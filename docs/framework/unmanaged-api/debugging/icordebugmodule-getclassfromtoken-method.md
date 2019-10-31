@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 622a4d3c-0425-4c54-a7e4-0735377cdad2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6da6fabc6632bea58b28a00f55d05f4c2cc5b46
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 790999093f874a4d81dd5db74ef012b1d997a12f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762680"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109642"
 ---
 # <a name="icordebugmodulegetclassfromtoken-method"></a>ICorDebugModule::GetClassFromToken Yöntemi
-Metaveri belirteci tarafından belirtilen sınıf alır.  
+Meta veri belirteci tarafından belirtilen sınıfı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,16 +36,16 @@ HRESULT GetClassFromToken(
   
 ## <a name="parameters"></a>Parametreler  
  `typedef`  
- [in] Bir `mdTypeDef` meta veri sınıfının başvuran meta veri belirteci.  
+ 'ndaki Bir sınıfın meta verilerine başvuran bir `mdTypeDef` meta veri belirteci.  
   
  `ppClass`  
- [out] Bir işaretçi adresine Icordebugclass nesnenin sınıfını temsil eder.  
+ dışı Sınıfını temsil eden ICorDebugClass nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

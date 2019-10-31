@@ -10,20 +10,18 @@ helpviewer_keywords:
 - <disableCachingBindingFailures> element
 - disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d5b45ea4b30677d17e72685b16c19f9192c8c144
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 23633cb282b8e59b4df4bcc2cd38717d805a207e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252676"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117492"
 ---
 # <a name="disablecachingbindingfailures-element"></a>\<Disablecachingbindinghatalarıyla > öğesi
 Derleme yoklama tarafından bulunamadığı için oluşan bağlama hatalarının önbelleğe alınmasının devre dışı bırakılıp başlatılmayacağını belirtir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<çalışma zamanı >** ](runtime-element.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<Disablecachingbindinghatalarıyla >**  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -39,7 +37,7 @@ Derleme yoklama tarafından bulunamadığı için oluşan bağlama hatalarının
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|enabled|Gerekli öznitelik.<br /><br /> Derleme yoklama tarafından bulunamadığı için oluşan bağlama hatalarının önbelleğe alınmasının devre dışı bırakılıp başlatılmayacağını belirtir.|  
+|etkinletir|Gerekli öznitelik.<br /><br /> Derleme yoklama tarafından bulunamadığı için oluşan bağlama hatalarının önbelleğe alınmasının devre dışı bırakılıp başlatılmayacağını belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
@@ -61,7 +59,7 @@ Derleme yoklama tarafından bulunamadığı için oluşan bağlama hatalarının
 ## <a name="remarks"></a>Açıklamalar  
  .NET Framework sürüm 2,0 ' den başlayarak, derlemelerin yüklenmesi için varsayılan davranış tüm bağlama ve yükleme hatalarının önbelleğe alınarak yapılır. Diğer bir deyişle, bir derlemeyi yükleme girişimi başarısız olursa, derlemeyi bulmaya gerek kalmadan, aynı derlemeyi yükleme isteklerinin sonraki istekleri hemen başarısız olur. Bu öğe, derleme yoklama yolunda bulunamadığı için oluşan bağlama hatalarının varsayılan davranışını devre dışı bırakır. Bu arızalar <xref:System.IO.FileNotFoundException>oluşturur.  
   
- Bazı bağlama ve yükleme hatalarının bu öğeden etkilenmemesi ve her zaman önbelleğe alınması gerekir. Bu arızalar, derlemenin bulunduğu ancak yüklenemediği için oluşur. Ya da <xref:System.BadImageFormatException> <xref:System.IO.FileLoadException>oluşturur. Aşağıdaki liste, bu hataların bazı örneklerini içerir.  
+ Bazı bağlama ve yükleme hatalarının bu öğeden etkilenmemesi ve her zaman önbelleğe alınması gerekir. Bu arızalar, derlemenin bulunduğu ancak yüklenemediği için oluşur. <xref:System.BadImageFormatException> veya <xref:System.IO.FileLoadException>oluşturur. Aşağıdaki liste, bu hataların bazı örneklerini içerir.  
   
 - Bir dosyayı yüklemeye çalışırsanız, geçerli bir derleme değilse, bozuk dosya doğru derlemeyle değiştirilse bile derlemeyi yükleme girişimleri başarısız olur.  
   

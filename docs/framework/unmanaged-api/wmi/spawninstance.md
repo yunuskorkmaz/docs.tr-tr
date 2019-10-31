@@ -14,14 +14,12 @@ helpviewer_keywords:
 - SpawnInstance function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 529905bd9286520a8e09479bfc95ef0b614f53e9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f93b4fbd5429ed2bdae8fb707e61df024cd8fd6e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798212"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107508"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance işlevi
 Bir sınıfın yeni bir örneğini oluşturur.    
@@ -50,7 +48,7 @@ HRESULT SpawnInstance (
 'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
 
 `ppNewInstance`  
-dışı Sınıfın yeni örneğine işaretçiyi alır. Bir hata oluşursa, yeni bir nesne döndürülmez ve `ppNewInstance` değiştirilmemiş olarak kalır.
+dışı Sınıfın yeni örneğine işaretçiyi alır. Bir hata oluşursa, yeni bir nesne döndürülmez ve `ppNewInstance` değiştirilmemiş olarak bırakılır.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -58,23 +56,23 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`geçerli bir sınıf tanımı değil ve yeni örnekler üretilemedi. Tamamlanmamış ya da [Putclasswmı](putclasswmi.md)çağırarak Windows yönetimine kaydedilmemiş. |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` geçerli bir sınıf tanımı değil ve yeni örnekler üretilemedi. Tamamlanmamış ya da [Putclasswmı](putclasswmi.md)çağırarak Windows yönetimine kaydedilmemiş. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass``null`. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` `null`. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
 Bu işlev, [IWbemClassObject:: SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) yöntemine bir çağrı kaydırır.
 
-`ptr`Windows yönetiminden alınmış bir sınıf tanımı olmalıdır. (Bir örnekten örnek oluşturma desteklendiğini, ancak döndürülen örnek boş olduğunu unutmayın.) Daha sonra bu sınıf tanımını yeni örnekler oluşturmak için kullanırsınız. Örneği Windows yönetimine yazmayı düşünüyorsanız [Putınstancewmi](putinstancewmi.md) işlevine yapılan bir çağrı gerekir.
+`ptr`, Windows yönetiminden alınmış bir sınıf tanımı olmalıdır. (Bir örnekten örnek oluşturma desteklendiğini, ancak döndürülen örnek boş olduğunu unutmayın.) Daha sonra bu sınıf tanımını yeni örnekler oluşturmak için kullanırsınız. Örneği Windows yönetimine yazmayı düşünüyorsanız [Putınstancewmi](putinstancewmi.md) işlevine yapılan bir çağrı gerekir.
 
-`ppNewClass` Otomatik olarak döndürülen yeni nesne, geçerli nesnenin bir alt sınıfı olur. Bu davranışın üzerine yazılamıyor. Alt sınıfların (türetilmiş sınıflar) oluşturulabilmesi için başka bir yöntem yoktur.
+`ppNewClass` ' de döndürülen yeni nesne otomatik olarak geçerli nesnenin bir alt sınıfı olur. Bu davranışın üzerine yazılamıyor. Alt sınıfların (türetilmiş sınıflar) oluşturulabilmesi için başka bir yöntem yoktur.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** WMINet_Utils. IDL  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

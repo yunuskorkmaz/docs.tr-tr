@@ -16,39 +16,37 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cacccc182b3361ffd635f2b5f32ce8c17100d08
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: 72b60d0a91fda3e89448a19b506a6f8457835304
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133628"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124405"
 ---
 # <a name="custom-numeric-format-strings"></a>Özel sayısal biçim dizeleri
 
 Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha fazla özel sayısal tanımlayıcıdan oluşan özel bir sayısal biçim dizesi oluşturabilirsiniz. Özel bir sayısal biçim dizesi, [Standart sayısal biçim dizesi](../../../docs/standard/base-types/standard-numeric-format-strings.md)olmayan herhangi bir biçim dizesidir.
 
-Özel sayısal biçim dizeleri, `ToString` tüm sayısal türdeki metodun bazı aşırı yüklemeleri tarafından desteklenir. Örneğin, <xref:System.Int32.ToString%28System.String%29> <xref:System.Int32> türünün ve <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> yöntemlerine bir sayısal biçim dizesi sağlayabilirsiniz. Özel sayısal biçim dizeleri de .net [Composite biçimlendirme özelliği](../../../docs/standard/base-types/composite-formatting.md)tarafından desteklenir ve bu `Write` , <xref:System.Console> ve <xref:System.IO.StreamWriter> sınıflarının bazı ve `WriteLine` <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemleri, yöntemi ve <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> yöntemi. [Dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md) özelliği de özel sayısal biçim dizelerini destekler.
+Özel sayısal biçim dizeleri, tüm sayısal türlerde `ToString` yönteminin bazı aşırı yüklemeleri tarafından desteklenir. Örneğin, <xref:System.Int32> türünün <xref:System.Int32.ToString%28System.String%29> ve <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> yöntemlerine bir sayısal biçim dizesi sağlayabilirsiniz. Özel sayısal biçim dizeleri Ayrıca, <xref:System.Console> ve <xref:System.IO.StreamWriter> sınıflarının, <xref:System.String.Format%2A?displayProperty=nameWithType> yönteminin ve <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> yönteminin bazı `Write` ve `WriteLine` yöntemleri tarafından kullanılan .NET [Bileşik biçimlendirme özelliği](../../../docs/standard/base-types/composite-formatting.md)tarafından da desteklenir. [Dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md) özelliği de özel sayısal biçim dizelerini destekler.
 
 > [!TIP]
 > Sayısal veya tarih ve saat değerlerine biçim dizeleri uygulamanızı sağlayan ve sonuç dizesini görüntüleyen bir .NET Core Windows Forms uygulaması olan **biçimlendirme yardımcı programını**indirebilirsiniz. Kaynak kodu, ve [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)için kullanılabilir.
 
 <a name="table"></a>Aşağıdaki tabloda özel sayısal biçim belirticileri açıklanmakta ve her biçim belirticisi tarafından üretilen örnek çıktı görüntülenir. Özel sayısal biçim dizeleri kullanma hakkında ek bilgi için [Notlar](#NotesCustomFormatting) bölümüne ve kullanımlarının kapsamlı bir gösterimi için [örnek](#example) bölümüne bakın.
 
-|Biçim belirteci|Ad|Açıklama|Örnekler|
+|Biçim belirteci|Name|Açıklama|Örnekler|
 |----------------------|----------|-----------------|--------------|
-|"0"|Sıfır yer tutucu|Eğer varsa, karşılık gelen rakamı sıfır ile değiştirir; aksi halde sonuç dizesinde sıfır görünür.<br /><br /> Daha fazla bilgi: ["0" özel Belirleyicisi](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0,45678 ("0,00", en-US)-> 0,46<br /><br /> 0,45678 ("0,00", fr-FR)-> 0, 46|
-|"#"|Basamak yer tutucusu|Eğer varsa, karşılık gelen rakamı "#" sembolü ile değiştirir; aksi halde sonuç dizesinde hiçbir rakam gözükmez.<br /><br /> Giriş dizesindeki karşılık gelen basamak, önemli olmayan 0 ise sonuç dizesinde bir basamak göründüğünü unutmayın. Örneğin, 0003 ("# # # #")-> 3.<br /><br /> Daha fazla bilgi: ["#" Özel Belirleyicisi](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0,45678 ("#. # #", en-US)->. 46<br /><br /> 0,45678 ("#. # #", fr-FR)->, 46|
+|"0"|Sıfır yer tutucu|Eğer varsa, karşılık gelen rakamı sıfır ile değiştirir; aksi halde sonuç dizesinde sıfır görünür.<br /><br /> Daha fazla bilgi: ["0" özel Belirleyicisi](#Specifier0).|1234,5678 ("00000")-> 01235<br /><br /> 0,45678 ("0,00", en-US)-> 0,46<br /><br /> 0,45678 ("0,00", fr-FR)-> 0, 46|
+|"#"|Basamak yer tutucusu|Eğer varsa, karşılık gelen rakamı "#" sembolü ile değiştirir; aksi halde sonuç dizesinde hiçbir rakam gözükmez.<br /><br /> Giriş dizesindeki karşılık gelen basamak, önemli olmayan 0 ise sonuç dizesinde bir basamak göründüğünü unutmayın. Örneğin, 0003 ("# # # #")-> 3.<br /><br /> Daha fazla bilgi: ["#" özel Belirleyicisi](#SpecifierD).|1234,5678 ("# # # # #")-> 1235<br /><br /> 0,45678 ("#. # #", en-US)->. 46<br /><br /> 0,45678 ("#. # #", fr-FR)->, 46|
 |"."|Ondalık noktası|Sonuç dizesindeki ondalık ayracının konumunu belirler.<br /><br /> Daha fazla bilgi: ["." Özel tanımlayıcı](#SpecifierPt).|0,45678 ("0,00", en-US)-> 0,46<br /><br /> 0,45678 ("0,00", fr-FR)-> 0, 46|
-|","|Grup ayırıcısı ve numara ölçekleme|Hem bir grup ayracı, hem de sayı ölçekleme tanımlayıcısı olarak kullanılır. Grup ayracı olarak, her grup arasında yerelleştirilmiş bir grup ayracı karakteri ekler. Sayı ölçekleme tanımlayıcısı olarak, bir sayıyı belirtilen her virgül için 1000'e böler.<br /><br /> Daha fazla bilgi: ["," Özel Belirleyicisi](#SpecifierTh).|Grup ayracı tanımlayıcısı:<br /><br /> 2147483647 ("# #, #", en-US)-> 2.147.483.647<br /><br /> 2147483647 ("# #, #", ES-ES)-> 2.147.483.647<br /><br /> Ölçekleme tanımlayıcısı:<br /><br /> 2147483647 ("#, #,,", en-US)-> 2.147<br /><br /> 2147483647 ("#, #,,", ES-ES)-> 2,147|
-|"%"|Yüzde yer tutucu|Sayıyı 100 ile çarpar ve sonuç dizesine yerelleştirilmiş bir yüzde simgesi ekler.<br /><br /> Daha fazla bilgi: ["%" Özel Belirleyicisi](#SpecifierPct).|0,3697 ("% #0.00", en-US)->% 36,97<br /><br /> 0,3697 ("% #0 00", el-GR)->% 36, 97<br /><br /> 0,3697 ("# #. 0%", en-US)-> 37,0%<br /><br /> 0,3697 ("# #. 0%", el-GR)-> 37,% 0|
-|"‰"|Her mille yer tutucu|Sayıyı 1000 ile çarpar ve sonuç dizesine yerelleştirilmiş bir binde simgesi ekler.<br /><br /> Daha fazla bilgi: ["‰" Özel Belirleyicisi](#SpecifierPerMille).|0,03697 ("#0.00‰", en-US)-> 36,97‰<br /><br /> 0,03697 ("#0 00‰", ru-RU)-> 36, 97‰|
-|"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "e0"<br /><br /> "e+0"<br /><br /> "e-0"|Üstel simgeleme|Eğer ardından en az bir 0 (sıfır) geliyorsa, sonucu üstel gösterim kullanarak biçimlendirir. "E" veya "e" harfi üs sembolünün sonuç dizesinde büyük veya küçük harf olduğunu belirtir. "E" veya "e" karakterini izleyen sıfır sayısı üsteki en az basamak sayısını belirler. Artı işareti (+) üsten önce her zaman bir işaret karakterinin bulunacağını belirtir. Eksi işareti (-), işaret karakterinin yalnızca negatif üslerin önünde bulunacağını belirtir.<br /><br /> Daha fazla bilgi: ["E" ve "e" özel belirticileri](#SpecifierExponent).|987654 ("#0.0e0")-> 98.8 E4<br /><br /> 1503,92311 ("0,0 # #e + 00")-> 1.504 e + 03<br /><br /> 1.8901385 e-16 ("0.0 e + 00")-> 1.9 e-16|
-|"\\"|Atlatma karakteri|Sonraki karakterin özel biçim tanımlayıcısı yerine bir sabit karakter olarak yorumlanmasını sağlar.<br /><br /> Daha fazla bilgi: ["\\" Kaçış karakteri](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|
-|'*String*'<br /><br /> "*String*"|Değişmez dize sınırlayıcısı|İçinde bulunan karakterlerin sonuç dizesine değiştirilmeden kopyalanacağını belirtir.<br/><br/>Daha fazla bilgi: [Karakter değişmez değerleri](#character-literals).|68 ("#" derece ' ")-> 68 derece<br /><br /> 68 ("#" derece ' ")-> 68 derece|
-|;|Bölüm ayırıcı|Pozitif, negatif ve sıfır değerine sahip sayılar için ayrı biçim dizeleri tanımlar.<br /><br /> Daha fazla bilgi: [";" Bölüm ayırıcısı](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|
-|Diğer|Diğer karakterler|Karakter, değişmeyen sonuç dizesine kopyalanır.<br/><br/>Daha fazla bilgi: [Karakter değişmez değerleri](#character-literals).|68 ("# °") -> 68 °|
+|","|Grup ayırıcısı ve numara ölçekleme|Hem bir grup ayracı, hem de sayı ölçekleme tanımlayıcısı olarak kullanılır. Grup ayracı olarak, her grup arasında yerelleştirilmiş bir grup ayracı karakteri ekler. Sayı ölçekleme tanımlayıcısı olarak, bir sayıyı belirtilen her virgül için 1000'e böler.<br /><br /> Daha fazla bilgi: ["," özel Belirleyicisi](#SpecifierTh).|Grup ayracı tanımlayıcısı:<br /><br /> 2147483647 ("# #, #", en-US)-> 2.147.483.647<br /><br /> 2147483647 ("# #, #", ES-ES)-> 2.147.483.647<br /><br /> Ölçekleme tanımlayıcısı:<br /><br /> 2147483647 ("#, #,,", en-US)-> 2.147<br /><br /> 2147483647 ("#, #,,", ES-ES)-> 2,147|
+|"%"|Yüzde yer tutucu|Sayıyı 100 ile çarpar ve sonuç dizesine yerelleştirilmiş bir yüzde simgesi ekler.<br /><br /> Daha fazla bilgi: ["%" özel Belirleyicisi](#SpecifierPct).|0,3697 ("% #0.00", en-US)->% 36,97<br /><br /> 0,3697 ("% #0 00", el-GR)-> %36, 97<br /><br /> 0,3697 ("# #. 0%", en-US)-> 37,0%<br /><br /> 0,3697 ("# #. 0%", el-GR)-> 37, %0|
+|"‰"|Her mille yer tutucu|Sayıyı 1000 ile çarpar ve sonuç dizesine yerelleştirilmiş bir binde simgesi ekler.<br /><br /> Daha fazla bilgi: ["‰" özel Belirleyicisi](#SpecifierPerMille).|0,03697 ("#0.00‰", en-US)-> 36,97‰<br /><br /> 0,03697 ("#0 00‰", ru-RU)-> 36, 97‰|
+|"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "e0"<br /><br /> "e+0"<br /><br /> "e-0"|Üstel simgeleme|Eğer ardından en az bir 0 (sıfır) geliyorsa, sonucu üstel gösterim kullanarak biçimlendirir. "E" veya "e" harfi üs sembolünün sonuç dizesinde büyük veya küçük harf olduğunu belirtir. "E" veya "e" karakterini izleyen sıfır sayısı üsteki en az basamak sayısını belirler. Artı işareti (+) üsten önce her zaman bir işaret karakterinin bulunacağını belirtir. Eksi işareti (-), işaret karakterinin yalnızca negatif üslerin önünde bulunacağını belirtir.<br /><br /> Daha fazla bilgi: ["e" ve "e" özel belirticileri](#SpecifierExponent).|987654 ("#0.0e0")-> 98.8 E4<br /><br /> 1503,92311 ("0,0 # #e + 00")-> 1.504 e + 03<br /><br /> 1.8901385 e-16 ("0.0 e + 00")-> 1.9 e-16|
+|"\\"|Atlatma karakteri|Sonraki karakterin özel biçim tanımlayıcısı yerine bir sabit karakter olarak yorumlanmasını sağlar.<br /><br /> Daha fazla bilgi: ["\\" kaçış karakteri](#SpecifierEscape).|987654 ("\\# # #00\\#")-> #987654 #|
+|'*String*'<br /><br /> "*String*"|Değişmez dize sınırlayıcısı|İçinde bulunan karakterlerin sonuç dizesine değiştirilmeden kopyalanacağını belirtir.<br/><br/>Daha fazla bilgi: [karakter sabit değerleri](#character-literals).|68 ("#" derece ' ")-> 68 derece<br /><br /> 68 ("#" derece ' ")-> 68 derece|
+|;|Bölüm ayırıcı|Pozitif, negatif ve sıfır değerine sahip sayılar için ayrı biçim dizeleri tanımlar.<br /><br /> Daha fazla bilgi: [";" Bölüm ayırıcısı](#SectionSeparator).|12,345 ("#0 0 #;(#0.0 #);-\ 0-")-> 12,35<br /><br /> 0 ("#0 0 #;(#0.0 #);-\ 0-")->-0-<br /><br /> -12,345 ("#0 0 #;(#0.0 #);-\ 0-")-> (12,35)<br /><br /> 12,345 ("#0 0 #;(#0.0 #)")-> 12,35<br /><br /> 0 ("#0 0 #;(#0.0 #)")-> 0,0<br /><br /> -12,345 ("#0 0 #;(#0.0 #)")-> (12,35)|
+|Diğer|Diğer karakterler|Karakter, değişmeyen sonuç dizesine kopyalanır.<br/><br/>Daha fazla bilgi: [karakter sabit değerleri](#character-literals).|68 ("# °")-> 68 °|
 
 Aşağıdaki bölümler her özel sayısal biçim tanımlayıcısı hakkında ayrıntılı bilgi sağlar.
 
@@ -100,7 +98,7 @@ Eksik basamakların veya baştaki sıfırların boşluklarla değiştirildiği b
 
 "." özel biçim tanımlayıcısı sonuç dizesine yerelleştirilmiş bir ondalık ayracı ekler. Biçim dizesindeki ilk nokta biçimlendirilen değerdeki ondalık ayracının konumunu belirler; diğer ek noktalar göz ardı edilir.
 
-Sonuç dizesinde ondalık ayırıcı olarak kullanılan karakter her zaman bir nokta değildir; biçimlendirmeyi denetleyen <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> <xref:System.Globalization.NumberFormatInfo> nesnenin özelliği tarafından belirlenir.
+Sonuç dizesinde ondalık ayırıcı olarak kullanılan karakter her zaman bir nokta değildir; biçimlendirmeyi denetleyen <xref:System.Globalization.NumberFormatInfo> nesnesinin <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> özelliği tarafından belirlenir.
 
 Aşağıdaki örnek birkaç sonuç dizesindeki ondalık noktasının konumunu tanımlamak için "." biçim tanımlayıcısını kullanır.
 
@@ -116,11 +114,11 @@ Aşağıdaki örnek birkaç sonuç dizesindeki ondalık noktasının konumunu ta
 
 "," karakteri hem bir grup ayracı, hem de sayı ölçekleme tanımlayıcısı olarak kullanılır.
 
-- Grup ayırıcısı: Bir sayının tamsayı rakamlarını formatlamak için bir veya daha fazla virgül belirtilirse, çıktının integral bölümünde her bir sayı grubu arasına bir grup ayırıcısı karakteri eklenir.
+- Grup ayracı: Eğer bir sayının tamsayı basamaklarını biçimlendiren iki basamak yer tutucu karakteri (0 veya #) arasında bir veya daha fazla virgül belirtilirse, çıktının tamsayı bölümündeki her sayı grubunun arasında bir grup ayracı karakteri eklenir.
 
-  Geçerli <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> nesnenin ve özellikleri, sayı Grup ayırıcısı olarak kullanılan karakteri ve her bir sayı grubunun boyutunu belirlemektir. <xref:System.Globalization.NumberFormatInfo> Örneğin, 1000 sayısını biçimlendirmek için "#,#" dizesi ve sabit kültür kullanılırsa, çıktı "1,000" olur.
+  Geçerli <xref:System.Globalization.NumberFormatInfo> nesnesinin <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> ve <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> özellikleri, sayı Grup ayırıcısı olarak kullanılan karakteri ve her bir sayı grubunun boyutunu belirlemektir. Örneğin, 1000 sayısını biçimlendirmek için "#,#" dizesi ve sabit kültür kullanılırsa, çıktı "1,000" olur.
 
-- Sayı ölçekleme tanımlayıcısı: Açık ya da örtük ondalık noktanın hemen solunda bir veya daha fazla virgül belirtilirse, biçimlendirilecek sayı her virgül için 1000 ile bölünür. Örneğin, eğer 100 milyon sayısını biçimlendirmek için "0,," dizesi kullanılırsa, çıktı "100" olur.
+- Sayı ölçekleme tanımlayıcısı: Eğer açık veya örtülü ondalık noktasının hemen solunda bir veya daha fazla virgül belirtilirse, biçimlendirilen sayı her virgül için 1000 ile bölünür. Örneğin, eğer 100 milyon sayısını biçimlendirmek için "0,," dizesi kullanılırsa, çıktı "100" olur.
 
 Aynı biçim dizesinde grup ayracı ve sayı ölçekleme tanımlayıcılarını kullanabilirsiniz. Örneğin, eğer bir milyar sayısını biçimlendirmek için "#,0,," dizesi ve sabit kültür kullanılırsa, çıktı "1,000" olur.
 
@@ -142,7 +140,7 @@ Aşağıdaki örnek virgülün sayı ölçekleme için bir tanımlayıcı olarak
 
 ## <a name="the--custom-specifier"></a>"%" Özel Belirleyicisi
 
-Biçim dizesindeki bir yüzde işareti (%) sayının biçimlendirilmeden önce 100 ile çarpılmasına neden olur. Sayıya, % karakterinin biçim dizesinde bulunduğu konumda yerelleştirilmiş bir yüzde sembolü eklenir. Kullanılan yüzde karakteri geçerli <xref:System.Globalization.NumberFormatInfo.PercentSymbol%2A> <xref:System.Globalization.NumberFormatInfo> nesnenin özelliği tarafından tanımlanır.
+Biçim dizesindeki bir yüzde işareti (%) sayının biçimlendirilmeden önce 100 ile çarpılmasına neden olur. Sayıya, % karakterinin biçim dizesinde bulunduğu konumda yerelleştirilmiş bir yüzde sembolü eklenir. Kullanılan yüzde karakteri geçerli <xref:System.Globalization.NumberFormatInfo> nesnesinin <xref:System.Globalization.NumberFormatInfo.PercentSymbol%2A> özelliği tarafından tanımlanır.
 
 Aşağıdaki örnek "%" özel tanımlayıcısını içeren birkaç özel biçim dizesini tanımlar.
 
@@ -156,7 +154,7 @@ Aşağıdaki örnek "%" özel tanımlayıcısını içeren birkaç özel biçim 
 
 ## <a name="the--custom-specifier"></a>"‰" Özel Belirleyicisi
 
-Biçim dizesindeki binde bir karakteri (‰ veya \u2030) sayının biçimlendirilmeden önce 1000 ile çarpılmasına neden olur. Dönüş dizesine, ‰ karakterinin biçim dizesinde bulunduğu konumda uygun bir binde bir karakteri eklenir. Kullanılan Mille başına karakter, kültüre özgü biçimlendirme bilgileri <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=nameWithType> sağlayan nesnesinin özelliği tarafından tanımlanır.
+Biçim dizesindeki binde bir karakteri (‰ veya \u2030) sayının biçimlendirilmeden önce 1000 ile çarpılmasına neden olur. Dönüş dizesine, ‰ karakterinin biçim dizesinde bulunduğu konumda uygun bir binde bir karakteri eklenir. Kullanılan Mille başına karakter, nesneye kültüre özgü biçimlendirme bilgileri sağlayan <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=nameWithType> özelliği tarafından tanımlanır.
 
 Aşağıdaki örnek "‰" özel tanımlayıcısını içeren bir özel biçim dizesi tanımlar.
 
@@ -182,7 +180,7 @@ Aşağıdaki örnek bilimsel gösterim tanımlayıcılarını kullanarak birkaç
 
 <a name="SpecifierEscape"></a>
 
-## <a name="the--escape-character"></a>"\\" Kaçış karakteri
+## <a name="the--escape-character"></a>"\\" kaçış karakteri
 
 Biçimlendirme dizesindeki "#", "0", ".", ",", "%" ve "‰" sembolleri sabit karakterler yerine biçim tanımlayıcıları olarak yorumlanır. Özel biçim dizesindeki konumlarına göre, büyük / küçük harf "E" ve + ve - sembolleri de biçim tanımlayıcıları olarak yorumlanabilir.
 
@@ -246,7 +244,7 @@ Aşağıdaki örnek, değişmez karakter birimlerinin yaygın olarak kullanılan
 
 Karakterlerin, bir sonuç dizesine eklenebilir veya bir giriş dizesinde başarıyla ayrıştırılabilmeleri için, biçimlendirme karakterleri olarak değil, karakterlerin değişmez karakter olarak yorumlanabileceğini belirten iki yol vardır:
 
-- Bir biçimlendirme karakterini kaçış. Daha fazla bilgi için ["\\" kaçış karakterine](#SpecifierEscape)bakın.
+- Bir biçimlendirme karakterini kaçış. Daha fazla bilgi için bkz. ["\\" kaçış karakteri](#SpecifierEscape).
 
 - Tüm sabit değer dizesini tırnak işareti içine alarak.
 
@@ -261,13 +259,13 @@ Aşağıdaki örnek, özel bir sayısal biçim dizesinde ayrılmış karakterler
 
 ### <a name="floating-point-infinities-and-nan"></a>Kayan nokta sonsuz ve NaN
 
-Biçim dizesi ne olursa olsun, <xref:System.Single> bir veya <xref:System.Double> kayan nokta türünün değeri pozitif sonsuzluk, negatif sonsuz veya sayı değil (NaN), biçimlendirilen dize ilgili <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>, veya <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> geçerli geçerli <xref:System.Globalization.NumberFormatInfo> nesne tarafından belirtilen özellik.
+Biçim dizesinden bağımsız olarak, bir <xref:System.Single> veya <xref:System.Double> kayan nokta türünün değeri pozitif sonsuzluk, negatif sonsuzluk veya sayı değil (NaN), biçimlendirilen dize ilgili <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>veya <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> özelliğinin değeridir geçerli <xref:System.Globalization.NumberFormatInfo> nesnesine göre.
 
 ### <a name="control-panel-settings"></a>Denetim Masası Ayarları
 
-Denetim Masası 'ndaki **bölge ve dil seçenekleri** öğesindeki ayarlar, bir biçimlendirme işlemi tarafından üretilen sonuç dizesini etkiler. Bu ayarlar, geçerli iş parçacığı kültürüyle ilişkili <xref:System.Globalization.NumberFormatInfo> nesneyi başlatmak için kullanılır ve geçerli iş parçacığı kültürü biçimlendirmeyi yönetmek için kullanılan değerleri sağlar. Farklı ayarları kullanan bilgisayarlar farklı sonuç dizeleri üretir.
+Denetim Masası 'ndaki **bölge ve dil seçenekleri** öğesindeki ayarlar, bir biçimlendirme işlemi tarafından üretilen sonuç dizesini etkiler. Bu ayarlar, geçerli iş parçacığı kültürü ile ilişkili <xref:System.Globalization.NumberFormatInfo> nesnesini başlatmak için kullanılır ve geçerli iş parçacığı kültürü, biçimlendirmeyi yönetmek için kullanılan değerleri sağlar. Farklı ayarları kullanan bilgisayarlar farklı sonuç dizeleri üretir.
 
-Ayrıca, geçerli sistem kültürüyle aynı <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> kültürü temsil eden yeni <xref:System.Globalization.CultureInfo> bir nesne oluşturmak için oluşturucuyu kullanırsanız, Denetim Masası 'ndaki **bölge ve dil seçenekleri** öğesi tarafından belirlenen özelleştirmeler , yeni <xref:System.Globalization.CultureInfo> nesnesine uygulanır. Oluşturucuyu, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> sistemin özelleştirmelerini yansıtmayan bir <xref:System.Globalization.CultureInfo> nesne oluşturmak için kullanabilirsiniz.
+Ayrıca, geçerli sistem kültürüyle aynı kültürü temsil eden yeni bir <xref:System.Globalization.CultureInfo> nesnesini başlatmak için <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> oluşturucusunu kullanırsanız, Denetim Masası 'ndaki **bölge ve dil seçenekleri** öğesi tarafından belirlenen tüm özelleştirmeler şu şekilde olur Yeni <xref:System.Globalization.CultureInfo> nesnesine uygulandı. Bir sistemin özelleştirmelerini yansıtmayan bir <xref:System.Globalization.CultureInfo> nesnesi oluşturmak için <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> oluşturucusunu kullanabilirsiniz.
 
 ### <a name="rounding-and-fixed-point-format-strings"></a>Yuvarlama ve sabit nokta biçim dizeleri
 
@@ -279,7 +277,7 @@ Sabit nokta biçim dizeleri için (yani, bilimsel gösterim biçim karakterleri 
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek iki özel sayısal biçim dizesini gösterir. Her iki durumda da, basamak yer tutucusu`#`() sayısal verileri, diğer tüm karakterler sonuç dizesine kopyalanır.
+Aşağıdaki örnek iki özel sayısal biçim dizesini gösterir. Her iki durumda da, rakam yer tutucusu (`#`) sayısal verileri, diğer tüm karakterler sonuç dizesine kopyalanır.
 
 [!code-cpp[Formatting.Numeric.Custom#10](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/example1.cpp#10)]
 [!code-csharp-interactive[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]
@@ -292,6 +290,6 @@ Aşağıdaki örnek iki özel sayısal biçim dizesini gösterir. Her iki durumd
 - <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
 - [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)
 - [Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Nasıl yapılır: Bir sayıyı önünde sıfır olacak şekilde doldurma](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
+- [Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
 - [Örnek: .NET Core WinForms biçimlendirme yardımcı programıC#()](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
 - [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

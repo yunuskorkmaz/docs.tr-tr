@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bf8a141-b2c0-4058-9885-1cef7dcaa811
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 25364330dafdf858c4b41e9a05731c37e97fbb57
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e188fe80e770481aac02244a2c105639e4da19e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795438"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108888"
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext İşlevi
 Bu işlev .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
@@ -43,11 +41,11 @@ HRESULT CreateApplicationContext (
  dışı Uygulama bağlamına yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** Fusion. h  
+ **Üst bilgi:** Fusion. h  
   
- **Kitaplığı** Fusion. dll ' ye kaynak olarak dahildir  
+ **Kitaplık:** Fusion. dll ' ye kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -13,14 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce0f11547d4b16516b7c78d1b1947f5c4bc831a3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 46cd8b5c22f48ba45c4da7fa8876d6807a21f2b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798804"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124152"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib Yöntemi
 Tam nitelikli yolunu döndürerek bir tür kitaplığının basit adını çözer.  
@@ -58,19 +56,19 @@ HRESULT ResolveTypeLib(
  'ndaki İşletim ortamını tanımlayan bir [Syskind](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) bayrağı. Ortak değerler SYS_WIN32 ve SYS_WIN64.  
   
  `pbstrResolvedTlbName`  
- dışı `bstrSimpleName` Parametresinde adlı tür kitaplığının tam yolunu içeren bir [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) için bir işaretçi.  
+ dışı `bstrSimpleName` parametresinde adlı tür kitaplığının tam yolunu içeren [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) 'ye yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemi, [Tlbexp. exe (tür kitaplığı verme programı)](../../tools/tlbexp-exe-type-library-exporter.md) işleme sırasında [LoadTypeLibWithResolver işlevi](loadtypelibwithresolver-function.md) tarafından çağrılır. `ResolveTypeLib`  
+ `ResolveTypeLib` yöntemi, [Tlbexp. exe (tür kitaplığı verme programı)](../../tools/tlbexp-exe-type-library-exporter.md) Işleme sırasında [LoadTypeLibWithResolver işlevi](loadtypelibwithresolver-function.md) tarafından çağırılır.  
   
  Bu arabirimin özel uygulamaları, `bstrSimpleName` parametresinde adlı tür kitaplığının tam yolunu içeren bir [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) döndürmelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** TlbRef. IDL, TlbRef. h  
+ **Üst bilgi:** TlbRef. IDL, TlbRef. h  
   
- **Kitaplığı** TlbRef. lib  
+ **Kitaplık:** TlbRef. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3cbb47c-457f-4083-8895-49562ca99ab8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 390ab4881396bbc01337d087f05b6066153bfed1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a43d5e15c02a97ff10a6a5afd439cadebb6b33d2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795492"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109221"
 ---
 # <a name="assembly_info-structure"></a>ASSEMBLY_INFO Yapısı
 Genel derleme önbelleğinde kayıtlı olan bir derleme hakkındaki bilgileri içerir.  
@@ -43,15 +41,15 @@ typedef struct _ASSEMBLY_INFO {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`cbAssemblyInfo`|Yapının bayt cinsinden boyutu. Bu alan gelecekteki genişletilebilirlik için ayrılmıştır.|  
-|`dwAssemblyFlags`|Derlemeyle ilgili yükleme ayrıntılarını gösteren Bayraklar. Aşağıdaki değerler desteklenir:<br /><br /> -Derlemenin yüklendiğini gösteren ASSEMBLYINFO_FLAG_INSTALLED değeri. .NET Framework geçerli sürümü her zaman bu değere ayarlanır `dwAssemblyFlags` .<br />-Derlemenin bir yükün yerleşik olduğunu gösteren ASSEMBLYINFO_FLAG_PAYLOADRESIDENT değeri. .NET Framework geçerli sürümü hiçbir şekilde bu değere ayarlanır `dwAssemblyFlags` .|  
+|`dwAssemblyFlags`|Derlemeyle ilgili yükleme ayrıntılarını gösteren Bayraklar. Aşağıdaki değerler desteklenir:<br /><br /> -Derlemenin yüklendiğini gösteren ASSEMBLYINFO_FLAG_INSTALLED değeri. .NET Framework geçerli sürümü her zaman bu değere `dwAssemblyFlags` belirler.<br />-Derlemenin bir yükün yerleşik olduğunu gösteren ASSEMBLYINFO_FLAG_PAYLOADRESIDENT değeri. .NET Framework geçerli sürümü bu değere `dwAssemblyFlags` hiçbir şekilde ayarlamamez.|  
 |`uliAssemblySizeInKB`|Derlemenin içerdiği dosyaların kilobayt cinsinden toplam boyutu.|  
 |`pszCurrentAssemblyPathBuf`|Bildirim dosyasının geçerli yolunu tutan bir dize arabelleği işaretçisi. Yol, null bir karakterle bitmelidir.|  
-|`cchBuf`|`pszCurrentAssemblyPathBuf` İçeren null Sonlandırıcı dahil olmak üzere geniş karakter sayısı.|  
+|`cchBuf`|`pszCurrentAssemblyPathBuf` içerdiği null Sonlandırıcı dahil olmak üzere geniş karakter sayısı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** Fusion. h  
+ **Üst bilgi:** Fusion. h  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

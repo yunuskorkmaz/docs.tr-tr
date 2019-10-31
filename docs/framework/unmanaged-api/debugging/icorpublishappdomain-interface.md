@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e7885a6-d17a-4bfc-a4c6-23cbb7337ad5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d9dbaac5b08cf3f700b5f2581c60d0cb7bf3f545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8d651f19b7d4cb0cbe163c2fa59e1ef07ceb480
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986680"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140340"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain Arabirimi
 Bir uygulama etki alanını temsil eder ve bu etki alanı hakkında bilgi sağlar.  
@@ -30,17 +28,17 @@ Bir uygulama etki alanını temsil eder ve bu etki alanı hakkında bilgi sağla
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Bu benzersiz tanımlayıcısını alır `ICorPublishAppDomain`.|  
-|[GetName Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Bu tarafından başvurulan uygulama etki alanının adını alır `ICorPublishAppDomain`.|  
+|[GetID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Bu `ICorPublishAppDomain`için benzersiz tanımlayıcıyı alır.|  
+|[GetName Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Bu `ICorPublishAppDomain`başvurduğu uygulama etki alanının adını alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorPub.idl, CorPub.h  
+ **Üst bilgi:** CorPub. IDL, CorPub. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

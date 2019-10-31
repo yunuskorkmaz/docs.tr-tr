@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b2f7007f-c446-4b18-aed1-a25cff8aee31
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3bb2f6333f306c8a19c8b2f67986b23819b74ee0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 77d28d8eef97a934c15ac29725f856f4bf39e6ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966858"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140149"
 ---
 # <a name="icordebugvalue-interface"></a>ICorDebugValue Arabirimi
 Hata ayıklanan işlemdeki bir değeri temsil eder. Değer bir okuma veya yazma değeri olabilir.  
@@ -31,9 +29,9 @@ Hata ayıklanan işlemdeki bir değeri temsil eder. Değer bir okuma veya yazma 
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |[CreateBreakpoint Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-createbreakpoint-method.md)|Bu yöntem şu anda uygulanmadı.|  
-|[GetAddress Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|Bu `ICorDebugValue` nesnenin, hata ayıklama sürecinde olan adresini alır.|  
-|[GetSize Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|Bu `ICorDebugValue` nesnenin boyutunu bayt cinsinden alır.|  
-|[GetType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|Bu `ICorDebugValue` nesnenin temel türünü alır.|  
+|[GetAddress Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|Bu `ICorDebugValue` nesnesinin, hata ayıklama sürecinde olan adresini alır.|  
+|[GetSize Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|Bu `ICorDebugValue` nesnesinin bayt cinsinden boyutunu alır.|  
+|[GetType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|Bu `ICorDebugValue` nesnesinin temel türünü alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Genel olarak, bir değer nesnesinin sahipliği döndürüldüğünde geçirilir. Alıcı, nesne ile işiniz bittiğinde nesneden bir başvuruyu kaldırmaktan sorumludur.  
@@ -44,11 +42,11 @@ Hata ayıklanan işlemdeki bir değeri temsil eder. Değer bir okuma veya yazma 
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -6,71 +6,69 @@ helpviewer_keywords:
 - debugging structures [.NET Framework]
 - structures [.NET Framework debugging]
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 45a4b5c2a65ae7e4c01ffc3977875e598d076557
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 05a321d5025f03d6a0378b462178bf06c0291f48
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025930"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123029"
 ---
 # <a name="debugging-structures"></a>Hata Ayıklama Yapıları
 
-Bu bölümde, hata ayıklama API'SİNİN kullandığı yönetilmeyen yapıları açıklar.
+Bu bölümde hata ayıklama API 'sinin kullandığı yönetilmeyen yapılar açıklanmaktadır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [CLRDATA_ADDRESS_RANGE yapısı](../../../../docs/framework/unmanaged-api/debugging/clrdata-address-range-structure.md) bir adres aralığı tanımlar.
+ [CLRDATA_ADDRESS_RANGE yapısı](../../../../docs/framework/unmanaged-api/debugging/clrdata-address-range-structure.md) Bir adres aralığı tanımlar.
 
- [CLRDATA_IL_ADDRESS_MAP yapısı](../../../../docs/framework/unmanaged-api/debugging/clrdata-il-address-map-structure.md) bir IL adresi eşleme tanımlar.
+ [CLRDATA_IL_ADDRESS_MAP yapısı](../../../../docs/framework/unmanaged-api/debugging/clrdata-il-address-map-structure.md) Adres eşleme için bir Il tanımlar
 
- [Clr_debuggıng_versıon yapısı](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) hata ayıklama amacıyla ortak dil çalışma zamanı (CLR) ürün sürümünü tanımlar.
+ [CLR_DEBUGGING_VERSION yapısı](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) Hata ayıklama amacıyla ortak dil çalışma zamanının (CLR) ürün sürümünü tanımlar.
 
- [Codechunkınfo yapısı](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md) kod bellekte tek bir öbek temsil eder.
+ [CodeChunkInfo yapısı](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md) Bellekte tek bir kod öbeğini temsil eder.
 
- [Cor_actıve_functıon](cor-active-function-structure.md) bir iş parçacığının çerçevelerde şu an etkin olan işlevler hakkında bilgiler içerir.
+ [COR_ACTIVE_FUNCTION](cor-active-function-structure.md) Şu anda bir iş parçacığının çerçevelerinde etkin olan işlevlerle ilgili bilgiler içerir.
 
- [COR_ARRAY_LAYOUT yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) bir dizi nesnesinin bellek düzeni hakkında bilgiler sağlar.
+ [COR_ARRAY_LAYOUT yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) Bellekte bir dizi nesnesinin yerleşimi hakkında bilgi sağlar.
 
- [Cor_debug_ıl_to_natıve_map](cor-debug-il-to-native-map-structure.md) Microsoft Ara dilini (MSIL) eşlemek için kullanılan uzaklıkları yerel kod için kod içerir.
+ [COR_DEBUG_IL_TO_NATIVE_MAP](cor-debug-il-to-native-map-structure.md) Microsoft ara dili (MSIL) kodunu yerel kodla eşlemek için kullanılan uzaklıkları içerir.
 
- [COR_DEBUG_STEP_RANGE](cor-debug-step-range-structure.md) kod aralığı uzaklık bilgilerini içerir.
+ [COR_DEBUG_STEP_RANGE](cor-debug-step-range-structure.md) Bir kod aralığı için konum bilgilerini içerir.
 
- [Cor_fıeld yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) bir alanda bir nesne hakkında bilgi sağlar.
+ [COR_FIELD yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) Bir nesne içindeki bir alan hakkında bilgi sağlar.
 
- [COR_GC_REFERENCE yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) atık olarak toplanmış olacak bir nesneyle ilgili bilgileri içerir.
+ [Cor_gc_reference yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) Atık olarak toplanmış bir nesne hakkındaki bilgileri içerir.
 
- [Cor_heapınfo yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) numaralandırılabilir olup olmadığı dahil çöp toplama yığınındaki hakkında genel bilgiler sağlar.
+ [COR_HEAPINFO yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) Çöp toplama yığını hakkında, numaralandırılabilir olup olmadığı dahil genel bilgiler sağlar.
 
- [COR_HEAPOBJECT yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) yönetilen yığındaki bir nesne hakkında bilgi sağlar.
+ [COR_HEAPOBJECT Yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) Yönetilen yığında bir nesne hakkında bilgi sağlar.
 
- [Cor_ıl_map](cor-il-map-structure.md) değişiklikleri bir işlevin göreli uzaklığı belirtir.
+ [COR_IL_MAP](cor-il-map-structure.md) Bir işlevin göreli uzaklığının değişikliklerini belirtir.
 
- [COR_SEGMENT yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md) bellek yönetilen yığında bir bölge hakkında bilgi içerir.
+ [COR_SEGMENT Yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md) Yönetilen yığında bir bellek bölgesi hakkındaki bilgileri içerir.
 
- [Cor_typeıd yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) bir tür tanımlayıcısı içeriyor.
+ [COR_TYPEID yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) Bir tür tanımlayıcısı içerir.
 
- [COR_TYPE_LAYOUT yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) bellekte bir nesne düzeni hakkında bilgiler sağlar.
+ [Cor_type_layout yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) Bellekteki bir nesnenin düzeni hakkında bilgi sağlar.
 
- [Cor_versıon](cor-version-structure.md) ortak dil çalışma zamanı standart Dört bölümlü sürüm numarasını depolar.
+ [COR_VERSION](cor-version-structure.md) Ortak dil çalışma zamanının Standart Dört parçalı sürüm numarasını depolar.
 
- [CorDebugBlockingObject yapısı](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) bir iş parçacığı ve iş parçacığı engellendi neden neden engelleyen bir nesneyi tanımlar.
+ [CorDebugBlockingObject yapısı](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) Bir iş parçacığını engelleyen bir nesne ve iş parçacığının engellenme nedenini tanımlar.
 
- [CorDebugEHClause yapısı](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) bir özel durum işleme (EH) yan tümcesi için Ara dil (IL) belirli bir parçasını temsil eder.
+ [Corhata ayıklama Gehclause yapısı](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) Belirli bir ara dil (IL) parçası için bir özel durum işleme (EH) yan tümcesini temsil eder.
 
- [CorDebugExceptionObjectStackFrame yapısı](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) yığın çerçeve bilgileri bir özel durum nesnesinden temsil eder.
+ [CorDebugExceptionObjectStackFrame yapısı](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) Bir özel durum nesnesinden yığın çerçeve bilgilerini temsil eder.
 
- [CorDebugGuidToTypeMapping yapısı](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) , karşılık gelen bir Windows çalışma zamanı GUID eşler [Icordebugtype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) nesne.
+ [CorDebugGuidToTypeMapping yapısı](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) Windows Çalışma Zamanı GUID 'sini karşılık gelen [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) nesnesine eşler.
 
- [DacpGetModuleAddress yapısı](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md) modülü adresi isteği için bir kapsayıcı tanımlar.
+ [DacpGetModuleAddress yapısı](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md) Modül adresi isteği için kapsayıcıyı tanımlar.
 
- [DacpMethodDescData yapısı](../../../../docs/framework/unmanaged-api/debugging/dacpmethoddescdata-structure.md) bir yöntemin çalışma zamanı bilgileri için transport arabellek tanımlar.
+ [Dadcpmethoddescdata yapısı](../../../../docs/framework/unmanaged-api/debugging/dacpmethoddescdata-structure.md) Metodun çalışma zamanı bilgileri için bir aktarım arabelleği tanımlar.
 
- [DacpModuleData yapısı](../../../../docs/framework/unmanaged-api/debugging/dacpmoduledata-structure.md) aktarım arabelleği için bir modülün çalışma zamanı bilgileri tanımlar.
+ [Dadcpmoduledata yapısı](../../../../docs/framework/unmanaged-api/debugging/dacpmoduledata-structure.md) Modülün çalışma zamanı bilgileri için bir aktarım arabelleği tanımlar.
 
- [DacpReJitData yapısı](../../../../docs/framework/unmanaged-api/debugging/dacprejitdata-structure.md) belirli bir profil oluşturucu izleme eklenmiş yöntemi ile ilgili temel bilgileri tanımlar.
+ [Dacprejdata yapısı](../../../../docs/framework/unmanaged-api/debugging/dacprejitdata-structure.md) Belirli bir profil oluşturucu tarafından işaretlenmiş yöntem hakkında temel bilgileri tanımlar.
 
- [StackTrace_SimpleContext yapısı](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) tam yerine kullanılabilecek basit bir bağlam sağlar `CONTEXT` yapısı.
+ [StackTrace_SimpleContext yapısı](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) Tam `CONTEXT` yapısının yerine kullanılabilecek basit bir bağlam sağlar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 

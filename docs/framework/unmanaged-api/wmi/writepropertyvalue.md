@@ -14,14 +14,12 @@ helpviewer_keywords:
 - WritePropertyValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3c42129835f9b30bed493a0992d49d7e2a458e2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f02fb3877d55e9f47384b281573202712c29c606
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798174"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107298"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue işlevi
 Bir özellik tanıtıcısı tarafından tanımlanan bir özelliğe belirtilen sayıda bayt yazar.
@@ -71,14 +69,14 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 
 Bu işlev, [IWbemClassObject:: WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) yöntemine bir çağrı kaydırır.
 
-Bu işlevi, dizeyi ve diğer`DWORD` `QWORD` tüm veri olmayan verileri ayarlamak için kullanın.
+Dizeyi ve diğer tüm`DWORD` olmayan veya`QWORD` olmayan verileri ayarlamak için bu işlevi kullanın.
 
-Dize olmayan özellik değerleri `lNumBytes` için belirtilen özellik türünün doğru veri boyutu olmalıdır. Dize özellik değerleri için, `lNumBytes` belirtilen dizenin bayt cinsinden uzunluğu olmalıdır ve dizenin kendisi, bayt cinsinden bir çift uzunluğunda olmalı ve ardından null sonlandırma karakteriyle birlikte gelmelidir.
+Dize olmayan özellik değerleri için `lNumBytes`, belirtilen özellik türünün doğru veri boyutu olmalıdır. Dize özellik değerleri için `lNumBytes`, belirtilen dizenin bayt cinsinden uzunluğu olmalıdır ve dizenin kendisi, bayt cinsinden bir çift uzunluğunda olmalı ve ardından null sonlandırma karakteriyle birlikte gelmelidir.
 
 ## <a name="requirements"></a>Gereksinimler  
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** WMINet_Utils. IDL  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

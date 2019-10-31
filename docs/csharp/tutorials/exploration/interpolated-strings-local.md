@@ -1,15 +1,13 @@
 ---
 title: Dize ilişkilendirme- C# öğretici
 description: Bu öğreticide, dize ilişkilendirme özelliğinin, C# biçimlendirilen ifade sonuçlarını daha büyük bir dizeye eklemek için nasıl kullanılacağı gösterilmektedir.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: 813623f4036813d7c1af440a60387f5d8e889354
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 53b9afa4c5ccdcb1f18d2947981aee6571b73134
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774044"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120113"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Biçimlendirilen dizeler oluşturmak için dize ilişkilendirmeyi kullanın
 
@@ -34,11 +32,11 @@ var name = "<name>";
 Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 ```
 
-Konsol pencerenize `dotnet run` yazarak bu kodu deneyin. Programı çalıştırdığınızda, selamdaki adınızı içeren tek bir dize görüntüler. @No__t_0 yöntemi çağrısına dahil edilen dize, bir *enterpolasyonlu dize ifadesidir*. Katıştırılmış kodu içeren bir dizeden tek bir dize ( *sonuç dizesi*olarak adlandırılır) oluşturmanıza imkan tanıyan bir şablon türüdür. Enterpolasyonlu dizeler, bir dizeye değer eklemek veya dizeleri birleştirmek (bir araya birleştirmek) için özellikle faydalıdır.
+Konsol pencerenize `dotnet run` yazarak bu kodu deneyin. Programı çalıştırdığınızda, selamdaki adınızı içeren tek bir dize görüntüler. <xref:System.Console.WriteLine%2A> yöntemi çağrısına dahil edilen dize, bir *enterpolasyonlu dize ifadesidir*. Katıştırılmış kodu içeren bir dizeden tek bir dize ( *sonuç dizesi*olarak adlandırılır) oluşturmanıza imkan tanıyan bir şablon türüdür. Enterpolasyonlu dizeler, bir dizeye değer eklemek veya dizeleri birleştirmek (bir araya birleştirmek) için özellikle faydalıdır.
 
 Bu basit örnek, her bir enterpolasyonlu dizenin sahip olması gereken iki öğeyi içerir:
 
-- Açılış tırnak işareti karakterinden önce `$` karakteriyle başlayan bir dize sabit değeri. @No__t_0 simgesiyle tırnak işareti karakteri arasında boşluk olamaz. (Bir tane eklerseniz ne olacağını görmek isterseniz, `$` karakterden sonra bir boşluk ekleyin, dosyayı kaydedin ve konsol penceresine `dotnet run` yazarak programı yeniden çalıştırın. C# Derleyici bir hata iletisi görüntülüyor, "Error CS1056: beklenmeyen karakter ' $ '".)
+- Açılış tırnak işareti karakterinden önce `$` karakteriyle başlayan bir dize sabit değeri. `$` simgesiyle tırnak işareti karakteri arasında boşluk olamaz. (Bir tane eklerseniz ne olacağını görmek isterseniz, `$` karakterden sonra bir boşluk ekleyin, dosyayı kaydedin ve konsol penceresine `dotnet run` yazarak programı yeniden çalıştırın. C# Derleyici bir hata iletisi görüntülüyor, "Error CS1056: beklenmeyen karakter ' $ '".)
 
 - Bir veya daha fazla *ilişkilendirme ifadesi*. Enterpolasyon ifadesi bir açma ve kapatma ayracı (`{` ve `}`) ile belirtilir. Küme ayraçlarının içinde C# (`null` dahil) bir değer döndüren herhangi bir ifadeyi yerleştirebilirsiniz.
 
@@ -48,7 +46,7 @@ Biraz daha farklı veri türleriyle daha fazla dize ilişkilendirme örneği den
 
 Önceki bölümde, bir dizeyi diğerinin içine eklemek için dize ilişkilendirmeyi kullandınız. Enterpolasyon ifadesinin sonucu herhangi bir veri türünde olabilir, ancak. Enterpolasyonlu bir dizedeki çeşitli veri türlerinin değerlerini ekleyelim.
 
-Aşağıdaki örnekte, ilk olarak, <xref:System.Object.ToString?displayProperty=nameWithType> yönteminin davranışını [geçersiz kılan](../../language-reference/keywords/override.md) bir `Name` [özelliğine](../../properties.md) ve bir `ToString` [yöntemine](../../methods.md)sahip `Vegetable` bir [sınıf](../../programming-guide/classes-and-structs/classes.md) veri türü tanımladık. [@No__t_1 erişim değiştiricisi](../../language-reference/keywords/public.md) , bu yöntemi bir `Vegetable` örneğinin dize gösterimini almak için herhangi bir istemci kodu için kullanılabilir hale getirir. Örnekte `Vegetable.ToString` yöntemi `Vegetable` [oluşturucusunda](../../programming-guide/classes-and-structs/constructors.md)başlatılan `Name` özelliğinin değerini döndürür:
+Aşağıdaki örnekte, ilk olarak, <xref:System.Object.ToString?displayProperty=nameWithType> yönteminin davranışını [geçersiz kılan](../../language-reference/keywords/override.md) bir `Name` [özelliğine](../../properties.md) ve bir `ToString` [yöntemine](../../methods.md)sahip `Vegetable` bir [sınıf](../../programming-guide/classes-and-structs/classes.md) veri türü tanımladık. [`public` erişim değiştiricisi](../../language-reference/keywords/public.md) , bu yöntemi bir `Vegetable` örneğinin dize gösterimini almak için herhangi bir istemci kodu için kullanılabilir hale getirir. Örnekte `Vegetable.ToString` yöntemi `Vegetable` [oluşturucusunda](../../programming-guide/classes-and-structs/constructors.md)başlatılan `Name` özelliğinin değerini döndürür:
 
 ```csharp
 public Vegetable(string name) => Name = name;
@@ -93,7 +91,7 @@ Enterpolasyonlu dizedeki enterpolasyon ifadesinin `item`, sonuç dizesinde "eggb
 
 - Enterpolasyon ifadesi `null` olarak değerlendirilirse, boş bir dize ("" veya <xref:System.String.Empty?displayProperty=nameWithType>) kullanılır.
 
-- Enterpolasyon ifadesi `null` olarak değerlendirilmiyorsa, genellikle sonuç türünün `ToString` yöntemi çağrılır. @No__t_0 yönteminin uygulamasını güncelleştirerek bunu test edebilirsiniz. Her tür bu yöntemin bir uygulaması olduğundan `ToString` yöntemini uygulamanız gerekmez. Bunu test etmek için örnekteki `Vegetable.ToString` yönteminin tanımını (bunu yapmak için, bir açıklama simgesi koyun `//`, önüne ekleyin). Çıktıda, "eggbitki" dizesi, <xref:System.Object.ToString?displayProperty=nameWithType> yönteminin varsayılan davranışı olan tam nitelikli tür adı (Bu örnekteki "Vegetable") ile değiştirilmiştir. Bir numaralandırma değeri için `ToString` yönteminin varsayılan davranışı değerin dize gösterimini döndürmektir.
+- Enterpolasyon ifadesi `null` olarak değerlendirilmiyorsa, genellikle sonuç türünün `ToString` yöntemi çağrılır. `Vegetable.ToString` yönteminin uygulamasını güncelleştirerek bunu test edebilirsiniz. Her tür bu yöntemin bir uygulaması olduğundan `ToString` yöntemini uygulamanız gerekmez. Bunu test etmek için örnekteki `Vegetable.ToString` yönteminin tanımını (bunu yapmak için, bir açıklama simgesi koyun `//`, önüne ekleyin). Çıktıda, "eggbitki" dizesi, <xref:System.Object.ToString?displayProperty=nameWithType> yönteminin varsayılan davranışı olan tam nitelikli tür adı (Bu örnekteki "Vegetable") ile değiştirilmiştir. Bir numaralandırma değeri için `ToString` yönteminin varsayılan davranışı değerin dize gösterimini döndürmektir.
 
 Bu örnekteki çıktıda, tarih çok kesin (eggbitki fiyatı her saniye değişmez) ve fiyat değeri bir para birimi göstermez. Sonraki bölümde, ifade sonuçlarının dize temsillerini biçimini denetleyerek bu sorunları nasıl düzelteceğinizi öğreneceksiniz.
 
@@ -109,7 +107,7 @@ Bir biçim dizesini, iki nokta üst üste (":") ve biçim dizesiyle birlikte ent
 
 .NET kitaplıklarında bulunan birçok tür, önceden tanımlanmış bir biçim dizeleri kümesini destekler. Bunlar, tüm sayısal türleri ve Tarih ve saat türlerini içerir. Biçim dizelerini destekleyen türlerin tüm listesi için bkz. [.net makalesindeki biçimlendirme türleri](../../../standard/base-types/formatting-types.md) ' nde [Biçim dizeleri ve .NET sınıf kitaplığı türleri](../../../standard/base-types/formatting-types.md#format-strings-and-net-types) .
 
-Metin düzenleyicinizdeki biçim dizelerini değiştirmeyi deneyin ve her değişiklik yaptığınızda, değişikliklerin tarih ve saat ve sayısal değer biçimlendirmesini nasıl etkilediğini görmek için programı yeniden çalıştırın. @No__t_0 içindeki "d" öğesini "t" olarak değiştirin (kısa saat biçimini göstermek için), "y" (yılı ve ayı göstermek için) ve "yyyy" (yılı dört basamaklı bir sayı olarak göstermek için). @No__t_0 içindeki "C2" öğesini "e" (üstel gösterim için) ve "F3" (ondalık ayırıcıdan sonra üç basamaklı bir sayısal değer için) olarak değiştirin.
+Metin düzenleyicinizdeki biçim dizelerini değiştirmeyi deneyin ve her değişiklik yaptığınızda, değişikliklerin tarih ve saat ve sayısal değer biçimlendirmesini nasıl etkilediğini görmek için programı yeniden çalıştırın. `{date:d}` içindeki "d" öğesini "t" olarak değiştirin (kısa saat biçimini göstermek için), "y" (yılı ve ayı göstermek için) ve "yyyy" (yılı dört basamaklı bir sayı olarak göstermek için). `{price:C2}` içindeki "C2" öğesini "e" (üstel gösterim için) ve "F3" (ondalık ayırıcıdan sonra üç basamaklı bir sayısal değer için) olarak değiştirin.
 
 Biçimlendirmeyi denetlemenin yanı sıra, sonuç dizesinde bulunan biçimlendirilmiş dizelerin alan genişliğini ve hizalamasını da denetleyebilirsiniz. Sonraki bölümde bunu nasıl yapacağınızı öğreneceksiniz.
 
@@ -143,7 +141,7 @@ public class Example
 
 Yazarların adları sola hizalanır ve yazdığı başlıklar sağa hizalanır. Bir ilişkilendirme ifadesinden sonra bir virgül (",") ekleyerek ve *en az* alan genişliğini belirterek hizalamayı belirlersiniz. Belirtilen değer pozitif bir sayıysa, alan sağa hizalanır. Negatif bir sayı ise, alan sola hizalanır.
 
-@No__t_0 ve `{title.Key,-25}` koddan negatif işaretlerini kaldırmayı deneyin ve aşağıdaki kod olduğu gibi örneği yeniden çalıştırın:
+`{"Author",-25}` ve `{title.Key,-25}` koddan negatif işaretlerini kaldırmayı deneyin ve aşağıdaki kod olduğu gibi örneği yeniden çalıştırın:
 
 ```csharp
 Console.WriteLine($"|{"Author",25}|{"Title",30}|");
@@ -153,7 +151,7 @@ foreach (var title in titles)
 
 Bu kez, yazar bilgileri sağa hizalanır.
 
-Tek bir ilişkilendirme ifadesi için bir hizalama belirleyicisi ve biçim dizesi birleştirebilirsiniz. Bunu yapmak için önce hizalamayı, ardından iki nokta üst üste ve biçim dizesini belirtin. @No__t_0 yöntemi içindeki tüm kodu, tanımlı alan genişlikleri olan üç biçimli dizeyi görüntüleyen aşağıdaki kodla değiştirin. Ardından `dotnet run` komutunu girerek programı çalıştırın.
+Tek bir ilişkilendirme ifadesi için bir hizalama belirleyicisi ve biçim dizesi birleştirebilirsiniz. Bunu yapmak için önce hizalamayı, ardından iki nokta üst üste ve biçim dizesini belirtin. `Main` yöntemi içindeki tüm kodu, tanımlı alan genişlikleri olan üç biçimli dizeyi görüntüleyen aşağıdaki kodla değiştirin. Ardından `dotnet run` komutunu girerek programı çalıştırın.
 
 ```csharp
 Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.342,15:N2}] feet");

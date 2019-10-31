@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 84296b55-c2c5-424c-ac9c-8e28e2895945
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f6f5cd47abd4c17021bc324898a096ff70a3db2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a957a042875b546a18a17422f355b712756e91c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739998"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098167"
 ---
 # <a name="cordebughandletype-enumeration"></a>CorDebugHandleType Numaralandırması
-Tanıtıcı türü gösterir.  
+Tanıtıcı türünü gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,17 +37,17 @@ typedef enum CorDebugHandleType {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`HANDLE_STRONG`|Tanıtıcı güçlü, bir nesnenin çöp toplama tarafından iadesi engeller.|  
-|`HANDLE_WEAK_TRACK_RESURRECTION`|Tanıtıcı zayıf, hangi nesnenin çöp toplama tarafından iadesi engellemez.<br /><br /> Nesne toplandığında tanıtıcı geçersiz hale gelir.|  
+|`HANDLE_STRONG`|Tanıtıcı güçlü olduğundan, bir nesnenin çöp toplama tarafından geri kazanımasını önler.|  
+|`HANDLE_WEAK_TRACK_RESURRECTION`|Tanıtıcı zayıf, bu da bir nesnenin çöp toplama tarafından geri kazanımasını engellemez.<br /><br /> Nesne toplandığında tanıtıcı geçersiz hale gelir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

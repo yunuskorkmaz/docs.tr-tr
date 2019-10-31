@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: d1b2b172-5353-42af-a877-cf653c68ece0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d4b748370ff1aff042923002ad827a0e39d99963
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cf7667f0f2a0f77cd793e00a5de8b030b0c53ec8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799272"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140703"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>GetHashFromAssemblyFileW İşlevi
 Belirtilen karma algoritmasını kullanarak belirtilen derleme dosyasının karmasını alır. Derleme dosyasının yolu Unicode dize olarak belirtilmelidir.  
@@ -54,14 +52,14 @@ HRESULT GetHashFromAssemblyFileW (
  'ndaki İstenen en büyük boyut `pbHash`.  
   
  `pchHash`  
- dışı Bayt cinsinden döndürülen boyut `pbHash`.  
+ dışı `pbHash`bayt cinsinden döndürülen boyut.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** StrongName. h  
+ **Üst bilgi:** StrongName. h  
   
- **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65af5303468904ee40da4d567381782af70bfb38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db6a20dee21b6c8bbd55fa9b52a159a00fe310d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776491"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092032"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK İşlev İşaretçisi
-Bekleme işleyen ana bildiren bir işleve işaret eder (<xref:System.Threading.WaitHandle>) sinyal veya zaman aşımına uğradı.  
+Ana bilgisayarı bir bekleme tutamacının (<xref:System.Threading.WaitHandle>) sinyal ettiğini veya zaman aşımına uğradığını bildiren bir işleve işaret eder.  
   
- Bu işlev işaretçisi .NET Framework 4'te kullanım dışıdır.  
+ Bu işlev işaretçisi .NET Framework 4 ' te kullanım dışı bırakıldı.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +37,22 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
   
 ## <a name="parameters"></a>Parametreler  
  `lpParameter`  
- [in] Ana bilgisayar tarafından tanımlanan bilgileri içeren bir nesne için bir işaretçi.  
+ 'ndaki Ana bilgisayar tarafından tanımlanan bilgileri içeren bir nesne işaretçisi.  
   
  `TimerOrWaitFired`  
- [in] `true` bekleme tanıtıcısı zaman aşımına uğradı, varsa veya `false` , sinyal değilse.  
+ [in] bekleme işlemi zaman aşımına uğradı veya sinyal edildiyse `false` `true`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşleve `WAITORTIMERCALLBACK` noktaları bir geri çağırma işlevidir ve uygulamanın barındırma yazıcı tarafından uygulanır.  
+ `WAITORTIMERCALLBACK` işaret eden, bir geri çağırma işlevi olduğu ve barındırma uygulamasının yazarı tarafından uygulanması gereken işlev.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorWks.dll  
+ **Kitaplık:** MSCorWks. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

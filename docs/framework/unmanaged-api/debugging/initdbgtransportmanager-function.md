@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: a30102ff-c52e-48c9-b3a9-aa14286a42b2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 948e97064d12dc5b2044faf35aa374e5ba5f2592
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d67bee3ea0e57080179b3fbb7e0b4193860c44d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764787"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103284"
 ---
 # <a name="initdbgtransportmanager-function"></a>InitDbgTransportManager İşlevi
-İşlem ve çalışma zamanı numaralandırması için bir uzak hedef bağlanmak için Aktarım Yöneticisi'ni başlatır.  
+İşlem ve çalışma zamanı numaralandırması için uzak hedefe bağlanmak üzere aktarım yöneticisini başlatır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,16 +37,16 @@ HRESULT InitDbgTransportManager ();
  Başarılı.  
   
  E_OUTOFMEMORY  
- İşlev için bir aktarım Yöneticisi bellek ayıramadı.  
+ İşlev, bir taşıma yöneticisi için bellek ayıramadı.  
   
- E_FAIL (veya diğer E_ dönüş kodları)  
- Diğer hatalar.  
+ E_FAıL (veya diğer E_ dönüş kodları)  
+ Diğer sorunlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CoreClrRemoteDebuggingInterfaces.h  
+ **Üst bilgi:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Kitaplık:** mscordbi_macx86. dll  
   
- **.NET framework sürümleri:** 3.5 SP1
+ **.NET Framework sürümleri:** 3,5 SP1

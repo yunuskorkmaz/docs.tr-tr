@@ -5,14 +5,12 @@ helpviewer_keywords:
 - supportPortability element
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a76c378038a19d3edb9fe0c5e61012cc854c1b7
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 63c309a8a93c1d31ed8f73a495cf5154c3590d56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773924"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115648"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > öğesi
 Bir uygulamanın, uygulama taşınabilirlik amaçları doğrultusunda derlemeleri eşdeğer olarak ele alan varsayılan davranışı devre dışı bırakarak, .NET Framework iki farklı uygulamasındaki aynı derlemeye başvurabildiklerini belirtir.  
@@ -69,7 +67,7 @@ Bu tür bir senaryo, hem .NET Framework uygulamasına hem de belirli bir başvur
   
 ## <a name="example"></a>Örnek  
 
-Aşağıdaki örnek, bir uygulamanın hem .NET Framework uygulamasına hem de her iki uygulamada bulunan herhangi bir .NET Framework derlemesinin Silverlight uygulamasına .NET Framework başvurularına sahip olmasını sağlar. @No__t_0 derleyici seçeneği, bu app. config dosyasının konumunu belirtmek için kullanılmalıdır.  
+Aşağıdaki örnek, bir uygulamanın hem .NET Framework uygulamasına hem de her iki uygulamada bulunan herhangi bir .NET Framework derlemesinin Silverlight uygulamasına .NET Framework başvurularına sahip olmasını sağlar. `/appconfig` derleyici seçeneği, bu app. config dosyasının konumunu belirtmek için kullanılmalıdır.  
   
 ```xml  
 <configuration>  

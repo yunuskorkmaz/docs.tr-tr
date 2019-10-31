@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CreateClassEnumWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a696a6f02f6d3a5afbcb45e5566e4b667739e2c5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1d637479bd140e635ee647a1e30d03343d8b0dcd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798733"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107528"
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi işlevi
 Belirtilen seçim ölçütlerini karşılayan tüm sınıflar için bir Numaralandırıcı döndürür.
@@ -48,7 +46,7 @@ HRESULT CreateClassEnumWmi (
 ## <a name="parameters"></a>Parametreler
 
 `strSuperclass`\
-'ndaki Aksi takdirde `null` veya boşsa, bir üst sınıfın adını belirtir; Numaralandırıcı yalnızca bu sınıfın alt sınıflarını döndürür. Ya da boşsa ve `lFlags` WBEM_FLAG_SHALLOW ise, yalnızca üst düzey sınıfları (üst sınıfı olmayan sınıflar) döndürür. `null` Ya da boşsa ve `lFlags` ise `WBEM_FLAG_DEEP`, ad alanındaki tüm sınıfları döndürür. `null`
+'ndaki `null` veya boş değilse, bir üst sınıfın adını belirtir; Numaralandırıcı bu sınıfın yalnızca alt sınıflarını döndürür. `null` veya boş ise ve `lFlags` WBEM_FLAG_SHALLOW ise, yalnızca üst düzey sınıfları (üst sınıfı olmayan sınıflar) döndürür. `null` veya boş ise ve `lFlags` `WBEM_FLAG_DEEP`, ad alanındaki tüm sınıfları döndürür.
 
 `lFlags`\
 'ndaki Bu işlevin davranışını etkileyen bayrakların birleşimi. Aşağıdaki değerler *Wbemcli. h* üstbilgi dosyasında tanımlanmıştır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
@@ -62,7 +60,7 @@ HRESULT CreateClassEnumWmi (
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | İşlev, salt ileri bir Numaralandırıcı döndürür. Genellikle, yalnızca ileri Numaralandırıcılar daha hızlıdır ve geleneksel numaralandırıcılardan daha az bellek kullanır, ancak [kopyalama](clone.md)çağrılarına izin vermez. |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI, serbest bırakılana kadar Numaralandırmadaki nesnelere işaretçiler tutar. |
 
-Önerilen bayraklar `WBEM_FLAG_RETURN_IMMEDIATELY` ve `WBEM_FLAG_FORWARD_ONLY` en iyi performans için.
+Önerilen bayraklar `WBEM_FLAG_RETURN_IMMEDIATELY` ve en iyi performans için `WBEM_FLAG_FORWARD_ONLY`.
 
 `pCtx`\
 'ndaki Genellikle, bu değer `null`. Aksi takdirde, istenen sınıfları sağlayan sağlayıcı tarafından kullanılabilen bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) örneğine yönelik bir işaretçidir.
@@ -96,7 +94,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | Kullanıcının işlevin döndüregörüntüleyebileceği bir veya daha fazla sınıfı görüntüleme izni yok. |
 | `WBEM_E_FAILED` | 0x80041001 | Belirtilmeyen bir hata oluştu. |
-| `WBEM_E_INVALID_CLASS` | 0x80041010 | `strSuperClass`yok. |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | `strSuperClass` yok. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI, büyük olasılıkla durmuş ve yeniden başlatılıyor. [Connectserverwmi](connectserverwmi.md) ' i yeniden çağırın. |
@@ -111,9 +109,9 @@ Bu işlev, [IWbemServices:: CreateClassEnum](/windows/desktop/api/wbemcli/nf-wbe
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi** WMINet_Utils. IDL
+**Üst bilgi:** WMINet_Utils. IDL
 
 **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

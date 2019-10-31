@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c0c7477-05ba-461b-b21b-cbfba95f1db1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31329a8674a9991a3f306eeff44ee3437ad64a5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9b3a6bab8672f3ef3fca5f89c60b03a43477cce5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779438"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123308"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo Yöntemi
-Belirtilen doğrulama hatası için karşılık gelen hata iletisini alır.  
+Belirtilen doğrulama hatasına karşılık gelen hata iletisini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,25 +39,25 @@ HRESULT FormatEventInfo(
   
 ## <a name="parameters"></a>Parametreler  
  `hVECode`  
- [in] Doğrulama hata işleyicisine geçirilen HRESULT değerini.  
+ 'ndaki Doğrulama hata işleyicisine geçirilen HRESULT değeri.  
   
  `Context`  
- [in] A `VEContext` doğrulama hatası ile ilgili bağlam bilgilerini içeren bir örneği.  
+ 'ndaki Doğrulama hatası hakkında bağlam bilgilerini içeren bir `VEContext` örneği.  
   
  `msg`  
- [out içinde] Döndürülen hata iletisi içeren bir dize.  
+ [in, out] Döndürülen hata iletisini içeren bir dize.  
   
  `ulMaxLength`  
- [in] Hata iletisi en fazla uzunluğu.  
+ 'ndaki Hata iletisinin en fazla uzunluğu.  
   
  `psa`  
- [in] Hatayı açıklayan ek parametreler içeren güvenli bir dizi.  
+ 'ndaki Hatayı açıklayan ek parametreler içeren bir güvenli dizi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** IValidator.idl, IValidator.h  
+ **Üst bilgi:** IValidator. IDL, IValidator. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

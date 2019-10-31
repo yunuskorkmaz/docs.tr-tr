@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0a65e2a4-5bb6-496c-ae6f-40474426b5a6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8aeb6ed448539db2720fee0d42cfcc344fd3bbf7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da532ee1b5909a68bedbb9e6f6c96333e88002a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762769"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109722"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a>ICorDebugModule::EnableJITDebugging Yöntemi
-Just-ın-time (JIT) derleyicinin bu modül içindeki yöntemler için hata ayıklama bilgilerini korur olup olmadığını denetler.  
+Just-In-Time (JıT) derleyicisinin Bu modüldeki yöntemler için hata ayıklama bilgilerini koruyamayacağını denetler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +36,19 @@ HRESULT EnableJITDebugging(
   
 ## <a name="parameters"></a>Parametreler  
  `bTrackJITInfo`  
- [in] Bu değer kümesine `true` Microsoft Ara dil (MSIL) ve bu modüldeki her yöntemi JIT olarak derlenmiş sürümleri arasında eşleme bilgilerini korumak JIT derleyicisi etkinleştirmek için.  
+ 'ndaki JıT derleyicisinin Microsoft ara dili (MSIL) sürümü ile bu modüldeki her yöntemin JıT derlenmiş sürümü arasındaki eşleme bilgilerini korumasına olanak tanımak için bu değeri `true` olarak ayarlayın.  
   
  `bAllowJitOpts`  
- [in] Bu değer kümesine `true` JIT Derleyici kodu ile hata ayıklama için belirli özel JIT iyileştirmelerini etkinleştirmek için.  
+ 'ndaki JıT derleyicisinin hata ayıklama için belirli bir JıT özel iyileştirmelere sahip kod oluşturmasını sağlamak için bu değeri `true` olarak ayarlayın.  
   
 ## <a name="remarks"></a>Açıklamalar  
- JIT hata ayıklama, hata ayıklayıcısı etkinken, yüklenen tüm modüller için varsayılan olarak etkindir. Program aracılığıyla etkinleştirme veya ayarları devre dışı bırakma genel ayarları geçersiz kılar.  
+ JıT hata ayıklayıcı, hata ayıklayıcısı etkin olduğunda yüklenen tüm modüller için varsayılan olarak etkindir. Ayarları programlı bir şekilde etkinleştirmek veya devre dışı bırakmak genel ayarları geçersiz kılar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

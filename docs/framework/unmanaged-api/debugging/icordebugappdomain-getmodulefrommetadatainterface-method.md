@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f35225b3-5dda-4d5a-913d-b3373e9ab81e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 48249bb634c301b7fda2c360c3b793e9206a759a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c8469c9aa875e7d567229e9949d83083cbe54987
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737894"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110351"
 ---
 # <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a>ICorDebugAppDomain::GetModuleFromMetaDataInterface Metodu
-Belirtilen meta veriler arabirimine karşılık gelen modülü alır.  
+Verilen meta veri arabirimine karşılık gelen modülü alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,16 +36,16 @@ HRESULT GetModuleFromMetaDataInterface (
   
 ## <a name="parameters"></a>Parametreler  
  `pIMetaData`  
- [in] Biri olan bir nesneye bir işaretçi [meta veri arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).  
+ 'ndaki [Meta veri arabirimlerinden](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)biri olan nesneye yönelik bir işaretçi.  
   
  `ppModule`  
- [out] Bir işaretçi adresine Icordebugmodule nesnenin karşılık gelen bir modül için belirtilen meta veriler arabirimi temsil eder.  
+ dışı Belirtilen meta veri arabirimine karşılık gelen modülü temsil eden bir ICorDebugModule nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -14,39 +14,37 @@ helpviewer_keywords:
 ms.assetid: 2bd55e0c-001b-41fd-b29d-f01670fe8216
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 19ef7cb78791496de76e5741f8254ee88563c776
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e25a6a03a836b8b4964b8260c974c8e8d8d9998d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763379"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092195"
 ---
 # <a name="iclrtaskmanager-interface"></a>ICLRTaskManager Arabirimi
-Ortak dil çalışma zamanı (CLR) açıkça istemek üzere konağın izin yöntemleri yeni bir görev oluşturma, şu anda yürütülmekte olan görevi Al ve coğrafi dil ve kültür için bir görev kümesi sağlar.  
+Ana bilgisayarın ortak dil çalışma zamanının (CLR) yeni bir görev oluşturmasını, şu anda yürütülmekte olan görevi almasını ve görevin coğrafi dilini ve kültürünü ayarlamanızı sağlayan yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[CreateTask Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-createtask-method.md)|CLR yeni oluşturduğunuz açıkça ister [Iclrtask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) örneği.|  
-|[GetCurrentTask Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-getcurrenttask-method.md)|Alır `ICLRTask` şu anda yürütülmekte olan görevi temsil eden örneği.|  
-|[GetCurrentTaskType Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-getcurrenttasktype-method.md)|Şu anda yürütülmekte olan görevi türünü alır.|  
-|[SetLocale Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-setlocale-method.md)|Konak şu anda yürütülmekte olan görevi yerel ayar tanımlayıcısı değiştirdi CLR bildirir.|  
-|[SetUILocale Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-setuilocale-method.md)|Ortak dil çalışma zamanı ana kullanıcı arabirimi yerel ayar tanımlayıcısı şu anda yürütülen görevde değiştirdi bildirir.|  
+|[CreateTask Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-createtask-method.md)|CLR 'nin yeni bir [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) örneği oluşturmasını açıkça ister.|  
+|[GetCurrentTask Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-getcurrenttask-method.md)|Şu anda yürütülmekte olan görevi temsil eden `ICLRTask` örneğini alır.|  
+|[GetCurrentTaskType Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-getcurrenttasktype-method.md)|Şu anda yürütülmekte olan görevin türünü alır.|  
+|[SetLocale Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-setlocale-method.md)|, Konağın Şu anda yürütülmekte olan görevde yerel ayar tanıtıcısını değiştirdiğinizi CLR 'ye bildirir.|  
+|[SetUILocale Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-setuilocale-method.md)|Ana bilgisayarın şu anda yürütülmekte olan görevde Kullanıcı arabirimi yerel ayar tanımlayıcısını değiştirdiği ortak dil çalışma zamanına bildirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Barındırılan bir ortamda çalışan her görev temsile her iki konak tarafında sahiptir (örneği [Ihosttask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)) ve CLR tarafında (örneği [Iclrtask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)). Konak veya CLR görev oluşturulmasını başlatabilir, ancak konak tarafı gösterimi konakla ilgili görev CLR arasındaki başarılı iletişim sağlamak için karşılık gelen bir CLR tarafı gösterimi ile ilişkilendirilmiş olması gerekir. İki nesne oluşturulur ve bir işletim sistemi iş parçacığı üzerinde yönetilen kodu yürütmeden önce örneği.  
+ Barındırılan bir ortamda çalışan her görev, hem konak tarafında (bir [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)örneği) hem de clr tarafında ( [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)örneği) temsil edilir. Konak veya CLR bir görevin oluşturulmasını başlatabilir, ancak konakla ilgili konak ile CLR arasında başarılı bir iletişim sağlamak için konak tarafı gösteriminin karşılık gelen bir CLR tarafı temsili ile ilişkilendirilmesi gerekir. Yönetilen kodun bir işletim sistemi iş parçacığında yürütülebilmesi için önce iki nesnenin oluşturulup oluşturulması gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

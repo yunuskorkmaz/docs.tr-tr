@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 796de687-7dd4-4b7b-a10b-8bf22dc7779f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b7e5b0a9f4166923a559eb3886aa0f9cabbcd72
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6969c23bcf3ea19bf6e404996d477f669f0eee5b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962954"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122403"
 ---
 # <a name="icordebugthreadenum-interface"></a>ICorDebugThreadEnum Arabirimi
 Icordebugger Genum yöntemlerini uygular ve ICorDebugThread dizilerini numaralandırır.  
@@ -30,7 +28,7 @@ Icordebugger Genum yöntemlerini uygular ve ICorDebugThread dizilerini numaralan
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki `ICorDebugThread` belirtilen örnek sayısını alır.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki belirtilen `ICorDebugThread` örneği sayısını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -38,11 +36,11 @@ Icordebugger Genum yöntemlerini uygular ve ICorDebugThread dizilerini numaralan
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: <clear>NameValueSectionHandler ve DictionarySectionHandler için öğesi
+title: NameValueSectionHandler ve DictionarySectionHandler için <clear> öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbb689db4abc5d59729d9a4d9807a02a0983d40b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3e27bb7e21baf2eb4990d0107db4aae1b5f9a7d1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927705"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119068"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<NameValueSectionHandler ve DictionarySectionHandler için > öğesini temizle
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler ve DictionarySectionHandler için \<Clear > öğesi
 
 Bir bölümdeki önceden tanımlanmış tüm ayarları temizler.
 
-[ **\<Yapılandırma >** ](configuration-element.md)   
+[ **\<yapılandırma >** ](configuration-element.md)   
 &nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> Temizle**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<temizle >**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,7 +38,7 @@ Yok.
 
 |     | Açıklama |
 | --- | ------------|
-| [sectionName > öğesi  **\<** ](custom-element-2.md) | <xref:System.Configuration.NameValueSectionHandler> Ve<xref:System.Configuration.DictionarySectionHandler> sınıflarını kullanan özel yapılandırma bölümlerinin ayarlarını tanımlar. |
+| [ **\<sectionName >** Dosyalarında](custom-element-2.md) | <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> sınıflarını kullanan özel yapılandırma bölümlerinin ayarlarını tanımlar. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
@@ -46,13 +46,13 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Uygulamanızın yapılandırma dosyası hiyerarşisinde daha yüksek bir düzeyde tanımlanmış tüm ayarları kaldırmak için  **\<Clear >** öğesini kullanabilirsiniz.
+Uygulamanızın yapılandırma dosyası hiyerarşisinde daha yüksek bir düzeyde tanımlanmış tüm ayarları kaldırmak için **\<clear >** öğesini kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Bu örnek bir makine yapılandırma dosyası ve bir uygulama yapılandırma dosyası tanımlar ve daha önce makine yapılandırmasında tanımlanmış bölümleri temizlemek için bir uygulama yapılandırma dosyasında  **\<Clear >** öğesinin nasıl kullanılacağını gösterir dosyasýný.
+Bu örnek bir makine yapılandırma dosyası ve bir uygulama yapılandırma dosyası tanımlar ve daha önce makine yapılandırma dosyasında tanımlanan bölümleri temizlemek için bir uygulama yapılandırma dosyasında **\<clear >** öğesinin nasıl kullanılacağını gösterir.
 
-Aşağıdaki makine yapılandırma dosyası kodu,  **\<MySection >** bölümünü bildirir:
+Aşağıdaki makine yapılandırma dosyası kodu, **\<mysection >** bölümünü bildirir:
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ Aşağıdaki makine yapılandırma dosyası kodu,  **\<MySection >** bölümün�
 </configuration>
 ```
 
-Aşağıdaki uygulama yapılandırma dosyası kodu,  **\<MySection >** 'daki tüm ayarları kaldırır. Uygulama,  **\<makine yapılandırma dosyasının MySection >** bölümünde içinde belirtilen ayarlardan hiçbirini alamıyor.
+Aşağıdaki uygulama yapılandırma dosyası kodu, tüm ayarları **\<mySection >** kaldırır. Uygulama, makine yapılandırma dosyasının **\<mySection >** bölümünde belirtilen ayarlardan hiçbirini alamıyor.
 
 ```xml
 <!-- Application configuration file -->

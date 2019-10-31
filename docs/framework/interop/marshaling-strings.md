@@ -11,32 +11,30 @@ helpviewer_keywords:
 - marshaling, platform invoke
 - sample applications [.NET Framework], marshaling strings
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab192f086e3e86a879d3478f2bf0d7084ae411b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88b6342038f99bf06fa2986c43f422e63cffd31e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642860"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124377"
 ---
 # <a name="marshaling-strings"></a>Dizeleri Hazırlama
-Platform çağırma bunları (Unicode) .NET Framework biçiminden yönetilmeyen biçimine (ANSI) gerekirse dönüştürme kopyaları dizesi parametreleri. Yönetilen dizeler sabit olduğundan, platform çağırma işlevi döndüğünde bunları yönetilmeyen bellekten yönetilen bellek kopyalamaz.  
+Platform çağrısı, dize parametrelerini kopyalar, bu parametreleri .NET Framework biçiminden (Unicode) yönetilmeyen biçimde (ANSI), gerekirse. Yönetilen dizeler sabit olduğu için, platform çağırma işlevi, işlev döndürdüğü zaman yönetilen belleğe geri kopyalamaz.  
   
- Aşağıdaki tabloda, dizeler için sıralama seçeneklerini listeler, bunların kullanımını açıklar ve karşılık gelen .NET Framework örnek bir bağlantı sağlar.  
+ Aşağıdaki tabloda dizeler için sıralama seçenekleri listelenmekte, kullanımları açıklanmakta ve karşılık gelen .NET Framework örneğine bir bağlantı sağlanmıştır.  
   
 |Dize|Açıklama|Örnek|  
 |------------|-----------------|------------|  
-|Değere göre.|Parametreleri olduğu gibi dizeleri geçirir.|[MsgBox](msgbox-sample.md)|  
-|Sonuç olarak.|Dizeleri, yönetilmeyen koddan döndürür.|[Dizeler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
-|Başvuruya göre.|Dizeler olarak In/Out parametreleri kullanarak geçirir <xref:System.Text.StringBuilder>.|[Arabellekler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))|  
-|Değere göre bir yapıda.|Dizeleri bir giriş parametresi bir yapıda geçirir.|[Yapılar](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))|  
-|Başvuruya göre bir yapı **(char\*)**.|Dizeleri bir ın/Out parametresi bir yapıda geçirir. Yönetilmeyen işlev işaretçisi karakter arabelleği bekliyor ve arabellek boyutu yapısı bir üyesidir.|[Dizeler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
-|Başvuruya göre bir yapı **(char[])**.|Dizeleri bir ın/Out parametresi bir yapıda geçirir. Yönetilmeyen işlev, bir katıştırılmış karakter arabelleği bekliyor.|[Osınfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
-|Değer sınıfında **(char\*)**.|Dizeler (bir sınıf bir ın/Out parametresi olan) bir sınıfta geçirir. Yönetilmeyen işlev işaretçisi karakter arabelleği bekliyor.|[OpenFileDlg](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w5tyztk9(v=vs.100))|  
-|Değer sınıfında **(char[])**.|Dizeler (bir sınıf bir ın/Out parametresi olan) bir sınıfta geçirir. Yönetilmeyen işlev, bir katıştırılmış karakter arabelleği bekliyor.|[Osınfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
-|Değer bir dize dizisi.|Değere göre geçirilen bir dize dizisi oluşturur.|[Diziler](marshaling-different-types-of-arrays.md)|  
-|Değere göre dizeleri içeren yapılarını dizisi.|Yapıları dizisi oluşturan dizeleri içeren ve bir dizi değere göre geçirilir.|[Diziler](marshaling-different-types-of-arrays.md)|  
+|Değere göre.|Dizeleri parametrelerde olduğu gibi geçirir.|[MsgBox](msgbox-sample.md)|  
+|Sonuç olarak.|Yönetilmeyen koddan dizeleri döndürür.|[Dizeler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
+|Başvuruya göre.|<xref:System.Text.StringBuilder>kullanarak dizeleri gelen/giden parametreler olarak geçirir.|[Arabellek](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))|  
+|Değere göre bir yapıda.|Dizeleri bir ın parametresi olan bir yapıda geçirir.|[Yapılar](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))|  
+|Başvuruya göre bir yapıda **(char\*)** .|Dizeleri bir ın/out parametresi olan bir yapıda geçirir. Yönetilmeyen işlev bir karakter arabelleği işaretçisi bekler ve arabellek boyutu yapının bir üyesidir.|[Dizeler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
+|Başvuruya göre bir yapıda **(Char [])** .|Dizeleri bir ın/out parametresi olan bir yapıda geçirir. Yönetilmeyen işlev, gömülü bir karakter arabelleği bekliyor.|[OSINFO](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
+|Değere göre bir sınıfta **(char\*)** .|Bir sınıftaki dizeleri geçirir (bir sınıf bir ın/out parametresidir). Yönetilmeyen işlev bir karakter arabelleği işaretçisi bekliyor.|[OpenFileDlg](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w5tyztk9(v=vs.100))|  
+|Değere göre bir sınıfta **(Char [])** .|Bir sınıftaki dizeleri geçirir (bir sınıf bir ın/out parametresidir). Yönetilmeyen işlev, gömülü bir karakter arabelleği bekliyor.|[OSINFO](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
+|Değere göre dizeler dizisi olarak.|Değer ile geçirilen dizelerin dizisini oluşturur.|[Diziler](marshaling-different-types-of-arrays.md)|  
+|Değere göre dizeler içeren yapıların bir dizisi olarak.|Dizeler içeren bir yapı dizisi oluşturur ve dizi değere göre geçirilir.|[Diziler](marshaling-different-types-of-arrays.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

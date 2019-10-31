@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ee1f6e6-1bd7-4ebb-83b8-ff9a08ca03de
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 16cf17d43fcad3c4f7a710678bbdc056f840eaca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57a82e4ec106fead105cc7f200e7e56026004328
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736812"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122375"
 ---
 # <a name="icordebugtypeenumeratetypeparameters-method"></a>ICorDebugType::EnumerateTypeParameters Yöntemi
-Bir arabirim işaretçisi alır içeren bir Icordebugtypeenum <xref:System.Type> bu Icordebugtype tarafından başvurulan sınıfın parametreleri.  
+Bu ICorDebugType tarafından başvurulan sınıfın <xref:System.Type> parametrelerini içeren bir ICorDebugTypeEnum için bir arabirim işaretçisi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +35,22 @@ HRESULT EnumerateTypeParameters (
   
 ## <a name="parameters"></a>Parametreler  
  `ppTyParEnum`  
- [out] Adresine bir işaretçi bir `ICorDebugTypeEnum` tür parametreleri içeren.  
+ dışı Türün parametrelerini içeren `ICorDebugTypeEnum` adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanabileceğiniz `EnumerateTypeParameters` CorElementType değeri tarafından döndürdüyse [Icordebugtype::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) ELEMENT_TYPE_CLASS, ELEMENT_TYPE_VALUETYPE, ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF ve ELEMENT_TYPE_ PTR veya ELEMENT_TYPE_FNPTR. Parametreler ve bunların sırası sayısını türüne bağlıdır:  
+ [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) tarafından döndürülen CorElementType değeri element_type_class, element_type_valuetype, element_type_array, element_type_szarray, element_type_byref, ELEMENT_TYPE_PTR veya ELEMENT_TYPE_FNPTR ise `EnumerateTypeParameters` kullanabilirsiniz. Parametrelerin sayısı ve sırası türüne bağlıdır:  
   
-- ELEMENT_TYPE_CLASS veya ELEMENT_TYPE_VALUETYPE: Bulunan tür parametreleri sayısı `ICorDebugTypeEnum` bu yöntem döndürdüğünü, karşılık gelen sınıf için biçimsel tür parametrelerinin sayısına bağımlı. Örneğin, türü ise `class Dict<String,int32>`, ardından `EnumerateTypeParameters` döndürür bir `ICorDebugTypeEnum` temsil eden nesneler içeren `String` ve `int32` dizideki.  
+- ELEMENT_TYPE_CLASS veya ELEMENT_TYPE_VALUETYPE: Bu yöntemin döndürdüğü `ICorDebugTypeEnum` içindeki tür parametrelerinin sayısı, karşılık gelen sınıf için biçimsel tür parametrelerinin sayısına bağlıdır. Örneğin, tür `class Dict<String,int32>`ise `EnumerateTypeParameters`, `String` ve `int32` sırayla temsil eden nesneleri içeren bir `ICorDebugTypeEnum` döndürür.  
   
-- ELEMENT_TYPE_FNPTR: Bulunan tür parametreleri sayısı `ICorDebugTypeEnum` bir bağımsız değişken işlev tarafından kabul sayısından daha büyük olacaktır. Bulunan ilk tür parametresi `ICorDebugTypeEnum` işlevin dönüş türü ve sonraki tür parametreleri, işlevin parametrelerdir.  
+- ELEMENT_TYPE_FNPTR: `ICorDebugTypeEnum` içindeki tür parametrelerinin sayısı, işlev tarafından kabul edilen bağımsız değişkenlerin sayısından bir büyük olacaktır. `ICorDebugTypeEnum` yer alan ilk tür parametresi, işlevin dönüş türüdür ve sonraki tür parametreleri işlevin parametreleridir.  
   
-- ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF veya ELEMENT_TYPE_PTR: Bir tür parametresi döndürülür. Örneğin, türü gibi bir dizi türü ise `int32[]`,`EnumerateTypeParameters` döndüreceği bir `ICorDebugTypeEnum` içeren bir nesneyi temsil eden `int32`.  
+- ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF veya ELEMENT_TYPE_PTR: bir tür parametresi döndürülecek. Örneğin, türü `int32[]`gibi bir dizi türü ise`EnumerateTypeParameters`, `int32`temsil eden bir nesne içeren bir `ICorDebugTypeEnum` döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

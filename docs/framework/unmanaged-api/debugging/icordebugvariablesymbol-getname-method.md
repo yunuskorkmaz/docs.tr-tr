@@ -2,14 +2,12 @@
 title: 'ICorDebugVariableSymbol:: GetName metodu'
 ms.date: 03/30/2017
 ms.assetid: c922b7d4-44e5-45e4-aef3-cc9c35a0be80
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 23637055e493c008db36b23515001895450d6ab9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9bc32d3372710b4c4e92aa89df5e6e7839ad3078
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967898"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121009"
 ---
 # <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol:: GetName metodu
 Bir değişkenin adını alır.  
@@ -26,10 +24,10 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- 'ndaki `szName` Arabellekteki karakterlerin sayısı.  
+ 'ndaki `szName` arabelleğindeki karakterlerin sayısı.  
   
  `pcchName`  
- dışı Gerçekte `szName` arabelleğe yazılan karakter sayısına yönelik bir işaretçi.  
+ dışı Gerçekten `szName` arabelleğine yazılan karakter sayısına yönelik bir işaretçi.  
   
  `szName`  
  Değişken adını içeren bir karakter dizisine yönelik bir işaretçi.  
@@ -40,11 +38,11 @@ HRESULT GetName(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

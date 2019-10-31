@@ -6,20 +6,18 @@ helpviewer_keywords:
 - threading [.NET Framework], scheduling
 - scheduling threads
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 502e118a67e157ce7756efdece866564fddc6ab7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abcdf56b90513b937adefc38583e0312fec69785
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934309"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106225"
 ---
 # <a name="scheduling-threads"></a>İş parçacıklarını zamanlama
 
-Her iş parçacığı, kendisine atanmış bir iş parçacığı önceliği vardır. Ortak dil çalışma zamanı içinde oluşturulan iş parçacığı önceliği atanan başlangıçta <xref:System.Threading.ThreadPriority.Normal?displayProperty=nameWithType>. Çalışma zamanı dışında oluşturulan iş parçacığı yönetilen ortamı girildiğinde önce sahip oldukları öncelik korur. Get veya herhangi bir iş parçacığı ile önceliğini ayarlayın <xref:System.Threading.Thread.Priority?displayProperty=nameWithType> özelliği.  
+Her iş parçacığının kendisine atanmış bir iş parçacığı önceliği vardır. Ortak dil çalışma zamanı içinde oluşturulan iş parçacıklarına başlangıçta <xref:System.Threading.ThreadPriority.Normal?displayProperty=nameWithType>önceliği atanır. Çalışma zamanının dışında oluşturulan iş parçacıkları, yönetilen ortama girmeden önce sahip oldukları önceliği korurlar. <xref:System.Threading.Thread.Priority?displayProperty=nameWithType> özelliği ile herhangi bir iş parçacığının önceliğini alabilir veya ayarlayabilirsiniz.  
   
- İş parçacıkları, önceliklerine göre yürütmek için zamanlanır. Tüm iş parçacıkları iş parçacıkları çalışma zamanı içinde yürütülen olsa da, işlemci zaman dilimleri işletim sistemi tarafından atanır. İş parçacıkları yürütüldüğü sırayı belirlemek için kullanılan algoritma zamanlama ayrıntılarını her işletim sistemiyle değişir. Bazı işletim sistemlerinde (yürütülebilir bu iş parçacığı)'ın en yüksek önceliğe sahip iş parçacığı her zaman ilk olarak çalıştırmak için zamanlandı. Aynı önceliğe sahip birden çok iş parçacığı her iş parçacığı bir sabit bir zaman dilimi yürütüleceği vererek, öncelik, iş parçacıklarının Zamanlayıcı dolaşma tüm kullanılabilir olması durumunda. Yüksek öncelikli bir iş parçacığı, çalıştırılmak için uygun olduğu sürece, daha düşük öncelikli iş parçacıklarını yürütmek almıyor. Belirli bir öncelikte artık çalıştırılabilir iş parçacıkları olduğunda Zamanlayıcı sonraki daha düşük önceliği taşır ve iş parçacıkları, öncelikle yürütme için zamanlanır. Daha yüksek öncelikli iş parçacığı çalıştırılabilir duruma gelirse, daha düşük öncelikli iş parçacığı etkisiz ve daha yüksek öncelikli iş parçacığını yeniden çalıştırmak için izin verilir. Bir uygulamanın kullanıcı arabirimini ön ve arka plan arasında geçirildiğinden tüm bunları en üstünde, işletim sistemini de iş parçacığı öncelikleri dinamik olarak ayarlayabilirsiniz. Diğer işletim sistemleri, farklı bir zamanlama algoritma kullanmayı seçebilirsiniz.  
+ İş parçacıkları önceliklerine göre yürütme için zamanlanır. İş parçacıkları çalışma zamanı içinde yürütülebilse de, tüm iş parçacıkları işletim sistemi tarafından işlemci zamanı dilimlerine atanır. İş parçacıklarının yürütüldüğü sırayı belirlemede kullanılan zamanlama algoritmasının ayrıntıları her bir işletim sistemiyle farklılık gösterir. Bazı işletim sistemleri altında, en yüksek önceliğe sahip iş parçacığı (yürütülebilecek iş parçacıklarından) her zaman ilk çalışacak şekilde zamanlanır. Aynı önceliğe sahip birden çok iş parçacığı varsa, Zamanlayıcı ilgili öncelikteki iş parçacıkları arasında geçiş yapar ve her iş parçacığına yürütülecek sabit bir zaman dilimi verir. Daha yüksek önceliğe sahip bir iş parçacığı çalıştırmak için kullanılabilir olduğu sürece, düşük öncelikli iş parçacıkları yürütülmeye ulaşmaz. Belirli bir önceliğe göre daha fazla çalıştırılabilir iş parçacığı kalmadığında, Zamanlayıcı bir sonraki düşük önceliğe gider ve yürütme için bu öncelikteki iş parçacıklarını zamanlar. Daha yüksek öncelikli bir iş parçacığı çalıştırılabilir hale gelirse, daha düşük öncelikli iş parçacığı yok edilir ve daha yüksek öncelikli iş parçacığının bir kez daha yürütülmesine izin verilir. Her birinin üzerine, işletim sistemi, bir uygulamanın kullanıcı arabirimi ön plan ve arka plan arasında taşındığında, iş parçacığı önceliklerini dinamik olarak da ayarlayabilir. Diğer işletim sistemleri farklı bir zamanlama algoritması kullanmayı tercih edebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

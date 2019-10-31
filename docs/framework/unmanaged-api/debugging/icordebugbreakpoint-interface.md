@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 608c2cea79c20a43d65fcbf37ba13242fa465100
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29bb84341c2cb4177c43f798d25a1a6d50099aa5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969318"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122788"
 ---
 # <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint Arabirimi
 
@@ -31,23 +29,23 @@ Bir işlevde bir kesme noktasını veya bir değer üzerinde bir izleme noktası
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Activate Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|Bunun `ICorDebugBreakpoint`etkin durumunu ayarlar.|  
-|[IsActive Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Bu `ICorDebugBreakpoint` , etkin olup olmadığını gösteren bir değer alır.|  
+|[Activate Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|Bu `ICorDebugBreakpoint`etkin durumunu ayarlar.|  
+|[IsActive Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Bu `ICorDebugBreakpoint` etkin olup olmadığını gösteren bir değer alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kesme noktaları, Koşullu ifadeleri doğrudan desteklemez. Bu tür işlevler isteniyorsa, bir hata ayıklayıcının üzerinde `ICorDebugBreakpoint`uygulaması gerekir.  
+ Kesme noktaları, Koşullu ifadeleri doğrudan desteklemez. Bu işlevsellik isteniyorsa, bir hata ayıklayıcı onu `ICorDebugBreakpoint`en üstünde uygulamalıdır.  
   
- ICorDebugFunctionBreakpoint Arabirimi işlevleri içindeki `ICorDebugBreakpoint` kesme noktalarını destekleyecek şekilde genişletilir.  
+ ICorDebugFunctionBreakpoint Arabirimi, işlevleri içindeki kesme noktalarını desteklemek için `ICorDebugBreakpoint` genişletir.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

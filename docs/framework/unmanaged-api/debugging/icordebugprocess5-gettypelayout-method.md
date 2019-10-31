@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bd62f5d1-e874-41f1-81e5-a29a7572c15d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ee556f559a7dc4c271f110f7bba4c86b675c3511
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a348c3b2ad33a5d68b1bc46e9a284f2d2a9c7304
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736498"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121292"
 ---
 # <a name="icordebugprocess5gettypelayout-method"></a>ICorDebugProcess5::GetTypeLayout Yöntemi
-Kendi tür tanımlayıcısına göre bellekte bir nesne düzeni bilgilerini alır.  
+Bir nesnenin tür tanımlayıcısına göre bellek içindeki düzeni hakkında bilgi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,22 +33,22 @@ HRESULT GetTypeLayout(    [in] COR_TYPEID id,     [out] COR_TYPE_LAYOUT *pLayout
   
 ## <a name="parameters"></a>Parametreler  
  `id`  
- [in] A [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) düzeni istenen türünü belirten bir belirteç.  
+ 'ndaki Düzeni istenen türü belirten bir [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) belirteci.  
   
  `pLayout`  
- [out] Bir işaretçi bir [COR_TYPE_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) nesnesinin bellek düzeni hakkındaki bilgileri içeren yapısı.  
+ dışı [Cor_type_layout](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) yapısına yönelik bir işaretçi, bellekteki nesnenin düzeni hakkında bilgiler içerir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugProcess5::GetTypeLayout` Yöntemi temel bir nesne hakkında bilgi sağlar, [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), diğer bir sayı tarafından döndürülen [Icordebugprocess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md) yöntemleri. Bilgileri tarafından sağlanan bir [COR_TYPE_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) yöntemi tarafından doldurulur yapısı.  
+ `ICorDebugProcess5::GetTypeLayout` yöntemi, bir nesne hakkında, bir dizi diğer [ICorDebugProcess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md) yöntemi tarafından döndürülen [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)temel alınarak ilgili bilgiler sağlar. Bilgiler, yöntemi tarafından doldurulan bir [cor_type_layout](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) yapısı tarafından sağlanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

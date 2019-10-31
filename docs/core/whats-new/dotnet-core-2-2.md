@@ -1,36 +1,34 @@
 ---
-title: .NET Core 2.2 içinde yenilikler nelerdir?
-description: .NET Core 2.2 içinde bulunan yeni özellikler hakkında bilgi edinin.
+title: ​.NET Core 2.2’deki yenilikler
+description: .NET Core 2,2 ' de bulunan yeni özellikler hakkında bilgi edinin.
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 49a65dd44159e9800f7cf50a1edaa3d9e9b82e47
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 917b51e0cf36cca45135fda4a084eb2bca62e835
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646793"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100687"
 ---
-# <a name="whats-new-in-net-core-22"></a>.NET Core 2.2 içinde yenilikler nelerdir?
+# <a name="whats-new-in-net-core-22"></a>​.NET Core 2.2’deki yenilikler
 
-.NET core 2.2 uygulama dağıtımı, çalışma zamanı Hizmetleri için olay işleme, Azure SQL veritabanları, JIT Derleyici performans ve kod ekleme yürütülmeden önce kimlik doğrulaması geliştirmeleri içerir `Main` yöntemi.
+.NET Core 2,2, uygulama dağıtımında geliştirmeler, çalışma zamanı Hizmetleri için olay işleme, Azure SQL veritabanlarında kimlik doğrulaması, JıT derleyicisi performansı ve `Main` yönteminin yürütülmesinden önce kod ekleme geliştirmeleri içerir.
 
-## <a name="new-deployment-mode"></a>Yeni bir dağıtım modu
+## <a name="new-deployment-mode"></a>Yeni dağıtım modu
 
-Dağıtabileceğiniz .NET Core 2.2 ile başlayarak, [framework bağımlı yürütülebilir dosyaları](../deploying/index.md#framework-dependent-executables-fde), hangi **.exe** yerine dosyaları **.dll** dosyaları. Framework bağımlı dağıtımları, framework bağımlı işlevsel olarak benzer yürütülebilir dosyalar (FDE), yine de bir paylaşılan sistem genelinde sürümünü çalıştırmak için .NET Core varlığını temel kullanır. Uygulamanızı, yalnızca kodunuzu ve üçüncü taraf bağımlılıkları içerir. Framework bağımlı dağıtımları FDEs platforma özgüdür.
+.NET Core 2,2 ile başlayarak,. **DLL** dosyaları yerine **. exe** dosyaları olan [çerçeveye bağımlı yürütülebilir](../deploying/index.md#framework-dependent-executables-fde)dosyaları dağıtabilirsiniz. İşleve bağımlı dağıtımlara benzer şekilde, çerçeveye bağımlı yürütülebilir dosyalar (FDE), .NET Core 'un paylaşılan sistem genelindeki bir sürümünün çalışmasına de dayanmaktadır. Uygulamanız yalnızca kendi kodunuzu ve üçüncü taraf bağımlılıklarını içerir. Çerçeveye bağımlı dağıtımlardan farklı olarak, FDEs platforma özgüdür.
 
-Bu yeni bir dağıtım modu doğrudan çağırmadan uygulamanızı çalıştırabilir anlamına gelir. bir kitaplık yerine bir yürütülebilir dosya oluşturma, farklı avantajına sahiptir `dotnet` ilk.
+Bu yeni dağıtım modu, bir kitaplık yerine yürütülebilir bir dosya oluşturmanın farklı avantajına sahiptir. Bu, uygulamanızı öncelikle `dotnet` çağırmadan doğrudan çalıştırabilmeniz anlamına gelir.
 
 ## <a name="core"></a>Çekirdek
 
-**Çalışma zamanı Hizmetleri olayları işleme**
+**Çalışma zamanı hizmetlerindeki olayları işleme**
 
-Genellikle, GC, JIT ve iş parçacığı havuzu, bunların uygulamanızı nasıl etkilediği anlamak için gibi çalışma zamanı Hizmetleri, uygulamanızın kullanımını izlemek isteyebilirsiniz. Windows sistemlerde, bu genellikle geçerli işlem ETW olaylarını izleme tarafından gerçekleştirilir. Bu da çalışmaya devam ederken, her zaman düşük ayrıcalıklı bir ortamda veya Linux veya macOS üzerinde çalıştırıyorsanız, ETW kullanmak mümkün değildir. 
+Uygulamanızı nasıl etkileyeceğini anlamak için, uygulamanızın GC, JıT ve ThreadPool gibi çalışma zamanı hizmetlerinin kullanımını izlemek isteyebilirsiniz. Windows sistemlerinde, bu genellikle geçerli işlemin ETW olayları izlenerek yapılır. Bu, sorunsuz çalışmaya devam ederken, düşük ayrıcalıklı bir ortamda veya Linux veya macOS 'ta çalışıyorsanız ETW 'yi kullanmak her zaman mümkün değildir. 
 
-.NET Core 2.2 ile başlayarak, CoreCLR olayları artık kullanarak tüketilebilir <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> sınıfı. Bu olaylar, GC, JIT, iş parçacığı havuzu ve birlikte çalışabilirlik gibi çalışma zamanı Hizmetleri davranışını açıklar. Bunlar CoreCLR ETW sağlayıcısı bir parçası olarak sunulan aynı olaylardır.  Bu olayları kullanan veya bir telemetri toplama hizmete göndermek aktarım mekanizması kullanmak uygulamalara izin verir. Aşağıdaki kod örneği olaylara abone olma görebilirsiniz:
+.NET Core 2,2 ile başlayarak CoreCLR olayları artık <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> sınıfı kullanılarak tüketilebilir. Bu olaylar, bu tür çalışma zamanı hizmetlerinin GC, JıT, ThreadPool ve birlikte çalışma olarak davranışını anlatmaktadır. Bunlar CoreCLR ETW sağlayıcısı 'nın bir parçası olarak sunulan olaylardır.  Bu, uygulamaların bu olayları kullanmasına veya bir telemetri toplama hizmetine göndermek için bir taşıma mekanizması kullanmasına izin verir. Aşağıdaki kod örneğinde olaylara nasıl abone olunacağına bakabilirsiniz:
 
 ```csharp
 internal sealed class SimpleEventListener : EventListener
@@ -60,7 +58,7 @@ internal sealed class SimpleEventListener : EventListener
 }
 ```
 
-Ayrıca, aşağıdaki iki özelliği .NET Core 2.2 ekler <xref:System.Diagnostics.Tracing.EventWrittenEventArgs> ETW olayları hakkında ek bilgi sağlamak için sınıfı:
+Ayrıca, .NET Core 2,2, ETW olayları hakkında ek bilgi sağlamak için <xref:System.Diagnostics.Tracing.EventWrittenEventArgs> sınıfına aşağıdaki iki özelliği ekler:
 
 - <xref:System.Diagnostics.Tracing.EventWrittenEventArgs.OSThreadId?displayProperty=nameWithType>
 
@@ -68,36 +66,36 @@ Ayrıca, aşağıdaki iki özelliği .NET Core 2.2 ekler <xref:System.Diagnostic
 
 ## <a name="data"></a>Veri
 
-**Azure SQL veritabanlarına SqlConnection.AccessToken özelliği ile AAD kimlik doğrulaması**
+**SqlConnection. AccessToken özelliği ile Azure SQL veritabanlarında AAD kimlik doğrulaması**
 
-.NET Core 2.2 ile başlayarak, Azure Active Directory tarafından verilen bir erişim belirteci bir Azure SQL veritabanında kimlik doğrulaması için kullanılabilir. Erişim belirteçleri desteklemek için <xref:System.Data.SqlClient.SqlConnection.AccessToken> özelliği eklendi <xref:System.Data.SqlClient.SqlConnection> sınıfı. AAD kimlik doğrulaması yararlanmak için 4.6 sürümünü System.Data.SqlClient NuGet paketini indirin. Bu özelliği kullanmak için erişim belirteci değerini kullanarak elde edebilirsiniz [.NET için Active Directory Authentication Library](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet) bulunan [ `Microsoft.IdentityModel.Clients.ActiveDirectory` ](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/) NuGet paketi.
+.NET Core 2,2 ile başlayarak, Azure Active Directory tarafından verilen bir erişim belirteci, bir Azure SQL veritabanında kimlik doğrulaması yapmak için kullanılabilir. Erişim belirteçlerini desteklemek için, <xref:System.Data.SqlClient.SqlConnection.AccessToken> özelliği <xref:System.Data.SqlClient.SqlConnection> sınıfına eklenmiştir. AAD kimlik doğrulamasının avantajlarından yararlanmak için System. Data. SqlClient NuGet paketinin 4,6 sürümünü indirin. Özelliğini kullanabilmeniz için, [`Microsoft.IdentityModel.Clients.ActiveDirectory`](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/) NuGet paketinde bulunan [.NET için Active Directory Authentication Library](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet) erişim belirteci değerini elde edebilirsiniz.
 
-## <a name="jit-compiler-improvements"></a>JIT Derleyici iyileştirmeleri
+## <a name="jit-compiler-improvements"></a>JıT derleyicisi geliştirmeleri
 
-**Katmanlı derleme Tercihli özellik kalır.**
+**Katmanlı derleme bir katılım özelliği kalır**
 
-.NET Core 2.1 içinde yeni bir derleyici teknoloji JIT derleyicisi uygulanan *katmanlı derleme*, katılım özelliği olarak. Katmanlı derleme performansı hedeftir. JIT derleyicisi tarafından gerçekleştirilen önemli görevlerinden birini ve kod yürütme en iyi duruma getiriyor. Az kullanılan kodu yolları için ancak derleyici kodu çalışma zamanı iyileştirilmemiş kod yürütmek için harcadığı daha iyileştirme daha fazla zaman harcayabilir. Katmanlı bir derleme JIT derlemesi iki aşamada sunar:
+.NET Core 2,1 ' de JıT derleyicisi, bir katılım özelliği olarak yeni bir derleyici teknolojisi, *katmanlı derleme*uyguladık. Katmanlı derlemenin amacı performansı artırmaktır. JıT derleyicisi tarafından gerçekleştirilen önemli görevlerden biri, kod yürütmeyi iyileştiriliyor. Ancak, daha az kullanılan kod yolları için, derleyici en iyi duruma getirilmiş kodu yürütme çalışma zamanından daha fazla zaman harcayabilir. Katmanlı derleme JıT derlemesinde iki aşama sunar:
 
-- A **ilk katman**, mümkün olan en kısa sürede kod oluşturduğu.
+- Mümkün olduğunca hızlı bir şekilde kod üreten **ilk katman**.
 
-- A **ikinci katman**, oluşturduğu kodu sık yürütülen bu yöntemleri için en iyi duruma getirilmiş. Derleme, ikinci katman, Gelişmiş performans için paralel gerçekleştirilir.
+- Sık çalıştırılan yöntemler için iyileştirilmiş kod üreten **ikinci bir katman**. İkinci derleme katmanı, gelişmiş performans için paralel olarak gerçekleştirilir.
 
-Katmanlı derlemeden sonuçlanabilir performans geliştirmesi hakkında daha fazla bilgi için bkz: [.NET Core 2.2 Önizleme 2 Duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/).
+Katmanlı derlemeden kaynaklanan performans iyileştirmesi hakkında daha fazla bilgi için bkz. [.NET Core 2,2 Preview 2 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/).
 
-.NET Core 2.2 Preview 2'deki katmanlı derleme varsayılan olarak etkinleştirildi. Ancak biz katmanlı derleme varsayılan olarak etkinleştirmek hala hazır değil duyuyoruz karar verdiniz. Bu nedenle .NET Core 2.2 içinde katmanlı derleme Tercihli özellik olmaya devam eder. Seçim için katmanlı derleme hakkında daha fazla bilgi için bkz: [JIT Derleyici iyileştirmeleri](dotnet-core-2-1.md#jit-compiler-improvements) içinde [.NET Core 2.1 yenilikler](dotnet-core-2-1.md).
+.NET Core 2,2 Preview 2 ' de katmanlı derleme varsayılan olarak etkinleştirilmiştir. Ancak, varsayılan olarak katmanlı derlemeyi etkinleştirmeye hazır olmaya devam ediyoruz. Bu nedenle, .NET Core 2,2 ' de katmanlı derleme bir kabul etme özelliği olmaya devam eder. Katmanlı derleme ile ilgili daha fazla bilgi için bkz. [.NET Core 2,1 'deki](dotnet-core-2-1.md)Yenilikler bölümünde [JIT derleyicisi geliştirmeleri](dotnet-core-2-1.md#jit-compiler-improvements) .
 
 ## <a name="runtime"></a>Çalışma zamanı
 
-**Main yöntemine yürütmeden önce kod ekleme**
+**Ana yöntemi yürütmeden önce ekleme kodu**
 
-.NET Core 2.2 ile başlayarak, bir uygulamanın ana yöntemi çalıştırılmadan önce kod için bir başlangıç kanca kullanabilirsiniz. Başlangıç kancaları yeniden derleyin veya uygulama dağıtmaya gerek kalmadan dağıtıldıktan sonra uygulamalarının davranışını özelleştirmek bir konak olun.
+.NET Core 2,2 ile başlayarak, bir uygulamanın ana metodunu çalıştırmadan önce kodu eklemek için bir başlangıç kancası kullanabilirsiniz. Başlangıç kancaları, bir konağın uygulamayı yeniden derlemenize veya değiştirmeye gerek kalmadan dağıtıldıktan sonra uygulamaların davranışını özelleştirmesini olanaklı kılar.
 
-Özel yapılandırma ve potansiyel olarak gibi uygulamanın ana girdi noktası yükleme davranışını etkileyen ayarları dahil olmak üzere ilke tanımlamak için barındırma sağlayıcılarının bekliyoruz <xref:System.Runtime.Loader.AssemblyLoadContext?displayProperty=nameWithType> davranışı. Kanca geri çağırmaları işlemek için ayarlama veya tanımlamak diğer ortam ayara bağlı davranışı için izleme veya telemetri ekleme ayarlamak için kullanılabilir. Kanca giriş noktasından ayrı, böylelikle kullanıcı kodunun değiştirilmesi gerekmez.
+Ana giriş noktasının, <xref:System.Runtime.Loader.AssemblyLoadContext?displayProperty=nameWithType> davranışı gibi yük davranışını etkileyebilecek ayarlar da dahil olmak üzere barındırma sağlayıcılarının özel yapılandırma ve ilke tanımlamasına ihtiyacımız vardır. Kanca, izleme veya telemetri ekleme, işleme için geri çağırmaları ayarlama veya ortama bağlı diğer davranışı tanımlama amacıyla kullanılabilir. Kanca giriş noktasından ayrıdır, bu sayede kullanıcı kodunun değiştirilmesi gerekmez.
 
-Bkz: [konak başlangıç kanca](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/host-startup-hook.md) daha fazla bilgi için.
+Daha fazla bilgi için bkz. [konak başlangıç kancası](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/host-startup-hook.md) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [​.NET Core'daki Yenilikler](index.md)
-- [ASP.NET Core 2.2 içinde yenilikler nelerdir?](/aspnet/core/release-notes/aspnetcore-2.2)
-- [EF Core 2.2 yeni özellikler](/ef/core/what-is-new/ef-core-2.2)
+- [ASP.NET Core 2,2 ' deki yenilikler](/aspnet/core/release-notes/aspnetcore-2.2)
+- [EF Core 2,2 ' deki yeni özellikler](/ef/core/what-is-new/ef-core-2.2)

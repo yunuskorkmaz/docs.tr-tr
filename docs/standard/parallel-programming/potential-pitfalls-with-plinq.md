@@ -8,49 +8,47 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b996b09ed3973125d4d848d5e00c18ab02a6967
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85098a0d10b4c05de52cd33d30ec5c4f4bbc594d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908719"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139993"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ'te Olası Tuzaklar
 
-Çoğu durumda, PLINQ, sıralı LINQ-Plınq sorgularının üzerinde önemli performans geliştirmeleri sağlayabilir. Ancak, paralel sorgu yürütme işi, sıralı kodda olarak genel olmayan ya da hiç karşılaşılan değil sorunlara yol açabilecek daha karmaşık hâle getirir. Bu konuda, PLINQ sorguları yazarken önlemek için bazı yöntemler listelenmiştir.
+Birçok durumda PLıNQ, sıralı LINQ to Objects sorguları üzerinde önemli performans geliştirmeleri sağlayabilir. Ancak, sorgu yürütmeyi paralelleştirme işi, ardışık kodda yaygın olmayan veya hiç karşılaşılmayan sorunlara yol açabilecek karmaşıklığa neden olabilir. Bu konu başlığı altında, PLıNQ sorgularını yazarken kaçınılacak bazı yöntemler listelenmiştir.
 
-## <a name="do-not-assume-that-parallel-is-always-faster"></a>Paralel her zaman daha hızlı olan varsaymayın
+## <a name="do-not-assume-that-parallel-is-always-faster"></a>Parallel öğesinin her zaman daha hızlı olduğunu varsaymayın
 
-Bazen paralelleştirme bir PLINQ sorgusu nesneleri eşdeğer kendi LINQ göre daha yavaş çalışmasına neden olur. Temel birkaç kaynak öğeleri ve Hızlı Kullanıcı temsilcileri sorguları çok hızlandırmayı için olası udur. Ancak, birçok faktöre performans katılan olduğundan, PLINQ kullanıp kullanmayacağınızı karar vermeden önce gerçek sonuçlar ölçmek öneririz. Daha fazla bilgi için [plınq'te hızlandırmayı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
+Paralelleştirme bazen bir PLıNQ sorgusunun LINQ to Objects eşinden daha yavaş çalışmasına neden olur. Thumb 'in temel kuralı, az sayıda kaynak öğe ve Hızlı Kullanıcı temsilcileri olan sorguların çok daha hızlı bir şekilde hızlanmasından düşüktür. Ancak, birçok etken performansa dahil edildiğinden, PLıNQ kullanmaya karar vermeden önce gerçek sonuçları ölçmenizi öneririz. Daha fazla bilgi için bkz. [PLıNQ 'Te hızlı Hızlandırlamayı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
 
-## <a name="avoid-writing-to-shared-memory-locations"></a>Paylaşılan bellek konumlarına yazılmasını kaçının
+## <a name="avoid-writing-to-shared-memory-locations"></a>Paylaşılan bellek konumlarına yazmayı önleyin
 
-Sıralı kodda, okuma veya yazma statik değişkenler veya sınıf alanlar için yaygın görülen değil. Ancak, birden çok iş parçacığı gibi değişkenleri eriştiği her seferde, büyük bir olası yarış durumlarını yoktur. Değişkene erişimi eşitlemek için kilit kullanabilirsiniz, ancak eşitleme maliyetini performansı olumsuz etkileyebilir. Bu nedenle, öneririz, kaçının, veya en az sınırlamak, paylaşılan erişimi mümkün olduğunca bir PLINQ sorgusu durumda olmadığını.
+Ardışık kodda, statik değişkenlerle veya sınıf alanlarından okumak veya yazmak yaygın olmayan bir durumdur. Ancak, birden çok iş parçacığı bu tür değişkenlere eşzamanlı olarak eriştiği zaman, yarış koşullarında büyük bir olasılık vardır. Erişimi değişkene eşitlemek için kilitleri da kullanabilirsiniz, ancak eşitleme maliyeti performansı zarar verebilir. Bu nedenle, bir PLıNQ sorgusunda mümkün olduğunca, paylaşılan duruma erişimi önlemenize veya en azından sınırlamanızı öneririz.
 
-## <a name="avoid-over-parallelization"></a>Aşırı Paralelleştirme kaçının
+## <a name="avoid-over-parallelization"></a>Fazla paralelleştirme kullanmaktan kaçının
 
-Kullanarak `AsParallel` işleci, kaynak koleksiyonu bölümleme ve çalışan iş parçacığı eşitleme yüksek maliyetleri doğurur. Paralelleştirme avantajlarını daha fazla bilgisayara işlemci sayısı sınırlıdır. Tek bir işlemci üzerinde birden fazla hesaplama bağlantılı iş parçacığı çalıştırarak kazanılacak hiçbir hızlandırmayı yoktur. Bu nedenle, bir sorguyu aşırı paralel olmayan dikkatli olmanız gerekir.
+`AsParallel` işlecini kullanarak, kaynak koleksiyonun bölümlenmesi ve çalışan iş parçacıklarını eşitlemek için ek ücret maliyetlerine tabi olursunuz. Paralelleştirme avantajları, bilgisayardaki işlemci sayısıyla daha fazla sınırlandırılır. Yalnızca bir işlemcide birden çok işlem ile sınırlı iş parçacığı çalıştırılarak kazanılabilir. Bu nedenle, paralel hale getirmek bir sorgu üzerinde bulunmamaya dikkat etmeniz gerekir.
 
-En yaygın senaryoda hangi aşırı paralelleştirme oluşabilir iç içe geçmiş sorgularda aşağıdaki kod parçacığında gösterildiği gibi.
+Aşağıdaki kod parçacığında gösterildiği gibi, aşırı paralel hale getirme işleminin gerçekleşebileceği en yaygın senaryo iç içe sorgularda yer alabilir.
 
 [!code-csharp[PLINQ#20](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#20)]
 [!code-vb[PLINQ#20](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#20)]
 
-Bu durumda, bir veya daha fazla aşağıdaki koşullardan biri uygulamadığınız sürece yalnızca dış veri kaynağı (müşteri) paralel hale getirmek idealdir:
+Bu durumda, aşağıdaki koşullardan biri veya birkaçı geçerli olmadığı için yalnızca dış veri kaynağına (müşteriler) paralel hale getirmek en iyi seçenektir:
 
-- İç veri kaynağı (müşteri. Siparişler) çok uzun olarak bilinir.
+- İç veri kaynağı (Müşt. Siparişler) çok uzun olduğu bilinmektedir.
 
-- Her bir order pahalı bir hesaplama yapıyorsunuz. (Örnekte gösterilen işlemi pahalı değildir.)
+- Her sırada pahalı bir hesaplama gerçekleştirçalışıyorsunuz. (Örnekte gösterilen işlem pahalı değildir.)
 
-- Hedef sistem üzerinde sorguyu paralelleştirmek tarafından üretilen iş parçacığı sayısını işlemek için yeterli işlemci sahip olduğu bilinmektedir `cust.Orders`.
+- Hedef sistemin, `cust.Orders`sorguyu paralelleştirerek üretilecek iş parçacığı sayısını işlemek için yeterli işlemcisi olduğu bilinmektedir.
 
-Her durumda en iyi sorgu şeklini belirlemek için en iyi test ve ölçmek için yoludur. Daha fazla bilgi için [nasıl yapılır: PLINQ sorgu performansını ölçme](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).
+Her durumda, en uygun sorgu şeklinin belirlenmesi için en iyi yol test ve ölçüdür. Daha fazla bilgi için bkz. [nasıl yapılır: PLıNQ sorgu performansını ölçme](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).
 
-## <a name="avoid-calls-to-non-thread-safe-methods"></a>İş parçacığı güvenli olmayan yöntemlere yapılan çağrılar kaçının
+## <a name="avoid-calls-to-non-thread-safe-methods"></a>Iş parçacığı olmayan güvenli yöntemlere yapılan çağrılardan kaçının
 
-İş parçacığı güvenli olmayan örnek yöntemleri için bir PLINQ yazma sorgu programınızda saptanamayabilir değil veya verilerin bozulmasına neden olabilir. Özel durumlar da neden olabilir. Aşağıdaki örnekte, birden çok iş parçacığı çağrı çalışıyor `FileStream.Write` yöntemi, aynı anda sınıfı tarafından desteklenmiyor.
+Bir PLıNQ sorgusundan iş parçacığı açısından güvenli olmayan örnek yöntemlerine yazmak, programınızda algılanamayan veya algılanamayan veri bozulmasına yol açabilir. Ayrıca özel durumlara da yol açabilir. Aşağıdaki örnekte, birden çok iş parçacığı, sınıf tarafından desteklenmeyen aynı anda `FileStream.Write` yöntemini çağırmaya çalışıyor.
 
 ```vb
 Dim fs As FileStream = File.OpenWrite(…)
@@ -62,34 +60,34 @@ FileStream fs = File.OpenWrite(...);
 a.AsParallel().Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
 ```
 
-## <a name="limit-calls-to-thread-safe-methods"></a>İş parçacığı açısından güvenli yöntemlere yapılan çağrılar sınırı
+## <a name="limit-calls-to-thread-safe-methods"></a>Iş parçacığı güvenli yöntemleriyle yapılan çağrıları sınırlayın
 
-.NET Framework'teki en statik yöntemler iş parçacığı bakımından güvenlidir ve aynı anda birden fazla iş parçacığından çağrılabilir. Ancak bu durumlarda bile ilgili eşitleme sorgu önemli yol açabilir.
+.NET Framework çoğu statik yöntem iş parçacığı açısından güvenlidir ve aynı anda birden çok iş parçacığından çağrılabilir. Ancak, bu durumlarda bile ilgili eşitleme, sorgudaki önemli yavaşlama oluşmasına neden olabilir.
 
 > [!NOTE]
-> Bunun için kendiniz bazı çağrıları ekleyerek test edebilirsiniz <xref:System.Console.WriteLine%2A> sorgularınızı içinde. Bu yöntem belgeleri örneklerde tanıtım amacıyla kullanılsa da PLINQ sorguları kullanmayın.
+> Sorgularınızdaki <xref:System.Console.WriteLine%2A> bazı çağrılar ekleyerek bunu kendiniz test edebilirsiniz. Bu yöntem, Gösterim amacıyla belge örneklerinde kullanılmasına karşın, bunu PLıNQ sorgularında kullanmayın.
 
-## <a name="avoid-unnecessary-ordering-operations"></a>Gereksiz sıralama işlemlerden kaçının
+## <a name="avoid-unnecessary-ordering-operations"></a>Gereksiz sıralama Işlemlerinden kaçının
 
-PLINQ'nun bir sorguyu paralel olarak yürütüldüğünde, kaynak sırası birden çok iş parçacığı üzerinde eşzamanlı olarak üzerinde işletilebilir bölümlere böler. Varsayılan olarak, bölümleri işlenir ve sonuçlarının teslim edildiği sıra tahmin edilebilir değildir (işleçler gibi dışında `OrderBy`). PLINQ'nun kaynak dizi sıralamasını korumak için bildirebilirsiniz, ancak bu performansı üzerinde olumsuz bir etkiye sahiptir. Sıra koruması üzerinde güvenmeyin en iyi uygulama, mümkün olduğunda, yapısı sorguları, böylelikle. Daha fazla bilgi için [plınq'te sıra koruma](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md).
+PLıNQ bir sorguyu paralel olarak yürüttüğünde, kaynak diziyi birden çok iş parçacığında eşzamanlı olarak işletilebilir bölümlere böler. Varsayılan olarak, bölümlerin işlenme sırası ve sonuçlar teslim edilebilir değildir (örneğin, `OrderBy`gibi işleçler hariç). PLıNQ ile herhangi bir kaynak dizinin sıralamasını koruyabilir, ancak bu performans üzerinde olumsuz bir etkiye sahip olabilir. En iyi yöntem, mümkün olduğunda, sorgu siparişi saklama üzerine güvenmemesi için sorguları yapısal olarak kullanmaktır. Daha fazla bilgi için bkz. [PLıNQ 'Te sıra koruma](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md).
 
-## <a name="prefer-forall-to-foreach-when-it-is-possible"></a>ForAll ForEach olduğunda mümkündür için tercih et
+## <a name="prefer-forall-to-foreach-when-it-is-possible"></a>Bu mümkün olduğunda, ForAll öğesini ForEach olarak tercih et
 
-Sonuçlarda kazanabilirsiniz PLINQ sorgu birden çok iş parçacığında yürütülür. ancak bir `foreach` döngü (`For Each` Visual Basic'te), sorgu sonuçlarını bir akışına birleştirilir ve seri olarak numaralandırıcı tarafından erişilebilir. Bazı durumlarda, kaçınılmaz budur; Ancak, mümkün olduğunda kullanın `ForAll` kendi sonuçları, örneğin, bir iş parçacığı güvenli koleksiyonu yazarak çıktısını almak her bir iş parçacığı etkinleştirmek için yöntemi <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>.
+PLıNQ birden çok iş parçacığında bir sorgu yürütüyordu, ancak sonuçları bir `foreach` döngüsünde (`For Each` Visual Basic) kullandıysanız, sorgu sonuçlarının bir iş parçacığında geri birleştirilmesi ve Numaralandırıcının seri hale getirilene erişilmesi gerekir. Bazı durumlarda bu durum kaçınılmaz; Ancak mümkün olduğunda, her bir iş parçacığının kendi sonuçlarını çıktısına (örneğin, <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>gibi iş parçacığı güvenli bir koleksiyona yazarak) izin vermek için `ForAll` yöntemini kullanın.
 
-Aynı sorunu uygulandığı <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> başka bir deyişle, `source.AsParallel().Where().ForAll(...)` kesin tercih edilmelidir
+Aynı sorun diğer bir deyişle <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> için geçerlidir, `source.AsParallel().Where().ForAll(...)` için güçlü bir tercih edilmelidir
 
 `Parallel.ForEach(source.AsParallel().Where(), ...)`.
 
-## <a name="be-aware-of-thread-affinity-issues"></a>İş parçacığı benzeşimini sorunlarından haberdar olmalı
+## <a name="be-aware-of-thread-affinity-issues"></a>Iş parçacığı benzeşim sorunlarından haberdar olun
 
-Örneğin, COM birlikte çalışabilirliği Single-Threaded grubu (STA) bileşenler, Windows Forms ve Windows Presentation Foundation (WPF) için bazı teknolojiler belirli bir iş parçacığı üzerinde çalıştırılacak kodu gerektiren iş parçacığı benzeşimini kısıtlamaları dayatır. Örneğin, Windows Forms ve WPF bir denetim yalnızca üzerinde oluşturulmuş iş parçacığı üzerinde erişilebilir. Paylaşılan bir PLINQ sorgusu Windows Forms denetiminde durumunu erişmeye çalışırsanız, hata ayıklayıcıda çalıştırıyorsanız bir özel durum oluşturulur. (Bu ayar kapatılabilir.) Sorgunuzu UI iş parçacığı üzerinde kullanılır, ancak ardından denetiminden erişebilirsiniz `foreach` sorgu listesini numaralandıran bir döngüye neden olur çünkü bu kod yalnızca bir iş parçacığında yürütülür.
+Tek iş parçacıklı Apartment (STA) bileşenleri, Windows Forms ve Windows Presentation Foundation (WPF) için COM birlikte çalışabilirlik gibi bazı teknolojiler, kodun belirli bir iş parçacığında çalıştırılmasını gerektiren iş parçacığı benzeşim kısıtlamalarını sağlar. Örneğin, hem Windows Forms hem de WPF 'de, bir denetime yalnızca oluşturulduğu iş parçacığında erişilebilir. Bir PLıNQ sorgusunda Windows Forms denetiminin paylaşılan durumuna erişmeye çalışırsanız, hata ayıklayıcıda çalıştırıyorsanız bir özel durum oluşturulur. (Bu ayar kapatılabilir.) Ancak, Sorgunuz UI iş parçacığında kullanılıyorsa, bu kod yalnızca bir iş parçacığında yürütüldüğü için sorgu sonuçlarını numaralandırır `foreach` döngüsünden denetime erişebilirsiniz.
 
-## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Değil varsayılır, ForEach, yinelemeleri için ve ForAll her zaman Paralel yürütme
+## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>ForEach, for ve ForAll yinelemelerinin her zaman paralel olarak yürütüleceğini varsayın
 
-Bu tek tek yinelemelerde göz önünde bulundurmanız önemlidir bir <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> veya <xref:System.Linq.ParallelEnumerable.ForAll%2A> döngü Mayıs ancak paralel olarak yürütmek izniniz yok. Bu nedenle, yinelemelerin Paralel yürütme ya da yineleme herhangi bir sırayla yürütülmesi doğruluğu bağlıdır herhangi bir kod yazmadan kaçınmanız gerekir.
+Bir <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> veya <xref:System.Linq.ParallelEnumerable.ForAll%2A> döngüsünde bireysel yinelemelerin, ancak paralel olarak yürütülmesi gerekmez olduğunu göz önünde bulundurmanız önemlidir. Bu nedenle, tekrarların paralel olarak yürütülmesi veya yinelemeler üzerinde herhangi bir sıraya göre yürütülmesi açısından doğruluğu için herhangi bir kod yazmadan kaçınmalısınız.
 
-Örneğin, bu kodu kilitlenme olasılığı bulunur:
+Örneğin, bu kodun kilitlenmesi olasıdır:
 
 ```vb
 Dim mre = New ManualResetEventSlim()
@@ -121,9 +119,9 @@ Enumerable.Range(0, Environment.ProcessorCount * 100).AsParallel().ForAll((j) =>
 }); //deadlocks
 ```
 
-Bu örnekte, bir olay bir yineleme ayarlar ve diğer tüm yinelemeleri olay üzerinde bekleyin. Olay ayarı yineleme tamamlanmasını bekleme yinelemeleri hiçbiri tamamlayabilirsiniz. Ancak, bekleme yinelemeleri önce olay ayarı yineleme yürütmek için bir fırsat paralel bir döngüden yürütmek için kullanılan tüm iş parçacıklarının block mümkündür. Bu bir kilitlenmeyle sonuçlanır: olay ayarı yineleme hiçbir zaman yürütülür ve bekleme yinelemeler hiç uyandıracağına.
+Bu örnekte, bir yineleme bir olay ayarlıyor ve diğer tüm yinelemeler olayda bekler. Olay ayarı yinelemesi tamamlanana kadar bekleyen yinelemeden hiçbiri tamamlanamaz. Ancak, bekleyen yinelemeler, olay ayarı yinelemesi yürütme şansı vermeden önce paralel döngüyü yürütmek için kullanılan tüm iş parçacıklarını engelliyor olabilir. Bu, bir kilitlenme ile sonuçlanır: olay ayarı yinelemesi hiçbir şekilde yürütülmez ve bekleyen yinelemeler hiçbir şekilde çağrılmaz.
 
-Özellikle, bir yineleme, paralel bir döngüden hiçbir zaman başka bir döngü ilerleme beklemeniz gerekir. Yinelemeleri ardışık olarak ancak ters sırada zamanlamak paralel bir döngüden karar verirse, karşılıklı bir kilitlenme ortaya çıkar.
+Özellikle, bir paralel döngünün bir yinelemesi, ilerleme yapmak için döngünün başka bir yinelemesinin asla beklemelidir. Paralel döngü, yinelemeleri sırayla zamanlamaya karar verirse, ters sırada bir kilitlenme meydana gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

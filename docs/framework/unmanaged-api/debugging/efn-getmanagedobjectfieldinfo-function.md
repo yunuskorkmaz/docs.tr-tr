@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1de0b3b05d38c1fec38b9436c653973dfaa4136
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b68f24908a5b214d507da8e8a4636a7c55259604
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739005"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123010"
 ---
-# <a name="efngetmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo işlevi
-Uzaklık nesnenin başlangıcından bir alan ve sağlanan nesne işaretçisi ve alan adını kullanarak, alanın değerini alır.  
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN\_Getmanagedobjectfieldınfo Işlevi
+Belirtilen nesne işaretçisini ve alan adını kullanarak bir nesnenin başından bir alana ve alanın değerine kadar olan sapmayı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,31 +38,31 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
   
 ## <a name="parameters"></a>Parametreler  
  `Client`  
- [in] Hata ayıklama istemci için bir işaretçi.  
+ 'ndaki Hata ayıklama istemcisine yönelik bir işaretçi.  
   
  `objAddr`  
- [in] Bir yönetilen nesne işaretçisi.  
+ 'ndaki Yönetilen nesne işaretçisi.  
   
  szFieldName  
- [in] Alan adı için bir yönetilen nesne işaretçisi.  
+ 'ndaki Alan adı için yönetilen bir nesne işaretçisi.  
   
  `pValue`  
- [out] Alan değeri. Bu parametre null olabilir.  
+ dışı Alan değeri. Bu parametre null olabilir.  
   
  `pOffset`  
- [out] Uzaklığı `objAddr` alan. Bu parametre null olabilir.  
+ dışı `objAddr` alanındaki Aralık. Bu parametre null olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Uzaklık, uzaklık 0 ise, yazılır.  
+ Eğer fark 0 ise, hiçbir fark yazılmaz.  
   
- Varsa yönetilen kod yok iş parçacığı üzerinde şu anda bağlamında, işlev HRESULT SOS_E_NOMANAGEDCODE 0xa0 tesis değerini ve 0x1000 hata kodu ile döndürür.  
+ Şu anda bağlamda olan iş parçacığında yönetilen kod yoksa, işlev, bir 0xa0 tesis değeri ve 0x1000 hata kodu ile HRESULT SOS_E_NOMANAGEDCODE döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** SOS_Stacktrace.h  
+ **Üst bilgi:** SOS_Stacktrace. h  
   
- **.NET framework sürümü:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümü:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

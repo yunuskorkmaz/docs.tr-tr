@@ -2,12 +2,12 @@
 title: .NET Core hakkında
 description: .NET Core hakkında bilgi edinin.
 ms.date: 09/17/2019
-ms.openlocfilehash: 8b96e1e8f882ee69bcf7db58ca7a5eeab89fb4fd
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 51e4f3784db58e23ab4293c2d9f4e52e0d6617b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395177"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093437"
 ---
 # <a name="about-net-core"></a>.NET Core hakkında
 
@@ -37,10 +37,10 @@ Bu tümleştirme, kapsamında, [Omnisharp](https://www.omnisharp.net/) ve [ıon�
 .NET Core pek çok senaryo için API 'Leri kullanıma sunar.
 
 - [Bool](../csharp/language-reference/keywords/bool.md) ve [int](../csharp/language-reference/builtin-types/integral-numeric-types.md)gibi temel türler.
-- @No__t-0 ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> gibi koleksiyonlar.
-- @No__t-0 ve <xref:System.IO.FileStream?displayProperty=nameWithType> gibi yardımcı program türleri.
-- @No__t-0 ve [Dbset](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/)gibi veri türleri.
-- @No__t-0 ve işlem [hatları](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/)gibi yüksek performanslı türler.
+- <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>gibi koleksiyonlar.
+- <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>ve <xref:System.IO.FileStream?displayProperty=nameWithType>gibi yardımcı program türleri.
+- <xref:System.Data.DataSet?displayProperty=nameWithType>ve [Dbset](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/)gibi veri türleri.
+- <xref:System.Numerics.Vector?displayProperty=nameWithType> ve işlem [hatları](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/)gibi yüksek performanslı türler.
 
 .NET Core, [.NET Standard](../standard/net-standard.md) belirtimini uygulayarak .NET Framework ve mono API 'leri ile uyumluluk sağlar.
 
@@ -113,7 +113,7 @@ Windows ve UNIX uygulamaları boyutuyla benzerdir. CoreFX, [Microsoft. Win32. Re
 
 ### <a name="comparison-with-mono"></a>Mono ile karşılaştırma
 
-[Mono](https://www.mono-project.com/) , .net 'in ilk platformlar arası platformudur. .NET Framework ve iOS ve Android cihazlar popüler hale geldiğinden mobil cihazları hedeflemeye geçiş yapmak için [Açık kaynaklı](https://github.com/mono/mono)bir alternatif olarak başlatılır. .NET Framework topluluk kopyası olarak düşünülebilir. Mono proje ekibi, Microsoft tarafından uyumlu bir uygulama sağlamak üzere yayımlanan açık [.net standartlarına](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (özellikle ECMA 335) güvendi.
+[Mono](https://www.mono-project.com/) , .net 'in özgün platformlar arası uygulamasıdır. .NET Framework için [Açık kaynaklı](https://github.com/mono/mono) alternatif olarak başlatılır ve IOS ve Android cihazlar popüler hale geldiğinden mobil cihazları hedeflemeye geçirilir. .NET Framework topluluk kopyası olarak düşünülebilir. Mono proje ekibi, Microsoft tarafından uyumlu bir uygulama sağlamak üzere yayımlanan açık [.net standartlarına](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (özellikle ECMA 335) güvendi.
 
 .NET Core ve mono arasındaki önemli farklılıklar:
 

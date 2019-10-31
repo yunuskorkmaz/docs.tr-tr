@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9047bf973224cdbc1f67463ef70f15f81089f827
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66d4c14234c7929af443922f86098b46a4aa6eb7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768461"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122011"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC İşlevi
-Geçerli iş parçacığının varsayılan kültürünü kullanarak, bir HRESULT değerini hata iletisine çevirir.  
+Geçerli iş parçacığının varsayılan kültürünü kullanarak bir HRESULT değerini bir hata iletisine çevirir.  
   
- Bu işlev .NET Framework 4'te kullanım dışıdır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,19 +39,19 @@ HRESULT LoadStringRC (
   
 ## <a name="parameters"></a>Parametreler  
  `iResourceID`  
- [in] HRESULT.  
+ 'ndaki HRESULT.  
   
  `szBuffer`  
- [out] Başarılı tamamlandığında hata iletisini içeren bir arabelleği.  
+ dışı Başarılı bir şekilde tamamlandıktan sonra hata iletisini içeren bir arabellek.  
   
  `iMax`  
- [in] Hata iletisi arabellek boyutu.  
+ 'ndaki Hata iletisi arabelleğinin boyutu.  
   
  `bQuiet`  
- [in] Yoksayıldı.  
+ 'ndaki LIP.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem standart Bileşen Nesne Modeli (COM) hata kodları, ek olarak aşağıdaki değerleri Wınerror içinde tanımlanan döndürür.  
+ Bu yöntem, aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart bileşen nesne modeli (COM) hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
@@ -61,16 +59,16 @@ HRESULT LoadStringRC (
 |E_INVALIDARG|`szBuffer` null veya `iMax` sıfır (0).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemi başarıyla tamamlanmazsa `szBuffer` boş bir dize içeriyor.  
+ Yöntem başarıyla tamamlanmazsa, `szBuffer` boş bir dize içerir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll and Mscorwks.dll. MSCorEE.dll yerine Mscorwks.dll doğru .NET Framework sürümünü hedefleyen emin olmak için kullanın.  
+ **Kitaplık:** MSCorEE. dll ve mscorwks. dll. .NET Framework doğru sürümünü hedefliyorsanız emin olmak için mscorwks. dll yerine MSCorEE. dll kullanın.  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

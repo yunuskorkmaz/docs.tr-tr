@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 25c08217-fdeb-44b9-9cd6-1b4955d6e602
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1064c15fc6fc1416f9c2b3a7aac51ef30d78ca7a
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 5a9041ab75836b4239d492987e94c9104133e9bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300915"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120045"
 ---
 # <a name="connectiongroup-class"></a>ConnectionGroup Sınıfı
 
-`ConnectionGroup` Sınıfı grupları içindeki bağlantılar listesini <xref:System.Net.ServicePoint> içerik ve ağ kaynaklarını (örneğin, proxy ve ayrı istemciler) için içerik korumak için kullanılır.
+`ConnectionGroup` sınıfı, <xref:System.Net.ServicePoint> bağlamdaki bir bağlantı listesini gruplandırır ve ağ kaynaklarının bağlamını korumak için kullanılır (örneğin, proxy 'ler ve ayrı istemciler).
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -30,14 +30,14 @@ internal class ConnectionGroup
 ```
 
 > [!WARNING]
-> `ConnectionGroup` Sınıfı dahili kullanım içindir ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
+> `ConnectionGroup` sınıfı dahili ve doğrudan kodunuzda kullanılmamalıdır.
 > 
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu sınıfın kullanımını desteklemez.
+> Microsoft, bu sınıfın herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Net>
+**Ad alanı:** <xref:System.Net>
 
-**Derleme:** Sistemde (System.dll)
+**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

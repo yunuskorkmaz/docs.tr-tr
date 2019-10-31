@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest._AutoRedirects Field
+title: HttpWebRequest. _Oto yeniden yönlendirmeler alanı
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2dde9cdeeca1cc8cca13322747d625b505e7f453
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 82acb409f09826d70f8f050c932ab4aebc4fd172
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301067"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120091"
 ---
-# <a name="httpwebrequestautoredirects-field"></a>HttpWebRequest. \_AutoRedirects alan
+# <a name="httpwebrequest_autoredirects-field"></a>HttpWebRequest.\_oto yeniden yönlendirmeler alanı
 
-`HttpWebRequest._AutoRedirects` olan bir <xref:System.Int32> bunun için yapılan yeniden yönlendirmeleri sayısını yansıtır <xref:System.Net.HttpWebRequest>.
+`HttpWebRequest._AutoRedirects`, bu <xref:System.Net.HttpWebRequest>için yapılan yeniden yönlendirme sayısını yansıtan bir <xref:System.Int32>.
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -30,14 +30,14 @@ private int _AutoRedirects
 ```
 
 > [!WARNING]
-> `HttpWebRequest._AutoRedirects` Alan dahili kullanım içindir ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
+> `HttpWebRequest._AutoRedirects` alanı dahili ve doğrudan kodunuzda kullanılmamalıdır.
 > 
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu alanı kullanımını desteklemez.
+> Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Net>
+**Ad alanı:** <xref:System.Net>
 
-**Derleme:** Sistemde (System.dll)
+**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3226230-964b-47fb-9f53-d6fdbeda1e9e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 92eff65078f05557f542c64c1be7d4f6eca43eb5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7640f7fafd0bf52a302ac0da1e5df39b5da22d68
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738472"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091154"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual Yöntemi
-Bu hedef işlemin adres alanında bellek ayırmak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.  
+Bu hedef işlemin adres alanına bellek ayırmak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağırılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,33 +39,33 @@ HRESULT AllocVirtual(
   
 ## <a name="parameters"></a>Parametreler  
  `addr`  
- [in] A `CLRDATA_ADDRESS` ayrılacak bellek istenen başlangıç adresini belirten bir değer.  
+ 'ndaki Ayrılacak belleğin istenen başlangıç adresini belirten bir `CLRDATA_ADDRESS` değeri.  
   
  `size`  
- [in] Baytlarında ayrılacak bellek boyutu.  
+ 'ndaki Ayrılacak belleğin bayt cinsinden boyutu.  
   
  `typeFlags`  
- [in] Bellek ayırma denetleyen bayraklar. Win32 bkz `VirtualAlloc` işlevi.  
+ 'ndaki Bellek ayırmayı denetleyen bayraklar. Bkz. Win32 `VirtualAlloc` işlevi.  
   
  `protectFlags`  
- [in] Ayrılan bellek koruması öznitelikleri. Win32 bkz `VirtualAlloc` işlevi.  
+ 'ndaki Ayrılan bellek için koruma öznitelikleri. Bkz. Win32 `VirtualAlloc` işlevi.  
   
  `virt`  
- [out] Bir işaretçi bir `CLRDATA_ADDRESS` ayrılan bellek gerçek başlangıç adresini belirten bir değer.  
+ dışı Ayrılan belleğin gerçek başlangıç adresini belirten `CLRDATA_ADDRESS` değerine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `AllocVirtual` Yöntemi Win32 için mantıksal kapsayıcı olarak hizmet veren `VirtualAlloc` işlevi.  
+ `AllocVirtual` yöntemi, Win32 `VirtualAlloc` işlevi için bir mantıksal sarmalayıcı görevi görür.  
   
- Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.  
+ Bu yöntem, hata ayıklama uygulamasının yazarı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** ClrData.idl, ClrData.h  
+ **Üst bilgi:** ClrData. IDL, ClrData. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

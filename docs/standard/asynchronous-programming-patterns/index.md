@@ -6,14 +6,12 @@ helpviewer_keywords:
 - asynchronous design patterns, .NET
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 36798fabcd42cf7e04b0a6f288736503eecad88b
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: dfce69ee18b8346cd802b4934de63bf0a39c72f0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169118"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124265"
 ---
 # <a name="asynchronous-programming-patterns"></a>Zaman uyumsuz programlama desenleri
 
@@ -21,13 +19,13 @@ ms.locfileid: "70169118"
 
 - Zaman uyumsuz bir işlemin başlatılması ve tamamlanmasını temsil etmek için tek bir yöntem kullanan **görev tabanlı zaman uyumsuz model (TAP)** . .NET Framework 4 ' te dokunma eklendi. **.NET ' te zaman uyumsuz programlama için önerilen yaklaşımdır.** ' Deki [Async](../../csharp/language-reference/keywords/async.md) ve [await](../../csharp/language-reference/operators/await.md) anahtar C# sözcükleri ve Visual Basic ' deki [Async](../../visual-basic/language-reference/modifiers/async.md) ve [await](../../visual-basic/language-reference/operators/await-operator.md) işleçleri, TAP için dil desteği ekler. Daha fazla bilgi için bkz. [görev tabanlı zaman uyumsuz model (TAP)](task-based-asynchronous-pattern-tap.md).  
 
-- Zaman uyumsuz davranış sağlamaya yönelik olay tabanlı eski model olan **olay tabanlı zaman uyumsuz model (EAP)** . `Async` Son ek ve bir veya daha fazla olay, olay işleyicisi temsilci türleri ve `EventArg`-türetilmiş türler içeren bir yöntem gerektirir. EAP .NET Framework 2,0 ' de tanıtılmıştı. Artık yeni geliştirme için önerilmez. Daha fazla bilgi için bkz. [olay tabanlı zaman uyumsuz model (EAP)](event-based-asynchronous-pattern-eap.md).  
+- Zaman uyumsuz davranış sağlamaya yönelik olay tabanlı eski model olan **olay tabanlı zaman uyumsuz model (EAP)** . `Async` soneki ve bir veya daha fazla olay, olay işleyicisi temsilci türleri ve `EventArg`türetilmiş türler içeren bir yöntem gerektirir. EAP .NET Framework 2,0 ' de tanıtılmıştı. Artık yeni geliştirme için önerilmez. Daha fazla bilgi için bkz. [olay tabanlı zaman uyumsuz model (EAP)](event-based-asynchronous-pattern-eap.md).  
 
-- Zaman uyumsuz davranış sağlamak için <xref:System.IAsyncResult> arabirimi kullanan eski model olan **zaman uyumsuz programlama modeli (APM)** modeli (Ayrıca, model olarak da bilinir <xref:System.IAsyncResult> ). Bu düzende, zaman uyumlu işlemler ve `Begin` `End` yöntemleri gerektirir (örneğin, `BeginWrite` ve `EndWrite` bir zaman uyumsuz yazma işlemi uygulamak için). Bu model artık yeni geliştirme için önerilmez. Daha fazla bilgi için bkz. [zaman uyumsuz programlama modeli (APM)](asynchronous-programming-model-apm.md).  
+- Zaman uyumsuz davranış sağlamak için <xref:System.IAsyncResult> arabirimini kullanan eski model olan **zaman uyumsuz programlama modeli (APM)** modeli (<xref:System.IAsyncResult> modeli olarak da bilinir). Bu düzende, zaman uyumlu işlemler `Begin` ve `End` yöntemleri gerektirir (örneğin, `BeginWrite` ve `EndWrite` zaman uyumsuz bir yazma işlemi uygular). Bu model artık yeni geliştirme için önerilmez. Daha fazla bilgi için bkz. [zaman uyumsuz programlama modeli (APM)](asynchronous-programming-model-apm.md).  
   
 ## <a name="comparison-of-patterns"></a>Desenlerin karşılaştırması
 
-Üç desenin zaman uyumsuz işlemlerin nasıl modellendiği hakkında hızlı bir karşılaştırma için, `Read` belirtilen bir uzaklığa göre belirtilen bir veri miktarını belirtilen bir arabellekte okuyan bir yöntemi göz önünde bulundurun:  
+Üç desenin zaman uyumsuz işlemlerin nasıl modellendiği hakkında hızlı bir karşılaştırma için, belirtilen bir uzaklığa göre belirtilen bir veri miktarını belirtilen bir arabellekte okuyan bir `Read` yöntemi düşünün:  
   
 ```csharp  
 public class MyClass  
@@ -36,7 +34,7 @@ public class MyClass
 }  
 ```  
 
-Bu yöntemin karşılık gelen dokunması, aşağıdaki tek `ReadAsync` yöntemi kullanıma sunar:  
+Bu yöntemin karşılık gelen DOKUNMASı aşağıdaki tek `ReadAsync` yöntemi kullanıma sunar:  
   
 ```csharp
 public class MyClass  
@@ -55,7 +53,7 @@ public class MyClass
 }  
 ```  
   
-APM karşılığı, `BeginRead` ve `EndRead` yöntemlerini kullanıma sunar:  
+APM karşılığına `BeginRead` ve `EndRead` yöntemleri kullanıma sunar:  
   
 ```csharp  
 public class MyClass  

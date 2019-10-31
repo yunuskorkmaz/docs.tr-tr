@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4bf3a0507f9f7d4d622163a55fc9c45b4a4dd0a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 80643187045e7e96b9c18169c5e71287713d711f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781156"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106244"
 ---
-# <a name="runtimeinfoflags-enumeration"></a>RUNTIME_INFO_FLAGS Numaralandırması
-Ortak dil çalışma zamanı (CLR) hakkında bilgiler döndürülmesi gerektiğini gösteren değerleri içerir.  
+# <a name="runtime_info_flags-enumeration"></a>RUNTIME_INFO_FLAGS Numaralandırması
+Ortak dil çalışma zamanı (CLR) hakkında hangi bilgilerin döndürüleceğini belirten değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,17 +45,17 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Dizin bilgileri eklenmeyeceğini gösterir.|  
-|`RUNTIME_INFO_DONT_RETURN_VERSION`|Sürüm bilgileri eklenmeyeceğini gösterir.|  
-|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Bir hata iletişim kutusu başarısızlık durumunda gösterilecek değil olduğunu gösterir.|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Bildiren arama etkilerini [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) SEM_FAILCRITICALERRORS bayrağıyla işlevi geçersiz. Diğer bir deyişle, bir yükleme iletişim kutusu yok yerine başarısızlık gösterilmesi gerekir.|  
-|`RUNTIME_INFO_REQUEST_AMD64`|Bir çalışma zamanı AMD 64 uyumlu sürümü hakkında daha fazla bilgi için bir istek gösterir.|  
-|`RUNTIME_INFO_REQUEST_IA64`|Bir çalışma zamanı IA-64-compatible sürümü hakkında daha fazla bilgi için bir istek gösterir.|  
-|`RUNTIME_INFO_REQUEST_X86`|Bir çalışma zamanı x86 uyumlu sürümü hakkında daha fazla bilgi için bir istek gösterir.|  
-|`RUNTIME_INFO_UPGRADE_VERSION`|Sürüm yükseltme bilgileri dahil olması gerektiğini gösterir.|  
+|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Dizin bilgilerinin içerilmeyeceğini belirtir.|  
+|`RUNTIME_INFO_DONT_RETURN_VERSION`|Sürüm bilgisinin dahil edilmemelidir.|  
+|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Hata sonrasında bir hata iletişim kutusu gösterilmemelidir.|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|[SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) işlevini SEM_FAILCRITICALERRORS bayrağıyla çağırmanın etkilerinin geçersiz kılınabileceğini belirtir. Diğer bir deyişle, bir yükleme iletişim kutusu gizlenmeden önce hata sonrasında gösterilmelidir.|  
+|`RUNTIME_INFO_REQUEST_AMD64`|Çalışma zamanının AMD-64 ile uyumlu bir sürümü hakkında bilgi isteği gösterir.|  
+|`RUNTIME_INFO_REQUEST_IA64`|Çalışma zamanının IA-64 ile uyumlu bir sürümü hakkında bilgi isteği gösterir.|  
+|`RUNTIME_INFO_REQUEST_X86`|Çalışma zamanının x86 uyumlu sürümü hakkında bilgi isteği gösterir.|  
+|`RUNTIME_INFO_UPGRADE_VERSION`|Sürüm yükseltme bilgilerinin dahil edileceğini gösterir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Aşağıdaki platform mimarisi bayrakları belirtilen tek bir zaman olabilir ve birleştirilemez:  
+ Aşağıdaki platform mimarisi bayrakları tek seferde belirtilebilir ve birleştirilemez:  
   
 - RUNTIME_INFO_REQUEST_IA64  
   
@@ -66,13 +64,13 @@ typedef enum {
 - RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

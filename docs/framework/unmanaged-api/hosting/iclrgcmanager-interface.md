@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: fb511c9b-3fe4-41b0-822a-6ba4a079d1f5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 76d1071ddde1509f16fd786afa4c05c05224d051
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 08c46ecbad85e3cc15f60d1cc8dae6b8281702ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966218"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141137"
 ---
 # <a name="iclrgcmanager-interface"></a>ICLRGCManager Arabirimi
 Bir konağın ortak dil çalışma zamanının çöp toplama sistemiyle etkileşime geçmesini sağlayan yöntemler sağlar.  
   
 > [!NOTE]
-> 4,5 .NET Framework başlayarak, [ICLRGCManager2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) yöntemini kullanarak bir çöp toplama segmentinin boyutunu ve çöp toplama sisteminin en büyük boyutunu 0 ' dan `DWORD`dahabüyükdeğerlereayarlayın. [SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md) yöntemi tarafından uygulanan sınır.  
+> 4,5 .NET Framework başlayarak, [ICLRGCManager2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) yöntemini kullanarak bir çöp toplama kesiminin boyutunu ve çöp toplama sisteminin 1. kuşak en büyük boyutunu, `DWORD` daha büyük değerlere ayarlayabilirsiniz [SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md) yöntemi tarafından uygulanan sınır.  
   
 ## <a name="methods"></a>Yöntemler  
   
@@ -38,14 +36,14 @@ Bir konağın ortak dil çalışma zamanının çöp toplama sistemiyle etkileş
 |[SetGCStartupLimits Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md)|Çöp toplama kesiminin boyutunu ve çöp toplama sisteminin oluşturma 0 ' nın en büyük boyutunu ayarlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ortak dil çalışma zamanı (CLR), kendi çöp toplama mekanizmasını yönetilen <xref:System.GC> türle uygular. Çöp toplama sistemi hakkında daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  
+ Ortak dil çalışma zamanı (CLR), atık toplama mekanizmasını yönetilen <xref:System.GC> türüyle uygular. Çöp toplama sistemi hakkında daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** MSCorEE. h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

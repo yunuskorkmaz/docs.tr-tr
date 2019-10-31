@@ -10,14 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d11567b3a5abca6e81ff0358295aa8516ef6443f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5ead3d1ac37b3c7ee50f18a81530720205678de2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969024"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121999"
 ---
 # <a name="managed-execution-process"></a>Yönetilen Yürütme İşlemi
 <a name="introduction"></a>Yönetilen yürütme işlemi, bu konunun ilerleyen bölümlerinde ayrıntılı olarak ele alınan aşağıdaki adımları içerir:  
@@ -42,7 +40,7 @@ ms.locfileid: "70969024"
 ## <a name="choosing-a-compiler"></a>Derleyici seçme  
  Ortak dil çalışma zamanı (CLR) tarafından belirtilen avantajları elde etmek için, Visual Basic, C#, görsel C++, F#veya bir Eiffel, Perl veya gibi birçok üçüncü taraf derleyicilerinin biri olan çalışma zamanını hedefleyen bir veya daha fazla dil derleyicileri kullanmanız gerekir. COBOL derleyicisi.  
   
- Çok dilli bir yürütme ortamı olduğundan, çalışma zamanı çok çeşitli veri türlerini ve dil özelliklerini destekler. Kullandığınız dil derleyicisi, hangi çalışma zamanı özelliklerinin kullanılabilir olduğunu belirler ve bu özellikleri kullanarak kodunuzu tasarlayamazsınız. Çalışma zamanı değil, kodunuzun kullanması gereken söz dizimini belirler. Bileşeninizin diğer dillerde yazılmış bileşenler tarafından tamamen kullanılabilir olması gerekiyorsa, bileşeninizin verilme türleri yalnızca [Dil bağımsızlığı ve dilden bağımsız bileşenlere](../../docs/standard/language-independence-and-language-independent-components.md) (CLS) dahil olan dil özelliklerini kullanıma sunmalıdır. Kodunuzun CLS uyumlu olduğundan <xref:System.CLSCompliantAttribute> emin olmak için özniteliğini kullanabilirsiniz. Daha fazla bilgi için bkz. [Dil bağımsızlığı ve dilden bağımsız bileşenler](../../docs/standard/language-independence-and-language-independent-components.md).  
+ Çok dilli bir yürütme ortamı olduğundan, çalışma zamanı çok çeşitli veri türlerini ve dil özelliklerini destekler. Kullandığınız dil derleyicisi, hangi çalışma zamanı özelliklerinin kullanılabilir olduğunu belirler ve bu özellikleri kullanarak kodunuzu tasarlayamazsınız. Çalışma zamanı değil, kodunuzun kullanması gereken söz dizimini belirler. Bileşeninizin diğer dillerde yazılmış bileşenler tarafından tamamen kullanılabilir olması gerekiyorsa, bileşeninizin verilme türleri yalnızca [Dil bağımsızlığı ve dilden bağımsız bileşenlere](../../docs/standard/language-independence-and-language-independent-components.md) (CLS) dahil olan dil özelliklerini kullanıma sunmalıdır. Kodunuzun CLS uyumlu olduğundan emin olmak için <xref:System.CLSCompliantAttribute> özniteliğini kullanabilirsiniz. Daha fazla bilgi için bkz. [Dil bağımsızlığı ve dilden bağımsız bileşenler](../../docs/standard/language-independence-and-language-independent-components.md).  
   
  [Başa dön](#introduction)  
   
@@ -97,13 +95,13 @@ ms.locfileid: "70969024"
   
  Yürütme sırasında yönetilen kod, atık toplama, güvenlik, yönetilmeyen kodla birlikte çalışabilirlik, çapraz dil hata ayıklama desteği ve gelişmiş dağıtım ve sürüm oluşturma desteği gibi hizmetleri alır.  
   
- Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] ve[!INCLUDE[windowsver](../../includes/windowsver-md.md)]işletim sistemi yükleyicisi, COFF üstbilgisindeki bir bit inceleyerek yönetilen modülleri denetler. Ayarlanan bit, yönetilen bir modül gösterir. Yükleyici yönetilen modülleri algılarsa, mscoree. dll dosyasını `_CorValidateImage` `_CorImageUnloading` yükler ve yönetilen modül görüntüleri yüklenip kaldırıldığında yükleyiciyi bilgilendirir. `_CorValidateImage`Aşağıdaki eylemleri gerçekleştirir:  
+ Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] ve [!INCLUDE[windowsver](../../includes/windowsver-md.md)], işletim sistemi yükleyicisi, COFF üstbilgisindeki bir bit inceleyerek yönetilen modülleri denetler. Ayarlanan bit, yönetilen bir modül gösterir. Yükleyici yönetilen modülleri algılarsa, mscoree. dll dosyasını yükler ve `_CorValidateImage` ve yönetilen modül görüntüleri yüklenip kaldırıldığında yükleyiciyi bilgilendirir `_CorImageUnloading`. `_CorValidateImage` aşağıdaki eylemleri gerçekleştirir:  
   
 1. Kodun geçerli yönetilen kod olmasını sağlar.  
   
 2. Görüntüdeki giriş noktasını çalışma zamanındaki bir giriş noktasına dönüştürür.  
   
- 64 bit Windows üzerinde, `_CorValidateImage` bellekteki görüntüyü PE32 ' dan PE32 + biçimine dönüştürerek değiştirir.  
+ 64 bit Windows üzerinde `_CorValidateImage`, bellekteki görüntüyü PE32 ' den PE32 + biçimine dönüştürerek değiştirir.  
   
  [Başa dön](#introduction)  
   
@@ -113,7 +111,7 @@ ms.locfileid: "70969024"
 - [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (IL Derleyici)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Güvenlik](../../docs/standard/security/index.md)
+- [Security](../../docs/standard/security/index.md)
 - [Yönetilmeyen Kod ile Birlikte Çalışma](../../docs/framework/interop/index.md)
 - [Dağıtım](../../docs/framework/deployment/net-framework-applications.md)
 - [.NET’te bütünleştirilmiş kodlar](assembly/index.md)

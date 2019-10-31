@@ -13,63 +13,61 @@ helpviewer_keywords:
 - converting numeric user input to number
 - numbers [.NET Framework], converting numeric user input to number
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5af942b5e7576c13ff7be8d11c0009fd0c4f7462
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 78ba284ad2e75b39c0fb1001b0f65b48c519dbb5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882478"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140100"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Nasıl yapılır: Web Denetimlerindeki Sayısal Kullanıcı Girişlerini Sayıya Dönüştürme
-Kullanıcıların dünyanın herhangi bir Web sayfası görüntülenebileceğinden sayısal verileri girebilirsiniz bir <xref:System.Web.UI.WebControls.TextBox> neredeyse sınırsız sayıda biçimleri denetimi. Sonuç olarak, yerel ve Web sayfasının kullanıcı kültürü belirlemek çok önemlidir. Kullanıcı girişini ayrıştırmasına, daha sonra kullanıcının yerel ayar ve kültür tarafından tanımlanan biçimlendirme kurallarını uygulayabilirsiniz.  
+Bir Web sayfası dünyanın herhangi bir yerinden görüntülenebildiğinden, kullanıcılar neredeyse sınırsız sayıda biçimdeki <xref:System.Web.UI.WebControls.TextBox> denetimine sayısal veri girişi yapabilir. Sonuç olarak, Web sayfası kullanıcısının yerel ayar ve kültürünü belirlenmesi çok önemlidir. Kullanıcı girişini ayrıştırdığınızda, kullanıcının yerel ayarı ve kültürü tarafından tanımlanan biçimlendirme kurallarını uygulayabilirsiniz.  
   
-### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>Bir Web TextBox denetimi bir sayıyı sayısal giriş dönüştürülemiyor  
+### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>Bir Web TextBox denetiminden sayısal girişi bir sayıya dönüştürmek için  
   
-1. Dize dizisi tarafından döndürülen olup olmadığını belirlemek <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> özelliği doldurulur. Yüklü değilse, 6. adıma devam edin.  
+1. <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> özelliği tarafından döndürülen dize dizisinin doldurulup doldurulmadığını belirleme. Değilse, adım 6 ' ya geçin.  
   
-2. Dize dizisi olarak döndürülürse <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği eklendiğinden, ilk öğesi alın. Kullanıcının varsayılan veya tercih edilen dil ve bölge ilk öğeyi gösterir.  
+2. <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği tarafından döndürülen dize dizisi doldurulduktan sonra ilk öğesini alın. İlk öğe, kullanıcının varsayılan veya tercih edilen dil ve bölge olduğunu gösterir.  
   
-3. Örneği bir <xref:System.Globalization.CultureInfo> kullanıcıyı temsil eden bir nesne tercih edilen kültür çağırarak <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Oluşturucusu.  
+3. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> oluşturucusunu çağırarak kullanıcının tercih ettiği kültürü temsil eden bir <xref:System.Globalization.CultureInfo> nesnesi örneği oluşturun.  
   
-4. Çağırın ya da `TryParse` veya `Parse` kullanıcı dönüştürmek istediğiniz sayısal türü yöntemi için giriş. Bir aşırı yüklemesini kullanmanız `TryParse` veya `Parse` yöntemi ile bir `provider` parametresi, aşağıdakilerden birini geçirin:  
+4. Kullanıcı girişini dönüştürmek istediğiniz sayısal türün `TryParse` ya da `Parse` yöntemini çağırın. `TryParse` veya `Parse` yönteminin bir `provider` parametresiyle bir aşırı yüklemesini kullanın ve aşağıdakilerden birini geçirin:  
   
-    - <xref:System.Globalization.CultureInfo> 3. adımda oluşturulan nesne.  
+    - Adım 3 ' te oluşturulan <xref:System.Globalization.CultureInfo> nesnesi.  
   
-    - <xref:System.Globalization.NumberFormatInfo> Tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.NumberFormat%2A> özelliği <xref:System.Globalization.CultureInfo> 3. adımda oluşturulan nesne.  
+    - Adım 3 ' te oluşturulan <xref:System.Globalization.CultureInfo> nesnesinin <xref:System.Globalization.CultureInfo.NumberFormat%2A> özelliği tarafından döndürülen <xref:System.Globalization.NumberFormatInfo> nesnesi.  
   
-5. Dönüştürme başarısız olursa tarafından döndürülen 2 dize dizisi kalan her öğe için 4 arasındaki adımları yineleyin <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği.  
+5. Dönüştürme başarısız olursa, <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği tarafından döndürülen dize dizisindeki kalan her öğe için 2 ile 4 arasındaki adımları tekrarlayın.  
   
-6. Dönüştürme yine başarısız olursa veya dize dizisi tarafından döndürülen <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği boşsa, tarafından döndürülen sabit kültür kullanarak dizeyi ayrıştırmak <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliği.  
+6. Dönüştürme hala başarısız olursa veya <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği tarafından döndürülen dize dizisi boşsa, <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliği tarafından döndürülen sabit kültür kullanarak dizeyi ayrıştırın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek sayısal bir değer girmesini ister Web formu tam arka plan kod sayfasıdır bir <xref:System.Web.UI.WebControls.TextBox> denetlemek ve bir sayıya dönüştürür. Ardından bu sayıyı iki katına ve özgün giriş olarak aynı biçimlendirme kurallarını kullanarak görüntülenir.  
+ Aşağıdaki örnek, bir Web formu için, kullanıcıdan <xref:System.Web.UI.WebControls.TextBox> denetimine sayısal bir değer girmesini ve bir sayıya dönüştürmelerini isteyen tam arka plan kod sayfasıdır. Bu sayı daha sonra, özgün girişle aynı biçimlendirme kuralları kullanılarak iki katına çıkar ve görüntülenir.  
   
  [!code-csharp[Formatting.HowTo.ParseNumericInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseNumericInput/cs/NumericUserInput1.aspx.cs#1)]
  [!code-vb[Formatting.HowTo.ParseNumericInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseNumericInput/vb/NumericUserInput1.aspx.vb#1)]  
   
- <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> Özelliği bulunan kültür adları doldurulur `Accept-Language` bir HTTP isteğinde üstbilgileri. Ancak, tüm tarayıcılar dahil `Accept-Language` üst bilgilerini kendi isteklerini ve kullanıcılar de gösterme üstbilgileri tamamen. Önemli kullanıcı girişi ayrıştırılırken bir geri dönüş kültürü olmasını sağlar. Genellikle, geri dönüş kültürü tarafından döndürülen sabit kültür olan <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Kullanıcılar aynı zamanda Internet Explorer kültür adları ile kültür adları geçerli olmayabilir olasılığını oluşturur ve metin kutusu içinde giriş sağlar. Bu örneği oluşturulurken özel durum işleme kullanmak önemli sağlar bir <xref:System.Globalization.CultureInfo> nesne.  
+ <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> özelliği, bir HTTP isteğine dahil `Accept-Language` üst bilgilerinde bulunan kültür adlarından doldurulur. Ancak, tüm tarayıcılar isteklerinde `Accept-Language` üst bilgileri içermez ve kullanıcılar üst bilgileri tamamen de engelleyebilir. Bu, Kullanıcı girişini ayrıştırırken bir geri dönüş kültürüne sahip olmanızı önemli hale getirir. Genellikle, geri dönüş kültürü <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>tarafından döndürülen sabit kültürdür. Kullanıcılar ayrıca, bir metin kutusunda girdikleri kültür adları ile Internet Explorer 'ı da sağlayabilir ve bu da kültür adlarının geçerli olma olasılığını oluşturur. Bu, bir <xref:System.Globalization.CultureInfo> nesnesi örneği oluşturulurken özel durum işlemenin kullanılmasını önemli hale getirir.  
   
- Internet Explorer tarafından gönderilen HTTP isteğinden alınırken <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> dizisi, kullanıcı tercih sırasına göre doldurulur. Kullanıcının birincil kültür/bölge adı dizideki ilk öğe içerir. Dizi herhangi bir ek öğeler varsa, Internet Explorer bunları rasgele kültür adı, noktalı virgülle ayrılmış bir kalite belirticisi atar. Örneğin, fr-FR kültürü için bir giriş formu sürebilir `fr-FR;q=0.7`.  
+ Internet Explorer tarafından gönderilen HTTP isteğinden alındığında, <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> dizisi Kullanıcı tercihi sırasıyla doldurulur. Dizideki ilk öğe, kullanıcının birincil kültürünün ve bölgesinin adını içerir. Dizi ek öğe içeriyorsa, Internet Explorer onlara rastgele bir kalite belirleyicisi atar ve bu, kültür adından noktalı virgülle ayrılır. Örneğin, fr-FR kültürü için bir giriş `fr-FR;q=0.7`formunu alabilir.  
   
- Örnek aramalar <xref:System.Globalization.CultureInfo.%23ctor%2A> oluşturucuyla kendi `useUserOverride` parametresini `false` yeni bir <xref:System.Globalization.CultureInfo> nesne. Kültür adı varsayılan kültür adı sunucu üzerinde ise bu, sağlar yeni <xref:System.Globalization.CultureInfo> sınıfı Oluşturucu tarafından oluşturulan nesne bir kültürün varsayılan ayarlarını içerir ve sunucunun kullanılarak herhangi bir ayarı yansıtmaz  **Bölge ve Dil Seçenekleri** uygulama. Sunucu üzerindeki herhangi bir geçersiz kılınan ayarı değerleri, kullanıcının sistemde yok veya kullanıcının girişinde yansıtılması düşüktür.  
+ Örnek, yeni bir <xref:System.Globalization.CultureInfo> nesnesi oluşturmak için `useUserOverride` parametresi `false` olarak ayarlanmış <xref:System.Globalization.CultureInfo.%23ctor%2A> oluşturucusunu çağırır. Bu sayede, kültür adı sunucuda varsayılan kültür adı ise, sınıf oluşturucusu tarafından oluşturulan yeni <xref:System.Globalization.CultureInfo> nesnesi bir kültürün varsayılan ayarlarını içerir ve sunucunun bölgesel ayarlarını kullanarak geçersiz kılınan ayarları yansıtmaz ve  **Dil seçenekleri** uygulaması. Sunucuda geçersiz kılınan ayarların değerleri, kullanıcının sisteminde veya kullanıcının girişine yansıtılmasının olası bir olasılıktır.  
   
- Kodunuzu ya da çağırabilir `Parse` veya `TryParse` kullanıcının girişinin sayısal türün yöntemi dönüştürülür. Parse yöntemi yinelenen çağrıları tek bir ayrıştırma işleminde gerekli olabilir. Sonuç olarak, `TryParse` yöntemi daha iyidir, çünkü bu döndürür `false` bir ayrıştırma işlemi başarısız olursa. Buna karşılık, tarafından oluşturulabilir yinelenen bir özel durum işleme `Parse` yöntemi, bir Web uygulamasındaki çok pahalı bir teklifi olabilir.  
+ Kodunuz `Parse` veya Kullanıcı girişinin dönüştürülecek sayısal türde `TryParse` yöntemini çağırabilir. Ayrıştırma yöntemine yinelenen çağrılar tek bir ayrıştırma işlemi için gerekli olabilir. Sonuç olarak, bir ayrıştırma işlemi başarısız olursa `false` döndürdüğünden `TryParse` yöntemi daha iyidir. Buna karşılık, `Parse` yöntemi tarafından oluşturulabilecek yinelenen özel durumları işlemek bir Web uygulamasında çok pahalı bir işlem olabilir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Kodu derlemek için tüm mevcut kodlar değiştirir, böylece bir ASP.NET arka plan kod sayfasına kopyalayın. ASP.NET Web sayfası aşağıdaki denetimleri içermesi gerekir:  
+ Kodu derlemek için, mevcut tüm kodun yerine ASP.NET bir arka plan kod sayfasına kopyalayın. ASP.NET Web sayfası aşağıdaki denetimleri içermelidir:  
   
-- A <xref:System.Web.UI.WebControls.Label> kodda başvurulmuyor denetimi. Ayarlama, <xref:System.Web.UI.WebControls.TextBox.Text%2A> özelliğini "bir sayı girin:".  
+- Kodda başvurulmayan bir <xref:System.Web.UI.WebControls.Label> denetimi. <xref:System.Web.UI.WebControls.TextBox.Text%2A> özelliğini "bir sayı girin:" olarak ayarlayın.  
   
-- A <xref:System.Web.UI.WebControls.TextBox> adlı Denetim `NumericString`.  
+- `NumericString`adlı <xref:System.Web.UI.WebControls.TextBox> denetim.  
   
-- A <xref:System.Web.UI.WebControls.Button> adlı Denetim `OKButton`. Ayarlama, <xref:System.Web.UI.WebControls.Button.Text%2A> özelliği için "Tamam".  
+- `OKButton`adlı <xref:System.Web.UI.WebControls.Button> denetim. <xref:System.Web.UI.WebControls.Button.Text%2A> özelliğini "Tamam" olarak ayarlayın.  
   
- Sınıfın adını değiştirmek `NumericUserInput` tarafından tanımlanan sınıfı adını `Inherits` ASP.NET sayfa özniteliği `Page` yönergesi. Adını değiştirmek `NumericInput` nesnesi tarafından tanımlanan adına başvuru `id` ASP.NET sayfa özniteliği `form` etiketi.  
+ `NumericUserInput` sınıfının adını, ASP.NET sayfasının `Page` yönergesinin `Inherits` özniteliği tarafından tanımlanan sınıfın adına değiştirin. `NumericInput` Nesne başvurusunun adını, ASP.NET sayfasının `form` etiketinin `id` özniteliğiyle tanımlanan ada değiştirin.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- HTML akışına betik ekleme gelen bir kullanıcı önlemek için kullanıcı girişi hiçbir zaman doğrudan ve sunucu yanıtında yansıtılması gerekir. Bunun yerine, bunu kullanarak kodlanması gereken <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> yöntemi.  
+ Bir kullanıcının ekleme betiğine HTML akışına engel olmak için, Kullanıcı girişinin sunucu yanıtında hiçbir şekilde doğrudan yankılanır olması gerekir. Bunun yerine, <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> yöntemi kullanılarak kodlanmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 625c3dd5-a3f0-442c-adde-310dadbb5054
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f5fab4ef0d67ab6b86510bd4b2f814d9456213fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a93d700c9c398076d87156cd2eb9c6d0d08cccfd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763984"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124482"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly Yöntemi
-Tarafından başvurulmuyor bir derlemeye bir başvuru alır [Iclrassemblyreferencelist](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) sağlayıcıdan döndürülen [Ihostassemblymanager::getnonhoststoreassemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md). Ortak dil çalışma zamanı (CLR) çağıran `ProvideAssembly` listesinde görünmüyor her derleme için.  
+[IHostAssemblyManager:: GetNonHostStoreAssemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)öğesinden döndürülen [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) tarafından başvurulmayan bir derlemeye başvuru alır. Ortak dil çalışma zamanı (CLR), listede görünmeyen her derleme için `ProvideAssembly` çağırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,44 +39,44 @@ HRESULT ProvideAssembly (
   
 ## <a name="parameters"></a>Parametreler  
  `pBindInfo`  
- [in] Bir işaretçi bir [Assemblybindınfo](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md) varlığı veya yokluğu herhangi bir sürüm oluşturma ilkesine dahil olmak üzere, belirli bir bağlama özellikleri belirlemek için konağın kullandığı örneği ve bağlamak için hangi derleme.  
+ 'ndaki Herhangi bir sürüm oluşturma ilkesinin varlığı veya yokluğu ve hangi derlemenin bağlanacağı dahil olmak üzere, konağın belirli bağlama özelliklerini belirlemede kullandığı bir [AssemblyBindInfo](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md) örneği işaretçisi.  
   
  `pAssemblyId`  
- [out] Bunun için istenen derleme için benzersiz bir tanımlayıcı için bir işaretçi `IStream`.  
+ dışı Bu `IStream`için istenen derleme için benzersiz bir tanımlayıcı işaretçisi.  
   
  `pHostContext`  
- [out] Bir platform gerek olmadan istenen derleme kanıtı belirlemek için kullanılan ana bilgisayara özgü veri işaretçisi çağrısı çağırın. `pHostContext` karşılık gelen <xref:System.Reflection.Assembly.HostContext%2A> yönetilen özellik <xref:System.Reflection.Assembly> sınıfı.  
+ dışı Platform çağırma çağrısına gerek olmadan istenen derlemenin kanıtını belirlemede kullanılan, konağa özgü verilere yönelik bir işaretçi. `pHostContext`, yönetilen <xref:System.Reflection.Assembly> sınıfının <xref:System.Reflection.Assembly.HostContext%2A> özelliğine karşılık gelir.  
   
  `ppStmAssemblyImage`  
- [out] Adresine bir işaretçi bir `IStream` yüklenmesi veya bütünleştirilmiş kod bulunamadı, null için taşınabilir yürütülebilir (PE) görüntüsünü içerir.  
+ dışı Yüklenecek Taşınabilir çalıştırılabilir (PE) görüntüsünü içeren `IStream` adresine yönelik bir işaretçi veya derleme bulunamazsa null.  
   
  `ppStmPDB`  
- [out] Adresine bir işaretçi bir `IStream` varsa program hata ayıklama (PDB) bilgileri veya null .pdb dosyası bulunamadı.  
+ dışı Program hata ayıklama (PDB) bilgilerini içeren `IStream` adresine yönelik bir işaretçi veya. pdb dosyası bulunamazsa null.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`ProvideAssembly` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.|  
-|HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
-|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
-|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
+|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
 |COR_E_FILENOTFOUND (0x80070002)|İstenen derleme bulunamadı.|  
-|E_NOT_SUFFICIENT_BUFFER|Tarafından belirtilen arabellek boyutu `pAssemblyId` döndürülecek konak istediği tanımlayıcısı tutabilecek kadar büyük değil.|  
+|E_NOT_SUFFICIENT_BUFFER|`pAssemblyId` tarafından belirtilen arabellek boyutu, konağın döndürmek istediği tanımlayıcıyı tutabilecek kadar büyük değil.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kimlik değeri için döndürülen `pAssemblyId` ana bilgisayar tarafından belirtilir. Tanımlayıcılar bir işlem yaşam süresi içinde benzersiz olmalıdır. CLR, akışı için benzersiz bir tanımlayıcı olarak bu değeri kullanır. Her değer değerlerini karşı denetler `pAssemblyId` yapılan diğer çağrılar tarafından döndürülen `ProvideAssembly`. Konak aynı döndürürse `pAssemblyId` başka bir değer `IStream`, CLR, akış içeriğini zaten eşlendi olup olmadığını denetler. Bu durumda, çalışma zamanı yerine yeni bir eşleme görüntü kopyasının yükler.  
+ `pAssemblyId` için döndürülen kimlik değeri ana bilgisayar tarafından belirtilir. Tanımlayıcılar bir işlemin ömrü içinde benzersiz olmalıdır. CLR bu değeri akış için benzersiz bir tanımlayıcı olarak kullanır. Her değeri, `ProvideAssembly`için diğer çağrılar tarafından döndürülen `pAssemblyId` değerlere karşı denetler. Ana bilgisayar başka bir `IStream`için aynı `pAssemblyId` değerini döndürürse, CLR bu akışın içeriğinin zaten eşlenmiş olup olmadığını denetler. Öyleyse, çalışma zamanı yeni bir tane eşlemek yerine görüntünün var olan kopyasını yükler.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

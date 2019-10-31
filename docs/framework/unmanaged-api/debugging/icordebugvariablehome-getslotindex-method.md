@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetSlotIndex yöntemi
+title: 'Icordebugvariablehome:: Getslotındex yöntemi'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetSlotIndex
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 199c3ba5d5b9588db4c665070b4dec6266cefc2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfc2e91599e7f05d90d56af07b71313e9eecaa51
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760351"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121049"
 ---
-# <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome::GetSlotIndex yöntemi
-Yerel değişken yönetilen yuvası dizinini alır.  
+# <a name="icordebugvariablehomegetslotindex-method"></a>Icordebugvariablehome:: Getslotındex yöntemi
+Yerel bir değişkenin yönetilen yuva dizinini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,27 +35,27 @@ HRESULT GetSlotIndex(
   
 ## <a name="parameters"></a>Parametreler  
  `pSlotIndex`  
- [out] Bir yerel değişken dizini yuva için bir işaretçi.  
+ dışı Yerel bir değişkenin yuva dizinine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, aşağıdaki değerleri döndürür.  
+ Yöntemi aşağıdaki değerleri döndürür.  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`S_OK`|Bir yuva dizin değeri yöntem çağrısından döndürülen `pSlotIndex`.|  
-|`E_FAIL`|Geçerli [Icordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) örneği, işlev bağımsız değişkeni temsil eder.|  
+|`S_OK`|Yöntem çağrısı `pSlotIndex`bir yuva dizini değeri döndürdü.|  
+|`E_FAIL`|Geçerli [ıcordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) örneği bir işlev bağımsız değişkenini temsil eder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yuva dizin, bu yerel değişken için meta verileri almak için kullanılabilir.  
+ Bu yerel değişken için meta verileri almak için yuva dizini kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

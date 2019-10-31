@@ -5,20 +5,18 @@ helpviewer_keywords:
 - UseSmallInternalThreadStacks element
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 515ea076c5eaead50b41e45e415725d0439914bc
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2fd776ce8605e6dcf288dcb3852ded16638a1873
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252216"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114921"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<Usesmallınternalthreadyığınları > öğesi
 Ortak dil çalışma zamanının (CLR), bu iş parçacıkları için varsayılan yığın boyutunu kullanmak yerine, dahili olarak kullandığı belirli iş parçacıklarını oluştururken açık yığın boyutları belirterek bellek kullanımını azaltmalarını ister.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<çalışma zamanı >** ](runtime-element.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<Usesmallınternalthreadyığınları >**  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -34,7 +32,7 @@ Ortak dil çalışma zamanının (CLR), bu iş parçacıkları için varsayılan
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|enabled|Gerekli öznitelik.<br /><br /> CLR tarafından kullanılan belirli iş parçacıklarını oluşturduğunda, CLR 'nin varsayılan yığın boyutu yerine açık yığın boyutları kullanması istenip istenmeyeceğini belirtir. Açık yığın boyutları 1 MB varsayılan yığın boyutundan daha küçüktür.|  
+|etkinletir|Gerekli öznitelik.<br /><br /> CLR tarafından kullanılan belirli iş parçacıklarını oluşturduğunda, CLR 'nin varsayılan yığın boyutu yerine açık yığın boyutları kullanması istenip istenmeyeceğini belirtir. Açık yığın boyutları 1 MB varsayılan yığın boyutundan daha küçüktür.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   

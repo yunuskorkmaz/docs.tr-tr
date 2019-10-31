@@ -1,5 +1,5 @@
 ---
-title: Bir derlemeyi gecikmeli imzala
+title: Derlemeyi gecikmeli imzalama
 ms.date: 08/19/2019
 helpviewer_keywords:
 - deferring assembly signing
@@ -8,20 +8,18 @@ helpviewer_keywords:
 - strong-named assemblies, delaying assembly signing
 - partial assembly signing
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: e7679520e246ab3eda03e6f0e0d092c7d09f1845
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 75c86c49f4d471452a7e8f56856d5437e84df307
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991327"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084335"
 ---
-# <a name="delay-sign-an-assembly"></a>Bir derlemeyi gecikmeli imzala
+# <a name="delay-sign-an-assembly"></a>Derlemeyi gecikmeli imzalama
 
 Bir kuruluş, geliştiricilerin günlük olarak erişebileceği, daha yakından korunan bir anahtar çiftine sahip olabilir. Ortak anahtar genellikle kullanılabilir, ancak özel anahtara erişim yalnızca birkaç bireyle kısıtlıdır. Tanımlayıcı adlara sahip derlemeler geliştirirken, tanımlayıcı adlı hedef derlemeye başvuran her derleme, hedef derlemeye tanımlayıcı bir ad vermek için kullanılan ortak anahtarın belirtecini içerir. Bu, geliştirme sürecinde ortak anahtarın kullanılabilir olmasını gerektirir.
 
@@ -31,11 +29,11 @@ Bir derlemeyi gecikmeli imzalamak için:
 
 1. Son imzalamayı sağlayacak olan kuruluştan anahtar çiftinin ortak anahtar bölümünü alın. Genellikle bu anahtar, Windows SDK tarafından belirtilen [tanımlayıcı ad Aracı (sn. exe)](../../framework/tools/sn-exe-strong-name-tool.md) kullanılarak oluşturulabilen bir *. snk* dosyası biçimindedir.
 
-2. İki özel özniteliğe <xref:System.Reflection>sahip derleme için kaynak koda not ekleyin:
+2. <xref:System.Reflection>iki özel özniteliğe sahip derleme için kaynak koda not ekleyin:
 
    - <xref:System.Reflection.AssemblyKeyFileAttribute>, ortak anahtarı içeren dosyanın adını oluşturucuya bir parametre olarak geçirir.
 
-   - <xref:System.Reflection.AssemblyDelaySignAttribute>Bu, gecikme imzasının, oluşturucuya bir parametre olarak **doğru** geçirerek kullanıldığını gösterir.
+   - <xref:System.Reflection.AssemblyDelaySignAttribute>, **doğru** bir parametre olarak oluşturucuya bir parametre olarak geçirerek gecikme imzasının kullanıldığını gösterir.
 
    Örneğin:
 
@@ -64,7 +62,7 @@ Bir derlemeyi gecikmeli imzalamak için:
    sn –Vr myAssembly.dll
    ```
 
-   Gelişmiş RıSC makinesi (ARM) mikro işlemciler gibi tanımlayıcı ad aracını çalıştıramıyorum platformlarda doğrulamayı devre dışı bırakmak için, **– VK** seçeneğini kullanarak bir kayıt defteri dosyası oluşturun. Kayıt defteri dosyasını, doğrulamayı kapatmak istediğiniz bilgisayarda kayıt defterine aktarın. Aşağıdaki örnek için `myAssembly.dll`bir kayıt defteri dosyası oluşturur.
+   Gelişmiş RıSC makinesi (ARM) mikro işlemciler gibi tanımlayıcı ad aracını çalıştıramıyorum platformlarda doğrulamayı devre dışı bırakmak için, **– VK** seçeneğini kullanarak bir kayıt defteri dosyası oluşturun. Kayıt defteri dosyasını, doğrulamayı kapatmak istediğiniz bilgisayarda kayıt defterine aktarın. Aşağıdaki örnek `myAssembly.dll`için bir kayıt defteri dosyası oluşturur.
 
    ```console
    sn –Vk myRegFile.reg myAssembly.dll
@@ -89,6 +87,6 @@ Bir derlemeyi gecikmeli imzalamak için:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Derlemeler oluştur](create.md)
-- [Nasıl yapılır: Ortak özel anahtar çifti oluşturma](create-public-private-key-pair.md)
+- [Nasıl yapılır: genel-özel anahtar çifti oluşturma](create-public-private-key-pair.md)
 - [Sn. exe (tanımlayıcı ad aracı)](../../framework/tools/sn-exe-strong-name-tool.md)
 - [Bütünleştirilmiş kod içeren program](program.md)

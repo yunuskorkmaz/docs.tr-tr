@@ -11,20 +11,18 @@ helpviewer_keywords:
 - asynchronous programming, state objects
 - IAsyncResult interface, samples
 ms.assetid: e3e5475d-c5e9-43f0-928e-d18df8ca1f1d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bb62b191dc3b3246745f9f0ea3737ed74a2bf57b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7bd0a7606b5f93289cf39d33794457265e7e453
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699012"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094600"
 ---
 # <a name="using-an-asynccallback-delegate-and-state-object"></a>Bir AsyncCallback Temsilcisi ve Durum Nesnesi Kullanma
-Kullandığınızda, bir <xref:System.AsyncCallback> zaman uyumsuz işlemin ayrı bir iş parçacığında sonuçları işlemek için temsilci, bir durum nesnesi geri çağırmalar arasında bilgi geçirmek ve Nihai sonuç almak için kullanabilirsiniz. Bu konuda, örnekte genişleterek o uygulama gösterilir [zaman uyumsuz bir işlemi sonlandırmak için bir AsyncCallback temsilcisi kullanma](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
+Zaman uyumsuz işlemin sonuçlarını ayrı bir iş parçacığında işlemek için bir <xref:System.AsyncCallback> temsilcisi kullandığınızda, geri çağrılar arasında bilgi geçirmek ve nihai sonucu almak için bir durum nesnesi kullanabilirsiniz. Bu konuda, [zaman uyumsuz bir Işlemi sonlandırmak için bir AsyncCallback temsilcisi kullanma](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)içindeki örneği genişleterek bu alıştırma gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, zaman uyumsuz metotlar kullanma gösterilmektedir <xref:System.Net.Dns> kullanıcı tarafından belirtilen bilgisayarların etki alanı adı sistemi (DNS) bilgilerini almak için sınıf. Bu örnek, tanımlar ve kullandığı `HostRequest` durum bilgilerini depolamak için sınıf. A `HostRequest` nesne kullanıcı tarafından girilen her bir bilgisayar adı için oluşturulur. Bu nesne geçirilir <xref:System.Net.Dns.BeginGetHostByName%2A> yöntemi. `ProcessDnsInformation` Yöntemi, bir istek tamamlandıktan her zaman çağrılır. `HostRequest` Nesnesi kullanılarak alınır <xref:System.IAsyncResult.AsyncState%2A> özelliği. `ProcessDnsInformation` Yöntemi kullanan `HostRequest` depolamak için nesne <xref:System.Net.IPHostEntry> istek tarafından döndürülen veya <xref:System.Net.Sockets.SocketException> istek tarafından oluşturulur. Tüm istekleri tamamlandığı zaman, uygulama üzerinden yinelenir `HostRequest` nesneleri ve DNS bilgilerini görüntüler veya <xref:System.Net.Sockets.SocketException> hata iletisi.  
+ Aşağıdaki kod örneği, Kullanıcı tarafından belirtilen bilgisayarlar için etki alanı adı sistemi (DNS) bilgilerini almak üzere <xref:System.Net.Dns> sınıfında zaman uyumsuz yöntemleri kullanmayı gösterir. Bu örnek, durum bilgilerini depolamak için `HostRequest` sınıfını tanımlar ve kullanır. Kullanıcı tarafından girilen her bilgisayar adı için bir `HostRequest` nesnesi oluşturulur. Bu nesne <xref:System.Net.Dns.BeginGetHostByName%2A> yöntemine geçirilir. `ProcessDnsInformation` yöntemi, istek her tamamlandığında çağrılır. `HostRequest` nesnesi <xref:System.IAsyncResult.AsyncState%2A> özelliği kullanılarak alınır. `ProcessDnsInformation` yöntemi, istek tarafından döndürülen <xref:System.Net.IPHostEntry> veya istek tarafından oluşturulan bir <xref:System.Net.Sockets.SocketException> depolamak için `HostRequest` nesnesini kullanır. Tüm istekler tamamlandığında, uygulama `HostRequest` nesneler üzerinde dolaşır ve DNS bilgilerini veya <xref:System.Net.Sockets.SocketException> hata iletisini görüntüler.  
   
  [!code-csharp[AsyncDesignPattern#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/AsyncDelegateWithStateObject.cs#5)]
  [!code-vb[AsyncDesignPattern#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/AsyncDelegateWithStateObject.vb#5)]  

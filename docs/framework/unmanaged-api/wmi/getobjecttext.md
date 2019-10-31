@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetObjectText function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d47fcd59204a4d114fc9f0dc5bc4550ba1681f33
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 412e1ad503fa0e0b4f813298c0ac96ae80098c06
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798499"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102462"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText işlevi
 Yönetilen Nesne Biçimi (MOF) sözdiziminde nesnenin metinsel işlemesini döndürür.
@@ -48,10 +46,10 @@ HRESULT GetObjectText (
 'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `lFlags`  
-'ndaki Normalde 0. `WBEM_FLAG_NO_FLAVORS` (Veya 0x1) belirtilirse, niteleyiciler yayma veya Flavor bilgisi olmadan dahil edilir.
+'ndaki Normalde 0. `WBEM_FLAG_NO_FLAVORS` (veya 0x1) belirtilmişse, niteleyiciler yayma veya Flavor bilgileri olmaksızın dahil edilir.
 
 `pstrObjectText`   
-dışı `null` Açık giriş işaretçisi. Dönüşte, nesnenin MOF sözdizimi `BSTR` işleme içeren yeni bir ayrılmış.  
+dışı Girişteki `null` için bir işaretçi. Dönüşte, nesnenin MOF sözdizimi işleme içeren yeni bir ayrılmış `BSTR`.  
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -73,14 +71,14 @@ Döndürülen MOF metni nesneyle ilgili tüm bilgileri içermiyor, ancak özgün
 Aşağıdaki algoritma bir yöntemin parametrelerinin metnini yeniden oluşturmak için kullanılır:
 
 1. Parametreler, tanımlayıcı değerlerinin sırasıyla yeniden sıralandır.
-1. `[in]` Ve`[out]` olarak belirtilen parametreler tek bir parametre içinde birleştirilir.
+1. `[in]` ve `[out]` olarak belirtilen parametreler tek bir parametre içinde birleştirilir.
  
-`pstrObjectText`işlev çağrıldığında bir `null` öğesine işaretçi olmalıdır; işaretçi serbest bırakılmadığı için yöntem çağrısından önce geçerli olan bir dizeye işaret etmelidir.
+`pstrObjectText`, işlev çağrıldığında bir `null` işaretçisi olmalıdır; işaretçi serbest bırakılmayacak olduğundan, yöntem çağrısından önce geçerli olan bir dizeye işaret etmelidir.
 
 ## <a name="requirements"></a>Gereksinimler  
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** WMINet_Utils. IDL  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

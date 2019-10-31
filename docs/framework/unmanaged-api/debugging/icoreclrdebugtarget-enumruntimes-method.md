@@ -17,14 +17,12 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 08f34822099468b8c52f1d7ea2c665205f1b6c01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2579bed9ae432a2b9460c421c6ee5bdc40d1e149
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774424"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121832"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes Yöntemi
 Uzak bir bilgisayarda çalışan belirtilen işlemdeki ortak dil çalışma zamanlarını (CLRs) numaralandırır.  
@@ -41,38 +39,38 @@ HRESULT EnumRuntimes (
   
 ## <a name="parameters"></a>Parametreler  
  `dwInternalProcessID`  
- [in] Çalışma zamanları numaralandırmak kullanmak istediğiniz işlemi iç işlem kimliği. Bu `m_dwInternalID` öğelerinden karşılık gelen [Coreclrdebugprocınfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).  
+ 'ndaki Çalışma zamanlarını numaralandırmak istediğiniz işlemin iç işlem KIMLIĞI. Bu, karşılık gelen [coreclrdebugprocınfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)`m_dwInternalID` olacaktır.  
   
  `pcRuntimes`  
- [out] Döndürülen çalışma zamanları sayısını `ppRuntimes`. Bu değer, 0 (sıfır) olabilir.  
+ dışı `ppRuntimes`döndürülen çalışma zamanlarının sayısı. Bu değer 0 (sıfır) olabilir.  
   
  `ppRuntimes`  
- [out] Bir dizi [Coreclrdebugruntimeınfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) çalışma zamanları temsil eden yapılar uzak hedef işleminde yüklendi.  
+ dışı Uzak hedef işlemde yüklü olan çalışma zamanlarını temsil eden [CoreCLR[gruntimeınfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) yapıtlarından oluşan bir dizi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
  Başarılı.  
   
  S_FALSE  
- `dwInternalProcessID` işlemin sonlandırıldığından, bilgisayarda çalışan herhangi bir işlem büyük olasılıkla eşleşmiyor. `pcRuntimes` ve `ppRuntimes` null olacaktır.  
+ `dwInternalProcessID`, büyük olasılıkla işlem sonlandırıldığı için, bilgisayar üzerinde çalışan herhangi bir işlemle eşleşmez. `pcRuntimes` ve `ppRuntimes` null olacaktır.  
   
  E_OUTOFMEMORY  
- Yeterli bellek ayrılamıyor `ppRuntimes`.  
+ `ppRuntimes`için yeterli bellek ayrılamıyor.  
   
- E_FAIL (veya diğer E_ dönüş kodları)  
- Diğer hatalar.  
+ E_FAıL (veya diğer E_ dönüş kodları)  
+ Diğer sorunlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem tarafından ayrılmış olan belleği boşaltmak için çağrı [Icoreclrdebugtarget::freememory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) yöntemi.  
+ Bu yöntem tarafından ayrılan belleği boşaltmak için, [ıreclrdebugtarget:: FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) metodunu çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CoreClrRemoteDebuggingInterfaces.h  
+ **Üst bilgi:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Kitaplık:** mscordbi_macx86. dll  
   
- **.NET framework sürümleri:** 3.5 SP1  
+ **.NET Framework sürümleri:** 3,5 SP1  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c50f673e77ef384ccf33803e14d60c322b6c0365
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a305b28a34a70112cc80c33b11f30ab02213f0c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300970"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120062"
 ---
 # <a name="connection-class"></a>Connection Sınıfı
 
-`Connection` Sınıfı ayrıştırıyor sunucu yanıtları, sıra isteklerini ve işlem hattı istekleri.
+`Connection` sınıfı sunucu yanıtlarını, kuyruk isteklerini ve işlem hattı isteklerini ayrıştırır.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -30,14 +30,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> `Connection` Sınıfı dahili kullanım içindir ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
+> `Connection` sınıfı dahili ve doğrudan kodunuzda kullanılmamalıdır.
 > 
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu sınıfın kullanımını desteklemez.
+> Microsoft, bu sınıfın herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Net>
+**Ad alanı:** <xref:System.Net>
 
-**Derleme:** Sistemde (System.dll)
+**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

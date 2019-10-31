@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ec3dc37984228565b4a3fcc560d3857a1c1e46d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4d297023d96de83965c3d04ca9efe2613fd54d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767334"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084440"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject Metodu
-Bir nesne adresi "ICorDebugObjectValue" nesneye dönüştürür.  
+Bir nesne adresini bir "ICorDebugObjectValue" nesnesine dönüştürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +36,22 @@ HRESULT GetObject(
   
 ## <a name="parameters"></a>Parametreler  
  `addr`  
- [in] Nesnesi adresi.  
+ 'ndaki Nesne adresi.  
   
  `ppObject`  
- [out] Bir "ICorDebugObjectValue" nesnenin adresi için bir işaretçi.  
+ dışı "ICorDebugObjectValue" nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa `addr` geçerli yönetilen nesneye işaret etmiyor `GetObject` yöntemi döndürür `E_FAIL`.  
+ `addr` geçerli bir yönetilen nesneyi işaret etmez, `GetObject` yöntemi `E_FAIL`döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

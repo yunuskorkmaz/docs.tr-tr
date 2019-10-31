@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35c2173e-3b0b-4b2a-950d-e0a01c6df052
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aeb4c9935d5e9e4063497dd56276edfe6e62752a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0ce822533b0699f3467dc08044aa4dab59285a77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765591"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120308"
 ---
 # <a name="iclrruntimeinfogetdefaultstartupflags-method"></a>ICLRRuntimeInfo::GetDefaultStartupFlags Metodu
-Başlangıç bayrakları ve çalışma zamanı'nı başlatmak için kullanılacak ana bilgisayar yapılandırma dosyası alır.  
+Çalışma zamanını başlatmak için kullanılacak başlangıç bayraklarını ve ana bilgisayar yapılandırma dosyasını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,32 +36,32 @@ HRESULT GetDefaultStartupFlags(
   
 ## <a name="parameters"></a>Parametreler  
  `pdwStartupFlags`  
- [out] Şu anda ayarlanmış ana başlangıç bayrakları için bir işaretçi.  
+ dışı Şu anda ayarlanmış olan ana bilgisayar başlatma bayraklarının işaretçisi.  
   
  `pwzHostConfigFile`  
- [out] Dizin yolu geçerli ana bilgisayar yapılandırma dosyasının bir işaretçi.  
+ dışı Geçerli ana bilgisayar yapılandırma dosyasının dizin yoluna yönelik bir işaretçi.  
   
  `pcchHostConfigFile`  
- [out içinde] Giriş üzerinde boyutunu `pwzHostConfigFile`, arabellek taşması önlemek için. Varsa `pwzHostConfigFile` olduğu null yöntem gerekli boyutunu döndürür `pwzHostConfigFile` ön ayırması için.  
+ [in, out] Girişte, arabellek taşmalarını önlemek için `pwzHostConfigFile`boyutu. `pwzHostConfigFile` null ise, yöntemi ön ayırma için gereken `pwzHostConfigFile` boyutunu döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki özel HRESULT döndürür yöntemi hatayı belirtmek HRESULT hata yanı sıra.  
+ Bu yöntem, aşağıdaki belirli HRESULT 'yi ve Yöntem hatasını belirten HRESULT hatalarını döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem varsayılan bayrak değerleri döndürür (`STARTUP_CONCURRENT_GC` ve `NULL`), veya önceki bir çağrı tarafından sağlanan değerleri [Iclrruntimeınfo::setdefaultstartupflags yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), veya herhangi biri tarafından ayarlanan değerlerle `CorBind*` Bu çalışma zamanına bağlıysa yöntemleri.  
+ Bu yöntem, varsayılan bayrak değerlerini (`STARTUP_CONCURRENT_GC` ve `NULL`) ya da bu çalışma zamanına bağlıysa `CorBind*` [metotlarından herhangi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md)biri tarafından ayarlanan değerler tarafından belirtilen değerleri (ve) veya geri döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MetaHost.h  
+ **Üst bilgi:** MetaHost. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

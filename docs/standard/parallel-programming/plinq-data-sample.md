@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 60693a6570eff6f9d4980d8f29f1385bc7462f08
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353160"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140015"
 ---
 # <a name="plinq-data-sample"></a>PLINQ Veri Örneği
 Bu örnek,. csv biçimindeki örnek verileri, bu dosyayı bellek içi müşteriler, ürünler, siparişler ve sipariş ayrıntılarına dönüştüren yöntemlerle birlikte içerir. PLıNQ ile daha fazla denemek için, belirli diğer konulardan kod örneklerini bu konudaki koda yapıştırabilir ve `Main` yönteminden çağırabilirsiniz. Bu verileri kendi PLıNQ sorgularınız ile de kullanabilirsiniz.  
@@ -46,7 +44,7 @@ Bu örnek,. csv biçimindeki örnek verileri, bu dosyayı bellek içi müşteril
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a>Data  
+## <a name="data"></a>Veri  
   
 ```console  
 CUSTOMERS  

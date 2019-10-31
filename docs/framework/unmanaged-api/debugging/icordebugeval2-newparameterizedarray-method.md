@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 973f975885bbbf5cbed74adef7b9f4f423c42583
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9476bcc9706e89fd3d7e0abc14031f70a0aa0ad0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753658"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084832"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray Yöntemi
-Belirtilen öğe türü ve boyut yeni bir dizi ayırır.  
+Belirtilen öğe türü ve boyutlarının yeni bir dizisini ayırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,25 +38,25 @@ HRESULT NewParameterizedArray(
   
 ## <a name="parameters"></a>Parametreler  
  `pElementType`  
- [in] Bir dizide depolanan öğenin türünü temsil eden bir Icordebugtype nesne işaretçisi.  
+ 'ndaki Dizide depolanan öğe türünü temsil eden ICorDebugType nesnesine yönelik bir işaretçi.  
   
  `rank`  
- [in] Dizinin boyut sayısı. .NET Framework sürüm 2. 0'da, bu değeri 1 olmalı.  
+ 'ndaki Dizinin boyut sayısı. .NET Framework sürüm 2,0 ' de, bu değer 1 olmalıdır.  
   
  `dims`  
- [in] Dizinin her boyutunun bayt cinsinden boyutu.  
+ 'ndaki Dizinin her boyutunun bayt cinsinden boyutu.  
   
  `lowBounds`  
- [in] İsteğe bağlı. Dizinin her boyutunun alt sınırı. Bu değer belirtilmezse, her boyut için alt sınırı sıfır varsayılır.  
+ 'ndaki Seçim. Dizi boyutunun alt sınırı. Bu değer atlanırsa, her bir boyut için sıfırdan daha düşük bir sınır varsayılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dizinin öğeleri, genel bir türün örneklerinin olabilir. Dizinin her zaman iş parçacığı şu anda çalıştığı uygulama etki alanında oluşturulur. .NET Framework 2.0, değerini `rank` 1 olmalıdır.  
+ Dizinin öğeleri, genel bir türün örnekleri olabilir. Dizi, iş parçacığının çalışmakta olduğu uygulama etki alanında her zaman oluşturulur. .NET Framework 2,0 ' de, `rank` değeri 1 olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

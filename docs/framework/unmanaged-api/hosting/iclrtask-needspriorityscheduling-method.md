@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c9db3f3-26bf-4317-88de-5eb926a22a1d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9503e5aeeb1b59c8e62cab20736ea6ab7d5f629f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 91c1ea51969447861ff6d0956c5714baa0054450
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758924"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124663"
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a>ICLRTask::NeedsPriorityScheduling Yöntemi
-Dışarı anahtarlanır, geçerli görevi yeniden zamanlama için bir yüksek öncelikli olarak işaretlenmiş olması gerekip gerekmediğini belirten bir değer alır.  
+Dışarı aktarılan geçerli görevin, yeniden zamanlama için yüksek öncelikli olarak işaretlenmesi gerekip gerekmediğini belirten bir değer alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,30 +35,30 @@ HRESULT NeedsPriorityScheduling (
   
 ## <a name="parameters"></a>Parametreler  
  `pbNeedsPriorityRescheduling`  
- [out] `true`, olabildiğince çabuk; Aksi takdirde, geçerli görev örneği yeniden zamanlamak konak denemelidir `false`.  
+ [out] konağın geçerli görev örneğini mümkün olan en kısa sürede yeniden zamanlamayı denemesi gerekiyorsa `true`; Aksi takdirde, `false`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`NeedsPriorityRescheduling` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.|  
-|HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
-|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
-|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
+|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Görev çöp toplayıcısı tarafından toplanmış yakın olduğu durumlarda, CLR değerini ayarlar `pbNeedsPriorityScheduling` için `true`, yüksek öncelikli kullanılabilirliğiyle belirten. Bu görev hızlı bir şekilde yeniden zamanlamak için ana böylece atık toplamada gecikmeler olasılığını en aza indirmek ve konak ve çalışma zamanı bellek kaynakları koruma işbirliği yapmayı etkinleştirme sağlar.  
+ Görevin çöp toplayıcı tarafından toplanmaya yakın olduğu durumlarda, CLR `pbNeedsPriorityScheduling` değerini `true`olarak ayarlar ve yüksek öncelikli yeniden çizelgeyi gösterir. Bu, konağın görevi hızla yeniden zamanlayabilmesini, böylelikle çöp toplamadaki gecikmelerin olasılığını en aza indirmesini ve ana bilgisayarı ve çalışma zamanının bellek kaynaklarını koruma bölümünde birlikte çalışmasını sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

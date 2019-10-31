@@ -6,14 +6,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db4380e97cf4d556248f42981b350160710f1dd8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 09045fb455a2163641d6f4af0ba07520ead59f1e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051813"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123481"
 ---
 # <a name="exposing-net-components-to-com"></a>.NET bileşenlerini COM 'a gösterme
 
@@ -54,4 +52,4 @@ ms.locfileid: "71051813"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yönetilmeyen Kod ile Birlikte Çalışma](index.md)
-- [COM birlikte çalışma örneği: COM Istemcisi ve .NET sunucusu](com-interop-sample-com-client-and-net-server.md)
+- [COM Birlikte Çalışma Örneği: COM İstemcisi ve .NET Sunucusu](com-interop-sample-com-client-and-net-server.md)

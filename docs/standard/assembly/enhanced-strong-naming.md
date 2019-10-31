@@ -5,14 +5,12 @@ helpviewer_keywords:
 - strong-named assemblies
 - strong naming [.NET Framework], enhanced
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1ab1087a840fe41b9fac7779c73797c470899408
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1d582513b10de88e4e5b9b9ef8c338599d6980f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834887"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141164"
 ---
 # <a name="enhanced-strong-naming"></a>Tanımlayıcı adlandırmayı iyileştirme
 Tanımlayıcı ad imzası, derlemeleri tanımlamak için .NET Framework bir kimlik mekanizmasıdır. Genellikle bir oluşturana (imzalayan) bir alıcıya (Doğrulayıcı) geçirilen verilerin bütünlüğünü doğrulamak için kullanılan ortak anahtar dijital imzadır. Bu imza, bir derleme için benzersiz bir kimlik olarak kullanılır ve derlemeye yapılan başvuruların belirsiz olmamasını sağlar. Derleme, derleme sürecinin bir parçası olarak imzalanır ve sonra yüklendiğinde doğrulanır.  
@@ -36,7 +34,7 @@ Tanımlayıcı ad imzası, derlemeleri tanımlamak için .NET Framework bir kiml
 ## <a name="use-enhanced-strong-names"></a>Gelişmiş tanımlayıcı adlar kullanın  
  Tanımlayıcı ad anahtarları bir imza anahtarından ve bir kimlik anahtarından oluşur. Derleme imza anahtarıyla imzalanır ve kimlik anahtarı tarafından tanımlanır. .NET Framework 4,5 ' den önce bu iki anahtar birbirinin aynısıdır. .NET Framework 4,5 ' den başlayarak, kimlik anahtarı önceki .NET Framework sürümlerle aynı kalır, ancak imza anahtarı daha güçlü bir karma algoritmayla geliştirilmiştir. Ayrıca, imza anahtarı kimlik anahtarıyla imzalanır ve bir sayaç imzası oluşturulur.  
   
- @No__t-0 özniteliği, derleme meta verilerinin derleme kimliği için önceden var olan ortak anahtarı kullanmasını sağlar, bu da eski derleme başvurularının çalışmaya devam etmesine olanak tanır.  @No__t-0 özniteliği, yeni imza anahtarı sahibinin de eski kimlik anahtarının sahibi olduğundan emin olmak için sayaç imzasını kullanır.  
+ <xref:System.Reflection.AssemblySignatureKeyAttribute> özniteliği, derleme meta verilerinin derleme kimliği için önceden var olan ortak anahtarı kullanmasına olanak tanır. Bu, eski derleme başvurularının çalışmaya devam etmesine olanak tanır.  <xref:System.Reflection.AssemblySignatureKeyAttribute> özniteliği, yeni imza anahtarı sahibinin de eski kimlik anahtarının sahibi olduğundan emin olmak için sayaç imzasını kullanır.  
   
 ### <a name="sign-with-sha-2-without-key-migration"></a>Anahtar Geçişi olmadan SHA-2 ile imzala  
  Bir derlemeyi tanımlayıcı ad imzasına geçirmeden imzalamak için komut isteminden aşağıdaki komutları çalıştırın:  
@@ -87,7 +85,7 @@ Tanımlayıcı ad imzası, derlemeleri tanımlamak için .NET Framework bir kiml
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
-4. @No__t-0 özniteliği için parametreler oluşturun ve özniteliği derlemeye ekleyin.  
+4. Bir <xref:System.Reflection.AssemblySignatureKeyAttribute> özniteliği için parametreler oluşturun ve özniteliği derlemeye ekleyin.  
   
     ```console  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3d5b642e-7ef2-428b-a5ae-509c35ed461a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 148bc423a9497962ebfbc73faefcc799c6db6499
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 144bdb1b4e479c1e75f89911ad5002e2650e405d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739905"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098117"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept Numaralandırması
-(Bu, içine girdiğiniz olduğu gibi), geçirilebilir kod türlerini belirtir.  
+Ele geçirilebilecek kod türlerini gösterir (yani, ile).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,25 +42,25 @@ typedef enum CorDebugIntercept {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`INTERCEPT_NONE`|Kod geçirilebilir.|  
-|`INTERCEPT_CLASS_INIT`|Bir oluşturucu geçirilebilir.|  
-|`INTERCEPT_EXCEPTION_FILTER`|Özel Durum Filtresi geçirilebilir.|  
-|`INTERCEPT_SECURITY`|Güvenlik uygulayan kod ele geçirilebilir.|  
-|`INTERCEPT_CONTEXT_POLICY`|Bir bağlam ilke geçirilebilir.|  
+|`INTERCEPT_NONE`|Kod yakalanabilir.|  
+|`INTERCEPT_CLASS_INIT`|Bir Oluşturucu yakalanabilir.|  
+|`INTERCEPT_EXCEPTION_FILTER`|Özel durum filtresi yakalanabilir.|  
+|`INTERCEPT_SECURITY`|Güvenliği zorlayan kod yakalanabilir.|  
+|`INTERCEPT_CONTEXT_POLICY`|Bağlam ilkesi yakalanabilir.|  
 |`INTERCEPT_INTERCEPTION`|Kullanılmadı.|  
-|`INTERCEPT_ALL`|Tüm kod geçirilebilir.|  
+|`INTERCEPT_ALL`|Tüm kod yakalanabilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım [ICorDebugStepper::setınterceptmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) geçirilebilir kod türlerini oluşturmak için yöntemi.  
+ Ele geçirilebilecek kod türlerini oluşturmak için [ICorDebugStepper:: Setyakatmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) yöntemini kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

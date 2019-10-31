@@ -6,140 +6,138 @@ helpviewer_keywords:
 - unmanaged enumerations [.NET Framework], debugging
 - enumerations [.NET Framework debugging]
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5edd6dfb3dac05ce4614c43949f2ec4c19b5f742
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7948b78da1db5267ce53364af1e4a26ff73801e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698518"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124327"
 ---
 # <a name="debugging-enumerations"></a>Hata Ayıklama Numaralandırmaları
-Bu bölümde, hata ayıklama API'SİNİN kullandığı yönetilmeyen numaralandırmaları açıklar.  
+Bu bölümde hata ayıklama API 'sinin kullandığı yönetilmeyen numaralandırmalar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [CLR_DEBUGGING_PROCESS_FLAGS Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)  
- Tarafından kullanılan değerleri sağlar [Iclrdebugging::openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) yöntemi.  
+ [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) yöntemi tarafından kullanılan değerleri sağlar.  
   
  [CLRDataEnumMemoryFlags Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)  
- Hangi bellek bölgeleri için bir çağrı gösterir [Iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) yöntemini içerir.  
+ Hangi bellek bölgelerinin [ıclrdataenummemoryregion:: EnumMemoryRegion](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) yöntemine yönelik bir çağrı içermesi gerektiğini gösterir.  
   
  [COR_PUB_ENUMPROCESS Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)  
- Numaralandırılacak işlem türünü belirtir.  
+ Numaralandırılacak işlemin türünü tanımlar.  
   
  [CorDebugBlockingReason Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingreason-enumeration.md)  
- Belirli bir nesne üzerinde bir iş parçacığı neden engellenmiş duruma nedenlerini belirtir.  
+ Bir iş parçacığının belirli bir nesne üzerinde engellenip engellenme nedenlerini belirtir.  
   
  CorDebugChainReason  
- Neden veya çağrı zincirinin başlatma nedenlerle gösterir.  
+ Bir çağrı zincirinin başlatılması için neden veya nedenleri gösterir.  
   
  [CorDebugCodeInvokeKind Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md)  
- Dışarı aktarılan bir işlevin yönetilen kod nasıl çağırır açıklar.  
+ Bir içe aktarılmış işlevin yönetilen kodu nasıl çağırılacağını açıklar.  
   
  [CorDebugCodeInvokePurpose Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md)  
- Neden yönetilen kod dışa aktarılan bir işlevin çağrıları açıklar.  
+ Bir içe aktarılmış işlevin neden yönetilen kodu çağırıyor olduğunu açıklar.  
   
  CorDebugCreateProcessFlags  
- Bir çağrıda kullanılan ek hata ayıklama seçenekleri sağlar [Icordebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) yöntemi.  
+ [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) metoduna yapılan bir çağrıda kullanılabilecek ek hata ayıklama seçenekleri sağlar.  
   
  [CorDebugDebugEventKind Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
- , Bilgileri kodu çözülen olay türünü gösteren [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) yöntemi.  
+ Bilgileri [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) yöntemi tarafından kodu çözülen olay türünü gösterir.  
   
  [CorDebugDecodeEventFlagsWindows Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
- Hata ayıklama olaylar hakkında ek bilgi için Windows platformunda sağlar.  
+ Windows platformunda hata ayıklama olayları hakkında ek bilgi sağlar.  
   
  CorDebugExceptionCallbackType  
- Gelen yapılan bir geri çağırma türünü gösteren bir [Icordebugmanagedcallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) olay.  
+ Bir [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) olayından yapılan geri aramanın türünü gösterir.  
   
  [CorDebugExceptionFlags Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)  
  Bir özel durum hakkında ek bilgi sağlar.  
   
  CorDebugExceptionUnwindCallbackType  
- Geri çağırma tarafından geriye doğru izleme aşamasında sinyal olay gösterir.  
+ Geriye doğru izleme aşamasında geri çağırma tarafından sinyal edilen olayı gösterir.  
   
  [CorDebugGCType Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md)  
- Atık toplayıcı bir iş istasyonunda veya sunucuda çalışıp çalışmadığını gösterir.  
+ Çöp toplayıcının bir iş istasyonunda veya sunucuda çalışıp çalışmadığını belirtir.  
   
  [CorDebugGenerationTypes Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md)  
- Yönetilen yığında bir bellek bölgesini oluşturulmasını belirtir.  
+ Yönetilen yığında bir bellek bölgesinin üretilmesini belirtir.  
   
  CorDebugHandleType  
- Tanıtıcı türü gösterir.  
+ Tanıtıcı türünü gösterir.  
   
  [CorDebugIlToNativeMappingTypes Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md)  
- Yerel yönergeleri belirli bir dizi özel kod bölgesine karşılık gelen olup olmadığını gösterir.  
+ Belirli bir yerel yönerge aralığının özel bir kod bölgesine karşılık geldiğini gösterir.  
   
- Cordebugıntercept  
- İçine girdiğiniz kod türlerini belirtir.  
+ CorDebugIntercept  
+ İçine bulanan kod türlerini gösterir.  
   
  [CorDebugInterfaceVersion Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md)  
- .NET Framework sürümünü veya içinde bir arabirimi kullanıma sunulmuştur .NET Framework sürümünü belirtir.  
+ .NET Framework sürümünü veya bir arabirimin tanıtılmasıyla .NET Framework sürümünü belirtir.  
   
- Cordebugınternalframetype  
+ CorDebugInternalFrameType  
  Yığın çerçevesinin türünü tanımlar.  
   
  [CorDebugJITCompilerFlags Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)  
- Yönetilen just-ın-time (JIT) derleyici davranışını etkileyen değerlerini içerir.  
+ Yönetilen Just-In-Time (JıT) derleyicisinin davranışını etkileyen değerler içerir.  
   
  [CorDebugJITCompilerFlagsDeprecated Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflagsdeprecated-enumeration.md)  
- Kullanımdan kalktı. Kullanım `CORDEBUG_JIT_DEFAULT` üyesi [Cordebugjıtcompilerflags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) numaralandırma yerine.  
+ Kullanımdan kalktı. Bunun yerine [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) numaralandırmasının `CORDEBUG_JIT_DEFAULT` üyesini kullanın.  
   
  CorDebugMappingResult  
- Yönerge işaretçisi (IP) değerini nasıl edinilen ayrıntılarını sağlar.  
+ Yönerge işaretçisinin (IP) değerinin nasıl alındıklarına ilişkin ayrıntıları sağlar.  
   
  [CorDebugMDAFlags Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebugmdaflags-enumeration.md)  
- Yönetilen hata ayıklama Yardımcısı (MDA) harekete geçirilen iş parçacığı durumunu belirtir.  
+ Yönetilen hata ayıklama Yardımcısı 'nın (MDA) harekete geçirildiği iş parçacığının durumunu belirtir.  
   
  [CorDebugNGenPolicy Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)  
- Bir hata ayıklayıcı yerel görüntü önbelleğinden kaldırırız (NGen) yerel görüntüleri yükleyip yüklemediğini belirleyen bir değer sağlar.  
+ Bir hata ayıklayıcının yerel görüntü önbelleğinden yerel (NGen) görüntüler yükleyip yüklemeyeceğini belirleyen bir değer sağlar.  
   
  [CorDebugPlatform Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)  
- Tarafından kullanılan hedef platform değerleri sağlayan [Icordebugdatatarget::getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) yöntemi.  
+ [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) yöntemi tarafından kullanılan hedef platform değerlerini sağlar.  
   
  [CorDebugRecordFormat Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
- Yerel özel durum hata ayıklama olayla ilgili bilgileri içeren bir bayt dizisi verilerinin biçimini tanımlar.  
+ Bir yerel özel durum ayıklama olayı hakkında bilgi içeren bir bayt dizisindeki verilerin biçimini açıklar.  
   
  CorDebugRegister  
- Bir verilen işlemci mimarisi ile ilişkili olan kayıtları belirtir.  
+ Belirli bir işlemci mimarisiyle ilişkili kayıtları belirtir.  
   
  [CorDebugSetContextFlag Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md)  
- Bağlam etkin olup olmadığını belirtir (veya yaprak) çerçevesi yığın üzerinde veya başka bir çerçeveden geriye doğru izleme tarafından hesaplanır.  
+ Bağlamın yığındaki etkin (veya yaprak) kareden mi olduğunu yoksa başka bir çerçeveden geriye doğru bir şekilde mi hesaplandığını gösterir.  
   
  [CorDebugStateChange Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/cordebugstatechange-enumeration.md)  
- Değişiklikler iş akışına dayalı atılması gerekir önbelleğe alınan veri miktarı açıklar.  
+ İşlemdeki değişikliklere göre atılması gereken önbelleğe alınmış verilerin miktarını açıklar.  
   
  CorDebugStepReason  
- Bir adımın sonucunu gösterir.  
+ Tek bir adımın sonucunu gösterir.  
   
  CorDebugThreadState  
- Hata ayıklama için bir iş parçacığı durumunu belirtir.  
+ Hata ayıklama için bir iş parçacığının durumunu belirtir.  
   
  \>CorDebugUnmappedStop  
- Kod yürütülmesine bir durdurmak tarafından adımlayıcıdaki tetikleyebilirsiniz eşlenmemiş kodun türünü belirtir.  
+ Stepper tarafından kod yürütmede bir durdurmak tetikleyemeyecek eşlenmemiş kod türünü belirtir.  
   
  CorDebugUserState  
- Kullanıcı durumunu bir iş parçacığının gösterir.  
+ Bir iş parçacığının kullanıcı durumunu belirtir.  
   
  [CorGCReferenceType Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)  
- Kaynağı olarak atık olarak toplanmış bir nesneyi tanımlar.  
+ Atık olarak toplanmış bir nesnenin kaynağını tanımlar.  
   
  [ILCodeKind Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md)  
- Hata ayıklayıcı yerel değişkenler veya ReJIT izleme profil oluşturucu, eklenen kod erişmek mümkün olup olmadığını belirten değerleri sağlar.  
+ Hata ayıklayıcının profil oluşturucu ReJIT araçları 'nda eklenen yerel değişkenlere veya koda erişip erişemeyeceğini belirten değerler sağlar.  
   
  [LoggingLevelEnum Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md)  
- Yönetilen iş parçacığı bir olayı günlüğe kaydettiğinde, olay günlüğüne yazılan açıklayıcı bir iletisi önem derecesi düzeyini gösterir.  
+ Yönetilen bir iş parçacığı bir olay günlüğe kaydederken olay günlüğüne yazılan açıklayıcı bir iletinin önem derecesini gösterir.  
   
  [LogSwitchCallReason Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md)  
- Hata ayıklama izlemeyi anahtarda gerçekleştirilen bir işlemi belirtir.  
+ Hata ayıklama/izleme anahtarı üzerinde gerçekleştirilen işlemi gösterir.  
   
  [VariableLocationType Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)  
- Bir değişken yerel konum türünü belirtir.  
+ Bir değişkenin yerel konum türünü gösterir.  
   
  [WriteableMetadataUpdateMode Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md)  
- Meta veriler için bellek içi güncelleştirmeler için bir hata ayıklayıcı görünür olup olmadığını belirten değerleri sağlar. 
+ Meta verilerde bellek içi güncelleştirmelerin hata ayıklayıcıya görünür olup olmadığını belirten değerler sağlar. 
 
- [ClrDataSourceType numaralandırma](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md) CLRDATA_IL_ADDRESS_MAP yapısı tarafından kullanılan değerleri sağlar.
+ [ClrDataSourceType numaralandırması](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md) CLRDATA_IL_ADDRESS_MAP yapısı tarafından kullanılan değerleri sağlar.
 
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Hata Ayıklama Coclass’ları](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  

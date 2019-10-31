@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: cfe4b634-18bf-44b8-9773-d94fb7e8a480
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 08247c1ec5b868055e4836b3c0fb520a536374e8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ca428d680df1710d8e74441d9945d4c3545b0482
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798920"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121140"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx İşlevi
 Belirtilen yoldaki Derleme bildiriminin tanımlayıcı ad imzası içerip içermediğini gösteren bir değer alır.  
@@ -44,23 +42,23 @@ BOOLEAN StrongNameSignatureVerificationEx (
  'ndaki Doğrulanacak derleme için taşınabilir yürütülebilir (. exe veya. dll) dosyasının yolu.  
   
  `fForceVerification`  
- 'ndaki doğrulama gerçekleştirmek için, kayıt defteri ayarlarını geçersiz kılmak gerekli olsa bile, aksi durumda, `false`. `true`  
+ [in] kayıt defteri ayarlarını geçersiz kılmak gerekli olsa bile doğrulama gerçekleştirmek için `true`; Aksi takdirde, `false`.  
   
  `pfWasVerified`  
- dışı tanımlayıcı ad imzası doğrulandıysa, `false`tersi durumda. `true` `pfWasVerified`, kayıt defteri ayarları `false` nedeniyle doğrulama başarılı olduysa olarak da ayarlanır.  
+ [out] tanımlayıcı ad imzası doğrulandıysa `true`; Aksi takdirde, `false`. Ayrıca, kayıt defteri ayarları nedeniyle doğrulama başarılı olduysa, `pfWasVerified` `false` olarak ayarlanır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`doğrulama başarılı olduysa, Aksi takdirde `false`,.  
+ doğrulama başarılı olduysa `true`; Aksi takdirde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `StrongNameSignatureVerificationEx`[Strongnamesignaturedoğrulama](strongnamesignatureverification-function.md) işlevine benzer bir yetenek sağlar. Ancak, ikinci giriş parametresi ve için `StrongNameSignatureVerificationEx` çıkış parametresi yerine `DWORD`türüdür `BOOLEAN` .  
+ `StrongNameSignatureVerificationEx` [Strongnamesignaturedoğrulama](strongnamesignatureverification-function.md) işlevine benzer bir yetenek sağlar. Ancak, `StrongNameSignatureVerificationEx` için ikinci giriş parametresi ve çıkış parametresi `DWORD`yerine `BOOLEAN` türüdür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** StrongName. h  
+ **Üst bilgi:** StrongName. h  
   
- **Kitaplığı** Mscoree. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** Mscoree. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

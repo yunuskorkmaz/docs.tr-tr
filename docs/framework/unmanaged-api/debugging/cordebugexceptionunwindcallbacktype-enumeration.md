@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 783dce92-8a98-43db-8f78-888d943dd5b2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef3f1d5e78efe37070bb2bdd6d2834178947af7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5004cd293b64436c41caef1c7393d2229d1a6ccf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740080"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098476"
 ---
 # <a name="cordebugexceptionunwindcallbacktype-enumeration"></a>CorDebugExceptionUnwindCallbackType Numaralandırması
-Geri çağırma tarafından geriye doğru izleme aşamasında sinyal olay gösterir.  
+Geriye doğru izleme aşamasında geri çağırma tarafından sinyal edilen olayı gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,17 +37,17 @@ typedef enum CorDebugExceptionUnwindCallbackType {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_UNWIND_BEGIN`|Geriye doğru izleme işlemi başlangıcı.|  
-|`DEBUG_EXCEPTION_INTERCEPTED`|Özel durum kesildi.|  
+|`DEBUG_EXCEPTION_UNWIND_BEGIN`|Geriye doğru izleme işleminin başlangıcı.|  
+|`DEBUG_EXCEPTION_INTERCEPTED`|Özel durum yakalanmıştı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

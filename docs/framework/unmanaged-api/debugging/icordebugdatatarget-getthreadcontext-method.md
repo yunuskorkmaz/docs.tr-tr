@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8954268-1821-4b23-b665-dbb55f2af31b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2047929c52dbb7b0d780a4ea0f180bae48a3ce79
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 278320391615eddaa8ba878ef87f802f30cddb95
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750387"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122032"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext Metodu
 Belirtilen iş parçacığı için geçerli iş parçacığı bağlamını döndürür.  
@@ -39,28 +37,28 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Parametreler  
  `dwThreadID`  
- [in] Alınacak olan bağlamıdır iş parçacığı tanıtıcısı. Tanımlayıcı, işletim sistemi tarafından tanımlanır.  
+ 'ndaki Bağlamını alınacak olan iş parçacığının tanımlayıcısı. Tanımlayıcı, işletim sistemi tarafından tanımlanır.  
   
  `contextFlags`  
- [in] Bağlamın bölümünü okumalısınız belirtmek platforma bağımlı bayrakları Bitsel bir birleşimi.  
+ 'ndaki İçeriğin hangi bölümlerinin okunabileceği belirten, platforma bağımlı bayrakların bit düzeyinde birleşimi.  
   
  `contextSize`  
- [in] Boyutu `pContext`.  
+ 'ndaki `pContext`boyutu.  
   
  `pContext`  
- [out] İş parçacığı bağlamını depolanacağı arabelleği.  
+ dışı İş parçacığı bağlamının depolanacağı arabellek.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Windows platformlarında, `pContext` olmalıdır bir `CONTEXT` tarafından belirtilen makine türü için uygun olan (WinNT.h içinde tanımlanmıştır) yapısı [Icordebugdatatarget::getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) yöntemi. `contextFlags` aynı değerlere sahip olmalıdır `ContextFlags` alanını `CONTEXT` yapısı. `CONTEXT` Yapısının olduğundan işlemciye özgü; ayrıntılar için WinNT.h dosyasına bakın.  
+ Windows platformlarında, `pContext` [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) yöntemi tarafından belirtilen makine türü için uygun bir `CONTEXT` yapısı (Winnt. h içinde tanımlanır) olmalıdır. `contextFlags`, `CONTEXT` yapısının `ContextFlags` alanıyla aynı değerlere sahip olmalıdır. `CONTEXT` yapısı, işlemciye özeldir; Ayrıntılar için WinNT. h dosyasına bakın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

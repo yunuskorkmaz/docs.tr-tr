@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f783ebc3-e952-46e6-9325-14dd2c666f21
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1e8ffefbe52344edd782b7d5d5b8d01b57f11f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30fcf15ed5f612820fc2836995b1e0206f580763
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766254"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095764"
 ---
 # <a name="icordebugobjectvaluegetvirtualmethod-method"></a>ICorDebugObjectValue::GetVirtualMethod Metodu
-`GetVirtualMethod` .NET Framework'ün bu sürümünde uygulanmadı.  
+`GetVirtualMethod`, .NET Framework bu sürümünde uygulanmıyor.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,6 +35,6 @@ HRESULT GetVirtualMethod (
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

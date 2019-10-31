@@ -4,19 +4,17 @@ ms.date: 03/30/2017
 dev_langs:
 - cpp
 ms.assetid: c8c1d916-8d1a-4f82-8128-9fd3732383fc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 99fa1cc05ee583cf1bd59235fcd9821d1c92d21f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ac7ddeed5694ad0ae6ef3d4a11fcb1fb23755b8e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101438"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123222"
 ---
-# <a name="corprfassemblyreferenceinfo-structure"></a>COR_PRF_ASSEMBLY_REFERENCE_INFO Yapısı
-[.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
+# <a name="cor_prf_assembly_reference_info-structure"></a>COR_PRF_ASSEMBLY_REFERENCE_INFO Yapısı
+[.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
   
- Ortak dil çalışma zamanı bir bütünleştirilmiş kod başvurusu kapanış Yürüme gerçekleştirirken düşünmelisiniz bir bütünleştirilmiş kod başvurusu hakkında bilgi sağlar.  
+ Ortak dil çalışma zamanını, bir derleme başvurusu kapatma ilerlemesi gerçekleştirirken göz önünde bulundurmanız gereken bir derleme başvurusu hakkındaki bilgileri sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,27 +34,27 @@ typedef struct _COR_PRF_ASSEMBLY_REFERENCE_INFO {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`pbPublicKeyOrToken`|Ortak anahtar veya belirteç derlemenin bir işaretçi.|  
-|`cbPublicKeyOrToken`|Ortak anahtar veya belirteç bayt sayısı.|  
+|`pbPublicKeyOrToken`|Derleme için ortak anahtar veya belirtece yönelik bir işaretçi.|  
+|`cbPublicKeyOrToken`|Ortak anahtar veya belirteçteki bayt sayısı.|  
 |`szName`|Başvurulan derlemenin adı.|  
-|`pMetaData`|Derlemenin meta verilerini bir işaretçi.|  
+|`pMetaData`|Derlemenin meta verilerine yönelik bir işaretçi.|  
 |`pbHashValue`|Karma ikili büyük nesne (BLOB) için bir işaretçi.|  
-|`cbHashValue`|BLOB karma bayt sayısı.|  
-|`dwAssemblyRefFlags`|Derlemenin bayraklar.|  
+|`cbHashValue`|Karma BLOBUN içindeki bayt sayısı.|  
+|`dwAssemblyRefFlags`|Derlemenin bayrakları.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `COR_PRF_EX_CLAUSE_INFO` Yapısı, ortak dil çalışma zamanı, bir derleme başvurusu kapanış Yürüme yaparken dikkate almanız gereken ek derleme başvurularını bildirir, Profil Oluşturucu tarafından doldurulur.  
+ `COR_PRF_EX_CLAUSE_INFO` yapısı, ortak dil çalışma zamanının bir derleme başvuru kapanışı yürüirken dikkate alınması gereken ek derleme başvurularını bildirdiği zaman profil oluşturucu tarafından doldurulur.  
   
- Profil Oluşturucu kayıtlıysa [Icorprofilercallback6::getassemblyreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) geri çağırma yöntemi, çalışma zamanı geçirir, bir işaretçi ile birlikte yüklenecek derlemenin adı ve yolunu bir [ Icorprofilerassemblyreferenceprovider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md) bu yönteme arabirimi nesnesi. Profil Oluşturucu ardından çağırabilirsiniz [Icorprofilerassemblyreferenceprovider::addassemblyreference](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) yöntemi ile bir `COR_PRF_ASSEMBLY_REFERENCE_INFO` her hedef derleme planları içinde belirtilen derleme başvuru yapmak için nesne [ Icorprofilercallback6::getassemblyreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) geri çağırma.  
+ Profil Oluşturucu [ICorProfilerCallback6:: GetAssemblyReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) geri çağırma metoduna kaydolduktan sonra, çalışma zamanı yüklenecek derlemenin yolunu ve adını, [ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md) işaretçisi ile birlikte geçirir Bu yöntem için arabirim nesnesi. Profil Oluşturucu daha sonra [ICorProfilerAssemblyReferenceProvider:: AddAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) metodunu, ICorProfilerCallback6 içinde belirtilen derlemeden başvuru yaptığı her bir hedef derleme için bir `COR_PRF_ASSEMBLY_REFERENCE_INFO` nesnesi ile çağırabilir. [ GetAssemblyReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) geri çağırması.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 356f7ec9c50ce511883cbf0f5fbcb729493c92af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3d45caae56403d77776f1a8adbb5fb9c368ff105
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737574"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088485"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement Yöntemi
-Belirli bir dizi öğenin değerini alır.  
+Verilen dizi öğesinin değerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,23 +38,23 @@ HRESULT GetElement (
   
 ## <a name="parameters"></a>Parametreler  
  `cdim`  
- [in] Bu boyut sayısını `ICorDebugArrayValue` nesne.  
+ 'ndaki Bu `ICorDebugArrayValue` nesnesinin boyut sayısı.  
   
- Bu değer ayrıca boyutudur `indices` boyutuna boyutlarını sayısına eşit olduğundan dizi `ICorDebugArrayValue` nesne.  
+ Boyutu, `ICorDebugArrayValue` nesnesinin boyut sayısına eşit olduğundan, bu değer ayrıca `indices` dizisinin boyutudur.  
   
  `indices`  
- [in] Dizin değerlerini, her biri bir boyutu içinde bir konumu belirtir bir dizi `ICorDebugArrayValue` nesne.  
+ 'ndaki Her biri `ICorDebugArrayValue` nesnesinin boyutunda bir konum belirten Dizin değerleri dizisi.  
   
  Bu değer null olmamalıdır.  
   
  `ppValue`  
- [out] Belirtilen öğenin değerini temsil eden bir Icordebugvalue nesnenin adresi için bir işaretçi.  
+ dışı Belirtilen öğenin değerini temsil eden ICorDebugValue nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

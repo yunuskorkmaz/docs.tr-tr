@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c96770b0-3e09-47bb-bd29-20353b043459
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fc65f5b55082970a0cd59a6850aaaa6779d0821
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 002c6cccb3ddf29b831ba5e14baa5e51f1b82433
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766413"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095887"
 ---
 # <a name="icordebugobjectvaluegetfieldvalue-method"></a>ICorDebugObjectValue::GetFieldValue Yöntemi
-Bu nesne değeri için belirtilen sınıf belirtilen alanının değerini alır.  
+Bu nesne değeri için belirtilen sınıftaki belirtilen alanın değerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,26 +37,26 @@ HRESULT GetFieldValue (
   
 ## <a name="parameters"></a>Parametreler  
  `pClass`  
- [in] Alan değeri alınacağı bir sınıfı temsil eden bir "ICorDebugClass" nesne işaretçisi.  
+ 'ndaki Alan değerinin alınacağı sınıfı temsil eden bir "ICorDebugClass" nesnesine yönelik bir işaretçi.  
   
  `fieldDef`  
- [in] Bir `mdFieldDef` başvuran alanı tanımlayan meta veri belirteci.  
+ 'ndaki Alanı tanımlayan meta verilere başvuran bir `mdFieldDef` belirteci.  
   
  `ppValue`  
- [out] Belirtilen alanın değerini temsil eden bir "ICorDebugValue" nesne işaretçisi.  
+ dışı Belirtilen alanın değerini temsil eden bir "ICorDebugValue" nesnesine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirtilen sınıfın `pClass` parametresi, nesne değerinin sınıfının hiyerarşisinde olmalıdır ve söz konusu sınıfın bir alan alan olmalıdır.  
+ `pClass` parametresinde belirtilen sınıf, nesne değeri sınıfının hiyerarşisinde olmalıdır ve alan bu sınıfın bir alanı olmalıdır.  
   
- `GetFieldValue` Yöntemi yine de başarılı olur genel nesneleri ve Genel sınıflar için. Örneğin, varsa MyDictionary\<V > sözlükten devralan\<dize, V >, ve nesne değeri MyDictionary türünde\<Int32 >, geçen `ICorDebugClass` sözlük nesnesi\<K, V > olur sözlüğün bir alan başarıyla alma\<string, Int32 >.  
+ `GetFieldValue` yöntemi, genel nesneler ve genel sınıflar için yine de başarılı olur. Örneğin, MyDictionary\<V > sözlük\<dizeden, V > ' den devralırsa ve nesne değeri MyDictionary\<Int32 > türünde ise, `ICorDebugClass` Sözlük\<dize, Int32 >.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.

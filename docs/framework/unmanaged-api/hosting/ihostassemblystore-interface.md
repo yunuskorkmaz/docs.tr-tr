@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: cccb650f-abe0-41e2-9fd1-b383788eb1f6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f881440b2e93745723bd090cfbab0286dcd0a4e5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d7475e2423d4dc6f57e8928514d7991169eef232
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937872"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124495"
 ---
 # <a name="ihostassemblystore-interface"></a>IHostAssemblyStore Arabirimi
 Bir konağın ortak dil çalışma zamanından (CLR) bağımsız olarak derlemeleri ve modülleri yüklemesine izin veren yöntemler sağlar.  
@@ -34,22 +32,22 @@ Bir konağın ortak dil çalışma zamanından (CLR) bağımsız olarak derlemel
 |[ProvideModule Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)|Derleme içindeki bir modülü veya bağlı (gömülü değil) kaynak dosyasını çözer.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IHostAssemblyStore`bir konağın derleme kimliği temelinde derlemeleri etkin bir şekilde yüklemesi için bir yol sağlar. Ana bilgisayar, doğrudan baytlara `IStream` işaret eden örnekleri döndürerek derlemeleri yükler.  
+ `IHostAssemblyStore`, bir ana bilgisayarın derleme kimliği temelinde derlemeleri etkin bir şekilde yüklemesi için bir yol sağlar. Ana bilgisayar, doğrudan baytlara işaret eden `IStream` örnekleri döndürerek derlemeleri yükler.  
   
- CLR, başlatma sonrasında çağırarak `IHostAssemblyStore` `IHostAssemblyManager::GetNonHostAssemblyStores` bir konağın uygulanıp uygulanmadığı belirler. Bu, örneğin, ana bilgisayarın kullanıcı Derlemeleriyle bağlamayı denetlemesini, ancak .NET Framework derlemelerine bağlamak için çalışma zamanına güvenmelerini sağlar.  
+ CLR, başlatma sonrasında `IHostAssemblyManager::GetNonHostAssemblyStores` çağırarak bir konağın `IHostAssemblyStore` uygulanıp uygulanmadığı belirler. Bu, örneğin, ana bilgisayarın kullanıcı Derlemeleriyle bağlamayı denetlemesini, ancak .NET Framework derlemelerine bağlamak için çalışma zamanına güvenmelerini sağlar.  
   
 > [!NOTE]
-> Uygulamasının bir uygulamasını `IHostAssemblyStore`sağlamak için konak, öğesinden `ICLRAssemblyReferenceList` `IHostAssemblyManager::GetNonHostStoreAssemblies`döndürülen tarafından başvurulmayan tüm derlemeleri çözümleme amacını belirtir.  
+> `IHostAssemblyStore`bir uygulama sağlamak için, konak `IHostAssemblyManager::GetNonHostStoreAssemblies`döndürülen `ICLRAssemblyReferenceList` tarafından başvurulmayan tüm derlemeleri çözümleme amacını belirtir.  
   
 > [!NOTE]
 > .NET Framework sürüm 2,0, ana bilgisayarın [Yerel Görüntü Oluşturucu (Ngen. exe)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md) yardımcı programı tarafından sağlandığı şekilde bir derlemenin yerel görüntüsünü yüklemesi için bir yol sağlamaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** MSCorEE. h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

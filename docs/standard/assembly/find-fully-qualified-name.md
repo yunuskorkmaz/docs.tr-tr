@@ -1,35 +1,33 @@
 ---
-title: 'Nasıl yapılır: Bir derlemenin tam nitelikli adını bulun'
+title: 'Nasıl yapılır: bir derlemenin tam nitelikli adını bulma'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 4fc670adc80a6f4ce7b36074185dcd3bb85fbc67
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 49d6d6cf5c138df671d061beb23cb57bcb0667b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991306"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140292"
 ---
-# <a name="how-to-find-an-assemblys-fully-qualified-name"></a>Nasıl yapılır: Bir derlemenin tam nitelikli adını bulun
+# <a name="how-to-find-an-assemblys-fully-qualified-name"></a>Nasıl yapılır: bir derlemenin tam nitelikli adını bulma
 
-Genel derleme önbelleğinde bir .NET Framework derlemesinin tam adını öğrenmek için genel derleme önbelleği aracını ([Gacutil. exe](../../framework/tools/gacutil-exe-gac-tool.md)) kullanın. Bkz [. nasıl yapılır: Genel derleme önbelleğinin](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md)içeriğini görüntüleyin.
+Genel derleme önbelleğinde bir .NET Framework derlemesinin tam adını öğrenmek için genel derleme önbelleği aracını ([Gacutil. exe](../../framework/tools/gacutil-exe-gac-tool.md)) kullanın. Bkz. [nasıl yapılır: genel derleme önbelleğinin Içeriğini görüntüleme](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).
 
 .NET Core derlemeleri ve genel derleme önbelleğinde olmayan .NET Framework derlemeler için, tam derleme adını çeşitli yollarla alabilirsiniz:
 
 - Bilgileri konsola veya bir değişkene çıkarmak için kodu kullanabilir veya tam nitelikli adı içeren derlemenin meta verilerini incelemek için [ıldadsm. exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz.
 
-- Derleme uygulama tarafından zaten yüklüyse, tam adı almak için <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> özelliğin değerini alabilirsiniz. Nesnesine bir başvuru <xref:System.Type.Assembly> <xref:System.Type> almak için, bu derlemede tanımlanan öğesinin özelliğini kullanabilirsiniz. <xref:System.Reflection.Assembly> Örnek, bir gösterim sağlar.
+- Derleme uygulama tarafından zaten yüklenmişse, tam adı almak için <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> özelliğinin değerini alabilirsiniz. <xref:System.Reflection.Assembly> nesnesine bir başvuru almak için, bu derlemede tanımlanan bir <xref:System.Type> <xref:System.Type.Assembly> özelliğini kullanabilirsiniz. Örnek, bir gösterim sağlar.
 
-- Derlemenin dosya sistemi yolunu biliyorsanız, tam derleme adını almak `static` için (C#) veya `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> yöntemini çağırabilirsiniz. Aşağıda basit bir örnek verilmiştir.
+- Derlemenin dosya sistemi yolunu biliyorsanız, tam derleme adını almak için `static` (C#) veya `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> yöntemini çağırabilirsiniz. Aşağıda basit bir örnek verilmiştir.
 
   ```csharp
   using System;
@@ -64,7 +62,7 @@ Sürüm, kültür ve derleme adı gibi derleme özniteliklerini ayarlama hakkın
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, konsoluna belirtilen bir sınıf içeren bir derlemenin tam adının nasıl görüntüleneceğini gösterir. Bu, <xref:System.Type.Assembly?displayProperty=nameWithType> Bu derlemede tanımlanan türden bir derlemeye başvuru almak için özelliğini kullanır.
+Aşağıdaki örnek, konsoluna belirtilen bir sınıf içeren bir derlemenin tam adının nasıl görüntüleneceğini gösterir. Bu derlemede tanımlanan bir türden derlemeye başvuru almak için <xref:System.Type.Assembly?displayProperty=nameWithType> özelliğini kullanır.
 
 ```cpp
 #using <System.dll>

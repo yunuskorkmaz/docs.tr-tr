@@ -2,14 +2,12 @@
 title: 'ICorDebugVariableSymbol:: SetValue yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5436f56d3dcad7de3df2296485b0a36e5b3cfd79
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbd3d617e3448730241ccfda7bd26b65d17b694d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967961"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121886"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol:: SetValue yöntemi
 Bir bayt dizisinin değerini bir değişkene atar.  
@@ -41,7 +39,7 @@ HRESULT SetValue(
  'ndaki Değeri yazmak için kullanılan iş parçacığı bağlamı.  
   
  `cbValue`  
- 'ndaki `pValue` Arabelleğin bayt cinsinden boyutu.  
+ 'ndaki `pValue` arabelleğinin bayt cinsinden boyutu.  
   
  `pValue`  
  'ndaki Ayarlanacak değeri içeren arabellek.  
@@ -52,11 +50,11 @@ HRESULT SetValue(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

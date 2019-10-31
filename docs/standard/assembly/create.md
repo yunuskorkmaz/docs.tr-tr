@@ -1,5 +1,5 @@
 ---
-title: Derlemeler oluştur
+title: Derleme oluşturma
 ms.date: 08/19/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -7,16 +7,14 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2dda45cca182d75bc77916cdf862ada9faead9ec
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8a00784e6aa2d663c738339367b4076e79ed9c95
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973308"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122494"
 ---
-# <a name="create-assemblies"></a>Derlemeler oluştur
+# <a name="create-assemblies"></a>Derleme oluşturma
 
 Visual Studio gibi bir IDE veya Windows SDK tarafından sunulan derleyiciler ve araçlar aracılığıyla tek dosyalı veya çok dosyalı derlemeler oluşturabilirsiniz. En basit derleme basit bir ada sahip tek bir dosyadır ve tek bir uygulama etki alanına yüklenir. Bu derlemeye, uygulama dizini dışındaki diğer derlemeler tarafından başvurulamaz ve sürüm denetimi çalışmıyor. Derlemeden oluşan uygulamayı kaldırmak için, bulunduğu dizini silmeniz yeterlidir. Birçok geliştirici için, bu özelliklere sahip bir derleme, bir uygulamanın dağıtılması için gerekli olan bir derlemedir.
 
@@ -50,7 +48,7 @@ Yönetilmeyen COM uygulamaları için ortak dil çalışma zamanı derlemeleri k
 
 - [Bütünleştirilmiş kod içeren program](program.md)
 - [Derleme sürümü oluşturma](versioning.md)
-- [Nasıl yapılır: Tek dosya derlemesi oluşturma](../../framework/app-domains/build-single-file-assembly.md)
-- [Nasıl yapılır: Çoklu dosya derlemesi oluşturma](../../framework/app-domains/build-multifile-assembly.md)
+- [Nasıl yapılır: tek dosya bütünleştirilmiş kodu derleme](../../framework/app-domains/build-single-file-assembly.md)
+- [Nasıl yapılır: çok dosyalı bütünleştirilmiş kod derleme](../../framework/app-domains/build-multifile-assembly.md)
 - [Çalışma zamanının derlemeleri nasıl konumlandırır](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Çoklu dosya derlemeleri](../../framework/app-domains/multifile-assemblies.md)

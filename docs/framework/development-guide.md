@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ebbf0b28da04e2e70dd2d0a9689b80fcdbeee4be
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: abc392116aec8ffd8aa94f46ef97887c48516ca0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779530"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122475"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework Geliştirme Kılavuzu
 Bu bölümde .NET Framework uygulamalarınızı oluşturma, yapılandırma, hata ayıklama, güvenli hale getirme ve dağıtma işlemleri açıklanmaktadır. Bu bölüm ayrıca dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı gibi teknoloji alanlarıyla ilgili bilgiler de sağlar.  
@@ -32,7 +30,7 @@ Bu bölümde .NET Framework uygulamalarınızı oluşturma, yapılandırma, hata
  [WCF ile Hizmet Odaklı Uygulamalar](./wcf/index.md)  
  Güvenli ve güvenilir olan hizmet yönelimli uygulamalar oluşturmak için Windows Communication Foundation (WCF) kullanmayı açıklar.  
   
- [Windows Workflow Foundation iş akışları oluşturma](windows-workflow-foundation/index.md)     
+ [Windows Workflow Foundation    iş akışları oluşturma](windows-workflow-foundation/index.md)  
  Windows Workflow Foundation (WF) kullanmaya yönelik programlama modeli, örnekler ve araçlar hakkında bilgi sağlar.  
 
  [Windows Hizmeti Uygulamaları](./windows-services/index.md)  
@@ -50,7 +48,7 @@ Bu bölümde .NET Framework uygulamalarınızı oluşturma, yapılandırma, hata
  [.NET Native ile Uygulama Derleme](./net-native/index.md)  
  Windows Mağazası uygulamalarını derlemek ve dağıtmak için .NET Native ön derleme teknolojisini nasıl kullanabileceğinizi açıklar. .NET Native yönetilen kodda (C#) yazılmış ve .NET Framework yerel koda hedefleyen uygulamaları derler.  
   
- [Güvenlik](../standard/security/index.md)  
+ [Security](../standard/security/index.md)  
  Güvenli uygulama geliştirmeyi kolaylaştıran .NET Framework sınıflar ve hizmetlerle ilgili bilgiler sağlar.  
   
  [Hata Ayıklama, İzleme ve Profil Oluşturma](./debug-trace-profile/index.md)  

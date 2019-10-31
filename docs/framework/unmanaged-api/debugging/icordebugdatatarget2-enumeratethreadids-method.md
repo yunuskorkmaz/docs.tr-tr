@@ -2,14 +2,12 @@
 title: ICorDebugDataTarget2::EnumerateThreadIDs Yöntemi
 ms.date: 03/30/2017
 ms.assetid: af02460f-2a45-496e-bc4e-a1ac4f80fe11
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1dc5f8b7fa308bdb0fb270c11e044244839a7b47
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b4510e6858045281a2a663095972b84c40df3a22
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910295"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122157"
 ---
 # <a name="icordebugdatatarget2enumeratethreadids-method"></a>ICorDebugDataTarget2::EnumerateThreadIDs Yöntemi
 Etkin iş parçacığı kimliklerinin bir listesini döndürür.  
@@ -29,7 +27,7 @@ HRESULT EnumerateThreadIDs(
  'ndaki Kimlikleri döndürülebilecek en fazla iş parçacığı sayısı.  
   
  Pcthreadıds  
- dışı Diziye`pThreadIds` yazılan iş parçacığı `ULONG32` kimliklerinin gerçek sayısını gösteren bir işaretçisi.  
+ dışı `pThreadIds` dizisine yazılan iş parçacığı kimliklerinin gerçek sayısını belirten `ULONG32` işaretçisi.  
   
  Pthreadıds  
  Bir dizi iş parçacığı tanımlayıcısı.  
@@ -40,9 +38,9 @@ HRESULT EnumerateThreadIDs(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md). **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md). **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

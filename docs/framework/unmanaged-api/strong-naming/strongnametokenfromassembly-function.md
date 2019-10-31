@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a4b47ee-02f6-4a98-864e-a6f11ca3f2d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 71058a1ff82335b2a341904805d06738e662c296
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6b9eca3f2f0267870866874ea27dc65812795f41
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798865"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121128"
 ---
 # <a name="strongnametokenfromassembly-function"></a>StrongNameTokenFromAssembly İşlevi
 Belirtilen derleme dosyasından bir tanımlayıcı ad belirteci oluşturur.  
@@ -49,21 +47,21 @@ BOOLEAN StrongNameTokenFromAssembly (
  dışı Tanımlayıcı ad belirtecinin bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`başarıyla tamamlandığında; Aksi takdirde `false`,.  
+ başarılı tamamlamada `true`; Aksi takdirde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Tanımlayıcı ad belirteci, ortak anahtarın kısaltılmış biçimidir. Belirteç, derlemeyi imzalamak için kullanılan ortak anahtardan oluşturulan 64 bitlik bir karmadır. Belirteç, derlemenin tanımlayıcı adının bir parçasıdır ve derleme meta verilerinden okunabilir.  
   
  Belirteç oluşturulduktan sonra, ayrılan belleği serbest bırakmak için [StrongNameFreeBuffer](strongnamefreebuffer-function.md) işlevini çağırmanız gerekir.  
   
- İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo işlevini çağırın.](strongnameerrorinfo-function.md) `StrongNameTokenFromAssembly`  
+ `StrongNameTokenFromAssembly` işlevi başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** StrongName. h  
+ **Üst bilgi:** StrongName. h  
   
- **Kitaplığı** Mscoree. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** Mscoree. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetMethodQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 86a7788736c3c12cfcfd405de88dfadfb14c1eca
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1a36200fd214d013a10ed21c22e1f652de2cbf17
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798533"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102569"
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet işlevi
 
@@ -49,10 +47,10 @@ HRESULT GetMethodQualifierSet (
 'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `wszMethod`\
-'ndaki Yöntem adı. `wszMethod`geçerli `LPCWSTR`bir işaret etmelidir.
+'ndaki Yöntem adı. `wszMethod` geçerli bir `LPCWSTR`işaret etmelidir.
 
 `ppQualSet`\
-dışı Metodun niteleyicilerine erişime izin veren arabirim işaretçisini alır. `ppQualSet``null`olamaz. Bir hata oluşursa, yeni bir nesne döndürülmez ve işaretçi öğesine `null`işaret etmek üzere ayarlanır.
+dışı Metodun niteleyicilerine erişime izin veren arabirim işaretçisini alır. `ppQualSet` `null`olamaz. Bir hata oluşursa, yeni bir nesne döndürülmez ve işaretçi `null`işaret etmek üzere ayarlanır.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -74,9 +72,9 @@ Her yöntemin kendi niteleyicileri olabileceğinden, [IWbemQualifierSet işaret�
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi** WMINet_Utils. IDL
+**Üst bilgi:** WMINet_Utils. IDL
 
 **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

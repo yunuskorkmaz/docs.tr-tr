@@ -8,26 +8,24 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3167abd0c263a0a27573778d6f243bc824306a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b8c4e9d835db044912d1cbed92a14dd05e7de658
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051683"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113936"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Platform Çağırma ile Veri Sıralama
 
 Yönetilmeyen bir kitaplıktan aktarılmış işlevleri çağırmak için, bir .NET Framework uygulaması yönetilmeyen işlevi temsil eden yönetilen kodda bir işlev prototipi gerektirir. Platform Invoke 'ın verileri doğru bir şekilde sıralaması için bir prototip oluşturmak üzere şunları yapmanız gerekir:
 
-- <xref:System.Runtime.InteropServices.DllImportAttribute> Özniteliği, Yönetilen koddaki statik işleve veya yöntemine uygulayın.
+- Yönetilen koddaki statik işleve veya yönteme <xref:System.Runtime.InteropServices.DllImportAttribute> özniteliğini uygulayın.
 
 - Yönetilmeyen veri türleri için yönetilen veri türlerini değiştirin.
 
-Özniteliği isteğe bağlı alanlarıyla uygulayıp yönetilmeyen türler için yönetilen veri türlerini değiştirerek eşdeğer bir yönetilen prototip oluşturmak için, yönetilmeyen bir işlevle sağlanan belgeleri kullanabilirsiniz. Uygulamasına nasıl uygulandığına <xref:System.Runtime.InteropServices.DllImportAttribute>ilişkin yönergeler için bkz. [yönetilmeyen DLL işlevlerini](consuming-unmanaged-dll-functions.md)kullanma.
+Özniteliği isteğe bağlı alanlarıyla uygulayıp yönetilmeyen türler için yönetilen veri türlerini değiştirerek eşdeğer bir yönetilen prototip oluşturmak için, yönetilmeyen bir işlevle sağlanan belgeleri kullanabilirsiniz. <xref:System.Runtime.InteropServices.DllImportAttribute>nasıl uygulayacağınız hakkında yönergeler için bkz. [YÖNETILMEYEN DLL işlevlerini](consuming-unmanaged-dll-functions.md)kullanma.
 
-Bu bölümde, yönetilmeyen kitaplıklar tarafından dışarıya aktarılmış işlevlerden gelen bağımsız değişkenleri iletmek ve dönüş değerlerini almak için yönetilen işlev prototürlerinin nasıl oluşturulacağı gösterilmektedir. Örnekler Ayrıca, <xref:System.Runtime.InteropServices.MarshalAsAttribute> verileri açıkça sıralamak için özniteliği <xref:System.Runtime.InteropServices.Marshal> ve sınıfını ne zaman kullanacağınızı gösterir.
+Bu bölümde, yönetilmeyen kitaplıklar tarafından dışarıya aktarılmış işlevlerden gelen bağımsız değişkenleri iletmek ve dönüş değerlerini almak için yönetilen işlev prototürlerinin nasıl oluşturulacağı gösterilmektedir. Örnekler Ayrıca, verileri açıkça sıralamak için <xref:System.Runtime.InteropServices.MarshalAsAttribute> özniteliğin ve <xref:System.Runtime.InteropServices.Marshal> sınıfının ne zaman kullanılacağını gösterir.
 
 ## <a name="platform-invoke-data-types"></a>Platform çağırma veri türleri
 

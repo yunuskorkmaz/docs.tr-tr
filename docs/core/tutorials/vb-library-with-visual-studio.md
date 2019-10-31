@@ -1,68 +1,66 @@
 ---
-title: Visual Studio 2017'de bir Visual Basic .NET Standard sınıf kitaplığı derleme
-description: Visual Studio 2017'yi kullanarak Visual Basic'te yazılmış bir .NET Standard sınıf kitaplığı derleme hakkında bilgi edinin
-author: rpetrusha
-ms.author: ronpet
+title: Visual Studio 2017 'de Visual Basic .NET Standard sınıf kitaplığı oluşturma
+description: Visual Studio 2017 kullanarak Visual Basic yazılmış .NET Standard sınıf kitaplığı oluşturmayı öğrenin
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f14e4ffbebfe0d7e01d548a6d4f2dc8924633682
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1daab377abe3b6b89f73ed48eafadeae4d7eee77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647217"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100862"
 ---
-# <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Visual Basic ve Visual Studio 2017'de .NET Core SDK'sı ile bir .NET Standard kitaplığı derleme
+# <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017 ' de Visual Basic ve .NET Core SDK ile .NET Standard kitaplığı oluşturma
 
-A *sınıf kitaplığı* türlerini ve bir uygulama tarafından çağrılan yöntemlere tanımlar. .NET Standard 2.0 hedefleyen bir sınıf kitaplığı, .NET Standard sürümünü destekleyen herhangi bir .NET uygulaması tarafından çağrılacak kitaplığınızı sağlar. Sınıf kitaplığınıza bitirdikten sonra bir üçüncü taraf bileşeni veya bir veya daha fazla uygulama ile birlikte gelen bir bileşeni olarak dahil etmek isteyip istemediğinizi olarak dağıtmak isteyip istemediğinize karar verebilirsiniz.
+Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve yöntemleri tanımlar. .NET Standard 2,0 ' i hedefleyen bir sınıf kitaplığı, kitaplığınızın bu .NET Standard sürümünü destekleyen tüm .NET uygulamaları tarafından çağrılmasına izin verir. Sınıf kitaplığınızı bitirdiğinizde, bunu üçüncü taraf bir bileşen olarak dağıtmak mı yoksa bir veya daha fazla uygulamayla paketlenmiş bir bileşen olarak eklemek mi istediğinize karar verebilirsiniz.
 
 > [!NOTE]
-> .NET Standard sürümleri ve destekledikleri platformlar listesi için bkz: [.NET Standard](../../standard/net-standard.md).
+> .NET Standard sürümlerinin ve destekledikleri platformların bir listesi için bkz. [.NET Standard](../../standard/net-standard.md).
 
-Bu konuda, tek bir dize işleme yöntemini içeren bir basit bir yardımcı program kitaplığı oluşturacaksınız. Olarak uygulayacaksınız bir [genişletme yöntemi](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md) üyesi değilmiş gibi çağırabilirsiniz <xref:System.String> sınıfı.
+Bu konu başlığında, tek bir dize işleme yöntemi içeren basit bir yardımcı program kitaplığı oluşturacaksınız. Bunu, <xref:System.String> sınıfının bir üyesi gibi çağırabilmeniz için bir [genişletme yöntemi](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md) olarak uygulayacaksınız.
 
-## <a name="creating-a-class-library-solution"></a>Bir sınıf kitaplığı çözüm oluşturma
+## <a name="creating-a-class-library-solution"></a>Sınıf kitaplığı çözümü oluşturma
 
-Sınıf kitaplığı projenizi ve ilgili projeleri çözüm oluşturmaya başlayın. Bir Visual Studio çözümü yalnızca bir veya daha fazla proje için kapsayıcı işlevi görür. Çözümü oluşturmak için:
+Sınıf kitaplığı projeniz ve ilgili projeler için bir çözüm oluşturarak başlayın. Bir Visual Studio çözümü yalnızca bir veya daha fazla proje için kapsayıcı görevi görür. Çözümü oluşturmak için:
 
-1. Visual Studio menü çubuğunda **dosya** > **yeni** > **proje**.
+1. Visual Studio menü çubuğunda **dosya** > **Yeni** > **Proje**' yi seçin.
 
-1. İçinde **yeni proje** iletişim kutusunda genişletin **diğer proje türleri** düğüm ve select **Visual Studio çözümleri**. Seçin ve "ClassLibraryProjects" çözümünü arlandırın **Tamam** düğmesi.
+1. **Yeni proje** Iletişim kutusunda **diğer proje türleri** düğümünü genişletin ve **Visual Studio çözümleri**' ni seçin. "ClassLibraryProjects" çözümünü adlandırın ve **Tamam** düğmesini seçin.
 
-   ![Visual Studio test yeni proje iletişim kutusu oluşturma](./media/library-with-visual-studio/new-project-dialog.png)
+   ![Visual Studio yeni test projesi oluştur iletişim kutusu](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>Sınıf kitaplığı projesi oluşturma
 
 Sınıf kitaplığı projenizi oluşturun:
 
-1. İçinde **Çözüm Gezgini**, sağ **ClassLibraryProjects** çözüm dosyası ve bağlam menüsünden seçin **Ekle** > **yeni Proje**.
+1. **Çözüm Gezgini**, **classlibraryprojects** çözüm dosyasına sağ tıklayın ve bağlam menüsünden **Yeni proje** > **Ekle** ' yi seçin.
 
-1. İçinde **Yeni Proje Ekle** iletişim kutusunda genişletin **Visual Basic** düğümünü seçip **.NET Standard** düğümünü ve ardından **sınıf kitaplığı (.NET Standard)**  proje şablonu. İçinde **adı** metin kutusunda, projenin adı "StringLibrary" girin. Seçin **Tamam** sınıf kitaplığı projesi oluşturmak için.
+1. **Yeni Proje Ekle** iletişim kutusunda **Visual Basic** düğümünü genişletin ve ardından **.NET Standard** düğümünü ve ardından **sınıf kitaplığı (.NET Standard)** proje şablonunu seçin. **Ad** metin kutusuna projenin adı olarak "StringLibrary" yazın. Sınıf Kitaplığı projesini oluşturmak için **Tamam ' ı** seçin.
 
-   ![Visual Studio eklenti kitaplığı yeni proje iletişim kutusu](./media/vb-library-with-visual-studio/create-new-library-project.png)
+   ![Visual Studio yeni kitaplık projesi Ekle iletişim kutusu](./media/vb-library-with-visual-studio/create-new-library-project.png)
 
-   Kod penceresi, ardından Visual Studio geliştirme ortamında açar. 
+   Kod penceresi daha sonra Visual Studio geliştirme ortamında açılır. 
  
-   ![Visual Studio uygulama penceresinin varsayılan sınıf kitaplığı şablonu kodu gösterme](./media/vb-library-with-visual-studio/visual-studio-library.png)
+   ![Varsayılan sınıf kitaplığı şablon kodunu gösteren Visual Studio uygulama penceresi](./media/vb-library-with-visual-studio/visual-studio-library.png)
 
-1. Kitaplık .NET Standard doğru sürümünü hedefleyen emin olun. Kitaplığı projesinde sağ **Çözüm Gezgini** windows, ardından **özellikleri**. **Hedef Framework'ü** metin kutusuna .NET Standard 2.0 hedeflediğiniz gösterir.
+1. Kitaplığın .NET Standard doğru sürümünü hedeflediğinden emin olun. **Çözüm Gezgini** penceresinde kitaplık projesine sağ tıklayın ve ardından **Özellikler**' i seçin. **Hedef Framework** metin kutusunda 2,0 .NET Standard hedeflendiğimiz gösterilmektedir.
 
    ![Sınıf kitaplığı için proje özellikleri](./media/library-with-visual-studio/library-project-properties.png)
 
-1. Ayrıca **özellikleri** iletişim kutusunda, metni silmek **kök ad alanı** metin kutusu. Her proje için Visual Basic proje adına karşılık gelen bir ad alanı otomatik olarak oluşturur ve bu ad alanının üst kaynak kodu dosyalarında tanımlanan tüm ad alanları olan. Kullanarak bir en üst düzey ad alanı tanımlamak istediğimiz [ `namespace` ](../../visual-basic/language-reference/statements/namespace-statement.md) anahtar sözcüğü.
+1. Ayrıca **Özellikler** iletişim kutusunda, **kök ad alanı** metin kutusundaki metni temizleyin. Her proje için, Visual Basic otomatik olarak proje adına karşılık gelen bir ad alanı oluşturur ve kaynak kod dosyalarında tanımlanan ad alanları bu ad alanının üstlerdir. [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) anahtar sözcüğünü kullanarak en üst düzey bir ad alanı tanımlamak istiyoruz.
   
-1. Kod penceresinde kodu aşağıdaki kodla değiştirin ve dosyayı kaydedin:
+1. Kod penceresindeki kodu aşağıdaki kodla değiştirin ve dosyayı kaydedin:
 
   [!CODE-vb[ClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/stringlibrary.vb)]
 
-   Sınıf Kitaplığı `UtilityLibraries.StringLibrary`, adında bir yöntem içeriyorsa `StartsWithUpper`, döndüren bir <xref:System.Boolean> geçerli dize örneğinde bir büyük harf karakteri ile başlayan olup olmadığını gösteren değer. Unicode standardı, küçük harfli karakterlerden büyük harf karakterler ayırır. <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> Yöntemi döndürür `true` bir karakterin büyük harf ise.
+   `UtilityLibraries.StringLibrary`sınıf kitaplığı, geçerli dize örneğinin büyük bir karakterle başlayıp başlamadığını belirten bir <xref:System.Boolean> değeri döndüren `StartsWithUpper`adlı bir yöntemi içerir. Unicode standart, büyük harfli karakterleri küçük harfli karakterlerden ayırır. <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> yöntemi, bir karakter büyük harfle `true` döndürür.
 
-1. Menü çubuğunda, seçin **derleme** > **Çözümü Derle**. Projenin hatasız derlemeniz gerekir.
+1. Menü çubuğunda **derleme** > **Build Solution**' ı seçin. Projenin hatasız derlenmesi gerekir.
 
-   ![Derleme başarılı olduğunu gösteren çıkış bölmesi](./media/library-with-visual-studio/output-pane-successful-build.png)
+   ![Yapılandırmanın başarılı olduğunu gösteren çıkış bölmesi](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 ## <a name="next-step"></a>Sonraki adım
 
-Kitaplık başarıyla oluşturdunuz. Yöntemlerinden herhangi biri olarak adlandırılan henüz olduğundan, beklendiği gibi çalıştığını bilmiyorum. Kullanarak test etmek için kitaplığınızın geliştirme sonraki adımı olan bir [Birim Test projesi](testing-library-with-visual-studio.md).
+Kitaplığı başarıyla derlediniz. Yöntemlerinden herhangi birini çağırmadığınız için, beklendiği gibi çalışıp çalışmadığını bilemezsiniz. Kitaplığınızı geliştirmedeki bir sonraki adım, bir [birim testi projesi](testing-library-with-visual-studio.md)kullanarak test kullanmaktır.

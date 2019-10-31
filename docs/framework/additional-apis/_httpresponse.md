@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest._HttpResponse Field
+title: HttpWebRequest. _HttpResponse alanı
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db56bce0832d3439309d58f85e455f63f339816e
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d993021ccb87ccafb5f6f2fc4c6c7c288288adae
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301018"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120073"
 ---
-# <a name="httpwebrequesthttpresponse-field"></a>HttpWebRequest. \_HttpResponse alan
+# <a name="httpwebrequest_httpresponse-field"></a>HttpWebRequest.\_HttpResponse alanı
 
-`HttpWebRequest._HttpResponse` olan bir <xref:System.Net.HttpWebResponse> içeren bir HTTP istek HTTP yanıt ayrıntıları. Bu olabilir `null` bir HTTP yanıt alınana kadar.
+`HttpWebRequest._HttpResponse`, HTTP isteğinin http yanıtı ayrıntılarını içeren bir <xref:System.Net.HttpWebResponse>. HTTP yanıtı alınana kadar `null` olabilir.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -30,14 +30,14 @@ internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> `HttpWebRequest._HttpResponse` Alandır iç ve kodunuzda doğrudan kullanılacak yüksetlmesi.
+> `HttpWebRequest._HttpResponse` alanı dahili ve doğrudan kodunuzda kullanılmak üzere tasarlanmamıştır.
 > 
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu alanı kullanımını desteklemez.
+> Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Net>
+**Ad alanı:** <xref:System.Net>
 
-**Derleme:** Sistemde (System.dll)
+**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

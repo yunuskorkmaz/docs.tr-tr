@@ -11,14 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation garbage collection
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2c1b73108227160aaff28525beeca7f3bd4cb5f8
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 840fe972192c6beb5d84017c288455f1cdf52177
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775320"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121239"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Çöp toplamanın temelleri
 
@@ -74,7 +72,7 @@ Fiziksel bellek baskısı (yani fiziksel bellek talebi) düşük olsa bile sayfa
 
 - Yönetilen yığında ayrılmış nesneler tarafından kullanılan bellek, kabul edilebilir bir eşik geçirir. İşlem çalışırken bu eşik sürekli olarak ayarlanır.
 
-- @No__t_0 yöntemi çağrılır. Neredeyse tüm durumlarda, çöp toplayıcı sürekli çalıştığından bu yöntemi çağırmanız gerekmez. Bu yöntem öncelikle benzersiz durumlar ve test için kullanılır.
+- <xref:System.GC.Collect%2A?displayProperty=nameWithType> yöntemi çağrılır. Neredeyse tüm durumlarda, çöp toplayıcı sürekli çalıştığından bu yöntemi çağırmanız gerekmez. Bu yöntem öncelikle benzersiz durumlar ve test için kullanılır.
 
 [Başa dön](#top)
 
@@ -212,7 +210,7 @@ Aşağıdaki çizimde, bir sunucusunda çöp toplamayı gerçekleştiren adanmı
 
 ### <a name="configuring-garbage-collection"></a>Çöp toplamayı yapılandırma
 
-CLR 'nin gerçekleştirmesini istediğiniz çöp toplamanın türünü belirtmek için çalışma zamanı yapılandırma şemasının [\<gcServer > öğesini](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) kullanabilirsiniz. Bu öğenin `enabled` özniteliği `false` (varsayılan) olarak ayarlandığında, CLR iş istasyonu atık toplama işlemini gerçekleştirir. @No__t_0 özniteliğini `true` olarak belirlediğinizde, CLR sunucu çöp toplama işlemini gerçekleştirir.
+CLR 'nin gerçekleştirmesini istediğiniz çöp toplamanın türünü belirtmek için çalışma zamanı yapılandırma şemasının [\<gcServer > öğesini](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) kullanabilirsiniz. Bu öğenin `enabled` özniteliği `false` (varsayılan) olarak ayarlandığında, CLR iş istasyonu atık toplama işlemini gerçekleştirir. `enabled` özniteliğini `true`olarak belirlediğinizde, CLR sunucu çöp toplama işlemini gerçekleştirir.
 
 Eşzamanlı atık toplama, çalışma zamanı yapılandırma şemasının [\<gcConcurrent > öğesiyle](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) belirtildi. Varsayılan ayar `enabled` ' dır. Bu ayar hem eşzamanlı hem de arka plan çöp toplamayı denetler.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2b0e2db-3fae-4b56-844e-d30a125a660c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 314ffb143e99f9490bcd4a6489f2afed314b7c2c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c847f177f48d72f28192d1efabe93c65a7b3f4b8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768767"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120499"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>ICLRRuntimeHost::ExecuteInAppDomain Yöntemi
-Belirtir <xref:System.AppDomain> burada belirtilen yönetilen kodu yürütmek.  
+Belirtilen yönetilen kodun çalıştırılacağı <xref:System.AppDomain> belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,36 +37,36 @@ HRESULT ExecuteInAppDomain(
   
 ## <a name="parameters"></a>Parametreler  
  `AppDomainId`  
- [in] Sayısal kimliği <xref:System.AppDomain> burada belirtilen yöntem yürütülemedi.  
+ 'ndaki Belirtilen metodun çalıştırılacağı <xref:System.AppDomain> sayısal KIMLIĞI.  
   
  `pCallback`  
- [in] İçinde belirtilen yürütülecek bir işlevi işaretçisi <xref:System.AppDomain>.  
+ 'ndaki Belirtilen <xref:System.AppDomain>yürütmek için işleve yönelik bir işaretçi.  
   
  `cookie`  
- [in] Donuk arayana ayrılan belleğe yönelik işaretçi. Bu parametre, ortak dil çalışma zamanı tarafından (CLR) için etki alanı geri iletilir. Çalışma zamanı Yönetilen yığın bellek değil; hem ayırma hem de bu bellek kullanım ömrünü çağıran tarafından denetlenir.  
+ 'ndaki Donuk, çağırana ayrılan belleğe yönelik bir işaretçi. Bu parametre, ortak dil çalışma zamanı (CLR) tarafından etki alanı geri çağırması ile geçirilir. Çalışma zamanı tarafından yönetilen yığın belleği değildir; Bu belleğin ayırma ve yaşam süresi çağıran tarafından denetlenir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`ExecuteInAppDomain` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.|  
-|HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
-|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
-|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. CLR, artık bir yöntem E_FAIL döndürürse, işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
+|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürürse, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ExecuteInAppDomain` Denetim uygulamak amacıyla ana bilgisayar sağlayan yönetilen üzerinden <xref:System.AppDomain> belirtilen Yönetilen yöntemi içinde yürütülmelidir. Değerine karşılık gelen bir uygulama etki alanının tanımlayıcısının değer elde edebileceği <xref:System.AppDomain.Id%2A> çağırarak özelliği [Getcurrentappdomainıd metodu](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).  
+ `ExecuteInAppDomain`, konağın belirtilen yönetilen yöntemin üzerinde yürütülmesi gereken yönetilen <xref:System.AppDomain> denetimi üzerinde çalışmasına izin verir. [GetCurrentAppDomainId metodunu](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)çağırarak, <xref:System.AppDomain.Id%2A> özelliğinin değerine karşılık gelen bir uygulama etki alanı tanımlayıcısının değerini alabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

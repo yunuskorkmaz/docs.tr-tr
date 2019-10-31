@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32c27576-71fa-42ee-8230-67b92913ea08
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb8917fa401db9424cff168fe0b06ad84065827c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87c43d6f05dffbf10ca1dd9253abfe893db9adf5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737944"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110474"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId Metodu
 Uygulama etki alanının benzersiz tanımlayıcısını alır.  
@@ -37,16 +35,16 @@ HRESULT GetID (
   
 ## <a name="parameters"></a>Parametreler  
  `pId`  
- [out] Uygulama etki alanının benzersiz tanımlayıcısı.  
+ dışı Uygulama etki alanının benzersiz tanımlayıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Uygulama etki alanını içeren işlem içinde benzersiz tanımlayıcısıdır.  
+ Uygulama etki alanı için tanımlayıcı, kapsayan işlem içinde benzersizdir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

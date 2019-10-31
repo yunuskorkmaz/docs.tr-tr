@@ -8,14 +8,12 @@ helpviewer_keywords:
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1363ce758929414f054e3d28dc6cd02bd618a8ac
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bbb3dae2ce66c93d05a2a1c0f7e426901fa7b2e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053961"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140183"
 ---
 # <a name="assembly-versioning"></a>Derleme sürümü oluşturma
 
@@ -52,7 +50,7 @@ Her derlemenin sürüm bilgisini ifade etmek için iki farklı yolu vardır:
 
 Her derleme, kimliğinin bir parçası olarak bir sürüm numarasına sahiptir. Bu nedenle, sürüm numarası farklı olan iki derleme, çalışma zamanı tarafından tamamen farklı derlemeler olarak değerlendirilir. Bu sürüm numarası, fiziksel olarak aşağıdaki biçime sahip dört bölümlü bir dize olarak temsil edilir:  
   
-\<*ana sürüm*>. *ikincil sürüm >.* \< *Yapı numarası >.* \< \< *Düzeltme*>  
+*ana sürüm*> \<.\<*ikincil sürüm*>.\<*Yapı numarası*>.\<*düzeltme*>  
   
 Örneğin, 1.5.1254.0 sürümü ana sürüm olarak 1, alt sürüm olarak 5, yapı numarası olarak 1254 ve düzeltme numarası olarak da 0 belirtir.  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 235b93f4176858372a83331730ddea8b97179cc8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f28a4b4acd9d6050d33b9824aa49a9b9041b59b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738362"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111244"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata Metodu
-Görüntü meta verilerini almak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.  
+Bir görüntünün meta verilerini almak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağırılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,43 +44,43 @@ HRESULT GetMetadata(
   
 ## <a name="parameters"></a>Parametreler  
  `imagePath`  
- [in] Görüntü dosyasının yolu belirten bir dize.  
+ 'ndaki Görüntü dosyasının yolunu belirten bir dize.  
   
  `imageTimestamp`  
- [in] Görüntü dosyasının zaman damgası.  
+ 'ndaki Görüntü dosyasının zaman damgası.  
   
  `imageSize`  
- [in] Görüntü dosyasının boyutu.  
+ 'ndaki Resim dosyasının boyutu.  
   
  `mvid`  
- [in] Görüntünün benzersiz tanımlayıcısı.  
+ 'ndaki Görüntünün genel benzersiz tanımlayıcısı.  
   
  `mdRva`  
- [in] Meta veri göreli sanal adresi (RVA). Adres göre görüntü taban adresidir.  
+ 'ndaki Meta verilerin göreli sanal adresi (RVA). Adres, görüntü temel adresiyle ilişkilidir.  
   
  `flags`  
- [in] Gelecekte kullanılmak üzere ayrılmış.  
+ 'ndaki Gelecekte kullanılmak üzere ayrılmıştır.  
   
  `bufferSize`  
- [in] Meta veriler yerleştirileceği arabellek boyutu.  
+ 'ndaki Meta verilerin yerleştirileceği arabelleğin boyutu.  
   
  `buffer`  
- [out] Meta veriler yerleştirileceği arabelleği.  
+ dışı Meta verilerin yerleştirileceği arabellek.  
   
  `dataSize`  
- [out] Döndürülen meta veri boyutu.  
+ dışı Döndürülen meta verilerin boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.  
+ Bu yöntem, hata ayıklama uygulamasının yazarı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** ClrData.idl, ClrData.h  
+ **Üst bilgi:** ClrData. IDL, ClrData. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

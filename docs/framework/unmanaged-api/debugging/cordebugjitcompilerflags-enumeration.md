@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c0774f70-5bed-45e8-9922-fdad778c4c33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 39bc1316bb7d8e2aba3390499437aadf263dac07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 739b491d343c0eba76160c15719069ffae385f46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739851"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097969"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>CorDebugJITCompilerFlags Numaralandırması
-Yönetilen just-ın-time (JIT) derleyici davranışını etkileyen değerlerini içerir.  
+Yönetilen Just-In-Time (JıT) derleyicisinin davranışını etkileyen değerler içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,18 +40,18 @@ typedef enum CorDebugJITCompilerFlags {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_DEFAULT`|Derleyici derleme veri izlemelisiniz ve iyileştirmelerini sağlar belirtir.|  
-|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|Derleyici iyileştirmeleri devre dışı bırakır ancak derleme veri izleyeceğine belirtir.|  
-|`CORDEBUG_JIT_ENABLE_ENC`|Derleyici iyileştirmeleri devre dışı bırakır, derleme veri izlemelisiniz ve Düzenle ve devam teknolojileri sağlar belirtir.|  
+|`CORDEBUG_JIT_DEFAULT`|Derleyicinin derleme verilerini izlemesi gerektiğini ve iyileştirmelere izin verdiğini belirtir.|  
+|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|Derleyicinin derleme verilerini izlemesi gerektiğini, ancak iyileştirmeleri devre dışı bıraktığını belirtir.|  
+|`CORDEBUG_JIT_ENABLE_ENC`|Derleyicinin derleme verilerini izlemesi gerektiğini, iyileştirmeleri devre dışı bıraktığını ve düzenleme ve devam teknolojilerini kullanmasını gerektiğini belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

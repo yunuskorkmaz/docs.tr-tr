@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 539f69c33b67ad1a8a514062c5d777deaced1599
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 23f868bba2dc058d99f1c5c09e9b311b1ff3634a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965000"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140895"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification Yöntemi
 Ortak dil çalışma zamanı (CLR) sürümü ilk kez yüklendiğinde, ancak henüz başlamamışsa çağrılan bir geri çağırma işlevi sağlar. Bu yöntem [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) işlevinin yerini alır.  
@@ -44,7 +42,7 @@ HRESULT RequestRuntimeLoadedNotification (
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_POINTER|`pCallbackFunction`null.|  
+|E_POINTER|`pCallbackFunction` null.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Geri çağırma aşağıdaki şekilde işe yarar:  
@@ -78,23 +76,23 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- Ana bilgisayar yüklemeyi amaçlıyordu veya başka bir çalışma zamanının `pfnCallbackThreadSet` yeniden eklenen bir şekilde yüklenmesine neden olursa, geri çağırma işlevinde belirtilen ve `pfnCallbackThreadUnset` parametreleri aşağıdaki şekilde kullanılmalıdır:  
+ Ana bilgisayar yüklemeyi amaçlıyordu veya başka bir çalışma zamanının yeniden eklenen bir şekilde yüklenmesine neden olursa, geri arama işlevinde belirtilen `pfnCallbackThreadSet` ve `pfnCallbackThreadUnset` parametreleri aşağıdaki şekilde kullanılmalıdır:  
   
-- `pfnCallbackThreadSet`Bu tür bir yük denenerek çalışma zamanı yüküne neden olabilecek iş parçacığı tarafından çağrılmalıdır.  
+- `pfnCallbackThreadSet`, bir yük denenerek çalışma zamanı yüküne neden olabilecek iş parçacığı tarafından çağrılmalıdır.  
   
-- `pfnCallbackThreadUnset`iş parçacığı artık böyle bir çalışma zamanı yüküne (ve ilk geri aramadan dönmeden önce) neden olmaz çağrılmalıdır.  
+- iş parçacığı artık böyle bir çalışma zamanı yüküne (ve ilk geri aramadan dönmeden önce) neden olmaz, `pfnCallbackThreadUnset` çağrılmalıdır.  
   
-- `pfnCallbackThreadSet`ve `pfnCallbackThreadUnset` her ikisi de yer yok.  
+- `pfnCallbackThreadSet` ve `pfnCallbackThreadUnset` her ikisi de yeniden kullanılamaz.  
   
 > [!NOTE]
-> Konak uygulamalar, `pfnCallbackThreadSet` `pfnCallbackThreadUnset` parametre`pCallbackFunction` kapsamını çağırmamalıdır ve dışarıda olmamalıdır.  
+> Ana bilgisayar uygulamaları `pfnCallbackThreadSet` ve `pCallbackFunction` parametresinin kapsamı dışında `pfnCallbackThreadUnset` çağırmamalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** MetaHost. h  
+ **Üst bilgi:** MetaHost. h  
   
- **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

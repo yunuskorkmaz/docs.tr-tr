@@ -9,204 +9,202 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75261bc44b938432c9c22b90dc4db30ca00d630b
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 808c92e906a0bf6f8fdc368396d6d240573de501
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170736"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120783"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows sistemlerinde dosya yolu biçimleri
 
-Çoğu içindeki türlerin üyelerini <xref:System.IO> ad alanı içeren bir `path` mutlak veya göreli bir yol için bir dosya sistemi kaynak belirtmenize olanak sağlar. parametre. Bu yolu geçirilerek [Windows dosya sistemi API'ları](/windows/desktop/fileio/file-systems). Bu konuda Windows sistemlerinde kullanabilirsiniz dosya yolları için biçimleri açıklanır.
+<xref:System.IO> ad alanındaki birçok türün üyeleri, bir dosya sistemi kaynağına mutlak veya göreli bir yol belirtmenize olanak tanıyan bir `path` parametresi içerir. Bu yol daha sonra [Windows dosya sistemi API 'lerine](/windows/desktop/fileio/file-systems)geçirilir. Bu konuda, Windows sistemlerinde kullanabileceğiniz dosya yollarının biçimleri ele alınmaktadır.
 
 ## <a name="traditional-dos-paths"></a>Geleneksel DOS yolları
 
-Standart bir DOS yol üç bileşeni oluşabilir:
+Standart bir DOS yolu üç bileşenden oluşabilir:
 
-- Bir birim veya sürücü harfini izleyen tarafından toplu ayırıcı (`:`).
-- Bir dizin adı. [Dizin ayırıcı karakterde](<xref:System.IO.Path.DirectorySeparatorChar>) iç içe geçmiş dizin sıradüzeni içinde alt dizinler ayırır.
-- İsteğe bağlı bir dosya adı. [Dizin ayırıcı karakterde](<xref:System.IO.Path.DirectorySeparatorChar>) dosya yolu ve dosya adını ayırır.
+- Birim veya sürücü harfi, ardından birim ayırıcısı (`:`).
+- Bir dizin adı. [Dizin ayırıcı karakteri](<xref:System.IO.Path.DirectorySeparatorChar>) , iç içe geçmiş Dizin hiyerarşisindeki alt dizinleri ayırır.
+- İsteğe bağlı bir dosya adı. [Dizin ayırıcı karakteri](<xref:System.IO.Path.DirectorySeparatorChar>) dosya yolunu ve dosya adını ayırır.
 
-Üç bileşen mevcut olması durumunda, mutlak bir yoludur. Birim veya sürücü harfi yok belirtilirse ve dizin adı ile başlayan [dizin ayırıcı karakterde](<xref:System.IO.Path.DirectorySeparatorChar>), geçerli sürücüsünün kökünden göreli yoludur. Aksi takdirde, geçerli dizine göreli yoludur. Aşağıdaki tabloda, bazı olası dizin ve dosya yolları gösterilmektedir.
+Üç bileşen varsa, yol mutlak olur. Birim veya sürücü harfi belirtilmemişse ve dizin adı [dizin ayırıcı karakteriyle](<xref:System.IO.Path.DirectorySeparatorChar>)başlıyorsa, yol geçerli sürücünün kökünden görelidir. Aksi takdirde, yol geçerli dizine göre değişir. Aşağıdaki tabloda bazı olası dizin ve dosya yolları gösterilmektedir.
 
 |Yol  |Açıklama  |
 | -- | -- |
-| `C:\Documents\Newsletters\Summer2018.pdf` | C: sürücüsünün kökünden bir mutlak dosya yolu |
-| `\Program Files\Custom Utilities\StringFinder.exe` | Geçerli sürücüsünün kökünden mutlak bir yol. |
-| `2018\January.xlsx` | Geçerli dizininin bir alt dosyaya göreli yol. |
-| `..\Publications\TravelBrochure.pdf` | Geçerli dizin eşdüzeyde bir dizindeki dosya için göreli bir yol. |
-| `C:\Projects\apilibrary\apilibrary.sln` | Bir dosya için mutlak bir yol C: sürücüsünün kökünden |
-| `C:Projects\apilibrary\apilibrary.sln` | Geçerli dizininden C: sürücüsünün göreli bir yol. |
+| `C:\Documents\Newsletters\Summer2018.pdf` | C sürücüsünün kökünden mutlak bir dosya yolu: |
+| `\Program Files\Custom Utilities\StringFinder.exe` | Geçerli sürücünün kökünden mutlak bir yol. |
+| `2018\January.xlsx` | Geçerli dizinin bir alt dizinindeki bir dosyanın göreli yolu. |
+| `..\Publications\TravelBrochure.pdf` | Geçerli dizinin eşi olan dizindeki dosyanın göreli yolu. |
+| `C:\Projects\apilibrary\apilibrary.sln` | C sürücüsünün kökünden bir dosyanın mutlak yolu: |
+| `C:Projects\apilibrary\apilibrary.sln` | C: sürücüsünün geçerli dizininden göreli bir yol. |
 
 > [!IMPORTANT]
-> Son iki yolu arasındaki farka dikkat edin. Hem isteğe bağlı bir birim tanımlayıcısı (her iki durumda da C:) belirtin, ancak ikinci desteklemez ilk belirtilen birimin kökündeki ile başlar. Sonuç olarak, ikinci bir göreli yol geçerli dizininden C: sürücüsünün bilgileriyse mutlak bir yol kök dizininden C: sürücüsünün davranıştır. Windows dosya yolları ilgili hatalar ortak bir kaynağı ilk istendiğinde ikinci formu kullanın.
+> Son iki yol arasındaki farkı dikkate alın. Her ikisi de isteğe bağlı birim belirticisini (C: her iki durumda) belirtir, ancak ilki belirtilen birimin köküyle başlar, ikincisi ise değildir. Sonuç olarak, ilki C sürücüsünün kök dizinindeki mutlak bir yoldur, ikincisi ise C: sürücüsündeki geçerli dizinden göreli bir yoldur. İlki Windows dosya yollarını içeren yaygın bir hata kaynağı olduğunda ikinci formun kullanılması.
 
-Bir dosya yolu tam olup olmadığını belirleyebilir (diğer bir deyişle, bu yolun geçerli dizine bağımsızdır ve geçerli dizine değiştiğinde değiştirmez) çağırarak <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType> yöntemi. Böyle bir yol göreli directory parçaları dahil edebileceğinizi unutmayın (`.` ve `..`) ve çözümlenen yol her zaman aynı konuma işaret ediyorsa yine de tam olarak nitelenmiş olmalıdır.
+Bir dosya yolunun tam nitelikli olup olmadığını (yani, yolun geçerli dizinden bağımsız olduğunu ve geçerli dizin değiştiğinde değişmediğini) <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType> yöntemini çağırarak belirleyebilirsiniz. Böyle bir yolun göreli Dizin segmentlerini (`.` ve `..`) içerebildiğini ve çözümlenen yolun her zaman aynı konuma işaret ettiğini unutmayın.
 
-Aşağıdaki örnek, mutlak ve göreli yolları arasındaki farkı gösterir. D:\FY2018\ dizinin var olduğundan ve, herhangi bir geçerli dizin için D:\ Komut İstemi'nden örneği çalıştırmadan önce ayarlamasını yapmadığınızı fark olduğunu varsayar.
+Aşağıdaki örnek mutlak ve göreli yollar arasındaki farkı gösterir. Dizin \ saat 2018\ ' un var olduğunu ve D:\ için herhangi bir seçkin Dizin belirlemediğinizi varsayar. komut isteminden örneği çalıştırın.
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
 
-## <a name="unc-paths"></a>UNC yolu
+## <a name="unc-paths"></a>UNC yolları
 
-Ağ kaynaklarına erişmek için kullanılan, Evrensel Adlandırma Kuralı (UNC) yollarını, aşağıdaki biçime sahiptir:
+Ağ kaynaklarına erişmek için kullanılan evrensel adlandırma kuralı (UNC) yolları aşağıdaki biçimdedir:
 
-- Tarafından başında bir sunucu veya ana bilgisayar adı \\ \\. Sunucu adı, NetBIOS makine adı veya IP/FQDN adresi (IPv4 v6 desteklenir gibi iyi) olabilir.
-- Ana bilgisayar adına göre ayrılmış olan bir paylaşım adı \\. Birlikte, sunucu ve Paylaşım adı birimi yavaşça olun.
-- Bir dizin adı. [Dizin ayırıcı karakterde](<xref:System.IO.Path.DirectorySeparatorChar>) iç içe geçmiş dizin sıradüzeni içinde alt dizinler ayırır.
-- İsteğe bağlı bir dosya adı. [Dizin ayırıcı karakterde](<xref:System.IO.Path.DirectorySeparatorChar>) dosya yolu ve dosya adını ayırır.
+- \\\\tarafından önceden ortaya çıkacak sunucu veya ana bilgisayar adı. Sunucu adı bir NetBIOS makine adı veya IP/FQDN adresi (IPv4 ve V6 desteklenir) olabilir.
+- \\tarafından ana bilgisayar adından ayrılan bir paylaşma adı. Birlikte, sunucu ve paylaşımın adı birimi oluşturun.
+- Bir dizin adı. [Dizin ayırıcı karakteri](<xref:System.IO.Path.DirectorySeparatorChar>) , iç içe geçmiş Dizin hiyerarşisindeki alt dizinleri ayırır.
+- İsteğe bağlı bir dosya adı. [Dizin ayırıcı karakteri](<xref:System.IO.Path.DirectorySeparatorChar>) dosya yolunu ve dosya adını ayırır.
 
-UNC yolu bazı örnekleri şunlardır:
+Aşağıda, UNC yollarının bazı örnekleri verilmiştir:
 
 |Yol  |Açıklama  |
 | -- | -- |
-| `\\system07\C$\` | C: kök dizinine sürücü üzerinde `system07`. |
-| `\\Server2\Share\Test\Foo.txt` | Test dizini Foo.txt dosyasında \\ \\Sunucu2\\birim paylaşın.|
+| `\\system07\C$\` | `system07`üzerindeki C: sürücüsünün kök dizini. |
+| `\\Server2\Share\Test\Foo.txt` | \\\\\\test dizinindeki foo. txt dosyası.|
 
-UNC yollarını her zaman tam olarak nitelenmiş olmalıdır. Göreli directory parçaları dahil edebilirsiniz (`.` ve `..`), ancak bunlar tam nitelenmiş bir yol bir parçası olmalıdır. Göreli yollar yalnızca bir UNC yolu bir sürücü harfi ile eşleştirerek kullanabilirsiniz.
+UNC yollarının her zaman tam olarak nitelenmiş olması gerekir. Bunlara göreli Dizin kesimleri (`.` ve `..`) dahil edebilirler, ancak bunların tam nitelikli bir yolun parçası olması gerekir. Yalnızca bir UNC yolunu bir sürücü harfine eşleyerek göreli yolları kullanabilirsiniz.
 
 ## <a name="dos-device-paths"></a>DOS cihaz yolları
 
-Windows işletim sistemi dosyaları dahil tüm kaynakları işaret eden bir birleşik nesne modeline sahiptir. Bu nesne yolları konsol penceresinden erişebilir ve Win32 katmana eski DOS ve UNC yollarını eşlendiğine simgesel bağlantıların özel bir klasör aracılığıyla sunulur. Bu özel klasör olan DOS aygıtı yolu sözdizimi erişilen biri:
+Windows işletim sistemi, dosyalar dahil olmak üzere tüm kaynaklara işaret eden birleştirilmiş bir nesne modeline sahiptir. Bu nesne yollarına konsol penceresinden erişilebilir ve eski DOS ve UNC yollarının eşlendiği özel bir sembolik bağlantı klasörü aracılığıyla Win32 katmanına açıktır. Bu özel klasöre, aşağıdakilerden biri olan DOS cihaz yolu sözdizimi kullanılarak erişilir:
 
 `\\.\C:\Test\Foo.txt`  
 `\\?\C:\Test\Foo.txt`
 
-Bir sürücüye, sürücü harfini belirlemeye ek olarak bir birimi, birim GUID'sini kullanarak tanımlayabilirsiniz. Bu, şu biçimi alır:
+Bir sürücüyü sürücü harfine göre tanımlamaya ek olarak, birim GUID 'sini kullanarak bir birimi belirleyebilirsiniz. Bu formu alır:
 
 `\\.\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
 `\\?\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
 
 > [!NOTE]
-> DOS aygıtı yolu sözdizimi .NET Framework 4.6.2 ve .NET Core 1.1 ile başlayarak Windows üzerinde çalışan .NET uygulamalarında desteklenir.
+> DOS cihaz yolu sözdizimi, .NET Core 1,1 ve .NET Framework 4.6.2 ile başlayan Windows üzerinde çalışan .NET uygulamalarında desteklenir.
 
-DOS aygıtı yolu aşağıdaki bileşenlerden oluşur:
+DOS cihaz yolu aşağıdaki bileşenlerden oluşur:
 
-- Cihaz yolu tanımlayıcısı (`\\.\` veya `\\?\`), yolun bir DOS aygıtı yol olarak tanımlar.
+- Yolu bir DOS cihaz yolu olarak tanımlayan cihaz yolu Belirleyicisi (`\\.\` veya `\\?\`).
 
    > [!NOTE]
-   > `\\?\` Tüm sürümlerinde .NET Core ve .NET Framework 4.6.2 sürümünden itibaren desteklenir.
+   > `\\?\` tüm .NET Core sürümlerinde .NET Framework ve 4.6.2 sürümünden itibaren desteklenir.
 
-- Bir birim GUID'si söz konusu olduğunda bir "gerçek" cihaz nesnesine (C: sürücüsüne adı söz konusu olduğunda) veya birim {b75e2c83-0000-0000-0000-602f00000000} sembolik bağlantı.
+- "Gerçek" cihaz nesnesine (bir sürücü adı veya birim GUID 'SI olması durumunda {b75e2c83-0000-0000-0000-602f00000000} birimi) sembolik bir bağlantı.
 
-   İlk cihaz yolu tanımlayıcısı sonraki DOS aygıtı yol kesimi toplu veya sürücü tanımlar. (Örneğin, `\\?\C:\` ve `\\.\BootPartition\`.)
+   Cihaz yolu belirticisinden sonra DOS cihaz yolunun ilk segmenti birimi veya sürücüyü tanımlar. (Örneğin, `\\?\C:\` ve `\\.\BootPartition\`.)
 
-   Edilebileceği çağrılır belirli bir bağlantı için UNC `UNC`. Örneğin:
+   UNCs 'Ler için, `UNC`olarak adlandırılan belirli bir bağlantı vardır. Örneğin:
 
   `\\.\UNC\Server\Share\Test\Foo.txt`  
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    Cihaz UNC paylaşımı/bölümü birim oluşturur. Örneğin, `\\?\server1\e:\utilities\\filecomparer\`, server1\utilities paylaşımı/bölümüdür. Bir yöntemi gibi çağrılırken bu önemlidir <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> göreli directory bölümleri ile; hiçbir zaman birimi gitmek mümkündür. 
+    Cihaz UNCs için, sunucu/paylaşma bölümü birimi oluşturur. Örneğin, `\\?\server1\e:\utilities\\filecomparer\`, sunucu/paylaşma bölümü server1\utilities. Göreli Dizin kesimlerine sahip <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> gibi bir yöntemi çağırırken bu çok önemlidir; birimin ötesinde gezinmek hiçbir şekilde mümkün değildir. 
 
-DOS cihaz yolları tanımına göre tam. Göreli directory parçaları (`.` ve `..`) izin verilmez. Geçerli dizin, hiçbir zaman kendi kullanımlarına girin.
+DOS cihaz yolları tanımına göre tam olarak nitelenir. Göreli Dizin kesimlerine (`.` ve `..`) izin verilmez. Geçerli dizinler, kullanımlarına hiçbir şekilde girmez.
 
-## <a name="example-ways-to-refer-to-the-same-file"></a>Örnek: Aynı dosyaya başvurmak için yollar
+## <a name="example-ways-to-refer-to-the-same-file"></a>Örnek: aynı dosyaya başvurmanın yolları
 
-Aşağıdaki örnek, başvurabilirsiniz bir dosyaya API'leri kullanırken yollardan bazılarını göstermektedir <xref:System.IO> ad alanı. Örnek bir <xref:System.IO.FileInfo> nesne ve kullanımları onun <xref:System.IO.FileInfo.Name> ve <xref:System.IO.FileInfo.Length> dosya adı ve dosya uzunluğunu görüntülemek için özellikler.
+Aşağıdaki örnek, <xref:System.IO> ad alanında API 'Leri kullanırken bir dosyaya başvurmak için kullanabileceğiniz bazı yolları göstermektedir. Örnek, bir <xref:System.IO.FileInfo> nesnesini örnekleyen ve dosyanın dosya adını ve uzunluğunu göstermek için <xref:System.IO.FileInfo.Name> ve <xref:System.IO.FileInfo.Length> özelliklerini kullanır.
 
 [!code-csharp[referring-to-the-same-file](~/samples/snippets/standard/io/file-names/cs/file-refs.cs)]
 [!code-vb[referring-to-the-same-file](~/samples/snippets/standard/io/file-names/vb/file-refs.vb)]
 
 ## <a name="path-normalization"></a>Yol normalleştirme
 
-Neredeyse tüm yolları Windows API'lerine geçirilen normalleştirilir. Normalleştirme sırasında Windows aşağıdaki adımları gerçekleştirir:
+Windows API 'Lerine geçirilen neredeyse tüm yollar normalleştirilir. Normalleştirme sırasında, Windows aşağıdaki adımları gerçekleştirir:
 
-- Yolunu tanımlar.
-- Geçerli dizin kısmen nitelenmiş (göreli) yollara uygular.
-- Bileşen ve dizin ayırıcı canonicalizes.
-- Göreli dizini bileşenlerini değerlendirir (`.` geçerli dizin için ve `..` üst dizini için).
-- Belirli karakterlerin kırpar.
+- Yolu tanımlar.
+- Geçerli dizini kısmen nitelenmiş (göreli) yollara uygular.
+- Canonicalizes bileşeni ve Dizin ayırıcıları.
+- Göreli Dizin bileşenlerini değerlendirir (geçerli dizin için`.` ve üst dizin için `..`).
+- Belirli karakterleri kırpar.
 
-Bu normalleştirme örtük olarak gerçekleşir, ancak bunu açıkça çağırarak yapabilirsiniz <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> yöntemine bir çağrı sarılır [GetFullPathName() işlevi](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea). Windows de çağırabilirsiniz [GetFullPathName() işlevi](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) P/Invoke kullanarak doğrudan.
+Bu normalleştirme örtük bir şekilde gerçekleşir, ancak [GetFullPathName () işlevine](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)yapılan çağrıyı sarmalayan <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> yöntemini çağırarak bunu açıkça yapabilirsiniz. Ayrıca, P/Invoke kullanarak doğrudan Windows [GetFullPathName () işlevini](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) çağırabilirsiniz.
 
-### <a name="identifying-the-path"></a>Yolun tanımlama
+### <a name="identifying-the-path"></a>Yolu tanımlama
 
-İlk adımda yolu normalleştirme yol türünü tanımlamak için kullanılır. Yolları birkaç kategoriden birine girer:
+Yol normalleştirmede ilk adım yolun türünü tanımlar. Yollar birkaç kategoriden birinde yer almalıdır:
 
-- Cihaz yolları oldukları; diğer bir deyişle, bunlar iki ayırıcıları ve bir soru işareti veya nokta ile başlayan (`\\?` veya `\\.`).
-- UNC yollarını oldukları; diğer bir deyişle, bir soru işareti veya dönem olmadan iki ayırıcı ile başlar. 
-- Bunlar tam DOS yollardır; diğer bir deyişle, bunlar bir sürücü harfi, bir birim ayracı ve bileşen ayırıcı ile başlar (`C:\`).
-- Bunlar eski bir cihaza atamak (`CON`, `LPT1`).
-- Geçerli sürücüsünün köküne göreli oldukları; diğer bir deyişle, bunlar bir tek bileşen ayırıcı ile başlar (`\`).
-- Belirtilen sürücü geçerli dizine göreli oldukları; diğer bir deyişle, bunlar bir sürücü harfi, bir birim ayracı ve bileşen ayırıcı ile başlar (`C:`).
-- Geçerli dizinine göreli oldukları; diğer bir deyişle, bunlar başka bir şey ile başlar (`temp\testfile.txt`).
+- Bunlar cihaz yollardır; diğer bir deyişle, iki ayırıcıya ve soru işareti ya da nokta (`\\?` ya da `\\.`) ile başlarlar.
+- Bunlar UNC yollardır; diğer bir deyişle, bir soru işareti veya dönem olmadan iki ayırıcıya başlarlar. 
+- Bunlar tamamen nitelikli DOS yollarıdır; diğer bir deyişle, bir sürücü harfi, bir birim ayırıcısı ve bir bileşen ayırıcısı (`C:\`) ile başlar.
+- Eski bir cihaz (`CON`, `LPT1`) tasarlarlar.
+- Bunlar geçerli sürücünün köküne görelidir; diğer bir deyişle, tek bir bileşen ayırıcısı (`\`) ile başlar.
+- Bunlar, belirtilen sürücünün geçerli dizinine göre belirlenir; diğer bir deyişle, bir sürücü harfi, bir birim ayırıcısı ve bileşen ayırıcısı (`C:`) ile başlar.
+- Bunlar geçerli dizine göre değişir; diğer bir deyişle, başka bir şeyle (`temp\testfile.txt`) başlarlar.
 
-Yol türü, geçerli bir dizin şekilde uygulanmış olup olmadığını belirler. Yolun "Kök" ne olduğunu belirler.
+Yolun türü, geçerli bir dizinin bir biçimde uygulanıp uygulanmadığı belirler. Ayrıca, yolun "kökünün" ne olduğunu da belirler.
 
 ### <a name="handling-legacy-devices"></a>Eski cihazları işleme
 
-Yolun eski bir DOS aygıtı gibi olup olmadığını `CON`, `COM1`, veya `LPT1`, cihaz yola eklenerek dönüştürülür `\\.\` ve döndürülen. 
+Yol, `CON`, `COM1`veya `LPT1`gibi eski bir DOS cihazından, ön bekleyen `\\.\` tarafından bir cihaz yoluna dönüştürülür ve döndürülür. 
 
-Eski cihaz adları ile başlayan yol her zaman eski bir cihaz tarafından yorumlanan <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType> yöntemi. Örneğin, DOS aygıtı yolunu `CON.TXT` olduğu `\\.\CON`ve DOS aygıtı yolunu `COM1.TXT\file1.txt` olduğu `\\.\COM1`.
+Eski cihaz adı ile başlayan bir yol <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType> yöntemi tarafından her zaman eski bir cihaz olarak yorumlanır. Örneğin, `CON.TXT` için DOS cihaz yolu `\\.\CON`ve `COM1.TXT\file1.txt` DOS cihaz yolu `\\.\COM1`.
 
-### <a name="applying-the-current-directory"></a>Geçerli dizine uygulanıyor
+### <a name="applying-the-current-directory"></a>Geçerli dizin uygulanıyor
 
-Bir yol tam değilse, Windows geçerli dizin için geçerlidir. UNC ve cihaz yolları uygulanan geçerli dizin yok. Tam bir sürücü C: ayırıcısıyla diğerinden mu\\.
+Bir yol tam nitelikli değilse, Windows geçerli dizini bu dizine uygular. UNCs ve cihaz yollarına geçerli dizin uygulanmaz. , Ayırıcısı C:\\olan tam bir sürücü yapmaz.
 
-Yolun bir tek bileşen ayırıcı ile başlarsa, geçerli dizin sürücüden uygulanır. Örneğin, dosya yolu ise `\utilities` ve geçerli dizin `C:\temp\`, normalleştirme üretir `C:\utilities`.
+Yol tek bir bileşen ayırıcısıyla başlıyorsa, geçerli dizindeki sürücü uygulanır. Örneğin, dosya yolu `\utilities` ve geçerli dizin `C:\temp\`, normalleştirme `C:\utilities`üretir.
 
-Yolun bir sürücü harfi, birim ayırıcı ve bileşen ayırıcı ile başlarsa, komut kabuğundan belirtilen sürücü için ayarlanmış son geçerli dizine uygulanır. Son geçerli dizin ayarlanmadı, tek başına sürücü uygulanır. Örneğin, dosya yolu ise `D:sources`, geçerli dizin `C:\Documents\`, ve D: sürücüsü son geçerli dizinde `D:\sources\`, sonuç `D:\sources\sources`. Bu "göreli sürücü" yolları program ve betik mantık hataları ortak bir kaynaktır. Bir harf ve bir iki nokta üst üste ile başlayan yol göreli değil varsayarak açıkça doğru değil.
+Yol bir sürücü harfi, birim ayırıcısı ve bileşen ayırıcısı ile başlıyorsa, belirtilen sürücü için komut kabuğundan ayarlanan son geçerli dizin uygulanır. Son geçerli dizin ayarlanmamışsa, tek başına sürücü uygulanır. Örneğin, dosya yolu `D:sources`, geçerli dizin `C:\Documents\`ve D: sürücüsündeki son geçerli dizin `D:\sources\`, sonuç ise `D:\sources\sources`. Bu "sürücü göreli" yolları, yaygın olarak kullanılan bir program ve betik mantığı hataları kaynağıdır. Bir harf ile başlayan bir yolun ve iki nokta üst üste doğru olmadığını varsayarsak
 
-Yol ayırıcı dışında bir şey ile başlarsa, geçerli bir sürücü ve geçerli dizinde uygulanır. Örneğin, yol ise `filecompare` ve geçerli dizin `C:\utilities\`, sonuç `C:\utilities\filecompare\`.
+Yol, ayırıcı dışında bir şeyle başlıyorsa, geçerli sürücü ve geçerli dizin uygulanır. Örneğin, yol `filecompare` ve geçerli dizin `C:\utilities\`, sonuç `C:\utilities\filecompare\`olur.
 
 > [!IMPORTANT]
-> İşlem içi ayarı geçerli dizin olduğu için göreli yolların tehlikeli birden çok iş parçacıklı uygulamalar (diğer bir deyişle, çoğu uygulamalar). Herhangi bir iş parçacığı geçerli dizin dilediğiniz zaman değiştirebilirsiniz. .NET Core 2.1 ile başlayarak, çağırabilirsiniz <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> mutlak bir yol göreli bir yol ve karşı çözümlemek istediğiniz temel yolu (geçerli dizin) almak için yöntemi. 
+> Geçerli dizin işlem başına bir ayar olduğundan, göreli yollar çok iş parçacıklı uygulamalarda (yani, çoğu uygulama) tehlikelidir. Herhangi bir iş parçacığı herhangi bir zamanda geçerli dizini değiştirebilir. .NET Core 2,1 ' den itibaren, bir göreli yol ve kendisine karşı çözümlemek istediğiniz temel yol (geçerli dizin) için bir mutlak yol almak üzere <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> yöntemini çağırabilirsiniz. 
 
-### <a name="canonicalizing-separators"></a>Ayırıcılar standart hale getirme
+### <a name="canonicalizing-separators"></a>Standart hale getirme ayırıcılar
 
-Tüm İleri eğik çizgi (`/`) standart Windows ayırıcı ters eğik çizgi dönüştürülür (`\`). Varsa, bir dizi izleyin ilk iki eğik çizgi, eğik çizgi daraltılmış tek bir eğik çizgi.
+Tüm eğik çizgiler (`/`), standart Windows ayırıcısına dönüştürülür, ters eğik çizgi (`\`). Varsa, ilk iki eğik çizgiyi izleyen eğik çizgi serileri tek eğik çizgi olarak daraltılır.
 
-### <a name="evaluating-relative-components"></a>Göreli bileşenleri değerlendiriliyor
+### <a name="evaluating-relative-components"></a>Göreli bileşenleri değerlendirme
 
-Yolun işlendiğinde, tüm bileşenleri veya tek bir veya iki nokta oluşan parçalarını (`.` veya `..`) değerlendirilir: 
+Yol işlendiğinde, tek veya çift dönemden (`.` veya `..`) oluşan tüm bileşenler veya segmentler değerlendirilir: 
 
-- Geçerli dizine başvurduğundan tek bir dönem için geçerli kesime kaldırılır.
+- Tek bir dönem için geçerli kesim, geçerli dizine başvurduğundan kaldırılır.
 
-- İki nokta üst dizine başvurduğundan çift bir dönem için geçerli kesime ve üst segment, kaldırılır.
+- Çift dönem için, çift nokta üst dizine başvurduğundan, geçerli segment ve üst kesim kaldırılır.
 
-   Üst dizinlerin, yolun kökü değillerse yalnızca kaldırılır. Yol kök yolunun türüne bağlıdır. Sürücü harfi (`C:\`) DOS yolları, sunucu/paylaşımı için UNC (`\\Server\Share`) ve cihaz yolları cihaz yol ön eki (`\\?\` veya `\\.\`).
+   Üst dizinler yalnızca yolun kökünü geçmemişse kaldırılır. Yolun kökü, yol türüne bağlıdır. DOS yolları için sürücü (`C:\`), UNCs için sunucu/paylaşma (`\\Server\Share`) ve cihaz yolları için cihaz yolu ön eki (`\\?\` veya `\\.\`).
 
 ### <a name="trimming-characters"></a>Karakterleri kırpma
 
-Ayırıcılar ve daha önce kaldırılmış göreli kesimleri çalıştırılan yanı sıra bazı ek karakterler normalleştirme sırasında kaldırılır:
+Daha önce kaldırılan ayırıcıların ve göreli parçaların çalıştırılmalarının yanı sıra, normalleştirme sırasında bazı ek karakterler kaldırılır:
 
-- Bir segmenti tek nokta ile bitiyorsa, bu süre kaldırılır. (Tek veya çift nokta bir parçası, önceki adımda normalleştirilmiştir. Üç veya daha fazla nokta bir segmentini Normalleştirilmemiş ve aslında bir geçerli dosya/dizin addır.)
+- Bir segment tek bir dönemde sona ererse bu süre kaldırılır. (Tek veya çift dönemin bir segmenti, önceki adımda normalleştirilmelidir. Üç veya daha fazla dönemin bir segmenti normalleştirilmez ve aslında geçerli bir dosya/dizin adıdır.)
 
-- Yolun bir ayırıcı sonlanmıyor, nokta ve boşluk tüm sondaki (U + 0020) kaldırılır. Son segmenti yalnızca tek veya çift nokta ise, yukarıdaki göreli bileşenleri kural altında döner. 
+- Yol bir ayırıcıda sonlanmazsa, tüm sondaki noktalar ve boşluklar (U + 0020) kaldırılır. Son segment yalnızca tek veya çift bir nokta ise, yukarıdaki ilgili bileşenler kuralının altına girer. 
 
-   Bu kural, bir dizin adı boşluk ile sonda ayırıcı sonra boşluk ekleyerek oluşturabileceğiniz anlamına gelir.  
+   Bu kural, boşluktan sonra sondaki bir ayırıcı ekleyerek sonunda boşluk olan bir dizin adı oluşturabileceğiniz anlamına gelir.  
 
    > [!IMPORTANT]
-   > Yapmanız gerekenler **hiçbir zaman** bir dizin veya dosya adı, boşluk ile oluşturun. Sondaki boşlukları bunu karmaşık hale getirebilir veya erişmek mümkün olmayan bir dizin ve uygulamaları sık dizinleri ve dosyaları, adları boşluk içerir işlemeye çalışırken başarısız.
+   > Sonunda boşluk olan bir dizin veya dosya **adı oluşturmanız gerekir** . Sondaki boşluklar, bir dizine erişmek zor veya olanaksız hale gelir ve uygulamalar genellikle boşluklar içeren dizinleri veya dosyaları işlemeye çalışırken başarısız olur.
 
 ## <a name="skipping-normalization"></a>Normalleştirme atlanıyor
 
-Normalde, bir Windows API'ye geçirilen herhangi bir yola (etkin) geçirilen [GetFullPathName işlevi](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) ve normalleştirilmiş. Önemli bir istisna vardır: bir dönem yerine bir soru işareti ile başlayan bir cihaz yolu. Tam olarak ile başlayan yol sürece `\\?\` (normalleştirilmiş Not kurallı ters eğik çizgi kullanımı).
+Normalde, bir Windows API 'sine geçirilen tüm yol, [GetFullPathName işlevine](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) ve normalleştirilmesine geçirilir. Önemli bir özel durum vardır: bir dönem yerine soru işaretiyle başlayan bir cihaz yolu. Yol `\\?\` ile tamamen başlıyorsa (kurallı ters eğik çizginin kullanımını aklınızda bulunur), normalleştirilmelidir.
 
-Neden normalleştirme atlamak istiyorsunuz? Üç ana nedeni vardır:
+Neden normalleştirmeyi atlamak istiyorsunuz? Üç önemli neden vardır:
 
-1. Normalde kullanılamaz ancak yasal yola erişim almak için. Bir dosya veya dizin adında `hidden.`, örneğin, herhangi bir şekilde erişmek mümkün değildir. 
+1. Normalde kullanılamayan ancak geçerli olan yollara erişim sağlamak için. `hidden.`adlı bir dosya veya dizin, örneğin, başka bir şekilde erişim imkansızdır. 
 
-1. Zaten normalleştirilmiş, normalleştirme atlayarak performansını artırmak için.
+1. Zaten normalleştirdiyseniz normalleştirmeyi atlayarak performansı artırmak için.
 
-1. .NET Framework ile ilgili atlamak için yalnızca `MAX_PATH` 259 karakterden uzun yollar izin vermek yol uzunluğu olup olmadığını denetleyin. Çoğu API'ler, bazı istisnalar izin verir.
+1. Yalnızca .NET Framework, 259 karakterden daha büyük yollara izin vermek üzere yol uzunluğu denetimini `MAX_PATH` atlamak için. Çoğu API, bazı özel durumlarla birlikte buna izin verir.
 
 > [!NOTE]
-> .NET core uzun yollar örtük olarak işler ve gerçekleştirmez bir `MAX_PATH` denetleyin. `MAX_PATH` Denetim, yalnızca .NET Framework için geçerlidir.
+> .NET Core, uzun yolları örtük olarak işler ve `MAX_PATH` denetimi gerçekleştirmez. `MAX_PATH` denetimi yalnızca .NET Framework uygulanır.
 
-Normalleştirme ve en fazla yol denetimleri atlanıyor iki cihaz yolu sözdizimleri arasındaki tek fark, Aksi takdirde birbirinin aynıdır. Normalleştirme, uğraşmanız "normal" uygulamalar için zor olan yollar kolayca oluşturabilirsiniz olduğundan atlanıyor ile dikkat edin.
+Normalleştirme atlama ve en yüksek yol denetimleri, iki cihaz yolu sözdizimleri arasındaki tek farktır; Aksi halde özdeş. "Normal" uygulamalar için zor olan yolları kolayca oluşturabildiklerinden, normalleştirmeyi atlama konusunda dikkatli olun.
 
-İle başlayan yollar `\\?\` açıkça bunları geçirirseniz hala normalleştirilmiş [GetFullPathName işlevi](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
+`\\?\` ile başlayan yollar, bunları [GetFullPathName işlevine](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)açıkça geçirdiğinizde normalleştirmeye devam eder.
 
-Yolları için Not birden fazla `MAX_PATH` karakterin [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) olmadan `\\?\`. Bu rastgele uzunluktaki yollar Windows işleyebileceği maksimum dize boyutu kadar destekler.
+`\\?\`olmadan [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 'e `MAX_PATH` karakterden daha fazla yol kullanabileceğinizi unutmayın. Windows 'un işleyebileceği en büyük dize boyutuna kadar rastgele uzunluk yollarını destekler.
 
-## <a name="case-and-the-windows-file-system"></a>Windows dosya sistemi ve servis talebi
+## <a name="case-and-the-windows-file-system"></a>Büyük/küçük harf ve Windows dosya sistemi
 
-Windows olmayan kullanıcılara ve geliştiricilere, karmaşık bulma Windows dosya sisteminin bir yaný yoludur ve dizin adları büyük/küçük harfe duyarsızdır. Diğer bir deyişle, dizin ve dosya adları büyük/küçük harf oluşturulduğunda kullanılan dizelerin yansıtır. Örneğin, yöntem çağrısı
+Windows dosya sisteminin, Windows olmayan kullanıcılar ve geliştiricilerin kafa karıştırıcı olduğunu fark eden, yol ve dizin adlarının büyük/küçük harfe duyarlı olduğunu belirtir. Diğer bir deyişle, dizin ve dosya adları, oluşturulduklarında kullanılan dizelerin büyük küçük harflerini yansıtır. Örneğin, yöntem çağrısı
 
 ```csharp
 Directory.Create("TeStDiReCtOrY");
@@ -216,9 +214,9 @@ Directory.Create("TeStDiReCtOrY");
 Directory.Create("TeStDiReCtOrY")
 ```
 
-TeStDiReCtOrY adlı bir dizin oluşturur. Bir dizin veya dosya kasasının değiştirmek için yeniden adlandırırsanız, dizin veya dosya adı, yeniden adlandırdığınızda kullanılan dize durumunu yansıtır. Örneğin, aşağıdaki kod, test.txt Test.txt için adlı bir dosyayı yeniden adlandırır:
+TeStDiReCtOrY adlı bir dizin oluşturur. Bir dizini veya dosyayı durumunu değiştirmek için yeniden adlandırırsanız, dizin veya dosya adı, yeniden adlandırdığınızda kullanılan dize durumunu yansıtır. Örneğin, aşağıdaki kod test. txt adlı dosyayı test. txt öğesine yeniden adlandırır:
 
 [!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
 [!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
-Ancak, dizin ve dosya adı karşılaştırmalar büyük küçük harf duyarlıdır. "Test.txt" adlı bir dosya için arama yaparsanız, dosya sistemi API'yi .NET karşılaştırma durumda yoksayın. Test.txt, TEST. TXT, test. TXT ve büyük ve küçük harfler, herhangi bir birleşimini "test.txt" eşleşir.
+Bununla birlikte, dizin ve dosya adı karşılaştırmaları büyük/küçük harfe duyarlıdır. "Test. txt" adlı bir dosyayı arıyorsanız, .NET dosya sistemi API 'Leri karşılaştırmayla ilgili büyük/küçük harf durumunu yoksayar. Test. txt, TEST. TXT, test. TXT ve büyük ve küçük harflerin diğer birleşimleri "test. txt" ile eşleşir.

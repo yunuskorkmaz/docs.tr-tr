@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ResetSecurity function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1636d7de8273389e785131dbc1145affd5d3b45f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 95d91eac21e82e55af2f5e9ab181b770832f5ad0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798260"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120205"
 ---
 # <a name="resetsecurity-function"></a>ResetSecurity işlevi
 Sağlanan kimliğe bürünme belirtecini geçerli iş parçacığına atar.   
@@ -39,18 +37,18 @@ HRESULT ResetSecurity (
 ## <a name="parameters"></a>Parametreler
 
 `token`  
-'ndaki Geçerli iş parçacığıyla ilişkilendirilecek kimliğe bürünme belirteci. Değeri olabilir `null`. 
+'ndaki Geçerli iş parçacığıyla ilişkilendirilecek kimliğe bürünme belirteci. Değeri `null`olabilir. 
 
 ## <a name="return-value"></a>Dönüş değeri
 
-İşlev başarılı olursa, dönüş değeri (0) `S_OK` olur.
+İşlev başarılı olursa, dönüş değeri `S_OK` (0).
 
 İşlev başarısız olursa, dönüş değeri sıfır olmayan bir hata kodudur. Genişletilmiş hata bilgilerini almak için [GetErrorInfo](geterrorinfo.md) işlevini çağırın.
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** WMINet_Utils. IDL  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0aba6096-5b38-435c-a72a-86d35db4daef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f0643ba9e750e7c64d2dae8eb5744df7bc26931
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a6e0b009674ff52595aaa0ae4a060f1cdfd1398
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737791"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089055"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>ICorDebugAppDomain2::GetFunctionPointerType Yöntemi
-Belirli bir imzaya sahip bir işlev için bir işaretçi alır.  
+Belirli bir imzaya sahip bir işleve yönelik bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,19 +37,19 @@ HRESULT GetFunctionPointerType (
   
 ## <a name="parameters"></a>Parametreler  
  `nTypeArgs`  
- [in] Tür bağımsız değişkenleri için işlev sayısı.  
+ 'ndaki İşlevin tür bağımsız değişkenlerinin sayısı.  
   
  `ppTypeArgs`  
- [in] Bir dizi işaretçileri, her biri bir tür bağımsız değişkeni işlevin temsil eden bir Icordebugtype nesneye işaret eder. Dönüş türü olan ilk öğedir; diğer öğelerin her biri bir parametre türüdür.  
+ 'ndaki Her biri işlevin tür bağımsız değişkenini temsil eden bir ICorDebugType nesnesine işaret eden bir işaretçiler dizisi. İlk öğe dönüş türüdür; diğer öğelerin her biri bir parametre türüdür.  
   
  `ppType`  
- [out] Adresine bir işaretçi bir `ICorDebugType` işaretçiyi işleve temsil eden nesne.  
+ dışı İşlevin işaretçisini temsil eden bir `ICorDebugType` nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

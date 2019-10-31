@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdb67a77-782f-44cf-a8a1-b75999b0f3c8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3225e42df44e719ecde31c26fae70f26731fa157
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ff1f9428a92d091a51a4cca12d69d98da0ecba2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761590"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120533"
 ---
 # <a name="iclrprobingassemblyenumget-method"></a>ICLRProbingAssemblyEnum::Get Yöntemi
-Belirtilen dizindeki derleme kimliğini alır.  
+Belirtilen dizinde derleme kimliğini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,40 +37,40 @@ HRESULT Get (
   
 ## <a name="parameters"></a>Parametreler  
  `dwIndex`  
- [in] Derleme kimliği döndürmek için sıfır tabanlı dizini.  
+ 'ndaki Döndürülecek derleme kimliğinin sıfır tabanlı dizini.  
   
  `pwzBuffer`  
- [out] Derlemeyi kimlik verilerini içeren arabellek.  
+ dışı Bütünleştirilmiş kod kimlik verilerini içeren bir arabellek.  
   
  `pcchBufferSize`  
- [out içinde] Boyutu `pwzBuffer` arabellek.  
+ [in, out] `pwzBuffer` arabelleğinin boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`Get` başarıyla döndürüldü.|  
-|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` çok küçüktür.|  
-|ERROR_NO_MORE_ITEMS|Numaralandırma, daha fazla öğe içeriyor.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.|  
-|HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
-|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
-|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. CLR, artık bir yöntem E_FAIL döndürürse, işlem içinde kullanılamaz. Herhangi bir barındırma yöntemini yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` çok küçük.|  
+|ERROR_NO_MORE_ITEMS|Sabit listesi daha fazla öğe içermiyor.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
+|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürürse, CLR artık işlem içinde kullanılamaz. Herhangi bir barındırma yöntemine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlemci mimarisi için belirli kimlik dizin 0 konumunda kimliğidir. Microsoft Ara dilini (MSIL) mimarisi nötr bütünleştirilmiş kod dizin 1 kimliğidir. Dizin 2 konumunda kimlik mimarisi bilgi içerir.  
+ 0 dizinindeki kimlik, işlemci mimarisine özgü kimliktir. Dizin 1 ' deki kimlik, Microsoft ara dili (MSIL) için mimari olarak nötr derlemedir. Dizin 2 ' deki kimlik hiçbir mimari bilgisi içermiyor.  
   
- `Get` genellikle iki kez çağrılır. İlk çağrı için bir null değer sağlayan `pwzBuffer`ve ayarlar `pcchBufferSize` boyuta uygun `pwzBuffer`. İkinci çağrı uygun şekilde boyutlandırılmış sağlayan `pwzBuffer`ve tamamlandıktan sonra derleme kurallı kimlik verilerini içerir.  
+ `Get` genellikle iki kez çağırılır. İlk çağrı `pwzBuffer`için null değer sağlar ve `pcchBufferSize` `pwzBuffer`için uygun boyuta ayarlar. İkinci çağrı uygun boyutta bir `pwzBuffer`sağlar ve tamamlama sonrasında kurallı derleme kimlik verilerini içerir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

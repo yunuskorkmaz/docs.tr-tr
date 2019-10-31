@@ -6,14 +6,12 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eafbd5b1dfa8eeee386cdcf49652aeeee9d635a8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 02163f923bc93a1cf377cc608b5f390472c60edd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052389"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121595"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework'teki Performans Sayaçları
 Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)'nde bulabileceğiniz performans sayaçlarının bir listesini sağlar.  
@@ -119,10 +117,10 @@ Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-ve
 |-------------------------|-----------------|  
 |**Tüm yığınlardaki bayt sayısı**|**Gen 1 yığın boyutu**, **Gen 2 yığın boyutu**ve **büyük nesne yığın boyutu** sayaçlarının toplamını görüntüler. Bu sayaç, çöp toplama yığınlarında bayt cinsinden ayrılan geçerli belleği gösterir.|  
 |**# GC tutamaçları**|Kullanımdaki çöp toplama tanıtıcılarının geçerli sayısını görüntüler. Çöp toplama tutamaçları, ortak dil çalışma zamanı ve yönetilen ortam dışındaki kaynaklara yönelik tanıtıcılardır.|  
-|**# Gen 0 toplamaları**|Oluşturma 0 nesnelerinin (yani, kardeşinizin, en son ayrılan nesnelerin), uygulamanın başlatılmasından bu yana atık olarak toplanarak sayısını görüntüler.<br /><br /> Nesil 0, kuşak 0 ' daki kullanılabilir bellek, bir ayırma isteğini karşılamak için yeterli olmadığında oluşur. Bu sayaç, 1. nesil atık toplamanın sonunda artırılır. Daha yüksek kuşak çöp koleksiyonları, tüm düşük nesil koleksiyonları içerir. Bu sayaç, daha yüksek bir oluşturma (1 veya 2. nesil) çöp toplama gerçekleştiğinde açıkça artırılır.<br /><br /> Bu sayaç, son gözlemlenen değeri görüntüler. **_Global\_**  sayaç değeri doğru değil ve göz ardı edilmelidir.|  
-|**# Gen 1 toplamaları**|Uygulamanın başlatılmasından bu yana 1. nesil nesnelerin atık olarak toplandığı kaç kez toplandığını gösterir.<br /><br /> Sayaç, 1. nesil atık toplamanın sonunda artırılır. Daha yüksek kuşak çöp koleksiyonları, tüm düşük nesil koleksiyonları içerir. Bu sayaç, daha yüksek bir oluşturma (2. nesil) atık toplama gerçekleştiğinde açıkça artırılır.<br /><br /> Bu sayaç, son gözlemlenen değeri görüntüler. **_Global\_**  sayaç değeri doğru değil ve göz ardı edilmelidir.|  
-|**Gen 2 toplamaları sayısı**|Uygulamanın başlatılmasından bu yana 2. nesil nesnelerinin çöp toplama sayısını görüntüler. Sayaç, 2. nesil atık toplamanın (tam çöp toplama da denir) sonunda artırılır.<br /><br /> Bu sayaç, son gözlemlenen değeri görüntüler. **_Global\_**  sayaç değeri doğru değil ve göz ardı edilmelidir.|  
-|**Igelemiş GC**|' A açık bir çağrı <xref:System.GC.Collect%2A?displayProperty=nameWithType>nedeniyle çöp toplamanın en yoğun sayısını görüntüler. Atık toplayıcısının koleksiyonların sıklığını ayarlamaya olanak sağlamak iyi bir uygulamadır.|  
+|**# Gen 0 toplamaları**|Oluşturma 0 nesnelerinin (yani, kardeşinizin, en son ayrılan nesnelerin), uygulamanın başlatılmasından bu yana atık olarak toplanarak sayısını görüntüler.<br /><br /> Nesil 0, kuşak 0 ' daki kullanılabilir bellek, bir ayırma isteğini karşılamak için yeterli olmadığında oluşur. Bu sayaç, 1. nesil atık toplamanın sonunda artırılır. Daha yüksek kuşak çöp koleksiyonları, tüm düşük nesil koleksiyonları içerir. Bu sayaç, daha yüksek bir oluşturma (1 veya 2. nesil) çöp toplama gerçekleştiğinde açıkça artırılır.<br /><br /> Bu sayaç, son gözlemlenen değeri görüntüler. **_Global\_** sayaç değeri doğru değil ve göz ardı edilmelidir.|  
+|**# Gen 1 toplamaları**|Uygulamanın başlatılmasından bu yana 1. nesil nesnelerin atık olarak toplandığı kaç kez toplandığını gösterir.<br /><br /> Sayaç, 1. nesil atık toplamanın sonunda artırılır. Daha yüksek kuşak çöp koleksiyonları, tüm düşük nesil koleksiyonları içerir. Bu sayaç, daha yüksek bir oluşturma (2. nesil) atık toplama gerçekleştiğinde açıkça artırılır.<br /><br /> Bu sayaç, son gözlemlenen değeri görüntüler. **_Global\_** sayaç değeri doğru değil ve göz ardı edilmelidir.|  
+|**Gen 2 toplamaları sayısı**|Uygulamanın başlatılmasından bu yana 2. nesil nesnelerinin çöp toplama sayısını görüntüler. Sayaç, 2. nesil atık toplamanın (tam çöp toplama da denir) sonunda artırılır.<br /><br /> Bu sayaç, son gözlemlenen değeri görüntüler. **_Global\_** sayaç değeri doğru değil ve göz ardı edilmelidir.|  
+|**Igelemiş GC**|<xref:System.GC.Collect%2A?displayProperty=nameWithType>yönelik açık bir çağrı nedeniyle çöp toplamanın en yüksek sayısını görüntüler. Atık toplayıcısının koleksiyonların sıklığını ayarlamaya olanak sağlamak iyi bir uygulamadır.|  
 |**Sabitlenmiş nesne sayısı**|Son çöp toplama işleminde karşılaşılan sabitlenmiş nesne sayısını görüntüler. Sabitlenmiş nesne, çöp toplayıcısının bellekte taşıyamayacağını belirten bir nesnedir. Bu sayaç, Sabitlenmiş nesneleri yalnızca atık toplanan yığınlardaki izler. Örneğin, nesil 0 çöp toplama, sabitlenmiş nesnelerin yalnızca nesil 0 yığınında numaralandırılmasına neden olur.|  
 |**Kullanımdaki havuz bloklarının sayısı**|Kullanımdaki eşitleme bloklarının geçerli sayısını görüntüler. Eşitleme blokları, eşitleme bilgilerini depolamak için ayrılan nesne başına veri yapılarıdır. Bunlar yönetilen nesnelere zayıf başvuruları tutar ve çöp toplayıcı tarafından taranmalıdır. Eşitleme blokları, eşitleme bilgilerini depolamak için sınırlı değildir; Ayrıca, COM birlikte çalışma meta verilerini de saklayabilir. Bu sayaç, eşitleme temel temellerinin yoğun kullanımıyla ilgili performans sorunlarını gösterir.|  
 |**Toplam kaydedilmiş bayt sayısı**|Çöp toplayıcı tarafından şu anda işlenen sanal bellek miktarını bayt cinsinden görüntüler. Kaydedilmiş bellek, disk disk belleği dosyasında ayrılan alanın fiziksel belleğidir.|  
@@ -147,17 +145,17 @@ Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-ve
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
-|**Alınan bayt**|İşlemin başlatılmasından <xref:System.Net.Sockets.Socket> <xref:System.AppDomain> bu yana içindeki tüm nesneler tarafından alınan toplam bayt sayısı. Bu sayı, TCP/IP tarafından tanımlanmayan verileri ve protokol bilgilerini içerir.|  
-|**Gönderilen bayt**|İşlemin başlatılmasından <xref:System.Net.Sockets.Socket> <xref:System.AppDomain> bu yana içindeki tüm nesneler tarafından gönderilen toplam bayt sayısı. Bu sayı, TCP/IP tarafından tanımlanmayan verileri ve protokol bilgilerini içerir.|  
-|**Kurulan bağlantılar**|İşlem başladıktan sonra, <xref:System.Net.Sockets.Socket> <xref:System.AppDomain> içinde hiç bağlı olan akış yuvaları için toplam nesne sayısı.|  
-|**Alınan veri birimleri**|İşlemin başlatılmasından bu yana, <xref:System.Net.Sockets.Socket> <xref:System.AppDomain> içindeki tüm nesneler tarafından alınan toplam veri birimi paketlerinin birikimli sayısı.|  
-|**Gönderilen veri birimleri**|İşlemin başlatılmasından bu yana, <xref:System.Net.Sockets.Socket> <xref:System.AppDomain> içindeki tüm nesneler tarafından gönderilen toplam veri birimi paketlerinin birikimli sayısı.|  
-|**HttpWebRequest ortalama ömrü**|İşlem başladıktan sonra, <xref:System.Net.HttpWebRequest> <xref:System.AppDomain> içindeki son aralıkta sona eren geçen tüm nesneler için tamamlanması gereken ortalama süre.|  
-|**HttpWebRequest Ortalama sıra süresi**|İşlemin başlatılmasından bu yana, <xref:System.Net.HttpWebRequest> <xref:System.AppDomain> içindeki son aralıktaki kuyruğu alan tüm nesneler için Ortalama sırada geçen süre.|  
-|**Oluşturulan Httpwebistek/sn**|İçinde saniye başına <xref:System.Net.HttpWebRequest> oluşturulan nesne sayısı. <xref:System.AppDomain>|  
-|**Sıraya alınan Httpwebistek/sn**|İçinde saniye başına <xref:System.Net.HttpWebRequest> sıraya eklenen nesne sayısı. <xref:System.AppDomain>|  
-|**Durdurulan Httpwebistek/sn**|Uygulamanın içinde saniye <xref:System.Net.HttpWebRequest> başına <xref:System.Net.HttpWebRequest.Abort%2A>Yöntemolarak çağırdığı nesne sayısı <xref:System.AppDomain>.|  
-|**Başarısız Httpwebisteği/sn**|Sunucu içinden saniye <xref:System.Net.HttpWebRequest> <xref:System.AppDomain>başına hatalı durum kodu alan nesne sayısı.|  
+|**Alınan bayt**|İşlem başlatıldığından bu yana <xref:System.AppDomain> içindeki tüm <xref:System.Net.Sockets.Socket> nesneleri tarafından alınan toplam bayt sayısı. Bu sayı, TCP/IP tarafından tanımlanmayan verileri ve protokol bilgilerini içerir.|  
+|**Gönderilen bayt**|İşlem başlatıldığından bu yana <xref:System.AppDomain> içindeki tüm <xref:System.Net.Sockets.Socket> nesneleri tarafından gönderilen toplam bayt sayısı. Bu sayı, TCP/IP tarafından tanımlanmayan verileri ve protokol bilgilerini içerir.|  
+|**Kurulan bağlantılar**|İşlem başladıktan sonra, <xref:System.AppDomain> içinde hiç bağlı olan akış yuvaları için <xref:System.Net.Sockets.Socket> nesnelerinin birikimli toplam sayısı.|  
+|**Alınan veri birimleri**|İşlem başlatıldığından bu yana <xref:System.AppDomain> içindeki tüm <xref:System.Net.Sockets.Socket> nesneleri tarafından alınan toplam veri birimi paketlerinin birikimli sayısı.|  
+|**Gönderilen veri birimleri**|İşlem başlatıldığından bu yana <xref:System.AppDomain> içindeki tüm <xref:System.Net.Sockets.Socket> nesneleri tarafından gönderilen toplam veri birimi paketi sayısı.|  
+|**HttpWebRequest ortalama ömrü**|İşlem başlatıldığından bu yana <xref:System.AppDomain> içindeki son aralıkta sona eren <xref:System.Net.HttpWebRequest> tüm nesneler için tamamlanması gereken ortalama süre.|  
+|**HttpWebRequest Ortalama sıra süresi**|İşlem başlatıldığından bu yana <xref:System.AppDomain> içindeki son aralıkta sırayı bıraktığınız tüm <xref:System.Net.HttpWebRequest> nesneleri için Ortalama süre (sıra).|  
+|**Oluşturulan Httpwebistek/sn**|<xref:System.AppDomain>içinde saniyede oluşturulan <xref:System.Net.HttpWebRequest> nesne sayısı.|  
+|**Sıraya alınan Httpwebistek/sn**|<xref:System.AppDomain>içindeki sıraya göre sıraya eklenen <xref:System.Net.HttpWebRequest> nesne sayısı.|  
+|**Durdurulan Httpwebistek/sn**|Uygulamanın <xref:System.AppDomain>içinde saniye başına <xref:System.Net.HttpWebRequest.Abort%2A> yöntemi olarak çağırdığı <xref:System.Net.HttpWebRequest> nesne sayısı.|  
+|**Başarısız Httpwebisteği/sn**|Sunucu <xref:System.AppDomain>içinde saniyede başarısız durum kodu alan <xref:System.Net.HttpWebRequest> nesne sayısı.|  
   
  Desteklenen birkaç ağ performans sayacı sınıfı vardır:  
   
@@ -177,9 +175,9 @@ Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-ve
   
 - **Gönderilen veri birimleri**  
   
- Bu performans sayaçları, işlem başladıktan sonra sayımlar sağlar. Oluşturulan bağlantı sayısı, bir uygulama tarafından <xref:System.Net.Sockets.Socket> oluşturulan akış yuvası bağlantısı ve diğer sınıflar tarafından yapılan iç çağrılar için açık Yöntem çağrıları içerir (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.Sockets.Socket> <xref:System.Net.WebClient>ve ,<xref:System.Net.Sockets.TcpClient>örneğin) <xref:System.Net.Sockets.Socket> sınıfına  
+ Bu performans sayaçları, işlem başladıktan sonra sayımlar sağlar. Oluşturulan <xref:System.Net.Sockets.Socket> bağlantı sayısı, oluşturulan bir akış yuvası bağlantısı için bir uygulama tarafından açık <xref:System.Net.Sockets.Socket> Yöntem çağrıları ve diğer sınıflar tarafından yapılan iç çağrılar (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient>ve <xref:System.Net.Sockets.TcpClient>içerir Örneğin,) <xref:System.Net.Sockets.Socket> sınıfı  
   
- **Alınan veri birimleri** ve **gönderilen veri birimleri** için sayımlar, bir uygulama tarafından açık <xref:System.Net.Sockets.Socket> Yöntem çağrıları kullanılarak gönderilen veya alınan veri birimi paketleri ve diğer sınıflar tarafından yapılan iç çağrılar (<xref:System.Net.Sockets.UdpClient>Örneğin,) ile <xref:System.Net.Sockets.Socket>. sınıfı. **Alınan** veri birimleri ve **gönderilen** veri birimleri, bir veri birimi için Ortalama bir boyut varsayarak, veri birimleri kullanılarak gönderilen veya alınan bayt sayısı çok kaba bir ölçü sağlamak için de kullanılabilir.  
+ **Alınan veri birimleri** ve **gönderilen veri birimleri** için sayımlar, bir uygulamanın açık <xref:System.Net.Sockets.Socket> yöntemi çağrıları kullanılarak gönderilen veya alınan veri birimi paketleri içerir (örneğin,<xref:System.Net.Sockets.UdpClient><xref:System.Net.Sockets.Socket>). Sınıfı. **Alınan** veri birimleri ve **gönderilen** veri birimleri, bir veri birimi için Ortalama bir boyut varsayarak, veri birimleri kullanılarak gönderilen veya alınan bayt sayısı çok kaba bir ölçü sağlamak için de kullanılabilir.  
   
  Veriler için ağ performans sayaçları şunları içerir:  
   
@@ -189,19 +187,19 @@ Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-ve
   
  Yukarıdaki sayaçlar, işlem başladıktan sonra gelen bayt sayısını sağlar.  
   
- Nesnelerin tüm yaşam döngüsü veya yalnızca bir parçası aracılığıyla geçmesi için <xref:System.Net.HttpWebRequest> geçen süreyi ölçen iki Duration sayacı vardır:  
+ <xref:System.Net.HttpWebRequest> nesnelerinin tüm yaşam döngüsü veya yalnızca bir parçası aracılığıyla geçmesi için ne kadar sürdüğünü ölçen iki Duration sayacı vardır:  
   
 - **HttpWebRequest ortalama ömrü**  
   
 - **HttpWebRequest Ortalama sıra süresi**  
   
- **HttpWebRequest ortalama ömür süresi** sayacı için, çoğu <xref:System.Net.HttpWebRequest> nesnenin kullanım ömrü, yanıt akışının uygulama tarafından kapatılmadığı zamana kadar her zaman nesnenin oluşturulduğu zaman ile başlar. Yaygın olarak görülen iki durum vardır:  
+ **HttpWebRequest ortalama ömür süresi** sayacı için, en <xref:System.Net.HttpWebRequest> nesnelerinin yaşam süresi her zaman, yanıt akışının uygulama tarafından kapatılmadığı zamana kadar her zaman nesnenin oluşturulduğu zaman ile başlar. Yaygın olarak görülen iki durum vardır:  
   
-- Uygulama hiçbir şekilde <xref:System.Net.HttpWebRequest.GetResponse%2A> veya <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> yöntemini çağırmadıysa, <xref:System.Net.HttpWebRequest> nesne ömrü yok sayılır.  
+- Uygulama <xref:System.Net.HttpWebRequest.GetResponse%2A> veya <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> yöntemlerini hiçbir şekilde çağırmadıysa <xref:System.Net.HttpWebRequest> nesnesinin kullanım ömrü yoksayılır.  
   
-- Nesne, veyayöntemlerini<xref:System.Net.HttpWebRequest.EndGetResponse%2A> çağırırken <xref:System.Net.WebException> bir oluşturursa, özel durum oluştuğunda yaşam süresi sona erer. <xref:System.Net.HttpWebRequest.GetResponse%2A> <xref:System.Net.HttpWebRequest> Teknik olarak, temel alınan yanıt akışı o noktada da kapatılır (kullanıcıya döndürülen yanıt akışı gerçekten yanıt akışının bir kopyasını içeren bir bellek akışıdır).  
+- <xref:System.Net.HttpWebRequest> nesnesi <xref:System.Net.HttpWebRequest.GetResponse%2A> veya <xref:System.Net.HttpWebRequest.EndGetResponse%2A> yöntemlerini çağırırken bir <xref:System.Net.WebException> oluşturursa, özel durum oluştuğunda yaşam süresi sona erer. Teknik olarak, temel alınan yanıt akışı o noktada da kapatılır (kullanıcıya döndürülen yanıt akışı gerçekten yanıt akışının bir kopyasını içeren bir bellek akışıdır).  
   
- Her Aralık için belirli <xref:System.Net.HttpWebRequest> nesne sorunlarını izleyen dört sayaç vardır. Bu performans sayaçları, uygulama geliştiricilerinin, yöneticilerin ve destek personelinin <xref:System.Net.HttpWebRequest> nesnelerin ne yaptığını daha iyi anlamasına yardımcı olabilir. Sayaçlar şunları içerir:  
+ Aralık başına belirli <xref:System.Net.HttpWebRequest> nesne sorunlarını izleyen dört sayaç vardır. Bu performans sayaçları, uygulama geliştiricilerinin, yöneticilerin ve destek personelinin <xref:System.Net.HttpWebRequest> nesnelerinin ne yaptığını daha iyi anlamasına yardımcı olabilir. Sayaçlar şunları içerir:  
   
 - **Oluşturulan Httpwebistek/sn**  
   
@@ -211,13 +209,13 @@ Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-ve
   
 - **Başarısız Httpwebisteği/sn**  
   
- **Yürütülen HttpWebRequests/sn** sayacı için iç çağrılar <xref:System.Net.HttpWebRequest.Abort%2A> de sayılır. Bu iç çağrılar genellikle uygulamanın ölçmek isteyebileceğiniz zaman aşımları nedeniyle oluşur.  
+ **Yürütülen HttpWebRequests/sn** sayacı için <xref:System.Net.HttpWebRequest.Abort%2A> iç çağrıları da sayılır. Bu iç çağrılar genellikle uygulamanın ölçmek isteyebileceğiniz zaman aşımları nedeniyle oluşur.  
   
- **Başarısız olan HttpWebRequests/sn** sayacı, sunucudan bir saniyede <xref:System.Net.HttpWebRequest> başarısız durum kodu alan nesne sayısını içerir. Yani, isteğin sonundaki HTTP sunucusundan alınan durum kodu 200 ile 299 arasında değildir. İşlenen ve yeni bir istek ile sonuçlanan durum kodları (örneğin, 401 Yetkisiz durum kodlarının çoğu) başarısız olur veya yeniden deneme sonucuna göre başarısız olmaz. Uygulama yeniden denemeye göre bir hata görebiliyorsa, bu sayaç artırılır.  
+ **Başarısız olan HttpWebRequests/sn** sayacı, sunucudan başarısız bir durum kodu içeren <xref:System.Net.HttpWebRequest> nesne sayısını (saniye başına) içerir. Yani, isteğin sonundaki HTTP sunucusundan alınan durum kodu 200 ile 299 arasında değildir. İşlenen ve yeni bir istek ile sonuçlanan durum kodları (örneğin, 401 Yetkisiz durum kodlarının çoğu) başarısız olur veya yeniden deneme sonucuna göre başarısız olmaz. Uygulama yeniden denemeye göre bir hata görebiliyorsa, bu sayaç artırılır.  
   
- Ağ performans sayaçlarına, <xref:System.Diagnostics.PerformanceCounter> <xref:System.Diagnostics> ad alanındaki ve ilgili sınıflar kullanılarak erişilebilir ve yönetilebilir. Ağ performans sayaçları, Windows performans Izleyicisi konsolu ile de görüntülenebilir.  
+ <xref:System.Diagnostics> ad alanındaki <xref:System.Diagnostics.PerformanceCounter> ve ilgili sınıflar kullanılarak ağ performans sayaçlarına erişilebilir ve yönetilebilir. Ağ performans sayaçları, Windows performans Izleyicisi konsolu ile de görüntülenebilir.  
   
- Ağ performans sayaçlarının kullanılacak yapılandırma dosyasında etkinleştirilmesi gerekir. Tüm ağ performans sayaçları, yapılandırma dosyasında tek bir ayarla etkin veya devre dışı bırakıldı. Bireysel ağ performans sayaçları etkinleştirilemez veya devre dışı bırakılamaz. Daha fazla bilgi için bkz [ \<. performanceCounter > öğesi (ağ ayarları)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md).  
+ Ağ performans sayaçlarının kullanılacak yapılandırma dosyasında etkinleştirilmesi gerekir. Tüm ağ performans sayaçları, yapılandırma dosyasında tek bir ayarla etkin veya devre dışı bırakıldı. Bireysel ağ performans sayaçları etkinleştirilemez veya devre dışı bırakılamaz. Daha fazla bilgi için bkz. [\<performanceCounter > öğesi (ağ ayarları)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md).  
   
  Ağ sayaçları etkinse bu, hem AppDomain başına hem de küresel performans sayaçlarını oluşturur ve güncelleştirir. Devre dışı bırakılırsa, uygulama herhangi bir ağ performans sayacı verisi sağlamacaktır.  
   
@@ -235,7 +233,7 @@ for (int i = 0; i < Array.Length; i++)
   
 - ".NET CLR Networking"-.NET Framework sürüm 2 ' de tanıtılan ve .NET Framework sürüm 2 ve sonrasında desteklenen özgün performans sayaçları.  
   
-- ".NET CLR Networking 4.0.0.0"-yukarıdaki yuva sayaçlarının yanı sıra .NET Framework sürüm 4 ve üzeri sürümlerde desteklenen yeni performans sayaçları. Bu yeni sayaçlar nesneler hakkında <xref:System.Net.HttpWebRequest> performans bilgileri sağlar.  
+- ".NET CLR Networking 4.0.0.0"-yukarıdaki yuva sayaçlarının yanı sıra .NET Framework sürüm 4 ve üzeri sürümlerde desteklenen yeni performans sayaçları. Bu yeni sayaçlar <xref:System.Net.HttpWebRequest> nesneler hakkında performans bilgileri sağlar.  
   
  Bir uygulamadaki performans sayaçlarına erişme ve bunları yönetme hakkında daha fazla bilgi için bkz. [performans sayaçları](performance-counters.md).  
   

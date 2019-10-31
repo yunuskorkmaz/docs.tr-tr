@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce259d1d-cd81-4490-a7a1-0d0ea0804872
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9df9263a0356b0c3c1a6d1da950c670f5a020d1e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9e8b65c735028029f4fb44c2640df74ef171d9de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966224"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141148"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats Metodu
 Ortak dil çalışma zamanının çöp toplama sistemiyle ilgili geçerli istatistik kümesini alır.  
@@ -43,17 +41,17 @@ HRESULT GetStats (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`GetStats`başarıyla döndürüldü.|  
+|S_OK|`GetStats` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR, yalnızca `Flags` `pStats`alanı tarafından belirtilen istatistikleri hesaplar ve döndürür.  
+ CLR, yalnızca `pStats``Flags` alanı tarafından belirtilen istatistikleri hesaplar ve döndürür.  
   
- [Cor_gc_stats yapısındaki](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) hangi istatistiklerin ayarlanacağını belirtmek için [](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) alanıCOR_GC_STAT_TYPESnumaralandırmanınbirveyadahafazladeğerine`Flags` ayarlayın.  
+ [Cor_gc_stats](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) yapısındaki hangi istatistiklerin ayarlanacağını belirlemek için `Flags` alanını [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) numaralandırmanın bir veya daha fazla değerine ayarlayın.  
   
  Kullanım örneği aşağıdaki gibidir:  
   
@@ -64,11 +62,11 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** MSCorEE. h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

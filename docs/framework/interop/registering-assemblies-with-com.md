@@ -7,45 +7,43 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6482d5fa046409d15913ea26300d298238750326
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ff24a5705058d4e303b3b64b454ced8548053a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648549"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113800"
 ---
 # <a name="registering-assemblies-with-com"></a>Derlemeleri COM ile Kaydetme
-Adlı bir komut satırı aracını çalıştırdığınız [derleme Kayıt Aracı (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) kaydetmek veya com ile kullanmak için derleme kaydını kaldırmak için .NET Framework sınıfı COM istemcilerinin şeffaf bir şekilde kullanabilmeniz için RegAsm.exe'yi sınıfına ilişkin bilgileri sistem kayıt defterine ekler. <xref:System.Runtime.InteropServices.RegistrationServices> Sınıfı eşdeğer bir işlevselliği sağlar.  
+Bir derlemeyi COM ile kullanmak üzere kaydetmek veya kaydını silmek için [Derleme Kayıt Aracı (Regasm. exe)](../tools/regasm-exe-assembly-registration-tool.md) adlı bir komut satırı aracı çalıştırabilirsiniz. Regasm. exe, COM istemcilerinin .NET Framework sınıfını saydam bir şekilde kullanabilmesi için sistem kayıt defterine sınıf hakkında bilgi ekler. <xref:System.Runtime.InteropServices.RegistrationServices> sınıfı eşdeğer işlevselliği sağlar.  
   
- Bir COM istemciden etkinleştirilmeden önce bir yönetilen bileşen Windows kayıt defterine kaydedilmelidir. Aşağıdaki tablo, Regasm.exe genellikle Windows kayıt defterine ekler anahtarları gösterir. (000000 gerçek GUID değeri gösterir.)  
+ Yönetilen bir bileşen, bir COM istemcisinden etkinleştirilmeden önce Windows kayıt defteri 'nde kayıtlı olmalıdır. Aşağıdaki tabloda, Regasm. exe ' nin tipik olarak Windows kayıt defterine eklediği anahtarlar gösterilmektedir. (000000 yazın, gerçek GUID değerini gösterir.)  
   
 |GUID|Açıklama|Kayıt defteri anahtarı|  
 |----------|-----------------|------------------|  
-|CLSID|Sınıf tanımlayıcısı|HKEY_CLASSES_ROOT\CLSID\\{000…000}|  
-|IID|Arabirim tanımlayıcı|HKEY_CLASSES_ROOT\Interface\\{000…000}|  
-|KİTAPLIK KİMLİĞİ|Tür kitaplığı tanımlayıcısı|HKEY_CLASSES_ROOT\TypeLib\\{000…000}|  
-|Program Kimliği|Programlı tanımlayıcısı|HKEY_CLASSES_ROOT\000…000|  
+|IN|Sınıf tanımlayıcısı|HKEY_CLASSES_ROOT\CLSID\\{000... 000|  
+|'SI|Arabirim tanımlayıcısı|HKEY_CLASSES_ROOT\Interface\\{000... 000|  
+|KITAPLıK KIMLIĞI|Kitaplık tanımlayıcısı|HKEY_CLASSES_ROOT\TypeLib\\{000... 000|  
+|ProgID|Programlı tanımlayıcı|HKEY_CLASSES_ROOT\000... 000|  
   
- HKCR\CLSID altında\\{0000... 0000} anahtarı, varsayılan değer sınıfının ProgID için ayarlanır ve iki yeni adlandırılmış değerler, sınıf ve bütünleştirilmiş koduna eklenir. Çalışma zamanı derleme değeri Kayıt Defteri'nden okur ve çalışma zamanı derlemenin çözümleyici açın geçirir. Derleme Çözücü, ad ve sürüm numarası gibi derleme bilgileri temel alarak, derleme bulmayı dener. Derleme Çözücü bir derlemeyi bulmak derlemeyi aşağıdaki konumlardan birinde olmak zorundadır:  
+ HKCR\CLSID\\{0000... 0000} anahtar, varsayılan değer sınıfının ProgID değerine ayarlanır ve iki yeni adlandırılmış değer, sınıf ve derleme eklenir. Çalışma zamanı, kayıt defterinden derleme değerini okur ve çalışma zamanı derleme çözümleyiciye geçirir. Derleme çözümleyici, ad ve sürüm numarası gibi derleme bilgilerine göre derlemeyi bulmaya çalışır. Bütünleştirilmiş kod Çözümleyicisinin bir derlemeyi bulması için, derlemenin aşağıdaki konumlardan birinde olması gerekir:  
   
-- Genel Derleme Önbelleği (tanımlayıcı adlı bütünleştirilmiş kod olmalıdır).  
+- Genel bütünleştirilmiş kod önbelleği (tanımlayıcı adlandırılmış derleme olmalıdır).  
   
-- Uygulama dizininde. Uygulama yolu yüklenen derlemeler, yalnızca bu uygulamadan erişilebilir.  
+- , Uygulama dizininde. Uygulama yolundan yüklenen derlemelere yalnızca bu uygulamadan erişilebilir.  
   
-- Belirtilen bir dosya yolu boyunca **/ codebase** Regasm.exe seçeneği.  
+- **/CODEBASE** seçeneğiyle birlikte bir dosya yolu ile regasm. exe olarak belirtilir.  
   
- RegAsm.exe da HKCR\CLSID Inprocserver32 anahtarında oluşturur\\{0000... 0000} anahtarı. Anahtar için varsayılan değer, ortak dil çalışma zamanı (Mscoree.dll) başlatır dll adına ayarlanır.  
+ Regasm. exe ayrıca HKCR\CLSID\\{0000... altında ınprocserver32 anahtarını da oluşturur. 0000} anahtar. Anahtar için varsayılan değer, ortak dil çalışma zamanını (mscoree. dll) başlatan DLL adına ayarlanır.  
   
 ## <a name="examining-registry-entries"></a>Kayıt Defteri Girdilerini İnceleme  
- COM birlikte çalışma, herhangi bir .NET Framework sınıfı örneğini oluşturmak için bir standart sınıf üreteci uygulamasını sağlar. İstemciler çağırabilir **DllGetClassObject** bir sınıf üreteci almak ve herhangi bir COM bileşeni ile olduğu gibi nesneleri oluşturmak için yönetilen DLL üzerinde.  
+ COM birlikte çalışması, herhangi bir .NET Framework sınıfının bir örneğini oluşturmak için standart bir sınıf fabrikası uygulamasına sahiptir. İstemciler, bir sınıf fabrikası almak ve diğer tüm COM bileşenleri gibi nesneleri oluşturmak için yönetilen DLL üzerinde **DllGetClassObject** çağırabilir.  
   
- İçin `InprocServer32` alt anahtarı Mscoree.dll başvuru, ortak dil çalışma zamanı Yönetilen Nesne oluşturduğunu göstermek için geleneksel COM tür kitaplığı yerine görüntülenir.  
+ `InprocServer32` alt anahtarında, ortak dil çalışma zamanının yönetilen nesneyi oluşturduğunu göstermek için, geleneksel bir COM tür kitaplığı yerine Mscoree. dll başvurusu görüntülenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)
-- [Nasıl yapılır: COM başvurusu .NET türlerinden](how-to-reference-net-types-from-com.md)
-- [Bir .NET nesnesini çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
-- [COM erişimi için bir uygulama dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
+- [Nasıl yapılır: COM'dan .NET Türlerine Başvurma](how-to-reference-net-types-from-com.md)
+- [.NET nesnesi çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [COM erişimi için uygulama dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

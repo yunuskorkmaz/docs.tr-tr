@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b67ea03-d474-4605-acaa-57455790250c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b6d5ea24e40357205051188b68de8b973d2cec18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3fd9efd3961be1d6e6e91b881327628c598e364e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748252"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092720"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfile-method"></a>ICLRStrongName::GetHashFromAssemblyFile Metodu
-Belirtilen karma algoritması kullanılarak, belirtilen derleme dosyasının bir karmasını alır.  
+Belirtilen karma algoritmasını kullanarak belirtilen derleme dosyasının karmasını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,31 +39,31 @@ HRESULT GetHashFromAssemblyFile (
   
 ## <a name="parameters"></a>Parametreler  
  `szFilePath`  
- [in] Karma hale getirilecek dosyanın yolu.  
+ 'ndaki Karma hale getirilen dosyanın yolu.  
   
  `piHashAlg`  
- [out içinde] Sabit karma algoritmasını belirtir. Sıfır varsayılan karma algoritması için kullanın.  
+ [in, out] Karma algoritmayı belirten bir sabit. Varsayılan karma algoritması için sıfır kullanın.  
   
  `pbHash`  
- [out] Döndürülen karma arabellek.  
+ dışı Döndürülen karma arabelleği.  
   
  `cchHash`  
- [in] İstenen en büyük boyutunu `pbHash`.  
+ 'ndaki İstenen en büyük boyut `pbHash`.  
   
  `pchHash`  
- [out] Bayt cinsinden boyutu döndürülen `pbHash`.  
+ dışı `pbHash`bayt cinsinden döndürülen boyut.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
+ Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](https://go.microsoft.com/fwlink/?LinkId=213878) ).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MetaHost.h  
+ **Üst bilgi:** MetaHost. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

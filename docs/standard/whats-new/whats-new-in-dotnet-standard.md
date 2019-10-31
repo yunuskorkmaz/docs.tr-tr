@@ -4,14 +4,12 @@ description: Bu makalede, .NET Standard her yeni sürümünde bulunan yeni özel
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f69dfe77e5d485c4c7ffcbf2b98657eab87d452d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ebf656c4a5499fff54cb5a70a93c4e8cc9c82d0a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775229"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101766"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard’daki Yenilikler
 
@@ -41,17 +39,17 @@ Sürüm 1,6 ' den .NET Standard, API 'lerin karşılaştırarak küçük bir alt
 
 .NET Standard 2,0 ' de <xref:System> ad alanına yapılan eklemelerin bazıları şunlardır:
 
-- @No__t_0 sınıfı için destek.
-- @No__t_0 sınıfında ek üyelerden diziler ile çalışmaya yönelik daha iyi destek.
-- @No__t_0 sınıfında ek üyelerin öznitelikleriyle çalışma için daha iyi destek.
-- @No__t_0 değerler için daha iyi takvim desteği ve ek biçimlendirme seçenekleri.
+- <xref:System.AppDomain> sınıfı için destek.
+- <xref:System.Array> sınıfında ek üyelerden diziler ile çalışmaya yönelik daha iyi destek.
+- <xref:System.Attribute> sınıfında ek üyelerin öznitelikleriyle çalışma için daha iyi destek.
+- <xref:System.DateTime> değerler için daha iyi takvim desteği ve ek biçimlendirme seçenekleri.
 - Ek <xref:System.Decimal> yuvarlama işlevselliği.
-- @No__t_0 sınıfında ek işlevsellik.
-- @No__t_0 sınıfı aracılığıyla çöp toplayıcı üzerinde Gelişmiş denetim.
-- @No__t_0 sınıfında dize karşılaştırma, numaralandırma ve normalleştirme için geliştirilmiş destek.
-- @No__t_0 ve <xref:System.TimeZoneInfo.TransitionTime> sınıflarında gün ışığından yararlanma ayarlamaları ve geçiş süreleri için destek.
-- @No__t_0 sınıfında önemli ölçüde gelişmiş işlevsellik.
-- @No__t_0 ve <xref:System.Runtime.Serialization.StreamingContext> parametrelere sahip bir özel durum Oluşturucusu ekleyerek özel durum nesnelerinin serisini kaldırma için daha iyi destek.
+- <xref:System.Environment> sınıfında ek işlevsellik.
+- <xref:System.GC> sınıfı aracılığıyla çöp toplayıcı üzerinde Gelişmiş denetim.
+- <xref:System.String> sınıfında dize karşılaştırma, numaralandırma ve normalleştirme için geliştirilmiş destek.
+- <xref:System.TimeZoneInfo.AdjustmentRule> ve <xref:System.TimeZoneInfo.TransitionTime> sınıflarında gün ışığından yararlanma ayarlamaları ve geçiş süreleri için destek.
+- <xref:System.Type> sınıfında önemli ölçüde gelişmiş işlevsellik.
+- <xref:System.Runtime.Serialization.SerializationInfo> ve <xref:System.Runtime.Serialization.StreamingContext> parametrelere sahip bir özel durum Oluşturucusu ekleyerek özel durum nesnelerinin serisini kaldırma için daha iyi destek.
 
 ### <a name="support-for-net-framework-libraries"></a>.NET Framework kitaplıkları için destek
 

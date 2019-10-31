@@ -14,33 +14,31 @@ helpviewer_keywords:
 ms.assetid: 6c1d15c1-a80a-4ee9-b1e4-6e859db6575a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb5fea403f8210ea93d240aa3aabd4325524b987
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b191243ea03adcfecaadbd3a5871e1773b28bb1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599461"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124459"
 ---
 # <a name="ihostautoevent-interface"></a>IHostAutoEvent Arabirimi
-Otomatik sıfırlama olayın ana bilgisayarın uygulama bir gösterimini sağlar.  
+Ana bilgisayarın otomatik sıfırlama olayı uygulamasının bir gösterimini sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Set Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Geçerli ayarlar `IHostAutoEvent` sinyal verilmiş duruma örneği.|  
-|[Wait Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Geçerli neden `IHostAutoEvent` olay ait kadar beklenecek örneği veya belirli bir zaman geçtikçe miktarını.|  
+|[Set Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Geçerli `IHostAutoEvent` örneğini bir sinyal durumuna ayarlar.|  
+|[Wait Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Geçerli `IHostAutoEvent` örneğinin, olaya ait olana veya belirli bir süre geçtikten sonra beklemesine neden olur.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

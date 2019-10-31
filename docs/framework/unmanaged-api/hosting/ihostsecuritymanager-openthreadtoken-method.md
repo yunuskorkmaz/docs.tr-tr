@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5999052-8bf0-4a9e-8621-da6284406b18
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1beeb0ff6b2e3493f0814fc3371f189bd4d485d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ced153798355aff882f0244f3dd946c39dea2bd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778012"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121463"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken Yöntemi
-Şu anda yürütülen iş parçacığıyla ilişkilendirilmiş isteğe bağlı erişim belirteci açılır.  
+Şu anda yürütülmekte olan iş parçacığıyla ilişkili olan isteğe bağlı erişim belirtecini açar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,38 +37,38 @@ HRESULT OpenThreadToken (
   
 ## <a name="parameters"></a>Parametreler  
  `dwDesiredAccess`  
- [in] İstenen iş parçacığı belirteci erişim türlerini belirten erişim değerleri maskesi. Bu değerleri Win32'de tanımlanan `OpenThreadToken` işlevi. İstenen erişim türleri, belirtecin isteğe bağlı erişim denetim listesini (DACL) vermek veya reddetmek için erişim türlerini belirlemek için karşı mutabık kılınır.  
+ 'ndaki İş parçacığı belirtecine istenen erişim türlerini belirten bir erişim değerleri maskesi. Bu değerler, Win32 `OpenThreadToken` işlevinde tanımlanmıştır. İstenen erişim türleri, izin verilecek veya reddedilecek erişim türlerini belirleyen belirtecin kısıtlı erişim denetim listesine (DACL) göre mutabık kılınmakta.  
   
  `bOpenAsSelf`  
- [in] `true` erişim denetimi için çağıran iş parçacığını; işlemin güvenlik bağlamını kullanarak yapılması gerektiğini belirtmek için `false` çağıran iş parçacığı için kendi güvenlik bağlamını kullanarak erişim denetimi gerçekleştirilmesi gerektiğini belirtmek için. İş parçacığı bir istemci kimliğine bürünme, güvenlik bağlamı, istemci işlemi olabilir.  
+ [in] erişim denetiminin, çağıran iş parçacığı için işlemin güvenlik bağlamı kullanılarak yapılması gerektiğini belirtmek üzere `true`; erişim denetiminin, çağıran iş parçacığının kendisi için güvenlik bağlamı kullanılarak gerçekleştirilmesi gerektiğini belirtmek için `false`. İş parçacığı bir istemciyi taklit alıyorsa, güvenlik bağlamı bir istemci işlemi olabilir.  
   
  `phThreadToken`  
- [out] Yeni açılan bir erişim belirteci için bir işaretçi.  
+ dışı Yeni açılan erişim belirtecine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`OpenThreadToken` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.|  
-|HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
-|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
-|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
+|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IHostSecurityManager::OpenThreadToken` davranışını benzer şekilde aynı ada karşılık gelen Win32 işlevini çağıran bir tanıtıcıda rastgele bir iş parçacığına geçirmek Win32 işlevini sağlar dışında while `IHostSecurityManager::OpenThreadToken` yalnızca çağıran iş parçacığıyla ilişkilendirilmiş belirteci açılır.  
+ `IHostSecurityManager::OpenThreadToken`, aynı ada sahip karşılık gelen Win32 işlevine benzer şekilde davranır, ancak `IHostSecurityManager::OpenThreadToken` yalnızca çağıran iş parçacığıyla ilişkili belirteci açtığında, bu, çağıran bir iş parçacığına yönelik bir tutamacı açar.  
   
- `HANDLE` Tür COM uyumlu değil, diğer bir deyişle, boyutunu işletim sistemine özeldir ve özel sıralama gerektirir. Bu nedenle, bu belirteci yalnızca CLR ile konak arasındaki işlemin içinde kullanıma yöneliktir.  
+ `HANDLE` türü, COM uyumlu değildir, diğer bir deyişle, boyutu işletim sistemine özeldir ve özel sıralama gerektirir. Bu nedenle, bu belirteç yalnızca işlem içinde, CLR ile ana bilgisayar arasında kullanılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

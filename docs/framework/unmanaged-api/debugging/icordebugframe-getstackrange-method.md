@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: fab037cb-fda6-40fb-9367-921e435dd5a0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9f58e66286f5e3e169507efd2f87ce10e9d323b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 828e4dc67cb93d0a35879e94b54c9fac6e5bda16
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754859"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124080"
 ---
 # <a name="icordebugframegetstackrange-method"></a>ICorDebugFrame::GetStackRange Yöntemi
 Bu yığın çerçevesinin mutlak adres aralığını alır.  
@@ -38,19 +36,19 @@ HRESULT GetStackRange (
   
 ## <a name="parameters"></a>Parametreler  
  `pStart`  
- [out] Bir işaretçi bir `CORDB_ADDRESS` bu tarafından temsil edilen yığın çerçevesinin başlangıç adresini belirten `ICorDebugFrame` nesne.  
+ dışı Bu `ICorDebugFrame` nesnesi tarafından temsil edilen yığın çerçevesinin başlangıç adresini belirten `CORDB_ADDRESS` işaretçisi.  
   
  `pEnd`  
- [out] Bir işaretçi bir `CORDB_ADDRESS` bitiş adresini bu tarafından temsil edilen yığın çerçevesinin belirten `ICorDebugFrame` nesne.  
+ dışı Bu `ICorDebugFrame` nesnesi tarafından temsil edilen yığın çerçevesinin bitiş adresini belirten `CORDB_ADDRESS` işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yığın adres aralığı, birden çok hata ayıklama motorlarından toplanan Aralanmış yığın izlemelerini birbirine eklemekten için kullanışlıdır. Sayısal Aralık yığın çerçevesi bir içeriği hakkında bilgi sağlar. Bu, yalnızca yığın çerçeve konumu bir karşılaştırması için anlamlı olur.  
+ Yığının adres aralığı, birden çok hata ayıklama altyapılarından toplanan araya eklemeli yığın izlemeleri piecing için faydalıdır. Sayısal Aralık, yığın çerçevesinin içeriğiyle ilgili bilgi sağlamaz. Yalnızca yığın çerçeve konumlarının karşılaştırılmasının anlamı vardır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

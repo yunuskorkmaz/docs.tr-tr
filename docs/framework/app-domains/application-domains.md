@@ -12,14 +12,12 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0ce9d5f706a473d64e97fb02e0426060878d9c75
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: a5c9f4248e060d231941269f39cadbc7147ce27f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834026"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119980"
 ---
 # <a name="application-domains"></a>Uygulama etki alanları
 
@@ -48,45 +46,45 @@ ms.locfileid: "71834026"
     > [!NOTE]
     > Ayrı derlemeler veya türler kaldırılamaz. Yalnızca bir etki alanı kaldırılabilir.  
   
-- Bir uygulamada çalışan kod, başka bir uygulamadan koda veya kaynaklara doğrudan erişemez. Ortak dil çalışma zamanı, farklı uygulama etki alanlarındaki nesneler arasındaki doğrudan çağrıları önleyerek bu yalıtımı zorlar. Etki alanları arasında geçiş yapan nesneler, proxy tarafından kopyalanır veya erişilir. Nesne kopyalanırsa, nesnesine yapılan çağrı yereldir. Diğer bir deyişle, hem çağıran hem de başvurulan nesne aynı uygulama etki alanında olur. Nesnesine bir proxy üzerinden erişiliyorsa, nesnesine yapılan çağrı uzak olur. Bu durumda, çağıran ve başvurulan nesne farklı uygulama etki alanlarında. Çapraz etki alanı çağrıları, iki işlem arasındaki veya iki makine arasındaki çağrılarla aynı uzaktan çağrı altyapısını kullanır. Bu nedenle, başvurulan nesnenin meta verileri, yöntem çağrısının JıT olarak derlenmesine izin vermek için her iki uygulama etki alanı için de kullanılabilir olmalıdır. Çağıran etki alanının çağrılan nesnenin meta verilerine erişimi yoksa, derleme <xref:System.IO.FileNotFoundException> türünde bir özel durumla başarısız olabilir. Daha fazla bilgi için bkz. [uzak nesneler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Nesneleri etki alanları genelinde nasıl erişilebileceğini belirleme mekanizması nesne tarafından belirlenir. Daha fazla bilgi için bkz. <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+- Bir uygulamada çalışan kod, başka bir uygulamadan koda veya kaynaklara doğrudan erişemez. Ortak dil çalışma zamanı, farklı uygulama etki alanlarındaki nesneler arasındaki doğrudan çağrıları önleyerek bu yalıtımı zorlar. Etki alanları arasında geçiş yapan nesneler, proxy tarafından kopyalanır veya erişilir. Nesne kopyalanırsa, nesnesine yapılan çağrı yereldir. Diğer bir deyişle, hem çağıran hem de başvurulan nesne aynı uygulama etki alanında olur. Nesnesine bir proxy üzerinden erişiliyorsa, nesnesine yapılan çağrı uzak olur. Bu durumda, çağıran ve başvurulan nesne farklı uygulama etki alanlarında. Çapraz etki alanı çağrıları, iki işlem arasındaki veya iki makine arasındaki çağrılarla aynı uzaktan çağrı altyapısını kullanır. Bu nedenle, başvurulan nesnenin meta verileri, yöntem çağrısının JıT olarak derlenmesine izin vermek için her iki uygulama etki alanı için de kullanılabilir olmalıdır. Çağıran etki alanının çağrılan nesnenin meta verilerine erişimi yoksa, derleme <xref:System.IO.FileNotFoundException>türünde bir özel durumla başarısız olabilir. Daha fazla bilgi için bkz. [uzak nesneler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Nesneleri etki alanları genelinde nasıl erişilebileceğini belirleme mekanizması nesne tarafından belirlenir. Daha fazla bilgi için bkz. <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 - Kodun davranışı, çalıştığı uygulamanın kapsamına alınır. Diğer bir deyişle, uygulama etki alanı, uygulama sürüm ilkeleri, eriştiği uzak derlemelerin konumu ve etki alanına yüklenen derlemelerin nerede bulunacağı hakkında bilgi gibi yapılandırma ayarları sağlar.  
   
 - Koda verilen izinler, kodun çalıştığı uygulama etki alanı tarafından denetlenebilir.  
   
-## <a name="application-domains-and-assemblies"></a>Uygulama etki alanları ve derlemeler
+## <a name="application-domains-and-assemblies"></a>Uygulama Etki Alanları ve derlemeler
 
- Bu bölüm, uygulama etki alanları ve derlemeler arasındaki ilişkiyi açıklar. İçerdiği kodu yürütmeden önce bir derlemeyi uygulama etki alanına yüklemeniz gerekir. Tipik bir uygulamanın çalıştırılması, çeşitli derlemelerin bir uygulama etki alanına yüklenmesine neden olur.  
+ Bu bölüm, uygulama etki alanları ve derlemeler arasındaki ilişkiyi açıklar. Bir derlemenin içerdiği kodu yürütmeden önce derlemeyi bir uygulama etki alanına yüklemeniz gerekir. Tipik bir uygulamayı çalıştırmak, bir uygulama etki alanına birkaç derlemenin yüklenmesine neden olur.  
   
- Bir derlemenin yüklenme şekli, tam zamanında (JıT) derlenmiş kodun, işlemdeki birden çok uygulama etki alanı tarafından paylaşılıp paylaşılamayacağını ve derlemenin işlemden kaldırılabileceğini belirler.  
+ Bir derlemenin yüklenme şekli, onun işlemdeki birden çok uygulama etki alanı ile paylaşılabilen anlık (JIT) derlenmiş kod olup olmadığını ve derlemenin işlemden kaldırılabilip kaldırılamayacağını belirler.  
   
-- Bir derleme etki alanı nötr olarak yüklenirse, aynı güvenlik izni kümesini paylaşan tüm uygulama etki alanları aynı JıT kodlu kodu paylaşabilir, bu da uygulamanın gerektirdiği belleği azaltır. Ancak, derleme işlemden hiçbir şekilde kaldırılamaz.  
+- Eğer bir derleme etki alanından bağımsız olarak yüklenirse, aynı güvenlik izni kümesine sahip olan tüm uygulama etki alanları aynı JIT olarak derlenmiş kodunu paylaşabilir ve bu da uygulamanın gerektirdiği belleği azaltır. Ancak, derleme işlemden asla kaldırılamaz.  
   
-- Bir derleme, etki alanına bağımsız yüklenmemişse, yüklendiği her uygulama etki alanında JıT olarak derlenmelidir. Ancak, derleme, yüklendiği tüm uygulama etki alanlarını kaldırarak işlemden kaldırılabilirler.  
+- Eğer bir derleme etki alanından bağımsız olarak yüklenmezse, yüklendiği tüm uygulama etki alanlarında JIT olarak derlenmelidir. Ancak derleme, yüklü olduğu tüm uygulama etki alanları kaldırılarak işlemden kaldırılabilir.  
   
- Çalışma zamanı ana bilgisayarı, çalışma zamanını bir işleme yüklediğinde, derlemelerin etki alanı nötr olarak yüklenip yüklenmeyeceğini belirler. Yönetilen uygulamalar için, <xref:System.LoaderOptimizationAttribute> özniteliğini işlem için giriş noktası yöntemine uygulayın ve ilişkili <xref:System.LoaderOptimization> numaralandırmasından bir değer belirtin. Ortak dil çalışma zamanını barındıran yönetilmeyen uygulamalar için [CorBindToRuntimeEx işlev](../unmanaged-api/hosting/corbindtoruntimeex-function.md) yöntemini çağırdığınızda uygun bayrağı belirtin.  
+ Çalışma zamanı konak ortamı, çalışma zamanını bir işleme yüklerken derlemeleri etki alanından bağımsız olarak yükleyip yüklemeyeceğini belirler. Yönetilen uygulamalar için, <xref:System.LoaderOptimizationAttribute> özniteliğini işlem için giriş noktası metoduna uygulayın ve ilişkili <xref:System.LoaderOptimization> sabit listesinden bir değer belirtin. Ortak dil çalışma zamanını barındıran yönetilmeyen uygulamalar için [CorBindToRuntimeEx işlev](../unmanaged-api/hosting/corbindtoruntimeex-function.md) yöntemini çağırdığınızda uygun bayrağı belirtin.  
   
- Etki alanı bağımsız derlemeleri yüklemek için üç seçenek vardır:  
+ Etki alanından bağımsız derlemeleri yüklemek için üç seçenek vardır:  
   
-- <xref:System.LoaderOptimization.SingleDomain?displayProperty=nameWithType>, her zaman etki alanı nötr olarak yüklenen mscorlib dışında, hiçbir derlemeyi etki alanı nötr olarak yükler. Bu ayar, ana bilgisayar işlemde yalnızca tek bir uygulama çalıştırırken yaygın olarak kullanıldığından, tek etki alanı olarak adlandırılır.
+- <xref:System.LoaderOptimization.SingleDomain?displayProperty=nameWithType>, her zaman etki alanından bağımsız olarak yüklenen Mscorlib dışındaki hiçbir derlemeyi etki alanından bağımsız olarak yüklemez. Bu ayar, ana bilgisayar işlemde yalnızca tek bir uygulama çalıştırırken yaygın olarak kullanıldığından, tek etki alanı olarak adlandırılır.
 
-- <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> tüm derlemeleri etki alanı nötr olarak yükler. İşlemde, hepsi aynı kodu çalıştıran birden çok uygulama etki alanı olduğunda bu ayarı kullanın.
+- <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType>, tüm derlemeleri etki alanından bağımsız yükler. İşlemde tamamı aynı kodu çalıştıran birden çok uygulama etki alanı olduğunda bu ayarı kullanın.
 
-- <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>, ve tüm bağımlılıkları genel derleme önbelleğinde yüklüyse, tanımlayıcı adlı derlemeleri etki alanı nötr olarak yükler. Diğer derlemeler yüklendikleri her uygulama etki alanı için ayrı olarak yüklenir ve JıT olarak derlenir ve bu nedenle işlemden kaldırılabilirler. Aynı işlemde birden fazla uygulama çalıştırırken veya işlemden yüklemesi gereken birçok uygulama etki alanı ve derlemesi tarafından paylaşılan derlemelerin bir karışımını varsa bu ayarı kullanın.
+- <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>, tanımlayıcı ada sahip olan derlemeleri, kendileri ve tüm bağımlılıkları genel bütünleştirilmiş kod önbelleğinde yüklü ise, etki alanından bağımsız olarak yükler. Diğer derlemeler yüklü oldukları her uygulama etki alanı için ayrı olarak yüklenip JIT olarak derlenirler ve bu nedenle işlemden kaldırılabilirler. Aynı işlemde birden çok uygulama çalıştırırken veya işlemden kaldırılması gereken birden çok uygulama etki alanı ve derleme tarafından paylaşılan bir derleme karışımına sahipseniz bu ayarı kullanın.
   
- JıT olarak derlenen kod, <xref:System.Reflection.Assembly> sınıfının <xref:System.Reflection.Assembly.LoadFrom%2A> yöntemi kullanılarak veya bir bayt dizileri belirten <xref:System.Reflection.Assembly.Load%2A> yönteminin aşırı yüklemeleri kullanılarak görüntülerden yüklenen, Load-to----------from bağlamına yüklenen derlemeler için paylaştırılamaz.  
+ JIT olarak derlenmiş kod, <xref:System.Reflection.Assembly.LoadFrom%2A> sınıfının <xref:System.Reflection.Assembly> yöntemi kullanarak load-from bağlamı içine yüklenen derlemeler için ya da <xref:System.Reflection.Assembly.Load%2A> yönteminin bayt dizilerini belirten aşırı yüklemeleri kullanılarak görüntülerden yüklenen derlemeler için paylaşılamaz.  
   
  [Ngen. exe (yerel görüntü Oluşturucu)](../tools/ngen-exe-native-image-generator.md) kullanılarak yerel koda derlenmiş derlemeler, bir işleme ilk kez yüklendiklerinde etki alanı nötr olarak yüklenirse, uygulama etki alanları arasında paylaşılabilir.  
   
- Uygulama giriş noktasını içeren derleme için JıT ile derlenen kod yalnızca tüm bağımlılıkları paylaşılırsa paylaşılır.  
+ Uygulama giriş noktasını içeren derleme için JIT olarak derlenmiş kod, yalnızca tüm bağımlılıkları paylaşılabiliyorsa paylaşılır.  
   
- Bir etki alanı bağımsız derlemesi JıT olarak birden çok kez derlenebilir. Örneğin, iki uygulama etki alanının güvenlik izni kümesi farklıysa, aynı JıT kodlu kodu paylaşamaz. Ancak, JıT ile derlenen derlemenin her kopyası aynı izin kümesine sahip olan diğer uygulama etki alanlarıyla paylaşılabilir.  
+ Etki alanından bağımsız bir derleme JIT olarak birden çok kez derlenebilir. Örneğin, iki uygulama etki alanının güvenlik izni kümeleri farklıysa, aynı JIT olarak derlenmiş kodu paylaşamazlar. Ancak, JIT olarak derlenmiş derlemenin her kopyası, aynı izin kümesine sahip olan diğer uygulama etki alanlarıyla paylaşılabilir.  
   
- Derlemeleri etki alanı için bağımsız olarak yükleyip yükleyemeyeceğine karar verirken, bellek kullanımını azaltma ve diğer performans faktörleri arasında bir zorunluluğunu getirir yapmanız gerekir.  
+ Derlemeleri etki alanından bağımsız olarak yükleyip yüklemeyeceğinize karar verdiğinizde, bellek kullanımı ve diğer performans etmenleri arasında bir takas yapmanız gerekir.  
   
-- Statik verilere ve yöntemlere erişim, derlemeleri yalıtma gereksinimi nedeniyle, etki alanı nötr derlemeler için daha yavaştır. Derlemeye erişen her uygulama etki alanının statik verilerin ayrı bir kopyasına sahip olması gerekir ve statik alanlardaki nesnelere yapılan başvuruların etki alanı sınırlarının sınırlarını önler. Sonuç olarak, çalışma zamanı, çağrıyı statik verilerin veya metodun uygun kopyasına yönlendirmek için ek mantık içerir. Bu ek mantık çağrıyı yavaşlatır.  
+- Etki alanından bağımsız derlemeler için statik verilere ve yöntemlere olan erişim, derlemeleri yalıtmak gerektiği için daha yavaştır. Statik alanlardaki nesnelere olan başvuruların etki alanı sınırlarını geçmesini engellemek için derlemeye erişen tüm uygulama etki alanlarının, statik verinin ayrı kopyalarına sahip olması gerekir. Sonuç olarak, çalışma zamanı bir çağıranı statik veri veya yöntemin uygun kopyasına yönlendirmek için ek mantık içerir. Bu ek mantık, çağrıyı yavaşlatır.  
   
-- Bir derlemenin tüm bağımlılıkları, derleme etki alanı nötr olduğunda yerleştirilmelidir ve yüklenmelidir çünkü etki alanı nötr olarak yüklenemeyen bir bağımlılık, derlemenin etki alanından bağımsız olarak yüklenmesini önler.  
+- Derleme etki alanından bağımsız olarak yüklendiğinde, derlemenin tüm bağımlılıkları konumlandırılıp yüklenmelidir çünkü etki alanından bağımsız olarak yüklenemeyen bir bağımlılık, derlemenin etki alanından bağımsız olarak yüklenmesini engeller.  
   
 ## <a name="application-domains-and-threads"></a>Uygulama etki alanları ve iş parçacıkları
 
@@ -94,33 +92,33 @@ ms.locfileid: "71834026"
   
  Uygulama etki alanları ve iş parçacıkları arasında bire bir bağıntı yoktur. Birçok iş parçacığı, belirli bir zamanda tek bir uygulama etki alanında yürütebilir ve belirli bir iş parçacığı tek bir uygulama etki alanına göre sınırlandırmaz. Diğer bir deyişle, iş parçacıkları, uygulama etki alanı sınırları arasında ücretsizdir; her uygulama etki alanı için yeni bir iş parçacığı oluşturulmaz.  
   
- Belirli bir zamanda, her iş parçacığı bir uygulama etki alanında yürütülür. Sıfır, bir veya birden çok iş parçacığı belirli bir uygulama etki alanında Yürütülüyor olabilir. Çalışma zamanı, uygulama etki alanlarında hangi iş parçacıklarının çalıştığını izler. @No__t-0 yöntemini çağırarak bir iş parçacığının yürütüldüğü etki alanını dilediğiniz zaman bulabilirsiniz.
+ Belirli bir zamanda, her iş parçacığı bir uygulama etki alanında yürütülür. Sıfır, bir veya birden çok iş parçacığı belirli bir uygulama etki alanında Yürütülüyor olabilir. Çalışma zamanı, uygulama etki alanlarında hangi iş parçacıklarının çalıştığını izler. <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType> yöntemini çağırarak bir iş parçacığının yürütüldüğü etki alanını dilediğiniz zaman bulabilirsiniz.
 
 ### <a name="application-domains-and-cultures"></a>Uygulama etki alanları ve kültürleri
 
- @No__t-0 nesnesiyle temsil edilen kültür, iş parçacıklarıyla ilişkilendirilir. @No__t-0 özelliğini kullanarak şu anda yürütülmekte olan iş parçacığıyla ilişkili kültürü alabilir ve <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliğini kullanarak şu anda yürütülmekte olan iş parçacığıyla ilişkilendirilmiş kültürü alabilir veya ayarlayabilirsiniz. Bir iş parçacığı ile ilişkili kültür <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği kullanılarak açıkça ayarlandıysa, iş parçacığı uygulama etki alanı sınırlarını aştığında bu iş parçacığıyla ilişkilendirilmeye devam eder. Aksi takdirde, belirli bir zamanda iş parçacığı ile ilişkili kültür, iş parçacığının yürütüldüğü uygulama etki alanındaki <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> özelliğinin değeri tarafından belirlenir:  
+ <xref:System.Globalization.CultureInfo> nesne tarafından temsil edilen kültür, iş parçacıklarıyla ilişkilendirilir. Şu anda yürütülmekte olan iş parçacığıyla ilişkili kültürü <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliğini kullanarak alabilir ve <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliğini kullanarak şu anda yürütülmekte olan iş parçacığıyla ilişkili kültürü alabilir veya ayarlayabilirsiniz. Bir iş parçacığı ile ilişkili kültür <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği kullanılarak açıkça ayarlandıysa, iş parçacığı uygulama etki alanı sınırlarını aştığında bu iş parçacığıyla ilişkilendirilmeye devam eder. Aksi takdirde, belirli bir zamanda iş parçacığı ile ilişkili kültür, iş parçacığının yürütüldüğü uygulama etki alanındaki <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> özelliğinin değeri tarafından belirlenir:  
   
-- Özelliğin değeri `null` değilse, özelliği tarafından döndürülen kültür iş parçacığıyla ilişkilendirilir (ve bu nedenle <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> ve <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özellikleri tarafından döndürülür).  
+- Özelliğin değeri `null`değilse, özelliği tarafından döndürülen kültür iş parçacığıyla ilişkilendirilir (ve bu nedenle <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> ve <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özellikleri tarafından döndürülür).  
   
-- Özelliğin değeri `null` ise, geçerli sistem kültürü iş parçacığıyla ilişkilendirilir.  
+- Özelliğin değeri `null`ise, geçerli sistem kültürü iş parçacığıyla ilişkilendirilir.  
   
 ## <a name="programming-with-application-domains"></a>Uygulama etki alanlarıyla programlama
 
- Uygulama etki alanları genellikle çalışma zamanı konakları tarafından programlı olarak oluşturulur ve işlenir. Ancak, bazen bir uygulama programı da uygulama etki alanlarıyla çalışmak isteyebilir. Örneğin, bir uygulama programı uygulamanın tamamını durdurmak zorunda kalmadan etki alanını (ve bileşeni) kaldırabilmek için bir etki alanına uygulama bileşeni yükleyebilir.  
+ Uygulama etki alanları genellikle programlı olarak çalışma zamanı ana bilgisayarları tarafından oluşturulur ve değiştirilir. Ancak, bazen bir uygulama programı da uygulama etki alanları ile birlikte çalışmak isteyebilir. Örneğin, bir uygulama programı, tüm uygulamayı durdurmasına gerek kalmadan etki alanını (ve bileşeni) kaldırabilmek için bir etki alanına bir uygulama bileşeni yükleyebilir.  
   
- @No__t-0, uygulama etki alanlarına yönelik programlama arabirimidir. Bu sınıf etki alanlarını oluşturma ve kaldırma, etki alanlarında türlerin örneklerini oluşturma ve uygulama etki alanı kaldırma gibi çeşitli bildirimlere kaydolma yöntemlerini içerir. Aşağıdaki tabloda, yaygın olarak kullanılan <xref:System.AppDomain> yöntemleri listelenmiştir.  
+ <xref:System.AppDomain>, uygulama etki alanlarına yönelik programlama arabirimidir. Bu sınıf, etki alanları oluşturmak ve kaldırmak, etki alanlarında türlerin örneklerini oluşturmak ve uygulama etki alanı kaldırma gibi belirli bildirimlere kaydolmak için metotlar içerir. Aşağıdaki tabloda yaygın olarak kullanılan <xref:System.AppDomain> yöntemleri listelenmiştir.  
   
-|AppDomain yöntemi|Açıklama|  
+|AppDomain Yöntemi|Açıklama|  
 |----------------------|-----------------|  
-|<xref:System.AppDomain.CreateDomain%2A>|Yeni bir uygulama etki alanı oluşturur. Bu yöntemin <xref:System.AppDomainSetup> nesnesini belirten bir aşırı yüklemesini kullanmanız önerilir. Bu, uygulama temeli veya uygulama için kök dizin gibi yeni bir etki alanının özelliklerini ayarlamak için tercih edilen yoldur; etki alanının yapılandırma dosyasının konumu; ve ortak dil çalışma zamanının, etki alanına derlemeleri yüklemek için kullanacağı arama yolu.|  
-|<xref:System.AppDomain.ExecuteAssembly%2A> ve <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Uygulama etki alanında bir derlemeyi yürütür. Bu bir örnek yöntemidir. bu nedenle, bir başvuruya sahip olduğunuz başka bir uygulama etki alanındaki kodu yürütmek için kullanılabilir.|  
-|<xref:System.AppDomain.CreateInstanceAndUnwrap%2A>|Uygulama etki alanında belirtilen türde bir örnek oluşturur ve bir proxy döndürür. Oluşturulan türü içeren derlemenin çağıran derlemeye yüklenmesini önlemek için bu yöntemi kullanın.|  
-|<xref:System.AppDomain.Unload%2A>|Etki alanının düzgün bir şekilde kapatılmasını gerçekleştirir. Etki alanında çalışan tüm iş parçacıkları durdurulmadığından veya artık etki alanında bulunmadığından, uygulama etki alanı kaldırılmıyor.|  
+|<xref:System.AppDomain.CreateDomain%2A>|Yeni bir uygulama etki alanı oluşturur. Bu yöntemin bir <xref:System.AppDomainSetup> nesnesi belirten bir aşırı yüklemesini kullanmanız önerilir. Bu; yeni bir etki alanının uygulama temel dizini veya uygulamanın kök dizini, etki alanı için yapılandırma dosyasının konumu ve ortak dil çalışma zamanının etki alanına yeni derlemeler yüklemek için kullanacağı arama yolu gibi özelliklerini ayarlamak için tercih edilen yöntemdir.|  
+|<xref:System.AppDomain.ExecuteAssembly%2A> ve <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Uygulama etki alanındaki bir derlemeyi yürütür. Bu bir örnek yöntemi olduğundan, atıfta bulunduğunuz başka bir uygulama etki alanındaki kodu yürütmek için kullanılabilir.|  
+|<xref:System.AppDomain.CreateInstanceAndUnwrap%2A>|Uygulama etki alanında belirtilen bir türün bir örneğini oluşturur ve bir proxy döndürür. Oluşturulan türü içeren derlemenin, bu derlemeyi çağıran derlemeye yüklenmesini engellemek için kullanın.|  
+|<xref:System.AppDomain.Unload%2A>|Etki alanının düzgün bir şekilde kapatılmasını gerçekleştirir. Uygulama etki alanı, etki alanındaki tüm iş parçacıkları durmadan veya etki alanının dışında olmadan kaldırılmaz.|  
   
 > [!NOTE]
-> Ortak dil çalışma zamanı, genel yöntemlerin serileştirmesini desteklemez, bu nedenle temsilciler diğer uygulama etki alanlarında genel yöntemleri yürütmek için kullanılamaz.  
+> Ortak dil çalışma zamanı, genel yöntemlerin serileştirilmesini desteklemediğinden, temsilciler kullanılarak diğer uygulama etki alanlarındaki genel yöntemler yürütülemez.  
   
- Ortak dil çalışma zamanı barındırma arabirimleri belirtiminde açıklanan yönetilmeyen arabirimler, uygulama etki alanlarına da erişim sağlar. Çalışma zamanı Konakları yönetilmeyen koddan arabirimler kullanarak bir işlem içinde uygulama etki alanları oluşturabilir ve bu verilere erişim elde edebilir.  
+ Ortak dil çalışma zamanı Ana Bilgisayarları Arabirimleri Bildirimi'nde açıklanan yönetilmeyen arabirimler de uygulama etki alanlarına erişim sağlar. Çalışma zamanı ana bilgisayarları, yönetilmeyen koddan arabirimler kullanarak bir işlem içinde uygulama etki alanları oluşturabilir veya onlara erişebilir.  
   
 ## <a name="the-complus_loaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization ortam değişkeni
 
@@ -163,4 +161,4 @@ Value (to append) = COMPLUS_LoaderOptimization=1
 - <xref:System.AppDomain?displayProperty=nameWithType>
 - <xref:System.MarshalByRefObject?displayProperty=nameWithType>
 - [Uygulama etki alanları ve Derlemeleriyle programlama](index.md)
-- [Uygulama etki alanlarını kullanma](use.md)
+- [Uygulama Etki Alanlarını Kullanma](use.md)

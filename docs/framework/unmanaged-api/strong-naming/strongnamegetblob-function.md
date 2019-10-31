@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15d09166-be00-4696-913f-2c1fbc7ac2e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d5b3d1d39b5d4c5b7d4db073b3ffaf1c6b88373
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e99346ecca651346b46c220a5e427cbc7f4c4697
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799107"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095010"
 ---
 # <a name="strongnamegetblob-function"></a>StrongNameGetBlob İşlevi
 Belirtilen adresteki yürütülebilir dosyanın ikili gösterimiyle belirtilen arabelleği doldurur.  
@@ -46,20 +44,20 @@ BOOLEAN StrongNameGetBlob (
  'ndaki Yürütülebilir dosyanın yükleneceği arabellek.  
   
  `pcbBlob`  
- [in, out] İstenen en büyük boyut ( `pbBlob`bayt). Dönüş sonrasında, bayt `pbBlob`cinsinden gerçek boyut.  
+ [in, out] `pbBlob`istenen en büyük boyut (bayt cinsinden). Dönüş sonrasında, `pbBlob`bayt cinsinden gerçek boyut.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`başarıyla tamamlandığında; Aksi takdirde `false`,.  
+ başarılı tamamlamada `true`; Aksi takdirde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo işlevini çağırın.](strongnameerrorinfo-function.md) `StrongNameGetBlob`  
+ `StrongNameGetBlob` işlevi başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** StrongName. h  
+ **Üst bilgi:** StrongName. h  
   
- **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

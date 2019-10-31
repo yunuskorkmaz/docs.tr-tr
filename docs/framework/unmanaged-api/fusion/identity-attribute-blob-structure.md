@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 212a9f46dd33f98abd31e7a78c7a830cb3386cb6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796498"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108004"
 ---
 # <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB Yapısı
-Bir derlemedeki tek bir öznitelikle ilgili bilgiler içerir ve üç `DWORD`' dan oluşur. Her `DWORD` biri, [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) arabiriminin `CurrentIntoBuffer` yöntemi tarafından oluşturulan bir karakter arabelleği için bir uzaklığa sahiptir  
+Bir derlemedeki tek bir öznitelikle ilgili bilgiler içerir ve üç `DWORD`s oluşur. Her `DWORD`, [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) arabiriminin `CurrentIntoBuffer` yöntemi tarafından oluşturulan bir karakter arabelleği için bir uzaklığa sahiptir  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,15 +45,15 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 |`ofsValue`|Karakter arabelleğinin üçüncü boşluğu. Bu konum, öznitelik değerinin başlangıcını işaretler.|  
   
 ## <a name="sample"></a>Örnek  
- Aşağıdaki örnek, sonunda doldurulmuş `IDENTITY_ATTRIBUTE_BLOB` bir yapıya neden olan birkaç temel adımı göstermektedir:  
+ Aşağıdaki örnek, sonunda doldurulmuş `IDENTITY_ATTRIBUTE_BLOB` yapısına neden olan birkaç temel adımı göstermektedir:  
   
 1. Derleme için bir [IReferenceIdentity](ireferenceidentity-interface.md) alın.  
   
-2. Yöntemini çağırın ve bir IEnumIDENTITY_ATTRIBUTE edinin. [](ienumidentity-attribute-interface.md) `IReferenceIdentity::EnumAttributes`  
+2. `IReferenceIdentity::EnumAttributes` yöntemini çağırın ve bir [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)edinin.  
   
-3. Bir karakter arabelleği oluşturun ve `IDENTITY_ATTRIBUTE_BLOB` yapı olarak atayın.  
+3. Bir karakter arabelleği oluşturun ve `IDENTITY_ATTRIBUTE_BLOB` yapısı olarak atayın.  
   
-4. `IEnumIDENTITY_ATTRIBUTE` Arabirimin `CurrentIntoBuffer` yöntemini çağırın. Bu yöntem, ve `Namespace` `Name` `Value` özniteliklerini karakter arabelleğine kopyalar. Bu dizelerin üç uzaklıkları `IDENTITY_ATTRIBUTE_BLOB` yapıda kullanılabilir hale gelir.  
+4. `IEnumIDENTITY_ATTRIBUTE` arabiriminin `CurrentIntoBuffer` yöntemini çağırın. Bu yöntem, `Namespace`, `Name`ve `Value` özniteliklerini karakter arabelleğine kopyalar. Bu dizelerin üç uzaklıkları `IDENTITY_ATTRIBUTE_BLOB` yapısında kullanılabilir hale gelir.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -236,9 +234,9 @@ Exit:
  Sürüm = 2.0.0.0  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** Yalıtım. h  
+ **Üst bilgi:** Yalıtım. h  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

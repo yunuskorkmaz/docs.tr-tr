@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: e9226e6e-ca2c-428e-bb38-0c099210f507
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c48c222a34e2e78f29c33e49da331d97d409bae1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6cc3ec1c802c28b74248380aa7f686e675a92f1d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949755"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088836"
 ---
 # <a name="icordebugappdomainenum-interface"></a>ICorDebugAppDomainEnum Arabirimi
 
-, Numaralandırmadaki bir sonraki konumdan başlayarak belirtilen `ICorDebugAppDomainEnum` sayıda değer döndüren yönteminisağlar.`Next` Bu arabirim "ıcordebuggenum" öğesinin bir alt sınıfıdır.  
+, Numaralandırmadaki bir sonraki konumdan başlayarak belirtilen sayıda `ICorDebugAppDomainEnum` değeri döndüren `Next` yöntemi sağlar. Bu arabirim "ıcordebuggenum" öğesinin bir alt sınıfıdır.  
   
 ## <a name="methods"></a>Yöntemler  
   
@@ -39,11 +37,11 @@ ms.locfileid: "69949755"
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

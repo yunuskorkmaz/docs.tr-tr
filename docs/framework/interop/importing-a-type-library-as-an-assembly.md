@@ -15,14 +15,12 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db9571a2d07bcdf9830ef93cd07a5dae912f4677
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e1a21175bcabc72b86a328d4f73ecec37140c304
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051717"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107591"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Tür Kitaplığını Derleme Olarak İçeri Aktarma
 
@@ -30,9 +28,9 @@ COM tür tanımları genellikle bir tür kitaplığında bulunur. Buna karşıl�
 
 Bu tür bilgilerini uygulamanız için kullanılabilir hale getirmek için iki yol vardır:
 
-- Yalnızca tasarım zamanı birlikte çalışma derlemelerini kullanma: .NET Framework 4 ' ten başlayarak, derleyiciye birlikte çalışma derlemesinden tür bilgilerini çalıştırılabilire katıştırmasını bildirebilirsiniz. Derleyici yalnızca uygulamanızın kullandığı tür bilgilerini katıştırır. Birlikte çalışma derlemesini uygulamanızla birlikte dağıtmanız gerekmez. Önerilen yöntem budur.
+- Yalnızca tasarım zamanı birlikte çalışma derlemelerini kullanarak: .NET Framework 4 ' ten başlayarak, derleyicinin birlikte çalışma derlemesinden tür bilgilerini çalıştırılabilire katıştırmasını isteyebilirsiniz. Derleyici yalnızca uygulamanızın kullandığı tür bilgilerini katıştırır. Birlikte çalışma derlemesini uygulamanızla birlikte dağıtmanız gerekmez. Önerilen yöntem budur.
 
-- Birlikte çalışma derlemelerini dağıtma: Birlikte çalışabilirlik derlemesine standart bir başvuru oluşturabilirsiniz. Bu durumda, birlikte çalışma derlemesinin uygulamanızla birlikte dağıtılması gerekir. Bu tekniği kullandıysanız ve özel bir COM bileşeni kullanmıyorsanız, her zaman yönetilen kodunuzda birleştirmek istediğiniz COM bileşeninin yazarı tarafından yayımlanan birincil birlikte çalışma derlemesine (PIA) başvurun. Birincil birlikte çalışma derlemelerini üretme ve kullanma hakkında daha fazla bilgi için bkz. [birincil birlikte çalışma derlemeleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).
+- Birlikte çalışma derlemelerini dağıtma: birlikte çalışma derlemesine standart bir başvuru oluşturabilirsiniz. Bu durumda, birlikte çalışma derlemesinin uygulamanızla birlikte dağıtılması gerekir. Bu tekniği kullandıysanız ve özel bir COM bileşeni kullanmıyorsanız, her zaman yönetilen kodunuzda birleştirmek istediğiniz COM bileşeninin yazarı tarafından yayımlanan birincil birlikte çalışma derlemesine (PIA) başvurun. Birincil birlikte çalışma derlemelerini üretme ve kullanma hakkında daha fazla bilgi için bkz. [birincil birlikte çalışma derlemeleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).
 
 Yalnızca tasarım zamanı birlikte çalışma derlemelerini kullandığınızda, COM bileşeninin yazarı tarafından yayımlanan birincil birlikte çalışma derlemesinden tür bilgilerini ekleyebilirsiniz. Bununla birlikte, birincil birlikte çalışma derlemesini uygulamanızla birlikte dağıtmanız gerekmez.
 
@@ -46,15 +44,15 @@ Hedef COM türü uygulamasını içeren tür kitaplığını bulduktan sonra, t�
 
 - Visual Studio
 
-  Visual Studio, bir tür kitaplığındaki COM türlerini otomatik olarak bir derlemedeki meta verilere dönüştürür. Yönergeler için bkz [. nasıl yapılır: Tür kitaplıklarına](how-to-add-references-to-type-libraries.md)başvurular ekleyin.
+  Visual Studio, bir tür kitaplığındaki COM türlerini otomatik olarak bir derlemedeki meta verilere dönüştürür. Yönergeler için bkz. [nasıl yapılır: tür kitaplıklarına başvurular ekleme](how-to-add-references-to-type-libraries.md).
 
 - [Tür kitaplığı alma programı (Tlbimp. exe)](../tools/tlbimp-exe-type-library-importer.md)
 
-  Tür kitaplığı alma programı, elde edilen birlikte çalışma dosyasındaki meta verileri ayarlamak için komut satırı seçenekleri sağlar, türleri varolan bir tür kitaplığından içeri aktarır ve bir birlikte çalışma derlemesi ve bir ad alanı oluşturur. Yönergeler için bkz [. nasıl yapılır: Tür kitaplıklarından](how-to-generate-interop-assemblies-from-type-libraries.md)birlikte çalışma derlemeleri oluşturun.
+  Tür kitaplığı alma programı, elde edilen birlikte çalışma dosyasındaki meta verileri ayarlamak için komut satırı seçenekleri sağlar, türleri varolan bir tür kitaplığından içeri aktarır ve bir birlikte çalışma derlemesi ve bir ad alanı oluşturur. Yönergeler için bkz. [nasıl yapılır: tür kitaplıklarından birlikte çalışma derlemeleri oluşturma](how-to-generate-interop-assemblies-from-type-libraries.md).
 
-- <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>sınıfı
+- <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> sınıfı
 
-  Bu sınıf, bir tür kitaplığındaki ortak sınıfları ve arabirimleri derleme içindeki meta verilere dönüştürmek için yöntemler sağlar. Tlbimp. exe ile aynı meta veri çıkışını üretir. Ancak, Tlbimp. exe ' den farklı <xref:System.Runtime.InteropServices.TypeLibConverter> olarak, sınıfı bellek içi bir tür kitaplığını meta verilere dönüştürebilir.
+  Bu sınıf, bir tür kitaplığındaki ortak sınıfları ve arabirimleri derleme içindeki meta verilere dönüştürmek için yöntemler sağlar. Tlbimp. exe ile aynı meta veri çıkışını üretir. Ancak, Tlbimp. exe ' den farklı olarak <xref:System.Runtime.InteropServices.TypeLibConverter> sınıfı, bellek içi bir tür kitaplığını meta verilere dönüştürebilir.
 
 - Özel sarmalayıcılar
 
@@ -82,5 +80,5 @@ Hedef COM türü uygulamasını içeren tür kitaplığını bulduktan sonra, t�
 - [Yönetilen kodda COM türlerini kullanma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Birlikte Çalışma Projesi Derleme](compiling-an-interop-project.md)
 - [Birlikte Çalışma Uygulamasını Dağıtma](deploying-an-interop-application.md)
-- [Nasıl yapılır: Tür kitaplıklarına başvurular ekleme](how-to-add-references-to-type-libraries.md)
-- [Nasıl yapılır: Tür kitaplıklarından birlikte çalışma derlemeleri oluşturma](how-to-generate-interop-assemblies-from-type-libraries.md)
+- [Nasıl yapılır: Tür Kitaplıklarına Başvurular Ekleme](how-to-add-references-to-type-libraries.md)
+- [Nasıl yapılır: Tür Kitaplıklarından Birlikte Çalışma Bütünleştirilmiş Kodları Oluşturma](how-to-generate-interop-assemblies-from-type-libraries.md)

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a851bf3c405d15243bc1457b8c3dff815d072ebe
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 314b637b4a43725f6daeefa6097544567dcaabc2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180279"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124296"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Öğretici: model Oluşturucu ile gerileme kullanarak fiyatları tahmin etme
 
@@ -19,7 +19,7 @@ Fiyatları tahmin etmek için bir gerileme modeli oluşturmak üzere ML.NET mode
 
 Model Oluşturucu fiyat tahmin şablonu, sayısal tahmin değeri gerektiren herhangi bir senaryo için kullanılabilir. Örnek senaryolar şunlardır: ev fiyat tahmini, talep tahmini ve satış tahmini.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > - Verileri hazırlama ve anlama
@@ -32,7 +32,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!NOTE]
 > Model Oluşturucu Şu anda önizleme aşamasındadır.
 
-## <a name="pre-requisites"></a>Önkoşullar
+## <a name="pre-requisites"></a>Ön koşullar
 
 Önkoşul ve Yükleme yönergelerinin bir listesi için [model Oluşturucu Yükleme Kılavuzu](../how-to-guides/install-model-builder.md)' nu ziyaret edin.
 
@@ -54,7 +54,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 1. **Çözüm Gezgini**, *Taxi-fare-train. csv* dosyasına sağ tıklayın ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala**olarak değiştirin.
 
-@No__t-0 veri kümesindeki her satır, bir TAXI tarafından yapılan gelişlerin ayrıntılarını içerir.
+`taxi-fare-train.csv` veri kümesindeki her satır, bir TAXI tarafından yapılan gelişlerin ayrıntılarını içerir.
 
 1. **Taxi-fare-train. csv** veri kümesini açın
 
@@ -68,7 +68,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
     - **payment_type:** Ödeme yöntemi (nakit veya kredi kartı) bir özelliktir.
     - **fare_amount:** Ödenen toplam TAXI tarifeli havayolu etikettir.
 
-@No__t-0, tahmin etmek istediğiniz sütundur. Regresyon görevi gerçekleştirirken, amaç sayısal bir değeri tahmin etmek için kullanılır. Bu fiyat tahmin senaryosunda, bir TAXI arttırıldığında 'nın maliyeti tahmin ediliyor. Bu nedenle, **fare_amount** etikettir. Tanımlanan `features`, modele `label` tahmin etmek için verdiğiniz girişlerdir. Bu durumda, **trip_time_in_secs** özel durumu ile sütunların geri kalanı, tarifeli havayolu tutarını tahmin etmek için özellik veya giriş olarak kullanılır.
+`label`, tahmin etmek istediğiniz sütundur. Regresyon görevi gerçekleştirirken, amaç sayısal bir değeri tahmin etmek için kullanılır. Bu fiyat tahmin senaryosunda, bir TAXI arttırıldığında 'nın maliyeti tahmin ediliyor. Bu nedenle, **fare_amount** etikettir. Tanımlanan `features`, modele `label` tahmin etmek için verdiğiniz girişlerdir. Bu durumda, **trip_time_in_secs** özel durumu ile sütunların geri kalanı, tarifeli havayolu tutarını tahmin etmek için özellik veya giriş olarak kullanılır.
 
 ## <a name="choose-a-scenario"></a>Senaryo seçin
 
@@ -83,8 +83,8 @@ Model Oluşturucu, bir SQL Server veritabanı veya CSV ya da TSV biçimindeki ye
 
 1. Model Oluşturucu aracının veri adımında, veri kaynağı açılır listesinden *Dosya* ' yı seçin.
 1. *Dosya Seç* metin kutusunun yanındaki düğmeyi seçin ve *veri* dizinindeki *Taxi-fare-test. csv* dosyasına gidip seçmek için dosya Gezgini 'ni kullanın
-1. *Tahmin edilecek (etiket) açılan sütununda* *fare_amount* öğesini seçin ve model Oluşturucu aracının eğitme adımına gidin.
-1. *Giriş sütunları (Özellikler)* açılan listesini genişletin ve eğitim sırasında bunu bir özellik olarak dışlamak için *trip_time_in_secs* sütununun işaretini kaldırın.
+1. *Tahmin edilecek (etiket)* aşağı açılan sütunda *fare_amount* öğesini seçin.
+1. *Giriş sütunları (Özellikler)* açılan listesini genişletin ve eğitim sırasında bunu bir özellik olarak dışlamak için *trip_time_in_secs* sütununun işaretini kaldırın.  Model Oluşturucu aracının eğitme adımına gidin.
 
 ## <a name="train-the-model"></a>Modeli eğitme
 
@@ -140,7 +140,7 @@ Eğitim sürecinin bir sonucu olarak iki proje oluşturulacaktır.
     };
     ```
 
-1. @No__t-1 sınıfından `Predict` yöntemini kullanın. @No__t-0 yöntemi, eğitilen modeli yükler, model için bir [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) oluşturur ve yeni verilerde tahmine dayalı hale getirmek için onu kullanır. 
+1. `ConsumeModel` sınıfındaki `Predict` yöntemi kullanın. `Predict` yöntemi eğitilen modeli yükler, model için bir [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) oluşturur ve yeni verilerde tahmine dayalı hale getirmek için onu kullanır. 
 
     ```csharp
     // Make prediction
@@ -163,7 +163,7 @@ Oluşturulan projelere başka bir çözümün içinde daha sonraki bir zamanda b
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
+Bu öğreticide, nasıl yapılacağını öğrendiniz:
 > [!div class="checklist"]
 >
 > - Verileri hazırlama ve anlama

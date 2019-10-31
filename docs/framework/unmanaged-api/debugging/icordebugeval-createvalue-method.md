@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9a1c0b47-6f10-4fcb-844a-4ab2d7990140
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ada3a06a2beb8f21c3e24665c0f1f8e7c48515f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4bb04ba090be9cab551bc39d8d9f1be974c747d3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752948"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085129"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue Yöntemi
-Belirtilen türde bir değer sıfır ya da null bir başlangıç değeriyle birlikte oluşturur.  
+Sıfır veya null başlangıç değeri ile belirtilen türde bir değer oluşturur.  
   
- Bu yöntem .NET Framework 2.0 sürümünde artık kullanılmıyor. Kullanım [Icordebugeval2::createvaluefortype](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) yerine.  
+ Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor. Bunun yerine [ICorDebugEval2:: CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,31 +39,31 @@ HRESULT CreateValue (
   
 ## <a name="parameters"></a>Parametreler  
  `elementType`  
- [in] Değerini [CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md) değerin türünü belirten sabit listesi.  
+ 'ndaki Değerin türünü belirten [CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md) numaralandırması değeri.  
   
  `pElementClass`  
- [in] İşaretçi bir [Icordebugclass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md) değerinin sınıf türü bir basit türü değilse belirten nesne.  
+ 'ndaki Tür temel bir tür değilse, değerin sınıfını belirten [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md) nesnesine yönelik işaretçi.  
   
  `ppValue`  
- [out] İşaretçi adresine "ICorDebugValue" nesnenin değerini temsil eder.  
+ dışı Değeri temsil eden bir "ICorDebugValue" nesnesinin adresine yönelik işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CreateValue` oluşturur bir `ICorDebugValue` bir işlev değerlendirmesini kullanarak verilen tür için tek amacı, nesne. Bu değer nesnesi kullanıcı sabitleri parametre olarak geçirmek için kullanılabilir.  
+ `CreateValue`, tek bir işlev değerlendirmesinde kullanmak amacıyla verilen türde bir `ICorDebugValue` nesnesi oluşturur. Bu değer nesnesi, Kullanıcı sabitlerini parametre olarak geçirmek için kullanılabilir.  
   
- Değerin türü bir basit türü ise, ilk değeri sıfırdır veya null. Kullanım [Icordebuggenericvalue::SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md) türü basit tür değeri ayarlamak için.  
+ Değerin türü temel bir tür ise, ilk değeri sıfır veya null olur. Temel bir türün değerini ayarlamak için [ICorDebugGenericValue:: SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md) kullanın.  
   
- Varsa değerini `elementType` ELEMENT_TYPE_CLASS, olan "ICorDebugReferenceValue" Al (döndürdü `ppValue`) temsil eden null Nesne başvurusu. Bu nesne, nesne başvuru parametreleri olan bir işlev değerlendirmesi için null değeri geçirmeye izin kullanabilirsiniz. Ayarlayamazsınız `ICorDebugValue` şey; bu her zaman boş kalır.  
+ `elementType` değeri ELEMENT_TYPE_CLASS ise, null nesne başvurusunu temsil eden bir "ICorDebugReferenceValue" (`ppValue`olarak döndürülen) alırsınız. Bu nesneyi, nesne başvuru parametrelerine sahip bir işlev değerlendirmesine null geçirmek için kullanabilirsiniz. `ICorDebugValue` her şeyi ayarlayamazsınız; her zaman null kalmaya devam eder.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** 1.1, 1.0  
+ **.NET Framework sürümleri:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [CreateValueForType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)
-- [Icordebugeval arabirimi](icordebugeval-interface.md)
+- [Icorıncertificate Geval arabirimi](icordebugeval-interface.md)

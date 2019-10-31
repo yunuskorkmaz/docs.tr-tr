@@ -8,14 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: baabff187fb8a22aea37c4fb4c1dc11a680d3bb8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 61f5f0f3ec9a4386fa12e7511b4a518f2b56a21c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853844"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123661"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma
 .NET Framework tabanlı bileşenlere yönelik kayıt için ücretsiz etkinleştirme, COM bileşenleri için olduğundan biraz daha karmaşıktır. Kurulum için iki bildirim gerekir:  
@@ -39,7 +37,7 @@ ms.locfileid: "70853844"
   
      Bildirim öğeleri ve öznitelikleri hakkında daha fazla bilgi için bkz. [uygulama bildirimleri](/windows/desktop/SbsCs/application-manifests).  
   
-3. Bildirimin sahibini belirler. Aşağıdaki örnekte, `myComApp` sürüm 1 bildirim dosyasının sahibidir.  
+3. Bildirimin sahibini belirler. Aşağıdaki örnekte, `myComApp` sürüm 1 ' ın bildirim dosyasının sahibidir.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -51,7 +49,7 @@ ms.locfileid: "70853844"
       />  
     ```  
   
-4. Bağımlı derlemeleri belirler. Aşağıdaki örnekte, `myComApp` `myManagedComp`öğesine bağımlıdır.  
+4. Bağımlı derlemeleri belirler. Aşağıdaki örnekte, `myComApp` `myManagedComp`bağlıdır.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -90,7 +88,7 @@ ms.locfileid: "70853844"
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-3. Dosyanın sahibini belirler. Uygulama bildirimi dosyasındaki `<dependentAssembly>` öğenin öğesi,bileşenbildirimindebulunanileaynıolmalıdır.`<assemblyIdentity>` Aşağıdaki örnekte, belirtilen sürüm `myManagedComp` , bildirim dosyasının sahibidir.  
+3. Dosyanın sahibini belirler. Uygulama bildirimi dosyasındaki `<dependentAssembly>` öğesinin `<assemblyIdentity>` öğesi, bileşen bildiriminde bulunan ile aynı olmalıdır. Aşağıdaki örnekte, `myManagedComp` sürümü, bildirim dosyasının sahibidir.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -103,7 +101,7 @@ ms.locfileid: "70853844"
            />  
     ```  
   
-4. Derlemedeki her bir sınıfı belirler. Yönetilen derlemedeki her bir sınıfı benzersiz şekilde tanımlamak için öğesinikullanın.`<clrClass>` `<assembly>` Öğesinin bir alt öğesi olan öğesi, aşağıdaki tabloda açıklanan özniteliklere sahiptir.  
+4. Derlemedeki her bir sınıfı belirler. Yönetilen derlemedeki her bir sınıfı benzersiz şekilde tanımlamak için `<clrClass>` öğesini kullanın. `<assembly>` öğesinin bir alt öğesi olan öğesi, aşağıdaki tabloda açıklanan özniteliklere sahiptir.  
   
     |Öznitelik|Açıklama|Gerekli|  
     |---------------|-----------------|--------------|  
@@ -117,7 +115,7 @@ ms.locfileid: "70853844"
   
      Tüm öznitelik etiketleri büyük/küçük harfe duyarlıdır. OLE/COM ObjectViewer (Oleview. exe) ile derleme için aktarılmış tür kitaplığını görüntüleyerek CLSID, ProgID 'ler, iş parçacığı modelleri ve çalışma zamanı sürümünü edinebilirsiniz.  
   
-     Aşağıdaki bileşen bildirimi, ve `testClass1` `testClass2`olmak üzere iki sınıfı tanımlar.  
+     Aşağıdaki bileşen bildirimi, `testClass1` ve `testClass2`iki sınıfı tanımlar.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -156,7 +154,7 @@ ms.locfileid: "70853844"
   
      `RT_MANIFEST 1 myManagedComp.manifest`  
   
-     Bu bildirimde, `myManagedComp.manifest` eklenen bileşen bildiriminin adıdır. Bu örnek için, betik dosyası adı `myresource.rc`.  
+     Bu bildirimde `myManagedComp.manifest`, eklenen bileşen bildiriminin adıdır. Bu örnekte, betik dosyası adı `myresource.rc`.  
   
 2. Microsoft Windows Kaynak derleyicisi (RC. exe) kullanarak betiği derleyin. Komut satırında, aşağıdaki komutu yazın:  
   
@@ -168,11 +166,11 @@ ms.locfileid: "70853844"
   
     `/win32res:myresource.res`  
   
-     Yine, `myresource.res` gömülü kaynakları içeren kaynak dosyasının adıdır.  
+     Yeniden `myresource.res`, katıştırılmış kaynakları içeren kaynak dosyasının adıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kayıtsız COM Birlikte Çalışma](registration-free-com-interop.md)
 - [Kayıtsız COM birlikte çalışma gereksinimleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
 - [Kayıt-ücretsiz etkinleştirme için COM bileşenlerini yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
-- [Kayıt-ücretsiz etkinleştirmesi. NET tabanlı bileşenler: Bir Izlenecek yol](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))
+- [Kayıt-ücretsiz etkinleştirmesi. NET tabanlı bileşenler: Izlenecek yol](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))

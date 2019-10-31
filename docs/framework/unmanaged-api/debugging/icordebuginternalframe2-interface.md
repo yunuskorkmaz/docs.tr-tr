@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: d4755569-85b8-4ff4-bf50-0e608e76429f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2377773b471b387376f0284522ebe29d6b003ae3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5a451218e0fdc32132a4e79d091ada8355d32fe7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910106"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122696"
 ---
 # <a name="icordebuginternalframe2-interface"></a>ICorDebugInternalFrame2 Arabirimi
 Yığın adresi ve ICorDebugFrame nesneleriyle ilişkili konum dahil olmak üzere iç çerçeveler hakkında bilgi sağlar.  
@@ -31,7 +29,7 @@ Yığın adresi ve ICorDebugFrame nesneleriyle ilişkili konum dahil olmak üzer
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |[GetFrameAddress Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-getframeaddress-method.md)|İç çerçevenin yığın adresini döndürür.|  
-|[IsCloserToLeaf Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-isclosertoleaf-method.md)|`this` İç karenin belirtilen ICorDebugFrame nesnesinden daha yakın olup olmadığını denetler.|  
+|[IsCloserToLeaf Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-isclosertoleaf-method.md)|`this` iç çerçevesinin belirtilen ICorDebugFrame nesnesinden daha yakın olup olmadığını denetler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu arabirim, ICorDebugInternalFrame arabirimini genişletir.  
@@ -40,11 +38,11 @@ Yığın adresi ve ICorDebugFrame nesneleriyle ilişkili konum dahil olmak üzer
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

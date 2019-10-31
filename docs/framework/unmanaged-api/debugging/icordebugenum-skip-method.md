@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e925d88a-67a5-4f76-88b8-09cedeed0232
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 53b892cddbf716afbd137ead36a69aa42f22d331
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c5cd7435ec34e852b80031cfe0310ee517b7bc5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752222"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103469"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip Yöntemi
-İmleci İleri numaralandırmada tarafından belirtilen sayıda öğeyi taşır.  
+İmleci belirtilen öğe sayısına göre numaralandırmada ileri doğru kaydırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +35,17 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] İmleç ilerlemek, öğe sayısı.  
+ 'ndaki İmlecin ileri taşımasını sağlayan öğe sayısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Icordebugenum arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+- [Icorı, Genum arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

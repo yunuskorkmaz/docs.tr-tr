@@ -2,20 +2,18 @@
 title: <EnableAmPmParseAdjustment> Öğesi
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f132ce0a114a6fc904d86ca3ce893c447366523f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8920e51fcaaca5cb78b80a99ea321163c9b5240f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252626"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117365"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<Enableampmparseayarlaması > öğesi
 Tarih ve saat ayrıştırma yöntemlerinin, gün, ay, saat ve PM/PM göstergesini içeren Tarih dizelerini ayrıştırmak için ayarlanmış bir kural kümesi kullanıp kullanmadığını belirler.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<çalışma zamanı >** ](runtime-element.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<Enableampmparseayarlaması >**  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -51,7 +49,7 @@ Tarih ve saat ayrıştırma yöntemlerinin, gün, ay, saat ve PM/PM göstergesin
 |`runtime`|Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<EnableAmPmParseAdjustment>` Öğesi, aşağıdaki yöntemlerin sayısal bir gün ve ay içeren bir tarih dizesini nasıl ayrıştırarak bir saat ve bir har/PM göstergesini ("4/10 6" gibi) denetler:  
+ `<EnableAmPmParseAdjustment>` öğesi, aşağıdaki yöntemlerin sayısal bir gün ve ay içeren bir tarih dizesini nasıl ayrıştırarak bir saat ve bir har/PM göstergesini ("4/10 6" gibi) denetler:  
   
 - <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
@@ -65,7 +63,7 @@ Tarih ve saat ayrıştırma yöntemlerinin, gün, ay, saat ve PM/PM göstergesin
   
  Başka desenler etkilenmemiştir.  
   
- Öğesinin,<xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> ,ve<xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> yöntemleri üzerinde hiçbir etkisi yoktur. <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType> `<EnableAmPmParseAdjustment>` <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>  
+ `<EnableAmPmParseAdjustment>` öğesinin <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>ve <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> yöntemleri üzerinde hiçbir etkisi yoktur.  
   
 > [!IMPORTANT]
 > .NET Core ve .NET Native 'de, ayarlanan saat/PM ayrıştırma kuralları varsayılan olarak etkindir.  
@@ -74,7 +72,7 @@ Tarih ve saat ayrıştırma yöntemlerinin, gün, ay, saat ve PM/PM göstergesin
   
  Ayrıştırma ayarlama kuralı etkinleştirilirse, ayrıştırma yöntemi geçerli yıla ait günü ve ayı yorumlayıp saati 12 saatlik saatin saati olarak yorumlar.  
   
- Aşağıdaki tabloda, <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> yöntemi "0" veya <xref:System.DateTime> "1" olarak ayarlanan `<EnableAmPmParseAdjustment>` öğenin `enabled` özelliği ile "" 4/10 6 har "dizesini ayrıştırmak için kullanılan değerin farkı gösterilmektedir. Bugünün tarihinin 5 Ocak 2017 olduğunu varsayar ve belirtilen kültürün "G" biçim dizesi kullanılarak biçimlendirilip biçimlendirildiğine ilişkin tarihi görüntüler.  
+ Aşağıdaki tabloda, `<EnableAmPmParseAdjustment>` öğenin `enabled` özelliği "0" veya "1" olarak ayarlanmış "" 4/10 6 "dizesini ayrıştırmak için <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> yöntemi kullanıldığında <xref:System.DateTime> değerindeki fark gösterilmektedir. Bugünün tarihinin 5 Ocak 2017 olduğunu varsayar ve belirtilen kültürün "G" biçim dizesi kullanılarak biçimlendirilip biçimlendirildiğine ilişkin tarihi görüntüler.  
   
 |Kültür adı|etkin = "0"|etkin = "1"|  
 |------------------|------------------|------------------|  
@@ -83,5 +81,5 @@ Tarih ve saat ayrıştırma yöntemlerinin, gün, ay, saat ve PM/PM göstergesin
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<çalışma zamanı > öğesi](runtime-element.md)
+- [\<Runtime > öğesi](runtime-element.md)
 - [\<Yapılandırma > öğesi](../configuration-element.md)

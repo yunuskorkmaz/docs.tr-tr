@@ -8,149 +8,147 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1f88308dcea250c02d9c6cd7f326570f8bc0133c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf8a1c028b7b987cb9a7340597087d799dfd4321
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630112"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123168"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Devamlılık Görevlerini Kullanarak Görevleri Birbirine Bağlama
-Zaman uyumsuz programlama, ikinci bir işlem başlatmak ve ona veri aktarmak için tamamlandığında, bir zaman uyumsuz işlem için yaygındır. Geleneksel olarak, geri arama yöntemleri kullanılarak devamlılıklar gerçekleştirilmedi. Görev paralel Kitaplığı'nda aynı işlevler tarafından sağlanan *devamlılık görevleri*. Devamlılık görevi (sadece devamlılık olarak da bilinir) olarak da bilinen başka bir görev tarafından çağrılan zaman uyumsuz bir görevdir *öncül*, öncül görev tamamlandıktan sonra.  
+Zaman uyumsuz programlamada, bir zaman uyumsuz işlem için, tamamlandığında ikinci bir işlemi çağırmak ve verileri iletmek için yaygındır. Geleneksel olarak, devamlılıklar geri çağırma yöntemleri kullanılarak yapılır. Görev paralel kitaplığında, aynı işlevler *devamlılık görevleri*tarafından sağlanır. Devamlılık görevi (sadece devamlılık olarak da bilinir *), öncül*olarak bilinen başka bir görev tarafından çağrılan zaman uyumsuz bir görevdir.  
   
- Devamlılıklar kullanımı oldukça kolaydır ancak yine de güçlü ve esnek. Örneğin, şunları yapabilirsiniz:  
+ Devamlılıkların kullanımı nispeten kolaydır, ancak bu, güçlü ve esnektir. Örneğin, şunları yapabilirsiniz:  
   
-- Veri öncülden devama geçirin.  
+- Verileri öncül bilgisayardan devamlıya geçirin.  
   
-- Altında devamlılığın çağrılacağı ya çağrılmayacağı kesin koşulları belirtin.  
+- Devamlılığın çağrılacağını veya çağrılmaması gereken kesin koşulları belirtin.  
   
-- Devamlılık, başlamadan önce ya da işbirliği ile çalışırken iptal edin.  
+- Çalışmaya başlamadan önce veya çalışmaya devam etmeden önce bir devamlılığın iptal edildiğini yapın.  
   
 - Devamlılığın nasıl zamanlanması gerektiği hakkında ipuçları sağlayın.  
   
-- Aynı öncülden gelen birden çok devamlılığını çağırır.  
+- Aynı öncül öğesinden birden çok devamlılık çağırın.  
   
-- Tümü veya herhangi birini Öncüllerin tamamlandığında bir devamlılığı çağırır.  
+- Bir veya birden çok öncüllerin tamamlandıktan sonra bir devamlılık çağırın.  
   
-- Birbiri ardına herhangi bir rastgele uzunluktaki zincir devamlılıkları.  
+- Zincirden sonra herhangi bir rastgele uzunluğa kadar zincir devamlılıkları.  
   
-- Öncülün attığı özel durumları işlemek için devamlılığı kullanın.  
+- Öncül tarafından oluşturulan özel durumları işlemek için devamlılık kullanın.  
   
 ## <a name="about-continuations"></a>Devamlılıklar hakkında  
- Oluşturulan bir görev devamıdır <xref:System.Threading.Tasks.TaskStatus.WaitingForActivation> durumu. Kendi öncül görevi veya görevler tamamlandığında otomatik olarak etkinleştirilir. Çağırma <xref:System.Threading.Tasks.Task.Start%2A?displayProperty=nameWithType> kullanıcı kodunda bir devamlılık üzerinde oluşturur bir <xref:System.InvalidOperationException?displayProperty=nameWithType> özel durum.  
+ Devamlılık, <xref:System.Threading.Tasks.TaskStatus.WaitingForActivation> durumunda oluşturulan bir görevdir. Öncül görevi veya görevleri tamamlandığında otomatik olarak etkinleştirilir. Kullanıcı kodundaki bir devamlılığın <xref:System.Threading.Tasks.Task.Start%2A?displayProperty=nameWithType> çağrılması <xref:System.InvalidOperationException?displayProperty=nameWithType> özel durum oluşturur.  
   
- Devamlılık, kendisi olduğu bir <xref:System.Threading.Tasks.Task> ve üzerinde başlatıldığında iş parçacığını engellemez. Çağrı <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> devamlılık görevi bitene kadar engellemek için yöntemi.  
+ Devamlılık bir <xref:System.Threading.Tasks.Task> ve başlatıldığı iş parçacığını engellemez. Devamlılık görevi bitene kadar engellemek için <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemini çağırın.  
   
-## <a name="creating-a-continuation-for-a-single-antecedent"></a>Bir devamlılık için tek bir öncül görev oluşturma  
- Çağırarak kendi öncül görevi tamamlandığında yürüten bir devam oluşturmak <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> yöntemi. Aşağıdaki örnek, temel deseni gösterir (Anlaşılsın diye, özel durum işleme atlanmıştır). Öncül görev yürütülmeden `taskA`, döndüren bir <xref:System.DayOfWeek> haftanın geçerli günü adını gösteren nesne. Öncül görev tamamlandığında devamlılık görevi `continuation`, öncül geçirilir ve sonucunu içeren bir dize görüntüler. 
+## <a name="creating-a-continuation-for-a-single-antecedent"></a>Tek bir öncül için devamlılık oluşturma  
+ <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> yöntemini çağırarak öncül öğesinin son tamamlandığında yürütülen bir devamlılık oluşturursunuz. Aşağıdaki örnekte temel desenler gösterilmektedir (açıklık için özel durum işleme atlanır). Bir öncül görevini yürütür, bu, haftanın geçerli gününün adını belirten bir <xref:System.DayOfWeek> nesnesi döndüren `taskA`. Öncül tamamlandığında, devamlılık görevi `continuation`, öncül işlemi geçirilir ve sonucunu içeren bir dize görüntüler. 
 
 > [!NOTE]
-> C# Bu makaledeki örnekleri olun kullanım `async` değiştiricisi `Main` yöntemi. Bu özellik kullanılabilir C# 7.1 ve üzeri. Önceki sürüm oluşturma [ `CS5001` ](../../csharp/misc/cs5001.md) Bu örnek kod derlenirken. Dil sürümü ayarlanacak ihtiyacınız olacak C# 7.1 veya üzeri. Makaleyi dil sürümü yapılandırma edinebilirsiniz [dil sürümü yapılandırma](../../csharp/language-reference/configure-language-version.md).
+> Bu C# makaledeki örneklerde, `Main` yönteminde `async` değiştiricisinden yararlanabilirsiniz. Bu özellik C# 7,1 ve üzeri sürümlerde kullanılabilir. Önceki sürümler bu örnek kodu derlerken [`CS5001`](../../csharp/misc/cs5001.md) oluşturur. Dil sürümünü C# 7,1 veya daha yeni bir sürüme ayarlamanız gerekir. Dil sürümünü [yapılandırma sürümünü yapılandırma](../../csharp/language-reference/configure-language-version.md)makalesindeki makaleyi yapılandırma hakkında bilgi edinebilirsiniz.
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  
   
-## <a name="creating-a-continuation-for-multiple-antecedents"></a>Bir devamlılık için birden çok öncülün oluşturma  
- Ayrıca, herhangi bir görev grubu biri veya tümü tamamlandığında çalışacak bir devamlılık oluşturabilirsiniz. Öncül tüm görevler tamamlandığında devamlılık yürütmek için statik çağırın (`Shared` Visual Basic'te) <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> yöntemi veya örnek <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> yöntemi. Öncül görevlerden herhangi birini tamamlandığında devamlılık yürütmek için statik çağırın (`Shared` Visual Basic'te) <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> yöntemi veya örnek <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> yöntemi.  
+## <a name="creating-a-continuation-for-multiple-antecedents"></a>Birden çok öncüllerin için devamlılık oluşturma  
+ Ayrıca, bir görev grubunun herhangi biri veya tümü tamamlandığında çalıştırılacak bir devamlılık oluşturabilirsiniz. Tüm öncül görevler tamamlandığında bir devamlılık yürütmek için, statik (`Shared` Visual Basic) <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> metodunu veya örnek <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> yöntemini çağırın. Öncül görevlerden herhangi biri tamamlandığında bir devamlılık yürütmek için, statik (`Shared` Visual Basic) <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> metodunu veya örnek <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> yöntemini çağırın.  
   
- Çağrılar Not <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> aşırı çağıran iş parçacığını engelleme yapmadığından.  Ancak, genellikle arama dışındaki tüm <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> döndürülen almak için yöntemler <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> özelliği çağıran iş parçacığını engeller.  
+ <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> çağrıları ve <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> aşırı yüklemeleri çağıran iş parçacığını engellemez.  Ancak, çağıran iş parçacığını engelleyen döndürülen <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> özelliğini almak için genellikle <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> yöntemleri hariç tümünü çağırabilirsiniz.  
   
- Aşağıdaki örnek çağrıları <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 10 öncül görevlerinin sonuçlarını gösteren bir devamlılık görevi oluşturmak için yöntemi. Her bir öncül görev, bir ila 10 arasında bir dizin değeri squares. Öncüllerin başarıyla tamamlanırsa (kendi <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> özelliği <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>), <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> devamlılığın özelliği olan bir dizi <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> her bir öncül görev tarafından döndürülen değer. Örneğin, onları ile 10 arasındaki tüm sayılar için kareler toplamı hesaplamak için ekler.  
+ Aşağıdaki örnek, 10 öncül görevlerinin sonuçlarını yansıtan bir devamlılık görevi oluşturmak için <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> yöntemini çağırır. Her öncül görev, birinden 10 ' a değişen bir dizin değeri sağlar. Öncüllerin başarıyla tamamlandıysanız (<xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> özelliği <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>), devamlılık <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> özelliği her öncül tarafından döndürülen <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> değerlerinin bir dizisidir. Örnek, bir ve 10 arasındaki tüm sayıların karelerinin toplamını hesaplamak için bunları ekler.  
   
  [!code-csharp[TPL_Continuations#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/whenall1.cs#5)]
  [!code-vb[TPL_Continuations#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/whenall1.vb#5)]  
   
 ## <a name="continuation-options"></a>Devamlılık seçenekleri  
- Bir tek devamlılık oluştururken kullanabileceğiniz bir <xref:System.Threading.Tasks.Task.ContinueWith%2A> alan aşırı yüklemesini bir <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> devamlılık başlatan koşulları belirtmek için numaralandırma değeri. Örneğin, devamlılığın yalnızca öncül görev başarıyla tamamlanırsa veya yalnızca bir hatalı durumunda tamamlanırsa çalıştırmak üzere olduğunu belirtebilirsiniz. Öncül sürekliliği çağırmaya hazır olduğunda, koşul true değilse, süreklilik doğrudan geçiş <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> belirtin ve ardından başlatılamıyor.  
+ Tek bir görev devamlılığı oluşturduğunuzda, Devamlılığın başladığı koşulları belirtmek için <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> numaralandırma değeri alan bir <xref:System.Threading.Tasks.Task.ContinueWith%2A> aşırı yüklemesi kullanabilirsiniz. Örneğin, Devamlılığın yalnızca öncül işlemi başarıyla tamamlandığında veya hatalı bir durumda tamamlanırsa çalıştırılacağını belirtebilirsiniz. Öncül, devamlılık çağırmaya hazırlandığında koşul doğru değilse, devamlılık geçişleri doğrudan <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> duruma geçer ve daha sonra başlatılamaz.  
   
- Bir dizi aşırı yüklemeleri gibi çoklu görev devamlılığı yöntem <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> yöntemi de dahil bir <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> parametresi. Yalnızca bir alt tüm <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> numaralandırma üyelerini geçerli, ancak. Belirtebileceğiniz <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> ortaklarınıza olmayan değerleri <xref:System.Threading.Tasks.TaskCreationOptions?displayProperty=nameWithType> numaralandırma gibi <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskContinuationOptions.LongRunning?displayProperty=nameWithType>, ve <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness?displayProperty=nameWithType>. Herhangi bir belirtirseniz `NotOn` veya `OnlyOn` seçenekler çoklu görev sürekliliği ile bir <xref:System.ArgumentOutOfRangeException> çalışma zamanında özel durum oluşturulur.  
+ <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> yönteminin aşırı yüklemeleri gibi çok sayıda çoklu görev devamlılığı yöntemi de bir <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> parametresi içerir. Ancak tüm <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> numaralandırma üyelerinin yalnızca bir alt kümesi geçerlidir. <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskContinuationOptions.LongRunning?displayProperty=nameWithType>ve <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness?displayProperty=nameWithType>gibi <xref:System.Threading.Tasks.TaskCreationOptions?displayProperty=nameWithType> numaralandırmasında karşılıkları olan <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> değerler belirtebilirsiniz. Çoklu görev devamlılığı ile `NotOn` veya `OnlyOn` seçeneklerinden birini belirtirseniz, çalışma zamanında bir <xref:System.ArgumentOutOfRangeException> özel durumu oluşturulur.  
   
- Görev devamlılık seçenekleri hakkında daha fazla bilgi için bkz. <xref:System.Threading.Tasks.TaskContinuationOptions> konu.  
+ Görev devamlılık seçenekleri hakkında daha fazla bilgi için <xref:System.Threading.Tasks.TaskContinuationOptions> konusuna bakın.  
   
-## <a name="passing-data-to-a-continuation"></a>Devamlılık veri geçirme  
- <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> Yöntemi bağımsız değişken olarak devamlılığın kullanıcı temsilcisine öncül bir başvuru geçirir. Öncül bir <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> nesne yanı sıra, görev çalıştırılmadan tamamlanana kadar devamlılığın erişebilir <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> görevi özelliğidir.  
+## <a name="passing-data-to-a-continuation"></a>Verileri Devamlıya geçirme  
+ <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> yöntemi, öncül öğesine bir başvuruyu bir bağımsız değişken olarak devamlılık Kullanıcı temsilcisine geçirir. Öncül bir <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> nesneysa ve görev tamamlanana kadar çalışırsa, devamlılık görevin <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> özelliğine erişebilir.  
   
- <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> Özelliği, görev tamamlanıncaya kadar engeller. Görev iptal edildi veya hatalı, ancak erişmeye çalışan <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği oluşturur bir <xref:System.AggregateException> özel durum. Kullanarak bu sorunu önleyebilirsiniz <xref:System.Threading.Tasks.TaskContinuationOptions.OnlyOnRanToCompletion> seçeneği, aşağıdaki örnekte gösterildiği gibi.  
+ <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> özelliği, görev tamamlanana kadar engeller. Ancak, görev iptal edildiyse veya hata verdiyse, <xref:System.Threading.Tasks.Task%601.Result%2A> özelliğine erişme girişimi bir <xref:System.AggregateException> özel durumu oluşturur. Aşağıdaki örnekte gösterildiği gibi <xref:System.Threading.Tasks.TaskContinuationOptions.OnlyOnRanToCompletion> seçeneğini kullanarak bu sorundan kaçınabilirsiniz.  
   
  [!code-csharp[TPL_Continuations#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/result1.cs#2)]
  [!code-vb[TPL_Continuations#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/result1.vb#2)]  
   
- Devamlılık, öncül görev için işlemin başarıyla tamamlanmasından çalıştırmadıysanız bile istiyorsanız, özel duruma karşı korumanız gerekir. Test etmek için bir yaklaşım ise <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> öncül ve yalnızca özellik erişme girişiminde <xref:System.Threading.Tasks.Task%601.Result%2A> durum değilse, özelliği <xref:System.Threading.Tasks.TaskStatus.Faulted> veya <xref:System.Threading.Tasks.TaskStatus.Canceled>. Ayrıca inceleyebilirsiniz <xref:System.Threading.Tasks.Task.Exception%2A> öncül özelliğidir. Daha fazla bilgi için [özel durum işleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md). Aşağıdaki örnek önceki örneğe erişim öncülün değiştirir <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> durumunun ise özellik <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>.  
+ Öncül başarıyla tamamlanmayı çalıştırmadığından bile devamlılığın çalıştırılmasını istiyorsanız özel duruma karşı koruma gerekir. Bir yaklaşım, öncül öğesinin <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> özelliğini test etmek ve yalnızca durum <xref:System.Threading.Tasks.TaskStatus.Faulted> veya <xref:System.Threading.Tasks.TaskStatus.Canceled>değilse <xref:System.Threading.Tasks.Task%601.Result%2A> özelliğine erişmeyi dener. Ayrıca, öncül öğesinin <xref:System.Threading.Tasks.Task.Exception%2A> özelliğini inceleyebilirsiniz. Daha fazla bilgi için bkz. [özel durum işleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md). Aşağıdaki örnek, önceki örneği, öncül 'ın <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> özelliğine yalnızca durumu <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>olarak erişmek için değiştirir.  
   
  [!code-csharp[TPL_Continuations#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/result2.cs#7)]
  [!code-vb[TPL_Continuations#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/result2.vb#7)]  
   
-## <a name="canceling-a-continuation"></a>Devamlılığı iptal etme  
- <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> Özelliği, bir devamlılık <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> aşağıdaki durumlarda:  
+## <a name="canceling-a-continuation"></a>Devamlılığını iptal etme  
+ Bir devamlılığın <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> özelliği, aşağıdaki durumlarda <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> olarak ayarlanır:  
   
-- Atar bir <xref:System.OperationCanceledException> bir iptal isteğine yanıt olarak özel durum. Özel durum devamlılığa geçirilen aynı belirteci içeriyorsa olarak herhangi bir görev ile ortak iptali alındı bildirimi kabul edilir.  
+- İptal isteğine yanıt olarak <xref:System.OperationCanceledException> bir özel durum oluşturur. Herhangi bir görevde olduğu gibi, özel durum devamlılığın geçirildiği aynı belirteci içeriyorsa, birlikte iptalin iptali onayı olarak değerlendirilir.  
   
-- Devamlılığın geçirilen bir <xref:System.Threading.CancellationToken?displayProperty=nameWithType> olan <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> özelliği `true`. Bu durumda süreklilik başlatılmaz ve geçer <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> durumu.  
+- Devamlılık, <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> özelliği `true`olan bir <xref:System.Threading.CancellationToken?displayProperty=nameWithType> geçirilir. Bu durumda, devamlılık başlamaz ve <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> duruma geçer.  
   
-- Koşul belirlediği için devamlılık hiç çalışır, <xref:System.Threading.Tasks.TaskContinuationOptions> bağımsız değişken karşılanmadı. Örneğin, bir öncül görev içine aşması durumunda bir <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> durumuna geçildi devamlılığını <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> seçenek çalışmaz, ancak hizmete geçiş <xref:System.Threading.Tasks.TaskStatus.Canceled> durumu.  
+- <xref:System.Threading.Tasks.TaskContinuationOptions> bağımsız değişkeni tarafından ayarlanan koşul karşılanmadığından devamlılık hiçbir şekilde çalışmaz. Örneğin, bir öncül <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> duruma geçtiğinde, <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> seçeneğini geçen devamlılık çalışmaz ancak <xref:System.Threading.Tasks.TaskStatus.Canceled> durumuna geçer.  
   
- Bir görev ve devamlılığını aynı mantık işleminin iki parçasını temsil ediyorsa aynı iptal belirtecini her iki görevleri için aşağıdaki örnekte gösterildiği gibi geçirebilirsiniz. Devamlılık için geçen 33 bölünebilir tamsayılar listesini oluşturan bir öncülü oluşur. Devamlılığın sırayla listesini görüntüler. Düzenli olarak öncül hem devamlılık için rastgele aralıklarda duraklatın. Ayrıca, bir <xref:System.Threading.Timer?displayProperty=nameWithType> yürütmek için kullanılan nesne `Elapsed` 5 saniyelik zaman aşımı aralığından sonra yöntemi. Bu örnek <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> çağırmak o anda yürütülen görevin neden yöntemi <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType> yöntemi. Olmadığını <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> öncül veya devamlılığını yürüttüğünde yöntemi çağrıldığında rastgele oluşturulmuş duraklamaları süresine bağlıdır. Öncül iptal edildiyse, süreklilik başlatılmaz. Öncül iptal değil, belirteç sürekliliği iptal etmek için yine de kullanılabilir.  
+ Bir görev ve devamlılık aynı mantıksal işlemin iki parçasını temsil ediyorsa, aşağıdaki örnekte gösterildiği gibi aynı iptal belirtecini her iki göreve da geçirebilirsiniz. Bu, 33 ile bölünebilen tamsayıların bir listesini üreten bir öncül öğesinden oluşur ve bu da devamlıya geçirilir. Devam eden devamlılık listeyi görüntüler. Hem öncül hem de devamlılık rastgele aralıklarla düzenli olarak duraklatılır. Ayrıca, bir <xref:System.Threading.Timer?displayProperty=nameWithType> nesnesi, beş saniyelik bir zaman aşımı aralığından sonra `Elapsed` metodunu yürütmek için kullanılır. Bu örnek, şu anda yürütülmekte olan görevin <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType> yöntemi aramasına neden olan <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> yöntemini çağırır. Öncül veya devamlılık yürütüldüğü zaman <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> yönteminin çağrılmaması, rastgele oluşturulan duraklamalar süresine bağlıdır. Öncül iptal edilirse, devamlılık başlamacaktır. Öncül iptal edilmediğinde, belirteç devam etmek için hala kullanılabilir.  
   
  [!code-csharp[TPL_Continuations#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/cancellation1.cs#3)]
  [!code-vb[TPL_Continuations#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/cancellation1.vb#3)]  
   
- Belirterek bir iptal belirteci devamlılığın sağlamadan kendi öncül görevi iptal edilirse bir devamlılığın yürütülmesini engelleyebilirsiniz <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnCanceled?displayProperty=nameWithType> seçeneği devamlılığı oluşturduğunuzda. Basit bir örnek verilmiştir.  
+ Devamlılığın, devamlılığı oluştururken <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnCanceled?displayProperty=nameWithType> seçeneğini belirterek devamlılık belirteci vermeden iptal edilse de devamlılığın yürütülmesini engelleyebilirsiniz. Aşağıda basit bir örnek verilmiştir.  
   
  [!code-csharp[TPL_Continuations#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/cancellation2.cs#8)]
  [!code-vb[TPL_Continuations#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/cancellation2.vb#8)]  
   
- Devamlılık geçtikten sonra <xref:System.Threading.Tasks.TaskStatus.Canceled> durumuna bağlı olarak sonraki devamlılıkları etkileyebilir <xref:System.Threading.Tasks.TaskContinuationOptions> bu devamlılıklar için belirlenen.  
+ Devamlılık <xref:System.Threading.Tasks.TaskStatus.Canceled> duruma geçtikten sonra, bu devamlılıklar için belirtilen <xref:System.Threading.Tasks.TaskContinuationOptions> bağlı olarak, izleyen devamlılıkları etkileyebilir.  
   
- Atılan devamlılıklar başlatılamaz.  
+ Bırakılan devamlılık başlamaz.  
   
-## <a name="continuations-and-child-tasks"></a>Alt görevler ve devamlılıklar  
- Devamlılık öncül çalışmaz ve eklenen alt görevlerin hepsi tamamlanmış. Devamlılığın tamamlamak, ayrılmış alt görevlerin tamamlanmasını beklemez. Ekli ve ayrılmış bir devamlılık oluşturan öncül bir görevden alt görevleri aşağıdaki iki örnek gösterilmektedir. Aşağıdaki örnekte, devamlılık, yalnızca tüm alt görevlerini tamamladıktan ve aynı her zaman çıktı örneği birden çok kez üretir çalıştırmadan sonra çalışır. Örnek öncül çağrılarak başlatılır <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> yöntemi olduğundan varsayılan <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> yöntemi oluşturur, varsayılan görev oluşturma seçeneği olan bir üst görev <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>.  
+## <a name="continuations-and-child-tasks"></a>Devamlılıklar ve alt görevler  
+ Bir devamlılık, eklenen alt görevlerinin tümü tamamlanana kadar çalışmaz. Devamlılık, ayrılmış alt görevlerin bitmesini beklemez. Aşağıdaki iki örnek, bir devamlılık oluşturan bir öncül öğesine iliştirilmiş ve bu gruptan ayrılan alt görevleri gösterir. Aşağıdaki örnekte, devamlılık yalnızca tüm alt görevler tamamlandıktan sonra çalışır ve örneği birden çok kez çalıştırarak her seferinde aynı çıktıyı üretir. Örnek, varsayılan olarak <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> yöntemi, varsayılan görev oluşturma seçeneği <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>olan bir üst görev oluşturduğunda <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> yöntemini çağırarak antecedent 'yi başlatır.  
   
  [!code-csharp[TPL_Continuations#9](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/attached1.cs#9)]
  [!code-vb[TPL_Continuations#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/attached1.vb#9)]  
   
- Ancak, alt görevlerin öncülden ayrılırsa, öncül görev sonlandırıldı, alt görevlerin durumunu bakılmaksızın hemen sonra devamlılığın çalıştırır. Sonuç olarak, aşağıdaki örnek, birden fazla çalıştırma, Görev Zamanlayıcısı'nı her bir alt görev işlenme bağlıdır değişken çıktı üretebilir.  
+ Ancak alt görevler öncül öğesinden ayrılımışsa, alt görevlerin durumundan bağımsız olarak öncül sona erer tamamlanmaz devamlılık çalışır. Sonuç olarak, aşağıdaki örnekte birden çok çalıştırma, görev zamanlayıcının her bir alt görevi nasıl ele dığına bağlı olarak değişken çıktı üretebilir.  
   
  [!code-csharp[TPL_Continuations#10](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/detached1.cs#10)]
  [!code-vb[TPL_Continuations#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/detached1.vb#10)]  
   
- Öncül görevin son durumu, iliştirilmiş alt görevlerin son durumuna bağlıdır. Ayrılmış alt öğelerin durumu üst öğeyi etkilemez. Daha fazla bilgi için [ekli ve ayrılmış alt görevler](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
+ Öncül görevin son durumu, bağlı olan tüm alt görevlerin son durumuna bağlıdır. Ayrılmış alt görevlerin durumu üst öğeyi etkilemez. Daha fazla bilgi için bkz. [ekli ve ayrılmış alt görevler](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   
-## <a name="associating-state-with-continuations"></a>Devamlılıklarla ilişkilendirme durumu  
- Görev devamlılığıyla rasgele durumu ilişkilendirebilirsiniz. <xref:System.Threading.Tasks.Task.ContinueWith%2A> Yöntem, aşırı yüklü sürümler sağlar her bir <xref:System.Object> birinin devamlılığın durumunu temsil eden değer. Kullanarak daha sonra bu durum nesnesine erişebilirsiniz <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> özelliği. Bu durum nesne `null` bir değer belirtmezseniz.  
+## <a name="associating-state-with-continuations"></a>Durumu devamlılıklar ile ilişkilendirme  
+ Rastgele durumu, bir görev devamlılığı ile ilişkilendirebilirsiniz. <xref:System.Threading.Tasks.Task.ContinueWith%2A> yöntemi, her birinin devamlılık durumunu temsil eden bir <xref:System.Object> değer alan aşırı yüklenmiş sürümler sağlar. Daha sonra <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> özelliğini kullanarak bu durum nesnesine erişebilirsiniz. Değer sağlamazsanız bu durum nesnesi `null`.  
   
- Devamlılık durumu, kullanan mevcut kodu dönüştürürken yararlıdır [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) TPL kullanmak için. APM, genellikle nesne durumunu sağladığınız **başlamak**_yöntemi_ yöntemi ve durumunu kullanarak daha sonra erişmek <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> özelliği. Kullanarak <xref:System.Threading.Tasks.Task.ContinueWith%2A> yöntemi, bu durumu koruyabilirsiniz TPL kullanmak için APM kullanan kodu dönüştüreceğiniz zaman.  
+ Devamlılık durumu, [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) kullanan mevcut kodu tpl 'yi kullanacak şekilde dönüştürdüğünüzde faydalıdır. APM 'de, genellikle **BEGIN**_Method_ yönteminde nesne durumu sağlarsınız ve daha sonra bu duruma <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> özelliğini kullanarak erişirsiniz. <xref:System.Threading.Tasks.Task.ContinueWith%2A> yöntemini kullanarak, TPL 'yi kullanmak için APM kullanan kodu dönüştürürken bu durumu koruyabilirsiniz.  
   
- Devamlılık durumu da yararlı olabilir ile çalışırken <xref:System.Threading.Tasks.Task> Visual Studio hata ayıklayıcısı nesneleri. Örneğin, **Paralel Görevler** penceresinde **görev** sütunu her görevin durum nesnesinin dize gösterimini görüntüler. Hakkında daha fazla bilgi için **Paralel Görevler** penceresinde görmek [Using the Tasks Window](/visualstudio/debugger/using-the-tasks-window).  
+ Devamlılık durumu, Visual Studio hata ayıklayıcısında <xref:System.Threading.Tasks.Task> nesneleriyle çalıştığınızda da yararlı olabilir. Örneğin, **paralel görevler** penceresinde, **görev** sütunu her görev için durum nesnesinin dize gösterimini görüntüler. **Paralel görevler** penceresi hakkında daha fazla bilgi için, bkz. [Görevler penceresini kullanma](/visualstudio/debugger/using-the-tasks-window).  
   
- Aşağıdaki örnek, devamlılık durumunun nasıl kullanılacağını gösterir. Devamlılık görevleri zinciri oluşturur. Her görev geçerli saati sağlayan bir <xref:System.DateTime> nesnesi için `state` parametresinin <xref:System.Threading.Tasks.Task.ContinueWith%2A> yöntemi. Her <xref:System.DateTime> nesne devamlılık görevi oluşturulduğu zaman temsil eder. İkinci bir sonuç olarak her görevin ürettiği <xref:System.DateTime> başlangıçtan görevinin bittiği zamanı temsil eden nesne. Bu örnek, tüm görevler tamamlandıktan sonra oluşturma zamanını ve her devamlılık görevinin bittiği zamanı görüntüler.  
+ Aşağıdaki örnek, devamlılık durumunun nasıl kullanılacağını göstermektedir. Bir devamlılık görevleri zinciri oluşturur. Her görev, <xref:System.Threading.Tasks.Task.ContinueWith%2A> yönteminin `state` parametresi için geçerli saati bir <xref:System.DateTime> nesnesi sağlar. Her <xref:System.DateTime> nesnesi, devamlılık görevinin oluşturulduğu süreyi temsil eder. Her görev, görevin bittiği süreyi temsil eden ikinci bir <xref:System.DateTime> nesnesi sonucu olarak üretilir. Tüm görevler bittikten sonra bu örnek, oluşturma zamanını ve her devamlılık görevinin bittiği saati görüntüler.  
   
  [!code-csharp[TPL_ContinuationState#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuationstate/cs/continuationstate.cs#1)]
  [!code-vb[TPL_ContinuationState#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuationstate/vb/continuationstate.vb#1)]  
   
-## <a name="handling-exceptions-thrown-from-continuations"></a>Devamlılıktan özel durum işleme  
- Önceki devamlılık ilişkisi, üst-alt ilişkisi değildir. Devamlılıklarla atılan özel durumlar öncüle yayılmaz. Bu nedenle, bunları başka herhangi bir görev, şu şekilde gerçekleştirilir gibi devamlılıklarla atılan özel durumları işler:  
+## <a name="handling-exceptions-thrown-from-continuations"></a>Devamlılıklardan oluşan özel durumları işleme  
+ Öncül-devamlılık ilişkisi üst-alt ilişkisi değildir. Devamlılıklar tarafından oluşturulan özel durumlar, öncül öğesine yayılmaz. Bu nedenle, devamlılıklar tarafından oluşturulan özel durumları aşağıdaki gibi başka bir görevde idare ettiğiniz şekilde işleyin:  
   
-- Kullanabileceğiniz <xref:System.Threading.Tasks.Task.Wait%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A>, veya <xref:System.Threading.Tasks.Task.WaitAny%2A> yöntemi veya beklemek için genel çözümlemesiyle. Bir öncülü ve devamlılığını aynı bekleyebilirsiniz `try` deyimi, aşağıdaki örnekte gösterildiği gibi.  
+- Devamlılığın bekleneceği <xref:System.Threading.Tasks.Task.Wait%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A>veya <xref:System.Threading.Tasks.Task.WaitAny%2A> yöntemini ya da genel karşılığına sahip olabilirsiniz. Aşağıdaki örnekte gösterildiği gibi, bir öncül ve sürekliliği için aynı `try` deyimindeki devamlılığını bekleyebilirsiniz.  
   
      [!code-csharp[TPL_Continuations#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception1.cs#6)]
      [!code-vb[TPL_Continuations#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception1.vb#6)]  
   
-- Gözlemlemek için ikinci devamlılığı kullanın <xref:System.Threading.Tasks.Task.Exception%2A> ilk devamlılığın özelliği. Aşağıdaki örnekte, bir görev var olmayan dosyasından okumaya çalışır. Ardından devamlılık, öncül görev özel durum hakkındaki bilgileri görüntüler.  
+- İlk devamlılığın <xref:System.Threading.Tasks.Task.Exception%2A> özelliğini gözlemlemek için ikinci devamlılık kullanabilirsiniz. Aşağıdaki örnekte, bir görev var olmayan bir dosyadan okumaya çalışır. Devamlılık daha sonra, öncül görevde özel durumla ilgili bilgileri görüntüler.  
   
      [!code-csharp[TPL_Continuations#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#4)]
      [!code-vb[TPL_Continuations#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#4)]  
   
-     İle çalıştığından <xref:System.Threading.Tasks.TaskContinuationOptions.OnlyOnFaulted?displayProperty=nameWithType> seçeneği, devamlılık yürütür yalnızca öncül görev bir özel durum oluşur ve bu nedenle, kabul edebilirsiniz öncülün <xref:System.Threading.Tasks.Task.Exception%2A> özelliği değil `null`. Devamlılık içinde öncül bir özel durum olup olmadığını yürütür, denetlenecek gerekir yoksa öncülün <xref:System.Threading.Tasks.Task.Exception%2A> özelliği değil `null` özel durumu işlemek üzere çalışmadan önce aşağıdaki kod parçası gösterir.  
+     <xref:System.Threading.Tasks.TaskContinuationOptions.OnlyOnFaulted?displayProperty=nameWithType> seçeneğiyle çalıştırıldığı için, devamlılık yalnızca öncül içinde bir özel durum oluşursa yürütülür ve bu nedenle, öncül 'un <xref:System.Threading.Tasks.Task.Exception%2A> özelliğinin `null`olmadığını varsayabilir. Devamlılık, öncül içinde bir özel durum oluşturulup oluşturulmayacağını denetlüyorsa, aşağıdaki kod parçasının gösterdiği gibi, özel durumu işlemeye çalışmadan önce, öncül 'ın <xref:System.Threading.Tasks.Task.Exception%2A> özelliğinin `null` olup olmadığını denetlemesi gerekir.  
   
      [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
      [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
-     Daha fazla bilgi için [özel durum işleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
+     Daha fazla bilgi için bkz. [özel durum işleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
   
-- Devamlılığın kullanılarak oluşturulmuş bir eklenmiş alt görev ise <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> seçeneği, ana çağıran iş parçacığı tarafından herhangi bir ekli alt içinde olduğu gibi özel durumlar aktarılacaktır. Daha fazla bilgi için [ekli ve ayrılmış alt görevler](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
+- Devamlılık, <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> seçeneği kullanılarak oluşturulan iliştirilmiş bir alt görev ise, diğer tüm bağlı alt bir örnekte olduğu gibi, özel durumları üst öğe tarafından çağıran iş parçacığına yayılır. Daha fazla bilgi için bkz. [ekli ve ayrılmış alt görevler](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,19 +2,17 @@
 title: COR_PRF_HIGH_MONITOR Numaralandırması
 ms.date: 04/10/2018
 ms.assetid: 3ba543d8-15e5-4322-b6e7-1ebfc92ed7dd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8cbc66ef1eb5048d2c708a615a99ea363d29540f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 03fa33e0e2b4175d9f82bc6021731d58805da258
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752180"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123990"
 ---
-# <a name="corprfhighmonitor-enumeration"></a>COR_PRF_HIGH_MONITOR Numaralandırması
-[.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
+# <a name="cor_prf_high_monitor-enumeration"></a>COR_PRF_HIGH_MONITOR Numaralandırması
+[.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
   
- Bulunan listelenenlere bayrakları sağlar [cor_prf_monıtor](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) Profiler'ı için belirtebileceğiniz numaralandırma [Icorprofilerınfo5::seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) , yüklenirken yöntemi.  
+ , Profil oluşturucunun, yüklenirken [ICorProfilerInfo5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) yöntemine belirtebileceğiniz [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) numaralandırması içinde bulunanlara ek olarak bayraklar sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,33 +40,33 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`COR_PRF_HIGH_MONITOR_NONE`|Hiçbir bayrakları ayarlanmış.|  
-|`COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES`|Denetimleri [ICorProfilerCallback6::GetAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) CLR bütünleştirilmiş kod başvurusu kapanış ilerlemesi sırasında derleme başvuruları eklemek için geri çağırma.|  
-|`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`|Denetimleri [ICorProfilerCallback7::ModuleInMemorySymbolsUpdated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md) güncelleştirmeleri bir bellek içi modül ile ilişkili simge akışı için geri çağırma.|  
-|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|Denetimleri [ICorProfilerCallback9::DynamicMethodUnloaded](icorprofilercallback9-dynamicmethodunloaded-method.md) dinamik bir yöntem atık zaman olmuştur belirten geri çağırma toplanan ve kaldırıldı. <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|
-|`COR_PRF_HIGH_DISABLE_TIERED_COMPILATION`|.NET core 3.0 ve sonraki sürümler yalnızca: Devre dışı bırakır [katmanlı derleme](../../../core/whats-new/dotnet-core-3-0.md) profil oluşturucular için.|
-|`COR_PRF_HIGH_BASIC_GC`|.NET core 3.0 ve sonraki sürümler yalnızca: Profil oluşturma seçeneği GC karşılaştırdığınızda basit sağlar [ `COR_PRF_MONITOR_GC` ](cor-prf-monitor-enumeration.md). Yalnızca denetimleri [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md), ve [GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md) geri çağırmalar. Farklı `COR_PRF_MONITOR_GC` bayrak `COR_PRF_HIGH_BASIC_GC` eş zamanlı çöp toplama devre dışı bırakmaz.|
-|`COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS`|.NET core 3.0 ve sonraki sürümler yalnızca: Sağlar [MovedReferences](icorprofilercallback-movedreferences-method.md) ve [MovedReferences2](icorprofilercallback4-movedreferences2-method.md) yalnızca sıkıştırma GC'ler için geri çağırmaları.|
-|`COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED`|.NET core 3.0 ve sonraki sürümler yalnızca: Benzer şekilde [ `COR_PRF_MONITOR_OBJECT_ALLOCATED` ](cor-prf-monitor-enumeration.md), ancak nesne ayırma işlemleri için büyük nesne yığını (LOH) yalnızca hakkında bilgi sağlar.|
-|`COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE`|Tüm gösteren `COR_PRF_HIGH_MONITOR` profili Gelişmiş görüntüleri gerektiren bayrakları. Karşılık `COR_PRF_REQUIRE_PROFILE_IMAGE` bayrağını [cor_prf_monıtor](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) sabit listesi.|  
-|`COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH`|Tüm gösteren `COR_PRF_HIGH_MONITOR` profil oluşturucuyu çalışan bir uygulamaya bağlandıktan sonra ayarlanabilir bayrakları.|  
-|`COR_PRF_HIGH_MONITOR_IMMUTABLE`|Tüm gösteren `COR_PRF_HIGH_MONITOR` yalnızca başlatma sırasında ayarlanabilir bayrakları. Herhangi başka bir yerde sonuçlanıyor Bu bayrakların değiştirilmeye çalışılırken bir `HRESULT` başarısızlığı gösteren değer.|  
+|`COR_PRF_HIGH_MONITOR_NONE`|Hiçbir bayrak ayarlanmadı.|  
+|`COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES`|CLR derleme başvurusu kapatma yürüme sırasında derleme başvuruları eklemek için [ICorProfilerCallback6:: GetAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) geri aramasını denetler.|  
+|`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`|Bellek içi modülle ilişkilendirilen sembol akışındaki güncelleştirmeler için [ICorProfilerCallback7:: Moduleınmemorysymbolsupdated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md) geri aramasını denetler.|  
+|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|Bir dinamik yöntemin atık olarak toplandığını ve ne zaman kaldırılabileceğini belirten [ICorProfilerCallback9::D ynamicmethodunloaded](icorprofilercallback9-dynamicmethodunloaded-method.md) geri aramasını denetler. <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|
+|`COR_PRF_HIGH_DISABLE_TIERED_COMPILATION`|.NET Core 3,0 ve sonraki sürümleri: profil oluşturucular için [katmanlı derlemeyi](../../../core/whats-new/dotnet-core-3-0.md) devre dışı bırakır.|
+|`COR_PRF_HIGH_BASIC_GC`|Yalnızca .NET Core 3,0 ve üzeri sürümler: [`COR_PRF_MONITOR_GC`](cor-prf-monitor-enumeration.md)kıyasla hafıf bir GC profili oluşturma seçeneği sağlar. Yalnızca [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)ve [getgenerationlimitcallbacks](icorprofilerinfo2-getgenerationbounds-method.md) ' ı denetler. `COR_PRF_MONITOR_GC` bayrağının aksine, `COR_PRF_HIGH_BASIC_GC` eşzamanlı atık toplamayı devre dışı bırakır.|
+|`COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS`|Yalnızca .NET Core 3,0 ve sonraki sürümleri: yalnızca GCs 'yi sıkıştırmak için [MovedReferences](icorprofilercallback-movedreferences-method.md) ve [MovedReferences2](icorprofilercallback4-movedreferences2-method.md) Callbacks etkinleştirilir.|
+|`COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED`|Yalnızca .NET Core 3,0 ve sonraki sürümleri: [`COR_PRF_MONITOR_OBJECT_ALLOCATED`](cor-prf-monitor-enumeration.md)benzerdir, ancak yalnızca büyük nesne yığını (LOH) için nesne ayırmaları hakkında bilgi sağlar.|
+|`COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE`|Profil ile gelişmiş görüntüler gerektiren tüm `COR_PRF_HIGH_MONITOR` bayraklarını temsil eder. [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) numaralandırmasındaki `COR_PRF_REQUIRE_PROFILE_IMAGE` bayrağına karşılık gelir.|  
+|`COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH`|Profil Oluşturucu çalışan bir uygulamaya eklendikten sonra ayarlayalebilecek tüm `COR_PRF_HIGH_MONITOR` bayraklarını temsil eder.|  
+|`COR_PRF_HIGH_MONITOR_IMMUTABLE`|Yalnızca başlatma sırasında ayarlanabilir tüm `COR_PRF_HIGH_MONITOR` bayraklarını temsil eder. Bu bayrakların herhangi birini değiştirme girişimi, hatayı belirten `HRESULT` bir değer ile sonuçlanır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `COR_PRF_HIGH_MONITOR` Bayrakları ile kullanılan `pdwEventsHigh` parametresinin [Icorprofilerınfo5::geteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) ve [Icorprofilerınfo5::seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) yöntemleri.  
+ `COR_PRF_HIGH_MONITOR` bayrakları, [ICorProfilerInfo5:: GetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) ve [ICorProfilerInfo5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) yöntemlerinin `pdwEventsHigh` parametresiyle kullanılır.  
   
-.NET Framework 4.6.1, değeri başlangıç `COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH` 0 olarak değiştirildi `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` (0x00000002). Değeri değiştirildi 4.7.2 .NET Framework ile başlayarak, `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` için `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`.   
+.NET Framework 4.6.1 başlayarak, `COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH` değeri 0 ' dan `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` (0x00000002) olarak değiştirilir. .NET Framework 4.7.2 ile başlayarak değeri `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`olarak değiştirilmiştir.   
 
-`COR_PRF_HIGH_MONITOR_IMMUTABLE` yalnızca başlatma sırasında ayarlanabilir tüm bayraklar temsil eden bir bit maskesi olması amaçlanmıştır. Bu bayraklar başka bir yerde sonuçları başarısız bir değişiklik çalışılırken `HRESULT`.
+`COR_PRF_HIGH_MONITOR_IMMUTABLE`, yalnızca başlatma sırasında ayarlanmayan tüm bayrakları temsil eden bir bit maskesi olması amaçlanmıştır. Bu bayrakların herhangi birini değiştirme girişimi başarısız bir `HRESULT`neden olur.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

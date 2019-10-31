@@ -10,14 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6f867b53f168a394515a1b1eaa6575a72dfb8d91
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f2c22f13f74698b8cbd1474b331d65dcedfa4889
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052005"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114557"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework sistem gereksinimleri
 
@@ -60,13 +58,13 @@ Bu konudaki tablolar, aşağıdaki .NET Framework sürümleri için donanım, i�
 | Windows 10 Ekim 2018 güncelleştirmesi | 32 bit ve 64 bit | .NET Framework 4.7.2 | .NET Framework 4,8 |
 | Windows 10 Nisan 2018 güncelleştirmesi | 32 bit ve 64 bit | .NET Framework 4.7.2 |.NET Framework 4,8|
 | Windows 10 Fall Creators Update | 32 bit ve 64 bit | .NET Framework 4.7.1 | .NET Framework 4.7.2<br/><br/>.NET Framework 4,8 |
-| Windows 10 Creators Update | 32 bit ve 64 bit | .NET framework 4.7 | .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8 |
-| Windows 10 Yıldönümü Güncelleştirmesi | 32 bit ve 64 bit | .NET Framework 4.6.2 |.NET framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8  |
+| Windows 10 Creators Update | 32 bit ve 64 bit | .NET Framework 4,7 | .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8 |
+| Windows 10 Yıldönümü Güncelleştirmesi | 32 bit ve 64 bit | .NET Framework 4.6.2 |.NET Framework 4,7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8  |
 | Windows 10 Kasım güncelleştirmesi | 32 bit ve 64 bit | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
 | Windows 10 | 32 bit ve 64 bit | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
-| [!INCLUDE[win81](../../../includes/win81-md.md)] | 32 bit, 64 bit ve ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8 |
+| [!INCLUDE[win81](../../../includes/win81-md.md)] | 32 bit, 64 bit ve ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4,7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8 |
 | [!INCLUDE[win8](../../../includes/win8-md.md)] | 32 bit, 64 bit ve ARM | .NET Framework 4.5 | .NET Framework 4.5.1<br /><br />.NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1 |
-| Windows 7 SP1|32 bit ve 64 bit | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8 |
+| Windows 7 SP1|32 bit ve 64 bit | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4,7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8 |
 | Windows Vista SP2|32 bit ve 64 bit | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
 | Windows XP |32 bit ve 64 bit | -- | .NET Framework 4 |
 
@@ -90,15 +88,15 @@ Bu konudaki tablolar, aşağıdaki .NET Framework sürümleri için donanım, i�
 | Windows Server, sürüm 1809 | 64 bit | .NET Framework 4.7.2 | .NET Framework 4,8 |
 | Windows Server, sürüm 1803 | 64 bit | .NET Framework 4.7.2 | .NET Framework 4,8 |
 | Windows Server, sürüm 1709 | 64 bit | .NET Framework 4.7.1 | .NET Framework 4.7.2|
-| Windows Server 2016 | 64 bit | .NET Framework 4.6.2 | .NET framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8 |
-| Windows Server 2012 R2 | 64 bit | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8 |
-| Windows Server 2012 (64-bit sürüm) | 64 bit| .NET Framework 4.5 | .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8 |
-| Windows Server 2008 R2 SP1|64 bit | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8 |
+| Windows Server 2016 | 64 bit | .NET Framework 4.6.2 | .NET Framework 4,7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8 |
+| Windows Server 2012 R2 | 64 bit | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4,7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8 |
+| Windows Server 2012 (64-bit sürüm) | 64 bit| .NET Framework 4.5 | .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4,7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8 |
+| Windows Server 2008 R2 SP1|64 bit | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4,7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4,8 |
 | Windows Server 2008 SP2|32 bit ve 64 bit | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
 
  **Notlar:**
 
-- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)].NET Framework 4,5 ' i içerir, bu nedenle ayrı olarak yüklemek zorunda kalmazsınız. Benzer şekilde [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] , .NET Framework 4.5.1 içerir.
+- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] .NET Framework 4,5 ' i içerir, bu yüzden ayrı olarak yüklemek zorunda kalmazsınız. Benzer şekilde, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] .NET Framework 4.5.1 içerir.
 
 - .NET Framework, Windows Server 2008 R2 SP1 veya sonraki sürümleri ile sunucu çekirdeği rolü için sınırlı desteğe sahiptir. Desteklenmeyen API 'lerin listesi için bkz. [sunucu çekirdeği .net işlevleri](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)) .
 

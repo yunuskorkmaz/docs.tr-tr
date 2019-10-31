@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0121753f-ebea-48d0-aeb2-ed7fda76dc60
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1e94e4da0eea06ce9cc0110002b1def9e4dd4989
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3a1c4a931a61186c4737aada47ceb861e7848e7b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939152"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122840"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next Yöntemi
 Geçerli konumdan başlayarak Numaralandırmadaki belirtilen [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) nesnelerinin sayısını alır.  
@@ -52,22 +50,22 @@ HRESULT Next([in] ULONG  celt,
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|S_FALSE|`pceltFetched`eşit `celt`değildir.|  
+|S_FALSE|`pceltFetched` `celt`eşit değildir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntem tipik bir COM numaralandırıcısı gibi çalışır.  
   
- Giriş dizisi değerleri en az boyutta `celt`olmalıdır. Dizi, Numaralandırmadaki bir sonraki `celt` değerle veya `celt` daha az kalırsa kalan tüm değerlerle doldurulur. Bu yöntem döndüğünde, `pceltFetched` alınan değer sayısıyla doldurulur. Geçersiz işaretçiler `celt`içeriyorsaveyadaha küçük olan bir arabelleğe işaret ediyorsa ya `pceltFetched` da geçersiz bir işaretçisiyse, sonuç tanımsızdır. `values`  
+ Giriş dizisi değerleri en az `celt`boyutunda olmalıdır. Dizi, Numaralandırmadaki bir sonraki `celt` değeri ya da `celt` daha az kalırsa kalan tüm değerlerle doldurulur. Bu yöntem döndürüldüğünde `pceltFetched` alınan değer sayısıyla doldurulur. `values` geçersiz işaretçiler içeriyorsa veya `celt`daha küçük bir arabelleğe işaret ediyorsa veya `pceltFetched` geçersiz bir işaretçisiyse, sonuç tanımsızdır.  
   
 > [!NOTE]
 > [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) yapısının serbest bırakılması gerekmez, ancak Içindeki "ICorDebugValue" arabiriminin serbest bırakılması gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -8,20 +8,18 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ed1e66c4aadab656455686a7a1e5028b035676a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 99eef6b8c264e21df7f4ecf9fc79dc607d484a0a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252262"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115413"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > öğesi
 İşlenmemiş görev özel durumlarının çalışan bir işlemi sonlandırmayı gerekip gerekmediğini belirtir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<çalışma zamanı >** ](runtime-element.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<ThrowUnobservedTaskExceptions >**  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -59,19 +57,19 @@ ms.locfileid: "70252262"
 |||  
   
 ## <a name="remarks"></a>Açıklamalar  
- İle <xref:System.Threading.Tasks.Task> ilişkili bir özel durum gözlemlenmeyen bir işlem yok <xref:System.Threading.Tasks.Task.Wait%2A> , üst öğe iliştirilmemiş ve <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> özellik okunamadı, görev özel durumu gözlemlenmemiş olarak kabul edilir.  
+ Bir <xref:System.Threading.Tasks.Task> ilişkili bir özel durum gözlemlenmişse, hiçbir <xref:System.Threading.Tasks.Task.Wait%2A> işlemi yoktur, üst öğe eklenmez ve <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> özelliği okunmadı. görev özel durumunun gözlemlenen olarak kabul edildiği kabul edilir.  
   
- .NET Framework 4 ' te, varsayılan olarak, gözlemlenen olmayan <xref:System.Threading.Tasks.Task> bir özel durum atık olarak toplanmışsa Sonlandırıcı bir özel durum oluşturur ve işlemi sonlandırır. İşlemin sonlandırılması çöp toplama ve sonlandırma zamanlaması tarafından belirlenir.  
+ .NET Framework 4 ' te, varsayılan olarak, gözlemlenen olmayan bir özel durum içeren bir <xref:System.Threading.Tasks.Task> atık olarak toplanırsa Sonlandırıcı bir özel durum oluşturur ve işlemi sonlandırır. İşlemin sonlandırılması çöp toplama ve sonlandırma zamanlaması tarafından belirlenir.  
   
- Geliştiricilerin görevlere göre zaman uyumsuz kod yazmasını kolaylaştırmak için .NET Framework 4,5, gözlemlenen özel durumlar için bu varsayılan davranışı değiştirir. Gözlemlenen özel durumlar hala <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> etkinliğin oluşturulmasına neden olur, ancak varsayılan olarak işlem sonlanmaz. Bunun yerine, bir olay işleyicisinin özel durumu görmediğine bakılmaksızın, olay oluşturulduktan sonra özel durum yoksayılır.  
+ Geliştiricilerin görevlere göre zaman uyumsuz kod yazmasını kolaylaştırmak için .NET Framework 4,5, gözlemlenen özel durumlar için bu varsayılan davranışı değiştirir. Gözlemlenen özel durumlar hala <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> olayının oluşturulmasına neden olur, ancak varsayılan olarak işlem sonlanmaz. Bunun yerine, bir olay işleyicisinin özel durumu görmediğine bakılmaksızın, olay oluşturulduktan sonra özel durum yoksayılır.  
   
- .NET Framework 4,5 ' de, bir özel durum oluşturan .NET Framework 4 davranışını etkinleştirmek için bir uygulama yapılandırma dosyasında [ \<ThrowUnobservedTaskExceptions > öğesini](throwunobservedtaskexceptions-element.md) kullanabilirsiniz.  
+ .NET Framework 4,5 ' de, bir özel durum oluşturmak için .NET Framework 4 davranışını etkinleştirmek üzere bir uygulama yapılandırma dosyasında [\<ThrowUnobservedTaskExceptions > öğesini](throwunobservedtaskexceptions-element.md) kullanabilirsiniz.  
   
  Özel durum davranışını aşağıdaki yollarla da belirtebilirsiniz:  
   
-- Ortam değişkenini `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`) ayarlayarak.  
+- Ortam değişkenini ayarlayarak `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
   
-- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\içinde ThrowUnobservedTaskExceptions = 1 kayıt defteri DWORD değerini ayarlayarak. NETFramework anahtarı.  
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\kayıt defteri DWORD değerini ThrowUnobservedTaskExceptions = 1 olarak ayarlayarak. NETFramework anahtarı.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir uygulama yapılandırma dosyası kullanarak görevlerde özel durumların üretilmesini nasıl etkinleştireceğinizi gösterir.  

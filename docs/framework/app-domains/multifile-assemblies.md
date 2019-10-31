@@ -1,5 +1,5 @@
 ---
-title: Çoklu dosya derlemeleri
+title: Birden çok dosyalı derlemeler
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -10,20 +10,18 @@ helpviewer_keywords:
 - code modules
 - multifile assemblies
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b4c288a54194e89eb90b6ac512cf45184376e952
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8ffb0482ebd01a056d9ffd80a74ec0332e1b8dff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971872"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119788"
 ---
-# <a name="multifile-assemblies"></a>Çoklu dosya derlemeleri
+# <a name="multifile-assemblies"></a>Birden çok dosyalı derlemeler
 
-Komut satırı derleyicileri veya Visual C++Studio 'yu kullanarak .NET Framework hedefleyen çok dosyalı derlemeler oluşturabilirsiniz. Derlemedeki bir dosyanın derleme bildirimini içermesi gerekir. Bir uygulamayı başlatan bir derleme, `Main` ya `WinMain` da yöntemi gibi bir giriş noktası içermelidir.
+Komut satırı derleyicileri veya Visual C++Studio 'yu kullanarak .NET Framework hedefleyen çok dosyalı derlemeler oluşturabilirsiniz. Derlemedeki bir dosyanın derleme bildirimini içermesi gerekir. Bir uygulamayı başlatan bütünleştirilmiş kod ayrıca `Main` veya `WinMain` yöntemi gibi bir giriş noktası içermelidir.
 
-Örneğin, *Client.cs* ve *Stringer.cs*olmak üzere iki kod modülü içeren bir uygulamanız olduğunu varsayalım. *Stringer.cs* , `myStringer` *Client.cs*içindeki kod tarafından başvurulan ad alanını oluşturur. *Client.cs* , uygulamanın `Main` giriş noktası olan yöntemini içerir. Bu örnekte, iki kod modülünü derler ve ardından uygulamayı başlatan derleme bildirimini içeren üçüncü bir dosya oluşturursunuz. Derleme bildirimi hem *istemci* hem de *stru* modüllerine başvurur.
+Örneğin, *Client.cs* ve *Stringer.cs*olmak üzere iki kod modülü içeren bir uygulamanız olduğunu varsayalım. *Stringer.cs* , *Client.cs*içindeki kod tarafından başvurulan `myStringer` ad alanını oluşturur. *Client.cs* , uygulamanın giriş noktası olan `Main` yöntemini içerir. Bu örnekte, iki kod modülünü derler ve ardından uygulamayı başlatan derleme bildirimini içeren üçüncü bir dosya oluşturursunuz. Derleme bildirimi hem *istemci* hem de *stru* modüllerine başvurur.
 
 > [!NOTE]
 > Çok dosyalı derlemeler, derleme birden fazla kod modüllerine sahip olsa bile yalnızca bir giriş noktasına sahip olabilir.
@@ -43,5 +41,5 @@ Derlemeyi oluşturduktan sonra, derleme bildirimini içeren dosyayı imzalayabil
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Çoklu dosya derlemesi oluşturma](build-multifile-assembly.md)
+- [Nasıl yapılır: çok dosyalı bütünleştirilmiş kod derleme](build-multifile-assembly.md)
 - [Bütünleştirilmiş kod içeren program](../../standard/assembly/program.md)

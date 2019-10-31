@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ee7c434-9681-4fa8-badd-652cb1a9742b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e0bcabb32d50b236d42a555c073b50ba3a234dde
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8b7edf1cc642228c4a79c855b51727264f31741c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796492"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107979"
 ---
 # <a name="identity_attribute-structure"></a>IDENTITY_ATTRIBUTE Yapısı
 Bir [IDefinitionIdentity](idefinitionidentity-interface.md) örneği hakkında meta veri özniteliği bilgilerini içerir.  
@@ -45,14 +43,14 @@ typedef struct _IDENTITY_ATTRIBUTE {
 |`pszValue`|Özniteliğin değerini içeren, null ile sonlandırılmış bir karakter dizesinin işaretçisi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yapı `IDENTITY_ATTRIBUTE` , null ile sonlandırılmış karakter dizelerine yönelik üç işaretçi içerir. Bu üç dize bir özniteliği tanımlıyor.  
+ `IDENTITY_ATTRIBUTE` yapısı, null ile sonlandırılmış karakter dizelerine yönelik üç işaretçi içerir. Bu üç dize bir özniteliği tanımlıyor.  
   
- Bir `IDENTITY_ATTRIBUTE` yapının örneği bir [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) yapısının örneğiyle ilişkilendirilir. Yapı gerçek dizeleri içerir ve ilgili `IDENTITY_ATTRIBUTE_BLOB` yapı, `IDENTITY_ATTRIBUTE` yapıda listelenen üç dizenin farklarını listeler. `IDENTITY_ATTRIBUTE`  
+ Bir `IDENTITY_ATTRIBUTE` yapısının örneği, bir [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) yapısının örneğiyle ilişkilendirilir. `IDENTITY_ATTRIBUTE` yapısı gerçek dizeleri içerir ve karşılık gelen `IDENTITY_ATTRIBUTE_BLOB` yapısı `IDENTITY_ATTRIBUTE` yapısında listelenen üç dizeye olan uzaklıkları listeler.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** Yalıtım. h  
+ **Üst bilgi:** Yalıtım. h  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

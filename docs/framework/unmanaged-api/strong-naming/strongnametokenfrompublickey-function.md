@@ -18,14 +18,12 @@ helpviewer_keywords:
 ms.assetid: 997e9e57-abb2-4217-bf20-1df621a75add
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 197504cbb0dd66c0cf43dee718026fc63e918d60
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b95c96efeb666f25d04118aa8cb9b0da3a2e7924
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798857"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104157"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey İşlevi
 Ortak anahtarı temsil eden bir belirteç alır. Tanımlayıcı ad belirteci, ortak anahtarın kısaltılmış biçimidir.  
@@ -48,28 +46,28 @@ BOOLEANStrongNameTokenFromPublicKey (
  'ndaki Tanımlayıcı ad imzasını oluşturmak için kullanılan anahtar çiftinin ortak bölümünü içeren [PublicKeyBlob](publickeyblob-structure.md) türünde bir yapı.  
   
  `cbPublicKeyBlob`  
- 'ndaki Bayt cinsinden boyutu `pbPublicKeyBlob`.  
+ 'ndaki `pbPublicKeyBlob`bayt cinsinden boyutu.  
   
  `ppbStrongNameToken`  
- dışı Geçilen anahtara karşılık gelen tanımlayıcı ad belirteci `pbPublicKeyBlob`. Ortak dil çalışma zamanı, belirtecin döndürüleceği belleği ayırır. Çağıranın bu belleği [StrongNameFreeBuffer](strongnamefreebuffer-function.md) işlevini kullanarak boşaltmalıdır.  
+ dışı `pbPublicKeyBlob`geçilen anahtara karşılık gelen tanımlayıcı ad belirteci. Ortak dil çalışma zamanı, belirtecin döndürüleceği belleği ayırır. Çağıranın bu belleği [StrongNameFreeBuffer](strongnamefreebuffer-function.md) işlevini kullanarak boşaltmalıdır.  
   
  `pcbStrongNameToken`  
  dışı Döndürülen tanımlayıcı ad belirtecinin bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`başarıyla tamamlandığında; Aksi takdirde `false`,.  
+ başarılı tamamlamada `true`; Aksi takdirde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Tanımlayıcı ad belirteci, anahtar bilgilerini meta verilerde depolarken alan kazanmak için kullanılan bir ortak anahtarın kısaltılmış biçimidir. Özellikle, tanımlayıcı ad belirteçleri, bağımlı derlemeye başvurmak için derleme başvurularında kullanılır.  
   
- İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo işlevini çağırın.](strongnameerrorinfo-function.md) `StrongNameTokenFromPublicKey`  
+ `StrongNameTokenFromPublicKey` işlevi başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** StrongName. h  
+ **Üst bilgi:** StrongName. h  
   
- **Kitaplığı** Mscoree. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** Mscoree. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

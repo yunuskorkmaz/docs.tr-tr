@@ -17,14 +17,12 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f32924c8c104f37fdb98a2a9ff104b6f6c19e478
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 712040c3482b51c4dafe0ee87fdda8cd848fb7fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853839"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123612"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Yönetilen Kodda Prototipler Oluşturma
 Bu konu, yönetilmeyen işlevlere nasıl erişmekte olduğunu ve yönetilen kodda Yöntem tanımına açıklama eklenen çeşitli öznitelik alanlarını tanıtır. Nasıl oluşturulacağını gösteren örnekler için. Platform çağırma ile kullanılacak NET tabanlı bildirimler, bkz. [Platform çağırma Ile verileri sıralama](marshaling-data-with-platform-invoke.md).  
@@ -32,7 +30,7 @@ Bu konu, yönetilmeyen işlevlere nasıl erişmekte olduğunu ve yönetilen kodd
  Yönetilen koddan yönetilmeyen bir DLL işlevine erişebilmek için önce işlevin adını ve onu dışarı aktaran DLL 'nin adını bilmeniz gerekir. Bu bilgilerle, DLL 'de uygulanan yönetilmeyen bir işlev için yönetilen tanımı yazmaya başlayabilirsiniz. Ayrıca, platform çağırma işlevinin işlevi nasıl oluşturduğunu ve işlevden veri sıraladığı yöntemi ayarlayabilirsiniz.  
   
 > [!NOTE]
-> Bir dize ayıran Windows API işlevleri, gibi bir yöntemi `LocalFree`kullanarak dizeyi boşaltmaya olanak sağlar. Platform çağırma, bu tür parametreleri farklı işler. Platform çağırma çağrıları için parametreyi `IntPtr` `String` tür yerine bir tür yapın. Türü bir dizeye el ile dönüştürmek için <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> sınıfı tarafından sunulan yöntemleri kullanın ve el ile boşaltın.  
+> Bir dize ayıran Windows API işlevleri, `LocalFree`gibi bir yöntemi kullanarak dizeyi boşaltmaya olanak tanır. Platform çağırma, bu tür parametreleri farklı işler. Platform çağırma çağrıları için, parametreyi bir `String` türü yerine `IntPtr` türü yapın. Türü bir dizeye el ile dönüştürmek ve el ile boşaltmak için <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> sınıfı tarafından sunulan yöntemleri kullanın.  
   
 ## <a name="declaration-basics"></a>Bildirim temelleri  
  Yönetilmeyen işlevlere yönetilen tanımlar, aşağıdaki örneklerde görebileceğiniz gibi dile bağımlıdır. Daha kapsamlı kod örnekleri için bkz. [Platform çağırma örnekleri](platform-invoke-examples.md).  
@@ -47,7 +45,7 @@ Friend Class NativeMethods
 End Class
 ```
   
- <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping?displayProperty=nameWithType> ,<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig?displayProperty=nameWithType> <xref:System.Runtime.InteropServices.DllImportAttribute> `Declare` ,,,, Veya<xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar?displayProperty=nameWithType> alanlarını bir Visual Basic bildirimine uygulamak için, ifadesini kullanarak özniteliğini kullanmanız gerekir. <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention?displayProperty=nameWithType> <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError?displayProperty=nameWithType>  
+ <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError?displayProperty=nameWithType>veya <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar?displayProperty=nameWithType> alanlarını Visual Basic bildirimine uygulamak için <xref:System.Runtime.InteropServices.DllImportAttribute> deyimin yerine `Declare` özniteliğini kullanmanız gerekir.  
   
 ```vb
 Imports System.Runtime.InteropServices
@@ -85,30 +83,30 @@ extern "C" int MessageBox(
 ```
   
 ## <a name="adjusting-the-definition"></a>Tanımı ayarlama  
- Onları açıkça ayarlayıp ayarlamazsanız, öznitelik alanları yönetilen kodun davranışını tanımlayan çalışmalardır. Platform çağırma, bir derlemede meta veriler olarak var olan çeşitli alanlarda ayarlanan varsayılan değerlere göre çalışır. Bir veya daha fazla alanın değerlerini ayarlayarak bu varsayılan davranışı değiştirebilirsiniz. Çoğu durumda, bir değer ayarlamak <xref:System.Runtime.InteropServices.DllImportAttribute> için öğesini kullanırsınız.  
+ Onları açıkça ayarlayıp ayarlamazsanız, öznitelik alanları yönetilen kodun davranışını tanımlayan çalışmalardır. Platform çağırma, bir derlemede meta veriler olarak var olan çeşitli alanlarda ayarlanan varsayılan değerlere göre çalışır. Bir veya daha fazla alanın değerlerini ayarlayarak bu varsayılan davranışı değiştirebilirsiniz. Çoğu durumda, bir değer ayarlamak için <xref:System.Runtime.InteropServices.DllImportAttribute> kullanırsınız.  
   
  Aşağıdaki tablo, platform Invoke ile ilgili olan öznitelik alanlarının tamamını listeler. Her alan için tablo, varsayılan değeri ve yönetilmeyen DLL işlevlerini tanımlamak için bu alanların nasıl kullanılacağına ilişkin bilgilere bir bağlantı içerir.  
   
 |Alan|Açıklama|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|En uygun eşlemeyi etkinleştirilir veya devre dışı bırakır.|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|Yöntem bağımsız değişkenlerini geçirilerek kullanılacak çağırma kuralını belirtir. Varsayılan `WinAPI`değer, 32 bit Intel tabanlı `__stdcall` platformlar için karşılık gelir.|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|Yöntem bağımsız değişkenlerini geçirilerek kullanılacak çağırma kuralını belirtir. Varsayılan değer, 32 bit Intel tabanlı platformlar için `__stdcall` karşılık gelen `WinAPI`.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|Denetim adı değiştirmeyi ve dize bağımsız değişkenlerinin işleve sıralanması gereken yolu. Varsayılan, `CharSet.Ansi` değeridir.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>|Çağrılacak DLL giriş noktasını belirtir.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>|Bir giriş noktasının karakter kümesine karşılık olarak değiştirilmesi gerekip gerekmediğini denetler. Varsayılan değer programlama diline göre değişir.|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|Yönetilen yöntem imzasının bir HRESULT döndüren yönetilmeyen imzaya dönüştürülmesi gerekip gerekmediğini ve dönüş değeri için ek bir [Out, retval] bağımsız değişkenine sahip olup olmadığını denetler.<br /><br /> Varsayılan `true` değer (imza dönüştürülmemelidir).|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>|Çağıran, metodu yürütürken bir hata `Marshal.GetLastWin32Error` oluşup oluşmadığını anlamak için API işlevini kullanmasını sağlar. Visual Basic `true`, varsayılan, ve C# C++' de varsayılan ' dir `false`.|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|Yönetilen yöntem imzasının bir HRESULT döndüren yönetilmeyen imzaya dönüştürülmesi gerekip gerekmediğini ve dönüş değeri için ek bir [Out, retval] bağımsız değişkenine sahip olup olmadığını denetler.<br /><br /> Varsayılan değer `true` (imza dönüştürülmemelidir).|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>|Çağıran, yöntemi yürütürken bir hata oluşup oluşmadığını anlamak için `Marshal.GetLastWin32Error` API işlevini kullanmasını sağlar. Visual Basic, varsayılan olarak `true`; ve C# C++' de, varsayılan olarak `false`.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar>|Bir ANSI "?" karakterine dönüştürülmüş, eşlenebilir bir Unicode karakter üzerinde özel durum üretilmesini denetler.|  
   
- Ayrıntılı başvuru bilgileri için bkz <xref:System.Runtime.InteropServices.DllImportAttribute>.  
+ Ayrıntılı başvuru bilgileri için bkz. <xref:System.Runtime.InteropServices.DllImportAttribute>.  
   
 ## <a name="platform-invoke-security-considerations"></a>Platform çağırma güvenlik konuları  
- `Assert`, `Deny`Ve numaralandırmanınüyeleri<xref:System.Security.Permissions.SecurityAction> *Yığın ilerleme değiştiricileri*olarak adlandırılır. `PermitOnly` Bu Üyeler platform çağırma bildirimleri ve COM arabirim tanım dili (IDL) deyimlerinde bildirime dayalı öznitelikler olarak kullanılıyorsa yok sayılır.  
+ <xref:System.Security.Permissions.SecurityAction> numaralandırmanın `Assert`, `Deny`ve `PermitOnly` üyeleri *yığın yürüme değiştiricileri*olarak adlandırılır. Bu Üyeler platform çağırma bildirimleri ve COM arabirim tanım dili (IDL) deyimlerinde bildirime dayalı öznitelikler olarak kullanılıyorsa yok sayılır.  
   
 ### <a name="platform-invoke-examples"></a>Platform Çağırma Örnekleri  
- Bu bölümdeki platform çağırma örnekleri, yığın yürüme değiştiricilerine sahip `RegistryPermission` özniteliğin kullanımını gösterir.  
+ Bu bölümdeki platform çağırma örnekleri, `RegistryPermission` özniteliğinin yığın yürüme değiştiricilerine göre kullanımını gösterir.  
   
- <xref:System.Security.Permissions.SecurityAction>Aşağıdaki örnekte `Assert` ,,`PermitOnly` ve değiştiricileri yok sayılır. `Deny`  
+ Aşağıdaki örnekte, <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny`ve `PermitOnly` değiştiricileri yoksayılır.  
   
 ```csharp  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -124,7 +122,7 @@ extern "C" int MessageBox(
     private static extern bool CallRegistryPermissionDeny();  
 ```  
   
- Ancak, `Demand` aşağıdaki örnekteki değiştirici kabul edilir.  
+ Ancak, aşağıdaki örnekte `Demand` değiştiricisi kabul edilir.  
   
 ```csharp
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -132,7 +130,7 @@ extern "C" int MessageBox(
     private static extern bool CallRegistryPermissionDeny();  
 ```  
   
- <xref:System.Security.Permissions.SecurityAction>değiştiriciler, platform çağırma çağrısını içeren (sarmalanmış) bir sınıfa yerleştirilirse doğru çalışır.  
+ <xref:System.Security.Permissions.SecurityAction> değiştiriciler, platform çağırma çağrısını içeren (sarmalanmış) bir sınıfa yerleştirilirse doğru şekilde çalışır.  
   
 ```cpp  
       [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
@@ -153,7 +151,7 @@ class PInvokeWrapper
 }  
 ```  
   
- <xref:System.Security.Permissions.SecurityAction>değiştiriciler, platform çağırma çağrısının çağıranına yerleştirildikleri iç içe geçmiş bir senaryoda da doğru çalışır:  
+ <xref:System.Security.Permissions.SecurityAction> değiştiriciler, platform çağırma çağrısının çağıranına yerleştirildikleri iç içe geçmiş bir senaryoda da doğru şekilde çalışır:  
   
 ```cpp  
       {  
@@ -185,9 +183,9 @@ class PInvokeScenario
 ```  
   
 #### <a name="com-interop-examples"></a>COM birlikte çalışabilirlik örnekleri  
- Bu bölümdeki com birlikte çalışabilirlik örnekleri, yığın yürüme değiştiricilerine `RegistryPermission` sahip özniteliğin kullanımını gösterir.  
+ Bu bölümdeki COM birlikte çalışabilirlik örnekleri, `RegistryPermission` özniteliğinin yığın yürüme değiştiricilerine göre kullanımını gösterir.  
   
- Aşağıdaki com birlikte çalışma arabirimi bildirimleri, önceki `Assert`bölümde `Deny`bulunan Platform `PermitOnly` çağırma örneklerine benzer şekilde,, ve değiştiricilerini yoksayar.  
+ Aşağıdaki COM birlikte çalışma arabirimi bildirimleri, önceki bölümdeki platform çağırma örneklerine benzer şekilde, `Assert`, `Deny`ve `PermitOnly` değiştiricilerini yoksayar.  
   
 ```csharp
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
@@ -218,7 +216,7 @@ interface IAssertStubsItf
 }  
 ```  
   
- Ek olarak, `Demand` aşağıdaki örnekte gösterildiği gibi, değiştirici com birlikte çalışma arabirimi bildirim senaryolarında kabul edilmez.  
+ Ayrıca, aşağıdaki örnekte gösterildiği gibi `Demand` değiştiricisi COM birlikte çalışma arabirimi bildirim senaryolarında kabul edilmez.  
   
 ```csharp  
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  

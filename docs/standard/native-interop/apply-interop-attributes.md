@@ -13,17 +13,15 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c0b3c9d13267abe50ee187bce0c56485be29613
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 78f89c3c8784467d3ec396106de7bbb34a2022f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775291"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121948"
 ---
 # <a name="applying-interop-attributes"></a>Birlikte Çalışma Özniteliklerini Uygulama
-@No__t_0 ad alanı, birlikte çalışabilirlik 'e özgü özniteliklerin üç kategorisini sağlar: tasarım zamanında sizin tarafınızdan, dönüştürme işlemi sırasında COM birlikte çalışma araçları ve API 'Leri tarafından uygulanan ve sizin tarafınızdan veya COM birlikte çalışma tarafından uygulanan bunlar.  
+<xref:System.Runtime.InteropServices> ad alanı, birlikte çalışabilirlik 'e özgü özniteliklerin üç kategorisini sağlar: tasarım zamanında sizin tarafınızdan, dönüştürme işlemi sırasında COM birlikte çalışma araçları ve API 'Leri tarafından uygulanan ve sizin tarafınızdan veya COM birlikte çalışma tarafından uygulanan bunlar.  
   
  Yönetilen koda öznitelik uygulama görevi hakkında bilginiz yoksa, bkz. [öznitelikleri kullanarak meta verileri genişletme](../../../docs/standard/attributes/index.md). Diğer özel öznitelikler gibi türler, Yöntemler, özellikler, parametreler, alanlar ve diğer üyelere birlikte çalışma için özel öznitelikler de uygulayabilirsiniz.  
   

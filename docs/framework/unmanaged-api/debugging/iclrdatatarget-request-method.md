@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f6926d66a438cfc4fd97d7120e359b737212dde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5d7a6b9826a734363d6beeb2e3fab8422964558
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738623"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113347"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request Yöntemi
-Uygulama tarafından tanımlanan bir işlemi istemek için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.  
+Uygulama tarafından tanımlanan bir işlem istemek için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağırılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,33 +41,33 @@ HRESULT Request (
   
 ## <a name="parameters"></a>Parametreler  
  `reqCode`  
- [in] Kullanıcı tanımlı.  
+ 'ndaki Kullanıcı tanımlı.  
   
  `inBufferSize`  
- [in] Gelen istek için kullanılan giriş arabellek boyutu.  
+ 'ndaki Gelen istek için kullanılan giriş arabelleğinin boyutu.  
   
  `inBuffer`  
- [in] İstek içeren arabellek.  
+ 'ndaki İsteği içeren bir arabellek.  
   
  `outBufferSize`  
- [in] Yanıt için kullanılan çıkış arabelleği boyutu.  
+ 'ndaki Yanıt için kullanılan çıkış arabelleğinin boyutu.  
   
  `outBuffer`  
- [out] Yanıtı içeren arabellek.  
+ dışı Yanıtı içeren bir arabellek.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Request` Yöntemi belirtilmeyen özel işlemler eklenmesini kolaylaştırır. Diğer bir deyişle, bu yöntem, arabirim tanımı gözden geçirilmesini gerek kalmadan genişletilebilirlik sağlar.  
+ `Request` yöntemi, belirtilmeyen özel işlemlerin eklenmesini kolaylaştırır. Diğer bir deyişle, bu yöntem, arabirim tanımının düzeltilmesi gerekmeden genişletilebilirlik sağlar.  
   
- Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.  
+ Bu yöntem, hata ayıklama uygulamasının yazarı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** ClrData.idl, ClrData.h  
+ **Üst bilgi:** ClrData. IDL, ClrData. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

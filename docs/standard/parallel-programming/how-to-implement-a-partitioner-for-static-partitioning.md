@@ -5,22 +5,20 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - tasks, how to create a static partitioner
 ms.assetid: f4410508-cac6-4ba7-bef1-c5e68b2794f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 302d7d98d04e528d205edf38c3fa13bb3f2b2252
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 94fbb681b20b9c920c20df2a9017f75a9aa9a6ea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638265"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091528"
 ---
 # <a name="how-to-implement-a-partitioner-for-static-partitioning"></a>Nasıl yapılır: Statik Bölümleme için bir Bölümleyici Uygulama
-Aşağıdaki örnek, statik bölümleme gerçekleştiren PLINQ için basit ve özel bir bölümleyici uygulama yollarından biri gösterilmektedir. Dinamik bölümleri bölümleyici desteklemez, gelen tüketilebilir değildir, çünkü <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>. Bu özel bölümleyici, artan bir işleme zaman miktarı gerektiren her öğe için veri kaynakları için varsayılan aralık bölümleyici hızlandırmayı sağlayabilir.  
+Aşağıdaki örnek, statik bölümlendirme gerçekleştiren PLıNQ için basit bir özel bölümleyici uygulamak için bir yol gösterir. Bölümleyici dinamik bölümleri desteklemediğinden, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>tüketilebilir değildir. Bu belirli bir bölümleyici, her öğenin artan miktarda işleme süresi gerektirdiği veri kaynakları için varsayılan Aralık bölümleyici 'nin üzerinde iyileşme sağlayabilir.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[TPL_Partitioners#05](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioners.cs#05)]  
   
- Bu örnekte bölümleri işleme süresinde her öğe için doğrusal bir artışı varsayımına dayanır. Gerçek dünyada, işlem süreleri bu şekilde tahmin etmek zor olabilir. Statik bölümleyici belirli veri kaynağı ile kullanıyorsanız, bölümleme formülü kaynağı için en iyi duruma getirme, Yük Dengeleme mantığı ekleyebilir veya bir öbek yaklaşım gösterildiği şekilde bölümleme kullanın [nasıl yapılır: Dinamik bölümleri uygulama](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+ Bu örnekteki bölümler her öğe için işleme zamanında doğrusal bir artışın varsayımına dayanır. Gerçek dünyada, işleme sürelerini bu şekilde tahmin etmek zor olabilir. Belirli bir veri kaynağıyla statik bir bölümleyici kullanıyorsanız, kaynağın bölümlendirme formülünü iyileştirebilir, Yük Dengeleme mantığını ekleyebilir veya [nasıl yapılır: dinamik bölümleri uygulama](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)bölümünde gösterildiği gibi öbek bölümleme yaklaşımını kullanabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

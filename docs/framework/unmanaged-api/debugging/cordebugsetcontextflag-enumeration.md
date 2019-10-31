@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e959ce7a77ad6ceb7f2fc848193cbd9fff028279
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 251c96042e8e56112015fb869176c708322267f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739610"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097261"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag Numaralandırması
-Bağlam etkin olup olmadığını belirtir (veya yaprak) çerçevesi yığın üzerinde veya başka bir çerçeveden geriye doğru izleme tarafından hesaplanır.  
+Bağlamın yığındaki etkin (veya yaprak) kareden mi olduğunu yoksa başka bir çerçeveden geriye doğru bir şekilde mi hesaplandığını gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,20 +38,20 @@ typedef enum CorDebugSetContextFlag
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|SET_CONTEXT_FLAG_ACTIVE_FRAME|İş parçacığının etkin bağlam bağlamdır.|  
-|SET_CONTEXT_FLAG_UNWIND_FRAME|Bağlamı başka bir çerçeveden geriye doğru izleme hesaplandıktan.|  
+|SET_CONTEXT_FLAG_ACTIVE_FRAME|Bağlam, iş parçacığının etkin bağlamıdır.|  
+|SET_CONTEXT_FLAG_UNWIND_FRAME|Bağlam, başka bir çerçeveden geriye doğru geri sarım tarafından hesaplandı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CorDebugSetContextFlag` tarafından kullanılan değerleri sağlar [Icordebugstackwalk::setcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) yöntemi.  
+ `CorDebugSetContextFlag`, [ıcordebugstackyürüme:: SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) yöntemi tarafından kullanılan değerleri sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

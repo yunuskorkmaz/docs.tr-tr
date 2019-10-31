@@ -2,19 +2,17 @@
 title: Windows Forms Yapılandırma Bölümü
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e76e11ef8bb39d72cb16655c948354bc326e75bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a54df0b6301f1aae14d5561c91c6792cb0a1620
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913093"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109820"
 ---
 # <a name="windows-forms-configuration-section"></a>Windows Forms Yapılandırma Bölümü
 Windows Forms yapılandırma ayarları, Windows Forms uygulamanın çok Monitor desteği, yüksek DPı desteği ve diğer önceden tanımlanmış yapılandırma ayarları gibi özelleştirilmiş uygulama ayarları hakkında bilgi depolamasına ve almasına izin verir.
 
-Windows Forms uygulama yapılandırma ayarları bir uygulama yapılandırma dosyasının `System.Windows.Forms.ApplicationConfigurationSection` öğesinde saklanır.
+Windows Forms uygulama yapılandırma ayarları bir uygulama yapılandırma dosyasının `System.Windows.Forms.ApplicationConfigurationSection` öğesinde depolanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,9 +46,9 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-.NET Framework 4,7 ' den başlayarak, `<System.Windows.Forms.ApplicationConfigurationSection>` öğesi, .NET Framework son sürümlerinde eklenen özelliklerden yararlanmak için Windows Forms uygulamalarını yapılandırmanıza olanak tanır. 
+.NET Framework 4,7 ' den başlayarak `<System.Windows.Forms.ApplicationConfigurationSection>` öğesi, .NET Framework son sürümlerinde eklenen özelliklerden yararlanmak için Windows Forms uygulamaları yapılandırmanıza olanak tanır. 
 
-Öğesi, her biri belirli bir yapılandırma ayarını [`<add>`](windows-forms-add-configuration-element.md) tanımlayan bir veya daha fazla alt öğe içerebilir. `<System.Windows.Forms.ApplicationConfigurationSection>`
+`<System.Windows.Forms.ApplicationConfigurationSection>` öğesi, her biri belirli bir yapılandırma ayarını tanımlayan bir veya daha fazla alt öğe [`<add>`](windows-forms-add-configuration-element.md) öğesi içerebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

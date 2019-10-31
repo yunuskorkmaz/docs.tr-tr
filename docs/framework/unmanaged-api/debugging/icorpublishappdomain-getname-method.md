@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b518a3be939c70b207a71d79a3d362dba26fd3d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2f91891164f1f80617cab10347eb4a7a08762c10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774196"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140346"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName Yöntemi
-Bu tarafından temsil edilen uygulama etki alanının adını alır [Icorpublishappdomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
+Bu [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)tarafından temsil edilen uygulama etki alanının adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,27 +38,27 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- [in] Boyutu `szName` dizisi.  
+ 'ndaki `szName` dizisinin boyutu.  
   
  `pcchName`  
- [out] Döndürülen null karakter de dahil olmak üzere geniş karakter sayısı için bir işaretçi `szName` dizisi.  
+ dışı `szName` dizisinde döndürülen, null karakter dahil olmak üzere geniş karakter sayısına yönelik bir işaretçi.  
   
  `szName`  
- [out] Dizi adı depolanacağı.  
+ dışı Adın kaydedileceği bir dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa `szName` kullanmaktan, `GetName` yöntemi kopyalar kadar `cchName` (null Sonlandırıcı dahil) karakterlerine `szName`. Null olmayan bir döndürülürse `pcchName`, (null Sonlandırıcı dahil) adında gerçek sayısını depolanan `szName` dizisi.  
+ `szName` null değilse `GetName` yöntemi, `szName``cchName` karaktere (null Sonlandırıcı dahil) kopyalar. `pcchName`null olmayan bir değer döndürülürse, ad içindeki gerçek karakter sayısı (null Sonlandırıcı dahil) `szName` dizisinde depolanır.  
   
- `GetName` Yöntemi karakterlerinin kaçının tutulacağını kopyalanan bağımsız olarak bir S_OK HRESULT döndürür.  
+ `GetName` yöntemi, kaç karakter kopyalandığına bakmaksızın S_OK HRESULT döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorPub.idl, CorPub.h  
+ **Üst bilgi:** CorPub. IDL, CorPub. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

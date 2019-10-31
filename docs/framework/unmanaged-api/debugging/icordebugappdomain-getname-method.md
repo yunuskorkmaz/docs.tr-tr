@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 535d94688d02a7315529d17fae555fba457bbb86
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c9aa6792885c685195049948a540453b1f5235e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737878"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110306"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName Yöntemi
 Uygulama etki alanının adını alır.  
@@ -40,22 +38,22 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- [in] Boyutu `szName` dizisi. Bu değer, bu yöntem sorgu moduna sıfıra ayarlayın.  
+ 'ndaki `szName` dizisinin boyutu. Bu yöntemi sorgu moduna almak için bu değeri sıfır olarak ayarlayın.  
   
  `pcchName`  
- [out] Boyut adı ya da gerçekte döndürülen karakter sayısı için bir işaretçi `szName`. Sorgu modunda, bu değer ne büyüklükte bir arabellek bilmeniz arayan olanak tanır. adı ayrılamıyor.  
+ dışı Adın boyutuna veya aslında `szName`geri döndürülen karakterlerin sayısına yönelik bir işaretçi. Sorgu modunda, bu değer çağıranın ad için ne kadar büyük bir arabellek ayrılacağını bilmesini sağlar.  
   
  `szName`  
- [out] Uygulama etki alanı adını depolar dizisi.  
+ dışı Uygulama etki alanının adını depolayan bir dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir hata ayıklayıcı çağırır `GetName` adı gerekli bir arabellek boyutunu almak için bir kez yöntemi. Hata ayıklayıcı arabelleği ayırır ve ardından arabellek doldurmak için ikinci bir kez yöntemini çağırır. Adı boyutunu almak için birinci çağrı olarak adlandırılır *sorgu modu*.  
+ Bir hata ayıklayıcı, ad için gereken bir arabellek boyutunu almak için `GetName` yöntemini bir kez çağırır. Hata ayıklayıcı arabelleği ayırır ve sonra arabelleği dolduracak ikinci kez yöntemi çağırır. Adın boyutunu almak için ilk çağrı *sorgu modu*olarak adlandırılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

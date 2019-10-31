@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ae765f0-93b2-4b6f-aea1-7b0cf44e04a7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1804a14c1197148afbffb5ec2cb4f29cb9ff019e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f0dd814ad5adfa1b0dd7199530a3f993634a548
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774560"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121792"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses Yöntemi
-Bu bilgisayar üzerinde çalışan yönetilen işlemler için bir numaralandırıcı alır.  
+Bu bilgisayarda çalışan yönetilen işlemlere yönelik bir Numaralandırıcı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,24 +36,24 @@ HRESULT EnumProcesses (
   
 ## <a name="parameters"></a>Parametreler  
  `Type`  
- Değerini [COR_PUB_ENUMPROCESS](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md) alınacak işlem türünü belirten sabit listesi. Geçerli sürümde, yalnızca COR_PUB_MANAGEDONLY geçerli değil.  
+ Alınacak işlemin türünü belirten [COR_PUB_ENUMPROCESS](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md) numaralandırması değeri. Geçerli sürümde yalnızca COR_PUB_MANAGEDONLY geçerlidir.  
   
  `ppIEnum`  
- Adresine bir işaretçi bir [Icorpublishprocessenum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md) Numaralandırıcı işlemlerin örneği.  
+ İşlemlerin numaralandırıcısı olan [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md) örneğinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Numaralandırıcının toplama işlemlerinin ne zaman çalışan işlemler üzerinde bir anlık görüntü alır `EnumProcesses` yöntemi çağrılır. Numaralandırıcı önce sonlandırma veya sonrasında herhangi bir işlem içermez `EnumProcesses` çağrılır.  
+ Numaralandırıcının işlem koleksiyonu, `EnumProcesses` yöntemi çağrıldığında çalışan işlemlerin anlık görüntüsünü temel alır. Numaralandırıcı, `EnumProcesses` çağrıldıktan sonra, önce veya başlamadan sonra sona erecek herhangi bir işlem içermez.  
   
- `EnumProcesses` Yöntemi çağrılabilir birden çok kez bu [Icorpublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md) işlemlerinin yeni ve güncel bir koleksiyon oluşturmak için örneği. Mevcut koleksiyonlar sonraki çağrılar tarafından etkilenmez `EnumProcesses` yöntemi.  
+ `EnumProcesses` yöntemi bu [ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md) örneğinde birden çok kez çağrılabilir ve bu işlemlerin yeni bir güncellik koleksiyonu oluşturulur. Mevcut koleksiyonlar `EnumProcesses` yönteminin sonraki çağrılarından etkilenmeyecektir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorPub.idl, CorPub.h  
+ **Üst bilgi:** CorPub. IDL, CorPub. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

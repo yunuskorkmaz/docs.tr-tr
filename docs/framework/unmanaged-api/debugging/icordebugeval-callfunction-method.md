@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 7f470c5c-e1c0-4d8d-aad8-830f113ae751
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65225281fe3abaa20e69e96f4cd4d2a4b03a87ce
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4ac26ef4449dc02230f26b1247616b4587d217b7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629935"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085167"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction Yöntemi
 
-Belirtilen işlev çağrısı ayarlar.
+Belirtilen işleve bir çağrı kurar.
 
-Bu yöntem .NET Framework 2.0 sürümünde artık kullanılmıyor. Kullanım [Icordebugeval2::callparameterizedfunction](icordebugeval2-callparameterizedfunction-method.md) yerine.
+Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor. Bunun yerine [ICorDebugEval2:: CallParameterizedFunction](icordebugeval2-callparameterizedfunction-method.md) kullanın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,27 +41,27 @@ HRESULT CallFunction (
 ## <a name="parameters"></a>Parametreler
 
 `pFunction`\
-[in] İşaretçi ICorDebugFunction nesneye çağrılacak işlevi belirtir.
+'ndaki Çağrılacak işlevi belirten ICorDebugFunction nesnesine yönelik işaretçi.
 
 `nArgs`\
-[in] İşlev için bağımsız değişken sayısı.
+'ndaki İşlevin bağımsız değişken sayısı.
 
 `ppArgs`\
-[in] İşleve geçirilecek bağımsız değişken belirtir Icordebugvalue nesneyi işaret her biri bir işaretçiler dizisi.
+'ndaki Her biri, işleve geçirilecek bir bağımsız değişken belirten ICorDebugValue nesnesine işaret eden bir işaretçiler dizisi.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sanal bir işlev ise `CallFunction` sanal gönderim yapar. İşlev farklı uygulama etki alanında ise, tüm bağımsız değişkenler de, uygulama etki alanında olduğu sürece, bir geçiş meydana gelir.
+İşlev sanal ise `CallFunction` sanal dağıtım yapar. İşlev farklı bir uygulama etki alanında ise, tüm bağımsız değişkenler de bu uygulama etki alanında olduğu sürece bir geçiş meydana gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
-**Üst bilgi:** CorDebug.idl, CorDebug.h
+**Üst bilgi:** CorDebug. IDL, CorDebug. h
 
-**Kitaplığı:** CorGuids.lib
+**Kitaplık:** Corguid. lib
 
-**.NET framework sürümleri:** 1.1, 1.0
+**.NET Framework sürümleri:** 1,1, 1,0
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

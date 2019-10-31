@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 78cbb98d4fb3887b82b2432451c47ac64d96ab91
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5202e4c26220bc9ea08d6d941ee5a7821cbbdefd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052027"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122232"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework'te Yan Yana Yürütme
 
@@ -63,7 +61,7 @@ Her bir yönetilen uygulamanın ve bileşeninin taşınabilir yürütülebilir (
   
 ### <a name="runtime-version-information-in-the-application-configuration-file"></a>Uygulama yapılandırma dosyasındaki çalışma zamanı sürüm bilgileri  
 
-PE dosya üstbilgisindeki bilgilere ek olarak, bir uygulama çalışma zamanı sürüm bilgilerini sağlayan bir uygulama yapılandırma dosyası ile dağıtılabilir. Uygulama yapılandırma dosyası, uygulama geliştiricisi tarafından oluşturulan ve bir uygulamayla birlikte gelen XML tabanlı bir dosyadır. Bu dosyada varsa, [ \<Başlangıç > bölümünün](../configure-apps/file-schema/startup/startup-element.md) [ requiredRuntime>öğesi,çalışmazamanınınhangisürümlerininveuygulamanınhangisürümlerinindesteklediğinibelirtir.\<](../configure-apps/file-schema/startup/requiredruntime-element.md) Uygulamanın çalışma zamanının farklı sürümleriyle uyumluluğunu test etmek için bu dosyayı test içinde de kullanabilirsiniz.  
+PE dosya üstbilgisindeki bilgilere ek olarak, bir uygulama çalışma zamanı sürüm bilgilerini sağlayan bir uygulama yapılandırma dosyası ile dağıtılabilir. Uygulama yapılandırma dosyası, uygulama geliştiricisi tarafından oluşturulan ve bir uygulamayla birlikte gelen XML tabanlı bir dosyadır. [\<startup > bölümünün](../configure-apps/file-schema/startup/startup-element.md) [\<requiredRuntime > öğesi](../configure-apps/file-schema/startup/requiredruntime-element.md) bu dosyada mevcutsa, çalışma zamanının hangi sürümlerinin ve uygulamanın hangi sürümlerinin desteklediğini belirtir. Uygulamanın çalışma zamanının farklı sürümleriyle uyumluluğunu test etmek için bu dosyayı test içinde de kullanabilirsiniz.  
   
 COM ve COM+ uygulamaları dahil olmak üzere yönetilmeyen kod, çalışma zamanının yönetilen kodla etkileşim kurmak için kullandığı uygulama yapılandırma dosyalarına sahip olabilir. Uygulama yapılandırma dosyası, COM aracılığıyla etkinleştirebileceğiniz tüm yönetilen kodları etkiler. Dosya, derleme yeniden yönlendirmelerinin yanı sıra desteklediği çalışma zamanı sürümlerini belirtebilir. Varsayılan olarak, yönetilen koda çağıran COM birlikte çalışma uygulamaları, bilgisayarda yüklü olan çalışma zamanının en son sürümünü kullanır.  
   
@@ -83,7 +81,7 @@ Ortak dil çalışma zamanı, bir uygulama için hangi çalışma zamanının ha
   
 Bir uygulama yapılandırma dosyası varsa, çalışma zamanı, aşağıdaki işlemin sonuçlarına göre yüklenecek uygun çalışma zamanı sürümünü belirler:  
   
-1. Çalışma zamanı, uygulama yapılandırma dosyasındaki [ \<supportedRuntime > öğesi](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesini inceler. **\<** SupportedRuntime > öğesinde belirtilen  **\<** bir veya daha fazla desteklenen çalışma zamanı sürümü varsa, çalışma zamanı ilk supportedRuntime > öğesi tarafından belirtilen çalışma zamanı sürümünü yükler. Bu sürüm kullanılamıyorsa, çalışma zamanı sonraki  **\<supportedRuntime >** öğesini inceler ve belirtilen çalışma zamanı sürümünü yüklemeye çalışır. Bu çalışma zamanı sürümü kullanılamıyorsa, sonraki  **\<supportedRuntime >** öğeleri incelenir. Desteklenen çalışma zamanı sürümlerinin hiçbiri kullanılabilir değilse, çalışma zamanı bir çalışma zamanı sürümü yükleyemez ve kullanıcıya bir ileti görüntüler (bkz. Adım 3).  
+1. Çalışma zamanı, uygulama yapılandırma dosyasında [\<supportedRuntime > öğesi](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesini inceler. **\<supportedruntime >** öğesinde belirtilen bir veya daha fazla desteklenen çalışma zamanı sürümü varsa, çalışma zamanı Ilk **\<supportedRuntime >** öğesi tarafından belirtilen çalışma zamanı sürümünü yükler. Bu sürüm kullanılamıyorsa, çalışma zamanı bir sonraki **\<supportedruntime >** öğesini inceler ve belirtilen çalışma zamanı sürümünü yüklemeye çalışır. Bu çalışma zamanı sürümü kullanılamıyorsa, sonraki **\<supportedRuntime >** öğeleri incelenir. Desteklenen çalışma zamanı sürümlerinin hiçbiri kullanılabilir değilse, çalışma zamanı bir çalışma zamanı sürümü yükleyemez ve kullanıcıya bir ileti görüntüler (bkz. Adım 3).  
   
 2. Çalışma zamanı, uygulamanın yürütülebilir dosyasının PE dosya üstbilgisini okur. PE dosya üst bilgisi tarafından belirtilen çalışma zamanı sürümü kullanılabiliyorsa, çalışma zamanı bu sürümü yükler. Belirtilen çalışma zamanı sürümü kullanılamıyorsa, çalışma zamanı Microsoft tarafından, PE üstbilgisindeki çalışma zamanı sürümüyle uyumlu olacak şekilde belirlenen bir çalışma zamanı sürümü arar. Bu sürüm bulunamazsa, işlem adım 3 ' e devam eder.  
   
@@ -99,9 +97,9 @@ Bir uygulama yapılandırma dosyası varsa, çalışma zamanı, aşağıdaki iş
 
 Yan yana sorunların olası bir kaynağı olduklarından, kısmen nitelenmiş derleme başvuruları yalnızca bir uygulama dizini içindeki derlemelere bağlamak için kullanılabilir. Kodunuzda kısmen nitelikli derleme başvurularından kaçının.  
   
-Koddaki kısmen nitelikli derleme başvurularını azaltmak için, kodda oluşan kısmen nitelikli derleme başvurularını tam olarak nitelemek üzere bir uygulama yapılandırma dosyasında [ \<qualifyAssembly >](../configure-apps/file-schema/runtime/qualifyassembly-element.md) öğesini kullanabilirsiniz. Yalnızca kısmi başvuruda ayarlanmamış alanları belirtmek için  **qualifyAssembly>öğesinikullanın.\<** **FullName** özniteliğinde listelenen derleme kimliği, derleme adını, ortak anahtarı, kültürü ve sürümü tam olarak nitelemek için gereken tüm bilgileri içermelidir.  
+Kodda kısmen nitelikli derleme başvurularını azaltmak için bir uygulama yapılandırma dosyasında [\<qualifyAssembly >](../configure-apps/file-schema/runtime/qualifyassembly-element.md) öğesini kullanarak kodda oluşan kısmen nitelikli derleme başvurularını tam olarak niteleyebilirsiniz. Yalnızca kısmi başvuruda ayarlanmamış alanları belirtmek için **\<qualifyAssembly >** öğesini kullanın. **FullName** özniteliğinde listelenen derleme kimliği, derleme adını, ortak anahtarı, kültürü ve sürümü tam olarak nitelemek için gereken tüm bilgileri içermelidir.  
   
- Aşağıdaki örnek, adlı `myAssembly`bir derlemeyi tam olarak nitelendirmek için uygulama yapılandırma dosyası girişini gösterir.  
+ Aşağıdaki örnek, `myAssembly`adlı bir derlemeyi tam olarak nitelendirmek için uygulama yapılandırma dosya girişini gösterir.  
   
 ```xml  
 <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">   
@@ -113,7 +111,7 @@ publicKeyToken=...,
 </assemblyBinding>   
 ```  
   
- Bir derleme Load açıklaması her başvurduğunda `myAssembly`, bu yapılandırma dosyası ayarları çalışma zamanının kısmen nitelikli `myAssembly` başvuruyu tam nitelikli başvuruya otomatik olarak çevirmesine neden olur. Örneğin, Assembly. Load ("myAssembly") derleme. Load ("myAssembly, Version = 1.0.0.0, publicKeyToken =..., Culture = neutral") olur.  
+ Bir derleme yükleme bildiriminde `myAssembly`her başvurduğunda, bu yapılandırma dosyası ayarları çalışma zamanının kısmen nitelenmiş `myAssembly` başvurusunu tam nitelikli bir başvuruya otomatik olarak çevirmesine neden olur. Örneğin, Assembly. Load ("myAssembly") derleme. Load ("myAssembly, Version = 1.0.0.0, publicKeyToken =..., Culture = neutral") olur.  
   
 > [!NOTE]
 > Genel derleme önbelleğinden kısmen Başvurulmuş derlemelerin yüklenmesini engelleyen ortak dil çalışma zamanı kısıtlamasını atlamak için **LoadWithPartialName** yöntemini kullanabilirsiniz. Bu yöntem, yan yana yürütmede sorunlara kolayca yol açabileceği için yalnızca uzaktan iletişim senaryolarında kullanılmalıdır.  
@@ -122,7 +120,7 @@ publicKeyToken=...,
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Nasıl yapılır: Otomatik bağlama yeniden yönlendirmeyi etkinleştirme ve devre dışı bırakma](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Bir uygulamanın bir derlemenin belirli bir sürümüne nasıl bağlanacağını açıklar.|  
+|[Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Bir uygulamanın bir derlemenin belirli bir sürümüne nasıl bağlanacağını açıklar.|  
 |[Bütünleştirilmiş Kod Bağlama Yönlendirmesini Yapılandırma](configuring-assembly-binding-redirection.md)|Derleme bağlama başvurularının nasıl belirli bir sürümdeki .NET Framework derlemelerine yeniden yönlendirildiğini açıklar.|  
 |[İşlem İçi Yan Yana Yürütme](in-process-side-by-side-execution.md)|Tek bir işlemde CLR'nin birden çok sürümünü çalıştırılacak işlem içi yan yana çalışma zamanlı ana makine etkinleştirmenin nasıl kullanabileceğini açıklanır.|  
 |[.NET’te bütünleştirilmiş kodlar](../../standard/assembly/index.md)|Derlemeler üzerine kavramsal bir genel bakış sağlar.|  

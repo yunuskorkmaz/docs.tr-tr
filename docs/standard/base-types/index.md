@@ -7,34 +7,32 @@ helpviewer_keywords:
 - base types
 - type system, base types
 ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e78da65eb8ef7db6dd01c1c1d3d313ac8946431a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fa22ce749dc7d117a4a37de5d09abd9892eeab7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051201"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103540"
 ---
 # <a name="working-with-base-types-in-net"></a>.NET içinde Temel Türlerle Çalışma
-Bu bölümde, biçimlendirme, dönüştürme ve yaygın işlemler de dahil olmak üzere, .NET temel tür işlemleri açıklanmaktadır.  
+Bu bölümde biçimlendirme, dönüştürme ve yaygın işlemler de dahil olmak üzere .NET temel tür işlemleri açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [.NET Framework'te tür dönüştürme](../../../docs/standard/base-types/type-conversion.md)  
- Bir türden diğerine dönüştürün açıklar.  
+ [.NET Framework dönüştürme türü](../../../docs/standard/base-types/type-conversion.md)  
+ Bir türden diğerine dönüştürmeyi açıklar.  
   
  [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
- Dize biçim belirticilerini kullanarak dizelerinin nasıl biçimlendirileceğini açıklar.  
+ Dize biçim belirticilerini kullanarak dizelerin nasıl biçimlendirileceğini açıklar.  
   
  [Dizeleri Düzenleme](../../../docs/standard/base-types/manipulating-strings.md)  
- Düzenleme ve biçim dizeleri açıklar.  
+ Dizelerin nasıl değiştirileceğini ve biçimlendirileceğini açıklar.  
   
  [Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)  
- Dizeleri .NET Framework türlerine dönüştüren açıklar.  
+ Dizelerin .NET Framework türlerine nasıl dönüştürüleceğini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Ortak Tür Sistemi](../../../docs/standard/base-types/common-type-system.md)  
- .NET Framework tarafından kullanılan türleri açıklanmaktadır.  
+ .NET Framework tarafından kullanılan türleri açıklar.  
   
  [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)  
  Saat dilimiyle uyumlu uygulamalarda saat dilimleri ve saat dilimi dönüşümleri ile nasıl çalışıldığını açıklar.

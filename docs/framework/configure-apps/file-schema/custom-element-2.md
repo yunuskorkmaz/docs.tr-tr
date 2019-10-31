@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 890269857aaa00ce62195ccb2f4cb184b363b61e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d73c07d58bb226346cb99a1fe50b12bb0e7e746e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921031"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118536"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler ve DictionarySectionHandler için özel öğe
 
-<xref:System.Configuration.NameValueSectionHandler> Ve<xref:System.Configuration.DictionarySectionHandler> sınıflarını kullanan özel yapılandırma bölümlerinin ayarlarını tanımlar.
+<xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> sınıflarını kullanan özel yapılandırma bölümlerinin ayarlarını tanımlar.
 
-[ **\<Yapılandırma >** ](configuration-element.md)\
+[ **\<configuration >** ](configuration-element.md) \
 &nbsp;&nbsp; **\<sectionName >**
 
 ## <a name="attributes"></a>Öznitelikler
@@ -36,9 +36,9 @@ Yok.
 
 |     | Açıklama |
 | --- | ----------- |
-| ve için<xref:System.Configuration.NameValueSectionHandler> > ekleyin [ **\<** ](add-element-for-custom-2.md)<xref:System.Configuration.DictionarySectionHandler>  | Özel uygulama ayarları ekler. |
-| ve için<xref:System.Configuration.NameValueSectionHandler> > Kaldır [ **\<** ](remove-element-for-custom-2.md)<xref:System.Configuration.DictionarySectionHandler> | Daha önce tanımlanmış bir ayarı kaldırır. |
-| ve için<xref:System.Configuration.NameValueSectionHandler> > Temizle [ **\<** ](clear-element-for-custom-2.md)<xref:System.Configuration.DictionarySectionHandler> | Bir bölümdeki önceden tanımlanmış tüm ayarları temizler. |
+| <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> için [ **\<ekleyin**](add-element-for-custom-2.md)  | Özel uygulama ayarları ekler. |
+| <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> için [ **\<kaldırın**](remove-element-for-custom-2.md) | Daha önce tanımlanmış bir ayarı kaldırır. |
+| <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> için [ **\<> Temizle**](clear-element-for-custom-2.md) | Bir bölümdeki önceden tanımlanmış tüm ayarları temizler. |
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -53,9 +53,9 @@ Aşağıdaki tabloda, ConfigurationSettings. GetConfig yönteminin her bir yapı
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, <xref:System.Configuration.DictionarySectionHandler> ve <xref:System.Configuration.NameValueSectionHandler> sınıflarını kullanan bölümlerin nasıl bildirilemeyeceğini gösterir.
+Aşağıdaki örnek, <xref:System.Configuration.DictionarySectionHandler> ve <xref:System.Configuration.NameValueSectionHandler> sınıfları kullanan bölümlerin nasıl bildirilemeyeceğini gösterir.
 
-İlk özel öğe <xref:System.Configuration.DictionarySectionHandler>  **\<** , `System.dll` derlemedeki sınıf tarafından okunan ayarları içeren dictionarysample >. İkinci özel öğe <xref:System.Configuration.NameValueSectionHandler> `System.dll`  **\<** , derleme içindeki sınıf tarafından okunan ayarları içeren MySection >.
+İlk özel öğe, `System.dll` derlemesinde <xref:System.Configuration.DictionarySectionHandler> sınıfı tarafından okunan ayarları içeren **\<dictionarySample >** . İkinci özel öğe, `System.dll` derlemesinde <xref:System.Configuration.NameValueSectionHandler> sınıfı tarafından okunan ayarları içeren **mySection >\<** .
 
 ```xml
 <configuration>

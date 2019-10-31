@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 269e3702c21532f377735ba6087abb1603dde4f7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e30b6f2d2254d2d107c4c82a2c5664850ce6ec23
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796322"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123063"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly İşlevi
 Belirtilen derlemenin yönetilip yönetilmediğini gösteren bir değer alır.  
@@ -48,17 +46,17 @@ HRESULT IsFrameworkAssembly (
  'ndaki Derlemenin benzersiz kimliğini içeren bir Uncanonicalized dizesi.  
   
  `pccSize`  
- 'ndaki Boyutu `pwzFrameworkAssemblyIdentity`.  
+ 'ndaki `pwzFrameworkAssemblyIdentity`boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `pwzAssemblyReference` Parametresi, bir derlemenin adını içeren bir karakter dizesinin bir işaretçisidir.  
+ `pwzAssemblyReference` parametresi, bir derlemenin adını içeren bir karakter dizesinin bir işaretçisidir.  
   
- Bu derleme .NET Framework bir parçasıysa, `pbIsFrameworkAssembly` parametresi bir Boolean `true`değeri içerir.  
+ Bu derleme .NET Framework bir parçasıysa, `pbIsFrameworkAssembly` parametresi bir `true`Boolean değeri içerir.  
   
- Adlandırılmış derleme .NET Framework bir parçası değilse veya `pwzAssemblyReference` parametre bir derlemeyi isimlendirilemez, `pbIsFrameworkAssembly` Boolean değeri `false`içerir.  
+ Adlandırılmış derleme .NET Framework bir parçası değilse veya `pwzAssemblyReference` parametresi bir derlemeyi isimlendirilemez `pbIsFrameworkAssembly` Boolean değeri `false`içerecektir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

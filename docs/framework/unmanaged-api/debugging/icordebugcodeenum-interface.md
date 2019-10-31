@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5589171-a4a0-4c00-bbdc-6e0a42233b75
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a771100ad4d63173fdb3b1ddea5ae3d67fbbc7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f4baaf5e4f5117ee936fa6d758798c340551c48b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960670"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121075"
 ---
 # <a name="icordebugcodeenum-interface"></a>ICorDebugCodeEnum Arabirimi
 
@@ -31,7 +29,7 @@ ms.locfileid: "69960670"
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki `ICorDebugCode` belirtilen örnek sayısını alır.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki belirtilen `ICorDebugCode` örneği sayısını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -39,11 +37,11 @@ ms.locfileid: "69960670"
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

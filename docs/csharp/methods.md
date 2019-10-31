@@ -1,16 +1,15 @@
 ---
 title: Yöntemler- C# kılavuz
 description: Yöntemlere, yöntem parametrelerine ve yöntem dönüş değerlerine genel bakış
-author: rpetrusha
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: b25fad09b530967c9bbfc83412632fc876842dcc
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f44c83408e884d76eef5e2b5abbca511fbae2a1f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035802"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101493"
 ---
 # <a name="methods"></a>Yöntemler
 

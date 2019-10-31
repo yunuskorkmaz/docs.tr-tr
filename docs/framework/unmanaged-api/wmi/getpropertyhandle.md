@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyHandle function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d72b0da43971a74a08a249b19dfc0d446eeb5e6a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5af003f0295e0b403727f9af6b03ab81c4b8bccb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798545"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101867"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle işlevi
 
@@ -53,7 +51,7 @@ HRESULT GetPropertyHandle (
 'ndaki Özellik adını içeren UTF16 kodlu karakterlerin null ile sonlandırılmış dizesi.
 
 `pType`\
-dışı Özelliğin CIM türünü temsil [`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) eden bir numaralandırma üyesine yönelik işaretçi.
+dışı Özelliğin CıM türünü temsil eden [`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) numaralandırma üyesine yönelik bir işaretçi.
 
 `pHandle`\
 dışı Özellik tanıtıcısını içeren tamsayıya yönelik bir işaretçi.
@@ -66,7 +64,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen özellik adı bulunamadı. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
-|`WBEM_E_NOT_SUPPORTED` | 0x8004100C | İstenen özellik türü `CIM_OBJECT` veya `CIM_ARRAY`. |
+|`WBEM_E_NOT_SUPPORTED` | 0x8004100C | İstenen özellik `CIM_OBJECT` veya `CIM_ARRAY`. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
 
 ## <a name="remarks"></a>Açıklamalar
@@ -75,13 +73,13 @@ Bu işlev, [IWbemClassObject:: GetPropertyHandle](/windows/desktop/api/wbemcli/n
 
 Bu tanıtıcıyı, özellik değerlerini okumak veya yazmak için [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) yöntemlerini kullanırken özellikleri tanımlamak için kullanabilirsiniz.
 
-Tutamaçları, `CIM_OBJECT` ve `CIM_ARRAY`dışındaki tüm veri türlerinin özellikleri için alınabilir. Döndürülen tutamaçlar bir sınıfın tüm örneklerinde çalışır.
+İşleyiciler, `CIM_OBJECT` ve `CIM_ARRAY`dışındaki tüm veri türlerinin özellikleri için alınabilir. Döndürülen tutamaçlar bir sınıfın tüm örneklerinde çalışır.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi** WMINet_Utils. IDL
+**Üst bilgi:** WMINet_Utils. IDL
 
 **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

@@ -16,14 +16,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 09c54e58ef25afa28d2681719284c358d90bddc2
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 6866da283cc7cdd180aada252007d67bd72cd862
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969070"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124091"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>COM için bir .NET Framework derlemesi paketleme
 
@@ -61,7 +59,7 @@ COM geliştiricileri, uygulamasında dahil etmek üzere plantıkları yönetilen
 
   Seçtiğiniz mekanizmaya bakılmaksızın, yalnızca sağladığınız derlemede tanımlanan ortak türler oluşturulan tür kitaplığına dahil edilir.
 
-Yönergeler için bkz [. nasıl yapılır: Tür kitaplıklarını ' de Win32 kaynakları olarak ekleyin. NET tabanlı uygulamalar](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).
+Yönergeler için bkz [. nasıl yapılır: tür kitaplıklarını Win32 kaynakları olarak ekleme. NET tabanlı uygulamalar](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 
@@ -73,9 +71,9 @@ Yönergeler için bkz [. nasıl yapılır: Tür kitaplıklarını ' de Win32 kay
 
 ## <a name="typelibconverter-class"></a>TypeLibConverter sınıfı
 
-**System. Runtime. Interop** ad alanında bulunan sınıfı,birderlemedebulunansınıflarıvearabirimleribircomtürkitaplığınadönüştürür.<xref:System.Runtime.InteropServices.TypeLibConverter> Bu API, önceki bölümde açıklanan tür kitaplığı verme programı ile aynı tür bilgilerini üretir.
+**System. Runtime. Interop** ad alanında bulunan <xref:System.Runtime.InteropServices.TypeLibConverter> sınıfı, bir derlemede bulunan sınıfları ve ARABIRIMLERI bir com tür kitaplığına dönüştürür. Bu API, önceki bölümde açıklanan tür kitaplığı verme programı ile aynı tür bilgilerini üretir.
 
-**TypeLibConverter sınıfı** öğesini uygular <xref:System.Runtime.InteropServices.ITypeLibConverter>.
+**TypeLibConverter sınıfı** <xref:System.Runtime.InteropServices.ITypeLibConverter>uygular.
 
 <a name="cpconpackagingassemblyforcomanchor3"></a>
 
@@ -99,4 +97,4 @@ Yönergeler için bkz [. nasıl yapılır: Tür kitaplıklarını ' de Win32 kay
 - [Bütünleştirilmiş Kod Güvenliği Konuları](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Bütünleştirilmiş Kodları COM ile Kaydetme](registering-assemblies-with-com.md)
-- [Nasıl yapılır: Tür kitaplıklarını uygulamalarda Win32 kaynakları olarak ekleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))
+- [Nasıl yapılır: uygulamalarda tür kitaplıklarını Win32 kaynakları olarak katıştırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

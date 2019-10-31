@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b25c47e101ad0fb8e8cbdbb2718a41c9be6c0c22
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 59dcb7ae6f27f8d049cd4dc2d313f7f1130fc503
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931980"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085258"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum Arabirimi
 
@@ -31,13 +29,13 @@ Bir hata ayıklama uygulaması tarafından kullanılan numaralandırıcıların 
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Bu `ICorDebugEnum` nesnenin bir kopyasını oluşturur.|  
+|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Bu `ICorDebugEnum` nesnesinin bir kopyasını oluşturur.|  
 |[GetCount Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Numaralandırmadaki öğelerin sayısını alır.|  
 |[Reset Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|İmleci numaralandırmanın başlangıcına kaydırır.|  
 |[Skip Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|İmleci belirtilen öğe sayısına göre numaralandırmada ileri doğru kaydırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Aşağıdaki Numaralandırıcılar öğesinden `ICorDebugEnum`türetilir:  
+ Aşağıdaki Numaralandırıcılar `ICorDebugEnum`türetilir:  
   
 - ICorDebugAppDomainEnum  
   
@@ -85,11 +83,11 @@ Bir hata ayıklama uygulaması tarafından kullanılan numaralandırıcıların 
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fae3673fe72d036802cb1a8366aaa2430c38884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac2d01121e81b545556fb082fa7b82c31cccf9da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927497"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118842"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler için özel öğe
 
-Bir \<Bölüm > öğesi tarafından tanımlanan ve <xref:System.Configuration.SingleTagSectionHandler> sınıfını kullanan özel bir yapılandırma bölümünde ayarları tanımlar.
+Bir \<bölümü > öğesi tarafından tanımlanan ve <xref:System.Configuration.SingleTagSectionHandler> sınıfını kullanan özel bir yapılandırma bölümünde ayarları tanımlar.
 
-[ **\<Yapılandırma >** ](configuration-element.md)   
+[ **\<yapılandırma >** ](configuration-element.md)   
 &nbsp;&nbsp; *\<sectionName >*
 
 ## <a name="syntax"></a>Sözdizimi
@@ -44,11 +44,11 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-SectionName > öğesi, [**configSections \<>** ](configsections-element-for-configuration.md) öğesinde bir [ **\<Bölüm >** ](section-element.md) etiketi tarafından tanımlanan özel bir öğedir.  **\<** Yapılandırma sistemi, çağırdığınızda <xref:System.Collections.IDictionary> <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>bir nesne döndürür.
+**\<sectionName >** öğesi, [ **\<configSections >** ](configsections-element-for-configuration.md) öğesinde bir [ **\<bölümü >** ](section-element.md) etiketi tarafından tanımlanan özel bir öğedir. Yapılandırma sistemi, <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>çağırdığınızda bir <xref:System.Collections.IDictionary> nesnesi döndürür.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, <xref:System.Configuration.SingleTagSectionHandler> sınıf tarafından okunan ayarları içeren  **\<sampleSection >** adlı özel bir öğe bildirir:
+Aşağıdaki örnek, <xref:System.Configuration.SingleTagSectionHandler> sınıfı tarafından okunan ayarları içeren **\<sampleSection >** adlı özel bir öğe bildirir:
 
 ```xml
 <configuration>

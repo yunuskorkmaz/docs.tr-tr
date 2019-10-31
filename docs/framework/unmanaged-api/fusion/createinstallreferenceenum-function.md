@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80dbbbf8-54fc-4894-b74a-0179d3201083
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d696326ff8861ed8496474f76e9eaf89b4ead3e8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f089769f854bad5d3e572e0307734e06e72ca89c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795397"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108563"
 ---
 # <a name="createinstallreferenceenum-function"></a>CreateInstallReferenceEnum İşlevi
 Belirtilen derlemeye ait başvuruların bir listesini temsil eden bir [IInstallReferenceEnum](iinstallreferenceenum-interface.md) örneği için bir işaretçi alır.  
@@ -41,7 +39,7 @@ HRESULT CreateInstallReferenceEnum (
   
 ## <a name="parameters"></a>Parametreler  
  `ppRefEnum`  
- dışı Döndürülen `IInstallReferenceEnum` işaretçi.  
+ dışı Döndürülen `IInstallReferenceEnum` işaretçisi.  
   
  `pName`  
  'ndaki Başvuruların numaralandırılacağı derlemeyi tanımlayan [IAssemblyName](iassemblyname-interface.md) .  
@@ -50,14 +48,14 @@ HRESULT CreateInstallReferenceEnum (
  'ndaki Numaralandırıcının davranışını etkileyen bayraklar.  
   
  `pvReserved`  
- 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `pvReserved`null bir başvuru olmalıdır.  
+ 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `pvReserved`, null bir başvuru olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** Fusion. h  
+ **Üst bilgi:** Fusion. h  
   
- **Kitaplığı** Fusion. dll ve mscorwks. dll. .NET Framework doğru sürümünü hedefliyorsanız emin olmak için mscorwks. dll yerine Fusion. dll kullanın.  
+ **Kitaplık:** Fusion. dll ve mscorwks. dll. .NET Framework doğru sürümünü hedefliyorsanız emin olmak için mscorwks. dll yerine Fusion. dll kullanın.  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

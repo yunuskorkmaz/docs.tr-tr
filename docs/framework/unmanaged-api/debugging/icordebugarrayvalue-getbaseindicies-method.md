@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 868b339b-acdb-4fe0-91c7-b85f4fba99eb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f4ecb700a19a4e06f9f0056881fe3cdb9753aae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e103401b85626e53db53e1894c22b161774e5163
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737602"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088682"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>ICorDebugArrayValue::GetBaseIndicies Metodu
-Dizideki her boyutun temel dizini alır.  
+Dizideki her boyutun temel dizinini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,16 +37,16 @@ HRESULT GetBaseIndicies (
   
 ## <a name="parameters"></a>Parametreler  
  `cdim`  
- [in] Bu boyut sayısını `ICorDebugArrayValue` nesne. Bu değer ayrıca boyutudur `indicies` boyutuna boyutlarını sayısına eşit olduğundan dizi `ICorDebugArrayValue` nesne.  
+ 'ndaki Bu `ICorDebugArrayValue` nesnesinin boyut sayısı. Boyutu, `ICorDebugArrayValue` nesnesinin boyut sayısına eşit olduğundan, bu değer ayrıca `indicies` dizisinin boyutudur.  
   
  `indicies`  
- [out] Tamsayı, her biri olan bu boyutun temel dizini (diğer bir deyişle, başlangıç dizini) dizisi `ICorDebugArrayValue` nesne.  
+ dışı Bu `ICorDebugArrayValue` nesnesinin bir boyutunun temel dizini (yani, başlangıç dizini) olan tamsayılar dizisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

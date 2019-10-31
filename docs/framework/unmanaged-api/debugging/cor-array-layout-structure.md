@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa20ac3d-6f60-4aa2-91c5-f3a86f82eba8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec9c4f3afb8f3b7e75e22874996d57d29ce8cf16
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: f37bf545553045b9737b7057feed78e1f06ace4d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274210"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099465"
 ---
 # <a name="cor_array_layout-structure"></a>COR_ARRAY_LAYOUT Yapısı
 Bellekte bir dizi nesnesinin yerleşimi hakkında bilgi sağlar.  
@@ -55,16 +53,16 @@ typedef struct COR_ARRAY_LAYOUT {
 |`rankOffset`|Derecelendirmelerinin başlayacağı fark.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `rankSize` Alan, çok boyutlu bir dizideki bir derece boyutunu belirtir. Tek boyutlu diziler için de doğrudur.  
+ `rankSize` alanı, çok boyutlu bir dizideki bir derece boyutunu belirtir. Tek boyutlu diziler için de doğrudur.  
   
- Değeri `numRanks` , tek boyutlu bir dizi için ve `N` çok boyutlu bir boyut `N` dizisi için 1 ' dir.  
+ `numRanks` değeri, tek boyutlu bir dizi için 1 ve `N` boyutların çok boyutlu dizisi için `N`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

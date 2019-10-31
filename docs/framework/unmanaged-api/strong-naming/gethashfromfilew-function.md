@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 97c2d7a6-5376-45a1-ba65-146a249147cc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd96b5acb22f63b6e06c981119186680d6593a79
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db6f39119d143d27c0d3a80a9c65565d4dfd0d39
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799190"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140681"
 ---
 # <a name="gethashfromfilew-function"></a>GetHashFromFileW İşlevi
 Unicode dizesi tarafından belirtilen dosyanın içeriği üzerinde bir karma oluşturur.  
@@ -51,20 +49,20 @@ HRESULT GetHashFromFileW (
  dışı Oluşturulan karmayı içeren bir bayt dizisi.  
   
  `cchHash`  
- 'ndaki Tarafından `pbHash`işaret edilen arabelleğin en büyük boyutu.  
+ 'ndaki `pbHash`tarafından işaret edilen arabelleğin en büyük boyutu.  
   
  `pchHash`  
- dışı Bayt cinsinden boyutu `pbHash`.  
+ dışı `pbHash`bayt cinsinden boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu işlev, [GetHashFromFile](gethashfromfile-function.md)ile aynıdır, ancak dosya adı belirtimi ANSI yerine Unicode olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** StrongName. h  
+ **Üst bilgi:** StrongName. h  
   
- **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

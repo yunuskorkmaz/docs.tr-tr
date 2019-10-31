@@ -9,14 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 113646de-7ea0-4f0e-8df0-c46dab3e8733
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b842f44711d38a996b9d710dbe8bd369d30c5443
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 14589544e05f6c59f4f58f7723fef40e75af9823
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051879"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123714"
 ---
 # <a name="calling-a-dll-function"></a>DLL İşlevini Çağırma
 Yönetilmeyen DLL işlevlerinin çağrılması, diğer yönetilen kodu çağırmaya neredeyse özdeş olsa da, ilk olarak DLL işlevlerinin kafa karıştırıcı görünmesine neden olabilir. Bu bölümde, bazı olağan dışı arama ile ilgili sorunlardan bazıları açıklanır.  
@@ -30,7 +28,7 @@ Yönetilmeyen DLL işlevlerinin çağrılması, diğer yönetilen kodu çağırm
  [Geri Arama İşlevleri](callback-functions.md)  
  Geri çağırma işlevleriyle ilgili temel bilgileri sağlar.  
   
- [Nasıl yapılır: Geri çağırma Işlevlerini Uygula](how-to-implement-callback-functions.md)  
+ [Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama](how-to-implement-callback-functions.md)  
  Yönetilen kodda geri çağırma işlevlerinin nasıl uygulanacağını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

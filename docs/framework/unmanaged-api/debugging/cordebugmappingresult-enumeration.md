@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2042d0936359a85d203375c42be0d8a096f004e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc3f77adf33502bfbc3d65ff5131420093fbbec8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739754"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097932"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult Numaralandırması
-Yönerge işaretçisi (IP) değerini nasıl edinilen ayrıntılarını sağlar.  
+Yönerge işaretçisinin (IP) değerinin nasıl alındıklarına ilişkin ayrıntıları sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,24 +41,24 @@ typedef enum CorDebugMappingResult {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`MAPPING_PROLOG`|Yerel kod giriş bölümünde olduğundan IP değeri 0'dır.|  
-|`MAPPING_EPILOG`|Yerel kod bir sonuç içinde olduğundan, yöntemin son yönerge adresi IP değeri.|  
-|`MAPPING_NO_INFO`|IP değeri 0, bu nedenle yöntemi için hiçbir eşleme bilgisi kullanılabilir.|  
-|`MAPPING_UNMAPPED_ADDRESS`|Eşleme bilgileri yöntemi olsa da, Microsoft Ara dili (MSIL) kodu için geçerli adresi eşlenemez. IP değeri 0'dır.|  
-|`MAPPING_EXACT`|Yöntemin MSIL kodu tam olarak eşler ya da IP değeri doğru Bu nedenle çerçeve, algılanır.|  
-|`MAPPING_APPROXIMATE`|Yöntem başarılı bir şekilde eşlendi ancak IP değeri yaklaşık olabilir.|  
+|`MAPPING_PROLOG`|Yerel kod giriş durumunda olduğundan IP değeri 0 ' dır.|  
+|`MAPPING_EPILOG`|Yerel kod bir bitişdir, bu nedenle IP değeri yöntemin son yönergesinin adresidir.|  
+|`MAPPING_NO_INFO`|Yöntemi için hiçbir eşleme bilgisi yok, bu nedenle IP değeri 0 ' dır.|  
+|`MAPPING_UNMAPPED_ADDRESS`|Yöntemi için eşleme bilgileri olsa da, geçerli adres Microsoft ara dili (MSIL) koduna eşlenemez. IP değeri 0 ' dır.|  
+|`MAPPING_EXACT`|Yöntemi tamamen MSIL koduna eşlenir veya çerçeve yorumlanmış olduğundan, IP değeri doğru olmalıdır.|  
+|`MAPPING_APPROXIMATE`|Yöntem başarıyla eşlendi, ancak IP 'nin değeri yaklaşık olabilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanabileceğiniz [Icordebugılframe::getıp](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) yönerge işaretçisini değerini elde etmek için yöntemi.  
+ Yönerge işaretçisinin değerini elde etmek için [ICorDebugILFrame:: GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) yöntemini kullanabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

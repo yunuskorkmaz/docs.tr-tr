@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1680ec06-4ab0-447e-93ad-cdb8693fde5c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9be0c3b931130e0ea86766b5134ca514478f0201
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eb9e5bdf85c6d487fd82422522854076c03e2288
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764934"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140454"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip Yöntemi
-İmleci İleri numaralandırmada tarafından belirtilen sayıda öğeyi taşır.  
+İmleci belirtilen öğe sayısına göre numaralandırmada ileri doğru kaydırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +35,16 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] İmleç ilerlemek, öğe sayısı.  
+ 'ndaki İmlecin ileri taşımasını sağlayan öğe sayısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorPub.idl, CorPub.h  
+ **Üst bilgi:** CorPub. IDL, CorPub. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

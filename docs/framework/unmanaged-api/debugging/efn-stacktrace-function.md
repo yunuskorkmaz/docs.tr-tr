@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: caea7754-867c-4360-a65c-5ced4408fd9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9035d9a53c4b0c8822b79e641aef092b4a48c418
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 272856c7eedbdc577158edcc463535a7946bb060
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895041"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122985"
 ---
-# <a name="_efn_stacktrace-function"></a>\_EFN\_StackTrace işlevi
-Yönetilmeyen ve yönetilen kod arasındaki her geçiş için bir yönetilen yığın izlemenin ve `CONTEXT` bir kayıt dizisinin metin gösterimini sağlar.  
+# <a name="_efn_stacktrace-function"></a>\_EFN\_StackTrace Işlevi
+Yönetilmeyen ve yönetilen kod arasındaki her geçiş için bir yönetilen yığın izlemenin ve bir dizi `CONTEXT` kaydın metin gösterimini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -48,7 +46,7 @@ HRESULT CALLBACK _EFN_StackTrace(
  dışı Yığın izlemenin metin temsili.  
   
  `puiTextLength`  
- dışı İçindeki `wszTextOut`karakter sayısına yönelik bir işaretçi.  
+ dışı `wszTextOut`karakter sayısına yönelik bir işaretçi.  
   
  `pTransitionContexts`  
  dışı Geçiş bağlamlarının dizisi.  
@@ -60,22 +58,22 @@ HRESULT CALLBACK _EFN_StackTrace(
  'ndaki Bağlam yapısının boyutu.  
   
  `Flags`  
- 'ndaki Her `module!functionname` satırın önünde EBP kaydını ve ENTER yığın işaretçisini (ESP) göstermek için 0 ya da SOS_STACKTRACE_SHOWADDRESSES (0x01) olarak ayarlayın.  
+ 'ndaki Her bir `module!functionname` satırının önünde EBP yazmacın ve yığın işaretçisini gir (ESP) öğesini göstermek için 0 veya SOS_STACKTRACE_SHOWADDRESSES (0x01) olarak ayarlayın.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `_EFN_StackTrace` Yapı bir WinDbg programlı arabiriminden çağrılabilir. Parametreleri aşağıdaki gibi kullanılır:  
+ `_EFN_StackTrace` yapısı bir WinDbg programlı arabiriminden çağrılabilir. Parametreleri aşağıdaki gibi kullanılır:  
   
-- Null ise ve `puiTextLength` null değilse, işlev içindeki `puiTextLength`dize uzunluğunu döndürür. `wszTextOut`  
+- `wszTextOut` null ise ve `puiTextLength` null değilse, işlev `puiTextLength`dize uzunluğunu döndürür.  
   
-- Null değilse, işlev tarafından `puiTextLength`belirtilen konuma `wszTextOut` kadar metni depolar. `wszTextOut` Arabellekte yeterli yer varsa başarıyla geri döner veya arabellek yeterince uzunsa E_OUTOFMEMORY döndürür.  
+- `wszTextOut` null değilse, işlev, `puiTextLength`tarafından belirtilen konuma kadar `wszTextOut` metni depolar. Arabellekte yeterli yer varsa başarıyla geri döner veya arabellek yeterince uzunsa E_OUTOFMEMORY döndürür.  
   
-- İşlevin geçiş bölümü, ve `pTransitionContexts` `puiTransitionContextCount` her ikisi de null ise yoksayılır. Bu durumda, işlev çağıranları yalnızca işlev adlarının metin çıktısı ile birlikte sunar.  
+- `pTransitionContexts` ve `puiTransitionContextCount` her ikisi de null ise işlevin geçiş bölümü yok sayılır. Bu durumda, işlev çağıranları yalnızca işlev adlarının metin çıktısı ile birlikte sunar.  
   
-- Null ise ve `puiTransitionContextCount` null değilse, işlev içinde `puiTransitionContextCount`gereken bağlam girişi sayısını döndürür. `pTransitionContexts`  
+- `pTransitionContexts` null ise ve `puiTransitionContextCount` null değilse, işlev `puiTransitionContextCount`gereken bağlam girişi sayısını döndürür.  
   
-- Null değilse, işlev bunu bir dizi yapının `puiTransitionContextCount`dizisi olarak değerlendirir. `pTransitionContexts` Yapı boyutu tarafından `uiSizeOfContext`verilir ve [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) 'in veya `CONTEXT` mimarinin boyutu olmalıdır.  
+- `pTransitionContexts` null değilse, işlevi onu `puiTransitionContextCount`uzunluklu bir yapı dizisi olarak değerlendirir. Yapı boyutu `uiSizeOfContext`tarafından verilir ve bu mimari için [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) veya `CONTEXT` boyutu olmalıdır.  
   
-- `wszTextOut`aşağıdaki biçimde yazılır:  
+- `wszTextOut` aşağıdaki biçimde yazılır:  
   
     ```output  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -88,16 +86,16 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 - Şu anda bağlamda olan iş parçacığında yönetilen kod yoksa, işlev SOS_E_NOMANAGEDCODE döndürür.  
   
-- Parametresi, her `module!functionname` satırın önünde ebp ve ESP 'yi görmek için 0 veya SOS_STACKTRACE_SHOWADDRESSES. `Flags` Varsayılan olarak, 0 ' dır.  
+- `Flags` parametresi, her `module!functionname` satırının önünde EBP ve ESP 'yi görmek için 0 veya SOS_STACKTRACE_SHOWADDRESSES. Varsayılan olarak, 0 ' dır.  
   
     ```cpp  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** SOS_Stacktrace. h  
+ **Üst bilgi:** SOS_Stacktrace. h  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

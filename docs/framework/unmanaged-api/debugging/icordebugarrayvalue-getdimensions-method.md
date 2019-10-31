@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c0f4836a3dc848b52ee7fe6947f350e6fab787f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c5199794098e4d83588728eeb165aee5f81fe4c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737556"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088507"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions Metodu
-Bu dizinin her boyutundaki öğe sayısını alır.  
+Bu dizinin her bir boyutundaki öğelerin sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,18 +37,18 @@ HRESULT GetDimensions (
   
 ## <a name="parameters"></a>Parametreler  
  `cdim`  
- [in] Bu Icordebugarrayvalue nesnesinin boyut sayısı.  
+ 'ndaki Bu ıcorınumber Garrayvalue nesnesinin boyut sayısı.  
   
- Bu değer ayrıca boyutudur `dims` boyutuna boyutlarını sayısına eşit olduğundan dizi `ICorDebugArrayValue` nesne.  
+ Boyutu, `ICorDebugArrayValue` nesnesinin boyut sayısına eşit olduğundan, bu değer ayrıca `dims` dizisinin boyutudur.  
   
  `dims`  
- [out] Her biri belirtir öğe sayısı bu bir boyutta tamsayı, bir dizi `ICorDebugArrayValue` nesne.  
+ dışı Her biri bu `ICorDebugArrayValue` nesnesindeki bir boyuttaki öğelerin sayısını belirten bir tamsayılar dizisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

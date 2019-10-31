@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3ff2ad2a-da5a-461b-8627-1a8eba49df9c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0925cf217afafe57abf82cf51a77b1992bad5152
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ab5adabe868c245ed7a773d9b4206b25d9e9a4f0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966835"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140250"
 ---
 # <a name="icordebugvalue2-interface"></a>ICorDebugValue2 Arabirimi
 "ICorDebugType" nesnelerine yönelik destek sağlamak için "ICorDebugValue" arabirimini genişletir.  
@@ -30,7 +28,7 @@ ms.locfileid: "69966835"
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetExactType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|Bu değerin değerini <xref:System.Type> temsil eden bir `ICorDebugType` nesne için bir arabirim işaretçisi alır.|  
+|[GetExactType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|Bu değerin <xref:System.Type> temsil eden bir `ICorDebugType` nesnesine yönelik bir arabirim işaretçisi alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -38,11 +36,11 @@ ms.locfileid: "69966835"
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

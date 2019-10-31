@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae668a40ba1510e0e3d4f509643022ebe822a4f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 69288e995ec789091bf089368cd9a60f003df86e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738941"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122981"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs İşlevi
-Bir işlemde CLRs numaralandırmak için bir mekanizma sağlar.  
+Bir işlemdeki CLRs 'yi listelemek için bir mekanizma sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,44 +39,44 @@ HRESULT EnumerateCLRs (
   
 ## <a name="parameters"></a>Parametreler  
  `debuggeePID`  
- [in] Yüklenen CLRs Numaralandırılacak işleminin işlem tanıtıcısı.  
+ 'ndaki Yüklenen CLRs 'nin numaralandıralınacağı işlemin işlem tanımlayıcısı.  
   
  `ppHandleArrayOut`  
- [out] CLR başlangıç devam etmek için kullanılan olay tanıtıcıları içeren bir dizi için işaretçi. Dizideki her tutamacı geçerli olması garanti edilmez. Geçerli tanıtıcı devam başlangıç olayı olarak aynı dizinde bulunan karşılık gelen çalışma zamanı için kullanılmak üzere olup olmadığını `ppStringArrayOut`.  
+ dışı CLR başlatmaya devam etmek için kullanılan olay tutamaçlarını içeren bir diziye yönelik işaretçi. Dizideki her tanıtıcının geçerli olması garanti edilmez. Geçerliyse, tanıtıcı aynı `ppStringArrayOut`dizininde bulunan ilgili çalışma zamanı için devam-başlatma olayı olarak kullanılır.  
   
  `ppStringArrayOut`  
- [out] Tam yolları CLRs belirten bir dize dizisi işaretçisine işlemde yüklü.  
+ dışı İşlemde yüklü olan tüm CLRs yollarını belirten dizeler dizisine yönelik işaretçi.  
   
  `pdwArrayLengthOut`  
- [out] İşaretçisine eşit boyutlu uzunluğunu içeren bir DWORD `ppHandleArrayOut` ve `pdwArrayLengthOut`.  
+ dışı Eşit ölçekli `ppHandleArrayOut` ve `pdwArrayLengthOut`uzunluğunu içeren bir DWORD işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
- İşlem CLRs sayısında başarıyla belirlendi ve karşılık gelen tanıtıcısı ve yol diziler düzgün doldurulmuş.  
+ İşlemdeki CLRs sayısı başarıyla belirlendi ve karşılık gelen tanıtıcı ve yol dizileri doğru şekilde dolduruldu.  
   
  E_INVALIDARG  
- Ya da `ppHandleArrayOut` veya `ppStringArrayOut` null ise veya `pdwArrayLengthOut` null.  
+ `ppHandleArrayOut` veya `ppStringArrayOut` null ya da `pdwArrayLengthOut` null.  
   
  E_OUTOFMEMORY  
- İşlev tanıtıcısı ve yol diziler için yeterli bellek ayıramadı.  
+ İşlev, tanıtıcı ve yol dizileri için yeterli bellek ayıramadı.  
   
- E_FAIL (veya diğer E_ dönüş kodları)  
- Yüklenen CLRs numaralandırılamadı.  
+ E_FAıL (veya diğer E_ dönüş kodları)  
+ Yüklenen CLRs numaralandırılamıyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tarafından tanımlanan bir hedef işlemi `debuggeePID`, işlev yolları, bir dizi döndürür `ppStringArrayOut`, işlemde yüklü CLRs; bir dizi olay işleyicilerini `ppHandleArrayOut`, hangi içerebilir devam başlangıç olay için aynı dizindeki; CLR ve dizi boyutu `pdwArrayLengthOut`, yüklenen CLRs sayısını belirtir.  
+ `debuggeePID`tarafından tanımlanan bir hedef işlem için işlev, `ppStringArrayOut`, işlem içinde yüklenmiş bir yol dizisi döndürür; aynı dizinde CLR için devam-başlatma olayı içerebilen `ppHandleArrayOut`olay tanıtıcı dizisi; ve dizi boyutu, yüklenen CLRs sayısını belirten `pdwArrayLengthOut`.  
   
- Windows işletim sisteminde `debuggeePID` eşlemeleri bir işletim sistemi için işlem tanımlayıcısı.  
+ Windows işletim sisteminde `debuggeePID` bir IŞLETIM sistemi işlem tanımlayıcısına eşlenir.  
   
- Bellek için `ppHandleArrayOut` ve `ppStringArrayOut` bu işlev tarafından ayrılır. Ayrılan bellek boşaltmak için çağırmalısınız [CloseCLREnumeration işlevi](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md).  
+ `ppHandleArrayOut` ve `ppStringArrayOut` bellek bu işlev tarafından ayrılır. Ayrılan belleği serbest bırakmak için [CloseCLREnumeration işlevini](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)çağırmanız gerekir.  
   
- Bu işlev, her iki dizi parametrelerle hedef işlemde CLRs sayısını döndürmek için null olarak çağrılabilir. Bu sayıdan, bir çağıranın oluşturulacak arabellek boyutu çıkarabilir: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
+ Bu işlev, hedef işlemdeki CLRs sayısını döndürmek için her iki dizi parametresi null olarak ayarlanmış şekilde çağrılabilir. Bu sayımla, bir arayan, oluşturulacak arabelleğin boyutunu çıkarabilir: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** dbgshim.h  
+ **Üstbilgi:** dbgshim. h  
   
- **Kitaplığı:** dbgshim.dll  
+ **Kitaplık:** dbgshim. dll  
   
- **.NET framework sürümleri:** 3.5 SP1
+ **.NET Framework sürümleri:** 3,5 SP1

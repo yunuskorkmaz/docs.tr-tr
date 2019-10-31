@@ -7,45 +7,45 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d02f9f952c0ca7651d27571111a2d29f3d1130fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b931b76aa09b3f62fbd799990975268af4f7293
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921295"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119213"
 ---
 # <a name="app-settings-schema"></a>Uygulama ayarları şeması
 
 Dosya yolları, XML Web hizmeti URL 'Leri veya bir uygulama için başka özel yapılandırma bilgileri gibi özel uygulama ayarlarını içerir.
 
-[ **\<Yapılandırma >** ](../configuration-element.md)   
+[ **\<yapılandırma >** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> Ekle**](add-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> Temizle**](clear-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> Kaldır**](remove-element-for-appsettings.md)
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add >** ](add-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear >** ](clear-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Kaldır >** ](remove-element-for-appsettings.md)
 
 | Öğe | Açıklama |
 | ------- | ----------- |
-| [ **\<appSettings >** ](appsettings-element-for-configuration.md) | Uygulama ayarlarını denetlemek için  **\<> Ekle**,  **\<> Temizle**ve  **\<> etiketlerini kaldır** ' ı içerir. , İsteğe bağlı bir **Dosya** özniteliğine sahiptir. |
-| [ **\<> Ekle**](add-element-for-appsettings.md) | Bir ayarı tanımlar. AppSettings > alt öğesi.  **\<** **Anahtar** ve **değer** öznitelikleri gerektirir. |
-| [ **\<> Temizle**](clear-element-for-appsettings.md) | Tüm ayarları temizler. AppSettings > alt öğesi.  **\<** Hiç özniteliği yok. |
-| [ **\<> Kaldır**](remove-element-for-appsettings.md) | Bir ayarı kaldırır. AppSettings > alt öğesi.  **\<** **Anahtar** özniteliği gerektirir. |
+| [ **\<appSettings >** ](appsettings-element-for-configuration.md) | Uygulama ayarlarını denetlemek için **> ekle\<** , **\<Temizle >** ve\<etiketlerini **Kaldır** . , İsteğe bağlı bir **Dosya** özniteliğine sahiptir. |
+| [ **\<> Ekle**](add-element-for-appsettings.md) | Bir ayarı tanımlar. **\<appSettings >** alt öğesi. **Anahtar** ve **değer** öznitelikleri gerektirir. |
+| [ **\<Temizle >** ](clear-element-for-appsettings.md) | Tüm ayarları temizler. **\<appSettings >** alt öğesi. Hiç özniteliği yok. |
+| [ **\<> Kaldır**](remove-element-for-appsettings.md) | Bir ayarı kaldırır. **\<appSettings >** alt öğesi. **Anahtar** özniteliği gerektirir. |
 
 ## <a name="appsettings-element"></a>\<appSettings > öğesi
 
-Bu öğe, uygulama ayarlarını denetlemek için  **\<> Ekle**,  **\<> Temizle**ve  **\<> etiketlerini kaldır** ' ı içerir. **Dosya**için isteğe bağlı bir öznitelik tanımlar.
+Bu öğe, uygulama ayarlarını denetlemek için **> ekle\<** , **\<Temizle >** ve\<etiketlerini **Kaldır** ' ı içerir. **Dosya**için isteğe bağlı bir öznitelik tanımlar.
 
 ## <a name="add-element"></a>\<> öğesi Ekle
 
 Uygulama ayarları koleksiyonuna bir ad/değer çifti olarak özel bir uygulama ayarı ekler. **Anahtar** ve **değer**için öznitelikleri tanımlar.
 
-## <a name="clear-element"></a>\<> öğeyi temizle
+## <a name="clear-element"></a>\<Clear > öğesi
 
-Devralınan özel uygulama ayarlarına yapılan tüm başvuruları kaldırır ve yalnızca  **\<Clear >** öğesini takip eden  **\<>** öğeleri ekleyerek eklenen başvuruların kullanılmasına izin verir. Hiçbir öznitelik tanımlamıyor.
+Devralınan özel uygulama ayarlarına yapılan tüm başvuruları kaldırır ve yalnızca **\<clear >** öğesinden sonra > öğeleri **eklemek\<** tarafından eklenen başvuruların kullanılmasına izin verir. Hiçbir öznitelik tanımlamıyor.
 
-## <a name="remove-element"></a>\<> öğeyi kaldır
+## <a name="remove-element"></a>\<> öğesi kaldır
 
 Devralınan özel uygulama ayarının başvurusunu uygulama ayarları koleksiyonundan kaldırır. **Anahtar**için bir özniteliği tanımlar.
 

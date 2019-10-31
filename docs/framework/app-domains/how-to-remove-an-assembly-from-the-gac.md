@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: genel bütünleştirilmiş kod önbelleğinden bir derlemeyi kaldırma'
+title: 'Nasıl yapılır: Bir Derlemeyi Genel Derleme Önbelleğinden Kaldırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - GAC (global assembly cache), removing assemblies
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a085ff6955f706bcd90f895c42e6405a28d408a
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c7d85222f35a61154e3eec70d8c9dad2ca6a32f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834046"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119861"
 ---
-# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Nasıl yapılır: genel bütünleştirilmiş kod önbelleğinden bir derlemeyi kaldırma
+# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Nasıl yapılır: Bir Derlemeyi Genel Derleme Önbelleğinden Kaldırma
 
 Bir derlemeyi genel bütünleştirilmiş kod önbelleğinden (GAC) kaldırmanın iki yolu vardır:
 
@@ -30,9 +28,9 @@ Bir derlemeyi genel bütünleştirilmiş kod önbelleğinden (GAC) kaldırmanın
 
 ## <a name="removing-an-assembly-with-gacutilexe"></a>Gacutil. exe ile bir derlemeyi kaldırma
 
-Komut isteminde aşağıdaki komutu yazın:
+Komut satırında, aşağıdaki komutu yazın:
 
-**Gacutil – u** \<*derleme adı*>
+**Gacutil – u** \<*bütünleştirilmiş kod adı*>
 
 Bu komutta, *derleme adı* genel derleme önbelleğinden kaldırılacak derlemenin adıdır.
 
@@ -54,6 +52,6 @@ gacutil -u hello
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derlemeler ve genel derleme önbelleği ile çalışma](working-with-assemblies-and-the-gac.md)
-- [Nasıl yapılır: bir derlemeyi genel derleme önbelleğine yüklemek](install-assembly-into-gac.md)
-- [Gacutil. exe (Genel Bütünleştirilmiş Kod Önbelleği Aracı)](../tools/gacutil-exe-gac-tool.md)
+- [Bütünleştirilmiş Kodlar ve Genel Derleme Önbelleği ile Çalışma](working-with-assemblies-and-the-gac.md)
+- [Nasıl yapılır: Bir Bütünleştirilmiş Kodu Genel Derleme Önbelleğine Yükleme](install-assembly-into-gac.md)
+- [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../tools/gacutil-exe-gac-tool.md)

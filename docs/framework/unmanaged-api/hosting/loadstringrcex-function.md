@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4a0cac77d7bf7611acf6042298bfe6814d8f4352
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68332aee895f012bcf6ab6a72936c8dddc7f28a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768445"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122044"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx İşlevi
-HRESULT değerini belirtilen kültür için uygun hata iletisine çevirir.  
+Belirtilen kültür için bir HRESULT değerini uygun bir hata iletisine çevirir.  
   
- Bu işlev .NET Framework 4'te kullanım dışıdır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,42 +41,42 @@ HRESULT LoadStringRCEx (
   
 ## <a name="parameters"></a>Parametreler  
  `lcid`  
- [in] Bir kültür tanımlayıcısı. -1 geçirmek `lcid` varsayılan kültür kullanılacak.  
+ 'ndaki Bir kültür tanımlayıcısı. `lcid` için-1 ' i varsayılan kültürü kullanacak şekilde geçirin.  
   
  `iResourceID`  
- [in] HRESULT.  
+ 'ndaki HRESULT.  
   
  `szBuffer`  
- [out] Başarılı tamamlandığında hata iletisini içeren bir arabelleği.  
+ dışı Başarılı bir şekilde tamamlandıktan sonra hata iletisini içeren bir arabellek.  
   
  `iMax`  
- [in] Hata iletisi arabellek boyutu.  
+ 'ndaki Hata iletisi arabelleğinin boyutu.  
   
  `bQuiet`  
- [in] Yoksayıldı.  
+ 'ndaki LIP.  
   
  `pcwchUsed`  
- [out] Hata iletisi uzunluğu bir işaretçi.  
+ dışı Hata iletisinin uzunluğuna yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, ek olarak aşağıdaki değerleri Wınerror içinde tanımlanan standart COM hata kodlarını döndürür.  
+ Bu yöntem, aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart COM hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_INVALIDARG|`szBuffer` null ise veya `iMax` sıfır (0).|  
+|E_INVALIDARG|`szBuffer` null veya `iMax` sıfır (0).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemi başarıyla tamamlanmazsa `szBuffer` boş bir dize içeriyor.  
+ Yöntem başarıyla tamamlanmazsa, `szBuffer` boş bir dize içerir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -4,18 +4,16 @@ description: Tanıtım C# kavramlarını hızlıca öğrenmenizi ve .NET Core uy
 helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
-author: rpetrusha
-ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: b921db9abb65a1d470ada86784ecba1b649c9f09
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 7ea84f9bb815b7080625508bd28364bc75255afe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182431"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099950"
 ---
-# <a name="get-started-with-c"></a>C ile çalışmaya başlama\#
+# <a name="get-started-with-c"></a>C\# kullanmaya başlama
 
 Bu bölümde, ve .NET Core kullanarak C# hızlı bir şekilde uygulama oluşturmanıza olanak sağlayan kısa ve basit öğreticiler sağlanmaktadır. Visual Studio 2017 ve Visual Studio Code için Başlarken konuları vardır. Bu makalelerde bazı programlama deneyimleri varsayılmaktadır. Programlama için yeni bir deneyimize tıkladığınızda etkileşimli öğreticilere [giriş C# ](../tutorials/intro-to-csharp/index.md) ' i deneyin.
 
@@ -51,7 +49,7 @@ Aşağıdaki konular kullanılabilir:
 
     Anahtar sözcükler, işleçler, C# Önişlemci yönergeleri, derleyici seçenekleri ve derleyici hataları ve uyarıları hakkında ayrıntılı başvuru bilgileri sağlar.
 
-- [İzlenecek Yollar](../walkthroughs.md)
+- [İzlenecek yollar](../walkthroughs.md)
 
     C# kullanan programlama yollarına ve her izlenecek yola ilişkin kısa bir açıklamaya bağlantılar sağlar.
 

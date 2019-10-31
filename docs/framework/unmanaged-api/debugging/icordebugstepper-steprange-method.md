@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9776112-6e6d-4708-892a-8873db02e16f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e1ace501bf5de741ea110fe4d3bb4bc44843bf8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ca4542fe42fab0b5ff54b23b9492d3906698c10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760528"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120628"
 ---
 # <a name="icordebugsteppersteprange-method"></a>ICorDebugStepper::StepRange Yöntemi
-Bu ICorDebugStepper tek adımlı içeren kendi iş parçacığı ve son belirtilen aralıkların dışında kod ulaştığında döndürülecek için neden olur.  
+Bu ICorDebugStepper, kendi kapsayıcı iş parçacığı aracılığıyla tek adımlı ve belirtilen aralıkların en son ötesinde koda ulaştığında geri dönüşmesine neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,26 +37,26 @@ HRESULT StepRange (
   
 ## <a name="parameters"></a>Parametreler  
  `bStepIn`  
- [in] Kümesine `true` için iş parçacığı içinde çağrılan bir işlevin içine Adımlama. Kümesine `false` işlevi Adımlama için.  
+ 'ndaki İş parçacığı içinde çağrılan bir işleve adımla `true` olarak ayarlayın. İşlevin üzerinde adımla `false` olarak ayarlayın.  
   
  `ranges`  
- [in] Bir dizi COR_DEBUG_STEP_RANGE yapılarının her biri bir aralığını belirtir.  
+ 'ndaki Her biri bir Aralık belirten COR_DEBUG_STEP_RANGE yapılarından oluşan bir dizi.  
   
  `cRangeCount`  
- [in] Boyutu `ranges` dizisi.  
+ 'ndaki `ranges` dizisinin boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `StepRange` Yöntem çalışır gibi [ICorDebugStepper::Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) yöntemi, belirtilen aralığın dışındaki kod kadar tamamlanmazsa dışında ulaşıldı.  
+ `StepRange` yöntemi [ICorDebugStepper:: Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) yöntemi gibi çalışarak, belirtilen aralığın dışındaki koda ulaşılana kadar tamamlanmaz.  
   
- Bu, aynı anda tek bir yönerge Adımlama değerinden daha verimli olabilir. Aralıkları listesi Adımlayıcı 's çerçeve başından uzaklık çiftleri olarak belirtilir.  
+ Tek seferde bir yönergeyi adımlamayı kullanmaktan daha etkili olabilir. Aralıklar, Stepper 'ın çerçevesinin başından itibaren bir konum çiftleri listesi olarak belirtilir.  
   
- Göreli bir yöntemin Microsoft Ara dili (MSIL) kodu aralıktır. Çağrı [ICorDebugStepper::setrangeıl](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) ile `false` aralıkları yerel kod bir yöntemin göre yapma.  
+ Aralıklar bir yöntemin Microsoft ara dili (MSIL) koduna göredir. Aralıkları bir yöntemin yerel koduyla ilişkili hale getirmek için `false` ile [ICorDebugStepper:: SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

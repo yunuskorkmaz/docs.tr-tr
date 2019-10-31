@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd285233-a4a2-4b52-bbca-0025a60e4864
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8aa2d174200db76f5c7a6db43e14bb6904604226
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db3ba3380d1fc30a8f34683618b5cc326d7d1906
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796333"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123053"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx İşlevi
 Bir derlemenin ilke sonrası görünen adını alır.  
@@ -58,17 +56,17 @@ HRESULT PreBindAssemblyEx (
  dışı İlke sonrası görünen adını içerir.  
   
  `pvReserved`  
- 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `pvReserved`null bir başvuru olmalıdır.  
+ 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `pvReserved`, null bir başvuru olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ppNamePostPolicy` Output parametresi yalnızca işlev HRESULT FUSION_E_REF_DEF_MISMATCH döndürürse ayarlanır. Aksi halde, null olur.  
+ `ppNamePostPolicy` output parametresi yalnızca işlev HRESULT FUSION_E_REF_DEF_MISMATCH döndürürse ayarlanır. Aksi halde, null olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** Fusion. h  
+ **Üst bilgi:** Fusion. h  
   
- **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

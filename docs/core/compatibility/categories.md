@@ -1,15 +1,13 @@
 ---
 title: Değişiklik kategorilerini bölme-.NET Core
 description: .NET Core 'da önemli değişiklikler sınıflandırılan yollar hakkında bilgi edinin.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: e15b0c566584571440eb09c7fb981874b7517c48
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 058f2c2cdeed1e3e984f1de8ab493971d3937876
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698453"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089437"
 ---
 # <a name="breaking-change-categories"></a>Hataya neden olan değişiklik kategorileri
 

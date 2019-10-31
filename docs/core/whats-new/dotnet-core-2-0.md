@@ -1,15 +1,13 @@
 ---
 title: ​.NET Core 2.0’deki yenilikler
 description: .NET Core 'da bulunan yeni özellikler hakkında bilgi edinin.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: c208f565bebedc06e244de1f6554129f21c77b8c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849939"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100837"
 ---
 # <a name="whats-new-in-net-core-20"></a>​.NET Core 2.0’deki yenilikler
 
@@ -30,13 +28,13 @@ ms.locfileid: "70849939"
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-`dotnet restore` `--no-restore` Ayrıca ,`new`anahtarı, ,,`run`, ve komutlarınageçirerekotomatikçağrısını`test` devre dışı bırakabilirsiniz. `build` `publish` `pack`
+Ayrıca, `--no-restore` anahtarını `new`, `run`, `build`, `publish`, `pack`ve `test` komutlarına geçirerek `dotnet restore` otomatik olarak çağrılmasını devre dışı bırakabilirsiniz.
 
 ### <a name="retargeting-to-net-core-20"></a>.NET Core 2,0 için yeniden hedefleme
 
 .NET Core 2,0 SDK 'Sı yüklüyse, .NET Core 1. x 'i hedefleyen projeler .NET Core 2,0 ' e yeniden hedeflenebilir.
 
-.NET Core 2,0 ' ye yeniden hedeflemesini sağlamak için, 1. x ile 2,0 arasında `<TargetFramework>` (veya proje dosyanızda `<TargetFrameworks>` birden fazla hedef varsa, öğe) değerini değiştirerek proje dosyanızı düzenleyin:
+.NET Core 2,0 ' ye yeniden hedeflemesini sağlamak için, `<TargetFramework>` öğesinin değerini değiştirerek (veya proje dosyanızda birden fazla hedef varsa `<TargetFrameworks>` öğesi) 1. x ile 2,0 arasında bir proje dosyası düzenleyin:
 
 ```xml
 <PropertyGroup>
@@ -72,17 +70,17 @@ Sürüm 2,0 ile, .NET Core artık Visual Basic 2017 ' yi desteklemektedir. Visua
 
 1. Bir konsol penceresi açın, projeniz için bir dizin oluşturun ve geçerli dizin yapın.
 
-1. Komutunu `dotnet new console -lang vb`girin.
+1. `dotnet new console -lang vb`komutunu girin.
 
-   Bu komut, *program. vb*adlı Visual Basic `.vbproj` kaynak kodu dosyası ile birlikte bir dosya uzantısına sahip bir proje dosyası oluşturur. Bu dosya, "Merhaba Dünya!" dizesinin yazılacağı kaynak kodunu içerir Konsol penceresine.
+   Komut, *program. vb*adlı bir Visual Basic kaynak kodu dosyası ile birlikte `.vbproj` dosya uzantısına sahip bir proje dosyası oluşturur. Bu dosya, "Merhaba Dünya!" dizesinin yazılacağı kaynak kodunu içerir Konsol penceresine.
 
-1. Komutunu `dotnet run`girin. [.NET Core CLI](../tools/index.md) , uygulamayı otomatik olarak derler ve yürütür ve "Merhaba Dünya!" iletisini görüntüler. Konsol penceresinde.
+1. `dotnet run`komutunu girin. [.NET Core CLI](../tools/index.md) , uygulamayı otomatik olarak derler ve yürütür ve "Merhaba Dünya!" iletisini görüntüler. Konsol penceresinde.
 
 ### <a name="support-for-c-71"></a>7,1 için C# destek
 
 .NET Core 2,0, C# aşağıdakiler de dahil olmak üzere çeşitli yeni özellikler ekleyen 7,1 ' i destekler:
 
-- Uygulama giriş noktası [](../../csharp/language-reference/keywords/async.md) yöntemi,asyncanahtarsözcüğüyle`Main` işaretlenebilir.
+- Uygulama giriş noktası `Main` yöntemi, [Async](../../csharp/language-reference/keywords/async.md) anahtar sözcüğüyle işaretlenebilir.
 - Çıkarsanan demet adları.
 - Varsayılan ifadeler.
 
@@ -106,13 +104,13 @@ MacOS üzerinde .NET Core 1. x, OpenSSL araç setinin şifreleme kitaplığını
 
 ### <a name="support-for-net-standard-20"></a>.NET Standard 2,0 desteği
 
-.NET Standard, Standard 'ın bu sürümüyle uyumlu .NET uygulamalarında kullanılabilmesi gereken sürümlenmiş bir API kümesini tanımlar. .NET Standard, kitaplık geliştiricileri 'ne yöneliktir. Her bir .NET uygulamasındaki .NET Standard bir sürümünü hedefleyen bir kitaplık için kullanılabilen işlevselliği garanti etmek için kullanılır. .NET Core 1. x .NET Standard sürüm 1,6 ' ü destekler; .NET Core 2,0, en son sürümü .NET Standard 2,0. Daha fazla bilgi için [.NET Standard](../../standard/net-standard.md).
+.NET Standard, Standard 'ın bu sürümüyle uyumlu .NET uygulamalarında kullanılabilmesi gereken sürümlenmiş bir API kümesini tanımlar. .NET Standard, kitaplık geliştiricileri 'ne yöneliktir. Her bir .NET uygulamasındaki .NET Standard bir sürümünü hedefleyen bir kitaplık için kullanılabilen işlevselliği garanti etmek için kullanılır. .NET Core 1. x .NET Standard sürüm 1,6 ' ü destekler; .NET Core 2,0, en son sürümü .NET Standard 2,0. Daha fazla bilgi için bkz. [.NET Standard](../../standard/net-standard.md).
 
 .NET Standard 2,0, .NET Standard 1,6 ' de kullanılabilir olandan daha fazla 20.000 API 'ye sahiptir. Bu genişletilmiş yüzey alanının büyük bölümü, .NET Framework ve Xamarin için ortak olan API 'Leri .NET Standard ' ye ekleme sonucu oluşur.
 
 .NET Standard 2,0 sınıf kitaplıkları ayrıca .NET Standard 2,0 ' de bulunan API 'Leri çağırmak kaydıyla .NET Framework sınıf kitaplıklarına başvurabilir. .NET Framework kitaplıklarının yeniden derlenmesi gerekli değildir.
 
-Son sürümü bu yana .NET Standard eklenen API 'lerin bir listesi için, .NET Standard 1,6, bkz [. .NET Standard 2,0 vs. 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
+Son sürümü bu yana .NET Standard eklenen API 'lerin bir listesi için, .NET Standard 1,6, bkz. [.NET Standard 2,0 vs. 1,6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
 
 ### <a name="expanded-surface-area"></a>Genişletilmiş yüzey alanı
 
@@ -132,7 +130,7 @@ Visual Studio 2017 sürüm 15,3 ve bazı durumlarda Mac için Visual Studio .NET
 
 .NET Core 2,0 SDK 'Sı yüklüyse, .NET Core 1. x projelerini .NET Core 2,0 ve .NET Standard 1. x kitaplıklarını .NET Standard 2,0 olarak yeniden hedefleyebilirsiniz.
 
-Projenizi Visual Studio 'da yeniden hedeflemek için projenin Özellikler iletişim kutusunun **uygulama** sekmesini açın ve **hedef Framework** değerini **.net Core 2,0** veya **2,0 .NET Standard**olarak değiştirirsiniz. Ayrıca, projeye sağ tıklayıp **. csproj dosyasını Düzenle \*** seçeneğini belirleyerek de değiştirebilirsiniz. Daha fazla bilgi için bu konunun önceki kısımlarında yer alan [Araçlar bölümüne bakın](#tooling) .
+Projenizi Visual Studio 'da yeniden hedeflemek için projenin Özellikler iletişim kutusunun **uygulama** sekmesini açın ve **hedef Framework** değerini **.net Core 2,0** veya **2,0 .NET Standard**olarak değiştirirsiniz. Ayrıca, projeye sağ tıklayıp **\*. csproj dosyasını Düzenle** seçeneğini belirleyerek bunu değiştirebilirsiniz. Daha fazla bilgi için bu konunun önceki kısımlarında yer alan [Araçlar bölümüne bakın](#tooling) .
 
 ### <a name="live-unit-testing-support-for-net-core"></a>.NET Core için Live Unit Testing
 
@@ -142,7 +140,7 @@ Daha fazla bilgi için bkz. [Visual Studio 2017 ile Live Unit Testing](/visualst
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>Birden çok hedef çerçeve için daha iyi destek
 
-Birden çok hedef çerçeve için bir proje oluşturuyorsanız, artık üst düzey menüden hedef platformu seçebilirsiniz. Aşağıdaki şekilde, SCD1 adlı bir proje 64-bit MacOS X 10,11 (`osx.10.11-x64`) ve 64-bit Windows 10/Windows Server 2016 (`win10-x64`) hedefliyor. Bu durumda bir hata ayıklama yapısı çalıştırmak için proje düğmesini seçmeden önce hedef Framework 'ü seçebilirsiniz.
+Birden çok hedef çerçeve için bir proje oluşturuyorsanız, artık üst düzey menüden hedef platformu seçebilirsiniz. Aşağıdaki şekilde, SCD1 adlı bir proje 64-bit macOS X 10,11 (`osx.10.11-x64`) ve 64-bit Windows 10/Windows Server 2016 (`win10-x64`) hedeflerini hedefliyor. Bu durumda bir hata ayıklama yapısı çalıştırmak için proje düğmesini seçmeden önce hedef Framework 'ü seçebilirsiniz.
 
 ![Proje oluşturulurken hedef çerçeve seçimini gösteren ekran görüntüsü.](./media/dotnet-core-2-0/target-framework-selection.png)
 

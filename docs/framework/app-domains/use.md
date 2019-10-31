@@ -6,14 +6,12 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 11774620dba03cc980ec3e2e2d3bd1a855dc6295
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d6bbc2648608e9542158e0f281984174447633a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053051"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119733"
 ---
 # <a name="using-application-domains"></a>Uygulama Etki Alanlarını Kullanma
 
@@ -23,32 +21,32 @@ Uygulama etki alanları, ortak dil çalışma zamanı için bir yalıtım birimi
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
-[Nasıl yapılır: Uygulama etki alanı oluşturma](how-to-create-an-application-domain.md)  
+[Nasıl yapılır: Uygulama Etki Alanı Oluşturma](how-to-create-an-application-domain.md)  
 Programlı olarak bir uygulama etki alanı oluşturma işlemini açıklar.  
   
-[Nasıl yapılır: Uygulama etki alanını kaldırma](how-to-unload-an-application-domain.md)  
+[Nasıl yapılır: Uygulama Etki Alanını Boşaltma](how-to-unload-an-application-domain.md)  
 Bir uygulama etki alanını programlı olarak nasıl kaldırabileceğinizi açıklar.  
   
-[Nasıl yapılır: Uygulama etki alanı yapılandırma](how-to-configure-an-application-domain.md)  
+[Nasıl yapılır: Uygulama Etki Alanını Yapılandırma](how-to-configure-an-application-domain.md)  
 Uygulama etki alanı yapılandırmaya bir giriş sağlar.  
   
 [Bir Uygulama Etki Alanından Kurulum Bilgilerini Alma](retrieve-setup-information.md)  
 Bir uygulama etki alanından kurulum bilgilerinin nasıl alınacağını açıklar.  
   
-[Nasıl yapılır: Derlemeleri bir uygulama etki alanına yükleme](how-to-load-assemblies-into-an-application-domain.md)  
+[Nasıl yapılır: Uygulama Etki Alanına Bütünleştirilmiş Kodlar Yükleme](how-to-load-assemblies-into-an-application-domain.md)  
 Bir derlemenin uygulama etki alanına nasıl yükleneceğini açıklar.  
   
-[Nasıl yapılır: Bir derlemeden tür ve üye bilgilerini alma](../reflection-and-codedom/get-type-member-information.md)  
+[Nasıl yapılır: Bir Bütünleştirilmiş Koddan Tür ve Üye Bilgilerini Alma](../reflection-and-codedom/get-type-member-information.md)  
 Bir derleme hakkında bilgilerin nasıl alınacağını açıklar.  
   
 [Gölge Kopyalama Bütünleştirilmiş Kodları](shadow-copy-assemblies.md)  
 Gölge kopyalamanın, kullanıldıkları sırada derlemeler için güncelleştirmelerin nasıl izin verdiğini ve gölge kopyalamayı nasıl yapılandıracağınızı açıklar.  
   
-[Nasıl yapılır: Birinci şans özel durum bildirimlerini al](how-to-receive-first-chance-exception-notifications.md)  
+[Nasıl yapılır: İlk Fırsat Özel Durum Bildirimleri Alma](how-to-receive-first-chance-exception-notifications.md)  
 Ortak dil çalışma zamanı özel durum işleyicilerini aramaya başlamadan önce bir özel durumun oluşturulduğu bildirimini nasıl alacağınızı açıklar.  
   
 [Bütünleştirilmiş Kod Yüklerini Çözme](../../standard/assembly/resolve-loads.md)  
-Derleme yükleme başarısızlıklarını çözümlemek için <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayı kullanma hakkında rehberlik sağlar.  
+Derleme yükleme başarısızlıklarını çözümlemek için <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayının kullanılmasıyla ilgili rehberlik sağlar.  
   
 ## <a name="reference"></a>Başvuru  
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10093e3d-26b6-4ad7-8ef3-bbf66243fc02
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a1c0f7deb2ef24893530797b4507e2dcc540ad2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adcfbf1207ad7895ab55f7e5cf9581905cb826bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757052"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096102"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next Yöntemi
-Geçerli konumunda başlayan sabit listesi, belirli sayıda nesneleri, göreli sanal adreslerine (RVA) alır.  
+Geçerli konumdan başlayarak Numaralandırmadaki belirtilen nesne sayısının göreli sanal adreslerini (RVA) alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,21 +38,21 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Alınacak nesne sayısı.  
+ 'ndaki Alınacak nesne sayısı.  
   
  `objects`  
- [out] Bir dizi işaretçileri, her biri bir CORDB_ADDRESS nesneye işaret eder.  
+ dışı Her biri bir CORDB_ADDRESS nesnesine işaret eden işaretçiler dizisi.  
   
  `pceltFetched`  
- [out] Gerçekte döndürülen nesne sayısı için işaretçi. Bu değer null olabilir, `celt` biridir.  
+ dışı Gerçekten döndürülen nesne sayısına yönelik işaretçi. `celt` bir tane ise bu değer null olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.

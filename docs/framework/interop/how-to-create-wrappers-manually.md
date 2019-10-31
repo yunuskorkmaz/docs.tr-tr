@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5db0ec9050c74b27d3ee25a99dcf8e2319835ffb
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: a647e4b434d0c38a2a84e9faec1d603d2bc4bb11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894224"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123922"
 ---
 # <a name="how-to-create-wrappers-manually"></a>Nasıl yapılır: Sarmalayıcıları Elle Oluşturma
 COM türlerini yönetilen kaynak kodunda el ile bildirmeye karar verirseniz, başlamak için en iyi yer, var olan bir arabirim tanım dili (IDL) dosyası veya tür kitaplığı vardır. IDL dosyanız yoksa veya bir tür kitaplığı dosyası üretüriyorsa, yönetilen bildirimler oluşturarak ve ortaya çıkan derlemeyi bir tür kitaplığına vererek COM türlerinin benzetimini yapabilirsiniz.  
@@ -32,10 +30,10 @@ COM türlerini yönetilen kaynak kodunda el ile bildirmeye karar verirseniz, ba�
   
 3. Bildirimler tamamlandığında, başka bir yönetilen kaynak kodu derlerken dosyayı derleyin.  
   
-4. Tlbimp. exe ile içeri aktarılan türlerde, bazıları doğrudan kodunuza ekleyebileceğiniz ek bilgiler gerektirir. Ayrıntılar için bkz [. nasıl yapılır: Birlikte çalışma derlemelerini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))düzenleyin.  
+4. Tlbimp. exe ile içeri aktarılan türlerde, bazıları doğrudan kodunuza ekleyebileceğiniz ek bilgiler gerektirir. Ayrıntılar için bkz. [nasıl yapılır: birlikte çalışma derlemelerini düzenleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100)).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, IDL içindeki `ISATest` arabirim ve `SATest` sınıfa ve C# kaynak kodundaki karşılık gelen türlere ilişkin bir örnek gösterir.  
+ Aşağıdaki kod, IDL içinde `ISATest` arabirimi ve `SATest` sınıfının bir örneğini ve C# kaynak kodundaki karşılık gelen türleri gösterir.  
   
  **IDL veya tür kitaplığı dosyası**  
   
@@ -103,7 +101,7 @@ namespace SAServer
 
 - [Çalışma zamanı çağrılabilir sarmalayıcıları özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
 - [COM veri türleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
-- [Nasıl yapılır: Birlikte çalışma derlemelerini Düzenle](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
+- [Nasıl yapılır: birlikte çalışma derlemelerini düzenleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
 - [Tür kitaplığını derlemeye dönüştürme Özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../tools/tlbexp-exe-type-library-exporter.md)

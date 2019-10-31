@@ -8,37 +8,35 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to unwrap nested tasks
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3cc468da70d3c62c139a98a6637e7a3c7990c378
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c72654a2bc21035fe706d76018bb163d8ba01ee8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797130"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106901"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>Nasıl yapılır: İç İçe Geçmiş Bir Görevi Sarmalamadan Çıkarma
-Bir yöntemi, bir görev döndürür ve ardından bekleyebilir veya bu görevi, aşağıdaki örnekte gösterildiği gibi devam eder:  
+Aşağıdaki örnekte gösterildiği gibi, bir yöntemden bir görev döndürebilir ve sonra bu görevden bekleyebilir veya devam edebilirsiniz:  
   
  [!code-csharp[TPL_Unwrap#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#01)]
  [!code-vb[TPL_Unwrap#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_unwrap/vb/snippets1-3.vb#01)]  
   
- Önceki örnekte, <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği türüdür `string` (`String` Visual Basic'te).  
+ Önceki örnekte <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği `string` türündedir (`String` Visual Basic).  
   
- Ancak, bazı senaryolarda, bir görevi başka bir görev oluşturun ve sonra iç içe görev dönmek isteyebilirsiniz. Bu durumda, `TResult` kapsayan görevin kendisi bir görevdir. Aşağıdaki örnekte, sonuç özelliktir bir `Task<Task<string>>` C# veya `Task(Of Task(Of String))` Visual Basic'te.  
+ Ancak, bazı senaryolarda başka bir görevde bir görev oluşturmak ve ardından iç içe görevi döndürmek isteyebilirsiniz. Bu durumda, kapsayan görevin `TResult` kendisi bir görevdir. Aşağıdaki örnekte Result özelliği Visual Basic içinde C# veya `Task(Of Task(Of String))` `Task<Task<string>>`.  
   
  [!code-csharp[TPL_Unwrap#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#02)]
  [!code-vb[TPL_Unwrap#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_unwrap/vb/snippets1-3.vb#02)]  
   
- Dış bir görevi sarmalamadan çıkarma ve özgün görevi almak için kod yazmayı mümkün olsa da ve kendi <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği bu tür kod özel durumlar ve ayrıca iptal isteklerini işlemesi gerekir çünkü kolay değildir. Bu durumda, aşağıdakilerden birini kullanmanızı öneririz <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> genişletme yöntemleri, aşağıdaki örnekte gösterildiği gibi.  
+ Dış görevin sarmalarını kaldırmak ve özgün görevi ve <xref:System.Threading.Tasks.Task%601.Result%2A> özelliğini almak için kod yazmak mümkün olsa da, özel durumları ve ayrıca iptal isteklerini işleyebilmeniz gerektiğinden, bu tür kodun yazılması kolay değildir. Bu durumda, aşağıdaki örnekte gösterildiği gibi <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> uzantısı yöntemlerinden birini kullanmanızı öneririz.  
   
  [!code-csharp[TPL_UnWrap#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#03)]
  [!code-vb[TPL_UnWrap#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_unwrap/vb/snippets1-3.vb#03)]  
   
- <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> Yöntemleri herhangi dönüştürmek için kullanılabilir `Task<Task>` veya `Task<Task<TResult>>` (`Task(Of Task)` veya `Task(Of Task(Of TResult))` Visual Basic'te) için bir `Task` veya `Task<TResult>` (`Task(Of TResult)` Visual Basic'te). Yeni görevin tam olarak iç iç içe geçmiş görev temsil eder ve iptal durumunu ve tüm özel durumları içerir.  
+ <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> Yöntemler `Task<Task>` veya `Task<Task<TResult>>``Task(Of Task)` (`Task(Of Task(Of TResult))`) Visual Basic veya `Task` (`Task<TResult>``Task(Of TResult)`) arasında dönüştürmek için kullanılabilir. Yeni görev iç iç içe görevi tamamen temsil eder ve iptal durumu ve tüm özel durumları içerir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> genişletme yöntemleri.  
+ Aşağıdaki örnek, <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> uzantısı yöntemlerinin nasıl kullanılacağını göstermektedir.  
   
  [!code-csharp[TPL_UnWrap#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#04)]
  [!code-vb[TPL_UnWrap#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_unwrap/vb/snippet04.vb#04)]  

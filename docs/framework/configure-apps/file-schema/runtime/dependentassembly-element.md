@@ -9,21 +9,19 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a0604161ed6e7c3ead4a2e518daebc8414689af
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 33309ed89b4d31580da5de3aeb38e9e1fd8ae4d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252699"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117592"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly > öğesi
-Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Her derleme `dependentAssembly` için bir öğe kullanın.  
+Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Her derleme için bir `dependentAssembly` öğesi kullanın.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<çalışma zamanı >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly >**  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -43,7 +41,7 @@ Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Her derleme `d
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Derlemeyle ilgili tanımlama bilgilerini içerir. Bu öğe her `dependentAssembly` bir öğeye eklenmelidir.|  
+|`assemblyIdentity`|Derlemeyle ilgili tanımlama bilgilerini içerir. Bu öğe her bir `dependentAssembly` öğesine eklenmelidir.|  
 |`codeBase`|Çalışma zamanının, bilgisayarda yüklü değilse paylaşılan bir derlemeyi bulabilecekleri yeri belirtir.|  
 |`bindingRedirect`|Bir derleme sürümünü diğerine yeniden yönlendirir.|  
 |`publisherPolicy`|Çalışma zamanının bu derleme için yayımcı ilkesi uygulanıp uygulanmadığını belirtir.|  

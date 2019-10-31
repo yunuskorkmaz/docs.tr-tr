@@ -14,14 +14,12 @@ helpviewer_keywords:
 - FormatFromRawValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65a6d9eab9708f762d14e5361697b85ffb73f54a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5097cfe43ae785461a1e2af1217bcbd5e8c4b79c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798634"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120280"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue işlevi
 Biçim dönüştürmesi zaman tabanlıysa, bir ham performans verisi değerini belirtilen biçime veya iki ham performans verisi değerine dönüştürür. 
@@ -44,7 +42,7 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parametreler
 
 `dwCounterType`\
-'ndaki Sayaç türü. Sayaç türlerinin listesi için bkz. [WMI performans sayacı türleri](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType``PERF_LARGE_RAW_FRACTION` ve`PERF_LARGE_RAW_BASE`dışında herhangi bir sayaç türü olabilir. 
+'ndaki Sayaç türü. Sayaç türlerinin listesi için bkz. [WMI performans sayacı türleri](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType`, `PERF_LARGE_RAW_FRACTION` ve `PERF_LARGE_RAW_BASE`dışında herhangi bir sayaç türü olabilir. 
 
 `dwFormat`\
 'ndaki Ham performans verilerinin dönüştürüleceği biçim. Aşağıdaki değerlerden biri olabilir:
@@ -65,13 +63,13 @@ int FormatFromRawValue (
 `pTimeBase`\
 'ndaki Biçim dönüştürmesi için gerekliyse, zaman tabanına yönelik bir işaretçi. Biçim dönüştürmesi için zaman taban bilgileri gerekli değilse, bu parametrenin değeri yok sayılır.
 
-`pRawValue1`\ [in] ham performans değerini temsil [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) eden bir yapıya yönelik işaretçi.
+`pRawValue1`\ [in] bir ham performans değerini temsil eden [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) yapısına yönelik bir işaretçidir.
 
 `pRawValue2`\
-'ndaki İkinci bir ham performans [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) değerini temsil eden bir yapıya yönelik işaretçi. İkinci bir ham performans değeri gerekli değilse, bu parametre olmalıdır `null`.
+'ndaki İkinci bir ham performans değerini temsil eden [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) yapısına yönelik bir işaretçi. İkinci bir ham performans değeri gerekli değilse, bu parametrenin `null`olması gerekir.
 
 `pFmtValue`\
-dışı Biçimlendirilen performans değerini alan [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh-pdh_fmt_countervalue) yapıya yönelik bir işaretçi.
+dışı Biçimli performans değerini alan [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh-pdh_fmt_countervalue) yapısına yönelik bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -89,9 +87,9 @@ Bu işlev, [Formatfromrawvalue](https://docs.microsoft.com/previous-versions/ms2
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
- **Kitaplığı** PerfCounter. dll
+ **Kitaplık:** PerfCounter. dll
 
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

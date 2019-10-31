@@ -8,17 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to wrap EAP patterns
 ms.assetid: f11ed467-af2f-4504-8a2e-299a6c36d44e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a4287879bd95f7bc1e1dc99f74fa0d7cc0fe737f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac7436892c644340286bb4670bf75c9cd63a8ce5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769206"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106817"
 ---
 # <a name="how-to-wrap-eap-patterns-in-a-task"></a>Nasıl yapılır: Bir Görevde EAP Desenlerini Sarmalama
-Aşağıdaki örnek, rastgele bir olay tabanlı zaman uyumsuz desen (EAP) işlem dizisi bir görev olarak kullanarak nasıl sunacağınızı öğrenin gösterir bir <xref:System.Threading.Tasks.TaskCompletionSource%601>. Örnek ayrıca nasıl kullanılacağını gösterir bir <xref:System.Threading.CancellationToken> üzerinde yerleşik iptal yöntemleri çağırmak için <xref:System.Net.WebClient> nesneleri.  
+Aşağıdaki örnek, bir <xref:System.Threading.Tasks.TaskCompletionSource%601>kullanarak bir görev olarak rastgele bir olay tabanlı zaman uyumsuz model (EAP) işlemleri dizisinin nasıl gösterileceğini gösterir. Örnek ayrıca, <xref:System.Net.WebClient> nesnelerinde yerleşik iptal yöntemlerini çağırmak için bir <xref:System.Threading.CancellationToken> nasıl kullanacağınızı gösterir.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[FromAsync#08](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#08)]

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - data marshaling, Callback sample
 - marshaling, Callback sample
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0e2289b3c12c7c83a39f1ad8d5a1365349ca6442
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: c71c89e5797745144a2baed2d4846e3d9f9f26be
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151804"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114014"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Geri Çağırma Yöntemi Olarak Bir Temsilci Hazırlama
 Bu örnek, işlev işaretçileri bekleyen yönetilmeyen bir işleve temsilcilerin nasıl geçirileceğini gösterir. Bir temsilci, bir yönteme başvuru tutan ve tür kullanımı uyumlu işlev işaretçisine veya geri çağırma işlevine eşdeğer olan bir sınıftır.
@@ -26,13 +24,13 @@ Bu örnek, işlev işaretçileri bekleyen yönetilmeyen bir işleve temsilcileri
 
 Geri çağırma örneği, özgün işlev bildirimiyle gösterilen aşağıdaki yönetilmeyen işlevleri kullanır:
 
-- `TestCallBack`PInvokeLib. dll dosyasından verildi.
+- `TestCallBack`, PInvokeLib. dll dosyasından verildi.
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
-- `TestCallBack2`PInvokeLib. dll dosyasından verildi.
+- `TestCallBack2`, PInvokeLib. dll dosyasından verildi.
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);

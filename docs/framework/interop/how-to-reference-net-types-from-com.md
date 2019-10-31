@@ -12,31 +12,29 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 081548f9004d2fedf4d49845d3f44d4609fa508e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0223cb25b933cc84af49aa86d90259fdf1fd3efc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626300"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124168"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Nasıl yapılır: COM'dan .NET Türlerine Başvurma
-Bakış açısıyla, istemci ve sunucu kodu, COM ve .NET Framework arasındaki farklar büyük ölçüde görünmez. Microsoft Visual Basic istemciler, bir .NET nesnesini sözdizimi, özelliklerini ve nesne yöntemleri ve tam olarak bunu herhangi bir COM nesnesi gibi alanlar nesne tarayıcısında görüntüleyebilirsiniz.  
+İstemci ve sunucu kodunun bakış noktasından, COM ile .NET Framework arasındaki farklar büyük ölçüde görünmez değildir. Microsoft Visual Basic istemcileri, nesne yöntemleri ve söz dizimi, Özellikler ve alanları tamamen başka bir COM nesnesi gibi sunan nesne tarayıcısında bir .NET nesnesini görüntüleyebilir.  
   
- Meta veriler için bir COM tür kitaplığı dışarı aktarmak için aynı araçları kullanmanıza rağmen bir tür kitaplığını içeri aktarma işlemi C++ istemciler için biraz daha karmaşıktır. .NET nesne üyeleri bir yönetilmeyen C++ istemcisinden başvurmak için ile (Tlbexp.exe ile üretilen) TLB dosyasına başvurmak **#import** yönergesi. Tür kitaplığından başvururken C++, ya da belirtmeniz gerekir **raw_interfaces_only** seçeneğini veya Mscorlib.tlb temel sınıf kitaplığı'nda tanımlarını içe aktarın.  
+ Bir tür kitaplığını içeri aktarma işlemi istemciler için C++ biraz daha karmaşıktır, ancak meta VERILERI bir com tür kitaplığına aktarmak için aynı araçları kullanabilirsiniz. Yönetilmeyen C++ bir istemciden .NET nesne üyelerine başvurmak için **#import** yönergesi Ile tlb dosyasına (Tlbexp. exe ile üretildi) başvurun. Öğesinden C++bir tür kitaplığına başvurulduğunda, **raw_interfaces_only** seçeneğini belirtmeniz veya tanımları, mscorlib. tlb temel sınıf kitaplığında içeri aktarmanız gerekir.  
   
 ### <a name="to-import-a-library"></a>Bir kitaplığı içeri aktarmak için  
   
-- Belirtin **raw_interfaces_only** seçeneğini **#import** yönergesi. Örneğin:  
+- **#İmport** yönergesinde **raw_interfaces_only** seçeneğini belirtin. Örneğin:  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
     ```  
   
-     -veya-  
+     veya  
   
-- #İmport yönergesi için Mscorlib.tlb içerir. Örneğin:  
+- Mscorlib. tlb için bir #import yönergesi ekleyin. Örneğin:  
   
     ```cpp  
     #import "mscorlib.tlb"  
@@ -47,5 +45,5 @@ Bakış açısıyla, istemci ve sunucu kodu, COM ve .NET Framework arasındaki f
 
 - [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)
 - [Bütünleştirilmiş Kodları COM ile Kaydetme](registering-assemblies-with-com.md)
-- [Bir .NET nesnesini çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
-- [COM erişimi için bir uygulama dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
+- [.NET nesnesi çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [COM erişimi için uygulama dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

@@ -2,14 +2,12 @@
 title: ICorDebugDataTarget2::GetImageLocation Yöntemi
 ms.date: 03/30/2017
 ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b046a5fcd514dde84e2f0f8c22ee23529ee906e2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8b873e28bfab31ea18924f471f916475efd345d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911463"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122131"
 ---
 # <a name="icordebugdatatarget2getimagelocation-method"></a>ICorDebugDataTarget2::GetImageLocation Yöntemi
 Modülün temel adresinden bir modülün yolunu döndürür.  
@@ -32,7 +30,7 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
  'ndaki Arabellekte modül yolunu alacak karakterlerin sayısı.  
   
  `pcchName`  
- dışı `szName` Arabelleğe yazılan karakter sayısına yönelik bir işaretçi.  
+ dışı `szName` arabelleğine yazılan karakter sayısına yönelik bir işaretçi.  
   
  `szName`  
  dışı Modülün yolu.  
@@ -43,11 +41,11 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

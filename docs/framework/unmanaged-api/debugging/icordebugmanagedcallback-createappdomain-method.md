@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 48d410d7-6749-4125-a8fd-f9562c7088e9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3958e62f23615d4c9038713bb973a6d16424f348
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fa829d0a08846287835d2ac66a461b4b9b27a09a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759730"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090238"
 ---
 # <a name="icordebugmanagedcallbackcreateappdomain-method"></a>ICorDebugManagedCallback::CreateAppDomain Yöntemi
-Hata ayıklayıcı, bir uygulama etki alanı oluşturulduğunu bildirir.  
+Hata ayıklayıcıya bir uygulama etki alanının oluşturulduğunu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +36,19 @@ HRESULT CreateAppDomain (
   
 ## <a name="parameters"></a>Parametreler  
  `pProcess`  
- [in] Uygulama etki alanı oluşturulduğu işlemini temsil eden bir Icordebugprocess nesnesine bir işaretçi.  
+ 'ndaki Uygulama etki alanının oluşturulduğu işlemi temsil eden ICorDebugProcess nesnesine yönelik bir işaretçi.  
   
  `pAppDomain`  
- [in] Oluşturulmuş uygulama etki alanı temsil eden bir Icordebugappdomain nesne işaretçisi.  
+ 'ndaki Oluşturulmuş uygulama etki alanını temsil eden ICorDebugAppDomain nesnesine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

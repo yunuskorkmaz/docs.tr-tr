@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26fb69f8-1467-4711-bd24-cb117c63938f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d51c445d6f375f805253b9f640ab61ab3dccc58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c084a3fcbbc02504124a511c6e136be32f408d21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738480"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112319"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>ICLRDataTarget2::FreeVirtual Yöntemi
-Ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri hedef işlemin adres alanında önceden ayrılmış olan belleği boşaltmak için tarafından çağrılır.  
+Daha önce hedef işlemin adres alanında ayrılan belleği boşaltmak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağırılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,27 +37,27 @@ HRESULT FreeVirtual(
   
 ## <a name="parameters"></a>Parametreler  
  `addr`  
- [in] A `CLRDATA_ADDRESS` belleğin boşaltılması için başlangıç adresini belirten bir değer.  
+ 'ndaki Boşaltılacak belleğin başlangıç adresini belirten bir `CLRDATA_ADDRESS` değeri.  
   
  `size`  
- [in] Serbest bırakılacak belleğin bayt cinsinden boyutu.  
+ 'ndaki Boşaltılacak belleğin bayt cinsinden boyutu.  
   
  `typeFlags`  
- [in] Bellek boşaltma denetleyen bayraklar. Win32 bkz `VirtualFree` işlevi.  
+ 'ndaki Belleğin boşaltımı kontrol eden bayraklar. Bkz. Win32 `VirtualFree` işlevi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `FreeVirtual` Yöntemi Win32 için mantıksal kapsayıcı olarak hizmet veren `VirtualFree` işlevi.  
+ `FreeVirtual` yöntemi, Win32 `VirtualFree` işlevi için bir mantıksal sarmalayıcı görevi görür.  
   
- Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.  
+ Bu yöntem, hata ayıklama uygulamasının yazarı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** ClrData.idl, ClrData.h  
+ **Üst bilgi:** ClrData. IDL, ClrData. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

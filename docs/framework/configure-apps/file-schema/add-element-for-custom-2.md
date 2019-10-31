@@ -1,5 +1,5 @@
 ---
-title: <add>NameValueSectionHandler ve DictionarySectionHandler için öğesi
+title: NameValueSectionHandler ve DictionarySectionHandler için <add> öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec6d5045580e887de5f05a05c8f39fa62c6e3f2e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9e7d68530ae1f0666fc4940ffe7605c3bf8dfe3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921324"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119608"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<NameValueSectionHandler ve DictionarySectionHandler için > öğesi ekleyin
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler ve DictionarySectionHandler için > öğesi \<ekleyin
 
-Özel uygulama ayarları ekler. **Her\<Add >** etiketi bir anahtar/değer çifti içerir.
+Özel uygulama ayarları ekler. Her **\<add >** etiketi bir anahtar/değer çifti içerir.
 
-[ **\<Yapılandırma >** ](configuration-element.md)   
+[ **\<yapılandırma >** ](configuration-element.md)   
 &nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> Ekle**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<ekleme >**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,7 +41,7 @@ ms.locfileid: "69921324"
 
 | Öğe | Açıklama |
 | ------- | ------------|
-| [sectionName > öğesi  **\<** ](custom-element-2.md) | <xref:System.Configuration.NameValueSectionHandler> Ve<xref:System.Configuration.DictionarySectionHandler> sınıflarını kullanan özel yapılandırma bölümlerinin ayarlarını tanımlar. |
+| [ **\<sectionName >** Dosyalarında](custom-element-2.md) | <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> sınıflarını kullanan özel yapılandırma bölümlerinin ayarlarını tanımlar. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
@@ -49,7 +49,7 @@ Yok.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir özel yapılandırma bölümünün nasıl tanımlanacağını gösterir ve  **\<> Ekle** öğesini kullanarak ayarları bölümüne yerleştirir:
+Aşağıdaki örnek, bir özel yapılandırma bölümünün nasıl tanımlanacağını gösterir ve **\<add >** öğesini kullanarak ayarları bölümüne yerleştirir:
 
 ```xml
 <configuration>

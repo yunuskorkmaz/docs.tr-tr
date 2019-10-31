@@ -7,78 +7,76 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 90ed12862c4cadc45777150deb1b9f91f111bf41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6db7d37293015911c1285d39e19bf7542a7ac59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750514"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123636"
 ---
 # <a name="copying-and-pinning"></a>Kopyalama ve Sabitleme
 
-Veri sıralarken, birlikte çalışma sıralayıcısı kopyalayabilir veya sıralanmış veri sabitleyin. Veri kopyalama verilerin bir kopyasını başka bir bellek konumuna bir bellek konumunda yerleştirir. Bir değer türü kopyalama arasındaki farklar aşağıda gösterilmiştir ve bir tür kopyalama başvuruya göre yönetilmeyen bellek yönetilen geçirilmedi.
+Verileri sıralama sırasında birlikte çalışma sıralayıcısı, sıralanan verileri kopyalayabilir veya sabitleyebilir. Verilerin kopyalanması, verilerin bir kopyasını başka bir bellek konumundaki bir bellek konumundan bir konuma koyar. Aşağıdaki çizimde, bir değer türü kopyalama ve bir başvuruya göre geçirilen bir tür ile yönetilmeyen belleğe kopyalama arasındaki farklar gösterilmektedir.
 
-![Değer ve başvuru türleri nasıl kopyalanır gösteren diyagram.](./media/copying-and-pinning/interop-marshal-copy.gif)
+![Değer ve başvuru türlerinin nasıl kopyalanacağını gösteren diyagram.](./media/copying-and-pinning/interop-marshal-copy.gif)
 
-Değer olarak geçilemez yöntem bağımsız değişkenleri yığında değerler olarak yönetilmeyen kod için hazırlanırlar. Kopyalama işlemi doğrudan. Gibi işaretçiler, başvuruya göre geçirilen bağımsız değişkenler yığında geçirilir. Başvuru türleri de değere ve başvuruya göre iletilir. Aşağıdaki çizimde gösterildiği gibi değer olarak geçilemez başvuru türleri ya da kopyaladığınız Sabitlenen veya:
+Değer tarafından geçirilen yöntem bağımsız değişkenleri, yığın üzerinde değer olarak yönetilmeyen koda sıralanır. Kopyalama işlemi doğrudan olur. Başvuruya göre geçirilen bağımsız değişkenler yığına işaretçiler olarak geçirilir. Başvuru türleri de değere ve başvuruya göre geçirilir. Aşağıdaki çizimde gösterildiği gibi, değer tarafından geçirilen başvuru türleri kopyalanır veya sabitlenir:
 
-![Diyagram gösteren başvuru türleri, değere ve başvuruya göre geçirilen.](./media/copying-and-pinning/interop-marshal-reference-pin.gif)
+![Değere ve başvuruya göre geçirilen başvuru türlerini gösteren diyagram.](./media/copying-and-pinning/interop-marshal-reference-pin.gif)
 
-Geçici olarak sabitleme, bu nedenle ortak dil çalışma zamanının atık toplayıcısı tarafından yeniden konumlandırılması tutma geçerli bellek konumuna verileri kilitler. Sıralayıcı, veri kopyalama yükünü azaltmak ve performansı artırmak için sabitler. Veri türü kopyaladığınız veya sıralama işlemi sırasında sabitlenmiş olup olmadığını belirler.  Sabitleme otomatik olarak gerçekleştirilir gibi nesneler için sıralama sırasında <xref:System.String>bellek kullanarak el ile de sabitleyebilirsiniz ancak <xref:System.Runtime.InteropServices.GCHandle> sınıfı.
+Veri sabitleme, verileri geçerli bellek konumunda geçici olarak kilitler ve bu sayede ortak dil çalışma zamanının çöp toplayıcısının yeniden konumlandırılmasını sağlar. Sıralayıcı, performansı kopyalama ve geliştirme yükünü azaltmak için verileri sabitler. Verilerin türü, sıralama işlemi sırasında kopyalanıp kopyalanmadığını veya sabitlenmeyeceğini belirler.  Sabitleme işlemi, <xref:System.String>gibi nesneler için sıralama sırasında otomatik olarak gerçekleştirilir, ancak <xref:System.Runtime.InteropServices.GCHandle> sınıfını kullanarak belleği el ile sabitleyebilirsiniz.
 
-## <a name="formatted-blittable-classes"></a>Biçimlendirilmiş Blittable sınıfları
+## <a name="formatted-blittable-classes"></a>Biçimlendirilen blittable sınıfları
 
-Biçimlendirilmiş [blittable](blittable-and-non-blittable-types.md) sınıfları (biçimlendirilmiş) düzeni sabit ve ortak veri temsilini hem yönetilen hem de yönetilmeyen bellek. Bu tür hazırlama gerektirdiğinde yığındaki bir nesneye bir işaretçi çağrılanın doğrudan geçirilir. Çağrılan bellek konumuna işaretçi tarafından başvurulan içeriği değiştirebilirsiniz.
+Biçimlendirilen [blittable](blittable-and-non-blittable-types.md) sınıflarının hem yönetilen hem de yönetilmeyen bellekte sabit düzeni (biçimli) ve ortak veri temsili vardır. Bu türler sıralama gerektirdiğinde, yığında nesne işaretçisi doğrudan çağrıa geçirilir. Aranan, işaretçinin başvurduğu bellek konumunun içeriğini değiştirebilir.
 
 > [!NOTE]
-> Out veya In/Out parametresi işaretlenmişse çağrılan bellek içeriği değiştirebilirsiniz. Buna karşılık, çağrılan parametresi gibi sıralamakta ayarlandığında içeriğini değiştirme biçimlendirilmiş bir blok halinde kopyalanabilir türler için varsayılan kaçınmanız gerekir. In nesneyi değiştirme aynı sınıf için bir tür kitaplığı dışarı aktarılırken sorunları oluşturur ve çapraz-grup çağrıları yapmak için kullanılır.
+> Parametre dışarı veya dışarı işaretlenmişse, çağrılan bellek içeriğini değiştirebilir. Buna karşılık, parametresi ' de olarak sıralama olarak ayarlandığında, aranan blittable türleri için varsayılan değer olan, aranan içeriği değiştirmekten kaçınmalıdır. Bir ın nesnesini değiştirmek, aynı sınıf bir tür kitaplığına aktarıldığında ve çapraz grup çağrıları yapmak için kullanıldığında sorunlar oluşturur.
 
-## <a name="formatted-non-blittable-classes"></a>Biçimlendirilmiş Blittable olmayan sınıflar
+## <a name="formatted-non-blittable-classes"></a>Blittable olmayan sınıflar biçimlendirildi
 
-Biçimlendirilmiş [kopyalanamaz](blittable-and-non-blittable-types.md) sınıfları (biçimlendirilmiş) düzeni sabit ancak veri temsilini yönetilen ve yönetilmeyen bellekte farklıdır. Veri dönüştürme aşağıdaki koşullarda gerektirebilir:
+Biçimlendirilen [non-blittable](blittable-and-non-blittable-types.md) sınıfları sabit düzene sahip (biçimlendirildi), ancak veri gösterimi yönetilen ve yönetilmeyen bellekte farklıdır. Veriler aşağıdaki koşullarda Dönüşüm gerektirebilir:
 
-- Blittable olmayan sınıf değere göre sıralanmış olduğundan çağrılan bir kopyasını bir veri yapısına bir işaretçi alır.
+- Blittable olmayan bir sınıf değere göre sıralandıysanız, çağrılan, veri yapısının bir kopyasına bir işaretçi alır.
 
-- Blittable olmayan sınıf başvuruya göre sıralanmış olduğundan çağrılan bir kopyasını veri yapısı işaretçisi için bir işaretçi alır.
+- Blittable olmayan bir sınıf başvuruya göre sıralandıysanız, çağrılan, veri yapısının bir kopyasına yönelik bir işaretçi alır.
 
-- Varsa <xref:System.Runtime.InteropServices.InAttribute> özniteliği, bu kopyanın her zaman gerektiği şekilde hazırlama, örneğin durumu ile başlatılır.
+- <xref:System.Runtime.InteropServices.InAttribute> özniteliği ayarlandıysa, bu kopya her zaman örneğin durumuyla başlatılır ve gerektiğinde sıralama yapılır.
 
-- Varsa <xref:System.Runtime.InteropServices.OutAttribute> özniteliği, durumu her zaman sonrasında, gerektiği şekilde hazırlama örneğine geri kopyalanır.
+- <xref:System.Runtime.InteropServices.OutAttribute> özniteliği ayarlandıysa, durum her zaman döndürülen örneğe geri kopyalanır ve gerektiğinde sıralama yapılır.
 
-- Her iki **InAttribute** ve **OutAttribute** , her iki kopyasında gerekli ayarlanmıştır. Her iki öznitelik belirtilmezse, ya da kopyalama ortadan kaldırarak Sıralayıcı iyileştirebilirsiniz.
+- **InAttribute** ve **OutAttribute** öğelerinin her ikisi de ayarlanırsa, her iki kopya de gereklidir. Her iki öznitelik de atlanırsa Sıralayıcı, kopyayı ortadan kaldırarak iyileştirebilirler.
 
 ## <a name="reference-types"></a>Başvuru Türleri
 
-Başvuru türleri, değer veya başvuruya göre geçirilebilir. Değere göre geçirildiğinde türü bir işaretçi yığında geçirilir. Başvuruya göre geçirildiği durumların bir işaretçi türüne bir işaretçi yığında geçirilir.
+Başvuru türleri, değere veya başvuruya göre geçirilebilir. Değer ile geçirildiğinde, yığına tür işaretçisi geçirilir. Başvuruya göre geçirildiğinde, tür işaretçisine bir işaretçi yığına geçirilir.
 
-Başvuru türleri aşağıdaki koşullu davranışı vardır:
+Başvuru türleri aşağıdaki koşullu davranışa sahiptir:
 
-- Türleri, bir başvuru türü değerle geçirilir ve kopyalanamaz türlerin üyelerini varsa, iki kez dönüştürülür:
+- Bir başvuru türü değere göre geçirilir ve blittable olmayan türlerde üyelere sahipse türler iki kez dönüştürülür:
 
-  - Ne zaman bir bağımsız değişken yönetilmeyen tarafa geçirilir.
+  - Yönetilmeyen tarafa bir bağımsız değişken geçirildiğinde.
 
-  - Geri çağrısından.
+  - Çağrıdan geri dönün.
 
-  Önlemek için gereksiz yere kopyalayarak ve dönüştürme, bu tür olarak sıralanmış parametreleri. Açıkça uygulamalısınız **InAttribute** ve **OutAttribute** öznitelikleri için Aranan tarafından yapılan değişiklikleri görmek arayan için bağımsız değişken.
+  Gereksiz kopyalama ve dönüştürmeyi önlemek için bu türler parametrelerde olduğu gibi sıralanır. Çağıran tarafından yapılan değişiklikleri görmek için bir bağımsız değişkene **InAttribute** ve **OutAttribute** özniteliklerini açıkça uygulamanız gerekir.
 
-- Bir başvuru türü değerle geçirilir ve yalnızca blittable türlerinde üyeler varsa, hazırlama sırasında sabitlenebilir ve tür üyeleri için Aranan tarafından yapılan değişiklikler arayan tarafından görülür. Uygulama **InAttribute** ve **OutAttribute** açıkça bu davranışı istiyorsanız. Bu yönlü öznitelikler, tür kitaplığına yönlü bilgilerini birlikte çalışma sıralayıcısı vermez (Bu gibi varsayılan dışarı aktarır) ve bu COM çapraz-grup sıralama ile sorunlara neden olabilir.
+- Bir başvuru türü değere göre geçirilmişse ve yalnızca blittable türlerin üyeleri içeriyorsa, sıralama sırasında sabitlenebilir ve aranan tarafından tür üyelerinde yapılan değişiklikler arayan tarafından görülür. Bu davranışı isterseniz **InAttribute** ve **OutAttribute** 'ı açık bir şekilde uygulayın. Bu yönlü öznitelikler olmadan, birlikte çalışma sıralayıcısı yönlü bilgileri tür kitaplığına dışa aktarmaz (varsayılan olan ' de olarak dışa aktarır) ve bu, COM çapraz grup sıralaması ile ilgili sorunlara neden olabilir.
 
-- Başvuruya göre bir başvuru türü geçirilmezse, bu In/Out varsayılan olarak sıralanmış.
+- Başvuru türü başvuru ile geçirilmezse, varsayılan olarak Içinde/dışarı olarak sıralanır.
 
-## <a name="systemstring-and-systemtextstringbuilder"></a>System.String ve System.Text.StringBuilder
+## <a name="systemstring-and-systemtextstringbuilder"></a>System. String ve System. Text. StringBuilder
 
-Veri yönetilmeyen koda değere veya başvuruya göre sıralanır, Sıralayıcı, genellikle verileri (büyük olasılıkla karakter kümesi, kopyalama sırasında dönüştürme) bir ikincil arabelleğe kopyalar ve çağrılanın arabellek bir başvuru geçirir. Başvuru olmadığı sürece bir **BSTR** ile ayrılan **SysAllocString**, başvuru ile her zaman ayrılır **CoTaskMemAlloc**.
+Veriler, değere veya başvuruya göre yönetilmeyen koda sıralandığında, Sıralayıcı tipik olarak verileri ikincil bir arabelleğe kopyalar (büyük olasılıkla kopya sırasında karakter kümelerini dönüştürüyor) ve bir arabelleğe bir başvuru çağırarak aranan öğesine geçirir. Başvuru, **SysAllocString**ile ayrılmış bir **BSTR** değilse, başvuru her zaman **CoTaskMemAlloc**ile ayrılır.
 
-Ya da dize türü (örneğin, Unicode karakter dizesi gibi) değerine göre sıralanmış bir iyileştirme Sıralayıcı çağrılan doğrudan bir işaretçi için yeni bir arabellek kopyalamak yerine iç Unicode arabellek yönetilen dizelere geçer.
+Dize türü değere göre sıralanmışsa (örneğin, bir Unicode karakter dizesi), Sıralayıcı çağıran, iç Unicode arabelleğinde yönetilen dizelere doğrudan bir işaretçi ekleyerek onu yeni bir arabelleğe kopyalamanız gerekir.
 
 > [!CAUTION]
-> Bir dize değeriyle geçirildiğinde, çağrılan hiçbir zaman sıralayıcı tarafından geçirilen başvuru değiştirmeniz gerekir. Bunun yapılması, yönetilen yığın bozabilir.
+> Bir dize değere göre geçirildiğinde, çağrılan, Sıralayıcı tarafından geçirilen başvuruyu hiçbir zaman değiştirmemelidir. Bunun yapılması yönetilen yığının bozulmasına neden olabilir.
 
-Olduğunda bir <xref:System.String?displayProperty=nameWithType> geçirilen başvuruya göre sıralayıcı içeriğini dize için ikincil bir arabellek çağrı yapmadan önce kopyalar. Ardından çağrısından dönüşte, yeni bir dizeye arabellek içeriğini kopyalar. Bu teknik, yönetilen bir değişmez dize değiştirilmemiş kalmasını sağlar.
+Bir <xref:System.String?displayProperty=nameWithType> başvuruya göre geçirildiğinde Sıralayıcı, çağrıyı yapmadan önce, içeriği ikincil arabelleğe kopyalar. Ardından, arabelleğin içeriğini çağrıdan dönüşte yeni bir dizeye kopyalar. Bu teknik, sabit yönetilen dizenin değiştirilmemiş olarak kalmasını sağlar.
 
-Olduğunda bir <xref:System.Text.StringBuilder?displayProperty=nameWithType> değeri, Sıralayıcı geçişleri iç arabellek başvuru tarafından geçirilen **StringBuilder** doğrudan çağırana. Çağıran ve çağrılan arabellek boyutuna kabul etmesi gerekir. Çağıranın oluşturmaktan sorumlu bir **StringBuilder** yeterli uzunluğu. Çağrılan arabellek değil taşması emin olmak için gerekli önlemleri almanız gerekir. **StringBuilder** olduğundan başvuru türleri değer olarak geçilemez kural için bir özel parametre olduğu gibi varsayılan olarak geçirilir. Bu her zaman geçirilir olarak daraltma veya genişletme.
+Değer tarafından <xref:System.Text.StringBuilder?displayProperty=nameWithType> geçirildiğinde Sıralayıcı, **StringBuilder** 'ın iç arabelleğine doğrudan çağırana bir başvuru geçirir. Çağıran ve çağrılan, arabelleğin boyutunu kabul etmelidir. Çağıran, yeterli uzunlukta bir **StringBuilder** oluşturmaktan sorumludur. Aranan, arabelleğin taşma olmamasını sağlamak için gerekli önlemleri almalıdır. **StringBuilder** , değere göre geçirilen başvuru türleri varsayılan olarak parametrelerde olarak geçirilir kural için bir özel durumdur. Her zaman Içinde/dışarı olarak geçirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7de415b998ef97e7500c289a1bca4402d203b152
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 205ad3af81fb6fabda5cbe291536f8858999f831
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738695"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113696"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue Yöntemi
-Hedef işlemde belirtilen iş parçacığının, iş parçacığı yerel depolaması (TLS) bir değer alır. Bu yöntem, ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.  
+Hedef işlemde belirtilen iş parçacığının iş parçacığı yerel depolama alanından (TLS) bir değer alır. Bu yöntem, ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +37,25 @@ HRESULT GetTLSValue (
   
 ## <a name="parameters"></a>Parametreler  
  `threadID`  
- [in] Bir iş parçacığı hedef işlem, işletim sistemi tanımlayıcısı.  
+ 'ndaki Hedef işlemdeki bir iş parçacığının işletim sistemi tanımlayıcısı.  
   
  `index`  
- [in] Konumun dizini. Bu değer, belirtilen iş parçacığı yerel deposuna geçerli bir dizin olmalıdır.  
+ 'ndaki Konumun dizini. Bu değer, belirtilen iş parçacığının yerel deposunda geçerli bir dizin olmalıdır.  
   
  `value`  
- [out] Bir işaretçi bir `CLRDATA_ADDRESS` değeri belirten bir değeri belirli TLS konumdan döndürdü.  
+ dışı Verilen TLS konumundan döndürülen değeri belirten `CLRDATA_ADDRESS` değerine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.  
+ Bu yöntem, hata ayıklama uygulamasının yazarı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** ClrData.idl, ClrData.h  
+ **Üst bilgi:** ClrData. IDL, ClrData. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

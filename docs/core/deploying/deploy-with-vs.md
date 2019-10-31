@@ -1,19 +1,17 @@
 ---
 title: Visual Studio ile .NET Core uygulamaları dağıtma
 description: Visual Studio ile .NET Core uygulaması dağıtmayı öğrenin.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: e905d48da31bb5a2e16a645620f2c4f57dda4413
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: fd6861a71bdaac2d3500be52ae29c9fdb383a574
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522812"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092706"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio ile .NET Core uygulamaları dağıtma
 
@@ -73,9 +71,9 @@ Bir veya daha fazla üçüncü taraf bağımlılığı olan çerçeveye bağlı 
 
 1. Projenize bir NuGet paketine başvuru eklemek için **NuGet paket yöneticisini** kullanın; paket sisteminizde zaten yoksa, uygulamayı da yükleyemezsiniz. Paket Yöneticisi 'ni açmak için **araçlar**  > **nuget Paket Yöneticisi**  > **çözüm için NuGet Paketlerini Yönet**' i seçin.
 
-1. @No__t_0 sisteminizde yüklü olduğunu doğrulayın ve yoksa, yükleme. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. Orada `Newtonsoft.Json` listede **yoksa, araştır sekmesini seçin** ve arama kutusuna "Newtonsoft. JSON" yazın. @No__t_0 ' yi seçin ve sağ bölmedeki **yüklemeyi**seçmeden önce projenizi seçin.
+1. `Newtonsoft.Json` sisteminizde yüklü olduğunu doğrulayın ve yoksa, yükleme. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. Orada `Newtonsoft.Json` listede **yoksa, araştır sekmesini seçin** ve arama kutusuna "Newtonsoft. JSON" yazın. `Newtonsoft.Json` ' yi seçin ve sağ bölmedeki **yüklemeyi**seçmeden önce projenizi seçin.
 
-1. @No__t_0 sisteminizde zaten yüklüyse, **çözüm Için paketleri Yönet** sekmesinin sağ bölmesinde projenizi seçerek projenize ekleyin.
+1. `Newtonsoft.Json` sisteminizde zaten yüklüyse, **çözüm Için paketleri Yönet** sekmesinin sağ bölmesinde projenizi seçerek projenize ekleyin.
 
 Üçüncü taraf bağımlılıkları olan çerçeveye bağlı bir dağıtımın yalnızca üçüncü taraf bağımlılıkları olarak taşındığına göz önünde kalabileceğinizi unutmayın. Örneğin, bir üçüncü taraf kitaplığı yalnızca macOS destekliyorsa, uygulama Windows sistemlerine taşınabilir değildir. Bu durum, üçüncü taraf bağımlılığının yerel koda bağlı olması durumunda meydana gelir. Bunun iyi bir örneği, [libuv](https://github.com/libuv/libuv)üzerinde yerel bir bağımlılık gerektiren [Kestrel sunucusudur](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel). Bu tür üçüncü taraf bağımlılığı olan bir uygulama için FDD oluşturulduğunda, yayımlanan çıktı, yerel bağımlılığın desteklediği (ve NuGet paketinde bulunan) her [çalışma zamanı tanımlayıcısı (RID)](../rid-catalog.md) için bir klasör içerir.
 
@@ -132,7 +130,7 @@ Uygulamanızı Visual Studio 'dan yayımlamak için şunları yapın:
    </PropertyGroup>
    ```
 
-   @No__t_0 öğesinin *csproj* dosyanızda sahip olduğunuz herhangi bir `<PropertyGroup>` gidebileceğini unutmayın. Bu bölümde daha sonra bir örnek *csproj* dosyası belirir.
+   `<RuntimeIdentifiers>` öğesinin *csproj* dosyanızda sahip olduğunuz herhangi bir `<PropertyGroup>` gidebileceğini unutmayın. Bu bölümde daha sonra bir örnek *csproj* dosyası belirir.
 
 1. Uygulamanızı yayımlayın.
 
@@ -158,7 +156,7 @@ Uygulamanızı Visual Studio 'dan yayımlamak için şunları yapın:
 
          1. Uygulamanızı 64 bitlik Windows 10 platformları için yayımlamak üzere **Yayımla** ' yı seçin.
 
-         1. @No__t_0 platformu için bir profil oluşturmak üzere önceki adımları tekrar izleyin. **Hedef konum** *Bin\Release\PublishOutput\osx.10.11-x64*ve **hedef çalışma zamanı** `osx.10.11-x64`. Visual Studio 'Nun bu profile atadığı ad **FolderProfile2**' dir.
+         1. `osx.10.11-x64` platformu için bir profil oluşturmak üzere önceki adımları tekrar izleyin. **Hedef konum** *Bin\Release\PublishOutput\osx.10.11-x64*ve **hedef çalışma zamanı** `osx.10.11-x64`. Visual Studio 'Nun bu profile atadığı ad **FolderProfile2**' dir.
 
       Her hedef konumun, uygulamanızı başlatmak için gereken tüm dosya (hem uygulama dosyalarınız hem de tüm .NET Core dosyaları) kümesini içerdiğini unutmayın.
 
@@ -270,9 +268,9 @@ Bir veya daha fazla üçüncü taraf bağımlılığı ile kendi içindeki bir d
 
 1. Projenize bir NuGet paketine başvuru eklemek için **NuGet paket yöneticisini** kullanın; paket sisteminizde zaten yoksa, uygulamayı da yükleyemezsiniz. Paket Yöneticisi 'ni açmak için **araçlar**  > **nuget Paket Yöneticisi**  > **çözüm için NuGet Paketlerini Yönet**' i seçin.
 
-1. @No__t_0 sisteminizde yüklü olduğunu doğrulayın ve yoksa, yükleme. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. Orada `Newtonsoft.Json` listede **yoksa, araştır sekmesini seçin** ve arama kutusuna "Newtonsoft. JSON" yazın. @No__t_0 ' yi seçin ve sağ bölmedeki **yüklemeyi**seçmeden önce projenizi seçin.
+1. `Newtonsoft.Json` sisteminizde yüklü olduğunu doğrulayın ve yoksa, yükleme. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. Orada `Newtonsoft.Json` listede **yoksa, araştır sekmesini seçin** ve arama kutusuna "Newtonsoft. JSON" yazın. `Newtonsoft.Json` ' yi seçin ve sağ bölmedeki **yüklemeyi**seçmeden önce projenizi seçin.
 
-1. @No__t_0 sisteminizde zaten yüklüyse, **çözüm Için paketleri Yönet** sekmesinin sağ bölmesinde projenizi seçerek projenize ekleyin.
+1. `Newtonsoft.Json` sisteminizde zaten yüklüyse, **çözüm Için paketleri Yönet** sekmesinin sağ bölmesinde projenizi seçerek projenize ekleyin.
 
 Bu proje için tüm *csproj* dosyası aşağıda verilmiştir:
 

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Put function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 40688a0e4273233245d00fcd927f95945a43f712
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a35025c6d16455a51b7b22d822ba77337ddd894a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798265"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120230"
 ---
 # <a name="qualifierset_put-function"></a>QualifierSet_Put işlevi
 
@@ -53,7 +51,7 @@ HRESULT QualifierSet_Put (
 'ndaki Yazılacak niteleyicinin adı.
 
 `pVal`\
-'ndaki Yazılacak niteleyiciyi içeren geçerli `VARIANT` bir işaretçisi. Bu parametre `null`olamaz.
+'ndaki Yazılacak niteleyiciyi içeren geçerli bir `VARIANT` işaretçisi. Bu parametre `null`olamaz.
 
 `lFlavor`\
 'ndaki Bu niteleyici için istenen niteleyici türlerini tanımlayan aşağıdaki sabitlerden biri. Varsayılan değer `WBEM_FLAVOR_OVERRIDABLE` (0).
@@ -74,8 +72,8 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 |---------|---------|---------|
 | `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Anahtar olmayan bir özellikte **anahtar** niteleyicisi belirtmeye yönelik geçersiz bir girişim vardı. Anahtarlar bir nesne için sınıf tanımında belirtilir ve örnek temelinde değiştirilemez. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
-| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal` Parametre geçerli bir niteleyici türü değil. |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Sahip olan nesne geçersiz kılmalara izin `QualifierSet_Put` vermediğinden, niteleyicinin yöntemi çağrılamaz. |
+| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal` parametresi geçerli bir niteleyici türü değil. |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Sahip olan nesne geçersiz kılmalara izin vermediğinden, niteleyicisi üzerinde `QualifierSet_Put` yöntemini çağırmak mümkün değildir. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
 
 ## <a name="remarks"></a>Açıklamalar
@@ -84,9 +82,9 @@ Bu işlev, [IWbemQualifierSet::P UT](/windows/desktop/api/wbemcli/nf-wbemcli-iwb
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi** WMINet_Utils. IDL
+**Üst bilgi:** WMINet_Utils. IDL
 
 **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

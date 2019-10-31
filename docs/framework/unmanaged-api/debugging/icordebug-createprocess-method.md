@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5d6220270634dd8e2d15787d717020b8f6f86bb9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8812a98b0f28dd1336903dc34682f638a291f53b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738334"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111002"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess Yöntemi
-Bir işlem ve onun birincil iş parçacığı hata ayıklayıcının denetiminin altında başlatır.  
+Hata ayıklayıcının denetimi altında bir işlem ve birincil iş parçacığını başlatır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -48,58 +46,58 @@ HRESULT CreateProcess (
   
 ## <a name="parameters"></a>Parametreler  
  `lpApplicationName`  
- [in] Başlatılan işlem tarafından yürütülecek modülü belirtiyorsa null ile sonlandırılmış bir dize işaretçisi. Modül çağırma işleminin bağlamında çalıştırılır.  
+ 'ndaki Başlatılan işlem tarafından yürütülecek modülü belirten, null ile sonlandırılmış bir dize işaretçisi. Modül, çağıran işlemin güvenlik bağlamında yürütülür.  
   
  `lpCommandLine`  
- [in] Başlatılan işlem tarafından yürütülecek komut satırı belirten bir null ile sonlandırılmış dize işaretçisi. Uygulama adı (örneğin, "SomeApp.exe"), ilk bağımsız değişken olmalıdır.  
+ 'ndaki Başlatılan işlem tarafından yürütülecek komut satırını belirten, null ile sonlandırılmış bir dize işaretçisi. Uygulama adı (örneğin, "SomeApp. exe") ilk bağımsız değişken olmalıdır.  
   
  `lpProcessAttributes`  
- [in] Bir Win32 işaretçisine `SECURITY_ATTRIBUTES` işlemi için güvenlik tanımlayıcısı belirten yapısı. Varsa `lpProcessAttributes` olan null, işlem varsayılan güvenlik tanımlayıcısını alır.  
+ 'ndaki İşlemin güvenlik tanımlayıcısını belirten bir Win32 `SECURITY_ATTRIBUTES` yapısına yönelik işaretçi. `lpProcessAttributes` null ise, işlem varsayılan bir güvenlik tanımlayıcısı alır.  
   
  `lpThreadAttributes`  
- [in] Bir Win32 işaretçisine `SECURITY_ATTRIBUTES` işlemin birincil iş parçacığı için güvenlik tanımlayıcısı belirten yapısı. Varsa `lpThreadAttributes` olan null, iş parçacığı bir varsayılan güvenlik tanımlayıcısını alır.  
+ 'ndaki İşlemin birincil iş parçacığının güvenlik tanımlayıcısını belirten bir Win32 `SECURITY_ATTRIBUTES` yapısına yönelik işaretçi. `lpThreadAttributes` null ise, iş parçacığı varsayılan bir güvenlik tanımlayıcısı alır.  
   
  `bInheritHandles`  
- [in] Kümesine `true` çağırma işleminde devralınabilir her tutamacı başlatılan işlem tarafından devralınır belirtmek için veya `false` tutamaçları devralınmaz belirtmek için. Devralınan tutamaçları özgün tutamaçlarını aynı değeri ve erişim haklarına sahip.  
+ 'ndaki Çağıran işlemdeki her bir devralınabilir tanıtıcının başlatılan işlem tarafından devralındığını veya tanıtıcıların devralınamayacağını belirtmek için `false` `true` olarak ayarlayın. Devralınan tutamaçlar, özgün tanıtıcılarla aynı değere ve erişim haklarına sahiptir.  
   
  `dwCreationFlags`  
- [in] Bitsel bir birleşimi [Win32 işlem oluşturma bayrak](https://go.microsoft.com/fwlink/?linkid=69981) öncelik sınıfı ve başlatılan işlemin davranışını kontrol eden.  
+ 'ndaki Öncelik sınıfını ve başlatılan işlemin davranışını denetleyen [Win32 Işlemi oluşturma bayraklarının](https://go.microsoft.com/fwlink/?linkid=69981) bit düzeyinde birleşimi.  
   
  `lpEnvironment`  
- [in] Yeni işlem için bir ortam bloğuna işaretçi.  
+ 'ndaki Yeni işlem için ortam bloğunun işaretçisi.  
   
  `lpCurrentDirectory`  
- [in] İşlem için geçerli dizin tam yolunu belirtir null ile sonlandırılmış bir dize işaretçisi. Bu parametre null ise, yeni işlem çağırma işlemi aynı geçerli sürücü ve dizine sahip.  
+ 'ndaki İşlem için geçerli dizinin tam yolunu belirten, null ile sonlandırılmış bir dize işaretçisi. Bu parametre null ise, yeni işlem çağıran işlemle aynı geçerli sürücü ve dizine sahip olur.  
   
  `lpStartupInfo`  
- [in] Bir Win32 işaretçisine `STARTUPINFOW` iş istasyonunda, masaüstü, standart tanıtıcıları ve başlatılan işlem için ana penceresinin görünümünü belirtir yapısı.  
+ 'ndaki Başlatılan işlemin ana penceresinin pencere istasyonunu, masaüstünü, standart tutamaçlarını ve görünümünü belirten bir Win32 `STARTUPINFOW` yapısına yönelik işaretçi.  
   
  `lpProcessInformation`  
- [in] Bir Win32 işaretçisine `PROCESS_INFORMATION` yapısı başlatılacak işlemine ilişkin kimlik bilgilerini belirtir.  
+ 'ndaki Başlatılacak işlemle ilgili kimlik bilgilerini belirten bir Win32 `PROCESS_INFORMATION` yapısına yönelik işaretçi.  
   
  `debuggingFlags`  
- [in] Hata ayıklama seçenekleri belirten CorDebugCreateProcessFlags sabit listesi değeri.  
+ 'ndaki Hata ayıklama seçeneklerini belirten CorDebugCreateProcessFlags numaralandırması değeri.  
   
  `ppProcess`  
- [out] İşlemi temsil eden Icordebugprocess nesnesi adresi için bir işaretçi.  
+ dışı İşlemi temsil eden ICorDebugProcess nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem parametrelerini Win32 aynıdır `CreateProcess` yöntemi.  
+ Bu yöntemin parametreleri, Win32 `CreateProcess` yöntemi ile aynıdır.  
   
- Yönetilmeyen karışık mod hata ayıklamayı etkinleştirmek için ayarlanmış `dwCreationFlags` DEBUG_PROCESS için &#124; DEBUG_ONLY_THIS_PROCESS. Yalnızca yönetilen hata ayıklama kullanmak istiyorsanız, bu bayraklar ayarlamayın.  
+ Yönetilmeyen karma mod hata ayıklamayı etkinleştirmek için `dwCreationFlags` DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS olarak ayarlayın. Yalnızca yönetilen hata ayıklamayı kullanmak istiyorsanız, bu bayrakları ayarlamayın.  
   
- Hata ayıklayıcı ve işlem olacak şekilde (iliştirilmiş işlem) hata ayıklaması, tek bir konsol paylaşmak ve birlikte çalışma hata ayıklama kullanılıyorsa bir hata ayıklama etkinlikte durdurmak ve konsol için kilitler barındırmıyorsa iliştirilmiş işlem mümkündür. Hata ayıklayıcı, ardından konsolunu kullanmak için her türlü girişim engeller. Bu sorundan kaçınmak için CREATE_NEW_CONSOLE bayrağını ayarlayın `dwCreationFlags` parametresi.  
+ Hata ayıklayıcı ve hataları Ayıklanacak işlem (ekli işlem) tek bir konsolu paylaşıyorsa ve birlikte çalışma hata ayıklaması kullanılırsa, ekli işlemin konsol kilitlerini tutması ve hata ayıklama olayında durdurulması mümkündür. Hata ayıklayıcı daha sonra konsolu kullanma denemesini engeller. Bu sorundan kaçınmak için `dwCreationFlags` parametresindeki CREATE_NEW_CONSOLE bayrağını ayarlayın.  
   
- IA-64 tabanlı ve AMD64 tabanlı platformları gibi Win9x ve x86 olmayan platformlarda birlikte çalışma hata ayıklama desteklenmiyor.  
+ Birlikte çalışabilirlik hata ayıklaması, IA-64 tabanlı ve AMD64 tabanlı platformlar gibi Win9x ve x86 olmayan platformlarda desteklenmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

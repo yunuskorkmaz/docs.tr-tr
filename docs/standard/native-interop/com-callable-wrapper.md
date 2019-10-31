@@ -12,14 +12,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ebfc8f79303f89b092dd0fb38237dffffe0a93ba
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 6f2f4055a95dbcea8d7872b5c5fa3ccede8c2c8c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353909"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120725"
 ---
 # <a name="com-callable-wrapper"></a>COM Aranabilir Sarmalayıcısı
 
@@ -62,16 +60,16 @@ Bu sorunsuz yaklaşımı oluşturmak için CCW, **IUnknown** ve **ıDISPATCH**gi
 
 |Arabirim|Açıklama|
 |---------------|-----------------|
-|(@No__t-0*ClassName*) sınıf arabirimi|Çalışma zamanı tarafından sunulan ve açıkça tanımlanmamış, tüm genel arabirimleri, yöntemleri, özellikleri ve yönetilen bir nesne üzerinde açık olarak açık olan alanları sunan arabirim.|
+|(\_*ClassName*) sınıf arabirimi|Çalışma zamanı tarafından sunulan ve açıkça tanımlanmamış, tüm genel arabirimleri, yöntemleri, özellikleri ve yönetilen bir nesne üzerinde açık olarak açık olan alanları sunan arabirim.|
 |**Inewctionpoint** ve **IConnectionPointContainer**|Temsilci tabanlı Olaylar (Olay aboneleri kaydetmek için bir arabirim) olan nesneler için arabirim.|
 |**IDispatchEx** (yalnızca .NET Framework)|Sınıf **IBir**uygularsa çalışma zamanı tarafından sağlanan arabirim. **IDispatchEx** **arabirimi IDispatch arabiriminin bir** uzantısıdır. Bu, **IDispatch**'in aksine numaralandırma, ekleme, silme ve büyük/küçük harf duyarlı üyelerin çağrılmasını mümkün değildir.|
 |**IEnumVariant**|Sınıf **IEnumerable**uygularsa koleksiyondaki nesneleri numaralandırır koleksiyon türü sınıfları için arabirim.|
 
 ## <a name="introducing-the-class-interface"></a>Sınıf arabirimine giriş
 
-Yönetilen kodda açıkça tanımlanmayan sınıf arabirimi, tüm ortak Yöntemler, özellikler, alanlar ve .NET nesnesi üzerinde açık olarak açık olan olayları kullanıma sunan bir arabirimdir. Bu arabirim, bir çift veya salt dağıtım arabirimi olabilir. Sınıf arabirimi, öncesinde bir alt çizgi gelen .NET sınıfının adını alır. Örneğin, Mammal sınıfı için sınıf arabirimi \_Mammal olur.
+Yönetilen kodda açıkça tanımlanmayan sınıf arabirimi, tüm ortak Yöntemler, özellikler, alanlar ve .NET nesnesi üzerinde açık olarak açık olan olayları kullanıma sunan bir arabirimdir. Bu arabirim, bir çift veya salt dağıtım arabirimi olabilir. Sınıf arabirimi, öncesinde bir alt çizgi gelen .NET sınıfının adını alır. Örneğin, Mammal sınıfı için sınıf arabirimi \_Mammal.
 
-Türetilmiş sınıflar için, sınıf arabirimi de temel sınıfın tüm ortak yöntemlerini, özelliklerini ve alanlarını gösterir. Türetilmiş sınıf Ayrıca her temel sınıf için bir sınıf arabirimi sunar. Örneğin, Mammal sınıfı, System. Object ' i genişleten bir Mammalsüper sınıfını genişletirse, .NET nesnesi COM istemcilerinin \_Mammal, \_Mammalsüper sınıfı ve \_ adlı üç sınıf arabirimine yönelik olduğunu gösterir.
+Türetilmiş sınıflar için, sınıf arabirimi de temel sınıfın tüm ortak yöntemlerini, özelliklerini ve alanlarını gösterir. Türetilmiş sınıf Ayrıca her temel sınıf için bir sınıf arabirimi sunar. Örneğin, Mammal sınıfı, System. Object öğesini genişleten bir Mammalsüper sınıfını genişletirse, .NET nesnesi COM istemcilerinin \_Mammal, \_Mammalüst sınıfı ve \_nesne adlı üç sınıf arabirimine de yararlandığını gösterir.
 
 Örneğin, aşağıdaki .NET sınıfını göz önünde bulundurun:
 
@@ -98,7 +96,7 @@ public class Mammal
 }
 ```
 
-COM istemcisi `_Mammal` adlı bir sınıf arabirimine bir işaretçi alabilir. .NET Framework, `_Mammal` arabirimi tanımını içeren bir tür kitaplığı oluşturmak için [tür kitaplığı verme programı (Tlbexp. exe)](../../framework/tools/tlbexp-exe-type-library-exporter.md) aracını kullanabilirsiniz. Tür kitaplığı verme programı .NET Core 'da desteklenmez. @No__t-0 sınıfı bir veya daha fazla arabirim uyguladıysanız, arabirimler coclass altında görünür.
+COM istemcisi `_Mammal`adlı bir sınıf arabirimine bir işaretçi alabilir. .NET Framework, `_Mammal` arabirimi tanımını içeren bir tür kitaplığı oluşturmak için [tür kitaplığı verme programı (Tlbexp. exe)](../../framework/tools/tlbexp-exe-type-library-exporter.md) aracını kullanabilirsiniz. Tür kitaplığı verme programı .NET Core 'da desteklenmez. `Mammal` sınıfı bir veya daha fazla arabirim uyguladıysanız, arabirimler coclass altında görünür.
 
 ```console
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]
@@ -121,7 +119,7 @@ coclass Mammal
 }
 ```
 
-Sınıf arabiriminin oluşturulması isteğe bağlıdır. Varsayılan olarak COM birlikte çalışması, bir tür kitaplığına verdiğiniz her sınıf için yalnızca bir dağıtım arabirimi oluşturur. Sınıfınıza <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> uygulayarak bu arabirimin otomatik olarak oluşturulmasını engelleyebilir veya değiştirebilirsiniz. Sınıf arabirimi yönetilen sınıfları COM 'a gösterme görevini kolaylaştırabilir, ancak kullanımları sınırlıdır.
+Sınıf arabiriminin oluşturulması isteğe bağlıdır. Varsayılan olarak COM birlikte çalışması, bir tür kitaplığına verdiğiniz her sınıf için yalnızca bir dağıtım arabirimi oluşturur. <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> sınıfınıza uygulayarak bu arabirimin otomatik olarak oluşturulmasını engelleyebilir veya değiştirebilirsiniz. Sınıf arabirimi yönetilen sınıfları COM 'a gösterme görevini kolaylaştırabilir, ancak kullanımları sınırlıdır.
 
 > [!CAUTION]
 > Kendi kendinizinkini açıkça tanımlamak yerine sınıf arabirimini kullanarak, yönetilen sınıfınızın gelecek sürümü oluşturma sürecini karmaşıklaştırabilirsiniz. Sınıf arabirimini kullanmadan önce lütfen aşağıdaki yönergeleri okuyun.
@@ -186,9 +184,9 @@ Otomatik olarak oluşturulan bir çift arabirim ender durumlarda uygun olabilir;
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Tüm COM olay bildirimlerinin geç bağlandığına emin olun.
 
-Varsayılan olarak, COM tür bilgileri doğrudan yönetilen derlemelere katıştırılır ve bu da birincil birlikte çalışma derlemeleri (PIA 'lar) gereksinimini ortadan kaldırır. Ancak, gömülü tür bilgisinin kısıtlamalarından biri, COM olay bildirimlerinin erken bağlanan vtable çağrılarına teslimini desteklemediğine karşın yalnızca geç bağlanan `IDispatch::Invoke` çağrılarını destekler.
+Varsayılan olarak, COM tür bilgileri doğrudan yönetilen derlemelere katıştırılır ve bu da birincil birlikte çalışma derlemeleri (PIA 'lar) gereksinimini ortadan kaldırır. Ancak, gömülü tür bilgilerinin sınırlamalarından biri, COM olay bildirimlerinin erken bağlanan vtable çağrılarına teslimini desteklemediğine karşın yalnızca geç bağlanan `IDispatch::Invoke` çağrılarını destekler.
 
-Uygulamanız COM olay arabirimi yöntemlerine erken bağlantılı çağrılar gerektiriyorsa, Visual Studio 'da **birlikte çalışma türlerini katıştır** özelliğini `true` olarak ayarlayabilir veya aşağıdaki öğeyi proje dosyanıza dahil edebilirsiniz:
+Uygulamanız COM olay arabirimi yöntemlerine erken bağlantılı çağrılar gerektiriyorsa, Visual Studio 'da **birlikte çalışma türlerini katıştır** özelliğini `true`olarak ayarlayabilir veya aşağıdaki öğeyi proje dosyanıza dahil edebilirsiniz:
 
 ```xml
 <EmbedInteropTypes>True</EmbedInteropTypes>

@@ -1,20 +1,18 @@
 ---
-title: Bütünleştirilmiş kod içeren program
+title: Derlemeler ile programlama
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], programming
 - programming assemblies
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 03babe701b46eab54a76094c4728af80e6d9911e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9f07d36d9e47189d53e367fd1406e5684c024aa3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973140"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107064"
 ---
-# <a name="program-with-assemblies"></a>Bütünleştirilmiş kod içeren program
+# <a name="program-with-assemblies"></a>Derlemeler ile programlama
 Derlemeler .NET Framework yapı taşlarıdır; temel dağıtım, sürüm denetimi, yeniden kullanım, etkinleştirme kapsamı ve güvenlik izinleri oluşturur. Bir derleme, ortak dil çalışma zamanına tür uygulamalarına dikkat etmesi için gerekli bilgileri sunar. Birlikte çalışacak ve mantıksal bir işlevsellik birimi oluşturacak bir tür ve kaynak koleksiyonudur. Çalışma zamanı için, bir derleme bağlamı dışında bir tür yoktur.  
   
  Bu bölümde modüller oluşturma, modüllerden derlemeler oluşturma, bir anahtar çifti oluşturma ve bir derlemeyi tanımlayıcı adla imzalama ve genel bütünleştirilmiş kod önbelleğine bir derleme yüklemesi açıklanmaktadır. Ayrıca, bu bölümde, derleme bildirimi bilgilerini görüntülemek için [MSIL Disassembler (ıldadsm. exe)](../../framework/tools/ildasm-exe-il-disassembler.md) ' nin nasıl kullanılacağı açıklanmaktadır.  
@@ -29,7 +27,7 @@ Derlemeler .NET Framework yapı taşlarıdır; temel dağıtım, sürüm denetim
  [Derleme adları](names.md)  
  Derleme adlandırmasına genel bir bakış sağlar.  
   
- [Nasıl yapılır: Bir derlemenin tam nitelikli adını belirleme](find-fully-qualified-name.md)  
+ [Nasıl yapılır: bir derlemenin tam nitelikli adını belirleme](find-fully-qualified-name.md)  
  Bir derlemenin tam nitelikli adının nasıl belirleneceğini açıklar.  
   
  [Intranet uygulamalarını tam güvende çalıştırma](../../framework/app-domains/running-intranet-applications-in-full-trust.md)  
@@ -38,13 +36,13 @@ Derlemeler .NET Framework yapı taşlarıdır; temel dağıtım, sürüm denetim
  [Derleme konumu](location.md)  
  Derlemelerin nereye bulunacağı hakkında genel bakış sağlar.  
   
- [Nasıl yapılır: Tek dosya derlemesi oluşturma](../../framework/app-domains/build-single-file-assembly.md)  
+ [Nasıl yapılır: tek dosya bütünleştirilmiş kodu derleme](../../framework/app-domains/build-single-file-assembly.md)  
  Tek dosya derlemesinin nasıl oluşturulacağını açıklar.  
   
  [Çoklu dosya derlemeleri](../../framework/app-domains/multifile-assemblies.md)  
  Çok dosyalı derlemeler oluşturma nedenlerini açıklar.  
   
- [Nasıl yapılır: Çoklu dosya derlemesi oluşturma](../../framework/app-domains/build-multifile-assembly.md)  
+ [Nasıl yapılır: çok dosyalı bütünleştirilmiş kod derleme](../../framework/app-domains/build-multifile-assembly.md)  
  Çoklu dosya derlemesinin nasıl oluşturulacağını açıklar.  
   
  [Derleme özniteliklerini ayarla](set-attributes.md)  
@@ -59,7 +57,7 @@ Derlemeler .NET Framework yapı taşlarıdır; temel dağıtım, sürüm denetim
  [Derlemeler ve genel derleme önbelleği ile çalışma](../../framework/app-domains/working-with-assemblies-and-the-gac.md)  
  Derlemelerin nasıl ve neden genel derleme önbelleğine ekleneceğini ve nasıl yapılır konuları içerdiğini açıklar.  
   
- [Nasıl yapılır: Derleme içeriğini görüntüle](view-contents.md)  
+ [Nasıl yapılır: derleme içeriğini görüntüleme](view-contents.md)  
  Derleme içeriğini görüntülemek için MSIL Disassembler (ıldadsm. exe) ' nin nasıl kullanılacağını açıklar.  
   
  [Ortak dil çalışma zamanında tür iletimi](type-forwarding.md)  
@@ -70,17 +68,17 @@ Derlemeler .NET Framework yapı taşlarıdır; temel dağıtım, sürüm denetim
  Bir derlemeyi temsil eden .NET Framework sınıfı.  
   
 ## <a name="related-sections"></a>İlgili bölümler  
- [Nasıl yapılır: Bir derlemeden tür ve üye bilgilerini alma](../../framework/reflection-and-codedom/get-type-member-information.md)  
+ [Nasıl yapılır: bir derlemeden tür ve üye bilgilerini alma](../../framework/reflection-and-codedom/get-type-member-information.md)  
  Bir derlemeden program aracılığıyla tür ve diğer bilgilerin nasıl elde edileceğini açıklar.  
   
  [.NET’te bütünleştirilmiş kodlar](index.md)  
  Ortak dil çalışma zamanı derlemelerine kavramsal bir genel bakış sağlar.  
   
  [Derleme sürümü oluşturma](versioning.md)  
- Derleme bağlamaya ve <xref:System.Reflection.AssemblyVersionAttribute> ve <xref:System.Reflection.AssemblyInformationalVersionAttribute> özniteliklerine ilişkin bir genel bakış sağlar.  
+ <xref:System.Reflection.AssemblyVersionAttribute> ve <xref:System.Reflection.AssemblyInformationalVersionAttribute> özniteliklerinin derleme bağlamaya genel bir bakış sağlar.  
   
  [Çalışma zamanının derlemeleri nasıl konumlandırır](../../framework/deployment/how-the-runtime-locates-assemblies.md)  
  Çalışma zamanının, bir bağlama isteğini yerine getirmek için hangi derlemeyi kullanacağınızı nasıl belirlediğini açıklar.  
   
- [Yansıması](../../framework/reflection-and-codedom/reflection.md)   
+ [Yansıma](../../framework/reflection-and-codedom/reflection.md)   
  Bir derleme hakkında bilgi almak için **yansıma** sınıfının nasıl kullanılacağını açıklar.

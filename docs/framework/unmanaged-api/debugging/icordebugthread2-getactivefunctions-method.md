@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27fae01a-ecec-423a-973e-24f8de55826c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fdf3998d7430348cb71af8e7dd75cf2203d380ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9b9a301714ea60b4e3220eb75721e56e39bd9659
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769040"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139936"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions Metodu
-Bu bu iş parçacığının çerçevede etkin işlevi hakkında bilgi alır.  
+Bu iş parçacığı çerçevelerinin her birinde etkin işlev hakkında bilgi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,26 +38,26 @@ HRESULT GetActiveFunctions (
   
 ## <a name="parameters"></a>Parametreler  
  `cFunctions`  
- [in] Boyutu `pFunctions` dizisi.  
+ 'ndaki `pFunctions` dizisinin boyutu.  
   
  `pcFunctions`  
- [out] Döndürülen nesne sayısı için bir işaretçi `pFunctions` dizisi. Döndürülen nesne sayısını yığın üzerinde yönetilen çerçeve sayısı eşit olacaktır.  
+ dışı `pFunctions` dizisinde döndürülen nesne sayısına yönelik bir işaretçi. Döndürülen nesne sayısı, yığındaki yönetilen çerçeve sayısına eşit olacaktır.  
   
  `pFunctions`  
- [out içinde] Bir dizi cor_actıve_functıon nesnelerin her biri bu iş parçacığının çerçeveler etkin işlevler hakkında bilgiler içerir.  
+ [in, out] Her biri bu iş parçacığı çerçevelerinin etkin işlevleri hakkında bilgi içeren bir COR_ACTIVE_FUNCTION nesneleri dizisi.  
   
- İlk öğeyi yaprak çerçeve ve yığın kökünün vb. geri için kullanılır.  
+ İlk öğe yaprak çerçeve için kullanılacaktır ve bu nedenle yığının köküne geri dönün.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa `pFunctions` girişte, null `GetActiveFunctions` yalnızca yığında olan işlev sayısını döndürür. Diğer bir deyişle, `pFunctions` girişte, null `GetActiveFunctions` bir değer döndürür. yalnızca `pcFunctions`.  
+ `pFunctions` girişte null ise, `GetActiveFunctions` yalnızca yığında olan işlevlerin sayısını döndürür. Diğer bir deyişle, `pFunctions` girişte null ise, `GetActiveFunctions` yalnızca `pcFunctions`bir değer döndürür.  
   
- `GetActiveFunctions` Yöntemi bir iyileştirme bir yığın izlemesi çerçevelerde aynı bilgileri almaya oluşturulmuştur ve yalnızca bir Icordebugılframe nesne için tam bir yığın izlemeyle uygulamanızda zorunda kalacaktır çerçevelerini içerir.  
+ `GetActiveFunctions` yöntemi, bir yığın izlemesinde çerçevelerden aynı bilgileri elde etmek için en iyi duruma getirme amaçlıdır ve yalnızca tam yığın izlemesinde bir ICorDebugILFrame nesnesine sahip olacak çerçeveleri içerir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

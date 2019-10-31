@@ -10,14 +10,12 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f0828409a8c57baecf7c81fd7a4df6e7844c7ce
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9d5f8c80937c36e975d42d6efb0a83295cb28be9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044330"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104977"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify Aracı)
 PEVerify aracı, Microsoft ara dili (MSIL) (derleyici yazıcıları, betik motor geliştiricileri vb.) oluşturan geliştiricilere, MSIL kodlarının ve ilişkili meta verilerinin güvenlik koşullarına uygun olup olmadığını belirlemede yardımcı olur. Bazı derleyiciler yalnızca belirli dil yapılarını kullanmaktan kaçındığınızda doğrulanabilir şekilde tür kullanımı uyumlu kod üretir. Bir geliştirici olarak, bilgisayar kullanıyorsanız, kodunuzun tür güvenliğini tehlikeye atmadığınızı doğrulamak isteyebilirsiniz. Bu durumda, MSIL ve meta verileri denetlemek için dosyalarınızda PEVerify aracını çalıştırabilirsiniz.  
@@ -40,12 +38,12 @@ peverify filename [options]
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/break=** *maxErrorCount*|*MaxErrorCount* hatalarından sonra doğrulamayı iptal eder.<br /><br /> Bu parametre .NET Framework sürüm 2.0 ve sonrasında desteklenmez.|  
+|**/Break =** *maxErrorCount*|*MaxErrorCount* hatalarından sonra doğrulamayı iptal eder.<br /><br /> Bu parametre .NET Framework sürüm 2.0 ve sonrasında desteklenmez.|  
 |**/Saat**|Milisaniye olarak aşağıdaki doğrulama zamanlarını ölçer ve bildirir:<br /><br /> **MD Val. Cycle**<br /> Meta veri doğrulama döngüsü<br /><br /> **MD Val. Pure**<br /> Meta veri doğrulama safı<br /><br /> **Il ver. Cycle**<br /> Microsoft ara dili (MSIL) doğrulama döngüsü<br /><br /> **Il ver saf**<br /> MSIL doğrulaması saf<br /><br /> **Md Val. Cycle** ve **Il ver. Cycle** süreleri, gerekli başlatma ve kapatılma yordamlarını gerçekleştirmek için gereken süreyi içerir. **Md Val. saf** ve **Il ver saf** süreleri yalnızca doğrulamayı veya doğrulamayı gerçekleştirmek için gereken süreyi yansıtır.|  
-|**/ Help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
+|**/Help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/HRESULT**|Onaltılık biçimde hata kodlarını görüntüler.|  
 |**/Ignore =** *Hex. Code* [, *Hex. Code*]|Belirtilen hata kodlarını dikkate almaz.|  
-|**/Ignore = @** *yanıt dosyası*|Belirtilen yanıt dosyasında listelenen hata kodlarını dikkate almaz.|  
+|**/Ignore = @** *ResponseFile*|Belirtilen yanıt dosyasında listelenen hata kodlarını dikkate almaz.|  
 |**/İl**|*Dosya adı*tarafından belirtilen derlemede uygulanan metotlar için MSIL tür güvenliği doğrulama denetimlerini gerçekleştirir. Araç, **/quiet** seçeneğini belirtmediğiniz müddetçe bulunan her bir sorun için ayrıntılı açıklamalar döndürür.|  
 |**/MD**|*Dosya adı*tarafından belirtilen derlemede meta veri doğrulama denetimleri gerçekleştirir. Bu, dosya içindeki tüm meta veri yapısını ölçer ve karşılaşılan tüm doğrulama sorunlarını rapor eder.|  
 |**/nologo**|Ürün sürümü ve telif hakkı bilgilerinin görüntülenmesini önler.|  
@@ -63,10 +61,10 @@ peverify filename [options]
   
  Peverify.exe, veri akışı analizine ve geçerli meta veriye ilişkin birkaç yüz kuralı içeren bir listeye göre kapsamlı MSIL doğrulama denetimleri yapar. Peverify. exe ' nin gerçekleştirdiği denetimler hakkında ayrıntılı bilgi için, Windows SDK araçlar Geliştirici Kılavuzu klasöründe "meta veri doğrulama belirtimi" ve "MSIL yönerge kümesi belirtimi" başlığına bakın.  
   
- .NET Framework sürüm 2,0 veya sonraki bir sürümün aşağıdaki MSIL yönergeleri `byref` kullanılarak belirtilen doğrulanabilir dönüşler desteklediğini unutmayın: `dup`, `ldsflda`, `ldflda` `ldelema` `call` , ve `unbox`.  
+ .NET Framework sürüm 2,0 veya sonraki bir sürümün şu MSIL yönergeleri kullanılarak belirtilen doğrulanabilir `byref` döndürdüğünü desteklediğini unutmayın: `dup`, `ldsflda`, `ldflda`, `ldelema`, `call` ve `unbox`.  
   
 ## <a name="examples"></a>Örnekler  
- Aşağıdaki komut, derlemede `myAssembly.exe`uygulanan yöntemler için meta veri doğrulama denetimleri ve MSIL tür güvenliği doğrulama denetimlerini gerçekleştirir.  
+ Aşağıdaki komut, `myAssembly.exe`derlemede uygulanan yöntemler için meta veri doğrulama denetimleri ve MSIL tür güvenliği doğrulama denetimlerini gerçekleştirir.  
   
 ```console  
 peverify myAssembly.exe /md /il  
@@ -78,7 +76,7 @@ peverify myAssembly.exe /md /il
 All classes and methods in myAssembly.exe Verified  
 ```  
   
- Aşağıdaki komut, derlemede `myAssembly.exe`uygulanan yöntemler için meta veri doğrulama denetimleri ve MSIL tür güvenliği doğrulama denetimlerini gerçekleştirir. Araç bu denetimleri gerçekleştirmek için gereken süreyi görüntüler.  
+ Aşağıdaki komut, `myAssembly.exe`derlemede uygulanan yöntemler için meta veri doğrulama denetimleri ve MSIL tür güvenliği doğrulama denetimlerini gerçekleştirir. Araç bu denetimleri gerçekleştirmek için gereken süreyi görüntüler.  
   
 ```console  
 peverify myAssembly.exe /md /il /clock  
@@ -95,7 +93,7 @@ Timing: Total run     320 msec
         IL Ver.pure   230 msec  
 ```  
   
- Aşağıdaki komut, derlemede `myAssembly.exe`uygulanan yöntemler için meta veri doğrulama denetimleri ve MSIL tür güvenliği doğrulama denetimlerini gerçekleştirir. Ancak en fazla hata sayısı olan 100'e ulaştığında Peverify.exe durur. Araç belirtilen hata kodlarını dikkate almaz.  
+ Aşağıdaki komut, `myAssembly.exe`derlemede uygulanan yöntemler için meta veri doğrulama denetimleri ve MSIL tür güvenliği doğrulama denetimlerini gerçekleştirir. Ancak en fazla hata sayısı olan 100'e ulaştığında Peverify.exe durur. Araç belirtilen hata kodlarını dikkate almaz.  
   
 ```console  
 peverify myAssembly.exe /break=100 /ignore=0x12345678,0xABCD1234  

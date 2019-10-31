@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 76fbbb3f924f610b604586dca78cab344217b544
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d0394d511197c8d0aaa366ce7b791216a3d226bc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739456"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120199"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState Numaralandırması
-Kullanıcı durumunu bir iş parçacığının gösterir.  
+Bir iş parçacığının kullanıcı durumunu belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,28 +45,28 @@ typedef enum CorDebugUserState {
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`USER_STOP_REQUESTED`|İş parçacığının sonlandırılması istendi.|  
-|`USER_SUSPEND_REQUESTED`|İş parçacığının bir askıya alma isteğinde bulundu.|  
+|`USER_SUSPEND_REQUESTED`|İş parçacığını askıya alma istendi.|  
 |`USER_BACKGROUND`|İş parçacığı arka planda çalışıyor.|  
-|`USER_UNSTARTED`|Yürütme iş parçacığı başlatılmadı.|  
+|`USER_UNSTARTED`|İş parçacığı yürütmeyi başlatmadı.|  
 |`USER_STOPPED`|İş parçacığı sonlandırıldı.|  
-|`USER_WAIT_SLEEP_JOIN`|İş parçacığı bir görevi tamamlamak başka bir iş parçacığı için bekliyor.|  
-|`USER_SUSPENDED`|İş parçacığını askıya alındı.|  
-|`USER_UNSAFE_POINT`|İş parçacığı güvenli olmayan bir noktada ' dir. Diğer bir deyişle, yürütme noktasında bir çöp toplama burada engelleyebilir iş parçacığıdır.<br /><br /> Hata ayıklama olaylarını güvenli olmayan noktalarından gönderilir, ancak güvenli olmayan bir noktada bir iş parçacığını askıya büyük olasılıkla neden olacak bir kilitlenme iş parçacığı sürdürülene kadar. Güvenli ve güvenli olmayan noktaları, just-in-time (JIT) ve çöp toplama uygulama tarafından belirlenir.|  
-|`USER_THREADPOOL`|İş parçacığı havuzu iş parçacığıdır.|  
+|`USER_WAIT_SLEEP_JOIN`|İş parçacığı başka bir iş parçacığının bir görevi tamamlamasını bekliyor.|  
+|`USER_SUSPENDED`|İş parçacığı askıya alındı.|  
+|`USER_UNSAFE_POINT`|İş parçacığı güvenli olmayan bir noktada. Diğer bir deyişle, iş parçacığı, atık toplamayı engelleyebileceği bir yürütme noktasıdır.<br /><br /> Hata ayıklama olayları güvenli olmayan noktalarından gönderilebilir, ancak bir iş parçacığının güvenli olmayan bir noktada askıya alınması, iş parçacığı sürdürülene kadar kilitlenmeye neden olur. Güvenli ve güvenli olmayan noktaları, tam zamanında (JıT) ve çöp toplama uygulamasıyla belirlenir.|  
+|`USER_THREADPOOL`|İş parçacığı iş parçacığı havuzundan yapılır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanıcı durumunu bir iş parçacığının iş parçacığı hata ayıklayıcısı incelerken olan durumudur. Bir iş parçacığı, kullanıcı durumlarını bir birleşimi olabilir.  
+ Bir iş parçacığının kullanıcı durumu, iş parçacığının hata ayıklayıcı tarafından incelediği durumdur. Bir iş parçacığında Kullanıcı durumlarının bir birleşimi olabilir.  
   
- Kullanım [Icordebugthread::getuserstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) bir iş parçacığının kullanıcı durumunu almak için yöntemi.  
+ Bir iş parçacığının kullanıcı durumunu almak için [ICorDebugThread:: GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) metodunu kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

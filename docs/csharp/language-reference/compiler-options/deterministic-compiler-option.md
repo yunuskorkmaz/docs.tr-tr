@@ -7,14 +7,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e77c14a1c3a4ba11b8ae6556be4f1c3c0cd42788
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2f0f9680668d67867d4bd7b60cb54d48ed7c4776
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202927"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73086902"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -28,7 +26,7 @@ Derleyicinin bayt çıkışı, aynı girişlerin derlemeleri arasında özdeş o
 
 ## <a name="remarks"></a>Açıklamalar
 
-Varsayılan olarak, belirli bir giriş kümesinden Derleyici çıktısı benzersizdir, çünkü derleyici bir zaman damgası ve rastgele sayıdan oluşturulan bir GUID ekliyor. Değer aynı kaldığı `-deterministic` sürece, bir *belirleyici derleme*oluşturmak için bu seçeneği kullanın.
+Varsayılan olarak, belirli bir giriş kümesinden Derleyici çıktısı benzersizdir, çünkü derleyici bir zaman damgası ve rastgele sayıdan oluşturulan bir GUID ekliyor. Değer aynı kaldığı sürece, bir *belirleyici derleme*oluşturmak için `-deterministic` seçeneğini kullanın.
 
 Derleyici, belirlemeleri için aşağıdaki girişleri dikkate alır:
 
@@ -48,9 +46,9 @@ Derleyici, belirlemeleri için aşağıdaki girişleri dikkate alır:
   - Çözümleyiciler tarafından kullanılabilecek ek dosyalar
 - Geçerli kültür (tanılama ve özel durum iletilerinin oluşturulduğu dil için).
 - Kodlama belirtilmemişse, varsayılan kodlama (veya geçerli kod sayfası).
-- Derleyicinin arama yollarındaki dosyaların varlığı, var olmayan ve içeriği (örneğin, veya `/lib` `/recurse`ile).
+- Derleyicinin arama yollarındaki dosyaların varlığı, var olmayan ve içeriği (örneğin, `/lib` veya `/recurse`).
 - Derleyicinin çalıştırıldığı CLR platformu.
-- `%LIBPATH%`, Çözümleyici bağımlılığı yüklemeyi etkileyebilecek değeri.
+- `%LIBPATH%`değeri, çözümleyici bağımlılığını yüklemeyi etkileyebilecek.
 
 Kaynaklar herkese açık olduğunda, bir ikilinin güvenilir bir kaynaktan derlenip derlenmediğini oluşturmak için belirleyici derleme kullanılabilir. Ayrıca, bir ikiliye yapılan değişikliklere bağımlı derleme adımlarının yürütülmesi gerekip gerekmediğini belirlemek için sürekli bir derleme sisteminde de yararlı olabilir.
 

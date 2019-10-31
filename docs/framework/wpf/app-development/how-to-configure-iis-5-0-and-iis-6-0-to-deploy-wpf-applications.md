@@ -13,18 +13,18 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: 3a9bf79a9d505fef53b62cb589920adcf95ae92a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a731dc49556a73c585c6201a80ea3ea77c15cb11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611496"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124426"
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Nasıl yapılır: WPF Uygulamalarını Dağıtmak için IIS 5.0 ve IIS 6.0'ı Yapılandırma
 
-Bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamayı, uygun çok amaçlı Internet posta uzantıları (MIME) türleriyle yapılandırıldığı sürece çoğu Web sunucusundan dağıtabilirsiniz. Varsayılan olarak, Microsoft Internet Information Services (IIS) 7,0 bu MIME türleriyle yapılandırılır, ancak Microsoft Internet Information Services (IIS) 5,0 ve Microsoft Internet Information Services (IIS) 6,0 değildir.
+Uygun çok amaçlı Internet posta uzantıları (MIME) türleriyle yapılandırıldığı sürece, çoğu Web sunucusundan bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulaması dağıtabilirsiniz. Varsayılan olarak, Microsoft Internet Information Services (IIS) 7,0 bu MIME türleriyle yapılandırılır, ancak Microsoft Internet Information Services (IIS) 5,0 ve Microsoft Internet Information Services (IIS) 6,0 değildir.
 
-Bu konuda, uygulamaları dağıtmak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] için Microsoft Internet Information Services (IIS) 5,0 ve Microsoft Internet Information Services (IIS) 6,0 ' nin nasıl yapılandırılacağı açıklanmaktadır.
+Bu konuda, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalarını dağıtmak için Microsoft Internet Information Services (IIS) 5,0 ve Microsoft Internet Information Services (IIS) 6,0 ' nin nasıl yapılandırılacağı açıklanmaktadır.
 
 > [!NOTE]
 > Bir sistemin .NET Framework yüklü olup olmadığını anlamak için kayıt defterindeki *UserAgent* dizesini kontrol edebilirsiniz. .NET Framework bir sistemde yüklü olup olmadığını belirlemek üzere *UserAgent* dizesini inceleyen Ayrıntılar ve bir betik için, bkz. [.NET Framework 3,0 'Nin yüklü olup olmadığını algılama](how-to-detect-whether-the-net-framework-3-0-is-installed.md).
@@ -51,7 +51,7 @@ Bu konuda, uygulamaları dağıtmak [!INCLUDE[TLA2#tla_winclient](../../../../in
 
 İstemci sistemindeki tarayıcının doğru işleyiciyi yükleyebilmesi için birkaç MIME türünü ve dosya uzantısını kaydetmeniz gerekir. Aşağıdaki türleri eklemeniz gerekir:
 
-|Dahili numara|MIME türü|
+|uzantının|MIME türü|
 |---------------|---------------|
 |. manifest|uygulama/bildirim|
 |. xaml|uygulama/xaml + xml|
@@ -63,7 +63,7 @@ Bu konuda, uygulamaları dağıtmak [!INCLUDE[TLA2#tla_winclient](../../../../in
 > [!NOTE]
 > İstemci sistemlerine MIME türlerini veya dosya uzantılarını kaydetmeniz gerekmez. Microsoft .NET Framework 'Ü yüklediğinizde otomatik olarak kaydedilir.
 
-Aşağıdaki Microsoft Visual Basic Scripting Edition (VBScript) örneği, gerekli MIME türlerini otomatik olarak IIS 'e ekler. Betiği kullanmak için, kodu sunucunuzdaki bir. vbs dosyasına kopyalayın. Ardından, komut satırından dosyasını çalıştırarak veya içindeki [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)]dosyasına çift tıklayarak betiği çalıştırın.
+Aşağıdaki Microsoft Visual Basic Scripting Edition (VBScript) örneği, gerekli MIME türlerini otomatik olarak IIS 'e ekler. Betiği kullanmak için, kodu sunucunuzdaki bir. vbs dosyasına kopyalayın. Ardından, komut satırından dosyayı çalıştırarak veya Microsoft Windows Gezgini 'nde dosyaya çift tıklayarak betiği çalıştırın.
 
 ```vb
 ' This script adds the necessary Windows Presentation Foundation MIME types
@@ -147,7 +147,7 @@ For Each mimeMap In allMimeMaps
 Next
 ```
 
-Betiği bir `.vbs` dosya olarak kaydedin (örneğin, `DiscoverIISMimeTypes.vbs`) ve aşağıdaki komutu kullanarak komut isteminden çalıştırın:
+Betiği bir `.vbs` dosyası olarak kaydedin (örneğin, `DiscoverIISMimeTypes.vbs`) ve aşağıdaki komutu kullanarak komut isteminden çalıştırın:
 
 ```console
 cscript DiscoverIISMimeTypes.vbs

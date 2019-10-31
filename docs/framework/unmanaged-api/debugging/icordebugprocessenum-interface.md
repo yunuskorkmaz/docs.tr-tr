@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b63a507a-ca97-4be0-8e4f-401cce2125f6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81653c69353b60d7287240505f53b26552c21774
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f5406c35915e447831d233804413034a429e8a1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960984"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139780"
 ---
 # <a name="icordebugprocessenum-interface"></a>ICorDebugProcessEnum Arabirimi
 Icordebugger Genum yöntemlerini uygular ve ICorDebugProcess dizilerini numaralandırır.  
@@ -30,7 +28,7 @@ Icordebugger Genum yöntemlerini uygular ve ICorDebugProcess dizilerini numarala
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki `ICorDebugProcess` belirtilen örnek sayısını alır.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki belirtilen `ICorDebugProcess` örneği sayısını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -38,11 +36,11 @@ Icordebugger Genum yöntemlerini uygular ve ICorDebugProcess dizilerini numarala
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

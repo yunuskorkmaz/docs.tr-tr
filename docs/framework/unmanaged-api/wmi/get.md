@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17304dc8330e4f8571f25b8544f1049dff229f2b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 60f29b91000fd3c07efea88dcc319eb283a4af78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798599"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120322"
 ---
 # <a name="get-function"></a>Get işlevi
 
@@ -58,19 +56,19 @@ HRESULT Get (
 'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
 
 `pVal`\
-dışı İşlev başarıyla döndürürse, `wszName` özelliğinin değerini içerir. `pval` Bağımsız değişkenine, niteleyicisi için doğru tür ve değer atanır.
+dışı İşlev başarıyla döndürürse, `wszName` özelliğinin değerini içerir. `pval` bağımsız değişkenine niteleyici için doğru tür ve değer atanır.
 
 `pvtType`\
-dışı İşlev başarıyla döndürürse, özellik türünü gösteren bir [CIM türü sabiti](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) içerir. Değeri de olabilir `null`. 
+dışı İşlev başarıyla döndürürse, özellik türünü gösteren bir [CIM türü sabiti](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) içerir. Değeri de `null`olabilir. 
 
 `plFlavor`\
-dışı İşlev başarıyla döndürürse, özelliğin kaynağı hakkında bilgi alır. Bunun değeri `null`, *wbemcli. h* üstbilgi dosyasında tanımlanan aşağıdaki WBEM_FLAVOR_TYPE sabitlerinden biri olabilir: 
+dışı İşlev başarıyla döndürürse, özelliğin kaynağı hakkında bilgi alır. Değeri `null`veya *Wbemcli. h* üstbilgi dosyasında tanımlanan aşağıdaki WBEM_FLAVOR_TYPE sabitlerinden biri olabilir: 
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Özelliği, standart bir sistem özelliğidir. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Bir sınıf için: Özelliği üst sınıftan devralınır. <br> Bir örnek için: Üst sınıftan Devralındığı sürece özelliği, örnek tarafından değiştirilmez.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Bir sınıf için: Özelliği türetilmiş sınıfa aittir. <br> Bir örnek için: Özelliği örnek tarafından değiştirilir; diğer bir deyişle, bir değer sağlanmış veya bir niteleyici eklenmiş ya da değiştirilmiş. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Bir sınıf için: özellik üst sınıftan devralınır. <br> Bir örnek için: üst sınıftan Devralındığı sürece özelliği, örnek tarafından değiştirilmez.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Bir sınıf için: özellik türetilmiş sınıfa aittir. <br> Bir örnek için: özelliği örnek tarafından değiştirilir; diğer bir deyişle, bir değer sağlanmış veya bir niteleyici eklenmiş ya da değiştirilmiş. |
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -88,15 +86,15 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 
 Bu işlev, [IWbemClassObject:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) yöntemine bir çağrı kaydırır.
 
-`Get` İşlev sistem özelliklerini de döndürebilir.
+`Get` işlevi, sistem özellikleri de döndürebilir.
 
-Bağımsız değişkenine, niteleyicinin ve com [variantinit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) işlevinin doğru türü ve değeri atanır `pVal`
+`pVal` bağımsız değişkenine niteleyici ve COM [Variantinit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) işlevi için doğru tür ve değer atanır
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
- **Üst bilgi** WMINet_Utils. IDL
+ **Üst bilgi:** WMINet_Utils. IDL
 
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

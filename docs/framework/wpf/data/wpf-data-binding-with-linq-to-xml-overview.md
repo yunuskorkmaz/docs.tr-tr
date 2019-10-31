@@ -2,12 +2,12 @@
 title: LINQ to XML ile WPF verilerini bağlama
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: c423ad9c8069b78b2e69a88d25d8e12bd3a3a1b7
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
-ms.translationtype: MT
+ms.openlocfilehash: 53bc5e09d3c837b69c8f215b1b5c61d1b745f683
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920708"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139807"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>LINQ to XML ile WPF veri bağlamaya genel bakış
 
@@ -91,4 +91,4 @@ WPF dinamik bağlamayı uygulamak için dinamik özellikler, <xref:System.Window
 - [LINQ to XML Dinamik Özellikleri](linq-to-xml-dynamic-properties.md)
 - [WPF'de XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)
 - [Veri bağlama (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
-- [Iş akışı Işaretlemesini kullanma](http://go.microsoft.com/fwlink/?LinkId=98685)
+- [Iş akışı Işaretlemesini kullanma](https://go.microsoft.com/fwlink/?LinkId=98685)

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ff9bb537a31e28dbd4b878c1bc04c96262f85ac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f57dc9279c107ce751f71c2998670ab992db162
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927464"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118430"
 ---
-# <a name="remove-element-for-configsections"></a>\<configSections için \<> öğesi > Kaldır
+# <a name="remove-element-for-configsections"></a>\<configSections için > öğesini \<kaldırın >
 
 Önceden tanımlanmış bir bölümü veya bölüm grubunu kaldırır.
 
-[ **\<Yapılandırma >** ](configuration-element.md)   
+[ **\<yapılandırma >** ](configuration-element.md)   
 &nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> Kaldır**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<kaldır >**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,13 +34,13 @@ ms.locfileid: "69927464"
 
 |           | Açıklama |
 | --------- | ----------- |
-| **name**  | Gerekli öznitelik.<br><br>Kaldırılacak bölüm veya bölüm grubunun adını belirtir. |
+| **ada**  | Gerekli öznitelik.<br><br>Kaldırılacak bölüm veya bölüm grubunun adını belirtir. |
 
 ## <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **configSections>\<** öğesi](configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimleri içerir. |
+| [ **\<configSections >** Dosyalarında](configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimleri içerir. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
@@ -48,13 +48,13 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yapılandırma dosyası hiyerarşisinde daha yüksek bir düzeyde tanımlanmış olan uygulamalarınızdan bölümleri ve bölüm gruplarını kaldırmak için  **\<Remove >** öğesini kullanabilirsiniz.
+Uygulamanızın yapılandırma dosyası hiyerarşisinde daha yüksek bir düzeyde tanımlanmış bölümleri ve bölüm gruplarını kaldırmak için **\<remove >** öğesini kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, daha önce makine yapılandırma dosyasında tanımlanan bir bölümü kaldırmak için bir uygulama yapılandırma dosyasında  **\<Remove >** öğesinin nasıl kullanılacağını gösterir.
+Aşağıdaki örnek, daha önce makine yapılandırma dosyasında tanımlanan bir bölümü kaldırmak üzere bir uygulama yapılandırma dosyasında **\<remove >** öğesinin nasıl kullanılacağını gösterir.
 
-Aşağıdaki makine yapılandırma dosyası kodu,  **\<sampleSection >** bölümünü bildirir:
+Aşağıdaki makine yapılandırma dosyası kodu, **\<samplesection >** bölümünü bildirir:
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ Aşağıdaki makine yapılandırma dosyası kodu,  **\<sampleSection >** bölüm
 </configuration>
 ```
 
-Aşağıdaki uygulama yapılandırma dosyası kodu,  **\<sampleSection >** bölümünü kaldırır. Kaldırma işleminden sonra uygulama  **\<sampleSection >** ayarlarını alamaz.
+Aşağıdaki uygulama yapılandırma dosyası kodu **\<samplesection >** bölümünü kaldırır. Kaldırma işleminden sonra uygulama, **\<sampleSection**içindeki ayarları alamaz.
 
 ```xml
 <!-- Application configuration file -->

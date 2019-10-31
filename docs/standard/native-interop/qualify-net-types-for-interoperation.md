@@ -9,14 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 04ebdf5d3e5caf2c34823528703f75cf972f302f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f0b9bc03225ae3d2365a21fd3b78d09c08d4fc1a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631314"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091576"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>COM birlikte çalışma için .NET türlerini nitelendirme
 Türleri bir derlemede COM uygulamalarına sunmak istiyorsanız, tasarım zamanında COM birlikte çalışma gereksinimlerini göz önünde bulundurun. Yönetilen türler (sınıf, arabirim, yapı ve numaralandırma) aşağıdaki yönergelere uydığınızda COM türleriyle sorunsuz bir şekilde tümleşir:  
@@ -35,7 +33,7 @@ Türleri bir derlemede COM uygulamalarına sunmak istiyorsanız, tasarım zaman�
   
 - Yöntemler, özellikler, alanlar ve olaylar ortak olmalıdır.  
   
-     Ortak türlerin üyeleri COM 'a görünür olmaları durumunda da genel olmalıdır. Bir derlemenin görünürlüğünü, ortak bir türü veya genel bir türün genel üyelerini ' a uygulayarak <xref:System.Runtime.InteropServices.ComVisibleAttribute>kısıtlayabilirsiniz. Varsayılan olarak, tüm genel türler ve Üyeler görünür durumdadır.  
+     Ortak türlerin üyeleri COM 'a görünür olmaları durumunda da genel olmalıdır. <xref:System.Runtime.InteropServices.ComVisibleAttribute>uygulayarak bir derlemenin görünürlüğünü, genel bir türü veya genel bir türün genel üyelerini kısıtlayabilirsiniz. Varsayılan olarak, tüm genel türler ve Üyeler görünür durumdadır.  
   
 - Türler COM 'dan etkinleştirilecek Ortak parametresiz bir oluşturucuya sahip olmalıdır.  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c17105bb-b49f-434e-8f9b-77f8c85b9220
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65ac35e254368b53ac2751e84be7dfe052fa0b53
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a55ae265230c4da3cc0a19b06a7597be8661beb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749075"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103254"
 ---
 # <a name="imanagedobjectgetserializedbuffer-method"></a>IManagedObject::GetSerializedBuffer Yöntemi
-Bu yönetilen bir nesnenin dize gösterimini alır.  
+Bu yönetilen nesnenin dize temsilini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +35,19 @@ HRESULT GetSerializedBuffer (
   
 ## <a name="parameters"></a>Parametreler  
  `pBSTR`  
- [out] Serileştirilmiş nesne bir dizeye bir işaretçi.  
+ dışı Serileştirilmiş nesne olan dize işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetSerializedBuffer` Yöntemi istemciye sıralanabilir şekilde nesneyi serileştirir.  
+ `GetSerializedBuffer` yöntemi, istemciye sıralanabilmesi için nesneyi seri hale getirir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

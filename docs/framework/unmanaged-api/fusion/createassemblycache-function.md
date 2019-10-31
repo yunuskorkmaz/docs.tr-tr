@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 348c7c8c-8578-46ae-97cf-480d6015c3c6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c855d6f85c3cbfa6d81a1fbce3ef5b83abb3f583
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5ef100680328e9ad6261bb9188d7509efa9ab479
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795413"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108860"
 ---
 # <a name="createassemblycache-function"></a>CreateAssemblyCache İşlevi
 Genel derleme önbelleğini temsil eden yeni bir [IAssemblyCache](iassemblycache-interface.md) örneğine yönelik bir işaretçi alır.  
@@ -39,17 +37,17 @@ HRESULT CreateAssemblyCache (
   
 ## <a name="parameters"></a>Parametreler  
  `ppAsmCache`  
- dışı Döndürülen `IAssemblyCache` işaretçi.  
+ dışı Döndürülen `IAssemblyCache` işaretçisi.  
   
  `dwReserved`  
- 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `dwReserved`0 (sıfır) olmalıdır.  
+ 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `dwReserved` 0 (sıfır) olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** Fusion. h  
+ **Üst bilgi:** Fusion. h  
   
- **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

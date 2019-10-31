@@ -22,80 +22,78 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 55bdf4cf589bd912dbfc85777542150696aaa436
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 771bd0276310eecb534fb80836faadb1a8aa10bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589781"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084198"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Nasıl yapılır: Belirli bir Tarihten Haftanın Gününü Çıkarma
-.NET Framework sıralı için belirli bir tarihten haftanın gününü belirlemek için ve belirli bir tarih için yerelleştirilmiş gün adını görüntülemek için kolaylaştırır. Belirli bir tarihe kadar karşılık gelen haftanın gününü gösteren numaralandırılmış değer kullanılabilir <xref:System.DateTime.DayOfWeek%2A> veya <xref:System.DateTimeOffset.DayOfWeek%2A> özelliği. Buna karşılık, haftanın günü adı alınırken tarih ve saat değerinin gibi bir biçimlendirme yöntemi çağırarak gerçekleştirilebilen bir biçimlendirme işlemdir `ToString` yöntemi veya <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi. Bu konu, bunlar biçimlendirme işlemleri gerçekleştirmeyi gösterir.  
+.NET Framework belirli bir tarih için haftanın sıralı gününü belirlemeyi ve belirli bir tarih için yerelleştirilmiş iş günü adını görüntülemeyi kolaylaştırır. <xref:System.DateTime.DayOfWeek%2A> veya <xref:System.DateTimeOffset.DayOfWeek%2A> özelliğinden belirli bir tarihe karşılık gelen haftanın gününü gösteren numaralandırılmış bir değer. Buna karşılık, hafta içi adı alma, tarih ve saat değerinin `ToString` yöntemi veya <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi gibi bir biçimlendirme yöntemi çağırarak gerçekleştirilebilecek biçimlendirme işlemidir. Bu konuda, bu biçimlendirme işlemlerinin nasıl gerçekleştirileceği gösterilmektedir.  
   
-### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>Belirli bir tarihten haftanın gününü gösteren bir sayı ayıklamak için  
+### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>Belirli bir tarihten itibaren haftanın gününü gösteren bir sayı ayıklamak için  
   
 1. Eğer bir tarihin dize gösterimiyle çalışıyorsanız, statik <xref:System.DateTime> veya <xref:System.DateTimeOffset> yöntemini kullanarak bunu bir <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> veya bir <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> değerine dönüştürün.  
   
-2. Kullanım <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> veya <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> almak için özellik bir <xref:System.DayOfWeek> haftanın gününü gösteren değer.  
+2. Haftanın gününü gösteren bir <xref:System.DayOfWeek> değeri almak için <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> veya <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> özelliğini kullanın.  
   
-3. Gerekirse, dönüştürme (C# ') veya (Visual Basic'te) <xref:System.DayOfWeek> bir tamsayı değeri.  
+3. Gerekirse, cast (ın C#) veya convert (Visual Basic) <xref:System.DayOfWeek> değerini bir tamsayıya dönüştürür.  
   
- Aşağıdaki örnek, belirli bir tarihten haftanın gününü temsil eden bir tamsayı görüntüler.  
+ Aşağıdaki örnek, belirli bir tarihin haftanın gününü temsil eden bir tamsayı görüntüler.  
   
  [!code-csharp[Formatting.Howto.WeekdayName#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/weekdaynumber7.cs#7)]
  [!code-vb[Formatting.Howto.WeekdayName#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/weekdaynumber7.vb#7)]  
   
-### <a name="to-extract-the-abbreviated-weekday-name-from-a-specific-date"></a>Belirli bir tarihten itibaren kısaltılmış gün adını ayıklamak için  
+### <a name="to-extract-the-abbreviated-weekday-name-from-a-specific-date"></a>Kısaltılmış iş günü adını belirli bir tarihten ayıklamak için  
   
 1. Eğer bir tarihin dize gösterimiyle çalışıyorsanız, statik <xref:System.DateTime> veya <xref:System.DateTimeOffset> yöntemini kullanarak bunu bir <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> veya bir <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> değerine dönüştürün.  
   
-2. Geçerli kültürün veya belirli bir kültürün kısaltılmış gün adını Ayıkla:  
+2. Geçerli kültürün kısaltılmış iş günü adını veya belirli bir kültürü ayıklayabilirsiniz:  
   
-    1. Tarih ve saat değerinin geçerli kültür için kısaltılmış gün adını Ayıkla çağrısı <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> veya <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> örnek yöntemi ve "ddd" dize olarak geçirin `format` parametresi. Aşağıdaki örnek yapılan çağrıyı gösterir <xref:System.DateTime.ToString%28System.String%29> yöntemi.  
+    1. Geçerli kültür için kısaltılmış iş günü adını ayıklamak için, tarih ve saat değerinin <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> veya <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> örnek yöntemini çağırın ve "ddd" dizesini `format` parametresi olarak geçirin. Aşağıdaki örnek <xref:System.DateTime.ToString%28System.String%29> yöntemine yapılan çağrıyı gösterir.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname1.cs#1)]
          [!code-vb[Formatting.Howto.WeekdayName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname1.vb#1)]  
   
-    2. Tarih ve saat değerinin belirli bir kültür için kısaltılmış gün adını Ayıkla çağrısı <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> veya <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> örnek yöntemi. "Ddd" dize olarak geçirin `format` parametresi. Ya da başarılı bir <xref:System.Globalization.CultureInfo> veya <xref:System.Globalization.DateTimeFormatInfo> haftanın günü adı olarak almak istediğiniz kültürü temsil eden bir nesne `provider` parametresi. Aşağıdaki kod bir çağrıyı gösterir <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> yöntemini kullanarak bir <xref:System.Globalization.CultureInfo> fr-FR kültürü temsil eden nesne.  
+    2. Belirli bir kültür için kısaltılmış hafta içi adı ayıklamak üzere, tarih ve saat değerinin <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> veya <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> örnek yöntemini çağırın. "Ddd" dizesini `format` parametresi olarak geçirin. İş günü adı `provider` parametresi olarak almak istediğiniz kültürü temsil eden bir <xref:System.Globalization.CultureInfo> veya <xref:System.Globalization.DateTimeFormatInfo> nesnesi geçirin. Aşağıdaki kod, fr-FR kültürünü temsil eden bir <xref:System.Globalization.CultureInfo> nesnesi kullanarak <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> yöntemine yapılan çağrıyı gösterir.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname2.cs#2)]
          [!code-vb[Formatting.Howto.WeekdayName#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname2.vb#2)]  
   
-### <a name="to-extract-the-full-weekday-name-from-a-specific-date"></a>Belirli bir tarihten itibaren tam haftanın günü adı ayıklanamıyor  
+### <a name="to-extract-the-full-weekday-name-from-a-specific-date"></a>Belirli bir tarihten itibaren tam hafta içi adı ayıklamak için  
   
 1. Eğer bir tarihin dize gösterimiyle çalışıyorsanız, statik <xref:System.DateTime> veya <xref:System.DateTimeOffset> yöntemini kullanarak bunu bir <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> veya bir <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> değerine dönüştürün.  
   
-2. Tam haftanın günü adı geçerli kültürün veya belirli bir kültürün ayıklayabilirsiniz:  
+2. Geçerli kültürün veya belirli bir kültürün tam iş günü adını ayıklayabilirsiniz:  
   
-    1. Tarih ve saat değerinin haftanın günü adı geçerli kültür için ayıklamak için çağrı <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> veya <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> yöntemi örneği ve ' % s'dizesi "dddd" olarak geçirin `format` parametresi. Aşağıdaki örnek yapılan çağrıyı gösterir <xref:System.DateTime.ToString%28System.String%29> yöntemi.  
+    1. Geçerli kültürün hafta içi adını ayıklamak için, tarih ve saat değerinin <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> veya <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> örnek yöntemini çağırın ve "gggg" dizesini `format` parametresi olarak geçirin. Aşağıdaki örnek <xref:System.DateTime.ToString%28System.String%29> yöntemine yapılan çağrıyı gösterir.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname4.cs#4)]
          [!code-vb[Formatting.Howto.WeekdayName#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname4.vb#4)]  
   
-    2. Tarih ve saat değerinin haftanın günü adı belirli bir kültür için ayıklamak için çağrı <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> veya <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> örnek yöntemi. ' % S'dizesi "dddd" olarak geçirin `format` parametresi. Ya da başarılı bir <xref:System.Globalization.CultureInfo> veya <xref:System.Globalization.DateTimeFormatInfo> haftanın günü adı olarak almak istediğiniz kültürü temsil eden bir nesne `provider` parametresi. Aşağıdaki kod bir çağrıyı gösterir <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> yöntemini kullanarak bir <xref:System.Globalization.CultureInfo> es-ES kültürü temsil eden nesne.  
+    2. Belirli bir kültürün hafta içi adını ayıklamak için tarih ve saat değerinin <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> veya <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> örnek yöntemini çağırın. "Gggg" dizesini `format` parametresi olarak geçirin. İş günü adı `provider` parametresi olarak almak istediğiniz kültürü temsil eden bir <xref:System.Globalization.CultureInfo> veya <xref:System.Globalization.DateTimeFormatInfo> nesnesi geçirin. Aşağıdaki kod, ES-ES kültürünü temsil eden bir <xref:System.Globalization.CultureInfo> nesnesi kullanarak <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> yöntemine yapılan çağrıyı gösterir.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname5.cs#5)]
          [!code-vb[Formatting.Howto.WeekdayName#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname5.vb#5)]  
   
 ## <a name="example"></a>Örnek  
- Çağrısına örnekte gösterildiği <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> ve <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> özellikleri ve <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> ve <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> haftanın kısaltılmış gün adını ve tam haftanın günü adı gününü temsil eden sayı almak için yöntemler bir Belirli tarih.  
+ Örnek, <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> ve <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> özelliklerine ve <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> ve <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> yöntemlerine, haftanın gününü, kısaltılmış iş günü adını ve belirli bir tarih için tam gün adını temsil eden sayıyı almak için kullanılan çağrıları gösterir.  
   
  [!code-csharp[Formatting.Howto.WeekdayName#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/example6.cs#6)]
  [!code-vb[Formatting.Howto.WeekdayName#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/example6.vb#6)]  
   
- Tek tek dillerin yineleme veya .NET Framework tarafından sağlanan işlevselliği tamamlayan işlevler sağlayabilir. Örneğin, Visual Basic böyle iki işlevin içerir:  
+ Tek tek diller .NET Framework tarafından belirtilen işlevleri çoğaltan veya tamamlayan işlevselliği sağlayabilir. Örneğin, Visual Basic iki işlevi de içerir:  
   
-- `Weekday`, belirli bir tarihten haftanın gününü gösteren bir sayı döndürür. Oysa sıralı değeri, biri için haftanın ilk gününü dikkate <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> özelliği sıfır olarak değerlendirir.  
+- `Weekday`, belirli bir tarihin haftanın gününü gösteren bir sayı döndürür. Haftanın ilk gününün sıra değerini bir olarak değerlendirir, <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> özelliği bunu sıfır olarak değerlendirir.  
   
-- `WeekdayName`, döndüren hafta adını karşılık gelen geçerli kültürün belirli hafta içi sayıya.  
+- geçerli kültürün belirli bir iş günü numarasına karşılık gelen haftanın adını döndüren `WeekdayName`.  
   
- Aşağıdaki örnek Visual Basic kullanışını `Weekday` ve `WeekdayName` işlevleri.  
+ Aşağıdaki örnek Visual Basic `Weekday` ve `WeekdayName` işlevlerinin kullanımını gösterir.  
   
  [!code-vb[Formatting.HowTo.WeekdayName#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/example9.vb#9)]  
   
- Tarafından döndürülen değer de kullanabilirsiniz <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> belirli bir tarihten haftanın günü adını almak için özellik. Bu yalnızca bir çağrı gerektirir <xref:System.Enum.ToString%2A> metodunda <xref:System.DayOfWeek> özellik tarafından döndürülen değer. Ancak aşağıdaki örnekte gösterildiği gibi bu teknik geçerli kültür için yerelleştirilmiş haftanın günü adları oluşturmaz.  
+ Belirli bir tarihin hafta içi adını almak için <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> özelliği tarafından döndürülen değeri de kullanabilirsiniz. Bu, özelliği tarafından döndürülen <xref:System.DayOfWeek> değerindeki <xref:System.Enum.ToString%2A> yöntemine yönelik bir çağrı gerektirir. Ancak, bu teknik, aşağıdaki örnekte gösterildiği gibi geçerli kültür için yerelleştirilmiş bir iş günü adı üretmez.  
   
  [!code-csharp[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/Howto1.cs#8)]
  [!code-vb[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/Howto1.vb#8)]  

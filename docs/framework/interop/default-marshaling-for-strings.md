@@ -8,34 +8,32 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d39d4dfd5413b95300b70f27437bd27ca2d67a20
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 49f2d871a42db484e20f0bfc35634a0e8b959c2e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452391"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123544"
 ---
 # <a name="default-marshaling-for-strings"></a>Dizeler için Varsayılan Hazırlama
 
-Hem <xref:System.String?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder?displayProperty=nameWithType> sınıflar benzer hazırlama davranışı sahiptir.
+<xref:System.String?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder?displayProperty=nameWithType> sınıflarının her ikisi de benzer sıralama davranışına sahiptir.
 
-Dizeleri bir COM stili olarak sıralanmış `BSTR` türü veya null ile sonlandırılmış bir dize (boş bir karakter ile sona eren bir karakter dizisi) olarak. Unicode (Windows sistemlerinde varsayılan) veya ANSI olarak dize içindeki karakterlerin sıralanabilir.
+Dizeler bir COM stili `BSTR` türü olarak veya null ile sonlandırılmış bir dize (null karakterle biten bir karakter dizisi) olarak sıralanır. Dize içindeki karakterler Unicode olarak sıralanabilir (Windows sistemlerinde varsayılan olarak) veya ANSI.
 
 ## <a name="strings-used-in-interfaces"></a>Arabirimlerde kullanılan dizeler
 
-Aşağıdaki tablo, yönetilmeyen kodu bir metot bağımsız değişkeni olarak sıralandığı zaman dize veri türü için sıralama seçeneklerini gösterir. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Özniteliği sağlayan çeşitli <xref:System.Runtime.InteropServices.UnmanagedType> numaralandırma değerleri için COM arabirimlerine dizelerini sıralama.
+Aşağıdaki tabloda, yönetilmeyen koda bir yöntem bağımsız değişkeni olarak sıralandığınızda dize veri türü için sıralama seçenekleri gösterilmektedir. <xref:System.Runtime.InteropServices.MarshalAsAttribute> özniteliği, dizelerin COM arabirimlerine sıralaması için birkaç <xref:System.Runtime.InteropServices.UnmanagedType> numaralandırma değeri sağlar.
 
-|Numaralandırma türü|Yönetilmeyen biçimi açıklaması|
+|Sabit listesi türü|Yönetilmeyen biçimin açıklaması|
 |----------------------|-------------------------------------|
-|`UnmanagedType.BStr` (varsayılan)|COM Stili `BSTR` önekli bir uzunluk ve Unicode karakter.|
-|`UnmanagedType.LPStr`|Null ile sonlandırılmış bir dizi ANSI karakter işaretçisi.|
-|`UnmanagedType.LPWStr`|Null ile sonlandırılmış bir dizi Unicode karakter işaretçisi.|
+|`UnmanagedType.BStr` (varsayılan)|Ön ek uzunluğu ve Unicode karakterlerle bir COM stili `BSTR`.|
+|`UnmanagedType.LPStr`|ANSI karakterlerinin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
+|`UnmanagedType.LPWStr`|Unicode karakterlerinin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
 
-Bu tabloda uygulandığı <xref:System.String>. İçin <xref:System.Text.StringBuilder>, izin verilen tek Seçenekler `UnmanagedType.LPStr` ve `UnmanagedType.LPWStr`.
+Bu tablo <xref:System.String>için geçerlidir. <xref:System.Text.StringBuilder>için izin verilen tek seçenek `UnmanagedType.LPStr` ve `UnmanagedType.LPWStr`.
 
-Aşağıdaki örnek, dizeleri bildirilen gösterir `IStringWorker` arabirimi.
+Aşağıdaki örnek, `IStringWorker` arabiriminde belirtilen dizeleri gösterir.
 
 ```csharp
 public interface IStringWorker
@@ -64,7 +62,7 @@ Public Interface IStringWorker
 End Interface
 ```
 
-Aşağıdaki örnek, bir tür kitaplığında tanımlanan karşılık gelen arabirimi gösterir.
+Aşağıdaki örnekte, bir tür kitaplığında açıklanan karşılık gelen arabirim gösterilmektedir.
 
 ```cpp
 interface IStringWorker : IDispatch
@@ -80,26 +78,26 @@ interface IStringWorker : IDispatch
 };
 ```
 
-## <a name="strings-used-in-platform-invoke"></a>Dizeleri platformunda kullanılan çağırma
+## <a name="strings-used-in-platform-invoke"></a>Platform çağırma içinde kullanılan dizeler
 
-Platform çağırma kopyaları dize bağımsız değişkenleri, .NET Framework biçimden (Unicode) platform yönetilmeyen biçimine dönüştürme. Dizeleri sabittir ve yönetilmeyen belleğin geri çağrısı döndürüldüğünde yönetilen bellek kopyalanmaz.
+Platform çağrısı, .NET Framework biçiminden (Unicode) Platform yönetilmeyen biçimine dönüştürerek dize bağımsız değişkenlerini kopyalar. Dizeler sabittir ve çağrı geri döndüğünde yönetilen belleğe yönetilmeyen bellekten geri kopyalanmaz.
 
-Aşağıdaki tabloda bir yöntemi bağımsız değişken bir platform çağırma olarak çağrı sıralandığı zaman dizeler için sıralama seçenekleri listeler. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Özniteliği sağlayan çeşitli <xref:System.Runtime.InteropServices.UnmanagedType> sabit listesi dizelerini sıralama için değerler.
+Aşağıdaki tabloda, bir platform çağırma çağrısının Yöntem bağımsız değişkeni olarak sıralandığınızda dizeler için sıralama seçenekleri listelenmektedir. <xref:System.Runtime.InteropServices.MarshalAsAttribute> özniteliği, dizeleri sıralamak için birkaç <xref:System.Runtime.InteropServices.UnmanagedType> numaralandırma değeri sağlar.
 
-|Numaralandırma türü|Yönetilmeyen biçimi açıklaması|
+|Sabit listesi türü|Yönetilmeyen biçimin açıklaması|
 |----------------------|-------------------------------------|
-|`UnmanagedType.AnsiBStr`|COM Stili `BSTR` önekli bir uzunluk ve ANSI karakterler.|
-|`UnmanagedType.BStr`|COM Stili `BSTR` önekli bir uzunluk ve Unicode karakter.|
-|`UnmanagedType.LPStr` (varsayılan)|Null ile sonlandırılmış bir dizi ANSI karakter işaretçisi.|
-|`UnmanagedType.LPTStr`|Null ile sonlandırılmış bir dizi platform bağımlı karakter işaretçisi.|
-|`UnmanagedType.LPUTF8Str`|UTF-8 null ile sonlandırılmış bir dizi işaretçi karakterleri kodlanmıştır.|
-|`UnmanagedType.LPWStr`|Null ile sonlandırılmış bir dizi Unicode karakter işaretçisi.|
-|`UnmanagedType.TBStr`|COM Stili `BSTR` önekli bir uzunluk ve platforma bağımlı karakter.|
-|`VBByRefStr`|Bir dizede değiştirilecek Visual Basic .NET sağlayan bir değer kod yönetilmeyen ve yönetilen kodda sonuçları yansıtılmasını. Bu değer, yalnızca platform çağırma için desteklenir. Visual Basic için varsayılan değer budur `ByVal` dizeleri.|
+|`UnmanagedType.AnsiBStr`|Ön ek uzunluğu ve ANSI karakterleri olan bir COM stili `BSTR`.|
+|`UnmanagedType.BStr`|Ön ek uzunluğu ve Unicode karakterlerle bir COM stili `BSTR`.|
+|`UnmanagedType.LPStr` (varsayılan)|ANSI karakterlerinin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
+|`UnmanagedType.LPTStr`|Platforma bağlı karakterlerin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
+|`UnmanagedType.LPUTF8Str`|UTF-8 kodlu karakterlerin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
+|`UnmanagedType.LPWStr`|Unicode karakterlerinin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
+|`UnmanagedType.TBStr`|Ön ek uzunluğu ve platforma bağlı karakterlerle bir COM stili `BSTR`.|
+|`VBByRefStr`|Visual Basic .NET 'in yönetilmeyen koddaki bir dizeyi değiştirmesini ve sonuçların yönetilen koda yansıtılmasını sağlayan bir değer. Bu değer yalnızca platform çağırma için desteklenir. Bu, `ByVal` dizeleri için Visual Basic varsayılan değerdir.|
 
-Bu tabloda uygulandığı <xref:System.String>. İçin <xref:System.Text.StringBuilder>, izin verilen tek Seçenekler `LPStr`, `LPTStr`, ve `LPWStr`.
+Bu tablo <xref:System.String>için geçerlidir. <xref:System.Text.StringBuilder>için izin verilen tek seçenek `LPStr`, `LPTStr`ve `LPWStr`.
 
-Aşağıdaki tür tanımı doğru kullanımını gösterir `MarshalAsAttribute` çağrıları için platform çağırma.
+Aşağıdaki tür tanımı, platform çağırma çağrıları için `MarshalAsAttribute` doğru kullanımını gösterir.
 
 ```csharp
 class StringLibAPI
@@ -140,22 +138,22 @@ Class StringLibAPI
 End Class
 ```
 
-## <a name="strings-used-in-structures"></a>Yapıları, kullanılan dizeler
+## <a name="strings-used-in-structures"></a>Yapılarda kullanılan dizeler
 
-Dizeleri yapıları geçerli üyeleridir; Ancak, <xref:System.Text.StringBuilder> arabellekler yapılarda geçersiz. Sıralama seçenekleri aşağıdaki tabloda gösterilmektedir <xref:System.String> veri türü, bir alan olarak sıralandığı zaman türü. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Özniteliği sağlayan çeşitli <xref:System.Runtime.InteropServices.UnmanagedType> numaralandırma değerleri için bir alan için dizeleri sıralama.
+Dizeler yapıların geçerli üyeleridir; Ancak, <xref:System.Text.StringBuilder> arabellekleri yapılarda geçersizdir. Aşağıdaki tabloda, tür bir alan olarak sıralandığınızda <xref:System.String> veri türü için sıralama seçenekleri gösterilmektedir. <xref:System.Runtime.InteropServices.MarshalAsAttribute> özniteliği, bir alana dizeleri sıralamak için birkaç <xref:System.Runtime.InteropServices.UnmanagedType> numaralandırma değeri sağlar.
 
-|Numaralandırma türü|Yönetilmeyen biçimi açıklaması|
+|Sabit listesi türü|Yönetilmeyen biçimin açıklaması|
 |----------------------|-------------------------------------|
-|`UnmanagedType.BStr`|COM Stili `BSTR` önekli bir uzunluk ve Unicode karakter.|
-|`UnmanagedType.LPStr` (varsayılan)|Null ile sonlandırılmış bir dizi ANSI karakter işaretçisi.|
-|`UnmanagedType.LPTStr`|Null ile sonlandırılmış bir dizi platform bağımlı karakter işaretçisi.|
-|`UnmanagedType.LPUTF8Str`|UTF-8 null ile sonlandırılmış bir dizi işaretçi karakterleri kodlanmıştır.|
-|`UnmanagedType.LPWStr`|Null ile sonlandırılmış bir dizi Unicode karakter işaretçisi.|
-|`UnmanagedType.ByValTStr`|Karakter sabit uzunluklu dizi; dizi türü içeren yapı karakter kümesi tarafından belirlenir.|
+|`UnmanagedType.BStr`|Ön ek uzunluğu ve Unicode karakterlerle bir COM stili `BSTR`.|
+|`UnmanagedType.LPStr` (varsayılan)|ANSI karakterlerinin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
+|`UnmanagedType.LPTStr`|Platforma bağlı karakterlerin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
+|`UnmanagedType.LPUTF8Str`|UTF-8 kodlu karakterlerin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
+|`UnmanagedType.LPWStr`|Unicode karakterlerinin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
+|`UnmanagedType.ByValTStr`|Sabit uzunluklu karakter dizisi; dizinin türü, kapsayan yapının karakter kümesi tarafından belirlenir.|
 
-`ByValTStr` Türü satır içi, bir yapı içinde görünen sabit uzunluklu karakteri diziler için kullanılır. Diğer türleri dizelerine içeren yapıları içindeki dize başvuruları için geçerlidir.
+`ByValTStr` türü, bir yapı içinde görünen satır içi, sabit uzunlukta karakter dizileri için kullanılır. Diğer türler, dizeler için işaretçiler içeren yapılar içinde yer alan dize başvuruları için geçerlidir.
 
-`CharSet` Bağımsız değişkeni <xref:System.Runtime.InteropServices.StructLayoutAttribute> içeren uygulanan yapısı yapılardaki dize karakter biçimini belirler. Aşağıdaki örnek yapılardaki dize başvurular ve satır içi dizeleri yanı sıra ANSI, Unicode ve platforma bağımlı karakter içerir. Bu yapılar, tür kitaplığındaki gösterimini aşağıda gösterilir C++ kod:
+İçerilen yapıya uygulanan <xref:System.Runtime.InteropServices.StructLayoutAttribute> `CharSet` bağımsız değişkeni, yapılardaki dizelerin karakter biçimini belirler. Aşağıdaki örnek yapılar dize başvurularını ve satır içi dizeleri, ayrıca ANSI, Unicode ve platforma bağımlı karakterleri içerir. Bir tür kitaplığındaki bu yapıların temsili aşağıdaki C++ kodda gösterilmiştir:
 
 ```cpp
 struct StringInfoA
@@ -178,7 +176,7 @@ struct StringInfoT
 };
 ```
 
-Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Runtime.InteropServices.MarshalAsAttribute> farklı biçimlerde aynı yapısını tanımlamak için.
+Aşağıdaki örnek, farklı biçimlerde aynı yapıyı tanımlamak için <xref:System.Runtime.InteropServices.MarshalAsAttribute> nasıl kullanacağınızı gösterir.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -228,13 +226,13 @@ Structure StringInfoT
 End Structure
 ```
 
-## <a name="fixed-length-string-buffers"></a>Sabit uzunluklu dize arabelleği
+## <a name="fixed-length-string-buffers"></a>Sabit uzunluklu dize arabellekleri
 
-Bazı durumlarda, sabit uzunluklu karakteri arabellek yönetilebilmesini yönetilmeyen koda geçirilmelidir. Çağrılan geçirilen arabellek içeriği değiştirilemez çünkü yalnızca bir dizeye geçiliyor bu durumda çalışmaz. Dize başvuruya göre geçirilse bile, verilen boyuta arabellek başlatmak için hiçbir yolu yoktur.
+Bazı durumlarda, sabit uzunluklu bir karakter arabelleğinin, kullanılacak yönetilmeyen koda geçirilmesi gerekir. Çağıran, geçilen arabelleğin içeriğini değiştiremediğinden, bu durumda yalnızca bir dize geçirilmesi çalışmaz. Dize başvuruya göre geçirilse bile, arabelleği verilen boyuta başlatmanın bir yolu yoktur.
 
-Çözüm geçirmektir bir <xref:System.Text.StringBuilder> arabellek yerine bağımsız değişken olarak bir <xref:System.String>. A `StringBuilder` başvurusu ve kapasitesini aşmadığından sağlanan Aranan tarafından değiştirilen `StringBuilder`. Sabit uzunluk için de yeniden başlatılabilir. Örneğin, başlatma, bir `StringBuilder` kapasitesi arabelleğe `N`, Sıralayıcı bir arabellek boyutunu sağlar (`N`+ 1) karakter. Yönetilmeyen dize bir null Sonlandırıcı çalışırken sahip olgu + 1 hesaplar `StringBuilder` desteklemez.
+Çözüm, bir <xref:System.Text.StringBuilder> arabelleğini <xref:System.String>yerine bağımsız değişken olarak geçirmektir. `StringBuilder`, `StringBuilder`kapasitesini aşmadığı belirtilen aranan tarafından bir başvuru yapılabilir ve değiştirilebilir. Ayrıca, sabit bir uzunluğa de başlatılabilir. Örneğin, bir `N`kapasitesine `StringBuilder` arabelleği başlattığınızda Sıralayıcı, boyut (`N`+ 1) karakter arabelleği sağlar. Yönetilmeyen dizenin `StringBuilder` null sonlandırıcısına sahip olduğu için + 1 hesapları.
 
-Örneğin, Windows [ `GetWindowText` ](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) API işlevi (tanımlanan *winuser.h*) arayan işlev Yazar pencerenin metin sabit uzunluklu karakteri arabellek geçmesini gerektirir. `LpString` işaret boyutu arayana ayrılan arabelleğe `nMaxCount`. Çağıranın arabellek ayırmak ve ayarlamak için beklenen `nMaxCount` bağımsız değişkeni için ayrılan arabelleğin boyutu. Aşağıdaki örnekte gösterildiği `GetWindowText` işlevi bildiriminde tanımlanan *winuser.h*.
+Örneğin, Windows [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) API işlevi ( *Winuser. h*içinde tanımlanan), çağıranın, işlevin pencerenin metnini yazdığı sabit uzunlukta bir karakter arabelleği geçmesini gerektirir. `LpString`, çağıran bir boyut `nMaxCount`arabelleğini işaret eder. Çağıranın arabelleği ayırması ve `nMaxCount` bağımsız değişkenini ayrılan arabelleğin boyutuna ayarlaması beklenmektedir. Aşağıdaki örnek, `GetWindowText` işlev bildirimini *Winuser. h*içinde tanımlanan şekilde gösterir.
 
 ```cpp
 int GetWindowText(
@@ -244,7 +242,7 @@ int GetWindowText(
 );
 ```
 
-A `StringBuilder` başvurusu ve kapasitesini aşmadığından sağlanan Aranan tarafından değiştirilen `StringBuilder`. Aşağıdaki kod örneğinde nasıl `StringBuilder` sabit uzunluk için başlatılabilir.
+`StringBuilder`, `StringBuilder`kapasitesini aşmadığı belirtilen aranan tarafından bir başvuru yapılabilir ve değiştirilebilir. Aşağıdaki kod örneği `StringBuilder` sabit bir uzunluğa nasıl başlatılabileceğinizi gösterir.
 
 ```csharp
 using System;

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Ortak özel anahtar çifti oluşturma'
+title: 'Nasıl yapılır: genel-özel anahtar çifti oluşturma'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - key pairs for strong-named assemblies
@@ -11,31 +11,29 @@ helpviewer_keywords:
 - .snk files
 - strong-named assemblies, key pairs
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 62c38494e29541bd490d69ccc8de485217b9514a
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8a9845e3cd18ff86ec04216ad0e9c5606186b113
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991698"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122526"
 ---
-# <a name="how-to-create-a-public-private-key-pair"></a>Nasıl yapılır: Ortak özel anahtar çifti oluşturma
+# <a name="how-to-create-a-public-private-key-pair"></a>Nasıl yapılır: genel-özel anahtar çifti oluşturma
 
 Bir derlemeyi güçlü bir adla imzalamak için ortak/özel anahtar çiftiniz olmalıdır. Bu ortak ve özel şifreleme anahtarı çifti derleme sırasında, tanımlayıcı adlı bir derleme oluşturmak için kullanılır. [Tanımlayıcı ad Aracı (sn. exe)](../../framework/tools/sn-exe-strong-name-tool.md)kullanarak bir anahtar çifti oluşturabilirsiniz. Anahtar çifti dosyaları genellikle *. snk* uzantısına sahiptir.
 
 > [!NOTE]
-> Visual Studio 'da, C# ve Visual Basic proje özelliği sayfaları, var olan anahtar dosyaları seçmenize veya *sn. exe*' yi kullanmadan yeni anahtar dosyaları oluşturmanıza olanak sağlayan bir **imzalama** sekmesi içerir. Görsel C++' de, varolan bir anahtar dosyasının konumunu, **Özellik sayfaları** penceresinin **yapılandırma özellikleri** bölümünün **bağlayıcı** bölümünde bulunan **Gelişmiş** Özellik sayfasında belirtebilirsiniz. Anahtar dosya çiftlerini tanımlamak <xref:System.Reflection.AssemblyKeyFileAttribute> için özniteliğinin kullanımı, Visual Studio 2005 ' den itibaren artık kullanılmıyor olarak yapılmıştır.
+> Visual Studio 'da, C# ve Visual Basic proje özelliği sayfaları, var olan anahtar dosyaları seçmenize veya *sn. exe*' yi kullanmadan yeni anahtar dosyaları oluşturmanıza olanak sağlayan bir **imzalama** sekmesi içerir. Görsel C++' de, varolan bir anahtar dosyasının konumunu, **Özellik sayfaları** penceresinin **yapılandırma özellikleri** bölümünün **bağlayıcı** bölümünde bulunan **Gelişmiş** Özellik sayfasında belirtebilirsiniz. Anahtar dosya çiftlerini tanımlamak için <xref:System.Reflection.AssemblyKeyFileAttribute> özniteliğinin kullanımı, Visual Studio 2005 ' den itibaren artık kullanılmıyor olarak yapılmıştır.
 
 ## <a name="create-a-key-pair"></a>Anahtar çifti oluşturma
 
 Bir anahtar çifti oluşturmak için, komut isteminde aşağıdaki komutu yazın:
 
-**sn – k** \< *dosya adı*>
+**sn – k** \<*dosya adı*>
 
 Bu komutta *dosya adı* , anahtar çiftini içeren çıkış dosyasının adıdır.
 

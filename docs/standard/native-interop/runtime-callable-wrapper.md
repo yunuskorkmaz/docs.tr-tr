@@ -8,14 +8,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a460ac730db85dfa8d4a8ee6949a168bc228193d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 70ed4176872e18ccafa00808630fcc51337b8479
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631311"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123205"
 ---
 # <a name="runtime-callable-wrapper"></a>Çalışma Zamanı Aranabilir Sarmalayıcısı
 Ortak dil çalışma zamanı, COM nesnelerini, çalışma zamanı çağrılabilir sarmalayıcı (RCW) adlı bir ara sunucu üzerinden kullanıma sunar. RCW, .NET istemcilerine sıradan bir nesne gibi görünse de, birincil işlevi bir .NET istemcisiyle COM nesnesi arasındaki çağrıları sıralayamaz.  
@@ -55,7 +53,7 @@ Aşağıdaki görüntüde, çalışma zamanında çağrılabilir sarmalayıcı a
 |Arabirim|Açıklama|  
 |---------------|-----------------|  
 |**Inewctionpoint** ve **IConnectionPointContainer**|RCW, bağlantı noktası olay stilini kullanıma sunan nesneleri temsilci tabanlı olaylara dönüştürür.|  
-|**IDispatchEx** (Yalnızca .NET Framework) |Sınıf **IDispatchEx**uygularsa, RCW, Idauygular. **IDispatchEx** arabirimi **IDispatch arabiriminin bir** uzantısıdır. Bu, **IDispatch**'in aksine numaralandırma, ekleme, silme ve büyük/küçük harf duyarlı üyelerin çağrılmasını mümkün değildir.|  
+|**IDispatchEx** (yalnızca .NET Framework) |Sınıf **IDispatchEx**uygularsa, RCW, **Ida**uygular. **IDispatchEx** **arabirimi IDispatch arabiriminin bir** uzantısıdır. Bu, **IDispatch**'in aksine numaralandırma, ekleme, silme ve büyük/küçük harf duyarlı üyelerin çağrılmasını mümkün değildir.|  
 |**IEnumVariant**|Numaralandırmalar destekleyen COM türlerinin koleksiyonlar olarak değerlendirilmesini sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50dbb9af-58a1-41f4-b56d-3da20011884f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b12ba5ad5c85643d1f4c91585cf7abca210d22bd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 52bfe669d3b078657916554255a11cecfc07d484
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752945"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085085"
 ---
 # <a name="icordebugevalgetresult-method"></a>ICorDebugEval::GetResult Yöntemi
-Bu değerlendirme sonuçlarını alır.  
+Bu değerlendirmenin sonuçlarını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +35,18 @@ HRESULT GetResult (
   
 ## <a name="parameters"></a>Parametreler  
  `ppResult`  
- [out] Değerlendirme normalde tamamlanırsa Bu değerlendirme sonuçlarını temsil eden bir Icordebugvalue nesnenin adresini işaretçisi.  
+ dışı Değerlendirme normal şekilde tamamlanırsa, bu değerlendirmenin sonuçlarını temsil eden bir ICorDebugValue nesnesinin adresine yönelik işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetResult` Yöntemi, yalnızca değerlendirme tamamlandıktan sonra geçerlidir.  
+ `GetResult` yöntemi yalnızca değerlendirme tamamlandıktan sonra geçerlidir.  
   
- Normalde, değerlendirme tamamlanırsa `ppResult` sonuçları belirtir. Bir özel durumla sona ererse, oluşturulan özel durum oluşur. Değerlendirme için yeni bir nesne ise, yeni nesneye başvuru sonucudur.  
+ Değerlendirme normal şekilde tamamlanırsa, `ppResult` sonuçları belirtir. Bir özel durumla sonlandığında sonuç, oluşturulan özel durumdur. Değerlendirme yeni bir nesne için ise, sonuç yeni nesneye başvurudur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

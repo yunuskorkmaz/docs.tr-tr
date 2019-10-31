@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d5da531bff3a0e9e198ba9b5ab6cf2b52bf36b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c3e1c3a3cfd61a9fa8e7abdae9a25ec1bc674492
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921307"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119224"
 ---
-# <a name="clear-element-for-appsettings"></a>\<appSettings için \<> öğesi > Temizle
+# <a name="clear-element-for-appsettings"></a>\<appSettings için > öğesi \<temizleyin >
 
 Özel uygulama ayarlarını temizler.
 
-[ **\<Yapılandırma >** ](../configuration-element.md)   
+[ **\<yapılandırma >** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> Temizle**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<temizle >**
 
 ## <a name="syntax"></a>Sözdizimi
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 091c5f32-c160-49e3-a75f-4692e084c8e4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9dbb655d6ed0b9bd88c5eedf61a191401a805fb3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fed643ae52f50b1b8cd134880c644c8941da6f56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738762"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122868"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase Yöntemi
-Belirtilen görüntü temel bellek adresini alır.  
+Belirtilen görüntünün taban bellek adresini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +36,22 @@ HRESULT GetImageBase (
   
 ## <a name="parameters"></a>Parametreler  
  `imagePath`  
- [in] Diskteki yolu da dahil olmak üzere resim dosya adı.  
+ 'ndaki Görüntünün yolu da dahil olmak üzere dosya adı.  
   
  `baseAddress`  
- [out] Görüntüyü temel adresini depolayan bir CLRDATA_ADDRESS işaretçisi.  
+ dışı Görüntünün temel adresini depolayan bir CLRDATA_ADDRESS işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Resim dosyası adına olabilir veya bir yol olmayabilir. Bir yol belirtilmezse, eşleşen dosyanın tam yolunu üzerinde gerçekleştirilir; Aksi halde, eşleme yalnızca dosya adını gerçekleştirilir.  
+ Görüntü dosyası adı bir yola sahip olabilir veya olmayabilir. Bir yol belirtilmişse, eşleşme tam yol üzerinde yapılır; Aksi takdirde, eşleştirme yalnızca dosya adı üzerinde yapılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** ClrData.idl, ClrData.h  
+ **Üst bilgi:** ClrData. IDL, ClrData. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

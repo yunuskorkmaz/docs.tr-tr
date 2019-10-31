@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d68666a-fb73-4455-bebd-908d49a16abc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 840a3779ca5692787c2c352db60a29d6a4d4ba4f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8ae47eac713fbee30ea543538957b12460b8e1fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768597"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123279"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate Yöntemi
-Belirtilen taşınabilir yürütülebilir (PE) veya Microsoft Ara dili (MSIL) dosyası doğrular.  
+Belirtilen Taşınabilir çalıştırılabilir (PE) veya Microsoft ara dili (MSIL) dosyasını doğrular.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,34 +42,34 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>Parametreler  
  `veh`  
- [in] Bir işaretçi bir `IVEHandler` doğrulama hatalarını işleyen örneği.  
+ 'ndaki Doğrulama hatalarını işleyen `IVEHandler` örneğine yönelik bir işaretçi.  
   
  `pAppDomain`  
- [in] Dosya yüklendiği uygulama etki alanı için bir işaretçi.  
+ 'ndaki Dosyanın yüklendiği uygulama etki alanına yönelik bir işaretçi.  
   
  `ulFlags`  
- [in] Bitsel bir birleşimi [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) gerçekleştirilmelidir Doğrulamalar gösteren değer.  
+ 'ndaki Gerçekleştirilmesi gereken doğrulamaları belirten, [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) değerlerinin bit düzeyinde birleşimi.  
   
  `ulMaxError`  
- [in] Doğrulama çıkmadan önce izin vermek için hataları sayısı.  
+ 'ndaki Doğrulamadan çıkmadan önce izin verilen en fazla hata sayısı.  
   
  `token`  
- [in] Kullanılmıyor.  
+ 'ndaki Kullanılmıyor.  
   
  `fileName`  
- [in] Doğrulanacak dosyasının adını belirten dize.  
+ 'ndaki Doğrulanacak dosyanın adını belirten bir dize.  
   
  `pe`  
- [in] Dosyanın depolandığı ara belleğe yönelik işaretçi.  
+ 'ndaki Dosyanın depolandığı bellek arabelleğine yönelik bir işaretçi.  
   
  `ulSize`  
- [in] Doğrulanacak dosyasının bayt cinsinden boyutu.  
+ 'ndaki Doğrulanacak dosyanın bayt cinsinden boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** IValidator.idl, IValidator.h  
+ **Üst bilgi:** IValidator. IDL, IValidator. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

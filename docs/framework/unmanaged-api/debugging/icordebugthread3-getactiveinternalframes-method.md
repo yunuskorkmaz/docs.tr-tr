@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58aaf0445fe42d083c12541056cb362f9a994944
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b4f228d55c9ffd6b85ebd0b430a7f5db404320f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765217"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124343"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>ICorDebugThread3::GetActiveInternalFrames Metodu
-İç çerçeveler bir dizi döndürür ([Icordebugınternalframe2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) nesneleri) yığında.  
+Yığında iç çerçeveler ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) nesneleri) dizisini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,42 +39,42 @@ HRESULT GetActiveInternalFrames
   
 ## <a name="parameters"></a>Parametreler  
  `cInternalFrames`  
- [in] Beklenen iç çerçeve sayısı `ppInternalFrames`.  
+ 'ndaki `ppInternalFrames`beklenen iç çerçeve sayısı.  
   
  `pcInternalFrames`  
- [out] Bir işaretçi bir `ULONG32` içeren yığında iç çerçeve sayısı.  
+ dışı Yığındaki iç çerçevelerin sayısını içeren bir `ULONG32` işaretçisi.  
   
  `ppInternalFrames`  
- [out içinde] İç çerçeveler yığın üzerinde bir dizi adresi için bir işaretçi.  
+ [in, out] Yığındaki iç çerçeveler dizisinin adresine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
+ Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|[Icordebugınternalframe2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) nesne başarıyla oluşturuldu.|  
-|E_INVALIDARG|`cInternalFrames` sıfır değilse ve `ppInternalFrames` olduğu `null`, veya `pcInternalFrames` olduğu `null`.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` İç çerçeveler sayısından küçük.|  
+|S_OK|[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) nesnesi başarıyla oluşturuldu.|  
+|E_INVALIDARG|`cInternalFrames` sıfır değil ve `ppInternalFrames` `null`ya da `pcInternalFrames` `null`.|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` iç çerçeve sayısından daha küçüktür.|  
   
 ## <a name="exceptions"></a>Özel Durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
- İç çerçeveler, yığın üstüne, geçici verileri depolamak için çalışma zamanı tarafından gönderilen veri yapılarıdır.  
+ İç çerçeveler, geçici verileri depolamak için çalışma zamanı tarafından yığına gönderilen veri yapılarıdır.  
   
- İlk çağırdığınızda `GetActiveInternalFrames`, ayarlamalısınız `cInternalFrames` parametresi 0 (sıfır) ve `ppInternalFrames` parametresi null. Zaman `GetActiveInternalFrames` ilk döndürür, `pcInternalFrames` yığında iç çerçeve sayısını içerir.  
+ `GetActiveInternalFrames`ilk kez çağırdığınızda, `cInternalFrames` parametresini 0 (sıfır) ve `ppInternalFrames` parametresini null olarak ayarlamanız gerekir. `GetActiveInternalFrames` ilk döndürüldüğünde, `pcInternalFrames` yığındaki iç çerçevelerin sayısını içerir.  
   
- `GetActiveInternalFrames` ardından ikinci bir kez çağrılmalıdır. Uygun sayısı geçmelidir (`pcInternalFrames`) içinde `cInternalFrames` parametresi ve uygun boyutlandırılmış bir dizide bir işaretçi belirtin `ppInternalFrames`.  
+ `GetActiveInternalFrames` ikinci kez çağrılmalıdır. Uygun sayıyı (`pcInternalFrames`) `cInternalFrames` parametresine geçirmeniz ve `ppInternalFrames`uygun boyutta bir diziye yönelik bir işaretçi belirtmeniz gerekir.  
   
- Kullanım [Icordebugstackwalk::getframe](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) gerçek döndürmek için yöntemin yığın çerçevesi.  
+ Gerçek yığın çerçevelerini döndürmek için [ıcordebugstackyürüme:: GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) metodunu kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

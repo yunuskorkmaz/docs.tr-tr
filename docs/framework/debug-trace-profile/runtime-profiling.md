@@ -11,14 +11,12 @@ helpviewer_keywords:
 - profiling applications
 - Performance Console
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 163022256dfbeb303a500d9c1d574054c5b550d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: daa2ae4fbbed78bda4648b4b3077fa7d96a9b3f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052292"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121559"
 ---
 # <a name="runtime-profiling"></a>Çalışma Zamanı Profili Oluşturma
 Profil oluşturma, herhangi bir geliştirme veya dağıtım senaryosunda performans verileri toplama yöntemidir. Bu bölüm, uygulama performansı hakkında bilgi toplamak isteyen geliştiricilere ve sistem yöneticilerine yöneliktir.  
@@ -40,9 +38,9 @@ Profil oluşturma, herhangi bir geliştirme veya dağıtım senaryosunda perform
   
 5. Görüntülemek istediğiniz performans sayacını tıklayın.  
   
-6. **Seçilen nesne örnekleri** liste kutusunda, ortak dil çalışma zamanının genel olarak performans sayacını izlemek istediğinizi belirtmek için  **\<> tüm örnekler** ' e tıklayın (yani, sistem genelinde).  
+6. **Seçilen nesne örnekleri** liste kutusunda, ortak dil çalışma zamanı genel (yani, sistem genelinde) performans sayacını izlemek istediğinizi belirtmek Için **\<tüm örnekler >** ' e tıklayın.  
   
-     -veya-  
+     veya  
   
      **Seçilen nesne örnekleri** liste kutusunda, uygulamanın performans sayacını izlemek için bir uygulama adına tıklayın.  
   
@@ -54,7 +52,7 @@ Profil oluşturma, herhangi bir geliştirme veya dağıtım senaryosunda perform
  Bir bölgede veya uzak paylaşımda bulunan bir derlemenin profilini oluşturmak istiyorsanız, uzak derlemenin performans sayaçlarını çalıştıran bilgisayarda tam güvene sahip olduğundan emin olun. Derlemenin yeterli güveni yoksa, performans sayaçları çalışmaz. Farklı bölgelere güven verme hakkında daha fazla bilgi için bkz. [Caspol. exe (kod erişimi güvenlik Ilkesi aracı)](../tools/caspol-exe-code-access-security-policy-tool.md).  
   
 > [!NOTE]
-> .NET Framework 4 ' ün yüklendiği sistemlerde, performans Izleyicisi .net **clr verileri** ve **.NET CLR ağı**gibi bazı kategorilerdeki performans sayaçlarındaki verileri .NET kullanılarak geliştirilmiş uygulamalar için görüntülemeyebilir Framework 1,1. Bu durumda, [ \<forcePerformanceCounterUniqueSharedMemoryReads >](../configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) öğesini uygulamanın yapılandırma dosyasına ekleyerek performans izleyicisini bu verileri görüntüleyecek şekilde yapılandırabilirsiniz.  
+> .NET Framework 4 ' ün yüklendiği sistemlerde, performans Izleyicisi .net **clr verileri** ve **.NET CLR ağı**gibi bazı kategorilerdeki performans sayaçlarındaki verileri .NET kullanılarak geliştirilmiş uygulamalar için görüntülemeyebilir Framework 1,1. Bu durumda, [\<forcePerformanceCounterUniqueSharedMemoryReads >](../configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) öğesini uygulamanın yapılandırma dosyasına ekleyerek performans izleyicisini bu verileri görüntüleyecek şekilde yapılandırabilirsiniz.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Programlı olarak performans sayaçlarını okuma ve oluşturma  
  .NET Framework, Performans konsolunda bulunan performans bilgilerine programlı bir şekilde erişmek için kullanabileceğiniz sınıflar sağlar. Özel performans sayaçları oluşturmak için bu sınıfları da kullanabilirsiniz. Aşağıdaki tabloda .NET Framework belirtilen bazı performans izleme sınıfları açıklanmaktadır.  
@@ -63,8 +61,8 @@ Profil oluşturma, herhangi bir geliştirme veya dağıtım senaryosunda perform
 |-----------|-----------------|  
 |<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|Bir Windows NT performans sayacı bileşenini temsil eder. Bu sınıfı, önceden tanımlanmış mevcut veya özel sayaçları okumak ve performans verilerini Özel sayaçlara yayımlamak (yazmak) için kullanın.|  
 |<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|, Bilgisayardaki sayaçların ve sayaçların kategorileriyle etkileşim kurmak için çeşitli yöntemler sağlar.|  
-|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|`PerformanceCounter` Bileşen için bir yükleyici belirtir.|  
-|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|İçin yönteminin`NextValue` hesaplanacağı formülü belirtir. `PerformanceCounter`|  
+|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|`PerformanceCounter` bileşeni için bir yükleyiciyi belirtir.|  
+|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|Bir `PerformanceCounter`için `NextValue` yöntemini hesaplamak üzere formülü belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

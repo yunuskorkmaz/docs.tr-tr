@@ -9,17 +9,15 @@ helpviewer_keywords:
 - marshaling, MsgBox sample
 - data marshaling, MsgBox sample
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9469cc5db1ada479e97026cae40b3019ae10c2c6
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 9f1e6d58742f60b6043a4be9218b80b323cd523e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151730"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124107"
 ---
 # <a name="msgbox-sample"></a>MsgBox Örneği
-Bu örnek <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, parametre türlerini parametrelere göre ve, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>, ve <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> alanlarını ne zaman kullanacağınızı gösteren bir değere göre nasıl geçirileceğini gösterir.  
+Bu örnek, dize türlerini parametrelere göre ve <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>ve <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> alanlarının ne zaman kullanılacağını gösterir.  
   
  MsgBox örnek, özgün işlev bildirimiyle gösterilen aşağıdaki yönetilmeyen işlevi kullanır:  
   
@@ -30,9 +28,9 @@ Bu örnek <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, p
        UINT uType);  
     ```  
   
- Bu örnekte, `NativeMethods` sınıfı, `MsgBoxSample` sınıfı tarafından çağrılan her yönetilmeyen işlev için bir yönetilen prototip içerir. Yönetilen prototip yöntemleri `MsgBox` `MsgBox2`, ve `MsgBox3` aynı yönetilmeyen işlev için farklı bildirimlere sahiptir.  
+ Bu örnekte, `NativeMethods` sınıfı, `MsgBoxSample` sınıfı tarafından çağrılan her yönetilmeyen işlev için bir yönetilen prototip içerir. `MsgBox`, `MsgBox2`ve `MsgBox3` yönetilen prototip yöntemleri aynı yönetilmeyen işlev için farklı bildirimlere sahip.  
   
- ANSI olarak belirtilen `MsgBox2` karakter türü, Unicode işlevinin adı olan giriş noktasıyla `MessageBoxW`eşleşmediğinden, için bildirimi ileti kutusunda yanlış çıktı üretir. Bildirimi `MsgBox3` , **entryPoint**, **charset**ve **ExactSpelling** alanları arasında bir uyumsuzluk oluşturur. Çağrıldığında bir özel `MsgBox3` durum oluşturur. Dize adlandırma ve ad sıralaması hakkında ayrıntılı bilgi için bkz. [bir karakter kümesi belirtme](specifying-a-character-set.md).  
+ `MsgBox2` bildirimi, ileti kutusunda hatalı çıkış üretir çünkü ANSI olarak belirtilen karakter türü, Unicode işlevinin adı olan `MessageBoxW`giriş noktası ile eşleşmiyor. `MsgBox3` bildirimi, **entryPoint**, **charset**ve **ExactSpelling** alanları arasında bir uyumsuzluk oluşturur. Çağrıldığında, `MsgBox3` bir özel durum oluşturur. Dize adlandırma ve ad sıralaması hakkında ayrıntılı bilgi için bkz. [bir karakter kümesi belirtme](specifying-a-character-set.md).  
   
 ## <a name="declaring-prototypes"></a>Prototipleri Bildirme  
  [!code-cpp[Conceptual.Interop.Marshaling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/msgbox.cpp#5)]

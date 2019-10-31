@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5f54a34-6335-4708-b407-a756ec70fab4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a90f0a0319d88654d0310530749ef35b7095e0fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3836b6c08098d38516c8a25260fb28998a2317fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754433"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084777"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>ICorDebugEval2::NewStringWithLength Yöntemi
-Belirtilen içerikle belirtilen uzunlukta bir dize oluşturur.  
+Belirtilen bir uzunluğa sahip, belirtilen içeriğe sahip bir dize oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,21 +36,21 @@ HRESULT NewStringWithLength (
   
 ## <a name="parameters"></a>Parametreler  
  `string`  
- [in] Dize değeri için bir işaretçi.  
+ 'ndaki Dize değerine yönelik bir işaretçi.  
   
  `uiLength`  
- [in] Dize uzunluğu.  
+ 'ndaki Dizenin uzunluğu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dize sondaki, null karakteri yönetilen dizesinde çağıran olması bekleniyorsa `NewStringWithLength` yöntemi dize uzunluğu sondaki null karakter içerdiğinden emin gerekir.  
+ Dizenin sondaki NULL karakterinin yönetilen dizede olması bekleniyorsa, `NewStringWithLength` yönteminin çağıranı dize uzunluğunun sondaki null karakteri içerdiğinden emin olmalıdır.  
   
- Dize, her zaman iş parçacığı gerçekleştirmektedir uygulama etki alanında oluşturulur.  
+ Dize her zaman iş parçacığının yürütüldüğü uygulama etki alanında oluşturulur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -1,20 +1,18 @@
 ---
-title: .NET Core 2,1 ' deki yenilikler
+title: ​.NET Core 2.1’deki yenilikler
 description: .NET Core 2,1 ' de bulunan yeni özellikler hakkında bilgi edinin.
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 18c8d566c3b79c131a3d031e5bdf3b37996d9115
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: 603e7ae4ffb9e6a4bb477af9597d6948bd63f55e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031854"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100743"
 ---
-# <a name="whats-new-in-net-core-21"></a>.NET Core 2,1 ' deki yenilikler
+# <a name="whats-new-in-net-core-21"></a>​.NET Core 2.1’deki yenilikler
 
 .NET Core 2,1, aşağıdaki alanlarda geliştirmeler ve yeni özellikler içerir:
 
@@ -25,7 +23,7 @@ ms.locfileid: "72031854"
 - [JıT derleme geliştirmeleri](#jit-compiler-improvements)
 - [API değişiklikleri](#api-changes)
 
-## <a name="tooling"></a>Araçları
+## <a name="tooling"></a>Araçlar
 
 .NET Core 2,1 ' de yer alan araç, .NET Core 2,1 SDK (v 2.1.300), aşağıdaki değişiklikleri ve geliştirmeleri içerir:
 
@@ -53,7 +51,7 @@ Yalnızca .NET Core SDK bir parçası olarak [`DotnetCliToolReference`](../tools
    dotnet watch -- --verbose build
    ```
 
-   @No__t-1 seçeneğinden önce gelen `--` seçeneğini unutmayın. Alt `dotnet` işlemine geçirilen bağımsız değişkenlerden `dotnet watch` komutuna doğrudan geçirilen seçenekleri ayırır. Bu olmadan, `--verbose` seçeneği `dotnet build` komutuna değil `dotnet watch` komutu için geçerlidir.
+   `--verbose` seçeneğinden önce gelen `--` seçeneğine göz önüne alın. Alt `dotnet` işlemine geçirilen bağımsız değişkenlerden `dotnet watch` komutuna doğrudan geçirilen seçenekleri ayırır. Bu olmadan, `--verbose` seçeneği `dotnet build` komutuna değil `dotnet watch` komutu için geçerlidir.
   
    Daha fazla bilgi için bkz. [DotNet Watch kullanarak ASP.NET Core uygulamalar geliştirme](/aspnet/core/tutorials/dotnet-watch).
 
@@ -65,11 +63,11 @@ Yalnızca .NET Core SDK bir parçası olarak [`DotnetCliToolReference`](../tools
 
 - `dotnet ef`, Entity Framework Core uygulamalardaki veritabanlarını, <xref:Microsoft.EntityFrameworkCore.DbContext> nesneleri ve geçişleri yönetmeye yönelik bir araçtır. Daha fazla bilgi için bkz. [.NET komut satırı araçlarını EF Core](/ef/core/miscellaneous/cli/dotnet).
 
-### <a name="global-tools"></a>Küresel Araçlar
+### <a name="global-tools"></a>Genel Araçlar
 
 .NET Core 2,1, *genel araçları* destekler-diğer bir deyişle, komut satırından küresel olarak kullanılabilir özel araçlar. .NET Core 'un önceki sürümlerindeki genişletilebilirlik modeli, yalnızca [`DotnetCliToolReference` ' i](../tools/extensibility.md#consuming-per-project-tools)kullanarak her proje için kullanılabilir özel araçları kullanıma sunulmuştur.
 
-Küresel bir araç yüklemek için [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın. Örnek:
+Küresel bir araç yüklemek için [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın. Örneğin:
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
@@ -77,7 +75,7 @@ dotnet tool install -g dotnetsay
 
 Yüklendikten sonra araç, araç adı belirtilerek komut satırından çalıştırılabilir. Daha fazla bilgi için bkz. [.NET Core genel araçlarına genel bakış](../tools/global-tools.md).
 
-### <a name="tool-management-with-the-dotnet-tool-command"></a>@No__t-0 komutuyla araç yönetimi
+### <a name="tool-management-with-the-dotnet-tool-command"></a>`dotnet tool` komutuyla araç yönetimi
 
 .NET Core 2,1 SDK 'da tüm araçlar işlemleri `dotnet tool` komutunu kullanır. Aşağıdaki seçenekler mevcuttur:
 
@@ -106,7 +104,7 @@ Bu davranışı, aday paylaşılan çerçeve olmadan geri alma ayarını değiş
 
 Bu ayarı, üç şekilde değiştirebilirsiniz:
 
-- @No__t-0 ortam değişkenini istenen değere ayarlayın.
+- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` ortam değişkenini istenen değere ayarlayın.
 
 - Aşağıdaki satırı, istenen değeri *. runtimeconfig. JSON* dosyasına ekleyin:
 
@@ -122,7 +120,7 @@ Bu ayarı, üç şekilde değiştirebilirsiniz:
 
 Düzeltme Eki Sürümü ileri, bu ayardan bağımsızdır ve herhangi bir olası küçük veya büyük sürüm ileri doğru uygulandıktan sonra yapılır.
 
-## <a name="deployment"></a>Kurulum
+## <a name="deployment"></a>Dağıtım
 
 ### <a name="self-contained-application-servicing"></a>Kendi içinde uygulama Bakımı
 
@@ -130,7 +128,7 @@ Düzeltme Eki Sürümü ileri, bu ayardan bağımsızdır ve herhangi bir olası
 
 Kendi içinde yayımlama, NuGet.org üzerinde çalışma zamanı sürümlerini kullanır. Makinenizde bakım çalışma zamanına sahip olmanız gerekmez.
 
-@No__t-0 özelliği aracılığıyla farklı bir sürüm belirtilmediği takdirde, .NET Core 2,0 SDK 'sını kullanarak, kendi içinde bulunan uygulamalar .NET Core 2.0.0 Runtime ile yayımlanır. Bu yeni davranışla birlikte, bu özelliği, otomatik olarak kapsanan bir uygulama için daha yüksek bir çalışma zamanı sürümü seçmek üzere ayarlamanıza gerek kalmaz. En kolay yaklaşım .NET Core 2,1 SDK (v 2.1.300) ile her zaman yayımlamaktır.
+.NET Core 2,0 SDK 'sını kullanarak, `RuntimeFrameworkVersion` özelliği aracılığıyla farklı bir sürüm belirtilmediği takdirde, kendi içinde bulunan uygulamalar .NET Core 2.0.0 çalışma zamanına yayımlanır. Bu yeni davranışla birlikte, bu özelliği, otomatik olarak kapsanan bir uygulama için daha yüksek bir çalışma zamanı sürümü seçmek üzere ayarlamanıza gerek kalmaz. En kolay yaklaşım .NET Core 2,1 SDK (v 2.1.300) ile her zaman yayımlamaktır.
 
 Daha fazla bilgi için bkz. [kendi kendine içerilen dağıtım çalışma zamanı ileri](../deploying/runtime-patch-selection.md).
 ## <a name="windows-compatibility-pack"></a>Windows Uyumluluk Paketi
@@ -177,7 +175,7 @@ Katmanlı derlemeyi iki şekilde seçebilirsiniz.
 
 Bu türler olmadan, bu tür öğeleri bir dizinin bir bölümü veya bir bellek arabelleğinin bir bölümü olarak geçirirken, bir yönteme geçirmeden önce verilerin bir kısmının kopyasını oluşturmanız gerekir. Bu türler, ek bellek ayırma ve kopyalama işlemlerine gereksinimi ortadan kaldıran bu verilerin sanal bir görünümünü sağlar.
 
-Aşağıdaki örnek, bir dizinin 10 öğelerinin sanal görünümünü sağlamak için <xref:System.Span%601> ve <xref:System.Memory%601> örneğini kullanır.
+Aşağıdaki örnek, bir dizi 10 öğenin sanal görünümünü sağlamak için bir <xref:System.Span%601> ve <xref:System.Memory%601> örneğini kullanır.
 
 [!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
 
@@ -191,7 +189,7 @@ Aşağıdaki örnek, bir dizinin 10 öğelerinin sanal görünümünü sağlamak
 
 [!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
-@No__t-0 davranışı, bu API 'Leri çağıran kodu <xref:System.IO.Compression.BrotliStream> ' e dönüştürmeyi kolaylaştıran <xref:System.IO.Compression.DeflateStream> ve <xref:System.IO.Compression.GZipStream> ile aynıdır.
+<xref:System.IO.Compression.BrotliStream> davranış <xref:System.IO.Compression.DeflateStream> ve <xref:System.IO.Compression.GZipStream>aynıdır, bu da bu API 'Leri çağıran kodun <xref:System.IO.Compression.BrotliStream>dönüştürülmesini kolaylaştırır.
 
 ### <a name="new-cryptography-apis-and-cryptography-improvements"></a>Yeni şifreleme API 'Leri ve şifreleme geliştirmeleri
 
@@ -199,25 +197,25 @@ Aşağıdaki örnek, bir dizinin 10 öğelerinin sanal görünümünü sağlamak
 
 - <xref:System.Security.Cryptography.Pkcs.SignedCms?displayProperty=nameWithType>, System. Security. Cryptography. Pkcs paketinde kullanılabilir. Uygulama, .NET Framework <xref:System.Security.Cryptography.Pkcs.SignedCms> sınıfıyla aynıdır.
 
-- @No__t-0 ve <xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHashString%2A?displayProperty=nameWithType> yöntemlerinin yeni aşırı yüklemeleri, çağıranların SHA-1 dışındaki algoritmaları kullanarak sertifika parmak izi değerlerini almasını sağlamak için bir karma algoritma tanımlayıcısı kabul eder.
+- <xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHash%2A?displayProperty=nameWithType> ve <xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHashString%2A?displayProperty=nameWithType> yöntemlerinin yeni aşırı yüklemeleri, çağıranların SHA-1 dışındaki algoritmaları kullanarak sertifika parmak izi değerlerini almasını sağlamak için bir karma algoritma tanımlayıcısı kabul eder.
 
-- Yeni @no__t -0 tabanlı şifreleme API 'Leri, karma, HMAC, şifreleme rastgele sayı oluşturma, asimetrik imza oluşturma, asimetrik imza işleme ve RSA şifrelemesi için kullanılabilir.
+- Yeni <xref:System.Span%601>tabanlı şifreleme API 'Leri, karma, HMAC, şifreleme rastgele sayı oluşturma, asimetrik imza oluşturma, asimetrik imza işleme ve RSA şifrelemesi için kullanılabilir.
 
-- @No__t-0 ' nın performansı, @no__t -1 tabanlı bir uygulama kullanılarak yaklaşık% 15 oranında geliştirilmiştir.
+- <xref:System.Security.Cryptography.Rfc2898DeriveBytes?displayProperty=nameWithType> performansı <xref:System.Span%601>tabanlı bir uygulama kullanılarak yaklaşık %15 oranında geliştirilmiştir.
 
 - Yeni <xref:System.Security.Cryptography.CryptographicOperations?displayProperty=nameWithType> sınıfı iki yeni yöntem içerir:
 
-  - <xref:System.Security.Cryptography.CryptographicOperations.FixedTimeEquals%2A>, aynı uzunlukta olan iki giriş için geri dönüş için sabit bir zaman alır. Bu, zamanlama tarafı kanal bilgilerine katkıda bulunmaktan kaçınmak için şifreleme doğrulamasında kullanılması uygun hale gelir.
+  - <xref:System.Security.Cryptography.CryptographicOperations.FixedTimeEquals%2A>, aynı uzunlukta olan iki giriş için geri dönüş için sabit bir süre sürer. Bu, zamanlama tarafı kanal bilgilerine katkıda bulunmaktan kaçınmak için şifreleme doğrulamasında kullanılması uygun hale getirir.
 
   - <xref:System.Security.Cryptography.CryptographicOperations.ZeroMemory%2A>, iyileştirelemeyen bir bellek temizleme yordamdır.
 
 - Statik <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> yöntemi rastgele değerlerle bir <xref:System.Span%601> doldurur.
 
-- @No__t-0 artık Linux ve macOS 'ta desteklenmektedir.
+- <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> artık Linux ve macOS 'ta desteklenmektedir.
 
 - Eliptik Eğri Diffie-Hellman (ECDH) artık <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType> sınıf ailesinde kullanılabilir. Yüzey alanı .NET Framework ile aynıdır.
 
-- @No__t-0 tarafından döndürülen örnek, bir SHA-2 Özeti kullanarak OAEP ile şifreleyebilir veya şifresini çözebilir, ayrıca RSA-PSS kullanarak imzaları oluşturabilir veya doğrulayabilir.
+- <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType> tarafından döndürülen örnek, bir SHA-2 Özeti kullanarak OAEP ile şifreleyebilir veya şifresini çözebilir, ayrıca RSA-PSS kullanarak imzaları oluşturabilir veya doğrulayabilir.
 
 ### <a name="sockets-improvements"></a>Yuva geliştirmeleri
 
@@ -241,7 +239,7 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);
 AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 ```
 
-@No__t-0 tabanlı yuva uygulamalarını kullanmayı devre dışı bırakmak için bir ortam değişkeni de kullanabilirsiniz. Bunu yapmak için `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` ' ı `false` ya da 0 olarak ayarlayın.
+Ayrıca, <xref:System.Net.Http.SocketsHttpHandler>dayalı yuva uygulamalarını kullanmayı devre dışı bırakmak için bir ortam değişkeni de kullanabilirsiniz. Bunu yapmak için `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` `false` ya da 0 olarak ayarlayın.
 
 Windows 'da, bir yerel uygulamaya bağlı <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType> ' ı veya bir sınıfın örneğini <xref:System.Net.Http.HttpClient> oluşturucusuna geçirerek <xref:System.Net.Http.SocketsHttpHandler> sınıfını kullanmayı da seçebilirsiniz.
 
@@ -249,6 +247,6 @@ Linux ve macOS 'ta, işlem başına temelinde yalnızca <xref:System.Net.Http.Ht
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core 'daki yenilikler](index.md)
+- [​.NET Core'daki Yenilikler](index.md)
 - [EF Core 2,1 ' deki yeni özellikler](/ef/core/what-is-new/ef-core-2.1)
 - [ASP.NET Core 2,1 ' deki yenilikler](/aspnet/core/aspnetcore-2.1)

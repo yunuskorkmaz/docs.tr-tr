@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4244ef04d6789b7c17ccc8330cb0c26a6c9f3866
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 295deeec2e8eb42ccaa4d0cfb8b08b32438d047c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765552"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120246"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface Metodu
-Geçerli işleme CLR yükler ve çalışma zamanı arabirim işaretçileri gibi döndürür [Iclrruntimehost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [Iclrstrongname](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), ve [Imetadatadispenserex](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).  
+CLR 'yi geçerli işleme yükler ve [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)ve [ımetadatadağıtıserex](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)gibi çalışma zamanı arabirimi işaretçilerini döndürür.  
   
- Bu yöntem tüm yerini `CorBindTo`* içindeki işlevler [kullanım dışı CLR barındırma işlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) bölümü.  
+ Bu yöntem, [kullanımdan KALDıRıLAN clr barındırma işlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) bölümündeki tüm `CorBindTo`* işlevlerinin yerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,48 +38,48 @@ HRESULT GetInterface(
   
 ## <a name="parameters"></a>Parametreler  
  `rclsid`  
- [in] Coclass'ı CLSID arabirimi.  
+ 'ndaki Coclass için CLSID arabirimi.  
   
  `riid`  
- [in] İstenen Laboratuvardaki `rclsid` arabirimi.  
+ 'ndaki İstenen `rclsid` arabiriminin IID 'si.  
   
  `ppUnk`  
- [out] Sorgulanan arabirim işaretçisi.  
+ dışı Sorgulanan arabirime yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
+ Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_POINTER|`ppUnk` NULL olur.|  
-|E_OUTOFMEMORY|İsteği işlemek yeterli bellek yok.|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Farklı bir çalışma zamanı, eski CLR sürüm 2 etkinleştirme ilkesi zaten bağlıydı.|  
+|E_POINTER|`ppUnk` null.|  
+|E_OUTOFMEMORY|İsteği işlemek için yeterli kullanılabilir bellek yok.|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Farklı bir çalışma zamanı eski CLR sürüm 2 etkinleştirme ilkesine zaten bağlıydı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem CLR'nin yüklendi ancak başlatılmadı neden olur.  
+ Bu yöntem CLR 'nin yüklenmesine, ancak başlatılmamasını sağlar.  
   
- Aşağıdaki tablo için desteklenen kombinasyonlar gösterir `rclsid` ve `riid`.  
+ Aşağıdaki tabloda `rclsid` ve `riid`için desteklenen birleşimler gösterilmektedir.  
   
 |`rclsid`|`riid`|  
 |--------------|------------|  
 |CLSID_CorMetaDataDispenser|IID_IMetaDataDispenser, IID_IMetaDataDispenserEx|  
 |CLSID_CorMetaDataDispenserRuntime|IID_IMetaDataDispenser, IID_IMetaDataDispenserEx|  
-|CLSID_CorRuntimeHost|: Iıd_ıcorruntimehost|  
-|CLSID_CLRRuntimeHost|Iıd_ıclrruntimehost|  
+|CLSID_CorRuntimeHost|IID_ICorRuntimeHost|  
+|CLSID_CLRRuntimeHost|IID_ICLRRuntimeHost|  
 |CLSID_TypeNameFactory|IID_ITypeNameFactory|  
 |CLSID_CLRDebuggingLegacy|IID_ICorDebug|  
 |||  
 |CLSID_CLRStrongName|IID_ICLRStrongName|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MetaHost.h  
+ **Üst bilgi:** MetaHost. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

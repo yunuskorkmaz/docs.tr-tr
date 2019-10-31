@@ -157,17 +157,15 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad4ea3b2d5fb828c425f30e76244772f5ca9a11a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5d75f60cb96ddb7bd9e24a7cdc4b8d2b61aff8f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043981"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104185"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe Hata İletileri
-Derleme işlemi [WinMDExp. exe ' yi (Windows çalışma zamanı meta veri dışa aktarma aracı](winmdexp-exe-windows-runtime-metadata-export-tool.md) 2012 **Windows çalışma zamanı** ) çağırır. bu nedenle, WinMDExp. exe hata iletileri **hata listesi**görüntülenir. WinMDExp. exe, `/target:winmdobj` seçeneğiyle derlenen bir modül üzerinde çalışır. Giriş olarak derlenmiş bir modül gerektirdiğinden, derleme başarılı olmadığı sürece hata iletileri görünmez.  
+Derleme işlemi [WinMDExp. exe ' yi (Windows çalışma zamanı meta veri dışa aktarma aracı](winmdexp-exe-windows-runtime-metadata-export-tool.md) 2012 **Windows çalışma zamanı** ) çağırır. bu nedenle, WinMDExp. exe hata iletileri **hata listesi**görüntülenir. WinMDExp. exe `/target:winmdobj` seçeneği ile derlenen bir modül üzerinde çalışır. Giriş olarak derlenmiş bir modül gerektirdiğinden, derleme başarılı olmadığı sürece hata iletileri görünmez.  
   
  Hata iletileri, raportıkları hata koşullarına yönelik olarak gereken tüm bilgileri içerecek şekilde tasarlanmıştır. Ancak, bazı sorunlar iletiye sığmayacak kadar daha fazla bilgi gerektirir. Windows Geliştirme Merkezi 'nde [Windows çalışma zamanı bileşeni hata koşullarını tanılamada](https://go.microsoft.com/fwlink/p/?LinkId=251127) ek bilgiler bulabilirsiniz.  
   

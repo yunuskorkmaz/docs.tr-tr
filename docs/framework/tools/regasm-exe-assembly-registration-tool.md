@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4038f8e4a3c012fab9df6019b5f9f19375f61f2a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044284"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104957"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Derleme Kayıt Aracı)
 
@@ -54,7 +52,7 @@ regasm assemblyFile [options]
 
 ## <a name="remarks"></a>Açıklamalar
 
-Değişiklikleri doğrudan kayıt defterine getirmek yerine kayıt defteri girdilerini içeren bir. reg dosyası oluşturmak için **/regfile** seçeneğini kullanabilirsiniz. Kayıt Defteri Düzenleyicisi (Regedit.exe) aracı ile .reg dosyasını içe aktararak, bir bilgisayarda kayıt defterini güncelleştirebilirsiniz. .reg dosyasının, kullanıcı tarafından tanımlanan kayıt işlevleriyle yapılabilen kayıt defteri güncelleştirmelerini içermediğini unutmayın.  **/Regfile** seçeneğinin yalnızca yönetilen sınıflar için kayıt defteri girişlerini gösterdiğine unutmayın.  Bu seçenek `TypeLibID`s veya `InterfaceID`s girdilerini göstermez.
+Değişiklikleri doğrudan kayıt defterine getirmek yerine kayıt defteri girdilerini içeren bir. reg dosyası oluşturmak için **/regfile** seçeneğini kullanabilirsiniz. Kayıt Defteri Düzenleyicisi (Regedit.exe) aracı ile .reg dosyasını içe aktararak, bir bilgisayarda kayıt defterini güncelleştirebilirsiniz. .reg dosyasının, kullanıcı tarafından tanımlanan kayıt işlevleriyle yapılabilen kayıt defteri güncelleştirmelerini içermediğini unutmayın.  **/Regfile** seçeneğinin yalnızca yönetilen sınıflar için kayıt defteri girişlerini gösterdiğine unutmayın.  Bu seçenek `TypeLibID`s veya `InterfaceID`s için giriş göstermez.
 
 **/Tlb** seçeneğini belirttiğinizde, Regasm. exe derlemede bulunan türleri açıklayan bir tür kitaplığı oluşturur ve kaydettirir. RegAsm.exe oluşturulan tür kitaplıklarını geçerli çalışma dizinine veya çıktı dosyası için belirtilen dizine yerleştirir. Diğer derlemelere başvuran bir derleme için tür kitaplığı oluşturmak, bazı tür kitaplıklarının tek seferde oluşturulmasına neden olabilir. Visual Studio gibi geliştirme araçlarına tür bilgilerini sağlamak için tür kitaplığını kullanabilirsiniz. Kaydolduğunuz derleme tür kitaplığı alma programı ([Tlbimp. exe](tlbimp-exe-type-library-importer.md)) tarafından oluşturulduysa **/tlb** seçeneğini kullanmamalısınız. Bir tür kitaplığından içeri aktarılmış bir derlemeden bir tür kitaplığını dışarı aktaramazsınız. **/Tlb** seçeneğinin kullanılması, Tlbexp. exe ' nin ürettiği tür kitaplığını kaydetmediğinden emin olmak Için tür kitaplığı verme programı ([Tlbexp. exe](tlbexp-exe-type-library-exporter.md)) ve Regasm. exe ' yi kullanmakla aynı etkiye sahiptir.  Bir tür kitaplığını kaydettiğiniz **/tlb** seçeneğini kullanırsanız, tür kitaplığının kaydını silmek için **/tlb** seçeneğini **/Unregister** seçeneğiyle birlikte kullanabilirsiniz. İki seçeneği birlikte kullandığınızda tür kitaplığının ve arabirim girdilerinin kaydını kaldırırsınız, bu da kayıt defterini önemli ölçüde temizleyebilir.
 
@@ -66,19 +64,19 @@ Bir derlemeyi Regasm. exe ' yi kullanarak kaydettikten sonra, herhangi bir COM i
 
 ## <a name="examples"></a>Örnekler
 
-Aşağıdaki komut içinde `myTest.dll`bulunan tüm ortak sınıfları kaydeder.
+Aşağıdaki komut `myTest.dll`bulunan tüm ortak sınıfları kaydeder.
 
 ```console
 regasm myTest.dll
 ```
 
-Aşağıdaki komut, tüm gerekli kayıt `myTest.reg`defteri girdilerini içeren dosyayı oluşturur. Bu komut, kayıt defterini güncelleştirmez.
+Aşağıdaki komut, tüm gerekli kayıt defteri girdilerini içeren `myTest.reg`dosya oluşturur. Bu komut, kayıt defterini güncelleştirmez.
 
 ```console
 regasm myTest.dll /regfile:myTest.reg
 ```
 
-Aşağıdaki komut içinde `myTest.dll`bulunan tüm ortak sınıfları kaydeder ve içinde `myTest.dll`tanımlanan tüm ortak türlerin tanımlarını içeren tür `myTest.tlb`kitaplığını oluşturur ve kaydettirir.
+Aşağıdaki komut `myTest.dll`bulunan tüm ortak sınıfları kaydeder ve `myTest.dll`tanımlanmış tüm ortak türlerin tanımlarını içeren tür kitaplığı `myTest.tlb`oluşturur ve kaydeder.
 
 ```console
 regasm myTest.dll /tlb:myTest.tlb

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - fusion interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], fusion
 ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1605605f8510f7ccf5f0bbf2f3f6b09050a16025
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 81c66825e69d9526abddfe06133426a2274ad08f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795310"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108189"
 ---
 # <a name="fusion-interfaces"></a>Fusion Arabirimleri
 Bu bölümde, Fusion API 'sinin bir uygulama kaynaklarının özelliklerine erişmek ve uygulama için bu kaynakların doğru sürümlerini bulmak için kullandığı yönetilmeyen arabirimler açıklanmaktadır.  
@@ -29,7 +27,7 @@ Bu bölümde, Fusion API 'sinin bir uygulama kaynaklarının özelliklerine eri�
  Genel derleme önbelleğindeki tek bir derlemeyi temsil eder.  
   
  [IAssemblyEnum Arabirimi](iassemblyenum-interface.md)  
- Bir `IAssemblyName` nesne dizisi için bir numaralandırıcısı temsil eder.  
+ `IAssemblyName` nesnelerinin bir dizisi için bir Numaralandırıcı temsil eder.  
   
  [IAssemblyName Arabirimi](iassemblyname-interface.md)  
  Bir derlemenin benzersiz kimliğini tanımlamak ve bunlarla çalışmak için yöntemler sağlar.  
@@ -41,13 +39,13 @@ Bu bölümde, Fusion API 'sinin bir uygulama kaynaklarının özelliklerine eri�
  Geçerli kapsamdaki uygulamayı tanımlayan kodun benzersiz imzasını temsil eder.  
   
  [IEnumDefinitionIdentity Arabirimi](ienumdefinitionidentity-interface.md)  
- Bir `IDefinitionIdentity` nesne koleksiyonu için numaralandırıcı görevi görür.  
+ `IDefinitionIdentity` nesnelerinin bir koleksiyonu için numaralandırıcı görevi görür.  
   
  [IEnumIDENTITY_ATTRIBUTE Arabirimi](ienumidentity-attribute-interface.md)  
  Geçerli kapsamdaki kod nesnesinin öznitelikleri için bir Numaralandırıcı işlevi görür.  
   
  [IEnumReferenceIdentity Arabirimi](ienumreferenceidentity-interface.md)  
- Bir `IReferenceIdentity` nesne koleksiyonu için bir Numaralandırıcı görevi görür.  
+ `IReferenceIdentity` nesnelerinin bir koleksiyonu için bir Numaralandırıcı işlevi görür.  
   
  [IIdentityAuthority Arabirimi](iidentityauthority-interface.md)  
  Kod nesneleri için kimlik anahtarlarını yönetir.  

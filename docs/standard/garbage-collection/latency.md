@@ -6,53 +6,51 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a81a0015ae046682e1afa40c1c8d272357839ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8833c88c3221c0a375011eb62dd712340f7e89cd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622767"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120914"
 ---
 # <a name="latency-modes"></a>Gecikme Modları
-Nesneleri geri kazanmak için atık toplayıcı tüm yürütme iş parçacığı bir uygulamada durdurmanız gerekir. Uygulamanın ne zaman veri aldığını veya içeriğini görüntüler gibi bazı durumlarda, tam çöp toplama kritik bir zamanda meydana ve performans engelleyebildiğinden. Ne kadar zorlayıcı olduğunu atık toplayıcının ayarlayarak yapabilirsiniz <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> özelliğini birine <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> değerleri.  
+Nesneleri geri kazanmak için çöp toplayıcı, bir uygulamadaki tüm yürütülen iş parçacıklarını durdurmalıdır. Örneğin, bir uygulamanın verileri aldığı veya içeriği gösterdiği durumlarda, tam bir çöp toplama işlemi kritik bir zamanda gerçekleşebilir ve performansı kesin bir şekilde gerçekleştirebilir. <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> özelliğini <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> değerlerinden birine ayarlayarak çöp toplayıcısının izinsiz kullanımını ayarlayabilirsiniz.  
   
- Gecikme süresi, çöp toplayıcı, uygulamanızda intrudes süreyi ifade eder. Düşük gecikme süreleri sırasında atık toplayıcı daha pasif ve nesneleri tekrar kullanılabilir hale getirme, daha az müdahale eden. <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> Numaralandırma iki düşük gecikme süresi ayarı sağlar:  
+ Gecikme süresi, çöp toplayıcı intrudes uygulamanızdaki süreyi ifade eder. Düşük gecikme süreleri boyunca çöp toplayıcı daha koruyucu olur ve geri kazanma nesnelerinde daha az zorlayıcıdır. <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> numaralandırması iki düşük gecikme süresi ayarı sağlar:  
   
-- <xref:System.Runtime.GCLatencyMode.LowLatency> 2. nesil koleksiyonlar göstermez ve yalnızca 0 ve 1. nesil koleksiyonlar gerçekleştirir. Yalnızca kısa süreler için kullanılabilir. Sistem bellek Basıncı altında ise uzun süreler boyunca kısaca uygulamayı duraklatmak ve zaman açısından kritik işlem kesintiye bir koleksiyon, atık toplayıcı tetikler. Bu ayar, yalnızca iş istasyonu çöp toplama için kullanılabilir.  
+- <xref:System.Runtime.GCLatencyMode.LowLatency> 2. nesil koleksiyonları bastırır ve yalnızca nesil 0 ve 1 koleksiyonlar gerçekleştirir. Bu, yalnızca kısa süreler için kullanılabilir. Daha uzun süreler, sistem bellek baskısı altındaysa çöp toplayıcı bir koleksiyonu tetikler, bu da uygulamayı kısaca duraklatabilir ve zaman kritik bir işlemi kesintiye uğratabilir. Bu ayar yalnızca iş istasyonu çöp toplama için kullanılabilir.  
   
-- <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> ön plan 2. nesil koleksiyonlar engeller ve yalnızca oluşturmayı gerçekleştiren 0, 1 ve arka plan 2. nesil koleksiyonlar. Uzun süreler için kullanılabilir ve hem iş istasyonu ve sunucu çöp toplama için kullanılabilir. Bu ayar, kullanılamaz [eş zamanlı çöp toplama](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) devre dışı bırakıldı.  
+- <xref:System.Runtime.GCLatencyMode.SustainedLowLatency>, ön plan oluşturma 2 koleksiyonlarını bastırır ve yalnızca nesil 0, 1 ve arka plan oluşturma 2 koleksiyonlarını gerçekleştirir. Daha uzun süreler için kullanılabilir ve hem iş istasyonu hem de sunucu çöp toplama için kullanılabilir. [Eşzamanlı çöp toplama](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) devre dışıysa bu ayar kullanılamaz.  
   
- Aşağıdaki gerçekleşmediği sürece, düşük gecikme süresi dönemlerde 2. nesil koleksiyonlar bastırılan:  
+ Düşük gecikme süreleri sırasında, 2. nesil koleksiyonlar aşağıdakiler gerçekleşmediği takdirde bastırılır:  
   
-- Sistemin işletim sisteminden bir düşük bellek bildirimi alır.  
+- Sistem, işletim sisteminden düşük bir bellek bildirimi alır.  
   
-- Uygulama kodunuz çağırarak bir koleksiyon sevk <xref:System.GC.Collect%2A?displayProperty=nameWithType> yöntemi ve 2 belirtme `generation` parametresi.  
+- Uygulama kodunuz, <xref:System.GC.Collect%2A?displayProperty=nameWithType> yöntemini çağırarak ve `generation` parametresi için 2 belirterek bir koleksiyona sahiptir.  
   
- Uygulama senaryoları kullanmak için aşağıdaki tabloda listelenmektedir <xref:System.Runtime.GCLatencyMode> değerleri.  
+ Aşağıdaki tabloda <xref:System.Runtime.GCLatencyMode> değerlerini kullanmaya yönelik uygulama senaryoları listelenmektedir.  
   
-|Gecikme süresi modu|Uygulama senaryoları|  
+|Gecikme modu|Uygulama senaryoları|  
 |------------------|---------------------------|  
-|<xref:System.Runtime.GCLatencyMode.Batch>|Hiçbir kullanıcı Arabirimi veya sunucu tarafı işlemleri sahip uygulamalar için.<br /><br /> Bu varsayılan moddur olduğunda [eş zamanlı çöp toplama](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) devre dışı bırakıldı.|  
-|<xref:System.Runtime.GCLatencyMode.Interactive>|Çoğu uygulama için bir kullanıcı Arabirimi sahip.<br /><br /> Bu varsayılan moddur olduğunda [eş zamanlı çöp toplama](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) etkinleştirilir.|  
-|<xref:System.Runtime.GCLatencyMode.LowLatency>|Kısa vadeli sahip uygulamalar için zamana duyarlı işlemler çöp toplayıcı hangi kesintilerden sırasında karışıklığa neden olabilir. Örneğin, animasyon işleme veya veri edinme işlevlerini yapmak uygulamalar.|  
-|<xref:System.Runtime.GCLatencyMode.SustainedLowLatency>|Bir kapsanan ancak büyük olasılıkla daha uzun süre boyunca çöp toplayıcı kesintilerden karışıklığa neden olabilir, zamana duyarlı işlemleri sahip uygulamalar için. Örneğin, alım-satım saatleri boyunca hızlı yanıt süreleri Pazar veriler değiştikçe gerek duyan uygulamalar.<br /><br /> Bu mod modlardan daha büyük bir yönetilen yığın boyutu sonuçlanır. Yönetilen yığın compact değil çünkü daha yüksek parçalanma mümkündür. Yeterli bellek kullanılabilir olduğundan emin olun.|  
+|<xref:System.Runtime.GCLatencyMode.Batch>|Kullanıcı arabirimi veya sunucu tarafı işlemleri olmayan uygulamalar için.<br /><br /> [Eşzamanlı atık toplama](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) devre dışı bırakıldığında bu varsayılan moddur.|  
+|<xref:System.Runtime.GCLatencyMode.Interactive>|Kullanıcı arabirimi olan çoğu uygulama için.<br /><br /> [Eşzamanlı atık toplama](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) etkinleştirildiğinde bu varsayılan moddur.|  
+|<xref:System.Runtime.GCLatencyMode.LowLatency>|Kısa süreli ve çöp toplayıcısından kesintiler kesintiye uğratan, zamana duyarlı işlemler içeren uygulamalar için. Örneğin, animasyon işleme veya veri alma işlevleri gerçekleştiren uygulamalar.|  
+|<xref:System.Runtime.GCLatencyMode.SustainedLowLatency>|İçinde, atık toplayıcıdan kesintileri kesintiye uğratan daha uzun bir süre için zamana duyarlı işlemler içeren uygulamalar için. Örneğin, Ticaret saatlerinde Pazar verileri değiştikçe hızlı yanıt süresi gerektiren uygulamalar.<br /><br /> Bu mod, diğer moddan daha büyük bir yönetilen yığın boyutuna neden olur. Yönetilen yığını sıkıştırmadığından, daha yüksek parçalanma mümkündür. Yeterli belleğin kullanılabildiğinden emin olun.|  
   
-## <a name="guidelines-for-using-low-latency"></a>Düşük gecikme süresi kullanma yönergeleri  
- Kullanırken <xref:System.Runtime.GCLatencyMode.LowLatency> modu, aşağıdaki yönergeleri göz önünde bulundurun:  
+## <a name="guidelines-for-using-low-latency"></a>Düşük gecikme süresi kullanımı için yönergeler  
+ <xref:System.Runtime.GCLatencyMode.LowLatency> modu kullandığınızda aşağıdaki yönergeleri göz önünde bulundurun:  
   
-- Süre, düşük gecikme olabildiğince kısa tutun.  
+- Süreyi düşük gecikme süresine olabildiğince kısa tutun.  
   
-- Düşük gecikme süresi dönemlerde yüksek miktarlarda bellek ayırma kullanmayın. Çöp toplamanın daha az nesne sahiplendiğinden, düşük bellek bildirimi oluşabilir.  
+- Düşük gecikme süreleri sırasında yüksek miktarda bellek ayırmaktan kaçının. Çöp toplama geri kazanır daha az nesne olduğundan düşük bellek bildirimleri meydana gelebilir.  
   
-- Düşük gecikme süresi modundayken, büyük nesne yığını ve Sabitlenen nesne üzerine belirli ayırmaları yaptığınız ayırmaların sayısı en aza indirin.  
+- Düşük gecikme modundayken, büyük nesne yığını ve sabitlenmiş nesneler üzerinde belirli ayırmalarda, yaptığınız ayırma sayısını en aza indirin.  
   
-- Ayırma, iş parçacıklarının dikkat edin. Çünkü <xref:System.Runtime.GCSettings.LatencyMode%2A> özellik ayarı işlem genelinde, oluşturduğunuz bir <xref:System.OutOfMemoryException> ayırma herhangi bir iş parçacığı üzerinde.  
+- Ayrılamıyor iş parçacıklarından haberdar olun. <xref:System.Runtime.GCSettings.LatencyMode%2A> özellik ayarı işlem genelinde olduğundan, ayırmak için herhangi bir iş parçacığında bir <xref:System.OutOfMemoryException> oluşturabilirsiniz.  
   
-- Kısıtlı yürütme bölgeleri içinde düşük gecikme süresi kodu kaydırmak (daha fazla bilgi için [kısıtlı yürütme bölgeleri](../../../docs/framework/performance/constrained-execution-regions.md)).  
+- Sınırlı yürütme bölgelerinde düşük gecikme süresi kodunu sarın (daha fazla bilgi için bkz. [kısıtlı yürütme bölgeleri](../../../docs/framework/performance/constrained-execution-regions.md)).  
   
-- Çağırarak, düşük gecikme süresi boyunca 2. nesil koleksiyonlar zorlayabilirsiniz <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> yöntemi.  
+- <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> yöntemini çağırarak düşük gecikme süresi boyunca 2 koleksiyonu oluşturmaya zorlayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

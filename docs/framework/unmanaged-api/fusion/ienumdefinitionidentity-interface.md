@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8263e75d-251b-4abc-8a1a-c62884142232
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 88c2513229b6a4183cadbdc78e505910e01e152c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 09c6431ec885c8b797dc9bb5f5c3ffe21890ccc7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796477"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107946"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity Arabirimi
-Bir `IDefinitionIdentity` nesne koleksiyonu için numaralandırıcı görevi görür.  
+`IDefinitionIdentity` nesnelerinin bir koleksiyonu için numaralandırıcı görevi görür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -55,15 +53,15 @@ IEnumDefinitionIdentity : IUnknown {
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|`IEnumDefinitionIdentity` Bu`IEnumDefinitionIdentity`, ile aynı üyeleri içeren yeni bir nesne için bir arabirim işaretçisi alır.|  
-|`IEnumDefinitionIdentity::Next`|Geçerli konumdan başlayarak belirtilen sayıda `IDefinitionIdentity` nesneyi alır.|  
-|`IEnumDefinitionIdentity::Reset`|Yönerge işaretçisini bunun `IEnumDefinitionIdentity`başlangıcına taşıdır.|  
+|`IEnumDefinitionIdentity::Clone`|Bu `IEnumDefinitionIdentity`aynı üyeleri içeren yeni bir `IEnumDefinitionIdentity` nesnesine bir arabirim işaretçisi alır.|  
+|`IEnumDefinitionIdentity::Next`|Geçerli konumdan başlayarak belirtilen sayıda `IDefinitionIdentity` nesnesini alır.|  
+|`IEnumDefinitionIdentity::Reset`|Yönerge işaretçisini bu `IEnumDefinitionIdentity`başına kaydırır.|  
 |`IEnumDefinitionIdentity::Skip`|Yönerge işaretçisini, geçerli konumdan başlayarak belirtilen sayıda öğe kadar ileri kaydırır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** Yalıtım. h  
+ **Üst bilgi:** Yalıtım. h  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

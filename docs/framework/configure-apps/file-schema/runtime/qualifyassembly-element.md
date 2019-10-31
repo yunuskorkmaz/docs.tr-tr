@@ -9,21 +9,19 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 581b19cf74dcb5c2d5c4a549847629503fe0b6ff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 17cfe9fc39d65f146beef5d02c701f5e3e2fbbe1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252364"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115780"
 ---
 # <a name="qualifyassembly-element"></a>\<qualifyAssembly > öğesi
 Kısmi bir ad kullanıldığında dinamik olarak yüklenmesi gereken derlemenin tam adını belirtir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<çalışma zamanı >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<qualifyAssembly >**  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -56,12 +54,12 @@ Kısmi bir ad kullanıldığında dinamik olarak yüklenmesi gereken derlemenin 
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kısmi derleme adlarını kullanarak yöntemiçağırmak,ortakdilçalışmazamanınınderlemeyiyalnızcauygulamatemeldizinindearamasınısağlar.<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> Tüm derleme bilgilerini (ad, sürüm, ortak anahtar belirteci ve kültür) sağlamak için uygulama yapılandırma dosyanızda  **qualifyAssembly>öğesinikullanınveortakdilçalışmazamanının,derlemeiçin\<** Genel derleme önbelleği.  
+ Kısmi derleme adlarını kullanarak <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yönteminin çağrılması, ortak dil çalışma zamanının derlemeyi yalnızca uygulama temel dizininde aramasını sağlar. Tüm derleme bilgilerini (ad, sürüm, ortak anahtar belirteci ve kültür) sağlamak için uygulama yapılandırma dosyanızda **\<qualifyAssembly >** öğesini kullanın ve ortak dil çalışma zamanının, derlemeyi küresel bir şekilde aramasına neden olur bütünleştirilmiş kod önbelleği.  
   
- **FullName** özniteliği, derleme kimliğinin dört alanını içermelidir: ad, sürüm, ortak anahtar belirteci ve kültür. **PartialName** özniteliği kısmen bir derlemeye başvurmalıdır. En azından derlemenin metin adını (en yaygın durum) belirtmeniz gerekir, ancak sürüm, ortak anahtar belirteci veya kültürü (ya da dört ' un herhangi bir birleşimini değil) dahil edebilirsiniz. **PartialName** , çağrın içinde belirtilen ad ile aynı olmalıdır. Örneğin, yapılandırma dosyanızda `"math"` **partialName** özniteliği olarak belirtemezsiniz ve kodunuzda çağrı `Assembly.Load("math, Version=3.3.3.3")` yapabilirsiniz.  
+ **FullName** özniteliği, derleme kimliğinin dört alanını içermelidir: ad, sürüm, ortak anahtar belirteci ve kültür. **PartialName** özniteliği kısmen bir derlemeye başvurmalıdır. En azından derlemenin metin adını (en yaygın durum) belirtmeniz gerekir, ancak sürüm, ortak anahtar belirteci veya kültürü (ya da dört ' un herhangi bir birleşimini değil) dahil edebilirsiniz. **PartialName** , çağrın içinde belirtilen ad ile aynı olmalıdır. Örneğin, yapılandırma dosyanızda **partialName** özniteliği olarak `"math"` belirtemezsiniz ve kodunuzda `Assembly.Load("math, Version=3.3.3.3")` çağırabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, çağrısını `Assembly.Load("math")` `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`mantıksal olarak etkinleştirir.  
+ Aşağıdaki örnek, `Assembly.Load("math")` çağrı `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`mantıksal olarak etkinleştirir.  
   
 ```xml  
 <configuration>  

@@ -1,5 +1,5 @@
 ---
-title: ServicePoint.m_ConnectionGroupList Field
+title: ServicePoint. m_ConnectionGroupList alanı
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85359492fbf06942a57c51142620cab015999b31
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 1991dae4d03f617857b860f920077531f7937bf1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300871"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120056"
 ---
-# <a name="servicepointmconnectiongrouplist-field"></a>ServicePoint.m\_ConnectionGroupList Field
+# <a name="servicepointm_connectiongrouplist-field"></a>ServicePoint. d\_ConnectionGroupList alanı
 
-`ServicePoint.m_ConnectionGroupList` olan bir <xref:System.Collections.Hashtable> bağlantı grupları, her bir bağlantı için bulunduran <xref:System.Net.ServicePoint>ait URI.
+`ServicePoint.m_ConnectionGroupList`, her biri <xref:System.Net.ServicePoint>URI 'sine yönelik bir bağlantı tutan bağlantı gruplarının bir <xref:System.Collections.Hashtable>.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -30,14 +30,14 @@ private Hashtable m_ConnectionGroupList
 ```
 
 > [!WARNING]
-> `ServicePoint.m_ConnectionGroupList` Alan özeldir ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
+> `ServicePoint.m_ConnectionGroupList` alanı özeldir ve doğrudan kodunuzda kullanılmamalıdır.
 > 
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu alanı kullanımını desteklemez.
+> Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Net>
+**Ad alanı:** <xref:System.Net>
 
-**Derleme:** Sistemde (System.dll)
+**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

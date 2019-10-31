@@ -14,33 +14,31 @@ helpviewer_keywords:
 ms.assetid: 1fbbf572-6d28-41a5-82fb-579ac90bfcf5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c90df6a8b6f25a93835981b1593a4b3d123cd168
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5dc1ad5bd98899f82e0b52345710c5ea3da864b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943411"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103041"
 ---
 # <a name="imanagedobject-interface"></a>IManagedObject Arabirimi
-Yönetilen bir nesnenin denetlemek için yöntemler sağlar.  
+Yönetilen bir nesneyi denetlemek için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetObjectIdentity Yöntemi](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|Bu yönetilen nesne kimliğini alır.|  
-|[GetSerializedBuffer Yöntemi](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|Bu yönetilen bir nesnenin dize gösterimini alır.|  
+|[GetObjectIdentity Yöntemi](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|Bu yönetilen nesnenin kimliğini alır.|  
+|[GetSerializedBuffer Yöntemi](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|Bu yönetilen nesnenin dize temsilini alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

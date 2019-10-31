@@ -2,14 +2,12 @@
 title: 'ICorDebugVariableSymbol:: GetValue yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6b72b9dbeff6aa06a132dc7ec3ddd9477553c4c2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ef7e67efb2bafd9b9f52203246fd7d1590e6107
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967988"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120958"
 ---
 # <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol:: GetValue yöntemi
 Bir değişkenin değerini bir bayt dizisi olarak alır.  
@@ -32,16 +30,16 @@ HRESULT GetValue(
  'ndaki Değerin okunacağı değişkenin başlangıç boşluğu. Bu parametre, bir nesnedeki üye alanlarını okurken kullanılır.  
   
  `cbContext`  
- 'ndaki `context` Bağımsız değişkenin bayt cinsinden boyutu.  
+ 'ndaki `context` bağımsız değişkeninin bayt cinsinden boyutu.  
   
  `context`  
  'ndaki Değeri okumak için kullanılan iş parçacığı bağlamı.  
   
  `cbValue`  
- 'ndaki `pValue` Arabelleğin bayt cinsinden boyutu.  
+ 'ndaki `pValue` arabelleğinin bayt cinsinden boyutu.  
   
  `pcbValue`  
- dışı Gerçekte `pValue` arabelleğe yazılan bayt sayısı.  
+ dışı Gerçekten `pValue` arabelleğine yazılan bayt sayısı.  
   
  `pValue`  
  dışı Değişkenin değerini içeren bir bayt dizisi.  
@@ -52,11 +50,11 @@ HRESULT GetValue(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

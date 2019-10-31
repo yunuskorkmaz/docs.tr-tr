@@ -15,14 +15,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a35f4ffa88211d914dbf84c87da49fafa89a929
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353902"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121940"
 ---
 # <a name="metadata-and-self-describing-components"></a>Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler
 
@@ -48,7 +46,7 @@ Geçmişte, bir dilde yazılmış bir yazılım bileşeni (. exe veya. dll), ba�
 
   - Üyeler (Yöntemler, alanlar, özellikler, olaylar, iç içe türler).
 
-- Özelliklerine.
+- özelliklerine.
 
   - Türleri ve üyeleri değiştiren ek tanımlayıcı öğeler.
 
@@ -64,7 +62,7 @@ Meta veriler, daha basit bir programlama modelinin anahtarıdır ve arabirim tan
 
   Meta veriler, farklı bir dilde yazılmış bir PE dosyasından bir sınıfı devralması için derlenmiş kod hakkında gereken tüm bilgileri sağlar. Açık sıralama veya özel birlikte çalışabilirlik kodu kullanma hakkında endişelenmeden, herhangi bir yönetilen dilde (ortak dil çalışma zamanını hedefleyen herhangi bir dilde) yazılmış herhangi bir sınıfın örneğini oluşturabilirsiniz.
 
-- Özelliklerine.
+- özelliklerine.
 
   .NET Framework, derlenmiş dosyanızda öznitelikler olarak adlandırılan belirli meta veri türlerini bildirmenize olanak tanır. Öznitelikler, .NET Framework tamamında bulunabilir ve programınızın çalışma zamanında nasıl davranacağını daha ayrıntılı olarak denetlemek için kullanılır. Ayrıca, Kullanıcı tanımlı özel öznitelikler aracılığıyla .NET Framework dosyalara kendi özel meta verilerinizi de yayabilirsiniz. Daha fazla bilgi için bkz. [öznitelikler](../../docs/standard/attributes/index.md).
 
@@ -86,7 +84,7 @@ Metaveri belirteci, dört baytlık bir sayıdır. Üstteki bayt, belirtecin atı
 
 `0x06000004`
 
-Üstteki bayt (`0x06`) Bu bir **MethodDef** belirteci olduğunu gösterir. Alt üç bayt (`000004`), ortak dil çalışma zamanına, bu yöntem tanımını açıklayan bilgiler için **MethodDef** tablosunun dördüncü satırına bakmasını söyler.
+Üstteki bayt (`0x06`), bu bir **MethodDef** belirteci olduğunu gösterir. Daha az üç bayt (`000004`), ortak dil çalışma zamanına, bu yöntem tanımını açıklayan bilgiler için **MethodDef** tablosunun dördüncü satırına bakmasını söyler.
 
 ### <a name="metadata-within-a-pe-file"></a>Bir PE Dosyasının İçindeki Metaveriler
 
@@ -100,7 +98,7 @@ Bir program ortak dil çalışma zamanı için derlendiğinde, üç bölümden o
 
 ## <a name="run-time-use-of-metadata"></a>Meta Verilerin Çalışma Zamanında Kullanımı
 
-Ortak dil çalışma zamanında meta verileri ve rolünü daha iyi anlamak için, basit bir program oluşturmak ve meta verilerin çalışma zamanı ömrünü nasıl etkilediğini göstermek yararlı olabilir. Aşağıdaki kod örneği, `MyApp` adlı bir sınıf içinde iki yöntemi gösterir. @No__t-0 yöntemi program giriş noktasıdır, ancak `Add` yöntemi yalnızca iki tamsayı bağımsız değişkenin toplamını döndürür.
+Ortak dil çalışma zamanında meta verileri ve rolünü daha iyi anlamak için, basit bir program oluşturmak ve meta verilerin çalışma zamanı ömrünü nasıl etkilediğini göstermek yararlı olabilir. Aşağıdaki kod örneği, `MyApp`adlı bir sınıf içinde iki yöntemi gösterir. `Main` yöntemi program giriş noktasıdır, ancak `Add` yöntemi yalnızca iki tamsayı bağımsız değişkenin toplamını döndürür.
 
 ```vb
 Public Class MyApp
@@ -136,7 +134,7 @@ public class MyApp
 
 Kod çalıştığında, çalışma zamanı modülü belleğe yükler ve bu sınıfa ait meta verileri çalıştırır. Yüklendikten sonra, çalışma zamanı, yöntemin Microsoft ara dili (MSIL) akışının kapsamlı analizini gerçekleştirerek hızlı yerel makine yönergelerine dönüştürür. Çalışma zamanı tam zamanında (JıT) derleyicisini kullanarak MSIL talimatlarını aynı anda bir yönteme yerel makine koduna dönüştürür.
 
-Aşağıdaki örnek, önceki kodun `Main` işlevinden oluşturulan MSIL 'nin bir parçasını gösterir. MSIL [Disassembler (ıldadsm. exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md)kullanarak herhangi bir .NET Framework uygulamadan MSIL ve meta verileri görüntüleyebilirsiniz.
+Aşağıdaki örnek, önceki kodun `Main` işlevinden oluşturulan MSIL 'in bir parçasını gösterir. MSIL [Disassembler (ıldadsm. exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md)kullanarak herhangi bir .NET Framework uygulamadan MSIL ve meta verileri görüntüleyebilirsiniz.
 
 ```console
 .entrypoint
@@ -155,15 +153,15 @@ IL_000c:  ldloc.1
 IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
 ```
 
-JıT derleyicisi, tüm yöntemi için MSIL 'yi okur, onu tamamen analiz eder ve yöntemi için etkili yerel yönergeler oluşturur. @No__t-0 ' da, `Add` yöntemi (`/*` `06000003 */`) için bir meta veri belirtecine rastlandı ve çalışma zamanı, **MethodDef** tablosunun üçüncü satırına danışması için belirteci kullanır.
+JıT derleyicisi, tüm yöntemi için MSIL 'yi okur, onu tamamen analiz eder ve yöntemi için etkili yerel yönergeler oluşturur. `IL_000d`, `Add` yöntemi (`/*` `06000003 */`) için bir meta veri belirtecine rastlandı ve çalışma zamanı, **MethodDef** tablosunun üçüncü satırına danışması için belirteci kullanır.
 
 Aşağıdaki tabloda, `Add` yöntemini açıklayan meta veri belirtecinin başvurduğu **MethodDef** tablosunun bir kısmı gösterilmektedir. Bu derlemede diğer meta veri tabloları var ve kendi benzersiz değerleri var olsa da, yalnızca bu tablo ele alınmıştır.
 
-|Satır|Göreli sanal adres (RVA)|ImplFlags|bayrakları|Name<br /><br /> (Dize yığınına işaret eder.)|İmza (blob yığınına Işaret eder.)|
+|sırada|Göreli sanal adres (RVA)|ImplFlags|Bayraklar|Name<br /><br /> (Dize yığınına işaret eder.)|İmza (blob yığınına Işaret eder.)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
-|1\.|0x00002050|DEMIRYOLU<br /><br /> Yönetilen|Genel<br /><br /> Reusespartisi<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> . ctor|. ctor (Oluşturucu)||
-|2|0x00002058|DEMIRYOLU<br /><br /> Yönetilen|Genel<br /><br /> Statik<br /><br /> Reusespartisi|Ana|Dize|
-|3|0x0000208c|DEMIRYOLU<br /><br /> Yönetilen|Genel<br /><br /> Statik<br /><br /> Reusespartisi|Ekle|int, int, int|
+|1\.|0x00002050|DEMIRYOLU<br /><br /> lebilmesi|Ortak<br /><br /> Reusespartisi<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> . ctor|. ctor (Oluşturucu)||
+|2|0x00002058|DEMIRYOLU<br /><br /> lebilmesi|Ortak<br /><br /> Statik<br /><br /> Reusespartisi|Ana|Dize|
+|3|0x0000208c|DEMIRYOLU<br /><br /> lebilmesi|Ortak<br /><br /> Statik<br /><br /> Reusespartisi|Ekle|int, int, int|
 
 Tablonun her sütunu, kodunuz hakkında önemli bilgiler içerir. **RVA** sütunu, çalışma zamanının bu YÖNTEMI tanımlayan MSIL 'nin başlangıç belleği adresini hesaplamasını sağlar. **ImplFlags** ve **Flags** sütunları, yöntemi tanımlayan bitmaskeleri içerir (örneğin, yöntemin genel mi yoksa özel mi olduğunu belirtir). **Ad** sütunu, dize yığınından yöntemin adını dizine ekler. **İmza** sütunu, blob yığınındaki yöntem imzasının tanımını dizinler.
 

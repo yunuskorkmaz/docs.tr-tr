@@ -1,5 +1,5 @@
 ---
-title: .NET içinde tür dönüştürme tabloları
+title: .NET 'te tür dönüştürme tabloları
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,22 +12,20 @@ helpviewer_keywords:
 - tables [.NET Framework], type conversions
 - data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f018ed182e6354bbc6e6873f0df1b35e023c9c17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa1ef8397338af949bd147fd3252b2d9ecaf53ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650329"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103883"
 ---
-# <a name="type-conversion-tables-in-net"></a>.NET içinde tür dönüştürme tabloları
-Bir türde bir değer eşit veya daha fazla boyutunu başka bir türe dönüştürüldüğünde Genişletme dönüşümü gerçekleşir. Bir türde bir değer daha küçük bir boyut başka bir türün değerine dönüştürüldüğünde bir daraltma dönüşümü gerçekleşir. Bu başlıktaki tablolar, her iki tür dönüştürmeler tarafından sergilenen davranışları gösterir.  
+# <a name="type-conversion-tables-in-net"></a>.NET 'te tür dönüştürme tabloları
+Genişleyen dönüştürme, bir türün değeri eşit veya daha büyük boyutta başka bir türe dönüştürüldüğünde gerçekleşir. Bir tür değeri daha küçük boyutta olan başka bir türün değerine dönüştürüldüğünde bir daraltma dönüştürmesi oluşur. Bu konudaki tablolarda her iki tür dönüştürme için de konu gösteren davranışlar gösterilmektedir.  
   
 ## <a name="widening-conversions"></a>Dönüştürmeleri Genişletme  
- Aşağıdaki tabloda, bilgi kaybı olmadan gerçekleştirilebilir dönüştürmelerine açıklanmaktadır.  
+ Aşağıdaki tabloda, bilgi kaybı olmadan gerçekleştirilebilecek genişletme dönüştürmeleri açıklanmaktadır.  
   
-|Tür|Veri kaybı olmadan dönüştürülebilir|  
+|Tür|, Veri kaybı olmadan dönüştürülebilir|  
 |----------|-------------------------------------------|  
 |<xref:System.Byte>|<xref:System.UInt16>, <xref:System.Int16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.SByte>|<xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
@@ -40,7 +38,7 @@ Bir türde bir değer eşit veya daha fazla boyutunu başka bir türe dönüşt�
 |<xref:System.UInt64>|<xref:System.Decimal>|  
 |<xref:System.Single>|<xref:System.Double>|  
   
- Bazı dönüşümlerdir <xref:System.Single> veya <xref:System.Double> duyarlık kaybına neden olabilir. Aşağıdaki tabloda, bazen bir bilgi kaybına neden dönüştürmelerine açıklanmaktadır.  
+ <xref:System.Single> veya <xref:System.Double> bazı genişletme dönüştürmeleri duyarlık kaybına neden olabilir. Aşağıdaki tabloda bazen bilgi kaybına neden olan genişletme dönüştürmeleri açıklanmaktadır.  
   
 |Tür|Dönüştürülebilir|  
 |----------|-------------------------|  
@@ -50,12 +48,12 @@ Bir türde bir değer eşit veya daha fazla boyutunu başka bir türe dönüşt�
 |<xref:System.UInt64>|<xref:System.Single>, <xref:System.Double>|  
 |<xref:System.Decimal>|<xref:System.Single>, <xref:System.Double>|  
   
-## <a name="narrowing-conversions"></a>Daraltma dönüşümleri  
- Bir daraltma dönüşümü için <xref:System.Single> veya <xref:System.Double> bilgi kaybına neden olabilir. Hedef türü doğru kaynak büyüklüğünü express olamaz, elde edilen türü sabitine ayarlanır `PositiveInfinity` veya `NegativeInfinity`. `PositiveInfinity` sonuçları bir pozitif sayı sıfıra bölme gelen ve ne zaman da döndürülür değerini bir <xref:System.Single> veya <xref:System.Double> değerini aşıyor `MaxValue` alan. `NegativeInfinity` negatif bir sayı sıfıra bölme gelen sonuçları ve ne zaman da döndürülür değerini bir <xref:System.Single> veya <xref:System.Double> değerin altına düşerse `MinValue` alan. Dönüştürme bir <xref:System.Double> için bir <xref:System.Single> sonuçlanabilir `PositiveInfinity` veya `NegativeInfinity`.  
+## <a name="narrowing-conversions"></a>Daraltma dönüştürmeleri  
+ <xref:System.Single> veya <xref:System.Double> bir daraltma dönüştürmesi, bilgi kaybına neden olabilir. Hedef türü kaynağın büyüklüğünü doğru bir şekilde ifade edemez, elde edilen tür sabit `PositiveInfinity` veya `NegativeInfinity`olarak ayarlanır. `PositiveInfinity`, pozitif bir sayıyı sıfıra bölüyor ve bir <xref:System.Single> ya da <xref:System.Double> değeri `MaxValue` alanının değerini aştığında de döndürülür. `NegativeInfinity`, negatif bir sayıyı sıfıra bölüden elde edilecek ve bir <xref:System.Single> veya <xref:System.Double> değeri `MinValue` alanı değerin altına düştüğünde de döndürülür. Bir <xref:System.Double> <xref:System.Single> bir dönüştürme `PositiveInfinity` veya `NegativeInfinity`neden olabilirler.  
   
- Bir daraltma dönüşümü ayrıca diğer veri türleri için bilgi kaybına neden olabilir. Ancak, bir <xref:System.OverflowException> harflere dönüştürülecek türün değeri hedef türün tarafından belirtilen aralık dışında kalırsa durum `MaxValue` ve `MinValue` alanları ve dönüştürme hedef değeri emin olmak için çalışma zamanı tarafından denetlenir aşmayan türü kendi `MaxValue` veya `MinValue`. İle gerçekleştirilen dönüştürmeler <xref:System.Convert?displayProperty=nameWithType> sınıfı her zaman bu şekilde denetlenir.  
+ Daraltma dönüştürmesi aynı zamanda diğer veri türleri için bilgi kaybına neden olabilir. Ancak, dönüştürülmüş bir türün değeri hedef türün `MaxValue` ve `MinValue` alanları tarafından belirtilen aralığın dışında kalırsa ve dönüştürme çalışma zamanı tarafından, hedef türü değerinin aşmayacağından emin olmak için işaretlendiğinde bir <xref:System.OverflowException> oluşturulur. `MaxValue` veya `MinValue`. <xref:System.Convert?displayProperty=nameWithType> sınıfıyla gerçekleştirilen dönüşümler her zaman bu şekilde denetlenir.  
   
- Throw dönüştürmeler aşağıdaki tabloda bir <xref:System.OverflowException> kullanarak <xref:System.Convert?displayProperty=nameWithType> veya harflere dönüştürülecek türün değeri sonuç türünde tanımlı aralığın dışında ise herhangi işaretli dönüştürme.  
+ Aşağıdaki tabloda, <xref:System.Convert?displayProperty=nameWithType> veya dönüştürülen tür değeri elde edilen türün tanımlı aralığının dışındaysa bir <xref:System.OverflowException> oluşturan dönüşümler listelenmektedir.  
   
 |Tür|Dönüştürülebilir|  
 |----------|-------------------------|  

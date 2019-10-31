@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0eed5a8-fa6d-4818-bd00-7babcea30325
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f37fab4d877ae804996f46290e3576cecc5a25ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39f5c1813b08f4d72c610820b1434e29eb4aec8e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767622"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121268"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID Metodu
-Bir tür tanımlayıcı bir Icordebugtype değerine dönüştürür.  
+Bir tür tanımlayıcısını ICorDebugType değerine dönüştürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +36,22 @@ HRESULT GetTypeForTypeID(
   
 ## <a name="parameters"></a>Parametreler  
  `id`  
- [in] Tür tanımlayıcısı.  
+ 'ndaki Tür tanımlayıcısı.  
   
  `ppType`  
- [out] Icordebugtype nesnenin adresi için bir işaretçi.  
+ dışı ICorDebugType nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bazı durumlarda, bir tür tanımlayıcı döndüren yöntemler bir null döndürebilir `COR_TYPEID` değeri. Bu değer olarak iletilmezse `id` bağımsız değişkeni, `GetTypeForTypeID` yöntemi başarısız olur ve dönüş `E_FAIL`.  
+ Bazı durumlarda, bir tür tanımlayıcısı döndüren yöntemler null `COR_TYPEID` değeri döndürebilir. Bu değer `id` bağımsız değişkeni olarak geçirilirse, `GetTypeForTypeID` yöntemi başarısız olur ve `E_FAIL`döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

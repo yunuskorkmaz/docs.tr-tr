@@ -2,14 +2,12 @@
 title: ICorDebugAssembly3 Arabirimi
 ms.date: 03/30/2017
 ms.assetid: 17fc5d76-75a9-4933-83f0-594de7f973f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca77360c36ff2cdce7ee47d5c3883dd824c6cef8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 930101f6cd4ebb9215d6420f774b8e066c54a4f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959322"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095359"
 ---
 # <a name="icordebugassembly3-interface"></a>ICorDebugAssembly3 Arabirimi
 Kapsayıcı derlemeler ve içerdikleri derlemeler için destek sağlamak üzere ICorDebugAssembly arabirimini mantıksal olarak genişletir.  
@@ -19,19 +17,19 @@ Kapsayıcı derlemeler ve içerdikleri derlemeler için destek sağlamak üzere 
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |[EnumerateContainedAssemblies Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-enumeratecontainedassemblies-method.md)|Bu derlemede yer alan derlemeler için bir Numaralandırıcı alır.|  
-|[GetContainerAssembly Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-getcontainerassembly-method.md)|Bu `ICorDebugAssembly3` nesnenin kapsayıcı derlemesini döndürür.|  
+|[GetContainerAssembly Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-getcontainerassembly-method.md)|Bu `ICorDebugAssembly3` nesnesinin kapsayıcı derlemesini döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> Arabirim yalnızca .NET Native kullanılabilir. .NET Native dışında ICorDebug senaryolarına `QueryInterface` `E_NOINTERFACE` yönelik bir arabirim işaretçisi alma çağrısı yapılmaya çalışılıyor.  
+> Arabirim yalnızca .NET Native kullanılabilir. Bir arabirim işaretçisini almak için `QueryInterface` çağırma girişimi, .NET Native dışındaki ICorDebug senaryoları için `E_NOINTERFACE` döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

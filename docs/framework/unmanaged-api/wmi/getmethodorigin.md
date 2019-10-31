@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetMethodOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9cea7251353dae093f64448c8d84157917fa74c5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1f669d5721a7bd9434f0ce4b1e2290c0633e1b46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798546"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102537"
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin işlevi
 Bir yöntemin bildirildiği sınıfı belirler.
@@ -69,12 +67,12 @@ Bu işlev, [IWbemClassObject:: GetMethodOrigin](/windows/desktop/api/wbemcli/nf-
 
 Bir sınıf bir veya daha fazla taban sınıftan Yöntemler devraldığı için, geliştiriciler genellikle belirli bir yöntemin tanımlandığı sınıfı belirleyebilmek ister.
 
-`pstrClassName` Parametresi `BSTR` bir parametre`out` olduğundan, işlev çağrılmadan önce geçerli bir işaret içermemelidir; Bu işaretçi, işlev çağrıldıktan sonra serbest bırakılmaz.
+Bu bir `out` parametresi olduğundan, işlev çağrılmadan önce `pstrClassName` parametresi geçerli bir `BSTR` işaret etmelidir; işlev döndüğünde bu işaretçi serbest bırakılmaz.
 
 ## <a name="requirements"></a>Gereksinimler  
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** WMINet_Utils. IDL  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

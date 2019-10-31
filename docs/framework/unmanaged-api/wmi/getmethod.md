@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b9cc185bf8cccb8ed3c24e28954afd86464602d7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 48986f5ff1cbbb45840ec1a059aa86711848d717
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798573"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102585"
 ---
 # <a name="getmethod-function"></a>GetMethod işlevi
 
@@ -51,16 +49,16 @@ HRESULT GetMethod (
 'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `wszName`\
-'ndaki Yöntem adı. Bu parametre geçerli olamaz `null` ve geçerli `LPCWSTR`bir işaret etmelidir.
+'ndaki Yöntem adı. Bu parametre `null` olamaz ve geçerli bir `LPCWSTR`işaret etmelidir.
 
 `lFlags`\
 'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
 
 `ppInSignature`\
-dışı Yöntemine yönelik parametreleri açıklayan bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğinin adresine yönelik bir işaretçi. Bu parametre, olarak `null`ayarlandıysa yok sayılır.
+dışı Yöntemine yönelik parametreleri açıklayan bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğinin adresine yönelik bir işaretçi. Bu parametre `null`olarak ayarlandıysa yok sayılır.
 
 `ppOutSignature`\
-dışı Yönteme giden parametreleri açıklayan bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğinin adresine yönelik bir işaretçi. Bu parametre, olarak `null`ayarlandıysa yok sayılır.
+dışı Yönteme giden parametreleri açıklayan bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğinin adresine yönelik bir işaretçi. Bu parametre `null`olarak ayarlandıysa yok sayılır.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -76,15 +74,15 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 
 Bu işlev, [IWbemClassObject:: GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) yöntemine bir çağrı kaydırır.
 
-Windows yönetimi, metotta parametre yoksa, [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) işaretçisini `null` ' a ayarlayabilir.
+Yöntemin parametrelere sahip olmaması halinde, Windows Yönetimi [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) işaretçisini `null` olarak ayarlayabilir.
 
-`IWbemClassObject` Ve `ppInSignature` '`ppOutSignature` de, bir sistem sınıfı [_parametreleri](/windows/desktop/WmiSdk/--parameters)örneğindeki özellikler olarak sırasıyla ve içinde ve dışarı parametreleri açıklama. `ppInSignature` İçindeki Özellikler *n*olarak adlandırılır `Param`; burada *n* , yöntem imzasında `Param1` `Param2`parametre konumudur (örneğin, vb.). İçindeki `ppOutSignature` özellikler de n olarak adlandırılır `Param`ve dönüş değeri olarak adlandırılır. `ReturnValue` Daha fazla bilgi ve örnek için bkz. [IWbemClassObject:: GetMethod metodu](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
+`ppInSignature` ve `ppOutSignature`, sistem sınıfı [_parametrelerinin](/windows/desktop/WmiSdk/--parameters)`IWbemClassObject` örneğindeki özellikler olarak sırasıyla gelen ve dışarı parametreleri anlatmaktadır. `ppInSignature` özellikler, `Param`*n*olarak adlandırılır; burada *n* , yöntem imzasında parametrenin konumudur (`Param1`, `Param2`, vb.). `ppOutSignature` özellikler de `Param`*n*olarak adlandırılır ve döndürülen değer `ReturnValue`olarak adlandırılır. Daha fazla bilgi ve örnek için bkz. [IWbemClassObject:: GetMethod metodu](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi** WMINet_Utils. IDL
+**Üst bilgi:** WMINet_Utils. IDL
 
 **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

@@ -18,15 +18,13 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d2255d935f59bc7a999819d345b35db3e5916656
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b427c579b4190acaf715147908b38ea57ab7aea3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037848"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120636"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET 'teki dizeleri kullanmak için en iyi uygulamalar
 
@@ -312,7 +310,7 @@ Aşağıdaki örnek, <xref:System.Collections.Hashtable> özelliği tarafından 
 Kullanıcılara sayılar ve tarih ve saatler gibi dize olmayan verileri görüntülerken bunları, kullanıcının kültürel ayarlarını kullanarak biçimlendirin. Varsayılan olarak, aşağıdaki hepsi biçimlendirme işlemlerinde geçerli iş parçacığı kültürünü kullanır:
 
 - [C#](../../csharp/language-reference/tokens/interpolated.md) Ve [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) derleyicileri tarafından desteklenen enterpolasyonlu dizeler.
-- [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) Ya da<xref:System.String.Concat%2A?displayProperty=nameWithType>yöntemini doğrudan çağıran veya [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) birleştirme işleçlerini kullanan dize birleştirme işlemleri.
+- [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) Ya da <xref:System.String.Concat%2A?displayProperty=nameWithType> yöntemini doğrudan çağıran veya [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) birleştirme işleçlerini kullanan dize birleştirme işlemleri.
 - <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi.
 - Sayısal türlerin ve Tarih ve saat türlerinin `ToString` yöntemleri.
 
