@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5b132ef1-8d4b-4525-89b3-54123596c194
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c137a10d5da94d04509385fc97d71535d33fae93
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6def272ecc7bd2b6e946e2c9623f0b60587d317
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758743"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128803"
 ---
-# <a name="icordebugprocessgetthreadcontext-method"></a><span data-ttu-id="91af8-102">ICorDebugProcess::GetThreadContext Yöntemi</span><span class="sxs-lookup"><span data-stu-id="91af8-102">ICorDebugProcess::GetThreadContext Method</span></span>
-<span data-ttu-id="91af8-103">Bu işlem belirli bir iş parçacığı için bağlamı alır.</span><span class="sxs-lookup"><span data-stu-id="91af8-103">Gets the context for the given thread in this process.</span></span>  
+# <a name="icordebugprocessgetthreadcontext-method"></a><span data-ttu-id="141f1-102">ICorDebugProcess::GetThreadContext Yöntemi</span><span class="sxs-lookup"><span data-stu-id="141f1-102">ICorDebugProcess::GetThreadContext Method</span></span>
+<span data-ttu-id="141f1-103">Bu işlemdeki verilen iş parçacığının bağlamını alır.</span><span class="sxs-lookup"><span data-stu-id="141f1-103">Gets the context for the given thread in this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="91af8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="91af8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="141f1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="141f1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetThreadContext(  
@@ -37,28 +35,28 @@ HRESULT GetThreadContext(
     BYTE context[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="91af8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="91af8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="141f1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="141f1-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="91af8-106">[in] Bağlamı almak istediğiniz iş parçacığının kimliği.</span><span class="sxs-lookup"><span data-stu-id="91af8-106">[in] The ID of the thread for which to retrieve the context.</span></span>  
+ <span data-ttu-id="141f1-106">'ndaki Bağlamını almak için iş parçacığının KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="141f1-106">[in] The ID of the thread for which to retrieve the context.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="91af8-107">[in] Boyutu `context` dizisi.</span><span class="sxs-lookup"><span data-stu-id="91af8-107">[in] The size of the `context` array.</span></span>  
+ <span data-ttu-id="141f1-107">'ndaki `context` dizisinin boyutu.</span><span class="sxs-lookup"><span data-stu-id="141f1-107">[in] The size of the `context` array.</span></span>  
   
  `context`  
- <span data-ttu-id="91af8-108">[out içinde] İş parçacığı bağlamı açıklayan bir bayt dizisi.</span><span class="sxs-lookup"><span data-stu-id="91af8-108">[in, out] An array of bytes that describe the thread's context.</span></span>  
+ <span data-ttu-id="141f1-108">[in, out] İş parçacığının bağlamını tanımlayan bir bayt dizisi.</span><span class="sxs-lookup"><span data-stu-id="141f1-108">[in, out] An array of bytes that describe the thread's context.</span></span>  
   
- <span data-ttu-id="91af8-109">Bağlam, iş parçacığının yürütülmekte olan işlemci mimarisini belirtir.</span><span class="sxs-lookup"><span data-stu-id="91af8-109">The context specifies the architecture of the processor on which the thread is executing.</span></span>  
+ <span data-ttu-id="141f1-109">Bağlam, iş parçacığının yürütüldüğü işlemcinin mimarisini belirtir.</span><span class="sxs-lookup"><span data-stu-id="141f1-109">The context specifies the architecture of the processor on which the thread is executing.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="91af8-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="91af8-110">Remarks</span></span>  
- <span data-ttu-id="91af8-111">Hata ayıklayıcı Win32 yerine bu yöntemi çağırmanız gerekir `GetThreadContext` yöntemi, çünkü iş parçacığı aslında, onun içeriği geçici olarak değiştirildi "ele geçirilen" bir durumda olabilir.</span><span class="sxs-lookup"><span data-stu-id="91af8-111">The debugger should call this method rather than the Win32 `GetThreadContext` method, because the thread may actually be in a "hijacked" state, in which its context has been temporarily changed.</span></span> <span data-ttu-id="91af8-112">Bu yöntem, yalnızca bir iş parçacığı yerel kodda olduğunda kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="91af8-112">This method should be used only when a thread is in native code.</span></span> <span data-ttu-id="91af8-113">Kullanım [Icordebugregisterset](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) yönetilen kodda iş parçacığı için.</span><span class="sxs-lookup"><span data-stu-id="91af8-113">Use [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) for threads in managed code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="141f1-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="141f1-110">Remarks</span></span>  
+ <span data-ttu-id="141f1-111">İş parçacığı gerçekten, bağlamı geçici olarak değiştirilen "ele alınmış" durumda olabileceğinden, hata ayıklayıcı Win32 `GetThreadContext` yöntemi yerine bu yöntemi çağırmalıdır.</span><span class="sxs-lookup"><span data-stu-id="141f1-111">The debugger should call this method rather than the Win32 `GetThreadContext` method, because the thread may actually be in a "hijacked" state, in which its context has been temporarily changed.</span></span> <span data-ttu-id="141f1-112">Bu yöntem, yalnızca bir iş parçacığı yerel kodda olduğunda kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="141f1-112">This method should be used only when a thread is in native code.</span></span> <span data-ttu-id="141f1-113">Yönetilen koddaki iş parçacıkları için [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) kullanın.</span><span class="sxs-lookup"><span data-stu-id="141f1-113">Use [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) for threads in managed code.</span></span>  
   
- <span data-ttu-id="91af8-114">Döndürülen veriler, geçerli platform için bir bağlam yapısıdır.</span><span class="sxs-lookup"><span data-stu-id="91af8-114">The data returned is a context structure for the current platform.</span></span> <span data-ttu-id="91af8-115">İle olduğu gibi Win32 `GetThreadContext` Initialize yöntemi, çağırana `context` bu yöntemi çağırmadan önce parametresi.</span><span class="sxs-lookup"><span data-stu-id="91af8-115">Just as with the Win32 `GetThreadContext` method, the caller should initialize the `context` parameter before calling this method.</span></span>  
+ <span data-ttu-id="141f1-114">Döndürülen veriler, geçerli platform için bir bağlam yapısıdır.</span><span class="sxs-lookup"><span data-stu-id="141f1-114">The data returned is a context structure for the current platform.</span></span> <span data-ttu-id="141f1-115">Win32 `GetThreadContext` yönteminde olduğu gibi, çağıranın bu yöntemi çağırmadan önce `context` parametresini başlatması gerekir.</span><span class="sxs-lookup"><span data-stu-id="141f1-115">Just as with the Win32 `GetThreadContext` method, the caller should initialize the `context` parameter before calling this method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="91af8-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="91af8-116">Requirements</span></span>  
- <span data-ttu-id="91af8-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="91af8-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="141f1-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="141f1-116">Requirements</span></span>  
+ <span data-ttu-id="141f1-117">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="141f1-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="91af8-118">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="91af8-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="141f1-118">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="141f1-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="91af8-119">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="91af8-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="141f1-119">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="141f1-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="91af8-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="91af8-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="141f1-120">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="141f1-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

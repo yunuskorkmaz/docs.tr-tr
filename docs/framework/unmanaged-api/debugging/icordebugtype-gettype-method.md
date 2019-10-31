@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: d6e64534-4d47-4ad0-a340-7590e07e2b4a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 78f2733584e07433171c91d6a2674d3a67c8e283
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7f3010cccc584288608b3f6ba95efbeb95f271fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772524"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132055"
 ---
-# <a name="icordebugtypegettype-method"></a><span data-ttu-id="b0b39-102">ICorDebugType::GetType Metodu</span><span class="sxs-lookup"><span data-stu-id="b0b39-102">ICorDebugType::GetType Method</span></span>
-<span data-ttu-id="b0b39-103">Ortak dil çalışma zamanı (CLR) yerel türünü açıklayan bir CorElementType değerini alır <xref:System.Type> bu Icordebugtype tarafından temsil edilir.</span><span class="sxs-lookup"><span data-stu-id="b0b39-103">Gets a CorElementType value that describes the native type of the common language runtime (CLR) <xref:System.Type> represented by this ICorDebugType.</span></span>  
+# <a name="icordebugtypegettype-method"></a><span data-ttu-id="0c660-102">ICorDebugType::GetType Metodu</span><span class="sxs-lookup"><span data-stu-id="0c660-102">ICorDebugType::GetType Method</span></span>
+<span data-ttu-id="0c660-103">Bu ICorDebugType tarafından temsil edilen ortak dil çalışma zamanı (CLR) <xref:System.Type> yerel türünü açıklayan bir CorElementType değeri alır.</span><span class="sxs-lookup"><span data-stu-id="0c660-103">Gets a CorElementType value that describes the native type of the common language runtime (CLR) <xref:System.Type> represented by this ICorDebugType.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0b39-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b0b39-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0c660-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0c660-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetType (  
@@ -35,18 +33,18 @@ HRESULT GetType (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b0b39-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b0b39-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0c660-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0c660-105">Parameters</span></span>  
  `ty`  
- <span data-ttu-id="b0b39-106">[out] Bir işaretçi değerini `CorElementType` CLR gösteren numaralandırma <xref:System.Type> bu `ICorDebugType` temsil eder.</span><span class="sxs-lookup"><span data-stu-id="b0b39-106">[out] A pointer to a value of the `CorElementType` enumeration that indicates the CLR <xref:System.Type> that this `ICorDebugType` represents.</span></span>  
+ <span data-ttu-id="0c660-106">dışı Bu `ICorDebugType` temsil eden CLR <xref:System.Type> belirten `CorElementType` numaralandırması değerine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0c660-106">[out] A pointer to a value of the `CorElementType` enumeration that indicates the CLR <xref:System.Type> that this `ICorDebugType` represents.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b0b39-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b0b39-107">Remarks</span></span>  
- <span data-ttu-id="b0b39-108">Varsa değerini `ty` ELEMENT_TYPE_CLASS ya da ELEMENT_TYPE_VALUETYPE, [Icordebugtype::getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) yöntemi örneklenmemiş türü için genel bir tür almak için çağrılabilir; Aksi takdirde, çağırmayın `ICorDebugType::GetClass`.</span><span class="sxs-lookup"><span data-stu-id="b0b39-108">If the value of `ty` is either ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE, the [ICorDebugType::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) method may be called to get the uninstantiated type for a generic type; otherwise, do not call `ICorDebugType::GetClass`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0c660-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0c660-107">Remarks</span></span>  
+ <span data-ttu-id="0c660-108">`ty` değeri ELEMENT_TYPE_CLASS veya ELEMENT_TYPE_VALUETYPE ise, [ICorDebugType:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) yöntemi, genel bir türün örneklenmemiş türünü almak için çağrılabilir; Aksi takdirde, `ICorDebugType::GetClass`çağırmayın.</span><span class="sxs-lookup"><span data-stu-id="0c660-108">If the value of `ty` is either ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE, the [ICorDebugType::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) method may be called to get the uninstantiated type for a generic type; otherwise, do not call `ICorDebugType::GetClass`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b0b39-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b0b39-109">Requirements</span></span>  
- <span data-ttu-id="b0b39-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b0b39-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0c660-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0c660-109">Requirements</span></span>  
+ <span data-ttu-id="0c660-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0c660-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b0b39-111">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b0b39-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0c660-111">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="0c660-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b0b39-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b0b39-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0c660-112">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="0c660-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b0b39-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0b39-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="0c660-113">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0c660-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
