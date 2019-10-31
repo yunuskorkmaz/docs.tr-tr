@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: dc9f37ae0cd6eef2c67e62421571290bba1c2233
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 503d61cb86c83e2f32ad40c60a127ae255ef71b0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394384"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198592"
 ---
 ### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC: zaman uyumsuz son ek, denetleyici eylem adlarından kırpılmakta
 
-[ASPNET/AspNetCore # 4849](https://github.com/aspnet/AspNetCore/issues/4849)adresleme 'nin bir parçası olarak ASP.NET Core MVC, varsayılan olarak eylem adlarından 1 @no__t sonekini kırpar. ASP.NET Core 3,0 ' den itibaren bu değişiklik hem yönlendirme hem de bağlantı üretimini etkiler.
+[ASPNET/AspNetCore # 4849](https://github.com/aspnet/AspNetCore/issues/4849)adresleme 'nin bir parçası olarak ASP.NET Core MVC, varsayılan olarak eylem adlarından son eki `Async` kırpar. ASP.NET Core 3,0 ' den itibaren bu değişiklik hem yönlendirme hem de bağlantı üretimini etkiler.
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
@@ -43,12 +43,12 @@ ASP.NET Core 3,0 ' de eylem, `Product/List` aracılığıyla yönlendirilebilir.
 <a asp-controller="Product" asp-action="List">List</a>
 ```
 
-Bu değişiklik, `[ActionName]` özniteliği kullanılarak belirtilen adları etkilemez. Yeni davranış `Startup.ConfigureServices` ' de `MvcOptions.SuppressAsyncSuffixInActionNames` ' ı `false` ayarlanarak devre dışı bırakılabilir:
+Bu değişiklik `[ActionName]` özniteliği kullanılarak belirtilen adları etkilemez. Yeni davranış `Startup.ConfigureServices` ' de `MvcOptions.SuppressAsyncSuffixInActionNames` ' ı `false` ayarlanarak devre dışı bırakılabilir:
 
 ```csharp
 services.AddMvc(options =>
 {
-   options.SuppressAsyncSuffixInActionNames = false; 
+   options.SuppressAsyncSuffixInActionNames = false;
 });
 ```
 
@@ -61,12 +61,12 @@ Kurala göre, zaman uyumsuz .NET yöntemleri `Async` ile sonlardır. Ancak, bir 
 Uygulamanız, adın `Async` sonekini koruyan MVC eylemlerine bağımlıysa, aşağıdaki azaltmaları aşağıdakilerden birini seçin:
 
 - Özgün adı korumak için `[ActionName]` özniteliğini kullanın.
-- @No__t-2 ' de `MvcOptions.SuppressAsyncSuffixInActionNames` olarak `false` ' i ayarlayarak yeniden adlandırmayı tamamen devre dışı bırakın:
+- `Startup.ConfigureServices``MvcOptions.SuppressAsyncSuffixInActionNames` `false` olarak ayarlayarak yeniden adlandırmayı tamamen devre dışı bırakın:
 
 ```csharp
 services.AddMvc(options =>
 {
-   options.SuppressAsyncSuffixInActionNames = false; 
+   options.SuppressAsyncSuffixInActionNames = false;
 });
 ```
 

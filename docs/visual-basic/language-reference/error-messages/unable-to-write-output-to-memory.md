@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC31020
 ms.assetid: 23996dca-250f-4320-8211-1560e90172df
-ms.openlocfilehash: 510488e9dd18d8bf274a8fe5cd00666c4c26fcf5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65e63ddf15534ac83480bca3a9a01c97b629ee08
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787380"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198173"
 ---
 # <a name="unable-to-write-output-to-memory"></a>Çıkış belleğe yazılamıyor
-Çıkış belleğe yazılırken bir sorun oluştu.  
+Belleğe çıkış yazılırken bir sorun oluştu.  
   
- **Hata Kimliği:** BC31020  
+ **Hata kimliği:** BC31020  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Hata durumunda yeniden yeniden görmek için programı derleyin.  
+1. Hatanın yeniden oluşup oluşmadığını görmek için programı yeniden derleyin.  
   
-2. Hata devam ederse, çalışmanızı kaydedin ve Visual Studio'yu yeniden başlatın.  
+2. Hata devam ederse, çalışmanızı kaydedin ve Visual Studio 'Yu yeniden başlatın.  
   
-3. Hata almaya devam ederseniz, Visual Basic yeniden yükleyin.  
+3. Hata yinelenirse Visual Basic yeniden yükleyin.  
   
-4. Yeniden yüklenmesinden sonra hata oluşmaya devam ederse Microsoft Ürün Destek Hizmetleri bildirin.  
+4. Yeniden yükleme sonrasında hata devam ederse, Microsoft Ürün Destek Hizmetleri 'ne bildirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)
+- [Bizimle İletişime Geçin](/visualstudio/ide/feedback-options)

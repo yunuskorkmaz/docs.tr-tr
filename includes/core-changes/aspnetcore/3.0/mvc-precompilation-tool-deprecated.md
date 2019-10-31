@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 641233df165a1c2208a2185f2b6e99077f9a59d3
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 3f702febc78488b9413ec9303ded211493650f02
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394170"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198595"
 ---
 ### <a name="mvc-precompilation-tool-deprecated"></a>MVC: ön derleme aracı kullanım dışı
 
 ASP.NET Core 1,1 ' de, Razor dosyalarının ( *. cshtml* dosyaları) yayımlama zamanı derlemesi için destek eklemek üzere `Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` (MVC ön derleme aracı) paketi sunulmuştur. ASP.NET Core 2,1 ' de, [Razor SDK](/aspnet/core/razor-pages/sdk?view=aspnetcore-2.1) , ön derleme aracının özelliklerini genişletmek üzere sunulmuştur. Razor SDK, Razor dosyalarının derleme ve yayımlama zamanı derlemesi için destek eklendi. SDK, uygulama başlatma zamanında geliştirirken derleme zamanında *. cshtml* dosyalarının doğruluğunu doğrular. Razor SDK varsayılan olarak açık olur ve kullanmaya başlamak için herhangi bir hareket gerekmez.
 
-ASP.NET Core 3,0 ' de, ASP.NET Core 1,1-Era MVC prederlemesini kaldırma aracı kaldırılmıştır. Önceki paket sürümleri, düzeltme eki sürümünde önemli hata ve güvenlik düzeltmeleri almaya devam edecektir. 
+ASP.NET Core 3,0 ' de, ASP.NET Core 1,1-Era MVC prederlemesini kaldırma aracı kaldırılmıştır. Önceki paket sürümleri, düzeltme eki sürümünde önemli hata ve güvenlik düzeltmeleri almaya devam edecektir.
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
@@ -18,11 +18,11 @@ ASP.NET Core 3,0 ' de, ASP.NET Core 1,1-Era MVC prederlemesini kaldırma aracı 
 
 #### <a name="old-behavior"></a>Eski davranış
 
-@No__t-0 paketi, MVC Razor görünümlerini önceden derlemek için kullanıldı.
+`Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` paketi, MVC Razor görünümlerini önceden derlemek için kullanıldı.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Razor SDK, bu işlevselliği yerel olarak destekler. @No__t-0 paketi artık güncelleştirilmemiş.
+Razor SDK, bu işlevselliği yerel olarak destekler. `Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` paketi artık güncelleştirilmedi.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 

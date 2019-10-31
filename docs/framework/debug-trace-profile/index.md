@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43927be83b8b2a9163656f8d6d54c2cf83a23e28
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 43e9438ed2c1cd82bb4d89ff082545021b2d543e
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052648"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195348"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Hata Ayıklama, İzleme ve Profil Oluşturma
 .NET Framework bir uygulamada hata ayıklamak için, derleyici ve çalışma zamanı ortamı, bir hata ayıklayıcının uygulamaya iliştirmesine ve mümkünse hem semboller hem de çizgi haritaları (mümkünse, uygulama ve karşılık gelen Microsoft ara Dil (MSIL). Yönetilen bir uygulamanın hatası ayıklandıktan sonra, performansı artırmak için profili oluşturulabilir. Profil oluşturma, en sık yürütülen kodu oluşturan kaynak kodu satırlarını ve bunların yürütülmesi için ne kadar zaman harcanduğunu değerlendirir ve tanımlar.  
   
- .NET Framework uygulamalar, birçok yapılandırma ayrıntılarını işleyen Visual Studio kullanılarak kolayca hata ayıklamalıdır. Visual Studio yüklü değilse, .NET Framework <xref:System.Diagnostics> ad alanındaki hata ayıklama sınıflarını kullanarak .NET Framework uygulamalarının performansını inceleyebilir ve geliştirebilirsiniz. Bu ad alanı, <xref:System.Diagnostics.Trace>izleme <xref:System.Diagnostics.Debug>yürütme akışı <xref:System.Diagnostics.TraceSource> için,, ve <xref:System.Diagnostics.Process>sınıflarını ve profil oluşturma kodu <xref:System.Diagnostics.EventLog>için, <xref:System.Diagnostics.PerformanceCounter> ve sınıflarını içerir.  
+ .NET Framework uygulamalar, birçok yapılandırma ayrıntılarını işleyen Visual Studio kullanılarak kolayca hata ayıklamalıdır. Visual Studio yüklü değilse, .NET Framework <xref:System.Diagnostics> ad alanındaki hata ayıklama sınıflarını kullanarak .NET Framework uygulamalarının performansını inceleyebilir ve geliştirebilirsiniz. Bu ad alanı, yürütme akışını izlemek için <xref:System.Diagnostics.Trace>, <xref:System.Diagnostics.Debug>ve <xref:System.Diagnostics.TraceSource> sınıflarını ve profil oluşturma kodu için <xref:System.Diagnostics.Process>, <xref:System.Diagnostics.EventLog>ve <xref:System.Diagnostics.PerformanceCounter> sınıflarını içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [JIT-Ekleme Hata Ayıklamayı Etkinleştirme](enabling-jit-attach-debugging.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "71052648"
  Bir uygulamanın performansını izlemek için kullanabileceğiniz sayaçları açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Visual Studio 'da ASP.NET veya ASP.NET Core uygulamalarında hata ayıklama](/visualstudio/debugger/debugging-aspnet-and-ajax-applications)  
+ [Visual Studio 'da ASP.NET veya ASP.NET Core uygulamalarında hata ayıklama](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
  Geliştirme sırasında veya dağıtımdan sonra bir ASP.NET uygulamasında hata ayıklama için önkoşul ve yönergeler sağlar.  
   
  [Geliştirme Kılavuzu](../development-guide.md)  

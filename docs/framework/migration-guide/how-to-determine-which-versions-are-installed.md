@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: e339767b981cea80b1b804db7360961dc42f2102
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 748b5ea2b14abe2da0b84430461eb68a70ae268d
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126319"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195226"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: hangi .NET Framework sürümlerinin yüklendiğini belirleme
 
@@ -95,7 +95,7 @@ Bu değerleri şu şekilde kullanabilirsiniz:
 
 - Belirli bir .NET Framework sürümünün Windows işletim sisteminin belirli bir sürümüne yüklenip yüklenmediğini öğrenmek için, **yayın** DWORD değerinin tabloda listelenen değere *eşit* olup olmadığını test edin. Örneğin, Windows 10 sisteminde .NET Framework 4,6 olup olmadığını anlamak için, 393295 ' *e eşit* olan bir **yayın** değeri için test edin.
 
-- .NET Framework en düşük sürümünün mevcut olup olmadığını anlamak için, bu sürüm için daha küçük **yayın** DWORD değerini kullanın. Örneğin, uygulamanız .NET Framework 4,6 veya sonraki bir sürümde çalışıyorsa, 393295 ' *den büyük veya buna eşit* bir **yayın** DWORD değeri testi yapın. Her bir .NET Framework sürümü için yalnızca en düşük **yayın** DWORD değerini listeleyen bir tablo için, [.NET Framework 4,5 ve sonraki sürümler Için en düşük sürüm DWORD değerlerini](minimum-release-dword.md)inceleyin.
+- .NET Framework en düşük sürümünün mevcut olup olmadığını anlamak için, bu sürüm için daha küçük **yayın** DWORD değerini kullanın. Örneğin, uygulamanız .NET Framework 4,8 veya sonraki bir sürümde çalışıyorsa, 528040 ' *den büyük veya buna eşit* bir **yayın** DWORD değeri testi yapın. Her bir .NET Framework sürümü için yalnızca en düşük **yayın** DWORD değerini listeleyen bir tablo için, [.NET Framework 4,5 ve sonraki sürümler Için en düşük sürüm DWORD değerlerini](minimum-release-dword.md)inceleyin.
 
 - Birden çok sürümü test etmek için, en son .NET Framework sürümü için daha küçük DWORD değerinden *büyük veya ona eşit* bir değer için test yaparak başlayın ve ardından değeri, sonraki her önceki sürüm için daha küçük DWORD değeri ile karşılaştırın. Örneğin, uygulamanız .NET Framework 4,7 veya üzeri bir sürüm gerektiriyorsa ve mevcut .NET Framework sürümünü belirleyebilmek istiyorsanız, 461808 ' e *eşit veya* daha küçük olan bir **yayın** DWORD değeri için test yaparak BAŞLAYıN (daha küçük DWORD .NET Framework 4.7.2) değeri. Ardından, **yayın** DWORD değerini her bir sonraki .NET Framework sürümü için daha küçük bir değerle karşılaştırın. Her bir .NET Framework sürümü için yalnızca en düşük **yayın** DWORD değerini listeleyen bir tablo için, [.NET Framework 4,5 ve sonraki sürümler Için en düşük sürüm DWORD değerlerini](minimum-release-dword.md)inceleyin.
 

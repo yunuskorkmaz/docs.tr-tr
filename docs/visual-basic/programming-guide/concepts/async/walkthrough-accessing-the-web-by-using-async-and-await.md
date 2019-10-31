@@ -2,12 +2,12 @@
 title: "İzlenecek yol: Async ve await kullanarak Web 'e erişme (Visual Basic)"
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 2d9d3ea3d55fcd3a59039f4b8b93f37df35bf86d
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: feaa1e298cda852492e020a5fa81845fb887f102
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351913"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197019"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>İzlenecek yol: Async ve await kullanarak Web 'e erişme (Visual Basic)
 
@@ -17,7 +17,7 @@ Async özelliği hakkında daha fazla bilgi için bkz. zaman uyumsuz [programlam
 
 Bu izlenecek yol, bir Web sitesi listesindeki bayt sayısını toplayan bir zaman uyumlu Windows Presentation Foundation (WPF) uygulamasıyla başlar. İzlenecek yol, yeni özellikleri kullanarak uygulamayı zaman uyumsuz bir çözüme dönüştürür.
 
-Uygulamaları kendiniz derlemek istemiyorsanız, "zaman uyumsuz örnek: Web Izlenecek yol (C# ve Visual Basic) " [Geliştirici kodu örneklerinden](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)erişme.
+Uygulamaları kendiniz derlemek istemiyorsanız,C# [Geliştirici kodu örneklerinden](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)"zaman uyumsuz örnek: Web 'e (ve Visual Basic) erişme" ' ya erişebilirsiniz.
 
 Bu kılavuzda, aşağıdaki görevleri tamamlayadınız:
 
@@ -37,21 +37,21 @@ Bu kılavuzda, aşağıdaki görevleri tamamlayadınız:
 
 Tüm zaman uyumsuz örnek için [örnek](#example) bölümüne bakın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazla bilgi için bkz. Visual Studio [İndirmeleri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) sayfası.
 
 ## <a name="create-a-wpf-application"></a>WPF uygulaması oluşturma
 
-1. Visual Studio’yu çalıştırın.
+1. Visual Studio 'Yu başlatın.
 
-2. Menü çubuğunda, **dosya**, **yeni**, **proje**.
+2. Menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin.
 
     **Yeni proje** iletişim kutusu açılır.
 
 3. **Yüklü şablonlar** bölmesinde Visual Basic öğesini seçin ve ardından Proje türleri listesinden **WPF uygulaması** ' nı seçin.
 
-4. **Ad** metin kutusuna girin `AsyncExampleWPF`ve sonra **Tamam** düğmesini seçin.
+4. **Ad** metin kutusuna `AsyncExampleWPF`girin ve sonra **Tamam** düğmesini seçin.
 
     Yeni proje **Çözüm Gezgini**görüntülenir.
 
@@ -65,7 +65,7 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
 
 4. **TextBox** denetimini vurgulayın ve **Özellikler** penceresinde aşağıdaki değerleri ayarlayın:
 
-    - **Name** özelliğini olarak `resultsTextBox`ayarlayın.
+    - **Name** özelliğini `resultsTextBox`olarak ayarlayın.
 
     - **Height** özelliğini 250 olarak ayarlayın.
 
@@ -75,13 +75,13 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
 
 5. **Düğme** denetimini vurgulayın ve **Özellikler** penceresinde aşağıdaki değerleri ayarlayın:
 
-    - **Name** özelliğini olarak `startButton`ayarlayın.
+    - **Name** özelliğini `startButton`olarak ayarlayın.
 
     - **İçerik** özelliğinin değerini **düğmeden** **başla**olarak değiştirin.
 
 6. Metin kutusunu ve düğmeyi her ikisinin de **MainWindow** penceresinde görünmesi için konumlandırın.
 
-    WPF XAML Tasarımcısı hakkında daha fazla bilgi için, bkz. [XAML Tasarımcısı kullanarak Kullanıcı arabirimi oluşturma](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).
+    WPF XAML Tasarımcısı hakkında daha fazla bilgi için, bkz. [XAML Tasarımcısı kullanarak Kullanıcı arabirimi oluşturma](/visualstudio/xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio).
 
 ## <a name="add-a-reference"></a>Başvuru ekleme
 
@@ -103,7 +103,7 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
 
 1. **Çözüm Gezgini**, MainWindow. xaml. vb için kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
 
-2. Zaten mevcut değilse `Imports` , kod dosyasının en üstüne aşağıdaki deyimleri ekleyin.
+2. Zaten mevcut değilse, kod dosyasının en üstüne aşağıdaki `Imports` deyimlerini ekleyin.
 
     ```vb
     Imports System.Net.Http
@@ -113,9 +113,9 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
 
 ## <a name="create-a-synchronous-application"></a>Zaman uyumlu uygulama oluşturma
 
-1. MainWindow. xaml tasarım penceresinde, MainWindow. xaml. vb ' de `startButton_Click` olay işleyicisini oluşturmak için Başlat düğmesine çift tıklayın.
+1. MainWindow. xaml tasarım penceresinde, MainWindow. xaml. vb ' de `startButton_Click` olay işleyicisini oluşturmak için **Başlat** düğmesine çift tıklayın.
 
-2. MainWindow. xaml. vb dosyasında aşağıdaki kodu ' ın `startButton_Click`gövdesine kopyalayın:
+2. MainWindow. xaml. vb dosyasında aşağıdaki kodu `startButton_Click`gövdesine kopyalayın:
 
     ```vb
     resultsTextBox.Clear()
@@ -123,19 +123,19 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
     resultsTextBox.Text &= vbCrLf & "Control returned to startButton_Click."
     ```
 
-    Kod, uygulamayı `SumPageSizes`yönlendiren yöntemini çağırır ve denetim ' e `startButton_Click`döndüğünde bir ileti görüntüler.
+    Kod, uygulamayı yönlendiren yöntemi çağırır, `SumPageSizes`ve denetim `startButton_Click`döndüğünde bir ileti görüntüler.
 
 3. Zaman uyumlu çözüm kodu aşağıdaki dört yöntemi içerir:
 
-    - `SumPageSizes`, ' den `SetUpURLList` Web sayfası URL 'lerinin bir listesini alır ve ardından her `DisplayResults` URL 'yi çağırır `GetURLContents` ve işler.
+    - `SumPageSizes`, `SetUpURLList` Web sayfası URL 'Lerinin bir listesini alır ve sonra her bir URL 'YI işlemek için `GetURLContents` ve `DisplayResults` çağırır.
 
-    - `SetUpURLList`, bir Web adresleri listesi oluşturur ve döndürür.
+    - `SetUpURLList`, Web adreslerinin bir listesini oluşturan ve döndüren.
 
-    - `GetURLContents`, her bir Web sitesinin içeriğini indirir ve bir bayt dizisi olarak içeriğini döndürür.
+    - Her Web sitesinin içeriğini indiren ve bir bayt dizisi olarak içeriği döndüren `GetURLContents`.
 
-    - `DisplayResults`, her bir URL için bayt dizisindeki bayt sayısını görüntüler.
+    - her URL için bayt dizisindeki bayt sayısını görüntüleyen `DisplayResults`.
 
-    Aşağıdaki dört yöntemi kopyalayın ve ardından bunları MainWindow. xaml. vb `startButton_Click` içindeki olay işleyicisinin altına yapıştırın:
+    Aşağıdaki dört yöntemi kopyalayın ve sonra MainWindow. xaml. vb ' de `startButton_Click` olay işleyicisi altına yapıştırın:
 
     ```vb
     Private Sub SumPageSizes()
@@ -238,28 +238,28 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
 
 ## <a name="convert-geturlcontents-to-an-asynchronous-method"></a>GetURLContents öğesini zaman uyumsuz bir metoda Dönüştür
 
-1. Zaman uyumlu çözümü zaman uyumsuz bir çözüme dönüştürmek için, `GetURLContents` <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=nameWithType> yönteme ve <xref:System.IO.Stream.CopyTo%2A?displayProperty=nameWithType> yöntemine yapılan çağrılar uygulamanın Web 'e eriştiği yerdir. .NET Framework, her iki yöntemin de zaman uyumsuz sürümlerini sağlayarak dönüştürmeyi kolaylaştırır.
+1. Zaman uyumlu çözümü zaman uyumsuz bir çözüme dönüştürmek için, <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=nameWithType> yöntemine ve <xref:System.IO.Stream.CopyTo%2A?displayProperty=nameWithType> yöntemine yapılan çağrılar uygulamanın Web 'e eriştiği yer olduğundan, başlamak için en iyi yer `GetURLContents`. .NET Framework, her iki yöntemin de zaman uyumsuz sürümlerini sağlayarak dönüştürmeyi kolaylaştırır.
 
-    İçinde `GetURLContents`kullanılan yöntemler hakkında daha fazla bilgi için bkz <xref:System.Net.WebRequest>.
+    `GetURLContents`' de kullanılan yöntemler hakkında daha fazla bilgi için bkz. <xref:System.Net.WebRequest>.
 
     > [!NOTE]
     > Bu izlenecek yolda bulunan adımları izleyerek bazı derleyici hataları görüntülenir. Bunları yoksayabilir ve İzlenecek yol ile devam edebilirsiniz.
 
-    ' In `GetURLContents` `GetResponse` üçüncü satırında çağrılan yöntemi, zaman uyumsuz, görev tabanlı <xref:System.Net.WebRequest.GetResponseAsync%2A> metoda değiştirin.
+    `GetURLContents` üçüncü satırındaki `GetResponse` zaman uyumsuz, görev tabanlı <xref:System.Net.WebRequest.GetResponseAsync%2A> metoduna olan yöntemi değiştirin.
 
     ```vb
     Using response As WebResponse = webReq.GetResponseAsync()
     ```
 
-2. `GetResponseAsync`<xref:System.Threading.Tasks.Task%601>döndürür. Bu durumda, *görev dönüş değişkeni* `TResult`, türündedir <xref:System.Net.WebResponse>. Görev, istenen veriler indirildikten ve görevin tamamlanmasını `WebResponse` çalıştırdıktan sonra gerçek bir nesne oluşturmak için bir taahhüddir.
+2. `GetResponseAsync` <xref:System.Threading.Tasks.Task%601>döndürür. Bu durumda, *görev dönüş değişkeni*`TResult`, <xref:System.Net.WebResponse>türü vardır. Görev, istenen veriler indirildikten ve görevin tamamlanmasını çalıştırdıktan sonra gerçek bir `WebResponse` nesnesi oluşturmak için bir taahhüddir.
 
-    Görevden `WebResponse` değeri almak için, aşağıdaki kodda gösterildiği gibi çağrısına [](../../../../visual-basic/language-reference/operators/await-operator.md) `GetResponseAsync`bir Await işleci uygulayın.
+    Görevden `WebResponse` değerini almak için aşağıdaki kodda gösterildiği gibi, `GetResponseAsync`çağrısına bir [await](../../../../visual-basic/language-reference/operators/await-operator.md) işleci uygulayın.
 
     ```vb
     Using response As WebResponse = Await webReq.GetResponseAsync()
     ```
 
-    İşleç, beklenen görev tamamlanana kadar geçerli `GetURLContents`yöntemin yürütülmesini askıya alır. `Await` Bu arada, Denetim geçerli yöntemi çağırana döner. Bu örnekte, geçerli yöntem `GetURLContents`ve `SumPageSizes`arayan ' dır. Görev tamamlandığında, taahhüt edilen `WebResponse` nesne, beklenen görevin değeri olarak üretilir ve değişkenine `response`atanır.
+    `Await` işleci, beklenen görev tamamlanana kadar, `GetURLContents`geçerli metodun yürütülmesini askıya alır. Bu arada, Denetim geçerli yöntemi çağırana döner. Bu örnekte, geçerli yöntem `GetURLContents`ve arayan `SumPageSizes`. Görev tamamlandığında, taahhüt edilen `WebResponse` nesnesi, beklenen görevin değeri olarak üretilir ve `response`değişkenine atanır.
 
     Önceki deyim, ne olacağını açıklamak için aşağıdaki iki ifadeye ayrılabilir.
 
@@ -268,15 +268,15 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
     Using response As WebResponse = Await responseTask
     ```
 
-    Çağrısı `webReq.GetResponseAsync` bir `Task(Of WebResponse)` veya döndürür.`Task<WebResponse>` Sonra `Await` değeri`WebResponse` almak için göreve bir işleç uygulanır.
+    `webReq.GetResponseAsync` çağrısı `Task(Of WebResponse)` veya `Task<WebResponse>`döndürür. Sonra, `WebResponse` değerini almak için göreve bir `Await` işleci uygulanır.
 
-    Zaman uyumsuz yönteminizin, görevin tamamlanmasına bağlı olmaması durumunda, zaman uyumsuz metoda yapılan çağrıdan sonra ve Await işleci uygulanmadan önce bu iki deyim arasında bu işe devam edebilir. Örnekler için bkz [. nasıl yapılır: Async ve await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) kullanarak birden çok web isteğini paralel hale getirin ve [şunları yapın: Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)kullanarak zaman uyumsuz izlenecek yolu genişletin.
+    Zaman uyumsuz yönteminizin, görevin tamamlanmasına bağlı olmaması durumunda, zaman uyumsuz metoda yapılan çağrıdan sonra ve Await işleci uygulanmadan önce bu iki deyim arasında bu işe devam edebilir. Örnekler için bkz. [nasıl yapılır: Async ve await kullanarak birden çok Web Isteğini paralel hale getirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) ve [nasıl yapılır: Task. whenall (Visual Basic) kullanarak zaman uyumsuz izlenecek yolu genişletme](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 
-3. Önceki adımda işleci eklediğiniz `Await` için bir derleyici hatası oluşur. İşleci yalnızca [zaman uyumsuz](../../../../visual-basic/language-reference/modifiers/async.md) değiştiriciyle işaretlenen yöntemlerde kullanılabilir. Çağrısını `CopyTo` ' a `CopyToAsync`' çağrısı ile değiştirmek için dönüştürme adımlarını tekrarlarken hatayı yoksayın.
+3. Önceki adımda `Await` işlecini eklediğiniz için bir derleyici hatası oluşur. İşleci yalnızca [zaman uyumsuz](../../../../visual-basic/language-reference/modifiers/async.md) değiştiriciyle işaretlenen yöntemlerde kullanılabilir. `CopyTo` çağrısını `CopyToAsync`çağrısı ile değiştirmek için dönüştürme adımlarını tekrarlarken hatayı yoksayın.
 
-    - Olarak çağrılan <xref:System.IO.Stream.CopyToAsync%2A>metodun adını değiştirin.
+    - <xref:System.IO.Stream.CopyToAsync%2A>olarak çağrılan metodun adını değiştirin.
 
-    - Ya da yöntemi ,`content`bayt bağımsız değişkenine bayt kopyalar, ve anlamlı bir değer döndürmez. `CopyTo` `CopyToAsync` Zaman uyumlu sürümde, çağrısı `CopyTo` bir değer döndürmeyen basit bir ifadedir. Zaman uyumsuz sürüm `CopyToAsync`, bir <xref:System.Threading.Tasks.Task>döndürür. Görev, "Task (void)" gibi çalışır ve yöntemin beklenmesine olanak sağlar. Aşağıdaki kodda `await` gösterildiği gibi, çağrısına `CopyToAsync`yönelik veyaçağrısıyapın.`Await`
+    - `CopyTo` veya `CopyToAsync` yöntemi, baytları bağımsız değişkenine `content`, ve anlamlı bir değer döndürmez. Zaman uyumlu sürümde, `CopyTo` çağrısı bir değer döndürmeyen basit bir ifadedir. Zaman uyumsuz sürüm `CopyToAsync`, bir <xref:System.Threading.Tasks.Task>döndürür. Görev, "Task (void)" gibi çalışır ve yöntemin beklenmesine olanak sağlar. Aşağıdaki kodun gösterdiği gibi, `CopyToAsync`çağrısına `Await` veya `await` uygulayın.
 
         ```vb
         Await responseStream.CopyToAsync(content)
@@ -293,21 +293,21 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
         Await copyTask
         ```
 
-4. Tüm bunlar ' de `GetURLContents` yapılacak şekilde, yöntem imzasını ayarlamasıdır. `Await` İşlecini yalnızca [zaman uyumsuz](../../../../visual-basic/language-reference/modifiers/async.md) değiştiriciyle işaretlenen yöntemlerde kullanabilirsiniz. Aşağıdaki kodun gösterdiği gibi, yöntemi *zaman uyumsuz bir yöntem*olarak işaretlemek için değiştirici ekleyin.
+4. `GetURLContents` her şey, yöntem imzasını ayarlamasıdır. `Await` işlecini yalnızca [zaman uyumsuz](../../../../visual-basic/language-reference/modifiers/async.md) değiştiriciyle işaretlenen yöntemlerde kullanabilirsiniz. Aşağıdaki kodun gösterdiği gibi, yöntemi *zaman uyumsuz bir yöntem*olarak işaretlemek için değiştirici ekleyin.
 
     ```vb
     Private Async Function GetURLContents(url As String) As Byte()
     ```
 
-5. Zaman uyumsuz bir yöntemin dönüş türü yalnızca, <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601>olabilir. Visual Basic, yöntemi `Function` bir `Task` veya `Task(Of T)`döndüren bir, ya da yönteminin bir `Sub`olması gerekir. Genellikle, bir `Sub` Yöntem yalnızca zaman uyumsuz olay işleyicide kullanılır, burada `Sub` gereklidir. Diğer durumlarda, `Task(T)` tamamlanan yöntemin T türünde bir değer döndüren bir [Return](../../../../visual-basic/language-reference/statements/return-statement.md) ifadesine sahip olması ve `Task` tamamlanan yöntemin anlamlı bir değer döndürmemesi durumunda kullanmanız gerekir.
+5. Zaman uyumsuz bir yöntemin dönüş türü yalnızca <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>olabilir. Visual Basic, yönteminin bir `Task` veya `Task(Of T)`döndüren bir `Function` olması veya metodun bir `Sub`olması gerekir. Genellikle, bir `Sub` yöntemi yalnızca `Sub` gerekli olduğu zaman uyumsuz olay işleyicide kullanılır. Diğer durumlarda, tamamlanan yöntemin T türünde bir değer döndüren bir [Return](../../../../visual-basic/language-reference/statements/return-statement.md) ifadesine sahipse ve tamamlanmış Yöntem anlamlı bir değer döndürmezse `Task` kullandığınızda `Task(T)` kullanırsınız.
 
     Daha fazla bilgi için bkz. [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
 
-    Yöntem `GetURLContents` bir return ifadesine sahiptir ve ifade bir bayt dizisi döndürür. Bu nedenle, zaman uyumsuz sürümün dönüş türü görev (T), burada T bir bayt dizisidir. Yöntem imzasında aşağıdaki değişiklikleri yapın:
+    `GetURLContents` yöntemi bir return ifadesine sahiptir ve ifade bir bayt dizisi döndürür. Bu nedenle, zaman uyumsuz sürümün dönüş türü görev (T), burada T bir bayt dizisidir. Yöntem imzasında aşağıdaki değişiklikleri yapın:
 
-    - Dönüş türünü olarak `Task(Of Byte())`değiştirin.
+    - Dönüş türünü `Task(Of Byte())`değiştirin.
 
-    - Kurala göre, zaman uyumsuz metotların "Async" ile biten adları vardır. bu nedenle, `GetURLContentsAsync`yöntemi yeniden adlandırın.
+    - Kurala göre, zaman uyumsuz metotların "Async" ile biten adları vardır. `GetURLContentsAsync`yöntemi yeniden adlandırın.
 
     Aşağıdaki kod bu değişiklikleri gösterir.
 
@@ -315,15 +315,15 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
     Private Async Function GetURLContentsAsync(url As String) As Task(Of Byte())
     ```
 
-    Bu az değişiklikle, zaman uyumsuz bir metoda `GetURLContents` dönüştürme işlemi tamamlanmıştır.
+    Bu az değişiklikle, zaman uyumsuz bir metoda `GetURLContents` dönüştürmesi tamamlanmıştır.
 
 ## <a name="convert-sumpagesizes-to-an-asynchronous-method"></a>Sumpageslikleri zaman uyumsuz bir metoda Dönüştür
 
-1. İçin `SumPageSizes`önceki yordamdaki adımları tekrarlayın. İlk olarak, çağrısını `GetURLContents` zaman uyumsuz bir çağrıya değiştirin.
+1. `SumPageSizes`için önceki yordamdaki adımları tekrarlayın. İlk olarak, `GetURLContents` çağrısını zaman uyumsuz bir çağrıya değiştirin.
 
-    - Daha önce yapmadıysanız, ' dan `GetURLContents` ' a çağrılan metodun adını değiştirin. `GetURLContentsAsync`
+    - Daha önce yapmadıysanız, `GetURLContents` `GetURLContentsAsync`olarak çağrılan metodun adını değiştirin.
 
-    - Bayt `Await` dizi değerini almak için `GetURLContentsAsync` döndüren göreve uygulanır.
+    - Bayt dizi değerini almak için `GetURLContentsAsync` döndüren göreve `Await` uygulayın.
 
     Aşağıdaki kod bu değişiklikleri gösterir.
 
@@ -342,11 +342,11 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
 
 2. Yöntemin imzasında aşağıdaki değişiklikleri yapın:
 
-    - Yöntemi `Async` değiştiriciyle işaretleyin.
+    - Yöntemi `Async` değiştiricisiyle işaretleyin.
 
     - Yöntem adına "Async" ekleyin.
 
-    - T için bir değer döndürmediğinden `SumPageSizesAsync` , bu kez bir görev dönüş değişkeni yok. (Yönteminde hiçbir ifade yoktur `Return` .) Ancak, yöntemi bir olarak bir `Task` olarak döndürmelidir. Bu nedenle, yöntem türünü `Sub` olarak `Function`değiştirin. İşlevin dönüş türü `Task`.
+    - `SumPageSizesAsync` T için bir değer döndürmediğinden, bu kez bir görev dönüş değişkeni yok. (yöntemin hiçbir `Return` bildirisi yok.) Ancak, yönteminin bir `Task` olması gerekir. Bu nedenle, `Sub` yöntem türünü `Function`olarak değiştirin. İşlevin dönüş türü `Task`.
 
     Aşağıdaki kod bu değişiklikleri gösterir.
 
@@ -354,15 +354,15 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
     Private Async Function SumPageSizesAsync() As Task
     ```
 
-    ' A dönüştürme `SumPageSizes` `SumPageSizesAsync` işlemi tamamlanmıştır.
+    `SumPageSizes` `SumPageSizesAsync` dönüşümü tamamlanmıştır.
 
 ## <a name="convert-startbutton_click-to-an-asynchronous-method"></a>StartButton_Click öğesini zaman uyumsuz bir metoda Dönüştür
 
-1. Daha önce yapmadıysanız, olay işleyicisinde, çağrılan yöntemin `SumPageSizes` adını olarak olarak `SumPageSizesAsync`değiştirin.
+1. Daha önce yapmadıysanız, olay işleyicisinde `SumPageSizes` çağrılan yöntemin adını `SumPageSizesAsync`olarak değiştirin.
 
-2. Zaman `SumPageSizesAsync` uyumsuz bir yöntem olduğundan, olay işleyicisindeki kodu, sonucu bekleme olarak değiştirin.
+2. `SumPageSizesAsync` zaman uyumsuz bir yöntem olduğundan, olay işleyicisindeki kodu, sonucu beklemek için değiştirin.
 
-    `SumPageSizesAsync` İçindeki`GetURLContentsAsync`çağrısınıyansıtançağrı. `CopyToAsync` Çağrı a `Task` `Task(T)`değil, döndürür.
+    `SumPageSizesAsync` çağrısı, `GetURLContentsAsync``CopyToAsync` çağrısını yansıtır. Çağrı bir `Task(T)`değil `Task`döndürür.
 
     Önceki yordamlarda olduğu gibi, çağrıyı tek bir deyim veya iki deyim kullanarak dönüştürebilirsiniz. Aşağıdaki kod bu değişiklikleri gösterir.
 
@@ -375,7 +375,7 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
     Await sumTask
     ```
 
-3. İşlemi yanlışlıkla yeniden girmeye engel olmak için, **Başlangıç** düğmesini devre dışı bırakmak için aşağıdaki ifadeyi `startButton_Click` ' ın üst kısmına ekleyin.
+3. İşlemi yanlışlıkla yeniden girmeye engel olmak için, **Başlangıç** düğmesini devre dışı bırakmak üzere `startButton_Click` en üstüne aşağıdaki ifadeyi ekleyin.
 
     ```vb
     ' Disable the button until the operation is complete.
@@ -391,13 +391,13 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
 
     Yeniden giriş hakkında daha fazla bilgi için bkz. [zaman uyumsuz uygulamalarda yeniden girişi işleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).
 
-4. Son olarak, olay `Async` işleyicisinin `SumPagSizesAsync`beklebilmesi için değiştiricisini bildirime ekleyin.
+4. Son olarak, `Async` değiştiricisini bildirime ekleyerek olay işleyicisinin `SumPagSizesAsync`bekleymasını sağlayabilirsiniz.
 
     ```vb
     Async Sub startButton_Click(sender As Object, e As RoutedEventArgs) Handles startButton.Click
     ```
 
-    Genellikle, olay işleyicilerinin adları değiştirilmez. Olay işleyicilerinin Visual Basic yordamlar olması `Task` `Sub` gerektiğinden, dönüş türü olarak değiştirilmez.
+    Genellikle, olay işleyicilerinin adları değiştirilmez. Olay işleyicilerinin Visual Basic `Sub` yordamlar olması gerektiğinden, dönüş türü `Task` olarak değiştirilmez.
 
     Projenin zaman uyumlu olarak zaman uyumsuz işlemeye dönüştürülmesi işlemi tamamlanır.
 
@@ -407,15 +407,15 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
 
 2. Zaman uyumlu çözümün çıktısına benzeyen çıkış görünmelidir. Ancak, aşağıdaki farklılıklara dikkat edin.
 
-    - İşlem tamamlandıktan sonra sonuçların hepsi aynı anda gerçekleşmiyor. Örneğin, her iki program içinde `startButton_Click` metin kutusunu temizleyen bir satır içerir. Tek bir sonuç kümesi görüntülendikten sonra **Başlat** düğmesini ikinci bir kez seçerseniz, çalıştırmalar arasındaki metin kutusunu temizlemek amaç. Zaman uyumlu sürümde, metin kutusu yalnızca sayımlar ikinci kez görüntülenmeden önce temizlenir, İndirmeler tamamlandığında ve Kullanıcı arabirimi iş parçacığı başka iş yapmak için ücretsizdir. Zaman uyumsuz sürümde, **Başlat** düğmesini seçtikten sonra metin kutusu hemen temizlenir.
+    - İşlem tamamlandıktan sonra sonuçların hepsi aynı anda gerçekleşmiyor. Örneğin, her iki program de `startButton_Click` metin kutusunu temizleyen bir çizgi içerir. Tek bir sonuç kümesi görüntülendikten sonra **Başlat** düğmesini ikinci bir kez seçerseniz, çalıştırmalar arasındaki metin kutusunu temizlemek amaç. Zaman uyumlu sürümde, metin kutusu yalnızca sayımlar ikinci kez görüntülenmeden önce temizlenir, İndirmeler tamamlandığında ve Kullanıcı arabirimi iş parçacığı başka iş yapmak için ücretsizdir. Zaman uyumsuz sürümde, **Başlat** düğmesini seçtikten sonra metin kutusu hemen temizlenir.
 
     - En önemlisi, indirme sırasında UI iş parçacığı engellenmiyor. Web kaynakları indirilirken, sayıldıkça ve görüntülenirken pencereyi taşıyabilir veya yeniden boyutlandırabilirsiniz. Web sitelerinden biri yavaşsa veya yanıt vermiyorsa, **Kapat** düğmesini (sağ üst köşedeki kırmızı alanda bulunan x) seçerek işlemi iptal edebilirsiniz.
 
 ## <a name="replace-the-geturlcontentsasync-method-with-a-net-framework-method"></a>GetURLContentsAsync yöntemini bir .NET Framework yöntemiyle değiştirin
 
-1. .NET Framework kullanabileceğiniz birçok zaman uyumsuz yöntem sağlar. Bunlardan biri, <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29?displayProperty=nameWithType> yöntemi Bu izlenecek yol için yalnızca ihtiyacınız olanları yapar. Daha önceki bir yordamda oluşturduğunuz `GetURLContentsAsync` yöntemi yerine kullanabilirsiniz.
+1. .NET Framework kullanabileceğiniz birçok zaman uyumsuz yöntem sağlar. Bunlardan biri, <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29?displayProperty=nameWithType> yöntemi Bu izlenecek yol için yalnızca ihtiyacınız olanları yapar. Bunu, önceki yordamda oluşturduğunuz `GetURLContentsAsync` yöntemi yerine kullanabilirsiniz.
 
-    İlk adım <xref:System.Net.Http.HttpClient> `SumPageSizesAsync` yönteminde bir nesne oluşturmaktır. Yönteminin başlangıcında aşağıdaki bildirimi ekleyin.
+    İlk adım `SumPageSizesAsync` yönteminde bir <xref:System.Net.Http.HttpClient> nesnesi oluşturmaktır. Yönteminin başlangıcında aşağıdaki bildirimi ekleyin.
 
     ```vb
     ' Declare an HttpClient object and increase the buffer size. The
@@ -424,13 +424,13 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
         New HttpClient() With {.MaxResponseContentBufferSize = 1000000}
     ```
 
-2. İçinde `SumPageSizesAsync,` , yöntemine yapılan çağrıyı yöntemine `GetURLContentsAsync` bir çağrı `HttpClient` ile değiştirin.
+2. `SumPageSizesAsync,` `GetURLContentsAsync` yönteminizin çağrısını `HttpClient` yöntemine yönelik bir çağrı ile değiştirin.
 
     ```vb
     Dim urlContents As Byte() = Await client.GetByteArrayAsync(url)
     ```
 
-3. Yazdığınız `GetURLContentsAsync` yöntemi kaldırın veya not edin.
+3. Yazdığınız `GetURLContentsAsync` yöntemi kaldırın veya açıklamayı kaldırın.
 
 4. Programı çalıştırmak için F5 tuşunu seçin ve sonra **Başlat** düğmesini seçin.
 
@@ -438,7 +438,7 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
 
 ## <a name="example"></a>Örnek
 
-Aşağıda, zaman uyumsuz `GetURLContentsAsync` yöntemi kullanan dönüştürülmüş zaman uyumsuz çözümün tam örneği verilmiştir. Özgün, zaman uyumlu çözüme kesinlikle benzediğine dikkat edin.
+Zaman uyumsuz `GetURLContentsAsync` yöntemini kullanan dönüştürülmüş zaman uyumsuz çözümün tam örneği aşağıda verilmiştir. Özgün, zaman uyumlu çözüme kesinlikle benzediğine dikkat edin.
 
 ```vb
 ' Add the following Imports statements, and add a reference for System.Net.Http.
@@ -565,7 +565,7 @@ Class MainWindow
 End Class
 ```
 
-Aşağıdaki kod, `HttpClient` `GetByteArrayAsync`yöntemini kullanan çözümün tam örneğini içerir.
+Aşağıdaki kod, `GetByteArrayAsync``HttpClient` yöntemini kullanan çözümün tam örneğini içerir.
 
 ```vb
 ' Add the following Imports statements, and add a reference for System.Net.Http.
@@ -660,11 +660,11 @@ End Class
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Zaman uyumsuz örnek: Web Izlenecek yol (C# ve Visual Basic) erişimi](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Zaman uyumsuz örnek: Web Walkthrough 'A erişmeC# (ve Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [Await İşleci](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Async ve await ile zaman uyumsuz programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
 - [Görev tabanlı zaman uyumsuz programlama (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)
-- [Nasıl yapılır: Task. WhenAll (Visual Basic) kullanarak zaman uyumsuz Izlenecek yolu genişletme](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Nasıl yapılır: Task. WhenAll kullanarak zaman uyumsuz Izlenecek yolu genişletme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
 - [Nasıl yapılır: Async ve await kullanarak birden çok Web Isteğini paralel hale getirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

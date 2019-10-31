@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: e6bb1d53cbe1883b8faef75bd22942bd4f65a5e6
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 84b6bfc32f5a73597b227098e5aee1e3450cf85b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71181734"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198583"
 ---
 ### <a name="switchsystemwindowsformsenablevisualstylevalidation-compatibility-switch-not-supported"></a>Switch. System. Windows. Forms. EnableVisualStyleValidation uyumluluk anahtarı desteklenmiyor
 
-`Switch.System.Windows.Forms.EnableVisualStyleValidation` Uyumluluk anahtarı .NET Core 3,0 ' de Windows Forms desteklenmez.
+`Switch.System.Windows.Forms.EnableVisualStyleValidation` uyumluluk anahtarı .NET Core 3,0 üzerinde Windows Forms desteklenmez.
 
 #### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Framework, `Switch.System.Windows.Forms.EnableVisualStyleValidation` uyumluluk anahtarı bir uygulamanın sayısal biçimde sağlanan görsel stillerin doğrulanmasını geri açmasına izin verilir. 
+.NET Framework, `Switch.System.Windows.Forms.EnableVisualStyleValidation` uyumluluk anahtarı bir uygulamanın sayısal bir biçimde sağlanan görsel stillerin doğrulanmasını geri açmasına izin verilir.
 
-.NET Core 'da, `Switch.System.Windows.Forms.EnableVisualStyleValidation` anahtar desteklenmez.
+.NET Core 'da `Switch.System.Windows.Forms.EnableVisualStyleValidation` anahtarı desteklenmez.
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 

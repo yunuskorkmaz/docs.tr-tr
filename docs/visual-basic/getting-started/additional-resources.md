@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: dc7653b1d792c66b40c0ab1d55a1614c7a69b7d1
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 9e55910573b3aa3aecf9082f1b77659a45f883a1
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869055"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196985"
 ---
 # <a name="additional-resources"></a>Ek kaynaklar
 
@@ -51,7 +51,7 @@ Aşağıdaki Web siteleri rehberlik sağlar ve yaygın sorunların yanıtların�
 |URL|Açıklama|
 |----------|----------------|
 |[Microsoft Desteği](https://support.microsoft.com)|Bilgi Bankası (KB) makalelerine, indirmelere ve güncelleştirmelere, destek Web yayınlarına ve diğer hizmetlere erişim sağlar.|
-|[Visual Studio soruları](https://developercommunity.visualstudio.com)|Hataları dosyalamanıza veya Microsoft 'a .NET ve Visual Studio hakkında öneriler sağlamanıza olanak sağlar. Ayrıca, Visual Studio 'da**geri bildirim** > gönder**sorun bildir** **Yardım** > ' a tıklayarak da bir hata bildirebilirsiniz.|
+|[Visual Studio soruları](https://developercommunity.visualstudio.com)|Hataları dosyalamanıza veya Microsoft 'a .NET ve Visual Studio hakkında öneriler sağlamanıza olanak sağlar. Ayrıca, Visual Studio 'da **sorun bildirmek** > **Yardım** > **geri bildirim gönder** ' i seçerek bir hatayı bildirebilirsiniz.|
 
 ## <a name="third-party-resources"></a>Üçüncü taraf kaynakları
 
@@ -64,4 +64,4 @@ Aşağıdaki Web siteleri rehberlik sağlar ve yaygın sorunların yanıtların�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Basic kullanmaya başlayın](../../visual-basic/getting-started/index.md)
-- [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)
+- [Bizimle İletişime Geçin](/visualstudio/ide/feedback-options)

@@ -4,12 +4,12 @@ description: Güçlü adlandırma .NET kitaplıkları için en iyi yöntem öner
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 3a623f65d95d776e45af245a1fe241cc5ee25b93
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3e7cc9a3a1be05d8fcb02b34f7027126697d15d0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968977"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196978"
 ---
 # <a name="strong-naming"></a>Kesin adlandırma
 
@@ -53,7 +53,7 @@ Açık kaynaklı .NET kitaplıklarınızı tanımlayıcı olarak adlandırın. D
 
 > Genel kullanıma açık bir anahtar, geliştiricilerin kitaplık kaynak kodunuzu aynı anahtarla değiştirmesine ve yeniden derlemenize olanak tanır.
 > 
-> Geçmişte, [kısmi güven senaryolarında](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)özel izinler vermek için geçmişte kullanılırsa, tanımlayıcı adlandırma anahtarını genel hale kullanmamanız gerekir. Aksi takdirde, mevcut ortamların güvenliğini tehlikeye atabilir.
+> Geçmişte, [kısmi güven senaryolarında](../../framework/misc/using-libraries-from-partially-trusted-code.md)özel izinler vermek için geçmişte kullanılırsa, tanımlayıcı adlandırma anahtarını genel hale kullanmamanız gerekir. Aksi takdirde, mevcut ortamların güvenliğini tehlikeye atabilir.
 
 > [!IMPORTANT]
 > Kod yayımcısının kimliği isteniyorsa, [Authenticode](/windows-hardware/drivers/install/authenticode) ve [NuGet paket imzalama](/nuget/create-packages/sign-a-package) önerilir. Kod erişim güvenliği (CAS) güvenlik azaltma olarak kullanılmamalıdır.
@@ -62,14 +62,14 @@ Açık kaynaklı .NET kitaplıklarınızı tanımlayıcı olarak adlandırın. D
 
 > [Sürüm oluşturma ve derleme sürümü](./versioning.md#assembly-version)hakkında daha fazla bilgi edinin.
 
-**❌** Tanımlayıcı adlandırma anahtarını ekleme, kaldırma veya değiştirme.
+**❌** tanımlayıcı adlandırma anahtarını ekleme, kaldırma veya değiştirme.
 
 > Bir derlemenin tanımlayıcı adlandırma anahtarını değiştirmek derlemenin kimliğini değiştirir ve onu kullanan derlenmiş kodu keser. Daha fazla bilgi için bkz. [ikili son değişiklikler](./breaking-changes.md#binary-breaking-change).
 
-❌, Kitaplığınızın güçlü adlandırılmış ve tanımlayıcı olmayan sürümlerini **yayımlamaz** . Örneğin, `Contoso.Api` ve `Contoso.Api.StrongNamed`.
+❌, kitaplığınızın güçlü adlandırılmış ve tanımlayıcı olmayan sürümlerini **yayımlamaz** . Örneğin, `Contoso.Api` ve `Contoso.Api.StrongNamed`.
 
 > İki paket yayımlandığında geliştirici ekonomik sisteminize çatalın. Ayrıca, her iki pakete bağlı olarak bir uygulama sonlanıyorsa, geliştirici tür adı çakışmaları ile karşılaşabilir. .NET, farklı derlemelerdeki farklı türlerdir.
 
 >[!div class="step-by-step"]
->[Önceki](cross-platform-targeting.md)İleri
->[](nuget.md)
+>[Önceki](cross-platform-targeting.md)
+>[İleri](nuget.md)

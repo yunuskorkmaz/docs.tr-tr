@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: b50a108d2efbfd3da0d690cb02537a12f766b26b
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: ff156afb3da4b921517fd841c5de2295265a8d7b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72237479"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198581"
 ---
-### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>HttpRequestMessage. Version öğesinin varsayılan değeri 1,1 olarak değiştirildi 
+### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>HttpRequestMessage. Version öğesinin varsayılan değeri 1,1 olarak değiştirildi
 
-@No__t-0 özelliğinin varsayılan değeri 2,0 ' den 1,1 ' e değişmiştir.
+<xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> özelliğinin varsayılan değeri 2,0 ' den 1,1 ' e değişmiştir.
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
@@ -16,10 +16,10 @@ ms.locfileid: "72237479"
 
 #### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core 1,0 ile 2,0 arasında, <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> özelliğinin varsayılan değeri 1,1 ' dir. .NET Core 2,1 ile başlayarak, 2,1 olarak değiştirilmiştir. 
+.NET Core 1,0 ile 2,0 arasında, <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> özelliğinin varsayılan değeri 1,1 ' dir. .NET Core 2,1 ile başlayarak, 2,1 olarak değiştirilmiştir.
 
 .NET Core 3,0 ile başlayarak, <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> özelliği tarafından döndürülen varsayılan sürüm numarası bir kez daha 1,1.
- 
+
 #### <a name="recommended-action"></a>Önerilen eylem
 
 Varsayılan 2,0 değerini döndüren <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> özelliğine bağımlıysa, kodunuzu güncelleştirin.

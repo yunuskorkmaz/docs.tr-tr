@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 22ef5d0f91a4f61ca75203f677bcc14e91d77dc1
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cd66317bc93343e03a73dec74dff534776ca42e4
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394120"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198589"
 ---
 ### <a name="http-response-body-infrastructure-changes"></a>HTTP: yanıt gövdesi altyapı değişiklikleri
 
-Bir HTTP yanıt gövdesini yedekleyen altyapı değişti. @No__t-0 ' ı doğrudan kullanıyorsanız, herhangi bir kod değişikliği yapmanız gerekmez. @No__t-0 ' yı sardıysanız veya değiştirirken veya `HttpContext.Features` ' i kullanırken daha fazla bilgi edinin.
+Bir HTTP yanıt gövdesini yedekleyen altyapı değişti. `HttpResponse` doğrudan kullanıyorsanız, herhangi bir kod değişikliği yapmanız gerekmez. `HttpResponse.Body` sardıysanız veya değiştiriyorsanız ya da `HttpContext.Features`erişimi varsa daha fazla bilgi edinin.
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
@@ -24,7 +24,7 @@ HTTP yanıt gövdesi ile ilişkili üç API vardı:
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-@No__t-0 ' ı değiştirirseniz, tüm `IHttpResponseBodyFeature` ' i, tüm beklenen API 'Ler için varsayılan uygulamalar sağlamak üzere `StreamResponseBodyFeature` kullanarak verilen akışlarınızın etrafındaki bir sarmalayıcı ile değiştirir. Özgün akışın geri ayarlanması bu değişikliği geri alır.
+`HttpResponse.Body`değiştirirseniz, tüm `IHttpResponseBodyFeature`, tüm beklenen API 'Ler için varsayılan uygulamalar sağlamak üzere `StreamResponseBodyFeature` kullanarak verilen akışlarınızın etrafında bir sarmalayıcı ile değiştirir. Özgün akışın geri ayarlanması bu değişikliği geri alır.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -43,7 +43,7 @@ ASP.NET Core
 - <xref:Microsoft.AspNetCore.Http.Features.IHttpBufferingFeature?displayProperty=nameWithType>
 - <xref:Microsoft.AspNetCore.Http.Features.IHttpResponseFeature.Body?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Http.Features.IHttpSendFileFeature?displayProperty=nameWithType>
- 
+
 <!-- 
 
 #### Affected APIs

@@ -2,12 +2,12 @@
 title: LINQ to XML dinamik özellikler başvurusu
 ms.date: 10/22/2019
 ms.topic: reference
-ms.openlocfilehash: ca3684716f9b562d0e6a006c26730a1d1a28f8b1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 48b51e92eb78786b2cc189e3e7daa00875b41585
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920932"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197046"
 ---
 # <a name="linq-to-xml-dynamic-properties"></a>LINQ to XML dinamik özellikleri
 
@@ -21,7 +21,7 @@ Bu bölüm LINQ to XML içindeki dinamik özelliklerle ilgili başvuru bilgileri
 
 - Dizin Oluşturucu türünde çözümlenilen <xref:System.Xml.Linq.XElement> [öğeleri](elements-xelement-dynamic-property.md) ve [alt](descendants-xelement-dynamic-property.md) öğeler gibi dizinli değerler. Dizin Oluşturucu türlerinin istenen değere veya koleksiyona çözümlenmesi için, bir genişletilmiş ad parametresi geçirilmesi gerekir.
 
-<xref:System.Collections.Generic.IEnumerable%601> türünde dizinli bir değer döndüren tüm dinamik özellikler ertelenmiş yürütmeyi kullanır. Ertelenmiş yürütme hakkında daha fazla bilgi için bkz. [LINQ Sorgularına Giriş (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries).
+<xref:System.Collections.Generic.IEnumerable%601> türünde dizinli bir değer döndüren tüm dinamik özellikler ertelenmiş yürütmeyi kullanır. Ertelenmiş yürütme hakkında daha fazla bilgi için bkz. [LINQ Sorgularına Giriş (C#)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
 ## <a name="reference"></a>Başvuru
 
@@ -33,4 +33,4 @@ Bu bölüm LINQ to XML içindeki dinamik özelliklerle ilgili başvuru bilgileri
 
 - [LINQ to XML ile WPF verilerini bağlama](wpf-data-binding-with-linq-to-xml-overview.md)
 - [LINQ to XML genel bakış ile WPF veri bağlama](wpf-data-binding-with-linq-to-xml-overview.md)
-- [LINQ Sorgularına Giriş (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)
+- [LINQ Sorgularına Giriş (C#)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)

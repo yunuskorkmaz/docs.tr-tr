@@ -8,116 +8,116 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f62fbe13b42202a2eaca212236ee5fd9aa4df05
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3ebeae3e51cedd3add2de4062c8914693ac94f7b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053147"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197000"
 ---
 # <a name="wpf-community-feedback"></a>WPF topluluğu geri bildirimi
 
-Microsoft, topluluk kaynakları hakkında bilgi edinin, tartışın ve Windows Presentation Foundation (WPF) geri bildirim sağlamak için çeşitli kullanıma sunar. Bu kaynaklar forumları içerir ve [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/) site. Her bir topluluk kaynak farklı birtakım avantajlar sunar. Bu avantajlar, her özellikle büyük topluluk ve Microsoft en iyi yanıtı sağlamak için kullanmaya yönelik en iyi bir dizi olarak burada açıklanmıştır.
+Microsoft, Windows Presentation Foundation (WPF) hakkında bilgi edinmek, tartışmak ve geri bildirimde bulunmak için kullanabileceğiniz çeşitli topluluk kaynaklarını kullanıma sunar. Bu kaynaklar forumları ve [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/) sitesini içerir. Her topluluk kaynağı farklı bir avantajlar kümesi sunar. Bu avantajlar, her birinin büyük ve Microsoft 'taki topluluk açısından en iyi yanıtı sağlamak üzere her birini kullanmaya yönelik en iyi yöntemler kümesi olarak açıklanmaktadır.
 
 > [!NOTE]
-> Her sayfanın alt kısmında bulunan geri bildirim bölümünde ürün geri bildirim göndermek için kullanmayın. Bu bağlantılar yalnızca belge geri bildirimi verilmiştir.
+> Ürün geri bildirimi göndermek için her sayfanın alt kısmında bulunan geri bildirim bölümünü kullanmayın. Bu bağlantılar yalnızca belge geri bildirimlerine yöneliktir.
 
 ## <a name="forums"></a>Forumlar
 
-[WPF Forumu](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf) tartışmak ve sorunları çözmek için birincil topluluk kaynaktır. Forumlar, kapsamlı bir dizi içeren özellikler destekleyici sunarak tartışmalar ve sorun çözümlemesi kolaylaştırmak:
+[WPF Forumu](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf) , sorunların ele alınması ve çözümlenmesi için birincil topluluk kaynağıdır. Forumlar, aşağıdakiler dahil olmak üzere kapsamlı bir destekleyici özellikler kümesi sunarak tartışmayı ve sorun çözümünü kolaylaştırır:
 
-- Aranıyor.
-- Tartışma.
-- Zengin metin ve kod biçimlendirme.
+- Arama.
+- Tartışma izleme.
+- Metin ve kod için zengin biçimlendirme.
 - Visual Studio tümleştirmesi.
-- En değerli Professional (MVP) ve topluluk katılımı.
-- Gönderileri hızlı olası zamanında yanıt emin olmak için izleme.
+- En değerli profesyonel (MVP) ve topluluk katılımı.
+- Gönderilerin, mümkün olan en hızlı zamanda yanıt verdiğinden emin olmak için izleme.
 
-WPF hakkında topluluğa soru sormanız için başka bir seçenek [Stack Overflow](https://stackoverflow.com/questions/tagged/wpf).
+WPF hakkında soru sormanız için başka bir seçenek de [Stack Overflow](https://stackoverflow.com/questions/tagged/wpf).
 
-### <a name="forum-best-practices"></a>Forum en iyi uygulamalar
+### <a name="forum-best-practices"></a>Forum en iyi yöntemleri
 
-Aşağıdaki en iyi kullanarak hızlı olası zamanında WPF foruma postalanan sorunlarını gidermek için Yardım yöntemler. Bu yöntemler tüm forumları için geçerlidir.
+Aşağıdaki en iyi yöntemler, WPF forumuna gönderilen sorunları en hızlı olası sürede ele almak için yardımcı olur. Bu uygulamalar tüm Forumlar için geçerlidir.
 
-#### <a name="search-existing-posts"></a>Mevcut gönderileri arayın
+#### <a name="search-existing-posts"></a>Mevcut gönderilerini arayın
 
-Bazı sorunlar yeterince büyük ölçüde diğerleri bunları önce karşılaştığı olduğunu oluşur. Sonuç olarak, sorunu hızlıca çözme veya girişinizi var olan bir tartışmaya ekleyebilirsiniz.
+Bazı sorunlar daha önce başkalarının daha önce karşılaştığı kadar çok büyük bir süre oluşur. Sonuç olarak, sorununuzu hızlı bir şekilde çözebilir veya mevcut bir tartışmaya giriş ekleyebilirsiniz.
 
 #### <a name="use-meaningful-titles"></a>Anlamlı başlıklar kullanın
 
-Kısa ve anlamlı bir başlık postalarınıza bulunabilirliğini artırın. Bunlar ayrıca diğer WPF Forumu topluluk üyelerinin sorununuzu çözmek, belirlemek için kolaylaştırır.
+Kısa, anlamlı başlıklar gönderilerinizi bulunabilirliği iyileştirir. Ayrıca, diğer WPF forum topluluk üyelerinin sorununuzu çözebilecekleri saptanması kolaylaşır.
 
-#### <a name="include-appropriate-content"></a>Uygun içerik
+#### <a name="include-appropriate-content"></a>Uygun içeriği dahil et
 
-Sorun ve nasıl üzerinden çalışma girişimi yaptınız açıklanmaktadır. Mümkünse, kod parçacıkları veya sorununuzu gösteren basit olası örneği içerir. Sorunuzu bir kolayca yanıtlanacak olasılığını artırmak için bu Ayrıntılar yardımcı olur.
+Sorunu ve bu sorunu nasıl deneyişlerinizi betimleyen. Mümkünse, destek kod parçacıklarını veya sorununuzu gösteren en basit örneği de ekleyin. Tüm bu ayrıntılar, sorunuzu hızlı bir şekilde cevaplanacak şansı artırmaya yardımcı olur.
 
 ## <a name="visual-studio-developer-community"></a>Visual Studio Geliştirici topluluğu
 
-Sorunlar, bazen çözümlemek zor veya çözümlenemeyen olabilir. Böyle durumlarda belirli senaryolar ya da belirli senaryolar için destek eksikliği teknoloji uygulama zorluklarla teknoloji hataları nedeniyle ortaya çıkar. Bu bilgiler Microsoft'a önemlidir ve aracılığıyla sağlanan [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/) site.
+Sorunlar bazen çözülmesi zor olabilir veya çözülenebilir. Bu tür durumlar teknolojideki hatalar, belirli senaryolara teknolojinin uygulanmasıyla ilgili zorluklar veya belirli senaryolar için destek olmaması nedeniyle oluşur. Bu bilgiler, Microsoft için önemlidir ve [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/) sitesi aracılığıyla sağlaneklenebilir.
 
-WPF ürün geri bildirim Merkezi'nde yayınlanan öğelerini, WPF takımın iç hata veritabanına yönlendirilir. Sonuç olarak, bu WPF özellik sahibine geri bildirim almak için en güvenilir yoludur. Ayrıca, doğrulamak ve öneriler ve hataları izleyin yapabilir bunlar üzerinde yardımcı olan WPF takım, sorunları önceliklendirmek için oy verin.
+WPF ürün geri bildirim merkezinde gönderilen öğeler WPF ekibinin iç hata veritabanına yönlendirilir. Sonuç olarak, WPF özelliği sahibine geri bildiriminizi almanın en güvenilir yoludur. Bunlara ek olarak, öneriler ve hataları da doğrulayabilir ve izleyebilir, böylece WPF ekibinin sorunları önceliklendirmesine yardımcı olur.
 
-### <a name="developer-community-best-practices"></a>Geliştirici topluluğu en iyi uygulamalar
+### <a name="developer-community-best-practices"></a>Geliştirici topluluğu en iyi uygulamaları
 
-Visual Studio Geliştirici topluluğuna nakil sırasında mevcut arama, anlamlı bir başlık sağlama gönderir ve uygun içeriklerimizin WPF foruma göndermek için olduğu gibi önemli en iyi yöntemler. Ayrıca içermelidir ek en iyi uygulamalar aşağıda verilmiştir.
+Visual Studio Geliştirici topluluğu 'na naklederken, mevcut gönderileri aramak için, tıpkı WPF forumuna gönderdikleri gibi anlamlı bir başlık ve uygun içerikler önemli en iyi deneyimlerdir. Aşağıdaki ek en iyi yöntemler de kullanılmalıdır.
 
-#### <a name="search-existing-posts"></a>Mevcut gönderileri arayın
+#### <a name="search-existing-posts"></a>Mevcut gönderilerini arayın
 
-Bazı sorunlar yeterince büyük ölçüde diğerleri bunları önce karşılaştığı olduğunu oluşur. Sonuç olarak, sorunu hızlıca çözme veya var olan bir sorunu için giriş ekleyebilirsiniz.
+Bazı sorunlar daha önce başkalarının daha önce karşılaştığı kadar çok büyük bir süre oluşur. Sonuç olarak, sorununuzu hızlı bir şekilde çözebilir veya mevcut bir soruna giriş ekleyebilirsiniz.
 
 #### <a name="use-meaningful-titles"></a>Anlamlı başlıklar kullanın
 
-Kısa ve anlamlı bir başlık artış fırsat sorunu en kısa sürede en uygun WPF takıma yönlendirilir. Bu gibi birbiriyle ilişkili birçok özellik içeren bir WPF bir teknoloji için özellikle önemlidir.
+Kısa, anlamlı başlıklar, sorununuzun en uygun WPF takımına en kısa sürede yönlendirilme olasılığını artırır. Bu, özellikle birbiriyle ilişkili birçok özelliği içeren WPF gibi bir teknoloji için önemlidir.
 
-#### <a name="describe-how-to-reproduce-your-bug"></a>Hatayı yeniden oluşturmaya nasıl açıklar
+#### <a name="describe-how-to-reproduce-your-bug"></a>Hatayı yeniden oluşturma hakkında açıklama
 
-İle ilgili bir hata gönderin, ilgili yerlerde şunları içerir önemlidir:
+Bir hata hakkında gönderi gönderdiğinizde, ilgili olan yerlerde aşağıdakiler dahil edilmesi önemlidir:
 
-- Hata hakkında NET bir açıklama sağlayın.
-- Kod parçacıkları, hata açıklaması desteklemek için kullanın.
-- Hatayı yeniden oluşturmak nasıl gösteren adımları bir listesini sağlayın.
-- Hata oluşmazsa en küçük olası kod örneği içerir.
-- Hatayı yeniden üretilebilen tutarlı olup olmadığını bahsedebilirsiniz.
-- İlgili özel durum bilgilerini içerir.
+- Hatanın açık bir açıklamasını sağlayın.
+- Hata açıklamasını desteklemek için kod parçacıklarını kullanın.
+- Hatanın nasıl yeniden üretemediğini gösteren adımların bir listesini sağlayın.
+- Hatayı yeniden üreten olası en küçük kod örneğini ekleyin.
+- Hatanın sürekli olarak tekrarlanabilir olup olmadığını bahsetme.
+- İlgili özel durum bilgilerini ekleyin.
 
- Yükleme veya Kurulum ilgili hata olması durumunda ilgili yükleme günlükleri ve anlık görüntüler (, % temp % klasöründe yer alan "ile dd_" ön ekli dosyaları) ekleyin.
+ Hata yükleme veya kurma ise, ilgili yükleme günlüklerini ve anlık görüntülerini ("dd_" önekini ön eki olan dosyalar,% Temp% klasöründe bulunur) ekleyin.
 
- İçin derleme, Derleme günlüklerini ekleme, veya sorunlar oluşturun. Sistem için yapılandırılabilir MSBuild komut satırından/v: anahtarını kullanarak veya uygun düzeyde gelen bir tümleşik geliştirme ortamı (IDE) Visual Studio gibi yapılandırma çeşitli verbosities günlüğüyle destekler.
+ Derleme veya yapı sorunları için, Derleme günlüklerini iliştirin. MSBuild sistemi, komut satırından/v: anahtarını kullanarak veya Visual Studio gibi bir tümleşik geliştirme ortamından (IDE) uygun düzeyi yapılandırarak çeşitli verbosities ile günlüğe kaydetmeyi destekleyecek şekilde yapılandırılabilir.
 
-#### <a name="provide-environment-information"></a>Ortam bilgilerini sağlayın
+#### <a name="provide-environment-information"></a>Ortam bilgilerini sağlama
 
-Arka plan bilgileri genellikle ekleyerek bağlam için yararlı olabilir. Özellikle, işletim sistemi platformu, işlemci ailesini ve "Windows 10 sürüm 1709, Intel(r) Xeon(R) x64." gibi bir mimari bahsedin
+Arka plan bilgileri genellikle gönderinizi bağlam eklemek için yararlı olabilir. Özellikle, "Windows 10 sürüm 1709, Intel (R) Xeon (R) Xeon (R), x64" gibi işletim sistemi platformundan, işlemci ailesiyle ve mimarisinden bahsedin.
 
-Hakkında postaladığınız sorunu işlemeyle ilişkili ise, aynı zamanda grafik kartı ve sürücü ayrıntıları, mümkünse içermelidir. Bu bilgiler, WPF bir sunu çerçevesidir için önemlidir.
+Gönderme yaptığınız sorun işleme ile ilgiliyse, mümkünse grafik kartı ve Sürücü ayrıntılarını da dahil etmelisiniz. Bu bilgiler, WPF bir sunum çerçevesi olduğundan önemlidir.
 
-#### <a name="provide-solution-or-project-information"></a>Çözüm veya proje bilgileri sağlayın
+#### <a name="provide-solution-or-project-information"></a>Çözüm veya proje bilgilerini sağlama
 
-Hataları geliştirin ve uygulamalarınızı ve oluşturmakta olduğunuz uygulama türleri oluşturmak için kullanılan araçları ait. Sonuç olarak, belirtmek yararlı olabilir:
+Hatalar, uygulamalarınızı geliştirmek ve derlemek için kullanılan araçlarla ve oluşturmakta olduğunuz uygulama türleri ile ilgili olabilir. Sonuç olarak, şunları belirtmek yararlı olabilir:
 
-- Uygulama türü, gibi oluşturuyorsunuz:
-  - Uygulama (*.exe*) veya kitaplık (*.dll*)
+- Oluşturmakta olduğunuz uygulamanın türü, örneğin:
+  - Uygulama ( *. exe*) veya kitaplık ( *. dll*)
   - Extensible Application Markup Language (XAML) tarayıcı uygulaması (XBAP)
-  - Gevşek XAML uygulama
-  - Tek başına yüklü uygulamalar
-  - Tek başına ClickOnce dağıtılan uygulamalar
-- Geliştirme aracı gibi:
+  - Gevşek XAML uygulaması
+  - Tek başına yüklenen uygulamalar
+  - Tek başına ClickOnce tarafından dağıtılan uygulamalar
+- Geliştirme aracı, örneğin:
   - MSBuild
   - İfade Grafik Tasarımcısı
-  - İfade etkileşimli Tasarımcısı
+  - İfade etkileşimli tasarımcı
   - Visual Studio
-- Çözüm yapılandırması gibi:
+- Çözüm yapılandırması, örneğin:
   - Bir çözüm
   - Tek bir proje
-  - Birden çok bağımlı projeleri içeren bir çözüm
-- Uygulamanızı dile özgü veya dilden kaynakları olup olmadığı. Örneğin, belirttiğiniz yaptığınız `UICulture` proje özelliği veya yerelleştirilebilir meta verilerini `Application`, `Page`, ve `Resource` türleri?
-- Nötr dil ayarı AssemblyInfo.cs veya AssemblyInfo.vb dosyasında kullanılıp.
+  - Birden çok bağımlı projeyle bir çözüm
+- Uygulamanızın dile özgü veya dilden bağımsız kaynaklar içerip içermediğini belirtir. Örneğin, `Application`, `Page`ve `Resource` türleri için `UICulture` proje özelliğini veya yerelleştirilebilir meta verileri mi belirtistediniz?
+- AssemblyInfo.cs veya AssemblyInfo. vb dosyasında Nötr dil ayarını kullandıysanız.
 
-#### <a name="provide-scenario-and-impact-information"></a>Senaryo ve etkisi bilgileri sağlayın
+#### <a name="provide-scenario-and-impact-information"></a>Senaryo ve etki bilgilerini sağlama
 
-Hata ve etkisini bildirimleri senaryosu hakkında bilgi sağlar. Sorun ne zaman ve nasıl düzeltilmesi gereken veya kabul edilebilir bir çözüm yerine kullanılıp kullanılamayacağı, karar verdiğinde bu bilgileri WPF takım için çok önemlidir.
+Hatayı ve etkisini belirten senaryo hakkında bilgi sağlayın. Bu bilgiler WPF ekibi için son derece önemlidir, ne zaman, bir sorun düzeltilmeli veya bunun yerine kabul edilebilir bir geçici çözüm kullanılıp kullanılamayacağını belirler.
 
-Normalde, kilitlenme ve veri kaybı senaryolarını yüksek etkisi ve bu nedenle, kolay önceliğini belirlemek ' dir. Bazı hatalar ancak yalnızca bazı durumlarda ana hat senaryolar da olabilir nadir senaryolarda gösterilir. Bağlam senaryo ve etkisi, doğru kararı WPF takıma yardımcı olur.
+Normalde, kilitlenme ve veri kaybı senaryoları yüksek etki ve dolayısıyla önceliklendirmenin en kolay yoludur. Ancak bazı hatalar, bazı durumlarda de ana hat senaryoları olabilecek yaygın olmayan senaryolarda gösterilmektedir. Senaryo ve etki etrafında bağlam sağlamak WPF ekibinin doğru kararı vermesini sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 2017 ile ilgili bir sorun bildirme](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)
+- [Visual Studio ile ilgili sorun bildirme](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)

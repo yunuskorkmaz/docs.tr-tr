@@ -2,19 +2,19 @@
 title: Visual Studio 'da Ifade ağaçlarında hata ayıklamaC#()
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 2b858597a01f4d7ce460460956d3efcad856531d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 30f538712881e41b4fd0e62d06f74373d755ea40
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318992"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195688"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Visual Studio 'da Ifade ağaçlarında hata ayıklamaC#()
-Uygulamalarınızda hata ayıklarken ifade ağaçlarının yapısını ve içeriğini çözümleyebilirsiniz. İfade ağacı yapısına hızlı bir genel bakış almak için, [özel bir sözdizimi kullanarak](debugview-syntax.md)ifade ağaçlarını temsil eden `DebugView` özelliğini kullanabilirsiniz. (@No__t-0 ' ın yalnızca hata ayıklama modunda kullanılabilir olduğunu unutmayın.)  
+Uygulamalarınızda hata ayıklarken ifade ağaçlarının yapısını ve içeriğini çözümleyebilirsiniz. İfade ağacı yapısına hızlı bir genel bakış almak için, [özel bir sözdizimi kullanarak](debugview-syntax.md)ifade ağaçlarını temsil eden `DebugView` özelliğini kullanabilirsiniz. (`DebugView` yalnızca hata ayıklama modunda kullanılabilir olduğunu unutmayın.)  
 
 ![VS hata ayıklayıcı içindeki bir ifade ağacının DebugView 'ın ekran görüntüsü.](media/debugging-expression-trees-in-visual-studio/debugview-expression-tree.png)
 
-@No__t-0 bir dize olduğundan, `DebugView` etiketinin yanındaki büyüteç simgesinden **metin görselleştiricisi** ' i seçerek birden çok satırda görüntülemek Için [yerleşik metin Görselleştirici](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer) ' u kullanabilirsiniz.
+`DebugView` bir dize olduğundan, `DebugView` etiketinin yanındaki büyüteç simgesinden **metin görselleştiricisi** ' i seçerek birden çok satırda görüntülemek Için [yerleşik metin Görselleştirici](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer) ' u kullanabilirsiniz.
 
  ![DebugView sonuçlarına uygulanan metin görselleştirmesinin ekran görüntüsü.](media/debugging-expression-trees-in-visual-studio/string-visualizer-debugview.png)
 
@@ -41,6 +41,6 @@ Alternatif olarak, şu gibi bir ifade ağaçları için [özel Görselleştirici
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İfade ağaçları (C#)](./index.md)
-- [Visual Studio’da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio)
+- [Visual Studio’da hata ayıklama](/visualstudio/debugger/debugger-feature-tour)
 - [Özel Görselleştirici Oluşturma](/visualstudio/debugger/create-custom-visualizers-of-data)
 - [`DebugView` sözdizimi](debugview-syntax.md)

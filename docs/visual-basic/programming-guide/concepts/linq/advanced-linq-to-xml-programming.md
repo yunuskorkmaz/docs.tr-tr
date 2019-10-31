@@ -1,32 +1,32 @@
 ---
-title: Gelişmiş LINQ to XML programlama (Visual Basic)
+title: Gelişmiş LINQ to XML Programlama (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 36018532-a55c-4538-8a27-98f475ea3415
-ms.openlocfilehash: f30f8f1c6dcdbabc1f32f4f7e216ce65a50396c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1ffed42036bd7398384717725328e19e6ac7812
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787211"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198287"
 ---
-# <a name="advanced-linq-to-xml-programming-visual-basic"></a>Gelişmiş LINQ to XML programlama (Visual Basic)
-Bu bölümde, yalnızca bazı ileri düzey geliştiriciler için geçerli olacak bilgi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] senaryoları.  
+# <a name="advanced-linq-to-xml-programming-visual-basic"></a>Gelişmiş LINQ to XML Programlama (Visual Basic)
+Bu bölüm, yalnızca belirli [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] senaryolardaki gelişmiş geliştiriciler için geçerli olacak bilgiler sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[LINQ to XML Ek Açıklamaları](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md)|Ek açıklamalar eklemeyi açıklar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] düğümleri ve öznitelikleri.|  
-|[LINQ to XML olayları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-events.md)|Bir XML ağacı değiştirdiğinizde meydana gelen olayları için olay işleyicileri yazma açıklar.|  
-|[(Visual Basic) düğümlerle programlama](../../../../visual-basic/programming-guide/concepts/linq/programming-with-nodes.md)|Sorgu ve öğeler ve öznitelikler daha hassas bir düzeyde ayrıntı düğümleri işlemek nasıl açıklar.|  
-|[Bildirim temelli kod/kesinliği kod hataları karışımı (LINQ to XML) karma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)|Kesinlik temelli kod (XML ağacı değiştiren kodun) bildirim temelli bir kod (sorgular) karışımı görüntülenen sorunlar açıklanır.|  
-|[Nasıl yapılır: (Visual Basic) üst bilgilere erişimle XML parçalarının Stream](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)|Gelen XML parçalarının akışını açıklar bir <xref:System.Xml.XmlReader>. Uygulamanızın bellek Ayak izi denetlemek için bu tekniği kullanabilirsiniz.|  
-|[Nasıl yapılır: (Visual Basic) büyük XML belgelerinin akış dönüşümünü gerçekleştirme](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md)|XML'den akışını açıklar bir <xref:System.Xml.XmlReader>, XML parçası dönüştürme ve kullanarak çıkış akışı <xref:System.Xml.Linq.XStreamingElement>.|  
-|[Nasıl yapılır: Okuma ve yazma kodlanmış belge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md)|Okuma ve yazma kodlanan XML belgeleri açıklar.|  
-|[(Visual Basic) XML ağacı dönüştürmek için XSLT kullanma](../../../../visual-basic/programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md)|XSLT kullanarak XML ağacı dönüştürmek açıklar.|  
-|[Nasıl yapılır: LINQ to XML ağaçlarını XSLT stilindeki (Visual Basic) dönüştürmek için ek açıklamalarını kullanma](../../../../visual-basic/programming-guide/concepts/linq/how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md)|XML ağacının dönüşümler kolaylaştırmak için ek açıklamalar'ın nasıl kullanılabileceğini açıklar.|  
-|[(Visual Basic) XElement nesneleri içeren nesne grafiklerini serileştirme](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|İçeren nesne grafiklerini serileştirme açıklar <xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XDocument> nesneleri.|  
-|[LINQ to XML ile WPF Verilerini Bağlama](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|Windows Presentation Foundation uygulamalarında veri bağlama için veri kaynağı olarak LINQ to XML kullanmayı açıklar.|  
+|[LINQ to XML Ek Açıklamaları](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md)|[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] düğümlerine ve özniteliklerine ek açıklamaların nasıl ekleneceğini açıklar.|  
+|[LINQ to XML olayları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-events.md)|Bir XML ağacını değiştirdiğinizde oluşan olaylar için olay işleyicilerinin nasıl yazılacağını açıklar.|  
+|[Düğümlerle programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-with-nodes.md)|Öğelerin ve özniteliklerin daha ayrıntılı düzeyinde düğümlerin nasıl sorgulanılacağını ve değiştirileceğini açıklar.|  
+|[Karma bildirime dayalı kod/zorunlu kod hataları (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)|Tanımlayıcı kod (XML ağacını değiştiren kod) ile bildirim temelli kod (sorgular) karıştırma sırasında görünen sorunları açıklar.|  
+|[Nasıl yapılır: üst bilgi bilgilerine erişimi olan XML parçalarını akışa alma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)|Bir <xref:System.Xml.XmlReader>XML parçalarının nasıl akışının oluşturulacağını açıklar. Uygulamanızın bellek parmak izini denetlemek için bu tekniği kullanabilirsiniz.|  
+|[Nasıl yapılır: büyük XML belgelerinin akış dönüşümünü gerçekleştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md)|Bir <xref:System.Xml.XmlReader>XML akışını, XML parçasını dönüştürmeyi ve <xref:System.Xml.Linq.XStreamingElement>kullanarak çıkışın akışını açıklar.|  
+|[Nasıl yapılır: kodlanmış bir belgeyi okuma ve yazma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md)|Kodlanmış XML belgelerinin nasıl okunacağını ve yazılacağını açıklar.|  
+|[XML ağacını dönüştürmek için XSLT kullanma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md)|XSLT kullanarak bir XML ağacının nasıl dönüştürüleceğini açıklar.|  
+|[Nasıl yapılır: XSLT stilinde LINQ to XML ağaçlarını dönüştürmek için ek açıklamaları kullanma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md)|Bir XML ağacının dönüştürmelerini kolaylaştırmak için ek açıklamaların nasıl kullanılabileceğini açıklar.|  
+|[XElement nesneleri içeren nesne grafiklerini serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|<xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XDocument> nesneleri içeren nesne grafiklerinin nasıl serileştirilmek açıklanmaktadır.|  
+|[LINQ to XML ile WPF Verilerini Bağlama](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)|Windows Presentation Foundation uygulamalarında veri bağlama için veri kaynağı olarak LINQ to XML nasıl kullanacağınızı açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
