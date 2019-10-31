@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-ms.openlocfilehash: 42f31df7f4bc849374d8beb09e17394c3cdd5ec4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3ef2aa5e25d61f005159e06852e23c2c036fd54
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774869"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198178"
 ---
-# <a name="unable-to-load-information-for-class-classname"></a><span data-ttu-id="f5465-102">Sınıf için bilgileri yüklenemiyor\<SınıfAdı >'</span><span class="sxs-lookup"><span data-stu-id="f5465-102">Unable to load information for class '\<classname>'</span></span>
-<span data-ttu-id="f5465-103">Kullanılabilir olmayan bir sınıfa bir başvuru yapıldı.</span><span class="sxs-lookup"><span data-stu-id="f5465-103">A reference was made to a class that is not available.</span></span>  
+# <a name="unable-to-load-information-for-class-classname"></a><span data-ttu-id="e29a1-102">'\<ClassName > ' sınıfının bilgileri yüklenemiyor</span><span class="sxs-lookup"><span data-stu-id="e29a1-102">Unable to load information for class '\<classname>'</span></span>
+<span data-ttu-id="e29a1-103">Kullanılamayan bir sınıfa bir başvuru yapıldı.</span><span class="sxs-lookup"><span data-stu-id="e29a1-103">A reference was made to a class that is not available.</span></span>  
   
- <span data-ttu-id="f5465-104">**Hata Kimliği:** BC30712</span><span class="sxs-lookup"><span data-stu-id="f5465-104">**Error ID:** BC30712</span></span>  
+ <span data-ttu-id="e29a1-104">**Hata kimliği:** BC30712</span><span class="sxs-lookup"><span data-stu-id="e29a1-104">**Error ID:** BC30712</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f5465-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="f5465-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e29a1-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="e29a1-105">To correct this error</span></span>  
   
-1. <span data-ttu-id="f5465-106">Sınıf tanımlanır ve adının doğru yazıldığından emin olun.</span><span class="sxs-lookup"><span data-stu-id="f5465-106">Verify that the class is defined and that you spelled the name correctly.</span></span>  
+1. <span data-ttu-id="e29a1-106">Sınıfın tanımlandığını ve adı doğru yazdığınızdan emin olun.</span><span class="sxs-lookup"><span data-stu-id="e29a1-106">Verify that the class is defined and that you spelled the name correctly.</span></span>  
   
-2. <span data-ttu-id="f5465-107">Modülde tanımlanmış üyelerinden erişmeyi deneyin.</span><span class="sxs-lookup"><span data-stu-id="f5465-107">Try accessing one of the members declared in the module.</span></span> <span data-ttu-id="f5465-108">Bazı durumlarda, burada bildirildikleri modülleri henüz yüklenmedi çünkü hata ayıklama ortamında üyeleri bulamıyor.</span><span class="sxs-lookup"><span data-stu-id="f5465-108">In some cases, the debugging environment cannot locate members because the modules where they are declared have not been loaded yet.</span></span>  
+2. <span data-ttu-id="e29a1-107">Modülde belirtilen üyelerden birine erişmeyi deneyin.</span><span class="sxs-lookup"><span data-stu-id="e29a1-107">Try accessing one of the members declared in the module.</span></span> <span data-ttu-id="e29a1-108">Bazı durumlarda, bildirildiği modüller henüz yüklenmediği için hata ayıklama ortamı üyeleri bulamaz.</span><span class="sxs-lookup"><span data-stu-id="e29a1-108">In some cases, the debugging environment cannot locate members because the modules where they are declared have not been loaded yet.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f5465-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f5465-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e29a1-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e29a1-109">See also</span></span>
 
-- [<span data-ttu-id="f5465-110">Visual Studio’da hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="f5465-110">Debugging in Visual Studio</span></span>](/visualstudio/debugger/debugging-in-visual-studio)
+- [<span data-ttu-id="e29a1-110">Visual Studio’da hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="e29a1-110">Debugging in Visual Studio</span></span>](/visualstudio/debugger/debugger-feature-tour)
