@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 22d2e339-f174-40b5-a478-0b744501566f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 489ea22e17178398f53e103da04a47e8fe15a936
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 693ec07176f80711709cd9b85c6886bea8be74b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738927"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122960"
 ---
-# <a name="iclrdataenummemoryregionsenummemoryregions-method"></a><span data-ttu-id="bbeeb-102">ICLRDataEnumMemoryRegions::EnumMemoryRegions Yöntemi</span><span class="sxs-lookup"><span data-stu-id="bbeeb-102">ICLRDataEnumMemoryRegions::EnumMemoryRegions Method</span></span>
-<span data-ttu-id="bbeeb-103">Belirtilen bellek alanları numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="bbeeb-103">Enumerates specified areas of memory.</span></span>  
+# <a name="iclrdataenummemoryregionsenummemoryregions-method"></a><span data-ttu-id="71462-102">ICLRDataEnumMemoryRegions::EnumMemoryRegions Yöntemi</span><span class="sxs-lookup"><span data-stu-id="71462-102">ICLRDataEnumMemoryRegions::EnumMemoryRegions Method</span></span>
+<span data-ttu-id="71462-103">Belirtilen bellek alanını numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="71462-103">Enumerates specified areas of memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bbeeb-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bbeeb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="71462-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="71462-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumMemoryRegions (  
@@ -37,30 +35,30 @@ HRESULT EnumMemoryRegions (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bbeeb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="bbeeb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="71462-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="71462-105">Parameters</span></span>  
  `callback`  
- <span data-ttu-id="bbeeb-106">[in] Bir işaretçi bir [Iclrdataenummemoryregionscallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) sonucun hata ayıklayıcı bildirmek için numaralandırılan her bellek bölge için bu yöntem tarafından çağrılan örnek.</span><span class="sxs-lookup"><span data-stu-id="bbeeb-106">[in] A pointer to an [ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) instance that is called by this method for each memory region being enumerated to notify the debugger of the result.</span></span>  
+ <span data-ttu-id="71462-106">'ndaki Bir [ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) örneğine, sonucun hata ayıklayıcısını bildirmek üzere numaralandırılmakta olan her bellek bölgesi için bu yöntem tarafından çağrılan bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="71462-106">[in] A pointer to an [ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) instance that is called by this method for each memory region being enumerated to notify the debugger of the result.</span></span>  
   
- <span data-ttu-id="bbeeb-107">Bile hata geri çağırma gösterir bellek bölümlerinin listelenmeye devam eder.</span><span class="sxs-lookup"><span data-stu-id="bbeeb-107">The enumeration of memory regions continues even if the callback indicates a failure.</span></span>  
+ <span data-ttu-id="71462-107">Geri arama bir hata gösteriyorsa bile, bellek bölümlerinin numaralandırılması devam eder.</span><span class="sxs-lookup"><span data-stu-id="71462-107">The enumeration of memory regions continues even if the callback indicates a failure.</span></span>  
   
  `miniDumpFlags`  
- <span data-ttu-id="bbeeb-108">[in] Kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="bbeeb-108">[in] Not used.</span></span>  
+ <span data-ttu-id="71462-108">'ndaki Kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="71462-108">[in] Not used.</span></span>  
   
  `clrFlags`  
- <span data-ttu-id="bbeeb-109">[in] Değerini [CLRDataEnumMemoryFlags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md) sıralanması bellek bölümlerinin belirten sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="bbeeb-109">[in] A value of the [CLRDataEnumMemoryFlags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md) enumeration that specifies the regions of memory to be enumerated.</span></span>  
+ <span data-ttu-id="71462-109">'ndaki Numaralandırılacak bellek bölgelerini belirten [CLRDataEnumMemoryFlags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md) numaralandırması değeri.</span><span class="sxs-lookup"><span data-stu-id="71462-109">[in] A value of the [CLRDataEnumMemoryFlags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md) enumeration that specifies the regions of memory to be enumerated.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bbeeb-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bbeeb-110">Remarks</span></span>  
- <span data-ttu-id="bbeeb-111">Bu yöntemde belirtilen [Iclrdataenummemoryregionscallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) sonuçlarının çağrıyı yapana bunu bildirmesi örneği.</span><span class="sxs-lookup"><span data-stu-id="bbeeb-111">This method uses the specified [ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) instance to notify the caller of results.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="71462-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="71462-110">Remarks</span></span>  
+ <span data-ttu-id="71462-111">Bu yöntem, sonuçları çağırana bildirmek için belirtilen [ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) örneğini kullanır.</span><span class="sxs-lookup"><span data-stu-id="71462-111">This method uses the specified [ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) instance to notify the caller of results.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bbeeb-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bbeeb-112">Requirements</span></span>  
- <span data-ttu-id="bbeeb-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bbeeb-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="71462-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="71462-112">Requirements</span></span>  
+ <span data-ttu-id="71462-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="71462-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bbeeb-114">**Üst bilgi:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="bbeeb-114">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="71462-114">**Üst bilgi:** ClrData. IDL, ClrData. h</span><span class="sxs-lookup"><span data-stu-id="71462-114">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="bbeeb-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bbeeb-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="71462-115">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="71462-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bbeeb-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bbeeb-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="71462-116">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="71462-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bbeeb-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bbeeb-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="71462-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="71462-117">See also</span></span>
 
-- [<span data-ttu-id="bbeeb-118">ICLRDataEnumMemoryRegions Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bbeeb-118">ICLRDataEnumMemoryRegions Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-interface.md)
+- [<span data-ttu-id="71462-118">ICLRDataEnumMemoryRegions Arabirimi</span><span class="sxs-lookup"><span data-stu-id="71462-118">ICLRDataEnumMemoryRegions Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-interface.md)

@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 57e0f2d2-5f0e-4e2d-99ec-3f26632eb693
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f626ff6e562bd9bc94440f31e9470a45cc32cfbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba4375511fe7f5aaee032c4e132de54808041111
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902778"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122441"
 ---
-# <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a><span data-ttu-id="dafd5-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification Metodu</span><span class="sxs-lookup"><span data-stu-id="dafd5-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification Method</span></span>
+# <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a><span data-ttu-id="6bb85-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification Metodu</span><span class="sxs-lookup"><span data-stu-id="6bb85-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification Method</span></span>
 
-<span data-ttu-id="dafd5-103">Geçerli alır [Icordebugmanagedcallback3::customnotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) nesne geçerli iş parçacığı üzerinde.</span><span class="sxs-lookup"><span data-stu-id="dafd5-103">Gets the current [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) object on the current thread.</span></span>
+<span data-ttu-id="6bb85-103">Geçerli iş parçacığında geçerli [ICorDebugManagedCallback3:: CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) nesnesini alır.</span><span class="sxs-lookup"><span data-stu-id="6bb85-103">Gets the current [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) object on the current thread.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="dafd5-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dafd5-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="6bb85-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6bb85-104">Syntax</span></span>
 
 ```cpp
 HRESULT GetCurrentCustomDebuggerNotification(
@@ -36,27 +34,27 @@ HRESULT GetCurrentCustomDebuggerNotification(
     );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="dafd5-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="dafd5-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="6bb85-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6bb85-105">Parameters</span></span>
 
 `ppNotificationObject`\
-<span data-ttu-id="dafd5-106">[out] Geçerli bir işaretçi `ICorDebugManagedCallback3::CustomNotification` nesne geçerli iş parçacığı üzerinde.</span><span class="sxs-lookup"><span data-stu-id="dafd5-106">[out] A pointer to the current `ICorDebugManagedCallback3::CustomNotification` object on the current thread.</span></span>
+<span data-ttu-id="6bb85-106">dışı Geçerli iş parçacığında geçerli `ICorDebugManagedCallback3::CustomNotification` nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="6bb85-106">[out] A pointer to the current `ICorDebugManagedCallback3::CustomNotification` object on the current thread.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="dafd5-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="dafd5-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="6bb85-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6bb85-107">Remarks</span></span>
 
-<span data-ttu-id="dafd5-108">Değerini `ppNotificationObject` yöntemi içinden çağrılmazsa null bir `ICorDebugManagedCallback3::CustomNotification` geri arama veya geçerli hiçbir bildirim nesne varsa.</span><span class="sxs-lookup"><span data-stu-id="dafd5-108">The value of `ppNotificationObject` is null if the method is not called from within a `ICorDebugManagedCallback3::CustomNotification` callback, or if no current notification object exists.</span></span>
+<span data-ttu-id="6bb85-108">Yöntem, `ICorDebugManagedCallback3::CustomNotification` bir geri çağırma içinden çağrılmaması veya geçerli bir bildirim nesnesi yoksa `ppNotificationObject` değeri null olur.</span><span class="sxs-lookup"><span data-stu-id="6bb85-108">The value of `ppNotificationObject` is null if the method is not called from within a `ICorDebugManagedCallback3::CustomNotification` callback, or if no current notification object exists.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="dafd5-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="dafd5-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="6bb85-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6bb85-109">Requirements</span></span>
 
-<span data-ttu-id="dafd5-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dafd5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="6bb85-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6bb85-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="dafd5-111">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dafd5-111">**Header:** CorDebug.idl, CorDebug.h</span></span>
+<span data-ttu-id="6bb85-111">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="6bb85-111">**Header:** CorDebug.idl, CorDebug.h</span></span>
 
-<span data-ttu-id="dafd5-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dafd5-112">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="6bb85-112">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="6bb85-112">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="dafd5-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dafd5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>
+<span data-ttu-id="6bb85-113">**.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6bb85-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="dafd5-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dafd5-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6bb85-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6bb85-114">See also</span></span>
 
-- [<span data-ttu-id="dafd5-115">ICorDebugThread4 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="dafd5-115">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [<span data-ttu-id="dafd5-116">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="dafd5-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="dafd5-117">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="dafd5-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="6bb85-115">ICorDebugThread4 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6bb85-115">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [<span data-ttu-id="6bb85-116">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="6bb85-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="6bb85-117">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="6bb85-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ed71961e-ae9b-4dfc-9554-06637696d697
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8e0159ce6ad1087838681214533d386f4d44cee2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d4de3405f84bfc08f7e1519bc7f9604eb1f5a14e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737465"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088298"
 ---
-# <a name="icordebugarrayvaluegetelementtype-method"></a><span data-ttu-id="60222-102">ICorDebugArrayValue::GetElementType Metodu</span><span class="sxs-lookup"><span data-stu-id="60222-102">ICorDebugArrayValue::GetElementType Method</span></span>
-<span data-ttu-id="60222-103">Basit dizideki öğelerin türünü belirten bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="60222-103">Gets a value that indicates the simple type of the elements in the array.</span></span>  
+# <a name="icordebugarrayvaluegetelementtype-method"></a><span data-ttu-id="cfbf9-102">ICorDebugArrayValue::GetElementType Metodu</span><span class="sxs-lookup"><span data-stu-id="cfbf9-102">ICorDebugArrayValue::GetElementType Method</span></span>
+<span data-ttu-id="cfbf9-103">Dizideki öğelerin basit türünü gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="cfbf9-103">Gets a value that indicates the simple type of the elements in the array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="60222-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="60222-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cfbf9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cfbf9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetElementType (  
@@ -35,15 +33,15 @@ HRESULT GetElementType (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="60222-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="60222-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cfbf9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cfbf9-105">Parameters</span></span>  
  `pType`  
- <span data-ttu-id="60222-106">[out] CorElementType numaralandırma türü gösteren bir değer için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="60222-106">[out] A pointer to a value of the CorElementType enumeration that indicates the type.</span></span>  
+ <span data-ttu-id="cfbf9-106">dışı Türü gösteren CorElementType numaralandırması değerine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="cfbf9-106">[out] A pointer to a value of the CorElementType enumeration that indicates the type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="60222-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="60222-107">Requirements</span></span>  
- <span data-ttu-id="60222-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="60222-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cfbf9-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cfbf9-107">Requirements</span></span>  
+ <span data-ttu-id="cfbf9-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cfbf9-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="60222-109">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="60222-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cfbf9-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="cfbf9-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="60222-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="60222-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cfbf9-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="cfbf9-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="60222-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="60222-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="cfbf9-111">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cfbf9-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

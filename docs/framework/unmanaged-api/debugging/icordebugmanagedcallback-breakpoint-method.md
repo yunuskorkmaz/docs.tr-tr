@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 60b279b0-a726-46d2-8c53-76986a007ebb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f49fac3951c130c3cf06b6861beb06b89c27dfb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a4f7d4f422d80d044bcb92065dbefc7f421a069
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759900"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122597"
 ---
-# <a name="icordebugmanagedcallbackbreakpoint-method"></a><span data-ttu-id="8cf9c-102">ICorDebugManagedCallback::Breakpoint Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8cf9c-102">ICorDebugManagedCallback::Breakpoint Method</span></span>
-<span data-ttu-id="8cf9c-103">Hata ayıklayıcı bir kesme oluştuğunda size bildirir.</span><span class="sxs-lookup"><span data-stu-id="8cf9c-103">Notifies the debugger when a breakpoint is encountered.</span></span>  
+# <a name="icordebugmanagedcallbackbreakpoint-method"></a><span data-ttu-id="5e9fe-102">ICorDebugManagedCallback::Breakpoint Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5e9fe-102">ICorDebugManagedCallback::Breakpoint Method</span></span>
+<span data-ttu-id="5e9fe-103">Bir kesme noktasıyla karşılaşıldığında hata ayıklayıcıya bildirir.</span><span class="sxs-lookup"><span data-stu-id="5e9fe-103">Notifies the debugger when a breakpoint is encountered.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8cf9c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8cf9c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5e9fe-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5e9fe-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Breakpoint (  
@@ -37,25 +35,25 @@ HRESULT Breakpoint (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8cf9c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8cf9c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5e9fe-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5e9fe-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="8cf9c-106">[in] Kesme noktasını içeren uygulama etki alanını temsil eden bir Icordebugappdomain nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="8cf9c-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the breakpoint.</span></span>  
+ <span data-ttu-id="5e9fe-106">'ndaki Kesme noktasını içeren uygulama etki alanını temsil eden ICorDebugAppDomain nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5e9fe-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the breakpoint.</span></span>  
   
  `pThread`  
- <span data-ttu-id="8cf9c-107">[in] Kesme noktasını içeren iş parçacığını temsil eden bir Icordebugthread nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="8cf9c-107">[in] A pointer to an ICorDebugThread object that represents the thread that contains the breakpoint.</span></span>  
+ <span data-ttu-id="5e9fe-107">'ndaki Kesme noktasını içeren iş parçacığını temsil eden ICorDebugThread nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5e9fe-107">[in] A pointer to an ICorDebugThread object that represents the thread that contains the breakpoint.</span></span>  
   
  `pBreakpoint`  
- <span data-ttu-id="8cf9c-108">[in] Kesme noktasını temsil eden bir Icordebugbreakpoint nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="8cf9c-108">[in] A pointer to an ICorDebugBreakpoint object that represents the breakpoint.</span></span>  
+ <span data-ttu-id="5e9fe-108">'ndaki Kesme noktasını temsil eden ICorDebugBreakpoint nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5e9fe-108">[in] A pointer to an ICorDebugBreakpoint object that represents the breakpoint.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8cf9c-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8cf9c-109">Requirements</span></span>  
- <span data-ttu-id="8cf9c-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8cf9c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5e9fe-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5e9fe-109">Requirements</span></span>  
+ <span data-ttu-id="5e9fe-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5e9fe-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8cf9c-111">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8cf9c-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5e9fe-111">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="5e9fe-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8cf9c-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8cf9c-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5e9fe-112">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="5e9fe-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8cf9c-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8cf9c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5e9fe-113">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e9fe-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8cf9c-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8cf9c-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e9fe-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5e9fe-114">See also</span></span>
 
-- [<span data-ttu-id="8cf9c-115">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8cf9c-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="5e9fe-115">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5e9fe-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

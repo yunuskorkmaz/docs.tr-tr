@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9d42c85502c12d4d77694626a533c69af97da67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87316b20c5835d9b887355a1f9374fa5f2156e5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750266"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122167"
 ---
-# <a name="icordebugdatatargetreadvirtual-method"></a><span data-ttu-id="5ddc5-102">ICorDebugDataTarget::ReadVirtual Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5ddc5-102">ICorDebugDataTarget::ReadVirtual Method</span></span>
-<span data-ttu-id="5ddc5-103">Belirtilen adres'ten itibaren bitişik bellek bloğunu alır ve sağlanan arabellek döndürür.</span><span class="sxs-lookup"><span data-stu-id="5ddc5-103">Gets a block of contiguous memory starting at the specified address, and returns it in the supplied buffer.</span></span>  
+# <a name="icordebugdatatargetreadvirtual-method"></a><span data-ttu-id="5a0c2-102">ICorDebugDataTarget::ReadVirtual Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5a0c2-102">ICorDebugDataTarget::ReadVirtual Method</span></span>
+<span data-ttu-id="5a0c2-103">Belirtilen adresten başlayarak bir ardışık bellek bloğunu alır ve sağlanan arabellekte döndürür.</span><span class="sxs-lookup"><span data-stu-id="5a0c2-103">Gets a block of contiguous memory starting at the specified address, and returns it in the supplied buffer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5ddc5-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5ddc5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a0c2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5a0c2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ReadVirtual(  
@@ -38,33 +36,33 @@ HRESULT ReadVirtual(
     [out] ULONG32 *  pBytesRead);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5ddc5-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5ddc5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5a0c2-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5a0c2-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="5ddc5-106">[in] İstenen bellek başlangıç adresi.</span><span class="sxs-lookup"><span data-stu-id="5ddc5-106">[in] The start address of requested memory.</span></span>  
+ <span data-ttu-id="5a0c2-106">'ndaki İstenen belleğin başlangıç adresi.</span><span class="sxs-lookup"><span data-stu-id="5a0c2-106">[in] The start address of requested memory.</span></span>  
   
  `pbuffer`  
- <span data-ttu-id="5ddc5-107">[out] Bellek depolanacağı arabelleği.</span><span class="sxs-lookup"><span data-stu-id="5ddc5-107">[out] The buffer where the memory will be stored.</span></span>  
+ <span data-ttu-id="5a0c2-107">dışı Belleğin depolanacağı arabellek.</span><span class="sxs-lookup"><span data-stu-id="5a0c2-107">[out] The buffer where the memory will be stored.</span></span>  
   
  `bytesRequested`  
- <span data-ttu-id="5ddc5-108">[in] Hedef adres alınacağı bayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="5ddc5-108">[in] The number of bytes to get from the target address.</span></span>  
+ <span data-ttu-id="5a0c2-108">'ndaki Hedef adresten alınacak bayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="5a0c2-108">[in] The number of bytes to get from the target address.</span></span>  
   
  `pBytesRead`  
- <span data-ttu-id="5ddc5-109">[out] Hedef adres gerçekten okunan bayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="5ddc5-109">[out] The number of bytes actually read from the target address.</span></span> <span data-ttu-id="5ddc5-110">Bu daha az olabilir `bytesRequested`.</span><span class="sxs-lookup"><span data-stu-id="5ddc5-110">This can be fewer than `bytesRequested`.</span></span>  
+ <span data-ttu-id="5a0c2-109">dışı Hedef adresten gerçekten okunan bayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="5a0c2-109">[out] The number of bytes actually read from the target address.</span></span> <span data-ttu-id="5a0c2-110">Bu, `bytesRequested`daha az olabilir.</span><span class="sxs-lookup"><span data-stu-id="5a0c2-110">This can be fewer than `bytesRequested`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5ddc5-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5ddc5-111">Remarks</span></span>  
- <span data-ttu-id="5ddc5-112">(Belirtilen başlangıç adresindeki) ilk baytı okunabiliyorsa çağrı başarılı (uzunluğu, null ile sonlandırılmış dizeler gibi kendini açıklayan ile veri yapılarının verimli okuma desteklemek için) döndürmelidir.</span><span class="sxs-lookup"><span data-stu-id="5ddc5-112">If the first byte (at the specified start address) can be read, the call should return success (to support efficient reading of data structures with self-describing length, like null-terminated strings).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5a0c2-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5a0c2-111">Remarks</span></span>  
+ <span data-ttu-id="5a0c2-112">İlk bayt (belirtilen başlangıç adresinde) okunurken, çağrının başarılı döndürmesi gerekir (null ile sonlandırılmış dizeler gibi, kendi kendine tanımlayan uzunlukla veri yapılarının etkili şekilde okunmasını desteklemek için).</span><span class="sxs-lookup"><span data-stu-id="5a0c2-112">If the first byte (at the specified start address) can be read, the call should return success (to support efficient reading of data structures with self-describing length, like null-terminated strings).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5ddc5-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5ddc5-113">Requirements</span></span>  
- <span data-ttu-id="5ddc5-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5ddc5-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5a0c2-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5a0c2-113">Requirements</span></span>  
+ <span data-ttu-id="5a0c2-114">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5a0c2-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5ddc5-115">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5ddc5-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5a0c2-115">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="5a0c2-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5ddc5-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5ddc5-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5a0c2-116">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="5a0c2-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5ddc5-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5ddc5-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="5a0c2-117">**.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a0c2-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ddc5-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5ddc5-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a0c2-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5a0c2-118">See also</span></span>
 
-- [<span data-ttu-id="5ddc5-119">ICorDebugDataTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5ddc5-119">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [<span data-ttu-id="5ddc5-120">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="5ddc5-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="5ddc5-121">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="5ddc5-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="5a0c2-119">ICorDebugDataTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5a0c2-119">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [<span data-ttu-id="5a0c2-120">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="5a0c2-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="5a0c2-121">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="5a0c2-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 035a9035-ac66-4953-b48a-99652b42b7fe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db34d56fd4d074551ca4823681bc5d94e76df758
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0fbff178efd4d0dff3593907b3d40e946be2ff6e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756625"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121305"
 ---
-# <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a><span data-ttu-id="bacf1-102">ICorDebugHeapValue3::GetMonitorEventWaitList Yöntemi</span><span class="sxs-lookup"><span data-stu-id="bacf1-102">ICorDebugHeapValue3::GetMonitorEventWaitList Method</span></span>
-<span data-ttu-id="bacf1-103">Monitör kilit ile ilişkili olay sıraya alınan iş parçacıkları sıralı bir listesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="bacf1-103">Provides an ordered list of threads that are queued on the event that is associated with a monitor lock.</span></span>  
+# <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a><span data-ttu-id="86645-102">ICorDebugHeapValue3::GetMonitorEventWaitList Yöntemi</span><span class="sxs-lookup"><span data-stu-id="86645-102">ICorDebugHeapValue3::GetMonitorEventWaitList Method</span></span>
+<span data-ttu-id="86645-103">Bir izleyici kilidi ile ilişkili olayda sıraya alınan iş parçacıklarının sıralı bir listesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="86645-103">Provides an ordered list of threads that are queued on the event that is associated with a monitor lock.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bacf1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bacf1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="86645-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="86645-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMonitorEventWaitList (  
@@ -35,41 +33,41 @@ HRESULT GetMonitorEventWaitList (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bacf1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="bacf1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="86645-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="86645-105">Parameters</span></span>  
  `ppThreadEnum`  
- <span data-ttu-id="bacf1-106">[out] Icordebugthreadenum Numaralandırıcı iş parçacıkları sıralı listesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="bacf1-106">[out] The ICorDebugThreadEnum enumerator that provides the ordered list of threads.</span></span>  
+ <span data-ttu-id="86645-106">dışı Sıralı iş parçacığı listesini sağlayan ICorDebugThreadEnum numaralandırıcısı.</span><span class="sxs-lookup"><span data-stu-id="86645-106">[out] The ICorDebugThreadEnum enumerator that provides the ordered list of threads.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="bacf1-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="bacf1-107">Return Value</span></span>  
- <span data-ttu-id="bacf1-108">Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.</span><span class="sxs-lookup"><span data-stu-id="bacf1-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="86645-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="86645-107">Return Value</span></span>  
+ <span data-ttu-id="86645-108">Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.</span><span class="sxs-lookup"><span data-stu-id="86645-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="bacf1-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="bacf1-109">HRESULT</span></span>|<span data-ttu-id="bacf1-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="bacf1-110">Description</span></span>|  
+|<span data-ttu-id="86645-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="86645-109">HRESULT</span></span>|<span data-ttu-id="86645-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="86645-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="bacf1-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="bacf1-111">S_OK</span></span>|<span data-ttu-id="bacf1-112">Liste boş değil.</span><span class="sxs-lookup"><span data-stu-id="bacf1-112">The list is not empty.</span></span>|  
-|<span data-ttu-id="bacf1-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="bacf1-113">S_FALSE</span></span>|<span data-ttu-id="bacf1-114">Liste boş olduğu.</span><span class="sxs-lookup"><span data-stu-id="bacf1-114">The list is empty.</span></span>|  
+|<span data-ttu-id="86645-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="86645-111">S_OK</span></span>|<span data-ttu-id="86645-112">Liste boş değil.</span><span class="sxs-lookup"><span data-stu-id="86645-112">The list is not empty.</span></span>|  
+|<span data-ttu-id="86645-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="86645-113">S_FALSE</span></span>|<span data-ttu-id="86645-114">Liste boş.</span><span class="sxs-lookup"><span data-stu-id="86645-114">The list is empty.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="bacf1-115">Özel Durumlar</span><span class="sxs-lookup"><span data-stu-id="bacf1-115">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="86645-115">Özel Durumlar</span><span class="sxs-lookup"><span data-stu-id="86645-115">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bacf1-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bacf1-116">Remarks</span></span>  
- <span data-ttu-id="bacf1-117">Listedeki ilk iş parçacığında sonraki çağrı tarafından yayınlanan ilk iş parçacığıdır <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="bacf1-117">The first thread in the list is the first thread that is released by the next call to <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>.</span></span> <span data-ttu-id="bacf1-118">Bir sonraki iş parçacığı listesinde aşağıdaki çağrı ve benzeri serbest bırakılır.</span><span class="sxs-lookup"><span data-stu-id="bacf1-118">The next thread in the list is released on the following call, and so on.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="86645-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="86645-116">Remarks</span></span>  
+ <span data-ttu-id="86645-117">Listedeki ilk iş parçacığı, <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>sonraki çağrısıyla yayınlanan ilk iş parçacığıdır.</span><span class="sxs-lookup"><span data-stu-id="86645-117">The first thread in the list is the first thread that is released by the next call to <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>.</span></span> <span data-ttu-id="86645-118">Listedeki bir sonraki iş parçacığı aşağıdaki çağrıda yayımlanır ve bu şekilde devam eder.</span><span class="sxs-lookup"><span data-stu-id="86645-118">The next thread in the list is released on the following call, and so on.</span></span>  
   
- <span data-ttu-id="bacf1-119">Liste boş değilse bu yöntem S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="bacf1-119">If the list is not empty, this method returns S_OK.</span></span> <span data-ttu-id="bacf1-120">Liste boş ise, yöntem S_FALSE döndürür; Bu durumda, sabit listesi boş olmasına rağmen hala geçerli.</span><span class="sxs-lookup"><span data-stu-id="bacf1-120">If the list is empty, the method returns S_FALSE; in this case, the enumeration is still valid, although it is empty.</span></span>  
+ <span data-ttu-id="86645-119">Liste boş değilse, bu yöntem S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="86645-119">If the list is not empty, this method returns S_OK.</span></span> <span data-ttu-id="86645-120">Liste boşsa, yöntem S_FALSE döndürür; Bu durumda, numaralandırma hala geçerlidir, ancak boş olur.</span><span class="sxs-lookup"><span data-stu-id="86645-120">If the list is empty, the method returns S_FALSE; in this case, the enumeration is still valid, although it is empty.</span></span>  
   
- <span data-ttu-id="bacf1-121">Her iki durumda da, yalnızca geçerli eşitleme durumunun süresi boyunca sabit listesi arabirimi kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="bacf1-121">In either case, the enumeration interface is usable only for the duration of the current synchronized state.</span></span> <span data-ttu-id="bacf1-122">Ancak, iş parçacığının arabirimleri buradan dispensed iş parçacığı çıkana kadar geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="bacf1-122">However, the thread's interfaces dispensed from it are valid until the thread exits.</span></span>  
+ <span data-ttu-id="86645-121">Her iki durumda da, numaralandırma arabirimi yalnızca geçerli eşitlenmiş durumun süresi boyunca kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="86645-121">In either case, the enumeration interface is usable only for the duration of the current synchronized state.</span></span> <span data-ttu-id="86645-122">Ancak, iş parçacığından gelen arabirimler, iş parçacığı çıkıncaya kadar geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="86645-122">However, the thread's interfaces dispensed from it are valid until the thread exits.</span></span>  
   
- <span data-ttu-id="bacf1-123">Varsa `ppThreadEnum` geçerli bir işaretçi değil sonuç tanımsızdır.</span><span class="sxs-lookup"><span data-stu-id="bacf1-123">If `ppThreadEnum` is not a valid pointer, the result is undefined.</span></span>  
+ <span data-ttu-id="86645-123">`ppThreadEnum` geçerli bir işaretçi değilse, sonuç tanımsızdır.</span><span class="sxs-lookup"><span data-stu-id="86645-123">If `ppThreadEnum` is not a valid pointer, the result is undefined.</span></span>  
   
- <span data-ttu-id="bacf1-124">Bu, varsa, iş parçacıkları için izleme, bekleyen belirlenemiyor, bir hata oluşursa yöntemi hata olduğunu gösteren bir HRESULT döndürür.</span><span class="sxs-lookup"><span data-stu-id="bacf1-124">If an error occurs such that it cannot be determined which, if any, threads are waiting for the monitor, the method returns an HRESULT that indicates failure.</span></span>  
+ <span data-ttu-id="86645-124">Bir hata oluşursa, herhangi bir iş parçacığı izleyiciden bekliyorsa, yöntem hata belirten bir HRESULT döndürür.</span><span class="sxs-lookup"><span data-stu-id="86645-124">If an error occurs such that it cannot be determined which, if any, threads are waiting for the monitor, the method returns an HRESULT that indicates failure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bacf1-125">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bacf1-125">Requirements</span></span>  
- <span data-ttu-id="bacf1-126">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bacf1-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="86645-125">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="86645-125">Requirements</span></span>  
+ <span data-ttu-id="86645-126">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="86645-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bacf1-127">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bacf1-127">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="86645-127">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="86645-127">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bacf1-128">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bacf1-128">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="86645-128">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="86645-128">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bacf1-129">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bacf1-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="86645-129">**.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86645-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bacf1-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bacf1-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="86645-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="86645-130">See also</span></span>
 
-- [<span data-ttu-id="bacf1-131">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="bacf1-131">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="bacf1-132">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="bacf1-132">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="86645-131">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="86645-131">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="86645-132">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="86645-132">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

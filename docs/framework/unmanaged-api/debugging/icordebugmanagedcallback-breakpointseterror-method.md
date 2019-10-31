@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: f2b773a4-c4d0-429c-9717-51d6e2ed86af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3ef4b284676608363281e04087f6435dcb1ef74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dae04e1809c1bb3260461086a4953b8b4e5cce52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759844"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122578"
 ---
-# <a name="icordebugmanagedcallbackbreakpointseterror-method"></a><span data-ttu-id="0cd88-102">ICorDebugManagedCallback::BreakpointSetError Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0cd88-102">ICorDebugManagedCallback::BreakpointSetError Method</span></span>
-<span data-ttu-id="0cd88-103">Hata ayıklayıcı ortak dil çalışma zamanı öncesinde bir işlev yalnızca derlenmiş zamanında (JIT) ayarlanan bir kesme noktası doğru şekilde bağlanamıyor olduğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="0cd88-103">Notifies the debugger that the common language runtime was unable to accurately bind a breakpoint that was set before a function was just-in-time (JIT) compiled.</span></span>  
+# <a name="icordebugmanagedcallbackbreakpointseterror-method"></a><span data-ttu-id="e2506-102">ICorDebugManagedCallback::BreakpointSetError Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e2506-102">ICorDebugManagedCallback::BreakpointSetError Method</span></span>
+<span data-ttu-id="e2506-103">Hata ayıklayıcısını, ortak dil çalışma zamanının, bir işlev tam zamanında (JıT) derlenmesinden önce ayarlanmış bir kesme noktasını doğru bir şekilde bağlamadığı konusunda bilgilendirir.</span><span class="sxs-lookup"><span data-stu-id="e2506-103">Notifies the debugger that the common language runtime was unable to accurately bind a breakpoint that was set before a function was just-in-time (JIT) compiled.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0cd88-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0cd88-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e2506-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e2506-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT BreakpointSetError (  
@@ -38,31 +36,31 @@ HRESULT BreakpointSetError (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0cd88-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0cd88-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e2506-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e2506-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="0cd88-106">[in] İlişkisiz bir kesme noktası içeren uygulama etki alanını temsil eden bir Icordebugappdomain nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="0cd88-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the unbound breakpoint.</span></span>  
+ <span data-ttu-id="e2506-106">'ndaki İlişkisiz kesme noktasını içeren uygulama etki alanını temsil eden ICorDebugAppDomain nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e2506-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the unbound breakpoint.</span></span>  
   
  `pThread`  
- <span data-ttu-id="0cd88-107">[in] İlişkisiz bir kesme noktası içeren iş parçacığını temsil eden bir Icordebugthread nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="0cd88-107">[in] A pointer to an ICorDebugThread object that represents the thread that contains the unbound breakpoint.</span></span>  
+ <span data-ttu-id="e2506-107">'ndaki İlişkisiz kesme noktasını içeren iş parçacığını temsil eden ICorDebugThread nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e2506-107">[in] A pointer to an ICorDebugThread object that represents the thread that contains the unbound breakpoint.</span></span>  
   
  `pBreakpoint`  
- <span data-ttu-id="0cd88-108">[in] İlişkisiz kesme noktasını temsil eden bir Icordebugbreakpoint nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="0cd88-108">[in] A pointer to an ICorDebugBreakpoint object that represents the unbound breakpoint.</span></span>  
+ <span data-ttu-id="e2506-108">'ndaki İlişkisiz kesme noktasını temsil eden ICorDebugBreakpoint nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e2506-108">[in] A pointer to an ICorDebugBreakpoint object that represents the unbound breakpoint.</span></span>  
   
  `dwError`  
- <span data-ttu-id="0cd88-109">[in] Hata gösteren bir tamsayı.</span><span class="sxs-lookup"><span data-stu-id="0cd88-109">[in] An integer that indicates the error.</span></span>  
+ <span data-ttu-id="e2506-109">'ndaki Hatayı gösteren bir tamsayı.</span><span class="sxs-lookup"><span data-stu-id="e2506-109">[in] An integer that indicates the error.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0cd88-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0cd88-110">Remarks</span></span>  
- <span data-ttu-id="0cd88-111">Belirtilen kesme noktası hiçbir zaman ulaşırsınız.</span><span class="sxs-lookup"><span data-stu-id="0cd88-111">The given breakpoint will never be hit.</span></span> <span data-ttu-id="0cd88-112">Hata ayıklayıcı, devre dışı bırakma ve onu yeniden bağlayın.</span><span class="sxs-lookup"><span data-stu-id="0cd88-112">The debugger should deactivate and rebind it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e2506-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e2506-110">Remarks</span></span>  
+ <span data-ttu-id="e2506-111">Verilen kesme noktası hiçbir şekilde isabet ettirilmeyecek.</span><span class="sxs-lookup"><span data-stu-id="e2506-111">The given breakpoint will never be hit.</span></span> <span data-ttu-id="e2506-112">Hata ayıklayıcı devre dışı bırakıp yeniden bağlamasını bilmelidir.</span><span class="sxs-lookup"><span data-stu-id="e2506-112">The debugger should deactivate and rebind it.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0cd88-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0cd88-113">Requirements</span></span>  
- <span data-ttu-id="0cd88-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0cd88-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e2506-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e2506-113">Requirements</span></span>  
+ <span data-ttu-id="e2506-114">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e2506-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0cd88-115">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0cd88-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e2506-115">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="e2506-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0cd88-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0cd88-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e2506-116">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="e2506-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0cd88-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0cd88-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e2506-117">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e2506-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0cd88-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0cd88-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2506-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e2506-118">See also</span></span>
 
-- [<span data-ttu-id="0cd88-119">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0cd88-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="e2506-119">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e2506-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

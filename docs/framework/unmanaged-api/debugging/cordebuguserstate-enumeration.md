@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 76fbbb3f924f610b604586dca78cab344217b544
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d0394d511197c8d0aaa366ce7b791216a3d226bc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739456"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120199"
 ---
-# <a name="cordebuguserstate-enumeration"></a><span data-ttu-id="b0656-102">CorDebugUserState Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="b0656-102">CorDebugUserState Enumeration</span></span>
-<span data-ttu-id="b0656-103">Kullanıcı durumunu bir iş parçacığının gösterir.</span><span class="sxs-lookup"><span data-stu-id="b0656-103">Indicates the user state of a thread.</span></span>  
+# <a name="cordebuguserstate-enumeration"></a><span data-ttu-id="ab25e-102">CorDebugUserState Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="ab25e-102">CorDebugUserState Enumeration</span></span>
+<span data-ttu-id="ab25e-103">Bir iş parçacığının kullanıcı durumunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab25e-103">Indicates the user state of a thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0656-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b0656-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab25e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ab25e-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorDebugUserState {  
@@ -42,34 +40,34 @@ typedef enum CorDebugUserState {
 } CorDebugUserState;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b0656-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="b0656-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ab25e-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="ab25e-105">Members</span></span>  
   
-|<span data-ttu-id="b0656-106">Değer</span><span class="sxs-lookup"><span data-stu-id="b0656-106">Value</span></span>|<span data-ttu-id="b0656-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b0656-107">Description</span></span>|  
+|<span data-ttu-id="ab25e-106">Değer</span><span class="sxs-lookup"><span data-stu-id="ab25e-106">Value</span></span>|<span data-ttu-id="ab25e-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ab25e-107">Description</span></span>|  
 |-----------|-----------------|  
-|`USER_STOP_REQUESTED`|<span data-ttu-id="b0656-108">İş parçacığının sonlandırılması istendi.</span><span class="sxs-lookup"><span data-stu-id="b0656-108">A termination of the thread has been requested.</span></span>|  
-|`USER_SUSPEND_REQUESTED`|<span data-ttu-id="b0656-109">İş parçacığının bir askıya alma isteğinde bulundu.</span><span class="sxs-lookup"><span data-stu-id="b0656-109">A suspension of the thread has been requested.</span></span>|  
-|`USER_BACKGROUND`|<span data-ttu-id="b0656-110">İş parçacığı arka planda çalışıyor.</span><span class="sxs-lookup"><span data-stu-id="b0656-110">The thread is running in the background.</span></span>|  
-|`USER_UNSTARTED`|<span data-ttu-id="b0656-111">Yürütme iş parçacığı başlatılmadı.</span><span class="sxs-lookup"><span data-stu-id="b0656-111">The thread has not started executing.</span></span>|  
-|`USER_STOPPED`|<span data-ttu-id="b0656-112">İş parçacığı sonlandırıldı.</span><span class="sxs-lookup"><span data-stu-id="b0656-112">The thread has been terminated.</span></span>|  
-|`USER_WAIT_SLEEP_JOIN`|<span data-ttu-id="b0656-113">İş parçacığı bir görevi tamamlamak başka bir iş parçacığı için bekliyor.</span><span class="sxs-lookup"><span data-stu-id="b0656-113">The thread is waiting for another thread to complete a task.</span></span>|  
-|`USER_SUSPENDED`|<span data-ttu-id="b0656-114">İş parçacığını askıya alındı.</span><span class="sxs-lookup"><span data-stu-id="b0656-114">The thread has been suspended.</span></span>|  
-|`USER_UNSAFE_POINT`|<span data-ttu-id="b0656-115">İş parçacığı güvenli olmayan bir noktada ' dir.</span><span class="sxs-lookup"><span data-stu-id="b0656-115">The thread is at an unsafe point.</span></span> <span data-ttu-id="b0656-116">Diğer bir deyişle, yürütme noktasında bir çöp toplama burada engelleyebilir iş parçacığıdır.</span><span class="sxs-lookup"><span data-stu-id="b0656-116">That is, the thread is at a point in execution where it may block garbage collection.</span></span><br /><br /> <span data-ttu-id="b0656-117">Hata ayıklama olaylarını güvenli olmayan noktalarından gönderilir, ancak güvenli olmayan bir noktada bir iş parçacığını askıya büyük olasılıkla neden olacak bir kilitlenme iş parçacığı sürdürülene kadar.</span><span class="sxs-lookup"><span data-stu-id="b0656-117">Debug events may be dispatched from unsafe points, but suspending a thread at an unsafe point  will very likely cause a deadlock until the thread is resumed.</span></span> <span data-ttu-id="b0656-118">Güvenli ve güvenli olmayan noktaları, just-in-time (JIT) ve çöp toplama uygulama tarafından belirlenir.</span><span class="sxs-lookup"><span data-stu-id="b0656-118">The safe and unsafe points are determined by the just-in-time (JIT) and garbage collection implementation.</span></span>|  
-|`USER_THREADPOOL`|<span data-ttu-id="b0656-119">İş parçacığı havuzu iş parçacığıdır.</span><span class="sxs-lookup"><span data-stu-id="b0656-119">The thread is from the thread pool.</span></span>|  
+|`USER_STOP_REQUESTED`|<span data-ttu-id="ab25e-108">İş parçacığının sonlandırılması istendi.</span><span class="sxs-lookup"><span data-stu-id="ab25e-108">A termination of the thread has been requested.</span></span>|  
+|`USER_SUSPEND_REQUESTED`|<span data-ttu-id="ab25e-109">İş parçacığını askıya alma istendi.</span><span class="sxs-lookup"><span data-stu-id="ab25e-109">A suspension of the thread has been requested.</span></span>|  
+|`USER_BACKGROUND`|<span data-ttu-id="ab25e-110">İş parçacığı arka planda çalışıyor.</span><span class="sxs-lookup"><span data-stu-id="ab25e-110">The thread is running in the background.</span></span>|  
+|`USER_UNSTARTED`|<span data-ttu-id="ab25e-111">İş parçacığı yürütmeyi başlatmadı.</span><span class="sxs-lookup"><span data-stu-id="ab25e-111">The thread has not started executing.</span></span>|  
+|`USER_STOPPED`|<span data-ttu-id="ab25e-112">İş parçacığı sonlandırıldı.</span><span class="sxs-lookup"><span data-stu-id="ab25e-112">The thread has been terminated.</span></span>|  
+|`USER_WAIT_SLEEP_JOIN`|<span data-ttu-id="ab25e-113">İş parçacığı başka bir iş parçacığının bir görevi tamamlamasını bekliyor.</span><span class="sxs-lookup"><span data-stu-id="ab25e-113">The thread is waiting for another thread to complete a task.</span></span>|  
+|`USER_SUSPENDED`|<span data-ttu-id="ab25e-114">İş parçacığı askıya alındı.</span><span class="sxs-lookup"><span data-stu-id="ab25e-114">The thread has been suspended.</span></span>|  
+|`USER_UNSAFE_POINT`|<span data-ttu-id="ab25e-115">İş parçacığı güvenli olmayan bir noktada.</span><span class="sxs-lookup"><span data-stu-id="ab25e-115">The thread is at an unsafe point.</span></span> <span data-ttu-id="ab25e-116">Diğer bir deyişle, iş parçacığı, atık toplamayı engelleyebileceği bir yürütme noktasıdır.</span><span class="sxs-lookup"><span data-stu-id="ab25e-116">That is, the thread is at a point in execution where it may block garbage collection.</span></span><br /><br /> <span data-ttu-id="ab25e-117">Hata ayıklama olayları güvenli olmayan noktalarından gönderilebilir, ancak bir iş parçacığının güvenli olmayan bir noktada askıya alınması, iş parçacığı sürdürülene kadar kilitlenmeye neden olur.</span><span class="sxs-lookup"><span data-stu-id="ab25e-117">Debug events may be dispatched from unsafe points, but suspending a thread at an unsafe point  will very likely cause a deadlock until the thread is resumed.</span></span> <span data-ttu-id="ab25e-118">Güvenli ve güvenli olmayan noktaları, tam zamanında (JıT) ve çöp toplama uygulamasıyla belirlenir.</span><span class="sxs-lookup"><span data-stu-id="ab25e-118">The safe and unsafe points are determined by the just-in-time (JIT) and garbage collection implementation.</span></span>|  
+|`USER_THREADPOOL`|<span data-ttu-id="ab25e-119">İş parçacığı iş parçacığı havuzundan yapılır.</span><span class="sxs-lookup"><span data-stu-id="ab25e-119">The thread is from the thread pool.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b0656-120">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b0656-120">Remarks</span></span>  
- <span data-ttu-id="b0656-121">Kullanıcı durumunu bir iş parçacığının iş parçacığı hata ayıklayıcısı incelerken olan durumudur.</span><span class="sxs-lookup"><span data-stu-id="b0656-121">The user state of a thread is the state that the thread has when the debugger examines it.</span></span> <span data-ttu-id="b0656-122">Bir iş parçacığı, kullanıcı durumlarını bir birleşimi olabilir.</span><span class="sxs-lookup"><span data-stu-id="b0656-122">A thread may have a combination of user states.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ab25e-120">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ab25e-120">Remarks</span></span>  
+ <span data-ttu-id="ab25e-121">Bir iş parçacığının kullanıcı durumu, iş parçacığının hata ayıklayıcı tarafından incelediği durumdur.</span><span class="sxs-lookup"><span data-stu-id="ab25e-121">The user state of a thread is the state that the thread has when the debugger examines it.</span></span> <span data-ttu-id="ab25e-122">Bir iş parçacığında Kullanıcı durumlarının bir birleşimi olabilir.</span><span class="sxs-lookup"><span data-stu-id="ab25e-122">A thread may have a combination of user states.</span></span>  
   
- <span data-ttu-id="b0656-123">Kullanım [Icordebugthread::getuserstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) bir iş parçacığının kullanıcı durumunu almak için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="b0656-123">Use the [ICorDebugThread::GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) method to retrieve a thread's user state.</span></span>  
+ <span data-ttu-id="ab25e-123">Bir iş parçacığının kullanıcı durumunu almak için [ICorDebugThread:: GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) metodunu kullanın.</span><span class="sxs-lookup"><span data-stu-id="ab25e-123">Use the [ICorDebugThread::GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) method to retrieve a thread's user state.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b0656-124">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b0656-124">Requirements</span></span>  
- <span data-ttu-id="b0656-125">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b0656-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab25e-124">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ab25e-124">Requirements</span></span>  
+ <span data-ttu-id="ab25e-125">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab25e-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b0656-126">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b0656-126">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ab25e-126">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="ab25e-126">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b0656-127">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b0656-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ab25e-127">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="ab25e-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b0656-128">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0656-128">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ab25e-128">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab25e-128">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0656-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b0656-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab25e-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ab25e-129">See also</span></span>
 
-- [<span data-ttu-id="b0656-130">Hata Ayıklama Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="b0656-130">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="ab25e-130">Hata Ayıklama Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="ab25e-130">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

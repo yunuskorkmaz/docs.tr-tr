@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 27967230-144f-40d3-9e23-961d0241abd9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 218818097846709ec92e20f33a0707314edd562a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 887d207aea3de9296107c041816606b2f5947406
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754734"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124027"
 ---
-# <a name="icordebugfunctiongetclass-method"></a><span data-ttu-id="f1a93-102">ICorDebugFunction::GetClass Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f1a93-102">ICorDebugFunction::GetClass Method</span></span>
-<span data-ttu-id="f1a93-103">Bu işlev bir üyesi, sınıfın temsil ettiği bir Icordebugclass nesnesini alır.</span><span class="sxs-lookup"><span data-stu-id="f1a93-103">Gets an ICorDebugClass object that represents the class this function is a member of.</span></span>  
+# <a name="icordebugfunctiongetclass-method"></a><span data-ttu-id="e7f17-102">ICorDebugFunction::GetClass Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e7f17-102">ICorDebugFunction::GetClass Method</span></span>
+<span data-ttu-id="e7f17-103">Bu işlevin üyesi olduğu sınıfı temsil eden bir ICorDebugClass nesnesi alır.</span><span class="sxs-lookup"><span data-stu-id="e7f17-103">Gets an ICorDebugClass object that represents the class this function is a member of.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f1a93-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f1a93-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e7f17-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e7f17-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetClass (  
@@ -35,15 +33,15 @@ HRESULT GetClass (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f1a93-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f1a93-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e7f17-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e7f17-105">Parameters</span></span>  
  `ppClass`  
- <span data-ttu-id="f1a93-106">[out] Adresini bir işaretçiye `ICorDebugClass` bu işlev bir sınıfın üyesi değilse, sınıf veya null temsil eden nesne.</span><span class="sxs-lookup"><span data-stu-id="f1a93-106">[out] A pointer to the address of the `ICorDebugClass` object that represents the class, or null, if this function is not a member of a class.</span></span>  
+ <span data-ttu-id="e7f17-106">dışı Sınıfı temsil eden `ICorDebugClass` nesnenin adresine yönelik bir işaretçi veya bu işlev bir sınıfın üyesi değilse null.</span><span class="sxs-lookup"><span data-stu-id="e7f17-106">[out] A pointer to the address of the `ICorDebugClass` object that represents the class, or null, if this function is not a member of a class.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f1a93-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f1a93-107">Requirements</span></span>  
- <span data-ttu-id="f1a93-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f1a93-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e7f17-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e7f17-107">Requirements</span></span>  
+ <span data-ttu-id="e7f17-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e7f17-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f1a93-109">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f1a93-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e7f17-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="e7f17-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f1a93-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f1a93-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e7f17-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="e7f17-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f1a93-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1a93-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="e7f17-111">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7f17-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
