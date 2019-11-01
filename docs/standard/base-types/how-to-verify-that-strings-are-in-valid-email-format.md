@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Dizelerin Geçerli E-Posta Biçiminde Olduğunu Doğrulama'
+title: Dizelerin geçerli e-posta biçiminde olduğunu doğrulama
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-ms.openlocfilehash: 1812235da6e6d02a97fe994568c5c26a3c7cde33
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c02fc215fa66951ae3333175191ab96a226a2afe
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126407"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197587"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Nasıl yapılır: dizelerin geçerli e-posta biçiminde olduğunu doğrulama
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Dizelerin geçerli e-posta biçiminde olduğunu doğrulama
 
 Aşağıdaki örnek bir dizenin geçerli e-posta biçiminde olduğunu doğrulamak için normal bir ifade kullanır.
 
@@ -50,7 +50,7 @@ Etki alanı adı @ karakteriyle birlikte `DomainMapper` yöntemine geçirilir ve
 [!code-csharp[RegularExpressions.Examples.Email#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#7)]
 [!code-vb[RegularExpressions.Examples.Email#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#7)]
 
-Bu örnekte, normal ifade deseninin ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` aşağıdaki göstergede gösterildiği gibi yorumlanır. Normal ifade <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> bayrağı kullanılarak derlenir.
+Bu örnekte, normal ifade deseninin ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$`` aşağıdaki göstergede gösterildiği gibi yorumlanır. Normal ifade <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> bayrağı kullanılarak derlenir.
 
 `^`model: dizenin başlangıcında eşleşmeyi Başlat.
 
@@ -62,7 +62,7 @@ Model `|(([0-9a-z]`: ilk karakter bir tırnak işareti değilse, a 'dan z 'ye ve
 
 Model `(\.(?!\.))`: sonraki karakter bir nokta ise, bunu eşleştirin. Bir nokta değilse, sonraki karaktere bakın ve eşleştirmeye devam edin. `(?!\.)`, iki ardışık dönemin bir e-posta adresinin yerel bölümünde görünmesini engelleyen sıfır Genişlik negatif ileriye yönelik bir onaylama işlemi.
 
-Model ``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``: sonraki karakter bir nokta değilse, herhangi bir sözcük karakteri veya şu karakterlerden birini eşleştirin:-! # $% & ' * +/=? ^ '{}| ~
+Model ``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``: sonraki karakter bir nokta değilse, herhangi bir sözcük karakteri veya şu karakterlerden birini eşleştirin:-! # $% & '\*+/=? ^\`{}| ~
 
 ``((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*``model: değişim düzeniyle (bir dönem, süresi olmayan bir nokta veya karakter sayısından biri) sıfır veya daha fazla kez eşleştirin.
 
