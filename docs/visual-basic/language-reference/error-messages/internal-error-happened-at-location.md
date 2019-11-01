@@ -2,20 +2,20 @@
 title: <location> konumunda iç hata oluştu
 ms.date: 07/20/2015
 ms.assetid: 0af78cbc-89ec-40ea-9dee-bac9f2cb7c1e
-ms.openlocfilehash: bcb83c684c54e7ccd5e3857a79d5c626fe7d3443
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a2b09a204ed7b67dcbad7816fdb3e12769a11bff
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622571"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197688"
 ---
-# <a name="internal-error-happened-at-location"></a>İç hata oluştu \<konum >
-Bir iç hata oluştu. Gerçekleştiği satır hata iletisinde yer alır.  
+# <a name="internal-error-happened-at-location"></a>\<konumunda iç hata oluştu >
+Bir iç hata oluştu. Oluştuğu satır hata iletisinde yer alır.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Emin bu hatayı oluşturulmadı tarafından `Error` deyimi veya `Raise` yöntemi; bunu olduğunu değil, ileti görünen koşullarını raporlamak için Microsoft Ürün Destek Hizmetleri'ne başvurun.  
+- Bu hatanın `Error` deyimin veya `Raise` yönteminin üretilmediğinden emin olun; Aksi takdirde, iletinin göründüğü koşulları bildirmek için Microsoft Ürün Destek Hizmetleri 'ne başvurun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklayıcısı Temel Bilgileri](/visualstudio/debugger/debugger-basics)
+- [Hata Ayıklayıcısı Temel Bilgileri](/visualstudio/debugger/debugger-feature-tour)

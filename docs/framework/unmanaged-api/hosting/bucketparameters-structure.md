@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9432487e-f276-45d6-9a13-9a68024dbd46
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96fee259b31938ddec5820bc1b8d72a96b50c8d8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 80623bdec939b0ae5fc13008c1c4001c613ac435
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773883"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195952"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters Yapısı
-Olay ile ilişkili olan geçerli bir özel durum için bir olay ve parametreleri türü adını depolar.  
+Bir olayın tür adını ve olayla ilişkili geçerli özel durumun parametrelerini depolar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,16 +38,16 @@ typedef struct _BucketParameters {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`fInited`|`true`, bu yapının rest geçerliyse; Aksi takdirde, `false`.|  
-|`pszEventTypeName`|Olay türü adı.|  
-|`pszParams`|Her biri için geçerli özel olayla ilişkili bir parametre belirtir bir dizi dizeleri.|  
+|`fInited`|`true`, bu yapının geri kalanı geçerliyse; Aksi takdirde, `false`.|  
+|`pszEventTypeName`|Olay türünün adı.|  
+|`pszParams`|Her biri olayla ilişkili geçerli özel durum için bir parametre belirten dizeler dizisi.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.idl  
+ **Üst bilgi:** MSCorEE. IDL  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,14 +14,14 @@ ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 2e0b98107ac5f43c80aad6cb5ea61e6f4e1e28d3
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 5d3aa715590a10391bafa08a85265842ee8cedfb
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015706"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197110"
 ---
-# <a name="troubleshoot-control-and-component-authoring"></a>Denetim ve bileşen yazma sorunlarını giderme
+# <a name="troubleshoot-control-and-component-authoring"></a>Denetim ve Bileşen Yazmada Sorun Giderme
 
 Bu konuda, bileşenleri ve denetimleri geliştirirken ortaya çıkan aşağıdaki yaygın sorunlar listelenmektedir:
 
@@ -31,7 +31,7 @@ Bu konuda, bileşenleri ve denetimleri geliştirirken ortaya çıkan aşağıdak
 
 - Devralınan denetimde veya bileşende olay Iki kez getirilir
 
-- Tasarım zamanı hatası: "'" Bileşen*adı*' "bileşeni oluşturulamadı
+- Tasarım zamanı hatası: "' ' bileşen*adı*'" bileşeni oluşturulamadı
 
 - STAThreadAttribute
 
@@ -39,7 +39,7 @@ Bu konuda, bileşenleri ve denetimleri geliştirirken ortaya çıkan aşağıdak
 
 ## <a name="cannot-add-control-to-toolbox"></a>Araç kutusu 'na denetim eklenemiyor
 
-**Araç kutusu**için başka bir projede veya üçüncü taraf denetiminde oluşturduğunuz özel bir denetim eklemek istiyorsanız, bunu el ile yapmanız gerekir. Geçerli proje denetim veya bileşeninizi içeriyorsa **araç kutusunda** otomatik olarak görünmelidir. Daha fazla bilgi için bkz [. İzlenecek yol: Araç kutusunu özel bileşenlerle](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)otomatik olarak doldurma.
+**Araç kutusu**için başka bir projede veya üçüncü taraf denetiminde oluşturduğunuz özel bir denetim eklemek istiyorsanız, bunu el ile yapmanız gerekir. Geçerli proje denetim veya bileşeninizi içeriyorsa **araç kutusunda** otomatik olarak görünmelidir. Daha fazla bilgi için bkz. [Izlenecek yol: araç kutusunu özel bileşenlerle otomatik olarak doldurma](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).
 
 ### <a name="to-add-a-control-to-the-toolbox"></a>Araç kutusuna denetim eklemek için
 
@@ -49,7 +49,7 @@ Bu konuda, bileşenleri ve denetimleri geliştirirken ortaya çıkan aşağıdak
 
     - .NET Framework bir bileşen veya denetim eklemek istiyorsanız, **.NET Framework bileşenleri** sekmesine tıklayın.
 
-         – veya –
+         veya
 
     - COM bileşeni veya ActiveX denetimi eklemek istiyorsanız **com bileşenleri** sekmesine tıklayın.
 
@@ -73,7 +73,7 @@ Bu konuda, bileşenleri ve denetimleri geliştirirken ortaya çıkan aşağıdak
 
 ## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>Windows Forms Kullanıcı denetiminde veya bileşende hata ayıklaması yapılamıyor
 
-Denetiminiz <xref:System.Windows.Forms.UserControl> sınıftan türetildiğinden, çalışma zamanı davranışının hata ayıklaması için test kapsayıcısını kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)'un çalışma zamanı davranışını test edin.
+Denetiminiz <xref:System.Windows.Forms.UserControl> sınıfından türetildiğinden, çalışma zamanı davranışının test kapsayıcısı ile hata ayıklaması yapabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: bir UserControl 'un çalışma zamanı davranışını test etme](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
 
 Diğer özel denetimler ve bileşenler tek başına projeler değildir. Bunlar, Windows Forms projesi gibi bir uygulama tarafından barındırılmalıdır. Bir denetimin veya bileşenin hatalarını ayıklamak için bir Windows Forms projesine eklemeniz gerekir.
 
@@ -99,27 +99,27 @@ Diğer özel denetimler ve bileşenler tek başına projeler değildir. Bunlar, 
 
    Artık, denetim veya bileşeninizdeki hataları her zamanki gibi ayıklayabilirsiniz.
 
-Hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio 'da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio) ve [izlenecek yol: Tasarım zamanında](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)özel Windows Forms Denetimlerinde hata ayıklama.
+Hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio 'Da hata ayıklama](/visualstudio/debugger/debugger-feature-tour) ve [Izlenecek yol: tasarım zamanında özel Windows Forms Denetimlerinde hata ayıklama](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).
 
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>Devralınan denetimde veya bileşende olay Iki kez getirilir
 
-Bunun nedeni, bir yinelenen `Handles` yan tümcesi olabilir. Daha fazla bilgi için bkz. [Visual Basic devralınan olay Işleyicilerinin sorunlarını giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).
+Bunun nedeni muhtemelen yinelenen bir `Handles` yan tümcesi olabilir. Daha fazla bilgi için bkz. [Visual Basic devralınan olay Işleyicilerinin sorunlarını giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).
 
-## <a name="design-time-error-failed-to-create-component-component-name"></a>Tasarım zamanı hatası: "'" Bileşen adı ' "bileşeni oluşturulamadı
+## <a name="design-time-error-failed-to-create-component-component-name"></a>Tasarım zamanı hatası: "' ' bileşen adı '" bileşeni oluşturulamadı
 
 Bileşeninizin veya denetiminizin parametresiz bir Oluşturucu sağlaması gerekir. Tasarım ortamı, bileşeninizin veya denetiminizin bir örneğini oluşturduğunda, parametreleri alan Oluşturucu aşırı yüklerini parametre sağlamaya çalışmaz.
 
 ## <a name="stathreadattribute"></a>STAThreadAttribute
 
-, <xref:System.STAThreadAttribute> Windows Forms tek iş parçacıklı grup modelini kullanan ortak dil çalışma zamanına (CLR) bildirir. Bu özniteliği Windows Forms uygulamanızın `Main` yöntemine uygulamadıysanız istenmeden bir davranış fark edebilirsiniz. Örneğin, gibi <xref:System.Windows.Forms.ListView>denetimler için arka plan görüntüleri görünmeyebilir. Bazı denetimler, doğru otomatik tamamlama ve sürükle ve bırak davranışı için de bu özniteliği gerektirebilir.
+<xref:System.STAThreadAttribute>, Windows Forms tek iş parçacıklı grup modelini kullanan ortak dil çalışma zamanına (CLR) bildirir. Bu özniteliği Windows Forms uygulamanızın `Main` yöntemine uygulamadıysanız istenmeden bir davranış fark edebilirsiniz. Örneğin, arka plan görüntüleri <xref:System.Windows.Forms.ListView>gibi denetimler için görünmeyebilir. Bazı denetimler, doğru otomatik tamamlama ve sürükle ve bırak davranışı için de bu özniteliği gerektirebilir.
 
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>Bileşen simgesi araç kutusunda görünmüyor
 
-Özel bileşeninizdeki <xref:System.Drawing.ToolboxBitmapAttribute> bir simgeyi ilişkilendirmek için kullandığınızda, otomatik olarak oluşturulmuş bileşenler için araç kutusunda bit eşlem görüntülenmez. Bit eşlemi görmek için **araç kutusu öğelerini Seç** iletişim kutusunu kullanarak denetimi yeniden yükleyin. Daha fazla bilgi için [nasıl yapılır: Bir denetim](how-to-provide-a-toolbox-bitmap-for-a-control.md)Için araç kutusu bit eşlemi sağlayın.
+Özel bileşeninizdeki bir simgeyi ilişkilendirmek için <xref:System.Drawing.ToolboxBitmapAttribute> kullandığınızda, otomatik olarak oluşturulmuş bileşenler için araç kutusunda bit eşlem görünmez. Bit eşlemi görmek için **araç kutusu öğelerini Seç** iletişim kutusunu kullanarak denetimi yeniden yükleyin. Daha fazla bilgi için bkz. [nasıl yapılır: bir denetim Için araç kutusu bit eşlemi sağlama](how-to-provide-a-toolbox-bitmap-for-a-control.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Tasarım Zamanında Windows Forms Denetimleri Geliştirme](developing-windows-forms-controls-at-design-time.md)
-- [İzlenecek yol: Araç kutusunu özel bileşenlerle otomatik olarak doldurma](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [Nasıl yapılır: UserControl 'un çalışma zamanı davranışını test etme](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [İzlenecek yol: Tasarım zamanında özel Windows Forms Denetimlerinde hata ayıklama](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+- [İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Nasıl yapılır: Bir UserControl Denetiminin Çalışma Zamanı Davranışını Sınama](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [İzlenecek yol: Tasarım Zamanında Özel Windows Forms Denetimleri Hatalarını Ayıklama](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)

@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: a4bf8cff59ffe01b7465e227c0b1d1e7d93f16e7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8344fdedcff34f102b73f977b688abc15563bd4c
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394051"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198597"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Paylaşılan çerçeve: Microsoft. AspNetCore. app öğesinden kaldırılan derlemeler
 
-ASP.NET Core 3,0 ' den başlayarak, ASP.NET Core paylaşılan çerçeve (`Microsoft.AspNetCore.App`) yalnızca Microsoft tarafından tam olarak geliştirilen, desteklenen ve hizmet veren birinci taraf derlemeleri içerir. 
+ASP.NET Core 3,0 ' den başlayarak, ASP.NET Core paylaşılan çerçeve (`Microsoft.AspNetCore.App`) yalnızca Microsoft tarafından tam olarak geliştirilen, desteklenen ve hizmet veren birinci taraf derlemeleri içerir.
 
 #### <a name="change-description"></a>Açıklamayı Değiştir
 
@@ -32,7 +32,7 @@ Ayrıca, `Microsoft.AspNetCore.App` aşağıdaki alt bileşenleri içeriyordu:
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-@No__t-0 ' a bir başvuru artık proje dosyasında `<PackageReference>` öğesi gerektirmez. .NET Core SDK, `<PackageReference>` kullanımını değiştiren `<FrameworkReference>` adlı yeni bir öğeyi destekler.
+`Microsoft.AspNetCore.App` bir başvuru artık proje dosyasında bir `<PackageReference>` öğesi gerektiriyor. .NET Core SDK, `<PackageReference>` kullanımını değiştiren `<FrameworkReference>` adlı yeni bir öğeyi destekler.
 
 Daha fazla bilgi için bkz. [ASPNET/AspNetCore # 3612](https://github.com/aspnet/AspNetCore/issues/3612).
 
@@ -54,8 +54,8 @@ Projelerin NuGet paketleri olarak `Microsoft.AspNetCore.App` ' daki derlemeleri 
 
 Bu değişiklik, ASP.NET Core 2. x içinde `Microsoft.AspNetCore.App` ile başvurulan tüm ikili dosyalar için geçerlidir. Önemli özel durumlar şunlardır:
 
-- @no__t-hedef .NET Standard devam eden 0 kitaplıkları NuGet paketleri olarak kullanılabilir (bkz. https://github.com/aspnet/Extensions) ).
-- @No__t-0 ' ın parçası olmayan ASP.NET Core ekibi tarafından oluşturulan API 'Ler. Örneğin, aşağıdaki bileşenler NuGet paketleri olarak kullanılabilir:
+- hedef .NET Standard devam eden `Microsoft.Extensions` kitaplıkları, NuGet paketleri olarak kullanılabilir (bkz. https://github.com/aspnet/Extensions).
+- `Microsoft.AspNetCore.App`parçası olmayan ASP.NET Core ekibi tarafından oluşturulan API 'Ler. Örneğin, aşağıdaki bileşenler NuGet paketleri olarak kullanılabilir:
   - Entity Framework Core
   - Üçüncü taraf tümleştirme sağlayan API 'Ler
   - Deneysel özellikler

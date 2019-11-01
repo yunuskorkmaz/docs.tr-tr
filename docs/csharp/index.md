@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 78a9bd2cf657376bbc324cdefd423b14a283f842
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 77db5201ab21dff1f04f76da5dd10d07aa377813
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104724"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191811"
 ---
 # <a name="c-guide"></a>C# Kılavuzu
 
@@ -55,7 +55,7 @@ C# Kılavuzda birkaç bölüm vardır. Bunları sırasıyla okuyabilir veya en f
 - [C# Programlama Kılavuzu](./programming-guide/index.md)
   - C# dil yapılarının kullanımı hakkında bilgi ve uygulamalı örnekler sağlar.
 
-- [İzlenecek Yollar](./walkthroughs.md)
+- [İzlenecek yollar](./walkthroughs.md)
   - C# kullanan programlama yollarına ve her izlenecek yola ilişkin kısa bir açıklamaya bağlantılar sağlar.
 
 - [Dil Başvurusu](language-reference/index.md)
@@ -66,6 +66,6 @@ C# Kılavuzda birkaç bölüm vardır. Bunları sırasıyla okuyabilir veya en f
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual C# ve Visual Basic'e Başlarken](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Görsele BaşlarkenC#](/visualstudio/ide/quickstart-csharp-console)
 - [.NET Kılavuzu](../standard/index.md)
-- [C# örnekleri](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)
+- [C#Lerinizi](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)

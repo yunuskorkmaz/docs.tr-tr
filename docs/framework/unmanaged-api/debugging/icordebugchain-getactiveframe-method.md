@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36887017-670b-4f21-b406-8fab956f84a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c79f3b3b976b83eb99f8aa26d38a1fe316de471a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 03cb1556ee971124ed4c591f38d9f892fc7df7b0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744988"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192151"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>ICorDebugChain::GetActiveFrame Metodu
-Etkin alır (yani, en son) zincirindeki çerçeve.  
+Zincirdeki etkin (yani en son) çerçeveyi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +35,18 @@ HRESULT GetActiveFrame (
   
 ## <a name="parameters"></a>Parametreler  
  `ppFrame`  
- [out] Etkin temsil eden Icordebugframe nesnenin adresini bir işaretçiye (diğer bir deyişle, en son) zincirindeki çerçeve.  
+ dışı Zincirdeki etkin (yani en son) kareyi temsil eden ICorDebugFrame nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yönetilen yığın çerçeve varsa `ppFrame` ayarlanır null.  
+ Kullanılabilir bir yönetilen yığın çerçevesi yoksa `ppFrame` null olarak ayarlanır.  
   
- Etkin çerçeveye kullanılabilir durumda değilse, çağrı başarılı olacaktır ve `ppFrame` null olacaktır. Etkin çerçeve CHAIN_ENTER_UNMANAGED nedeniyle başlatılan zincirleri için ve başlatılan CHAIN_CLASS_INIT nedeniyle bazı zincirleri için kullanılabilir olmayacak. CorDebugChainReason numaralandırması bakın.  
+ Etkin çerçeve kullanılabilir değilse, çağrı başarılı olur ve `ppFrame` null olur. CHAIN_ENTER_UNMANAGED nedeniyle başlatılan zincirler için etkin çerçeveler kullanılamayacak ve bazı zincirler CHAIN_CLASS_INIT nedeniyle başlatılacaktır. CorDebugChainReason numaralandırması bölümüne bakın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

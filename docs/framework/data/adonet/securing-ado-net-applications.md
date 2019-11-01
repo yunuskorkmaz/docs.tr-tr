@@ -2,12 +2,12 @@
 title: ADO.NET Uygulamalarının Güvenliğini Sağlama
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 725ba568f3cd482991359237f4fc42b7da99bc0a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c99c56afca475caafe32cca3f50d074fb82e0e00
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795061"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196719"
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET Uygulamalarının Güvenliğini Sağlama
 Güvenli bir ADO.NET uygulaması yazmak, Kullanıcı girişini doğrulamamak gibi yaygın kodlama ile kullanmaktan daha fazlasını içerir. Verilere erişen bir uygulama, bir saldırganın duyarlı verileri almak, değiştirmek veya yok etmek için yararlanabilecek birçok olası hata noktası içerir. Bu nedenle, uygulamanızın tasarım aşamasında, son dağıtım ve devam eden bakımda güvenlik açısından tehdit modellemesi sürecinde güvenliğin tüm yönlerini anlamak önemlidir.  
@@ -39,7 +39,7 @@ Güvenli bir ADO.NET uygulaması yazmak, Kullanıcı girişini doğrulamamak gib
  [Güvenlik Konuları](./ef/security-considerations.md)  
  Entity Framework uygulamalar için güvenliği açıklar.  
   
- [Güvenlik](../../../standard/security/index.md)  
+ [Security](../../../standard/security/index.md)  
  .NET 'teki tüm güvenlik yönlerini açıklayan konuların bağlantılarını içerir.  
   
  [Güvenlik araçları](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
@@ -48,7 +48,7 @@ Güvenli bir ADO.NET uygulaması yazmak, Kullanıcı girişini doğrulamamak gib
  [Güvenli uygulamalar oluşturmak için kaynaklar](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  Güvenli uygulamalar oluşturmaya yönelik konuların bağlantılarını sağlar.  
   
- [Güvenlik Kaynakçası](/visualstudio/ide/security-bibliography)  
+ [Güvenlik Kaynakçası](/visualstudio/ide/securing-applications)  
  Çevrimiçi ve yazdırma için kullanılabilir dış kaynaklara bağlantılar sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

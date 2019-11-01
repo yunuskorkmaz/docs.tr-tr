@@ -8,150 +8,150 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: a7c36e8fc150fe3268120ed728f1bed87d24e800
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c8a83dd3f7327d00979431ca7fa801ff642a4eef
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623593"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197804"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>İzlenecek yol: WindowsFormsHost Öğesi Kullanarak Özellikleri Eşleme
 
-Bu izlenecek yol size nasıl kullanılacağını gösterir <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> eşlemek için özellik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] barındırılan karşılık gelen özelliklere özellikleri [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi.
+Bu izlenecek yol, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliklerini barındırılan bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimindeki ilgili özelliklerle eşlemek için <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> özelliğini nasıl kullanacağınızı gösterir.
 
-Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
+Bu izlenecek yolda gösterilen görevler şunlardır:
 
 - Proje oluşturuluyor.
 
-- Uygulama düzenini tanımlama.
+- Uygulama yerleşimini tanımlama.
 
-- Yeni bir özellik eşlemesi tanımlama.
+- Yeni özellik eşlemesi tanımlama.
 
 - Varsayılan özellik eşlemesi kaldırılıyor.
 
-- Varsayılan özellik eşlemesi değiştiriliyor.
+- Varsayılan özellik eşlemesini değiştirme.
 
-- Varsayılan özellik eşlemesi genişletme.
+- Varsayılan özellik eşlemesini genişletme.
 
-Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [WindowsFormsHost öğesi örneği kullanarak eşleme özelliklerini](https://go.microsoft.com/fwlink/?LinkID=160019).
+Bu kılavuzda gösterilen görevlerin tüm kod listesi için bkz. [WindowsFormsHost öğesi örneği kullanılarak özellikleri eşleme](https://go.microsoft.com/fwlink/?LinkID=160019).
 
-Bitirdiğiniz zaman, eşlemek mümkün olmayacak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] barındırılan karşılık gelen özelliklere özellikleri [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi.
+İşiniz bittiğinde, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliklerini barındırılan bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimindeki ilgili özelliklerle eşleyebilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Visual Studio 2017
 
-## <a name="create-and-set-up-the-project"></a>Oluşturma ve projesi kurun
+## <a name="create-and-set-up-the-project"></a>Projeyi oluşturma ve ayarlama
 
-1. Oluşturma bir **WPF uygulaması** adlı proje `PropertyMappingWithWfhSample`.
+1. `PropertyMappingWithWfhSample`adlı bir **WPF uygulaması** projesi oluşturun.
 
-2. İçinde **Çözüm Gezgini**, WindowsFormsIntegration.dll adlı WindowsFormsIntegration derlemesine bir başvuru ekleyin.
+2. **Çözüm Gezgini**' de, WindowsFormsIntegration. dll adlı WindowsFormsIntegration derlemesine bir başvuru ekleyin.
 
-3. İçinde **Çözüm Gezgini**, System.Drawing ve System.Windows.Forms öğelerini derlemelere başvurular ekleyin.
+3. **Çözüm Gezgini**, System. Drawing ve System. Windows. Forms derlemelerine başvuruları ekleyin.
 
-## <a name="defining-the-application-layout"></a>Uygulama düzenini tanımlama
+## <a name="defining-the-application-layout"></a>Uygulama yerleşimini tanımlama
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Uygulamanız tarafından kullanılan temel <xref:System.Windows.Forms.Integration.WindowsFormsHost> ana öğesine bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]tabanlı uygulama bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimini barındırmak için <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesini kullanır.
 
-### <a name="to-define-the-application-layout"></a>Uygulama düzenini tanımlamak için
+### <a name="to-define-the-application-layout"></a>Uygulama yerleşimini tanımlamak için
 
-1. Window1.XAML içinde açın [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
+1. [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]Window1. xaml ' i açın.
 
-2. Varolan kodu aşağıdaki kodla değiştirin.
+2. Mevcut kodu aşağıdaki kodla değiştirin.
 
      [!code-xaml[PropertyMappingWithWfhSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml#1)]
 
-3. Window1.xaml.cs Kod Düzenleyicisi'nde açın.
+3. Kod düzenleyicisinde Window1.xaml.cs öğesini açın.
 
-4. Dosyasının en üstüne aşağıdaki ad alanlarını içeri aktarın.
+4. Dosyanın en üstüne aşağıdaki ad alanlarını içeri aktarın.
 
      [!code-csharp[PropertyMappingWithWfhSample#20](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#20)]
      [!code-vb[PropertyMappingWithWfhSample#20](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#20)]
 
-## <a name="defining-a-new-property-mapping"></a>Yeni bir özellik eşlemesi tanımlama
+## <a name="defining-a-new-property-mapping"></a>Yeni özellik eşlemesi tanımlama
 
-<xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğe birkaç varsayılan özellik eşlemeleri sağlar. Çağırarak yeni bir özellik eşlemesi Ekle <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> metodunda <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>.
+<xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi, çeşitli varsayılan özellik eşlemeleri sağlar. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinin <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A><xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> yöntemini çağırarak yeni bir özellik eşlemesi eklersiniz.
 
 ### <a name="to-define-a-new-property-mapping"></a>Yeni bir özellik eşlemesi tanımlamak için
 
-- Tanımı aşağıdaki kodu kopyalayarak `Window1` sınıfı.
+- Aşağıdaki kodu `Window1` sınıfının tanımına kopyalayın.
 
      [!code-csharp[PropertyMappingWithWfhSample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#14)]
      [!code-vb[PropertyMappingWithWfhSample#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#14)]
 
-     `AddClipMapping` Yöntemi ekler için yeni bir eşleme <xref:System.Windows.UIElement.Clip%2A> özelliği.
+     `AddClipMapping` yöntemi <xref:System.Windows.UIElement.Clip%2A> özelliği için yeni bir eşleme ekler.
 
-     `OnClipChange` Yöntemi çevirir <xref:System.Windows.UIElement.Clip%2A> özelliğini [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.Region%2A> özelliği.
+     `OnClipChange` yöntemi, <xref:System.Windows.UIElement.Clip%2A> özelliğini [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A> özelliğine çevirir.
 
-     `Window1_SizeChanged` Yöntemi işler pencerenin <xref:System.Windows.FrameworkElement.SizeChanged> olay ve uygulama penceresine sığacak şekilde kırpma bölgesini boyutları.
+     `Window1_SizeChanged` yöntemi pencerenin <xref:System.Windows.FrameworkElement.SizeChanged> olayını işler ve kırpma bölgesini uygulama penceresine uyacak şekilde boyutlandırır.
 
-## <a name="removing-a-default-property-mapping"></a>Varsayılan özellik eşlemesi kaldırılıyor
+## <a name="removing-a-default-property-mapping"></a>Varsayılan özellik eşlemesini kaldırma
 
-Çağırarak varsayılan özellik eşlemesini kaldırma <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> metodunda <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>.
+<xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinin <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A><xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> yöntemini çağırarak varsayılan özellik eşlemesini kaldırın.
 
 ### <a name="to-remove-a-default-property-mapping"></a>Varsayılan özellik eşlemesini kaldırmak için
 
-- Tanımı aşağıdaki kodu kopyalayarak `Window1` sınıfı.
+- Aşağıdaki kodu `Window1` sınıfının tanımına kopyalayın.
 
      [!code-csharp[PropertyMappingWithWfhSample#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#13)]
      [!code-vb[PropertyMappingWithWfhSample#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#13)]
 
-     `RemoveCursorMapping` Yöntemi için varsayılan eşlemeyi siler <xref:System.Windows.FrameworkElement.Cursor%2A> özelliği.
+     `RemoveCursorMapping` yöntemi <xref:System.Windows.FrameworkElement.Cursor%2A> özelliğinin varsayılan eşlemesini siler.
 
-## <a name="replacing-a-default-property-mapping"></a>Varsayılan özellik eşlemesi değiştiriliyor
+## <a name="replacing-a-default-property-mapping"></a>Varsayılan özellik eşlemesini değiştirme
 
-Varsayılan eşleme ve arama kaldırarak bir varsayılan özellik eşlemesini değiştirmek <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> metodunda <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>.
+Varsayılan eşlemeyi kaldırarak ve <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinin <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A><xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> yöntemi çağırarak varsayılan özellik eşlemesini değiştirin.
 
-### <a name="to-replace-a-default-property-mapping"></a>Varsayılan özellik eşlemesini değiştirmek için
+### <a name="to-replace-a-default-property-mapping"></a>Varsayılan bir özellik eşlemesini değiştirmek için
 
-- Tanımı aşağıdaki kodu kopyalayarak `Window1` sınıfı.
+- Aşağıdaki kodu `Window1` sınıfının tanımına kopyalayın.
 
      [!code-csharp[PropertyMappingWithWfhSample#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#12)]
      [!code-vb[PropertyMappingWithWfhSample#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]
 
-     `ReplaceFlowDirectionMapping` Yöntemi için varsayılan eşlemeyi değiştirir <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliği.
+     `ReplaceFlowDirectionMapping` yöntemi <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliğinin varsayılan eşlemesinin yerini alır.
 
-     `OnFlowDirectionChange` Yöntemi çevirir <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliğini [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.RightToLeft%2A> özelliği.
+     `OnFlowDirectionChange` yöntemi, <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliğini [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A> özelliğine çevirir.
 
-     `cb_CheckedChanged` Yöntemi tanıtıcıları <xref:System.Windows.Forms.CheckBox.CheckedChanged> olayda <xref:System.Windows.Forms.CheckBox> denetimi. Buna atar <xref:System.Windows.FrameworkElement.FlowDirection%2A> özellik değerini temel alarak <xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliği
+     `cb_CheckedChanged` yöntemi <xref:System.Windows.Forms.CheckBox> denetimindeki <xref:System.Windows.Forms.CheckBox.CheckedChanged> olayını işler. <xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliğinin değerine göre <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliğini atar
 
-## <a name="extending-a-default-property-mapping"></a>Varsayılan özellik eşlemesi genişletme
+## <a name="extending-a-default-property-mapping"></a>Varsayılan özellik eşlemesini genişletme
 
-Varsayılan özellik eşlemesini ve ayrıca kendi eşleme ile genişletmek kullanabilirsiniz.
+Varsayılan bir özellik eşlemesini kullanabilir ve ayrıca kendi eşlemesiyle genişletebilirsiniz.
 
-### <a name="to-extend-a-default-property-mapping"></a>Varsayılan özellik eşlemesi genişletmek için
+### <a name="to-extend-a-default-property-mapping"></a>Varsayılan bir özellik eşlemesini genişletmek için
 
-- Tanımı aşağıdaki kodu kopyalayarak `Window1` sınıfı.
+- Aşağıdaki kodu `Window1` sınıfının tanımına kopyalayın.
 
      [!code-csharp[PropertyMappingWithWfhSample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#15)]
      [!code-vb[PropertyMappingWithWfhSample#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#15)]
 
-     `ExtendBackgroundMapping` Yöntemi, varolan bir özel özellik translator ekler <xref:System.Windows.Controls.Control.Background%2A> özellik eşlemesi.
+     `ExtendBackgroundMapping` yöntemi, varolan <xref:System.Windows.Controls.Control.Background%2A> özellik eşlemesine özel bir özellik Çeviricisi ekler.
 
-     `OnBackgroundChange` Yöntemi barındırılan denetim için belirli bir görüntünün atar <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği. `OnBackgroundChange` Yöntemi, varsayılan özellik eşlemesi uygulandıktan sonra çağrılır.
+     `OnBackgroundChange` yöntemi, barındırılan denetimin <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliğine belirli bir görüntü atar. `OnBackgroundChange` yöntemi, varsayılan özellik eşleme uygulandıktan sonra çağrılır.
 
-## <a name="initializing-your-property-mappings"></a>Özellik eşlemelerinizin başlatılıyor
+## <a name="initializing-your-property-mappings"></a>Özellik Eşlemelerinizi Başlatma
 
-Özelliği daha önce açıklandığı gibi yöntemleri çağırarak eşlemelerinizi <xref:System.Windows.FrameworkElement.Loaded> olay işleyicisi.
+Daha önce açıklanan yöntemleri <xref:System.Windows.FrameworkElement.Loaded> olay işleyicisinde çağırarak özellik eşlemelerinizi ayarlayın.
 
-### <a name="to-initialize-your-property-mappings"></a>Özellik eşlemelerinizin başlatmak için
+### <a name="to-initialize-your-property-mappings"></a>Özellik Eşlemelerinizi başlatmak için
 
-1. Tanımı aşağıdaki kodu kopyalayarak `Window1` sınıfı.
+1. Aşağıdaki kodu `Window1` sınıfının tanımına kopyalayın.
 
      [!code-csharp[PropertyMappingWithWfhSample#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#11)]
      [!code-vb[PropertyMappingWithWfhSample#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#11)]
 
-     `WindowLoaded` Yöntemi tanıtıcıları <xref:System.Windows.FrameworkElement.Loaded> olay ve aşağıdaki başlatmaya gerçekleştirir.
+     `WindowLoaded` yöntemi <xref:System.Windows.FrameworkElement.Loaded> olayını işler ve aşağıdaki başlatmayı gerçekleştirir.
 
-    - Oluşturur bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> denetimi.
+    - Bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox> denetimi oluşturur.
 
-    - Özellik eşlemelerini ayarlamak için daha önce izlenecek içinde tanımlanan yöntemleri çağırır.
+    - Özellik eşlemelerini ayarlamak için izlenecek yolda daha önce tanımladığınız yöntemleri çağırır.
 
-    - Eşlenen özelliklere başlangıç değerleri atar.
+    - Eşlenen özelliklere ilk değerleri atar.
 
-2. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın. Etkisini görmek için bu onay kutusuna tıklayın <xref:System.Windows.FrameworkElement.FlowDirection%2A> eşleme. Düzen onay kutusuna tıklayın, soldan sağa yönünü tersine çevirir.
+2. Uygulamayı derlemek ve çalıştırmak için **F5** tuşuna basın. <xref:System.Windows.FrameworkElement.FlowDirection%2A> eşlemenin etkisini görmek için onay kutusuna tıklayın. Onay kutusuna tıkladığınızda, düzen sol sağ yönünü tersine çevirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -159,5 +159,5 @@ Varsayılan özellik eşlemesini ve ayrıca kendi eşleme ile genişletmek kulla
 - <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Windows Forms ve WPF Özelliğini Eşleme](windows-forms-and-wpf-property-mapping.md)
-- [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [İzlenecek yol: WPF'de Windows Forms denetimini barındırma](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Visual Studio’da XAML tasarlama](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
+- [İzlenecek yol: WPF'de Windows Forms Denetimini Barındırma](walkthrough-hosting-a-windows-forms-control-in-wpf.md)

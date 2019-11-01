@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 530aaee40be92bf72ee4b83b4141108e9b81c8a1
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5776755a57fbc2b0086b1c9b6cfbb2f2b7eb03fa
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968860"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197265"
 ---
 # <a name="unable-to-emit-assembly-error-message"></a>Bütünleştirilmiş kod yayılamıyor: \<hata iletisi >
 
 Visual Basic derleyici, bildirime sahip bir derleme oluşturmak için derleme Bağlayıcısı (*al. exe*, ve Alink olarak da bilinir) çağırır ve bağlayıcı derlemeyi oluşturan egörev aşamasında bir hata bildiriyor.
 
-**Hata KIMLIĞI:** BC30145
+**Hata kimliği:** BC30145
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
@@ -63,5 +63,5 @@ Visual Basic derleyici, bildirime sahip bir derleme oluşturmak için derleme Ba
 
 - [Al. exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe (Tanımlayıcı Ad Aracı)](../../../framework/tools/sn-exe-strong-name-tool.md)
-- [Nasıl yapılır: Ortak özel anahtar çifti oluşturma](../../../standard/assembly/create-public-private-key-pair.md)
-- [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)
+- [Nasıl yapılır: Genel-Özel Anahtar Çifti Oluşturma](../../../standard/assembly/create-public-private-key-pair.md)
+- [Bizimle İletişime Geçin](/visualstudio/ide/feedback-options)

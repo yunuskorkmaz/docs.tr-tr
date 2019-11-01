@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
-ms.openlocfilehash: cae65e1637c29ecfdec07d6a5df27e71b6460c01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d775fab8de7cdbfa1982e455a6a46fef83114d5
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787393"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197235"
 ---
-# <a name="unable-to-link-to-resource-file-filename-error-message"></a>Kaynak dosyasına bağlanamıyor. '\<dosya adı >': \<hata iletisi >
-Visual Basic Derleyicisi bir bildirime sahip bir derleme oluşturmak için Assembly Linker (Al.exe Alink olarak da bilinir) çağırır. Bağlayıcı yerel COM + kaynak dosyasına bütünleştirilmiş koddan bağlanırken bir hata bildirdi.  
+# <a name="unable-to-link-to-resource-file-filename-error-message"></a>'\<filename > ' kaynak dosyasına bağlanamıyor: \<hata iletisi >
+Visual Basic derleyici, bildirime sahip bir derleme oluşturmak için derleme Bağlayıcısı (al. exe, Alink olarak da bilinir) çağırır. Bağlayıcı, derlemeden yerel bir COM+ kaynak dosyasına bağlanırken bir hata bildirdi.  
   
- **Hata Kimliği:** BC30144  
+ **Hata kimliği:** BC30144  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Tırnak işaretli hata iletisini inceleyin ve konusuna danışın [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Daha fazla açıklama ve öneriler için.  
+1. Alıntı yapılan hata iletisini inceleyin ve [al. exe](../../../framework/tools/al-exe-assembly-linker.md)konusuna başvurun. daha fazla açıklama ve öneri.  
   
-2. Sorun devam ederse, koşullar hakkında bilgi toplamak ve Microsoft Ürün Destek Hizmetleri bilgilendirir.  
+2. Hata devam ederse, koşullar hakkındaki bilgileri toplayın ve Microsoft Ürün Destek Hizmetleri 'ne bildirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)
+- [Al. exe](../../../framework/tools/al-exe-assembly-linker.md)
+- [Bizimle İletişime Geçin](/visualstudio/ide/feedback-options)

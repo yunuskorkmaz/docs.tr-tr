@@ -4,12 +4,12 @@ ms.date: 03/28/2018
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.openlocfilehash: d874788830ad15325ad93858e48c16cce20056cb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: cb186e1c893e1c97c96f641edbdf1537a135bfcb
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581953"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191978"
 ---
 # <a name="visual-basic-guide"></a>Visual Basic Kılavuzu
 
@@ -50,7 +50,7 @@ Zaten Visual Basic yoksa, Visual Studio 'nun [Visual](https://aka.ms/vsdownload?
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
-- [Visual Studio ile Geliştirmeye Başlama](/visualstudio/ide/get-started-developing-with-visual-studio)  
+- [Visual Studio ile Geliştirmeye Başlama](/visualstudio/ide/visual-studio-ide)  
   Visual Studio 'nun temelleri hakkında bilgi edinmenize yardımcı olacak konulara bağlantılar sağlar.
 
 - [.NET API tarayıcısı](../../api/index.md)  

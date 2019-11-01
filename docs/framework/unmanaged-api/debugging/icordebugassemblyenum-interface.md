@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 891ceb43-5161-421e-a0bf-299962fd7efd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6c557df3c69b9d18b95ebf33815b92dcb9097f4e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aa0bc34c3cb3ac330582cee0843022e913376fc2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69987533"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192166"
 ---
 # <a name="icordebugassemblyenum-interface"></a>ICorDebugAssemblyEnum Arabirimi
 
@@ -31,7 +29,7 @@ Icordebugger Genum yöntemlerini uygular ve ICorDebugAssembly dizilerini numaral
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki `ICorDebugAssembly` belirtilen örnek sayısını alır.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki `ICorDebugAssembly` örneklerinin belirtilen sayısını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -39,11 +37,11 @@ Icordebugger Genum yöntemlerini uygular ve ICorDebugAssembly dizilerini numaral
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

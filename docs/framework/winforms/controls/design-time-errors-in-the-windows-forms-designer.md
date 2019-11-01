@@ -11,16 +11,16 @@ ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 3e2366513183337c3c5dd05ff45f8a6f724deaae
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0d7fb0d5a98400b3b3eb78e3b93b274e23119497
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988438"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197400"
 ---
 # <a name="windows-forms-designer-error-page"></a>Windows Form Tasarımcısı hata sayfası
 
-Kodunuzda, üçüncü taraf bir bileşende veya başka bir yerde bir hata nedeniyle Windows Form Tasarımcısı yüklenemezse, tasarımcı yerine bir hata sayfası görürsünüz. Bu hata sayfası Tasarımcıda bir hatayı işaret etmeyebilir. Hata,-form adı > adlı \<arka plan kod sayfasında yer alabilir. Designer.cs. Hatalar, kod sayfasındaki hatanın konumuna atlayabileceğiniz bir bağlantı içeren daraltılabilir, sarı çubuklarda görünür.
+Kodunuzda, üçüncü taraf bir bileşende veya başka bir yerde bir hata nedeniyle Windows Form Tasarımcısı yüklenemezse, tasarımcı yerine bir hata sayfası görürsünüz. Bu hata sayfası Tasarımcıda bir hatayı işaret etmeyebilir. Hata,-form adı > \<adlı arka plan kod sayfasında bir yerde olabilir. Designer.cs. Hatalar, kod sayfasındaki hatanın konumuna atlayabileceğiniz bir bağlantı içeren daraltılabilir, sarı çubuklarda görünür.
 
 ![Windows Form Tasarımcısı hata sayfası](media/windows-forms-designer-error-page-collapsed.png)
 
@@ -53,19 +53,19 @@ Bu bölümde karşılaşabileceğiniz hatalardan bazıları listelenir.
 
 Bu hata, bir alanın, yöntemin, etkinliğin veya nesnenin yanlış adlandırıldığını gösterir.
 
-### <a name="name-already-exists-in-project-name"></a>' name > ', '\<proje adı > ' içinde zaten var\<
+### <a name="name-already-exists-in-project-name"></a>'\<name > ' '\<proje adı > ' içinde zaten var
 
-Hata iletisi: '\<\<proje adı > ' içinde "' name > ' zaten var. Lütfen benzersiz bir ad girin. "
+Hata iletisi: "'\<name > ' '\<proje adı > ' içinde zaten var. Lütfen benzersiz bir ad girin. "
 
 Projede zaten var olan devralınmış bir form için bir ad belirttiniz. Bu hatayı düzeltmek için devralınan forma benzersiz bir ad verin.
 
-### <a name="toolbox-tab-name-is-not-a-toolbox-category"></a>'\<Araç kutusu sekme adı > ' bir araç kutusu kategorisi değil
+### <a name="toolbox-tab-name-is-not-a-toolbox-category"></a>'\<araç kutusu sekme adı > ' bir araç kutusu kategorisi değil
 
 Bir üçüncü taraf tasarımcı, araç kutusundaki mevcut olmayan bir sekmeye erişmeye çalıştı. Bileşen satıcısına başvurun.
 
 ### <a name="a-requested-language-parser-is-not-installed"></a>İstenen bir dil ayrıştırıcı yüklü değil
 
-Hata iletisi: "İstenen dil ayrıştırıcısı yüklü değil. Dil ayrıştırıcı adı '{0}'. "
+Hata iletisi: "istenen dil ayrıştırıcısı yüklü değil. Dil ayrıştırıcı adı '{0}'. "
 
 Visual Studio, dosya türü için kaydedilen ancak desteklenmeyen bir tasarımcı yüklemeye çalıştı. Bu, büyük olasılıkla kurulum sırasında oluşan bir hata nedeniyle oluşur. Bir çözüm için kullanmakta olduğunuz dilin satıcısına başvurun.
 
@@ -73,15 +73,15 @@ Visual Studio, dosya türü için kaydedilen ancak desteklenmeyen bir tasarımc�
 
 Bu bir üçüncü taraf bileşeniyle ilgili bir sorundur. Bileşen satıcısına başvurun.
 
-### <a name="an-exception-occurred-while-trying-to-create-an-instance-of-object-name"></a>'\<Nesne adı > ' örneği oluşturulmaya çalışılırken özel durum oluştu
+### <a name="an-exception-occurred-while-trying-to-create-an-instance-of-object-name"></a>'\<nesne adı > ' örneği oluşturulmaya çalışılırken özel durum oluştu
 
-Hata iletisi: "'\<Nesne adı > ' örneği oluşturulmaya çalışılırken özel durum oluştu. Özel durum "\<özel durum dizesi\>" idi.
+Hata iletisi: "'\<nesne adı > ' örneği oluşturulmaya çalışılırken özel durum oluştu. Özel durum "\<özel durum dizesi\>" idi.
 
 Üçüncü taraf tasarımcı, Visual Studio 'Nun bir nesne oluşturmasını istedi, ancak nesne bir hata oluşturdu. Bileşen satıcısına başvurun.
 
-### <a name="another-editor-has-document-name-open-in-an-incompatible-mode"></a>Başka bir düzenleyicide,\<uyumsuz modda açık olan ' belge adı > ' yok
+### <a name="another-editor-has-document-name-open-in-an-incompatible-mode"></a>Başka bir düzenleyicide '\<belge adı > ' uyumsuz modda açık
 
-Hata iletisi: "Başka bir düzenleyicide,\<uyumsuz modda açık olan ' belge adı > ' yok. Lütfen düzenleyiciyi kapatın ve bu işlemi yeniden deneyin. "
+Hata iletisi: "başka bir düzenleyicide '\<belge adı > ' uyumsuz modda açılmış. Lütfen düzenleyiciyi kapatın ve bu işlemi yeniden deneyin. "
 
 Bu hata, zaten başka bir düzenleyicide açılmış olan bir dosyayı açmaya çalıştığınızda ortaya çıkar. Zaten açık dosyayı olan düzenleyici gösteriliyor. Bu hatayı düzeltmek için, dosyayı açık olan düzenleyiciyi kapatın ve yeniden deneyin.
 
@@ -91,17 +91,17 @@ Değişikliklerin etkili olması için tasarımcıyı kapatıp yeniden açın. N
 
 ### <a name="another-editor-has-the-file-open-in-an-incompatible-mode"></a>Dosya başka bir düzenleyicide uyumsuz modda açılmış
 
-Hata iletisi: "Başka bir düzenleyicide dosyanın uyumsuz modda açık olması. Lütfen düzenleyiciyi kapatın ve bu işlemi yeniden deneyin. "
+Hata iletisi: "başka bir düzenleyici dosyanın uyumsuz modda açık olduğunu. Lütfen düzenleyiciyi kapatın ve bu işlemi yeniden deneyin. "
 
-Bu ileti "başka bir düzenleyicide\<' belge adı > ', uyumsuz modda açılmış", ancak Visual Studio dosya adını belirleyemedi. Bu hatayı düzeltmek için, dosyayı açık olan düzenleyiciyi kapatın ve yeniden deneyin.
+Bu ileti "başka bir düzenleyicide '\<belge adı > ' uyumsuz bir modda açık" olduğundan, ancak Visual Studio dosya adını saptayamıyor. Bu hatayı düzeltmek için, dosyayı açık olan düzenleyiciyi kapatın ve yeniden deneyin.
 
-### <a name="array-rank-rank-in-array-is-too-high"></a>Dizi derecelendirmesi '\<> dizideki sıralaması çok yüksek
+### <a name="array-rank-rank-in-array-is-too-high"></a>Dizi > ' dizisinde dizi derecelendirmesi '\<sıralaması çok yüksek
 
 Visual Studio yalnızca tasarımcı tarafından ayrıştırılmış kod bloğundaki tek boyutlu dizileri destekler. Çok boyutlu diziler bu alanın dışında geçerli.
 
-### <a name="assembly-assembly-name-could-not-be-opened"></a>'\<Derleme adı > ' derlemesi açılamadı
+### <a name="assembly-assembly-name-could-not-be-opened"></a>'\<bütünleştirilmiş kod adı > ' derlemesi açılamadı
 
-Hata iletisi: "Derleme '\<derleme adı > ' açılamadı. Dosyanın hala mevcut olduğunu doğrulayın. "
+Hata iletisi: "derleme '\<derleme adı > ' açılamadı. Dosyanın hala mevcut olduğunu doğrulayın. "
 
 Bu hata iletisi, açılmayan bir dosyayı açmaya çalıştığınızda ortaya çıkar. Dosyanın var olduğunu ve geçerli bir derleme olduğunu doğrulayın.
 
@@ -113,7 +113,7 @@ Bu bir üçüncü taraf bileşeniyle ilgili bir sorundur. Bileşen satıcısına
 
 Visual Studio, araç kutusu için kullanılabilir olmayan bir çağrı yaptı. Bu hatayı görürseniz, bu hatayı görürseniz lütfen [sorun bildir](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)' i kullanarak bir sorunu günlüğe kaydedin.
 
-### <a name="cannot-bind-an-event-handler-to-the-event-name-event-because-it-is-read-only"></a>'\<Event name > ' olayına bir olay işleyicisi bağlanamaz çünkü salt okunurdur
+### <a name="cannot-bind-an-event-handler-to-the-event-name-event-because-it-is-read-only"></a>'\<olay adı > ' olayına bir olay işleyicisi bağlanamaz çünkü salt okunurdur
 
 Bu hata, genellikle bir olayı temel sınıftan devralınan bir denetime bağlamayı denediğinizde ortaya çıkar. Denetimin üye değişkeni Private ise, Visual Studio olayı yöntemine bağlanamaz. Özel olarak devralınan denetimlere ek olaylar bağlanamaz.
 
@@ -121,7 +121,7 @@ Bu hata, genellikle bir olayı temel sınıftan devralınan bir denetime bağlam
 
 Visual Studio, tasarımcıda üye değişkeni olmayan bir bileşene olay işleyicisi eklemeye çalıştı. Bileşen satıcısına başvurun.
 
-### <a name="cannot-name-the-object-name-because-it-is-already-named-name"></a>' Name > ' zaten\<\<adlandırılmış olduğundan ' name > ' nesnesinin adı değiştirilemez
+### <a name="cannot-name-the-object-name-because-it-is-already-named-name"></a>'\<name > ' nesnesi zaten '\<name > ' olarak adlandırıldığından adlandırılamıyor
 
 Bu, Visual Studio seri hale getiricide bir iç hatadır. Seri hale getiricinin, desteklenmeyen bir nesneyi iki kez yeniden adlandırma girişiminde bulunduğunu belirtir. Bu hatayla karşılaşırsanız lütfen [sorun bildir](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)' i kullanarak bir sorunu günlüğe kaydedin.
 
@@ -129,11 +129,11 @@ Bu, Visual Studio seri hale getiricide bir iç hatadır. Seri hale getiricinin, 
 
 Devralınan denetimler, devralan sınıfının sahipliğinin altındadır. Devralınan denetimdeki değişiklikler denetimin kaynaklandığı sınıfta yapılmalıdır. Bu nedenle, yeniden adlandıramaz veya yok edilemez.
 
-### <a name="category-toolbox-tab-name-does-not-have-a-tool-for-class-class-name"></a>Kategori '\<araç kutusu sekme adı > ' sınıfı '\<sınıf adı > ' için bir araca sahip değil
+### <a name="category-toolbox-tab-name-does-not-have-a-tool-for-class-class-name"></a>'\<araç kutusu sekme adı > ' kategorisinin '\<class name > ' sınıfı için bir aracı yok
 
 Tasarımcı, belirli bir araç kutusu sekmesindeki bir sınıfa başvurmaya çalıştı, ancak sınıf yok. Bileşen satıcısına başvurun.
 
-### <a name="class-class-name-has-no-matching-constructor"></a>'\<Sınıf adı > ' sınıfının eşleşen bir oluşturucusu yok
+### <a name="class-class-name-has-no-matching-constructor"></a>'\<class name > ' sınıfının eşleşen bir oluşturucusu yok
 
 Üçüncü taraf tasarımcı, Visual Studio 'Nun mevcut olmayan oluşturucuda belirli parametrelere sahip bir nesne oluşturmasını istedi. Bileşen satıcısına başvurun.
 
@@ -141,31 +141,31 @@ Tasarımcı, belirli bir araç kutusu sekmesindeki bir sınıfa başvurmaya çal
 
 Bu bir hata için genel bir sarmalayıcıdır. Bu iletiye eşlik eden hata dizesi, hata iletisi hakkında daha fazla ayrıntı verir ve daha belirli bir Yardım konusunun bağlantısına sahip olur. Bu hatayı düzeltmek için, bu hataya eklenen hata iletisinde belirtilen hatayı ele edin.
 
-### <a name="component-component-name-did-not-call-containeradd-in-its-constructor"></a>'\<Bileşen adı > ' bileşeni, oluşturucusunda Container. Add () çağrısını gerçekleştirmedi
+### <a name="component-component-name-did-not-call-containeradd-in-its-constructor"></a>'\<bileşen adı > ' bileşeni, kurucusunda Container. Add () çağrısını gerçekleştirmedi
 
 Bu, yeni yüklediğiniz veya forma yerleştirdiğiniz bileşendeki bir hatadır. Bileşenin kendisini kapsayıcı denetimine eklemediğini belirtir (bunun başka bir denetim veya form olup olmadığı). Tasarımcı çalışmaya devam eder, ancak çalışma zamanında bileşenle ilgili sorunlar olabilir.
 
-Hatayı düzeltmek için bileşen satıcısına başvurun. Ya da, oluşturduğunuz bir bileşen ise, bileşenin oluşturucusunda `IContainer.Add` yöntemini çağırın.
+Hatayı düzeltmek için bileşen satıcısına başvurun. Ya da, oluşturduğunuz bir bileşen ise bileşenin oluşturucusunda `IContainer.Add` yöntemini çağırın.
 
 ### <a name="component-name-cannot-be-empty"></a>Bileşen adı boş olamaz
 
 Bu hata, bir bileşeni boş bir değere yeniden adlandırmaya çalıştığınızda ortaya çıkar.
 
-### <a name="could-not-access-the-variable-variable-name-because-it-has-not-been-initialized-yet"></a>'\<Değişken adı > ' değişkenine erişilemedi çünkü henüz başlatılmamış
+### <a name="could-not-access-the-variable-variable-name-because-it-has-not-been-initialized-yet"></a>Henüz başlatılamadığından '\<değişken adı > ' değişkenine erişilemedi
 
 Bu hata, iki senaryo nedeniyle ortaya çıkabilir. Üçüncü taraf bir bileşen satıcısı, dağıttıkları bir denetim veya bileşenle ilgili bir sorun içeriyor veya yazdığınız kod bileşenler arasında özyinelemeli bağımlılıklara sahip.
 
 Bu hatayı düzeltmek için, kodunuzun özyinelemeli bir bağımlılığı olmadığından emin olun. Bu tür sorunlardan biri ücretsizdir, hata iletisinin tam metnini aklınızda yazın ve bileşen satıcısına başvurun.
 
-### <a name="could-not-find-type-type-name"></a>'\<Tür adı > ' türü bulunamadı
+### <a name="could-not-find-type-type-name"></a>'\<tür adı > ' türü bulunamadı
 
-Hata iletisi: "'\<Tür adı > ' türü bulunamadı. Lütfen bu türü içeren derlemeye başvurulduğundan emin olun. Bu tür geliştirme projenizin bir parçasıysa, projenin başarılı bir şekilde oluşturulduğundan emin olun. "
+Hata iletisi: "'\<tür adı > ' türü bulunamadı. Lütfen bu türü içeren derlemeye başvurulduğundan emin olun. Bu tür geliştirme projenizin bir parçasıysa, projenin başarılı bir şekilde oluşturulduğundan emin olun. "
 
 Bir başvuru bulunamadığı için bu hata oluştu. Hata iletisinde belirtilen türün başvurulduğundan ve türün gerektirdiği tüm derlemelere de başvurulduğundan emin olun. Genellikle, sorun çözümdeki bir denetimin oluşturulmamasından kaynaklanır. Derlemek için **derleme** menüsünden **çözüm oluştur** ' u seçin. Aksi takdirde, denetim zaten oluşturulsa, Çözüm Gezgini **Başvurular** veya **Bağımlılıklar** klasörünün sağ tıklama menüsünden el ile bir başvuru ekleyin.
 
-### <a name="could-not-load-type-type-name"></a>'\<Tür adı > ' türü yüklenemedi
+### <a name="could-not-load-type-type-name"></a>'\<tür adı > ' türü yüklenemedi
 
-Hata iletisi: "'\<Tür adı > ' türü yüklenemedi. Lütfen bu türü içeren derlemenin proje başvurularına eklendiğinden emin olun. "
+Hata iletisi: "'\<tür adı > ' türü yüklenemedi. Lütfen bu türü içeren derlemenin proje başvurularına eklendiğinden emin olun. "
 
 Visual Studio bir olay işleme yöntemi oluşturmaya çalıştı ve yöntem için bir veya daha fazla parametre türü bulamadı. Bunun nedeni genellikle eksik bir başvurudur. Bu hatayı düzeltmek için, türü içeren başvuruyu projeye ekleyin ve yeniden deneyin.
 
@@ -173,15 +173,15 @@ Visual Studio bir olay işleme yöntemi oluşturmaya çalıştı ve yöntem içi
 
 Visual Studio 'da devralınan formlara yönelik şablonlar kullanılamıyor. Bu hatayla karşılaşırsanız lütfen [sorun bildir](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)' i kullanarak bir sorunu günlüğe kaydedin.
 
-### <a name="delegate-class-class-name-has-no-invoke-method-is-this-class-a-delegate"></a>'\<Sınıf adı > ' temsilci sınıfında Invoke yöntemi yok. Bu sınıf bir temsilci mi?
+### <a name="delegate-class-class-name-has-no-invoke-method-is-this-class-a-delegate"></a>'\<class name > ' temsilci sınıfında Invoke yöntemi yok. Bu sınıf bir temsilci mi?
 
 Visual Studio bir olay işleyicisi oluşturmaya çalıştı, ancak olay türünde bir sorun oluştu. Olay CLS uyumlu olmayan bir dil tarafından oluşturulduysa bu durum oluşabilir. Bileşen satıcısına başvurun.
 
-### <a name="duplicate-declaration-of-member-member-name"></a>'\<Üye adı > ' üyesinin yinelenen bildirimi
+### <a name="duplicate-declaration-of-member-member-name"></a>'\<üye adı > ' üyesinin yinelenen bildirimi
 
-Bu hata, bir üye değişkeni iki kez bildirildiği için (örneğin, adlandırılmış `Button1` iki denetim kodda bildirildiği için) Bu hata ortaya çıkar. Adların devralınan formlarda benzersiz olması gerekir. Ayrıca, adlar yalnızca büyük/küçük harf bakımından farklı olamaz.
+Bir üye değişkeni iki kez bildirildiği için bu hata oluşur (örneğin, `Button1` adında iki denetim kodda bildirildiği için). Adların devralınan formlarda benzersiz olması gerekir. Ayrıca, adlar yalnızca büyük/küçük harf bakımından farklı olamaz.
 
-### <a name="error-reading-resources-from-the-resource-file-for-the-culture-culture-name"></a>'\<Kültür adı > ' kültürü için kaynak dosyasındaki kaynakları okuma hatası
+### <a name="error-reading-resources-from-the-resource-file-for-the-culture-culture-name"></a>'\<kültür adı > ' kültürü için kaynak dosyasındaki kaynakları okuma hatası
 
 Bu hata, projede hatalı bir. resx dosyası varsa oluşabilir.
 
@@ -191,7 +191,7 @@ Bu hatayı düzeltmek için:
 2. . Resx dosyasını XML düzenleyicisinde,. resx dosyasına sağ tıklayıp **Aç**' ı seçerek yükleyin.
 3. Hataları gidermek için. resx dosyasını el ile düzenleyin.
 
-### <a name="error-reading-resources-from-the-resource-file-for-the-default-culture-culture-name"></a>'\<Kültür adı > ' varsayılan kültürünün kaynak dosyasındaki kaynakları okuma hatası
+### <a name="error-reading-resources-from-the-resource-file-for-the-default-culture-culture-name"></a>'\<kültür adı > ' varsayılan kültürünün kaynak dosyasındaki kaynakları okuma hatası
 
 Bu hata, varsayılan kültür için projede bir hatalı. resx dosyası varsa meydana gelir.
 
@@ -201,9 +201,9 @@ Bu hatayı düzeltmek için:
 2. . Resx dosyasını XML düzenleyicisinde,. resx dosyasına sağ tıklayıp **Aç**' ı seçerek yükleyin.
 3. Hataları gidermek için. resx dosyasını el ile düzenleyin.
 
-### <a name="failed-to-parse-method-method-name"></a>'\<Yöntem adı > ' yöntemi ayrıştırılamadı
+### <a name="failed-to-parse-method-method-name"></a>'\<Yöntem adı > ' metodu ayrıştırılamadı
 
-Hata iletisi: "' Yöntem adı > '\<yöntemi ayrıştırılamadı. Ayrıştırıcı şu hatayı bildirdi: '\<hata dizesi > '. Olası hatalar için lütfen Görev Listesi bakın. "
+Hata iletisi: "Yöntem adı > '\<metodu ayrıştırılamadı. Ayrıştırıcı şu hatayı bildirdi: '\<hata dizesi > '. Olası hatalar için lütfen Görev Listesi bakın. "
 
 Bu, ayrıştırma sırasında ortaya çıkan sorunlar için genel bir hata iletisidir. Bu hatalar genellikle söz dizimi hataları nedeniyle yapılır. Hatayla ilgili belirli iletiler için Görev Listesi bakın.
 
@@ -211,31 +211,31 @@ Bu, ayrıştırma sırasında ortaya çıkan sorunlar için genel bir hata ileti
 
 Bir bileşeni bu dil için geçersiz bir değerle yeniden adlandırmaya çalıştınız. Bu hatayı düzeltmek için, bileşeni bu dilin adlandırma kurallarıyla uyumlu olacak şekilde adlandırın.
 
-### <a name="the-type-class-name-is-made-of-several-partial-classes-in-the-same-file"></a>'\<Sınıf adı > ' türü aynı dosyadaki birkaç kısmi sınıftan yapılır
+### <a name="the-type-class-name-is-made-of-several-partial-classes-in-the-same-file"></a>'\<class name > ' türü aynı dosyadaki birkaç kısmi sınıftan yapılır
 
-[Kısmi](/dotnet/csharp/language-reference/keywords/partial-type) anahtar sözcüğünü kullanarak birden çok dosyada bir sınıf tanımladığınızda, her dosyada yalnızca bir kısmi tanımınız olabilir.
+[Kısmi](../../../csharp/language-reference/keywords/partial-type.md) anahtar sözcüğünü kullanarak birden çok dosyada bir sınıf tanımladığınızda, her dosyada yalnızca bir kısmi tanımınız olabilir.
 
 Bu hatayı düzeltmek için, sınıfınızın kısmi tanımlarından birini, dosyadan kaldırın.
 
-### <a name="the-assembly-assembly-name-could-not-be-found"></a>'\<Derleme adı > ' bütünleştirilmiş kodu bulunamadı
+### <a name="the-assembly-assembly-name-could-not-be-found"></a>'\<bütünleştirilmiş kod adı > ' derlemesi bulunamadı
 
-Hata iletisi: "Derleme '\<derleme adı > ' bulunamadı. Derlemeye başvurulduğundan emin olun. Derleme, geçerli geliştirme projesinin bir parçasıysa, projenin oluşturulduğundan emin olun. "
+Hata iletisi: "\<bütünleştirilmiş kod adı > ' bulunamadı. Derlemeye başvurulduğundan emin olun. Derleme, geçerli geliştirme projesinin bir parçasıysa, projenin oluşturulduğundan emin olun. "
 
-Bu hata, "tür adı '\<> ' bulunamadı" olarak benzerdir, ancak bu hata genellikle meta veri özniteliği nedeniyle oluşur. Bu hatayı düzeltmek için, öznitelikler tarafından kullanılan tüm derlemelerin başvurulduğundan emin olun.
+Bu hata, "'\<tür adı > ' bulunamadı" olarak benzerdir, ancak bu hata genellikle meta veri özniteliği nedeniyle oluşur. Bu hatayı düzeltmek için, öznitelikler tarafından kullanılan tüm derlemelerin başvurulduğundan emin olun.
 
-### <a name="the-assembly-name-assembly-name-is-invalid"></a>Derleme adı '\<derleme adı > ' geçersiz
+### <a name="the-assembly-name-assembly-name-is-invalid"></a>'\<bütünleştirilmiş kod adı > ' derleme adı geçersiz
 
 Bir bileşen belirli bir derlemeyi istedi, ancak bileşen tarafından girilen ad geçerli bir derleme adı değil. Bileşen satıcısına başvurun.
 
-### <a name="the-base-class-class-name-cannot-be-designed"></a>'\<Sınıf adı > ' temel sınıfı tasarlanamıyor
+### <a name="the-base-class-class-name-cannot-be-designed"></a>'\<class name > ' temel sınıfı tasarlanamıyor
 
 Visual Studio sınıfını yükledi, ancak sınıfın uygulayıcısı bir tasarımcı sağlamadığı için sınıf tasarlanamıyor. Sınıf bir tasarımcıyı destekliyorsa, derleyici hataları gibi bir tasarımcıda görüntülemede sorun oluşmasına neden olabilecek bir sorun olmadığından emin olun. Ayrıca, sınıfa yapılan tüm başvuruların doğru olduğundan ve tüm sınıf adlarının doğru yazıldığından emin olun. Aksi takdirde, sınıf bir gösterimde değilse kod görünümünde düzenleyin.
 
-### <a name="the-base-class-class-name-could-not-be-loaded"></a>'\<Sınıf adı > ' temel sınıfı yüklenemedi
+### <a name="the-base-class-class-name-could-not-be-loaded"></a>'\<class name > ' temel sınıfı yüklenemedi
 
 Sınıfın projede başvurulmadığından, Visual Studio tarafından yüklenemez. Bu hatayı düzeltmek için, projedeki sınıfa bir başvuru ekleyin ve Windows Form Tasarımcısı penceresini kapatıp yeniden açın.
 
-### <a name="the-class-class-name-cannot-be-designed-in-this-version-of-visual-studio"></a>'\<Class name > ' sınıfı, Visual Studio 'nun bu sürümünde tasarlanabilir
+### <a name="the-class-class-name-cannot-be-designed-in-this-version-of-visual-studio"></a>'\<class name > ' sınıfı, Visual Studio 'nun bu sürümünde tasarlanabilir
 
 Bu denetim veya bileşen için tasarımcı, Visual Studio 'Nun desteklediği türleri desteklemez. Bileşen satıcısına başvurun.
 
@@ -243,7 +243,7 @@ Bu denetim veya bileşen için tasarımcı, Visual Studio 'Nun desteklediği tü
 
 Kullanıcı tarafından oluşturulan kaynak kodun, kullanılmakta olan dil için geçerli olmayan bir sınıf adı vardır. Bu hatayı düzeltmek için, sınıfı dil gereksinimlerine uygun olacak şekilde adlandırın.
 
-### <a name="the-component-cannot-be-added-because-it-contains-a-circular-reference-to-reference-name"></a>'\<Başvuru adı > ' öğesine döngüsel başvuru içerdiğinden bileşen eklenemiyor
+### <a name="the-component-cannot-be-added-because-it-contains-a-circular-reference-to-reference-name"></a>Bileşen, '\<başvuru adı > ' öğesine döngüsel bir başvuru içerdiğinden eklenemiyor
 
 Kendisini bir denetim veya bileşen ekleyemezsiniz. Bunun gerçekleşebileceği başka bir durum da, bir formun InitializeComponent yönteminde (örneğin, Form1) bir Form1'in başka bir örneğini oluşturan bir kod varsa.
 
@@ -255,13 +255,13 @@ Bu hata, düzenleyicideki dosya salt okunurdur olarak işaretlendiğinde oluşur
 
 Visual Studio, tasarımcı gereksinimlerini karşılayan bir temel sınıf bulamadığında bu hata oluşur. Formlar ve denetimler, tasarımcıları destekleyen bir taban sınıftan türetilmelidir. Devralınan bir formdan veya denetimden türetmeniz durumunda, projenin oluşturulduğundan emin olun.
 
-### <a name="the-designer-for-base-class-class-name-is-not-installed"></a>'\<Sınıf adı > ' temel sınıfı için tasarımcı yüklenmedi
+### <a name="the-designer-for-base-class-class-name-is-not-installed"></a>'\<class name > ' temel sınıfı için tasarımcı yüklü değil
 
 Visual Studio, sınıf için tasarımcıyı yükleyemedi. Bu hatayla karşılaşırsanız lütfen [sorun bildir](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)' i kullanarak bir sorunu günlüğe kaydedin.
 
-### <a name="the-designer-must-create-an-instance-of-type-type-name-but-it-cant-because-the-type-is-declared-as-abstract"></a>Tasarımcı '\<tür adı > ' türünde bir örnek oluşturmalı, ancak tür soyut olarak bildirildiği için bu işlemi yapamıyor
+### <a name="the-designer-must-create-an-instance-of-type-type-name-but-it-cant-because-the-type-is-declared-as-abstract"></a>Tasarımcı '\<tür adı > ' türünde bir örnek oluşturmalı, ancak tür abstract olarak bildirildiği için bu işlemi yapamıyor
 
-Bu hata oluştuğundan, tasarımcıya geçirilen nesnenin temel sınıfı [soyut](/dotnet/csharp/language-reference/keywords/abstract)olduğundan, buna izin verilmez.
+Bu hata oluştuğundan, tasarımcıya geçirilen nesnenin temel sınıfı [soyut](../../../csharp/language-reference/keywords/abstract.md)olduğundan, buna izin verilmez.
 
 ### <a name="the-file-could-not-be-loaded-in-the-designer"></a>Dosya tasarımcıya yüklenemedi
 
@@ -273,21 +273,21 @@ Hata iletisi: "Bu dosyanın dili, gerekli kod ayrıştırma ve oluşturma hizmet
 
 Bu hata, büyük olasılıkla, tasarımcıları desteklemeyen bir projede bulunan bir dosyayı açmaktan kaynaklanıyor.
 
-### <a name="the-language-parser-class-class-name-is-not-implemented-properly"></a>Dil ayrıştırıcı sınıfı '\<sınıf adı > ' düzgün uygulanmadı
+### <a name="the-language-parser-class-class-name-is-not-implemented-properly"></a>'\<class name > ' dil ayrıştırıcı sınıfı düzgün şekilde uygulanmadı
 
-Hata iletisi: "Dil ayrıştırıcı sınıfı '\<sınıf adı > ' düzgün uygulanmadı. Güncelleştirilmiş bir Ayrıştırıcı modülü için satıcıya başvurun. "
+Hata iletisi: "\<class name > ' dil ayrıştırıcı sınıfı düzgün şekilde uygulanmadı. Güncelleştirilmiş bir Ayrıştırıcı modülü için satıcıya başvurun. "
 
 Kullanımdaki dil, doğru temel sınıftan türemeyen bir tasarımcı sınıfına kaydoldu. Kullanmakta olduğunuz dilin satıcısıyla iletişim kurun.
 
-### <a name="the-name-name-is-already-used-by-another-object"></a>'\<Name > ' adı zaten başka bir nesne tarafından kullanılıyor
+### <a name="the-name-name-is-already-used-by-another-object"></a>'\<name > ' adı zaten başka bir nesne tarafından kullanılıyor
 
 Bu, Visual Studio seri hale getiricide bir iç hatadır. Bu hatayla karşılaşırsanız lütfen [sorun bildir](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)' i kullanarak bir sorunu günlüğe kaydedin.
 
-### <a name="the-object-object-name-does-not-implement-the-icomponent-interface"></a>'\<Nesne adı > ' nesnesi IComponent arabirimini uygulamıyor
+### <a name="the-object-object-name-does-not-implement-the-icomponent-interface"></a>'\<nesne adı > ' nesnesi IComponent arabirimini uygulamıyor
 
 Visual Studio bir bileşen oluşturmaya çalıştı, ancak oluşturulan nesne <xref:System.ComponentModel.IComponent> arabirimini uygulamıyor. Bir çözüm için bileşen satıcısına başvurun.
 
-### <a name="the-object-object-name-returned-null-for-the-property-property-name-but-this-is-not-allowed"></a>'\<Nesne adı > ' nesnesi '\<Özellik adı > ' özelliği için null döndürdü, ancak buna izin verilmiyor
+### <a name="the-object-object-name-returned-null-for-the-property-property-name-but-this-is-not-allowed"></a>'\<nesne adı > ' nesnesi '\<Özellik adı > ' özelliği için null döndürdü, ancak buna izin verilmiyor
 
 Her zaman bir nesne döndürmesi gereken bazı .NET özellikleri vardır. Örneğin, bir formun **denetimler** koleksiyonu, içinde hiç denetim olmadığı halde her zaman bir nesne döndürmelidir.
 
@@ -297,19 +297,19 @@ Bu hatayı düzeltmek için, hatada belirtilen özelliğin null olmadığından 
 
 Seri hale getirici tarafından sunulan bir veri nesnesi, kullanılmakta olan geçerli seri hale getirici ile eşleşen bir türün örneği değildir. Bileşen satıcısına başvurun.
 
-### <a name="the-service-service-name-is-required-but-could-not-be-located"></a>'\<Hizmet adı > ' hizmeti gereklidir, ancak bulunamadı
+### <a name="the-service-service-name-is-required-but-could-not-be-located"></a>'\<hizmet adı > ' hizmeti gerekli, ancak bulunamadı
 
-Hata iletisi: "Hizmet\<adı > ' gereklidir, ancak bulunamadı. Visual Studio yüklemenizde bir sorun olabilir. "
+Hata iletisi: "hizmet '\<hizmet adı > ' gereklidir, ancak bulunamadı. Visual Studio yüklemenizde bir sorun olabilir. "
 
 Visual Studio için gereken bir hizmet kullanılamıyor. Bu tasarımcıyı desteklemeyen bir projeyi yüklemeye çalışıyorsanız, ihtiyacınız olan değişiklikleri yapmak için kod düzenleyicisini kullanın. Aksi takdirde, bu hatayı görürseniz lütfen [sorun bildir](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)' i kullanarak bir sorunu günlüğe kaydedin.
 
-### <a name="the-service-instance-must-derive-from-or-implement-interface-name"></a>Hizmet örneği, '\<arabirim adı > ' öğesinden türetilmeli veya bunu uygulamalıdır
+### <a name="the-service-instance-must-derive-from-or-implement-interface-name"></a>Hizmet örneği '\<arabirim adı > ' öğesinden türetilmeli veya bunu uygulamalıdır
 
 Bu hata, bir bileşen veya bileşen tasarımcısının bir arabirim ve nesne gerektiren **AddService** yöntemini çağırdığını, ancak belirtilen nesnenin belirtilen arabirimi uygulamıyor olduğunu gösterir. Bileşen satıcısına başvurun.
 
 ### <a name="the-text-in-the-code-window-could-not-be-modified"></a>Kod penceresindeki metin değiştirilemedi
 
-Hata iletisi: "Kod penceresindeki metin değiştirilemedi. Dosyanın salt okunurdur ve yeterli disk alanı olup olmadığını denetleyin. "
+Hata iletisi: "kod penceresindeki metin değiştirilemedi. Dosyanın salt okunurdur ve yeterli disk alanı olup olmadığını denetleyin. "
 
 Bu hata, Visual Studio disk alanı veya bellek sorunları nedeniyle bir dosyayı düzenleyemediğinde veya dosya salt okunurdur olarak işaretlendiğinden oluşur.
 
@@ -317,21 +317,21 @@ Bu hata, Visual Studio disk alanı veya bellek sorunları nedeniyle bir dosyayı
 
 Bu hatayı görürseniz, bu hatayı görürseniz lütfen [sorun bildir](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)' i kullanarak bir sorunu günlüğe kaydedin.
 
-### <a name="the-toolbox-item-for-component-name-could-not-be-retrieved-from-the-toolbox"></a>'\<Bileşen adı > ' araç kutusu öğesi araç kutusundan alınamadı
+### <a name="the-toolbox-item-for-component-name-could-not-be-retrieved-from-the-toolbox"></a>'\<bileşen adı > ' araç kutusu öğesi araç kutusundan alınamadı
 
-Hata iletisi: "'\<Bileşen adı > ' araç kutusu öğesi araç kutusundan alınamadı. Araç kutusu öğesini içeren derlemenin düzgün yüklendiğinden emin olun. Araç kutusu öğesi şu hatayı verdi: \<hata dizesi >. "
+Hata iletisi: "'\<bileşen adı > ' araç kutusu öğesi araç kutusundan alınamadı. Araç kutusu öğesini içeren derlemenin düzgün yüklendiğinden emin olun. Araç kutusu öğesi şu hatayı verdi: \<hata dizesi >. "
 
 Söz konusu bileşen, Visual Studio 'Ya eriştiğinde bir özel durum oluşturdu. Bileşen satıcısına başvurun.
 
-### <a name="the-toolbox-item-for-toolbox-item-name-could-not-be-retrieved-from-the-toolbox"></a>'\<Araç kutusu öğe adı > ' araç kutusu öğesi araç kutusundan alınamadı
+### <a name="the-toolbox-item-for-toolbox-item-name-could-not-be-retrieved-from-the-toolbox"></a>'\<araç kutusu öğe adı > ' için araç kutusu öğesi araç kutusundan alınamadı
 
-Hata iletisi: "'\<Araç kutusu öğe adı > ' araç kutusu öğesi araç kutusundan alınamadı. Öğeyi araç kutusundan kaldırmayı ve geri eklemeyi deneyin. "
+Hata iletisi: "'\<araç kutusu öğe adı > ' araç kutusu öğesi araç kutusundan alınamadı. Öğeyi araç kutusundan kaldırmayı ve geri eklemeyi deneyin. "
 
 Araç kutusu öğesi içindeki veriler bozuksa veya bileşenin sürümü değiştirilmişse bu hata oluşur. Araç kutusundan öğeyi kaldırmayı ve tekrar eklemeyi deneyin.
 
-### <a name="the-type-type-name-could-not-be-found"></a>'\<Tür adı > ' türü bulunamadı
+### <a name="the-type-type-name-could-not-be-found"></a>'\<tür adı > ' türü bulunamadı
 
-Hata iletisi: \<"Tür adı > ' bulunamadı. Türü içeren derlemeye başvurulduğundan emin olun. Derleme, geçerli geliştirme projesinin bir parçasıysa, projenin oluşturulduğundan emin olun. "
+Hata iletisi: "\<tür adı > ' türü bulunamadı. Türü içeren derlemeye başvurulduğundan emin olun. Derleme, geçerli geliştirme projesinin bir parçasıysa, projenin oluşturulduğundan emin olun. "
 
 Tasarımcı yüklenirken, Visual Studio bir tür bulamadı. Türü içeren derlemeye başvurulduğundan emin olun. Derleme, geçerli geliştirme projesinin bir parçasıysa, projenin oluşturulduğundan emin olun.
 
@@ -339,21 +339,21 @@ Tasarımcı yüklenirken, Visual Studio bir tür bulamadı. Türü içeren derle
 
 Visual Studio, hatalı iş parçacığından gerekli kaynaklara erişmeyi denedi. Bu hata, tasarımcıyı oluşturmak için kullanılan kod, ana uygulama iş parçacığı dışında bir iş parçacığından tür çözümleme hizmeti olarak çağrıldığında görüntülenir. Bu hatayı düzeltmek için, doğru iş parçacığından hizmeti çağırın veya bileşen satıcısına başvurun.
 
-### <a name="the-variable-variable-name-is-either-undeclared-or-was-never-assigned"></a>'\<Değişken adı > ' değişkeni bildirilmemiş ya da hiç atanmadı
+### <a name="the-variable-variable-name-is-either-undeclared-or-was-never-assigned"></a>'\<değişken adı > ' değişkeni bildirilmemiş ya da hiç atanmadı
 
 Kaynak kodun, başvurmayan veya atanmamış olan **button1**gibi bir değişkene başvurusu vardır. Değişken atanmamıştır, bu ileti hata değil, uyarı olarak görüntülenir.
 
-### <a name="there-is-already-a-command-handler-for-the-menu-command-menu-command-name"></a>Menü komutu '\<menü komut adı > ' için zaten bir komut işleyicisi var
+### <a name="there-is-already-a-command-handler-for-the-menu-command-menu-command-name"></a>Menü komutu '\<menü komutu için zaten bir komut işleyicisi var > '
 
 Bir üçüncü taraf tasarımcı, komut tablosuna zaten bir işleyicisi olan bir komut eklerse bu hata ortaya çıkar. Bileşen satıcısına başvurun.
 
-### <a name="there-is-already-a-component-named-component-name"></a>'\<Bileşen adı > ' adlı bir bileşen zaten var
+### <a name="there-is-already-a-component-named-component-name"></a>'\<bileşen adı > ' adlı bir bileşen zaten var
 
-Hata iletisi: "'\<Bileşen adı > ' adlı bir bileşen zaten var. Bileşenler benzersiz adlara sahip olmalıdır ve adların büyük/küçük harfe duyarlı olmaması gerekir. Ayrıca, bir ad devralınmış bir sınıftaki herhangi bir bileşenin adıyla çakışamaz. "
+Hata iletisi: "'\<bileşen adı > ' adlı bir bileşen zaten var. Bileşenler benzersiz adlara sahip olmalıdır ve adların büyük/küçük harfe duyarlı olmaması gerekir. Ayrıca, bir ad devralınmış bir sınıftaki herhangi bir bileşenin adıyla çakışamaz. "
 
 Bu hata iletisi, Özellikler penceresi bileşen adında bir değişiklik olduğunda ortaya çıkar. Bu hatayı düzeltmek için tüm bileşen adlarının benzersiz olduğundan, büyük/küçük harfe duyarlı olmadığından ve devralınan sınıflardaki bileşenlerin adlarıyla çakışmadıklarından emin olun.
 
-### <a name="there-is-already-a-toolbox-item-creator-registered-for-the-format-format-name"></a>'\<Biçim adı > ' biçiminde kaydedilmiş bir araç kutusu öğe Oluşturucusu zaten var
+### <a name="there-is-already-a-toolbox-item-creator-registered-for-the-format-format-name"></a>'\<biçim adı > ' biçiminde kaydedilmiş bir araç kutusu öğe Oluşturucusu zaten var
 
 Bir üçüncü taraf bileşeni bir araç kutusu sekmesindeki bir öğeye geri çağırma yaptı, ancak öğe zaten bir geri çağırma içeriyor. Bileşen satıcısına başvurun.
 
@@ -361,29 +361,29 @@ Bir üçüncü taraf bileşeni bir araç kutusu sekmesindeki bir öğeye geri ç
 
 Bu ileti "Bu dosyanın dili, gerekli kod ayrıştırma ve oluşturma hizmetlerini desteklemez" olarak benzerdir, ancak bu ileti bir iç kayıt sorunuyla ilgilidir. Bu hatayı görürseniz, bu hatayı görürseniz lütfen [sorun bildir](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)' i kullanarak bir sorunu günlüğe kaydedin.
 
-### <a name="type-type-name-does-not-have-a-constructor-with-parameters-of-types-parameter-type-names"></a>'\<Tür adı\>' türünün, '\<parametre türü adları > ' türünde parametrelere sahip bir oluşturucusu yok
+### <a name="type-type-name-does-not-have-a-constructor-with-parameters-of-types-parameter-type-names"></a>'\<tür adı\>' türü, '\<parametre türü adları > ' türünde parametrelere sahip bir oluşturucuya sahip değil
 
-Visual Studio eşleşen parametrelere sahip bir [Oluşturucu](/dotnet/csharp/programming-guide/classes-and-structs/constructors) bulamadı. Bu, gerekenden farklı türlere sahip bir Oluşturucu sağlamaya neden olabilir. Örneğin, bir **nokta** Oluşturucusu iki tamsayı alabilir. Kayan noktalar sağladıysanız bu hata oluşur.
+Visual Studio eşleşen parametrelere sahip bir [Oluşturucu](../../../csharp/programming-guide/classes-and-structs/constructors.md) bulamadı. Bu, gerekenden farklı türlere sahip bir Oluşturucu sağlamaya neden olabilir. Örneğin, bir **nokta** Oluşturucusu iki tamsayı alabilir. Kayan noktalar sağladıysanız bu hata oluşur.
 
 Bu hatayı düzeltmek için, farklı bir Oluşturucu kullanın veya parametre türlerini Oluşturucu tarafından sağlananlarla eşleşecek şekilde açıkça atayın.
 
-### <a name="unable-to-add-reference-reference-name-to-the-current-application"></a>'\<Başvuru adı > ' başvurusu geçerli uygulamaya eklenemiyor
+### <a name="unable-to-add-reference-reference-name-to-the-current-application"></a>Geçerli uygulamaya '\<başvuru adı > ' başvurusu eklenemiyor
 
-Hata iletisi: "' Başvuru adı > '\<başvurusu geçerli uygulamaya eklenemiyor. '\<Başvuru adı > ' öğesinin farklı bir sürümünün zaten başvurulmadığını denetleyin. "
+Hata iletisi: "\<başvuru adı > ' başvurusu geçerli uygulamaya eklenemiyor. Farklı bir '\<başvuru adı > ' sürümünün zaten başvurulmadığını denetleyin. "
 
 Visual Studio başvuru ekleyemez. Bu hatayı düzeltmek için, başvurunun farklı bir sürümünün zaten başvurulmadığını denetleyin.
 
 ### <a name="unable-to-check-out-the-current-file"></a>Geçerli dosya kullanıma alınamıyor
 
-Hata iletisi: "Geçerli dosya denetlenemiyor. Dosya kilitli olabilir veya dosyayı el ile denetlemeniz gerekebilir. "
+Hata iletisi: "geçerli dosya denetlenemiyor. Dosya kilitli olabilir veya dosyayı el ile denetlemeniz gerekebilir. "
 
 Bu hata, şu anda kaynak kodu denetimine iade edilmiş bir dosyayı değiştirdiğiniz zaman ortaya çıkar. Genellikle, Visual Studio dosya kullanıma alma iletişim kutusunu gösterir, böylece Kullanıcı dosyayı kullanıma alabilir. Bu kez, kullanıma alma sırasında birleştirme çakışması nedeniyle dosya kullanıma alınmamış olabilir. Bu hatayı düzeltmek için dosyanın kilitli olmadığından emin olun ve ardından dosyayı el ile kullanıma almaya çalışın.
 
-### <a name="unable-to-find-page-named-options-dialog-box-tab-name"></a>'\<Seçenekler iletişim kutusu sekme adı > ' adlı sayfa bulunamıyor
+### <a name="unable-to-find-page-named-options-dialog-box-tab-name"></a>'\<Options iletişim kutusu sekme adı > ' adlı sayfa bulunamıyor
 
 Bu hata, bir bileşen Tasarımcısı mevcut olmayan bir ad kullanarak Seçenekler iletişim kutusundan bir sayfaya erişim istediğinde ortaya çıkar. Bileşen satıcısına başvurun.
 
-### <a name="unable-to-find-property-property-name-on-page-options-dialog-box-tab-name"></a>'\<Seçenekler iletişim kutusu sekme\<adı > ' sayfasında ' özellik adı > ' özelliği bulunamıyor
+### <a name="unable-to-find-property-property-name-on-page-options-dialog-box-tab-name"></a>'\<Options iletişim kutusu sekme adı > ' sayfasında '\<Özellik adı > ' özelliği bulunamıyor
 
 Bu hata, bir bileşen Tasarımcısı Seçenekler iletişim kutusundan sayfadaki belirli bir değere erişim istediğinde, ancak bu değer yoksa oluşur. Bileşen satıcısına başvurun.
 
@@ -395,13 +395,13 @@ Visual Studio sınıfı yükledi, ancak bu sınıfa yönelik tasarımcı yüklen
 
 Bu bir üçüncü taraf bileşeniyle ilgili bir sorundur. Bileşen satıcısına başvurun.
 
-### <a name="visual-studio-is-unable-to-open-document-name-in-design-view"></a>Visual Studio, Tasarım görünümü '\<belge adı > ' öğesini açamadı
+### <a name="visual-studio-is-unable-to-open-document-name-in-design-view"></a>Visual Studio, Tasarım görünümü '\<belge adı > ' açamadı
 
-Hata iletisi: "Visual Studio Tasarım görünümü '\<> ' belge adını açamadı. Dosya türü için hiçbir ayrıştırıcı yüklenmedi. "
+Hata iletisi: "Visual Studio, Tasarım görünümü '\<belge adı > ' açamadı. Dosya türü için hiçbir ayrıştırıcı yüklenmedi. "
 
 Bu hata, dosya Aç iletişim kutusunda veya Çözüm Gezgini bir dosyayı açmaya çalıştığınızda projenin dilinin bir tasarımcıyı desteklemediğini ve ortaya geçtiğini gösterir. Bunun yerine, dosyayı kod görünümünde düzenleyin.
 
-### <a name="visual-studio-was-unable-to-find-a-designer-for-classes-of-type-type-name"></a>Visual Studio, '\<type name > ' türündeki sınıflar için bir tasarımcı bulamadı
+### <a name="visual-studio-was-unable-to-find-a-designer-for-classes-of-type-type-name"></a>Visual Studio, '\<tür adı > ' türündeki sınıflar için bir tasarımcı bulamadı
 
 Visual Studio sınıfı yükledi, ancak sınıfı tasarlanamıyor. Bunun yerine, sınıfı sağ tıklayıp kodu **görüntüle**' yi seçerek kod görünümündeki sınıfı düzenleyin.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 21605b30867d7be0b906b431253c183e655bea82
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7b22bbf75b29fdffd9927110ebe5b4e5309cd778
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922477"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191840"
 ---
 # <a name="-doc-c-compiler-options"></a>-Doc (C# derleyici seçenekleri)
 **-Doc** seçeneği, belge AÇıKLAMALARıNı bir XML dosyasına eklemenizi sağlar.  
@@ -41,9 +41,9 @@ ms.locfileid: "69922477"
   
  Main içeren kaynak kodu dosyası ilk olarak XML 'e çıktı.  
   
- [IntelliSense](/visualstudio/ide/using-intellisense) özelliğiyle kullanılmak üzere oluşturulan. xml dosyasını kullanmak için,. xml dosyasının dosya adının desteklemek istediğiniz derlemeyle aynı olmasına izin verin ve. xml dosyasının derlemeyle aynı dizinde olduğundan emin olun. Bu nedenle, Visual Studio projesinde derlemeye başvuruluyorsa. xml dosyası da bulunur. Bkz. [kod açıklamaları sağlama](/visualstudio/ide/supplying-xml-code-comments) ve daha fazla bilgi.  
+ [IntelliSense](/visualstudio/ide/using-intellisense) özelliğiyle kullanılmak üzere oluşturulan. xml dosyasını kullanmak için,. xml dosyasının dosya adının desteklemek istediğiniz derlemeyle aynı olmasına izin verin ve. xml dosyasının derlemeyle aynı dizinde olduğundan emin olun. Bu nedenle, Visual Studio projesinde derlemeye başvuruluyorsa. xml dosyası da bulunur. Bkz. [kod açıklamaları sağlama](/visualstudio/ide/reference/generate-xml-documentation-comments) ve daha fazla bilgi.  
   
- [-Target: Module](./target-module-compiler-option.md)ile derlemediğiniz takdirde, `file` derlemenin çıkış \<dosyası için\<derleme bildirimini içeren dosyanın adını belirten derleme >/assembly > etiketlerini içerir.  
+ [-Target: Module](./target-module-compiler-option.md)ile derlenmediğiniz takdirde `file`, derlemenin çıkış dosyası için derleme bildirimini içeren dosyanın adını belirten \<bütünleştirilmiş kod >\</assembly > etiketleri içerecektir.  
   
 > [!NOTE]
 > -Doc seçeneği tüm giriş dosyaları için geçerlidir; veya proje ayarları 'nda ayarlandıysa, projedeki tüm dosyalar. Belirli bir dosyanın veya kod bölümünün belge açıklamalarıyla ilgili uyarıları devre dışı bırakmak için [#pragma uyarı](../preprocessor-directives/preprocessor-pragma-warning.md)kullanın.  
@@ -58,7 +58,7 @@ ms.locfileid: "69922477"
   
 3. **XML belge dosyası** özelliğini değiştirin.  
   
- Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
+ Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz. <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

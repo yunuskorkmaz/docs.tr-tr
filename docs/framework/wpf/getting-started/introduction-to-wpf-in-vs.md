@@ -15,22 +15,22 @@ helpviewer_keywords:
 - WPF [WPF], about Windows Presentation Foundation
 - 3-D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
-ms.openlocfilehash: d2a0cdb7e49fb584d0824edcefe710313ba21d4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 893f9cd881b841409829d8f6a0513ee4368535ab
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934686"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197598"
 ---
 # <a name="introduction-to-wpf-in-visual-studio"></a>Visual Studio’da WPF’ye Giriş
-Visual Studio'da Windows Presentation Foundation (WPF), satır iş kolu Windows Masaüstü uygulamaları oluşturmak için birleştirilmiş programlama modeli geliştiricilere sağlar.  
+Visual Studio 'daki Windows Presentation Foundation (WPF), geliştiricilere Windows üzerinde iş kolu masaüstü uygulamaları oluşturmaya yönelik Birleşik bir programlama modeli sağlar.  
   
- [Windows Presentation Foundation ile Masaüstü uygulamaları oluşturun](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [Windows Presentation Foundation ile masaüstü uygulamaları oluşturma](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
  [Visual Studio ve Visual Studio İçin Blend Uygulamalarında XAML Tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [WPF'ye Giriş](/visualstudio/designers/introduction-to-wpf)  
+ [WPF'ye Giriş](/dotnet/framework/wpf/introduction-to-wpf)  
   
- [WPF .NET Framework'teki](../index.md)  
+ [.NET Framework WPF](../index.md)  
   
- [Get Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ [Visual Studio 'Yu al](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

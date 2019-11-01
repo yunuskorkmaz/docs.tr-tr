@@ -7,18 +7,18 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-ms.openlocfilehash: 3bf90636bf1fc4b20b23c61fdd90033b3da35ddd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 0b99dcdb9549a2319efe8a78eb4bca33f40f2cb0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141191"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197496"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms Uygulamalarında İki Yönlü Destek
 Visual Studio 'Yu, Arapça ve Ibranice gibi çift yönlü (sağdan sola) dilleri destekleyen Windows tabanlı uygulamalar oluşturmak için kullanabilirsiniz. Bu, standart formları, iletişim kutularını, MDI formlarını ve bu formlarda (<xref:System.Windows.Forms.Control> ad alanındaki tüm nesneler) birlikte çalışarak kullanabileceğiniz tüm denetimleri içerir.
 
 ## <a name="culture-support"></a>Kültür desteği
- Kültür ve UI kültürü ayarları bir uygulamanın tarihler, saatler, para birimi ve diğer bilgilerle nasıl çalıştığını belirleme. Kültür ve UI kültürü desteği, diğer dillerin yanı sıra iki yönlü diller için de aynıdır. Daha fazla bilgi için bkz. [Genel Windows formları ve Web formları Için kültüre özgü sınıflar](/visualstudio/ide/culture-specific-classes-for-global-windows-forms-and-web-forms).
+ Kültür ve UI kültürü ayarları bir uygulamanın tarihler, saatler, para birimi ve diğer bilgilerle nasıl çalıştığını belirleme. Kültür ve UI kültürü desteği, diğer dillerin yanı sıra iki yönlü diller için de aynıdır. Daha fazla bilgi için bkz. [Genel Windows formları ve Web formları Için kültüre özgü sınıflar](/visualstudio/ide/globalizing-and-localizing-applications).
 
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>RightToLeft ve RightToLeftLayout özellikleri
  Form türettikleri temel <xref:System.Windows.Forms.Control> sınıfı, bir formun ve denetimlerin okuma düzenini değiştirmek için ayarlayabileceğiniz bir <xref:System.Windows.Forms.Control.RightToLeft%2A> özelliği içerir. Formun <xref:System.Windows.Forms.Control.RightToLeft%2A> özelliğini ayarlarsanız, formdaki varsayılan denetimler bu ayarı devralınır. Ancak, <xref:System.Windows.Forms.Control.RightToLeft%2A> özelliğini birçok denetim üzerinde ayrı ayrı de ayarlayabilirsiniz. Ayrıca bkz. [nasıl yapılır: Genelleştirme için Windows Forms Içinde sağdan sola metin görüntüleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100)).

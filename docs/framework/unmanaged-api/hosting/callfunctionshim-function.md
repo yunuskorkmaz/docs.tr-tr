@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 37118465-ddf3-41f0-bf27-335b72777e63
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31d93ac427ec67726c9456d623aeb683c9029ccd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d39e15a2ba71ba0c0147482259f5618dcb5d298b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773766"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192102"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim İşlevi
-Belirtilen kitaplık içinde belirtilen ad ve parametreler içeren işleve bir çağrı yapar.  
+Belirtilen kitaplıkta belirtilen ad ve parametrelere sahip işleve bir çağrı yapar.  
   
- Bu işlev .NET Framework 4'te kullanım dışıdır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,31 +41,31 @@ HRESULT CallFunctionShim (
   
 ## <a name="parameters"></a>Parametreler  
  `szDllName`  
- [in] İşlevi içeren kitaplığın adı.  
+ 'ndaki İşlevi içeren kitaplığın adı.  
   
  `szFunctionName`  
- [in] İşlevin adı.  
+ 'ndaki İşlevin adı.  
   
  `lpvArgument1`  
- [in] İşleve geçirilecek ilk bağımsız değişken.  
+ 'ndaki İşleve geçirilecek ilk bağımsız değişken.  
   
  `lpvArgument2`  
- [in] İşleve ikinci bağımsız değişkeni.  
+ 'ndaki İşleve geçirilecek ikinci bağımsız değişken.  
   
  `szVersion`  
- [in] İşlevi içeren kitaplık sürümü.  
+ 'ndaki İşlevin bulunduğu kitaplığın sürümü.  
   
  `pvReserved`  
- [in] Gelecekte kullanılmak üzere ayrılmış. Bu parametre sıfır geçirin.  
+ 'ndaki Gelecekte kullanılmak üzere ayrılmıştır. Bu parametreye sıfır geçirin.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

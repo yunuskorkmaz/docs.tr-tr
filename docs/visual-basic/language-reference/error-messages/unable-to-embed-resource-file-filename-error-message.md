@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30143
 ms.assetid: 319e95b5-5176-4fe1-bc04-90075594b397
-ms.openlocfilehash: c2aab9db8a74665748fba92821fcdfa97a1cec6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b54d7c5716453be47aff2245e0e58174aaf1f7bf
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792086"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197294"
 ---
-# <a name="unable-to-embed-resource-file-filename-error-message"></a>Kaynak dosyası katıştırılamıyor '\<dosya adı >': \<hata iletisi >
-Visual Basic Derleyicisi bir bildirime sahip bir derleme oluşturmak için Assembly Linker (Al.exe Alink olarak da bilinir) çağırır. Bağlayıcı, doğrudan bütünleştirilmiş koda yerel bir COM + kaynak dosyası ekleme bir hata bildirdi.  
+# <a name="unable-to-embed-resource-file-filename-error-message"></a>'\<filename > ' kaynak dosyası katıştırılamıyor: \<hata iletisi >
+Visual Basic derleyici, bildirime sahip bir derleme oluşturmak için derleme Bağlayıcısı (al. exe, Alink olarak da bilinir) çağırır. Bağlayıcı, yerel bir COM+ kaynak dosyasını doğrudan derlemeye eklerken bir hata bildirdi.  
   
- **Hata Kimliği:** BC30143  
+ **Hata kimliği:** BC30143  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Tırnak işaretli hata iletisini inceleyin ve konusuna danışın [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Daha fazla açıklama ve öneriler için.  
+1. Alıntı yapılan hata iletisini inceleyin ve [al. exe](../../../framework/tools/al-exe-assembly-linker.md)konusuna başvurun. daha fazla açıklama ve öneri.  
   
-2. Sorun devam ederse, koşullar hakkında bilgi toplamak ve Microsoft Ürün Destek Hizmetleri bilgilendirir.  
+2. Hata devam ederse, koşullar hakkındaki bilgileri toplayın ve Microsoft Ürün Destek Hizmetleri 'ne bildirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)
+- [Al. exe](../../../framework/tools/al-exe-assembly-linker.md)
+- [Bizimle İletişime Geçin](/visualstudio/ide/feedback-options)

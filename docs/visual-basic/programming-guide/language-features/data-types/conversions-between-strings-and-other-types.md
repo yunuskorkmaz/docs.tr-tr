@@ -9,17 +9,17 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: e1530c1772808249546b453294fc848c31c1e581
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 06dabbb5d5dfbfb545f01afb157fd532ca0551df
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582931"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197336"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Dizeler ve Diğer Türleri Arasında Dönüştürmeler (Visual Basic)
 Bir sayısal, `Boolean` veya tarih/saat değerini bir `String` dönüştürebilirsiniz. Ayrıca, dizenin içeriği hedef veri türünün geçerli bir değeri olarak yorumlanabileceğinden, bir dize değerinden sayısal, `Boolean` veya `Date` ters yönde dönüştürebilirsiniz. Bu durumda, bir çalışma zamanı hatası oluşur.  
   
- Her iki yönde de tüm bu atamaların dönüştürmeleri daraltma dönüştürmelerinde. Tür dönüştürme anahtar sözcüklerini (`CBool`, `CByte`, `CDate`, `CDbl`, `CDec`, `CInt`, `CLng`, `CSByte`, `CShort`, `CSng`, 0, 1, 2 , 3 ve 4). @No__t_0 ve <xref:Microsoft.VisualBasic.Conversion.Val%2A> işlevleri, dizeler ve sayılar arasındaki dönüştürmeler üzerinde ek denetim sağlar.  
+ Her iki yönde de tüm bu atamaların dönüştürmeleri daraltma dönüştürmelerinde. Tür dönüştürme anahtar sözcüklerini (`CBool`, `CByte`, `CDate`, `CDbl`, `CDec`, `CInt`, `CLng`, `CSByte`, `CShort`, `CSng`, 0, 1, 2 , 3 ve 4). <xref:Microsoft.VisualBasic.Strings.Format%2A> ve <xref:Microsoft.VisualBasic.Conversion.Val%2A> işlevleri, dizeler ve sayılar arasındaki dönüştürmeler üzerinde ek denetim sağlar.  
   
  Bir sınıf veya yapı tanımladıysanız, `String` dönüştürme işleçlerini ve sınıf veya yapınızın türünü tanımlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: dönüştürme Işleci tanımlama](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
@@ -49,4 +49,4 @@ Str = "The total count is " & count
 - [Dizi Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
 - [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [.NET Framework Tabanlı Uluslararası Uygulamalara Giriş](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [Genelleştirilmiş ve yerelleştirilmiş uygulamalar geliştirin](/visualstudio/ide/globalizing-and-localizing-applications)

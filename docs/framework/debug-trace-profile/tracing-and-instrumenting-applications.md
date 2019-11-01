@@ -15,36 +15,36 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c71e95b3fd1276d2fae4268ed59818e5fafc8a79
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9e1b8d5cb25445ffc3ce08e8c73e1d3742067e21
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052250"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196712"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>İzleme Uygulamaları
-İzleme, çalışırken uygulamanızın yürütülmesini izlemenize yönelik bir yoldur. Geliştirme sırasında .NET Framework uygulamanıza izleme ve hata ayıklama araçları ekleyebilirsiniz ve bu araçları, uygulamayı geliştirirken ve dağıttıktan sonra kullanabilirsiniz. <xref:System.Diagnostics.Trace?displayProperty=nameWithType> ,<xref:System.Diagnostics.Debug?displayProperty=nameWithType>Ve sınıflarını<xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> , daha sonra analiz edilmek üzere günlüklerde, metin dosyalarında veya diğer cihazlarda hatalar ve uygulama yürütme bilgilerini kaydetmek için kullanabilirsiniz.  
+İzleme, çalışırken uygulamanızın yürütülmesini izlemenize yönelik bir yoldur. Geliştirme sırasında .NET Framework uygulamanıza izleme ve hata ayıklama araçları ekleyebilirsiniz ve bu araçları, uygulamayı geliştirirken ve dağıttıktan sonra kullanabilirsiniz. Daha sonraki analize yönelik günlüklerde, metin dosyalarında veya diğer cihazlarda hatalar ve uygulama yürütme bilgilerini kaydetmek için <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>ve <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> sınıflarını kullanabilirsiniz.  
   
  Dönem *araçları* , bir ürünün performansının düzeyini izleyip ölçmenize ve hataları tanılamaya yönelik bir özellik anlamına gelir. Programlamada, bu, bir uygulamanın bu şekilde dahil olduğu anlamına gelir:  
   
 - **Kod izleme** -bir uygulamanın çalışma zamanında yürütülmesi hakkında bilgilendirici mesajlar alma.  
   
-- **Hata ayıklama** -geliştirme aşamasındaki bir uygulamada programlama hatalarını izleme ve düzeltme. Daha fazla bilgi için bkz. [hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio).  
+- **Hata ayıklama** -geliştirme aşamasındaki bir uygulamada programlama hatalarını izleme ve düzeltme. Daha fazla bilgi için bkz. [hata ayıklama](/visualstudio/debugger/debugger-feature-tour).  
   
 - **Performans sayaçları** -uygulamanızın performansını izlemenize imkan tanıyan bileşenler. Daha fazla bilgi için bkz. [performans sayaçları](performance-counters.md).  
   
-- **Olay günlükleri** -uygulamanızın yürütülmesinde önemli olayları almanızı ve izlemenizi sağlayan bileşenler. Daha fazla bilgi için, <xref:System.Diagnostics.EventLog> sınıfına bakın.  
+- **Olay günlükleri** -uygulamanızın yürütülmesinde önemli olayları almanızı ve izlemenizi sağlayan bileşenler. Daha fazla bilgi için <xref:System.Diagnostics.EventLog> sınıfına bakın.  
   
  Kodunuzda stratejik konumlara izleme deyimleri yerleştirerek uygulamanızı denetlemek, dağıtılmış uygulamalar için özellikle yararlıdır. Trace deyimlerini kullanarak, bir uygulamayı yalnızca bir şeyler yanlış olduğunda ve ayrıca uygulamanın ne kadar iyi çalıştığını izlemek için değil, yalnızca bilgileri görüntülemek için Not alabilirsiniz.  
   
- Sınıfı <xref:System.Diagnostics.TraceSource> , Gelişmiş izleme özellikleri sağlar ve eski <xref:System.Diagnostics.Trace> ve <xref:System.Diagnostics.Debug> izleme sınıflarının statik yöntemlerinin yerine kullanılabilir. <xref:System.Diagnostics.Trace> Tanıdık ve <xref:System.Diagnostics.TraceSource.TraceEvent%2A> <xref:System.Diagnostics.TraceSource.TraceData%2A>sınıflar yaygın olarak kullanılır, ancak sınıfıvegibiyeniizlemekomutlarıiçinönerilir.<xref:System.Diagnostics.TraceSource> <xref:System.Diagnostics.Debug>  
+ <xref:System.Diagnostics.TraceSource> sınıfı gelişmiş izleme özellikleri sağlar ve eski <xref:System.Diagnostics.Trace> ve <xref:System.Diagnostics.Debug> izleme sınıflarının statik yöntemlerinin yerine kullanılabilir. Tanıdık <xref:System.Diagnostics.Trace> ve <xref:System.Diagnostics.Debug> sınıfları hala yaygın olarak kullanılır, ancak <xref:System.Diagnostics.TraceSource> sınıfı <xref:System.Diagnostics.TraceSource.TraceEvent%2A> ve <xref:System.Diagnostics.TraceSource.TraceData%2A>gibi yeni izleme komutları için önerilir.  
   
- Ve sınıfları aynıdır, ancak <xref:System.Diagnostics.Trace> sınıfın yordamları ve işlevleri varsayılan olarak yayın yapılarına derlenir, ancak <xref:System.Diagnostics.Debug> sınıfının bu özellikleri değildir. <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.Trace> ve <xref:System.Diagnostics.Debug> sınıfları aynıdır, çünkü <xref:System.Diagnostics.Trace> sınıfının yordamları ve işlevleri, varsayılan olarak yayın yapılarına derlenir, ancak <xref:System.Diagnostics.Debug> sınıfının bu özellikleri değildir.  
   
- <xref:System.Diagnostics.Trace> Ve<xref:System.Diagnostics.Debug> sınıfları, geliştirme sırasında veya dağıtımdan sonra uygulama performansını izleme ve İnceleme araçlarını sağlar. Örneğin, dağıtılmış bir uygulamadaki belirli eylem <xref:System.Diagnostics.Trace> türlerini (örneğin, yeni veritabanı bağlantıları oluşturma) ve bu nedenle uygulamanın verimliliğini izlemek için sınıfını kullanabilirsiniz.  
+ <xref:System.Diagnostics.Trace> ve <xref:System.Diagnostics.Debug> sınıfları, geliştirme sırasında veya dağıtımdan sonra uygulama performansını izleme ve İnceleme araçlarını sağlar. Örneğin, dağıtılmış bir uygulamadaki belirli eylem türlerini (örneğin, yeni veritabanı bağlantıları oluşturma) ve bu nedenle uygulamanın verimliliğini izleyebilmeniz için <xref:System.Diagnostics.Trace> sınıfını kullanabilirsiniz.  
   
 ## <a name="code-tracing-and-debugging"></a>Kod Izleme ve hata ayıklama  
- Geliştirme sırasında, Visual Studio tümleşik geliştirme ortamının (IDE) <xref:System.Diagnostics.Debug> çıkış penceresinde iletileri göstermek için sınıfının çıkış yöntemlerini kullanabilirsiniz. Örneğin:  
+ Geliştirme sırasında, Visual Studio tümleşik geliştirme ortamının (IDE) çıkış penceresinde iletileri göstermek için <xref:System.Diagnostics.Debug> sınıfının çıkış yöntemlerini kullanabilirsiniz. Örneğin:  
   
 ```vb  
 Trace.WriteLine("Hello World!")  
@@ -58,11 +58,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  Bu örneklerin her birinde "Merhaba Dünya!" görüntülenir hata ayıklayıcıda uygulama çalıştırıldığında çıkış penceresinde.  
   
- Bu, uygulamalarınızda hata ayıklamanızı ve test ortamınızdaki davranışlarını temel alarak performanslarını iyileştirmenizi sağlar. Tüm hata ayıklama çıkışını almak için, <xref:System.Diagnostics.Debug> koşullu özniteliği açık olan hata ayıklama derinizdeki uygulamanızda hata ayıklaması yapabilirsiniz. Uygulamanız yayın için hazırsanız, <xref:System.Diagnostics.Debug> koşullu özniteliği açmadan yayın yapınızı derleyebilirsiniz, böylece derleyicinin son yürütülebilir dosyasına hata ayıklama kodunuzu içermemesi gerekir. Daha fazla bilgi için [nasıl yapılır: Trace ve Debug](how-to-compile-conditionally-with-trace-and-debug.md)ile koşullu olarak derleyin. Uygulamanıza yönelik farklı derleme konfigürasyonları hakkında daha fazla bilgi için bkz. [derleme ve](/visualstudio/ide/compiling-and-building-in-visual-studio)derleme.  
+ Bu, uygulamalarınızda hata ayıklamanızı ve test ortamınızdaki davranışlarını temel alarak performanslarını iyileştirmenizi sağlar. Tüm hata ayıklama çıktısını almak için <xref:System.Diagnostics.Debug> koşullu özniteliği açık olan hata ayıklama derinizdeki uygulamanızda hata ayıklaması yapabilirsiniz. Uygulamanız yayın için kullanıma hazırlandığında, derleme derlemenizi <xref:System.Diagnostics.Debug> koşullu özniteliğini açmadan derleyebilirsiniz, böylece derleyicinin son yürütülebilir dosyasına hata ayıklama kodunuzu içermemesi gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: izleme ve hata ayıklama Ile koşullu derleme](how-to-compile-conditionally-with-trace-and-debug.md). Uygulamanıza yönelik farklı derleme konfigürasyonları hakkında daha fazla bilgi için bkz. [derleme ve](/visualstudio/ide/compiling-and-building-in-visual-studio)derleme.  
   
- Kod yürütmeyi, <xref:System.Diagnostics.Trace> sınıfının yöntemlerini kullanarak yüklü bir uygulamada da izleyebilirsiniz. Kodunuzda [Izleme anahtarları](trace-switches.md) yerleştirerek, izlemenin yapılıp yapılmayacağını ve ne kadar geniş olduğunu kontrol edebilirsiniz. Bu, uygulamanızın durumunu bir üretim ortamında izlemenize olanak sağlar. Bu, özellikle birden çok bilgisayarda çalışan birden çok bileşen kullanan bir iş uygulamasında önemlidir. Yapılandırma dosyası aracılığıyla dağıtımdan sonra anahtarların nasıl kullanıldığını kontrol edebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Izleme anahtarları](how-to-create-initialize-and-configure-trace-switches.md)oluşturun, başlatın ve yapılandırın.  
+ Ayrıca, <xref:System.Diagnostics.Trace> sınıfının yöntemlerini kullanarak, yüklü bir uygulamada kod yürütmeyi izleyebilirsiniz. Kodunuzda [Izleme anahtarları](trace-switches.md) yerleştirerek, izlemenin yapılıp yapılmayacağını ve ne kadar geniş olduğunu kontrol edebilirsiniz. Bu, uygulamanızın durumunu bir üretim ortamında izlemenize olanak sağlar. Bu, özellikle birden çok bilgisayarda çalışan birden çok bileşen kullanan bir iş uygulamasında önemlidir. Yapılandırma dosyası aracılığıyla dağıtımdan sonra anahtarların nasıl kullanıldığını kontrol edebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: oluşturma, başlatma ve yapılandırma Izleme anahtarları](how-to-create-initialize-and-configure-trace-switches.md).  
   
- İzlemeyi kullanmayı düşündüğünüz bir uygulama geliştirirken, genellikle uygulama koduna hem izleme hem de hata ayıklama iletileri dahil edersiniz. Uygulamayı dağıtmaya hazırsanız, **hata ayıklama** koşullu özniteliğini açmadan yayın yapınızı derleyebilirsiniz. Ancak, derleyicinin yürütülebilir dosya içinde izleme kodunuzu içermesi için **Trace** Conditional özniteliğini açabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Trace ve Debug](how-to-compile-conditionally-with-trace-and-debug.md)ile koşullu olarak derleyin.  
+ İzlemeyi kullanmayı düşündüğünüz bir uygulama geliştirirken, genellikle uygulama koduna hem izleme hem de hata ayıklama iletileri dahil edersiniz. Uygulamayı dağıtmaya hazırsanız, **hata ayıklama** koşullu özniteliğini açmadan yayın yapınızı derleyebilirsiniz. Ancak, derleyicinin yürütülebilir dosya içinde izleme kodunuzu içermesi için **Trace** Conditional özniteliğini açabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: izleme ve hata ayıklama Ile koşullu derleme](how-to-compile-conditionally-with-trace-and-debug.md).  
   
 ### <a name="phases-of-code-tracing"></a>Kod Izlemenin aşamaları  
  Kod izlemenin üç aşaması vardır:  
@@ -81,7 +81,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 1. Uygulamayı dağıttıktan sonra yerinde hangi izleme çıktısını almak istediğinizi göz önünde bulundurun.  
   
-2. Anahtar kümesi oluşturun. Daha fazla bilgi için [nasıl yapılır: Izleme anahtarlarını](how-to-create-initialize-and-configure-trace-switches.md)yapılandırın.  
+2. Anahtar kümesi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Izleme anahtarlarını yapılandırma](how-to-create-initialize-and-configure-trace-switches.md).  
   
 3. Uygulama koduna Trace deyimlerini ekleyin.  
   
@@ -93,7 +93,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     - **Yapı** menüsünü, **Çözüm Gezgini** **Özellik sayfaları** iletişim kutusunun **hata ayıklama** sayfasıyla birlikte kullanın. Visual Studio 'da derlerken bunu kullanın.  
   
-         \- veya -  
+         \- veya-  
   
     - Derleme komut satırı yöntemi için **Trace** ve **Debug** derleyici yönergelerini kullanın. Daha fazla bilgi için bkz. [izleme ve hata ayıklama Ile koşullu derleme](how-to-compile-conditionally-with-trace-and-debug.md). Komut satırından derlerken bunu kullanın.  
   
@@ -111,14 +111,14 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Trace deyimleriyle, özgün kaynak kodu İnceleme, bunu değiştirme, yeniden derleme ve hata ayıklama ortamında çalışma zamanı hatasını üretmeye çalışırken zor görevi önleyebilirsiniz. Bir uygulamayı yalnızca hataları görüntülemek için değil, aynı zamanda performansı izlemek için de değiştirebileceğinizi unutmayın.  
   
 ## <a name="strategic-placement-of-trace-statements"></a>Trace deyimlerinin stratejik yerleşimi  
- Çalışma zamanında kullanım için izleme deyimlerinizi yerleştirirken özel dikkatli olmanız gerekir. Büyük olasılıkla tüm izleme senaryolarının yeterince kapsanmasını sağlamak için, dağıtılan bir uygulamada hangi izleme bilgilerinin gerekli olduğunu göz önünde bulundurmanız gerekir. Ancak izlemeyi kullanan uygulamalar yaygın farklılık gösterdiğinden, izlemenin stratejik yerleşimi için genel bir yönerge yoktur. Trace deyimlerini yerleştirme hakkında daha fazla bilgi için bkz [. nasıl yapılır: Uygulama koduna](how-to-add-trace-statements-to-application-code.md)Trace deyimlerini ekleyin.  
+ Çalışma zamanında kullanım için izleme deyimlerinizi yerleştirirken özel dikkatli olmanız gerekir. Büyük olasılıkla tüm izleme senaryolarının yeterince kapsanmasını sağlamak için, dağıtılan bir uygulamada hangi izleme bilgilerinin gerekli olduğunu göz önünde bulundurmanız gerekir. Ancak izlemeyi kullanan uygulamalar yaygın farklılık gösterdiğinden, izlemenin stratejik yerleşimi için genel bir yönerge yoktur. Trace deyimlerini yerleştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Trace deyimlerini uygulama koduna ekleme](how-to-add-trace-statements-to-application-code.md).  
   
 ## <a name="output-from-tracing"></a>Izlemenin çıktısı  
- İzleme çıktısı, *dinleyiciler*adlı nesneler tarafından toplanır. Dinleyici, izleme çıkışını alan ve bunu çıkış cihazına (genellikle bir pencere, günlük veya metin dosyası) yazan bir nesnedir. Bir izleme dinleyicisi oluşturulduğunda, genellikle <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> koleksiyona eklenir ve dinleyicinin tüm izleme çıkışını almasına izin verir.  
+ İzleme çıktısı, *dinleyiciler*adlı nesneler tarafından toplanır. Dinleyici, izleme çıkışını alan ve bunu çıkış cihazına (genellikle bir pencere, günlük veya metin dosyası) yazan bir nesnedir. Bir izleme dinleyicisi oluşturulduğunda, genellikle <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> koleksiyonuna eklenir ve bu da dinleyicinin tüm izleme çıkışını almasına izin verir.  
   
- İzleme bilgileri her zaman en azından varsayılan <xref:System.Diagnostics.Trace> çıktı hedefine <xref:System.Diagnostics.DefaultTraceListener>yazılır. Herhangi bir nedenden dolayı <xref:System.Diagnostics.DefaultTraceListener> <xref:System.Diagnostics.Trace.Listeners%2A> koleksiyona başka bir dinleyici eklemeden sildiyseniz, hiçbir izleme iletisi almazsınız. Daha fazla bilgi için bkz. [Trace dinleyicileri](trace-listeners.md).  
+ İzleme bilgileri her zaman en azından varsayılan <xref:System.Diagnostics.Trace> çıktı hedefine yazılır, <xref:System.Diagnostics.DefaultTraceListener>. Bazı nedenlerle <xref:System.Diagnostics.Trace.Listeners%2A> koleksiyonuna başka bir dinleyici eklemeden <xref:System.Diagnostics.DefaultTraceListener> sildiyseniz, hiçbir izleme iletisi almazsınız. Daha fazla bilgi için bkz. [Trace dinleyicileri](trace-listeners.md).  
   
- İzleme bilgilerini <xref:System.Diagnostics.Debug> yazan altı <xref:System.Diagnostics.Trace> üye ve yöntem aşağıdaki tabloda listelenmiştir.  
+ İzleme bilgilerini yazan altı <xref:System.Diagnostics.Debug> üye ve <xref:System.Diagnostics.Trace> yöntemi aşağıdaki tabloda listelenmiştir.  
   
 |Yöntem|Çıkış|  
 |------------|------------|  
@@ -129,14 +129,14 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 |**WriteLine**|Belirtilen metin ve bir satır başı.|  
 |**WriteLineIf**|Belirtilen metin ve bir satır başı, **WriteLineIf** ifadesinde bağımsız değişken olarak belirtilen koşul karşılandığında.|  
   
- <xref:System.Diagnostics.Trace.Listeners%2A> Koleksiyondaki tüm dinleyiciler yukarıdaki tabloda açıklanan iletileri alır, ancak alınan eylemler iletiyi hangi tür dinleyiciye aldığına bağlı olarak farklılık gösterebilir. Örneğin <xref:System.Diagnostics.DefaultTraceListener> , bir **başarısızlık** veya başarısız <xref:System.Diagnostics.TextWriterTraceListener> **onaylama** bildirimi aldığında bir onaylama iletişim kutusu görüntüler, ancak yalnızca çıktıyı akışa yazar.  
+ <xref:System.Diagnostics.Trace.Listeners%2A> koleksiyonundaki tüm dinleyiciler yukarıdaki tabloda açıklanan iletileri alır, ancak alınan eylemler iletiyi alan dinleyicinin ne olduğuna bağlı olarak farklılık gösterebilir. Örneğin, <xref:System.Diagnostics.DefaultTraceListener> **başarısız** veya başarısız **onaylama** bildirimi aldığında bir onaylama iletişim kutusu görüntüler, ancak bir <xref:System.Diagnostics.TextWriterTraceListener> çıktıyı akışa yazar.  
   
- Kendi dinleyicinizi uygulayarak özel sonuçlar elde edebilirsiniz. Özel bir izleme dinleyicisi Örneğin, iletileri bir ileti kutusuna görüntüleyebilir veya bir tabloya ileti eklemek için bir veritabanına bağlanabilir. Tüm özel dinleyiciler yukarıda bahsedilen altı yöntemi desteklemelidir. Geliştirici tanımlı dinleyiciler oluşturma hakkında daha fazla bilgi için .NET Framework başvuru <xref:System.Diagnostics.TraceListener> içindeki bölümüne bakın.  
+ Kendi dinleyicinizi uygulayarak özel sonuçlar elde edebilirsiniz. Özel bir izleme dinleyicisi Örneğin, iletileri bir ileti kutusuna görüntüleyebilir veya bir tabloya ileti eklemek için bir veritabanına bağlanabilir. Tüm özel dinleyiciler yukarıda bahsedilen altı yöntemi desteklemelidir. Geliştirici tanımlı dinleyiciler oluşturma hakkında daha fazla bilgi için .NET Framework başvurusunda <xref:System.Diagnostics.TraceListener> bakın.  
   
- **Write** ve **WriteLine** yöntemleri her zaman belirttiğiniz metni yazar. **Onaylama**, **Writeif**ve **WriteLineIf** , belirtilen metni yazıp yazmadığını denetleyen bir Boole bağımsız değişkeni gerektirir; yalnızca ifade **true** Ise ( **WriteIf** ve **WriteLineIf**için) veya **false** (onay **için) ise**, belirtilen metni yazar. **Fail** yöntemi her zaman belirtilen metni yazar. Daha fazla bilgi için [nasıl yapılır: Uygulama koduna](how-to-add-trace-statements-to-application-code.md) ve .NET Framework başvuruya Trace deyimleri ekleyin.  
+ **Write** ve **WriteLine** yöntemleri her zaman belirttiğiniz metni yazar. **Onaylama**, **Writeif**ve **WriteLineIf** , belirtilen metni yazıp yazmadığını denetleyen bir Boole bağımsız değişkeni gerektirir; yalnızca ifade **true** Ise ( **WriteIf** ve **WriteLineIf**için) veya **false** (onay **için) ise**, belirtilen metni yazar. **Fail** yöntemi her zaman belirtilen metni yazar. Daha fazla bilgi için bkz. [nasıl yapılır: uygulama koduna Izleme deyimleri ekleme](how-to-add-trace-statements-to-application-code.md) ve .NET Framework başvurusu.  
   
 ## <a name="security-concerns"></a>Güvenlik sorunları  
- Bir ASP.NET uygulamasını dağıtımdan önce izlemeyi ve hata ayıklamayı devre dışı bırakmayın, uygulamanız kötü amaçlı bir program tarafından yararlanılabilen hakkında bilgi açığa çıkabilir. Daha fazla bilgi için [nasıl yapılır: İzleme ve hata ayıklama](how-to-compile-conditionally-with-trace-and-debug.md), [derleme ve derleme](/visualstudio/ide/compiling-and-building-in-visual-studio)ile koşullu olarak derleyin [ve şunları yapın: Izleme anahtarları](how-to-create-initialize-and-configure-trace-switches.md)oluşturun, başlatın ve yapılandırın. Hata ayıklama Ayrıca Internet Information Services (IIS) aracılığıyla yapılandırılabilir.  
+ Bir ASP.NET uygulamasını dağıtımdan önce izlemeyi ve hata ayıklamayı devre dışı bırakmayın, uygulamanız kötü amaçlı bir program tarafından yararlanılabilen hakkında bilgi açığa çıkabilir. Daha fazla bilgi için bkz. [nasıl yapılır: izleme ve hata ayıklama Ile koşullu derleme](how-to-compile-conditionally-with-trace-and-debug.md), [derleme ve derleme](/visualstudio/ide/compiling-and-building-in-visual-studio)ve [nasıl yapılır: izleme anahtarları oluşturma, başlatma ve yapılandırma](how-to-create-initialize-and-configure-trace-switches.md). Hata ayıklama Ayrıca Internet Information Services (IIS) aracılığıyla yapılandırılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -144,10 +144,10 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 - <xref:System.Diagnostics.TraceSource>
 - [Kod Anlaşmaları](code-contracts.md)
 - [C#, F# ve Visual Basic Proje Türleri](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
-- [Nasıl yapılır: Uygulama koduna Izleme deyimleri ekleme](how-to-add-trace-statements-to-application-code.md)
-- [Nasıl yapılır: Izleme ve hata ayıklama ile koşullu derleme](how-to-compile-conditionally-with-trace-and-debug.md)
-- [Nasıl yapılır: Izleme anahtarları oluşturma, başlatma ve yapılandırma](how-to-create-initialize-and-configure-trace-switches.md)
-- [Nasıl yapılır: Izleme kaynakları oluşturma ve başlatma](how-to-create-and-initialize-trace-sources.md)
-- [Nasıl yapılır: Izleme dinleyicileri ile TraceSource ve filtreler kullanma](how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](how-to-add-trace-statements-to-application-code.md)
+- [Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme](how-to-compile-conditionally-with-trace-and-debug.md)
+- [Nasıl yapılır: İzleme Anahtarları Oluşturma, Başlatma ve Yapılandırma](how-to-create-initialize-and-configure-trace-switches.md)
+- [Nasıl yapılır: İzleme Kaynakları Oluşturma ve Başlatma](how-to-create-and-initialize-trace-sources.md)
+- [Nasıl yapılır: İzleme Dinleyicileri ile TraceSource ve Filtreler Kullanma](how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [İzleme Dinleyicileri](trace-listeners.md)
 - [İzleme Anahtarları](trace-switches.md)

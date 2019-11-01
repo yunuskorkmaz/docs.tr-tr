@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 995362667ed0a203112744f03a036eabbcb784c8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 93f07e663fbc8f61c71e5b83bb752f0b129b62ba
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608306"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191877"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# Diline ve.NET Framework'e Giriş
 
@@ -22,9 +22,9 @@ C#, geliştiricilerin .NET Framework çalışan çeşitli güvenli ve güçlü u
   
 ## <a name="c-language"></a>C# Dili
 
- C#sözdizimi büyük ölçüde ifade edilir, ancak kolayca öğrenilmesi ve kolay bir işlemdir. Küme ayracı sözdizimi C# , C C++ veya Java 'yı bilen herkese anında tanınacaktır. Bu dillerden herhangi birini bilen geliştiriciler genellikle çok kısa bir süre C# içinde üretken bir şekilde çalışmaya başlayabilirler. C#sözdizimi, C++ ' nin birçok karmaşıklıklarını basitleştirir ve null yapılabilir değer türleri, numaralandırmalar, temsilciler, lambda ifadeleri ve doğrudan bellek erişimi gibi Java 'da bulunmayan güçlü özellikler sağlar. C#, Artırılmış tür güvenliği ve performans ve yineleyiciler sağlayan genel yöntemleri ve türleri destekler ve bu sayede, istemci kodu tarafından kullanılması kolay olan özel yineleme davranışları tanımlamak için koleksiyon sınıflarının uygulayıcıları özelliğini etkinleştirir. [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]ifadeler, türü kesin belirlenmiş sorguyu birinci sınıf dil yapısı yapar.  
+ C#sözdizimi büyük ölçüde ifade edilir, ancak kolayca öğrenilmesi ve kolay bir işlemdir. Küme ayracı sözdizimi C# , C C++ veya Java 'yı bilen herkese anında tanınacaktır. Bu dillerden herhangi birini bilen geliştiriciler genellikle çok kısa bir süre C# içinde üretken bir şekilde çalışmaya başlayabilirler. C#sözdizimi, C++ ' nin birçok karmaşıklıklarını basitleştirir ve null yapılabilir değer türleri, numaralandırmalar, temsilciler, lambda ifadeleri ve doğrudan bellek erişimi gibi Java 'da bulunmayan güçlü özellikler sağlar. C#, Artırılmış tür güvenliği ve performans ve yineleyiciler sağlayan genel yöntemleri ve türleri destekler ve bu sayede, istemci kodu tarafından kullanılması kolay olan özel yineleme davranışları tanımlamak için koleksiyon sınıflarının uygulayıcıları özelliğini etkinleştirir. [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ifadeler, türü kesin belirlenmiş sorguyu birinci sınıf dil yapısına getirir.  
   
- Nesne yönelimli bir dil olarak kapsülleme, C# devralma ve çok biçimlilik kavramlarını destekler. `Main` Yöntemi dahil olmak üzere tüm değişkenler ve Yöntemler, uygulamanın giriş noktası, sınıf tanımları içinde kapsüllenir. Bir sınıf doğrudan bir üst sınıftan devralınabilir, ancak herhangi bir sayıda arabirim uygulayabilir. Bir üst sınıftaki sanal yöntemleri geçersiz kılan yöntemler, `override` yanlışlıkla yeniden tanımı önlemek için anahtar sözcüğünü gerektirir. ' C#De, bir yapı hafif bir sınıf gibidir; arabirim uygulayan, ancak devralmayı desteklemeyen, yığın olarak ayrılmış bir türdür.  
+ Nesne yönelimli bir dil olarak kapsülleme, C# devralma ve çok biçimlilik kavramlarını destekler. `Main` yöntemi dahil olmak üzere tüm değişkenler ve Yöntemler, uygulamanın giriş noktası, sınıf tanımları içinde kapsüllenir. Bir sınıf doğrudan bir üst sınıftan devralınabilir, ancak herhangi bir sayıda arabirim uygulayabilir. Bir üst sınıftaki sanal yöntemleri geçersiz kılan yöntemler, yanlışlıkla yeniden tanımlama önlemek için `override` anahtar sözcüğünü gerektirir. ' C#De, bir yapı hafif bir sınıf gibidir; arabirim uygulayan, ancak devralmayı desteklemeyen, yığın olarak ayrılmış bir türdür.  
   
  Bu temel nesne odaklı ilkelere ek olarak, C# aşağıdakiler de dahil olmak üzere çeşitli yenilikçi dil yapıları aracılığıyla yazılım bileşenleri geliştirmeyi kolaylaştırır:  
   
@@ -36,7 +36,7 @@ C#, geliştiricilerin .NET Framework çalışan çeşitli güvenli ve güçlü u
   
 - Satır içi XML belge açıklamaları.  
   
-- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]çeşitli veri kaynakları genelinde yerleşik sorgu özellikleri sağlar.  
+- çeşitli veri kaynakları genelinde yerleşik sorgu özellikleri sağlayan [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
  COM nesneleri veya yerel Win32 DLL 'Leri gibi diğer Windows yazılımlarıyla etkileşimde bulunmak istiyorsanız bunu "birlikte çalışma" adlı bir işlem C# aracılığıyla yapabilirsiniz. Birlikte çalışabilirlik C# , programların bir yerel C++ uygulamanın yapabildiği neredeyse her şeyi yapmasına olanak sağlar. C#, doğrudan bellek erişiminin kesinlikle kritik olduğu durumlar için işaretçileri ve "güvenli olmayan" kod kavramını destekler.  
   
@@ -48,7 +48,7 @@ C#, geliştiricilerin .NET Framework çalışan çeşitli güvenli ve güçlü u
   
 - C# Dilin belirli yönleri hakkında ayrıntılı bilgi için bkz. [ C# başvuru](../language-reference/index.md).  
   
-- Hakkında [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]daha fazla bilgi için bkz. [LINQ (dil ile tümleşik sorgu)](../programming-guide/concepts/linq/index.md).  
+- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]hakkında daha fazla bilgi için bkz. [LINQ (dil Ile tümleşik sorgu)](../programming-guide/concepts/linq/index.md).  
 
 ## <a name="net-framework-platform-architecture"></a>.NET Framework platform mimarisi
 
@@ -69,4 +69,4 @@ C#, geliştiricilerin .NET Framework çalışan çeşitli güvenli ve güçlü u
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C#](../index.md)
-- [Visual C# ve Visual Basic'e Başlarken](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Görsele BaşlarkenC#](/visualstudio/ide/quickstart-csharp-console)

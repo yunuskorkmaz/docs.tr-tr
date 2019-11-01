@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6fc01e98-c2e7-49de-ab9f-95937cc89017
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f4cb71e5ac0afe19e865ffca6fe578ad08f3162
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8764a3d665c997460419561eb168f92ca769c30c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773874"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192108"
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo Yapısı
-Başvurulan derleme hakkında ayrıntılı bilgiler sağlar.  
+Başvurulan derleme hakkında ayrıntılı bilgi sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,22 +39,22 @@ typedef struct _AssemblyBindInfo {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`dwAppDomainId`|İçin benzersiz bir tanımlayıcı `IStream` bir çağrı tarafından döndürülen [Ihostassemblystore::provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md), başvurulan derleme yüklenecek olan öğesinden.|  
+|`dwAppDomainId`|Başvurulan derlemenin yükleneceği [ıhostassembly:P Store](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)çağrısı tarafından döndürülen `IStream` için benzersiz bir tanımlayıcı.|  
 |`lpReferencedIdentity`|Başvurulan derleme için benzersiz bir tanımlayıcı.|  
-|`lpPostPolicyIdentity`|Başvurulan derleme bağlama ilkesi değerleri uygulandıktan sonra tanımlayıcısı.|  
-|`ePolicyLevel`|Aşağıdakilerden birini [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) hangi sürüm ilkeleri varsa, başvurulan derlemeye uygulanması gerektiğini gösteren değerleri.|  
+|`lpPostPolicyIdentity`|Bağlama ilkesi değerlerinin uygulamadan sonra başvurulan derlemenin tanımlayıcısı.|  
+|`ePolicyLevel`|Varsa, başvurulan derlemeye hangi sürüm oluşturma ilkelerinin uygulanacağını belirten [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) değerlerinden biri.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Benzersiz tanımlayıcı ana bilgisayar kaynakları `dwAppDomainId` ortak dil çalışma zamanı (CLR). Çağrısı yapıldıktan sonra `IHostAssemblyStore::ProvideAssembly` döndürür, çalışma belirlemek için tanımlayıcı kullandığı olmadığını içeriğini `IStream` eşlendi. Bu durumda, çalışma zamanı akış yeniden eşleme yerine var olan kopyasını yükler. Döndürülen akışlar için çalışma zamanı bu tanımlayıcıyı ayrıca arama anahtar olarak kullanır. çağrılar [Ihostassemblystore::providemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md). Bu nedenle, tanımlayıcı derleme isteklerini ve modülün istekleri için benzersiz olmalıdır.  
+ Ana bilgisayar, ortak dil çalışma zamanına (CLR) `dwAppDomainId` benzersiz tanımlayıcıyı sağlar. `IHostAssemblyStore::ProvideAssembly` çağrısı yapıldıktan sonra, çalışma zamanı `IStream` içeriğinin eşlenip eşleştirilmediğini anlamak için tanımlayıcıyı kullanır. Öyleyse, çalışma zamanı akışı yeniden eşleme yerine mevcut kopyayı yükler. Çalışma zamanı Ayrıca bu tanımlayıcıyı [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)çağrılarından döndürülen akışlar için bir arama anahtarı olarak kullanır::P rovideModule. Bu nedenle, tanımlayıcı modül istekleri ve derleme istekleri için benzersiz olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.idl  
+ **Üst bilgi:** MSCorEE. IDL  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

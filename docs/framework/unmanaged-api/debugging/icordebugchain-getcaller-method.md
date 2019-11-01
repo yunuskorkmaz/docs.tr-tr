@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0b8ab4b-d7d2-4fa0-945f-3d2b87e7e991
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d11693473dc4ed4438bbcad7f95c1b20adc1062b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a07550d44857526e8ab4ded9f1827ef12e3bba4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744977"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192133"
 ---
 # <a name="icordebugchaingetcaller-method"></a>ICorDebugChain::GetCaller Metodu
-Bu zincir denir zinciri alır.  
+Bu zinciri çağıran zinciri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +35,18 @@ HRESULT GetCaller (
   
 ## <a name="parameters"></a>Parametreler  
  `ppChain`  
- [out] Çağrı zincirini temsil eden bir Icordebugchain nesnenin adresi için bir işaretçi.  
+ dışı Çağıran zinciri temsil eden bir ıcordebugzincirleri nesnesinin adresine yönelik bir işaretçi.  
   
- (Bu zincir veya hata ayıklayıcı çağrı yığınını başlatılmış durumda olurdu gibi) Bu zincir kendiliğinden çağrıldı, `ppChain` null olacaktır.  
+ Bu zincir daha önce çağrılırsa (Bu zincir veya hata ayıklayıcı çağrı yığınını başlatdıysa olduğu gibi) `ppChain` null olur.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çağrı zincirinin çağrı iş parçacıkları arasında sıralanmış farklı bir iş parçacığı üzerinde olabilir.  
+ Çağrı iş parçacıkları arasında sıralandıysa, çağırma zinciri farklı bir iş parçacığında olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 6c48806e54f11bce930d03a53b010c337e6658f8
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 8ecf399e48da12a9dee19bb217b8668c6a53d3ad
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960846"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191862"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# Başvurusu)
 
@@ -27,7 +27,7 @@ ms.locfileid: "72960846"
   - Başvuru türleri, verilerine yönelik bir başvuru içerdiğinden, `readonly` başvuru türü olan bir alan her zaman aynı nesneye başvurmalıdır. Bu nesne sabit değildir. `readonly` değiştiricisi, alanın farklı bir başvuru türü örneğiyle değiştirilmesini önler. Ancak, değiştirici alanın örnek verilerinin salt okunurdur alanı aracılığıyla değiştirilmesini engellemez.
 
   > [!WARNING]
-  > Değişebilir bir başvuru türü olan bir dışarıdan görünür salt okunurdur alanı içeren dışarıdan görünen bir tür, bir güvenlik açığı olabilir ve uyarı [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) : "salt okuma kesilebilir başvuru türleri bildiremiyor" olarak tetiklenebilir.
+  > Değişebilir bir başvuru türü olan bir dışarıdan görünür salt okunurdur alanı içeren dışarıdan görünen bir tür, bir güvenlik açığı olabilir ve uyarı [CA2104](/visualstudio/code-quality/ca2104) : "salt okuma kesilebilir başvuru türleri bildiremiyor" olarak tetiklenebilir.
 
 - [`readonly struct` tanımında](#readonly-struct-example), `readonly` `struct` sabit olduğunu gösterir.
 - [`readonly` üye tanımında](#readonly-member-examples), `readonly` bir `struct` üyesinin yapının iç durumunu muiçermediğini belirtir.

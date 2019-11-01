@@ -1,15 +1,15 @@
 ---
 title: WCF Web hizmeti başvurusu Ekle
 description: .NET Framework projelerine yönelik Hizmet Başvurusu Ekle benzer şekilde .NET Core ve ASP.NET Core projelerine yönelik işlevsellik ekleyen Microsoft WCF Web Service Reference Provider aracına genel bakış.
-author: mlacouture
-ms.date: 04/19/2018
+author: dasetser
+ms.date: 10/29/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 28eaae4a83d918f8a9e5376eb3c8d42843ffa027
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: feecf374e1af48f349495c13ea91b810c6b0a1c3
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773954"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191903"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web hizmeti başvuru sağlayıcısı aracını kullanma
 
@@ -76,12 +76,16 @@ Yıllarca, birçok Visual Studio geliştiricisi, .NET Framework projeleri Web hi
 
 Bu işlemler tamamlandığında, oluşturulan WCF istemci türünün bir örneğini oluşturabilir ve hizmet işlemlerini çağırabilirsiniz.
 
-## <a name="next-steps"></a>Sonraki adımlar
+## <a name="see-also"></a>Ayrıca bkz.
 
-### <a name="feedback--questions"></a>Geri bildirim & soruları
+- [Windows Communication Foundation uygulamalarla çalışmaya başlama](../../framework/wcf/getting-started-tutorial.md)
+- [Visual Studio 'da Windows Communication Foundation Hizmetleri ve WCF veri Hizmetleri](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio)
+- [.NET Core 'da desteklenen WCF özellikleri](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md)
 
-Sorularınız veya geri bildiriminiz varsa [GitHub ' da bir sorun açın](https://github.com/dotnet/wcf/issues/new). Ayrıca, [GitHub 'DAKI WCF](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling)deposundaki mevcut soruları veya sorunları da inceleyebilirsiniz.
+## <a name="feedback--questions"></a>Geri bildirim & soruları
 
-### <a name="release-notes"></a>Sürüm notları
+Sorularınız veya geri bildiriminiz varsa, [sorun bildir](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) aracını kullanarak bunu [Geliştirici topluluğu](https://developercommunity.visualstudio.com/) 'nda bildirin.
+
+## <a name="release-notes"></a>Sürüm notları
 
 - Bilinen sorunlar da dahil olmak üzere, güncelleştirilmiş sürüm bilgileri için [sürüm notlarına](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) bakın.

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: b98bf7b3f0aa4e7698a5c0ca7c8ae16051ce6300
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: bef296d5de4735780c839af312b5d4fe7eeeb960
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991765"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197858"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>İzlenecek yol: Karma Uygulamayı Yerelleştirme
 
-Bu izlenecek yol, temel bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]karma uygulamadaki öğelerin nasıl yerelleştirileceğini gösterir.
+Bu izlenecek yol, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]tabanlı karma uygulamadaki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğelerinin nasıl yerelleştirileceğini gösterir.
 
 Bu izlenecek yolda gösterilen görevler şunlardır:
 
-- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Konak projesi oluşturuluyor.
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] konak projesi oluşturuluyor.
 
 - Yerelleştirilebilir içerik ekleme.
 
@@ -32,7 +32,7 @@ Bu kılavuzda gösterilen görevlerin tüm kod listesi için bkz. [karma uygulam
 
 İşiniz bittiğinde, yerelleştirilmiş bir karma uygulamanız olur.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
@@ -40,35 +40,35 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 ## <a name="creating-the-windows-forms-host-project"></a>Windows Forms konak projesi oluşturma
 
-İlk adım, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama projesinin oluşturulması ve Yerelleştirilecek içeriğe sahip bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğe eklemektir.
+İlk adım [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama projesinin oluşturulması ve Yerelleştirilecek içeriğe sahip bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğesi eklemektir.
 
 ### <a name="to-create-the-host-project"></a>Konak projesini oluşturmak için
 
-1. Adlı`LocalizingWpfInWf`bir **WPF uygulaması** projesi oluşturun.  (**Dosya** > **Yeni** **Proje görseli C#**  Visual BasicKlasikMasaüstü > **WPF uygulaması**). >  >  > 
+1. `LocalizingWpfInWf`adlı bir **WPF uygulaması** projesi oluşturun.  (**Dosya** > **Yeni** > **projesi** > **görsel C#**  veya **Visual Basic** > **Klasik Masaüstü** > **WPF uygulaması**).
 
-2. Projeye adlı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir`SimpleControl` öğe ekleyin. <xref:System.Windows.Controls.UserControl>
+2. Projeye `SimpleControl` adlı bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.UserControl> öğesi ekleyin.
 
-3. Form üzerinde bir `SimpleControl` öğe yerleştirmek için denetimikullanın.<xref:System.Windows.Forms.Integration.ElementHost> Daha fazla bilgi için bkz [. İzlenecek yol: Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)Içinde 3-b WPF bileşik denetimi barındırma.
+3. Forma bir `SimpleControl` öğesi yerleştirmek için <xref:System.Windows.Forms.Integration.ElementHost> denetimini kullanın. Daha fazla bilgi için bkz. [Izlenecek yol: 3-b WPF bileşik denetimini barındırma Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
 
 ## <a name="adding-localizable-content"></a>Yerelleştirilebilir Içerik ekleme
 
-Ardından, bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] etiket denetimi ekleyecek ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğenin içeriğini yerelleştirilebilir bir dizeye ayarlayacaksınız.
+Sonra, bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Label denetimi ekleyeceksiniz ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğesinin içeriğini yerelleştirilebilir bir dizeye ayarlayacaksınız.
 
 ### <a name="to-add-localizable-content"></a>Yerelleştirilebilir İçerik eklemek için
 
-1. **Çözüm Gezgini**içinde açmak [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]için **SimpleControl. xaml** ' ye çift tıklayın.
+1. **Çözüm Gezgini**, [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]açmak Için **SimpleControl. xaml** ' ye çift tıklayın.
 
-2. Aşağıdaki kodu kullanarak <xref:System.Windows.Controls.Button> denetimin içeriğini ayarlayın.
+2. Aşağıdaki kodu kullanarak <xref:System.Windows.Controls.Button> denetiminin içeriğini ayarlayın.
 
      [!code-xaml[LocalizingWpfInWf#10](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]
 
 3. **Çözüm Gezgini**, Windows Form Tasarımcısı açmak için **Form1** ' e çift tıklayın.
 
-4. Forma bir etiket denetimi eklemek için **araç kutusunu** açın ve **etiket** ' e çift tıklayın. <xref:System.Windows.Forms.Control.Text%2A> Özelliğinin değerini olarak `"Hello"`ayarlayın.
+4. Forma bir etiket denetimi eklemek için **araç kutusunu** açın ve **etiket** ' e çift tıklayın. <xref:System.Windows.Forms.Control.Text%2A> özelliğinin değerini `"Hello"`olarak ayarlayın.
 
 5. Uygulamayı derlemek ve çalıştırmak için **F5** tuşuna basın.
 
-     Hem öğe hem de etiket denetimi **"Hello"** metnini görüntüler. `SimpleControl`
+     Hem `SimpleControl` öğesi hem de Label denetimi **"Hello"** metnini görüntüler.
 
 ## <a name="enabling-localization"></a>Yerelleştirme etkinleştiriliyor
 
@@ -78,19 +78,19 @@ Windows Form Tasarımcısı bir uydu derlemesinde yerelleştirmeyi etkinleştirm
 
 1. **Çözüm Gezgini**' de, **Form1.cs** ' ye çift tıklayarak Windows Form Tasarımcısı açın.
 
-2. **Özellikler** penceresinde, formun **yerelleştirilebilir** özelliğinin değerini olarak `true`ayarlayın.
+2. **Özellikler** penceresinde, formun **yerelleştirilebilir** özelliğinin değerini `true`olarak ayarlayın.
 
 3. **Özellikler** penceresinde, **Language** özelliğinin değerini **İspanyolca (İspanya)** olarak ayarlayın.
 
 4. Windows Form Tasarımcısı etiket denetimini seçin.
 
-5. **Özellikler** penceresinde, <xref:System.Windows.Forms.Control.Text%2A> özelliğinin değerini olarak `"Hola"`ayarlayın.
+5. **Özellikler** penceresinde <xref:System.Windows.Forms.Control.Text%2A> özelliğinin değerini `"Hola"`olarak ayarlayın.
 
      Projeye Form1.es-ES. resx adlı yeni bir kaynak dosyası eklenir.
 
 6. **Çözüm Gezgini**' de, **Form1.cs** öğesine sağ tıklayın ve kodu **görüntüle** ' ye tıklayarak kodu düzenleyici 'de açın.
 
-7. Çağrısından önce aşağıdaki kodu `Form1` oluşturucuya kopyalayın. `InitializeComponent`
+7. Aşağıdaki kodu, `InitializeComponent`çağrısından önce `Form1` oluşturucusuna kopyalayın.
 
      [!code-csharp[LocalizingWpfInWf#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]
 
@@ -102,7 +102,7 @@ Windows Form Tasarımcısı bir uydu derlemesinde yerelleştirmeyi etkinleştirm
 
      Proje dosyası kod düzenleyicisinde açılır.
 
-10. Aşağıdaki satırı proje dosyasında ilk `PropertyGroup` öğesine kopyalayın.
+10. Aşağıdaki satırı proje dosyasındaki ilk `PropertyGroup` kopyalayın.
 
     ```xml
     <UICulture>en-US</UICulture>
@@ -114,7 +114,7 @@ Windows Form Tasarımcısı bir uydu derlemesinde yerelleştirmeyi etkinleştirm
 
 ## <a name="assigning-resource-identifiers"></a>Kaynak tanımlayıcıları atama
 
-Kaynak tanımlayıcılarını kullanarak, yerelleştirilebilir içeriğinizi kaynak Derlemeleriyle eşleyebilirsiniz. MSBuild. exe uygulaması, `updateuid` seçeneğini belirttiğinizde kaynak tanımlayıcılarını otomatik olarak atar.
+Kaynak tanımlayıcılarını kullanarak, yerelleştirilebilir içeriğinizi kaynak Derlemeleriyle eşleyebilirsiniz. MsBuild. exe uygulaması, `updateuid` seçeneğini belirttiğinizde kaynak tanımlayıcılarını otomatik olarak atar.
 
 ### <a name="to-assign-resource-identifiers"></a>Kaynak tanımlayıcılarını atamak için
 
@@ -126,7 +126,7 @@ Kaynak tanımlayıcılarını kullanarak, yerelleştirilebilir içeriğinizi kay
     msbuild -t:updateuid LocalizingWpfInWf.csproj
     ```
 
-3. **Çözüm Gezgini**, kod düzenleyicisinde açmak Için **SimpleControl. xaml** ' ye çift tıklayın. `msbuild` Komutun `Uid` özniteliği tüm öğelerine eklediğini görürsünüz. Bu, kaynak tanımlayıcılarının atanması yoluyla yerelleştirmeyi kolaylaştırır.
+3. **Çözüm Gezgini**, kod düzenleyicisinde açmak Için **SimpleControl. xaml** ' ye çift tıklayın. `msbuild` komutun tüm öğelere `Uid` özniteliğini eklediğini göreceksiniz. Bu, kaynak tanımlayıcılarının atanması yoluyla yerelleştirmeyi kolaylaştırır.
 
      [!code-xaml[LocalizingWpfInWf#20](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]
 
@@ -134,7 +134,7 @@ Kaynak tanımlayıcılarını kullanarak, yerelleştirilebilir içeriğinizi kay
 
 ## <a name="using-locbaml-to-produce-a-satellite-assembly"></a>Bir uydu derlemesi oluşturmak için LocBaml Kullanma
 
-Yerelleştirilmiş içeriğiniz yalnızca kaynak bir *uydu derlemesinde*depolanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçeriğiniz için yerelleştirilmiş bir derleme oluşturmak üzere LocBaml. exe komut satırı aracını kullanın.
+Yerelleştirilmiş içeriğiniz yalnızca kaynak bir *uydu derlemesinde*depolanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğiniz için yerelleştirilmiş bir derleme oluşturmak üzere LocBaml. exe komut satırı aracını kullanın.
 
 ### <a name="to-produce-a-satellite-assembly"></a>Uydu derlemesi oluşturmak için
 
@@ -146,7 +146,7 @@ Yerelleştirilmiş içeriğiniz yalnızca kaynak bir *uydu derlemesinde*depolan�
     LocBaml /parse LocalizingWpfInWf.g.en-US.resources /out:temp.csv
     ```
 
-3. Geçici. csv dosyasını Visual Studio veya başka bir metin düzenleyici ile açın. Dizeyi `"Hello"` , İspanyolca `"Hola"`çevirisi ile değiştirin.
+3. Geçici. csv dosyasını Visual Studio veya başka bir metin düzenleyici ile açın. Dize `"Hello"`, Ispanyolca çevirisi, `"Hola"`ile değiştirin.
 
 4. Temp. csv dosyasını kaydedin.
 
@@ -178,4 +178,4 @@ Yerelleştirilmiş içeriğiniz yalnızca kaynak bir *uydu derlemesinde*depolan�
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Bir Uygulamayı Yerelleştirme](how-to-localize-an-application.md)
 - [İzlenecek yol: Windows Forms yerelleştirme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
-- [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Visual Studio’da XAML tasarlama](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)

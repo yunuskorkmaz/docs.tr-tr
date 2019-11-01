@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
-ms.openlocfilehash: 19572e3a20c3d9392560d434bebb8f70ca144297
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3f0d74e4ac141d383a595bf86ca9b5cd7bee4c0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803343"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191949"
 ---
-# <a name="error-creating-win32-resources-error-message"></a>Win32 kaynakları oluşturulurken hata oluştu: \<hata iletisi >
-Visual Basic Derleyicisi bir bildirime sahip bir derleme oluşturmak için Assembly Linker (Al.exe Alink olarak da bilinir) çağırır. Bağlayıcı, bellek içi kaynak oluşturulurken bir hata bildirdi. Bu ortam ile ilgili bir sorun olabilir veya bilgisayarınızda bellek yetersiz olabilir.  
+# <a name="error-creating-win32-resources-error-message"></a>Win32 kaynakları oluşturma hatası: \<hata iletisi >
+Visual Basic derleyici, bildirime sahip bir derleme oluşturmak için derleme Bağlayıcısı (al. exe, Alink olarak da bilinir) çağırır. Bağlayıcı, bellek içi kaynak oluştururken bir hata bildirdi. Bu, ortamda bir sorun olabilir veya bilgisayarınızın belleği azalmış olabilir.  
   
- **Hata Kimliği:** BC30136  
+ **Hata kimliği:** BC30136  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Tırnak işaretli hata iletisini inceleyin ve konusuna danışın [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Daha fazla açıklama ve öneriler için.  
+1. Alıntı yapılan hata iletisini inceleyin ve [al. exe](../../../framework/tools/al-exe-assembly-linker.md)konusuna başvurun. daha fazla açıklama ve öneri.  
   
-2. Sorun devam ederse, koşullar hakkında bilgi toplamak ve Microsoft Ürün Destek Hizmetleri bilgilendirir.  
+2. Hata devam ederse, koşullar hakkındaki bilgileri toplayın ve Microsoft Ürün Destek Hizmetleri 'ne bildirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)
+- [Al. exe](../../../framework/tools/al-exe-assembly-linker.md)
+- [Bizimle İletişime Geçin](/visualstudio/ide/feedback-options)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0783c6ab80f3a07bd7b7e5a005444218c17e85fb
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035453"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191687"
 ---
 # <a name="contributing"></a>Bulunan
 
@@ -15,9 +15,9 @@ ms.locfileid: "73035453"
 
 Belge, [.net belge sitesinde](https://docs.microsoft.com/dotnet)barındırılan makalelere ve kod örneklerine katkıda bulunma sürecini ele alır. Katkılar, yazım hatası düzeltmeleri kadar basit veya yeni makale olarak karmaşık olabilir.
 
+- [DOs ve yapılmaması gerekenler](#dos-and-donts)
 - [Katkıda bulunan için işlem](#process-for-contributing)
 - [C# Etkileşimli deneyim](#the-c-interactive-experience)
-- [DOs ve yapılmaması gerekenler](#dos-and-donts)
 - [Katkıda bulunan lisans sözleşmesi](#contributor-license-agreement)
 
 Bu depo, .NET kavramsal belgelerini içerir. .NET belgeleri sitesi buna ek olarak birden çok depodan oluşturulmuştur:
@@ -28,6 +28,24 @@ Bu depo, .NET kavramsal belgelerini içerir. .NET belgeleri sitesi buna ek olara
     Bu depo için sorunlar ve görevler [DotNet/DotNet-api-docs/sorunlar](https://github.com/dotnet/dotnet-api-docs/issues)' de izlenir.
 - [.NET Compiler Platform SDK başvurusu](https://github.com/dotnet/roslyn-api-docs)  
     Bu depoya yönelik sorunlar ve Taks, [DotNet/docs/sorunlar](https://github.com/dotnet/docs/issues)bölümünde izlenir.
+
+## <a name="dos-and-donts"></a>DOs ve yapılmaması gerekenler
+
+Aşağıdaki listede, .NET belgelerine katkıda bulunmak için göz önünde bulundurmanız gereken bazı temel kurallar gösterilmektedir:
+
+- Büyük çekme istekleri konusunda **sürmeyin** . Bunun yerine bir sorun oluşturup bir tartışma başlatın, böylece büyük bir süre yatırmadan önce bir yönü kabul edebilirsiniz. Toplu değişiklikler için çalışmayı daha küçük PR 'ler (en fazla 100 dosya) olarak bölün. Bu kılavuz, çekme isteği aşağıdaki kurallara uyulmazsa önemle önerilir.
+- Görevlerle ilgili öneriler için Şu anki [Dallarınızla](https://github.com/dotnet/docs/labels/up-for-grabs) **sorunlarına göz atın** .
+- Her görev için bir **PR oluşturun.** Birden çok ilgisiz değişiklik içeren PR 'ler, incelenmek çok daha zordur. Bu, İncelemeleri ve PR 'ler birleştirmeyi geciktirir. Bu kılavuz gözden geçirmeler için de geçerlidir: incelemelerde ilişkisiz değişiklikler öneremiyoruz; topluluğun bu kılavuza bağlı olduğunu soruyoruz.
+- Çekme ortamınızdaki çalışmanın net bir **açıklamasını sağlayın.** Nelerin değiştiğini ve neden olduğunu bize bildirin. "Update article.md" öğesinin varsayılan açıklaması gözden geçirenler için yararlı değildir.
+- Önceki bir tartışmadan yalnızca stil değişiklikleri için **PR 'ler gönderme.** Bu PR 'ler doğruluk açısından incelenmek için ek süre sürer ve bunları birleştirmek, diğer önemli güncelleştirmelerle birleştirme çakışmalarına neden olur. Tutarlı bir stili takip etmek için çalışıyoruz, ancak diğer görevlerle çalışmayı dengeliyoruz. Makaleler, diğer nedenlerle önemli güncelleştirmeler yaptığımız zaman stil uyumına getirilir. 
+- [Stil kılavuzunu](./styleguide/template.md) ve [ses ve ton](./styleguide/voice-tone.md) **kılavuzlarını okuyun.** Yeni eklemeler bu yönergeleri izlemelidir.
+- Makaleler üzerinde çalışmadan önce çatalınızda ayrı bir **dal oluşturun.**
+- [GitHub Flow iş akışını](https://guides.github.com/introduction/flow/) **izleyin.**
+- **Web günlüğü** ve Tweet (veya herhangi bir) katkılarınız hakkında sık sık!
+
+Bu yönergeler herkesin süresini dikkate almanıza yardımcı olur. Birçok kişi bu depolara katkıda bulunur. Bu yönergelerin ardından, çekme isteğinizi zamanında incelemenizi ve birleşmemizi kolaylaştırır. Bu uygulamalar, diğer topluluk üyelerinden ve takımımız PR 'ler çakışmaları en aza indirir. Bu yönergeleri takip etmediği PR 'ler, genellikle ABD ve topluluk üyeleri için ek işe neden olur, bu PR 'ler reddedilebilir. Bir özel durum istiyorsanız, bir sorun oluşturarak başlayın.
+
+> Not: bazı konuların Şu anda burada belirtilen tüm yönergeleri ve [Stil kılavuzunu](./styleguide/template.md) takip ettiğini fark edebilirsiniz. Site genelinde tutarlılık elde etmek için çalışıyoruz.
 
 ## <a name="process-for-contributing"></a>Katkıda bulunan için işlem
 
@@ -135,19 +153,6 @@ Etkileşimli C# deneyim, örneklerle nasıl çalışadığımızda değişiklik 
 
 - Örneğin, örneğin daha büyük bir çıktı oluşturduğu makaleler açıklamalarda bunu içermemelidir. Örnek çalıştırıldıktan sonra kodu gizler.
 - Örneğin bir konuyu gösteren makaleler, ancak bunu anlamak için tam sayı değildir. Örneğin, sorgu sözdizimini açıklamak ve sonra çıktı koleksiyonundaki her öğeyi göstermek için bir LINQ sorgusu çalıştıran kod.
-
-## <a name="dos-and-donts"></a>DOs ve yapılmaması gerekenler
-
-Aşağıdaki listede, .NET belgelerine katkıda bulunmak için göz önünde bulundurmanız gereken bazı temel kurallar gösterilmektedir:
-
-- Büyük çekme istekleri konusunda **sürmeyin** . Bunun yerine bir sorun oluşturup bir tartışma başlatın, böylece büyük bir süre yatırmadan önce bir yönü kabul edebilirsiniz. Toplu değişiklikler için çalışmayı daha küçük PR 'ler (en fazla 100 dosya) olarak bölün.
-- [Stil kılavuzunu](./styleguide/template.md) ve [ses ve ton](./styleguide/voice-tone.md) **kılavuzlarını okuyun.**
-- [Şablon](./styleguide/template.md) dosyasını, çalışmanızın başlangıç noktası **olarak kullanın.**
-- Makaleler üzerinde çalışmadan önce çatalınızda ayrı bir **dal oluşturun.**
-- [GitHub Flow iş akışını](https://guides.github.com/introduction/flow/) **izleyin.**
-- **Web günlüğü** ve Tweet (veya herhangi bir) katkılarınız hakkında sık sık!
-
-> Not: bazı konuların Şu anda burada belirtilen tüm yönergeleri ve [Stil kılavuzunu](./styleguide/template.md) takip ettiğini fark edebilirsiniz. Site genelinde tutarlılık elde etmek için çalışıyoruz.
 
 ## <a name="contributor-license-agreement"></a>Katkıda bulunan lisans sözleşmesi
 
