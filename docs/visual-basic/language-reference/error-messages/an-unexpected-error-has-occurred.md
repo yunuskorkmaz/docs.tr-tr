@@ -4,34 +4,34 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: 8130eee93ab5c14043283c28f522da53f9047e85
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9643d14b3e94e814c492b362b9db3e37cff4ce9f
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646883"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197379"
 ---
-# <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a><span data-ttu-id="e4a52-102">Tek örnek başlatmak için gerekli olan bir işletim sistemi kaynağı alınamadığından, beklenmeyen bir hata oluştu</span><span class="sxs-lookup"><span data-stu-id="e4a52-102">An unexpected error has occurred because an operating system resource required for single instance startup cannot be acquired</span></span>
-<span data-ttu-id="e4a52-103">Uygulamayı gerekli işletim sistemi kaynak alınamadı.</span><span class="sxs-lookup"><span data-stu-id="e4a52-103">The application could not acquire a necessary operating system resource.</span></span> <span data-ttu-id="e4a52-104">Bu sorunun olası nedeni bazıları şunlardır:</span><span class="sxs-lookup"><span data-stu-id="e4a52-104">Some of the possible causes for this problem are:</span></span>  
+# <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a><span data-ttu-id="fc736-102">Tek örnek başlatmak için gerekli olan bir işletim sistemi kaynağı alınamadığından, beklenmeyen bir hata oluştu</span><span class="sxs-lookup"><span data-stu-id="fc736-102">An unexpected error has occurred because an operating system resource required for single instance startup cannot be acquired</span></span>
+<span data-ttu-id="fc736-103">Uygulama gerekli bir işletim sistemi kaynağını alamadı.</span><span class="sxs-lookup"><span data-stu-id="fc736-103">The application could not acquire a necessary operating system resource.</span></span> <span data-ttu-id="fc736-104">Bu sorunun olası nedenlerinden bazıları şunlardır:</span><span class="sxs-lookup"><span data-stu-id="fc736-104">Some of the possible causes for this problem are:</span></span>  
   
-- <span data-ttu-id="e4a52-105">Uygulamanın işletim sistemi bir adlandırılan nesne oluşturma izniniz yok.</span><span class="sxs-lookup"><span data-stu-id="e4a52-105">The application does not have permissions to create named operating-system objects.</span></span>  
+- <span data-ttu-id="fc736-105">Uygulamanın adlandırılmış işletim sistemi nesneleri oluşturma izni yok.</span><span class="sxs-lookup"><span data-stu-id="fc736-105">The application does not have permissions to create named operating-system objects.</span></span>  
   
-- <span data-ttu-id="e4a52-106">Ortak dil çalışma zamanı bellek eşlemeli dosyalar oluşturma izniniz yok.</span><span class="sxs-lookup"><span data-stu-id="e4a52-106">The common language runtime does not have permissions to create memory-mapped files.</span></span>  
+- <span data-ttu-id="fc736-106">Ortak dil çalışma zamanının bellekle eşlenen dosyalar oluşturma izni yok.</span><span class="sxs-lookup"><span data-stu-id="fc736-106">The common language runtime does not have permissions to create memory-mapped files.</span></span>  
   
-- <span data-ttu-id="e4a52-107">Uygulamasının bir işletim sistemi nesne erişmesi gerekir, ancak başka bir işlem tarafından kullanılıyor.</span><span class="sxs-lookup"><span data-stu-id="e4a52-107">The application needs to access an operating-system object, but another process is using it.</span></span>  
+- <span data-ttu-id="fc736-107">Uygulamanın bir işletim sistemi nesnesine erişmesi gerekir, ancak başka bir işlem onu kullanıyor.</span><span class="sxs-lookup"><span data-stu-id="fc736-107">The application needs to access an operating-system object, but another process is using it.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="e4a52-108">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="e4a52-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="fc736-108">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="fc736-108">To correct this error</span></span>  
   
-1. <span data-ttu-id="e4a52-109">Uygulamanın işletim sistemi bir adlandırılan nesne oluşturmak için yeterli izinlere sahip olduğunu denetleyin.</span><span class="sxs-lookup"><span data-stu-id="e4a52-109">Check that the application has sufficient permissions to create named operating-system objects.</span></span>  
+1. <span data-ttu-id="fc736-109">Uygulamanın adlandırılmış işletim sistemi nesneleri oluşturmak için yeterli izinlere sahip olup olmadığını denetleyin.</span><span class="sxs-lookup"><span data-stu-id="fc736-109">Check that the application has sufficient permissions to create named operating-system objects.</span></span>  
   
-2. <span data-ttu-id="e4a52-110">Ortak dil çalışma zamanı bellek eşlemeli dosyalar oluşturmak için yeterli izinlere sahip olduğunu denetleyin.</span><span class="sxs-lookup"><span data-stu-id="e4a52-110">Check that the common language runtime has sufficient permissions to create memory-mapped files.</span></span>  
+2. <span data-ttu-id="fc736-110">Ortak dil çalışma zamanının, bellek eşlemeli dosyalar oluşturmak için yeterli izinlere sahip olup olmadığını denetleyin.</span><span class="sxs-lookup"><span data-stu-id="fc736-110">Check that the common language runtime has sufficient permissions to create memory-mapped files.</span></span>  
   
-3. <span data-ttu-id="e4a52-111">Özgün örnek uygulamaya bağlanmak için gereken kaynak kullanarak herhangi bir işlem temizlemek için bilgisayarı yeniden başlatın.</span><span class="sxs-lookup"><span data-stu-id="e4a52-111">Restart the computer to clear any process that may be using the resource needed to connect to the original instance application.</span></span>  
+3. <span data-ttu-id="fc736-111">Özgün örnek uygulamasına bağlanmak için gereken kaynağı kullanıyor olabilecek tüm işlemleri temizlemek için bilgisayarı yeniden başlatın.</span><span class="sxs-lookup"><span data-stu-id="fc736-111">Restart the computer to clear any process that may be using the resource needed to connect to the original instance application.</span></span>  
   
-4. <span data-ttu-id="e4a52-112">Altında hatanın gerçekleştiği durumlarda dikkat edin ve Microsoft Ürün Destek Hizmetleri'ni arayın</span><span class="sxs-lookup"><span data-stu-id="e4a52-112">Note the circumstances under which the error occurred, and call Microsoft Product Support Services</span></span>  
+4. <span data-ttu-id="fc736-112">Hatanın oluştuğu koşulları göz önünde, Microsoft Ürün Destek Hizmetleri 'ni çağıran</span><span class="sxs-lookup"><span data-stu-id="fc736-112">Note the circumstances under which the error occurred, and call Microsoft Product Support Services</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e4a52-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e4a52-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fc736-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fc736-113">See also</span></span>
 
-- [<span data-ttu-id="e4a52-114">Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e4a52-114">Application Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
-- [<span data-ttu-id="e4a52-115">Hata Ayıklayıcısı Temel Bilgileri</span><span class="sxs-lookup"><span data-stu-id="e4a52-115">Debugger Basics</span></span>](/visualstudio/debugger/debugger-basics)
-- [<span data-ttu-id="e4a52-116">Bizimle İletişime Geçin</span><span class="sxs-lookup"><span data-stu-id="e4a52-116">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+- [<span data-ttu-id="fc736-114">Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fc736-114">Application Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [<span data-ttu-id="fc736-115">Hata Ayıklayıcısı Temel Bilgileri</span><span class="sxs-lookup"><span data-stu-id="fc736-115">Debugger Basics</span></span>](/visualstudio/debugger/debugger-basics)
+- [<span data-ttu-id="fc736-116">Bizimle İletişime Geçin</span><span class="sxs-lookup"><span data-stu-id="fc736-116">Talk to Us</span></span>](/visualstudio/ide/feedback-options)
