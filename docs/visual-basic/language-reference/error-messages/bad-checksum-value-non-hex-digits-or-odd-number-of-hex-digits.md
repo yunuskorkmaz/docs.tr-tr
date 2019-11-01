@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: 81156fd7b1c9957486bcdd898c90a2bad2945829
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ae4113505ca63df9b20e6e71aa0b418da4ef924
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935271"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197355"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>Hatalı sağlama toplaması değeri, onaltılık olmayan basamaklar veya tek sayıda onaltılık basamak sayısı
-Bir sağlama toplamı değeri geçersiz onaltılık basamaklar içermeyen veya tek sayıda basamak içeriyor.  
+Sağlama toplamı değeri geçersiz onaltılık basamaklar içeriyor veya tek sayıda basamak içeriyor.  
   
- ASP.NET bir Visual Basic kaynak dosyası (.vb uzantısı) oluşturduğunda, bir sağlama toplamı hesaplar ve bir gizli kaynak dosyası tarafından tanımlanan yerleştirir `#externalchecksum`. Ayrıca bunu yapmanın .vb dosyası oluşturma bir kullanıcı için mümkündür ancak bu işlem, iç kullanım için en iyi sol.  
+ ASP.NET bir Visual Basic kaynak dosyası (uzantısı. vb) oluşturduğunda, bir sağlama toplamı hesaplar ve `#externalchecksum`tarafından tanımlanan gizli bir kaynak dosyasına koyar. Bu işlemi yapmak için bir. vb dosyası üreten bir kullanıcı da bu işlemi en iyi şekilde dahili kullanıma yöneliktir.  
   
- Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirmesini hakkında daha fazla bilgi için bkz: [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Bu ileti, varsayılan olarak bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Hata Kimliği:** BC42033  
+ **Hata kimliği:** BC42033  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Visual Basic kaynak dosyası ASP.NET oluşturuyorsa, proje derlemesi yeniden başlatın.  
+1. ASP.NET Visual Basic kaynak dosyası üretiyorsa, proje derlemesini yeniden başlatın.  
   
-2. Bu uyarıyı yeniden başlatıldıktan sonra devam ederse, ASP.NET yeniden yükleyin ve derlemeyi yeniden deneyin.  
+2. Yeniden başlatıldıktan sonra bu uyarı devam ederse, ASP.NET 'i yeniden yükleyin ve derlemeyi yeniden deneyin.  
   
-3. Uyarı devam ederse ya da bu ASP.NET kullanmıyorsanız, koşullar hakkında bilgi toplamak ve Microsoft Ürün Destek Hizmetleri bilgilendirir.  
+3. Uyarı hala devam ederse veya ASP.NET kullanmıyorsanız, şartlar hakkında bilgi toplayın ve Microsoft Ürün Destek Hizmetleri 'ne bildirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ASP.NET genel bakış](/aspnet/overview)
-- [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)
+- [Bizimle İletişime Geçin](/visualstudio/ide/feedback-options)
