@@ -7,12 +7,12 @@ helpviewer_keywords:
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 36ca18adc392643107b43a947656846f3b94a2eb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ac47ec6e69b7910f474378eebd91d58c171a802e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597350"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419557"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>Türü Örtük Olarak Belirlenmiş Diziler (C# Programlama Kılavuzu)
 
@@ -24,11 +24,11 @@ Aşağıdaki örneklerde, örtülü olarak yazılmış bir dizinin nasıl oluşt
 
 [!code-csharp[csProgGuideLINQ#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#37)]
 
-Önceki örnekte, örtük olarak yazılmış diziler ile, başlatma ifadesinin sol tarafında bir köşeli ayraç kullanılmaması fark edilir. Ayrıca, basit dizilerin tıpkı tek boyutlu diziler gibi `new []` kullanılarak başlatılmış olduğunu unutmayın.
+Önceki örnekte, örtük olarak yazılmış diziler ile, başlatma ifadesinin sol tarafında bir köşeli ayraç kullanılmaması fark edilir. Ayrıca, tek boyutlu diziler gibi `new []` kullanılarak pürüzlü Diziler başlatılmış olduğunu unutmayın.
 
 ## <a name="implicitly-typed-arrays-in-object-initializers"></a>Nesne başlatıcılarında örtük olarak yazılmış diziler
 
-Bir dizi içeren anonim bir tür oluşturduğunuzda, dizi türün nesne başlatıcısında örtük olarak yazılmalıdır. Aşağıdaki örnekte, `contacts` her biri adlı `PhoneNumbers`bir dizi içeren, örtülü olarak yazılmış bir anonim türler dizisidir. `var` Anahtar sözcüğünün nesne başlatıcıları içinde kullanılmadığını unutmayın.
+Bir dizi içeren anonim bir tür oluşturduğunuzda, dizi türün nesne başlatıcısında örtük olarak yazılmalıdır. Aşağıdaki örnekte `contacts`, her biri `PhoneNumbers`adlı bir dizi içeren anonim türlerin örtük olarak yazılmış bir dizisidir. `var` anahtar sözcüğünün nesne başlatıcıları içinde kullanılmadığını unutmayın.
 
 [!code-csharp[csProgGuideLINQ#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#38)]
 
@@ -40,4 +40,4 @@ Bir dizi içeren anonim bir tür oluşturduğunuzda, dizi türün nesne başlat�
 - [Anonim Tipler](../classes-and-structs/anonymous-types.md)
 - [Nesne ve Koleksiyon Başlatıcıları](../classes-and-structs/object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)
-- [LINQ sorgu Ifadeleri](../linq-query-expressions/index.md)
+- [C# üzerinde LINQ](../../linq/index.md)

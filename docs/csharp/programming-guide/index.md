@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 25b686e654c5d6bb44a56b96cbf4045d14e95b62
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392434"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423242"
 ---
 # <a name="c-programming-guide"></a>C#Programlama Kılavuzu
 Bu bölüm .NET Framework C# C# aracılığıyla erişilebilen temel dil özellikleri ve özellikleri hakkında ayrıntılı bilgi sağlar.  
   
  Bu bölümün çoğu, C# ve genel programlama kavramlarını daha önce bildiğiniz varsayılmaktadır. Programlama veya ile C#birlikte tam bir başlangıç yapıyorsanız, önceden programlama bilgisi gerekli olmayan öğreticiler veya [.net-tarayıcı öğreticisini](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)ziyaret [etmek C# ](../tutorials/intro-to-csharp/index.md) isteyebilirsiniz.  
   
- Belirli anahtar sözcükler, işleçler ve Önişlemci yönergeleri hakkında daha fazla bilgi [ C# ](../language-reference/index.md)için bkz. başvuru. C# Dil belirtimi hakkında daha fazla bilgi için bkz [ C# . dil belirtimi](../language-reference/language-specification/index.md).  
+ Belirli anahtar sözcükler, işleçler ve Önişlemci yönergeleri hakkında daha fazla bilgi [ C# ](../language-reference/index.md)için bkz. başvuru. C# Dil belirtimi hakkında daha fazla bilgi için bkz [ C# . dil belirtimi](/dotnet/csharp/language-reference/language-specification/introduction).  
   
 ## <a name="program-sections"></a>Program bölümleri
 
@@ -46,7 +46,7 @@ Bu bölüm .NET Framework C# C# aracılığıyla erişilebilen temel dil özelli
   
  [Dizeler](./strings/index.md)  
   
- [Özellikler](./classes-and-structs/properties.md)  
+ [Veri Erişimi](./classes-and-structs/properties.md)  
   
  [Dizin Oluşturucular](./indexers/index.md)  
   
@@ -56,11 +56,11 @@ Bu bölüm .NET Framework C# C# aracılığıyla erişilebilen temel dil özelli
   
  [Yineleyiciler](./concepts/iterators.md)
   
- [LINQ sorgu Ifadeleri](./linq-query-expressions/index.md)  
+ [LINQ sorgu Ifadeleri](../linq/index.md)  
   
  [Lambda İfadeleri](./statements-expressions-operators/lambda-expressions.md)  
   
- [Ad Alanları](./namespaces/index.md)  
+ [Ad alanları](./namespaces/index.md)  
   
  [Null yapılabilir değer türleri](./nullable-types/index.md)  
   

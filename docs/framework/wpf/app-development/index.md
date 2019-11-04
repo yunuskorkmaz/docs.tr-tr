@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 85218bd4b6e900bd4508a5c90132419a07846f2c
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: ce37eecf7edf2adcc4f56af27a5c658400f7abba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920209"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420646"
 ---
 # <a name="application-development"></a>Uygulama Geliştirme
 <a name="introduction"></a>Windows Presentation Foundation (WPF), aşağıdaki uygulama türlerini geliştirmek için kullanılabilen bir sunum çerçevesidir:  
   
 - Tek başına uygulamalar (geleneksel stil Windows uygulamaları, istemci bilgisayara yüklenmiş ve bu bilgisayardan çalıştırılan yürütülebilir derlemeler olarak oluşturulur).  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (yürütülebilir derlemeler olarak oluşturulan ve Microsoft Internet Explorer veya Mozilla Firefox gibi Web tarayıcıları tarafından barındırılan gezinti sayfalarından oluşan uygulamalar).  
+- XAML tarayıcı uygulamaları (XBAP 'ler) (yürütülebilir derlemeler olarak oluşturulan ve Microsoft Internet Explorer veya Mozilla Firefox gibi Web tarayıcıları tarafından barındırılan gezinti sayfalarından oluşan uygulamalar).  
   
 - Özel denetim kitaplıkları (yeniden kullanılabilir denetimleri içeren yürütülebilir olmayan derlemeler).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72920209"
   
 - Windows 'ı tek başına uygulamalarda yönetme.  
   
-- Gezinti pencereleri ve çerçevelerle [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]ve tek başına uygulamalarda gezinmeyi izleme.  
+- XAML tarayıcı uygulamalarında (XBAP) ve gezinti pencereleri ve çerçevelerle tek başına uygulamalarda gezinmeyi izleme.  
   
  Bu yetenekler, *uygulama tanımı*kullanarak uygulamalarınıza ekleyeceğiniz <xref:System.Windows.Application> sınıfı tarafından uygulanır.  
   
@@ -86,15 +86,15 @@ ms.locfileid: "72920209"
   
 - Bir Web tarayıcısında barındırılan tek başına sayfalar.  
   
-- Bir Web tarayıcısında barındırılan bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] derlenen sayfalar.  
+- Bir Web tarayıcısında barındırılan bir XBAP 'ye derlenen sayfalar.  
   
 - Tek başına bir uygulamaya derlenen ve bir gezinti penceresi (<xref:System.Windows.Navigation.NavigationWindow>) tarafından barındırılan sayfalar.  
   
-- Bir çerçeve (<xref:System.Windows.Controls.Frame>) tarafından barındırılan ve tek başına bir sayfada barındırılabilen sayfalar veya bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ya da tek başına uygulama için derlenen bir sayfa.  
+- Tek başına bir sayfada veya bir XBAP ya da tek başına uygulama olarak derlenen bir sayfada barındırılan bir çerçeve (<xref:System.Windows.Controls.Frame>) tarafından barındırılan sayfalar.  
   
  Gezintiyi kolaylaştırmak için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aşağıdakileri uygular:  
   
-- <xref:System.Windows.Navigation.NavigationService>, <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>ve [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] tarafından uygulama içi gezintiyi desteklemek için kullanılan gezinti isteklerini işlemeye yönelik paylaşılan gezinti motoru.  
+- <xref:System.Windows.Navigation.NavigationService>, <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>ve XBAP 'ler tarafından uygulama içi gezintiyi desteklemek için kullanılan gezinti isteklerini işlemeye yönelik paylaşılan gezinti motoru.  
   
 - Gezinmeyi başlatmak için gezinti yöntemleri.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "72920209"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Barındırma  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], Microsoft Internet Explorer veya Firefox içinde barındırılabilir. Her barındırma modelinin, [barındırma](hosting-wpf-applications.md)kapsamında yer alan kendi konuları ve kısıtlamaları vardır.  
+ XBAP 'ler, Microsoft Internet Explorer veya Firefox içinde barındırılabilir. Her barındırma modelinin, [barındırma](hosting-wpf-applications.md)kapsamında yer alan kendi konuları ve kısıtlamaları vardır.  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Yapılandırma ve Dağıtma  
@@ -124,7 +124,7 @@ ms.locfileid: "72920209"
 |[Uygulama Yönetimine Genel Bakış](application-management-overview.md)|Uygulama yaşam süresi, Windows, uygulama kaynakları ve gezinmeyi yönetme dahil <xref:System.Windows.Application> sınıfına genel bir bakış sağlar.|  
 |[WPF’de Windows](windows-in-wpf-applications.md)|Uygulamanızda, <xref:System.Windows.Window> sınıfı ve iletişim kutularının kullanımı dahil olmak üzere yönetme hakkında ayrıntılı bilgi sağlar.|  
 |[Gezintiye Genel Bakış](navigation-overview.md)|Uygulamanızın sayfaları arasında gezinmeyi yönetmeye ilişkin bir genel bakış sağlar.|  
-|[Barındırma](hosting-wpf-applications.md)|[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]genel bir bakış sağlar.|  
+|[Barındırma](hosting-wpf-applications.md)|XAML tarayıcı uygulamalarına (XBAP 'ler) genel bir bakış sağlar.|  
 |[Derleme ve Dağıtma](building-and-deploying-wpf-applications.md)|WPF uygulamanızı derleyip dağıtmayı açıklar.|  
 |[Visual Studio’da WPF’ye Giriş](../getting-started/introduction-to-wpf-in-vs.md)|WPF 'nin ana özelliklerini açıklar.|  
 |[İzlenecek Yol: İlk WPF masaüstü uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Sayfa gezintisi, düzen, denetimler, görüntüler, stiller ve bağlamayı kullanarak bir WPF uygulamasının nasıl oluşturulduğunu gösteren bir izlenecek yol.|

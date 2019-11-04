@@ -1,64 +1,66 @@
 ---
 title: C# öğreticiler
-description: Bunlar keşfedin C# oluşturmayı öğrenmek için öğreticileri C# programları ve bilgi C# dil özellikleri.
+description: Program oluşturma C# C# ve dil özelliklerini öğrenme C# hakkında bilgi edinmek için bu öğreticileri göz atın.
 ms.date: 10/25/2018
-ms.openlocfilehash: c2dd00505afbf4d8bc3f213a2f87751fe452f253
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 3f3ca31c0fdeb5d7c60b25c4b45399569cc919b4
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557177"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417108"
 ---
 # <a name="c-tutorials"></a>C# öğreticiler
 
-Hoş Geldiniz C# öğreticiler. Bu, tarayıcınızda çalıştırabilirsiniz etkileşimli dersleri başlayın. Sonraki öğreticiler ve daha gelişmiş öğreticilerde oluşturmak için .NET geliştirme araçları ile çalışmanıza yardımcı C# makinenizde programlar.
+C# Öğreticilere hoş geldiniz. Bu, tarayıcınızda çalıştırabileceğiniz etkileşimli dersler ile başlar. Daha sonraki öğreticiler ve daha gelişmiş öğreticiler, makinenizde program oluşturmak C# için .NET geliştirme araçlarıyla çalışmanıza yardımcı olur.
 
-## <a name="introduction-to-c-interactive-tutorials"></a>Giriş C# etkileşimli öğreticileri
+## <a name="introduction-to-c-interactive-tutorials"></a>C# Etkileşimli öğreticilere giriş
 
-İlk Ders açıklayan C# kavramları küçük kod parçacıkları kullanma. Temellerini öğreneceksiniz C# söz dizimi ve veri türleriyle çalışmak nasıl dizeler, sayılar ve Boole değerlerini ister. Tüm etkileşimli ve, kod yazma ve dakikalar içinde çalıştırma. Bu ilk dersleri hiçbir programlamaya yönelik ön bilgi varsayar veya C# dili.
+Araştırmayı video biçiminde başlatmak istiyorsanız, [ C# 101 video serisi](https://aka.ms/dotnet3-csharp) öğesine C#bir giriş sağlar. Bu öğreticilerde keşfedebileceğiniz kavramlar hakkında bilgi edineceksiniz.
+
+İlk dersler, kodun C# küçük parçacıkları kullanılarak kavramları açıklamaktadır. C# Sözdiziminin temel bilgilerini ve dizeler, sayılar ve Boole değerleri gibi veri türleriyle nasıl çalışacağınızı öğreneceksiniz. Bu, tüm etkileşimlidir ve dakikalar içinde kod yazmak ve çalıştırmak isteyeceksiniz. Bu ilk dersler daha önce programlama veya C# dil bilgisine sahip değildir.
 
 ## <a name="hello-worldintro-to-csharphello-worldyml"></a>[Merhaba dünya](intro-to-csharp/hello-world.yml)
 
-İçinde [Merhaba Dünya](intro-to-csharp/hello-world.yml) Öğreticisi, en temel oluşturacaksınız C# program. Hakkında bilgi edineceksiniz `string` türü ve metin ile çalışmayı öğrenin.
+[Merhaba Dünya](intro-to-csharp/hello-world.yml) öğreticisinde en temel C# programı oluşturacaksınız. `string` türünü ve metinle çalışmayı keşfedebilirsiniz.
 
 ## <a name="numbers-in-cintro-to-csharpnumbers-in-csharpyml"></a>[C# numaraları](intro-to-csharp/numbers-in-csharp.yml)
 
-İçinde [içindeki numaralandırır C# ](intro-to-csharp/numbers-in-csharp.yml) öğreticide nasıl bilgisayarlar sayıları depolamak ve farklı sayısal türler ile hesaplamalar gerçekleştirmek nasıl öğreneceksiniz. Yuvarlama ve kullanarak matematiksel hesaplamalar gerçekleştirmek nasıl ilişkin temel bilgileri öğreneceksiniz C#. Bu öğretici ayrıca kullanılabilir [makinenizde yerel olarak çalıştırılacak](intro-to-csharp/numbers-in-csharp-local.md).
+Öğreticideki [sayılarda C# ](intro-to-csharp/numbers-in-csharp.yml) , bilgisayarların sayıları nasıl depolayacağınızı ve farklı sayısal türlerle hesaplamaların nasıl gerçekleştirileceğini öğreneceksiniz. Yuvarlama hakkında temel bilgileri ve kullanarak C#matematik hesaplamaları yapmayı öğreneceksiniz. Bu öğretici, [makinenizde yerel olarak çalışmak için](intro-to-csharp/numbers-in-csharp-local.md)de kullanılabilir.
 
-Bu öğreticide tamamlandığından emin varsayılır [Merhaba Dünya](intro-to-csharp/hello-world.yml) Ders.
+Bu öğreticide, [Hello World](intro-to-csharp/hello-world.yml) ders 'i tamamladığınız varsayılmaktadır.
 
 ## <a name="branches-and-loopsintro-to-csharpbranches-and-loopsyml"></a>[Dal ve döngüler](intro-to-csharp/branches-and-loops.yml)
 
-[Dallar ve döngüler](intro-to-csharp/branches-and-loops.yml) öğretici değişkenlerinde depolanan değerlere göre kod yürütme farklı yolların seçilmesi temellerini öğretir. Hangi programların nasıl kararlar ve farklı eylemleri seçin temel denetim akışı ile ilgili temel bilgileri öğreneceksiniz. Bu öğretici ayrıca kullanılabilir [makinenizde yerel olarak çalıştırılacak](intro-to-csharp/branches-and-loops-local.md).
+[Dallar ve döngüler](intro-to-csharp/branches-and-loops.yml) öğreticisinde, değişkenlerde depolanan değerlere göre farklı kod yürütme yolları seçmenin temelleri öğretilir. Denetim akışının temel bilgilerini öğrenirsiniz. Bu, programların kararlar alma ve farklı eylemler seçme işlemlerinin temelini oluşturur. Bu öğretici, [makinenizde yerel olarak çalışmak için](intro-to-csharp/branches-and-loops-local.md)de kullanılabilir.
 
-Bu öğreticide tamamlandığından emin varsayılır [Merhaba Dünya](intro-to-csharp/hello-world.yml) ve [içindeki numaralandırır C# ](intro-to-csharp/numbers-in-csharp.yml) dersleri.
+Bu öğreticide, [Merhaba Dünya](intro-to-csharp/hello-world.yml) ve derslerin [numaralarını C# ](intro-to-csharp/numbers-in-csharp.yml) tamamladığınız varsayılmaktadır.
 
 ## <a name="list-collectionintro-to-csharplist-collectionyml"></a>[Liste koleksiyonu](intro-to-csharp/list-collection.yml)
 
-[Liste koleksiyon](intro-to-csharp/list-collection.yml) Ders tura dizileri veri depolayan koleksiyon türleri sağlar. Ekleme ve öğeleri kaldırma, öğeleri aramak ve listeleri sıralama öğreneceksiniz. Farklı türde listeleri hakkında bilgi edineceksiniz. Bu öğretici ayrıca kullanılabilir [makinenizde yerel olarak çalıştırılacak](intro-to-csharp/arrays-and-collections.md).
+[Liste koleksiyonu](intro-to-csharp/list-collection.yml) dersi, veri dizilerini depolayan liste koleksiyonu türünün bir turuna sahip olmanızı sağlar. Öğe ekleme ve kaldırma, öğe arama ve listeleri sıralama hakkında bilgi edineceksiniz. Farklı liste türleri keşfedebilirsiniz. Bu öğretici, [makinenizde yerel olarak çalışmak için](intro-to-csharp/arrays-and-collections.md)de kullanılabilir.
 
-Bu öğreticide, yukarıda listelenen dersleri tamamlandı varsayılır.
+Bu öğreticide, yukarıda listelenen dersleri tamamladığınız varsayılmaktadır.
 
-## <a name="introduction-to-c----work-locallyintro-to-csharplocal-environmentmd"></a>[Giriş C# --yerel olarak çalışmak](intro-to-csharp/local-environment.md)
+## <a name="introduction-to-c----work-locallyintro-to-csharplocal-environmentmd"></a>[Giriş C# --yerel olarak çalışın](intro-to-csharp/local-environment.md)
 
-Hello World Ders aşağıdaki tanıtım öğreticilerine kendi yerel geliştirme ortamında kullanılabilir. Her öğretici sonunda, çevrimiçi ya da kendi makinenizde sonraki Ders ile devam etmek isteyip istemediğinize karar verin. Ortamınızı ayarlayın ve makinenizde sonraki öğreticiye devam yardımcı olacak bağlantılar bulunur.
+Merhaba Dünya dersi izleyen tüm giriş öğreticileri kendi yerel geliştirme ortamınızda bulunabilir. Her öğreticinin sonunda, çevrimiçi olarak veya kendi makinenizde bir sonraki ders ile devam etmek istediğinize karar verirsiniz. Ortamınızı ayarlamanıza ve makinenizde bir sonraki öğreticiye devam etmenize yardımcı olacak bağlantılar vardır.
 
-## <a name="explore-new-features-in-c"></a>C'de yeni özellikleri keşfedin\#
+## <a name="explore-new-features-in-c"></a>C\# 'teki yeni özellikleri keşfet
 
-* [Yeni özellikleri deneyin C# 6 etkileşimli olarak](exploration/csharp-6.yml): Eklenen özellikleri keşfedin [ C# 6](../whats-new/csharp-6.md) tarayıcınızda etkileşimli olarak.
-* [Dize ilişkilendirme](string-interpolation.md): dize ilişkilendirme, biçimlendirilmiş dizeler oluşturulacağı gösterilmektedir C#.
-* [Null başvuru türleri](nullable-reference-types.md): null başvuru için amacınız ifade etmek için boş değer atanabilir başvuru türleri nasıl yapılacağı açıklanır.
-* [Güncelleştirme Nullable kullanmak için bir proje başvuru türleri](upgrade-to-nullable-references.md): yapmak için var olan bir projeyi yükseltmesine teknikleri gösterir null başvuru türlerini kullanın.
-* [Desen eşleştirme kullanan veri yeteneklerini genişletmek](pattern-matching.md): desen eşleştirme türleri temel özelliklerine ötesine genişletmek için nasıl kullanılacağını gösterir.
-* [Çalışma dizini ve aralıkları kullanarak verileri sıralarıyla](ranges-indexes.md): Tek öğeleri veya sıralı veri kapsayıcısı aralıklarına erişmek için yeni uygun söz dizimini gösterir.
+* [6. adımda yeni C# Özellikler 'i etkileşimli olarak deneyin](exploration/csharp-6.yml): tarayıcınızda [ C# 6](../whats-new/csharp-6.md) . adımda eklenen özellikleri araştırma.
+* [Dize ilişkilendirme](string-interpolation.md): ' de C#biçimlendirilen dizeler oluşturmak için dize ilişkilendirmeyi nasıl kullanacağınızı gösterir.
+* Null [yapılabilir başvuru türleri](nullable-reference-types.md): null Başvurular için amacınızı ifade etmek üzere null yapılabilir başvuru türlerini nasıl kullanacağınızı gösterir.
+* [Null yapılabilir başvuru türlerini kullanmak için bir projeyi güncelleştirme](upgrade-to-nullable-references.md): mevcut bir projeyi, null yapılabilir başvuru türlerini kullanmak için yükseltme tekniklerini gösterir.
+* [Model eşleştirme kullanarak veri yeteneklerini genişletme](pattern-matching.md): türleri temel özelliklerinin ötesinde genişletmek için model eşleştirmeyi nasıl kullanacağınızı gösterir.
+* [Dizinler ve aralıklar kullanarak veri dizileri Ile çalışma](ranges-indexes.md): bir sıralı veri kapsayıcısının tek öğelerine veya aralıklarına erişmek için yeni uygun sözdizimi gösterir.
 
 ## <a name="general-tutorials"></a>Genel öğreticiler
 
-Aşağıdaki öğreticilerde oluşturmanıza olanak tanıyan C# kullanarak programları [.NET Core](../../core/index.md):
+Aşağıdaki öğreticiler [.NET Core](../../core/index.md)kullanarak program oluşturmanızı C# sağlar:
 
-* [Konsol uygulaması](console-teleprompter.md): konsol g/ç, bir konsol uygulaması yapısını ve görev tabanlı zaman uyumsuz programlama modeli ile ilgili temel bilgileri gösterir.
-* [REST istemcisi](console-webapiclient.md): web iletişimi, JSON seri hale getirme ve nesne yönelimli özellikleri gösterir C# dili.
-* [Devralmada C# ve .NET](inheritance.md): devralma gösterir C#temel sınıflarını tanımlamak için soyut temel sınıflar, devralma kullanımı dahil olmak üzere ve türetilmiş sınıflar.
-* [LINQ ile çalışma](working-with-linq.md): LINQ ve Dil öğelerini destekleyen özelliklerin çoğunu gösterir.
-* [Öznitelikleri kullanarak](attributes.md): oluşturma ve öznitelikleri kullanma işlemi gösterilmektedir C#.
-* [Dize ilişkilendirme](exploration/interpolated-strings.yml) Öğreticisi, değerleri bir dizeye nasıl ekleneceğini gösterir. İlişkilendirilmiş dize oluşturma öğreneceksiniz ile katıştırılmış C# ifadeleri ve nasıl sonuç dizesinde ifade sonuçları metin görünümünü denetler. Bu öğretici ayrıca kullanılabilir [makinenizde yerel olarak çalıştırılacak](exploration/interpolated-strings-local.md).
+* [Konsol uygulaması](console-teleprompter.md): konsol g/ç, konsol uygulamasının yapısını ve görev tabanlı zaman uyumsuz programlama modelinin temellerini gösterir.
+* [Rest istemcisi](console-webapiclient.md): C# DILDEKI Web iletişimlerini, JSON serileştirmesini ve nesne yönelimli özellikleri gösterir.
+* [Ve .NET C# içinde devralma](inheritance.md): temel sınıfları, C#soyut temel sınıfları ve türetilmiş sınıfları tanımlamak için devralma kullanımı dahil olmak üzere ' de devralım işlemini gösterir.
+* [LINQ Ile çalışma](working-with-linq.md): LINQ özelliklerinin çoğunu ve bunu destekleyen dil öğelerini gösterir.
+* [Öznitelikleri kullanma](attributes.md): ' de C#özniteliklerin nasıl oluşturulduğunu ve kullanıldığını gösterir.
+* [Dize ilişkilendirme](exploration/interpolated-strings.yml) öğreticisi, bir dizeye nasıl değer ekleneceğini gösterir. Katıştırılmış C# ifadelerle bir enterpolasyonlu dize oluşturmayı ve sonuç dizesinde ifade sonuçlarının metin görünümünü denetlemeyi öğreneceksiniz. Bu öğretici, [makinenizde yerel olarak çalışmak için](exploration/interpolated-strings-local.md)de kullanılabilir.

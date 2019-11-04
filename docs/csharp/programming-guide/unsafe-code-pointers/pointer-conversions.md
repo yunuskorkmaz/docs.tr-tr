@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 81b2110e6a571e174693fd272d1c6b4bf44dbae3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b0a517eacc505376c9502e9d095c7aac0cd54555
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588223"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417528"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>İşaretçi Dönüşümleri (C# Programlama Kılavuzu)
 Aşağıdaki tabloda önceden tanımlanmış örtük işaretçi dönüşümleri gösterilmektedir. Örtük dönüştürmeler, yöntem çağırma ve atama deyimleri dahil olmak üzere birçok durumda gerçekleşebilir.  
@@ -33,7 +33,7 @@ Aşağıdaki tabloda önceden tanımlanmış örtük işaretçi dönüşümleri 
 |Herhangi bir işaretçi türü|SByte, Byte, Short, ushort, int, uint, Long veya ulong|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, için bir işaretçisi `int` `byte`işaretçisine dönüştürülür. İşaretçinin, değişkenin en düşük adresli baytını işaret ettiğini unutmayın. Sonucu büyük ölçüde arttırdığınızda `int` (4 bayt), değişkenin kalan baytlarını görüntüleyebilirsiniz.  
+ Aşağıdaki örnekte, `int` bir işaretçi `byte`işaretçisine dönüştürülür. İşaretçinin, değişkenin en düşük adresli baytını işaret ettiğini unutmayın. Sonucu büyük ölçüde artırdığınızda, `int` boyutuna kadar (4 bayt), değişkenin kalan baytlarını görüntüleyebilirsiniz.  
   
  [!code-csharp[csProgGuidePointers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers2.cs#3)]  
   
@@ -43,7 +43,7 @@ Aşağıdaki tabloda önceden tanımlanmış örtük işaretçi dönüşümleri 
 
 - [C# Programlama Kılavuzu](../index.md)
 - [İşaretçi türleri](./pointer-types.md)
-- [Türler](../../language-reference/keywords/types.md)
+- [Türler](/dotnet/csharp/language-reference/keywords)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [fixed Deyimi](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

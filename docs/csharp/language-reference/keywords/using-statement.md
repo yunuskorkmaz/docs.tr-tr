@@ -5,16 +5,16 @@ ms.date: 10/15/2019
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: 7e6d1b663007d430f71f81923f343f1c43f5dd2d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f5ff78eaf9d565a9708c7a3a11754579389e79e8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579176"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422238"
 ---
 # <a name="using-statement-c-reference"></a>using deyimleri (C# başvuru)
 
-@No__t_0 nesnelerinin doğru kullanımını sağlayan uygun bir sözdizimi sağlar.
+<xref:System.IDisposable> nesnelerinin doğru kullanımını sağlayan uygun bir sözdizimi sağlar.
 
 ## <a name="example"></a>Örnek
 
@@ -30,15 +30,15 @@ Aşağıdaki örnek, `using` deyimin nasıl kullanılacağını göstermektedir.
 
 <xref:System.IO.File> ve <xref:System.Drawing.Font>, yönetilmeyen kaynaklara erişen yönetilen türlerin örnekleridir (Bu durumda dosya tutamaçları ve cihaz bağlamları). Birçok farklı türde yönetilmeyen kaynak ve bunları kapsülleyen sınıf kitaplığı türleri vardır. Bu tür türler <xref:System.IDisposable> arabirimini gerçekleştirmelidir.
 
-Bir `IDisposable` nesnesinin kullanım ömrü tek bir yöntemle sınırlıysa, bunu `using` bildiriminde bildirmeniz ve oluşturmanız gerekir. @No__t_0 ifade, nesne üzerinde <xref:System.IDisposable.Dispose%2A> yöntemini doğru şekilde çağırır ve (daha önce gösterildiği gibi kullandığınızda), <xref:System.IDisposable.Dispose%2A> çağrıldığında nesnenin kendisinin kapsam dışına geçmesine da neden olur. @No__t_0 bloğunda, nesnesi salt okunurdur ve değiştirilemez ya da yeniden atanamaz.
+Bir `IDisposable` nesnesinin kullanım ömrü tek bir yöntemle sınırlıysa, bunu `using` bildiriminde bildirmeniz ve oluşturmanız gerekir. `using` ifade, nesne üzerinde <xref:System.IDisposable.Dispose%2A> yöntemini doğru şekilde çağırır ve (daha önce gösterildiği gibi kullandığınızda), <xref:System.IDisposable.Dispose%2A> çağrıldığında nesnenin kendisinin kapsam dışına geçmesine da neden olur. `using` bloğunda, nesnesi salt okunurdur ve değiştirilemez ya da yeniden atanamaz.
 
-@No__t_0 bildiri, `using` bloğunda bir özel durum gerçekleşse bile <xref:System.IDisposable.Dispose%2A> çağırılmasını sağlar. Nesneyi `try` bloğunun içine yerleştirerek ve sonra <xref:System.IDisposable.Dispose%2A> bir `finally` bloğunda çağırarak aynı sonucu elde edebilirsiniz; Aslında `using` deyimin derleyici tarafından çevrilme yöntemi budur. Kod örneği, derleme zamanında aşağıdaki koda genişletilir (nesne için sınırlı kapsam oluşturmak için ek küme ayraçları aklınızda):
+`using` bildiri, `using` bloğunda bir özel durum gerçekleşse bile <xref:System.IDisposable.Dispose%2A> çağırılmasını sağlar. Nesneyi `try` bloğunun içine yerleştirerek ve sonra <xref:System.IDisposable.Dispose%2A> bir `finally` bloğunda çağırarak aynı sonucu elde edebilirsiniz; Aslında `using` deyimin derleyici tarafından çevrilme yöntemi budur. Kod örneği, derleme zamanında aşağıdaki koda genişletilir (nesne için sınırlı kapsam oluşturmak için ek küme ayraçları aklınızda):
 
 [!code-csharp[csrefKeywordsNamespace#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#5)]
 
-Yeni `using` deyimin sözdizimi, çok benzer bir koda çevrilir. @No__t_0 bloğu, değişkenin bildirildiği yerde açılır. @No__t_0 bloğu, genellikle bir yöntemin sonunda kapsayan bloğun yakın bir tarafında eklenir.
+Yeni `using` deyimin sözdizimi, çok benzer bir koda çevrilir. `try` bloğu, değişkenin bildirildiği yerde açılır. `finally` bloğu, genellikle bir yöntemin sonunda kapsayan bloğun yakın bir tarafında eklenir.
 
-@No__t_0 - `finally` ifadesiyle ilgili daha fazla bilgi için, [try-finally](try-finally.md) konusuna bakın.
+`try`-`finally` ifadesiyle ilgili daha fazla bilgi için, [try-finally](try-finally.md) konusuna bakın.
 
 Aşağıdaki örnekte gösterildiği gibi, bir türün birden çok örneği `using` bildiriminde bildirilebilecek:
 
@@ -52,11 +52,11 @@ Kaynak nesnesini örnekleyebilirsiniz ve sonra değişkeni `using` ifadesine ge�
 
 [!code-csharp[csrefKeywordsNamespace#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#7)]
 
-@No__t_0 nesnelerini elden atma hakkında daha fazla bilgi için, bkz. [IDisposable uygulayan nesneleri kullanma](../../../standard/garbage-collection/using-objects.md).
+`IDisposable` nesnelerini elden atma hakkında daha fazla bilgi için, bkz. [IDisposable uygulayan nesneleri kullanma](../../../standard/garbage-collection/using-objects.md).
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için, [ C# dil belirtiminde](../language-specification/index.md) [using ifadesine](~/_csharplang/spec/statements.md#the-using-statement) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için, [ C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [using ifadesine](~/_csharplang/spec/statements.md#the-using-statement) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

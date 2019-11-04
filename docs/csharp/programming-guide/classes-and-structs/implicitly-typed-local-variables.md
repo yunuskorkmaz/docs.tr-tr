@@ -1,105 +1,105 @@
 ---
-title: Örtük olarak yazılan yerel değişkenler - C# Programlama Kılavuzu
+title: Örtük olarak yazılan yerel değişkenler C# -Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 8c09ddc5a9db71a4e0bef0434d2fc14a4c088352
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635559"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419384"
 ---
-# <a name="implicitly-typed-local-variables-c-programming-guide"></a>Örtük olarak yazılan yerel değişkenler (C# Programlama Kılavuzu)
+# <a name="implicitly-typed-local-variables-c-programming-guide"></a>Örtük olarak yazılan yerel değişkenlerC# (Programlama Kılavuzu)
 
-Yerel değişkenler, açık bir tür vermeden bildirilebilir. `var` Başlatma ifadesinin sağ tarafındaki ifade değişkenin türünü çıkarsamak için derleyicinin anahtar sözcüğü bildirir. Çıkarsanan tür, yerleşik bir tür, anonim bir tür, kullanıcı tanımlı bir tür veya .NET Framework Sınıf Kitaplığı'nda tanımlı bir tür olabilir. Dizilerle başlatma hakkında daha fazla bilgi için `var`, bkz: [örtük olarak yazılan diziler](../arrays/implicitly-typed-arrays.md).
+Yerel değişkenler açık bir tür vermeden bildirilebilecek. `var` anahtar sözcüğü, derleyiciye, başlatma deyiminin sağ tarafındaki ifadeden değişkenin türünü çıkarmasını söyler. Çıkarsanan tür bir yerleşik tür, anonim tür, Kullanıcı tanımlı tür veya .NET Framework sınıf kitaplığında tanımlanmış bir tür olabilir. Dizileri `var`ile başlatma hakkında daha fazla bilgi için, bkz. [örtülü olarak yazılan diziler](../arrays/implicitly-typed-arrays.md).
 
-Aşağıdaki örnekler, yerel değişkenleri bildirilebilir ile çeşitli şekillerde `var`:
+Aşağıdaki örneklerde, yerel değişkenlerin `var`ile bildirilebilecek çeşitli yolları gösterilmektedir:
 
 [!code-csharp[csProgGuideLINQ#43](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#43)]
 
-Kavramak önemlidir `var` anahtar sözcüğü, "değişken" anlamına gelmez ve değişken gevşek olduğunu göstermez yazılabilir veya geç bağlama. Yalnızca derleyici belirler ve en uygun türde atar anlamına gelir.
+`var` anahtar sözcüğünün "değişken" anlamına gelmeyeceğini ve değişkenin gevşek olarak yazılmış olduğunu veya geç bağlandığını belirtmeyeceğini anlamak önemlidir. Yalnızca derleyicinin en uygun türü belirlediği ve atayacağı anlamına gelir.
 
-`var` Anahtar sözcüğü aşağıdaki bağlamlarında kullanılabilir:
+`var` anahtar sözcüğü aşağıdaki bağlamlarda kullanılabilir:
 
-- Yerel değişkenlere (yöntemi kapsamında bildirilen değişkenler) önceki örnekte gösterildiği gibi.
+- Yerel değişkenlerde (Yöntem kapsamında belirtilen değişkenler) önceki örnekte gösterildiği gibi.
 
-- İçinde bir [için](../../language-reference/keywords/for.md) başlatma ifadesi.
+- [For](../../language-reference/keywords/for.md) Initialization ifadesinde.
 
     ```csharp
     for(var x = 1; x < 10; x++)
     ```
 
-- İçinde bir [foreach](../../language-reference/keywords/foreach-in.md) başlatma ifadesi.
+- Bir [foreach](../../language-reference/keywords/foreach-in.md) başlatma bildiriminde.
 
     ```csharp
     foreach(var item in list){...}
     ```
 
-- İçinde bir [kullanarak](../../language-reference/keywords/using-statement.md) deyimi.
+- Bir [using](../../language-reference/keywords/using-statement.md) ifadesinde.
 
     ```csharp
     using (var file = new StreamReader("C:\\myfile.txt")) {...}
     ```
 
-Daha fazla bilgi için [nasıl yapılır: Kullanım türü örtük olarak belirlenmiş yerel değişkenleri ve dizileri sorgu ifadesinde](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
+Daha fazla bilgi için bkz. [nasıl yapılır: bir sorgu Ifadesinde örtük olarak yazılan yerel değişkenleri ve dizileri kullanma](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
 
 ## <a name="var-and-anonymous-types"></a>var ve anonim türler
 
-Çoğu durumda kullanımını `var` isteğe bağlıdır ve yalnızca söz dizimsel kolaylık. Ancak, bir değişken içeren bir anonim tür başlatıldığında olarak değişkeni bildirilmelidir `var` daha sonraki bir noktada nesnenin özelliklerini erişmeniz gerekiyorsa. Bu ortak senaryoda olan [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadelerinde. Daha fazla bilgi için [anonim türler](anonymous-types.md).
+Çoğu durumda `var` kullanımı isteğe bağlıdır ve yalnızca sözdizimsel bir kolaylık vardır. Ancak, bir değişken anonim bir türle başlatıldığında, nesnenin özelliklerine sonraki bir noktada erişmeniz gerekiyorsa değişkeni `var` olarak bildirmeniz gerekir. Bu, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadelerinde yaygın bir senaryodur. Daha fazla bilgi için bkz. [anonim türler](anonymous-types.md).
 
-Kaynak kodunuzu açısından bakıldığında, anonim bir tür adı yok. Bu nedenle, bir sorgu değişkeni ile başlatılmışsa `var`, döndürülen dizi nesnelerin özelliklerine erişmek için tek yolu kullanmaktır sonra `var` yineleme değişkeni türü olarak `foreach` deyimi.
+Kaynak kodunuzun perspektifinden adsız bir türün adı yoktur. Bu nedenle, bir sorgu değişkeni `var`ile başlatılmışsa, nesne dizisinde döndürülen özelliklere erişmenin tek yolu, `foreach` deyimindeki yineleme değişkeninin türü olarak `var` kullanmaktır.
 
 [!code-csharp[csProgGuideLINQ#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#44)]
 
 ## <a name="remarks"></a>Açıklamalar
 
-Türü örtük olarak belirlenmiş değişken bildirimleri için aşağıdaki kısıtlamalar uygulanır:
+Aşağıdaki kısıtlamalar, örtük olarak belirlenmiş değişken bildirimleri için geçerlidir:
 
-- `var` yerel bir değişken bildirildi ve aynı deyimde başlatıldı, yalnızca kullanılabilir; değişkeni, null ya da bir yöntem grubu ya da anonim bir işlevdir başlatılamaz.
+- `var`, yalnızca yerel bir değişken aynı deyimde bildirildiği ve başlatıldığı zaman kullanılabilir; değişken null veya bir yöntem grubuna veya anonim işleve başlatılamaz.
 
-- `var` sınıf kapsamı alanları kullanılamaz.
+- `var` sınıf kapsamındaki alanlarda kullanılamaz.
 
-- Kullanılarak bildirilen değişkenler `var` başlatma ifadesinde kullanılamaz. Diğer bir deyişle, bu ifade yasal`: int i = (i = 20);` ancak bu ifade bir derleme zamanı hatası oluşturur: `var i = (i = 20);`
+- `var` kullanılarak belirtilen değişkenler başlatma ifadesinde kullanılamaz. Diğer bir deyişle, bu ifade yasal`: int i = (i = 20);`, ancak bu ifade derleme zamanı hatası veriyor: `var i = (i = 20);`
 
-- Aynı deyimde birden fazla örtük olarak yazılan değişkenler başlatılamaz.
+- Birden çok örtük olarak yazılmış değişkenler aynı ifadede başlatılamaz.
 
-- Adlı bir tür ise `var` kapsam içinde olan sonra `var` anahtar sözcüğü bu tür adı için çözümler ve bir örtük olarak belirlenmiş yerel değişken bildirimi bir parçası olarak kabul edilmez.
+- `var` adlı bir tür kapsamdadır, `var` anahtar sözcüğü bu tür adına çözümlenir ve örtük olarak yazılmış bir yerel değişken bildiriminin parçası olarak değerlendirilmez.
 
-İle örtülü yazma `var` anahtar sözcüğü yalnızca uygulanabilir yerel yöntemi kapsamda değişkenlere. Örtülü yazma sınıf alanlar için kullanılabilir değil C# derleyici kodu işlendi olarak mantıksal paradox karşılaştığınız: derleyici alanın türünü bilmeniz gerekir, ancak atama ifadesi analiz kadar türü belirlenemiyor ve ifade türü bilmeden değerlendirilemez. Aşağıdaki kodu göz önünde bulundurun:
+`var` anahtar sözcüğüyle örtük yazma, yalnızca yerel Yöntem kapsamındaki değişkenlere uygulanabilir. C# Derleyici, kodu işlediği bir mantıksal Paradox ile karşılaşacağından, sınıf alanları için örtülü yazma kullanılamaz: derleyicinin alanın türünü bilmesi gerekir, ancak atama ifadesi çözümlenene kadar türü belirleyemez ve ifade, türü bilmeden değerlendirilemiyor. Aşağıdaki kodu göz önünde bulundurun:
 
 ```csharp
 private var bookTitles;
 ```
 
-`bookTitles` bir sınıf alanı türü verilen `var`. Hesaplanacak ifade yok alana sahip olduğundan, derleyicinin hangi türünün çıkarsanması mümkün değildir `bookTitles` olduğu varsayılır. Ayrıca, (için yerel bir değişken gibi), bir ifade için alan ekleme da yeterli değil:
+`bookTitles`, `var`türü verilen bir sınıf alanıdır. Alan değerlendirilecek bir ifadeye sahip olmadığı için derleyicinin ne tür `bookTitles` olması gerektiğini çıkarması olanaksızdır. Ayrıca, alana bir ifade eklemek (yerel bir değişken gibi) de yeterli değildir:
 
 ```csharp
 private var bookTitles = new List<string>();
 ```
 
-Derleyici, alanlar, kod derleme sırasında karşılaştığında, ilişkili tüm ifadeleri işlenmeden önce her alanın türünü kaydeder. Derleyici ayrıştırmaya çalışırken aynı paradox karşılaştığında `bookTitles`: alan türünü bilmeniz gerekir, ancak derleyicinin normalde belirler `var`'s türe göre çözümleme ifade türü önceden bilmeden mümkün değildir.
+Derleyici kod derleme sırasında alanlarla karşılaştığında, onunla ilişkili herhangi bir ifadeyi işlemeden önce her alanın türünü kaydeder. Derleyici, `bookTitles`ayrıştırmaya çalışan aynı Paradox ile karşılaştığında: alanın türünü bilmesi gerekir, ancak derleyici, daha önce türü bilmeden mümkün olmayan ifadeyi analiz ederek normalde `var`türünü saptayabilir.
 
-İlginizi çekebilecek `var` da yararlı sorgu ifadeleri tam olarak yapılandırılmış sorgu değişkeni türünü olduğu saptamak zor olabilir. Bu gruplandırma ve sıralama işlemleri ile ortaya çıkabilir.
+`var`, sorgu değişkeninin tam olarak oluşturulan türünün belirlenmesi zor olduğu sorgu ifadeleri ile de yararlı olabileceğini fark edebilirsiniz. Gruplandırma ve sıralama işlemlerinde bu durum oluşabilir.
 
-`var` Anahtar sözcüğü de yararlı olabilir değişkeni türünü yorucu bir süreç klavyede yazın veya açıktır veya kodun okunabilirliğini eklemez. Bir örnek burada `var` bu yararlıdır şekilde olan grubu işlemleri ile Kullanılanlar gibi iç içe geçmiş genel türler. Aşağıdaki sorguda, sorgu değişkeninin türü olduğu `IEnumerable<IGrouping<string, Student>>`. Siz ve kodunuzu korumalıdır başkalarının bunu anlamak sürece örtülü yazma convenience ve kısaltma için kullanma konusunda sorun yoktur.
+`var` anahtar sözcüğü, değişkenin belirli türü klavyede yazmak sıkıcı veya belirgin olduğunda ya da kodun okunabilirliğini eklememe olduğunda da yararlı olabilir. Bu şekilde `var` yararlı olduğu bir örnek, Grup işlemleriyle kullanılanlar gibi iç içe geçmiş genel türlerdir. Aşağıdaki sorguda, sorgu değişkeninin türü `IEnumerable<IGrouping<string, Student>>`. Siz ve kodunuzun bakımını yapmak zorunda olan başkaları bunu anlamış olduğu sürece, kolaylık ve kısaltma için örtük yazma kullanmayla ilgili bir sorun yoktur.
 
 [!code-csharp[cscsrefQueryKeywords#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#13)]
 
-Ancak, kullanımını `var` kodunuzu anlamak için diğer geliştiriciler daha zor hale getirmek için olası en az yok. Bu nedenle, genellikle C# belgeleri kullanan `var` yalnızca gerekli olduğunda.
+Ancak `var` kullanımı, kodunuzun diğer geliştiriciler için anlaşılması daha zor hale getirmek için en az olasılığından oluşur. Bu nedenle, C# belgeler yalnızca gerekli olduğunda `var` kullanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../language-reference/index.md)
+- [C#Başvurunun](../../language-reference/index.md)
 - [Örtük Olarak Yazılan Diziler](../arrays/implicitly-typed-arrays.md)
-- [Nasıl yapılır: Kullanım yerel değişkenleri ve dizileri sorgu ifadesinde örtük](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
+- [Nasıl yapılır: Sorgu İfadesinde Türü Örtük Olarak Belirlenmiş Yerel Değişkenleri ve Dizileri Kullanma](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [Anonim Tipler](anonymous-types.md)
 - [Nesne ve Koleksiyon Başlatıcıları](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)
-- [LINQ Sorgu ifadeleri](../linq-query-expressions/index.md)
+- [C# üzerinde LINQ](../../linq/index.md)
 - [LINQ (dil ile tümleşik sorgu)](../../linq/index.md)
 - [for](../../language-reference/keywords/for.md)
 - [foreach, in](../../language-reference/keywords/foreach-in.md)

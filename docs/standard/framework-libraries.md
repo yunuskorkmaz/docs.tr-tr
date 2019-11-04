@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 56d795d309aec98d43bfba506cbc4e862f13cc68
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9c0b5a07277de6e87e2692ebb7c4f73c03702801
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131548"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424965"
 ---
 # <a name="framework-libraries"></a>Framework Kitaplıkları
 
@@ -26,7 +26,7 @@ BCL en temel tür ve yardımcı program işlevlerini sağlar ve diğer tüm .NET
 
 .NET, tüm programlarda kullanılan (farklı derecelerde) bir temel türler kümesi içerir. Bu türler sayılar, dizeler, baytlar ve rastgele nesneler gibi verileri içerir. Dil C# , bu türlerin anahtar sözcüklerini içerir. Bu türlerin örnek bir kümesi, eşleşen C# anahtar sözcüklerle aşağıda listelenmiştir.
 
-* <xref:System.Object?displayProperty=nameWithType> ([nesne](../csharp/language-reference/keywords/object.md))-clr türü sistemindeki en son temel sınıf. Bu, tür hiyerarşisinin köküdür.
+* <xref:System.Object?displayProperty=nameWithType> ([nesne](../csharp/language-reference/builtin-types/reference-types.md#the-object-type))-clr türü sistemindeki en son temel sınıf. Bu, tür hiyerarşisinin köküdür.
 * <xref:System.Int16?displayProperty=nameWithType> ([kısa](../csharp/language-reference/builtin-types/integral-numeric-types.md))-16 bit işaretli bir tamsayı türü. İmzasız <xref:System.UInt16> de mevcuttur.
 * <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md))-32 bitlik işaretli bir tamsayı türü. İmzasız [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) de mevcuttur.
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md))-bir 32 bit kayan nokta türü.
@@ -34,7 +34,7 @@ BCL en temel tür ve yardımcı program işlevlerini sağlar ve diğer tüm .NET
 * <xref:System.Byte?displayProperty=nameWithType> ([bayt](../csharp/language-reference/builtin-types/integral-numeric-types.md))-belleğin bir baytını temsil eden işaretsiz 8 bitlik bir tamsayı.
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md))-`true` veya `false`temsil eden bir Boole türü.
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md))-Unicode karakteri temsil eden 16 bit sayısal bir tür.
-* <xref:System.String?displayProperty=nameWithType> ([dize](../csharp/language-reference/keywords/string.md))-bir karakter dizisini temsil eder. `char[]`farklıdır, ancak `string`her tekil `char` Dizin oluşturmayı mümkün hale getirmenizi.
+* <xref:System.String?displayProperty=nameWithType> ([dize](../csharp/language-reference/builtin-types/reference-types.md#the-string-type))-bir karakter dizisini temsil eder. `char[]`farklıdır, ancak `string`her tekil `char` Dizin oluşturmayı mümkün hale getirmenizi.
 
 ## <a name="data-structures"></a>Veri yapıları
 

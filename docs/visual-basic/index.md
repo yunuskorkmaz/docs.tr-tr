@@ -4,12 +4,12 @@ ms.date: 03/28/2018
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.openlocfilehash: cb186e1c893e1c97c96f641edbdf1537a135bfcb
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 0e31502f617012c4f3596497f5b9c911c2dde167
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191978"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421290"
 ---
 # <a name="visual-basic-guide"></a>Visual Basic Kılavuzu
 
@@ -42,7 +42,7 @@ Zaten Visual Basic yoksa, Visual Studio 'nun [Visual](https://aka.ms/vsdownload?
 - [COM Birlikte Çalışma](../visual-basic/programming-guide/com-interop/index.md)  
   Visual Basic ile bileşen nesne modeli (COM) nesneleri oluşturma ve kullanma ile ilişkili birlikte çalışabilirlik sorunlarını açıklar.
 
-- [Örnekler](../visual-basic/sample-applications.md)  
+- [Örnekler](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)  
   Örnekler hakkında bilgi içerir.
 
 - [İzlenecek yollar](../visual-basic/walkthroughs.md)  

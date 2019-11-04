@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6d13e7e4788dfd2bad6fd26015d76342b38f1142
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1364b6a1cf6d424975828185a50175b2763c6516
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774445"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420052"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Öğretici: ML.NET 'de ONNX kullanarak nesneleri algılama
 
@@ -45,7 +45,7 @@ Bu örnek, önceden eğitilen derinlemesine öğrenme ONNX modelini kullanarak b
 
 Nesne algılama bir bilgisayar vizyonu sorunudur. Görüntü sınıflandırmasıyla yakından ilgili olarak, nesne algılama görüntü sınıflandırmasını daha ayrıntılı bir ölçekte gerçekleştirir. Nesne algılama hem görüntüler içindeki varlıkları bulur _hem_ de kategorilere ayırır. Görüntüler farklı türlerde birden çok nesne içerdiğinde nesne algılamayı kullanın.
 
-![Sol taraftaki bir köpek için görüntü sınıflandırmasını gösteren yan yana görüntüler ve bir kökten bir grubun nesne sınıflandırması doğru görünür](./media/object-detection-onnx/img-classification-obj-detection.PNG)
+![Resim sınıflandırmasına karşı nesne sınıflandırmasına karşı ekran görüntüleri.](./media/object-detection-onnx/img-classification-obj-detection.png)
 
 Nesne algılama için bazı kullanım örnekleri şunları içerir:
 
@@ -66,7 +66,7 @@ Farklı türlerde sinir Networks, en yaygın çok katmanlı Perceptron (MLP), ev
 
 Nesne algılama bir görüntü işleme görevidir. Bu nedenle, bu sorunu çözmek için eğitilen çoğu derin öğrenme modeli CNNs ' dir. Bu öğreticide kullanılan model, YOLOv2 modelinin ["YOLO9000: daha iyi, daha hızlı, daha güçlü" ve Redmon ve Fadhari tarafından](https://arxiv.org/pdf/1612.08242.pdf)tanımlanan daha küçük bir sürümüdür. Küçük YOLOv2, Pascal VOC veri kümesi üzerinde eğitilir ve 20 farklı nesne sınıfı tahmin edebilen 15 katmandan oluşur. Küçük YOLOv2 özgün YOLOv2 modelinin sıkıştırılmış bir sürümü olduğundan, hız ve doğruluk arasında bir zorunluluğunu getirir yapılır. Modeli oluşturan farklı katmanlar netron gibi araçlar kullanılarak görselleştirilir. Modelin araştırılama, her katmanın, ilgili giriş/çıkış boyutlarıyla birlikte katman adını içerdiği sinir ağını oluşturan tüm katmanlar arasında bağlantı eşlemesini elde edecektir. Modelin girişlerini ve çıkışlarını tanımlamakta kullanılan veri yapıları, teniler olarak bilinir. Teniler, verileri N boyutlu bir şekilde depolayan kapsayıcılar olarak düşünülebilir. Küçük YOLOv2 durumunda, giriş katmanının adı `image` ' dır ve `3 x 416 x 416` ' de bir boyut kullanımını bekler. Çıkış katmanının adı `grid` ' dır ve `125 x 13 x 13` boyutları için bir çıktı oluşturur.
 
-![Gizli katmanlara bölünmekte olan giriş katmanı, çıkış katmanı](./media/object-detection-onnx/netron-model-map.png)
+![Gizli katmanlara bölünmekte olan giriş katmanı, çıkış katmanı](./media/object-detection-onnx/netron-model-map-layers.png)
 
 YOLO modeli bir görüntü `3(RGB) x 416px x 416px` alır. Model bu girişi alır ve bir çıktı üretmek için farklı katmanlardan geçirir. Çıktı, giriş görüntüsünü, kılavuzda `125` değerlerinden oluşan her hücreyle birlikte `13 x 13` kılavuzuna böler.
 
@@ -74,11 +74,11 @@ YOLO modeli bir görüntü `3(RGB) x 416px x 416px` alır. Model bu girişi alı
 
 Open sinir Network Exchange (ONNX), AI modelleri için açık kaynak biçimidir. ONNX çerçeveler arasında birlikte çalışabilirliği destekler. Bu, bir modeli PyTorch gibi birçok popüler makine öğrenimi çerçevelerinden birinde eğitebileceğiniz anlamına gelir, ONNX biçimine dönüştürebilir ve ML.NET gibi farklı bir çerçevede ONNX modelini kullanabilirsiniz. Daha fazla bilgi edinmek için [Onnx Web sitesini](https://onnx.ai/)ziyaret edin.
 
-![Onnx ' e aktarılan ve daha sonra diğer ONNX desteklenen biçimler tarafından kullanılan ONNX desteklenen biçimler](./media/object-detection-onnx/onnx-frameworks.png)
+![Kullanılan ONNX desteklenen biçimlerin diyagramı.](./media/object-detection-onnx/onyx-supported-formats.png)
 
-Önceden eğitilen küçük YOLOv2 modeli, katmanların serileştirilmiş bir gösterimi ve bu katmanların öğrenilen desenleri ile ONNX biçiminde depolanır. ML.NET ' de, ONNX ile birlikte çalışabilirlik [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) ve [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet paketleriyle elde edilir. [@No__t_1](xref:Microsoft.ML.Transforms.Image) paketi bir görüntü alıp bir tahmin veya eğitim işlem hattına giriş olarak kullanılabilecek sayısal değerlere kodlayan bir dizi dönüştürme içerir. [@No__t_1](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) paketi Onnx çalışma zamanından yararlanır ve belirtilen girişe göre tahmine dayalı hale getirmek için bu modeli kullanır.
+Önceden eğitilen küçük YOLOv2 modeli, katmanların serileştirilmiş bir gösterimi ve bu katmanların öğrenilen desenleri ile ONNX biçiminde depolanır. ML.NET ' de, ONNX ile birlikte çalışabilirlik [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) ve [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet paketleriyle elde edilir. [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) paketi bir görüntü alıp bir tahmin veya eğitim işlem hattına giriş olarak kullanılabilecek sayısal değerlere kodlayan bir dizi dönüştürme içerir. [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) paketi Onnx çalışma zamanından yararlanır ve belirtilen girişe göre tahmine dayalı hale getirmek için bu modeli kullanır.
 
-![ONNX dosyasının ONNX çalışma zamanına ve son olarak C# uygulamaya veri akışı](./media/object-detection-onnx/onnx-ml-net-integration.png)
+![ONNX dosyasının ONNX çalışma zamanına veri akışı.](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
 ## <a name="set-up-the-net-core-project"></a>.NET Core projesini ayarlama
 
@@ -100,7 +100,7 @@ Artık ONNX 'in ne olduğuna ve küçük YOLOv2 nasıl çalıştığına ilişki
 
 1. [Proje Varlıkları Dizin ZIP dosyasını](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/assets.zip) indirin ve sıkıştırmayı açın.
 
-1. @No__t_0 dizinini *Objectdetection* proje dizininize kopyalayın. Bu dizin ve alt dizinleri, bu öğretici için gerekli olan resim dosyalarını (küçük YOLOv2 modeli dışında, indirecek ve sonraki adımda ekleyeceğiniz) içerir.
+1. `assets` dizinini *Objectdetection* proje dizininize kopyalayın. Bu dizin ve alt dizinleri, bu öğretici için gerekli olan resim dosyalarını (küçük YOLOv2 modeli dışında, indirecek ve sonraki adımda ekleyeceğiniz) içerir.
 
 1. [Onnx model Zoo](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny_yolov2)ve unzip 'Ten [küçük YOLOv2 modelini](https://onnxzoo.blob.core.windows.net/models/opset_8/tiny_yolov2/tiny_yolov2.tar.gz) indirin.
 
@@ -110,7 +110,7 @@ Artık ONNX 'in ne olduğuna ve küçük YOLOv2 nasıl çalıştığına ilişki
     tar -xvzf tiny_yolov2.tar.gz
     ```
 
-1. Ayıklanan `model.onnx` dosyasını Dizin içinden *Objectdetection* proje `assets\Model` dizinine kopyalayın ve `TinyYolo2_model.onnx` olarak yeniden adlandırın. Bu dizin, bu öğretici için gereken modeli içerir.
+1. Ayıklanan `model.onnx` dosyasını Dizin içinden *Objectdetection* proje `assets\Model` dizinine kopyalayın ve `TinyYolo2_model.onnx`olarak yeniden adlandırın. Bu dizin, bu öğretici için gereken modeli içerir.
 
 1. Çözüm Gezgini, varlık dizinindeki ve alt dizinlerde bulunan dosyaların her birine sağ tıklayın ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala**olarak değiştirin.
 
@@ -175,7 +175,7 @@ Yeni oluşturulan *Datayapýlarý* dizininde giriş veri sınıfınızı oluştu
 
 [Mlcontext sınıfı](xref:Microsoft.ML.MLContext) tüm ml.NET işlemleri için bir başlangıç noktasıdır ve `mlContext` başlatmak, model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ml.net ortamı oluşturur. Bu, kavramsal olarak, Entity Framework `DBContext` ' a benzer.
 
-@No__t_4 alanının altındaki *Program.cs* `Main` yöntemine aşağıdaki satırı ekleyerek `mlContext` değişkenini yeni bir `MLContext` örneğiyle başlatın.
+`outputFolder` alanının altındaki *Program.cs* `Main` yöntemine aşağıdaki satırı ekleyerek `mlContext` değişkenini yeni bir `MLContext` örneğiyle başlatın.
 
 [!code-csharp [InitMLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L24)]
 
@@ -209,7 +209,7 @@ Modelin veri çıktısı, görüntü içindeki nesnelerin sınırlayıcı kutula
 
     *DimensionsBase.cs* dosyası kod düzenleyicisinde açılır. Tüm `using` deyimlerini ve var olan sınıf tanımını kaldırın.
 
-    @No__t_0 sınıfı için aşağıdaki kodu *DimensionsBase.cs* dosyasına ekleyin:
+    `DimensionsBase` sınıfı için aşağıdaki kodu *DimensionsBase.cs* dosyasına ekleyin:
 
     [!code-csharp [DimensionsBaseClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/DimensionsBase.cs#L3-L9)]
 
@@ -256,11 +256,11 @@ Artık boyut ve sınırlama kutuları için sınıflar oluşturuldığına göre
 
     [!code-csharp [YoloParserUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L1-L4)]
 
-    Var olan `YoloOutputParser` sınıf tanımının içinde, görüntüdeki her bir hücrenin boyutlarını içeren bir iç içe sınıf ekleyin. @No__t_2 sınıf tanımının en üstündeki `DimensionsBase` sınıfından devralan `CellDimensions` sınıfı için aşağıdaki kodu ekleyin.
+    Var olan `YoloOutputParser` sınıf tanımının içinde, görüntüdeki her bir hücrenin boyutlarını içeren bir iç içe sınıf ekleyin. `YoloOutputParser` sınıf tanımının en üstündeki `DimensionsBase` sınıfından devralan `CellDimensions` sınıfı için aşağıdaki kodu ekleyin.
 
     [!code-csharp [YoloParserUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L10)]
 
-1. @No__t_0 sınıf tanımı içinde aşağıdaki sabiti ve alanları ekleyin.
+1. `YoloOutputParser` sınıf tanımı içinde aşağıdaki sabiti ve alanları ekleyin.
 
     [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]
 
@@ -284,7 +284,7 @@ Bağlayıcıların sınırlayıcı kutuların önceden tanımlanmış yükseklik
 
 Ardından, modelin tahmin edecek etiketleri veya sınıfları tanımlayın. Bu model, özgün YOLOv2 modeli tarafından tahmin edilen toplam sınıf sayısının bir alt kümesi olan 20 sınıfı tahmin eder.
 
-@No__t_0 altına etiket listenizi ekleyin.
+`anchors`altına etiket listenizi ekleyin.
 
 [!code-csharp [ParserLabels](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L28-L34)]
 
@@ -308,13 +308,13 @@ Ayrıştırıcı tarafından kullanılan yardımcı yöntemler şunlardır:
 - `GetTopResult`, en yüksek olasılığa sahip tahmin edilen sınıflar listesinden sınıfı seçer.
 - `IntersectionOverUnion`, daha düşük olasılıklara sahip sınırlayıcı kutularla çakışarak filtreler.
 
-@No__t_0 listenizin altındaki tüm yardımcı yöntemleri için kodu ekleyin.
+`classColors`listenizin altındaki tüm yardımcı yöntemleri için kodu ekleyin.
 
 [!code-csharp [ParserHelperMethods](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L61-L151)]
 
 Tüm yardımcı yöntemlerini tanımladıktan sonra, model çıkışını işlemek için bunları kullanma zamanı da vardır.
 
-@No__t_0 yönteminin altında, model tarafından oluşturulan çıktıyı işlemek için `ParseOutputs` metodunu oluşturun.
+`IntersectionOverUnion` yönteminin altında, model tarafından oluşturulan çıktıyı işlemek için `ParseOutputs` metodunu oluşturun.
 
 ```csharp
 public IList<YoloBoundingBox> ParseOutputs(float[] yoloModelOutputs, float threshold = .3F)
@@ -327,7 +327,7 @@ Sınırlayıcı kutularınızı depolamak ve `ParseOutputs` yöntemi içinde de�
 
 [!code-csharp [BBoxList](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L155)]
 
-Her görüntü, `13 x 13` hücrelerinin bir kılavuza bölünmüştür. Her hücrede beş sınırlayıcı kutu bulunur. @No__t_0 değişkeninin altında, her hücrenin içindeki tüm kutuları işlemek için kod ekleyin.
+Her görüntü, `13 x 13` hücrelerinin bir kılavuza bölünmüştür. Her hücrede beş sınırlayıcı kutu bulunur. `boxes` değişkeninin altında, her hücrenin içindeki tüm kutuları işlemek için kod ekleyin.
 
 ```csharp
 for (int row = 0; row < ROW_COUNT; row++)
@@ -370,7 +370,7 @@ Ardından, geçerli kutu için en yüksek olasılığa sahip sınıfın değerin
 
 [!code-csharp [GetTopResult](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L176-L177)]
 
-@No__t_0 yalnızca belirtilen eşiğin üzerinde olan sınırlayıcı kutuları bir kez daha bırakmak için kullanın.
+`topScore` yalnızca belirtilen eşiğin üzerinde olan sınırlayıcı kutuları bir kez daha bırakmak için kullanın.
 
 [!code-csharp [CheckThreshold2](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L179-L180)]
 
@@ -384,7 +384,7 @@ Görüntüdeki tüm hücreler işlendikten sonra `boxes` listesini döndürün. 
 
 ### <a name="filter-overlapping-boxes"></a>Çakışan kutuları filtrele
 
-Artık yüksek oranda uygun sınırlama kutularının tümü model çıktısından ayıklandığına göre, çakışan görüntüleri kaldırmak için ek filtrelemenin yapılması gerekir. @No__t_1 yönteminin altına `FilterBoundingBoxes` adlı bir yöntem ekleyin:
+Artık yüksek oranda uygun sınırlama kutularının tümü model çıktısından ayıklandığına göre, çakışan görüntüleri kaldırmak için ek filtrelemenin yapılması gerekir. `ParseOutputs` yönteminin altına `FilterBoundingBoxes` adlı bir yöntem ekleyin:
 
 ```csharp
 public IList<YoloBoundingBox> FilterBoundingBoxes(IList<YoloBoundingBox> boxes, int limit, float threshold)
@@ -393,7 +393,7 @@ public IList<YoloBoundingBox> FilterBoundingBoxes(IList<YoloBoundingBox> boxes, 
 }
 ```
 
-@No__t_0 yöntemi içinde, algılanan kutuların boyutuna eşit bir dizi oluşturarak ve tüm yuvaları etkin veya işleme için hazırlanma olarak işaretleyerek devre dışı bırakın.
+`FilterBoundingBoxes` yöntemi içinde, algılanan kutuların boyutuna eşit bir dizi oluşturarak ve tüm yuvaları etkin veya işleme için hazırlanma olarak işaretleyerek devre dışı bırakın.
 
 [!code-csharp [InitActiveSlots](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L203-L207)]
 
@@ -461,7 +461,7 @@ Alanları! Artık bu kodu Puanlama modeliyle birlikte kullanmanın zamanı.
 
     [!code-csharp [ScorerUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L1-L7)]
 
-    @No__t_0 sınıf tanımı içinde aşağıdaki değişkenleri ekleyin.
+    `OnnxModelScorer` sınıf tanımı içinde aşağıdaki değişkenleri ekleyin.
 
     [!code-csharp [InitScorerVars](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L13-L17)]
 
@@ -477,7 +477,7 @@ Alanları! Artık bu kodu Puanlama modeliyle birlikte kullanmanın zamanı.
 
     [!code-csharp [YoloSettingsStruct](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L32-L43)]
 
-    Ardından, Puanlama için kullanılan ilk yöntem kümesini oluşturun. @No__t_1 sınıfınızın içinde `LoadModel` yöntemi oluşturun.
+    Ardından, Puanlama için kullanılan ilk yöntem kümesini oluşturun. `OnnxModelScorer` sınıfınızın içinde `LoadModel` yöntemi oluşturun.
 
     ```csharp
     private ITransformer LoadModel(string modelLocation)
@@ -486,7 +486,7 @@ Alanları! Artık bu kodu Puanlama modeliyle birlikte kullanmanın zamanı.
     }
     ```
 
-    @No__t_0 yönteminin içinde günlüğe kaydetmek için aşağıdaki kodu ekleyin.
+    `LoadModel` yönteminin içinde günlüğe kaydetmek için aşağıdaki kodu ekleyin.
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
@@ -501,7 +501,7 @@ Alanları! Artık bu kodu Puanlama modeliyle birlikte kullanmanın zamanı.
     - [`ExtractPixels`](xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*) görüntünün piksel gösterimini bir bit eşlemden sayısal bir Vector öğesine değiştirir.
     - [`ApplyOnnxModel`](xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel*) onnx modelini yükler ve belirtilen verileri öğrenmek için onu kullanır.
 
-    @No__t_1 değişkeninin altındaki `LoadModel` yönteminde işlem hattınızı tanımlayın.
+    `data` değişkeninin altındaki `LoadModel` yönteminde işlem hattınızı tanımlayın.
 
     [!code-csharp [ScoringPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L55-L58)]
 
@@ -518,7 +518,7 @@ private IEnumerable<float[]> PredictDataUsingModel(IDataView testData, ITransfor
 }
 ```
 
-@No__t_0 içinde günlüğe kaydetmek için aşağıdaki kodu ekleyin.
+`PredictDataUsingModel`içinde günlüğe kaydetmek için aşağıdaki kodu ekleyin.
 
 [!code-csharp [PredictDataLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L68-L71)]
 
@@ -530,7 +530,7 @@ Tahmin edilen olasılıkların ayıklanmasını ayıklayın ve bunları ek işle
 
 [!code-csharp [ReturnModelOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L75-L77)]
 
-Her iki adım de ayarlandığına göre, bunları tek bir yöntemde birleştirin. @No__t_0 yönteminin altında `Score` adlı yeni bir yöntem ekleyin.
+Her iki adım de ayarlandığına göre, bunları tek bir yöntemde birleştirin. `PredictDataUsingModel` yönteminin altında `Score`adlı yeni bir yöntem ekleyin.
 
 [!code-csharp [ScoreMethod](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L80-L85)]
 
@@ -557,7 +557,7 @@ catch (Exception ex)
 }
 ```
 
-@No__t_0 bloğunun içinde, nesne algılama mantığını uygulamaya başlayın. İlk olarak, verileri [`IDataView`](xref:Microsoft.ML.IDataView)' e yükleyin.
+`try` bloğunun içinde, nesne algılama mantığını uygulamaya başlayın. İlk olarak, verileri [`IDataView`](xref:Microsoft.ML.IDataView)' e yükleyin.
 
 [!code-csharp [LoadData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L29-L30)]
 
@@ -616,7 +616,7 @@ using (Graphics thumbnailGraphic = Graphics.FromImage(image))
 }
 ```
 
-@No__t_0 kod bloğunun içinde, grafiğin [`Graphics`](xref:System.Drawing.Graphics) nesne ayarlarını ayarlayın.
+`using` kod bloğunun içinde, grafiğin [`Graphics`](xref:System.Drawing.Graphics) nesne ayarlarını ayarlayın.
 
 [!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
 
@@ -624,7 +624,7 @@ Bunun altında metin ve sınırlayıcı kutusu için yazı tipi ve renk seçenek
 
 [!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
 
-[@No__t_1](xref:System.Drawing.Graphics.FillRectangle*) yöntemi kullanılarak metni içermesi için sınırlayıcı kutunun üzerinde bir dikdörtgen oluşturun ve girin. Bu, metnin karşıtlığına ve okunabilirliği iyileştirmenize yardımcı olur.
+[`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) yöntemi kullanılarak metni içermesi için sınırlayıcı kutunun üzerinde bir dikdörtgen oluşturun ve girin. Bu, metnin karşıtlığına ve okunabilirliği iyileştirmenize yardımcı olur.
 
 [!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
 
@@ -703,7 +703,7 @@ person and its Confidence score: 0.5551759
 
 Sınırlayıcı kutuları olan görüntüleri görmek için `assets/images/output/` dizinine gidin. Aşağıda, işlenen görüntülerden birindeki bir örnek verilmiştir.
 
-![Bir atma odasının örnek işlenmiş görüntüsü](./media/object-detection-onnx/image3.jpg)
+![Bir atma odasının örnek işlenmiş görüntüsü](./media/object-detection-onnx/dinning-room-table-chairs.png)
 
 Mühendisi! ML.NET ' de önceden eğitilen `ONNX` modelini yeniden çalıştırarak nesne algılama için bir makine öğrenimi modelini başarıyla oluşturdunuz.
 

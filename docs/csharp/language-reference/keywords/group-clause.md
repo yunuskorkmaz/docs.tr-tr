@@ -1,5 +1,5 @@
 ---
-title: Group tümcesi - C# başvurusu
+title: Group yan tümcesi C# -başvuru
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,82 +9,82 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 160b25bd93f7d7c69ec104a31a0608e930e2dee3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 806bc3de138ebae682d2e248593230c753eb7ba2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661496"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422759"
 ---
 # <a name="group-clause-c-reference"></a>group tümcesi (C# Başvurusu)
 
-`group` Yan tümcesi bir dizi döndürür <xref:System.Linq.IGrouping%602> grubu için anahtar değerle eşleşen sıfır veya daha fazla öğe içeren nesne. Örneğin, bir dizi dize her bir dizenin ilk harfini göre gruplandırabilirsiniz. Bu durumda, ilk harfi anahtarı ve bir türe sahip [char](char.md)ve depolanan `Key` her özellik <xref:System.Linq.IGrouping%602> nesne. Derleyicinin anahtar türünü çıkarsar.
+`group` yan tümcesi, grup için anahtar değeriyle eşleşen sıfır veya daha fazla öğe içeren bir <xref:System.Linq.IGrouping%602> nesneleri dizisi döndürür. Örneğin, her bir dizedeki ilk harfe göre bir dizi dizeyi gruplandırabilirsiniz. Bu durumda, ilk harf anahtardır ve bir tür [char](char.md)içerir ve her <xref:System.Linq.IGrouping%602> nesnesinin `Key` özelliğinde saklanır. Derleyici, anahtarın türünü haller.
 
-Bir sorgu ifadesi ile sona erdirebilirsiniz bir `group` yan tümcesi, aşağıdaki örnekte gösterildiği gibi:
+Aşağıdaki örnekte gösterildiği gibi, bir sorgu ifadesini `group` yan tümcesiyle sona erdirmek isteyebilirsiniz:
 
 [!code-csharp[cscsrefQueryKeywords#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#10)]
 
-Her grupta ek sorgu işlemleri gerçekleştirmek istiyorsanız, kullanarak geçici bir tanımlayıcı belirtebilirsiniz [içine](into.md) bağlamsal anahtar sözcük. Kullanırken `into`, devam edip sonunda ile son bir `select` deyimi veya başka bir `group` aşağıdaki alıntıda gösterildiği yan tümcesi:
+Her grupta ek sorgu işlemleri gerçekleştirmek [istiyorsanız, ' ın bağlamsal anahtar](into.md) sözcüğünü kullanarak geçici bir tanımlayıcı belirtebilirsiniz. `into`kullandığınızda, sorguyla devam etmeniz ve sonunda aşağıdaki alıntıda gösterildiği gibi bir `select` deyimi veya başka bir `group` yan tümcesiyle sona erdirmek gerekir:
 
 [!code-csharp[cscsrefQueryKeywords#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#11)]
 
-Daha da kullanımı örnekleri'ni tamamlamak `group` olmadan `into` bu makalede örnek bölümünde sağlanır.
+Bu makalenin örnek bölümünde `into` ve olmadan `group` kullanımı için daha kapsamlı örnekler verilmiştir.
 
-## <a name="enumerating-the-results-of-a-group-query"></a>Bir grup sorgunun sonuçlarını numaralandırma
+## <a name="enumerating-the-results-of-a-group-query"></a>Bir grup sorgusunun sonuçlarını numaralandırma
 
-Çünkü <xref:System.Linq.IGrouping%602> nesneleri tarafından üretilen bir `group` sorgu temelde listelerinin bir listesini, iç içe bir kullanmalısınız [foreach](foreach-in.md) döngü her gruptaki öğeleri erişmek için. Dış döngü Grup anahtarları yinelenir ve iç döngü gruptaki her öğe üzerinde yinelenir. Bir grubu, bir anahtar vardır, ancak hiçbir öğe olabilir. Aşağıdaki `foreach` önceki kod örneklerinde Sorguyu yürüten döngü:
+Bir `group` sorgusu tarafından oluşturulan <xref:System.Linq.IGrouping%602> nesneleri temelde bir liste listesi olduğundan, her bir gruptaki öğelere erişmek için iç içe geçmiş bir [foreach](foreach-in.md) döngüsü kullanmanız gerekir. Dış döngü grup anahtarlarının üzerinde yinelenir ve iç döngü gruptaki her öğe için yinelenir. Bir grupta anahtar olabilir ancak öğe yok. Aşağıda, önceki kod örneklerinde sorguyu yürüten `foreach` döngüsü verilmiştir:
 
 [!code-csharp[cscsrefQueryKeywords#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#12)]
 
-## <a name="key-types"></a>Anahtar türü
+## <a name="key-types"></a>Anahtar türleri
 
-Gibi bir dize, bir yerleşik sayısal tür veya kullanıcı tanımlı tür veya anonim tür adlı Grup anahtarları herhangi bir tür olabilir.
+Grup anahtarları dize, yerleşik bir sayısal tür veya Kullanıcı tanımlı adlandırılmış tür veya anonim tür gibi herhangi bir tür olabilir.
 
 ### <a name="grouping-by-string"></a>Dizeye göre gruplandırma
 
-Yukarıdaki kod örnekleri kullanılan bir `char`. Bir dize anahtarı kolayca bunun yerine, örneğin tam son adı belirtilmedi:
+Önceki kod örnekleri bir `char`kullandı. Bunun yerine bir dize anahtarı kolayca belirtilmelidir, örneğin, son soyadı adı:
 
 [!code-csharp[cscsrefQueryKeywords#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#13)]
 
-### <a name="grouping-by-bool"></a>Bool göre gruplandırma
+### <a name="grouping-by-bool"></a>Bool ile gruplandırma
 
-Aşağıdaki örnek, sonuçları iki gruplara bölmek bir anahtar için bir bool değeri kullanımını gösterir. Bir alt ifadenin, değerini oluşturduğu Not `group` yan tümcesi.
+Aşağıdaki örnek, sonuçları iki gruba bölmek için bir anahtar için bool değer kullanımını gösterir. Değerin `group` yan tümcesindeki bir alt ifade tarafından üretildiğini unutmayın.
 
 [!code-csharp[cscsrefQueryKeywords#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#14)]
 
-### <a name="grouping-by-numeric-range"></a>Sayısal Aralık göre gruplandırma
+### <a name="grouping-by-numeric-range"></a>Sayısal aralığa göre gruplandırma
 
-Sonraki örnek, bir dilim aralığı temsil eden sayısal Grup anahtarları oluşturmak için bir ifade kullanır. Kullanımına dikkat edin [izin](let-clause.md) yöntemini iki kez çağırmak zorunda kalmazsınız bir yöntem depolamak için uygun bir konum arama sonucu, `group` yan tümcesi. Güvenli bir şekilde sorgu ifadelerinde yöntemleri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Sorgu ifadelerinde özel durumları işlemek](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
+Sonraki örnek, bir yüzdebirlik aralığını temsil eden sayısal grup anahtarları oluşturmak için bir ifade kullanır. Yöntem çağrı sonucunu depolamak için uygun bir konum olarak [izin ver](let-clause.md) öğesinin kullanımını unutmayın. bu sayede yöntemi `group` yan tümcesinde iki kez çağırmak zorunda kalmazsınız. Sorgu ifadelerinde yöntemleri güvenle kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: sorgu Ifadelerinde özel durumları işleme](../../linq/handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
 ### <a name="grouping-by-composite-keys"></a>Bileşik anahtarlara göre gruplandırma
 
-Birden fazla anahtar göre grup öğeleri için istediğiniz zaman bir bileşik anahtarı kullanın. Bileşik anahtar, anahtar öğesi tutmak için anonim bir tür veya adlandırılmış bir tür kullanarak oluşturun. Aşağıdaki örnekte, varsayımında bir sınıf `Person` adlı üye ile bildirilmiş `surname` ve `city`. `group` Yan tümcesi kişilerin son aynı ada ve aynı şehirdeki her bir kümesi için oluşturulacak farklı bir grup neden olur.
+Öğeleri birden fazla anahtara göre gruplandırmak istediğinizde bileşik anahtar kullanın. Anahtar öğesini tutmak için anonim bir tür veya adlandırılmış bir tür kullanarak bileşik anahtar oluşturursunuz. Aşağıdaki örnekte, bir sınıf `Person` `surname` ve `city`adlı üyelerle bildirildiği varsayılır. `group` yan tümcesi, aynı soyadı ve aynı şehirde bulunan her kişi kümesi için ayrı bir grubun oluşturulmasına neden olur.
 
 ```csharp
 group person by new {name = person.surname, city = person.city};
 ```
 
-Sorgu değişkeni başka yönteme geçirin, adlandırılmış bir tür kullanın. Otomatik uygulanan özellikler anahtarlarını kullanarak özel bir sınıf oluşturun ve daha sonra geçersiz <xref:System.Object.Equals%2A> ve <xref:System.Object.GetHashCode%2A> yöntemleri. Bu durumda, kesin olarak bu yöntemleri geçersiz kılmanız gerekmez, bir yapı de kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Otomatik uygulanan özelliklerle hafif bir sınıf uygulama](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) ve [nasıl yapılır: Bir dizin ağacında yineleyen dosyalar için sorgu](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Sonraki makalede, türü adlandırılmış bir bileşik anahtarı kullanmayı gösteren bir kod örneği bulunur.
+Sorgu değişkenini başka bir yönteme geçirmeniz gerekiyorsa adlandırılmış bir tür kullanın. Anahtarlar için otomatik uygulanan özellikler kullanarak özel bir sınıf oluşturun ve ardından <xref:System.Object.Equals%2A> ve <xref:System.Object.GetHashCode%2A> yöntemlerini geçersiz kılın. Ayrıca, bu yöntemleri kesin bir şekilde geçersiz kılmak zorunda değilsiniz bir yapı da kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: otomatik uygulanan özelliklerle hafif bir sınıf uygulama](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) ve [nasıl yapılır: bir dizin ağacındaki yinelenen dosyaları sorgulama](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). İkinci makalede, adlandırılmış tür ile bileşik anahtarın nasıl kullanılacağını gösteren bir kod örneği bulunur.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, hiçbir ek sorgu mantıksal gruplara uygulandığında gruplar halinde kaynak verileri sıralama için standart deseni gösterir. Bu, bir devamlılık olmadan bir gruplandırma olarak adlandırılır. Dizelerden oluşan bir dizi öğeleri, ilk harfi göre gruplandırılır. Sorgu sonucu bir <xref:System.Linq.IGrouping%602> içeren genel bir tür `Key` türünün özelliği `char` ve <xref:System.Collections.Generic.IEnumerable%601> gruplandırma her öğe içeren koleksiyon.
+Aşağıdaki örnek, gruplara ek sorgu mantığı uygulanırken kaynak verileri gruplara sıralamak için standart düzeni gösterir. Bu, devamlılık olmadan gruplandırma olarak adlandırılır. Dizeler dizisindeki öğeler, ilk harfine göre gruplandırılır. Sorgunun sonucu, `char` türünde ortak bir `Key` özelliği ve gruplandırmadaki her öğeyi içeren bir <xref:System.Collections.Generic.IEnumerable%601> koleksiyonu içeren <xref:System.Linq.IGrouping%602> türüdür.
 
-Sonucu bir `group` yan tümcesi ise sıralarının. Bu nedenle, döndürülen her grup içindeki tek tek öğelerine erişmek için bir iç içe kullanın `foreach` Grup anahtarları, aşağıdaki örnekte gösterildiği gibi yinelenen döngü içinde döngü.
+`group` yan tümcesinin sonucu bir dizi dizidir. Bu nedenle, döndürülen her grup içindeki ayrı öğelere erişmek için, aşağıdaki örnekte gösterildiği gibi, döngü içinde, bir iç içe `foreach` döngüsünü kullanın.
 
 [!code-csharp[cscsrefQueryKeywords#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#16)]
 
 ## <a name="example"></a>Örnek
 
-Bu örnek gösterir kullanarak bunları oluşturduktan sonra ek mantık gruplarında gerçekleştirmek nasıl bir *devamlılık* ile `into`. Daha fazla bilgi için [içine](into.md). Aşağıdaki örnek, her grup, yalnızca anahtar değeri olan bir sesli seçmek için sorgular.
+Bu örnek, `into`ile devam eden bir *devamlılığın* kullanıldığı gruplar üzerinde ek mantığın nasıl gerçekleştirileceğini gösterir. Daha fazla bilgi için bkz [..](into.md) Aşağıdaki örnek, her bir grubu yalnızca anahtar değerini bir sesli harf olarak seçmek üzere sorgular.
 
 [!code-csharp[cscsrefQueryKeywords#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#17)]
 
 ## <a name="remarks"></a>Açıklamalar
 
-Derleme zamanında `group` yan tümceleri çevrilmiş çağrıları içine <xref:System.Linq.Enumerable.GroupBy%2A> yöntemi.
+Derleme zamanında, `group` yan tümceleri <xref:System.Linq.Enumerable.GroupBy%2A> yöntemine yapılan çağrılara çevrilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

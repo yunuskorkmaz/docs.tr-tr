@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 81cf336f94815dd3f2c88995eb34ae03b8220097
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 9588ec73250e8745426f6f6020c8d555a174d627
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179916"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422952"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C# derleyici seçenekleri)
 
@@ -25,20 +25,20 @@ Derleyicinin yalnızca seçilen C# dil belirtiminde bulunan sözdizimini kabul e
 -langversion:option
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Arguments
 
  `option`  
  Aşağıdaki değerler geçerlidir:
 
-|Seçenek|Anlamı|
+|Seçenek|Açıklama|
 |------------|-------------|
-|önizleme|Derleyici, destekleyebileceği en son önizleme sürümünden tüm geçerli dil sözdizimini kabul eder.|
-|latest|Derleyici, destekleyebileceği en son sürümden (ikincil yayınlar dahil) tüm geçerli dil sözdizimini kabul eder.|
+|Önizleme|Derleyici, destekleyebileceği en son önizleme sürümünden tüm geçerli dil sözdizimini kabul eder.|
+|sürümü|Derleyici, destekleyebileceği en son sürümden (ikincil yayınlar dahil) tüm geçerli dil sözdizimini kabul eder.|
 |Latestana|Derleyici, destekleyebileceği en son ana sürümden tüm geçerli dil sözdizimini kabul eder.|
 |8.0|Derleyici yalnızca C# 8,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
-|7.3|Derleyici yalnızca C# 7,3 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
-|7.2|Derleyici yalnızca C# 7,2 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
-|7.1|Derleyici yalnızca C# 7,1 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|7,3|Derleyici yalnızca C# 7,3 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|7,2|Derleyici yalnızca C# 7,2 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|7,1|Derleyici yalnızca C# 7,1 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
 |7|Derleyici yalnızca C# 7,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
 |6|Derleyici yalnızca C# 6,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
 |5|Derleyici yalnızca C# 5,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
@@ -63,12 +63,12 @@ C# Dil sürümünü belirtmek için diğer yollar için [ C# dil sürümünü se
 
 Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz. <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>.
 
-## <a name="c-language-specification"></a>C#dil belirtimi
+## <a name="c-language-specification"></a>C# dili belirtimi
 
-|Sürüm|Bağlantı|Açıklama|
+|Version|Bağlantı|Açıklama|
 |-------|----|-----------|
 |C#7,0 ve üzeri||Şu anda kullanılamıyor|
-|C#6,0|[Bağlantı](../language-specification/index.md)|C#Dil belirtimi sürüm 6-resmi olmayan taslak: .NET Foundation|
+|C#6,0|[Bağlantısının](/dotnet/csharp/language-reference/language-specification/introduction)|C#Dil belirtimi sürüm 6-resmi olmayan taslak: .NET Foundation|
 |C#5,0|[PDF 'YI indir](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|Standart ECMA-334 5 sürümü|
 |C#3,0|[BELGEYI indir](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|C#Dil belirtimi sürüm 3,0: Microsoft Corporation|
 |C#2,0|[PDF 'YI indir](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|Standart ECMA-334 4 sürümü|
@@ -81,12 +81,12 @@ Aşağıdaki tabloda, karşılık gelen dil sürümünü destekleyen C# DERLEYIC
 
 |C#Sürüm|En düşük SDK sürümü|
 |----------|-------------------|
-|C#8,0| Microsoft Visual Studio/derleme araçları 2019, sürüm 16,3 veya .NET Core 3,0 SDK |
-|C#7,3| Microsoft Visual Studio/derleme araçları 2017, sürüm 15,7 |
-|C#7,2| Microsoft Visual Studio/derleme araçları 2017, sürüm 15,5 |
-|C#7,1| Microsoft Visual Studio/derleme araçları 2017, sürüm 15,3 |
-|C#7,0| Microsoft Visual Studio/derleme araçları 2017 |
-|C#inç| Microsoft Visual Studio/derleme araçları 2015 |
+|C# 8.0| Microsoft Visual Studio/derleme araçları 2019, sürüm 16,3 veya .NET Core 3,0 SDK |
+|C# 7.3| Microsoft Visual Studio/derleme araçları 2017, sürüm 15,7 |
+|C# 7.2| Microsoft Visual Studio/derleme araçları 2017, sürüm 15,5 |
+|C# 7.1| Microsoft Visual Studio/derleme araçları 2017, sürüm 15,3 |
+|C# 7.0| Microsoft Visual Studio/derleme araçları 2017 |
+|C# 6| Microsoft Visual Studio/derleme araçları 2015 |
 |C#e| Microsoft Visual Studio/derleme araçları 2012 veya paketlenmiş .NET Framework 4,5 derleyicisi |
 |C#4| Microsoft Visual Studio/derleme araçları 2010 veya paketlenmiş .NET Framework 4,0 derleyicisi |
 |C#03| Microsoft Visual Studio/derleme araçları 2008 veya paketlenmiş .NET Framework 3,5 derleyicisi |
@@ -95,5 +95,5 @@ Aşağıdaki tabloda, karşılık gelen dil sürümünü destekleyen C# DERLEYIC
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Derleyici seçenekleri](index.md)
-- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+- [C# Derleyici Seçenekleri](index.md)
+- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
