@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: e1daf9efd59b89d5d5be5f51cf9ac5e00750dda3
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919733"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421096"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF Eklentilerine Genel Bakış
 
@@ -171,21 +171,21 @@ Eklentiler, ana bilgisayar uygulamalarının görüntülemesi için genellikle b
 
 ## <a name="add-ins-and-xaml-browser-applications"></a>Eklentiler ve XAML tarayıcı uygulamaları
 
-Bu örnekte, ana bilgisayar uygulaması yüklenmiş bir tek başına uygulamadır. Ayrıca [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], aşağıdaki ek derleme ve uygulama gereksinimleriyle birlikte eklentileri de barındırabilir:
+Bu örnekte, ana bilgisayar uygulaması yüklenmiş bir tek başına uygulamadır. Ancak XAML tarayıcı uygulamaları (XBAP 'ler), aşağıdaki ek derleme ve uygulama gereksinimleriyle birlikte eklentileri de barındırabilir:
 
-- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] uygulama bildirimi, işlem hattını (klasörler ve derlemeler) ve eklenti derlemesini istemci makinedeki ClickOnce uygulama önbelleğine, [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]aynı klasöre indirmek için özel olarak yapılandırılmalıdır.
+- XBAP uygulama bildirimi, işlem hattını (klasörler ve derlemeler) ve eklenti derlemesini istemci makinedeki ClickOnce uygulama önbelleğine, XBAP ile aynı klasöre indirmek için özel olarak yapılandırılmalıdır.
 
-- Eklentilerin keşfedilmesine ve yüklenmesine yönelik [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kodu, işlem hattı ve eklenti konumu olarak [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] için ClickOnce uygulama önbelleğini kullanmalıdır.
+- Eklentiler keşfedilecek ve yüklenecek XBAP kodu, işlem hattı ve eklenti konumu olarak XBAP için ClickOnce uygulama önbelleğini kullanmalıdır.
 
-- Eklenti, kaynak sitesinde bulunan gevşek dosyalara başvuruyorsa, [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] eklentiyi özel bir güvenlik bağlamına yüklemesi gerekir; [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]tarafından barındırıldığında, eklentiler yalnızca ana bilgisayar uygulamasının kaynak sitesinde bulunan gevşek dosyalara başvurabilir.
+- Eklenti kaynak sitesinde bulunan gevşek dosyalara başvuruyorsa, XBAP eklentiyi özel bir güvenlik bağlamına yüklemesi gerekir; XBAP 'ler tarafından barındırıldığında, eklentiler yalnızca ana bilgisayar uygulamasının kaynak sitesinde bulunan gevşek dosyalara başvurabilir.
 
 Bu görevler, aşağıdaki alt bölümlerde ayrıntılı olarak açıklanmıştır.
 
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>ClickOnce dağıtımı için işlem hattı ve eklentiyi yapılandırma
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], ClickOnce dağıtım önbelleğindeki güvenli bir klasöre indirilir ve buradan çalıştırılır. Bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] eklentiyi barındırabilmesi için, işlem hattı ve eklenti derlemesi güvenli klasöre de indirilmelidir. Bunu başarmak için, uygulama bildirimini indirmek üzere hem işlem hattı hem de eklenti derlemesini içerecek şekilde yapılandırmanız gerekir. Visual Studio 'nun ardışık düzen derlemelerini algılaması için, işlem hattı ve eklenti derlemesinin konak [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projesinin kök klasöründe olması gerekir ancak Visual Studio 'da bu en kolay şekilde yapılır.
+XBAP 'ler, ClickOnce dağıtım önbelleğindeki güvenli bir klasöre indirilir ve bu klasörden çalıştırılır. Bir XBAP 'nin bir eklentiyi barındırması için, ardışık düzen ve eklenti derlemesi de güvenli klasöre indirilmelidir. Bunu başarmak için, uygulama bildirimini indirmek üzere hem işlem hattı hem de eklenti derlemesini içerecek şekilde yapılandırmanız gerekir. İşlem hattı ve eklenti derlemesinin, Visual Studio 'nun ardışık düzen derlemelerini algılaması için konak XBAP projesinin kök klasöründe olması gerekir ancak Visual Studio 'da bu en kolay şekilde yapılır.
 
-Sonuç olarak, ilk adım, her bir ardışık düzen derlemesinin ve eklenti derleme projelerinin yapı çıkışını ayarlayarak [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projesinin köküne ardışık düzen ve eklenti derlemesini oluşturmak için kullanılır. Aşağıdaki tabloda, ana bilgisayar [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projesi ile aynı çözümde ve kök klasörde bulunan işlem hattı derleme projeleri ve eklenti derleme projesi için derleme çıkış yolları gösterilmektedir.
+Sonuç olarak, ilk adım, her bir ardışık düzen derlemesinin ve eklenti derleme projelerinin yapı çıkışını ayarlayarak, bir işlem hattı ve eklenti derlemesini XBAP projesinin köküne inşa etmek için kullanılır. Aşağıdaki tabloda, ana bilgisayar XBAP projesi ile aynı çözümde ve kök klasörde bulunan işlem hattı derleme projeleri ve eklenti derleme projesi için derleme çıkış yolları gösterilmektedir.
 
 Tablo 1: bir XBAP tarafından barındırılan işlem hattı derlemeleri için oluşturma çıkış yolları
 
@@ -197,21 +197,21 @@ Tablo 1: bir XBAP tarafından barındırılan işlem hattı derlemeleri için ol
 |Konak tarafı bağdaştırıcısı|`..\HostXBAP\HostSideAdapters\`|
 |Eklenti|`..\HostXBAP\AddIns\WPFAddIn1`|
 
-Sonraki adım, aşağıdaki işlemleri gerçekleştirerek işlem hattı derlemelerini ve eklenti derlemesini Visual Studio 'da [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] içerik dosyaları olarak belirtmektir:
+Sonraki adım, aşağıdaki işlemleri gerçekleştirerek işlem hattı derlemelerini ve eklenti derlemesini Visual Studio 'daki XBAP içerik dosyaları olarak belirtmektir:
 
 1. Çözüm Gezgini içindeki her bir işlem hattı klasörüne sağ tıklayıp projeye Ekle ' yi seçerek, işlem hattını ve eklenti derlemesini projeye dahil **edin**.
 
 2. Her bir işlem hattı derlemesinin **derleme eylemini** ve **Özellikler** penceresinden **içeriğe** eklenti derlemesini ayarlama.
 
-Son adım, uygulama bildirimini indirme için işlem hattı derleme dosyalarını ve eklenti derleme dosyasını içerecek şekilde yapılandırmaktır. Dosyalar, [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] uygulamanın kapladığı ClickOnce önbelleğindeki klasörün kökündeki klasörlerde bulunmalıdır. Yapılandırma, Visual Studio 'da aşağıdakiler gerçekleşilerek elde edilebilir:
+Son adım, uygulama bildirimini indirme için işlem hattı derleme dosyalarını ve eklenti derleme dosyasını içerecek şekilde yapılandırmaktır. Dosyalar, XBAP uygulamasının kapladığı ClickOnce önbelleğindeki klasörün kökündeki klasörlerde bulunmalıdır. Yapılandırma, Visual Studio 'da aşağıdakiler gerçekleşilerek elde edilebilir:
 
-1. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projesine sağ tıklayın, **Özellikler**' e tıklayın, **Yayımla**' ya tıklayın ve ardından **uygulama dosyaları** düğmesine tıklayın.
+1. XBAP projesine sağ tıklayın, **Özellikler**' e tıklayın, **Yayımla**' ya tıklayın ve ardından **uygulama dosyaları** düğmesine tıklayın.
 
 2. **Uygulama dosyaları** iletişim kutusunda her bir ardışık düzen ve eklenti dll 'Inin **Yayımla durumunu** **(otomatik) içerecek**şekilde ayarlayın ve her BIR işlem hattı ve eklenti dll 'si için **indirme grubunu** **(gerekli)** ayarlayın.
 
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Uygulama temelinden işlem hattını ve eklentiyi kullanma
 
-İşlem hattı ve eklenti ClickOnce dağıtımı için yapılandırıldığında, [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]ile aynı ClickOnce önbellek klasörüne indirilir. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]işlem hattını ve eklentiyi kullanmak için, [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kodun uygulama temelden alması gerekir. İşlem hatları ve eklentileri kullanmak için .NET Framework eklentisi modelinin çeşitli türleri ve üyeleri, bu senaryo için özel destek sağlar. İlk olarak, yol <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> numaralandırma değeri tarafından tanımlanır. Bu değeri, aşağıdakileri içeren işlem hatlarını kullanmak için ilgili eklenti üyelerinin aşırı yüklemeleri ile birlikte kullanırsınız:
+İşlem hattı ve eklenti ClickOnce dağıtımı için yapılandırıldığında, XBAP ile aynı ClickOnce önbellek klasörüne indirilir. XBAP 'nin işlem hattını ve eklentisini kullanmak için, XBAP kodu uygulama temelden almalıdır. İşlem hatları ve eklentileri kullanmak için .NET Framework eklentisi modelinin çeşitli türleri ve üyeleri, bu senaryo için özel destek sağlar. İlk olarak, yol <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> numaralandırma değeri tarafından tanımlanır. Bu değeri, aşağıdakileri içeren işlem hatlarını kullanmak için ilgili eklenti üyelerinin aşırı yüklemeleri ile birlikte kullanırsınız:
 
 - <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 
