@@ -7,26 +7,26 @@ helpviewer_keywords:
 - styles [WPF]
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
-ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b47b9b7091e5421278fe867f79eb8abc62588b93
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790916"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459053"
 ---
-# <a name="styles-and-templates"></a><span data-ttu-id="d25ac-102">Stilleri ve Şablonları</span><span class="sxs-lookup"><span data-stu-id="d25ac-102">Styles and Templates</span></span>
-<span data-ttu-id="d25ac-103">Bir paket için bir uygulama, belge veya kullanıcı arabirimi (UI) Tasarımcısı görsel açıdan ilgi çekici uygulamaları oluşturmaya olanak tanıyan özellikler (stiller, şablonlar, tetikleyiciler ve görsel Taslaklar) ve Windows Presentation Foundation (WPF) stil ve şablon oluşturma bakın Ürün için özel bir görünüm üzerinde standart hale getirin.</span><span class="sxs-lookup"><span data-stu-id="d25ac-103">Windows Presentation Foundation (WPF) styling and templating refer to a suite of features (styles, templates, triggers, and storyboards) that allow an application, document, or user interface (UI) designer to create visually compelling applications and to standardize on a particular look for their product.</span></span>  
+# <a name="styles-and-templates"></a><span data-ttu-id="fcea7-102">Stilleri ve Şablonları</span><span class="sxs-lookup"><span data-stu-id="fcea7-102">Styles and Templates</span></span>
+<span data-ttu-id="fcea7-103">Windows Presentation Foundation (WPF) stili ve şablon oluşturma, bir uygulama, belge veya Kullanıcı arabirimi (UI) tasarımcısının görsel açıdan etkileyici uygulamalar oluşturmasına ve şunları yapmasına izin veren bir özellik paketine (stiller, şablonlar, Tetikleyiciler ve film şeritleri) başvurur. ürünlerinin belirli bir görünümü üzerinde standartlaştırın.</span><span class="sxs-lookup"><span data-stu-id="fcea7-103">Windows Presentation Foundation (WPF) styling and templating refer to a suite of features (styles, templates, triggers, and storyboards) that allow an application, document, or user interface (UI) designer to create visually compelling applications and to standardize on a particular look for their product.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d25ac-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="d25ac-104">In This Section</span></span>  
- [<span data-ttu-id="d25ac-105">Stil ve Şablon Oluşturma</span><span class="sxs-lookup"><span data-stu-id="d25ac-105">Styling and Templating</span></span>](styling-and-templating.md)  
-  [<span data-ttu-id="d25ac-106">Nasıl yapılır: ControlTemplate ile oluşturulan öğeleri bulma</span><span class="sxs-lookup"><span data-stu-id="d25ac-106">How to: Find ControlTemplate-Generated Elements</span></span>](how-to-find-controltemplate-generated-elements.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fcea7-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="fcea7-104">In This Section</span></span>  
+ [<span data-ttu-id="fcea7-105">Stil ve Şablon Oluşturma</span><span class="sxs-lookup"><span data-stu-id="fcea7-105">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+  [<span data-ttu-id="fcea7-106">Nasıl yapılır: ControlTemplate ile Oluşturulan Öğeleri Bulma</span><span class="sxs-lookup"><span data-stu-id="fcea7-106">How to: Find ControlTemplate-Generated Elements</span></span>](how-to-find-controltemplate-generated-elements.md)  
   
-## <a name="reference"></a><span data-ttu-id="d25ac-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="d25ac-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="fcea7-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="fcea7-107">Reference</span></span>  
  <xref:System.Windows.Style>  
   <xref:System.Windows.Controls.ControlTemplate>  
   <xref:System.Windows.DataTemplate>  
   
-## <a name="related-sections"></a><span data-ttu-id="d25ac-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="d25ac-108">Related Sections</span></span>  
- [<span data-ttu-id="d25ac-109">Gelişmiş</span><span class="sxs-lookup"><span data-stu-id="d25ac-109">Advanced</span></span>](../advanced/index.md)  
-  [<span data-ttu-id="d25ac-110">Denetim Özelleştirme</span><span class="sxs-lookup"><span data-stu-id="d25ac-110">Control Customization</span></span>](control-customization.md)  
-  [<span data-ttu-id="d25ac-111">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="d25ac-111">Graphics and Multimedia</span></span>](../graphics-multimedia/index.md)
+## <a name="related-sections"></a><span data-ttu-id="fcea7-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="fcea7-108">Related Sections</span></span>  
+ [<span data-ttu-id="fcea7-109">Gelişmiş</span><span class="sxs-lookup"><span data-stu-id="fcea7-109">Advanced</span></span>](../advanced/index.md)  
+  [<span data-ttu-id="fcea7-110">Denetim Özelleştirme</span><span class="sxs-lookup"><span data-stu-id="fcea7-110">Control Customization</span></span>](control-customization.md)  
+  [<span data-ttu-id="fcea7-111">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="fcea7-111">Graphics and Multimedia</span></span>](../graphics-multimedia/index.md)
