@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: e07ded52d76e027127ad41c14c39730648c0ca12
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c5cd4ab82fde1604dea14718b3cdd1a104fdf922
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775179"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425144"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic kullanmaya başlayın
 
@@ -41,7 +41,7 @@ Sık karşılaşılan sorunların yanıtlarını bulmanıza yardımcı olabilece
 - [Nesne odaklı programlama](../programming-guide/concepts/object-oriented-programming.md) \
 Nesne yönelimli programlamaya giriş konularını veren, kendi nesnelerinizi nasıl oluşturacağınızı ve kodlamanızı basitleştirmek için nesneleri nasıl kullanacağınızı açıklayan sayfaların bağlantılarını sağlar.
 
-- [Örnek](../../visual-basic/sample-applications.md) \
+- [Örnek](https://github.com/dotnet/samples/tree/master/snippets/visualbasic) \
 Visual Basic 'de örnek koda bağlantılar sağlar.
 
 - [Izlenecek yollar](../../visual-basic/walkthroughs.md) \

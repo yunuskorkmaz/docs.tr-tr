@@ -2,187 +2,187 @@
 title: Güvenlik Protokolleri sürüm 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 71855b73bb08d5edef05747dcff9e1ac04fb951f
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e22150d21638cffdf804008c32285f900bb1e263
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425094"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459048"
 ---
 # <a name="security-protocols-version-10"></a>Güvenlik Protokolleri sürüm 1.0
-Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksinimlerini Mesajlaşma kapsayan Web Hizmetleri güvenlik mekanizmaları sağlar. Bu bölümde Windows Communication Foundation (WCF) sürüm 1.0 ayrıntılarını açıklar (uygulanan <xref:System.ServiceModel.Channels.SecurityBindingElement>) güvenlik protokollerini aşağıdaki Web Hizmetleri için.  
+Web Hizmetleri Güvenliği protokolleri, mevcut tüm kurumsal mesajlaşma güvenlik gereksinimlerini kapsayan Web Hizmetleri güvenlik mekanizmaları sağlar. Bu bölümde, aşağıdaki Web Hizmetleri güvenlik protokollerinin Windows Communication Foundation (WCF) sürüm 1,0 ayrıntıları (<xref:System.ServiceModel.Channels.SecurityBindingElement>uygulanır) açıklanmaktadır.  
   
-|Belirtimi/belge|Bağlantı|  
+|Belirtim/belge|Bağlantı|  
 |-|-|  
-|WSS: SOAP ileti güvenliği 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
-|WSS: Kullanıcı adı belirteci profili 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
-|WSS: Profil 1.0 X509 belirteç|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
-|WSS: SAML 1.1 belirteç profili 1.0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
-|WSS: SOAP ileti güvenliği 1.1|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
-|WSS kullanıcı adı belirteci Profil 1.1|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
-|WSS: X.509 belirteci Profil 1.1|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
-|WSS: Kerberos belirteci Profil 1.1|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
-|WSS: SAML 1.1 belirteç Profil 1.1|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
-|WS-Secure Conversation|<http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf>|
-|WS-Güven|<http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf>|
-|Uygulama Not:<br /><br /> WS-Trust TLS el sıkışma için kullanma|Yayımlanacak|  
-|Uygulama Not:<br /><br /> WS-Trust SPNEGO için kullanma|Yayımlanacak|  
-|Uygulama Not:<br /><br /> Web uç noktası başvuruları adresleme ve kimlik Hizmetleri|Yayımlanacak|  
-|WS-SecurityPolicy 1.1<br /><br /> (2005/07)|<http://specs.xmlsoap.org/ws/2005/07/securitypolicy/ws-securitypolicy.pdf><br /><br /> tarafından düzeltilir gibi [errata](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html) OASIS WS-SX teknik komitesi gönderildi |  
+|WSS: SOAP Iletisi güvenliği 1,0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
+|WSS: Kullanıcı adı belirteç profili 1,0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|WSS: x509 belirteç profili 1,0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
+|WSS: SAML 1,1 belirteç profili 1,0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
+|WSS: SOAP Iletisi güvenliği 1,1|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
+|WSS Kullanıcı adı belirteç profili 1,1|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|WSS: X. 509.440 belirteç profili 1,1|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
+|WSS: Kerberos belirteç profili 1,1|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
+|WSS: SAML 1,1 belirteç profili 1,1|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
+|WS-Secure konuşması|<https://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf>|
+|WS-Trust|<https://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf>|
+|Uygulama notunun:<br /><br /> TLS el sıkışması için WS-Trust kullanma|Yayımlanacak|  
+|Uygulama notunun:<br /><br /> SPNEGO için WS-Trust kullanma|Yayımlanacak|  
+|Uygulama notunun:<br /><br /> Web Hizmetleri, uç nokta başvurularını ve kimliğini adresleyen|Yayımlanacak|  
+|WS-SecurityPolicy 1,1<br /><br /> (2005/07)|<https://specs.xmlsoap.org/ws/2005/07/securitypolicy/ws-securitypolicy.pdf><br /><br /> OASSıS WS-SX Technical komite 'a gönderilen [Errata](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html) tarafından değiştirilen |  
   
- WCF, sürüm 1, Web Hizmetleri güvenlik yapılandırması için temel olarak kullanılabilecek 17 kimlik doğrulama modları sağlar. Her modu gibi dağıtım gereksinimleri, ortak bir dizi için optimize edilmiştir:  
+ WCF, sürüm 1, Web Hizmetleri güvenlik yapılandırması için temel olarak kullanılabilecek 17 kimlik doğrulama modu sağlar. Her mod ortak bir dağıtım gereksinimleri kümesi için iyileştirilmiştir, örneğin:  
   
-- Hizmet ve istemci kimlik doğrulaması için kullanılan kimlik bilgileri.  
+- İstemci ve hizmetin kimliğini doğrulamak için kullanılan kimlik bilgileri.  
   
-- İleti veya aktarım güvenlik koruma mekanizması.  
+- İleti veya aktarım güvenliği koruma mekanizmaları.  
   
-- İleti exchange desenleri.  
+- İleti değişimi desenleri.  
   
 |Kimlik doğrulama modu|İstemci kimlik doğrulaması|Sunucu kimlik doğrulaması|Mod|  
 |-------------------------|---------------------------|---------------------------|----------|  
-|UserNameOverTransport|Kullanıcı adı/parola|X509|Taşıma|  
-|CertificateOverTransport|X509|X509|Taşıma|  
-|KerberosOverTransport|Windows|X509|Taşıma|  
-|IssuedTokenOverTransport|Federasyon|X509|Taşıma|  
-|SspiNegotiatedOverTransport|Windows SSPI anlaşması|Windows SSPI anlaşması|Taşıma|  
-|AnonymousForCertificate|Yok.|X509|`Message`|  
-|UserNameForCertificate|Kullanıcı adı/parola|X509|`Message`|  
-|MutualCertificate|X509|X509|`Message`|  
-|MutualCertificateDuplex|X509|X509|`Message`|  
-|IssuedTokenForCertificate|Federasyon|X509|`Message`|  
-|Kerberos|Windows|Windows|`Message`|  
-|IssuedToken|Federasyon|Federasyon|`Message`|  
-|SspiNegotiated|Windows SSPI anlaşması|Windows SSPI anlaşması|`Message`|  
-|AnonymousForSslNegotiated|Yok.|X509, TLS-Nego|`Message`|  
-|UserNameForSslNegotiated|Kullanıcı adı/parola|X509, TLS-Nego|`Message`|  
-|MutualSslNegotiated|X509|X509, TLS-Nego|`Message`|  
-|IssuedTokenForSslNegotiated|Federasyon|X509, TLS-Nego|`Message`|  
+|UserNameOverTransport|Kullanıcı adı/parola|X509|Aktarım|  
+|CertificateOverTransport|X509|X509|Aktarım|  
+|KerberosOverTransport|Windows|X509|Aktarım|  
+|IssuedTokenOverTransport|Federasyon|X509|Aktarım|  
+|SspiNegotiatedOverTransport|Üzerinde anlaşılan Windows SSPI|Üzerinde anlaşılan Windows SSPI|Aktarım|  
+|AnonymousForCertificate|Yok.|X509|İleti|  
+|UserNameForCertificate|Kullanıcı adı/parola|X509|İleti|  
+|Çoklu sertifika|X509|X509|İleti|  
+|Değişken Uıalcertificateduplex|X509|X509|İleti|  
+|IssuedTokenForCertificate|Federasyon|X509|İleti|  
+|Kerberos|Windows|Windows|İleti|  
+|IssuedToken|Federasyon|Federasyon|İleti|  
+|SspiNegotiated|Üzerinde anlaşılan Windows SSPI|Üzerinde anlaşılan Windows SSPI|İleti|  
+|Anonymousforsslanlaşmalı|Yok.|X509, TLS-Nego|İleti|  
+|Usernameforsslanlaşmalı|Kullanıcı adı/parola|X509, TLS-Nego|İleti|  
+|Değişken anlaşmalı|X509|X509, TLS-Nego|İleti|  
+|Issuedtokenforsslanlaşmalı|Federasyon|X509, TLS-Nego|İleti|  
   
- Bu tür bir kimlik doğrulama modları kullanarak uç noktaları, WS-SecurityPolicy (WS-SP) kullanarak kendi güvenlik gereksinimleri ifade edebilir. Bu belge, güvenlik üstbilgi ve her kimlik doğrulama modu için altyapı iletileri yapısını açıklar ve ilkeleri ve iletileri örneklerini sağlar.  
+ Bu tür kimlik doğrulama modlarını kullanan uç noktalar, WS-SecurityPolicy (WS-SP) kullanarak güvenlik gereksinimlerini ifade edebilir. Bu belgede, her kimlik doğrulama modu için güvenlik üst bilgisi ve altyapı iletilerinin yapısı açıklanmakta ve ilke ve ileti örnekleri verilmektedir.  
   
- Güvenli oturumlar uygulamalar arasında çok ileti iletişimlerini korumak için destek sağlamak için WS-SecureConversation WCF yararlanır.  "Güvenli oturumlar" aşağıdaki uygulama ayrıntıları için bkz.  
+ WCF, uygulamalar arasında çok ileti alışverişlerini korumak için güvenli oturumlar desteği sağlamak üzere WS-SecureConversation kullanır.  Uygulama ayrıntıları için aşağıda "güvenli oturumlar" başlığına bakın.  
   
- Kimlik doğrulama modları yanı sıra WCF çoğu ileti güvenlik tabanlı kimlik doğrulama modları, örneğin geçerli genel koruma mekanizması denetleyen ayarları sağlar: İmza ve şifreleme işlemleri, algoritma paketleri, anahtar türetme sırası ve imza onayı.  
+ WCF, kimlik doğrulama modlarına ek olarak, çoğu ileti güvenlik tabanlı kimlik doğrulama modu için uygulanan genel koruma mekanizmalarını denetlemek için ayarlar sağlar; örneğin: imza sırası, şifreleme işlemleri, algoritma paketleri, anahtar türetme ve imza onayı.  
   
- Bu belgede, aşağıdaki ön ekleri ve ad alanları kullanılır.  
+ Bu belgede aşağıdaki ön ekler ve ad alanları kullanılır.  
   
-|Ön eki|Ad Alanı|  
+|koy|Ad Alanı|  
 |------------|---------------|  
-|s|<https://www.w3.org/2003/05/soap-envelope/>|
-|SP|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/>|
-|a|<https://www.w3.org/2005/08/addressing>|  
-|wsse|TBD – OASIS WSS 1.0 URI'Sİ|  
-|wsse11|TBD – OASIS WSS 1.1 URI'Sİ|  
-|wsu|TBD – OASIS WSS 1.0 yardımcı programı URI'si|  
-|DS|TBD – W3C XMLDSig URI'si|  
-|WST|TBD – WS-Trust 2005/02 URI'si|  
-|wssc|TBD – WS-SecureConversation 2005/02 URI'si|  
-|wsaw|TBD - WS-Addressing policy ad alanı|  
+|s|<http://www.w3.org/2003/05/soap-envelope/>|
+|SP2|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/>|
+|A|<http://www.w3.org/2005/08/addressing>|  
+|WSO|TBD – OASSıS WSS 1,0 URI 'SI|  
+|wsse11|TBD – OASSıS WSS 1,1 URI 'SI|  
+|WSU dili|TBD – OASSıS WSS 1,0 yardımcı programı URI 'SI|  
+|FID|TBD – W3C XMLDSIG URI 'SI|  
+|WST|TBD – WS-Trust 2005/02 URI|  
+|wssc|TBD – WS-SecureConversation 2005/02 URI 'SI|  
+|Wonu dili|TBD-WS-adresleme ilkesi ad alanı|  
 |WSP|<http://schemas.xmlsoap.org/ws/2004/09/policy>|  
-|mssp|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy>|
+|MSSP|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy>|
   
-## <a name="1-token-profiles"></a>1. Belirteç profilleri  
- Web Hizmetleri Güvenlik belirtimleri kimlik bilgisi güvenlik belirteçleri temsil eder. WCF aşağıdaki belirteç türlerini destekler:  
+## <a name="1-token-profiles"></a>1. belirteç profilleri  
+ Web Hizmetleri Güvenliği belirtimleri güvenlik belirteçleri olarak kimlik bilgisini temsil eder. WCF aşağıdaki belirteç türlerini destekler:  
   
-### <a name="11-usernametoken"></a>1.1 UsernameToken  
- WCF UsernameToken10 ve UsernameToken11 profilleriyle aşağıdaki kısıtlamaları aşağıdaki gibidir:  
+### <a name="11-usernametoken"></a>1,1 UsernameToken  
+ WCF aşağıdaki kısıtlamalara sahip UsernameToken10 ve UsernameToken11 profillerini izler:  
   
- UsernameToken\Password öğesindeki R1101 PasswordType özniteliği ya da atlanmış olabilir veya #PasswordText (varsayılan) bir değer olamaz.  
+ UsernameToken\Password öğesinde R1101 PasswordType özniteliği atlanmış veya değer #PasswordText (varsayılan) olmalıdır.  
   
- Bir genişletilebilirlik kullanarak #PasswordDigest uygulayabilirsiniz. Yeterince güvenli parola koruma mekanizması olarak #PasswordDigest genellikle mistaken gözlenmiştir. Ancak #PasswordDigest UsernameToken şifrelenmesi için bir alternatif olarak hizmet veremez. #PasswordDigest birincil amacı yeniden yürütme saldırılarına karşı bir korumadır. WCF kimlik doğrulama modları ileti imzalarını kullanarak yeniden yürütme saldırı tehditlerine azalır.  
+ Bunlardan biri, genişletilebilirlik kullanarak #PasswordDigest uygulayabilir. #PasswordDigest genellikle yeterince güvenli bir parola koruma mekanizması olması gözlemlenmiştir. Ancak #PasswordDigest, UsernameToken şifrelemesinin bir alternatifi olarak kullanılamaz. #PasswordDigest birincil amacı, yeniden yürütme saldırılarına karşı koruma sağlamaktır. WCF kimlik doğrulama modlarında, yeniden yürütme saldırı tehditleri ileti imzaları kullanılarak azaltıldığında.  
   
- B1102 WCF UsernameToken Nonce ve oluşturulan alt öğeleri hiçbir zaman yayar.  
+ B1102 WCF hiçbir şekilde hiçbir şekilde anahtar vermez ve UsernameToken alt öğelerini oluşturmuştur.  
   
- Bu alt öğeleri yeniden yürütme algılaması yardımcı olmak için tasarlanmıştır. Bunun yerine, WCF ileti imzalarını kullanır.  
+ Bu alt öğeler, yeniden yürütmeyi algılamaya yardımcı olmayı amaçlar. WCF bunun yerine ileti imzalarını kullanır.  
   
- OASIS WSS SOAP ileti güvenlik UsernameToken Profile 1.1 (UsernameToken11) anahtar türetme parola özelliğini kullanıma sunmuştur.  
+ OASSıS WSS SOAP Iletisi güvenliği UsernameToken profili 1,1 (UsernameToken11) parola özelliğinden anahtar türetme sunmuştur.  
   
- B1103 UsernameToken parola için anahtar türetme değil kullanılmalıdır ve bu nedenle şifreleme işlemleri için.  
+ B1103 UsernameToken parolası, anahtar türetmede kullanılmamalıdır ve bu nedenle şifreleme işlemleri için kullanılmamalıdır.  
   
- Stratejinin: parolaları genel şifreleme işlemleri için kullanılacak zayıf olarak kabul edilir.  
+ Korale: parolalar genellikle şifreleme işlemleri için kullanılmak üzere çok zayıf kabul edilir.  
   
-### <a name="12-x509-token"></a>1.2 X509 Token  
- WCF X509v3 sertifikalarını bir kimlik bilgisi türü olarak destekler ve aşağıdaki kısıtlamalarla X509TokenProfile1.0 ve X509TokenProfile1.1 izler:  
+### <a name="12-x509-token"></a>1,2 x509 belirteci  
+ WCF, kimlik bilgisi türü olarak X509v3 sertifikalarını destekler ve aşağıdaki kısıtlamalara sahip X509TokenProfile 1.0 ve X509TokenProfile 1.1 ' i izler:  
   
- X509v3 sertifika içerdiğinde BinarySecurityToken öğesindeki R1201 ValueType özniteliği değeri #X509v3 olması gerekir.  
+ R1201, BinarySecurityToken öğesindeki ValueType özniteliği bir X509v3 sertifikası içerdiğinde değer #X509v3 sahip olmalıdır.  
   
- Değer türleri WSS X509 da belirteci profili 1.0 ve 1.1 #X509PKIPathv1 ve #PKCS7 olarak tanımlayın. WCF bu türleri desteklemez.  
+ WSS x509 belirteç profili 1,0 ve 1,1 de #X509PKIPathv1 ve #PKCS7 değer türleri olarak tanımlar. WCF bu türleri desteklemez.  
   
- R1202 SubjectKeyIdentifier (KAYAK) uzantı ise x X509 içinde mevcut sertifika wsse:KeyIdentifier olmalıdır belirtecine dış başvurular için kullanılan, ValueType ile #X509SubjectKeyIdentifier ve içeriğini base64 ile kodlanmış, öznitelik değeri Sertifikanın KAYAK uzantısı.  
+ R1202 bir x509 sertifikası içinde bir subjectKeyIdentifier (kayak) uzantısı varsa, ' nin ValueType özniteliğiyle birlikte #X509SubjectKeyIdentifier ve içerik Base64 kodlamalı değeri olan, belirteç için dış başvurular için anahtar tanımlayıcısı kullanılmalıdır. Sertifikanın Kayak uzantısı.  
   
- KAYAK başvuruları yaygın olarak uygulanan ve kendini kanıtlamış bir yüksek düzeyde birlikte çalışabilen bir dış başvuru türü olması.  
+ Kayak başvuruları yaygın olarak uygulanırlar ve yüksek oranda çalışabilen bir dış başvuru türü olarak kanıtlanmış olur.  
   
- R1203 Dış başvuru X509 için güvenlik belirteci olmamalıdır ds:X509IssuerSerial'ı kullanın.  
+ R1203 x509 güvenlik belirtecine bir dış başvuru DS: X509IssuerSerial KULLANMAMALıDıR.  
   
- R1204 varsa X509TokenProfile1.1, bir dış başvuru X509 güvenlik belirteci kullanmalıdır WS-güvenlik 1.1 tarafından sunulan parmak izi için kullanılıyor.  
+ R1204 X509TokenProfile 1.1 kullanılıyorsa, x509 güvenlik belirteci için bir dış başvuru, WS-Security 1,1 tarafından tanıtılan parmak izini kullanmalıdır.  
   
- WCF X509IssuerSerial destekler. Ancak X509IssuerSerial ile birlikte çalışabilirlik sorunları vardır: WCF X509IssuerSerial iki değerlerini karşılaştırmak için bir dize kullanır. Bir konu adı bileşenleri yeniden sıralar ve bir WCF hizmeti için bir sertifika başvuru gönderir, bu nedenle, bulunamamış olabilir.  
+ WCF, X509IssuerSerial destekler. Ancak X509IssuerSerial ile birlikte çalışabilirlik sorunları vardır: WCF, X509IssuerSerial 'in iki değerini karşılaştırmak için bir dize kullanır. Bu nedenle, konu adının bileşenlerini yeniden sipariş eden bir, bir WCF hizmetine bir sertifikaya başvuru gönderirse, bu durum bulunamamıştır.  
   
-### <a name="13-kerberos-token"></a>1.3 Kerberos belirteci  
- WCF KerberosTokenProfile1.1 aşağıdaki kısıtlamaları olan Windows kimlik doğrulaması amacıyla destekler:  
+### <a name="13-kerberos-token"></a>1,3 Kerberos belirteci  
+ WCF, Windows kimlik doğrulaması amacıyla aşağıdaki kısıtlamalara sahip KerberosTokenProfile 1.1 'yi destekler:  
   
- R1301 bir Kerberos belirteci gerekir taşıyan bir GSS değerini Kerberos v4 AP_REQ GSS_API Kerberos belirtimi ile tanımlanan sarmalandı ve değer #GSS_Kerberosv5_AP_REQ ValueType özniteliğiyle olması gerekir.  
+ R1301 bir Kerberos belirtecinin, GSS_API ve Kerberos belirtiminde tanımlanan bir GSS sarmalanmış Kerberos v4 AP_REQ değerini taşıması ve #GSS_Kerberosv5_AP_REQ değeri ile ValueType özniteliğine sahip olması gerekir.  
   
- WCF kullanan GSS Kerberos AP-REQ, olmayan bir çıplak AP-talep sarmalanmış Bu bir güvenlik en iyi uygulamadır.  
+ WCF, tam bir AP-REQ değil, GSS sarmalanmış Kerberos AP-REQ kullanır. Bu en iyi güvenlik uygulamasıdır.  
   
-### <a name="14-saml-v11-token"></a>1.4 SAML v1.1 belirteci  
- WCF WSS SAML belirteci profilleri 1.0 ve 1.1 için SAML v1.1 belirteçleri destekler. SAML belirteci biçimleri'nın diğer sürümlerinin uygulamak mümkündür.  
+### <a name="14-saml-v11-token"></a>1,4 SAML v 1.1 belirteci  
+ WCF, SAML v 1.1 belirteçleri için WSS SAML belirteci profilleri 1,0 ve 1,1 ' ü destekler. SAML belirteci biçimlerinin diğer sürümlerini uygulamak mümkündür.  
   
-### <a name="15-security-context-token"></a>1.5 güvenlik bağlamı belirteci  
- WCF güvenlik bağlamı belirteci (WS-SecureConversation sunulan SCT) destekler. SCT SecureConversation içinde de oluşturulan bir güvenlik bağlamı temsil etmek için kullanılan ikili anlaşma TLS ve SSPI protokoller olarak aşağıda açıklanmıştır.  
+### <a name="15-security-context-token"></a>1,5 güvenlik bağlamı belirteci  
+ WCF, WS-SecureConversation ' de tanıtılan güvenlik bağlamı belirtecini (SCT) destekler. SCT, SecureConversation 'de kurulu bir güvenlik bağlamını ve aşağıda açıklanan ikili anlaşma protokolleri TLS ve SSPI 'yi temsil etmek için kullanılır.  
   
-## <a name="2-common-message-security-parameters"></a>2. Ortak ileti güvenlik parametreleri  
+## <a name="2-common-message-security-parameters"></a>2. ortak Ileti güvenlik parametreleri  
   
-### <a name="21-timestamp"></a>2.1 zaman damgası  
- Zaman damgası varlığı kullanılarak denetlenir <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> özelliği <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı. WCF wsse:TimeStamp wsse ile her zaman serileştiren: oluşturulan ve wsse: alanları süresi dolar. İmzalama kullanıldığında wsse:TimeStamp her zaman imzalanır.  
+### <a name="21-timestamp"></a>2,1 zaman damgası  
+ Zaman damgası varlığı, <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfının <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> özelliği kullanılarak denetlenir. WCF her zaman wsse: Created ve wsse: Expires alanları ile zaman damgası olarak serileştirir. Wsse: imza kullanıldığında zaman damgası her zaman imzalanır.  
   
-### <a name="22-protection-order"></a>2.2 koruma sırası  
- WCF ileti koruma sırası "Önce oturum şifrelemek" ve "Şifrelemek önce oturumu" (Güvenlik İlkesi 1.1) destekler. "Şifrele önce oturum" gibi nedenlerle önerilir: WS-güvenlik 1.1 SignatureConfirmation mekanizması kullanılır ve imza şifrelenmiş içerik üzerinde yapar sürece iletileri şifrelemek önce oturum ile korunan imza değiştirme saldırılara açık daha sıkı denetim.  
+### <a name="22-protection-order"></a>2,2 koruma sırası  
+ WCF, "şifrelemeden önce Imzala" ve "oturum açmadan önce şifreleyin" (Güvenlik Ilkesi 1,1) ileti koruma sırasını destekler. Aşağıdakiler dahil olmak üzere "şifrelemeden önce imzala" önerilir: oturum açmadan önce şifrelemeden korunan iletiler, WS-Security 1,1 SignatureConfirmation mekanizması kullanılmadığı ve şifrelenmiş içerik üzerinde bir imza açık değilse imza değiştirme saldırılarına açık olur Denetim daha zordur.  
   
-### <a name="23-signature-protection"></a>2.3 imza koruma  
- Şifreleme önce oturum kullanıldığında, şifrelenmiş içerik veya imzalama anahtarı tahmin için (özellikle özel belirteç zayıf anahtar malzemesi ile kullanıldığında) deneme yanılma saldırıları önlemek için imza korumak için önerilir.  
+### <a name="23-signature-protection"></a>2,3 imza koruması  
+ İmza kullanılmadan önce şifrelendiğinde, şifrelenmiş içeriği veya imzalama anahtarını tahmin etmeye yönelik deneme yanılma saldırılarını engellemek için imzayı korumanız önerilir (özellikle de, zayıf anahtar malzemeyle özel bir belirteç kullanıldığında).  
   
-### <a name="24-algorithm-suite"></a>2.4 algoritması paketi  
- WCF güvenlik ilkesi 1.1 içinde listelenen tüm algoritması paketlerini destekler.  
+### <a name="24-algorithm-suite"></a>2,4 algoritma paketi  
+ WCF, Güvenlik Ilkesi 1,1 ' de listelenen tüm algoritma paketlerini destekler.  
   
-### <a name="25-key-derivation"></a>2.5 anahtar türetme  
- WCF "Anahtar türetme simetrik anahtarlar için" WS-SecureConversation açıklandığı gibi kullanır.  
+### <a name="25-key-derivation"></a>2,5 anahtar türetme  
+ WCF, WS-SecureConversation bölümünde açıklandığı gibi "simetrik anahtarlar için anahtar türetme" kullanır.  
   
-### <a name="26-signature-confirmation"></a>2.6 imza onayı  
- İmza onayı imzaları kümesini korumak için ortadaki adam saldırılarına karşı koruma olarak olabilir.  
+### <a name="26-signature-confirmation"></a>2,6 imza onayı  
+ İmza onaylama, imza kümesini korumak için ortadaki adam saldırılarına karşı koruma sağlayabilir.  
   
-### <a name="27-security-header-layout"></a>2.7 güvenlik üst bilgisi düzeni  
- Her kimlik doğrulama modu, güvenlik üst bilgisi için belirli bir düzen açıklar. Güvenlik üst bilgisi içinde yarı sıralı öğeleridir. Güvenlik üst bilgi alt öğelerin sırasını tanımlamak için aşağıdaki güvenlik üst bilgisi düzeni modları WS-Security Policy tanımlar:  
+### <a name="27-security-header-layout"></a>2,7 güvenlik üst bilgisi düzeni  
+ Her kimlik doğrulama modu, güvenlik üst bilgisi için belirli bir düzeni tanımlar. Güvenlik üst bilgisi içindeki öğeler yarı sıralanır. Güvenlik üst bilgisi alt öğelerinin sırasını tanımlamak için, WS-Güvenlik Ilkesi aşağıdaki güvenlik üst bilgisi düzen modlarını tanımlar:  
   
 |||  
 |-|-|  
-|Katı|Öğeleri "kullanılmadan önce bildirme" ilkesi numaralı düzeni kuralları bölüme 7.7.1 genel göre Güvenlik İlkesi'nde açıklanan güvenlik üst bilgi aşağıdaki eklenir.|  
-|Belirsiz|Öğeler için WSS uyan herhangi bir sırada güvenlik üstbilgisinde eklenir: SOAP ileti güvenliği.|  
-|LaxTimestampFirst|İlk öğe dışında güvenlik üstbilgisinde Lax bir wsse:Timestamp aynı olmalıdır|  
-|LaxTimestampLast|Belirsiz bir wsse:Timestamp güvenlik üst bilgisindeki son öğe olmalıdır dışında aynı|  
+|Sert|Öğeler, Güvenlik Ilkesi bölümünde açıklanan numaralandırılmış düzen kurallarından sonra, "kullanmadan önce bildir" genel ilkesine göre güvenlik üstbilgisine eklenir.|  
+|LAX|Öğeler, WSS: SOAP Iletisi güvenliğine uyan herhangi bir sırada güvenlik başlığına eklenir.|  
+|Önce Laxtimestamp|Güvenlik üst bilgisindeki ilk öğenin bir WSO: Timestamp olması dışında LAX ile aynı|  
+|Laxtimestamp son|Güvenlik üstbilgisindeki son öğenin bir WSO: Timestamp olması dışında LAX ile aynı|  
   
- WCF güvenlik üst bilgisi düzeni için tüm dört modlarını destekler. Güvenlik üst bilgisi yapısı ve ileti örnekleri aşağıdaki kimlik doğrulama modları için "Strict" modu izleyin.  
+ WCF, güvenlik üst bilgisi düzeni için dört modunu destekler. Güvenlik üst bilgisi yapısı ve aşağıdaki kimlik doğrulama modları için ileti örnekleri "katı" modunu izler.  
   
-## <a name="2-common-message-security-parameters"></a>2. Ortak ileti güvenlik parametreleri  
- Bu bölümde, hizmet ve istemci tarafından alınıp verilen iletileri güvenlik üst bilgisi yapısı gösteren örneklerinin yanı sıra her bir kimlik doğrulama modu örnek ilkeleri sağlar.  
+## <a name="2-common-message-security-parameters"></a>2. ortak Ileti güvenlik parametreleri  
+ Bu bölümde, istemci ve hizmet tarafından değiştirilen iletilerde güvenlik üst bilgi yapısını gösteren örneklerle birlikte her bir kimlik doğrulama modu için örnek ilkeler sağlanır.  
   
-### <a name="61-transport-protection"></a>6.1 taşıma koruma  
- WCF mesajlarını korumak için güvenli aktarım kullanan beş kimlik doğrulama modları sağlar. UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport ve SspiNegotiatedOverTransport.  
+### <a name="61-transport-protection"></a>6,1 taşıma koruması  
+ WCF, iletileri korumak için güvenli aktarım kullanan beş kimlik doğrulama modu sağlar; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport ve SspiNegotiatedOverTransport.  
   
- Bu kimlik doğrulama modları SecurityPolicy içinde açıklanan aktarım bağlama kullanılarak oluşturulur. UserNameOverTransport için kimlik doğrulama modu UsernameToken imzalı destekleme belirteci ' dir. Bir kimlik doğrulama modları için belirteç imzalı ve onaylanan bir belirteç görünür. Ek C.1.2 ve C.1.3, SecurityPolicy ayrıntılı güvenlik üst bilgisi düzeni açıklanmaktadır. Aşağıdaki örnekte güvenlik üst bilgileri bir belirli kimlik doğrulama modu katı düzenini gösterir.  
+ Bu kimlik doğrulama modları, SecurityPolicy ' de açıklanan aktarım bağlaması kullanılarak oluşturulur. UserNameOverTransport kimlik doğrulama modu için UsernameToken imzalı bir destekleme belirtecidir. Diğer kimlik doğrulama modlarında, belirteç imzalı bir onaylama belirteci olarak görünür. Ek C. 1.2 ve C. 1.3 SecurityPolicy, güvenlik üst bilgisi yerleşimini ayrıntılı olarak anlatmaktadır. Aşağıdaki örnek güvenlik üstbilgileri, belirli bir kimlik doğrulama modu için katı düzeni gösterir.  
   
- Tüm durumlarda belirteçleri "Türetilmiş anahtarları" özelliği "false" değeridir.  
+ Her durumda belirteçlerin "türetilmiş anahtarlar" özelliğinin değeri "false" şeklindedir.  
   
- Aktarım bağlama çeşitli özelliklerin değerlerini aşağıdaki gibidir:  
+ Aktarım bağlamasının çeşitli özelliklerinin değerleri şunlardır:  
   
  Zaman damgası: true  
   
- Güvenlik üst bilgisi düzeni: Katı  
+ Güvenlik üst bilgisi düzeni: katı  
   
  Algoritma paketi: Basic256  
   
 #### <a name="611-usernameovertransport"></a>6.1.1 UsernameOverTransport  
- Bu kimlik doğrulama modu SOAP katmanında başlatıcıdan alıcının her zaman gönderilen imzalı destekleme belirteci olarak görüntülenen bir kullanıcı adı belirteci ile istemci kimliğini doğrular. Aktarım katmanında bir X.509 sertifikası kullanarak hizmet kimlik doğrulaması yapılır. Kullanılan bağlama aktarım bağlama ' dir.  
+ Bu kimlik doğrulama modu ile istemci, SOAP katmanında, her zaman başlatıcıdan alıcıya gönderilen imzalı bir destekleme belirteci olarak görünen bir Kullanıcı adı belirteci ile kimlik doğrular. Hizmetin kimliği, aktarım katmanında bir X. 509.440 sertifikası kullanılarak yapılır. Kullanılan bağlama bir aktarım bağlamadır.  
   
  İlke  
   
@@ -256,7 +256,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -267,7 +267,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 ```  
   
 #### <a name="612-certificateovertransport"></a>6.1.2 CertificateOverTransport  
- SOAP katmanında başlatıcıdan alıcıya gönderilen her zaman bir onaylama destekleme belirteci olarak göründüğü bu kimlik doğrulama modu istemci kimlik doğrulaması kullanarak bir X.509 sertifikası. Aktarım katmanında bir X.509 sertifikası kullanarak hizmet kimlik doğrulaması yapılır. Kullanılan bağlama aktarım bağlama ' dir.  
+ Bu kimlik doğrulama modunda, istemci, her zaman başlatıcıdan alıcıya gönderilen bir onaylama destekleme belirteci olarak SOAP katmanında görünen bir X. 509.440 sertifikası kullanarak kimlik doğrular. Hizmetin kimliği, aktarım katmanında bir X. 509.440 sertifikası kullanılarak yapılır. Kullanılan bağlama bir aktarım bağlamadır.  
   
  İlke  
   
@@ -349,7 +349,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <o:Security>  
@@ -360,7 +360,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 ```  
   
 #### <a name="613-issuedtokenovertransport"></a>6.1.3 IssuedTokenOverTransport  
- Bu kimlik doğrulama modu ile istemci hizmeti için bu nedenle, kimlik doğrulaması yapmaz ancak yerine bir güvenlik belirteci hizmeti (STS) tarafından verilmiş bir belirteç sunar ve paylaşılan anahtar bilgi kanıtlar. Verilen belirteç SOAP katmanında başlatıcıdan alıcıya gönderilen her zaman bir onaylama destekleme belirteci olarak görünür. Aktarım katmanında bir X.509 sertifikası kullanarak hizmet kimlik doğrulaması yapılır. Aktarım bağlama bağlamadır.  
+ Bu kimlik doğrulama modunda, istemci hizmette kimlik doğrulaması yapmaz, ancak bunun yerine güvenlik belirteci hizmeti (STS) tarafından verilen bir belirteç ve paylaşılan bir anahtar hakkında bilgi sahibi olduğunu gösterir. Verilen belirteç, her zaman başlatıcıdan alıcıya gönderilen bir onaylama destekleme belirteci olarak SOAP katmanında görünür. Hizmetin kimliği, aktarım katmanında bir X. 509.440 sertifikası kullanılarak yapılır. Bağlama bir aktarım bağlamadır.  
   
  İlke  
   
@@ -446,7 +446,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -457,7 +457,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 ```  
   
 #### <a name="614-kerberosovertransport"></a>6.1.4 KerberosOverTransport  
- Bu kimlik doğrulama modu ile bir Kerberos anahtarı kullanarak hizmete istemcinin kimliğini doğrular. Kerberos belirteci SOAP katmanında bir onaylama destekleme belirteci görünür. Aktarım katmanında bir X.509 sertifikası kullanarak hizmet kimlik doğrulaması yapılır. Aktarım bağlama bağlamadır.  
+ Bu kimlik doğrulama modunda istemci Kerberos bileti kullanarak hizmeti doğrular. Kerberos belirteci, SOAP katmanında bir onaylama destekleme belirteci olarak görünür. Hizmetin kimliği, aktarım katmanında bir X. 509.440 sertifikası kullanılarak yapılır. Bağlama bir aktarım bağlamadır.  
   
  İlke  
   
@@ -538,7 +538,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -549,7 +549,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 ```  
   
 #### <a name="615-sspinegotiatedovertransport"></a>6.1.5 SspiNegotiatedOverTransport  
- Bu modda, istemci ve sunucu kimlik doğrulaması gerçekleştirmek üzere bir anlaşma protokolü kullanılır. Kerberos Mümkünse, kullanılan aksi NTLM. Sonuçta elde edilen SCT SOAP katmanında başlatıcıdan alıcılara gönderilen her zaman bir onaylama destekleme belirteci olarak görünür. Hizmet, ayrıca aktarım katmanında bir X.509 sertifikası tarafından doğrulanır. Kullanılan bağlama aktarım bağlama ' dir. "SPNEGO" (anlaşması) WCF SSPI ikili anlaşma protokolü WS-Trust ile nasıl kullandığını açıklar. SCT SPNEGO anlaşma oluşturulduktan sonra güvenlik üst bilgisi bu bölümdeki verilebilir.  
+ Bu modda istemci ve sunucu kimlik doğrulamasını gerçekleştirmek için bir anlaşma protokolü kullanılır. Mümkünse, Kerberos kullanılır, aksi takdirde NTLM kullanılır. Elde edilen SCT, her zaman başlatıcıdan alıcıya gönderilen bir onaylama destekleme belirteci olarak SOAP katmanında görünür. Ayrıca hizmet, aktarım katmanında bir X. 509.440 sertifikası tarafından da doğrulanır. Kullanılan bağlama bir aktarım bağlamadır. "SPNEGO" (anlaşma), WCF 'nin WS-Trust ile SSPI ikili anlaşma protokolünü nasıl kullandığını açıklar. Bu bölümdeki güvenlik üst bilgisi örnekleri, SPNEGO el sıkışma aracılığıyla SCT oluşturulduktan sonra verilmiştir.  
   
  İlke  
   
@@ -610,8 +610,8 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples"></a>Güvenlik üstbilgi örnekler  
- Güvenlik bağlamı belirteci SPNEGO el sıkışması WS-Trust ikili anlaşması kullanılarak kurulduktan sonra uygulama iletileri güvenlik üst bilgileri aşağıdaki yapıya sahip olması.  
+### <a name="security-header-examples"></a>Güvenlik üst bilgisi örnekleri  
+ Güvenlik bağlamı belirteci, WS-Trust Ikili anlaşması kullanılarak SPNEGO Handshake aracılığıyla kurulduktan sonra, uygulama iletilerinde aşağıdaki yapıyla güvenlik üst bilgileri bulunur.  
   
  İstek  
   
@@ -629,7 +629,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -639,25 +639,25 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
-### <a name="62-using-x509-certificates-for-service-authentication"></a>6.2 hizmet kimlik doğrulaması için X.509 sertifikaları kullanma  
- Bu bölümde aşağıdaki kimlik doğrulama modları açıklanmaktadır: MutualCertificate WSS1.0, karşılıklı CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate ve IssuedTokenForCertificate.  
+### <a name="62-using-x509-certificates-for-service-authentication"></a>Hizmet kimlik doğrulaması için X. 509.440 sertifikalarını kullanma 6,2  
+ Bu bölümde şu kimlik doğrulama modları açıklanmaktadır: Mulualcertificate WSS 1.0, karşılıklı CertificateDuplex, Mulualcertificate WSS 1.1, AnonymousForCertificate, UserNameForCertificate ve IssuedTokenForCertificate.  
   
-#### <a name="621-mutualcertificate-wss10"></a>6.2.1 MutualCertificate WSS1.0  
- Başlatıcı belirteciyle SOAP katmanında görünen bu kimlik doğrulama modu istemci kimlik doğrulaması kullanarak bir X.509 sertifikası. Hizmet, ayrıca bir X.509 sertifikası kullanılarak kimlik doğrulaması yapılır.  
+#### <a name="621-mutualcertificate-wss10"></a>6.2.1 Mulualcertificate WSS 1.0  
+ Bu kimlik doğrulama modunda istemci, başlatıcı belirteci olarak SOAP katmanında görünen bir X. 509.440 sertifikası kullanarak kimlik doğrular. Ayrıca, hizmet bir X. 509.440 sertifikası kullanılarak doğrulanır.  
   
- Aşağıdaki özellik değerlerini asimetrik bir bağlamayla kullanılan bağlama şöyledir:  
+ Kullanılan bağlama, aşağıdaki özellik değerleriyle asimetrik bir bağlamadır:  
   
- Başlatıcı belirteci: ekleme modu ayarlamak için .../IncludeToken/AlwaysToRecipient istemcinin X.509 sertifikası  
+ Başlatıcı belirteci: ekleme modu. ../IncludeToken/AlwaysToRecipient olarak ayarlanan istemcinin X. 509.440 sertifikası  
   
- Alıcı belirteci: Ekleme modu ile sunucu X.509 sertifikasının .../IncludeToken/Never ayarlanır  
+ Alıcı belirteci: sunucu X. 509.440 sertifikası, dahil etme modu ayarlandı. ../Includetoken/No  
   
- Belirteç koruma: False  
+ Belirteç koruması: false  
   
- Tüm üst bilgisi ve gövdesi imza: Doğru  
+ Tüm başlık ve gövde Imzaları: doğru  
   
  Koruma sırası: SignBeforeEncrypt  
   
- İmza şifrele: Doğru  
+ Imzayı şifreleyin: doğru  
   
  İlke  
   
@@ -721,7 +721,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üstbilgi örnekler: SignBeforeEncrypt, EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üst bilgisi örnekleri: SignBeforeEncrypt, EncryptSignature  
  İstek  
   
 ```xml  
@@ -744,7 +744,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -763,7 +763,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Güvenlik üstbilgi örnekler: EncryptBeforeSign  
+ Güvenlik üst bilgisi örnekleri: EncryptBeforeSign  
   
  İstek  
   
@@ -787,7 +787,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -806,22 +806,22 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-#### <a name="622-mutualcertificateduplex"></a>6.2.2 MutualCertificateDuplex  
- Başlatıcı belirteciyle SOAP katmanında görünen bu kimlik doğrulama modu istemci kimlik doğrulaması kullanarak bir X.509 sertifikası. Hizmet, ayrıca bir X.509 sertifikası kullanılarak kimlik doğrulaması yapılır.  
+#### <a name="622-mutualcertificateduplex"></a>6.2.2 Mulualcertificateduplex  
+ Bu kimlik doğrulama modunda istemci, başlatıcı belirteci olarak SOAP katmanında görünen bir X. 509.440 sertifikası kullanarak kimlik doğrular. Ayrıca, hizmet bir X. 509.440 sertifikası kullanılarak doğrulanır.  
   
- Aşağıdaki özellik değerlerini asimetrik bir bağlamayla kullanılan bağlama şöyledir:  
+ Kullanılan bağlama, aşağıdaki özellik değerleriyle asimetrik bir bağlamadır:  
   
- Başlatıcı belirteci: İstemcinin X509 sertifikası ekleme modu için .../IncludeToken/AlwaysToRecipient ayarlanır  
+ Başlatıcı belirteci: Istemcinin x509 sertifikası, ekleme modu. ../IncludeToken/AlwaysToRecipient olarak ayarlandı  
   
- Alıcı belirteci: Sunucunun X509 sertifikası ekleme modu için .../IncludeToken/AlwaysToInitiator ayarlanır  
+ Alıcı belirteci: sunucunun x509 sertifikası, dahil etme modu. ../ıncludetoken/AlwaysToInitiator olarak ayarlandı  
   
- Belirteç koruma: False  
+ Belirteç koruması: false  
   
- Tüm üst bilgisi ve gövdesi imza: Doğru  
+ Tüm başlık ve gövde Imzaları: doğru  
   
  Koruma sırası: SignBeforeEncrypt  
   
- İmza şifrele: Doğru  
+ Imzayı şifreleyin: doğru  
   
  İlke  
   
@@ -885,7 +885,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üstbilgi örnekler: SignBeforeEncrypt, EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üst bilgisi örnekleri: SignBeforeEncrypt, EncryptSignature  
  İstek ve yanıt  
   
 ```xml  
@@ -908,7 +908,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üstbilgi örnekler: EncryptBeforeSign  
+### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üst bilgisi örnekleri: EncryptBeforeSign  
  İstek ve yanıt  
   
 ```xml  
@@ -931,23 +931,23 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-#### <a name="623-using-symmetricbinding-with-x509-service-authentication"></a>6.2.3 SymmetricBinding X.509 hizmet kimlik doğrulamasını kullanarak.  
- "WSS10" X509 senaryolarıyla için sınırlı destek sağlanmaktadır belirteçleri. Örneğin, yalnızca hizmet X509 belirteci kullanarak iletileri için imza ve şifreleme koruma sağlamak için hiçbir yolu yoktu. "WSS11" EncryptedKey kullanımını simetrik bir belirteç kullanıma sunuldu. Şimdi hizmetin X.509 sertifikası için şifrelenmiş geçici bir anahtar hem istek hem de yanıt iletilerini koruma için kullanılabilir. ' % S'bölümünde 6.4 açıklanan kimlik doğrulama modları, bu düzeni kullanın.  
+#### <a name="623-using-symmetricbinding-with-x509-service-authentication"></a>X. 509.440 hizmeti kimlik doğrulamasıyla SymmetricBinding kullanarak 6.2.3  
+ "WSS10", x509 belirteçleri olan senaryolar için sınırlı destek sağlamıştır. Örneğin, yalnızca Service x509 belirtecini kullanan iletiler için imza ve şifreleme koruması sağlanması mümkün değildir. "WSS11", EncryptedKey öğesinin kullanımını simetrik bir belirteç olarak getirdi. Artık hem istek hem de yanıt iletileri koruması için hizmetin X. 509.440 sertifikası için şifrelenmiş bir geçici anahtar kullanılabilir. Aşağıdaki 6,4 bölümünde açıklanan kimlik doğrulama modları bu kalıbı kullanır.  
   
- WS-SecurityPolicy SymmetricBinding hizmetiyle kullanarak bu deseni açıklar X509 token koruma belirteç.  
+ WS-SecurityPolicy, koruma belirteci olarak Service x509 belirteci ile SymmetricBinding kullanarak bu kalıbı açıklar.  
   
- Kimlik doğrulama modları AnonymousForCertificate, UsernameForCertificate MutualCertificate WSS11 ve IssuedTokenForCertificate tüm sp:SymmetricBinding benzer bir örneğini aşağıdaki özellik değerleri kullanın:  
+ Kimlik doğrulama modları AnonymousForCertificate, UsernameForCertificate, Mulualcertificate WSS11 ve IssuedTokenForCertificate All, aşağıdaki özellik değerleriyle benzer bir SP: SymmetricBinding örneği kullanır:  
   
- Koruma belirteci: Sunucunun X509 sertifikası ekleme modu için .../IncludeToken/Never ayarlanır  
-Belirteç koruma: False  
+ Koruma belirteci: sunucunun x509 sertifikası, içerme modu olarak ayarlandı. ../Includetoken/hiçbir  
+Belirteç koruması: false  
   
- Tüm üst bilgisi ve gövdesi imza: Doğru  
+ Tüm başlık ve gövde Imzaları: doğru  
   
  Koruma sırası: SignBeforeEncrypt  
   
- İmza şifrele: Doğru  
+ Imzayı şifreleyin: doğru  
   
- Yukarıdaki kimlik doğrulama modları, yalnızca kullandıkları destek belirteçleri ile farklı. AnonymousForCertificate destekleyici tarafından istenen belirteçleri yok, MutualCertificate WSS 1.1 sahip istemcinin X509 sertifika bir destek belirteçleri onaylama olarak, UserNameForCertificate sahip bir kullanıcı adı belirteci imzalı destekleme belirteci olarak ve IssuedTokenForCertificate verilen belirtecin bir onaylama destekleme belirteci sahiptir.  
+ Yukarıdaki kimlik doğrulama modları yalnızca kullandıkları destekleyici belirteçlere göre farklılık gösterir. AnonymousForCertificate içinde herhangi bir destekleme belirteci yok 1,1, çok sayıda çoklu Kullanıcı tarafından desteklenen bir destekleme belirteçleri, UserNameForCertificate, imzalı destekleyici belirteç olarak bir Kullanıcı adı belirteci içeriyor ve IssuedTokenForCertificate verilen belirteci, bir onaylama destekleme belirteci olarak içeriyor.  
   
  İlke  
   
@@ -1011,13 +1011,13 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 ```  
   
 #### <a name="624-anonymousforcertificate"></a>6.2.4 AnonymousForCertificate  
- Bu kimlik doğrulama modu ile istemci anonimdir ve bir X.509 sertifikası kullanarak hizmet kimlik doğrulaması. Kullanılan bağlama 6.4.2 içinde anlatıldığı gibi simetrik bağlama bir örneğidir.  
+ Bu kimlik doğrulama modunda, istemci anonimdir ve hizmetin kimliği bir X. 509.440 sertifikası kullanılarak yapılır. Kullanılan bağlama, 6.4.2 içinde açıklandığı gibi simetrik bağlamanın bir örneğidir.  
   
  İlke  
   
- Yukarıdaki 6.2.3 "ilke" bağlaması ayrıntıları için bkz.  
+ Bağlama ayrıntıları için yukarıdaki 6.2.3 içindeki "Ilke" başlığına bakın  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üstbilgi örnekler: SignBeforeEncrypt, EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üst bilgisi örnekleri: SignBeforeEncrypt, EncryptSignature  
  İstek  
   
 ```xml  
@@ -1043,7 +1043,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -1068,7 +1068,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üstbilgi örnekler: EncryptBeforeSign  
+### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üst bilgisi örnekleri: EncryptBeforeSign  
  İstek  
   
 ```xml  
@@ -1094,7 +1094,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -1118,13 +1118,13 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 ```  
   
 #### <a name="625-usernameforcertificate"></a>6.2.5 UserNameForCertificate  
- Bu kimlik doğrulama modu ile görüntülenen bir kullanıcı adı belirteci SOAP katmanında imzalı destekleme belirteci kullanarak hizmete istemcinin kimliğini doğrular. Hizmet bir X.509 sertifikası kullanarak istemcinin kimliğini doğrular. Kullanılan bağlama, hizmetin ortak anahtar ile şifrelenmiş bir istemci tarafından oluşturulan bir anahtarı olan koruma belirtecine sahip simetrik bir bağlamadır.  
+ Bu kimlik doğrulama modunda istemci, SOAP katmanında imzalı destekleyici belirteç olarak görünen bir Kullanıcı adı belirteci kullanarak hizmette kimlik doğrulaması yapar. Hizmet, bir X. 509.440 sertifikası kullanarak istemcinin kimliğini doğrular. Kullanılan bağlama, koruma belirtecinin istemci tarafından oluşturulan ve hizmetin ortak anahtarıyla şifrelenen bir anahtar olduğu simetrik bir bağlamadır.  
   
  İlke  
   
- Yukarıdaki 6.2.3 "ilke" bağlaması ayrıntıları için bkz.  
+ Bağlama ayrıntıları için yukarıdaki 6.2.3 içindeki "Ilke" başlığına bakın  
   
- Destekleme belirteci imzalayan  
+ İmzalı destekleme belirteci  
   
 ```xml  
 <sp:SignedSupportingTokens>  
@@ -1138,7 +1138,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </sp:SignedSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üstbilgi örnekler: SignBeforeEncrypt, EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üst bilgisi örnekleri: SignBeforeEncrypt, EncryptSignature  
  İstek  
   
 ```xml  
@@ -1167,7 +1167,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -1189,7 +1189,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üstbilgi örnekler: EncryptBeforeSign  
+### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üst bilgisi örnekleri: EncryptBeforeSign  
  İstek  
   
 ```xml  
@@ -1218,7 +1218,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -1240,14 +1240,14 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-#### <a name="626-mutualcertificate-wss-11"></a>6.2.6 MutualCertificate (WSS 1.1)  
- SOAP katmanında bir onaylama destekleme belirteci olarak görünen bu kimlik doğrulama modu istemci kimlik doğrulaması kullanarak bir X.509 sertifikası. Hizmet, ayrıca bir X.509 sertifikası kullanılarak kimlik doğrulaması yapılır. Kullanılan bağlama, hizmetin ortak anahtar ile şifrelenmiş bir istemci tarafından oluşturulan bir anahtarı olan koruma belirtecine sahip simetrik bir bağlamadır.  
+#### <a name="626-mutualcertificate-wss-11"></a>6.2.6 Mulualcertificate (WSS 1,1)  
+ Bu kimlik doğrulama modunda istemci, SOAP katmanında bir destekleme desteği belirteci olarak görünen bir X. 509.440 sertifikası kullanarak kimlik doğrular. Ayrıca, hizmet bir X. 509.440 sertifikası kullanılarak doğrulanır. Kullanılan bağlama, koruma belirtecinin istemci tarafından oluşturulan ve hizmetin ortak anahtarıyla şifrelenen bir anahtar olduğu simetrik bir bağlamadır.  
   
  İlke  
   
- İlke 6.2.3 bağlaması ayrıntıları için bkz.  
+ Bağlama ayrıntıları için bkz. 6.2.3 içinde Ilke  
   
- Onaylama destekleme belirteci  
+ Destekleyici belirteç onaylama  
   
 ```xml  
 <sp:EndorsingSupportingTokens>  
@@ -1262,7 +1262,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üstbilgi örnekler: SignBeforeEncrypt, EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üst bilgisi örnekleri: SignBeforeEncrypt, EncryptSignature  
  İstek  
   
 ```xml  
@@ -1294,7 +1294,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -1325,7 +1325,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üstbilgi örnekler: EncryptBeforeSign  
+### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üst bilgisi örnekleri: EncryptBeforeSign  
  İstek  
   
 ```xml  
@@ -1357,7 +1357,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -1385,13 +1385,13 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 ```  
   
 #### <a name="627-issuedtokenforcertificate"></a>6.2.7 IssuedTokenForCertificate  
- Bu kimlik doğrulaması ile istemci hizmete, bu nedenle, ancak bunun yerine kimlik doğrulamasını yapmaz modu STS tarafından verilen bir belirteç verir ve bir paylaşılan anahtar bilgisini kanıtlayan sorgu. Verilen belirteç SOAP katmanında bir onaylama destekleme belirteci görünür. Hizmet bir X.509 sertifikası kullanarak istemcinin kimliğini doğrular. Kullanılan bağlama, hizmetin ortak anahtar ile şifrelenmiş bir istemci tarafından oluşturulan bir anahtarı olan koruma belirtecine sahip simetrik bir bağlamadır.  
+ Bu kimlik doğrulama modunda istemci, bu şekilde hizmette kimlik doğrulaması yapmaz, ancak bunun yerine STS tarafından verilen bir belirteç ve paylaşılan anahtar hakkında bilgi sahibi olduğunu gösterir. Verilen belirteç, SOAP katmanında bir onaylama destekleme belirteci olarak görünür. Hizmet, bir X. 509.440 sertifikası kullanarak istemcinin kimliğini doğrular. Kullanılan bağlama, koruma belirtecinin istemci tarafından oluşturulan ve hizmetin ortak anahtarıyla şifrelenen bir anahtar olduğu simetrik bir bağlamadır.  
   
  İlke  
   
- İlke 6.2.3 bağlama ayrıntıları için bkz.  
+ Bağlama ayrıntıları için yukarıdaki 6.2.3 içindeki Ilkeye bakın  
   
- Onaylama destekleme belirteci  
+ Destekleyici belirteç onaylama  
   
 ```xml  
 <sp:EndorsingSupportingTokens>  
@@ -1411,7 +1411,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üstbilgi örnekler: SignBeforeEncrypt, EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üst bilgisi örnekleri: SignBeforeEncrypt, EncryptSignature  
  İstek  
   
 ```xml  
@@ -1446,7 +1446,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -1474,7 +1474,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üstbilgi örnekler: EncryptBeforeSign  
+### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üst bilgisi örnekleri: EncryptBeforeSign  
  İstek  
   
 ```xml  
@@ -1509,7 +1509,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -1533,17 +1533,17 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
-## <a name="63-kerberos"></a>6.3 Kerberos  
- Bu kimlik doğrulama modu ile bir Kerberos anahtarı kullanarak hizmete istemcinin kimliğini doğrular. Bu aynı anahtar Ayrıca sunucu kimlik doğrulaması sağlar. Kullanılan bağlama, aşağıdaki özelliklere sahip bir simetrik bağlamadır;  
+## <a name="63-kerberos"></a>6,3 Kerberos  
+ Bu kimlik doğrulama modunda istemci Kerberos bileti kullanarak hizmeti doğrular. Aynı bilet aynı zamanda sunucu kimlik doğrulaması da sağlar. Kullanılan bağlama, aşağıdaki özelliklerle simetrik bir bağlamadır;  
   
- Koruma belirteci: Kerberos anahtarı ekleme modu .../IncludeToken/Once için ayarlanır.  
-Belirteç koruma: False  
+ Koruma belirteci: Kerberos bileti, ekleme modu. ../IncludeToken/Once olarak ayarlandı  
+Belirteç koruması: false  
   
- Tüm üst bilgisi ve gövdesi imza: Doğru  
+ Tüm başlık ve gövde Imzaları: doğru  
   
  Koruma sırası: SignBeforeEncrypt  
   
- İmza şifrele: Doğru  
+ Imzayı şifreleyin: doğru  
   
  İlke  
   
@@ -1599,7 +1599,7 @@ Belirteç koruma: False
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üstbilgi örnekler: SignBeforeEncrypt, EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üst bilgisi örnekleri: SignBeforeEncrypt, EncryptSignature  
  İstek  
   
 ```xml  
@@ -1625,7 +1625,7 @@ Belirteç koruma: False
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1647,7 +1647,7 @@ Belirteç koruma: False
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üstbilgi örnekler: EncryptBeforeSign  
+### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üst bilgisi örnekleri: EncryptBeforeSign  
  İstek  
   
 ```xml  
@@ -1656,7 +1656,7 @@ TBD
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -1664,17 +1664,17 @@ TBD
 </wsse:Security>  
 ```  
   
-#### <a name="64-issuedtoken"></a>6.4 IssuedToken  
- İstemci hizmete kimlik doğrulaması yapmaz, bu kimlik doğrulama modu ile bu nedenle, yerine istemci STS tarafından verilen bir belirteç sunar ve paylaşılan anahtar bilgi kanıtlar. İstemcisini, bu nedenle hizmet kimliği, bunun yerine STS şifreler paylaşılan anahtarı verilen belirtecin bir parçası olarak yalnızca hizmet anahtarının şifresini çözüm olacak şekilde. Aşağıdaki özelliklerle simetrik bağlama kullanılan bağlama gibidir;  
+#### <a name="64-issuedtoken"></a>6,4 IssuedToken  
+ Bu kimlik doğrulama modunda, istemci hizmette kimlik doğrulaması yapmaz, bunun yerine istemci, STS tarafından verilen bir belirteç ve paylaşılan bir anahtar hakkında bilgi sahibi olduğunu gösterir. Bu hizmet, istemci tarafından kimlik doğrulaması değil, bu nedenle, STS, paylaşılan anahtarı yalnızca hizmetin şifresini çözebilmesini sağlayan, verilen belirtecin bir parçası olarak şifreler. Kullanılan bağlama, aşağıdaki özelliklerle simetrik bağlama olarak verilmiştir;  
   
- Koruma belirteci: Belirteç, ekleme modu için .../IncludeToken/AlwaysToRecipient ayarlanır  
-Belirteç koruma: False  
+ Koruma belirteci: verilen belirteç, ekleme modu. ../IncludeToken/AlwaysToRecipient olarak ayarlandı  
+Belirteç koruması: false  
   
- Tüm üst bilgisi ve gövdesi imza: Doğru  
+ Tüm başlık ve gövde Imzaları: doğru  
   
  Koruma sırası: SignBeforeEncrypt  
   
- İmza şifrele: Doğru  
+ Imzayı şifreleyin: doğru  
   
  İlke  
   
@@ -1735,7 +1735,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üstbilgi örnekler: SignBeforeEncrypt, EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üst bilgisi örnekleri: SignBeforeEncrypt, EncryptSignature  
  İstek  
   
 ```xml  
@@ -1761,7 +1761,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1783,7 +1783,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üstbilgi örnekler: EncryptBeforeSign  
+### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üst bilgisi örnekleri: EncryptBeforeSign  
  İstek  
   
 ```xml  
@@ -1809,7 +1809,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -1831,22 +1831,22 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
-### <a name="65-using-sslnegotiated-for-service-authentication"></a>6.5 SslNegotiated hizmet kimlik doğrulaması için kullanma  
- Bu bölümde, bir grup olan bir güvenlik bağlamı belirteci başına WS-anahtar değeri, WS-Trust (WS-T) lk TLS protokolü yürüterek varılır SecureConversation (WS-SC) koruma belirtecine sahip bir simetrik bağlama kullanan kimlik doğrulama modları açıklanır / RSTR iletileri. WS-Trust kullanarak TLS el sıkışma uygulamasının Ayrıntılar TLSNEGO içinde açıklanmıştır. Burada ileti örneklerde SCT ilişkili güvenlik bağlamı ile zaten bir anlaşması kurulan varsayacağız.  
+### <a name="65-using-sslnegotiated-for-service-authentication"></a>Hizmet kimlik doğrulaması için Sslanlaşmalı kullanma 6,5  
+ Bu bölümde, WS-Trust (WS-T) RST/üzerinde TLS protokolünü yürüterek, anahtar değerine anlaşılan, her WS-SecureConversation (WS-SC) başına bir güvenlik bağlamı belirteci olan bir kimlik doğrulama modu grubu açıklanmaktadır. RSTR iletileri. WS-Trust kullanılarak TLS el sıkışma uygulamasının ayrıntıları TLSNEGO içinde açıklanmaktadır. Burada ileti örneklerinde, ilişkili bir güvenlik bağlamı olan SCT 'nin bir el sıkışma aracılığıyla zaten kurulduğu varsayılmaktadır.  
   
- Kullanılan bağlama, aşağıdaki özelliklere sahip bir simetrik bağlamadır;  
+ Kullanılan bağlama, aşağıdaki özelliklerle simetrik bir bağlamadır;  
   
- Koruma belirteci: SslContextToken, ekleme modu .../IncludeToken/Never için ayarlanır.  
-Belirteç koruma: False  
+ Koruma belirteci: SslContextToken, ekleme modu olarak ayarlandı. ../Includetoken/hiçbir  
+Belirteç koruması: false  
   
- Tüm üst bilgisi ve gövdesi imza: Doğru  
+ Tüm başlık ve gövde Imzaları: doğru  
   
  Koruma sırası: SignBeforeEncrypt  
   
- İmza şifrele: Doğru  
+ Imzayı şifreleyin: doğru  
   
-#### <a name="651-policy-for-sslnegotiated-service-authentication"></a>6.5.1 SslNegotiated hizmeti kimlik doğrulama İlkesi  
- Bu bölümdeki tüm kimlik doğrulama modları için ilke benzerdir ve yalnızca özel imzalı desteklemenin veya kullanılan belirteçleri onaylama farklılık gösterir.  
+#### <a name="651-policy-for-sslnegotiated-service-authentication"></a>Sslanlaşmalı hizmet kimlik doğrulaması için 6.5.1 ilkesi  
+ Bu bölümdeki tüm kimlik doğrulama modları için ilke benzerdir ve yalnızca belirli imzalı destekleyici veya onaylama belirteçlerine göre farklılık gösterir.  
   
 ```xml  
 <wsp:Policy wsu:Id='SslNegotiated_policy' >  
@@ -1901,14 +1901,14 @@ Belirteç koruma: False
 </wsp:Policy>  
 ```  
   
-#### <a name="652-anonymousforsslnegotiated"></a>6.5.2 AnonymousForSslNegotiated  
- Bu kimlik doğrulama modu ile istemci anonimdir ve bir X.509 sertifikası kullanarak hizmet kimlik doğrulaması. Kullanılan bağlama 6.5.1 yukarıda açıklandığı gibi simetrik bağlama bir örneğidir.  
+#### <a name="652-anonymousforsslnegotiated"></a>6.5.2 Anonymousforsslanlaşmalı  
+ Bu kimlik doğrulama modunda, istemci anonimdir ve hizmetin kimliği bir X. 509.440 sertifikası kullanılarak yapılır. Kullanılan bağlama, yukarıdaki 6.5.1 açıklanan simetrik bağlamanın bir örneğidir.  
   
  İlke  
   
- İlke Bağlama Ayrıntılar için 6.5.1 görürsünüz.  
+ Bağlama ayrıntıları için yukarıdaki 6.5.1 içindeki Ilkeye bakın.  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üstbilgi örnekler: SignBeforeEncrypt, EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üst bilgisi örnekleri: SignBeforeEncrypt, EncryptSignature  
  İstek  
   
 ```xml  
@@ -1934,7 +1934,7 @@ Belirteç koruma: False
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1956,7 +1956,7 @@ Belirteç koruma: False
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üstbilgi örnekler: EncryptBeforeSign  
+### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üst bilgisi örnekleri: EncryptBeforeSign  
  İstek  
   
 ```xml  
@@ -1982,7 +1982,7 @@ Belirteç koruma: False
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -2004,14 +2004,14 @@ Belirteç koruma: False
 </wsse:Security>  
 ```  
   
-#### <a name="653-usernameforsslnegotiated"></a>6.5.3 UserNameForSslNegotiated  
- Bu kimlik doğrulaması ile istemci modunda görüntülenen bir kullanıcı adı belirteci SOAP katmanında imzalı destekleme belirteci kullanarak kimliğini doğrular. Hizmet bir X.509 sertifikası kullanılarak kimlik doğrulaması yapılır. Kullanılan bağlama 6.5.1 içinde anlatıldığı gibi simetrik bağlama bir örneğidir.  
+#### <a name="653-usernameforsslnegotiated"></a>6.5.3 Usernameforsslanlaşmalı  
+ Bu kimlik doğrulama modunda istemci, SOAP katmanında imzalı destekleyici belirteç olarak görünen bir Kullanıcı adı belirteci kullanarak kimlik doğrular. Hizmetin kimliği bir X. 509.440 sertifikası kullanılarak yapılır. Kullanılan bağlama, 6.5.1 içinde açıklandığı gibi simetrik bağlamanın bir örneğidir.  
   
  İlke  
   
- Bağlaması ayrıntıları için yukarıdaki 6.5.1 bölümüne bakın  
+ Bağlama ayrıntıları için yukarıdaki 6.5.1 bölümüne bakın  
   
- Destekleme belirteci imzalayan  
+ İmzalı destekleme belirteci  
   
 ```xml  
 <sp:SignedSupportingTokens>  
@@ -2025,7 +2025,7 @@ Belirteç koruma: False
 </sp:SignedSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üstbilgi örnekler: SignBeforeEncrypt, EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üst bilgisi örnekleri: SignBeforeEncrypt, EncryptSignature  
  İstek  
   
 ```xml  
@@ -2054,7 +2054,7 @@ Belirteç koruma: False
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2076,7 +2076,7 @@ Belirteç koruma: False
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üstbilgi örnekler: EncryptBeforeSign  
+### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üst bilgisi örnekleri: EncryptBeforeSign  
  İstek  
   
 ```xml  
@@ -2105,7 +2105,7 @@ Belirteç koruma: False
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -2127,14 +2127,14 @@ Belirteç koruma: False
 </wsse:Security>  
 ```  
   
-#### <a name="654-issuedtokenforsslnegotiated"></a>6.5.4 IssuedTokenForSslNegotiated  
- Bu kimlik doğrulaması ile istemci hizmete, bu nedenle, ancak bunun yerine kimlik doğrulamasını yapmaz modu STS tarafından verilen bir belirteç verir ve bir paylaşılan anahtar bilgisini kanıtlar. Verilen belirteç SOAP katmanında bir onaylama destekleme belirteci görünür. Hizmet bir X.509 sertifikası kullanılarak kimlik doğrulaması yapılır. Kullanılan bağlama 6.5.1 yukarıda açıklandığı gibi simetrik bağlama bir örneğidir.  
+#### <a name="654-issuedtokenforsslnegotiated"></a>6.5.4 ıssuedtokenforsslanlaşmalı  
+ Bu kimlik doğrulama modunda istemci, bu şekilde hizmette kimlik doğrulaması yapmaz, ancak bunun yerine STS tarafından verilen bir belirteç ve paylaşılan anahtar hakkında bilgi sahibi olduğunu gösterir. Verilen belirteç, SOAP katmanında bir onaylama destekleme belirteci olarak görünür. Hizmetin kimliği bir X. 509.440 sertifikası kullanılarak yapılır. Kullanılan bağlama, yukarıdaki 6.5.1 açıklanan simetrik bağlamanın bir örneğidir.  
   
  İlke  
   
- Bağlaması ayrıntıları için yukarıdaki 6.5.1 bölümüne bakın  
+ Bağlama ayrıntıları için yukarıdaki 6.5.1 bölümüne bakın  
   
- Onaylama destekleme belirteci  
+ Destekleyici belirteç onaylama  
   
 ```xml  
 <sp:EndorsingSupportingTokens>  
@@ -2154,7 +2154,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üstbilgi örnekler: SignBeforeEncrypt, EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üst bilgisi örnekleri: SignBeforeEncrypt, EncryptSignature  
  İstek  
   
 ```xml  
@@ -2189,7 +2189,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2217,7 +2217,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üstbilgi örnekler: EncryptBeforeSign  
+### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üst bilgisi örnekleri: EncryptBeforeSign  
  İstek  
   
 ```xml  
@@ -2252,7 +2252,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -2276,14 +2276,14 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
-#### <a name="655-mutualsslnegotiated"></a>6.5.5 MutualSslNegotiated  
- Bu kimlik doğrulama modu ile hizmet ve istemci X.509 sertifikaları kullanarak kimlik doğrulaması. Kullanılan bağlama 6.5.1 yukarıda açıklandığı gibi simetrik bağlama bir örneğidir.  
+#### <a name="655-mutualsslnegotiated"></a>6.5.5 Mulualsslanlaşmalı  
+ Bu kimlik doğrulama moduyla, istemci ve hizmet X. 509.440 sertifikalarını kullanarak kimlik doğrular. Kullanılan bağlama, yukarıdaki 6.5.1 açıklanan simetrik bağlamanın bir örneğidir.  
   
  İlke  
   
- Bağlaması ayrıntıları için yukarıdaki 6.5.1 bölümüne bakın  
+ Bağlama ayrıntıları için yukarıdaki 6.5.1 bölümüne bakın  
   
- Onaylama destekleme belirteci  
+ Destekleyici belirteç onaylama  
   
 ```xml  
 <sp:EndorsingSupportingTokens>  
@@ -2298,7 +2298,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üstbilgi örnekler: SignBeforeEncrypt, EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üst bilgisi örnekleri: SignBeforeEncrypt, EncryptSignature  
  İstek  
   
 ```xml  
@@ -2324,7 +2324,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2346,7 +2346,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üstbilgi örnekler: EncryptBeforeSign  
+### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üst bilgisi örnekleri: EncryptBeforeSign  
  İstek  
   
 ```xml  
@@ -2372,7 +2372,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -2394,17 +2394,17 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
-### <a name="66-sspinegotiated"></a>6.6 SspiNegotiated  
- Bu kimlik doğrulama modu ile istemci ve sunucu kimlik doğrulaması gerçekleştirmek üzere bir anlaşma protokolü kullanılır. Kerberos Mümkünse, kullanılan aksi NTLM. Kullanılan bağlama, aşağıdaki özelliklere sahip bir simetrik bağlamadır;  
+### <a name="66-sspinegotiated"></a>6,6 SspiNegotiated  
+ Bu kimlik doğrulama modunda, istemci ve sunucu kimlik doğrulamasını gerçekleştirmek için bir anlaşma protokolü kullanılır. Mümkünse, Kerberos kullanılır, aksi takdirde NTLM kullanılır. Kullanılan bağlama, aşağıdaki özelliklerle simetrik bir bağlamadır;  
   
- Koruma belirteci: SpnegoContextToken, ekleme modu .../IncludeToken/AlwaysToRecipient için ayarlanır.  
-Belirteç koruma: False  
+ Koruma belirteci: SpnegoContextToken, ekleme modu. ../ıncludetoken/AlwaysToRecipient olarak ayarlandı  
+Belirteç koruması: false  
   
- Tüm üst bilgisi ve gövdesi imza: Doğru  
+ Tüm başlık ve gövde Imzaları: doğru  
   
  Koruma sırası: SignBeforeEncrypt  
   
- İmza şifrele: Doğru  
+ Imzayı şifreleyin: doğru  
   
  İlke  
   
@@ -2459,7 +2459,7 @@ Belirteç koruma: False
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üstbilgi örnekler: SignBeforeEncrypt, EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üst bilgisi örnekleri: SignBeforeEncrypt, EncryptSignature  
  İstek  
   
 ```xml  
@@ -2485,7 +2485,7 @@ Belirteç koruma: False
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2507,7 +2507,7 @@ Belirteç koruma: False
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üstbilgi örnekler: EncryptBeforeSign  
+### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üst bilgisi örnekleri: EncryptBeforeSign  
  İstek  
   
 ```xml  
@@ -2533,7 +2533,7 @@ Belirteç koruma: False
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  
@@ -2555,8 +2555,8 @@ Belirteç koruma: False
 </wsse:Security>  
 ```  
   
-### <a name="67-secureconversation"></a>6.7 SecureConversation  
- Kullanılan bağlama, WS-SecureConversation (WS-SC) başına bir SCT olan koruma belirtecine sahip simetrik bir bağlamadır. SCT kendisi bir anlaşma protokolünü kullanan, simetrik bir bağlamadır bir iç içe bağlama göre WS-Trust (WS-Trust) veya WS-SecureConversation (WS-SC) kullanılarak belirlenir. Anlaşma Protokolü, mümkün olduğunda istemci ve sunucu kimlik doğrulaması gerçekleştirmek için Kerberos kullanır. Kerberos kullanılamıyorsa, NTLM olarak geri döner.  
+### <a name="67-secureconversation"></a>6,7 SecureConversation  
+ Kullanılan bağlama, bir WS-SecureConversation (WS-SC) başına bir SCT olan koruma belirtecine sahip simetrik bir bağlamadır. SCT, bir anlaşma Protokolü kullanan simetrik bağlama olan, iç içe bir bağlamaya göre WS-Trust (WS-Trust) veya WS-SecureConversation (WS-SC) kullanılarak görüşülür. Anlaşma Protokolü, mümkünse istemci ve sunucu kimlik doğrulaması gerçekleştirmek için Kerberos kullanır. Kerberos kullanılmıyorsa, NTLM 'ye geri döner.  
   
  İlke  
   
@@ -2669,7 +2669,7 @@ Belirteç koruma: False
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üstbilgi örnekler: SignBeforeEncrypt, EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Güvenlik üst bilgisi örnekleri: SignBeforeEncrypt, EncryptSignature  
  İstek  
   
 ```xml  
@@ -2695,7 +2695,7 @@ Belirteç koruma: False
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2717,7 +2717,7 @@ Belirteç koruma: False
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üstbilgi örnekler: EncryptBeforeSign  
+### <a name="security-header-examples-encryptbeforesign"></a>Güvenlik üst bilgisi örnekleri: EncryptBeforeSign  
  İstek  
   
 ```xml  
@@ -2743,7 +2743,7 @@ Belirteç koruma: False
 </wsse:Security>  
 ```  
   
- Yanıt  
+ Yanıtıyla  
   
 ```xml  
 <wsse:Security>  

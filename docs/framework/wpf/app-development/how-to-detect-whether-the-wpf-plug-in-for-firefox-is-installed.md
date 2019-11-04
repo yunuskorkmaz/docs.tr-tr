@@ -8,23 +8,23 @@ helpviewer_keywords:
 - Firefox [WPF], detecting installation
 - detecting whether the WPF plug-in for Firefox is installed [WPF]
 ms.assetid: 5f839373-e3fb-44f1-88ad-4a0761f02189
-ms.openlocfilehash: f84a0a2af43931b3ada1f674390ec5d841b79a1c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: fdc7b516c316c7efc7056b549baf43191a5aedd1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690423"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423756"
 ---
 # <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>Nasıl yapılır: Firefox WPF Eklentisinin Yüklü Olup Olmadığını Algılama
 
-Windows Presentation Foundation (WPF) için Firefox eklentisini sağlayan [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] ve XAML dosyalarının Mozilla Firefox tarayıcınızda çalıştırın kaybedilir. Bu konu, HTML ve JavaScript Yöneticiler Firefox WPF eklentisinin yüklü olup olmadığını belirlemek için kullanabileceğiniz yazılmış bir komut dosyası sağlar.
+Firefox için Windows Presentation Foundation (WPF) eklentisi, XAML tarayıcı uygulamaları (XBAP) ve gevşek XAML dosyalarının Mozilla Firefox tarayıcısında çalıştırılmasını sağlar. Bu konu başlığı altında, yöneticilerin Firefox WPF eklentisinin yüklü olup olmadığını belirlemede kullanabileceğiniz HTML ve JavaScript 'te yazılmış bir komut dosyası sağlanmaktadır.
 
 > [!NOTE]
-> Yükleme hakkında daha fazla bilgi için bkz: dağıtma ve .NET Framework'ü algılama [geliştiriciler için .NET Framework yükleme](../../install/guide-for-developers.md).
+> .NET Framework yükleme, dağıtma ve algılama hakkında daha fazla bilgi için bkz. [geliştiricilere yönelik .NET Framework yükleme](../../install/guide-for-developers.md).
 
 ## <a name="example"></a>Örnek
 
-.NET Framework 3.5 yüklendiğinde, istemci bilgisayarın Firefox için WPF eklentisi ile yapılandırılır. Aşağıdaki örnek betik, Firefox WPF eklentisinin için denetler ve ardından uygun durum iletisini görüntüler.
+.NET Framework 3,5 yüklendiğinde, istemci bilgisayar Firefox için WPF eklentisi ile yapılandırılır. Aşağıdaki örnek betik, Firefox WPF eklentisini denetler ve ardından uygun bir durum iletisi görüntüler.
 
 ```html
 <HTML>
@@ -56,7 +56,7 @@ Windows Presentation Foundation (WPF) için Firefox eklentisini sağlayan [!INCL
 </HTML>
 ```
 
-Firefox için WPF eklentisi onay başarılı olursa, aşağıdaki durum iletisi görüntülenir:
+Firefox WPF eklentisi için denetim başarılı olursa aşağıdaki durum iletisi görüntülenir:
 
 `The WPF plug-in for Firefox is installed.`
 

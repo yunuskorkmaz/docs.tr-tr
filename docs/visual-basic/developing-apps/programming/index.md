@@ -5,37 +5,37 @@ helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 09bc9254c880d58ffed22971d3ff96ba341fdf83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68c200b3e47a0f96963e5872c854633a7c24e938
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61812684"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423983"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic'te Programlama
-Bu bölüm, Visual Basic uygulamasında oluşturma hakkında daha fazla bilgi için isteyebilirsiniz programlama görevlerini açıklar.  
+Bu bölümde, Visual Basic uygulamanızı oluştururken daha fazla bilgi edinmek isteyebileceğiniz programlama görevleri açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu bölümde  
  [Bilgisayar Kaynaklarına Erişme](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
- Nasıl kullanılacağı hakkında belgeleri içerir `My.Computer` bilgisayar bilgilerine erişim uygulamanın çalıştığı ve nasıl bilgisayarı denetlemek nesne.  
+ Uygulamanın çalıştığı bilgisayar hakkındaki bilgilere erişmek ve bilgisayarı denetlemek için `My.Computer` nesnesinin nasıl kullanılacağına ilişkin belgeler içerir.  
   
  [Uygulamadan Günlüğe Bilgi Kaydetme](../../../visual-basic/developing-apps/programming/log-info/index.md)  
- Bilgileri günlüğe kaydetmek, uygulama kullanımından eklemeye ilişkin belge içeren `My.Application.Log` ve `My.Log` nesneleri ve uygulamanın günlüğe kaydetme özellikleri genişletme.  
+ `My.Application.Log` ve `My.Log` nesneleri kullanarak uygulamanızdaki bilgilerin nasıl günlüğe kaydedilmesine ve uygulamanın günlüğe kaydetme yeteneklerini genişletmenize ilişkin belgeler içerir.  
   
  [Kullanıcı Verilerine Erişme](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
- Kullanarak gerçekleştirebileceğiniz görevler hakkında bilgi içeren `My.User` nesne.  
+ `My.User` nesnesini kullanarak gerçekleştirebileceğiniz görevlere ilişkin belgeler içerir.  
   
  [Uygulama Formlarına Erişme](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)  
- Kullanarak bir uygulama formlarına erişme hakkında belgeleri içerir `My.Forms` ve `My.Application` nesneleri.  
+ `My.Forms` ve `My.Application` nesnelerini kullanarak bir uygulamanın formlarına erişme belgelerini içerir.  
   
  [Uygulama Web Hizmetlerine Erişme](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
- Erişim kullanan uygulama tarafından başvurulan Web Hizmetleri hakkında belgeleri içerir `My.WebServices` nesne.  
+ `My.WebServices` nesnesi kullanılarak uygulama tarafından başvurulan Web hizmetlerine erişme hakkında belge içerir.  
   
  [Uygulama Ayarlarına Erişme](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
- Kullanarak uygulama ayarlarına erişme hakkında belgeleri içerir `My.Settings` nesne.  
+ `My.Settings` nesnesini kullanarak bir uygulamanın ayarlarına erişme belgelerini içerir.  
   
- [Sürücüleri, Dizinleri ve Dosyaları İşleme](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
- Kullanarak dosya sistemini erişim hakkında belgeleri içerir `My.Computer.FileSystem` nesne.  
+ [Sürücüleri, Dizinleri ve Dosyaları İşleme](drives-directories-files/index.md)  
+ `My.Computer.FileSystem` nesnesini kullanarak dosya sistemine erişme hakkında belge içerir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

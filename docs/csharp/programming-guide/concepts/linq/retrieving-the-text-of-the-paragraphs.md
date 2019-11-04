@@ -2,30 +2,30 @@
 title: Paragrafların (C#) metnini alma
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 986145fa62722a35d23831a3818b89e63529b85f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cedca9df84ee687a9e304cde0015b46d07956364
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253053"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423334"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Paragrafların (C#) metnini alma
 Bu örnek, önceki örnekte yer alan [ve paragrafları ve stilleriniC#() alma](./retrieving-the-paragraphs-and-their-styles.md)hakkında daha fazla örnek oluşturur. Bu yeni örnek, her bir paragrafın metnini dize olarak alır.  
   
- Bu örnek, metni almak için anonim türler koleksiyonu ve proje, `Text`yeni bir üyenin eklenmesiyle anonim bir türün yeni bir koleksiyonu aracılığıyla yinelenen ek bir sorgu ekler. Birden çok dizeyi <xref:System.Linq.Enumerable.Aggregate%2A> tek bir dizede birleştirmek için standart sorgu işlecini kullanır.  
+ Bu örnek, metni almak için, anonim türler koleksiyonu aracılığıyla yinelenen bir sorgu ekler ve yeni bir üyenin eklenmesiyle adsız bir türün yeni bir koleksiyonunu `Text`. Birden çok dizeyi tek bir dizede birleştirmek için <xref:System.Linq.Enumerable.Aggregate%2A> standart sorgu işlecini kullanır.  
   
  Bu teknik (yani, ilk olarak anonim bir türün koleksiyonuna yansıtırken, daha sonra bu koleksiyonun yeni bir anonim tür koleksiyonuna proje için kullanılması) ortak ve kullanışlı bir derlemedir. Bu sorgu, ilk anonim türe yansıtılamadan yazılmış olabilir. Ancak, yavaş değerlendirme nedeniyle bunu yapmak çok daha fazla işlem gücü kullanmaz. Deyim yığında daha kısa süreli nesneler oluşturur, ancak bu durum performansı önemli ölçüde düşürür.  
   
  Tabii ki, paragrafları alma işlevini, her bir paragrafın stilini ve her bir paragrafın metnini içeren tek bir sorgu yazmak mümkün olacaktır. Ancak, sonuçta elde edilen kod daha modüler ve bakımını daha kolay olduğundan, genellikle daha karmaşık bir sorguyu birden çok sorguya bölmek faydalı olur. Ayrıca, sorgunun bir bölümünü yeniden kullanmanız gerekiyorsa, sorgular bu şekilde yazılmışsa yeniden düzenleme daha kolay olur.  
   
- Birlikte zincirleme olan bu sorgular, konu [öğreticisinde ayrıntılı olarak incelenen işleme modelini kullanır: Sorguları birlikte (C#)](./tutorial-chaining-queries-together.md)zincirleme.  
+ Birlikte zincirleme olan bu sorgular, konu öğreticisinde ayrıntılı olarak incelenen işleme modelini kullanın [: sorguları birlikte zincirlemeC#()](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
 ## <a name="example"></a>Örnek  
  Bu örnekte, bir WordprocessingML belgesi işlenir, öğe düğümü, stil adı ve her paragrafın metni belirlenir. Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır. Yeni sorgu, aşağıdaki koddaki açıklamalarda çağrılır.  
   
  Bu örnek için kaynak belge oluşturmaya ilişkin yönergeler için bkz. [kaynak Office Open XML belgesi (C#) oluşturma](./creating-the-source-office-open-xml-document.md).  
   
- Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanındaki türleri kullanır.  
+ Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -138,11 +138,11 @@ StyleName:Code >Hello World<
 ```  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Sonraki örnek, birden çok dizeyi tek bir dizeye birleştirmek için yerine <xref:System.Linq.Enumerable.Aggregate%2A>bir genişletme yönteminin nasıl kullanılacağını gösterir.  
+ Sonraki örnek, birden çok dizeyi tek bir dizeye birleştirmek için <xref:System.Linq.Enumerable.Aggregate%2A>yerine bir genişletme yönteminin nasıl kullanılacağını gösterir.  
   
 - [Bir genişletme yöntemi (C#) kullanılarak yeniden düzenleme](./refactoring-using-an-extension-method.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: WordprocessingML belgesinde (C#) içeriği düzenleme](./tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Öğretici: bir WordprocessingML belgesinde (C#) içeriği düzenleme](shape-of-wordprocessingml-documents.md)
 - [LINQ to XML (C#) Içinde ertelenmiş yürütme ve geç değerlendirme](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

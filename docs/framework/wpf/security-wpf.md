@@ -13,17 +13,17 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 031313c6f56801f032a5aeaff06cde8d0550af92
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
-ms.translationtype: MT
+ms.openlocfilehash: 7e29b724259604a6ee09dff9cf9133b1739eb9ad
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582407"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424782"
 ---
 # <a name="security-wpf"></a>Güvenlik (WPF)
 <a name="introduction"></a>Windows Presentation Foundation (WPF) tek başına ve tarayıcıda barındırılan uygulamalar geliştirirken güvenlik modelini göz önünde bulundurmanız gerekir. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulamalar, Windows Installer (. msi), XCopy veya ClickOnce kullanılarak dağıtılıp dağıtılmayacağı Kısıtlanmamış izinlerle (CAS**FullTrust** izin kümesi) yürütülür. ClickOnce ile kısmi güven dağıtma, tek başına WPF uygulamaları desteklenmez. Ancak, bir tam güven ana bilgisayar uygulaması, .NET Framework eklenti modelini kullanarak kısmi güven <xref:System.AppDomain> oluşturabilir. Daha fazla bilgi için bkz. [WPF Eklentilerine Genel Bakış](./app-development/wpf-add-ins-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar Windows Internet Explorer veya Firefox tarafından barındırılır ve daha fazla bilgi Için [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] veya gevşek [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] belgeler olabilir. bkz. [WPF XAML tarayıcı uygulamalarına genel bakış](./app-development/wpf-xaml-browser-applications-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar Windows Internet Explorer veya Firefox tarafından barındırılır ve daha fazla bilgi Için XAML tarayıcı uygulamaları (XBAP) veya gevşek [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] belgeleri olabilir. bkz. [WPF XAML tarayıcı uygulamalarına genel bakış](./app-development/wpf-xaml-browser-applications-overview.md).  
   
  tarayıcıda barındırılan uygulamalar [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], varsayılan olarak varsayılan CA**Internet** bölgesi izin kümesiyle sınırlı bir kısmi güven güvenlik alanı içinde yürütülür. Böylece, tarayıcıda barındırılan uygulamaları istemci bilgisayardan, normal web uygulamalarının yalıtılacak şekilde bekleeceğiniz şekilde [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] yalıtılmıştır. Bir XBAP, dağıtım URL 'sinin güvenlik bölgesine ve istemcinin güvenlik yapılandırmasına bağlı olarak, ayrıcalıkları tam güvenle yükseltebilir. Daha fazla bilgi için bkz. [WPF Kısmi güven güvenliği](wpf-partial-trust-security.md).  
   
@@ -45,13 +45,13 @@ ms.locfileid: "72582407"
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>Güvenli gezinti  
- @No__t_0 için, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] iki gezinti türünü ayırır: uygulama ve tarayıcı.  
+ XBAP 'ler için [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] iki gezinti türünü ayırır: uygulama ve tarayıcı.  
   
  *Uygulama gezintisi* , bir tarayıcı tarafından barındırılan bir uygulama içindeki içerik öğeleri arasında gezinmektedir. *Tarayıcı gezintisi* , tarayıcının içerik ve konum URL 'sini değiştiren gezinidir. Uygulama Gezintisi (genellikle XAML) ve tarayıcı Gezintisi (genellikle HTML) arasındaki ilişki aşağıdaki çizimde gösterilmiştir:
   
  ![Uygulama gezintisi ve tarayıcı gezintisi arasındaki ilişki.](./media/security-wpf/application-browser-navigation-relationship.png)  
   
- @No__t_0 için güvenli olarak kabul edilen içeriğin türü öncelikle uygulama gezintisi veya tarayıcı gezinmesinin kullanılıp kullanılmadığını belirler.  
+ Bir XBAP 'nin gidilecek güvenli olarak kabul edilen içerik türü öncelikle uygulama gezintisi veya tarayıcı gezinmesinin kullanılıp kullanılmadığını belirler.  
   
 <a name="Application_Navigation_Security"></a>   
 ### <a name="application-navigation-security"></a>Uygulama gezintisi güvenliği  
@@ -83,7 +83,7 @@ ms.locfileid: "72582407"
   
 - **Protokol**. Kullanılan protokol **http**, **https**, **File**ya da **mailto**'dir.  
   
- @No__t_0, içeriğe bu koşullara uygun olmayan bir şekilde gitmeye çalışırsa, bir <xref:System.Security.SecurityException> oluşturulur.  
+ Bir XBAP, içeriğe bu koşullara uygun olmayan bir şekilde gitmeyi denerse bir <xref:System.Security.SecurityException> oluşturulur.  
   
 <a name="InternetExplorerSecuritySettings"></a>   
 ## <a name="web-browsing-software-security-settings"></a>Web 'e göz atma yazılım güvenlik ayarları  
@@ -124,7 +124,7 @@ ms.locfileid: "72582407"
   
 - **Gevşek XAML**. Internet Explorer 'ın dosyalara [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] erişip erişemeyeceğini denetler. (Etkinleştir, devre dışı bırak ve sor seçenekleri).  
   
-- **XAML tarayıcı uygulamaları**. Internet Explorer 'ın [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] erişip erişemeyeceğini denetler. (Etkinleştir, devre dışı bırak ve sor seçenekleri).  
+- **XAML tarayıcı uygulamaları**. Internet Explorer 'ın XBAP 'ye gidip erişip çalıştıramayacağını denetler. (Etkinleştir, devre dışı bırak ve sor seçenekleri).  
   
  Varsayılan olarak, bu ayarların hepsi **Internet**, **Yerel intranet**ve **Güvenilen siteler** bölgeleri için etkindir ve **Yasak siteler** bölgesi için devre dışıdır.  
   
@@ -207,9 +207,9 @@ ms.locfileid: "72582407"
 |---------------------|  
 |FEATURE_ENABLE_SCRIPT_PASTE_URLACTION_IF_PROMPT|  
   
- Windows Internet Explorer 'da WPF <xref:System.Windows.Controls.WebBrowser> denetimi içeren bir kısmi güven [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] çalıştırırsanız WPF, Internet Explorer işleminin adres alanındaki WebBrowser ActiveX denetimini barındırır. WebBrowser ActiveX denetimi Internet Explorer işleminde barındırıldığından, Internet Explorer 'ın tüm özellik denetimleri de WebBrowser ActiveX denetimi için etkinleştirilmiştir.  
+ Windows Internet Explorer 'da WPF <xref:System.Windows.Controls.WebBrowser> denetimi içeren bir kısmi güven XAML tarayıcı uygulaması (XBAP) çalıştırırsanız, WPF, Internet Explorer işleminin adres alanındaki WebBrowser ActiveX denetimini barındırır. WebBrowser ActiveX denetimi Internet Explorer işleminde barındırıldığından, Internet Explorer 'ın tüm özellik denetimleri de WebBrowser ActiveX denetimi için etkinleştirilmiştir.  
   
- Internet Explorer 'da çalışan XBAP 'ler, normal tek başına uygulamalara kıyasla ek bir güvenlik düzeyi de alır. Bu ek güvenlik, Internet Explorer 'ın ve bu nedenle WebBrowser ActiveX denetiminin, [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] ve [!INCLUDE[win7](../../../includes/win7-md.md)] ' de varsayılan olarak korumalı modda çalışmasına bağlıdır. Korumalı mod hakkında daha fazla bilgi için bkz. [korumalı modda anlama ve Internet Explorer 'Da çalışma](https://go.microsoft.com/fwlink/?LinkId=179393).  
+ Internet Explorer 'da çalışan XBAP 'ler, normal tek başına uygulamalara kıyasla ek bir güvenlik düzeyi de alır. Bu ek güvenlik, Internet Explorer 'ın ve bu nedenle WebBrowser ActiveX denetiminin, [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] ve [!INCLUDE[win7](../../../includes/win7-md.md)]' de varsayılan olarak korumalı modda çalışmasına bağlıdır. Korumalı mod hakkında daha fazla bilgi için bkz. [korumalı modda anlama ve Internet Explorer 'Da çalışma](https://go.microsoft.com/fwlink/?LinkId=179393).  
   
 > [!NOTE]
 > Firefox 'ta WPF <xref:System.Windows.Controls.WebBrowser> denetimi içeren bir XBAP çalıştırmayı denerseniz, Internet bölgesinde bir <xref:System.Security.SecurityException> oluşturulur. Bunun nedeni WPF Güvenlik ilkesidir.  
@@ -220,7 +220,7 @@ ms.locfileid: "72582407"
   
  Ancak, bir APTCA derlemesinin GAC 'ye yüklendikten sonra bir güvenlik kusuru göstermesi mümkündür. Bir güvenlik kusurunu bulduktan sonra, derleme yayımcıları mevcut kurulumlarda sorunu gidermek ve sorun keşfedildiğinde oluşabilecek yüklemelere karşı korumak için bir güvenlik güncelleştirmesi oluşturabilir. Güncelleştirme için bir seçenek derlemeyi kaldırmakla birlikte, derlemeyi kullanan diğer tam güvenilir istemci uygulamaları da kesintiye uğramayabilir.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], APTCA derlemesini kaldırmadan kısmen güvenilen [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] için bir APTCA derlemesinin devre dışı bırakılabileceği bir mekanizma sağlar.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], APTCA derlemesini kaldırmadan kısmen güvenilen XBAP 'ler için bir APTCA derlemesinin devre dışı bırakılabileceği bir mekanizma sağlar.  
   
  Bir APTCA derlemesini devre dışı bırakmak için özel bir kayıt defteri anahtarı oluşturmanız gerekir:  
   
@@ -258,7 +258,7 @@ ms.locfileid: "72582407"
  Bu ayarla, dış içerik, uygulamayı barındıran işlemden ayrı bir işleme yüklenir. Bu işlem, varsayılan Internet bölgesi izin kümesiyle kısıtlıdır ve bu, barındırma uygulamasından ve istemci bilgisayardan etkin bir şekilde yalımalıdır.  
   
 > [!NOTE]
-> Tek başına bir uygulamadaki bir <xref:System.Windows.Navigation.NavigationWindow> veya <xref:System.Windows.Controls.Frame> [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dosyalara yönelik gezinti,, PresentationHost işlemini içeren WPF tarayıcısı barındırma altyapısına göre uygulansa bile, güvenlik düzeyi içerik, doğrudan [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ve [!INCLUDE[win7](../../../includes/win7-md.md)] (PresentationHost üzerinden olmaya devam edecek) üzerinde Internet Explorer 'a yüklenir. Bunun nedeni, bir Web tarayıcısı kullanan tek başına bir WPF uygulamasının Internet Explorer 'ın ek korumalı mod güvenliği özelliği sağlamasıdır.  
+> Tek başına bir uygulamadaki bir <xref:System.Windows.Navigation.NavigationWindow> veya <xref:System.Windows.Controls.Frame> dosya [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] gevşek olan dosyalar, PresentationHost işlemini içeren WPF tarayıcısı barındırma altyapısına göre uygulansa bile, güvenlik düzeyi Şu süreden biraz küçüktür içerik, [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ve [!INCLUDE[win7](../../../includes/win7-md.md)] üzerinde doğrudan Internet Explorer 'a yüklenir (yine de PresentationHost aracılığıyla olmaya devam eder). Bunun nedeni, bir Web tarayıcısı kullanan tek başına bir WPF uygulamasının Internet Explorer 'ın ek korumalı mod güvenliği özelliği sağlamasıdır.  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Güvenliği geliştiren WPF uygulamaları geliştirmeye yönelik kaynaklar  

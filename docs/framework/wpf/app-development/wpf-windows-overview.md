@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8c650ceab57a46cb6dd396111e7a93163a62299f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040870"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424936"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows'a Genel Bakış
 Kullanıcılar Windows aracılığıyla Windows Presentation Foundation (WPF) tek başına uygulamalarıyla etkileşime geçer. Bir pencerenin birincil amacı, verileri görselleştirerek kullanıcıların verilerle etkileşime geçmesini sağlayan içeriği barındırmak için kullanılır. Tek başına [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar, <xref:System.Windows.Window> sınıfını kullanarak kendi pencerelerini sağlar. Bu konu, Windows 'un tek başına uygulamalarda oluşturulması ve yönetilmesi temellerini kapsamadan önce <xref:System.Windows.Window> tanıtır.  
   
 > [!NOTE]
-> [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] ve gevşek [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sayfaları dahil, tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar kendi pencerelerini sağlamamalıdır. Bunun yerine, Windows Internet Explorer tarafından sunulan Windows 'da barındırılır. Bkz. [WPF XAML tarayıcı uygulamalarına genel bakış](wpf-xaml-browser-applications-overview.md).  
+> XAML tarayıcı uygulamaları (XBAP) ve gevşek [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sayfaları dahil olmak üzere tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar kendi pencerelerini sağlamamalıdır. Bunun yerine, Windows Internet Explorer tarafından sunulan Windows 'da barındırılır. Bkz. [WPF XAML tarayıcı uygulamalarına genel bakış](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Pencere sınıfı  
@@ -471,7 +471,7 @@ Pencerenin varsayılan görünümü, aşağıdaki şekilde gösterildiği gibi b
   
  Bununla birlikte, bu, ClickOnce kullanılarak Internet 'ten veya yerel intranet bölgesinden başlatılan uygulamalara verilen izin kümesinin dışındadır. Sonuç olarak, kullanıcılar bir ClickOnce güvenlik uyarısı alır ve uygulamanın izin kümesini tam güvenle yükseltmek gerekecektir.  
   
- Ayrıca [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], varsayılan olarak Windows veya iletişim kutularını gösteremez. Tek başına uygulama güvenliği konuları hakkında bir tartışma için bkz. [WPF Güvenlik Stratejisi-Platform güvenliği](../wpf-security-strategy-platform-security.md).  
+ Ayrıca, XBAP varsayılan olarak Windows veya iletişim kutularını gösteremez. Tek başına uygulama güvenliği konuları hakkında bir tartışma için bkz. [WPF Güvenlik Stratejisi-Platform güvenliği](../wpf-security-strategy-platform-security.md).  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>Diğer Windows türleri  

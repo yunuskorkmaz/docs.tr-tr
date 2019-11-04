@@ -4,12 +4,12 @@ description: Tüm C# programlarda çekirdek türleri (Numerics, dizeler ve nesne
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: f984321ab01fc4b5ddd92a20b178748de50246da
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 7a75ad5080cd2646070447cbc3dcc46b8c73dd65
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037663"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420708"
 ---
 # <a name="types-variables-and-values"></a>Türler, değişkenler ve değerler
 
@@ -66,7 +66,7 @@ Bir tür, istemci kodunun türün bir örneğini oluşturduğunda sağladığı 
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
-Tür parametresinin kullanımı, her öğeyi [nesneye](language-reference/keywords/object.md)dönüştürmek zorunda kalmadan her türlü öğe türünü tutmak için aynı sınıfı yeniden kullanmayı mümkün kılar. Derleyici, koleksiyon öğelerinin belirli türünü bildiğinden ve derleme zamanında bir hata tetikleyebildiğinden, genel koleksiyon sınıfları *kesin türü belirtilmiş koleksiyonlar* olarak adlandırılır. `strings` Örneğin, önceki örnek. Daha fazla bilgi için bkz. [Genel türler](programming-guide/generics/index.md).
+Tür parametresinin kullanımı, her öğeyi [nesneye](language-reference/builtin-types/reference-types.md#the-object-type)dönüştürmek zorunda kalmadan her türlü öğe türünü tutmak için aynı sınıfı yeniden kullanmayı mümkün kılar. Derleyici, koleksiyon öğelerinin belirli türünü bildiğinden ve derleme zamanında bir hata tetikleyebildiğinden, genel koleksiyon sınıfları *kesin türü belirtilmiş koleksiyonlar* olarak adlandırılır. `strings` Örneğin, önceki örnek. Daha fazla bilgi için bkz. [Genel türler](programming-guide/generics/index.md).
 
 ## <a name="implicit-types-anonymous-types-and-tuple-types"></a>Örtülü türler, anonim türler ve demet türleri
 
@@ -82,9 +82,9 @@ Bir yöntemden birden fazla değer döndürmek, yaygın bir yöntemdir. Tek bir 
   
 - Devralma ilkesini destekler. Türler, *temel türler*olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. <xref:System.Int32> (C# anahtar sözcük:`int`) gibi yerleşik sayısal türler dahil olmak üzere tüm türler, sonunda<xref:System.Object>(C# anahtar sözcük:`object`) olan tek bir temel türden türetilir. Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../standard/common-type-system.md) (Cts) denir. ' De C#devralma hakkında daha fazla bilgi için bkz. [Devralma](programming-guide/classes-and-structs/inheritance.md).  
   
-- CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü*olarak tanımlanır. Bu, .NET Framework sınıf kitaplığındaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. [Struct](language-reference/keywords/struct.md) anahtar sözcüğünü kullanarak tanımladığınız türler değer türleridir; Tüm yerleşik sayısal türler **yapılar**' dur. Değer türleri hakkında daha fazla bilgi için bkz. [yapılar](structs.md). [Sınıf](language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri hakkında daha fazla bilgi için bkz. [sınıflar](classes.md). Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
+- CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü*olarak tanımlanır. Bu, .NET Framework sınıf kitaplığındaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. [Struct](language-reference/keywords/struct.md) anahtar sözcüğünü kullanarak tanımladığınız türler değer türleridir; Tüm yerleşik sayısal türler **yapılar**' dur. Değer türleri hakkında daha fazla bilgi için bkz. [yapılar](structs.md). [Sınıf](language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri hakkında daha fazla bilgi için bkz. [sınıflar](programming-guide/classes-and-structs/classes.md). Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yapılar](structs.md)
-- [Sınıflar](classes.md)
+- [Sınıflar](programming-guide/classes-and-structs/classes.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: d752f4815de16daa466302881116e80aceec6edf
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 76fa13d4a12362d04c832fd59ee69db5a6811029
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040903"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454451"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Nasıl yapılır: Web Hizmetine Bağlama
 Bu örnek, Web hizmeti yöntem çağrıları tarafından döndürülen nesnelere nasıl bağlanılacağını gösterir.  
@@ -47,6 +47,6 @@ Bu örnek, Web hizmeti yöntem çağrıları tarafından döndürülen nesnelere
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
+- [Veri Bağlamaya Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)
 - [Bağlama Kaynaklarına Genel Bakış](binding-sources-overview.md)
 - [XAML'de Bağlama için Veriyi Kullanılabilir Yapma](how-to-make-data-available-for-binding-in-xaml.md)

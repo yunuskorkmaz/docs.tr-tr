@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: bf4617d838ba7f02523d7bbdbb57932c033f4a9e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9ec6716fefdc8de75d7e523c56ae0b3a02c8cf02
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958670"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424638"
 ---
 # <a name="dialog-boxes-overview"></a>İletişim kutularına genel bakış
 Tek başına uygulamalar genellikle uygulamanın çalıştığı ana verileri görüntüleyen ve menü çubukları, araç çubukları ve durum çubukları gibi [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mekanizmalarda bu verileri işleme işlevselliğini sunan bir ana pencereye sahiptir. Önemsiz olmayan bir uygulama, aşağıdakileri yapmak için ek pencereler de gösterebilir:  
@@ -40,12 +40,12 @@ Tek başına uygulamalar genellikle uygulamanın çalıştığı ana verileri g�
   
  ![Uygulama kapanmadan önce belgedeki değişiklikleri kaydetmek isteyip istemediğinizi soran bir sözcük Işlemcisi iletişim kutusu.](./media/dialog-boxes-overview/word-processor-dialog.png)  
   
- İleti kutusu oluşturmak için <xref:System.Windows.MessageBox> sınıfını kullanırsınız. <xref:System.Windows.MessageBox>ileti kutusu metnini, başlığı, simgeyi ve düğmelerini aşağıdaki gibi bir kod kullanarak yapılandırmanıza olanak tanır.  
+ İleti kutusu oluşturmak için <xref:System.Windows.MessageBox> sınıfını kullanırsınız. <xref:System.Windows.MessageBox>, aşağıdaki gibi bir kod kullanarak ileti kutusu metnini, başlığı, simgeyi ve düğmelerini yapılandırmanıza olanak tanır.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- İleti kutusu görüntülemek için, aşağıdaki kodda gösterildiği gibi `static` <xref:System.Windows.MessageBox.Show%2A> yöntemini çağırın.  
+ İleti kutusu görüntülemek için, aşağıdaki kodda gösterildiği gibi `static`<xref:System.Windows.MessageBox.Show%2A> yöntemini çağırın.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -55,9 +55,9 @@ Tek başına uygulamalar genellikle uygulamanın çalıştığı ana verileri g�
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- İleti kutularını kullanma hakkında daha fazla bilgi için, <xref:System.Windows.MessageBox>bkz., [MessageBox örneği](https://go.microsoft.com/fwlink/?LinkID=160023)ve [iletişim kutusu örneği](https://go.microsoft.com/fwlink/?LinkID=159984).  
+ İleti kutularını kullanma hakkında daha fazla bilgi için bkz. <xref:System.Windows.MessageBox>, [MessageBox örneği](https://go.microsoft.com/fwlink/?LinkID=160023)ve [iletişim kutusu örneği](https://go.microsoft.com/fwlink/?LinkID=159984).  
   
- , <xref:System.Windows.MessageBox> Basit bir iletişim kutusu kullanıcı deneyimi sunabilse de, kullanmanın <xref:System.Windows.MessageBox> avantajı kısmi güven güvenlik alanı içinde çalışan uygulamalar tarafından gösterilebilecek tek bir pencere türüdür (bkz. [güvenlik](../security-wpf.md)) [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+ <xref:System.Windows.MessageBox> basit bir iletişim kutusu kullanıcı deneyimi sunabilse de, <xref:System.Windows.MessageBox> kullanmanın avantajı, kısmi güven güvenlik alanı (bkz. [güvenlik](../security-wpf.md)) IÇINDE (XAML tarayıcısı gibi) çalışan uygulamalar tarafından gösterilebilecek tek pencere türüdür. uygulamalar (XBAP).  
   
  Çoğu iletişim kutusu, metin, seçim (onay kutuları), karşılıklı kullanım dışı seçim (radyo düğmeleri) ve liste seçimi (liste kutuları, Birleşik giriş kutuları, açılan liste kutuları) gibi bir ileti kutusunun sonucundan daha karmaşık veriler görüntüler ve toplar. Bunlar için, Windows Presentation Foundation (WPF) birkaç ortak iletişim kutusu sağlar ve bunların kullanımı tam güvenle çalışan uygulamalarla sınırlı olsa da, kendi iletişim kutularınızı oluşturmanızı sağlar.  
   
@@ -73,12 +73,12 @@ Tek başına uygulamalar genellikle uygulamanın çalıştığı ana verileri g�
   
  ![Dosyanın alınması için konumu gösteren bir açık iletişim kutusu.](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
- Ortak dosya Aç iletişim kutusu <xref:Microsoft.Win32.OpenFileDialog> sınıf olarak uygulanır ve <xref:Microsoft.Win32> ad alanında bulunur. Aşağıdaki kod, bir tane oluşturma, yapılandırma ve gösterme ve sonucun nasıl işlenmesi gerektiğini gösterir.  
+ Ortak dosya Aç iletişim kutusu, <xref:Microsoft.Win32.OpenFileDialog> sınıfı olarak uygulanır ve <xref:Microsoft.Win32> ad alanında bulunur. Aşağıdaki kod, bir tane oluşturma, yapılandırma ve gösterme ve sonucun nasıl işlenmesi gerektiğini gösterir.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#openfiledialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#openfiledialogboxcodebehind)]  
   
- Dosya Aç iletişim kutusu hakkında daha fazla bilgi için bkz <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>.  
+ Dosya Aç iletişim kutusu hakkında daha fazla bilgi için bkz. <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>.  
   
 > [!NOTE]
 > <xref:Microsoft.Win32.OpenFileDialog>, kısmi güvenle çalışan uygulamalar tarafından dosya adlarını güvenle almak için kullanılabilir (bkz. [güvenlik](../security-wpf.md)).  
@@ -89,12 +89,12 @@ Tek başına uygulamalar genellikle uygulamanın çalıştığı ana verileri g�
   
  ![Dosyanın kaydedileceği konumu gösteren bir farklı Kaydet iletişim kutusu.](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
- Ortak dosya Kaydet iletişim kutusu <xref:Microsoft.Win32.SaveFileDialog> sınıf olarak uygulanır ve <xref:Microsoft.Win32> ad alanında bulunur. Aşağıdaki kod, bir tane oluşturma, yapılandırma ve gösterme ve sonucun nasıl işlenmesi gerektiğini gösterir.  
+ Ortak dosya Kaydet iletişim kutusu <xref:Microsoft.Win32.SaveFileDialog> sınıfı olarak uygulanır ve <xref:Microsoft.Win32> ad alanında bulunur. Aşağıdaki kod, bir tane oluşturma, yapılandırma ve gösterme ve sonucun nasıl işlenmesi gerektiğini gösterir.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#savefiledialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#savefiledialogboxcodebehind)]  
   
- Dosya Kaydet iletişim kutusu hakkında daha fazla bilgi için bkz <xref:Microsoft.Win32.SaveFileDialog?displayProperty=nameWithType>.  
+ Dosya Kaydet iletişim kutusu hakkında daha fazla bilgi için bkz. <xref:Microsoft.Win32.SaveFileDialog?displayProperty=nameWithType>.  
   
 <a name="Print_Dialog"></a>   
 ### <a name="print-dialog-box"></a>Yazdır iletişim kutusu
@@ -103,22 +103,22 @@ Aşağıdaki şekilde gösterilen Yazdır iletişim kutusu, bir kullanıcının 
   
 ![Yazdır iletişim kutusunu gösteren ekran görüntüsü.](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
-Ortak Yazdır iletişim kutusu <xref:System.Windows.Controls.PrintDialog> sınıf olarak uygulanır ve <xref:System.Windows.Controls> ad alanında bulunur. Aşağıdaki kod, bir tane oluşturma, yapılandırma ve görüntüleme işlemlerinin nasıl yapılacağını gösterir.  
+Ortak Yazdır iletişim kutusu <xref:System.Windows.Controls.PrintDialog> sınıfı olarak uygulanır ve <xref:System.Windows.Controls> ad alanında bulunur. Aşağıdaki kod, bir tane oluşturma, yapılandırma ve görüntüleme işlemlerinin nasıl yapılacağını gösterir.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#PrintDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#printdialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#PrintDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#printdialogboxcodebehind)]  
   
- Yazdır iletişim kutusu hakkında daha fazla bilgi için bkz <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>. WPF 'de yazdırmayla ilgili ayrıntılı bilgi için bkz. [yazdırma genel bakış](../advanced/printing-overview.md).  
+ Yazdır iletişim kutusu hakkında daha fazla bilgi için bkz. <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>. WPF 'de yazdırmayla ilgili ayrıntılı bilgi için bkz. [yazdırma genel bakış](../advanced/printing-overview.md).  
   
 <a name="Custom_Dialog_Boxes"></a>   
 ## <a name="custom-dialog-boxes"></a>Özel iletişim kutuları
 
-Ortak iletişim kutuları yararlı olsa da, mümkün olduğunda kullanılmalıdır, etki alanına özgü iletişim kutularının gereksinimlerini desteklemezler. Bu durumlarda, kendi iletişim kutularınızı oluşturmanız gerekir. Göreceğiniz gibi, bir iletişim kutusu özel davranışları olan bir pencere olur. <xref:System.Windows.Window>Bu davranışları uygular ve sonuç olarak, özel kalıcı <xref:System.Windows.Window> ve kalıcı olmayan iletişim kutuları oluşturmak için kullanırsınız.  
+Ortak iletişim kutuları yararlı olsa da, mümkün olduğunda kullanılmalıdır, etki alanına özgü iletişim kutularının gereksinimlerini desteklemezler. Bu durumlarda, kendi iletişim kutularınızı oluşturmanız gerekir. Göreceğiniz gibi, bir iletişim kutusu özel davranışları olan bir pencere olur. <xref:System.Windows.Window> bu davranışları uygular ve sonuç olarak, özel kalıcı ve kalıcı iletişim kutuları oluşturmak için <xref:System.Windows.Window> kullanırsınız.  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>Kalıcı özel iletişim kutusu oluşturma
 
-Bu konuda, bir örnek olarak <xref:System.Windows.Window> `Margins` iletişim kutusunu kullanarak tipik bir kalıcı iletişim kutusu uygulamasının oluşturulması için nasıl kullanılacağı gösterilmektedir (bkz. [iletişim kutusu örneği](https://go.microsoft.com/fwlink/?LinkID=159984)). `Margins` İletişim kutusu aşağıdaki şekilde gösterilmiştir.  
+Bu konuda, bir örnek olarak `Margins` iletişim kutusunu kullanarak tipik bir kalıcı iletişim kutusu uygulamasının oluşturulması için <xref:System.Windows.Window> nasıl kullanılacağı gösterilmektedir (bkz. [Iletişim kutusu örneği](https://go.microsoft.com/fwlink/?LinkID=159984)). `Margins` iletişim kutusu aşağıdaki şekilde gösterilmiştir.  
   
  ![Sol kenar boşluğu, üst kenar boşluğu, sağ kenar boşluğu ve alt kenar boşluğu tanımlamak için alanları olan bir kenar boşlukları iletişim kutusu.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
@@ -144,9 +144,9 @@ Tipik bir iletişim kutusu için Kullanıcı arabirimi şunları içerir:
   
 - İletişim kutusunun çok küçük olmasını önleyen ve kullanıcıya yararlı bir varsayılan boyut sağlayan mümkün olduğunda yeniden boyutlandırılabilme özelliği. Bu, hem varsayılan hem de minimum boyutları ayarlamanızı gerektirir.  
   
-- ESC tuşu bir klavye kısayolu olarak, **iptal** düğmesine basılmasına neden olur. Bunu, <xref:System.Windows.Controls.Button.IsCancel%2A> **iptal** düğmesinin özelliğini olarak `true`ayarlayarak yapabilirsiniz.  
+- ESC tuşu bir klavye kısayolu olarak, **iptal** düğmesine basılmasına neden olur. Bunu, **iptal** düğmesinin <xref:System.Windows.Controls.Button.IsCancel%2A> özelliğini `true`olarak ayarlayarak yapabilirsiniz.  
   
-- **Ok** düğmesine basılmasına neden olan bir klavye KıSAYOLU olarak ENTER (veya Return) anahtarı. Bunu, <xref:System.Windows.Controls.Button.IsDefault%2A> **Tamam** düğmesinin `true`özelliğini ayarlayarak yapabilirsiniz.  
+- **Ok** düğmesine basılmasına neden olan bir klavye KıSAYOLU olarak ENTER (veya Return) anahtarı. Bunu, **Tamam** düğmesi `true`<xref:System.Windows.Controls.Button.IsDefault%2A> özelliğini ayarlayarak yapabilirsiniz.  
   
 Aşağıdaki kod bu yapılandırmayı gösterir.  
   
@@ -168,12 +168,12 @@ Bir iletişim kutusu tipik olarak, bir kullanıcının, bir sözcük işlemcisin
 [!code-csharp[Opening a modal dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-11,78-88,193-195)]
 [!code-vb[Opening a modal dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,58-67,130-132)]  
 
-Burada kod, varsayılan bilgileri (geçerli kenar boşlukları) iletişim kutusuna geçirir. Ayrıca, <xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType> özelliğini iletişim kutusunu gösteren pencereye bir başvuru ile ayarlar. Genel olarak, tüm iletişim kutularında ortak olan pencere durumuyla ilgili davranışları sağlamak için her zaman bir iletişim kutusunun sahibini ayarlamanız gerekir (daha fazla bilgi için bkz. [WPF Windows 'A genel bakış](wpf-windows-overview.md) ).
+Burada kod, varsayılan bilgileri (geçerli kenar boşlukları) iletişim kutusuna geçirir. Ayrıca, iletişim kutusunu gösteren pencereye bir başvuru ile <xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType> özelliğini ayarlar. Genel olarak, tüm iletişim kutularında ortak olan pencere durumuyla ilgili davranışları sağlamak için her zaman bir iletişim kutusunun sahibini ayarlamanız gerekir (daha fazla bilgi için bkz. [WPF Windows 'A genel bakış](wpf-windows-overview.md) ).
 
 > [!NOTE]
 > İletişim kutuları için Kullanıcı arabirimi (UI) otomasyonunu desteklemek üzere bir sahip sağlamalısınız (bkz. [UI Automation 'A genel bakış](../../ui-automation/ui-automation-overview.md)).
 
-İletişim kutusu yapılandırıldıktan sonra <xref:System.Windows.Window.ShowDialog%2A> yöntemi çağırarak, bu, bir olarak gösterilir.  
+İletişim kutusu yapılandırıldıktan sonra, <xref:System.Windows.Window.ShowDialog%2A> yöntemi çağırarak, bu, önemli olarak gösterilir.  
   
 #### <a name="validating-user-provided-data"></a>Kullanıcı tarafından belirtilen veriler doğrulanıyor
 
@@ -187,12 +187,12 @@ Bir iletişim kutusu açıldığında ve Kullanıcı gerekli verileri sağlıyor
   
 - Bir performans açısından, çok katmanlı bir uygulamadaki veri doğrulaması, özellikle uygulama Web hizmetlerinden veya sunucu tabanlı veritabanlarından oluşturulduğunda istemci ve uygulama katmanları arasındaki gidiş dönüş sayısını azaltabilir.  
 
-WPF 'deki bir bağlama denetimini doğrulamak için bir doğrulama kuralı tanımlamanız ve bağlama ile ilişkilendirmeniz gerekir. Doğrulama kuralı, öğesinden <xref:System.Windows.Controls.ValidationRule>türetilen özel bir sınıftır. Aşağıdaki örnek, bir doğrulama kuralını `MarginValidationRule`gösterir, bu, bir bağlanan değerin bir <xref:System.Double> olduğunu ve belirtilen bir Aralık içinde olduğunu denetler.  
+WPF 'deki bir bağlama denetimini doğrulamak için bir doğrulama kuralı tanımlamanız ve bağlama ile ilişkilendirmeniz gerekir. Doğrulama kuralı, <xref:System.Windows.Controls.ValidationRule>türetilen özel bir sınıftır. Aşağıdaki örnek, bir `MarginValidationRule`bir doğrulama kuralı gösterir, bu, bir ilişkilendirilmiş değerin <xref:System.Double> olduğunu ve belirtilen bir Aralık içinde olduğunu denetler.  
 
 [!code-csharp[Margin validation rules](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginValidationRule.cs)]
 [!code-vb[Margin validation rules](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginValidationRule.vb)]  
 
-Bu kodda, bir doğrulama kuralının doğrulama mantığı, verileri doğrulayan ve uygun <xref:System.Windows.Controls.ValidationRule.Validate%2A> <xref:System.Windows.Controls.ValidationResult>bir değer döndüren yöntemi geçersiz kılarak uygulanır.  
+Bu kodda, bir doğrulama kuralının doğrulama mantığı, verileri doğrulayan ve uygun bir <xref:System.Windows.Controls.ValidationResult>döndüren <xref:System.Windows.Controls.ValidationRule.Validate%2A> yöntemi geçersiz kılınarak uygulanır.  
 
 Doğrulama kuralını, ilişkili denetimle ilişkilendirmek için aşağıdaki biçimlendirmeyi kullanırsınız.  
   
@@ -202,40 +202,40 @@ Doğrulama kuralı ilişkilendirildikten sonra WPF, verileri, ilişkili denetime
   
 ![Geçersiz sol kenar boşluğu değeri etrafında kırmızı kenarlığı olan bir kenar boşlukları iletişim kutusu.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
 
-WPF, geçerli veri girene kadar bir kullanıcıyı geçersiz denetim ile kısıtlayamaz. Bu, iletişim kutusu için iyi bir davranıştır; bir Kullanıcı, verilerin geçerli olup olmadığını bir iletişim kutusunda serbestçe gezinebilmelidir. Ancak bu, bir kullanıcının geçersiz veri girebileceği ve **Tamam** düğmesine basması anlamına gelir. Bu nedenle, kodunuzun aynı zamanda <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı işleyerek **Tamam** düğmesine basıldığında bir iletişim kutusundaki tüm denetimleri doğrulaması gerekir.  
+WPF, geçerli veri girene kadar bir kullanıcıyı geçersiz denetim ile kısıtlayamaz. Bu, iletişim kutusu için iyi bir davranıştır; bir Kullanıcı, verilerin geçerli olup olmadığını bir iletişim kutusunda serbestçe gezinebilmelidir. Ancak bu, bir kullanıcının geçersiz veri girebileceği ve **Tamam** düğmesine basması anlamına gelir. Bu nedenle, kodunuzun aynı zamanda <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayını işleyerek **Tamam** düğmesine basıldığında bir iletişim kutusundaki tüm denetimleri doğrulaması gerekir.  
   
 [!code-csharp[Validating all controls in a dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,26-29,33-68)]
 [!code-vb[Validating all controls in a dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,27-29,33-62)]  
 
-Bu kod, bir penceredeki tüm bağımlılık nesnelerini numaralandırır ve eğer <xref:System.Windows.Controls.Validation.GetHasError%2A>varsa, geçersiz denetim odağı `IsValid` alır, yöntem döner `false`ve pencere geçersiz olarak kabul edilir.  
+Bu kod, bir penceredeki tüm bağımlılık nesnelerini numaralandırır ve varsa (<xref:System.Windows.Controls.Validation.GetHasError%2A>tarafından döndürülen geçersiz denetim odağı aldığında, `IsValid` yöntemi `false`döndürür ve pencere geçersiz olarak kabul edilir.  
   
 İletişim kutusu geçerli olduğunda, güvenli bir şekilde kapatılabilir ve dönebilir. Döndürülen işlemin bir parçası olarak, çağıran işleve bir sonuç döndürmesi gerekir.  
   
 #### <a name="setting-the-modal-dialog-result"></a>Kalıcı iletişim kutusu sonucunu ayarlama
 
-Kullanarak <xref:System.Windows.Window.ShowDialog%2A> bir iletişim kutusu açmak, bir yöntemi çağırmak gibidir: iletişim <xref:System.Windows.Window.ShowDialog%2A> kutusunu açan kod, dönüşene kadar <xref:System.Windows.Window.ShowDialog%2A> bekler. ' İ döndüğünde, kullanıcının Tamam düğmesine veya İptal düğmesine bastığına bağlı olarak, bu dosyayı çağıran kodun işlemeye veya durdurulmasına devam edip etmeyeceğine karar sağlaması gerekir. <xref:System.Windows.Window.ShowDialog%2A> Bu kararı kolaylaştırmak için, iletişim kutusunun <xref:System.Boolean> <xref:System.Windows.Window.ShowDialog%2A> yönteminden döndürülen bir değer olarak kullanıcının seçeneğini döndürmesi gerekir.  
+<xref:System.Windows.Window.ShowDialog%2A> kullanarak bir iletişim kutusu açmak bir yöntemi çağırmak gibidir: <xref:System.Windows.Window.ShowDialog%2A> kullanarak iletişim kutusunu açan kod <xref:System.Windows.Window.ShowDialog%2A> dönüşene kadar bekler. <xref:System.Windows.Window.ShowDialog%2A> döndürüldüğünde, kullanıcının **Tamam** düğmesine veya **iptal** düğmesine bastığına bağlı olarak, bu dosyayı çağıran kodun işlemeye veya durdurulmasına devam edip etmeyeceğine karar sağlaması gerekir. Bu kararı kolaylaştırmak için iletişim kutusunun, <xref:System.Windows.Window.ShowDialog%2A> yönteminden döndürülen bir <xref:System.Boolean> değeri olarak kullanıcının seçeneğini döndürmesi gerekir.  
 
-**Tamam** düğmesine tıklandığında, <xref:System.Windows.Window.ShowDialog%2A> döndürmelidir. `true` Bu, **Tamam** düğmesine tıklandığında iletişim <xref:System.Windows.Window.DialogResult%2A> kutusunun özelliği ayarlanarak elde edilir.  
+**Tamam** düğmesine tıklandığında, <xref:System.Windows.Window.ShowDialog%2A> `true`döndürmelidir. Bu, **Tamam** düğmesine tıklandığında iletişim kutusunun <xref:System.Windows.Window.DialogResult%2A> özelliği ayarlanarak elde edilir.  
 
 [!code-csharp[Responding to the OK button](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,25-27,32-33,67-68)]
 [!code-vb[Responding to the OK button](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,27,31-33,61-62)]  
 
-<xref:System.Windows.Window.DialogResult%2A> Özelliği ayarlamanın Ayrıca pencerenin otomatik olarak kapatılmasına neden olduğunu unutmayın, bu da açıkça çağrı <xref:System.Windows.Window.Close%2A>yapması gerekir konuma almayı azaltır.  
+<xref:System.Windows.Window.DialogResult%2A> özelliğinin ayarlanması ayrıca pencerenin otomatik olarak kapatılmasına neden olur. Bu, <xref:System.Windows.Window.Close%2A>açıkça çağırma gereksinimini konuma almayı azaltır.  
   
-**İptal** düğmesine tıklandığında, <xref:System.Windows.Window.ShowDialog%2A> <xref:System.Windows.Window.DialogResult%2A> özelliği de ayarlamayı gerektiren döndürmelidir `false`.  
+**İptal** düğmesine tıklandığında <xref:System.Windows.Window.ShowDialog%2A>, <xref:System.Windows.Window.DialogResult%2A> özelliğinin ayarlanmasını de gerektiren `false`döndürmelidir.  
   
 [!code-csharp[Responding to the Cancel button](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,19-24,67-68)]
 [!code-vb[Responding to the Cancel button](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,22-25,61-62)]  
 
-Bir düğmenin <xref:System.Windows.Controls.Button.IsCancel%2A> `true` özelliği olarak ayarlandığında ve Kullanıcı **iptal** düğmesine veya <xref:System.Windows.Window.DialogResult%2A> `false`ESC tuşuna basarsa, otomatik olarak olarak ayarlanır. Aşağıdaki biçimlendirme, <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı işlemeye gerek olmadan Yukarıdaki kodla aynı etkiye sahiptir.  
+Bir düğmenin <xref:System.Windows.Controls.Button.IsCancel%2A> özelliği `true` olarak ayarlandığında ve Kullanıcı **iptal** DÜĞMESINE veya ESC tuşuna basarsa, <xref:System.Windows.Window.DialogResult%2A> otomatik olarak `false`olarak ayarlanır. Aşağıdaki biçimlendirme, <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayını işlemeye gerek kalmadan, yukarıdaki kodla aynı etkiye sahiptir.  
   
 [!code-xaml[Markup instead of handling the Click event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml#L109-L109)]  
 
-Bir `false` Kullanıcı başlık çubuğundaki **Kapat** düğmesine bastığında veya **sistem** menüsünden **Kapat** menü öğesini seçtiğinde bir iletişim kutusu otomatik olarak döner.  
+Bir Kullanıcı başlık çubuğundaki **Kapat** düğmesine bastığında veya **sistem** menüsünden **Kapat** menü öğesini seçtiğinde, bir iletişim kutusu otomatik olarak `false` döndürür.  
 
 #### <a name="processing-data-returned-from-a-modal-dialog-box"></a>Kalıcı iletişim kutusundan döndürülen verileri işleme  
 
-Bir iletişim kutusu tarafından ayarlandığında, onu açan işlev, <xref:System.Windows.Window.ShowDialog%2A> döndüğünde <xref:System.Windows.Window.DialogResult%2A> özelliği inceleyerek iletişim kutusu sonucunu alabilir. <xref:System.Windows.Window.DialogResult%2A>  
+<xref:System.Windows.Window.DialogResult%2A> bir iletişim kutusu tarafından ayarlandığında, onu açan işlev, <xref:System.Windows.Window.ShowDialog%2A> döndüğünde <xref:System.Windows.Window.DialogResult%2A> özelliğini inceleyerek iletişim kutusu sonucunu alabilir.  
   
 [!code-csharp[Processing data returned from the modal dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,77-79,89-96,194-195)]
 [!code-vb[Processing data returned from the modal dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,58,69-73,131-132)]
@@ -243,9 +243,9 @@ Bir iletişim kutusu tarafından ayarlandığında, onu açan işlev, <xref:Syst
 İletişim kutusu sonucu `true`ise, işlev kullanıcı tarafından belirtilen verileri almak ve işlemek için bir ipucu olarak kullanır.  
   
 > [!NOTE]
-> Geri <xref:System.Windows.Window.ShowDialog%2A> döntikten sonra bir iletişim kutusu yeniden açılamaz. Bunun yerine, yeni bir örnek oluşturmanız gerekir.
+> <xref:System.Windows.Window.ShowDialog%2A> döndürüldüğünde bir iletişim kutusu yeniden açılamaz. Bunun yerine, yeni bir örnek oluşturmanız gerekir.
 
-İletişim kutusu sonucu ise `false`, işlev işlemeyi uygun şekilde sonlandırmalıdır.  
+İletişim kutusu sonucu `false`, işlev işlemeyi uygun şekilde sonlandırmalıdır.  
   
 <a name="Creating_a_Modeless_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modeless-custom-dialog-box"></a>Kalıcı olmayan özel iletişim kutusu oluşturma
@@ -258,28 +258,28 @@ Ancak, aşağıdaki bölümlerde açıklandığı gibi davranış biraz farklıd
   
 #### <a name="opening-a-modeless-dialog-box"></a>Kalıcı olmayan iletişim kutusu açma
 
-<xref:System.Windows.Window.Show%2A> Yöntemi çağırarak kalıcı olmayan bir iletişim kutusu açılır.  
+<xref:System.Windows.Window.Show%2A> yöntemi çağırarak kalıcı olmayan bir iletişim kutusu açılır.  
 
 [!code-xaml[XAML to define a modeless dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml#L21-L22)]  
  
 [!code-csharp[Opening a modeless dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,65-76,194-195)]
 [!code-vb[Openng a modeless dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,18-23,131,132)]  
 
-Aksine <xref:System.Windows.Window.ShowDialog%2A> ,<xref:System.Windows.Window.Show%2A> hemen döndürür. Sonuç olarak, geçici pencere kalıcı iletişim kutusu kapalıyken ve bu nedenle, bir iletişim kutusu sonucunu ne zaman denetleyeceğinizi veya daha fazla işleme için iletişim kutusunda veri almayı bilmez. Bunun yerine, iletişim kutusunun işleme için verileri çağıran pencereye döndürmesi için alternatif bir yol oluşturması gerekir.  
+<xref:System.Windows.Window.ShowDialog%2A>aksine <xref:System.Windows.Window.Show%2A> hemen döndürülür. Sonuç olarak, geçici pencere kalıcı iletişim kutusu kapalıyken ve bu nedenle, bir iletişim kutusu sonucunu ne zaman denetleyeceğinizi veya daha fazla işleme için iletişim kutusunda veri almayı bilmez. Bunun yerine, iletişim kutusunun işleme için verileri çağıran pencereye döndürmesi için alternatif bir yol oluşturması gerekir.  
   
 #### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>Kalıcı olmayan iletişim kutusundan döndürülen verileri işleme  
 
-Bu örnekte `FindDialogBox` , belirli bir sıklık olmadan aranan metne bağlı olarak ana pencereye bir veya daha fazla arama sonucu döndürebilir. Kalıcı iletişim kutusunda olduğu gibi, kalıcı olmayan bir iletişim kutusu, özellikleri kullanarak sonuçlar döndürebilir. Ancak, iletişim kutusunun sahibi olan pencere, bu özellikleri ne zaman denetleyeceğinizi bilmelidir. Bunu etkinleştirmenin bir yolu, iletişim kutusunun metin bulunduğunda oluşturulan bir olayı uygulaması için kullanılır. `FindDialogBox``TextFoundEvent` öncelikle bir temsilci gerektiren bu amaçla uygular.  
+Bu örnekte `FindDialogBox` belirli bir sıklık olmadan aranan metne bağlı olarak ana pencereye bir veya daha fazla arama sonucu döndürebilir. Kalıcı iletişim kutusunda olduğu gibi, kalıcı olmayan bir iletişim kutusu, özellikleri kullanarak sonuçlar döndürebilir. Ancak, iletişim kutusunun sahibi olan pencere, bu özellikleri ne zaman denetleyeceğinizi bilmelidir. Bunu etkinleştirmenin bir yolu, iletişim kutusunun metin bulunduğunda oluşturulan bir olayı uygulaması için kullanılır. `FindDialogBox`, bu amaçla öncelikle bir temsilci gerektiren `TextFoundEvent` uygular.  
 
 [!code-csharp[The TextFoundEventHandler delegate](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs)]
 [!code-vb[The TextFoundEventHandler delegate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb)]  
 
-Temsilciyi kullanarak, öğesini `FindDialogBox` uygular `TextFoundEvent`. `TextFoundEventHandler`
+`TextFoundEventHandler` temsilciyi kullanarak, `FindDialogBox` `TextFoundEvent`uygular.
   
 [!code-csharp[The TextFound event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-17,125-126)]
 [!code-vb[The TextFound event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-15,102-103)]
 
-Sonuç olarak `Find` , bir arama sonucu bulunduğunda olayı oluşturabilir.  
+Sonuç olarak, bir arama sonucu bulunduğunda `Find` olayı oluşturabilir.  
   
 [!code-csharp[Raising the TextFound event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,50-52,91-94,124-127)]
 [!code-vb[Raising the TextFound event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,15,60-64,102-103)]  
@@ -291,7 +291,7 @@ Daha sonra sahip penceresinin bu olayı ile kaydetmesi ve işlemesi gerekir.
 
 #### <a name="closing-a-modeless-dialog-box"></a>Kalıcı olmayan iletişim kutusu kapatılıyor
 
-<xref:System.Windows.Window.DialogResult%2A> Ayarlanması gerekmeyen için, aşağıdakiler de dahil olmak üzere sistem sağlama mekanizmaları kullanılarak kalıcı olmayan bir iletişim kutusu kapatılabilir:  
+<xref:System.Windows.Window.DialogResult%2A> ayarlanması gerekmiyorsa, aşağıdakiler dahil olmak üzere sistem sağlama mekanizmaları kullanılarak kalıcı olmayan bir iletişim kutusu kapatılabilir:  
   
 - Başlık çubuğundaki **Kapat** düğmesine tıklanın.  
   
@@ -299,7 +299,7 @@ Daha sonra sahip penceresinin bu olayı ile kaydetmesi ve işlemesi gerekir.
   
 - **Sistem** menüsünden **Kapat** seçeneğini belirleme.  
   
-Alternatif olarak, **Kapat** düğmesine tıklandığında <xref:System.Windows.Window.Close%2A> kodunuz da çağırabilir.  
+Alternatif olarak, **Kapat** düğmesine tıklandığında kodunuz <xref:System.Windows.Window.Close%2A> çağırabilir.  
 
 [!code-csharp[Calling the Close method](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,119-126)]
 [!code-vb[Calling the Close method](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,99-103)]  

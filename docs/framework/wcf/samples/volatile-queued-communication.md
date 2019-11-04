@@ -2,30 +2,30 @@
 title: Geçici Kuyruğa Alınmış İletişim
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-ms.openlocfilehash: ad29efb2c2b22945cda09f3aecc57ef50ed97f5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a3c67de2966bb9b7379a191039f6405b4007c78
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006339"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424684"
 ---
 # <a name="volatile-queued-communication"></a>Geçici Kuyruğa Alınmış İletişim
 
-Bu örnek, Message Queuing (MSMQ) aktarma üzerinden geçici kuyruğa alınan iletişim gerçekleştirme gösterir. Bu örnekte <xref:System.ServiceModel.NetMsmqBinding>. Bu durumda, kuyruğa alınmış iletiler alma hizmeti gözlemleyin sağlamak için şirket içinde barındırılan bir konsol uygulaması hizmetidir.
+Bu örnek, Message Queuing (MSMQ) taşıması üzerinden geçici sıraya alınmış iletişimin nasıl gerçekleştirileceğini gösterir. Bu örnek <xref:System.ServiceModel.NetMsmqBinding>kullanır. Bu durumda hizmet, sıraya alınan iletileri alma hizmetini gözlemlemeye olanak sağlayan, kendine barındırılan bir konsol uygulamasıdır.
 
 > [!NOTE]
-> Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
 
-Kuyruğa alınan iletişim kullanarak bir kuyruk hizmetine istemci iletişim kurar. Daha kesin bir istemci bir kuyruğa iletiler gönderir. Hizmet iletileri kuyruktan alır. Hizmet ve istemci bu nedenle, bir kuyruk kullanarak iletişim kurmak için aynı anda çalıştırılması gerekmez.
+Sıraya alınmış iletişimde istemci, hizmet ile bir kuyruk kullanarak iletişim kurar. Daha kesin olarak, istemci iletileri bir kuyruğa gönderir. Hizmet kuyruktaki iletileri alır. Bu nedenle, hizmet ve istemci, bir kuyruk kullanarak iletişim kurmak için aynı anda çalışıyor olması gerekmez.
 
-Hiçbir Güvenceleri içeren bir ileti gönderirken MSMQ yalnızca ileti aksine tam bir kez Güvenceleri ile burada MSMQ iletiyi teslim edildiğinden veya teslim edilemiyor, ileti teslim bilmenizi sağlar, sağlar sunmak için bir en iyi hale getirir.
+Herhangi bir bilgi sahibi olmadan bir ileti gönderdiğinizde, MSMQ yalnızca iletiyi teslim etmek için en iyi çaba, MSMQ 'nun iletinin teslim edilmesini sağlayan veya teslim edileyemediği durumlarda iletinin teslim edilemez olduğunu bilmenizi sağlar.
 
-Belirli senaryolarda zamanında teslimat iletileri kaybetme değerinden daha önemli olduğunda, bir kuyruk hiçbir Güvenceleri içeren geçici bir ileti göndermek isteyebilirsiniz. Volatile iletileri Kuyruk yöneticisi kilitlenmeleri sürdürmez. Bu nedenle sıra yöneticisini çökerse, geçici iletileri depolamak için kullanılan işlem olmayan sırasının devam eder ancak iletileri disk üzerinde değil depolanmadığından iletileri yapın.
+Belirli senaryolarda, bir kuyruk üzerinden hiçbir zaman daha önemli olan bir geçici ileti göndermek isteyebilirsiniz. Geçici iletiler, kuyruk yöneticisi kilitlenmelerinden devam etmez. Bu nedenle, kuyruk yöneticisi kilitlenirse, geçici iletileri daha fazla saklamak için kullanılan işlem dışı sıra, iletiler diskte depolanmadığı için ileti kendileri değildir.
 
 > [!NOTE]
-> MSMQ kullanarak bir işlem kapsamında hiçbir Güvenceleri geçici iletilerle gönderemez. Ayrıca, geçici bir ileti göndermek için işlemsel olmayan bir sıraya oluşturmanız gerekir.
+> MSMQ kullanarak bir işlemin kapsamı içinde hiçbir ölçü olmadan geçici iletiler gönderemezsiniz. Ayrıca geçici iletiler göndermek için işlemsel olmayan bir sıra oluşturmanız gerekir.
 
-Bu hizmet sözleşme `IStockTicker` queuing ile kullanmak için en uygun tek yönlü hizmetler tanımlar.
+Bu örnekteki hizmet sözleşmesi, kuyruğa alma için en uygun olan tek yönlü hizmetleri tanımlayan `IStockTicker`.
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -36,7 +36,7 @@ public interface IStockTicker
 }
 ```
 
-Hizmet işlemi borsa ve fiyat, aşağıdaki örnek kodda gösterildiği gibi görüntülenir:
+Hizmet işlemi, aşağıdaki örnek kodda gösterildiği gibi hisse senedi bandı sembolünü ve fiyatını görüntüler:
 
 ```csharp
 public class StockTickerService : IStockTicker
@@ -49,7 +49,7 @@ public class StockTickerService : IStockTicker
 }
 ```
 
-Kendi kendine barındırılan bir hizmettir. MSMQ taşıma kullanırken, kullanılan kuyruk önceden oluşturulmuş olması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte, hizmet sıranın varlığını denetleyin ve gerekirse oluşturmak için kod içerir. Kuyruk adı yapılandırma dosyasından okunur. Tarafından kullanılan taban adresini [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) proxy hizmeti için oluşturulacak.
+Hizmet kendi kendine barındırılır. MSMQ aktarımını kullanırken kullanılan kuyruğun önceden oluşturulması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte hizmet, sıranın varlığını denetlemek ve gerekirse oluşturmak için kod içerir. Sıra adı yapılandırma dosyasından okundu. Temel adres, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından hizmete yönelik proxy oluşturmak için kullanılır.
 
 ```csharp
 // Host the service within this EXE console application.
@@ -80,12 +80,12 @@ public static void Main()
 }
 ```
 
-MSMQ kuyruk adı yapılandırma dosyasının appSettings bölümünde belirtilir. Hizmet için uç nokta yapılandırma dosyasının system.serviceModel bölümünde tanımlanan ve belirtir `netMsmqBinding` bağlama.
+MSMQ kuyruğu adı, yapılandırma dosyasının appSettings bölümünde belirtilir. Hizmetin uç noktası, yapılandırma dosyasının System. serviceModel bölümünde tanımlanır ve `netMsmqBinding` bağlamayı belirtir.
 
 > [!NOTE]
-> Kuyruk adı bir nokta (.) için yerel makine ve ters eğik çizgi ayırıcılar yolundaki bir kuyruk kullanma oluştururken kullandığı <xref:System.Messaging>. Windows Communication Foundation (WCF) uç nokta adresini belirten bir net.msmq: Düzen, eğik çizgi yolundaki ve yerel makine için "localhost" kullanır.
+> Sıra adı, <xref:System.Messaging>kullanarak bir sıra oluştururken, yerel makine ve ters eğik çizgi ayırıcılar için bir nokta (.) kullanır. Windows Communication Foundation (WCF) uç noktası adresi bir net. MSMQ: Scheme belirtir, yerel makine için "localhost" kullanır ve yolunda eğik çizgiler kullanır.
 
-Güvenceleri ve dayanıklılık veya geçicilik iletilerinin de yapılandırmada belirtilmedi.
+Yapılandırmada Ayrıca, bir veya daha fazla ileti de belirtilir.
 
 ```xml
 <appSettings>
@@ -118,7 +118,7 @@ Güvenceleri ve dayanıklılık veya geçicilik iletilerinin de yapılandırmada
 </system.serviceModel>
 ```
 
-Örnek, işlemsel olmayan bir sıraya kullanarak sıraya alınan iletileri gönderdiğinden, işlem yapılmış iletileri kuyruğa gönderilemez.
+Örnek, işlem olmayan bir sıra kullanarak sıraya alınmış iletiler gönderdiğinden, işlem temelli iletiler kuyruğa gönderilemez.
 
 ```csharp
 // Create a client.
@@ -137,9 +137,9 @@ for (int i = 0; i < 10; i++)
 client.Close();
 ```
 
-Örneği çalıştırdığınızda, istemci ve hizmet etkinlikleri hizmet ve istemci konsol pencerelerinde görüntülenir. İstemciden hizmet alma iletileri görebilirsiniz. Her konsol penceresi hizmet ve istemci kapatmak için ENTER tuşuna basın. Sıraya alma kullanımda olduğundan, istemci ve hizmet aynı zamanda açık ve çalışıyor olması gerekmez, unutmayın. İstemcisini çalıştıran da kapatın ve ardından hizmeti başlatın ve hala iletilerini alır.
+Örneği çalıştırdığınızda, istemci ve hizmet etkinlikleri hem hizmet hem de istemci konsol pencereleri içinde görüntülenir. Hizmetin istemciden ileti alacağını görebilirsiniz. Hizmeti ve istemciyi kapatmak için her bir konsol penceresinde ENTER tuşuna basın. Kuyruk kullanımda olduğu için istemci ve hizmetin aynı anda çalışmaya ve çalışır durumda olmadığından emin olun. İstemcisini çalıştırabilir, kapatabilir ve ardından hizmeti başlatabilir ve yine de iletilerini alabilir.
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -155,19 +155,19 @@ Stock Tick zzz8:43.32
 Stock Tick zzz9:43.3
 ```
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
 
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
 
-3. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
 
-Varsayılan olarak <xref:System.ServiceModel.NetMsmqBinding>, aktarım güvenliği etkin. MSMQ taşıma güvenlik için iki testlerinizle ilgili olabilecek özellikler <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> ve <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` varsayılan olarak, kimlik doğrulama modu ayarlamak `Windows` ve koruma düzeyini ayarlamak `Sign`. MSMQ imzalama özelliği ve kimlik doğrulaması sağlamak için bir etki alanının parçası olması gerekir ve MSMQ active directory tümleştirme seçeneği yüklenmelidir. Bu ölçütleri karşılamayan bir bilgisayarda bu örneği çalıştırmak, bir hata alırsınız.
+<xref:System.ServiceModel.NetMsmqBinding>varsayılan olarak, taşıma güvenliği etkinleştirilmiştir. MSMQ aktarım güvenliği, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> ve <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>için iki uygun özellik vardır `.` varsayılan olarak, kimlik doğrulama modu `Windows` olarak ayarlanır ve koruma düzeyi `Sign`olarak ayarlanır. Kimlik doğrulama ve imzalama özelliğini sağlamak için MSMQ için, bir etki alanının parçası olması ve MSMQ için Active Directory tümleştirme seçeneğinin yüklü olması gerekir. Bu örneği bu ölçütlere uygun olmayan bir bilgisayarda çalıştırırsanız bir hata alırsınız.
 
-### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Örnek, bir çalışma grubuna veya active directory tümleştirmesi olmadan alanına katılmış bir bilgisayarda çalıştırmak için
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Örneği bir çalışma grubuna katılmış veya Active Directory Tümleştirmesi olmadan bir bilgisayarda çalıştırmak için
 
-1. Bilgisayarınız bir etki alanının parçası değil veya yüklü active directory tümleştirmesi yok, aktarım güvenliği devre dışı kimlik doğrulama modu ve koruma düzeyi ayarlayarak kapatma `None` aşağıdaki örnek yapılandırma kodda gösterildiği gibi:
+1. Bilgisayarınız bir etki alanının parçası değilse veya Active Directory Tümleştirmesi yüklü değilse, aşağıdaki örnek yapılandırma kodunda gösterildiği gibi kimlik doğrulama modu ve koruma düzeyini `None` olarak ayarlayarak aktarım güvenliğini kapatın:
 
     ```xml
     <system.serviceModel>
@@ -214,16 +214,16 @@ Varsayılan olarak <xref:System.ServiceModel.NetMsmqBinding>, aktarım güvenli�
       </system.serviceModel>
     ```
 
-2. Örneği çalıştırmadan önce yapılandırma hem sunucu hem de istemci değiştirdiğinizden emin olun.
+2. Örneği çalıştırmadan önce hem sunucu hem de istemci üzerinde yapılandırmayı değiştirin.
 
     > [!NOTE]
-    > Ayarı `security mode` için `None` ayarlamakla eşdeğerdir <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, ve `Message` güvenlik `None`.
+    > `security mode` `None` ayarlanması, `Message` <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>ve `None`güvenliğini ayarlamaya eşdeğerdir.
 
 > [!IMPORTANT]
-> Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.
+> Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`

@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: dfc66bd2bdc69d1236a635b30697bc1cd607821c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 93dbc711e38c17c2f502c4d04239d037ff015059
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120764"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425182"
 ---
 # <a name="net-guide"></a>.NET Kılavuzu
 
@@ -49,7 +49,7 @@ Bir uygulamanın, hizmetin veya bir sistem bileşeninin bir bölümünü .NET Co
 * [.NET Mimari Bileşenleri](components.md)
 * [.NET Standard](net-standard.md)
 * [Yerel birlikte çalışabilirlik](native-interop/index.md)
-* [Atık Toplama](garbagecollection/index.md)
+* [Atık Toplama](garbage-collection/index.md)
 * [.NET 'teki temel türler](base-types/index.md)
 * [Koleksiyonlar](collections/index.md)
 * [Tarihler, saatler ve saat dilimleri](datetime/index.md)

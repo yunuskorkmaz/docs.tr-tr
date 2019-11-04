@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms’da Denetimleri Konumlandırma'
+title: 'Nasıl yapılır: Windows Formlarında Denetimleri Konumlandırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1cc2cb4c749b7290a6edf914a8e6a697006ef43c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: bb57d14397a4626e01c41dd687dfed7331282a10
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987074"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458331"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Nasıl yapılır: Windows Forms denetimleri konumlandırma
 
@@ -34,22 +34,22 @@ Denetimleri konumlandırmak için, Visual Studio 'da Windows Form Tasarımcısı
 Visual Studio 'da, denetimi fareyle uygun konuma sürükleyin.
 
 > [!NOTE]
-> Denetimi seçin ve bunu daha hassas bir şekilde konumlandırmak için ok tuşlarıyla taşıyın. Ayrıca, *dayama çizgileri* denetimleri formunuza tam olarak yerleştirmekte yardımcı olur. Daha fazla bilgi için bkz [. İzlenecek yol: Windows Forms denetimleri, snaplines](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)kullanarak düzenleme.
+> Denetimi seçin ve bunu daha hassas bir şekilde konumlandırmak için ok tuşlarıyla taşıyın. Ayrıca, *dayama çizgileri* denetimleri formunuza tam olarak yerleştirmekte yardımcı olur. Daha fazla bilgi için bkz. [Izlenecek yol: Windows Forms denetimleri yerleştirme, yama çizgileri kullanarak](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).
 
 ## <a name="position-a-control-using-the-properties-window"></a>Özellikler penceresi kullanarak bir denetimi konumlandırma
 
 1. Visual Studio 'da konumlandırmak istediğiniz denetimi seçin.
 
-2. **Özellikler** penceresinde, denetimin kapsayıcısı içindeki konumunu konumlandırmak için <xref:System.Windows.Forms.Control.Location%2A> , özelliğin değerlerini virgülle ayırarak girin.
+2. **Özellikler** penceresinde, denetimin kapsayıcısı içinde konumlandırmak için <xref:System.Windows.Forms.Control.Location%2A> özelliğinin değerlerini virgülle ayırarak girin.
 
    İlk sayı (X) kapsayıcının sol kenarlığının uzaklığı; İkinci sayı (Y), kapsayıcı alanının üst kenarlığının piksel cinsinden ölçülmüş uzaklığı.
 
    > [!NOTE]
-   > <xref:System.Windows.Forms.Control.Location%2A> Özelliği tek tek **X** ve **Y** değerlerini yazmak için genişletebilirsiniz.
+   > **X** ve **Y** değerlerini tek tek yazmak için <xref:System.Windows.Forms.Control.Location%2A> özelliğini genişletebilirsiniz.
 
 ## <a name="position-a-control-programmatically"></a>Bir denetimi programlı olarak konumlandırma
 
-1. Denetimin özelliğini bir <xref:System.Drawing.Point>olarak ayarlayın. <xref:System.Windows.Forms.Control.Location%2A>
+1. Denetimin <xref:System.Windows.Forms.Control.Location%2A> özelliğini bir <xref:System.Drawing.Point>olarak ayarlayın.
 
     ```vb
     Button1.Location = New Point(100, 100)
@@ -63,7 +63,7 @@ Visual Studio 'da, denetimi fareyle uygun konuma sürükleyin.
     button1->Location = Point(100, 100);
     ```
 
-2. <xref:System.Windows.Forms.Control.Left%2A> Alt özelliğini kullanarak denetimin konumunun X koordinatını değiştirin.
+2. <xref:System.Windows.Forms.Control.Left%2A> alt özelliğini kullanarak denetimin konumunun X koordinatını değiştirin.
 
     ```vb
     Button1.Left = 300
@@ -79,7 +79,7 @@ Visual Studio 'da, denetimi fareyle uygun konuma sürükleyin.
 
 ## <a name="increment-a-controls-location-programmatically"></a>Denetimin konumunu programlı olarak artırma
 
-Denetimin X koordinatını artırmak için altözelliğiayarlayın.<xref:System.Windows.Forms.Control.Left%2A>
+Denetimin X koordinatını artırmak için <xref:System.Windows.Forms.Control.Left%2A> alt özelliğini ayarlayın.
 
 ```vb
 Button1.Left += 200
@@ -94,14 +94,14 @@ button1->Left += 200;
 ```
 
 > [!NOTE]
-> Bir denetimin X ve Y konumlarını eşzamanlı olarak ayarlamak için özelliğinikullanın.<xref:System.Windows.Forms.Control.Location%2A> Bir konumu tek tek ayarlamak için <xref:System.Windows.Forms.Control.Left%2A> denetimin (**X**) veya <xref:System.Windows.Forms.Control.Top%2A> (**Y**) alt özelliğini kullanın. Bu yapı düğmenin koordinatlarının bir kopyasını içerdiğinden, düğmenin konumunu temsil eden <xref:System.Drawing.Point> yapının X ve Y koordinatlarını örtülü olarak ayarlamaya çalışmayın.
+> Bir denetimin X ve Y konumlarını eşzamanlı olarak ayarlamak için <xref:System.Windows.Forms.Control.Location%2A> özelliğini kullanın. Bir konumu tek tek ayarlamak için, denetimin <xref:System.Windows.Forms.Control.Left%2A> (**X**) veya <xref:System.Windows.Forms.Control.Top%2A> (**Y**) alt özelliğini kullanın. Bu yapı düğmenin koordinatlarının bir kopyasını içerdiğinden, düğmenin konumunu temsil eden <xref:System.Drawing.Point> yapısının X ve Y koordinatlarını örtülü olarak ayarlamaya çalışmayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows Forms Denetimleri](index.md)
-- [İzlenecek yol: Anlık görüntü çizgilerini kullanarak Windows Forms denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [İzlenecek yol: TableLayoutPanel kullanarak Windows Forms denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [İzlenecek yol: FlowLayoutPanel kullanarak Windows Forms denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
 - [İşleve Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)

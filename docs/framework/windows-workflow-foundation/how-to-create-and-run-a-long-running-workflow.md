@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: Uzun Süre Çalışan İş Akışı Oluşturma ve Çalıştırma'
+title: 'Nasıl yapılır: uzun süre çalışan bir Iş akışı oluşturma ve çalıştırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 15ee10120f4d4c92bdc95cb48cb3cb838f526343
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e5083b3d12cecc395500ef13405effa7b7e51633
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044375"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420625"
 ---
-# <a name="how-to-create-and-run-a-long-running-workflow"></a>Nasıl yapılır: Uzun Süre Çalışan İş Akışı Oluşturma ve Çalıştırma
+# <a name="how-to-create-and-run-a-long-running-workflow"></a>Nasıl yapılır: uzun süre çalışan bir Iş akışı oluşturma ve çalıştırma
 
-Windows Workflow Foundation (WF) öğesinin merkezi özelliklerinden biri, çalışma zamanının boşta iş akışlarını bir veritabanına kalıcı ve kaldırma olanağıdır. [Nasıl yapılır: Bir konsol uygulaması](how-to-run-a-workflow.md) kullanarak iş akışı barındırma hakkında temel bilgileri gösterilen bir iş akışını çalıştırın. Örnek olarak başlangıç iş akışları, iş akışı yaşam döngüsü işleyicileri gösterildi ve yer işaretleri sürdürülüyor. İş akışı kalıcılığını etkin bir şekilde göstermek için, birden çok iş akışı örneğini başlatmayı ve sürdürmeyi destekleyen daha karmaşık bir iş akışı konağı gerekir. Öğreticideki Bu adım, birden çok iş akışı örneğini başlatma ve sürdürmeyi destekleyen bir Windows form ana bilgisayar uygulamasının nasıl oluşturulduğunu, iş akışı kalıcılığını ve izleme ve sürüm oluşturma gibi gelişmiş özellikler için bir temel sağlar. sonraki öğretici adımlarında gösterilmiştir.
+Windows Workflow Foundation (WF) öğesinin merkezi özelliklerinden biri, çalışma zamanının boşta iş akışlarını bir veritabanına kalıcı ve kaldırma olanağıdır. [Nasıl yapılır: bir Iş akışını çalıştırma](how-to-run-a-workflow.md) , bir konsol uygulaması kullanarak iş akışı barındırma temelleri gösterilmektedir. Örnek olarak başlangıç iş akışları, iş akışı yaşam döngüsü işleyicileri gösterildi ve yer işaretleri sürdürülüyor. İş akışı kalıcılığını etkin bir şekilde göstermek için, birden çok iş akışı örneğini başlatmayı ve sürdürmeyi destekleyen daha karmaşık bir iş akışı konağı gerekir. Öğreticideki Bu adım, birden çok iş akışı örneğini başlatma ve sürdürmeyi destekleyen bir Windows form ana bilgisayar uygulamasının nasıl oluşturulduğunu, iş akışı kalıcılığını ve izleme ve sürüm oluşturma gibi gelişmiş özellikler için bir temel sağlar. sonraki öğretici adımlarında gösterilmiştir.
 
 > [!NOTE]
-> Bu öğretici adımı ve sonraki adımlar [, nasıl yapılır: Bir Iş akışı](how-to-create-a-workflow.md)oluşturun. Üç tür de tamamlamadıysanız, [Windows Workflow Foundation (WF45)-başlangıç öğreticisindeki](https://go.microsoft.com/fwlink/?LinkID=248976)adımların tamamlanmış bir sürümünü indirebilirsiniz.
+> Bu öğretici adımı ve sonraki adımlarda, [nasıl yapılır: Iş akışı oluşturma](how-to-create-a-workflow.md)ile üç iş akışı türü kullanılır. Üç tür de tamamlamadıysanız, [Windows Workflow Foundation (WF45)-başlangıç öğreticisindeki](https://go.microsoft.com/fwlink/?LinkID=248976)adımların tamamlanmış bir sürümünü indirebilirsiniz.
 
 > [!NOTE]
 > Tamamlanmış bir sürümü indirmek veya öğreticiye ilişkin bir video kılavuzunu görüntülemek için, bkz. [Windows Workflow Foundation (WF45)-Başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).
@@ -51,7 +51,7 @@ Windows Workflow Foundation (WF) öğesinin merkezi özelliklerinden biri, çal�
     > [!NOTE]
     > Veritabanını oluşturmadan önce yerel sunucuda **Create Database** iznine sahip olduğunuzdan emin olun.
 
-2. **Dosya** menüsünden **Aç**, **Dosya** ' yı seçin. Aşağıdaki klasöre gidin:`C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`
+2. **Dosya** menüsünden **Aç**, **Dosya** ' yı seçin. Şu klasöre gidin: `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`
 
     Aşağıdaki iki dosyayı seçin ve **Aç**' a tıklayın.
 
@@ -70,18 +70,18 @@ Windows Workflow Foundation (WF) öğesinin merkezi özelliklerinden biri, çal�
 
 1. **Çözüm Gezgini** Için **Numberguessworkflowwhost** öğesine sağ tıklayın ve **Başvuru Ekle**' yi seçin.
 
-2. **Başvuru Ekle** listesinden `DurableInstancing` **derlemeler** ' i seçin ve **derleme ara** kutusuna yazın. Bu, derlemelerin filtreleyeceğini ve istenen başvuruların seçimi daha kolay hale getirir.
+2. **Başvuru Ekle** listesinden **derlemeler** ' i seçin ve `DurableInstancing` **arama derlemeler** kutusuna yazın. Bu, derlemelerin filtreleyeceğini ve istenen başvuruların seçimi daha kolay hale getirir.
 
 3. **Arama sonuçları** listesinden **System. Activities. durableörnekınlist** ve **System. Runtime. durableörnekno** ' ın yanındaki onay kutusunu işaretleyin ve **Tamam**' a tıklayın.
 
 ### <a name="BKMK_CreateForm"></a>İş akışı konak formunu oluşturmak için
 
 > [!NOTE]
-> Bu yordamdaki adımlarda, formun el ile nasıl ekleneceği ve yapılandırılacağı açıklanır. İsterseniz, öğreticinin çözüm dosyalarını indirebilir ve tamamlanmış formu projeye ekleyebilirsiniz. Öğretici dosyalarını indirmek için, bkz. [Windows Workflow Foundation (WF45)-Başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976). Dosyalar indirildikten sonra **Numberguessworkflowwhost** öğesine sağ tıklayın ve **Başvuru Ekle**' yi seçin. **System. Windows. Forms** ve **System. Drawing**için bir başvuru ekleyin. **Ekle**, **Yeni öğe** menüsünden Yeni bir form eklerseniz, ancak form içeri aktarılırken el ile eklenmesi gerekiyorsa, bu başvurular otomatik olarak eklenir. Başvurular eklendikten sonra, **Çözüm Gezgini** **Numberguessworkflowwhost** öğesine sağ tıklayın ve **Ekle**, **Varolan Öğe öğesini**seçin. Proje dosyalarındakiklasöre gidin, WorkflowHostForm.cs (veya workflowwhostform. vb) öğesini seçin ve Ekle ' ye tıklayın. `Form` Formu içeri aktarmayı seçerseniz, [formun özellikler ve yardımcı yöntemleri eklemek için](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)sonraki bölüme atlayabilirsiniz.
+> Bu yordamdaki adımlarda, formun el ile nasıl ekleneceği ve yapılandırılacağı açıklanır. İsterseniz, öğreticinin çözüm dosyalarını indirebilir ve tamamlanmış formu projeye ekleyebilirsiniz. Öğretici dosyalarını indirmek için, bkz. [Windows Workflow Foundation (WF45)-Başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976). Dosyalar indirildikten sonra **Numberguessworkflowwhost** öğesine sağ tıklayın ve **Başvuru Ekle**' yi seçin. **System. Windows. Forms** ve **System. Drawing**için bir başvuru ekleyin. **Ekle**, **Yeni öğe** menüsünden Yeni bir form eklerseniz, ancak form içeri aktarılırken el ile eklenmesi gerekiyorsa, bu başvurular otomatik olarak eklenir. Başvurular eklendikten sonra, **Çözüm Gezgini** **Numberguessworkflowwhost** öğesine sağ tıklayın ve **Ekle**, **Varolan Öğe öğesini**seçin. Proje dosyalarındaki `Form` klasörüne gidin, **WorkflowHostForm.cs** (veya **Workflowwhostform. vb**) öğesini seçin ve **Ekle**' ye tıklayın. Formu içeri aktarmayı seçerseniz, [formun özellikler ve yardımcı yöntemleri eklemek için](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)sonraki bölüme atlayabilirsiniz.
 
 1. **Çözüm Gezgini** Için **Numberguessworkflowwhost** öğesine sağ tıklayın ve **Ekle**, **Yeni öğe**seçeneğini belirleyin.
 
-2. **Yüklü** şablonlar listesinde, **Windows formu**' nu seçin, `WorkflowHostForm` **ad** kutusuna yazın ve **Ekle**' ye tıklayın.
+2. **Yüklü** şablonlar listesinde, **Windows formu**' nu seçin, **ad** kutusuna `WorkflowHostForm` yazın ve **Ekle**' ye tıklayın.
 
 3. Formda aşağıdaki özellikleri yapılandırın.
 
@@ -93,28 +93,28 @@ Windows Workflow Foundation (WF) öğesinin merkezi özelliklerinden biri, çal�
 
 4. Aşağıdaki denetimleri, belirtilen sırada forma ekleyin ve özellikleri yönlendirildiği şekilde yapılandırın.
 
-    |Denetim|Özelliði Değer|
+    |Denetim|Özellik: değer|
     |-------------|---------------------|
-    |**Düğme**|Ad: NewGame<br /><br /> Konumuna 13, 13<br /><br /> Boyutla 75, 23<br /><br /> Metinleri Yeni oyun|
-    |**Etiket**|Konumuna 94, 18<br /><br /> Metinleri 1 ile arasında bir sayı tahmin edin|
-    |**ComboBox**|Ad: NumberRange<br /><br /> DropDownStyle 'E<br /><br /> Öğeler 10, 100, 1000<br /><br /> Konumuna 228, 12<br /><br /> Boyutla 143, 21|
-    |**Etiket**|Konumuna 13, 43<br /><br /> Metinleri İş akışı türü|
-    |**ComboBox**|Ad: WorkflowType<br /><br /> DropDownStyle 'E<br /><br /> Öğeler StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> Konumuna 94, 40<br /><br /> Boyutla 277, 21|
-    |**Etiket**|Ad: WorkflowVersion<br /><br /> Konumuna 13, 362<br /><br /> Metinleri İş akışı sürümü|
-    |**GroupBox**|Konumuna 13, 67<br /><br /> Boyutla 358, 287<br /><br /> Metinleri Oyun|
+    |**Düğme**|Ad: NewGame<br /><br /> Konum: 13, 13<br /><br /> Boyut: 75, 23<br /><br /> Metin: yeni oyun|
+    |**Etiket**|Konum: 94, 18<br /><br /> Metin: 1 ile arasında bir sayı tahmin edin|
+    |**ComboBox**|Ad: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Öğeler: 10, 100, 1000<br /><br /> Konum: 228, 12<br /><br /> Boyut: 143, 21|
+    |**Etiket**|Konum: 13, 43<br /><br /> Metin: Iş akışı türü|
+    |**ComboBox**|Ad: WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> Öğeler: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> Konum: 94, 40<br /><br /> Boyut: 277, 21|
+    |**Etiket**|Ad: WorkflowVersion<br /><br /> Konum: 13, 362<br /><br /> Metin: Iş akışı sürümü|
+    |**GroupBox**|Konum: 13, 67<br /><br /> Boyut: 358, 287<br /><br /> Metin: oyun|
 
     > [!NOTE]
     > Aşağıdaki denetimleri eklerken GroupBox içine yerleştirin.
 
-    |Denetim|Özelliði Değer|
+    |Denetim|Özellik: değer|
     |-------------|---------------------|
-    |**Etiket**|Konumuna 7, 20<br /><br /> Metinleri İş akışı örnek kimliği|
-    |**ComboBox**|Ad: InstanceId<br /><br /> DropDownStyle 'E<br /><br /> Konumuna 121, 17<br /><br /> Boyutla 227, 21|
-    |**Etiket**|Konumuna 7, 47<br /><br /> Metinleri Ede|
-    |**TextBox**|Ad: Ede<br /><br /> Konumuna 50, 44<br /><br /> Boyutla 65, 20|
-    |**Düğme**|Ad: Kurumsal tahmin<br /><br /> Konumuna 121, 42<br /><br /> Boyutla 75, 23<br /><br /> Metinleri Tahmin girin|
-    |**Düğme**|Ad: QuitGame<br /><br /> Konumuna 274, 42<br /><br /> Boyutla 75, 23<br /><br /> Metinleri Çıkmak|
-    |**TextBox**|Ad: WorkflowStatus<br /><br /> Konumuna 10, 73<br /><br /> Çok satırlı Doğru<br /><br /> Özelliğinin Doğru<br /><br /> Çubuklarını Matema<br /><br /> Boyutla 338, 208|
+    |**Etiket**|Konum: 7, 20<br /><br /> Metin: Iş akışı örneği kimliği|
+    |**ComboBox**|Ad: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Konum: 121, 17<br /><br /> Boyut: 227, 21|
+    |**Etiket**|Konum: 7, 47<br /><br /> Metin: tahmin|
+    |**TextBox**|Ad: tahmin<br /><br /> Konum: 50, 44<br /><br /> Boyut: 65, 20|
+    |**Düğme**|Ad: Entertahmin<br /><br /> Konum: 121, 42<br /><br /> Boyut: 75, 23<br /><br /> Metin: tahmin girin|
+    |**Düğme**|Ad: QuitGame<br /><br /> Konum: 274, 42<br /><br /> Boyut: 75, 23<br /><br /> Metin: çık|
+    |**TextBox**|Ad: WorkflowStatus<br /><br /> Konum: 10, 73<br /><br /> Çoklu satır: doğru<br /><br /> ReadOnly: true<br /><br /> Kaydırma çubukları: dikey<br /><br /> Boyut: 338, 208|
 
 5. Formun **AcceptButton** özelliğini **entertahmin**olarak ayarlayın.
 
@@ -161,9 +161,9 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
     ```
 
     > [!NOTE]
-    > Bağlantı dizeniz farklıysa, veritabanınıza başvuracak şekilde `connectionString` güncelleştirin.
+    > Bağlantı dizeniz farklıysa, veritabanınıza başvurmak için `connectionString` güncelleştirin.
 
-4. `WorkflowFormHost` Sınıfına bir `WorkflowInstanceId` özellik ekleyin.
+4. `WorkflowFormHost` sınıfına bir `WorkflowInstanceId` özelliği ekleyin.
 
     ```vb
     Public ReadOnly Property WorkflowInstanceId() As Guid
@@ -187,7 +187,7 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
     }
     ```
 
-    Birleşik giriş kutusu kalıcı iş akışı örneği kimliklerinin bir listesini görüntüler `WorkflowInstanceId` ve özelliği şu anda seçili olan iş akışını döndürür. `InstanceId`
+    `InstanceId` açılan kutusu, kalıcı iş akışı örneği kimliklerinin bir listesini görüntüler ve `WorkflowInstanceId` özelliği şu anda seçili olan iş akışını döndürür.
 
 5. Form `Load` olayı için bir işleyici ekleyin. İşleyiciyi eklemek için form için **Tasarım görünümüne** geçin, **Özellikler** penceresinin üst kısmındaki **Olaylar** simgesine tıklayın ve **Yükle**' ye çift tıklayın.
 
@@ -204,7 +204,7 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
     }
     ```
 
-6. Aşağıdaki kodu öğesine `WorkflowHostForm_Load`ekleyin.
+6. `WorkflowHostForm_Load`için aşağıdaki kodu ekleyin.
 
     ```vb
     'Initialize the store and configure it so that it can be used for
@@ -232,9 +232,9 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
     ListPersistedWorkflows();
     ```
 
-    Form yüklendiğinde `SqlWorkflowInstanceStore` ,, Aralık ve iş akışı türü Birleşik giriş kutuları varsayılan değerlere ayarlanır ve kalıcı iş akışı örnekleri `InstanceId` açılan kutuya eklenir.
+    Form yüklendiğinde, `SqlWorkflowInstanceStore` yapılandırılır, Aralık ve iş akışı türü Birleşik giriş kutuları varsayılan değerlere ayarlanır ve kalıcı iş akışı örnekleri `InstanceId` Birleşik giriş kutusuna eklenir.
 
-7. `SelectedIndexChanged` İçin`InstanceId`bir işleyici ekleyin. İşleyiciyi eklemek için form için **Tasarım görünümüne** geçiş yapın, `InstanceId` açılan kutuyu seçin, **Özellikler** penceresinin üst kısmındaki **Olaylar** simgesine tıklayın ve **SelectedIndexChanged**öğesine çift tıklayın.
+7. `InstanceId`için `SelectedIndexChanged` işleyicisi ekleyin. İşleyiciyi eklemek için form için **Tasarım görünümüne** geçiş yapın, `InstanceId` Birleşik giriş kutusunu seçin, **Özellikler** penceresinin üst kısmındaki **Olaylar** simgesine tıklayın ve **SelectedIndexChanged**öğesine çift tıklayın.
 
     ```vb
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged
@@ -249,7 +249,7 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
     }
     ```
 
-8. Aşağıdaki kodu öğesine `InstanceId_SelectedIndexChanged`ekleyin. Kullanıcı açılan kutuyu kullanarak bir iş akışı seçtiğinde, bu işleyici durum penceresini güncelleştirir.
+8. `InstanceId_SelectedIndexChanged`için aşağıdaki kodu ekleyin. Kullanıcı açılan kutuyu kullanarak bir iş akışı seçtiğinde, bu işleyici durum penceresini güncelleştirir.
 
     ```vb
     If InstanceId.SelectedIndex = -1 Then
@@ -299,7 +299,7 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
     }
     ```
 
-9. Aşağıdaki `ListPersistedWorkflows` yöntemi form sınıfına ekleyin.
+9. Aşağıdaki `ListPersistedWorkflows` yöntemini form sınıfına ekleyin.
 
     ```vb
     Private Sub ListPersistedWorkflows()
@@ -343,9 +343,9 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
     }
     ```
 
-    `ListPersistedWorkflows`kalıcı iş akışı örnekleri için örnek deposunu sorgular ve `cboInstanceId` Birleşik giriş kutusuna örnek kimliklerini ekler.
+    `ListPersistedWorkflows` kalıcı iş akışı örnekleri için örnek deposunu sorgular ve örnek kimliklerini `cboInstanceId` Birleşik giriş kutusuna ekler.
 
-10. Form sınıfına aşağıdaki `UpdateStatus` yöntemi ve ilgili temsilciyi ekleyin. Bu yöntem, form üzerindeki durum penceresini Şu anda çalışan iş akışının durumuyla güncelleştirir.
+10. Aşağıdaki `UpdateStatus` yöntemini ve ilgili temsilciyi form sınıfına ekleyin. Bu yöntem, form üzerindeki durum penceresini Şu anda çalışan iş akışının durumuyla güncelleştirir.
 
     ```vb
     Private Delegate Sub UpdateStatusDelegate(msg As String)
@@ -392,7 +392,7 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
     }
     ```
 
-11. Form sınıfına aşağıdaki `GameOver` yöntemi ve ilgili temsilciyi ekleyin. Bir iş akışı tamamlandığında, bu yöntem, **InstanceId** Birleşik giriş kutusundan tamamlanan iş akışının örnek kimliğini kaldırarak form kullanıcı arabirimini güncelleştirir.
+11. Aşağıdaki `GameOver` yöntemini ve ilgili temsilciyi form sınıfına ekleyin. Bir iş akışı tamamlandığında, bu yöntem, **InstanceId** Birleşik giriş kutusundan tamamlanan iş akışının örnek kimliğini kaldırarak form kullanıcı arabirimini güncelleştirir.
 
     ```vb
     Private Delegate Sub GameOverDelegate()
@@ -426,7 +426,7 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
 
 ### <a name="BKMK_ConfigureWorkflowApplication"></a>Örnek deposunu, iş akışı yaşam döngüsü işleyicilerini ve uzantıları yapılandırmak için
 
-1. Form sınıfına `ConfigureWorkflowApplication` bir yöntem ekleyin.
+1. Form sınıfına bir `ConfigureWorkflowApplication` yöntemi ekleyin.
 
     ```vb
     Private Sub ConfigureWorkflowApplication(wfApp As WorkflowApplication)
@@ -440,9 +440,9 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
     }
     ```
 
-    Bu yöntem, `WorkflowApplication`öğesini yapılandırır, istenen uzantıları ekler ve iş akışı yaşam döngüsü olayları için işleyiciler ekler.
+    Bu yöntem `WorkflowApplication`yapılandırır, istenen uzantıları ekler ve iş akışı yaşam döngüsü olayları için işleyiciler ekler.
 
-2. İçinde `ConfigureWorkflowApplication`, `SqlWorkflowInstanceStore` için öğesinibelirtin.`WorkflowApplication`
+2. `ConfigureWorkflowApplication`' de, `WorkflowApplication``SqlWorkflowInstanceStore` belirtin.
 
     ```vb
     'Configure the persistence store.
@@ -454,7 +454,7 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
     wfApp.InstanceStore = store;
     ```
 
-3. Sonra bir `StringWriter` örnek oluşturun ve `Extensions` koleksiyonuna `WorkflowApplication`ekleyin. Uzantılara eklendiğinde `WriteLine` , tüm etkinlik çıkışlarını yakalar. `StringWriter` İş akışı boşta olduğunda, `WriteLine` çıkış `StringWriter` konumundan ayıklanıp formda görüntülenebilir.
+3. Sonra, bir `StringWriter` örneği oluşturup `WorkflowApplication``Extensions` koleksiyonuna ekleyin. Uzantılara bir `StringWriter` eklendiğinde, tüm `WriteLine` etkinlik çıkışını yakalar. İş akışı boşta kaldığında, `WriteLine` çıktısı `StringWriter` ayıklanıp formda görüntülenebilir.
 
     ```vb
     'Add a StringWriter to the extensions. This captures the output
@@ -470,7 +470,7 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
     wfApp.Extensions.Add(sw);
     ```
 
-4. `Completed` Olay için aşağıdaki işleyiciyi ekleyin. Bir iş akışı başarıyla tamamlandığında, sayıyı tahmin etmek için yapılan dönüşün sayısı durum penceresine görüntülenir. İş akışı sonlandığında, sonlandırmasına neden olan özel durum bilgileri görüntülenir. İşleyicinin `GameOver` sonunda yöntem çağrılır, bu, tamamlanan iş akışını iş akışı listesinden kaldırır.
+4. `Completed` olayı için aşağıdaki işleyiciyi ekleyin. Bir iş akışı başarıyla tamamlandığında, sayıyı tahmin etmek için yapılan dönüşün sayısı durum penceresine görüntülenir. İş akışı sonlandığında, sonlandırmasına neden olan özel durum bilgileri görüntülenir. İşleyicinin sonunda, tamamlanan iş akışını iş akışı listesinden kaldıran `GameOver` yöntemi çağrılır.
 
     ```vb
     wfApp.Completed = _
@@ -483,7 +483,7 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
                 UpdateStatus("Workflow Canceled.")
             Else
                 Dim Turns As Integer = Convert.ToInt32(e.Outputs("Turns"))
-                UpdateStatus(String.Format("Congratulations, you guessed the number in {0} turns.", Turns))
+                UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.")
             End If
             GameOver()
         End Sub
@@ -494,9 +494,7 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
     {
         if (e.CompletionState == ActivityInstanceState.Faulted)
         {
-            UpdateStatus(string.Format("Workflow Terminated. Exception: {0}\r\n{1}",
-                e.TerminationException.GetType().FullName,
-                e.TerminationException.Message));
+            UpdateStatus($"Workflow Terminated. Exception: {e.TerminationException.GetType().FullName}\r\n{e.TerminationException.Message}");
         }
         else if (e.CompletionState == ActivityInstanceState.Canceled)
         {
@@ -505,27 +503,23 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
         else
         {
             int Turns = Convert.ToInt32(e.Outputs["Turns"]);
-            UpdateStatus(string.Format("Congratulations, you guessed the number in {0} turns.", Turns));
+            UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.");
         }
         GameOver();
     };
     ```
 
-5. Aşağıdakileri `Aborted` ve`OnUnhandledException` işleyicileri ekleyin. Yöntemi, bir iş akışı örneği iptal `Aborted` edildiğinde, Sonlanmadığı ve örneği daha sonra sürdürülmesi mümkün olduğu için işleyiciden çağrılmaz. `GameOver`
+5. Aşağıdaki `Aborted` ve `OnUnhandledException` işleyicileri ekleyin. `GameOver` yöntemi, bir iş akışı örneği iptal edildiğinde, Sonlanmadığı ve örneği daha sonra sürdürülmesi mümkün olduğu için `Aborted` işleyicisinden çağrılmaz.
 
     ```vb
     wfApp.Aborted = _
         Sub(e As WorkflowApplicationAbortedEventArgs)
-            UpdateStatus(String.Format("Workflow Aborted. Exception: {0}" & vbCrLf & "{1}", _
-                e.Reason.GetType().FullName, _
-                e.Reason.Message))
+            UpdateStatus($"Workflow Aborted. Exception: {0e.Reason.GetType().FullName}" & vbCrLf & $"{e.Reason.Message}")
         End Sub
 
     wfApp.OnUnhandledException = _
         Function(e As WorkflowApplicationUnhandledExceptionEventArgs)
-            UpdateStatus(String.Format("Unhandled Exception: {0}" & vbCrLf & "{1}", _
-                e.UnhandledException.GetType().FullName, _
-                e.UnhandledException.Message))
+            UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}" & vbCrLf & $"{e.UnhandledException.Message}")
             GameOver()
             Return UnhandledExceptionAction.Terminate
         End Function
@@ -534,22 +528,18 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
     ```csharp
     wfApp.Aborted = delegate(WorkflowApplicationAbortedEventArgs e)
     {
-        UpdateStatus(string.Format("Workflow Aborted. Exception: {0}\r\n{1}",
-                e.Reason.GetType().FullName,
-                e.Reason.Message));
+        UpdateStatus($"Workflow Aborted. Exception: {e.Reason.GetType().FullName}\r\n{e.Reason.Message}");
     };
 
     wfApp.OnUnhandledException = delegate(WorkflowApplicationUnhandledExceptionEventArgs e)
     {
-        UpdateStatus(string.Format("Unhandled Exception: {0}\r\n{1}",
-                e.UnhandledException.GetType().FullName,
-                e.UnhandledException.Message));
+        UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}\r\n{e.UnhandledException.Message}");
         GameOver();
         return UnhandledExceptionAction.Terminate;
     };
     ```
 
-6. Aşağıdaki `PersistableIdle` işleyiciyi ekleyin. Bu işleyici eklenen `StringWriter` uzantıyı alır, `WriteLine` etkinliklerdeki çıktıyı ayıklar ve durum penceresinde görüntüler.
+6. Aşağıdaki `PersistableIdle` işleyicisini ekleyin. Bu işleyici, eklenen `StringWriter` uzantısını alır, `WriteLine` etkinliklerinden çıktıyı ayıklar ve durum penceresinde görüntüler.
 
     ```vb
     wfApp.PersistableIdle = _
@@ -576,7 +566,7 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
     };
     ```
 
-    Numaralandırmada üç değer vardır: <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist>, ve <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction> <xref:System.Activities.PersistableIdleAction.Persist>iş akışının kalıcı olmasına neden olur, ancak iş akışının kaldırılmasına neden olmaz. <xref:System.Activities.PersistableIdleAction.Unload>iş akışının kalıcı ve kaldırılmış olmasına neden olur.
+    <xref:System.Activities.PersistableIdleAction> numaralandırması üç değere sahiptir: <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist>ve <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist> iş akışının devam etmesine neden olur, ancak iş akışının kaldırılmasına neden olmaz. <xref:System.Activities.PersistableIdleAction.Unload>, iş akışının kalıcı ve kaldırılmış olmasına neden olur.
 
     Aşağıdaki örnek, tamamlanmış `ConfigureWorkflowApplication` yöntemidir.
 
@@ -600,23 +590,19 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
                     UpdateStatus("Workflow Canceled.")
                 Else
                     Dim Turns As Integer = Convert.ToInt32(e.Outputs("Turns"))
-                    UpdateStatus(String.Format("Congratulations, you guessed the number in {0} turns.", Turns))
+                    UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.")
                 End If
                 GameOver()
             End Sub
 
         wfApp.Aborted = _
             Sub(e As WorkflowApplicationAbortedEventArgs)
-                UpdateStatus(String.Format("Workflow Aborted. Exception: {0}" & vbCrLf & "{1}", _
-                    e.Reason.GetType().FullName, _
-                    e.Reason.Message))
+                UpdateStatus($"Workflow Aborted. Exception: {e.Reason.GetType().FullName}" & vbCrLf & $"{e.Reason.Message}")
             End Sub
 
         wfApp.OnUnhandledException = _
             Function(e As WorkflowApplicationUnhandledExceptionEventArgs)
-                UpdateStatus(String.Format("Unhandled Exception: {0}" & vbCrLf & "{1}", _
-                    e.UnhandledException.GetType().FullName, _
-                    e.UnhandledException.Message))
+                UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}" & vbCrLf & $"{e.UnhandledException.Message}")
                 GameOver()
                 Return UnhandledExceptionAction.Terminate
             End Function
@@ -648,9 +634,7 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
         {
             if (e.CompletionState == ActivityInstanceState.Faulted)
             {
-                UpdateStatus(string.Format("Workflow Terminated. Exception: {0}\r\n{1}",
-                    e.TerminationException.GetType().FullName,
-                    e.TerminationException.Message));
+                UpdateStatus($"Workflow Terminated. Exception: {e.TerminationException.GetType().FullName}\r\n{e.TerminationException.Message}");
             }
             else if (e.CompletionState == ActivityInstanceState.Canceled)
             {
@@ -659,23 +643,19 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
             else
             {
                 int Turns = Convert.ToInt32(e.Outputs["Turns"]);
-                UpdateStatus(string.Format("Congratulations, you guessed the number in {0} turns.", Turns));
+                UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.");
             }
             GameOver();
         };
 
         wfApp.Aborted = delegate(WorkflowApplicationAbortedEventArgs e)
         {
-            UpdateStatus(string.Format("Workflow Aborted. Exception: {0}\r\n{1}",
-                    e.Reason.GetType().FullName,
-                    e.Reason.Message));
+            UpdateStatus($"Workflow Aborted. Exception: {e.Reason.GetType().FullName}\r\n{e.Reason.Message}");
         };
 
         wfApp.OnUnhandledException = delegate(WorkflowApplicationUnhandledExceptionEventArgs e)
         {
-            UpdateStatus(string.Format("Unhandled Exception: {0}\r\n{1}",
-                    e.UnhandledException.GetType().FullName,
-                    e.UnhandledException.Message));
+            UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}\r\n{e.UnhandledException.Message}");
             GameOver();
             return UnhandledExceptionAction.Terminate;
         };
@@ -695,9 +675,9 @@ Bu bölümdeki adımlarda, form sınıfına, çalışma ve tahmin sayısı tahmi
 
 ### <a name="BKMK_WorkflowVersionMap"></a>Birden çok iş akışı türünü başlatmayı ve sürdürmeyi etkinleştirmek için
 
-Bir iş akışı örneğinin sürdürülmesi için, konağın iş akışı tanımını sağlaması gerekir. Bu öğreticide, üç iş akışı türü vardır ve sonraki öğretici adımları bu türlerin birden çok sürümünü ortaya çıkarabilir. `WorkflowIdentity`bir ana bilgisayar uygulamasının, tanımlayıcı bilgileri kalıcı bir iş akışı örneğiyle ilişkilendirmesi için bir yol sağlar. Bu bölümdeki adımlarda, kalıcı bir iş akışı örneğinden ilgili iş akışı tanımına iş akışı kimliğini eşleştirmeye yardımcı olması için bir yardımcı program sınıfının nasıl oluşturulacağı gösterilmektedir. Ve sürümü oluşturma hakkında `WorkflowIdentity` daha fazla bilgi için bkz. [workflowwıdentity ve sürümü kullanma](using-workflowidentity-and-versioning.md).
+Bir iş akışı örneğinin sürdürülmesi için, konağın iş akışı tanımını sağlaması gerekir. Bu öğreticide, üç iş akışı türü vardır ve sonraki öğretici adımları bu türlerin birden çok sürümünü ortaya çıkarabilir. `WorkflowIdentity`, bir ana bilgisayar uygulamasının, tanımlayıcı bilgileri kalıcı bir iş akışı örneğiyle ilişkilendirmesi için bir yol sağlar. Bu bölümdeki adımlarda, kalıcı bir iş akışı örneğinden ilgili iş akışı tanımına iş akışı kimliğini eşleştirmeye yardımcı olması için bir yardımcı program sınıfının nasıl oluşturulacağı gösterilmektedir. `WorkflowIdentity` ve sürüm oluşturma hakkında daha fazla bilgi için bkz. [Workflowwıdentity ve sürüm oluşturmayı kullanma](using-workflowidentity-and-versioning.md).
 
-1. **Çözüm Gezgini** Için **Numberguessworkflowwhost** öğesine sağ tıklayın ve **Ekle**, **sınıf**' i seçin. Ad `WorkflowVersionMap` kutusuna yazın ve **Ekle**' ye tıklayın.
+1. **Çözüm Gezgini** Için **Numberguessworkflowwhost** öğesine sağ tıklayın ve **Ekle**, **sınıf**' i seçin. **Ad** kutusuna `WorkflowVersionMap` yazın ve **Ekle**' ye tıklayın.
 
 2. Aşağıdaki `using` veya `Imports` deyimlerini, diğer `using` veya `Imports` deyimleriyle dosyanın en üstüne ekleyin.
 
@@ -711,7 +691,7 @@ Bir iş akışı örneğinin sürdürülmesi için, konağın iş akışı tanı
     using System.Activities;
     ```
 
-3. `WorkflowVersionMap` Sınıf bildirimini aşağıdaki bildirimle değiştirin.
+3. `WorkflowVersionMap` sınıfı bildirimini aşağıdaki bildirimle değiştirin.
 
     ```vb
     Public Module WorkflowVersionMap
@@ -809,11 +789,11 @@ Bir iş akışı örneğinin sürdürülmesi için, konağın iş akışı tanı
     }
     ```
 
-    `WorkflowVersionMap`Bu öğreticideki üç iş akışı tanımına eşlenen üç iş akışı kimliği içerir ve iş akışları başlatıldığında ve sürdürüldüğünde aşağıdaki bölümlerde kullanılır.
+    `WorkflowVersionMap`, bu öğreticideki üç iş akışı tanımına eşlenen üç iş akışı kimliği içerir ve iş akışları başlatıldığında ve devam ettirildiğinde aşağıdaki bölümlerde kullanılır.
 
 ### <a name="BKMK_StartWorkflow"></a>Yeni bir iş akışı başlatmak için
 
-1. `Click` İçin`NewGame`bir işleyici ekleyin. İşleyiciyi eklemek için form için **Tasarım görünümüne** geçin ve çift tıklayın `NewGame`. Bir `NewGame_Click` işleyici eklenir ve görünüm form için kod görünümüne geçer. Kullanıcı bu düğmeye her tıkladığında yeni bir iş akışı başlatılır.
+1. `NewGame`için `Click` işleyicisi ekleyin. İşleyiciyi eklemek için form için **Tasarım görünümüne** geçin ve `NewGame`çift tıklayın. `NewGame_Click` işleyicisi eklenir ve görünüm form için kod görünümüne geçer. Kullanıcı bu düğmeye her tıkladığında yeni bir iş akışı başlatılır.
 
     ```vb
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click
@@ -840,7 +820,7 @@ Bir iş akışı örneğinin sürdürülmesi için, konağın iş akışı tanı
     inputs.Add("MaxNumber", Convert.ToInt32(NumberRange.SelectedItem));
     ```
 
-3. Sonra, iş akışını başlatan aşağıdaki kodu ekleyin. Seçilen iş akışı türüne karşılık gelen `WorkflowVersionMap` veişakışıtanımıyardımcısınıfıkullanılarakalınır.`WorkflowIdentity` Ardından, iş akışı `WorkflowApplication` tanımı, `WorkflowIdentity`ve giriş bağımsız değişkenlerinin sözlüğü kullanılarak yeni bir örnek oluşturulur.
+3. Sonra, iş akışını başlatan aşağıdaki kodu ekleyin. Seçilen iş akışı türüne karşılık gelen `WorkflowIdentity` ve iş akışı tanımı `WorkflowVersionMap` yardımcı sınıfı kullanılarak alınır. Ardından, giriş bağımsız değişkenlerinin iş akışı tanımı, `WorkflowIdentity`ve sözlüğü kullanılarak yeni bir `WorkflowApplication` örneği oluşturulur.
 
     ```vb
     Dim identity As WorkflowIdentity = Nothing
@@ -900,7 +880,7 @@ Bir iş akışı örneğinin sürdürülmesi için, konağın iş akışı tanı
     WorkflowStarting = false;
     ```
 
-5. Örnek `ConfigureWorkflowApplication` deposunu, uzantıları ve bu `WorkflowApplication` örnek için iş akışı yaşam döngüsü işleyicilerini yapılandırma çağrısı.
+5. Bu `WorkflowApplication` örneği için örnek deposu, Uzantılar ve iş akışı yaşam döngüsü işleyicilerini yapılandırmak üzere `ConfigureWorkflowApplication` çağırın.
 
     ```vb
     'Configure the instance store, extensions, and
@@ -926,7 +906,7 @@ Bir iş akışı örneğinin sürdürülmesi için, konağın iş akışı tanı
     wfApp.Run();
     ```
 
-     Aşağıdaki örnek, tamamlanan `NewGame_Click` işleyicidir.
+     Aşağıdaki örnek, tamamlanmış `NewGame_Click` işleyicisidir.
 
     ```vb
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click
@@ -1008,7 +988,7 @@ Bir iş akışı örneğinin sürdürülmesi için, konağın iş akışı tanı
 
 ### <a name="BKMK_ResumeWorkflow"></a>Bir iş akışını sürdürmesini sağlamak için
 
-1. `Click` İçin`EnterGuess`bir işleyici ekleyin. İşleyiciyi eklemek için form için **Tasarım görünümüne** geçin ve çift tıklayın `EnterGuess`. Kullanıcı bu düğmeye tıkladığında bir iş akışı sürdürülür.
+1. `EnterGuess`için `Click` işleyicisi ekleyin. İşleyiciyi eklemek için form için **Tasarım görünümüne** geçin ve `EnterGuess`çift tıklayın. Kullanıcı bu düğmeye tıkladığında bir iş akışı sürdürülür.
 
     ```vb
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click
@@ -1057,7 +1037,7 @@ Bir iş akışı örneğinin sürdürülmesi için, konağın iş akışı tanı
     }
     ```
 
-3. Sonra, kalıcı iş `WorkflowApplicationInstance` akışı örneğini alın. Bir `WorkflowApplicationInstance` iş akışı tanımıyla henüz ilişkilendirilmemiş kalıcı bir iş akışı örneğini temsil eder. Öğesinin, kalıcı iş akışı `WorkflowIdentity` örneğinin içerir.`WorkflowApplicationInstance` `DefinitionIdentity` Bu öğreticide `WorkflowVersionMap` yardımcı program sınıfı, `WorkflowIdentity` doğru iş akışı tanımıyla eşlemek için kullanılır. İş akışı tanımı alındıktan sonra, `WorkflowApplication` doğru iş akışı tanımı kullanılarak oluşturulur.
+3. Sonra, kalıcı iş akışı örneğinin `WorkflowApplicationInstance` alın. `WorkflowApplicationInstance`, henüz bir iş akışı tanımıyla ilişkilendirilmemiş kalıcı bir iş akışı örneğini temsil eder. `WorkflowApplicationInstance` `DefinitionIdentity`, kalıcı iş akışı örneğinin `WorkflowIdentity` içerir. Bu öğreticide, `WorkflowVersionMap` yardımcı sınıfı, `WorkflowIdentity` doğru iş akışı tanımına eşlemek için kullanılır. İş akışı tanımı alındıktan sonra, doğru iş akışı tanımı kullanılarak bir `WorkflowApplication` oluşturulur.
 
     ```vb
     Dim instance As WorkflowApplicationInstance = _
@@ -1087,7 +1067,7 @@ Bir iş akışı örneğinin sürdürülmesi için, konağın iş akışı tanı
         new WorkflowApplication(wf, instance.DefinitionIdentity);
     ```
 
-4. Oluşturulduktan sonra, çağırarak `ConfigureWorkflowApplication`örnek deposunu, iş akışı yaşam döngüsü işleyicilerini ve Uzantıları yapılandırın. `WorkflowApplication` Bu adımların her yeni `WorkflowApplication` oluşturulduğunda yapılması ve iş akışı örneği `WorkflowApplication`içine yüklenmeden önce yapılması gerekir. İş akışı yüklendikten sonra kullanıcının tahminiyle devam edilir.
+4. `WorkflowApplication` oluşturulduktan sonra, `ConfigureWorkflowApplication`çağırarak örnek depoyu, iş akışı yaşam döngüsü işleyicilerini ve Uzantıları yapılandırın. Bu adımların her yeni `WorkflowApplication` oluşturulduğunda yapılması ve iş akışı örneği `WorkflowApplication`yüklenmeden önce yapılması gerekir. İş akışı yüklendikten sonra kullanıcının tahminiyle devam edilir.
 
     ```vb
     'Configure the extensions and lifecycle handlers.
@@ -1129,7 +1109,7 @@ Bir iş akışı örneğinin sürdürülmesi için, konağın iş akışı tanı
     Guess.Focus();
     ```
 
-    Aşağıdaki örnek, tamamlanan `EnterGuess_Click` işleyicidir.
+    Aşağıdaki örnek, tamamlanmış `EnterGuess_Click` işleyicisidir.
 
     ```vb
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click
@@ -1224,7 +1204,7 @@ Bir iş akışı örneğinin sürdürülmesi için, konağın iş akışı tanı
 
 ### <a name="BKMK_TerminateWorkflow"></a>Bir iş akışını sonlandırmak için
 
-1. `Click` İçin`QuitGame`bir işleyici ekleyin. İşleyiciyi eklemek için form için **Tasarım görünümüne** geçin ve çift tıklayın `QuitGame`. Kullanıcı bu düğmeye tıkladığında Şu anda seçili olan iş akışı sonlandırılır.
+1. `QuitGame`için `Click` işleyicisi ekleyin. İşleyiciyi eklemek için form için **Tasarım görünümüne** geçin ve `QuitGame`çift tıklayın. Kullanıcı bu düğmeye tıkladığında Şu anda seçili olan iş akışı sonlandırılır.
 
     ```vb
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click
@@ -1239,7 +1219,7 @@ Bir iş akışı örneğinin sürdürülmesi için, konağın iş akışı tanı
     }
     ```
 
-2. Aşağıdaki kodu `QuitGame_Click` işleyiciye ekleyin. Bu kod ilk olarak iş akışı listesinde bir iş akışının seçili olduğundan emin olmak için kontrol eder. Ardından kalıcı örneği öğesine `WorkflowApplicationInstance`yükler, doğru iş akışı tanımını anlamak `DefinitionIdentity` için öğesini kullanır ve sonra öğesini başlatır. `WorkflowApplication` Sonraki Uzantılar ve iş akışı yaşam döngüsü işleyicileri bir çağrısıyla `ConfigureWorkflowApplication`yapılandırılır. Yapılandırıldıktan sonra, yüklenir ve ardından `Terminate` çağırılır. `WorkflowApplication`
+2. `QuitGame_Click` işleyicisine aşağıdaki kodu ekleyin. Bu kod ilk olarak iş akışı listesinde bir iş akışının seçili olduğundan emin olmak için kontrol eder. Ardından, kalıcı örneği bir `WorkflowApplicationInstance`yükler, doğru iş akışı tanımını anlamak için `DefinitionIdentity` kullanır ve ardından `WorkflowApplication`başlatır. Daha sonra Uzantılar ve iş akışı yaşam döngüsü işleyicileri bir `ConfigureWorkflowApplication`çağrısıyla yapılandırılır. `WorkflowApplication` yapılandırıldıktan sonra, yüklenir ve ardından `Terminate` çağırılır.
 
     ```vb
     If WorkflowInstanceId = Guid.Empty Then
@@ -1310,7 +1290,7 @@ Bir iş akışı örneğinin sürdürülmesi için, konağın iş akışı tanı
     using System.Windows.Forms;
     ```
 
-3. Mevcut iş akışı barındırma kodunu kaldırın veya buradan [nasıl yapılır: Bir iş akışı](how-to-run-a-workflow.md)çalıştırın ve aşağıdaki kodla değiştirin.
+3. [Nasıl yapılır: Iş akışı çalıştırma](how-to-run-a-workflow.md)ve aşağıdaki kodla değiştirme gibi mevcut iş akışı barındırma kodunu kaldırın
 
     ```vb
     Sub Main()
@@ -1333,8 +1313,8 @@ Bir iş akışı örneğinin sürdürülmesi için, konağın iş akışı tanı
 
 6. **Numberguessworkflowwhost** ' nin başlangıç uygulaması olarak ayarlandığından emin olun ve uygulamayı başlatmak için CTRL + F5 tuşlarına basın.
 
-7. Tahmin etme oyunu ve başlatılacak iş akışı türü için bir Aralık seçin ve **yeni oyun**' e tıklayın. Tahmin kutusuna bir tahmin girin ve tahmininizi göndermek için **Git** ' e tıklayın. `WriteLine` Etkinliklerdeki çıktının formda görüntülendiğini unutmayın.
+7. Tahmin etme oyunu ve başlatılacak iş akışı türü için bir Aralık seçin ve **yeni oyun**' e tıklayın. **Tahmin kutusuna bir** tahmin girin ve tahmininizi göndermek için **Git** ' e tıklayın. `WriteLine` etkinliklerinden gelen çıktının formda görüntülendiğini unutmayın.
 
 8. Farklı iş akışı türleri ve sayı aralıkları kullanarak birkaç iş akışı başlatın, bazı tahminler girin ve **Iş akışı örneği kimliği** listesinden seçim yaparak iş akışları arasında geçiş yapın.
 
-    Yeni bir iş akışına geçtiğinizde, iş akışının önceki tahminlerini ve ilerleme durumu durum penceresinde görüntülenmediğini unutmayın. Durumun, yakalanmadığı ve her yerde kaydedilmediği için durum kullanılamaz. Öğreticinin bir sonraki adımında, [nasıl yapılır: Özel bir izleme katılımcısı](how-to-create-a-custom-tracking-participant.md)oluşturun, bu bilgileri kaydeden özel bir izleme katılımcısı oluşturursunuz.
+    Yeni bir iş akışına geçtiğinizde, iş akışının önceki tahminlerini ve ilerleme durumu durum penceresinde görüntülenmediğini unutmayın. Durumun, yakalanmadığı ve her yerde kaydedilmediği için durum kullanılamaz. Öğreticinin bir sonraki adımında, [nasıl yapılır: özel bir Izleme katılımcısı oluşturma](how-to-create-a-custom-tracking-participant.md), bu bilgileri kaydeden özel bir izleme katılımcısı oluşturursunuz.

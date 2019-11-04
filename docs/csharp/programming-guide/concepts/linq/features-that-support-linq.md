@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 1029d34ae8823fe91c7e4bc92e168fcc1061c707
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: af7bf487ff4ed250025b946f0948c269fcc5bf09
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594409"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418568"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ'i Destekleyen C# Özellikleri
 
-Aşağıdaki bölümde 3,0 sürümünde C# tanıtılan yeni dil yapıları tanıtılmaktadır. Bu yeni özelliklerin tümü sorguları olan [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] bir dereceye kadar kullanılsa da [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] bunlarla sınırlı değildir ve yararlı bulduğunuz herhangi bir bağlamda kullanılabilir.
+Aşağıdaki bölümde 3,0 sürümünde C# tanıtılan yeni dil yapıları tanıtılmaktadır. Bu yeni özelliklerin tümü [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgularıyla bir dereceye kadar kullanılsa da, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] bunlarla sınırlı değildir ve yararlı bulduğunuz herhangi bir bağlamda kullanılabilir.
 
 ## <a name="query-expressions"></a>Sorgu İfadeleri
 
-Sorgu ifadeleri, IEnumerable koleksiyonlarını sorgulamak için SQL veya XQuery ile benzer bir bildirime dayalı sözdizimi kullanır. Derleme zamanı sorgu söz dizimi, bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcının standart sorgu işleci genişletme yöntemlerinin uygulamasına yönelik yöntem çağrılarına dönüştürülür. Uygulamalar, uygun ad alanını bir `using` yönergeyle belirterek kapsamdaki standart sorgu işleçlerini denetler. Aşağıdaki sorgu ifadesi bir dize dizisi alır, bunları dizedeki ilk karaktere göre gruplandırır ve grupları sıralar.
+Sorgu ifadeleri, IEnumerable koleksiyonlarını sorgulamak için SQL veya XQuery ile benzer bir bildirime dayalı sözdizimi kullanır. Derleme zamanı sorgu söz dizimi, bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcının standart sorgu işleci genişletme yöntemlerinin uygulamasına olan yöntem çağrılarına dönüştürülür. Uygulamalar, `using` yönergesi ile uygun ad alanını belirterek kapsamdaki standart sorgu işleçlerini denetler. Aşağıdaki sorgu ifadesi bir dize dizisi alır, bunları dizedeki ilk karaktere göre gruplandırır ve grupları sıralar.
 
 ```csharp
 var query = from str in stringArray
@@ -26,7 +26,7 @@ var query = from str in stringArray
             select stringGroup;
 ```
 
-Daha fazla bilgi için bkz. [LINQ sorgu ifadeleri](../../linq-query-expressions/index.md).
+Daha fazla bilgi için bkz. [LINQ sorgu ifadeleri](../../../linq/index.md).
 
 ## <a name="implicitly-typed-variables-var"></a>Örtük olarak yazılan değişkenler (var)
 
@@ -40,19 +40,19 @@ var query = from str in stringArray
             select str;
 ```
 
-Olarak `var` belirtilen değişkenler, türü açıkça belirttiğiniz değişkenler olarak kesin olarak türdedir. Öğesinin `var` kullanımı anonim türler oluşturmayı mümkün kılar, ancak yalnızca yerel değişkenler için kullanılabilir. Diziler, örtük yazma ile de bildirilemez.
+`var` olarak belirtilen değişkenler, türü açıkça belirttiğiniz değişkenler olarak kesin olarak türdedir. `var` kullanımı anonim türler oluşturmayı mümkün kılar, ancak yalnızca yerel değişkenler için kullanılabilir. Diziler, örtük yazma ile de bildirilemez.
 
 Daha fazla bilgi için bkz. [örtülü olarak yazılan yerel değişkenler](../../classes-and-structs/implicitly-typed-local-variables.md).
 
 ## <a name="object-and-collection-initializers"></a>Nesne ve Koleksiyon Başlatıcıları
 
-Nesne ve koleksiyon başlatıcıları nesne için bir oluşturucu açıkça çağrılmadan nesneleri başlatmayı mümkün hale getirir. Başlatıcılar, genellikle, kaynak verileri yeni bir veri türüne proje yaparken sorgu ifadelerinde kullanılır. Public `Customer` `Name` ve Propertiesileadlandırılmışbirsınıfvarsayıldığında,nesneBaşlatıcısıaşağıdakikoddaolduğugibikullanılabilir:`Phone`
+Nesne ve koleksiyon başlatıcıları nesne için bir oluşturucu açıkça çağrılmadan nesneleri başlatmayı mümkün hale getirir. Başlatıcılar, genellikle, kaynak verileri yeni bir veri türüne proje yaparken sorgu ifadelerinde kullanılır. Ortak `Name` ve `Phone` özellikleriyle `Customer` adlı bir sınıf kabul edildiğinde, nesne Başlatıcısı aşağıdaki kodda olduğu gibi kullanılabilir:
 
 ```csharp
 var cust = new Customer { Name = "Mike", Phone = "555-1212" };
 ```
 
-Sınıfımızla `Customer` devam ederek, adlı `IncomingOrders`bir veri kaynağı olduğunu ve her sıra büyük `OrderSize`bir sipariş için bu sırada yeni `Customer` bir temel oluşturmak istiyoruz. Bir LINQ sorgusu bu veri kaynağında yürütülebilir ve bir koleksiyonu doldurarak nesne başlatma işlemi kullanılabilir:
+`Customer` sınıfınız ile devam ederek, `IncomingOrders`adlı bir veri kaynağı olduğunu ve her bir sipariş için büyük bir `OrderSize`olan her sıra için bu siparişi temel alan yeni bir `Customer` oluşturmak istediğinizi varsayalım. Bir LINQ sorgusu bu veri kaynağında yürütülebilir ve bir koleksiyonu doldurarak nesne başlatma işlemi kullanılabilir:
 
 ```csharp
 var newLargeOrderCustomers = from o in IncomingOrders
@@ -60,7 +60,7 @@ var newLargeOrderCustomers = from o in IncomingOrders
                             select new Customer { Name = o.Name, Phone = o.Phone };
 ```
 
-Veri kaynağı, gibi bir `Customer` sınıftan `OrderSize`çok daha fazla özelliğe sahip olabilir, ancak nesne başlatma ile sorgudan döndürülen veriler istenen veri türüne kopyalanır; sınıfımızla ilgili verileri seçiyoruz. Sonuç olarak, şimdi `IEnumerable` yaptığımız yeni `Customer`s 'leri doldurduk. Yukarıdaki, LINQ yöntem sözdiziminde de yazılabilir:
+Veri kaynağı, `OrderSize`gibi `Customer` sınıftan çok daha fazla özelliğe sahip olabilir, ancak nesne başlatma ile, sorgudan döndürülen veriler istenen veri türüne kopyalanır; sınıfımızla ilgili verileri seçtik. Sonuç olarak, şimdi yaptığımız yeni `Customer`s `IEnumerable`. Yukarıdaki, LINQ yöntem sözdiziminde de yazılabilir:
 
 ```csharp
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
@@ -84,13 +84,13 @@ Daha fazla bilgi için bkz. [anonim türler](../../classes-and-structs/anonymous
 
 ## <a name="extension-methods"></a>Genişletme Yöntemleri
 
-Uzantı yöntemi, bir tür ile ilişkilendirilebilen statik bir yöntemdir ve bu sayede tür üzerinde bir örnek yöntemi gibi çağrılabilir. Bu özellik, etkin bir şekilde, var olan türlere "Ekle" gibi yeni yöntemler eklemenizi sağlar. Standart sorgu işleçleri, uygulayan [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] <xref:System.Collections.Generic.IEnumerable%601>herhangi bir tür için sorgu işlevselliği sağlayan bir genişletme yöntemleri kümesidir.
+Uzantı yöntemi, bir tür ile ilişkilendirilebilen statik bir yöntemdir ve bu sayede tür üzerinde bir örnek yöntemi gibi çağrılabilir. Bu özellik, etkin bir şekilde, var olan türlere "Ekle" gibi yeni yöntemler eklemenizi sağlar. Standart sorgu işleçleri, <xref:System.Collections.Generic.IEnumerable%601>uygulayan her tür için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu işlevselliği sağlayan bir genişletme yöntemleri kümesidir.
 
 Daha fazla bilgi için bkz. [Uzantı yöntemleri](../../classes-and-structs/extension-methods.md).
 
 ## <a name="lambda-expressions"></a>Lambda İfadeleri
 
-Lambda ifadesi, işlev gövdesinden giriş parametrelerini ayırmak için = > işlecini kullanan ve derleme zamanında bir temsilciye veya bir ifade ağacına dönüştürülebilen bir satır içi işlevdir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Programlamada, standart sorgu işleçleri için doğrudan Yöntem çağrıları yaptığınızda lambda ifadeleriyle karşılaşacaksınız.
+Lambda ifadesi, işlev gövdesinden giriş parametrelerini ayırmak için = > işlecini kullanan ve derleme zamanında bir temsilciye veya bir ifade ağacına dönüştürülebilen bir satır içi işlevdir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] programlamada, standart sorgu işleçleri için doğrudan Yöntem çağrıları yaptığınızda lambda ifadeleriyle karşılaşacaksınız.
 
 Daha fazla bilgi için bkz.:
 

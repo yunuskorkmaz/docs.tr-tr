@@ -1,40 +1,40 @@
 ---
-title: in (genel değiştirici) - C# başvurusu
+title: ın (genel değiştirici)- C# başvuru
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
-ms.openlocfilehash: f736540a37d3226bccfc07749dcf06ca018663e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0806169b9b1c3521dcf89f5ea0fa5aec188030c2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661470"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422782"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (Genel Değiştirici) (C# Başvurusu)
 
-Genel tür parametreleri için `in` anahtar sözcüğü, tür parametresi değişken karşıtı olduğunu belirtir. Kullanabileceğiniz `in` genel arabirimlerde ve temsilcilerde anahtar sözcük.
+Genel tür parametreleri için `in` anahtar sözcüğü tür parametresinin değişken karşıtı olduğunu belirtir. Genel arabirimlerde ve temsilcilerde `in` anahtar sözcüğünü kullanabilirsiniz.
 
-Kontravaryans, genel parametre olarak belirtilenden daha az türetilmiş bir tür belirtmenize olanak sağlar. Bu değişken karşıtı arabirimleri uygulayan sınıflar örtük dönüştürülmesi ve temsilci türlerinin örtük dönüştürme için sağlar. Kovaryans ve kontravaryans, genel tür parametreleri başvuru türleri için desteklenir ancak değer türleri için desteklenmiyor.
+Değişken Varyans, genel parametre ile belirtilenden daha az türetilmiş bir tür kullanmanıza olanak sağlar. Bu, değişken karşıtı arabirimler uygulayan sınıfların örtük dönüştürülmesini ve temsilci türlerinin örtük dönüştürülmesini sağlar. Genel tür parametrelerindeki Kovaryans ve değişken Varyans, başvuru türleri için desteklenir, ancak değer türleri için desteklenmez.
 
-Yalnızca bir yöntemin dönüş türü ve bir yöntemin parametre türü tanımlıyorsa türü değişken karşıtı genel arabirim veya temsilci olarak bildirilebilir. `In`, `ref`, ve `out` parametreleri ne olduklarından yani sabit olmalıdır birlikte değişken veya değişken karşıtı.
+Bir tür, genel bir arabirimde veya bir yöntemin dönüş türü değil, bir yöntemin parametrelerinin türünü tanımlıyorsa yalnızca bir veya temsilcisinde değişken karşıtı olarak bildirilemez. `In`, `ref`ve `out` parametreleri sabit olmalıdır, yani bunlar birlikte değişken veya değişken karşıtı değil.
 
-Yöntemlerinden daha az türetilmiş türler arabirim türü parametresi ile belirtilen değerinden bağımsız değişkenleri kabul etmek bir değişken karşıtı tür parametresine sahip bir arabirim sağlar. Örneğin, <xref:System.Collections.Generic.IComparer%601> arabirimi, T türü değişken karşıtı olduğundan, bir nesnenin atayabilirsiniz `IComparer<Person>` bir nesne türüne `IComparer<Employee>` özel dönüştürme yöntemleri kullanılarak olmadan türü `Employee` devralan `Person`.
+Değişken karşıtı tür parametresine sahip bir arabirim, yöntemlerinin, arabirim türü parametresi tarafından belirtilenden daha az türetilmiş türlerin bağımsız değişkenlerini kabul etmesine olanak tanır. Örneğin, <xref:System.Collections.Generic.IComparer%601> arabiriminde T yazın, `IComparer<Person>` türünün bir nesnesini `IComparer<Employee>` türünün bir nesnesine `Employee` devr`Person`alırsa herhangi bir özel dönüştürme yöntemini kullanmadan atayabilirsiniz.
 
-Başka bir temsilci aynı türden, ancak daha az türetilmiş bir genel tür parametresi değişken karşıtı temsilci atanabilir.
+Değişken karşıtı bir temsilciye aynı türde başka bir temsilci atanabilir, ancak daha az türetilmiş bir genel tür parametresi olabilir.
 
-Daha fazla bilgi için [Kovaryans ve kontravaryans](../../programming-guide/concepts/covariance-contravariance/index.md).
+Daha fazla bilgi için bkz. [Kovaryans ve değişken varyans](../../programming-guide/concepts/covariance-contravariance/index.md).
 
-## <a name="contravariant-generic-interface"></a>Değişken karşıtı genel arabirimi
+## <a name="contravariant-generic-interface"></a>Değişken karşıtı genel arabirim
 
-Aşağıdaki örnek, bildirmek, genişletin ve değişken karşıtı genel bir arabirim uygulamak gösterilmektedir. Ayrıca, bu arabirimi uygulayan sınıflar için örtük dönüştürme nasıl kullanabileceğinizi gösterir.
+Aşağıdaki örnek, bir değişken karşıtı genel arabirimin nasıl bildirileceği, genişletileceği ve uygulanacağını gösterir. Ayrıca, bu arabirimi uygulayan sınıflar için örtük dönüştürmeyi nasıl kullanabileceğinizi gösterir.
 
 [!code-csharp[csVarianceKeywords#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csvariancekeywords/cs/program.cs#1)]
 
-## <a name="contravariant-generic-delegate"></a>Değişken karşıtı Genel temsilci
+## <a name="contravariant-generic-delegate"></a>Değişken karşıtı genel temsilci
 
-Aşağıdaki örnek, bildirme, oluşturma ve değişken karşıtı Genel temsilci çağırma gösterilmektedir. Ayrıca, bir temsilci türü örtük olarak nasıl dönüştürebilirsiniz gösterir.
+Aşağıdaki örnek, bir değişken karşıtı genel temsilcinin nasıl bildirilemeyeceğini, örneklendirilemeyeceğini ve çağıralınacağını gösterir. Ayrıca, bir temsilci türünü örtülü olarak nasıl dönüştürebileceğiniz de gösterilmektedir.
 
 [!code-csharp[csVarianceKeywords#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csvariancekeywords/cs/program.cs#2)]
 
@@ -46,4 +46,4 @@ Aşağıdaki örnek, bildirme, oluşturma ve değişken karşıtı Genel temsilc
 
 - [out](out-generic-modifier.md)
 - [Kovaryans ve Kontravaryans](../../programming-guide/concepts/covariance-contravariance/index.md)
-- [Değiştiriciler](modifiers.md)
+- [Değiştiriciler](index.md)

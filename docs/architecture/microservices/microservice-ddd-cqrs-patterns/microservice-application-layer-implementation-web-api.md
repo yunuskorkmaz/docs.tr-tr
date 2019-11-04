@@ -2,12 +2,12 @@
 title: Web API’si kullanarak mikro hizmet uygulama katmanını uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Bağımlılık ekleme ve ortalama düzenlerini ve bunların uygulama ayrıntılarını Web API 'SI uygulama katmanında anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 38c0bdb32666ab727c573d466d3e30d739bdd3b3
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771111"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454856"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API 'sini kullanarak mikro hizmet uygulama katmanını uygulama
 
@@ -285,7 +285,7 @@ Temel olarak, komut sınıfı, etki alanı model nesnelerini kullanarak bir iş 
 
 Ek bir özellik olarak, beklenen kullanım doğrudan etki alanı modeli tarafından işlendiklerinden, komutlar sabittir. Bunların öngörülen yaşam süresi boyunca değiştirmeleri gerekmez. Bir sınıfta C# , bir ayarlayıcıya ya da iç durumu değiştiren başka yöntemler yoksa, dengeshlik kullanılabilirliği elde edilebilir.
 
-Komutları bir serileştirme/seri durumdan çıkarma sürecinde işlem yapmanız veya beklemeniz durumunda, özelliklerin özel ayarlayıcı ve `[DataMember]` (veya `[JsonProperty]`) özniteliği olması gerektiğini unutmayın; Aksi takdirde, seri hale getirici nesneyi şu konumda yeniden yapılandıramazlar: gerekli değerlere sahip hedef.
+Komutları bir serileştirme/seri durumdan çıkarma sürecinde işlem yapmak veya beklemek istiyorsanız, özelliklerin özel ayarlayıcı ve `[DataMember]` (veya `[JsonProperty]`) özniteliği olması gerektiğini unutmayın, aksi takdirde, seri hale getirici nesneyi yeniden oluşturamayacak gerekli değerleri olan hedefte.
 
 Örneğin, sipariş oluşturmak için komut sınıfı büyük olasılıkla veri bakımından oluşturmak istediğiniz sıraya benzer, ancak büyük olasılıkla aynı özniteliklere gerek kalmaz. Örneğin, sipariş henüz oluşturulmadığından `CreateOrderCommand` ' ın bir sıra KIMLIĞI yoktur.
 
@@ -398,10 +398,10 @@ Bunlar bir komut işleyicisinin gerçekleşmesi gereken ek adımlardır:
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **Komutlar ve olaylar**  \
-  <http://cqrs.nu/Faq/commands-and-events>
+  <https://cqrs.nu/Faq/commands-and-events>
 
 - **Komut işleyici ne yapar?** \
-  <http://cqrs.nu/Faq/command-handlers>
+  <https://cqrs.nu/Faq/command-handlers>
 
 - **Jimmy Bogard. Etki alanı komut desenleri – Işleyiciler** \
   <https://jimmybogard.com/domain-command-patterns-handlers/>
@@ -451,9 +451,9 @@ Bu nedenle, zaman uyumsuz bir kuyruğa gönderilen bir komut iletisi doğruland�
 
 Ayrıca, zaman uyumsuz komutlar tek yönlü bir komutlardır. Bu, bir [çevrimiçi konuşmada](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ)Burtsev Alexey ve Greg başak arasında aşağıdaki ilginç alışverişte açıklandığı gibi, birçok durumda gerekli olmayabilir:
 
-> \[Burtsev Alexey \] kişilerin hiçbir neden olmadan zaman uyumsuz komut işleme veya tek yönlü komut mesajlaşmasını kullandıkları çok sayıda kod buldum (uzun bir işlem yapmadıklarında, dış zaman uyumsuz kod yürütülemedikleri gibi, bunlar bile çapraz uygulama değildir ileti veri yolu kullanımı sınırı). Bu gereksiz karmaşıklığa neden tanıtılsın? Aslında, şu ana kadar çok sayıda durumda çalışacak şekilde komut işleyicilerini engelleyen bir CQRS kod örneği görmedim.
+> Burtsev Alexey\] kişilerin herhangi bir nedenden dolayı zaman uyumsuz komut işleme veya tek yönlü komut mesajlaşma kullandıkları çok sayıda kod buldum (uzun bir işlem yapılmazlar, bunlar harici zaman uyumsuz kod yürütülemese de, hatta çapraz değildir \[ileti veri yolu kullanılarak kullanılacak uygulama sınırı). Bu gereksiz karmaşıklığa neden tanıtılsın? Aslında, şu ana kadar çok sayıda durumda çalışacak şekilde komut işleyicilerini engelleyen bir CQRS kod örneği görmedim.
 >
-> \[Greg genç \] \[... zaman uyumsuz bir komut \] yok; Bu aslında başka bir olaydır. Bana gönderdiklerinizi kabul etmem ve bir olayı daha kabul eterdiğimde, artık \[that bir şey yapmamızı söylediğimde, bir komut \] değildir. Bir şey yapıldığını söylemiş olursunuz. Bu, ilk başta küçük bir farklılık gibi görünüyor, ancak birçok etkileri vardır.
+> \[Greg başak\] \[...\] zaman uyumsuz bir komut yok; Bu aslında başka bir olaydır. Bana gönderdiklerinizi kabul etmem ve bir olayı daha kabul eterdiğimde, artık \[bir şey yapmamızı söylediğimde, bir komut\]değildir. Bir şey yapıldığını söylemiş olursunuz. Bu, ilk başta küçük bir farklılık gibi görünüyor, ancak birçok etkileri vardır.
 
 Zaman uyumsuz komutlar, hataların belirtmenin basit bir yolu olmadığından, sistemin karmaşıklığını büyük ölçüde artırır. Bu nedenle, zaman uyumsuz komutlar, ölçekleme gereksinimlerinin gerekli olduğu durumlar dışında veya iç mikro hizmetleri mesajlaşma yoluyla iletişim kurarken özel durumlarda önerilmez. Bu durumlarda, hatalara yönelik ayrı bir raporlama ve kurtarma sistemi tasarlamanız gerekir.
 
@@ -586,7 +586,7 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-IdentifiedCommand, bir iş komutunun zarfı gibi davrandığı için, tekrarlanmış bir kimlik olmadığından iş komutunun işlenmesi gerektiğinde, bu iç iş komutunu alır ve yukarıda gösterilen kodun en son bölümünde olduğu gibi bu iç iş komutunu yeniden gönderir. `_mediator.Send(message.Command)` çalıştıran, [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
+IdentifiedCommand, bir iş komutunun zarfı gibi davrandığı için, tekrarlanmış bir kimlik olmadığından iş komutunun işlenmesi gerektiğinde, bu iç iş komutunu alır ve yukarıda gösterilen kodun en son bölümünde olduğu gibi bu iç iş komutunu yeniden gönderir. `_mediator.Send(message.Command)`çalıştıran, [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
 
 Bunu yaparken, aşağıdaki kodda gösterildiği gibi, işlem veritabanına karşı işlemleri çalıştıran [Createordercommandhandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) olan bu örnekte iş komut işleyicisini bağlar ve çalıştırır.
 

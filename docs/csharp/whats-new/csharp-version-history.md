@@ -3,12 +3,12 @@ title: C# Kılavuz geçmişi C#
 description: Dil en eski sürümlerinde ne şekilde görünür ve bu tarihten sonra nasıl gelişmiştir?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 11463f7d47c5fb5b71bd16d73039b22e4a6ca43e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 490f001d4ed648d6621f8ec059201830acb90af0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039644"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423091"
 ---
 # <a name="the-history-of-c"></a>C\# geçmişi
 
@@ -104,7 +104,7 @@ C#Visual Studio 2010 ile yayınlanan sürüm 4,0, sürüm 3,0 çığır durumuna
 
 Sonraki sürümde bazı ilginç yeni özellikler tanıtıldı:
 
-- [Dinamik bağlama](../language-reference/keywords/dynamic.md)
+- [Dinamik bağlama](../language-reference/builtin-types/reference-types.md)
 - [Adlandırılmış/isteğe bağlı bağımsız değişkenler](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Genel birlikte değişken ve değişken karşıtı](../../standard/generics/covariance-and-contravariance.md)
 - [Gömülü birlikte çalışma türleri](../../framework/interop/type-equivalence-and-embedded-interop-types.md)

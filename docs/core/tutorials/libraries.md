@@ -4,18 +4,18 @@ description: .NET Core CLI araçlarını kullanarak .NET Core kitaplıkları olu
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 536319bc02b45e7948c89ae67988e821a55a842d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: dcd454f0bd1739597fc27dccf2849fc259767292
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117419"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420466"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Platformlar Arası Araçlarla Kitaplık Geliştirme
 
-Bu makalede, platformlar arası CLı araçları kullanılarak .NET için kitaplıkların nasıl yazılacağı ele alınmaktadır. CLı, desteklenen tüm işletim sistemlerinde çalışacak etkili ve düşük düzeyde bir deneyim sağlar. Visual Studio ile Kitaplıklar oluşturmaya devam edebilirsiniz ve tercih ettiğiniz deneyim [Visual Studio kılavuzuna başvurur](libraries-with-vs.md).
+Bu makalede, platformlar arası CLı araçları kullanılarak .NET için kitaplıkların nasıl yazılacağı ele alınmaktadır. CLı, desteklenen tüm işletim sistemlerinde çalışacak etkili ve düşük düzeyde bir deneyim sağlar. Visual Studio ile Kitaplıklar oluşturmaya devam edebilirsiniz ve tercih ettiğiniz deneyim [Visual Studio kılavuzuna başvurur](library-with-visual-studio.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Makinenizde yüklü [.NET Core SDK ve CLI](https://dotnet.microsoft.com/download) olması gerekir.
 
@@ -43,11 +43,11 @@ Bu makalede, .NET Standard sürümlerini çeşitli uygulamalarla eşleyen bir ta
 
 Bu tabloda kitaplık oluşturma amaçları için ne olacağı açıklanmaktadır:
 
-Seçtiğiniz .NET Standard sürümü, en yeni API 'lere erişim ve daha fazla .NET uygulaması ve .NET Standard sürümlerini hedefleyebilme arasında bir zorunluluğunu getirir olacaktır. Bir sürümünü `netstandardX.X` `.csproj` (sürüm numarası) seçerek ve proje dosyanıza (veya `.fsproj`) ekleyerek hedeflenebilir platformlarının ve sürümlerinin aralığını kontrol edersiniz. `X.X`
+Seçtiğiniz .NET Standard sürümü, en yeni API 'lere erişim ve daha fazla .NET uygulaması ve .NET Standard sürümlerini hedefleyebilme arasında bir zorunluluğunu getirir olacaktır. `netstandardX.X` bir sürümünü (`X.X` bir sürüm numarası olduğu) seçerek ve proje dosyanıza (`.csproj` ya da `.fsproj`) ekleyerek hedeflenebilir platformlarının ve sürümlerinin aralığını kontrol edersiniz.
 
 Gereksinimlerinize bağlı olarak .NET Standard hedeflenirken üç birincil seçeneğiniz vardır.
 
-1. Şablonlar `netstandard1.4` tarafından sağlanan .NET Standard varsayılan sürümünü kullanabilirsiniz. Bu, .NET Standard her API 'ye hala UWP, .NET Framework 4.6.1 ve forthın .NET Standard 2,0 ile uyumlu olmaya yönelik olarak erişim sağlar.
+1. Şablonlar-`netstandard1.4` tarafından sağlanan .NET Standard varsayılan sürümünü kullanabilirsiniz. Bu, .NET Standard üzerinde API 'Lerin çoğuna, hala UWP, .NET Framework 4.6.1 ve forthverilen .NET Standard 2,0 ile uyumlu olmaya devam ederken izin verir.
 
     ```xml
     <Project Sdk="Microsoft.NET.Sdk">
@@ -59,9 +59,9 @@ Gereksinimlerinize bağlı olarak .NET Standard hedeflenirken üç birincil seç
 
 2. Proje dosyanızın `TargetFramework` düğümündeki değeri değiştirerek .NET Standard daha düşük veya daha yüksek bir sürümünü kullanabilirsiniz.
 
-    .NET Standard sürümler geriye dönük olarak uyumludur. Bu, `netstandard1.0` kitaplıkların platformlar ve daha `netstandard1.1` yükseği üzerinde çalıştığı anlamına gelir. Ancak, ileri bir uyumluluk yoktur .NET Standard platformlar daha yüksek bir değere başvuramaz. Bu, `netstandard1.0` kitaplıkların, `netstandard1.1` veya üzeri kitaplıklara başvurmayacağı anlamına gelir. Gereksinimlerinize uygun API 'lerin ve platform desteğinin doğru karışımına sahip standart sürümü seçin. Şimdilik önerilir `netstandard1.4` .
+    .NET Standard sürümler geriye dönük olarak uyumludur. Bu, `netstandard1.0` kitaplıklarının `netstandard1.1` platformları ve daha yükseği üzerinde çalıştığı anlamına gelir. Ancak, ileri bir uyumluluk yoktur .NET Standard platformlar daha yüksek bir değere başvuramaz. Bu, `netstandard1.0` kitaplıklarının `netstandard1.1` veya üzeri hedef kitaplıklara başvurmayacağı anlamına gelir. Gereksinimlerinize uygun API 'lerin ve platform desteğinin doğru karışımına sahip standart sürümü seçin. Şimdilik `netstandard1.4` önerilir.
 
-3. 4,0 veya sonraki .NET Framework sürümlerini hedeflemek istiyorsanız veya .NET Framework (örneğin, `System.Drawing`) .NET Standard değil, bir API kullanmak istiyorsanız, aşağıdaki bölümleri okuyun ve çoklu hedef hakkında bilgi edinin.
+3. 4,0 veya sonraki .NET Framework sürümlerini hedeflemek istiyorsanız veya .NET Standard .NET Framework (örneğin, `System.Drawing`) bir API kullanmak istiyorsanız, aşağıdaki bölümleri okuyun ve çoklu hedef hakkında bilgi edinin.
 
 ## <a name="how-to-target-the-net-framework"></a>.NET Framework nasıl hedeflenecek
 
@@ -84,10 +84,10 @@ En fazla geliştirici ve proje sayısına ulaşmak isterseniz, taban çizgisi he
 | .NET Framework 4.6     | `net46`  |
 | .NET Framework 4.6.1   | `net461` |
 | .NET Framework 4.6.2   | `net462` |
-| .NET framework 4.7     | `net47`  |
+| .NET Framework 4,7     | `net47`  |
 | .NET Framework 4,8     | `net48`  |
 
-Daha sonra bu tfd `TargetFramework` 'yi proje dosyanızın bölümüne eklersiniz. Örneğin, .NET Framework 4,0 ' i hedefleyen bir kitaplığı nasıl yazacağınız aşağıda verilmiştir:
+Daha sonra bu tfd 'yi proje dosyanızın `TargetFramework` bölümüne eklersiniz. Örneğin, .NET Framework 4,0 ' i hedefleyen bir kitaplığı nasıl yazacağınız aşağıda verilmiştir:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -104,9 +104,9 @@ Daha sonra bu tfd `TargetFramework` 'yi proje dosyanızın bölümüne eklersini
 > [!NOTE]
 > Aşağıdaki yönergelerde .NET Framework makinenizde yüklü olduğunu varsaymaktadır. Yüklemeniz gereken bağımlılıkları ve bunların nereden indirileceği hakkında bilgi edinmek için [Önkoşullar](#prerequisites) bölümüne bakın.
 
-Projeniz hem .NET Framework hem de .NET Core ' u desteklediğinde, .NET Framework eski sürümlerini hedefleyebilirsiniz. Bu senaryoda, daha yeni hedefler için daha yeni API 'ler ve dil yapıları kullanmak istiyorsanız, kodunuzda yönergeleri kullanın `#if` . Ayrıca, hedeflediğiniz her platform için, her bir durum için gereken farklı API 'Leri dahil etmek için farklı paketler ve bağımlılıklar eklemeniz gerekebilir.
+Projeniz hem .NET Framework hem de .NET Core ' u desteklediğinde, .NET Framework eski sürümlerini hedefleyebilirsiniz. Bu senaryoda, daha yeni hedefler için daha yeni API 'Ler ve dil yapıları kullanmak istiyorsanız, kodunuzda `#if` yönergeleri kullanın. Ayrıca, hedeflediğiniz her platform için, her bir durum için gereken farklı API 'Leri dahil etmek için farklı paketler ve bağımlılıklar eklemeniz gerekebilir.
 
-Örneğin, HTTP üzerinden ağ işlemleri gerçekleştiren bir kitaplığınız olduğunu varsayalım. .NET Standard ve .NET Framework sürümleri 4,5 veya üzeri için, `HttpClient` `System.Net.Http` ad alanından sınıfını kullanabilirsiniz. Ancak, .NET Framework önceki sürümleri `HttpClient` sınıfına sahip değildir, bu nedenle bunun yerine `System.Net` ad alanından `WebClient` sınıfını kullanabilirsiniz.
+Örneğin, HTTP üzerinden ağ işlemleri gerçekleştiren bir kitaplığınız olduğunu varsayalım. .NET Standard ve .NET Framework sürümleri 4,5 veya üzeri için `System.Net.Http` ad alanından `HttpClient` sınıfını kullanabilirsiniz. Ancak, .NET Framework önceki sürümlerinde `HttpClient` sınıfı yoktur, bu nedenle `System.Net` ad alanından `WebClient` sınıfını bunun yerine kullanabilirsiniz.
 
 Proje dosyanız şuna benzeyebilir:
 
@@ -131,11 +131,11 @@ Proje dosyanız şuna benzeyebilir:
 
 Burada üç önemli değişiklik fark edeceksiniz:
 
-1. `TargetFramework` Düğüm ile`TargetFrameworks`değiştirilmiştir ve üç tfms içinde belirtilir.
-1. Bir .NET Framework başvurusunda `<ItemGroup>` `net40` hedef çekme için bir düğüm vardır.
-1. İki .NET Framework başvuru `<ItemGroup>` halinde `net45` hedef çekme için bir düğüm vardır.
+1. `TargetFramework` düğümü `TargetFrameworks`ile değiştirilmiştir ve üç TFMs içinde belirtilir.
+1. `net40` hedefi için bir .NET Framework başvurusunda çekme için bir `<ItemGroup>` düğümü vardır.
+1. İki .NET Framework başvurularında `net45` hedefi çekme için bir `<ItemGroup>` düğümü vardır.
 
-Yapı sistemi, `#if` yönergelerden kullanılan aşağıdaki Önişlemci simgelerinden haberdar olur:
+Yapı sistemi, `#if` yönergelerinde kullanılan aşağıdaki Önişlemci sembollerinin farkındadır:
 
 [!INCLUDE [Preprocessor symbols](../../../includes/preprocessor-symbols.md)]
 
@@ -202,7 +202,7 @@ namespace MultitargetLib
 }
 ```
 
-Bu projeyi ile `dotnet build`oluşturursanız, `bin/` klasörün altında üç dizin olduğunu fark edeceksiniz:
+Bu projeyi `dotnet build`oluşturursanız, `bin/` klasörünün altında üç dizin olduğunu fark edeceksiniz:
 
 ```
 net40/
@@ -210,7 +210,7 @@ net45/
 netstandard1.4/
 ```
 
-Bunların her biri, `.dll` her bir hedef için dosyaları içerir.
+Bunların her biri, her bir hedefin `.dll` dosyalarını içerir.
 
 ## <a name="how-to-test-libraries-on-net-core"></a>.NET Core 'da kitaplıkları test etme
 
@@ -231,7 +231,7 @@ Platformlar arasında test etmek önemlidir. Kutusundan [xUnit](https://xunit.gi
    dotnet sln add MyProject.Test/MyProject.Test.csproj
    ```
 
-   Bu, projeler oluşturur ve bunları bir çözümde birbirine bağlar. Dizininiz `SolutionWithSrcAndTest` şuna benzemelidir:
+   Bu, projeler oluşturur ve bunları bir çözümde birbirine bağlar. `SolutionWithSrcAndTest` dizininiz şuna benzemelidir:
 
    ```
    /SolutionWithSrcAndTest
@@ -240,7 +240,7 @@ Platformlar arasında test etmek önemlidir. Kutusundan [xUnit](https://xunit.gi
    |__MyProject.Test/
    ```
 
-1. Test projesinin dizinine gidin ve öğesinden `MyProject.Test` `MyProject`öğesine bir başvuru ekleyin.
+1. Test projesinin dizinine gidin ve `MyProject``MyProject.Test` bir başvuru ekleyin.
 
    ```bash
    cd MyProject.Test
@@ -256,14 +256,14 @@ Platformlar arasında test etmek önemlidir. Kutusundan [xUnit](https://xunit.gi
 
    [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
-1. `dotnet test` Komutunu yürüterek xUnit 'in çalıştığını doğrulayın. MSTest kullanmayı seçerseniz, bunun yerine MSTest konsol Çalıştırıcısı çalıştırılmalıdır.
+1. `dotnet test` komutunu yürüterek xUnit 'nin çalıştığını doğrulayın. MSTest kullanmayı seçerseniz, bunun yerine MSTest konsol Çalıştırıcısı çalıştırılmalıdır.
 
 İşte bu kadar! Artık, komut satırı araçlarını kullanarak kitaplığınızı tüm platformlarda test edebilirsiniz. Artık her şeyi ayarlamış olduğunuza göre teste devam etmek için, kitaplığınızı test etmek çok basittir:
 
 1. Kitaplığınızda değişiklik yapın.
-1. Testleri komut satırından, test dizininizde `dotnet test` , komutuyla çalıştırın.
+1. Testleri komut satırından, test dizininizde, `dotnet test` komutuyla çalıştırın.
 
-Komut çağırdığınızda `dotnet test` kodunuz otomatik olarak yeniden oluşturulur.
+`dotnet test` komutu çağırdığınızda kodunuz otomatik olarak yeniden oluşturulur.
 
 ## <a name="how-to-use-multiple-projects"></a>Birden çok proje kullanma
 
@@ -325,7 +325,7 @@ Bir projeye başvurmak için en iyi yöntem .NET Core CLI bir proje başvurusu e
 dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
-Hem **awesomelibrary. CSharp** hem de **awesomelibrary. FSharp** için proje dosyaları artık bir `ProjectReference` hedef olarak **awesomelibrary. Core** 'a başvuracaktır.  Bunu, proje dosyalarını inceleyerek ve içinde aşağıdakileri görerek doğrulayabilirsiniz:
+Hem **Awesomelibrary. CSharp** hem de **Awesomelibrary. FSharp** için proje dosyaları artık `ProjectReference` hedefi olarak **Awesomelibrary. Core** 'a başvuracaktır.  Bunu, proje dosyalarını inceleyerek ve içinde aşağıdakileri görerek doğrulayabilirsiniz:
 
 ```xml
 <ItemGroup>
@@ -337,4 +337,4 @@ Hem **awesomelibrary. CSharp** hem de **awesomelibrary. FSharp** için proje dos
 
 ### <a name="structuring-a-solution"></a>Çözüm yapılandırma
 
-Çok projeli çözümlerin diğer önemli bir yönü de iyi bir genel proje yapısı oluşturma. İsterseniz kodu düzenleyebilir, ve her bir projeyi çözüm dosyanıza `dotnet sln add`bağladığınızda, çözüm düzeyinde ve `dotnet build` ' yi çalıştıracaksınız `dotnet restore` .
+Çok projeli çözümlerin diğer önemli bir yönü de iyi bir genel proje yapısı oluşturma. İsterseniz kodu düzenleyebilir ve her bir projeyi `dotnet sln add`çözüm dosyanıza bağladığınızda, çözüm düzeyinde `dotnet restore` ve `dotnet build` çalıştırabileceksiniz demektir.

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 8a29584dd5ed47ad1e8a336a7283cba9271f3abd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 95726d4bfae6da43cd845d461caf8f1848d774f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121204"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424326"
 ---
 # <a name="implementing-a-dispose-method"></a>Dispose yöntemi uygulama
 
 Uygulamanız tarafından kullanılan yönetilmeyen kaynakları serbest bırakmak için bir <xref:System.IDisposable.Dispose%2A> yöntemi uygulamanız gerekir. .NET atık toplayıcısı, yönetilmeyen bellek ayırır veya serbest bırakmaz.  
   
-[Dispose düzeni](../../../docs/standard/design-guidelines/dispose-pattern.md)olarak adlandırılan bir nesneyi elden atma düzeni, bir nesnenin ömrüne göre sıra uygular. Dispose deseni yalnızca yönetilmeyen kaynaklara erişen, dosya ve kanal tanıtıcıları, kayıt defteri tanıtıcıları, bekleme tanıtıcıları veya yönetilmeyen bellek bloğu işaretçileri gibi nesneler için kullanılır. Bunun nedeni, çöp toplayıcısının kullanılmayan yönetilen nesneleri geri kazanmada çok etkili olması, fakat yönetilmeyen nesneleri geri kazanamamasıdır.  
+[Dispose düzeni](implementing-dispose.md)olarak adlandırılan bir nesneyi elden atma düzeni, bir nesnenin ömrüne göre sıra uygular. Dispose deseni yalnızca yönetilmeyen kaynaklara erişen, dosya ve kanal tanıtıcıları, kayıt defteri tanıtıcıları, bekleme tanıtıcıları veya yönetilmeyen bellek bloğu işaretçileri gibi nesneler için kullanılır. Bunun nedeni, çöp toplayıcısının kullanılmayan yönetilen nesneleri geri kazanmada çok etkili olması, fakat yönetilmeyen nesneleri geri kazanamamasıdır.  
   
 Dispose deseninin iki çeşidi vardır:  
   
@@ -167,4 +167,4 @@ Aşağıdaki örnek, bir önceki örnekte sunulan `DisposableStreamResource` sı
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
 - [Nasıl yapılır: Sınıfları ve Yapıları Tanımlama ve Kullanma (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
-- [Dispose Deseni](../../../docs/standard/design-guidelines/dispose-pattern.md)
+- [Dispose Deseni](implementing-dispose.md)

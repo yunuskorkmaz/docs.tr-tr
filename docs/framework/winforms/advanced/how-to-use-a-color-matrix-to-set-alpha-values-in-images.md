@@ -10,30 +10,30 @@ helpviewer_keywords:
 - matrices [Windows Forms], alpha values
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
-ms.openlocfilehash: fd63380e04eeb4b7ec7ed7d59032309ea7446507
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 73e820845d040856a0ae367da8b9371ad6afa142
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593162"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423730"
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Nasıl yapılır: Görüntülerdeki Alfa Değerleri Ayarlamak için Renk Matrisi Kullanma
-<xref:System.Drawing.Bitmap> Sınıfı (işlevinden devralan <xref:System.Drawing.Image> sınıfı) ve <xref:System.Drawing.Imaging.ImageAttributes> sınıfı piksel değerleri ayarlama ve alma işlevselliği sağlar. Kullanabileceğiniz <xref:System.Drawing.Imaging.ImageAttributes> alfa değiştirmek için sınıf için görüntünün değerleri veya çağırabilirsiniz <xref:System.Drawing.Bitmap.SetPixel%2A> yöntemi <xref:System.Drawing.Bitmap> bağımsız piksel değerlerini değiştirmek için sınıf.  
+<xref:System.Drawing.Bitmap> sınıfı (<xref:System.Drawing.Image> sınıfından devralan) ve <xref:System.Drawing.Imaging.ImageAttributes> sınıfı, piksel değerlerini almak ve ayarlamak için işlevsellik sağlar. Tüm görüntünün Alfa değerlerini değiştirmek için <xref:System.Drawing.Imaging.ImageAttributes> sınıfını kullanabilir veya tek tek piksel değerlerini değiştirmek için <xref:System.Drawing.Bitmap> sınıfının <xref:System.Drawing.Bitmap.SetPixel%2A> yöntemini çağırabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- <xref:System.Drawing.Imaging.ImageAttributes> Sınıfı görüntüleri işleme sırasında değiştirmek için kullanabileceğiniz birçok özellik vardır. Aşağıdaki örnekte, bir <xref:System.Drawing.Imaging.ImageAttributes> nesnesi 80 ne oldukları, yüzde olarak tüm alfa değerleri ayarlamak için kullanılır. Bu renk matrisi başlatma ve Alfa değerini 0,8 matrise ölçeklendirme ayarı tarafından gerçekleştirilir. Renk Matrisi adresini geçirilir <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> yöntemi <xref:System.Drawing.Imaging.ImageAttributes> nesnesi ve <xref:System.Drawing.Imaging.ImageAttributes> nesnesi <xref:System.Drawing.Graphics.DrawString%2A> yöntemi <xref:System.Drawing.Graphics> nesne.  
+ <xref:System.Drawing.Imaging.ImageAttributes> sınıfı, işleme sırasında görüntüleri değiştirmek için kullanabileceğiniz birçok özelliğe sahiptir. Aşağıdaki örnekte, bir <xref:System.Drawing.Imaging.ImageAttributes> nesnesi, tüm Alfa değerlerini ne gibi bir yüzde 80 ' e ayarlamak için kullanılır. Bu, bir renk matrisi başlatarak ve Matristeki Alfa ölçekleme değeri 0,8 olarak ayarlanarak yapılır. Renk matrisinin adresi <xref:System.Drawing.Imaging.ImageAttributes> nesnesinin <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> yöntemine geçirilir ve <xref:System.Drawing.Imaging.ImageAttributes> nesnesi <xref:System.Drawing.Graphics> nesnesinin <xref:System.Drawing.Graphics.DrawString%2A> yöntemine geçirilir.  
   
- İşleme sırasında bit eşlem alfa değerleri 80 ne oldukları, yüzde olarak dönüştürülür. Bu, bir arka plan ile karışık bir görüntü sonuçlanır. Aşağıdaki çizimde gösterildiği gibi bit eşlem resmi saydam arar; düz siyah bir çizgi geçen görebilirsiniz.  
+ Oluşturma sırasında, bit eşlemdeki alfa değerleri, ne olduğu konusunda yüzde 80 ' e dönüştürülür. Bu, arka planla karışan bir görüntüyle sonuçlanır. Aşağıdaki çizimde gösterildiği gibi, bit eşlem görüntüsü saydam görünüyor; düz siyah çizgiyi onunla görebilirsiniz.  
   
- ![Alfa karıştırma kullanarak bir matrise](./media/image2.png "image2")  
+ ![Matris kullanan Alfa karıştırma ekran görüntüsü.](./media/how-to-use-a-color-matrix-to-set-alpha-values-in-images/alpha-blending-matrix.png "image2")  
   
- Görüntü, arka plan üzerinde beyaz kısmında olduğunda, görüntü beyaz ile karışık. Burada siyah bir çizgi görüntü aştığında görüntü rengi siyah harmanlanan.  
+ Görüntünün arka planın beyaz kısmının üzerinde olduğu yerlerde görüntü beyaz renkle karışmıştır. Görüntüde siyah çizgi kesiştiği yerde görüntü siyah renkle karıştırıyor.  
   
  [!code-csharp[System.Drawing.AlphaBlending#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.AlphaBlending#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
+ Yukarıdaki örnek, Windows Forms kullanımı için tasarlanmıştır ve <xref:System.Windows.Forms.PaintEventHandler>parametresi olan <xref:System.Windows.Forms.PaintEventArgs> `e`gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

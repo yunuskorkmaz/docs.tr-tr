@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 4e3e8bc0868c23aca90fa4baec738347db59c6f2
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: be6f6b2d2213e96bc4e695ffbf7bc77f755ed492
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425338"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454991"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework yenilikler
 
@@ -1264,7 +1264,7 @@ Dönüştürülmüş masaüstü uygulamaları, UWP API 'Lerinin, canlı kutucuk 
 
 - [.NET Framework 4.6.1 listesi](https://go.microsoft.com/fwlink/?LinkId=622964)
 
-- [4.6.1 'de uygulama uyumluluğu](../migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)
+- [4.6.1 'de uygulama uyumluluğu](../migration-guide/application-compatibility.md)
 
 - [.NET Framework API farkı](https://go.microsoft.com/fwlink/?LinkId=622989) (GitHub üzerinde)
 

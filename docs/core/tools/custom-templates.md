@@ -3,26 +3,26 @@ title: DotNet New için özel şablonlar
 description: Herhangi bir .NET projesi veya dosya türü için özel şablonlar hakkında bilgi edinin.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: 7a599973a1914f0df187557e48718263f16546f3
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117812"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420877"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>DotNet New için özel şablonlar
 
-[.NET Core SDK](https://dotnet.microsoft.com/download) , zaten yüklenmiş ve kullanıma hazırmış birçok şablon ile birlikte gelir. Komut yalnızca bir şablonu kullanmanın ve ayrıca şablonların nasıl yükleneceğini ve kaldırılacağını gösteren bir yoldur. [ `dotnet new` ](dotnet-new.md) .NET Core 2,0 ile başlayarak, bir uygulama, hizmet, araç veya sınıf kitaplığı gibi herhangi bir proje türü için kendi özel şablonlarınızı oluşturabilirsiniz. Hatta bir yapılandırma dosyası gibi bir veya daha fazla bağımsız dosyayı çıkaran bir şablon oluşturabilirsiniz.
+[.NET Core SDK](https://dotnet.microsoft.com/download) , zaten yüklenmiş ve kullanıma hazırmış birçok şablon ile birlikte gelir. [`dotnet new` komutu](dotnet-new.md) yalnızca şablon kullanmanın ve ayrıca şablonların nasıl yükleneceğini ve kaldırılacağını gösteren bir yoldur. .NET Core 2,0 ile başlayarak, bir uygulama, hizmet, araç veya sınıf kitaplığı gibi herhangi bir proje türü için kendi özel şablonlarınızı oluşturabilirsiniz. Hatta bir yapılandırma dosyası gibi bir veya daha fazla bağımsız dosyayı çıkaran bir şablon oluşturabilirsiniz.
 
 NuGet *. nupkg* dosyasına doğrudan başvurarak veya şablonu içeren bir dosya sistemi dizini belirterek herhangi bir NuGet akışında bir NuGet paketinden özel şablonlar yükleyebilirsiniz. Şablon altyapısı, şablon kullanılırken değerleri değiştirmenizi, dosyaları dahil ve dışlamalarını ve özel işleme işlemlerini yürütmeyi sağlayan özellikler sunar.
 
 Şablon altyapısı açık kaynaktır ve çevrimiçi kod deposu GitHub 'da [DotNet/şablon](https://github.com/dotnet/templating/) oluşturma ' dır. Şablon örnekleri için [DotNet/DotNet-Template-Samples](https://github.com/dotnet/dotnet-template-samples) deposunun ziyaret edin. Üçüncü taraflardan şablonlar da dahil olmak üzere diğer şablonlar, GitHub 'da [Yeni DotNet Için kullanılabilir şablonlarda](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) bulunur. Özel şablonlar oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [DotNet New için kendi şablonlarınızı oluşturma](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) ve [DotNet/şablon GitHub depo wiki](https://github.com/dotnet/templating/wiki).
 
-Bir yönergeyi izlemek ve şablon oluşturmak için, [DotNet yeni öğretici için özel şablon oluşturma](../tutorials/create-custom-template.md) makalesine bakın.
+Bir yönergeyi izlemek ve şablon oluşturmak için, [DotNet yeni öğretici için özel şablon oluşturma](../tutorials/cli-templates-create-item-template.md) makalesine bakın.
 
 ### <a name="net-default-templates"></a>.NET varsayılan şablonları
 
-[.NET Core SDK](https://dotnet.microsoft.com/download)yüklediğinizde, konsol uygulamaları, sınıf kitaplıkları, birim testi projeleri, ASP.NET Core uygulamalar ( [angular](https://angular.io/) ve [tepki](https://facebook.github.io/react/) verme projeleri dahil) dahil olmak üzere proje ve dosya oluşturmaya yönelik bir düzine yerleşik şablon üzerinden karşılaşırsınız. ve yapılandırma dosyaları. Yerleşik şablonları listelemek için `dotnet new` komutunu `-l|--list` seçeneğiyle çalıştırın:
+[.NET Core SDK](https://dotnet.microsoft.com/download)yüklediğinizde, konsol uygulamaları, sınıf kitaplıkları, birim testi projeleri, ASP.NET Core uygulamalar ( [angular](https://angular.io/) ve [tepki](https://facebook.github.io/react/) verme projeleri dahil) dahil olmak üzere proje ve dosya oluşturmaya yönelik bir düzine yerleşik şablon üzerinden karşılaşırsınız. ve yapılandırma dosyaları. Yerleşik şablonları listelemek için, `-l|--list` seçeneğiyle `dotnet new` komutunu çalıştırın:
 
 ```dotnetcli
 dotnet new --list
@@ -37,7 +37,7 @@ dotnet new --list
 
 ### <a name="source-files-and-folders"></a>Kaynak dosya ve klasörler
 
-Kaynak dosya ve klasörler, şablon altyapısının `dotnet new <TEMPLATE>` komut çalıştırıldığında kullanmasını istediğiniz dosya ve klasörleri içerir. Şablon altyapısı, proje üretmek için kaynak kodu olarak *runacitme projelerini* kullanmak üzere tasarlanmıştır. Bunun birkaç avantajı vardır:
+Kaynak dosyalar ve klasörler, `dotnet new <TEMPLATE>` komutu çalıştırıldığında şablon altyapısının kullanmasını istediğiniz dosya ve klasörleri içerir. Şablon altyapısı, proje üretmek için kaynak kodu olarak *runacitme projelerini* kullanmak üzere tasarlanmıştır. Bunun birkaç avantajı vardır:
 
 - Şablon altyapısı, projenizin kaynak koduna özel belirteçler eklemesine gerek yoktur.
 - Kod dosyaları özel dosyalar değildir veya şablon altyapısıyla çalışmak için herhangi bir şekilde değiştirilmez. Bu nedenle, genellikle projelerle çalışırken kullandığınız araçlar şablon içeriğiyle de çalışır.
@@ -46,7 +46,7 @@ Kaynak dosya ve klasörler, şablon altyapısının `dotnet new <TEMPLATE>` komu
 
 Şablonda depolanan dosya ve klasörler, biçimsel .NET proje türleriyle sınırlı değildir. Şablon altyapısı çıkış olarak yalnızca bir dosya üretse bile, kaynak dosyalar ve klasörler, şablon kullanıldığında oluşturmak istediğiniz içerikten oluşabilir.
 
-Şablon tarafından oluşturulan dosyalar, *Template. JSON* yapılandırma dosyasında sağladığınız mantık ve ayarlara göre değiştirilebilir. Kullanıcı, seçenekleri `dotnet new <TEMPLATE>` komuta geçirerek bu ayarları geçersiz kılabilir. Özel mantığın ortak bir örneği, bir şablon tarafından dağıtılan kod dosyasındaki bir sınıf veya değişken için bir ad sağlar.
+Şablon tarafından oluşturulan dosyalar, *Template. JSON* yapılandırma dosyasında sağladığınız mantık ve ayarlara göre değiştirilebilir. Kullanıcı `dotnet new <TEMPLATE>` komutuna seçenekleri geçirerek bu ayarları geçersiz kılabilir. Özel mantığın ortak bir örneği, bir şablon tarafından dağıtılan kod dosyasındaki bir sınıf veya değişken için bir ad sağlar.
 
 ### <a name="templatejson"></a>Template. JSON
 
@@ -54,9 +54,9 @@ Kaynak dosya ve klasörler, şablon altyapısının `dotnet new <TEMPLATE>` komu
 
 | Üye            | Tür          | Açıklama |
 | ----------------- | ------------- | ----------- |
-| `$schema`         | URI           | *Template. JSON* dosyası için JSON şeması. JSON şemalarını destekleyen düzenleyiciler, şema belirtildiğinde JSON düzenlemesi özelliklerini etkinleştirir. Örneğin, [Visual Studio Code](https://code.visualstudio.com/) IntelliSense 'i etkinleştirmek için bu üyeyi gerektirir. Değerini `http://json.schemastore.org/template`kullanın. |
+| `$schema`         | URI           | *Template. JSON* dosyası için JSON şeması. JSON şemalarını destekleyen düzenleyiciler, şema belirtildiğinde JSON düzenlemesi özelliklerini etkinleştirir. Örneğin, [Visual Studio Code](https://code.visualstudio.com/) IntelliSense 'i etkinleştirmek için bu üyeyi gerektirir. `http://json.schemastore.org/template`değerini kullanın. |
 | `author`          | dize        | Şablonun yazarı. |
-| `classifications` | dizi (dize) | Bir kullanıcının, arama yaparken şablonu bulmak için kullanabileceği şablonun sıfır veya daha fazla özelliği. Sınıflandırmalar, `dotnet new -l|--list` komutu kullanılarak oluşturulan şablonlar listesinde göründüğünde *Etiketler* sütununda da görüntülenir. |
+| `classifications` | dizi (dize) | Bir kullanıcının, arama yaparken şablonu bulmak için kullanabileceği şablonun sıfır veya daha fazla özelliği. Sınıflandırmalar Ayrıca, `dotnet new -l|--list` komutu kullanılarak oluşturulan şablonlar listesinde göründüğünde *Etiketler* sütununda da görünür. |
 | `identity`        | dize        | Bu şablon için benzersiz bir ad. |
 | `name`            | dize        | Kullanıcıların göreceği şablonun adı. |
 | `shortName`       | dize        | Şablon adının Kullanıcı tarafından belirtildiği, GUI aracılığıyla seçilmemiş ortamlar için geçerli olan şablonu seçmek üzere varsayılan bir Özet adı. Örneğin, CLı komutlarıyla bir komut isteminden Şablonlar kullanılırken kısa ad yararlı olur. |
@@ -89,7 +89,7 @@ Kaynak dosya ve klasörler, şablon altyapısının `dotnet new <TEMPLATE>` komu
 }
 ```
 
-*MyTemplate* klasörü, yüklenebilir bir şablon paketidir. Paket yüklendikten `shortName` sonra, `dotnet new` komutu ile kullanılabilir. Örneğin, `dotnet new adatumconsole` `console.cs` ve dosyalarınıgeçerliklasöreçıktı.`readme.txt`
+*MyTemplate* klasörü, yüklenebilir bir şablon paketidir. Paket yüklendikten sonra, `shortName` `dotnet new` komutuyla birlikte kullanılabilir. Örneğin, `dotnet new adatumconsole` `console.cs` ve `readme.txt` dosyalarını geçerli klasöre çıktı.
 
 ## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a>Bir NuGet paketine (nupkg dosyası) şablon paketleme
 
@@ -97,21 +97,21 @@ Kaynak dosya ve klasörler, şablon altyapısının `dotnet new <TEMPLATE>` komu
 
 *. Csproj* dosyası geleneksel bir Code-Project *. csproj* dosyasından biraz farklıdır. Şunlara dikkat edin:
 
-01. Ayar eklenir ve olarak `Template`ayarlanır. `<PackageType>`
-01. Ayar eklenir ve geçerli bir [NuGet sürüm numarasına](/nuget/reference/package-versioning)ayarlanır. `<PackageVersion>`
-01. `<PackageId>` Ayar eklenir ve benzersiz bir tanımlayıcıya ayarlanır. Bu tanımlayıcı, şablon paketini kaldırmak için kullanılır ve NuGet akışları tarafından şablon paketinizi kaydetmek için kullanılır.
-01. Genel meta veri ayarları ayarlanmalıdır `<Title>`:, `<Authors>`, `<Description>`, ve `<PackageTags>`.
-01. Şablon işlemi tarafından üretilen ikilinin kullanılmasa bile, ayarınayarlanmasıgerekir.`<TargetFramework>` Aşağıdaki örnekte olarak `netstandard2.0`ayarlanır.
+01. `<PackageType>` ayar eklenir ve `Template`olarak ayarlanır.
+01. `<PackageVersion>` ayar eklenir ve geçerli bir [NuGet sürüm numarası](/nuget/reference/package-versioning)olarak ayarlanır.
+01. `<PackageId>` ayar eklenir ve benzersiz bir tanımlayıcıya ayarlanır. Bu tanımlayıcı, şablon paketini kaldırmak için kullanılır ve NuGet akışları tarafından şablon paketinizi kaydetmek için kullanılır.
+01. Genel meta veri ayarları ayarlanmalıdır: `<Title>`, `<Authors>`, `<Description>`ve `<PackageTags>`.
+01. Şablon işlemi tarafından üretilen ikili dosya kullanılmasa bile, `<TargetFramework>` ayar ayarlanmalıdır. Aşağıdaki örnekte `netstandard2.0`olarak ayarlanmıştır.
 
 *. Nupkg* NuGet paketi biçimindeki bir şablon paketi, tüm şablonların paket içindeki *içerik* klasöründe depolanmasını gerektirir. Oluşturulan *. nupkg* 'nin bir şablon paketi olarak yüklenememesini sağlamak için bir *. csproj* dosyasına eklemenin daha fazla ayarı vardır:
 
-01. Ayar, projenin, NuGet `true` paketine içerik olarak ayarlandığı herhangi bir dosyayı içerecek şekilde ayarlanır. `<IncludeContentInPack>`
-01. Ayar, NuGet paketinden derleyici `false` tarafından oluşturulan tüm ikilileri dışarıda bırakacak şekilde ayarlanır. `<IncludeBuildOutput>`
-01. `<ContentTargetFolders>` Ayar olarak`content`ayarlanır. Bu, **içerik** olarak ayarlanmış dosyaların NuGet paketindeki *içerik* klasörüne depolandığından emin olur. NuGet paketindeki bu klasör DotNet şablon sistemi tarafından ayrıştırılır.
+01. `<IncludeContentInPack>` ayar, projenin, NuGet paketine **içerik** olarak ayarladığı tüm dosyaları içerecek şekilde `true` olarak ayarlanır.
+01. `<IncludeBuildOutput>` ayarı, derleme tarafından NuGet paketinden oluşturulan tüm ikilileri dışlamak için `false` olarak ayarlanır.
+01. `<ContentTargetFolders>` ayarı `content`olarak ayarlanır. Bu, **içerik** olarak ayarlanmış dosyaların NuGet paketindeki *içerik* klasörüne depolandığından emin olur. NuGet paketindeki bu klasör DotNet şablon sistemi tarafından ayrıştırılır.
 
-Tüm kod dosyalarının şablon projeniz tarafından derlenmesinden dışlanmasını sağlamanın kolay bir yolu, proje dosyanızdaki `<Compile Remove="**\*" />` öğeyi bir `<ItemGroup>` öğe içinde kullanmaktır.
+Tüm kod dosyalarını şablon projeniz tarafından derlenmeden dışmanın kolay bir yolu, proje dosyanızdaki `<Compile Remove="**\*" />` öğeyi bir `<ItemGroup>` öğesi içinde kullanmaktır.
 
-Şablon paketinizi oluşturmanın kolay bir yolu, tüm şablonları tek tek klasörlere koymak ve ardından, *. csproj* dosyanız ile aynı dizinde bulunan *bir şablon klasörünün içindeki her bir şablon* klasörünü kullanmaktır. Bu şekilde, tek bir proje öğesi kullanarak *şablonlarda* tüm dosya ve klasörleri **içerik**olarak ekleyebilirsiniz. Öğesinin içinde bir `<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />` öğe oluşturun. `<ItemGroup>`
+Şablon paketinizi oluşturmanın kolay bir yolu, tüm şablonları tek tek klasörlere koymak ve ardından, *. csproj* dosyanız ile aynı dizinde bulunan *bir şablon klasörünün içindeki her bir şablon* klasörünü kullanmaktır. Bu şekilde, tek bir proje öğesi kullanarak *şablonlarda* tüm dosya ve klasörleri **içerik**olarak ekleyebilirsiniz. `<ItemGroup>` öğesinin içinde, bir `<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />` öğesi oluşturun.
 
 Yukarıdaki tüm yönergeleri izleyen örnek bir *. csproj* dosyası aşağıda verilmiştir. *Şablonlar* alt klasörünü *içerik* paketi klasörüne paketler ve tüm kod dosyalarını derlenmeden dışlar.
 
@@ -222,7 +222,7 @@ Currently installed items:
 ...
 ```
 
-Sonraki `Currently installed items:` öğelerin ilk düzeyi, bir şablonu kaldırma bölümünde kullanılan tanımlayıcılardır. Ve yukarıdaki `Microsoft.DotNet.Common.ItemTemplates` örnekteki ve `Microsoft.DotNet.Common.ProjectTemplates.3.0` listelenmiştir. Şablon bir dosya sistemi yolu kullanılarak yüklenmişse, bu tanımlayıcı *. Template. config* klasörünün klasör yolu olacaktır.
+`Currently installed items:` sonra ilk öğe düzeyi, bir şablonu kaldırmak için kullanılan tanımlayıcılardır. Yukarıdaki örnekte `Microsoft.DotNet.Common.ItemTemplates` ve `Microsoft.DotNet.Common.ProjectTemplates.3.0` listelenir. Şablon bir dosya sistemi yolu kullanılarak yüklenmişse, bu tanımlayıcı *. Template. config* klasörünün klasör yolu olacaktır.
 
 ## <a name="uninstalling-a-template"></a>Bir şablonu kaldırma
 
@@ -234,7 +234,7 @@ Paket, bir NuGet akışı veya doğrudan bir *. nupkg* dosyası tarafından yük
 dotnet new -u <NUGET_PACKAGE_ID>
 ```
 
-Paket *. Template. config* klasörü için bir yol belirtilerek yüklendiyse, paketi kaldırmak için bu **mutlak** yolu kullanın. Şablonun mutlak yolunu `dotnet new -u` komut tarafından belirtilen çıkışta görebilirsiniz. Daha fazla bilgi için yukarıdaki [yüklü şablonlar listesini al](#get-a-list-of-installed-templates) bölümüne bakın.
+Paket *. Template. config* klasörü için bir yol belirtilerek yüklendiyse, paketi kaldırmak için bu **mutlak** yolu kullanın. Şablonun mutlak yolunu `dotnet new -u` komutu tarafından belirtilen çıkışta görebilirsiniz. Daha fazla bilgi için yukarıdaki [yüklü şablonlar listesini al](#get-a-list-of-installed-templates) bölümüne bakın.
 
 ```dotnetcli
 dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
@@ -242,7 +242,7 @@ dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 
 ## <a name="create-a-project-using-a-custom-template"></a>Özel şablon kullanarak proje oluşturma
 
-Bir şablon yüklendikten sonra, başka bir önceden yüklenmiş şablonla yaptığınız gibi `dotnet new <TEMPLATE>` komutu yürüterek şablonu kullanın. Ayrıca, şablon ayarlarında [](dotnet-new.md#options) yapılandırdığınız şablona özgü `dotnet new` seçenekler dahil olmak üzere komut için seçenekler de belirtebilirsiniz. Şablonun kısa adını doğrudan komuta sağlayın:
+Bir şablon yüklendikten sonra, `dotnet new <TEMPLATE>` komutunu, önceden yüklenmiş diğer tüm şablonla yaptığınız gibi yürüterek şablonu kullanın. Ayrıca, şablon ayarlarında yapılandırdığınız şablona özgü seçenekler dahil olmak üzere `dotnet new` komutuna [Seçenekler](dotnet-new.md#options) de belirtebilirsiniz. Şablonun kısa adını doğrudan komuta sağlayın:
 
 ```dotnetcli
 dotnet new <TEMPLATE>
@@ -250,7 +250,7 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DotNet New için özel şablon oluşturma (öğretici)](../tutorials/create-custom-template.md)
+- [DotNet New için özel şablon oluşturma (öğretici)](../tutorials/cli-templates-create-item-template.md)
 - [DotNet/şablon oluşturma GitHub deposu wiki](https://github.com/dotnet/templating/wiki)
 - [DotNet/DotNet-şablon-örnek GitHub deposu](https://github.com/dotnet/dotnet-template-samples)
 - [DotNet New için kendi şablonlarınızı oluşturma](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)

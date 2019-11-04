@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 67cba143957b50e8e8d7fa68e62b52775ca2f144
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131626"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423533"
 ---
 # <a name="handling-and-raising-events"></a>Olayları işleme ve oluşturma
 
@@ -50,7 +50,7 @@ Temsilcilerin .NET 'te birçok kullanımı vardır. Olaylar bağlamında, bir te
   
 Temsilciler [çok noktaya yayın](xref:System.MulticastDelegate), yani birden çok olay işleme yöntemine başvuruları tutabilecekleri anlamına gelir. Ayrıntılar için <xref:System.Delegate> başvuru sayfasına bakın. Temsilciler, olay İşlemede esneklik ve ayrıntılı denetim sağlar. Bir temsilci, olay için kayıtlı olay işleyicilerinin bir listesini tutarak olayı oluşturan sınıf için bir olay dağıtıcısı işlevi görür.  
   
-<xref:System.EventHandler> ve <xref:System.EventHandler%601> temsilcilerinin çalışmalarındaki senaryolar için bir temsilci tanımlayabilirsiniz. Bir temsilciyi tanımlamanızı gerektiren senaryolar çok nadir bir durumdur, örneğin, genel türleri tanımayan kodla çalışmanız gerekir. Bir temsilciyi C# , bildirimde [`delegate`](../../csharp/language-reference/keywords/delegate.md) ve Visual Basic [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) anahtar sözcüğüyle işaretlersiniz. Aşağıdaki örnek, `ThresholdReachedEventHandler`adlı bir temsilcinin nasıl bildirilemeyeceğini gösterir.  
+<xref:System.EventHandler> ve <xref:System.EventHandler%601> temsilcilerinin çalışmalarındaki senaryolar için bir temsilci tanımlayabilirsiniz. Bir temsilciyi tanımlamanızı gerektiren senaryolar çok nadir bir durumdur, örneğin, genel türleri tanımayan kodla çalışmanız gerekir. Bir temsilciyi C# , bildirimde [`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) ve Visual Basic [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) anahtar sözcüğüyle işaretlersiniz. Aşağıdaki örnek, `ThresholdReachedEventHandler`adlı bir temsilcinin nasıl bildirilemeyeceğini gösterir.  
   
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  

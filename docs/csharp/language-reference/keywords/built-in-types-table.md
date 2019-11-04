@@ -7,16 +7,16 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 687990cc86b3303bdef96af26be63af47410f8c0
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 22bdfa197e3ce9c119203c74eeb0eb8217022a68
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698788"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422901"
 ---
 # <a name="built-in-types-table-c-reference"></a>Yerleşik türler tablosu (C# başvuru)
 
-Aşağıdaki tabloda, <xref:System> ad alanında önceden tanımlanmış C# türlerin diğer adları olan yerleşik türler için anahtar sözcükler gösterilmektedir:
+Aşağıdaki tabloda, <xref:System> ad alanında önceden tanımlanmış türlerin diğer C# adları olan yerleşik türler için anahtar sözcükler gösterilmektedir:
 
 |C#türüyle|.NET türü|  
 |--------------|-------------------------|  
@@ -31,14 +31,14 @@ Aşağıdaki tabloda, <xref:System> ad alanında önceden tanımlanmış C# tür
 |[uint](../builtin-types/integral-numeric-types.md)|<xref:System.UInt32?displayProperty=nameWithType>|  
 |[long](../builtin-types/integral-numeric-types.md)|<xref:System.Int64?displayProperty=nameWithType>|  
 |[ulong](../builtin-types/integral-numeric-types.md)|<xref:System.UInt64?displayProperty=nameWithType>|  
-|[object](object.md)|<xref:System.Object?displayProperty=nameWithType>|  
+|[object](../builtin-types/reference-types.md)|<xref:System.Object?displayProperty=nameWithType>|  
 |[short](../builtin-types/integral-numeric-types.md)|<xref:System.Int16?displayProperty=nameWithType>|  
 |[ushort](../builtin-types/integral-numeric-types.md)|<xref:System.UInt16?displayProperty=nameWithType>|  
-|[string](string.md)|<xref:System.String?displayProperty=nameWithType>|  
+|[string](../builtin-types/reference-types.md)|<xref:System.String?displayProperty=nameWithType>|  
   
 ## <a name="remarks"></a>Açıklamalar
 
-Tablodaki tüm türlere `object` ve `string` dışında, basit türler olarak başvurulur.
+Tablodaki tüm türler, `object` ve `string`hariç, basit türler olarak adlandırılır.
 
 .NET türleri ve bunların C# tür anahtar sözcük diğer adları değiştirilebilir. Örneğin, aşağıdaki bildirimlerden birini kullanarak bir tamsayı değişkeni bildirebilirsiniz:
 
@@ -69,4 +69,4 @@ Console.WriteLine(doubleType.FullName);
 - [Değer türleri](value-types.md)
 - [Başvuru türleri](reference-types.md)
 - [Varsayılan değerler tablosu](default-values-table.md)
-- [dynamic](dynamic.md)
+- [dynamic](../builtin-types/reference-types.md)

@@ -1,21 +1,21 @@
 ---
-title: "Nasıl yapılır: XML 'den metin dosyaları oluştur (C#)"
+title: "Nasıl yapılır: XML 'den metin dosyaları oluşturma (C#)"
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 76fcca69236ef97374855ebbb19259aa5e119ea0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8e36bbda60bea207707dcf869afc059e645ec8ad
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253590"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418299"
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a>Nasıl yapılır: XML 'den metin dosyaları oluştur (C#)
+# <a name="how-to-generate-text-files-from-xml-c"></a>Nasıl yapılır: XML 'den metin dosyaları oluşturma (C#)
 Bu örnek, bir XML dosyasından bir virgülle ayrılmış değerler (CSV) dosyasının nasıl oluşturulacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu C# örneğin sürümü, tek bir ifadede bir XML belgesinden `Aggregate` CSV dosyası oluşturmak için yöntem sözdizimini ve işlecini kullanır. Daha fazla bilgi için bkz. [LINQ 'Te sorgu sözdizimi ve Yöntem sözdizimi](./query-syntax-and-method-syntax-in-linq.md).  
+ Bu C# örneğin sürümü, tek bir IFADEDE bir XML belgesinden CSV dosyası oluşturmak için yöntem sözdizimini ve `Aggregate` işlecini kullanır. Daha fazla bilgi için bkz. [LINQ 'Te sorgu sözdizimi ve Yöntem sözdizimi](./query-syntax-and-method-syntax-in-linq.md).  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -55,4 +55,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Projeksiyonlar ve dönüşümler (LINQ to XMLC#) ()](./projections-and-transformations-linq-to-xml.md)
+- [Projeksiyonlar ve dönüşümler (LINQ to XMLC#) ()](how-to-work-with-dictionaries-using-linq-to-xml.md)

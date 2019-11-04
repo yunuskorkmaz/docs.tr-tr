@@ -1,5 +1,5 @@
 ---
-title: volatile - C# başvurusu
+title: Geçici C# başvuru
 ms.custom: seodec18
 ms.date: 10/24/2018
 f1_keywords:
@@ -8,41 +8,41 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: 7200432780cb5a65bc5420b41c5dbd2e27a2c01f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e72173ba1b91f03ccb1c15ca6451ac997666bc7f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633100"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422121"
 ---
 # <a name="volatile-c-reference"></a>volatile (C# Başvurusu)
 
-`volatile` Anahtar sözcüğü gösteren bir alan, aynı anda yürütülen birden çok iş parçacığı tarafından değiştirilebilir. Derleyici, çalışma zamanı sistemi ve hatta donanım okuma ve bellek konumlara yazma işlemleri performans nedeniyle yeniden. Bildirilen alanları `volatile` bu iyileştirmeler tabi değildir. Ekleme `volatile` değiştiricisi, tüm iş parçacıklarının bunlar hedeflenerek gerçekleştirildi sırada başka bir iş parçacığı tarafından gerçekleştirilen geçici yazma dikkate almasını sağlar. Bir tek toplam geçici yazma olarak görülen yürütme tüm iş parçacıklarından sıralama garantisi yoktur.
+`volatile` anahtar sözcüğü, bir alanın aynı anda yürütülen birden çok iş parçacığı tarafından değiştirildiğini belirtir. Derleyici, çalışma zamanı sistemi ve hatta donanım, performans nedeniyle bellek konumlarına okuma ve yazma işlemlerini yeniden düzenleyebilir. `volatile` olarak belirtilen alanlar bu iyileştirmelere tabi değildir. `volatile` değiştiricisini eklemek, tüm iş parçacıklarının gerçekleştirilen diğer bir iş parçacığı tarafından gerçekleştirilen geçici yazmaları gözlemleyecek olmasını sağlar. Yürütmenin tüm iş parçacıklarından görüldüğü şekilde, tek bir toplam geçici yazma sıralaması garantisi yoktur.
 
-`volatile` Anahtar sözcüğü, bu tür alanlar için uygulanabilir:
+`volatile` anahtar sözcüğü bu türlerin alanlarına uygulanabilir:
 
 - Başvuru türleri.
-- İşaretçi türleri (güvenli olmayan bir bağlamda). İşaretçi geçici olabilir, ancak işaret nesnesi dönüştürülemez unutmayın. Diğer bir deyişle, "işaretçisi geçici." bildiremezsiniz.
-- Basit türler gibi `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `char`, `float`, ve `bool`.
-- Bir `enum` aşağıdaki temel türlerinden birini türüyle: `byte`, `sbyte`, `short`, `ushort`, `int`, veya `uint`.
+- İşaretçi türleri (güvenli olmayan bir bağlamda). İşaretçinin kendisi geçici olsa da, işaret ettiği nesnenin bu şekilde olduğunu unutmayın. Diğer bir deyişle, "geçici işaretçi işaretçisi" bildiremezsiniz.
+- `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `char`, `float`ve `bool`gibi basit türler.
+- Aşağıdaki temel türlerden birine sahip `enum` türü: `byte`, `sbyte`, `short`, `ushort`, `int`veya `uint`.
 - Başvuru türleri olarak bilinen genel tür parametreleri.
 - <xref:System.IntPtr> ve <xref:System.UIntPtr>.
 
-Diğer türleri dahil olmak üzere, `double` ve `long`, işaretlenemiyor `volatile` çünkü okuma ve yazma işlemleri bu türlerin alanları atomik olmasını garanti edilemez. Bu tür alanlar çok iş parçacıklı erişimi korumak için kullanmak <xref:System.Threading.Interlocked> sınıf üyeleri veya erişim kullanarak koruma [ `lock` ](lock-statement.md) deyimi.
+`double` ve `long`dahil diğer türler `volatile` olarak işaretlenemez, çünkü bu türlerin alanlarına okuma ve yazma işlemleri atomik olarak garanti edilemez. Bu tür alanlara çok iş parçacıklı erişimi korumak için, <xref:System.Threading.Interlocked> sınıf üyelerini kullanın veya [`lock`](lock-statement.md) ifadesini kullanarak erişimi koruyun.
 
-`volatile` Anahtar sözcüğü yalnızca alanlarına uygulanabilir bir `class` veya `struct`. Yerel değişkenler bildirilemez `volatile`.
+`volatile` anahtar sözcüğü yalnızca bir `class` veya `struct`alanlara uygulanabilir. Yerel değişkenler `volatile`olarak bildirilemez.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir ortak alan değişken olarak bildirmek gösterilmektedir `volatile`.
+Aşağıdaki örnek, `volatile`olarak bir ortak alan değişkeninin nasıl bildirilemeyeceğini gösterir.
 
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Declaration)]
 
-Aşağıdaki örnek nasıl yardımcı veya çalışan iş parçacığı oluşturulabilir ve birincil iş parçacığının ile paralel işleme gerçekleştirmek için kullanılan gösterir. Daha fazla bilgi için ilgili çoklu iş parçacığı bakın [yönetilen iş parçacığı](../../../standard/threading/index.md).
+Aşağıdaki örnek, birincil iş parçacığından paralel olarak işleme gerçekleştirmek için bir yardımcı veya çalışan iş parçacığının nasıl oluşturulup kullanılabileceğini gösterir. Çoklu iş parçacığı hakkında daha fazla bilgi için bkz. [yönetilen Iş parçacığı](../../../standard/threading/index.md).
 
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
 
-İle `volatile` bildirimi için eklenen değiştiricisi `_shouldStop` yerde, her zaman aynı sonuçları (yukarıdaki kodda gösterildiği alıntı benzer) elde edersiniz. Ancak, bu değiştirici olmadan `_shouldStop` üyesi, davranıştır tahmin edilemez. `DoWork` Yöntemi eski verilerin okunmasını kaynaklanan üye erişimi iyileştirin. Çok iş parçacıklı programlama yapısı nedeniyle eski okuma sayısını tahmin edilemez. Programın farklı çalışmalarında biraz farklı sonuçlar oluşturur.
+`_shouldStop` bildirimine eklenen `volatile` değiştiricisi ile, her zaman aynı sonuçları elde edersiniz (Yukarıdaki kodda gösterilen alıntıya benzer). Ancak, `_shouldStop` üyesinde Bu değiştirici olmadan davranış tahmin edilemez. `DoWork` yöntemi üye erişimini iyileştirebilmenizi sağlayabilir ve bu da eski verilerin okunmasına yol açar. Çok iş parçacıklı programlama doğası nedeniyle, eski okuma sayısı tahmin edilemez. Programın farklı çalıştırmaları biraz farklı sonuçlar üretecektir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -51,9 +51,9 @@ Aşağıdaki örnek nasıl yardımcı veya çalışan iş parçacığı oluştur
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C#dil belirtimi: volatile anahtar sözcüğü](../../../../_csharplang/spec/classes.md#volatile-fields)
-- [C# başvurusu](../index.md)
+- [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [Değiştiriciler](modifiers.md)
-- [lock deyimi](lock-statement.md)
+- [Değiştiriciler](index.md)
+- [Lock deyimleri](lock-statement.md)
 - <xref:System.Threading.Interlocked>

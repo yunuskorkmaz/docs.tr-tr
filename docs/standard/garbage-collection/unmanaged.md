@@ -12,12 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: 04bed819b472abe23ae6a9e89de149e715272505
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141358"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423032"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Yönetilmeyen Kaynakları Temizleme
 
@@ -25,7 +25,7 @@ Uygulamanızın oluşturduğu nesnelerin çoğu için, ' i kullanabilirsiniz. Be
 
 Türleriniz yönetilmeyen kaynaklar ise, aşağıdakileri yapmanız gerekir:
 
-- [Dispose modelini](../../../docs/standard/design-guidelines/dispose-pattern.md)uygulayın. Bu, yönetilmeyen kaynakların belirleyici sürümünü etkinleştirmek için bir <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> uygulama sağlamanızı gerektirir. Nesne (ve kullandığı kaynaklar) artık gerekli olmadığında, bir tür tüketicisini <xref:System.IDisposable.Dispose%2A> çağırır. <xref:System.IDisposable.Dispose%2A> yöntemi, yönetilmeyen kaynakları hemen serbest bırakır.
+- [Dispose modelini](implementing-dispose.md)uygulayın. Bu, yönetilmeyen kaynakların belirleyici sürümünü etkinleştirmek için bir <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> uygulama sağlamanızı gerektirir. Nesne (ve kullandığı kaynaklar) artık gerekli olmadığında, bir tür tüketicisini <xref:System.IDisposable.Dispose%2A> çağırır. <xref:System.IDisposable.Dispose%2A> yöntemi, yönetilmeyen kaynakları hemen serbest bırakır.
 
 - Bir tür tüketicisinin <xref:System.IDisposable.Dispose%2A>çağırmayı unutması durumunda, yönetilmeyen kaynaklarınızın serbest bırakılacağını sağlayın. Bunu yapmak için iki yol vardır:
 
@@ -39,7 +39,7 @@ Daha sonra, bu türden tüketiciler, yönetilmeyen kaynaklar tarafından kullan�
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[Dispose yöntemi uygulama](../../../docs/standard/garbage-collection/implementing-dispose.md) Yönetilmeyen kaynakları serbest bırakmak için [Dispose deseninin](../../../docs/standard/design-guidelines/dispose-pattern.md) nasıl uygulanacağını açıklar.
+[Dispose yöntemi uygulama](../../../docs/standard/garbage-collection/implementing-dispose.md) Yönetilmeyen kaynakları serbest bırakmak için [Dispose deseninin](implementing-dispose.md) nasıl uygulanacağını açıklar.
 
 [IDisposable uygulayan nesneleri kullanma](../../../docs/standard/garbage-collection/using-objects.md) Bir türün tüketicilerinin <xref:System.IDisposable.Dispose%2A> uygulamasının çağrıldığından nasıl emin olduğunu açıklar. Bunu yapmak için C# `using` deyimin veya Visual Basic `Using` ifadesinin kullanılmasını öneririz.
 

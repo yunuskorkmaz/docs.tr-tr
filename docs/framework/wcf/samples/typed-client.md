@@ -2,12 +2,12 @@
 title: Türü Belirlenmiş İstemci
 ms.date: 03/30/2017
 ms.assetid: 62c40e8f-e9b4-4b1a-939a-93c37393d343
-ms.openlocfilehash: a1c3337bdc5ab9ff4df7f0158584b6d4e47a1058
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 97362d5ae88d237253eb8eaba015b8e5f99adaac
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044655"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424201"
 ---
 # <a name="typed-client"></a>Türü Belirlenmiş İstemci
 Örnek, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan, yazılmış bir istemciden nasıl bilgi alınacağını gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır. Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
@@ -15,7 +15,7 @@ ms.locfileid: "70044655"
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- İstemci `Endpoint` özelliği, istemcinin iletişim kurduğu hizmet uç noktası hakkındaki bilgilere (adres, bağlama ve sözleşme bilgileri dahil) erişim sağlar. İstemci `InnerChannel` özelliği, kendi durumu ve oturum tanımlayıcısı <xref:System.ServiceModel.IClientChannel> gibi temel alınan kanalla ilgili bilgilere erişim sağlayan bir örneğidir.  
+ İstemcinin `Endpoint` özelliği, istemcinin iletişim kurduğu hizmet uç noktası hakkındaki bilgilere (adres, bağlama ve sözleşme bilgileri dahil) erişim sağlar. İstemcinin `InnerChannel` özelliği, kendi durumu ve oturum tanımlayıcısı gibi temel alınan kanalla ilgili bilgilere erişim sağlayan bir <xref:System.ServiceModel.IClientChannel> örneğidir.  
   
 ```csharp   
 // Create a client.  
@@ -35,7 +35,7 @@ client.Close();
   
  Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -63,6 +63,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\TypedClient`  

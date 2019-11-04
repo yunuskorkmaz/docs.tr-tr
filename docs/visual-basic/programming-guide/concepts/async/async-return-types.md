@@ -2,16 +2,16 @@
 title: Zaman uyumsuz dönüş türleri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: f85b3ec536033fd6d3cdec8f5a6ac4f9f66077f3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a5553070dd68a0bc3eaad1c5e8c000f7a31f8783
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524335"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423966"
 ---
 # <a name="async-return-types-visual-basic"></a>Zaman uyumsuz dönüş türleri (Visual Basic)
 
-Zaman uyumsuz metotlarda üç olası dönüş türü vardır: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> ve void. Visual Basic, void dönüş türü bir [alt](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) yordam olarak yazılır. Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).
+Zaman uyumsuz metotlarda üç olası dönüş türü vardır: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>ve void. Visual Basic, void dönüş türü bir [alt](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) yordam olarak yazılır. Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).
 
 Her dönüş türü aşağıdaki bölümlerden birinde incelenir ve konunun sonunda her üç türü kullanan tam bir örnek bulabilirsiniz.
 
@@ -20,7 +20,7 @@ Her dönüş türü aşağıdaki bölümlerden birinde incelenir ve konunun sonu
 
 ## <a name="BKMK_TaskTReturnType"></a>Görev (T) dönüş türü
 
-@No__t_0 dönüş türü, işleneninin tür `TResult` sahip olduğu bir [Return](../../../../visual-basic/language-reference/statements/return-statement.md) ifadesini içeren zaman uyumsuz bir yöntem için kullanılır.
+<xref:System.Threading.Tasks.Task%601> dönüş türü, işleneninin tür `TResult`sahip olduğu bir [Return](../../../../visual-basic/language-reference/statements/return-statement.md) ifadesini içeren zaman uyumsuz bir yöntem için kullanılır.
 
 Aşağıdaki örnekte, `TaskOfT_MethodAsync` async yöntemi bir Integer döndüren return ifadesini içerir. Bu nedenle, yöntem bildirimi `Task(Of Integer)` bir dönüş türü belirtmelidir.
 
@@ -47,7 +47,7 @@ Async Function TaskOfT_MethodAsync() As Task(Of Integer)
 End Function
 ```
 
-Bir await ifadesi içinden `TaskOfT_MethodAsync` çağrıldığında await ifadesi, `TaskOfT_MethodAsync` tarafından döndürülen görevde depolanan tamsayı değerini (`leisureHours` değeri) alır. Await ifadeleri hakkında daha fazla bilgi için bkz. [Await işleci](../../../../visual-basic/language-reference/operators/await-operator.md).
+Bir await ifadesi içinden `TaskOfT_MethodAsync` çağrıldığında await ifadesi, `TaskOfT_MethodAsync`tarafından döndürülen görevde depolanan tamsayı değerini (`leisureHours`değeri) alır. Await ifadeleri hakkında daha fazla bilgi için bkz. [Await işleci](../../../../visual-basic/language-reference/operators/await-operator.md).
 
 Aşağıdaki kod çağrıları ve await metodu `TaskOfT_MethodAsync`. Sonuç `result1` değişkenine atanır.
 
@@ -56,36 +56,36 @@ Aşağıdaki kod çağrıları ve await metodu `TaskOfT_MethodAsync`. Sonuç `re
 Dim result1 As Integer = Await TaskOfT_MethodAsync()
 ```
 
-Aşağıdaki kodun gösterdiği gibi, `TaskOfT_MethodAsync` çağrısını `Await` uygulamasından ayırarak bunun nasıl gerçekleştiğini daha iyi anlayabilirsiniz. Yönteminin bildiriminden bekleyebileceğiniz gibi, hemen beklenmiş olmayan bir yöntem `TaskOfT_MethodAsync` çağrısı `Task(Of Integer)` döndürür. Görev, örnekteki `integerTask` değişkenine atanır. @No__t_0 bir <xref:System.Threading.Tasks.Task%601> olduğundan, `TResult` türünde bir <xref:System.Threading.Tasks.Task%601.Result> özelliği içerir. Bu durumda, TResult bir tamsayı türünü temsil eder. @No__t_0 `integerTask` uygulandığında, await ifadesi `integerTask` <xref:System.Threading.Tasks.Task%601.Result%2A> özelliğinin içeriğini değerlendirir. Değer `result2` değişkenine atanır.
+Aşağıdaki kodun gösterdiği gibi, `TaskOfT_MethodAsync` çağrısını `Await`uygulamasından ayırarak bunun nasıl gerçekleştiğini daha iyi anlayabilirsiniz. Yönteminin bildiriminden bekleyebileceğiniz gibi, hemen beklenmiş olmayan bir yöntem `TaskOfT_MethodAsync` çağrısı `Task(Of Integer)`döndürür. Görev, örnekteki `integerTask` değişkenine atanır. `integerTask` bir <xref:System.Threading.Tasks.Task%601>olduğundan, `TResult`türünde bir <xref:System.Threading.Tasks.Task%601.Result> özelliği içerir. Bu durumda, TResult bir tamsayı türünü temsil eder. `Await` `integerTask`uygulandığında, await ifadesi `integerTask`<xref:System.Threading.Tasks.Task%601.Result%2A> özelliğinin içeriğini değerlendirir. Değer `result2` değişkenine atanır.
 
 > [!WARNING]
-> @No__t_0 özelliği engelleyici bir özelliktir. Görevi tamamlanmadan önce ona erişmeye çalışırsanız, etkin olan iş parçacığı, görev tamamlanana ve değer kullanılabilir olana kadar engellenir. Çoğu durumda, özelliği doğrudan erişmek yerine `Await` kullanarak değere erişmeniz gerekir.
+> <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği engelleyici bir özelliktir. Görevi tamamlanmadan önce ona erişmeye çalışırsanız, etkin olan iş parçacığı, görev tamamlanana ve değer kullanılabilir olana kadar engellenir. Çoğu durumda, özelliği doğrudan erişmek yerine `Await` kullanarak değere erişmeniz gerekir.
 
 ```vb
 ' Call and await in separate statements.
 Dim integerTask As Task(Of Integer) = TaskOfT_MethodAsync()
 
 ' You can do other work that does not rely on resultTask before awaiting.
-textBox1.Text &= String.Format("Application can continue working while the Task(Of T) runs. . . . " & vbCrLf)
+textBox1.Text &= "Application can continue working while the Task(Of T) runs. . . . " & vbCrLf
 
 Dim result2 As Integer = Await integerTask
 ```
 
-Aşağıdaki koddaki görüntüleme deyimleri `result1` değişkeninin değerlerinin, `result2` değişkeninin ve `Result` özelliğinin aynı olduğunu doğrular. @No__t_0 özelliğinin engelleme özelliği olduğunu ve görevi beklenmeden önce erişilmeyeceğini unutmayın.
+Aşağıdaki koddaki görüntüleme deyimleri `result1` değişkeninin değerlerinin, `result2` değişkeninin ve `Result` özelliğinin aynı olduğunu doğrular. `Result` özelliğinin engelleme özelliği olduğunu ve görevi beklenmeden önce erişilmeyeceğini unutmayın.
 
 ```vb
 ' Display the values of the result1 variable, the result2 variable, and
 ' the resultTask.Result property.
-textBox1.Text &= String.Format(vbCrLf & "Value of result1 variable:   {0}" & vbCrLf, result1)
-textBox1.Text &= String.Format("Value of result2 variable:   {0}" & vbCrLf, result2)
-textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, integerTask.Result)
+textBox1.Text &= vbCrLf & $"Value of result1 variable:   {result1}" & vbCrLf
+textBox1.Text &= $"Value of result2 variable:   {result2}" & vbCrLf
+textBox1.Text &= $"Value of resultTask.Result:  {integerTask.Result}" & vbCrLf
 ```
 
 ## <a name="BKMK_TaskReturnType"></a>Görev dönüş türü
 
 Dönüş açıklaması içermeyen veya bir işleneni döndürmeyen bir return ifadesini içeren zaman uyumsuz metotlar genellikle <xref:System.Threading.Tasks.Task> dönüş türüne sahiptir. Bu tür yöntemler, zaman uyumlu olarak çalışmak üzere yazılmışsa [alt](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) yordamlar olur. Zaman uyumsuz bir yöntem için `Task` dönüş türü kullanırsanız, çağıran bir yöntem, çağrılan zaman uyumsuz yöntem tamamlanana kadar arayanın tamamlanmasını askıya almak için bir `Await` işleci kullanabilir.
 
-Aşağıdaki örnekte, zaman uyumsuz yöntem `Task_MethodAsync` return ifadesini içermez. Bu nedenle, `Task_MethodAsync` beklenmesine olanak sağlayan, yöntemi için `Task` dönüş türünü belirtirsiniz. @No__t_0 türünün tanımı bir dönüş değeri depolamak için bir `Result` özelliği içermiyor.
+Aşağıdaki örnekte, zaman uyumsuz yöntem `Task_MethodAsync` return ifadesini içermez. Bu nedenle, `Task_MethodAsync` beklenmesine olanak sağlayan, yöntemi için `Task` dönüş türünü belirtirsiniz. `Task` türünün tanımı bir dönüş değeri depolamak için bir `Result` özelliği içermiyor.
 
 ```vb
 ' TASK EXAMPLE
@@ -95,7 +95,7 @@ Async Function Task_MethodAsync() As Task
     ' asynchronous call.
     ' Task.Delay is a placeholder for actual work.
     Await Task.Delay(2000)
-    textBox1.Text &= String.Format(vbCrLf & "Sorry for the delay. . . ." & vbCrLf)
+    textBox1.Text &= vbCrLf & "Sorry for the delay. . . ." & vbCrLf
 
     ' This method has no return statement, so its return type is Task.
 End Function
@@ -119,16 +119,16 @@ Aşağıdaki kod, `Task_MethodAsync` döndürdüğü görevi bekleyen çağrıy�
 Dim simpleTask As Task = Task_MethodAsync()
 
 ' You can do other work that does not rely on simpleTask before awaiting.
-textBox1.Text &= String.Format(vbCrLf & "Application can continue working while the Task runs. . . ." & vbCrLf)
+textBox1.Text &= vbCrLf & "Application can continue working while the Task runs. . . ." & vbCrLf
 
 Await simpleTask
 ```
 
 ## <a name="BKMK_VoidReturnType"></a>Void dönüş türü
 
-@No__t_0 yordamların birincil kullanımı, dönüş türü olmayan (diğer dillerde void dönüş türü olarak ifade edilen) olay işleyicileridir. Void Return Ayrıca, void döndüren yöntemleri geçersiz kılmak için veya "Fire ve unut" olarak kategorilere ayrılmamış etkinlikler gerçekleştiren yöntemler için de kullanılabilir. Ancak, void döndüren zaman uyumsuz bir yöntem beklenmediğinden, mümkün olan her yerde `Task` döndürmelisiniz. Bu tür bir yöntemi çağıran, çağrılan zaman uyumsuz yöntemin tamamlanmasını beklemeden tamamlamaya devam edebilmelidir ve çağıranın, zaman uyumsuz yöntemin ürettiği herhangi bir değerden veya özel durumlardan bağımsız olması gerekir.
+`Sub` yordamların birincil kullanımı, dönüş türü olmayan (diğer dillerde void dönüş türü olarak ifade edilen) olay işleyicileridir. Void Return Ayrıca, void döndüren yöntemleri geçersiz kılmak için veya "Fire ve unut" olarak kategorilere ayrılmamış etkinlikler gerçekleştiren yöntemler için de kullanılabilir. Ancak, void döndüren zaman uyumsuz bir yöntem beklenmediğinden, mümkün olan her yerde `Task` döndürmelisiniz. Bu tür bir yöntemi çağıran, çağrılan zaman uyumsuz yöntemin tamamlanmasını beklemeden tamamlamaya devam edebilmelidir ve çağıranın, zaman uyumsuz yöntemin ürettiği herhangi bir değerden veya özel durumlardan bağımsız olması gerekir.
 
-Void döndüren zaman uyumsuz bir yöntemi çağıran, yöntemden oluşturulan özel durumları yakalayabilir ve bu tür işlenmemiş özel durumlar uygulamanızın başarısız olmasına neden olabilir. Bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> döndüren zaman uyumsuz yöntemde bir özel durum oluşursa, özel durum döndürülen görevde depolanır ve görev beklendiğinde yeniden oluşturulur. Bu nedenle, bir özel durum üretemeyen herhangi bir zaman uyumsuz yöntemin <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> dönüş türüne sahip olduğundan ve yönteme yapılan çağrıların beklenmediğinden emin olun.
+Void döndüren zaman uyumsuz bir yöntemi çağıran, yöntemden oluşturulan özel durumları yakalayabilir ve bu tür işlenmemiş özel durumlar uygulamanızın başarısız olmasına neden olabilir. Bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>döndüren zaman uyumsuz yöntemde bir özel durum oluşursa, özel durum döndürülen görevde depolanır ve görev beklendiğinde yeniden oluşturulur. Bu nedenle, bir özel durum üretemeyen herhangi bir zaman uyumsuz yöntemin <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> dönüş türüne sahip olduğundan ve yönteme yapılan çağrıların beklenmediğinden emin olun.
 
 Zaman uyumsuz yöntemlerde özel durumları yakalama hakkında daha fazla bilgi için bkz [. TRY... Yakala... Finally ekstresi](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
 
@@ -218,15 +218,15 @@ Aşağıdaki Windows Presentation Foundation (WPF) projesi bu konudan kod örnek
             Dim integerTask As Task(Of Integer) = TaskOfT_MethodAsync()
 
             ' You can do other work that does not rely on resultTask before awaiting.
-            textBox1.Text &= String.Format("Application can continue working while the Task(Of T) runs. . . . " & vbCrLf)
+            textBox1.Text &= "Application can continue working while the Task(Of T) runs. . . . " & vbCrLf
 
             Dim result2 As Integer = Await integerTask
 
             ' Display the values of the result1 variable, the result2 variable, and
             ' the resultTask.Result property.
-            textBox1.Text &= String.Format(vbCrLf & "Value of result1 variable:   {0}" & vbCrLf, result1)
-            textBox1.Text &= String.Format("Value of result2 variable:   {0}" & vbCrLf, result2)
-            textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, integerTask.Result)
+            textBox1.Text &= vbCrLf & $"Value of result1 variable:   {result1}" & vbCrLf
+            textBox1.Text &= $"Value of result2 variable:   {result2}" & vbCrLf
+            textBox1.Text &= $"Value of resultTask.Result:  {integerTask.Result}" & vbCrLf
 
             ' Task
             ' Call and await the Task-returning async method in the same statement.
@@ -236,7 +236,7 @@ Aşağıdaki Windows Presentation Foundation (WPF) projesi bu konudan kod örnek
             Dim simpleTask As Task = Task_MethodAsync()
 
             ' You can do other work that does not rely on simpleTask before awaiting.
-            textBox1.Text &= String.Format(vbCrLf & "Application can continue working while the Task runs. . . ." & vbCrLf)
+            textBox1.Text &= vbCrLf & "Application can continue working while the Task runs. . . ." & vbCrLf
 
             Await simpleTask
         End Function
@@ -269,7 +269,7 @@ Aşağıdaki Windows Presentation Foundation (WPF) projesi bu konudan kod örnek
             ' asynchronous call.
             ' Task.Delay is a placeholder for actual work.
             Await Task.Delay(2000)
-            textBox1.Text &= String.Format(vbCrLf & "Sorry for the delay. . . ." & vbCrLf)
+            textBox1.Text &= vbCrLf & "Sorry for the delay. . . ." & vbCrLf
 
             ' This method has no return statement, so its return type is Task.
         End Function

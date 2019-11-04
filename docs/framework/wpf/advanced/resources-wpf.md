@@ -8,18 +8,18 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f3ab7a11757ba1936aae6e63ace28c4b336292b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981896"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458700"
 ---
 # <a name="resources-wpf"></a>Kaynaklar (WPF)
-Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir nesnedir. WPF, farklı türdeki kaynakların destekler. Bu kaynaklar öncelikle iki kaynak türleri şunlardır: XAML kaynakları ve kaynak veri dosyaları. XAML kaynakları Fırçalar ve stilleri verilebilir. Kaynak veri dosyaları uygulamanın gereken yürütülebilir olmayan veri dosyalarıdır.  
+Kaynak, uygulamanızdaki farklı yerlerde yeniden kullanılabilen bir nesnedir. WPF farklı kaynak türlerini destekler. Bu kaynaklar birincil olarak iki kaynak türüdür: XAML Kaynakları ve kaynak veri dosyaları. XAML kaynaklarına örnek olarak fırçalar ve stiller verilebilir. Kaynak veri dosyaları, bir uygulamanın ihtiyacı olan yürütülebilir olmayan veri dosyalarıdır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [XAML Kaynakları](xaml-resources.md)  
+ [XAML Kaynakları](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
  [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../app-development/wpf-application-resource-content-and-data-files.md)  
  [WPF İçinde URI'leri Paketleme](../app-development/pack-uris-in-wpf.md)  
   

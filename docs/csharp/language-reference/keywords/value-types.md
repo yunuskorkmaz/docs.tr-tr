@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353756"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422210"
 ---
 # <a name="value-types-c-reference"></a>Değer türleri (C# başvuru)
 
@@ -26,13 +26,13 @@ ms.locfileid: "71353756"
 
 ## <a name="main-features-of-value-types"></a>Değer türlerinin ana özellikleri
 
-Değer türünde bir değişken, türün bir değerini içerir. Örneğin, `int` türünün bir değişkeni değeri `42`içerebilir. Bu, bir nesne olarak da bilinen tür örneğine başvuru içeren bir başvuru türü değişkeninden farklıdır. Değer türünde bir değişkene yeni bir değer atadığınızda, bu değer kopyalanır. Başvuru türündeki bir değişkene yeni bir değer atadığınızda, başvuru nesnenin kendisi değil, kopyalanır.
+Değer türünde bir değişken, türün bir değerini içerir. Örneğin, `int` türünün bir değişkeni `42`değerini içerebilir. Bu, bir nesne olarak da bilinen tür örneğine başvuru içeren bir başvuru türü değişkeninden farklıdır. Değer türünde bir değişkene yeni bir değer atadığınızda, bu değer kopyalanır. Başvuru türündeki bir değişkene yeni bir değer atadığınızda, başvuru nesnenin kendisi değil, kopyalanır.
 
-Tüm değer türleri, <xref:System.ValueType?displayProperty=nameWithType>öğesinden örtük olarak türetilir.
+Tüm değer türleri örtük olarak <xref:System.ValueType?displayProperty=nameWithType>türetilir.
 
 Başvuru türlerinden farklı olarak, bir değer türünden yeni bir tür türemezsiniz. Ancak, başvuru türleri gibi yapılar, arabirimler uygulayabilir.
 
-Değer türü değişkenleri varsayılan `null` olarak olamaz. Ancak, karşılık gelen [Nullable değer türlerinin](../../programming-guide/nullable-types/index.md) değişkenleri `null` olabilir.
+Değer türü değişkenleri varsayılan olarak `null` olamaz. Ancak, karşılık gelen [null yapılabilir değer türlerinin](../../programming-guide/nullable-types/index.md) değişkenleri `null`olabilir.
 
 Her değer türünün, bu türün varsayılan değerini Başlatan örtük parametresiz bir Oluşturucusu vardır. Değer türlerinin varsayılan değerleri hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](default-values-table.md).
 
@@ -44,17 +44,17 @@ Her değer türünün, bu türün varsayılan değerini Başlatan örtük parame
 - [Kayan nokta türleri](../builtin-types/floating-point-numeric-types.md)
 - [bool](bool.md)
 
-Basit türler anahtar sözcükler aracılığıyla tanımlanır, ancak bu anahtar sözcükler yalnızca <xref:System> ad alanındaki önceden tanımlanmış yapı türleri için diğer adlardır. Örneğin, [int](../builtin-types/integral-numeric-types.md) diğer bir addır <xref:System.Int32?displayProperty=nameWithType>. Diğer adların tam listesi için bkz. [Yerleşik türler tablosu](built-in-types-table.md).
+Basit türler anahtar sözcükler aracılığıyla tanımlanır, ancak bu anahtar sözcükler yalnızca <xref:System> ad alanındaki önceden tanımlanmış yapı türleri için diğer adlardır. Örneğin, [int](../builtin-types/integral-numeric-types.md) bir <xref:System.Int32?displayProperty=nameWithType>diğer adıdır. Diğer adların tam listesi için bkz. [Yerleşik türler tablosu](built-in-types-table.md).
 
 Basit türler, bazı ek işlemlere izin veren diğer yapı türlerinden farklıdır:
 
-- Basit türler, değişmez değerler kullanılarak başlatılabilir. Örneğin, `'A'` türünün `char` bir sabit değeri ve `2001` türünün `int`bir sabit değeri.
+- Basit türler, değişmez değerler kullanılarak başlatılabilir. Örneğin, `'A'` türü `char` bir değişmez değerdir ve `2001` `int`türü bir değişmez değerdir.
 
 - [Const](const.md) anahtar sözcüğüyle basit türlerin sabitlerini bildirebilirsiniz. Diğer yapı türlerinin sabitlerinin olması mümkün değildir.
 
 - İşlenenleri hepsi basit tür sabitleri olan sabit ifadeler, derleme zamanında değerlendirilir.
 
-Daha fazla bilgi için, [ C# dil belirtiminin](../language-specification/index.md) [basit türler](~/_csharplang/spec/types.md#simple-types) bölümüne bakın.
+Daha fazla bilgi için, [ C# dil belirtiminin](/dotnet/csharp/language-reference/language-specification/introduction) [basit türler](~/_csharplang/spec/types.md#simple-types) bölümüne bakın.
 
 ## <a name="initializing-value-types"></a>Değer türlerini başlatma
 
@@ -88,9 +88,9 @@ veya
 int myInt = 0;
 ```
 
-[New](../operators/new-operator.md) işlecini kullanmak, belirli türde parametresiz oluşturucuyu çağırır ve varsayılan değeri değişkenine atar. Önceki örnekte, parametresiz Oluşturucu değerine `0` `myInt`atanır. Parametresiz oluşturucular çağırarak atanan değerler hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](default-values-table.md).
+[New](../operators/new-operator.md) işlecini kullanmak, belirli türde parametresiz oluşturucuyu çağırır ve varsayılan değeri değişkenine atar. Önceki örnekte, parametresiz Oluşturucu değeri `myInt``0` atanır. Parametresiz oluşturucular çağırarak atanan değerler hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](default-values-table.md).
 
-Kullanıcı tanımlı türlerle, parametresiz oluşturucuyu çağırmak için [Yeni](../operators/new-operator.md) ' yi kullanın. Örneğin, aşağıdaki ifade `Point` yapının parametresiz oluşturucusunu çağırır:
+Kullanıcı tanımlı türlerle, parametresiz oluşturucuyu çağırmak için [Yeni](../operators/new-operator.md) ' yi kullanın. Örneğin, aşağıdaki ifade `Point` yapısının parametresiz oluşturucusunu çağırır:
 
 ```csharp
 var p = new Point(); // Invoke parameterless constructor for the struct.
@@ -98,7 +98,7 @@ var p = new Point(); // Invoke parameterless constructor for the struct.
 
 Bu çağrıdan sonra yapının kesin olarak atanması kabul edilir; diğer bir deyişle, tüm üyeleri varsayılan değerlerine başlatılır.
 
-`new` İşleci hakkında daha fazla bilgi için bkz. [Yeni](../operators/new-operator.md).
+`new` işleci hakkında daha fazla bilgi için, bkz. [Yeni](../operators/new-operator.md).
 
 Sayısal türlerin çıkışını biçimlendirme hakkında daha fazla bilgi için bkz. [sayısal sonuçlar tablosunu biçimlendirme](formatting-numeric-results-table.md).
 
@@ -107,6 +107,6 @@ Sayısal türlerin çıkışını biçimlendirme hakkında daha fazla bilgi içi
 - [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [Türler](types.md)
+- [Türler](/dotnet/csharp/language-reference/keywords)
 - [Başvuru türleri](reference-types.md)
 - [Null yapılabilir değer türleri](../../programming-guide/nullable-types/index.md)

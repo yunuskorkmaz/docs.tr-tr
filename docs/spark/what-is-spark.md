@@ -4,20 +4,20 @@ description: Apache Spark ve büyük veri senaryoları hakkında bilgi edinin.
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
-ms.openlocfilehash: 187a37897c23809d91820bd79b476e775fb5b99b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583482"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458167"
 ---
 # <a name="what-is-apache-spark"></a>Apache Spark nedir?
 
-[Apache Spark](https://spark.apache.org/) , büyük verileri çözümleyen uygulamaların performansını artırmak üzere bellek içi işlemeyi destekleyen açık kaynaklı bir paralel işleme çerçevesidir. Büyük veri çözümleri geleneksel veritabanları için çok büyük veya karmaşık olan verileri işleyecek şekilde tasarlanmıştır. Spark, disk tabanlı alternatiflerden çok daha hızlı olan bellekteki büyük miktarda veriyi işler. 
+[Apache Spark](https://spark.apache.org/) , büyük verileri çözümleyen uygulamaların performansını artırmak üzere bellek içi işlemeyi destekleyen açık kaynaklı bir paralel işleme çerçevesidir. Büyük veri çözümleri geleneksel veritabanları için çok büyük veya karmaşık olan verileri işleyecek şekilde tasarlanmıştır. Spark, disk tabanlı alternatiflerden çok daha hızlı olan bellekteki büyük miktarda veriyi işler.
 
 ## <a name="common-big-data-scenarios"></a>Yaygın büyük veri senaryoları
 
-Büyük hacimlerdeki verileri depolamanız ve işlemek, yapılandırılmamış verileri dönüştürmek veya akış verilerini işlemek için büyük bir veri mimarisini düşünebilirsiniz. Spark, çok büyük veri senaryolarında kullanılabilen, genel amaçlı bir dağıtılmış işleme altyapısıdır. 
+Büyük hacimlerdeki verileri depolamanız ve işlemek, yapılandırılmamış verileri dönüştürmek veya akış verilerini işlemek için büyük bir veri mimarisini düşünebilirsiniz. Spark, çok büyük veri senaryolarında kullanılabilen, genel amaçlı bir dağıtılmış işleme altyapısıdır.
 
 ### <a name="extract-transform-and-load-etl"></a>Ayıklama, dönüştürme ve yükleme (ETL)
 
@@ -33,7 +33,7 @@ Büyük hacimlerdeki verileri depolamanız ve işlemek, yapılandırılmamış v
 
 ### <a name="real-time-data-stream-processing"></a>Gerçek zamanlı veri akışı işleme
 
-Akış veya gerçek zamanlı veriler hareket halinde veriler. IoT cihazlarındaki telemetri, Weblogs ve tıklama akışları, akış verilerine örnek olarak verilebilir. Gerçek zamanlı veriler, Jeo-uzamsal analiz, uzaktan izleme ve anomali algılama gibi yararlı bilgiler sağlamak için işlenebilir. İlişkisel veriler gibi, verileri bir çıkış havuzuna taşımadan önce, akış verilerini filtreleyebilir, toplayabilir ve hazırlayabilirsiniz. Apache Spark [Spark akışı](https://spark.apache.org/streaming/)aracılığıyla [gerçek zamanlı veri akışı işlemesini](/azure/architecture/data-guide/big-data/real-time-processing) destekler. 
+Akış veya gerçek zamanlı veriler hareket halinde veriler. IoT cihazlarındaki telemetri, Weblogs ve tıklama akışları, akış verilerine örnek olarak verilebilir. Gerçek zamanlı veriler, Jeo-uzamsal analiz, uzaktan izleme ve anomali algılama gibi yararlı bilgiler sağlamak için işlenebilir. İlişkisel veriler gibi, verileri bir çıkış havuzuna taşımadan önce, akış verilerini filtreleyebilir, toplayabilir ve hazırlayabilirsiniz. Apache Spark [Spark akışı](https://spark.apache.org/streaming/)aracılığıyla [gerçek zamanlı veri akışı işlemesini](/azure/architecture/data-guide/big-data/real-time-processing) destekler.
 
 ### <a name="batch-processing"></a>Toplu işleme
 

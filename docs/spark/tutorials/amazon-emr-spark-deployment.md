@@ -4,12 +4,12 @@ description: Apache Spark uygulamasının bir .NET uygulamasını Amazon EMR Spa
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0eea5a40ae4643c7447e2f7281dc8b0db609ca79
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a1ff1ba4d5e855e0ac36b99b0c9d63adfaaaac1e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117950"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454941"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Amazon EMR Spark için bir .NET Apache Spark uygulaması dağıtma
 
@@ -24,7 +24,7 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > * Uygulamanızı Amazon EMR Spark 'a dağıtın
 > * Uygulamanızı çalıştırma
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Başlamadan önce aşağıdakileri yapın:
 
@@ -37,9 +37,9 @@ Başlamadan önce aşağıdakileri yapın:
 
 1. Kümenize dağıtılacak bir [Microsoft. spark. Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp sürümü seçin.
 
-   Örneğin, kullanmak `.NET for Apache Spark v0.1.0` `netcoreapp2.1`istiyorsanız [Microsoft. spark. Worker. netcoreapp 2.1. Linux-x64-0.1.0. tar. gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz)dosyasını indirirsiniz.
+   Örneğin, `netcoreapp2.1` kullanarak `.NET for Apache Spark v0.1.0` ' ı istiyorsanız, [Microsoft. spark. Worker. netcoreapp 2.1. Linux-x64-0.1.0. tar. gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz)dosyasını indirirsiniz.
 
-2. Kümenizin `Microsoft.Spark.Worker.<release>.tar.gz` erişimi olan bir dağıtılmış dosya sistemine (ör. S3) yükleyin ve [install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) .
+2. `Microsoft.Spark.Worker.<release>.tar.gz` ve [install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 'yi, kümenizin erişimi olan bir dağıtılmış dosya sistemine (ör. S3) yükleyin.
 
 ## <a name="prepare-your-net-for-apache-spark-app"></a>Apache Spark uygulamanızı .NET 'e hazırlama
 
@@ -53,9 +53,9 @@ Başlamadan önce aşağıdakileri yapın:
    dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
    ```
 
-3. Yayımlanan `<your app>.zip` dosyalar için üretin.
+3. Yayımlanan dosyalar için `<your app>.zip` üretir.
 
-   Kullanarak `zip`Linux üzerinde aşağıdaki komutu çalıştırın.
+   `zip`kullanarak Linux üzerinde aşağıdaki komutu çalıştırın.
 
    ```bash
    zip -r <your app>.zip .
@@ -71,14 +71,14 @@ Başlamadan önce aşağıdakileri yapın:
 
 [Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html) , AWS 'de büyük veri çerçevelerini çalıştırmayı kolaylaştıran bir yönetilen küme platformudur.
 
-> [!NOTE] 
+> [!NOTE]
 > Amazon EMR Spark, Linux tabanlıdır. Bu nedenle, uygulamanızı Amazon EMR Spark 'a dağıtmaya ilgileniyorsanız, uygulamanızın .NET Standard uyumlu olduğundan ve uygulamanızı derlemek için [.NET Core derleyicisini](https://dotnet.microsoft.com/download) kullandığınızdan emin olun.
 
 ### <a name="deploy-microsoftsparkworker"></a>Microsoft. spark. Worker 'ı dağıtma
 
 Bu adım yalnızca küme oluşturulurken gereklidir.
 
-`install-worker.sh` [Önyükleme eylemlerini](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html)kullanarak küme oluşturma sırasında çalıştırın.
+[Önyükleme eylemlerini](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html)kullanarak küme oluşturma sırasında `install-worker.sh` çalıştırın.
 
 AWS CLı kullanarak Linux üzerinde aşağıdaki komutu çalıştırın.
 
@@ -102,7 +102,7 @@ Bu uygulamayı Amazon EMR Spark: Spark-gönderme ve Amazon EMR adımlarında ça
 
 [Spark-gönder](https://spark.apache.org/docs/latest/submitting-applications.html) komutunu kullanarak, Amazon emr spark 'a Apache Spark işleri için .net gönderebilirsiniz.
 
-1. `ssh`Kümedeki düğümlerden birine.
+1. Kümedeki düğümlerden birine `ssh`.
 
 2. `spark-submit`'i çalıştırın.
 

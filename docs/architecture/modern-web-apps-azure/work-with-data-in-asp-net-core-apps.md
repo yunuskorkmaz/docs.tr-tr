@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9d9e75767f5ed5010f618d5dbe1e58fe79454597
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ff517aef93acf8c3a241c8fd8f240f7018467793
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117294"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419975"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamalarında verilerle çalışma
 
@@ -37,7 +37,7 @@ dotnet add package Microsoft.EntityFrameworkCore.InMemory
 
 ### <a name="the-dbcontext"></a>DbContext
 
-EF Core çalışmak için bir alt sınıfının <xref:Microsoft.EntityFrameworkCore.DbContext>olması gerekir. Bu sınıf, uygulamanızın birlikte çalıştığı varlıkların koleksiyonlarını temsil eden özellikleri barındırır. EShopOnWeb örneği, öğeler, markalar ve türler için koleksiyonlarla bir CatalogContext içerir:
+EF Core çalışmak için <xref:Microsoft.EntityFrameworkCore.DbContext>bir alt sınıfına ihtiyacınız vardır. Bu sınıf, uygulamanızın birlikte çalıştığı varlıkların koleksiyonlarını temsil eden özellikleri barındırır. EShopOnWeb örneği, öğeler, markalar ve türler için koleksiyonlarla bir CatalogContext içerir:
 
 ```csharp
 public class CatalogContext : DbContext
@@ -55,7 +55,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-DbContext 'in DbContextOptions kabul eden bir oluşturucusu olmalıdır ve bu bağımsız değişkeni temel DbContext oluşturucusuna geçirin. Uygulamanızda yalnızca bir DbContext varsa, dbcontextoptions 'ın bir örneğini geçirebileceğinizi unutmayın, ancak birden fazla tane varsa, DbContext türünü genel parametre olarak geçirerek, genel dbcontextoptions\<T > türünü kullanmanız gerekir.
+DbContext 'in DbContextOptions kabul eden bir oluşturucusu olmalıdır ve bu bağımsız değişkeni temel DbContext oluşturucusuna geçirin. Uygulamanızda yalnızca bir DbContext varsa, DbContextOptions 'ın bir örneğini geçirebileceğinizi unutmayın, ancak birden fazla tane varsa, DbContext türünü genel parametre olarak geçirerek, genel DbContextOptions\<T > türünü kullanmanız gerekir.
 
 ### <a name="configuring-ef-core"></a>EF Core yapılandırma
 
@@ -93,7 +93,7 @@ var brandItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-Sorguyu hemen yürütmek için, yukarıdaki örnekte ToListAsync çağrısını eklemek önemlidir. Aksi takdirde, ifade, numaralandırılmadıkça yürütülemeyecek bir IQueryable\<SelectListItem > atayacaktır. Metotlardan IQueryable sonuçlarının döndürülmesinin olumlu ve olumsuz yönleri vardır. Sorgu EF Core daha fazla değiştirilecek şekilde oluşturulmasına izin verir, ancak sorguya EF Core çevrilemediği bir işleme eklenirse, yalnızca çalışma zamanında oluşan hatalara de yol açabilir. Veri erişimi gerçekleştiren yönteme filtre geçirmek genellikle daha güvenlidir ve sonuç olarak bir bellek içi toplamayı (örneğin, liste\<T >) geri döndürür.
+Sorguyu hemen yürütmek için, yukarıdaki örnekte ToListAsync çağrısını eklemek önemlidir. Aksi takdirde, ifade, numaralandırılana kadar yürütülemeyecek bir IQueryable\<SelectListItem > atayacaktır. Metotlardan IQueryable sonuçlarının döndürülmesinin olumlu ve olumsuz yönleri vardır. Sorgu EF Core daha fazla değiştirilecek şekilde oluşturulmasına izin verir, ancak sorguya EF Core çevrilemediği bir işleme eklenirse, yalnızca çalışma zamanında oluşan hatalara de yol açabilir. Veri erişimi gerçekleştiren yönteme filtre geçirmek genellikle daha güvenlidir ve sonuç olarak bir bellek içi toplamayı geri (örneğin, liste\<T >) geri döndürür.
 
 EF Core, kalıcılığı yaptığı varlıklarda yapılan değişiklikleri izler. İzlenen bir varlıktaki değişiklikleri kaydetmek için, yalnızca DbContext üzerinde SaveChanges metodunu çağırın, bu da varlığı getirmek için kullanılan DbContext örneğinin aynı olduğundan emin olur. Varlık ekleme ve kaldırma, doğrudan uygun DbSet özelliğinde, veritabanı komutlarını yürütmek için SaveChanges çağrısı ile birlikte yapılır. Aşağıdaki örnek, kalıcılığı ekleme, güncelleştirme ve kalıcılığın kaldırılmasını gösterir.
 
@@ -127,7 +127,7 @@ var brandsWithItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-Birden çok ilişki ekleyebilirsiniz ve Thenınclude kullanarak alt ilişkileri de dahil edebilirsiniz. EF Core, sonuçta elde edilen varlık kümesini almak için tek bir sorgu yürütülür. Alternatif olarak, gezinti özelliklerinin gezinti özelliklerini bir '. ' geçirerek dahil edebilirsiniz. `.Include()` uzantı yöntemine ayrılmış dize, örneğin:
+Birden çok ilişki ekleyebilirsiniz ve Thenınclude kullanarak alt ilişkileri de dahil edebilirsiniz. EF Core, sonuçta elde edilen varlık kümesini almak için tek bir sorgu yürütülür. Alternatif olarak, gezinti özelliklerinin gezinti özelliklerini bir '. ' geçirerek dahil edebilirsiniz. `.Include()` uzantısı yöntemine ayrılmış dize, örneğin:
 
 ```csharp
     .Include(“Items.Products”)
@@ -147,7 +147,7 @@ query = specification.IncludeStrings.Aggregate(query,
 
 İlgili verileri yüklemeye yönelik başka bir seçenek de _açık yükleme_kullanmaktır. Açık yükleme, daha önce alınmış bir varlığa ek veri yüklemenize olanak sağlar. Bu, veritabanına ayrı bir istek içerdiğinden Web uygulamaları için önerilmez, bu da istek başına yapılan veritabanı gidiş dönüş sayısını en aza indirmelidir.
 
-_Yavaş yükleme_ , uygulama tarafından başvurulduğundan ilgili verileri otomatik olarak yükleyen bir özelliktir. EF Core sürüm 2,1 ' de geç yükleme desteği eklendi. Geç yükleme varsayılan olarak etkin değildir ve yüklemesi `Microsoft.EntityFrameworkCore.Proxies`gerekir. Açık yüklemede olduğu gibi, kullanımı genellikle Web uygulamaları için devre dışı bırakılmalıdır, çünkü kullanımı her Web isteği içinde ek veritabanı sorgularının oluşmasına neden olur. Ne yazık ki, yavaş yükleme tarafından tahakkuk eden ek yük, gecikme küçük olduğunda ve genellikle test için kullanılan veri kümelerinin küçük olması durumunda geliştirme sırasında fark etmez. Ancak üretimde, daha fazla Kullanıcı, daha fazla veri ve daha fazla gecikmeyle, ek veritabanı istekleri genellikle yavaş yüklemeyi yoğun bir şekilde kullanan Web uygulamaları için düşük performansa neden olabilir.
+_Yavaş yükleme_ , uygulama tarafından başvurulduğundan ilgili verileri otomatik olarak yükleyen bir özelliktir. EF Core sürüm 2,1 ' de geç yükleme desteği eklendi. Yavaş yükleme varsayılan olarak etkin değildir ve `Microsoft.EntityFrameworkCore.Proxies`yüklenmesini gerektirir. Açık yüklemede olduğu gibi, kullanımı genellikle Web uygulamaları için devre dışı bırakılmalıdır, çünkü kullanımı her Web isteği içinde ek veritabanı sorgularının oluşmasına neden olur. Ne yazık ki, yavaş yükleme tarafından tahakkuk eden ek yük, gecikme küçük olduğunda ve genellikle test için kullanılan veri kümelerinin küçük olması durumunda geliştirme sırasında fark etmez. Ancak üretimde, daha fazla Kullanıcı, daha fazla veri ve daha fazla gecikmeyle, ek veritabanı istekleri genellikle yavaş yüklemeyi yoğun bir şekilde kullanan Web uygulamaları için düşük performansa neden olabilir.
 
 [Web uygulamalarında yavaş yükleme varlıklarının olmaması](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
 
@@ -180,7 +180,7 @@ public class Basket : BaseEntity
 }
 ```
 
-Bu varlık türünün bir public `List` veya `ICollection` Property sunmaz, bunun yerine temel alınan liste türünü sarmalayan bir `IReadOnlyCollection` tür gösterir. Bu model kullanılırken, şu şekilde bir yedekleme alanı kullanacağınızı Entity Framework Core belirtebilirsiniz:
+Bu varlık türünün ortak bir `List` veya `ICollection` özelliğini kullanıma sunmadığını, bunun yerine temel alınan liste türünü sarmalayan bir `IReadOnlyCollection` türünü gösterir. Bu model kullanılırken, şu şekilde bir yedekleme alanı kullanacağınızı Entity Framework Core belirtebilirsiniz:
 
 ```csharp
 private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
@@ -200,7 +200,7 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 }
 ```
 
-Bu örnekte, `ShipToAddress` özelliği türündedir `Address`. `Address`, `Street` ve`City`gibi çeşitli özelliklere sahip bir değer nesnesidir. EF Core, `Order` nesneyi özelliği başına `Address` tek sütunlu, her sütun adının özelliğin adıyla sonuna ekleyerek tablosuna eşler. Bu örnekte, `Order` tablosu `ShipToAddress_Street` ve `ShipToAddress_City`gibi sütunları içerir.
+Bu örnekte, `ShipToAddress` özelliği `Address`türündedir. `Address`, `Street` ve `City`gibi çeşitli özelliklere sahip bir değer nesnesidir. EF Core, `Order` nesnesini `Address` özelliği başına tek sütunlu bir sütunla eşler, her sütun adının özelliğin adıyla sonuna önek olarak. Bu örnekte, `Order` tablo `ShipToAddress_Street` ve `ShipToAddress_City`gibi sütunları içerir.
 
 [EF Core 2,2, sahip olunan varlıkların koleksiyonları için destek sunar](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
 
@@ -240,7 +240,7 @@ EF Core bağlantılarında yeniden denemeler etkinleştirildiğinde, EF Core kul
 
 Ancak, kodunuz BeginTransaction kullanarak bir işlem başlatırsa, birim olarak değerlendirilmesi gereken kendi işlem grubunuzu tanımlamanız gerekir; bir hata oluşursa işlem içindeki her şeyin geri alınması gerekmez. Bir EF yürütme stratejisi (yeniden deneme ilkesi) kullanırken bu işlemi yürütmeye çalışırsanız ve içinde birden fazla Dbbağlamdan birkaç SaveChanges eklerseniz, aşağıdaki gibi bir özel durum görürsünüz.
 
-System. InvalidOperationException: Yapılandırılan ' Sqlserverretryingexecutionstrateji ' yürütme stratejisi, Kullanıcı tarafından başlatılan işlemleri desteklemiyor. İşlemdeki tüm işlemleri yeniden kullanılabilir bir birim olarak yürütmek için ' DbContext. Database. Createexecutionstrateji () ' tarafından döndürülen yürütme stratejisini kullanın.
+System. InvalidOperationException: yapılandırılan ' Sqlserverretryingexecutionstrateji ' yürütme stratejisi, Kullanıcı tarafından başlatılan işlemleri desteklemez. İşlemdeki tüm işlemleri yeniden kullanılabilir bir birim olarak yürütmek için ' DbContext. Database. Createexecutionstrateji () ' tarafından döndürülen yürütme stratejisini kullanın.
 
 Çözüm, yürütülmesi gereken her şeyi temsil eden bir temsilciyle EF yürütme stratejisini el ile çağırmalıdır. Geçici bir hata oluşursa, yürütme stratejisi temsilciyi tekrar çağıracaktır. Aşağıdaki kod, bu yaklaşımın nasıl uygulanacağını göstermektedir:
 
@@ -267,13 +267,13 @@ await strategy.ExecuteAsync(async () =>
 });
 ```
 
-İlk DbContext \_, catalogcontext ve ikinci DbContext, \_ıntegrationeventlogservice nesnesi içindedir. Son olarak, yürütme eylemi birden fazla Dbbağlamı ve EF yürütme stratejisi kullanılarak gerçekleştirilir.
+İlk DbContext \_catalogContext ve ikinci DbContext, \_ıntegrationeventlogservice nesnesi içindedir. Son olarak, yürütme eylemi birden fazla Dbbağlamı ve EF yürütme stratejisi kullanılarak gerçekleştirilir.
 
 > ### <a name="references--entity-framework-core"></a>Başvurular – Entity Framework Core
 >
 > - **EF Core docs**  
 >   <https://docs.microsoft.com/ef/>
-> - **EF Core: İlgili veriler**  
+> - **EF Core: Ilgili veriler**  
 >   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **ASPNET uygulamalarında daha yavaş yükleme varlıklarını önleyin**  
 >   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
@@ -342,20 +342,20 @@ Nesnelerin birden çok sürümünü depolamak için NoSQL veritabanlarında, sab
 
 NoSQL veritabanları genellikle, ilişkisel veritabanları üzerinde performans ve ölçeklenebilirlik avantajları olan [ACID](https://en.wikipedia.org/wiki/ACID)'yi zorlamaz. Bunlara çok büyük veri kümeleri ve normalleştirilmiş tablo yapılarında depolamaya uygun olmayan nesneler de uygundur. Tek bir uygulamanın hem ilişkisel hem de NoSQL veritabanlarından yararlanması, her yerde en iyi şekilde yararlanamaması gerekmez.
 
-## <a name="azure-documentdb"></a>Azure DocumentDB
+## <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-Azure DocumentDB, bulut tabanlı şemaya ücretsiz veri depolaması sağlayan, tam olarak yönetilen bir NoSQL veritabanı hizmetidir. DocumentDB hızlı ve tahmin edilebilir performans, yüksek kullanılabilirlik, esnek ölçeklendirme ve küresel dağıtım için oluşturulmuştur. Geliştiriciler NoSQL veritabanı olmasına rağmen JSON verilerinde zengin ve tanıdık SQL sorgu yeteneklerini kullanabilir. DocumentDB 'deki tüm kaynaklar JSON belgeleri olarak depolanır. Kaynaklar, meta verileri içeren belgeler ve öğe koleksiyonları olan _akışlar_olan _öğeler_olarak yönetilir. Şekil 8-2, farklı DocumentDB kaynakları arasındaki ilişkiyi gösterir.
+Azure Cosmos DB, bulut tabanlı şemaya ücretsiz veri depolama sağlayan, tam olarak yönetilen bir NoSQL veritabanı hizmetidir. Azure Cosmos DB, hızlı ve öngörülebilir performans, yüksek kullanılabilirlik, esnek ölçeklendirme ve küresel dağıtım için oluşturulmuştur. Geliştiriciler NoSQL veritabanı olmasına rağmen JSON verilerinde zengin ve tanıdık SQL sorgu yeteneklerini kullanabilir. Azure Cosmos DB içindeki tüm kaynaklar JSON belgeleri olarak depolanır. Kaynaklar, meta verileri içeren belgeler ve öğe koleksiyonları olan _akışlar_olan _öğeler_olarak yönetilir. Şekil 8-2 farklı Azure Cosmos DB kaynakları arasındaki ilişkiyi gösterir.
 
-![Bir NoSQL JSON veritabanı olan DocumentDB 'de kaynaklar arasındaki hiyerarşik ilişki](./media/image8-2.png)
+![Bir NoSQL JSON veritabanı olan Azure Cosmos DB kaynaklar arasındaki hiyerarşik ilişki](./media/image8-2.png)
 
-**Şekil 8-2.** DocumentDB kaynak organizasyonu.
+**Şekil 8-2.** Kaynak organizasyonunu Azure Cosmos DB.
 
-DocumentDB sorgu dili, JSON belgelerini sorgulamak için basit ancak güçlü bir arabirimdir. Dil, ANSI SQL dilbilgisi 'nin bir alt kümesini destekler ve JavaScript nesnesi, diziler, nesne oluşturma ve işlev çağırma için derin tümleştirme ekler.
+Azure Cosmos DB sorgu dili, JSON belgelerini sorgulamak için basit ancak güçlü bir arabirimdir. Dil, ANSI SQL dilbilgisi 'nin bir alt kümesini destekler ve JavaScript nesnesi, diziler, nesne oluşturma ve işlev çağırma için derin tümleştirme ekler.
 
-**Başvurular – DocumentDB**
+**Başvurular – Azure Cosmos DB**
 
-- DocumentDB tanıtımı  
-  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- Azure Cosmos DB giriş  
+  <https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>Diğer kalıcılık seçenekleri
 
@@ -439,7 +439,6 @@ public class CachedCatalogService : ICatalogService
     private readonly CatalogService _catalogService;
     private static readonly string _brandsKey = "brands";
     private static readonly string _typesKey = "types";
-    private static readonly string _itemsKeyTemplate = "items-{0}-{1}-{2}-{3}";
     private static readonly TimeSpan _defaultCacheDuration = TimeSpan.FromSeconds(30);
     public CachedCatalogService(IMemoryCache cache,
     CatalogService catalogService)
@@ -459,7 +458,7 @@ public class CachedCatalogService : ICatalogService
 
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
-        string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
+        string cacheKey = $"items-{pageIndex}-{itemsPage}-{brandID}-{typeId}";
         return await _cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SlidingExpiration = _defaultCacheDuration;
@@ -513,5 +512,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 Önbelleğe alma, veritabanından aynı değerleri tekrar tekrar isteyen web sayfalarının performansını önemli ölçüde iyileştirebilir. Önbelleğe almayı uygulamadan önce veri erişimi ve sayfa performansını ölçdiğinizden emin olun ve yalnızca geliştirme gereksinimi olduğunu gördüğünüz önbelleğe alma işlemini uygulayın. Önbelleğe alma, Web sunucusu bellek kaynaklarını tüketir ve uygulamanın karmaşıklığını artırır. bu sayede, bu tekniği kullanarak erken iyileştirmemenizi önemli değildir.
 
 >[!div class="step-by-step"]
->[Önceki](develop-asp-net-core-mvc-apps.md)İleri
->[](test-asp-net-core-mvc-apps.md)
+>[Önceki](develop-asp-net-core-mvc-apps.md)
+>[İleri](test-asp-net-core-mvc-apps.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
-ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0d3c5198c6c4146cf92201b08781041043c4a72
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926418"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453603"
 ---
 # <a name="base-elements"></a>Temel Öğeler
-Dört anahtar sınıfı--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, ve <xref:System.Windows.FrameworkContentElement>--önemli bir WPF programlamada mevcut olan genel öğesi işlevselliğini uygular. Bu dört sınıflar için bu SDK'yı temel öğe sınıflar olarak değerlendirilirler.  
+Dört anahtar sınıfı--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>ve <xref:System.Windows.FrameworkContentElement>, WPF programlamada bulunan ortak öğe işlevselliğinin önemli bir yüzdesini uygular. Bu dört sınıf, temel öğe sınıfları olarak bu SDK 'da başvurulur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Temel Öğelere Genel Bakış](base-elements-overview.md)  
@@ -35,9 +35,9 @@ Dört anahtar sınıfı--<xref:System.Windows.UIElement>, <xref:System.Windows.C
  [WPF Mimarisi](wpf-architecture.md)  
   [WPF'de XAML](xaml-in-wpf.md)  
   [Öğe Ağacı ve Serileştirme](element-tree-and-serialization.md)  
-  [Özellikler](properties-wpf.md)  
+  [Veri Erişimi](properties-wpf.md)  
   [Olaylar](events-wpf.md)  
   [Giriş](input-wpf.md)  
   [Kaynaklar](resources-wpf.md)  
-  [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)  
+  [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [İş Parçacığı Modeli](threading-model.md)

@@ -2,12 +2,12 @@
 title: Zaman uyumsuz bir görevi veya görev listesini iptal etme (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 73627455b1f4460edfe165126a388e961e98921f
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 89a78e9e423ab4cce9fd3627ec433072ade238dc
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353133"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419862"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Zaman uyumsuz bir görevi veya görev listesini iptal etme (Visual Basic)
 
@@ -24,7 +24,7 @@ Bir zaman uyumsuz uygulamayı, bitmesini beklemek istemiyorsanız iptal etmek i�
 
 ### <a name="downloading-the-example"></a>Örnek indiriliyor
 
-Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten indirebilirsiniz: Uygulamanızı](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) hassas ayarlamalar yapın ve ardından aşağıdaki adımları izleyin.
+Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten indirebilirsiniz: uygulamanızı Ince ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) yapın ve ardından aşağıdaki adımları izleyin.
 
 1. İndirdiğiniz dosyayı sıkıştırmasını açın ve ardından Visual Studio 'Yu başlatın.
 
@@ -48,7 +48,7 @@ Aşağıdaki değişiklikler bir Web sitesini indiren uygulamaya bir **iptal** d
 
 Ardından, bu projenin MainWindow. xaml. vb dosyasına aşağıdaki değişiklikleri ekleyin.
 
-1. Kendisine erişen tüm yöntemler için kapsam içinde olan `CancellationTokenSource` değişkeni `cts` ' i bildirin.
+1. Kendisine erişen tüm yöntemler için kapsam içinde olan bir `CancellationTokenSource` değişken `cts`bildirin.
 
     ```vb
     Class MainWindow
@@ -57,7 +57,7 @@ Ardından, bu projenin MainWindow. xaml. vb dosyasına aşağıdaki değişiklik
         Dim cts As CancellationTokenSource
     ```
 
-2. **İptal** düğmesi için aşağıdaki olay işleyicisini ekleyin. Olay işleyicisi, Kullanıcı iptali istediğinde `cts` ' i bilgilendirmek için <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> yöntemini kullanır.
+2. **İptal** düğmesi için aşağıdaki olay işleyicisini ekleyin. Olay işleyicisi, Kullanıcı iptali istediğinde `cts` bilgilendirmek için <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> yöntemini kullanır.
 
     ```vb
     ' ***Add an event handler for the Cancel button.
@@ -69,16 +69,16 @@ Ardından, bu projenin MainWindow. xaml. vb dosyasına aşağıdaki değişiklik
     End Sub
     ```
 
-3. @No__t-1 ' i **Başlat** düğmesi için olay işleyicisinde aşağıdaki değişiklikleri yapın.
+3. **Başlat** düğmesi için olay işleyicisinde aşağıdaki değişiklikleri yapın `startButton_Click`.
 
-    - @No__t-0 `cts` ' i oluşturun.
+    - `CancellationTokenSource``cts`örneğini oluşturun.
 
       ```vb
       ' ***Instantiate the CancellationTokenSource.
       cts = New CancellationTokenSource()
       ```
 
-    - Belirtilen bir Web sitesinin içeriğini indiren `AccessTheWebAsync` ' a yapılan çağrıda, bir bağımsız değişken olarak `cts` ' nin <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> özelliğini gönderin. @No__t-0 özelliği iptali isteniyorsa iletiyi yayar. Kullanıcı indirme işlemini iptal etmeyi seçerse bir ileti görüntüleyen bir catch bloğu ekleyin. Aşağıdaki kod değişiklikleri gösterir.
+    - Belirtilen bir Web sitesinin içeriğini indiren `AccessTheWebAsync`çağrısında, `cts` <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> özelliğini bağımsız değişken olarak gönderin. `Token` özelliği, iptal isteniyorsa iletiyi yayar. Kullanıcı indirme işlemini iptal etmeyi seçerse bir ileti görüntüleyen bir catch bloğu ekleyin. Aşağıdaki kod değişiklikleri gösterir.
 
       ```vb
       Try
@@ -86,7 +86,7 @@ Ardından, bu projenin MainWindow. xaml. vb dosyasına aşağıdaki değişiklik
           Dim contentLength As Integer = Await AccessTheWebAsync(cts.Token)
 
           resultsTextBox.Text &=
-              String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, contentLength)
+              vbCrLf & $"Length of the downloaded string: {contentLength}." & vbCrLf
 
           ' *** If cancellation is requested, an OperationCanceledException results.
       Catch ex As OperationCanceledException
@@ -97,9 +97,9 @@ Ardından, bu projenin MainWindow. xaml. vb dosyasına aşağıdaki değişiklik
       End Try
       ```
 
-4. @No__t-0 ' da, bir Web sitesinin içeriğini indirmek için <xref:System.Net.Http.HttpClient> türünde `GetAsync` yönteminin <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> aşırı yüklemesini kullanın. İkinci bağımsız değişken olarak `AccessTheWebAsync` ' nin <xref:System.Threading.CancellationToken> parametresi `ct` ' ı geçirin. Kullanıcı **iptal** düğmesini seçerse, belirteç iletiyi taşır.
+4. `AccessTheWebAsync`, bir Web sitesinin içeriğini indirmek için <xref:System.Net.Http.HttpClient> türünde `GetAsync` yönteminin <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> aşırı yüklemesini kullanın. İkinci bağımsız değişken olarak `AccessTheWebAsync`<xref:System.Threading.CancellationToken> parametresini `ct`geçirin. Kullanıcı **iptal** düğmesini seçerse, belirteç iletiyi taşır.
 
-    Aşağıdaki kod `AccessTheWebAsync` ' daki değişiklikleri gösterir.
+    Aşağıdaki kod `AccessTheWebAsync`değişiklikleri gösterir.
 
     ```vb
     ' ***Provide a parameter for the CancellationToken.
@@ -107,8 +107,7 @@ Ardından, bu projenin MainWindow. xaml. vb dosyasına aşağıdaki değişiklik
 
         Dim client As HttpClient = New HttpClient()
 
-        resultsTextBox.Text &=
-            String.Format(vbCrLf & "Ready to download." & vbCrLf)
+        resultsTextBox.Text &= vbCrLf & "Ready to download." & vbCrLf
 
         ' You might need to slow things down to have a chance to cancel.
         Await Task.Delay(250)
@@ -145,7 +144,7 @@ Aynı `CancellationTokenSource` örneğini her görevle ilişkilendirerek, daha 
 
 ### <a name="downloading-the-example"></a>Örnek indiriliyor
 
-Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten indirebilirsiniz: Uygulamanızı](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) hassas ayarlamalar yapın ve ardından aşağıdaki adımları izleyin.
+Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten indirebilirsiniz: uygulamanızı Ince ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) yapın ve ardından aşağıdaki adımları izleyin.
 
 1. İndirdiğiniz dosyayı sıkıştırmasını açın ve ardından Visual Studio 'Yu başlatın.
 
@@ -185,14 +184,14 @@ Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten in
     End Function
     ```
 
-2. @No__t-0 ' da yöntemi çağırın.
+2. `AccessTheWebAsync`yöntemi çağırın.
 
     ```vb
     ' ***Call SetUpURLList to make a list of web addresses.
     Dim urlList As List(Of String) = SetUpURLList()
     ```
 
-3. Listedeki her bir Web adresini işlemek için aşağıdaki döngüyü `AccessTheWebAsync` ' a ekleyin.
+3. Listedeki her bir Web adresini işlemek için aşağıdaki döngüyü `AccessTheWebAsync` ekleyin.
 
     ```vb
     ' ***Add a loop to process the list of web addresses.
@@ -206,17 +205,17 @@ Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten in
         Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()
 
         resultsTextBox.Text &=
-            String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, urlContents.Length)
+            vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
     Next
     ```
 
-4. @No__t-0 uzunlukları gösterdiği için yöntemin her şeyi döndürmesi gerekmez. Return ifadesini kaldırın ve yöntemin dönüş türünü <xref:System.Threading.Tasks.Task%601> yerine <xref:System.Threading.Tasks.Task> olarak değiştirin.
+4. `AccessTheWebAsync` uzunlukları gösterdiği için yöntemin herhangi bir şey döndürmesi gerekmez. Return ifadesini kaldırın ve yöntemin dönüş türünü <xref:System.Threading.Tasks.Task%601>yerine <xref:System.Threading.Tasks.Task> olarak değiştirin.
 
     ```vb
     Async Function AccessTheWebAsync(ct As CancellationToken) As Task
     ```
 
-    Bir ifadesi yerine bir deyim kullanarak `startButton_Click` ' dan yöntemi çağırın.
+    Bir ifadesi yerine deyimi kullanarak `startButton_Click` yöntemi çağırın.
 
     ```vb
     Await AccessTheWebAsync(cts.Token)
@@ -256,9 +255,9 @@ Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten in
 
 ## <a name="BKMK_CompleteExamples"></a>Tüm örnekler
 
-Aşağıdaki bölümler, önceki örneklerin her birine ilişkin kodu içerir. İçin <xref:System.Net.Http>bir başvuru eklemeniz gerektiğini unutmayın.
+Aşağıdaki bölümler, önceki örneklerin her birine ilişkin kodu içerir. <xref:System.Net.Http>için bir başvuru eklemeniz gerektiğini unutmayın.
 
-Projeleri [Async örneğinden indirebilirsiniz: Uygulamanızı](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)hassas bir şekilde ayarlama.
+Projeleri [zaman uyumsuz örnekten indirebilirsiniz: uygulamanızı hassas bir şekilde ayarlama](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ### <a name="cancel-a-task-example"></a>Bir görev örneğini iptal etme
 
@@ -287,7 +286,7 @@ Class MainWindow
             Dim contentLength As Integer = Await AccessTheWebAsync(cts.Token)
 
             resultsTextBox.Text &=
-                String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, contentLength)
+                vbCrLf & $"Length of the downloaded string: {contentLength}." & vbCrLf
 
             ' *** If cancellation is requested, an OperationCanceledException results.
         Catch ex As OperationCanceledException
@@ -315,7 +314,7 @@ Class MainWindow
         Dim client As HttpClient = New HttpClient()
 
         resultsTextBox.Text &=
-            String.Format(vbCrLf & "Ready to download." & vbCrLf)
+            vbCrLf & "Ready to download." & vbCrLf
 
         ' You might need to slow things down to have a chance to cancel.
         Await Task.Delay(250)
@@ -413,7 +412,7 @@ Class MainWindow
             Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()
 
             resultsTextBox.Text &=
-                String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, urlContents.Length)
+                vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
         Next
     End Function
 
@@ -470,4 +469,4 @@ End Class
 - <xref:System.Threading.CancellationToken>
 - [Async ve await ile zaman uyumsuz programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Zaman uyumsuz uygulamanızda ince ayar yapma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Zaman uyumsuz örnek: Uygulamanızda ince ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Zaman uyumsuz örnek: uygulamanıza Ince ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

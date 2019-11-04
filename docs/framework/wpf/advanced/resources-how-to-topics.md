@@ -7,15 +7,15 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 568ff84c6de2d80527921fe6f3179e6bb123f72f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053489"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458723"
 ---
 # <a name="resources-how-to-topics"></a>Kaynaklar ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konularda, Windows Presentation Foundation (WPF) kaynaklarının nasıl kullanılacağını açıklar.  
+Bu bölümdeki konular Windows Presentation Foundation (WPF) kaynaklarının nasıl kullanılacağını açıklamaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Kaynağı Tanımlama ve Kaynağa Başvurma](how-to-define-and-reference-a-resource.md)  
@@ -35,4 +35,4 @@ Bu bölümdeki konularda, Windows Presentation Foundation (WPF) kaynaklarının 
  <xref:System.Windows.SystemFonts>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [XAML Kaynakları](xaml-resources.md)
+ [XAML Kaynakları](../../../desktop-wpf/fundamentals/xaml-resources-define.md)

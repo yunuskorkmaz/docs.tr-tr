@@ -7,19 +7,19 @@ helpviewer_keywords:
 - styles [WPF]
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
-ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b47b9b7091e5421278fe867f79eb8abc62588b93
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790916"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459053"
 ---
 # <a name="styles-and-templates"></a>Stilleri ve Şablonları
-Bir paket için bir uygulama, belge veya kullanıcı arabirimi (UI) Tasarımcısı görsel açıdan ilgi çekici uygulamaları oluşturmaya olanak tanıyan özellikler (stiller, şablonlar, tetikleyiciler ve görsel Taslaklar) ve Windows Presentation Foundation (WPF) stil ve şablon oluşturma bakın Ürün için özel bir görünüm üzerinde standart hale getirin.  
+Windows Presentation Foundation (WPF) stili ve şablon oluşturma, bir uygulama, belge veya Kullanıcı arabirimi (UI) tasarımcısının görsel açıdan etkileyici uygulamalar oluşturmasına ve şunları yapmasına izin veren bir özellik paketine (stiller, şablonlar, Tetikleyiciler ve film şeritleri) başvurur. ürünlerinin belirli bir görünümü üzerinde standartlaştırın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Stil ve Şablon Oluşturma](styling-and-templating.md)  
-  [Nasıl yapılır: ControlTemplate ile oluşturulan öğeleri bulma](how-to-find-controltemplate-generated-elements.md)  
+ [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+  [Nasıl yapılır: ControlTemplate ile Oluşturulan Öğeleri Bulma](how-to-find-controltemplate-generated-elements.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Style>  

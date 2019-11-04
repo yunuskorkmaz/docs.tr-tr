@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 27001d1697def083580ecdc742b4b8db924545aa
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 42e1814af38fa442255f6da79fb4862ce3d0f361
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589420"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423200"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# Kodlama Kuralları (C# Programlama Kılavuzu)
  Kodlama kuralları aşağıdaki amaçlara hizmet eder:  
@@ -75,7 +75,7 @@ ms.locfileid: "69589420"
   
      [!code-csharp[csProgGuideCodingConventions#6](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#6)]  
   
-- Özellikle büyük miktarlarda metinle çalışırken, Döngülerde dizeler eklemek için bir <xref:System.Text.StringBuilder> nesnesi kullanın.  
+- Döngülerde dizeleri eklemek için, özellikle büyük miktarlarda metinle çalışırken bir <xref:System.Text.StringBuilder> nesnesi kullanın.  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
   
@@ -85,7 +85,7 @@ ms.locfileid: "69589420"
   
      [!code-csharp[csProgGuideCodingConventions#8](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#8)]  
   
-- Tür atamanın sağ [](../../language-reference/keywords/var.md) tarafından görünmüyorsa, yok kullanmayın.  
+- Tür atamanın sağ tarafından görünmüyorsa, [yok kullanmayın.](../../language-reference/keywords/var.md)  
   
      [!code-csharp[csProgGuideCodingConventions#9](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#9)]  
   
@@ -93,21 +93,21 @@ ms.locfileid: "69589420"
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- `var` [Dinamik](../../language-reference/keywords/dynamic.md)yerine kullanılmasını önleyin.  
+- [Dinamik](../../language-reference/builtin-types/reference-types.md)yerine `var` kullanmaktan kaçının.  
   
 - [For](../../language-reference/keywords/for.md) ve [foreach](../../language-reference/keywords/foreach-in.md) döngüleri içindeki döngü değişkeninin türünü öğrenmek için örtük yazma kullanın.  
   
-     Aşağıdaki örnek, bir `for` bildiriminde örtük yazma kullanır.  
+     Aşağıdaki örnek, `for` bildiriminde örtük yazma kullanır.  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
   
-     Aşağıdaki örnek, bir `foreach` bildiriminde örtük yazma kullanır.  
+     Aşağıdaki örnek, `foreach` bildiriminde örtük yazma kullanır.  
   
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]  
   
 ### <a name="unsigned-data-type"></a>İmzasız Veri Türü  
   
-- Genel olarak, imzasız `int` türler yerine kullanın. Kullanımı `int` genelinde C#yaygın olarak kullanılır ve kullandığınızda `int`diğer kitaplıklarla etkileşim kurmak daha kolaydır.  
+- Genel olarak, işaretsiz türler yerine `int` kullanın. `int` kullanımı genelinde C#yaygındır ve `int`kullandığınızda diğer kitaplıklarla etkileşim kurmak daha kolaydır.  
   
 ### <a name="arrays"></a>Diziler  
   
@@ -129,13 +129,13 @@ ms.locfileid: "69589420"
   
      [!code-csharp[csProgGuideCodingConventions#16](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#16)]  
   
-- C# [Using ifadesini](../../language-reference/keywords/using-statement.md)kullanarak kodunuzu kolaylaştırın. Yalnızca `finally` bloktaki kodun <xref:System.IDisposable.Dispose%2A> yöntemine yönelik bir çağrı olduğu bir [try-finally](../../language-reference/keywords/try-finally.md) deyiminiz varsa, bunun yerine bir `using` ifade kullanın.  
+- C# [Using ifadesini](../../language-reference/keywords/using-statement.md)kullanarak kodunuzu kolaylaştırın. Yalnızca `finally` bloğundaki kodun <xref:System.IDisposable.Dispose%2A> yöntemine yönelik bir çağrı olduğu bir [try-finally](../../language-reference/keywords/try-finally.md) deyiminiz varsa, bunun yerine bir `using` ifadesini kullanın.  
   
      [!code-csharp[csProgGuideCodingConventions#17](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#17)]  
   
 ### <a name="-and-124124-operators"></a>& & ve &#124; &#124; işleçler  
   
-- Özel durumların önüne geçmek ve gereksiz karşılaştırmaları atlayarak performansı artırmak için, [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) aşağıdaki örnekte gösterildiği [ &#124; ](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) gibi karşılaştırmaları [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) gerçekleştirirken yerine kullanın [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) .  
+- Gereksiz karşılaştırmaları atlayarak özel durumları önlemek ve performansı artırmak için, aşağıdaki örnekte gösterildiği gibi [](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) , karşılaştırmaları [ &#124; ](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) gerçekleştirirken&[&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) yerine [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) kullanın.  
   
      [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
@@ -163,11 +163,11 @@ ms.locfileid: "69589420"
   
 ### <a name="static-members"></a>Statik Üyeler  
   
-- Sınıf adını kullanarak [statik](../../language-reference/keywords/static.md) üyeleri çağırın: *ClassName. StaticMember*. Bu uygulama, statik erişim Temizleme yaparak kodu daha okunabilir hale getirir.  Türetilmiş bir sınıf adına sahip bir temel sınıfta tanımlanan statik bir üyeyi nitelemeyin.  Kod derlense de, kod okunurluğu yanıltıcı olur ve türetilmiş sınıfa aynı ada sahip bir statik üye eklerseniz kod daha sonra bozulabilir.  
+- [Statik](../../language-reference/keywords/static.md) üyeleri, sınıf adı: *ClassName. staticmember*' i kullanarak çağırın. Bu uygulama, statik erişim Temizleme yaparak kodu daha okunabilir hale getirir.  Türetilmiş bir sınıf adına sahip bir temel sınıfta tanımlanan statik bir üyeyi nitelemeyin.  Kod derlense de, kod okunurluğu yanıltıcı olur ve türetilmiş sınıfa aynı ada sahip bir statik üye eklerseniz kod daha sonra bozulabilir.  
   
 ### <a name="linq-queries"></a>LINQ Sorguları  
   
-- Sorgu değişkenleri için anlamlı adlar kullanın. Aşağıdaki örnek Seattle 'da `seattleCustomers` bulunan müşteriler için kullanır.  
+- Sorgu değişkenleri için anlamlı adlar kullanın. Aşağıdaki örnek, Seattle 'da bulunan müşteriler için `seattleCustomers` kullanır.  
   
      [!code-csharp[csProgGuideCodingConventions#25](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#25)]  
   
@@ -175,7 +175,7 @@ ms.locfileid: "69589420"
   
      [!code-csharp[csProgGuideCodingConventions#26](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#26)]  
   
-- Sonuç içindeki Özellik adları belirsiz olduğunda özellikleri yeniden adlandırın. Örneğin, sorgunuz bir müşteri adı ve bir dağıtıcı `Name` kimliği döndürürse, ve `ID` sonuç olarak bırakmak yerine, bir müşterinin adı olduğunu ve `ID` bir dağıtıcının kimliğini açıklığa kavuşturacak `Name` şekilde yeniden adlandırın.  
+- Sonuç içindeki Özellik adları belirsiz olduğunda özellikleri yeniden adlandırın. Örneğin, sorgunuz bir müşteri adı ve bir dağıtıcı KIMLIĞI döndürürse, `Name` olarak bırakmak yerine `ID`, `Name` bir müşterinin adı olduğunu ve `ID` bir dağıtıcı KIMLIĞI olduğunu açıklığa kavuşturacak şekilde yeniden adlandırın.  
   
      [!code-csharp[csProgGuideCodingConventions#27](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#27)]  
   
@@ -189,7 +189,7 @@ ms.locfileid: "69589420"
   
      [!code-csharp[csProgGuideCodingConventions#29](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#29)]  
   
-- İç koleksiyonlara `from` erişmek için [JOIN](../../language-reference/keywords/join-clause.md) yan tümcesi yerine birden çok yan tümce kullanın. Örneğin, bir `Student` nesne koleksiyonu her biri bir test puanları koleksiyonu içerebilir. Aşağıdaki sorgu yürütüldüğünde, puanı alan öğrencinin son adıyla birlikte 90 ' ten fazla olan her puanı döndürür.  
+- İç koleksiyonlara erişmek için [JOIN](../../language-reference/keywords/join-clause.md) yan tümcesi yerine birden çok `from` yan tümcesini kullanın. Örneğin, `Student` nesnelerinin bir koleksiyonu, her biri bir test puanları koleksiyonu içerebilir. Aşağıdaki sorgu yürütüldüğünde, puanı alan öğrencinin son adıyla birlikte 90 ' ten fazla olan her puanı döndürür.  
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   

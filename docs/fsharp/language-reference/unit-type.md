@@ -2,16 +2,16 @@
 title: Birim Türü
 description: F# ' Unit ' türünün, hiçbir değer gerekmediği veya istenmiyorsa dil söz konusu olduğunda bir değerin gerekli olduğu yeri tutmak için genellikle nasıl kullanıldığını öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 4e586702324565b8dcd4f6c7e11a0e1754f89c58
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a5960fb05af50486a78345d10a5ad913e65729e3
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630166"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424026"
 ---
 # <a name="unit-type"></a>Birim Türü
 
-Tür, belirli bir değerin yokluğunu gösteren bir türdür `unit` ; tür, başka bir değer yoksa veya gerektiğinde yer tutucu görevi gören tek bir değere sahiptir. `unit`
+`unit` türü, belirli bir değerin yokluğunu gösteren bir türdür; `unit` türü, başka bir değer yoksa veya gerekli olmadığında yer tutucu olarak davranan yalnızca tek bir değere sahiptir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -22,13 +22,13 @@ Tür, belirli bir değerin yokluğunu gösteren bir türdür `unit` ; tür, baş
 
 ## <a name="remarks"></a>Açıklamalar
 
-Her F# ifade bir değer olarak değerlendirilmelidir. İlgilendiğiniz bir değer üretmeyen ifadeler için, türünün `unit` değeri kullanılır. Tür, `void` ve C++gibi C# dillerdeki türe benzer. `unit`
+Her F# ifade bir değer olarak değerlendirilmelidir. İlgi çekici bir değer üretmeyen ifadeler için `unit` türündeki değer kullanılır. `unit` türü, ve C# C++gibi dillerde `void` türüne benzer.
 
-Türün tek bir değeri vardır ve bu değer belirteç `()`tarafından belirtilir. `unit`
+`unit` türünün tek bir değeri vardır ve bu değer belirteç `()`tarafından belirtilir.
 
-`unit` Türün değeri, genellikle bir değerin dil sözdizimi için F# gerekli olduğu yeri tutmak için programlama sırasında kullanılır, ancak hiçbir değer gerekli veya istenmez. Bir `printf` işlevin dönüş değeri bir örnek olabilir. `printf` İşlemin önemli eylemleri işlevde gerçekleştiğinden, işlevin gerçek bir değer döndürmesi gerekmez. Bu nedenle, dönüş değeri türündedir `unit`.
+`unit` türünün değeri, genellikle bir değerin dil sözdizimi için F# gerekli olduğu yeri tutmak için programlama sırasında kullanılır, ancak hiçbir değer gerekli veya istenmez. Örnek bir `printf` işlevinin dönüş değeri olabilir. `printf` işleminin önemli eylemleri işlevde gerçekleştiğinden, işlevin gerçek bir değer döndürmesi gerekmez. Bu nedenle, dönüş değeri `unit`türündedir.
 
-Bazı yapılar bir `unit` değer bekler. Örneğin, `do` bir modülün en üst düzeyindeki bir bağlamanın veya kodun bir `unit` değer değerlendirmesi beklenir. Bir modülün en üst düzeyindeki bir `do` bağlama veya kod, aşağıdaki örnekte gösterildiği gibi kullanılmayan `unit` değerden farklı bir sonuç üretirse, derleyici bir uyarı bildirir.
+Bazı yapılar bir `unit` değeri bekler. Örneğin, bir modülün en üst düzeyindeki bir `do` bağlama veya herhangi bir kod `unit` bir değere değerlendirmesi beklenir. Bir modülün en üst düzeyindeki bir `do` bağlama veya kod, aşağıdaki örnekte gösterildiği gibi kullanılmayan `unit` değerinden başka bir sonuç üretirse, derleyici bir uyarı bildirir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet901.fs)]
 
@@ -36,5 +36,5 @@ Bu uyarı, işlevsel programlama 'nin bir özelliğidir; diğer .NET programlama
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Eleman](primitive-types.md)
+- [Eleman](basic-types.md)
 - [F# Dili Başvurusu](index.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: cee80ca0880e046870f699f45624df61ee507a47
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 403c4e76e302536513b9de0694ab7b0de621d5d2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919856"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455525"
 ---
 # <a name="attached-properties-overview"></a>Ekli Özelliklere Genel Bakış
 
@@ -146,5 +146,5 @@ WPF, yansıma işlemlerine eklenen özellikler hakkında bilgi sağlamak için t
 - <xref:System.Windows.DependencyProperty>
 - [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
 - [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)
-- [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
+- [XAML'ye Genel Bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Ekli Özelliği Kaydetme](how-to-register-an-attached-property.md)

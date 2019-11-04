@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 77f3c519308f39f83dac399aef395d5d36a7195e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
-ms.translationtype: MT
+ms.openlocfilehash: 6b1a78ec56032d84d9699c2ecda89308779ee2da
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040917"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421143"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları
 Microsoft Windows uygulamaları genellikle [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], görüntü, video ve ses gibi yürütülebilir olmayan verileri içeren dosyalara bağımlıdır. Windows Presentation Foundation (WPF), uygulama veri dosyaları olarak adlandırılan bu tür veri dosyalarını yapılandırmaya, tanımlamaya ve kullanmaya yönelik özel destek sunar. Bu destek, aşağıdakiler de dahil olmak üzere belirli bir uygulama veri dosyası türü kümesinin etrafında döner:  
@@ -187,15 +187,15 @@ Microsoft Windows uygulamaları genellikle [!INCLUDE[TLA#tla_xaml](../../../../i
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- Ancak, file:///ve http://şemaları uygulamanızın tam güvene sahip olmasını gerektirir. Uygulamanız Internet 'ten veya intranetten başlatılan bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] ve yalnızca bu konumlardan başlatılan uygulamalar için izin verilen izin kümesini isterse, gevşek dosyalar yalnızca uygulamanın kaynak sitesinden yüklenebilir ( başlatma konumu). Bu tür dosyalar, *kaynak dosyalarının sitesi* olarak bilinir.  
+ Ancak, file:///ve http://şemaları uygulamanızın tam güvene sahip olmasını gerektirir. Uygulamanız Internet 'ten veya intranetten başlatılan bir XAML tarayıcı uygulaması (XBAP) ise ve yalnızca bu konumlardan başlatılan uygulamalar için izin verilen izin kümesini isterse, gevşek dosyalar yalnızca uygulamanın kaynak sitesi (başlatma konumu). Bu tür dosyalar, *kaynak dosyalarının sitesi* olarak bilinir.  
   
  Kaynak dosyalarının sitesi kısmi güven uygulamaları için tek seçenektir, ancak kısmi güven uygulamalarıyla sınırlı değildir. Tam güven uygulamalarının, derleme zamanında hakkında bilgi sahibi olmadıkları uygulama verileri dosyalarını yüklemesi gerekebilir; tam güven uygulamaları file:///kullanabilir, ancak uygulama veri dosyalarının uygulama bütünleştirilmiş kodu ile aynı klasöre veya bir alt klasörüne yüklenebileceği olasıdır. Bu durumda, file:///kullanımı, dosyanın tam yolunu kullanmanızı gerektirdiğinden, kaynak başvuru sitesinin file:///kullanmaktan daha kolaydır.  
   
 > [!NOTE]
-> Kaynak dosyalarının sitesi, istemci makinesindeki bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] önbelleğe alınmaz, ancak içerik dosyaları vardır. Sonuç olarak, bunlar yalnızca özellikle istendiğinde indirilir. Bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] uygulamasının büyük medya dosyaları varsa, bunları kaynak dosyaları sitesi olarak yapılandırmak, ilk uygulama başlatma işlemi çok daha hızlıdır ve dosyalar yalnızca isteğe bağlı olarak indirilir.  
+> Kaynak dosyalarının sitesi, istemci makinesindeki bir XAML tarayıcı uygulaması (XBAP) ile önbelleğe alınmaz, ancak içerik dosyaları. Sonuç olarak, bunlar yalnızca özellikle istendiğinde indirilir. Bir XAML tarayıcı uygulaması (XBAP) uygulamasının büyük medya dosyaları varsa, bunları kaynak dosyaları sitesi olarak yapılandırmak, ilk uygulama başlatma işlemi çok daha hızlıdır ve dosyalar yalnızca isteğe bağlı olarak indirilir.  
   
 ### <a name="configuring-site-of-origin-files"></a>Kaynak dosyalarının sitesini yapılandırma  
- Kaynak dosyaları siteniz derleme sırasında mevcut değilse veya bilinmiyorsa, gerekli dosyaların `XCopy` komut satırı programını veya [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)]kullanma dahil olmak üzere çalışma zamanında kullanılabilir olmasını sağlamak için geleneksel dağıtım mekanizmalarını kullanmanız gerekir.  
+ Kaynak dosyaları siteniz derleme sırasında mevcut değilse veya bilinmiyorsa, gerekli dosyaların çalışma zamanında kullanılabilir olmasını sağlamak için, `XCopy` komut satırı programını veya Microsoft Windows 'u kullanma dahil olmak üzere geleneksel dağıtım mekanizmalarını kullanmanız gerekir. Yükleyicinin.  
   
  Derleme zamanında, kaynak sitesinde bulunmasını istediğiniz dosyaları öğrenseniz, ancak yine de açık bir bağımlılığı önlemek istiyorsanız, bu dosyaları bir MSBuild projesine `None` öğesi olarak ekleyebilirsiniz. İçerik dosyalarında olduğu gibi, kaynak dosya sitesinin, `Always` değerini veya `PreserveNewest` değerini belirterek oluşturulan derlemeye göreli bir konuma kopyalandığını belirtmek için MSBuild `CopyToOutputDirectory` özniteliğini ayarlamanız gerekir.  
   

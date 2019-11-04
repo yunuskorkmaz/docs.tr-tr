@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: cf5873cdf137573826d5361d077e0534e8cba1f0
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920284"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459022"
 ---
 # <a name="binding-sources-overview"></a>Kaynakların Bağlanmasına Genel Bakış
 Veri bağlamada bağlama kaynak nesnesi, verileri aldığınız nesneye başvurur. Bu konuda, bağlama kaynağı olarak kullanabileceğiniz nesne türleri ele alınmaktadır.
@@ -54,7 +54,7 @@ Veri bağlamada bağlama kaynak nesnesi, verileri aldığınız nesneye başvuru
 ## <a name="using-entire-objects-as-a-binding-source"></a>Tüm nesneleri bağlama kaynağı olarak kullanma
  Tüm nesneyi bağlama kaynağı olarak kullanabilirsiniz. <xref:System.Windows.Data.Binding.Source%2A> veya <xref:System.Windows.FrameworkElement.DataContext%2A> özelliğini kullanarak bir bağlama kaynağı belirtebilir ve ardından boş bir bağlama bildirimi sağlayabilirsiniz: `{Binding}`. Bunun yararlı olduğu senaryolar, tür String olan nesnelere bağlamayı, ilgilendiğiniz birden fazla özelliğe sahip nesnelere bağlamayı veya koleksiyon nesnelerine bağlamayı içerir. Tüm koleksiyon nesnesine bağlama örneği için bkz. [hiyerarşik verilerle ana ayrıntı modelini kullanma](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).
 
- Verilerin, bağlantılı hedef özelliği için anlamlı olması için özel mantık uygulamanız gerekebileceğini unutmayın. Özel mantık özel bir dönüştürücü biçiminde (varsayılan tür dönüştürmesi yoksa) veya bir <xref:System.Windows.DataTemplate>olabilir. Dönüştürücüler hakkında daha fazla bilgi için [veri bağlamaya genel bakış](data-binding-overview.md)' ın veri dönüştürme bölümüne bakın. Veri şablonları hakkında daha fazla bilgi için bkz. [veri şablonu oluşturmaya genel bakış](data-templating-overview.md).
+ Verilerin, bağlantılı hedef özelliği için anlamlı olması için özel mantık uygulamanız gerekebileceğini unutmayın. Özel mantık özel bir dönüştürücü biçiminde (varsayılan tür dönüştürmesi yoksa) veya bir <xref:System.Windows.DataTemplate>olabilir. Dönüştürücüler hakkında daha fazla bilgi için [veri bağlamaya genel bakış](../../../desktop-wpf/data/data-binding-overview.md)' ın veri dönüştürme bölümüne bakın. Veri şablonları hakkında daha fazla bilgi için bkz. [veri şablonu oluşturmaya genel bakış](data-templating-overview.md).
 
 <a name="collections"></a>
 ## <a name="using-collection-objects-as-a-binding-source"></a>Koleksiyon nesnelerini bağlama kaynağı olarak kullanma
@@ -64,7 +64,7 @@ Veri bağlamada bağlama kaynak nesnesi, verileri aldığınız nesneye başvuru
 
  <xref:System.Collections.ObjectModel.ObservableCollection%601> sınıfı, <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimini kullanıma sunan bir veri koleksiyonunun yerleşik bir uygulamasıdır. Koleksiyon içindeki bireysel veri nesneleri, önceki bölümlerde açıklanan gereksinimleri karşılamalıdır. Bir örnek için bkz. [oluşturma ve bir ObservableCollection bağlama](how-to-create-and-bind-to-an-observablecollection.md). Kendi koleksiyonunuzu uygulamadan önce, <xref:System.Collections.ObjectModel.ObservableCollection%601> veya <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>ve <xref:System.ComponentModel.BindingList%601>gibi var olan koleksiyon sınıflarından birini, diğer birçok konuda kullanmayı düşünün.
 
- WPF hiçbir şekilde doğrudan bir koleksiyona bağlanmaz. Bir koleksiyonu bağlama kaynağı olarak belirtirseniz, WPF aslında koleksiyonun varsayılan görünümüne bağlanır. Varsayılan görünümler hakkında daha fazla bilgi için bkz. [veri bağlamaya genel bakış](data-binding-overview.md).
+ WPF hiçbir şekilde doğrudan bir koleksiyona bağlanmaz. Bir koleksiyonu bağlama kaynağı olarak belirtirseniz, WPF aslında koleksiyonun varsayılan görünümüne bağlanır. Varsayılan görünümler hakkında daha fazla bilgi için bkz. [veri bağlamaya genel bakış](../../../desktop-wpf/data/data-binding-overview.md).
 
  Gelişmiş bir senaryonuz varsa ve kendi koleksiyonunuzu uygulamak istiyorsanız <xref:System.Collections.IList> arabirimini kullanmayı göz önünde bulundurun. <xref:System.Collections.IList>, dizin tarafından ayrı ayrı erişilebilen nesnelerin genel olmayan bir koleksiyonunu sağlar ve bu da performansı iyileştirebilir.
 
@@ -97,6 +97,6 @@ Veri bağlamada bağlama kaynak nesnesi, verileri aldığınız nesneye başvuru
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
 - [Bağlama Kaynağı Belirtme](how-to-specify-the-binding-source.md)
-- [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
+- [Veri Bağlamaya Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)
 - [LINQ to XML ile WPF Verilerini Bağlamaya Genel Bakış](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Veri bağlama performansını iyileştirme](../advanced/optimizing-performance-data-binding.md)

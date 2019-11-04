@@ -6,33 +6,33 @@ helpviewer_keywords:
 - data binding [WPF], notification of binding updates
 - binding [WPF], updates [WPF], notifications of
 ms.assetid: 5673073e-dbe1-49da-980a-484a88f9595a
-ms.openlocfilehash: 4185198312ed98f9aaa1388626600d9f21abae55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dfa0f9264247f7585c1743e40fd980906556efd0
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051994"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454953"
 ---
 # <a name="how-to-set-up-notification-of-binding-updates"></a>Nasıl yapılır: Bağlama Güncelleştirmeleri Bildirimini Ayarlama
-Bu örnek, bağlama hedefi (hedef) veya bir bağlamanın bağlama (kaynak) kaynak özelliği güncelleştirildiğinde bildirim almak için nasıl ayarlanacağını gösterir.  
+Bu örnek, bağlama hedefi (hedef) veya bir bağlamanın bağlama kaynağı (kaynak) özelliği güncelleştirildikten sonra bildirim yapılacak şekilde nasıl ayarlanacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Veri güncelleştirme her zaman bağlama kaynağı veya hedefi güncelleştirildiğini olayını oluşturur. Bu olay bildirmek için dahili olarak kullanılan [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] bağlı veriler değiştiğinden, bu, güncelleştirmeniz gerekir. Bu olaylar için ve ayrıca düzgün çalışması için tek yönlü veya çift yönlü bağlama için sınıfı kullanarak verilerinizi uygulamak gerektiğini unutmayın <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi. Daha fazla bilgi için [özellik değişikliği bildirimi uygulama](how-to-implement-property-change-notification.md).  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], bağlama kaynağı veya hedefi her güncelleştirildiği zaman bir veri güncelleştirme olayı başlatır. Bu olay, bağlantılı veriler değiştiğinden, güncelleştirilmesi gereken [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] bilgilendirmek için kullanılır. Bu olayların çalışması ve aynı zamanda tek yönlü veya iki yönlü bağlamanın düzgün şekilde çalışması için, <xref:System.ComponentModel.INotifyPropertyChanged> arabirimini kullanarak veri sınıfınızı uygulamanız gerektiğini unutmayın. Daha fazla bilgi için bkz. [özellik değişiklik bildirimini uygulama](how-to-implement-property-change-notification.md).  
   
- Ayarlama <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> veya <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> özelliği (veya her ikisi de) `true` bağlamasında. Bağlam içinde herhangi bir şey değişti bilincinde olmasını istiyorsanız bu olay için dinleme sağladığınız işleyici değişikliklerin bildirilmesini istediğiniz öğeye doğrudan ya da genel veri bağlamı bağlanması gerekir.  
+ <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> veya <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> özelliğini (ya da her ikisi) bağlamadaki `true` ayarlayın. Bu olayı dinlemek için sağladığınız işleyicinin, değişiklikler hakkında bilgi almak istediğiniz öğeye doğrudan iliştirilmeli veya bağlamdaki herhangi bir şeyin değiştiği farkında olmak istiyorsanız genel veri bağlamına eklenmelidir.  
   
- Bir hedef özelliği güncelleştirildiğinde bildirim için ayarlanmış gösteren bir örnek aşağıda verilmiştir.  
+ Bir hedef özellik güncelleştirildiği zaman bildirim için ayarlamayı gösteren bir örnek aşağıda verilmiştir.  
   
  [!code-xaml[DirectionalBinding#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#2)]  
   
- Ardından EventHandler üzerinde bağlı bir işleyici atayabilirsiniz\<T > temsilcisi, *EventHandler* olayı işlemek için bu örnekte:  
+ Daha sonra, olayı işlemek için bu örnekteki *OnTargetUpdated*\<t > temsilcisine göre bir işleyici atayabilirsiniz:  
   
  [!code-csharp[DirectionalBinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml.cs#3)]  
 [!code-csharp[DirectionalBinding#EndEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml.cs#endevent)]  
   
- Olay parametrelerinin (türü veya aynı işleyici için birden fazla öğe eklediyseniz öğe gibi), değiştirilen özelliğin ayrıntılarını belirlemek için kullanılabilir olan tek bir öğede birden çok ilişkili özellikler varsa yararlı olabilir.  
+ Olayın parametreleri, tek bir öğede birden fazla bağlı özellik olması halinde, değiştirilen Özellik (örneğin, tür veya aynı işleyici birden fazla öğeye eklenmişse) hakkındaki ayrıntıları belirlemede kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
+- [Veri Bağlamaya Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)
 - [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

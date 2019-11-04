@@ -8,12 +8,12 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-ms.openlocfilehash: 495377403e2f0c0f5f4f166f51d738265c16ef7e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126056"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457725"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Risk azaltma: ZipArchiveEntry. FullName yol ayırıcısı
 .NET Framework 4.6.1 ' i hedefleyen uygulamalarla başlayarak, <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> özelliğinde kullanılan yol ayırıcısı, önceki .NET Framework önceki sürümlerinde kullanılan ters eğik çizgiyle ("\\") değiştirilmiştir ("/").   <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> nesneler, <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType> yönteminin aşırı yüklerinden biri çağırarak oluşturulur.  
@@ -45,4 +45,4 @@ ms.locfileid: "73126056"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yeniden Hedefleme Değişiklikleri](retargeting-changes-in-the-net-framework-4-6-1.md)
-- [4.6.1 'de uygulama uyumluluğu](application-compatibility-in-the-net-framework-4-6-1.md)
+- [Uygulama uyumluluğu](application-compatibility.md)

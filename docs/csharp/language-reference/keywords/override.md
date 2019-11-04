@@ -8,38 +8,38 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: bbdbcaf466e0b4dca4b78902ca9e7a49b02ac718
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 699887d635ab074fc9ffa4cd7fa354372eb82f25
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394231"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422629"
 ---
 # <a name="override-c-reference"></a>override (C# Başvurusu)
 
-`override` Değiştirici, devralınan bir metodun, özelliğin, dizin oluşturucunun veya olayın soyut veya sanal uygulamasını genişletmek ya da değiştirmek için gereklidir.
+`override` değiştirici, devralınan bir metodun, özelliğin, dizin oluşturucunun veya olayın soyut veya sanal uygulamasını genişletmek ya da değiştirmek için gereklidir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte,, soyut `Square` `GetArea` `GetArea` sınıftandevralınmışolduğundan,sınıfınıngeçersizkılınanbir`Shape` uygulamasını sağlaması gerekir:
+Bu örnekte `Square` sınıfı, `GetArea` soyut `Shape` sınıfından devralındığından, geçersiz kılınan bir `GetArea` uygulamasını sağlamalıdır:
 
 [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
 
-Bir `override` yöntemi, temel sınıftan devralınan bir üyenin yeni bir uygulamasını sağlar. Bir `override` bildirim tarafından geçersiz kılınan yöntem, geçersiz kılınan temel yöntem olarak bilinir. Geçersiz kılınan temel yöntemin, `override` yöntemiyle aynı imzaya sahip olması gerekir. Devralma hakkında daha fazla bilgi için bkz. [Devralma](../../programming-guide/classes-and-structs/inheritance.md).
+`override` yöntemi, temel sınıftan devralınan bir üyenin yeni bir uygulamasını sağlar. Bir `override` bildirimi tarafından geçersiz kılınan yöntem, geçersiz kılınan temel yöntem olarak bilinir. Geçersiz kılınan temel yöntemin `override` yöntemiyle aynı imzaya sahip olması gerekir. Devralma hakkında daha fazla bilgi için bkz. [Devralma](../../programming-guide/classes-and-structs/inheritance.md).
 
 Sanal olmayan veya statik bir yöntemi geçersiz kılamazsınız. Geçersiz kılınan taban yöntemi `virtual`, `abstract`veya `override`olmalıdır.
 
-Bildirim, `virtual` yönteminin erişilebilirliğini değiştiremez. `override` Hem yöntemi hem de yöntemi aynı [erişim düzeyi değiştiricisine](access-modifiers.md)sahip olmalıdır. `virtual` `override`
+`override` bildirimi `virtual` yönteminin erişilebilirliğini değiştiremiyor. Hem `override` yöntemi hem de `virtual` yöntemi aynı [erişim düzeyi değiştiricisine](access-modifiers.md)sahip olmalıdır.
 
-Bir `new` `static` `virtual` yöntemi değiştirmek için, veya değiştiricilerini kullanamazsınız. `override`
+`override` bir yöntemi değiştirmek için `new`, `static`veya `virtual` değiştiricilerini kullanamazsınız.
 
-Geçersiz kılma özelliği bildirimi, devralınan özellik olarak tam olarak aynı erişim değiştiricisini, türü ve adı belirtmeli ve geçersiz kılınan özellik `virtual`, `abstract`veya `override`olmalıdır.
+Geçersiz kılma özelliği bildirimi, devralınan özellik olarak tam olarak aynı erişim değiştiricisini, türü ve adı belirtmeli ve geçersiz kılınan Özellik `virtual`, `abstract`veya `override`olmalıdır.
 
-`override` Anahtar sözcüğünü kullanma hakkında daha fazla bilgi için, bkz. [geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) ve [geçersiz kılma ve yeni anahtar sözcüklerin ne zaman kullanılacağını bilme](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).
+`override` anahtar sözcüğünü kullanma hakkında daha fazla bilgi için bkz. [geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) ve [geçersiz kılma ve yeni anahtar sözcüklerin ne zaman kullanılacağını bilme](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).
 
 ## <a name="example"></a>Örnek
 
-Bu örnek `Employee`, adlı bir temel sınıfı ve adlı `SalesEmployee`türetilmiş bir sınıfı tanımlar. Sınıfı ek bir `salesbonus`alan içerir ve bunu hesaba almak için yöntemi `CalculatePay` geçersiz kılar. `SalesEmployee`
+Bu örnek, `Employee`adlı bir temel sınıfı ve `SalesEmployee`adlı türetilmiş bir sınıfı tanımlar. `SalesEmployee` sınıfı ek bir alan içerir, `salesbonus`ve bunu hesaba almak için `CalculatePay` yöntemi geçersiz kılar.
 
 [!code-csharp[csrefKeywordsModifiers#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#9)]
 
@@ -53,7 +53,7 @@ Bu örnek `Employee`, adlı bir temel sınıfı ve adlı `SalesEmployee`türetil
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [Devralma](../../programming-guide/classes-and-structs/inheritance.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [Değiştiriciler](modifiers.md)
+- [Değiştiriciler](index.md)
 - [abstract](abstract.md)
 - [virtual](virtual.md)
 - [Yeni (değiştirici)](new-modifier.md)
