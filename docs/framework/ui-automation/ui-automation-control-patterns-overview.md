@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: a3daf75417260d7e761da2e90c595471b2a4b2a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: acb10df0da97954f4c2f7451d75d2f3042938e48
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131507"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458099"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI Otomasyon Denetim Düzenlerine Genel Bakış
 > [!NOTE]
@@ -55,7 +55,7 @@ ms.locfileid: "73131507"
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Bir yerleştirme kapsayıcısına sabitlenebilir denetimler için kullanılır. Örneğin, araç çubukları veya araç paletleri.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Genişletilebilecek veya daraltılabilen denetimler için kullanılır. Örneğin, **Dosya** menüsü gibi bir uygulamadaki menü öğeleri.|  
-|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Boyutlandırma ve belirtilen bir hücreye taşıma gibi kılavuz işlevlerini destekleyen denetimler için kullanılır. Örneğin, Windows Gezgini 'ndeki büyük simge görünümü veya [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]üst bilgileri olmayan basit tablolar.|  
+|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Boyutlandırma ve belirtilen bir hücreye taşıma gibi kılavuz işlevlerini destekleyen denetimler için kullanılır. Örneğin, Windows Gezgini 'ndeki büyük simge görünümü veya Microsoft Word 'de üst bilgi içermeyen basit tablolar.|  
 |<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Kılavuzlar içinde hücreler bulunan denetimler için kullanılır. Tek tek hücreler GridItem modelini desteklemelidir. Örneğin, Microsoft Windows Explorer ayrıntı görünümündeki her bir hücre.|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Düğme gibi çağrılabilecek denetimler için kullanılır.|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|Aynı bilgi, veri veya alt öğe kümesinin birden çok gösterimi arasında geçiş yapılabilir denetimler için kullanılır. Örneğin, verilerin küçük resim, kutucuk, simge, liste veya ayrıntı görünümlerinde kullanılabildiği bir liste görünümü denetimi.|  
@@ -64,13 +64,13 @@ ms.locfileid: "73131507"
 |<xref:System.Windows.Automation.ScrollItemPattern>|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Kayan bir listedeki öğeleri tek tek içeren denetimler için kullanılır. Örneğin, bir Birleşik giriş kutusu denetimi gibi, kaydırma listesinde tek tek öğeleri olan bir liste denetimidir.|  
 |<xref:System.Windows.Automation.SelectionPattern>|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Seçim kapsayıcısı denetimleri için kullanılır. Örneğin, liste kutuları ve Birleşik giriş kutuları.|  
 |<xref:System.Windows.Automation.SelectionItemPattern>|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Liste kutuları ve Birleşik giriş kutuları gibi seçim kapsayıcısı denetimlerindeki tek tek öğeler için kullanılır.|  
-|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|Kılavuza ve başlık bilgilerine sahip denetimler için kullanılır. Örneğin, çalışma sayfalarını [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)].|  
+|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|Kılavuza ve başlık bilgilerine sahip denetimler için kullanılır. Örneğin, Microsoft Excel çalışma sayfaları.|  
 |<xref:System.Windows.Automation.TableItemPattern>|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Tablodaki öğeler için kullanılır.|  
 |<xref:System.Windows.Automation.TextPattern>|<xref:System.Windows.Automation.Provider.ITextProvider>|Düzenleme denetimleri ve metin bilgilerini açığa çıkaran belgeler için kullanılır.|  
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Durumun değiştirilebilir olduğu denetimler için kullanılır. Örneğin, onay kutuları ve kullanıma ılabilir menü öğeleri.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Yeniden boyutlandırılabileceği, taşınabilecek ve döndürülebilen denetimler için kullanılır. Dönüşüm denetim deseninin tipik kullanımları tasarımcılar, formlar, grafik düzenleyiciler ve çizim uygulamalarıdır.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|İstemcilerin bir değer aralığını desteklemeyen denetimlerde değer almasına veya ayarlamasına izin verir. Örneğin, bir tarih saat seçici.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Microsoft Windows işletim sistemi için temel bir kavram olan Windows 'a özgü bilgileri gösterir. Windows, en üst düzey uygulama pencereleri ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], Microsoft Windows Gezgini, vb.), birden çok belge arabirimi (MDI) alt pencereleri ve iletişim kutuları olan denetimlerin örnekleridir.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Microsoft Windows işletim sistemi için temel bir kavram olan Windows 'a özgü bilgileri gösterir. Windows, en üst düzey uygulama pencereleri (Microsoft Word, Microsoft Windows Gezgini, vb.), birden çok belge arabirimi (MDI) alt pencereleri ve iletişim kutuları olan denetimlere örnektir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -5,36 +5,36 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83ea398f18ab02840ea811c74a6053dba11a3baa
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3befdd0ec96856a62e5c3c603935303498758710
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490894"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423921"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML Belgesinde Ad Alanlarını Yönetme
-XML ad alanları XML belgesinde öğe ve öznitelik adları, özel ve önceden tanımlanmış bir URI'leri ile ilişkilendirin. Bu ilişkileri oluşturmak için URI ad alanı ön eklerini tanımlayın ve bu ön ekler öğe ve öznitelik adları XML verisindeki nitelemek için kullanın. Ad alanları, öğe ve öznitelik adı çakışmalarını önlemek ve öğeleri ve öznitelikleri aynı ada sahip işlenmesini ve farklı şekilde doğrulanmış etkinleştirin.  
+XML ad alanları, bir XML belgesindeki öğe ve öznitelik adlarını özel ve önceden tanımlanmış URI 'Ler ile ilişkilendirir. Bu ilişkilendirmeleri oluşturmak için, ad alanı URI 'Leri için ön ekleri tanımlar ve bu önekleri, XML verilerinde öğe ve öznitelik adlarını nitelemek için kullanabilirsiniz. Ad alanları öğe ve öznitelik adı çakışmalarını önler ve aynı ada sahip öğelerin ve özniteliklerin işlenmesini ve farklı şekilde doğrulanmasını etkinleştirir.  
   
 <a name="declare"></a>   
 ## <a name="declaring-namespaces"></a>Ad alanlarını bildirme  
- Bir öğe üzerinde bir ad alanı bildirmek için kullanmanız `xmlns:` özniteliği:  
+ Bir öğe üzerinde bir ad alanı bildirmek için `xmlns:` özniteliğini kullanın:  
   
  `xmlns:<name>=<"uri">`  
   
- Burada `<name>` ad alanı öneki ve `<"uri">` ad alanını tanımlayan URI. Önek bildirdikten sonra öğeleri ve özniteliklerinin bir XML belgesi sınıflandırmak ve ad alanı URI ile ilişkilendirmek için kullanabilirsiniz. Ad alanı öneki belge kullanılmakta olduğundan uzunluğu kısa olmalıdır.  
+ Burada `<name>` ad alanı ön eki ve `<"uri">` ad alanını tanımlayan URI 'dir. Ön eki bildirdikten sonra, bir XML belgesindeki öğeleri ve öznitelikleri nitelemek ve bunları ad alanı URI 'siyle ilişkilendirmek için kullanabilirsiniz. Ad alanı ön eki bir belge boyunca kullanıldığından, bu değer kısa bir süre olmalıdır.  
   
- Bu örnek iki tanımlar `BOOK` öğeleri. Ön eke göre ilk öğeyi nitelenmiş `mybook`, ve ikinci öğe ön eke göre nitelenmiş `bb`. Her ön eki farklı ad alanı URI ile ilişkilendirilir:  
+ Bu örnek iki `BOOK` öğesi tanımlar. İlk öğe önek, `mybook`ve ikinci öğe önek tarafından nitelenir, `bb`. Her önek farklı bir ad alanı URI 'siyle ilişkilendirilir:  
   
 ```xml  
 <mybook:BOOK xmlns:mybook="http://www.contoso.com/books.dtd">  
 <bb:BOOK xmlns:bb="urn:blueyonderairlines">  
 ```  
   
- Bir öğenin belirli bir ad alanının bir parçası olduğunu belirtmek için ad alanı öneki ekleyin. Örneğin, bir `Author` öğenin ait olduğu `mybook` ad alanı, bildirilen olarak `<mybook:Author>`.  
+ Bir öğenin belirli bir ad alanının parçası olduğunu belirtmek için, buna ad alanı öneki ekleyin. Örneğin, bir `Author` öğesi `mybook` ad alanına aitse, `<mybook:Author>`olarak bildirilmiştir.  
   
 <a name="scope"></a>   
 ## <a name="declaration-scope"></a>Bildirim kapsamı  
- Bir ad alanı içinde bildirilen öğe sonuna kadar bildirim noktasında etkilidir. Bu örnekte ad alanı tanımlı `BOOK` öğesi öğeler için geçerli değildir `BOOK` öğesi gibi `Publisher` öğesi:  
+ Bir ad alanı, içinde bildirildiği öğenin sonuna kadar bildirim noktasından etkilidir. Bu örnekte, `BOOK` öğesinde tanımlanan ad alanı `Publisher` öğesi gibi `BOOK` öğesi dışındaki öğelere uygulanmaz:  
   
 ```xml  
 <Author>Joe Smith</Author>  
@@ -47,37 +47,37 @@ XML ad alanları XML belgesinde öğe ve öznitelik adları, özel ve önceden t
 </Publisher>  
 ```  
   
- Bir ad alanı, kullanılabilir, ancak XML belgenin üst kısmında görünmesini yok önce bildirilmelidir.  
+ Ad alanı kullanılmadan önce bildirilmelidir, ancak XML belgesinin en üstünde görünmesini gerekmez.  
   
- Bir XML belgesinde birden çok ad alanını kullandığınızda, bir ad alanı Temizleyicisi görünümlü bir belge oluşturmak için varsayılan ad alanı olarak tanımlayabilirsiniz. Varsayılan ad alanı, kök öğesi bildirilmiş ve belgedeki tüm nitelenmemiş öğeleri için geçerlidir. Varsayılan ad alanlarını öznitelikler için yalnızca öğeler için geçerlidir.  
+ Bir XML belgesinde birden çok ad alanı kullandığınızda, temizleyici bir arama belgesi oluşturmak için bir ad alanını varsayılan ad alanı olarak tanımlayabilirsiniz. Varsayılan ad alanı, kök öğesinde bildirilmiştir ve belgedeki tüm nitelenmemiş öğeler için geçerlidir. Varsayılan ad alanları özniteliklere değil yalnızca öğeler için geçerlidir.  
   
- Varsayılan ad alanı kullanılacak önek ve virgül gelen öğede bildirimi atla:  
+ Varsayılan ad alanını kullanmak için, öneki ve öğesindeki bildiriminden iki nokta üst üste atlayın:  
   
 ```xml  
 <BOOK xmlns="http://www.contoso.com/books.dtd">  
 ```  
   
 ## <a name="managing-namespaces"></a>Ad alanlarını yönetme  
- <xref:System.Xml.XmlNamespaceManager> Sınıf ad alanı URI koleksiyonunu depolar ve bunların ön ekleri ve sağlar, konum ekleyin ve bu koleksiyondan ad alanları. Belirli bağlamlarda bu sınıfı daha iyi XML işlem performansı için gereklidir. Örneğin, <xref:System.Xml.Xsl.XsltContext> sınıfının kullandığı <xref:System.Xml.XmlNamespaceManager> XPath desteği.  
+ <xref:System.Xml.XmlNamespaceManager> sınıfı, bir ad alanı URI 'Leri ve bunların ön eklerini depolar ve bu koleksiyonda ad alanlarını arayabilir, eklemenize ve kaldırmanıza olanak tanır. Bazı bağlamlarda, daha iyi XML işleme performansı için bu sınıf gereklidir. Örneğin, <xref:System.Xml.Xsl.XsltContext> sınıfı XPath desteği için <xref:System.Xml.XmlNamespaceManager> kullanır.  
   
- Ad alanı Yöneticisi'ni ad alanlarında herhangi doğrulaması gerçekleştirmez, ancak önek ve ad alanları zaten doğrulandı ve uygun varsayar [W3C ad alanları](https://www.w3.org/TR/REC-xml-names/) belirtimi.  
+ Ad alanı Yöneticisi ad alanları üzerinde herhangi bir doğrulama gerçekleştirmez, ancak ön eklerin ve ad alanlarının zaten doğrulanmış olduğunu varsayar ve [W3C ad](https://www.w3.org/TR/REC-xml-names/) alanları belirtimine uyum sağlar.  
   
 > [!NOTE]
-> XML için LINQ [ C# ](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) ve [Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) kullanmayın <xref:System.Xml.XmlNamespaceManager> ad alanlarını yönetmek için. Bkz: [XML ad alanları ile çalışma (C#)](../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) ve [(Visual Basic) XML ad alanları ile çalışma](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) LINQ to XML kullanarak ad alanlarını yönetme hakkında bilgi için LINQ belgelerinde.  
+> Ve [C#](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) [VISUAL BASIC](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) İçindeki LINQ to XML, ad alanlarını yönetmek için <xref:System.Xml.XmlNamespaceManager> kullanmaz. LINQ to XML kullanırken ad alanlarını yönetme hakkında bilgi için bkz. [XML ad alanlarıC#() ile çalışma](../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md) ve LINQ belgelerinde [XML ad alanları (Visual Basic) ile](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) çalışma.  
   
- Bazı görevlerin ile gerçekleştirebileceğiniz yönetim ve arama <xref:System.Xml.XmlNamespaceManager> sınıfı. Daha fazla bilgi ve örnekler için her bir metot veya Özellik Başvurusu sayfasına bağlantıları izleyin.  
+ <xref:System.Xml.XmlNamespaceManager> sınıfıyla gerçekleştirebileceğiniz yönetim ve arama görevlerinin bazıları aşağıda verilmiştir. Daha fazla bilgi ve örnek için, her bir yöntem veya özellik için başvuru sayfasının bağlantılarını izleyin.  
   
 |Bitiş|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|  
 |--------|---------|  
-|Bir ad alanı Ekle|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> Yöntemi|  
-|Bir ad alanını Kaldır|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> Yöntemi|  
-|Varsayılan ad alanı URI bulma|<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A> Özelliği|  
-|İçin bir ad alanı öneki URI bulma|<xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A> Yöntemi|  
-|Ad alanı için URI öneki bulun|<xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A> Yöntemi|  
-|Geçerli düğüm ad alanlarının listesini alın|<xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A> Yöntemi|  
-|Bir ad alanı kapsamı|<xref:System.Xml.XmlNamespaceManager.PushScope%2A> ve <xref:System.Xml.XmlNamespaceManager.PopScope%2A> yöntemleri|  
-|Bir önek geçerli kapsamda tanımlı olup olmadığını denetleyin|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> Yöntemi|  
-|Ön ekleri ve URI'leri ara için kullanılan ad tablosu Al|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> Özelliği|  
+|Ad alanı Ekle|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> yöntemi|  
+|Ad alanını kaldır|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> yöntemi|  
+|Varsayılan ad alanı için URI 'yi bul|<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A> özelliği|  
+|Bir ad alanı öneki için URI bulma|<xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A> yöntemi|  
+|Bir ad alanı URI 'sinin önekini bulma|<xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A> yöntemi|  
+|Geçerli düğümdeki ad alanlarının listesini al|<xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A> yöntemi|  
+|Ad alanı kapsamı|<xref:System.Xml.XmlNamespaceManager.PushScope%2A> ve <xref:System.Xml.XmlNamespaceManager.PopScope%2A> yöntemleri|  
+|Geçerli kapsamda bir ön ek tanımlanıp tanımlanmadığını denetleyin|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> yöntemi|  
+|Ön ekleri ve URI 'Leri aramak için kullanılan ad tablosunu alın|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> özelliği|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

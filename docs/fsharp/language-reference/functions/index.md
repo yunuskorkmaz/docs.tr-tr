@@ -2,18 +2,18 @@
 title: İşlevler
 description: İçindeki F# işlevleri hakkında bilgi edinin ve F# ortak fonksiyonel programlama yapılarını nasıl destekler.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6f65ce692169b71abe8d2eff7ef07b66975d478b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6b8307f51ffcdc77fe4352b2305fca1f247ccbb
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630707"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423948"
 ---
 # <a name="functions"></a>İşlevler
 
 İşlevler, herhangi bir programlama dilinde program yürütmenin temel birimidir. Diğer dillerde olduğu gibi, bir F# işlevin adı vardır, parametreleri olabilir ve bağımsız değişkenler alabilir ve bir gövdeye sahip olabilir. F#Ayrıca, işlevleri değer olarak davranma, ifadelerde adlandırılmamış işlevleri kullanma, yeni işlevler, curried işlevleri ve kısmi olarak işlevlerin örtük tanımına göre işlev oluşturma gibi işlev programlama yapılarını destekler. işlev bağımsız değişkenlerinin uygulaması.
 
-İşlevleri `let` anahtar sözcüğünü kullanarak tanımlarsınız veya işlev özyinelemeli `let rec` ise anahtar sözcük birleşimi.
+`let` anahtar sözcüğünü kullanarak işlevler tanımlarsınız veya işlev özyinelemeli ise `let rec` anahtar sözcük birleşimi.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,9 +34,9 @@ Basit bir işlev tanımı aşağıdakine benzer:
 let f x = x + 1
 ```
 
-Önceki örnekte, `f`işlev adı, türü `int`, işlev gövdesi `x + 1`ve dönüş değeri `x`tür `int`olan bağımsız değişkendir.
+Önceki örnekte, işlev adı `f`, bağımsız değişken türü `int`olan `x`, işlev gövdesi `x + 1`ve dönüş değeri `int`türündedir.
 
-İşlevler işaretlenebilir `inline`. Hakkında `inline`bilgi için bkz. [satır içi işlevler](../functions/inline-functions.md).
+İşlevler, `inline`olarak işaretlenebilir. `inline`hakkında bilgi için bkz. [Inline Functions](../functions/inline-functions.md).
 
 ## <a name="scope"></a>Kapsam
 
@@ -56,7 +56,7 @@ Parametrelerin adları, işlev adından sonra listelenir. Bir parametre için a�
 let f (x : int) = x + 1
 ```
 
-Bir tür belirtirseniz, parametrenin adını izler ve iki nokta üst üste ile birbirinden ayrılır. Parametresinin türünü atlarsanız, parametre türü derleyici tarafından algılanır. Örneğin, aşağıdaki işlev tanımında, 1 türünde `x` `int`olduğu için bağımsız değişken türü `int` olarak algılanır.
+Bir tür belirtirseniz, parametrenin adını izler ve iki nokta üst üste ile birbirinden ayrılır. Parametresinin türünü atlarsanız, parametre türü derleyici tarafından algılanır. Örneğin, aşağıdaki işlev tanımında `x` bağımsız değişkeni, 1 `int`türünde olduğu için `int` türü olarak algılanır.
 
 ```fsharp
 let f x = x + 1
@@ -76,11 +76,11 @@ Bir işlev gövdesi, yerel değişkenlerin ve işlevlerin tanımlarını içereb
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
-Daha fazla bilgi için bkz. [kod biçimlendirme yönergeleri](../code-formatting-guidelines.md) ve [ayrıntılı sözdizimi](../verbose-syntax.md).
+Daha fazla bilgi için bkz. [kod biçimlendirme yönergeleri](../../style-guide/formatting.md) ve [ayrıntılı sözdizimi](../verbose-syntax.md).
 
 ## <a name="return-values"></a>Dönüş Değerleri
 
-Derleyici, dönüş değerini ve türünü belirleyebilmek için bir işlev gövdesinde son ifadeyi kullanır. Derleyici, önceki ifadelerden son ifadenin türünü çıkarmayabilir. Önceki bölümde gösterilen `cylinderVolume`işlevinde, `pi` türü, sabit değer `3.14159` türünden olacak `float`şekilde belirlenir. Derleyici, kullanılacak `pi` `h * pi * r * r` ifadenin`float`türünü öğrenmek için türünü kullanır. Bu nedenle, işlevinin genel dönüş türü ' dir `float`.
+Derleyici, dönüş değerini ve türünü belirleyebilmek için bir işlev gövdesinde son ifadeyi kullanır. Derleyici, önceki ifadelerden son ifadenin türünü çıkarmayabilir. Önceki bölümde gösterilen `cylinderVolume`işlevinde, `pi` türü, sabit değer `3.14159` `float`olacak şekilde belirlenir. Derleyici, `float`olacak `h * pi * r * r` ifade türünü belirleyebilmek için `pi` türünü kullanır. Bu nedenle, işlevin genel dönüş türü `float`.
 
 Dönüş değerini açık olarak belirtmek için, kodu aşağıdaki gibi yazın:
 
@@ -102,7 +102,7 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="partial-application-of-arguments"></a>Bağımsız Değişkenlerin Kısmi Uygulanması
 
-Belirtilen sayıda bağımsız değişkene daha az bir değer sağlarsanız, kalan bağımsız değişkenleri bekleyen yeni bir işlev oluşturursunuz. Bu bağımsız değişken işleme yöntemi, gibi F#işlevsel programlama dillerinin bir özelliğidir ve olarak adlandırılır. Örneğin, iki kanal boyutu ile çalıştığınızı varsayalım: biri **2,0** radius ve diğeri ise **3,0**yarıçapı vardır. Aşağıdaki gibi kanal hacmini tespit eden işlevler oluşturabilirsiniz:
+Belirtilen sayıda bağımsız değişkene daha az bir değer sağlarsanız, kalan bağımsız değişkenleri bekleyen yeni bir işlev oluşturursunuz. Bu bağımsız değişken işleme yöntemi, gibi F#işlevsel programlama dillerinin bir *özelliğidir ve olarak* adlandırılır. Örneğin, iki kanal boyutu ile çalıştığınızı varsayalım: biri **2,0** radius ve diğeri ise **3,0**yarıçapı vardır. Aşağıdaki gibi kanal hacmini tespit eden işlevler oluşturabilirsiniz:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
 
@@ -124,13 +124,13 @@ Bazı Özyinelemeli işlevler program yığınını taşımayabilir veya işlevi
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
-`->` Belirteç kullanarak bir işlev değerinin türünü belirtirsiniz. Bu belirtecin sol tarafında, bağımsız değişkenin türü ve sağ tarafta ise dönüş değeri bulunur. Önceki örnekte, `apply1` bir işlevi `transform` bağımsız değişken `transform` olarak alan ve bir tamsayı alan ve başka bir tamsayı döndüren bir işlevdir. Aşağıdaki kod, nasıl `apply1`kullanılacağını gösterir:
+`->` belirtecini kullanarak bir işlev değeri türünü belirtirsiniz. Bu belirtecin sol tarafında, bağımsız değişkenin türü ve sağ tarafta ise dönüş değeri bulunur. Önceki örnekte `apply1`, bir bağımsız değişken olarak bir işlev `transform` alan, `transform` bir tamsayı alan ve başka bir tamsayı döndüren bir işlevdir. Aşağıdaki kod `apply1`nasıl kullanacağınızı gösterir:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
 
-Değeri `result` , önceki kod çalıştıktan sonra 101 olacaktır.
+`result` değeri, önceki kod çalıştıktan sonra 101 olacaktır.
 
-Aşağıdaki örnekte gösterildiği gibi, birden `->` çok bağımsız değişken birbirini izleyen belirteçlerle ayrılır:
+Aşağıdaki örnekte gösterildiği gibi, birden çok bağımsız değişken birbirini izleyen `->` belirteçleriyle ayrılır:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
 
@@ -142,7 +142,7 @@ Sonuç 200 ' dir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Lambda ifadelerini, `fun` anahtar sözcüğünü kullanarak tanımlarsınız. Lambda ifadesi bir işlev tanımına benzer, `=` belirteç `->` yerine belirtecin bağımsız değişken listesini işlev gövdesinden ayırmak için kullanılır. Normal bir işlev tanımında olduğu gibi, bağımsız değişken türleri açıkça çıkarsanamıyor veya belirlenebilir ve lambda ifadesinin dönüş türü, gövdedeki son ifadenin türünden çıkarsanamıyor. Daha fazla bilgi için bkz [. Lambda ifadeleri: `fun` Anahtar sözcüğü](../functions/lambda-expressions-the-fun-keyword.md).
+Lambda ifadelerini `fun` anahtar sözcüğünü kullanarak tanımlarsınız. Lambda ifadesi bir işlev tanımına benzer, ancak `=` belirteci yerine, bağımsız değişken listesini işlev gövdesinden ayırmak için `->` belirteci kullanılır. Normal bir işlev tanımında olduğu gibi, bağımsız değişken türleri açıkça çıkarsanamıyor veya belirlenebilir ve lambda ifadesinin dönüş türü, gövdedeki son ifadenin türünden çıkarsanamıyor. Daha fazla bilgi için bkz. [lambda ifadeleri: `fun` anahtar sözcüğü](../functions/lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>İşlev Bileşimi ve Ardışık Düzen Oluşturma
 

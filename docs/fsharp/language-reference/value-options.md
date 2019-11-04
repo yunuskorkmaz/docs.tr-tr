@@ -1,26 +1,26 @@
 ---
-title: Değer seçenekleri
-description: Hakkında bilgi edinin F# seçenek türünün bir yapı sürümü seçeneği değer türü.
+title: Değer Seçenekleri
+description: Seçenek türünün bir F# struct sürümü olan değer seçenek türü hakkında bilgi edinin.
 ms.date: 02/06/2019
-ms.openlocfilehash: e1036c83189c853b3704d94ca245e4818acc98c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4dc3f7217943345b7aaf1165fd648ab2e01bd727
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982585"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424015"
 ---
-# <a name="value-options"></a>Değer seçenekleri
+# <a name="value-options"></a>Değer Seçenekleri
 
-Değer seçenek türünde F# aşağıdaki iki koşul tuttuğunuzda kullanılır:
+' Deki F# değer seçenek türü, aşağıdaki iki koşul ayrı olduğunda kullanılır:
 
-1. Bir senaryo için uygun olan bir [ F# seçeneği](options.md).
-2. Bir yapı kullanarak sizin senaryonuzda bu performans artar.
+1. Bir senaryo, bir [ F# seçenek](options.md)için uygundur.
+2. Yapı kullanımı, senaryonuza bir performans avantajı sağlar.
 
-Tüm performans açısından duyarlı senaryoları "yapılar kullanarak çözülen". Bunları başvuru türleri yerine kullanırken kopyalama ek maliyeti dikkate almanız gerekir. Ancak, büyük F# programlar etkin yolları akış birçok isteğe bağlı türler genellikle örneği ve böyle durumlarda yapılar genellikle bir program ömrü boyunca daha iyi toplam performans sağlayabilir.
+Tüm performans duyarlı senaryolar yapılar kullanılarak "çözülür". Başvuru türleri yerine bunları kullanırken, kopyalamanın ek maliyetini göz önünde bulundurmanız gerekir. Ancak, büyük F# programlar genellikle dinamik yollardan akan birçok isteğe bağlı türü oluşturur ve bu gibi durumlarda, yapılar genellikle programın kullanım ömrü boyunca daha iyi genel performans elde edebilir.
 
 ## <a name="definition"></a>Tanım
 
-Değer seçeneği olarak tanımlanmış olan bir [ayırt edici birleşim](discriminated-unions.md#struct-discriminated-unions) olan başvuru seçeneği türüne benzerdir. Tanımı şöyle düşünülebilir:
+Değer seçeneği, başvuru seçenek türüne benzer bir [struct ayrılmış birleşim](discriminated-unions.md#struct-discriminated-unions) olarak tanımlanır. Tanımı şu şekilde düşünülebilir:
 
 ```fsharp
 [<StructuralEquality; StructuralComparison>]
@@ -30,11 +30,11 @@ type ValueOption<'T> =
     | ValueSome of 'T
 ```
 
-Değer seçeneği yapısal eşitlik ve karşılaştırma için uygundur. İkisi arasındaki temel fark, derlenmiş ad, tür adı ve büyük/küçük harf adları, bir değer türü olduğunu belirtmek ' dir.
+Değer seçeneği yapısal eşitlik ve karşılaştırmaya uyar. Ana fark, derlenmiş ad, tür adı ve büyük/küçük harf adlarının tümü bir değer türü olduğunu gösterir.
 
 ## <a name="using-value-options"></a>Değer seçeneklerini kullanma
 
-Değer seçenekleri gibi kullanılır [seçenekleri](options.md). `ValueSome` bir değerin mevcut olduğunu belirtmek için kullanılır ve `ValueNone` bir değer mevcut olmadığında kullanılır:
+Değer seçenekleri tıpkı [Seçenekler](options.md)gibi kullanılır. `ValueSome`, bir değerin mevcut olduğunu göstermek için kullanılır ve bir değer mevcut olmadığında `ValueNone` kullanılır:
 
 ```fsharp
 let tryParseDateTime (s: string) =
@@ -55,23 +55,23 @@ match (result1, result2) with
 | ValueNone, ValueNone -> printfn "None of them are dates!"
 ```
 
-Olduğu gibi [seçenekleri](options.md), döndüren bir işlev için adlandırma kuralı `ValueOption` ile ön ek için `try`.
+[Seçeneklerde](options.md)olduğu gibi, `ValueOption` döndüren bir işlevin adlandırma kuralı, `try`önek olarak önektir.
 
 ## <a name="value-option-properties-and-methods"></a>Değer seçeneği özellikleri ve yöntemleri
 
-Şu anda bir özellik için değer seçenekleri mevcuttur: `Value`. Bir <xref:System.InvalidOperationException> hiçbir değer yoksa, bu özelliğin çağırılır olması durumunda tetiklenir.
+Şu anda değer seçenekleri için bir özellik var: `Value`. Bu özellik çağrıldığında hiçbir değer yoksa <xref:System.InvalidOperationException> tetiklenir.
 
 ## <a name="value-option-functions"></a>Değer seçeneği işlevleri
 
-Şu anda bir modül bağlı işlev değer seçenekleri için olan `defaultValueArg`:
+Şu anda değer seçenekleri için bir modüle bağlı işlev var, `defaultValueArg`:
 
 ```fsharp
-val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T 
+val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T
 ```
 
-Olduğu gibi `defaultArg` işlevi `defaultValueArg` belirli değer seçeneği temel değerini döndürür var; Aksi takdirde, varsayılan değeri döndürür.
+`defaultArg` işlevinde olduğu gibi `defaultValueArg`, varsa verilen değer seçeneğinin temel alınan değerini döndürür; Aksi halde, belirtilen varsayılan değeri döndürür.
 
-Şu anda hiç bir modül bağlı işlevi değer seçenekleri için vardır.
+Şu anda değer seçenekleri için modüle özgü başka işlevler yoktur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

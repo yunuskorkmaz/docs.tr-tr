@@ -2,12 +2,12 @@
 title: 'Risk azaltma: simge nesnelerinde PNG çerçeveleri'
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
-ms.openlocfilehash: 28787eff0dd4ce92394a66a936b3d422dfe513bb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1a4ae0c069a4cd6d53bce77e64822ebf3fbb5361
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126184"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457876"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>Risk azaltma: simge nesnelerinde PNG çerçeveleri
 .NET Framework 4,6 ' den başlayarak <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> yöntemi, simgeleri PNG çerçevelerinden <xref:System.Drawing.Bitmap> nesnelerine başarıyla dönüştürür.  
@@ -34,4 +34,4 @@ ms.locfileid: "73126184"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Hedefleme Değişiklikleri](retargeting-changes-in-the-net-framework-4-6.md)
+- [Uygulama uyumluluğu](application-compatibility.md)

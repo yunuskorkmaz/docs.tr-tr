@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 1f13053ea23e45b66b4767295af28a758f474ab5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3e87ba8c9442c4bba24e4e569cd20bdbdc76f6ec
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121548"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457985"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET Framework dağıtım kılavuzu
 Bu konu, .NET Framework 4,5 ' den .NET Framework herhangi bir sürümünü uygulamalarıyla [!INCLUDE[net_current](../../../includes/net-current-version.md)] yüklemek isteyen geliştiriciler için bilgi sağlamaktadır.
@@ -168,7 +168,7 @@ Visual Studio 'da InstallShield dağıtımını seçmek ve .NET Framework bir ba
 
 ### <a name="windows-installer-xml-wix-deployment"></a>Windows Installer XML (WiX) dağıtımı
 
-Windows Installer XML (WiX) araç takımı, XML kaynak kodundan Windows yükleme paketleri oluşturur. WiX, MSI ve MSM kurulum paketleri oluşturmak için yapı süreçlerinizle tümleştirilebilen bir komut satırı ortamını destekler. WiX kullanarak, [.NET Framework bir önkoşul olarak belirtebilir](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)veya .NET Framework dağıtım deneyimini tam olarak denetlemek için [bir bağlayıcı oluşturabilirsiniz](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) . WiX hakkında daha fazla bilgi için [WINDOWS Installer XML (WiX) araç takımı](http://wixtoolset.org/) Web sitesine bakın.
+Windows Installer XML (WiX) araç takımı, XML kaynak kodundan Windows yükleme paketleri oluşturur. WiX, MSI ve MSM kurulum paketleri oluşturmak için yapı süreçlerinizle tümleştirilebilen bir komut satırı ortamını destekler. WiX kullanarak, [.NET Framework bir önkoşul olarak belirtebilir](https://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)veya .NET Framework dağıtım deneyimini tam olarak denetlemek için [bir bağlayıcı oluşturabilirsiniz](https://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) . WiX hakkında daha fazla bilgi için [WINDOWS Installer XML (WiX) araç takımı](https://wixtoolset.org/) Web sitesine bakın.
 
 <a name="installing_manually"></a>
 

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - ControlTemplates [WPF], finding elements
 - finding ControlTemplate elements [WPF]
 ms.assetid: d7b25447-ceff-4bb4-9be5-fd7c40ef00af
-ms.openlocfilehash: 426f6c93433711ac72fe67eff2ee3006aa4d9166
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 232ee7d2859059591c9beff753f45781598a8127
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037149"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460711"
 ---
 # <a name="how-to-find-controltemplate-generated-elements"></a>Nasıl yapılır: ControlTemplate ile Oluşturulan Öğeleri Bulma
-Bu örnek tarafından oluşturulan öğeleri bulma işlemini gösterir. bir <xref:System.Windows.Controls.ControlTemplate>.  
+Bu örnek, bir <xref:System.Windows.Controls.ControlTemplate>tarafından oluşturulan öğelerin nasıl bulunacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, basit bir oluşturan bir stil gösterir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.Button> sınıfı:  
+ Aşağıdaki örnek, <xref:System.Windows.Controls.Button> sınıfı için basit <xref:System.Windows.Controls.ControlTemplate> oluşturan bir stil gösterir:  
   
  [!code-xaml[FindGeneratedItems#CT](~/samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml#ct)]  
   
- Şablon uygulandıktan sonra şablon içinde bir öğeyi bulmak için çağırabilirsiniz <xref:System.Windows.FrameworkTemplate.FindName%2A> yöntemi <xref:System.Windows.Controls.Control.Template%2A>. Aşağıdaki örnekte gerçek genişlik değerini gösteren bir ileti kutusu oluşturur <xref:System.Windows.Controls.Grid> denetim şablonu içinde:  
+ Şablon uygulandıktan sonra şablon içinde bir öğe bulmak için <xref:System.Windows.Controls.Control.Template%2A><xref:System.Windows.FrameworkTemplate.FindName%2A> yöntemini çağırabilirsiniz. Aşağıdaki örnek, denetim şablonu içinde <xref:System.Windows.Controls.Grid> gerçek genişlik değerini gösteren bir ileti kutusu oluşturur:  
   
  [!code-csharp[FindGeneratedItems#CTFindElement](~/samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml.cs#ctfindelement)]
  [!code-vb[FindGeneratedItems#CTFindElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#ctfindelement)]  
@@ -31,6 +31,6 @@ Bu örnek tarafından oluşturulan öğeleri bulma işlemini gösterir. bir <xre
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataTemplate ile Oluşturulan Öğeleri Bulma](../data/how-to-find-datatemplate-generated-elements.md)
-- [Stil ve Şablon Oluşturma](styling-and-templating.md)
+- [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [WPF XAML Ad Kapsamları](../advanced/wpf-xaml-namescopes.md)
 - [WPF İçinde Ağaçlar](../advanced/trees-in-wpf.md)

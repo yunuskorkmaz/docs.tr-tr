@@ -7,18 +7,18 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: 4724e6264c0108924629055525e46d84e86a6e6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98c7022eab9153808d47d7da69c23349032165c3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953417"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460852"
 ---
 # <a name="optimizing-wpf-application-performance"></a>WPF Uygulama Performansını İyileştirme
-Bu bölüm, uygulamalarının performansını artırmanın yollarını arayan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama geliştiricileri için başvuru olarak hazırlanmıştır. Microsoft .NET Framework 'ün yeni bir geliştiricisiyseniz ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ilk olarak her iki platformda de kendinizi öğrenmeniz gerekir. Bu bölüm, her ikisinin de bilgi sahibi olduğunu varsayar ve uygulamalarını çalışır duruma getirmek için yeterince bildiğiniz programcılar için yazılmıştır.  
+Bu bölüm, uygulamalarının performansını artırmanın yollarını arayan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama geliştiricileri için bir başvuru olarak hazırlanmıştır. Microsoft .NET Framework ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]yeni bir geliştiricisiyseniz, her iki platformda de kendinizi öğrenmeniz gerekir. Bu bölüm, her ikisinin de bilgi sahibi olduğunu varsayar ve uygulamalarını çalışır duruma getirmek için yeterince bildiğiniz programcılar için yazılmıştır.  
   
 > [!NOTE]
-> Bu bölümde belirtilen performans verileri, 512 RAM ve bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ATI Radeon 9700 grafik kartı ile 2,8 GHz bilgisayar üzerinde çalışan uygulamalara dayalıdır.  
+> Bu bölümde belirtilen performans verileri, 512 RAM ve ATI Radeon 9700 grafik kartı ile 2,8 GHz BILGISAYAR üzerinde çalışan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalara dayalıdır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Uygulama Performansını Planlama](planning-for-application-performance.md)  
@@ -59,7 +59,7 @@ Bu bölüm, uygulamalarının performansını artırmanın yollarını arayan [!
 - [WPF'deki Belgeler](documents-in-wpf.md)
 - [Biçimlendirilmiş Metin Çizme](drawing-formatted-text.md)
 - [WPF'de Tipografi](typography-in-wpf.md)
-- [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)
+- [Veri Bağlamaya Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)
 - [Gezintiye Genel Bakış](../app-development/navigation-overview.md)
 - [Animasyon İpuçları ve Püf Noktaları](../graphics-multimedia/animation-tips-and-tricks.md)
-- [İzlenecek yol: WPF uygulamasında uygulama verilerini önbelleğe alma](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma](walkthrough-caching-application-data-in-a-wpf-application.md)

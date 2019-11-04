@@ -9,48 +9,48 @@ helpviewer_keywords:
 - ControlTemplate [WPF], RepeatButton
 - states [WPF], RepeatButton
 ms.assetid: fd340743-f44f-4990-9077-085301469670
-ms.openlocfilehash: 86f212326bc707e4b07b8cab8d9a95d4f6ef8920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c6a8ad0a954d244fb693e25965ab52dda114068
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053322"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459855"
 ---
 # <a name="repeatbutton-styles-and-templates"></a>RepeatButton Stilleri ve Şablonları
 
-Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.Primitives.RepeatButton> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).
+Bu konuda <xref:System.Windows.Controls.Primitives.RepeatButton> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).
 
 ## <a name="repeatbutton-parts"></a>RepeatButton bölümleri
 
-<xref:System.Windows.Controls.Primitives.RepeatButton> Denetim herhangi bir adlandırılmış bölümü yok.
+<xref:System.Windows.Controls.Primitives.RepeatButton> denetiminde hiç adlandırılmış bölüm yok.
 
 ## <a name="repeatbutton-states"></a>RepeatButton durumları
 
-Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.RepeatButton> denetimi.
+Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.RepeatButton> denetimi için görsel durumlar listelenmektedir.
 
-|VisualState adı|Visualstategroup'u adı|Açıklama|
+|VisualState adı|VisualStateGroup adı|Açıklama|
 |-|-|-|
-|Normal|CommonStates|Varsayılan durumu.|
-|Fareyi üzerine getirme|CommonStates|Fare işaretçisi denetimin üzerine yerleştirilir.|
-|Basılan|CommonStates|Denetime basıldığında.|
-|Devre dışı|CommonStates|Denetim devre dışıdır.|
-|Odaklanmış|FocusStates|Denetim odağa sahip.|
-|Plana odaklanmadan|FocusStates|Denetim odağa sahip değil.|
-|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|
+|Olağan|Ortak durumlar|Varsayılan durum.|
+|Gelme olayından|Ortak durumlar|Fare işaretçisi denetimin üzerine yerleştirilir.|
+|Basılması|Ortak durumlar|Denetime basıldığında.|
+|Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|
+|Diğinize|Odaklardaki durumlar|Denetim odağa sahiptir.|
+|Odaklanmadan gözetle|Odaklardaki durumlar|Denetimin odağı yok.|
+|Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|
+|Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|
+|Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|
 
-## <a name="repeatbutton-controltemplate-example"></a>RepeatButton ControlTemplate Örneği
+## <a name="repeatbutton-controltemplate-example"></a>RepeatButton ControlTemplate örneği
 
-Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.Primitives.RepeatButton> denetimi.
+Aşağıdaki örnek, <xref:System.Windows.Controls.Primitives.RepeatButton> denetimi için <xref:System.Windows.Controls.ControlTemplate> tanımlanacağını gösterir.
 
 [!code-xaml[ControlTemplateExamples#RepeatButton](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/scrollbar.xaml#repeatbutton)]
 
-Yukarıdaki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.
+Yukarıdaki örnekte aşağıdaki kaynaklardan biri veya daha fazlası kullanılmaktadır.
 
 [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]
 
-Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
+Tüm örnek için bkz. [ControlTemplates Ile stillendirme örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -58,5 +58,5 @@ Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://g
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
-- [Stil ve Şablon Oluşturma](styling-and-templating.md)
+- [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)

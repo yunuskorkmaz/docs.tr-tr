@@ -3,16 +3,18 @@ title: C# Etkileşimli öğreticilere giriş
 description: Tarayıcınızda C# öğrenin ve kendi geliştirme ortamınızı kullanmaya başlayın
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 564af21fb0f9b6cf8b5c3591ff5622278a8cbb22
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850773"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423096"
 ---
-# <a name="introduction-to-c"></a>C 'ye giriş\#
+# <a name="introduction-to-c"></a>C\# giriş
 
-C# Öğreticilere giriş konusuna hoş geldiniz. Bu, tarayıcınızda çalıştırabileceğiniz etkileşimli dersler ile başlar.
+C# Öğreticilere giriş konusuna hoş geldiniz. Bu, tarayıcınızda çalıştırabileceğiniz etkileşimli dersler ile başlar. Bu etkileşimli dersleri başlatmadan önce C# [ C# 101 video serisinden](https://aka.ms/dotnet3-csharp) temel bilgileri öğrenebilirsiniz.
+
+> [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 İlk dersler, kodun C# küçük parçacıkları kullanılarak kavramları açıklamaktadır. C# Sözdiziminin temel bilgilerini ve dizeler, sayılar ve Boole değerleri gibi veri türleriyle nasıl çalışacağınızı öğreneceksiniz. Bu, tüm etkileşimlidir ve dakikalar içinde kod yazmak ve çalıştırmak isteyeceksiniz. Bu ilk dersler daha önce programlama veya C# dil bilgisine sahip değildir.
 
@@ -20,7 +22,7 @@ Merhaba Dünya dersi izleyen tüm giriş öğreticileri, çevrimiçi tarayıcı 
 
 ## <a name="hello-worldhello-worldyml"></a>[Merhaba dünya](hello-world.yml)
 
-[Merhaba Dünya](hello-world.yml) öğreticisinde en temel C# programı oluşturacaksınız. `string` Türü ve metinle çalışmayı inceleyebilirsiniz.
+[Merhaba Dünya](hello-world.yml) öğreticisinde en temel C# programı oluşturacaksınız. `string` türünü ve metinle çalışmayı keşfedebilirsiniz.
 
 ## <a name="numbers-in-cnumbers-in-csharpyml"></a>[C# numaraları](numbers-in-csharp.yml)
 

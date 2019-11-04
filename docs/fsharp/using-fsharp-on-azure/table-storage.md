@@ -3,14 +3,14 @@ title: F# kullanarak Azure Tablo depolama kullanmaya başlama
 description: Yapılandırılmış verileri Azure Tablo depolama veya Azure Cosmos DB kullanarak bulutta depolayın.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 30ffd5f099dbb8efbf57104a2ade6c26304b7cee
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6833e2264f7543f50b94892b6980140e4bf1cdd1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395201"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424602"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F @ no__t-0 kullanarak Azure Tablo depolama ve Azure Cosmos DB Tablo API'si kullanmaya başlama
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F\# kullanarak Azure Tablo depolama ve Azure Cosmos DB Tablo API'si kullanmaya başlama
 
 Azure Tablo depolama, bulutta yapılandırılmış NoSQL verilerini depolayan bir hizmettir. Tablo depolama, şesız bir tasarıma sahip bir anahtar/öznitelik deposudur. Tablo Depolaması şesız olduğundan, uygulamanızın ihtiyaçları geliştikçe verilerinizi kolayca uyarlayabilirsiniz. Verilere erişim, tüm uygulama türleri için hızlı ve uygun maliyetli bir hesaplıdır. Tablo depolaması, benzer veri birimleri için geleneksel SQL 'den büyük ölçüde düşük maliyetlidir.
 
@@ -54,7 +54,7 @@ Azure Storage Table Service 'e bağlanıyorsanız, bu öğretici için bağlant�
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Azure Cosmos DB Bağlantı dizenizi alın
 
-Azure Cosmos DB 'e bağlanıyorsanız, bu öğretici için bağlantı dizeniz olması gerekir. Bağlantı dizenizi Azure portal kopyalayabilirsiniz. Azure portal, Cosmos DB hesabınızda **ayarlar** > **bağlantı dizesi**' ne gidin ve **Kopyala** düğmesine tıklayarak birincil Bağlantı dizenizi kopyalayın. 
+Azure Cosmos DB 'e bağlanıyorsanız, bu öğretici için bağlantı dizeniz olması gerekir. Bağlantı dizenizi Azure portal kopyalayabilirsiniz. Azure portal, Cosmos DB hesabınızda **ayarlar** > **bağlantı dizesi**' ne gidin ve **Kopyala** düğmesine tıklayarak birincil Bağlantı dizenizi kopyalayın.
 
 Öğreticide, aşağıdaki örnekte olduğu gibi betiğe Bağlantı dizenizi girin:
 
@@ -78,7 +78,7 @@ Bu `CloudStorageAccount` döndürür.
 
 ### <a name="create-the-table-service-client"></a>Tablo hizmeti istemcisini oluşturma
 
-@No__t-0 sınıfı tablo depolamadaki tabloları ve varlıkları almanızı sağlar. Hizmet istemcisini oluşturmak için bir yol aşağıda verilmiştir:
+`CloudTableClient` sınıfı tablo depolamadaki tabloları ve varlıkları almanızı sağlar. Hizmet istemcisini oluşturmak için bir yol aşağıda verilmiştir:
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
 
@@ -92,7 +92,7 @@ Bu örnek, zaten yoksa tablo oluşturmayı gösterir:
 
 ### <a name="add-an-entity-to-a-table"></a>Tabloya varlık ekleme
 
-Bir varlık `TableEntity` ' dan devralan bir türe sahip olmalıdır. @No__t-0 ' ı dilediğiniz şekilde genişletebilirsiniz, ancak türü parametre-daha az bir oluşturucuya sahip *olmalıdır* . Yalnızca `get` ve `set` olan özellikler Azure tablonuzda depolanır.
+Bir varlık `TableEntity` ' dan devralan bir türe sahip olmalıdır. `TableEntity` dilediğiniz şekilde genişletebilirsiniz, ancak türü parametre-daha az bir oluşturucuya sahip *olmalıdır* . Yalnızca `get` ve `set` olan özellikler Azure tablonuzda depolanır.
 
 Bir varlığın bölüm ve satır anahtarı, varlığı tabloda benzersiz şekilde tanımlar. Aynı bölüm anahtarına sahip varlıklar farklı bölüm anahtarlarıyla daha hızlı sorgulanabilir ancak farklı bölüm anahtarlarının kullanılması paralel işlemler için daha fazla ölçeklenebilirlik sağlar.
 
@@ -139,7 +139,7 @@ Bir bölümdeki tüm varlıkları sorgulamak istemiyorsanız, bölüm anahtarı 
 
 ### <a name="retrieve-a-single-entity"></a>Tek bir varlık alma
 
-Tek, belirli bir varlığı almak için bir sorgu yazabilirsiniz. Burada, "Ben Smith" müşterisini belirtmek için bir @no__t (0) kullanırsınız. Bir koleksiyon yerine bir @no__t geri alırsınız. Bir sorgudaki bölüm anahtarını ve satır anahtarını belirtme, tablo hizmetinden tek bir varlık almanın en hızlı yoludur.
+Tek, belirli bir varlığı almak için bir sorgu yazabilirsiniz. Burada, "Ben Smith" müşterisini belirtmek için bir `TableOperation` kullanırsınız. Bir koleksiyon yerine bir `Customer`geri alırsınız. Bir sorgudaki bölüm anahtarını ve satır anahtarını belirtme, tablo hizmetinden tek bir varlık almanın en hızlı yoludur.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
 

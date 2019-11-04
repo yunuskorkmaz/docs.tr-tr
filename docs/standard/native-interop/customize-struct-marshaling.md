@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: b174a817e82f9a9f123c79581656cc8e7179b435
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f4b8402413f4d2f558d8e61ad4f10490dece9835
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929033"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423987"
 ---
 # <a name="customizing-structure-marshaling"></a>Yapı hazırlamayı özelleştirme
 
@@ -20,19 +20,19 @@ Bazen yapılar için varsayılan sıralama kuralları, ihtiyacınız olan tam de
 
 ## <a name="customizing-structure-layout"></a>Yapı mizanpajını özelleştirme
 
-.Net, <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> alanların belleğe nasıl yerleştirileceğini <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> özelleştirmenizi sağlayacak özniteliği ve sabit listesini sağlar. Aşağıdaki kılavuz yaygın sorunlardan kaçınmanıza yardımcı olur.
+.NET, alanların belleğe nasıl yerleştirileceğini özelleştirmenizi sağlamak için <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> özniteliği ve <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> numaralandırması sağlar. Aşağıdaki kılavuz yaygın sorunlardan kaçınmanıza yardımcı olur.
 
-mümkün olan **her durumda kullanmayı ✔️** `LayoutKind.Sequential` .
+**✔️** mümkün olduğunda `LayoutKind.Sequential` kullanmayı düşünün.
 
-**✔️** yalnızca, yerel `LayoutKind.Explicit` yapının birleşim gibi açık bir düzeni de olduğunda, hazırlama sırasında kullanılır.
+**✔️** yalnızca, yerel yapının birleşim gibi açık bir düzeni de olduğunda, `LayoutKind.Explicit` yalnızca sıralama sırasında kullanılır.
 
-Windows dışı platformlarda `LayoutKind.Explicit` yapıları hazırlama sırasında **kullanmaktan kaçının ❌** . .NET Core çalışma zamanı, Intel veya AMD 64-bit Windows dışı sistemlerdeki yerel işlevlere değere göre açık yapıların geçirilmesini desteklemez. Ancak çalışma zamanı, tüm platformlarda başvuruya göre açık yapıların geçirilmesini destekler.
+❌ .NET Core 3,0 ' den önce çalışma zamanlarını hedeflemek gerekirse, Windows dışı platformlarda yapıları hazırlama `LayoutKind.Explicit` **kullanmaktan kaçının** . 3,0 öncesi .NET Core çalışma zamanı, Intel veya AMD 64-bit Windows dışı sistemlerdeki yerel işlevlere değere göre açık yapıların geçirilmesini desteklemez. Ancak çalışma zamanı, tüm platformlarda başvuruya göre açık yapıların geçirilmesini destekler.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Boole alan sıralamasını özelleştirme
 
-Yerel kodun birçok farklı Boolean temsili vardır. Windows tek başına, Boole değerlerini göstermenin üç yolu vardır. Çalışma zamanı, yapınızın yerel tanımını bilmez, bu yüzden en iyi yöntem, Boolean değerlerinizi nasıl sıraleyeceğinizi tahmin edebilir. .NET çalışma zamanı, Boolean alanınızı nasıl sıralamadığını göstermek için bir yol sağlar. Aşağıdaki örneklerde, .net `bool` 'in farklı yerel Boole türlerine nasıl sıralaması yapılacağı gösterilmektedir.
+Yerel kodun birçok farklı Boolean temsili vardır. Windows tek başına, Boole değerlerini göstermenin üç yolu vardır. Çalışma zamanı, yapınızın yerel tanımını bilmez, bu yüzden en iyi yöntem, Boolean değerlerinizi nasıl sıraleyeceğinizi tahmin edebilir. .NET çalışma zamanı, Boolean alanınızı nasıl sıralamadığını göstermek için bir yol sağlar. Aşağıdaki örnekler, .NET `bool` farklı yerel Boole türlerine nasıl hazırlanacağını göstermektedir.
 
-Aşağıdaki örnekte gösterildiği gibi, yerel 4 baytlık bir Win32 [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) değeri olarak sıralama varsayılan Boole değerleri:
+Boolean değerleri varsayılan olarak, aşağıdaki örnekte gösterildiği gibi yerel bir 4 baytlık Win32 [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) değeri olarak sıralanmasına sahiptir:
 
 ```csharp
 public struct WinBool
@@ -48,7 +48,7 @@ struct WinBool
 };
 ```
 
-Açık olmasını istiyorsanız, yukarıdaki gibi aynı davranışı almak için <xref:System.Runtime.InteropServices.UnmanagedType.Bool?displayProperty=nameWithType> değeri kullanabilirsiniz:
+Açık olmasını istiyorsanız, yukarıdaki gibi aynı davranışı almak için <xref:System.Runtime.InteropServices.UnmanagedType.Bool?displayProperty=nameWithType> değerini kullanabilirsiniz:
 
 ```csharp
 public struct WinBool
@@ -65,7 +65,7 @@ struct WinBool
 };
 ```
 
-`b` `bool` Aşağıdaki veya değerlerini`UnmanagedType.I1` kullanarak çalışma zamanına, alanı 1 baytlık yerel bir tür olarak sıralayamaz. `UnmanagedType.U1`
+Aşağıdaki `UnmanagedType.U1` veya `UnmanagedType.I1` değerlerini kullanarak, çalışma zamanına `b` alanını 1 baytlık yerel `bool` türü olarak sıralayamaz şekilde söyleyebilirsiniz.
 
 ```csharp
 public struct CBool
@@ -82,7 +82,7 @@ struct CBool
 };
 ```
 
-Windows 'ta, çalışma zamanına, Boole <xref:System.Runtime.InteropServices.UnmanagedType.VariantBool?displayProperty=nameWithType> değerini 2 baytlık `VARIANT_BOOL` bir değere göre sıralayamaz şekilde söylemek için bu değeri kullanabilirsiniz:
+Windows 'da, çalışma zamanının Boole değerini 2 baytlık bir `VARIANT_BOOL` değerine sıralaması için <xref:System.Runtime.InteropServices.UnmanagedType.VariantBool?displayProperty=nameWithType> değerini kullanabilirsiniz:
 
 ```csharp
 public struct VariantBool
@@ -100,7 +100,7 @@ struct VariantBool
 ```
 
 > [!NOTE]
-> `VARIANT_BOOL`, `VARIANT_TRUE = -1` ve`VARIANT_FALSE = 0`' deki en bool türlerden farklıdır. Ayrıca, eşit `VARIANT_TRUE` olmayan tüm değerler false olarak değerlendirilir.
+> `VARIANT_BOOL`, bu `VARIANT_TRUE = -1` ve `VARIANT_FALSE = 0`pek çok bool türünden farklıdır. Ayrıca, `VARIANT_TRUE` eşit olmayan tüm değerler false olarak değerlendirilir.
 
 ## <a name="customizing-array-field-marshaling"></a>Dizi alanı sıralamasını özelleştirme
 
@@ -122,7 +122,7 @@ struct DefaultArray
 };
 ```
 
-COM API 'leri ile arabirimleriniz varsa, dizileri nesneler olarak `SAFEARRAY*` sıralama yapmanız gerekebilir. Çalışma zamanına bir diziyi <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> bir `SAFEARRAY*`diziyi <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> sıralayamaz söylemek için ve değerini kullanabilirsiniz:
+COM API 'Leri ile arabirimleriniz varsa dizileri `SAFEARRAY*` nesne olarak sıralama yapmanız gerekebilir. Çalışma zamanına bir diziyi `SAFEARRAY*`olarak sıralayamaz söylemek için <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> ve <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> değerini kullanabilirsiniz:
 
 ```csharp
 public struct SafeArrayExample
@@ -139,9 +139,9 @@ struct SafeArrayExample
 };
 ```
 
-İçinde `SAFEARRAY`ne tür bir öğe olduğunu özelleştirmeniz gerekiyorsa, <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> ve öğelerinin tam öğe türünü özelleştirmek `SAFEARRAY`için ve <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> alanlarını kullanabilirsiniz.
+`SAFEARRAY`öğe türünü özelleştirmeniz gerekiyorsa, `SAFEARRAY`tam öğe türünü özelleştirmek için <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> ve <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> alanlarını kullanabilirsiniz.
 
-Diziyi yerinde sıralamakta ihtiyacınız varsa, sıralayıcıya diziyi yerinde sıralayamaz söylemek için <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType> değerini kullanabilirsiniz. Bu sıralama 'yı kullanırken, çalışma zamanının yapıya doğru bir şekilde alan ayırabilmesi için <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> dizideki öğe sayısı için alana bir değer sağlamanız gerekir.
+Diziyi yerinde sıralamakta ihtiyacınız varsa, sıralayıcıya diziyi yerinde sıralayamaz söylemek için <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType> değerini kullanabilirsiniz. Bu sıralama 'yı kullanırken, çalışma zamanının yapı için doğru alanı ayırabilmesi için dizideki öğe sayısı için <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> alanına bir değer sağlamanız gerekir.
 
 ```csharp
 public struct InPlaceArray
@@ -165,7 +165,7 @@ struct InPlaceArray
 
 .NET ayrıca, dize alanlarını hazırlama için çok çeşitli özelleştirmeler de sağlar.
 
-Varsayılan olarak, .NET, bir dizeyi null ile sonlandırılmış bir dizenin işaretçisi olarak sıraar. Kodlama, <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType>içindeki alanın değerine bağlıdır. Hiçbir öznitelik belirtilmemişse, kodlama varsayılan olarak bir ANSI kodlaması olur.
+Varsayılan olarak, .NET, bir dizeyi null ile sonlandırılmış bir dizenin işaretçisi olarak sıraar. Kodlama, <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType><xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> alanının değerine bağlıdır. Hiçbir öznitelik belirtilmemişse, kodlama varsayılan olarak bir ANSI kodlaması olur.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -197,7 +197,7 @@ struct DefaultString
 };
 ```
 
-Farklı alanlar için farklı kodlamalar kullanmanız veya yapı tanımınızda daha açık olmasını tercih etmeniz gerekiyorsa, <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> veya <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> değerlerini bir <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> öznitelik üzerinde kullanabilirsiniz.
+Farklı alanlar için farklı kodlamalar kullanmanız veya yapı tanımınızda daha açık olmasını tercih etmeniz gerekiyorsa, <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> özniteliğinde <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> veya <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> değerlerini kullanabilirsiniz.
 
 ```csharp
 public struct AnsiString
@@ -229,7 +229,7 @@ struct UnicodeString
 };
 ```
 
-Dizelerinizi UTF-8 kodlaması kullanarak sıralamak isterseniz, <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> <xref:System.Runtime.InteropServices.MarshalAsAttribute>içindeki değeri kullanabilirsiniz.
+Dizelerinizi UTF-8 kodlaması kullanarak sıralamak istiyorsanız <xref:System.Runtime.InteropServices.MarshalAsAttribute><xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> değerini kullanabilirsiniz.
 
 ```csharp
 public struct UTF8String
@@ -247,9 +247,9 @@ struct UTF8String
 ```
 
 > [!NOTE]
-> Kullanmak <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> .NET Framework 4,7 (veya sonraki sürümler) veya .NET Core 1,1 (ya da sonraki sürümler) gerektirir. .NET Standard 2,0 ' de kullanılamaz.
+> <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> kullanmak için .NET Framework 4,7 (veya sonraki sürümler) veya .NET Core 1,1 (ya da sonraki sürümler) gerekir. .NET Standard 2,0 ' de kullanılamaz.
 
-COM API 'Leri ile çalışıyorsanız bir dizeyi bir `BSTR`olarak sıralıyoruz. Değerini kullanarak bir dizeyi bir `BSTR`olarak sıraaktarabilirsiniz. <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType>
+COM API 'Leri ile çalışıyorsanız, bir dizeyi `BSTR`olarak sıralama yapmanız gerekebilir. <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> değerini kullanarak bir dizeyi `BSTR`olarak sıraaktarabilirsiniz.
 
 ```csharp
 public struct BString
@@ -266,7 +266,7 @@ struct BString
 };
 ```
 
-WinRT tabanlı bir API kullanırken bir dizeyi bir `HSTRING`olarak sıralamakta gerek olabilir.  Değerini kullanarak bir dizeyi bir `HSTRING`olarak sıraaktarabilirsiniz. <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType>
+WinRT tabanlı bir API kullanırken, bir dizeyi `HSTRING`olarak sıralama gerekebilir.  <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> değerini kullanarak bir dizeyi `HSTRING`olarak sıraaktarabilirsiniz.
 
 ```csharp
 public struct HString
@@ -283,7 +283,7 @@ struct BString
 };
 ```
 
-API 'niz dizeyi yapıya yerinde geçirmeniz gerekiyorsa, bu <xref:System.Runtime.InteropServices.UnmanagedType.ByValTStr?displayProperty=nameWithType> değeri kullanabilirsiniz. Tarafından `ByValTStr` sıralanan bir dizenin kodlamasının `CharSet` öznitelikten belirlendiğini unutmayın. Ayrıca, <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> alan tarafından bir dize uzunluğunun geçirilmesini gerektirir.
+API 'niz dizeyi yapıya yerinde geçirmeniz gerekiyorsa <xref:System.Runtime.InteropServices.UnmanagedType.ByValTStr?displayProperty=nameWithType> değerini kullanabilirsiniz. `ByValTStr` tarafından sıralanan bir dizenin kodlamasının `CharSet` özniteliğinden belirlendiğini unutmayın. Ayrıca, <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> alanı tarafından bir dize uzunluğunun geçirilmesini gerektirir.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -319,7 +319,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Ondalık alan sıralamasını özelleştirme
 
-Windows üzerinde çalışıyorsanız, yerel [ `CY` veya `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1) yapıyı kullanan bazı API 'lerle karşılaşabilirsiniz. Varsayılan olarak, .net `decimal` türü yerel [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) yapıya göre sıralar. Bununla birlikte <xref:System.Runtime.InteropServices.MarshalAsAttribute> , bir `decimal` değeri yerel <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> `CY` bir değere dönüştürmek üzere Sıralayıcı 'yı yönlendirmek için değeriyle birlikte kullanabilirsiniz.
+Windows üzerinde çalışıyorsanız, yerel [`CY` veya `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) yapısını kullanan bazı API 'lerle karşılaşabilirsiniz. Varsayılan olarak, .NET `decimal` türü yerel [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) yapısına göre sıralar. Ancak, Sıralayıcı 'nın bir `decimal` değerini yerel bir `CY` değerine dönüştürmesini istemek için <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> değeri ile bir <xref:System.Runtime.InteropServices.MarshalAsAttribute> kullanabilirsiniz.
 
 ```csharp
 public struct Currency
@@ -336,15 +336,15 @@ struct Currency
 };
 ```
 
-## <a name="marshaling-systemobjects"></a>Sıralama `System.Object`
+## <a name="marshaling-systemobjects"></a>`System.Object`öğeleri sıralaması
 
-Windows 'ta, yerel koda göre `object`türsüz alanları sıraaktarabilirsiniz. Bu alanları üç türden birine göre sıraaktarabilirsiniz:
+Windows 'da, `object`türü belirlenmiş alanları yerel koda göre sıraaktarabilirsiniz. Bu alanları üç türden birine göre sıraaktarabilirsiniz:
 
 - [`VARIANT`](/windows/win32/api/oaidl/ns-oaidl-variant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 - [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 
-Varsayılan olarak, bir `object`türü olan bir alan, nesneyi sarmalayan `IUnknown*` bir öğesine sıralanacaktır.
+Varsayılan olarak, bir `object`türü alan, nesneyi sarmalayan bir `IUnknown*` sıraya alınır.
 
 ```csharp
 public struct ObjectDefault
@@ -360,7 +360,7 @@ struct ObjectDefault
 };
 ```
 
-Bir nesne alanını bir `IDispatch*`öğesine sıralamak istiyorsanız <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType> değeri ile bir <xref:System.Runtime.InteropServices.MarshalAsAttribute> ekleyin.
+Bir nesne alanını bir `IDispatch*`sıralamak istiyorsanız <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType> değere sahip bir <xref:System.Runtime.InteropServices.MarshalAsAttribute> ekleyin.
 
 ```csharp
 public struct ObjectDispatch
@@ -377,7 +377,7 @@ struct ObjectDispatch
 };
 ```
 
-Bunu bir `VARIANT`olarak sıralamak istiyorsanız <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> değeri ile bir <xref:System.Runtime.InteropServices.MarshalAsAttribute> ekleyin.
+`VARIANT`olarak sıralamak istiyorsanız <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> değerine sahip bir <xref:System.Runtime.InteropServices.MarshalAsAttribute> ekleyin.
 
 ```csharp
 public struct ObjectVariant
@@ -394,7 +394,7 @@ struct ObjectVariant
 };
 ```
 
-Aşağıdaki tabloda, `obj` alanın farklı çalışma zamanı türlerinin `VARIANT`' de depolanan çeşitli türlere nasıl eşlendiğini açıklanmaktadır:
+Aşağıdaki tabloda `obj` alanın farklı çalışma zamanı türlerinin `VARIANT`depolanan çeşitli türlere nasıl eşlendiğini açıklanmaktadır:
 
 | .NET türü | DEĞIŞKEN türü | | .NET türü | DEĞIŞKEN türü |
 |------------|--------------|-|----------|--------------|

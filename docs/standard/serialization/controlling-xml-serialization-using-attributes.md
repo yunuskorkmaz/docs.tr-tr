@@ -15,21 +15,21 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 54660244c1b3cca8cb75539edbe23628b370afd5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e089924900196ae369de1becfe3d0b8f0a00b79c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934517"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459277"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme
 
-Öznitelikler, nesnenin XML serileştirme denetlemek için veya alternatif bir XML akışı sınıfları aynı kümesinden oluşturmak için kullanılabilir. Alternatif bir XML akışı oluşturma hakkında daha fazla ayrıntı için bkz. [nasıl yapılır: Bir XML Stream için alternatif öğe adı belirtin](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+Öznitelikler, bir nesnenin XML serileştirmesini denetlemek veya aynı sınıf kümesinden alternatif bir XML akışı oluşturmak için kullanılabilir. Alternatif XML akışı oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: BIR XML akışı Için alternatif bir öğe adı belirtme](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
-> Oluşturulan XML başlıklı bölümüne World Wide Web Consortium (W3C) belgesinin 5 uymalıdır, [Basit Nesne Erişim Protokolü (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), listelenen öznitelikleri kullanın [öznitelikleri emin denetim kodlanmış SOAP Serileştirme](attributes-that-control-encoded-soap-serialization.md).
+> Oluşturulan XML [basit nesne erişim Protokolü (SOAP) 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)adlı World WIDE Web KONSORSIYUMU (W3C) belgenin 5. bölümüne uyması gerekiyorsa, [kodlanmış soap serileştirmesini denetleyen özniteliklerde](attributes-that-control-encoded-soap-serialization.md)listelenen öznitelikleri kullanın.
 
-Varsayılan olarak, bir XML öğesi adı, sınıf veya üye ada göre belirlenir. Adlı basit bir sınıf içinde `Book`, adında bir alan `ISBN` bir XML öğesi etiketi üretecektir \<ISBN >, aşağıdaki örnekte gösterildiği gibi.
+Varsayılan olarak, bir XML öğesi adı, sınıf veya üye ada göre belirlenir. `Book`adlı basit bir sınıfta, aşağıdaki örnekte gösterildiği gibi, `ISBN` adlı bir alan \<ıSBN > bir XML öğesi etiketi oluşturacaktır.
 
 ```vb
 Public Class Book
@@ -50,7 +50,7 @@ public class Book
 // <ISBN>1234567890</ISBN>.
 ```
 
-Öğe yeni bir ad verin istiyorsanız, bu varsayılan davranış değiştirilebilir. Aşağıdaki kod nasıl bir özniteliği bu ayarlayarak sağlar gösterir <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> özelliği bir <xref:System.Xml.Serialization.XmlElementAttribute>.
+Öğe yeni bir ad verin istiyorsanız, bu varsayılan davranış değiştirilebilir. Aşağıdaki kod, bir <xref:System.Xml.Serialization.XmlElementAttribute><xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> özelliğini ayarlayarak bir özniteliğin bunu nasıl etkinleştirçalıştığını gösterir.
 
 ```vb
 Public Class TaxRates
@@ -66,11 +66,11 @@ public class TaxRates {
 }
 ```
 
-Öznitelikler hakkında daha fazla bilgi için bkz. [öznitelikleri](../../../docs/standard/attributes/index.md). XML serileştirme denetleyen öznitelikler listesi için bkz. [öznitelikleri, Denetim XML serileştirme](attributes-that-control-xml-serialization.md).
+Öznitelikler hakkında daha fazla bilgi için bkz. [öznitelikler](../../../docs/standard/attributes/index.md). XML serileştirmesini denetleyen özniteliklerin bir listesi için bkz. [XML serileştirmesini denetleyen öznitelikler](attributes-that-control-xml-serialization.md).
 
-## <a name="controlling-array-serialization"></a>Denetleme dizisi seri hale getirme
+## <a name="controlling-array-serialization"></a>Dizi serileştirme denetleniyor
 
-<xref:System.Xml.Serialization.XmlArrayAttribute> Ve <xref:System.Xml.Serialization.XmlArrayItemAttribute> öznitelikleri dizileri serileştirmek denetlemek için tasarlanmıştır. Bu öznitelikler kullanarak, öğe adı, ad alanı ve XML Şeması (XSD) veri türü denetleyebilirsiniz (başlıklı World Wide Web Consortium [www.w3.org] belgede tanımlanan "XML şema bölümü 2: "Veri türleri"). Bir dizide dahil edilebilir türleri de belirtebilirsiniz.
+<xref:System.Xml.Serialization.XmlArrayAttribute> ve <xref:System.Xml.Serialization.XmlArrayItemAttribute> öznitelikleri, dizilerin serileştirmesini denetlemek için tasarlanmıştır. Bu öznitelikleri kullanarak, öğe adı, ad alanı ve XML şeması (XSD) veri türünü ("XML şeması Bölüm 2: veri türleri" başlıklı World Wide Web Konsorsiyumu [www.w3.org] belgesinde tanımlandığı gibi) denetleyebilirsiniz. Bir dizide dahil edilebilir türleri de belirtebilirsiniz.
 
 <xref:System.Xml.Serialization.XmlArrayAttribute> Bir dizi serileştirilmiş olduğunda, kapsayan XML öğesi özelliklerini belirler. Örneğin, varsayılan olarak, aşağıdaki dizi serileştirmek adlı bir XML öğesi sonuçlanacak `Employees`. `Employees` Öğesi, bir dizi sonra dizi türü adlı öğeleri içerecek `Employee`.
 
@@ -132,7 +132,7 @@ Elde edilen XML aşağıdakine benzer.
 </Group>
 ```
 
-<xref:System.Xml.Serialization.XmlArrayItemAttribute>, Diğer yandan nasıl dizisinde bulunan öğeleri seri hale geldiği denetler. Öznitelik dizi dönerek alanına uygulandığını unutmayın.
+Diğer taraftan <xref:System.Xml.Serialization.XmlArrayItemAttribute>, dizide içerilen öğelerin serileştirilme şeklini denetler. Özniteliği diziyi döndüren alana uygulanacağını unutmayın.
 
 ```vb
 Public Class Group
@@ -160,7 +160,7 @@ Elde edilen XML aşağıdakine benzer.
 
 ## <a name="serializing-derived-classes"></a>Türetilen sınıfların seri hale getirilmedi
 
-Başka bir kullanımını <xref:System.Xml.Serialization.XmlArrayItemAttribute> türetilen sınıfların serileştirmek izin vermektir. Örneğin, adlı başka bir sınıf `Manager` , türetilen `Employee` önceki örneği eklenebilir. Geçerli <xref:System.Xml.Serialization.XmlArrayItemAttribute>, türetilmiş sınıf türü tanınmıyor çünkü kod çalışma zamanında başarısız olur. Bu sorunu gidermek için özniteliğini uygulayın iki kez, her zaman ayarı <xref:System.Xml.Serialization.XmlArrayItemAttribute.Type%2A> her kabul edilebilir türü (temel ve türetilen) özelliği.
+Başka bir kullanımını <xref:System.Xml.Serialization.XmlArrayItemAttribute> türetilen sınıfların serileştirmek izin vermektir. Örneğin, adlı başka bir sınıf `Manager` , türetilen `Employee` önceki örneği eklenebilir. Geçerli <xref:System.Xml.Serialization.XmlArrayItemAttribute>, türetilmiş sınıf türü tanınmıyor çünkü kod çalışma zamanında başarısız olur. Bu sorunu gidermek için, her zaman kabul edilebilir her tür (temel ve türetilmiş) için <xref:System.Xml.Serialization.XmlArrayItemAttribute.Type%2A> özelliğini ayarlarken özniteliği iki kez uygulayın.
 
 ```vb
 Public Class Group
@@ -202,7 +202,7 @@ Serileştirilmiş bir örnek şöyle olabilir.
     <Employee xsi:type = "Manager">
         <Name>Ann</Name>
         <Level>3</Level>
-    <Employee>
+    </Employee>
 </Employees>
 </Group>
 ```
@@ -241,7 +241,7 @@ Serileştirilmiş bir örnek şöyle olabilir.
 </Group>
 ```
 
-İki XML akışları ayırt etmek için başka bir XML şema tanımı aracı XML Şeması (XSD) belge dosyaları derlenmiş kod oluşturmak için kullanılacak yoludur. (Aracı kullanma hakkında daha fazla ayrıntı için bkz. [XML şema tanımı aracı ve XML serileştirmeyi](the-xml-schema-definition-tool-and-xml-serialization.md).) Hiçbir öznitelik alanına uygulandığında şema öğesi aşağıdaki şekilde açıklar.
+İki XML akışını ayırt etmenin bir diğer yolu, derlenmiş koddan XML şeması (XSD) belge dosyalarını oluşturmak için XML şema tanımı aracını kullanmaktır. (Aracı kullanma hakkında daha fazla bilgi için bkz. [XML şema tanımı aracı ve XML serileştirme](the-xml-schema-definition-tool-and-xml-serialization.md).) Alana hiçbir öznitelik uygulandığında, şema öğeyi aşağıdaki şekilde açıklar.
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -273,13 +273,13 @@ public class Group {
 }
 ```
 
-## <a name="controlling-serialization-of-classes-using-xmlrootattribute-and-xmltypeattribute"></a>Serileştirme XmlRootAttribute ve XmlTypeAttribute kullanarak sınıfların denetleme
+## <a name="controlling-serialization-of-classes-using-xmlrootattribute-and-xmltypeattribute"></a>XmlRootAttribute ve XmlTypeAttribute kullanarak sınıfların serileştirilmesi denetleniyor
 
-Bir sınıf (ve yalnızca bir sınıf) uygulanabilir iki özniteliği vardır: <xref:System.Xml.Serialization.XmlRootAttribute> ve <xref:System.Xml.Serialization.XmlTypeAttribute>. Bu öznitelikler çok benzer. <xref:System.Xml.Serialization.XmlRootAttribute> İçin yalnızca bir sınıf uygulanabilir: sınıf serileştirilmiş olduğunda, temsil eder XML belgesi açma kapatma ve, öğe — diğer bir deyişle, kök öğe. <xref:System.Xml.Serialization.XmlTypeAttribute>, Diğer el, kök sınıfı dahil olmak üzere herhangi bir sınıf uygulanabilir.
+Bir sınıfa (ve yalnızca bir sınıfa) uygulanabilen iki öznitelik vardır: <xref:System.Xml.Serialization.XmlRootAttribute> ve <xref:System.Xml.Serialization.XmlTypeAttribute>. Bu öznitelikler çok benzerdir. <xref:System.Xml.Serialization.XmlRootAttribute> İçin yalnızca bir sınıf uygulanabilir: sınıf serileştirilmiş olduğunda, temsil eder XML belgesi açma kapatma ve, öğe — diğer bir deyişle, kök öğe. <xref:System.Xml.Serialization.XmlTypeAttribute>, Diğer el, kök sınıfı dahil olmak üzere herhangi bir sınıf uygulanabilir.
 
-Örneğin, önceki örneklerde, `Group` kök sınıfı ve tüm genel alanlar ve Özellikler XML belgesinde bulunan XML öğelerine haline gelir. Bu nedenle, yalnızca bir kök sınıfı olabilir. Uygulayarak <xref:System.Xml.Serialization.XmlRootAttribute>, XML akışı tarafından oluşturulan denetleyebilirsiniz <xref:System.Xml.Serialization.XmlSerializer>. Örneğin, ad alanı ve öğe adını değiştirebilirsiniz.
+Örneğin, önceki örneklerde, `Group` kök sınıfı ve tüm genel alanlar ve Özellikler XML belgesinde bulunan XML öğelerine haline gelir. Bu nedenle, yalnızca bir kök sınıfı olabilir. <xref:System.Xml.Serialization.XmlRootAttribute>uygulayarak, <xref:System.Xml.Serialization.XmlSerializer>tarafından oluşturulan XML akışını kontrol edebilirsiniz. Örneğin, ad alanı ve öğe adını değiştirebilirsiniz.
 
-<xref:System.Xml.Serialization.XmlTypeAttribute> Oluşturulan XML Şeması denetlemenizi sağlar. Bu yetenek şeması XML Web hizmeti aracılığıyla yayımlamak gerektiğinde faydalıdır. Aşağıdaki örnekte, her ikisi de uygulanır <xref:System.Xml.Serialization.XmlTypeAttribute> ve <xref:System.Xml.Serialization.XmlRootAttribute> aynı sınıfa.
+<xref:System.Xml.Serialization.XmlTypeAttribute> oluşturulan XML 'in şemasını denetlemenize olanak tanır. Bu yetenek şeması XML Web hizmeti aracılığıyla yayımlamak gerektiğinde faydalıdır. Aşağıdaki örnekte, her ikisi de uygulanır <xref:System.Xml.Serialization.XmlTypeAttribute> ve <xref:System.Xml.Serialization.XmlRootAttribute> aynı sınıfa.
 
 ```vb
 <XmlRoot("NewGroupName"), _
@@ -303,7 +303,7 @@ Bu sınıf derlenmiş ve XML şema tanımı aracı şemasına üretmek için kul
 <xs:element name="NewGroupName" type="NewTypeName">
 ```
 
-Buna karşılık, sınıfının bir örneği, yalnızca serileştirmek için olsaydı `NewGroupName` XML belgesindeki bulundu.
+Buna karşılık, sınıfının bir örneğini seri hale getirmek istiyorsanız, yalnızca `NewGroupName` XML belgesinde bulunur.
 
 ```xml
 <NewGroupName>
@@ -311,7 +311,7 @@ Buna karşılık, sınıfının bir örneği, yalnızca serileştirmek için ols
 </NewGroupName>
 ```
 
-## <a name="preventing-serialization-with-the-xmlignoreattribute"></a>Serileştirme xmlıgnoreattribute ile önleme
+## <a name="preventing-serialization-with-the-xmlignoreattribute"></a>XmlIgnoreAttribute ile Serileştirmeyi engellemek
 
 Ortak özelliği olduğunda durumlar olabilir veya alan seri hale gerekmez. Örneğin, bir alan veya özellik meta veriler içeren için kullanılabilir. Böyle durumlarda, uygulama <xref:System.Xml.Serialization.XmlIgnoreAttribute> alanı veya özelliği için ve <xref:System.Xml.Serialization.XmlSerializer> üzerine atlar.
 
@@ -321,6 +321,6 @@ Ortak özelliği olduğunda durumlar olabilir veya alan seri hale gerekmez. Örn
 - [Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler](attributes-that-control-encoded-soap-serialization.md)
 - [XML Serileştirmeye Giriş](introducing-xml-serialization.md)
 - [XML Serileştirme Örnekleri](examples-of-xml-serialization.md)
-- [Nasıl yapılır: Bir XML Stream için alternatif öğe adı belirtin](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Nasıl yapılır: Bir nesneyi serileştirmek](how-to-serialize-an-object.md)
-- [Nasıl yapılır: Bir nesneyi seri durumdan çıkarma](how-to-deserialize-an-object.md)
+- [Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Nasıl yapılır: Nesne Serileştirme](how-to-serialize-an-object.md)
+- [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](how-to-deserialize-an-object.md)

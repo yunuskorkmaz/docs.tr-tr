@@ -8,15 +8,15 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70fbd1a4c4062708ab6082c4ec39e3e99354b004
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010351"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460494"
 ---
 # <a name="events-wpf"></a>Olaylar (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Açık öğe ağacında bir uygulamanın çeşitli dinleyicisi mevcut işleyiciler çağırabilirsiniz yönlendirilmiş olaylar tanıtır.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], bir uygulamanın öğe ağacındaki çeşitli dinleyicilerde bulunan işleyicileri çağırabilen yönlendirilmiş olayları tanıtır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)  
@@ -41,9 +41,9 @@ ms.locfileid: "62010351"
   [WPF'de XAML](xaml-in-wpf.md)  
   [Temel Öğeler](base-elements.md)  
   [Öğe Ağacı ve Serileştirme](element-tree-and-serialization.md)  
-  [Özellikler](properties-wpf.md)  
+  [Veri Erişimi](properties-wpf.md)  
   [Giriş](input-wpf.md)  
   [Kaynaklar](resources-wpf.md)  
-  [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)  
+  [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [WPF İçerik Modeli](../controls/wpf-content-model.md)  
   [İş Parçacığı Modeli](threading-model.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-ms.openlocfilehash: 7401d7fed89d18aa0b05e1c95871e4a025705627
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 350d5400b4e1df7238702ce925c974eecb2a0d7a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126310"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457955"
 ---
 # <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>4,8, 4,7, 4,6 ve 4,5 .NET Framework geçiş kılavuzu
 
@@ -33,7 +33,7 @@ Uygulamanızı önceki .NET Framework sürümlerinden 4,5, 4.5.1, 4.5.2, 4,6, 4.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uygulama Uyumluluğu](application-compatibility.md)
+- [Uygulama uyumluluğu](application-compatibility.md)
 - [.NET Framework 1.1'den Geçiş](migrating-from-the-net-framework-1-1.md)
 - [Sürüm Uyumluluğu](version-compatibility.md)
 - [Sürümler ve Bağımlılıklar](versions-and-dependencies.md)

@@ -9,46 +9,46 @@ helpviewer_keywords:
 - templates [WPF], ProgressBar
 - states [WPF], ProgressBar
 ms.assetid: 935aa600-16e6-4947-a905-37a189a583dd
-ms.openlocfilehash: f948cf2b4f4cd2a4cb73b0cd5fc754240c850b83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1bea39ba9b6d2cff9937a3fee1d1de41daf16b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770532"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459875"
 ---
 # <a name="progressbar-styles-and-templates"></a>ProgressBar Stilleri ve Şablonları
-Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.ProgressBar> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+Bu konuda <xref:System.Windows.Controls.ProgressBar> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="progressbar-parts"></a>ProgressBar bölümleri  
- Adlandırılmış bölümleri için aşağıdaki tabloda <xref:System.Windows.Controls.ProgressBar> denetimi.  
+## <a name="progressbar-parts"></a>ProgressBar parçaları  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.ProgressBar> denetimi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümü|Tür|Açıklama|  
+|Bölümüyle|Tür|Açıklama|  
 |-|-|-|  
-|PART_Indicator|<xref:System.Windows.FrameworkElement>|İlerleme durumunu gösteren nesne.|  
-|PART_Track|<xref:System.Windows.FrameworkElement>|İlerleme göstergesi yolunu tanımlayan nesne.|  
-|PART_GlowRect|<xref:System.Windows.FrameworkElement>|İlerleme çubuğu embellishes bir nesne.|  
+|PART_Indicator|<xref:System.Windows.FrameworkElement>|İlerlemeyi belirten nesne.|  
+|PART_Track|<xref:System.Windows.FrameworkElement>|İlerleme göstergesinin yolunu tanımlayan nesne.|  
+|PART_GlowRect|<xref:System.Windows.FrameworkElement>|İlerleme çubuğunu gösteren bir nesne.|  
   
 ## <a name="progressbar-states"></a>ProgressBar durumları  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.ProgressBar> denetimi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.ProgressBar> denetimi için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |----------------------|---------------------------|-----------------|  
-|Kararlı|CommonStates|<xref:System.Windows.Controls.ProgressBar> göre ilerleme raporlarınızı <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> özelliği.|  
-|Belirsiz|CommonStates|<xref:System.Windows.Controls.ProgressBar> Yinelenen bir desen ile genel ilerlemeyi raporlar.|  
-|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
+|Kararlı|Ortak durumlar|<xref:System.Windows.Controls.ProgressBar>, <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> özelliğine göre ilerlemeyi raporlar.|  
+|'Dır|Ortak durumlar|<xref:System.Windows.Controls.ProgressBar>, yinelenen bir desenli genel ilerlemeyi raporlar.|  
+|Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
+|Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
+|Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
   
-## <a name="progressbar-controltemplate-example"></a>ProgressBar ControlTemplate Örneği  
- Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.ProgressBar> denetimi.  
+## <a name="progressbar-controltemplate-example"></a>ProgressBar ControlTemplate örneği  
+ Aşağıdaki örnek, <xref:System.Windows.Controls.ProgressBar> denetimi için <xref:System.Windows.Controls.ControlTemplate> tanımlanacağını gösterir.  
   
  [!code-xaml[ControlTemplateExamples#ProgressBar](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/progressbar.xaml#progressbar)]  
   
- Yukarıdaki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
+ Yukarıdaki örnekte aşağıdaki kaynaklardan biri veya daha fazlası kullanılmaktadır.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Tüm örnek için bkz. [ControlTemplates Ile stillendirme örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -56,5 +56,5 @@ Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.P
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
-- [Stil ve Şablon Oluşturma](styling-and-templating.md)
+- [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)

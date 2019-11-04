@@ -2,28 +2,28 @@
 title: İş Akışı için İzlemeyi Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 889efc804bb45b384dfde5b4deb520a81d1e5486
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353057"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458905"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>İş Akışı için İzlemeyi Yapılandırma
 
 Bir iş akışı üç şekilde çalıştırılabilir:
 
-- @No__t içinde barındırılan-0
+- <xref:System.ServiceModel.Activities.WorkflowServiceHost> içinde barındırılan
 
-- @No__t olarak yürütüldü-0
+- <xref:System.Activities.WorkflowApplication> olarak yürütüldü
 
-- @No__t ile doğrudan yürütülür-0
+- <xref:System.Activities.WorkflowInvoker> kullanarak doğrudan yürütülür
 
-İş akışı barındırma seçeneğine bağlı olarak, bir izleme katılımcısı kod aracılığıyla veya bir yapılandırma dosyası aracılığıyla eklenebilir. Bu konu, izlemenin bir <xref:System.Activities.WorkflowApplication> ' a ve <xref:System.ServiceModel.Activities.WorkflowServiceHost> ' e bir izleme katılımcısı ekleyerek nasıl yapılandırıldığını ve <xref:System.Activities.WorkflowInvoker> kullanılırken izlemenin nasıl etkinleştirileceğini açıklar.
+İş akışı barındırma seçeneğine bağlı olarak, bir izleme katılımcısı kod aracılığıyla veya bir yapılandırma dosyası aracılığıyla eklenebilir. Bu konuda, izlemenin bir <xref:System.Activities.WorkflowApplication> ve <xref:System.ServiceModel.Activities.WorkflowServiceHost>bir izleme katılımcısı eklenerek nasıl yapılandırıldığı ve <xref:System.Activities.WorkflowInvoker>kullanılırken izlemenin nasıl etkinleştirileceği açıklanmaktadır.
 
 ## <a name="configuring-workflow-application-tracking"></a>Iş akışı uygulama Izlemeyi yapılandırma
 
-Bir iş akışı <xref:System.Activities.WorkflowApplication> sınıfı kullanılarak çalıştırılabilir. Bu konu, <xref:System.Activities.WorkflowApplication> iş akışı konağına izleme katılımcısı ekleyerek izlemenin [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] iş akışı uygulaması için nasıl yapılandırıldığını gösterir. Bu durumda iş akışı, iş akışı uygulaması olarak çalışır. Bir iş akışı uygulamasını, <xref:System.Activities.WorkflowApplication> sınıfını kullanan şirket içinde barındırılan bir. exe dosyası olan kod aracılığıyla (bir yapılandırma dosyası kullanmak yerine) yapılandırırsınız. İzleme katılımcısı <xref:System.Activities.WorkflowApplication> örneğine bir uzantı olarak eklenir. Bu işlem, WorkflowApplication örneği için Uzantılar koleksiyonuna <xref:System.Activities.Tracking.TrackingParticipant> eklenerek yapılır.
+Bir iş akışı <xref:System.Activities.WorkflowApplication> sınıfı kullanılarak çalıştırılabilir. Bu konu, <xref:System.Activities.WorkflowApplication> iş akışı konağına izleme katılımcısı ekleyerek bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] iş akışı uygulaması için izlemenin nasıl yapılandırıldığını gösterir. Bu durumda iş akışı, iş akışı uygulaması olarak çalışır. Bir iş akışı uygulamasını, <xref:System.Activities.WorkflowApplication> sınıfını kullanan şirket içinde barındırılan bir. exe dosyası olan kod aracılığıyla (bir yapılandırma dosyası kullanmak yerine) yapılandırırsınız. İzleme katılımcısı, <xref:System.Activities.WorkflowApplication> örneğine bir uzantı olarak eklenir. Bu, <xref:System.Activities.Tracking.TrackingParticipant> WorkflowApplication örneği için Uzantılar koleksiyonuna eklenerek yapılır.
 
 Bir iş akışı uygulaması için aşağıdaki kodda gösterildiği gibi <xref:System.Activities.Tracking.EtwTrackingParticipant> davranış uzantısını ekleyebilirsiniz.
 
@@ -50,9 +50,9 @@ instance.Extensions.Add(trackingParticipant);
 
 ### <a name="configuring-workflow-service-tracking"></a>Iş akışı hizmeti Izlemeyi yapılandırma
 
-Bir iş akışı, <xref:System.ServiceModel.Activities.WorkflowServiceHost> hizmet konağında barındırıldığında bir WCF hizmeti olarak gösterilebilir. <xref:System.ServiceModel.Activities.WorkflowServiceHost>, iş akışı tabanlı hizmet için özelleşmiş bir .NET ServiceHost uygulamasıdır. Bu bölümde, <xref:System.ServiceModel.Activities.WorkflowServiceHost> ' de çalışan [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı hizmeti için izlemenin nasıl yapılandırılacağı açıklanmaktadır. Bir Web. config dosyası (Web 'de barındırılan bir hizmet için) veya bir App. config dosyası aracılığıyla, bir hizmet davranışı belirterek veya ' ye izlemeye özgü bir davranış ekleyerek kod aracılığıyla bir uygulama. config dosyası (konsol uygulaması gibi tek başına bir uygulamada barındırılan bir hizmet için) ile yapılandırılır. hizmet ana bilgisayarı için <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> koleksiyonu.
+Bir iş akışı, <xref:System.ServiceModel.Activities.WorkflowServiceHost> hizmeti konağında barındırıldığında bir WCF hizmeti olarak gösterilebilir. <xref:System.ServiceModel.Activities.WorkflowServiceHost>, iş akışı tabanlı hizmet için özelleşmiş bir .NET ServiceHost uygulamasıdır. Bu bölümde, <xref:System.ServiceModel.Activities.WorkflowServiceHost>çalıştıran bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı hizmeti için izlemenin nasıl yapılandırılacağı açıklanmaktadır. Bir Web. config dosyası (Web 'de barındırılan bir hizmet için) veya bir App. config dosyası aracılığıyla, bir hizmet davranışı belirterek veya ' ye izlemeye özgü bir davranış ekleyerek kod aracılığıyla bir uygulama. config dosyası (konsol uygulaması gibi tek başına bir uygulamada barındırılan bir hizmet için) ile yapılandırılır. hizmet ana bilgisayarı için <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> koleksiyonu.
 
-@No__t-0 ' da barındırılan bir iş akışı hizmeti için, aşağıdaki örnekte gösterildiği gibi, bir yapılandırma dosyasındaki < `behavior` > öğesini kullanarak <xref:System.Activities.Tracking.EtwTrackingParticipant> ekleyebilirsiniz.
+<xref:System.ServiceModel.WorkflowServiceHost>barındırılan bir iş akışı hizmeti için, aşağıdaki örnekte gösterildiği gibi, bir yapılandırma dosyasındaki <`behavior`> öğesini kullanarak <xref:System.Activities.Tracking.EtwTrackingParticipant> ekleyebilirsiniz.
 
 ```xml
 <behaviors>
@@ -61,10 +61,10 @@ Bir iş akışı, <xref:System.ServiceModel.Activities.WorkflowServiceHost> hizm
           <etwTracking profileName="Sample Tracking Profile" />
         </behavior>
    </serviceBehaviors>
-<behaviors>
+</behaviors>
 ```
 
-Alternatif olarak, <xref:System.ServiceModel.WorkflowServiceHost> ' da barındırılan bir iş akışı hizmeti için, kod aracılığıyla <xref:System.Activities.Tracking.EtwTrackingParticipant> davranış uzantısını ekleyebilirsiniz. Özel bir izleme katılımcısı eklemek için yeni bir davranış uzantısı oluşturun ve aşağıdaki örnek kodda gösterildiği gibi <xref:System.ServiceModel.ServiceHost> ' a ekleyin.
+Alternatif olarak, <xref:System.ServiceModel.WorkflowServiceHost>barındırılan bir iş akışı hizmeti için, kod aracılığıyla <xref:System.Activities.Tracking.EtwTrackingParticipant> davranışı uzantısını ekleyebilirsiniz. Özel bir izleme katılımcısı eklemek için yeni bir davranış uzantısı oluşturun ve aşağıdaki örnek kodda gösterildiği gibi <xref:System.ServiceModel.ServiceHost> ekleyin.
 
 > [!NOTE]
 > Özel bir izleme katılımcısı ekleyen özel bir davranış öğesinin nasıl oluşturulacağını gösteren örnek kodu görüntülemek istiyorsanız [izleme](./samples/tracking.md) örneklerine bakın.
@@ -138,7 +138,7 @@ if (null != workflowServiceHost)
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Workflowwınvoker kullanarak izlemeyi yapılandırma
 
-@No__t-0 kullanılarak yürütülen bir iş akışına yönelik izlemeyi yapılandırmak için, izleme sağlayıcısını bir <xref:System.Activities.WorkflowInvoker> örneğine uzantı olarak ekleyin. Aşağıdaki kod örneği, [özel izleme](./samples/custom-tracking.md) örneğinden yapılır.
+<xref:System.Activities.WorkflowInvoker>kullanılarak yürütülen bir iş akışına yönelik izlemeyi yapılandırmak için, izleme sağlayıcısını bir <xref:System.Activities.WorkflowInvoker> örneğine uzantı olarak ekleyin. Aşağıdaki kod örneği, [özel izleme](./samples/custom-tracking.md) örneğinden yapılır.
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -152,7 +152,7 @@ WF yürütmesi izlenirken, analiz günlüğü ve hata ayıklama günlüğünde g
 
 Hata ayıklama izleme olayları hata ayıklama günlüğüne yazılır. Olay Görüntüleyicisi WF hata ayıklama izleme olaylarını toplamak için, hata ayıklama günlüğünü etkinleştirin.
 
-1. Olay Görüntüleyicisi açmak için **Başlat**' a ve ardından Çalıştır ' a tıklayın **.** Çalıştır iletişim kutusunda `eventvwr` yazın.
+1. Olay Görüntüleyicisi açmak için **Başlat**' a ve ardından Çalıştır ' a tıklayın **.** Çalıştır iletişim kutusunda `eventvwr`yazın.
 
 2. Olay Görüntüleyicisi iletişim kutusunda, **uygulamalar ve hizmetler günlükleri** düğümünü genişletin.
 
@@ -168,7 +168,7 @@ WF 4, izleme kayıtlarını ETW (Windows için olay Izleme) oturumuna yazan bir 
 
 İzleme kayıtlarını görüntülemek için aşağıdaki adımları izleyin.
 
-1. Olay Görüntüleyicisi açmak için **Başlat**' a ve ardından Çalıştır ' a tıklayın **.** Çalıştır iletişim kutusunda `eventvwr` yazın.
+1. Olay Görüntüleyicisi açmak için **Başlat**' a ve ardından Çalıştır ' a tıklayın **.** Çalıştır iletişim kutusunda `eventvwr`yazın.
 
 2. Olay Görüntüleyicisi iletişim kutusunda, **uygulamalar ve hizmetler günlükleri** düğümünü genişletin.
 
@@ -196,7 +196,7 @@ Olayların belirli bir uygulama günlüğüne yazılması gerekiyorsa, yeni sağ
     </system.serviceModel>
     ```
 
-2. Bildirim dosyasını%windir%\Microsoft.NET\Framework @ no__t-0 @ no__t-1En son sürümü olan [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] > \Microsoft.Windows.ApplicationServer.Applications.man geçici bir konuma kopyalayın ve şu şekilde yeniden adlandırın Microsoft. Windows. ApplicationServer. Applications_Provider1. Man
+2. Bildirim dosyasını%windir%\Microsoft.NET\Framework\\\<en son [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man sürümünden geçici bir konuma kopyalayın ve şu şekilde yeniden adlandırın Microsoft. Windows. ApplicationServer. Applications_Provider1. Man
 
 3. Bildirim dosyasındaki GUID 'yi yeni GUID ile değiştirin.
 

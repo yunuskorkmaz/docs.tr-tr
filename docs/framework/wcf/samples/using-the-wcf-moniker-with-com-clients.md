@@ -2,12 +2,12 @@
 title: WCF Bilinen Adını COM İstemcileri ile Kullanma
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 2836b8c034a62602822ca629189e38eff818180a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 321d59285b0ef86e4631634d90229a0d8e79657b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038722"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424715"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF Bilinen Adını COM İstemcileri ile Kullanma
 Bu örnek, Web hizmetlerini Microsoft Office Visual Basic for Applications (Office VBA) veya Visual Basic 6,0 gibi COM tabanlı geliştirme ortamlarında bütünleştirmek için Windows Communication Foundation (WCF) hizmet bilinen adının nasıl kullanılacağını gösterir. Bu örnek, bir Windows betik ana istemcisi (. vbs), destekleyici istemci kitaplığı (. dll) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (. dll) içerir. Hizmet bir Hesaplayıcı hizmetidir ve COM istemcisi, hizmet üzerinde matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) çağırır. İstemci etkinliği ileti kutusu penceresinde görünür.  
@@ -20,11 +20,11 @@ Bu örnek, Web hizmetlerini Microsoft Office Visual Basic for Applications (Offi
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   
- Hizmet, aşağıdaki kod `ICalculator` örneğinde gösterildiği gibi tanımlanan bir sözleşmeyi uygular.  
+ Hizmet, aşağıdaki kod örneğinde gösterildiği gibi tanımlanan bir `ICalculator` sözleşme uygular.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -62,7 +62,7 @@ svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samp
 [assembly: ComVisible(true)]  
 ```  
   
- Projeyi oluşturduktan sonra, aşağıdaki örnekte gösterildiği gibi kullanarak `regasm` com görünebilir türlerini kaydedin.  
+ Projeyi oluşturduktan sonra, aşağıdaki örnekte gösterildiği gibi `regasm` kullanarak COM görünebilir türleri kaydedin.  
   
 ```console  
 regasm.exe /tlb:CalcProxy.tlb client.dll  
@@ -70,14 +70,14 @@ regasm.exe /tlb:CalcProxy.tlb client.dll
   
  Oluşturulan bütünleştirilmiş kod, genel derleme önbelleğine eklenmelidir. Kesinlikle gerekli olmasa da, derlemeyi bulma çalışma zamanının sürecini basitleştirir. Aşağıdaki komut, derlemeyi genel derleme önbelleğine ekler.  
   
-```  
+```console  
 gacutil.exe /i client.dll  
 ```  
   
 > [!NOTE]
 > Hizmet bilinen adı yalnızca tür kaydı gerektirir ve hizmetle iletişim kurmak için proxy kullanmaz.  
   
- ComCalcClient. vbs istemci uygulaması, hizmet `GetObject` için bir ara sunucu oluşturmak üzere işlevini kullanır ve hizmetin adresini, bağlamasını ve sözleşmesini belirtmek için hizmet bilinen kullanım sözdizimini kullanır.  
+ ComCalcClient. vbs istemci uygulaması, hizmet için bir proxy oluşturmak üzere `GetObject` işlevini kullanır ve hizmetin adresini, bağlamayı ve sözleşmesini belirtmek için hizmet bilinen kullanım sözdizimini kullanır.  
   
 ```vbscript
 Set typedServiceMoniker = GetObject(  
@@ -91,7 +91,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
 - İstemcinin bu uç noktayla bağlanmak için kullanması gereken bağlama. Bu durumda, sistem tarafından tanımlanan wsHttpBinding, istemci yapılandırma dosyalarında özel bağlamalar tanımlanbilse de kullanılır. Windows komut dosyası ana bilgisayarı ile kullanmak için özel bağlama, cscript. exe ile aynı dizindeki bir cscript. exe. config dosyasında tanımlanır.  
   
-- Uç noktada desteklenen sözleşmenin türü. Bu, yukarıda oluşturulup kaydedilen türdür. Visual Basic betiği kesin türü belirtilmiş bir COM ortamı sağlamadığından, sözleşmeye yönelik bir tanımlayıcı belirtilmelidir. Bu GUID, OLE `interfaceID` /com Nesne Görüntüleyicisi (Oleview. exe) gibi com araçları kullanılarak görüntülenebilen CalcProxy. tlb ' dir. Office VBA veya Visual Basic 6,0 gibi türü kesin belirlenmiş ortamlarda, tür kitaplığına açık bir başvuru eklemek ve ardından Proxy nesnesinin türünü bildirmek, sözleşme parametresinin yerine kullanılabilir. Bu Ayrıca, istemci uygulama geliştirme sırasında IntelliSense desteği sağlar.  
+- Uç noktada desteklenen sözleşmenin türü. Bu, yukarıda oluşturulup kaydedilen türdür. Visual Basic betiği kesin türü belirtilmiş bir COM ortamı sağlamadığından, sözleşmeye yönelik bir tanımlayıcı belirtilmelidir. Bu GUID, OLE/COM Nesne Görüntüleyicisi (OleView. exe) gibi COM araçları kullanılarak görüntülenebilen CalcProxy. tlb dosyasından `interfaceID`. Office VBA veya Visual Basic 6,0 gibi türü kesin belirlenmiş ortamlarda, tür kitaplığına açık bir başvuru eklemek ve ardından Proxy nesnesinin türünü bildirmek, sözleşme parametresinin yerine kullanılabilir. Bu Ayrıca, istemci uygulama geliştirme sırasında IntelliSense desteği sağlar.  
   
  Proxy örneğinin hizmet bilinen adıyla oluşturulması, istemci uygulama proxy üzerinde Yöntemler çağırabilir ve bu da hizmet bilinen hizmet işlemlerini çağıran hizmet adı altyapısına neden olur.  
   
@@ -105,7 +105,7 @@ WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(1
 ## <a name="wsdl-contract"></a>WSDL sözleşmesi  
  Bilinen adı bir WSDL sözleşmesiyle kullanmak için, hiçbir istemci kitaplığı kaydı gerekmez, ancak hizmet için WSDL sözleşmesinin, hizmet için WSDL uç noktasına erişmek üzere bir tarayıcı kullanma gibi bir bant dışı mekanizmadan alınması gerekir. Bilinen ad daha sonra bu sözleşmeye yürütme zamanında erişebilir.  
   
- ComCalcClient. vbs istemci uygulaması, `FileSystemObject` yerel olarak kaydedilen WSDL dosyasına erişmek için öğesini kullanır ve ardından hizmet için bir ara sunucu oluşturmak üzere `GetObject` işlevini kullanır.  
+ ComCalcClient. vbs istemci uygulaması, yerel olarak kaydedilen WSDL dosyasına erişmek için `FileSystemObject` kullanır ve ardından hizmet için bir proxy oluşturmak üzere `GetObject` işlevini yeniden kullanır.  
   
 ```vbscript  
 ' Open the WSDL contract file and read it all into the wsdlContract string  
@@ -129,7 +129,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
 - Hizmet uç noktasının adresi.  
   
-- İstemcinin bu uç nokta ile bağlanmak için kullanması gereken bağlama ve bu bağlamanın tanımlandığı ad alanı. Bu durumda `wsHttpBinding_ICalculator` , kullanılır.  
+- İstemcinin bu uç nokta ile bağlanmak için kullanması gereken bağlama ve bu bağlamanın tanımlandığı ad alanı. Bu durumda `wsHttpBinding_ICalculator` kullanılır.  
   
 - Sözleşmeyi tanımlayan WSDL. Bu durumda, serviceWsdl. xml dosyasından okunan dizedir.  
   
@@ -150,7 +150,7 @@ WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtrac
 ## <a name="metadata-exchange-contract"></a>Meta veri değişimi sözleşmesi  
  Bilinen adı, WSDL sözleşimiyle birlikte bir MEX sözleşmesiyle birlikte kullanmak için, istemci kaydı gerekmez. Hizmetin sözleşmesi, meta veri değişim iç kullanımı üzerinden yürütme sırasında alınır.  
   
- ComCalcClient. vbs istemci uygulaması, hizmeti için bir `GetObject` ara sunucu oluşturmak üzere işlevini kullanır.  
+ ComCalcClient. vbs istemci uygulaması, hizmet için bir proxy oluşturmak üzere `GetObject` işlevini kullanır.  
   
 ```vbscript  
 ' Create a string for the service moniker specifying the address to retrieve the service metadata from  
@@ -169,7 +169,7 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
   
 - Hizmet uç noktasının adresi.  
   
-- İstemcinin bu uç nokta ile bağlanmak için kullanması gereken bağlama ve bu bağlamanın tanımlandığı ad alanı. Bu durumda `wsHttpBinding_ICalculator` , kullanılır.  
+- İstemcinin bu uç nokta ile bağlanmak için kullanması gereken bağlama ve bu bağlamanın tanımlandığı ad alanı. Bu durumda `wsHttpBinding_ICalculator` kullanılır.  
   
 - Sözleşmenin adı ve ad alanı. WSDL birden fazla sözleşme içerebileceğinden bu kimlik gereklidir.  
   
@@ -191,17 +191,17 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
 3. Visual Studio için Geliştirici Komut İstemi, dile özgü klasör altında \client\bin klasörünü açın.  
   
     > [!NOTE]
-    > [!INCLUDE[wv](../../../../includes/wv-md.md)] ,[!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 veya Windows Server 2008 R2 kullanıyorsanız, komut istemi 'ni yönetici ayrıcalıklarıyla çalıştırdığınızdan emin olun.  
+    > [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 veya Windows Server 2008 R2 kullanıyorsanız, komut istemi 'ni yönetici ayrıcalıklarıyla çalıştırdığınızdan emin olun.  
   
-4. Dll 'yi bir TLB dosyasına aktarmak içinyazın.`tlbexp.exe client.dll /out:CalcProxy.tlb` Bir "tür kitaplığı verme programı Uyarısı" beklenmektedir, ancak genel tür gerekli olmadığından bir sorun değil.  
+4. Dll 'yi bir TLB dosyasına aktarmak için `tlbexp.exe client.dll /out:CalcProxy.tlb` yazın. Bir "tür kitaplığı verme programı Uyarısı" beklenmektedir, ancak genel tür gerekli olmadığından bir sorun değil.  
   
-5. Türleri com ile kaydetmek içinyazın.`regasm.exe /tlb:CalcProxy.tlb client.dll` Bir "tür kitaplığı verme programı Uyarısı" beklenmektedir, ancak genel tür gerekli olmadığından bir sorun değil.  
+5. Türleri COM 'a kaydetmek için `regasm.exe /tlb:CalcProxy.tlb client.dll` yazın. Bir "tür kitaplığı verme programı Uyarısı" beklenmektedir, ancak genel tür gerekli olmadığından bir sorun değil.  
   
-6. Derlemeyi genel derleme önbelleğine eklemek içinyazın.`gacutil.exe /i client.dll`  
+6. Derlemeyi genel bütünleştirilmiş kod önbelleğine eklemek için `gacutil.exe /i client.dll` yazın.  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için  
   
-1. Aşağıdaki adresi yazarak, bir tarayıcı kullanarak hizmete erişebilme sınamasını yapın: `http://localhost/servicemodelsamples/service.svc`. Yanıt olarak bir onay sayfası görüntülenmelidir.  
+1. Aşağıdaki adresi yazarak hizmete bir tarayıcı kullanarak erişebiliyor musunuz: `http://localhost/servicemodelsamples/service.svc`. Yanıt olarak bir onay sayfası görüntülenmelidir.  
   
 2. Dile özgü klasörün altındaki \Client öğesinden ComCalcClient. vbs ' yi çalıştırın. İstemci etkinliği ileti kutusu pencereleri ' nde görüntülenir.  
   
@@ -221,13 +221,13 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 6. Client. dll kitaplığını dile özgü klasörün altındaki \client\bin klasöründen istemci bilgisayardaki bir dizine kopyalayın.  
   
-7. Bir komut isteminden, istemci bilgisayardaki bu hedef dizine gidin. [!INCLUDE[wv](../../../../includes/wv-md.md)] Veya[!INCLUDE[lserver](../../../../includes/lserver-md.md)]kullanıyorsanız, komut istemi ' ni yönetici olarak çalıştırdığınızdan emin olun.  
+7. Bir komut isteminden, istemci bilgisayardaki bu hedef dizine gidin. [!INCLUDE[wv](../../../../includes/wv-md.md)] veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)]kullanıyorsanız, komut istemi ' ni yönetici olarak çalıştırdığınızdan emin olun.  
   
-8. Dll 'yi bir TLB dosyasına aktarmak içinyazın.`tlbexp.exe client.dll /out:CalcProxy.tlb` Bir "tür kitaplığı verme programı Uyarısı" beklenmektedir, ancak genel tür gerekli olmadığından bir sorun değil.  
+8. Dll 'yi bir TLB dosyasına aktarmak için `tlbexp.exe client.dll /out:CalcProxy.tlb` yazın. Bir "tür kitaplığı verme programı Uyarısı" beklenmektedir, ancak genel tür gerekli olmadığından bir sorun değil.  
   
-9. Türleri com ile kaydetmek içinyazın.`regasm.exe /tlb:CalcProxy.tlb client.dll` Komutu çalıştırmadan önce, yolu içeren `regasm.exe` klasörüne ayarlanmış olduğundan emin olun.  
+9. Türleri COM 'a kaydetmek için `regasm.exe /tlb:CalcProxy.tlb client.dll` yazın. Komutu çalıştırmadan önce yolun `regasm.exe` içeren klasöre ayarlandığından emin olun.  
   
-10. Derlemeyi genel derleme önbelleğine eklemek içinyazın.`gacutil.exe /i client.dll` Komutu çalıştırmadan önce, yolu içeren `gacutil.exe` klasörüne ayarlanmış olduğundan emin olun.  
+10. Derlemeyi genel bütünleştirilmiş kod önbelleğine eklemek için `gacutil.exe /i client.dll` yazın. Komutu çalıştırmadan önce yolun `gacutil.exe` içeren klasöre ayarlandığından emin olun.  
   
 11. Bir tarayıcı kullanarak hizmete istemci bilgisayardan erişebilmeniz için test edin.  
   

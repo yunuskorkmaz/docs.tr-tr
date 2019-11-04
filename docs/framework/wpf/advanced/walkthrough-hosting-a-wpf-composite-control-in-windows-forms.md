@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 4a0b15ded5050833d4e87a30b977139834b624d4
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197934"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458926"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodda önemli bir yatırımınız varsa, sıfırdan yazmak yerine mevcut [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamanızı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] genişletmek daha etkili olabilir. Yaygın bir senaryo, Windows Forms uygulamanızda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulanmış bir veya daha fazla denetim eklemek istemeniz durumunda olur. WPF denetimlerini özelleştirme hakkında daha fazla bilgi için bkz. [Denetim özelleştirmesi](../controls/control-customization.md).  
@@ -87,7 +87,7 @@ Bu yönergeyi tamamlamak için Visual Studio gerekir.
 #### <a name="styling-the-ui-elements"></a>UI öğelerini Stillendirme  
  Veri girişi formundaki öğelerin birçoğu benzer bir görünüme sahiptir ve bu, özelliklerinin birkaçı için aynı ayarlara sahip oldukları anlamına gelir. Her öğenin özniteliklerini ayrı olarak ayarlamak yerine, önceki XAML öğelerin sınıfları için standart özellik ayarlarını tanımlamak üzere <xref:System.Windows.Style> öğelerini kullanır. Bu yaklaşım, denetimin karmaşıklığını azaltır ve tek bir stil özniteliğiyle birden çok öğenin görünümünü değiştirmenize olanak sağlar.  
   
- <xref:System.Windows.Style> öğeleri <xref:System.Windows.Controls.Grid> öğenin <xref:System.Windows.FrameworkElement.Resources%2A> özelliğinde bulunur, bu nedenle denetimdeki tüm öğeler tarafından kullanılabilirler. Bir stil adlandırılmışsa, stilin adına ayarlanmış bir <xref:System.Windows.Style> öğesi ekleyerek onu bir öğeye uygularsınız. Adında olmayan stiller öğesi için varsayılan stil olur. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stilleri hakkında daha fazla bilgi için bkz. [Stil oluşturma ve şablon](../controls/styling-and-templating.md)oluşturma.  
+ <xref:System.Windows.Style> öğeleri <xref:System.Windows.Controls.Grid> öğenin <xref:System.Windows.FrameworkElement.Resources%2A> özelliğinde bulunur, bu nedenle denetimdeki tüm öğeler tarafından kullanılabilirler. Bir stil adlandırılmışsa, stilin adına ayarlanmış bir <xref:System.Windows.Style> öğesi ekleyerek onu bir öğeye uygularsınız. Adında olmayan stiller öğesi için varsayılan stil olur. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stilleri hakkında daha fazla bilgi için bkz. [Stil oluşturma ve şablon](../../../desktop-wpf/fundamentals/styles-templates-overview.md)oluşturma.  
   
  Aşağıdaki XAML bileşik denetim için <xref:System.Windows.Style> öğelerini gösterir. Stillerin öğelere nasıl uygulandığını görmek için önceki XAML 'ye bakın. Örneğin, son <xref:System.Windows.Controls.TextBlock> öğesi `inlineText` stiline sahiptir ve son <xref:System.Windows.Controls.TextBox> öğesi varsayılan stili kullanır.  
   

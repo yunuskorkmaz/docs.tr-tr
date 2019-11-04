@@ -2,12 +2,12 @@
 title: 'Risk azaltma: yol Iki nokta denetimleri'
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-ms.openlocfilehash: ee71f6ef1e70509e772aee2cc75d00c33122a92e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e88643fea3bd507289436f41880a2de34117884f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126226"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457902"
 ---
 # <a name="mitigation-path-colon-checks"></a>Risk azaltma: yol Iki nokta denetimleri
 .NET Framework 4.6.2 hedefleyen uygulamalarla başlayarak, daha önce desteklenmeyen yolları (hem uzunluk hem de biçim bakımından) desteklemeye yönelik bir dizi değişiklik yapılmıştır. Özellikle, uygun sürücü ayırıcı söz dizimini (iki nokta üst üste) denetler.  
@@ -32,4 +32,4 @@ ms.locfileid: "73126226"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Hedefleme Değişiklikleri](retargeting-changes-in-the-net-framework-4-6-2.md)
+- [Uygulama uyumluluğu](application-compatibility.md)

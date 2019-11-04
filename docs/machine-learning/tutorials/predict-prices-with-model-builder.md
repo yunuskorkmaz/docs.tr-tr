@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 314b637b4a43725f6daeefa6097544567dcaabc2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f5010f944dba007e24d3c0e22d4e339f9ed0522a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124296"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459193"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Öğretici: model Oluşturucu ile gerileme kullanarak fiyatları tahmin etme
 
@@ -180,4 +180,4 @@ Bu öğreticide bahsedilen konular hakkında daha fazla bilgi edinmek için aşa
 - [Model Oluşturucu senaryoları](../automate-training-with-model-builder.md#scenarios)
 - [Regresyon](../resources/glossary.md#regression)
 - [Regresyon modeli ölçümleri](../resources/metrics.md#metrics-for-regression)
-- [NYC TLC TAXI seyahat veri kümesi](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
+- [NYC TLC TAXI seyahat veri kümesi](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)

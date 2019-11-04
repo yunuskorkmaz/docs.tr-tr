@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: cac7a7552d1a24480d614b7b90fdd8cf0ef8a3e8
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 04183b2404d26c783e14dc6f4cb4141bab0d7621
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197796"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424431"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
 
@@ -136,13 +136,13 @@ Proje dosyasındaki `ApplicationDefinition`, `Page`ve `Resource` derleme eylemle
 
 Yapı işleminin sonunda, tüm uygulama derlemeleri ve içerik dosyaları hazırlandıktan sonra, uygulamanın ClickOnce bildirimleri oluşturulur.
 
-Dağıtım bildirim dosyası, dağıtım modelini açıklar: geçerli sürüm, güncelleştirme davranışı ve Yayımcı kimliği ile birlikte dijital imza. Bu bildirim, dağıtımı işleyen yöneticiler tarafından yazılmak üzere tasarlanmıştır. Dosya uzantısı. XBAP ([!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]için) ve. Application yüklü uygulamalar için. İlki `HostInBrowser` proje özelliği tarafından dikte edilir ve sonuç olarak bildirim, uygulamayı tarayıcıda barındırılan olarak tanımlar.
+Dağıtım bildirim dosyası, dağıtım modelini açıklar: geçerli sürüm, güncelleştirme davranışı ve Yayımcı kimliği ile birlikte dijital imza. Bu bildirim, dağıtımı işleyen yöneticiler tarafından yazılmak üzere tasarlanmıştır. Dosya uzantısı. XBAP (XAML tarayıcı uygulamaları (XBAP) için) ve yüklü uygulamalar için. Application. İlki `HostInBrowser` proje özelliği tarafından dikte edilir ve sonuç olarak bildirim, uygulamayı tarayıcıda barındırılan olarak tanımlar.
 
 Uygulama bildirimi (bir. exe. manifest dosyası) uygulama derlemelerini ve bağımlı kitaplıkları açıklar ve uygulamanın gerektirdiği izinleri listeler. Bu dosya, uygulama geliştiricisi tarafından yazılmayı amaçlanır. Bir ClickOnce uygulamasını başlatmak için, kullanıcı uygulamanın dağıtım bildirim dosyasını açar.
 
-Bu bildirim dosyaları her zaman [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]için oluşturulur. Yüklü uygulamalar için, `GenerateManifests` özelliği proje dosyasında `true`değer ile belirtilmediği takdirde oluşturulmaz.
+Bu bildirim dosyaları her zaman XBAP için oluşturulur. Yüklü uygulamalar için, `GenerateManifests` özelliği proje dosyasında `true`değer ile belirtilmediği takdirde oluşturulmaz.
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] tipik Internet bölgesi uygulamalarına atanan izinlerin üzerine ve üstüne iki ek izin alın: <xref:System.Security.Permissions.WebBrowserPermission> ve <xref:System.Security.Permissions.MediaPermission>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] yapı sistemi bu izinleri uygulama bildiriminde bildirir.
+XBAP 'ler, tipik Internet bölgesi uygulamalarına atanan izinlerin üzerinde ve üzerinde iki ek izin alır: <xref:System.Security.Permissions.WebBrowserPermission> ve <xref:System.Security.Permissions.MediaPermission>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] yapı sistemi bu izinleri uygulama bildiriminde bildirir.
 
 <a name="Incremental_Build_Support"></a>
 

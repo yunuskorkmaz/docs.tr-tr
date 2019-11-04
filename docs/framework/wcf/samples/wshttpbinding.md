@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Profile binding
 ms.assetid: 22d85b19-0135-4141-9179-a0e9c343ad73
-ms.openlocfilehash: 7751e40762a99711302681f28a88d451087e4980
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5a2d190fe7dfd5305b47da0e6e67de822cfd695b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044506"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424453"
 ---
 # <a name="wshttpbinding"></a>WSHttpBinding
-Bu örnek, Windows Communication Foundation (WCF) kullanılarak tipik bir hizmetin ve tipik bir istemcinin nasıl uygulanacağını gösterir. Bu örnek, bir istemci konsol programından (Client. exe) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığından oluşur. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, matematik işlemlerini (ekleme `ICalculator` , çıkarma, çarpma ve bölme) sunan arabirim tarafından tanımlanır. İstemci belirli bir matematik işlemine zaman uyumlu istekler yapar ve hizmet sonuçla yanıt verir. İstemci etkinliği konsol penceresinde görünür.  
+Bu örnek, Windows Communication Foundation (WCF) kullanılarak tipik bir hizmetin ve tipik bir istemcinin nasıl uygulanacağını gösterir. Bu örnek, bir istemci konsol programından (Client. exe) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığından oluşur. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) sunan `ICalculator` arabirimi tarafından tanımlanır. İstemci belirli bir matematik işlemine zaman uyumlu istekler yapar ve hizmet sonuçla yanıt verir. İstemci etkinliği konsol penceresinde görünür.  
   
 > [!IMPORTANT]
 > Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsHttp`  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bu örnek, `ICalculator` bir sözleşmeyi [ \<WSHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)kullanarak gösterir. Bu bağlamanın yapılandırması Web. config dosyasında genişletildi.  
+ Bu örnek, `ICalculator` sözleşmesini [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)kullanarak gösterir. Bu bağlamanın yapılandırması Web. config dosyasında genişletildi.  
   
 ```xml
 <bindings>  
@@ -60,15 +60,15 @@ Bu örnek, Windows Communication Foundation (WCF) kullanılarak tipik bir hizmet
 </bindings>  
 ```  
   
- Taban `binding` öğesinde `maxReceivedMessageSize` değeri, gelen bir iletinin en büyük boyutunu (bayt cinsinden) yapılandırmanıza olanak tanır. `hostNameComparisonMode` Değer, ana bilgisayar adının hizmete ileti serbest bırakıldığında kabul edilip edilmeyeceğini yapılandırmanızı sağlar. Değer `messageEncoding` , iletiler için metin veya MTOM kodlamasının kullanılıp kullanılmayacağını yapılandırmanızı sağlar. Değer `textEncoding` , iletiler için karakter kodlamasını yapılandırmanızı sağlar. Değer `bypassProxyOnLocal` , yerel iletişim için bir http proxy 'si kullanıp kullanmayacağınızı yapılandırmanıza olanak tanır. `transactionFlow` Değer, geçerli işlemin akan olup olmadığını yapılandırır (işlem akışı için bir işlem yapılandırılmışsa).  
+ Temel `binding` öğesinde, `maxReceivedMessageSize` değeri gelen iletinin en büyük boyutunu (bayt cinsinden) yapılandırmanıza olanak tanır. `hostNameComparisonMode` değeri, ana bilgisayar adının hizmete ileti serbest bırakıldığında kabul edilip edilmeyeceğini yapılandırmanızı sağlar. `messageEncoding` değeri, iletiler için metin veya MTOM kodlamasının kullanılıp kullanılmayacağını yapılandırmanızı sağlar. `textEncoding` değeri iletiler için karakter kodlamasını yapılandırmanıza olanak tanır. `bypassProxyOnLocal` değeri, yerel iletişim için bir HTTP proxy 'si kullanıp kullanmayacağınızı yapılandırmanıza olanak tanır. `transactionFlow` değeri, geçerli işlemin akan olup olmadığını yapılandırır (işlem akışı için bir işlem yapılandırılmışsa).  
   
- ReliableSession > öğesinde, etkin Boole değeri, güvenilir oturumların etkinleştirilip etkinleştirilmeyeceğini yapılandırır. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) Değer `ordered` , ileti sıralamasını korunup korunmadığını yapılandırır. Değer `inactivityTimeout` , bir oturumun hata vermeden önce ne kadar süreyle boşta kalabileceğini yapılandırır.  
+ [\<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) öğesinde, etkin Boole değeri, güvenilir oturumların etkinleştirilip etkinleştirilmeyeceğini yapılandırır. `ordered` değeri, ileti sıralamasını korunup korunmadığını yapılandırır. `inactivityTimeout` değeri, bir oturumun hata vermeden önce ne kadar süreyle boşta kalabileceğini yapılandırır.  
   
- Güvenlik >, değerhangigüvenlikmodununkullanılmasıgerektiğiniyapılandırır.`mode` [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) Bu örnekte [ \<ileti](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) güvenliği kullanılmaktadır, bu neden > ileti [ \<güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)içinde belirtilir.  
+ [\<güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)`mode` değeri hangi güvenlik modunun kullanılması gerektiğini yapılandırır. Bu örnekte ileti güvenliği, [\<ileti >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) neden [\<güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)içinde belirtilmekte kullanılır.  
   
  Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -81,7 +81,7 @@ Press <ENTER> to terminate client.
   
 1. Aşağıdaki komutu kullanarak ASP.NET 4,0 ' ü yükler.  
   
-    ```  
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

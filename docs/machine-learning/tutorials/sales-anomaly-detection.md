@@ -4,12 +4,12 @@ description: Ürün satış verileri için anomali algılama uygulaması oluştu
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ed4c24fac2348c021982ad593417b33d50347dd1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 37c6b99fbd7db63c19201e0c6dce9b2b6d9f1932
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774435"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423604"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Öğretici: ML.NET ile ürün satışlardaki anormallikleri algılama
 
@@ -107,7 +107,7 @@ Projenize yeni bir sınıf ekleyin:
 
 ### <a name="initialize-variables-in-main"></a>Değişkenleri ana olarak Başlat
 
-1. @No__t_2 değişkenini bildirmek ve başlatmak için `Main` yöntemindeki `Console.WriteLine("Hello World!")` satırı aşağıdaki kodla değiştirin:
+1. `mlContext` değişkenini bildirmek ve başlatmak için `Main` yöntemindeki `Console.WriteLine("Hello World!")` satırı aşağıdaki kodla değiştirin:
 
     [!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateMLContext "Create the ML Context")]
 
@@ -127,7 +127,7 @@ ML.NET içindeki veriler [ıdataview sınıfı](xref:Microsoft.ML.IDataView)olar
 
 Anomali algılama, beklenmeyen veya olağandışı olayları ya da davranışları işaretler. Sorunları nerede aramak ve "Bu tuhaf?" sorusunu cevaplamanıza yardımcı olacak ipuçları verir.
 
-![Bu tuhaf](./media/sales-anomaly-detection/anomalydetection.png)
+!["Bu tuhaf" anomali algılama örneğidir.](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
 
 Anomali algılama, zaman serisi veri aykırı durumları algılama işlemidir; belirli bir giriş zaman serisini, davranışın beklenmediği veya "tuhaf" olduğunu gösterir.
 
@@ -152,7 +152,7 @@ Artışlar ve değişiklik noktalarını algılamak için aynı ürün satış v
 
 Ani algılamanın amacı, zaman serisi veri değerlerinin çoğunluğunun önemli ölçüde farklı olduğu ani, geçici bir artışlarıyla 'yi belirlemektir. Bu şüpheli nadir öğe, olay veya gözlemlerin en aza indirme zamanında algılanması önemlidir. Aşağıdaki yaklaşım,: kesintiler, Cyber saldırıları veya viral web içeriği gibi çeşitli anormallikleri algılamak için kullanılabilir. Aşağıdaki görüntü, zaman serisi veri kümesindeki ani artışlar örneğidir:
 
-![SpikeDetection](./media/sales-anomaly-detection/SpikeDetection.png)
+![İki ani algılama gösteren ekran görüntüsü.](./media/sales-anomaly-detection/two-spike-detections.png)
 
 ### <a name="add-the-createemptydataview-method"></a>CreateEmptyDataView () yöntemi ekleme
 
@@ -266,7 +266,7 @@ Alert   Score   P-Value
 
 `Change points`, bir zaman serisi olay akışı, düzey değişiklikler ve eğilimler gibi değerlerin dağıtımında kalıcı değişikliklerdir. Bu kalıcı değişiklikler `spikes` son olarak çok daha uzun ve çok zararlı olay (ler) i gösteriyor olabilir. `Change points`, genellikle çıplak gözle görünmez, ancak verilerinizde aşağıdaki yöntemde olduğu gibi yaklaşımlar kullanılarak algılanabilir.  Aşağıdaki görüntü, değişiklik noktası algılamayı bir örneğidir:
 
-![ChangePointDetection](./media/sales-anomaly-detection/ChangePointDetection.png)
+![Değişiklik noktası algılamayı gösteren ekran görüntüsü.](./media/sales-anomaly-detection/change-point-detection.png)
 
 ### <a name="create-the-detectchangepoint-method"></a>DetectChangepoint () metodunu oluşturma
 

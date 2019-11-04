@@ -7,35 +7,35 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b88ef444283f4e1e85009c59b39f3cc41965d300
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051019"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460011"
 ---
 # <a name="inline-styles-and-templates"></a>Satır İçi Stil ve Şablonları
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sağlar <xref:System.Windows.Style> nesneleri ve şablon nesneleri (<xref:System.Windows.FrameworkTemplate> alt sınıflarını) öğesinin görsel görünümüne kaynakları tanımlamak için bir yol kullanılabilmesi için birden çok kez. Bu nedenle, öznitelikleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] türleri ele <xref:System.Windows.Style> ve <xref:System.Windows.FrameworkTemplate> neredeyse her zaman mevcut stilleri ve şablonları kaynak başvuruları yerine satır içi yenilerini tanımlayın.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], kaynakların birden çok kez kullanılabilmesi için, kaynaklardaki bir öğenin görsel görünümünü tanımlamanın bir yolu olarak <xref:System.Windows.Style> nesneleri ve şablon nesneleri (<xref:System.Windows.FrameworkTemplate> alt sınıfları) sağlar. Bu nedenle, <xref:System.Windows.Style> ve <xref:System.Windows.FrameworkTemplate> türlerini alan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] öznitelikleri neredeyse her zaman satır içi yenilerini tanımlamak yerine var olan stillere ve şablonlara kaynak başvuruları yapabilir.  
   
-## <a name="limitations-of-inline-styles-and-templates"></a>Satır içi stilleri ve şablonları sınırlamaları  
- İçinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], stil ve şablon özellikler teknik olarak ayarlanabilir iki yoldan biriyle. Öznitelik sözdizimi, örneğin bir kaynak içinde tanımlanan bir stile başvurmak için kullanabileceğiniz `<` *nesne*`Style="{StaticResource`*myResourceKey*`}" .../>`. Veya örneğin bir stil satır içi tanımlamak için özellik öğesi sözdizimini kullanabilirsiniz:  
+## <a name="limitations-of-inline-styles-and-templates"></a>Satır Içi stiller ve şablonların sınırlamaları  
+ [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], stil ve Şablon Özellikleri Teknik olarak iki şekilde ayarlanabilir. Kaynak içinde tanımlanmış bir stile başvurmak için öznitelik sözdizimini kullanabilirsiniz; Örneğin, `<`*nesnesi* *myresourcekey*`}" .../>``Style="{StaticResource`. Ya da bir stil satır içi tanımlamak için özellik öğesi sözdizimini kullanabilirsiniz, örneğin:  
   
- `<` *Nesne* `>`  
+ *nesne* `>` `<`  
   
- `<` *Nesne* `.Style>`  
+ *nesne* `.Style>` `<`  
   
- `<` `Style`  `.../>`  
+ `<` `Style``.../>`  
   
- `</` *Nesne* `.Style>`  
+ *nesne* `.Style>` `</`  
   
- `</` *Nesne* `>`  
+ *nesne* `>` `</`  
   
- Öznitelik kullanımı çok daha yaygındır. Satır içi olarak tanımlanan ve kaynaklar içinde tanımlanmamış bir stil yalnızca kapsayıcı öğe için mutlaka kapsama alınır ve hiçbir kaynak anahtarına sahip olduğu gibi bir kolayca yeniden kullanılamaz. Genel bir kaynak tarafından tanımlanan stil daha verimli ve kullanışlı ve daha genel mantığıyla [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] programlama modeli biçimlendirmede tasarımdan kod program mantığında ayırma ilkesi.  
+ Öznitelik kullanımı çok daha yaygındır. Satır içi tanımlanmış ve kaynaklarda tanımlanmamış bir stil, yalnızca kapsayan öğe kapsamına alınır ve kaynak anahtarı olmadığından kolayca yeniden kullanılamaz. Genel olarak kaynak tanımlı bir stil daha kullanışlıdır ve yararlı olur ve kod içindeki program mantığını biçimlendirme içinde tasarlamadan ayırmak için genel [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] programlama modeli ilkesiyle birlikte tutulmaktadır.  
   
- Genellikle yalnızca ilgili konumda stil veya şablonu kullanmak istiyorsanız bile, bir stil veya şablon satır içi ayarlamak için bir neden yoktur. Bir stil veya şablon sürebilir öğelerin çoğu, bir içerik özelliğine ve içerik modeli de destekler. Hangi mantıksal ağaç yalnızca kullanıyorsanız, stil veya şablon ile bir kez oluşturun, yalnızca doğrudan biçimlendirmede eşdeğer alt öğeleri, içerik özelliğini doldurmak daha kolay olacaktır. Bu stil ve şablon mekanizmalarını birlikte atlar.  
+ Genellikle, söz konusu stili veya şablonu yalnızca o konumda kullanmak istiyorsanız bile, bir stil veya şablon satır içi ayarlamak için bir neden yoktur. Stil veya şablon alan çoğu öğe, içerik özelliğini ve bir içerik modelini de destekler. Yalnızca stil veya şablon oluşturma aracılığıyla oluşturduğunuz herhangi bir mantıksal ağacı kullanıyorsanız, doğrudan biçimlendirme içindeki bu içerik özelliğini yalnızca eşdeğer alt öğelerle doldurmanız daha da kolay olur. Bu, stili ve şablon mekanizmalarını tamamen atlar.  
   
- Etkin nesneyi döndürmek biçimlendirme uzantıları tarafından diğer sözdizimleri da stilleri ve şablonları için mümkündür. Olası senaryolar sahip olan iki uzantı şunlardır [TemplateBinding](templatebinding-markup-extension.md) ve <xref:System.Windows.Data.Binding>.  
+ Bir nesne döndüren biçimlendirme uzantıları tarafından etkinleştirilen diğer sözdizimleri, stiller ve şablonlar için de mümkündür. Olası senaryolara sahip iki uzantı de [TemplateBinding](templatebinding-markup-extension.md) ve <xref:System.Windows.Data.Binding>içerir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)
+- [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

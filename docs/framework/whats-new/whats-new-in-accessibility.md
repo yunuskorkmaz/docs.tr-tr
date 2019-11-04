@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 150b8458828b1c0f42fc4cb0980a8ff090a89e2a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22d70d0ee976d9c1a6aabd57e5d13dc70cd2d081
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140654"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454262"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework erişilebilirlik yenilikleri
 
@@ -709,4 +709,4 @@ Bu geliştirmeler, klavye odağı sırası gibi önceki bazı davranışları de
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework yenilikler](whats-new.md)
+- [.NET Framework yenilikler](index.md)

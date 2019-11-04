@@ -10,16 +10,15 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: ccc6a4c4640b5f473d21f4ab0c82df2034a8fd9d
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: fb7ad54f61d9dcfe94379aef14930a0395da5291
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920014"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424586"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML Tarayıcı Uygulamalarına Genel Bakış
-<a name="introduction"></a>
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] hem Web uygulamalarının hem de zengin istemci uygulamalarının özelliklerini birleştirir. Web uygulamaları gibi, XBAP 'ler bir Web sunucusuna dağıtılabilir ve Internet Explorer veya Firefox 'tan başlatılabilir. Zengin istemci uygulamaları gibi, XBAP 'ler WPF 'nin yeteneklerini kullanabilir. XBAP 'lerin geliştirilmesi, zengin istemci geliştirmeye de benzer. Bu konu, XBAP geliştirmeye basit, yüksek düzey bir giriş sağlar ve XBAP geliştirmenin standart zengin istemci geliştirmeden farklı olduğunu açıklar.
+<a name="introduction"></a>XAML tarayıcı uygulamaları (XBAP 'ler) hem Web uygulamalarının hem de zengin istemci uygulamalarının özelliklerini birleştirir. Web uygulamaları gibi, XBAP 'ler bir Web sunucusuna dağıtılabilir ve Internet Explorer veya Firefox 'tan başlatılabilir. Zengin istemci uygulamaları gibi, XBAP 'ler WPF 'nin yeteneklerini kullanabilir. XBAP 'lerin geliştirilmesi, zengin istemci geliştirmeye de benzer. Bu konu, XBAP geliştirmeye basit, yüksek düzey bir giriş sağlar ve XBAP geliştirmenin standart zengin istemci geliştirmeden farklı olduğunu açıklar.
 
  Bu konu aşağıdaki bölümleri içermektedir:
 

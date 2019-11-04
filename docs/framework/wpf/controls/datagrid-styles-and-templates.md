@@ -9,165 +9,165 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: dacc1222958ab05971c9681d33a0c431b72d0531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1ef962132f4c057229c8150a8d49809ce8c7430
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912294"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460395"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid Stilleri ve Şablonları
-Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.DataGrid> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+Bu konuda <xref:System.Windows.Controls.DataGrid> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="datagrid-parts"></a>DataGrid bölümleri  
- Adlandırılmış bölümleri için aşağıdaki tabloda <xref:System.Windows.Controls.DataGrid> denetimi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.DataGrid> denetimi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümü|Tür|Açıklama|  
+|Bölümüyle|Tür|Açıklama|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Sütun üst bilgilerini içeren satır.|  
   
- Oluştururken bir <xref:System.Windows.Controls.ControlTemplate> için bir <xref:System.Windows.Controls.DataGrid>, şablonunuzu içerebilir bir <xref:System.Windows.Controls.ItemsPresenter> içinde bir <xref:System.Windows.Controls.ScrollViewer>. ( <xref:System.Windows.Controls.ItemsPresenter> Her öğe görüntüler <xref:System.Windows.Controls.DataGrid>; <xref:System.Windows.Controls.ScrollViewer> denetimi içinde kaydırma sağlar).  Varsa <xref:System.Windows.Controls.ItemsPresenter> doğrudan alt öğesi değil <xref:System.Windows.Controls.ScrollViewer>, size gereken <xref:System.Windows.Controls.ItemsPresenter> adı `ItemsPresenter`.  
+ Bir <xref:System.Windows.Controls.DataGrid>için <xref:System.Windows.Controls.ControlTemplate> oluşturduğunuzda, şablonunuz <xref:System.Windows.Controls.ScrollViewer>içinde bir <xref:System.Windows.Controls.ItemsPresenter> içerebilir. (<xref:System.Windows.Controls.ItemsPresenter>, <xref:System.Windows.Controls.DataGrid>her öğeyi görüntüler; <xref:System.Windows.Controls.ScrollViewer> denetimin içinde kaydırmaya izin vermez).  <xref:System.Windows.Controls.ItemsPresenter>, <xref:System.Windows.Controls.ScrollViewer>doğrudan alt öğesi değilse, `ItemsPresenter`adına <xref:System.Windows.Controls.ItemsPresenter> vermelisiniz.  
   
- İçin varsayılan şablonu <xref:System.Windows.Controls.DataGrid> içeren bir <xref:System.Windows.Controls.ScrollViewer> denetimi. Tarafından tanımlanan bölümleri hakkında daha fazla bilgi için <xref:System.Windows.Controls.ScrollViewer>, bkz: [ScrollViewer stilleri ve şablonları](scrollviewer-styles-and-templates.md).  
+ <xref:System.Windows.Controls.DataGrid> için varsayılan şablon <xref:System.Windows.Controls.ScrollViewer> bir denetim içerir. <xref:System.Windows.Controls.ScrollViewer>tarafından tanımlanan parçalar hakkında daha fazla bilgi için bkz. [ScrollViewer stilleri ve şablonları](scrollviewer-styles-and-templates.md).  
   
 ## <a name="datagrid-states"></a>DataGrid durumları  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.DataGrid> denetimi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.DataGrid> denetimi için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Normal|CommonStates|Varsayılan durumu.|  
-|Devre dışı|CommonStates|Denetim devre dışıdır.|  
-|InvalidFocused|ValidationStates|Denetim, geçerli değil ve odağa sahip.|  
-|InvalidUnfocused|ValidationStates|Denetim, geçerli değil ve odak sahip değil.|  
-|Geçerli|ValidationStates|Denetim geçerli değil.|  
+|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|  
+|Invalidodaklanmış|Doğrulama durumları|Denetim geçerli değil ve odağa sahip.|  
+|Invalidunodaklanmış|Doğrulama durumları|Denetim geçerli değil ve odağa sahip değil.|  
+|Geçerli|Doğrulama durumları|Denetim geçerli.|  
   
 ## <a name="datagridcell-parts"></a>DataGridCell bölümleri  
- <xref:System.Windows.Controls.DataGridCell> Öğesi herhangi bir adlandırılmış bölümü yok.  
+ <xref:System.Windows.Controls.DataGridCell> öğesinin adlandırılmış bölümü yok.  
   
 ## <a name="datagridcell-states"></a>DataGridCell durumları  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.DataGridCell> öğesi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.DataGridCell> öğesi için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Normal|CommonStates|Varsayılan durumu.|  
-|Fareyi üzerine getirme|CommonStates|Fare işaretçisi hücrenin üzerine yerleştirilir.|  
-|Odaklanmış|FocusStates|Hücre odağa sahip.|  
-|Plana odaklanmadan|FocusStates|Hücre odak yok|  
-|Geçerli|CurrentStates|Hücre geçerli hücreyi ' dir.|  
-|Normal|CurrentStates|Hücre geçerli hücreyi değil.|  
-|Ekran|InteractionStates|Hücre görünen modundadır.|  
-|Düzenleme|InteractionStates|Hücre düzenleme modunda olduğu.|  
-|Seçildi|SelectionStates|Hücre seçildi.|  
-|Seçimi kaldırıldı|SelectionStates|Hücre seçilmedi.|  
-|InvalidFocused|ValidationStates|Hücre geçerli değil ve odağa sahip.|  
-|InvalidUnfocused|ValidationStates|Hücre geçerli değil ve odak sahip değil.|  
-|Geçerli|ValidationStates|Hücre geçerli değil.|  
+|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Gelme olayından|Ortak durumlar|Fare işaretçisi hücrenin üzerine konumlandırılır.|  
+|Diğinize|Odaklardaki durumlar|Hücre odağa sahip.|  
+|Odaklanmadan gözetle|Odaklardaki durumlar|Hücrede odak yok|  
+|Geçerli|CurrentStates|Hücre geçerli hücredir.|  
+|Aralıklarla|CurrentStates|Hücre geçerli hücre değil.|  
+|Ekran|Interactionstates|Hücre, görüntüleme modundadır.|  
+|Düzenleme|Interactionstates|Hücre düzenleme modunda.|  
+|Seçildiğinde|SelectionStates|Hücre seçildi.|  
+|Değilken|SelectionStates|Hücre seçilmemiş.|  
+|Invalidodaklanmış|Doğrulama durumları|Hücre geçerli değil ve odağa sahip.|  
+|Invalidunodaklanmış|Doğrulama durumları|Hücre geçerli değil ve odağı yok.|  
+|Geçerli|Doğrulama durumları|Hücre geçerli.|  
   
-## <a name="datagridrow-parts"></a>DataGridRow bölümleri  
- <xref:System.Windows.Controls.DataGridRow> Öğesi herhangi bir adlandırılmış bölümü yok.  
+## <a name="datagridrow-parts"></a>DataGridRow parçaları  
+ <xref:System.Windows.Controls.DataGridRow> öğesinin adlandırılmış bölümü yok.  
   
 ## <a name="datagridrow-states"></a>DataGridRow durumları  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.DataGridRow> öğesi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.DataGridRow> öğesi için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Normal|CommonStates|Varsayılan durumu.|  
-|Fareyi üzerine getirme|CommonStates|Fare işaretçisi satırın yerleştirilir.|  
-|MouseOver_Editing|CommonStates|Fare işaretçisi satırın yerleştirilir ve düzenleme modunda satırdır.|  
-|MouseOver_Selected|CommonStates|Fare işaretçisi satırın yerleştirilir ve satır seçildi.|  
-|MouseOver_Unfocused_Editing|CommonStates|Satırın fare işaretçisini konumlandırılmış, satır içinde düzenleme modu ve odak sahip değil.|  
-|MouseOver_Unfocused_Selected|CommonStates|Satırın fare işaretçisini konumlandırılmış, satır seçilir ve odak sahip değil.|  
-|Normal_AlternatingRow|CommonStates|Satır değişen bir satırdır.|  
-|Normal_Editing|CommonStates|Düzenleme modunda satırdır.|  
-|Normal_Selected|CommonStates|Satır seçildi.|  
-|Unfocused_Editing|CommonStates|Satır düzenleme modundayken ve odak sahip değil.|  
-|Unfocused_Selected|CommonStates|Satır seçilir ve odak sahip değil.|  
-|InvalidFocused|ValidationStates|Denetim, geçerli değil ve odağa sahip.|  
-|InvalidUnfocused|ValidationStates|Denetim, geçerli değil ve odak sahip değil.|  
-|Geçerli|ValidationStates|Denetim geçerli değil.|  
+|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Gelme olayından|Ortak durumlar|Fare işaretçisi, satırın üzerine yerleştirilir.|  
+|MouseOver_Editing|Ortak durumlar|Fare işaretçisi, satırın üzerine konumlandırılır ve satır düzenleme modundadır.|  
+|MouseOver_Selected|Ortak durumlar|Fare işaretçisi, satırın üzerine konumlandırılır ve satır seçilir.|  
+|MouseOver_Unfocused_Editing|Ortak durumlar|Fare işaretçisi, satırın üzerine konumlandırılır, satır düzenleme modundadır ve odağa sahip değildir.|  
+|MouseOver_Unfocused_Selected|Ortak durumlar|Fare işaretçisi, satırın üzerine konumlandırılır, satır seçilir ve odağa sahip değildir.|  
+|Normal_AlternatingRow|Ortak durumlar|Satır, alternatif bir satırdır.|  
+|Normal_Editing|Ortak durumlar|Satır düzenleme modundadır.|  
+|Normal_Selected|Ortak durumlar|Satır seçilir.|  
+|Unfocused_Editing|Ortak durumlar|Satır düzenleme modundadır ve odağa sahip değildir.|  
+|Unfocused_Selected|Ortak durumlar|Satır seçilir ve odağa sahip değildir.|  
+|Invalidodaklanmış|Doğrulama durumları|Denetim geçerli değil ve odağa sahip.|  
+|Invalidunodaklanmış|Doğrulama durumları|Denetim geçerli değil ve odağa sahip değil.|  
+|Geçerli|Doğrulama durumları|Denetim geçerli.|  
   
-## <a name="datagridrowheader-parts"></a>DataGridRowHeader bölümleri  
- Adlandırılmış bölümleri için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DataGridRowHeader> öğesi.  
+## <a name="datagridrowheader-parts"></a>DataGridRowHeader parçaları  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DataGridRowHeader> öğesi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümü|Tür|Açıklama|  
+|Bölümüyle|Tür|Açıklama|  
 |-|-|-|  
-|PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Satır üst bilgisi üst yeniden boyutlandırmak için kullanılan öğe.|  
-|PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Satır üst bilgisi aşağıdan yeniden boyutlandırmak için kullanılan öğe.|  
+|PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Üstteki satır üstbilgisini yeniden boyutlandırmak için kullanılan öğe.|  
+|PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Satır üstbilgisini alttan yeniden boyutlandırmak için kullanılan öğe.|  
   
 ## <a name="datagridrowheader-states"></a>DataGridRowHeader durumları  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DataGridRowHeader> öğesi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DataGridRowHeader> öğesi için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Normal|CommonStates|Varsayılan durumu.|  
-|Fareyi üzerine getirme|CommonStates|Fare işaretçisi satırın yerleştirilir.|  
-|MouseOver_CurrentRow|CommonStates|Fare işaretçisi satırın yerleştirilir ve satır geçerli bir satırdır.|  
-|MouseOver_CurrentRow_Selected|CommonStates|Fare işaretçisi satırın yerleştirilir ve satırın geçerli ve seçili.|  
-|MouseOver_EditingRow|CommonStates|Fare işaretçisi satırın yerleştirilir ve düzenleme modunda satırdır.|  
-|MouseOver_Selected|CommonStates|Fare işaretçisi satırın yerleştirilir ve satır seçildi.|  
-|MouseOver_Unfocused_CurrentRow_Selected|CommonStates|Fare işaretçisi yerleştirilmiş satır üzerinde satırın geçerli ve seçili olduğundan ve odak sahip değil.|  
-|MouseOver_Unfocused_EditingRow|CommonStates|Satırın fare işaretçisini konumlandırılmış, satır içinde düzenleme modu ve odak sahip değil.|  
-|MouseOver_Unfocused_Selected|CommonStates|Satırın fare işaretçisini konumlandırılmış, satır seçilir ve odak sahip değil.|  
-|Normal_CurrentRow|CommonStates|Geçerli satırın satırdır.|  
-|Normal_CurrentRow_Selected|CommonStates|Satırın geçerli satır ve seçilir.|  
-|Normal_EditingRow|CommonStates|Düzenleme modunda satırdır.|  
-|Normal_Selected|CommonStates|Satır seçildi.|  
-|Unfocused_CurrentRow_Selected|CommonStates|Satırın geçerli satır, seçili olduğundan ve odak sahip değil.|  
-|Unfocused_EditingRow|CommonStates|Satır düzenleme modundayken ve odak sahip değil.|  
-|Unfocused_Selected|CommonStates|Satır seçilir ve odak sahip değil.|  
-|InvalidFocused|ValidationStates|Denetim, geçerli değil ve odağa sahip.|  
-|InvalidUnfocused|ValidationStates|Denetim, geçerli değil ve odak sahip değil.|  
-|Geçerli|ValidationStates|Denetim geçerli değil.|  
+|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Gelme olayından|Ortak durumlar|Fare işaretçisi, satırın üzerine yerleştirilir.|  
+|MouseOver_CurrentRow|Ortak durumlar|Fare işaretçisi, satırın üzerine konumlandırılır ve satır geçerli satırdır.|  
+|MouseOver_CurrentRow_Selected|Ortak durumlar|Fare işaretçisi, satırın üzerine konumlandırılır ve satır geçerli ve seçilir.|  
+|MouseOver_EditingRow|Ortak durumlar|Fare işaretçisi, satırın üzerine konumlandırılır ve satır düzenleme modundadır.|  
+|MouseOver_Selected|Ortak durumlar|Fare işaretçisi, satırın üzerine konumlandırılır ve satır seçilir.|  
+|MouseOver_Unfocused_CurrentRow_Selected|Ortak durumlar|Fare işaretçisi, satırın üzerine konumlandırılır, satır geçerli ve seçilir ve odağa sahip değildir.|  
+|MouseOver_Unfocused_EditingRow|Ortak durumlar|Fare işaretçisi, satırın üzerine konumlandırılır, satır düzenleme modundadır ve odağa sahip değildir.|  
+|MouseOver_Unfocused_Selected|Ortak durumlar|Fare işaretçisi, satırın üzerine konumlandırılır, satır seçilir ve odağa sahip değildir.|  
+|Normal_CurrentRow|Ortak durumlar|Satır geçerli satırdır.|  
+|Normal_CurrentRow_Selected|Ortak durumlar|Satır geçerli satırdır ve seçilir.|  
+|Normal_EditingRow|Ortak durumlar|Satır düzenleme modundadır.|  
+|Normal_Selected|Ortak durumlar|Satır seçilir.|  
+|Unfocused_CurrentRow_Selected|Ortak durumlar|Satır geçerli satırdır, seçilir ve odağa sahip değildir.|  
+|Unfocused_EditingRow|Ortak durumlar|Satır düzenleme modundadır ve odağa sahip değildir.|  
+|Unfocused_Selected|Ortak durumlar|Satır seçilir ve odağa sahip değildir.|  
+|Invalidodaklanmış|Doğrulama durumları|Denetim geçerli değil ve odağa sahip.|  
+|Invalidunodaklanmış|Doğrulama durumları|Denetim geçerli değil ve odağa sahip değil.|  
+|Geçerli|Doğrulama durumları|Denetim geçerli.|  
   
-## <a name="datagridcolumnheaderspresenter-parts"></a>DataGridColumnHeadersPresenter Parts  
- Adlandırılmış bölümleri için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> öğesi.  
+## <a name="datagridcolumnheaderspresenter-parts"></a>DataGridColumnHeadersPresenter bölümleri  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> öğesi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümü|Tür|Açıklama|  
+|Bölümüyle|Tür|Açıklama|  
 |-|-|-|  
-|PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Sütun başlığı için yer tutucu.|  
+|PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Sütun üst bilgileri için yer tutucu.|  
   
-## <a name="datagridcolumnheaderspresenter-states"></a>DataGridColumnHeadersPresenter States  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> öğesi.  
+## <a name="datagridcolumnheaderspresenter-states"></a>DataGridColumnHeadersPresenter durumları  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> öğesi için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|InvalidFocused|ValidationStates|Hücre geçerli değil ve odağa sahip.|  
-|InvalidUnfocused|ValidationStates|Hücre geçerli değil ve odak sahip değil.|  
-|Geçerli|ValidationStates|Hücre geçerli değil.|  
+|Invalidodaklanmış|Doğrulama durumları|Hücre geçerli değil ve odağa sahip.|  
+|Invalidunodaklanmış|Doğrulama durumları|Hücre geçerli değil ve odağı yok.|  
+|Geçerli|Doğrulama durumları|Hücre geçerli.|  
   
-## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader bölümleri  
- Adlandırılmış bölümleri için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> öğesi.  
+## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader parçaları  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> öğesi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümü|Tür|Açıklama|  
+|Bölümüyle|Tür|Açıklama|  
 |-|-|-|  
-|PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Sol sütun başlığına yeniden boyutlandırmak için kullanılan öğe.|  
-|PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Sağ sütun başlığına yeniden boyutlandırmak için kullanılan öğe.|  
+|PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Sol taraftaki sütun üst bilgisini yeniden boyutlandırmak için kullanılan öğe.|  
+|PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Sağdaki sütun üst bilgisini yeniden boyutlandırmak için kullanılan öğesi.|  
   
-## <a name="datagridcolumnheader-states"></a>DataGridColumnHeader States  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> öğesi.  
+## <a name="datagridcolumnheader-states"></a>DataGridColumnHeader durumları  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> öğesi için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Normal|CommonStates|Varsayılan durumu.|  
-|Fareyi üzerine getirme|CommonStates|Fare işaretçisi denetimin üzerine yerleştirilir.|  
-|Basılan|CommonStates|Denetime basıldığında.|  
-|SortAscending|SortStates|Sütun, artan düzende sıralanır.|  
-|SortDescending|SortStates|Sütun, azalan düzende sıralanır.|  
-|Sıralanmamış|SortStates|Sütun sıralı değil.|  
-|InvalidFocused|ValidationStates|Denetim, geçerli değil ve odağa sahip.|  
-|InvalidUnfocused|ValidationStates|Denetim, geçerli değil ve odak sahip değil.|  
-|Geçerli|ValidationStates|Denetim geçerli değil.|  
+|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Gelme olayından|Ortak durumlar|Fare işaretçisi denetimin üzerine yerleştirilir.|  
+|Basılması|Ortak durumlar|Denetime basıldığında.|  
+|Sortascbitiriliyor|SortStates|Sütun artan düzende sıralanır.|  
+|Sortazalan|SortStates|Sütun, azalan düzende sıralanır.|  
+|Olmayan|SortStates|Sütun sıralanmaz.|  
+|Invalidodaklanmış|Doğrulama durumları|Denetim geçerli değil ve odağa sahip.|  
+|Invalidunodaklanmış|Doğrulama durumları|Denetim geçerli değil ve odağa sahip değil.|  
+|Geçerli|Doğrulama durumları|Denetim geçerli.|  
   
-## <a name="datagrid-controltemplate-example"></a>DataGrid ControlTemplate Örneği  
- Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.DataGrid> denetimi ve ilişkili türleri.  
+## <a name="datagrid-controltemplate-example"></a>DataGrid ControlTemplate örneği  
+ Aşağıdaki örnek, <xref:System.Windows.Controls.DataGrid> denetimi ve ilişkili türleri için <xref:System.Windows.Controls.ControlTemplate> nasıl tanımlanacağını gösterir.  
   
  [!code-xaml[ControlTemplateExamples#DataGrid](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   
- Yukarıdaki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
+ Yukarıdaki örnekte aşağıdaki kaynaklardan biri veya daha fazlası kullanılmaktadır.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Tüm örnek için bkz. [ControlTemplates Ile stillendirme örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -175,5 +175,5 @@ Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.D
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
-- [Stil ve Şablon Oluşturma](styling-and-templating.md)
+- [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)

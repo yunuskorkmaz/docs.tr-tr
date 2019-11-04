@@ -2,12 +2,12 @@
 title: Verileri gruplandırma (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 15dafdb144ee9fd4184d4c8281d041e03161a16b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e7f10b121a7a1c599d88731a806fe784eb1a7e66
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594195"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423414"
 ---
 # <a name="grouping-data-c"></a>Verileri gruplandırma (C#)
 Gruplandırma, her bir gruptaki öğelerin ortak bir özniteliği paylaşması için verileri gruplara yerleştirme işlemini ifade eder.  
@@ -22,11 +22,11 @@ Gruplandırma, her bir gruptaki öğelerin ortak bir özniteliği paylaşması i
   
 |Yöntem adı|Açıklama|C#Sorgu Ifadesi söz dizimi|Daha fazla bilgi|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Ölçütü|Ortak bir özniteliği paylaşan öğeleri gruplandırır. Her grup bir <xref:System.Linq.IGrouping%602> nesne tarafından temsil edilir.|`group … by`<br /><br /> -veya-<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
-|ToLookup|Bir <xref:System.Linq.Lookup%602> anahtar Seçici işlevine göre öğeleri (bire çok sözlüğüne) ekler.|Geçerli değildir.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|Ölçütü|Ortak bir özniteliği paylaşan öğeleri gruplandırır. Her grup <xref:System.Linq.IGrouping%602> nesne tarafından temsil edilir.|`group … by`<br /><br /> veya<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|ToLookup|Bir anahtar Seçici işlevine dayalı olarak bir <xref:System.Linq.Lookup%602> (bire çok sözlüğüne) öğe ekler.|Yok.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Sorgu Ifadesi söz dizimi örneği  
- Aşağıdaki kod örneği, bir listedeki `group by` tamsayıları, hatta veya tek olup olmadığına göre gruplamak için yan tümcesini kullanır.  
+ Aşağıdaki kod örneği, bir listedeki tamsayıları, hatta veya tek olup olmadığına göre gruplamak için `group by` yan tümcesini kullanır.  
   
 ```csharp  
 List<int> numbers = new List<int>() { 35, 44, 200, 84, 3987, 4, 199, 329, 446, 208 };  
@@ -64,8 +64,8 @@ foreach (var group in query)
 - <xref:System.Linq>
 - [Standart sorgu Işleçlerine genelC#bakış ()](./standard-query-operators-overview.md)
 - [group yan tümcesi](../../../language-reference/keywords/group-clause.md)
-- [Nasıl yapılır: Iç Içe geçmiş grup oluşturma](../../linq-query-expressions/how-to-create-a-nested-group.md)
-- [Nasıl yapılır: Dosyaları uzantıya göre Gruplandır (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
-- [Nasıl yapılır: Sorgu sonuçlarını gruplandırma](../../linq-query-expressions/how-to-group-query-results.md)
-- [Nasıl yapılır: Gruplandırma Işleminde alt sorgu gerçekleştirme](../../linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
-- [Nasıl yapılır: Grupları (LINQ) kullanarak bir dosyayı çok sayıda dosyaya bölme (LINQC#) ()](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Nasıl yapılır: Iç Içe geçmiş grup oluşturma](../../../linq/create-a-nested-group.md)
+- [Nasıl yapılır: dosyaları uzantıya göre gruplama (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
+- [Nasıl yapılır: sorgu sonuçlarını gruplandırma](../../../linq/group-query-results.md)
+- [Nasıl yapılır: gruplandırma Işleminde alt sorgu gerçekleştirme](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
+- [Nasıl yapılır: grupları (LINQ) kullanarak bir dosyayı birçok dosyaya bölme (LINQ)C#()](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

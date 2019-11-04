@@ -7,16 +7,16 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 33b40ddbb0c959332f7d95ffa0f1633b910bcb33
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: cea6809ebf9a4ae516d59bd99bf8126d2e874788
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672011"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459568"
 ---
 # <a name="xaml-in-wpf"></a>WPF'de XAML
 
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], bildirime dayalı uygulama programlaması için bir biçimlendirme dilidir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]XAML işlemci uygulamasını uygular ve XAML dil desteği sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Türler, bir XAML temsili için gereken tür yedeklemesini sağlayabilecekleri şekilde uygulanır. Genel olarak, xaml biçimlendirmesinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama kullanıcı arabirimi çoğunluğunun çoğunu oluşturabilirsiniz.  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], bildirime dayalı uygulama programlaması için bir biçimlendirme dilidir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] XAML işlemcisi uygulamasını uygular ve XAML dil desteği sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] türler, bir XAML temsili için gereken tür yedeklemesini sağlayabilecekleri şekilde uygulanır. Genel olarak, XAML biçimlendirmesinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama kullanıcı arabiriminizi büyük çoğunluğunu oluşturabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
@@ -31,18 +31,18 @@ ms.locfileid: "68672011"
 [XAML 'de boşluk Işleme](../../xaml-services/whitespace-processing-in-xaml.md)  
 [TypeConverters ve XAML](typeconverters-and-xaml.md)  
 [XML Karakter Varlıkları ve XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
-[XAML ad alanı (x:) Dil özellikleri](../../xaml-services/xaml-namespace-x-language-features.md)  
+[XAML Ad Alanı (x:) Dil Özellikleri](../../xaml-services/xaml-namespace-x-language-features.md)  
 [WPF XAML Uzantıları](wpf-xaml-extensions.md)  
-[Biçimlendirme uyumluluğu (MC:) Dil özellikleri](markup-compatibility-mc-language-features.md)  
+[İşaretleme Uyumluluğu (mc:) Dil Özellikleri](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 
 [WPF Mimarisi](wpf-architecture.md)  
 [Temel Öğeler](base-elements.md)  
 [Öğe Ağacı ve Serileştirme](element-tree-and-serialization.md)  
-[Özellikler](properties-wpf.md)  
+[Veri Erişimi](properties-wpf.md)  
 [Olaylar](events-wpf.md)  
 [Giriş](input-wpf.md)  
 [Kaynaklar](resources-wpf.md)  
-[Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)  
+[Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
 [İş Parçacığı Modeli](threading-model.md)

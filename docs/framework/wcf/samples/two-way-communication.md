@@ -2,15 +2,15 @@
 title: Çift Yönlü İletişim
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: 379197ee3dc041351f0b13ad1e336824a0f411ed
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7bc513d270a860c104255ac5df6f6d890f6b2b0d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038713"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424216"
 ---
 # <a name="two-way-communication"></a>Çift Yönlü İletişim
-Bu örnek, MSMQ üzerinden işlem temelli iki yönlü sıraya alınmış iletişimin nasıl gerçekleştirileceğini gösterir. Bu örnek, `netMsmqBinding` bağlamayı kullanır. Bu durumda hizmet, sıraya alınan iletileri alma hizmetinin gözlemlebilmenizi sağlayan, kendine barındırılan bir konsol uygulamasıdır.  
+Bu örnek, MSMQ üzerinden işlem temelli iki yönlü sıraya alınmış iletişimin nasıl gerçekleştirileceğini gösterir. Bu örnek `netMsmqBinding` bağlamasını kullanır. Bu durumda hizmet, sıraya alınan iletileri alma hizmetinin gözlemlebilmenizi sağlayan, kendine barındırılan bir konsol uygulamasıdır.  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
@@ -21,7 +21,7 @@ Bu örnek, MSMQ üzerinden işlem temelli iki yönlü sıraya alınmış iletiş
   
  Bu örnek, kuyrukları kullanarak 2 yönlü iletişimi gösterir. İstemci, bir işlemin kapsamındaki satınalma emirlerini kuyruğa gönderir. Hizmet siparişleri alır, sırayı işler ve sonra bir işlemin kapsamındaki sıradaki sıra durumuyla istemciyi geri çağırır. İki yönlü iletişimi kolaylaştırmak için, istemci ve hizmetin her ikisi de, satın alma siparişlerinin ve sipariş durumunun kuyruğa alınması için kuyrukları kullanır.  
   
- Hizmet sözleşmesi `IOrderProcessor` , sıraya alma işlemini kullanan tek yönlü hizmet işlemlerini tanımlar. Hizmet işlemi, sipariş durumlarını göndermek için kullanılacak yanıt uç noktasını içerir. Yanıt uç noktası, sipariş durumunun istemciye geri gönderilmesi için kuyruğun URI 'sidir. Sipariş işleme uygulaması bu sözleşmeyi uygular.  
+ Hizmet sözleşmesi `IOrderProcessor`, sıraya alma kullanımı ile ilgili tek yönlü hizmet işlemlerini tanımlar. Hizmet işlemi, sipariş durumlarını göndermek için kullanılacak yanıt uç noktasını içerir. Yanıt uç noktası, sipariş durumunun istemciye geri gönderilmesi için kuyruğun URI 'sidir. Sipariş işleme uygulaması bu sözleşmeyi uygular.  
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -44,7 +44,7 @@ public interface IOrderStatus
 }  
 ```
 
- Hizmet işlemi gönderilen satın alma siparişini işler. , <xref:System.ServiceModel.OperationBehaviorAttribute> Kuyruktan ileti almak ve hizmet işleminin tamamlanmasından sonra işlemlerin otomatik olarak tamamlanması için kullanılan bir işlemde otomatik kayıt belirtmek üzere hizmet işlemine uygulanır. `Orders` Sınıfı sipariş işleme işlevselliğini Kapsüller. Bu durumda, satın alma sırasını bir sözlüğe ekler. İçindeki hizmet işleminin kayıtlı olduğu işlem, `Orders` sınıftaki işlemler için kullanılabilir.  
+ Hizmet işlemi gönderilen satın alma siparişini işler. <xref:System.ServiceModel.OperationBehaviorAttribute>, işlem sırasında iletiyi almak ve hizmet işleminin tamamlanmasından otomatik olarak tamamlamak için kullanılan bir işlemde otomatik kayıt belirtmek üzere hizmet işlemine uygulanır. `Orders` sınıfı sıra işleme işlevselliğini Kapsüller. Bu durumda, satın alma sırasını bir sözlüğe ekler. Hizmet işleminin kayıtlı olduğu işlem, `Orders` sınıfındaki işlemler için kullanılabilir.  
   
  Hizmet işlemi, gönderilen satın alma siparişinin işlenmesine ek olarak, siparişin durumunda istemciye geri yanıt verir.  
 
@@ -143,7 +143,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
 }  
 ```
 
- İstemci kodu, hizmetten sipariş `IOrderStatus` durumunu almak için sözleşmeyi uygular. Bu durumda, sipariş durumunu yazdırır.  
+ İstemci kodu, hizmetten sipariş durumunu almak için `IOrderStatus` sözleşmesini uygular. Bu durumda, sipariş durumunu yazdırır.  
 
 ```csharp
 [ServiceBehavior]  
@@ -194,7 +194,7 @@ public class OrderStatusService : IOrderStatus
   
  Hizmet, satın alma siparişi bilgilerini görüntüler ve sipariş durumunu sipariş durumu kuyruğuna geri gönderdiğini gösterir.  
   
-```  
+```console  
 The service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -211,7 +211,7 @@ Sending back order status information
   
  İstemci, hizmet tarafından gönderilen sıra durumu bilgilerini görüntüler.  
   
-```  
+```console  
 Press <ENTER> to terminate client.  
 Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending  
 ```  
@@ -227,11 +227,11 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
     > [!NOTE]
     > Bu örneğe yönelik yapılandırmayı yeniden oluşturmak için Svcutil. exe ' yi kullanırsanız, istemci yapılandırmasındaki uç nokta adlarını istemci koduyla eşleşecek şekilde değiştirdiğinizden emin olun.  
   
- Varsayılan <xref:System.ServiceModel.NetMsmqBinding>olarak, taşıma güvenliği etkindir. <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> MSMQ aktarım güvenliği için iki ilgili özellik vardır ve `.` <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> varsayılan olarak, kimlik doğrulama modu olarak `Windows` ayarlanır ve koruma düzeyi olarak `Sign`ayarlanır. Kimlik doğrulama ve imzalama özelliğini sağlamak için MSMQ için, bir etki alanının parçası olması ve MSMQ için Active Directory tümleştirme seçeneğinin yüklü olması gerekir. Bu örneği bu ölçütlere uygun olmayan bir bilgisayarda çalıştırırsanız bir hata alırsınız.  
+ <xref:System.ServiceModel.NetMsmqBinding>varsayılan olarak, taşıma güvenliği etkinleştirilmiştir. MSMQ aktarım güvenliği, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> ve <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` varsayılan olarak, kimlik doğrulama modu `Windows` olarak ayarlanır ve koruma düzeyi `Sign`olarak ayarlanır. Kimlik doğrulama ve imzalama özelliğini sağlamak için MSMQ için, bir etki alanının parçası olması ve MSMQ için Active Directory tümleştirme seçeneğinin yüklü olması gerekir. Bu örneği bu ölçütlere uygun olmayan bir bilgisayarda çalıştırırsanız bir hata alırsınız.  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Örneği bir çalışma grubuna katılmış veya Active Directory Tümleştirmesi olmadan bir bilgisayarda çalıştırmak için  
   
-1. Bilgisayarınız bir etki alanının parçası değilse veya Active Directory Tümleştirmesi yüklü değilse, kimlik doğrulama modunu ve koruma düzeyini `None` aşağıdaki örnek yapılandırmada gösterildiği gibi olarak ayarlayarak aktarım güvenliğini kapatın:  
+1. Bilgisayarınız bir etki alanının parçası değilse veya Active Directory Tümleştirmesi yüklü değilse, aşağıdaki örnek yapılandırmada gösterildiği gibi kimlik doğrulama modu ve koruma düzeyini `None` olarak ayarlayarak aktarım güvenliğini kapatın:  
   
     ```xml  
     <configuration>  
@@ -310,7 +310,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
     </configuration>  
     ```  
   
-3. Bu örnek için hizmeti, `OrderProcessorService`içinde bir bağlama oluşturur. Güvenlik modunu olarak `None`ayarlamak için bağlama örneği oluşturulduktan sonra bir kod satırı ekleyin.  
+3. Bu örnek için hizmet `OrderProcessorService`bir bağlama oluşturur. Güvenlik modunu `None`olarak ayarlamak için bağlama örneği oluşturulduktan sonra bir kod satırı ekleyin.  
   
     ```csharp
     NetMsmqBinding msmqCallbackBinding = new NetMsmqBinding();  
@@ -320,13 +320,13 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 4. Örneği çalıştırmadan önce hem sunucu hem de istemci üzerinde yapılandırmayı değiştirin.  
   
     > [!NOTE]
-    > `security mode` Ayarı,<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> ayarına veya Güvenliğeeşdeğerdir.`Message` `None` <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> `None`  
+    > `security mode` `None` ayarlanması <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> veya `Message` güvenlik `None`ayarı ile eşdeğerdir.  
   
 > [!IMPORTANT]
 > Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  

@@ -9,36 +9,36 @@ helpviewer_keywords:
 - data binding [WPF], converting bound data
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
-ms.openlocfilehash: 40699bec1c6cd775f7f8495b7a49eda15fb2ed83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9ad390626092d481bf47f017f643a29302c1b29
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020939"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458862"
 ---
 # <a name="how-to-convert-bound-data"></a>Nasıl yapılır: Bağımlı Veri Dönüştürme
-Bu örnek uygulama bağlamalarında kullanılan veri dönüştürme işlemini gösterir.  
+Bu örnek, bağlamalarda kullanılan verilere dönüştürmenin nasıl uygulanacağını gösterir.  
   
- Veri bağlama sırasında dönüştürmek için uygulayan bir sınıf oluşturmanız <xref:System.Windows.Data.IValueConverter> içeren arabirimi <xref:System.Windows.Data.IValueConverter.Convert%2A> ve <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> yöntemleri.  
+ Bağlama sırasında verileri dönüştürmek için, <xref:System.Windows.Data.IValueConverter.Convert%2A> ve <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> yöntemlerini içeren <xref:System.Windows.Data.IValueConverter> arabirimini uygulayan bir sınıf oluşturmanız gerekir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, yıl, ay ve gün yalnızca gösterir böylece geçilen tarih değeri dönüştürür tarih dönüştürücü uygulanışı gösterilmektedir. Uygularken <xref:System.Windows.Data.IValueConverter> arabirimi, bir uygulama ile donatmak için iyi bir uygulama olan bir <xref:System.Windows.Data.ValueConversionAttribute> geliştirme belirtmek için özniteliği veri türlerini dönüştürme, aşağıdaki örnekte olduğu gibi ilgili araçları:  
+ Aşağıdaki örnek, yalnızca yılı, ayı ve günü görüntüleyecek şekilde geçirilen tarih değerini dönüştüren bir tarih dönüştürücünün uygulamasını gösterir. <xref:System.Windows.Data.IValueConverter> arabirimini uygularken, aşağıdaki örnekte olduğu gibi, dönüştürme işleminde yer alan veri türleri için geliştirme araçlarına işaret eden bir <xref:System.Windows.Data.ValueConversionAttribute> özniteliğiyle uygulamayı süslemek iyi bir uygulamadır:  
   
  [!code-csharp[DataBindingLab#18](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DateConverter.cs#18)]
  [!code-vb[DataBindingLab#18](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/DateConverter.vb#18)]  
   
- Bir dönüştürücü oluşturulduktan sonra bunu bir kaynak olarak ekleyebilirsiniz, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosya. Aşağıdaki örnekte, *src* eşler, ad alanına *DateConverter* tanımlanır.  
+ Dönüştürücüyü oluşturduktan sonra, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyanıza kaynak olarak ekleyebilirsiniz. Aşağıdaki örnekte, *src* , *DateConverter* 'ın tanımlandığı ad alanı ile eşlenir.  
   
  [!code-xaml[DataBindingLab#15](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#15)]  
   
- Son olarak, aşağıdaki sözdizimini kullanarak, bağlama dönüştürücüyü kullanabilirsiniz. Aşağıdaki örnekte, metin içeriği <xref:System.Windows.Controls.TextBlock> bağlı *StartDate*, bir dış veri kaynağının bir özelliği olan.  
+ Son olarak, aşağıdaki sözdizimini kullanarak bağlamadaki dönüştürücüyü kullanabilirsiniz. Aşağıdaki örnekte <xref:System.Windows.Controls.TextBlock> metin içeriği, bir dış veri kaynağının özelliği olan *StartDate*' e bağlanır.  
   
  [!code-xaml[DataBindingLab#17](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#17)]  
   
- Yukarıdaki örnekte başvurulan stil kaynakları, bu konuda gösterilen olmayan bir kaynak bölümünde tanımlanır.  
+ Yukarıdaki örnekte başvurulan stil kaynakları, bu konuda görünmeyen bir kaynak bölümünde tanımlanmıştır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bağlama Doğrulaması Uygulama](how-to-implement-binding-validation.md)
-- [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
+- [Veri Bağlamaya Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)
 - [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

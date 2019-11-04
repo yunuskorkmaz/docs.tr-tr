@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms’da Nesneleri Katmanlara Ayırma'
+title: 'Nasıl yapılır: Windows Formlarında Nesneleri Katmanlara Ayırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2e4c6a3236b3a2a2afaad73fee21c3cf59b992b8
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 5b8f6c00e70df94ae3a82c2c195fa781f0840a53
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987560"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458358"
 ---
-# <a name="how-to-layer-objects-on-windows-forms"></a>Nasıl yapılır: Windows Forms katman nesneleri
+# <a name="how-to-layer-objects-on-windows-forms"></a>Nasıl yapılır: Windows Forms üzerinde katman nesneleri
 
 Karmaşık bir kullanıcı arabirimi oluşturduğunuzda veya birden çok belge arabirimi (MDI) formuyla çalışıyorsanız, genellikle daha karmaşık kullanıcı arabirimleri (UI) oluşturmak için hem denetimleri hem de alt formları katman halinde katman yapmak isteyeceksiniz. Bir grup bağlamı içinde denetimleri ve pencereleri taşımak ve izlemek için *z sırasını*değiştirebilirsiniz. Z düzeni, formun z ekseni (derinlik) üzerinde bir formdaki denetimlerin görsel katmandır. Z düzeninin en üstündeki pencere diğer tüm pencereler ile çakışıyor. Diğer tüm pencereler, z düzeninin alt kısmındaki pencereyle çakışıyor.
 
@@ -34,9 +34,9 @@ Karmaşık bir kullanıcı arabirimi oluşturduğunuzda veya birden çok belge a
 
 ## <a name="to-layer-controls-programmatically"></a>Denetimleri programlı olarak katman halinde
 
-Denetimlerin z düzenini <xref:System.Windows.Forms.Control.SendToBack%2A> değiştirmek için veyöntemlerinikullanın.<xref:System.Windows.Forms.Control.BringToFront%2A>
+Denetimlerin z düzenini değiştirmek için <xref:System.Windows.Forms.Control.BringToFront%2A> ve <xref:System.Windows.Forms.Control.SendToBack%2A> yöntemlerini kullanın.
 
-Örneğin, bir <xref:System.Windows.Forms.TextBox> `txtFirstName`denetim başka bir denetimin altında ise ve en üstte olmasını istiyorsanız aşağıdaki kodu kullanın:
+Örneğin, `txtFirstName`bir <xref:System.Windows.Forms.TextBox> denetimi başka bir denetimin altında ve en üstte olmasını istiyorsanız aşağıdaki kodu kullanın:
 
 ```vb
 txtFirstName.BringToFront()
@@ -51,7 +51,7 @@ txtFirstName->BringToFront();
 ```
 
 > [!NOTE]
-> Windows Forms *Denetim kapsamayı*destekler. Denetim kapsama, bir <xref:System.Windows.Forms.RadioButton> <xref:System.Windows.Forms.GroupBox> denetim içindeki denetim sayısı gibi, kapsayan bir denetim içinde çok sayıda denetim yerleştirmeyi içerir. Daha sonra, içeren denetim içindeki denetimleri katmandan yönetebilirsiniz. Grup kutusunun taşınması, içinde olduklarından, denetimleri de taşır.
+> Windows Forms *Denetim kapsamayı*destekler. Denetim kapsama, bir <xref:System.Windows.Forms.GroupBox> denetimindeki birçok <xref:System.Windows.Forms.RadioButton> denetimi gibi, kapsayan bir denetim içinde çok sayıda denetim yerleştirmeyi içerir. Daha sonra, içeren denetim içindeki denetimleri katmandan yönetebilirsiniz. Grup kutusunun taşınması, içinde olduklarından, denetimleri de taşır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama'
+title: 'Nasıl yapılır: XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplandırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], grouping data in views in XAML
@@ -11,28 +11,28 @@ helpviewer_keywords:
 - views [WPF], sorting data
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
-ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e42dd330535f71438ab7af3dca9d078e9dfd8d3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020744"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460118"
 ---
-# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Nasıl yapılır: XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama
-Bu örnek, bir veri toplama bir görünümün nasıl oluşturulacağını gösterir. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Görünümler işlevleri gruplandırma, sıralama, filtreleme ve geçerli öğenin kavram izin verir.  
+# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Nasıl yapılır: XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplandırma
+Bu örnek, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]' de bir veri koleksiyonunun bir görünümünün nasıl oluşturulacağını gösterir. Görünümler gruplandırma, sıralama, filtreleme ve geçerli bir öğenin kavramının işlevlerini sağlar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte adlı statik kaynak *yerleştirir* koleksiyonu olarak tanımlanır *yerde* nesneleri, her *yerde* nesne bir şehir adı toplamda ve durumu. Önek *src* ad alanına eşlenen burada veri kaynağı *yerler* tanımlanır. Önek *scm* eşlendiği `"clr-namespace:System.ComponentModel;assembly=WindowsBase"` ve *dat* eşlendiği `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`.  
+ Aşağıdaki örnekte, *yerleri* adlı statik kaynak, her bir *Yerleştir* nesnesinin bir şehir adı ve eyalet olarak oluşturulduğu bir *Yerleştir* nesneleri koleksiyonu olarak tanımlanmıştır. *Src* ön eki, veri kaynağı *yerlerinin* tanımlandığı ad alanı ile eşleştirilir. *SCM* ön eki, `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"``"clr-namespace:System.ComponentModel;assembly=WindowsBase"` ve *dat* eşlemeleriyle eşlenir.  
   
- Aşağıdaki örnek Şehir adına göre sıralanır ve durumlarına göre gruplandırılan veri koleksiyonunu bir görünümünü oluşturur.  
+ Aşağıdaki örnek, şehir adına göre sıralanmış ve duruma göre gruplandırılan veri koleksiyonunun bir görünümünü oluşturur.  
   
  [!code-xaml[CollectionViewSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
   
- Görünüm, ardından aşağıdaki örnekteki gibi bir bağlama kaynağı olabilir:  
+ Görünüm daha sonra aşağıdaki örnekte olduğu gibi bir bağlama kaynağı olabilir:  
   
  [!code-xaml[CollectionViewSource#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
   
- Tanımlanan XML veri bağlama için bir <xref:System.Windows.Data.XmlDataProvider> kaynak ile XML adın önüne bir @ sembolü.  
+ Bir <xref:System.Windows.Data.XmlDataProvider> kaynağında tanımlanan XML verilerine bağlamalar için, XML adından önce bir @ simgesiyle önüne geçin.  
   
  [!code-xaml[CollectionViewSource#XDPChunk](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
   
@@ -42,5 +42,5 @@ Bu örnek, bir veri toplama bir görünümün nasıl oluşturulacağını göste
 
 - <xref:System.Windows.Data.CollectionViewSource>
 - [Veri Koleksiyonunun Varsayılan Görünümünü Alma](how-to-get-the-default-view-of-a-data-collection.md)
-- [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
+- [Veri Bağlamaya Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)
 - [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

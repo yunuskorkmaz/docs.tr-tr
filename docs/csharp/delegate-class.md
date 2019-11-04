@@ -4,12 +4,12 @@ description: Temsilcileri destekleyen .NET Framework sınıflar ve bunların ' D
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 7aca2d3ba7aefd103ac927a6ce905938262ae39c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037444"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420362"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System. Delegate ve `delegate` anahtar sözcüğü
 
@@ -32,7 +32,7 @@ Bizim örneğimizde List. Sort () yöntemini kullanmaya devam edelim. İlk adım
 public delegate int Comparison<in T>(T left, T right);
 ```
 
-Derleyici, kullanılan imzayla eşleşen `System.Delegate` türetilen bir sınıf oluşturur (Bu durumda, bir tamsayı döndüren ve iki bağımsız değişkeni olan bir yöntem). Bu temsilcinin türü `Comparison`. `Comparison` temsilci türü genel bir tür. Genel türler hakkında daha fazla bilgi için [buraya](generics.md)bakın.
+Derleyici, kullanılan imzayla eşleşen `System.Delegate` türetilen bir sınıf oluşturur (Bu durumda, bir tamsayı döndüren ve iki bağımsız değişkeni olan bir yöntem). Bu temsilcinin türü `Comparison`. `Comparison` temsilci türü genel bir tür. Genel türler hakkında daha fazla bilgi için [buraya](programming-guide/generics/index.md)bakın.
 
 Sözdiziminin bir değişken bildirmiş gibi görünebileceğini ancak gerçekten bir *tür*bildirdiğine dikkat edin. Sınıf içinde doğrudan ad alanları içinde veya genel ad alanında temsilci türleri tanımlayabilirsiniz.
 

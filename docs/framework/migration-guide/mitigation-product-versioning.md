@@ -2,12 +2,12 @@
 title: 'Azaltma: Ürün Sürümü Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
-ms.openlocfilehash: 63075136b7de4aeaa4f94c092996ae1829b449a7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64a68d2b79a0a3ccdd806949ffd6cb3760974390
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126165"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457804"
 ---
 # <a name="mitigation-product-versioning"></a>Azaltma: Ürün Sürümü Oluşturma
 
@@ -42,4 +42,4 @@ Genel olarak, uygulamalar .NET Framework çalışma zamanı sürümü ve yüklem
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Değişiklikleri](runtime-changes-in-the-net-framework-4-6.md)
+- [Uygulama uyumluluğu](application-compatibility.md)

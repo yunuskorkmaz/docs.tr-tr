@@ -2,12 +2,12 @@
 title: 'Risk azaltma: özel IMessageFilter. PreFilterMessage uygulamaları'
 ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
-ms.openlocfilehash: 5174c67e4204c2e20e5730ab7c092ccbb0aeda1a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7757e8d1fd0258ab2d972b7321082e4afa37f710
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126272"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457934"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Risk azaltma: özel IMessageFilter. PreFilterMessage uygulamaları
 
@@ -47,4 +47,4 @@ Ayrıca, .NET Framework önceki sürümlerini hedefleyen, ancak .NET Framework 4
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Hedefleme Değişiklikleri](retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Uygulama uyumluluğu](application-compatibility.md)

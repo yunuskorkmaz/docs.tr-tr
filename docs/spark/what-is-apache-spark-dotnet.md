@@ -4,12 +4,12 @@ description: .NET kodu yazdığınız her yerde Spark alan ücretsiz, açık kay
 author: mamccrea
 ms.topic: overview
 ms.date: 10/15/2019
-ms.openlocfilehash: c31b50a20ac08bcde077e1e85ee915435a99fc28
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 12fccd478cedaccf455043feb3afa7b12221bf0e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395863"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458193"
 ---
 # <a name="what-is-net-for-apache-spark"></a>Apache Spark için .NET nedir?
 
@@ -19,10 +19,10 @@ ms.locfileid: "72395863"
 
 .NET Apache Spark, büyük veri analizinin dünyasına katılmak üzere .NET deneyimi veya kod esaslarını içeren geliştiricilere güç sağlar. Apache Spark için .NET, ve ' C# F#den Spark kullanımı Için yüksek performanslı API 'ler sağlar. Ve C# F#ile Şu şekilde erişebilirsiniz:
 
-* Yapılandırılmış verilerle çalışmaya yönelik DataFrame ve mini SQL
-* Akış verileriyle çalışma için Spark yapılandırılmış akış
-* SQL söz dizimi ile sorgu yazmak için Spark SQL
-* Daha hızlı eğitim ve tahmin için makine öğrenimi tümleştirmesi (örn. [ml.net](http://dot.net/ml)ile birlikte Apache Spark için .NET kullanın)
+* Yapılandırılmış verilerle çalışmaya yönelik DataFrame ve parlak SQL.
+* Akış verileriyle çalışmak için Spark yapılandırılmış akışı.
+* SQL söz dizimi ile sorgu yazmak için Spark SQL.
+* Daha hızlı eğitim ve tahmin için makine öğrenimi tümleştirmesi (yani, [ml.net](https://dot.net/ml)ile birlikte Apache Spark için .NET kullanın).
 
 Apache Spark .net, .NET uygulamaları genelinde ortak olan bir .NET API 'si belirtimi olan .NET Standard uyumludur. Bu, .NET kodu yazdığınız her yerde Apache Spark için .NET kullanabilmeniz anlamına gelir. Bu durumda, .net geliştiricisi olarak sahip olduğunuz tüm bilgi, beceriler, kod ve kitaplıkları yeniden kullanmanıza olanak sağlanır.
 
@@ -33,13 +33,13 @@ Apache Spark .net, .NET uygulamaları genelinde ortak olan bir .NET API 'si beli
 Spark C#'a F# /dil bağlaması, daha kolay genişletilebilirlik sunan yeni bir Spark birlikte çalışma katmanında yazılmıştır. Spark Interop 'in bu yeni katmanı, dil uzantısı için en iyi yöntemler kullanılarak yazılmıştır ve birlikte çalışma ve performans için optimize edildi. Bu genişletilebilirlik, Spark 'daki diğer dillere yönelik destek eklemek için kullanılabilir.
 
 > [!div class="mx-imgBorder"]
-> Apache Spark mimarisi için ![.NET @ no__t-1
+> Apache Spark mimarisi için ![.NET](media/dotnet-spark-architecture.png)
 
 [Önerinin](https://issues.apache.org/jira/browse/SPARK-26257)Spark dil uzantıları için birlikte çalışma desteği hakkında bilgi edinebilirsiniz.
 
 ## <a name="net-for-apache-spark-performance"></a>Apache Spark performans için .NET
 
-[TPC-H kıyaslaması](http://www.tpc.org/tpch/)kullanılarak Python ve Scala karşılaştırıldığında, Apache Spark için .net çoğu durumda en iyi şekilde çalışır ve Kullanıcı tanımlı işlev performansı önemli olduğunda Python 'dan daha hızlıdır. Geliştirme ve kıyaslama performansı için devam eden bir çaba vardır. 
+[TPC-H kıyaslaması](http://www.tpc.org/tpch/)kullanılarak Python ve Scala karşılaştırıldığında, Apache Spark için .net çoğu durumda en iyi şekilde çalışır ve Kullanıcı tanımlı işlev performansı önemli olduğunda Python 'dan daha hızlıdır. Geliştirme ve kıyaslama performansı için devam eden bir çaba vardır.
 
 Kendi benchişaretlemesini yapmak için, bkz. [Apache Spark GitHub için .net](https://github.com/dotnet/spark/tree/master/benchmark)üzerinde bulunan kıyaslamalar.
 

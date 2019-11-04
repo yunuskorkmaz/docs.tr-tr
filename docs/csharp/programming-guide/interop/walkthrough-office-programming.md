@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 11e48c54ba82b51268b34d6db01d2f9d4ae61ad7
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: d4a2562324259bda0bab523849449d584736b2ae
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523579"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423191"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office Programlama (C# ve Visual Basic)
 
@@ -70,7 +70,7 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 
 1. **Çözüm Gezgini**, projenizin adına sağ tıklayın, **Ekle**' ye ve ardından **sınıf**' a tıklayın. Kullanıyorsanız, Visual Basic veya Account.cs kullanıyorsanız,. vb sınıfını adlandırın C#. **Ekle**'yi tıklatın.
 
-2. @No__t_0 sınıfının tanımını aşağıdaki kodla değiştirin. Sınıf tanımları *Otomatik uygulanan özellikleri*kullanır. Daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).
+2. `Account` sınıfının tanımını aşağıdaki kodla değiştirin. Sınıf tanımları *Otomatik uygulanan özellikleri*kullanır. Daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).
 
      [!code-csharp[csOfficeWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/account.cs#2)]
 
@@ -96,7 +96,7 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 
          Daha fazla bilgi için bkz. [adlandırılmış ve Isteğe bağlı bağımsız değişkenler](../classes-and-structs/named-and-optional-arguments.md).
 
-    - [Range](<xref:Microsoft.Office.Interop.Excel.Range>) nesnesinin `Range` ve `Offset` özellikleri *dizinli Özellikler* özelliğini kullanır. Bu özellik, aşağıdaki tipik C# sözdizimini kullanarak bu özellikleri com türlerinden kullanmanıza olanak sağlar. Dizinli Özellikler Ayrıca, `Value2` özelliğini kullanma gereksinimini ortadan kaldıran `Range` nesnesinin `Value` özelliğini kullanmanıza olanak sağlar. @No__t_0 özelliği dizine alınmış, ancak dizin isteğe bağlıdır. İsteğe bağlı bağımsız değişkenler ve dizinli özellikler, aşağıdaki örnekte birlikte çalışır.
+    - [Range](<xref:Microsoft.Office.Interop.Excel.Range>) nesnesinin `Range` ve `Offset` özellikleri *dizinli Özellikler* özelliğini kullanır. Bu özellik, aşağıdaki tipik C# sözdizimini kullanarak bu özellikleri com türlerinden kullanmanıza olanak sağlar. Dizinli Özellikler Ayrıca, `Value2` özelliğini kullanma gereksinimini ortadan kaldıran `Range` nesnesinin `Value` özelliğini kullanmanıza olanak sağlar. `Value` özelliği dizine alınmış, ancak dizin isteğe bağlıdır. İsteğe bağlı bağımsız değişkenler ve dizinli özellikler, aşağıdaki örnekte birlikte çalışır.
 
          [!code-csharp[csOfficeWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#5)]
 
@@ -114,17 +114,17 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     Bu eklemeler, ' deki başka C#bir özelliği gösterir. Bu, OFFICE gibi com konaklarından döndürülen `Object` değerlerini [dinamik](../../language-reference/keywords/dynamic.md)tür olarak kabul ediyor. Bu, derleme [-bağlantı](../../language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği tarafından başvuruluyorsa, **birlikte çalışma türleri ekle** , `True` veya equivalently gibi varsayılan değere ayarlandığında bu otomatik olarak gerçekleşir. Tür `dynamic`, geç bağlamaya izin verir, Visual Basic zaten kullanılabilir ve C# 3,0 ve önceki dil sürümlerinde gerekli olan açık dönüştürmeyi önler.
+     Bu eklemeler, ' deki başka C#bir özelliği gösterir. Bu, OFFICE gibi com konaklarından döndürülen `Object` değerlerini [dinamik](../../language-reference/builtin-types/reference-types.md)tür olarak kabul ediyor. Bu, derleme [-bağlantı](../../language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği tarafından başvuruluyorsa, **birlikte çalışma türleri ekle** , `True` veya equivalently gibi varsayılan değere ayarlandığında bu otomatik olarak gerçekleşir. Tür `dynamic`, geç bağlamaya izin verir, Visual Basic zaten kullanılabilir ve C# 3,0 ve önceki dil sürümlerinde gerekli olan açık dönüştürmeyi önler.
 
-     Örneğin, `excelApp.Columns[1]` bir `Object` döndürür ve `AutoFit` bir Excel [Range](<xref:Microsoft.Office.Interop.Excel.Range>) yöntemidir. @No__t_0 olmadan, yöntem `AutoFit` çağrılmadan önce `excelApp.Columns[1]` tarafından `Range` örneği olarak döndürülen nesneyi atamalısınız.
+     Örneğin, `excelApp.Columns[1]` bir `Object`döndürür ve `AutoFit` bir Excel [Range](<xref:Microsoft.Office.Interop.Excel.Range>) yöntemidir. `dynamic`olmadan, yöntem `AutoFit`çağrılmadan önce `excelApp.Columns[1]` tarafından `Range` örneği olarak döndürülen nesneyi atamalısınız.
 
      [!code-csharp[csOfficeWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#8)]
 
-     Birlikte çalışma türlerini katıştırma hakkında daha fazla bilgi için, bu konunun devamındaki "PIA başvurusunu bulmak Için" ve "PIA bağımlılığını geri yüklemek için" yordamlarına bakın. @No__t_0 hakkında daha fazla bilgi için bkz. [dinamik veya](../../language-reference/keywords/dynamic.md) [tür dinamik kullanma](../types/using-type-dynamic.md).
+     Birlikte çalışma türlerini katıştırma hakkında daha fazla bilgi için, bu konunun devamındaki "PIA başvurusunu bulmak Için" ve "PIA bağımlılığını geri yüklemek için" yordamlarına bakın. `dynamic`hakkında daha fazla bilgi için bkz. [dinamik veya](../../language-reference/builtin-types/reference-types.md) [tür dinamik kullanma](../types/using-type-dynamic.md).
 
 ### <a name="to-invoke-displayinexcel"></a>DisplayInExcel 'i çağırmak için
 
-1. @No__t_0 yönteminin sonuna aşağıdaki kodu ekleyin. @No__t_0 çağrısı iki bağımsız değişken içerir. İlk bağımsız değişken işlenecek hesapların listesinin adıdır. İkinci bağımsız değişken, verilerin nasıl işleneceğini tanımlayan çok satırlı bir lambda ifadesidir. Her bir hesabın `ID` ve `balance` değerleri bitişik hücrelerde görüntülenir ve bakiye sıfırdan küçükse satır kırmızı renkte görüntülenir. Daha fazla bilgi için bkz. [lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+1. `ThisAddIn_StartUp` yönteminin sonuna aşağıdaki kodu ekleyin. `DisplayInExcel` çağrısı iki bağımsız değişken içerir. İlk bağımsız değişken işlenecek hesapların listesinin adıdır. İkinci bağımsız değişken, verilerin nasıl işleneceğini tanımlayan çok satırlı bir lambda ifadesidir. Her bir hesabın `ID` ve `balance` değerleri bitişik hücrelerde görüntülenir ve bakiye sıfırdan küçükse satır kırmızı renkte görüntülenir. Daha fazla bilgi için bkz. [lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
      [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
@@ -177,15 +177,15 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 
 2. **Özellikler** penceresinde, **birlikte çalışma türlerini katıştır** özelliğini **true** değerinden **false**değerine değiştirin.
 
-3. @No__t_0 için bu yordamda 1 ve 2. adımları tekrarlayın.
+3. `Microsoft.Office.Interop.Word`için bu yordamda 1 ve 2. adımları tekrarlayın.
 
 4. İçinde C#, `DisplayInExcel` yönteminin sonundaki `Autofit` için iki çağrısı olduğunu açıklama.
 
 5. Projenin hala doğru şekilde çalıştığını doğrulamak için F5 tuşuna basın.
 
-6. Önceki yordamdan derleme penceresini açmak için 1-3 arasındaki adımları yineleyin. @No__t_0 ve `Microsoft.Office.Interop.Excel` artık gömülü derlemeler listesinde olmadığına dikkat edin.
+6. Önceki yordamdan derleme penceresini açmak için 1-3 arasındaki adımları yineleyin. `Microsoft.Office.Interop.Word` ve `Microsoft.Office.Interop.Excel` artık gömülü derlemeler listesinde olmadığına dikkat edin.
 
-7. **Bildirim** simgesine çift tıklayın ve başvurulan derlemeler listesinde gezinin. @No__t_0 ve `Microsoft.Office.Interop.Excel` her ikisi de listede bulunur. Uygulama Excel ve Word PIAlerine başvurduğundan ve **birlikte çalışma türlerini katıştır** özelliği **false**olarak ayarlandığından, her iki derlemenin de son kullanıcının bilgisayarında bulunması gerekir.
+7. **Bildirim** simgesine çift tıklayın ve başvurulan derlemeler listesinde gezinin. `Microsoft.Office.Interop.Word` ve `Microsoft.Office.Interop.Excel` her ikisi de listede bulunur. Uygulama Excel ve Word PIAlerine başvurduğundan ve **birlikte çalışma türlerini katıştır** özelliği **false**olarak ayarlandığından, her iki derlemenin de son kullanıcının bilgisayarında bulunması gerekir.
 
 8. Visual Studio 'da, tamamlanmış projeyi temizlemek için **derleme** menüsündeki **Çözümü Temizle** ' ye tıklayın.
 
@@ -199,7 +199,7 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 - [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
 - [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../classes-and-structs/named-and-optional-arguments.md)
 - [Erken ve Geç Bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Tür dinamiği kullanma](../types/using-type-dynamic.md)
 - [Lambda Ifadeleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Lambda Ifadeleri (C#)](../statements-expressions-operators/lambda-expressions.md)

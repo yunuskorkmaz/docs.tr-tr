@@ -6,30 +6,30 @@ helpviewer_keywords:
 - styling rows in ListViews implementing GridViews [WPF]
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
-ms.openlocfilehash: 9af8d10c7db2d3bbe8b9443402cbb1cfeaa7edb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 150988aab368e3ffef0107d29bea5ebc53163946
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052020"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459314"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Nasıl yapılır: GridView Uygulayan ListView İçinde bir Satıra Stil Ekleme
-Bu örnekte, içinde bir satıra stil ekleme işlemi gösterilmektedir bir <xref:System.Windows.Controls.ListView> uygulayan denetimi bir <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView.View%2A> modu.  
+Bu örnek, <xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A> modunu uygulayan <xref:System.Windows.Controls.ListView> denetimindeki bir satırın nasıl stilli olduğunu gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bir satıra stil uygulayabilirsiniz bir <xref:System.Windows.Controls.ListView> ayarlayarak denetimi bir <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> üzerinde <xref:System.Windows.Controls.ListView> denetimi. Olarak temsil edilen öğeleri stilini ayarlayın <xref:System.Windows.Controls.ListViewItem> nesneleri. <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Başvuruları <xref:System.Windows.Controls.ControlTemplate> satır içeriği görüntülemek için kullanılan nesneleri.  
+ <xref:System.Windows.Controls.ListView> denetiminde bir <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> ayarlayarak <xref:System.Windows.Controls.ListView> denetimindeki bir satıra stil uygulayabilirsiniz. <xref:System.Windows.Controls.ListViewItem> nesne olarak temsil edilen öğelerinin stilini ayarlayın. <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>, satır içeriğini göstermek için kullanılan <xref:System.Windows.Controls.ControlTemplate> nesnelerine başvurur.  
   
- Aşağıdaki örnekler ayıklandığı, tam örnek depolanan şarkı bilgilerini koleksiyonunu görüntüler bir [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veritabanı. Veritabanındaki her bir şarkıyı Derecelendirme alanı vardır ve bu alanın değeri bir şarkıyı bilgi satırını görüntülemek nasıl belirtir.  
+ Aşağıdaki örneklerin ayıklandığı tüm örnek, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veritabanında depolanan bir şarkı bilgileri koleksiyonunu görüntüler. Veritabanındaki her şarkının bir derecelendirme alanı vardır ve bu alanın değeri bir şarkı bilgileri satırının nasıl görüntüleneceğini belirtir.  
   
- Aşağıdaki örnek nasıl tanımlanacağını gösterir <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> için <xref:System.Windows.Controls.ListViewItem> şarkı koleksiyondaki şarkıya temsil eden nesneleri. <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Başvuruları <xref:System.Windows.Controls.ControlTemplate> nasıl görüntüleneceğini şarkı bilgilerini içeren bir satırın belirttiğiniz nesneleri.  
+ Aşağıdaki örnek, Song koleksiyonundaki şarkıları temsil eden <xref:System.Windows.Controls.ListViewItem> nesneleri için <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> nasıl tanımlanacağını gösterir. <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>, şarkı bilgilerinin bir satırını görüntülemeyi belirten <xref:System.Windows.Controls.ControlTemplate> nesnelerine başvurur.  
   
  [!code-xaml[ListViewItemStyleSnippet#ItemContainerStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#itemcontainerstyle)]  
   
- Aşağıdaki örnekte gösterildiği bir <xref:System.Windows.Controls.ControlTemplate> metin dizesi ekleyen `"Strongly Recommended"` satır. Bu şablon başvurulduğundan <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> ve 5 (beş) değerini şarkıyı ait derecelendirme sahip olduğunda görüntüler. <xref:System.Windows.Controls.ControlTemplate> İçeren bir <xref:System.Windows.Controls.GridViewRowPresenter> sütunlardaki satır içeriğini tarafından tanımlandığı şekilde yerleştirir nesne <xref:System.Windows.Controls.GridView> görünüm modu.  
+ Aşağıdaki örnek, `"Strongly Recommended"` metin dizesini satıra ekleyen bir <xref:System.Windows.Controls.ControlTemplate> gösterir. Bu şablona <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> başvurulur ve şarkının derecelendirmesinin 5 (beş) değerine sahip olduğu zaman görüntülenir. <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.Controls.GridView> görünüm modu tarafından tanımlanan şekilde sütunlarda satır içeriğini oluşturan bir <xref:System.Windows.Controls.GridViewRowPresenter> nesnesi içerir.  
   
  [!code-xaml[ListViewItemStyleSnippet#ControlTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#controltemplate)]  
   
- Aşağıdaki örnek tanımlar <xref:System.Windows.Controls.GridView>.  
+ Aşağıdaki örnek <xref:System.Windows.Controls.GridView>tanımlar.  
   
  [!code-xaml[ListViewItemStyleSnippet#GridView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#gridview)]  
   
@@ -39,4 +39,4 @@ Bu örnekte, içinde bir satıra stil ekleme işlemi gösterilmektedir bir <xref
 - <xref:System.Windows.Controls.GridView>
 - [Nasıl Yapılır Konuları](listview-how-to-topics.md)
 - [ListView Genel Bakış](listview-overview.md)
-- [Stil ve Şablon Oluşturma](styling-and-templating.md)
+- [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

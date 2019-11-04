@@ -2,19 +2,19 @@
 title: WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 5333c9c5caad502ce925fe4a45a039c553812ba6
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 161ac59e64e1a933049ed36ebb7140901686929c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320195"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425262"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)
 WS-AtomicTransaction Yapılandırma yardımcı programı, temel WS-AtomicTransaction destek ayarlarını yapılandırmak için kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 wsatConfig [Options]  
 ```  
   
@@ -25,7 +25,7 @@ wsatConfig [Options]
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- @No__t-0 veya [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] çalıştırıyorsanız, WsatConfig. exe ' yi çalıştırmadan önce bir güncelleştirmeyi indirmeniz gerekir. Bu güncelleştirme hakkında daha fazla bilgi için bkz. [Commerce Server 2007 (KB912817) güncelleştirmesi](https://go.microsoft.com/fwlink/?LinkId=95340) ve [Windows XP COM+ düzeltme paketi 13 ' ün kullanılabilirliği](https://go.microsoft.com/fwlink/?LinkId=95341).  
+ [!INCLUDE[wxp](../../../includes/wxp-md.md)] veya [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]çalıştırıyorsanız, WsatConfig. exe ' yi çalıştırmadan önce bir güncelleştirmeyi indirmeniz gerekir. Bu güncelleştirme hakkında daha fazla bilgi için bkz. [Commerce Server 2007 (KB912817) güncelleştirmesi](https://go.microsoft.com/fwlink/?LinkId=95340) ve [Windows XP COM+ düzeltme paketi 13 ' ün kullanılabilirliği](https://go.microsoft.com/fwlink/?LinkId=95341).  
   
  Aşağıdaki tabloda, WS-AtomicTransaction Yapılandırma yardımcı programı (wsatConfig. exe) ile kullanılabilecek seçenekler gösterilmektedir.  
   

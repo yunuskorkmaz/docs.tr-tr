@@ -10,32 +10,32 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: 4f8ee4b31c135595770338831c23d8a0f419e8cd
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 1a1d956ee7f41ac1ac0fc9bd051a18b9ff438930
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67857005"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459841"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Nesne Ağacında Olmayan Nesne Öğelerini Başlatma
-Bazı yönlerini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] başlatma erteleneceğini mantıksal ağaç veya görsel ağaç'için bağlı bu öğe genellikle kullanan işlemler. Bu konu, ya da ağacına bağlı olmayan bir öğe başlatmak için gereken adımları açıklar.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] başlatmanın bazı yönleri, genellikle mantıksal ağaca veya görsel ağaca bağlı olan öğeyi kullanan işlemlere ertelenir. Bu konu, herhangi bir ağaca bağlı olmayan bir öğeyi başlatmak için gerekli olabilecek adımları açıklamaktadır.  
 
-## <a name="elements-and-the-logical-tree"></a>Öğeleri ve mantıksal ağaç  
- Örneği oluşturduğunuzda, bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sınıfı kod içinde çeşitli yönlerini nesne başlatmanın bilmeniz gereken bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sınıfı kasıtlı bir parçası değildir sınıf oluşturucusu çağrılırken yürütülen kod. Özellikle bir denetim sınıf için denetimin görsel temsilini çoğunu Oluşturucu tarafından tanımlanmadı. Bunun yerine, görsel bir temsili denetim şablonu tarafından tanımlanır. Şablon olabilecek çeşitli kaynaklardan gelir, ancak çoğunlukla şablonu tema stillerinden elde edilir. Şablonları etkili bir şekilde geç bağlama; Denetim için Düzen hazır olana kadar gerekli şablon söz konusu denetime bağlı değil. Ve kökünde bir işleme yüzeyi bağlanan bir mantıksal ağaç bağlı olduğu kadar denetim için Düzen hazır değil. Mantıksal ağaçta tanımlanan tüm alt öğeleri işleme başlatır, kök düzeyinde öğesidir.  
+## <a name="elements-and-the-logical-tree"></a>Öğeler ve mantıksal ağaç  
+ Kodda [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sınıfının bir örneğini oluşturduğunuzda, bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sınıfı için nesne başlatmasının birkaç yönü, sınıf oluşturucusu çağrılırken yürütülen kodun bir parçası değildir. Özellikle bir denetim sınıfı için, bu denetimin görsel gösteriminin çoğu Oluşturucu tarafından tanımlanmamıştır. Bunun yerine, görsel temsili denetimin şablonu tarafından tanımlanır. Şablon, çok çeşitli kaynaklardan gelir, ancak çoğu zaman şablon tema stillerinden elde edilir. Şablonlar etkili bir şekilde geç bağlamadır; gerekli şablon, denetim düzen için hazırlanana kadar söz konusu denetime eklenmez. Ayrıca Denetim, köke bir işleme yüzeyine bağlanan bir mantıksal ağaca iliştirilene kadar, düzen için de kullanıma uygun değildir. Mantıksal ağaçta tanımlanan tüm alt öğelerini işlemeyi Başlatan kök düzeyi öğedir.  
   
- Görsel ağacı da bu işlemde yer alır. Şablonları aracılığıyla görsel ağacın bir parçası olan öğeler, bağlı kadar tam olarak örneği oluşturulur.  
+ Görsel ağaç Ayrıca bu işleme katılır. Şablonlar aracılığıyla görsel ağacın bir parçası olan öğeler, bağlanana kadar de tam olarak başlatılamaz.  
   
- Sonuçları, bu davranış, bir öğenin tamamlanmış görsel özelliklerini kullanan belirli işlemleri ek adımlar gerektirmez ' dir. Bir sınıfın oluşturulmuş, ancak henüz bir ağaca bağlı görsel özelliklerini almak çalışırken, bir örnektir. Örneğin, çağrı istiyorsanız <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> üzerinde bir <xref:System.Windows.Media.Imaging.RenderTargetBitmap> ve, kaçı görsel ağaç olarak bağlı olmayan bir öğedir ek başlatma adımlar tamamlanana kadar bu öğenin görsel olarak tam değil.  
+ Bu davranışın sonuçları, bir öğenin tamamlanmış görsel özelliklerine dayanan bazı işlemlerin ek adımlar gerektirmelerdir. Oluşturulan ancak henüz bir ağaca eklenmemiş olan bir sınıfın görsel özelliklerini almaya çalışıyorsanız örnek bir örnektir. Örneğin, bir <xref:System.Windows.Media.Imaging.RenderTargetBitmap> <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> çağırmak isterseniz ve geçirdiğiniz görsel bir ağaca bağlı olmayan bir öğe ise, ek başlatma adımları tamamlanana kadar bu öğe görsel olarak tamamlanmaz.  
   
-### <a name="using-begininit-and-endinit-to-initialize-the-element"></a>Öğeyi başlatmak için BeginInit ve EndInit'i kullanma  
- Çeşitli sınıflarda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamak <xref:System.ComponentModel.ISupportInitialize> arabirimi. Kullandığınız <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> ve <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> kodunuzda başlatma adımları (özellik ayarı işlemeyi etkileyen değerleri gibi) içeren bir bölge göstermek için arabirimin yöntemlerini. Sonra <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> çağrılır sırayla düzen sistemi öğe işleyebilir ve örtülü bir stil için aramaya başlayabilirsiniz.  
+### <a name="using-begininit-and-endinit-to-initialize-the-element"></a>BeginInit kullanma ve öğeyi başlatmak için  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çeşitli sınıflar <xref:System.ComponentModel.ISupportInitialize> arabirimini uygular. Kodunuzda başlatma adımları içeren bir bölgeyi göstermek için arabirimin <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> ve <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> yöntemlerini (işlemeyi etkileyen özellik değerlerini ayarlama gibi) kullanabilirsiniz. Dizi <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> çağrıldıktan sonra, Düzen sistemi öğeyi işleyebilir ve örtülü bir stil aramaya başlayabilir.  
   
- Öğe özellikleri üzerinde ayarladığınız bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement> sınıf sürümlerini çağırabilirsiniz türetilmiş bir sınıf, <xref:System.Windows.FrameworkElement.BeginInit%2A> ve <xref:System.Windows.FrameworkElement.EndInit%2A> atamayı yerine <xref:System.ComponentModel.ISupportInitialize>.  
+ Üzerinde Özellikler ayarladığınız öğe bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement> türetilmiş bir sınıf ise, <xref:System.ComponentModel.ISupportInitialize>atamak yerine <xref:System.Windows.FrameworkElement.BeginInit%2A> ve <xref:System.Windows.FrameworkElement.EndInit%2A> sınıf sürümlerini çağırabilirsiniz.  
   
-### <a name="sample-code"></a>Örnek Kod  
- Aşağıdaki örnek, işleme API'lerini kullanan bir konsol uygulaması için örnek kod ve <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygun yerleşimini göstermek için dosya <xref:System.Windows.FrameworkElement.BeginInit%2A> ve <xref:System.Windows.FrameworkElement.EndInit%2A> özelliklerini ayarlamanız diğer API çağrıları etrafında, işleme etkiler.  
+### <a name="sample-code"></a>Örnek kod  
+ Aşağıdaki örnek, <xref:System.Windows.FrameworkElement.BeginInit%2A> uygun yerleşimini ve işlemeyi etkileyen özellikleri ayarlamaya yönelik diğer API çağrılarının etrafında <xref:System.Windows.FrameworkElement.EndInit%2A>, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işleme API 'Leri ve gevşek bir dosya <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> kullanan bir konsol uygulaması için örnek koddur.  
   
- Main işlevi yalnızca örnek gösterir. İşlevleri `Rasterize` ve `Save` görüntü işleme ve g/ç ilgileniriz yardımcı program işlevleri olan (gösterilmemiştir).  
+ Örnek yalnızca ana işlevi gösterir. `Rasterize` ve `Save` işlevleri (gösterilmez), görüntü işleme ve GÇ 'nin ele aldığı yardımcı işlevlerdir.  
   
  [!code-csharp[InitializeElements#Main](~/samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
  [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
@@ -44,4 +44,4 @@ Bazı yönlerini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-w
 
 - [WPF İçinde Ağaçlar](trees-in-wpf.md)
 - [WPF Grafik İşlemeye Genel Bakış](../graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
+- [XAML'ye Genel Bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

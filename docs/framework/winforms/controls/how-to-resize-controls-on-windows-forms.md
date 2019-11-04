@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms’da Denetimleri Yeniden Boyutlandırma'
+title: 'Nasıl yapılır: Windows Formlarında Denetimleri Yeniden Boyutlandırma'
 ms.date: 03/30/2017
 f1_keywords:
 - Size.Height
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7e659bf02ea079afc10561e1d83f7ab7cef29a2e
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 3aacc9434199eb7881e362a67e1fe0c08784c4a7
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987049"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459547"
 ---
-# <a name="how-to-resize-controls-on-windows-forms"></a>Nasıl yapılır: Windows Forms denetimleri yeniden boyutlandır
+# <a name="how-to-resize-controls-on-windows-forms"></a>Nasıl yapılır: Windows Forms denetimleri yeniden boyutlandırma
 
-Tek tek denetimleri yeniden boyutlandırabilir, ve gibi aynı ya da farklı türde <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.GroupBox> birden çok denetimi yeniden boyutlandırabilirsiniz.
+Tek tek denetimleri yeniden boyutlandırabilir ve <xref:System.Windows.Forms.Button> ve <xref:System.Windows.Forms.GroupBox> denetimleri gibi aynı veya farklı türde birden çok denetimi yeniden boyutlandırabilirsiniz.
 
 ## <a name="to-resize-a-control"></a>Bir denetimi yeniden boyutlandırmak için
 

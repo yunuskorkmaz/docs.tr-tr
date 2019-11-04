@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-ms.openlocfilehash: cdd8d2781331956289d2b74162e653ba1ee8fad6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114233"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457959"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Yönetilmeyen kodla birlikte çalışma
 
@@ -40,9 +40,6 @@ COM birlikte çalışma ve platform çağırma için hazırlamayı açıklar.
 [Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme](how-to-map-hresults-and-exceptions.md)  
 Özel durumlar ve HRESULTs arasındaki eşlemeyi açıklar.
 
-[COM Sarmalayıcıları](com-wrappers.md)  
-COM birlikte çalışma tarafından sunulan sarmalayıcıları açıklar.
-
 [Tür Eşdeğerliği ve Katıştırılmış Birlikte Çalışma Türleri](type-equivalence-and-embedded-interop-types.md)  
 COM türleri için tür bilgilerinin derlemelerde nasıl gömülü olduğunu ve ortak dil çalışma zamanının gömülü COM türlerinin denklik düzeyini nasıl belirlediğini açıklar.
 
@@ -57,3 +54,8 @@ COM birlikte çalışabilirliğine Windows kayıt defteri kullanmadan bileşenle
 
 [Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma](configure-net-framework-based-com-components-for-reg.md)  
 Bir uygulama bildirimi oluşturmayı ve bir bileşen bildirimi oluşturmayı ve eklemeyi açıklar.
+
+## <a name="related-sections"></a>İlgili bölümler
+
+[COM Sarmalayıcıları](../../standard/native-interop/com-wrappers.md)  
+COM birlikte çalışma tarafından sunulan sarmalayıcıları açıklar.

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-ms.openlocfilehash: bf75677ee6a6a607a8779edf5af5e63f5c92b230
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: a3990a7dc446c264e0865e15dadcdaf3ba0a0ff6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920168"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460053"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>İzlenecek yollar: Özel Animasyonlu Düğme Oluşturma
 Adından da anlaşılacağı gibi, Windows Presentation Foundation (WPF) müşteriler için zengin sunum deneyimleri oluşturmak için harika. Bu izlenecek yollar, bir düğmenin (animasyonlar dahil) görünümünü ve davranışını nasıl özelleştireceğinizi gösterir. Bu özelleştirme, bu özel düğmeyi uygulamanızdaki düğmelere kolayca uygulayabilmeniz için stil ve şablon kullanılarak yapılır. Aşağıdaki çizimde, oluşturacağınız özelleştirilmiş düğme gösterilmektedir.
@@ -26,7 +26,7 @@ Adından da anlaşılacağı gibi, Windows Presentation Foundation (WPF) müşte
  [XAML kullanarak bir düğme oluşturma](walkthrough-create-a-button-by-using-xaml.md) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve Visual Studio kullanarak özel davranışla düğme oluşturmayı gösterir.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Stil ve şablon](styling-and-templating.md) oluşturma Stillerin ve şablonlarının denetimlerin görünümünü ve davranışını belirlemede nasıl kullanılabileceğini açıklar.
+ [Stil ve şablon](../../../desktop-wpf/fundamentals/styles-templates-overview.md) oluşturma Stillerin ve şablonlarının denetimlerin görünümünü ve davranışını belirlemede nasıl kullanılabileceğini açıklar.
 
  [Animasyona genel bakış](../graphics-multimedia/animation-overview.md) Nesnelerin, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] animasyon ve zamanlama sistemi kullanılarak nasıl canlandırılabileceğinizi açıklar.
 

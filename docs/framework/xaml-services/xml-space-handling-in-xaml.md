@@ -7,15 +7,15 @@ helpviewer_keywords:
 - xml:space attribute [XAML Services]
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f860f5ee42b5c1df43c4ec2b1003408bc1c0d8e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938729"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458798"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>XAML'de xml:space İşleme
-`xml:space` Özniteliği olan bir nesne öğesi içinde önemli boşluk işleme davranışını bildiren XML tanımlı öznitelik. Bu öğe içinde bulunan tüm içeriği (iç metni) ilgili, davranıştır burada `xml:space` bildirilmiş ve aynı zamanda kapsamları alt öğeleri için.  
+`xml:space` özniteliği bir nesne öğesi içinde önemli beyaz boşluk işleme davranışını bildiren XML tanımlı bir özniteliktir. Bu davranış, `xml:space` bildirildiği öğede bulunan tüm içerik (iç metin) ve ayrıca alt öğe kapsamları için geçerlidir.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -23,24 +23,24 @@ ms.locfileid: "61938729"
 <object xml:space="preserve" />  
 ```  
   
- \- veya -  
+ \- veya-  
   
 ```xaml  
 <object xml:space="default" />  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tanımı `xml:space` iki olası değerleri dahil olmak üzere XAML özniteliği türetilen `xml:space` "özel özniteliği" belirtimleri XML W3C tarafından tanımlandığı şekilde.  
+ XAML 'de iki olası değeri de dahil olmak üzere `xml:space` özniteliğinin tanımı, XML için W3C belirtimleri tarafından bir "özel öznitelik" olarak tanımlanan `xml:space` türetilir.  
   
- Varsayılan değer olan `xml:space` özniteliktir değişmez değer `"default"`. Değeri için `"default"`, veya `xml:space` önemli boşluk ayrıştırma davranıştır varsayılan işleme konusundaki tanımlandığı şekilde, belirtilmemiş [boşluk XAML içinde işleme](whitespace-processing-in-xaml.md).  
+ `xml:space` özniteliğin varsayılan değeri, `"default"`değişmez değer değeridir. `"default"`değer için ya da `xml:space` hiç belirtilmemişse, önemli boşluk ayrıştırması davranışı [xaml 'Deki beyaz boşluk işleme](whitespace-processing-in-xaml.md)konusunda tanımlandığı şekilde varsayılan işleme olur.  
   
- Boşluk nesne öğe içeriği içinde korumak için bu seçeneği belirtin `xml:space="preserve"` o nesne öğesi üzerinde.  
+ Nesne öğesi içeriği içinde boşluk korumak için, bu nesne öğesinde `xml:space="preserve"` belirtin.  
   
- Çoğu yorumlaması altında `xml:space` özniteliği etkiler ve öznitelik değeri için alt öğeleri kapsanır.  
+ En çok yorumlamalar altında, `xml:space` öznitelik etkileri ve özniteliğin değeri alt öğelerin kapsamına alınır.  
   
- Boşluk işleme XAML içinde tam bir açıklaması için bkz: [boşluk XAML içinde işleme](whitespace-processing-in-xaml.md).  
+ XAML 'de beyaz alan işleme hakkında tam bir açıklama için bkz. [xaml 'de beyaz boşluk işleme](whitespace-processing-in-xaml.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Boşluk XAML içinde işleme](whitespace-processing-in-xaml.md)
-- [XAML'ye Genel Bakış (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [XAML 'de boşluk işleme](whitespace-processing-in-xaml.md)
+- [XAML'ye Genel Bakış (WPF)](../../desktop-wpf/fundamentals/xaml.md)

@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme"
+title: "İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'ta Denetimleri Düzenleme"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 83f0365ffb7335cb67c729c5a113e550c119191a
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 04bef7162662f4fbefdaa151de13468d88530914
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987004"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460643"
 ---
-# <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>İzlenecek yol: Anlık görüntü çizgilerini kullanarak Windows Forms denetimleri düzenleme
+# <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>İzlenecek yol: Windows Forms denetimleri, yama çizgileri kullanarak düzenleme
 
-Denetimlerin formunuza kesin olarak yerleştirilmesi birçok uygulama için yüksek önceliktir. Windows Form Tasarımcısı bunu gerçekleştirmek için size çok sayıda düzen aracı sağlar. En önemlileri <xref:System.Windows.Forms.Design.Behavior.SnapLine> bu özellikten biridir.
+Denetimlerin formunuza kesin olarak yerleştirilmesi birçok uygulama için yüksek önceliktir. Windows Form Tasarımcısı bunu gerçekleştirmek için size çok sayıda düzen aracı sağlar. En önemlilerinden biri <xref:System.Windows.Forms.Design.Behavior.SnapLine> özelliğidir.
 
 Anlık görüntü çizgileri, denetimleri diğer denetimlerle nerede hizalamak gerektiğini tam olarak gösterir. Ayrıca, [Windows Kullanıcı arabirimi yönergeleri](/windows/win32/uxguide/guidelines)tarafından belirtildiği gibi denetimler arasındaki kenar boşlukları için önerilen uzaklıkları gösterir.
 
@@ -37,62 +37,62 @@ Anlık görüntü çizgileri, formunuzdaki denetimleri hizalamak için size doğ
 
 ### <a name="to-arrange-controls-using-snaplines"></a>Anlık görüntü çizgilerini kullanarak denetimleri düzenlemek için
 
-1. <xref:System.Windows.Forms.Button> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin.
+1. **Araç kutusundan** bir <xref:System.Windows.Forms.Button> denetimini formunuza sürükleyin.
 
-2. <xref:System.Windows.Forms.Button> Denetimi formun sağ alt köşesine taşıyın. <xref:System.Windows.Forms.Button> Denetim olarak görünen anlık görüntü çizgileri formun alt ve sağ kenarlıklarına yaklaşır. Bu anlık çizgiler, denetimin kenarlıkları ve form arasındaki önerilen mesafeyi görüntüler.
+2. <xref:System.Windows.Forms.Button> denetimini formun sağ alt köşesine taşıyın. <xref:System.Windows.Forms.Button> denetimi olarak görünen anlık görüntü çizgileri formun alt ve sağ kenarlıklarına yaklaşır. Bu anlık çizgiler, denetimin kenarlıkları ve form arasındaki önerilen mesafeyi görüntüler.
 
-3. <xref:System.Windows.Forms.Button> Denetimi, form kenarlıklarının etrafında taşıyın ve anlık görüntü çizgilerinin nerede göründüğünü aklınızda yapın. İşiniz bittiğinde <xref:System.Windows.Forms.Button> denetimi formun merkezine yaklaştırın.
+3. <xref:System.Windows.Forms.Button> denetimini form kenarlıklarının etrafında taşıyın ve anlık görüntü çizgilerinin nerede göründüğünü aklınızda yapın. İşiniz bittiğinde, form merkezinin yakınında <xref:System.Windows.Forms.Button> denetimini taşıyın.
 
-4. <xref:System.Windows.Forms.Button> **Araç kutusundan** başka bir denetimi formunuza sürükleyin.
+4. **Araç kutusundan** başka bir <xref:System.Windows.Forms.Button> denetimini formunuza sürükleyin.
 
-5. İkinci <xref:System.Windows.Forms.Button> denetimi ilk ile neredeyse düzeyi olana kadar taşıyın. Her iki düğmenin de metin taban çizgisinde görüntülenen ve taşıdığınız denetimin diğer denetimle tam düzeyde bir konuma yaslandığına göz önünde bulunduğunu unutmayın.
+5. İkinci <xref:System.Windows.Forms.Button> denetimini, ilk ile neredeyse düzeyi olana kadar taşıyın. Her iki düğmenin de metin taban çizgisinde görüntülenen ve taşıdığınız denetimin diğer denetimle tam düzeyde bir konuma yaslandığına göz önünde bulunduğunu unutmayın.
 
-6. İkinci <xref:System.Windows.Forms.Button> denetimi, önce doğrudan üzerine konumlandırılana kadar taşıyın. Her iki düğmenin sol ve sağ kenarlarındaki anlık görüntü çizgilerini ve taşıdığınız denetimin diğer denetimle tam olarak hizalanmış bir konuma yaslandığını unutmayın.
+6. İkinci <xref:System.Windows.Forms.Button> denetimini, önce doğrudan üzerine konumlandırılana kadar taşıyın. Her iki düğmenin sol ve sağ kenarlarındaki anlık görüntü çizgilerini ve taşıdığınız denetimin diğer denetimle tam olarak hizalanmış bir konuma yaslandığını unutmayın.
 
-7. <xref:System.Windows.Forms.Button> Denetimlerden birini seçin ve neredeyse dokununcaya kadar, diğerine yakın hareket ettirin. Aralarında görüntülenen anlık görüntü çizgisini unutmayın. Bu uzaklık, denetimlerin kenarlıkları arasında önerilen uzaklıktan oluşur. Ayrıca, taşıdığınız denetimin bu konuma yaslandığına de unutmayın.
+7. <xref:System.Windows.Forms.Button> denetimlerinden birini seçin ve neredeyse dokunana kadar bir sonrakine geçin. Aralarında görüntülenen anlık görüntü çizgisini unutmayın. Bu uzaklık, denetimlerin kenarlıkları arasında önerilen uzaklıktan oluşur. Ayrıca, taşıdığınız denetimin bu konuma yaslandığına de unutmayın.
 
-8. <xref:System.Windows.Forms.Panel> **Araç kutusundan** iki denetimi formunuza sürükleyin.
+8. **Araç kutusundan** iki <xref:System.Windows.Forms.Panel> denetimini formunuza sürükleyin.
 
-9. İlk ile neredeyse düzeyi <xref:System.Windows.Forms.Panel> olana kadar denetimlerden birini taşıyın. Her iki denetimin üst ve alt kenarları üzerinde görünen anlık görüntü çizgilerini ve taşıdığınız denetimin diğer denetimle tam düzeyde bir konuma yaslanmadığını unutmayın.
+9. <xref:System.Windows.Forms.Panel> denetimlerinden birini, ilk ile neredeyse düzeyi olana kadar taşıyın. Her iki denetimin üst ve alt kenarları üzerinde görünen anlık görüntü çizgilerini ve taşıdığınız denetimin diğer denetimle tam düzeyde bir konuma yaslanmadığını unutmayın.
 
 ## <a name="align-to-form-and-container-margins"></a>Form ve kapsayıcı kenar boşluklarına Hizala
 
 Anlık görüntü çizgileri, denetimlerinizi, düzenli bir şekilde form ve kapsayıcı kenar boşluklarına hizalamanıza yardımcı olur.
 
-1. <xref:System.Windows.Forms.Button> Denetimlerden birini seçin ve bir anlık görüntü satırı görünene kadar formun sağ kenarlığına yakın taşıyın. Anlık görüntü çizgisinin sağ kenarından uzaklığı denetimin <xref:System.Windows.Forms.Control.Margin%2A> özelliğinin ve <xref:System.Windows.Forms.Control.Padding%2A> formun özellik değerlerinin toplamıdır.
+1. <xref:System.Windows.Forms.Button> denetimlerinden birini seçin ve bir ek yük çizgisi görünene kadar formun sağ kenarlığına yakın taşıyın. Anlık görüntü çizgisinin sağ kenarından uzaklığı, denetimin <xref:System.Windows.Forms.Control.Margin%2A> özelliğinin ve formun <xref:System.Windows.Forms.Control.Padding%2A> özellik değerlerinin toplamıdır.
 
    > [!NOTE]
-   > Formun <xref:System.Windows.Forms.Control.Padding%2A> özelliği 0, 0, 0, 0 olarak ayarlandıysa Windows Form Tasarımcısı, forma 9, 9, 9, 9 ' un <xref:System.Windows.Forms.Control.Padding%2A> gölgeli bir değer verir. Bu davranışı geçersiz kılmak için 0, 0, 0, 0 dışında bir değer atayın.
+   > Formun <xref:System.Windows.Forms.Control.Padding%2A> özelliği 0, 0, 0, 0 olarak ayarlandıysa, Windows Form Tasarımcısı forma 9, 9, 9, 9 ' un gölgeli bir <xref:System.Windows.Forms.Control.Padding%2A> değeri verir. Bu davranışı geçersiz kılmak için 0, 0, 0, 0 dışında bir değer atayın.
 
-2. <xref:System.Windows.Forms.Button> **Özellikler** penceresinde girişigenişleterek<xref:System.Windows.Forms.Control.Margin%2A> ve <xref:System.Windows.Forms.Control.Margin%2A> özelliğini0olarakayarlayarakdenetiminözelliğinindeğerinideğiştirin.<xref:System.Windows.Forms.Padding.All%2A> Ayrıntılar için bkz [. İzlenecek yol: Doldurma, kenar boşlukları ve AutoSize özelliği](windows-forms-controls-padding-autosize.md)ile Windows Forms denetimleri yerleştirme.
+2. <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Margin%2A> özelliğinin değerini, **Özellikler** penceresinde <xref:System.Windows.Forms.Control.Margin%2A> girdisini genişleterek ve <xref:System.Windows.Forms.Padding.All%2A> özelliğini 0 olarak ayarlayarak değiştirin. Ayrıntılar için bkz. [Izlenecek yol: doldurma, kenar boşlukları ve AutoSize özelliği ile Windows Forms denetimleri yerleştirme](windows-forms-controls-padding-autosize.md).
 
-3. Anlık görüntü satırı görünene kadar denetimiformunsağkenarlığınataşıyın.<xref:System.Windows.Forms.Button> Bu uzaklık artık formun <xref:System.Windows.Forms.Control.Padding%2A> özelliğinin değeri tarafından verilir.
+3. Bir Snapın çizgisi görünene kadar <xref:System.Windows.Forms.Button> denetimini formun sağ kenarlığına taşıyın. Bu uzaklık artık formun <xref:System.Windows.Forms.Control.Padding%2A> özelliğinin değeri tarafından verilir.
 
-4. <xref:System.Windows.Forms.GroupBox> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin.
+4. **Araç kutusundan** bir <xref:System.Windows.Forms.GroupBox> denetimini formunuza sürükleyin.
 
-5. <xref:System.Windows.Forms.GroupBox> **Özellikler** penceresinde girişigenişleterek<xref:System.Windows.Forms.Control.Padding%2A> ve <xref:System.Windows.Forms.Control.Padding%2A> özelliğini10olarakayarlayarakdenetiminözelliğinindeğerinideğiştirin.<xref:System.Windows.Forms.Padding.All%2A>
+5. <xref:System.Windows.Forms.GroupBox> denetimin <xref:System.Windows.Forms.Control.Padding%2A> özelliğinin değerini, **Özellikler** penceresinde <xref:System.Windows.Forms.Control.Padding%2A> girdisini genişleterek ve <xref:System.Windows.Forms.Padding.All%2A> özelliğini 10 olarak ayarlayarak değiştirin.
 
-6. Bir <xref:System.Windows.Forms.Button> denetimi **araç kutusundan denetime sürükleyin** <xref:System.Windows.Forms.GroupBox> .
+6. **Araç kutusundan** bir <xref:System.Windows.Forms.Button> denetimini <xref:System.Windows.Forms.GroupBox> denetimine sürükleyin.
 
-7. Bir anlık görüntü satırı görünene kadar <xref:System.Windows.Forms.GroupBox> denetimisağkenarlığıylataşıyın.<xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.Button> Denetim içindekidenetimitaşıyınveanlıkgörüntüçizgilerininnerede<xref:System.Windows.Forms.GroupBox> göründüğünü aklınızda yapın.
+7. Bir Snapın çizgisi görünene kadar <xref:System.Windows.Forms.Button> denetimini <xref:System.Windows.Forms.GroupBox> denetiminin sağ kenarlığına taşıyın. <xref:System.Windows.Forms.GroupBox> denetim içindeki <xref:System.Windows.Forms.Button> denetimini taşıyın ve anlık görüntü çizgilerinin nerede göründüğünü aklınızda yapın.
 
 ## <a name="align-to-grouped-controls"></a>Gruplanmış denetimlere Hizala
 
-Gruplanmış denetimleri ve <xref:System.Windows.Forms.GroupBox> denetim içindeki denetimleri hizalamak için Snapın çizgilerini kullanabilirsiniz.
+Gruplanmış denetimleri ve bir <xref:System.Windows.Forms.GroupBox> denetimindeki denetimleri hizalamak için dayama çizgileri ' i kullanabilirsiniz.
 
 1. Formunuzdaki iki denetimden birini seçin. Seçimi taşıyın ve seçiminiz ve diğer denetimler arasında görünen anlık görüntü çizgilerini unutmayın.
 
-2. <xref:System.Windows.Forms.GroupBox> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin.
+2. **Araç kutusundan** bir <xref:System.Windows.Forms.GroupBox> denetimini formunuza sürükleyin.
 
-3. Bir <xref:System.Windows.Forms.Button> denetimi **araç kutusundan denetime sürükleyin** <xref:System.Windows.Forms.GroupBox> .
+3. **Araç kutusundan** bir <xref:System.Windows.Forms.Button> denetimini <xref:System.Windows.Forms.GroupBox> denetimine sürükleyin.
 
-4. <xref:System.Windows.Forms.Button> Denetimlerden birini seçin ve <xref:System.Windows.Forms.GroupBox> denetimin çevresinde taşıyın. <xref:System.Windows.Forms.GroupBox> Denetimin kenarlarındaki görünen ek çizgi çizgilerini unutmayın. Ayrıca, denetimin içindeki <xref:System.Windows.Forms.Button> denetimin kenarları üzerinde görünen <xref:System.Windows.Forms.GroupBox> ek çizgi çizgilerini de unutmayın. Bir kapsayıcı denetiminin alt öğeleri olan denetimler de yama çizgilerini destekler.
+4. <xref:System.Windows.Forms.Button> denetimlerinden birini seçin ve <xref:System.Windows.Forms.GroupBox> denetimi etrafında taşıyın. <xref:System.Windows.Forms.GroupBox> denetiminin kenarlarındaki görünen ek çizgi çizgilerini unutmayın. Ayrıca, <xref:System.Windows.Forms.GroupBox> denetiminin içerdiği <xref:System.Windows.Forms.Button> denetiminin kenarları üzerinde görünen anlık görüntü çizgilerini de unutmayın. Bir kapsayıcı denetiminin alt öğeleri olan denetimler de yama çizgilerini destekler.
 
 ## <a name="use-snaplines-to-place-a-control-by-outlining-its-size"></a>Boyutunu belirleyerek bir denetim yerleştirmek için dayama çizgileri kullanın
 
-1. **Araç kutusunda** <xref:System.Windows.Forms.Button> denetim simgesine tıklayın. Bunu form üzerine sürüklemeyin.
+1. **Araç kutusunda**<xref:System.Windows.Forms.Button> denetim simgesine tıklayın. Bunu form üzerine sürüklemeyin.
 
-2. Fare işaretçisini formun Tasarım yüzeyi üzerine taşıyın. İşaretçinin, <xref:System.Windows.Forms.Button> denetim simgesinin eklendiği çapraz artı işaretine değişdiğine unutmayın. Ayrıca, <xref:System.Windows.Forms.Button> denetim için hizalanmış konumlar önermek için görüntülenen anlık görüntü çizgilerini de unutmayın.
+2. Fare işaretçisini formun Tasarım yüzeyi üzerine taşıyın. İşaretçinin, <xref:System.Windows.Forms.Button> denetim simgesinin eklendiği çapraz artı işaretine değişdiğine unutmayın. Ayrıca, <xref:System.Windows.Forms.Button> denetimi için hizalanmış konumlar önermek için görüntülenen anlık görüntü çizgilerini de unutmayın.
 
 3. Fare düğmesine tıklayın ve basılı tutun.
 
@@ -104,65 +104,65 @@ Gruplanmış denetimleri ve <xref:System.Windows.Forms.GroupBox> denetim içinde
 
 ## <a name="use-snaplines-when-dragging-a-control-from-the-toolbox"></a>Araç kutusundan denetim sürüklerken dayama çizgileri kullanın
 
-1. <xref:System.Windows.Forms.Button> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin, ancak fare düğmesini serbest bırakın.
+1. **Araç kutusundan** bir <xref:System.Windows.Forms.Button> denetimini formunuza sürükleyin, ancak fare düğmesini serbest bırakın.
 
-2. Fare işaretçisini formun Tasarım yüzeyi üzerine taşıyın. İşaretçinin, yeni <xref:System.Windows.Forms.Button> denetimin oluşturulacağı konumu belirtecek şekilde değişdiğine unutmayın.
+2. Fare işaretçisini formun Tasarım yüzeyi üzerine taşıyın. İşaretçinin, yeni <xref:System.Windows.Forms.Button> denetiminin oluşturulacağı konumu belirtecek şekilde değişdiğine unutmayın.
 
-3. Fare işaretçisini formun etrafında sürükleyin. <xref:System.Windows.Forms.Button> Denetim için hizalanmış konumlar önermek için görüntülenen anlık görüntü çizgilerini unutmayın. Diğer denetimlerle hizalanmış bir konum bulun.
+3. Fare işaretçisini formun etrafında sürükleyin. <xref:System.Windows.Forms.Button> denetimi için hizalanmış konumlar önermek için görüntülenen anlık görüntü çizgilerini unutmayın. Diğer denetimlerle hizalanmış bir konum bulun.
 
 4. Fare düğmesini bırakın. Denetim, snaplines belirtilen konumda oluşturulur.
 
 ## <a name="resize-a-control-using-snaplines"></a>Anlık görüntü çizgileri kullanarak bir denetimi yeniden boyutlandırma
 
-1. <xref:System.Windows.Forms.Button> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin.
+1. **Araç kutusundan** bir <xref:System.Windows.Forms.Button> denetimini formunuza sürükleyin.
 
-2. Yakalayıp, <xref:System.Windows.Forms.Button> köşe boyutlandırma tutamaçlarından birini ve sürüklemeyi seçerek denetimi yeniden boyutlandırın. Ayrıntılar için bkz [. nasıl yapılır: Windows Forms](how-to-resize-controls-on-windows-forms.md)denetimleri yeniden boyutlandırın.
+2. <xref:System.Windows.Forms.Button> denetimini, köşe boyutlandırma tutamaçlarından birini ve sürüklemeyi yakalayıp göre yeniden boyutlandırın. Ayrıntılar için bkz. [nasıl yapılır: Windows Forms denetimleri yeniden boyutlandırma](how-to-resize-controls-on-windows-forms.md).
 
-3. <xref:System.Windows.Forms.Button> Denetimin kenarlıklarıyla bir başka denetimle hizalanana kadar boyutlandırma tutamacını sürükleyin. Bir ek yük çizgisi göründüğünü unutmayın. Ayrıca, boyutlandırma tutamacının, snapline tarafından belirtilen konuma yaslandığına de unutmayın.
+3. <xref:System.Windows.Forms.Button> denetiminin kenarlarından biri başka bir denetimle hizalanana kadar boyutlandırma tutamacını sürükleyin. Bir ek yük çizgisi göründüğünü unutmayın. Ayrıca, boyutlandırma tutamacının, snapline tarafından belirtilen konuma yaslandığına de unutmayın.
 
-4. <xref:System.Windows.Forms.Button> Denetimi farklı yönlere göre yeniden boyutlandırın ve boyutlandırma tutamacını farklı denetimlere hizalayın. Hizalı göstermek için, ek çizgi çizgilerinin çeşitli yönlere nasıl göründüğünü aklınızda yapın.
+4. <xref:System.Windows.Forms.Button> denetimini farklı yönlere göre yeniden boyutlandırın ve boyutlandırma tutamacını farklı denetimlere hizalayın. Hizalı göstermek için, ek çizgi çizgilerinin çeşitli yönlere nasıl göründüğünü aklınızda yapın.
 
 ## <a name="align-a-label-to-a-controls-text"></a>Etiketi bir denetimin metnine hizalayın
 
-1. <xref:System.Windows.Forms.TextBox> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin. <xref:System.Windows.Forms.TextBox> Denetimi forma bıraktığınızda, akıllı etiket glifi ' na tıklayın ve **metni textBox1 olarak ayarla** seçeneğini belirleyin. Ayrıntılar için bkz [. İzlenecek yol: Windows Forms denetimlerinde](performing-common-tasks-using-smart-tags-on-wf-controls.md)Akıllı etiketleri kullanarak ortak görevleri gerçekleştirme.
+1. **Araç kutusundan** bir <xref:System.Windows.Forms.TextBox> denetimini formunuza sürükleyin. Form üzerine <xref:System.Windows.Forms.TextBox> denetimini bıraktığınızda, akıllı etiket simgesine tıklayın ve **metni textBox1 olarak ayarla** seçeneğini belirleyin. Ayrıntılar için bkz. [Izlenecek yol: Windows Forms Denetimlerinde akıllı etiketleri kullanarak ortak görevleri gerçekleştirme](performing-common-tasks-using-smart-tags-on-wf-controls.md).
 
-2. <xref:System.Windows.Forms.Label> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin.
+2. **Araç kutusundan** bir <xref:System.Windows.Forms.Label> denetimini formunuza sürükleyin.
 
-3. <xref:System.Windows.Forms.Label> Denetimin özelliğinin değerini olarak`true`değiştirin. <xref:System.Windows.Forms.Control.AutoSize%2A> Denetimin kenarlıklarının, görüntüleme metnine uyacak şekilde ayarlandığını unutmayın.
+3. <xref:System.Windows.Forms.Label> denetiminin <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğinin değerini `true`olarak değiştirin. Denetimin kenarlıklarının, görüntüleme metnine uyacak şekilde ayarlandığını unutmayın.
 
-4. Denetimi denetimin soluna <xref:System.Windows.Forms.TextBox> taşıyın, bu nedenle <xref:System.Windows.Forms.TextBox> denetimin alt kenarıyla hizalanır. <xref:System.Windows.Forms.Label> İki denetimin alt kenarları üzerinde görünen Snapın çizgisini unutmayın.
+4. <xref:System.Windows.Forms.Label> denetimini <xref:System.Windows.Forms.TextBox> denetiminin soluna taşıyın, bu nedenle <xref:System.Windows.Forms.TextBox> denetiminin alt kenarıyla hizalanır. İki denetimin alt kenarları üzerinde görünen Snapın çizgisini unutmayın.
 
-5. <xref:System.Windows.Forms.Label> Metin ve <xref:System.Windows.Forms.Label> metinhizalananakadardenetimibiraz<xref:System.Windows.Forms.TextBox> daha yukarıya taşıyın. Her iki denetimin metin alanlarının ne zaman hizalandığını belirten, görüntülenen farklı stillendirilmiş ek çizgi olduğunu unutmayın.
+5. <xref:System.Windows.Forms.Label> metni ve <xref:System.Windows.Forms.TextBox> metni hizalanana kadar <xref:System.Windows.Forms.Label> denetimini biraz daha yukarı taşıyın. Her iki denetimin metin alanlarının ne zaman hizalandığını belirten, görüntülenen farklı stillendirilmiş ek çizgi olduğunu unutmayın.
 
 ## <a name="use-snaplines-with-keyboard-navigation"></a>Klavye gezintisi ile dayama çizgileri kullanma
 
-1. <xref:System.Windows.Forms.Button> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin. Formun sol üst köşesine yerleştirin.
+1. **Araç kutusundan** bir <xref:System.Windows.Forms.Button> denetimini formunuza sürükleyin. Formun sol üst köşesine yerleştirin.
 
-2. **CTRL**+**aşağı ok**tuşuna basın. Denetimin formu, kullanılabilir ilk yatay hizalama konumuna taşıdığına unutmayın.
+2. **Ctrl**+**aşağı ok**tuşuna basın. Denetimin formu, kullanılabilir ilk yatay hizalama konumuna taşıdığına unutmayın.
 
-3. Denetim formun altına ulaşıncaya kadar **CTRL**+**aşağı ok** tuşuna basın. Formun aşağı doğru olduğu konumları göz önünde kalın.
+3. Denetim formun altına ulaşana kadar **Ctrl**+**aşağı ok** tuşuna basın. Formun aşağı doğru olduğu konumları göz önünde kalın.
 
-4. **CTRL**+**sağ ok**tuşuna basın. Denetimin form genelinde ilk kullanılabilir dikey hizalama konumuna taşındığını unutmayın.
+4. **Ctrl**+**sağ ok**tuşuna basın. Denetimin form genelinde ilk kullanılabilir dikey hizalama konumuna taşındığını unutmayın.
 
-5. Denetimin formun kenarına ulaşıncaya kadar **CTRL**++**ok** tuşuna basın. Form boyunca taşıdıkça kapladığı konumları göz önünde edin.
+5. Denetim formun kenarına ulaşıncaya kadar **Ctrl**+**sağ ok** tuşuna basın. Form boyunca taşıdıkça kapladığı konumları göz önünde edin.
 
 6. Denetimi, ok tuşlarının birleşimiyle birlikte form etrafında taşıyın. Denetimin kapladığı konumları ve bunlara eşlik eden anlık görüntü satırlarını unutmayın.
 
-7. <xref:System.Windows.Forms.Button> Denetimi bir pikselin artışlarla yeniden boyutlandırmak için **SHIFT**+**ok** tuşlarına basın.
+7. <xref:System.Windows.Forms.Button> denetimini bir pikselin artışlarla yeniden boyutlandırmak için **shıft**+**ok tuşlarına** basın.
 
-8. <xref:System.Windows.Forms.Button> **CTRL**+SHIFTok+tuşlarına basarak denetimin anlık çizgi artışlarını yeniden boyutlandırın.
+8. <xref:System.Windows.Forms.Button> denetimini daha sonra yeniden boyutlandırmak için **Ctrl**+**SHIFT**+**ok** tuşlarına basın.
 
 ## <a name="selectively-disable-snaplines"></a>Ek yama çizgilerini seçmeli devre dışı bırak
 
-1. <xref:System.Windows.Forms.TableLayoutPanel> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin.
+1. **Araç kutusundan** bir <xref:System.Windows.Forms.TableLayoutPanel> denetimini formunuza sürükleyin.
 
-2. <xref:System.Windows.Forms.Button> **Araç kutusundaki**denetim simgesine çift tıklayın. <xref:System.Windows.Forms.TableLayoutPanel> Denetimin ilk hücresinde yeni bir düğme denetimi göründüğünü unutmayın.
+2. **Araç kutusundaki**<xref:System.Windows.Forms.Button> denetim simgesine çift tıklayın. <xref:System.Windows.Forms.TableLayoutPanel> denetiminin ilk hücresinde yeni bir düğme denetimi göründüğünü unutmayın.
 
-3. <xref:System.Windows.Forms.Button> **Araç kutusundaki** denetim simgesine iki kez çift tıklayın. Bu, <xref:System.Windows.Forms.TableLayoutPanel> denetimde boş bir hücre bırakır.
+3. **Araç kutusundaki** <xref:System.Windows.Forms.Button> denetim simgesine iki kez çift tıklayın. Bu, <xref:System.Windows.Forms.TableLayoutPanel> denetiminde boş bir hücre bırakır.
 
-4. <xref:System.Windows.Forms.Button> **Araç kutusundan** bir denetimi <xref:System.Windows.Forms.TableLayoutPanel> denetimin boş hücresine sürükleyin. Hiçbir yama çizgisi görünmediğini unutmayın.
+4. **Araç kutusundan** bir <xref:System.Windows.Forms.Button> denetimini <xref:System.Windows.Forms.TableLayoutPanel> denetiminin boş hücresine sürükleyin. Hiçbir yama çizgisi görünmediğini unutmayın.
 
-5. Denetimi denetimin dışına<xref:System.Windows.Forms.TableLayoutPanel> sürükleyin ve denetimin çevresinde taşıyın. <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.TableLayoutPanel> Anlık görüntü çizgilerinin yeniden göründüğünü unutmayın.
+5. <xref:System.Windows.Forms.Button> denetimini <xref:System.Windows.Forms.TableLayoutPanel> denetiminden sürükleyin ve <xref:System.Windows.Forms.TableLayoutPanel> denetimi etrafında taşıyın. Anlık görüntü çizgilerinin yeniden göründüğünü unutmayın.
 
 ## <a name="disable-snaplines"></a>Anlık görüntü satırlarını devre dışı bırak
 
@@ -184,13 +184,13 @@ Hiçbir yama satırı görünmez ve denetim olası hizalama konumlarına eklemez
 
 Anlık görüntü çizgileri, formunuzdaki denetimleri hizalamak için sezgisel bir yöntem sunar. Daha fazla araştırma için öneriler şunlardır:
 
-- Bir <xref:System.Windows.Forms.GroupBox> denetimi başka <xref:System.Windows.Forms.GroupBox> bir denetim içinde iç içe geçirmeyi deneyin. Alt <xref:System.Windows.Forms.GroupBox> <xref:System.Windows.Forms.Button> Denetimiçine<xref:System.Windows.Forms.GroupBox> ve diğeri de üst denetim içine bir denetim koyun. Anlık görüntü, kapsayıcı sınırlarının çapraz çizgilerinin nasıl çapraz olduğunu görmek için denetimlerietrafındataşıyın.<xref:System.Windows.Forms.Button>
+- Bir <xref:System.Windows.Forms.GroupBox> denetimini başka bir <xref:System.Windows.Forms.GroupBox> denetiminde iç içe geçirmeyi deneyin. Alt <xref:System.Windows.Forms.GroupBox> denetimine bir <xref:System.Windows.Forms.Button> denetimi ve üst <xref:System.Windows.Forms.GroupBox> denetiminin içinde başka bir denetim koyun. Anlık görüntü çizgilerinin çapraz kapsayıcı sınırlarının dışına bakmak için <xref:System.Windows.Forms.Button> denetimlerinin etrafında taşıyın.
 
-- <xref:System.Windows.Forms.TextBox> Denetimlerin bir sütununu ve ilgili <xref:System.Windows.Forms.Label> denetimlerin bir sütununu oluşturun. <xref:System.Windows.Forms.Label> Denetimlerin `true`' <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğinin değerini olarak ayarlayın. <xref:System.Windows.Forms.Label> Denetimleri, görüntülenmekte olan metinlerin <xref:System.Windows.Forms.TextBox> denetimlerde metinle hizalanmasını sağlayacak şekilde taşımak için dayama çizgileri kullanın.
+- <xref:System.Windows.Forms.TextBox> denetimlerinin bir sütununu ve <xref:System.Windows.Forms.Label> denetimlerinin karşılık gelen sütununu oluşturun. <xref:System.Windows.Forms.Label> Controls ' <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğinin değerini `true`olarak ayarlayın. <xref:System.Windows.Forms.Label> denetimlerini, görüntülenecek metinlerin <xref:System.Windows.Forms.TextBox> denetimlerindeki metinle hizalandığı şekilde taşımak için dayama çizgileri kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [İzlenecek yol: FlowLayoutPanel kullanarak Windows Forms denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [İzlenecek yol: TableLayoutPanel kullanarak Windows Forms denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [İzlenecek yol: Doldurma, kenar boşlukları ve AutoSize özelliği ile Windows Forms denetimleri yerleştirme](windows-forms-controls-padding-autosize.md)
+- [İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [İzlenecek yol: Doldurma, Kenar Boşlukları ve AutoSize Özelliği ile Windows Forms Denetimlerini Düzenleme](windows-forms-controls-padding-autosize.md)

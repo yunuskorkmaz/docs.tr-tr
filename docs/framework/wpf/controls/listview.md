@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
-ms.openlocfilehash: c90849c27f7bbef2338ef255350a7dccd40c99e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45f5b054b946e746e490c64b2b051bec80fc6b17
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932593"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459333"
 ---
 # <a name="listview"></a>ListView
-<xref:System.Windows.Controls.ListView> Denetim bir veri öğeleri kümesi farklı düzenler veya görünümleri görüntülemek için altyapı sağlar.  
+<xref:System.Windows.Controls.ListView> denetimi, farklı mizanpajlarda veya görünümlerde veri öğelerinin bir kümesini görüntüleyecek altyapıyı sağlar.  
   
- Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.ListView>.  
+ Aşağıdaki çizimde bir <xref:System.Windows.Controls.ListView>gösterilmektedir.  
   
- ![Bir ListView GridView çıktıyla gösteren ekran görüntüsü.](./media/gridview-overview/listview-gridview-output.jpg)  
+ ![GridView çıkışıyla bir ListView gösteren ekran görüntüsü.](./media/gridview-overview/listview-gridview-output.jpg)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Genel Bakışlar](listview-overviews.md)  
@@ -31,5 +31,5 @@ ms.locfileid: "61932593"
   <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)  
+ [Veri Bağlamaya Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)  
   [Veri Şablonu Oluşturmaya Genel Bakış](../data/data-templating-overview.md)

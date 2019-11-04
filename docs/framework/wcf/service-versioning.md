@@ -2,12 +2,12 @@
 title: Hizmet Sürümü Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 68c41f2c349dbceb318976ee26db58fd00dae872
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3f9fd87eacf67a1b23568dcf87df086e935879ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321479"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423680"
 ---
 # <a name="service-versioning"></a>Hizmet Sürümü Oluşturma
 İlk dağıtımdan sonra ve yaşam süreleri (ve sergiledikleri uç noktalar) sırasında, iş ihtiyaçlarını değiştirme, bilgi teknolojisi gereksinimleri gibi çeşitli nedenlerle değişiklik yapılması veya diğer sorunları ele almanız gerekebilir çıkışları. Her değişiklik, hizmetin yeni bir sürümünü kullanıma sunar. Bu konu, Windows Communication Foundation (WCF) sürümünde sürüm oluşturmayı nasıl düşüntireceğinizi açıklamaktadır.  
@@ -63,9 +63,9 @@ ms.locfileid: "72321479"
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>Veri sözleşmesi ve .NET türleri arasında ayrım  
  Bir .NET sınıfı veya yapısı, sınıfa <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği uygulanarak veri sözleşmesi olarak yansıtılyabilirler. .NET türü ve veri sözleşmesi projeksiyonları iki ayrı önemlidir. Aynı veri anlaşması projeksiyonu ile birden çok .NET türü olması mümkündür. Bu ayrım özellikle, tasarlanan veri sözleşmesini koruyarak .NET türünü değiştirmenize olanak tanıyan yararlı olur ve böylece sözcüğün katı anlamda bile mevcut istemcilerle uyumluluğu sürdürmenize yardımcı olur. .NET türü ve veri sözleşmesi arasında bu ayrımı sürdürmek için her zaman yapmanız gereken iki şey vardır:  
   
-- @No__t-0 ve <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> belirtin. .NET türünün adının ve ad alanının sözleşmede gösterilmesini engellemek için, her zaman veri sözleşmeniz adını ve ad alanını belirtmeniz gerekir. Bu şekilde, daha sonra .NET ad alanı veya tür adı değiştirmeye karar verirseniz, veri sözleşmeniz aynı kalır.  
+- Bir <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> ve <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>belirtin. .NET türünün adının ve ad alanının sözleşmede gösterilmesini engellemek için, her zaman veri sözleşmeniz adını ve ad alanını belirtmeniz gerekir. Bu şekilde, daha sonra .NET ad alanı veya tür adı değiştirmeye karar verirseniz, veri sözleşmeniz aynı kalır.  
   
-- @No__t-0 belirtin. .NET üye adınızın sözleşmede gösterilmesini engellemek için, her zaman veri üyelerinizin adını belirtmeniz gerekir. Bu şekilde, üyenin .NET adını daha sonra değiştirmeye karar verirseniz, veri sözleşmeniz aynı kalır.  
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>belirtin. .NET üye adınızın sözleşmede gösterilmesini engellemek için, her zaman veri üyelerinizin adını belirtmeniz gerekir. Bu şekilde, üyenin .NET adını daha sonra değiştirmeye karar verirseniz, veri sözleşmeniz aynı kalır.  
   
 ### <a name="changing-or-removing-members"></a>Üyeleri değiştirme veya kaldırma  
  Bir üyenin adını veya veri türünü değiştirmek ya da veri üyelerini kaldırmak, LAX sürümliğine izin verilse bile Son değişiklik olur. Bu gerekliyse, yeni bir veri sözleşmesi oluşturun.  
@@ -77,7 +77,7 @@ ms.locfileid: "72321479"
 ### <a name="round-trips-of-unknown-data"></a>Bilinmeyen verilerin gidiş dönüşleri  
  Bazı senaryolarda, yeni bir sürüme eklenen üyelerden gelen bilinmeyen veriler "gidiş dönüş" için bir gereksinim vardır. Örneğin, "versionNew" hizmeti, yeni eklenen bazı üyelere "versionOld" istemcisine veri gönderir. İstemci, iletiyi işlerken yeni eklenen üyeleri yoksayar, ancak yeni eklenen üyeler de dahil olmak üzere aynı verileri versionNew hizmetine geri gönderir. Bunun için tipik senaryo, verilerin hizmetten alındığı, değiştirildiği ve döndürüldüğü veri güncelleştirmeleridir.  
   
- Belirli bir tür için gidiş-dönüşü etkinleştirmek üzere, türün <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimini uygulaması gerekir. Arabirim, <xref:System.Runtime.Serialization.ExtensionDataObject> türünü döndüren <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> olan bir özellik içerir. Özelliği, geçerli sürüme bilinmeyen veri sözleşmesinin gelecekteki sürümlerindeki verileri depolamak için kullanılır. Bu veriler istemci için opaktır, ancak örnek serileştirildiğinde <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> özelliğinin içeriği, veri sözleşmesi üyelerinin verileriyle birlikte yazılır.  
+ Belirli bir tür için gidiş-dönüşü etkinleştirmek üzere, türün <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimini uygulaması gerekir. Arabirim bir özellik içerir, <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> <xref:System.Runtime.Serialization.ExtensionDataObject> türünü döndürür. Özelliği, geçerli sürüme bilinmeyen veri sözleşmesinin gelecekteki sürümlerindeki verileri depolamak için kullanılır. Bu veriler istemci için opaktır, ancak örnek serileştirildiğinde <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> özelliğinin içeriği, veri sözleşmesinin üyelerinin verileri ile yazılır.  
   
  Tüm türlerinizin, yeni ve bilinmeyen gelecekteki üyelere uyum sağlaması için bu arabirimi uygulaması önerilir.  
   
@@ -85,10 +85,10 @@ ms.locfileid: "72321479"
  Bir sözleşmenin merkezi bir depoya yayımlandığı veri sözleşmeleri kitaplıkları olabilir ve hizmet ve tür uygulayıcıları, bu depodan veri sözleşmeleri uygular ve kullanıma sunar. Bu durumda, depoya bir veri sözleşmesi yayımladığınızda, kendisini uygulayan türler oluşturan herhangi bir denetiminiz yoktur. Bu nedenle, sözleşmeyi yayımlandıktan sonra değiştiremezsiniz ve etkili bir şekilde sabit hale gelir.  
   
 ### <a name="when-using-the-xmlserializer"></a>XmlSerializer kullanılırken  
- @No__t-0 sınıfı kullanılırken aynı sürüm oluşturma ilkeleri uygulanır. Katı sürüm oluşturma gerektiğinde, veri sözleşmelerini sabit olarak değerlendirin ve yeni sürümler için benzersiz ve nitelikli adlarla yeni veri sözleşmeleri oluşturun. LAX sürümü oluşturma 'nın kullanılabilir olduğundan emin olduğunuzda, yeni sürümlere yeni seri hale getirilebilir Üyeler ekleyebilirsiniz, ancak var olan üyeleri değiştirmez veya kaldıramazsınız.  
+ <xref:System.Xml.Serialization.XmlSerializer> sınıfı kullanılırken aynı sürüm oluşturma ilkeleri uygulanır. Katı sürüm oluşturma gerektiğinde, veri sözleşmelerini sabit olarak değerlendirin ve yeni sürümler için benzersiz ve nitelikli adlarla yeni veri sözleşmeleri oluşturun. LAX sürümü oluşturma 'nın kullanılabilir olduğundan emin olduğunuzda, yeni sürümlere yeni seri hale getirilebilir Üyeler ekleyebilirsiniz, ancak var olan üyeleri değiştirmez veya kaldıramazsınız.  
   
 > [!NOTE]
-> @No__t-0, bilinmeyen verilerin gidiş dönüşü desteklemek için <xref:System.Xml.Serialization.XmlAnyElementAttribute> ve <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> özniteliklerini kullanır.  
+> <xref:System.Xml.Serialization.XmlSerializer>, bilinmeyen verilerin gidiş dönüşü desteklemek için <xref:System.Xml.Serialization.XmlAnyElementAttribute> ve <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> özniteliklerini kullanır.  
   
 ## <a name="message-contract-versioning"></a>İleti sözleşmesi sürümü oluşturma  
  İleti sözleşmesi sürümü oluşturma yönergeleri, veri sözleşmelerinin sürümü oluşturma konusunda çok benzer. Katı sürüm oluşturma gerekliyse, ileti gövdesini değiştirmemelisiniz, bunun yerine benzersiz bir nitelenmiş ada sahip yeni bir ileti sözleşmesi oluşturmalısınız. LAX sürümü oluşturmayı biliyorsanız, yeni ileti gövdesi parçalarını ekleyebilir, ancak varolanları değiştirmez veya kaldırabilirsiniz. Bu kılavuz, hem çıplak hem de Sarmalanan ileti sözleşmeleri için geçerlidir.  
@@ -114,7 +114,7 @@ ms.locfileid: "72321479"
  İşlemleri kaldırma işlemi de son değişiklik olur. Böyle bir değişiklik yapmak için yeni bir hizmet sözleşmesi tanımlayın ve yeni bir uç noktada kullanıma sunun.  
   
 ### <a name="fault-contracts"></a>Hata sözleşmeleri  
- @No__t-0 özniteliği, bir hizmet sözleşmesi geliştiricisinin, sözleşmenin işlemlerinden döndürülebilecek hatalar hakkında bilgi belirtmesini sağlar.  
+ <xref:System.ServiceModel.FaultContractAttribute> özniteliği, bir hizmet sözleşmesi geliştiricisinin, sözleşmenin işlemlerinden döndürülebilecek hatalar hakkında bilgi belirtmesini sağlar.  
   
  Bir hizmetin sözleşmesinde açıklanan hataların listesi ayrıntılı olarak değerlendirilmez. Herhangi bir zamanda, bir işlem sözleşmede açıklanmayan hatalar döndürebilir. Bu nedenle, sözleşmede açıklanan hata kümesini değiştirmenin bölünmesi düşünülmez. Örneğin, <xref:System.ServiceModel.FaultContractAttribute> kullanarak sözleşmeye yeni bir hata ekleme veya mevcut bir hatayı sözleşmeden kaldırma.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "72321479"
   
  Bu tür bir mekanizma, her bir veri sözleşmesinin üyelerini tanımlamak ve arabirimleri uygulayan veri sözleşmesi sınıfları yerine iç uygulama kodu yazmak için arabirimler kullanmaktır. Bir hizmetin 1. sürümü için aşağıdaki kod `IPurchaseOrderV1` arabirimini ve `PurchaseOrderV1` ' i gösterir:  
   
-```  
+```csharp  
 public interface IPurchaseOrderV1  
 {  
     string OrderId { get; set; }  
@@ -153,7 +153,7 @@ public class PurchaseOrderV1 : IPurchaseOrderV1
   
  Hizmet sözleşmesinin işlemleri `PurchaseOrderV1` ' da yazıldığında, gerçek iş mantığı `IPurchaseOrderV1` ' de olabilir. Ardından, sürüm 2 ' de, aşağıdaki kodda gösterildiği gibi yeni bir `IPurchaseOrderV2` arabirimi ve yeni bir `PurchaseOrderV2` sınıfı vardır:  
   
-```  
+```csharp
 public interface IPurchaseOrderV2  
 {  
     DateTime OrderDate { get; set; }  
@@ -173,7 +173,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
 }  
 ```  
   
- Hizmet sözleşmesi, `PurchaseOrderV2` ' da yazılı yeni işlemleri içerecek şekilde güncelleştirilecektir. @No__t-0 ' da yazılan mevcut iş mantığı `PurchaseOrderV2` ' i ve `OrderDate` özelliği için gereken yeni iş mantığı `IPurchaseOrderV2` ' e göre yazılır.  
+ Hizmet sözleşmesi, `PurchaseOrderV2` ' da yazılı yeni işlemleri içerecek şekilde güncelleştirilecektir. `IPurchaseOrderV1` olarak yazılan mevcut iş mantığı `PurchaseOrderV2` ve `OrderDate` özelliğin `IPurchaseOrderV2`açısından yazılması gereken yeni iş mantığı için çalışmaya devam edecektir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

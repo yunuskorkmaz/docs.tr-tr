@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 1a3c23a70bc7dc519c824426f8939cb15e87a7fb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c3e2368bc5977d7f50ae7ecea8557c5c545e82a4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128049"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455600"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework sürüm uyumluluğu
 
@@ -49,7 +49,7 @@ Uygulamada, bu uyumluluk .NET Framework ve programlama tekniklerindeki değişik
 
 Uygulamanız veya bileşeniniz .NET Framework 4,5 ' de beklendiği gibi çalışmazsa (kendi nokta sürümleri, .NET Framework 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 veya 4,8), aşağıdaki denetim listelerini kullanın:
 
-- Uygulamanız, .NET Framework 4,0 ' den başlayarak .NET Framework herhangi bir sürümünde çalışacak şekilde geliştirildiyse, hedeflenen .NET Framework sürümünüz ve bu sürüm üzerinde yapılan değişikliklerin listesini oluşturmak için [.NET Framework uygulama uyumluluğu](application-compatibility.md) ' na bakın. uygulamanız çalışıyor.
+- Uygulamanız .NET Framework 4,0 ' den başlayarak .NET Framework herhangi bir sürümünde çalışacak şekilde geliştirildiyse, hedeflenen .NET Framework sürümünüz ve uygulamanızın üzerinde çalıştığı sürüm arasındaki değişikliklerin listesini oluşturmak için [uygulama uyumluluğu](application-compatibility.md) ' na bakın.
 
 - .NET Framework 3,5 uygulamanız varsa Ayrıca bkz. [.NET Framework 4 geçiş sorunları](../migration-guide/net-framework-4-migration-issues.md).
 

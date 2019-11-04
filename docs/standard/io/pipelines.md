@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 54b5f97aca131f52b9b5d9f54d7fa5ec00ba3d5b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395920"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423670"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET 'teki System. ıO. işlem hatları
 
@@ -48,7 +48,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 Yukarıdaki kodda birkaç sorun vardır:
 
 * Tüm ileti (satır sonu) `ReadAsync` ' a yapılan tek bir çağrıda alınmayabilir.
-* @No__t-0 sonucu yok sayılıyor. `stream.ReadAsync`, okunan veri miktarını döndürür.
+* `stream.ReadAsync`sonucunu yok sayıyor. `stream.ReadAsync`, okunan veri miktarını döndürür.
 * Tek bir `ReadAsync` çağrısında birden çok satırın okunduğu durumu işlemez.
 * Her okuma ile bir `byte` dizisi ayırır.
 
@@ -70,7 +70,7 @@ Yukarıdaki sorunları onarmak için aşağıdaki değişiklikler gereklidir:
 
 ## <a name="pipe"></a>Kapatıldığı
 
-@No__t-0 sınıfı bir `PipeWriter/PipeReader` çifti oluşturmak için kullanılabilir. @No__t-0 ' a yazılan tüm veriler `PipeReader` ' de kullanılabilir:
+<xref:System.IO.Pipelines.Pipe> sınıfı bir `PipeWriter/PipeReader` çifti oluşturmak için kullanılabilir. `PipeWriter` yazılan tüm veriler `PipeReader`kullanılabilir:
 
 [!code-csharp[](~/samples/snippets/csharp/pipelines/Pipe.cs?name=snippet2)]
 
@@ -90,20 +90,20 @@ Ayrılmış açık arabellek yok. Tüm arabellek yönetimi, `PipeReader` ve `Pip
 İlk döngüde:
 
 * <xref:System.IO.Pipelines.PipeWriter.GetMemory(System.Int32)?displayProperty=nameWithType>, temel kümeden belleği almak için çağrılır.
-* <xref:System.IO.Pipelines.PipeWriter.Advance(System.Int32)?displayProperty=nameWithType>, arabelleğe ne kadar veri yazıldığını @no__t söylemek için çağırılır.
-* <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType>, verileri `PipeReader` ' e kullanılabilir hale getirmek için çağrılır.
+* <xref:System.IO.Pipelines.PipeWriter.Advance(System.Int32)?displayProperty=nameWithType>, arabelleğe ne kadar veri yazıldığını `PipeWriter` söylemek için çağırılır.
+* <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType>, verileri `PipeReader`kullanılabilir hale getirmek için çağrılır.
 
-İkinci döngüde `PipeReader` `PipeWriter` tarafından yazılan arabellekleri kullanır. Arabellekler yuvadan gelir. @No__t-0 ' a çağrı:
+İkinci döngüde `PipeReader` `PipeWriter` tarafından yazılan arabellekleri kullanır. Arabellekler yuvadan gelir. `PipeReader.ReadAsync`çağrısı:
 
 * İki önemli bilgi parçasını içeren <xref:System.IO.Pipelines.ReadResult> döndürür:
 
-  * @No__t-0 biçiminde okunan veriler.
+  * `ReadOnlySequence<byte>`biçiminde okunan veriler.
   * Verilerin sonuna (EOF) ulaşıldığını belirten bir Boole `IsCompleted`.
 
 Satır sonu (EOL) sınırlayıcısı bulduktan ve satırı ayrıştırdıktan sonra:
 
 * Mantık, zaten işlenmiş olan öğeleri atlamak için arabelleği işler.
-* `PipeReader.AdvanceTo` ' a, ne kadar veri tüketildiğini ve inceleyeceğinizi @no__t söylemek için çağırılır.
+* `PipeReader.AdvanceTo`, ne kadar veri tüketiğini ve incelendiğini `PipeReader` söylemek için çağırılır.
 
 Okuyucu ve yazıcı döngüleri `Complete` çağırarak biter. `Complete`, temeldeki kanalın ayrılan belleği serbest bırakmasına olanak tanır.
 
@@ -123,15 +123,15 @@ En iyi performans için, sık duraklamalar ve daha fazla bellek ayırma arasınd
 
 Önceki sorunu çözmek için, `Pipe` ' ın veri akışını denetlemek için iki ayarı vardır:
 
-* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> duraklatmaya çağrı yapmadan önce ne kadar verinin arabelleğe alınacağını belirler.
+* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> duraklatma çağrısı yapmadan önce ne kadar veri ara belleğe alınacağını belirler.
 * <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>: okuyucunun `PipeWriter.FlushAsync` sürdürülmesine geçmeden önce ne kadar veri gözlemleyecek olduğunu belirler.
 
 ![ResumeWriterThreshold ve PauseWriterThreshold ile diyagram](./media/pipelines/resume-pause.png)
 
 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType>:
 
-* @No__t-1 ' deki veri miktarı `PauseWriterThreshold` ' den kesişse, tamamlanmamış `ValueTask<FlushResult>` döndürür.
-* @No__t, `ResumeWriterThreshold` ' den daha düşük hale geldiğinde 0 ' a tamamlanır.
+* `Pipe` veri miktarı `PauseWriterThreshold`kesiştiği zaman tamamlanmamış bir `ValueTask<FlushResult>` döndürür.
+* `ResumeWriterThreshold`daha düşük hale geldiğinde `ValueTask<FlushResult>` tamamlar.
 
 Tek bir değer kullanılırsa oluşabilecek hızlı döngüyü engellemek için iki değer kullanılır.
 
@@ -151,7 +151,7 @@ Genellikle `async` ve `await` kullanılırken, zaman uyumsuz kod <xref:System.Th
 G/ç yaparken, g/ç 'nin gerçekleştirildiği noktada ayrıntılı denetime sahip olmak önemlidir. Bu denetim, CPU önbelleklerinin etkin bir şekilde yararlanmasını sağlar. Verimli önbelleğe alma, Web sunucuları gibi yüksek performanslı uygulamalar için kritik öneme sahiptir. <xref:System.IO.Pipelines.PipeScheduler>, zaman uyumsuz geri çağırmaların çalıştığı konum üzerinde denetim sağlar. Varsayılan olarak:
 
 * Geçerli <xref:System.Threading.SynchronizationContext> kullanılır.
-* @No__t-0 yoksa, geri çağırmaları çalıştırmak için iş parçacığı havuzunu kullanır.
+* `SynchronizationContext`yoksa, geri çağırmaları çalıştırmak için iş parçacığı havuzunu kullanır.
 
 [!code-csharp[](~/samples/snippets/csharp/pipelines/Program.cs?name=snippet)]
 
@@ -159,11 +159,11 @@ G/ç yaparken, g/ç 'nin gerçekleştirildiği noktada ayrıntılı denetime sah
 
 ### <a name="pipe-reset"></a>Kanal sıfırlama
 
-@No__t-0 nesnesini yeniden kullanmak sıklıkla etkilidir. Kanalı sıfırlamak için, hem `PipeReader` hem de `PipeWriter` tamamlandığında <xref:System.IO.Pipelines.PipeReader> <xref:System.IO.Pipelines.Pipe.Reset%2A> ' i çağırın.
+`Pipe` nesnesini yeniden kullanmak sıklıkla etkilidir. Kanalı sıfırlamak için, hem `PipeReader` hem de `PipeWriter` tamamlandığında <xref:System.IO.Pipelines.PipeReader> <xref:System.IO.Pipelines.Pipe.Reset%2A> çağırın.
 
 ## <a name="pipereader"></a>Piypereader
 
-<xref:System.IO.Pipelines.PipeReader>, arayanın adına belleği yönetir. @No__t-2 çağrıldıktan sonra **her zaman** <xref:System.IO.Pipelines.PipeReader.AdvanceTo%2A?displayProperty=nameWithType> ' i çağırın. Bu, `PipeReader` ' ın, Arayıcı bellekle izlenebilmesi için ne zaman yapıldığını bilmesini sağlar. @No__t-1 ' den döndürülen `ReadOnlySequence<byte>` yalnızca `PipeReader.AdvanceTo` ' a çağrı yapana kadar geçerlidir. @No__t-1 çağrıldıktan sonra `ReadOnlySequence<byte>` kullanmak geçersizdir.
+<xref:System.IO.Pipelines.PipeReader>, arayanın adına belleği yönetir. <xref:System.IO.Pipelines.PipeReader.ReadAsync%2A?displayProperty=nameWithType>çağrıldıktan sonra **her zaman** <xref:System.IO.Pipelines.PipeReader.AdvanceTo%2A?displayProperty=nameWithType> çağırın. Bu, `PipeReader` ' ın, Arayıcı bellekle izlenebilmesi için ne zaman yapıldığını bilmesini sağlar. `PipeReader.ReadAsync` döndürülen `ReadOnlySequence<byte>` yalnızca `PipeReader.AdvanceTo`çağrısı yapılıncaya kadar geçerlidir. `PipeReader.AdvanceTo`çağrıldıktan sonra `ReadOnlySequence<byte>` kullanımı geçersizdir.
 
 `PipeReader.AdvanceTo` iki <xref:System.SequencePosition> bağımsız değişkeni alır:
 
@@ -213,9 +213,9 @@ Aşağıdaki kod `PipeReader` ' dan gelen tüm iletileri okur ve her biri üzeri
 
 `PipeReader.ReadAsync`:
 
-* @No__t geçirmeyi destekler-0.
+* <xref:System.Threading.CancellationToken>geçirmeyi destekler.
 * Bir okuma beklemede olduğunda, `CancellationToken` iptal edilirse bir <xref:System.OperationCanceledException> oluşturur.
-* , Bir özel durumun çıkarılmasını önleyen <xref:System.IO.Pipelines.PipeReader.CancelPendingRead%2A?displayProperty=nameWithType> aracılığıyla geçerli okuma işlemini iptal etmenin bir yolunu destekler. @No__t-0 ' a çağırmak, geçerli veya sonraki `PipeReader.ReadAsync` çağrısının `IsCanceled` ' i `true` ' e ayarlı <xref:System.IO.Pipelines.ReadResult> ' i döndürmesi sağlar. Bu, var olan okuma döngüsünü bozucu olmayan ve olağanüstü olmayan bir şekilde sonlandırmanız için yararlı olabilir.
+* , Geçerli okuma işlemini <xref:System.IO.Pipelines.PipeReader.CancelPendingRead%2A?displayProperty=nameWithType>aracılığıyla iptal etmek için bir yol destekler, bu da bir özel durumun çıkarılmasını önler. `PipeReader.CancelPendingRead` çağırmak, geçerli veya sonraki `PipeReader.ReadAsync` çağrının `IsCanceled` <xref:System.IO.Pipelines.ReadResult> ile `true`döndürmesine neden olur. Bu, var olan okuma döngüsünü bozucu olmayan ve olağanüstü olmayan bir şekilde sonlandırmanız için yararlı olabilir.
 
 [!code-csharp[MyConnection](~/samples/snippets/csharp/pipelines/MyConnection.cs?name=snippet)]
 
@@ -223,23 +223,23 @@ Aşağıdaki kod `PipeReader` ' dan gelen tüm iletileri okur ve her biri üzeri
 
 ### <a name="pipereader-common-problems"></a>Piypereader yaygın sorunlar
 
-* @No__t-0 veya `examined` ' e yanlış değerler geçirmek, zaten okunan verileri okumaya neden olabilir.
-* @No__t-0 ' ın incelenmesiyle geçirilmesi şu sonucu verebilir:
+* Yanlış değerleri `consumed` veya `examined` geçirmek, zaten okuma verilerinin okunmasına neden olabilir.
+* `buffer.End` İncelenme olarak geçirilmesiyle sonuçlanabilir:
 
   * Durdurulmuş veriler
   * Veriler tüketilmemişse, büyük olasılıkla yetersiz bellek (OOM) özel durumu. Örneğin, her seferinde tek bir ileti işlenirken `PipeReader.AdvanceTo(position, buffer.End)`.
 
-* @No__t-0 veya `examined` ' e yanlış değerler geçirilme sonsuz bir döngüye neden olabilir. Örneğin, @no__t `buffer.Start` ' i değişmemişse, yeni veriler alınmadan hemen önce `PipeReader.ReadAsync` ' ye yapılan bir sonraki çağrının geri dönmesini sağlar.
-* @No__t-0 veya `examined` ' e yanlış değerler geçirilmesi sonsuz arabelleğe alma (nihai OOM) ile sonuçlanabilir.
-* @No__t-0 ' i çağırdıktan sonra, `PipeReader.AdvanceTo` ' in kullanılması bellek bozulmasına yol açabilir (ücretsiz olarak kullanılabilir).
-* @No__t-0 çağrlamaması, bellek sızıntısına yol açabilir.
+* Yanlış değerleri `consumed` veya `examined` geçirmek sonsuz bir döngüye neden olabilir. Örneğin, `buffer.Start` değiştirilmemişse `PipeReader.AdvanceTo(buffer.Start)`, yeni veri alınmadan hemen önce `PipeReader.ReadAsync` bir sonraki çağrının dönmesini sağlar.
+* Yanlış değerleri `consumed` veya `examined` geçirmek sonsuz arabelleğe alma (nihai OOM) ile sonuçlanabilir.
+* `PipeReader.AdvanceTo` çağrıldıktan sonra `ReadOnlySequence<byte>` kullanmak bellek bozulmasına neden olabilir (ücretsiz olarak kullanabilirsiniz).
+* `PipeReader.Complete/CompleteAsync` çağıramayan bellek sızıntısına neden olabilir.
 * Veri kaybına neden olan arabellek sonuçlarını işlemeden önce <xref:System.IO.Pipelines.ReadResult.IsCompleted?displayProperty=nameWithType> denetleniyor ve okuma mantığını çıkıyor. Döngü çıkış koşulunun `ReadResult.Buffer.IsEmpty` ve `ReadResult.IsCompleted` temelinde olması gerekir. Bunu yanlış yapmak sonsuz bir döngüye neden olabilir.
 
 #### <a name="problematic-code"></a>Sorunlu kod
 
 ❌ **veri kaybı**
 
-@No__t-0, `IsCompleted` `true` olarak ayarlandığında verilerin son segmentini döndürebilir. Okuma döngüsünden çıkmadan önce bu verilerin okunmamasından dolayı veri kaybı olur.
+`ReadResult`, `IsCompleted` `true`olarak ayarlandığında son veri segmentini döndürebilir. Okuma döngüsünden çıkmadan önce bu verilerin okunmamasından dolayı veri kaybı olur.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
@@ -249,7 +249,7 @@ Aşağıdaki kod `PipeReader` ' dan gelen tüm iletileri okur ve her biri üzeri
 
 ❌ **sonsuz döngü**
 
-@No__t-0 `true` ise ve arabellekte hiç tam ileti yoksa, aşağıdaki mantık sonsuz döngüye neden olabilir.
+Aşağıdaki mantık, `Result.IsCompleted` `true`, ancak arabellekte hiç tamamlanmamış bir ileti varsa sonsuz döngüye neden olabilir.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
@@ -257,7 +257,7 @@ Aşağıdaki kod `PipeReader` ' dan gelen tüm iletileri okur ve her biri üzeri
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
-Aynı sorunu içeren başka bir kod parçası aşağıda verilmiştir. @No__t-0 denetlemeden önce boş olmayan bir arabellek denetleniyor. @No__t-0 olduğundan, arabellekte hiç tam ileti yoksa sonsuza kadar döngüye alınır.
+Aynı sorunu içeren başka bir kod parçası aşağıda verilmiştir. `ReadResult.IsCompleted`denetlemeden önce boş olmayan bir arabellek denetleniyor. Bir `else if`olduğundan, arabellekte hiç bir ileti yoksa, süresiz olarak döngü yapılır.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
@@ -267,7 +267,7 @@ Aynı sorunu içeren başka bir kod parçası aşağıda verilmiştir. @No__t-0 
 
 ❌ **beklenmeyen askı**
 
-@No__t-2 konumunda `buffer.End` ile @no__t koşulsuz olarak çağırmanın tek bir ileti ayrıştırılırken askıda kalmasına neden olabilir. @No__t-0 ' a yapılan bir sonraki çağrı şu kadar döndürmez:
+`examined` konumundaki `buffer.End` ile `PipeReader.AdvanceTo` koşulsuz olarak çağırmanın tek bir ileti ayrıştırılırken askıda kalmasına neden olabilir. `PipeReader.AdvanceTo` sonraki çağrısı şu kadar döndürmez:
 
 * Kanala yazılan daha fazla veri var.
 * Ve yeni veriler daha önce incelendi.
@@ -283,7 +283,7 @@ Aynı sorunu içeren başka bir kod parçası aşağıda verilmiştir. @No__t-0 
 Aşağıdaki koşullara göre aşağıdaki kod <xref:System.OutOfMemoryException> gerçekleşene kadar arabelleğe almayı sürdürür:
 
 * En büyük ileti boyutu yok.
-* @No__t-0 ' dan döndürülen veriler tam bir ileti yapmaz. Örneğin, diğer taraf büyük bir ileti (örneğin, 4 GB bir ileti) yazıldığı için, bu tam bir ileti yapmaz.
+* `PipeReader` döndürülen veriler, tüm iletileri yapmaz. Örneğin, diğer taraf büyük bir ileti (örneğin, 4 GB bir ileti) yazıldığı için, bu tam bir ileti yapmaz.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
@@ -305,44 +305,44 @@ Arabelleği okuyan yardımcıları yazarken, `Advance` çağrılmadan önce dön
 
 ## <a name="pipewriter"></a>PipeWriter
 
-@No__t-0, arayanın adına yazma arabelleğini yönetir. `PipeWriter` [@no__t uygular-2](xref:System.Buffers.IBufferWriter%601). `IBufferWriter<byte>`, ek arabellek kopyaları olmadan yazma işlemleri gerçekleştirmek için arabelleklere erişim sağlamak mümkün hale getirir.
+<xref:System.IO.Pipelines.PipeWriter>, arayan adına yazma arabelleğini yönetir. `PipeWriter` [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601)uygular. `IBufferWriter<byte>`, ek arabellek kopyaları olmadan yazma işlemleri gerçekleştirmek için arabelleklere erişim sağlamak mümkün hale getirir.
 
 [!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
 
 Önceki kod:
 
-* @No__t-1 kullanarak `PipeWriter` ' dan en az 5 baytlık bir arabellek ister.
-* ASCII dizesi için bayt `"Hello"` ' yı döndürülen `Span<byte>` öğesine yazar.
-* Arabelleğe kaç bayt yazıldığını belirten <xref:System.IO.Pipelines.PipeWriter.Advance%2A> ' ı çağırır.
+* <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A>kullanarak `PipeWriter` en az 5 baytlık bir arabellek ister.
+* `"Hello"` ASCII dizesinin bayt sayısını döndürülen `Memory<byte>`yazar.
+* Arabelleğe kaç bayt yazıldığını belirten <xref:System.IO.Pipelines.PipeWriter.Advance%2A> çağırır.
 * Temel cihaza bayt gönderen `PipeWriter` ' ı boşaltır.
 
 Önceki yazma yöntemi `PipeWriter` tarafından sağlanmış arabellekleri kullanır. Alternatif olarak, <xref:System.IO.Pipelines.PipeWriter.WriteAsync%2A?displayProperty=nameWithType>:
 
 * Mevcut arabelleği `PipeWriter` ' a kopyalar.
-* @No__t-0, `Advance` ' i uygun şekilde çağırır ve <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> ' i çağırır.
+* `GetSpan`çağırır `Advance` ve <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A>çağırır.
 
 [!code-csharp[MyPipeWriter#2](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet2)]
 
 ### <a name="cancellation"></a>İptal Etme
 
-<xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> <xref:System.Threading.CancellationToken> geçirmeyi destekler. @No__t-0 ' ın geçirilmesi, bir temizleme işlemi sırasında belirteç iptal edildiğinde, bir `OperationCanceledException` ile sonuçlanır. `PipeWriter.FlushAsync`, bir özel durum oluşturmadan geçerli temizleme işlemini <xref:System.IO.Pipelines.PipeWriter.CancelPendingFlush%2A?displayProperty=nameWithType> aracılığıyla iptal etmenin bir yolunu destekler. @No__t-0 ' a çağırmak, geçerli veya sonraki `PipeWriter.FlushAsync` veya `PipeWriter.WriteAsync` çağrısının `IsCanceled` ile `true` olarak ayarlanmış bir <xref:System.IO.Pipelines.FlushResult> döndürmesini sağlar. Bu, bozucu olmayan ve olağanüstü olmayan bir şekilde boşaltmayı Temizleme için yararlı olabilir.
+<xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> <xref:System.Threading.CancellationToken>geçirmeyi destekler. Bir `CancellationToken` geçirme işlemi, belirteç bekleyen bir temizleme işlemi sırasında iptal edilirse bir `OperationCanceledException` sonuçlanır. `PipeWriter.FlushAsync`, özel durum oluşturmadan <xref:System.IO.Pipelines.PipeWriter.CancelPendingFlush%2A?displayProperty=nameWithType> aracılığıyla geçerli temizleme işlemini iptal etmek için bir yol destekler. `PipeWriter.CancelPendingFlush` çağırmak, geçerli veya sonraki `PipeWriter.FlushAsync` veya `PipeWriter.WriteAsync` çağrının `IsCanceled` ayarlanmış `true`bir <xref:System.IO.Pipelines.FlushResult> döndürmesini sağlar. Bu, bozucu olmayan ve olağanüstü olmayan bir şekilde boşaltmayı Temizleme için yararlı olabilir.
 
 <a name="pwcp"></a>
 
 ### <a name="pipewriter-common-problems"></a>PipeWriter ortak sorunları
 
-* <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A> ve <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A>, en az istenen bellek miktarına sahip bir arabellek döndürür. Tam arabellek boyutlarını kabul **etmeyin** .
+* <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A> ve <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A> en az istenen bellek miktarına sahip bir arabellek döndürür. Tam arabellek boyutlarını kabul **etmeyin** .
 * Art arda yapılan çağrıların aynı arabelleğe veya aynı boyutlu arabelleğe Döneceğinin garantisi yoktur.
-* Daha fazla veri yazmaya devam etmek için <xref:System.IO.Pipelines.PipeWriter.Advance%2A> çağrıldıktan sonra yeni bir arabelleğin istenmesi gerekir. Daha önce edinilen arabelleğin üzerine yazılamaz.
-* @No__t-0 veya `GetSpan` ' i çağırmak, `FlushAsync` ' ye yönelik tamamlanmamış bir çağrı olması durumunda güvenli değildir.
-* @No__t-0 veya `CompleteAsync` ' i çağırmak, verilerin temizlenme sırasında bellek bozulmasına yol açabilir.
+* Daha fazla veri yazmaya devam etmek için <xref:System.IO.Pipelines.PipeWriter.Advance%2A> çağrıldıktan sonra yeni bir arabellek istenmesi gerekir. Daha önce edinilen arabelleğin üzerine yazılamaz.
+* `FlushAsync` tamamlanmamış bir çağrı olduğundan `GetMemory` veya `GetSpan` çağırma.
+* Verilerin temizlenme sırasında `Complete` veya `CompleteAsync` çağırmak bellek bozulmasına yol açabilir.
 
 ## <a name="iduplexpipe"></a>IDuplexPipe
 
-@No__t-0, hem okumayı hem de yazmayı destekleyen türler için bir sözleşmedir. Örneğin, bir ağ bağlantısı `IDuplexPipe` ile temsil edilir.
+<xref:System.IO.Pipelines.IDuplexPipe>, hem okumayı hem de yazmayı destekleyen türler için bir sözleşmedir. Örneğin, bir ağ bağlantısı `IDuplexPipe` ile temsil edilir.
 
- @No__t-1 ve bir `PipeWriter` içeren `Pipe` ' dan farklı olarak, `IDuplexPipe` tam çift yönlü bağlantının tek tarafını temsil eder. Bu, @no__t yazılmış olan ve `PipeReader` ' den okunmayacak anlamına gelir.
+ Bir `PipeReader` ve `PipeWriter`içeren `Pipe` aksine, `IDuplexPipe` tam çift yönlü bağlantının tek tarafını temsil eder. Bu, `PipeWriter` yazılan ve `PipeReader`okunmayacak anlamına gelir.
 
 ## <a name="streams"></a>Akışlar
 
-Akış verilerini okurken veya yazarken genellikle seri hale getirici kullanarak verileri okur ve serileştirici kullanarak verileri yazın. Bu okuma ve yazma akışı API 'Lerinin çoğu `Stream` parametresine sahiptir. Bu mevcut API 'lerle tümleştirmeyi kolaylaştırmak için `PipeReader` ve `PipeWriter` <xref:System.IO.Pipelines.PipeReader.AsStream%2A> ' yi kullanıma sunar.  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A> `PipeReader` veya `PipeWriter` etrafında `Stream` uygulamasını döndürür.
+Akış verilerini okurken veya yazarken genellikle seri hale getirici kullanarak verileri okur ve serileştirici kullanarak verileri yazın. Bu okuma ve yazma akışı API 'Lerinin çoğu `Stream` parametresine sahiptir. Bu mevcut API 'lerle tümleştirmeyi kolaylaştırmak için `PipeReader` ve `PipeWriter` <xref:System.IO.Pipelines.PipeReader.AsStream%2A>kullanıma sunun.  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A>, `PipeReader` veya `PipeWriter`etrafında `Stream` bir uygulama döndürür.

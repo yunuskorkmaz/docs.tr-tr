@@ -1,30 +1,31 @@
 ---
 title: Özel Durum İşleme
-description: Özel durum olarak işlemeyi temel bilgileri öğrenmek F# ve özel durum ifadeler ve İşlevler işleme bağlantılarını bulabilirsiniz.
+description: İçindeki F# özel durum işlemenin temellerini öğrenin ve özel durum işleme ifadeleri ve işlevleri için bağlantıları bulun.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0f4e57bfd643cba3dab5281df484ebb6162cb4b7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e34a65dd7da9d706153254ac28e729de0745e4d0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645475"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423068"
 ---
 # <a name="exception-handling"></a>Özel Durum İşleme
 
-Bu bölümde, özel durum işleme desteği hakkında bilgi içeren F# dili.
+Bu bölüm, F# dilde özel durum işleme desteği hakkında bilgiler içerir.
 
-## <a name="exception-handling-basics"></a>Özel durum işleme temelleri
-Özel durum işleme, .NET Framework'teki hata koşullarını işleme, standart bir yoludur. Bu nedenle, herhangi bir .NET dil Bu mekanizma desteklemelidir dahil olmak üzere F#. Bir *özel durum* hatayla ilgili bilgileri yalıtan bir nesne. Hatalar oluştuğunda durumlardır yükseltilmiş ve normal yürütmeyi durdurur. Bunun yerine, çalışma zamanı özel durum için uygun tanıtıcının arar. Arama geçerli işlevde başlar ve yığınına çağıranlar katmanları ile eşleşen bir işleyici bulunana kadar devam eder. İşleyicisi yürütülür.
+## <a name="exception-handling-basics"></a>Özel durum Işleme temelleri
 
-Yığın geriye doğru izlenirken, herhangi bir kod Ayrıca, çalışma zamanının yürüttüğü `finally` blokları, nesnelerin doğru geriye doğru işlem sırasında temizlenmesini garanti etmek için.
+Özel durum işleme, .NET Framework hata koşullarını işlemenin standart yoludur. Bu nedenle, tüm .NET dilleri de dahil olmak üzere F#bu mekanizmayı desteklemelidir. *Özel durum* , bir hata hakkındaki bilgileri kapsülleyen bir nesnedir. Hata oluştuğunda, özel durumlar tetiklenir ve normal yürütme durduruluyor. Bunun yerine, çalışma zamanı özel durum için uygun bir işleyici arar. Arama geçerli işlevde başlar ve eşleşen bir işleyici bulunana kadar yığını, çağıranların katmanları üzerinden ilerler. Ardından işleyici yürütülür.
+
+Ayrıca, yığın bozuk olduğu için, çalışma zamanı `finally` bloklarda herhangi bir kodu yürütür, bu da nesnelerin sargı işlemi sırasında doğru şekilde temizlenmesini sağlar.
 
 ## <a name="related-topics"></a>İlgili Konular
 
 |Başlık|Açıklama|
 |-----|-----------|
-|[Özel Durum Türleri](exception-types.md)|Bir özel durum türü bildirmek açıklar.|
-|[Özel Durumlar: `try...with` İfadesi](the-try-with-expression.md)|Özel durum işleme destekleyen dil yapısı açıklar.|
-|[Özel Durumlar: `try...finally` İfadesi](the-try-finally-expression.md)|Bir özel durum oluştuğunda yığının geriye doğru izler gibi temizleme kodu yürütme olanak tanıyan dil yapısı açıklar.|
-|[Özel durumlar: `raise` işlevi](the-raise-Function.md)|Bir özel durum nesnesi oluşturmak nasıl açıklar.|
-|[Özel Durumlar: `failwith` İşlevi](the-failwith-function.md)|Genel oluşturmayı açıklar F# özel durum.|
-|[Özel Durumlar: `invalidArg` İşlevi](the-invalidArg-function.md)|Geçersiz bağımsız değişken özel oluşturmayı açıklar.|
+|[Özel Durum Türleri](exception-types.md)|Bir özel durum türünün nasıl bildirileneceğini açıklar.|
+|[Özel durumlar: `try...with` Ifadesi](the-try-with-expression.md)|Özel durum işlemeyi destekleyen dil yapısını açıklar.|
+|[Özel durumlar: `try...finally` Ifadesi](the-try-finally-expression.md)|Bir özel durum oluştuğunda Temizleme kodunu yığın olarak yürütmenize olanak tanıyan dil yapısını açıklar.|
+|[Özel durumlar: `raise` Işlevi](the-raise-Function.md)|Bir özel durum nesnesinin nasıl oluşturulduğunu açıklar.|
+|[Özel durumlar: `failwith` Işlevi](the-failwith-function.md)|Genel F# bir özel durum oluşturmayı açıklar.|
+|[Özel durumlar: `invalidArg` Işlevi](the-invalidArg-function.md)|Geçersiz bağımsız değişken özel durumunun nasıl oluşturulacağını açıklar.|

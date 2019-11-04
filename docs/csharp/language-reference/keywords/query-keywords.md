@@ -6,12 +6,12 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: ed931871e8abbfd9ff421a1307fb21c3490493fb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 44af3bf1a7c013c16c7b4a4528c3516621bea149
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608459"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422545"
 ---
 # <a name="query-keywords-c-reference"></a>Sorgu anahtar sözcükleriC# (başvuru)
 
@@ -21,8 +21,8 @@ Bu bölüm sorgu ifadelerinde kullanılan bağlamsal anahtar sözcüklerini içe
 
 |Yan Tümce|Açıklama|
 |------------|-----------------|
-|[from](from-clause.md)|Bir veri kaynağını ve bir Aralık değişkenini (yineleme değişkenine benzer) belirtir.|
-|[olmadığı](where-clause.md)|Mantıksal ve ve veya işleçlerle ( `&&` veya <code>&#124;&#124;</code> ) ayrılmış bir veya daha fazla Boole ifadesine göre kaynak öğelerine filtre uygular.|
+|[Kaynak](from-clause.md)|Bir veri kaynağını ve bir Aralık değişkenini (yineleme değişkenine benzer) belirtir.|
+|[olmadığı](where-clause.md)|Mantıksal ve ve veya işleçlerle (`&&` veya <code>&#124;&#124;</code>) ayrılmış bir veya daha fazla Boole ifadesine göre kaynak öğelerine filtre uygular.|
 |[seçin](select-clause.md)|Sorgu yürütüldüğünde döndürülen dizideki öğelerin sahip olacağı türü ve şekli belirtir.|
 |[grubu](group-clause.md)|Sorgu sonuçlarını belirtilen bir anahtar değerine göre gruplandırır.|
 |[into](into.md)|JOIN, Group veya Select yan tümcesinin sonuçlarına başvuru olarak sunacak bir tanımlayıcı sağlar.|
@@ -40,5 +40,5 @@ Bu bölüm sorgu ifadelerinde kullanılan bağlamsal anahtar sözcüklerini içe
 
 - [C# Anahtar Sözcükleri](index.md)
 - [LINQ (dil ile tümleşik sorgu)](../../programming-guide/concepts/linq/index.md)
-- [LINQ sorgu Ifadeleri](../../programming-guide/linq-query-expressions/index.md)
-- [C#'de LINQ Kullanmaya Başlama](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C# üzerinde LINQ](../../linq/index.md)
+- [C#'de LINQ Kullanmaya Başlama](/dotnet/csharp/programming-guide/concepts/linq/)

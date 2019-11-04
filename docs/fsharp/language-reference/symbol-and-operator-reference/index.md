@@ -1,122 +1,122 @@
 ---
 title: Simge ve İşleç Başvurusu
-description: Simgeler ve kullanılan işleçleri hakkında F# programlama dilidir.
+description: F# Programlama dilinde kullanılan semboller ve işleçler hakkında bilgi edinin.
 ms.date: 02/11/2019
-ms.openlocfilehash: 14ea7a66f7e9a79d24b62a4aa0564eecb891ee1a
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 0c177242991c39aa1a2b7566415b50385f3403d1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306183"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424054"
 ---
 # <a name="symbol-and-operator-reference"></a>Simge ve İşleç Başvurusu
 
 > [!NOTE]
-> Bu makaledeki API başvuru bağlantıları için MSDN sürer.  Docs.microsoft.com API başvuru tamamlanmadı.
+> Bu makaledeki API başvuru bağlantıları sizi MSDN 'ye götürür.  Docs.microsoft.com API başvurusu tamamlanmadı.
 
-Bu konu, simgeler ve işleçler kullanılan bir tablo içerir F# dili.
+Bu konu, F# dilde kullanılan bir sembol ve işleç tablosu içerir.
 
 ## <a name="table-of-symbols-and-operators"></a>Simgeler ve İşleçler Tablosu
 
-Aşağıdaki tabloda kullanılan simgeler açıklanmaktadır F# dil daha fazla bilgi sağlayan konulara bağlantılar sağlar ve bazı kullandığı simgenin kısa bir açıklamasını sağlar. Semboller ASCII karakter sıralama kümesini göre sıralanır.
+Aşağıdaki tablo, F# dilde kullanılan sembolleri açıklar, daha fazla bilgi sağlayan konuların bağlantılarını sağlar ve sembolün bazı kullanımları hakkında kısa bir açıklama sağlar. Semboller ASCII karakter kümesi sıralamasına göre sıralanır.
 
-|Sembol or işleci|Bağlantılar|Açıklama|
+|Sembol veya işleç|Bağlantılar|Açıklama|
 |------------------|-----|-----------|
-|`!`|[Başvuru Hücreleri](../reference-cells.md)<br /><br />[Hesaplama İfadeleri](../computation-expressions.md)|<ul><li>Bir başvuru hücresi başvurusunu kaldırır.<br /></li><li>Sonra anahtar sözcüğü, bir iş akışı tarafından denetlenen anahtar sözcüğü'nın davranışı değiştirilmiş bir sürümünü gösterir.<br /></li></ul>|
-|`!=`|Geçerli değildir.|<ul><li>İçinde kullanılmadı F#. Kullanım `<>` eşitsizlik işlemleri için.<br /></li></ul>|
-|`"`|[Değişmez Değerler](../literals.md)<br /><br />[Dizeler](../strings.md)|<ul><li>Bir metin dizesi sınırlandırır.<br /></li></ul>|
-|`"""`|[Dizeler](../strings.md)|Verbatim metin dizesi sınırlandırır. Farklıdır `@"..."` içeren bir tırnak işareti karakteri tek tırnak içinde dize kullanarak belirtebilirsiniz.|
-|`#`|[Derleyici Yönergeleri](../compiler-directives.md)<br /><br />[Esnek Türler](../flexible-types.md)|<ul><li>Önişlemci veya derleyici yönergesi gibi ön ekleri `#light`.<br /></li><li>Bir türü ile kullanıldığında, gösterir bir *esnek türü*, bir tür veya türetilmiş türlerini birini gösterir.<br /></li></ul>|
-|`$`|Daha fazla bilgi yok.|<ul><li>Belirli derleyici tarafından oluşturulan değişken ve işlev adları için dahili olarak kullanılır.<br /></li></ul>|
-|`%`|[Aritmetik İşleçler](arithmetic-operators.md)<br /><br />[Kod Alıntıları](../code-quotations.md)|<ul><li>Tamsayı kalanı hesaplar.<br /></li><li>Yazılan kod tırnak işaretleri içine boşluklarına ayıran ifadeler için kullanılır.<br /></li></ul>|
-|`%%`|[Kod Alıntıları](../code-quotations.md)|<ul><li>İfadeler türsüz kod tırnak işaretleri içine boşluklarına ayıran için kullanılır.<br /></li></ul>|
-|`%?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda, tamsayı kalanı hesaplar.<br /></li></ul>|
-|`&`|[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>Diğer dillerle birlikte çalışma sırasında kullanımınız değiştirilebilir bir değer adresini hesaplar.<br /></li><li>VE desenler kullanılır.<br /></li></ul>|
-|`&&`|[Boole İşleçleri](boolean-operators.md)|<ul><li>Boole türü AND işlemi hesaplar.<br /></li></ul>|
-|`&&&`|[Bit Düzeyinde İşleçler](bitwise-operators.md)|<ul><li>Bit düzeyinde AND işlemi hesaplar.<br /></li></ul>|
-|`'`|[Değişmez Değerler](../literals.md)<br /><br />[Otomatik Genelleştirme](../generics/automatic-generalization.md)|<ul><li>Bir tek karakterli sabit değer sınırlandırır.<br /></li><li>Genel tür parametresi gösterir.<br /></li></ul>|
-|<code>&#96;&#96;...&#96;&#96;</code>|Daha fazla bilgi yok.|<ul><li>Dil anahtar sözcüğü gibi geçerli bir tanımlayıcı olmazdı tanımlayıcı sınırlandırır.<br /></li></ul>|
-|`( )`|[Birim Türü](../unit-type.md)|<ul><li>Birim türü tek değerini temsil eder.<br /></li></ul>|
-|`(...)`|[Demetler](../tuples.md)<br /><br />[İşleç Aşırı Yüklemesi](../operator-overloading.md)|<ul><li>İfadelerin değerlendirilme sırasını gösterir.<br /></li><li>Bir demet sınırlandırır.<br /></li><li>İşleç tanımlarında kullanılır.<br /></li></ul>|
-|`(*...*)`||<ul><li>Birden fazla satırı kapsayabilir bir yorum sınırlandırır.<br /></li></ul>|
-|<code>(&#124;...&#124;)</code>|[Etkin Desenler](../active-patterns.md)|<ul><li>Etkin desen sınırlandırır. Olarak da adlandırılan *Muz klipleri*.<br /></li></ul>|
-|`*`|[Aritmetik İşleçler](arithmetic-operators.md)<br /><br />[Demetler](../tuples.md)<br /><br />[Ölçü Birimleri](../units-of-measure.md)|<ul><li>İkili işleç olarak kullanıldığında, sağ ve sol çarpar.<br /></li><li>Bir grup içinde eşleştirme türlerinde gösterir.<br /></li><li>Ölçü türlerine birimlerinde kullanılır.<br /></li></ul>|
-|`*?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda ve sol tarafında çarpar.<br /></li></ul>|
-|`**`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Üs işlem hesaplar (`x ** y` anlamına gelir `x` sayısının `y`).<br /></li></ul>|
-|`+`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>İkili işleç olarak kullanıldığında, sağ ve sol ekler.<br /></li><li>Birli işleç kullanıldığında, pozitif bir miktar gösterir. (Resmi olarak, bu değerin değişmeden işaretiyle üretir.)<br /></li></ul>|
-|`+?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda ve sol tarafında ekler.<br /></li></ul>|
-|`,`|[Demetler](../tuples.md)|<ul><li>Bir tanımlama grubu ya da tür parametreleri öğelerini ayırır.<br /></li></ul>|
-|`-`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>İkili işleç olarak kullanıldığında, sol tarafta sağından çıkarır.<br /></li><li>Birli işleç kullanıldığında, bir değilleme işlemi gerçekleştirir.<br /></li></ul>|
-|`-?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda, sol taraftaki sağından çıkarır.<br /></li></ul>|
-|`->`|[İşlevler](../functions/index.md)<br /><br />[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>İşlev türleri, bağımsız değişkenleri sınırlandırır ve dönüş değerleri.<br /></li><li>Bir ifade (sequence ifadeleri); verir eşdeğer `yield` anahtar sözcüğü.<br /></li><li>Eşleştirme ifadelerinde kullanılır<br /></li></ul>|
-|`.`|[Üyeler](../members/index.md)<br /><br />[İlkel Türler](../primitive-types.md)|<ul><li>Üye erişir ve bir tam ad bireysel adlarını ayırır.<br /></li><li>Bir ondalık kayan nokta numaralarını belirtir.<br /></li></ul>|
-|`..`|[Döngüler: `for...in` İfade](../loops-for-in-expression.md)|<ul><li>Bir aralığını belirtir.<br /></li></ul>|
-|`.. ..`|[Döngüler: `for...in` İfade](../loops-for-in-expression.md)|<ul><li>Bir artış ile birlikte bir aralığını belirtir.<br /></li></ul>|
+|`!`|[Başvuru Hücreleri](../reference-cells.md)<br /><br />[Hesaplama İfadeleri](../computation-expressions.md)|<ul><li>Bir başvuru hücresine başvurur.<br /></li><li>Anahtar sözcüğünden sonra, bir iş akışı tarafından denetlenen şekilde anahtar sözcüğünün davranışının değiştirilmiş bir sürümünü belirtir.<br /></li></ul>|
+|`!=`|Yok.|<ul><li>İçinde F#kullanılmaz. Eşitsizlik işlemleri için `<>` kullanın.<br /></li></ul>|
+|`"`|[Değişmez Değerler](../literals.md)<br /><br />[Dizeler](../strings.md)|<ul><li>Bir metin dizesini ayırır.<br /></li></ul>|
+|`"""`|[Dizeler](../strings.md)|Tam metin dizesini ayırır. Dizedeki tek bir tırnak kullanarak bir tırnak işareti karakteri belirtebilmeniz için `@"..."` farklıdır.|
+|`#`|[Derleyici Yönergeleri](../compiler-directives.md)<br /><br />[Esnek Türler](../flexible-types.md)|<ul><li>`#light`gibi bir Önişlemci veya derleyici yönergesine önek ekler.<br /></li><li>Bir türle birlikte kullanıldığında, bir türe veya türetilmiş türlerinden birine başvuran *esnek bir türü*gösterir.<br /></li></ul>|
+|`$`|Daha fazla bilgi yok.|<ul><li>Derleyici tarafından üretilen belirli değişken ve işlev adları için dahili olarak kullanılır.<br /></li></ul>|
+|`%`|[Aritmetik İşleçler](arithmetic-operators.md)<br /><br />[Kod Alıntıları](../code-quotations.md)|<ul><li>Tam sayı kalanını hesaplar.<br /></li><li>Türü belirtilmiş kod tekliflerine yönelik ifade için kullanılır.<br /></li></ul>|
+|`%%`|[Kod Alıntıları](../code-quotations.md)|<ul><li>Türsüz kod tekliflerine yönelik ifadeleri ifade etmek için kullanılır.<br /></li></ul>|
+|`%?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ kenar null yapılabilir bir tür olduğunda, tam sayı kalanını hesaplar.<br /></li></ul>|
+|`&`|[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>Diğer dillerle birlikte çalışırken kullanılmak üzere kesilebilir değerin adresini hesaplar.<br /></li><li>VE desenlerinde kullanılır.<br /></li></ul>|
+|`&&`|[Boole İşleçleri](boolean-operators.md)|<ul><li>Boole ve işlemi hesaplar.<br /></li></ul>|
+|`&&&`|[Bit Düzeyinde İşleçler](bitwise-operators.md)|<ul><li>Bit düzeyinde ve işlemi hesaplar.<br /></li></ul>|
+|`'`|[Değişmez Değerler](../literals.md)<br /><br />[Otomatik Genelleştirme](../generics/automatic-generalization.md)|<ul><li>Tek karakterlik değişmez değer ayırır.<br /></li><li>Genel bir tür parametresini gösterir.<br /></li></ul>|
+|<code>&#96;&#96;...&#96;&#96;</code>|Daha fazla bilgi yok.|<ul><li>Alternatif olarak, bir dil anahtar sözcüğü gibi yasal tanımlayıcı olmayan bir tanımlayıcıyı ayırır.<br /></li></ul>|
+|`( )`|[Birim Türü](../unit-type.md)|<ul><li>Birim türünün tek bir değerini temsil eder.<br /></li></ul>|
+|`(...)`|[Demetler](../tuples.md)<br /><br />[İşleç Aşırı Yüklemesi](../operator-overloading.md)|<ul><li>İfadelerin değerlendirileceği sırayı gösterir.<br /></li><li>Tanımlama grubu ayırır.<br /></li><li>İşleç tanımlarında kullanılır.<br /></li></ul>|
+|`(*...*)`||<ul><li>Birden çok satıra yayılabilen bir yorumu ayırır.<br /></li></ul>|
+|<code>(&#124;...&#124;)</code>|[Etkin Desenler](../active-patterns.md)|<ul><li>Etkin bir düzene ayırır. Ayrıca *muz klipleri*olarak da bilinir.<br /></li></ul>|
+|`*`|[Aritmetik İşleçler](arithmetic-operators.md)<br /><br />[Demetler](../tuples.md)<br /><br />[Ölçü Birimleri](../units-of-measure.md)|<ul><li>İkili işleç olarak kullanıldığında, sol ve sağ kenarları çarpar.<br /></li><li>Türlerde, bir tanımlama grubu içindeki eşlemeyi gösterir.<br /></li><li>Ölçü birimi türlerinde kullanılır.<br /></li></ul>|
+|`*?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ kenar null yapılabilir bir tür olduğunda sol ve sağ kenarları çarpar.<br /></li></ul>|
+|`**`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Üs işlemini hesaplar (`x ** y`, `y`kuvvetine `x` anlamına gelir.<br /></li></ul>|
+|`+`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>İkili işleç olarak kullanıldığında, sol ve sağ kenarları ekler.<br /></li><li>Birli işleç olarak kullanıldığında, pozitif miktarı gösterir. (Resmi olarak, işareti değişmeden aynı değeri üretir.)<br /></li></ul>|
+|`+?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ kenar null yapılabilir bir tür olduğunda sol ve sağ kenarları ekler.<br /></li></ul>|
+|`,`|[Demetler](../tuples.md)|<ul><li>Bir tanımlama grubunun öğelerini veya tür parametrelerini ayırır.<br /></li></ul>|
+|`-`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>İkili işleç olarak kullanıldığında, sol taraftaki sağ tarafı çıkartır.<br /></li><li>Birli operatör olarak kullanıldığında, bir Olumsuzlaştırma işlemi gerçekleştirir.<br /></li></ul>|
+|`-?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ taraftaki null yapılabilir bir tür olduğunda, sağ tarafı sol taraftan çıkartır.<br /></li></ul>|
+|`->`|[İşlevler](../functions/index.md)<br /><br />[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>İşlev türlerinde, bağımsız değişkenleri ve dönüş değerlerini ayırır.<br /></li><li>Bir ifade verir (dizi ifadelerinde); `yield` anahtar kelimesiyle eşdeğerdir.<br /></li><li>Eşleşme ifadelerinde kullanılır<br /></li></ul>|
+|`.`|[Üyeler](../members/index.md)<br /><br />[İlkel Türler](../basic-types.md)|<ul><li>Bir üyeye erişir ve adları tam bir ada ayırır.<br /></li><li>Kayan nokta numaralarında ondalık bir nokta belirtir.<br /></li></ul>|
+|`..`|[Döngüler: `for...in` Ifade](../loops-for-in-expression.md)|<ul><li>Bir aralığı belirtir.<br /></li></ul>|
+|`.. ..`|[Döngüler: `for...in` Ifade](../loops-for-in-expression.md)|<ul><li>Bir artım ile birlikte bir aralığı belirtir.<br /></li></ul>|
 |`.[...]`|[Diziler](../arrays.md)|<ul><li>Bir dizi öğesine erişir.<br /></li></ul>|
-|`/`|[Aritmetik İşleçler](arithmetic-operators.md)<br /><br />[Ölçü Birimleri](../units-of-measure.md)|<ul><li>Sol tarafındaki (pay) sağ tarafındaki (paydası) böler.<br /></li><li>Ölçü türlerine birimlerinde kullanılır.<br /></li></ul>|
-|`/?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda sol tarafındaki sağ tarafını tarafından böler.<br /></li></ul>|
-|`//`||<ul><li>Tek satırlı açıklama başlangıcını gösterir.<br /></li></ul>|
-|`///`|[XML Belgeleri](../xml-documentation.md)|<ul><li>XML açıklaması gösterir.<br /></li></ul>|
-|`:`|[İşlevler](../functions/index.md)|<ul><li>Bir tür ek açıklamasına kendi türünden bir parametre veya üye adı ayırır.<br /></li></ul>|
-|`::`|[Listeler](../lists.md)<br /><br />[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>Bir liste oluşturur. Öğe sol tarafındaki işlecin sağ tarafındaki listesine eklenir.<br /></li><li>Desen eşleştirme listenin bölümlerini ayırmak için kullanılır.<br /></li></ul>|
-|`:=`|[Başvuru Hücreleri](../reference-cells.md)|<ul><li>Bir başvuru hücresine bir değer atar.<br /></li></ul>|
-|`:>`|[Tür Değiştirme ve Dönüştürmeler](../casting-and-conversions.md)|<ul><li>İçin türü, hiyerarşinin üst düzeylerindeki dönüştürür.<br /></li></ul>|
-|`:?`|[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>Döndürür `true` değeri belirtilen türe (alt ise dahil); eşleşiyorsa, aksi halde döndürür `false` (tür test işleci).<br /></li></ul>|
-|`:?>`|[Tür Değiştirme ve Dönüştürmeler](../casting-and-conversions.md)|<ul><li>Bir tür hiyerarşide daha düşük bir türe dönüştürür.<br /></li></ul>|
-|`;`|[Ayrıntılı Söz Dizimi](../verbose-syntax.md)<br /><br />[Listeler](../lists.md)<br /><br />[Kayıtlar](../records.md)|<ul><li>İfadeler (çoğunlukla ayrıntılı sözdiziminde kullanılır) ayırır.<br /></li><li>Bir liste öğelerini ayırır.<br /></li><li>Bir kaydın alanlarını ayırır.<br /></li></ul>|
-|`<`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Daha az hesaplar-işlemi daha.<br /></li></ul>|
-|`<?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|Sağ tarafında boş değer atanabilir bir tür olduğunda işlemi,'den az hesaplar.|
-|`<<`|[İşlevler](../functions/index.md)|<ul><li>İki işlev ters sırada ölçeklemesini; İkincisi yürütülür ilk (geriye dönük birleşim işleci).<br /></li></ul>|
-|`<<<`|[Bit Düzeyinde İşleçler](bitwise-operators.md)|<ul><li>BITS miktar sol taraftaki sağ tarafta belirtilen bit sayısına göre Sola kaydırır.<br /></li></ul>|
-|`<-`|[Değerler](../values/index.md)|<ul><li>Bir değeri bir değişkene atar.<br /></li></ul>|
-|`<...>`|[Otomatik Genelleştirme](../generics/automatic-generalization.md)|<ul><li>Tür parametreleri sınırlandırır.<br /></li></ul>|
-|`<>`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Döndürür `true` sol tarafındaki sağ tarafı; eşit değilse, aksi takdirde false döndürür.<br /></li></ul>|
-|`<>?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda "eşit değildir" işlemi hesaplar.<br /></li></ul>|
-|`<=`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Döndürür `true` ; sağ tarafındaki küçüktür veya eşittir sol tarafta ise, aksi halde döndürür `false`.<br /></li></ul>|
-|`<=?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>"Az veya buna eşit" işlemi, sağ tarafında boş değer atanabilir bir tür olduğunda hesaplar.<br /></li></ul>|
-|<code>&lt;&#124;</code>|[İşlevler](../functions/index.md)|<ul><li>İfadenin sonucu sağ tarafta (geriye dönük yöneltme işleci) sol taraftaki işlevine geçirir.<br /></li></ul>|
-|<code>&lt;&#124;&#124;</code>|[İşleçler. &#40; &#60; &#124; &#124; &#41; &#60;' T1, 'T2' U&#62; işlevi](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhh-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>İki bağımsız değişken tanımlama grubu sağ tarafta sol taraftaki işlevine geçirir.<br /></li></ul>|
-|<code>&lt;&#124;&#124;&#124;</code>|[İşleçler. &#40; &#60; &#124; &#124; &#124; &#41; &#60;'T1, 'T2' T3,' U&#62; işlevi](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhhh-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Üç bağımsız değişken kayıt sağ tarafta sol taraftaki işlevine geçirir.<br /></li></ul>|
-|`<@...@>`|[Kod Alıntıları](../code-quotations.md)|<ul><li>Yazılan kod tırnak sınırlandırır.<br /></li></ul>|
-|`<@@...@@>`|[Kod Alıntıları](../code-quotations.md)|<ul><li>Kod yazılmamış tırnak sınırlandırır.<br /></li></ul>|
-|`=`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Döndürür `true` sağ tarafı; sol tarafındaki eşitse, aksi takdirde döndürür `false`.<br /></li></ul>|
-|`=?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>"Equal" işlemi, sağ tarafında boş değer atanabilir bir tür olduğunda hesaplar.<br /></li></ul>|
-|`==`|Geçerli değildir.|<ul><li>İçinde kullanılmadı F#. Kullanım `=` eşitlik işlemleri için.<br /></li></ul>|
-|`>`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Döndürür `true` sol tarafında, aksi takdirde sağ tarafındaki büyük döndürür `false`.<br /></li></ul>|
-|`>?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda, "büyüktür" işlemi hesaplar.<br /></li></ul>|
-|`>>`|[İşlevler](../functions/index.md)|<ul><li>İki işlev (İleri birleşim işleci) oluşturur.<br /></li></ul>|
-|`>>>`|[Bit Düzeyinde İşleçler](bitwise-operators.md)|<ul><li>Kaydırmalar bit sayısı kadar sağa sol tarafındaki miktar sağ tarafta belirtilen yerleştirir.<br /></li></ul>|
-|`>=`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Döndürür `true` sol tarafındaki büyük veya eşittir; sağ tarafta ise döndürür, aksi takdirde, `false`.<br /></li></ul>|
-|`>=?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda, "büyüktür veya eşittir" işlemi hesaplar.<br /></li></ul>|
-|`?`|[Parametreler ve Bağımsız Değişkenler](../parameters-and-arguments.md)|<ul><li>İsteğe bağlı bir bağımsız değişken belirtir.<br /></li><li>Operatör, dinamik yöntem ve özellik çağrıları için kullanılır. Kendi uygulamanız sağlamanız gerekir.<br /></li></ul>|
-|`? ... <- ...`|Daha fazla bilgi yok.|<ul><li>Operatör, dinamik özelliklerini ayarlama kullanılır. Kendi uygulamanız sağlamanız gerekir.<br /></li></ul>|
-|`?>=`, `?>`, `?<=`, `?<`, `?=`, `?<>`, `?+`, `?-`, `?*`, `?/`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Karşılık gelen işleçleri eşdeğer? boş değer atanabilir bir tür soldaki olduğu önek.<br /></li></ul>|
-|`>=?`, `>?`, `<=?`, `<?`, `=?`, `<>?`, `+?`, `-?`, `*?`, `/?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Karşılık gelen işleçleri eşdeğer? boş değer atanabilir bir tür sağ tarafta olduğu soneki.<br /></li></ul>|
-|`?>=?`, `?>?`, `?<=?`, `?<?`, `?=?`, `?<>?`, `?+?`, `?-?`, `?*?`, `?/?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Her iki tarafında boş değer atanabilir türler nerede çevresindeki soru işaretleri olmadan karşılık gelen işleçleri ile eşdeğerdir.<br /></li></ul>|
-|`@`|[Listeler](../lists.md)<br /><br />[Dizeler](../strings.md)|<ul><li>İki liste art arda ekler.<br /></li><li>Önce bir dize sabit değeri yerleştirildiğinde, dize aynen, kaçış karakterleri yok yorumu yorumlanacağını olduğunu gösterir.<br /></li></ul>|
-|`[...]`|[Listeler](../lists.md)|<ul><li>Öğeleri listesini sınırlandırır.<br /></li></ul>|
-|<code>[&#124;...&#124;]</code>|[Diziler](../arrays.md)|<ul><li>Bir dizinin öğeleri sınırlandırır.<br /></li></ul>|
-|`[<...>]`|[Öznitelikler](../attributes.md)|<ul><li>Bir öznitelik sınırlandırır.<br /></li></ul>|
-|`\`|[Dizeler](../strings.md)|<ul><li>Sonraki karakter çıkışları; ' deki karakter ve dize değişmez değerleri kullanılır.<br /></li></ul>|
-|`^`|[Statik Olarak Çözümlenmiş Tür Parametreleri](../generics/statically-resolved-type-parameters.md)<br /><br />[Dizeler](../strings.md)|<ul><li>Çözümlenen gerekir çalışma zamanı değil, derleme zamanında tür parametreleri belirtir.<br /></li><li>Dizeleri birleştirir.<br /></li></ul>|
-|`^^^`|[Bit Düzeyinde İşleçler](bitwise-operators.md)|<ul><li>Bit düzeyinde dışlamalı OR işleminde hesaplar.<br /></li></ul>|
-|`_`|[Eşleşme İfadeleri](../match-expressions.md)<br /><br />[Genel Türler](../generics/index.md)|<ul><li>Joker karakter deseni gösterir.<br /></li><li>Anonim bir genel parametre belirler.<br /></li></ul>|
-|<code>&#96;</code>|[Otomatik Genelleştirme](../generics/automatic-generalization.md)|<ul><li>Genel tür parametresi belirtmek için dahili olarak kullanılır.<br /></li></ul>|
-|`{...}`|[Diziler](../sequences.md)<br /><br />[Kayıtlar](../records.md)|<ul><li>Sequence ifadeleri ve hesaplama ifadeleri sınırlandırır.<br /></li><li>Kayıt tanımlarında kullanılır.<br /></li></ul>|
-|<code>&#124;</code>|[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>Bireysel eşleşme örnekleri, tek tek ayrılmış birlik vakaları ve numaralandırma değerlerini sınırlandırır.<br /></li></ul>|
-|<code>&#124;&#124;</code>|[Boole İşleçleri](boolean-operators.md)|<ul><li>Boole veya işlem hesaplar.<br /></li></ul>|
-|<code>&#124;&#124;&#124;</code>|[Bit Düzeyinde İşleçler](bitwise-operators.md)|<ul><li>Bit düzeyinde OR işleminde hesaplar.<br /></li></ul>|
-|<code>&#124;></code>|[İşlevler](../functions/index.md)|<ul><li>Sol tarafta sonucunu (ileriye doğru kanalı işleci) sağ tarafta işleve geçirir.<br /></li></ul>|
-|<code>&#124;&#124;></code>|[İşleçler. &#40; &#124; &#124; &#62; &#41; &#60;' T1, 'T2' U&#62; işlevi](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hh%5d-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>İki bağımsız değişken tanımlama sol taraftaki işlecin sağ tarafındaki işlevine geçirir.<br /></li></ul>|
-|<code>&#124;&#124;&#124;></code>|[İşleçler. &#40; &#124; &#124; &#124; &#62; &#41; &#60;'T1, 'T2' T3,' U&#62; işlevi](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hhh%5d-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Üç bağımsız değişken kayıt sol taraftaki işlecin sağ tarafındaki işlevine geçirir.<br /></li></ul>|
-|`~~`|[İşleç Aşırı Yüklemesi](../operator-overloading.md)|<ul><li>Tekli değilleme işleci için bir aşırı bildirmek için kullanılır.<br /></li></ul>|
-|`~~~`|[Bit Düzeyinde İşleçler](bitwise-operators.md)|<ul><li>Bit düzeyinde hesaplar işlemi değil.<br /></li></ul>|
-|`~-`|[İşleç Aşırı Yüklemesi](../operator-overloading.md)|<ul><li>Aşırı yükleme birli eksi işleci için bildirmek için kullanılır.<br /></li></ul>|
-|`~+`|[İşleç Aşırı Yüklemesi](../operator-overloading.md)|<ul><li>Aşırı yükleme birli artı işleci için bildirmek için kullanılır.<br /></li></ul>|
+|`/`|[Aritmetik İşleçler](arithmetic-operators.md)<br /><br />[Ölçü Birimleri](../units-of-measure.md)|<ul><li>Sol tarafı (pay) sağ tarafa (payda) böler.<br /></li><li>Ölçü birimi türlerinde kullanılır.<br /></li></ul>|
+|`/?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ kenar null yapılabilir bir tür olduğunda, sol tarafı sağ tarafla böler.<br /></li></ul>|
+|`//`||<ul><li>Tek satırlık açıklamanın başlangıcını gösterir.<br /></li></ul>|
+|`///`|[XML Belgeleri](../xml-documentation.md)|<ul><li>Bir XML açıklamasını gösterir.<br /></li></ul>|
+|`:`|[İşlevler](../functions/index.md)|<ul><li>Bir tür ek açıklamasında bir parametre veya üye adını türünden ayırır.<br /></li></ul>|
+|`::`|[Listeler](../lists.md)<br /><br />[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>Bir liste oluşturur. Sol taraftaki öğe, sağ taraftaki listenin başına eklenir.<br /></li><li>Bir listenin parçalarını ayırmak için kalıp eşleştirmesinde kullanılır.<br /></li></ul>|
+|`:=`|[Başvuru Hücreleri](../reference-cells.md)|<ul><li>Başvuru hücresine bir değer atar.<br /></li></ul>|
+|`:>`|[Tür Değiştirme ve Dönüştürmeler](../casting-and-conversions.md)|<ul><li>Bir türü hiyerarşide daha üst olan türe dönüştürür.<br /></li></ul>|
+|`:?`|[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>Değer belirtilen türle eşleşiyorsa `true` döndürür (bir alt tür ise dahil); Aksi takdirde, `false` döndürür (tür testi işleci).<br /></li></ul>|
+|`:?>`|[Tür Değiştirme ve Dönüştürmeler](../casting-and-conversions.md)|<ul><li>Bir türü hiyerarşide daha düşük olan bir türe dönüştürür.<br /></li></ul>|
+|`;`|[Ayrıntılı Söz Dizimi](../verbose-syntax.md)<br /><br />[Listeler](../lists.md)<br /><br />[Kayıtlar](../records.md)|<ul><li>İfadeleri ayırır (çoğunlukla ayrıntılı sözdiziminde kullanılır).<br /></li><li>Bir listenin öğelerini ayırır.<br /></li><li>Bir kaydın alanlarını ayırır.<br /></li></ul>|
+|`<`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Küçüktür işlemini hesaplar.<br /></li></ul>|
+|`<?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|Sağ kenar null yapılabilir bir tür olduğunda, işlemi küçüktür olarak hesaplar.|
+|`<<`|[İşlevler](../functions/index.md)|<ul><li>İki işlevi ters sırada oluşturur; ikinci bir ilki yürütülür (geriye doğru bileşim işleci).<br /></li></ul>|
+|`<<<`|[Bit Düzeyinde İşleçler](bitwise-operators.md)|<ul><li>Sol taraftaki miktardaki miktarı, sağ tarafta belirtilen bit sayısıyla sola kaydırır.<br /></li></ul>|
+|`<-`|[Değerler](../values/index.md)|<ul><li>Bir değişkene bir değer atar.<br /></li></ul>|
+|`<...>`|[Otomatik Genelleştirme](../generics/automatic-generalization.md)|<ul><li>Sınırlandırlar tür parametreleri.<br /></li></ul>|
+|`<>`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Sol kenar sağ tarafa eşit değilse `true` döndürür; Aksi takdirde, false döndürür.<br /></li></ul>|
+|`<>?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ kenar null yapılabilir bir tür olduğunda "eşit değildir" işlemini hesaplar.<br /></li></ul>|
+|`<=`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Sol kenar sağ taraftan daha küçük veya bu değere eşitse `true` döndürür; Aksi takdirde, `false`döndürür.<br /></li></ul>|
+|`<=?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ kenar null yapılabilir bir tür olduğunda "küçüktür veya eşittir" işlemini hesaplar.<br /></li></ul>|
+|<code>&lt;&#124;</code>|[İşlevler](../functions/index.md)|<ul><li>Sağ taraftaki ifadenin sonucunu sol taraftaki işleve geçirir (geriye doğru kanal işleci).<br /></li></ul>|
+|<code>&lt;&#124;&#124;</code>|[İşletmenlerinin. &#40; &#62; 1, 't 2, ' U işlev &#60; &#124; &#124; &#41; &#60;](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhh-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Sağ taraftaki iki bağımsız değişkenin kayıt kümesini sol taraftaki işleve geçirir.<br /></li></ul>|
+|<code>&lt;&#124;&#124;&#124;</code>|[İşletmenlerinin. &#40; &#62; 1, 't 2, 't, ' U işlevi &#60; &#124; &#124; &#124; &#41; &#60;](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhhh-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Sağ taraftaki üç bağımsız değişkenin kayıt kümesini sol taraftaki işleve geçirir.<br /></li></ul>|
+|`<@...@>`|[Kod Alıntıları](../code-quotations.md)|<ul><li>Türü belirlenmiş bir kod teklifini ayırır.<br /></li></ul>|
+|`<@@...@@>`|[Kod Alıntıları](../code-quotations.md)|<ul><li>Türsüz bir kod teklifini ayırır.<br /></li></ul>|
+|`=`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Sol kenar sağ tarafa eşitse `true` döndürür; Aksi takdirde, `false`döndürür.<br /></li></ul>|
+|`=?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ kenar null yapılabilir bir tür olduğunda "eşittir" işlemini hesaplar.<br /></li></ul>|
+|`==`|Yok.|<ul><li>İçinde F#kullanılmaz. Eşitlik işlemleri için `=` kullanın.<br /></li></ul>|
+|`>`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Sol kenar sağ taraftan büyükse `true` döndürür; Aksi takdirde, `false`döndürür.<br /></li></ul>|
+|`>?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ kenar null yapılabilir bir tür olduğunda "büyüktür" işlemini hesaplar.<br /></li></ul>|
+|`>>`|[İşlevler](../functions/index.md)|<ul><li>İki işlevi (ileri birleşim işleci) bileşik olarak oluşturur.<br /></li></ul>|
+|`>>>`|[Bit Düzeyinde İşleçler](bitwise-operators.md)|<ul><li>Sol taraftaki miktardaki miktarı sağ tarafta belirtilen yer sayısına göre sağa kaydırır.<br /></li></ul>|
+|`>=`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Sol kenar sağ taraftan büyük veya ona eşitse `true` döndürür; Aksi takdirde, `false`döndürür.<br /></li></ul>|
+|`>=?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ kenar null yapılabilir bir tür olduğunda "büyüktür veya eşittir" işlemini hesaplar.<br /></li></ul>|
+|`?`|[Parametreler ve Bağımsız Değişkenler](../parameters-and-arguments.md)|<ul><li>İsteğe bağlı bir bağımsız değişken belirtir.<br /></li><li>Dinamik yöntem ve özellik çağrıları için işleç olarak kullanılır. Kendi uygulamanızı sağlamanız gerekir.<br /></li></ul>|
+|`? ... <- ...`|Daha fazla bilgi yok.|<ul><li>Dinamik özellikleri ayarlamak için işleç olarak kullanılır. Kendi uygulamanızı sağlamanız gerekir.<br /></li></ul>|
+|`?>=`, `?>`, `?<=`, `?<`, `?=`, `?<>`, `?+`, `?-`, `?*`, `?/`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>İlgili işleçlere sahip olmadan eşdeğer mi? null yapılabilir bir tür solda olan önek.<br /></li></ul>|
+|`>=?`, `>?`, `<=?`, `<?`, `=?`, `<>?`, `+?`, `-?`, `*?`, `/?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>İlgili işleçlere sahip olmadan eşdeğer mi? sonek olarak null yapılabilir bir tür.<br /></li></ul>|
+|`?>=?`, `?>?`, `?<=?`, `?<?`, `?=?`, `?<>?`, `?+?`, `?-?`, `?*?`, `?/?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Her iki taraf da null yapılabilir türler olduğunda, çevresindeki soru işaretleri olmadan karşılık gelen işleçlere eşdeğerdir.<br /></li></ul>|
+|`@`|[Listeler](../lists.md)<br /><br />[Dizeler](../strings.md)|<ul><li>İki listeyi birleştirir.<br /></li><li>Bir dize sabit değerinden önce yerleştirildiğinde, kaçış karakterleri yorumu olmadan dizenin tam olarak yorumlanıp yorumlanmadığını gösterir.<br /></li></ul>|
+|`[...]`|[Listeler](../lists.md)|<ul><li>Bir listenin öğelerini ayırır.<br /></li></ul>|
+|<code>[&#124;...&#124;]</code>|[Diziler](../arrays.md)|<ul><li>Bir dizinin öğelerini ayırır.<br /></li></ul>|
+|`[<...>]`|[Öznitelikler](../attributes.md)|<ul><li>Bir özniteliği ayırır.<br /></li></ul>|
+|`\`|[Dizeler](../strings.md)|<ul><li>Sonraki karakteri çıkar; karakter ve dize değişmez değerlerinde kullanılır.<br /></li></ul>|
+|`^`|[Statik Olarak Çözümlenmiş Tür Parametreleri](../generics/statically-resolved-type-parameters.md)<br /><br />[Dizeler](../strings.md)|<ul><li>Çalışma zamanında değil, derleme zamanında çözülmesi gereken tür parametrelerini belirtir.<br /></li><li>Dizeleri art arda ekler.<br /></li></ul>|
+|`^^^`|[Bit Düzeyinde İşleçler](bitwise-operators.md)|<ul><li>Bit düzeyinde dışlamalı veya işlemi hesaplar.<br /></li></ul>|
+|`_`|[Eşleşme İfadeleri](../match-expressions.md)<br /><br />[Genel Türler](../generics/index.md)|<ul><li>Bir joker karakter deseninin olduğunu gösterir.<br /></li><li>Anonim bir genel parametre belirtir.<br /></li></ul>|
+|<code>&#96;</code>|[Otomatik Genelleştirme](../generics/automatic-generalization.md)|<ul><li>Genel bir tür parametresini göstermek için dahili olarak kullanılır.<br /></li></ul>|
+|`{...}`|[Diziler](../sequences.md)<br /><br />[Kayıtlar](../records.md)|<ul><li>Sıralama ifadelerini ve hesaplama ifadelerini ayırır.<br /></li><li>Kayıt tanımlarında kullanılır.<br /></li></ul>|
+|<code>&#124;</code>|[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>Bireysel eşleşme durumlarını, tek ayırt edici birleşim durumlarını ve numaralandırma değerlerini ayırır.<br /></li></ul>|
+|<code>&#124;&#124;</code>|[Boole İşleçleri](boolean-operators.md)|<ul><li>Boole veya işlemi hesaplar.<br /></li></ul>|
+|<code>&#124;&#124;&#124;</code>|[Bit Düzeyinde İşleçler](bitwise-operators.md)|<ul><li>Bit düzeyinde OR işlemini hesaplar.<br /></li></ul>|
+|<code>&#124;></code>|[İşlevler](../functions/index.md)|<ul><li>Sol tarafın sonucunu sağ taraftaki işleve geçirir (ileri kanal işleci).<br /></li></ul>|
+|<code>&#124;&#124;></code>|[İşletmenlerinin. &#40; &#62; 1, 't 2, ' U işlev &#124; &#124; &#62; &#41; &#60;](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hh%5d-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Sol taraftaki iki bağımsız değişkenin kayıt kümesini sağ taraftaki işleve geçirir.<br /></li></ul>|
+|<code>&#124;&#124;&#124;></code>|[İşletmenlerinin. &#40; &#62; 1, 't 2, 't, ' U işlevi &#124; &#124; &#124; &#62; &#41; &#60;](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hhh%5d-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Sol taraftaki üç bağımsız değişkenin kayıt kümesini sağ taraftaki işleve geçirir.<br /></li></ul>|
+|`~~`|[İşleç Aşırı Yüklemesi](../operator-overloading.md)|<ul><li>Birli olumsuzlama işleci için bir aşırı yükleme bildirmek için kullanılır.<br /></li></ul>|
+|`~~~`|[Bit Düzeyinde İşleçler](bitwise-operators.md)|<ul><li>Bit düzeyinde işlem işlemini hesaplar.<br /></li></ul>|
+|`~-`|[İşleç Aşırı Yüklemesi](../operator-overloading.md)|<ul><li>Birli eksi işleci için aşırı yükleme bildirmek için kullanılır.<br /></li></ul>|
+|`~+`|[İşleç Aşırı Yüklemesi](../operator-overloading.md)|<ul><li>Birli artı işleci için aşırı yükleme bildirmek için kullanılır.<br /></li></ul>|
 
 ## <a name="operator-precedence"></a>İşleç Önceliği
 
-Aşağıdaki tabloda öncelik işleçleri ve diğer deyim anahtar sözcükleri sırasını gösterir F# en yüksek önceliği en düşük önceliğe kaliteden dili. Ayrıca listelenen birleşim geçerli olur.
+Aşağıdaki tabloda, operatörlerin ve diğer ifade anahtar sözcüklerinin F# öncelik sırası, en düşük önceliğe göre en yüksek önceliğe göre gösterilmiştir. Ayrıca, varsa, ilişkilendirilebilirliği de listelenmiştir.
 
 |İşleç|İlişkilendirilebilirlik|
 |--------|-------------|
@@ -124,31 +124,31 @@ Aşağıdaki tabloda öncelik işleçleri ve diğer deyim anahtar sözcükleri s
 |`when`|Sağ|
 |<code>&#124;</code> (kanal)|Sol|
 |`;`|Sağ|
-|`let`|Nonassociative|
-|`function`, `fun`, `match`, `try`|Nonassociative|
-|`if`|Nonassociative|
+|`let`|İlişkilendirilebilir olmayan|
+|`function`, `fun`, `match`, `try`|İlişkilendirilebilir olmayan|
+|`if`|İlişkilendirilebilir olmayan|
 |`not`|Sağ|
 |`->`|Sağ|
 |`:=`|Sağ|
-|`,`|Nonassociative|
+|`,`|İlişkilendirilebilir olmayan|
 |`or`, <code>&#124;&#124;</code>|Sol|
 |`&`, `&&`|Sol|
 |`:>`, `:?>`|Sağ|
-|`<`*OP*, `>` *op*, `=`, <code>&#124;</code> *op*, `&` *op*, `&`<br /><br />(dahil olmak üzere `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Sol|
-|`^`*OP*<br /><br />(dahil olmak üzere `^^^`)|Sağ|
+|`<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(`<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`dahil)|Sol|
+|`^`*op*<br /><br />(`^^^`dahil)|Sağ|
 |`::`|Sağ|
-|`:?`|İlişkili değil|
-|`-`*OP*, `+` *Aç*|Bu simge kullanan infix için geçerlidir|
-|`*`*OP*, `/` *op*, `%` *Aç*|Sol|
-|`**`*OP*|Sağ|
+|`:?`|İlişkilendirilebilir değil|
+|`-`*op*, `+`*op*|Bu sembollerin ındüzeltilme kullanımları için geçerlidir|
+|`*`*op*, `/`*op*, `%`*op*|Sol|
+|`**`*op*|Sağ|
 |`f x` (işlev uygulaması)|Sol|
-|<code>&#124;</code> (desen eşleme)|Sağ|
-|önek işleçleri (`+`*op*, `-` *op*, `%`, `%%`, `&`, `&&`, `!` *op*, `~` *op*)|Sol|
+|<code>&#124;</code> (kalıp eşleşmesi)|Sağ|
+|önek işleçleri (`+`*op*, `-`*op*, `%`, `%%`, `&`, `&&`, `!`*op*, `~`*op*)|Sol|
 |`.`|Sol|
 |`f(x)`|Sol|
-|`f<`*Türleri*`>`|Sol|
+|`f<`*türler*`>`|Sol|
 
-F#Özel İşleç aşırı yüklemesi destekler. Başka bir deyişle, kendi işleçleri tanımlayabilirsiniz. Önceki tabloda *op* (büyük olasılıkla boş) geçerli dizi işleci karakter, yerleşik veya kullanıcı tanımlı olabilir. Bu nedenle, hangi istediğiniz öncelik düzeyini elde etmek için özel bir işleç için kullanılacak karakter sırasını belirlemek için bu tabloyu kullanın. Önde gelen `.` derleyici öncelik belirlediğinde karakterler yoksayılır.
+F#Özel operatör aşırı yüklemesini destekler. Bu, kendi işleçlerinizi tanımlayabilmeniz anlamına gelir. Önceki tabloda, *op* , yerleşik veya Kullanıcı tanımlı işleç karakterlerinin geçerli (muhtemelen boş) sırası olabilir. Bu nedenle, istenen öncelik düzeyini elde etmek üzere özel bir operatör için kullanılacak karakter dizisini belirlemek için bu tabloyu kullanabilirsiniz. Derleyici önceliği belirlediğinde önde gelen `.` karakterleri yoksayılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,23 +11,23 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f051d7a51a5f4ff8debf40fafbb8acfd8f7098f5
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 297a7080b0c34fa10f976cbbbfb48d8c35786aca
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182634"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458084"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>İzlenecek yol: Standart türlerin koleksiyonlarını serileştirme
 
-Özel denetimleriniz bazen bir koleksiyonu özellik olarak kullanıma sunar. Bu izlenecek yol, <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> bir koleksiyonun tasarım zamanında nasıl serileştirildiği denetlemek için sınıfının nasıl kullanılacağını gösterir. <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> Değer koleksiyon özelliğine uygulandığında, özelliğin serileştirilmesi gerekir.
+Özel denetimleriniz bazen bir koleksiyonu özellik olarak kullanıma sunar. Bu izlenecek yol, bir koleksiyonun tasarım zamanında nasıl serileştirildiği denetlemek için <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> sınıfını nasıl kullanacağınızı gösterir. <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> değeri koleksiyon özelliğine uygulamak, özelliğin serileştirilmesini sağlar.
 
-Bu konudaki kodu tek bir liste olarak kopyalamak için bkz [. nasıl yapılır: Standart türlerin koleksiyonlarını DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))ile serileştirme.
+Bu konudaki kodu tek bir liste olarak kopyalamak için bkz. [nasıl yapılır: Standart türlerin koleksiyonlarını DesignerSerializationVisibilityAttribute Ile serileştirme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Bu yönergeyi tamamlamak için Visual Studio gerekir.
 
@@ -37,13 +37,13 @@ Bu yönergeyi tamamlamak için Visual Studio gerekir.
 
 1. Visual Studio 'da bir Windows Denetim Kitaplığı projesi oluşturun ve **SerializationDemoControlLib**olarak adlandırın.
 
-2. `UserControl1` Olarak`SerializationDemoControl`yeniden adlandırın. Daha fazla bilgi için bkz. [kod sembolünü yeniden düzenlemeyi yeniden adlandırma](/visualstudio/ide/reference/rename).
+2. `UserControl1` `SerializationDemoControl`olarak yeniden adlandırın. Daha fazla bilgi için bkz. [kod sembolünü yeniden düzenlemeyi yeniden adlandırma](/visualstudio/ide/reference/rename).
 
-3. **Özellikler** penceresinde, <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> özelliğinin değerini **10**olarak ayarlayın.
+3. **Özellikler** penceresinde <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> özelliğinin değerini **10**olarak ayarlayın.
 
-4. İçine bir <xref:System.Windows.Forms.TextBox> denetim koyun. `SerializationDemoControl`
+4. `SerializationDemoControl`bir <xref:System.Windows.Forms.TextBox> denetimi yerleştirin.
 
-5. <xref:System.Windows.Forms.TextBox> Denetimi seçin. **Özellikler** penceresinde, aşağıdaki özellikleri ayarlayın.
+5. <xref:System.Windows.Forms.TextBox> denetimini seçin. **Özellikler** penceresinde, aşağıdaki özellikleri ayarlayın.
 
     |Özellik|Değiştir|
     |--------------|---------------|
@@ -52,16 +52,16 @@ Bu yönergeyi tamamlamak için Visual Studio gerekir.
     |**Çubuklarını**|<xref:System.Windows.Forms.ScrollBars.Vertical>|
     |**ReadOnly**|`true`|
 
-6. **Kod düzenleyicisinde**, içinde `stringsValue` `SerializationDemoControl`adlı bir dize dizisi alanı bildirin.
+6. **Kod düzenleyicisinde**, `SerializationDemoControl``stringsValue` adlı bir dize dizisi alanı bildirin.
 
      [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#4)]
      [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#4)]
      [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#4)]
 
-7. Üzerinde özelliğini tanımlayın. `SerializationDemoControl` `Strings`
+7. `SerializationDemoControl``Strings` özelliğini tanımlayın.
 
    > [!NOTE]
-   > <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> Değer, koleksiyonun serileştirmesini etkinleştirmek için kullanılır.
+   > <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> değeri, koleksiyonun serileştirmesini etkinleştirmek için kullanılır.
 
    [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
    [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
@@ -69,35 +69,35 @@ Bu yönergeyi tamamlamak için Visual Studio gerekir.
 
 8. Projeyi derlemek için **F5** tuşuna basın ve denetimi **UserControl Test kapsayıcısında**çalıştırın.
 
-9. **UserControl test kapsayıcısının**içinde <xref:System.Windows.Forms.PropertyGrid> **dizeler** özelliğini bulun. **Dizeler** özelliğini seçin, sonra **dize koleksiyonu düzenleyicisini**açmak için![üç nokta (Visual Studio](./media/visual-studio-ellipsis-button.png)'nun Özellikler penceresi) düğmesini seçin.
+9. **UserControl test kapsayıcısının**<xref:System.Windows.Forms.PropertyGrid> **dizeler** özelliğini bulun. **Dizeler** özelliğini seçin, sonra **dize koleksiyonu düzenleyicisini**açmak Için üç nokta (Visual](./media/visual-studio-ellipsis-button.png)Studio 'nun Özellikler penceresi![) düğmesini seçin (...).
 
 10. **Dize koleksiyonu düzenleyicisine**birkaç dize girin. Her bir dizenin sonundaki **ENTER** tuşuna basarak onları ayırın. Dizeleri girmeyi tamamladığınızda **Tamam** ' a tıklayın.
 
    > [!NOTE]
-   > Yazdığınız dizeler içinde <xref:System.Windows.Forms.TextBox> `SerializationDemoControl`görüntülenir.
+   > Yazdığınız dizeler `SerializationDemoControl`<xref:System.Windows.Forms.TextBox> görüntülenir.
 
 ## <a name="serialize-a-collection-property"></a>Koleksiyon özelliğini serileştirme
 
 Denetiminizin serileştirme davranışını test etmek için, bunu bir forma yerleştirip koleksiyonun içeriğini **koleksiyon Düzenleyicisi**ile değiştirirsiniz. Seri hale getirilmiş koleksiyon durumunu, **Windows Form Tasarımcısı** kod yaydığı özel bir tasarımcı dosyasına bakarak görebilirsiniz.
 
-1. Çözüme bir Windows uygulama projesi ekleyin. Projeyi `SerializationDemoControlTest`adlandırın.
+1. Çözüme bir Windows uygulama projesi ekleyin. Projeyi `SerializationDemoControlTest`olarak adlandırın.
 
-2. **Araç kutusunda** **SerializationDemoControlLib bileşenleri**adlı sekmeyi bulun. Bu sekmede, `SerializationDemoControl`' yi bulacaksınız. Daha fazla bilgi için bkz [. İzlenecek yol: Araç kutusunu özel bileşenlerle](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)otomatik olarak doldurma.
+2. **Araç kutusunda** **SerializationDemoControlLib bileşenleri**adlı sekmeyi bulun. Bu sekmede `SerializationDemoControl`bulacaksınız. Daha fazla bilgi için bkz. [Izlenecek yol: araç kutusunu özel bileşenlerle otomatik olarak doldurma](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).
 
-3. Formunuza bir `SerializationDemoControl` koyun.
+3. Formunuza bir `SerializationDemoControl` yerleştirin.
 
-4. `Strings` **Özellikler** penceresinde özelliği bulun. Özelliği tıklatın, ardından **dize koleksiyonu düzenleyicisini**açmak için![üç nokta (Visual Studio](./media/visual-studio-ellipsis-button.png)'nun Özellikler penceresi) düğmesine tıklayın. `Strings`
+4. **Özellikler** penceresinde `Strings` özelliğini bulun. `Strings` özelliğine tıklayın ve sonra, **dize koleksiyonu düzenleyicisini**açmak için üç![nokta düğmesini (Visual Studio 'nun Özellikler penceresi](./media/visual-studio-ellipsis-button.png)) düğmesine tıklayın.
 
 5. **Dize koleksiyonu düzenleyicisine**birkaç dize yazın. Her bir dizenin sonunda **ENTER** tuşuna basarak onları ayırın. Dizeleri girmeyi tamamladığınızda **Tamam** ' a tıklayın.
 
     > [!NOTE]
-    > Yazdığınız dizeler içinde <xref:System.Windows.Forms.TextBox> `SerializationDemoControl`görüntülenir.
+    > Yazdığınız dizeler `SerializationDemoControl`<xref:System.Windows.Forms.TextBox> görüntülenir.
 
 6. **Çözüm Gezgini**, **tüm dosyaları göster** düğmesine tıklayın.
 
 7. **Form1** düğümünü açın. Bunun altında **Form1.Designer.cs** veya **Form1. Designer. vb**adlı bir dosyadır. Bu, **Windows Form Tasarımcısı** formunuzun tasarım zamanı durumunu ve onun alt denetimlerini temsil eden kodu yaydığı dosyadır. Bu dosyayı **kod düzenleyicisinde**açın.
 
-8. **Windows Form Tasarımcısı tarafından oluşturulan kod** adlı bölgeyi açın ve **serializationDemoControl1**etiketli bölümü bulun. Bu etiketin altında, denetiminizin serileştirilmiş durumunu temsil eden kod bulunur. 5\. adımda yazdığınız dizeler, `Strings` özelliği için bir atamada görüntülenir. C# Ve Visual Basic aşağıdaki kod örnekleri, "Red", "turuncu" ve "sarı" dizelerini yazdığınız sırada göreceğiniz koda benzer kodu gösterir.
+8. **Windows Form Tasarımcısı tarafından oluşturulan kod** adlı bölgeyi açın ve **serializationDemoControl1**etiketli bölümü bulun. Bu etiketin altında, denetiminizin serileştirilmiş durumunu temsil eden kod bulunur. 5\. adımda yazdığınız dizeler `Strings` özelliğine bir atamada görüntülenir. C# Ve Visual Basic aşağıdaki kod örnekleri, "Red", "turuncu" ve "sarı" dizelerini yazdığınız sırada göreceğiniz koda benzer kodu gösterir.
 
     ```csharp
     this.serializationDemoControl1.Strings = new string[] {
@@ -110,7 +110,7 @@ Denetiminizin serileştirme davranışını test etmek için, bunu bir forma yer
     Me.serializationDemoControl1.Strings = New String() {"red", "orange", "yellow"}
     ```
 
-9. **Kod düzenleyicisinde**, <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> `Strings` özelliğindeki öğesinin değerini olarak <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>değiştirin.
+9. **Kod Düzenleyicisi**'nde, `Strings` özelliğindeki <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> değerini <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>olarak değiştirin.
 
     ```csharp
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -123,7 +123,7 @@ Denetiminizin serileştirme davranışını test etmek için, bunu bir forma yer
 10. Çözümü yeniden derleyin ve 3. ve 4. adımları yineleyin.
 
 > [!NOTE]
-> Bu durumda **Windows Form Tasarımcısı** , `Strings` özelliğe atama yapılmaz.
+> Bu durumda, **Windows Form Tasarımcısı** `Strings` özelliğine atama yapılmaz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -135,9 +135,9 @@ Standart türlerden oluşan bir koleksiyonun nasıl serileştirildiğini öğren
 
 - [Tasarımcı serileştirmesine genel bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 
-- [İzlenecek yol: Visual Studio tasarım zamanı özelliklerinden faydalanan bir Windows Forms denetimi oluşturma](creating-a-wf-control-design-time-features.md)
+- [İzlenecek yol: Visual Studio Tasarım-Zamanı Özellikleri'nden Faydalanan Windows Forms Denetimi Oluşturma](creating-a-wf-control-design-time-features.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
-- [İzlenecek yol: Araç kutusunu özel bileşenlerle otomatik olarak doldurma](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

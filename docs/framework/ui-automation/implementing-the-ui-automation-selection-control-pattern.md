@@ -6,54 +6,54 @@ helpviewer_keywords:
 - UI Automation, Selection control pattern
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-ms.openlocfilehash: 8ce37b71846f227c753e8d217e96482f623d3bd1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 39baadbad4bf5aff1cc2cd7877489f43581e0fa0
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043231"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458164"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>UI Otomasyon Seçim Denetim Düzenini Uygulama
 > [!NOTE]
-> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu konu, olaylar ve özellikler hakkında bilgiler <xref:System.Windows.Automation.Provider.ISelectionProvider>de dahil olmak üzere uygulama yönergelerini ve kurallarını tanıtır. Ek başvuruların bağlantıları konunun sonunda listelenmiştir.  
+ Bu konu, olaylar ve özellikler hakkında bilgiler de dahil olmak üzere <xref:System.Windows.Automation.Provider.ISelectionProvider>uygulamak için kılavuz ve kuralları tanıtır. Ek başvuruların bağlantıları konunun sonunda listelenmiştir.  
   
- <xref:System.Windows.Automation.SelectionPattern> Denetim stili, seçilebilir alt öğelerin bir koleksiyonu için kapsayıcılar olarak davranan denetimleri desteklemek için kullanılır. Bu öğenin alt öğelerinin uygulanması <xref:System.Windows.Automation.Provider.ISelectionItemProvider>gerekir. Bu denetim modelini uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](control-pattern-mapping-for-ui-automation-clients.md).  
+ <xref:System.Windows.Automation.SelectionPattern> denetim stili, seçilebilir alt öğelerin bir koleksiyonu için kapsayıcılar olarak davranan denetimleri desteklemek için kullanılır. Bu öğenin alt öğeleri <xref:System.Windows.Automation.Provider.ISelectionItemProvider>gerçekleştirmelidir. Bu denetim modelini uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
  Seçim Denetim modelini uygularken, aşağıdaki kılavuz ve kurallara göz önünde aklınızda olmanız gerekir:  
   
-- Uygulayan <xref:System.Windows.Automation.Provider.ISelectionProvider> denetimlerin tek veya birden çok alt öğe seçmesine izin ver. Örneğin, liste kutusu, liste görünümü ve ağaç görünümü birden çok seçimi destekler, Birleşik giriş kutusu, kaydırıcı ve radyo düğmesi grubu tek seçimi destekler.  
+- <xref:System.Windows.Automation.Provider.ISelectionProvider> uygulayan denetimler tek veya birden çok alt öğenin seçili olmasını sağlar. Örneğin, liste kutusu, liste görünümü ve ağaç görünümü birden çok seçimi destekler, Birleşik giriş kutusu, kaydırıcı ve radyo düğmesi grubu tek seçimi destekler.  
   
-- **Birim** kaydırıcı denetimi gibi minimum, maksimum ve sürekli aralığa sahip denetimler <xref:System.Windows.Automation.Provider.IRangeValueProvider> yerine <xref:System.Windows.Automation.Provider.ISelectionProvider>uygulanmalıdır.  
+- **Birim** kaydırıcı denetimi gibi minimum, maksimum ve sürekli aralığa sahip denetimler <xref:System.Windows.Automation.Provider.ISelectionProvider>yerine <xref:System.Windows.Automation.Provider.IRangeValueProvider> uygulamalıdır.  
   
-- **Görüntü özellikleri** iletişim kutusundaki **ekran çözünürlüğü** kaydırıcısı veya ' den <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot> [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] **renk seçici** seçim denetimi gibi, uygulayan alt denetimleri yöneten tek seçim denetimleri ( aşağıda gösterildiği gibi), uygulaması <xref:System.Windows.Automation.Provider.ISelectionProvider>gerekir; alt öğeleri <xref:System.Windows.Automation.Provider.ISelectionItemProvider>hem hem <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> de uygulamalıdır.  
+- **Görüntüleme özellikleri** Iletişim kutusundaki **ekran çözünürlüğü** kaydırıcısı veya Microsoft Word 'deki **renk Seçicisi** seçim denetimi gibi <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>uygulayan alt denetimleri yöneten tek seçim denetimleri (aşağıda gösterilmiştir ), <xref:System.Windows.Automation.Provider.ISelectionProvider>uygulamalıdır; alt öğeleri hem <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> hem de <xref:System.Windows.Automation.Provider.ISelectionItemProvider>uygulamalıdır.  
   
  ![Sarı vurgulanmış şekilde renk seçici.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Renk örneği dize eşlemesi örneği  
   
-- Menüler desteklemez <xref:System.Windows.Automation.SelectionPattern>. Hem grafik hem de metin içeren menü öğeleriyle çalışıyorsanız (Microsoft Outlook 'ta **Görünüm** menüsündeki <xref:System.Windows.Automation.Provider.IToggleProvider> **Önizleme bölmesi** öğeleri gibi) ve durumu iletmelisiniz, uygulamanız gerekir.  
+- Menüler <xref:System.Windows.Automation.SelectionPattern>desteklemez. Hem grafik hem de metin içeren menü öğeleriyle çalışıyorsanız (Microsoft Outlook 'ta **Görünüm** menüsündeki **Önizleme bölmesi** öğeleri gibi) ve durumu iletmelisiniz, <xref:System.Windows.Automation.Provider.IToggleProvider>uygulamanız gerekir.  
   
 <a name="Required_Members_for_ISelectionProvider"></a>   
 ## <a name="required-members-for-iselectionprovider"></a>ISelectionProvider için gerekli Üyeler  
- <xref:System.Windows.Automation.Provider.ISelectionProvider> Arabirim için aşağıdaki özellikler, Yöntemler ve olaylar gereklidir.  
+ <xref:System.Windows.Automation.Provider.ISelectionProvider> arabirimi için aşağıdaki özellikler, Yöntemler ve olaylar gereklidir.  
   
 |Gerekli Üyeler|Tür|Notlar|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Özellik|, Ve <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>kullanan özellik değişmiş olayları desteklemelidir.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Özellik|, Ve <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>kullanan özellik değişmiş olayları desteklemelidir.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Özellik|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> ve <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>kullanarak özellik değiştirilen olayları desteklemelidir.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Özellik|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> ve <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>kullanarak özellik değiştirilen olayları desteklemelidir.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Yöntem|Yok.|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Olay|Kapsayıcıda bir seçim önemli ölçüde değiştirildiğinde ve <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> sabit izin verenden daha fazla ekleme ve kaldırma olayı gönderilmesini gerektirdiğinde tetiklenir.|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Olay|Kapsayıcıda bir seçim önemli ölçüde değiştiği ve <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> sabitinden izin verdiğinden daha fazla ekleme ve kaldırma olayı gönderilmesini gerektirdiğinde tetiklenir.|  
   
- <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> Ve<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A> özellikleri dinamik olabilir. Örneğin, bir denetimin ilk durumu varsayılan olarak seçili herhangi bir öğeye sahip olmayabilir ve bunu gösterir <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>. `false` Ancak, bir öğe seçildikten sonra Denetim her zaman en az bir öğe seçilmiş olmalıdır. Benzer şekilde, ender durumlarda, bir denetim birden fazla öğenin başlatma sırasında seçilebilsin, ancak bundan sonra yalnızca tek seçimlerin olmasına izin verebilir.  
+ <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> ve <xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A> özellikleri dinamik olabilir. Örneğin, bir denetimin ilk durumu varsayılan olarak seçili herhangi bir öğeye sahip olmayabilir ve bu <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> `false`. Ancak, bir öğe seçildikten sonra Denetim her zaman en az bir öğe seçilmiş olmalıdır. Benzer şekilde, ender durumlarda, bir denetim birden fazla öğenin başlatma sırasında seçilebilsin, ancak bundan sonra yalnızca tek seçimlerin olmasına izin verebilir.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Özel Durumlar  
  Sağlayıcılar aşağıdaki özel durumları oluşturması gerekir.  
   
-|Özel Durum Türü|Koşul|  
+|Özel durum türü|Koşul|  
 |--------------------|---------------|  
 |<xref:System.Windows.Automation.ElementNotEnabledException>|Denetim etkinleştirilmemişse.|  
 |<xref:System.InvalidOperationException>|Denetim gizliyse.|  

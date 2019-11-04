@@ -2,12 +2,12 @@
 title: MTOM Kodlama
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-ms.openlocfilehash: 52fe91e5ab4967190d7654b232143adbf0a49d65
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ab8abdf79304037f2b4039407115a3f64a0afa4e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039264"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424065"
 ---
 # <a name="mtom-encoding"></a>MTOM Kodlama
 Bu örnek, bir WSHttpBinding ile Ileti Iletimi Iyileştirme mekanizması (MTOM) ileti kodlamasının kullanımını gösterir. MTOM, SOAP iletileri olan büyük ikili ekleri ham bayt olarak iletme ve daha küçük iletilere izin veren bir mekanizmadır.  
@@ -17,11 +17,11 @@ Bu örnek, bir WSHttpBinding ile Ileti Iletimi Iyileştirme mekanizması (MTOM) 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MTOM`  
   
- Varsayılan olarak, WSHttpBinding iletileri normal metin XML olarak gönderir ve gönderir. MTOM iletilerinin gönderilmesini ve alınmasını etkinleştirmek için, bağlama yapılandırmasındaki `messageEncoding` özniteliği (Aşağıdaki örnek kodda olduğu gibi) veya doğrudan bağlama üzerinde `MessageEncoding` özelliğini kullanarak ayarlayın. Hizmet veya istemci artık MTOM iletileri gönderebilir ve alabilir.  
+ Varsayılan olarak, WSHttpBinding iletileri normal metin XML olarak gönderir ve gönderir. MTOM iletilerinin gönderilmesini ve alınmasını etkinleştirmek için, bağlamanın yapılandırmasındaki `messageEncoding` özniteliğini (Aşağıdaki örnek kodda olduğu gibi) veya doğrudan bağlama üzerinde `MessageEncoding` özelliğini kullanarak ayarlayın. Hizmet veya istemci artık MTOM iletileri gönderebilir ve alabilir.  
   
 ```xml  
 <wsHttpBinding>  
@@ -29,7 +29,7 @@ Bu örnek, bir WSHttpBinding ile Ileti Iletimi Iyileştirme mekanizması (MTOM) 
 </wsHttpBinding>  
 ```  
   
- MTOM Kodlayıcısı, bayt ve akış dizilerini iyileştirebilirler. Bu örnekte, işlem bir `Stream` parametre kullanır ve bu nedenle en iyi duruma getirilebilir.  
+ MTOM Kodlayıcısı, bayt ve akış dizilerini iyileştirebilirler. Bu örnekte, işlem bir `Stream` parametresi kullanır ve bu nedenle en iyi duruma getirilebilir.  
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -42,7 +42,7 @@ Bu örnek, bir WSHttpBinding ile Ileti Iletimi Iyileştirme mekanizması (MTOM) 
   
  Bu örnek için seçilen sözleşme, ikili verileri hizmete aktarır ve dönüş değeri olarak karşıya yüklenen bayt sayısını alır. Hizmet yüklendiğinde ve istemci çalıştırıldığında, tüm 1000 baytlarının alındığını belirten 1000 sayısını yazdırır. Çıktının geri kalanı, çeşitli yükleri için iyileştirilmiş ve en iyi duruma getirilmemiş ileti boyutlarını listeler.  
   
-```  
+```console
 Output:  
 1000  
   
@@ -70,7 +70,7 @@ Press <ENTER> to terminate client.
   
 1. Aşağıdaki komutu kullanarak ASP.NET 4,0 ' ü yükler.  
   
-    ```  
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

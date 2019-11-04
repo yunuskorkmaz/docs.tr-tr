@@ -4,16 +4,16 @@ description: ML.NET sürümünde desteklenen farklı makine öğrenimi görevler
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bcd967c11156ca9b837631560e78722b13fc7ae0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d19593358361c9c8d3657053e766ec4a2c1ec163
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630055"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424223"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 'de makine öğrenimi görevleri
 
-Bir makine öğrenimi modeli oluştururken, öncelikle verilerinize ulaşmak için ne kadar atlama yapabileceğinizi tanımlamanız gerekir. Bu, durumunuz için doğru makine öğrenimi görevini seçmenizi sağlar. Aşağıdaki listede, aralarından seçim yapabileceğiniz farklı makine öğrenimi görevleri ve bazı yaygın kullanım durumları açıklanmaktadır.
+Bir makine öğrenimi modeli oluştururken, öncelikle verilerinize ulaşmak için ne kadar atlama yapabileceğinizi tanımlamanız gerekir. Bu, durumunuz için doğru makine öğrenimi görevini seçmenizi sağlar. Aşağıdaki listede, aralarından seçim yapabileceğiniz farklı makine öğrenimi görevleri ve bazı yaygın kullanım durumları açıklanmaktadır. Senaryonuza uygun görevi seçme hakkında daha fazla bilgi için bkz. [algoritmalar](../how-to-choose-an-ml-net-algorithm.md).
 
 Senaryolarınız için hangi görevin çalıştığına karar verdikten sonra, modelinize eğitebilmeniz için en iyi algoritmayı seçmeniz gerekir. Kullanılabilir algoritmalar her görevin bölümünde listelenmiştir.
 
@@ -24,7 +24,7 @@ Senaryolarınız için hangi görevin çalıştığına karar verdikten sonra, m
 * [Twitter açıklamalarının](../tutorials/sentiment-analysis.md) yaklaşımını "pozitif" veya "negatif" olarak anlama.
 * Hasta 'in belirli bir sapmasına sahip olup olmadığını tanılama.
 * E-postayı "istenmeyen posta" olarak işaretlemek için bir karar verme.
-* Fotoğrafın bir köpek mi yoksa meyve mi içerdiğini belirleme.
+* Bir fotoğrafın bir köpek ya da meyve gibi belirli bir öğe içerip içermediğini belirleme.
 
 Daha fazla bilgi için Vikipde bulunan [ikili sınıflandırma](https://en.wikipedia.org/wiki/Binary_classification) makalesine bakın.
 
@@ -50,14 +50,14 @@ Aşağıdaki algoritmaları kullanarak bir ikili sınıflandırma modeli eğiteb
 İkili sınıflandırmayla en iyi sonuçları elde etmek için eğitim verilerinin dengelenmesi gerekir (yani, pozitif ve negatif eğitim verilerinin eşit sayısı). Eksik değerler, eğitimin önüne alınmalıdır.
 
 Giriş etiketi sütun verileri <xref:System.Boolean>olmalıdır.
-Giriş özellikleri sütun verileri sabit boyutlu bir vektör <xref:System.Single>olmalıdır.
+Giriş özellikleri sütun verileri, <xref:System.Single>sabit boyutlu bir vektörü olmalıdır.
 
-Bu traipler aşağıdaki sütunları çıktı:
+Bu traçler aşağıdaki sütunları çıktı:
 
 | Çıkış sütunu adı | Sütun türü | Açıklama|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Model tarafından hesaplanan ham puan|
-| `PredictedLabel` | <xref:System.Boolean> | Puanınızın işaretine göre öngörülen etiket. Negatif puan ile eşlenir `false` ve bir pozitif puan ile `true`eşlenir.|
+| `PredictedLabel` | <xref:System.Boolean> | Puanınızın işaretine göre öngörülen etiket. Negatif puan, `false` eşlenir ve bir pozitif puan `true`eşlenir.|
 
 ## <a name="multiclass-classification"></a>Birden çok Lass sınıflandırması
 
@@ -70,7 +70,7 @@ Bir veri örneğinin sınıfını (kategori) tahmin etmek için kullanılan [den
 Daha fazla bilgi için Vikipde bulunan [birden çok sınıf sınıflandırması](https://en.wikipedia.org/wiki/Multiclass_classification) makalesine bakın.
 
 >[!NOTE]
->Bunlardan biri, birden çok Lass veri kümesi üzerinde işlem yapmak için herhangi bir [ikili sınıflandırmanın yükseltimidir](#binary-classification) . [Vikipedi] hakkında daha https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest) fazla bilgi (.
+>Bunlardan biri, birden çok Lass veri kümesi üzerinde işlem yapmak için herhangi bir [ikili sınıflandırmanın yükseltimidir](#binary-classification) . [Vikipedi] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest) hakkında daha fazla bilgi.
 
 ### <a name="multiclass-classification-trainers"></a>Birden çok Lass sınıflandırma traipleyiciler
 
@@ -87,13 +87,13 @@ Aşağıdaki eğitim algoritmalarını kullanarak çok bir Lass sınıflandırma
 ### <a name="multiclass-classification-inputs-and-outputs"></a>Birden çok Lass sınıflandırma girişleri ve çıkışları
 
 Giriş etiketi sütun verileri, [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türünde olmalıdır.
-Özellik sütunu sabit boyutlu bir vektör <xref:System.Single>olmalıdır.
+Özellik sütunu <xref:System.Single>sabit boyutlu vektörü olmalıdır.
 
 Bu, aşağıdaki çıkışları verir:
 
 | Çıkış adı | Tür | Açıklama|
 | -- | -- | -- |
-| `Score` | Vektör<xref:System.Single> | Tüm sınıfların puanları. Daha yüksek değer, ilişkili sınıfa düşecek daha büyük olasılık anlamına gelir. İ-th öğesi en büyük değere sahipse, tahmin edilen etiket dizini i olur. Sıfır tabanlı dizin olduğunu unutmayın. |
+| `Score` | <xref:System.Single> vektörü | Tüm sınıfların puanları. Daha yüksek değer, ilişkili sınıfa düşecek daha büyük olasılık anlamına gelir. İ-th öğesi en büyük değere sahipse, tahmin edilen etiket dizini i olur. Sıfır tabanlı dizin olduğunu unutmayın. |
 | `PredictedLabel` | [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türü | Tahmin edilen etiketin dizini. Değeri i ise, gerçek etiket anahtar değerli giriş etiketi türündeki ı-TH kategorisi olacaktır. |
 
 ## <a name="regression"></a>Regresyon
@@ -144,13 +144,13 @@ Aşağıdaki algoritmayı kullanarak bir kümeleme modeli eğitebilirsiniz:
 
 ### <a name="clustering-inputs-and-outputs"></a>Kümeleme girişleri ve çıkışları
 
-Giriş özellikleri verileri olmalıdır <xref:System.Single>. Etiket gerekli değildir.
+Giriş özellikleri verileri <xref:System.Single>olmalıdır. Etiket gerekli değildir.
 
 Bu, aşağıdaki çıkışları verir:
 
 | Çıkış adı | Tür | Açıklama|
 | -- | -- | -- |
-| `Score` | vektör<xref:System.Single> | Verilen veri noktasının tüm kümelerdeki mesafeler ' centriods |
+| `Score` | <xref:System.Single> vektörü | Verilen veri noktasının tüm kümelerdeki mesafeler ' centriods |
 | `PredictedLabel` | [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türü | Model tarafından tahmin edilen en yakın küme dizini. |
 
 ## <a name="anomaly-detection"></a>Anomali algılama
@@ -176,7 +176,7 @@ Aşağıdaki algoritmayı kullanarak bir anomali algılama modeli eğitebilirsin
 
 ### <a name="anomaly-detection-inputs-and-outputs"></a>Anomali algılama girişleri ve çıkışları
 
-Giriş özellikleri sabit boyutlu bir vektör <xref:System.Single>olmalıdır.
+Giriş özellikleri, <xref:System.Single>sabit boyutlu bir vektörü olmalıdır.
 
 Bu, aşağıdaki çıkışları verir:
 
@@ -199,7 +199,7 @@ Aşağıdaki algoritmalarla bir derecelendirme modeli eğitebilirsiniz:
 
 Giriş etiketi veri türü, [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türünde veya <xref:System.Single>olmalıdır. Etiketin değeri ilgiyi belirler, burada daha yüksek değerler daha yüksek uygunluğu gösterir. Etiket bir [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türü ise, anahtar dizin, en küçük dizin en az ilgili olan ilgi değeridir. Etiket bir <xref:System.Single>ise, daha büyük değerler daha yüksek uygunluğu gösterir.
 
-Özellik verileri sabit boyutlu bir vektör <xref:System.Single> olmalıdır ve giriş satırı grup sütunu [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türünde olmalıdır.
+Özellik verileri <xref:System.Single> sabit boyutlu bir vektör olmalıdır ve giriş satırı grubu sütunu [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türünde olmalıdır.
 
 Bu, aşağıdaki çıkışları verir:
 

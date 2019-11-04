@@ -2,12 +2,12 @@
 title: Statik Olarak Çözümlenmiş Tür Parametreleri
 description: Statik olarak çözümlenen bir F# tür parametresini nasıl kullanacağınızı öğrenin. Bu, çalışma zamanı yerine derleme sırasında gerçek bir tür ile değiştirilmiştir.
 ms.date: 05/16/2016
-ms.openlocfilehash: bc3310192cdaa5ae4862b8aee46b6152f61da38a
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 017c18dd3caaa484ddc653557573f548e3224ca0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082921"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425005"
 ---
 # <a name="statically-resolved-type-parameters"></a>Statik Olarak Çözümlenmiş Tür Parametreleri
 
@@ -21,7 +21,7 @@ ms.locfileid: "71082921"
 
 ## <a name="remarks"></a>Açıklamalar
 
-F# Dilde iki farklı türde tür parametresi vardır. İlk tür standart genel tür parametresidir. Bunlar, ve `'T` `'U`' de olduğu gibi bir kesme işareti (') ile gösterilir. Bunlar, diğer .NET Framework dillerdeki genel tür parametrelerine eşdeğerdir. Diğer tür statik olarak çözümlenir ve ve `^T` `^U`' de olduğu gibi bir giriş işareti simgesiyle belirtilir.
+F# Dilde iki farklı türde tür parametresi vardır. İlk tür standart genel tür parametresidir. Bunlar, `'T` ve `'U`gibi bir kesme işareti (') ile belirtilir. Bunlar, diğer .NET Framework dillerdeki genel tür parametrelerine eşdeğerdir. Diğer tür statik olarak çözümlenir ve `^T` ve `^U`gibi bir giriş işareti simgesiyle belirtilir.
 
 Statik olarak çözümlenen tür parametreleri, genellikle bir tür bağımsız değişkeninin kullanılabilmesi için belirli bir üyeye veya üyelere sahip olması gerektiğini belirtmenize imkan tanıyan kısıtlamalar olan üye kısıtlamalarıyla birlikte faydalıdır. Normal genel tür parametresi kullanarak bu tür bir kısıtlamayı oluşturmanın bir yolu yoktur.
 
@@ -42,7 +42,7 @@ Ve statik olarak çözümlenen tür parametrelerine sahip diğer işlevleri kull
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
 
-Çözümlenme türü `(+@)` , hem hem de `(*)`' nin, her `(+)` ikisi de statik olarak çözümlenen tür parametrelerinde üye kısıtlamalarını çıkarmasına neden olan tür çıkarımı ' nın kullanımını temel alır. Çözülen tür, yorumlayıcıda F# gösterildiği gibi aşağıdaki gibidir.
+Çözümlenmiş `(+@)` türü hem `(+)` hem de `(*)`, her ikisi de statik olarak çözümlenen tür parametrelerinde üye kısıtlamalarını çıkarması neden olan tür çıkarımı ' nı temel alır. Çözülen tür, yorumlayıcıda F# gösterildiği gibi aşağıdaki gibidir.
 
 ```fsharp
 ^a -> ^c -> ^d
@@ -62,7 +62,7 @@ when (^a or ^b) : (static member ( + ) : ^a * ^b -> ^d) and
 ```fsharp
 let inline konst x _ = x
 
-type CFunctor() = 
+type CFunctor() =
     static member inline fmap (f: ^a -> ^b, a: ^a list) = List.map f a
     static member inline fmap (f: ^a -> ^b, a: ^a option) =
         match a with

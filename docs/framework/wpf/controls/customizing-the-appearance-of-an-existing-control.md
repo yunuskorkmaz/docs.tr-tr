@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 0c79ba3dd42f2e65eb241409946e921577ced5f1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6d7401f9614e663351968dc6a2f85548735a176d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920060"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460425"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme
 <a name="introduction"></a><xref:System.Windows.Controls.ControlTemplate> bir denetimin görsel yapısını ve görsel davranışını belirtir. Bir denetimin görünümünü yeni bir <xref:System.Windows.Controls.ControlTemplate>vererek özelleştirebilirsiniz. Bir <xref:System.Windows.Controls.ControlTemplate>oluşturduğunuzda, mevcut bir denetimin görünüşünü, işlevselliğini değiştirmeden değiştirirsiniz. Örneğin, uygulamadaki düğmeleri varsayılan kare şekli yerine yuvarlayabilmeniz, ancak düğme <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayını yine de yükseltecektir.
@@ -262,4 +262,4 @@ Basılan durumda özel denetim şablonu kullanan bir düğme
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Stil ve Şablon Oluşturma](styling-and-templating.md)
+- [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

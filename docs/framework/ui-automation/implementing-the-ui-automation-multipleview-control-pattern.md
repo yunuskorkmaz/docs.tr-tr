@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: edef213c0f4d43a15b7c6842ef6c62e95544da66
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 62f0ba1dc8b7836a3b4699699b91b567eb8051f3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039505"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458185"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>UI Otomasyon MultipleView Denetim Düzeni Uygulama
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "73039505"
   
  <xref:System.Windows.Automation.MultipleViewPattern> denetim stili, aynı bilgi kümesinin veya alt denetimlerin birden çok temsilini sağlayan ve arasında geçiş yapabilecek denetimleri desteklemek için kullanılır.  
   
- Birden çok görünüm sunan denetimlerin örnekleri, liste görünümünü (içeriğini küçük resim, kutucuk, simgeler veya ayrıntılar olarak gösterebilir), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] grafikleri (pasta, çizgi, çubuk, bir formül içeren hücre değeri), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] belgeleri (normal, Web düzeni, yazdırma düzeni) içerir. okuma düzeni, ana hat), Microsoft Outlook Takvim (yıl, ay, hafta, gün) ve Microsoft Windows Media Player dış görünümleri. Desteklenen görünümler denetim geliştiricisi tarafından belirlenir ve her denetime özeldir.  
+ Birden çok görünüm sunan denetimlerin örnekleri, liste görünümünü (içeriğini küçük resimler, Kutucuklar, simgeler veya ayrıntılar olarak gösterebilir), Microsoft Excel grafikleri (pasta, çizgi, çubuk, formül içeren hücre değeri), Microsoft Word belgeleri (normal, Web düzeni, Yazdır) içerir. Düzen, okuma düzeni, ana hat), Microsoft Outlook Takvim (yıl, ay, hafta, gün) ve Microsoft Windows Media Player dış görünümleri. Desteklenen görünümler denetim geliştiricisi tarafından belirlenir ve her denetime özeldir.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  

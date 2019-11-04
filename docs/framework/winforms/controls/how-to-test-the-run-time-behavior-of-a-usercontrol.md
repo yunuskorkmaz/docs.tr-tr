@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: bir UserControl 'un çalışma zamanı davranışını test etme"
+title: 'Nasıl yapılır: Bir UserControl Denetiminin Çalışma Zamanı Davranışını Sınama'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 110036e5031a2956375b1edf0689237661522d39
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: be6c913c43e3559806bc9f38a9c3152b544e4c07
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180200"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455529"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Nasıl yapılır: bir UserControl 'un çalışma zamanı davranışını test etme
 
-@No__t-0 geliştirdiğinizde, çalışma zamanı davranışını test etmeniz gerekir. Ayrı bir Windows tabanlı uygulama projesi oluşturabilir ve denetiminizi bir test formuna yerleştirebilirsiniz, ancak bu yordam uygun değildir. Visual Studio tarafından sunulan **UserControl Test kapsayıcısını** daha hızlı ve kolay bir şekilde kullanmaktır. Bu test kapsayıcısı doğrudan Windows Denetim Kitaplığı projenizden başlatılır.
+Bir <xref:System.Windows.Forms.UserControl>geliştirirken, çalışma zamanı davranışını test etmeniz gerekir. Ayrı bir Windows tabanlı uygulama projesi oluşturabilir ve denetiminizi bir test formuna yerleştirebilirsiniz, ancak bu yordam uygun değildir. Visual Studio tarafından sunulan **UserControl Test kapsayıcısını** daha hızlı ve kolay bir şekilde kullanmaktır. Bu test kapsayıcısı doğrudan Windows Denetim Kitaplığı projenizden başlatılır.
 
 > [!IMPORTANT]
-> @No__t-0 ' ı yüklemek için test kapsayıcısı için, denetimin en az bir ortak Oluşturucusu olmalıdır.
+> Test kapsayıcısının <xref:System.Windows.Forms.UserControl>yüklemesi için, denetimin en az bir ortak Oluşturucusu olmalıdır.
 
 > [!NOTE]
 > Görsel C++ denetim, **UserControl Test kapsayıcısı**kullanılarak test edilemez.
@@ -36,7 +36,7 @@ ms.locfileid: "72180200"
 
 3. Projeyi derlemek ve **UserControl Test kapsayıcısını**çalıştırmak için <kbd>F5</kbd> tuşuna basın. Test kapsayıcısı, **Önizleme** bölmesinde <xref:System.Windows.Forms.UserControl> ile görünür.
 
-4. **Önizleme** bölmesinin sağında <xref:System.Windows.Forms.PropertyGrid> denetiminde görüntülenecek <xref:System.Windows.Forms.Control.BackColor%2A> özelliğini seçin. Değerini **Controlkoyu**olarak değiştirin. Denetimin daha koyu bir renge değiştiğini gözlemleyin. Diğer özellik değerlerini değiştirmeyi deneyin ve denetiminizin etkisini gözlemleyin.
+4. **Önizleme** bölmesinin sağındaki <xref:System.Windows.Forms.PropertyGrid> denetiminde görüntülenecek <xref:System.Windows.Forms.Control.BackColor%2A> özelliğini seçin. Değerini **Controlkoyu**olarak değiştirin. Denetimin daha koyu bir renge değiştiğini gözlemleyin. Diğer özellik değerlerini değiştirmeyi deneyin ve denetiminizin etkisini gözlemleyin.
 
 5. **Önizleme** bölmesinin altındaki **Kullanıcı denetimine dolguyu yerleştir** onay kutusunu tıklatın. Bölmeyi dolduracak şekilde denetimin yeniden boyutlandırıldığını gözlemleyin. Test kapsayıcısını yeniden boyutlandırın ve denetimin bölme ile yeniden boyutlandırıldığını gözlemleyin.
 
@@ -48,7 +48,7 @@ ms.locfileid: "72180200"
 
 9. Projeyi derlemek ve test kapsayıcısını çalıştırmak için <kbd>F5</kbd> tuşuna basın.
 
-10. İki kullanıcı denetimi arasında geçiş yapmak için @no__t **Kullanıcı denetimini Seç** -1 ' e tıklayın.
+10. İki kullanıcı denetimi arasında geçiş yapmak için **Kullanıcı denetimini seç** <xref:System.Windows.Forms.ComboBox> tıklayın.
 
 ## <a name="test-user-controls-from-another-project"></a>Başka bir projeden kullanıcı denetimlerini test etme
 
@@ -69,6 +69,6 @@ Kullanıcı denetimlerini, geçerli projenizin test kapsayıcısındaki diğer p
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.UserControl>
-- [Nasıl yapılır: bileşik denetimler yazma](how-to-author-composite-controls.md)
+- [Nasıl yapılır: Bileşik Denetimler Yazma](how-to-author-composite-controls.md)
 - [İzlenecek yol: bileşik denetim yazma](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [Kullanıcı denetimi Tasarımcısı](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

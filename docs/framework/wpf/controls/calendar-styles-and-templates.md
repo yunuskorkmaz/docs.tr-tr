@@ -9,123 +9,123 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: 18bef548b11f1a680c1361027b86f6952bedaad0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49d9ced42572ac06a4ff824ec41a59c14497d215
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912450"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460932"
 ---
 # <a name="calendar-styles-and-templates"></a>Takvim Stilleri ve Şablonları
-Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.Calendar> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+Bu konuda <xref:System.Windows.Controls.Calendar> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="calendar-parts"></a>Takvim bölümleri  
- Adlandırılmış bölümleri için aşağıdaki tabloda <xref:System.Windows.Controls.Calendar> denetimi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.Calendar> denetimi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümü|Tür|Açıklama|  
+|Bölümüyle|Tür|Açıklama|  
 |-|-|-|  
-|PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|Şu anda görüntülenen ayı veya yılı <xref:System.Windows.Controls.Calendar>.|  
-|PART_Root|<xref:System.Windows.Controls.Panel>|İçeren paneli <xref:System.Windows.Controls.Primitives.CalendarItem>.|  
+|PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|<xref:System.Windows.Controls.Calendar>Şu anda görüntülenen ay veya yıl.|  
+|PART_Root|<xref:System.Windows.Controls.Panel>|<xref:System.Windows.Controls.Primitives.CalendarItem>içeren panel.|  
   
 ## <a name="calendar-states"></a>Takvim durumları  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.Calendar> denetimi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.Calendar> denetimi için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |----------------------|---------------------------|-----------------|  
-|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
+|Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
+|Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
+|Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
   
 ## <a name="calendaritem-parts"></a>CalendarItem bölümleri  
- Adlandırılmış bölümleri için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.CalendarItem> denetimi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.CalendarItem> denetimi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümü|Tür|Açıklama|  
+|Bölümüyle|Tür|Açıklama|  
 |-|-|-|  
-|PART_Root|<xref:System.Windows.FrameworkElement>|Denetim kökü.|  
-|PART_PreviousButton|<xref:System.Windows.Controls.Button>|Takvim önceki sayfasına tıklatıldığında görüntülenen düğme.|  
-|PART_NextButton|<xref:System.Windows.Controls.Button>|Sonraki sayfaya takvimin tıklatıldığında görüntülenen düğme.|  
-|PART_HeaderButton|<xref:System.Windows.Controls.Button>|Ay modu, yıl modu ve on modu arasında geçişi sağlar düğmesi.|  
+|PART_Root|<xref:System.Windows.FrameworkElement>|Denetimin kökü.|  
+|PART_PreviousButton|<xref:System.Windows.Controls.Button>|Tıklandığında takvimin önceki sayfasını görüntüleyen düğme.|  
+|PART_NextButton|<xref:System.Windows.Controls.Button>|Tıklandığında takvimin sonraki sayfasını görüntüleyen düğme.|  
+|PART_HeaderButton|<xref:System.Windows.Controls.Button>|Ay modu, yıl modu ve on yıl modu arasında geçişe izin veren düğme.|  
 |PART_MonthView|<xref:System.Windows.Controls.Grid>|Ay modundayken içeriği barındırır.|  
-|PART_YearView|<xref:System.Windows.Controls.Grid>|Yıl veya on modunda olduğunda içeriği barındırır.|  
-|PART_DisabledVisual|<xref:System.Windows.FrameworkElement>|Kaplaması için devre dışı bırakılmış.|  
-|DayTitleTemplate|<xref:System.Windows.DataTemplate>|<xref:System.Windows.DataTemplate> , Görsel yapısını açıklar.|  
+|PART_YearView|<xref:System.Windows.Controls.Grid>|Yıl veya on yıl modunda içeriği barındırır.|  
+|PART_DisabledVisual|<xref:System.Windows.FrameworkElement>|Devre dışı durumu için yer paylaşımı.|  
+|Daytitleşablonu|<xref:System.Windows.DataTemplate>|Görsel yapıyı tanımlayan <xref:System.Windows.DataTemplate>.|  
   
 ## <a name="calendaritem-states"></a>CalendarItem durumları  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.CalendarItem> denetimi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.CalendarItem> denetimi için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Normal durumu|CommonStates|Varsayılan durumu.|  
-|Devre dışı durumu|CommonStates|Takvim durumunu zaman <xref:System.Windows.UIElement.IsEnabled%2A> özelliği `false`.|  
-|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
-|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
+|Normal durum|Ortak durumlar|Varsayılan durum.|  
+|Devre dışı durumu|Ortak durumlar|<xref:System.Windows.UIElement.IsEnabled%2A> özelliği `false`, takvimin durumu.|  
+|Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
+|Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
+|Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
+|Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
+|Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
+|Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
   
 ## <a name="calendardaybutton-parts"></a>CalendarDayButton bölümleri  
- <xref:System.Windows.Controls.Primitives.CalendarDayButton> Denetim herhangi bir adlandırılmış bölümü yok.  
+ <xref:System.Windows.Controls.Primitives.CalendarDayButton> denetiminde hiç adlandırılmış bölüm yok.  
   
 ## <a name="calendardaybutton-states"></a>CalendarDayButton durumları  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.CalendarDayButton> denetimi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.CalendarDayButton> denetimi için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Normal|CommonStates|Varsayılan durumu.|  
-|Devre dışı|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> Devre dışı bırakıldı.|  
-|Fareyi üzerine getirme|CommonStates|Fareyi üzerine getirildiği <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
-|Basılan|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> Basıldığında.|  
-|Seçildi|SelectionStates|Düğmesi seçilir.|  
-|Seçimi kaldırıldı|SelectionStates|Düğme seçili değil.|  
-|CalendarButtonFocused|CalendarButtonFocusStates|Bir düğme odak vardır.|  
-|CalendarButtonUnfocused|CalendarButtonFocusStates|Düğme odak yok.|  
-|Odaklanmış|FocusStates|Bir düğme odak vardır.|  
-|Plana odaklanmadan|FocusStates|Düğme odak yok.|  
-|Etkin|ActiveStates|Düğme etkin değil.|  
-|Etkin değil|ActiveStates|Düğme etkin değil.|  
-|RegularDay|DayStates|Düğmeyi temsil etmez <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
-|Bugün|DayStates|Düğme nesnesini temsil eden <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
-|NormalDay|BlackoutDayStates|Düğmesini seçilebilir bir günü temsil eder.|  
-|BlackoutDay|BlackoutDayStates|Düğmesi seçilemez bir günü temsil eder.|  
-|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
+|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Devre dışı|Ortak durumlar|<xref:System.Windows.Controls.Primitives.CalendarDayButton> devre dışı bırakıldı.|  
+|Gelme olayından|Ortak durumlar|Fare işaretçisi <xref:System.Windows.Controls.Primitives.CalendarDayButton>yerleştirilir.|  
+|Basılması|Ortak durumlar|<xref:System.Windows.Controls.Primitives.CalendarDayButton> basıldığında.|  
+|Seçildiğinde|SelectionStates|Düğme seçilidir.|  
+|Değilken|SelectionStates|Düğme seçili değil.|  
+|Calendarbuttonodaklanmış|CalendarButtonFocusStates|Düğme odağa sahiptir.|  
+|Calendarbuttonunodaklanmış|CalendarButtonFocusStates|Düğme odağa sahip değil.|  
+|Diğinize|Odaklardaki durumlar|Düğme odağa sahiptir.|  
+|Odaklanmadan gözetle|Odaklardaki durumlar|Düğme odağa sahip değil.|  
+|Bkz|ActiveStates|Düğme etkin.|  
+|Olmadan|ActiveStates|Düğme etkin değil.|  
+|RegularDay|Gün cinsinden durumlar|Düğme <xref:System.DateTime.Today%2A?displayProperty=nameWithType>temsil etmez.|  
+|Adresten|Gün cinsinden durumlar|Düğme <xref:System.DateTime.Today%2A?displayProperty=nameWithType>temsil eder.|  
+|Normalgün|BlackoutDayStates|Düğme, seçilebilirler bir günü temsil eder.|  
+|BlackoutDay|BlackoutDayStates|Düğme seçilebir günü temsil eder.|  
+|Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
+|Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
+|Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
   
-## <a name="calendarbutton-parts"></a>CalendarButton bölümleri  
- <xref:System.Windows.Controls.Primitives.CalendarButton> Denetim herhangi bir adlandırılmış bölümü yok.  
+## <a name="calendarbutton-parts"></a>CalendarButton kısımları  
+ <xref:System.Windows.Controls.Primitives.CalendarButton> denetiminde hiç adlandırılmış bölüm yok.  
   
 ## <a name="calendarbutton-states"></a>CalendarButton durumları  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.CalendarButton> denetimi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.CalendarButton> denetimi için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Normal|CommonStates|Varsayılan durumu.|  
-|Devre dışı|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> Devre dışı bırakıldı.|  
-|Fareyi üzerine getirme|CommonStates|Fareyi üzerine getirildiği <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
-|Basılan|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> Basıldığında.|  
-|Seçildi|SelectionStates|Düğmesi seçilir.|  
-|Seçimi kaldırıldı|SelectionStates|Düğme seçili değil.|  
-|CalendarButtonFocused|CalendarButtonFocusStates|Bir düğme odak vardır.|  
-|CalendarButtonUnfocused|CalendarButtonFocusStates|Düğme odak yok.|  
-|Odaklanmış|FocusStates|Bir düğme odak vardır.|  
-|Plana odaklanmadan|FocusStates|Düğme odak yok.|  
-|Etkin|ActiveStates|Düğme etkin değil.|  
-|Etkin değil|ActiveStates|Düğme etkin değil.|  
-|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
+|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Devre dışı|Ortak durumlar|<xref:System.Windows.Controls.Primitives.CalendarButton> devre dışı bırakıldı.|  
+|Gelme olayından|Ortak durumlar|Fare işaretçisi <xref:System.Windows.Controls.Primitives.CalendarButton>yerleştirilir.|  
+|Basılması|Ortak durumlar|<xref:System.Windows.Controls.Primitives.CalendarButton> basıldığında.|  
+|Seçildiğinde|SelectionStates|Düğme seçilidir.|  
+|Değilken|SelectionStates|Düğme seçili değil.|  
+|Calendarbuttonodaklanmış|CalendarButtonFocusStates|Düğme odağa sahiptir.|  
+|Calendarbuttonunodaklanmış|CalendarButtonFocusStates|Düğme odağa sahip değil.|  
+|Diğinize|Odaklardaki durumlar|Düğme odağa sahiptir.|  
+|Odaklanmadan gözetle|Odaklardaki durumlar|Düğme odağa sahip değil.|  
+|Bkz|ActiveStates|Düğme etkin.|  
+|Olmadan|ActiveStates|Düğme etkin değil.|  
+|Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
+|Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
+|Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
   
-## <a name="calendar-controltemplate-example"></a>Takvim ControlTemplate Örneği  
- Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.Calendar> denetimi ve ilişkili tür.  
+## <a name="calendar-controltemplate-example"></a>Takvim ControlTemplate örneği  
+ Aşağıdaki örnek, <xref:System.Windows.Controls.Calendar> denetimi ve ilişkili türler için <xref:System.Windows.Controls.ControlTemplate> nasıl tanımlanacağını gösterir.  
   
  [!code-xaml[ControlTemplateExamples#Calendar](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/calendar.xaml#calendar)]  
   
- Yukarıdaki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
+ Yukarıdaki örnekte aşağıdaki kaynaklardan biri veya daha fazlası kullanılmaktadır.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Tüm örnek için bkz. [ControlTemplates Ile stillendirme örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -133,5 +133,5 @@ Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.C
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
-- [Stil ve Şablon Oluşturma](styling-and-templating.md)
+- [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)
