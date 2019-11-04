@@ -9,65 +9,65 @@ helpviewer_keywords:
 - states [WPF], TabControl
 - templates [WPF], TabControl
 ms.assetid: f6b19a30-f10e-4fa1-96ce-f17a54092ab6
-ms.openlocfilehash: e38756c5f266abc16b99f2359f8a87460d5d9450
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32ee86e2388808739a2c2ff5a02bb40fc641129b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790903"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460540"
 ---
 # <a name="tabcontrol-styles-and-templates"></a>TabControl Stilleri ve Şablonları
-Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.TabControl> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+Bu konuda <xref:System.Windows.Controls.TabControl> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="tabcontrol-parts"></a>TabControl bölümleri  
- Adlandırılmış bölümleri için aşağıdaki tabloda <xref:System.Windows.Controls.TabControl> denetimi.  
+## <a name="tabcontrol-parts"></a>TabControl parçaları  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.TabControl> denetimi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümü|Tür|Açıklama|  
+|Bölümüyle|Tür|Açıklama|  
 |-|-|-|  
-|PART_SelectedContentHost|<xref:System.Windows.Controls.ContentPresenter>|Şu anda seçili içeriğini gösteren nesne <xref:System.Windows.Controls.TabItem>.|  
+|PART_SelectedContentHost|<xref:System.Windows.Controls.ContentPresenter>|Şu anda seçili <xref:System.Windows.Controls.TabItem>içeriğini gösteren nesne.|  
   
- Oluştururken bir <xref:System.Windows.Controls.ControlTemplate> için bir <xref:System.Windows.Controls.TabControl>, şablonunuzu içerebilir bir <xref:System.Windows.Controls.ItemsPresenter> içinde bir <xref:System.Windows.Controls.ScrollViewer>. ( <xref:System.Windows.Controls.ItemsPresenter> Her öğe görüntüler <xref:System.Windows.Controls.TabControl>; <xref:System.Windows.Controls.ScrollViewer> denetimi içinde kaydırma sağlar).  Varsa <xref:System.Windows.Controls.ItemsPresenter> doğrudan alt öğesi değil <xref:System.Windows.Controls.ScrollViewer>, size gereken <xref:System.Windows.Controls.ItemsPresenter> adı `ItemsPresenter`.  
+ Bir <xref:System.Windows.Controls.TabControl>için <xref:System.Windows.Controls.ControlTemplate> oluşturduğunuzda, şablonunuz <xref:System.Windows.Controls.ScrollViewer>içinde bir <xref:System.Windows.Controls.ItemsPresenter> içerebilir. (<xref:System.Windows.Controls.ItemsPresenter>, <xref:System.Windows.Controls.TabControl>her öğeyi görüntüler; <xref:System.Windows.Controls.ScrollViewer> denetimin içinde kaydırmaya izin vermez).  <xref:System.Windows.Controls.ItemsPresenter>, <xref:System.Windows.Controls.ScrollViewer>doğrudan alt öğesi değilse, `ItemsPresenter`adına <xref:System.Windows.Controls.ItemsPresenter> vermelisiniz.  
   
 ## <a name="tabcontrol-states"></a>TabControl durumları  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.TabControl> denetimi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.TabControl> denetimi için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |----------------------|---------------------------|-----------------|  
-|Normal|CommonStates|Varsayılan durumu.|  
-|Devre dışı|CommonStates|Denetim devre dışıdır.|  
-|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
+|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|  
+|Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
+|Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
+|Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
   
 ## <a name="tabitem-parts"></a>TabItem bölümleri  
- <xref:System.Windows.Controls.TabItem> Denetim herhangi bir adlandırılmış bölümü yok.  
+ <xref:System.Windows.Controls.TabItem> denetiminde hiç adlandırılmış bölüm yok.  
   
 ## <a name="tabitem-states"></a>TabItem durumları  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.TabItem> denetimi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.TabItem> denetimi için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |----------------------|---------------------------|-----------------|  
-|Normal|CommonStates|Varsayılan durumu.|  
-|Fareyi üzerine getirme|CommonStates|Fare işaretçisi denetimin üzerine yerleştirilir.|  
-|Devre dışı|CommonStates|Denetim devre dışıdır.|  
-|Odaklanmış|FocusStates|Denetim odağa sahip.|  
-|Plana odaklanmadan|FocusStates|Denetim odağa sahip değil.|  
-|Seçildi|SelectionStates|Denetimin seçili olduğunu.|  
-|Seçimi kaldırıldı|SelectionStates|Denetimin seçili değil.|  
-|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
+|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Gelme olayından|Ortak durumlar|Fare işaretçisi denetimin üzerine yerleştirilir.|  
+|Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|  
+|Diğinize|Odaklardaki durumlar|Denetim odağa sahiptir.|  
+|Odaklanmadan gözetle|Odaklardaki durumlar|Denetimin odağı yok.|  
+|Seçildiğinde|SelectionStates|Denetim seçilidir.|  
+|Değilken|SelectionStates|Denetim seçili değil.|  
+|Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
+|Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
+|Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
   
-## <a name="tabcontrol-controltemplate-example"></a>TabControl ControlTemplate Örneği  
- Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.TabControl> ve <xref:System.Windows.Controls.TabItem> kontrol eder.  
+## <a name="tabcontrol-controltemplate-example"></a>TabControl ControlTemplate örneği  
+ Aşağıdaki örnek, <xref:System.Windows.Controls.TabControl> ve <xref:System.Windows.Controls.TabItem> denetimleri için <xref:System.Windows.Controls.ControlTemplate> tanımlanacağını gösterir.  
   
  [!code-xaml[ControlTemplateExamples#TabControl](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/tabcontrol.xaml#tabcontrol)]  
   
- Yukarıdaki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
+ Yukarıdaki örnekte aşağıdaki kaynaklardan biri veya daha fazlası kullanılmaktadır.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Tüm örnek için bkz. [ControlTemplates Ile stillendirme örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -75,5 +75,5 @@ Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.T
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
-- [Stil ve Şablon Oluşturma](styling-and-templating.md)
+- [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)

@@ -9,40 +9,40 @@ helpviewer_keywords:
 - ControlTemplate [WPF], ContextMenu
 - states [WPF], ContextMenu
 ms.assetid: 342d1f17-c406-4f94-8f55-867c5f3ea511
-ms.openlocfilehash: 6650d5a7be8ebe8fc2dcd7af7c854da669de87f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4112306dab648d022e171401f5b9b362f2c91fdc
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912333"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460754"
 ---
 # <a name="contextmenu-styles-and-templates"></a>ContextMenu Stilleri ve Şablonları
-Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.ContextMenu> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+Bu konuda <xref:System.Windows.Controls.ContextMenu> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="contextmenu-parts"></a>ContextMenu bölümleri  
- <xref:System.Windows.Controls.ContextMenu> Denetim herhangi bir adlandırılmış bölümü yok.  
+## <a name="contextmenu-parts"></a>ContextMenu parçaları  
+ <xref:System.Windows.Controls.ContextMenu> denetiminde hiç adlandırılmış bölüm yok.  
   
- Oluştururken bir <xref:System.Windows.Controls.ControlTemplate> için bir <xref:System.Windows.Controls.ContextMenu>, şablonunuzu içerebilir bir <xref:System.Windows.Controls.ItemsPresenter> içinde bir <xref:System.Windows.Controls.ScrollViewer>. ( <xref:System.Windows.Controls.ItemsPresenter> Her öğe görüntüler <xref:System.Windows.Controls.ContextMenu>; <xref:System.Windows.Controls.ScrollViewer> denetimi içinde kaydırma sağlar).  Varsa <xref:System.Windows.Controls.ItemsPresenter> doğrudan alt öğesi değil <xref:System.Windows.Controls.ScrollViewer>, size gereken <xref:System.Windows.Controls.ItemsPresenter> adı `ItemsPresenter`.  
+ Bir <xref:System.Windows.Controls.ContextMenu>için <xref:System.Windows.Controls.ControlTemplate> oluşturduğunuzda, şablonunuz <xref:System.Windows.Controls.ScrollViewer>içinde bir <xref:System.Windows.Controls.ItemsPresenter> içerebilir. (<xref:System.Windows.Controls.ItemsPresenter>, <xref:System.Windows.Controls.ContextMenu>her öğeyi görüntüler; <xref:System.Windows.Controls.ScrollViewer> denetimin içinde kaydırmaya izin vermez).  <xref:System.Windows.Controls.ItemsPresenter>, <xref:System.Windows.Controls.ScrollViewer>doğrudan alt öğesi değilse, `ItemsPresenter`adına <xref:System.Windows.Controls.ItemsPresenter> vermelisiniz.  
   
 ## <a name="contextmenu-states"></a>ContextMenu durumları  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.ContextMenu> denetimi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.ContextMenu> denetimi için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
+|Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
+|Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
+|Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
   
-## <a name="contextmenu-controltemplate-example"></a>ContextMenu ControlTemplate Örneği  
- Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.ContextMenu> denetimi.  
+## <a name="contextmenu-controltemplate-example"></a>ContextMenu ControlTemplate örneği  
+ Aşağıdaki örnek, <xref:System.Windows.Controls.ContextMenu> denetimi için <xref:System.Windows.Controls.ControlTemplate> tanımlanacağını gösterir.  
   
  [!code-xaml[ControlTemplateExamples#ContextMenu](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#contextmenu)]  
   
- <xref:System.Windows.Controls.ControlTemplate> Aşağıdaki kaynakları kullanır.  
+ <xref:System.Windows.Controls.ControlTemplate> aşağıdaki kaynakları kullanır.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Tüm örnek için bkz. [ControlTemplates Ile stillendirme örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -50,5 +50,5 @@ Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.C
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
-- [Stil ve Şablon Oluşturma](styling-and-templating.md)
+- [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)

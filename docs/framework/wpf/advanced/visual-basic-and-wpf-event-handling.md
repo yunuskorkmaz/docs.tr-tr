@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 12ced911c6fded5dd9016ea377a3a4518c9c2ee1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920336"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458306"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic ve WPF Olay İşleme
 Özellikle Microsoft Visual Basic .NET dili için, <xref:System.Windows.UIElement.AddHandler%2A> özniteliklerle olay işleyicileri eklemek yerine, olay işleyicilerini örneklerle ilişkilendirmek için dile özgü `Handles` anahtar sözcüğünü kullanabilirsiniz. Ancak, örnekleri örneklere eklemek için `Handles` tekniği bazı sınırlamalara sahiptir, çünkü `Handles` sözdizimi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay sisteminin bazı belirli yönlendirilmiş olay özelliklerini destekleyemez.  
@@ -47,4 +47,4 @@ ms.locfileid: "72920336"
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [Yönlendirilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi](marking-routed-events-as-handled-and-class-handling.md)
 - [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
-- [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
+- [XAML'ye Genel Bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

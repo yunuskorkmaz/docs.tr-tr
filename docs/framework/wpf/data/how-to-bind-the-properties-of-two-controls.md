@@ -6,27 +6,27 @@ helpviewer_keywords:
 - binding properties of two controls [WPF]
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
-ms.openlocfilehash: 332e8e0dfa30ff7aff27c95652f07446baf6511a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66c759c28747de5b0288c906f5d51e4253fb7d52
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754053"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459175"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>Nasıl yapılır: İki Denetimin Özelliklerini Bağlama
-Bu örnekte, başka bir örneği oluşturulan bir denetimin özellik bağlama gösterilmektedir <xref:System.Windows.Data.Binding.ElementName%2A> özelliği.  
+Bu örnek, bir örneği oluşturulan denetimin özelliğinin, <xref:System.Windows.Data.Binding.ElementName%2A> özelliğini kullanarak başka birine nasıl bağlanacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl bağlanacağını gösterir <xref:System.Windows.Controls.Panel.Background%2A> özelliği bir <xref:System.Windows.Controls.Canvas> için <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A>.<xref:System.Windows.Controls.ContentControl.Content%2A> özelliği bir <xref:System.Windows.Controls.ComboBox>:  
+ Aşağıdaki örnek, bir <xref:System.Windows.Controls.Canvas> <xref:System.Windows.Controls.Panel.Background%2A> özelliğinin <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A>nasıl bağlanacağını gösterir.<xref:System.Windows.Controls.ContentControl.Content%2A> <xref:System.Windows.Controls.ComboBox>özelliği:  
   
  [!code-xaml[BindDptoDp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindDPtoDP/CS/Window1.xaml#1)]  
   
- Bu örnek oluşturulduğunda aşağıdaki gibi görünür:  
+ Bu örnek işlendiğinde aşağıdaki gibi görünür:  
   
-![Bir birleşik giriş kutusu seçiliyken yeşil değeri ve yeşil bir kare gösteren ekran görüntüsü.](./media/how-to-bind-the-properties-of-two-controls/data-binding-bind-background-canvas.png)
+![Yeşil ve yeşil kare değeri olan bir Birleşik giriş kutusunu gösteren ekran görüntüsü.](./media/how-to-bind-the-properties-of-two-controls/data-binding-bind-background-canvas.png)
 
 > [!NOTE]
-> Bağlamanın hedef özelliği (Bu örnekte, <xref:System.Windows.Controls.Panel.Background%2A> özelliği) bir bağımlılık özelliği olmalıdır. Daha fazla bilgi için [Data Binding Overview](data-binding-overview.md).  
+> Bağlama hedefi özelliği (Bu örnekte, <xref:System.Windows.Controls.Panel.Background%2A> özelliği) bir bağımlılık özelliği olmalıdır. Daha fazla bilgi için bkz. [veri bağlamaya genel bakış](../../../desktop-wpf/data/data-binding-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

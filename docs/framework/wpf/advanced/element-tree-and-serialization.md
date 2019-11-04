@@ -8,15 +8,15 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afddaab6a7f5e9ef445da48d013ace59b84611cd
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962451"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460474"
 ---
 # <a name="element-tree-and-serialization"></a>Öğe Ağacı ve Serileştirme
-WPF programlama öğeleri genellikle birbirine ağacı ilişki çeşit yok. Örneğin, kullanıcı Arabirimi XAML içinde oluşturulan bir uygulama bir nesne ağacının kavramsallaştırılabilinir. Öğe ağacı iki ayrık henüz bazen paralel ağaçlara daha da ayrılabilir: mantıksal ağacı ve görsel ağaç. Serileştirme ' WPF'de içeren iki bu durumunu kaydetme ağaçları yanı sıra uygulama durumunu ve potansiyel olarak XAML bir dosyaya yazma.  
+WPF programlama öğeleri, genellikle birbirleriyle bir ağaç ilişkisi biçiminde bulunur. Örneğin, XAML 'de oluşturulan bir uygulama kullanıcı arabirimi, nesne ağacı olarak kavramslaştırılabilirler. Öğe ağacı iki ayrı bazen paralel ağaçlara ayrılabilir: mantıksal ağaç ve görsel ağaç. WPF 'de serileştirme, bu iki ağacının durumunun yanı sıra uygulama durumunu ve muhtemelen XAML olarak bir dosyaya yazmayı içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [WPF İçinde Ağaçlar](trees-in-wpf.md)  
@@ -35,9 +35,9 @@ WPF programlama öğeleri genellikle birbirine ağacı ilişki çeşit yok. Örn
  [WPF Mimarisi](wpf-architecture.md)  
   [WPF'de XAML](xaml-in-wpf.md)  
   [Temel Öğeler](base-elements.md)  
-  [Özellikler](properties-wpf.md)  
+  [Veri Erişimi](properties-wpf.md)  
   [Olaylar](events-wpf.md)  
   [Giriş](input-wpf.md)  
   [Kaynaklar](resources-wpf.md)  
-  [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)  
+  [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [İş Parçacığı Modeli](threading-model.md)

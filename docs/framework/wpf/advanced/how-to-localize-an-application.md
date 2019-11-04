@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: b3ad3d0c3223d5baf937ca22fd48d46a80979aac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 26c09e547205e7819ebb43d6e34b6e18d6d9ff98
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913677"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460843"
 ---
 # <a name="how-to-localize-an-application"></a>Nasıl yapılır: Bir Uygulamayı Yerelleştirme
 Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanın nasıl oluşturulacağı açıklanmaktadır.  
@@ -23,7 +23,7 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
 > LocBaml aracı üretime yönelik olarak hazırlanmayan bir uygulama değildir. Bu, yerelleştirme API 'Lerinden bazılarını kullanan bir örnek olarak sunulur ve yerelleştirme aracını nasıl yazacağınızı gösterir.  
   
 <a name="Introduction"></a>   
-## <a name="overview"></a>Genel Bakış  
+## <a name="overview"></a>Genel bakış  
  Bu tartışma, bir uygulamayı yerelleştirme konusunda adım adım bir yaklaşım sağlar. İlk olarak, çevrilecek metnin ayıklanabilmesi için uygulamanızı hazırlayacaksınız. Metin çevrildikten sonra, çevrilmiş metni orijinal uygulamanın yeni bir kopyasına birleştirirsiniz.  
   
 <a name="Requirements"></a>   
@@ -36,7 +36,7 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>Örnek uygulama oluşturma  
- Bu adımda, uygulamanızı yerelleştirme için hazırlayacaksınız. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Örneklerde, bu tartışmadaki kod örnekleri için kullanılacak bir HelloApp örneği sağlanır. Bu örneği kullanmak isterseniz, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] [LocBaml araç örneğinden](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)dosyaları indirin.  
+ Bu adımda, uygulamanızı yerelleştirme için hazırlayacaksınız. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] örneklerde, bu tartışmadaki kod örnekleri için kullanılacak bir HelloApp örneği sağlanır. Bu örneği kullanmak isterseniz, [LocBaml araç örneğinden](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyalarını indirin.  
   
 1. Uygulamanızı yerelleştirmeye başlamak istediğiniz noktaya geliştirin.  
   
@@ -44,7 +44,7 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
   
      `<UICulture>en-US</UICulture>`  
   
-3. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Dosyalarınıza uid 'ler ekleyin. Uid 'ler, dosyalardaki değişiklikleri izlemek ve çevrilmesi gereken öğeleri belirlemek için kullanılır. Dosyalarınıza uid eklemek için, proje dosyanızda **updateuid** komutunu çalıştırın:  
+3. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyalarınıza uid 'ler ekleyin. Uid 'ler, dosyalardaki değişiklikleri izlemek ve çevrilmesi gereken öğeleri belirlemek için kullanılır. Dosyalarınıza uid eklemek için, proje dosyanızda **updateuid** komutunu çalıştırın:  
   
      **MSBuild-t:updateuid HelloApp. csproj**  
   
@@ -91,21 +91,21 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
   
 4. LocBaml 'i çalıştırdığınızda belirtebileceğiniz seçenekler aşağıdaki gibidir:  
   
-    - **Parse** veya **-p:** Bir. csv veya. txt dosyası oluşturmak için BAML, kaynaklar veya DLL dosyalarını ayrıştırır.  
+    - **Parse** veya **-p:** bir. csv veya. txt dosyası oluşturmak için BAML, kaynak veya dll dosyalarını ayrıştırır.  
   
-    - **Oluştur** veya **-g:** Çevrilmiş bir dosya kullanarak yerelleştirilmiş bir ikili dosya oluşturur.  
+    - **Oluştur** veya **-g:** çevrilmiş bir dosya kullanarak yerelleştirilmiş bir ikili dosya oluşturur.  
   
-    - **Out** veya **-o** {*FileDirectory*] **:** Çıkış dosyası adı.  
+    - **Out** veya **-o** {*FileDirectory*] **:** çıkış dosyası adı.  
   
-    - **kültür** veya **-Cul** {*kültür*] **:** Çıkış derlemelerinin yerel ayarı.  
+    - **Culture** veya **-Cul** {*Culture*] **:** çıkış derlemelerinin yerel ayarı.  
   
-    - **çeviri** veya **-Trans** {*Translation. csv*] **:** Çevrilmiş veya yerelleştirilmiş dosya.  
+    - **çeviri** veya **-Trans** {*Translation. csv*] **:** çevrilmiş veya yerelleştirilmiş dosya.  
   
-    - **asmpath** veya **-asmpath:** {*FileDirectory*] **:** Kodunuz özel denetimler içeriyorsa, özel denetim derlemesine asmpath sağlamanız gerekir. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
+    - **asmpath** veya **-asmpath:** {*FileDirectory*] **:** [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kodunuz özel denetimler içeriyorsa, özel denetim derlemesine **asmpath** sağlamanız gerekir.  
   
-    - **nologo** Logo veya telif hakkı bilgileri görüntüler.  
+    - **nologo:** Logo veya telif hakkı bilgileri görüntüler.  
   
-    - **seçeneini** Ayrıntılı mod bilgilerini görüntüler.  
+    - **verbose:** Ayrıntılı mod bilgilerini görüntüler.  
   
     > [!NOTE]
     > Aracı çalıştırırken seçenekler listesine ihtiyacınız varsa **LocBaml. exe** YAZıN ve ENTER tuşuna basın.  
@@ -151,7 +151,7 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
   
    |BAML adı|Kaynak anahtarı|Kategori|Luğunu|Modifibilme|Açıklamalar|Değer|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp. g. en-US. resources: Window1. BAML|Stack1: System. Windows. Controls. StackPanel. $Content|Yoksayma|YANLÝÞ|YANLÝÞ||#Text1; #Text2|
+   |HelloApp. g. en-US. resources: Window1. BAML|Stack1: System. Windows. Controls. StackPanel. $Content|Yoksay|YANLÝÞ|YANLÝÞ||#Text1; #Text2|
    |HelloApp. g. en-US. resources: Window1. BAML|Metin1: System. Windows. Controls. TextBlock. $Content|Yok.|TRUE|TRUE||Merhaba Dünya|
    |HelloApp. g. en-US. resources: Window1. BAML|Metin2: System. Windows. Controls. TextBlock. $Content|Yok.|TRUE|TRUE||Güle dünya|
   
@@ -161,7 +161,7 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
   
 <a name="translate_loc_content"></a>   
 ## <a name="translate-the-localizable-content"></a>Yerelleştirilebilir Içeriği çevir  
- Ayıklanan içeriği çevirmek için kullanabileceğiniz herhangi bir aracı kullanın. Bunu yapmanın iyi bir yolu, kaynakları bir. csv dosyasına yazmak ve bunları içinde [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)]görüntülemeniz, son sütunda (değer) çeviri değişiklikleri yapmak.  
+ Ayıklanan içeriği çevirmek için kullanabileceğiniz herhangi bir aracı kullanın. Bunu yapmanın iyi bir yolu, kaynakları bir. csv dosyasına yazmak ve bunları Microsoft Excel 'de görüntüleyerek, çeviri değişikliklerini son sütuna (değer) yapıyor.  
   
 <a name="merge_translations"></a>   
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>Yeni bir. resources. dll dosyası oluşturmak için LocBaml kullanın  

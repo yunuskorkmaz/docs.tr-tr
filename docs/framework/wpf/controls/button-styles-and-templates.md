@@ -9,44 +9,44 @@ helpviewer_keywords:
 - templates [WPF], Button
 - ControlTemplate [WPF], Button
 ms.assetid: e223c759-f8c4-4717-acfb-b1e40bdf5f3b
-ms.openlocfilehash: ec64c7c2051b12cba01135054a90e54864b7386a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64764d43191d30c191c5d6519982b16cfc86d26e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912489"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460959"
 ---
 # <a name="button-styles-and-templates"></a>Düğme Stilleri ve Şablonları
-Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.Button> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+Bu konuda <xref:System.Windows.Controls.Button> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="button-parts"></a>Düğme bölümleri  
- <xref:System.Windows.Controls.Button> Denetim herhangi bir adlandırılmış bölümü yok.  
+ <xref:System.Windows.Controls.Button> denetiminde hiç adlandırılmış bölüm yok.  
   
 ## <a name="button-states"></a>Düğme durumları  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.Button> denetimi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.Button> denetimi için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Normal|CommonStates|Varsayılan durumu.|  
-|Fareyi üzerine getirme|CommonStates|Fare işaretçisi denetimin üzerine yerleştirilir.|  
-|Basılan|CommonStates|Denetime basıldığında.|  
-|Devre dışı|CommonStates|Denetim devre dışıdır.|  
-|Odaklanmış|FocusStates|Denetim odağa sahip.|  
-|Plana odaklanmadan|FocusStates|Denetim odağa sahip değil.|  
-|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` ve Denetim odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` ve Denetim odağa sahip değil.|  
+|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Gelme olayından|Ortak durumlar|Fare işaretçisi denetimin üzerine yerleştirilir.|  
+|Basılması|Ortak durumlar|Denetime basıldığında.|  
+|Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|  
+|Diğinize|Odaklardaki durumlar|Denetim odağa sahiptir.|  
+|Odaklanmadan gözetle|Odaklardaki durumlar|Denetimin odağı yok.|  
+|Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
+|Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `true` ve denetim odağa sahiptir.|  
+|Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `true` ve denetim odağa sahip değil.|  
   
-## <a name="button-controltemplate-example"></a>ControlTemplate Örneği düğmesi  
- Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.Button> denetimi.  
+## <a name="button-controltemplate-example"></a>Düğme ControlTemplate örneği  
+ Aşağıdaki örnek, <xref:System.Windows.Controls.Button> denetimi için <xref:System.Windows.Controls.ControlTemplate> tanımlanacağını gösterir.  
   
  [!code-xaml[ControlTemplateExamples#Button](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/button.xaml#button)]  
   
- Yukarıdaki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
+ Yukarıdaki örnekte aşağıdaki kaynaklardan biri veya daha fazlası kullanılmaktadır.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Tüm örnek için bkz. [ControlTemplates Ile stillendirme örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -54,5 +54,5 @@ Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.B
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
-- [Stil ve Şablon Oluşturma](styling-and-templating.md)
+- [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)

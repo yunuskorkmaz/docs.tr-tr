@@ -10,28 +10,28 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017663"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460403"
 ---
 # <a name="control-styles-and-templates"></a>Denetim Stilleri ve Şablonları
-Windows Presentation Foundation (WPF) denetiminiz bir <xref:System.Windows.Controls.ControlTemplate> , denetimin görsel ağacını içerir. Bir denetimin görünümünü ve yapısı değiştirerek değiştirebilirsiniz <xref:System.Windows.Controls.ControlTemplate> denetimin. Bir denetimin görsel ağacın yalnızca bir kısmını değiştirmek için bir yolu yoktur; görsel ağacı ayarlamalısınız bir denetimin değiştirmek için <xref:System.Windows.Controls.Control.Template%2A> yeni ve tam denetim özelliği <xref:System.Windows.Controls.ControlTemplate>.  
+Windows Presentation Foundation (WPF) içindeki denetimlerin, bu denetimin görsel ağacını içeren bir <xref:System.Windows.Controls.ControlTemplate> vardır. Denetimin yapısını ve görünümünü, bu denetimin <xref:System.Windows.Controls.ControlTemplate> değiştirerek değiştirebilirsiniz. Bir denetimin görsel ağacının yalnızca bir kısmını değiştirmek mümkün değildir; bir denetimin görsel ağacını değiştirmek için denetimin <xref:System.Windows.Controls.Control.Template%2A> özelliğini yeni ve tamamlanmış <xref:System.Windows.Controls.ControlTemplate>olarak ayarlamanız gerekir.  
   
- Masaüstü temalar, hangi kaynak sözlüğünün kullanılıp kullanılmayacağı belirler. Kaynak sözlükleri masaüstü temaları almak için bkz. [WPF temaları varsayılan](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ Masaüstü temaları, hangi kaynak sözlüğün kullanıldığını belirlenir. Masaüstü temaları için kaynak sözlüklerini almak için bkz. [varsayılan WPF temaları](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
- Aşağıdaki tabloda, kaynak sözlük dosya adlarını ve karşılık gelen masaüstü temalarını açıklar.  
+ Aşağıdaki tabloda kaynak sözlüğü dosya adları ve bunlara karşılık gelen masaüstü temaları açıklanmaktadır.  
   
 |Tema dosyası|Masaüstü teması|  
 |----------------|-------------------|  
-|Classic.xaml|Klasik Windows, Windows XP işletim sistemi (Windows 95, Windows 98 ve Windows 2000) arayın...|  
-|Luna.NormalColor.xaml|Windows XP varsayılan mavi tema.|  
-|Luna.Homestead.xaml|Windows XP Zeytin teması.|  
-|Luna.Metallic.xaml|Windows XP Gümüş tema.|  
-|Royale.NormalColor.xaml|Windows XP Media Center Edition işletim sistemindeki varsayılan tema.|  
-|Aero.NormalColor.xaml|Windows Vista işletim sistemindeki varsayılan tema.|  
+|Klasik. xaml|Windows XP işletim sisteminde klasik Windows görünümü (Windows 95, Windows 98 ve Windows 2000).|  
+|Luna. NormalColor. xaml|Windows XP 'de varsayılan mavi tema.|  
+|Luna. Homestead. xaml|Windows XP 'de zeytin teması.|  
+|Luna. metalik. xaml|Windows XP 'de Gümüş teması.|  
+|Royale. NormalColor. xaml|Windows XP Media Center Edition işletim sisteminde varsayılan tema.|  
+|Aero. NormalColor. xaml|Windows Vista işletim sisteminde varsayılan tema.|  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Düğme Stilleri ve Şablonları](button-styles-and-templates.md)  
@@ -50,17 +50,17 @@ Windows Presentation Foundation (WPF) denetiminiz bir <xref:System.Windows.Contr
  [ListView Stilleri ve Şablonları](listview-styles-and-templates.md)  
  [Menü Stilleri ve Şablonları](menu-styles-and-templates.md)  
  [NavigationWindow Stilleri ve Şablonları](navigationwindow-styles-and-templates.md)  
- [PasswordBox stilleri ve şablonları](passwordbox-styles-and-templates.md)  
+ [PasswordBox Stilleri ve şablonları](passwordbox-styles-and-templates.md)  
  [ProgressBar Stilleri ve Şablonları](progressbar-styles-and-templates.md)  
  [RadioButton Stilleri ve Şablonları](radiobutton-styles-and-templates.md)  
- [RepeatButton stilleri ve şablonları](repeatbutton-styles-and-templates.md)  
+ [RepeatButton Stilleri ve şablonları](repeatbutton-styles-and-templates.md)  
  [ScrollBar Stilleri ve Şablonları](scrollbar-styles-and-templates.md)  
  [ScrollViewer Stilleri ve Şablonları](scrollviewer-styles-and-templates.md)  
  [Kaydırıcı Stilleri ve Şablonları](slider-styles-and-templates.md)  
  [StatusBar Stilleri ve Şablonları](statusbar-styles-and-templates.md)  
  [TabControl Stilleri ve Şablonları](tabcontrol-styles-and-templates.md)  
  [TextBox Stilleri ve Şablonları](textbox-styles-and-templates.md)  
- [Parmak stilleri ve şablonları](thumb-styles-and-templates.md)  
+ [Parmak izi stilleri ve şablonları](thumb-styles-and-templates.md)  
  [ToggleButton stilleri ve şablonları](togglebutton-styles-and-templates.md)  
  [ToolBar Stilleri ve Şablonları](toolbar-styles-and-templates.md)  
  [ToolTip Stilleri ve Şablonları](tooltip-styles-and-templates.md)  
@@ -75,4 +75,4 @@ Windows Presentation Foundation (WPF) denetiminiz bir <xref:System.Windows.Contr
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Denetim Yazımına Genel Bakış](control-authoring-overview.md)  
   
- [Stil ve Şablon Oluşturma](styling-and-templating.md)
+ [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

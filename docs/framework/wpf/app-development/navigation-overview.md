@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 5a5c4c62799e1d2c190c2f7eaab12fff31e457ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: 619dc101cd8851cee24651b7e3098ae12ef46259
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425280"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459774"
 ---
 # <a name="navigation-overview"></a>Gezintiye Genel Bakış
 
@@ -742,7 +742,7 @@ HTML 'ye gitmek için özel izinler gerekir. Örneğin, Internet bölgesi kısmi
 
 ### <a name="navigating-to-custom-objects"></a>Özel nesnelere gitme
 
-Özel nesneler olarak depolanan verileriniz varsa, bu verileri görüntülemenin bir yolu, bu nesnelere bağlanan içeriğe sahip bir <xref:System.Windows.Controls.Page> oluşturmaktır (bkz. [veri bağlamaya genel bakış](../data/data-binding-overview.md)). Yalnızca nesneleri görüntüleyen bir sayfanın tamamını oluşturmak için ek yüke gerek yoksa, bunun yerine doğrudan bunlara gidebilirsiniz.
+Özel nesneler olarak depolanan verileriniz varsa, bu verileri görüntülemenin bir yolu, bu nesnelere bağlanan içeriğe sahip bir <xref:System.Windows.Controls.Page> oluşturmaktır (bkz. [veri bağlamaya genel bakış](../../../desktop-wpf/data/data-binding-overview.md)). Yalnızca nesneleri görüntüleyen bir sayfanın tamamını oluşturmak için ek yüke gerek yoksa, bunun yerine doğrudan bunlara gidebilirsiniz.
 
 Aşağıdaki kodda uygulanan `Person` sınıfını göz önünde bulundurun.
 

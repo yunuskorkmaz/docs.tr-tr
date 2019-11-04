@@ -9,20 +9,20 @@ helpviewer_keywords:
 - rollover effect [WPF]
 - element colors [WPF], changing
 ms.assetid: 3b20d028-6f1c-4b25-95d2-fa68cefbdb4c
-ms.openlocfilehash: 806056397200fa5c567e83227499ba721544f523
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: ccdc8aeb26b538814b2f9020e1e3a5b311fa5a99
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005185"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460166"
 ---
 # <a name="how-to-create-a-rollover-effect-using-events"></a>Nasıl yapılır: Olayları Kullanarak Geçiş Efekti Oluşturma
 Bu örnek, fare işaretçisi öğe tarafından dolu olan alana girdiğinde bir öğenin renginin nasıl değiştirileceğini gösterir.  
   
- Bu örnek [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyasından ve arka plan kod dosyasından oluşur.  
+ Bu örnek, bir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyası ve arka plan kod dosyasından oluşur.  
   
 > [!NOTE]
-> Bu örnek, olayların nasıl kullanılacağını gösterir, ancak aynı etkiyi elde etmek için önerilen yol, bir stilde <xref:System.Windows.Trigger> kullanmaktır. Daha fazla bilgi için bkz. [Stil oluşturma ve şablon](../controls/styling-and-templating.md)oluşturma.  
+> Bu örnek, olayların nasıl kullanılacağını gösterir, ancak aynı etkiyi elde etmek için önerilen yol, bir stilde <xref:System.Windows.Trigger> kullanmaktır. Daha fazla bilgi için bkz. [Stil oluşturma ve şablon](../../../desktop-wpf/fundamentals/styles-templates-overview.md)oluşturma.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki XAML, bir <xref:System.Windows.Controls.TextBlock> etrafında <xref:System.Windows.Controls.Border> ' dan oluşan Kullanıcı arabirimini oluşturur ve <xref:System.Windows.Input.Mouse.MouseEnter> ve <xref:System.Windows.UIElement.MouseLeave> olay işleyicilerini <xref:System.Windows.Controls.Border> ' e ekler.  

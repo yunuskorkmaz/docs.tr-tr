@@ -1,78 +1,78 @@
 ---
-title: 'Performansı iyileştirme: Denetimler - WPF'
+title: 'Performansı İyileştirme: denetimler-WPF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], improving performance
 - container recycling [WPF]
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-ms.openlocfilehash: 1e291e1638864176913342d02acad092f561789c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 595a4865e1d422f460aab18fc541326a4557476b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645679"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458531"
 ---
-# <a name="optimizing-performance-controls"></a>Performansı iyileştirme: Denetimler
+# <a name="optimizing-performance-controls"></a>Performansı İyileştirme: denetimler
 
-Windows Presentation Foundation (WPF) çoğu Windows uygulamalarında kullanılan ortak bir kullanıcı arabirimi (UI) bileşenleri çoğunu içerir. Bu konu, UI performansını iyileştirme tekniklerini içerir.
+Windows Presentation Foundation (WPF), çoğu Windows uygulamasında kullanılan birçok ortak kullanıcı arabirimi (UI) bileşenini içerir. Bu konu, UI 'nizin performansını iyileştirmeye yönelik teknikler içerir.
 
 ## <a name="displaying-large-data-sets"></a>Büyük veri kümelerini görüntüleme
 
-WPF denetimleri gibi <xref:System.Windows.Controls.ListView> ve <xref:System.Windows.Controls.ComboBox> öğe listeleri içeren bir uygulamada görüntülemek için kullanılır. Görüntülemek için listede büyükse, uygulamanın performansı etkilenebilir. Bu, Standart Düzen sistemi liste denetimi ile ilişkili her öğe için bir düzen kapsayıcısı oluşturur çünkü ve Düzen boyutunu ve konumunu hesaplar. Genellikle, aynı anda tüm öğeleri görüntülemek gerekmez; Bunun yerine, bir alt kümesini görüntüleme ve kullanıcı listede kaydırma. Bu durumda, kullanıcı arabirimini kullanarak mantıklıdır *sanallaştırma*, öğe container oluşturulması anlamına gelir ve bir öğe öğesi görünene kadar ertelenmiştir için Düzen hesaplama ilişkili.
+<xref:System.Windows.Controls.ListView> ve <xref:System.Windows.Controls.ComboBox> gibi WPF denetimleri, bir uygulamadaki öğelerin listesini göstermek için kullanılır. Görüntülenecek liste büyükse, uygulamanın performansı etkilenebilir. Bunun nedeni, standart düzen sisteminin liste denetimiyle ilişkili her öğe için bir düzen kapsayıcısı oluşturması ve düzen boyutunu ve konumunu hesaplamasıdır. Genellikle, tüm öğeleri aynı anda göstermek zorunda değilsiniz; Bunun yerine, bir alt küme görüntüler ve Kullanıcı listede kaydırılır. Bu durumda, UI *sanallaştırmayı*kullanmak mantıklı olur, bu, öğe için öğe kapsayıcısı oluşturma ve ilişkili düzen hesaplamasının, öğe görünene kadar ertelenmesi anlamına gelir.
 
-Kullanıcı Arabirimi sanallaştırma, liste denetimleri, önemli bir yönüdür. Kullanıcı Arabirimi sanallaştırma verileri sanallaştırma ile karıştırılmamalıdır. Kullanıcı Arabirimi sanallaştırma depoları yalnızca görünen öğeler bellekte ancak veri bağlama senaryosunda tüm veri yapısını bellekte depolar. Buna karşılık, veri sanallaştırma bellekte ekranda görünür olan veri öğeleri depolar.
+UI Sanallaştırması liste denetimlerinin önemli bir yönüdür. UI Sanallaştırması veri sanallaştırmayla karıştırılmamalıdır. UI Sanallaştırması yalnızca bellekteki görünür öğeleri depolar, ancak veri bağlama senaryosunda veri yapısının tamamını bellekte depolar. Buna karşılık, veri sanallaştırma yalnızca bellekte ekranda görünür olan veri öğelerini depolar.
 
-Varsayılan olarak, kullanıcı Arabirimi sanallaştırma için etkin <xref:System.Windows.Controls.ListView> ve <xref:System.Windows.Controls.ListBox> , liste öğelerini veriye bağlıyken denetler. <xref:System.Windows.Controls.TreeView> Sanallaştırma ayarlayarak etkinleştirilebilir <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> özelliğine bağlı `true`. Öğesinden türetilen özel denetimler için UI sanallaştırmasını etkinleştirmek istiyorsanız <xref:System.Windows.Controls.ItemsControl> ya da var olan öğe denetimleri kullanan <xref:System.Windows.Controls.StackPanel> gibi sınıf <xref:System.Windows.Controls.ComboBox>, ayarlayabileceğiniz <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> için <xref:System.Windows.Controls.VirtualizingStackPanel> ayarlayıp <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> için`true`. Ne yazık ki, bu denetimler için kullanıcı Arabirimi sanallaştırma fark etmeden devre dışı bırakabilirsiniz. Devre dışı kullanıcı Arabirimi sanallaştırma koşulların listesi verilmiştir.
+Varsayılan olarak, <xref:System.Windows.Controls.ListView> için UI Sanallaştırması etkinleştirilir ve liste öğeleri veriye bağlandığında denetimleri <xref:System.Windows.Controls.ListBox>. <xref:System.Windows.Controls.TreeView> sanallaştırma, <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> iliştirilmiş özelliği `true`ayarlanarak etkinleştirilebilir. <xref:System.Windows.Controls.ComboBox>gibi <xref:System.Windows.Controls.StackPanel> sınıfını kullanan <xref:System.Windows.Controls.ItemsControl> veya varolan öğe denetimlerinden türetilen özel denetimler için UI sanallaştırmayı etkinleştirmek istiyorsanız, <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> <xref:System.Windows.Controls.VirtualizingStackPanel> ve <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> olarak ayarlayabilirsiniz. Ne yazık ki, bu denetimler için UI sanallaştırmayı uygulamadan devre dışı bırakabilirsiniz. Aşağıda, UI sanallaştırmayı devre dışı bırakan koşulların bir listesi verilmiştir.
 
-- Öğe kapsayıcılarını doğrudan eklenir <xref:System.Windows.Controls.ItemsControl>. Örneğin, bir uygulamayı açıkça eklerse <xref:System.Windows.Controls.ListBoxItem> nesneleri için bir <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListBox> değil sanallaştırmak <xref:System.Windows.Controls.ListBoxItem> nesneleri.
+- Öğe kapsayıcıları doğrudan <xref:System.Windows.Controls.ItemsControl>eklenir. Örneğin, bir uygulama bir <xref:System.Windows.Controls.ListBox>açıkça <xref:System.Windows.Controls.ListBoxItem> nesneleri eklerse, <xref:System.Windows.Controls.ListBox> <xref:System.Windows.Controls.ListBoxItem> nesneleri sanallaştırmaz.
 
-- Öğe kapsayıcı <xref:System.Windows.Controls.ItemsControl> farklı türlere sahip. Örneğin, bir <xref:System.Windows.Controls.Menu> kullanan <xref:System.Windows.Controls.Separator> nesneleri, çünkü öğe geri dönüştürme uygulayamaz <xref:System.Windows.Controls.Menu> türünde nesneler içeren <xref:System.Windows.Controls.Separator> ve <xref:System.Windows.Controls.MenuItem>.
+- <xref:System.Windows.Controls.ItemsControl> öğe kapsayıcıları farklı türlerdir. Örneğin, <xref:System.Windows.Controls.Menu> <xref:System.Windows.Controls.Separator> ve <xref:System.Windows.Controls.MenuItem>türünde nesneler içerdiğinden, <xref:System.Windows.Controls.Separator> nesneleri kullanan bir <xref:System.Windows.Controls.Menu> öğe geri dönüşümü uygulayamaz.
 
-- Ayarı <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> için `false`.
+- <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> `false`olarak ayarlanıyor.
 
-- Ayarı <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A> için `false`.
+- <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A> `false`olarak ayarlanıyor.
 
-Öğe kapsayıcılarını sanallaştırmak olduğunda önemli bir husus ek durum bilgileri ile öğenin ait olduğu öğe kapsayıcı ile ilişkili olup ' dir. Bu durumda, ek durum kaydetmeniz gerekir. Örneğin, bulunan öğeyi olabilir bir <xref:System.Windows.Controls.Expander> denetimi ve <xref:System.Windows.Controls.Expander.IsExpanded%2A> durumu bağlı öğenin kapsayıcısı ve öğenin kendisi için değil. Ne zaman kapsayıcıyı yeniden kullanılabilir bir yeni öğe için geçerli değerini <xref:System.Windows.Controls.Expander.IsExpanded%2A> yeni öğe için kullanılır. Ayrıca, eski öğesi doğru kaybeder <xref:System.Windows.Controls.Expander.IsExpanded%2A> değeri.
+Öğe kapsayıcılarını sanallaştırdığınızda önemli bir önemi, öğe ile ilgili olan bir öğe kapsayıcısı ile ilişkili ek durum bilgilerinizin olmasına bakılmaksızın. Bu durumda, ek durumu kaydetmeniz gerekir. Örneğin, bir <xref:System.Windows.Controls.Expander> denetiminde bulunan bir öğeye sahip olabilirsiniz ve <xref:System.Windows.Controls.Expander.IsExpanded%2A> durumu öğenin kendine değil öğenin kapsayıcısına bağlanır. Kapsayıcı yeni bir öğe için tekrar kullanıldığında, yeni öğe için <xref:System.Windows.Controls.Expander.IsExpanded%2A> geçerli değeri kullanılır. Ayrıca, eski öğe doğru <xref:System.Windows.Controls.Expander.IsExpanded%2A> değerini kaybeder.
 
-Şu anda hiçbir WPF denetimleri veri sanallaştırma için yerleşik destek sunar.
+Şu anda, veri sanallaştırma için yerleşik destek sunan WPF denetimleri yoktur.
 
-## <a name="container-recycling"></a>Kapsayıcı geri dönüşümü
+## <a name="container-recycling"></a>Kapsayıcı geri dönüştürme
 
-.NET Framework 3.5 SP1 devralınan denetimler için eklenen kullanıcı Arabirimi sanallaştırma iyileştirme <xref:System.Windows.Controls.ItemsControl> olduğu *kapsayıcı geri dönüşümü* , ayrıca kayan performansı geliştirebilir. Olduğunda bir <xref:System.Windows.Controls.ItemsControl> kullanan kullanıcı Arabirimi sanallaştırma eklendiğinden, görünüm dışına kaydırdığında her öğe için öğe kapsayıcısı yok eder ve kayan görünüme her öğe için bir öğe kapsayıcı oluşturur. *Kapsayıcı geri dönüşümü* öğe kapsayıcılarını değil, sürekli olarak oluşturulur ve kullanıcı sonuçlarda yok, farklı veri öğeleri için var olan öğe kapsayıcılarını yeniden denetim sağlayan <xref:System.Windows.Controls.ItemsControl>. Ayarlayarak geri dönüştürme öğesini etkinleştirmek seçebileceğiniz <xref:System.Windows.Controls.VirtualizingPanel.VirtualizationMode%2A> özelliğine bağlı <xref:System.Windows.Controls.VirtualizationMode.Recycling>.
+<xref:System.Windows.Controls.ItemsControl> öğesinden devraldığı denetimler için .NET Framework 3,5 SP1 'e uygulanan UI sanallaştırmaya en iyi duruma getirme, kayan performansı de iyileştirebilecek *kapsayıcı geri Dönüşümleridir* . UI sanallaştırmayı kullanan bir <xref:System.Windows.Controls.ItemsControl> doldurulduğu zaman, görünüm olarak kayan her öğe için bir öğe kapsayıcısı oluşturur ve görünümün dışına kayan her öğe için öğe kapsayıcısını yok eder. *Kapsayıcı geri dönüştürme* , denetimin farklı veri öğeleri için varolan öğe kapsayıcılarını yeniden kullanmasına olanak sağlar. böylece, Kullanıcı <xref:System.Windows.Controls.ItemsControl>kaydırıldığında öğe kapsayıcıları sürekli olarak oluşturulmaz ve yok edilir. <xref:System.Windows.Controls.VirtualizingPanel.VirtualizationMode%2A> ekli özelliği <xref:System.Windows.Controls.VirtualizationMode.Recycling>olarak ayarlayarak öğe geri dönüşümünü etkinleştirmeyi seçebilirsiniz.
 
-Tüm <xref:System.Windows.Controls.ItemsControl> destekleyen sanallaştırma kapsayıcı geri dönüşümü kullanabilirsiniz. Bir örneği üzerinde kapsayıcı geri dönüşümü etkinleştirmek nasıl bir <xref:System.Windows.Controls.ListBox>, bakın [ListBox'ın kaydırma performansını](../controls/how-to-improve-the-scrolling-performance-of-a-listbox.md).
+Sanallaştırmayı destekleyen <xref:System.Windows.Controls.ItemsControl>, kapsayıcı geri dönüşümü kullanabilir. <xref:System.Windows.Controls.ListBox>kapsayıcının geri dönüşümünü etkinleştirme örneği için, bkz. [ListBox 'ın kayan performansını geliştirme](../controls/how-to-improve-the-scrolling-performance-of-a-listbox.md).
 
-## <a name="supporting-bidirectional-virtualization"></a>Çift yönlü sanallaştırma destekleme
+## <a name="supporting-bidirectional-virtualization"></a>Çift yönlü sanallaştırmayı destekleme
 
-<xref:System.Windows.Controls.VirtualizingStackPanel> yatay veya dikey yönde bir kullanıcı Arabirimi sanallaştırma için yerleşik destek sunar. Çift yönlü sanallaştırma denetimleriniz için kullanmak istiyorsanız, genişleten bir özel panel uygulamalıdır <xref:System.Windows.Controls.VirtualizingStackPanel> sınıfı. <xref:System.Windows.Controls.VirtualizingStackPanel> Sınıfı gösterir sanal yöntemler gibi <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, ve <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Bu sanal yöntemler, bir liste görünür kısmında bir değişikliği algılar ve uygun şekilde işlemelidir sağlar.
+<xref:System.Windows.Controls.VirtualizingStackPanel>, UI Sanallaştırması için yatay veya dikey olarak bir yönde yerleşik destek sunar. Denetimleriniz için çift yönlü sanallaştırma kullanmak istiyorsanız, <xref:System.Windows.Controls.VirtualizingStackPanel> sınıfını genişleten özel bir panel uygulamanız gerekir. <xref:System.Windows.Controls.VirtualizingStackPanel> sınıfı <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>ve <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>gibi sanal yöntemler sunar. Bu sanal yöntemler, listenin görünür bölümündeki bir değişikliği algılamanıza ve buna uygun şekilde işleme sağlar.
 
-## <a name="optimizing-templates"></a>Şablonları en iyi duruma getirme
+## <a name="optimizing-templates"></a>Şablonları iyileştirme
 
-Görsel ağacı, uygulamadaki tüm görsel öğeleri içerir. Doğrudan oluşturulan nesnelerin yanı sıra, ayrıca şablon genişletmesi nedeniyle nesneleri içerir. Örneğin, oluşturduğunuzda bir <xref:System.Windows.Controls.Button>, ayrıca Al <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> ve <xref:System.Windows.Controls.ContentPresenter> görsel ağaç nesneleri. Denetim şablonlarınızı iyileştirilmiş yapmadıysanız, fazladan gereksiz nesneleri birçok görsel ağaçta oluşturuyor olabilir. Görsel ağacı hakkında daha fazla bilgi için bkz. [WPF Grafik işlemeye genel bakış](../graphics-multimedia/wpf-graphics-rendering-overview.md).
+Görsel ağaç, bir uygulamadaki tüm görsel öğeleri içerir. Doğrudan oluşturulan nesnelere ek olarak, şablon genişletmesinden kaynaklanan nesneler de bulunur. Örneğin, bir <xref:System.Windows.Controls.Button>oluşturduğunuzda, ayrıca görsel ağaçta <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> ve <xref:System.Windows.Controls.ContentPresenter> nesneleri de alırsınız. Denetim şablonlarınızı en iyi duruma almadıysanız, görsel ağaçta çok fazla sayıda gereksiz nesne oluşturuyor olabilirsiniz. Görsel ağaç hakkında daha fazla bilgi için bkz. [WPF Grafik Işlemeye genel bakış](../graphics-multimedia/wpf-graphics-rendering-overview.md).
 
-## <a name="deferred-scrolling"></a>Kaydırma ertelendi
+## <a name="deferred-scrolling"></a>Ertelenmiş kaydırma
 
-Kullanıcı bir scrollbar üzerinde parmak sürüklediğinde, varsayılan olarak, içerik görünümü sürekli olarak güncelleştirir. Kaydırma denetiminizi yavaşsa, kaydırma kullanarak ertelenmiş göz önünde bulundurun. Yalnızca kullanıcı thumb bıraktığında kaydırma ertelenmiş, içerik güncelleştirildi.
+Varsayılan olarak, Kullanıcı Thumb öğesini bir ScrollBar üzerine sürüklediğinde içerik görünümü sürekli olarak güncellenir. Denetiminiz içinde kaydırma yavaşsa, ertelenmiş kaydırma kullanmayı düşünün. Ertelenmiş kaydırma ' de, içerik yalnızca Kullanıcı Thumb 'i yayınlarsa güncelleştirilir.
 
-Ertelenmiş kaydırma uygulamak için ayarlanmış <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> özelliğini `true`. <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> bağlı bir özelliktir ve ayarlanabilir <xref:System.Windows.Controls.ScrollViewer> ve sahip herhangi bir denetime bir <xref:System.Windows.Controls.ScrollViewer> onun Denetim şablonunda.
+Ertelenmiş kaydırma uygulamak için <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> özelliğini `true`olarak ayarlayın. <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A>, ekli bir özelliktir ve <xref:System.Windows.Controls.ScrollViewer> ve denetim şablonunda <xref:System.Windows.Controls.ScrollViewer> olan herhangi bir denetimde ayarlanabilir.
 
-## <a name="controls-that-implement-performance-features"></a>Performans özelliklerini uygulama denetimleri
+## <a name="controls-that-implement-performance-features"></a>Performans özelliklerini uygulayan denetimler
 
-Aşağıdaki tabloda, verileri ve Destek performans özelliklerini görüntülemek için ortak denetimleri listeler. Bu özellikleri etkinleştirme hakkında bilgi için önceki bölümlere bakın.
+Aşağıdaki tabloda, verileri görüntülemek için ortak denetimler ve performans özellikleri desteği listelenmektedir. Bu özelliklerin nasıl etkinleştirileceği hakkında bilgi için önceki bölümlere bakın.
 
-|Denetim|Sanallaştırma|Kapsayıcı geri dönüşümü|Kaydırma ertelendi|
+|Denetim|Sanallaştırma|Kapsayıcı geri dönüştürme|Ertelenmiş kaydırma|
 |-------------|--------------------|-------------------------|------------------------|
-|<xref:System.Windows.Controls.ComboBox>|Etkin hale getirilebilir|Etkin hale getirilebilir|Etkin hale getirilebilir|
-|<xref:System.Windows.Controls.ContextMenu>|Etkin hale getirilebilir|Etkin hale getirilebilir|Etkin hale getirilebilir|
-|<xref:System.Windows.Controls.DocumentViewer>|Yok|Yok|Etkin hale getirilebilir|
-|<xref:System.Windows.Controls.ListBox>|Varsayılan|Etkin hale getirilebilir|Etkin hale getirilebilir|
-|<xref:System.Windows.Controls.ListView>|Varsayılan|Etkin hale getirilebilir|Etkin hale getirilebilir|
-|<xref:System.Windows.Controls.TreeView>|Etkin hale getirilebilir|Etkin hale getirilebilir|Etkin hale getirilebilir|
-|<xref:System.Windows.Controls.ToolBar>|Yok|Yok|Etkin hale getirilebilir|
+|<xref:System.Windows.Controls.ComboBox>|Etkinleştirilebilir|Etkinleştirilebilir|Etkinleştirilebilir|
+|<xref:System.Windows.Controls.ContextMenu>|Etkinleştirilebilir|Etkinleştirilebilir|Etkinleştirilebilir|
+|<xref:System.Windows.Controls.DocumentViewer>|Yok|Yok|Etkinleştirilebilir|
+|<xref:System.Windows.Controls.ListBox>|Varsayılan|Etkinleştirilebilir|Etkinleştirilebilir|
+|<xref:System.Windows.Controls.ListView>|Varsayılan|Etkinleştirilebilir|Etkinleştirilebilir|
+|<xref:System.Windows.Controls.TreeView>|Etkinleştirilebilir|Etkinleştirilebilir|Etkinleştirilebilir|
+|<xref:System.Windows.Controls.ToolBar>|Yok|Yok|Etkinleştirilebilir|
 
 > [!NOTE]
-> Sanallaştırma ve kapsayıcı üzerinde geri dönüşümü etkinleştirmek nasıl bir örnek için bir <xref:System.Windows.Controls.TreeView>, bkz: [TreeView'ın performansını](../controls/how-to-improve-the-performance-of-a-treeview.md).
+> <xref:System.Windows.Controls.TreeView>sanallaştırma ve kapsayıcı geri dönüşümünü etkinleştirme örneği için bkz. [bir TreeView 'un performansını geliştirme](../controls/how-to-improve-the-performance-of-a-treeview.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -80,5 +80,5 @@ Aşağıdaki tabloda, verileri ve Destek performans özelliklerini görüntülem
 - [Düzen ve Tasarım](optimizing-performance-layout-and-design.md)
 - [Veri Bağlama](optimizing-performance-data-binding.md)
 - [Denetimler](../controls/index.md)
-- [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)
-- [İzlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+- [İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma](walkthrough-caching-application-data-in-a-wpf-application.md)

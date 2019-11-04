@@ -14,15 +14,15 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: bf62987c61c1d4f6aefce515f79e997b41272b56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df0b3fe53cb8f284fc6e2d79a9b2cea86318d701
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622962"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459917"
 ---
 # <a name="xtype-markup-extension"></a>x:Type İşaretleme Uzantısı
-CLR'nin sağladığı <xref:System.Type> belirtilen bir XAML türü için temel alınan türü bir nesne.  
+Belirtilen XAML türü için temeldeki tür olan CLR <xref:System.Type> nesnesini sağlar.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -40,48 +40,48 @@ CLR'nin sağladığı <xref:System.Type> belirtilen bir XAML türü için temel 
   
 |||  
 |-|-|  
-|`prefix`|İsteğe bağlı. Eşleyen bir varsayılan olmayan XAML ad alanı öneki. Bir önek belirleyerek sık gerekli değildir. Açıklamalara bakın.|  
-|`typeNameValue`|Gerekli. Geçerli varsayılan XAML ad alanına çözülebilir bir tür adı; veya belirtilen eşlenmiş önek, `prefix` sağlanır.|  
+|`prefix`|İsteğe bağlı. Varsayılan olmayan XAML ad alanını eşleyen bir ön ek. Ön ek belirtmek genellikle gerekli değildir. Bkz. açıklamalar.|  
+|`typeNameValue`|Gerekli. Geçerli varsayılan XAML ad alanına çözümlenebilen bir tür adı; veya `prefix` sağlanırsa belirtilen eşlenen ön eki.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `x:Type` İşaretleme uzantısı için benzer bir işlev olan `typeof()` C# dilinde işleç veya `GetType` Visual Basic'de işleç.  
+ `x:Type` biçimlendirme uzantısının, içindeki C# `typeof()` işlecine benzer bir Işlevi veya Microsoft Visual Basic `GetType` işleci vardır.  
   
- `x:Type` İşaretleme uzantısı türü alan özellikleri için gelen dize dönüştürme davranış sağlayan <xref:System.Type>. Giriş bir XAML türüdür. XAML türü giriş ve çıkış CLR arasındaki ilişkiyi <xref:System.Type> çıkış olan <xref:System.Type> olduğu <xref:System.Xaml.XamlType.UnderlyingType%2A> giriş <xref:System.Xaml.XamlType>, gerekli bakan sonra <xref:System.Xaml.XamlType> XAML şema içeriği ve göre<xref:System.Windows.Markup.IXamlTypeResolver>Hizmet bağlamı sağlar.  
+ `x:Type` biçimlendirme uzantısı, <xref:System.Type>türü alan özellikler için, dizeden bir dönüştürme davranışı sağlar. Giriş bir XAML türüdür. Giriş XAML türü ve çıkış CLR <xref:System.Type> arasındaki ilişki, XAML şema bağlamına ve içeriğin sağladığı <xref:System.Xaml.XamlType> hizmetine göre gerekli <xref:System.Windows.Markup.IXamlTypeResolver> aranırken, çıkış <xref:System.Type> giriş <xref:System.Xaml.XamlType><xref:System.Xaml.XamlType.UnderlyingType%2A>.  
   
- .NET Framework XAML hizmetlerinde bu işaretleme uzantısının işlenmesi tarafından tanımlanan <xref:System.Windows.Markup.TypeExtension> sınıfı.  
+ .NET Framework XAML hizmetlerinde, bu biçimlendirme uzantısının işlenmesi <xref:System.Windows.Markup.TypeExtension> sınıfı tarafından tanımlanır.  
   
- Bazı özellikler, belirli framework uygulamalarında ele <xref:System.Type> bir değer türünün adını doğrudan kabul (türünün dize değerini `Name`). Ancak, bu davranışı uygulayan karmaşık bir senaryo değildir. Örneğin, aşağıdaki "WPF kullanım notları" bölümüne bakın.  
+ Belirli Framework uygulamalarında, değer olarak <xref:System.Type> alan bazı özellikler doğrudan türün adını kabul edebilir (`Name`türünün dize değeri). Ancak, bu davranışı uygulamak karmaşık bir senaryodur. Örnekler için aşağıdaki "WPF kullanım notları" bölümüne bakın.  
   
- Öznitelik sözdizimi, bu işaretleme uzantısı ile kullanılan en yaygın sözdizimidir. Sonra sağlanan dize belirteci `x:Type` tanımlayıcı dizesi olarak atandığı <xref:System.Windows.Markup.TypeExtension.TypeName%2A> temel değer <xref:System.Windows.Markup.TypeExtension> uzantısı sınıfı. Varsayılan XAML şema içeriği için CLR türlerine bağlı, .NET Framework XAML hizmetlerinde bu özniteliğin değeri ya da altındadır <xref:System.Reflection.MemberInfo.Name%2A> istenen türde veya içeren <xref:System.Reflection.MemberInfo.Name%2A> varsayılan olmayan XAML ad alanı için bir ön eke göre öncesinde eşleme.  
+ Öznitelik sözdizimi, bu işaretleme uzantısı ile kullanılan en yaygın sözdizimidir. `x:Type` tanımlayıcı dizeden sonra belirtilen dize belirteci, temel <xref:System.Windows.Markup.TypeExtension> uzantı sınıfının <xref:System.Windows.Markup.TypeExtension.TypeName%2A> değeri olarak atanır. CLR türlerini temel alan .NET Framework XAML Hizmetleri için varsayılan XAML şeması bağlamı altında, bu özniteliğin değeri istenen türün <xref:System.Reflection.MemberInfo.Name%2A> veya bundan önce varsayılan olmayan XAML ad alanı eşlemesi için bir ön ek tarafından <xref:System.Reflection.MemberInfo.Name%2A> içerir.  
   
- `x:Type` Nesne öğesi sözdiziminde işaretleme uzantısı kullanılabilir. Bu durumda, değerini belirterek <xref:System.Windows.Markup.TypeExtension.TypeName%2A> özelliği uzantısı düzgün başlatmak için gereklidir.  
+ `x:Type` biçimlendirme uzantısı nesne öğesi sözdiziminde kullanılabilir. Bu durumda, uzantıyı doğru şekilde başlatmak için <xref:System.Windows.Markup.TypeExtension.TypeName%2A> özelliğinin değerini belirtmek gerekir.  
   
- `x:Type` İşaretleme uzantısı ayrıntılı bir özniteliği olarak da kullanılabilir; ancak bu kullanım tipik: `<object property="{x:Type TypeName=typeNameValue}" .../>`  
+ `x:Type` biçimlendirme uzantısı verbose özniteliği olarak da kullanılabilir; Ancak bu kullanım tipik değildir: `<object property="{x:Type TypeName=typeNameValue}" .../>`  
   
 ## <a name="wpf-usage-notes"></a>WPF kullanım notları  
   
-### <a name="default-xaml-namespace-and-type-mapping"></a>Varsayılan XAML Namespace ve tür eşlemesi  
- Varsayılan XAML ad alanı WPF programlama için tipik XAML senaryoları için gereksinim duyduğunuz XAML türlerin çoğu içerir; Bu nedenle, genellikle önekleri XAML türü değerleri başvururken önleyebilirsiniz. Bir özel bütünleştirilmiş kod veya, bir WPF bütünleştirilmiş kodda mevcut ancak varsayılan XAML ad alanına eşlenmedi bir CLR ad alanındaki türleri için bir tür başvuru değilse bir önek harita gerekebilir. Ön ekleri, XAML ad alanları ve CLR ad alanlarını eşleme ile ilgili daha fazla bilgi için bkz. [XAML ad alanları ve WPF XAML için Namespace eşlemesi](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+### <a name="default-xaml-namespace-and-type-mapping"></a>Varsayılan XAML ad alanı ve tür eşleme  
+ WPF programlama için varsayılan XAML ad alanı, tipik XAML senaryoları için ihtiyacınız olan XAML türlerinin çoğunu içerir; Bu nedenle, XAML türü değerlerine başvuru yaparken genellikle öneklerden kaçınabilirsiniz. Özel bir derlemeden veya bir WPF derlemesinde bulunan ancak varsayılan XAML ad alanıyla eşlenmeyen bir CLR ad alanı olan türler için bir türe başvuruyordıysanız bir ön eki eşlemeniz gerekebilir. Ön ekler, XAML ad alanları ve eşleme CLR ad alanları hakkında daha fazla bilgi için bkz. [WPF XAML Için xaml ad alanları ve ad alanı eşlemesi](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
-### <a name="type-properties-that-support-typename-as-string"></a>Bu destek Typename olarak-dizesini-özellikler yazın  
- WPF destekleyen bazı özelliklerin türünün değerini belirtmek teknikleri <xref:System.Type> gerektirmeden bir `x:Type` biçimlendirme uzantısı kullanımı. Bunun yerine, değer türü adları bir dize olarak belirtebilirsiniz. Örneğin <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType> ve <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>. Bu davranış için destek, tür dönüştürücüleri veya biçimlendirme uzantıları sağlanmadı. Bunun yerine, bu aracılığıyla uygulanan bir erteleme, davranıştır <xref:System.Windows.FrameworkElementFactory>.  
+### <a name="type-properties-that-support-typename-as-string"></a>Dize olarak TypeName 'ı destekleyen tür özellikleri  
+ WPF, `x:Type` biçimlendirme uzantısı kullanımı gerekmeden <xref:System.Type> türündeki bazı özelliklerin değerini belirtmeyi etkinleştiren teknikleri destekler. Bunun yerine, değeri türü adı belirleyen bir dize olarak belirtebilirsiniz. Bunun örnekleri <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType> ve <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>. Bu davranış için destek, tür dönüştürücüler veya biçimlendirme uzantıları aracılığıyla sağlanmaz. Bunun yerine, <xref:System.Windows.FrameworkElementFactory>aracılığıyla uygulanan bir erteleme davranışıdır.  
   
- Silverlight benzer bir kuralı destekler. Aslında, Silverlight uygulamasının şu anda desteklemediği `{x:Type}` , XAML dil desteği ve kabul etmediği `{x:Type}` kullanımları Silverlight WPF XAML geçişi desteklemek için tasarlanan bazı durumlar dışında. Bu nedenle, dize olarak typename davranışı için tüm Silverlight yerel özellik değerlendirmesini yerleşik burada bir <xref:System.Type> değerdir.  
+ Silverlight benzer bir kuralı destekler. Aslında, Silverlight, XAML dil desteğiyle `{x:Type}` desteklememektedir ve WPF-Silverlight XAML geçişini desteklemeye yönelik birkaç durumda `{x:Type}` kullanımlarını kabul etmez. Bu nedenle, dize olarak TypeName davranışı, bir <xref:System.Type> değeri olduğu tüm Silverlight yerel özellik değerlendirmesinde yerleşik olarak bulunur.  
   
 ## <a name="xaml-2009"></a>XAML 2009  
- XAML 2009, genel türleri ve özellik davranışını değiştiren için ek destek sağlar `x:TypeArguments` ve `x:Type` bu desteği sağlamak için.  
+ XAML 2009, genel türler için ek destek sağlar ve bu desteği sağlamak üzere `x:TypeArguments` ve `x:Type` özellik davranışını değiştirir.  
   
-- `x:TypeArguments` ve kök dışında öğelerde genel nesne örneklemesini için ilişkili nesne öğesi olabilir. Daha fazla bilgi için "XAML 2009" bölümüne bakın. [x: TypeArguments yönergesi](x-typearguments-directive.md).  
+- Genel nesne örneklemesi için `x:TypeArguments` ve ilişkili nesne öğesi kök dışında bir öğe üzerinde olabilir. Daha fazla bilgi için, [X:TypeArguments yönergesinin](x-typearguments-directive.md)"xaml 2009" bölümüne bakın.  
   
-- XAML 2009, genel bir türün kısıtlaması işaretlemede belirtmek için sözdizimi destekler. Bu, tarafından kullanılabilir `x:TypeArguments`tarafından `x:Type`, ya da iki özellik birlikte.  
+- XAML 2009, biçimlendirme içinde genel bir türün kısıtlamasını belirtmek için bir sözdizimi destekler. Bu, `x:TypeArguments`, `x:Type`veya iki özelliği ile birlikte kullanılabilir.  
   
-- Yükleme türünü kullanan bazı framework özellikleri örtük tür dönüştürme davranışını bu özellik ayrıca ekler için XAML 2009 işlerken WPF XAML uygulama <xref:System.Type>.  
+- Yükleme için XAML 2009 ' i işlerken WPF XAML uygulamasında bu özellik, türü <xref:System.Type>kullanan belirli Framework özellikleri için örtük tür dönüştürme davranışına de eklenir.  
   
- WPF içinde ancak yalnızca gevşek XAML için (biçimlendirme yapılmayan XAML) XAML 2009 özelliklerini kullanabilirsiniz. WPF ve XAML, BAML formu için biçimlendirme derlenmiş XAML şu anda desteklemediğinden XAML 2009 anahtar sözcükleri ve özellikleri.  
+ WPF 'de XAML 2009 özelliklerini, ancak yalnızca gevşek XAML (biçimlendirme ile derlenen XAML) için kullanabilirsiniz. WPF için biçimlendirme derlenmiş XAML ve XAML 'nin BAML formu şu anda XAML 2009 anahtar sözcüklerini ve özelliklerini desteklememektedir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Style>
 - [Stil ve Şablon Oluşturma](../wpf/controls/styling-and-templating.md)
-- [XAML'ye Genel Bakış (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [XAML'ye Genel Bakış (WPF)](../../desktop-wpf/fundamentals/xaml.md)
 - [İşaretleme Uzantıları ve WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

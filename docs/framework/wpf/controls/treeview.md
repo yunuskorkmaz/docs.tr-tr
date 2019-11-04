@@ -8,19 +8,19 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: b353b413f7486990b6dd8ae5126809b27590ae3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8d77bd3df848e6e9ed186cc621c02d36842175
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761342"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458296"
 ---
 # <a name="treeview"></a>TreeView
-<xref:System.Windows.Controls.TreeView> Denetim bilgilerini hiyerarşik bir yapıda daraltılabilir düğümleri kullanarak görüntüler.  
+<xref:System.Windows.Controls.TreeView> denetimi, daraltılabilir düğümleri kullanarak bilgileri hiyerarşik bir yapıda görüntüler.  
   
- Aşağıdaki çizim, örneğidir bir <xref:System.Windows.Controls.TreeView> iç içe geçmiş denetim <xref:System.Windows.Controls.TreeViewItem> denetimler:  
+ Aşağıdaki çizim, iç içe <xref:System.Windows.Controls.TreeViewItem> denetimlerine sahip <xref:System.Windows.Controls.TreeView> denetimine bir örnektir:  
   
- ![Çizimde, iç içe geçmiş TreeViewItem denetimleri gösterir.](./media/treeview/nested-treeviewitem-controls.jpg)  
+ ![İç içe TreeViewItem denetimlerini gösteren çizim.](./media/treeview/nested-treeviewitem-controls.jpg)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [TreeView Genel Bakış](treeview-overview.md)  
@@ -31,5 +31,5 @@ ms.locfileid: "61761342"
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)  
+ [Veri Bağlamaya Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)  
   [Veri Şablonu Oluşturmaya Genel Bakış](../data/data-templating-overview.md)

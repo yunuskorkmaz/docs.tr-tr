@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 7a1a8df78a785066992472c7de37f958ae3467f1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 245b05d9cfa7ca66dec310bd9a5291def0101d19
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920162"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459113"
 ---
 # <a name="how-to-implement-binding-validation"></a>Nasıl yapılır: Bağlama Doğrulaması Uygulama
 
@@ -41,9 +41,9 @@ Aşağıdaki örnekte gösterildiği gibi, hata iletisini gösteren <xref:System
 
 Tüm örnek için bkz. [bağlama doğrulama örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/BindValidation).
   
-Özel bir <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> sağlamazsanız, doğrulama hatası olduğunda kullanıcıya görsel geri bildirim sağlamak için varsayılan hata şablonunun göründüğünü unutmayın. Daha fazla bilgi için [veri bağlamaya genel bakış](data-binding-overview.md) bölümüne bakın. Ayrıca, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bağlama kaynağı özelliğinin güncelleştirilmesi sırasında oluşturulan özel durumları yakalayan yerleşik bir doğrulama kuralı sağlar. Daha fazla bilgi için bkz. <xref:System.Windows.Controls.ExceptionValidationRule>.
+Özel bir <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> sağlamazsanız, doğrulama hatası olduğunda kullanıcıya görsel geri bildirim sağlamak için varsayılan hata şablonunun göründüğünü unutmayın. Daha fazla bilgi için [veri bağlamaya genel bakış](../../../desktop-wpf/data/data-binding-overview.md) bölümüne bakın. Ayrıca, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bağlama kaynağı özelliğinin güncelleştirilmesi sırasında oluşturulan özel durumları yakalayan yerleşik bir doğrulama kuralı sağlar. Daha fazla bilgi için bkz. <xref:System.Windows.Controls.ExceptionValidationRule>.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
+- [Veri Bağlamaya Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)
 - [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

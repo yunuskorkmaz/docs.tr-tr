@@ -9,33 +9,33 @@ helpviewer_keywords:
 - dependency properties [WPF], XAML loading and
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
-ms.openlocfilehash: 4db87c5f266a9eed136f0651f48d11720abede65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 57c25297f995acd1ef307466258b5f4e03cc3098
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053866"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459539"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>XAML Yükleme ve Bağımlılık Özellikleri
-Geçerli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamasını kendi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işleyicisidir kendiliğinden bağımlılık özelliği kullanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] İşlemci ikili yüklerken bu özelliği sistemi yöntemleri bağımlılık özellikleri için kullanan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve bağımlılık özellikleri özniteliklerini işleme. Bu özellik sarmalayıcıları etkili bir şekilde atlar. Özel bağımlılık özellikleri uyguladığınızda, bu davranışı dikkate almalı ve, özellik sarmalayıcı yöntem özelliği sistem dışında herhangi bir kod yerleştirmekten kaçınmalısınız <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A>.  
+[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcisinin geçerli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulanması, kendiliğinden bağımlılık özelliği farkındır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcisi, ikili [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yüklenirken ve bağımlılık özellikleri olan öznitelikleri işlerken bağımlılık özellikleri için özellik sistemi yöntemlerini kullanır. Bu özellik sarmalayıcıları etkin bir şekilde atlar. Özel bağımlılık özellikleri uyguladığınızda, bu davranışı dikkate almalısınız ve özellik sarmalayıcısında başka bir kodu, <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A>özellik dışında bir şekilde yerleştirmekten kaçınmalısınız.  
 
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Önkoşullar  
- Bu konuda bağımlılık özellikleri hem de tüketici ve yazarı olarak anlamak ve okuduğunuz varsayılır [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md) ve [özel bağımlılık özellikleri](custom-dependency-properties.md). Ayrıca okuma [XAML genel bakış (WPF)](xaml-overview-wpf.md) ve [içinde XAML söz dizimi ayrıntı](xaml-syntax-in-detail.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ Bu konu, bağımlılık özelliklerini hem tüketici hem de yazar olarak anladığınızı ve okuma [bağımlılığı özelliklerine genel bakış](dependency-properties-overview.md) ve [Özel bağımlılık özellikleri](custom-dependency-properties.md)kullandığınızı varsayar. Ayrıca ayrıntılı [xaml 'ye Genel Bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md) ve [xaml söz dizimi](xaml-syntax-in-detail.md)da vardır.  
   
 <a name="implementation"></a>   
-## <a name="the-wpf-xaml-loader-implementation-and-performance"></a>WPF XAML yükleyici uygulaması ve performans  
- Uygulama nedenlerinden dolayı bir bağımlılık özelliği olarak bir özelliği tanımlamak ve özellik sistemi erişmek daha az yoğun <xref:System.Windows.DependencyObject.SetValue%2A> yerine özellik sarmalayıcısı ve erişilebilirliğini kullanarak ayarlamak için yöntemi. Bunun nedeni, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci yedekleme kodunun yapısını biçimlendirme ve çeşitli dizeleri tarafından belirtilen tür ve üye ilişkilerine göre tüm nesne modelini Infer gerekir.  
+## <a name="the-wpf-xaml-loader-implementation-and-performance"></a>WPF XAML yükleyici uygulama ve performans  
+ Uygulama nedenleriyle, bağımlılık özelliği olarak bir özelliği belirlemek ve özellik sarmalayıcı ve ayarlayıcısı kullanmak yerine, özellik sistemine <xref:System.Windows.DependencyObject.SetValue%2A> metoduna erişmek için hesaplama daha ucuzdur. Bunun nedeni, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcinin, yalnızca biçimlendirme yapısına ve çeşitli dizelere göre belirtilen tür ve üye ilişkilerini bilmenin yanı sıra, yedekleme kodunun tüm nesne modelini temel almalıdır.  
   
- Xmlns ve derleme öznitelikleri, ancak, bir özniteliği olarak ayarlanan destekleyebilir belirleme üyeleri tanımlayan bir birleşimi yoluyla türü baktığı ve özellik değerlerini destek hangi türde kapsamlı yansıma gerektirir kullanarak <xref:System.Reflection.PropertyInfo>. Bağımlılık özellikleri verilen tür üzerinde özellik sistemi ile depolama tablo olarak erişilebilir olduğundan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamasını kendi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcisi bu tablo kullanır ve herhangi bir algılar özelliği verilen *ABC* daha verimli bir şekilde çağrılarak ayarlanabilir <xref:System.Windows.DependencyObject.SetValue%2A> çağırılarak <xref:System.Windows.DependencyObject> türetilmiş tür, bağımlılık özelliği tanımlayıcısını kullanarak *ABC*.  
+ Tür, xmlns ve derleme özniteliklerinin bir birleşimi ile aranır, ancak üyelerini tanımlar, hangisinin öznitelik olarak ayarlanmakta olduğunu belirler ve özellik değerlerinin desteklediği türleri çözümlemek için kapsamlı yansıma gerekir <xref:System.Reflection.PropertyInfo>kullanma. Verilen bir türdeki bağımlılık özellikleri, özellik sistemi aracılığıyla bir depolama tablosu olarak erişilebilir olduğundan, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcisinin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulanması bu tabloyu kullanır ve *ABC* 'nin verilen tüm özelliği tarafından daha verimli bir şekilde ayarlanabilir. bağımlılık özelliği tanımlayıcı *abcözelliğini*kullanarak kapsayan <xref:System.Windows.DependencyObject> türetilmiş tür üzerinde <xref:System.Windows.DependencyObject.SetValue%2A> çağrılıyor.  
   
 <a name="implications"></a>   
-## <a name="implications-for-custom-dependency-properties"></a>Özel bağımlılık özellikleri için uygulamaları  
- Çünkü geçerli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulaması [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci davranışı özellik ayarı sarmalayıcıları tamamen atlar, size herhangi ek bir mantık sarmalayıcı kümesi tanımlarını, özel bir bağımlılık özelliği için koymanız gerekir değil. Ayar tanımlarına böyle bir mantık sonra özelliği ayarlandığında mantığı yürütülmez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yerine kod.  
+## <a name="implications-for-custom-dependency-properties"></a>Özel bağımlılık özelliklerinin etkileri  
+ Özellik ayarı için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci davranışının geçerli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulanması, sarmalayıcıları tamamen atladığından, Özel bağımlılık özelliği için sarmalayıcının küme tanımlarına ek bir mantık koymamalısınız. Bu tür mantığı küme tanımına yerleştirirseniz, özellik kod yerine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ayarlandığında Logic yürütülmez.  
   
- Benzer şekilde, diğer yönleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] özellik değerleri almak İşlemci [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ayrıca kullanım işleme <xref:System.Windows.DependencyObject.GetValue%2A> sarmalayıcıyı kullanmak yerine. Bu nedenle de herhangi bir ek uygulamasında kaçınmalısınız `get` tanımı ötesinde <xref:System.Windows.DependencyObject.GetValue%2A> çağırın.  
+ Benzer şekilde, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemeden özellik değerlerini elde eden [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcinin diğer yönleri de sarmalayıcı kullanmak yerine <xref:System.Windows.DependencyObject.GetValue%2A> kullanır. Bu nedenle, <xref:System.Windows.DependencyObject.GetValue%2A> çağrısının ötesinde `get` tanımında ek herhangi bir uygulamayı da kullanmaktan kaçının.  
   
- Aşağıdaki örnek, önerilen bir bağımlılık özelliği olarak özellik tanımlayıcısı depolandığı sarmalayıcılar, tanımıyla bir `public` `static` `readonly` alan ve `get` ve `set` tanımlarını içeren kod yok gerekli özellik sistemi yöntemleri, yedekleme bağımlılık özelliği tanımlar.  
+ Aşağıdaki örnek, özellik tanımlayıcısının bir `public` `static` `readonly` alanı olarak depolandığı ve `get` ve `set` tanımlarının gerekli özelliğin ötesinde hiçbir kod içermediği sarmalayıcılarla önerilen bir bağımlılık özelliği tanımıdır. bağımlılık özelliği yedeklemesini tanımlayan sistem yöntemleri.  
   
  [!code-csharp[WPFAquariumSln#AGWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#agwithwrapper)]
  [!code-vb[WPFAquariumSln#AGWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
@@ -43,7 +43,7 @@ Geçerli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclie
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
-- [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
+- [XAML'ye Genel Bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Bağımlılık Özelliği Meta Verisi](dependency-property-metadata.md)
 - [Koleksiyon Türü Bağımlılık Özellikleri](collection-type-dependency-properties.md)
 - [Bağımlılık Özelliği Güvenliği](dependency-property-security.md)

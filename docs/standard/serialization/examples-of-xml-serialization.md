@@ -13,16 +13,16 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: f92f3c0f8d7b849772f96415d03b0924b1e341a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c206faf81868d6e871327a73ef0680936b132918
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922531"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459256"
 ---
 # <a name="examples-of-xml-serialization"></a>XML Serileştirme Örnekleri
 
-XML serileştirme birden fazla formdan, karmaşık için basit sürebilir. Örneğin, gösterildiği gibi ortak alanlar ve özellikler, yalnızca oluşan bir sınıf serileştirebiliyorsa [giriş XML serileştirme](../../../docs/standard/serialization/introducing-xml-serialization.md). Aşağıdaki kod örnekleri, XML serileştirme için belirli bir XML Şeması (XSD) belge uyan bir XML akışı oluşturmak için nasıl kullanılacağını dahil olmak üzere çeşitli Gelişmiş senaryolar adresi.
+XML serileştirme birden fazla formdan, karmaşık için basit sürebilir. Örneğin, [XML serileştirmesini tanıtma](../../../docs/standard/serialization/introducing-xml-serialization.md)bölümünde gösterildiği gibi, yalnızca genel alanlardan ve özelliklerden oluşan bir sınıfı seri hale getirebilirsiniz. Aşağıdaki kod örnekleri, belirli bir XML şeması (XSD) belgesine uyan bir XML akışı oluşturmak için XML serileştirmesini kullanma dahil çeşitli gelişmiş senaryolara yönelik olarak ele verilmektedir.
 
 ## <a name="serializing-a-dataset"></a>Bir veri kümesi seri hale getirilmedi
 
@@ -74,7 +74,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>Bir XmlElement ve XmlNode seri hale getirilmedi
 
-Ayrıca örnekleri serileştirebilen bir <xref:System.Xml.XmlElement> veya <xref:System.Xml.XmlNode> , aşağıdaki kod örneğinde gösterildiği gibi sınıf.
+Ayrıca, aşağıdaki kod örneğinde gösterildiği gibi bir <xref:System.Xml.XmlElement> veya <xref:System.Xml.XmlNode> sınıfının örneklerini seri hale getirebilirsiniz.
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -192,18 +192,18 @@ public class Item
         <Item>
             <ItemID>aaa111</ItemID>
             <ItemPrice>34.22</ItemPrice>
-        <Item>
+        </Item>
         <Item>
             <ItemID>bbb222</ItemID>
             <ItemPrice>2.89</ItemPrice>
-        <Item>
+        </Item>
     </ItemsOrders>
 </PurchaseOrder>
 ```
 
 ## <a name="serializing-a-class-that-implements-the-icollection-interface"></a>Bu ICollection arabirimini uygulayan bir sınıf seri hale getirilmedi
 
-Uygulanarak, kendi koleksiyon sınıfları oluşturabilirsiniz <xref:System.Collections.ICollection> arabirim ve kullanma <xref:System.Xml.Serialization.XmlSerializer> bu sınıfların örneklerini serileştirmek için. Arabirimini uygulayan bir sınıf unutmayın <xref:System.Collections.ICollection> arabirimi, yalnızca sınıfı tarafından bulunan koleksiyonun seri hale getirilmiş. Herhangi bir genel özelliklerini veya sınıfa eklediğiniz alanları serileştirilecek değil. Sınıf içermelidir bir **Ekle** yöntemi ve bir **öğesi** seri hale özelliği (C# dizin oluşturucu).
+Uygulanarak, kendi koleksiyon sınıfları oluşturabilirsiniz <xref:System.Collections.ICollection> arabirim ve kullanma <xref:System.Xml.Serialization.XmlSerializer> bu sınıfların örneklerini serileştirmek için. Arabirimini uygulayan bir sınıf unutmayın <xref:System.Collections.ICollection> arabirimi, yalnızca sınıfı tarafından bulunan koleksiyonun seri hale getirilmiş. Herhangi bir genel özelliklerini veya sınıfa eklediğiniz alanları serileştirilecek değil. Sınıf, seri hale getirilecek bir **Add** yöntemi ve bir **öğe** özelliğiC# (Dizin Oluşturucu) içermelidir.
 
 ```vb
 Imports System
@@ -364,13 +364,13 @@ public class Employee {
 
 Kes ve bir .cs veya .vb dosya adı uzantısı ile yeniden adlandırılamaz bir metin dosyası aşağıdaki kod örneği yapıştırın. C# veya Visual Basic derleyici dosya derlemek için kullanın. Daha sonra yürütülebilir dosya adını kullanarak çalıştırın.
 
-Bu örnek, bir nesne örneği nasıl oluşturulur ve bir dosya akışı kullanılarak içine serileştirilmiş göstermek için basit bir senaryo kullanır. <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> yöntemi. XML akışı bir dosyaya kaydedilir ve aynı dosyanın sonra geri okuyun ve orijinal nesnesini kullanarak, bir kopyasını yeniden <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> yöntemi.
+Bu örnek, bir nesne örneğinin nasıl oluşturulup <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> yöntemi kullanılarak bir dosya akışına serileştirildiği göstermek için basit bir senaryo kullanır. XML akışı bir dosyaya kaydedilir ve aynı dosya daha sonra geri okur ve <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> yöntemi kullanılarak özgün nesnenin bir kopyasına yeniden oluşturulur.
 
 Bu örnekte, bir sınıf adlı `PurchaseOrder` serileştirilmiş ve ardından seri durumdan. İkinci adında bir sınıf `Address` ortak alan adlı de dahil olduğundan `ShipTo` ayarlanmalıdır bir `Address`. Benzer şekilde, bir `OrderedItem` çünkü sınıfı dahil, bir dizi `OrderedItem` nesneleri ayarlanmalıdır `OrderedItems` alan. Son olarak, adlı bir sınıf `Test` serileştirir ve sınıflar çıkarır kodu içerir.
 
-`CreatePO` Yöntemi oluşturur `PurchaseOrder`, `Address`, ve `OrderedItem` sınıf nesneleri ve ortak alan değerlerini ayarlar. Yöntem aynı zamanda bir örneğini oluşturur <xref:System.Xml.Serialization.XmlSerializer> seri hale getirmek ve seri halinden dağıtmak için kullanılan sınıfı `PurchaseOrder`. Kod oluşturucuya seri hale sınıf türü başarılı not edin. Kod ayrıca oluşturur bir `FileStream` XML akışı bir XML belgesine yazmak için kullanılır.
+`CreatePO` Yöntemi oluşturur `PurchaseOrder`, `Address`, ve `OrderedItem` sınıf nesneleri ve ortak alan değerlerini ayarlar. Yöntemi ayrıca, `PurchaseOrder`serileştirmek ve serisini kaldırmak için kullanılan <xref:System.Xml.Serialization.XmlSerializer> sınıfının bir örneğini oluşturur. Kodun oluşturucuya serileştirilecek sınıfın türünü geçirdiğine unutmayın. Kod ayrıca XML akışını bir XML belgesine yazmak için kullanılan bir `FileStream` oluşturur.
 
-`ReadPo` Yöntemi biraz basittir. Yalnızca seri durumdan çıkarılacak nesne oluşturur ve değerlerine okur. Olduğu gibi `CreatePo` yöntemi, size gereken ilk oluşturmak bir <xref:System.Xml.Serialization.XmlSerializer>, oluşturucuya seri durumdan için sınıf türünü geçirerek. Ayrıca, bir <xref:System.IO.FileStream> XML belgesi okumak için gereklidir. Nesneleri seri durumdan çıkarılacak çağrısı <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> yöntemiyle <xref:System.IO.FileStream> bağımsız değişken olarak. Seri durumdan çıkarılmış nesne türü için bir nesne değişkeni dönüştürülmelidir `PurchaseOrder`. Kodu daha sonra seri durumdan çıkarılmış değerlerini okur `PurchaseOrder`. Gerçek XML görmek için oluşturulan PO.xml dosya ayrıca okuyabilirsiniz Not çıktı.
+`ReadPo` Yöntemi biraz basittir. Yalnızca seri durumdan çıkarılacak nesne oluşturur ve değerlerine okur. `CreatePo` yönteminde olduğu gibi, ilk olarak bir <xref:System.Xml.Serialization.XmlSerializer>oluşturmanız gerekir ve bu sınıf türünü oluşturucuya seri durumdan çıkarılacak şekilde geçirerek. Ayrıca, bir <xref:System.IO.FileStream> XML belgesi okumak için gereklidir. Nesneleri seri durumdan çıkarılacak çağrısı <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> yöntemiyle <xref:System.IO.FileStream> bağımsız değişken olarak. Seri durumdan çıkarılmış nesne türü için bir nesne değişkeni dönüştürülmelidir `PurchaseOrder`. Kodu daha sonra seri durumdan çıkarılmış değerlerini okur `PurchaseOrder`. Gerçek XML görmek için oluşturulan PO.xml dosya ayrıca okuyabilirsiniz Not çıktı.
 
 ```vb
 Imports System
@@ -771,9 +771,9 @@ XML çıktısı aşağıdakine benzer.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Serileştirmeye Giriş](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [XML Serileştirmeyi Denetleyen Öznitelikler](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
-- [XmlSerializer sınıfını](xref:System.Xml.Serialization.XmlSerializer)
-- [Nasıl yapılır: Bir nesneyi serileştirmek](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Nasıl yapılır: Bir nesneyi seri durumdan çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [XML Serileştirmeye Giriş](introducing-xml-serialization.md)
+- [Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme](controlling-xml-serialization-using-attributes.md)
+- [XML Serileştirmeyi Denetleyen Öznitelikler](attributes-that-control-xml-serialization.md)
+- [XmlSerializer sınıfı](xref:System.Xml.Serialization.XmlSerializer)
+- [Nasıl yapılır: Nesne Serileştirme](how-to-serialize-an-object.md)
+- [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](how-to-deserialize-an-object.md)
