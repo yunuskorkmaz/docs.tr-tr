@@ -7,23 +7,23 @@ helpviewer_keywords:
 - customizing controls [WPF]
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
-ms.openlocfilehash: b70a6654e5c3722ad1ef1d926ee3a441d24d9e68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 946724cc388c9c9456973ef164b8b6f38fd85869
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017702"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460749"
 ---
-# <a name="control-customization"></a><span data-ttu-id="b118b-102">Denetim Özelleştirme</span><span class="sxs-lookup"><span data-stu-id="b118b-102">Control Customization</span></span>
-<span data-ttu-id="b118b-103">Bu kategori, çeşitli temel sınıfları, arabirimleri ve diğer öğeleri ve tam olarak işlevsel oluştururken kullanılan kavramları kapsayan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] denetimi.</span><span class="sxs-lookup"><span data-stu-id="b118b-103">This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.</span></span>  
+# <a name="control-customization"></a><span data-ttu-id="323a1-102">Denetim Özelleştirme</span><span class="sxs-lookup"><span data-stu-id="323a1-102">Control Customization</span></span>
+<span data-ttu-id="323a1-103">Bu kategori, tam işlevli [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] denetimi oluştururken kullanılan çeşitli temel sınıfları, arabirimleri ve diğer öğeleri ve kavramları içerir.</span><span class="sxs-lookup"><span data-stu-id="323a1-103">This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b118b-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b118b-104">In This Section</span></span>  
- [<span data-ttu-id="b118b-105">Denetim Yazımına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b118b-105">Control Authoring Overview</span></span>](control-authoring-overview.md)  
- [<span data-ttu-id="b118b-106">Stillenebilir Denetimleri Tasarlama Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="b118b-106">Guidelines for Designing Stylable Controls</span></span>](guidelines-for-designing-stylable-controls.md)  
- [<span data-ttu-id="b118b-107">Donatıcılar</span><span class="sxs-lookup"><span data-stu-id="b118b-107">Adorners</span></span>](adorners.md)  
- [<span data-ttu-id="b118b-108">Denetim Stilleri ve Şablonları</span><span class="sxs-lookup"><span data-stu-id="b118b-108">Control Styles and Templates</span></span>](control-styles-and-templates.md)  
- [<span data-ttu-id="b118b-109">WPF Özel Denetiminin UI Otomasyonu</span><span class="sxs-lookup"><span data-stu-id="b118b-109">UI Automation of a WPF Custom Control</span></span>](ui-automation-of-a-wpf-custom-control.md)  
+## <a name="in-this-section"></a><span data-ttu-id="323a1-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="323a1-104">In This Section</span></span>  
+ [<span data-ttu-id="323a1-105">Denetim Yazımına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="323a1-105">Control Authoring Overview</span></span>](control-authoring-overview.md)  
+ [<span data-ttu-id="323a1-106">Stillenebilir Denetimleri Tasarlama Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="323a1-106">Guidelines for Designing Stylable Controls</span></span>](guidelines-for-designing-stylable-controls.md)  
+ [<span data-ttu-id="323a1-107">Donatıcılar</span><span class="sxs-lookup"><span data-stu-id="323a1-107">Adorners</span></span>](adorners.md)  
+ [<span data-ttu-id="323a1-108">Denetim Stilleri ve Şablonları</span><span class="sxs-lookup"><span data-stu-id="323a1-108">Control Styles and Templates</span></span>](control-styles-and-templates.md)  
+ [<span data-ttu-id="323a1-109">WPF Özel Denetiminin UI Otomasyonu</span><span class="sxs-lookup"><span data-stu-id="323a1-109">UI Automation of a WPF Custom Control</span></span>](ui-automation-of-a-wpf-custom-control.md)  
   
-## <a name="see-also"></a><span data-ttu-id="b118b-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b118b-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="323a1-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="323a1-110">See also</span></span>
 
-- [<span data-ttu-id="b118b-111">Stil ve Şablon Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b118b-111">Styling and Templating</span></span>](styling-and-templating.md)
+- [<span data-ttu-id="323a1-111">Stil ve Şablon Oluşturma</span><span class="sxs-lookup"><span data-stu-id="323a1-111">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
