@@ -1,28 +1,28 @@
 ---
-title: 'Nasıl yapılır: Sabit Listesine Bağlama'
+title: 'Nasıl yapılır: Numaralandırmaya Bağlama'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binding data [WPF], enumeration
 - data binding [WPF], enumeration
 - enumeration [WPF]
 ms.assetid: b9091eba-1119-424e-868b-d1a4168b3732
-ms.openlocfilehash: 5026261366d6abde82790f05780d8ba2c29c4a49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93f33e497fd7acb81c55f86bf38737d4e7d79bf2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021017"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454444"
 ---
-# <a name="how-to-bind-to-an-enumeration"></a>Nasıl yapılır: Sabit Listesine Bağlama
-Bu örnek, bir numaralandırma sabit listesinin GetValues yöntemi bağlanarak bağlamak gösterilmektedir.  
+# <a name="how-to-bind-to-an-enumeration"></a>Nasıl yapılır: Numaralandırmaya Bağlama
+Bu örnek, numaralandırmanın GetValues yöntemine bağlama yoluyla bir numaralandırmaya nasıl bağlanılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, <xref:System.Windows.Controls.ListBox> listesini görüntüler <xref:System.Windows.HorizontalAlignment> sabit listesi değerleri veri bağlama aracılığıyla. <xref:System.Windows.Controls.ListBox> Ve <xref:System.Windows.Controls.Button> değiştirebileceğiniz şekilde bağlı <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> özelliği değerinin <xref:System.Windows.Controls.Button> bir değer seçerek <xref:System.Windows.Controls.ListBox>.  
+ Aşağıdaki örnekte <xref:System.Windows.Controls.ListBox>, veri bağlama aracılığıyla <xref:System.Windows.HorizontalAlignment> numaralandırma değerlerinin listesini görüntüler. <xref:System.Windows.Controls.ListBox> ve <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.ListBox>bir değer seçerek <xref:System.Windows.Controls.Button> <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> özellik değerini değiştirebilmeniz için bağlanır.  
   
  [!code-xaml[BindToEnum#BindToEnum](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToEnum/CS/Window1.xaml#bindtoenum)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bir Yönteme Bağlama](how-to-bind-to-a-method.md)
-- [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
+- [Veri Bağlamaya Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)
 - [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

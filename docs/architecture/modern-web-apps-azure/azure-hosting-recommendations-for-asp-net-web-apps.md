@@ -4,17 +4,17 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: ed8771a4d79b45d8fad0e5309c886c2e00402ec7
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71331996"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416722"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Core Web uygulamaları için Azure barındırma önerileri
 
 > "Her yerde iş kolu liderlerinin her ikisi de, buluttan uygulamaları (SaaS olarak da bilinir) almak ve bunları dergi abonelikleri gibi ödemeleri için BT departmanlarını atlar. Hizmete artık gerek duyulmuyorsa, köşede kullanılmayan bir ekipman olmadan aboneliği iptal edebilirler. "  
-> _\- Daristl Pköpmer, Gartner analist_
+> _\- Daryıl Pbir Mer, Gartner analist_
 
 Uygulamanızın ihtiyaçları ve mimarisi ne olursa olsun Microsoft Azure destekleyebilir. Barındırma gereksinimleriniz, statik bir Web sitesi veya onlarca hizmetlerden oluşan gelişmiş bir uygulama kadar basit olabilir. ASP.NET Core tek parçalı Web uygulamaları ve destekleyici hizmetler için önerilen birkaç tanınmış yapılandırma vardır. Bu makaledeki öneriler, tam uygulamalar, bireysel süreçler veya veriler arasında barındırılacak kaynak türüne göre gruplandırılır.
 
@@ -76,7 +76,7 @@ Daha büyük uygulamaların bir bölümü kendi daha küçük, bağımsız *mikr
 
 [Mikro hizmet tabanlı sistemler oluştururken göz önünde bulundurmanız gereken tasarım desenleri hakkında daha fazla bilgi edinin.](https://docs.microsoft.com/azure/architecture/microservices/design/patterns)
 
-### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
+### <a name="azure-kubernetes-service"></a>Azure Kubernetes hizmeti
 
 Azure Kubernetes hizmeti (AKS), barındırılan Kubernetes ortamınızı yönetir ve kapsayıcı düzenleme uzmanlığı olmadan Kapsayıcılı uygulamaları dağıtmayı ve yönetmeyi kolaylaştırır. Ayrıca, uygulamalarınızı çevrimdışı duruma getirmeden, kaynakları etkinleştirerek, yükselterek ve ölçeklendirerek devam eden işlemlerin ve bakımın yükünü ortadan kaldırır.
 
@@ -108,15 +108,15 @@ App Service ' de çalışmak için önemli değişiklikler gerektiren mevcut bir
 
 ## <a name="logical-processes"></a>Mantıksal süreçler
 
-Uygulamanın geri kalanından ayrışlabilecek tek tek mantıksal işlemler, Azure Işlevlerine "sunucusuz" bir şekilde dağıtılabilir. Azure Işlevleri, belirli bir sorun için ihtiyaç duyduğunuz kodu, uygulamayı veya altyapıyı çalıştırmak için herhangi bir endişelenmeden yazmanızı sağlar. C @ no__t-0, F @ no__t-1, Node. js, Python ve PHP dahil olmak üzere çeşitli programlama dilleri arasından seçim yapabilirsiniz. Bu, eldeki görev için en üretken dili seçmenizi sağlar. Bulut tabanlı çoğu çözüm gibi, yalnızca kullandığınız süre için ödeme yaparsınız ve gerektiğinde ölçeği ölçeklendirmek için Azure Işlevlerine güvenebilirsiniz.
+Uygulamanın geri kalanından ayrışlabilecek tek tek mantıksal işlemler, Azure Işlevlerine "sunucusuz" bir şekilde dağıtılabilir. Azure Işlevleri, belirli bir sorun için ihtiyaç duyduğunuz kodu, uygulamayı veya altyapıyı çalıştırmak için herhangi bir endişelenmeden yazmanızı sağlar. C\#, F\#, Node. js, Python ve PHP dahil olmak üzere çeşitli programlama dilleri arasından seçim yapabilirsiniz. Bu, eldeki görev için en üretken dili seçmenizi sağlar. Bulut tabanlı çoğu çözüm gibi, yalnızca kullandığınız süre için ödeme yaparsınız ve gerektiğinde ölçeği ölçeklendirmek için Azure Işlevlerine güvenebilirsiniz.
 
-## <a name="data"></a>Data
+## <a name="data"></a>Veri
 
 Azure çok çeşitli veri depolama seçenekleri sunarak uygulamanızın söz konusu veriler için uygun veri sağlayıcısını kullanabilmesi için.
 
 İşlem, ilişkisel veriler için Azure SQL veritabanları en iyi seçenektir. Yüksek performanslı okuma verileri için, Azure SQL veritabanı tarafından desteklenen bir Redsıs önbelleği iyi bir çözümdür.
 
-Yapılandırılmamış JSON verileri, SQL veritabanı sütunlarından blob 'lara veya Azure Storage 'daki tablolara DocumentDB 'ye kadar çeşitli yollarla depolanabilir. Bu şekilde, DocumentDB en iyi sorgulama işlevlerini sunar ve sorgulamayı desteklemesi gereken çok sayıda JSON tabanlı belge için önerilen seçenektir.
+Yapılandırılmamış JSON verileri, SQL veritabanı sütunlarından blob 'lara veya Azure Storage 'daki tablolara Azure Cosmos DB için çeşitli yollarla depolanabilir. Bu Azure Cosmos DB, en iyi sorgulama işlevlerini sunmaktadır ve sorgulamayı desteklemesi gereken çok sayıda JSON tabanlı belge için önerilen seçenektir.
 
 Uygulama davranışını düzenlemek için kullanılan geçici komut veya olay tabanlı veriler Azure Service Bus veya Azure depolama kuyruklarını kullanabilir. Azure Storage veri yolu daha fazla esneklik sunar ve uygulamalar içinde ve arasında önemsiz olmayan mesajlaşma için önerilen hizmettir.
 
@@ -154,4 +154,4 @@ Uygulamanızın gereksinimleri mimarisini dikte etmelidir. Kullanılabilir birç
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
->[Önceki](development-process-for-azure.md)
+>[Öncekini](development-process-for-azure.md)

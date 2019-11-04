@@ -2,12 +2,12 @@
 title: Koleksiyonlar (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 712ae4c9b4cf577ab728e4b78582445070e08049
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 23d73a26bbe0e711bb3a081994826e06634c4bac
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595287"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418700"
 ---
 # <a name="collections-c"></a>Koleksiyonlar (C#)
 
@@ -24,7 +24,7 @@ Koleksiyonunuz yalnızca bir veri türünün öğelerini içeriyorsa, <xref:Syst
 > [!NOTE]
 > Bu konudaki örnekler için `System.Collections.Generic` ve `System.Linq` ad alanları için [using](../../language-reference/keywords/using-directive.md) yönergelerini içerir.
 
- **Bu konudaki**
+ **Bu konuda**
 
 - [Basit bir koleksiyon kullanma](#BKMK_SimpleCollection)
 
@@ -50,7 +50,7 @@ Koleksiyonunuz yalnızca bir veri türünün öğelerini içeriyorsa, <xref:Syst
 
 ## <a name="using-a-simple-collection"></a>Basit bir koleksiyon kullanma
 
-Bu bölümdeki örneklerde, türü kesin belirlenmiş bir <xref:System.Collections.Generic.List%601> nesne listesiyle çalışmanıza olanak sağlayan genel sınıfı kullanılır.
+Bu bölümdeki örneklerde, türü kesin belirlenmiş bir nesne listesiyle çalışmanıza olanak sağlayan genel <xref:System.Collections.Generic.List%601> sınıfını kullanın.
 
 Aşağıdaki örnek, bir dizi dizenin bir listesini oluşturur ve sonra, bir [foreach](../../language-reference/keywords/foreach-in.md) ifadesi kullanarak dizeler arasında yinelenir.
 
@@ -87,9 +87,9 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-Bir koleksiyon aracılığıyla yinelemek için bir [for](../../language-reference/keywords/for.md) ifadesinin yerine `foreach` bir for ifadesini kullanabilirsiniz. Bunu, koleksiyon öğelerine dizin konumuna erişerek gerçekleştirirsiniz. Öğelerin dizini 0 ' dan başlar ve öğe sayısı eksi 1 ' den sona erer.
+Bir koleksiyon üzerinden yinelemek için bir `foreach` deyimin yerine [for](../../language-reference/keywords/for.md) deyiminizi kullanabilirsiniz. Bunu, koleksiyon öğelerine dizin konumuna erişerek gerçekleştirirsiniz. Öğelerin dizini 0 ' dan başlar ve öğe sayısı eksi 1 ' den sona erer.
 
-Aşağıdaki örnek `for` `foreach`yerine kullanarak bir koleksiyonun öğeleri boyunca yinelenir.
+Aşağıdaki örnek, `foreach`yerine `for` kullanarak bir koleksiyonun öğeleri boyunca yinelenir.
 
 ```csharp
 // Create a list of strings by using a
@@ -122,7 +122,7 @@ foreach (var salmon in salmons)
 // Output: chinook pink sockeye
 ```
 
-Aşağıdaki örnek, genel bir listeden öğeleri kaldırır. Bir `foreach` ifade yerine, azalan düzende yinelenen bir [for](../../language-reference/keywords/for.md) deyimleri kullanılır. Bunun nedeni, <xref:System.Collections.Generic.List%601.RemoveAt%2A> yöntemin kaldırılan bir öğeden sonra öğelerin daha düşük bir dizin değerine sahip olmasına neden olur.
+Aşağıdaki örnek, genel bir listeden öğeleri kaldırır. Bir `foreach` deyimleri yerine, azalan düzende yinelenen bir [for](../../language-reference/keywords/for.md) deyimleri kullanılır. Bunun nedeni <xref:System.Collections.Generic.List%601.RemoveAt%2A> yöntemi kaldırılan bir öğeden sonra öğelerin daha düşük bir dizin değerine sahip olmasına neden olur.
 
 ```csharp
 var numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -146,7 +146,7 @@ numbers.ForEach(
 // Output: 0 2 4 6 8
 ```
 
-İçindeki <xref:System.Collections.Generic.List%601>öğe türleri için kendi sınıfınızı de tanımlayabilirsiniz. Aşağıdaki örnekte `Galaxy` , <xref:System.Collections.Generic.List%601> tarafından kullanılan sınıfı kodda tanımlanmıştır.
+<xref:System.Collections.Generic.List%601>öğe türü için kendi sınıfınızı de tanımlayabilirsiniz. Aşağıdaki örnekte, <xref:System.Collections.Generic.List%601> tarafından kullanılan `Galaxy` sınıfı kodda tanımlanmıştır.
 
 ```csharp
 private static void IterateThroughList()
@@ -196,19 +196,19 @@ Ortak koleksiyon sınıflarından bazıları bu bölümde açıklanmıştır:
 
 ### <a name="systemcollectionsgeneric-classes"></a>System. Collections. Generic sınıfları
 
-<xref:System.Collections.Generic> Ad alanındaki sınıflardan birini kullanarak genel bir koleksiyon oluşturabilirsiniz. Genel bir koleksiyon, koleksiyondaki her öğe aynı veri türüne sahip olduğunda faydalıdır. Genel bir koleksiyon, yalnızca istenen veri türünün eklenmesine izin vererek güçlü yazma uygular.
+<xref:System.Collections.Generic> ad alanındaki sınıflardan birini kullanarak genel bir koleksiyon oluşturabilirsiniz. Genel bir koleksiyon, koleksiyondaki her öğe aynı veri türüne sahip olduğunda faydalıdır. Genel bir koleksiyon, yalnızca istenen veri türünün eklenmesine izin vererek güçlü yazma uygular.
 
-Aşağıdaki tabloda, <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanının sık kullanılan sınıflarının bazıları listelenmektedir:
+Aşağıdaki tabloda <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanının sık kullanılan sınıflarının bazıları listelenmektedir:
 
 |örneği|Açıklama|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|Anahtara göre düzenlenen anahtar/değer çiftleri koleksiyonunu temsil eder.|
 |<xref:System.Collections.Generic.List%601>|Dizin tarafından erişilebilen nesnelerin listesini temsil eder. Listeleri aramak, sıralamak ve değiştirmek için yöntemler sağlar.|
 |<xref:System.Collections.Generic.Queue%601>|Nesnelerin ilk, ilk çıkar (FıFO) koleksiyonunu temsil eder.|
-|<xref:System.Collections.Generic.SortedList%602>|İlişkili <xref:System.Collections.Generic.IComparer%601> uygulamaya göre anahtara göre sıralanan anahtar/değer çiftleri koleksiyonunu temsil eder.|
+|<xref:System.Collections.Generic.SortedList%602>|İlişkili <xref:System.Collections.Generic.IComparer%601> uygulamasına göre anahtara göre sıralanan anahtar/değer çiftleri koleksiyonunu temsil eder.|
 |<xref:System.Collections.Generic.Stack%601>|Nesnelerin son, ilk çıkar (LıFO) koleksiyonunu temsil eder.|
 
-Daha fazla bilgi için bkz. [yaygın olarak kullanılan koleksiyon türleri](../../../standard/collections/commonly-used-collection-types.md), [koleksiyon sınıfı seçme](../../../standard/collections/selecting-a-collection-class.md)ve <xref:System.Collections.Generic>.
+Daha fazla bilgi için bkz. [yaygın olarak kullanılan koleksiyon türleri](../../../standard/collections/commonly-used-collection-types.md), [bir koleksiyon sınıfı seçme](../../../standard/collections/selecting-a-collection-class.md)ve <xref:System.Collections.Generic>.
 
 <a name="BKMK_Concurrent"></a>
 
@@ -216,19 +216,19 @@ Daha fazla bilgi için bkz. [yaygın olarak kullanılan koleksiyon türleri](../
 
 .NET Framework 4 veya daha yeni bir sürümde, <xref:System.Collections.Concurrent> ad alanındaki koleksiyonlar, koleksiyon öğelerine birden çok iş parçacığından erişmek için verimli iş parçacığı güvenli işlemleri sağlar.
 
-Birden çok iş parçacığının <xref:System.Collections.Concurrent> koleksiyona aynı anda eriştiği her seferinde <xref:System.Collections.Generic?displayProperty=nameWithType> ve <xref:System.Collections?displayProperty=nameWithType> ad alanındaki ilgili türler yerine ad alanındaki sınıflar kullanılmalıdır. Daha fazla bilgi için bkz. [Iş parçacığı güvenli koleksiyonlar](../../../standard/collections/thread-safe/index.md) ve <xref:System.Collections.Concurrent>.
+<xref:System.Collections.Concurrent> ad alanındaki sınıflar, koleksiyona aynı anda birden çok iş parçacığı eriştiği zaman, <xref:System.Collections.Generic?displayProperty=nameWithType> ve <xref:System.Collections?displayProperty=nameWithType> ad alanlarında karşılık gelen türler yerine kullanılmalıdır. Daha fazla bilgi için bkz. [Iş parçacığı güvenli koleksiyonlar](../../../standard/collections/thread-safe/index.md) ve <xref:System.Collections.Concurrent>.
 
-<xref:System.Collections.Concurrent> Ad alanına dahil edilen bazı sınıflar, <xref:System.Collections.Concurrent.BlockingCollection%601> <xref:System.Collections.Concurrent.ConcurrentDictionary%602> <xref:System.Collections.Concurrent.ConcurrentQueue%601>, ve <xref:System.Collections.Concurrent.ConcurrentStack%601>' dir.
+<xref:System.Collections.Concurrent> ad alanına eklenen bazı sınıflar <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>ve <xref:System.Collections.Concurrent.ConcurrentStack%601>.
 
 <a name="BKMK_Collections"></a>
 
 ### <a name="systemcollections-classes"></a>System. Collections sınıfları
 
-<xref:System.Collections?displayProperty=nameWithType> Ad alanındaki sınıflar öğeleri özel olarak yazılmış nesneler olarak depolamaz, ancak türünden `Object`nesneler olarak depolamaz.
+<xref:System.Collections?displayProperty=nameWithType> ad alanındaki sınıflar öğeleri özel olarak yazılmış nesneler olarak depolamaz, ancak `Object`türündeki nesneler.
 
-Mümkün olduğunda, ad alanındaki eski türler <xref:System.Collections.Generic?displayProperty=nameWithType> `System.Collections` yerine ad alanı <xref:System.Collections.Concurrent> veya ad alanı içinde genel koleksiyonları kullanmanız gerekir.
+Mümkün olduğunda, <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanındaki genel koleksiyonları veya `System.Collections` ad alanındaki eski türler yerine <xref:System.Collections.Concurrent> ad alanını kullanmanız gerekir.
 
-Aşağıdaki tabloda, `System.Collections` ad alanında sık kullanılan sınıfların bazıları listelenmektedir:
+Aşağıdaki tabloda `System.Collections` ad alanında sık kullanılan sınıfların bazıları listelenmektedir:
 
 |örneği|Açıklama|
 |---|---|
@@ -237,15 +237,15 @@ Aşağıdaki tabloda, `System.Collections` ad alanında sık kullanılan sınıf
 |<xref:System.Collections.Queue>|Nesnelerin ilk, ilk çıkar (FıFO) koleksiyonunu temsil eder.|
 |<xref:System.Collections.Stack>|Nesnelerin son, ilk çıkar (LıFO) koleksiyonunu temsil eder.|
 
-<xref:System.Collections.Specialized> Ad alanı, yalnızca dize toplamaları ve bağlantılı liste ve karma sözlük gibi özelleştirilmiş ve kesin tür belirtilmiş koleksiyon sınıfları sağlar.
+<xref:System.Collections.Specialized> ad alanı, yalnızca dize toplamaları ve bağlantılı liste ve karma sözlük gibi özelleştirilmiş ve kesin tür belirtilmiş koleksiyon sınıfları sağlar.
 
 <a name="BKMK_KeyValuePairs"></a>
 
 ## <a name="implementing-a-collection-of-keyvalue-pairs"></a>Anahtar/değer çiftleri koleksiyonu uygulama
 
-Genel <xref:System.Collections.Generic.Dictionary%602> koleksiyon, her bir öğenin anahtarını kullanarak bir koleksiyondaki öğelere erişmenizi sağlar. Sözlüğe eklenen her ekleme bir değerden ve ilişkili anahtarından oluşur. `Dictionary` Sınıfı bir karma tablo olarak uygulandığından, anahtarını kullanarak bir değerin alınması hızlıdır.
+<xref:System.Collections.Generic.Dictionary%602> genel koleksiyonu, her bir öğenin anahtarını kullanarak bir koleksiyondaki öğelere erişmenizi sağlar. Sözlüğe eklenen her ekleme bir değerden ve ilişkili anahtarından oluşur. `Dictionary` sınıfı bir karma tablo olarak uygulandığından, anahtarını kullanarak bir değerin alınması hızlıdır.
 
-Aşağıdaki örnek bir `Dictionary` koleksiyon oluşturur ve bir `foreach` ifade kullanarak sözlükten yinelenir.
+Aşağıdaki örnek bir `Dictionary` koleksiyonu oluşturur ve bir `foreach` ifadesini kullanarak sözlükten yinelenir.
 
 ```csharp
 private static void IterateThruDictionary()
@@ -294,7 +294,7 @@ public class Element
 }
 ```
 
-Koleksiyonu oluşturmak için bir koleksiyon başlatıcısı kullanmak yerine, `AddToDictionary` veyöntemleriniaşağıdakiyöntemledeğiştirebilirsiniz.`BuildDictionary` `Dictionary`
+Bunun yerine, `Dictionary` koleksiyonunu oluşturmak için bir koleksiyon başlatıcısı kullanmak için, `BuildDictionary` ve `AddToDictionary` yöntemlerini aşağıdaki yöntemle değiştirebilirsiniz.
 
 ```csharp
 private static Dictionary<string, Element> BuildDictionary2()
@@ -313,7 +313,7 @@ private static Dictionary<string, Element> BuildDictionary2()
 }
 ```
 
-Aşağıdaki örnek, bir öğeyi <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> anahtara göre hızlı <xref:System.Collections.Generic.Dictionary%602.Item%2A> bir şekilde `Dictionary` bulmak için yöntemini ve özelliğini kullanır. Özelliği, `elements`içindeöğesini C#kullanarak koleksiyondaki bir öğeye erişmenizi sağlar. `Item` `elements[symbol]`
+Aşağıdaki örnek, bir öğeyi anahtara göre hızlı bir şekilde bulmak için `Dictionary` <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> yöntemini ve <xref:System.Collections.Generic.Dictionary%602.Item%2A> özelliğini kullanır. `Item` özelliği, içindeki C#`elements[symbol]` kullanarak `elements` koleksiyonundaki bir öğeye erişmenizi sağlar.
 
 ```csharp
 private static void FindInDictionary(string symbol)
@@ -332,7 +332,7 @@ private static void FindInDictionary(string symbol)
 }
 ```
 
-Aşağıdaki örnek bunun yerine, bir <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> öğeyi anahtara göre hızlı bir şekilde bulmak için yöntemini kullanır.
+Aşağıdaki örnek bunun yerine, bir öğeyi anahtara göre hızlı bir şekilde bulmak <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> yöntemini kullanır.
 
 ```csharp
 private static void FindInDictionary2(string symbol)
@@ -351,9 +351,9 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>Koleksiyona erişmek için LINQ kullanma
 
-LINQ (dil ile tümleşik sorgu), koleksiyonlara erişmek için kullanılabilir. LINQ sorguları filtreleme, sıralama ve gruplama özellikleri sağlar. Daha fazla bilgi için bkz. [ C#LINQ ile çalışmaya ](./linq/getting-started-with-linq.md)başlama.
+LINQ (dil ile tümleşik sorgu), koleksiyonlara erişmek için kullanılabilir. LINQ sorguları filtreleme, sıralama ve gruplama özellikleri sağlar. Daha fazla bilgi için bkz. [ C#LINQ ile çalışmaya ](/dotnet/csharp/programming-guide/concepts/linq/)başlama.
 
-Aşağıdaki örnek, genel `List`olarak bir LINQ sorgusu çalıştırır. LINQ sorgusu, sonuçları içeren farklı bir koleksiyon döndürür.
+Aşağıdaki örnek, bir genel `List`karşı bir LINQ sorgusu çalıştırır. LINQ sorgusu, sonuçları içeren farklı bir koleksiyon döndürür.
 
 ```csharp
 private static void ShowLINQ()
@@ -400,11 +400,11 @@ public class Element
 
 ## <a name="sorting-a-collection"></a>Bir koleksiyonu sıralama
 
-Aşağıdaki örnek bir koleksiyonu sıralamak için bir yordam gösterir. Örnek, `Car` <xref:System.Collections.Generic.List%601>içinde depolanan sınıfının örneklerini sıralar. Sınıfı, <xref:System.IComparable%601.CompareTo%2A> yönteminin uygulanması <xref:System.IComparable%601> için arabirimini uygular. `Car`
+Aşağıdaki örnek bir koleksiyonu sıralamak için bir yordam gösterir. Örnek, bir <xref:System.Collections.Generic.List%601>depolanan `Car` sınıfının örneklerini sıralar. `Car` sınıfı, <xref:System.IComparable%601.CompareTo%2A> yönteminin uygulanması için <xref:System.IComparable%601> arabirimini uygular.
 
-Yöntemine yapılan her çağrı <xref:System.IComparable%601.CompareTo%2A> , sıralama için kullanılan tek bir karşılaştırma yapar. `CompareTo` Yöntemdeki Kullanıcı tarafından yazılan kod, geçerli nesnenin her bir karşılaştırması için başka bir nesneyle ilgili bir değer döndürür. Geçerli nesne diğer nesneden daha küçükse döndürülen değer sıfırdan küçük, geçerli nesne diğer nesneden büyükse sıfırdan büyük ve eşitse sıfır. Bu, büyük, küçüktür ve eşittir ölçütlerine göre kod içinde tanımlamanızı sağlar.
+<xref:System.IComparable%601.CompareTo%2A> yöntemine yapılan her çağrı, sıralama için kullanılan tek bir karşılaştırma yapar. `CompareTo` yönteminde Kullanıcı tarafından yazılan kod, geçerli nesnenin her karşılaştırması için başka bir nesneyle ilgili bir değer döndürür. Geçerli nesne diğer nesneden daha küçükse döndürülen değer sıfırdan küçük, geçerli nesne diğer nesneden büyükse sıfırdan büyük ve eşitse sıfır. Bu, büyük, küçüktür ve eşittir ölçütlerine göre kod içinde tanımlamanızı sağlar.
 
-`ListCars` Yönteminde`cars.Sort()` , ifade listeyi sıralar. <xref:System.Collections.Generic.List%601.Sort%2A> `CompareTo` Öğesininyöntemine`Car` yapılan bu çağrı, yönteminin içindeki `List`nesneler için otomatik olarak çağrılmasına neden olur. <xref:System.Collections.Generic.List%601>
+`ListCars` yönteminde, `cars.Sort()` ifade listeyi sıralar. <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.List%601.Sort%2A> yöntemine yapılan bu çağrı, `CompareTo` yönteminin `List``Car` nesneler için otomatik olarak çağrılmasına neden olur.
 
 ```csharp
 private static void ListCars()
@@ -480,13 +480,13 @@ public class Car : IComparable<Car>
 
 ## <a name="defining-a-custom-collection"></a>Özel bir koleksiyon tanımlama
 
-<xref:System.Collections.Generic.IEnumerable%601> Veya<xref:System.Collections.IEnumerable> arabirimini uygulayarak bir koleksiyon tanımlayabilirsiniz.
+<xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Collections.IEnumerable> arabirimini uygulayarak bir koleksiyon tanımlayabilirsiniz.
 
 Özel bir koleksiyon tanımlamanızı mümkün olsa da, bu konunun önceki kısımlarında yer alan [koleksiyonlar türlerinde](#BKMK_KindsOfCollections) açıklanan .NET Framework dahil edilen koleksiyonları kullanmak genellikle daha iyidir.
 
-Aşağıdaki örnek adlı `AllColors`özel bir koleksiyon sınıfını tanımlar. Bu sınıf, <xref:System.Collections.IEnumerable.GetEnumerator%2A> yönteminin <xref:System.Collections.IEnumerable> uygulanması için arabirimini uygular.
+Aşağıdaki örnek, `AllColors`adlı bir özel koleksiyon sınıfını tanımlar. Bu sınıf, <xref:System.Collections.IEnumerable.GetEnumerator%2A> yönteminin uygulanması için <xref:System.Collections.IEnumerable> arabirimini uygular.
 
-Yöntemi `GetEnumerator` , `ColorEnumerator` sınıfının bir örneğini döndürür. `ColorEnumerator`<xref:System.Collections.IEnumerator.Current%2A>özelliği, yöntemive<xref:System.Collections.IEnumerator.Reset%2A> yönteminin uygulanması için arabiriminiuygular.<xref:System.Collections.IEnumerator> <xref:System.Collections.IEnumerator.MoveNext%2A>
+`GetEnumerator` yöntemi `ColorEnumerator` sınıfının bir örneğini döndürür. `ColorEnumerator`, <xref:System.Collections.IEnumerator.Current%2A> özelliğinin, <xref:System.Collections.IEnumerator.MoveNext%2A> yönteminin ve <xref:System.Collections.IEnumerator.Reset%2A> yönteminin uygulanması için <xref:System.Collections.IEnumerator> arabirimini uygular.
 
 ```csharp
 private static void ListColors()
@@ -563,13 +563,13 @@ public class Color
 
 ## <a name="iterators"></a>Yineleyiciler
 
-Bir *Yineleyici* , bir koleksiyon üzerinde özel bir yineleme gerçekleştirmek için kullanılır. Yineleyici bir yöntem veya `get` erişimci olabilir. Bir yineleyici, tek seferde koleksiyonun her bir öğesini döndürmek için bir [yield return](../../language-reference/keywords/yield.md) ifadesini kullanır.
+Bir *Yineleyici* , bir koleksiyon üzerinde özel bir yineleme gerçekleştirmek için kullanılır. Yineleyici bir yöntem veya `get` erişimcisi olabilir. Bir yineleyici, tek seferde koleksiyonun her bir öğesini döndürmek için bir [yield return](../../language-reference/keywords/yield.md) ifadesini kullanır.
 
-Bir [foreach](../../language-reference/keywords/foreach-in.md) ifadesi kullanarak bir yineleyici çağırın. `foreach` Döngünün her yinelemesi yineleyiciyi çağırır. Yineleyiciden bir `yield return` ifadeye ulaşıldığında, bir ifade döndürülür ve koddaki geçerli konum korunur. Bu konumdan, yineleyici bir sonraki sefer çağrıldığında yürütme yeniden başlatılır.
+Bir [foreach](../../language-reference/keywords/foreach-in.md) ifadesi kullanarak bir yineleyici çağırın. `foreach` döngüsünün her yinelemesi yineleyiciyi çağırır. Yineleyiciden bir `yield return` deyimine ulaşıldığında, bir ifade döndürülür ve koddaki geçerli konum korunur. Bu konumdan, yineleyici bir sonraki sefer çağrıldığında yürütme yeniden başlatılır.
 
 Daha fazla bilgi için bkz. [yineleyicilerC#()](./iterators.md).
 
-Aşağıdaki örnek bir yineleyici yöntemi kullanır. Yineleyici yöntemi `yield return` için bir [for](../../language-reference/keywords/for.md) döngüsü içinde olan bir ifade vardır. Yönteminde, `foreach` ifade gövdesinin her yinelemesi, bir sonraki `yield return` ifadeye devam eden Yineleyici yöntemine bir çağrı oluşturur. `ListEvenNumbers`
+Aşağıdaki örnek bir yineleyici yöntemi kullanır. Yineleyici yöntemi bir [for](../../language-reference/keywords/for.md) döngüsü içinde olan bir `yield return` ifadesine sahiptir. `ListEvenNumbers` yönteminde, `foreach` deyimin gövdesinin her yinelemesi, bir sonraki `yield return` ifadesine devam eden Yineleyici yöntemine bir çağrı oluşturur.
 
 ```csharp
 private static void ListEvenNumbers()

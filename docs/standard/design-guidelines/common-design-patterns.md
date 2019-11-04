@@ -7,22 +7,22 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], design patterns
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
 author: KrzysztofCwalina
-ms.openlocfilehash: d0b16530863b009010383c8739c9512738dfdffd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1fa45c2934ec1c8358bd024af7a05877d183b945
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026477"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421353"
 ---
 # <a name="common-design-patterns"></a>Ortak Tasarım Desenleri
-Çok sayıda yazılım desenleri, deseni diller ve desenler çok geniş konusunu ele kötü modelleri kitaplar vardır. Bu nedenle, bu bölümde, yönergeleri ve .NET Framework API'ları tasarımında sık kullanılan desenleri çok sınırlı bir dizi ilgili tartışma sağlar.  
+Desenlerin çok geniş bir konusuyla ilgili olan yazılım desenleri, desen dilleri ve kenar desenleri hakkında çok sayıda kitap vardır. Bu nedenle, bu bölümde .NET Framework API 'Leri tasarımında sık kullanılan çok sınırlı bir desen kümesiyle ilgili yönergeler ve tartışmalar sağlanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Bağımlılık Özellikleri](../../../docs/standard/design-guidelines/dependency-properties.md)  
- [Dispose Deseni](../../../docs/standard/design-guidelines/dispose-pattern.md)  
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ [Dispose Deseni](../garbage-collection/implementing-dispose.md)  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *, Bir yeniden [kullanılabilir .NET kitaplığı Için kurallar, deyimler ve desenler, yeniden kullanılabilir .NET kitaplıkları için, 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abkms, yayınlanmış Eki 22, 2008 Ile Addison-Wesley tarafından yeniden yazdırılmıştır Microsoft Windows geliştirme serisinin bir parçası olarak profesyonel.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

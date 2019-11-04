@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: f0b763ad6b65c74b8c406fe006ef4036e70a99d4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b6e45858b64ea1bf87ca0e73001a5cf07ddfd58b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523558"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417703"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim (C# Programlama Kılavuzu)
 
@@ -75,15 +75,15 @@ Bu yönergeyi tamamlamak için, bilgisayarınızda yüklü Microsoft Office Exce
 
 1. Bir Excel çalışma sayfası ayarlamak için aşağıdaki yöntemi `Program` sınıfına ekleyin.
 
-     @No__t_0 yöntemi, belirli bir şablonu belirtmek için isteğe bağlı bir parametreye sahiptir. 4 ' te C# yeni olan isteğe bağlı parametreler, parametrenin varsayılan değerini kullanmak istiyorsanız bu parametreye ilişkin bağımsız değişkeni atlamanızı sağlar. Aşağıdaki kodda bir bağımsız değişken gönderilmediğinden, `Add` varsayılan şablonu kullanır ve yeni bir çalışma kitabı oluşturur. Önceki sürümlerindeki denk ifade, bir yer C# tutucu bağımsız değişkeni gerektirir: `ExcelApp.Workbooks.Add(Type.Missing)`.
+     <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> yöntemi, belirli bir şablonu belirtmek için isteğe bağlı bir parametreye sahiptir. 4 ' te C# yeni olan isteğe bağlı parametreler, parametrenin varsayılan değerini kullanmak istiyorsanız bu parametreye ilişkin bağımsız değişkeni atlamanızı sağlar. Aşağıdaki kodda bir bağımsız değişken gönderilmediğinden, `Add` varsayılan şablonu kullanır ve yeni bir çalışma kitabı oluşturur. Önceki sürümlerindeki denk ifade, bir yer C# tutucu bağımsız değişkeni gerektirir: `ExcelApp.Workbooks.Add(Type.Missing)`.
 
      [!code-csharp[csProgGuideOfficeHowTo#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#4)]
 
-2. @No__t_0 sonuna aşağıdaki kodu ekleyin. Kod, çalışma sayfasının ilk satırının ilk iki sütununa değer ekler.
+2. `DisplayInExcel`sonuna aşağıdaki kodu ekleyin. Kod, çalışma sayfasının ilk satırının ilk iki sütununa değer ekler.
 
      [!code-csharp[csProgGuideOfficeHowTo#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#5)]
 
-3. @No__t_0 sonuna aşağıdaki kodu ekleyin. @No__t_0 döngüsü, hesap listesindeki bilgileri, çalışma sayfasının Art arda gelen satırlarının ilk iki sütununa koyar.
+3. `DisplayInExcel`sonuna aşağıdaki kodu ekleyin. `foreach` döngüsü, hesap listesindeki bilgileri, çalışma sayfasının Art arda gelen satırlarının ilk iki sütununa koyar.
 
      [!code-csharp[csProgGuideOfficeHowTo#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#7)]
 
@@ -91,7 +91,7 @@ Bu yönergeyi tamamlamak için, bilgisayarınızda yüklü Microsoft Office Exce
 
      [!code-csharp[csProgGuideOfficeHowTo#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#13)]
 
-     Önceki sürümleri bu C# işlemler için açık atama gerektirir çünkü `ExcelApp.Columns[1]` bir `Object` döndürdüğünden `AutoFit` bir Excel <xref:Microsoft.Office.Interop.Excel.Range> yöntemidir. Aşağıdaki satırlarda atama gösterilmektedir.
+     Önceki sürümleri bu C# işlemler için açık atama gerektirir çünkü `ExcelApp.Columns[1]` bir `Object`döndürdüğünden `AutoFit` bir Excel <xref:Microsoft.Office.Interop.Excel.Range> yöntemidir. Aşağıdaki satırlarda atama gösterilmektedir.
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
@@ -99,7 +99,7 @@ Bu yönergeyi tamamlamak için, bilgisayarınızda yüklü Microsoft Office Exce
 
 ## <a name="to-run-the-project"></a>Projeyi çalıştırmak için
 
-1. @No__t_0 sonuna aşağıdaki satırı ekleyin.
+1. `Main`sonuna aşağıdaki satırı ekleyin.
 
      [!code-csharp[csProgGuideOfficeHowTo#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#8)]
 
@@ -111,11 +111,11 @@ Bu yönergeyi tamamlamak için, bilgisayarınızda yüklü Microsoft Office Exce
 
 1. C# 4 ve sonraki sürümlerin, Office programlama 'yi geliştiren ek yollarını göstermek için aşağıdaki kod bir Word uygulaması açar ve Excel çalışma sayfasına bağlanan bir simge oluşturur.
 
-     Bu adımda daha sonra belirtilen `CreateIconInWordDoc` yöntemi `Program` sınıfına yapıştırın. `CreateIconInWordDoc`, <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> ve <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A> metot çağrılarının karmaşıklığını azaltmak için adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanır. Bu çağrılar, başvuru parametrelerine sahip COM yöntemlerine yapılan C# çağrıları kolaylaştıran 4 ' te tanıtılan iki yeni özelliği dahil ediyor. İlk olarak, başvuru parametrelerine bağımsız değişkenleri değer parametreleriniz gibi gönderebilirsiniz. Diğer bir deyişle, her başvuru parametresi için bir değişken oluşturmadan doğrudan değerleri gönderebilirsiniz. Derleyici bağımsız değişken değerlerini tutacak geçici değişkenler oluşturur ve çağrıdan geri döndüğünüzde değişkenleri atar. İkinci olarak, bağımsız değişken listesindeki `ref` anahtar sözcüğünü atlayabilirsiniz.
+     Bu adımda daha sonra belirtilen `CreateIconInWordDoc` yöntemi `Program` sınıfına yapıştırın. `CreateIconInWordDoc`, <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> ve <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>metot çağrılarının karmaşıklığını azaltmak için adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanır. Bu çağrılar, başvuru parametrelerine sahip COM yöntemlerine yapılan C# çağrıları kolaylaştıran 4 ' te tanıtılan iki yeni özelliği dahil ediyor. İlk olarak, başvuru parametrelerine bağımsız değişkenleri değer parametreleriniz gibi gönderebilirsiniz. Diğer bir deyişle, her başvuru parametresi için bir değişken oluşturmadan doğrudan değerleri gönderebilirsiniz. Derleyici bağımsız değişken değerlerini tutacak geçici değişkenler oluşturur ve çağrıdan geri döndüğünüzde değişkenleri atar. İkinci olarak, bağımsız değişken listesindeki `ref` anahtar sözcüğünü atlayabilirsiniz.
 
-     @No__t_0 yönteminin tümü isteğe bağlı dört başvuru parametresi vardır. C# 4,0 ve sonraki sürümlerde, varsayılan değerlerini kullanmak istiyorsanız parametrelerin herhangi biri veya tümü için bağımsız değişkenleri atlayabilirsiniz. C# 3,0 ve önceki sürümlerde, her bir parametre için bir bağımsız değişken sağlanmalı ve parametreler başvuru parametreleri olduğundan bağımsız değişken bir değişken olmalıdır.
+     `Add` yönteminin tümü isteğe bağlı dört başvuru parametresi vardır. C# 4,0 ve sonraki sürümlerde, varsayılan değerlerini kullanmak istiyorsanız parametrelerin herhangi biri veya tümü için bağımsız değişkenleri atlayabilirsiniz. C# 3,0 ve önceki sürümlerde, her bir parametre için bir bağımsız değişken sağlanmalı ve parametreler başvuru parametreleri olduğundan bağımsız değişken bir değişken olmalıdır.
 
-     @No__t_0 yöntemi panonun içeriğini ekler. Yönteminde, hepsi isteğe bağlı yedi başvuru parametresi vardır. Aşağıdaki kod, bunların ikisi için bağımsız değişkenler belirtir: `Link`, pano içeriklerinin kaynağına bir bağlantı oluşturmak ve bağlantıyı bir simge olarak göstermek için `DisplayAsIcon`. C# 4,0 ve sonraki sürümlerde, bu ikisi için adlandırılmış bağımsız değişkenleri kullanabilir ve diğerlerini atlayabilirsiniz. Bunlar başvuru parametreleri olsa da, `ref` anahtar sözcüğünü kullanmanız veya bağımsız değişken olarak gönderilmek üzere değişkenler oluşturmanız gerekmez. Değerleri doğrudan gönderebilirsiniz. C# 3,0 ve önceki sürümlerde, her başvuru parametresi için bir değişken bağımsız değişkeni sağlamanız gerekir.
+     `PasteSpecial` yöntemi panonun içeriğini ekler. Yönteminde, hepsi isteğe bağlı yedi başvuru parametresi vardır. Aşağıdaki kod, bunların ikisi için bağımsız değişkenler belirtir: `Link`, pano içeriklerinin kaynağına bir bağlantı oluşturmak ve bağlantıyı bir simge olarak göstermek için `DisplayAsIcon`. C# 4,0 ve sonraki sürümlerde, bu ikisi için adlandırılmış bağımsız değişkenleri kullanabilir ve diğerlerini atlayabilirsiniz. Bunlar başvuru parametreleri olsa da, `ref` anahtar sözcüğünü kullanmanız veya bağımsız değişken olarak gönderilmek üzere değişkenler oluşturmanız gerekmez. Değerleri doğrudan gönderebilirsiniz. C# 3,0 ve önceki sürümlerde, her başvuru parametresi için bir değişken bağımsız değişkeni sağlamanız gerekir.
 
      [!code-csharp[csProgGuideOfficeHowTo#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#9)]
 
@@ -123,11 +123,11 @@ Bu yönergeyi tamamlamak için, bilgisayarınızda yüklü Microsoft Office Exce
 
      [!code-csharp[csProgGuideOfficeHowTo#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#10)]
 
-2. @No__t_0 sonuna aşağıdaki ifadeyi ekleyin.
+2. `Main`sonuna aşağıdaki ifadeyi ekleyin.
 
      [!code-csharp[csProgGuideOfficeHowTo#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#11)]
 
-3. @No__t_0 sonuna aşağıdaki ifadeyi ekleyin. @No__t_0 yöntemi, çalışma sayfasını panoya ekler.
+3. `DisplayInExcel`sonuna aşağıdaki ifadeyi ekleyin. `Copy` yöntemi, çalışma sayfasını panoya ekler.
 
      [!code-csharp[csProgGuideOfficeHowTo#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#12)]
 
@@ -141,7 +141,7 @@ Bu yönergeyi tamamlamak için, bilgisayarınızda yüklü Microsoft Office Exce
 
      Ayrıca, gerekli ve COM yöntemleri tarafından döndürülen türler `Object` yerine `dynamic` türü kullanılarak gösterilebildiğinden programlama kolaylaşır. Tür `dynamic` olan değişkenler çalışma zamanına kadar değerlendirilmez, bu da açık atama gereksinimini ortadan kaldırır. Daha fazla bilgi için bkz. [dinamik tür kullanımı](../types/using-type-dynamic.md).
 
-     4 C# ' te, PIA kullanımı yerine tür bilgilerini katıştırma varsayılan davranıştır. Bu varsayılan nedenle, açık atama gerekli olmadığından önceki örneklerden bazıları basitleştirilmiştir. Örneğin, `DisplayInExcel` `worksheet` bildirimi `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet` yerine `Excel._Worksheet workSheet = excelApp.ActiveSheet` olarak yazılmıştır. Aynı yöntemde `AutoFit` yapılan çağrılar, `ExcelApp.Columns[1]` bir `Object` döndürdüğünden ve `AutoFit` bir Excel yöntemi olduğundan, varsayılan olmadan açık atama gerektirir. Aşağıdaki kod, atama gösterir.
+     4 C# ' te, PIA kullanımı yerine tür bilgilerini katıştırma varsayılan davranıştır. Bu varsayılan nedenle, açık atama gerekli olmadığından önceki örneklerden bazıları basitleştirilmiştir. Örneğin, `DisplayInExcel` `worksheet` bildirimi `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`yerine `Excel._Worksheet workSheet = excelApp.ActiveSheet` olarak yazılmıştır. Aynı yöntemde `AutoFit` yapılan çağrılar, `ExcelApp.Columns[1]` bir `Object`döndürdüğünden ve `AutoFit` bir Excel yöntemi olduğundan, varsayılan olmadan açık atama gerektirir. Aşağıdaki kod, atama gösterir.
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
@@ -157,7 +157,7 @@ Bu yönergeyi tamamlamak için, bilgisayarınızda yüklü Microsoft Office Exce
 
      [!code-csharp[csProgGuideOfficeHowTo#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#15)]
 
-     @No__t_0 yöntemi, hepsi isteğe bağlı yedi değer parametresine sahiptir. Adlandırılmış ve isteğe bağlı bağımsız değişkenler hiçbiri, bazıları veya tümü için bağımsız değişkenler sağlamanıza olanak tanır. Önceki ifadede, `Format` parametrelerden yalnızca biri için bir bağımsız değişken sağlanır. @No__t_0 parametre listesindeki ilk parametre olduğundan, parametre adını belirtmeniz gerekmez. Ancak, aşağıdaki kodda gösterildiği gibi, deyimin parametre adının dahil edilip edilmediğini anlamak daha kolay olabilir.
+     <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> yöntemi, hepsi isteğe bağlı yedi değer parametresine sahiptir. Adlandırılmış ve isteğe bağlı bağımsız değişkenler hiçbiri, bazıları veya tümü için bağımsız değişkenler sağlamanıza olanak tanır. Önceki ifadede, `Format` parametrelerden yalnızca biri için bir bağımsız değişken sağlanır. `Format` parametre listesindeki ilk parametre olduğundan, parametre adını belirtmeniz gerekmez. Ancak, aşağıdaki kodda gösterildiği gibi, deyimin parametre adının dahil edilip edilmediğini anlamak daha kolay olabilir.
 
      [!code-csharp[csProgGuideOfficeHowTo#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#16)]
 
@@ -176,7 +176,7 @@ Aşağıdaki kod, tüm örneği göstermektedir.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
-- [dynamic](../../language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Tür dinamiği kullanma](../types/using-type-dynamic.md)
 - [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../classes-and-structs/named-and-optional-arguments.md)
 - [Nasıl yapılır: Office Programlamada Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenleri Kullanma](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

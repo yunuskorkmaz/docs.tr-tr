@@ -4,17 +4,17 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Mima
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373761"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416697"
 ---
 # <a name="architectural-principles"></a>Mimari ilkeleri
 
 > "Oluşturucular, programcıların programlar yazdığı şekilde bina gerçekleştirmişse, birlikte gelen ilk Woodpecker, Civil 'ı yok eder."  
-> _\-Gerald Weinberg_
+> _\- Gerald Weinberg_
 
 Bakım yaparken yazılım çözümlerini mimariyle mimarın ve tasarlayabilmelisiniz. Bu bölümde özetlenen ilkeler, temiz ve sürdürülebilir uygulamalara yol açacak mimari kararlara kılavuzluk etmenize yardımcı olabilir. Genellikle, bu ilkeler, uygulamanızın diğer bölümlerine sıkı bir şekilde bağlı olmayan, ancak açık arabirimler veya mesajlaşma sistemleri aracılığıyla iletişim kuran ayrık bileşenlerden uygulamalar oluşturmaya nasıl kılavuzluk eder.
 
@@ -75,7 +75,7 @@ Mantığı çoğaltmak yerine bir programlama yapısında kapsülleyebilirsiniz.
 
 ### <a name="persistence-ignorance"></a>Kalıcılık Ignorance
 
-**Kalıcılık Ignorance** (PI), kalıcı olması gereken türlere başvurur, ancak kodu Kalıcılık teknolojisi seçimi tarafından etkilenmemiştir. .NET 'teki bu tür türler, belirli bir temel sınıftan devralması veya belirli bir arabirim uygulamak zorunda olmadıkları için bazen düz eski CLR nesneleri (POCOs) olarak adlandırılır. Aynı iş modelinin birden çok şekilde kalıcı olmasını sağladığından, uygulama için ek esneklik sunarak Kalıcılık kalıcılığı önem taşır. Kalıcılık seçimleri zaman içinde, bir veritabanı teknolojisinden diğerine değişebilir ya da uygulamanın başladığı her şeyi (örneğin, bir Redsıs önbelleği veya Azure DocumentDb kullanma) Buna ek olarak, ilişkisel veritabanı).
+**Kalıcılık Ignorance** (PI), kalıcı olması gereken türlere başvurur, ancak kodu Kalıcılık teknolojisi seçimi tarafından etkilenmemiştir. .NET 'teki bu tür türler, belirli bir temel sınıftan devralması veya belirli bir arabirim uygulamak zorunda olmadıkları için bazen düz eski CLR nesneleri (POCOs) olarak adlandırılır. Aynı iş modelinin birden çok şekilde kalıcı olmasını sağladığından, uygulama için ek esneklik sunarak Kalıcılık kalıcılığı önem taşır. Kalıcılık seçimleri zaman içinde, bir veritabanı teknolojisinden diğerine değişebilir ya da uygulamanın başladığı her şeyi (örneğin, bir Redsıs önbelleği veya Azure Cosmos DB ek olarak ilişkisel veritabanı).
 
 Bu ilkeye yönelik ihlallere örnek olarak şunlar verilebilir:
 
@@ -101,9 +101,9 @@ En azından, bireysel Web uygulamaları, bir veritabanını diğer uygulamalarla
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- [JAVA tasarım desenleri: İlkeleri](https://java-design-patterns.com/principles/)
+- [JAVA tasarım desenleri: Ilkeler](https://java-design-patterns.com/principles/)
 - [Sınırlanmış bağlam](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
->[Önceki](choose-between-traditional-web-and-single-page-apps.md)İleri
->[](common-web-application-architectures.md)
+>[Önceki](choose-between-traditional-web-and-single-page-apps.md)
+>[İleri](common-web-application-architectures.md)

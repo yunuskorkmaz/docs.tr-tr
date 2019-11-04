@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 547ecd9ff823f61bf3995c02959235b65a4a3979
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a6c0ac86689c5d095fc077beb39d6281f77aab24
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606151"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422949"
 ---
 # <a name="abstract-c-reference"></a>abstract (C# Başvurusu)
-`abstract` Değiştirici, değiştirilmekte olan bir uygulamanın eksik veya tamamlanmamış bir uygulamasına sahip olduğunu gösterir. Soyut değiştirici sınıflar, Yöntemler, özellikler, Dizin oluşturucular ve olaylar ile kullanılabilir. Bir sınıfın yalnızca diğer sınıfların temel sınıfı olduğunu göstermek için bir sınıf bildiriminde değiştiricisinikullanın,kendikendineörneğideğildir.`abstract` Soyut olarak işaretlenen Üyeler soyut sınıftan türetilen soyut olmayan sınıflar tarafından uygulanmalıdır.
+`abstract` değiştirici, değiştirilmekte olan bir uygulamanın eksik veya tamamlanmamış bir uygulamasına sahip olduğunu gösterir. Soyut değiştirici sınıflar, Yöntemler, özellikler, Dizin oluşturucular ve olaylar ile kullanılabilir. Bir sınıfın yalnızca diğer sınıfların temel sınıfı olduğunu göstermek için bir sınıf bildiriminde `abstract` değiştiricisini kullanın, kendi kendine örneği değildir. Soyut olarak işaretlenen Üyeler soyut sınıftan türetilen soyut olmayan sınıflar tarafından uygulanmalıdır.
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, sınıfının `Square` türettiği `Shape`için bir `GetArea` uygulamasını sağlaması gerekir:  
+ Bu örnekte, sınıf `Square`, `Shape`türettiği için `GetArea` uygulamasını sağlamalıdır:  
   
  [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
   
@@ -29,11 +29,11 @@ ms.locfileid: "69606151"
   
 - Soyut bir sınıf, Soyut yöntemler ve erişimciler içerebilir.  
   
-- İki değiştiricinin ters anlamları olduğundan, soyut değiştirici içeren bir [](./sealed.md) soyut sınıfı değiştirmek mümkün değildir. Değiştirici bir sınıfın devralınmasını engeller `abstract` ve değiştirici bir sınıfın devralınmasını gerektirir. `sealed`  
+- İki değiştiricinin ters anlamları olduğundan, [soyut değiştirici içeren](./sealed.md) bir soyut sınıfı değiştirmek mümkün değildir. `sealed` değiştiricisi bir sınıfın devralınmasını engeller ve `abstract` değiştiricisi bir sınıfın devralınmasını gerektirir.  
   
 - Soyut bir sınıftan türetilmiş soyut olmayan bir sınıf, devralınan tüm soyut yöntemlerin ve erişimcilerinin gerçek uygulamalarını içermelidir.  
   
- Yöntemin veya özelliğin uygulama içermediğini belirtmek için yöntem veya özellik bildiriminde değiştiricikullanın.`abstract`  
+ Yöntemin veya özelliğin uygulama içermediğini belirtmek için bir yöntem veya özellik bildiriminde `abstract` değiştiricisini kullanın.  
   
  Soyut yöntemler aşağıdaki özelliklere sahiptir:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "69606151"
   
  Özet özellikler, bildirim ve çağırma söz dizimi farklılıkları dışında soyut yöntemler gibi davranır.  
   
-- `abstract` Değiştirici statik bir özellik üzerinde kullanılması hatadır.  
+- Statik bir özellik üzerinde `abstract` değiştiricisinin kullanılması hatadır.  
   
 - Bir soyut devralınmış özellik, [geçersiz kılma](./override.md) değiştiricisini kullanan bir özellik bildirimi eklenerek, türetilmiş bir sınıfta geçersiz kılınabilir.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69606151"
 [!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, sınıfı `DerivedClass` soyut bir sınıftan `BaseClass`türetilir. Soyut sınıf soyut bir yöntem, `AbstractMethod`ve iki soyut `X` özellik içerir ve `Y`.  
+ Bu örnekte, sınıf `DerivedClass` `BaseClass`soyut bir sınıftan türetilir. Soyut sınıf soyut bir yöntem, `AbstractMethod`ve iki soyut özellik içerir `X` ve `Y`.  
   
 [!code-csharp[csrefKeywordsModifiers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#3)]
   
@@ -85,7 +85,7 @@ Derleyicinin ' BaseClass ' soyut sınıfının bir örneğini oluşturkullanıla
 
 - [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [Değiştiriciler](./modifiers.md)
+- [Değiştiriciler](index.md)
 - [virtual](./virtual.md)
 - [override](./override.md)
 - [C# Anahtar Sözcükleri](./index.md)

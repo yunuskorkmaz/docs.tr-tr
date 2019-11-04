@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 17c384ec327d4a80ed614dce6254baa5bfb2e960
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5559acd162b26a94b009ec21691d1501c90db290
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597303"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419523"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Tek Boyutlu Diziler (C# Programlama Kılavuzu)
 
@@ -19,7 +19,7 @@ Aşağıdaki örnekte gösterildiği gibi, beş tamsayının tek boyutlu bir diz
   
  [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
   
- Bu dizi öğesine `array[0]` `array[4]`öğesinden öğelerini içerir. [New](../../language-reference/operators/new-operator.md) işleci diziyi oluşturmak için kullanılır ve dizi öğelerini varsayılan değerlerine başlatır. Bu örnekte, tüm dizi öğeleri sıfır olarak başlatılır.  
+ Bu dizi `array[4]``array[0]` öğeleri içerir. [New](../../language-reference/operators/new-operator.md) işleci diziyi oluşturmak için kullanılır ve dizi öğelerini varsayılan değerlerine başlatır. Bu örnekte, tüm dizi öğeleri sıfır olarak başlatılır.  
   
  Dize öğelerini depolayan bir dizi aynı şekilde bildirilebilecek. Örneğin:  
   
@@ -53,9 +53,9 @@ Aşağıdaki örnekte gösterildiği gibi, beş tamsayının tek boyutlu bir diz
   
  [!code-csharp[csProgGuideArrays#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#10)]  
   
- Bu deyimin sonucu, bir değer türü veya `SomeType` başvuru türü olmasına bağlıdır. Değer bir tür ise, ifade, her birinin türü `SomeType`olan 10 öğeden oluşan bir dizi oluşturur. `SomeType` Bir başvuru türü ise, ifade her biri null başvuruya başlatılan 10 öğeden oluşan bir dizi oluşturur.  
+ Bu deyimin sonucu, `SomeType` bir değer türü veya bir başvuru türü olmasına bağlıdır. Değer bir tür ise, ifade, her birinin türü `SomeType`olan 10 öğeden oluşan bir dizi oluşturur. `SomeType` bir başvuru türü ise, ifade her biri null başvuruya başlatılan 10 öğeden oluşan bir dizi oluşturur.  
   
- Değer türleri ve başvuru türleri hakkında daha fazla bilgi için bkz. [türler](../../language-reference/keywords/types.md).  
+ Değer türleri ve başvuru türleri hakkında daha fazla bilgi için bkz. [türler](/dotnet/csharp/language-reference/keywords).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

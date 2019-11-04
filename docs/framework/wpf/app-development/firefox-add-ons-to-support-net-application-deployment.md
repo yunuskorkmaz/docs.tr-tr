@@ -7,31 +7,31 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: 39f4548bfe9e505c1369a0de8262560070fd6221
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 6e8a333fc84eb85b7a312cb87207ebc235fbfe9f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833922"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424566"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>.NET Uygulaması Dağıtımını Destekleyen Firefox Eklentileri
-Windows Presentation Foundation (WPF) Firefox ve .NET Framework Assistant Firefox için eklenti etkinleştirme [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ve Mozilla Firefox tarayıcısı ile çalışmak için ClickOnce uygulamaları.  
+Firefox için Windows Presentation Foundation (WPF) eklentisi ve Firefox .NET Framework Yardımcısı, XAML tarayıcı uygulamaları (XBAP), gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ve ClickOnce uygulamalarının Mozilla Firefox tarayıcısı ile çalışmasını sağlar.  
   
-## <a name="wpf-plug-in-for-firefox"></a>Firefox WPF eklentisinin  
- Firefox WPF eklentisinin sağlayan [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] ve gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyaları için gittiğinizde ve üst düzey veya HTML IFRAME Firefox tarayıcısı'nı çalıştırın. Bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] olduğu bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir Web sunucusuna yayımlanması ve içinde başlatılan uygulama tarayıcılar desteklenir. Gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] için gittiğinizde ve bir XML dosyası gibi desteklenen tarayıcılar görüntülenen yalnızca XAML dosyası.  
+## <a name="wpf-plug-in-for-firefox"></a>Firefox için WPF eklentisi  
+ Firefox WPF eklentisi, XBAP ve gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyalarının, en üst düzeyde veya Firefox tarayıcısında bir HTML IFRAME 'de gezinip çalışmasına olanak sağlar. XBAP, Web sunucusuna yayımlanmakta olan ve desteklenen tarayıcılarda başlatılan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir uygulamadır. Gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bir XML dosyası gibi desteklenen tarayıcılarda gezinilebilir ve görüntülenebilir.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Firefox ile .NET Framework 3.5 yüklü eklenti. Windows 7, .NET Framework 3.5 içerir, ancak içermemesi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Firefox için eklenti. Yükleyemezsiniz [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Windows 7, Firefox için eklenti.  
+ Firefox [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eklentisi, .NET Framework 3,5 ile yüklenir. 7\. pencere, 3,5 .NET Framework içerir, ancak Firefox için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eklentisini içermez. Windows 7 ' de Firefox için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eklentisini yükleyemezsiniz.  
   
- .NET Framework 4 içermemesi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Firefox için eklenti. Ancak .NET Framework 3.5 ve .NET Framework 4 yüklü değilse, Firefox WPF eklentisinin ile .NET Framework 3.5 yüklenir. WPF konağı doğru framework sürümünü yüklenir çünkü bu nedenle .NET Framework 4 uygulamalarını çalışmaya devam edecektir. Daha fazla bilgi için [WPF Konağı (PresentationHost.exe)](wpf-host-presentationhost-exe.md).  
+ .NET Framework 4, Firefox [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eklentisini içermez. Ancak, 3,5 ve .NET Framework 4 .NET Framework her ikisi de yüklüyse, Firefox WPF eklentisi .NET Framework 3,5 ile yüklenir. Bu nedenle .NET Framework 4 uygulama çalışmaya devam eder çünkü WPF ana bilgisayarı doğru Framework sürümünü yükleyecek. Daha fazla bilgi için bkz. [WPF konağı (PresentationHost. exe)](wpf-host-presentationhost-exe.md).  
   
 ## <a name="net-framework-assistant-for-firefox"></a>Firefox için .NET Framework Assistant  
- .NET Framework Assistant Firefox için Firefox tarayıcıdan çalıştırmak tek başına ClickOnce uygulamaları etkinleştirir. .NET Framework Assistant aynı şekilde önce ve sonra Firefox tarayıcısı yüklendiğinde Firefox işlevleri için. Firefox tarayıcısı başlatılır ve .NET Framework 3.5 SP1 yüklü olduğunda, Firefox bulur ve Firefox için .NET Framework Yardımcısı'nı yükler. Kullanıcılar, .NET Framework Assistant aşağıdakileri yapmak Firefox için yapılandırabilirsiniz:  
+ Firefox .NET Framework Yardımcısı, tek başına ClickOnce uygulamalarının Firefox tarayıcısından çalıştırılmasını sağlar. Firefox .NET Framework Yardımcısı, Firefox tarayıcısından önce ve sonra yüklendiğinde aynı şekilde çalışır. Firefox tarayıcısı başlatıldığında ve .NET Framework 3,5 SP1 yüklendiğinde, Firefox Firefox için .NET Framework yardımcısını bulur ve kurar. Kullanıcılar Firefox .NET Framework yardımcısını aşağıdakileri yapmak üzere yapılandırabilir:  
   
-- ClickOnce uygulamasını çalıştırmadan önce sor  
+- ClickOnce uygulamasını çalıştırmadan önce sor.  
   
-- .NET Framework'ün yüklü tüm sürümlerini ya da yalnızca en son sürümünü bildirin.  
+- .NET Framework yüklü tüm sürümlerini veya yalnızca en son sürümü bildirin.  
   
- .NET Framework Assistant Firefox için .NET Framework 3.5 SP1 ile birlikte gelir. Firefox için .NET Framework Assistant kaldırma hakkında daha fazla bilgi için bkz: [Firefox için .NET Framework Assistant kaldırma](https://go.microsoft.com/fwlink/?LinkId=177944).  
+ Firefox için .NET Framework Yardımcısı, .NET Framework 3,5 SP1 'e dahildir. Firefox .NET Framework yardımcısını kaldırma hakkında daha fazla bilgi için bkz. [Firefox için .NET Framework yardımcısını kaldırma](https://go.microsoft.com/fwlink/?LinkId=177944).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,34 +2,34 @@
 title: NamedPipe Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: a7d940d6be56160945ca0f8697361314af96bc0b
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 9d1f7c599f16b0974fb327888c080957c5cd9cee
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487545"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417077"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe Etkinleştirme
 
-Bu örnek adları Kanallar üzerinden iletişim kuran bir hizmeti etkinleştirmek için Windows İşlem Etkinleştirme Hizmeti (WAS) kullanan bir hizmet barındırma gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve gerektiren [!INCLUDE[wv](../../../../includes/wv-md.md)] çalıştırılacak.
+Bu örnekte, ad kanalları üzerinden iletişim kuran bir hizmeti etkinleştirmek için Windows Işlem etkinleştirme hizmeti (WAS) kullanan bir hizmetin barındırılması gösterilmektedir. Bu örnek [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ' e dayalıdır ve [!INCLUDE[wv](../../../../includes/wv-md.md)] çalışması gerekir.
 
 > [!NOTE]
-> Bu örnek için Kurulum yordamı ve derleme yönergeleri Bu konunun sonunda yer alır.
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
 
 > [!IMPORTANT]
-> Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.
+> Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`
 
-## <a name="sample-details"></a>Örnek Ayrıntıları
+## <a name="sample-details"></a>Örnek Ayrıntılar
 
-Örnek bir istemci konsol program (.exe) ve Windows İşlem Etkinleştirme Hizmetleri (WAS) tarafından etkin bir çalışan işleminin barındırılan hizmet kitaplığı (.dll) oluşur. İstemci etkinliği konsol penceresinde görünür.
+Örnek, bir istemci konsol programından (. exe) ve Windows Işlem etkinleştirme Hizmetleri (WAS) tarafından etkinleştirilen bir çalışan işleminde barındırılan bir hizmet kitaplığından (. dll) oluşur. İstemci etkinliği konsol penceresinde görünür.
 
-Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular. Anlaşma tarafından tanımlanan `ICalculator` matematik işlemlerinden sunan arabirimi (ekleme, çıkarma, çarpma ve bölme), aşağıdaki örnek kodda gösterildiği gibi.
+Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, aşağıdaki örnek kodda gösterildiği gibi matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) sunan `ICalculator` arabirimi tarafından tanımlanır.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -46,7 +46,7 @@ public interface ICalculator
 }
 ```
 
-İstemci bir verilen matematik işlemi için zaman uyumlu istekleri yapar ve hizmet uygulaması hesaplar ve uygun sonucu döndürür.
+İstemci belirli bir matematik işlemine zaman uyumlu istekler yapar ve hizmet uygulamasını hesaplar ve ilgili sonucu döndürür.
 
 ```csharp
 // Service class that implements the service contract.
@@ -71,9 +71,9 @@ public class CalculatorService : ICalculator
 }
 ```
 
-Örnek bir değiştirilen kullanır `netNamedPipeBinding` ile güvenlik bağlama. İstemci ve hizmet yapılandırma dosyalarında bağlama belirtildi. Bağlama türü için hizmet uç noktası öğenin belirtilen `binding` özniteliği aşağıdaki örnek yapılandırmada gösterildiği gibi.
+Örnek, değiştirilen `netNamedPipeBinding` bağlamasını güvenlik olmadan kullanır. Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir. Hizmetin bağlama türü, aşağıdaki örnek yapılandırmada gösterildiği gibi Endpoint öğesinin `binding` özniteliğinde belirtilir.
 
-Güvenli bir adlandırılmış kanal bağlama kullanmak istiyorsanız, istenen güvenlik sunucunun güvenlik modunu değiştirin ve svcutil.exe güncelleştirilmiş bir istemci yapılandırma dosyası almak için istemcide yeniden çalıştırın.
+Güvenli adlandırılmış kanal bağlamayı kullanmak istiyorsanız, sunucunun güvenlik modunu istediğiniz güvenlik ayarıyla değiştirin ve güncelleştirilmiş bir istemci yapılandırma dosyası almak için istemci üzerinde Svcutil. exe dosyasını yeniden çalıştırın.
 
 ```xml
 <system.serviceModel>
@@ -114,7 +114,7 @@ Güvenli bir adlandırılmış kanal bağlama kullanmak istiyorsanız, istenen g
   </system.serviceModel>
 ```
 
-İstemcinin uç nokta bilgileri, aşağıdaki örnek kodda gösterildiği şekilde yapılandırılır.
+İstemcinin uç nokta bilgileri aşağıdaki örnek kodda gösterildiği gibi yapılandırılır.
 
 ```xml
 <system.serviceModel>
@@ -146,7 +146,7 @@ Güvenli bir adlandırılmış kanal bağlama kullanmak istiyorsanız, istenen g
   </system.serviceModel>
 ```
 
-Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.
+Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.
 
 ```console
 Add(100,15.99) = 115.99
@@ -157,73 +157,73 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
 
-1. IIS 7. 0'ın yüklü olduğundan emin olun. WAS etkinleştirme için IIS 7.0 gereklidir.
+1. IIS 7,0 'nin yüklü olduğundan emin olun. WAS etkinleştirmesi için IIS 7,0 gereklidir.
 
-2. Gerçekleştirdiğiniz olun [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
     Ayrıca, WCF HTTP olmayan etkinleştirme bileşenlerini yüklemelisiniz:
 
-    1. Gelen **Başlat** menüsünde seçin **Denetim Masası**.
+    1. **Başlat** menüsünde, **Denetim Masası**' nı seçin.
 
-    2. Seçin **programlar ve Özellikler**.
+    2. **Programlar ve Özellikler '** i seçin.
 
-    3. Tıklayın **Aç veya kapat Windows bileşenleri**.
+    3. **Windows bileşenlerini aç veya kapat**' a tıklayın.
 
-    4. Genişletin **Microsoft .NET Framework 3.0** düğüm ve onay **Windows Communication Foundation HTTP olmayan etkinleştirme** özelliği.
+    4. **Microsoft .NET Framework 3,0** düğümünü genişletin ve **Windows Communication Foundation HTTP olmayan etkinleştirme** özelliğini denetleyin.
 
-3. Adlandırılmış kanal etkinleştirmeyi desteklemek için Windows İşlem Etkinleştirme Hizmeti'nı (WAS) yapılandırın.
+3. Windows Işlem etkinleştirme hizmeti 'ni (WAS) adlandırılmış kanal etkinleştirmesini destekleyecek şekilde yapılandırın.
 
-    Bir kolaylık olarak örnek dizinde yer AddNetPipeSiteBinding.cmd adlı bir toplu iş dosyasında aşağıdaki iki adımı uygulanır.
+    Kolaylık olması halinde, örnek dizinde bulunan AddNetPipeSiteBinding. cmd adlı bir toplu iş dosyasında aşağıdaki iki adım uygulanır.
 
-    1. NET.pipe etkinleştirmeyi desteklemek için varsayılan Web sitesi ilk net.pipe protokole bağlı olmalıdır. Bu yapılabilir, IIS 7.0 Yönetim araç takımıyla yüklenmeyen appcmd.exe kullanarak. (Yönetici) yükseltilmiş komut isteminden aşağıdaki komutu çalıştırın.
+    1. Net. pipe etkinleştirmesini desteklemek için, önce varsayılan Web sitesinin net. pipe protokolüne bağlanması gerekir. Bu, IIS 7,0 yönetim araç takımı ile yüklenen appcmd. exe kullanılarak yapılabilir. Yükseltilmiş (yönetici) komut isteminden aşağıdaki komutu çalıştırın.
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
         -+bindings.[protocol='net.pipe',bindingInformation='*']
         ```
 
         > [!NOTE]
-        > Tek metin satırı komutudur.
+        > Bu komut, tek satırlık bir metin.
 
-        Bu komut, varsayılan Web sitesine net.pipe site bağlaması ekler.
+        Bu komut, varsayılan Web sitesine bir net. pipe site bağlaması ekler.
 
-    2. Bir sitedeki tüm uygulamaları genel net.pipe bağlama paylaşsa da her uygulama net.pipe destek ayrı ayrı etkinleştirebilirsiniz. /Servicemodelsamples uygulamanın NET.pipe etkinleştirmek için yükseltilmiş bir komut isteminden aşağıdaki komutu çalıştırın.
+    2. Bir sitedeki tüm uygulamalar ortak bir net. pipe bağlamasını paylaşır, ancak her uygulama net. pipe desteğini tek tek etkinleştirebilir. /Servicemodelsamples uygulamasının net. pipe ' ı etkinleştirmek için, yükseltilmiş bir komut isteminden aşağıdaki komutu çalıştırın.
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.pipe
         ```
 
         > [!NOTE]
-        > Tek metin satırı komutudur.
+        > Bu komut, tek satırlık bir metin.
 
-        Bu komut, her ikisi de kullanılarak erişilecektir /servicemodelsamples uygulama etkinleştirir `http://localhost/servicemodelsamples` ve `net.tcp://localhost/servicemodelsamples`.
+        Bu komut,/servicemodelsamples uygulamasına hem `http://localhost/servicemodelsamples` hem de `net.tcp://localhost/servicemodelsamples`kullanılarak erişilmesini sağlar.
 
-4. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
+4. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
 
-5. Eklediğiniz net.pipe site bağlaması için bu örnek kaldırın.
+5. Bu örnek için eklemiş olduğunuz net. pipe site bağlamasını kaldırın.
 
-    Bir kolaylık olarak örnek dizinde yer RemoveNetPipeSiteBinding.cmd adlı bir toplu iş dosyasında aşağıdaki iki adımı uygulanır:
+    Kolaylık olması için aşağıdaki iki adım örnek dizinde yer alan RemoveNetPipeSiteBinding. cmd adlı bir toplu iş dosyasında uygulanır:
 
-    1. NET.TCP, yükseltilmiş bir komut isteminden aşağıdaki komutu çalıştırarak etkin protokoller listesinden kaldırın.
+    1. Yükseltilmiş bir komut isteminden aşağıdaki komutu çalıştırarak, etkin protokoller listesinden net. TCP ' i kaldırın.
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http
         ```
 
         > [!NOTE]
-        > Bu komut, tek satırlık bir metin girilmelidir.
+        > Bu komut tek satırlık bir metin olarak girilmelidir.
 
-    2. Net.tcp site bağlaması, yükseltilmiş bir komut isteminden aşağıdaki komutu çalıştırarak kaldırın.
+    2. Yükseltilmiş bir komut isteminden aşağıdaki komutu çalıştırarak net. TCP site bağlamasını kaldırın.
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.pipe',bindingInformation='*']
         ```
 
         > [!NOTE]
-        > Bu komut, tek satırlık bir metin yazılmalıdır.
+        > Bu komutun tek satırlık bir metin olarak yazılması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric barındırma ve Kalıcılık örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric barındırma ve kalıcılık örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

@@ -2,20 +2,20 @@
 title: DotNet yeni komut
 description: DotNet New komutu, belirtilen şablona göre yeni .NET Core projeleri oluşturur.
 ms.date: 05/06/2019
-ms.openlocfilehash: b61b5fd53f470c30b636026fa19ebfad834d6354
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c9529e135f48c80f445c91038294a3e7266486f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117668"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420472"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
-`dotnet new`-Belirtilen şablonu temel alan yeni bir proje, yapılandırma dosyası veya çözüm oluşturur.
+`dotnet new`-belirtilen şablona göre yeni bir proje, yapılandırma dosyası veya çözüm oluşturur.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -58,7 +58,7 @@ dotnet new [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-Komut `dotnet new` , geçerli bir .NET Core projesi başlatmak için kullanışlı bir yol sağlar.
+`dotnet new` komutu, geçerli bir .NET Core projesi başlatmak için kullanışlı bir yol sağlar.
 
 Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturmak için [şablon altyapısını](https://github.com/dotnet/templating) çağırır.
 
@@ -68,29 +68,29 @@ Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturma
 
 Komut çağrıldığında örnek oluşturulacak şablon. Her şablonun geçirebilmeniz için özel seçenekleri olabilir. Daha fazla bilgi için bkz. [şablon seçenekleri](#template-options).
 
-Değer, şablonlar veya **kısa ad** sütunundaki metin üzerinde tam eşleşme değilse, bu iki sütunda bir alt dize eşleşmesi gerçekleştirilir. `TEMPLATE`
+`TEMPLATE` değeri **Şablonlar** veya **kısa ad** sütunundaki metin üzerinde tam eşleşme değilse, bu iki sütunda bir alt dize eşleşmesi gerçekleştirilir.
 
 # <a name="net-core-22tabnetcore22"></a>[.NET Core 2,2](#tab/netcore22)
 
-Komut, şablonların varsayılan bir listesini içerir. Kullanılabilir `dotnet new -l` şablonların bir listesini almak için kullanın. Aşağıdaki tabloda, .NET Core SDK 2.2.100 ile önceden yüklenmiş olarak gelen şablonlar gösterilmektedir. Şablon için varsayılan dil, köşeli ayraçlar içinde gösterilir.
+Komut, şablonların varsayılan bir listesini içerir. Kullanılabilir şablonların bir listesini almak için `dotnet new -l` kullanın. Aşağıdaki tabloda, .NET Core SDK 2.2.100 ile önceden yüklenmiş olarak gelen şablonlar gösterilmektedir. Şablon için varsayılan dil, köşeli ayraçlar içinde gösterilir.
 
 | Şablonlar                                    | Kısa Ad        | Dil     | Etiketler                                  |
 |----------------------------------------------|-------------------|--------------|---------------------------------------|
-| Konsol Uygulaması                          | `console`         | [C#], F#, VB | Ortak/konsol                        |
-| Sınıf kitaplığı                                | `classlib`        | [C#], F#, VB | Ortak/Kitaplık                        |
-| Birim testi projesi                            | `mstest`          | [C#], F#, VB | Test/MSTest                           |
-| NUnit 3 test projesi                         | `nunit`           | [C#], F#, VB | Test/NUnit                            |
-| NUnit 3 test öğesi                            | `nunit-test`      | [C#], F#, VB | Test/NUnit                            |
-| xUnit test projesi                           | `xunit`           | [C#], F#, VB | Test/xUnit                            |
+| Konsol Uygulaması                          | `console`         | [C#], F#Vb. | Ortak/konsol                        |
+| Sınıf kitaplığı                                | `classlib`        | [C#], F#Vb. | Ortak/Kitaplık                        |
+| Birim testi projesi                            | `mstest`          | [C#], F#Vb. | Test/MSTest                           |
+| NUnit 3 test projesi                         | `nunit`           | [C#], F#Vb. | Test/NUnit                            |
+| NUnit 3 test öğesi                            | `nunit-test`      | [C#], F#Vb. | Test/NUnit                            |
+| xUnit test projesi                           | `xunit`           | [C#], F#Vb. | Test/xUnit                            |
 | Razor sayfası                                   | `page`            | [C#]         | Web/ASP. NET                           |
 | MVC Viewıtemts                              | `viewimports`     | [C#]         | Web/ASP. NET                           |
 | MVC ViewStart                                | `viewstart`       | [C#]         | Web/ASP. NET                           |
 | ASP.NET Core boş                           | `web`             | [C#],F#     | Web/boş                             |
 | ASP.NET Core Web uygulaması (Model-View-Controller) | `mvc`             | [C#],F#     | Web/MVC                               |
 | ASP.NET Core Web uygulaması                         | `webapp`, `razor` | [C#]         | Web/MVC/Razor Pages                   |
-| Angular ile ASP.NET Core                    | `angular`         | [C#]         | MVC/Web/SPA                           |
-| Tepki verme. js ile ASP.NET Core                   | `react`           | [C#]         | MVC/Web/SPA                           |
-| Yanıt verir. js ve Redux ile ASP.NET Core         | `reactredux`      | [C#]         | MVC/Web/SPA                           |
+| Angular ile ASP.NET Core                    | `angular`         | [C#]         | Web/MVC/SPA                           |
+| Tepki verme. js ile ASP.NET Core                   | `react`           | [C#]         | Web/MVC/SPA                           |
+| Yanıt verir. js ve Redux ile ASP.NET Core         | `reactredux`      | [C#]         | Web/MVC/SPA                           |
 | Razor sınıf kitaplığı                          | `razorclasslib`   | [C#]         | Web/Razor/kitaplık/Razor sınıfı kitaplığı |
 | ASP.NET Core Web API 'SI                         | `webapi`          | [C#],F#     | Web/WebAPI                            |
 | Global. JSON dosyası                             | `globaljson`      |              | Config                                |
@@ -100,23 +100,23 @@ Komut, şablonların varsayılan bir listesini içerir. Kullanılabilir `dotnet 
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
 
-Komut, şablonların varsayılan bir listesini içerir. Kullanılabilir `dotnet new -l` şablonların bir listesini almak için kullanın. Aşağıdaki tabloda, .NET Core SDK 2.1.300 ile önceden yüklenmiş olarak gelen şablonlar gösterilmektedir. Şablon için varsayılan dil, köşeli ayraçlar içinde gösterilir.
+Komut, şablonların varsayılan bir listesini içerir. Kullanılabilir şablonların bir listesini almak için `dotnet new -l` kullanın. Aşağıdaki tabloda, .NET Core SDK 2.1.300 ile önceden yüklenmiş olarak gelen şablonlar gösterilmektedir. Şablon için varsayılan dil, köşeli ayraçlar içinde gösterilir.
 
 | Şablonlar                                    | Kısa Ad      | Dil     | Etiketler                                  |
 |----------------------------------------------|-----------------|--------------|---------------------------------------|
-| Konsol Uygulaması                          | `console`       | [C#], F#, VB | Ortak/konsol                        |
-| Sınıf kitaplığı                                | `classlib`      | [C#], F#, VB | Ortak/Kitaplık                        |
-| Birim testi projesi                            | `mstest`        | [C#], F#, VB | Test/MSTest                           |
-| xUnit test projesi                           | `xunit`         | [C#], F#, VB | Test/xUnit                            |
+| Konsol Uygulaması                          | `console`       | [C#], F#Vb. | Ortak/konsol                        |
+| Sınıf kitaplığı                                | `classlib`      | [C#], F#Vb. | Ortak/Kitaplık                        |
+| Birim testi projesi                            | `mstest`        | [C#], F#Vb. | Test/MSTest                           |
+| xUnit test projesi                           | `xunit`         | [C#], F#Vb. | Test/xUnit                            |
 | Razor sayfası                                   | `page`          | [C#]         | Web/ASP. NET                           |
 | MVC Viewıtemts                              | `viewimports`   | [C#]         | Web/ASP. NET                           |
 | MVC ViewStart                                | `viewstart`     | [C#]         | Web/ASP. NET                           |
 | ASP.NET Core boş                           | `web`           | [C#],F#     | Web/boş                             |
 | ASP.NET Core Web uygulaması (Model-View-Controller) | `mvc`           | [C#],F#     | Web/MVC                               |
 | ASP.NET Core Web uygulaması                         | `razor`         | [C#]         | Web/MVC/Razor Pages                   |
-| Angular ile ASP.NET Core                    | `angular`       | [C#]         | MVC/Web/SPA                           |
-| Tepki verme. js ile ASP.NET Core                   | `react`         | [C#]         | MVC/Web/SPA                           |
-| Yanıt verir. js ve Redux ile ASP.NET Core         | `reactredux`    | [C#]         | MVC/Web/SPA                           | 
+| Angular ile ASP.NET Core                    | `angular`       | [C#]         | Web/MVC/SPA                           |
+| Tepki verme. js ile ASP.NET Core                   | `react`         | [C#]         | Web/MVC/SPA                           |
+| Yanıt verir. js ve Redux ile ASP.NET Core         | `reactredux`    | [C#]         | Web/MVC/SPA                           | 
 | Razor sınıf kitaplığı                          | `razorclasslib` | [C#]         | Web/Razor/kitaplık/Razor sınıfı kitaplığı |
 | ASP.NET Core Web API 'SI                         | `webapi`        | [C#],F#     | Web/WebAPI                            |
 | Global. JSON dosyası                             | `globaljson`    |              | Config                                |
@@ -126,20 +126,20 @@ Komut, şablonların varsayılan bir listesini içerir. Kullanılabilir `dotnet 
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2,0](#tab/netcore20)
 
-Komut, şablonların varsayılan bir listesini içerir. Kullanılabilir `dotnet new -l` şablonların bir listesini almak için kullanın. Aşağıdaki tabloda, .NET Core SDK 2.0.0 ile önceden yüklenmiş olarak gelen şablonlar gösterilmektedir. Şablon için varsayılan dil, köşeli ayraçlar içinde gösterilir.
+Komut, şablonların varsayılan bir listesini içerir. Kullanılabilir şablonların bir listesini almak için `dotnet new -l` kullanın. Aşağıdaki tabloda, .NET Core SDK 2.0.0 ile önceden yüklenmiş olarak gelen şablonlar gösterilmektedir. Şablon için varsayılan dil, köşeli ayraçlar içinde gösterilir.
 
 | Şablonlar                                    | Kısa Ad    | Dil     | Etiketler                |
 |----------------------------------------------|---------------|--------------|---------------------|
-| Konsol Uygulaması                          | `console`     | [C#], F#, VB | Ortak/konsol      |
-| Sınıf kitaplığı                                | `classlib`    | [C#], F#, VB | Ortak/Kitaplık      |
-| Birim testi projesi                            | `mstest`      | [C#], F#, VB | Test/MSTest         |
-| xUnit test projesi                           | `xunit`       | [C#], F#, VB | Test/xUnit          |
+| Konsol Uygulaması                          | `console`     | [C#], F#Vb. | Ortak/konsol      |
+| Sınıf kitaplığı                                | `classlib`    | [C#], F#Vb. | Ortak/Kitaplık      |
+| Birim testi projesi                            | `mstest`      | [C#], F#Vb. | Test/MSTest         |
+| xUnit test projesi                           | `xunit`       | [C#], F#Vb. | Test/xUnit          |
 | ASP.NET Core boş                           | `web`         | [C#],F#     | Web/boş           |
 | ASP.NET Core Web uygulaması (Model-View-Controller) | `mvc`         | [C#],F#     | Web/MVC             |
 | ASP.NET Core Web uygulaması                         | `razor`       | [C#]         | Web/MVC/Razor Pages |
-| Angular ile ASP.NET Core                    | `angular`     | [C#]         | MVC/Web/SPA         |
-| Tepki verme. js ile ASP.NET Core                   | `react`       | [C#]         | MVC/Web/SPA         |
-| Yanıt verir. js ve Redux ile ASP.NET Core         | `reactredux`  | [C#]         | MVC/Web/SPA         |
+| Angular ile ASP.NET Core                    | `angular`     | [C#]         | Web/MVC/SPA         |
+| Tepki verme. js ile ASP.NET Core                   | `react`       | [C#]         | Web/MVC/SPA         |
+| Yanıt verir. js ve Redux ile ASP.NET Core         | `reactredux`  | [C#]         | Web/MVC/SPA         |
 | ASP.NET Core Web API 'SI                         | `webapi`      | [C#],F#     | Web/WebAPI          |
 | Global. JSON dosyası                             | `globaljson`  |              | Config              |
 | NuGet yapılandırması                                 | `nugetconfig` |              | Config              |
@@ -151,7 +151,7 @@ Komut, şablonların varsayılan bir listesini içerir. Kullanılabilir `dotnet 
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
-Komut, şablonların varsayılan bir listesini içerir. Kullanılabilir `dotnet new -all` şablonların bir listesini almak için kullanın. Aşağıdaki tabloda, .NET Core SDK 1.0.1 ile önceden yüklenmiş olarak gelen şablonlar gösterilmektedir. Şablon için varsayılan dil, köşeli ayraçlar içinde gösterilir.
+Komut, şablonların varsayılan bir listesini içerir. Kullanılabilir şablonların bir listesini almak için `dotnet new -all` kullanın. Aşağıdaki tabloda, .NET Core SDK 1.0.1 ile önceden yüklenmiş olarak gelen şablonlar gösterilmektedir. Şablon için varsayılan dil, köşeli ayraçlar içinde gösterilir.
 
 | Şablonlar            | Kısa Ad    | Dil | Etiketler           |
 |----------------------|---------------|----------|----------------|
@@ -182,24 +182,24 @@ Var olan dosyaları değiştirebilse bile içeriğin oluşturulmasını zorlar. 
 
 `-h|--help`
 
-Komut için yardım yazdırır. `dotnet new` Komutun kendisi veya gibi herhangi bir şablon `dotnet new mvc --help`için çağrılabilir.
+Komut için yardım yazdırır. `dotnet new` komutun kendisi veya `dotnet new mvc --help`gibi herhangi bir şablon için çağrılabilir.
 
 `-i|--install <PATH|NUGET_ID>`
 
-`PATH` Veya`NUGET_ID` tarafından sağlanmış bir kaynak veya şablon paketi kurar. Şablon paketinin bir ön sürümü sürümünü yüklemek istiyorsanız, sürümü biçiminde `<package-name>::<package-version>`belirtmeniz gerekir. Varsayılan olarak, `dotnet new` en \* son kararlı paket sürümünü temsil eden sürüm için geçirir. [Örnekler](#examples) bölümündeki bir örneğe bakın.
+`PATH` veya `NUGET_ID` belirtilen bir kaynak veya şablon paketini kurar. Şablon paketinin bir ön sürümünü yüklemek istiyorsanız, `<package-name>::<package-version>`biçiminde sürümü belirtmeniz gerekir. Varsayılan olarak, `dotnet new` en son kararlı paket sürümünü temsil eden sürüm için \* geçirir. [Örnekler](#examples) bölümündeki bir örneğe bakın.
 
 Özel şablonlar oluşturma hakkında daha fazla bilgi için bkz. [DotNet New Için özel şablonlar](custom-templates.md).
 
 `-l|--list`
 
-Belirtilen adı içeren şablonları listeler. `dotnet new` Komut için çağrılırsa, belirtilen dizin için kullanılabilir olabilecek şablonları listeler. Örneğin, dizin zaten bir proje içeriyorsa, tüm proje şablonlarını listeetmez.
+Belirtilen adı içeren şablonları listeler. `dotnet new` komutu için çağrılırsa, belirtilen dizin için kullanılabilir olabilecek şablonları listeler. Örneğin, dizin zaten bir proje içeriyorsa, tüm proje şablonlarını listeetmez.
 
 `-lang|--language {C#|F#|VB}`
 
 Oluşturulacak şablonun dili. Kabul edilen dil şablona göre değişir (bkz. [arguments](#arguments) bölümünde Varsayılanlar). Bazı şablonlar için geçerli değildir.
 
 > [!NOTE]
-> Bazı kabuklar `#` özel bir karakter olarak yorumlanır. Bu durumlarda, gibi dil parametre değerini `dotnet new console -lang "F#"`almalısınız.
+> Bazı kabuklar, `#` özel bir karakter olarak yorumlar. Bu durumlarda, `dotnet new console -lang "F#"`gibi dil parametre değerini almanız gerekir.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -219,10 +219,10 @@ Oluşturulan çıkışın yerleştirileceği konum. Geçerli dizin varsayıland�
 
 `-u|--uninstall <PATH|NUGET_ID>`
 
-`PATH` Veya`NUGET_ID` belirtilen bir kaynak veya şablon paketini kaldırır. `<PATH|NUGET_ID>` Değer hariç tutularak, yüklü olan tüm şablon paketleri ve bunlarla ilişkili şablonlar görüntülenir.
+`PATH` veya `NUGET_ID` sağlanmış bir kaynak veya şablon paketini kaldırır. `<PATH|NUGET_ID>` değeri hariç tutularak, yüklü olan tüm şablon paketleri ve bunlarla ilişkili şablonlar görüntülenir.
 
 > [!NOTE]
-> Bir `PATH`şablonu kullanarak kaldırmak için, yolu tam olarak nitelemeniz gerekir. Örneğin, *C:/kullanıcıları/\<Kullanıcı >/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* çalışır, ancak içeren klasörden *./GarciaSoftware.ConsoleTemplate.CSharp* olmayacaktır.
+> Bir `PATH`kullanarak bir şablonu kaldırmak için, yolu tam olarak nitelemeniz gerekir. Örneğin, *C:/kullanıcılar/\<USER >/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* çalışır, ancak içeren klasörden *./GarciaSoftware.ConsoleTemplate.CSharp* olmayacaktır.
 > Ayrıca, şablon yolunuza son Sonlandırıcı Dizin eğik çizgi eklemeyin.
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
@@ -233,24 +233,24 @@ Var olan dosyaları değiştirebilse bile içeriğin oluşturulmasını zorlar. 
 
 `-h|--help`
 
-Komut için yardım yazdırır. `dotnet new` Komutun kendisi veya gibi herhangi bir şablon `dotnet new mvc --help`için çağrılabilir.
+Komut için yardım yazdırır. `dotnet new` komutun kendisi veya `dotnet new mvc --help`gibi herhangi bir şablon için çağrılabilir.
 
 `-i|--install <PATH|NUGET_ID>`
 
-`PATH` Veya`NUGET_ID` tarafından sağlanmış bir kaynak veya şablon paketi kurar. Şablon paketinin bir ön sürümü sürümünü yüklemek istiyorsanız, sürümü biçiminde `<package-name>::<package-version>`belirtmeniz gerekir. Varsayılan olarak, `dotnet new` en \* son kararlı paket sürümünü temsil eden sürüm için geçirir. [Örnekler](#examples) bölümündeki bir örneğe bakın.
+`PATH` veya `NUGET_ID` belirtilen bir kaynak veya şablon paketini kurar. Şablon paketinin bir ön sürümünü yüklemek istiyorsanız, `<package-name>::<package-version>`biçiminde sürümü belirtmeniz gerekir. Varsayılan olarak, `dotnet new` en son kararlı paket sürümünü temsil eden sürüm için \* geçirir. [Örnekler](#examples) bölümündeki bir örneğe bakın.
 
 Özel şablonlar oluşturma hakkında daha fazla bilgi için bkz. [DotNet New Için özel şablonlar](custom-templates.md).
 
 `-l|--list`
 
-Belirtilen adı içeren şablonları listeler. `dotnet new` Komut için çağrılırsa, belirtilen dizin için kullanılabilir olabilecek şablonları listeler. Örneğin, dizin zaten bir proje içeriyorsa, tüm proje şablonlarını listeetmez.
+Belirtilen adı içeren şablonları listeler. `dotnet new` komutu için çağrılırsa, belirtilen dizin için kullanılabilir olabilecek şablonları listeler. Örneğin, dizin zaten bir proje içeriyorsa, tüm proje şablonlarını listeetmez.
 
 `-lang|--language {C#|F#|VB}`
 
 Oluşturulacak şablonun dili. Kabul edilen dil şablona göre değişir (bkz. [arguments](#arguments) bölümünde Varsayılanlar). Bazı şablonlar için geçerli değildir.
 
 > [!NOTE]
-> Bazı kabuklar `#` özel bir karakter olarak yorumlanır. Bu durumlarda, gibi dil parametre değerini `dotnet new console -lang "F#"`almalısınız.
+> Bazı kabuklar, `#` özel bir karakter olarak yorumlar. Bu durumlarda, `dotnet new console -lang "F#"`gibi dil parametre değerini almanız gerekir.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -270,10 +270,10 @@ Oluşturulan çıkışın yerleştirileceği konum. Geçerli dizin varsayıland�
 
 `-u|--uninstall <PATH|NUGET_ID>`
 
-`PATH` Veya`NUGET_ID` belirtilen bir kaynak veya şablon paketini kaldırır.
+`PATH` veya `NUGET_ID` sağlanmış bir kaynak veya şablon paketini kaldırır.
 
 > [!NOTE]
-> Bir `PATH`şablonu kullanarak kaldırmak için, yolu tam olarak nitelemeniz gerekir. Örneğin, *C:/kullanıcıları/\<Kullanıcı >/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* çalışır, ancak içeren klasörden *./GarciaSoftware.ConsoleTemplate.CSharp* olmayacaktır.
+> Bir `PATH`kullanarak bir şablonu kaldırmak için, yolu tam olarak nitelemeniz gerekir. Örneğin, *C:/kullanıcılar/\<USER >/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* çalışır, ancak içeren klasörden *./GarciaSoftware.ConsoleTemplate.CSharp* olmayacaktır.
 > Ayrıca, şablon yolunuza son Sonlandırıcı Dizin eğik çizgi eklemeyin.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2,0](#tab/netcore20)
@@ -284,24 +284,24 @@ Var olan dosyaları değiştirebilse bile içeriğin oluşturulmasını zorlar. 
 
 `-h|--help`
 
-Komut için yardım yazdırır. `dotnet new` Komutun kendisi veya gibi herhangi bir şablon `dotnet new mvc --help`için çağrılabilir.
+Komut için yardım yazdırır. `dotnet new` komutun kendisi veya `dotnet new mvc --help`gibi herhangi bir şablon için çağrılabilir.
 
 `-i|--install <PATH|NUGET_ID>`
 
-`PATH` Veya`NUGET_ID` tarafından sağlanmış bir kaynak veya şablon paketi kurar. Şablon paketinin bir ön sürümü sürümünü yüklemek istiyorsanız, sürümü biçiminde `<package-name>::<package-version>`belirtmeniz gerekir. Varsayılan olarak, `dotnet new` en \* son kararlı paket sürümünü temsil eden sürüm için geçirir. [Örnekler](#examples) bölümündeki bir örneğe bakın.
+`PATH` veya `NUGET_ID` belirtilen bir kaynak veya şablon paketini kurar. Şablon paketinin bir ön sürümünü yüklemek istiyorsanız, `<package-name>::<package-version>`biçiminde sürümü belirtmeniz gerekir. Varsayılan olarak, `dotnet new` en son kararlı paket sürümünü temsil eden sürüm için \* geçirir. [Örnekler](#examples) bölümündeki bir örneğe bakın.
 
 Özel şablonlar oluşturma hakkında daha fazla bilgi için bkz. [DotNet New Için özel şablonlar](custom-templates.md).
 
 `-l|--list`
 
-Belirtilen adı içeren şablonları listeler. `dotnet new` Komut için çağrılırsa, belirtilen dizin için kullanılabilir olabilecek şablonları listeler. Örneğin, dizin zaten bir proje içeriyorsa, tüm proje şablonlarını listeetmez.
+Belirtilen adı içeren şablonları listeler. `dotnet new` komutu için çağrılırsa, belirtilen dizin için kullanılabilir olabilecek şablonları listeler. Örneğin, dizin zaten bir proje içeriyorsa, tüm proje şablonlarını listeetmez.
 
 `-lang|--language {C#|F#|VB}`
 
 Oluşturulacak şablonun dili. Kabul edilen dil şablona göre değişir (bkz. [arguments](#arguments) bölümünde Varsayılanlar). Bazı şablonlar için geçerli değildir.
 
 > [!NOTE]
-> Bazı kabuklar `#` özel bir karakter olarak yorumlanır. Bu durumlarda, gibi dil parametre değerini `dotnet new console -lang "F#"`almalısınız.
+> Bazı kabuklar, `#` özel bir karakter olarak yorumlar. Bu durumlarda, `dotnet new console -lang "F#"`gibi dil parametre değerini almanız gerekir.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -317,33 +317,33 @@ Oluşturulan çıkışın yerleştirileceği konum. Geçerli dizin varsayıland�
 
 `-u|--uninstall <PATH|NUGET_ID>`
 
-`PATH` Veya`NUGET_ID` belirtilen bir kaynak veya şablon paketini kaldırır.
+`PATH` veya `NUGET_ID` sağlanmış bir kaynak veya şablon paketini kaldırır.
 
 > [!NOTE]
-> Bir kaynağı `PATH`kullanarak bir şablonu kaldırmak için yolu tam olarak nitelemeniz gerekir. Örneğin, *C:/kullanıcıları/\<Kullanıcı >/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* çalışır, ancak içeren klasörden *./GarciaSoftware.ConsoleTemplate.CSharp* olmayacaktır. Ayrıca, şablon yolunuza son Sonlandırıcı Dizin eğik çizgi eklemeyin.
+> Kaynak `PATH`kullanarak bir şablonu kaldırmak için, yolu tam olarak nitelemeniz gerekir. Örneğin, *C:/kullanıcılar/\<USER >/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* çalışır, ancak içeren klasörden *./GarciaSoftware.ConsoleTemplate.CSharp* olmayacaktır. Ayrıca, şablon yolunuza son Sonlandırıcı Dizin eğik çizgi eklemeyin.
 > 
-> Bir şablonu kaldırmak için gereken `PATH` veya `NUGET_ID` bağımsız değişkeni belirleyemıyorsanız, bağımsız değişken olmadan çalıştırıldığında `dotnet new --uninstall` , tüm yüklü şablonlar ve bunları kaldırmak için gereken bağımsız değişken listelenir.
+> Bir şablonu kaldırmak için gereken `PATH` veya `NUGET_ID` bağımsız değişkenini belirleyemıyorsanız, bir bağımsız değişken olmadan `dotnet new --uninstall` çalıştırmak, tüm yüklü şablonları ve bunları kaldırmak için gereken bağımsız değişkeni listeler.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 `-all|--show-all`
 
-Yalnızca `dotnet new` komutun bağlamında çalışırken belirli bir proje türü için tüm şablonları gösterir. Gibi belirli bir şablon `dotnet new web -all`bağlamında çalıştırılırken, `-all` zorla oluşturma bayrağı olarak yorumlanır. Çıkış dizini zaten bir proje içerdiğinde bu gereklidir.
+Yalnızca `dotnet new` komutu bağlamında çalışırken belirli bir proje türü için tüm şablonları gösterir. `dotnet new web -all`gibi belirli bir şablon bağlamında çalıştırılırken, `-all` bir zorla oluşturma bayrağı olarak yorumlanır. Çıkış dizini zaten bir proje içerdiğinde bu gereklidir.
 
 `-h|--help`
 
-Komut için yardım yazdırır. `dotnet new` Komutun kendisi veya gibi herhangi bir şablon `dotnet new mvc --help`için çağrılabilir.
+Komut için yardım yazdırır. `dotnet new` komutun kendisi veya `dotnet new mvc --help`gibi herhangi bir şablon için çağrılabilir.
 
 `-l|--list`
 
-Belirtilen adı içeren şablonları listeler. `dotnet new` Komut için çağrılırsa, belirtilen dizin için kullanılabilir olabilecek şablonları listeler. Örneğin, dizin zaten bir proje içeriyorsa, tüm proje şablonlarını listeetmez.
+Belirtilen adı içeren şablonları listeler. `dotnet new` komutu için çağrılırsa, belirtilen dizin için kullanılabilir olabilecek şablonları listeler. Örneğin, dizin zaten bir proje içeriyorsa, tüm proje şablonlarını listeetmez.
 
 `-lang|--language {C#|F#}`
 
 Oluşturulacak şablonun dili. Kabul edilen dil şablona göre değişir (bkz. [arguments](#arguments) bölümünde Varsayılanlar). Bazı şablonlar için geçerli değildir.
 
 > [!NOTE]
-> Bazı kabuklar `#` özel bir karakter olarak yorumlanır. Bu durumlarda, gibi dil parametre değerini `dotnet new console -lang "F#"`almalısınız.
+> Bazı kabuklar, `#` özel bir karakter olarak yorumlar. Bu durumlarda, `dotnet new console -lang "F#"`gibi dil parametre değerini almanız gerekir.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -363,131 +363,131 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 **konsola**
 
-`--langVersion <VERSION_NUMBER>`-Oluşturulan proje `LangVersion` dosyasındaki özelliği ayarlar. Örneğin, 7,3 kullanmak `--langVersion 7.3` C# için kullanın. İçin F#desteklenmez.
+`--langVersion <VERSION_NUMBER>`-oluşturulan proje dosyasındaki `LangVersion` özelliğini ayarlar. Örneğin, 7,3 kullanmak C# için `--langVersion 7.3` kullanın. İçin F#desteklenmez.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **Angular, tepki, reactredux**
 
-`--exclude-launch-settings`- *Launchsettings. JSON* öğesini oluşturulan şablondan hariç tutun.
+`--exclude-launch-settings`-oluşturulan şablondan *Launchsettings. JSON* öğesini hariç tutun.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
-`--no-https`-Proje HTTPS gerektirmez. Bu seçenek yalnızca `IndividualAuth` veya `OrganizationalAuth` kullanılmıyorsa geçerlidir.
+`--no-https`-proje HTTPS gerektirmez. Bu seçenek yalnızca `IndividualAuth` veya `OrganizationalAuth` kullanılmıyorsa geçerlidir.
 
 **razorclasslib**
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **projesinin**
 
-`-f|--framework <FRAMEWORK>`-Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: `netcoreapp2.2` bir .NET Core sınıf kitaplığı oluşturmak veya `netstandard2.0` bir .NET Standard sınıf kitaplığı oluşturmak için. Varsayılan değer `netstandard2.0` şeklindedir.
+`-f|--framework <FRAMEWORK>`-hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: bir .NET Standard sınıf kitaplığı oluşturmak için bir .NET Core sınıf kitaplığı veya `netstandard2.0` oluşturmak `netcoreapp2.2`. Varsayılan değer `netstandard2.0` şeklindedir.
 
-`--langVersion <VERSION_NUMBER>`-Oluşturulan proje `LangVersion` dosyasındaki özelliği ayarlar. Örneğin, 7,3 kullanmak `--langVersion 7.3` C# için kullanın. İçin F#desteklenmez.
+`--langVersion <VERSION_NUMBER>`-oluşturulan proje dosyasındaki `LangVersion` özelliğini ayarlar. Örneğin, 7,3 kullanmak C# için `--langVersion 7.3` kullanın. İçin F#desteklenmez.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **MSTest, xUnit**
 
 `-p|--enable-pack`- [DotNet Pack](dotnet-pack.md)kullanarak proje için paketlemeyi etkinleştirilir.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **NUnit**
 
-`-f|--framework <FRAMEWORK>`-Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Varsayılan değer `netcoreapp2.1` şeklindedir.
+`-f|--framework <FRAMEWORK>`-hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Varsayılan değer `netcoreapp2.1` şeklindedir.
 
 `-p|--enable-pack`- [DotNet Pack](dotnet-pack.md)kullanarak proje için paketlemeyi etkinleştirilir.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **sayfasında**
 
-`-na|--namespace <NAMESPACE_NAME>`-Oluşturulan kod için ad alanı. Varsayılan değer `MyApp.Namespace` şeklindedir.
+`-na|--namespace <NAMESPACE_NAME>`-oluşturulan kod için ad alanı. Varsayılan değer `MyApp.Namespace` şeklindedir.
 
-`-np|--no-pagemodel`-Sayfayı PageModel olmadan oluşturur.
+`-np|--no-pagemodel`-sayfayı PageModel olmadan oluşturur.
 
 **viewıtems 'lar**
 
-`-na|--namespace <NAMESPACE_NAME>`-Oluşturulan kod için ad alanı. Varsayılan değer `MyApp.Namespace` şeklindedir.
+`-na|--namespace <NAMESPACE_NAME>`-oluşturulan kod için ad alanı. Varsayılan değer `MyApp.Namespace` şeklindedir.
 
 **Web**
 
-`--exclude-launch-settings`- *Launchsettings. JSON* öğesini oluşturulan şablondan hariç tutun.
+`--exclude-launch-settings`-oluşturulan şablondan *Launchsettings. JSON* öğesini hariç tutun.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
-`--no-https`-Proje HTTPS gerektirmez. Bu seçenek yalnızca `IndividualAuth` veya `OrganizationalAuth` kullanılmıyorsa geçerlidir.
+`--no-https`-proje HTTPS gerektirmez. Bu seçenek yalnızca `IndividualAuth` veya `OrganizationalAuth` kullanılmıyorsa geçerlidir.
 
 **MVC, WebApp**
 
-`-au|--auth <AUTHENTICATION_TYPE>`-Kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
+`-au|--auth <AUTHENTICATION_TYPE>`-kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
 
-- `None`-Kimlik doğrulaması yok (varsayılan).
-- `Individual`-Bireysel kimlik doğrulama.
-- `IndividualB2C`-Azure AD B2C ile bireysel kimlik doğrulama.
-- `SingleOrg`-Tek bir kiracı için kuruluş kimlik doğrulaması.
-- `MultiOrg`-Birden çok kiracı için kuruluş kimlik doğrulaması.
+- `None`-kimlik doğrulaması yok (varsayılan).
+- `Individual` bireysel kimlik doğrulaması.
+- `IndividualB2C` bireysel kimlik doğrulama Azure AD B2C.
+- tek bir kiracı için `SingleOrg` kurumsal kimlik doğrulaması.
+- `MultiOrg`-birden çok kiracı için kuruluş kimlik doğrulaması.
 - `Windows`-Windows kimlik doğrulaması.
 
-`--aad-b2c-instance <INSTANCE>`-Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` Kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
+`--aad-b2c-instance <INSTANCE>`-Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
 
-`-ssp|--susi-policy-id <ID>`-Bu proje için oturum açma ve kaydolma ilkesi KIMLIĞI. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
+`-ssp|--susi-policy-id <ID>`-bu proje için oturum açma ve kaydolma ilkesi KIMLIĞI. `IndividualB2C` kimlik doğrulamasıyla kullanın.
 
-`-rp|--reset-password-policy-id <ID>`-Bu proje için parola sıfırlama ilkesi KIMLIĞI. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
+`-rp|--reset-password-policy-id <ID>`-bu proje için parola sıfırlama ilkesi KIMLIĞI. `IndividualB2C` kimlik doğrulamasıyla kullanın.
 
-`-ep|--edit-profile-policy-id <ID>`-Bu proje için profil ilkesi KIMLIĞINI Düzenle. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
+`-ep|--edit-profile-policy-id <ID>`-bu proje için profil ilke KIMLIĞINI Düzenle. `IndividualB2C` kimlik doğrulamasıyla kullanın.
 
-`--aad-instance <INSTANCE>`-Bağlanılacak Azure Active Directory örneği. `SingleOrg` Veya`MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
+`--aad-instance <INSTANCE>`-Bağlanılacak Azure Active Directory örneği. `SingleOrg` veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
 
-`--client-id <ID>`-Bu projenin Istemci KIMLIĞI. `IndividualB2C`, Veyakimlik`MultiOrg`doğrulamasıylakullanın. `SingleOrg` Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
+`--client-id <ID>`-bu projenin Istemci KIMLIĞI. `IndividualB2C`, `SingleOrg`veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
 
-`--domain <DOMAIN>`-Dizin kiracının etki alanı. `SingleOrg` Veya`IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `qualified.domain.name` şeklindedir.
+`--domain <DOMAIN>`-Dizin kiracının etki alanı. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `qualified.domain.name` şeklindedir.
 
-`--tenant-id <ID>`-Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` Kimlik doğrulamasıyla kullanın. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
+`--tenant-id <ID>`-Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
 
-`--callback-path <PATH>`-Uygulamanın yeniden yönlendirme URI 'sinin temel yolu içindeki istek yolu. `SingleOrg` Veya`IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `/signin-oidc` şeklindedir.
+`--callback-path <PATH>`-uygulamanın yeniden yönlendirme URI 'sinin temel yolu içindeki istek yolu. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `/signin-oidc` şeklindedir.
 
-`-r|--org-read-access`-Bu uygulamanın dizine okuma erişimi sağlar. Yalnızca veya `SingleOrg` `MultiOrg` kimlik doğrulaması için geçerlidir.
+`-r|--org-read-access`-bu uygulamanın dizine okuma erişimini sağlar. Yalnızca `SingleOrg` veya `MultiOrg` kimlik doğrulaması için geçerlidir.
 
-`--exclude-launch-settings`- *Launchsettings. JSON* öğesini oluşturulan şablondan hariç tutun.
+`--exclude-launch-settings`-oluşturulan şablondan *Launchsettings. JSON* öğesini hariç tutun.
 
-`--no-https`-Proje HTTPS gerektirmez. `app.UseHsts`ve `app.UseHttpsRedirection` öğesine`Startup.Configure`eklenmez. Bu `Individual`seçenek yalnızca `IndividualB2C` `MultiOrg` , ,,veyakullanılmıyorsageçerlidir.`SingleOrg`
+`--no-https`-proje HTTPS gerektirmez. `app.UseHsts` ve `app.UseHttpsRedirection` `Startup.Configure`eklenmez. Bu seçenek yalnızca `Individual`, `IndividualB2C`, `SingleOrg`veya `MultiOrg` kullanılmıyorsa geçerlidir.
 
-`-uld|--use-local-db`-SQLite yerine LocalDB kullanılması gerektiğini belirtir. Yalnızca veya `Individual` `IndividualB2C` kimlik doğrulaması için geçerlidir.
+`-uld|--use-local-db`-bir LocalDB 'nin SQLite yerine kullanılması gerektiğini belirtir. Yalnızca `Individual` veya `IndividualB2C` kimlik doğrulaması için geçerlidir.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **WebApi**
 
-`-au|--auth <AUTHENTICATION_TYPE>`-Kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
+`-au|--auth <AUTHENTICATION_TYPE>`-kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
 
-- `None`-Kimlik doğrulaması yok (varsayılan).
-- `IndividualB2C`-Azure AD B2C ile bireysel kimlik doğrulama.
-- `SingleOrg`-Tek bir kiracı için kuruluş kimlik doğrulaması.
+- `None`-kimlik doğrulaması yok (varsayılan).
+- `IndividualB2C` bireysel kimlik doğrulama Azure AD B2C.
+- tek bir kiracı için `SingleOrg` kurumsal kimlik doğrulaması.
 - `Windows`-Windows kimlik doğrulaması.
 
-`--aad-b2c-instance <INSTANCE>`-Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` Kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
+`--aad-b2c-instance <INSTANCE>`-Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
 
-`-ssp|--susi-policy-id <ID>`-Bu proje için oturum açma ve kaydolma ilkesi KIMLIĞI. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
+`-ssp|--susi-policy-id <ID>`-bu proje için oturum açma ve kaydolma ilkesi KIMLIĞI. `IndividualB2C` kimlik doğrulamasıyla kullanın.
 
-`--aad-instance <INSTANCE>`-Bağlanılacak Azure Active Directory örneği. `SingleOrg` Kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
+`--aad-instance <INSTANCE>`-Bağlanılacak Azure Active Directory örneği. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
 
-`--client-id <ID>`-Bu projenin Istemci KIMLIĞI. `IndividualB2C` Veya`SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
+`--client-id <ID>`-bu projenin Istemci KIMLIĞI. `IndividualB2C` veya `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
 
-`--domain <DOMAIN>`-Dizin kiracının etki alanı. `SingleOrg` Veya`IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `qualified.domain.name` şeklindedir.
+`--domain <DOMAIN>`-Dizin kiracının etki alanı. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `qualified.domain.name` şeklindedir.
 
-`--tenant-id <ID>`-Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` Kimlik doğrulamasıyla kullanın. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
+`--tenant-id <ID>`-Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
 
-`-r|--org-read-access`-Bu uygulamanın dizine okuma erişimi sağlar. Yalnızca veya `SingleOrg` `MultiOrg` kimlik doğrulaması için geçerlidir.
+`-r|--org-read-access`-bu uygulamanın dizine okuma erişimini sağlar. Yalnızca `SingleOrg` veya `MultiOrg` kimlik doğrulaması için geçerlidir.
 
-`--exclude-launch-settings`- *Launchsettings. JSON* öğesini oluşturulan şablondan hariç tutun.
+`--exclude-launch-settings`-oluşturulan şablondan *Launchsettings. JSON* öğesini hariç tutun.
 
-`--no-https`-Proje HTTPS gerektirmez. `app.UseHsts`ve `app.UseHttpsRedirection` öğesine`Startup.Configure`eklenmez. Bu `Individual`seçenek yalnızca `IndividualB2C` `MultiOrg` , ,,veyakullanılmıyorsageçerlidir.`SingleOrg`
+`--no-https`-proje HTTPS gerektirmez. `app.UseHsts` ve `app.UseHttpsRedirection` `Startup.Configure`eklenmez. Bu seçenek yalnızca `Individual`, `IndividualB2C`, `SingleOrg`veya `MultiOrg` kullanılmıyorsa geçerlidir.
 
-`-uld|--use-local-db`-SQLite yerine LocalDB kullanılması gerektiğini belirtir. Yalnızca veya `Individual` `IndividualB2C` kimlik doğrulaması için geçerlidir.
+`-uld|--use-local-db`-bir LocalDB 'nin SQLite yerine kullanılması gerektiğini belirtir. Yalnızca `Individual` veya `IndividualB2C` kimlik doğrulaması için geçerlidir.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **globaljson**
 
@@ -497,19 +497,19 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 **konsol, angular, tepki, reactredux, razorclasslib**
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **projesinin**
 
-`-f|--framework <FRAMEWORK>`-Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: `netcoreapp2.1` bir .NET Core sınıf kitaplığı oluşturmak veya `netstandard2.0` bir .NET Standard sınıf kitaplığı oluşturmak için. Varsayılan değer `netstandard2.0` şeklindedir.
+`-f|--framework <FRAMEWORK>`-hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: bir .NET Standard sınıf kitaplığı oluşturmak için bir .NET Core sınıf kitaplığı veya `netstandard2.0` oluşturmak `netcoreapp2.1`. Varsayılan değer `netstandard2.0` şeklindedir.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **MSTest, xUnit**
 
 `-p|--enable-pack`- [DotNet Pack](dotnet-pack.md)kullanarak proje için paketlemeyi etkinleştirilir.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **globaljson**
 
@@ -517,111 +517,111 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 **Web**
 
-`--exclude-launch-settings`- *Launchsettings. JSON* öğesini oluşturulan şablondan hariç tutun.
+`--exclude-launch-settings`-oluşturulan şablondan *Launchsettings. JSON* öğesini hariç tutun.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
-`--no-https`-Proje HTTPS gerektirmez. Bu seçenek yalnızca `IndividualAuth` veya `OrganizationalAuth` kullanılmıyorsa geçerlidir.
+`--no-https`-proje HTTPS gerektirmez. Bu seçenek yalnızca `IndividualAuth` veya `OrganizationalAuth` kullanılmıyorsa geçerlidir.
 
 **WebApi**
 
-`-au|--auth <AUTHENTICATION_TYPE>`-Kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
+`-au|--auth <AUTHENTICATION_TYPE>`-kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
 
-- `None`-Kimlik doğrulaması yok (varsayılan).
-- `IndividualB2C`-Azure AD B2C ile bireysel kimlik doğrulama.
-- `SingleOrg`-Tek bir kiracı için kuruluş kimlik doğrulaması.
+- `None`-kimlik doğrulaması yok (varsayılan).
+- `IndividualB2C` bireysel kimlik doğrulama Azure AD B2C.
+- tek bir kiracı için `SingleOrg` kurumsal kimlik doğrulaması.
 - `Windows`-Windows kimlik doğrulaması.
 
-`--aad-b2c-instance <INSTANCE>`-Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` Kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
+`--aad-b2c-instance <INSTANCE>`-Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
 
-`-ssp|--susi-policy-id <ID>`-Bu proje için oturum açma ve kaydolma ilkesi KIMLIĞI. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
+`-ssp|--susi-policy-id <ID>`-bu proje için oturum açma ve kaydolma ilkesi KIMLIĞI. `IndividualB2C` kimlik doğrulamasıyla kullanın.
 
-`--aad-instance <INSTANCE>`-Bağlanılacak Azure Active Directory örneği. `SingleOrg` Kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
+`--aad-instance <INSTANCE>`-Bağlanılacak Azure Active Directory örneği. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
 
-`--client-id <ID>`-Bu projenin Istemci KIMLIĞI. `IndividualB2C` Veya`SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
+`--client-id <ID>`-bu projenin Istemci KIMLIĞI. `IndividualB2C` veya `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
 
-`--domain <DOMAIN>`-Dizin kiracının etki alanı. `SingleOrg` Veya`IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `qualified.domain.name` şeklindedir.
+`--domain <DOMAIN>`-Dizin kiracının etki alanı. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `qualified.domain.name` şeklindedir.
 
-`--tenant-id <ID>`-Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` Kimlik doğrulamasıyla kullanın. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
+`--tenant-id <ID>`-Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
 
-`-r|--org-read-access`-Bu uygulamanın dizine okuma erişimi sağlar. Yalnızca veya `SingleOrg` `MultiOrg` kimlik doğrulaması için geçerlidir.
+`-r|--org-read-access`-bu uygulamanın dizine okuma erişimini sağlar. Yalnızca `SingleOrg` veya `MultiOrg` kimlik doğrulaması için geçerlidir.
 
-`--exclude-launch-settings`- *Launchsettings. JSON* öğesini oluşturulan şablondan hariç tutun.
+`--exclude-launch-settings`-oluşturulan şablondan *Launchsettings. JSON* öğesini hariç tutun.
 
-`-uld|--use-local-db`-SQLite yerine LocalDB kullanılması gerektiğini belirtir. Yalnızca veya `Individual` `IndividualB2C` kimlik doğrulaması için geçerlidir.
+`-uld|--use-local-db`-bir LocalDB 'nin SQLite yerine kullanılması gerektiğini belirtir. Yalnızca `Individual` veya `IndividualB2C` kimlik doğrulaması için geçerlidir.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
-`--no-https`-Proje HTTPS gerektirmez. `app.UseHsts`ve `app.UseHttpsRedirection` öğesine`Startup.Configure`eklenmez. Bu `Individual`seçenek yalnızca `IndividualB2C` `MultiOrg` , ,,veyakullanılmıyorsageçerlidir.`SingleOrg`
+`--no-https`-proje HTTPS gerektirmez. `app.UseHsts` ve `app.UseHttpsRedirection` `Startup.Configure`eklenmez. Bu seçenek yalnızca `Individual`, `IndividualB2C`, `SingleOrg`veya `MultiOrg` kullanılmıyorsa geçerlidir.
 
 **MVC, Razor**
 
-`-au|--auth <AUTHENTICATION_TYPE>`-Kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
+`-au|--auth <AUTHENTICATION_TYPE>`-kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
 
-- `None`-Kimlik doğrulaması yok (varsayılan).
-- `Individual`-Bireysel kimlik doğrulama.
-- `IndividualB2C`-Azure AD B2C ile bireysel kimlik doğrulama.
-- `SingleOrg`-Tek bir kiracı için kuruluş kimlik doğrulaması.
-- `MultiOrg`-Birden çok kiracı için kuruluş kimlik doğrulaması.
+- `None`-kimlik doğrulaması yok (varsayılan).
+- `Individual` bireysel kimlik doğrulaması.
+- `IndividualB2C` bireysel kimlik doğrulama Azure AD B2C.
+- tek bir kiracı için `SingleOrg` kurumsal kimlik doğrulaması.
+- `MultiOrg`-birden çok kiracı için kuruluş kimlik doğrulaması.
 - `Windows`-Windows kimlik doğrulaması.
 
-`--aad-b2c-instance <INSTANCE>`-Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` Kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
+`--aad-b2c-instance <INSTANCE>`-Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
 
-`-ssp|--susi-policy-id <ID>`-Bu proje için oturum açma ve kaydolma ilkesi KIMLIĞI. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
+`-ssp|--susi-policy-id <ID>`-bu proje için oturum açma ve kaydolma ilkesi KIMLIĞI. `IndividualB2C` kimlik doğrulamasıyla kullanın.
 
-`-rp|--reset-password-policy-id <ID>`-Bu proje için parola sıfırlama ilkesi KIMLIĞI. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
+`-rp|--reset-password-policy-id <ID>`-bu proje için parola sıfırlama ilkesi KIMLIĞI. `IndividualB2C` kimlik doğrulamasıyla kullanın.
 
-`-ep|--edit-profile-policy-id <ID>`-Bu proje için profil ilkesi KIMLIĞINI Düzenle. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
+`-ep|--edit-profile-policy-id <ID>`-bu proje için profil ilke KIMLIĞINI Düzenle. `IndividualB2C` kimlik doğrulamasıyla kullanın.
 
-`--aad-instance <INSTANCE>`-Bağlanılacak Azure Active Directory örneği. `SingleOrg` Veya`MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
+`--aad-instance <INSTANCE>`-Bağlanılacak Azure Active Directory örneği. `SingleOrg` veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
 
-`--client-id <ID>`-Bu projenin Istemci KIMLIĞI. `IndividualB2C`, Veyakimlik`MultiOrg`doğrulamasıylakullanın. `SingleOrg` Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
+`--client-id <ID>`-bu projenin Istemci KIMLIĞI. `IndividualB2C`, `SingleOrg`veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
 
-`--domain <DOMAIN>`-Dizin kiracının etki alanı. `SingleOrg` Veya`IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `qualified.domain.name` şeklindedir.
+`--domain <DOMAIN>`-Dizin kiracının etki alanı. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `qualified.domain.name` şeklindedir.
 
-`--tenant-id <ID>`-Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` Kimlik doğrulamasıyla kullanın. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
+`--tenant-id <ID>`-Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
 
-`--callback-path <PATH>`-Uygulamanın yeniden yönlendirme URI 'sinin temel yolu içindeki istek yolu. `SingleOrg` Veya`IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `/signin-oidc` şeklindedir.
+`--callback-path <PATH>`-uygulamanın yeniden yönlendirme URI 'sinin temel yolu içindeki istek yolu. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `/signin-oidc` şeklindedir.
 
-`-r|--org-read-access`-Bu uygulamanın dizine okuma erişimi sağlar. Yalnızca veya `SingleOrg` `MultiOrg` kimlik doğrulaması için geçerlidir.
+`-r|--org-read-access`-bu uygulamanın dizine okuma erişimini sağlar. Yalnızca `SingleOrg` veya `MultiOrg` kimlik doğrulaması için geçerlidir.
 
-`--exclude-launch-settings`- *Launchsettings. JSON* öğesini oluşturulan şablondan hariç tutun.
+`--exclude-launch-settings`-oluşturulan şablondan *Launchsettings. JSON* öğesini hariç tutun.
 
-`--use-browserlink`-Projedeki BrowserLink öğesini içerir.
+`--use-browserlink`-projede BrowserLink 'i Içerir.
 
-`-uld|--use-local-db`-SQLite yerine LocalDB kullanılması gerektiğini belirtir. Yalnızca veya `Individual` `IndividualB2C` kimlik doğrulaması için geçerlidir.
+`-uld|--use-local-db`-bir LocalDB 'nin SQLite yerine kullanılması gerektiğini belirtir. Yalnızca `Individual` veya `IndividualB2C` kimlik doğrulaması için geçerlidir.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
-`--no-https`-Proje HTTPS gerektirmez. `app.UseHsts`ve `app.UseHttpsRedirection` öğesine`Startup.Configure`eklenmez. Bu `Individual`seçenek yalnızca `IndividualB2C` `MultiOrg` , ,,veyakullanılmıyorsageçerlidir.`SingleOrg`
+`--no-https`-proje HTTPS gerektirmez. `app.UseHsts` ve `app.UseHttpsRedirection` `Startup.Configure`eklenmez. Bu seçenek yalnızca `Individual`, `IndividualB2C`, `SingleOrg`veya `MultiOrg` kullanılmıyorsa geçerlidir.
 
 **sayfasında**
 
-`-na|--namespace <NAMESPACE_NAME>`-Oluşturulan kod için ad alanı. Varsayılan değer `MyApp.Namespace` şeklindedir.
+`-na|--namespace <NAMESPACE_NAME>`-oluşturulan kod için ad alanı. Varsayılan değer `MyApp.Namespace` şeklindedir.
 
-`-np|--no-pagemodel`-Sayfayı PageModel olmadan oluşturur.
+`-np|--no-pagemodel`-sayfayı PageModel olmadan oluşturur.
 
 **viewıtems 'lar**
 
-`-na|--namespace <NAMESPACE_NAME>`-Oluşturulan kod için ad alanı. Varsayılan değer `MyApp.Namespace` şeklindedir.
+`-na|--namespace <NAMESPACE_NAME>`-oluşturulan kod için ad alanı. Varsayılan değer `MyApp.Namespace` şeklindedir.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2,0](#tab/netcore20)
 
 **konsol, angular, tepki, reactredux**
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **projesinin**
 
-`-f|--framework <FRAMEWORK>`-Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: `netcoreapp2.0` bir .NET Core sınıf kitaplığı oluşturmak veya `netstandard2.0` bir .NET Standard sınıf kitaplığı oluşturmak için. Varsayılan değer `netstandard2.0` şeklindedir.
+`-f|--framework <FRAMEWORK>`-hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: bir .NET Standard sınıf kitaplığı oluşturmak için bir .NET Core sınıf kitaplığı veya `netstandard2.0` oluşturmak `netcoreapp2.0`. Varsayılan değer `netstandard2.0` şeklindedir.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **MSTest, xUnit**
 
 `-p|--enable-pack`- [DotNet Pack](dotnet-pack.md)kullanarak proje için paketlemeyi etkinleştirilir.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **globaljson**
 
@@ -629,105 +629,105 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 **Web**
 
-`--use-launch-settings`-Oluşturulan şablon çıkışında *Launchsettings. JSON* öğesini içerir.
+`--use-launch-settings`-oluşturulan şablon çıkışında *Launchsettings. JSON* öğesini içerir.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **WebApi**
 
-`-au|--auth <AUTHENTICATION_TYPE>`-Kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
+`-au|--auth <AUTHENTICATION_TYPE>`-kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
 
-- `None`-Kimlik doğrulaması yok (varsayılan).
-- `IndividualB2C`-Azure AD B2C ile bireysel kimlik doğrulama.
-- `SingleOrg`-Tek bir kiracı için kuruluş kimlik doğrulaması.
+- `None`-kimlik doğrulaması yok (varsayılan).
+- `IndividualB2C` bireysel kimlik doğrulama Azure AD B2C.
+- tek bir kiracı için `SingleOrg` kurumsal kimlik doğrulaması.
 - `Windows`-Windows kimlik doğrulaması.
 
-`--aad-b2c-instance <INSTANCE>`-Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` Kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
+`--aad-b2c-instance <INSTANCE>`-Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
 
-`-ssp|--susi-policy-id <ID>`-Bu proje için oturum açma ve kaydolma ilkesi KIMLIĞI. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
+`-ssp|--susi-policy-id <ID>`-bu proje için oturum açma ve kaydolma ilkesi KIMLIĞI. `IndividualB2C` kimlik doğrulamasıyla kullanın.
 
-`--aad-instance <INSTANCE>`-Bağlanılacak Azure Active Directory örneği. `SingleOrg` Kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
+`--aad-instance <INSTANCE>`-Bağlanılacak Azure Active Directory örneği. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
 
-`--client-id <ID>`-Bu projenin Istemci KIMLIĞI. `IndividualB2C` Veya`SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
+`--client-id <ID>`-bu projenin Istemci KIMLIĞI. `IndividualB2C` veya `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
 
-`--domain <DOMAIN>`-Dizin kiracının etki alanı. `SingleOrg` Veya`IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `qualified.domain.name` şeklindedir.
+`--domain <DOMAIN>`-Dizin kiracının etki alanı. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `qualified.domain.name` şeklindedir.
 
-`--tenant-id <ID>`-Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` Kimlik doğrulamasıyla kullanın. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
+`--tenant-id <ID>`-Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
 
-`-r|--org-read-access`-Bu uygulamanın dizine okuma erişimi sağlar. Yalnızca veya `SingleOrg` `MultiOrg` kimlik doğrulaması için geçerlidir.
+`-r|--org-read-access`-bu uygulamanın dizine okuma erişimini sağlar. Yalnızca `SingleOrg` veya `MultiOrg` kimlik doğrulaması için geçerlidir.
 
-`--use-launch-settings`-Oluşturulan şablon çıkışında *Launchsettings. JSON* öğesini içerir.
+`--use-launch-settings`-oluşturulan şablon çıkışında *Launchsettings. JSON* öğesini içerir.
 
-`-uld|--use-local-db`-SQLite yerine LocalDB kullanılması gerektiğini belirtir. Yalnızca veya `Individual` `IndividualB2C` kimlik doğrulaması için geçerlidir.
+`-uld|--use-local-db`-bir LocalDB 'nin SQLite yerine kullanılması gerektiğini belirtir. Yalnızca `Individual` veya `IndividualB2C` kimlik doğrulaması için geçerlidir.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **MVC, Razor**
 
-`-au|--auth <AUTHENTICATION_TYPE>`-Kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
+`-au|--auth <AUTHENTICATION_TYPE>`-kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
 
-- `None`-Kimlik doğrulaması yok (varsayılan).
-- `Individual`-Bireysel kimlik doğrulama.
-- `IndividualB2C`-Azure AD B2C ile bireysel kimlik doğrulama.
-- `SingleOrg`-Tek bir kiracı için kuruluş kimlik doğrulaması.
-- `MultiOrg`-Birden çok kiracı için kuruluş kimlik doğrulaması.
+- `None`-kimlik doğrulaması yok (varsayılan).
+- `Individual` bireysel kimlik doğrulaması.
+- `IndividualB2C` bireysel kimlik doğrulama Azure AD B2C.
+- tek bir kiracı için `SingleOrg` kurumsal kimlik doğrulaması.
+- `MultiOrg`-birden çok kiracı için kuruluş kimlik doğrulaması.
 - `Windows`-Windows kimlik doğrulaması.
 
-`--aad-b2c-instance <INSTANCE>`-Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` Kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
+`--aad-b2c-instance <INSTANCE>`-Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
 
-`-ssp|--susi-policy-id <ID>`-Bu proje için oturum açma ve kaydolma ilkesi KIMLIĞI. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
+`-ssp|--susi-policy-id <ID>`-bu proje için oturum açma ve kaydolma ilkesi KIMLIĞI. `IndividualB2C` kimlik doğrulamasıyla kullanın.
 
-`-rp|--reset-password-policy-id <ID>`-Bu proje için parola sıfırlama ilkesi KIMLIĞI. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
+`-rp|--reset-password-policy-id <ID>`-bu proje için parola sıfırlama ilkesi KIMLIĞI. `IndividualB2C` kimlik doğrulamasıyla kullanın.
 
-`-ep|--edit-profile-policy-id <ID>`-Bu proje için profil ilkesi KIMLIĞINI Düzenle. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
+`-ep|--edit-profile-policy-id <ID>`-bu proje için profil ilke KIMLIĞINI Düzenle. `IndividualB2C` kimlik doğrulamasıyla kullanın.
 
-`--aad-instance <INSTANCE>`-Bağlanılacak Azure Active Directory örneği. `SingleOrg` Veya`MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
+`--aad-instance <INSTANCE>`-Bağlanılacak Azure Active Directory örneği. `SingleOrg` veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
 
-`--client-id <ID>`-Bu projenin Istemci KIMLIĞI. `IndividualB2C`, Veyakimlik`MultiOrg`doğrulamasıylakullanın. `SingleOrg` Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
+`--client-id <ID>`-bu projenin Istemci KIMLIĞI. `IndividualB2C`, `SingleOrg`veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
 
-`--domain <DOMAIN>`-Dizin kiracının etki alanı. `SingleOrg` Veya`IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `qualified.domain.name` şeklindedir.
+`--domain <DOMAIN>`-Dizin kiracının etki alanı. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `qualified.domain.name` şeklindedir.
 
-`--tenant-id <ID>`-Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` Kimlik doğrulamasıyla kullanın. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
+`--tenant-id <ID>`-Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
 
-`--callback-path <PATH>`-Uygulamanın yeniden yönlendirme URI 'sinin temel yolu içindeki istek yolu. `SingleOrg` Veya`IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `/signin-oidc` şeklindedir.
+`--callback-path <PATH>`-uygulamanın yeniden yönlendirme URI 'sinin temel yolu içindeki istek yolu. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `/signin-oidc` şeklindedir.
 
-`-r|--org-read-access`-Bu uygulamanın dizine okuma erişimi sağlar. Yalnızca veya `SingleOrg` `MultiOrg` kimlik doğrulaması için geçerlidir.
+`-r|--org-read-access`-bu uygulamanın dizine okuma erişimini sağlar. Yalnızca `SingleOrg` veya `MultiOrg` kimlik doğrulaması için geçerlidir.
 
-`--use-launch-settings`-Oluşturulan şablon çıkışında *Launchsettings. JSON* öğesini içerir.
+`--use-launch-settings`-oluşturulan şablon çıkışında *Launchsettings. JSON* öğesini içerir.
 
-`--use-browserlink`-Projedeki BrowserLink öğesini içerir.
+`--use-browserlink`-projede BrowserLink 'i Içerir.
 
-`-uld|--use-local-db`-SQLite yerine LocalDB kullanılması gerektiğini belirtir. Yalnızca veya `Individual` `IndividualB2C` kimlik doğrulaması için geçerlidir.
+`-uld|--use-local-db`-bir LocalDB 'nin SQLite yerine kullanılması gerektiğini belirtir. Yalnızca `Individual` veya `IndividualB2C` kimlik doğrulaması için geçerlidir.
 
-`--no-restore`-Proje oluşturma sırasında örtük geri yükleme yürütülmez.
+`--no-restore`-proje oluşturma sırasında örtük geri yükleme yürütmez.
 
 **sayfasında**
 
-`-na|--namespace <NAMESPACE_NAME>`-Oluşturulan kod için ad alanı. Varsayılan değer `MyApp.Namespace` şeklindedir.
+`-na|--namespace <NAMESPACE_NAME>`-oluşturulan kod için ad alanı. Varsayılan değer `MyApp.Namespace` şeklindedir.
 
-`-np|--no-pagemodel`-Sayfayı PageModel olmadan oluşturur.
+`-np|--no-pagemodel`-sayfayı PageModel olmadan oluşturur.
 
 **viewıtems 'lar**
 
-`-na|--namespace <NAMESPACE_NAME>`-Oluşturulan kod için ad alanı. Varsayılan değer `MyApp.Namespace` şeklindedir.
+`-na|--namespace <NAMESPACE_NAME>`-oluşturulan kod için ad alanı. Varsayılan değer `MyApp.Namespace` şeklindedir.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 **konsol, xUnit, MSTest, Web, WebApi**
 
-`-f|--framework <FRAMEWORK>`-Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: `netcoreapp1.0` veya `netcoreapp1.1`. Varsayılan değer `netcoreapp1.0` şeklindedir.
+`-f|--framework <FRAMEWORK>`-hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: `netcoreapp1.0` veya `netcoreapp1.1`. Varsayılan değer `netcoreapp1.0` şeklindedir.
 
 **projesinin**
 
-`-f|--framework <FRAMEWORK>`-Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: `netcoreapp1.0`, `netcoreapp1.1`, veya `netstandard1.0` .`netstandard1.6` Varsayılan değer `netstandard1.4` şeklindedir.
+`-f|--framework <FRAMEWORK>`-hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: `netstandard1.6`için `netcoreapp1.0`, `netcoreapp1.1`veya `netstandard1.0`. Varsayılan değer `netstandard1.4` şeklindedir.
 
-**mvc**
+**MVC**
 
-`-f|--framework <FRAMEWORK>`-Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: `netcoreapp1.0` veya `netcoreapp1.1`. Varsayılan değer `netcoreapp1.0` şeklindedir.
+`-f|--framework <FRAMEWORK>`-hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: `netcoreapp1.0` veya `netcoreapp1.1`. Varsayılan değer `netcoreapp1.0` şeklindedir.
 
-`-au|--auth <AUTHENTICATION_TYPE>`-Kullanılacak kimlik doğrulaması türü. Değerler: `None` veya `Individual`. Varsayılan değer `None` şeklindedir.
+`-au|--auth <AUTHENTICATION_TYPE>`-kullanılacak kimlik doğrulaması türü. Değerler: `None` veya `Individual`. Varsayılan değer `None` şeklindedir.
 
-`-uld|--use-local-db`-SQLite yerine LocalDB kullanılıp kullanılmayacağını belirtir. Değerler: `true` veya `false`. Varsayılan değer `false` şeklindedir.
+`-uld|--use-local-db`-, SQLite yerine LocalDB kullanılıp kullanılmayacağını belirtir. Değerler: `true` veya `false`. Varsayılan değer `false` şeklindedir.
 
 ---
 
@@ -776,6 +776,6 @@ SDK sürümü 2.0.0 (yalnızca .NET Core SDK 2,0 veya üzeri sürümlerle kullan
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DotNet New için özel şablonlar](custom-templates.md)
-- [Dotnet new için özel şablon oluşturma](../tutorials/create-custom-template.md)
+- [Dotnet new için özel şablon oluşturma](../tutorials/cli-templates-create-item-template.md)
 - [DotNet/DotNet-şablon-örnek GitHub deposu](https://github.com/dotnet/dotnet-template-samples)
 - [DotNet New için kullanılabilir şablonlar](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

@@ -3,12 +3,12 @@ title: Docker 'a giriş
 description: Bu makalede bir .NET Core uygulaması bağlamında Docker 'a bir giriş ve genel bakış sunulmaktadır.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: af1213eefb013f8911a865e7e2e318a8beadc9a5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 7f19b12d84543e8ae69c2f8728872bf94ef0536f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038459"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416634"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET ve Docker’a Giriş
 
@@ -72,7 +72,7 @@ Tüm Azure dağıtımı türlerinde kapsayıcı görüntüleri depolayın ve yö
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [.NET Core uygulamasını kapsayıya kapsayıtabilecek hakkında bilgi edinin.](build-docker-netcore-container.md)
+- [.NET Core uygulamasını kapsayıya kapsayıtabilecek hakkında bilgi edinin.](build-container.md)
 - [ASP.NET Core uygulamasını kapsayıya kapsayıtabilecek hakkında bilgi edinin.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 - [ASP.NET Core mikro hizmeti öğrenin öğreticisini deneyin.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
 - [Visual Studio 'da kapsayıcı araçları hakkında bilgi edinin](/visualstudio/containers/overview)

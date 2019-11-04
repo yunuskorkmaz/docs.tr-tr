@@ -3,16 +3,16 @@ title: GRPC istemci kitaplıkları oluşturma-WCF geliştiricileri için gRPC
 description: GRPC Hizmetleri için paylaşılan istemci kitaplıkları/paketleri tartışması.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 12c628d2b58199a8103c60aa123bb75a34e0797d
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: b403e7e1638496947ac7f6fc976cbeab2f435bbf
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846700"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419929"
 ---
 # <a name="create-grpc-client-libraries"></a>GRPC istemci kitaplıkları oluşturma
 
-Bir gPRC uygulaması için istemci kitaplıklarını dağıtmak gerekli değildir. Kuruluşunuzda paylaşılan bir `.proto` dosyaları kitaplığı oluşturabilirsiniz ve diğer takımlar bu dosyaları kendi projelerinde istemci kodu oluşturmak için kullanabilir. Ancak, özel bir NuGet deponuz varsa ve diğer birçok ekip .NET Core kullanıyorsa, hizmet projenizin bir parçası olarak istemci NuGet paketleri oluşturma ve yayımlama, hizmetinizi paylaşma ve yükseltme konusunda iyi bir yöntem olabilir.
+Bir gRPC uygulaması için istemci kitaplıklarını dağıtmak gerekli değildir. Kuruluşunuzda paylaşılan bir `.proto` dosyaları kitaplığı oluşturabilirsiniz ve diğer takımlar bu dosyaları kendi projelerinde istemci kodu oluşturmak için kullanabilir. Ancak, özel bir NuGet deponuz varsa ve diğer birçok ekip .NET Core kullanıyorsa, hizmet projenizin bir parçası olarak istemci NuGet paketleri oluşturma ve yayımlama, hizmetinizi paylaşma ve yükseltme konusunda iyi bir yöntem olabilir.
 
 İstemci kitaplığı dağıtmanın avantajlarından biri, oluşturulan gRPC ve prototip sınıflarını faydalı "kullanışlı" yöntemlerle ve özellikleriyle geliştirebilmektir. İstemci kodunda, sunucusunda olduğu gibi, tüm sınıfların `partial` olarak bildirildiği için, bunları oluşturulan kodu düzenlemeden genişletebilirsiniz. Bu, temel türlere oluşturucular, Yöntemler, hesaplanmış Özellikler ve daha fazlasını eklemenin kolay olması anlamına gelir.
 
@@ -23,7 +23,7 @@ Farklı takımların farklı programlama dilleri ve çerçeveleri kullanması ve
 
 ## <a name="useful-extensions"></a>Kullanışlı uzantılar
 
-.NET ' te nesne akışlarıyla uğraşmadan önce iki yaygın olarak kullanılan arabirim vardır: <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.IObservable%601>. .NET Core 3,0 ve C# 8,0 ' den itibaren, akışları zaman uyumsuz olarak işlemeye yönelik bir<xref:System.Collections.Generic.IAsyncEnumerable%601>arabirimi ve arabirimi kullanmak için`await foreach`söz dizimi vardır. Bu bölümde, bu arabirimlerin gRPC akışlarına uygulanması için yeniden kullanılabilir kod sunulmaktadır.
+.NET ' te nesne akışlarıyla uğraşmadan önce iki yaygın olarak kullanılan arabirim vardır: <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.IObservable%601>. .NET Core 3,0 ve C# 8,0 ' den itibaren, akışları zaman uyumsuz olarak işlemeye yönelik bir <xref:System.Collections.Generic.IAsyncEnumerable%601> arabirimi ve arabirimi kullanmak için `await foreach` söz dizimi vardır. Bu bölümde, bu arabirimlerin gRPC akışlarına uygulanması için yeniden kullanılabilir kod sunulmaktadır.
 
 .NET Core gRPC istemci kitaplıkları ile, bir `IAsyncEnumerable<T>`oluşturan `IAsyncStreamReader<T>` için `ReadAllAsync` bir genişletme yöntemi vardır. Reaktif programlama kullanan geliştiriciler için `IObservable<T>` oluşturmak için eşdeğer bir genişletme yöntemi şöyle görünebilir.
 

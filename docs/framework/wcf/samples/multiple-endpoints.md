@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: 2a1b03dfc48881df80652275eb20e43f7bd2b63b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9a4f610b3f67aac91440a343e0c6baff9d35df5c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044819"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417034"
 ---
 # <a name="multiple-endpoints"></a>Birden Fazla Uç Noktası
-Birden çok uç nokta örneği, bir hizmette birden çok uç noktanın nasıl yapılandırılacağını ve bir istemciden gelen her bir uç nokta ile nasıl iletişim kuracağını gösterir. Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. Hizmet yapılandırması, `ICalculator` sözleşmeyi destekleyen iki uç nokta tanımlamak üzere değiştirilmiştir, ancak her biri farklı bir bağlama kullanılarak farklı bir adreste bulunur. İstemci yapılandırması ve kodu, hizmet uç noktaları ile iletişim kuracak şekilde değiştirilmiştir.  
+Birden çok uç nokta örneği, bir hizmette birden çok uç noktanın nasıl yapılandırılacağını ve bir istemciden gelen her bir uç nokta ile nasıl iletişim kuracağını gösterir. Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. Hizmet yapılandırması, `ICalculator` sözleşmesini destekleyen iki uç nokta tanımlamak üzere değiştirilmiştir, ancak her biri farklı bir bağlama kullanılarak farklı bir adreste bulunur. İstemci yapılandırması ve kodu, hizmet uç noktaları ile iletişim kuracak şekilde değiştirilmiştir.  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Hizmet Web. config dosyası, her biri aynı `ICalculator` sözleşmeyi destekleyen iki uç nokta tanımlamak üzere değiştirilmiştir, ancak farklı bağlamalar kullanan farklı adreslerdir. İlk uç nokta, güvenliği etkinleştirilmemiş olan `basicHttpBinding` bağlama kullanılarak temel adreste tanımlanmıştır. İkinci uç nokta, Windows kimlik doğrulamasıyla WS-Security kullanılarak varsayılan olarak `wsHttpBinding` güvenli olan bir bağlama kullanılarak {BaseAddress}/Secure konumunda tanımlanmıştır.  
+ Hizmet Web. config dosyası, her biri aynı `ICalculator` sözleşmeyi destekleyen iki uç nokta tanımlamak üzere değiştirilmiştir, ancak farklı bağlamalar kullanan farklı adreslerdir. İlk uç nokta, güvenliği etkinleştirilmemiş `basicHttpBinding` bağlama kullanılarak temel adreste tanımlanmıştır. İkinci uç nokta, Windows kimlik doğrulamasıyla WS-Security kullanılarak varsayılan olarak güvenli olan `wsHttpBinding` bağlama kullanılarak {BaseAddress}/Secure konumunda tanımlanmıştır.  
   
 ```xml  
 <service   
@@ -87,7 +87,7 @@ static void Main()
   
  İstemcisini çalıştırdığınızda her iki uç nokta içeren etkileşimler görüntülenir.  
   
-```  
+```console
 Communicate with basic endpoint.  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
@@ -115,6 +115,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  

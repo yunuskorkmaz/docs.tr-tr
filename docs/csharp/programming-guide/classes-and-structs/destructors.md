@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 9936d56582afd160bf3464d18efd3acf47c7af60
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7cb9bd05d08a33be53abad58b78b39e36c6dffe
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924491"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419355"
 ---
 # <a name="finalizers-c-programming-guide"></a>Sonlandırıcılar (C# Programlama Kılavuzu)
 Sonlandırıcılar (yani **Yıkıcılar**olarak da bilinir), bir sınıf örneği çöp toplayıcısı tarafından toplandığında gerekli son temizleme işlemini gerçekleştirmek için kullanılır.  
@@ -29,7 +29,7 @@ Sonlandırıcılar (yani **Yıkıcılar**olarak da bilinir), bir sınıf örneğ
   
 - Sonlandırıcı değiştirici almaz veya parametrelere sahip değildir.  
   
- Örneğin, aşağıdaki, `Car` sınıfı için sonlandırıcının bir bildirimidir.
+ Örneğin, `Car` sınıfı için sonlandırıcının bildirimi aşağıda verilmiştir.
   
  [!code-csharp[csProgGuideObjects#86](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#86)]  
 
@@ -37,7 +37,7 @@ Bir Sonlandırıcı, aşağıdaki örnekte gösterildiği gibi bir ifade gövdes
 
 [!code-csharp[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
   
- Sonlandırıcı nesnenin temel sınıfında <xref:System.Object.Finalize%2A> örtülü olarak çağrı çağırır. Bu nedenle, sonlandırıcının çağrısı dolaylı olarak aşağıdaki koda çevrilir:  
+ Sonlandırıcı nesnenin temel sınıfında <xref:System.Object.Finalize%2A> dolaylı olarak çağırır. Bu nedenle, sonlandırıcının çağrısı dolaylı olarak aşağıdaki koda çevrilir:  
   
 ```csharp  
 protected override void Finalize()  
@@ -53,7 +53,7 @@ protected override void Finalize()
 }  
 ```  
   
- Bu, `Finalize` metodun devralma zincirindeki tüm örnekler için özyinelemeli olarak çağrıldığı ve en az türetilen en düşük olan ' dır.  
+ Bu, `Finalize` yönteminin devralma zincirindeki tüm örnekler için özyinelemeli olarak çağrıldığı, en az türetilen ' ın en küçük bir değer olarak çağrıldığı anlamına gelir.  
   
 > [!NOTE]
 > Boş sonlandırıcılar kullanılmamalıdır. Bir sınıf bir Sonlandırıcı içerdiğinde, `Finalize` kuyrukta bir giriş oluşturulur. Sonlandırıcı çağrıldığında, atık toplayıcı kuyruğu işleyecek şekilde çağrılır. Boş bir Sonlandırıcı yalnızca gereksiz performans kaybına neden olur.  
@@ -62,13 +62,13 @@ protected override void Finalize()
  
  .NET Framework uygulamalarda (.NET Core uygulamalarında değil), program çıkıldığında sonlandırıcılar da çağırılır. 
   
- Çöp toplamayı çağırarak <xref:System.GC.Collect%2A>, ancak çoğu zaman performans sorunları oluşturabileceğinden bu durum kaçınılması gerekir.  
+ <xref:System.GC.Collect%2A>çağırarak çöp toplamayı zorlamak mümkündür, ancak çoğu zaman performans sorunları oluşturabileceğinden bu durum kaçınılmalıdır.  
   
 ## <a name="using-finalizers-to-release-resources"></a>Kaynakları serbest bırakmak için sonlandırıcıları kullanma  
  Genel olarak, C# çöp toplama ile çalışma zamanını hedeflemez bir dille geliştirirken gereken kadar bellek yönetimi gerekmez. Bunun nedeni, .NET Framework atık toplayıcının nesneleriniz için bellek ayırmayı ve serbest bırakma işlemini örtülü olarak yönetmesinden kaynaklanır. Ancak, uygulamanız Windows, dosyalar ve ağ bağlantıları gibi yönetilmeyen kaynakları kapsüller, bu kaynakları serbest bırakmak için sonlandırıcıları kullanmanız gerekir. Nesne sonlandırmaya uygun olduğunda, çöp toplayıcı nesnenin `Finalize` yöntemini çalıştırır.  
   
 ## <a name="explicit-release-of-resources"></a>Kaynakların açık yayını  
- Uygulamanız pahalı bir dış kaynak kullanıyorsa, atık toplayıcı nesneyi serbest bırakmadan önce kaynağı açıkça serbest bırakmak için bir yol sağlamanızı öneririz. Bu, nesnesi için gerekli temizleme `Dispose` işlemini gerçekleştiren <xref:System.IDisposable> arabirimden bir yöntem uygulayarak yapılır. Bu, uygulamanın performansını önemli ölçüde iyileştirebilirler. Kaynak üzerinde bu açık denetimle birlikte, `Dispose` Yöntem çağrısı başarısız olursa Sonlandırıcı, kaynakları temizlemek için bir güvenlik önlemi haline gelir.  
+ Uygulamanız pahalı bir dış kaynak kullanıyorsa, atık toplayıcı nesneyi serbest bırakmadan önce kaynağı açıkça serbest bırakmak için bir yol sağlamanızı öneririz. Bu, nesnesi için gerekli temizleme işlemini gerçekleştiren <xref:System.IDisposable> arabiriminden bir `Dispose` yöntemi uygulayarak yapılır. Bu, uygulamanın performansını önemli ölçüde iyileştirebilirler. Kaynak üzerinde bu açık denetimle birlikte, `Dispose` yöntemine yapılan çağrı başarısız olursa Sonlandırıcı, kaynakları temizlemek için bir güvenlik önlemi haline gelir.  
   
  Kaynakları Temizleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:  
   
@@ -79,13 +79,13 @@ protected override void Finalize()
 - [using Deyimi](../../language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir devralım zinciri oluşturan üç sınıf oluşturur. Sınıfı `First` temel sınıftır, `Second` öğesinden `First`türetilir ve `Third` öğesinden `Second`türetilir. Tüm üçünün sonlandırıcıları vardır. ' `Main`De, en çok türetilmiş sınıfın bir örneği oluşturulur. Program çalıştığında, üç sınıfa ait sonlandırıcılara otomatik olarak ve sırasıyla en az türetilmiş ' dan türetilmiş ' a göre çağrıldığını unutmayın.  
+ Aşağıdaki örnek, bir devralım zinciri oluşturan üç sınıf oluşturur. Sınıf `First` temel sınıftır, `Second` `First`türetilir ve `Third` `Second`türetilir. Tüm üçünün sonlandırıcıları vardır. `Main`, en çok türetilen sınıfın bir örneği oluşturulur. Program çalıştığında, üç sınıfa ait sonlandırıcılara otomatik olarak ve sırasıyla en az türetilmiş ' dan türetilmiş ' a göre çağrıldığını unutmayın.  
   
  [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  
   
 ## <a name="c-language-specification"></a>C# dili belirtimi  
 
-Daha fazla bilgi için [ C# dil belirtiminin](../../language-reference/language-specification/index.md) [Yıkıcılar](~/_csharplang/spec/classes.md#destructors) bölümüne bakın.
+Daha fazla bilgi için [ C# dil belirtiminin](/dotnet/csharp/language-reference/language-specification/introduction) [Yıkıcılar](~/_csharplang/spec/classes.md#destructors) bölümüne bakın.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,12 +2,12 @@
 title: Erişim Denetimi
 description: F# Programlama dilindeki türler, Yöntemler ve işlevler gibi programlama öğelerine erişimi nasıl denetleyeceğinizi öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 38f8f3fd4114c0428fbe8baca71594cd07740b2c
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: fe204a883a440794fdd033c54d6d8d4fb68e0ce2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817861"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425107"
 ---
 # <a name="access-control"></a>Erişim Denetimi
 
@@ -15,28 +15,28 @@ ms.locfileid: "68817861"
 
 ## <a name="basics-of-access-control"></a>Access Control temelleri
 
-' F#De, erişim denetimi belirticileri `public` `internal`, ve `private` , modüller, türler, Yöntemler, değer tanımları, işlevler, Özellikler ve açık alanlara uygulanabilir.
+' F#De, erişim denetimi belirticileri `public`, `internal`ve `private`, modüller, türler, Yöntemler, değer tanımları, işlevler, Özellikler ve açık alanlara uygulanabilir.
 
-- `public`varlığa tüm çağıranlar tarafından erişilebileceğini belirtir.
+- `public`, varlığa tüm çağıranlar tarafından erişilebileceğini belirtir.
 
-- `internal`varlığa yalnızca aynı derlemeden erişilebileceğini belirtir.
+- `internal`, varlığa yalnızca aynı derlemeden erişilebileceğini belirtir.
 
-- `private`varlığa yalnızca kapsayan türden veya modülden erişilebileceğini belirtir.
+- `private`, varlığa yalnızca kapsayan tür veya modülden erişilebileceğini belirtir.
 
 > [!NOTE]
-> Erişim belirleyicisi `protected` , erişimi destekleyen `protected` dillerde yazılmış F#türler kullanıyorsanız kabul edilebilir olmasına rağmen ' de kullanılmaz. Bu nedenle, korumalı bir yöntemi geçersiz kılarsınız, yönteminiz yalnızca sınıf ve alt öğelerinden biri içinde erişilebilir kalır.
+> `protected` erişim belirleyicisi ' de F#kullanılamaz, ancak `protected` erişimi destekleyen dillerde yazılmış türler kullanıyorsanız bu kabul edilebilir. Bu nedenle, korumalı bir yöntemi geçersiz kılarsınız, yönteminiz yalnızca sınıf ve alt öğelerinden biri içinde erişilebilir kalır.
 
-Genel olarak, tanımlayıcı, erişim denetimi belirticisinden sonra görünen bir `mutable` veya `inline` tanımlayıcı kullanıldığı durumlar dışında, varlığın adının önüne konur.
+Genel olarak, tanımlayıcı, erişim denetimi belirticisinden sonra görünen bir `mutable` veya `inline` belirticisi dışında, varlığın adının önüne konur.
 
-Hiçbir erişim belirticisi kullanılmazsa, varsayılan olarak, bir tür `public`içindeki `let` bağlamalar dışında, her zaman `private` tür olarak olur.
+Herhangi bir erişim belirticisi kullanılmazsa, bir tür `let` bağlamaları dışında, her zaman türüne `private` olan `public`varsayılan değer.
 
-İçindeki F# imzalar F# program öğelerine erişimi denetlemek için başka bir mekanizma sağlar. İmza, erişim denetimi için gerekli değildir. Daha fazla bilgi için bkz. [imzalar](signatures.md).
+İçindeki F# imzalar F# program öğelerine erişimi denetlemek için başka bir mekanizma sağlar. İmza, erişim denetimi için gerekli değildir. Daha fazla bilgi için bkz. [imzalar](signature-files.md).
 
 ## <a name="rules-for-access-control"></a>Access Control kuralları
 
 Erişim denetimi aşağıdaki kurallara tabidir:
 
-- Devralma bildirimleri (yani, bir sınıf için bir `inherit` taban sınıf belirtmek için kullanımı), arabirim bildirimleri (yani, bir sınıfın bir arabirim uyguladığı) ve soyut üyelerin her zaman kapsayan türle aynı erişilebilirliği vardır. Bu nedenle, bir erişim denetim belirticisi bu yapılar üzerinde kullanılamaz.
+- Devralma bildirimleri (yani, bir sınıf için bir taban sınıf belirtmek için `inherit` kullanımı), arabirim bildirimleri (yani bir sınıfın bir arabirim uyguladığı) ve soyut üyelerin her zaman kapsayan türle aynı erişilebilirliği vardır. Bu nedenle, bir erişim denetim belirticisi bu yapılar üzerinde kullanılamaz.
 
 - Ayrılmış bir Union içindeki bireysel durumlar için erişilebilirlik, ayrılmış birleşimin erişilebilirliğine göre belirlenir. Diğer bir deyişle, belirli bir birleşim durumunun birleşimin kendisinden daha az erişilebilir olmaması gerekir.
 
@@ -44,15 +44,15 @@ Erişim denetimi aşağıdaki kurallara tabidir:
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod, erişim denetimi belirticilerinin kullanımını gösterir. `Module1.fs` Projesinde`Module2.fs`iki dosya vardır. Her dosya örtük olarak bir modüldür. Bu nedenle, `Module1` ve `Module2`olmak üzere iki modül vardır. Özel bir tür ve bir iç tür içinde `Module1`tanımlanmıştır. Özel türe erişilemez `Module2`, ancak iç tür olabilir.
+Aşağıdaki kod, erişim denetimi belirticilerinin kullanımını gösterir. Projede iki dosya vardır `Module1.fs` ve `Module2.fs`. Her dosya örtük olarak bir modüldür. Bu nedenle, `Module1` ve `Module2`iki modül vardır. Özel bir tür ve bir iç tür `Module1`tanımlanmıştır. Özel türe `Module2`erişilemez, ancak iç tür olabilir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/access-control/snippet1.fs)]
 
-Aşağıdaki kod, içinde `Module1.fs`oluşturulan türlerin erişilebilirliğini sınar.
+Aşağıdaki kod `Module1.fs`içinde oluşturulan türlerin erişilebilirliğini sınar.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/access-control/snippet2.fs)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F# Dili Başvurusu](index.md)
-- [İmzalar](signatures.md)
+- [İmzalar](signature-files.md)

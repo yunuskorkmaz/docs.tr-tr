@@ -2,12 +2,12 @@
 title: Docker uygulamaları için geliştirme iş akışı
 description: Docker tabanlı uygulamalar geliştirmeye yönelik iş akışının ayrıntılarını anlayın. Adım adım ilerleyin ve Dockerfiles 'ı iyileştirmek ve Visual Studio 'Yu kullanırken kullanılabilecek Basitleştirilmiş iş akışıyla sona erdirmek için bazı ayrıntılara ulaşın.
 ms.date: 01/07/2019
-ms.openlocfilehash: cd599753a5e89504f11226e89837df7665bca641
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8a4d87d84ca59304266a52b0a977f878189108f0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771495"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417247"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -117,7 +117,7 @@ Kullanmakta olduğunuz dile ve çerçeveye bağlı olarak Dockerfile içinde ek 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **.NET Core uygulamaları Için Docker görüntülerini derleme** \
-  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 - **Kendi görüntünüzü oluşturun**. Resmi Docker belgelerinde. \
   <https://docs.docker.com/engine/tutorials/dockerimages/>
@@ -268,7 +268,7 @@ Ancak, `dotnet restore` yalnızca klasörde tek bir proje veya çözüm dosyası
 
    - `!eShopOnContainers-ServicesAndWebApps.sln`, yalnızca bu çözüm dosyasını içerecek şekilde.
 
-2. @No__t_1 `/ignoreprojectextensions:.dcproj` bağımsız değişkenini dahil edin, böylece Docker-Compose projesini de yoksayar ve yalnızca eShopOnContainers-ServicesAndWebApps çözümü için paketleri geri yükler.
+2. `dotnet restore``/ignoreprojectextensions:.dcproj` bağımsız değişkenini dahil edin, böylece Docker-Compose projesini de yoksayar ve yalnızca eShopOnContainers-ServicesAndWebApps çözümü için paketleri geri yükler.
 
 Son iyileştirme için, satır 23 ' ün aynı zamanda uygulama oluşturup 20 ' den sonra da bir zaman alan komutla birlikte geldiğinden emin olmak yeterlidir.
 
@@ -425,7 +425,7 @@ Visual Studio 'daki çözümünüze Orchestrator desteği ekledikten sonra, Şek
 
 **Şekil 5-8**. Visual Studio 2017 Çözüm Gezgini eklenen **Docker-Compose** ağacı düğümü
 
-@No__t_0 komutunu kullanarak, tek bir Docker-Compose. yıml dosyası ile çok kapsayıcılı bir uygulama dağıtabilirsiniz. Ancak, Visual Studio bu grubun bir grubunu ekleyerek ortama (geliştirme veya üretim) ve yürütme türüne (yayın veya hata ayıklama) bağlı olarak değerleri geçersiz kılabilirsiniz. Bu özellik sonraki bölümlerde açıklanacaktır.
+`docker-compose up` komutunu kullanarak, tek bir Docker-Compose. yıml dosyası ile çok kapsayıcılı bir uygulama dağıtabilirsiniz. Ancak, Visual Studio bu grubun bir grubunu ekleyerek ortama (geliştirme veya üretim) ve yürütme türüne (yayın veya hata ayıklama) bağlı olarak değerleri geçersiz kılabilirsiniz. Bu özellik sonraki bölümlerde açıklanacaktır.
 
 ![5-kapsayıcıları veya oluşturulmuş uygulamayı çalıştırma](./media/image12.png)
 

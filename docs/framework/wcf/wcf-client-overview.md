@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 9aba83bd3e05e3f390b3d1553bd7974c64c41037
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 180de3f571426441155a19b98ab750fcdbb3888e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321340"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420655"
 ---
 # <a name="wcf-client-overview"></a>WCF İstemcisi Genel Bakış
 Bu bölümde, istemci uygulamalarının ne yaptığını, bir Windows Communication Foundation (WCF) istemcisini yapılandırma, oluşturma ve kullanma ve istemci uygulamalarının güvenliğini sağlama işlemlerinin nasıl yapılacağı açıklanmaktadır.  
@@ -43,7 +43,7 @@ Bu bölümde, istemci uygulamalarının ne yaptığını, bir Windows Communicat
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Hizmet sözleşmesini, bağlamaları ve adresleri alma  
  WCF 'de, hizmetler ve istemciler, yönetilen öznitelikler, arabirimler ve yöntemler kullanılarak sözleşmeleri modelleyebilir. Bir istemci uygulamasındaki bir hizmete bağlanmak için, hizmet sözleşmesinin tür bilgilerini edinmeniz gerekir. Genellikle bunu, hizmetten meta verileri indiren [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)kullanarak yapar, bunu istediğiniz dilde bir yönetilen kaynak kodu dosyasına dönüştürür ve bir istemci uygulama yapılandırma dosyası oluşturur Bu, WCF istemci nesneniz yapılandırmak için kullanabilirsiniz. Örneğin, bir `MyCalculatorService` çağırmak için bir WCF istemci nesnesi oluşturacaksanız ve bu hizmetin meta verilerinin `http://computerName/MyCalculatorService/Service.svc?wsdl` ' de yayımlandığını biliyorsanız, aşağıdaki kod örneği, hizmeti içeren bir `ClientCode.vb` dosyası almak için Svcutil. exe ' nin nasıl kullanılacağını gösterir Yönetilen kodda anlaşma.  
   
-```  
+```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
 ```  
   
@@ -57,14 +57,14 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
  Ayrıca, ile bağlantı kurmak ve hizmetleri kullanmak için WCF istemci kanalı nesnelerini de kullanabilirsiniz. Ayrıntılar için bkz. [WCF Istemci mimarisi](./feature-details/client-architecture.md).  
   
 #### <a name="creating-a-new-wcf-object"></a>Yeni bir WCF nesnesi oluşturma  
- @No__t-0 sınıfının kullanımını göstermek için, bir hizmet uygulamasından aşağıdaki basit hizmet sözleşmesinin oluşturulduğunu varsayın.  
+ Bir <xref:System.ServiceModel.ClientBase%601> sınıfının kullanımını göstermek için, bir hizmet uygulamasından aşağıdaki basit hizmet sözleşmesinin oluşturulduğunu varsayın.  
   
 > [!NOTE]
 > WCF istemcinizi oluşturmak için Visual Studio kullanıyorsanız, projenize bir hizmet başvurusu eklediğinizde nesneler nesne tarayıcısına otomatik olarak yüklenir.  
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Visual Studio kullanmıyorsanız, <xref:System.ServiceModel.ClientBase%601> ' ı ve hizmet sözleşmesi arabirimini `ISampleService` ' i genişleten türü bulmak için oluşturulan sözleşme kodunu inceleyin. Bu durumda, bu tür aşağıdaki kod gibi görünür:  
+ Visual Studio kullanmıyorsanız, <xref:System.ServiceModel.ClientBase%601> genişleten türü ve hizmet sözleşmesi arabirimini `ISampleService`bulmak için oluşturulan sözleşme kodunu inceleyin. Bu durumda, bu tür aşağıdaki kod gibi görünür:  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
@@ -75,11 +75,11 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
 ### <a name="contracts-bindings-and-addresses"></a>Sözleşmeler, bağlamalar ve adresler  
  Bir WCF istemci nesnesi oluşturabilmeniz için önce istemci nesnesini yapılandırmanız gerekir. Özellikle, kullanmak için bir hizmet *uç noktası* olması gerekir. Uç nokta, bir hizmet sözleşmesinin, bağlamanın ve bir adresin birleşimidir. (Uç noktalar hakkında daha fazla bilgi için bkz. [uç noktalar: adresler, bağlamalar ve sözleşmeler](./feature-details/endpoints-addresses-bindings-and-contracts.md).) Genellikle, bu bilgiler, Svcutil. exe aracının oluşturduğu ve istemci nesneniz oluştururken otomatik olarak yüklenen [\<endpoint >](../configure-apps/file-schema/wcf/endpoint-of-client.md) öğesinde bulunur. Her iki WCF istemci türünün de bu bilgileri programlı bir şekilde belirtmenizi sağlayan aşırı yüklemeleri vardır.  
   
- Örneğin, önceki örneklerde kullanılan bir @no__t için oluşturulan bir yapılandırma dosyası aşağıdaki uç nokta bilgilerini içerir.  
+ Örneğin, Yukarıdaki örneklerde kullanılan bir `ISampleService` için oluşturulmuş bir yapılandırma dosyası aşağıdaki uç nokta bilgilerini içerir.  
   
  [!code-xml[C_GeneratedCodeFiles#19](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
   
- Bu yapılandırma dosyası `<client>` öğesinde bir hedef uç nokta belirtir. Birden çok hedef uç noktası kullanma hakkında daha fazla bilgi için <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> oluşturucuları ' ne bakın.  
+ Bu yapılandırma dosyası `<client>` öğesinde bir hedef uç nokta belirtir. Birden çok hedef uç noktası kullanma hakkında daha fazla bilgi için <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> oluşturuculara bakın.  
   
 ## <a name="calling-operations"></a>Işlemleri çağırma  
  Bir istemci nesnesi oluşturulup yapılandırıldıktan sonra bir try/catch bloğu oluşturun, işlem, nesne yerelde olacak şekilde çağrı yapın ve WCF istemci nesnesini kapatın. İstemci uygulaması ilk işlemi çağırdığında, WCF otomatik olarak temel alınan kanalı açar ve nesne geri dönüştürüldüğünde temeldeki kanal kapatılır. (Alternatif olarak, diğer işlemleri çağırmak için veya daha sonra kanalı doğrudan açıp kapatabilirsiniz.)  
@@ -132,7 +132,7 @@ End Interface
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
 ## <a name="handling-errors"></a>Hataları İşleme  
- Temel alınan istemci kanalını (bir işlem çağırarak açıkça veya otomatik olarak) açarken, işlemleri çağırmak için istemci veya kanal nesnesi kullanılarak veya temel alınan istemci kanalının kapatılması sırasında bir istemci uygulamasında özel durumlar meydana gelebilir. İşlemler tarafından döndürülen SOAP hatalarının sonucu olarak oluşturulan @no__t 2 nesnenin yanı sıra, uygulamaların olası <xref:System.TimeoutException?displayProperty=nameWithType> ve <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> özel durumlarını işlemesini beklediği en düşük düzeyde önerilir. İşlem sözleşmesinde belirtilen SOAP hataları, tür parametresinin SOAP hatasının ayrıntı türü olduğu <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> olarak istemci uygulamalarına yükseltilir. İstemci uygulamasında hata koşullarını işleme hakkında daha fazla bilgi için bkz. [hataları gönderme ve alma](sending-and-receiving-faults.md). Tüm bir örnek için, istemcideki hataların nasıl işleneceğini gösterir, bkz. [Beklenen özel durumlar](./samples/expected-exceptions.md).  
+ Temel alınan istemci kanalını (bir işlem çağırarak açıkça veya otomatik olarak) açarken, işlemleri çağırmak için istemci veya kanal nesnesi kullanılarak veya temel alınan istemci kanalının kapatılması sırasında bir istemci uygulamasında özel durumlar meydana gelebilir. Uygulamalar, işlemler tarafından döndürülen SOAP hatalarının sonucu olarak oluşturulan tüm <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> nesnelerine ek olarak olası <xref:System.TimeoutException?displayProperty=nameWithType> ve <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> özel durumları işlemek için beklenen en düşük düzeyde önerilir. İşlem sözleşmesinde belirtilen SOAP hataları, istemci uygulamalarına tür parametresinin, SOAP hatasının ayrıntı türü olduğu <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> olarak getirilir. İstemci uygulamasında hata koşullarını işleme hakkında daha fazla bilgi için bkz. [hataları gönderme ve alma](sending-and-receiving-faults.md). Tüm bir örnek için, istemcideki hataların nasıl işleneceğini gösterir, bkz. [Beklenen özel durumlar](./samples/expected-exceptions.md).  
   
 ## <a name="configuring-and-securing-clients"></a>Istemcileri yapılandırma ve güvenli hale getirme  
  Bir istemciyi yapılandırmak, genellikle bir yapılandırma dosyasından, istemci veya kanal nesnesi için gerekli hedef uç nokta bilgilerinin yüklenmesi ile başlar, ancak istemci oluşturucular ve özellikler kullanarak bu bilgileri program aracılığıyla da yükleyebilirsiniz. Ancak, bazı istemci davranışlarını etkinleştirmek ve birçok güvenlik senaryosu için ek yapılandırma adımları gereklidir.  
@@ -169,7 +169,7 @@ End Interface
  İşlemler çağrıldığında istemci geliştiricisine tamamen aynıdır. Bunun nedeni, bir işlemi oluşturan iletilerin yönetilen kodda ifade edildiğinde zaman uyumlu veya zaman uyumsuz yöntemlerle eşlenmesine olanak sağlar. Bu nedenle, işlemleri zaman uyumsuz olarak çağıran bir istemci oluşturmak isterseniz, `/async` seçeneğini kullanarak zaman uyumsuz istemci kodu oluşturmak için Svcutil. exe ' yi kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: hizmet Işlemlerini zaman uyumsuz olarak çağırma](./feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>WCF Istemci kanalları kullanarak hizmetleri çağırma  
- WCF istemci türleri, kendisini temel alınan Kanal sistemini kullanıma sunmak için <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> arabiriminden türeyen <xref:System.ServiceModel.ClientBase%601> ' ı genişletir. Hedef hizmet sözleşmesini <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> sınıfıyla kullanarak hizmetleri çağırabilirsiniz. Ayrıntılar için bkz. [WCF Istemci mimarisi](./feature-details/client-architecture.md).  
+ WCF istemci türleri, kendisini temel alınan Kanal sistemini kullanıma sunmak için <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> arabiriminden türetilen <xref:System.ServiceModel.ClientBase%601>genişletir. Hedef hizmet sözleşmesini <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> sınıfıyla kullanarak hizmetleri çağırabilirsiniz. Ayrıntılar için bkz. [WCF Istemci mimarisi](./feature-details/client-architecture.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

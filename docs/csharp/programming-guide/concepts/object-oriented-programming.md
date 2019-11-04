@@ -2,12 +2,12 @@
 title: Nesne odaklı programlama (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 50b38833582ebe46836ccfab4e1ebeb98b53a96e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 121d2e43f6896179756067e661be6d7960a1ee64
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659875"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418042"
 ---
 # <a name="object-oriented-programming-c"></a>Nesne odaklı programlama (C#)
 
@@ -129,7 +129,7 @@ class SampleClass
 }
 ```
 
-Çoğu özelliğin, özellik değerini ayarlamak ve almak için yöntemleri ya da yordamları vardır. Ancak, bunları değiştirilmesini veya okumayı kısıtlamak için salt okunurdur veya salt yazılır özellikler oluşturabilirsiniz. ' C#De, `get` veya `set` özellik yöntemini atlayabilirsiniz. Ancak otomatik olarak uygulanan özellikler salt okunurdur veya salt yazılır olamaz.
+Çoğu özelliğin, özellik değerini ayarlamak ve almak için yöntemleri ya da yordamları vardır. Ancak, bunları değiştirilmesini veya okumayı kısıtlamak için salt okunurdur veya salt yazılır özellikler oluşturabilirsiniz. İçinde C#, `get` veya `set` özellik yöntemini atlayabilirsiniz. Ancak otomatik olarak uygulanan özellikler salt okunurdur veya salt yazılır olamaz.
 
 Daha fazla bilgi için bkz.:
 
@@ -170,7 +170,7 @@ Daha fazla bilgi için bkz.:
 
 - [Genişletme Yöntemleri](../classes-and-structs/extension-methods.md)
 
-#### <a name="Constructors"></a> Oluşturucular
+#### <a name="Constructors"></a>Kurucu
 
 Oluşturucular, belirli bir türden bir nesne oluşturulduğunda otomatik olarak yürütülen sınıf yöntemleridir. Oluşturucular genellikle yeni nesnenin veri üyelerini başlatır. Bir Oluşturucu, bir sınıf oluşturulduğunda yalnızca bir kez çalıştırılabilir. Ayrıca, kurucudaki kod her zaman bir sınıftaki diğer koddan önce çalışır. Ancak, başka bir yöntemle aynı şekilde birden çok Oluşturucu aşırı yüklemesi oluşturabilirsiniz.
 
@@ -190,7 +190,7 @@ Daha fazla bilgi için bkz.:
 
 [Oluşturucular](../classes-and-structs/constructors.md).
 
-#### <a name="Finalizers"></a> Sonlandırıcılar
+#### <a name="Finalizers"></a>Sonlandırıcılar
 
 Sonlandırıcılar sınıfların örneklerini deketmek için kullanılır. .NET Framework, çöp toplayıcı uygulamanızdaki yönetilen nesneler için bellek ayırmayı ve serbest bırakma işlemini otomatik olarak yönetir. Ancak, uygulamanızın oluşturduğu yönetilmeyen kaynakları temizlemek için sonlandırıcılardan yine de ihtiyacınız olabilir. Bir sınıf için yalnızca bir sonlandırıcılar olabilir.
 
@@ -309,11 +309,11 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-Daha fazla bilgi için bkz.: [Anonim türler](../classes-and-structs/anonymous-types.md).
+Daha fazla bilgi için bkz: [anonim türler](../classes-and-structs/anonymous-types.md).
 
 ## <a name="Inheritance"></a>Devralmayı
 
-Devralma, başka bir sınıfta tanımlanan davranışı yeniden kullanan, genişleten ve değiştiren yeni bir sınıf oluşturmanıza olanak sağlar. Üyeleri devralınmış olan sınıfa *temel sınıf*denir ve bu üyeleri devralan sınıfa *türetilmiş sınıf*denir. Ancak, ' deki C# tüm sınıflar, .NET sınıf <xref:System.Object> hiyerarşisini destekleyen sınıfından dolaylı olarak devralınır ve tüm sınıflara alt düzey hizmetler sağlar.
+Devralma, başka bir sınıfta tanımlanan davranışı yeniden kullanan, genişleten ve değiştiren yeni bir sınıf oluşturmanıza olanak sağlar. Üyeleri devralınmış olan sınıfa *temel sınıf*denir ve bu üyeleri devralan sınıfa *türetilmiş sınıf*denir. Ancak, içindeki C# tüm sınıflar, .NET sınıf hiyerarşisini destekleyen <xref:System.Object> sınıfından dolaylı olarak devralınır ve tüm sınıflara alt düzey hizmetler sağlar.
 
 > [!NOTE]
 > C#birden çok devralmayı desteklemez. Diğer bir deyişle, türetilmiş bir sınıf için yalnızca bir temel sınıf belirtebilirsiniz.
@@ -450,7 +450,7 @@ Daha fazla bilgi için bkz.:
 
 - [Temsilciler](../delegates/index.md)
 
-- [delegate](../../language-reference/keywords/delegate.md)
+- [delegate](../../language-reference/builtin-types/reference-types.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

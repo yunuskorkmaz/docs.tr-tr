@@ -4,28 +4,28 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
-ms.openlocfilehash: 7da0a121cdb854c787c105c92cec70b7c4b3244e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd9a1ee015ebb707a7a06d1c062a1bb3003c96e8
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911085"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458619"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Nasıl yapılır: Belirlenemeyen Derinliğe Sahip Veriyi TreeView'a Bağlama
-Bağlamak istediğiniz zamanlar olabilir bir <xref:System.Windows.Controls.TreeView> Derinliği bilinmeyen bir veri kaynağı.  Veriler doğal olarak nerede klasörleri klasörleri içeren bir dosya sistemi veya bir şirketin kuruluş yapısı gibi özyinelemeli çalışanların diğer çalışanlarla çalışanların olduğu olduğunda bu durum oluşabilir.  
+Derinliği bilinen bir veri kaynağına <xref:System.Windows.Controls.TreeView> bağlamak istediğiniz zaman olabilir.  Bu durum, verilerin bir dosya sistemi gibi (örneğin, klasörler) veya Şirketin kuruluş yapısını, çalışanların doğrudan rapor olarak başka çalışanları olduğu bir dosya sistemi gibi özyinelemeli olduğunda meydana gelebilir.  
   
- Veri kaynağı bir hiyerarşik nesne modeli yüklü olmalıdır. Örneğin, bir `Employee` sınıfı, bir çalışanın doğrudan rapor çalışan nesnelerinin bir koleksiyonu içerebilir. Hiyerarşik olmayan bir şekilde veri gösteriliyorsa, verilerin hiyerarşik bir sunumunu oluşturmanız gerekir.  
+ Veri kaynağının hiyerarşik bir nesne modeli olmalıdır. Örneğin, bir `Employee` sınıfı bir çalışanın doğrudan raporu olan çalışan nesnelerinin bir koleksiyonunu içerebilir. Veriler hiyerarşik olmayan bir şekilde gösteriliyorsa, verilerin hiyerarşik bir gösterimini derlemeniz gerekir.  
   
- Ayarladığınızda <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A?displayProperty=nameWithType> özelliği ve <xref:System.Windows.Controls.ItemsControl> oluşturur bir <xref:System.Windows.Controls.ItemsControl> her alt öğenin alt boyunca <xref:System.Windows.Controls.ItemsControl> ndedir <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> üst öğe olarak. Örneğin ayarlarsanız <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> verilere bağlı özellikte <xref:System.Windows.Controls.TreeView>, her <xref:System.Windows.Controls.TreeViewItem> oluşturulan kullanan diğer bir deyişle <xref:System.Windows.DataTemplate> için atanma <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> özelliği <xref:System.Windows.Controls.TreeView>.  
+ <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A?displayProperty=nameWithType> özelliğini ayarladığınızda ve <xref:System.Windows.Controls.ItemsControl> her alt öğe için bir <xref:System.Windows.Controls.ItemsControl> oluşturursa, alt <xref:System.Windows.Controls.ItemsControl> üst öğeyle aynı <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> kullanır. Örneğin, bir veri bağlantılı <xref:System.Windows.Controls.TreeView><xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> özelliğini ayarlarsanız, oluşturulan her <xref:System.Windows.Controls.TreeViewItem> <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> <xref:System.Windows.Controls.TreeView>özelliğine atanmış <xref:System.Windows.DataTemplate> kullanır.  
   
- <xref:System.Windows.HierarchicalDataTemplate> Belirtmenize olanak tanıyan <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> için bir <xref:System.Windows.Controls.TreeViewItem>, ya da tüm <xref:System.Windows.Controls.HeaderedItemsControl>, veri şablonu üzerinde. Ayarladığınızda <xref:System.Windows.HierarchicalDataTemplate.ItemsSource%2A?displayProperty=nameWithType> değeri özelliği yüklendiğinde <xref:System.Windows.HierarchicalDataTemplate> uygulanır. Kullanarak bir <xref:System.Windows.HierarchicalDataTemplate>, yinelemeli olarak ayarlayabilirsiniz <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> her <xref:System.Windows.Controls.TreeViewItem> içinde <xref:System.Windows.Controls.TreeView>.  
+ <xref:System.Windows.HierarchicalDataTemplate>, veri şablonunda bir <xref:System.Windows.Controls.TreeViewItem>veya herhangi bir <xref:System.Windows.Controls.HeaderedItemsControl>için <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> belirtmenize olanak sağlar. <xref:System.Windows.HierarchicalDataTemplate.ItemsSource%2A?displayProperty=nameWithType> özelliğini ayarladığınızda, <xref:System.Windows.HierarchicalDataTemplate> uygulandığında bu değer kullanılır. <xref:System.Windows.HierarchicalDataTemplate>kullanarak, <xref:System.Windows.Controls.TreeView>her <xref:System.Windows.Controls.TreeViewItem> için <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> yinelemeli olarak ayarlayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl bağlanacağını gösterir. bir <xref:System.Windows.Controls.TreeView> hiyerarşik veriler ve kullanmak için bir <xref:System.Windows.HierarchicalDataTemplate> belirtmek için <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> her <xref:System.Windows.Controls.TreeViewItem>.  <xref:System.Windows.Controls.TreeView> Şirket çalışanlar temsil eden bir XML verilerini bağlar.  Her `Employee` öğesi diğer içerebilir `Employee` kimin kime rapor göstermek için öğeleri. Verileri özyinelemeli olduğundan <xref:System.Windows.HierarchicalDataTemplate> her düzeye uygulanabilir.  
+ Aşağıdaki örnek, bir <xref:System.Windows.Controls.TreeView> hiyerarşik verilere nasıl bağlanacağını ve her bir <xref:System.Windows.Controls.TreeViewItem><xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> belirtmek için <xref:System.Windows.HierarchicalDataTemplate> nasıl kullanılacağını gösterir.  <xref:System.Windows.Controls.TreeView>, bir şirketteki çalışanları temsil eden XML verilerine bağlanır.  Her `Employee` öğesi kimin kim tarafından rapor olduğunu göstermek için diğer `Employee` öğeleri içerebilir. Veriler özyinelemeli olduğundan <xref:System.Windows.HierarchicalDataTemplate> her düzeye uygulanabilir.  
   
  [!code-xaml[TreeViewWithUnknownDepth#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)
+- [Veri Bağlamaya Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)
 - [Veri Şablonu Oluşturmaya Genel Bakış](../data/data-templating-overview.md)

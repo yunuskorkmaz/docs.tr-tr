@@ -2,12 +2,12 @@
 title: Zaman uyumsuz ileti tabanlı iletişim
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Zaman uyumsuz ileti tabanlı iletişimler mikro hizmetler mimarisinde önemli bir kavramdır, çünkü mikro hizmetleri bir diğerinden bağımsız tutmanın en iyi yolu, Ayrıca, sonunda da eşzamanlı olarak eşitlenmektir.
 ms.date: 09/20/2018
-ms.openlocfilehash: c362bdaf41fee5ee20516b89b8bec12d6c0557cf
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522750"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454239"
 ---
 # <a name="asynchronous-message-based-communication"></a>Zaman uyumsuz ileti tabanlı iletişim
 
@@ -77,7 +77,7 @@ Birden fazla mikro hizmette olay odaklı bir mimari uygulamaya yönelik bir zorl
 
 - Tam [olay](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) kaynağını belirleme düzenini kullanma.
 
-- [Giden kutusu deseninin](http://www.kamilgrzybek.com/design/the-outbox-pattern/)kullanımı: bir işlem veritabanı tablosu, olayı oluşturacak ve yayınlayacak bir olay Oluşturucu bileşeni için temel olacak bir ileti kuyruğu olarak.
+- [Giden kutusu deseninin](https://www.kamilgrzybek.com/design/the-outbox-pattern/)kullanımı: bir işlem veritabanı tablosu, olayı oluşturacak ve yayınlayacak bir olay Oluşturucu bileşeni için temel olacak bir ileti kuyruğu olarak.
 
 Zaman uyumsuz iletişimin kullanılması sırasında göz önünde bulundurmanız gereken ek konular Message Eşkuvvetlilik ve iletiyi yinelenenleri kaldırma. Bu konular, bu kılavuzun ilerleyen kısımlarında [mikro hizmetler (Tümleştirme olayları) arasındaki olay tabanlı Iletişimi uygulama](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) bölümünde ele alınmıştır.
 
@@ -101,7 +101,7 @@ Zaman uyumsuz iletişimin kullanılması sırasında göz önünde bulundurmanı
 - **Nihai tutarlılık** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard. Esnekliği 'e yeniden düzenleme: kup@no__t hesaplanıyor**-1
+- **Jimmy Bogard. Esnekliği 'e yeniden düzenleme: kup \ değerlendirilirken**
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]

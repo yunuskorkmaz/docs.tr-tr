@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 8ecf399e48da12a9dee19bb217b8668c6a53d3ad
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191862"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454965"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# Başvurusu)
 
@@ -33,7 +33,7 @@ ms.locfileid: "73191862"
 - [`readonly` üye tanımında](#readonly-member-examples), `readonly` bir `struct` üyesinin yapının iç durumunu muiçermediğini belirtir.
 - `ref readonly` bir [yöntemde döndürülen](#ref-readonly-return-example)`readonly` değiştirici, yöntemin bir başvuru döndürdüğünü ve bu başvuruya yazma izni bulunmadığını gösterir.
 
-`readonly sturct` ve `ref readonly` bağlamları 7,2 ' C# ye eklenmiştir. 8,0 ' de C# `readonly` struct üyeleri eklendi
+`readonly struct` ve `ref readonly` bağlamları 7,2 ' C# ye eklenmiştir. 8,0 ' de C# `readonly` struct üyeleri eklendi
 
 ## <a name="readonly-field-example"></a>ReadOnly alan örneği
 
@@ -161,6 +161,6 @@ Dil belirtimi tekliflerini de görebilirsiniz:
 - [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [Değiştiriciler](modifiers.md)
+- [Değiştiriciler](index.md)
 - [const](const.md)
 - [Alanlar](../../programming-guide/classes-and-structs/fields.md)

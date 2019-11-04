@@ -8,18 +8,20 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 77db5201ab21dff1f04f76da5dd10d07aa377813
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a7ddaac56177d13248caf6559221fff26d2d2c00
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191811"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416731"
 ---
 # <a name="c-guide"></a>C# Kılavuzu
 
 C# Kılavuz, C# dil hakkında birçok kaynak sağlar. Bu sitenin birçok farklı izleyicileri vardır. Programlama deneyiminize veya C# dille ve .net 'e bağlı olarak, bu kılavuzun farklı bölümlerini araştırmak isteyebilirsiniz.
 
 - Yepyeni geliştiriciler için:
+  - 101 video serisini izleyin. [ C# ](https://aka.ms/dotnet3-csharp) Bu öğreticilerde keşfedebileceğiniz önemli kavramlara bir giriş sağlar.
+
   - Öğreticilere giriş ile başlayın. [ C# ](tutorials/intro-to-csharp/index.md) Bu öğreticiler, C# tarayıcınızda etkileşimli olarak dili araştırmanıza olanak sağlar. Buradan, diğer [öğreticilere](tutorials/index.md)geçebilirsiniz. Bu öğreticiler, sıfırdan programlar oluşturmayı C# gösterir. Öğreticiler, programlar oluşturmak için adım adım bir işlem sağlar. Bunlar, dil kavramlarını ve kendi kendinize nasıl program C# deryükleneceğini gösterir. Önce genel bakış bilgilerini okumayı tercih ediyorsanız, [ C# dilin turunu](tour-of-csharp/index.md)deneyin. Bu, C# dilin kavramlarını açıklar. Bunu okuduktan sonra, dilin temel olarak anlaşılmasına ve öğreticilere denemeye veya kendi kendinize bir şeyler oluşturmaya başlamaya hazırlanmış olursunuz.
 
 - Yeni geliştiriciler için C#:
@@ -61,7 +63,7 @@ C# Kılavuzda birkaç bölüm vardır. Bunları sırasıyla okuyabilir veya en f
 - [Dil Başvurusu](language-reference/index.md)
   - Bu bölüm, C# dildeki başvuru malzemesini içerir. Bu malzeme, ' nin C#söz dizimini ve semantiğini anlamanıza yardımcı olur. Ayrıca türler, işleçler, öznitelikler, Önişlemci yönergeleri, derleyici anahtarları, derleyici hataları ve derleyici uyarıları üzerine başvuru malzemeleri de içerir.
 
-- [C#Dil belirtimi](./language-reference/language-specification/index.md)
+- [C#Dil belirtimi](/dotnet/csharp/language-reference/language-specification/introduction)
   - C# Dil belirtiminin en son sürümlerine bağlantı sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.

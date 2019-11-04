@@ -2,12 +2,12 @@
 title: Net.TCP Bağlantı Noktası Paylaşımı Örneği
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 56d248a8349e4f38bfdef6a887fc41b117402d02
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 240579ef36405d730bb04ea171846c8e5ef9322e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039193"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416753"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Bağlantı Noktası Paylaşımı Örneği
 TCP/IP protokolü, aynı makinede çalışan birden çok ağ uygulamasına olan bağlantıları ayırt etmek için bağlantı noktası olarak adlandırılan 16 bitlik bir sayı kullanır. Bir uygulama bir bağlantı noktasında dinliyorsa, bu bağlantı noktası için tüm TCP trafiği bu uygulamaya gider. Diğer uygulamalar bu bağlantı noktasını aynı anda dinleyemiyor.  
@@ -17,7 +17,7 @@ TCP/IP protokolü, aynı makinede çalışan birden çok ağ uygulamasına olan 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
@@ -25,16 +25,16 @@ TCP/IP protokolü, aynı makinede çalışan birden çok ağ uygulamasına olan 
   
  NetTcp bağlantı noktası Paylaşımı, benzer şekilde birden çok ağ uygulamasının tek bir bağlantı noktasını paylaşmasına izin veren bir Windows Communication Foundation (WCF) özelliğidir. NetTcp bağlantı noktası paylaşım hizmeti, net. tcp protokolünü kullanarak bağlantıları kabul eder ve iletileri hedef adreslerine göre iletir.  
   
- NetTcp bağlantı noktası Paylaşımı hizmeti varsayılan olarak etkinleştirilmemiştir. Bu örneği çalıştırmadan önce, hizmeti el ile etkinleştirmeniz gerekir. Daha fazla bilgi için [nasıl yapılır: Net. TCP bağlantı noktası paylaşım hizmetini](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)etkinleştirin. Hizmet devre dışıysa, sunucu uygulaması başlatıldığında bir özel durum oluşturulur.  
+ NetTcp bağlantı noktası Paylaşımı hizmeti varsayılan olarak etkinleştirilmemiştir. Bu örneği çalıştırmadan önce, hizmeti el ile etkinleştirmeniz gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: net. TCP bağlantı noktası paylaşım hizmetini etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Hizmet devre dışıysa, sunucu uygulaması başlatıldığında bir özel durum oluşturulur.  
   
-```  
+```console
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
- Bağlantı noktası Paylaşımı, <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> <xref:System.ServiceModel.NetTcpBinding> bağlama veya <xref:System.ServiceModel.Channels.TcpTransportBindingElement> bağlama öğesinin özelliği ayarlanarak sunucuda etkindir. İstemci, bağlantı noktası paylaşımının sunucuda kullanmak üzere nasıl yapılandırıldığını öğrenmek zorunda değildir.  
+ Bağlantı noktası Paylaşımı, <xref:System.ServiceModel.NetTcpBinding> bağlamasının veya <xref:System.ServiceModel.Channels.TcpTransportBindingElement> bağlama öğesinin <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> özelliğini ayarlayarak sunucuda etkindir. İstemci, bağlantı noktası paylaşımının sunucuda kullanmak üzere nasıl yapılandırıldığını öğrenmek zorunda değildir.  
   
 ## <a name="enabling-port-sharing"></a>Bağlantı noktası paylaşımını etkinleştirme  
- Aşağıdaki kod, sunucuda bağlantı noktası paylaşımını etkinleştirmeyi gösterir. Rastgele bir URI yolu olan sabit `ICalculator` bir bağlantı noktasında hizmetin bir örneğini başlatır. İki hizmet aynı bağlantı noktasını paylaşsa da, NetTcp bağlantı noktası paylaşım hizmeti 'nin iletileri doğru uygulamaya yönlendirebilmesi için genel uç nokta adresleri yine de benzersiz olmalıdır.  
+ Aşağıdaki kod, sunucuda bağlantı noktası paylaşımını etkinleştirmeyi gösterir. Rastgele bir URI yolu olan sabit bir bağlantı noktasında `ICalculator` hizmetinin bir örneğini başlatır. İki hizmet aynı bağlantı noktasını paylaşsa da, NetTcp bağlantı noktası paylaşım hizmeti 'nin iletileri doğru uygulamaya yönlendirebilmesi için genel uç nokta adresleri yine de benzersiz olmalıdır.  
 
 ```csharp
 // Configure a binding with TCP port sharing enabled  
@@ -49,9 +49,9 @@ host.AddServiceEndpoint(typeof(ICalculator), binding, address);
 host.Open();  
 ```
 
- Bağlantı noktası Paylaşımı etkinken, bağlantı noktası numarası üzerinden çakışmadan hizmeti birden çok kez çalıştırabilirsiniz. Bağlantı noktası paylaşımını devre dışı bırakmak için kodu değiştirirseniz, hizmetin iki kopyasının başlatılması ikinci hata ile <xref:System.ServiceModel.AddressAlreadyInUseException>başarısız olur.  
+ Bağlantı noktası Paylaşımı etkinken, bağlantı noktası numarası üzerinden çakışmadan hizmeti birden çok kez çalıştırabilirsiniz. Bağlantı noktası paylaşımını devre dışı bırakmak için kodu değiştirirseniz, hizmetin iki kopyasının başlatılması ikinci bir <xref:System.ServiceModel.AddressAlreadyInUseException>ile başarısız olur.  
   
-```  
+```console  
 Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is already a listener on IP endpoint 0.0.0.0:9000.  Make sure that you are not trying to use this endpoint multiple times in your application and that there are no other applications listening on this endpoint. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted  
 ```  
   
@@ -104,14 +104,14 @@ class client
 
  Hizmetin her örneği, benzersiz sayısını ve adresini yazdırır. Örneğin, Service. exe ' yi çalıştırdığınızda aşağıdaki metni görebilirsiniz.  
   
-```  
+```console  
 Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
 Press <ENTER> to terminate service.  
 ```  
   
  Client. exe ' yi çalıştırdığınızda burada gördüğünüz hizmet numarasını girin.  
   
-```  
+```console  
 Enter the service number to test: 4381  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
@@ -127,7 +127,7 @@ Press <ENTER> to terminate client.
   
 1. Aşağıdaki komutu kullanarak ASP.NET 4,0 ' ü yükler.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

@@ -1,15 +1,15 @@
 ---
-title: F#Etkileşimli (fsi. exe) başvurusu
+title: F# Etkileşimli (fsi.exe) Başvurusu
 description: Etkileşimli ( F# fsi. exe) bir kodu konsolda etkileşimli olarak çalıştırmak F# veya betikleri yürütmek F# için nasıl kullanılacağını öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 4e8521677cad5f4e62d2822837818292c55da96d
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 9f4b5c0e7527d29e375265bb31a5de2df098f8e1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002067"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419903"
 ---
-# <a name="interactive-programming-with-f"></a>F @ no__t ile etkileşimli programlama-0
+# <a name="interactive-programming-with-f"></a>F\# ile etkileşimli programlama
 
 > [!NOTE]
 > Bu makalede şu anda yalnızca Windows deneyimi açıklanmaktadır.  Yeniden yazılır.
@@ -43,10 +43,12 @@ Bazı kitaplıklara başvuruda bulunan bir proje açıksa, F# **Çözüm Gezgini
 
 Ayarları ayarlayarak F# etkileşimli komut satırı bağımsız değişkenlerini (Seçenekler) kontrol edebilirsiniz. **Araçlar** menüsünde **Seçenekler...** ' i seçin ve ardından  **F# araçlar**' ı genişletin. Değiştirebileceğiniz iki ayar F# etkileşimli seçenekler ve **64-bit F# etkileşimli** ayarıdır ve yalnızca, bir 64 bit makinede F# etkileşimli olarak çalışıyorsanız ilgilidir. Bu ayar, bir 32 bit veya 64 bit işlem olarak çalıştırılıp çalıştırılmayacağını anlamak için makine mimarisini kullanan fsi. exe veya fsıanycpu. exe ' nin adanmış 64 bit sürümünü çalıştırmak isteyip istemediğinizi belirler.
 
-## <a name="scripting-with-f"></a>F @ no__t-0 ile betik oluşturma
+## <a name="scripting-with-f"></a>F\# betiği oluşturma
+
 Betikler **. FSX** veya **. fsscript**dosya uzantısını kullanır. Kaynak kodu derlemek ve daha sonra derlenen derlemeyi çalıştırmak yerine, yalnızca **fsi. exe** ' yi çalıştırabilir ve F# Kaynak Kodu betiğinin dosya adını belirtebilir, kodu F# etkileşimli olarak okur ve gerçek zamanlı olarak yürütür.
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Etkileşimli, komut dosyası ve derlenmiş ortamlar arasındaki farklar
+
 Etkileşimli olarak F# kod derlerken, ister etkileşimli çalışıyor ister bir betiği çalıştırdığınıza bakılmaksızın **etkileşimli** simgesi tanımlanmıştır. Derleyicide kod derlerken, **derlenen** sembol tanımlanmıştır. Bu nedenle, kodun derlenmiş ve etkileşimli modlarda farklı olması gerekiyorsa, hangisinin kullanılacağını belirleyebilmek için koşullu derleme için önişlemci yönergelerini kullanabilirsiniz.
 
 Etkileşimli olarak F# , derleyicisini yürütürken kullanılamayan komut dosyalarını yürütürken bazı yönergeler kullanılabilir. Aşağıdaki tabloda, etkileşimli kullanırken F# kullanılabilen yönergeler özetlenmektedir.
@@ -84,10 +86,10 @@ for arg in fsi.CommandLineArgs do
 printfn "%A" (MyAssembly.myFunction 10 40)
 ```
 
-Çıktı aşağıdaki şekilde olacaktır:
+Çıktı aşağıdaki gibidir:
 
 ```console
-Command line arguments: 
+Command line arguments:
 file1.fsx
 test
 90
@@ -97,5 +99,5 @@ test
 
 |Başlık|Açıklama|
 |-----|-----------|
-|[F#Etkileşimli Seçenekler](../../language-reference/fsharp-interactive-options.md)|F# Etkileşimli, fsi. exe için komut satırı söz dizimini ve seçeneklerini açıklar.|
+|[F# Interactive Seçenekleri](../../language-reference/fsharp-interactive-options.md)|F# Etkileşimli, fsi. exe için komut satırı söz dizimini ve seçeneklerini açıklar.|
 |[F#Etkileşimli kitaplık başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Etkileşimli olarak F# kod yürütürken kullanılabilen kitaplık işlevlerini açıklar.|

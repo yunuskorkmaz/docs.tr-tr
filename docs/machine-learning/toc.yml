@@ -39,14 +39,16 @@
           href: tutorials/object-detection-onnx.md
         - name: TensorFlow kullanarak yaklaşımı sınıflandırma (metin sınıflandırması)
           href: tutorials/text-classification-tf.md
-    - name: Araçlar
+    - name: Model Oluşturucu ve CLI
       items:
-        - name: Model Oluşturucu ile fiyatları tahmin etme
+        - name: Fiyatları tahmin etme (Model Oluşturucu ve regresyon)
           href: tutorials/predict-prices-with-model-builder.md
         - name: ML.NET CLI kullanarak yaklaşımı çözümleme
           href: tutorials/mlnet-cli.md
-        - name: Model Oluşturucu ve Razor Pages kullanarak yaklaşımı analiz etme
+        - name: Razor Pages'de yaklaşımı çözümleme (Model Oluşturucu ve ikili sınıflandırma)
           href: tutorials/sentiment-analysis-model-builder.md
+        - name: Sistem durumu ihlallerini kategorilere ayırma (Model Oluşturucu ve çok sınıflı sınıflandırma)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: Infer.NET ile olasılığa dayalı programlama

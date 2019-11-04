@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 53c3ac6e4fa6313488c47d851e0897bd512521b7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2df3492274c2abceebf1d37b87be9cc9bb455b5f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596282"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419177"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Kısmi Sınıflar ve Yöntemler (C# Programlama Kılavuzu)
 
@@ -30,14 +30,14 @@ Bir sınıf tanımını bölmek istenen birkaç durum vardır:
 
   [!code-csharp[csProgGuideObjects#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#26)]
 
-`partial` Anahtar sözcüğü, sınıf, yapı veya arabirimin diğer bölümlerinin ad alanında tanımlanamayacağını gösterir. Tüm parçalar `partial` anahtar kelimesini kullanmalıdır. Son türü oluşturmak için tüm parçalar derleme zamanında kullanılabilir olmalıdır. Tüm parçalar, ve gibi aynı erişilebilirliği `public` `private`içermelidir.
+`partial` anahtar sözcüğü, sınıfın, yapının veya arabirimin diğer bölümlerinin ad alanında tanımlanamayacağını belirtir. Tüm parçaların `partial` anahtar sözcüğünü kullanması gerekir. Son türü oluşturmak için tüm parçalar derleme zamanında kullanılabilir olmalıdır. Tüm parçalar `public`, `private`vb. gibi aynı erişilebilirliği içermelidir.
 
 Herhangi bir bölüm soyut olarak bildirilirse, tüm tür soyut olarak değerlendirilir. Herhangi bir bölüm Sealed olarak bildirilirse, tüm tür Sealed olarak değerlendirilir. Herhangi bir parça bir temel tür bildiriyorsa, tüm tür o sınıfı devralır.
 
 Bir temel sınıf belirten tüm parçalar kabul etmelidir, ancak temel bir sınıfı atlayan parçalar hala temel türü miras alır. Parçalar farklı temel arabirimler belirtebilir ve son tür tüm kısmi bildirimlerin listelebileceği tüm arabirimleri uygular. Kısmi bir tanımda belirtilen herhangi bir sınıf, yapı veya arabirim üyesi diğer tüm parçalar için kullanılabilir. Son tür derleme zamanında tüm parçaların birleşimidir.
 
 > [!NOTE]
-> Değiştirici `partial` , temsilci veya numaralandırma bildirimlerinde kullanılamıyor.
+> `partial` değiştiricisi temsilci veya numaralandırma bildirimlerinde kullanılamıyor.
 
 Aşağıdaki örnek iç içe geçmiş türlerin kısmen, iç içe yerleştirilmiş olması durumunda bile kısmi bir tür olduğunu gösterir.
 
@@ -75,11 +75,11 @@ Bunlar aşağıdaki bildirimlerle eşdeğerdir:
 
 Kısmi sınıf tanımlarına çalışırken izlenecek birkaç kural vardır:
 
-- Aynı türdeki parçalar olması amaçlanan tüm kısmi tür tanımlarının ile `partial`değiştirilmesi gerekir. Örneğin, aşağıdaki sınıf bildirimleri bir hata oluşturur:
+- Aynı türdeki parçalar olması amaçlanan tüm kısmi tür tanımlarının `partial`ile değiştirilmesi gerekir. Örneğin, aşağıdaki sınıf bildirimleri bir hata oluşturur:
 
   [!code-csharp[csProgGuideObjects#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#20)]
 
-- Değiştirici yalnızca, veya `class` `struct` anahtarsözcüklerinden`interface`hemen önce görünebilir. `partial`
+- `partial` değiştirici yalnızca, `class`, `struct`veya `interface`anahtar kelimeleriyle hemen önce yer alabilir.
 
 - İç içe geçmiş kısmi türlere, aşağıdaki örnekte gösterildiği gibi kısmi tür tanımlarında izin verilir:
 
@@ -115,7 +115,7 @@ Daha fazla bilgi için bkz. [tür parametrelerindeki kısıtlamalar](../generics
 
 ### <a name="description"></a>Açıklama
 
-Aşağıdaki örnekte, sınıfının `Coords`alanları ve Oluşturucusu, bir kısmi sınıf tanımında ve `PrintCoords`üyesi başka bir kısmi sınıf tanımında bildirilmiştir.
+Aşağıdaki örnekte, `Coords`sınıfının alanları ve Oluşturucusu tek bir kısmi sınıf tanımında ve `PrintCoords`üyesi başka bir kısmi sınıf tanımında bildirilmiştir.
 
 ### <a name="code"></a>Kod
 
@@ -164,11 +164,11 @@ partial void onNameChanged()
 
 - Kısmi yöntemler genel olabilir. Kısıtlamalar, tanımlayıcı kısmi Yöntem bildirimine konur ve isteğe bağlı olarak uygulama bir tane üzerinde yinelenebilir. Parametre ve tür parametre adları, uygulama bildiriminde, tanımlanmasıyla aynı olmak zorunda değildir.
 
-- Tanımlanmış ve uygulanmış, ancak yalnızca tanımlanmış kısmi bir yönteme değil kısmi bir yönteme [temsilci](../../language-reference/keywords/delegate.md) oluşturabilirsiniz.
+- Tanımlanmış ve uygulanmış, ancak yalnızca tanımlanmış kısmi bir yönteme değil kısmi bir yönteme [temsilci](../../language-reference/builtin-types/reference-types.md) oluşturabilirsiniz.
 
 ## <a name="c-language-specification"></a>C# Dil Belirtimi
 
-Daha fazla bilgi için bkz. [ C# dil belirtiminde](../../language-reference/language-specification/index.md) [kısmi türler](~/_csharplang/spec/classes.md#partial-types) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için bkz. [ C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [kısmi türler](~/_csharplang/spec/classes.md#partial-types) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

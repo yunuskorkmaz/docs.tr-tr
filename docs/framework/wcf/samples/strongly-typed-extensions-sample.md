@@ -2,22 +2,22 @@
 title: Güçlü Yazılmış Uzantılar Örneği
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 1fd873e02dcc1fc824c8b17c52231c80c61e7c60
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5ee2f13df9d3c0841b3e8b62b1633ea4520d3860
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045480"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421520"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Güçlü Yazılmış Uzantılar Örneği
-Örnek, örnek amacıyla <xref:System.ServiceModel.Syndication.SyndicationFeed> sınıfını kullanır. Ancak, bu örnekte gösterilen desenler uzantı verilerini destekleyen tüm dağıtım sınıflarıyla birlikte kullanılabilir.  
+Örnek, örnek amaçları için <xref:System.ServiceModel.Syndication.SyndicationFeed> sınıfını kullanır. Ancak, bu örnekte gösterilen desenler uzantı verilerini destekleyen tüm dağıtım sınıflarıyla birlikte kullanılabilir.  
   
- Dağıtım nesne modeli<xref:System.ServiceModel.Syndication.SyndicationFeed>(, <xref:System.ServiceModel.Syndication.SyndicationItem>ve ilgili sınıflar), <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> ve <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> özellikleri kullanılarak uzantı verilerine gevşek olarak yazılmış erişimi destekler. Bu örnek, <xref:System.ServiceModel.Syndication.SyndicationFeed> özel türetilmiş sınıfları uygulayarak ve <xref:System.ServiceModel.Syndication.SyndicationItem> kesin tür belirtilmiş özellikler olarak uygulamaya özgü belirli uzantıları kullanıma sunarak uzantı verilerine kesin olarak yazılmış erişimin nasıl sağlanması gerektiğini gösterir.  
+ Dağıtım nesne modeli (<xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem>ve ilgili sınıflar), <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> ve <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> özellikleri kullanılarak uzantı verilerine gevşek olarak yazılmış erişimi destekler. Bu örnek, <xref:System.ServiceModel.Syndication.SyndicationFeed> özel türetilmiş sınıfları uygulayarak <xref:System.ServiceModel.Syndication.SyndicationItem> ve kesin tür belirtilmiş özellikler olarak uygulamaya özgü belirli uzantıları kullanıma sunarak uzantı verilerine kesin olarak yazılmış erişimin nasıl sağlanması gerektiğini gösterir.  
   
  Örnek olarak, bu örnek, önerilen atom Iş parçacığı uzantıları RFC 'de tanımlanan bir uzantı öğesinin nasıl uygulanacağını gösterir. Bu yalnızca tanıtım amaçlıdır ve bu örnek önerilen belirtim için tam bir uygulama olmak üzere tasarlanmamıştır.  
   
 ## <a name="sample-xml"></a>Örnek XML  
- Aşağıdaki xml örneği, ek `<in-reply-to>` bir genişletme öğesiyle bir Atom 1,0 girişi göstermektedir.  
+ Aşağıdaki XML örneği, ek bir `<in-reply-to>` uzantısı öğesiyle bir Atom 1,0 girişi gösterir.  
   
 ```xml  
 <entry>  
@@ -40,12 +40,12 @@ ms.locfileid: "70045480"
 </entry>  
 ```  
   
- Öğesi, ek uzantı özniteliklerinin ve uzantı`ref`öğelerinin varlığına `href`izin verirken, üç gerekli özniteliği (, `type` ve) belirler. `<in-reply-to>`  
+ `<in-reply-to>` öğesi üç gerekli özniteliği (`ref`, `type` ve `href`) belirtir, ayrıca ek uzantı öznitelikleri ve uzantı öğelerinin varlığına izin verir.  
   
 ## <a name="modeling-the-in-reply-to-element"></a>-Reply-To öğesini modelleme  
- Bu örnekte, `<in-reply-to>` öğesi, <xref:System.Runtime.Serialization.DataContractSerializer>ile kullanımını sağlayan CLR <xref:System.Xml.Serialization.IXmlSerializable>olarak modellenir. Ayrıca, aşağıdaki örnek kodda gösterildiği gibi, öğe verilerine erişmek için bazı yöntemler ve özellikler uygular.  
+ Bu örnekte, `<in-reply-to>` öğesi <xref:System.Xml.Serialization.IXmlSerializable>uygulayan CLR olarak modellenmiştir, bu da <xref:System.Runtime.Serialization.DataContractSerializer>ile kullanımını sağlar. Ayrıca, aşağıdaki örnek kodda gösterildiği gibi, öğe verilerine erişmek için bazı yöntemler ve özellikler uygular.  
   
-```  
+```csharp  
 [XmlRoot(ElementName = "in-reply-to", Namespace = "http://contoso.org/syndication/thread/1.0")]  
 public class InReplyToElement : IXmlSerializable  
 {  
@@ -86,11 +86,11 @@ public class InReplyToElement : IXmlSerializable
 }  
 ```  
   
- `HRef` `MediaType` `Source` <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> Sınıfı, gerekli öznitelik (,, ve) ve<xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>tutulacak koleksiyonlar için özellikleri uygular. `InReplyToElement`  
+ `InReplyToElement` sınıfı, gerekli özniteliğin özelliklerini (`HRef`, `MediaType`ve `Source`) ve <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> ve <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>tutacak koleksiyonları uygular.  
   
- Sınıfı, nesne örneklerinin <xref:System.Xml.Serialization.IXmlSerializable> XML 'den okuma ve yazma konusunda doğrudan denetime izin veren arabirimini uygular. `InReplyToElement` `Ref` `HRef`Yöntemi, geçirilen<xref:System.Xml.XmlReader> öğesinden, `MediaType` ,, ve özelliklerine ilişkin değerleri ilk olarak okur. `Source` `ReadXml` Bilinmeyen tüm öznitelikler <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> koleksiyonda depolanır. Tüm öznitelikler okundum, <xref:System.Xml.XmlReader.ReadStartElement> okuyucuyu bir sonraki öğeye ilerletmek için çağırılır. Bu sınıf tarafından modellenen öğede gerekli alt öğe bulunmadığından, alt öğeler aşağıdaki kodda gösterildiği gibi `XElement` örneklerle arabelleğe alınır ve <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> koleksiyonda depolanır.  
+ `InReplyToElement` sınıfı <xref:System.Xml.Serialization.IXmlSerializable> arabirimini uygular ve bu, nesne örneklerinin XML 'den nasıl okunacakları ve XML 'e yazıldığı üzerinde doğrudan denetime olanak tanır. `ReadXml` yöntemi ilk olarak `Ref`, `HRef`, `Source`ve `MediaType` özellikleri için geçirilen <xref:System.Xml.XmlReader> değerleri okur. Bilinmeyen tüm öznitelikler <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> koleksiyonunda depolanır. Tüm öznitelikler okundum, okuyucuyu bir sonraki öğeye ilerletmek için <xref:System.Xml.XmlReader.ReadStartElement> çağırılır. Bu sınıf tarafından modellenen öğede gerekli alt öğe bulunmadığından, alt öğeler `XElement` örneklerine arabelleğe alınır ve aşağıdaki kodda gösterildiği gibi <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> koleksiyonunda depolanır.  
   
-```  
+```csharp  
 public void ReadXml(System.Xml.XmlReader reader)  
 {  
     bool isEmpty = reader.IsEmptyElement;  
@@ -144,9 +144,9 @@ public void ReadXml(System.Xml.XmlReader reader)
 }  
 ```  
   
- `WriteXml` `Ref` `Source`İçinde, yöntemiilk`HRef`olarak,,,`WriteXml` ve özelliklerinindeğerleriniXMLöznitelikleriolarakyazar(gerçekdışöğeninyazılmasındansorumludeğildir`MediaType` `InReplyToElement` kendisini çağıran `WriteXml`tarafından yapıldığı gibi). Ayrıca, <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> aşağıdaki kodda gösterildiği gibi, ve <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> ' nin içeriğini yaza yazar.  
+ `WriteXml`, `InReplyToElement` yöntemi önce `Ref`, `HRef`, `Source`ve `MediaType` özelliklerinin değerlerini XML öznitelikleri olarak yazar (`WriteXml` gerçek dış öğenin kendisini yazmadan sorumludur `WriteXml`) çağıranı tarafından yapıldığı gibi). Ayrıca, aşağıdaki kodda gösterildiği gibi <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> içeriğini ve yazıcı <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> yazar.  
   
-```  
+```csharp  
 public void WriteXml(System.Xml.XmlWriter writer)  
 {  
     if (this.Ref != null)  
@@ -185,11 +185,11 @@ public void WriteXml(System.Xml.XmlWriter writer)
 ```  
   
 ## <a name="threadedfeed-and-threadeditem"></a>ThreadedFeed ve ThreadedItem  
- Örnekte, `SyndicationItems` `InReplyTo` uzantılarısınıfına`ThreadedItem` göre modellenir. Benzer şekilde, `ThreadedFeed` sınıfı öğelerinintüm`SyndicationFeed` örnekleri olan bir olur `ThreadedItem`.  
+ Örnekte, `InReplyTo` uzantılı `SyndicationItems` `ThreadedItem` sınıfına göre modellenir. Benzer şekilde, `ThreadedFeed` sınıfı öğeleri tüm `ThreadedItem`örnekleri olan bir `SyndicationFeed`.  
   
- Sınıfı öğesinden `SyndicationFeed` devralır`OnCreateItem` ve`ThreadedItem`döndürür. `ThreadedFeed` Ayrıca `Items` `ThreadedItems`, aşağıdaki kodda gösterildiği gibi, koleksiyona erişim için bir yöntem uygular.  
+ `ThreadedFeed` sınıfı `SyndicationFeed` devralır ve `ThreadedItem`döndürecek `OnCreateItem` geçersiz kılar. Ayrıca, aşağıdaki kodda gösterildiği gibi `Items` koleksiyonuna `ThreadedItems`olarak erişmek için bir yöntem uygular.  
   
-```  
+```csharp  
 public class ThreadedFeed : SyndicationFeed  
 {  
     public ThreadedFeed()  
@@ -211,9 +211,9 @@ public class ThreadedFeed : SyndicationFeed
 }  
 ```  
   
- Sınıfı `ThreadedItem` `InReplyToElement` öğesinden `SyndicationItem` devralır ve türü kesin belirlenmiş bir özellik olarak yapılır. Bu, `InReplyTo` uzantı verilerine kolay programlı erişim sağlar. Ayrıca, aşağıdaki `TryParseElement` kodda `WriteElementExtensions` gösterildiği gibi, uzantı verilerini okumak ve yazmak için de uygular.  
+ `ThreadedItem` sınıfı `SyndicationItem` devralır ve türü kesin belirlenmiş bir özellik olarak `InReplyToElement` yapar. Bu, `InReplyTo` uzantısı verilerine kolay programlı erişim sağlar. Ayrıca, aşağıdaki kodda gösterildiği gibi, uzantı verilerini okumak ve yazmak için `TryParseElement` ve `WriteElementExtensions` uygular.  
   
-```  
+```csharp  
 public class ThreadedItem : SyndicationItem  
 {  
     private InReplyToElement inReplyTo;  
@@ -283,6 +283,6 @@ public class ThreadedItem : SyndicationItem
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  

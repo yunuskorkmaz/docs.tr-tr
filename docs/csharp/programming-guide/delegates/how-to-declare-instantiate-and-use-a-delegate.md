@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Temsilci C# programlama kılavuzunu bildirme, oluşturma ve kullanma'
+title: 'Nasıl yapılır: temsilci C# programlama kılavuzunu bildirme, oluşturma ve kullanma'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 565ae2a6c42de57570f564edc9d0bde5cab8efa8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bd3d80023f6cb382f057e976dba01daf5e28db50
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590622"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423316"
 ---
-# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Nasıl yapılır: Bir temsilciyi bildirme, oluşturma ve kullanma (C# Programlama Kılavuzu)
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Nasıl yapılır: Temsilci Bildirme, Oluşturma ve Kullanma (C# Programlama Kılavuzu)
 C# 1,0 ve sonraki sürümlerde, temsilciler aşağıdaki örnekte gösterildiği gibi bildirilebilecek.  
   
  [!code-csharp[csProgGuideDelegates#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#13)]  
@@ -23,7 +23,7 @@ C# 1,0 ve sonraki sürümlerde, temsilciler aşağıdaki örnekte gösterildiği
   
  [!code-csharp[csProgGuideDelegates#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#32)]  
   
- C# 2,0 ve sonraki sürümlerde, aşağıdaki örnekte gösterildiği gibi bir [temsilciyi](../../language-reference/keywords/delegate.md)bildirmek ve başlatmak için anonim bir yöntem kullanmak da mümkündür.  
+ C# 2,0 ve sonraki sürümlerde, aşağıdaki örnekte gösterildiği gibi bir [temsilciyi](../../language-reference/builtin-types/reference-types.md)bildirmek ve başlatmak için anonim bir yöntem kullanmak da mümkündür.  
   
  [!code-csharp[csProgGuideDelegates#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#15)]  
   
@@ -33,7 +33,7 @@ C# 1,0 ve sonraki sürümlerde, temsilciler aşağıdaki örnekte gösterildiği
   
  Daha fazla bilgi için bkz. [lambda ifadeleri](../statements-expressions-operators/lambda-expressions.md).  
   
- Aşağıdaki örnek, bir temsilciyi bildirme, örneklendirme ve kullanma hakkında gösterilmektedir. Sınıfı `BookDB` , kitap veritabanını tutan bir kitaplığı veritabanını kapsüller. Bu, veritabanındaki tüm kağıt `ProcessPaperbackBooks`geri kitaplarını bulan ve her biri için bir temsilci çağıran bir yöntemi sunar. Kullanılan `delegate` tür adı. `ProcessBookDelegate` `Test` Sınıfı, Paperback kitaplarının başlıklarını ve ortalama fiyatını yazdırmak için bu sınıfı kullanır.  
+ Aşağıdaki örnek, bir temsilciyi bildirme, örneklendirme ve kullanma hakkında gösterilmektedir. `BookDB` sınıfı, kitap veritabanını tutan bir kitaplığı veritabanını kapsüller. Bu, veritabanındaki tüm kağıt geri kitaplarını bulan ve her biri için bir temsilci çağıran `ProcessPaperbackBooks`bir yöntem sunar. Kullanılan `delegate` türü `ProcessBookDelegate`olarak adlandırılır. `Test` sınıfı, Paperback kitaplarının başlıklarını ve ortalama fiyatını yazdırmak için bu sınıfı kullanır.  
   
  Temsilcilerin kullanımı, kitaplığı veritabanı ve istemci kodu arasındaki işlevlerin iyi bir şekilde ayrılmasını yükseltir. İstemci kodu kitaplarının nasıl depolandığını veya kitaplığı kodunun kağıt geri defterlerini nasıl bulduğunu bilmiştir. Kitaplığı kodu, her şeyi bulduktan sonra, kağıt geri defterlerinde gerçekleştirilen işleme ilişkin hiçbir bilgiye sahip değildir.  
   
@@ -52,11 +52,11 @@ C# 1,0 ve sonraki sürümlerde, temsilciler aşağıdaki örnekte gösterildiği
   
 - Bir temsilciyi örnekleme.  
   
-     Bir temsilci türü bildirildiğinde, bir temsilci nesnesi oluşturulmalı ve belirli bir yöntemle ilişkilendirilmelidir. Önceki örnekte, aşağıdaki örnekte olduğu gibi yöntemini yöntemine geçirerek `PrintTitle` `ProcessPaperbackBooks` bunu yapabilirsiniz:  
+     Bir temsilci türü bildirildiğinde, bir temsilci nesnesi oluşturulmalı ve belirli bir yöntemle ilişkilendirilmelidir. Önceki örnekte, aşağıdaki örnekte olduğu gibi `PrintTitle` yöntemini `ProcessPaperbackBooks` yöntemine geçirerek bunu yapabilirsiniz:  
   
      [!code-csharp[csProgGuideDelegates#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#17)]  
   
-     Bu, [statik](../../language-reference/keywords/static.md) yöntemle `Test.PrintTitle`ilişkili yeni bir temsilci nesnesi oluşturur. Benzer şekilde, nesne `AddBookToTotal` `totaller` üzerindeki statik olmayan yöntem aşağıdaki örnekte olduğu gibi geçirilir:  
+     Bu, `Test.PrintTitle`[statik](../../language-reference/keywords/static.md) yöntemiyle ilişkili yeni bir temsilci nesnesi oluşturur. Benzer şekilde, nesne `totaller` `AddBookToTotal` statik olmayan yöntem aşağıdaki örnekte olduğu gibi geçirilir:  
   
      [!code-csharp[csProgGuideDelegates#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#18)]  
   
@@ -70,7 +70,7 @@ C# 1,0 ve sonraki sürümlerde, temsilciler aşağıdaki örnekte gösterildiği
   
      [!code-csharp[csProgGuideDelegates#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#19)]  
   
-     Bir temsilci, bu örnekte olduğu gibi zaman uyumlu olarak ya da ve `BeginInvoke` `EndInvoke` yöntemleri kullanılarak zaman uyumsuz olarak çağrılabilir.  
+     Bir temsilci, bu örnekte olduğu gibi zaman uyumlu olarak ya da `BeginInvoke` ve `EndInvoke` yöntemleri kullanılarak zaman uyumsuz olarak çağrılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,12 +2,12 @@
 title: .NET Core hakkında
 description: .NET Core hakkında bilgi edinin.
 ms.date: 09/17/2019
-ms.openlocfilehash: 51e4f3784db58e23ab4293c2d9f4e52e0d6617b5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093437"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416740"
 ---
 # <a name="about-net-core"></a>.NET Core hakkında
 
@@ -16,7 +16,7 @@ ms.locfileid: "73093437"
 - **Platformlar arası:** Windows, macOS ve Linux [işletim sistemlerinde](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)çalışır.
 - **Mimarilerde tutarlı:** Kodunuzu x64, x86 ve ARM dahil olmak üzere birden çok mimaride aynı davranışla çalıştırır.
 - **Komut satırı araçları:**  , Yerel geliştirme ve sürekli tümleştirme senaryolarında kullanılabilecek kullanımı kolay komut satırı araçları içerir.
-- **Esnek dağıtım:** Uygulamanıza dahil edilebilir veya yan yana (Kullanıcı genelindeki veya sistem genelindeki Yüklemeler) yüklenebilir. [Docker kapsayıcılarıyla](docker/index.md)birlikte kullanılabilir.
+- **Esnek dağıtım:** Uygulamanıza dahil edilebilir veya yan yana (Kullanıcı genelindeki veya sistem genelindeki Yüklemeler) yüklenebilir. [Docker kapsayıcılarıyla](docker/introduction.md)birlikte kullanılabilir.
 - **Uyumlu:** .NET Core, [.NET Standard](../standard/net-standard.md)aracılığıyla .NET Framework, Xamarin ve Mono ile uyumludur.
 - **Açık Kaynak:** .NET Core platformu, MıT ve Apache 2 lisansları kullanılarak açık kaynaktır. .NET Core, bir [.net Foundation](https://dotnetfoundation.org/) projem.
 - **Microsoft tarafından desteklenen:** .NET Core, [.NET Core desteği](https://dotnet.microsoft.com/platform/support/policy)başına Microsoft tarafından desteklenir.

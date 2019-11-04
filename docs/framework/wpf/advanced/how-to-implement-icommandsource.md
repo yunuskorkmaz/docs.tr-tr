@@ -7,53 +7,53 @@ dev_langs:
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-ms.openlocfilehash: 218a17f221598ac29213bd28a0f04adb16bc933b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 974b145a125a158bcafff93f8e9bc11001e00bf1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107373"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453583"
 ---
 # <a name="how-to-implement-icommandsource"></a>Nasıl yapılır: ICommandSource Uygulama
-Bu örnek, bir komut kaynak uygulayarak oluşturma işlemi gösterilmektedir <xref:System.Windows.Input.ICommandSource>.  Komut kaynak komutu çağırmak bildiği bir nesnedir.  <xref:System.Windows.Input.ICommandSource> Arabirimi kullanıma sunan üç üye: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, ve <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> Çağrılacak komut olur. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Komut kaynağından komutunu yürüten yönteme geçirilen kullanıcı tanımlı veri türü. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> Komutu üzerinde yürütülmekte olan nesnesidir.  
+This example shows how to create a command source by implementing <xref:System.Windows.Input.ICommandSource>.  A command source is an object that knows how to invoke a command.  The <xref:System.Windows.Input.ICommandSource> interface exposes three members: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, and <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> is the command which will be invoked. The <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> is a user-defined data type which is passed from the command source to the method which handles the command. The <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> is the object that the command is being executed on.  
   
- Bu örnekte, bir sınıf alt oluşturulur <xref:System.Windows.Controls.Slider> denetimi ve uygular <xref:System.Windows.Input.ICommandSource>.  
+ In this example, a class is created which subclasses the <xref:System.Windows.Controls.Slider> control and implements <xref:System.Windows.Input.ICommandSource>.  
   
 ## <a name="example"></a>Örnek  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulayan sınıflar sunar <xref:System.Windows.Input.ICommandSource>, gibi <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, ve <xref:System.Windows.Controls.ListBoxItem>.  Komut kaynak nasıl çalıştırılacağını tanımlar.   <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.MenuItem> tıklandığında bir komutunu çağırın.  A <xref:System.Windows.Controls.ListBoxItem> çift tıklandığında bir komut çalıştırır. Bu sınıflar yalnızca bir komut haline kaynağı kendi <xref:System.Windows.Input.ICommandSource.Command%2A> özelliği ayarlanmış.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] provides a number of classes which implement <xref:System.Windows.Input.ICommandSource>, such as <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, and <xref:System.Windows.Controls.ListBoxItem>.  A command source defines how it invokes a command.   <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.MenuItem> invoke a command when they are clicked.  A <xref:System.Windows.Controls.ListBoxItem> invokes a command when it is double clicked. These classes only become a command source when their <xref:System.Windows.Input.ICommandSource.Command%2A> property is set.  
   
- Bu örnekte, kaydırıcıyı taşındığında komutu çağırılır ya da daha doğru bir şekilde zaman <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> özelliği.  
+ For this example we will invoke the command when the slider is moved, or more accurately, when the <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> property is changed.  
   
- Sınıf tanımı aşağıda verilmiştir.  
+ The following is the class definition.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceClassDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourceclassdefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceClassDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourceclassdefinition)]  
   
- Sonraki adım uygulamaktır <xref:System.Windows.Input.ICommandSource> üyeleri.  Bu örnekte, özellikleri olarak uygulanır <xref:System.Windows.DependencyProperty> nesneleri.  Bu, veri bağlama kullanılacak özellikleri sağlar.  Hakkında daha fazla bilgi için <xref:System.Windows.DependencyProperty> sınıfı [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md).  Veri bağlama hakkında daha fazla bilgi için bkz. [Data Binding Overview](../data/data-binding-overview.md).  
+ The next step is to implement the <xref:System.Windows.Input.ICommandSource> members.  In this example, the properties are implemented as <xref:System.Windows.DependencyProperty> objects.  This enables the properties to use data binding.  For more information about the <xref:System.Windows.DependencyProperty> class, see the [Dependency Properties Overview](dependency-properties-overview.md).  For more information about data binding, see the [Data Binding Overview](../../../desktop-wpf/data/data-binding-overview.md).  
   
- Yalnızca <xref:System.Windows.Input.ICommandSource.Command%2A> özelliği burada gösterilmiştir.  
+ Only the <xref:System.Windows.Input.ICommandSource.Command%2A> property is shown here.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandpropertydefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandpropertydefinition)]  
   
- Aşağıdaki <xref:System.Windows.DependencyProperty> geri çağırma değiştirin.  
+ The following is the <xref:System.Windows.DependencyProperty> change callback.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandChanged](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandchanged)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandChanged](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandchanged)]  
   
- Sonraki adım, ekleme ve kaldırma komut kaynağı ile ilişkili olan komutunu sağlamaktır.  <xref:System.Windows.Input.ICommandSource.Command%2A> Özelliği yalnızca yazılamıyor yeni bir komut eklendiğinde olay işleyicileri önceki komutla ilişkili olduğundan varsa, kaldırılmalıdır.  
+ The next step is to add and remove the command which is associated with the command source.  The <xref:System.Windows.Input.ICommandSource.Command%2A> property cannot simply be overwritten when a new command is added, because the event handlers associated with the previous command, if there was one, must be removed first.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcehookunhookcommands)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcehookunhookcommands)]  
   
- Son adım için mantığı oluşturmaktır <xref:System.Windows.Input.ICommand.CanExecuteChanged> işleyicisi ve <xref:System.Windows.Input.ICommand.Execute%2A> yöntemi.  
+ The last step is to create logic for the <xref:System.Windows.Input.ICommand.CanExecuteChanged> handler and the <xref:System.Windows.Input.ICommand.Execute%2A> method.  
   
- <xref:System.Windows.Input.ICommand.CanExecuteChanged> Olay, komutun geçerli komut hedefi üzerinde yürütme yeteneği değişmiş olan komut kaynak bildirir.  Komut kaynak bu olayı aldığında, genellikle çağrıları <xref:System.Windows.Input.ICommand.CanExecute%2A> yöntemi komutu.  Geçerli komut hedefi üzerinde komut yürütülemezse, komut kaynak genellikle kendisini devre dışı bırakır.  Komutun geçerli komut hedefi üzerinde yürütebilir, komut kaynak genellikle kendisini etkinleştirir.  
+ The <xref:System.Windows.Input.ICommand.CanExecuteChanged> event notifies the command source that the ability of the command to execute on the current command target may have changed.  When a command source receives this event, it typically calls the <xref:System.Windows.Input.ICommand.CanExecute%2A> method on the command.  If the command cannot execute on the current command target, the command source will typically disable itself.  If the command can execute on the current command target, the command source will typically enable itself.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandCanExecuteChanged](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandcanexecutechanged)]
  [!code-vb[ImplementICommandSource#ImplementICommandCanExecuteChanged](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandcanexecutechanged)]  
   
- Son adım <xref:System.Windows.Input.ICommand.Execute%2A> yöntemi.  Komut ise bir <xref:System.Windows.Input.RoutedCommand>, <xref:System.Windows.Input.RoutedCommand> <xref:System.Windows.Input.RoutedCommand.Execute%2A> yöntemdir; tersi durumda, <xref:System.Windows.Input.ICommand> <xref:System.Windows.Input.ICommand.Execute%2A> yöntemi çağrılır.  
+ The last step is the <xref:System.Windows.Input.ICommand.Execute%2A> method.  If the command is a <xref:System.Windows.Input.RoutedCommand>, the <xref:System.Windows.Input.RoutedCommand> <xref:System.Windows.Input.RoutedCommand.Execute%2A> method is called; otherwise, the <xref:System.Windows.Input.ICommand> <xref:System.Windows.Input.ICommand.Execute%2A> method is called.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandExecute](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandexecute)]
  [!code-vb[ImplementICommandSource#ImplementICommandExecute](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  

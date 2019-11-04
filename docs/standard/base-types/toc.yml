@@ -118,7 +118,7 @@
                   href: how-to-extract-a-protocol-and-port-number-from-a-url.md
                 - name: 'Nasıl yapılır: Dizeden Geçersiz Karakterleri Çıkartma'
                   href: how-to-strip-invalid-characters-from-a-string.md
-                - name: 'Nasıl yapılır: Dizelerin Geçerli E-Posta Biçiminde Olduğunu Doğrulama'
+                - name: Dizelerin geçerli e-posta biçiminde olduğunu doğrulama
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
         - name: .NET içinde Karakter Kodlaması
           href: character-encoding.md

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: 8cc1d1461a33ab94f8ae399d6ff40f26eaf7f74a
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d1e30162cbce65193783d2fb0607900f209cc648
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039459"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422681"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# Başvurusu)
 
-`namespace` Anahtar sözcüğü, ilgili nesneler kümesini içeren bir kapsamı bildirmek için kullanılır. Kod öğelerini düzenlemek ve genel benzersiz türler oluşturmak için bir ad alanı kullanabilirsiniz.
+`namespace` anahtar sözcüğü, ilgili nesneler kümesini içeren bir kapsamı bildirmek için kullanılır. Kod öğelerini düzenlemek ve genel benzersiz türler oluşturmak için bir ad alanı kullanabilirsiniz.
 
 [!code-csharp[csrefKeywordsNamespace#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#1)]
 
@@ -36,7 +36,7 @@ Bir ad alanı içinde, aşağıdaki türlerden sıfır veya daha fazlasını bil
 
 - [enum](enum.md)
 
-- [delegate](delegate.md)
+- [delegate](../builtin-types/reference-types.md)
 
 Bir C# kaynak dosyasında açıkça bir ad alanı bildirip bildirmeyeceğinizi belirtir, derleyici varsayılan bir ad alanı ekler. Her zaman genel ad alanı olarak adlandırılan bu adlandırılmamış ad alanı her dosyada mevcuttur. Genel ad alanındaki herhangi bir tanımlayıcı, adlandırılmış bir ad alanında kullanılmak üzere kullanılabilir.
 
@@ -62,5 +62,5 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 - [C# anahtar sözcükleri](index.md)
 - [using](using-directive.md)
 - [statik kullanma](using-static.md)
-- [Ad alanı diğer adı niteleyicisi`::`](../operators/namespace-alias-qualifier.md)
-- [Ad Alanları](../../programming-guide/namespaces/index.md)
+- [Ad alanı diğer adı niteleyicisi `::`](../operators/namespace-alias-qualifier.md)
+- [Ad alanları](../../programming-guide/namespaces/index.md)

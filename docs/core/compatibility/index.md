@@ -2,12 +2,12 @@
 title: Son değişiklikleri değerlendir-.NET Core
 description: .NET Core 'un .NET sürümleri genelinde geliştiriciler için uyumluluğu sürdürme yolları hakkında bilgi edinin.
 ms.date: 06/10/2019
-ms.openlocfilehash: 4c3f051bf37ea4753d916ee22fedf97a9bad5892
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089355"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416658"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>.NET Core 'daki kırılmaya karşı değişiklikleri değerlendir
 
@@ -139,7 +139,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını *değiştirir
 
   Bunun iki nedenden dolayı bölünmesi kabul edilir:
   
-  - Visual Basic ve [dinamik](../../csharp/language-reference/keywords/dynamic.md) sürümünde geç bağlama özelliği gibi geç bağlantılı senaryoları keser C#.
+  - Visual Basic ve [dinamik](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) sürümünde geç bağlama özelliği gibi geç bağlantılı senaryoları keser C#.
   
   - Geliştiriciler [adlandırılmış bağımsız değişkenler](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments)kullandıklarında [kaynak uyumluluğunu](categories.md#source-compatibility) keser.
 

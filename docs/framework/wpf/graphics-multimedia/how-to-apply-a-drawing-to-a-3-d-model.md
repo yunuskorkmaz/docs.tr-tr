@@ -5,21 +5,21 @@ helpviewer_keywords:
 - drawings [WPF], applying to 3-D models
 - 3-D models [WPF], applying drawings to
 ms.assetid: 68357577-b7fc-446e-8be9-a8cc7df3a350
-ms.openlocfilehash: 14470d0adeb948ea46a0720b5713c20fb7d8e6d8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 311a3ac1d9fa219a3a365d506d9d0c3e8b6bc229
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855873"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459374"
 ---
 # <a name="how-to-apply-a-drawing-to-a-3-d-model"></a>Nasıl yapılır: 3B Modeline Çizim Uygulama
 
-Bu örnek, <xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.Media3D.Material> bir 3-b model için uygulanan olarak nasıl kullanılacağını gösterir.
+Bu örnek, bir <xref:System.Windows.Media.DrawingBrush> bir 3-b modele uygulanan <xref:System.Windows.Media.Media3D.Material> olarak nasıl kullanılacağını gösterir.
 
-Aşağıdaki kod, bir <xref:System.Windows.Media.DrawingGroup> <xref:System.Windows.Media.DrawingBrush>öğesinin içeriği olarak bir tanımlar.  , <xref:System.Windows.Media.DrawingBrush> 3-b düzlemi <xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A> için <xref:System.Windows.Media.Media3D.DiffuseMaterial> uygulanan özelliği olarak ayarlanır.
+Aşağıdaki kod, bir <xref:System.Windows.Media.DrawingBrush>içeriği olarak bir <xref:System.Windows.Media.DrawingGroup> tanımlar.  <xref:System.Windows.Media.DrawingBrush>, 3-b düzlemine uygulanan <xref:System.Windows.Media.Media3D.DiffuseMaterial> <xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A> özelliği olarak ayarlanır.
 
 > [!NOTE]
-> Daha önce yeniden kullanılabilen ve kodunuzu basitleştirecek kaynaklar olarak aşağıdaki çizimde gösterildiği gibi karmaşık nesne ve değerleri tanımlamak genellikle tercih edilir. Daha fazla bilgi için bkz. [xaml kaynakları](../advanced/xaml-resources.md) .
+> Daha önce yeniden kullanılabilen ve kodunuzu basitleştirecek kaynaklar olarak aşağıdaki çizimde gösterildiği gibi karmaşık nesne ve değerleri tanımlamak genellikle tercih edilir. Daha fazla bilgi için bkz. [xaml kaynakları](../../../desktop-wpf/fundamentals/xaml-resources-define.md) .
 
 [!code-xaml[3DGallery_snip#ApplyDrawingToMaterialInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ApplyDrawingToMaterialExample.xaml#applydrawingtomaterialinline1)]
 
@@ -31,7 +31,7 @@ Aşağıdaki kod, tüm örneği gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XAML Kaynakları](../advanced/xaml-resources.md)
+- [XAML Kaynakları](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [3B Görünümü Oluşturma](how-to-create-a-3-d-scene.md)
 - [Çizim Nesnelerine Genel Bakış](drawing-objects-overview.md)
 - [3B Grafiklere Genel Bakış](3-d-graphics-overview.md)
