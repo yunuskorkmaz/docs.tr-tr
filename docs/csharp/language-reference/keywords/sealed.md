@@ -1,5 +1,5 @@
 ---
-title: Değiştirici - korumalı C# başvurusu
+title: Sealed değiştirici- C# başvuru
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,39 +8,39 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: 7b9551fe892b0335fb445ab9edce4facca0badbe
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 84f838645bed6facc8b59ebf596d16373a9c6f86
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833342"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422369"
 ---
 # <a name="sealed-c-reference"></a>sealed (C# Başvurusu)
 
-Bir sınıfa uygulandığında `sealed` değiştiricisi kullananların devralmasını diğer sınıflar engeller. Aşağıdaki örnekte, sınıf `B` sınıfından devralan `A`, ancak hiçbir sınıf sınıfı devralabilirsiniz `B`.
+Bir sınıfa uygulandığında `sealed` değiştiricisi diğer sınıfların bundan devralınmasını önler. Aşağıdaki örnekte, sınıf `B` sınıf `A`devralır, ancak sınıf `B`sınıfından hiçbir sınıf devralamıyor.
 
 ```csharp
 class A {}
 sealed class B : A {}
 ```
 
-Ayrıca `sealed` bir yöntem veya sanal bir yöntemi geçersiz kılan özellik veya bir temel sınıf özelliği değiştiricisi. Bu izin, sınıfından türetilir ve bunları belirli sanal yöntemleri veya özellikleri geçersiz kılmasını önlemek için sınıflar sağlar.
+Bir temel sınıftaki sanal bir yöntemi veya özelliği geçersiz kılan bir yöntem veya özellik üzerinde `sealed` değiştiricisini de kullanabilirsiniz. Bu, sınıfların sınıfınızdan türetmesine izin verir ve belirli sanal yöntemlerin veya özelliklerin geçersiz kılınmasını önler.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, `Z` devraldığı `Y` ancak `Z` sanal işlevini geçersiz kılamaz `F` dosyasında bildirilen `X` hem de korumalı `Y`.
+Aşağıdaki örnekte, `Z` `Y` devralır, ancak `Z` `X` ve mühürlenen `F` sanal işlevi geçersiz kılamaz.`Y`
 
 [!code-csharp[csrefKeywordsModifiers#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#16)]
 
-Bir sınıfta yeni yöntemleri veya özellikleri tanımladığınızda, türetilen sınıflar olarak bildirerek değil önlemiş engelleyebilir [sanal](virtual.md).
+Bir sınıfta yeni yöntemler veya özellikler tanımladığınızda, türetilen sınıfların bunları [sanal](virtual.md)olarak bildirmeyerek geçersiz kılmasını engelleyebilirsiniz.
 
-Kullanılacak bir hata olduğunu [soyut](abstract.md) değiştiricisi kapalı bir sınıf ile soyut bir sınıf soyut yöntemleri veya özellikleri uygulaması sağlayan bir sınıf tarafından devralınan gerekir çünkü.
+Soyut bir sınıf, soyut yöntemlerin veya özelliklerin bir uygulamasını sağlayan bir sınıf tarafından devralınamadığı için Sealed bir sınıf ile [soyut](abstract.md) değiştiricinin kullanılması hatadır.
 
-Bir yöntemi veya özelliği uygulandığında `sealed` değiştiricisi her zaman kullanılması gerektiğini ile [geçersiz kılma](override.md).
+Bir yönteme veya özelliğe uygulandığında, `sealed` değiştiricisi her zaman [geçersiz kılma](override.md)ile kullanılmalıdır.
 
-Yapılardan türetme çünkü bunlar devralınamaz.
+Yapılar örtük olarak mühürlenmediğinden devralınamaz.
 
-Daha fazla bilgi için [devralma](../../programming-guide/classes-and-structs/inheritance.md).
+Daha fazla bilgi için bkz. [Devralma](../../programming-guide/classes-and-structs/inheritance.md).
 
 Daha fazla örnek için bkz. [soyut ve korumalı sınıflar ve sınıf üyeleri](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).
 
@@ -48,21 +48,21 @@ Daha fazla örnek için bkz. [soyut ve korumalı sınıflar ve sınıf üyeleri]
 
 [!code-csharp[csrefKeywordsModifiers#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#17)]
 
-Önceki örnekte, aşağıdaki deyimi kullanarak korumalı sınıfından devralmak deneyebilirsiniz:
+Önceki örnekte, aşağıdaki ifadeyi kullanarak Sealed sınıfından devralmayı deneyebilirsiniz:
 
 `class MyDerivedC: SealedClass {}   // Error`
 
-Sonucu bir hata iletisi oluşturulur.
+Sonuç bir hata iletisidir:
 
 `'MyDerivedC': cannot derive from sealed type 'SealedClass'`
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir sınıf, yöntem veya özellik mühürlenecek belirlemek için genellikle iki aşağıdaki noktaları dikkate almanız gerekir:
+Bir sınıfın, yöntemin veya özelliğin mühürlendirilip zorlanmayacağını anlamak için genellikle aşağıdaki iki noktayı dikkate almalısınız:
 
-- Olası faydaları sınıflardan türetme sınıfınıza özelleştirme olanağı elde edebilir.
+- Sınıfların türetireceği olası avantajlar, sınıfınızı özelleştirme özelliği aracılığıyla elde edebilir.
 
-- Olası sınıflardan türetme gibi sınıflarınızdaki değiştirebilir, bunlar artık doğru şekilde çalışması veya olarak bir yöntem bekleniyor.
+- Sınıfları Türetmenin olasılığı, sınıflarınızı daha sonra düzgün şekilde veya beklendiği gibi çalışmayacak şekilde değiştirebilir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -70,12 +70,12 @@ Bir sınıf, yöntem veya özellik mühürlenecek belirlemek için genellikle ik
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [Statik Sınıflar ve Statik Sınıf Üyeleri](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [Erişim Değiştiricileri](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [Değiştiriciler](modifiers.md)
+- [Değiştiriciler](index.md)
 - [override](override.md)
 - [virtual](virtual.md)

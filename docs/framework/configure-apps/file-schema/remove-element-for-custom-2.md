@@ -1,5 +1,5 @@
 ---
-title: <remove>NameValueSectionHandler ve DictionarySectionHandler için öğesi
+title: NameValueSectionHandler ve DictionarySectionHandler için <remove> öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd338ff2d613be31ab1524f6baed6107f803a688
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc1519a794e24e04074dd2a674ecc2c0f3666521
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118560"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<NameValueSectionHandler ve DictionarySectionHandler için > öğesini kaldırın
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler ve DictionarySectionHandler için > öğesini \<kaldırın
 
 Daha önce tanımlanmış bir ayarı kaldırır.
 
-[ **\<Yapılandırma >** ](configuration-element.md)   
+[ **\<yapılandırma >** ](configuration-element.md)   
 &nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> Kaldır**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<kaldır >**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,7 +40,7 @@ Daha önce tanımlanmış bir ayarı kaldırır.
 
 | Öğe | Açıklama |
 | ------- | ------------|
-| [sectionName > öğesi  **\<** ](custom-element-2.md) | <xref:System.Configuration.NameValueSectionHandler> Ve<xref:System.Configuration.DictionarySectionHandler> sınıflarını kullanan özel yapılandırma bölümlerinin ayarlarını tanımlar. |
+| [ **\<sectionName >** Dosyalarında](custom-element-2.md) | <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> sınıflarını kullanan özel yapılandırma bölümlerinin ayarlarını tanımlar. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
@@ -48,13 +48,13 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Uygulama yapılandırma dosyası hiyerarşisinde daha yüksek bir düzeyde tanımlanmış olan ayarları kaldırabilmeniz için  **\<Remove >** öğesini kullanabilirsiniz.
+Uygulamanızın yapılandırma dosyası hiyerarşisinde daha yüksek bir düzeyde tanımlanmış ayarları kaldırmak için **\<remove >** öğesini kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, makine yapılandırma dosyasında daha önce tanımlanan ayarları kaldırmak için bir uygulama yapılandırma dosyasında  **\<Remove >** öğesinin nasıl kullanılacağını gösterir.
+Aşağıdaki örnek, daha önce makine yapılandırma dosyasında tanımlanan ayarları kaldırmak için bir uygulama yapılandırma dosyasında **\<remove >** öğesinin nasıl kullanılacağını gösterir.
 
-Aşağıdaki makine yapılandırma dosyası kodu,  **\<MySection >** bölümünü bildirir ve `key2`iki ayar `key1` ekler:
+Aşağıdaki makine yapılandırma dosyası kodu, **\<mysection >** bölümünü bildirir ve `key1` ve `key2`iki ayarı ekler:
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ Aşağıdaki makine yapılandırma dosyası kodu,  **\<MySection >** bölümün�
 </configuration>
 ```
 
-Aşağıdaki uygulama yapılandırma dosyası kodu, `key2`  **\<MySection >** ayarını kaldırır:
+Aşağıdaki uygulama yapılandırma dosyası kodu, `key2` ayarı **\<mySection >** kaldırır:
 
 ```xml
 <!--Application configuration file -->

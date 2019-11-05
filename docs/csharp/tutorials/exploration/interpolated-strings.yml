@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 460accc4f0877265a5a3d72ad3272502da9e5119
-  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+  ms.openlocfilehash: c3c4927a4afbf69f2101aa2596389e6f94cea243
+  ms.sourcegitcommit: 4aeac5d588ded58246f58030919e56b70a7674e4
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/22/2019
-  ms.locfileid: "72774039"
+  ms.lasthandoff: 10/27/2019
+  ms.locfileid: "72966975"
 items:
 - durationInMinutes: 2
   content: >
@@ -40,10 +40,10 @@ items:
     Yukarıdaki örnek, her bir enterpolasyonlu dize ifadesinin sahip olması gereken iki öğeyi içerir:
 
 
-    - Açılış tırnak işareti karakterinden önce `$` karakteriyle başlayan bir dize sabit değeri. @No__t_0 simgesiyle tırnak işareti karakteri arasında boşluk olamaz. (Bir tane eklerseniz ne olacağını görmek isterseniz, etkileşimli penceredeki `$` karakterden sonra bir boşluk ekleyin ve güncelleştirilmiş kodu çalıştırın. C# Derleyici şikayetleri, "beklenmeyen karakter ' $ '".)
+    - Açılış tırnak işareti karakterinden önce `$` karakteriyle başlayan bir dize sabit değeri. `$` simgesiyle tırnak işareti karakteri arasında boşluk olamaz. (Bir tane eklerseniz ne olacağını görmek isterseniz, etkileşimli penceredeki `$` karakterden sonra bir boşluk ekleyin ve güncelleştirilmiş kodu çalıştırın. C# Derleyici şikayetleri, "beklenmeyen karakter ' $ '".)
 
 
-    - Bir veya daha fazla *ilişkilendirme ifadesi*. Enterpolasyon ifadesi bir açma ve kapatma ayracı (`{` ve `}`) ile belirtilir. Küme ayraçlarının içinde C# (`null` dahil) bir değer döndüren herhangi bir ifadeyi yerleştirebilirsiniz.
+    - Bir veya daha fazla *ilişkilendirme ifadesi*. Enterpolasyon ifadesi bir açma ve kapatma ayracı (`{` ve `}`) ile belirtilir. Küme ayraçlarının içinde C# (`null`dahil) bir değer döndüren herhangi bir ifadeyi yerleştirebilirsiniz.
 
 
     Biraz daha farklı veri türleriyle daha fazla dize ilişkilendirme örneği deneyelim.
@@ -75,7 +75,7 @@ items:
     Enterpolasyonlu dizedeki enterpolasyon ifadesinin `item.Price`, sonuç dizesinde "1,99" metni olarak çözümlendiğine unutmayın. Yani, ifade sonucunun türü bir dize olmadığında, sonuç aşağıdaki şekilde bir dizeye çözülür:
 
 
-    - Enterpolasyon ifadesi `null` olarak değerlendirilirse, boş bir dize ("" veya <xref:System.String.Empty?displayProperty=nameWithType>) kullanılır.
+    - Enterpolasyon ifadesi `null`olarak değerlendirilirse, boş bir dize ("" veya <xref:System.String.Empty?displayProperty=nameWithType>) kullanılır.
 
 
     - Enterpolasyon ifadesi `null`olarak değerlendirilmiyorsa, genellikle sonuç ifadesinin `ToString` yöntemi çağrılır.
@@ -106,7 +106,7 @@ items:
     .NET kitaplıklarında bulunan birçok tür, önceden tanımlanmış bir biçim dizeleri kümesini destekler. Bunlar, tüm sayısal türleri ve Tarih ve saat türlerini içerir. Biçim dizelerini destekleyen türlerin tüm listesi için bkz. [.net makalesindeki biçimlendirme türleri](../../../standard/base-types/formatting-types.md) ' nde [Biçim dizeleri ve .NET sınıf kitaplığı türleri](../../../standard/base-types/formatting-types.md#format-strings-and-net-types) .
 
 
-    Tarih ve saat ve sayısal değer biçimlendirmesini nasıl etkilediğini görmek için örnekteki biçim dizelerini değiştirmeyi deneyin. @No__t_0 içindeki "d" öğesini "t" olarak değiştirin (kısa saat biçimini göstermek için), "y" (yılı ve ayı göstermek için) ve "yyyy" (yılı dört basamaklı bir sayı olarak göstermek için). @No__t_0 içindeki "C2" öğesini "e" (üstel gösterim için) ve "F3" (ondalık ayırıcıdan sonra üç basamaklı bir sayısal değer için) olarak değiştirin.
+    Tarih ve saat ve sayısal değer biçimlendirmesini nasıl etkilediğini görmek için örnekteki biçim dizelerini değiştirmeyi deneyin. `{date:d}` içindeki "d" öğesini "t" olarak değiştirin (kısa saat biçimini göstermek için), "y" (yılı ve ayı göstermek için) ve "yyyy" (yılı dört basamaklı bir sayı olarak göstermek için). `{price:C2}` içindeki "C2" öğesini "e" (üstel gösterim için) ve "F3" (ondalık ayırıcıdan sonra üç basamaklı bir sayısal değer için) olarak değiştirin.
 
 
     Biçimlendirmeyi denetlemenin yanı sıra, sonuç dizesinde bulunan biçimlendirilmiş dizelerin alan genişliğini ve hizalamasını da denetleyebilirsiniz. Sonraki adımda bunu nasıl yapacağınızı öğreneceksiniz.
@@ -157,7 +157,7 @@ items:
 
     > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
 - content: >-
-    Dize ilişkilendirme etkileşimli öğreticisini tamamladınız. Sonraki etkileşimli öğreticiye başlamak için aşağıdaki LINK **içindeki C# koleksiyonlara** tıklayabilirsiniz veya .NET Core SDK indirmek, makinenizde bir proje oluşturmak ve kodlamaya devam etmek için [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret edebilirsiniz. "Sonraki adımlar" bölümü, sizi bu öğreticilere geri getirir.
+    Dize ilişkilendirme etkileşimli öğreticisini tamamladınız. .NET Core SDK indirmek için [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret edebilir, makinenizde bir proje oluşturabilir ve kodlamayı tutabilirsiniz.
 
 
     Daha fazla bilgi için bkz. [dize ilişkilendirme](../../language-reference/tokens/interpolated.md).
