@@ -33,6 +33,8 @@
           href: tutorials/image-classification-api-transfer-learning.md
         - name: Görüntüleri sınıflandırma (model oluşturma)
           href: tutorials/image-classification.md
+        - name: Motosiklet kiralama talebini tahmin etme (zaman serisi)
+          href: tutorials/time-series-demand-forecasting.md
         - name: Ürün Satış Analizi (anomali algılama)
           href: tutorials/sales-anomaly-detection.md
         - name: Görüntülerdeki nesneleri algılama (nesne algılama)
