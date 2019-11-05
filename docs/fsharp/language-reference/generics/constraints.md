@@ -2,12 +2,12 @@
 title: Kısıtlamalar
 description: Genel tür F# veya işlevdeki bir tür bağımsız değişkeni için gereksinimleri belirtmek üzere genel tür parametrelerine uygulanan kısıtlamalar hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9912ba63138d893a7c616661dd2b1cbdbe51916c
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 70a8bec1ad67d7e814cb7a96b1876bb22399c5e7
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736800"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425014"
 ---
 # <a name="constraints"></a>Kısıtlamalar
 
@@ -25,17 +25,17 @@ Genel bir türde kullanılabilecek türleri sınırlamak için uygulayabileceği
 
 |Kısıtlaması|Sözdizimi|Açıklama|
 |----------|------|-----------|
-|Tür kısıtlaması|*tür-parametresi* : &gt; *tür*|Belirtilen tür, belirtilen türe eşit veya ondan türetilmiş olmalıdır ya da tür bir arabirimse, belirtilen türün arabirimi uygulaması gerekir.|
+|Tür kısıtlaması|*tür parametresi* :&gt; *türü*|Belirtilen tür, belirtilen türe eşit veya ondan türetilmiş olmalıdır ya da tür bir arabirimse, belirtilen türün arabirimi uygulaması gerekir.|
 |NULL kısıtlaması|*tür parametresi* : null|Belirtilen tür null sabit değeri desteklemelidir. Bu, tüm .NET nesne türlerini içerir ancak F# liste, demet, işlev, sınıf, kayıt veya birleşim türlerini içerir.|
 |Açık üye kısıtlaması|[(]*tür-parametre* [veya... or *türü-parametresi*)]: (*üye-imza*)|Belirtilen tür bağımsız değişkenlerinden en az biri, belirtilen imzaya sahip bir üyeye sahip olmalıdır; yaygın kullanım için tasarlanmamıştır. Üyeler açık bir üye kısıtlaması için geçerli hedefler olmak üzere tür üzerinde açıkça tanımlanmalıdır veya örtük bir tür uzantısının bir bölümü olmalıdır.|
-|Oluşturucu kısıtlaması|*tür-parametresi* : (yeni: birim-&gt; ' a)|Belirtilen türün parametresiz bir oluşturucusu olmalıdır.|
+|Oluşturucu kısıtlaması|*tür parametresi* : (yeni: birim-&gt; ' a)|Belirtilen türün parametresiz bir oluşturucusu olmalıdır.|
 |Değer türü kısıtlaması|: struct|Belirtilen tür bir .NET değer türü olmalıdır.|
 |Başvuru türü kısıtlaması|: struct değil|Belirtilen tür bir .NET başvuru türü olmalıdır.|
-|Numaralandırma türü kısıtlaması|: enum @ no__t-0*temel türü*&gt;|Belirtilen tür, belirtilen temel alınan türe sahip bir numaralandırılmış tür olmalıdır; yaygın kullanım için tasarlanmamıştır.|
-|Temsilci kısıtlaması|: temsilci @ no__t-0*demet-parametre-türü*, *return-Type*&gt;|Belirtilen tür, belirtilen bağımsız değişkenlere ve dönüş değerine sahip bir temsilci türü olmalıdır; yaygın kullanım için tasarlanmamıştır.|
+|Numaralandırma türü kısıtlaması|: numaralandırma&lt;*temel alınan tür*&gt;|Belirtilen tür, belirtilen temel alınan türe sahip bir numaralandırılmış tür olmalıdır; yaygın kullanım için tasarlanmamıştır.|
+|Temsilci kısıtlaması|: temsilci&lt;*demet-parametre türü*, *dönüş türü*&gt;|Belirtilen tür, belirtilen bağımsız değişkenlere ve dönüş değerine sahip bir temsilci türü olmalıdır; yaygın kullanım için tasarlanmamıştır.|
 |Karşılaştırma kısıtlaması|: karşılaştırma|Belirtilen tür karşılaştırmayı desteklemelidir.|
 |Eşitlik kısıtlaması|: eşitlik|Belirtilen tür eşitlik desteklemelidir.|
-|Yönetilmeyen kısıtlama|: yönetilmeyen|Belirtilen tür, yönetilmeyen bir tür olmalıdır. Yönetilmeyen türler, belirli basit türlerdir (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, 0, 1, 2 veya 3), numaralandırma türleri, 4 veya genel olmayan bir alanları tüm yönetilmeyen türler olan yapı.|
+|Yönetilmeyen kısıtlama|: yönetilmeyen|Belirtilen tür, yönetilmeyen bir tür olmalıdır. Yönetilmeyen türler, belirli basit türlerdir (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, veya `decimal`), numaralandırma türleri, `nativeptr<_>`veya alanları tüm yönetilmeyen türler olan genel olmayan bir yapı.|
 
 Kodunuzun kısıtlama türünde kullanılabilir ancak genel olarak türlerde olmayan bir özelliği kullanması gerektiğinde bir kısıtlama eklemeniz gerekir. Örneğin, bir sınıf türü belirtmek için tür kısıtlaması kullanırsanız, bu sınıfın yöntemlerinden birini genel işlevde veya türünde kullanabilirsiniz.
 
@@ -53,7 +53,7 @@ type Class1<'T when 'T :> System.Exception> =
 class end
 
 // Interface Type Constraint
-type Class2<'T when 'T :> System.IComparable> = 
+type Class2<'T when 'T :> System.IComparable> =
 class end
 
 // Null constraint
@@ -113,5 +113,5 @@ class end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tür](index.md)
-- [Kısıtlamaları](constraints.md)
+- [Genel Türler](index.md)
+- [Kısıtlamalar](constraints.md)
