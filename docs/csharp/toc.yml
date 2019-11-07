@@ -1152,14 +1152,6 @@
           href: programming-guide/namespaces/using-namespaces.md
         - name: 'Nasıl yapılır: Ad Alanımı kullanma'
           href: programming-guide/namespaces/how-to-use-the-my-namespace.md
-    - name: Boş değer atanabilen değer türleri
-      items:
-        - name: Genel Bakış
-          href: programming-guide/nullable-types/index.md
-        - name: Boş değer atanabilen değer türlerini kullanma
-          href: programming-guide/nullable-types/using-nullable-types.md
-        - name: 'Nasıl yapılır: boş değer atanabilir değer türünü tanımlama'
-          href: programming-guide/nullable-types/how-to-identify-a-nullable-type.md
     - name: Güvenli Olmayan Kod ve İşaretçiler
       items:
         - name: Genel bakış ve kısıtlamalar
@@ -1314,6 +1306,9 @@
                   href: language-reference/keywords/enum.md
                 - name: struct
                   href: language-reference/keywords/struct.md
+                - name: Boş değer atanabilen değer türleri
+                  href: language-reference/builtin-types/nullable-value-types.md
+                  displayName: '? token, ? symbol'
             - name: Başvuru türleri
               items:
                 - name: Başvuru türlerinin özellikleri
