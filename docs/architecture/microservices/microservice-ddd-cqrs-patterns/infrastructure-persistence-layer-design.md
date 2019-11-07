@@ -2,12 +2,12 @@
 title: Altyapı kalıcılık katmanını tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Altyapı kalıcılığı katmanının tasarımında depo modelini keşfet.
 ms.date: 10/08/2018
-ms.openlocfilehash: 76f545403a1b595ce7a541a96d212b9406d89c10
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295910"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737930"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Altyapı kalıcılığı katmanını tasarlama
 
@@ -33,13 +33,15 @@ Kullanıcı değişiklik yaptığında, görüntülenecek veriler istemci uygula
 
 Şekil 7-17 ' de gösterildiği gibi, her bir toplama kökü için yalnızca bir depoyu tanımlamanız gerektiğini bir kez daha vurgulamak önemlidir. Toplama içindeki tüm nesneler arasında işlem tutarlılığı sağlamak üzere toplama kökünün amacını elde etmek için, veritabanındaki her tablo için asla bir depo oluşturmanız gerekir.
 
-![Etki alanı ve altyapı katmanları arasındaki ilişkiler: Alıcı toplamı, Ibısurepository öğesine ve sıra toplamaya bağlı olarak ıorderrepository arabirimlerine bağlıdır, bu arabirimler, UnitOfWork 'e bağlı olan ilgili depolara göre altyapı katmanında uygulanır, Ayrıca, Bu, veri katmanındaki tablolara erişir.](./media/image18.png)
+![Etki alanı ve diğer altyapının ilişkilerini gösteren diyagram.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
 **Şekil 7-17**. Depolar, Toplamalar ve veritabanı tabloları arasındaki ilişki
 
+Yukarıdaki diyagramda, etki alanı ve altyapı katmanları arasındaki ilişkiler gösterilmektedir: alıcı toplamı, Ibuygurca ve sıra toplama, ıorderrepository arabirimlerine göre değişir, bu arabirimler altyapı katmanında uygulanır UnitOfWork 'e bağlı olan ilgili depolarda, veri katmanındaki tablolara erişen, orada de uygulanmış olan depolar.
+
 ### <a name="enforce-one-aggregate-root-per-repository"></a>Her depo için bir toplama kökünü zorla
 
-Depo tasarımınızın, yalnızca toplam köklerin depolara sahip olması için kuralı zorunlu kıldığı şekilde uygulanması yararlı olabilir. `IAggregateRoot` İşaret arabirimine sahip olduklarından emin olmak için, çalıştığı varlıkların türünü kısıtlayan genel veya temel bir depo türü oluşturabilirsiniz.
+Depo tasarımınızın, yalnızca toplam köklerin depolara sahip olması için kuralı zorunlu kıldığı şekilde uygulanması yararlı olabilir. `IAggregateRoot` işaretleyici arabirimine sahip olduklarından emin olmak için, çalıştığı varlıkların türünü kısıtlayan genel veya temel bir depo türü oluşturabilirsiniz.
 
 Bu nedenle, altyapı katmanında uygulanan her depo sınıfı, aşağıdaki kodda gösterildiği gibi kendi sözleşmesini veya arabirimini uygular:
 
@@ -63,7 +65,7 @@ public interface IOrderRepository : IRepository<Order>
 }
 ```
 
-Ancak, kodun her deponun tek bir toplama ile ilgili olduğunu bir şekilde zorlayacağından daha iyi bir yol, genel depo türünü uygulamaktır. Bu şekilde, belirli bir toplamı hedeflemek için bir depo kullandığınızı açıktır. Bu, aşağıdaki kodda olduğu gibi genel `IRepository` bir temel arabirim uygulayarak kolayca yapılabilir:
+Ancak, kodun her deponun tek bir toplama ile ilgili olduğunu bir şekilde zorlayacağından daha iyi bir yol, genel depo türünü uygulamaktır. Bu şekilde, belirli bir toplamı hedeflemek için bir depo kullandığınızı açıktır. Bu, aşağıdaki kodda olduğu gibi genel bir `IRepository` temel arabirimi uygulayarak kolayca yapılabilir:
 
 ```csharp
 public interface IRepository<T> where T : IAggregateRoot
@@ -86,11 +88,11 @@ EShopOnContainers 'da uygulanan depolar, değişiklik İzleyicisini kullanarak d
 
 ### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>Depo deseninin ve eski veri erişim sınıfı (DAL sınıfı) deseninin farkı
 
-Veri erişim nesnesi doğrudan depolamaya karşı veri erişimi ve Kalıcılık işlemleri gerçekleştirir. Bir depo, verileri iş nesnesi birimi ( <xref:Microsoft.EntityFrameworkCore.DbContext> sınıfı kullanılırken EF olarak) bellekte gerçekleştirmek istediğiniz işlemlere işaret ediyor, ancak bu güncelleştirmeler veritabanına hemen yapılmaz.
+Veri erişim nesnesi doğrudan depolamaya karşı veri erişimi ve Kalıcılık işlemleri gerçekleştirir. Bir depo, verileri iş nesnesi birimi (<xref:Microsoft.EntityFrameworkCore.DbContext> sınıfı kullanılırken EF olarak) bellekte gerçekleştirmek istediğiniz işlemlere işaret ediyor, ancak bu güncelleştirmeler veritabanına hemen yapılmaz.
 
 Bir iş birimi, birden çok INSERT, Update veya delete işlemi içeren tek bir işlem olarak adlandırılır. Basit koşullarda, bir Web sitesindeki kayıt gibi belirli bir kullanıcı eyleminin, tüm ekleme, güncelleştirme ve silme işlemlerinin tek bir işlemde işlendiği anlamına gelir. Bu, birden çok veritabanı hareketini bir chattier şekilde işlemeye kıyasla daha etkilidir.
 
-Bu birden çok kalıcılık işlemi daha sonra, uygulama katmanından kodunuz onu komutdaysa tek bir eylemde gerçekleştirilir. Gerçek veritabanı depolamasına bellek içi değişiklikleri uygulama kararı genellikle [iş deseninin birimi](https://martinfowler.com/eaaCatalog/unitOfWork.html)temel alınarak hesaplanır. EF 'de Iş deseninin birimi olarak <xref:Microsoft.EntityFrameworkCore.DbContext>uygulanır.
+Bu birden çok kalıcılık işlemi daha sonra, uygulama katmanından kodunuz onu komutdaysa tek bir eylemde gerçekleştirilir. Gerçek veritabanı depolamasına bellek içi değişiklikleri uygulama kararı genellikle [iş deseninin birimi](https://martinfowler.com/eaaCatalog/unitOfWork.html)temel alınarak hesaplanır. EF 'de Iş deseninin birimi <xref:Microsoft.EntityFrameworkCore.DbContext>olarak uygulanır.
 
 Çoğu durumda, bu model veya depolamaya yönelik işlemler uygulamanın yolu uygulama performansını artırabilir ve tutarsızlıklar olasılığını azaltabilir. Ayrıca, tüm amaçlanan işlemler bir işlemin parçası olarak yapıldığından veritabanı tablolarında işlem engellemeyi azaltır. Bu, veritabanında birçok yalıtılmış işlemi yürütmeye yönelik karşılaştırmada daha etkilidir. Bu nedenle, seçilen ORM birçok küçük ve ayrı işlem yürütmelerinin aksine, aynı işlem içinde birkaç güncelleştirme eylemini gruplandırarak veritabanına karşı yürütmeyi en iyileştirebilir.
 
@@ -117,7 +119,7 @@ Depolar kullanışlı olabilir, ancak toplama deseninin ve zengin etki alanı mo
 - **Depo deseninin** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
-- **Eric Evans. Etki alanı odaklı tasarım: Yazılım Kalkunda karmaşıklık karmaşıklığı.** (Kitap; depo deseninin bir tartışmasını içerir) \
+- **Eric Evans. Etki alanı odaklı tasarım: yazılım Kalbunda karmaşıklık karmaşıklığı.** (Kitap; depo deseninin bir tartışmasını içerir) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>Çalışma birimi stili
@@ -125,9 +127,9 @@ Depolar kullanışlı olabilir, ancak toplama deseninin ve zengin etki alanı mo
 - **Marwler. Çalışma birimi stili.** \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
-- **Bir ASP.NET MVC uygulamasında depo ve Iş düzeni birimi uygulama** \
+- **Bir ASP.NET MVC uygulamasında depo ve Iş deseni birimi uygulama** \
   <https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 >[!div class="step-by-step"]
->[Önceki](domain-events-design-implementation.md)İleri
->[](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[Önceki](domain-events-design-implementation.md)
+>[İleri](infrastructure-persistence-layer-implemenation-entity-framework-core.md)

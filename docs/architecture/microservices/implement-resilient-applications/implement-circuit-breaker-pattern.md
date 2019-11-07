@@ -2,12 +2,12 @@
 title: Devre kesici modelini uygulama
 description: Devre kesici düzeninin http yeniden denemeleri için tamamlayıcı bir sistem olarak nasıl uygulanacağını öğrenin.
 ms.date: 10/16/2018
-ms.openlocfilehash: a1a24094ae98d8c767ccf692fe8ded6e28d47854
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 00ca39b4b6fac37ff60adf128c3f4e22c5fc14e2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094112"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732829"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Devre Kesici desenini uygulama
 
@@ -94,7 +94,7 @@ Diğer bir seçenek de **sepet** mikro hizmetinde uygulanan özel ara yazılım 
 
 Ardından, Şekil 8-5 ' de gösterildiği gibi, URI `http://localhost:5103/failing`kullanarak durumu kontrol edebilirsiniz.
 
-![Başarısız olan ara yazılım simülasyonu durumunun kontrol edilirken oluşan tarayıcı görünümü](./media/image4.png)
+![Başarısız olan ara yazılım simülasyonu durumunun kontrol etme ekran görüntüsü.](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
 **Şekil 8-5**. "Başarısız" ASP.NET ara yazılım durumu denetleniyor ve bu durumda devre dışı bırakıldı.
 
@@ -134,7 +134,7 @@ public class CartController : Controller
 
 İşte bir Özet. Yeniden deneme ilkesi, HTTP isteğini yapmak ve HTTP hatalarını almak için birkaç kez çalışır. Yeniden deneme sayısı, devre kesici ilkesi için ayarlanan en büyük sayıya ulaştığında (Bu durumda, 5), uygulama bir Brokencırcuitexception oluşturur. Şekil 8-6 ' de gösterildiği gibi, sonuç kolay bir iletidir.
 
-![Devre kesici ilkesi tarafından tetiklenen bir "sepet hizmeti çalışmayan" iletisini gösteren MVC web uygulamasının tarayıcı görünümü](./media/image5.png)
+![Sepet hizmeti hata ile MVC web uygulamasının ekran görüntüsü.](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 
 **Şekil 8-6**. Devre kesici Kullanıcı arabirimine hata döndürüyor
 

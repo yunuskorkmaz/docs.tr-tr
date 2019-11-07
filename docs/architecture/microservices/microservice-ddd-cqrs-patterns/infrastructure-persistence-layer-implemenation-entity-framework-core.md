@@ -2,12 +2,12 @@
 title: Entity Framework Core ile altyapı kalıcılık katmanını uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Entity Framework Core kullanarak altyapı kalıcılığı katmanının uygulama ayrıntılarını keşfedebilirsiniz.
 ms.date: 10/08/2018
-ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b70ede6b47cbf990d0435aef841416c68f6439b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295904"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737904"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Altyapı kalıcılığı katmanını Entity Framework Core ile uygulama
 
@@ -26,13 +26,13 @@ EF Core giriş Microsoft belgelerinde zaten mevcut olduğundan, bu bilgilere yö
 - **Entity Framework Core** \
   [https://docs.microsoft.com/ef/core/](/ef/core/)
 
-- **Visual Studio 'Yu kullanarak ASP.NET Core ve Entity Framework Core kullanmaya başlama** \
+- **Visual Studio 'yu kullanarak ASP.NET Core ve Entity Framework Core** kullanmaya başlama \
   [https://docs.microsoft.com/aspnet/core/data/ef-mvc/](/aspnet/core/data/ef-mvc/)
 
 - **DbContext sınıfı** \
   [https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext](xref:Microsoft.EntityFrameworkCore.DbContext)
 
-- **Compare EF Core & EF6. x** \
+- **EF Core & EF6. x \ karşılaştırın**
   [https://docs.microsoft.com/ef/efcore-and-ef6/index](/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Bir DDD perspektifinden Entity Framework Core altyapısı
@@ -43,9 +43,9 @@ DDD desenleri başına, varlık sınıfı içinde etki alanı davranışını ve
 
 EF Core 1,1 ' den itibaren bu DDD gereksinimlerini karşılayacak şekilde, varlıklarınızda ortak özellikler yerine düz alanlara sahip olabilirsiniz. Bir varlık alanının dışarıdan erişilebilir olmasını istemiyorsanız, bir özellik yerine yalnızca özniteliği veya alanı oluşturabilirsiniz. Özel özellik ayarlayıcıları da kullanabilirsiniz.
 
-Benzer bir şekilde, artık olarak `IReadOnlyCollection<T>`yazılmış bir ortak özelliği kullanarak koleksiyonlara salt okuma erişimine sahip olabilirsiniz. Bu bir özel alan üyesi tarafından ( `List<T>`Örneğin,), kalıcılığı için EF 'e bağlı olan varlıktaki bir özel alan üyesi tarafından desteklenir. `ICollection<T>`' Nin, üst varlık sınıfını kullanan herhangi bir geliştiricinin özellik koleksiyonları aracılığıyla öğe eklemesine veya kaldırabileceği anlamına gelen, gerekli koleksiyon özelliklerinin Entity Framework önceki sürümleri. Bu olasılık, DDD 'daki önerilen desenlere karşı bir yaklaşımlar.
+Benzer bir şekilde, artık `IReadOnlyCollection<T>`olarak yazılmış bir ortak özelliği kullanarak koleksiyonlara salt okuma erişimine sahip olabilirsiniz. Bu, bir özel alan üyesi tarafından (örneğin, bir `List<T>`gibi), kalıcılık için EF 'i temel alan varlıkınızda desteklenir. Entity Framework önceki sürümleri, üst varlık sınıfını kullanan herhangi bir geliştiricinin özellik koleksiyonları aracılığıyla öğe eklemesine veya kaldırmasına olanak tanıyan `ICollection<T>`desteklemek için gerekli koleksiyon özelliklerinin. Bu olasılık, DDD 'daki önerilen desenlere karşı bir yaklaşımlar.
 
-Aşağıdaki kod örneğinde gösterildiği gibi, salt okunurdur `IReadOnlyCollection<T>` bir nesne ortaya çıkarmak için özel bir koleksiyon kullanabilirsiniz:
+Aşağıdaki kod örneğinde gösterildiği gibi, salt okunurdur `IReadOnlyCollection<T>` nesnesini kullanıma alırken özel bir koleksiyon kullanabilirsiniz:
 
 ```csharp
 public class Order : Entity
@@ -78,9 +78,9 @@ public class Order : Entity
 }
 ```
 
-Özelliğine yalnızca ile `IReadOnlyCollection<OrderItem>`salt okunurdur erişilebilir. `OrderItems` Bu tür salt okunurdur, bu nedenle normal dış güncelleştirmelere karşı korunur.
+`OrderItems` özelliğine yalnızca `IReadOnlyCollection<OrderItem>`kullanılarak salt okunurdur erişilebilir. Bu tür salt okunurdur, bu nedenle normal dış güncelleştirmelere karşı korunur.
 
-EF Core, etki alanı modelini "kirmadan", etki alanı modelini fiziksel veritabanıyla eşlemek için bir yol sağlar. Bu saf .NET POCO kodudur çünkü eşleme eylemi Kalıcılık katmanında uygulanmıştır. Bu eşleme eyleminde, alanları veritabanına eşlemeyi yapılandırmanız gerekir. `OnModelCreating` İçindeki `SetPropertyAccessMode` `OrderItems` yönteminin ve sınıfından`OrderEntityTypeConfiguration` aşağıdaki örnekte, ' ın çağrısı, ' ın alanı aracılığıyla özelliğine erişmesini söyler EF Core. `OrderingContext`
+EF Core, etki alanı modelini "kirmadan", etki alanı modelini fiziksel veritabanıyla eşlemek için bir yol sağlar. Bu saf .NET POCO kodudur çünkü eşleme eylemi Kalıcılık katmanında uygulanmıştır. Bu eşleme eyleminde, alanları veritabanına eşlemeyi yapılandırmanız gerekir. `OrderingContext` ve `OrderEntityTypeConfiguration` sınıfından `OnModelCreating` yönteminin aşağıdaki örneğinde, `SetPropertyAccessMode` çağrısı EF Core `OrderItems` özelliğine kendi alanı aracılığıyla erişmesini söyler.
 
 ```csharp
 // At OrderingContext.cs from eShopOnContainers
@@ -110,7 +110,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-Özellikler yerine alanları kullandığınızda, `OrderItem` varlık bir `List<OrderItem>` özelliği olduğu gibi kalıcı hale getirilir. Ancak, sırayla yeni öğeler eklemek için tek bir `AddOrderItem` erişimci ve yöntemi sunar. Sonuç olarak, davranış ve veriler birlikte birbirlerine bağlanır ve etki alanı modelini kullanan tüm uygulama kodları boyunca tutarlı olacaktır.
+Özellikler yerine alanları kullandığınızda `OrderItem` varlığı, tıpkı bir `List<OrderItem>` özelliğine sahip gibi kalıcıdır. Ancak, sıraya yeni öğeler eklemek için `AddOrderItem` yöntemi olan tek bir erişimci sunar. Sonuç olarak, davranış ve veriler birlikte birbirlerine bağlanır ve etki alanı modelini kullanan tüm uygulama kodları boyunca tutarlı olacaktır.
 
 ## <a name="implement-custom-repositories-with-entity-framework-core"></a>Entity Framework Core ile özel depolar uygulama
 
@@ -156,7 +156,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 
 Isusırepository arabiriminin, etki alanı modeli katmanından bir sözleşme olarak geldiğini unutmayın. Ancak, depo uygulama kalıcı ve altyapı katmanında yapılır.
 
-EF DbContext, Oluşturucu aracılığıyla bağımlılık ekleme yoluyla gelir. Aynı http istek kapsamındaki birden çok depo arasında paylaşılır ve IOC kapsayıcısında () varsayılan yaşam süresi (`ServiceLifetime.Scoped`) ile (ile `services.AddDbContext<>`açıkça ayarlanabilir).
+EF DbContext, Oluşturucu aracılığıyla bağımlılık ekleme yoluyla gelir. Aynı HTTP istek kapsamındaki birden çok depo arasında paylaşılır ve IOC kapsayıcısında varsayılan yaşam süresi (`ServiceLifetime.Scoped`) ile (Ayrıca `services.AddDbContext<>`açıkça ayarlanabilir).
 
 ### <a name="methods-to-implement-in-a-repository-updates-or-transactions-versus-queries"></a>Bir depoda uygulanacak Yöntemler (güncelleştirmeler veya işlemler ve sorgular)
 
@@ -174,11 +174,11 @@ Ancak, özel depoları uygulamak, daha karmaşık mikro hizmetler veya uygulamal
 
 Şekil 7-18 ' de, bu depoları daha kolay hale getirmek için depoları kullanma (doğrudan EF DbContext kullanarak) ile ilgili farklılıkları görebilirsiniz.
 
-![Özel bir depo ve düz DbContext kullanma arasında karşılaştırma: özel depo, depoyu yeniden düzenleyerek testi kolaylaştırmak için kullanılabilecek bir soyutlama katmanı ekler.](./media/image19.png)
+![İki depodaki bileşenlerin ve veri akışının gösterildiği diyagram.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
 **Şekil 7-18**. Özel depoları kullanma, düz bir DbContext
 
-Mocking için birden çok alternatif vardır. Yalnızca depoların tamamını veya bir bütün çalışma birimini sahte bir şekilde yapılandırabilirsiniz. Genellikle depolarda bulunan depolar yeterlidir ve tüm iş birimi için soyut ve anlamlı olan karmaşıklık genellikle gerekli değildir.
+Şekil 7-18, özel bir depoyu kullanmanın, depoyu test ederek testi kolaylaştırmak için kullanılabilecek bir soyutlama katmanı ekler. Mocking için birden çok alternatif vardır. Yalnızca depoların tamamını veya bir bütün çalışma birimini sahte bir şekilde yapılandırabilirsiniz. Genellikle depolarda bulunan depolar yeterlidir ve tüm iş birimi için soyut ve anlamlı olan karmaşıklık genellikle gerekli değildir.
 
 Daha sonra uygulama katmanına odaklandığımızda, bağımlılık ekleme 'nın ASP.NET Core içinde nasıl çalıştığını ve depoları kullanırken nasıl uygulandığını görürsünüz.
 
@@ -188,9 +188,9 @@ DbContext 'i doğrudan kullanıyorsanız, birim testleri için öngörülebilir 
 
 ## <a name="ef-dbcontext-and-iunitofwork-instance-lifetime-in-your-ioc-container"></a>IFC kapsayıcıda EF DbContext ve IUnitOfWork örnek ömrü
 
-Nesne (bir `IUnitOfWork` nesne olarak gösterilir), aynı http istek kapsamı içinde birden çok depo arasında paylaşılmalıdır. `DbContext` Örneğin, yürütülmekte olan işlem birden çok toplama ile uğraşmak veya birden çok depo örneği kullandığınız için geçerlidir. `IUnitOfWork` Arabirimin, EF Core türü değil, etki alanı katmanının bir parçası olması da önemlidir.
+`DbContext` nesnesi (bir `IUnitOfWork` nesnesi olarak gösterilir), aynı HTTP istek kapsamındaki birden çok depo arasında paylaşılmalıdır. Örneğin, yürütülmekte olan işlem birden çok toplama ile uğraşmak veya birden çok depo örneği kullandığınız için geçerlidir. `IUnitOfWork` arabirimin, EF Core bir tür değil, etki alanı katmanınızdaki bir parçası olduğunu bahsetmek de önemlidir.
 
-Bunu yapmak için `DbContext` nesnenin örneğinin hizmet ömrü servicelifetime. kapsamlıdır olarak ayarlanmalıdır. Bu, ASP.NET Core Web API projenizdeki `DbContext` `Startup.cs` dosyanın ConfigureServices `services.AddDbContext` yönteminden IOC kapsayıcıınızda bir ile kayıt yapılırken varsayılan yaşam süresidir. Aşağıdaki kod bunu göstermektedir.
+Bunu yapmak için, `DbContext` nesnesinin örneğinin hizmet ömrü ServiceLifetime. kapsamlıdır olarak ayarlanmalıdır. Bu, ASP.NET Core Web API projenizdeki `Startup.cs` dosyasının ConfigureServices yönteminden IBC kapsayıcısındaki `services.AddDbContext` bir `DbContext` kaydederken varsayılan yaşam süresidir. Aşağıdaki kod bunu göstermektedir.
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -232,20 +232,20 @@ Depo için tek yaşam süresinin kullanılması, DbContext kapsam (InstancePerLi
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Bir ASP.NET MVC uygulamasında depo ve Iş düzeni birimi uygulama** \
+- **Bir ASP.NET MVC uygulamasında depo ve Iş deseni birimi uygulama** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 - **Jonathan Allen. Entity Framework, kaber ve zincirle depo deseninin uygulama stratejileri** \
   <https://www.infoq.com/articles/repository-implementation-strategies>
 
-- **Cesar de La Torre. Autofac IoC kapsayıcı örneği kapsamları ile ASP.NET Core IOC kapsayıcı hizmeti yaşam sürelerini karşılaştırma** \
+- **Cesar de La Torre. Autofac IoC kapsayıcı örneği kapsamları ile ASP.NET Core IOC kapsayıcı hizmeti yaşam sürelerinin karşılaştırması** \
   <https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/>
 
 ## <a name="table-mapping"></a>Tablo eşleme
 
 Tablo eşleme, sorgulanacak tablo verilerini tanımlar ve veritabanına kaydedilir. Daha önce etki alanı varlıklarının (örneğin, bir ürün veya sipariş etki alanı) ilgili veritabanı şeması oluşturmak için nasıl kullanılabileceğini gördünüz. EF, *kural*kavramı etrafında kesin olarak tasarlanmıştır. Kurallar, "bir tablonun adı ne olacak?" gibi soruları ele alacak. or "birincil anahtar nedir?" Kurallar genellikle geleneksel adlara dayalıdır — Örneğin, birincil anahtarın kimlik ile biten bir özellik olması normaldir.
 
-Kural gereği, her varlık türetilmiş bağlamda varlığı sunan `DbSet<TEntity>` özelliği ile aynı ada sahip bir tabloya eşlenecek şekilde ayarlanır. Verilen varlık `DbSet<TEntity>` için hiçbir değer sağlanmazsa, sınıf adı kullanılır.
+Kurala göre, her varlık türetilmiş bağlamda varlığı sunan `DbSet<TEntity>` özelliği ile aynı ada sahip bir tabloya eşlenecek şekilde ayarlanır. Verilen varlık için `DbSet<TEntity>` değeri sağlanmazsa, sınıf adı kullanılır.
 
 ### <a name="data-annotations-versus-fluent-api"></a>Veri ek açıklamaları ve akıcı API
 
@@ -339,7 +339,7 @@ EF Core, önceki örnekte gösterildiği gibi, Forsqlserverusesequencechild o y�
 
 Bu özellik ile EF Core 1,1 ' den bu yana, sütunları doğrudan alanlarla eşleyebilirsiniz. Varlık sınıfında özellikler kullanılamaz ve yalnızca tablodaki sütunları alanlarla eşlemek mümkündür. İçin ortak bir kullanım, varlığın dışından erişilmesi gerekmeyen herhangi bir iç durum için özel alanlar olacaktır.
 
-Bunu tek alanlarla veya bir `List<>` alan gibi koleksiyonlarla yapabilirsiniz. Bu nokta, etki alanı model sınıflarını modelleyen daha önce bahsedildiği halde, bu eşlemenin önceki kodda vurgulanan `PropertyAccessMode.Field` yapılandırmayla nasıl gerçekleştirileceğini görebilirsiniz.
+Bunu tek alanlarla veya `List<>` alanı gibi koleksiyonlarla yapabilirsiniz. Bu nokta, etki alanı model sınıflarını modelleyen daha önce bahsedildiği halde, bu eşlemenin önceki kodda vurgulanan `PropertyAccessMode.Field` yapılandırmasıyla nasıl gerçekleştirileceğini görebilirsiniz.
 
 ### <a name="use-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>Altyapı düzeyinde gizlenen EF Core gölge özelliklerini kullanın
 
@@ -452,13 +452,13 @@ Bir depodan IQueryable döndürmek önerilmese de, bir dizi sonuç oluşturmak i
 - **Tablo eşleme** \
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)
 
-- **Entity Framework Core ile anahtar oluşturmak için Tepo kullanın** \
+- **Entity Framework Core \ anahtar oluşturmak Için Tepo kullanın**
   <https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/>
 
 - **Alanları yedekleme** \
   [https://docs.microsoft.com/ef/core/modeling/backing-field](/ef/core/modeling/backing-field)
 
-- **Steve Smith. Entity Framework Core içinde kapsüllenmiş Koleksiyonlar** \
+- **Steve Smith. Entity Framework Core \ kapsüllenmiş koleksiyonlar**
   <https://ardalis.com/encapsulated-collections-in-entity-framework-core>
 
 - **Gölge özellikleri** \
@@ -468,5 +468,5 @@ Bir depodan IQueryable döndürmek önerilmese de, bir dizi sonuç oluşturmak i
   <https://deviq.com/specification-pattern/>
 
 > [!div class="step-by-step"]
-> [Önceki](infrastructure-persistence-layer-design.md)İleri
-> [](nosql-database-persistence-infrastructure.md)
+> [Önceki](infrastructure-persistence-layer-design.md)
+> [İleri](nosql-database-persistence-infrastructure.md)

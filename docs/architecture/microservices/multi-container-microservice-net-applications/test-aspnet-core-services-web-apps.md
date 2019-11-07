@@ -2,12 +2,12 @@
 title: ASP.NET Core hizmetlerini ve web uygulamalarını test etme
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Kapsayıcılarda ASP.NET Core Hizmetleri ve Web uygulamalarını test etmek için bir mimari bulun.
 ms.date: 10/02/2018
-ms.openlocfilehash: 278d12b8215195351673a41149db5af6fcecddfb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772024"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739483"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core hizmetlerini ve web uygulamalarını test etme
 
@@ -144,7 +144,7 @@ Başvuru uygulaması (eShopOnContainers) testleri yakın zamanda yeniden yapıla
 
 Mikro hizmet başına birim ve tümleştirme testi, her mikro hizmette bir test klasöründe bulunur ve uygulama, Şekil 6-25 ' de gösterildiği gibi çözüm klasöründeki test klasörü altında bir yük testi içerir.
 
-![EShopOnContainers içindeki testlerin yapısı: her hizmetin birim ve işlev testlerini içeren bir "test" klasörü vardır. Çözüm "test" klasörünün altında, uygulama genelinde işlevsel testler ve yük testi vardır.](./media/image42.png)
+![Çözümdeki test projelerinin bazılarını gösteren ekran görüntüsü.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
 
 **Şekil 6-25**. EShopOnContainers 'daki test klasörü yapısı
 

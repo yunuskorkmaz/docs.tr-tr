@@ -2,12 +2,12 @@
 title: Sistem durumu izleme
 description: Sistem durumu izlemeyi uygulamayla bir yolu bulun.
 ms.date: 01/07/2019
-ms.openlocfilehash: 2d43efa7b6cfb855a033ee4d766c64c2472ceb36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1d63e04bbea95fcf0a9f9d3b50aef0e7d4a830e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094077"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732868"
 ---
 # <a name="health-monitoring"></a>Sistem durumu izleme
 
@@ -123,7 +123,7 @@ Açık kaynaklı proje [Aspnetcore. Diagnostics. healthcheck](https://github.com
 
 Örneğin, `Catalog.API` mikro hizmetinde aşağıdaki NuGet paketleri eklendi:
 
-![AspNetCore. Diagnostics. Healthdenetimlerinin NuGet paketlerine başvurduğu katalog. API projesinin Çözüm Gezgini görünümü](./media/image6.png)
+![AspNetCore. Diagnostics. Healthbir ekran görüntüsü NuGet paketlerini denetler.](./media/monitor-app-health/aspnet-core-diagnostics-health-checks.png)
 
 **Şekil 8-7**. AspNetCore. Diagnostics. Healthdenetimleri kullanılarak Catalog. API dosyasında uygulanan özel durum denetimleri
 
@@ -191,7 +191,7 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
 
 Bu makalede açıklandığı şekilde sistem durumu denetimleri yapılandırdığınızda ve mikro hizmeti Docker 'da çalışıyorsa, iyi durumda bir tarayıcıdan doğrudan kontrol edebilirsiniz. Kapsayıcı bağlantı noktasını Docker konağında yayımlamanız gerekir. bu sayede, Şekil 8-8 ' de gösterildiği gibi, kapsayıcıya dış Docker ana bilgisayar IP 'si veya `localhost`aracılığıyla erişebilirsiniz.
 
-![Bir sistem durumu denetimi tarafından döndürülen JSON yanıtının tarayıcı görünümü](./media/image7.png)
+![Bir sistem durumu denetimi tarafından döndürülen JSON yanıtının ekran görüntüsü.](./media/monitor-app-health/health-check-json-response.png)
 
 **Şekil 8-8**. Bir tarayıcıdan tek bir hizmetin sistem durumunu denetleme
 
@@ -205,7 +205,7 @@ EShopOnContainers örneği, Şekil 8-9 ' de gösterildiği gibi, örnek sistem d
 
 Neyse ki, [aspnetcore. Diagnostics. healthcheck](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) Ayrıca, yapılandırılmış URI 'lerden gelen sistem durumu denetimi sonuçlarını göstermek Için kullanılabilen [Aspnetcore. HEALTHCHECK. UI](https://www.nuget.org/packages/AspNetCore.HealthChecks.UI/) NuGet paketini de sağlar.
 
-![EShopOnContainers 'daki tüm mikro hizmetlerin sistem durumunu gösteren WebStatus uygulamasının tarayıcı görünümü](./media/image8.png)
+![Sistem durumu denetimleri kullanıcı arabirimi eShopOnContainers durum durumlarının ekran görüntüsü.](./media/monitor-app-health/health-check-status-ui.png)
 
 **Şekil 8-9**. EShopOnContainers 'daki örnek durum denetimi raporu
 

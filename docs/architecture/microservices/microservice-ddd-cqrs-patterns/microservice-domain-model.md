@@ -2,12 +2,12 @@
 title: Mikro hizmet etki alan modeli tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD-yönelimli bir etki alanı modeli tasarlarken temel kavramları anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: c6d2e84189ff542a2ed4c584c4a47bf7bf0e946a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296728"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737466"
 ---
 # <a name="design-a-microservice-domain-model"></a>Mikro hizmet etki alanı modeli tasarlama
 
@@ -21,7 +21,7 @@ Varlıklar, etki alanı nesnelerini temsil eder ve öncelikle kimlik, süreklili
 
 *Bir varlığın kimliği birden fazla mikro hizmet veya sınırlı bağlamlara çapraz olabilir.*
 
-Aynı kimlik (diğer bir deyişle, aynı etki `Id` alanı varlığı olmamakla birlikte aynı değer) birden çok sınırlanmış bağlam veya mikro hizmet arasında modellenebilir. Ancak, aynı özniteliğe ve mantığa sahip aynı varlığın birden çok sınırlanmış bağlamda uygulandığını göstermez. Bunun yerine, her sınırlı bağlamdaki varlıklar, özniteliklerini ve davranışlarını Bu sınırlanmış bağlamın etki alanında gerekli olanlarla sınırlar.
+Aynı kimlik (diğer bir deyişle, aynı etki alanı varlığı olmasa da aynı `Id` değeri, birden çok sınırlanmış bağlam veya mikro hizmet arasında modellenebilir. Ancak, aynı özniteliğe ve mantığa sahip aynı varlığın birden çok sınırlanmış bağlamda uygulandığını göstermez. Bunun yerine, her sınırlı bağlamdaki varlıklar, özniteliklerini ve davranışlarını Bu sınırlanmış bağlamın etki alanında gerekli olanlarla sınırlar.
 
 Örneğin, alıcı varlığı, kimlik dahil olmak üzere profil veya kimlik mikro hizmetindeki Kullanıcı varlığında tanımlanmış bir kişi özniteliklerinin çoğuna sahip olabilir. Ancak, yalnızca belirli alıcı verileri sipariş sürecleriyle ilişkili olduğundan sıralama mikro hizmetindeki alıcı varlığı daha az özniteliğe sahip olabilir. Her mikro hizmet veya sınırlı bağlamın bağlamı, etki alanı modelini etkiler.
 
@@ -31,11 +31,11 @@ DDD alanındaki bir etki alanı varlığı, varlık verileriyle ilgili etki alan
 
 Şekil 7-8, yalnızca veri öznitelikleri değil, işlemler veya ilgili etki alanı mantığına sahip Yöntemler uygulayan bir etki alanı varlığını gösterir.
 
-![Bir etki alanı modeli varlığı, davranışları yöntemler aracılığıyla uygular, yani bir "anemik" modeli değildir.](./media/image9.png)
+![Bir etki alanı varlığının deseninin gösterildiği diyagram.](./media/microservice-domain-model/domain-entity-pattern.png)
 
 **Şekil 7-8**. Veri ve davranış uygulayan bir etki alanı varlığı tasarımı örneği
 
-Kuşkusuz, bazen varlık sınıfının bir parçası olarak herhangi bir mantık uygulamayan varlıklara sahip olabilirsiniz. Bu, bir toplama içindeki alt varlıklarda, mantığın büyük çoğunluğu toplam kökte tanımlanmış olduğu için özel bir mantık yoksa meydana gelebilir. Etki alanı varlıkları yerine hizmet sınıflarında çok fazla mantığı uygulanmış karmaşık bir mikro hizmetiniz varsa, aşağıdaki bölümde açıklanan anemik etki alanı modeline düşeceksiniz.
+Bir etki alanı modeli varlığı, davranışları yöntemler aracılığıyla uygular, yani bir "anemik" modeli değildir. Kuşkusuz, bazen varlık sınıfının bir parçası olarak herhangi bir mantık uygulamayan varlıklara sahip olabilirsiniz. Bu, bir toplama içindeki alt varlıklarda, mantığın büyük çoğunluğu toplam kökte tanımlanmış olduğu için özel bir mantık yoksa meydana gelebilir. Etki alanı varlıkları yerine hizmet sınıflarında çok fazla mantığı uygulanmış karmaşık bir mikro hizmetiniz varsa, aşağıdaki bölümde açıklanan anemik etki alanı modeline düşeceksiniz.
 
 ### <a name="rich-domain-model-versus-anemic-domain-model"></a>Zengin etki alanı modeline karşı, anemik etki alanı modeli
 
@@ -80,16 +80,16 @@ EF Core 2,0, daha sonra ayrıntılı olarak göreceğiniz için değer nesneleri
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Marwler. Değer nesnesi kalıbı** \
+- **Marwler. Değer nesne deseninin** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
 - **Değer nesnesi** \
   <https://deviq.com/value-object/>
 
-- **Test odaklı geliştirmede değer nesneleri** \
+- **Test odaklı geliştirme \ değer nesneleri**
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans. Etki alanı odaklı tasarım: Yazılım Kalkunda karmaşıklık karmaşıklığı.** (Kitap; değer nesnelerinin bir tartışmasını içerir) \
+- **Eric Evans. Etki alanı odaklı tasarım: yazılım Kalbunda karmaşıklık karmaşıklığı.** (Kitap; değer nesnelerinin bir tartışmasını içerir) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>Toplam model
@@ -108,11 +108,11 @@ Toplama kökünün amacı, toplamanın tutarlılığını sağlamaktır; Toplam 
 
 Şekil 7-9 ' de, tek bir varlık (Toplam kök alıcı) içeren alıcı toplaması gibi örnek toplamalar görebilirsiniz. Sıra toplaması birden çok varlık ve bir değer nesnesi içerir.
 
-![DDD etki alanı modeli toplamalarda oluşur, bir toplama yalnızca bir varlık veya daha fazla olabilir ve değer nesneleri de içerebilir.](./media/image10.png)
+![Bir alıcı toplamasını ve bir sıra toplamasını karşılaştıran diyagram.](./media/microservice-domain-model/buyer-order-aggregate-pattern.png)
 
 **Şekil 7-9**. Birden çok veya tek varlık içeren toplamalar örneği
 
-Alıcı toplamanın, etki alanına bağlı olarak, eShopOnContainers başvuru uygulamasındaki mikro hizmette sıralama yaptığı gibi ek alt varlıklara sahip olabileceğini unutmayın. Şekil 7-9 yalnızca Birleşik bir kök içeren bir toplama örneği olarak, alıcının tek bir varlığa sahip olduğu bir durumu gösterir.
+DDD etki alanı modeli toplamalarda oluşur, bir toplama yalnızca bir varlık veya daha fazla olabilir ve değer nesneleri de içerebilir. Alıcı toplamanın, etki alanına bağlı olarak, eShopOnContainers başvuru uygulamasındaki mikro hizmette sıralama yaptığı gibi ek alt varlıklara sahip olabileceğini unutmayın. Şekil 7-9 yalnızca Birleşik bir kök içeren bir toplama örneği olarak, alıcının tek bir varlığa sahip olduğu bir durumu gösterir.
 
 Toplamaların ayrılmasını sürdürmek ve aralarında Temizleme sınırları tutmak için, bir DDD etki alanı modelinde, toplamalar arasında doğrudan gezinmeye izin vermemek ve sıralamada uygulandığı gibi yalnızca yabancı anahtar (FK) alanına sahip olmak için iyi bir uygulamadır [ eShopOnContainers içindeki mikro hizmet etki alanı modeli](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) . Sipariş varlığı, alıcı için yalnızca bir FK alanına sahiptir, ancak aşağıdaki kodda gösterildiği gibi EF Core gezinti özelliği değildir:
 
@@ -133,13 +133,13 @@ Toplamaları tanımlama ve bunlarla çalışma için araştırma ve deneyim gere
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Vaughn versuz. Geçerli toplama tasarımı-Bölüm ı: Tek bir toplama** (öğesinden <http://dddcommunity.org/>) modelleme
+- **Vaughn versuz. Geçerli toplama tasarımı-Bölüm ı: tek bir toplama modelleme** (<http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn versuz. Geçerli toplu tasarım-Bölüm II: Toplamalar birlikte** çalışır hale getirme ( <http://dddcommunity.org/>öğesinden) \
+- **Vaughn versuz. Geçerli toplama tasarımı-Bölüm II: toplamalar birlikte çalışır hale getirme** (<http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn versuz. Etkili toplu tasarım-Bölüm III: Bulma** (Kimden) \ aracılığıyla <http://dddcommunity.org/>öngörü elde etme
+- **Vaughn versuz. Etkili toplu tasarım-Bölüm III: bulma yoluyla öngörü elde etme** (<http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Gryıbniak. DDD Politiktasarım desenleri** \
@@ -152,5 +152,5 @@ Toplamaları tanımlama ve bunlarla çalışma için araştırma ve deneyim gere
   <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]
->[Önceki](ddd-oriented-microservice.md)İleri
->[](net-core-microservice-domain-model.md)
+>[Önceki](ddd-oriented-microservice.md)
+>[İleri](net-core-microservice-domain-model.md)

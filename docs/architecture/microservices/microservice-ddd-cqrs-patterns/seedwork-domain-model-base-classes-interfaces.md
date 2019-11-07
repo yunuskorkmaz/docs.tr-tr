@@ -2,12 +2,12 @@
 title: Seedwork (etki alanı modeliniz için yeniden kullanılabilir kök sınıflar ve arabirimler)
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD tabanlı bir etki alanı modeline yönelik uygulamayı başlatmak için başlangıç noktası olarak seedwork kavramını kullanın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 87cbc5ce96b66a9ac3e1c2bfc8c863d1b20714db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f53988b92a05fb54f3f05d9f463450d1a11a0843
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093796"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737228"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (etki alanı modeliniz için yeniden kullanılabilir kök sınıflar ve arabirimler)
 
@@ -15,7 +15,9 @@ ms.locfileid: "73093796"
 
 Şekil 7-12, etki alanı modelinin sıralama mikro hizmetindeki seedwork 'i oluşturan sınıfları gösterir. Varlık, ValueObject ve numaralandırma gibi bazı özel temel sınıflara ek olarak birkaç arabirim vardır. Bu arabirimler (ırepository ve IUnitOfWork) altyapı katmanını uygulanması gerekenler hakkında bilgilendirir. Bu arabirimler, uygulama katmanından bağımlılık ekleme yoluyla da kullanılır.
 
-![Temel sınıfları ve arabirimleri içeren SeedWork klasörünün ayrıntılı içeriği: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs ve ValueObject.cs](./media/image13.PNG)
+:::image type="complex" source="./media/seedwork-domain-model-base-classes-interfaces/vs-solution-seedwork-classes.png" alt-text="SeedWork klasöründe bulunan sınıfların ekran görüntüsü.":::
+Temel sınıfları ve arabirimleri içeren SeedWork klasörünün ayrıntılı içeriği: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs ve ValueObject.cs.
+:::image-end:::
 
 **Şekil 7-12**. "Seedwork" temel sınıfları ve arabirimleri için örnek bir etki alanı modeli kümesi
 

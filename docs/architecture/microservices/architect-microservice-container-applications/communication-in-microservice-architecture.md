@@ -2,22 +2,22 @@
 title: Mikro hizmet mimarisinde iletişim
 description: Mikro hizmetler arasındaki iletişimin farklı yollarını inceleyerek, zaman uyumlu ve zaman uyumsuz yolların etkilerini anlayın.
 ms.date: 09/20/2018
-ms.openlocfilehash: 25d99d3d9b00b8c20c5ded6d8b40c77fcbe0eb46
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: add1ff74bee456e0fa7f2fb54d2cf4e536402db4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295568"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738056"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Mikro hizmet mimarisinde iletişim
 
-Tek bir işlemde çalışan tek parçalı bir uygulamada, bileşenler dil düzeyi Yöntem veya işlev çağrıları kullanarak bir diğeri çağırır. Bunlar, kod içeren nesneler oluşturuyorsanız (örneğin, `new ClassName()`) veya somut nesne örnekleri yerine soyutlamalar ekleyerek bağımlılık ekleme 'yi kullanıyorsanız ayrılmış bir şekilde çağrılabilir. Her iki durumda da nesneler aynı işlem içinde çalışır. Tek parçalı bir uygulamadan mikro hizmet tabanlı bir uygulamaya geçiş yaparken en büyük zorluk, iletişim mekanizmasını değiştirme ' de yer alır. İşlem içi Yöntem çağrısı, hizmetlere yönelik RPC çağrılarına doğrudan dönüştürülür, dağıtılmış ortamlarda iyi bir şekilde karşılaşmayacak bir geveze ve verimli bir iletişim yapmaz. Dağıtılmış sistemi tasarlama sorunları, geliştiricilerin tek parçalı olarak dağıtılmış tasarımlara geçiş yaparken kullandığı varsayımları listeleyen, [dağıtılmış bilgi işlem](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing) gibi bilinen bir Canon 'nin de bilinen bir Canon .
+Tek bir işlemde çalışan tek parçalı bir uygulamada, bileşenler dil düzeyi Yöntem veya işlev çağrıları kullanarak bir diğeri çağırır. Bunlar kod içeren nesneler oluşturuyorsanız (örneğin, `new ClassName()`) veya somut nesne örnekleri yerine soyutlamalar ekleyerek bağımlılık ekleme 'yi kullanıyorsanız, ayrılmış bir şekilde çağrılabilir. Her iki durumda da nesneler aynı işlem içinde çalışır. Tek parçalı bir uygulamadan mikro hizmet tabanlı bir uygulamaya geçiş yaparken en büyük zorluk, iletişim mekanizmasını değiştirme ' de yer alır. İşlem içi Yöntem çağrısı, hizmetlere yönelik RPC çağrılarına doğrudan dönüştürülür, dağıtılmış ortamlarda iyi bir şekilde karşılaşmayacak bir geveze ve verimli bir iletişim yapmaz. Dağıtılmış sistemi tasarlama sorunları, geliştiricilerin tek parçalı olarak dağıtılmış tasarımlara geçiş yaparken kullandığı varsayımları listeleyen, [dağıtılmış bilgi işlem](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing) gibi bilinen bir Canon 'nin de bilinen bir Canon .
 
 Tek bir çözüm yoktur, ancak birkaç. Bir çözüm, iş mikro hizmetlerinin mümkün olduğunca yalımasını içerir. Daha sonra, iç mikro hizmetler arasında zaman uyumsuz iletişim kullanır ve kaba iletişim ile nesneler arasında işlem içi iletişimde tipik olan ayrıntılı iletişimin yerini alır. Bu, çağrıları gruplandırarak ve birden çok iç çağrının sonuçlarını toplayan verileri istemciye döndürerek yapabilirsiniz.
 
 Mikro hizmet tabanlı bir uygulama, genellikle birden çok sunucu veya ana bilgisayar üzerinde bile birden çok işlem veya hizmette çalışan dağıtılmış bir sistemdir. Her hizmet örneği genellikle bir işlemdir. Bu nedenle hizmetlerin, her bir hizmetin doğasına bağlı olarak HTTP, AMQP veya TCP gibi bir ikili protokol gibi işlem temelli iletişim protokolü kullanarak etkileşimde olması gerekir.
 
-Mikro hizmet topluluğu, "[akıllı uç noktalar ve Dumb kanallarının](https://simplicable.com/new/smart-endpoints-and-dumb-pipes)" felsefesini yükseltir. bu Sloga, mikro hizmetler arasında mümkün olduğunca bir tasarımı ve tek bir mikro hizmette mümkün olduğunca ortak bir şekilde teşvik eder. Daha önce açıklandığı gibi, her mikro hizmet kendi verilerini ve kendi etki alanı mantığını sahibidir. Ancak, uçtan uca bir uygulama oluşturan mikro hizmetler genellikle, merkezi olarak değil, WS-\* ve esnek olay odaklı iletişimler yerine Rest iletişimleri kullanılarak kolayca gerçekleştirilebilir iş-işlem yöneticileri.
+Mikro hizmet topluluğu, "[akıllı uç noktalar ve Dumb kanallarının](https://simplicable.com/new/smart-endpoints-and-dumb-pipes)" felsefesini yükseltir. bu Sloga, mikro hizmetler arasında mümkün olduğunca bir tasarımı ve tek bir mikro hizmette mümkün olduğunca ortak bir şekilde teşvik eder. Daha önce açıklandığı gibi, her mikro hizmet kendi verilerini ve kendi etki alanı mantığını sahibidir. Ancak, uçtan uca bir uygulama oluşturan mikro hizmetler genellikle, merkezi olarak değil, WS-\* ve esnek olay odaklı iletişimler yerine REST iletişimleri kullanılarak yalnızca tercih edilir. iş-işlem yöneticileri.
 
 Yaygın olarak kullanılan iki protokol, kaynak API 'Leri ile HTTP isteği/yanıtı ve birden çok mikro hizmette güncelleştirme haberleşirken hafif zaman uyumsuz mesajlaşma. Bunlar aşağıdaki bölümlerde daha ayrıntılı olarak açıklanmıştır.
 
@@ -51,9 +51,11 @@ Mümkünse, sorgular için de değil, birden fazla mikro hizmet arasında zaman 
 
 Diğer bir deyişle, sorgu istekleri gibi mikro hizmetler arasında zaman uyumlu bağımlılıklar eklediğinizde, istemci uygulamaları için genel yanıt süresinin ne kadar kötüleştiğini.
 
-![Zaman uyumlu iletişimde, istemci isteğine hizmet verirken mikro hizmetler arasında bir "zincir" isteği oluşturulur. Bu bir anti-model. Zaman uyumsuz iletişim mikro hizmetleri, diğer mikro hizmetlerle iletişim kurmak için zaman uyumsuz mesajlar veya http yoklaması kullanır, ancak istemci isteği hemen kullanıma sunulur.](./media/image15.png)
+![Mikro hizmetler genelinde üç tür iletişim gösteren diyagram.](./media/communication-in-microservice-architecture/sync-vs-async-patterns-across-microservices.png)
 
 **Şekil 4-15**. Mikro hizmetler arasındaki iletişimde koruma ve desenler
+
+Yukarıdaki diyagramda gösterildiği gibi, zaman uyumlu iletişimde istemci isteğine hizmet verirken mikro hizmetler arasında isteklerin "Zinciri" oluşturulur. Bu bir anti-model. Zaman uyumsuz iletişim mikro hizmetleri, diğer mikro hizmetlerle iletişim kurmak için zaman uyumsuz mesajlar veya http yoklaması kullanır, ancak istemci isteği hemen kullanıma sunulur.
 
 Mikro hizmetinizin başka bir mikro hizmette ek bir eylem oluşturması gerekiyorsa, bu eylemi zaman uyumlu olarak ve özgün mikro hizmet isteği ve yanıt işleminin bir parçası olarak gerçekleştirmeyin. Bunun yerine, zaman uyumsuz olarak (zaman uyumsuz mesajlaşma veya tümleştirme olayları, kuyruklar vb. kullanarak) bunu yapın. Ancak mümkün olduğunca, orijinal zaman uyumlu istek ve yanıt işleminin bir parçası olarak eylemi zaman uyumlu olarak çağırmayın.
 
@@ -75,7 +77,7 @@ Ayrıca, JSON veya XML gibi birden çok ileti biçimi ve hatta ikili biçimler d
 
 İstemci, istek/yanıt iletişimini kullandığında, hizmete bir istek gönderir ve ardından hizmet isteği işler ve bir yanıt gönderir. İstek/yanıt iletişimi, istemci uygulamalarından gerçek zamanlı bir kullanıcı arabirimi (canlı bir kullanıcı arabirimi) için verileri sorgulamak üzere özellikle idealdir. Bu nedenle, bir mikro hizmet mimarisinde, Şekil 4-16 ' de gösterildiği gibi büyük olasılıkla çoğu sorgu için bu iletişim mekanizmasını kullanacaksınız.
 
-![İstemci isteği bir API ağ geçidine gönderdiğinde, mikro hizmetlerden gelen yanıtın çok kısa bir süre içinde ulaştığını varsayarak, canlı sorgular için istek/yanıt iletişimini kullanabilirsiniz.](./media/image16.png)
+![Canlı sorgular ve güncelleştirmeler için istek/yanıt yazışmalar 'yi gösteren diyagram.](./media/communication-in-microservice-architecture/request-response-comms-live-queries-updates.png)
 
 **Şekil 4-16**. HTTP istek/yanıt iletişimini kullanma (zaman uyumlu veya zaman uyumsuz)
 
@@ -87,7 +89,7 @@ Arabirim tanım diliniz olarak HTTP REST hizmetlerini kullanırken ek bir değer
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Marwler. Richardson vade** modeli Rest modelinin açıklamasını. \
+- **Marwler. Richardson vade** MODELI Rest modelinin açıklamasını. \
   <https://martinfowler.com/articles/richardsonMaturityModel.html>
 
 - **Swagger** Resmi site. \
@@ -99,12 +101,12 @@ Başka bir olasılık (genellikle REST 'den farklı amaçlar için) [ASP.NET Sig
 
 Şekil 4-17 ' de gösterildiği gibi, gerçek zamanlı HTTP iletişimi, sunucunun bir istemcinin yeni veri istemesine izin vermek yerine, bağlı istemcilere içerik gönderen sunucu koduna sahip olabileceği anlamına gelir.
 
-![SignalR, bir arka uç sunucusundan istemcilere içerik dağıtmaya yönelik gerçek zamanlı iletişim elde etmenin iyi bir yoludur.](./media/image17.png)
+![SignalR tabanlı gönderim ve gerçek zamanlı yazışmalar 'yi gösteren diyagram.](./media/communication-in-microservice-architecture/one-to-many-communication.png)
 
 **Şekil 4-17**. Bire bir gerçek zamanlı zaman uyumsuz ileti iletişimi
 
-İletişim gerçek zamanlı olduğundan, istemci uygulamaları değişiklikleri neredeyse anında gösterir. Bu genellikle, birçok WebSockets bağlantısı (istemci başına) kullanarak WebSockets gibi bir protokol tarafından işlenir. Tipik bir örnek, bir hizmetin bir spor oyunundaki bir değişikliği aynı anda birçok istemci Web uygulaması ile iletişim kurduğuna yönelik bir örnektir.
+SignalR, bir arka uç sunucusundan istemcilere içerik dağıtmaya yönelik gerçek zamanlı iletişim elde etmenin iyi bir yoludur. İletişim gerçek zamanlı olduğundan, istemci uygulamaları değişiklikleri neredeyse anında gösterir. Bu genellikle, birçok WebSockets bağlantısı (istemci başına) kullanarak WebSockets gibi bir protokol tarafından işlenir. Tipik bir örnek, bir hizmetin bir spor oyunundaki bir değişikliği aynı anda birçok istemci Web uygulaması ile iletişim kurduğuna yönelik bir örnektir.
 
 >[!div class="step-by-step"]
->[Önceki](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)İleri
->[](asynchronous-message-based-communication.md)
+>[Önceki](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+>[İleri](asynchronous-message-based-communication.md)

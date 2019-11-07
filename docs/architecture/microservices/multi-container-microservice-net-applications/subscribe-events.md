@@ -2,12 +2,12 @@
 title: Olaylara abone olma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Tümleştirme olaylarına yayımlama ve aboneliğin ayrıntılarını anlayın.
 ms.date: 10/02/2018
-ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c607f8b980f7dffacf3564688c6c9bb498264d96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035645"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737024"
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
@@ -139,7 +139,7 @@ Olayları yayımlama adımlarını uygularken şu seçeneklere sahip olursunuz:
 
 Şekil 6-22, bu yaklaşımların ilki için mimari gösterir.
 
-![Olayları yayımlarken kararlılık 'i işlemeye yönelik bir yaklaşım: bir olay günlüğü tablosuna olay yürütmek için bir işlem kullanın ve ardından yayımlanacak başka bir işlem (eshoponcontainers 'da kullanılır)](./media/image23.png)
+![Çalışan mikro hizmeti olmadan yayımlama sırasında kararlılık diyagramı.](./media/subscribe-events/atomicity-publish-event-bus.png)
 
 **Şekil 6-22**. Olay veri yoluna olay yayımlarken Atomicity
 
@@ -147,7 +147,7 @@ Olayları yayımlama adımlarını uygularken şu seçeneklere sahip olursunuz:
 
 İkinci yaklaşım hakkında: olay günlüğü tablosunu kuyruk olarak kullanın ve iletileri yayımlamak için her zaman bir çalışan mikro hizmetini kullanın. Bu durumda, işlem Şekil 6-23 ' de gösterilenle benzer. Bu, ek bir mikro hizmet gösterir ve olaylar yayımlandığında tablo tek kaynaktır.
 
-![Atomicity 'i işlemeye yönelik başka bir yaklaşım: bir olay günlüğü tablosunda yayımlayın ve sonra başka bir mikro hizmet (arka plan çalışanı) olayını yayımlayın.](./media/image24.png)
+![Çalışan mikro hizmeti ile yayımlarken kararlılık diyagramı.](./media/subscribe-events/atomicity-publish-worker-microservice.png)
 
 **Şekil 6-23**. Bir çalışan mikro hizmeti ile olay veri yoluna olay yayımlarken Atomicity
 
@@ -279,7 +279,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 Olay işleyicisinin, ürünün sepet örneklerinde mevcut olup olmadığını doğrulaması gerekir. Ayrıca ilgili her sepet satırı öğesi için öğe fiyatını güncelleştirir. Son olarak, Şekil 6-24 ' de gösterildiği gibi, kullanıcıya fiyat değişikliği hakkında görüntülenmek üzere bir uyarı oluşturur.
 
-![Kullanıcı sepetindeki işlem değişikliği bildiriminin tarayıcı görünümü.](./media/image25.png)
+![Kullanıcı sepetindeki fiyat değişikliği bildirimini gösteren bir tarayıcının ekran görüntüsü.](./media/subscribe-events/display-item-price-change.png)
 
 **Şekil 6-24**. Bir sepetteki bir öğe fiyat değişikliğini tümleştirme olayları tarafından iletilen şekilde görüntüleme
 

@@ -2,12 +2,12 @@
 title: DDD odaklı bir mikro hizmet tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD-odaklı sıralama mikro hizmetinin ve uygulama katmanlarının tasarımını anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295994"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739968"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>DDD-odaklı mikro hizmet tasarlama
 
@@ -37,13 +37,13 @@ Bu karmaşıklıktan dolayı, bu varlık grubuyla ilgili (toplama) tüm ınvarya
 
 Şekil 7-5 ' de, bir katmanlı tasarımın eShopOnContainers uygulamasında nasıl uygulandığı gösterilmektedir.
 
-![Bir DDD mikro hizmetindeki sıralama gibi üç katman. Her katman bir VS projem: Uygulama katmanı sıralama. API, etki alanı katmanı sıralama. etki alanı ve altyapı katmanı sıralama. Infrastructure.](./media/image6.png)
+![Etki alanı odaklı tasarım mikro hizmetindeki katmanların gösterildiği diyagram.](./media/ddd-oriented-microservice/domain-driven-design-microservice.png)
 
 **Şekil 7-5**. EShopOnContainers 'da sıralama mikro hizmetindeki DDD katmanları
 
-Her katmanın yalnızca belirli diğer katmanlarla iletişim kurduğu şekilde sistemi tasarlamak istiyorsunuz. Kitaplıkların farklı sınıf kitaplıkları olarak uygulanıp uygulanmadığı, kitaplıklar arasında hangi bağımlılıkların ayarlandığını açıkça belirleyebileceğinize olanak tanımak daha kolay olabilir. Örneğin, etki alanı model katmanı başka bir katmana bağımlılık alamaz (etki alanı model sınıfları, düz eski CLR nesneleri veya [poco](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object), sınıflar olmalıdır). Şekil 7-6 ' de gösterildiği gibi, **sıralama. Domain** katman kitaplığı yalnızca .NET Core kitaplıklarında veya NuGet paketlerinde bağımlılıklara sahiptir, ancak veri kitaplığı veya kalıcılık kitaplığı gibi özel bir kitaplıkta değildir.
+Bir DDD mikro hizmetindeki sıralama gibi üç katman. Her katman bir VS projem: uygulama katmanı sıralama. API, etki alanı katmanı sıralama. etki alanı ve altyapı katmanı sıralama. altyapısıdır. Her katmanın yalnızca belirli diğer katmanlarla iletişim kurduğu şekilde sistemi tasarlamak istiyorsunuz. Kitaplıkların farklı sınıf kitaplıkları olarak uygulanıp uygulanmadığı, kitaplıklar arasında hangi bağımlılıkların ayarlandığını açıkça belirleyebileceğinize olanak tanımak daha kolay olabilir. Örneğin, etki alanı model katmanı başka bir katmana bağımlılık alamaz (etki alanı model sınıfları, düz eski CLR nesneleri veya [poco](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object), sınıflar olmalıdır). Şekil 7-6 ' de gösterildiği gibi, **sıralama. Domain** katman kitaplığı yalnızca .NET Core kitaplıklarında veya NuGet paketlerinde bağımlılıklara sahiptir, ancak veri kitaplığı veya kalıcılık kitaplığı gibi özel bir kitaplıkta değildir.
 
-![Sıralama Çözüm Gezgini görünümü. etki alanı bağımlılıkları, yalnızca .NET Core kitaplıklarına bağlıdır.](./media/image7.png)
+![Sıralama. etki alanı bağımlılıklarını ekran görüntüsü.](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
 
 **Şekil 7-6**. Kitaplıklar olarak uygulanan katmanlar Katmanlar arasındaki bağımlılıklara daha iyi denetim sağlar
 
@@ -51,7 +51,7 @@ Her katmanın yalnızca belirli diğer katmanlarla iletişim kurduğu şekilde s
 
 Eric Evans 'ın mükemmel kitap [etki alanı odaklı tasarımı](https://domainlanguage.com/ddd/) , etki alanı modeli katmanı ve uygulama katmanı hakkında aşağıdakileri söyler.
 
-**Etki alanı model katmanı**: İşletmenin kavramlarını, iş durumu hakkında bilgileri ve iş kurallarını temsil eden sorumludur. İş durumunu yansıtan eyalet, bu altyapıyı depolamanın teknik ayrıntıları altyapıya atanmış olsa bile burada kontrol edilir ve burada kullanılır. Bu katman, iş yazılımının kalbidir.
+**Etki alanı modeli katmanı**: işletmenin kavramlarını, iş durumu hakkında bilgileri ve iş kurallarını temsil eden sorumludur. İş durumunu yansıtan eyalet, bu altyapıyı depolamanın teknik ayrıntıları altyapıya atanmış olsa bile burada kontrol edilir ve burada kullanılır. Bu katman, iş yazılımının kalbidir.
 
 Etki alanı modeli katmanı, işletmenin ifade edildiği yerdir. .NET ' te bir mikro hizmet etki alanı model katmanı uyguladığınızda, bu katman veri ve davranışı (Logic ile Yöntemler) yakalayan etki alanı varlıklarını içeren bir sınıf kitaplığı olarak kodlanır.
 
@@ -85,11 +85,11 @@ Daha önce bahsedilen [Kalıcılık](https://deviq.com/persistence-ignorance/) k
 
 Bu nedenle, Şekil 7-7 ' de gösterildiği gibi, katmanlarınızın veya sınıf kitaplıklarınızın ve projelerinizin sonunda etki alanı model katmanına (kitaplık) bağlı olması gerekir.
 
-![Bir DDD hizmetindeki bağımlılıklar, uygulama katmanı etki alanı ve altyapıya bağlıdır ve altyapı etki alanına bağlıdır, ancak etki alanı herhangi bir katmana bağlı değildir.](./media/image8.png)
+![DDD hizmet katmanları arasında var olan bağımlılıkları gösteren diyagram.](./media/ddd-oriented-microservice/ddd-service-layer-dependencies.png)
 
 **Şekil 7-7**. DDD içindeki Katmanlar arasındaki bağımlılıklar
 
-Bu katman tasarımı her mikro hizmet için bağımsız olmalıdır. Daha önce belirtildiği gibi, daha basit bir şekilde veri odaklı mikro hizmetleri (tek bir katmanda basit CRUD) daha kolay bir şekilde uygularken, DDD desenlerini izleyen en karmaşık mikro hizmetleri de uygulayabilirsiniz.
+Bir DDD hizmetindeki bağımlılıklar, uygulama katmanı etki alanı ve altyapıya bağlıdır ve altyapı etki alanına bağlıdır, ancak etki alanı herhangi bir katmana bağlı değildir. Bu katman tasarımı her mikro hizmet için bağımsız olmalıdır. Daha önce belirtildiği gibi, daha basit bir şekilde veri odaklı mikro hizmetleri (tek bir katmanda basit CRUD) daha kolay bir şekilde uygularken, DDD desenlerini izleyen en karmaşık mikro hizmetleri de uygulayabilirsiniz.
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
@@ -99,9 +99,9 @@ Bu katman tasarımı her mikro hizmet için bağımsız olmalıdır. Daha önce 
 - **Oren Eini. Altyapı Ignorance** \
   <https://ayende.com/blog/3137/infrastructure-ignorance>
 
-- **Anlek Lopez. Etki alanı odaklı tasarımda katmanlı mimari** \
+- **Anlek Lopez. Etki alanı odaklı tasarım \ katmanlı mimari**
   <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]
->[Önceki](cqrs-microservice-reads.md)İleri
->[](microservice-domain-model.md)
+>[Önceki](cqrs-microservice-reads.md)
+>[İleri](microservice-domain-model.md)

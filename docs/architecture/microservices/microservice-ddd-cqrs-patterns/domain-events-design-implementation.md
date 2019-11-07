@@ -2,12 +2,12 @@
 title: Etki alanı olayları. Tasarım ve uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Toplamalar arasında iletişim kurmak için önemli bir kavram olan etki alanı olaylarının derinlemesine bir görünümünü alın.
 ms.date: 10/08/2018
-ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f0dbd6b0e70d825122d319611a327438df065588
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093964"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739902"
 ---
 # <a name="domain-events-design-and-implementation"></a>Etki alanı olayları: tasarım ve uygulama
 
@@ -47,11 +47,11 @@ Bu nedenle, olay veri yolu arabirimine, uzak hizmetler arasında işlemler aras�
 
 Bir toplu örnekle ilişkili bir komut yürütülebilmeniz için bir veya daha fazla ek toplama üzerinde ek etki alanı kurallarının çalıştırılmasını gerektiriyorsa, bu yan etkileri, etki alanı olayları tarafından tetiklenecek şekilde tasarlamanız ve uygulamanız gerekir. Şekil 7-14 ' de gösterildiği gibi ve en önemli kullanım çalışmalarından biri olarak, aynı etki alanı modeli içindeki birden çok toplama arasında durum değişikliklerini yaymak için bir etki alanı olayının kullanılması gerekir.
 
-![Toplamalar arasındaki tutarlılık, etki alanı olayları tarafından elde edilir, sipariş toplamı, alıcı toplamasını güncelleştirmek için işlenmiş bir OrderStarted etki alanı olayı gönderir. ](./media/image15.png)
+![Bir alıcı toplamasına veri denetleyen bir etki alanı olayını gösteren diyagram.](./media/domain-events-design-implementation/domain-model-ordering-microservice.png)
 
 **Şekil 7-14**. Aynı etki alanı içinde birden çok toplama arasında tutarlılığı zorlamak için etki alanı olayları
 
-Şekilde, Kullanıcı bir sipariş başlattığında, OrderStarted etki alanı olayı, kimlik mikro hizmetindeki özgün kullanıcı bilgilerine göre (CreateOrder komutunda belirtilen bilgilerle) sıralama mikro hizmetindeki bir alıcı nesnesinin oluşturulmasını tetikler. Etki alanı olayı, ilk yerde oluşturulduğunda sipariş toplama tarafından oluşturulur.
+Şekil 7-14, toplamalar arasındaki tutarlılığı etki alanı olayları tarafından nasıl elde edildiğini gösterir. Kullanıcı bir sipariş başlattığında, sıra toplaması bir `OrderStarted` etki alanı olayı gönderir. OrderStarted etki alanı olayı, alıcı toplama tarafından, kimlik mikro hizmetindeki özgün kullanıcı bilgilerine göre (CreateOrder komutunda belirtilen bilgiler ile) sıralama mikro hizmetinde bir alıcı nesnesi oluşturmak için işlenir.
 
 Alternatif olarak, toplama kökünün toplamaların (alt varlıklar) üyeleri tarafından oluşturulan olaylar için abone olmasını sağlayabilirsiniz. Örneğin, her OrderItem alt varlığı, öğe fiyatı belirli bir tutardan yüksek olduğunda veya ürün öğesi miktarı çok yüksek olduğunda bir olay oluşturabilir. Toplam kök, daha sonra bu olayları alabilir ve küresel bir hesaplama veya toplama gerçekleştirebilir.
 
@@ -78,11 +78,11 @@ Diğer taraftan, etki alanı olaylarını kullanıyorsanız, sorumlulukları Bu 
 
 Şekil 7-15 ' de gösterildiği gibi, aynı etki alanı olayından başlayarak, etki alanındaki diğer toplalarla ilgili birden çok eylemi veya tümleştirme olayları ve olay veri yolu ile bağlantı kurarak mikro hizmetler genelinde gerçekleştirmeniz gereken ek uygulama eylemlerini işleyebilirsiniz.
 
-![Uygulama katmanında aynı etki alanı olayı için birkaç işleyici olabilir. bir işleyici, toplamalar arasındaki tutarlılığı çözebileceği gibi, başka bir işleyici de bir tümleştirme olayı yayımlayabilir, böylece diğer mikro hizmetler onunla ilgili bir işlem yapabilir.](./media/image16.png)
+![Birkaç olay işleyicisine veri geçiren bir etki alanı olayını gösteren diyagram.](./media/domain-events-design-implementation/aggregate-domain-event-handlers.png)
 
 **Şekil 7-15**. Etki alanı başına birden çok eylemi işleme
 
-Olay işleyicileri genellikle uygulama katmanında bulunur çünkü, mikro hizmet davranışı için depolar veya bir uygulama API 'SI gibi altyapı nesneleri kullanacaksınız. Bu anlamda, olay işleyicileri komut işleyicileriyle benzerdir, bu nedenle her ikisi de uygulama katmanının bir parçasıdır. Önemli fark, bir komutun yalnızca bir kez işlenmesi gerektiğidir. Her işleyici için farklı bir amaçla birden çok alıcı veya olay işleyicisi tarafından alınabileceğinden, bir etki alanı olayı sıfır veya *n* kez işlenebilir.
+Uygulama katmanında aynı etki alanı olayı için birkaç işleyici olabilir. bir işleyici, toplamalar arasındaki tutarlılığı çözebileceği gibi, başka bir işleyici de bir tümleştirme olayı yayımlayabilir, böylece diğer mikro hizmetler onunla ilgili bir işlem yapabilir. Olay işleyicileri genellikle uygulama katmanında bulunur çünkü, mikro hizmet davranışı için depolar veya bir uygulama API 'SI gibi altyapı nesneleri kullanacaksınız. Bu anlamda, olay işleyicileri komut işleyicileriyle benzerdir, bu nedenle her ikisi de uygulama katmanının bir parçasıdır. Önemli fark, bir komutun yalnızca bir kez işlenmesi gerektiğidir. Her işleyici için farklı bir amaçla birden çok alıcı veya olay işleyicisi tarafından alınabileceğinden, bir etki alanı olayı sıfır veya *n* kez işlenebilir.
 
 Etki alanı başına açık sayıda işleyicinin olması, mevcut kodu etkilemeden gereken sayıda etki alanı kuralı eklemenize olanak sağlar. Örneğin, aşağıdaki iş kuralının uygulanması çok sayıda olay işleyicisi (ya da yalnızca bir tane) eklemek kadar kolay olabilir:
 
@@ -244,7 +244,7 @@ Bir yaklaşım, büyük olasılıkla bellek içi olaylara karşı bir hizmet ver
 
 Olayları birden çok olay işleyicisine eşlemenin bir diğer yolu da bir IOC kapsayıcısına kayıt türlerini kullanarak olayların nereye gönderdiğini dinamik olarak çıkarılabilmenizi sağlar. Diğer bir deyişle, belirli bir olayı hangi olay işleyicilerinin almak gerektiğini bilmeniz gerekir. Şekil 7-16, bu yaklaşım için basitleştirilmiş bir yaklaşım gösterir.
 
-![Bağımlılık ekleme, bu, MediatR tarafından kullanılan yaklaşım olan olayları olay işleyicileriyle ilişkilendirmek için kullanılabilir](./media/image17.png)
+![Uygun işleyicilere olay gönderen bir etki alanı olay dağıtıcısı gösteren diyagram.](./media/domain-events-design-implementation/domain-event-dispatcher.png)
 
 **Şekil 7-16**. IOC kullanarak etki alanı olay dağıtıcısı
 

@@ -2,12 +2,12 @@
 title: docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 description: Docker-Compose. yıml ile çok kapsayıcılı bir uygulama için mikro hizmet birleşimini belirtme.
 ms.date: 10/02/2018
-ms.openlocfilehash: 938a9aa192f82628051bd7dc065f661f510ba544
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 02db27feb1320d8b9c6823b8f9ef51c2ddf9791c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416699"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737091"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 
@@ -177,9 +177,15 @@ Farklı ortamları hedeflerken, birden çok oluşturma dosyası kullanmanız ger
 
 Varsayılan olarak, Compose iki dosyayı okur, bir Docker-Compose. yıml ve isteğe bağlı bir Docker-Compose. override. yıml dosyası. Şekil 6-11 ' de gösterildiği gibi, Visual Studio 'Yu kullanırken ve Docker desteğini etkinleştirirken, Visual Studio uygulamada hata ayıklamak için ek bir Docker-Compose. vs. Debug. g. i ml dosyası da oluşturur.\\Docker klasöründe bu dosyaya göz atabilirsiniz @no__t_ Ana çözüm klasöründe 1_.
 
-![Docker-Compose proje dosyası yapısı:. dockerıgnore, dosyaları yoksaymak için; Docker-Compose. yıml, mikro hizmetler oluşturmak için; Mikro hizmetler ortamını yapılandırmak için Docker-Compose. override. yıml.](./media/image12.png)
+![Docker Compose projesindeki dosyaların ekran görüntüsü.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **Şekil 6-11**. Visual Studio 'da Docker-dosyaları oluşturma 2017
+
+**Docker-** proje dosyası yapısını oluşturma:
+
+* *. dockerıgnore* -dosyaları yoksaymak için kullanılır
+* *Docker-Compose. yıml* -mikro hizmetleri oluşturmak için kullanılır
+* *Docker-Compose. override. yıml* -mikro hizmetler ortamını yapılandırmak için kullanılır
 
 Docker-Compose dosyalarını, Visual Studio Code veya alt lime gibi herhangi bir düzenleyici ile düzenleyebilir ve uygulamayı Docker-Compose up komutuyla çalıştırabilirsiniz.
 
@@ -191,11 +197,11 @@ Docker-Compose. override. yıml dosyası, adının önereceği gibi, temel yapı
 
 Tipik kullanım örneği, birden çok ortamı, hazırlama, CI veya geliştirme gibi birden çok ortamı hedefleyebilir. Bu farklılıkları desteklemek için, Şekil 6-12 ' de gösterildiği gibi, oluşturma yapılandırmanızı birden çok dosyaya bölebilirsiniz.
 
-![Farklı ortamları işlemek için birden çok Docker-Compose*. FML dosyasını birleştirebilirsiniz.](./media/image13.png)
+![Temel dosyayı geçersiz kılmak için ayarlanan üç Docker-Compose dosyası diyagramı.](./media/multi-container-applications-docker-compose/multiple-docker-compose-files-override-base.png)
 
 **Şekil 6-12**. Temel Docker-Compose. yıml dosyasındaki değerleri geçersiz kılan birden çok Docker-dosya oluşturma
 
-Temel Docker-Compose. yıml dosyası ile başlayabilirsiniz. Bu temel dosya, ortama bağlı olarak değişmeyen temel veya statik yapılandırma ayarlarını içermelidir. Örneğin eShopOnContainers, temel dosya olarak aşağıdaki Docker-Compose. yıml dosyasına (daha az hizmetlerle Basitleştirilmiş) sahiptir.
+Farklı ortamları işlemek için birden çok Docker-Compose*. yıml dosyasını birleştirebilirsiniz. Temel Docker-Compose. yıml dosyası ile başlayabilirsiniz. Bu temel dosya, ortama bağlı olarak değişmeyen temel veya statik yapılandırma ayarlarını içermelidir. Örneğin eShopOnContainers, temel dosya olarak aşağıdaki Docker-Compose. yıml dosyasına (daha az hizmetlerle Basitleştirilmiş) sahiptir.
 
 ```yml
 #docker-compose.yml (Base)

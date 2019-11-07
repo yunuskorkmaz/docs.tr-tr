@@ -2,12 +2,12 @@
 title: Kapsayıcılar ve Docker’a Giriş
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Kapsayıcılara ve Docker 'a giriş
 ms.date: 08/31/2018
-ms.openlocfilehash: cb6244939f6ae89ba1dc824b55a21d1e010cef5e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 364cbc0ba8149be1873df628a1ca243f420e7d0b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296161"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740053"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Kapsayıcılar ve Docker’a Giriş
 
@@ -19,7 +19,7 @@ Kapsayıcılar Ayrıca paylaşılan bir işletim sisteminde bulunan uygulamalar�
 
 Her kapsayıcı Şekil 2-1 ' de gösterildiği gibi bir Web uygulamasını veya bir hizmeti çalıştırabilir. Bu örnekte, Docker ana bilgisayarı bir kapsayıcı ana bilgisayarı ve APP1, app2, svc 1 ve svc 2 Kapsayıcılı uygulamalar veya hizmetlerdir.
 
-![VM 'de veya fiziksel sunucuda işletim sisteminde çalışan iki uygulama ve iki hizmet](./media/image1.png)
+![Bir VM 'de veya sunucuda çalışan dört kapsayıcıyı gösteren diyagram.](./media/index/multiple-containers-single-host.png)
 
 **Şekil 2-1**. Kapsayıcı ana bilgisayarında çalışan birden çok kapsayıcı
 
@@ -28,5 +28,5 @@ Kapsayıcılama kullanmanın başka bir avantajı da ölçeklenebilirlik. Kısa 
 Kısaca, kapsayıcılar tüm uygulama yaşam döngüsü iş akışı genelinde yalıtım, taşınabilirlik, çeviklik, ölçeklenebilirlik ve denetimin avantajlarından yararlanır. En önemli avantaj, ortamın geliştirme ve Ops arasında sağladığı yalıtımdır.
 
 >[!div class="step-by-step"]
->[Önceki](../index.md)İleri
->[](docker-defined.md)
+>[Önceki](../index.md)
+>[İleri](docker-defined.md)

@@ -2,12 +2,12 @@
 title: Kapsayıcı uygulamaları için Microsoft platformu ve araçlarına giriş
 description: Microsoft 'un Docker uygulamalarının yaşam döngüsünü desteklemeye yönelik tekliflerini öğrenin.
 ms.date: 02/15/2019
-ms.openlocfilehash: 1829ce1051f091065f543a6cadcf5d179a284834
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9c8c0f5688bf226351abfc7bf52d4ace05f8c6d8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094463"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738095"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Kapsayıcılı uygulamalar için Microsoft platformu ve araçlarına giriş
 
@@ -15,7 +15,9 @@ ms.locfileid: "73094463"
 
 Şekil 3-1, birden fazla ekip tarafından sunulan iş türüne göre sınıflandırılan Docker uygulamalarının yaşam döngüsünde ana pillerini gösterir (uygulama geliştirme, DevOps altyapı işlemleri ve BT yönetimi ve işlemler). Genellikle, kuruluşta, her alandan sorumlu olan "kişi" profilleri farklıdır. Bu nedenle becerileri.
 
-![Microsoft araçları. Geliştirme/tasarım iş yükü: Windows için Docker Engine, VS ve VS Code, .NET Core, Azure Kubernetes hizmeti. Derleme/test/teslim iş yükü için: Azure DevOps, Team Foundation Server, Docker CLı, Azure Kubernetes hizmeti. Çalıştırma/Izleme/yönetme iş yükü: Azure Izleyici, Azure portalı Azure Kubernetes Hizmetleri, Service Fabric, diğer düzenleyiciler.](./media/image1.png)
+:::image type="complex" source="./media/index/microsoft-tools-contanerized-docker-app.png" alt-text="Docker uygulamalarını sürdürmek için gereken Microsoft araçlarını gösteren diyagram.":::
+Microsoft araçları. Geliştirme/tasarım iş yükü: Windows için Docker Engine, VS ve VS Code, .NET Core, Azure Kubernetes hizmeti. Derleme/test/teslim iş yükü için: Azure DevOps, Team Foundation Server, Docker CLı, Azure Kubernetes hizmeti. Çalıştırma/Izleme/yönetme iş yükü: Azure Izleyici, Azure portalı Azure Kubernetes Hizmetleri, Service Fabric, diğer düzenleyiciler.
+:::image-end:::
 
 **Şekil 3-1.** Microsoft platformu ve araçları ile Kapsayıcılı Docker uygulamalarına yönelik yaşam döngüsünde ana sütunlar
 

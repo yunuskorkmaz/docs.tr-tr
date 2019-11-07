@@ -2,12 +2,12 @@
 title: Değer nesneleri uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Yeni Entity Framework özelliklerini kullanarak değer nesneleri uygulamak için Ayrıntılar ve seçeneklere ulaşın.
 ms.date: 10/08/2018
-ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2608517c4006f5e8da1d31b2c337d8ddd3ddd542
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295926"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739850"
 ---
 # <a name="implement-value-objects"></a>Değer nesneleri uygulama
 
@@ -17,11 +17,11 @@ Bir değer nesnesi, diğer varlıklara başvurabilir. Örneğin, bir noktadan di
 
 Şekil 7-13, düzen toplama içindeki adres değeri nesnesini gösterir.
 
-![Adres değeri-sıralama toplamı içindeki nesne.](./media/image14.png)
+![Düzen toplama içindeki adres değeri-nesnesi gösteren diyagram.](./media/implement-value-objects/value-object-within-aggregate.png)
 
 **Şekil 7-13**. Sıra toplaması içindeki adres değeri nesnesi
 
-Şekil 7-13 ' de gösterildiği gibi, bir varlık genellikle birden çok öznitelikten oluşur. Örneğin, `Order` varlık kimliği olan bir varlık olarak modellenebilir ve OrderID, OrderDate, OrderItems vb. gibi bir öznitelik kümesinin dahili olarak oluşturulmuş olabilir. Ancak, ülke/bölge, cadde, şehir, vb. gibi karmaşık bir değer olan ve bu etki alanında hiçbir kimliği olmayan adresin, modellenmesi ve değer nesnesi olarak kabul edilmesinin gerekir.
+Şekil 7-13 ' de gösterildiği gibi, bir varlık genellikle birden çok öznitelikten oluşur. Örneğin, `Order` varlığı kimliği olan bir varlık olarak modellenebilir ve OrderID, OrderDate, OrderItems vb. gibi bir öznitelik kümesinin dahili olarak oluşturulmuş olabilir. Ancak, ülke/bölge, cadde, şehir, vb. gibi karmaşık bir değer olan ve bu etki alanında hiçbir kimliği olmayan adresin, modellenmesi ve değer nesnesi olarak kabul edilmesinin gerekir.
 
 ## <a name="important-characteristics-of-value-objects"></a>Değer nesnelerinin önemli özellikleri
 
@@ -35,7 +35,7 @@ Değer nesneleri için iki ana özellik vardır:
 
 Değer nesneleri, belirli püf noktalarını, gerçek sabit doğası sayesinde performans için gerçekleştirmenize olanak tanır. Bu, özellikle de aynı değere sahip binlerce değer nesne örneği olabilen sistemlerde geçerlidir. Sabit doğası, bunların yeniden kullanılmasını sağlar; değerleri aynı olduğundan ve kimlik olmadığından, bunlar değiştirilebilir nesneler olabilir. Bu tür iyileştirme, bazen yavaş çalışan yazılımlar ve iyi performansa sahip yazılımlar arasında farklılık yapabilirler. Tabii ki, tüm bu durumlar uygulama ortamına ve dağıtım bağlamına bağlıdır.
 
-## <a name="value-object-implementation-in-c"></a>C 'de değer nesnesi uygulama\#
+## <a name="value-object-implementation-in-c"></a>C\# 'de değer nesnesi uygulama
 
 Uygulama açısından, tüm öznitelikler (bir değer nesnesi kimlik tabanlı olmaması gerektiğinden) ve diğer temel özellikler arasındaki karşılaştırmaya göre eşitlik gibi temel yardımcı yöntemlere sahip bir değer nesnesi taban sınıfına sahip olabilirsiniz. Aşağıdaki örnek, eShopOnContainers 'dan sıralama mikro hizmetinde kullanılan bir değer nesnesi temel sınıfını gösterir.
 
@@ -224,11 +224,11 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 }
 ```
 
-Önceki kodda, `orderConfiguration.OwnsOne(o => o.Address)` yöntemi, `Address` özelliğin `Order` türün sahip olduğu bir varlık olduğunu belirtir.
+Önceki kodda `orderConfiguration.OwnsOne(o => o.Address)` yöntemi, `Address` özelliğinin `Order` türünün sahip olduğu bir varlık olduğunu belirtir.
 
-Varsayılan olarak EF Core kurallar, sahip olduğu varlık türünün özelliklerinin veritabanı sütunlarını olarak `EntityProperty_OwnedEntityProperty`adlandırın. Bu `Address` nedenle, öğesinin iç özellikleri, `Address_City` (ve için `Orders` , `Country` ve `State` `ZipCode`için) `Address_Street`adlarına sahip tabloda görüntülenir.
+Varsayılan olarak EF Core kurallar, sahip olduğu varlık türünün özelliklerinin veritabanı sütunlarını `EntityProperty_OwnedEntityProperty`olarak adlandırın. Bu nedenle, `Address` iç özellikleri `Orders` tabloda `Address_Street`, `Address_City` (`State`ve `Country` için) adlarıyla görüntülenir.
 
-Bu sütunları yeniden adlandırmak `Property().HasColumnName()` için floent metodunu ekleyebilirsiniz. `Address` Ortak özellik olduğu durumlarda, eşlemeler aşağıdakine benzer olacaktır:
+Bu sütunları yeniden adlandırmak için `Property().HasColumnName()` floent metodunu ekleyebilirsiniz. `Address` ortak bir özellik olduğu durumda, eşlemeler aşağıdakine benzer olacaktır:
 
 ```csharp
 orderConfiguration.OwnsOne(p => p.Address)
@@ -238,7 +238,7 @@ orderConfiguration.OwnsOne(p => p.Address)
                             .Property(p=>p.City).HasColumnName("ShippingCity");
 ```
 
-Yöntemi, `OwnsOne` akıcı bir eşlemede zincirlemek mümkündür. `OrderDetails` Aşağıdaki kuramsal örnekte, `BillingAddress` ve olan ve `ShippingAddress`her iki `Address` tür olan. Daha `OrderDetails` sonra `Order` türüne aittir.
+`OwnsOne` yöntemi akıcı bir eşlemede zincirlenebilir. Aşağıdaki kuramsal örnekte, `OrderDetails` `BillingAddress` ve `ShippingAddress`sahiptir ve bu her ikisi de `Address` türüdür. `OrderDetails`, `Order` türüne aittir.
 
 ```csharp
 orderConfiguration.OwnsOne(p => p.OrderDetails, cb =>
@@ -285,13 +285,13 @@ public class Address
 
 - Eager yüklemesi, sahip olunan türler üzerinde otomatik olarak gerçekleştirilir, yani sorgu üzerinde Include () çağrısı gerektirmez.
 
-- EF Core 2,1 itibariyle sahip \[\]olan öznitelikle yapılandırılabilir
+- EF Core 2,1 itibariyle, sahip olduğu\]\[özniteliğiyle yapılandırılabilir
 
 #### <a name="owned-entities-limitations"></a>Sahip olunan varlıkların sınırlamaları:
 
-- Sahip olunan bir türde (tasarıma\<göre\> ) bir dbset T oluşturamazsınız.
+- Sahip olunan bir türün (tasarıma göre) bir DbSet\<T\> oluşturamazsınız.
 
-- ModelBuilder. Entity\<T\>() sahibi olan türler (Şu anda tasarım kaynaklı) çağrılamaz.
+- ModelBuilder. Entity\<T\>() sahip olan türler (Şu anda tasarım kaynaklı) çağrılamaz.
 
 - Henüz sahip olunan türler koleksiyonu yok (EF Core 2,1 itibariyle, ancak bunlar 2,2 ' de desteklenecektir).
 
@@ -307,10 +307,10 @@ public class Address
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Marwler. ValueObject kalıbı** \
+- **Marwler. ValueObject deseninin** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
-- **Eric Evans. Etki alanı odaklı tasarım: Yazılım Kalkunda karmaşıklık karmaşıklığı.** (Kitap; değer nesnelerinin bir tartışmasını içerir) \
+- **Eric Evans. Etki alanı odaklı tasarım: yazılım Kalbunda karmaşıklık karmaşıklığı.** (Kitap; değer nesnelerinin bir tartışmasını içerir) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 - **Vaughn versuz. Etki alanı odaklı tasarım uygulama.** (Kitap; değer nesnelerinin bir tartışmasını içerir) \
@@ -329,5 +329,5 @@ public class Address
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs>
 
 > [!div class="step-by-step"]
-> [Önceki](seedwork-domain-model-base-classes-interfaces.md)İleri
-> [](enumeration-classes-over-enum-types.md)
+> [Önceki](seedwork-domain-model-base-classes-interfaces.md)
+> [İleri](enumeration-classes-over-enum-types.md)

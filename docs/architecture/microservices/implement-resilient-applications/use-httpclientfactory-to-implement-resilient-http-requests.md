@@ -2,12 +2,12 @@
 title: Dayanıklı HTTP isteklerini uygulamak için HttpClientFactory kullanma
 description: .NET Core 2,1 ' den bu yana sunulan HttpClientFactory ' ı kullanarak `HttpClient` örnekleri oluşturmaya, bunu uygulamalarınızda kullanmanızı kolaylaştırmayı öğrenin.
 ms.date: 08/08/2019
-ms.openlocfilehash: e32ffdd43ce8968ef9a0694873870b61510d7300
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093994"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737747"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Dayanıklı HTTP isteklerini uygulamak için HttpClientFactory kullanma
 
@@ -56,11 +56,13 @@ Bu nedenle, "yazılı Istemci" nedir? Bu yalnızca, `DefaultHttpClientFactory` t
 
 Aşağıdaki diyagramda, yazılan Istemcilerin `HttpClientFactory` ile nasıl kullanıldığı gösterilmektedir:
 
-![Bir ClientService (bir denetleyici veya istemci kodu tarafından kullanılan), kayıtlı ıhttpclientfactory tarafından oluşturulan bir HttpClient kullanır. Bu fabrika, HttpClient 'ı yönettiği bir havuzdan HttpMessageHandler öğesine atar. HttpClient, dı kapsayıcısına ıhttpclientfactory ' i AddHttpClient uzantı yöntemiyle kaydettirilirken, Polly 'nin ilkeleriyle yapılandırılabilir.](./media/image3.5.png)
+![Yazılan istemcilerin HttpClientFactory ile nasıl kullanıldığını gösteren diyagram.](./media/use-httpclientfactory-to-implement-resilient-http-requests/client-application-code.png)
 
 **Şekil 8-4**. Türü belirtilmiş Istemci sınıflarıyla HttpClientFactory kullanma.
 
-İlk olarak, `IServiceCollection` için `AddHttpClient()` uzantısı yöntemini içeren `Microsoft.Extensions.Http` NuGet paketini yükleyerek uygulamanızda `HttpClientFactory` ayarlayın. Bu genişletme yöntemi, arabirim `IHttpClientFactory` için bir tek olarak kullanılacak `DefaultHttpClientFactory` kaydeder. `HttpMessageHandlerBuilder`için geçici bir yapılandırma tanımlar. Bir havuzdan alınan bu ileti işleyicisi (`HttpMessageHandler` nesnesi), fabrikada döndürülen `HttpClient` tarafından kullanılır.
+Yukarıdaki görüntüde, bir ClientService (bir denetleyici veya istemci kodu tarafından kullanılan) kayıtlı `IHttpClientFactory`tarafından oluşturulan `HttpClient` kullanır. Bu fabrika, yönettiği bir havuzdan bir `HttpMessageHandler` `HttpClient` atar. `HttpClient`, `IHttpClientFactory` dı kapsayıcısına `AddHttpClient`uzantı yöntemiyle kaydedilirken Polly 'in ilkeleriyle yapılandırılabilir.
+
+Yukarıdaki yapıyı yapılandırmak için, `IServiceCollection`için `AddHttpClient()` uzantısı yöntemini içeren `Microsoft.Extensions.Http` NuGet paketini yükleyerek uygulamanıza `HttpClientFactory` ekleyin. Bu genişletme yöntemi, arabirim `IHttpClientFactory` için bir tek olarak kullanılacak `DefaultHttpClientFactory` kaydeder. `HttpMessageHandlerBuilder`için geçici bir yapılandırma tanımlar. Bir havuzdan alınan bu ileti işleyicisi (`HttpMessageHandler` nesnesi), fabrikada döndürülen `HttpClient` tarafından kullanılır.
 
 Sonraki kodda, `HttpClient` kullanması gereken yazılı Istemcileri (hizmet aracıları) kaydetmek için `AddHttpClient()` nasıl kullanılabileceğini görebilirsiniz.
 

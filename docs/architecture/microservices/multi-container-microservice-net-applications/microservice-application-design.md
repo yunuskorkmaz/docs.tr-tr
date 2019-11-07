@@ -2,12 +2,12 @@
 title: Mikro hizmet odaklı bir uygulama tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmet odaklı bir uygulamanın avantajlarını ve altlarını anlayın ve bu sayede bilinçli bir karar alabilirsiniz.
 ms.date: 10/02/2018
-ms.openlocfilehash: 1c2fe341c62111e915df35aab818b8a980004834
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a783d582f39d25be0123f410553a54af970a4f67
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772055"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739556"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Mikro hizmet odaklı bir uygulama tasarlama
 
@@ -65,9 +65,11 @@ Bildiğiniz bir kuramsal iş etki alanı hakkında düşünmek yerine mimari ve 
 
 Uygulama, birkaç API ağ geçidine sahip tüm gerekli sunucu tarafı işlemleri için arka uç mikro hizmetleri ve kapsayıcıları ile birlikte çeşitli mağaza Kullanıcı arabirimi ön uçları (bir Web uygulaması ve yerel mobil uygulama) dahil olmak üzere birden çok alt sistemi içerir. birleştirilmiş giriş, iç mikro hizmetlere işaret eder. Şekil 6-1, başvuru uygulamasının mimarisini gösterir.
 
-![Mobil ve SPA istemcileri, mikro hizmetlerle iletişim kuran tek API Gateway uç noktaları ile iletişim kurar. Geleneksel Web istemcileri, mikro hizmetlerle iletişim kuran MVC mikro hizmeti ile iletişim kurar](./media/image1.png)
+![Tek bir Docker konağında eShopOnContainers kullanan istemci uygulamalarının diyagramı.](./media/microservice-application-design/eshoponcontainers-reference-application-architecture.png)
 
 **Şekil 6-1**. Geliştirme ortamı için eShopOnContainers başvuru uygulama mimarisi
+
+Yukarıdaki diyagramda, mobil ve SPA istemcilerinin tek API ağ geçidi uç noktalarına iletişim kurduğu ve bu da mikro hizmetlerle iletişim kurduğu gösterilmektedir. Geleneksel Web istemcileri, API ağ geçidi aracılığıyla mikro hizmetlere iletişim kuran MVC mikro hizmeti ile iletişim kurar.
 
 **Barındırma ortamı**. Şekil 6-1 ' de, tek bir Docker ana bilgisayarı içinde dağıtılan birkaç kapsayıcı görürsünüz. Bu durum, Docker-Compose up komutuyla tek bir Docker konağına dağıtım yaparken de olur. Ancak, bir Orchestrator ya da kapsayıcı kümesi kullanıyorsanız, her kapsayıcı farklı bir konakta (node) çalışıyor olabilir ve herhangi bir düğüm, mimari bölümünde daha önce anlatıldığı gibi herhangi bir sayıda kapsayıcı çalıştırıyor olabilir.
 
@@ -140,7 +142,7 @@ Mimari bölümünde belirtildiği gibi, mikro hizmetlere dayalı karmaşık bir 
 
 Dış mimari, bu kılavuzun mimari bölümünde açıklanan ilkeleri izleyerek birden çok hizmet tarafından oluşturulan Mikro hizmet mimarisidir. Ancak, her mikro hizmetin yapısına ve seçtiğiniz yüksek düzeyli mikro hizmet mimarisinden bağımsız olarak, her biri farklı desenleri temel alan farklı iç mimarilerin olması önerilir. Mikro hizmetler. Mikro hizmetler, farklı teknolojiler ve programlama dillerini de kullanabilir. Şekil 6-2 bu çeşitliliğe sahiptir.
 
-![Dış mimari arasındaki fark: mikro hizmet desenleri, API ağ geçitleri, dayanıklı iletişimler, yayın/alt, vb. ve dahili mimari: veri odaklı/CRUD, DDD desenleri, bağımlılık ekleme, birden çok kitaplık, vb.](./media/image2.png)
+![Dış ve iç mimari desenlerini karşılaştıran diyagram.](./media/microservice-application-design/external-versus-internal-architecture.png)
 
 **Şekil 6-2**. Harici ve dahili mimari ve tasarım
 
@@ -170,11 +172,11 @@ Ayrıca, ASP.NET Core Web API 'Leri, NancyFx, ASP.NET Core SignalR (.NET Core 2 
 
 Önemli nokta, belirli bir mimari deseninin veya stilin olmaması ya da herhangi bir teknolojinin tüm durumlar için doğru olması. Şekil 6-3, farklı mikro hizmetlerde kullanılabilecek bazı yaklaşımları ve teknolojileri (belirli bir sırada olmasa da) gösterir.
 
-![Multi-mimari model ve çok yönlü mikro hizmetleri, dilleri ve teknolojileri her bir mikro hizmetin ihtiyaçlarına göre karıştırabilmeniz ve eşleştirebilir ve yine de birbirleriyle iletişim kuran anlamına gelir.](./media/image3.png)
+![Çok yönlü dünyadaki bir mimaride 12 karmaşık mikro hizmeti gösteren diyagram.](./media/microservice-application-design/multi-architectural-patterns-polyglot-microservices.png)
 
 **Şekil 6-3**. Multi-mimari desenleri ve çok yönlü mikro hizmetleri dünyası
 
-Şekil 6-3 ' de gösterildiği gibi, birçok mikro hizmetten oluşan uygulamalarda (etki alanı odaklı tasarım terminolojisinde sınırlı bağlamlarda veya otonom mikro hizmetler olarak yalnızca "alt sistemler"), her mikro hizmeti farklı bir şekilde uygulayabilirsiniz. Her birinin farklı bir mimari deseninin olması ve uygulamanın doğası, iş gereksinimleri ve önceliklerine bağlı olarak farklı diller ve veritabanları kullanması olabilir. Bazı durumlarda, mikro hizmetler benzer olabilir. Ancak genellikle bu durum değildir çünkü her alt sistemin bağlam sınırı ve gereksinimleri genellikle farklıdır.
+Multi-mimari model ve çok yönlü mikro hizmetleri, dilleri ve teknolojileri her bir mikro hizmetin ihtiyaçlarına göre karıştırabilmeniz ve eşleştirebilir ve yine de birbirleriyle iletişim kuran anlamına gelir. Şekil 6-3 ' de gösterildiği gibi, birçok mikro hizmetten oluşan uygulamalarda (etki alanı odaklı tasarım terminolojisinde sınırlı bağlamlarda veya otonom mikro hizmetler olarak yalnızca "alt sistemler"), her mikro hizmeti farklı bir şekilde uygulayabilirsiniz. Her birinin farklı bir mimari deseninin olması ve uygulamanın doğası, iş gereksinimleri ve önceliklerine bağlı olarak farklı diller ve veritabanları kullanması olabilir. Bazı durumlarda, mikro hizmetler benzer olabilir. Ancak genellikle bu durum değildir çünkü her alt sistemin bağlam sınırı ve gereksinimleri genellikle farklıdır.
 
 Örneğin, basit bir CRUD bakım uygulaması için DDD desenleri tasarlamak ve uygulamak mantıklı olmayabilir. Ancak, çekirdek etki alanınız veya temel işletmeniz için, sürekli değişen iş kurallarıyla iş karmaşıklığını ortadan açmaya yönelik daha gelişmiş desenler uygulamanız gerekebilir.
 

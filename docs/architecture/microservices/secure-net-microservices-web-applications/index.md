@@ -4,12 +4,12 @@ description: .NET mikro hizmetleri ve Web uygulamalarında güvenlik-ASP.NET Cor
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798847"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736977"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Güvenli .NET mikro hizmetleri ve Web uygulamaları oluşturun
 
@@ -21,15 +21,17 @@ Genellikle bir hizmet tarafından yayımlanan kaynakların ve API 'Lerin belirli
 
 Mikro hizmet senaryolarında, kimlik doğrulaması genellikle merkezi olarak işlenir. Bir API ağ geçidi kullanıyorsanız, Şekil 9-1 ' de gösterildiği gibi ağ geçidi kimlik doğrulaması için iyi bir yerdir. Bu yaklaşımı kullanırsanız, ağ geçidinden gelen veya olmayan iletilerin kimlik doğrulamasını yapmak için ek bir güvenlik yoksa, tek tek mikro hizmetlere doğrudan ulaşılamadığından emin olun (API ağ geçidi olmadan).
 
-![API Gateway kimlik doğrulamasını merkezileştiren, istekleri mikro hizmetlere iletirken Kullanıcı bilgilerini ekler.](./media/image1.png)
+![İstemci mobil uygulamasının arka uca nasıl etkileşime gireceğini gösteren diyagram.](./media/index/api-gateway-centralized-authentication.png)
 
 **Şekil 9-1**. API ağ geçidiyle merkezi kimlik doğrulaması
 
-Hizmetlere doğrudan erişilemiyorsa, kullanıcıların kimliğini doğrulamak için Azure Active Directory gibi bir kimlik doğrulama hizmeti veya güvenlik belirteci hizmeti (STS) görevi gören ayrılmış bir kimlik doğrulama mikro hizmeti kullanılabilir. Güven kararları, güvenlik belirteçleri veya tanımlama bilgileriyle hizmetler arasında paylaşılır. (Bu belirteçler, gerekirse [tanımlama bilgisi paylaşımı](/aspnet/core/security/cookie-sharing)uygulayarak ASP.NET Core uygulamalar arasında paylaşılabilir.) Bu model Şekil 9-2 ' de gösterilmiştir.
+API Gateway kimlik doğrulamasını merkezileştiren, istekleri mikro hizmetlere iletirken Kullanıcı bilgilerini ekler. Hizmetlere doğrudan erişilemiyorsa, kullanıcıların kimliğini doğrulamak için Azure Active Directory gibi bir kimlik doğrulama hizmeti veya güvenlik belirteci hizmeti (STS) görevi gören ayrılmış bir kimlik doğrulama mikro hizmeti kullanılabilir. Güven kararları, güvenlik belirteçleri veya tanımlama bilgileriyle hizmetler arasında paylaşılır. (Bu belirteçler, gerekirse [tanımlama bilgisi paylaşımı](/aspnet/core/security/cookie-sharing)uygulayarak ASP.NET Core uygulamalar arasında paylaşılabilir.) Bu model Şekil 9-2 ' de gösterilmiştir.
 
-![Mikro hizmetlere doğrudan erişildiğinde, kimlik doğrulaması ve yetkilendirme içeren güven, mikro hizmetler arasında paylaşılan bir özel mikro hizmet tarafından verilen bir güvenlik belirteci tarafından işlenir.](./media/image2.png)
+![Arka uç mikro hizmetleri aracılığıyla kimlik doğrulaması gösteren diyagram.](./media/index/identity-microservice-authentication.png)
 
 **Şekil 9-2**. Kimlik mikro hizmetine göre kimlik doğrulaması; güven, bir yetkilendirme belirteci kullanılarak paylaşılır
+
+Mikro hizmetlere doğrudan erişildiğinde, kimlik doğrulaması ve yetkilendirme içeren güven, mikro hizmetler arasında paylaşılan, adanmış bir mikro hizmet tarafından verilen bir güvenlik belirteci tarafından işlenir.
 
 ### <a name="authenticate-with-aspnet-core-identity"></a>ASP.NET Core kimliğiyle kimlik doğrulama
 
@@ -121,7 +123,7 @@ else
 
 Visual Studio 'da ASP.NET Code Web uygulaması projesini oluştururken **bireysel kullanıcı hesabı** kimlik doğrulaması seçeneğini belirlerseniz, Şekil 9-3 ' de gösterildiği gibi, bir dış sağlayıcı ile oturum açmak için gereken tüm kodlar zaten projede bulunur.
 
-![Yeni ASP.NET Core Web uygulamasına yönelik iletişim kutusu, kimlik doğrulamasını değiştirmek için düğmeyi vurgular.](./media/image3.png)
+![Yeni ASP.NET Core Web uygulaması iletişim kutusunun ekran görüntüsü.](./media/index/select-external-authentication-option.png)
 
 **Şekil 9-3**. Web uygulaması projesi oluştururken dış kimlik doğrulaması kullanma seçeneği seçme
 

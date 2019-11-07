@@ -2,12 +2,12 @@
 title: .NET Core ile bir mikro hizmet etki alanı modeli uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD-odaklı bir etki alanı modelinin uygulama ayrıntılarına ulaşın.
 ms.date: 10/08/2018
-ms.openlocfilehash: b2ad62c2a16dd3993b9624ec14f0070e934ac2de
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: be8dc9339f5815139616e9785b5b3e3e5931b57e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296758"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737241"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core ile bir mikro hizmet etki alanı modeli uygulama
 
@@ -17,7 +17,9 @@ ms.locfileid: "70296758"
 
 EShopOnContainers başvuru uygulaması için kullanılan klasör organizasyonu, uygulamanın DDD modelini gösterir. Farklı bir klasör kuruluşun, uygulamanız için yapılan tasarım seçimlerini daha net bir şekilde iletişim kuracağını fark edebilirsiniz. Şekil 7-10 ' de görebileceğiniz gibi, sıralama etki alanı modelinde, sipariş toplama ve alıcı toplama olmak üzere iki toplama vardır. Her toplama, bir etki alanı varlıkları ve değer nesneleri grubudur, ancak tek bir etki alanı varlığından (Toplam kök veya kök varlık) oluşan bir toplama işlemi de olabilir.
 
-![BuyerAggregate ve OrderAggregate klasörlerini içeren AggregatesModel klasörünü gösteren sıralama. Domain projesi için Çözüm Gezgini görünümü, her biri varlık sınıflarını, değer nesne dosyalarını ve bu şekilde devam eder. ](./media/image11.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Çözüm Gezgini içinde sıralama. Domain projesinin ekran görüntüsü.":::
+BuyerAggregate ve OrderAggregate klasörlerini içeren AggregatesModel klasörünü gösteren sıralama. Domain projesi için Çözüm Gezgini görünümü, her biri varlık sınıflarını, değer nesne dosyalarını ve bu şekilde devam eder.
+:::image-end:::
 
 **Şekil 7-10**. EShopOnContainers 'da sıralama mikro hizmeti için etki alanı model yapısı
 
@@ -31,7 +33,9 @@ Bir toplama, işlem tutarlılığını eşleştirmek için birlikte gruplanmış
 
 İşlemsel tutarlılık, bir toplamanın bir iş eyleminin sonunda tutarlı ve güncel olmasını garanti edilir. Örneğin, eShopOnContainers sıralama mikro hizmet etki alanı modelinden sıra toplaması, Şekil 7-11 ' de gösterildiği gibi oluşturulur.
 
-![OrderAggregate klasörünün ayrıntılı bir görünümü: Address.cs bir değer nesnesidir, ıorderrepository bir depo arabirimidir, Order.cs bir toplama köküdür, OrderItem.cs ise bir alt varlıktır ve OrderStatus.cs bir numaralandırma sınıfıdır.](./media/image12.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/vs-solution-explorer-order-aggregate.png" alt-text="OrderAggregate klasörünün ve sınıflarının ekran görüntüsü.":::
+OrderAggregate klasörünün ayrıntılı bir görünümü: Address.cs bir değer nesnesidir, ıorderrepository bir depo arabirimidir, Order.cs bir toplama köküdür, OrderItem.cs ise bir alt varlıktır ve OrderStatus.cs bir numaralandırma sınıfıdır.
+:::image-end:::
 
 **Şekil 7-11**. Visual Studio çözümünde sıra toplaması
 
@@ -91,7 +95,7 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-Bu, POCO sınıfı olarak uygulanan bir etki alanı varlığı olduğunu unutmamak önemlidir. Entity Framework Core veya başka bir altyapı çerçevesine doğrudan bağımlılığı yoktur. Bu uygulama, ddd, yalnızca bir etki alanı modeli uygulayan C\# koduna sahip olmalıdır.
+Bu, POCO sınıfı olarak uygulanan bir etki alanı varlığı olduğunu unutmamak önemlidir. Entity Framework Core veya başka bir altyapı çerçevesine doğrudan bağımlılığı yoktur. Bu uygulama, DDD, yalnızca C\# bir etki alanı modeli uygulayan bir koddur.
 
 Ayrıca, sınıfı IAggregateRoot adlı bir arabirimle birlikte tasarlanmıştır. Bu arabirim, bazen yalnızca bu varlık sınıfının de bir toplam kök olduğunu göstermek için kullanılan *boş bir arabirimdir*.
 
@@ -150,7 +154,7 @@ Ayrıca, yeni OrderItem (params) işlemi de düzen toplama kökünden Addorderı
 
 Entity Framework Core 1,1 veya sonraki bir sürümü kullandığınızda, özelliklere ek olarak [alanlarla eşleştirmeye](https://docs.microsoft.com/ef/core/modeling/backing-field) ızın verdiğinden ddd varlığı daha iyi ifade edilebilir. Bu, alt varlıkların veya değer nesnelerinin koleksiyonlarını koruurken yararlı olur. Bu geliştirmelerden bazıları özellikler yerine basit özel alanları kullanabilir ve genel yöntemlerde alan koleksiyonuna herhangi bir güncelleştirmeyi uygulayabilir ve AsReadOnly yöntemi aracılığıyla salt okunur erişim sağlayabilirsiniz.
 
-DDD 'da, verilerin herhangi bir kısmını ve tutarlılığını denetlemek için yalnızca varlıktaki yöntemler aracılığıyla varlığı (veya Oluşturucu) güncellemek isteyebilirsiniz, böylece özellikler yalnızca bir get erişimcisi ile tanımlanmıştır. Özellikler özel alanlarla desteklenir. Özel üyelere yalnızca sınıfının içinden erişilebilir. Ancak, bir özel durum vardır: EF Core bu alanları da ayarlaması gerekir (Bu nedenle nesneyi doğru değerlerle döndürebilir).
+DDD 'da, verilerin herhangi bir kısmını ve tutarlılığını denetlemek için yalnızca varlıktaki yöntemler aracılığıyla varlığı (veya Oluşturucu) güncellemek isteyebilirsiniz, böylece özellikler yalnızca bir get erişimcisi ile tanımlanmıştır. Özellikler özel alanlarla desteklenir. Özel üyelere yalnızca sınıfının içinden erişilebilir. Ancak, bir özel durum vardır: EF Core bu alanları da ayarlaması gerekir (Bu nedenle, nesneyi doğru değerlerle döndürebilir).
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Özellikleri veritabanı tablosundaki alanlara yalnızca get erişimcileri ile eşleyin
 
@@ -162,19 +166,19 @@ EF Core 1,0 veya sonraki bir sürümü kullandığınızda, DbContext içinde, y
 
 Sütunları alanlarla eşlemek için EF Core 1,1 veya sonraki bir sürüme sahip bir özellik ile, özellikler de kullanılamaz. Bunun yerine, sütunları yalnızca bir tablodan alanlarla eşleyebilirsiniz. Bunun için ortak kullanım örneği, varlığın dışından erişilmesi gerekmeyen iç durum için özel alanlardır.
 
-Örneğin, önceki orderaggregate kod örneğinde, bir ayarlayıcı veya alıcı için ilgili özelliği olmayan, `_paymentMethodId` alanı gibi birkaç özel alan vardır. Bu alan Ayrıca, siparişin iş mantığı dahilinde hesaplanabilecek ve siparişin yöntemlerinden, ancak veritabanında kalıcı olması gerekir. Bu nedenle EF Core (v 1.1 ' den itibaren), ilgili bir özellik olmadan bir alanı veritabanındaki bir sütuna eşlemek için bir yol vardır. Bu, bu kılavuzun [altyapı katmanı](ddd-oriented-microservice.md#the-infrastructure-layer) bölümünde de açıklanmaktadır.
+Örneğin, önceki OrderAggregate kod örneğinde, bir ayarlayıcı veya alıcı için ilgili özelliği olmayan `_paymentMethodId` alanı gibi birkaç özel alan vardır. Bu alan Ayrıca, siparişin iş mantığı dahilinde hesaplanabilecek ve siparişin yöntemlerinden, ancak veritabanında kalıcı olması gerekir. Bu nedenle EF Core (v 1.1 ' den itibaren), ilgili bir özellik olmadan bir alanı veritabanındaki bir sütuna eşlemek için bir yol vardır. Bu, bu kılavuzun [altyapı katmanı](ddd-oriented-microservice.md#the-infrastructure-layer) bölümünde de açıklanmaktadır.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Vaughn versuz. DDD ve Entity Framework ile toplamalar Modellendirme.** Bunun *Entity Framework Core olmadığına* unutmayın. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. Veri noktaları-etki alanı odaklı tasarım için kodlama: Veri odaklı Devs ipuçları** \
+- **Julie Lerman. Veri noktaları-etki alanı odaklı tasarım için kodlama: veri odaklı Devs için Ipuçları** \
   <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
-- **UDI Dahan. Tamamen kapsüllenmiş etki alanı modelleri oluşturma** \
+- **UDI Dahan. Tam kapsüllenmiş etki alanı modelleri oluşturma** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 > [!div class="step-by-step"]
-> [Önceki](microservice-domain-model.md)İleri
-> [](seedwork-domain-model-base-classes-interfaces.md)
+> [Önceki](microservice-domain-model.md)
+> [İleri](seedwork-domain-model-base-classes-interfaces.md)

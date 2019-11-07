@@ -2,12 +2,12 @@
 title: Kapsayıcılar ve Docker’a Giriş
 description: Docker kullanmanın başlıca avantajlarından yüksek düzeyde bir genel bakış elde edin.
 ms.date: 02/15/2019
-ms.openlocfilehash: a03c67ed4fbc55c84e69fba5b7978863c8305e00
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295674"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738182"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Kapsayıcılara ve Docker 'a giriş
 
@@ -19,7 +19,7 @@ Kapsayıcılar Ayrıca paylaşılan bir işletim sisteminde bulunan uygulamalar�
 
 Her kapsayıcı Şekil 1-1 ' de gösterildiği gibi bir Web uygulamasını veya bir hizmeti çalıştırabilir. Bu örnekte, Docker ana bilgisayarı bir kapsayıcı ana bilgisayarı ve APP1, app2, Svc1 ve Svc2 Kapsayıcılı uygulamalar veya hizmetlerdir.
 
-![VM 'de veya fiziksel sunucuda işletim sisteminde çalışan iki uygulama ve iki hizmet](./media/image1.png)
+![Bir VM 'de veya sunucuda çalışan dört kapsayıcıyı gösteren diyagram.](./media/index/multiple-containers-single-host.png)
 
 **Şekil 1-1**. Kapsayıcı ana bilgisayarında çalışan birden çok kapsayıcı
 

@@ -2,12 +2,12 @@
 title: Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Geliştirme veya test ortamları için tümleştirme olayları için bir olay veri yolu mesajlaşma uygulamak üzere Kbbitmq kullanın.
 ms.date: 10/02/2018
-ms.openlocfilehash: 7d51054d444ce1e35fabab94cc803e74dbd96f19
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 211348caec3c101435fcdd99bd96fd8e17a6456b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089738"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739497"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
 
@@ -17,11 +17,11 @@ EShopOnContainers 'daki olay veri yolu özel uygulamasından biri, kbbitmq API '
 
 Kbbitmq ile olay veri yolu uygulamasının, Şekil 6-21 ' de gösterildiği gibi mikro hizmetlerin olaylara abone olma, olayları yayımlama ve olayları almasına izin verir.
 
-![Kbbitmq, dağıtımı işlemek için ileti yayımcısı ve aboneler arasında bir aracı olarak çalışır.](./media/image22.png)
+![İleti gönderici ve ileti alıcısı arasında Kbbitmq gösteren diyagram.](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
 
 **Şekil 6-21.** Bir olay veri yolunun Kbıbitmq uygulama
 
-Kodda, Eventbuskbbitmq sınıfı, genel ıeventbus arabirimini uygular. Bu, bu geliştirme/test sürümünden üretim sürümüne geçiş yapabilmeniz için bağımlılık ekleme tabanlıdır.
+Kbbitmq, dağıtımı işlemek için ileti yayımcısı ve aboneler arasında bir aracı olarak çalışır. Kodda, Eventbuskbbitmq sınıfı, genel ıeventbus arabirimini uygular. Bu, bu geliştirme/test sürümünden üretim sürümüne geçiş yapabilmeniz için bağımlılık ekleme tabanlıdır.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable

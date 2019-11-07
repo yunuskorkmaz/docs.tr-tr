@@ -2,12 +2,12 @@
 title: Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
 ms.date: 05/04/2018
-ms.openlocfilehash: 2262d2cf4e69e19e8b78c07c239602dd5dccc3cd
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 079c9c5ca02b6dc75214d63cb59afdead03d3190
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318672"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737008"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
 
@@ -27,7 +27,7 @@ Uygulamanın ihtiyaçlarına daha derin bir çözümledikten sonra, seçilen ür
 
 Şekil 1 ' de, farklı türde uygulamalar ve bunlara yönelik ideal Azure barındırma senaryolarına ait bir döküm görebilirsiniz.
 
-![Şekil 1](./media/image8.5.png)
+![Azure barındırma senaryolarının farklı uygulamalar için en iyisi tablosu.](./media/choosing-azure-compute-options-for-container-based-applications/azure-hosting-scenarios-for-apps.png)
 
 > [!div class="step-by-step"]
 > [Önceki](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

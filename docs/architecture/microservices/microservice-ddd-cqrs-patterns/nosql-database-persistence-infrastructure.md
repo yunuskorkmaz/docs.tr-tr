@@ -2,12 +2,12 @@
 title: NoSQL veritabanlarını bir kalıcılık altyapısı olarak kullanma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Genel olarak NoSql veritabanlarının kullanımını ve özellikle de Azure Cosmos DB, persistance uygulama seçeneği olarak anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: b184586dede6331e0babfa976c6fd641933d018e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 44fc2fa01e2d19efed7314f421a682c0a635a9f6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089863"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737422"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Kalıcı altyapı olarak NoSQL veritabanlarını kullanma
 
@@ -54,7 +54,7 @@ Etki alanı modelinizi toplamalara göre tasarladığınızda, NoSQL ve belge od
 
 [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) , Microsoft 'un görev açısından kritik uygulamalar için genel olarak dağıtılmış veritabanı hizmetidir. Azure Cosmos DB, [ön anahtar genel dağıtımı](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally), [Esnek işleme ve depolama için esnek ölçeklendirme](https://docs.microsoft.com/azure/cosmos-db/partition-data) , 99. yüzdebirlik, [beş adet iyi tanımlanmış tutarlılık düzeyi](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)ve garantili yüksek gecikme süreleriyle birlikte, tek basamaklı milisaniyelik gecikme süresi sağlar kullanılabilirlik, hepsi [sektörde önde gelen SLA 'lar](https://azure.microsoft.com/support/legal/sla/cosmos-db/)tarafından desteklenir. Azure Cosmos DB şema ve dizin yönetimiyle ilgilenmenize gerek kalmadan [otomatik olarak verileri dizine](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf) ekler. Çoklu modeldir ve belge, anahtar-değer, grafik ve sütunlu veri modellerini destekler.
 
-![Azure Cosmos DB, dört API protokolleriyle erişilebilen, küresel olarak dağıtılmış garantili düşük gecikme süreli bir veritabanıdır. ](./media/image19.1.png)
+![Azure Cosmos DB genel dağıtımı gösteren diyagram.](./media/nosql-database-persistence-infrastructure/azure-cosmos-db-global-distribution.png)
 
 **Şekil 7-19**. Azure Cosmos DB küresel dağıtım
 
@@ -132,7 +132,7 @@ Geliştirme/test çözümüne yönelik ideal ve daha basit dağıtım, geliştir
 
 Cosmos DB veritabanları, .NET için MongoDB API 'nin yanı sıra yerel MongoDB kablo protokolünü de destekler. Bu, var olan sürücüler kullanılarak MongoDB için yazılmış uygulamanız artık Cosmos DB ile iletişim kurabilir ve Şekil 7-20 ' de gösterildiği gibi MongoDB veritabanları yerine Cosmos DB veritabanlarını kullanabilir.
 
-![Cosmos DB .NET ve MongoDB kablo protokolü için MongoDB API 'sini destekler, MongoDb 'den Cosmos DB 'e kolayca geçiş yapabilirsiniz.](./media/image19.2.png)
+![Cosmos DB .NET ve MongoDB kablo protokolünü desteklediğini gösteren diyagram.](./media/nosql-database-persistence-infrastructure/mongodb-api-wire-protocol.png)
 
 **Şekil 7-20**. Azure Cosmos DB erişmek için MongoDB API 'sini ve protokolünü kullanma
 
@@ -140,7 +140,7 @@ Cosmos DB veritabanları, .NET için MongoDB API 'nin yanı sıra yerel MongoDB 
 
 Aşağıdaki görüntüde gösterildiği gibi, MongoDB API 'sini kullanarak, eShopOnContainers yerel geliştirme ortamı için MongoDB Linux ve Windows kapsayıcılarını destekler, ancak Azure Cosmos DB daha [sonra yalnızca Azure Cosmos DB işaret etmek için MongoDB bağlantı dizesi](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account).
 
-![EShopOnContainers 'daki location mikro hizmeti MongoDB kullanılarak uygulanır, ancak bağlantı dizesi değiştirilerek yalnızca Cosmos DB ' a geçiş yapılabilir.](./media/image20-bis.png)
+![EShopOnContainers 'daki konum mikro hizmetinin Cosmos DB ya da Mongo DB 'yi kullanabileceği diyagram.](./media/nosql-database-persistence-infrastructure/eshoponcontainers-mongodb-containers.png)
 
 **Şekil 7-21**. geliştirme için MongoDB kapsayıcılarını kullanan eShopOnContainers-env veya Azure Cosmos DB for Production
 
@@ -166,7 +166,7 @@ Temel olarak bu yalnızca, Azure Cosmos DB karşı MongoDB API 'sini her zaman b
 
 .NET için MongoDB API 'SI, aşağıdaki şekilde gösterilen konumlar. API projesinde olduğu gibi, projelerinize eklemeniz gereken NuGet paketlerini temel alır.
 
-![MongoDB NuGet paketlerindeki bağımlılıkları gösteren Çözüm Gezgini görünümü.](./media/image21-bis.png)
+![MongoDB NuGet paketlerindeki bağımlılıkların ekran görüntüsü.](./media/nosql-database-persistence-infrastructure/mongodb-api-nuget-packages.png)
 
 **Şekil 7-22**. .NET Core projesinde MongoDB API NuGet paketleri başvuruları
 

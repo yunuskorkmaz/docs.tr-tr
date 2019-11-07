@@ -2,12 +2,12 @@
 title: Bir Mikro Hizmetteki İş Karmaşıklığını DDD ve CQRS Desenleriyle Giderme
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD ve CQRS desenleri uygulayan karmaşık iş senaryolarına nasıl karar vermek istediğinizi anlayın
 ms.date: 10/08/2018
-ms.openlocfilehash: d311641e2ac73205c04c3f1147b54991585ce851
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 88b105b68307c8587f877bb9ddf370e143d8539b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295917"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739842"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>DDD ve CQRS desenleriyle mikro hizmette Iş karmaşıklığı
 
@@ -15,7 +15,9 @@ ms.locfileid: "70295917"
 
 Bu bölüm, karmaşık alt sistemleri veya sürekli değişen iş kurallarıyla etki alanı uzmanlarından oluşan mikro hizmetleri bir arada açmak istediğinizde uyguladığınız daha gelişmiş mikro hizmetlere odaklanır. Bu bölümde kullanılan mimari desenleri, Şekil 7-1 ' de gösterildiği gibi etki alanı odaklı tasarım (DDD) ve Komut ve Sorgu Sorumluluklarının Ayrılığı (CQRS) yaklaşımlarına dayanır.
 
-![Dış mimari arasındaki fark: mikro hizmet desenleri, API ağ geçitleri, dayanıklı iletişimler, yayın/alt, vb. ve dahili mimari: veri odaklı/CRUD, DDD desenleri, bağımlılık ekleme, birden çok kitaplık, vb.](./media/image1.png)
+:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="Dış ve iç mimari desenlerini karşılaştıran diyagram.":::
+Dış mimari arasındaki fark: mikro hizmet desenleri, API ağ geçitleri, dayanıklı iletişimler, yayın/alt, vb. ve dahili mimari: veri odaklı/CRUD, DDD desenleri, bağımlılık ekleme, birden çok kitaplık, vb.
+:::image-end:::
 
 **Şekil 7-1**. Her mikro hizmet için dış mikro hizmet mimarisi, iç mimari desenlerine karşı
 
@@ -40,28 +42,28 @@ DDD, öğrenme için zengin kaynak kümesi içeren büyük bir konudur. Eric Eva
 
 ##### <a name="ddd-books"></a>DDD kitapları
 
-- **Eric Evans. Etki alanı odaklı tasarım: Yazılım Kalkunda karmaşıklık karmaşıklığı** \
+- **Eric Evans. Etki alanı odaklı tasarım: yazılım \ kalp halinde karmaşıklık karmaşıklığı**
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
-- **Eric Evans. Etki alanı odaklı tasarım başvurusu: Tanımlar ve desenli özetler** \
+- **Eric Evans. Etki alanı odaklı tasarım başvurusu: tanımlar ve desenli özetler** \
   <https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/>
 
-- **Vaughn versuz. Etki alanı odaklı tasarımı uygulama** \
+- **Vaughn versuz. Etki alanı odaklı tasarım \ uygulama**
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
-- **Vaughn versuz. Etki alanı odaklı tasarım geri ışığı** \
+- **Vaughn versuz. Etki alanı odaklı tasarım** \
   <https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/>
 
 - **Jimmy Nilsson. Etki alanı odaklı tasarım ve desenleri uygulama** \
   <https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/>
 
-- **Cesar de La Torre. .NET ile N katmanlı etki alanı odaklı mimari Kılavuzu** \
+- **Cesar de La Torre. N katmanlı etki alanı odaklı mimari Kılavuzu .NET** \
   <https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/>
 
 - **Abel Avram ve Floyd Marinescu. Etki alanı odaklı tasarım hızlı** \
   <https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/>
 
-- **Scott Millett, Nick ayarı-etki alanı odaklı tasarımın desenleri, Ilkeleri ve uygulamaları** \
+- **Scott Millett, Nick ayarlama-etki alanı odaklı tasarım \ desenler, ilkeler ve uygulamalar**
   <http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html>
 
 ##### <a name="ddd-training"></a>DDD eğitimi
@@ -70,5 +72,5 @@ DDD, öğrenme için zengin kaynak kümesi içeren büyük bir konudur. Eric Eva
   <https://bit.ly/PS-DDD>
 
 >[!div class="step-by-step"]
->[Önceki](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)İleri
->[](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[Önceki](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)
+>[İleri](apply-simplified-microservice-cqrs-ddd-patterns.md)

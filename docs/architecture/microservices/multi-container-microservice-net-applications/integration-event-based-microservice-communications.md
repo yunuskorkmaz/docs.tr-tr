@@ -2,20 +2,20 @@
 title: Mikro hizmetler arasında olay tabanlı iletişim uygulama (tümleştirme olayları)
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmetler arasında olay tabanlı iletişim uygulamak için tümleştirme olaylarını anlayın.
 ms.date: 10/02/2018
-ms.openlocfilehash: 8a5cfa280063da742dc1693905fc44cf870c1fcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 70566745dc084ba9016a850ad749fefb958e89ec
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296621"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737126"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Mikro hizmetler arasında olay tabanlı iletişim uygulama (tümleştirme olayları)
 
 Daha önce açıklandığı gibi, olay tabanlı iletişimi kullandığınızda bir mikro hizmet, bir iş varlığını güncelleştirdiğinde olduğu gibi bir şey gerçekleştiğinde bir olay yayınlar. Diğer mikro hizmetler bu olaylara abone olur. Bir mikro hizmet bir olay aldığında, kendi iş varlıklarını güncelleştirebilir ve bu da daha fazla olay yayımlanmaya neden olabilir. Bu, nihai tutarlılık kavramının özünü. Bu yayımlama/abone olma sistemi genellikle bir olay veri yolunun uygulanması kullanılarak gerçekleştirilir. Olay veri yolu, olaylara abone olmak ve olayları kaldırmak ve olayları yayımlamak için gereken API ile bir arabirim olarak tasarlanabilir. Ayrıca, bir mesajlaşma kuyruğu veya zaman uyumsuz iletişimi destekleyen bir hizmet veri yolu veya bir yayımlama/abonelik modeli gibi işlem içi veya mesajlaşma iletişimine dayalı bir veya daha fazla uygulama olabilir.
 
-Olayları, bu hizmetler arasında nihai tutarlılık sağlayan birden çok hizmete yayılan iş işlemlerini uygulamak için kullanabilirsiniz. Sonuçta tutarlı bir işlem, bir dizi dağıtılmış eylemden oluşur. Her eylemde, mikro hizmet bir iş varlığını güncelleştirir ve sonraki eylemi tetikleyen bir olay yayımlar.
+Olayları, bu hizmetler arasında nihai tutarlılık sağlayan birden çok hizmete yayılan iş işlemlerini uygulamak için kullanabilirsiniz. Sonuçta tutarlı bir işlem, bir dizi dağıtılmış eylemden oluşur. Her eylemde, mikro hizmet bir iş varlığını güncelleştirir ve sonraki eylemi tetikleyen bir olay yayımlar. Şekil 6-18 aşağıdaki şekilde, ve olay veri yolu aracılığıyla yayınlanan PriceUpdated olayını gösterir, bu nedenle fiyat güncelleştirmesi sepet ve diğer mikro hizmetlere yayılır.
 
-![Bir olay veri yolu aracılığıyla olay odaklı iletişimi kullanan Katalog mikro hizmeti, sepet ve ek mikro hizmetlerle nihai tutarlılık elde etmek.](./media/image19.png)
+![Olay veri yolu ile zaman uyumsuz olay odaklı iletişimin diyagramı.](./media/integration-event-based-microservice-communications/event-driven-communication.png)
 
 **Şekil 6-18**. Olay veri yoluna dayalı olay odaklı iletişim
 
@@ -64,11 +64,11 @@ Mikro hizmetler arasında paylaşmanız gereken yalnızca birkaç kitaplık tür
 
 Bir olay veri yolu, Şekil 6-19 ' de gösterildiği gibi, bileşenlerin birbirleriyle açıkça farkında olması gerekmeden mikro hizmetler arasında yayımlama/abonelik stili iletişim sağlar.
 
-![Temel yayınlar/alt paur, mikro hizmet, mikro hizmetler B ve C 'yi abone olarak yayımlayan bir olay veri yolu yayımlar.](./media/image20.png)
+![Temel yayımla/abone ol deseninin gösterildiği diyagram.](./media/integration-event-based-microservice-communications/publish-subscribe-basics.png)
 
 **Şekil 6-19**. Bir olay veri yolundan temel olarak yayımlama/abone olma
 
-Olay veri yolu, gözlemci düzeniyle ve Yayımla-abone ol düzeniyle ilgilidir.
+Yukarıdaki diyagramda, mikro hizmet B ve C 'yi abone olarak yayımlayan ve yayımcı tarafından abonelere gerek duymadan bir olay veri yolu yayımlayıcısı gösterilmektedir. Olay veri yolu, gözlemci düzeniyle ve Yayımla-abone ol düzeniyle ilgilidir.
 
 ### <a name="observer-pattern"></a>Gözlemci kalıbı
 
@@ -92,11 +92,11 @@ Olay veri yolu genellikle iki bölümden oluşur:
 
 Şekil 6-20 ' de, kbbitmq, Azure Service Bus veya başka bir olay/ileti Aracısı gibi altyapı mesajlaşma teknolojilerine göre birden çok uygulama içeren bir olay veri yolu soyutlama görebilirsiniz.
 
-![Veri yolu, bir arabirim aracılığıyla tanımlanabilmesi ve bu sayede, Kbıbitmq Azure Service Bus veya diğerleri gibi çeşitli teknolojilerle uygulanabilmesi yararlı olur.](./media/image21.png)
+![Bir olay veri yolu soyutlama katmanının eklenmesini gösteren diyagram.](./media/integration-event-based-microservice-communications/multiple-implementations-event-bus.png)
 
 **Şekil 6-20.** Bir olay veri yolunun birden çok uygulaması
 
-Ancak, daha önce bahsedildiği gibi, kendi soyutlarınızın (olay veri yolu arabirimi) kullanılması yalnızca, soyutlamalar tarafından desteklenen temel olay veri yolu özelliklerine ihtiyacınız varsa iyidir. Daha zengin Service Bus özelliklerine ihtiyacınız varsa, büyük olasılıkla kendi soyutlamaları yerine tercih ettiğiniz ticari hizmet veri yolu tarafından sunulan API 'yi ve soyutlamaları kullanmanız gerekir.
+Veri yolu, bir arabirim aracılığıyla tanımlanabilmesi ve bu sayede, Kbıbitmq Azure Service Bus veya diğerleri gibi çeşitli teknolojilerle uygulanabilmesi yararlı olur. Ancak, daha önce bahsedildiği gibi, kendi soyutlarınızın (olay veri yolu arabirimi) kullanılması yalnızca, soyutlamalar tarafından desteklenen temel olay veri yolu özelliklerine ihtiyacınız varsa iyidir. Daha zengin Service Bus özelliklerine ihtiyacınız varsa, büyük olasılıkla kendi soyutlamaları yerine tercih ettiğiniz ticari hizmet veri yolu tarafından sunulan API 'yi ve soyutlamaları kullanmanız gerekir.
 
 ### <a name="defining-an-event-bus-interface"></a>Olay veri yolu arabirimi tanımlama
 
@@ -123,10 +123,10 @@ public interface IEventBus
 }
 ```
 
-`Publish` Yöntemi basittir. Olay veri yolu, kendisine geçirilen tümleştirme olayını herhangi bir mikro hizmete veya hatta bu olaya abone olan bir dış uygulamaya yayınlayacak. Bu yöntem, olayı yayımlayan mikro hizmet tarafından kullanılır.
+`Publish` yöntemi basittir. Olay veri yolu, kendisine geçirilen tümleştirme olayını herhangi bir mikro hizmete veya hatta bu olaya abone olan bir dış uygulamaya yayınlayacak. Bu yöntem, olayı yayımlayan mikro hizmet tarafından kullanılır.
 
-`Subscribe` Yöntemler (bağımsız değişkenlere bağlı olarak birkaç uygulama olabilir), olayları almak isteyen mikro hizmetler tarafından kullanılır. Bu yöntemin iki bağımsız değişkeni vardır. Birincisi, (`IntegrationEvent`) uygulamasına abone olan tümleştirme olayıdır. İkinci bağımsız değişken, alıcı mikro hizmeti bu tümleştirme olay iletisini aldığında yürütülecek adlı `IIntegrationEventHandler<T>`tümleştirme olay işleyicisidir (veya geri çağırma yöntemidir).
+`Subscribe` Yöntemleri (bağımsız değişkenlere bağlı olarak birkaç uygulama olabilir), olayları almak isteyen mikro hizmetler tarafından kullanılır. Bu yöntemin iki bağımsız değişkeni vardır. Birincisi, Abone olunacak tümleştirme olayıdır (`IntegrationEvent`). İkinci bağımsız değişken, alıcı mikro hizmeti bu tümleştirme olay iletisini aldığında yürütülecek `IIntegrationEventHandler<T>`adlı tümleştirme olay işleyicisidir (veya geri çağırma yöntemidir).
 
 > [!div class="step-by-step"]
-> [Önceki](database-server-container.md)İleri
-> [](rabbitmq-event-bus-development-test-environment.md)
+> [Önceki](database-server-container.md)
+> [İleri](rabbitmq-event-bus-development-test-environment.md)

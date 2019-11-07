@@ -2,12 +2,12 @@
 title: Tek Yapılı Uygulamaları Kapsayıcıya Alma
 description: Tek parçalı uygulamaların kapsayıcılarından yararlanın, mikro hizmetler mimarisinin tüm avantajlarını almamakla birlikte, hemen teslim edilebilir önemli dağıtım avantajları vardır.
 ms.date: 09/20/2018
-ms.openlocfilehash: 5b38ba1c2954f4fd4064723b1316afbf09d25bf2
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e02aa4ff644fc26b7f15721866f8862f6a175cf2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771472"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737955"
 ---
 # <a name="containerizing-monolithic-applications"></a>Tek Yapılı Uygulamaları Kapsayıcıya Alma
 
@@ -15,11 +15,11 @@ Tek, tek parçalı olarak dağıtılan bir Web uygulaması veya hizmeti oluştur
 
 Bu modeli yönetmek için, uygulamayı temsil etmek üzere tek bir kapsayıcı dağıtırsınız. Kapasiteyi artırmak için ölçeği ölçeklendirebilirsiniz, diğer bir deyişle, yalnızca bir yük dengeleyiciye sahip daha fazla kopya eklersiniz. Kolaylık, tek bir kapsayıcıda veya VM 'de tek bir dağıtımı yönetmekten gelir.
 
-![Tek parçalı kapsayıcılı bir uygulama, iç katmanlar ya da kitaplıklar ile tek bir kapsayıcı içindeki işlevselliğinin çoğunu içerir, bu da kapsayıcıyı birden çok sunucu/VM 'de klonlayarak ölçeklendirir](./media/image1.png)
+![Tek parçalı Kapsayıcılı uygulamanın bileşenlerini gösteren diyagram.](./media/containerize-monolithic-applications/monolithic-containerized-application.png)
 
 **Şekil 4-1**. Kapsayıcılı tek parçalı uygulama mimarisine örnek
 
-Şekil 4-1 ' de gösterildiği gibi, her bir kapsayıcıya birden çok bileşen, kitaplık veya iç katman ekleyebilirsiniz. Ancak, bu tek parçalı bir model, "kapsayıcı tek bir işlem" ve bu işlemi bir işlemde yapar "kapsayıcı ilkesiyle çakışabilir, ancak bazı durumlarda tamam olabilir.
+Şekil 4-1 ' de gösterildiği gibi, her bir kapsayıcıya birden çok bileşen, kitaplık veya iç katman ekleyebilirsiniz. Tek parçalı kapsayıcılı bir uygulama, iç katmanlar ya da kitaplıklar içeren tek bir kapsayıcı içindeki işlevselliğinin çoğunu içerir ve kapsayıcıyı birden çok sunucu/VM 'de kopyalayarak ölçeği ölçeklendirir. Ancak, bu tek parçalı bir model, "kapsayıcı tek bir işlem" ve bu işlemi bir işlemde yapar "kapsayıcı ilkesiyle çakışabilir, ancak bazı durumlarda tamam olabilir.
 
 Uygulamanın büyümesi durumunda bu yaklaşımın aşağı kısmı, ölçeklendirilmesi gerekir. Uygulamanın tamamı ölçeklenebiliyorsanız, aslında bir sorun değildir. Ancak çoğu durumda, uygulamanın yalnızca birkaç bölümü ölçeklendirmeyi gerektiren sıkıştırma noktalarından, diğer bileşenler daha az kullanılır.
 
@@ -31,7 +31,7 @@ Ancak, tek parçalı yaklaşım yaygın bir uygulamadır çünkü uygulamanın g
 
 Altyapı açısından, her sunucu aynı ana bilgisayar içinde birçok uygulama çalıştırabilir ve Şekil 4-2 ' de gösterildiği gibi, kaynakların kullanımı için kabul edilebilir bir verimlilik içerebilir.
 
-![Bir konak, her biri ayrı bir kapsayıcıda olmak üzere çeşitli tek parçalı uygulamalar çalıştırabilir.](./media/image2.png)
+![Kapsayıcılarda birçok uygulama çalıştıran bir konağı gösteren diyagram.](./media/containerize-monolithic-applications/host-multiple-apps-containers.png)
 
 **Şekil 4-2**. Tek parçalı yaklaşım: bir kapsayıcı olarak çalışan birden çok uygulamayı çalıştıran konak
 
@@ -39,7 +39,7 @@ Microsoft Azure tek parçalı uygulamalar, her örnek için adanmış VM 'Ler ku
 
 Soru-cevap ortamında veya sınırlı bir üretim ortamında, Şekil 4-3 ' de gösterildiği gibi birden çok Docker Konağı sanal makinesi dağıtabilir ve bunları Azure dengeleyicisi kullanarak dengeleyebilirsiniz. Bu, tüm uygulamanın tek bir kapsayıcı içinde bulunduğu için ölçeği kaba bir yaklaşım ile yönetmenizi sağlar.
 
-![Her biri tek parçalı uygulamayla bir kapsayıcı çalıştıran birçok ana bilgisayar.](./media/image3.png)
+![Tek parçalı uygulama kapsayıcılarını çalıştıran çeşitli Konakları gösteren diyagram.](./media/containerize-monolithic-applications/docker-infrastructure-monolithic-application.png)
 
 **Şekil 4-3**. Tek bir kapsayıcı uygulamasını ölçeklendirerek birden çok ana bilgisayar örneği
 
@@ -59,7 +59,7 @@ Tek parçalı uygulamalar Docker 'tan faydalanabilir, ancak avantajlara dokunuyo
 
 Azure 'a dağıtılan bir kapsayıcının doğrulanmasını mi yoksa bir uygulamanın yalnızca tek kapsayıcılı bir uygulama olduğu durumlarda Azure App Service, ölçeklenebilir tek kapsayıcı tabanlı hizmetler sağlamak için harika bir yol sağlar. Azure App Service kullanmak basittir. Kodunuzu almak, Visual Studio 'da derlemek ve doğrudan Azure 'a dağıtmak için git ile harika bir tümleştirme sağlar.
 
-![Visual Studio 'dan Azure App Service için tek bir kapsayıcı uygulamayı yayımlamaya yönelik sihirbaz](./media/image4.png)
+![Container Registry gösteren App Service oluştur iletişim kutusunun ekran görüntüsü.](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
 
 **Şekil 4-4**. Visual Studio 'dan Azure App Service için tek kapsayıcılı bir uygulama yayımlama
 

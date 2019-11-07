@@ -2,12 +2,12 @@
 title: CQRS mikro hizmetinde okuma/sorgulama işlemleri uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | CQRS 'nin sorgular tarafının, Davber kullanarak eShopOnContainers 'daki sıralama mikro hizmeti üzerinde uygulanmasını anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 6541a0cb7ce8ac3946e119483308d91158bdb522
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 064abd084ea6b99229f995f8ca899a99b69b7bc2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094061"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740043"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS mikro hizmetinde okuma/sorgu uygulama
 
@@ -15,15 +15,15 @@ Okuma/sorgular için, eShopOnContainers başvuru uygulamasından gelen sıralama
 
 Şekil 7-3 ' de gösterildiği gibi yaklaşım basittir. API arabirimi, Web API denetleyicileri tarafından, kaber gibi mikro nesne Ilişkisel Eşleyici (ORM) ve Kullanıcı arabirimi uygulamalarının ihtiyaçlarına bağlı olarak dinamik Viewmodeller gibi bir altyapı kullanılarak uygulanır.
 
-![Basitleştirilmiş bir CQRS yaklaşımında bulunan sorgular-tarafı için en basit yaklaşım, yalnızca bir Micro-ORM gibi, dinamik ViewModel döndüren veritabanı sorgulanarak uygulanabilir.](./media/image3.png)
+![Basitleştirilmiş CQRS 'de üst düzey sorgu-tarafı gösteren diyagram.](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
 
 **Şekil 7-3**. Bir CQRS mikro hizmetindeki sorgular için en basit yaklaşım
 
-Bu, sorgular için mümkün olan en basit yaklaşımdır. Sorgu tanımları veritabanını sorgular ve her sorgu için anında oluşturulmuş dinamik bir ViewModel döndürür. Sorgular ıdempotent olduğundan, bir sorgu kaç kez çalıştırıldıklarından bağımsız olarak verileri değiştirmez. Bu nedenle, işlem tarafında, Toplamalar ve diğer desenler gibi kullanılan DDD deseniyle kısıtlanması gerekmez ve sorguların işlem alanından ayrılması neden olur. Yalnızca Kullanıcı arabiriminin gerek duyduğu verilerin veritabanını sorgular ve SQL deyimlerinin kendisi hariç her yerde statik olarak tanımlanması gerekmeyen dinamik bir ViewModel (ViewModel için sınıf olmadan) döndürür.
+Basitleştirilmiş bir CQRS yaklaşımında bulunan sorgular-tarafı için en basit yaklaşım, yalnızca bir Micro-ORM gibi, dinamik ViewModel döndüren veritabanı sorgulanarak uygulanabilir. Sorgu tanımları veritabanını sorgular ve her sorgu için anında oluşturulmuş dinamik bir ViewModel döndürür. Sorgular ıdempotent olduğundan, bir sorgu kaç kez çalıştırıldıklarından bağımsız olarak verileri değiştirmez. Bu nedenle, işlem tarafında, Toplamalar ve diğer desenler gibi kullanılan DDD deseniyle kısıtlanması gerekmez ve sorguların işlem alanından ayrılması neden olur. Yalnızca Kullanıcı arabiriminin gerek duyduğu verilerin veritabanını sorgular ve SQL deyimlerinin kendisi hariç her yerde statik olarak tanımlanması gerekmeyen dinamik bir ViewModel (ViewModel için sınıf olmadan) döndürür.
 
 Bu basit bir yaklaşım olduğundan, sorgular tarafı için gereken kod (örneğin, mikro ORM 'yi kullanan kod [gibi)](https://github.com/StackExchange/Dapper) [aynı Web API projesi içinde](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)uygulanabilir. Şekil 7-4 bunu gösterir. Sorgular, eShopOnContainers çözümünde **sıralama. API** mikro hizmet projesinde tanımlanmıştır.
 
-![Uygulama > sorguları klasörünü gösteren sıralama. API projesinin Çözüm Gezgini görünümü.](./media/image4.png)
+![Sıralama. API projesinin sorgular klasörünün ekran görüntüsü.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
 **Şekil 7-4**. EShopOnContainers 'da sıralama mikro hizmetindeki sorgular
 
@@ -41,7 +41,7 @@ Sorgulamak için herhangi bir mikro ORM, Entity Framework Core veya hatta düz A
 
 Kaber, açık kaynaklı bir projem (orijinal, Sam Saffron tarafından oluşturulan) ve [Stack Overflow](https://stackoverflow.com/)' de kullanılan yapı taşlarının bir parçasıdır. Kaber 'yi kullanmak için, aşağıdaki şekilde gösterildiği gibi, bunu yalnızca [kaber NuGet paketi](https://www.nuget.org/packages/Dapper)aracılığıyla yüklemeniz gerekir:
 
-![VS 'de NuGet paketlerini yönet görünümünde görüntülenen kaber paketi.](./media/image4.1.png)
+![NuGet paketleri görünümündeki kaber paketinin ekran görüntüsü.](./media/cqrs-microservice-reads/drapper-package-nuget.png)
 
 Kodunuzun kaber genişletme yöntemlerine erişimi olması için using ifadesini de eklemeniz gerekir.
 
@@ -177,7 +177,7 @@ Bu, açık olarak döndürülen türlerin uzun dönemde dinamik türlerden daha 
 
 Aşağıdaki görüntüde, Swagger Kullanıcı arabiriminin ResponseType bilgilerini nasıl gösterdiğini görebilirsiniz.
 
-![Sıralama API 'SI için Swagger Kullanıcı arabirimi sayfasının tarayıcı görünümü.](./media/image5.png)
+![Sıralama API 'SI için Swagger Kullanıcı arabirimi sayfasının ekran görüntüsü.](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
 
 **Şekil 7-5**. Bir Web API 'sinden yanıt türlerini ve olası HTTP durum kodlarını gösteren Swagger Kullanıcı arabirimi
 

@@ -2,22 +2,22 @@
 title: Docker nedir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Docker nedir?
 ms.date: 08/31/2018
-ms.openlocfilehash: 6fb08157a78bfaee48e0bf919fc5942eadf0f287
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 215d756c631440c99a3a8ad8128ec61fef3bc26d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771354"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740118"
 ---
 # <a name="what-is-docker"></a>Docker nedir?
 
 [Docker](https://www.docker.com/) , uygulamaların bulutta veya şirket içinde çalışabilen, taşınabilir, kendi kendine yeterli kapsayıcı olarak dağıtımını otomatik hale getirmeye yönelik [Açık kaynaklı bir projem](https://github.com/docker/docker) . Docker Ayrıca, Microsoft dahil olmak üzere bulut, Linux ve Windows satıcılarıyla birlikte çalışarak bu teknolojiyi tanıtan ve geliştikçe bir [şirkettir](https://www.docker.com/) .
 
-![Docker kapsayıcıları, müşteri veri merkezinde her yerde, şirket içi bir hizmet sağlayıcısında veya bulutta, Azure 'da her yerde çalışabilir.](./media/image2.png)
+![Docker kapsayıcısının çalışacağı yerleri gösteren diyagram.](./media/docker-defined/docker-containers-run-anywhere.png)
 
-**Şekil 2-2**. Docker, kapsayıcıyı karma bulutun tüm katmanlarında dağıtır
+**Şekil 2-2**. Docker, kapsayıcıyı karma bulutun tüm katmanlarında dağıtır.
 
-Docker görüntü kapsayıcıları, Linux ve Windows üzerinde yerel olarak çalışabilir. Ancak, Windows yansımaları yalnızca Windows konakları üzerinde çalışabilir ve Linux görüntüleri Linux konakları ve Windows konakları üzerinde çalıştırılabilir (Bu nedenle, ana bilgisayar bir sunucu veya VM anlamına gelir).
+Docker kapsayıcıları, müşteri veri merkezinde her yerde, şirket içi bir hizmet sağlayıcısında veya bulutta, Azure 'da her yerde çalışabilir. Docker görüntü kapsayıcıları, Linux ve Windows üzerinde yerel olarak çalışabilir. Ancak, Windows yansımaları yalnızca Windows konakları üzerinde çalışabilir ve Linux görüntüleri Linux konakları ve Windows konakları üzerinde çalıştırılabilir (Bu nedenle, ana bilgisayar bir sunucu veya VM anlamına gelir).
 
 Geliştiriciler Windows, Linux veya macOS 'ta geliştirme ortamlarını kullanabilir. Geliştirme bilgisayarında, geliştirici, uygulama ve bağımlılıkları dahil olmak üzere Docker görüntülerinin dağıtıldığı bir Docker ana bilgisayarı çalıştırır. Linux veya Mac üzerinde çalışan geliştiriciler, Linux tabanlı bir Docker Konağı kullanır ve yalnızca Linux kapsayıcıları için görüntü oluşturabilirler. (Mac üzerinde çalışan geliştiriciler kodu düzenleyebilir veya macOS 'tan Docker CLı 'yi çalıştırabilir, ancak bu yazma sırasında kapsayıcılar doğrudan macOS üzerinde çalışmaz.) Windows üzerinde çalışan geliştiriciler, Linux ya da Windows kapsayıcıları için görüntü oluşturabilir.
 
@@ -37,10 +37,12 @@ Bu kapsayıcıların görüntüleri aynı şekilde oluşturulur ve aynı işlevi
 
 | Sanal Makineler | Docker Kapsayıcıları |
 | -----------------| ------------------|
-|![VM 'Ler için, aşağıdan yukarıya ana bilgisayar sunucusunda üç temel katman vardır: altyapı, ana bilgisayar Işletim sistemi ve hiper yönetici ve her VM 'nin kendi işletim sistemi ve tüm gerekli kitaplıklar vardır.](./media/image3.png)|![Docker için, konak sunucusu yalnızca altyapıyı ve işletim sistemini, kapsayıcıyı yalıtılmış ancak temel işletim sistemi hizmetlerini paylaşan kapsayıcı altyapısını barındırır.](./media/image4.png)|
+|![Geleneksel bir sanal makinenin donanım/yazılım yığınını gösteren diyagram.](./media/docker-defined/virtual-machine-hardware-software.png)|![Docker kapsayıcıları için donanım/yazılım yığınını gösteren diyagram.](./media/docker-defined/docker-container-hardware-software.png)|
 |Sanal makineler, uygulamayı, gerekli kitaplıkları veya ikili dosyaları ve tam Konuk işletim sistemini içerir. Tam sanallaştırma kapsayıcıdan daha fazla kaynak gerektirir. | Kapsayıcılar, uygulamayı ve tüm bağımlılıklarını içerir. Ancak, IŞLETIM sistemi çekirdeğini konak işletim sistemindeki kullanıcı alanında yalıtılmış süreçler olarak çalışan diğer kapsayıcılarla paylaşır. (Hyper-V kapsayıcıları dışında, her kapsayıcının kapsayıcı başına özel bir sanal makine içinde çalıştığı yer.) |
 
 **Şekil 2-3**. Geleneksel sanal makinelerin Docker kapsayıcılarına karşılaştırması
+
+VM 'Ler için, aşağıdan yukarıya ana bilgisayar sunucusunda üç temel katman vardır: altyapı, ana bilgisayar Işletim sistemi ve hiper yönetici ve her VM 'nin kendi işletim sistemi ve tüm gerekli kitaplıklar vardır. Docker için, konak sunucusu yalnızca altyapıyı ve işletim sistemini, kapsayıcıyı yalıtılmış ancak temel işletim sistemi hizmetlerini paylaşan kapsayıcı altyapısını barındırır.
 
 Kapsayıcılar çok daha az kaynak gerektirdiğinden (örneğin, tam bir işletim sistemine gerek kalmaz), kolayca dağıtılır ve hızlı bir başlangıç yapabilirsiniz. Bu, daha yüksek yoğunluklu hale gelir, yani aynı donanım biriminde daha fazla hizmet çalıştırmanıza olanak tanır ve böylece maliyetleri azaltır.
 

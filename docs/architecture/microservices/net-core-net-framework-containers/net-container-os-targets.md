@@ -2,12 +2,12 @@
 title: .NET kapsayıcıları ile hangi işletim sistemi hedeflenmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | .NET kapsayıcıları ile hedef işletim sistemi
 ms.date: 01/07/2019
-ms.openlocfilehash: 8bcfa0212f84c575a63f76e05edec1e511cadc36
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: dcf91f5ab808a8704201979f6bab1140c3343bce
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772009"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736914"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>.NET kapsayıcıları ile hangi işletim sistemi hedeflenmelidir?
 
@@ -19,9 +19,11 @@ Linux için, resmi .NET Docker görüntülerinde (Deklik gibi) Çoklu destekler 
 
 Şekil 3-1 ' de, kullanılan .NET Framework 'e bağlı olarak olası işletim sistemi sürümünü görebilirsiniz.
 
-![Eski .NET Framework uygulamalar dağıtıldığında, eski uygulamalarla ve IIS ile uyumlu Windows Server çekirdeğini hedeflemek için daha büyük bir görüntü vardır. .NET Core uygulamaları dağıtıldığında, buluta iyileştirilmiş Windows nano Server 'ı hedefleyebilir, Kestrel kullanır ve daha hızlı başlar. Ayrıca, Linux 'yi desteklemenin yanı sıra alçam ve diğerlerini de kullanabilirsiniz. Ayrıca Kestrel kullanır ve daha hızlı başlatılır.](./media/image1.png)
+![Hangi .NET kapsayıcılarıyla kullanılacak işletim sistemini gösteren diyagram.](./media/net-container-os-targets/targeting-operating-systems.png)
 
 **Şekil 3-1.** .NET Framework sürümüne bağlı olarak hedeflenecek işletim sistemleri
+
+Eski .NET Framework uygulamalar dağıtıldığında, eski uygulamalarla ve IIS ile uyumlu olan Windows Server çekirdeğini hedeflemek gerekir, ancak daha büyük bir görüntü içerir. .NET Core uygulamaları dağıtıldığında, buluta iyileştirilmiş Windows nano Server 'ı hedefleyebilir, Kestrel kullanır ve daha hızlı başlar. Ayrıca, Linux 'yi desteklemenin yanı sıra alçam ve diğerlerini de kullanabilirsiniz. Ayrıca, Kestrel kullanır, daha küçüktür ve daha hızlı başlar.
 
 Ayrıca, farklı bir Linux veya Microsoft tarafından sağlanmayan sürümlere sahip bir görüntü istediğiniz durumlarda kendi Docker görüntünüzü oluşturabilirsiniz. Örneğin, Docker için olmayan-yaygın bir senaryo olan geleneksel .NET Framework ve Windows Server Core üzerinde çalışan ASP.NET Core bir görüntü oluşturabilirsiniz.
 

@@ -1,14 +1,14 @@
 ---
 title: WCF geliştiricileri için ASP.NET Core gRPC-WCF geliştiricileri için gRPC
-description: YAZıLACAK
+description: WCF geliştiricileri için ASP.NET Core 3,0 ' de gRPC hizmetleri oluşturmaya giriş
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6a5b4f6d0b47a272f7a753e22bfd61b06202944a
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: b89f5974dd18e7005c6479c5b9eead039364e654
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919372"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738078"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>WCF Geliştiricileri için ASP.NET Core gRPC
 
@@ -50,23 +50,15 @@ Edit
 
 ## <a name="introduction"></a>Giriş
 
-TODO
-
-## <a name="purpose"></a>Amaç
-
-TODO
+gRPC, ağa bağlı hizmetler ve dağıtılmış uygulamalar oluşturmaya yönelik modern bir çerçevedir. SOAP 'nin platformlar arası birlikte çalışabilirliği ile WCF 'nin NetTCP bağlamalarının performansını düşünün. , uygulamalar ve hizmetler arasında yüksek performans, düşük bant genişliğine sahip bir iletişim sağlamak için HTTP/2 ve prototip ileti kodlama protokolü üzerinde gRPC derlemeleri. .NET, Java, Python, Node. js, go C++ ve daha fazlasını içeren en popüler programlama dilleri ve platformları genelinde sunucu ve istemci kodu üretimini destekler. ASP.NET Core 3,0 ' de gRPC için birinci sınıf destek sayesinde, mevcut gRPC araçları ve .NET 4. x kitaplıklarının yanı sıra, kuruluşlarda .NET Core 'u benimsemek isteyen geliştirme ekiplerine yönelik WCF için mükemmel bir alternatif olduğunu düşündük.
 
 ## <a name="who-should-use-this-guide"></a>Bu kılavuzu kimler kullanmalıdır?
 
-**BUNU GÜNCELLEŞTIR**
-
-Bu kılavuzun hedef kitlesi, .NET Framework 4 ' te WCF çözümlerini, gRPC hizmetlerini kullanarak ASP.NET Core 3,0 ' ye geçirmeye ilgilenen WCF geliştiricileri, geliştirme müşteri adayları ve mimarlardır.
+Bu kılavuz, daha önce WCF kullanan ve .NET Core 3,0 ve sonraki sürümleri için uygulamalarını modern bir RPC ortamına geçirmeyi arayan .NET Framework veya .NET Core 'da çalışan geliştiriciler için yazılmıştır. Bu kılavuz, yerleşik gRPC araçlarını kullanmak isteyen geliştiriciler için .NET Core 3,0 ' a yükseltmeyi veya kullanmayı düşünürken daha genel kullanım de olabilir.
 
 ## <a name="how-you-can-use-this-guide"></a>Bu Kılavuzu nasıl kullanabileceğiniz
 
-**BUNU GÜNCELLEŞTIR**
-
-Bu, WCF 'ye benzer bir platform olarak belirli bir başvuru ile ASP.NET Core 3,0 ' de gRPC hizmetleri oluşturmaya yönelik kısa bir giriş niteliğindedir. GRPC 'nin ilkelerini açıklar, her bir kavramı WCF 'nin eşdeğer özellikleriyle birbirleriyle ilgili olarak, mevcut bir WCF uygulamasının gRPC 'ye geçirilmesi için rehberlik sunar. Ayrıca, WCF deneyimi olan ve yeni hizmetler oluşturmak üzere gRPC 'yi öğrenmek isteyen geliştiriciler için de kullanışlıdır. Örnek uygulama, kendi projeleriniz için bir şablon veya başvuru olarak veya defterden veya örneklerinden kodu kopyalayıp yeniden kullandığınızda ücretsiz olarak kullanılabilir.
+Bu, WCF 'ye benzer bir platform olarak belirli bir başvuru ile ASP.NET Core 3,0 ' de gRPC hizmetleri oluşturmaya yönelik kısa bir giriş niteliğindedir. GRPC 'nin ilkelerini açıklar, her bir kavramı WCF 'nin eşdeğer özellikleriyle birbirleriyle ilgili olarak, mevcut bir WCF uygulamasının gRPC 'ye geçirilmesi için rehberlik sunar. Ayrıca, WCF deneyimi olan ve yeni hizmetler oluşturmak üzere gRPC 'yi öğrenmek isteyen geliştiriciler için de kullanışlıdır. Örnek uygulamalar, kendi projeleriniz için bir şablon veya başvuru olarak kullanılabilir ve kodu kitap veya örneklerinden kopyalayabilir ve yeniden kullanabilirsiniz.
 
 Bu noktaların ve fırsatların yaygın olarak anlaşılmasına yardımcı olmak için bu kılavuzu ekibinize iletmekten çekinmeyin. Her bir gövdenin ortak bir terminoloji kümesinden ve temel ilkelerin üzerinde çalışmasını sağlamak, mimari desenlerinin ve uygulamaların tutarlı olmasını sağlamaya yardımcı olur.
 

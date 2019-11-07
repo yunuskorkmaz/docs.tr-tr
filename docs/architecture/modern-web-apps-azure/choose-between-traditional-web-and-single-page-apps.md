@@ -4,17 +4,17 @@ description: Web uygulamaları oluştururken geleneksel web uygulamaları ve tek
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: d68c167dce791a31eeb5ca5729b50ec22c64f9b0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ede64249705aba3f22a9663b8a258e41f030aca
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296404"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739449"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web Apps ve tek sayfalı uygulamalar (maça 'Lar) arasında seçim yapın
 
-> "Atwood 'ın yasaları: JavaScript 'te yazılabilen tüm uygulamalar, sonunda JavaScript 'e yazılır. "  
-> _\-Jeff Atwood_
+> "Atwood 'ın yasaları: JavaScript 'te yazılabilen tüm uygulamalar, sonunda JavaScript 'e yazılır."  
+> _\- Jeff Atwood_
 
 Günümüzde web uygulamaları oluşturmaya yönelik iki genel yaklaşım vardır: sunucuda uygulama mantığının çoğunu gerçekleştiren geleneksel web uygulamaları ve bir Web tarayıcısında Kullanıcı arabirimi mantığının çoğunu gerçekleştiren tek sayfalı uygulamalar (maça 'Lar) Web API 'Leri kullanarak Web sunucusuyla iletişim kurma. Karma yaklaşım da olasıdır, en basit, daha büyük bir geleneksel Web uygulaması içinde bir veya daha fazla zengin SPA benzeri alt uygulama barındırmakta.
 
@@ -40,7 +40,7 @@ SPA modeliyle mümkün kılınan Kullanıcı deneyimindeki iyileştirmeler, bu n
 
 ## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3,0, Blazor adlı zengin, etkileşimli ve birleştirilebilir Kullanıcı arabirimi oluşturmak için yeni bir model sunar. Blazor sunucu tarafında, geliştiricilerin sunucuda Razor ile Kullanıcı arabirimi oluşturmalarına ve bu kodun tarayıcıya teslim edilmesi ve WebAssembly adlı bir JavaScript kitaplığı aracılığıyla istemci tarafında yürütülmesi sağlanır. ASP.NET Core 3,0, hala geliştirme aşamasındadır, ancak bu e-kitap için 3,0 güncelleştirmesinde bu teknolojide daha fazla görmeyi beklemelisiniz. Blazor hakkında daha fazla bilgi için bkz. [Blazor ile çalışmaya başlama](https://blazor.net/docs/get-started.html).
+ASP.NET Core 3,0, Blazor adlı zengin, etkileşimli ve birleştirilebilir Kullanıcı arabirimi oluşturmak için yeni bir model sunar. Blazor sunucu tarafında, geliştiricilerin sunucuda Razor ile Kullanıcı arabirimi oluşturmalarına ve bu kodun tarayıcıya teslim edilmesi ve [Webassembly](https://webassembly.org/)kullanarak istemci tarafında yürütülmesi sağlanır. ASP.NET Core 3,0, hala geliştirme aşamasındadır, ancak bu e-kitap için 3,0 güncelleştirmesinde bu teknolojide daha fazla görmeyi beklemelisiniz. Blazor hakkında daha fazla bilgi için bkz. [Blazor ile çalışmaya başlama](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Geleneksel Web uygulamalarını seçme
 
@@ -90,10 +90,10 @@ Aşağıdaki karar tablosu, geleneksel bir Web uygulaması ve SPA arasında seç
 | **Çarpan**                                           | **Geleneksel Web uygulaması** | **Tek Sayfalı Uygulama** |
 | ---------------------------------------------------- | ----------------------- | --------------------------- |
 | JavaScript/TypeScript ile gerekli takım hakkında benzerlik | **En az**             | **Gerekli**                |
-| Betik olmadan destek tarayıcıları                   | **Destekleniyor**           | **Desteklenmiyor**           |
+| Betik olmadan destek tarayıcıları                   | **Destek**           | **Desteklenmiyor**           |
 | En az Istemci tarafı uygulama davranışı             | **İyi uygun**         | **Gereğinden fazla**                |
 | Zengin, karmaşık kullanıcı arabirimi gereksinimleri            | **Az**             | **İyi uygun**             |
 
 >[!div class="step-by-step"]
->[Önceki](modern-web-applications-characteristics.md)İleri
->[](architectural-principles.md)
+>[Önceki](modern-web-applications-characteristics.md)
+>[İleri](architectural-principles.md)
