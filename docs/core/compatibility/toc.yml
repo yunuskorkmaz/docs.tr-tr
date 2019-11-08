@@ -1,4 +1,4 @@
-- name: Uygulama Uyumluluğu
+- name: Uygulama uyumluluğu
   items:
     - name: Hataya neden olan değişiklikleri değerlendirme
       href: index.md
@@ -10,7 +10,7 @@
       items:
         - name: .NET Framework - .NET Core
           href: framework-core.md
-        - name: 2.2 - 3.0
+        - name: 2.2’den 3.0’a
           href: 2.2-3.0.md
         - name: 3.0 Preview 6 - 3.0 Preview 7
           href: 3.0.6-3.0.7.md

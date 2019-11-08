@@ -7,6 +7,8 @@
           href: system-text-json-overview.md
         - name: JSON’u seri hale getirme ve seri halden çıkarma
           href: system-text-json-how-to.md
+        - name: Özel dönüştürücü yazma
+          href: system-text-json-converters-how-to.md
     - name: İkili Serileştirme
       href: binary-serialization.md
       items:
