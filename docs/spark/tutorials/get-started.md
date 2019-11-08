@@ -1,15 +1,15 @@
 ---
 title: Apache Spark için .NET ile çalışmaya başlama
 description: Windows 'da .NET Core kullanarak Apache Spark uygulaması için .NET çalıştırmayı öğrenin.
-ms.date: 06/27/2019
+ms.date: 11/04/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 19efc8412d834d73069c61e1cc1ccd9e5eb8593b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1b736e078eea40e399882c0df020062b6aa758ad
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774371"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740521"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Öğretici: Apache Spark için .NET ile çalışmaya başlama
 
@@ -20,104 +20,192 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > * .NET için Windows ortamınızı Apache Spark için hazırlayın
-> * **Microsoft. spark. Worker** 'ı indirin
-> * Apache Spark uygulama için basit bir .NET oluşturun ve çalıştırın
+> * İlk .NET Apache Spark uygulamanızı yazma
+> * Apache Spark uygulamanızı basit .NET için derleyin ve çalıştırın
 
 ## <a name="prepare-your-environment"></a>Ortamınızı hazırlama
 
-Başlamadan önce, komut satırınızdan `dotnet`, `java`, `mvn`, `spark-shell` ' ü çalıştıradığınızdan emin olun. Ortamınız zaten hazırlanmışsa bir sonraki bölüme atlayabilirsiniz. Komutlardan herhangi birini veya tümünü çalıştıradıysanız aşağıdaki adımları izleyin.
+Uygulamanızı yazmaya başlamadan önce bazı önkoşul bağımlılıklarını belirlemeniz gerekir. Komut satırı ortamınızdan `dotnet`, `java`, `mvn``spark-shell` çalıştırabiliyorsanız, ortamınız zaten hazırlanmışsa ve sonraki bölüme atlayabilirsiniz. Komutlardan herhangi birini veya tümünü çalıştırabiliyorsanız, aşağıdaki adımları uygulayın.
 
-1. [.NET Core 2.1 x SDK 'sını](https://dotnet.microsoft.com/download/dotnet-core/2.1)indirip yükleyin. SDK yükleme, yolunuza `dotnet` araç zinciri ekler. Yüklemeyi doğrulamak için `dotnet --version` PowerShell komutunu kullanın.
+### <a name="1-install-net"></a>1. .NET 'i yükler
 
-2. En son güncelleştirmelerle [Visual studio 2017](https://www.visualstudio.com/downloads/) veya [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/) ' ü yükler. Community, Professional veya Enterprise 'u kullanabilirsiniz. Topluluk sürümü ücretsizdir.
+.NET uygulamaları oluşturmaya başlamak için .NET SDK 'sını (yazılım geliştirme seti) indirmeniz ve yüklemeniz gerekir.
 
-   Yükleme sırasında aşağıdaki iş yüklerini seçin:
-      * .NET masaüstü geliştirme
-          * Tüm gerekli bileşenler
-          * .NET Framework 4.6.1 geliştirme araçları
-      * .NET Core platformlar arası geliştirme
-          * Tüm gerekli bileşenler
+[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)indirin ve yükleyin. SDK yükleme, yolunuza `dotnet` araç zinciri ekler. 
 
-3. [Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)' i yükler.
+.NET Core SDK yükledikten sonra, yeni bir komut istemi açın ve `dotnet`çalıştırın.
 
-    * İşletim sisteminiz için uygun sürümü seçin. Örneğin, bir Windows x64 makinesi için **JDK-8u201-Windows-x64. exe** ' yi seçin.
-    * Yüklemeyi doğrulamak için `java -version` PowerShell komutunu kullanın.
+Komut çalışır ve DotNet kullanımı hakkında bilgi içeriyorsa, bir sonraki adıma geçebilir. `'dotnet' is not recognized as an internal or external command` hatası alırsanız, komutu çalıştırmadan önce **Yeni** bir komut istemi açtığınızdan emin olun. 
 
-4. [Apache Maven 3.6.0 +](https://maven.apache.org/download.cgi)'yi yükler.
-    * [Apache Maven 3.6.2](http://mirror.metrocast.net/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.zip)indirin.
-    * Yerel bir dizine ayıklayın. Örneğin, `c:\bin\apache-maven-3.6.2\`.
-    * [Yol ortam değişkeninizin](https://www.java.com/en/download/help/path.xml)Apache Maven 'i ekleyin. @No__t_0 çıkardıysanız, yolunuza `c:\bin\apache-maven-3.6.2\bin` eklersiniz.
-    * Yüklemeyi doğrulamak için `mvn -version` PowerShell komutunu kullanın.
+### <a name="2-install-java"></a>2. Java 'Yı Install
 
-5. [Apache Spark 2.3 +](https://spark.apache.org/downloads.html)' yı yükler. Apache Spark 2,4 + desteklenmez.
-    * [Apache Spark 2.3 +](https://spark.apache.org/downloads.html) indirin ve [7-zip](https://www.7-zip.org/) veya [WinZip](https://www.winzip.com/)gibi bir araç kullanarak yerel bir klasöre ayıklayın. Örneğin, `c:\bin\spark-2.3.2-bin-hadoop2.7\` ' a ayıklayabilirsiniz.
-    * [Path ortam değişkeninizin](https://www.java.com/en/download/help/path.xml)Apache Spark ekleyin. @No__t_0 çıkardıysanız, yolunuza `c:\bin\spark-2.3.2-bin-hadoop2.7\bin` eklersiniz.
-    * @No__t_1 adlı [Yeni bir ortam değişkeni](https://www.java.com/en/download/help/path.xml) ekleyin. @No__t_0 çıkardıysanız, **değişken değeri**için `C:\bin\spark-2.3.2-bin-hadoop2.7\` kullanın.
-    * Komut satırınızdan `spark-shell` çalıştırabildiğinizi doğrulayın.
+[Java 8,1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)' i yükler.
 
-6. [Winutils](https://github.com/steveloughran/winutils)'i ayarlayın.
-    * Winutils **. exe** Ikili dosyasını [winutils deposundan](https://github.com/steveloughran/winutils)indirin. Spark dağıtımının derlenmiş olduğu Hadoop sürümünü seçin. Örneğin, **Spark 2.3.2**için **Hadoop-2.7.1** kullanırsınız. Hadoop sürümü, Spark install klasörünüzün adının sonunda açıklanmalıdır.
-    * **Winutils. exe** ikilisini istediğiniz bir dizine kaydedin. Örneğin, `c:\hadoop\bin`.
-    * @No__t_0, `bin` olmadan **winutils. exe** ile dizini yansıtacak şekilde ayarlayın. Örneğin, `c:\hadoop`.
-    * PATH ortam değişkenini `%HADOOP_HOME%\bin` içerecek şekilde ayarlayın.
+İşletim sisteminiz için uygun sürümü seçin. Örneğin, bir Windows x64 makinesi için **JDK-8u201-Windows-x64. exe** ' yi seçin. Ardından, yüklemeyi doğrulamak için `java` komutunu kullanın.
+   
+![Java Indirme](https://dotnet.microsoft.com/static/images/java-jdk-downloads-windows.png?v=6BbJHoNyDO-PyYVciImr5wzh2AW_YHNcyb3p093AwPA)
 
-Bir sonraki bölüme geçmeden önce komut satırınızdan `dotnet`, `java`, `mvn`, `spark-shell` ' ü çalıştırıp çalıştırabileceğinizi iki kez denetleyin.
+### <a name="3-install-7-zip"></a>3.7-zip ' i yükler
 
-## <a name="download-the-microsoftsparkworker-release"></a>Microsoft. spark. Worker sürümünü indirin
+Apache Spark, sıkıştırılmış. tgz dosyası olarak indirilir. Dosyayı ayıklamak için 7-zip gibi bir ayıklama programı kullanın.
 
-1. [Microsoft. spark. Worker](https://github.com/dotnet/spark/releases) sürümünü, Apache Spark GitHub yayınları sayfasından yerel makinenize indirin. Örneğin, `c:\bin\Microsoft.Spark.Worker\` yoluna indirebilirsiniz.
+* [7 ZIP indiriyi](https://www.7-zip.org/)ziyaret edin.
+* Sayfadaki ilk tabloda, işletim sisteminize bağlı olarak 32 bit x86 veya 64 bit x64 indirmeyi seçin.
+* Yükleme tamamlandığında, yükleyiciyi çalıştırın.
+   
+![7Zip Indir](https://dotnet.microsoft.com/static/images/7-zip-downloads.png?v=W6qWtFC1tTMKv3YGXz7lBa9F3M22uWyTvkMmunyroNk)
 
-2. @No__t_1 adlı [Yeni bir ortam değişkeni](https://www.java.com/en/download/help/path.xml) oluşturun ve bunu **Microsoft. spark. Worker**' i indirdiğiniz ve ayıkladığınız dizine ayarlayın. Örneğin, `c:\bin\Microsoft.Spark.Worker`.
+### <a name="4-install-apache-spark"></a>4. Apache Spark yüklemesi
 
-## <a name="clone-the-net-for-apache-spark-github-repo"></a>Apache Spark GitHub deposunun .NET kopyasını kopyalama
+[Apache Spark indirin ve yükleyin](https://spark.apache.org/downloads.html). 2,3. * veya 2.4.0, 2.4.1, 2.4.3 veya 2.4.4 (.NET Apache Spark Apache Spark diğer sürümleriyle uyumlu değildir) arasından seçim yapmanız gerekir.  
 
-Apache Spark deposunu makinenize kopyalamak için aşağıdaki [GitBash](https://gitforwindows.org/) komutunu kullanın.
+Aşağıdaki adımlarda kullanılan komutlar, [2.4.1 Apache Spark indirdiğiniz ve yüklediğiniz](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz)varsayılır. Farklı bir sürüm kullanmak istiyorsanız, **2.4.1** değerini uygun sürüm numarasıyla değiştirin. Ardından, **. tar** dosyasını ve Apache Spark dosyalarını ayıklayın.
 
-```bash
-git clone https://github.com/dotnet/spark.git c:\github\dotnet-spark
+İç içe geçmiş **. tar** dosyasını ayıklamak için:
+
+* İndirdiğiniz **Spark-2.4.1-bin-Hadoop 2.7. tgz** dosyasını bulun.
+* Dosyaya sağ tıklayın ve **7-ZIP-> buradan Ayıkla**' yı seçin.
+* **Spark-2.4.1-bin-Hadoop 2.7. tar** , indirdiğiniz **. tgz** dosyası ile birlikte oluşturulur.
+
+Apache Spark dosyalarını ayıklamak için:
+
+* **Spark-2.4.1-bin-Hadoop 2.7. tar** öğesine sağ tıklayın ve **7-ZIP-> dosyaları ayıkla ' yı seçin...**
+* **Ayıkla** alanına **c:\Bin** yazın.
+* **Ayıkla** alanının altındaki onay kutusunun işaretini kaldırın.
+* **Tamam ' ı**seçin.
+* Apache Spark dosyaları C:\bin\spark-2.4.1-bin-hadoop2.7\ ' ye ayıklanır
+      
+![Spark 'ı yükler](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
+    
+Apache Spark bulmak için kullanılan ortam değişkenlerini ayarlamak için aşağıdaki komutları çalıştırın:
+
+```console
+setx HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
+setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 ```
+
+Her şeyi yükledikten ve ortam değişkenlerinizi ayarladıktan sonra, **Yeni** bir komut istemi açın ve aşağıdaki komutu çalıştırın:
+
+`%SPARK_HOME%\bin\spark-submit --version`
+
+Komut çalışır ve sürüm bilgilerini yazdırıyorsa, sonraki adıma geçebilirsiniz.
+
+`'spark-submit' is not recognized as an internal or external command` bir hata alırsanız, **Yeni** bir komut istemi açtığınızdan emin olun.
+
+### <a name="5-install-net-for-apache-spark"></a>5. Apache Spark için .NET 'i yükler
+
+Apache Spark GitHub için .NET 'ten [Microsoft. spark. Worker](https://github.com/dotnet/spark/releases) sürümünü indirin. Örneğin, bir Windows makinesi kullanıyorsanız ve .NET Core 'u kullanmayı planlıyorsanız, [Windows x64 netcoreapp 2.1 sürümünü indirin](https://github.com/dotnet/spark/releases/download/v0.5.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip).
+
+Microsoft. spark. Worker öğesini ayıklamak için:
+
+* İndirdiğiniz **Microsoft. spark. Worker. netcoreapp 2.1. Win-x64-0.6.0. zip** dosyasını bulun.
+* Sağ tıklayıp **7 ZIP-> dosyaları ayıkla ' yı seçin...**
+* **Ayıkla** alanına **c:\Bin** yazın.
+* **Ayıkla** alanının altındaki onay kutusunun işaretini kaldırın.
+* **Tamam ' ı**seçin.
+  
+![.NET Spark 'ı yükler](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
+
+### <a name="6-install-winutils"></a>6. WinUtils 'i yükler
+
+Apache Spark için .NET, Apache Spark birlikte WinUtils 'in yüklenmesini gerektirir. [Winutils. exe dosyasını indirin](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe). Ardından, WinUtils 'ı **C:\bin\spark-2.4.1-bin-hadoop2.7\bin**'e kopyalayın.
+
+> [!NOTE]
+> Spark install klasörünüzün adının sonunda açıklanan farklı bir Hadoop sürümü kullanıyorsanız, Hadoop sürümünüzle uyumlu olan [WinUtils sürümünü seçin](https://github.com/steveloughran/winutils) . 
+
+### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7. DOTNET_WORKER_DIR ayarla ve bağımlılıkları denetle
+
+.NET uygulamaları tarafından Apache Spark .NET konumunu bulmak üzere kullanılan `DOTNET_WORKER_DIR` ortam değişkenini ayarlamak için aşağıdaki komutu çalıştırın:
+
+`setx DOTNET_WORKER_DIR "C:\bin\Microsoft.Spark.Worker-0.6.0"`
+
+Son olarak, bir sonraki bölüme geçmeden önce komut satırınızdan `dotnet`, `java`, `mvn``spark-shell` çalıştırıp çalıştırabileceğinizi iki kez kontrol edin.
 
 ## <a name="write-a-net-for-apache-spark-app"></a>Apache Spark uygulaması için .NET yazma
 
-1. **Visual Studio 'yu** açın ve **Dosya > Yeni Proje > konsol uygulaması (.NET Core) oluştur**' a gidin. Uygulamayı **Merhaba Spark**olarak adlandırın.
+### <a name="1-create-a-console-app"></a>1. konsol uygulaması oluşturma
 
-2. [Microsoft. Spark NuGet paketini](https://www.nuget.org/profiles/spark)yükler. NuGet paketlerini yükleme hakkında daha fazla bilgi için bkz. [NuGet paketini yüklemek Için farklı yollar](https://docs.microsoft.com/nuget/consume-packages/ways-to-install-a-package).
+Komut istemindeki yeni bir konsol uygulaması oluşturmak için aşağıdaki komutları çalıştırın:
 
-3. **Çözüm Gezgini**' de, **program.cs** açın ve aşağıdaki C# kodu yazın:
+```console
+dotnet new console -o mySparkApp
+cd mySparkApp
+```
 
-   ```csharp
-     var spark = SparkSession.Builder().GetOrCreate();
-     var df = spark.Read().Json("people.json");
-     df.Show();
-   ```
+`dotnet` komutu sizin için `console` türünde bir `new` uygulaması oluşturur. `-o` parametresi, uygulamanızın depolandığı *mySparkApp* adlı bir dizin oluşturur ve gerekli dosyalarla doldurur. `cd mySparkApp` komutu, dizini yeni oluşturduğunuz uygulama diziniyle değiştirir.
 
-4. Çözümü oluşturun.
+### <a name="2-install-nuget-package"></a>2. NuGet paketini yükler
+
+.NET uygulamasını bir uygulamada Apache Spark için kullanmak üzere Microsoft. Spark paketini yüklemek için. Komut isteminde aşağıdaki komutu çalıştırın:
+
+`dotnet add package Microsoft.Spark --version 0.6.0`
+
+### <a name="3-code-your-app"></a>3. uygulamanızı kodlayın
+
+Visual Studio Code veya herhangi bir metin düzenleyicisinde *program.cs* açın ve kodun tümünü aşağıdaki kodla değiştirin:
+
+```csharp
+using Microsoft.Spark.Sql;
+
+namespace MySparkApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Create a Spark session.
+            var spark = SparkSession
+                .Builder()
+                .AppName("word_count_sample")
+                .GetOrCreate();
+
+            // Create initial DataFrame.
+            DataFrame dataFrame = spark.Read().Text("input.txt");
+
+            // Count words.
+            var words = dataFrame
+                .Select(Functions.Split(Functions.Col("value"), " ").Alias("words"))
+                .Select(Functions.Explode(Functions.Col("words"))
+                .Alias("word"))
+                .GroupBy("word")
+                .Count()
+                .OrderBy(Functions.Col("count").Desc());
+
+            // Show results.
+            words.Show();
+
+            // Stop Spark session.
+            spark.Stop();
+        }
+    }
+}
+```
+
+### <a name="4-add-data-file"></a>4. veri dosyası Ekle
+
+Uygulamanız metin satırları içeren bir dosyayı işler. *MySparkApp* dizininizde aşağıdaki metni içeren bir *input. txt* dosyası oluşturun:
+
+```text
+Hello World
+This .NET app uses .NET for Apache Spark
+This .NET app counts words with Apache Spark
+```
 
 ## <a name="run-your-net-for-apache-spark-app"></a>Apache Spark uygulamanızı .NET için çalıştırın
 
-1. **PowerShell** 'i açın ve dizini uygulamanızın depolandığı klasöre değiştirin.
+1. Uygulamanızı derlemek için aşağıdaki komutu çalıştırın:
 
-   ```powershell
-   cd <your-app-output-directory>
+   ```dotnetcli
+   dotnet build
    ```
 
-2. Şu içerikle **kişiler. JSON** adlı bir dosya oluşturun:
-
-   ```json
-   {"name":"Michael"}
-   {"name":"Andy", "age":30}
-   {"name":"Justin", "age":19}
-   ```
-
-3. Uygulamanızı çalıştırmak için aşağıdaki PowerShell komutunu kullanın:
+2. Apache Spark üzerinde çalışacak uygulamanızı göndermek için aşağıdaki komutu çalıştırın:
 
    ```powershell
-    spark-submit `
-    --class org.apache.spark.deploy.dotnet.DotnetRunner `
-    --master local `
-    microsoft-spark-2.4.x-<version>.jar `
-    dotnet HelloSpark.dll
-    ```
+   %SPARK_HOME%\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local bin\Debug\netcoreapp3.0\microsoft-spark-2.4.x-0.6.0.jar dotnet bin\Debug\netcoreapp3.0\mySparkApp.dll
+   ```
+
+3. Uygulamanız çalıştırıldığında, *Input. txt* dosyasının sözcük sayısı verisi konsola yazılır.
 
 Mühendisi! Apache Spark uygulaması için bir .NET başarıyla yazıldı ve çalıştırdınız.
 
@@ -127,8 +215,10 @@ Bu öğreticide, nasıl yapılacağını öğrendiniz:
 > [!div class="checklist"]
 >
 > * .NET için Windows ortamınızı Apache Spark için hazırlayın
-> * **Microsoft. spark. Worker** 'ı indirin
-> * Apache Spark uygulama için basit bir .NET oluşturun ve çalıştırın
+> * İlk .NET Apache Spark uygulamanızı yazma
+> * Apache Spark uygulamanızı basit .NET için derleyin ve çalıştırın
+
+Yukarıdaki adımları açıklayan bir videoyu görmek için, [Apache Spark 101 video serisi için .net](https://channel9.msdn.com/Series/NET-for-Apache-Spark-101/Run-Your-First-NET-for-Apache-Spark-App)'i kullanıma alın.
 
 Daha fazla bilgi edinmek için kaynaklar sayfasına göz atın.
 > [!div class="nextstepaction"]
