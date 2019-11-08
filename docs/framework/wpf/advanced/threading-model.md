@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ef25123ed53ecf3e03e4f4c969bed2ef570591ad
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 22544b3bf2acf6e397f2ad5ae3de576bf491bd2b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459035"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740731"
 ---
 # <a name="threading-model"></a>İş Parçacığı Modeli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], geliştiricilerin iş parçacığı zorluklarından kaydedileceği şekilde tasarlanmıştır. Sonuç olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geliştiricilerin çoğunluğu birden fazla iş parçacığı kullanan bir arabirim yazmak zorunda kalmaz. Çok iş parçacıklı programlar karmaşık olduğu ve hata ayıklamanın zor olduğu için, tek iş parçacıklı çözümler olduğunda bu, kaçınılmalıdır.  
@@ -49,7 +49,7 @@ ms.locfileid: "73459035"
   
  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]yalnızca bir iş parçacığı değiştirebilir, arka plan iş parçacıkları kullanıcıyla nasıl etkileşime geçebilir? Arka plan iş parçacığı [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığından adına bir işlem gerçekleştirmesini isteyebilir. Bu, bir iş öğesini [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığının <xref:System.Windows.Threading.Dispatcher> kaydederek yapar. <xref:System.Windows.Threading.Dispatcher> sınıfı, iş öğelerini kaydetmek için iki yöntem sunar: <xref:System.Windows.Threading.Dispatcher.Invoke%2A> ve <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. Her iki yöntem de bir temsilciyi yürütmeye zamanlar. <xref:System.Windows.Threading.Dispatcher.Invoke%2A> zaman uyumlu bir çağrıdır; diğer bir deyişle, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı gerçekten temsilciyi yürütmeyi bitirene kadar döndürmez. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> zaman uyumsuzdur ve hemen döndürülür.  
   
- <xref:System.Windows.Threading.Dispatcher>, sırasındaki öğeleri önceliğe göre sıralar. <xref:System.Windows.Threading.Dispatcher> kuyruğuna bir öğe eklenirken belirtime gereken on düzey vardır. Bu öncelikler <xref:System.Windows.Threading.DispatcherPriority> numaralandırmasında tutulur. <xref:System.Windows.Threading.DispatcherPriority> düzeyler hakkında ayrıntılı bilgi [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)] belgelerinde bulunabilir.  
+ <xref:System.Windows.Threading.Dispatcher>, sırasındaki öğeleri önceliğe göre sıralar. <xref:System.Windows.Threading.Dispatcher> kuyruğuna bir öğe eklenirken belirtime gereken on düzey vardır. Bu öncelikler <xref:System.Windows.Threading.DispatcherPriority> numaralandırmasında tutulur. <xref:System.Windows.Threading.DispatcherPriority> düzeyler hakkında ayrıntılı bilgi Windows SDK belgelerinde bulunabilir.  
   
 <a name="samples"></a>   
 ## <a name="threads-in-action-the-samples"></a>İşlemdeki iş parçacıkları: örnekler  

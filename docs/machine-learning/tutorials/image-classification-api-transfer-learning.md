@@ -3,22 +3,19 @@ title: 'Öğretici: aktarım öğrenimi kullanarak otomatikleştirilmiş görsel
 description: Bu öğreticide, somut yüzeylerin görüntülerini kırçıkarılan veya Kırçıkmıyor olarak sınıflandırmak için görüntü algılama API 'sini kullanarak ML.NET ' deki bir TensorFlow derin öğrenme modelini nasıl eğitecağın nasıl kullanılacağı gösterilmektedir.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/25/2019
+ms.date: 11/07/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b8aec80134188811eb80ad1394e5a64d65a3c6f0
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: f5fc08b2944374c0be00249ec9e2a4b819762e13
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961989"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733217"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Öğretici: ML.NET görüntü sınıflandırma API 'SI ile aktarım öğrenimini kullanarak otomatikleştirilmiş görsel inceleme
 
 Özel derin öğrenme modelini, aktarım öğrenimi, önceden eğitilen bir TensorFlow modeli ve ML.NET görüntü sınıflandırma API 'sini kullanarak, somut yüzeylerin görüntülerini kırıllanmış veya kırılk olarak sınıflandırmasına nasıl eğeceğinizi öğrenin.
-
-> [!NOTE]
-> Bu öğretici, ML.NET görüntü sınıflandırma API 'sinin önizleme sürümünü kullanır.
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
@@ -84,7 +81,7 @@ Bu öğreticide kullanılan önceden eğitilen model, kalan ağ (ResNet) v2 mode
 Aktarım öğrenimine ve görüntü sınıflandırma API 'sine ilişkin genel bir bilgiye sahip olduğunuza göre, uygulamayı derlemek zaman alabilir.
 
 1. "DeepLearning_ImageClassification_Binary" adlı bir  **C# .NET Core konsol uygulaması** oluşturun.
-1. **Microsoft.ml 1.4.0-preview2** NuGet paketini yüklerken:
+1. **Microsoft.ml** Version **1.4.0** NuGet paketini yükler:
     1. Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
     1. Paket kaynağı olarak "nuget.org" öğesini seçin.
     1. **Tarayıcı** sekmesini seçin.
@@ -92,7 +89,7 @@ Aktarım öğrenimine ve görüntü sınıflandırma API 'sine ilişkin genel bi
     1. **Microsoft.ml**için arama yapın.
     1. **Install** düğmesini seçin.
     1. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin.
-    1. **Microsoft. ml. DNN 0.16.0-preview2** ve **Microsoft. ml. ımageanalytics 1.4.0-preview2**için bu adımları tekrarlayın.
+    1. Bu adımları **Microsoft. ml. Vision** sürümü **1.4.0**, **SciSharp. TensorFlow. Redist** sürüm **1.15.0**ve **Microsoft. ml. ımageanalytics** sürümü **1.4.0** NuGet paketleri için yineleyin.
 
 ### <a name="prepare-and-understand-the-data"></a>Verileri hazırlama ve anlama
 
@@ -124,7 +121,15 @@ Bu öğreticide, yalnızca köprü destesi görüntüleri kullanılır.
 
 1. *Program.cs* dosyasını açın ve dosyanın en üstündeki mevcut `using` deyimlerini aşağıdaki şekilde değiştirin:
 
-    [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L1-L7)]
+    ```csharp
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.IO;
+    using Microsoft.ML;
+    using static Microsoft.ML.DataOperationsCatalog;
+    using Microsoft.ML.Vision;
+    ```
 
 1. *Program.cs*içinde `Program` sınıfının altında `ImageData`adlı bir sınıf oluşturun. Bu sınıf başlangıçta yüklenen verileri temsil etmek için kullanılır. 
 
@@ -162,17 +167,27 @@ Bu öğreticide, yalnızca köprü destesi görüntüleri kullanılır.
 
         `ModelInput`benzer şekilde, yalnızca `PredictedLabel` model tarafından yapılan tahminleri içerdiğinden tahmine dayalı hale getirilmeleri gerekir. `ImagePath` ve `Label` özellikleri özgün görüntü dosyası adına ve kategorisine erişmek için kolaylık sağlamak amacıyla tutulur.
 
+### <a name="create-workspace-directory"></a>Çalışma alanı dizini oluştur
+
+Eğitim ve doğrulama verileri sıklıkla değişmediğinde, daha fazla çalıştırma için hesaplanan darboğazal değerlerini önbelleğe almak iyi bir uygulamadır.
+
+1. Projenizde, hesaplanan performans sorunu değerlerini ve modelin `.pb` sürümünü depolamak için *çalışma alanı* adlı yeni bir dizin oluşturun.
+
 ### <a name="define-paths-and-initialize-variables"></a>Yolları tanımlama ve değişkenleri başlatma
 
-1. `Main` yöntemi içinde varlıklarınızın konumunu tanımlayın.
+1. `Main` yönteminin içinde, varlıklarınızın konumunu, hesaplanan tıkanıklık değerlerini ve modelin `.pb` sürümünü tanımlayın.
 
-    [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L16)]
+    ```csharp
+    var projectDirectory = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "../../../"));
+    var workspaceRelativePath = Path.Combine(projectDirectory, "workspace");
+    var assetsRelativePath = Path.Combine(projectDirectory, "assets");
+    ```
 
 1. Sonra, `mlContext` değişkenini yeni bir [Mlcontext](xref:Microsoft.ML.MLContext)örneğiyle başlatın.
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L18)]
 
-[Mlcontext](xref:Microsoft.ML.MLContext) sınıfı tüm ml.NET işlemleri için bir başlangıç noktasıdır ve mlcontext 'i başlatmak, model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ml.net ortamı oluşturur. Bu, kavramsal olarak, Entity Framework `DBContext` ' a benzer.
+    [Mlcontext](xref:Microsoft.ML.MLContext) sınıfı tüm ml.NET işlemleri için bir başlangıç noktasıdır ve mlcontext 'i başlatmak, model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ml.net ortamı oluşturur. Bu, kavramsal olarak, Entity Framework `DBContext` ' a benzer.
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
@@ -226,9 +241,17 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
     [!code-csharp [ShuffleRows](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L24)]
 
-1. Makine öğrenimi modelleri, girişin sayısal biçimde olmasını bekler. Bu nedenle, eğitimin öncesinde bazı ön işleme verilerin yapılması gerekir. [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*) ve [`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*) dönüştürmelerini [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) oluşturun. `MapValueToKey` Transform, `Label` sütununda kategorik değeri alır, sayısal bir `KeyType` değere dönüştürür ve `LabelAsKey`adlı yeni bir sütunda depolar. `LoadImages`, eğitim için görüntüleri yüklemek üzere `imageFolder` parametresiyle birlikte `ImagePath` sütunundaki değerleri alır. `useImageType` `false` olarak ayarlamak, görüntüleri bir `byte[]`dönüştürür. 
+1. Makine öğrenimi modelleri, girişin sayısal biçimde olmasını bekler. Bu nedenle, eğitimin öncesinde bazı ön işleme verilerin yapılması gerekir. [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*) ve `LoadRawImageBytes` dönüştürmelerini [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) oluşturun. `MapValueToKey` Transform, `Label` sütununda kategorik değeri alır, sayısal bir `KeyType` değere dönüştürür ve `LabelAsKey`adlı yeni bir sütunda depolar. `LoadImages`, eğitim için görüntüleri yüklemek üzere `imageFolder` parametresiyle birlikte `ImagePath` sütunundaki değerleri alır.
 
-    [!code-csharp [DefinePreprocessingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L26-L33)]
+    ```csharp
+    var preprocessingPipeline = mlContext.Transforms.Conversion.MapValueToKey(
+            inputColumnName: "Label",
+            outputColumnName: "LabelAsKey")
+        .Append(mlContext.Transforms.LoadRawImageBytes(
+            outputColumnName: "Image",
+            imageFolder: assetsRelativePath,
+            inputColumnName: "ImagePath"));
+    ```
 
 1. [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) yöntemini kullanarak verileri `preprocessingPipeline` [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) ve ardından önceden işlenmiş verileri içeren bir [`IDataView`](xref:Microsoft.ML.IDataView) döndüren [`Transform`](xref:Microsoft.ML.Data.TransformerChain`1.Transform*) yöntemi ile uygulayın.
 
@@ -250,23 +273,41 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 Model eğitimi birkaç adımdan oluşur. İlk olarak, modeli eğitmek için görüntü sınıflandırma API 'SI kullanılır. Daha sonra, `PredictedLabel` sütunundaki kodlanmış Etiketler, `MapKeyToValue` dönüşümü kullanılarak özgün kategorik değerlerine geri dönüştürülür. 
 
-1. Hem `mapLabelEstimator` hem de `ImageClassification` dönüşümlerinden oluşan eğitim [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) işlem hattını tanımlayın.
+1. Bir `ImageClassificationTrainer`için gerekli ve isteğe bağlı parametrelerin bir kümesini depolamak üzere yeni bir değişken oluşturun. 
 
-    [!code-csharp [DefineTrainingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L58)]    
+    ```csharp
+    var classifierOptions = new ImageClassificationTrainer.Options()
+    {
+        FeatureColumnName = "Image",
+        LabelColumnName = "LabelAsKey",
+        ValidationSet = validationSet,
+        Arch = ImageClassificationTrainer.Architecture.ResnetV2101,
+        MetricsCallback = (metrics) => Console.WriteLine(metrics),
+        TestOnTrainSet = false,
+        ReuseTrainSetBottleneckCachedValues = true,
+        ReuseValidationSetBottleneckCachedValues = true,
+        WorkspacePath=workspaceRelativePath
+    };
+    ```
 
-    `ImageClassification` tahmin aracı birkaç parametre alır:
+    `ImageClassificationTrainer` birkaç isteğe bağlı parametre alır:
 
-    - `featuresColumnName`, model için girdi olarak kullanılan sütundur.
-    - `labelColumnName`, tahmin edilecek değerin sütundeğeridir.
-    - `arch`, önceden eğitilen model mimarilerinden hangisinin kullanılacağını tanımlar. Bu öğretici ResNetv2 modelinin 101 katman türevini kullanır.
-    - `epoch`, eğitim işlemi boyunca tüm veri kümesi üzerinde en fazla yineleme sayısını belirtir. Sayı arttıkça, model ne kadar uzun bir süre ve üretilen daha iyi bir modeldir.
-    - `batchSize`, eğitim için bir seferde kullanılacak örnek sayısıdır. Bir dönem sırasında, modeli eğitmek ve güncellemek için batchSize eşit birden çok yığın kullanılır. Sayı ne kadar düşükse, her toplu işlem işlendiğinde daha az bellek gerekir.
-    - `testOnTrainSet`, bir doğrulama kümesi mevcut olmadığında modelin eğitim kümesine karşı performansını ölçmesini söyler.
-    - `metricsCallback` eğitim sırasında ilerlemeyi izlemek için bir işlevi bağlar.
-    - `validationSet`, doğrulama verilerini içeren [`IDataView`](xref:Microsoft.ML.IDataView) .
-    - `reuseTrainSetBottleneckCachedValues`, sonraki çalışmalarda performans sorunlarına neden olan önbelleğe alınmış değerleri kullanıp kullanmayacağınızı modele söyler. Performans sorunu, ilk çalıştırıldığında yoğun bir şekilde yoğun bir geçiş hesaplasıdır. Eğitim verileri değişmezse ve farklı sayıda dönemler veya toplu iş boyutu kullanmayı denemek istiyorsanız, önbelleğe alınmış değerleri kullanmak bir modeli eğmek için gereken süreyi önemli ölçüde azaltır.
-    - `reuseValidationSetBottleneckCachedValues`, yalnızca bu örnekte doğrulama veri kümesi için olan `reuseTrainSetBottleneckCachedValues` benzerdir.
-    - `disableEarlyStopping`, ımageclassıflıya erken bir durdurma stratejisi kullanıp kullanmayacağınızı söyler. Model, eğitim sırasında doğru öngörülere sahip olmaya yardımcı olacak en iyi değerleri aradığında, performans artabilir veya azalabilir. Sonuç olarak, model son dönemi ulaşırsa, eğitiminden öğrendiği desenlerin en küçük bir hal olması durumunda olabilir. Erken durdurma, bu performans için eğitimin performansını izler ve modelin en iyi sürümünü koruma çabasında eğitim sürecini keser.
+    - `FeatureColumnName`, model için girdi olarak kullanılan sütundur.
+    - `LabelColumnName`, tahmin edilecek değerin sütundeğeridir.
+    - `ValidationSet`, doğrulama verilerini içeren [`IDataView`](xref:Microsoft.ML.IDataView) .
+    - `Arch`, önceden eğitilen model mimarilerinden hangisinin kullanılacağını tanımlar. Bu öğretici ResNetv2 modelinin 101 katman türevini kullanır.
+    - `MetricsCallback` eğitim sırasında ilerlemeyi izlemek için bir işlevi bağlar.
+    - `TestOnTrainSet`, bir doğrulama kümesi mevcut olmadığında modelin eğitim kümesine karşı performansını ölçmesini söyler.
+    - `ReuseTrainSetBottleneckCachedValues`, sonraki çalışmalarda performans sorunlarına neden olan önbelleğe alınmış değerleri kullanıp kullanmayacağınızı modele söyler. Performans sorunu, ilk çalıştırıldığında yoğun bir şekilde yoğun bir geçiş hesaplasıdır. Eğitim verileri değişmezse ve farklı sayıda dönemler veya toplu iş boyutu kullanmayı denemek istiyorsanız, önbelleğe alınmış değerleri kullanmak bir modeli eğmek için gereken süreyi önemli ölçüde azaltır.
+    - `ReuseValidationSetBottleneckCachedValues`, yalnızca bu örnekte doğrulama veri kümesi için olan `ReuseTrainSetBottleneckCachedValues` benzerdir.
+    - `WorkspacePath`, hesaplanan performans sorunu değerlerinin ve modelin `.pb` sürümünün depolanacağı dizini tanımlar.
+
+1. Hem `mapLabelEstimator` hem de `ImageClassificationTrainer`oluşan [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) eğitim işlem hattını tanımlayın.
+
+    ```csharp
+    var trainingPipeline = mlContext.MulticlassClassification.Trainers.ImageClassification(classifierOptions)
+        .Append(mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
+    ```
 
 1. Modelinize eğitebilmeniz için [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) yöntemini kullanın.
 

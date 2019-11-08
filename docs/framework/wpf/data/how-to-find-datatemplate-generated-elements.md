@@ -8,18 +8,18 @@ helpviewer_keywords:
 - finding DataTemplate elements [WPF]
 - DataTemplate [WPF]
 ms.assetid: bfcd564e-5e9e-451e-8641-a9b5c3cfac90
-ms.openlocfilehash: f9265e3f7b287e1e8c264e89325f7c9649eebe2c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2cb3d73574cd207c0e06abe15f6a953a67cd5c78
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459137"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733434"
 ---
 # <a name="how-to-find-datatemplate-generated-elements"></a>Nasıl yapılır: DataTemplate ile Oluşturulan Öğeleri Bulma
 Bu örnek, bir <xref:System.Windows.DataTemplate>tarafından oluşturulan öğelerin nasıl bulunacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, bazı [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] verilerine bağlanan bir <xref:System.Windows.Controls.ListBox> vardır:  
+ Bu örnekte, bazı XML verilerine bağlanan bir <xref:System.Windows.Controls.ListBox> vardır:  
   
  [!code-xaml[FindGeneratedItems#LB](~/samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml#lb)]  
   

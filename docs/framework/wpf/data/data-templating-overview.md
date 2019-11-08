@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: d088342a08076c69b34f6c3d39dce076cb3890d4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 377ee76e7e3537e9cae010189306611a503acbed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460040"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740629"
 ---
 # <a name="data-templating-overview"></a>Veri Şablonu Oluşturmaya Genel Bakış
 WPF veri şablonu oluşturma modeli, verilerinizin sunumunu tanımlamak için size büyük bir esneklik sağlar. WPF denetimleri, veri sunumu özelleştirmeyi desteklemek için yerleşik işlevlere sahiptir. Bu konu, ilk olarak bir <xref:System.Windows.DataTemplate> tanımlama ve ardından özel mantık ve hiyerarşik veri görüntüleme desteği gibi diğer veri şablonu oluşturma özelliklerinin nasıl tanıtıldiğini gösterir.  
@@ -54,7 +54,7 @@ WPF veri şablonu oluşturma modeli, verilerinizin sunumunu tanımlamak için si
   
  ![Veri şablonu oluşturma örnek ekran görüntüsü](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
- Ancak, bu sınırlama ve esnek bir şekilde kullanılır. Ayrıca, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] verilerine bağlıyorsanız `ToString`geçersiz kılamazsınız.  
+ Ancak, bu sınırlama ve esnek bir şekilde kullanılır. Ayrıca, XML verilerine bağlıyorsanız `ToString`geçersiz kılamazsınız.  
   
 <a name="defining_simple_datatemplate"></a>   
 ### <a name="defining-a-simple-datatemplate"></a>Basit bir DataTemplate tanımlama  
@@ -62,7 +62,7 @@ WPF veri şablonu oluşturma modeli, verilerinizin sunumunu tanımlamak için si
   
  [!code-xaml[DataTemplatingIntro_snip#Inline](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#inline)]  
   
- Bu konudaki örneklerin temel alınan verileri, CLR nesnelerinin bir koleksiyonudur. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] verilerine bağlıyorsanız, temel kavramlar aynıdır, ancak hafif bir sözdizimi farkı vardır. Örneğin, `Path=TaskName`olması yerine <xref:System.Windows.Data.Binding.XPath%2A> `@TaskName` (`TaskName` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] düğümünüz bir özniteliği ise) olarak ayarlamanız gerekir.  
+ Bu konudaki örneklerin temel alınan verileri, CLR nesnelerinin bir koleksiyonudur. XML verilerine bağlıyorsanız, temel kavramlar aynıdır, ancak hafif bir sözdizimi farkı vardır. Örneğin, `Path=TaskName`olması yerine <xref:System.Windows.Data.Binding.XPath%2A> `@TaskName` (`TaskName` XML düğümünüz bir özniteliği ise) olarak ayarlamanız gerekir.  
   
  Şimdi <xref:System.Windows.Controls.ListBox> şu şekilde görünür:  
   

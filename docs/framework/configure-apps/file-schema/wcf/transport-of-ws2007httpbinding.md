@@ -2,23 +2,23 @@
 title: <transport> / <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 4ea60ccaba58bc0b3fa8f2263295bf1413d25e89
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 0cd20c607b0c4ddd3ecfd806d38ba63b4a5c5a25
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399264"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732768"
 ---
-# <a name="transport-of-ws2007httpbinding"></a>\<\<WS2007HttpBinding > taşıma >
+# <a name="transport-of-ws2007httpbinding"></a>\<ws2007HttpBinding \<taşıma > >
 HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlamaları >** ](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007HttpBinding >** ](ws2007httpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Güvenlik >** ](security-of-ws2007httpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Taşıma >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<güvenlik >** ](security-of-ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<taşıma >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,8 +38,8 @@ HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`clientCredentialType`|Hizmetin istemcinin kimliğini doğrulamak için kullanılan kimlik bilgisini belirtir. Bu öznitelik türü <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|`proxyCredentialType`|Bir etki alanı ara sunucusu için istemcinin kimliğini doğrulamak için kullanılan kimlik bilgisini belirtir. Bu öznitelik türü <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|`clientCredentialType`|Hizmetin istemcinin kimliğini doğrulamak için kullanılan kimlik bilgisini belirtir. Bu öznitelik <xref:System.ServiceModel.HttpClientCredentialType>türündedir.|  
+|`proxyCredentialType`|Bir etki alanı ara sunucusu için istemcinin kimliğini doğrulamak için kullanılan kimlik bilgisini belirtir. Bu öznitelik <xref:System.ServiceModel.HttpProxyCredentialType>türündedir.|  
 |`realm`|Özet veya temel kimlik doğrulaması için kimlik doğrulama bölgesi. Varsayılan değer boş bir dizedir.<br /><br /> Kimlik doğrulama bölgesi, kimlik doğrulamasını gerçekleştiren konağın en azından adını belirtir. Ayrıca, erişimi olan bir kullanıcı koleksiyonu da belirtebilir. Kullanıcı, birkaç olası Kullanıcı adı ve parolanın kullanılabileceğini belirleyebilmek için kimlik doğrulama bölgesini sorgulayabilir.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType özniteliği  
@@ -48,7 +48,7 @@ HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.
 |-----------|-----------------|  
 |Yok.|Güvenlik devre dışı bırakıldı.|  
 |Temel|Temel kimlik doğrulamasını kullanır.|  
-|Bilgisi|Özet kimlik doğrulaması kullanır.|  
+|bilgisi|Özet kimlik doğrulaması kullanır.|  
 |NT|Windows etki alanı ile geri dönüş olarak NTLM kimlik doğrulamasını kullanır.|  
 |Windows|Tümleşik Windows kimlik doğrulamasını kullanır.|  
 |Sertifika|İstemcinin kimliğini doğrulamak için X. 509.440 sertifikalarını kullanır.|  
@@ -59,7 +59,7 @@ HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.
 |-----------|-----------------|  
 |Yok.|Güvenlik devre dışı bırakıldı.|  
 |Temel|Temel kimlik doğrulamasını kullanır.|  
-|Bilgisi|Özet kimlik doğrulaması kullanır.|  
+|bilgisi|Özet kimlik doğrulaması kullanır.|  
 |NT|Windows etki alanı ile geri dönüş olarak NTLM kullanır.|  
 |Windows|Tümleşik Windows kimlik doğrulamasını kullanır.|  
 |Sertifika|İstemcinin kimliğini doğrulamak için X. 509.440 sertifikalarını kullanır.|  
@@ -71,7 +71,7 @@ HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Güvenlik >](security-of-ws2007httpbinding.md)|WS2007HttpBinding > öğesinin güvenlik yeteneklerini [ \<](ws2007httpbinding.md) temsil eder.|  
+|[\<Güvenlik >](security-of-ws2007httpbinding.md)|[\<ws2007HttpBinding >](ws2007httpbinding.md) öğesinin güvenlik yeteneklerini temsil eder.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -83,4 +83,4 @@ HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../misc/binding.md)
+- [\< bağlama >](bindings.md)

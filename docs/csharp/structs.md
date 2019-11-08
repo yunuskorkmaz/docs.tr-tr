@@ -4,12 +4,12 @@ description: Yapı türü ve bunları nasıl oluşturacağınız hakkında bilgi
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 10971dc1a0b2c9d64ac8766734b3f6f630aa3ccf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 39bf44dc187fbbc7aac71a1d5c5f3a4d7f446eb8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423113"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739182"
 ---
 # <a name="structs"></a>Yapılar
 
@@ -53,21 +53,9 @@ Yapılar sınıflarla aynı sözdiziminin çoğunu paylaşır, ancak yapılar s�
   
 - Bir struct, arabirimler uygulayabilir.
 
-## <a name="literal-values"></a>Değişmez değerler
-
-' C#De, değişmez değerler derleyicisinden bir tür alır. Sayının sonuna bir harf ekleyerek sayısal bir sabit değerin nasıl yazılması gerektiğini belirtebilirsiniz. Örneğin, 4,56 değerinin bir float olarak değerlendirilip değerlendirilmeyeceğini belirtmek için, sayının sonuna bir "f" veya "F" ekleyin: `4.56f`. Hiçbir harf eklenyoksa, derleyici değişmez değer için `double` türünü çıkaracaktır. Hangi türlerin harf sonekleriyle belirtibileceği hakkında daha fazla bilgi için bkz. [değer türlerinde](./language-reference/keywords/value-types.md)bağımsız türler için başvuru sayfaları.  
-  
-Değişmez değerler yazıldığı ve tüm türler <xref:System.Object>sonunda sonuç olarak türettiğinden, aşağıdaki gibi bir kod yazabilir ve derleyebilirsiniz:  
-  
-[!code-csharp[Literal Values](../../samples/snippets/csharp/concepts/structs/literals.cs)]
-
-Son iki örnekte 7,0 ' de C# tanıtılan dil özellikleri gösterilmektedir. İlki, sayısal değişmez değerler içinde *rakam ayırıcısı* olarak bir alt çizgi karakterini kullanmanıza olanak sağlar. Okunabilirliği artırmak için bunları basamaklar arasında istediğiniz yere yerleştirebilirsiniz. Değer üzerinde hiçbir etkisi yoktur.
-
-İkincisi, onaltılık Gösterim kullanmak yerine doğrudan bit desenleri belirtmenize imkan tanıyan *ikili sabit değerleri*gösterir.
-
 ## <a name="nullable-value-types"></a>Boş değer atanabilen değer türleri
 
-Sıradan değer türlerinin değeri [null](language-reference/keywords/null.md)olamaz. Ancak, türden sonra bir `?` ekleyerek null yapılabilir değer türleri oluşturabilirsiniz. Örneğin `int?`, [null](./language-reference/keywords/null.md)değeri de olan bir `int` türüdür. Null yapılabilir değer türleri <xref:System.Nullable%601>genel yapı türü örnekleridir. Null olabilen değer türleri, genellikle sayısal değerlerin null veya tanımsız olabileceği veritabanlarına veri geçirirken faydalıdır. Daha fazla bilgi için bkz. [Nullable değer türleri](programming-guide/nullable-types/index.md).
+Sıradan değer türlerinin değeri [null](language-reference/keywords/null.md)olamaz. Ancak, türden sonra bir `?` ekleyerek null yapılabilir değer türleri oluşturabilirsiniz. Örneğin `int?`, [null](./language-reference/keywords/null.md)değeri de olan bir `int` türüdür. Null yapılabilir değer türleri <xref:System.Nullable%601>genel yapı türü örnekleridir. Null olabilen değer türleri, genellikle sayısal değerlerin null veya tanımsız olabileceği veritabanlarına veri geçirirken faydalıdır. Daha fazla bilgi için bkz. [Nullable değer türleri](language-reference/builtin-types/nullable-value-types.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

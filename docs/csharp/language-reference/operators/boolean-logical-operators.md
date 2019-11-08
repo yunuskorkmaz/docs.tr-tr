@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 4a3e6986060b8e22d49110b8b9f275f41b743af2
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 327a2a8a95809923446107e6ba1c4b331eee82b7
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036400"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737896"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Boole mantıksal işleçleri (C# başvuru)
 
@@ -129,7 +129,7 @@ Ayrıca, [MANTıKSAL or işleci](#logical-or-operator-) `|` işlenenlerini de he
 |null|false|false|null|  
 |null|null|null|null|  
 
-Bu işleçlerin davranışı, null yapılabilir değer türleriyle tipik işleç davranışından farklıdır. Genellikle, bir değer türünün işlenenleri için tanımlanan bir işleç, karşılık gelen Nullable değer türünün işlenenleri ile de kullanılabilir. Bu tür bir operatör, işlenenleri `null`değerlendirilirse `null` üretir. Ancak, `&` ve `|` işleçleri, işlenenlerden biri `null`olarak değerlendirilse bile null olmayan üretebilir. Null yapılabilir değer türleriyle operatör davranışı hakkında daha fazla bilgi için, [Nullable değer türlerini kullanma](../../programming-guide/nullable-types/using-nullable-types.md) makalesindeki [işleçler](../../programming-guide/nullable-types/using-nullable-types.md#operators) bölümüne bakın.
+Bu işleçlerin davranışı, null yapılabilir değer türleriyle tipik işleç davranışından farklıdır. Genellikle, bir değer türünün işlenenleri için tanımlanan bir işleç, karşılık gelen Nullable değer türünün işlenenleri ile de kullanılabilir. Bu tür bir operatör, işlenenleri `null`değerlendirilirse `null` üretir. Ancak, `&` ve `|` işleçleri, işlenenlerden biri `null`olarak değerlendirilse bile null olmayan üretebilir. Null yapılabilir değer türleriyle operatör davranışı hakkında daha fazla bilgi için, [Nullable değer türleri](../builtin-types/nullable-value-types.md) makalesinin [yükseltilmemiş işleçleri](../builtin-types/nullable-value-types.md#lifted-operators) bölümüne bakın.
 
 Aşağıdaki örnekte gösterildiği gibi, `!` ve `^` işleçlerini `bool?` işlenenleriyle de kullanabilirsiniz:
 

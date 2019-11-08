@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 7c0168d5ca8b1d3bda709f934e454b2603d37b71
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039874"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733571"
 ---
 # <a name="imaging-overview"></a>Görüntülemeye Genel Bakış
 Bu konu, Microsoft Windows Presentation Foundation Imaging bileşenine bir giriş sağlar. WPF Imaging, geliştiricilerin resimleri görüntülemesine, dönüştürmelerine ve biçimlendirmeye olanak sağlar.  
@@ -165,7 +165,7 @@ Görüntü fırçaları şekilleri, denetimleri, metinleri ve daha fazlasını d
 ## <a name="image-metadata"></a>Görüntü meta verileri  
  Bazı görüntü dosyaları, dosyanın içeriğini veya özelliklerini açıklayan meta veriler içerir. Örneğin, çoğu dijital kamera, görüntüyü yakalamak için kullanılan kameranın marka ve modeliyle ilgili meta verileri içeren görüntüler oluşturur. Her görüntü biçimi meta verileri farklı işler, ancak WPF Imaging desteklenen her görüntü biçimi için meta verileri depolamanın ve almanın Tekdüzen bir yolunu sağlar.  
   
- Meta verilere erişim, bir <xref:System.Windows.Media.Imaging.BitmapSource> nesnesinin <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> özelliği aracılığıyla sağlanır. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> görüntünün içerdiği tüm meta verileri içeren bir <xref:System.Windows.Media.Imaging.BitmapMetadata> nesnesi döndürür. Bu veriler bir meta veri şemasında veya farklı şemalarla birlikte olabilir. WPF Imaging, şu görüntü meta veri şemalarını destekler: takas edilebilir görüntü dosyası (Exif), metin (PNG metin verileri), görüntü dosyası dizini (ıFD), uluslararası iletişim (ıPTC) ve [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
+ Meta verilere erişim, bir <xref:System.Windows.Media.Imaging.BitmapSource> nesnesinin <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> özelliği aracılığıyla sağlanır. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> görüntünün içerdiği tüm meta verileri içeren bir <xref:System.Windows.Media.Imaging.BitmapMetadata> nesnesi döndürür. Bu veriler bir meta veri şemasında veya farklı şemalarla birlikte olabilir. WPF Imaging, şu görüntü meta veri şemalarını destekler: takas edilebilir görüntü dosyası (Exif), metin (PNG metin verileri), görüntü dosyası dizini (ıFD), uluslararası iletişim (ıPTC) ve Genişletilebilir Meta veri platformu (XMP).  
   
  <xref:System.Windows.Media.Imaging.BitmapMetadata> meta verileri okuma işlemini basitleştirmek için, <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>ve <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>gibi kolayca erişilebilen çeşitli adlandırılmış özellikler sağlar. Bu adlandırılmış özelliklerin birçoğu, meta verileri yazmak için de kullanılabilir. Meta veri okuma için ek destek, meta veri sorgu okuyucusu tarafından sağlanır. <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> yöntemi, *"/APP1/Exif/"* gibi bir dize sorgusu sağlayarak meta veri sorgu okuyucusunu almak için kullanılır. Aşağıdaki örnekte, *"/Text/Description"* konumunda depolanan metni almak için <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> kullanılır.  
   

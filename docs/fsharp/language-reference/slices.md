@@ -2,12 +2,12 @@
 title: Dilimler (F#)
 description: Mevcut F# veri türleri için dilimleri kullanma ve diğer veri türleri için kendi dilimlerinizi tanımlama hakkında bilgi edinin.
 ms.date: 01/22/2019
-ms.openlocfilehash: cbff1b055ea99ef708f9db191be49275e630ee90
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 2f7b87cda87aad1fdac05b4e14b16f454f8c0461
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798911"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733381"
 ---
 # <a name="slices"></a>Dilimler
 
@@ -117,12 +117,19 @@ Aslında bir struct olan bir tür için dilim tanımlıyorsanız `GetSlice` üye
 ```fsharp
 open System
 
+type ReadOnlySpan<'T> with
+    // Note the 'inline' in the member definition
+    member sp.GetSlice(startIdx, endIdx) =
+        let s = defaultArg startIdx 0
+        let e = defaultArg endIdx sp.Length
+        sp.Slice(s, e - s)
+
 type Span<'T> with
     // Note the 'inline' in the member definition
     member inline sp.GetSlice(startIdx, endIdx) =
         let s = defaultArg startIdx 0
         let e = defaultArg endIdx sp.Length
-        sp.Slice(s, e)
+        sp.Slice(s, e - s)
 
 let printSpan (sp: Span<int>) =
     let arr = sp.ToArray()

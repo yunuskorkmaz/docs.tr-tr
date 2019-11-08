@@ -5,15 +5,15 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 31fdc3c31c8792fea5f3e71dedb7370ebd63c98e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9b302be3ed9f01ccd27470063f49966dc7d74708
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458554"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740801"
 ---
 # <a name="optimizing-performance-data-binding"></a>Performansı İyileştirme: Veri Bağlama
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama, uygulamaların verileri sunmak ve verilerle etkileşim kurmak için basit ve tutarlı bir yol sağlar. Öğeler, CLR nesneleri biçiminde çeşitli veri kaynaklarından verilere bağlanabilir ve [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama, uygulamaların verileri sunmak ve verilerle etkileşim kurmak için basit ve tutarlı bir yol sağlar. Öğeler, CLR nesneleri ve XML biçiminde çeşitli veri kaynaklarından verilere bağlanabilir.  
   
  Bu konu veri bağlama performans önerileri sağlar.  
 
@@ -69,7 +69,7 @@ ms.locfileid: "73458554"
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>Yalnızca veri bağlama için CLR nesnelerini XML 'e dönüştürmeyin.  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] içeriğe veri bağlama olanağı sağlar; Ancak [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] içeriğe veri bağlama, CLR nesnelerine veri bağlamaktan daha yavaştır. Tek amaç veri bağlama için ise, CLR nesne verilerini XML 'e dönüştürmeyin.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], XML içeriğine veri bağlama olanağı sağlar; Ancak, XML içeriğine veri bağlama, CLR nesnelerine veri bağlamaktan daha yavaştır. Tek amaç veri bağlama için ise, CLR nesne verilerini XML 'e dönüştürmeyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

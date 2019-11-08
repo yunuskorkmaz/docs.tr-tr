@@ -11,12 +11,12 @@ helpviewer_keywords:
 - null-coalescing assignment [C#]
 - ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 5262aa70bb5ec2f03dda9425194b89ec1e809d76
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2bd6fe3d2d283e64eebc2251416fa5234e30bdad
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038958"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739663"
 ---
 # <a name="-and--operators-c-reference"></a>?? ve?? = işleçleri (C# başvuru)
 
@@ -28,7 +28,7 @@ C# 8,0 ve sonraki sürümlerde bulunan null birleşim atama işleci`??=`sağ iş
 
 `??=` işlecinin sol tarafındaki işleneni bir değişken, [özellik](../../programming-guide/classes-and-structs/properties.md)veya [Dizin Oluşturucu](../../programming-guide/indexers/index.md) öğesi olmalıdır.
 
-C# 7,3 ve önceki sürümlerde`??`işlecinin sol işlenenin türü bir başvuru türü ya da [null yapılabilir bir değer türü](../../programming-guide/nullable-types/index.md)olmalıdır. 8,0 ile C# başlayarak, bu gereksinim aşağıdaki değerle değiştirilmiştir:`??`ve`??=`işleçlerinin sol taraftaki işleneninin türü null yapılamayan bir değer türü olamaz. Özellikle, 8,0 ile C# başlayarak, null birleşim işleçlerini kısıtlanmış olmayan tür parametreleriyle kullanabilirsiniz:
+C# 7,3 ve önceki sürümlerde `??` işlecinin sol işlenenin türü bir [başvuru türü](../keywords/reference-types.md) ya da [null yapılabilir bir değer türü](../builtin-types/nullable-value-types.md)olmalıdır. 8,0 ile C# başlayarak, bu gereksinim aşağıdaki değerle değiştirilmiştir:`??`ve`??=`işleçlerinin sol taraftaki işleneninin türü null yapılamayan bir değer türü olamaz. Özellikle, 8,0 ile C# başlayarak, null birleşim işleçlerini kısıtlanmış olmayan tür parametreleriyle kullanabilirsiniz:
 
 [!code-csharp[unconstrained type parameter](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#UnconstrainedType)]
 
@@ -54,7 +54,7 @@ d ??= (e ??= f)
 
   [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
 
-- [Null yapılabilir değer türleriyle](../../programming-guide/nullable-types/index.md) çalıştığınızda ve temel alınan değer türünde bir değer sağlamanız gerekiyorsa, null yapılabilir bir tür değeri `null`olduğunda sağlamak üzere değer belirtmek için `??` işlecini kullanın:
+- [Null yapılabilir değer türleriyle](../builtin-types/nullable-value-types.md) çalıştığınızda ve temel alınan değer türünde bir değer sağlamanız gerekiyorsa, null yapılabilir bir tür değeri `null`olduğunda sağlamak üzere değer belirtmek için `??` işlecini kullanın:
 
   [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
 

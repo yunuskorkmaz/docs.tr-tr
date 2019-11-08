@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 648aaaa86cf2d6bd2de989739694ba188c4bbc04
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 47a339de60301e01b52a4b8a3a85945624daf940
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73041025"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733191"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>İzlenecek yol: Visual Studio 'da yönetilen derlemelerden tür ekleme
 
@@ -34,7 +34,7 @@ Bu izlenecek yolda şunları yapabilirsiniz:
 
 ## <a name="conditions-and-limitations"></a>Koşullar ve sınırlamalar
 
-Bir derlemeden tür bilgilerini aşağıdaki koşullarda ekleyebilirsiniz: 
+Bir derlemeden tür bilgilerini aşağıdaki koşullarda ekleyebilirsiniz:
 
 - Derleme en az bir ortak arabirim kullanıma sunar.
 - Katıştırılmış arabirimlere, `ComImport` öznitelikleri ve benzersiz GUID 'Ler `Guid` öznitelikleriyle açıklama eklenir.
@@ -321,5 +321,4 @@ Yapı çıkış klasörü konumuna gidin ve *TypeEquivalenceClient. exe*' yi ça
 - [-bağlantı (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
 - [C#Programlama Kılavuzu](../../csharp/programming-guide/index.md)
 - [Programlama kavramları (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
-- [Bütünleştirilmiş kod içeren program](program.md)
 - [.NET’te bütünleştirilmiş kodlar](index.md)

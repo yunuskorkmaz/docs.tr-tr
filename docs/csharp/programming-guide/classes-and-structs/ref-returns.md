@@ -2,12 +2,12 @@
 title: Ref dönüş değerleri ve ref YerellerC# (kılavuz)
 description: Ref return ve ref yerel değerlerini tanımlama ve kullanma hakkında bilgi edinin
 ms.date: 04/04/2018
-ms.openlocfilehash: 99e0f9d995cf3bf5c0486415b6f2d578147d3c7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114484"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736826"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref dönüşler ve ref yerel ayarlar
 
@@ -25,7 +25,7 @@ Bir yöntemin bir *Başvuru dönüş değeri* döndürdüğünü bildirmek, yön
 
 - Dönüş değeri `null`sabit değer olamaz. `null` derleyici hatası CS8156, "bir ifade başvuru ile döndürülmeyebilir çünkü bu bağlamda kullanılamaz."
 
-   Ref Return içeren bir yöntem, değeri şu anda null (örneklenmiş) değeri olan bir değişkene veya bir değer türü için null [yapılabilir değer türüne](../nullable-types/index.md) sahip bir diğer ad döndürebilir.
+   Ref Return içeren bir yöntem, değeri şu anda null (örneklenmiş) değeri olan bir değişkene veya bir değer türü için null [yapılabilir değer türüne](../../language-reference/builtin-types/nullable-value-types.md) sahip bir diğer ad döndürebilir.
 
 - Dönüş değeri bir sabit, bir numaralandırma üyesi, bir özellikten değere göre dönüş değeri veya `class` ya da `struct`bir yöntem olamaz. Bu kuralın ihlal edildiğinde derleyici hatası CS8156, "bir ifade başvuru ile döndürülmeyebilir çünkü bu bağlamda kullanılamaz."
 

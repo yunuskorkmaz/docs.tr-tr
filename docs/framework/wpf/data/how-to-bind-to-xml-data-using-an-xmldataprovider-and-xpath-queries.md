@@ -6,23 +6,23 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 0f39c9d42abfaba1327f2c189ac6ce3d40db6e89
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f075d646539de5d68e1c9c75d9664451125e9919
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459216"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733555"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Nasıl yapılır: XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama
-Bu örnek, <xref:System.Windows.Data.XmlDataProvider>kullanarak [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] verilere nasıl bağlanılacağını gösterir.  
+Bu örnek, bir <xref:System.Windows.Data.XmlDataProvider>kullanarak XML verilerinin nasıl bağlanacağını gösterir.  
   
- <xref:System.Windows.Data.XmlDataProvider>, uygulamanızdaki veri bağlama aracılığıyla erişilebilen temel alınan veriler, herhangi bir [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] düğümü ağacı olabilir. Diğer bir deyişle, bir <xref:System.Windows.Data.XmlDataProvider> herhangi bir [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] düğümü ağacını bağlama kaynağı olarak kullanmak için uygun bir yol sağlar.  
+ <xref:System.Windows.Data.XmlDataProvider>, uygulamanızdaki veri bağlama aracılığıyla erişilebilen temel veriler herhangi bir XML düğümleri ağacı olabilir. Diğer bir deyişle, bir <xref:System.Windows.Data.XmlDataProvider> herhangi bir XML düğümleri ağacını bağlama kaynağı olarak kullanmak için uygun bir yol sağlar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, veriler <xref:System.Windows.FrameworkElement.Resources%2A> bölümü içinde doğrudan bir [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] *veri Adası* olarak katıştırılır. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri Adası `<x:XData>` etiketlere sarmalanmış olmalı ve her zaman bu örnekte *Stok* olan tek bir kök düğüme sahip olmalıdır.  
+ Aşağıdaki örnekte, veriler <xref:System.Windows.FrameworkElement.Resources%2A> bölümünde doğrudan bir XML *veri Adası* olarak katıştırılır. Bir XML veri Adası `<x:XData>` etiketlere sarmalanmış olmalı ve her zaman bu örnekte *Envanter* olan tek bir kök düğüme sahip olmalıdır.  
   
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] verilerinin kök düğümü, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ad alanını boş bir dizeye ayarlayan bir **xmlns** özniteliğine sahiptir. Bu, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfasında satır içi bir veri adasına XPath sorguları uygulamak için bir gereksinimdir. Bu satır içi durumda, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ve bu nedenle veri Adası, <xref:System.Windows> ad alanını devralır. Bu nedenle, XPath sorgularının <xref:System.Windows> ad alanı tarafından nitelendirilmeden tutulması için ad alanını boş olarak ayarlamanız gerekir, bu da sorguları hatalı yönlendirebilir.  
+> XML verilerinin kök düğümü, XML ad alanını boş bir dizeye ayarlayan bir **xmlns** özniteliğine sahiptir. Bu, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfasında satır içi bir veri adasına XPath sorguları uygulamak için bir gereksinimdir. Bu satır içi durumda, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ve bu nedenle veri Adası, <xref:System.Windows> ad alanını devralır. Bu nedenle, XPath sorgularının <xref:System.Windows> ad alanı tarafından nitelendirilmeden tutulması için ad alanını boş olarak ayarlamanız gerekir, bu da sorguları hatalı yönlendirebilir.  
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
@@ -44,15 +44,15 @@ Bu örnek, <xref:System.Windows.Data.XmlDataProvider>kullanarak [!INCLUDE[TLA#tl
   
 - `XPath="*[position()>3]"` ilk 3 hariç tüm kitap öğelerini döndürür.  
   
- Bir **XPath** sorgusu çalıştırdığınızda <xref:System.Xml.XmlNode> veya XMLNodes listesini döndürür. <xref:System.Xml.XmlNode> ortak dil çalışma zamanı (CLR) nesnesidir ve bu, ortak dil çalışma zamanı (CLR) özelliklerine bağlamak için <xref:System.Windows.Data.Binding.Path%2A> özelliğini kullanabileceğiniz anlamına gelir. Önceki örneği yeniden deneyin. Örneğin geri kalanı aynı kalırsa ve <xref:System.Windows.Controls.TextBlock> bağlamasını aşağıdaki şekilde değiştirirseniz, <xref:System.Windows.Controls.ListBox> ' de döndürülen XmlNodes 'nin adlarını görürsünüz. Bu durumda, döndürülen tüm düğümlerin adı "*Book*" dır.  
+ Bir **XPath** sorgusu çalıştırdığınızda bir <xref:System.Xml.XmlNode> veya XMLNodes listesini döndürür. <xref:System.Xml.XmlNode> ortak dil çalışma zamanı (CLR) nesnesidir ve bu, ortak dil çalışma zamanı (CLR) özelliklerine bağlamak için <xref:System.Windows.Data.Binding.Path%2A> özelliğini kullanabileceğiniz anlamına gelir. Önceki örneği yeniden deneyin. Örneğin geri kalanı aynı kalırsa ve <xref:System.Windows.Controls.TextBlock> bağlamayı aşağıdaki şekilde değiştirirseniz, <xref:System.Windows.Controls.ListBox>döndürülen XmlNodes 'nin adlarını görürsünüz. Bu durumda, döndürülen tüm düğümlerin adı "*Book*" dır.  
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   
- Bazı uygulamalarda, verilerin tam içeriğinin derleme zamanında bilinmesi gerektiğinden, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfasının kaynağına veri Adası olarak eklemek kullanışlı olabilir. Bu nedenle, aşağıdaki örnekte olduğu gibi bir dış [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dosyasından veri alma de desteklenir:  
+ Bazı uygulamalarda, verilerin tam içeriğinin derleme zamanında bilinmesi gerektiğinden, bazı uygulamalarda, verileri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfanın kaynağına bir veri Adası olarak gömmek çok kullanışlı olabilir. Bu nedenle, aşağıdaki örnekte olduğu gibi harici bir XML dosyasından veri alma de desteklenir:  
   
  [!code-xaml[XMLDataSource2#XmlFileExample](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
   
- [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veriler uzak bir [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dosyasında yer alıyorsa, <xref:System.Windows.Data.XmlDataProvider.Source%2A> özniteliğine uygun bir URL atayarak aşağıdaki gibi verilere erişim tanımlayabilirsiniz:  
+ XML verileri uzak bir XML dosyasında yer alıyorsa, <xref:System.Windows.Data.XmlDataProvider.Source%2A> özniteliğine uygun bir URL atayarak aşağıdaki gibi verilere erişim tanımlayabilirsiniz:  
   
 ```xml  
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  

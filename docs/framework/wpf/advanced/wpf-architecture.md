@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 02a70e65cd53a8998395987770cd32efc82293d0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ec979240b8fead10522817b77eef23e29409411
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459598"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740699"
 ---
 # <a name="wpf-architecture"></a>WPF Mimarisi
 Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisinde kılavuzlu bir tur sağlar. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ana alt sistemlerinin çoğunu kapsamakta ve nasıl etkileşime gireceğini anlatmaktadır. Ayrıca, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]mimarları tarafından yapılan seçimlerin bazılarını da ayrıntılarıyla görebilirsiniz.  
@@ -42,7 +42,7 @@ Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisinde kılavuzl
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-dağıtıcı ve iş parçacığı benzeşimi ile tartışırken anlaşılması için önemli iki temel kavram vardır.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]tasarım aşamasında, amaç tek bir yürütme iş parçacığına, ancak iş parçacığı olmayan "bir" uyumsuz "modele geçmektir. İş parçacığı benzeşimi, bir bileşen bir tür durum depolamak için yürütülen iş parçacığının kimliğini kullandığında oluşur. Bunun en yaygın biçimi, durumu depolamak için iş parçacığı yerel deposu (TLS) kullanmaktır. İş parçacığı benzeşimi, her bir mantıksal iş parçacığının işletim sisteminde yalnızca bir fiziksel iş parçacığından sahip olmasını gerektirir, bu da bellek yoğunluğu haline gelebilir. Son olarak, WPF 'in iş parçacığı modeli, iş parçacığı benzeşimi ile tek iş parçacıklı yürütmenin mevcut User32 iş parçacığı modeliyle eşitlenmiş olarak tutulmuştur. Bunun birincil nedeni [!INCLUDE[TLA2#tla_ole2.0](../../../../includes/tla2sharptla-ole2-0-md.md)], pano ve Internet Explorer 'ın hepsi için tek iş parçacığı benzeşimi (STA) yürütmeyi gerektirir.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]tasarım aşamasında, amaç tek bir yürütme iş parçacığına, ancak iş parçacığı olmayan "bir" uyumsuz "modele geçmektir. İş parçacığı benzeşimi, bir bileşen bir tür durum depolamak için yürütülen iş parçacığının kimliğini kullandığında oluşur. Bunun en yaygın biçimi, durumu depolamak için iş parçacığı yerel deposu (TLS) kullanmaktır. İş parçacığı benzeşimi, her bir mantıksal iş parçacığının işletim sisteminde yalnızca bir fiziksel iş parçacığından sahip olmasını gerektirir, bu da bellek yoğunluğu haline gelebilir. Son olarak, WPF 'in iş parçacığı modeli, iş parçacığı benzeşimi ile tek iş parçacıklı yürütmenin mevcut User32 iş parçacığı modeliyle eşitlenmiş olarak tutulmuştur. Bunun birincil nedeni, birlikte çalışabilirlik – OLE 2,0, pano ve Internet Explorer gibi sistemlerin hepsi tek iş parçacığı benzeşimi (STA) yürütmeyi gerektirir.  
   
  STA iş parçacıklı nesneleriniz olduğundan, iş parçacıkları arasında iletişim kurmak ve doğru iş parçacığında olduğunu doğrulamak için bir yol gerekir. Buradaki dağıtıcı rolünü alır. Dağıtıcı, birden çok önceliklendirilmiş kuyruğu olan temel bir ileti gönderme sistemidir. İleti örnekleri arasında ham giriş bildirimleri (fare taşınan), çerçeve işlevleri (Düzen) veya Kullanıcı komutları (bu yöntemi Yürüt) verilebilir. <xref:System.Windows.Threading.DispatcherObject>türettikten sonra, STA davranışına sahip bir CLR nesnesi oluşturursunuz ve oluşturma zamanında dağıtıcı için bir işaretçi verilecek.  
   

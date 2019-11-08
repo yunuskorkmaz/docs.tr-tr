@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: aa535c36b578e000ae6ddd7534838b07b0a5d756
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10bd924664a469be26174fadf3892ee56aa33856
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459993"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740643"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ayrıntılı XAML Sözdizimi
 Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanımlanmaktadır. Bu terimler, hem WPF belgeleri için hem de XAML kullanan diğer çerçeveler veya System. xaml düzeyinde XAML dil desteği tarafından etkinleştirilen temel XAML kavramlarını için bu belgenin geri kalanında sık kullanılır. Bu konu, [xaml genel bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md)konu başlığında sunulan temel terminoloji üzerinde genişletilir.  
@@ -52,7 +52,7 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
 #### <a name="members-of-types-and-class-inheritance"></a>Türlerin üyeleri ve sınıf devralma  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir türün XAML üyeleri olarak göründükleri Özellikler ve olaylar genellikle temel türlerden devralınır. Örneğin, şu örneği göz önünde bulundurun: `<Button Background="Blue" .../>`. <xref:System.Windows.Controls.Control.Background%2A> özelliği, sınıf tanımına, yansıma sonuçlarına veya belgelere baktığınızda, <xref:System.Windows.Controls.Button> sınıfında anında bildirilmemiş bir özellik değildir. Bunun yerine, <xref:System.Windows.Controls.Control.Background%2A> taban <xref:System.Windows.Controls.Control> sınıfından devralınır.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML öğelerinin sınıf devralma davranışı, XML işaretlemesi için şema tarafından zorlanan bir yorumdan önemli bir kavadır. Sınıf devralma karmaşık olabilir, özellikle ara temel sınıflar soyut olduğunda veya arabirimler dahil edildiğinde karmaşık hale gelebilir. Bu, XAML öğeleri kümesinin ve izin verilen özniteliklerinin, genellikle DTD veya XSD biçimi gibi [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] programlama için kullanılan şema türlerini doğru ve tamamen temsil etmesi zor bir nedenidir. Diğer bir nedenden dolayı, XAML dilinin genişletilebilirlik ve tür eşleme özelliklerinin, izin verilen türlerin ve üyelerin herhangi bir sabit gösteriminden daha da karmaşık olmasını sağlamak.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML öğelerinin sınıf devralma davranışı, XML işaretlemesi için şema tarafından zorlanan bir yorumdan önemli bir kavadır. Sınıf devralma karmaşık olabilir, özellikle ara temel sınıflar soyut olduğunda veya arabirimler dahil edildiğinde karmaşık hale gelebilir. Bu, XAML öğeleri kümesinin ve izin verilen özniteliklerinin, genellikle DTD veya XSD biçimi gibi XML programlama için kullanılan şema türlerini doğru ve tamamen temsil etmesi zor bir nedenidir. Diğer bir nedenden dolayı, XAML dilinin genişletilebilirlik ve tür eşleme özelliklerinin, izin verilen türlerin ve üyelerin herhangi bir sabit gösteriminden daha da karmaşık olmasını sağlamak.  
   
 <a name="object_element_syntax"></a>   
 ## <a name="object-element-syntax"></a>Nesne öğesi sözdizimi  

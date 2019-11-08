@@ -2,23 +2,23 @@
 title: <transport> / <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 41f11be9b4ae8f7a7535c9766965de8575cff784
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 4ef08ad73a03dea21d27217364a7bacb46a3848e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399312"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735925"
 ---
-# <a name="transport-of-nettcpbinding"></a>\<\<NetTcpBinding > taşıma >
-[ \<NetTcpBinding >](nettcpbinding.md)yapılandırılmış bir uç nokta için ileti düzeyi güvenlik gereksinimlerinin türünü tanımlar.  
+# <a name="transport-of-nettcpbinding"></a>\<> netTcpBinding \<aktarma >
+[\<netTcpBinding >](nettcpbinding.md)ile yapılandırılmış bir uç nokta için ileti düzeyi güvenlik gereksinimlerinin türünü tanımlar.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlamaları >** ](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netTcpBinding >** ](nettcpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Güvenlik >** ](security-of-nettcpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Taşıma >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<güvenlik >** ](security-of-nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<taşıma >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,10 +47,10 @@ ms.locfileid: "70399312"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|clientCredentialType|İsteğe bağlı. Aktarım güvenliği kullanılarak istemci kimlik doğrulaması gerçekleştirilirken kullanılacak kimlik bilgisinin türünü belirtir.<br /><br /> -Varsayılan değer `Windows`.<br />-Bu öznitelik türündedir <xref:System.ServiceModel.TcpClientCredentialType>.|  
+|clientCredentialType|İsteğe bağlı. Aktarım güvenliği kullanılarak istemci kimlik doğrulaması gerçekleştirilirken kullanılacak kimlik bilgisinin türünü belirtir.<br /><br /> -Varsayılan değer `Windows`.<br />-Bu öznitelik <xref:System.ServiceModel.TcpClientCredentialType>türündedir.|  
 |protectionLevel|İsteğe bağlı. TCP aktarımı düzeyinde güvenliği tanımlar. İmzalama iletileri, üçüncü bir tarafın aktarılırken ileti üzerinde izinsiz değişiklik yaptığı riski azaltır. Şifreleme, aktarım sırasında veri düzeyinde gizlilik sağlar.<br /><br /> Varsayılan değer `EncryptAndSign` şeklindedir.|  
 |sslProtocols|Hangi SslProtocols desteklendiğini belirten bir SslProtocols numaralandırma bayrak değeri. Varsayılan değer TLS&#124;Tls11&#124;Tls12 ' dir.|  
-|policyEnforcement|Bu numaralandırma, <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> ne zaman uygulanacağını belirtir.<br /><br /> 1.  Hiçbir süre – ilke hiçbir şekilde zorlanmaz (genişletilmiş koruma devre dışı bırakılır).<br />2.  WhenSupported – ilke yalnızca istemci genişletilmiş korumayı destekliyorsa zorlanır.<br />3.  Her zaman – ilke her zaman zorlanır. Genişletilmiş korumayı desteklemeyen istemciler kimlik doğrulaması yapamaz.|  
+|policyEnforcement|Bu sabit listesi <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> ne zaman uygulanacağını belirtir.<br /><br /> 1. hiçbir süre – ilke hiçbir şekilde zorlanmaz (genişletilmiş koruma devre dışı bırakılır).<br />2. WhenSupported – ilke yalnızca istemci genişletilmiş korumayı destekliyorsa zorlanır.<br />3. her zaman – ilke her zaman zorlanır. Genişletilmiş korumayı desteklemeyen istemciler kimlik doğrulaması yapamaz.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType özniteliği  
   
@@ -66,7 +66,7 @@ ms.locfileid: "70399312"
 |-----------|-----------------|  
 |Yok.|Koruma yok.|  
 |İmzalayabilirsiniz|İletiler imzalanır.|  
-|EncryptAndSign|-İletiler şifrelenir ve imzalanır.|  
+|EncryptAndSign özelliğini|-İletiler şifrelenir ve imzalanır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -75,7 +75,7 @@ ms.locfileid: "70399312"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Güvenlik >](security-of-nettcpbinding.md)|[ \<NetTcpBinding >](nettcpbinding.md)'nin güvenlik yeteneklerini belirtir.|  
+|[\<Güvenlik >](security-of-nettcpbinding.md)|[\<netTcpBinding >](nettcpbinding.md)'nin güvenlik yeteneklerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  SOAP iletisinin bütünlüğü ve gizliliği ve karşılıklı kimlik doğrulaması için aktarım güvenliği kullanın. Bu güvenlik modu bir bağlamada seçilirse, kanal yığını güvenli bir aktarım kullanılarak yapılandırılır ve SOAP iletileri Windows (Negotiate) veya TCP üzerinden SSL gibi aktarım güvenliği kullanılarak güvenli hale getirilir.  
@@ -90,4 +90,4 @@ ms.locfileid: "70399312"
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../misc/binding.md)
+- [\< bağlama >](bindings.md)

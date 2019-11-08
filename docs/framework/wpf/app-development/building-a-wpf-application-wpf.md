@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 04183b2404d26c783e14dc6f4cb4141bab0d7621
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bf673195f06475daf8341fd17cd701b84a970b39
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424431"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740670"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
 
@@ -46,7 +46,7 @@ Derlemeden önce, MSBuild aşağıdakiler de dahil olmak üzere önemli araçlar
 
 - .NET Framework.
 
-- [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] dizinleri.
+- Windows SDK dizinleri.
 
 - [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] başvuru derlemelerinin konumu.
 
@@ -64,7 +64,7 @@ Yapı işlemi, uygulama projesini oluşturmak için gereken derlemeleri bulur ve
 
 ### <a name="markup-compilationpass-1"></a>Biçimlendirme derlemesi — 1. geçiş
 
-Bu adımda, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyalar ayrıştırılıp derlenerek çalışma zamanının, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] için zaman ayrıştırması ve özellik değerlerini doğrulaması harcamaması gerekir. Derlenmiş [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyası önceden simgeleştirilir, böylece çalışma zamanında, yükleme bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyası yüklemeden çok daha hızlı olmalıdır.
+Bu adımda, çalışma zamanının XML ayrıştırma ve özellik değerlerini doğrulama süresini harcamaması için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyalar ayrıştırılır ve derlenir. Derlenmiş [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyası önceden simgeleştirilir, böylece çalışma zamanında, yükleme bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyası yüklemeden çok daha hızlı olmalıdır.
 
 Bu adım sırasında, bir `Page` derleme öğesi olan her [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyası için aşağıdaki etkinlikler gerçekleşir:
 

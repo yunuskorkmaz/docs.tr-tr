@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 2e7d9ceed3ab8385f07d87ecdb92c0a99d410b40
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e4183ddc3868a1568662853b46e05348df129092
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459085"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733473"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Nasıl yapılır: Hiyerarşik Veriler ile Ana Öğe-Ayrıntı Desenini Kullanma
 Bu örnek, ana ayrıntı senaryosunun nasıl uygulanacağını gösterir.  
@@ -31,7 +31,7 @@ Bu örnek, ana ayrıntı senaryosunun nasıl uygulanacağını gösterir.
   
 2. <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> özelliğini, izlemekte olduğunuz seçimin <xref:System.Windows.Controls.ListBox> denetimlerinde `true` olarak ayarlamanız gerekir. Bu özelliğin ayarlanması, seçilen öğenin her zaman <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>olarak ayarlanmasını sağlar. Alternatif olarak, <xref:System.Windows.Controls.ListBox> <xref:System.Windows.Data.CollectionViewSource>verileri alırsa, seçim ve para birimini otomatik olarak eşitler.  
   
- [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] verileri kullanırken teknik biraz farklıdır. Bir örnek için bkz. [HIYERARŞIK XML verileriyle Master-Detail modelini kullanma](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
+ XML verileri kullanırken teknik biraz farklıdır. Bir örnek için bkz. [HIYERARŞIK XML verileriyle Master-Detail modelini kullanma](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

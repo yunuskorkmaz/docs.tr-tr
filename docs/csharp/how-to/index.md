@@ -2,12 +2,12 @@
 title: Nasıl yapılır makaleleri (C# kılavuz)
 description: Hızlı ipuçları ve kısa, odaklanmış kod örnekleri koleksiyonu
 ms.date: 12/20/2017
-ms.openlocfilehash: f764bd0183e3881bfb81ebda7d3c7dd49a4cbdde
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591602"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736882"
 ---
 # <a name="how-to-c"></a>Nasıl yapılır (C#)
 
@@ -21,8 +21,8 @@ Yaygın C# geliştirici uygulamaları olan çeşitli ipuçları ve püf noktalar
 - Bir [Yapı ve sınıfı bir yönteme geçirme arasındaki farkları öğrenin](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [İşleç aşırı yüklemesi kullanın](../language-reference/operators/operator-overloading.md).
 - [Özel bir genişletme yöntemi uygulayın ve çağırın](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
-- Programcılar C# [, hatta, `My` vb. ad alanını kullanmak](../programming-guide/namespaces/how-to-use-the-my-namespace.md)isteyebilir.
-- [Uzantı `enum` yöntemleri kullanarak bir tür için yeni bir yöntem oluşturun](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
+- Programcılar C# de [`My` ad alanını vb. kullanmak](../programming-guide/namespaces/how-to-use-the-my-namespace.md)isteyebilir.
+- [Uzantı yöntemlerini kullanarak `enum` türü için yeni bir yöntem oluşturun](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ### <a name="class-and-struct-members"></a>Sınıf ve yapı üyeleri
 
@@ -31,7 +31,7 @@ Programınızı uygulamak için sınıflar ve yapılar oluşturursunuz. Bu tekni
 - [Otomatik uygulanan özellikler bildirin](../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md).
 - [Okuma/yazma özelliklerini bildirin ve kullanın](../programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md).
 - [Sabitleri tanımlayın](../programming-guide/classes-and-structs/how-to-define-constants.md).
-- [Dize çıktısı sağlamak için yönteminigeçersizkılın.`ToString` ](../programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)
+- [Dize çıktısı sağlamak için `ToString` yöntemini geçersiz kılın](../programming-guide/classes-and-structs/how-to-override-the-tostring-method.md).
 - [Soyut özellikleri tanımlayın](../programming-guide/classes-and-structs/how-to-define-abstract-properties.md).
 - [Kodunuzu belgelemek için XML belge özelliklerini kullanın](../programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md).
 - Genel arabiriminizi kısa tutmak için [arabirim üyelerini açık](../programming-guide/interfaces/how-to-explicitly-implement-interface-members.md) bir şekilde uygulayın.
@@ -50,7 +50,7 @@ Dizeler, metni göstermek veya işlemek için kullanılan temel veri türüdür.
 - [Dizeleri karşılaştırın](compare-strings.md).
 - [Bir dizenin Içeriğini değiştirme](modify-string-contents.md).
 - [Bir dizenin bir sayıyı temsil edip etmediğini belirleme](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
-- [Dizeleri `String.Split` ayırmak için kullanın](parse-strings-using-split.md).
+- [Dizeleri ayırmak için `String.Split` kullanın](parse-strings-using-split.md).
 - [Birden çok dizeyi bir Içinde birleştirin](concatenate-multiple-strings.md).
 - [Dizede metin arayın](search-strings.md).
 
@@ -60,13 +60,13 @@ Bir nesneyi farklı bir türe dönüştürmeniz gerekebilir.
 
 - [Bir dizenin bir sayıyı temsil edip etmediğini belirleme](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Onaltılık sayıları ve sayıyı temsil eden dizeler arasında dönüştürme](../programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).
-- Bir [ `DateTime`dizeyi öğesine dönüştürün ](../../standard/base-types/parsing-datetime.md).
+- [Bir dizeyi `DateTime`Dönüştür ](../../standard/base-types/parsing-datetime.md).
 - [Bir Byte dizisini int 'e dönüştürün](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [Bir dizeyi sayıya dönüştürür](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
-- [Farklı bir türe güvenle dönüştürmek `as` için `is` , ve işleçlerini kullanarak model eşleştirmeyi kullanın](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
+- [Farklı bir türe güvenle dönüştürmek için, `as` ve `is` Işleçlerini kullanarak model eşleştirmeyi kullanın](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
 - [Özel tür dönüştürmeleri tanımlayın](../language-reference/operators/user-defined-conversion-operators.md).
-- [Türün null yapılabilir bir değer türü](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md)olup olmadığını belirleme.
-- [Null yapılabilen ve null yapılamayan değer türleri arasında dönüştürme](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type).
+- [Türün null yapılabilir bir değer türü](../language-reference/builtin-types/nullable-value-types.md#how-to-identify-a-nullable-value-type)olup olmadığını belirleme.
+- [Null yapılabilen ve null yapılamayan değer türleri arasında dönüştürme](../language-reference/builtin-types/nullable-value-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type).
 
 ## <a name="equality-and-ordering-comparisons"></a>Eşitlik ve sıralama karşılaştırmaları
 
@@ -79,8 +79,8 @@ Eşitlik için kendi kurallarını tanımlayan türler oluşturabilir veya bu t�
 
 .NET programları, özel durumlar oluşturarak bu yöntemlerin çalışmalarını başarıyla tamamlamamış olduğunu bildirir. Bu makalelerde, özel durumlarla çalışmayı öğreneceksiniz.
 
-- [ `try` Ve kullanarak`catch`özel durumları işleyin ](../programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md).
-- [Yan tümceleri kullanarak `finally` Kaynakları Temizleme](../programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md).
+- [`try` ve `catch`kullanarak özel durumları işleyin ](../programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md).
+- [`finally` yan tümceleri kullanarak kaynakları temizleme](../programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md).
 - [CLS olmayan (ortak dil belirtimi) özel durumlarından kurtarın](../programming-guide/exceptions/how-to-catch-a-non-cls-exception.md).
 
 ## <a name="delegates-and-events"></a>Temsilciler ve olaylar
@@ -104,7 +104,7 @@ LINQ, LINQ sorgu ifadesi modelini destekleyen herhangi bir veri kaynağını sor
 
 - [Bir koleksiyonu sorgulayın](../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
 - [Bir sorguda lambda Ifadeleri kullanın](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md).
-- [Sorgu `var` ifadelerinde kullanın](../programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
+- [Sorgu ifadelerinde `var` kullanın](../programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
 - [Bir sorgudan öğe özelliklerinin alt kümelerini döndürün](../programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md).
 - [Karmaşık filtrelemeye sahip sorgular yazın](../programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md).
 - [Bir veri kaynağının öğelerini sıralayın](../programming-guide/concepts/linq/how-to-sort-elements.md).
@@ -121,12 +121,12 @@ LINQ, LINQ sorgu ifadesi modelini destekleyen herhangi bir veri kaynağını sor
 
 Modern programlar genellikle zaman uyumsuz işlemler kullanır. Bu makaleler, bu teknikleri kullanmayı öğrenmenize yardımcı olur.
 
-- [ Kullanarak`System.Threading.Tasks.Task.WhenAll`zaman uyumsuz performansı geliştirir ](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
-- [ `async` Ve kullanarak`await`birden çok web isteğini paralel hale getirin ](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md).
+- [`System.Threading.Tasks.Task.WhenAll`kullanarak zaman uyumsuz performansı geliştirme ](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+- [`async` ve `await`kullanarak birden çok web isteğini paralel hale getirin ](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md).
 - [Bir iş parçacığı havuzu kullanın](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool).
 
 ## <a name="command-line-args-to-your-program"></a>Programınızın komut satırı bağımsız değişkenleri
 
 Genellikle, C# programların komut satırı bağımsız değişkenleri vardır. Bu makaleler, bu komut satırı bağımsız değişkenlerine erişmek ve bunları işlemek için size öğretir.
 
-- [Tüm komut satırı bağımsız değişkenlerini Ile `for`alın ](../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md).
+- [Tüm komut satırı bağımsız değişkenlerini `for`alın ](../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md).
