@@ -2,12 +2,12 @@
 title: Son değişiklikleri değerlendir-.NET Core
 description: .NET Core 'un .NET sürümleri genelinde geliştiriciler için uyumluluğu sürdürme yolları hakkında bilgi edinin.
 ms.date: 06/10/2019
-ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416658"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739354"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>.NET Core 'daki kırılmaya karşı değişiklikleri değerlendir
 
@@ -52,7 +52,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını *değiştirir
 - **✔️ [Yapı](../../csharp/language-reference/keywords/struct.md) türünü `readonly struct` türüne değiştirme**
 
   `readonly struct` türünün `struct` bir tür olarak değiştirilmesine izin verilmeyeceğini unutmayın.
-  
+
 - ***erişilebilir* (genel veya korumalı) oluşturucular olmadığında bir türe [Sealed](../../csharp/language-reference/keywords/sealed.md) veya [abstract](../../csharp/language-reference/keywords/abstract.md) anahtar sözcüğü eklemek ✔️**
 
 - **bir türün görünürlüğünü genişletmek ✔️**
@@ -138,9 +138,9 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını *değiştirir
 - **bir parametreyi yeniden adlandırma ❌ (büyük/küçük harf durumunu değiştirme dahil)**
 
   Bunun iki nedenden dolayı bölünmesi kabul edilir:
-  
+
   - Visual Basic ve [dinamik](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) sürümünde geç bağlama özelliği gibi geç bağlantılı senaryoları keser C#.
-  
+
   - Geliştiriciler [adlandırılmış bağımsız değişkenler](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments)kullandıklarında [kaynak uyumluluğunu](categories.md#source-compatibility) keser.
 
 - **`ref` dönüş değerinden `ref readonly` dönüş değerine değiştirme ❌**
@@ -153,9 +153,9 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını *değiştirir
 
   C# Derleyici, sanal olmayan yöntemleri çağırmak için [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) ara dil (IL) yönergelerini yayma eğilimi yaptığından (`callvirt` bir null denetimi gerçekleştirir, normal çağrı olmadığında) Bu durum genellikle Bazı nedenlerle ınvariable:
   - C#, .NET 'in hedeflediği tek dil değildir.
-  
+
   - C# Derleyici, hedef yöntem sanal olmayan ve muhtemelen null olmadığında ( [?. null yayma operatörü](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)aracılığıyla erişilen bir yöntem gibi) normal bir çağrıya `callvirt` iyileştirmenize çalışır.
-  
+
   Bir yöntem sanal hale getirmek, tüketici kodunun genellikle neredeyse bir kez çağrılmasını sona erdirmek anlamına gelir.
 
 - **bir üyeye [sanal](../../csharp/language-reference/keywords/virtual.md) anahtar sözcük eklemek ❌**

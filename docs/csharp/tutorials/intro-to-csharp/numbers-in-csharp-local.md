@@ -3,12 +3,12 @@ title: C# C#
 description: Sayısal C# türleri, özelliklerini ve yöntemlerini inceleyerek bilgi edinin.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: b392682a245101e37a182cb92d36ccb1dd34b13e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a06bc57e5c979b62e19407747cb2c8a2447ca114
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039702"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739143"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C \# integral ve kayan nokta numaralarını işleme
 
@@ -18,7 +18,11 @@ Bu öğreticide, geliştirme için kullanabileceğiniz bir makineniz olması bek
 
 ## <a name="explore-integer-math"></a>Tamsayı matematiğini keşfet
 
-Sayı adlı bir dizin oluşturun *-hızlı başlangıç*. Geçerli dizini yapıp `dotnet new console -n NumbersInCSharp -o .` çalıştırın.
+Sayı adlı bir dizin oluşturun *-hızlı başlangıç*. Geçerli dizini yapın ve şu komutu çalıştırın:
+
+```dotnetcli
+dotnet new console -n NumbersInCSharp -o .
+```
 
 En sevdiğiniz düzenleyicide *program.cs* açın ve satır `Console.WriteLine("Hello World!");` aşağıdaki kodla değiştirin:
 

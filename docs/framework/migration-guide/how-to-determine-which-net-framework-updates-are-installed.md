@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: hangi .NET Framework güvenlik güncelleştirmelerinin ve düzeltmelerin yüklendiğini belirleme'
+title: Hangi güvenlik güncelleştirmelerinin ve düzeltmelerinin yüklü .NET Framework
 description: Bir bilgisayara hangi .NET Framework güvenlik güncelleştirmelerinin ve düzeltmelerin yüklendiğini belirlemeyi öğrenin.
 ms.date: 11/27/2017
 dev_langs:
@@ -11,35 +11,35 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c69d4bb370087dddafbfed41cbfb1fef229677c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: aad202e7c9df01c2893e74a39744f2c32783f1f0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318965"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735205"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Nasıl yapılır: hangi .NET Framework güvenlik güncelleştirmelerinin ve düzeltmelerin yüklendiğini belirleme
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Hangi .NET Framework güvenlik güncelleştirmelerinin ve düzeltmelerinin yüklendiğini belirleme
 
 Bu makalede, bir bilgisayara hangi .NET Framework güvenlik güncelleştirmelerinin ve düzeltmelerinin yüklendiğini nasıl bulacağınız açıklanmaktadır.
 
 > [!NOTE]
 > Bu makalede gösterilen tüm teknikler, yönetici ayrıcalıklarına sahip bir hesap gerektirir.
 
-## <a name="to-find-installed-updates-using-the-registry"></a>Kayıt defterini kullanarak yüklü güncelleştirmeleri bulmak için
+## <a name="use-registry-editor"></a>Kayıt Defteri Düzenleyicisi 'Ni kullan
 
 Bir bilgisayarda yüklü .NET Framework her sürümü için yüklü güvenlik güncelleştirmeleri ve düzeltmeleri Windows kayıt defterinde listelenmiştir. Bu bilgileri görüntülemek için kayıt defteri Düzenleyicisi (*Regedit. exe*) programını kullanabilirsiniz.
 
-1. **Regedit. exe**programını açın. Windows 8 ve sonraki sürümlerde, ![Windows anahtar logosunun ekran görüntüsünü] **Başlat** ' a sağ tıklayın. (./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Windowskeyboardlogo")ve **Çalıştır**' ı seçin. **Aç** kutusunda, **Regedit** yazın ve **Tamam**' ı seçin.
+1. **Regedit. exe**programını açın. Windows 8 ve sonraki sürümlerde, ![Windows anahtar logosunun ekran görüntüsünü](./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Windowskeyboardlogo") **Başlat** ' a sağ tıklayın. ardından **Çalıştır**' ı seçin. **Aç** kutusunda, **Regedit** yazın ve **Tamam**' ı seçin.
 
 2. Kayıt Defteri Düzenleyicisi'nde, aşağıdaki alt anahtarı açın:
 
-     `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates`
+     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates**
 
      Yüklü güncelleştirmeler, için uygulandıkları .NET Framework sürümünü tanımlayan alt anahtarlar altında listelenir. Her güncelleştirme bir Bilgi Bankası (KB) numarasıyla tanımlanır.
 
 Kayıt defteri düzenleyicisinde, her sürüm için .NET Framework sürümleri ve yüklü güncelleştirmeler farklı alt anahtarlarda saklanır. Yüklü sürüm numaralarını algılama hakkında daha fazla bilgi için bkz. [nasıl yapılır: hangi .NET Framework sürümlerinin yüklendiğini belirleme](how-to-determine-which-versions-are-installed.md).
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Kod içinde kayıt defterini sorgulayarak yüklü güncelleştirmeleri bulmak için
+## <a name="query-the-registry-using-code"></a>Kodu kullanarak kayıt defterini sorgulama
 
 Aşağıdaki örnek, bir bilgisayarda yüklü olan .NET Framework güvenlik güncelleştirmelerini ve düzeltmeleri programlı bir şekilde belirler:
 
@@ -67,7 +67,7 @@ Microsoft .NET Framework 4 Extended
   KB2600217
 ```
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a>PowerShell 'de kayıt defterini sorgulayarak yüklü güncelleştirmeleri bulmak için
+## <a name="use-powershell-to-query-the-registry"></a>PowerShell kullanarak kayıt defterini sorgulama
 
 Aşağıdaki örnek, PowerShell kullanarak bir bilgisayarda yüklü olan .NET Framework güvenlik güncelleştirmelerinin ve düzeltmelerinin nasıl belirleneceğini göstermektedir:
 

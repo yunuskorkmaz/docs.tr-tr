@@ -7,19 +7,19 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 930e8a0013dd601aaafcd81340b3b9b8b69f8fdd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3661563dc7f5fa7346a12abab15013b56c376325
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458498"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740593"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML'de Boşluk İşleme
 XAML durumunun, önemli boşluk olan bir [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] işlemci uygulamasıyla işlenmesi gereken için dil kuralları. Bu konu, bu XAML dil kurallarını belgeler. Ayrıca XAML işlemcisinin [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] uygulamasının ve serileştirme için XAML yazıcısının tanımladığı ek boşluk işlemeyi da belgelemektedir.  
   
 <a name="whitespace_definition"></a>   
 ## <a name="white-space-definition"></a>Boşluk tanımı  
- [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]ile tutarlı, [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] boşluk karakterleri, linefeed ve sekme. Bunlar sırasıyla 0020, 000A ve 0009 Unicode değerlerine karşılık gelir.  
+ XML ile tutarlıdır, [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] ' deki boşluk karakterleriyle boşluk, linefeed ve sekme bulunur. Bunlar sırasıyla 0020, 000A ve 0009 Unicode değerlerine karşılık gelir.  
   
 <a name="whitespace_normalization"></a>   
 ## <a name="white-space-normalization"></a>Boşluk normalleştirme  

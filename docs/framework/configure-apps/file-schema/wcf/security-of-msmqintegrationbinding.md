@@ -2,22 +2,22 @@
 title: <security> / <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: e4f10ab994429c6cbb690caef38114b8340e6839
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 2268bf48a2b86c3b3b25db006e6f8f55ea33af73
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399861"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738686"
 ---
-# <a name="security-of-msmqintegrationbinding"></a>\<\<MsmqIntegrationBinding > Güvenlik >
+# <a name="security-of-msmqintegrationbinding"></a>\<MsmqIntegrationBinding > Güvenlik > \<
 Message Queuing (MSMQ) tümleştirme kanalının taşıma güvenlik ayarlarını tanımlar.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlamaları >** ](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<MsmqIntegrationBinding >** ](msmqintegrationbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Güvenlik >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<güvenlik >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,19 +44,19 @@ Message Queuing (MSMQ) tümleştirme kanalının taşıma güvenlik ayarlarını
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|mod|Message Queuing tümleştirme kanalı ile bütünlüğü, gizliliği ve kimlik doğrulamasını denetleyen güvenlik türünü belirtir. Geçerli değerler şunlardır:<br /><br /> Seçim Bu, güvenliği devre dışı bırakır.<br />Aktarım Koruma ve kimlik doğrulama, taşıma tarafından sunulur. Bu, iki kuyruk yöneticisi arasındaki ileti güvenliği için geçerlidir. Uygulama ve kuyruk Yöneticisi arasında bir güvenlik sunulmaz. Mevcut MSMQ uygulamaları, bu tür güvenlik moduyla işlevsel olarak eşdeğerdir.<br /><br /> Varsayılan değer `Transport` şeklindedir. Bu öznitelik türü <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.|  
+|mod|Message Queuing tümleştirme kanalı ile bütünlüğü, gizliliği ve kimlik doğrulamasını denetleyen güvenlik türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -None: Bu, güvenliği devre dışı bırakır.<br />-Taşıma: koruma ve kimlik doğrulama, taşıma tarafından sunulur. Bu, iki kuyruk yöneticisi arasındaki ileti güvenliği için geçerlidir. Uygulama ve kuyruk Yöneticisi arasında bir güvenlik sunulmaz. Mevcut MSMQ uygulamaları, bu tür güvenlik moduyla işlevsel olarak eşdeğerdir.<br /><br /> Varsayılan değer `Transport` şeklindedir. Bu öznitelik <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>türündedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Taşıma >](transport-of-msmqintegrationbinding.md)|Message Queuing tümleştirme taşıması için güvenlik ayarlarını tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<taşıma >](transport-of-msmqintegrationbinding.md)|Message Queuing tümleştirme taşıması için güvenlik ayarlarını tanımlar. Bu öğe <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>türündedir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../misc/binding.md)|[ \<MsmqIntegrationBinding](msmqintegrationbinding.md)'in Binding öğesi >.|  
+|[\< bağlama >](bindings.md)|[\<MsmqIntegrationBinding >](msmqintegrationbinding.md)bağlama öğesi.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -69,5 +69,5 @@ Message Queuing (MSMQ) tümleştirme kanalının taşıma güvenlik ayarlarını
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../misc/binding.md)
-- [\<MsmqIntegrationBinding >](msmqintegrationbinding.md)
+- [\< bağlama >](bindings.md)
+- [MsmqIntegrationBinding > \<](msmqintegrationbinding.md)

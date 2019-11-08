@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 00596911cf603ae9615eb64d0aedefe90c2520bc
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8e3ac7207a5ef05b94e97f005ecd17d5078669a4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458991"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740892"
 ---
 # <a name="custom-dependency-properties"></a>Özel Bağımlılık Özellikleri
 
@@ -35,7 +35,7 @@ Bu konu başlığı altında, bağımlılık özelliklerini [!INCLUDE[TLA2#tla_w
 
 ## <a name="what-is-a-dependency-property"></a>Bağımlılık özelliği nedir?
 
-Aynı şekilde, bir bağımlılık özelliği olarak uygulayarak stil, veri bağlama, devralma, animasyonlar ve varsayılan değerleri desteklemek için ortak dil çalışma zamanı (CLR) özelliğinin ne olduğunu seçebilirsiniz. Bağımlılık özellikleri, <xref:System.Windows.DependencyProperty.Register%2A> yöntemi (veya <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>) çağırarak ve bir <xref:System.Windows.DependencyProperty> tanımlayıcı alan tarafından desteklenen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemine kayıtlı özelliklerdir. Bağımlılık özellikleri yalnızca <xref:System.Windows.DependencyObject> türleri tarafından kullanılabilir, ancak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sınıf hiyerarşisinde <xref:System.Windows.DependencyObject> oldukça yüksektir, bu nedenle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ' de bulunan sınıfların çoğu bağımlılık özelliklerini destekleyebilir. Bağımlılık özellikleri ve bunları bu [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]açıklamak için kullanılan terminoloji ve kurallardan bazıları hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md).
+Aynı şekilde, bir bağımlılık özelliği olarak uygulayarak stil, veri bağlama, devralma, animasyonlar ve varsayılan değerleri desteklemek için ortak dil çalışma zamanı (CLR) özelliğinin ne olduğunu seçebilirsiniz. Bağımlılık özellikleri, <xref:System.Windows.DependencyProperty.Register%2A> yöntemi (veya <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>) çağırarak ve bir <xref:System.Windows.DependencyProperty> tanımlayıcı alan tarafından desteklenen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemine kayıtlı özelliklerdir. Bağımlılık özellikleri yalnızca <xref:System.Windows.DependencyObject> türleri tarafından kullanılabilir, ancak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sınıf hiyerarşisinde <xref:System.Windows.DependencyObject> oldukça yüksektir, bu nedenle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ' de bulunan sınıfların çoğu bağımlılık özelliklerini destekleyebilir. Bağımlılık özellikleri ve bu SDK 'da bunları açıklamak için kullanılan bazı terminoloji ve kurallar hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md).
 
 <a name="example_dp"></a>
 

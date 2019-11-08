@@ -3,19 +3,19 @@ title: C# Kılavuz geçmişi C#
 description: Dil en eski sürümlerinde ne şekilde görünür ve bu tarihten sonra nasıl gelişmiştir?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 490f001d4ed648d6621f8ec059201830acb90af0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423091"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739098"
 ---
 # <a name="the-history-of-c"></a>C\# geçmişi
 
 Bu makalede, C# dilin her bir ana sürümünün geçmişi sağlanmaktadır. C# Takım yenilik yapın ve yeni özellikler eklemeye devam etmektedir. Gelecek sürümler için kabul edilen özellikler dahil olmak üzere ayrıntılı dil özelliği durumu GitHub 'daki [DotNet/Roslyn deposunda](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) bulunabilir.
 
 > [!IMPORTANT]
-> C# Dil, C# belirtimin bazı özellikler için *standart kitaplık* olarak tanımladığı tür ve yöntemlere dayanır. .NET platformu bu türleri ve yöntemleri bir dizi pakete sunar. Özel durum işleme bir örnektir. Oluşturulan nesnenin <xref:System.Exception> ' den türetildiğinden emin olmak için her `throw` deyimi veya ifadesi denetlenir. Benzer şekilde, yakalanan türün <xref:System.Exception> ' den türetildiğinden emin olmak için her `catch` denetlenir. Her sürümde yeni gereksinimler eklenebilir. Eski ortamlarda en son dil özelliklerini kullanmak için, belirli kitaplıkları yüklemeniz gerekebilir. Bu bağımlılıklar, her belirli sürüm için sayfasında belgelenmiştir. Bu bağımlılıkta arka plan için [dil ve kitaplık arasındaki ilişkiler](relationships-between-language-and-library.md) hakkında daha fazla bilgi edinebilirsiniz.
+> C# Dil, C# belirtimin bazı özellikler için *standart kitaplık* olarak tanımladığı tür ve yöntemlere dayanır. .NET platformu bu türleri ve yöntemleri bir dizi pakete sunar. Özel durum işleme bir örnektir. Oluşturulan nesnenin <xref:System.Exception>türetildiğinden emin olmak için her `throw` deyimi veya ifadesi denetlenir. Benzer şekilde, yakalanan türün <xref:System.Exception>türediğinden emin olmak için her `catch` denetlenir. Her sürümde yeni gereksinimler eklenebilir. Eski ortamlarda en son dil özelliklerini kullanmak için, belirli kitaplıkları yüklemeniz gerekebilir. Bu bağımlılıklar, her belirli sürüm için sayfasında belgelenmiştir. Bu bağımlılıkta arka plan için [dil ve kitaplık arasındaki ilişkiler](relationships-between-language-and-library.md) hakkında daha fazla bilgi edinebilirsiniz.
 
 C# Yapı araçları, varsayılan dil sürümü olan en son ana dil sürümünü göz önünde bulundurun. Bu bölümdeki diğer makalelerde ayrıntılı olarak açıklanan ana yayınlar arasında nokta yayınları olabilir. En son özellikleri bir nokta sürümünde kullanmak için, [Derleyici dil sürümünü yapılandırmanız](../language-reference/configure-language-version.md) ve sürümü seçmeniz gerekir. 7,0 sonrasında C# üç nokta yayını vardı:
 
@@ -57,7 +57,7 @@ C#sürüm 1,2, Visual Studio .NET 2003 ile birlikte gönderilir. Dilde birkaç k
 - [Genel Türler](../programming-guide/generics/index.md)
 - [Kısmi türler](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Anonim Yöntemler](../language-reference/operators/delegate-operator.md)
-- [Null yapılabilir değer türleri](../programming-guide/nullable-types/index.md)
+- [Null yapılabilir değer türleri](../language-reference/builtin-types/nullable-value-types.md)
 - [Yineleyiciler](../programming-guide/concepts/iterators.md)
 - [Kovaryans ve değişken sapması](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -72,7 +72,7 @@ C# Genel bir nesne YÖNELIMLI (OO) dil olarak başlamışsa, sürüm 2,0, C# bir
 
 Genel türler ile türler ve Yöntemler, tür güvenliğini korurken rastgele bir tür üzerinde çalışabilir. Örneğin, bir <xref:System.Collections.Generic.List%601> olması, `List<string>` veya `List<int>` sahip olmanızı ve bu dizelerde veya tamsayılarla tür kullanımı güvenli işlemler gerçekleştirmenizi sağlar. Genel türleri kullanmak, her işlem için `Object` `ArrayList` veya kümeden türetilen `ListInt` oluşturma işleminden daha iyidir.
 
-C#sürüm 2,0, yineleyiciler tarafından getirildi. Yineleyiciler succinctly koymak için `List` (veya diğer sıralanabilir türler) içindeki tüm öğeleri `foreach` döngüsüyle incelemenizi sağlar. Dilin birinci sınıf parçası olarak yineleyiciler olması, dilin okunabilirliğini ve kişilerin kod hakkında neden olma yeteneğini önemli ölçüde geliştirmiştir.
+C#sürüm 2,0, yineleyiciler tarafından getirildi. Yineleyiciler, succinctly almak için bir `List` (veya diğer sıralanabilir türler) içindeki tüm öğeleri bir `foreach` döngüsüyle incelemenizi sağlar. Dilin birinci sınıf parçası olarak yineleyiciler olması, dilin okunabilirliğini ve kişilerin kod hakkında neden olma yeteneğini önemli ölçüde geliştirmiştir.
 
 Ancak, C# Java ile biraz catch oynamaya devam eder. Java, genel türler ve yineleyiciler içeren sürümleri zaten yayımlamıştır. Ancak yakında gelişmeye devam eden diller olarak değişir.
 
@@ -94,7 +94,7 @@ Geriye dönük olarak, bu özelliklerin çoğu hem kaçınılmazdır hem de ıns
 
 Daha fazla kızılmış bir görünüm, LINQ 'ın oluşturulduğu temel olarak ifade ağaçları, lambda ifadeleri ve anonim türler inceler. Ancak her iki durumda da 3,0 C# , Devrim niteliğinde bir kavram olarak sunulur. C#3,0, bir karma nesne odaklı/işlevsel dili açmak C# için ön hazırlıkları başlattık 'un düzenlenmesine başlamıştır.
 
-Özellikle, koleksiyonlar üzerinde işlemler gerçekleştirmek için diğer şeyler arasında SQL stili, bildirime dayalı sorgular yazabilirsiniz. Bir tamsayılar listesinin ortalamasını hesaplamak için `for` döngüsü yazmak yerine, bunu yalnızca `list.Average()` gibi yapabilirsiniz. Sorgu ifadelerinin ve genişletme yöntemlerinin birleşimi, tam olarak çok daha akıllı bir şekilde kullanıma sunulacaktır.
+Özellikle, koleksiyonlar üzerinde işlemler gerçekleştirmek için diğer şeyler arasında SQL stili, bildirime dayalı sorgular yazabilirsiniz. Bir tamsayılar listesinin ortalamasını hesaplamak için `for` döngüsü yazmak yerine, bunu `list.Average()`gibi yapabilirsiniz. Sorgu ifadelerinin ve genişletme yöntemlerinin birleşimi, tam olarak çok daha akıllı bir şekilde kullanıma sunulacaktır.
 
 İnsanların gerçekten bir kavram ve kavramı tümleştirmeleri için zaman sürdü, ancak bu, yavaş yavaş bir şekilde yapılır. Şimdi, daha sonra kod daha kısa, basit ve işlevsel.
 
@@ -111,7 +111,7 @@ Sonraki sürümde bazı ilginç yeni özellikler tanıtıldı:
 
 Gömülü birlikte çalışma türleri bir dağıtım sorun alleviated. Genel Kovaryans ve değişken Varyans, genel türler kullanmak için daha fazla güç sunar, ancak bu, büyük olasılıkla çerçeve ve kitaplık yazarları tarafından en çok teşekkürler. Adlandırılmış ve isteğe bağlı parametreler birçok yöntem aşırı yüklemesini ortadan kaldırmanıza ve kolaylık sağlamanıza olanak tanır. Ancak bu özelliklerden hiçbiri tam olarak paradigma değiştirme değildir.
 
-Ana Özellik `dynamic` anahtar sözcüğünün sunumiydi. C# Sürüm 4,0 ' de tanıtılan `dynamic` anahtar sözcüğü derleme zamanı yazma sırasında derleyiciyi geçersiz kılabilme özelliği. Dinamik anahtar sözcüğünü kullanarak JavaScript gibi dinamik olarak belirlenmiş dillere benzer yapılar oluşturabilirsiniz. Bir `dynamic x = "a string"` oluşturabilir ve ardından, daha sonra ne olması gerektiğini sıralamak için onu çalışma zamanına bırakarak bu bir tane ekleyebilirsiniz.
+Ana Özellik `dynamic` anahtar kelimesinin sunumiydi. C# Sürüm 4,0 ' de tanıtılan `dynamic` anahtar sözcüğü derleme zamanı yazma sırasında derleyiciyi geçersiz kılabilme özelliği. Dinamik anahtar sözcüğünü kullanarak JavaScript gibi dinamik olarak belirlenmiş dillere benzer yapılar oluşturabilirsiniz. Bir `dynamic x = "a string"` oluşturup daha sonra ne olması gerektiğini sıralamak için onu çalışma zamanına bırakarak bu bir oluşturabilirsiniz.
 
 Dinamik bağlama, hataları olası ve ayrıca dil dahilinde harika bir güç sağlar.
 
@@ -128,7 +128,7 @@ C#Visual Studio 2012 ile yayınlanan sürüm 5,0, dilin odaklanmış bir sürüm
 
 Çağıran bilgileri özniteliği, bir çok ortak yansıma kodu için kod olmadan çalıştırdığınız bağlam hakkındaki bilgileri kolayca almanızı sağlar. Tanılama ve günlüğe kaydetme görevlerinde birçok kullanımı vardır.
 
-Ancak `async` ve `await` Bu yayının gerçek yıldızlardır. Bu özellikler 2012 ' de geldiğinde, C# ilk sınıf katılımcı olarak dile zaman uyumlu hale getirerek oyunu yeniden değiştirdi. Uzun süre çalışan işlemlerle ve geri çağırmaların Web 'leri uygulamasına sahip olduğunuzda, büyük olasılıkla bu dil özelliğini sevtiniz.
+Ancak `async` ve `await` bu sürümün gerçek yıldızlardır. Bu özellikler 2012 ' de geldiğinde, C# ilk sınıf katılımcı olarak dile zaman uyumlu hale getirerek oyunu yeniden değiştirdi. Uzun süre çalışan işlemlerle ve geri çağırmaların Web 'leri uygulamasına sahip olduğunuzda, büyük olasılıkla bu dil özelliğini sevtiniz.
 
 ## <a name="c-version-60"></a>C#sürüm 6,0
 

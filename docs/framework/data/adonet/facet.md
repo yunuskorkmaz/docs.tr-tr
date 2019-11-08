@@ -2,15 +2,15 @@
 title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 1ac46c882b266fbb73d5c709c9fdf297e2b55b1b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0157105290a297eff2c1bf799a2065872082e40e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783975"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735643"
 ---
 # <a name="facet"></a>facet
-Bir *model* , ilkel bir tür özelliği tanımına ayrıntı eklemek için kullanılır. [Özellik](property.md) tanımı, özellik türü hakkında bilgi içerir, ancak genellikle daha fazla ayrıntı gereklidir. Örneğin, kavramsal modeldeki bir varlık türü, değeri null olarak ayarlanmayabilir türünde `String` bir özelliğe sahip olabilir. Modeller bu ayrıntı düzeyini belirtmenizi sağlar.  
+Bir *model* , ilkel bir tür özelliği tanımına ayrıntı eklemek için kullanılır. [Özellik](property.md) tanımı, özellik türü hakkında bilgi içerir, ancak genellikle daha fazla ayrıntı gereklidir. Örneğin, kavramsal modeldeki bir varlık türü, değeri null olarak ayarlanamaz `String` türünde bir özelliğe sahip olabilir. Modeller bu ayrıntı düzeyini belirtmenizi sağlar.  
   
  Aşağıdaki tabloda, EDM 'de desteklenen modeller açıklanmaktadır.  
   
@@ -25,12 +25,12 @@ Bir *model* , ilkel bir tür özelliği tanımına ayrıntı eklemek için kulla
 |`FixedLength`|Özellik değerinin uzunluğunun değişebileceğini belirtir.|`Binary`, `String`|  
 |`MaxLength`|Özellik değerinin uzunluk üst sınırını belirtir.|`Binary`, `String`|  
 |`Nullable`|Özelliğin NULL değere sahip olup olmayacağını belirtir.|Tüm ilkel tür özellikleri|  
-|`Precision`|Türündeki `Decimal`özellikler için, bir özellik değerinin sahip olduğu basamak sayısını belirtir. , Ve `Time` türündeki`DateTimeOffset`özellikler için, özellik değeri saniyelik kesirli kısmının basamak sayısını belirtir. `DateTime`|`DateTime`, `DateTimeOffset`, `Decimal`, `Time`,|  
+|`Precision`|`Decimal`türü özellikler için, bir özellik değerinin sahip olduğu basamak sayısını belirtir. `Time`, `DateTime`ve `DateTimeOffset`türündeki özellikler için, özellik değerinin kesirli bölümü için basamak sayısını belirtir.|`DateTime`, `DateTimeOffset`, `Decimal`, `Time`,|  
 |`Scale`|Özellik değeri için ondalık noktanın sağ tarafındaki basamak sayısını belirtir.|Ondalık|  
 |`Unicode`|Özellik değerinin Unicode olarak depolandığını belirtir.|`String`|  
   
 ## <a name="example"></a>Örnek  
- [ADO.NET Entity Framework](./ef/index.md) kavramsal model tanımlamak için kavramsal şema tanım dili ([csdl](./ef/language-reference/csdl-specification.md)) adlı bir etki ALANıNA özgü dil (DSL) kullanır. Aşağıdaki csdl bir `Book` varlık türünü tanımlar. Modellerinin XML öznitelikleri olarak uygulandığını unutmayın. Model değerleri, hiçbir özelliğin NULL olarak ayarlanabileceği ve `Scale` `Revision` özelliğinin, `Precision` her birinin 29 olarak ayarlandığı anlamına gelebilir.  
+ [ADO.NET Entity Framework](./ef/index.md) kavramsal model tanımlamak için kavramsal şema tanım dili ([csdl](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) adlı bir etki ALANıNA özgü dil (DSL) kullanır. Aşağıdaki CSDL `Book` bir varlık türünü tanımlar. Modellerinin XML öznitelikleri olarak uygulandığını unutmayın. Model değerleri, hiçbir özelliğin NULL olarak ayarlanabileceği ve `Revision` özelliğinin `Scale` ve `Precision` her birinin 29 olarak ayarlandığını gösterir.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   

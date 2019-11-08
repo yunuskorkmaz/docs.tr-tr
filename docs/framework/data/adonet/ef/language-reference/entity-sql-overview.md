@@ -2,21 +2,21 @@
 title: Entity SQL’e Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
-ms.openlocfilehash: 8f40a34f361669d2b8d89b63b3187cae6bf705d2
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e0f154ab2d9db1a1fdbaba8c72bc7e43ad71ee0b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854490"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738493"
 ---
 # <a name="entity-sql-overview"></a>Entity SQL’e Genel Bakış
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)], Entity Framework kavramsal modelleri sorgulamanızı sağlayan bir SQL benzeri dildir. Kavramsal modeller verileri varlıklar ve ilişkiler olarak temsil eder ve [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bu varlıkları ve ilişkileri SQL kullanan kullanıcılara tanıdık bir biçimde sorgulamanızı sağlar.  
       
- Entity Framework, genel [!INCLUDE[esql](../../../../../../includes/esql-md.md)] olarak depolamaya özgü sorgulara çevirmek için depolama 'ya özgü veri sağlayıcılarıyla birlikte kullanılabilir. EntityClient sağlayıcısı bir varlık modeline karşı bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] komut yürütmek ve skaler sonuçlar, sonuç kümeleri ve nesne grafikleri dahil zengin veri türlerini döndürmek için bir yol sağlar. Nesneleri oluştururken, <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> özelliğine bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu dizesi atayarak bir saklı yordam adı veya bir sorgu metni belirtebilirsiniz. <xref:System.Data.EntityClient.EntityCommand> , <xref:System.Data.EntityClient.EntityDataReader> Bir<xref:System.Data.EntityClient.EntityCommand> EDM için yürütme sonuçlarını sunar. <xref:System.Data.EntityClient.EntityDataReader>Öğesini döndüren komutunu yürütmek için çağrısı <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>yapın.  
+ Entity Framework, genel [!INCLUDE[esql](../../../../../../includes/esql-md.md)] depolamaya özgü sorgulara çevirmek için depolamaya özgü veri sağlayıcılarıyla birlikte kullanılabilir. EntityClient sağlayıcısı bir varlık modelinde [!INCLUDE[esql](../../../../../../includes/esql-md.md)] komutu yürütmek ve skaler sonuçlar, sonuç kümeleri ve nesne grafikleri dahil zengin veri türlerini döndürmek için bir yol sağlar. <xref:System.Data.EntityClient.EntityCommand> nesneleri oluşturduğunuzda, <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> özelliğine [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir sorgu dizesi atayarak bir saklı yordam adı veya bir sorgu metni belirtebilirsiniz. <xref:System.Data.EntityClient.EntityDataReader>, bir EDM 'ye karşı <xref:System.Data.EntityClient.EntityCommand> yürütme sonuçlarını gösterir. <xref:System.Data.EntityClient.EntityDataReader>döndüren komutu yürütmek için, <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>çağırın.  
   
- EntityClient sağlayıcısına ek olarak Entity Framework, sorguları kavramsal bir modele karşı yürütmek ve [!INCLUDE[esql](../../../../../../includes/esql-md.md)] verileri varlık türlerinin örnekleri olan kesin türü belirtilmiş CLR nesneleri olarak döndürmek için kullanmanıza olanak sağlar. Daha fazla bilgi için bkz. [nesneleriyle çalışma](../working-with-objects.md).  
+ Entity Framework EntityClient sağlayıcısına ek olarak, bir kavramsal modelde sorgu yürütmek ve verileri varlık türlerinin örnekleri olan kesin türü belirtilmiş CLR nesneleri olarak döndürmek için [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kullanmanıza olanak sağlar. Daha fazla bilgi için bkz. [nesneleriyle çalışma](../working-with-objects.md).  
   
- Bu bölüm hakkında [!INCLUDE[esql](../../../../../../includes/esql-md.md)]kavramsal bilgiler sağlar.  
+ Bu bölüm [!INCLUDE[esql](../../../../../../includes/esql-md.md)]hakkında kavramsal bilgiler sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Entity SQL ile Transact-SQL Arasındaki Farklar](how-entity-sql-differs-from-transact-sql.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "70854490"
   
  [Sorgu Planını Önbelleğe Alma](query-plan-caching-entity-sql.md)  
   
- [Ad Alanları](namespaces-entity-sql.md)  
+ [Ad alanları](namespaces-entity-sql.md)  
   
  [Tanımlayıcılar](identifiers-entity-sql.md)  
   
@@ -65,4 +65,4 @@ ms.locfileid: "70854490"
 
 - [Entity SQL Başvurusu](entity-sql-reference.md)
 - [Entity SQL Dili](entity-sql-language.md)
-- [CSDL, SSDL ve MSL Belirtimleri](csdl-ssdl-and-msl-specifications.md)
+- [CSDL, SSDL ve MSL Belirtimleri](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

@@ -5,22 +5,22 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: f74b75827770524299f9a25a5854503186139cb4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a553d24a12b7ea227325a76d255e2ad53ada716f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126290"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739627"
 ---
-# <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1'den Geçiş
+# <a name="migrate-from-the-net-framework-11"></a>.NET Framework 1,1 ' den geçirin
 
-Windows işletim sisteminin [!INCLUDE[win7](../../../includes/win7-md.md)] ve sonraki sürümleri, .NET Framework 1,1 desteklemez. Sonuç olarak, .NET Framework 1,1 ' i hedefleyen uygulamalar [!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki işletim sistemi sürümlerinde hiçbir değişiklik yapılmadan çalışmaz. Bu konuda, Windows işletim sisteminin [!INCLUDE[win7](../../../includes/win7-md.md)] ve sonraki sürümlerinde 1,1 .NET Framework hedefleyen bir uygulamayı çalıştırmak için gereken adımlar ele alınmaktadır. .NET Framework 1,1 ve [!INCLUDE[win8](../../../includes/win8-md.md)]hakkında daha fazla bilgi için bkz. [Windows 8 ve sonraki sürümlerde .NET Framework 1,1 uygulamaları çalıştırma](../install/run-net-framework-1-1-apps.md).
+Windows 7 ve sonraki Windows işletim sistemi sürümleri 1,1 .NET Framework desteklemez. Sonuç olarak, .NET Framework 1,1 ' i hedefleyen uygulamalar, Windows 7 veya sonraki işletim sistemi sürümlerinde hiçbir değişiklik yapılmadan çalıştırılmayacak. Bu konuda, Windows 7 ve sonraki Windows işletim sistemi sürümlerinde 1,1 .NET Framework hedefleyen bir uygulamayı çalıştırmak için gereken adımlar ele alınmaktadır. 1,1 ve Windows 8 .NET Framework hakkında daha fazla bilgi için bkz. [Windows 8 ve sonraki sürümlerde .NET Framework 1,1 uygulamaları çalıştırma](../install/run-net-framework-1-1-apps.md).
 
-## <a name="retargeting-or-recompiling"></a>Yeniden hedefleme veya yeniden derleme
+## <a name="retarget-or-recompile"></a>Yeniden hedefle veya yeniden derleme
 
-[!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki bir Windows işletim sisteminde çalıştırmak için 1,1 .NET Framework kullanılarak derlenen bir uygulamayı almanın iki yolu vardır:
+Windows 7 veya sonraki bir Windows işletim sisteminde çalıştırmak için 1,1 .NET Framework kullanılarak derlenen bir uygulamayı almanın iki yolu vardır:
 
-- .NET Framework 4 ve sonraki sürümlerde çalıştırmak için uygulamayı yeniden hedefleyebilirsiniz. Yeniden hedefleme, uygulamanın yapılandırma dosyasına .NET Framework 4 ve sonraki sürümlerde çalışmasına izin veren bir [\<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesi eklemenizi gerektirir. Bu tür bir yapılandırma dosyası aşağıdaki biçimi alır:
+- .NET Framework 4 ve sonraki sürümlerde çalıştırmak için uygulamayı yeniden hedefleyin. Yeniden hedefleme, uygulamanın yapılandırma dosyasına .NET Framework 4 ve sonraki sürümlerde çalışmasına izin veren bir [\<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesi eklemenizi gerektirir. Bu tür bir yapılandırma dosyası aşağıdaki biçimi alır:
 
     ```xml
     <configuration>
@@ -30,7 +30,7 @@ Windows işletim sisteminin [!INCLUDE[win7](../../../includes/win7-md.md)] ve so
     </configuration>
     ```
 
-- .NET Framework 4 veya sonraki bir sürümünü hedefleyen bir derleyici ile uygulamayı yeniden derleyebilirsiniz. Çözümünüzü geliştirmek ve derlemek için ilk olarak Visual Studio 2003 kullandıysanız, çözümü Visual Studio 2010 ' de (ve belki de sonraki sürümlerde) açabilir ve **Proje uyumluluğu** iletişim kutusunu kullanarak çözümü ve proje dosyalarını Visual Studio 2003 tarafından Microsoft Build Engine (MSBuild) biçiminde kullanılan biçimler.
+- .NET Framework 4 veya sonraki bir sürümünü hedefleyen bir derleyici ile uygulamayı yeniden derleyin. Çözümünüzü geliştirmek ve derlemek için ilk olarak Visual Studio 2003 kullandıysanız, çözümü Visual Studio 2010 ' de (ve belki de sonraki sürümlerde) açabilir ve **Proje uyumluluğu** iletişim kutusunu kullanarak çözümü ve proje dosyalarını Visual Studio 2003 tarafından Microsoft Build Engine (MSBuild) biçiminde kullanılan biçimler.
 
 Uygulamanızı yeniden derlemeyi veya yeniden hedeflemeniz tercih etmeksizin, uygulamanızın .NET Framework sonraki sürümlerinde tanıtılan değişikliklerden etkilenip etkilenmediğini belirlemeniz gerekir. Bu değişiklikler iki tür:
 
@@ -40,7 +40,7 @@ Uygulamanızı yeniden derlemeyi veya yeniden hedeflemeniz tercih etmeksizin, uy
 
 Uygulamanızı yeniden hedeflemenize veya yeniden derlemenize bakılmaksızın, .NET Framework 1,1 ' den sonra yayınlanan .NET Framework her sürümü için hem son değişiklikleri hem de eski türleri ve üyeleri gözden geçirmeniz gerekir.
 
-## <a name="breaking-changes"></a>Yeni Değişiklikler
+## <a name="breaking-changes"></a>Yeni değişiklikler
 
 Son değişiklik gerçekleştiğinde, belirli değişikliğe bağlı olarak, yeniden hedeflenen ve yeniden derlenen uygulamalar için geçici bir çözüm bulunabilir. Bazı durumlarda, önceki davranışı geri yüklemek için uygulamanızın yapılandırma dosyasının [\<çalışma zamanı >](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesine bir alt öğe ekleyebilirsiniz. Örneğin, aşağıdaki yapılandırma dosyası .NET Framework 1,1 ' de kullanılan dize sıralamayı ve karşılaştırma davranışını geri yükler ve yeniden hedeflenmiş ya da yeniden derlenmiş bir uygulama ile kullanılabilir.
 

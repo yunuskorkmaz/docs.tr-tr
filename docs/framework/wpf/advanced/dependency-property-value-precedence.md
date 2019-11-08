@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 2abe89abf1ab246464c8f7a7ca7c87295b0b3946
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 178145b06cb937fb677b8454357bed774ed3003b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458981"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740856"
 ---
 # <a name="dependency-property-value-precedence"></a>Bağımlılık Özelliği Değer Önceliği
 <a name="introduction"></a>Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sisteminin işleyişini bir bağımlılık özelliğinin değerini nasıl etkileyebileceğini açıklar ve özellik sisteminin yönlerinin bir özelliğin etkin değeri için geçerli olduğu önceliği açıklar.  
@@ -109,7 +109,7 @@ ms.locfileid: "73458981"
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>Zorlama, animasyonlar ve taban değeri  
- Zorlama ve animasyon her ikisi de bu [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]içinde "temel değer" olarak adlandırılmış bir değer üzerinde davranır. Temel değer bu nedenle, öğe 2 ' ye ulaşılana kadar öğelerin yukarı hesaplanmasıyla belirlenen değer belirlenir.  
+ Zorlama ve animasyon her ikisi de bu SDK 'nın tamamında "temel değer" olarak adlandırılmış bir değer üzerinde çalışır. Temel değer bu nedenle, öğe 2 ' ye ulaşılana kadar öğelerin yukarı hesaplanmasıyla belirlenen değer belirlenir.  
   
  Animasyon için, bu animasyon, belirli davranışlar için hem "Kimden" hem de "to" belirtmezse ya da bir animasyon tamamlandığında temel değere geri döndürüyorsa, bir animasyon için temel değer bir etkiye sahip olabilir. Bunu uygulamada görmek için [from, to ve By animasyon hedefi değerleri örneğini](https://go.microsoft.com/fwlink/?LinkID=159988)çalıştırın. Örnekteki dikdörtgen yüksekliğinin yerel değerlerini ayarlamayı deneyin. Örneğin, başlangıçtaki yerel değer animasyondaki herhangi bir "from" adından farklı olacak. Animasyonların "Kimden" değerlerini kullanarak hemen başladığını ve temel değeri başladıktan sonra istediğinizi göreceksiniz. Animasyon, durdurma <xref:System.Windows.Media.Animation.FillBehavior>belirterek, animasyondan önce bulunan değere geri dönmek için belirtebilir. Daha sonra, temel değer belirleme için normal öncelik kullanılır.  
   

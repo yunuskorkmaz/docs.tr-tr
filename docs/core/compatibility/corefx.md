@@ -2,17 +2,14 @@
 title: CoreFx değişiklikleri-.NET Core
 description: Temel sınıf kitaplığı olan .NET CoreFx 'teki son değişiklikleri listeler.
 ms.date: 09/20/2019
-ms.openlocfilehash: 04ae857b5f46748ad57c742b6ccf421f57bc3138
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 028a5c1059a855d1de644dde9fd9ad5f85f47ffe
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093424"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739791"
 ---
 # <a name="corefx-breaking-changes"></a>CoreFx değişiklikleri
-
-> [!IMPORTANT]
-> Bu makale yapım aşamasındadır. Bu, .NET Core önemli değişikliklerinin tamamen bir listesi değildir. .NET Core ile ilgili değişiklikler hakkında daha fazla bilgi için GitHub 'daki DotNet/docs deposundaki tek tek [değişiklikler sorunlarını](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) inceleyebilirsiniz.
 
 Aşağıda .NET Core sürümüne göre CoreFx 'in son değişikliklerinin bir listesi verilmiştir. CoreFx, .NET Core tarafından kullanılan temel öğeler ve diğer genel türler sağlar.
 

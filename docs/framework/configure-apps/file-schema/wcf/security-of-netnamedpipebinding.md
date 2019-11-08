@@ -2,22 +2,22 @@
 title: <security> / <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: cd3ff5d3983283f9b4783912b4b9525c5000df61
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 31ea31ce6880a770c966350cd931e487396c4d63
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399823"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736440"
 ---
-# <a name="security-of-netnamedpipebinding"></a>\<\<NetNamedPipeBinding > Güvenlik >
+# <a name="security-of-netnamedpipebinding"></a>\<netNamedPipeBinding > Güvenlik > \<
 Bağlama için güvenlik ayarlarını tanımlar.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlamaları >** ](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netNamedPipeBinding >** ](netnamedpipebinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Güvenlik >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<güvenlik >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +38,19 @@ Bağlama için güvenlik ayarlarını tanımlar.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|mod|Bu bağlamaya uygulanan güvenlik türünü belirtir. Geçerli değerler şunlardır:<br /><br /> Seçim Bu, güvenliği devre dışı bırakır.<br />Aktarım Güvenlik, temel alınan aktarım tabanlı güvenlik kullanılarak sağlanır. Koruma düzeyini Bu modla denetlemek mümkündür.<br />-Varsayılan değer Transport ' dır. Bu öznitelik türü <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
+|mod|Bu bağlamaya uygulanan güvenlik türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -None: Bu, güvenliği devre dışı bırakır.<br />-Transport: güvenlik, temel alınan aktarım tabanlı güvenlik kullanılarak sağlanır. Koruma düzeyini Bu modla denetlemek mümkündür.<br />-Varsayılan değer Transport ' dır. Bu öznitelik <xref:System.ServiceModel.NetNamedPipeSecurityMode>türündedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|taşıma|Taşımanın güvenlik ayarlarını tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>.|  
+|taşıma|Taşımanın güvenlik ayarlarını tanımlar. Bu öğe <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>türündedir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|bağlama|[ \<NetNamedPipeBinding](netnamedpipebinding.md)'in Binding öğesi >.|  
+|bağlama|[\<netNamedPipeBinding >](netnamedpipebinding.md)bağlama öğesi.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -63,4 +63,4 @@ Bağlama için güvenlik ayarlarını tanımlar.
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../misc/binding.md)
+- [\< bağlama >](bindings.md)

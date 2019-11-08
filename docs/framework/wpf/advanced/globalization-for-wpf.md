@@ -7,19 +7,19 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 04001f88e0f59fd4eb3ca84d846456be7740737e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1d6430ba5969d8a05db47baf9521d2409e596c23
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460489"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740857"
 ---
 # <a name="globalization-for-wpf"></a>WPF için Genelleştirme
 Bu konu başlığı altında, küresel pazara yönelik [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar yazarken bilmeniz gereken sorunlar açıklanır. Genelleştirme programlama öğeleri <xref:System.Globalization> ad alanında .NET içinde tanımlanmıştır.
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>XAML Genelleştirme
- Extensible Application Markup Language (XAML) [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] tabanlıdır ve [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] belirtiminde tanımlanan Genelleştirme desteğinden faydalanır. Aşağıdaki bölümlerde, bilmeniz gereken bazı [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] özellikleri açıklanır.
+ Extensible Application Markup Language (XAML), XML 'i temel alır ve XML belirtiminde tanımlanan Genelleştirme desteğinden yararlanır. Aşağıdaki bölümlerde, bilmeniz gereken bazı [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] özellikleri açıklanır.
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>Karakter başvuruları
@@ -143,7 +143,7 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>Çok dilli kullanıcı arabirimi
- Çok dilli kullanıcı arabirimleri (MUI), tek bir dilden diğerine geçiş yapmak için Microsoft desteği sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir uygulama, MUI 'yi desteklemek için bütünleştirilmiş kod modelini kullanır. Tek bir uygulama dilden bağımsız derlemeler ve dile bağlı uydu kaynak derlemeleri içerir. Giriş noktası yönetilen bir. EXE ana derlemede.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kaynak yükleyicisi, kaynak aramasını ve geri dönüşü desteklemek için [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]Resource Manager 'dan yararlanır. Birden çok dil uydu derlemesi aynı ana derlemeyle çalışır. Yüklenen kaynak derlemesi, geçerli iş parçacığının <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> bağlıdır.
+ Çok dilli kullanıcı arabirimleri (MUI), tek bir dilden diğerine geçiş yapmak için Microsoft desteği sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir uygulama, MUI 'yi desteklemek için bütünleştirilmiş kod modelini kullanır. Tek bir uygulama dilden bağımsız derlemeler ve dile bağlı uydu kaynak derlemeleri içerir. Giriş noktası yönetilen bir. EXE ana derlemede.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kaynak yükleyicisi, kaynak aramasını ve geri dönüşü desteklemek için Framework 'ün Resource Manager 'dan yararlanır. Birden çok dil uydu derlemesi aynı ana derlemeyle çalışır. Yüklenen kaynak derlemesi, geçerli iş parçacığının <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> bağlıdır.
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>Yerelleştirilebilir kullanıcı arabirimi
@@ -152,7 +152,7 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
  Bir kaynak görünümünden, dile bağlı [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] tanımlamakta tasarlanan bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyası bir kaynak öğesidir ve bu nedenle, son dağıtım biçimi Uluslararası dilleri destekleyecek şekilde yerelleştirilebilir olmalıdır. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olayları işleyemediği için, çoğu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygulama bunu yapmak için kod blokları içerir. Daha fazla bilgi için bkz. [xaml genel bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md). Kod çıkarılır ve bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyası XAML 'in BAML biçiminde simgeleştirilir, farklı ikililerin derlenmesi. XAML dosyalarının, görüntülerinin ve diğer yönetilen kaynak nesne türlerinin BAML formu, uydu kaynak derlemesine katıştırılır. Bu, diğer dillere yerelleştirilebilir veya yerelleştirme gerekli olmadığında ana derlemedir.
 
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar dize tabloları, görüntüleri ve benzeri tüm [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]CLR kaynaklarını destekler.
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar dize tabloları, görüntüleri vb. dahil olmak üzere tüm FrameworkCLR kaynaklarını destekler.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Yerelleştirilebilir uygulamalar oluşturma
@@ -163,7 +163,7 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 <EmbeddedResource Include="data\stringtable.en-US.restext"/>
 ```
 
- Uygulamanızdaki bir kaynağı kullanmak için bir <xref:System.Resources.ResourceManager> oluşturun ve kullanmak istediğiniz kaynağı yükleyin. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir.
+ Uygulamanızdaki bir kaynağı kullanmak için bir <xref:System.Resources.ResourceManager> örneği oluşturun ve kullanmak istediğiniz kaynağı yükleyin. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir.
 
  [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
 
@@ -171,7 +171,7 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 ## <a name="using-clickonce-with-localized-applications"></a>Yerelleştirilmiş uygulamalarla ClickOnce kullanma
  ClickOnce, Visual Studio 2005 ile birlikte gönderilecek yeni bir Windows Forms dağıtım teknolojisidir. Web uygulamalarının uygulama yükleme ve yükseltme yapmasına izin vermez. ClickOnce ile dağıtılan bir uygulama yerelleştirildiği zaman, yalnızca yerelleştirilmiş kültür üzerinde görüntülenebilir. Örneğin, dağıtılmış bir uygulama Japonca 'ya yerelleştirilir bu, yalnızca Ingilizce Windows üzerinde olmayan Japonca Microsoft Windows 'ta görüntülenebilir. Bu, Japonca kullanıcıların Windows 'un Ingilizce sürümünü çalıştırmasına yönelik yaygın bir senaryo olduğundan bir sorun oluşturur.
 
- Bu soruna yönelik çözüm, Nötr dil geri dönüş özniteliğini ayarlamadır. Uygulama geliştiricisi, isteğe bağlı olarak ana derlemeden kaynakları kaldırabilir ve belirli bir kültüre karşılık gelen bir uydu derlemesinde kaynakların bulunmamasını belirtebilir. Bu işlemi denetlemek için <xref:System.Resources.NeutralResourcesLanguageAttribute> kullanın. <xref:System.Resources.NeutralResourcesLanguageAttribute> sınıfının Oluşturucusu iki imzaya sahiptir ve bu, <xref:System.Resources.ResourceManager> geri dönüş kaynaklarını ayıklayacağı konumu belirtmek için bir <xref:System.Resources.UltimateResourceFallbackLocation> parametresi alır: ana derleme veya uydu bütünleştirilmiş kodu. Aşağıdaki örnek, özniteliğini nasıl kullanacağınızı gösterir. Son geri dönüş konumu için, kod, <xref:System.Resources.ResourceManager> ' ın şu anda yürütülmekte olan derlemenin dizininin "de" alt dizinindeki kaynakları aramaya neden olur.
+ Bu soruna yönelik çözüm, Nötr dil geri dönüş özniteliğini ayarlamadır. Uygulama geliştiricisi, isteğe bağlı olarak ana derlemeden kaynakları kaldırabilir ve belirli bir kültüre karşılık gelen bir uydu derlemesinde kaynakların bulunmamasını belirtebilir. Bu işlemi denetlemek için <xref:System.Resources.NeutralResourcesLanguageAttribute>kullanın. <xref:System.Resources.NeutralResourcesLanguageAttribute> sınıfının Oluşturucusu iki imzaya sahiptir ve bu, <xref:System.Resources.ResourceManager> geri dönüş kaynaklarını ayıklayacağı konumu belirtmek için bir <xref:System.Resources.UltimateResourceFallbackLocation> parametresi alır: ana derleme veya uydu bütünleştirilmiş kodu. Aşağıdaki örnek, özniteliğini nasıl kullanacağınızı gösterir. Son geri dönüş konumu için, kod <xref:System.Resources.ResourceManager> Şu anda yürütülmekte olan derlemenin dizininin "de" alt dizininde bulunan kaynakları aramaya neden olur.
 
 ```csharp
 [assembly: NeutralResourcesLanguageAttribute(

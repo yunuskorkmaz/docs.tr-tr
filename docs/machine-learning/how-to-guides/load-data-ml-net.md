@@ -1,16 +1,16 @@
 ---
 title: Dosyalardan ve diğer kaynaklardan veri yükleme
 description: Bu nasıl yapılır, ML.NET ' ye işleme ve eğitim için nasıl veri yükleneceğini gösterir. Veriler başlangıçta dosyalar veya veritabanları, JSON, XML veya bellek içi Koleksiyonlar gibi diğer veri kaynaklarında depolanır.
-ms.date: 09/11/2019
+ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 82a4d19a6296faa6d195e301016b1bf97d483a2c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 07b3e7f5302a03f5fa4c936679c8a3c00d19a7b0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040797"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740554"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Dosyalardan ve diğer kaynaklardan veri yükleme
 
@@ -107,10 +107,10 @@ IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubF
 
 ## <a name="load-data-from-a-relational-database"></a>İlişkisel veritabanından veri yükleme
 
-> [!NOTE]
-> DatabaseLoader Şu anda önizleme aşamasındadır. [Microsoft. ml. deneysel](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview) ve [System. Data. SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) NuGet paketlerine başvurarak kullanılabilir.
-
 ML.NET, SQL Server, Azure SQL veritabanı, Oracle, SQLite, PostgreSQL, Progress, IBM DB2 ve çok daha fazlasını içeren [`System.Data`](xref:System.Data) tarafından desteklenen çeşitli ilişkisel veritabanlarından veri yüklenmesini destekler.
+
+> [!NOTE]
+> `DatabaseLoader`kullanmak için [System. Data. SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) NuGet paketine başvurun.
 
 `House` adlı bir tabloya ve aşağıdaki şemaya sahip bir veritabanı verilirler:
 

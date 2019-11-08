@@ -2,19 +2,19 @@
 title: LINQ to Entities Sorguları
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: 561fa3217a80a8437b7c4d175d5a1156096ac241
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 52f48fcacd6fbd92e4fd0531c5e1fa3577496941
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249565"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738472"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities Sorguları
 Sorgu, veri kaynağından veri alan bir ifadedir. Sorgular, genellikle ilişkisel veritabanları için SQL gibi özel bir sorgu dilinde ifade edilir ve XML için XQuery. Bu nedenle, geliştiricilerin sorgutıkları her bir veri kaynağı türü veya veri biçimi için yeni bir sorgu dili öğrenmeleri gerekiyordu. Dil ile tümleşik sorgu (LINQ), çeşitli veri kaynakları ve biçimlerdeki verilerle çalışmaya yönelik daha basit ve tutarlı bir model sunar. Bir LINQ sorgusunda, her zaman programlama nesneleriyle çalışırsınız.  
   
  Bir LINQ sorgu işlemi üç eylemden oluşur: veri kaynağını veya kaynaklarını alın, sorguyu oluşturun ve sorguyu yürütün.  
   
- <xref:System.Collections.Generic.IEnumerable%601> Genel arabirimi<xref:System.Linq.IQueryable%601> veya genel arabirimi uygulayan veri kaynakları LINQ aracılığıyla sorgulanabilir. Genel <xref:System.Linq.IQueryable%601> arabirimi uygulayan genel <xref:System.Data.Objects.ObjectQuery%601> sınıfın örnekleri, LINQ to Entities sorguları için veri kaynağı olarak görev yapar. Genel <xref:System.Data.Objects.ObjectQuery%601> sınıf, sıfır veya daha fazla yazılmış nesne koleksiyonunu döndüren bir sorguyu temsil eder. Ayrıca, derleyicinin bir varlık türünü (Dim Visual Basic) C# anahtar sözcüğünü `var` kullanarak çıkarmasına izin verebilirsiniz.  
+ <xref:System.Collections.Generic.IEnumerable%601> genel arabirimini veya <xref:System.Linq.IQueryable%601> genel arabirimini uygulayan veri kaynakları LINQ aracılığıyla sorgulanabilir. Genel <xref:System.Linq.IQueryable%601> arabirimini uygulayan genel <xref:System.Data.Objects.ObjectQuery%601> sınıfının örnekleri LINQ to Entities sorguları için veri kaynağı olarak görev yapar. <xref:System.Data.Objects.ObjectQuery%601> genel sınıfı, sıfır veya daha fazla yazılmış nesne koleksiyonunu döndüren bir sorguyu temsil eder. Ayrıca derleyicinin `var` C# anahtar sözcüğünü kullanarak bir varlığın türünü çıkarmasına izin verebilirsiniz (Visual Basic karartma).  
   
  Sorguda, tam olarak veri kaynağından almak istediğiniz bilgileri belirtirsiniz. Bir sorgu, döndürülmeden önce bu bilgilerin nasıl sıralanacağını, gruplanacağını ve şekillendirilmiş olduğunu da belirtebilir. LINQ içinde, bir sorgu bir değişkende depolanır. Sorgu bir değer dizisi döndürürse, sorgu değişkeni bir sorgulanabilir tür olmalıdır. Bu sorgu değişkeni hiçbir eylemde bulunmaz ve veri döndürmez; yalnızca sorgu bilgilerini depolar. Bir sorgu oluşturduktan sonra, verileri almak için bu sorguyu yürütmeniz gerekir.  
   
@@ -24,50 +24,50 @@ Sorgu, veri kaynağından veri alan bir ifadedir. Sorgular, genellikle ilişkise
 ### <a name="query-expression-syntax"></a>Sorgu Ifadesi söz dizimi  
  Sorgu ifadeleri bildirime dayalı bir sorgu sözdizimidir. Bu sözdizimi, bir geliştiricinin Transact-SQL ile benzer şekilde biçimlendirilen üst düzey bir dilde sorgu yazmasını sağlar. Sorgu ifadesi söz dizimini kullanarak, çok az kodlu veri kaynakları üzerinde bile karmaşık filtreleme, sıralama ve gruplama işlemleri gerçekleştirebilirsiniz. Daha fazla bilgi için [temel sorgu işlemleri (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md). Sorgu ifadesi sözdiziminin nasıl kullanılacağını gösteren örnekler için aşağıdaki konulara bakın:  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Yansıtma](query-expression-syntax-examples-projection.md)  
+- [Sorgu İfadesi Söz Dizimi Örnekleri: Projeksiyon](query-expression-syntax-examples-projection.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Menin](query-expression-syntax-examples-filtering.md)  
+- [Sorgu İfadesi Söz Dizimi Örnekleri: Filtreleme](query-expression-syntax-examples-filtering.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Sıralama](query-expression-syntax-examples-ordering.md)  
+- [Sorgu İfadesi Söz Dizimi Örnekleri: Sıralama](query-expression-syntax-examples-ordering.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Toplama Işleçleri](query-expression-syntax-examples-aggregate-operators.md)  
+- [Sorgu İfadesi Söz Dizimi Örnekleri: Toplu İşleçler](query-expression-syntax-examples-aggregate-operators.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Leme](query-expression-syntax-examples-partitioning.md)  
+- [Sorgu İfadesi Söz Dizimi Örnekleri: Bölümleme](query-expression-syntax-examples-partitioning.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: JOIN Işleçleri](query-expression-syntax-examples-join-operators.md)  
+- [Sorgu İfadesi Söz Dizimi Örnekleri: Birleşim İşleçleri](query-expression-syntax-examples-join-operators.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Öğe Işleçleri](query-expression-syntax-examples-element-operators.md)  
+- [Sorgu İfadesi Söz Dizimi Örnekleri: Öğe İşleçleri](query-expression-syntax-examples-element-operators.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Gruplama](query-expression-syntax-examples-grouping.md)  
+- [Sorgu İfadesi Söz Dizimi Örnekleri: Gruplandırma](query-expression-syntax-examples-grouping.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Ilişkilerde gezinme](query-expression-syntax-examples-navigating-relationships.md)  
+- [Sorgu İfadesi Söz Dizimi Örnekleri: İlişkilerde Gezinme](query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>Yöntem tabanlı sorgu söz dizimi  
  LINQ to Entities sorguları oluşturmanın başka bir yolu da Yöntem tabanlı sorgular kullanmaktır. Yöntem tabanlı sorgu söz dizimi, LINQ operatörü yöntemlerine doğrudan yöntem çağrılarının bir dizidir ve Lambda ifadelerini parametreler olarak geçirerek. Daha fazla bilgi için bkz. [lambda ifadeleri](../../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Yöntem tabanlı sözdiziminin nasıl kullanılacağını gösteren örnekler için aşağıdaki konulara bakın:  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Yansıtma](method-based-query-syntax-examples-projection.md)  
+- [Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Projeksiyon](method-based-query-syntax-examples-projection.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Menin](method-based-query-syntax-examples-filtering.md)  
+- [Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Filtreleme](method-based-query-syntax-examples-filtering.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Sıralama](method-based-query-syntax-examples-ordering.md)  
+- [Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Sıralama](method-based-query-syntax-examples-ordering.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Toplama Işleçleri](method-based-query-syntax-examples-aggregate-operators.md)  
+- [Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Toplu İşleçler](method-based-query-syntax-examples-aggregate-operators.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Leme](method-based-query-syntax-examples-partitioning.md)  
+- [Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Bölümleme](method-based-query-syntax-examples-partitioning.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Dönüştürü](method-based-query-syntax-examples-conversion.md)  
+- [Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Dönüştürme](method-based-query-syntax-examples-conversion.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: JOIN Işleçleri](method-based-query-syntax-examples-join-operators.md)  
+- [Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Birleşim İşleçleri](method-based-query-syntax-examples-join-operators.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Öğe Işleçleri](method-based-query-syntax-examples-element-operators.md)  
+- [Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Öğe İşleçleri](method-based-query-syntax-examples-element-operators.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Gruplama](method-based-query-syntax-examples-grouping.md)  
+- [Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Gruplandırma](method-based-query-syntax-examples-grouping.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Ilişkilerde gezinme](method-based-query-syntax-examples-navigating-relationships.md)  
+- [Metot Tabanlı Sorgu Söz Dizimi Örnekleri: İlişkilerde Gezinme](method-based-query-syntax-examples-navigating-relationships.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to Entities](linq-to-entities.md)
-- [C#'de LINQ Kullanmaya Başlama](../../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C#'de LINQ Kullanmaya Başlama](../../../../../csharp/programming-guide/concepts/linq/index.md)
 - [Visual Basic LINQ ile çalışmaya başlama](../../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Entity Framework birleştirme seçenekleri ve derlenmiş sorgular](https://go.microsoft.com/fwlink/?LinkId=199591)

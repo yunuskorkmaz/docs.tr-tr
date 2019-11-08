@@ -4,12 +4,12 @@ ms.custom: seodec18
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 7b6b46a33430a4a58c78245a0ab3bed1e0fbcd9c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 24b7d6f98e331110ddcd971d0d0b21003dbe023d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455379"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736842"
 ---
 # <a name="local-functions-c-programming-guide"></a>Yerel işlevler (C# Programlama Kılavuzu)
 
@@ -43,11 +43,10 @@ Yerel işlevler, [zaman uyumsuz](../../language-reference/keywords/async.md) ve 
 
 Kendi Yöntem parametreleri de dahil olmak üzere, kapsayan üyede tanımlanan tüm yerel değişkenlerin yerel işlevde erişilebilir olduğunu unutmayın. 
 
-Bir yöntem tanımının aksine, yerel bir işlev tanımı aşağıdaki öğeleri içeremez:
+Bir yöntem tanımının aksine, yerel bir işlev tanımı üye erişim değiştiricisini içeremez. Tüm yerel işlevler özel olduğundan, `private` anahtar sözcüğü gibi bir erişim değiştiricisi de dahil olmak üzere, "özel ' değiştiricisi Bu öğe için geçerli değil."
 
-- Üye erişim değiştiricisi. Tüm yerel işlevler özel olduğundan, `private` anahtar sözcüğü gibi bir erişim değiştiricisi de dahil olmak üzere, "özel ' değiştiricisi Bu öğe için geçerli değil."
- 
-- [Static](../../language-reference/keywords/static.md) anahtar sözcüğü. `static` anahtar sözcüğünü içeren derleyici hatası CS0106, "' static ' değiştiricisi Bu öğe için geçerli değil."
+> [!NOTE]
+> C# 8,0 ' den önce yerel işlevler `static` değiştiricisini içeremez. `static` anahtar sözcüğünü içeren derleyici hatası CS0106, "' static ' değiştiricisi Bu öğe için geçerli değil."
 
 Ayrıca, öznitelikler yerel işleve veya parametrelerine ve parametre türüne uygulanamaz. 
  

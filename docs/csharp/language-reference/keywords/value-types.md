@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8703532ff8551e8bd42128eb9e8cdcf2afd9dad8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422210"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739669"
 ---
 # <a name="value-types-c-reference"></a>Değer türleri (C# başvuru)
 
@@ -32,7 +32,7 @@ Tüm değer türleri örtük olarak <xref:System.ValueType?displayProperty=nameW
 
 Başvuru türlerinden farklı olarak, bir değer türünden yeni bir tür türemezsiniz. Ancak, başvuru türleri gibi yapılar, arabirimler uygulayabilir.
 
-Değer türü değişkenleri varsayılan olarak `null` olamaz. Ancak, karşılık gelen [null yapılabilir değer türlerinin](../../programming-guide/nullable-types/index.md) değişkenleri `null`olabilir.
+Değer türü değişkenleri varsayılan olarak `null` olamaz. Ancak, karşılık gelen [null yapılabilir değer türlerinin](../builtin-types/nullable-value-types.md) değişkenleri `null`olabilir.
 
 Her değer türünün, bu türün varsayılan değerini Başlatan örtük parametresiz bir Oluşturucusu vardır. Değer türlerinin varsayılan değerleri hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](default-values-table.md).
 
@@ -104,9 +104,7 @@ Sayısal türlerin çıkışını biçimlendirme hakkında daha fazla bilgi içi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](index.md)
-- [Türler](/dotnet/csharp/language-reference/keywords)
+- [C#başvurunun](../index.md)
+- [C# anahtar sözcükleri](index.md)
 - [Başvuru türleri](reference-types.md)
-- [Null yapılabilir değer türleri](../../programming-guide/nullable-types/index.md)
+- [Null yapılabilir değer türleri](../builtin-types/nullable-value-types.md)

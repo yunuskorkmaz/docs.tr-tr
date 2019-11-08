@@ -2,17 +2,14 @@
 title: Şifreleme bölünmesi, sürüm 2,2, 3,0-.NET Core
 description: Sürüm 2,2 ' den, .NET Core, ASP.NET Core ve EF Core sürüm 3,0 ' den son değişiklikleri listeler.
 ms.date: 09/10/2019
-ms.openlocfilehash: ba330bdef4be8cfe0e74f5645adaf66b2e0051ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8b2894e6988c0b475e45c6d5602a7f54943f3ed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089578"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739428"
 ---
 # <a name="breaking-changes-for-migration-from-version-22-to-30"></a>2,2 sürümünden 3,0 sürümüne geçiş için son değişiklikler
-
-> [!IMPORTANT]
-> Bu makale yapım aşamasındadır. Bu, .NET Core önemli değişikliklerinin tamamen bir listesi değildir. .NET Core ile ilgili değişiklikler hakkında daha fazla bilgi için GitHub 'daki DotNet/docs deposundaki tek tek [değişiklikler sorunlarını](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) inceleyebilirsiniz. 
 
 Sürüm 2,2 ' den .NET Core, ASP.NET Core veya EF Core 3,0 sürümüne geçiş yapıyorsanız, uygulamanızı etkileyebilecek değişiklikler için aşağıdaki konuları gözden geçirin:
 

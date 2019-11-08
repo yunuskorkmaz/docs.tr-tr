@@ -3,16 +3,16 @@ title: .NET Core 'da .NET Framework teknolojileri kullanılamıyor
 description: .NET Core 'da kullanılamayan .NET Framework teknolojileri hakkında bilgi edinin
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: e5626d7b3e402848e2e84c49d4e98e109f62982d
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 47f93268c44682afeba87cde17fe9c39811b37bf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846807"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739715"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core 'da .NET Framework teknolojileri kullanılamıyor
 
-.NET Framework kitaplıkları için kullanılabilen çeşitli teknolojiler, uygulama etki alanları, uzaktan Iletişim, kod erişim güvenliği (CAS) ve güvenlik saydamlığı gibi .NET Core ile birlikte kullanılamaz. Kitaplıklarınız Bu teknolojilerden birini veya birkaçını kullanıyorsa, aşağıda özetlenen diğer yaklaşımları göz önünde bulundurun. API uyumluluğu hakkında daha fazla bilgi için bkz. [.NET Core son değişiklikler](../compatibility/breaking-changes.md) makalesi.
+.NET Framework kitaplıkları için kullanılabilen çeşitli teknolojiler, uygulama etki alanları, uzaktan Iletişim, kod erişim güvenliği (CAS), güvenlik saydamlığı ve System. EnterpriseServices gibi .NET Core ile birlikte kullanılamaz. Kitaplıklarınız Bu teknolojilerden birini veya birkaçını kullanıyorsa, aşağıda özetlenen diğer yaklaşımları göz önünde bulundurun. API uyumluluğu hakkında daha fazla bilgi için bkz. [.NET Core son değişiklikler](../compatibility/breaking-changes.md) makalesi.
 
 Bir API veya teknoloji şu anda uygulanmadığından, kasıtlı olarak desteklenmeyen anlamına gelmez. İlk olarak .NET Core için GitHub depolarında arama yapmanız gerekir, ancak bu tür bir göstergeyi bulamazsanız, lütfen GitHub 'daki [DotNet/corefx depo sorunlarını](https://github.com/dotnet/corefx/issues) Izleyerek belirli API 'ler için sorun giderin ve teknolojilerinin. [Sorunların taşıma istekleri](https://github.com/dotnet/corefx/labels/port-to-core) `port-to-core` etiketiyle işaretlenir.
 

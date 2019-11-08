@@ -2,22 +2,22 @@
 title: <security> / <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: b6a1c952b1ae65c8fb6f17237b5c15f3a8d4844a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 4969c041678bbf3490975bc0ec53507b6cf762bb
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399744"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738609"
 ---
-# <a name="security-of-wsdualhttpbinding"></a>\<\<WSDualHttpBinding > Güvenlik >
-[ \<WSDualHttpBinding >](wsdualhttpbinding.md)'nin güvenlik yeteneklerini tanımlar.  
+# <a name="security-of-wsdualhttpbinding"></a>\<wsDualHttpBinding \<güvenlik > >
+[\<wsDualHttpBinding >](wsdualhttpbinding.md)'nin güvenlik yeteneklerini tanımlar.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlamaları >** ](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsDualHttpBinding >** ](wsdualhttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Güvenlik >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<güvenlik >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,26 +36,26 @@ ms.locfileid: "70399744"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|mod|Seçim. Uygulanan güvenlik türünü belirtir. Varsayılan değer `Message` şeklindedir. Bu öznitelik türü <xref:System.ServiceModel.WSDualHttpSecurityMode>.|  
+|mod|Seçim. Uygulanan güvenlik türünü belirtir. Varsayılan değer `Message` şeklindedir. Bu öznitelik <xref:System.ServiceModel.WSDualHttpSecurityMode>türündedir.|  
   
 ## <a name="mode-attribute"></a>Mode özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |Yok.|Güvenlik devre dışı bırakıldı.|  
-|`Message`|Güvenlik, SOAP iletisi güvenliği kullanılarak sağlanır.|  
+|İleti|Güvenlik, SOAP iletisi güvenliği kullanılarak sağlanır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<ileti >](message-of-wsdualhttpbinding.md)|İleti düzeyinde güvenlik için ayarları tanımlar. Bu öğe türündedir <xref:System.ServiceModel.MessageSecurityOverHttp>.|  
+|[\<ileti >](message-of-wsdualhttpbinding.md)|İleti düzeyinde güvenlik için ayarları tanımlar. Bu öğe <xref:System.ServiceModel.MessageSecurityOverHttp>türündedir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../misc/binding.md)|WSDualHttpBinding > Tüm bağlama yeteneklerini [ \<](wsdualhttpbinding.md)tanımlar.|  
+|[\< bağlama >](bindings.md)|[\<wsDualHttpBinding >](wsdualhttpbinding.md)'in tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  İkili bağlama, istemcinin IP adresini hizmete gösterir. İstemci, yalnızca güvendiği hizmetlere bağlanmasını sağlamak için güvenliği kullanmalıdır.  
@@ -68,4 +68,4 @@ ms.locfileid: "70399744"
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../misc/binding.md)
+- [\< bağlama >](bindings.md)

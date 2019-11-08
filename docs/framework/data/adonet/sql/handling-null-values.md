@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: a634667ec8d963ef52abbdbe517a57d10e4a60fa
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 091fde9a6149f72577e0cf38c8ebf1536abdf6ea
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040211"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738207"
 ---
 # <a name="handling-null-values"></a>Null Değerleri İşleme
 Bir sütundaki değer bilinmiyorsa veya eksik olduğunda, ilişkisel veritabanında null değer kullanılır. Null, boş bir dize (karakter veya tarih saat veri türleri için) veya sıfır değeri (sayısal veri türleri için) değil. ANSI SQL-92 belirtimi, tüm null değerleri tutarlı bir şekilde işlenebilmesi için null değeri tüm veri türleri için aynı olması gerektiğini belirtir. <xref:System.Data.SqlTypes> ad alanı <xref:System.Data.SqlTypes.INullable> arabirimini uygulayarak null semantikler sağlar. <xref:System.Data.SqlTypes> içindeki her bir veri türü kendi `IsNull` özelliğine sahiptir ve bu veri türünün bir örneğine atanabilecek bir `Null` değeri vardır.  
   
 > [!NOTE]
-> .NET Framework sürüm 2,0,, programcıların bir değer türünü temel alınan türün tüm değerlerini temsil edecek şekilde genişletmesine izin veren null yapılabilir türler için destek sunmuştur. Bu CLR null yapılabilir türleri <xref:System.Nullable> yapısının bir örneğini temsil eder. Bu özellik, özellikle değer türleri kutulanmış ve kutulandığında, nesne türleriyle gelişmiş uyumluluk sağlayan yararlı olur. ANSI SQL null, `null` başvurusuyla (veya Visual Basic `Nothing`) aynı şekilde davranmadığından, CLR null yapılabilir türler, veritabanı boşları depolaması için tasarlanmamıştır. Veritabanı ANSI SQL null değerleriyle çalışma için, <xref:System.Nullable>yerine <xref:System.Data.SqlTypes> null değerleri kullanın. Visual Basic CLR null yapılabilir türleriyle çalışma hakkında daha fazla bilgi için bkz. [Nullable değer türlerini](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)kullanma ve C# bkz. [Nullable değer türlerini kullanma](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md).  
+> .NET Framework sürüm 2,0,, programcıların bir değer türünü temel alınan türün tüm değerlerini temsil edecek şekilde genişletmesine izin veren null yapılabilir türler için destek sunmuştur. Bu CLR null yapılabilir türleri <xref:System.Nullable> yapısının bir örneğini temsil eder. Bu özellik, özellikle değer türleri kutulanmış ve kutulandığında, nesne türleriyle gelişmiş uyumluluk sağlayan yararlı olur. ANSI SQL null, `null` başvurusuyla (veya Visual Basic `Nothing`) aynı şekilde davranmadığından, CLR null yapılabilir türler, veritabanı boşları depolaması için tasarlanmamıştır. Veritabanı ANSI SQL null değerleriyle çalışma için, <xref:System.Nullable>yerine <xref:System.Data.SqlTypes> null değerleri kullanın. Visual Basic içinde CLR null yapılabilir türleriyle çalışma hakkında daha fazla bilgi için bkz. [Nullable değer türlerini](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)gör C# ve için bkz. [Nullable değer türlerini](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)görüntüleyin.  
   
 ## <a name="nulls-and-three-valued-logic"></a>Null değerler ve üç değerli mantık  
  Sütun tanımlarında null değerlere izin verilmesi, uygulamanıza üç değerli mantık getirir. Karşılaştırma, üç koşuldan birini değerlendirebilir:  

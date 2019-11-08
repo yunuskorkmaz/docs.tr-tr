@@ -1,23 +1,23 @@
 ---
-title: <message>öğesi<wsFederationHttpBinding>
+title: <wsFederationHttpBinding> <message> öğesi
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: e26e1f94fb38e0654fd0bc9f06c6096a488bccfe
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 8e0903dd1313e68e2de65730e129079199ebe2f2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400278"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738985"
 ---
-# <a name="message-element-of-wsfederationhttpbinding"></a>\<ileti > \<WSFederationHttpBinding > öğesi
-[ \<WSFederationHttpBinding >](wsfederationhttpbinding.md)için ileti düzeyi güvenlik ayarlarını tanımlar.  
+# <a name="message-element-of-wsfederationhttpbinding"></a>\<wsFederationHttpBinding > \<ileti > öğesi
+[\<wsFederationHttpBinding >](wsfederationhttpbinding.md)için ileti düzeyi güvenlik ayarlarını tanımlar.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlamaları >** ](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Güvenlik >** ](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<güvenlik >** ](security-of-wsfederationhttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ileti >**  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -87,10 +87,10 @@ ms.locfileid: "70400278"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|algorithmSuite|İleti şifrelemesini ve anahtar sarması algoritmalarını ayarlar. Bu özniteliğin geçerli değerleri için "algorithmSuite Attribute" tablosuna bakın. Varsayılan değer `Basic256` şeklindedir.<br /><br /> Bu öznitelik türü <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.|  
-|IssuedKeyType|Verilecek anahtarın türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> Varsayılan, `SymmetricKey` değeridir. Bu öznitelik türü <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
-|issuedTokenType|Verilecek belirtecin türünü belirten bir URI içeren dize. Varsayılan, `null` değeridir.|  
-|negotiateServiceCredential|Hizmet kimlik bilgisinin, anlaşmanın parçası olarak alınıp alınmayacağını veya bant dışı kullanılabilir olup olmadığını belirten bir Boolean değer. Varsayılan `true`olarak, hizmet kimlik bilgisinin anlaşıldığı anlamına gelir.|  
+|algorithmSuite|İleti şifrelemesini ve anahtar sarması algoritmalarını ayarlar. Bu özniteliğin geçerli değerleri için "algorithmSuite Attribute" tablosuna bakın. Varsayılan değer `Basic256` şeklindedir.<br /><br /> Bu öznitelik <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>türündedir. Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.|  
+|IssuedKeyType|Verilecek anahtarın türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> Varsayılan, `SymmetricKey` değeridir. Bu öznitelik <xref:System.IdentityModel.Tokens.SecurityKeyType>türündedir.|  
+|IssuedTokenType|Verilecek belirtecin türünü belirten bir URI içeren dize. Varsayılan, `null` değeridir.|  
+|negotiateServiceCredential|Hizmet kimlik bilgisinin, anlaşmanın parçası olarak alınıp alınmayacağını veya bant dışı kullanılabilir olup olmadığını belirten bir Boolean değer. Varsayılan değer `true`, bu, hizmet kimlik bilgisinin üzerinde anlaşılan anlamına gelir.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite özniteliği  
   
@@ -117,10 +117,10 @@ ms.locfileid: "70400278"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements >](claimtyperequirements-element.md)|Bu bağlama için bir talep türleri koleksiyonu belirtir. Her öğe türündedir <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
-|yayınlayan|Bir güvenlik belirteci veren bir uç nokta belirtir. Bu öğe türündedir <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
+|[\<claimTypeRequirements >](claimtyperequirements-element.md)|Bu bağlama için bir talep türleri koleksiyonu belirtir. Her öğe <xref:System.ServiceModel.Configuration.ClaimTypeElement>türündedir.|  
+|yayınlayan|Bir güvenlik belirteci veren bir uç nokta belirtir. Bu öğe <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>türündedir.|  
 |issuerMetadata|Verenin uç nokta adresini belirtir.|  
-|[\<tokenRequestParameters>](tokenrequestparameters.md)|Belirteç isteği parametrelerinin bir koleksiyonu. Her parametre bir XML öğesidir.|  
+|[\<tokenRequestParameters >](tokenrequestparameters.md)|Belirteç isteği parametrelerinin bir koleksiyonu. Her parametre bir XML öğesidir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -138,4 +138,4 @@ ms.locfileid: "70400278"
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../misc/binding.md)
+- [\< bağlama >](bindings.md)

@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 49d6d6cf5c138df671d061beb23cb57bcb0667b5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bf24db03ca1dc4fbf3041f5e83d740029d87928f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140292"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740504"
 ---
 # <a name="how-to-find-an-assemblys-fully-qualified-name"></a>Nasıl yapılır: bir derlemenin tam nitelikli adını bulma
 
@@ -126,4 +126,3 @@ End Class
 - [Tanımlayıcı adlı derlemeler oluşturma ve kullanma](create-use-strong-named.md)
 - [Genel derleme önbelleği](../../framework/app-domains/gac.md)
 - [Çalışma zamanının derlemeleri nasıl konumlandırır](../../framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Bütünleştirilmiş kod içeren program](program.md)

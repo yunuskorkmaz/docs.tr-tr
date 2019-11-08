@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 0758a537ee457a8fe5a778e2a2c24a8ba13c263b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d578b9834ca39a33e284d3066eef85890c224a2f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460867"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740816"
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış
 Microsoft .NET Framework ile, Windows Presentation Foundation (WPF) kullanan uygulama geliştiricilerinin zengin yeni bir yazdırma ve yazdırma sistemi yönetim API 'Leri kümesi vardır. [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], bu yazdırma sistemi geliştirmelerinden bazıları, yönetilmeyen kod kullanan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamalar ve geliştiriciler oluşturan geliştiriciler tarafından da kullanılabilir. Bu yeni işlevselliğin çekirdeği, yeni XML Kağıt Belirtimi (XPS) dosya biçimi ve XPS yazdırma yoludur.  
@@ -29,7 +29,7 @@ Microsoft .NET Framework ile, Windows Presentation Foundation (WPF) kullanan uyg
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>XPS hakkında  
- XPS elektronik belge biçimidir, bir biriktirme dosyası biçimi ve sayfa açıklaması dilidir. Bu, platformlar arası belgeler oluşturmak için [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], açık paketleme kuralları (OPC) ve diğer sektör standartlarını kullanan bir açık belge biçimidir. XPS dijital belge oluşturma, paylaşılan, yazdırılma, görüntülenen ve arşivlenen işlemleri basitleştirir. XPS hakkında daha fazla bilgi için bkz. [XPS belgeleri](/windows/desktop/printdocs/documents).  
+ XPS elektronik belge biçimidir, bir biriktirme dosyası biçimi ve sayfa açıklaması dilidir. Bu, platformlar arası belgeler oluşturmak için XML, açık paketleme kuralları (OPC) ve diğer sektör standartlarını kullanan bir açık belge biçimidir. XPS dijital belge oluşturma, paylaşılan, yazdırılma, görüntülenen ve arşivlenen işlemleri basitleştirir. XPS hakkında daha fazla bilgi için bkz. [XPS belgeleri](/windows/desktop/printdocs/documents).  
   
  XPS tabanlı içeriklerin [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] kullanarak yazdırılması için çeşitli teknikler, [programlı olarak XPS dosyaları yazdırma](how-to-programmatically-print-xps-files.md)bölümünde gösterilmiştir. Bu konuda yer alan içeriğin gözden geçirilmesi sırasında bu örneklere başvurmak yararlı olabilir. (Yönetilmeyen kod geliştiricileri [MXDC_ESCAPE işlevi](/windows/desktop/printdocs/mxdc-escape)için belgeler görmelidir. Windows Forms geliştiricilerin, tam XPS yazdırma yolunu desteklemeyen <xref:System.Drawing.Printing> ad alanında API kullanması gerekir, ancak karma GDI 'dan XPS 'ye yazdırma yolunu destekler. Aşağıdaki **yazdırma yolu mimarisini** inceleyin.)  
   
@@ -78,7 +78,7 @@ Microsoft .NET Framework ile, Windows Presentation Foundation (WPF) kullanan uyg
  XPS özelliklerinin tamamına erişmek için gelişmiş yazdırma API 'sinin kullanılması gerekir. Birkaç ilgili API aşağıda daha ayrıntılı olarak açıklanmıştır. XPS yazdırma yolu API 'Lerinin tüm listesi için, <xref:System.Windows.Xps> ve <xref:System.Printing> ad alanı başvurularına bakın.  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket ve PrintCapabilities  
- <xref:System.Printing.PrintTicket> ve <xref:System.Printing.PrintCapabilities> sınıfları, gelişmiş XPS özelliklerinin temelidir. Her iki nesne türü de, harmanlama, iki taraflı yazdırma, Zımbalama vb. gibi yazdırma odaklı özelliklerin biçimlendirilen yapılarına [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. Bu yapılar, yazdırma şeması tarafından tanımlanır. <xref:System.Printing.PrintTicket> bir yazıcıya bir yazdırma işini nasıl işleyeceğini bildirir. <xref:System.Printing.PrintCapabilities> sınıfı bir yazıcının yeteneklerini tanımlar. Bir yazıcının yeteneklerini sorgulayarak, yazıcının desteklenen özelliklerinden tam olarak yararlanabilen bir <xref:System.Printing.PrintTicket> oluşturulabilir. Benzer şekilde, desteklenmeyen özelliklerden kaçınılabilir.  
+ <xref:System.Printing.PrintTicket> ve <xref:System.Printing.PrintCapabilities> sınıfları, gelişmiş XPS özelliklerinin temelidir. Her iki tür nesne, harmanlama, iki taraflı yazdırma, Zımbalama vb. gibi yazdırma odaklı özelliklerin XML biçimli yapılarıdır. Bu yapılar, yazdırma şeması tarafından tanımlanır. <xref:System.Printing.PrintTicket> bir yazıcıya bir yazdırma işini nasıl işleyeceğini bildirir. <xref:System.Printing.PrintCapabilities> sınıfı bir yazıcının yeteneklerini tanımlar. Bir yazıcının yeteneklerini sorgulayarak, yazıcının desteklenen özelliklerinden tam olarak yararlanabilen bir <xref:System.Printing.PrintTicket> oluşturulabilir. Benzer şekilde, desteklenmeyen özelliklerden kaçınılabilir.  
   
  Aşağıdaki örnek, bir yazıcı <xref:System.Printing.PrintCapabilities> sorgulama ve kod kullanarak <xref:System.Printing.PrintTicket> oluşturma işlemlerinin nasıl yapılacağını gösterir.  
   

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: e9d77cd1dc82e1b103c5f0d9f3f447ed105acaec
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: faf4ea9c52b91c3fc0f2f775e7bd5dfe039c53a8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003250"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738118"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Nasıl yapılır: parametre alma saklı yordamlarını kullanma
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], çıkış parametrelerini başvuru parametrelerine eşler ve değer türleri için parametreyi null yapılabilir olarak bildirir.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çıkış parametrelerini başvuru parametrelerine eşler ve değer türleri için parametreyi null yapılabilir olarak bildirir.  
   
  Bir satır kümesi döndüren sorguda giriş parametresinin nasıl kullanılacağına ilişkin bir örnek için bkz. [nasıl yapılır: satır kümelerini döndürme](how-to-return-rowsets.md).  
   
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [Saklı Yordamlar](stored-procedures.md)
 - [Örnek Veritabanları İndirme](downloading-sample-databases.md)
-- [Nullable değer türlerini kullanma](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [Boş Değer Atanabilen Değer Türleri](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Nullable değer türleri (C#)](../../../../../csharp/language-reference/builtin-types/nullable-value-types.md)
+- [Nullable değer türleri (Visual Basic)](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

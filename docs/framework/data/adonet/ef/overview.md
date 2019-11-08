@@ -2,12 +2,12 @@
 title: Entity Framework’e Genel Bakış
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 92aa7b9c1f163c0496a821cca375c8b7e1b21a5f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b68db4f139330ccc1da5057498a37a08d00ba266
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854346"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738500"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework genel bakış
 
@@ -34,10 +34,10 @@ Entity Framework, geliştiricilerin bu verilerin bulunduğu temel veritabanı ta
 
 Depolama modeli ve eşlemeler, kavramsal modelde, veri sınıflarında veya uygulama kodunda değişiklik yapılması gerekmeden gerektiği şekilde değiştirilebilir. Depolama modelleri sağlayıcıya özgü olduğundan, çeşitli veri kaynakları arasında tutarlı bir kavramsal model ile çalışabilirsiniz.
 
-Entity Framework bu modeli ve eşleme dosyalarını, kavramsal modeldeki varlıklara ve ilişkilere yönelik olarak veri kaynağındaki eşdeğer işlemlere karşı oluşturma, okuma, güncelleştirme ve silme işlemleri için kullanır. Entity Framework, kavramsal modeldeki varlıkların veri kaynağındaki saklı yordamlara eşlenmesini de destekler. Daha fazla bilgi için bkz. [csdl, SSDL ve MSL belirtimleri](./language-reference/csdl-ssdl-and-msl-specifications.md).
+Entity Framework bu modeli ve eşleme dosyalarını, kavramsal modeldeki varlıklara ve ilişkilere yönelik olarak veri kaynağındaki eşdeğer işlemlere karşı oluşturma, okuma, güncelleştirme ve silme işlemleri için kullanır. Entity Framework, kavramsal modeldeki varlıkların veri kaynağındaki saklı yordamlara eşlenmesini de destekler. Daha fazla bilgi için bkz. [csdl, SSDL ve MSL belirtimleri](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).
 
 ## <a name="map-objects-to-data"></a>Nesneleri verilerle eşleme
- Nesne odaklı programlama, veri depolama sistemleriyle etkileşime geçmek için bir zorluk doğurur. Sınıfların organizasyonu ilişkisel veritabanı tablolarının organizasyonunu sıklıkla yansıtsa da, sığdırma kusursuz değildir. Birden çok normalleştirilmiş tablo sıklıkla tek bir sınıfa karşılık gelir ve sınıflar arasındaki ilişkiler genellikle tablolar arasındaki ilişkilerden farklı şekilde temsil edilir. Örneğin, bir satış siparişi için müşteriyi göstermek üzere, `Order` bir sınıf bir `Customer` sınıfın örneğine başvuru içeren bir özellik kullanabilir, ancak `Order` veritabanındaki tablo satırı yabancı anahtar sütunu (veya sütun kümesi) içerdiğinde `Customer` tablodaki birincil anahtar değerine karşılık gelen bir değer. Bir `Customer` sınıf, `Order` sınıfının örneklerinin bir koleksiyonunu `Orders` içeren adlı bir özelliğe sahip olabilir, ancak `Customer` veritabanındaki tablo karşılaştırılabilir bir sütun içermez. Entity Framework, geliştiricilere bu şekilde ilişkileri temsil etme esnekliği sağlar veya veritabanında gösterildiği gibi ilişkileri daha yakından modelleyebilir.
+ Nesne odaklı programlama, veri depolama sistemleriyle etkileşime geçmek için bir zorluk doğurur. Sınıfların organizasyonu ilişkisel veritabanı tablolarının organizasyonunu sıklıkla yansıtsa da, sığdırma kusursuz değildir. Birden çok normalleştirilmiş tablo sıklıkla tek bir sınıfa karşılık gelir ve sınıflar arasındaki ilişkiler genellikle tablolar arasındaki ilişkilerden farklı şekilde temsil edilir. Örneğin, bir satış siparişi için müşteriyi göstermek üzere bir `Order` sınıfı, bir `Customer` sınıfının örneğine başvuru içeren bir özellik kullanabilir, ancak veritabanındaki bir `Order` tablo satırı, bir değeri olan bir yabancı anahtar sütunu (veya sütun kümesi) içeriyorsa `Customer` tablosundaki bir birincil anahtar değerine karşılık gelir. Bir `Customer` sınıfı, `Order` sınıfının örneklerinin bir koleksiyonunu içeren `Orders` adında bir özelliğe sahip olabilir, ancak bir veritabanındaki `Customer` tablo, karşılaştırılabilir bir sütuna sahip değildir. Entity Framework, geliştiricilere bu şekilde ilişkileri temsil etme esnekliği sağlar veya veritabanında gösterildiği gibi ilişkileri daha yakından modelleyebilir.
 
  Mevcut çözümler, genellikle "Impedance uyuşmazlığı" olarak adlandırılan ve yalnızca nesne odaklı sınıfları ve özellikleri ilişkisel tablo ve sütunlara eşleyerek bu boşluğu köprü oluşturmaya çalıştı. Entity Framework, bu geleneksel yaklaşımı almak yerine, mantıksal modellerdeki ilişkisel tabloları, sütunları ve yabancı anahtar kısıtlamalarını kavramsal modellerdeki varlıklara ve ilişkilere eşler. Bu, hem nesneleri tanımlamada hem de mantıksal modeli iyileştirirken daha fazla esneklik sağlar. Varlık Veri Modeli araçları, kavramsal modeli temel alan genişletilebilir veri sınıfları oluşturur. Bu sınıflar, geliştiricinin eklediği ek üyelerle genişletilebilen kısmi sınıflardır. Varsayılan olarak, belirli bir kavramsal model için oluşturulan sınıflar, varlıkları nesneler olarak görselleştirme ve değişiklikleri izleme ve kaydetme için hizmet sağlayan temel sınıflardan türetilir. Geliştiriciler bu sınıfları, ilişkilerle ilgili nesneler olarak varlıklar ve ilişkiler ile çalışmak için kullanabilir. Geliştiriciler bir kavramsal model için oluşturulan sınıfları da özelleştirebilir. Daha fazla bilgi için bkz. [nesneleriyle çalışma](working-with-objects.md).
 
@@ -47,19 +47,19 @@ Diğer bir nesne ilişkisel eşleme çözümünden daha fazlasına sahip Entity 
 
 - LINQ to Entities. Kavramsal modelde tanımlanan varlık türlerini sorgulamak için dil ile tümleşik sorgu (LINQ) desteği sağlar. Daha fazla bilgi için bkz. [LINQ to Entities](./language-reference/linq-to-entities.md).
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Kavramsal modeldeki varlıklarla doğrudan çalıştırılan ve Varlık Veri Modeli kavramları destekleyen, depolama bağımsız bir SQL diyalekti. [!INCLUDE[esql](../../../../../includes/esql-md.md)], EntityClient sağlayıcısı kullanılarak yürütülen nesne sorguları ve sorgularıyla birlikte kullanılır. Daha fazla bilgi için bkz. [Entity SQL genel bakış](./language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Kavramsal modeldeki varlıklarla doğrudan çalıştırılan ve Varlık Veri Modeli kavramları destekleyen, depolama bağımsız bir SQL diyalekti. [!INCLUDE[esql](../../../../../includes/esql-md.md)], her ikisi de EntityClient sağlayıcısı kullanılarak yürütülen nesne sorguları ve sorgularıyla kullanılır. Daha fazla bilgi için bkz. [Entity SQL genel bakış](./language-reference/entity-sql-overview.md).
 
-Entity Framework EntityClient veri sağlayıcısını içerir. Bu sağlayıcı bağlantıları yönetir, varlık sorgularını veri kaynağına özgü sorgulara çevirir ve Entity Framework varlık verilerini nesnelere getirmek için kullandığı bir veri okuyucusu döndürür. Nesne gerçekleştirmesi gerekli olmadığında, EntityClient sağlayıcısı, uygulamaların sorguları yürütmesine [!INCLUDE[esql](../../../../../includes/esql-md.md)] ve döndürülen salt okunurdur veri okuyucuyu kullanmasına olanak tanıyarak standart bir ADO.NET veri sağlayıcısı gibi de kullanılabilir. Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](entityclient-provider-for-the-entity-framework.md).
+Entity Framework EntityClient veri sağlayıcısını içerir. Bu sağlayıcı bağlantıları yönetir, varlık sorgularını veri kaynağına özgü sorgulara çevirir ve Entity Framework varlık verilerini nesnelere getirmek için kullandığı bir veri okuyucusu döndürür. Nesne gerçekleştirmesi gerekli olmadığında, EntityClient sağlayıcısı, uygulamaların [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorguları yürütmesini ve döndürülen salt okunurdur veri okuyucuyu kullanmasını sağlayarak standart bir ADO.NET veri sağlayıcısı gibi de kullanılabilir. Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](entityclient-provider-for-the-entity-framework.md).
 
 Aşağıdaki diyagramda verilere erişim için Entity Framework mimarisi gösterilmektedir:
 
 ![Entity Framework mimari diyagramı](./media/wd-efarchdiagram.gif "wd_EFArchDiagram")
 
-Varlık veri modeli araçları, kavramsal modeldeki varlık kapsayıcısını temsil eden `System.Data.Objects.ObjectContext` veya `System.Data.Entity.DbContext` ondan türetilmiş bir sınıf oluşturabilir. Bu nesne bağlamı, değişiklikleri izleme ve kimlikleri, eşzamanlılık ve ilişkileri yönetme olanakları sağlar. Bu sınıf Ayrıca veri kaynağına `SaveChanges` ekleme, güncelleştirme ve silme işlemlerini yazan bir yöntem sunar. Sorgular gibi bu değişiklikler, sistem tarafından veya geliştirici tarafından belirtilen saklı yordamlar tarafından otomatik olarak oluşturulan komutlara göre yapılır.
+Varlık Veri Modeli Araçlar, kavramsal modeldeki varlık kapsayıcısını temsil eden `System.Data.Objects.ObjectContext` veya `System.Data.Entity.DbContext` türetilmiş bir sınıf oluşturabilir. Bu nesne bağlamı, değişiklikleri izleme ve kimlikleri, eşzamanlılık ve ilişkileri yönetme olanakları sağlar. Bu sınıf Ayrıca veri kaynağına ekleme, güncelleştirme ve silme işlemlerini yazan bir `SaveChanges` yöntemi sunar. Sorgular gibi bu değişiklikler, sistem tarafından veya geliştirici tarafından belirtilen saklı yordamlar tarafından otomatik olarak oluşturulan komutlara göre yapılır.
 
 ## <a name="data-providers"></a>Veri sağlayıcıları
 
-`EntityClient` Sağlayıcı, kavramsal varlıklar ve ilişkiler açısından verilere erişerek ADO.NET sağlayıcı modelini genişletir. Kullanan sorguları [!INCLUDE[esql](../../../../../includes/esql-md.md)]yürütür. [!INCLUDE[esql](../../../../../includes/esql-md.md)]veritabanıyla iletişim kurmayı sağlayan `EntityClient` temel sorgu dili sağlar. Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](entityclient-provider-for-the-entity-framework.md).
+`EntityClient` sağlayıcı, kavramsal varlıklar ve ilişkiler açısından verilere erişerek ADO.NET sağlayıcı modelini genişletir. [!INCLUDE[esql](../../../../../includes/esql-md.md)]kullanan sorguları yürütür. [!INCLUDE[esql](../../../../../includes/esql-md.md)], `EntityClient` veritabanıyla iletişim kurmasını sağlayan temel sorgu dili sağlar. Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](entityclient-provider-for-the-entity-framework.md).
 
 Entity Framework, kurallı komut ağaçlarını destekleyen güncelleştirilmiş bir SqlClient Veri Sağlayıcısı içerir. Daha fazla bilgi için bkz. [Entity Framework Için SqlClient](sqlclient-for-the-entity-framework.md).
 

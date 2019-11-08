@@ -1,17 +1,17 @@
 ---
 title: 'Öğretici: tahmin Bisiklet Kiralama talep-süre serisi'
 description: Bu öğreticide, tek bir zaman serisi analizi ve ML.NET kullanarak bir bisiklet kiralama hizmeti için talebin nasıl tahmin yapılacağı gösterilir.
-ms.date: 10/31/2019
+ms.date: 11/07/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: f30aac5f8467c2410e9008bafea3cf35af3f4e2a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e913c27c3501c4c553d7d62f948de31abb3d6f49
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425641"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740539"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Öğretici: zaman serisi analizi ve ML.NET ile tahmin Bisiklet kiralama hizmeti talebi
 
@@ -26,9 +26,6 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > * Tahmin modelini değerlendir
 > * Tahmin modelini kaydetme
 > * Tahmin modeli kullan
-
-> [!NOTE]
-> Bu öğretici, DatabaseLoader 'ın önizleme sürümünü kullanır.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -49,13 +46,13 @@ Bu öğreticide kullanılan algoritma, [tek bir Spekme analizidir (SSA)](http://
 ## <a name="create-console-application"></a>Konsol uygulaması oluşturma
 
 1. "Bikeisteğtahmini" adlı yeni  **C# bir .NET Core konsol uygulaması** oluşturun.
-1. **Microsoft.ml** Version **1.4.0-preview2** NuGet paketini yükler
+1. **Microsoft.ml** Version **1.4.0** NuGet paketini yükler
     1. Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
     1. Paket kaynağı olarak "nuget.org" öğesini seçin, **Gözden** geçirme sekmesini seçin, **Microsoft.ml**için arama yapın.
     1. **Ön sürümü dahil et** onay kutusunu işaretleyin.
     1. **Install** düğmesini seçin.
     1. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız Lisans Kabulü iletişim kutusunda **kabul ediyorum** düğmesini seçin.
-    1. **System. Data. SqlClient** sürüm **4.7.0**, **Microsoft. ml. deneysel** sürüm **0.16.0-Preview2**ve **Microsoft. ml. timeseries** sürüm **1.4.0-preview2**için bu adımları yineleyin.
+    1. **System. Data. SqlClient** sürüm **4.7.0** ve **Microsoft. ml. timeseries** sürüm **1.4.0**için bu adımları yineleyin.
 
 ### <a name="prepare-and-understand-the-data"></a>Verileri hazırlama ve anlama
 

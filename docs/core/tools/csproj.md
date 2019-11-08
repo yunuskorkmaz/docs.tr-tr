@@ -2,12 +2,12 @@
 title: .NET Core için csproj biçimine eklemeler
 description: Mevcut ve .NET Core csproj dosyaları arasındaki farklılıklar hakkında bilgi edinin
 ms.date: 04/08/2019
-ms.openlocfilehash: d7fca40caaeb83152b8ae5260bf918981362d2c3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4ce9227839a610308071c36185b63db8b1ee86ed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522796"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739299"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core için csproj biçimine eklemeler
 
@@ -31,7 +31,7 @@ Meta paketlere, proje dosyanızın `<TargetFramework>` veya `<TargetFrameworks>`
 
 ### <a name="recommendations"></a>Öneri
 
-@No__t_0 veya `NETStandard.Library` metapaketlerine örtük olarak başvurulduğundan, önerilen en iyi yöntemler şunlardır:
+`Microsoft.NETCore.App` veya `NETStandard.Library` metapaketlerine örtük olarak başvurulduğundan, önerilen en iyi yöntemler şunlardır:
 
 - .NET Core veya .NET Standard hedeflenirken, proje dosyanızdaki bir `<PackageReference>` öğe aracılığıyla `Microsoft.NETCore.App` veya `NETStandard.Library` metapaketlerine açık bir başvuruya sahip olmaz.
 - .NET Core 'u hedeflerken çalışma zamanının belirli bir sürümüne ihtiyacınız varsa, metapackage 'e başvurmak yerine projenizde `<RuntimeFrameworkVersion>` özelliğini (örneğin, `1.0.4`) kullanmanız gerekir.
@@ -41,11 +41,11 @@ Meta paketlere, proje dosyanızın `<TargetFramework>` veya `<TargetFrameworks>`
 
 ## <a name="implicit-version-for-some-package-references"></a>Bazı paket başvurularının örtük sürümü
 
-[@No__t_1](#packagereference) çoğu kullanımları, kullanılacak NuGet paketi sürümünü belirtmek için `Version` özniteliğini ayarlamayı gerektirir. .NET Core 2,1 veya 2,2 kullanırken ve [Microsoft. aspnetcore. app](/aspnet/core/fundamentals/metapackage-app) ya da [Microsoft. Aspnetcore. All](/aspnet/core/fundamentals/metapackage)ile başvurulduğunda öznitelik gereksizdir. .NET Core SDK, bu paketlerin kullanılması gereken sürümünü otomatik olarak seçebilir.
+[`<PackageReference>`](#packagereference) çoğu kullanımları, kullanılacak NuGet paketi sürümünü belirtmek için `Version` özniteliğini ayarlamayı gerektirir. .NET Core 2,1 veya 2,2 kullanırken ve [Microsoft. aspnetcore. app](/aspnet/core/fundamentals/metapackage-app) ya da [Microsoft. Aspnetcore. All](/aspnet/core/fundamentals/metapackage)ile başvurulduğunda öznitelik gereksizdir. .NET Core SDK, bu paketlerin kullanılması gereken sürümünü otomatik olarak seçebilir.
 
 ### <a name="recommendation"></a>Öneri
 
-@No__t_0 veya `Microsoft.AspNetCore.All` paketlerine başvurulduğunda, sürümünü belirtmeyin. Bir sürüm belirtilmişse, SDK uyarı NETSDK1071 üretebilir. Bu uyarıyı onarmak için aşağıdaki örnekteki gibi paket sürümünü kaldırın:
+`Microsoft.AspNetCore.App` veya `Microsoft.AspNetCore.All` paketlerine başvurulduğunda, sürümünü belirtmeyin. Bir sürüm belirtilmişse, SDK uyarı NETSDK1071 üretebilir. Bu uyarıyı onarmak için aşağıdaki örnekteki gibi paket sürümünü kaldırın:
 
 ```xml
 <ItemGroup>
@@ -127,9 +127,9 @@ Projede birden çok hedef çerçeve varsa, komutun sonuçları MSBuild özelliğ
 
 *. Csproj* dosyasının kök `<Project>` öğesi, `Sdk` adlı yeni bir özniteliğe sahiptir. `Sdk`, proje tarafından hangi SDK 'nın kullanılacağını belirtir. [Katman, katmanlama belgesinde](cli-msbuild-architecture.md) açıklandığı gibi, .NET Core kodu oluşturabileceğiniz MSBuild [görevleri](/visualstudio/msbuild/msbuild-tasks) ve [hedefleri](/visualstudio/msbuild/msbuild-targets) kümesidir. .NET Core için aşağıdaki SDK 'lar mevcuttur:
 
-1. @No__t_0 KIMLIĞINE sahip .NET Core SDK
-2. @No__t_0 KIMLIKLI .NET Core Web SDK 'Sı
-3. @No__t_0 KIMLIKLI .NET Core Razor sınıf kitaplığı SDK 'Sı
+1. `Microsoft.NET.Sdk` KIMLIĞINE sahip .NET Core SDK
+2. `Microsoft.NET.Sdk.Web` KIMLIKLI .NET Core Web SDK 'Sı
+3. `Microsoft.NET.Sdk.Razor` KIMLIKLI .NET Core Razor sınıf kitaplığı SDK 'Sı
 4. KIMLIĞI `Microsoft.NET.Sdk.Worker` olan .NET Core Worker hizmeti (.NET Core 3,0 ' den beri)
 5. KIMLIĞI `Microsoft.NET.Sdk.WindowsDesktop` olan .NET Core WinForms ve WPF (.NET Core 3,0 ' den beri)
 
@@ -137,7 +137,7 @@ Projede birden çok hedef çerçeve varsa, komutun sonuçları MSBuild özelliğ
 
 ### <a name="packagereference"></a>PackageReference
 
-@No__t_0 item öğesi [, projede bir NuGet bağımlılığı](/nuget/consume-packages/package-references-in-project-files)belirtir. @No__t_0 özniteliği paket KIMLIĞINI belirtir.
+`<PackageReference>` item öğesi [, projede bir NuGet bağımlılığı](/nuget/consume-packages/package-references-in-project-files)belirtir. `Include` özniteliği paket KIMLIĞINI belirtir.
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
@@ -153,7 +153,7 @@ Gerekli `Version` özniteliği geri yüklenecek paketin sürümünü belirtir. �
 
 `ExcludeAssets` özniteliği, `<PackageReference>` tarafından belirtilen pakete ait olan varlıkların tüketilmediğini belirtir.
 
-`PrivateAssets` özniteliği, `<PackageReference>` tarafından belirtilen pakete ait olan varlıkların tüketilmesi ancak bir sonraki projeye akolmaması gerektiğini belirtir. @No__t_0, `Build` ve `ContentFiles` varlıkları bu öznitelik mevcut olmadığında varsayılan olarak özeldir.
+`PrivateAssets` özniteliği, `<PackageReference>` tarafından belirtilen pakete ait olan varlıkların tüketilmesi ancak bir sonraki projeye akolmaması gerektiğini belirtir. `Analyzers`, `Build` ve `ContentFiles` varlıkları bu öznitelik mevcut olmadığında varsayılan olarak özeldir.
 
 > [!NOTE]
 > `PrivateAssets`, *Project. json*/*xproj* `SuppressParent` öğesi ile eşdeğerdir.
@@ -174,7 +174,7 @@ Alternatif olarak, öznitelik şunları içerebilir:
 
 ### <a name="dotnetclitoolreference"></a>Dotnetclientoolreference
 
-@No__t_0 item öğesi, kullanıcının proje bağlamında geri yüklemek istediği CLı aracını belirtir. *Project. JSON*içinde `tools` düğümünün yerini alır.
+`<DotNetCliToolReference>` item öğesi, kullanıcının proje bağlamında geri yüklemek istediği CLı aracını belirtir. *Project. JSON*içinde `tools` düğümünün yerini alır.
 
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
@@ -186,7 +186,7 @@ Alternatif olarak, öznitelik şunları içerebilir:
 
 ### <a name="runtimeidentifiers"></a>Runtimetanımlayıcıtanımlayıcıları
 
-@No__t_0 Property öğesi, proje için bir [çalışma zamanı tanımlayıcıları (RID 'ler)](../rid-catalog.md) için noktalı virgülle ayrılmış bir liste belirtmenize olanak tanır.
+`<RuntimeIdentifiers>` Property öğesi, proje için bir [çalışma zamanı tanımlayıcıları (RID 'ler)](../rid-catalog.md) için noktalı virgülle ayrılmış bir liste belirtmenize olanak tanır.
 RID 'Ler, kendi kendine kapsanan dağıtımları yayımlamayı etkinleştirir.
 
 ```xml
@@ -195,7 +195,7 @@ RID 'Ler, kendi kendine kapsanan dağıtımları yayımlamayı etkinleştirir.
 
 ### <a name="runtimeidentifier"></a>Runtimeıdentifier
 
-@No__t_0 Property öğesi, proje için yalnızca bir [çalışma zamanı tanımlayıcısı (RID)](../rid-catalog.md) belirtmenize olanak tanır. RID, kendi kendine içerilen bir dağıtımı yayımlamayı mümkün.
+`<RuntimeIdentifier>` Property öğesi, proje için yalnızca bir [çalışma zamanı tanımlayıcısı (RID)](../rid-catalog.md) belirtmenize olanak tanır. RID, kendi kendine içerilen bir dağıtımı yayımlamayı mümkün.
 
 ```xml
 <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
@@ -205,7 +205,7 @@ Birden çok çalışma alanına yayımlamanız gerekiyorsa bunun yerine `<Runtim
 
 ### <a name="packagetargetfallback"></a>PackageTargetFallback
 
-@No__t_0 Property öğesi, paketler geri yüklenirken kullanılacak bir dizi uyumlu hedef belirtmenize olanak tanır. DotNet [TXE (hedef x takma adı)](/nuget/schema/target-frameworks) kullanan paketlere bir DotNet TXD bildirmeyin paketlerle çalışmak üzere tasarlanmıştır. Projeniz DotNet TXD 'yi kullanıyorsa, DotNet olmayan platformların DotNet ile uyumlu olmasını sağlamak üzere projenize `<PackageTargetFallback>` ' ı eklemediğiniz sürece, bağımlı olduğu tüm paketlerin DotNet TXD olması gerekir.
+`<PackageTargetFallback>` Property öğesi, paketler geri yüklenirken kullanılacak bir dizi uyumlu hedef belirtmenize olanak tanır. DotNet [TXE (hedef x takma adı)](/nuget/schema/target-frameworks) kullanan paketlere bir DotNet TXD bildirmeyin paketlerle çalışmak üzere tasarlanmıştır. Projeniz DotNet TXD 'yi kullanıyorsa, DotNet olmayan platformların DotNet ile uyumlu olmasını sağlamak üzere projenize `<PackageTargetFallback>` ' ı eklemediğiniz sürece, bağımlı olduğu tüm paketlerin DotNet TXD olması gerekir.
 
 Aşağıdaki örnek, projenizdeki tüm hedeflerin geri dönüşlerinizi sağlar:
 
@@ -222,6 +222,31 @@ Aşağıdaki örnek yalnızca `netcoreapp2.1` hedefi için fallyedekler belirtir
     $(PackageTargetFallback);portable-net45+win8+wpa81+wp8
 </PackageTargetFallback >
 ```
+
+## <a name="build-events"></a>Derleme olayları
+
+Derleme öncesi ve derleme sonrası olaylarının proje dosyasında belirtilme biçimi değişmiştir. $ (ProjectDir) gibi makrolar çözümlenmediğinden, PreBuildEvent ve PostBuildEvent özelliklerinin SDK stili proje biçiminde kullanılması önerilmez. Örneğin, aşağıdaki kod artık desteklenmemektedir:
+
+```xml
+<PropertyGroup>
+    <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)" />
+</PropertyGroup>
+```
+
+SDK stili projelerde `PreBuild` veya `PostBuild` adlı bir MSBuild hedefi kullanın ve `PreBuild` veya `AfterTargets` özelliği için `BeforeTargets` özelliğini ayarlayın. Önceki örnek için aşağıdaki kodu kullanın:
+
+```xml
+<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="&quot;$(ProjectDir)PreBuildEvent.bat&quot; &quot;$(ProjectDir)..\&quot; &quot;$(ProjectDir)&quot; &quot;$(TargetDir)&quot;" />
+</Target>
+
+<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+   <Exec Command="echo Output written to $(TargetDir)" />
+</Target>
+```
+
+> [!NOTE]
+>MSBuild hedefleri için herhangi bir ad kullanabilirsiniz, ancak Visual Studio IDE `PreBuild` ve `PostBuild` hedeflerini tanır. bu nedenle, Visual Studio IDE 'de komutları düzenleyebilmeniz için bu adları kullanmanızı öneririz. 
 
 ## <a name="nuget-metadata-properties"></a>NuGet meta veri özellikleri
 
@@ -253,9 +278,9 @@ UI görüntüleme paketinin uzun açıklaması.
 
 ### <a name="description"></a>Açıklama
 
-Derleme için uzun bir açıklama. @No__t_0 belirtilmezse, bu özellik paketin açıklaması olarak da kullanılır.
+Derleme için uzun bir açıklama. `PackageDescription` belirtilmezse, bu özellik paketin açıklaması olarak da kullanılır.
 
-### <a name="copyright"></a>yaptırımlar
+### <a name="copyright"></a>Yaptırımlar
 
 Paket için telif hakkı ayrıntıları.
 
@@ -294,7 +319,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 Bir SPDX tanımlayıcısı atanmamış bir lisans kullanıyorsanız paket içindeki bir lisans dosyasının yolu veya özel bir lisans (Aksi takdirde `PackageLicenseExpression` tercih edilir)
 
-@No__t_0, `PackageLicenseExpression` ile birleştirilemez ve Visual Studio 15.9.4, .NET SDK 2.1.502 veya 2.2.101 ya da daha yeni bir sürümü gerektirir.
+`PackageLicenseUrl`, `PackageLicenseExpression` ile birleştirilemez ve Visual Studio 15.9.4, .NET SDK 2.1.502 veya 2.2.101 ya da daha yeni bir sürümü gerektirir.
 
 Lisans dosyasının paketlenmiş olduğundan emin olmanız gerekir, bu işlem, örnek kullanım:
 
@@ -419,7 +444,7 @@ Notlar:
 
 - `AssemblyVersion` ve `FileVersion` varsayılan değeri, sonek olmadan `$(Version)` değerini alır. Örneğin, `$(Version)` `1.2.3-beta.4` ise, değer `1.2.3` olur.
 - `InformationalVersion` varsayılan değeri `$(Version)` ' dir.
-- `InformationalVersion`, özellik varsa `$(SourceRevisionId)` ' i içerir. @No__t_0 kullanılarak devre dışı bırakılabilir.
+- `InformationalVersion`, özellik varsa `$(SourceRevisionId)` ' i içerir. `IncludeSourceRevisionInInformationalVersion`kullanılarak devre dışı bırakılabilir.
 - `Copyright` ve `Description` özellikleri NuGet meta verileri için de kullanılır.
 - `Configuration` tüm derleme işlemiyle paylaşılır ve `dotnet` komutlarının `--configuration` parametresi aracılığıyla ayarlanır.
 
@@ -429,4 +454,4 @@ Tüm AssemblyInfo üretimini etkinleştiren veya devre dışı bırakan bir Bool
 
 ### <a name="generatedassemblyinfofile"></a>GeneratedAssemblyInfoFile
 
-Oluşturulan derleme bilgileri dosyasının yolu. @No__t_0 (obj) dizinindeki bir dosya için varsayılan değer.
+Oluşturulan derleme bilgileri dosyasının yolu. `$(IntermediateOutputPath)` (obj) dizinindeki bir dosya için varsayılan değer.

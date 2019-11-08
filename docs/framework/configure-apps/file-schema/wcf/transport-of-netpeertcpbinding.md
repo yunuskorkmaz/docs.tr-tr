@@ -2,23 +2,23 @@
 title: <transport> / <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 08be5d752f8422ebe6442b295195f21b16a274c0
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 49b31a889d192d190125214e89ba09305114eb7f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399299"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735980"
 ---
-# <a name="transport-of-netpeertcpbinding"></a>\<\<NetPeerTcpBinding > taşıma >
-[ \<NetPeerTcpBinding >](netpeertcpbinding.md)kullanılırken aktarım düzeyi güvenliği için ayarları belirtir.  
+# <a name="transport-of-netpeertcpbinding"></a>\<netPeerTcpBinding > \<taşıma >
+[\<netPeerTcpBinding >](netpeertcpbinding.md)kullanılırken aktarım düzeyi güvenliği için ayarları belirtir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlamaları >** ](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netPeerTcpBinding >** ](netpeertcpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Güvenlik >** ](security-of-netpeerbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Taşıma >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<güvenlik >** ](security-of-netpeerbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<taşıma >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,14 +39,14 @@ ms.locfileid: "70399299"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|credentialType|İsteğe bağlı. Eş aktarımlarla gönderilen iletileri doğrulamak için kullanılan kimlik bilgilerinin türünü belirtir. Bu öznitelik türü <xref:System.ServiceModel.PeerTransportCredentialType>.|  
+|credentialType|İsteğe bağlı. Eş aktarımlarla gönderilen iletileri doğrulamak için kullanılan kimlik bilgilerinin türünü belirtir. Bu öznitelik <xref:System.ServiceModel.PeerTransportCredentialType>türündedir.|  
   
 ## <a name="credentialtype-attribute"></a>credentialType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |Sertifika|Eş kanal taşımanın kimlik doğrulaması bir x509 sertifikası gerektirir.|  
-|Parola|Eş kanal taşımanın kimlik doğrulaması, doğru bir parola gerektirir.|  
+|istemcisiyle yönetilen bir cihaz için)|Eş kanal taşımanın kimlik doğrulaması, doğru bir parola gerektirir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -55,7 +55,7 @@ ms.locfileid: "70399299"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Güvenlik >](security-of-netpeerbinding.md)|[ \<NetPeerTcpBinding >](netpeertcpbinding.md)için güvenlik ayarlarını tanımlar.|  
+|[\<Güvenlik >](security-of-netpeerbinding.md)|[\<netPeerTcpBinding >](netpeertcpbinding.md)için güvenlik ayarlarını tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -67,4 +67,4 @@ ms.locfileid: "70399299"
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../misc/binding.md)
+- [\< bağlama >](bindings.md)

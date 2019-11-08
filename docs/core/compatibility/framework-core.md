@@ -2,17 +2,14 @@
 title: Son değişiklikler, .NET Core 3,0 .NET Framework-.NET Core
 description: Windows Forms ve Windows Presentation Foundation için .NET Framework son değişiklikleri .NET Core 3,0 'e listeler.
 ms.date: 09/10/2019
-ms.openlocfilehash: a374e35192c7aad07e986e0e0b75039642744edc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 80c93dd7a8715a9bcc6d81605ffe5af4b0461257
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089567"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739443"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core-30"></a>.NET Framework 'den .NET Core 3,0 'ye geçiş için son değişiklikler
-
-> [!IMPORTANT]
-> Bu makale yapım aşamasındadır. Bu, .NET Core önemli değişikliklerinin tamamen bir listesi değildir. .NET Core ile ilgili değişiklikler hakkında daha fazla bilgi için GitHub 'daki DotNet/docs deposundaki tek tek [değişiklikler sorunlarını](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) inceleyebilirsiniz. 
 
 .NET Framework bir Windows Forms veya Windows Presentation Foundation uygulamasını .NET Core 3,0 ' e geçiriyorsanız, uygulamanızı etkileyebilecek değişiklikler için aşağıdaki konuları gözden geçirin:
 

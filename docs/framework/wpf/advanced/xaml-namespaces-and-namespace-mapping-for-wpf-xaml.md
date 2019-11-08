@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 6c06e18f7869f1b1041c4d5fb1608a87f2902d7b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8f381a06aa916be378052d00f0d65f37ef910433
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460582"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740655"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi
 Bu konu, bir WPF XAML dosyasının kök etiketinde genellikle bulunan iki XAML ad alanı eşleştirmelerinin varlığını ve amacını açıklamaktadır. Ayrıca, kendi kodunuzda ve/veya ayrı derlemelerde tanımlanmış öğeleri kullanmak için benzer eşlemelerin nasıl üretileceğini açıklar.  
@@ -39,7 +39,7 @@ Bu konu, bir WPF XAML dosyasının kök etiketinde genellikle bulunan iki XAML a
   
  Bu bildirimler arasındaki ilişki, `x:` ön ek eşlemesinin XAML dil tanımının parçası olan iç bilgileri desteklemesidir ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir dil olarak XAML kullanan bir uygulama ve XAML için nesnelerinin bir sözlüğünü tanımlar. WPF sözlüğü kullanımları XAML iç yapı kullanımlarından çok daha yaygın olacak şekilde, WPF sözlüğü varsayılan olarak eşlenir.  
   
- XAML dil iç bilgileri desteğini eşlemek için `x:` ön eki kuralı, proje şablonları, örnek kod ve bu [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]dil özelliklerinin belgeleri tarafından izlenir. XAML ad alanı, temel WPF uygulamaları için bile gerekli olan çok sayıda yaygın kullanılan özelliği tanımlar. Örneğin, bir XAML dosyasının arka plan kodunu kısmi bir sınıf aracılığıyla birleştirmek için, ilgili XAML dosyasının kök öğesinde bu sınıfı `x:Class` özniteliği olarak vermelisiniz. Ya da bir XAML sayfasında, anahtarlı kaynak olarak erişmek istediğiniz herhangi bir öğe, söz konusu öğede ayarlanmış `x:Key` özniteliğine sahip olmalıdır. Bu ve XAML 'in diğer yönleri hakkında daha fazla bilgi için bkz. [xaml genel bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md) veya [XAML sözdizimi ayrıntılı](xaml-syntax-in-detail.md).  
+ XAML dil iç bilgileri desteğini eşlemek için `x:` ön eki kuralı, proje şablonları, örnek kod ve bu SDK içindeki dil özelliklerinin belgeleri tarafından izlenir. XAML ad alanı, temel WPF uygulamaları için bile gerekli olan çok sayıda yaygın kullanılan özelliği tanımlar. Örneğin, bir XAML dosyasının arka plan kodunu kısmi bir sınıf aracılığıyla birleştirmek için, ilgili XAML dosyasının kök öğesinde bu sınıfı `x:Class` özniteliği olarak vermelisiniz. Ya da bir XAML sayfasında, anahtarlı kaynak olarak erişmek istediğiniz herhangi bir öğe, söz konusu öğede ayarlanmış `x:Key` özniteliğine sahip olmalıdır. Bu ve XAML 'in diğer yönleri hakkında daha fazla bilgi için bkz. [xaml genel bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md) veya [XAML sözdizimi ayrıntılı](xaml-syntax-in-detail.md).  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>Özel sınıflar ve derlemelere eşleme  
@@ -105,7 +105,7 @@ End Namespace
   
 <a name="Mapping_CLR_Namespaces_to_XML_Namespaces_in_an"></a>   
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>CLR ad alanlarını bir derlemede XML ad alanları ile eşleme  
- WPF, birden çok CLR ad alanını tek XAML ad alanına eşlemek için XAML işlemcileri tarafından tüketilen bir CLR özniteliği tanımlar. Bu öznitelik, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, derlemeyi üreten kaynak kodundaki derleme düzeyine yerleştirilir. WPF derleme kaynak kodu, <xref:System.Windows> ve <xref:System.Windows.Controls>gibi çeşitli ortak ad alanlarını [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] ad alanına eşlemek için bu özniteliği kullanır.  
+ WPF, birden çok CLR ad alanını tek XAML ad alanına eşlemek için XAML işlemcileri tarafından tüketilen bir CLR özniteliği tanımlar. Bu öznitelik, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, derlemeyi üreten kaynak kodundaki derleme düzeyine yerleştirilir. WPF derleme kaynak kodu, <xref:System.Windows> ve <xref:System.Windows.Controls>gibi çeşitli ortak ad alanlarını `http://schemas.microsoft.com/winfx/2006/xaml/presentation` ad alanına eşlemek için bu özniteliği kullanır.  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> iki parametre alır: XML/XAML ad alanı adı ve CLR ad alanı adı. Birden çok CLR ad alanını aynı XML ad alanı ile eşlemek için birden fazla <xref:System.Windows.Markup.XmlnsDefinitionAttribute> bulunabilir. Eşlendikten sonra, bu ad alanlarının üyelerine, daha sonra kısmi sınıf arka plan kod sayfasında uygun `using` deyim sağlanması halinde tam nitelik olmadan da başvurulabilir. Daha ayrıntılı bilgi için bkz. <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
   

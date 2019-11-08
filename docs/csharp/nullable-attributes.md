@@ -1,18 +1,18 @@
 ---
-title: API 'Leri, null beklentilerini tanımlamak için özniteliklerle yükseltin
-description: Bu makalede, bağımsız değişkenlerin null durumunu ve API 'lerden dönüş değerlerini açıklayan açıklayıcı öznitelikler ekleme işlemleri ve teknikleri açıklanmaktadır
+title: Null değerler için beklentileri tanımlayan özniteliklere sahip Nullable başvuru türleri için API 'Leri yükseltin
+description: API 'lerinizin null durumunu tam olarak anlatmak için AllowNull, DisallowNull, MaybeNull, NotNull ve daha fazlasını açıklayan açıklayıcı öznitelikleri kullanmayı öğrenin.
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: 102598843b091ea25e6456aeedcccf43f056250d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 64dcc70565de0c3094ef1c10866aafce9e18a5c9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039375"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737885"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Kitaplıkları null yapılabilir başvuru türleri kullanacak şekilde güncelleştirme ve arayanlara null olabilecek kuralları iletişim kurma
 
-[Null yapılabilir başvuru türlerinin](nullable-references.md) eklenmesi, her değişken için `null` değerine izin verilip verilmeyeceğini veya beklenmediğini bildirebilmeniz anlamına gelir. Bu, kod yazarken harika bir deneyim sağlar. Null atanabilir olmayan bir değişken `null` olarak ayarlanmayabilir, uyarılar alırsınız. Nullable bir değişken, başvuru yapılmadan önce null olarak işaretli değilse uyarılar alırsınız. Kitaplıklarınızın güncelleştirilmesi zaman alabilir, ancak ödeme bu duruma göre yapılır. `null` değere izin verildiğinde ya da yasaklanmış *olduğunda* derleyiciye daha fazla bilgi SAĞLARSANıZ, API 'nizin kullanıcıları daha iyi uyarıları alır. Tanıdık bir örnekle başlayalım. Kitaplığınızın bir kaynak dizesini almak için aşağıdaki API 'ye sahip olduğunu düşünün:
+[Null yapılabilir başvuru türlerinin](nullable-references.md) eklenmesi, her değişken için `null` değerine izin verilip verilmeyeceğini veya beklenmediğini bildirebilmeniz anlamına gelir. Ayrıca, bağımsız değişkenin ve dönüş değerlerinin null durumlarını tamamen anlatmak için `AllowNull`, `DisallowNull`, `MaybeNull`, `NotNull`, `NotNullWhen`, `MaybeNullWhen`ve `NotNullWhenNotNull` gibi çeşitli öznitelikler de uygulayabilirsiniz. Bu, kod yazarken harika bir deneyim sağlar. Null atanabilir olmayan bir değişken `null` olarak ayarlanmayabilir, uyarılar alırsınız. Nullable bir değişken, başvuru yapılmadan önce null olarak işaretli değilse uyarılar alırsınız. Kitaplıklarınızın güncelleştirilmesi zaman alabilir, ancak ödeme bu duruma göre yapılır. `null` değere izin verildiğinde ya da yasaklanmış *olduğunda* derleyiciye daha fazla bilgi SAĞLARSANıZ, API 'nizin kullanıcıları daha iyi uyarıları alır. Tanıdık bir örnekle başlayalım. Kitaplığınızın bir kaynak dizesini almak için aşağıdaki API 'ye sahip olduğunu düşünün:
 
 ```csharp
 bool TryGetMessage(string key, out string message)

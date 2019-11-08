@@ -1,57 +1,43 @@
 ---
-title: Değer türleri tablosu - C# başvurusu
+title: Değer türleri tablo- C# başvuru
 ms.custom: seodec18
-ms.date: 08/24/2018
+ms.date: 11/06/2019
 helpviewer_keywords:
 - value types [C#], table
 - types [C#], value types
-- types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 2e2897ff647140b58b3a1812e153a44a6fcdaef7
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 7e09d7ee223b6f8f4df0af2d71896a19ed3bac7c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859566"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736877"
 ---
-# <a name="value-types-table-c-reference"></a>Değer türleri tablosu (C# Başvurusu)
+# <a name="value-types-table-c-reference"></a>Değer türleri tablosu (C# başvuru)
 
-Aşağıdaki tabloda C# değer türleri:
+Aşağıdaki tabloda C# değer türleri gösterilmektedir:
 
-|Değer türü|Category|Tür soneki|
-|----------------|--------------|-----------------|
-|[bool](bool.md)|Boole değeri||
-|`byte`|İmzasız, sayısal, [tamsayı](../builtin-types/integral-numeric-types.md)||
-|[char](char.md)|İmzasız, sayısal, [tamsayı](../builtin-types/integral-numeric-types.md)
-|`decimal`|Sayısal, [kayan nokta](../builtin-types/floating-point-numeric-types.md)|M veya m|
-|`double`|Sayısal, [kayan nokta](../builtin-types/floating-point-numeric-types.md)|D veya d|
-|[enum](enum.md)|Sabit Listesi||
-|`float`|Sayısal, [kayan nokta](../builtin-types/floating-point-numeric-types.md)|F veya f|
-|`int`|İmzalı, sayısal, [tamsayı](../builtin-types/integral-numeric-types.md)||
-|`long`|İmzalı, sayısal, [tamsayı](../builtin-types/integral-numeric-types.md)|M veya m|
-|`sbyte`|İmzalı, sayısal, [tamsayı](../builtin-types/integral-numeric-types.md)||
-|`short`|İmzalı, sayısal, [tamsayı](../builtin-types/integral-numeric-types.md)||
-|[struct](struct.md)|Kullanıcı tanımlı yapısı||
-|`uint`|İmzasız, sayısal, [tamsayı](../builtin-types/integral-numeric-types.md)|U veya u|
-|`ulong`|İmzasız, sayısal, [tamsayı](../builtin-types/integral-numeric-types.md)|UL, Ul, uL, ul, LU, Lu, lU veya lu|
-|`ushort`|İmzasız, sayısal, [tamsayı](../builtin-types/integral-numeric-types.md)||
-
-## <a name="remarks"></a>Açıklamalar
-
-Bir sayısal değişmez değer türü belirtmek için kullanın. Örneğin:
-
-```csharp
-decimal a = 0.1M;
-```
-
-Varsa bir [tamsayı sayısal sabit değer](~/_csharplang/spec/lexical-structure.md#integer-literals) hiçbir soneki olan ilk hangi değeri gösterilebileceği aşağıdaki türleri içeriyor: `int`, `uint`, `long`, `ulong`.
-
-Varsa bir [gerçek sayısal sabit değer](~/_csharplang/spec/lexical-structure.md#real-literals) hiçbir soneki olan türü `double`.
+|Değer türü|Kategori|
+|----------------|--------------|
+|[bool](bool.md)|Boole değeri|
+|`byte`|İşaretsiz, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|[char](char.md)|İşaretsiz, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|`decimal`|Sayısal, [kayan nokta](../builtin-types/floating-point-numeric-types.md)|
+|`double`|Sayısal, [kayan nokta](../builtin-types/floating-point-numeric-types.md)|
+|[enum](enum.md)|Sabit Listesi|
+|`float`|Sayısal, [kayan nokta](../builtin-types/floating-point-numeric-types.md)|
+|`int`|İmzalanan, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|`long`|İmzalanan, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|`sbyte`|İmzalanan, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|`short`|İmzalanan, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|[struct](struct.md)|Kullanıcı tanımlı yapı|
+|`uint`|İşaretsiz, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|`ulong`|İşaretsiz, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|`ushort`|İşaretsiz, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C#başvurunun](../index.md)
 - [Varsayılan değerler tablosu](default-values-table.md)
 - [Değer türleri](value-types.md)
 - [Sayısal sonuçlar tablosunu biçimlendirme](formatting-numeric-results-table.md)

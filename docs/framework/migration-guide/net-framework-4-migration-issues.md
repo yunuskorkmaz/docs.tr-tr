@@ -5,30 +5,16 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: d3966ff15e06baf293ea02dad031bd5849b4a20f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 889e63feb71682065641fcdc56ada017dcf6c58c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126041"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735127"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 geçiş sorunları
 
-Bu konu, .NET Framework sürüm 3,5 hizmet paketi 1 ile .NET Framework sürüm 4 arasındaki, düzeltmeler, standartlar uyumluluğu ve güvenlik değişiklikleri ve müşteri geri bildirimlerine göre değişiklikler hakkında geçiş sorunları anlatmaktadır. Bu değişikliklerin çoğu uygulamalarınızdaki programlamalarda herhangi bir değişiklik gerektirmez. Değişiklik gerektirebilecek değişiklikler için, tablonun önerilen değişiklikler sütununa bakın.
-
-Bu konu, şu alanlardaki dikkat çekici değişiklikleri açıklar:
-
-- [ASP.NET ve Web](#aspnet-and-web)
-
-- [Çekirdek](#core)
-
-- [Veri](#data)
-
-- [Windows Communication Foundation (WCF)](#windows-communication-foundation-wcf)
-
-- [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
-
-- [XML](#xml)
+Bu konu, .NET Framework sürüm 3,5 hizmet paketi 1 ile .NET Framework sürüm 4 arasındaki, düzeltmeler, standartlar uyumluluğu ve güvenlik değişiklikleri ve müşteri geri bildirimlerine göre değişiklikler hakkında geçiş sorunları anlatmaktadır. Bu değişikliklerin çoğu uygulamalarınızdaki programlamalarda herhangi bir değişiklik gerektirmez. Değişiklik gerektirebilecek değişiklikler için, tablonun önerilen değişiklikler sütununa bakın. Notable değişiklikleri alana göre bölünür, örneğin, ASP.NET ve Windows Presentation Foundation (WPF).
 
 Bu konudaki sorunlara yönelik daha yüksek düzeyde bir genel bakış için [.NET Framework 4 ' e geçiş kılavuzuna](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)bakın.
 

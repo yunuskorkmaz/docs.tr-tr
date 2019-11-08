@@ -2,18 +2,18 @@
 title: Güvenli Veri Erişimi
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c08f41be67f5d87635021e86ba5a5b33af9304cd
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782768"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735271"
 ---
 # <a name="secure-data-access"></a>Güvenli Veri Erişimi
 Güvenli ADO.NET kodu yazmak için, temel alınan veri deposunda veya veritabanında bulunan güvenlik mekanizmalarını anlamanız gerekir. Uygulamanızın içerebileceği diğer özelliklerin veya bileşenlerin güvenlik etkilerine de dikkat etmeniz gerekir.  
   
 ## <a name="authentication-authorization-and-permissions"></a>Kimlik doğrulama, yetkilendirme ve Izinler  
- Microsoft SQL Server bağlanırken, tümleşik güvenlik olarak da bilinen, bir kullanıcı KIMLIĞI ve parola geçirmek yerine geçerli etkin Windows kullanıcısının kimliğini kullanan Windows kimlik doğrulaması 'nı kullanabilirsiniz. Kullanıcı kimlik bilgileri bağlantı dizesinde gösterilmediğinden Windows kimlik doğrulamasının kullanılması önemle önerilir. SQL Server bağlanmak için Windows kimlik doğrulamasını kullanmıyorsanız, kullanarak <xref:System.Data.SqlClient.SqlConnectionStringBuilder>çalışma zamanında bağlantı dizeleri oluşturmayı düşünün.  
+ Microsoft SQL Server bağlanırken, tümleşik güvenlik olarak da bilinen, bir kullanıcı KIMLIĞI ve parola geçirmek yerine geçerli etkin Windows kullanıcısının kimliğini kullanan Windows kimlik doğrulaması 'nı kullanabilirsiniz. Kullanıcı kimlik bilgileri bağlantı dizesinde gösterilmediğinden Windows kimlik doğrulamasının kullanılması önemle önerilir. SQL Server bağlanmak için Windows kimlik doğrulamasını kullandıysanız, <xref:System.Data.SqlClient.SqlConnectionStringBuilder>kullanarak çalışma zamanında bağlantı dizeleri oluşturmayı düşünün.  
   
  Kimlik doğrulaması için kullanılan kimlik bilgilerinin, uygulama türüne bağlı olarak farklı şekilde işlenmesi gerekir. Örneğin, Windows Forms bir uygulamada, kullanıcıdan kimlik doğrulama bilgilerini sağlaması istenebilir veya kullanıcının Windows kimlik bilgileri kullanılabilir. Ancak, bir Web uygulaması genellikle, Kullanıcı tarafından değil uygulamanın kendisi tarafından sağlanan kimlik bilgilerini kullanarak verilere erişir.  
   
@@ -35,7 +35,7 @@ Güvenli ADO.NET kodu yazmak için, temel alınan veri deposunda veya veritaban�
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[DataAdapter Parametreleri](dataadapter-parameters.md)|Parametrelerinin ile `DataAdapter`nasıl kullanılacağını açıklar.|  
+|[DataAdapter Parametreleri](dataadapter-parameters.md)|`DataAdapter`parametrelerin nasıl kullanılacağını açıklar.|  
 |[Saklı Yordamlarla Verileri Değiştirme](modifying-data-with-stored-procedures.md)|Parametrelerin nasıl belirtileceğini ve bir dönüş değeri elde edileceğini açıklar.|  
 |[SQL Server'da Saklı Yordam İzinlerini Yönetme](./sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Veri erişimini kapsüllemek için SQL Server saklı yordamların nasıl kullanılacağını açıklar.|  
   
@@ -55,7 +55,7 @@ Güvenli ADO.NET kodu yazmak için, temel alınan veri deposunda veya veritaban�
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Özel durum Işleme temelleri](../../../standard/exceptions/exception-handling-fundamentals.md)|Try/catch/finally yapılandırılmış özel durum işlemenin temel biçimlerini açıklar.|  
+|[.NET 'te özel durumları işleme ve atma](../../../standard/exceptions/index.md)|Try/catch/finally yapılandırılmış özel durum işlemenin temel biçimlerini açıklar.|  
 |[Özel Durumlar için En İyi Yöntemler](../../../standard/exceptions/best-practices-for-exceptions.md)|Özel durumları işlemek için en iyi yöntemleri açıklar.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Microsoft Access ve Excel veri kaynaklarını koruma  
@@ -69,7 +69,7 @@ Güvenli ADO.NET kodu yazmak için, temel alınan veri deposunda veya veritaban�
 |[Erişim güvenliği 'nde çalışma grubu bilgi dosyalarının rolünü anlama](https://support.microsoft.com/kb/305542)|Access 2003 Güvenlik bölümünde çalışma grubu bilgi dosyasının rolünü ve ilişkisini açıklar.|  
 |[Microsoft Access 2,0 ile 2000 arasındaki Microsoft erişim güvenliği hakkında sık sorulan sorular](https://go.microsoft.com/fwlink/?LinkId=47698)|Microsoft Access Security 'nin indirilebilir sürümü SSS.|  
 ## <a name="enterprise-services"></a>Kurumsal Hizmetler  
- COM+, Windows NT hesaplarına ve işlem/iş parçacığı kimliğe bürünmeye dayalı kendi güvenlik modelini içerir. Ad <xref:System.EnterpriseServices> alanı, .NET uygulamalarının <xref:System.EnterpriseServices.ServicedComponent> sınıf aracılığıyla com+ güvenlik hizmetleriyle yönetilen kodu tümleştirmesine izin veren sarmalayıcılar sağlar.  
+ COM+, Windows NT hesaplarına ve işlem/iş parçacığı kimliğe bürünmeye dayalı kendi güvenlik modelini içerir. <xref:System.EnterpriseServices> ad alanı, .NET uygulamalarının <xref:System.EnterpriseServices.ServicedComponent> sınıfı aracılığıyla COM+ güvenlik hizmetleriyle yönetilen kodu tümleştirmesine izin veren sarmalayıcılar sağlar.  
   
  Daha fazla bilgi için aşağıdaki kaynağa bakın.  
   
@@ -78,7 +78,7 @@ Güvenli ADO.NET kodu yazmak için, temel alınan veri deposunda veya veritaban�
 |[Rol Tabanlı Güvenlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|Yönetilen kodun COM+ güvenlik hizmetleriyle nasıl tümleştirileceğini açıklar.|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>Yönetilmeyen Kod ile Birlikte Çalışma  
- .NET Framework, COM bileşenleri, COM+ Hizmetleri, dış tür kitaplıkları ve birçok işletim sistemi hizmeti de dahil olmak üzere, yönetilmeyen kod ile etkileşim sağlar. Yönetilmeyen kodla çalışma, yönetilen kod için güvenlik çevre 'nın dışına geçiyor. Kodunuzun ve ona çağıran tüm kodlar, yönetilmeyen kod iznine sahip olmalıdır (<xref:System.Security.Permissions.SecurityPermission> belirtilen <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> bayrağıyla birlikte). Yönetilmeyen kod, uygulamanızda istenmeyen güvenlik açıklarını ortaya çıkarabilir. Bu nedenle, kesinlikle gerekli olmadığı takdirde yönetilmeyen kodla birlikte çalışmaya engel olmanız gerekir.  
+ .NET Framework, COM bileşenleri, COM+ Hizmetleri, dış tür kitaplıkları ve birçok işletim sistemi hizmeti de dahil olmak üzere, yönetilmeyen kod ile etkileşim sağlar. Yönetilmeyen kodla çalışma, yönetilen kod için güvenlik çevre 'nın dışına geçiyor. Hem kodunuzun hem de bunu çağıran herhangi bir kod, yönetilmeyen kod iznine sahip olmalıdır (<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> bayrağıyla belirtilen<xref:System.Security.Permissions.SecurityPermission>). Yönetilmeyen kod, uygulamanızda istenmeyen güvenlik açıklarını ortaya çıkarabilir. Bu nedenle, kesinlikle gerekli olmadığı takdirde yönetilmeyen kodla birlikte çalışmaya engel olmanız gerekir.  
   
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   

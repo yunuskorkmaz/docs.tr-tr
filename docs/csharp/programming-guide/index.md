@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c9d879d1760f543d5a4722977d4dee8bca856016
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423242"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739197"
 ---
 # <a name="c-programming-guide"></a>C#Programlama Kılavuzu
+
 Bu bölüm .NET Framework C# C# aracılığıyla erişilebilen temel dil özellikleri ve özellikleri hakkında ayrıntılı bilgi sağlar.  
   
  Bu bölümün çoğu, C# ve genel programlama kavramlarını daha önce bildiğiniz varsayılmaktadır. Programlama veya ile C#birlikte tam bir başlangıç yapıyorsanız, önceden programlama bilgisi gerekli olmayan öğreticiler veya [.net-tarayıcı öğreticisini](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)ziyaret [etmek C# ](../tutorials/intro-to-csharp/index.md) isteyebilirsiniz.  
@@ -28,8 +29,9 @@ Bu bölüm .NET Framework C# C# aracılığıyla erişilebilen temel dil özelli
 [C# Programı İçinde](./inside-a-program/index.md)  
   
 [Ana() ve Komut Satırı Bağımsız Değişkenleri](./main-and-command-args/index.md)  
- 
-## <a name="language-sections"></a>Dil bölümleri  
+
+## <a name="language-sections"></a>Dil bölümleri
+
 [Deyimler, İfadeler ve İşleçler](./statements-expressions-operators/index.md)  
 
  [Türler](./types/index.md)  
@@ -41,7 +43,7 @@ Bu bölüm .NET Framework C# C# aracılığıyla erişilebilen temel dil özelli
  [Sabit Listesi Türleri](./enumeration-types.md)  
   
  [Temsilciler](./delegates/index.md)  
- 
+
  [Diziler](./arrays/index.md)  
   
  [Dizeler](./strings/index.md)  
@@ -62,13 +64,12 @@ Bu bölüm .NET Framework C# C# aracılığıyla erişilebilen temel dil özelli
   
  [Ad alanları](./namespaces/index.md)  
   
- [Null yapılabilir değer türleri](./nullable-types/index.md)  
-  
  [Güvenli Olmayan Kod ve İşaretçiler](./unsafe-code-pointers/index.md)  
   
  [XML Belge Açıklamaları](./xmldoc/index.md)  
   
-## <a name="platform-sections"></a>Platform bölümleri  
+## <a name="platform-sections"></a>Platform bölümleri
+
  [Uygulama Etki Alanları](../../framework/app-domains/application-domains.md)  
   
  [.NET’te bütünleştirilmiş kodlar](../../standard/assembly/index.md)  

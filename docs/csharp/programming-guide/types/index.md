@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5c5586c2ee41b12e9b5706603b4c2f62207566ed
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7d101e72a94ec1fecf44d4c883efb4f74e6d1d88
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417715"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739208"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 
@@ -174,7 +174,7 @@ Daha önce belirtildiği gibi, [var](../../language-reference/keywords/var.md) a
 
 Bazı durumlarda, yöntem sınırlarını depolamayı veya geçişi istemediğiniz ilgili değerlerin basit kümeleri için adlandırılmış bir tür oluşturmak uygun değildir. Bu amaçla *anonim türler* oluşturabilirsiniz. Daha fazla bilgi için bkz. [anonim türler](../classes-and-structs/anonymous-types.md).
 
-Sıradan değer türlerinin değeri [null](../../language-reference/keywords/null.md)olamaz. Ancak, türden sonra bir `?` ekleyerek null yapılabilir değer türleri oluşturabilirsiniz. Örneğin `int?`, [null](../../language-reference/keywords/null.md)değeri de olan bir `int` türüdür. Null yapılabilir değer türleri <xref:System.Nullable%601?displayProperty=nameWithType>genel yapı türü örnekleridir. Null olabilen değer türleri, genellikle sayısal değerlerin null olabileceği veritabanlarına ve veritabanlarından veri geçirirken faydalıdır. Daha fazla bilgi için bkz. [Nullable değer türleri](../nullable-types/index.md).
+Sıradan değer türlerinin değeri [null](../../language-reference/keywords/null.md)olamaz. Ancak, türden sonra bir `?` ekleyerek null yapılabilir değer türleri oluşturabilirsiniz. Örneğin `int?`, [null](../../language-reference/keywords/null.md)değeri de olan bir `int` türüdür. Null yapılabilir değer türleri <xref:System.Nullable%601?displayProperty=nameWithType>genel yapı türü örnekleridir. Null olabilen değer türleri, genellikle sayısal değerlerin null olabileceği veritabanlarına ve veritabanlarından veri geçirirken faydalıdır. Daha fazla bilgi için bkz. [Nullable değer türleri](../../language-reference/builtin-types/nullable-value-types.md).
 
 ## <a name="related-sections"></a>İlgili bölümler
 

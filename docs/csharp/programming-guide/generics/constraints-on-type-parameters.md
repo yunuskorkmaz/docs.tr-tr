@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 62d0aacc3464969366cbdc8107adbc9a5c364b0c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8159f24e92608677cc832448fd2d79a1846ab12a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417794"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739215"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Tür Parametrelerindeki Kısıtlamalar (C# Programlama Kılavuzu)
 
@@ -20,7 +20,7 @@ Kısıtlamalar, derleyicisini bir tür bağımsız değişkeni olması gereken y
 
 |Kısıtlaması|Açıklama|
 |----------------|-----------------|
-|`where T : struct`|Tür bağımsız değişkeni bir değer türü olmalıdır. <xref:System.Nullable%601> hariç herhangi bir değer türü belirtilebilir. Null yapılabilir değer türleri hakkında daha fazla bilgi için bkz. [Nullable değer türleri](../nullable-types/index.md).|
+|`where T : struct`|Tür bağımsız değişkeni null yapılamayan bir değer türü olmalıdır. Nullable değer türleri hakkında daha fazla bilgi için bkz. [Nullable değer türleri](../../language-reference/builtin-types/nullable-value-types.md).|
 |`where T : class`|Tür bağımsız değişkeni bir başvuru türü olmalıdır. Bu kısıtlama, her sınıf, arabirim, temsilci veya dizi türü için de geçerlidir.|
 |`where T : notnull`|Tür bağımsız değişkeni null yapılamayan bir tür olmalıdır. Bağımsız değişken, C# 8,0 veya sonraki bir sürümde null atanamaz bir başvuru türü veya null yapılamayan bir değer türü olabilir. Bu kısıtlama, her sınıf, arabirim, temsilci veya dizi türü için de geçerlidir.|
 |`where T : unmanaged`|Tür bağımsız değişkeni [yönetilmeyen bir tür](../../language-reference/builtin-types/unmanaged-types.md)olmalıdır.|

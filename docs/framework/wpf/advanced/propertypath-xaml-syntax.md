@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: b2530793bfe1a158a0df1c34b2768e0c7ca351f3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459358"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740787"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML Sözdizimi
 
@@ -32,7 +32,7 @@ ms.locfileid: "73459358"
 
 Veri bağlama, herhangi bir bağımlılık özelliğinin hedef değerini bağlayabileceğiniz bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliğidir. Ancak, bu tür bir veri bağlamasının kaynağı bir bağımlılık özelliği olmalıdır; Bu, geçerli veri sağlayıcısı tarafından tanınan herhangi bir özellik türü olabilir. Özellik yolları özellikle, ortak dil çalışma zamanı (CLR) nesnelerinden ve bunların özelliklerinden bağlama kaynakları almak için kullanılan <xref:System.Windows.Data.ObjectDataProvider>için kullanılır.
 
-[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] veri bağlamasının <xref:System.Windows.Data.Binding><xref:System.Windows.Data.Binding.Path%2A> kullanmadığı için <xref:System.Windows.PropertyPath>kullanmadığını unutmayın. Bunun yerine <xref:System.Windows.Data.Binding.XPath%2A> kullanır ve verilerin [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] geçerli XPath sözdizimini belirtirsiniz. <xref:System.Windows.Data.Binding.XPath%2A> Ayrıca bir dize olarak belirtilir, ancak burada belgelenmemiştir; bkz. [XMLDataProvider ve XPath sorgularını kullanarak XML verilerine bağlama](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).
+XML 'e veri bağlamanın, <xref:System.Windows.Data.Binding><xref:System.Windows.Data.Binding.Path%2A> kullanmadığı için <xref:System.Windows.PropertyPath>kullanmadığını unutmayın. Bunun yerine, <xref:System.Windows.Data.Binding.XPath%2A> kullanır ve verilerin XML Belge Nesne Modeli (DOM) geçerli XPath sözdizimini belirtirsiniz. <xref:System.Windows.Data.Binding.XPath%2A> Ayrıca bir dize olarak belirtilir, ancak burada belgelenmemiştir; bkz. [XMLDataProvider ve XPath sorgularını kullanarak XML verilerine bağlama](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).
 
 Veri bağlamada Özellik yollarını anlamak için bir anahtar, bağlamayı tek bir özellik değerine hedefleyebilir veya bunun yerine listeleri veya koleksiyonları alan hedef özelliklere bağlayabilirsiniz. Koleksiyonlar bağlıyorsanız, koleksiyonda kaç veri öğesi olduğuna bağlı olarak genişletilecek bir <xref:System.Windows.Controls.ListBox> bağlama için, özellik yolunuzdaki tek tek koleksiyon öğeleri değil koleksiyon nesnesine başvurması gerekir. Veri bağlama altyapısı, veri kaynağı olarak kullanılan koleksiyonla otomatik olarak bağlama hedefi türüne eşleşir ve bir <xref:System.Windows.Controls.ListBox> öğeler dizisiyle doldurma gibi davranışa neden olur.
 
@@ -76,7 +76,7 @@ Gerekirse dizinin türünü belirtebilirsiniz. Dizinli özellik yolunun bu yön�
 <object property="(ownerType.propertyName)" .../>
 ```
 
-Parantezler bir <xref:System.Windows.PropertyPath> bu özelliğin kısmi bir nitelik kullanılarak oluşturulması gerektiğini gösterir. Uygun bir eşleme ile türü bulmak için bir XML ad alanı kullanabilir. `ownerType`, her derlemedeki <xref:System.Windows.Markup.XmlnsDefinitionAttribute> bildirimleri aracılığıyla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcinin erişebileceği türleri arar. Çoğu uygulamanın, [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] ad alanına eşlenmiş varsayılan XML ad alanı vardır. bu nedenle, ön ek genellikle yalnızca bu ad alanı dışında özel türler veya türler için gereklidir.  `propertyName`, `ownerType`var olan bir özelliğin adı olacak şekilde çözümlenmelidir. Bu sözdizimi genellikle aşağıdaki durumlardan biri için kullanılır:
+Parantezler bir <xref:System.Windows.PropertyPath> bu özelliğin kısmi bir nitelik kullanılarak oluşturulması gerektiğini gösterir. Uygun bir eşleme ile türü bulmak için bir XML ad alanı kullanabilir. `ownerType`, her derlemedeki <xref:System.Windows.Markup.XmlnsDefinitionAttribute> bildirimleri aracılığıyla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcinin erişebileceği türleri arar. Çoğu uygulamanın, `http://schemas.microsoft.com/winfx/2006/xaml/presentation` ad alanına eşlenmiş varsayılan XML ad alanı vardır. bu nedenle, ön ek genellikle yalnızca bu ad alanı dışında özel türler veya türler için gereklidir.  `propertyName`, `ownerType`var olan bir özelliğin adı olacak şekilde çözümlenmelidir. Bu sözdizimi genellikle aşağıdaki durumlardan biri için kullanılır:
 
 - Yol, belirtilen hedef türüne sahip olmayan bir stil veya şablondaki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] belirtilir. Nitelikli olmayan bir kullanım genellikle bunun dışındaki durumlar için geçerli değildir, çünkü stil dışı, şablon dışı durumlarda özellik bir tür değil bir örnekte bulunur.
 
@@ -97,7 +97,7 @@ Görsel taslak hedefi olarak kullanılmak üzere `propertyName` olarak belirtile
 Bu söz dizimi, hiyerarşik bir veri kaynağı nesnesi içinde gezinmek için kullanılır ve hiyerarşide art arda/karakterlerle birlikte birden çok adım desteklenir. Geçerli kayıt işaretçisi konumuna ait kaynak çapraz geçiş hesapları, verilerin görünümünün kullanıcı arabirimiyle eşitlenmesi tarafından belirlenir. Hiyerarşik veri kaynağı nesneleriyle bağlama ve Veri bağlamada geçerli kayıt işaretçisinin kavramı ile ilgili ayrıntılar için bkz. hiyerarşik veri veya [veri bağlamaya genel bakış](../../../desktop-wpf/data/data-binding-overview.md) [Ile ana ayrıntı modelini kullanma](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) .
 
 > [!NOTE]
-> Superficially, bu söz dizimi [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]benzerdir. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri kaynağına bağlamaya yönelik doğru bir [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] ifadesi <xref:System.Windows.Data.Binding.Path%2A> değeri olarak kullanılmaz ve bunun yerine birbirini dışlayan <xref:System.Windows.Data.Binding.XPath%2A> özelliği için kullanılmalıdır.
+> Superficially, bu söz dizimi XPath olarak benzerdir. XML veri kaynağına bağlamak için doğru bir XPath ifadesi <xref:System.Windows.Data.Binding.Path%2A> değer olarak kullanılmaz ve bunun yerine birbirini dışlayan <xref:System.Windows.Data.Binding.XPath%2A> özelliği için kullanılmalıdır.
 
 ### <a name="collection-views"></a>Koleksiyon Görünümleri
 
@@ -204,7 +204,7 @@ Uygulanan stiller ve şablonlar nedeniyle animasyonların dolaylı olarak hedefl
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>
 ```
 
-Parantezler bir <xref:System.Windows.PropertyPath> bu özelliğin kısmi bir nitelik kullanılarak oluşturulması gerektiğini gösterir. Türü bulmak için bir XML ad alanı kullanabilir. `ownerType`, her derlemedeki <xref:System.Windows.Markup.XmlnsDefinitionAttribute> bildirimleri aracılığıyla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcinin erişebileceği türleri arar. Çoğu uygulamanın, [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] ad alanına eşlenmiş varsayılan XML ad alanı vardır. bu nedenle, ön ek genellikle yalnızca bu ad alanı dışında özel türler veya türler için gereklidir. `propertyName`, `ownerType`var olan bir özelliğin adı olacak şekilde çözümlenmelidir. `propertyName` olarak belirtilen özellik bir <xref:System.Windows.DependencyProperty>olmalıdır. (Tüm [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ekli Özellikler bağımlılık özellikleri olarak uygulanır, bu nedenle bu sorun yalnızca özel Ekli Özellikler için sorun olabilir.)
+Parantezler bir <xref:System.Windows.PropertyPath> bu özelliğin kısmi bir nitelik kullanılarak oluşturulması gerektiğini gösterir. Türü bulmak için bir XML ad alanı kullanabilir. `ownerType`, her derlemedeki <xref:System.Windows.Markup.XmlnsDefinitionAttribute> bildirimleri aracılığıyla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcinin erişebileceği türleri arar. Çoğu uygulamanın, `http://schemas.microsoft.com/winfx/2006/xaml/presentation` ad alanına eşlenmiş varsayılan XML ad alanı vardır. bu nedenle, ön ek genellikle yalnızca bu ad alanı dışında özel türler veya türler için gereklidir. `propertyName`, `ownerType`var olan bir özelliğin adı olacak şekilde çözümlenmelidir. `propertyName` olarak belirtilen özellik bir <xref:System.Windows.DependencyProperty>olmalıdır. (Tüm [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ekli Özellikler bağımlılık özellikleri olarak uygulanır, bu nedenle bu sorun yalnızca özel Ekli Özellikler için sorun olabilir.)
 
 <a name="indexanim"></a>
 

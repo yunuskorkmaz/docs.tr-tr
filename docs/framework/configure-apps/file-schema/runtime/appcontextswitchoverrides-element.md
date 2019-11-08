@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: feb84fb3d8836168035ef8eed31728c6a0d00cba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 881b9fedfaa42ffb402e226a6b271f47feb20617
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118291"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736802"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > öğesi
 Yeni işlevsellik için bir geri çevirme mekanizması sağlamak üzere <xref:System.AppContext> sınıfı tarafından kullanılan bir veya daha fazla anahtarı tanımlar.  
@@ -92,7 +92,7 @@ Yeni işlevsellik için bir geri çevirme mekanizması sağlamak üzere <xref:Sy
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |[DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) 'ın, ECMAScript V6 ve V8 standartlarına göre bazı denetim karakterlerini seri hale getirip getirmediğini denetler. Daha fazla bilgi için bkz [. azaltma: denetim karakterlerinin DataContractJsonSerializer Ile serileştirilmesi](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET Framework 4,7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> birden çok ayarlamayı veya bir saat dilimi için yalnızca tek ayarlamayı destekleyip desteklemediğini denetler. `true`, tarih ve saat verilerini seri hale getirmek ve seri durumdan çıkarmak için <xref:System.TimeZoneInfo> türünü kullanır; Aksi takdirde, birden çok ayarlama kuralını desteklemeyen <xref:System.TimeZone> türünü kullanır.|.NET Framework 4.6.2|
 |`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|<xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType> nesne serileştirme ve seri durumundan çıkarma sırasında daha büyük bir dizi boyutu kullanıp kullanmadığını denetler. Büyük nesne grafiklerinin serileştirme ve serisini kaldırma performansını <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>gibi türlere göre artırmak için bu anahtarı `true` olarak ayarlayın. |.NET Framework 4.7.2|
-|`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|<xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> oluşturucusunun yeni nesnenin <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> özelliğini varolan bir nesne başvurusuyla mi ayarlamadığını denetler. Daha fazla bilgi için bkz. [azaltma: ClaimsIdentity Oluşturucusu](../../../migration-guide/mitigation-claimsidentity-constructor.md).|.NET Framework 4.6.2|  
+|`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|<xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> oluşturucusunun yeni nesnenin <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> özelliğini varolan bir nesne başvurusuyla mi ayarlamadığını denetler. Daha fazla bilgi için bkz. [azaltma: ClaimsIdentity Oluşturucusu](../../../migration-guide/retargeting/4.6.1-4.6.2.md).|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|<xref:System.Security.Cryptography.AesCryptoServiceProvider> bir şifre çözücü yeniden kullanma denemesinin bir <xref:System.Security.Cryptography.CryptographicException>mi olduğunu denetler. Daha fazla bilgi için bkz. [AesCryptoServiceProvider şifre çözücü yeniden kullanılabilir bir dönüşüm sağlar](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform).|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|[CspParameters. ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) özelliğinin değerinin bir pencere tanıtıcısının bellek konumunu temsil eden bir [IntPtr](xref:System.IntPtr) veya bir pencere tutamacı (bir hwnd) olup olmadığını denetler. Daha fazla bilgi için bkz [. azaltma: CspParameters. ParentWindowHandle BIR HWND bekliyor](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value). |.NET Framework 4,7|   
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|FIPS modunda yönetilen şifreleme sınıflarının kullanılması <xref:System.Security.Cryptography.CryptographicException> (`true`) veya sistem kitaplıklarının (`false`) uygulanmasına bağlı olup olmadığını denetler.|.NET Framework 4,8|
