@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: ae9fc47bf07a7e28688942b856b4743ae7aadc36
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "68676690"
 ---
 # <a name="conclusion"></a>Sonuç
@@ -30,4 +30,4 @@ Aşağıdaki anahtar, bu kılavuzun en önemli ekibinizle.
 **Araç kutusu değil, araç olarak sunucusuz.** Sunucusuz, uygulama mimarisine özel çözüm değildir. Geleneksel katmanlar, tek bir arka ucu ve kapsayıcılar içerebilen bir karma uygulamanın parçası olarak yararlanılabilir olabilecek bir araçtır. Sunucusuz, mevcut çözümleri geliştirmek için kullanılabilir ve uygulama geliştirmeye yönelik bir bütün veya bir yaklaşım değildir.
 
 >[!div class="step-by-step"]
->[Önceki](serverless-business-scenarios.md)
+>[Öncekini](serverless-business-scenarios.md)

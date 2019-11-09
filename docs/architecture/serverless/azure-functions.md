@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 5e8187b3752a0f0d0bcf8e15f2ce440dc5a64e45
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72522871"
 ---
 # <a name="azure-functions"></a>Azure İşlevleri
@@ -111,7 +111,7 @@ Aşağıdaki örnek *Functions. JSON* dosyası bir tetikleyiciyi ve bağlamayı 
 }
 ```
 
-Bu örnekte, işlevi `images` kapsayıcısındaki blob depolamada yapılan bir değişiklik tarafından tetiklenir. Dosya ile ilgili bilgiler geçirilir, bu nedenle tetikleyici de bir bağlama işlevi görür. @No__t_0 adlı bir kuyruğa bilgi koymak için başka bir bağlama var.
+Bu örnekte, işlevi `images` kapsayıcısındaki blob depolamada yapılan bir değişiklik tarafından tetiklenir. Dosya ile ilgili bilgiler geçirilir, bu nedenle tetikleyici de bir bağlama işlevi görür. `images`adlı bir kuyruğa bilgi koymak için başka bir bağlama var.
 
 İşlevin C# betiği şöyledir:
 
@@ -169,11 +169,11 @@ Proxy 'ler JSON tanımları olarak depolanır. Aşağıda bir örnek verilmişti
 }
 ```
 
-@No__t_0 proxy, kısaltılmış bir yol alır ve daha uzun işlev kaynağıyla eşlenir. Dönüştürme şöyle görünür:
+`Domain Redirect` proxy, kısaltılmış bir yol alır ve daha uzun işlev kaynağıyla eşlenir. Dönüştürme şöyle görünür:
 
 `https://--shorturl--/123` -> `https://--longurl--.azurewebsites.net/api/UrlRedirect/123`
 
-@No__t_0 proxy, kök URL 'ye gönderilen her şeyi alır (`https://--shorturl--/`) ve belge sitesine yönlendirir.
+`Root` proxy, kök URL 'ye gönderilen her şeyi alır (`https://--shorturl--/`) ve belge sitesine yönlendirir.
 
 Azure 'da ara sunucu kullanımıyla ilgili bir örnek gösterilir [: sunucusuz Azure işlevleri ile Uygulamanızı buluta taşıyın](https://channel9.msdn.com/events/Connect/2017/E102). Gerçek zamanlı olarak, yerel SQL Server üzerinde çalışan bir ASP.NET Core uygulaması Azure bulutuna geçirilir. Proxy 'ler, işlevleri kullanmak üzere geleneksel bir Web API projesini yeniden düzenleme konusunda yardımcı olmak için kullanılır.
 

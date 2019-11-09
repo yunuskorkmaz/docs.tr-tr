@@ -3,10 +3,10 @@ title: Karma bulut senaryolarına geçiş
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Karma bulut senaryolarına geçiş
 ms.date: 04/30/2018
 ms.openlocfilehash: 4348a9b538042fee7ebd9c08f480491f17425937
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72394540"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Karma bulut senaryolarına geçiş

@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 43646db564ae31d26fe59e1ad7392e51d2d4e953
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "68676804"
 ---
 # <a name="azure-serverless-platform"></a>Azure sunucusuz platform
@@ -22,5 +22,5 @@ Tanılama izlemeleri ve telemetri yakalamak için sunucusuz bir platform olan Ap
 Bu bölümde, her bileşenin temelleri kesilir.
 
 >[!div class="step-by-step"]
->[Önceki](serverless-design-examples.md)İleri
->[](azure-functions.md)
+>[Önceki](serverless-design-examples.md)
+>[İleri](azure-functions.md)

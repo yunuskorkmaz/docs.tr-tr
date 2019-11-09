@@ -3,10 +3,10 @@ title: Windows Kapsayıcıları ne zaman dağıtılmaz?
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Windows kapsayıcılarına dağıtılmayan
 ms.date: 04/28/2018
 ms.openlocfilehash: 65e793b846b495e9a1be6db9ddfa38bbf0d49445
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "68676915"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a>Windows Kapsayıcıları ne zaman dağıtılmaz?
@@ -42,5 +42,5 @@ Topluluktaki desteklenmeyen ek senaryolar ve istekler için bkz. Windows kapsay�
     <https://azure.microsoft.com/overview/containers/>
 
 > [!div class="step-by-step"]
-> [Önceki](deploy-existing-net-apps-as-windows-containers.md)İleri
-> [](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)
+> [Önceki](deploy-existing-net-apps-as-windows-containers.md)
+> [İleri](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)

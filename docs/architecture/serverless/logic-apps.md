@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 7ece3d30209713d42ee44ef9c1be1cf0fe82464a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "68676753"
 ---
 # <a name="azure-logic-apps"></a>Azure Logic Apps
@@ -25,7 +25,7 @@ Azure Işlevleri gibi, mantıksal uygulama iş akışlarını bir tetikleyici il
 
 ![Logic Apps Tetikleyicileri](./media/logic-app-triggers.png)
 
-Uygulama tetiklendikten sonra, adımları, döngüleri, koşulları ve eylemleri oluşturmak için görsel tasarımcı 'yı kullanabilirsiniz. Önceki adımda alınan tüm veriler sonraki adımlarda kullanabileceğiniz şekilde kullanılabilir. Aşağıdaki iş akışı, CosmosDB veritabanından URL 'Leri yükler. `t.co` Daha sonra Twitter 'da bu ana bilgisayarı arar. Bunlara karşılık gelen fazla yer bulunursa, bir işlevi çağırarak ilgili alanı bulunan belgeleri güncelleştirir.
+Uygulama tetiklendikten sonra, adımları, döngüleri, koşulları ve eylemleri oluşturmak için görsel tasarımcı 'yı kullanabilirsiniz. Önceki adımda alınan tüm veriler sonraki adımlarda kullanabileceğiniz şekilde kullanılabilir. Aşağıdaki iş akışı, CosmosDB veritabanından URL 'Leri yükler. `t.co` barındırmalarını bulur ve sonra Twitter 'da arar. Bunlara karşılık gelen fazla yer bulunursa, bir işlevi çağırarak ilgili alanı bulunan belgeleri güncelleştirir.
 
 ![Mantıksal uygulama iş akışı](./media/logic-app-workflow.png)
 
@@ -34,5 +34,5 @@ Logic Apps panosu, iş akışlarınızı çalıştırmanın geçmişini ve her �
 Daha fazla bilgi için bkz. [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps).
 
 >[!div class="step-by-step"]
->[Önceki](application-insights.md)İleri
->[](event-grid.md)
+>[Önceki](application-insights.md)
+>[İleri](event-grid.md)

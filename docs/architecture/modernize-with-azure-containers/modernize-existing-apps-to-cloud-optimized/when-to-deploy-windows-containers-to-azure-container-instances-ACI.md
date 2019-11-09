@@ -3,15 +3,15 @@ title: Azure Container Instances (ACI) için Windows kapsayıcıları ne zaman d
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Azure Container Instances (ACI) için Windows kapsayıcıları ne zaman dağıtılır
 ms.date: 04/29/2018
 ms.openlocfilehash: 3b6ae1ced9c4e01f5ab400e2575947a396064ebd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "68676909"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Azure Container Instances (ACI) için Windows kapsayıcıları ne zaman dağıtılır
 
-Ana değer teklifini Azure Container Instances, kapsayıcıyı buna doğru bir şekilde dağıtmanızı ve bu ortamın bakımını yapmanıza gerek duymamanız, temel alınan işletim sistemini veya VM 'Leri yükseltmeniz/düzeltme eki uygulamanız gerekmez, hepsi saydam ve yeni bir dağıtım yapmanız gerekmez kullanıma hazırlama ortamına kapsayıcılar.
+Ana değer teklifini Azure Container Instances, kapsayıcıyı buna doğrudan dağıtıp dağıtabilmenize gerek kalmaz, bu ortamın bakımını yapmanız gerekmez, temel alınan işletim sistemini veya VM 'Leri yükseltmeniz/düzeltme eki uygulamanız gerekmez, tüm bunlar saydam olur ve yalnızca kullanıma açık bir ortama kapsayıcı dağıtabilirsiniz.
 
 Azure VM 'lerini kapsayıcılarla birlikte kullanırken ACI 'yi kullanmak isteyebileceğiniz nedenler ve senaryolar ana senaryolara benzerdir, bu nedenle temel olarak Azure Container Instances kullanmaya yönelik temel senaryolar şunlardır:
 
@@ -35,5 +35,5 @@ Azure Container Instances (ACI) 'nin başlıca avantajları şunlardır:
 Kısaca, ACI ile, sanal makineleri yönetmeden veya yeni araçlar öğrenmeden uygulamalar geliştirebilir. Yalnızca uygulamanız bulutta çalışan bir kapsayıcıda yer alabilir.
 
 > [!div class="step-by-step"]
-> [Önceki](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)İleri
-> [](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [Önceki](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+> [İleri](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

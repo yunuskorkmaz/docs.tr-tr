@@ -5,10 +5,10 @@ author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72522853"
 ---
 # <a name="durable-azure-functions"></a>Dayanıklı Azure işlevleri
@@ -27,7 +27,7 @@ Dayanıklı İşlevler durum bilgisi olan iş akışları, iki iç bileşene ayr
 
 Düzenlemeler, Azure Işlevlerinde tetiklenen işlemlerin diğer stilleriyle karşılaştırıldığında benzersizdir. Dayanıklı İşlevler, saat veya hatta tamamlanması gereken işlevlerin yürütülmesini sağlar. Bu tür davranışlar, çalışan bir düzenleme durumunun denetlenmesi, preemptively sonlanması veya dış olayların bildirimlerini gönderebilme gereksinimiyle birlikte gelir.
 
-Bu tür durumlarda Dayanıklı İşlevler uzantısı, genişletilmiş işlevlerle etkileşime girebilmeniz için `DurableOrchestrationClient` sınıfını sağlar. @No__t_0 bağlamasını kullanarak Orchestration istemcisine erişebilirsiniz. Genellikle, bu özniteliği bir `HttpTrigger` veya `ServiceBusTrigger` gibi başka bir tetikleyici türüyle dahil edersiniz. Kaynak işlev tetiklendikten sonra, düzenleme istemcisi bir Orchestrator işlevi başlatmak için kullanılabilir.
+Bu tür durumlarda Dayanıklı İşlevler uzantısı, genişletilmiş işlevlerle etkileşime girebilmeniz için `DurableOrchestrationClient` sınıfını sağlar. `OrchestrationClientAttribute` bağlamasını kullanarak Orchestration istemcisine erişebilirsiniz. Genellikle, bu özniteliği bir `HttpTrigger` veya `ServiceBusTrigger` gibi başka bir tetikleyici türüyle dahil edersiniz. Kaynak işlev tetiklendikten sonra, düzenleme istemcisi bir Orchestrator işlevi başlatmak için kullanılabilir.
 
 ```csharp
 [FunctionName("KickOff")]
@@ -69,15 +69,15 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-Bir Orchestration 'un birden fazla örneği aynı anda başlatılabilir ve çalıştırılabilir. @No__t_1 `StartNewAsync` yönteminin çağrılması, Orchestration 'un yeni bir örneğini başlatır. Yöntemi, düzenleme başladığında tamamlayan bir `Task<string>` döndürür. Düzenleme işlemi 30 saniye içinde başlatılmamışsa `TimeoutException` türünde bir özel durum oluşur.
+Bir Orchestration 'un birden fazla örneği aynı anda başlatılabilir ve çalıştırılabilir. `DurableOrchestrationClient` `StartNewAsync` yönteminin çağrılması, Orchestration 'un yeni bir örneğini başlatır. Yöntemi, düzenleme başladığında tamamlayan bir `Task<string>` döndürür. Düzenleme işlemi 30 saniye içinde başlatılmamışsa `TimeoutException` türünde bir özel durum oluşur.
 
-@No__t_1 tamamlanan `Task<string>`, Orchestration örneğinin benzersiz KIMLIĞINI içermelidir. Bu örnek KIMLIĞI, belirli bir düzenleme üzerindeki işlemleri çağırmak için kullanılabilir. Düzenleme durumu veya gönderilen olay bildirimleri için sorgulanabilir.
+`StartNewAsync` tamamlanan `Task<string>`, Orchestration örneğinin benzersiz KIMLIĞINI içermelidir. Bu örnek KIMLIĞI, belirli bir düzenleme üzerindeki işlemleri çağırmak için kullanılabilir. Düzenleme durumu veya gönderilen olay bildirimleri için sorgulanabilir.
 
 ### <a name="the-activity-functions"></a>Etkinlik işlevleri
 
 Etkinlik işlevleri, iş akışını oluşturmak için bir Orchestration işlevi içinde birlikte oluşturulan ayrık işlemlerdir. İşte en çok gerçek iş gerçekleşir. İş mantığını, uzun süre çalışan süreçlerini ve bulmaca parçalarını daha büyük bir çözüme göre temsil ederler.
 
-@No__t_0, `DurableActivityContext` türünde bir işlev parametresine açıklama eklemek için kullanılır. Ek açıklamanın kullanılması, işlevin etkinlik işlevi olarak kullanılması amaçlanan çalışma zamanına bildirir. Etkinlik işlevlerine giriş değerleri, `DurableActivityContext` parametresinin `GetInput<T>` yöntemi kullanılarak alınır.
+`ActivityTriggerAttribute`, `DurableActivityContext`türünde bir işlev parametresine açıklama eklemek için kullanılır. Ek açıklamanın kullanılması, işlevin etkinlik işlevi olarak kullanılması amaçlanan çalışma zamanına bildirir. Etkinlik işlevlerine giriş değerleri, `DurableActivityContext` parametresinin `GetInput<T>` yöntemi kullanılarak alınır.
 
 Düzenleme işlevlerine benzer şekilde, etkinlik işlevlerinin dönüş türleri void, Task veya JSON serileştirilebilir bir değer olmalıdır.
 

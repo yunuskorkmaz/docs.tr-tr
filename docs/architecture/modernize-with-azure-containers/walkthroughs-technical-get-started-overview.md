@@ -3,23 +3,23 @@ title: İzlenecek yollar ve teknik başlangıca genel bakış
 description: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin | İzlenecek yollar ve teknik Başlarken Genel Bakış
 ms.date: 04/28/2018
 ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "69660891"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>İzlenecek yollar ve teknik başlangıca genel bakış
 
 Bu e-kitabın boyutunu sınırlamak için, ek teknik belgeler ve bir GitHub deposunda sunulan tam izlenecek yollar. Bu bölümde açıklanan çevrimiçi izlenecek yollar serisi, Windows kapsayıcılarına dayalı birden çok ortamın adım adım kurulumunu ve Azure 'a dağıtımını ele almaktadır.
 
-Aşağıdaki bölümlerde her bir izlenecek yolun ne olduğu, amaçları ve üst düzey Vizyonumuz açıklanmakta ve dahil olan görevlerin bir diyagramı sağlanmıştır. İzlenecek yolları, ' de bulunan uygulama GitHub deposu wiki <https://github.com/dotnet-architecture/eShopModernizing/wiki>' de yer alır.
+Aşağıdaki bölümlerde her bir izlenecek yolun ne olduğu, amaçları ve üst düzey Vizyonumuz açıklanmakta ve dahil olan görevlerin bir diyagramı sağlanmıştır. İzlenecek yolları, <https://github.com/dotnet-architecture/eShopModernizing/wiki>adresindeki *Eshopmodernize* uygulamalar GitHub depolarında bulabilirsiniz.
 
 ## <a name="technical-walkthrough-list"></a>Teknik izlenecek yol listesi
 
 Aşağıdaki Başlarken izlenecek yollar, kapsayıcıları kullanarak kaldırıp kaydıracağınız örnek uygulamalar için tutarlı ve kapsamlı teknik rehberlik sağlar ve ardından Azure 'da birden çok dağıtım seçeneği kullanarak hareket edebilir.
 
-Aşağıdaki izlenecek yolların her biri, GitHub <https://github.com/dotnet-architecture/eShopModernizing>'da bulunan yeni örnek eshoplegacy ve Eshopmodernize uygulamalarını kullanır.
+Aşağıdaki izlenecek yolların her biri, <https://github.com/dotnet-architecture/eShopModernizing>'de GitHub 'da bulunan yeni örnek eShopLegacy ve Eshopmodernize uygulamalarını kullanır.
 
 - **EShop eski uygulamalar turu (temel uygulamalar modernleştirin)**
 
@@ -31,7 +31,7 @@ Aşağıdaki izlenecek yolların her biri, GitHub <https://github.com/dotnet-arc
 
 - **Windows kapsayıcıları tabanlı uygulamalarınızı Azure Container Service 'de Kubernetes 'e dağıtma**
 
-## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>İzlenecek yol 1: EShop eski uygulamalar turu
+## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>İzlenecek yol 1: eShop eski uygulamalar turu
 
 ### <a name="technical-walkthrough-availability"></a>Teknik izlenecek yol kullanılabilirliği
 
@@ -39,7 +39,7 @@ Tam teknik izlenecek yol, GitHub deposu wiki ' de kullanılabilir:
 
 [wiki gözden geçirmeleri için Eshopmodernize](https://github.com/dotnet-architecture/eShopModernizing/wiki)
 
-### <a name="overview"></a>Genel Bakış
+### <a name="overview"></a>Genel bakış
 
 Bu kılavuzda, üç örnek eski uygulamanın ilk uygulamasını inceleyebilirsiniz. İlk iki örnek Web uygulaması tek parçalı bir mimariye sahiptir ve klasik ASP.NET kullanılarak oluşturulmuştur. Bir uygulama ASP.NET 4. x MVC 'yi temel alır. ikinci uygulama, ASP.NET 4. x Web Forms temel alır.
 Üçüncü uygulama, bir istemci WinForms uygulaması ve sunucu tarafı [Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md) hizmeti tarafından oluşturulan 3 katmanlı bir uygulamadır.
@@ -72,7 +72,7 @@ Aşağıdaki şekilde, özgün 3 katmanlı eski uygulamanın basit senaryosu gö
 
 ### <a name="benefits"></a>Yararları
 
-Bu izlenecek yolun avantajları basittir: Yalnızca kod ve ilk uygulamaları öğrenirsiniz.
+Bu izlenecek yolun avantajları basittir: yalnızca kod ve ilk uygulamalar hakkında bilgi edinin.
 
 ### <a name="next-steps"></a>Sonraki adımlar
 
@@ -81,9 +81,9 @@ GitHub wiki üzerinde bu içeriği daha ayrıntılı bir şekilde gezin:
 - [Temel ASP.NET MVC ve "eski" uygulamalar Web Forms turuna katılın](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
 - [Taban çizgisi WCF hizmeti ve WinForms (3 katmanlı) "eski" uygulama turu](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
-## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>İzlenecek yol 2: Windows kapsayıcıları ile mevcut .NET uygulamalarınızı containerleştirme
+## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>İzlenecek yol 2: mevcut .NET uygulamalarınızı Windows kapsayıcılarıyla Kapsayıyleştirme
 
-### <a name="overview"></a>Genel Bakış
+### <a name="overview"></a>Genel bakış
 
 MVC, Web Forms veya WCF tabanlı uygulamalar, üretim, geliştirme ve test ortamları gibi mevcut .NET uygulamalarının dağıtımını geliştirmek için Windows kapsayıcıları kullanın.
 
@@ -132,9 +132,9 @@ GitHub wiki üzerinde bu içeriği daha ayrıntılı bir şekilde gezin:
 
 ### <a name="technical-walkthrough-availability"></a>Teknik izlenecek yol kullanılabilirliği
 
-Tam teknik izlenecek yol, GitHub deposu wiki ' de kullanılabilir:<https://github.com/dotnet-architecture/eShopModernizing/wiki/06.-Deploying-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
+Tam teknik izlenecek yol, Eshopmodernize GitHub deposu wiki 'de mevcuttur: <https://github.com/dotnet-architecture/eShopModernizing/wiki/06.-Deploying-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
-### <a name="overview"></a>Genel Bakış
+### <a name="overview"></a>Genel bakış
 
 Azure 'da bir Windows Server 2016 sanal makinesi (VM) üzerindeki bir Docker konağına dağıtım, geliştirme/test/hazırlık ortamlarını hızla ayarlamanıza olanak sağlar. Ayrıca, Sınayıcılar veya iş kullanıcılarının uygulamayı doğrulaması için ortak bir yer sağlar. VM 'Ler ayrıca geçerli bir hizmet olarak altyapı (IaaS) üretim ortamları olabilir.
 
@@ -146,19 +146,19 @@ Bu izlenecek yolun amacı, Windows Server 2016 veya sonraki sürümlerini temel 
 
 Bu izlenecek yolda çeşitli senaryolar ele alınmıştır.
 
-#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Senaryo A: Docker altyapısı bağlantısı aracılığıyla bir geliştirme PC 'sinden Azure VM 'ye dağıtma
+#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Senaryo A: Azure VM 'ye Docker altyapısı bağlantısı aracılığıyla bir geliştirme PC 'den dağıtma
 
 ![Bir Azure sanal makinesine Docker altyapısı bağlantısı aracılığıyla bir geliştirme BILGISAYARDAN dağıtma](./media/image5-4.png)
 
 **Şekil 5-4.** Bir Azure sanal makinesine Docker altyapısı bağlantısı aracılığıyla bir geliştirme BILGISAYARDAN dağıtma
 
-#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Senaryo B: Docker kayıt defteri aracılığıyla bir Azure VM 'ye dağıtma
+#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Senaryo B: bir Docker kayıt defteri aracılığıyla bir Azure VM 'ye dağıtma
 
 ![Docker kayıt defteri aracılığıyla bir Azure VM 'ye dağıtma](./media/image5-5.png)
 
 **Şekil 5-5.** Docker kayıt defteri aracılığıyla bir Azure VM 'ye dağıtma
 
-#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Senaryo C: Azure DevOps Services ' deki CI/CD işlem hatlarından bir Azure VM 'sine dağıtım
+#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Senaryo C: Azure DevOps Services içindeki CI/CD işlem hatlarından bir Azure VM 'sine dağıtım
 
 ![Azure DevOps Services ' deki CI/CD işlem hatlarından bir Azure VM 'sine dağıtım](./media/image5-6.png)
 
@@ -180,7 +180,7 @@ GitHub wiki üzerinde bu içeriği daha ayrıntılı bir şekilde gezin:
 
 <https://github.com/dotnet-architecture/eShopModernizing/wiki/06.-Deploying-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
-## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>İzlenecek yol 4: Windows kapsayıcıları tabanlı uygulamalarınızı Azure Container Instances (ACI) uygulamasına dağıtma
+## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>Adım 4: Windows kapsayıcıları tabanlı uygulamalarınızı Azure Container Instances (ACI) uygulamasına dağıtma
 
 ### <a name="technical-walkthrough-availability"></a>Teknik izlenecek yol kullanılabilirliği
 
@@ -188,7 +188,7 @@ Tam teknik izlenecek yol, GitHub deposu wiki ' de kullanılabilir:
 
 [Uygulamaları ACI 'ye dağıtma (Azure Container Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
 
-### <a name="overview"></a>Genel Bakış
+### <a name="overview"></a>Genel bakış
 
 [Azure Container Instances (ACI)](https://docs.microsoft.com/azure/container-instances/) , kapsayıcılar geliştirme/test/hazırlama ortamının tek tek örneklerini dağıtabileceğiniz en hızlı yoldur.
 
@@ -208,7 +208,7 @@ Azure Container Instances, sanal makineler sağlamak veya daha yüksek düzeyde 
 
 ### <a name="considerations"></a>Dikkat Edilecekler
 
-Docker görüntüsünün olması gerektiğinden, tam .NET Framework/ASP.NET veya SQL Server Azure Container Instances (ACI) ile Windows kapsayıcıları dağıtmak, normal bir Docker konağına (Windows kapsayıcıları ile Windows Server 2016 gibi) dağıtma kadar hızlı değildir. Her seferinde ve SQL Container Image (15,1 GB) ve ASP.NET kapsayıcı görüntüsü (13,9 GB) her seferinde indirilen (Docker kayıt defteri 'nden çekilir), ancak kendi Docker ana bilgisayarınızı koruyun (kalıcı olarak çevrimiçi Azure 'daki Windows kapsayıcıları sanal makinesi ile Windows Server 2016), diğer yandan, üretim dağıtımları için harika bir seçim olan Azure 'da Kubernetes gibi tüm düzenleyicilermek için değildir.
+Windows kapsayıcıları ' nı tam .NET Framework/ASP.NET veya SQL Server ile Azure Container Instances (ACI) ile dağıtmak, bir normal Docker konağına (Windows kapsayıcıları ile Windows Server 2016 gibi) dağıtım kadar hızlı değildir çünkü Docker görüntüsünün her seferinde ve SQL Container Image (15,1 GB) ve ASP.NET Container Image (13,9 GB) boyutlarının her seferinde indirilmesinin (Docker kayıt defteri 'nden çekilmesinin) büyük ölçüde büyük olması gerekir. ancak, kendi Docker ana bilgisayarınızı (kalıcı olarak çevrimiçi Windows) sürdürmeden çok daha ucuz Azure 'daki Windows kapsayıcıları sanal makinesi ile sunucu 2016), diğer yandan, üretim dağıtımları için harika bir seçim olan Azure 'da Kubernetes gibi bir düzenleyicinin (AKS) bir bütün düzenleyiciyle bahsetmez.
 
 Ana sonuç olarak, Azure Container Instances kullanımı geliştirme/test senaryoları ve CI/CD işlem hatları için çok etkileyici bir seçenektir.
 
@@ -218,7 +218,7 @@ GitHub wiki üzerinde bu içeriği daha ayrıntılı bir şekilde gezin:
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
 
-## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>İzlenecek yol 5: Windows kapsayıcıları tabanlı uygulamalarınızı Azure Container Service 'de Kubernetes 'e dağıtma
+## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>İzlenecek yol 5: Windows kapsayıcıları tabanlı uygulamalarınızı Azure Container Service Kubernetes 'e dağıtma
 
 ### <a name="technical-walkthrough-availability"></a>Teknik izlenecek yol kullanılabilirliği
 
@@ -226,7 +226,7 @@ Tam teknik izlenecek yol, GitHub deposu wiki ' de kullanılabilir:
 
 <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
-### <a name="overview"></a>Genel Bakış
+### <a name="overview"></a>Genel bakış
 
 Windows kapsayıcılarına dayalı bir uygulamanın, IaaS VM 'lerinden daha da fazla hareket eden platformları kullanması hızla gerekecektir. Bu, kolayca yüksek ölçeklenebilirlik ve daha iyi otomatik ölçeklenebilirlik elde etmek ve otomatikleştirilmiş dağıtımlar ve sürüm oluşturma konusunda önemli bir geliştirme sağlamak için gereklidir. [Azure Container Services](https://azure.microsoft.com/services/container-service/)'de bulunan Orchestrator [Kubernetes](https://kubernetes.io/)'i kullanarak bu hedeflere ulaşabilirsiniz.
 
@@ -240,13 +240,13 @@ Bu izlenecek yol, Azure Container Service ' de bir Windows kapsayıcı tabanlı 
 
 ### <a name="scenarios"></a>Senaryolar
 
-#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Senaryo A: Geliştirme ortamından bir Kubernetes kümesine doğrudan dağıtım
+#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Senaryo A: bir geliştirme ortamından bir Kubernetes kümesine doğrudan dağıtım
 
 ![Geliştirme ortamından bir Kubernetes kümesine doğrudan dağıtım](./media/image5-7.png)
 
 **Şekil 5-7.** Geliştirme ortamından bir Kubernetes kümesine doğrudan dağıtım
 
-#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Senaryo B: Azure DevOps Services ' deki CI/CD işlem hatlarından bir Kubernetes kümesine dağıtın
+#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Senaryo B: Azure DevOps Services içindeki CI/CD işlem hatlarından bir Kubernetes kümesine dağıtım
 
 ![Azure DevOps Services ' deki CI/CD işlem hatlarından bir Kubernetes kümesine dağıtın](./media/image5-8.png)
 
@@ -276,7 +276,7 @@ Kubernetes sayesinde, geliştiriciler fiziksel ve sanal makineler hakkında dü�
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-GitHub wiki üzerinde bu içeriği daha ayrıntılı bir şekilde gezin:<https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
+GitHub wiki üzerinde bu içeriği daha ayrıntılı bir şekilde keşfet: <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 ## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-app-service-for-containers"></a>İzlenecek yol 6: Windows kapsayıcıları tabanlı uygulamalarınızı kapsayıcılar için Azure App Service dağıtma
 
@@ -286,7 +286,7 @@ Tam teknik izlenecek yol, GitHub deposu wiki ' de kullanılabilir:
 
 <https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
 
-### <a name="overview"></a>Genel Bakış
+### <a name="overview"></a>Genel bakış
 
 Windows kapsayıcıları kullanılarak basit kapsayıcılı bir uygulama, kapsayıcılar için Azure App Service kolayca dağıtılabilir. Bu, Windows kapsayıcı tabanlı çoğu uygulama için önerilen yaklaşımdır.
 
@@ -304,8 +304,8 @@ Kapsayıcılar için Azure App Service dağıtım, Azure App Service PaaS avanta
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-GitHub wiki üzerinde bu içeriği daha ayrıntılı bir şekilde gezin:<https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
+GitHub wiki üzerinde bu içeriği daha ayrıntılı bir şekilde keşfet: <https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
 
 > [!div class="step-by-step"]
-> [Önceki](modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)İleri
-> [](conclusions.md) <!-- Next Chapter -->
+> [Önceki](modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)
+> [İleri](conclusions.md) <!-- Next Chapter -->

@@ -3,10 +3,10 @@ title: Sonuçlar
 description: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin | ekibinizle
 ms.date: 10/26/2017
 ms.openlocfilehash: c7c4042b224577238ae74bd786d4803e487998e7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "68677107"
 ---
 # <a name="conclusions"></a>Sonuçlar
@@ -28,4 +28,4 @@ ms.locfileid: "68677107"
 - Microsoft Azure, Windows kapsayıcıları, bulut altyapısı ve PaaS hizmetleri ile mevcut .NET Framework uygulamalarınızı modernleştirin için en kapsamlı ve eksiksiz bir ortam sağlar.
 
 >[!div class="step-by-step"]
->[Önceki](walkthroughs-technical-get-started-overview.md)
+>[Öncekini](walkthroughs-technical-get-started-overview.md)
