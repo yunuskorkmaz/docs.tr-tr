@@ -11,11 +11,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183940"
 ---
-# <a name="data-access-and-management"></a><span data-ttu-id="cc36f-103">Veri erişimi ve yönetimi</span><span class="sxs-lookup"><span data-stu-id="cc36f-103">Data access and management</span></span>
+# <a name="data-access-and-management"></a><span data-ttu-id="89703-103">Veri erişimi ve yönetimi</span><span class="sxs-lookup"><span data-stu-id="89703-103">Data access and management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="cc36f-104">*Bu içerik yakında geliyor.*</span><span class="sxs-lookup"><span data-stu-id="cc36f-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="89703-104">*Bu içerik yakında geliyor.*</span><span class="sxs-lookup"><span data-stu-id="89703-104">*This content is coming soon.*</span></span>
 
 <!--
 - Entity Framework
@@ -25,6 +25,6 @@ ms.locfileid: "71183940"
 -->
 
 >[!div class="step-by-step"]
-><span data-ttu-id="cc36f-105">[Önceki](forms-validation.md)
->[İleri](middleware.md)</span><span class="sxs-lookup"><span data-stu-id="cc36f-105">[Previous](forms-validation.md)
+><span data-ttu-id="89703-105">[Önceki](forms-validation.md)
+>[İleri](middleware.md)</span><span class="sxs-lookup"><span data-stu-id="89703-105">[Previous](forms-validation.md)
 [Next](middleware.md)</span></span>
