@@ -8,13 +8,13 @@ ms.locfileid: "72394239"
 ---
 ### <a name="authentication-oauthhandler-exchangecodeasync-signature-changed"></a>Kimlik doğrulaması: OAuthHandler ExchangeCodeAsync imzası değişti
 
-ASP.NET Core 3,0 ' de, `OAuthHandler.ExchangeCodeAsync` ' ın imzası şu şekilde değiştirildi:
+ASP.NET Core 3,0 ' de, `OAuthHandler.ExchangeCodeAsync` imzası şu şekilde değiştirildi:
 
 ```csharp
 protected virtual System.Threading.Tasks.Task<Microsoft.AspNetCore.Authentication.OAuth.OAuthTokenResponse> ExchangeCodeAsync(string code, string redirectUri) { throw null; }
 ```
 
-Hedef:
+Bitiş:
 
 ```csharp
 protected virtual System.Threading.Tasks.Task<Microsoft.AspNetCore.Authentication.OAuth.OAuthTokenResponse> ExchangeCodeAsync(Microsoft.AspNetCore.Authentication.OAuth.OAuthCodeExchangeContext context) { throw null; }
@@ -22,23 +22,23 @@ protected virtual System.Threading.Tasks.Task<Microsoft.AspNetCore.Authenticatio
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-@No__t-0 ve `redirectUri` dizeleri ayrı bağımsız değişkenler olarak geçirildi.
+`code` ve `redirectUri` dizeleri ayrı bağımsız değişkenler olarak geçirildi.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-`Code` ve `RedirectUri`, `OAuthCodeExchangeContext` Oluşturucusu aracılığıyla ayarlanabilir `OAuthCodeExchangeContext` ' deki özelliklerdir. Yeni `OAuthCodeExchangeContext` türü, `OAuthHandler.ExchangeCodeAsync` ' e geçirilen tek bağımsız değişkendir.
+`Code` ve `RedirectUri`, `OAuthCodeExchangeContext` `OAuthCodeExchangeContext` Oluşturucusu aracılığıyla ayarlayabileceği özelliklerdir. Yeni `OAuthCodeExchangeContext` türü `OAuthHandler.ExchangeCodeAsync`geçirilen tek bağımsız değişkendir.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Bu değişiklik, ek parametrelerin kırılmamış bir şekilde sağlanmasını sağlar. Yeni @no__t 0 aşırı yüklemeleri oluşturmanız gerekmez.
+Bu değişiklik, ek parametrelerin kırılmamış bir şekilde sağlanmasını sağlar. Yeni `ExchangeCodeAsync` aşırı yüklemeleri oluşturmanız gerekmez.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Uygun `code` ve `redirectUri` değerleriyle `OAuthCodeExchangeContext` oluşturun. @No__t-0 örneği sağlanmalıdır. Bu tek `OAuthCodeExchangeContext` örneği, birden çok bağımsız değişken yerine `OAuthHandler.ExchangeCodeAsync` ' e geçirilebilir.
+Uygun `code` ve `redirectUri` değerleriyle bir `OAuthCodeExchangeContext` oluşturun. <xref:Microsoft.AspNetCore.Authentication.AuthenticationProperties> bir örnek sağlanmalıdır. Bu tek `OAuthCodeExchangeContext` örneği, birden çok bağımsız değişken yerine `OAuthHandler.ExchangeCodeAsync` geçirilebilir.
 
 #### <a name="category"></a>Kategori
 
