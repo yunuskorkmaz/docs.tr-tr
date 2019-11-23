@@ -15,20 +15,20 @@ Küme yönetimi ve düzenleme, bir grup Konağı denetleme işlemidir. Bu durum,
 
 ## <a name="container-service-and-management-tools"></a>Kapsayıcı hizmeti ve yönetim araçları
 
-Kapsayıcı hizmeti, popüler açık kaynaklı kapsayıcı Kümelemesi ve düzenleme çözümlerinin hızlı dağıtımını sağlar. Uygulama kapsayıcılarınızın tamamen taşınabilir olmasını sağlamak için Docker görüntülerini kullanır. Kapsayıcı hizmeti 'ni kullanarak, bu uygulamaları binlerce (binlerce binlerce) ölçeklendirdiğinizden emin olmak için DC/OS 'yi (Mesosphere ve Apache Mesos tarafından desteklenir) ve Docker Sısınma kümelerini Azure Resource Manager şablonları veya Azure portal dağıtabilirsiniz. kapsayıcıları.
+Kapsayıcı hizmeti, popüler açık kaynaklı kapsayıcı Kümelemesi ve düzenleme çözümlerinin hızlı dağıtımını sağlar. Uygulama kapsayıcılarınızın tamamen taşınabilir olmasını sağlamak için Docker görüntülerini kullanır. Kapsayıcı hizmeti 'ni kullanarak, bu uygulamaları binlerce (hatta binlerce kapsayıcı) ölçeklendirdiğinizden emin olmak için DC/OS 'yi (Mesosphere ve Apache Mesos tarafından desteklenir) ve Docker Sısınma kümelerini Azure Resource Manager şablonlarıyla veya Azure portal dağıtabilirsiniz.
 
-Bu kümeleri, Azure Sanal Makine Ölçekleme Kümeleri kullanarak dağıtabilirsiniz, böylece kümeler Azure ağ ve depolama sunumlarından yararlanabilir. Kapsayıcı hizmetine erişmek için bir Azure aboneliğine ihtiyacınız vardır. Kapsayıcı hizmeti ile, düzenleme katmanları da dahil olmak üzere uygulama taşınabilirliği sağlarken Azure 'un kurumsal sınıf özelliklerinden yararlanabilirsiniz.
+Bu kümeleri Azure sanal makine ölçek kümeleri kullanarak dağıtırsınız ve kümeler Azure ağ ve depolama tekliflerinden yararlanır. Kapsayıcı hizmetine erişmek için bir Azure aboneliğine ihtiyacınız vardır. Kapsayıcı hizmeti ile, düzenleme katmanları da dahil olmak üzere uygulama taşınabilirliği sağlarken Azure 'un kurumsal sınıf özelliklerinden yararlanabilirsiniz.
 
 Tablo 6-1, düzenleyicilerinin, zamanlayıcılar ve kümeleme platformuyla ilgili yaygın yönetim araçlarını listeler.
 
 **Tablo 6-1**. Docker yönetim araçları
 
-| Yönetim araçları | Açıklama | İlgili düzenleyiciler |
+| Yönetim Araçları | Açıklama | İlgili düzenleyiciler |
 |------------------|-------------|-----------------------|
 | [Kapsayıcılar için Azure Izleyici](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Azure adanmış Kubernetes yönetim aracı | Azure Kubernetes Hizmetleri (AKS) |
-| [Kubernetes Web Kullanıcı arabirimi (Pano)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes Yönetim Aracı, yerel Kubernetes kümesini izleyebilir ve yönetebilir | Azure Kubernetes Service (AKS)<br/>Yerel Kubernetes |
+| [Kubernetes Web Kullanıcı arabirimi (Pano)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes Yönetim Aracı, yerel Kubernetes kümesini izleyebilir ve yönetebilir | Azure Kubernetes hizmeti (AKS)<br/>Yerel Kubernetes |
 | [Service Fabric için Azure portal](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Azure 'da, şirket içi, yerel geliştirme ve diğer bulutlarda Service Fabric kümelerini yönetmeye yönelik çevrimiçi ve masaüstü sürümü | Azure Service Fabric |
-| [Kapsayıcı Izleme (Azure Izleyici)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Genel kapsayıcı yönetimi y izleme çözümü. , [Kapsayıcılar Için Azure izleyici](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview)aracılığıyla Kubernetes kümelerini yönetebilir. | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS ve diğerleri. |
+| [Kapsayıcı Izleme (Azure Izleyici)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Genel kapsayıcı yönetimi y izleme çözümü. , [Kapsayıcılar Için Azure izleyici](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview)aracılığıyla Kubernetes kümelerini yönetebilir. | Azure Service Fabric<br/>Azure Kubernetes hizmeti (AKS)<br/>Mesosphere DC/OS ve diğerleri. |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 

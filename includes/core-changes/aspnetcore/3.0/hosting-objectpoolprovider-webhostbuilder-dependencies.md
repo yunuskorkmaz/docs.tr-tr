@@ -8,21 +8,21 @@ ms.locfileid: "72394317"
 ---
 ### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>Barındırma: ObjectPoolProvider WebHostBuilder bağımlılıklarından kaldırıldı
 
-ASP.NET Core oynatma için daha fazla ödeme yapma kapsamında, `ObjectPoolProvider` ' ın ana bağımlılıklar kümesinden kaldırılmıştır. @No__t-0 ' a bağlı belirli bileşenler artık kendisini ekler.
+ASP.NET Core yürütmek için daha fazla ödeme yapma kapsamında, `ObjectPoolProvider` ana bağımlılıklar kümesinden kaldırılmıştır. `ObjectPoolProvider` bağlı belirli bileşenler artık kendisini ekler.
 
 Tartışma için bkz. [ASPNET/AspNetCore # 5944](https://github.com/aspnet/AspNetCore/issues/5944).
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-`WebHostBuilder`, varsayılan olarak DI kapsayıcısında 1 @no__t sağlar.
+`WebHostBuilder`, DI kapsayıcısında varsayılan olarak `ObjectPoolProvider` sağlar.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-`WebHostBuilder` artık varsayılan olarak DI kapsayıcısında `ObjectPoolProvider` ' i sağlamaz.
+`WebHostBuilder` artık varsayılan olarak DI kapsayıcısında `ObjectPoolProvider` sağlamaz.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -30,7 +30,7 @@ Bu değişiklik ASP.NET Core yürütmek için daha fazla ödeme yapmak üzere ya
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Bileşeniniz `ObjectPoolProvider` gerektiriyorsa, `IServiceCollection` aracılığıyla bağımlılıklarınızın eklenmesi gerekir.
+Bileşeniniz `ObjectPoolProvider`gerektiriyorsa, `IServiceCollection`aracılığıyla bağımlılıklarınızın eklenmesi gerekir.
 
 #### <a name="category"></a>Kategori
 

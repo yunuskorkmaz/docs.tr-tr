@@ -18,24 +18,24 @@ Bir ifadenin türünün belirtilen türde mi yoksa alt türlerinden biri mi oldu
 expression IS [ NOT ] OF ( [ ONLY ] type )  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `expression`  
  Türünü belirleyecek geçerli bir sorgu ifadesi.  
   
- BAŞLATıLMADı  
+ DEĞİL  
  EDM 'yi geçersiz kılar. ' Nin Boolean sonucu.  
   
  YALNıZCA  
- @No__t-0 ' ın, yalnızca `expression` ' in `type` tipinde olması ve alt türlerinden herhangi biri olmaması durumunda olduğunu belirtir.  
+ ÖĞESININ `true`, yalnızca `expression` tür `type` ve alt türlerinden herhangi biri değilse, döndürdüğünü belirtir.  
   
  `type`  
- @No__t-0 ' dan test edilecek tür. Tür ad alanı nitelenmiş olmalıdır.  
+ `expression` sınanacak tür. Tür ad alanı nitelenmiş olmalıdır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- @no__t `expression`, T türünde ise ve T bir temel tür ya da türetilmiş bir tür `type`; çalışma zamanında `expression` null ise null; Aksi takdirde, @no__t 4.  
+ `expression` T ve T türünde ise `true`, bir temel tür ya da türetilmiş bir tür `type`; çalışma zamanında `expression` null ise null; Aksi takdirde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 ve `expression IS NOT OF (ONLY type)` ifadeleri sırasıyla `NOT (expression IS OF (type))` ve `NOT (expression IS OF (ONLY type))` ile eşdeğerdir.  
+ `expression IS NOT OF (type)` ve `expression IS NOT OF (ONLY type)` ifadeleri sırasıyla `NOT (expression IS OF (type))` ve `NOT (expression IS OF (ONLY type))`için sözdizimsel olarak eşdeğerdir.  
   
  Aşağıdaki tabloda, bazı tipik ve köşe desenleri üzerinde `IS OF` işlecinin davranışı gösterilmektedir. Sağlayıcı çağrılmadan önce istemci tarafında tüm özel durumlar atılır:  
   
@@ -52,9 +52,9 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
 |RowType, (RowType)|Oluşturur|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgusu, bir sorgu ifadesinin türünü tespit etmek için işleç ' i kullanır ve ardından bir nesneyi, bir nesne türünü Onsitekurs türünde bir nesne koleksiyonuna dönüştürmek için DEĞERLENDIR işlecini kullanır. Sorgu, [okul modelini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))temel alır.  
+ Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgusu, bir sorgu ifadesinin türünü tespit etmek için işleç ' ı kullanır ve ardından bir nesneyi, bir nesne türünü Onsitekurs türünde bir nesne koleksiyonuna dönüştürmek için DEĞERLENDIR işlecini kullanır. Sorgu, [okul modelini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))temel alır.  
   
- [! Code-SQL [DP EntityServices kavramları # TREAT_ISOF] ~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices kavramları/TSQL/EntitySql. SQL # TREAT_ISOF)]  
+ [! Code-SQL [DP EntityServices kavramları # TREAT_ISOF] ~/Samples/Snippets/TSQL/VS_Snippets_Data/DP entityservices kavramları/TSQL/EntitySql. SQL # treat_isof)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

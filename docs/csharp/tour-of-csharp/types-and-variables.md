@@ -93,7 +93,7 @@ C#öğesinin Birleşik tür sistemi etkin bir şekilde değer türlerinin "iste�
   - Bu tam türden bir değer
 - Null yapılabilir değer türü
   - Bir `null` değeri veya bu tam türde bir değer
-- nesne
+- object
   - `null` başvurusu, herhangi bir başvuru türünün nesnesine başvuru veya herhangi bir değer türünün paketlenmiş değerine başvuru
 - Sınıf türü
   - `null` başvurusu, bu sınıf türünün bir örneğine başvuru veya bu sınıf türünden türetilmiş bir sınıfın örneğine başvuru

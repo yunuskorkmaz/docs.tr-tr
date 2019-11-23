@@ -164,7 +164,7 @@ Azure DevOps Services şablonlar, aynı görüntü ikilisini benzersiz şekilde 
 
 ### <a name="managing-releases-to-docker-environments-by-using-azure-devops-services-release-management"></a>Azure DevOps Services kullanarak, Docker ortamlarında yayınları yönetme Release Management
 
-Azure DevOps Services şablonları aracılığıyla yeni bir görüntü oluşturabilir, bunu bir Docker kayıt defterine yayımlayabilir, Linux veya Windows konakları üzerinde çalıştırabilir ve tüm uygulama olarak birden çok kapsayıcı dağıtmak için `docker-compose` gibi komutları kullanın Azure DevOps Services Şekil 5-8 ' de gösterildiği gibi, birden çok ortam için tasarlanan özellikleri Release Management.
+Azure DevOps Services şablonları aracılığıyla, yeni bir görüntü oluşturabilir, bunu bir Docker kayıt defterine yayımlayabilir, Linux veya Windows konakları üzerinde çalıştırabilir ve tüm uygulama olarak birden çok kapsayıcıyı dağıtmak için `docker-compose` gibi komutları kullanabilirsiniz. Şekil 5-8 ' de gösterildiği gibi birden çok ortam için tasarlanan Azure DevOps Services Release Management yetenekler aracılığıyla.
 
 ![Docker Compose sürümlerinin yapılandırmasını gösteren ekran görüntüsü.](./media/docker-application-outer-loop-devops-workflow/configure-docker-compose-release.png)
 
@@ -184,7 +184,7 @@ Bir CD görünümü ve Azure DevOps Services özel olarak, Kapsayıcılı uygula
 
 **Şekil 5-9**. Dağıtılmış uygulamaları kapsayıcı hizmetine dağıtma
 
-Başlangıçta, belirli kümelere veya düzenleyicilerine dağıtım yaparken, her Orchestrator için (yani, Kubernetes ve Service Fabric farklı dağıtım mekanizmalarına sahip olan) geleneksel olarak belirli dağıtım betikleri ve mekanizmaları kullanacaksınız ve `docker-compose.yml` tanım dosyası temel alınarak kullanımı kolay `docker-compose` aracı. Ancak, Şekil 5-10 ' de gösterilen Azure DevOps Services Docker Deploy görevi sayesinde, araç artık sizin için "Çeviri" gerçekleştirse de yalnızca tanıdık `docker-compose.yml` dosyanızı kullanarak desteklenen düzenleyicilerine dağıtım yapabilirsiniz (`docker-compose.yml` dosyanızdaki Orchestrator için gereken biçim).
+Başlangıçta, belirli kümelere veya düzenleyicilerine dağıtım yaparken her Orchestrator için (yani, Kubernetes ve Service Fabric farklı dağıtım mekanizmalarına sahip), `docker-compose.yml` tanım dosyasına dayalı daha basit ve kullanımı kolay `docker-compose` aracı olmak yerine, her bir Orchestrator için özel dağıtım betikleri ve mekanizmaları kullanırsınız. Ancak, Şekil 5-10 ' de gösterilen Azure DevOps Services Docker Deploy görevi sayesinde, araç, sizin için "Çeviri" (`docker-compose.yml` dosyanızda Orchestrator tarafından gerek duyulan biçimde) gerçekleştirdiğinden, artık desteklenen düzenleyicilerine yalnızca tanıdık `docker-compose.yml` dosyanızı kullanarak dağıtım yapabilirsiniz.
 
 ![Kubernetes 'e dağıtımı görevi gösteren ekran görüntüsü.](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 

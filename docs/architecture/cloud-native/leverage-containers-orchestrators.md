@@ -69,7 +69,7 @@ Kubernetes, talepleri karşılamak için kümeleri ölçeklendirmeye yönelik ye
 
 ### <a name="declarative-versus-imperative"></a>Bildirime dayalı ve kesinlik
 
-Kubernetes hem bildirime dayalı hem de kesinlik temelli nesne yapılandırmasını destekler. Zorunlu yaklaşım, Kubernetes 'in her adımın nasıl yapılacağını söyleyen çeşitli komutları çalıştırmayı içerir. Bu görüntüyü *çalıştırın* . Bu Pod öğesini *silin* . Bu bağlantı noktasını *kullanıma sunun* . Bildirim temelli yaklaşımla, *ne yapmak* yerine *istediğinizi* açıklayan bir yapılandırma dosyası kullanırsınız ve Kubernetes istenen bitiş durumuna ulaşmak için ne yapılacağını tanımlar. Kümenizi zaten zorunlu komutları kullanarak yapılandırdıysanız, `kubectl get svc SERVICENAME -o yaml > service.yaml` ' ı kullanarak bir bildirime dayalı bildirimi dışarı aktarabilirsiniz. Bu, şunun gibi bir bildirim dosyası oluşturur:
+Kubernetes hem bildirime dayalı hem de kesinlik temelli nesne yapılandırmasını destekler. Zorunlu yaklaşım, Kubernetes 'in her adımın nasıl yapılacağını söyleyen çeşitli komutları çalıştırmayı içerir. Bu görüntüyü *çalıştırın* . Bu Pod öğesini *silin* . Bu bağlantı noktasını *kullanıma sunun* . Bildirim temelli yaklaşımla, *ne yapmak* yerine *istediğinizi* açıklayan bir yapılandırma dosyası kullanırsınız ve Kubernetes istenen bitiş durumuna ulaşmak için ne yapılacağını tanımlar. Kümenizi zaten zorunlu komutları kullanarak yapılandırdıysanız, `kubectl get svc SERVICENAME -o yaml > service.yaml`kullanarak bildirime dayalı bir bildirimi dışarı aktarabilirsiniz. Bu, şunun gibi bir bildirim dosyası oluşturur:
 
 ```yaml
 apiVersion: v1
@@ -97,7 +97,7 @@ status:
   loadBalancer: {}
 ```
 
-Bildirim temelli yapılandırma kullanırken, yapılandırma dosyalarınızın bulunduğu klasöre karşı `kubectl diff -f FOLDERNAME` kullanarak kaydedilmeden önce yapılacak değişikliklerin önizlemesini yapabilirsiniz. Değişiklikleri uygulamak istediğdiğinizden emin olduktan sonra `kubectl apply -f FOLDERNAME` ' ı çalıştırın. Bir klasör hiyerarşisini yinelemeli olarak işlemek için `-R` ekleyin.
+Bildirim temelli yapılandırma kullanırken, yapılandırma dosyalarınızın bulunduğu klasöre karşı `kubectl diff -f FOLDERNAME` kullanarak uygulamadan önce yapılacak değişiklikleri önizleyebilirsiniz. Değişiklikleri uygulamak istediğinize emin olduktan sonra `kubectl apply -f FOLDERNAME`çalıştırın. Bir klasör hiyerarşisini yinelemeli olarak işlemek için `-R` ekleyin.
 
 Hizmetlere ek olarak, *dağıtımlar*gibi diğer Kubernetes özellikleri için bildirim temelli yapılandırma kullanabilirsiniz. Bildirim temelli dağıtımlar, dağıtım denetleyicileri tarafından küme kaynaklarını güncelleştirmek için kullanılır. Dağıtımlar yeni değişiklikleri almak, daha fazla yük desteklemek üzere ölçeği genişletmek veya önceki bir düzeltmeye geri dönmek için kullanılır. Bir küme kararsız durumdaysa, bildirim temelli dağıtımlar otomatik olarak kümeyi istenen bir duruma getirmek için bir mekanizma sağlar.
 
@@ -159,7 +159,7 @@ Visual Studio, Web uygulamaları için Docker geliştirmeyi destekler. Yeni bir 
 
 **Şekil 3-5**. Visual Studio Docker desteğini etkinleştir
 
-Bu seçenek belirlendiğinde, proje kökünde bir `Dockerfile` ile oluşturulur ve bu, uygulamayı bir Docker kapsayıcısında derlemek ve barındırmak için kullanılabilir. Şekil 3-6 ' de örnek Dockerfile gösterilmektedir.
+Bu seçenek belirlendiğinde, proje kökünde bir `Dockerfile` oluşturulur ve bu, uygulamayı bir Docker kapsayıcısında derlemek ve barındırmak için kullanılabilir. Şekil 3-6 ' de örnek Dockerfile gösterilmektedir.
 
 ```docker
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-stretch-slim AS base
@@ -194,13 +194,13 @@ Uygulamanın çalışması için varsayılan davranış, Docker 'ı kullanmak ü
 
 [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) , yerel geliştirmeye ek olarak, birden çok geliştiricinin Azure 'Da kendi Kubernetes yapılandırmalarına göre çalışması için kullanışlı bir yol sağlar. Şekil 3-7 ' de görebileceğiniz gibi, uygulamayı Azure Dev Spaces de çalıştırabilirsiniz.
 
-ASP.NET Core uygulamanıza Docker desteği eklememeniz durumunda, daha sonra her zaman ekleyebilirsiniz. Visual Studio Çözüm Gezgini, Şekil 3-8 ' de gösterildiği gibi projeye sağ tıklayın ve  > **Docker desteği** **Ekle**' yi seçin.
+ASP.NET Core uygulamanıza Docker desteği eklememeniz durumunda, daha sonra her zaman ekleyebilirsiniz. Visual Studio Çözüm Gezgini, Şekil 3-8 ' de gösterildiği gibi projeye sağ tıklayın ve > **Docker desteği** **Ekle** ' yi seçin.
 
 ![Visual Studio Docker desteği ekle](./media/visual-studio-add-docker-support.png)
 
 **Şekil 3-8**. Visual Studio Docker desteği ekle
 
-Docker desteğinin yanı sıra, Şekil 3-8 ' de de gösterilen kapsayıcı düzenleme desteğini de ekleyebilirsiniz. Varsayılan olarak Orchestrator, Kubernetes ve Held kullanır. Orchestrator 'ı seçtikten sonra proje köküne bir `azds.yaml` dosyası eklenir ve uygulamayı yapılandırmak ve Kubernetes 'e dağıtmak için kullanılan Held grafiklerini içeren bir `charts` klasörü eklenir. Şekil 3-9 yeni bir projedeki sonuç dosyalarını gösterir.
+Docker desteğinin yanı sıra, Şekil 3-8 ' de de gösterilen kapsayıcı düzenleme desteğini de ekleyebilirsiniz. Varsayılan olarak Orchestrator, Kubernetes ve Held kullanır. Orchestrator 'ı seçtikten sonra proje köküne bir `azds.yaml` dosyası eklenir ve uygulamayı yapılandırmak ve Kubernetes 'e dağıtmak için kullanılan helk grafiklerini içeren bir `charts` klasörü eklenir. Şekil 3-9 yeni bir projedeki sonuç dosyalarını gösterir.
 
 ![Visual Studio Orchestrator desteği ekle](./media/visual-studio-add-orchestrator-support.png)
 

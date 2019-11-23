@@ -15,11 +15,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699188"
 ---
-# <a name="systemdiagnostics-element"></a>\<system. Diagnostics > öğesi
+# <a name="systemdiagnostics-element"></a>\<System. Diagnostics > öğesi
 İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.  
   
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<system. diagnostics >**  
+**System. diagnostics\<** &nbsp;&nbsp;>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,12 +38,12 @@ ms.locfileid: "71699188"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<onaylama >](assert-element.md)|@No__t-0 yöntemini çağırdığınızda bir ileti kutusunun görüntülenip görüntülenmeyeceğini belirtir; Ayrıca, iletilerin yazılacağı dosyanın adını da belirtir.|  
+|[\<onaylama >](assert-element.md)|<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> yöntemini çağırdığınızda bir ileti kutusunun görüntülenip görüntülenmeyeceğini belirtir; Ayrıca, iletilerin yazılacağı dosyanın adını da belirtir.|  
 |[\<performanceCounters >](performancecounters-element.md)|Performans sayaçları tarafından paylaşılan genel belleğin boyutunu belirtir.|  
 |[\<sharedListeners >](sharedlisteners-element.md)|Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik dinleyicileri içerir. Paylaşılan dinleyiciler ada göre kaynaklara veya izlemelere eklenebilir olarak tanımlanan dinleyiciler.|  
-|[\<kaynak >](sources-element.md)|İzleme iletilerini Başlatan izleme kaynaklarını belirtir.|  
-|[\<anahtarlar >](switches-element.md)|İzleme anahtarlarını ve izleme anahtarlarının ayarlandığı düzeyleri içerir.|  
-|[\<trace >](trace-element.md)|İzleme iletilerini toplayıp depolayan, depolayan ve yönlendiren dinleyicileri içerir.|  
+|[Kaynak \<>](sources-element.md)|İzleme iletilerini Başlatan izleme kaynaklarını belirtir.|  
+|[\<anahtarları >](switches-element.md)|İzleme anahtarlarını ve izleme anahtarlarının ayarlandığı düzeyleri içerir.|  
+|[\<izleme >](trace-element.md)|İzleme iletilerini toplayıp depolayan, depolayan ve yönlendiren dinleyicileri içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -52,10 +52,10 @@ ms.locfileid: "71699188"
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir izleme anahtarı ve bir İzleme dinleyicisinin **\<System. diagnostics >** öğesinin içine nasıl ekleneceğini gösterir. @No__t-0 izleme anahtarı <xref:System.Diagnostics.TraceLevel> düzeyine ayarlanır. @No__t-0 adlı izleme dinleyicisi, `MyListener.log` adlı bir dosya oluşturur ve çıktıyı dosyaya yazar.  
+ Aşağıdaki örnek, **\<System. diagnostics >** öğesinin içine bir izleme anahtarı ve İzleme dinleyicisinin nasıl ekleneceğini gösterir. `General` izleme anahtarı <xref:System.Diagnostics.TraceLevel> düzeyine ayarlanır. İzleme dinleyicisi `myListener` `MyListener.log` adlı bir dosya oluşturur ve çıktıyı dosyaya yazar.  
   
 > [!NOTE]
-> .NET Framework sürüm 2,0 ' de, bir anahtarın değerini belirtmek için metin kullanabilirsiniz. Örneğin, bir <xref:System.Diagnostics.BooleanSwitch> için `true` belirtebilir veya bir <xref:System.Diagnostics.TraceSwitch> için `Error` gibi bir sabit listesi değerini temsil eden metni kullanabilirsiniz. @No__t-0 satırı `<add name="myTraceSwitch" value="1" />` ' e eşdeğerdir.  
+> .NET Framework sürüm 2,0 ' de, bir anahtarın değerini belirtmek için metin kullanabilirsiniz. Örneğin, bir <xref:System.Diagnostics.BooleanSwitch> için `true` belirtebilir veya bir <xref:System.Diagnostics.TraceSwitch>için `Error` gibi bir numaralandırma değerini temsil eden metni kullanabilirsiniz. Satır `<add name="myTraceSwitch" value="Error" />` `<add name="myTraceSwitch" value="1" />`eşdeğerdir.  
   
 ```xml  
 <configuration>  

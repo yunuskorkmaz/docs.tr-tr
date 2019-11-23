@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF), uygulamanızın performansını ölçget
 </configuration>  
 ```  
   
- @No__t-0 özniteliği, belirli bir performans sayacı türünü etkinleştirecek şekilde ayarlanabilir. Geçerli değerler şunlardır  
+ `performanceCounters` özniteliği belirli bir performans sayacı türünü etkinleştirecek şekilde ayarlanabilir. Geçerli değerler şunlardır  
   
 - All: tüm kategori sayaçları (ServiceModelService, ServiceModelEndpoint ve ServiceModelOperation) etkinleştirilir.  
   
@@ -51,7 +51,7 @@ config.Save();
 ```  
   
 ## <a name="viewing-performance-data"></a>Performans verilerini görüntüleme  
- Performans sayaçları tarafından yakalanan verileri görüntülemek için, Windows ile birlikte gelen performans Izleyicisi 'ni (Perfmon. exe) kullanabilirsiniz. **Başlat**' a giderek bu aracı başlatabilir ve **Çalıştır** ' a tıklayıp iletişim kutusuna `perfmon.exe` yazın.  
+ Performans sayaçları tarafından yakalanan verileri görüntülemek için, Windows ile birlikte gelen performans Izleyicisi 'ni (Perfmon. exe) kullanabilirsiniz. **Başlat**' a gidip **Çalıştır** ' a tıklayıp iletişim kutusuna `perfmon.exe` yazarak bu aracı başlatabilirsiniz.  
   
 > [!NOTE]
 > Son iletiler bitiş noktası dağıtıcısı tarafından işlenmeden önce performans sayacı örnekleri serbest bırakılmış olabilir. Bu, performans verilerinin birkaç ileti için yakalanmasına yol açabilir.  
@@ -65,11 +65,11 @@ config.Save();
   
 - HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0 \ performans  
   
-- HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0 \ performans  
+- HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
   
 - HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0 \ performans  
   
- Çok sayıda nesne (örneğin, ServiceHost) atıldığında ancak çöp toplanmayı beklerken, `PrivateBytes` performans sayacı alışılmadık bir yüksek sayıyı kaydeder. Bu sorunu çözmek için uygulamaya özel Sayaçlarınızı ekleyebilir ya da yalnızca hizmet düzeyi sayaçlarını etkinleştirmek için `performanceCounters` özniteliğini kullanabilirsiniz.  
+ Çok sayıda nesne (örneğin, ServiceHost) aktiften çıkarıldığında ancak çöp toplanmayı beklerken, `PrivateBytes` performans sayacı alışılmadık bir yüksek sayıyı kaydeder. Bu sorunu çözmek için uygulamaya özel Sayaçlarınızı ekleyebilir ya da yalnızca hizmet düzeyi sayaçlarını etkinleştirmek için `performanceCounters` özniteliğini kullanabilirsiniz.  
   
 ## <a name="types-of-performance-counters"></a>Performans sayacı türleri  
  Performans sayaçları üç farklı düzeye sahiptir: hizmet, uç nokta ve Işlem.  
@@ -94,7 +94,7 @@ config.Save();
  Yeni bir InstanceContext oluşturulduğunda hizmet örneği oluşturma için performans sayaçları artırılır. Etkinleştirme dışı bir ileti (var olan bir hizmetle) aldığınızda ya da bir oturumdan bir örneğe bağlanıp oturumu sonlandırdığınızda ve sonra başka bir oturumdan yeniden bağlandığınızda bile yeni bir InstanceContext oluşturulduğunu unutmayın.  
   
 ### <a name="endpoint-performance-counters"></a>Uç nokta performans sayaçları  
- Uç nokta performans sayaçları, bir uç noktanın iletileri nasıl kabul ettiğini yansıtan verileri gözden etkinleştirmenizi sağlar. Performans Izleyicisi kullanılarak görüntüleme sırasında, `ServiceModelEndpoint 4.0.0.0` performans nesnesi altında bulunabilir. Örnekler aşağıdaki model kullanılarak adlandırılır:  
+ Uç nokta performans sayaçları, bir uç noktanın iletileri nasıl kabul ettiğini yansıtan verileri gözden etkinleştirmenizi sağlar. Performans Izleyicisi kullanılarak görüntülenirken `ServiceModelEndpoint 4.0.0.0` performans nesnesi altında bulunabilir. Örnekler aşağıdaki model kullanılarak adlandırılır:  
   
 `(ServiceName).(ContractName)@(endpoint listener address)`
   
@@ -112,7 +112,7 @@ config.Save();
   
  Bu sayaç, çağrının nasıl kullanıldığını ve işlemin ne kadar iyi çalıştığını ölçmenize olanak sağlar.  
   
- Sayaçlar birden çok kapsamda görünür olduğunda, daha yüksek bir kapsamdan toplanan veriler, daha düşük kapsamlardan alınan verilerle toplanır. Örneğin, bir uç noktadaki `Calls`, uç nokta içindeki tüm işlem çağrılarının toplamını temsil eder; bir hizmette `Calls`, hizmet içindeki tüm uç noktalara yapılan çağrıların toplamını temsil eder.  
+ Sayaçlar birden çok kapsamda görünür olduğunda, daha yüksek bir kapsamdan toplanan veriler, daha düşük kapsamlardan alınan verilerle toplanır. Örneğin, bir uç noktasındaki `Calls`, uç nokta içindeki tüm işlem çağrılarının toplamını temsil eder; bir hizmette `Calls`, hizmet içindeki tüm uç noktalara yapılan tüm çağrıların toplamını temsil eder.  
   
 > [!NOTE]
 > Bir sözleşmede yinelenen işlem adları varsa, her iki işlem için yalnızca bir sayaç örneği alırsınız.  
@@ -121,11 +121,11 @@ config.Save();
 
 WCF performans sayaçlarına programlı bir şekilde erişebilmeniz için SDK yükleme klasörüne birkaç dosya yüklenir. Bu dosyalar aşağıdaki gibi listelenmiştir:
   
-- *@no__t -1ServiceModelEndpointPerfCounters. VRG*
-- *@no__t -1ServiceModelOperationPerfCounters. VRG*
-- *@no__t -1ServiceModelServicePerfCounters. VRG*  
-- *@no__t -1SMSvcHostPerfCounters. VRG*
-- *@no__t -1Transactionköprüperfcounters. VRG*
+- *\_ServiceModelEndpointPerfCounters. VRG*
+- *\_ServiceModelOperationPerfCounters. VRG*
+- *\_ServiceModelServicePerfCounters. VRG*  
+- *\_SMSvcHostPerfCounters. VRG*
+- *\_Transactionköprüperfcounters. VRG*
   
 Sayaçlara programlı olarak erişme hakkında daha fazla bilgi için bkz. [performans sayacı programlama mimarisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90)).
   

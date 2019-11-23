@@ -18,21 +18,21 @@ Alternatif olarak, [.NET Core SDK](https://dotnet.microsoft.com/download) ve [Vi
 
 ## <a name="basic-application-development-flow"></a>Temel uygulama geliştirme akışı
 
-[@No__t-1](../../../core/tools/dotnet-new.md) komutunu kullanarak uygulamalar oluşturacaksınız. Bu komut, uygulamanız için gerekli olan dosyaları ve varlıkları oluşturur. C# Öğreticilere giriş, `console` uygulama türünü kullanır. Temel bilgileri aldıktan sonra diğer uygulama türlerine genişletebilirsiniz.
+[`dotnet new`](../../../core/tools/dotnet-new.md) komutunu kullanarak uygulamalar oluşturacaksınız. Bu komut, uygulamanız için gerekli olan dosyaları ve varlıkları oluşturur. C# Öğreticilere giriş, `console` uygulama türünü kullanır. Temel bilgileri aldıktan sonra diğer uygulama türlerine genişletebilirsiniz.
 
-Kullanacağınız diğer komutlar yürütülebilir dosyayı oluşturmak için [`dotnet build`](../../../core/tools/dotnet-build.md) ve çalıştırılabilir dosyayı çalıştırmak için [3 @no__t](../../../core/tools/dotnet-run.md) .
+Kullanacağınız diğer komutlar yürütülebilir dosyayı oluşturmak için [`dotnet build`](../../../core/tools/dotnet-build.md) ve çalıştırılabilir dosyayı çalıştırmak için [`dotnet run`](../../../core/tools/dotnet-run.md) .
 
 ## <a name="pick-your-tutorial"></a>Öğreticinizi seçin
 
 Aşağıdaki öğreticilerden herhangi biriyle başlayabilirsiniz:
 
-## <a name="numbers-in-cnumbers-in-csharp-localmd"></a>[İçindeki sayılarC#](numbers-in-csharp-local.md)
+## <a name="numbers-in-cnumbers-in-csharp-localmd"></a>[C# numaraları](numbers-in-csharp-local.md)
 
 Öğreticideki [sayılarda C# ](numbers-in-csharp-local.md) , bilgisayarların sayıları nasıl depolayacağınızı ve farklı sayısal türlerle hesaplamaların nasıl gerçekleştirileceğini öğreneceksiniz. ' İ yuvarlama hakkında temel bilgileri ve kullanarak C#matematik hesaplamaları yapmayı öğreneceksiniz.
 
 Bu öğreticide, [Hello World](hello-world.yml) ders 'i tamamladığınız varsayılmaktadır.
 
-## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[Dallar ve döngüler](branches-and-loops-local.md)
+## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[Dal ve döngüler](branches-and-loops-local.md)
 
 [Dallar ve döngüler](branches-and-loops-local.md) öğreticisinde, değişkenlerde depolanan değerlere göre farklı kod yürütme yolları seçmenin temelleri öğretilir. Denetim akışının temel bilgilerini öğrenirsiniz. Bu, programların kararlar alma ve farklı eylemler seçme işlemlerinin temelini oluşturur.
 

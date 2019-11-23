@@ -207,10 +207,10 @@ public void ConfigureServices(IServiceCollection services)
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Veri sorgulama**  \
+- **Veri sorgulama** \
   [https://docs.microsoft.com/ef/core/querying/index](/ef/core/querying/index)
 
-- **Veri kaydetme**  \
+- **Veri kaydetme** \
   [https://docs.microsoft.com/ef/core/saving/index](/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Docker kapsayıcıları tarafından kullanılan DB bağlantı dizesi ve ortam değişkenleri
@@ -291,13 +291,13 @@ Bu sürüm oluşturma mekanizması basittir ve isteği uygun uç noktaya yönlen
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Scott Hanselman. ASP.NET Core yeniden oluşturulmuş Web API 'SI sürümü kullanımı kolay**  \
+- **Scott Hanselman. ASP.NET Core yeniden oluşturulmuş Web API 'SI sürümü kullanımı kolay** \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
-- **Yeniden bir Web API 'Sinin sürümü oluşturma**  \
+- **Yeniden bir Web API 'Sinin sürümü oluşturma** \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
-- **Roy Fielding. Sürüm oluşturma, hiper medya ve REST**  \
+- **Roy Fielding. Sürüm oluşturma, hiper medya ve REST** \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>ASP.NET Core Web API 'nizden Swagger açıklaması meta verileri oluşturuluyor
@@ -330,7 +330,7 @@ Swagger 'nin meta verileri, API 'Leri kullanmayı ve bunlara bağlanmayı anlama
 
 *Swagger-UI*temel ALıNARAK işlevsel API Yardım sayfaları biçiminde ASP.NET Core REST API uygulamaları için Swagger meta veri üretimini otomatik hale getirmek için çeşitli seçenekler vardır.
 
-En iyi şekilde [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) 'Da kullanılan [swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) , bu kılavuzda bazı ayrıntılarla birlikte ele alacağız, ancak aynı zamanda TYPESCRIPT ve C \# API Istemcileri oluşturabilen [nswag](https://github.com/RSuter/NSwag)kullanma seçeneği de mevcuttur. C \# denetleyicileri, Swagger veya Openapı belirtiminden ve hatta denetleyicileri içeren. dll dosyasını tarayarak, [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio)kullanarak.
+Büyük olasılıkla [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) 'da kullanılmakta olan [swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) , bu kılavuzda bazı ayrıntılarla ele alacağız, ancak [nswag](https://github.com/RSuter/NSwag)kullanma seçeneği de mevcuttur. bunun yanı sıra, [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio)kullanarak, bir Swagger veya openapı belirtiminden ve ayrıca, denetleyicileri Içeren. dll dosyasını tarayarak, TypeScript ve c\# API istemcilerinin yanı sıra c\# denetleyicilerini de üretebilirler.
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Swashbuckle NuGet paketi ile API Swagger meta veri üretimini otomatikleştirme
 
@@ -401,7 +401,7 @@ Bu işlem tamamlandıktan sonra, aşağıdaki gibi URL 'Leri kullanarak uygulama
   http://<your-root-url>/swagger/
 ```
 
-Daha önce `http://<your-root-url>/swagger` gibi bir URL için swashbuckle tarafından oluşturulan oluşturulan kullanıcı arabirimini gördünüz. Şekil 6-9 ' de, herhangi bir API yöntemini nasıl test kullanabileceğinizi da görebilirsiniz.
+Daha önce `http://<your-root-url>/swagger`gibi bir URL için swashbuckle tarafından oluşturulan oluşturulan kullanıcı arabirimini gördünüz. Şekil 6-9 ' de, herhangi bir API yöntemini nasıl test kullanabileceğinizi da görebilirsiniz.
 
 ![Kullanılabilir test araçlarını gösteren Swagger Kullanıcı arabiriminin ekran görüntüsü.](./media/data-driven-crud-microservice/swashbuckle-ui-testing.png)
 
@@ -417,13 +417,13 @@ Bu basit bir işlemdir. Otomatik olarak oluşturulduğu için, API 'nize daha fa
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Swagger  \ kullanarak Web API 'Si yardım sayfaları ASP.net**
+- **Swagger \ kullanarak Web API 'Si yardım sayfaları ASP.net**
   [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
-- **Swashbuckle ve ASP.NET Core  \ ile çalışmaya** başlayın
+- **Swashbuckle ve ASP.NET Core \ ile çalışmaya** başlayın
   [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle](/aspnet/core/tutorials/getting-started-with-swashbuckle)
 
-- **NSwag ve ASP.NET Core ile çalışmaya başlama**  \
+- **NSwag ve ASP.NET Core ile çalışmaya başlama** \
   [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag](/aspnet/core/tutorials/getting-started-with-nswag)
 
 > [!div class="step-by-step"]

@@ -17,7 +17,7 @@ ms.locfileid: "73037973"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017’de NET Core ile bir .NET Standard kitaplığını test etme
 
-[Visual studio 2017 ' de ve C# .net Core Ile .NET Standard kitaplığı oluşturun](library-with-visual-studio.md) veya [visual Studio 2017 ' de Visual Basic ve .NET Core ile bir .NET Standard kitaplığı oluşturun](vb-library-with-visual-studio.md)@no__t_ bir genişletme yöntemi ekleyen basit bir sınıf kitaplığı oluşturdunuz 3_ sınıfı. Şimdi, beklendiği gibi çalıştığından emin olmak için bir birim testi oluşturacaksınız. Birim testi projenizi önceki makalede oluşturduğunuz çözüme ekleyeceksiniz.
+[Visual studio 2017 ' de ve C# .net Core Ile .NET Standard kitaplığı oluşturun](library-with-visual-studio.md) veya [visual Studio 2017 ' de Visual Basic ve .NET Core ile bir .NET Standard kitaplığı oluşturun](vb-library-with-visual-studio.md), <xref:System.String> sınıfına bir genişletme yöntemi ekleyen basit bir sınıf kitaplığı oluşturdunuz. Şimdi, beklendiği gibi çalıştığından emin olmak için bir birim testi oluşturacaksınız. Birim testi projenizi önceki makalede oluşturduğunuz çözüme ekleyeceksiniz.
 
 ## <a name="creating-a-unit-test-project"></a>Birim testi projesi oluşturma
 
@@ -118,7 +118,7 @@ Test yöntemleri oluşturmak için:
 
    [!code-csharp[Test#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
 
-   `TestStartsWithUpper` yönteminde büyük harfli karakter testinizin Yunanca Büyük Harf Alpha (U + 0391) ve Kiril Büyük harf EM (U + 041C) ve `TestDoesNotStartWithUpper` yönteminde küçük harfli karakterlerin testi, Yunanca Küçük Harf Alpha ' ı (U +) içerir. 03B1) ve Kiril Küçük harf GHE (U + 0433).
+   `TestStartsWithUpper` yönteminde büyük harfli karakter testinizin Yunanca Büyük Harf Alpha (U + 0391) ve Kiril Büyük harf EM (U + 041C) ve `TestDoesNotStartWithUpper` yönteminde küçük harfli karakterlerin testi, Yunanca Küçük Harf Alpha (U + 03B1) ve Kiril Küçük harf GHE (U + 0433) içerir.
 
 1. Menü çubuğunda **dosya > dosyayı** **farklı kaydet**' i seçin. **Dosyayı farklı kaydet** Iletişim kutusunda **Kaydet** düğmesinin yanındaki oku seçin ve **kodlamayla kaydet**' i seçin.
 
@@ -130,7 +130,7 @@ Test yöntemleri oluşturmak için:
 
     [!code-vb[Test#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
 
-   `TestStartsWithUpper` yönteminde büyük harfli karakter testinizin Yunanca Büyük Harf Alpha (U + 0391) ve Kiril Büyük harf EM (U + 041C) ve `TestDoesNotStartWithUpper` yönteminde küçük harfli karakterlerin testi, Yunanca Küçük Harf Alpha ' ı (U +) içerir. 03B1) ve Kiril Küçük harf GHE (U + 0433).
+   `TestStartsWithUpper` yönteminde büyük harfli karakter testinizin Yunanca Büyük Harf Alpha (U + 0391) ve Kiril Büyük harf EM (U + 041C) ve `TestDoesNotStartWithUpper` yönteminde küçük harfli karakterlerin testi, Yunanca Küçük Harf Alpha (U + 03B1) ve Kiril Küçük harf GHE (U + 0433) içerir.
 
 1. Menü çubuğunda **Dosya** ' yı seçin > **UnitTest1. vb dosyasını farklı kaydedin**. **Dosyayı farklı kaydet** Iletişim kutusunda **Kaydet** düğmesinin yanındaki oku seçin ve **kodlamayla kaydet**' i seçin.
 

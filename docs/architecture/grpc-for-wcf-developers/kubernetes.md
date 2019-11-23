@@ -1,14 +1,13 @@
 ---
 title: WCF geliştiricileri için Kubernetes-gRPC
 description: Bir Kubernetes kümesinde ASP.NET Core gRPC hizmetlerini çalıştırma.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 819c761a7a55485612b7fb0c8b392971751d8724
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 503b582ae9fdcf8c72c87558de3a8ddd898489aa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846637"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967562"
 ---
 # <a name="kubernetes"></a>Kubernetes
 
@@ -26,7 +25,7 @@ Bu bölümde, bir ASP.NET Core gRPC hizmetinin ve hizmeti bir Kubernetes kümesi
 
 ## <a name="kubernetes-terminology"></a>Kubernetes terminolojisi
 
-Kubernetes *istenen durum yapılandırmasını*KULLANıR: API, *pods*, *dağıtımlar* ve *Hizmetler*gibi nesneleri ve *Denetim düzlemi* , istenen durumu tüm düğümlerde uygulamayı dikkate alır.bir *kümede*. Bir Kubernetes kümesi, programlı olarak veya `kubectl` komut satırı aracı kullanılarak iletilebileceği *KUBERNETES API*'sini çalıştıran bir *ana* düğüme sahiptir. `kubectl`, komut satırı bağımsız değişkenleri kullanarak nesneleri oluşturabilir ve yönetebilir, ancak Kubernetes nesneleri için bildirim verilerini içeren YAML dosyalarıyla en iyi şekilde çalışabilir.
+Kubernetes *istenen durum yapılandırmasını*KULLANıR: API, *pods*, *dağıtımlar* ve *Hizmetler*gibi nesneleri tanımlamakta kullanılır ve *Denetim düzlemi* , bir *kümedeki*tüm *düğümlerde* istenen durumu uygulama konusunda dikkatli olur. Bir Kubernetes kümesi, programlı olarak veya `kubectl` komut satırı aracı kullanılarak iletilebileceği *KUBERNETES API*'sini çalıştıran bir *ana* düğüme sahiptir. `kubectl`, komut satırı bağımsız değişkenleri kullanarak nesneleri oluşturabilir ve yönetebilir, ancak Kubernetes nesneleri için bildirim verilerini içeren YAML dosyalarıyla en iyi şekilde çalışabilir.
 
 ### <a name="kubernetes-yaml-files"></a>Kubernetes YAML dosyaları
 
@@ -59,7 +58,7 @@ Dağıtımlar, pods için *açıklanan durum* nesneleridir. El ile bir pod oluş
 
 Pods, hizmetler ve dağıtımlar en temel nesne türlerinden yalnızca üçüne sahiptir. Bir Kubernetes kümesi tarafından yönetilen düzinelerce daha fazla nesne türü vardır. Daha fazla bilgi için bkz. [Kubernetes kavramları](https://kubernetes.io/docs/concepts/) belgeleri.
 
-### <a name="namespaces"></a>Ad Alanları
+### <a name="namespaces"></a>{1&gt;Ad Alanları&lt;1}
 
 Kubernetes kümeleri yüzlerce veya binlerce düğüme ölçeklendirilecek şekilde tasarlanmıştır ve benzer sayıda hizmeti çalıştırır. Nesne adlarıyla çakışıyor önlemek için ad alanları, nesneleri daha büyük uygulamaların bir parçası olarak gruplamak için kullanılır. Kubernetes kendi hizmetleri bir `default` ad alanında çalışır. Varsayılan nesneler veya kümedeki diğer kiracılar ile ilgili potansiyel çakışıyor kaçınmak için tüm Kullanıcı nesnelerinin kendi ad alanlarında oluşturulması gerekir.
 
@@ -95,7 +94,7 @@ kubectl apply -f object.yml
 
 ### <a name="the-namespace-declaration"></a>Ad alanı bildirimi
 
-Ad alanı bildirimi basittir ve yalnızca bir `name` atanmasını gerektirir.
+Ad alanı bildirimi basittir ve yalnızca bir `name`atanmasını gerektirir.
 
 ```yaml
 apiVersion: v1
@@ -121,7 +120,7 @@ stocks            Active   2m53s
 
 #### <a name="the-stockdata-deployment"></a>StockData dağıtımı
 
-Dağıtım bölümü, gereken kopyaların sayısı ve dağıtım tarafından oluşturulup yönetilecek Pod nesnelerinin bir `template` dahil olmak üzere dağıtımın kendisi için `spec` sağlar. Dağıtım nesnelerinin, ana Kubernetes API 'SI yerine `apiVersion` belirtilen `apps` API 'siyle yönetildiğini unutmayın.
+Dağıtım bölümü, gereken kopyaların sayısı ve dağıtım tarafından oluşturulup yönetilecek Pod nesnelerinin bir `template` dahil olmak üzere dağıtımın kendisi için `spec` sağlar. Dağıtım nesnelerinin, ana Kubernetes API 'SI yerine `apiVersion`belirtilen `apps` API 'siyle yönetildiğini unutmayın.
 
 ```yaml
 apiVersion: apps/v1
@@ -156,7 +155,7 @@ spec:
 `template.spec` bölümü kapsayıcıyı çalıştırılacak şekilde bildirir. Docker Desktop tarafından sağlandıkları gibi yerel bir Kubernetes kümesiyle çalışırken, bir sürüm etiketi olduğu sürece yerel olarak oluşturulan görüntüleri belirtebilirsiniz.
 
 > [!IMPORTANT]
-> Varsayılan olarak, Kubernetes her zaman yeni bir görüntü çekmeyi ve çekmeye çalışır. Görüntüyü bilinen depolarından hiçbirinde bulamazsa Pod oluşturma işlemi başarısız olur. Yerel görüntülerle çalışmak için `imagePullPolicy` `Never` olarak ayarlayın.
+> Varsayılan olarak, Kubernetes her zaman yeni bir görüntü çekmeyi ve çekmeye çalışır. Görüntüyü bilinen depolarından hiçbirinde bulamazsa Pod oluşturma işlemi başarısız olur. Yerel görüntülerle çalışmak için `imagePullPolicy` `Never`olarak ayarlayın.
 
 `ports` özelliği, pod üzerinde hangi kapsayıcı bağlantı noktalarının yayımlanacağını belirtir.  `stockservice` görüntüsü, hizmeti standart HTTP bağlantı noktasında çalıştırır, bu nedenle bağlantı noktası 80 yayımlandı.
 
@@ -182,7 +181,7 @@ spec:
     run: stockdata
 ```
 
-Service spec, çalışan `Pods` eşleştirmek için `selector` özelliğini kullanır, bu durumda bir etiket `run: stockdata` olan pods 'yi arıyor. Eşleşen FID 'ler üzerinde belirtilen `port`, adlandırılmış hizmet tarafından yayımlanır. `stocks` ad alanında çalışan diğer pods 'Ler, bu hizmette bulunan HTTP 'ye adres olarak `http://stockdata` kullanarak erişebilir. Diğer ad alanlarında çalışan pods `http://stockdata.stocks` ana bilgisayar adını kullanabilir. [Ağ ilkelerini](https://kubernetes.io/docs/concepts/services-networking/network-policies/)kullanarak, siteler arası hizmet erişimini denetleyebilirsiniz.
+Service spec, çalışan `Pods`eşleştirmek için `selector` özelliğini kullanır, bu durumda bir etiket `run: stockdata`olan pods 'yi arıyor. Eşleşen FID 'ler üzerinde belirtilen `port`, adlandırılmış hizmet tarafından yayımlanır. `stocks` ad alanında çalışan diğer pods 'Ler, bu hizmette bulunan HTTP 'ye adres olarak `http://stockdata` kullanarak erişebilir. Diğer ad alanlarında çalışan pods `http://stockdata.stocks` ana bilgisayar adını kullanabilir. [Ağ ilkelerini](https://kubernetes.io/docs/concepts/services-networking/network-policies/)kullanarak, siteler arası hizmet erişimini denetleyebilirsiniz.
 
 #### <a name="deploy-the-stockdata-application"></a>StockData uygulamasını dağıtma
 
@@ -295,7 +294,7 @@ NAME       TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
 stockweb   NodePort   10.106.141.5   <none>        80:32564/TCP   13s
 ```
 
-`get service` komutunun çıktısı, HTTP bağlantı noktasının dış ağdaki `32564` bağlantı noktasına yayımlandığını gösterir; Docker Desktop için bu, localhost olur. Uygulamaya `http://localhost:32564` göz atarak uygulamaya erişebilirsiniz.
+`get service` komutunun çıktısı, HTTP bağlantı noktasının dış ağdaki `32564` bağlantı noktasına yayımlandığını gösterir; Docker Desktop için bu, localhost olur. Uygulamaya `http://localhost:32564`göz atarak uygulamaya erişebilirsiniz.
 
 ### <a name="testing-the-application"></a>Uygulamayı test etme
 
@@ -303,7 +302,7 @@ StockWeb uygulaması, basit bir istek-yanıt hizmetinden alınan NASDAQ hisse se
 
 ![StockWeb ekran görüntüsü](media/kubernetes/stockweb-screenshot.png)
 
-`stockdata` hizmetinin çoğaltmalarının sayısı artdıysa, **sunucu** değerinin satırdan satıra değiştirilmesini bekleyebilir, ancak aslında tüm 100 kayıtları aynı örnekten döndürülür. Sayfayı birkaç saniyede bir kez yenilerseniz, sunucu KIMLIĞI aynı kalır. Bunun nedeni nedir? Burada çalmak için iki etken vardır.
+`stockdata` hizmetinin çoğaltmalarının sayısı artdıysa, **sunucu** değerinin satırdan satıra değiştirilmesini bekleyebilir, ancak aslında tüm 100 kayıtları aynı örnekten döndürülür. Sayfayı birkaç saniyede bir kez yenilerseniz, sunucu KIMLIĞI aynı kalır. Bu neden gerçekleşir? Burada çalmak için iki etken vardır.
 
 İlk olarak, Kubernetes hizmeti bulma sistemi varsayılan olarak "hepsini bir kez deneme" yük dengelemeyi kullanır. DNS sunucusu ilk kez sorgulandığında, hizmet için ilk eşleşen IP adresini döndürür. Sonraki sefer, listedeki bir sonraki IP adresi ve bu şekilde, sonuna kadar, başlangıç noktasına geri döngü.
 

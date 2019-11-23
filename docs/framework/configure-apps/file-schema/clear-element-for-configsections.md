@@ -1,5 +1,5 @@
 ---
-title: <configSections> için <clear> öğesi
+title: <clear> için <configSections> öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/clear
@@ -34,7 +34,7 @@ ms.locfileid: "73119080"
 
 |           | Açıklama |
 | --------- | ----------- |
-| **ada**  | Gerekli öznitelik.<br><br>Kaldırılacak bölüm veya bölüm grubunun adını belirtir. |
+| **name**  | Gerekli öznitelik.<br><br>Kaldırılacak bölüm veya bölüm grubunun adını belirtir. |
 
 ## <a name="parent-element"></a>Üst öğe
 

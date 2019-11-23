@@ -15,11 +15,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697501"
 ---
-# <a name="systemnet-element-network-settings"></a>\<system .net > öğesi (ağ ayarları)
+# <a name="systemnet-element-network-settings"></a>\<sistem .net > öğesi (ağ ayarları)
 .NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.  
   
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **@no__t -3system. net >**  
+**System. net >\<** &nbsp;&nbsp;  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71697501"
 |[defaultProxy](defaultproxy-element-network-settings.md)|Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.|  
 |[mailSettings](mailsettings-element-network-settings.md)|Basit Posta Aktarım Protokolü (SMTP) posta gönderme seçeneklerini yapılandırır.|  
 |[requestCaching](requestcaching-element-network-settings.md)|Ağ istekleri için önbelleğe alma mekanizmasını denetler.|  
-|[Ayarlar](settings-element-network-settings.md)|@No__t-0 ve ilgili alt ad alanlarında sınıflar için temel ağ seçeneklerini yapılandırır.|  
+|[Ayarlar](settings-element-network-settings.md)|<xref:System.Net> ve ilgili alt ad alanlarında sınıflar için temel ağ seçeneklerini yapılandırır.|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Internet konaklarından bilgi istemek için kullanılacak modülleri belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -53,7 +53,7 @@ ms.locfileid: "71697501"
 |[yapılandırmada](../configuration-element.md)|Tüm ad alanları için ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [@No__t -1System. net >](system-net-element-network-settings.md) öğesi, <xref:System.Net> ve ilgili alt ad alanlarındaki sınıfların ayarlarını içerir. Ayarlar, Internet konaklarından bilgi almak için kimlik doğrulama modüllerini, bağlantı yönetimini, posta ayarlarını, proxy sunucusunu ve Internet istek modüllerini yapılandırır.  
+ [\<System. net >](system-net-element-network-settings.md) öğesi, <xref:System.Net> ve ilgili alt ad alanlarındaki sınıfların ayarlarını içerir. Ayarlar, Internet konaklarından bilgi almak için kimlik doğrulama modüllerini, bağlantı yönetimini, posta ayarlarını, proxy sunucusunu ve Internet istek modüllerini yapılandırır.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte <xref:System.Net> sınıfları tarafından kullanılan tipik bir yapılandırma gösterilmektedir.  

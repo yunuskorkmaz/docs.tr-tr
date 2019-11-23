@@ -17,14 +17,14 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699608"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<bypasslist için > öğesi ekleme (ağ ayarları)
+# <a name="add-element-for-bypasslist-network-settings"></a>BypassList için > öğesi eklemek \<(ağ ayarları)
 Proxy atlama listesine bir IP adresi veya DNS adı ekler.  
   
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<add >**  
+[ **System. net >\<** &nbsp;&nbsp;](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultproxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BypassList >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -53,11 +53,11 @@ Proxy atlama listesine bir IP adresi veya DNS adı ekler.
 |[BypassList](bypasslist-element-network-settings.md)|Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 öğesi, bir proxy sunucusunu atlayan adresler listesine IP adreslerini veya DNS sunucu adlarını açıklayan normal ifadeler ekler.  
+ `add` öğesi, bir proxy sunucusunu atlayan adresler listesine IP adreslerini veya DNS sunucu adlarını açıklayan normal ifadeler ekler.  
   
- @No__t-0 özniteliğinin değeri bir IP adresi veya ana bilgisayar adı kümesini açıklayan bir normal ifade olmalıdır.  
+ `address` özniteliğinin değeri bir IP adresi veya ana bilgisayar adı kümesini açıklayan bir normal ifade olmalıdır.  
   
- Bu öğe için bir normal ifade belirtirken dikkatli olmanız gerekir. "[A-z] + @no__t -0.contoso\\.com" normal ifadesi contoso.com etki alanındaki herhangi bir konakla eşleşir, ancak aynı zamanda contoso.com.cpandl.com etki alanındaki herhangi bir konakla eşleşir. Yalnızca contoso.com etki alanındaki bir konağı eşleştirmek için bir tutturucu ("$"): "[a-z] + @no__t -0.contoso\\.com $" kullanın.  
+ Bu öğe için bir normal ifade belirtirken dikkatli olmanız gerekir. "[A-z] +\\. contoso\\. com" normal ifadesi, contoso.com etki alanındaki herhangi bir konakla eşleşir, ancak aynı zamanda contoso.com.cpandl.com etki alanındaki herhangi bir konakla eşleşir. Yalnızca contoso.com etki alanındaki bir konağı eşleştirmek için, bir tutturucu ("$"): "[a-z] +\\. contoso\\. com $" kullanın.  
   
  Normal ifadeler hakkında daha fazla bilgi için bkz. [Normal ifadeleri .NET Framework](../../../../standard/base-types/regular-expressions.md).  
   

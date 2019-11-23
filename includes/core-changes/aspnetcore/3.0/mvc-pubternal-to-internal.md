@@ -8,23 +8,23 @@ ms.locfileid: "72394427"
 ---
 ### <a name="mvc-pubternal-types-changed-to-internal"></a>MVC: "Pubternal" türleri iç olarak değiştirildi
 
-ASP.NET Core 3,0 ' de, MVC içindeki tüm "pubternal" türleri desteklenen bir ad alanında `public` ya da uygun şekilde `internal` olarak güncelleştirildi.
+ASP.NET Core 3,0 ' de, MVC içindeki tüm "pubternal" türleri desteklenen bir ad alanında `public` olacak şekilde veya `internal` uygun şekilde güncelleştirildi.
 
 #### <a name="change-description"></a>Açıklamayı Değiştir
 
-ASP.NET Core, "pubternal" türleri `public` olarak belirtilir, ancak bir @no__t -1-sonfixed ad alanında yer alır. Bu türler `public` olsa da, destek ilkesi yoktur ve bu değişiklikler, son değişikliklere tabidir. Ne yazık ki, bu türlerin yanlışlıkla kullanılması yaygındır ve bu projelerde oluşan değişikliklere neden olacak ve Framework 'ün bakımını yapma yeteneğini sınırlandırmıştır.
+ASP.NET Core, "pubternal" türleri `public` olarak belirtilir, ancak bir `.Internal`soneki sabit ad alanında yer alır. Bu türler `public`olsa da, destek ilkesi yoktur ve değişiklikler önemli değişikliklere tabidir. Ne yazık ki, bu türlerin yanlışlıkla kullanılması yaygındır ve bu projelerde oluşan değişikliklere neden olacak ve Framework 'ün bakımını yapma yeteneğini sınırlandırmıştır.
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-MVC 'deki bazı türler `public`, ancak `.Internal` ad alanında. Bu türlerin destek ilkesi yoktu ve değişiklikler ortadan kaldırıldı.
+MVC içindeki bazı türler `public`, ancak bir `.Internal` ad alanında. Bu türlerin destek ilkesi yoktu ve değişiklikler ortadan kaldırıldı.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Bu tür türler desteklenen bir ad alanında `public` ya da `internal` olarak işaretlenmiş olarak güncelleştirilir.
+Bu tür türler desteklenen bir ad alanında `public` ya da `internal`olarak işaretlenen şekilde güncelleştirilir.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -34,7 +34,7 @@ Bu tür türler desteklenen bir ad alanında `public` ya da `internal` olarak i�
 
 Gerçekten `public` olan ve yeni, desteklenen bir ad alanına taşınan türler kullanıyorsanız, başvurularınızı yeni ad alanlarıyla eşleşecek şekilde güncelleştirin.
 
-@No__t-0 olarak işaretlenen türler kullanıyorsanız, alternatif bulmanız gerekir. Daha önce "pubternal" türleri genel kullanım için hiçbir şekilde desteklenmez. Bu ad alanlarında uygulamalarınız için kritik olan belirli türler varsa, [ASPNET/AspNetCore](https://github.com/aspnet/AspNetCore/issues)' da bir sorun yayınlayın. İstenen türlerin @no__t yapılması için dikkat edilmesi gereken noktalar-0.
+`internal`olarak işaretlenen türler kullanıyorsanız, alternatif bulmanız gerekir. Daha önce "pubternal" türleri genel kullanım için hiçbir şekilde desteklenmez. Bu ad alanlarında uygulamalarınız için kritik olan belirli türler varsa, [ASPNET/AspNetCore](https://github.com/aspnet/AspNetCore/issues)' da bir sorun yayınlayın. İstenen türlerin `public`yapılması için dikkat edilmesi gereken noktalar olabilir.
 
 #### <a name="category"></a>Kategori
 

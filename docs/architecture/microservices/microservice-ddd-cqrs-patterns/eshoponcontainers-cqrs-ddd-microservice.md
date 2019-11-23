@@ -51,5 +51,5 @@ Yalnızca bir uygulama mimarisi vardır: tasarlamakta olduğunuz sistemin veya u
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 >[!div class="step-by-step"]
->[Önceki](apply-simplified-microservice-cqrs-ddd-patterns.md)İleri
->[](cqrs-microservice-reads.md)
+>[Önceki](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[İleri](cqrs-microservice-reads.md)

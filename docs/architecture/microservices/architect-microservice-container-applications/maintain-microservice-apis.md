@@ -25,15 +25,15 @@ Son olarak, bir REST mimarisi kullanıyorsanız, hizmetlerinizin sürümü oluş
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Scott Hanselman. ASP.NET Core daha fazla Web API sürümü oluşturma kolaylaştırıldı** \
+- **Scott Hanselman. ASP.NET Core yeniden oluşturulmuş Web API 'SI sürümü kullanımı kolay** \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
-- **Yeniden bir Web API 'sinin sürümü oluşturma** \
+- **Yeniden bir Web API 'Sinin sürümü oluşturma** \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
 - **Roy Fielding. Sürüm oluşturma, hiper medya ve REST** \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 >[!div class="step-by-step"]
->[Önceki](asynchronous-message-based-communication.md)İleri
->[](microservices-addressability-service-registry.md)
+>[Önceki](asynchronous-message-based-communication.md)
+>[İleri](microservices-addressability-service-registry.md)

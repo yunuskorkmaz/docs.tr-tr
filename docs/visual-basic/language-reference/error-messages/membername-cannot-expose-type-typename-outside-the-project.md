@@ -14,7 +14,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71700896"
 ---
-# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>' \<membername > ', ' \<typename > ' türünü @no__t ' >-3containertypename @no__t ' aracılığıyla projenin dışına gösteremez
+# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<MemberName > ', \<ContainerType > '\<containertypename > ' aracılığıyla proje dışında '\<TypeName > ' türünü gösteremez
 Bir değişken, yordam parametresi veya işlev dönüşü kapsayıcının dışında sunulur, ancak kapsayıcı dışında gösterilmemesi gereken bir tür olarak bildirilmiştir.  
   
  Aşağıdaki iskelet kodu, bu hatayı üreten bir durumu gösterir.  
@@ -27,7 +27,7 @@ Public Class mainClass
 End Class  
 ```  
   
- @No__t-0, `Friend`, `Protected Friend` veya `Private` olarak belirtilen bir türün, bildirim bağlamı dışında sınırlı erişimi olması amaçlanmıştır. Bunu daha az kısıtlanmış erişimi olan bir değişkenin veri türü olarak kullanmak, bu amacı erteçine neden olur. Önceki iskelet kodunda, `exposedVar` ' ı `Public` ' dir ve erişimi olmayan koda `privateClass` ' yi kullanıma sunacaktır.  
+ `Protected`, `Friend`, `Protected Friend`veya `Private` olarak belirtilen bir türün, bildirim bağlamı dışında sınırlı erişimi olması amaçlanmıştır. Bunu daha az kısıtlanmış erişimi olan bir değişkenin veri türü olarak kullanmak, bu amacı erteçine neden olur. Önceki iskelet kodunda, `exposedVar` `Public` ve buna erişimi olmayan koda `privateClass` kullanıma sunacaktır.  
   
  **Hata kimliği:** BC30909  
   

@@ -59,7 +59,7 @@ Daha önce [Dağıtılmış veri yönetimi sorunları ve çözümleri](distribut
 
 Zaman uyumsuz olay odaklı iletişimde, bir mikro hizmet olayları bir olay veri yoluna yayımlar ve çok sayıda mikro hizmet bu hizmete abone olabilir ve bu, bildirim alabilir ve üzerinde işlem yapabilir. Uygulamanız, olay odaklı ileti tabanlı iletişimler için kullanılacak protokolü tespit eder. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) , güvenilir sıraya alınmış iletişimin sağlanmasına yardımcı olabilir.
 
-Bir olay veri yolu kullandığınızda, [Kbbitmq](https://www.rabbitmq.com/) gibi bir ileti ARACıSıDıR API kullanarak kod içeren bir soyutlama düzeyi (bir olay veri yolu arabirimi gibi) ve [konularla birlikte Azure Service Bus gibi bir hizmet veri yolu kullanmak isteyebilirsiniz ](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Alternatif olarak, Event Bus ve Yayımla/abone ol sisteminizi ifade etmek için NServiceBus, Masstransıya ya da daha parlak gibi daha yüksek düzeyde bir Service Bus kullanmak isteyebilirsiniz.
+Bir olay veri yolu kullandığınızda, [Kbbitmq](https://www.rabbitmq.com/) gibi bir ileti ARACıSıDıR API kullanarak kod içeren bir soyutlama düzeyi (bir olay veri yolu arabirimi gibi) ve [konularla birlikte Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)gibi bir hizmet veri yolu kullanmak isteyebilirsiniz. Alternatif olarak, Event Bus ve Yayımla/abone ol sisteminizi ifade etmek için NServiceBus, Masstransıya ya da daha parlak gibi daha yüksek düzeyde bir Service Bus kullanmak isteyebilirsiniz.
 
 ## <a name="a-note-about-messaging-technologies-for-production-systems"></a>Üretim sistemleri için mesajlaşma teknolojileri hakkında bir göz
 
@@ -86,7 +86,7 @@ Zaman uyumsuz iletişimin kullanılması sırasında göz önünde bulundurmanı
 - **Olay odaklı mesajlaşma** \
   <https://soapatterns.org/design_patterns/event_driven_messaging>
 
-- **Yayımla/abone ol** \
+- **Yayımla/abone ol kanal** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **UDI Dahan. Açıklanan CQRS** \

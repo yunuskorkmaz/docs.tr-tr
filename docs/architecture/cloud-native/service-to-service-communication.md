@@ -3,12 +3,12 @@ title: Hizmetten hizmete iletişim
 description: Arka uç bulutu yerel mikro hizmetlerinin diğer arka uç mikro hizmetleriyle nasıl iletişim kuracağını öğrenin.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 6a7e72491cb56d925e684b94109b1aaa98e24df3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5124b8b83f62ff17b1230ead63db26e0c1f2a5b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094628"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087605"
 ---
 # <a name="service-to-service-communication"></a>Hizmetten hizmete iletişim
 
@@ -50,7 +50,7 @@ Başka bir mikro hizmete tek bir doğrudan HTTP çağrısı yapan seyrek erişim
 
 **Şekil 4-9**. HTTP sorgularını zincirleme
 
-Önceki görüntüde gösterilen tasarımda riski tamamen hayal edebilirsiniz. Adım \#3 başarısız olursa ne olur? Veya adım \#8 başarısız oluyor? Nasıl kurtarılır? Temel alınan hizmet meşgul olduğundan \#6 ' i yavaşsa ne olur? Nasıl devam edersiniz? Tümü doğru çalışıyor olsa bile, her adımın gecikme süresinin toplamı olan bu çağrının tabi olacağı gecikmeyi düşünün.
+Önceki görüntüde gösterilen tasarımda riski tamamen hayal edebilirsiniz. Adım \#3 başarısız olursa ne olur? Ya da \#8. adım başarısız oluyor? Nasıl kurtarılır? Temel alınan hizmet meşgul olduğundan \#6 ' nın yavaşlamasına neden olur? Nasıl devam edersiniz? Tümü doğru çalışıyor olsa bile, her adımın gecikme süresinin toplamı olan bu çağrının tabi olacağı gecikmeyi düşünün.
 
 Önceki görüntüde geçen büyük ölçüde, hizmetlerin en iyi modellenmedi. Bu, takımın tasarımını yeniden ziyaret behoove.
 
@@ -166,7 +166,7 @@ Olay ile, sıraya alma teknolojisinden *konulara*geçiş yaptık. Bir [Konu](htt
 
 **Şekil 4-16**. Konu mimarisi
 
-Önceki şekilde, yayımcılar konuya iletiler gönderir. Son sırada aboneler aboneliklerden ileti alır. Ortasında, konu, koyu mavi kutular halinde gösterilen bir dizi *kurala*göre iletileri aboneliklere iletir. Kurallar, belirli iletileri bir aboneliğe ileten bir filtre işlevi görür. Burada bir "CreateOrder" olayı, abonelik \#1 ve abonelik \#3 ' e gönderilebilir, ancak abonelik \#2 ' ye uygulanmaz. Abonelik \#2 ve abonelik \#3 olan "OrderCompleted" olayı gönderilebilir.
+Önceki şekilde, yayımcılar konuya iletiler gönderir. Son sırada aboneler aboneliklerden ileti alır. Ortasında, konu, koyu mavi kutular halinde gösterilen bir dizi *kurala*göre iletileri aboneliklere iletir. Kurallar, belirli iletileri bir aboneliğe ileten bir filtre işlevi görür. Burada, abonelik \#1 ve abonelik \#3 ' e bir "CreateOrder" olayı gönderilebilir, ancak abonelik \#2 ' ye uygulanmaz. Abonelik \#2 ' ye ve \#3 aboneliğine "OrderCompleted" olayı gönderilebilir.
 
 Azure bulutu iki farklı konu hizmetini destekler: Azure Service Bus konuları ve Azure EventGrid.
 
@@ -208,19 +208,19 @@ Event Grid, tam olarak yönetilen bir sunucusuz bulut hizmetidir. Bu, trafiğini
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Azure bulutu 'nda akış iletileri
 
-Azure Service Bus ve Event Grid, bir Cosmos DB eklenmiş yeni bir belge gibi tek ve ayrı olaylar sunan uygulamalar için harika destek sağlar. Ancak, bulutta yerel sisteminizin *ilgili olayların akışını*işlemesi gerekiyorsa ne olacak? [Olay akışları](https://msdn.microsoft.com/magazine/dn904671) daha karmaşıktır. Bunlar genellikle zaman içinde sıralanmıştır, birbirleriyle ilişkilidir ve bir grup olarak işlenmelidir.
+Azure Service Bus ve Event Grid, bir Cosmos DB eklenmiş yeni bir belge gibi tek ve ayrı olaylar sunan uygulamalar için harika destek sağlar. Ancak, bulutta yerel sisteminizin *ilgili olayların akışını*işlemesi gerekiyorsa ne olacak? [Olay akışları](https://docs.microsoft.com/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) daha karmaşıktır. Bunlar genellikle zaman içinde sıralanmıştır, birbirleriyle ilişkilidir ve bir grup olarak işlenmelidir.
 
 [Azure Olay Hub](https://azure.microsoft.com/services/event-hubs/) 'ı, olayları toplayan, dönüştüren ve depolayan bir veri akışı platformu ve olay alma hizmetidir. Bir telemetri bağlamından yayılan sürekli olay bildirimleri gibi akış verilerini yakalamak için ince ayar yapılır. Hizmet yüksek oranda ölçeklenebilir ve [saniye başına milyonlarca olayı depolayıp işleyebilir](https://docs.microsoft.com/azure/event-hubs/event-hubs-about). Şekil 4-18 ' de gösterildiği gibi, genellikle olay işlem hattının bir ön kapıdır ve olay tüketimine ait alma akışını ayırır.
 
-![Azure Olay Hub 'ı](./media/azure-event-hub.png)
+![Azure Olay Hub'ı](./media/azure-event-hub.png)
 
-**Şekil 4-18**. Azure Olay Hub 'ı
+**Şekil 4-18**. Azure Olay Hub'ı
 
 Olay Hub 'ı, düşük gecikme süresini ve yapılandırılabilir zaman bekletmesini destekler. Kuyrukların ve konuların aksine, bir tüketici tarafından okunduktan sonra olay verilerini saklayın Event Hubs. Bu özellik, iç ve dış diğer veri analizi hizmetlerinin, daha fazla analiz için verileri yeniden oynamalarını sağlar. Olay Hub 'ında depolanan olaylar yalnızca, varsayılan olarak bir gün olan ancak yapılandırılabilir olan bekletme döneminin süresi dolduktan sonra silinir.
 
 Olay Hub 'ı, HTTPS ve AMQP dahil olmak üzere ortak olay yayımlama protokollerini destekler. Ayrıca Kafka 1,0 de desteklenir. Mevcut Kafka uygulamaları, büyük Kafka kümelerinin yönetilmesine alternatif sağlayan Kafka protokolünü kullanarak [Olay Hub 'ı ile iletişim](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) kurabilir. Birçok açık kaynaklı bulut Yerel sistemi emayraç Kafka.
 
-Event Hubs, her tüketicinin ileti akışının yalnızca belirli bir alt kümesini veya bölümünü okuduğu [bölümlenmiş bir tüketici modeli](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) aracılığıyla ileti akışı uygular. Bu düzende olay işleme için inanılmaz yatay ölçek etkinleştirilir ve sıralarda ve konularda kullanılamayan diğer akışa odaklanmış özellikler sağlanır. Bölüm, bir olay hub 'ında tutulan olayların sıralı dizisidir. Daha yeni olaylar geldikçe, bu sıranın sonuna eklenir. Şekil 4-19 bir olay hub 'ında Bölümlendirmeyi gösterir.
+Event Hubs, her tüketicinin ileti akışının yalnızca belirli bir alt kümesini veya bölümünü okuduğu [bölümlenmiş bir tüketici modeli](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) aracılığıyla ileti akışı uygular. Bu düzende olay işleme için inanılmaz yatay ölçek etkinleştirilir ve sıralarda ve konularda kullanılamayan diğer akışa odaklanmış özellikler sağlanır. Bölüm bir olay hub'ında tutulan olayların sıralı dizisidir. Daha yeni olaylar geldikçe, bu sıranın sonuna eklenir. Şekil 4-19 bir olay hub 'ında Bölümlendirmeyi gösterir.
 
 ![Olay Hub 'ı bölümlendirme](./media/event-hub-partitioning.png)
 

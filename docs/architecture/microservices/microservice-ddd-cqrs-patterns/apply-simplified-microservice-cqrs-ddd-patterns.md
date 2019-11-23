@@ -1,5 +1,5 @@
 ---
-title: Mikro bir hizmette Basitleştirilmiş CQRS ve DDD desenleri uygulama
+title: Bir mikro hizmete CQRS ve DDD desenlerini uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | CQRS ve DDD desenleri arasındaki genel ilişkiyi anlayın.
 ms.date: 10/08/2018
 ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8

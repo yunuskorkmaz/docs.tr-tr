@@ -13,12 +13,12 @@ ms.locfileid: "71834017"
 
 Hizmet işlemlerine erişim yetkisi veren ayarları belirtir
 
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp; @ no__t-1[ **\<system. serviceModel >** ](system-servicemodel.md)\
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<davranışları >** ](behaviors.md)\
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<Servicedavranışlar >** ](servicebehaviors.md)\
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0behavior >** ](behavior-of-servicebehaviors.md)1
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1serviceAuthorization >**  
+[ **\<yapılandırma >** ](../configuration-element.md)\
+[**System. serviceModel >\<** ](system-servicemodel.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranışları >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Servicedavranışları >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranış >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceAuthorization >**  
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,16 +41,16 @@ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklan
 
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|ImpersonateCallerForAllOperations|Hizmette tüm işlemlerin çağıranın kimliğine bürünmesini belirten bir Boole değeri. Varsayılan değer: `false`.<br /><br /> Belirli bir hizmet işlemi çağıranı taklit ettiğinde, belirtilen hizmeti yürütmeden önce iş parçacığı bağlamı arayan bağlamına geçiş yapılır.|  
-|principalPermissionMode|Sunucuda işlemleri yürütmek için kullanılan sorumluyu ayarlar. Değerler şunlardır:<br /><br /> -Hiçbiri<br />-UseWindowsGroups<br />-UseAspNetRoles<br />-Özel<br /><br /> Varsayılan değer UseWindowsGroups değeridir. Değer <xref:System.ServiceModel.Description.PrincipalPermissionMode> türündedir. Bu özniteliği kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: erişimi, PrincipalPermissionAttribute sınıfı Ile kısıtlama](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).|  
+|ImpersonateCallerForAllOperations|Hizmette tüm işlemlerin çağıranın kimliğine bürünmesini belirten bir Boole değeri. Varsayılan, `false` değeridir.<br /><br /> Belirli bir hizmet işlemi çağıranı taklit ettiğinde, belirtilen hizmeti yürütmeden önce iş parçacığı bağlamı arayan bağlamına geçiş yapılır.|  
+|principalPermissionMode|Sunucuda işlemleri yürütmek için kullanılan sorumluyu ayarlar. Değerler şunlardır:<br /><br /> -Hiçbiri<br />-UseWindowsGroups<br />-UseAspNetRoles<br />-Özel<br /><br /> Varsayılan değer UseWindowsGroups değeridir. Değer <xref:System.ServiceModel.Description.PrincipalPermissionMode>türündedir. Bu özniteliği kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: erişimi, PrincipalPermissionAttribute sınıfı Ile kısıtlama](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).|  
 |roleProviderName|Bir Windows Communication Foundation (WCF) uygulaması için rol bilgileri sağlayan rol sağlayıcısının adını belirten bir dize. Varsayılan değer boş bir dizedir.|  
 |ServiceAuthorizationManagerType|Hizmet Yetkilendirme Yöneticisi türünü içeren bir dize. Daha fazla bilgi için bkz. <xref:System.ServiceModel.ServiceAuthorizationManager>.|  
 
-### <a name="child-elements"></a>Alt öğeler
+### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|authorizationPolicies|@No__t-0 anahtar sözcüğü kullanılarak eklenebilen bir yetkilendirme ilkesi türü koleksiyonu içerir. Her yetkilendirme ilkesi, bir dize olan tek bir gerekli `policyType` özniteliği içerir. Özniteliği, bir giriş talepleri kümesinin başka bir talepler kümesine dönüştürülmesini sağlayan bir yetkilendirme ilkesi belirtir. Erişim denetimi, bu temel alınarak verilebilir veya reddedilebilir. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElement>.|  
+|authorizationPolicies|`add` anahtar sözcüğü kullanılarak eklenebilen bir yetkilendirme ilkesi türü koleksiyonu içerir. Her yetkilendirme ilkesi, bir dize olan tek bir gerekli `policyType` özniteliği içerir. Özniteliği, bir giriş talepleri kümesinin başka bir talepler kümesine dönüştürülmesini sağlayan bir yetkilendirme ilkesi belirtir. Erişim denetimi, bu temel alınarak verilebilir veya reddedilebilir. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElement>.|  
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -62,7 +62,7 @@ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklan
 
 Bu bölüm yetkilendirme, özel rol sağlayıcıları ve kimliğe bürünme işlemlerini etkileyen öğeleri içerir.  
   
-@No__t-0 özniteliği, korumalı bir yöntemin kullanımını yetkilendirirken kullanılacak kullanıcı gruplarını belirtir. Varsayılan değer `UseWindowsGroups` ' dır ve bir kaynağa erişmeye çalışan bir kimlik için "Yöneticiler" veya "kullanıcılar" gibi Windows gruplarının arandığını belirtir. Ayrıca, aşağıdaki kodda gösterildiği gibi @no__t -1System. Web > öğesi altında yapılandırılan özel bir rol sağlayıcısını kullanmak için `UseAspNetRoles` belirtebilirsiniz:
+`principalPermissionMode` özniteliği, korumalı bir yöntemin kullanımını yetkilendirirken kullanılacak kullanıcı gruplarını belirtir. Varsayılan değer `UseWindowsGroups` ve bir kaynağa erişmeye çalışan bir kimlik için "Yöneticiler" veya "kullanıcılar" gibi Windows gruplarının arandığını belirtir. Ayrıca, aşağıdaki kodda gösterildiği gibi \<System. Web > öğesi altında yapılandırılan özel bir rol sağlayıcısını kullanmak için `UseAspNetRoles` belirtebilirsiniz:
 
 ```xml
 <system.web>
@@ -85,7 +85,7 @@ Bu bölüm yetkilendirme, özel rol sağlayıcıları ve kimliğe bürünme işl
 </system.web>
 ```
   
-Aşağıdaki kod, `principalPermissionMode` özniteliğiyle kullanılan `roleProviderName` gösterir:
+Aşağıdaki kod `principalPermissionMode` özniteliğiyle kullanılan `roleProviderName` gösterir:
   
 ```xml
 <behaviors>
@@ -103,8 +103,8 @@ Bu yapılandırma öğesinin kullanımına ilişkin ayrıntılı bir örnek içi
 
 - <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
-- [Güvenlik davranışları](../../../wcf/feature-details/security-behaviors-in-wcf.md)
-- [Hizmet Işlemlerine erişimi yetkilendirme](../../../wcf/samples/authorizing-access-to-service-operations.md)
-- [Nasıl yapılır: bir hizmet için özel Yetkilendirme Yöneticisi oluşturma](../../../wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
-- [Nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [Yetkilendirme Ilkesi](../../../wcf/samples/authorization-policy.md)
+- [Güvenlik Davranışları](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Hizmet İşlemlerine Erişimi Yetkilendirme](../../../wcf/samples/authorizing-access-to-service-operations.md)
+- [Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma](../../../wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Nasıl yapılır: PrincipalPermissionAttribute Sınıfı ile Erişimi Kısıtlama](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Yetkilendirme İlkesi](../../../wcf/samples/authorization-policy.md)

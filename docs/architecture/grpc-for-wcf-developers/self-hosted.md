@@ -1,14 +1,13 @@
 ---
 title: Self-hosted gRPC uygulamaları-WCF geliştiricileri için gRPC
 description: ASP.NET Core gRPC uygulamalarını self-hosted Hizmetleri olarak dağıtma.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 4983cad1dd075480c6d83a5350a323ab348cdaaf
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846115"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967221"
 ---
 # <a name="self-hosted-grpc-applications"></a>Şirket içinde barındırılan gRPC uygulamaları
 
@@ -78,13 +77,13 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 > [!NOTE]
 > Uygulama bir Linux hizmeti olarak çalışmıyorsa `UseSystemd` yöntemi hiçbir şey yapmaz.
 
-Şimdi, Visual Studio 'dan projeye sağ tıklayıp bağlam menüsünden *Yayımla* ' yı seçerek veya .NET Core CLI ' nden uygulamayı (örneğin, Framework 'e bağımlı veya ilgili Linux çalışma zamanı için kendi içinde) yayımlayın `linux-x64`. aşağıdaki komutu kullanarak.
+Şimdi, Visual Studio 'dan projeye sağ tıklayıp bağlam .NET Core CLI menüsünden *Yayımla* ' yı seçerek ve aşağıdaki komutu kullanarak, uygulamayı (örneğin, Framework 'e bağımlı veya ilgili Linux çalışma zamanı için kendi içinde) yayımlayın (örn. `linux-x64`).
 
 ```console
 dotnet publish -c Release -r linux-x64 -o ./publish
 ```
 
-`publish` dizininin tüm içeriğini Linux ana bilgisayarındaki bir yükleme klasörüne kopyalayın. Hizmeti kaydetmek için, `/etc/systemd/system` dizinine eklenmek üzere "birim dosyası" olarak adlandırılan özel bir dosya gerekir. Bu klasörde bir dosya oluşturmak için kök izninizin olması gerekir. `systemd` kullanmak istediğiniz tanımlayıcıyı ve `.service` uzantısını adlandırın. Örneğin, `/etc/systemd/system/myapp.service`.
+`publish` dizininin tüm içeriğini Linux ana bilgisayarındaki bir yükleme klasörüne kopyalayın. Hizmeti kaydetmek için, `/etc/systemd/system` dizinine eklenmek üzere "birim dosyası" olarak adlandırılan özel bir dosya gerekir. Bu klasörde bir dosya oluşturmak için kök izninizin olması gerekir. `systemd` kullanmak istediğiniz tanımlayıcıyı ve `.service` uzantısını adlandırın. Örneğin: `/etc/systemd/system/myapp.service`
 
 Hizmet dosyası, bu örnekte gösterildiği gibi ıNı biçimini kullanır.
 
@@ -153,7 +152,7 @@ Bir gRPC uygulamasını üretimde çalıştırırken, güvenilir bir sertifika y
 
 Windows konakları üzerinde, sertifika, [X509Store sınıfı](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0)kullanılarak güvenli bir [sertifika deposundan](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores) yüklenebilir. `X509Store` sınıfı, bazı Linux konaklarındaki OpenSSL anahtar deposu ile de kullanılabilir.
 
-Sertifikalar, bir dosyadan ( [Örneğin, güçlü](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0)bir parolayla korunan `.pfx` bir dosya) veya [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) gibi güvenli bir depolama hizmetinden alınan ikili verilerden biri kullanılarak da oluşturulabilir. .
+Sertifikalar, bir dosyadan ( [Örneğin, güçlü](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0)bir parolayla korunan `.pfx` bir dosya) veya [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)gibi güvenli bir depolama hizmetinden alınan ikili verilerden biri kullanılarak da oluşturulabilir.
 
 Kestrel, bir sertifikayı iki şekilde kullanacak şekilde yapılandırılabilir: yapılandırmadan veya kodda.
 

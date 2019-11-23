@@ -31,11 +31,11 @@ Azure Stack, kuruluşunuzun veri merkezinden Azure hizmetleri sunmanıza olanak 
 
 Azure Stack, gereksinimlerinizi karşılamak için iki dağıtım seçeneği sunulur:
 
-- Azure Stack tümleşik sistemler
+- Azure Stack tümleşik sistemleri
 
 - Azure Stack Geliştirme Seti
 
-### <a name="azure-stack-integrated-systems"></a>Azure Stack tümleşik sistemler
+### <a name="azure-stack-integrated-systems"></a>Azure Stack tümleşik sistemleri
 
 Azure Stack tümleşik sistemler, Microsoft ve donanım iş ortaklarının bir ortaklığı aracılığıyla sunulur. İş ortaklığı, yönetimin basitliği ile dengeli bulut adımlı yenilik sunan bir çözüm oluşturur. Azure Stack, donanım ve yazılım tümleştirilmiş bir sistem olarak sunulduğundan, doğru esneklik ve denetim elde edersiniz, ancak yine de buluttan yeniliği benimsemiş olursunuz. 4 ile 12 düğümden oluşan tümleşik sistemleri Azure Stack ve donanım ortağı ve Microsoft tarafından ortaklaşa desteklenir. Üretim iş yükleriniz için yeni senaryolar uygulamak üzere Azure Stack tümleşik sistemleri kullanın.
 

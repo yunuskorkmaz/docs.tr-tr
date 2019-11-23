@@ -32,5 +32,5 @@ Kapsayıcılı uygulama geliştirmenin karmaşıklığı, iş karmaşıklığı 
 - Kuruluşlar, Azure Container Registry ' de depolanan özel görüntülerden (veri, PaaS, vb.), zaten rahat olan araçlarla Azure Resource Manager şablonları kullanarak Azure bileşenleri (Data, PaaS vb.) ile birlikte her türlü bağımlılıktan Docker Kapsayıcıları sağlayabilir.
 
 >[!div class="step-by-step"]
->[Önceki](../design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md)İleri
->[](docker-application-outer-loop-devops-workflow.md)
+>[Önceki](../design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md)
+>[İleri](docker-application-outer-loop-devops-workflow.md)

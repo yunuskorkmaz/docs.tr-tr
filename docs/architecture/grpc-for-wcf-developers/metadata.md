@@ -1,14 +1,13 @@
 ---
 title: WCF geliştiricileri için meta veriler-gRPC
 description: İstemci ve sunucular arasında ek bağlam iletmek için gRPC 'de meta veriler nasıl kullanılır
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 32559b3404b12f366fc1624299d04cff9faad9d6
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 723d877bfbf0c2b0785949ff15939aedbac4d4e9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846613"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971984"
 ---
 # <a name="metadata"></a>Meta Veriler
 
@@ -50,7 +49,7 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 }
 ```
 
-Hizmetler, `ServerCallContext` `ResponseTrailers` özelliğini kullanarak istemcilere meta veri gönderebilir:
+Hizmetler, `ServerCallContext``ResponseTrailers` özelliğini kullanarak istemcilere meta veri gönderebilir:
 
 ```csharp
 public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request, ServerCallContext context)

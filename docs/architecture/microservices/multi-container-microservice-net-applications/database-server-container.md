@@ -1,5 +1,5 @@
 ---
-title: Kapsayıcı olarak çalışan bir veritabanı sunucusunu kullanma
+title: Kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Kapsayıcı olarak çalışan bir veritabanı sunucusu mı kullanıyorsunuz? yalnızca geliştirme için! Nedenini anlayın.
 ms.date: 10/02/2018
 ms.openlocfilehash: a508ba734525b24e2f3f00408e2c59c8c00f1898
@@ -9,15 +9,15 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/12/2019
 ms.locfileid: "72291309"
 ---
-# <a name="using-a-database-server-running-as-a-container"></a>Kapsayıcı olarak çalışan bir veritabanı sunucusunu kullanma
+# <a name="using-a-database-server-running-as-a-container"></a>Kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
 
-Veritabanlarınızı (SQL Server, PostgreSQL, MySQL, vb.) normal tek başına sunucularda, şirket içi kümelerde veya Azure SQL VERITABANı gibi buluttaki PaaS hizmetlerinde bulabilirsiniz. Ancak, geliştirme ve test ortamları için, herhangi bir dış bağımlılığı olmadığından ve yalnızca `docker-compose up` komutu tüm uygulamayı başlatır. Veritabanı kapsayıcıda başlatıldığı ve her zaman aynı örnek verilerle doldurulduğu için, bu veritabanlarının kapsayıcı olarak kullanılması da çok önemlidir. bu nedenle, testler daha öngörülebilir hale getirebilir.
+Veritabanlarınızı (SQL Server, PostgreSQL, MySQL, vb.) normal tek başına sunucularda, şirket içi kümelerde veya Azure SQL VERITABANı gibi buluttaki PaaS hizmetlerinde bulabilirsiniz. Ancak, geliştirme ve test ortamları için, herhangi bir dış bağımlılığı olmadığından ve yalnızca `docker-compose up` komutu uygulamanın tamamını başlattığında, veritabanlarının kapsayıcılar olarak çalışmasını sağlamak uygun olur. Veritabanı kapsayıcıda başlatıldığı ve her zaman aynı örnek verilerle doldurulduğu için, bu veritabanlarının kapsayıcı olarak kullanılması da çok önemlidir. bu nedenle, testler daha öngörülebilir hale getirebilir.
 
 ### <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>Mikro hizmetle ilgili bir veritabanıyla kapsayıcı olarak çalışan SQL Server
 
 EShopOnContainers 'da, mikro hizmetler için gereken tüm SQL Server veritabanlarına sahip Linux için SQL Server çalıştıran [Docker-Compose. yıml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) dosyasında tanımlanan SQL. Data adlı bir kapsayıcı vardır. (Her veritabanı için bir SQL Server kapsayıcısına da sahip olabilirsiniz, ancak bu, Docker 'a daha fazla bellek atanmasını gerektirir.) Mikro hizmetlerdeki önemli nokta, her bir mikro hizmetin ilgili verilerin sahibi olması, dolayısıyla ilgili SQL veritabanının bu durumda olması. Ancak veritabanları herhangi bir yerde olabilir.
 
-Örnek uygulamadaki SQL Server kapsayıcısı, `docker-compose up` ' ı çalıştırdığınızda yürütülen Docker-Compose. yıml dosyasında aşağıdaki YAML kodu ile yapılandırılır. YAML kodunun genel Docker-Compose. yıml dosyasından ve Docker-Compose. override. yıml dosyasından birleştirilmiş yapılandırma bilgilerine sahip olduğunu unutmayın. (Genellikle, ortam ayarlarını SQL Server görüntüyle ilgili temel veya statik bilgilerden ayırabilirsiniz.)
+Örnek uygulamadaki SQL Server kapsayıcısı, `docker-compose up`çalıştırdığınızda yürütülen Docker-Compose. yıml dosyasında aşağıdaki YAML kodu ile yapılandırılır. YAML kodunun genel Docker-Compose. yıml dosyasından ve Docker-Compose. override. yıml dosyasından birleştirilmiş yapılandırma bilgilerine sahip olduğunu unutmayın. (Genellikle, ortam ayarlarını SQL Server görüntüyle ilgili temel veya statik bilgilerden ayırabilirsiniz.)
 
 ```yml
   sql.data:
@@ -29,7 +29,7 @@ EShopOnContainers 'da, mikro hizmetler için gereken tüm SQL Server veritabanla
       - "5434:1433"
 ```
 
-Benzer bir şekilde, `docker-compose` kullanmak yerine aşağıdaki `docker run` komutu bu kapsayıcıyı çalıştırabilir:
+Benzer bir şekilde, `docker-compose`kullanmak yerine aşağıdaki `docker run` komutu bu kapsayıcıyı çalıştırabilir:
 
 ```console
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
@@ -37,7 +37,7 @@ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microso
 
 Ancak, eShopOnContainers gibi çok kapsayıcılı bir uygulama dağıtıyorsanız, uygulamanın tüm gerekli kapsayıcılarını dağıtması için `docker-compose up` komutunu kullanmak daha uygundur.
 
-Bu SQL Server kapsayıcısını ilk kez başlattığınızda, kapsayıcı, sağladığınız parolayla SQL Server başlatır. SQL Server bir kapsayıcı olarak çalışmaya başladıktan sonra, SQL Server Management Studio, Visual Studio veya C @ no__t-0 kodu gibi herhangi bir normal SQL bağlantısı üzerinden bağlanarak veritabanını güncelleştirebilirsiniz.
+Bu SQL Server kapsayıcısını ilk kez başlattığınızda, kapsayıcı, sağladığınız parolayla SQL Server başlatır. SQL Server bir kapsayıcı olarak çalışmaya başladıktan sonra, SQL Server Management Studio, Visual Studio veya C\# kodu gibi herhangi bir normal SQL bağlantısı üzerinden bağlanarak veritabanını güncelleştirebilirsiniz.
 
 EShopOnContainers uygulaması, aşağıdaki bölümde açıklandığı gibi, her mikro hizmet veritabanını başlangıçtaki verilerle dengeli hale getirerek örnek verilerle başlatır.
 
@@ -45,10 +45,10 @@ Bir kapsayıcı olarak çalışan SQL Server olması yalnızca bir SQL Server ö
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Linux, Mac veya Windows  \ ' de Docker görüntüsünü SQL Server çalıştırma**
+- **Linux, Mac veya Windows \ SQL Server Docker görüntüsünü çalıştırın**
     [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](/sql/linux/sql-server-linux-setup-docker)
 
-- **Linux üzerinde SQL Server sqlcmd ve Query with sqlcmd** \
+- **Sqlcmd \ ile Linux üzerinde SQL Server bağlama ve sorgulama**
     [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Web uygulaması başlangıcında test verileriyle dengeli dağıtım

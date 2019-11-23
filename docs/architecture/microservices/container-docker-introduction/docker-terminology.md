@@ -31,7 +31,7 @@ Bu bölümde, Docker 'a daha ayrıntılı bir şekilde yararlanmak için bilmeni
 
 **Kayıt defteri**: depolara erişim sağlayan bir hizmet. Çoğu ortak görüntü için varsayılan kayıt defteri, [Docker Hub](https://hub.docker.com/) ' dır (kuruluş olarak Docker tarafından sahiplenilir). Kayıt defteri genellikle birden çok ekipten depoları içerir. Şirketler genellikle oluşturdukları görüntüleri depolamak ve yönetmek için özel kayıt defterlerine sahiptir. Azure Container Registry başka bir örnektir.
 
-**Multi-Arch Image**: Multi-Architecture için, uygun görüntünün seçimini kolaylaştıran bir özelliktir, Docker 'ın çalıştığı platforma göre, bir Dockerfile, Docker 'ın çalıştırıldığı işletim sistemine ve sürümüne bağlı olarak, **MCR.Microsoft.com/DotNet/Core/SDK:2.2 'den** bir temel görüntü istediğinde, gerçekten **2,2-SDK-nanoserver-1709**, **2,2-SDK-nanoserver-1803**, **2,2-SDK-nanoserver-1809** veya **2,2-SDK-uzat** .
+**Multi-Arch Image**: Multi-Architecture için, uygun görüntünün seçimini kolaylaştıran bir özelliktir, Docker 'ın çalıştığı platforma göre, bir Dockerfile, Docker 'ın çalıştırıldığı işletim sistemine ve sürümüne bağlı olarak, **MCR.Microsoft.com/DotNet/Core/SDK:2.2 'den** bir temel görüntü istediğinde, gerçekten **2,2-SDK-nanoserver-1709**, **2,2-SDK-nanoserver-1803**, **2,2-SDK-nanoserver-1809** veya **2,2-SDK-uzat**.
 
 **Docker Hub**: görüntüleri karşıya yüklemek ve bunlarla çalışmak için ortak bir kayıt defteri. Docker Hub, Docker görüntüsü barındırma, genel veya özel kayıt defterleri, derleme Tetikleyicileri ve Web kancaları, GitHub ve BitBucket ile tümleştirme sağlar.
 

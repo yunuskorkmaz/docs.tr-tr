@@ -94,11 +94,11 @@ import { Component } from '@angular/core';
 export class AppComponent { name = 'Angular'; }
 ```
 
-Bileşenler, bileşen hakkında meta @Component veriler alan dekoratör işlevi kullanılarak tanımlanır. Selector özelliği, bu bileşenin görüntüleneceği sayfadaki öğenin kimliğini tanımlar. Şablon özelliği, son satırda tanımlanan bileşen adı özelliğine karşılık gelen bir yer tutucu içeren basit bir HTML şablonudur.
+Bileşenler, bileşeni hakkında meta veriler alan @Component dekoratör işlevi kullanılarak tanımlanır. Selector özelliği, bu bileşenin görüntüleneceği sayfadaki öğenin kimliğini tanımlar. Şablon özelliği, son satırda tanımlanan bileşen adı özelliğine karşılık gelen bir yer tutucu içeren basit bir HTML şablonudur.
 
 DOM öğeleri yerine bileşenler ve şablonlar ile çalışarak, angular uygulamaları daha yüksek bir soyutlama düzeyinde ve yalnızca JavaScript ("Vanilla JS" olarak da bilinir) kullanılarak yazılmış uygulamalardan veya jQuery ile daha az genel kodla çalışabilir. Angular Ayrıca, istemci tarafı betik dosyalarınızı düzenleme konusunda bir sıralama uygular. Kurala göre, angular uygulamaları, bir uygulama klasöründe bulunan modül ve bileşen komut dosyaları ile ortak bir klasör yapısı kullanır. Uygulama oluşturma, dağıtma ve test etme ile ilgili angular betikleri genellikle daha yüksek düzey bir klasörde bulunur.
 
-Angular ayrıca komut satırı arabirimi (CLı) araçlarının harika bir şekilde kullanılmasını sağlar. Angular geliştirmeyi yerel olarak kullanmaya başlama (git ve NPM 'nin yüklü olduğu varsayılarak), GitHub 'dan ve çalıştıran `npm install` `npm start`bir depoyu klonlamalarından oluşur. Bunun ötesinde, angular, proje oluşturabileceğiniz, dosya ekleyen ve test etme, paketleme ve dağıtım görevlerine yardımcı olan kendi CLı aracını dağıtırın. Bu CLı araçları, özellikle de ASP.NET Core ile uyumlu olan ve harika CLı desteği sunan bir fikir sunar.
+Angular ayrıca komut satırı arabirimi (CLı) araçlarının harika bir şekilde kullanılmasını sağlar. Angular geliştirmeyi yerel olarak kullanmaya başlama (git ve NPM 'nin yüklü olduğu varsayılarak), GitHub 'dan bir depoyu kopyalamayı ve `npm install` ve `npm start`çalıştırmayı içerir. Bunun ötesinde, angular, proje oluşturabileceğiniz, dosya ekleyen ve test etme, paketleme ve dağıtım görevlerine yardımcı olan kendi CLı aracını dağıtırın. Bu CLı araçları, özellikle de ASP.NET Core ile uyumlu olan ve harika CLı desteği sunan bir fikir sunar.
 
 Microsoft, angular SPA uygulaması içeren bir başvuru uygulaması ( [Eshoponcontainers](https://aka.ms/MicroservicesArchitecture)) geliştirmiştir. Bu uygulama, çevrimiçi mağaza alışveriş sepetini yönetmek, kataloğundan öğeleri yüklemek ve göstermek ve sipariş oluşturmayı işlemek için angular modüllerini içerir. Örnek uygulamayı [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA)' dan görüntüleyebilir ve indirebilirsiniz.
 
@@ -144,7 +144,7 @@ JavaScript çerçeveleri Breakneck hızında gelişmeye devam eder. Daha sonra b
 >
 > - **HTML ve CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
-> - **Sass ile karşılaştırması BÜYÜKTÜR**  
+> - **Sass ile daha az**  
 > <https://www.keycdn.com/blog/sass-vs-less/>
 > - **DAHA az, Sass ve yazı tipi harika olan uygulamaları ASP.NET Core Stillendirme**  
 > <https://docs.microsoft.com/aspnet/core/client-side/less-sass-fa>
@@ -166,5 +166,5 @@ JavaScript çerçeveleri Breakneck hızında gelişmeye devam eder. Daha sonra b
 > <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
->[Önceki](common-web-application-architectures.md)İleri
->[](develop-asp-net-core-mvc-apps.md)
+>[Önceki](common-web-application-architectures.md)
+>[İleri](develop-asp-net-core-mvc-apps.md)

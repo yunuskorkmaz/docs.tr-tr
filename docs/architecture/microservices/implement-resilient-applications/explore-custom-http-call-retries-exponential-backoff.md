@@ -13,7 +13,7 @@ ms.locfileid: "70296123"
 
 Dayanıklı mikro hizmetler oluşturmak için olası HTTP hatası senaryolarını işlemeniz gerekir. Bu hataların yerine getirmenin bir yolu, önerilmez, ancak üstel geri alma ile kendi yeniden deneme uygulamanızı oluşturmaktır.
 
-**Önemli bir dikkat:** Bu bölümde, HTTP çağrısı yeniden denemeleri uygulamak için kendi özel kodunuzu nasıl oluşturacağınız gösterilmektedir. Ancak, .NET Core 2,1 ' den beri kullanılabilir `HttpClientFactory` olan, daha basit ve güvenilir bir şekilde kullanılması önerilir. Bu önerilen yaklaşımlar sonraki bölümlerde açıklanmıştır.
+**Önemli bir dikkat:** Bu bölümde, HTTP çağrısı yeniden denemeleri uygulamak için kendi özel kodunuzu nasıl oluşturacağınız gösterilmektedir. Ancak, .NET Core 2,1 ' den beri sunulan, daha `HttpClientFactory` basit ve güvenilir bir şekilde kullanmak için, daha güçlü ve güvenilir bir şekilde kullanılması önerilmez. Bu önerilen yaklaşımlar sonraki bölümlerde açıklanmıştır.
 
 İlk araştırma olarak, [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260)' de olduğu gibi üstel geri alma için yardımcı program sınıfıyla kendi kodunuzu uygulayabilir ve aşağıdakine benzer bir kod ekleyebilirsiniz.
 
@@ -114,5 +114,5 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 Bu kodun yalnızca kavram kanıtı olarak uygun olduğunu unutmayın. Sonraki bölümlerde, HttpClientFactory kullanarak daha basit olan daha karmaşık yaklaşımların nasıl kullanılacağı açıklanmaktadır. HttpClientFactory, .NET Core 2,1 sürümünden itibaren Polly gibi kanıtlanmış dayanıklılık kitaplıklarıyla kullanılabilir.
 
 >[!div class="step-by-step"]
->[Önceki](implement-resilient-entity-framework-core-sql-connections.md)İleri
->[](use-httpclientfactory-to-implement-resilient-http-requests.md)
+>[Önceki](implement-resilient-entity-framework-core-sql-connections.md)
+>[İleri](use-httpclientfactory-to-implement-resilient-http-requests.md)

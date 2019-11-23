@@ -52,7 +52,7 @@ Etki alanı modelinizi toplamalara göre tasarladığınızda, NoSQL ve belge od
 
 ## <a name="introduction-to-azure-cosmos-db-and-the-native-cosmos-db-api"></a>Azure Cosmos DB ve yerel Cosmos DB API 'sine giriş
 
-[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) , Microsoft 'un görev açısından kritik uygulamalar için genel olarak dağıtılmış veritabanı hizmetidir. Azure Cosmos DB, [ön anahtar genel dağıtımı](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally), [Esnek işleme ve depolama için esnek ölçeklendirme](https://docs.microsoft.com/azure/cosmos-db/partition-data) , 99. yüzdebirlik, [beş adet iyi tanımlanmış tutarlılık düzeyi](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)ve garantili yüksek gecikme süreleriyle birlikte, tek basamaklı milisaniyelik gecikme süresi sağlar kullanılabilirlik, hepsi [sektörde önde gelen SLA 'lar](https://azure.microsoft.com/support/legal/sla/cosmos-db/)tarafından desteklenir. Azure Cosmos DB şema ve dizin yönetimiyle ilgilenmenize gerek kalmadan [otomatik olarak verileri dizine](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf) ekler. Çoklu modeldir ve belge, anahtar-değer, grafik ve sütunlu veri modellerini destekler.
+[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) , Microsoft 'un görev açısından kritik uygulamalar için genel olarak dağıtılmış veritabanı hizmetidir. Azure Cosmos DB, açık [anahtar genel dağıtımı](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally), [Esnek işleme ve depolama için esnek ölçeklendirme](https://docs.microsoft.com/azure/cosmos-db/partition-data) , 99. yüzdebirlik, [beş adet iyi tanımlanmış tutarlılık düzeyi](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)ve garantili yüksek kullanılabilirlik, hepsi [sektörde önde gelen SLA 'lar](https://azure.microsoft.com/support/legal/sla/cosmos-db/)tarafından desteklenir. Azure Cosmos DB, şema ve dizin yönetimiyle ilgilenmenize gerek kalmadan [otomatik olarak verilerin dizinini oluşturur](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf). Çok modelli olan bu hizmet belge, anahtar-değer, grafik ve sütunlu veri modellerini destekler.
 
 ![Azure Cosmos DB genel dağıtımı gösteren diyagram.](./media/nosql-database-persistence-infrastructure/azure-cosmos-db-global-distribution.png)
 
@@ -138,7 +138,7 @@ Cosmos DB veritabanları, .NET için MongoDB API 'nin yanı sıra yerel MongoDB 
 
 [MongoDB Docker görüntüsü](https://hub.docker.com/r/_/mongo/) , Docker Linux kapsayıcılarını ve Docker Windows kapsayıcılarını destekleyen çok katmanlı bir görüntü olduğundan, Linux kapsayıcılarıyla Docker ortamlarında kavram kanıtı açısından çok kullanışlı bir yaklaşımdır.
 
-Aşağıdaki görüntüde gösterildiği gibi, MongoDB API 'sini kullanarak, eShopOnContainers yerel geliştirme ortamı için MongoDB Linux ve Windows kapsayıcılarını destekler, ancak Azure Cosmos DB daha [sonra yalnızca Azure Cosmos DB işaret etmek için MongoDB bağlantı dizesi](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account).
+Aşağıdaki görüntüde gösterildiği gibi, MongoDB API 'sini kullanarak, eShopOnContainers yerel geliştirme ortamı için MongoDB Linux ve Windows kapsayıcılarını destekler, ancak daha sonra [MongoDB bağlantı dizesini Azure Cosmos DB işaret etmek üzere değiştirerek](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)ölçeklenebilir, PaaS bulut çözümüne Azure Cosmos DB olarak geçebilirsiniz.
 
 ![EShopOnContainers 'daki konum mikro hizmetinin Cosmos DB ya da Mongo DB 'yi kullanabileceği diyagram.](./media/nosql-database-persistence-infrastructure/eshoponcontainers-mongodb-containers.png)
 
@@ -299,9 +299,9 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 #ESHOP_AZURE_SERVICE_BUS=<YourAzureServiceBusInfo>
 ```
 
-ESHOP_AZURE_COSMOSDB satırının açıklamasını kaldırın ve [bir MongoDB uygulamasını Azure Cosmos DB 'e bağlama](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)bölümünde açıklandığı gibi Azure Portal elde edilen Azure Cosmos DB bağlantı dizeniz ile güncelleştirmeniz gerekir.
+ESHOP_AZURE_COSMOSDB satırının açıklamasını kaldırın ve Azure Cosmos DB bağlantı dizeniz ile [bir MongoDB uygulamasını Azure Cosmos DB 'ye bağlama](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)bölümünde açıklandığı gibi Azure Portal elde edin.
 
-`ESHOP_AZURE_COSMOSDB` global değişkeni boşsa, `.env` dosyasında açıklama eklendiğinde, kapsayıcı eShopOnContainers 'da dağıtılan ve `nosql.data` adlı yerel MongoDB kapsayıcısını işaret eden bir varsayılan MongoDB bağlantı dizesi kullanır. Aşağıdaki. yıml kodunda gösterildiği gibi Docker-Compose dosyasında tanımlanmıştır.
+`ESHOP_AZURE_COSMOSDB` genel değişkeni boşsa, `.env` dosyasında açıklama eklendiğinde, kapsayıcı Eshopon`nosql.data` containers içinde dağıtılan yerel MongoDB kapsayıcısını işaret eden bir varsayılan MongoDB bağlantı dizesi kullanarak, aşağıdaki. yıml kodunda gösterildiği gibi, Docker-Compose dosyasında tanımlanmıştır.
 
 ``` yml
 # docker-compose.yml

@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: nesne grafiğini proje (Visual Basic)'
+title: 'How to: Project an Object Graph'
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 6c4a040600b26e3e2d3d031c8eb991dd9c14fbac
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 68b58226dbf30f82709a39e96bef0f8cce95d0ec
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320266"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347774"
 ---
-# <a name="how-to-project-an-object-graph-visual-basic"></a>Nasıl yapılır: nesne grafiğini proje (Visual Basic)
-Bu konu, XML 'deki bir nesne grafiğinin nasıl proje veya doldurma yapılacağını gösterir.  
+# <a name="how-to-project-an-object-graph-visual-basic"></a>How to: Project an Object Graph (Visual Basic)
+This topic illustrates how to project, or populate, an object graph from XML.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, örnek XML dosyasındaki `Address`, `PurchaseOrder` ve `PurchaseOrderItem` sınıflarıyla bir nesne grafiğini doldurur [: tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML belgesi.  
+ The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML document.  
   
 ```vb  
 Class Address  
@@ -296,9 +296,9 @@ Sub Main()
 End Sub  
 ```  
   
- Bu örnekte, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusunun sonucu, `PurchaseOrderItem` @no__t olarak döndürülür. @No__t-0 sınıfındaki öğeler <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem` türündedir. Kod, sorgunun sonuçlarından bir <xref:System.Collections.Generic.List%601> koleksiyonu oluşturmak için <xref:System.Linq.Enumerable.ToList%2A> genişletme yöntemini kullanır.  
+ In this example, the result of the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`. The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`. The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.  
   
- Örnek aşağıdaki çıktıyı üretir:  
+ The example produces the following output:  
   
 ```console  
 PurchaseOrderNumber: 99503  
@@ -341,4 +341,4 @@ ShipDate: 5/21/1999
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
-- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

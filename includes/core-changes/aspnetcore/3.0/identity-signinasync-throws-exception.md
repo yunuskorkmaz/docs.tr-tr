@@ -8,27 +8,27 @@ ms.locfileid: "72394186"
 ---
 ### <a name="identity-signinasync-throws-exception-for-unauthenticated-identity"></a>Kimlik: Signınasync kimliği doğrulanmamış kimlik için özel durum oluşturur
 
-Varsayılan olarak, `IsAuthenticated`  `false` olduğu sorumlular/kimlikler için bir özel durum oluşturur.
+Varsayılan olarak, `SignInAsync`, `IsAuthenticated` `false`olduğu sorumlular/kimlikler için bir özel durum oluşturur.
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-`SignInAsync`, `IsAuthenticated` ' in `false` olduğu kimlikler de dahil olmak üzere herhangi bir sorumlusu/kimliği kabul eder.
+`SignInAsync`, `IsAuthenticated` `false`oldukları kimlikler dahil tüm sorumlularını/kimlikleri kabul eder.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Varsayılan olarak, `IsAuthenticated`  `false` olduğu sorumlular/kimlikler için bir özel durum oluşturur. Bu davranışı bastırmak için yeni bir bayrak bulunur, ancak varsayılan davranış değişmiştir.
+Varsayılan olarak, `SignInAsync`, `IsAuthenticated` `false`olduğu sorumlular/kimlikler için bir özel durum oluşturur. Bu davranışı bastırmak için yeni bir bayrak bulunur, ancak varsayılan davranış değişmiştir.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Varsayılan olarak, bu sorumlular `[Authorize]` @ no__t-1 @ no__t-2 tarafından reddedildiği için eski davranış soruna neden oldu.
+Varsayılan olarak, bu sorumlular `[Authorize]` / `RequireAuthenticatedUser()`tarafından reddedildiği için eski davranış soruna neden oldu.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-ASP.NET Core 3,0 Preview 6 ' da, varsayılan olarak `true` olan `AuthenticationOptions` `RequireAuthenticatedSignIn` bayrağı vardır. Eski davranışı geri yüklemek için bu bayrağı `false` olarak ayarlayın.
+ASP.NET Core 3,0 Preview 6 ' da, varsayılan olarak `true` `AuthenticationOptions` `RequireAuthenticatedSignIn` bir bayrak vardır. Eski davranışı geri yüklemek için bu bayrağı `false` olarak ayarlayın.
 
 #### <a name="category"></a>Kategori
 

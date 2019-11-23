@@ -11,10 +11,10 @@ ms.locfileid: "70295297"
 ---
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>Docker ve Microsoft Azure kullanarak Kapsayıcılı uygulamalar tasarlama ve geliştirme
 
-*Minin Docker ile ölçeklenebilir çözümler tasarlayın ve geliştirin.*
+*Vizyon: Docker ile ölçeklenebilir çözümler tasarlayın ve geliştirin.*
 
 *Yalnızca mikro hizmetlere dayalı mimarilere değil, kapsayıcılar için çok sayıda çok büyük kullanım durumu vardır, ancak aynı zamanda çalıştırmak için düzenli hizmetler veya Web uygulamalarınız olduğunda ve geliştirme ve üretim ortamı arasındaki kesintileri azaltmak istediğinizde dağıtımlar.*
 
 >[!div class="step-by-step"]
->[Önceki](../Microsoft-platform-tools-containerized-apps/index.md)İleri
->[](design-docker-applications.md)
+>[Önceki](../Microsoft-platform-tools-containerized-apps/index.md)
+>[İleri](design-docker-applications.md)

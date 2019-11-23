@@ -33,7 +33,7 @@ Bu UI Composition mikro hizmetlerinin her biri, küçük bir API ağ geçidine b
 
 Mikro hizmetler tarafından yönetilen bileşik bir kullanıcı arabirimi yaklaşımı, kullanmakta olduğunuz UI teknolojilerine bağlı olarak daha zor veya daha az olabilir. Örneğin, bir SPA veya yerel mobil uygulama oluşturmak için kullandığınız geleneksel bir Web uygulaması oluşturmak için aynı teknikleri kullanamazsınız (Bu yaklaşım için daha zor olabilecek Xamarin uygulamaları geliştirilirken olduğu gibi).
 
-[Eshoponcontainers](https://aka.ms/MicroservicesArchitecture) örnek uygulaması, birden çok nedenden dolayı tek parçalı kullanıcı arabirimi yaklaşımını kullanır. İlk olarak, mikro hizmetler ve kapsayıcılar için bir giriş niteliğindedir. Bileşik bir kullanıcı arabirimi daha gelişmiş olmakla kalmaz, Kullanıcı arabirimini tasarlarken ve geliştirirken de daha fazla karmaşıklık gerektirir. İkinci olarak, eShopOnContainers, Xamarin 'e dayalı yerel bir mobil uygulama de sağlar ve bu da, C @ no__t-0 tarafında istemci üzerinde daha karmaşık hale gelir.
+[Eshoponcontainers](https://aka.ms/MicroservicesArchitecture) örnek uygulaması, birden çok nedenden dolayı tek parçalı kullanıcı arabirimi yaklaşımını kullanır. İlk olarak, mikro hizmetler ve kapsayıcılar için bir giriş niteliğindedir. Bileşik bir kullanıcı arabirimi daha gelişmiş olmakla kalmaz, Kullanıcı arabirimini tasarlarken ve geliştirirken de daha fazla karmaşıklık gerektirir. İkinci olarak, eShopOnContainers, Xamarin 'e dayalı yerel bir mobil uygulama de sağlar ve bu da istemci C\# tarafında daha karmaşık hale gelir.
 
 Ancak, mikro hizmetlere dayalı bileşik UI hakkında daha fazla bilgi edinmek için aşağıdaki başvuruları kullanmanız önerilir.
 

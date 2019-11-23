@@ -52,5 +52,5 @@ Kapsayıcı tabanlı sisteminizin en iyi yoğunluğu, ayrıntı düzeyi ve perfo
 Bu özellikle, yüzlerce mikro hizmet (kapsayıcı) çalıştırdığınız mikro hizmet mimarileri için geçerlidir. Linux veya Windows nano 'daki ASP.NET Core görüntülerle (.NET Core çalışma zamanına bağlı olarak), sisteminizi çok daha az sayıda sunucu veya VM ile çalıştırarak, son olarak altyapı ve barındırma halinde maliyet tasarrufu yapabilirsiniz.
 
 >[!div class="step-by-step"]
->[Önceki](general-guidance.md)İleri
->[](net-framework-container-scenarios.md)
+>[Önceki](general-guidance.md)
+>[İleri](net-framework-container-scenarios.md)

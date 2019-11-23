@@ -37,7 +37,7 @@ Aşağıdaki seçeneklerden istediğiniz çalışan çalışma zamanını seçin
 - `node` (JavaScript)
 - `python`
 
-Proje oluşturulduğunda, bir Dockerfile içerecektir. Şimdi, işlevinizi yerel olarak oluşturup test edebilirsiniz. `docker build` Ve`docker run` komutlarını kullanarak derleyin ve çalıştırın. Docker desteğiyle Azure Işlevleri oluşturmaya başlamanıza yönelik ayrıntılı adımlar için bkz. [Linux üzerinde bir Işlev oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image) öğreticisini kullanarak.
+Proje oluşturulduğunda, bir Dockerfile içerecektir. Şimdi, işlevinizi yerel olarak oluşturup test edebilirsiniz. `docker build` ve `docker run` komutlarını kullanarak derleyin ve çalıştırın. Docker desteğiyle Azure Işlevleri oluşturmaya başlamanıza yönelik ayrıntılı adımlar için bkz. [Linux üzerinde bir Işlev oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image) öğreticisini kullanarak.
 
 ## <a name="how-to-combine-serverless-and-kubernetes-with-keda"></a>KEDA ile sunucusuz ve Kubernetes 'i birleştirme
 

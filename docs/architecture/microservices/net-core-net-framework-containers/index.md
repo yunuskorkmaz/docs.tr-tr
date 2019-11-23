@@ -14,5 +14,5 @@ ms.locfileid: "70849280"
 .NET: [.NET Framework ve .NET Core](https://dotnet.microsoft.com/download)ile sunucu tarafı Kapsayıcılı Docker uygulamaları oluşturmaya yönelik iki desteklenen çerçeve vardır. Bunlar birçok .NET Platform bileşenini paylaşır ve kodu iki arasında paylaşabilirsiniz. Ancak bunlar arasında temel farklılıklar vardır ve kullandığınız çerçeve, gerçekleştirmek istediğiniz işe göre farklılık gösterir. Bu bölüm her bir çerçevenin ne zaman seçlenebileceğine ilişkin yönergeler sağlar.
 
 >[!div class="step-by-step"]
->[Önceki](../container-docker-introduction/docker-containers-images-registries.md)İleri
->[](general-guidance.md)
+>[Önceki](../container-docker-introduction/docker-containers-images-registries.md)
+>[İleri](general-guidance.md)

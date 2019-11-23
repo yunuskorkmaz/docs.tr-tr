@@ -226,7 +226,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 
 Önceki kodda `orderConfiguration.OwnsOne(o => o.Address)` yöntemi, `Address` özelliğinin `Order` türünün sahip olduğu bir varlık olduğunu belirtir.
 
-Varsayılan olarak EF Core kurallar, sahip olduğu varlık türünün özelliklerinin veritabanı sütunlarını `EntityProperty_OwnedEntityProperty`olarak adlandırın. Bu nedenle, `Address` iç özellikleri `Orders` tabloda `Address_Street`, `Address_City` (`State`ve `Country` için) adlarıyla görüntülenir.
+Varsayılan olarak EF Core kurallar, sahip olduğu varlık türünün özelliklerinin veritabanı sütunlarını `EntityProperty_OwnedEntityProperty`olarak adlandırın. Bu nedenle, `Address` iç özellikleri `Orders` tabloda `Address_Street`, `Address_City` (`State`ve `Country` için) adlarıyla görüntülenir.`ZipCode`
 
 Bu sütunları yeniden adlandırmak için `Property().HasColumnName()` floent metodunu ekleyebilirsiniz. `Address` ortak bir özellik olduğu durumda, eşlemeler aşağıdakine benzer olacaktır:
 

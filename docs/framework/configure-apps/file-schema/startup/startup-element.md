@@ -16,12 +16,12 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699411"
 ---
-# <a name="startup-element"></a>\<startup > öğesi
+# <a name="startup-element"></a>\<Başlangıç > öğesi
 
 Ortak dil çalışma zamanı başlangıç bilgilerini belirtir.
 
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<startup >**  
+&nbsp;&nbsp; **\<başlatma >**  
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,7 +44,7 @@ Ortak dil çalışma zamanı başlangıç bilgilerini belirtir.
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`true`|Eski çalışma zamanı etkinleştirme tekniklerini ( [CorBindToRuntimeEx işlevi](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)gibi), clr 'de kullanmak yerine yapılandırma dosyasından seçilen çalışma zamanına bağlamak için, seçilen çalışma zamanına yönelik .NET Framework 2,0 çalışma zamanı etkinleştirme ilkesini etkinleştirin sürüm 2,0. Bu nedenle, yapılandırma dosyasından CLR sürüm 4 veya üzeri seçilirse, önceki .NET Framework sürümleriyle oluşturulan karma mod derlemeleri seçilen CLR sürümü ile yüklenir. Bu değeri ayarlamak, CLR sürüm 1,1 veya CLR sürüm 2,0 ' nin aynı işleme yüklenmesini engeller ve işlem içi yan yana özelliğini etkin bir şekilde devre dışı bırakır.|
+|`true`|Eski çalışma zamanı etkinleştirme tekniklerini ( [CorBindToRuntimeEx işlevi](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)gibi) yapılandırma dosyasından seçilen çalışma zamanına bağlamak yerine, bunları CLR sürüm 2,0 ' de kullanmak yerine, seçilen çalışma zamanı için .NET Framework 2,0 çalışma zamanı etkinleştirme ilkesini etkinleştirin. Bu nedenle, yapılandırma dosyasından CLR sürüm 4 veya üzeri seçilirse, önceki .NET Framework sürümleriyle oluşturulan karma mod derlemeleri seçilen CLR sürümü ile yüklenir. Bu değeri ayarlamak, CLR sürüm 1,1 veya CLR sürüm 2,0 ' nin aynı işleme yüklenmesini engeller ve işlem içi yan yana özelliğini etkin bir şekilde devre dışı bırakır.|
 |`false`|.NET Framework 4 ve üzeri için varsayılan etkinleştirme ilkesini kullanarak, eski çalışma zamanı etkinleştirme tekniklerinin işleme yönelik CLR sürüm 1,1 veya 2,0 ' i yüklemesine izin verir. Bu değeri ayarlamak, karışık mod derlemelerin .NET Framework 4 ' e veya üzeri bir sürüme derlenmedikleri takdirde, .NET Framework 4 veya üzeri bir sürümü ile oluşturulmalarına engel olur. Bu değer varsayılandır.|
 
 ### <a name="child-elements"></a>Alt öğeleri
@@ -62,16 +62,16 @@ Ortak dil çalışma zamanı başlangıç bilgilerini belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 
- **@No__t-1supportedRuntime >** öğesi, çalışma zamanının 1,1 veya sonraki bir sürümü kullanılarak oluşturulan tüm uygulamalar tarafından kullanılmalıdır. Yalnızca çalışma zamanının 1,0 sürümünü desteklemek üzere oluşturulan uygulamalar **\<requiredRuntime >** öğesini kullanmalıdır.
+ **\<supportedruntime >** öğesi, çalışma zamanının 1,1 veya sonraki bir sürümü kullanılarak oluşturulan tüm uygulamalar tarafından kullanılmalıdır. Yalnızca çalışma zamanının 1,0 sürümünü desteklemek üzere oluşturulan uygulamalar **\<requiredRuntime >** öğesini kullanmalıdır.
 
- Microsoft Internet Explorer 'da barındırılan bir uygulamanın başlangıç kodu, **\<startup >** öğesini ve onun alt öğelerini yoksayar.
+ Microsoft Internet Explorer 'da barındırılan bir uygulamanın başlangıç kodu, **\<başlangıç >** öğesini ve onun alt öğelerini yoksayar.
 
 ## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>UseLegacyV2RuntimeActivationPolicy özniteliği
 
- Bu öznitelik, uygulamanız [CorBindToRuntimeEx işlevi](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)gibi eski etkinleştirme yollarını kullanıyorsa ve bu yolların daha önceki bir sürüm yerine CLR sürüm 4 ' ü etkinleştirmesini istiyorsanız veya uygulamanız .NET ile derlendiğinde yararlıdır. Framework 4, ancak .NET Framework önceki bir sürümüyle oluşturulmuş bir karma mod derlemesine bağımlılığı vardır. Bu senaryolarda özniteliği `true` olarak ayarlayın.
+ Bu öznitelik, uygulamanız [CorBindToRuntimeEx işlevi](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)gibi eski etkinleştirme yollarını kullanıyorsa ve bu yolların daha önceki bir sürüm yerine CLR sürüm 4 ' ü etkinleştirmesini istiyorsanız ya da uygulamanız .NET Framework 4 ile oluşturulup daha önceki bir .NET Framework sürümüyle oluşturulmuş bir karma mod derlemesine bağımlılığı varsa yararlıdır. Bu senaryolarda, özniteliğini `true`olarak ayarlayın.
 
 > [!NOTE]
-> Özniteliğin `true` olarak ayarlanması, CLR sürüm 1,1 veya CLR sürüm 2,0 ' nin aynı işleme yüklenmesini engeller ve işlem içi yan yana özelliğini etkin bir şekilde devre dışı bırakır (bkz. [com birlikte çalışma Için yan yana yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))).
+> Özniteliği `true` olarak ayarlamak, CLR sürüm 1,1 veya CLR sürüm 2,0 ' nin aynı işleme yüklenmesini engeller ve işlem içi yan yana özelliğini etkin bir şekilde devre dışı bırakır (bkz. [com birlikte çalışması Için yan yana yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))).
 
 ## <a name="example"></a>Örnek
 

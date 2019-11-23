@@ -10,7 +10,7 @@ ms.lasthandoff: 10/15/2019
 ms.locfileid: "72319590"
 ---
 # <a name="multiset-entity-sql"></a>Çoklu küme (Entity SQL)
-Bir değer listesinden bir çoklu küme örneği oluşturur. Çoklu küme oluşturucudaki tüm değerler @no__t uyumlu bir türde olmalıdır-0. Boş çok kümeli oluşturuculara izin verilmez.  
+Bir değer listesinden bir çoklu küme örneği oluşturur. Çoklu küme oluşturucudaki tüm değerler `T`uyumlu türde olmalıdır. Boş çok kümeli oluşturuculara izin verilmez.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -20,12 +20,12 @@ MULTISET ( expression [{, expression }] )
 { expression [{, expression }] }  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `expression`  
  Herhangi bir geçerli değer listesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Çok KÜMELI @ no__t-0T türünde bir koleksiyon >.  
+ \<T > türünde bir koleksiyon.  
   
 ## <a name="remarks"></a>Açıklamalar  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] üç tür Oluşturucu sağlar: satır oluşturucular, nesne oluşturucular ve çoklu küme (veya koleksiyon) oluşturucuları. Daha fazla bilgi için bkz. [tür](constructing-types-entity-sql.md)oluşturma.  
@@ -39,7 +39,7 @@ MULTISET ( expression [{, expression }] )
  `{1, 2, 3}`  
   
 > [!NOTE]
-> İç içe yerleştirilmiş çoklu küme sabit değerleri yalnızca bir kaydırma çoklu kümeli tek bir çoklu küme öğesi olduğunda desteklenir; Örneğin, `{{1, 2, 3}}`. Kaydırma çoklu kümeli birden çok çoklu küme öğesine (örneğin, `{{1, 2}, {3, 4}}`) sahip olduğunda, iç içe yerleştirilmiş çoklu küme değerleri desteklenmez.  
+> İç içe yerleştirilmiş çoklu küme sabit değerleri yalnızca bir kaydırma çoklu kümeli tek bir çoklu küme öğesi olduğunda desteklenir; Örneğin, `{{1, 2, 3}}`. Kaydırma çoklu kümeli birden çok çoklu küme öğesine (örneğin, `{{1, 2}, {3, 4}}`) sahip olduğunda, iç içe yerleştirilmiş çoklu küme sabit değerleri desteklenmez.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki Entity SQL sorgusu, bir değer listesinden bir çoklu küme örneği oluşturmak için çoklu küme işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  

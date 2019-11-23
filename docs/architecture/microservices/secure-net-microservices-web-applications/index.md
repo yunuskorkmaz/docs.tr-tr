@@ -69,9 +69,9 @@ Dış kimlik doğrulamasını kullanmak için uygulamanızın HTTP istek işleme
 
 Popüler dış kimlik doğrulama sağlayıcıları ve bunlarla ilişkili NuGet paketleri aşağıdaki tabloda gösterilmiştir:
 
-| **Sağlayıcısını**  | **Paket**                                          |
+| **Sağlayıcı**  | **Paket**                                          |
 | ------------- | ---------------------------------------------------- |
-| **MICROSOFT** | **Microsoft. AspNetCore. Authentication. MicrosoftAccount** |
+| **Microsoft** | **Microsoft. AspNetCore. Authentication. MicrosoftAccount** |
 | **Google**    | **Microsoft. AspNetCore. Authentication. Google**           |
 | **'A**  | **Microsoft. AspNetCore. Authentication. Facebook**         |
 | **Twitter**   | **Microsoft. AspNetCore. Authentication. Twitter**          |
@@ -139,7 +139,7 @@ ASP.NET Core kimliği (veya kimlik Plus dış kimlik doğrulama sağlayıcılar�
 
 ### <a name="authenticate-with-an-openid-connect-or-oauth-20-identity-provider"></a>OpenID Connect veya OAuth 2,0 kimlik sağlayıcısı ile kimlik doğrulama
 
-Kullanıcı bilgileri Azure Active Directory veya OpenID Connect ya da OAuth 2,0 ' ı destekleyen başka bir kimlik çözümünde depolanıyorsa, OpenID Connect kullanarak kimlik doğrulamak için **Microsoft. AspNetCore. Authentication. Openıdconnect** paketini kullanabilirsiniz akışıyla. Örneğin, eShopOnContainers 'daki Identity. API mikro hizmeti için kimlik doğrulaması yapmak üzere, bir ASP.NET Core Web uygulaması, aşağıdaki Basitleştirilmiş örnekte gösterildiği gibi bu paketteki ara yazılımı kullanabilir `Startup.cs`:
+Kullanıcı bilgileri Azure Active Directory veya OpenID Connect ya da OAuth 2,0 ' ı destekleyen başka bir kimlik çözümünde depolanıyorsa, OpenID Connect iş akışını kullanarak kimlik doğrulamak için **Microsoft. AspNetCore. Authentication. Openıdconnect** paketini kullanabilirsiniz. Örneğin, eShopOnContainers 'daki Identity. API mikro hizmeti için kimlik doğrulaması yapmak üzere, bir ASP.NET Core Web uygulaması, aşağıdaki Basitleştirilmiş örnekte gösterildiği gibi bu paketteki ara yazılımı kullanabilir `Startup.cs`:
 
 ```csharp
 // Startup.cs

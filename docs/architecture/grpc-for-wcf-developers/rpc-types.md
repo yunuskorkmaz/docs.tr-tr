@@ -1,14 +1,13 @@
 ---
 title: WCF geliştiricileri için RPC-gRPC türleri
 description: WCF tarafından desteklenen uzak yordam çağrısı türlerinin ve gRPC 'de eşdeğerleri gözden geçirme
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: ce5bf03b01dff3f7bb201ff08c9065abc2e58360
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 64375236da17c0aedbafe1cb441e72a144203358
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846226"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967263"
 ---
 # <a name="types-of-rpc"></a>RPC türleri
 
@@ -62,7 +61,7 @@ Görebileceğiniz gibi, bir gRPC birli RPC hizmeti yöntemi uygulamak, gRPC ile 
 
 ## <a name="wcf-duplex-one-way-to-client"></a>WCF çift yönlü, tek yönlü istemciye
 
-WCF uygulamaları (belirli bağlamalarla birlikte), istemci ve sunucu arasında kalıcı bir bağlantı oluşturabilir ve sunucu, <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> belirtilen bir *geri çağırma arabirimi* kullanılarak, bağlantı kapatılana kadar istemciye zaman uyumsuz olarak veri gönderebilir özelliði.
+WCF uygulamaları (belirli bağlamalarla birlikte), istemci ve sunucu arasında kalıcı bir bağlantı oluşturabilir ve <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> özelliğinde belirtilen bir *geri çağırma arabirimi* kullanılarak sunucu, bağlantı kapatılana kadar istemciye zaman uyumsuz olarak veri gönderebilir.
 
 gRPC Hizmetleri, ileti akışlarıyla benzer işlevler sağlar. Akışlar, uygulama açısından *tam olarak* WCF çift yönlü hizmetlerine eşlenmiyor, ancak aynı sonuçlar elde edilebilir.
 

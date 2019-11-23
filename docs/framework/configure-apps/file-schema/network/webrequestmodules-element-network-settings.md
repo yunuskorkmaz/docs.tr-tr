@@ -19,8 +19,8 @@ ms.locfileid: "71697471"
 Ağ konaklarından bilgi istemek için kullanılacak modülleri belirtir.  
   
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4webRequestModules >  
+[ **System. net >\<** &nbsp;&nbsp;](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;\<webRequestModules >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,9 +50,9 @@ Ağ konaklarından bilgi istemek için kullanılacak modülleri belirtir.
 |[system.net](system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 öğesi, ağ konaklarına bilgi isteklerini işlemek için <xref:System.Net.WebRequest> sınıfının alt öğelerini kaydeder. Web isteği modülleri <xref:System.Net.IWebRequestCreate> arabirimini uygulamalıdır.  
+ `webRequestModules` öğesi, ağ konaklarına bilgi isteklerini işlemek için <xref:System.Net.WebRequest> sınıfının alt öğelerini kaydeder. Web isteği modülleri <xref:System.Net.IWebRequestCreate> arabirimini gerçekleştirmelidir.  
   
- .NET Framework, `http://`, `https://` ve `file://` ile başlayan URI 'Ler için Web isteği modülleri içerir. Varsayılan modülleri yalnızca yapılandırma dosyasına özel bir modül kaydederek geçersiz kılabilirsiniz.  
+ .NET Framework, `http://`, `https://`ve `file://`ile başlayan URI 'Ler için Web isteği modülleri içerir. Varsayılan modülleri yalnızca yapılandırma dosyasına özel bir modül kaydederek geçersiz kılabilirsiniz.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  

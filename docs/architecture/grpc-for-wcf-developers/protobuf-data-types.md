@@ -1,14 +1,13 @@
 ---
 title: Prototipsiz skaler veri türleri-WCF geliştiricileri için gRPC
 description: .NET Core 'da Protoarabellek ve gRPC tarafından desteklenen temel ve iyi bilinen veri türleri hakkında bilgi edinin.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: cae9cc483ffb791a9b53e6a2d9d7c0924d725a67
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: ae7f5f48099000dff0eefb36e23cb9b9f2ac517c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846356"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971549"
 ---
 # <a name="protobuf-scalar-data-types"></a>Protobuf skaler veri türleri
 
@@ -18,12 +17,12 @@ Prototip, yerel skaler değer türlerini destekler. Aşağıdaki tabloda bunlar�
 | ------------- | ------------ | ----- |
 | `double`      | `double`     |       |
 | `float`       | `float`      |       |
-| `int32`       | `int`        | 1\.     |
-| `int64`       | `long`       | 1\.     |
+| `int32`       | `int`        | 1     |
+| `int64`       | `long`       | 1     |
 | `uint32`      | `uint`       |       |
 | `uint64`      | `ulong`      |       |
-| `sint32`      | `int`        | 1\.     |
-| `sint64`      | `long`       | 1\.     |
+| `sint32`      | `int`        | 1     |
+| `sint64`      | `long`       | 1     |
 | `fixed32`     | `uint`       | 2     |
 | `fixed64`     | `ulong`      | 2     |
 | `sfixed32`    | `int`        | 2     |
@@ -34,16 +33,16 @@ Prototip, yerel skaler değer türlerini destekler. Aşağıdaki tabloda bunlar�
 
 ## <a name="notes"></a>Notlar
 
-1. `int32` ve `int64` için standart kodlama, imzalanmış değerlerle çalışırken verimsiz bir değer. Alanınız büyük olasılıkla negatif sayı içeriyorsa, bunun yerine `sint32` veya `sint64` kullanın. Her iki tür de sırasıyla C#`int`ve`long`türleriyle eşlenir.
+1. `int32` ve `int64` için standart kodlama, imzalanmış değerlerle çalışırken verimsiz bir değer. Alanınız büyük olasılıkla negatif sayı içeriyorsa, bunun yerine `sint32` veya `sint64` kullanın. Her iki tür de sırasıyla C# `int` ve `long` türleriyle eşlenir.
 2. `fixed` alanlar, her zaman değerin ne kadar olduğunu bağımsız olarak aynı sayıda bayt kullanır. Bu davranış, daha büyük değerler için serileştirme ve seri durumdan çıkarma sağlar.
 3. Prototip dizeler UTF-8 (veya 7 bit ASCII) kodlardır ve kodlanan uzunluk 2<sup>32</sup>' den büyük olamaz.
-4. Prototip çalışma zamanı,`byte[]`dizilerden ve bu kaynaklardan C# kolayca eşleyen bir `ByteString` türü sağlar.
+4. Prototip çalışma zamanı, `byte[]` dizilerden ve bu kaynaklardan C# kolayca eşleyen bir `ByteString` türü sağlar.
 
 ## <a name="other-net-primitive-types"></a>Diğer .NET ilkel türleri
 
 ### <a name="dates-and-times"></a>Tarihler ve saatler
 
-Yerel skaler türler,<xref:System.DateTimeOffset>,<xref:System.DateTime>ve<xref:System.TimeSpan>eşdeğer C#tarih ve saat değerleri için sağlamaz. Bu türler, desteklenen platformlar genelinde daha karmaşık alan türleri için kod oluşturma ve çalışma zamanı desteği sağlayan bazı Google "tanınmış türler" uzantıları kullanılarak belirtilebilir. Aşağıdaki tabloda tarih ve saat türleri gösterilmektedir:
+Yerel skaler türler, <xref:System.DateTimeOffset>, <xref:System.DateTime>ve <xref:System.TimeSpan>eşdeğer C#tarih ve saat değerleri için sağlamaz. Bu türler, desteklenen platformlar genelinde daha karmaşık alan türleri için kod oluşturma ve çalışma zamanı desteği sağlayan bazı Google "tanınmış türler" uzantıları kullanılarak belirtilebilir. Aşağıdaki tabloda tarih ve saat türleri gösterilmektedir:
 
 | C#türüyle | Prototip iyi bilinen tür |
 | ------- | ------------------------ |
@@ -90,7 +89,7 @@ Diğer platformlarda `UUID` olarak bilinen <xref:System.Guid> türü, prototipte
 
 ### <a name="nullable-types"></a>Boş değer atanabilir tipler
 
-İçin C# prototip kod oluşturma,`int32`için`int`gibi yerel türleri kullanır. Bu, değerlerin her zaman dahil olduğu ve null olamayacağı anlamına gelir. C# Kodunuzda `int?` kullanma gibi açık null gerektiren değerler Için, prototipli "Iyi bilinen türler", null yapılabilir C# türlere derlenen sarmalayıcıları içerir. Bunları kullanmak için, `wrappers.proto` `.proto` dosyanıza aşağıdaki gibi içeri aktarın:
+İçin C# prototip kod oluşturma, `int32`için `int` gibi yerel türleri kullanır. Bu, değerlerin her zaman dahil olduğu ve null olamayacağı anlamına gelir. C# Kodunuzda `int?` kullanma gibi açık null gerektiren değerler Için, prototipli "Iyi bilinen türler", null yapılabilir C# türlere derlenen sarmalayıcıları içerir. Bunları kullanmak için, `wrappers.proto` `.proto` dosyanıza aşağıdaki gibi içeri aktarın:
 
 ```protobuf  
 syntax = "proto3"
@@ -120,11 +119,11 @@ Aşağıdaki tabloda, sarmalama türlerinin, eşdeğer C# türlerine sahip tüm 
 
 `Timestamp` ve `Duration` bilinen türler, .NET içinde sınıflar olarak temsil edilir. bu nedenle, null yapılabilir bir sürüme gerek yoktur, ancak `DateTimeOffset` veya `TimeSpan`dönüştürülürken bu türlerin özelliklerinde null denetimi yapmanız önemlidir.
 
-## <a name="decimals"></a>ın
+## <a name="decimals"></a>In
 
 Prototip, yalnızca `double` ve `float`.NET `decimal` türünü yerel olarak desteklemez. Prototip projesinde, iyi bilinen türlere standart bir `Decimal` türü ekleme olasılığa, bunu destekleyen diller ve çerçeveler için platform desteğiyle, ancak henüz hiçbir şey uygulanmadığı için, prototipli projede devam eden bir tartışma vardır.
 
-.NET istemcileri ve sunucuları arasında güvenli seri hale getirme için çalışacak `decimal` türünü temsil eden bir ileti tanımı oluşturmak mümkündür, ancak diğer platformlardaki geliştiricilerin kullanılmakta olan biçimi anlaması ve kendi işlemesini uygulaması gerekir .
+.NET istemcileri ve sunucuları arasında güvenli seri hale getirme için çalışacak `decimal` türünü temsil eden bir ileti tanımı oluşturmak mümkündür, ancak diğer platformlardaki geliştiricilerin kullanılmakta olan biçimi anlaması ve onun için kendi işlemesini uygulaması gerekir.
 
 ### <a name="creating-a-custom-decimal-type-for-protobuf"></a>Protoarabellek için özel bir ondalık tür oluşturma
 

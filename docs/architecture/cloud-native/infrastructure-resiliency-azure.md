@@ -78,7 +78,7 @@ Daha önceki bir bölümde programlı yeniden deneme işlemleri uygulamak için 
 
 - *Azure Redis Cache.* Redsıs StackExchange istemcisi, başarısız denemelerde yeniden denemeler içeren bir bağlantı Yöneticisi sınıfı kullanır. Yeniden deneme sayısı, belirli bir yeniden deneme ilkesi ve bekleme süresi yapılandırılabilir.
 
-- *Azure Service Bus.* Service Bus istemcisi bir geri alma aralığı, yeniden deneme sayısı ve <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer> bir işlemin ne zaman sürebileceği maksimum süreyi belirten bir [Retrypolicy sınıfı](xref:Microsoft.ServiceBus.RetryPolicy) kullanıma sunar. Varsayılan ilke, denemeler arasında 30 saniyelik geri alma süresi olan dokuz en fazla yeniden deneme girişimdir.
+- *Azure Service Bus.* Service Bus istemcisi bir geri alma aralığı, yeniden deneme sayısı ve <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>bir işlemin ne zaman sürebileceği maksimum süreyi belirten bir [Retrypolicy sınıfı](xref:Microsoft.ServiceBus.RetryPolicy) kullanıma sunar. Varsayılan ilke, denemeler arasında 30 saniyelik geri alma süresi olan dokuz en fazla yeniden deneme girişimdir.
 
 - *Azure SQL veritabanı.* [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) kitaplığı kullanılırken yeniden deneme desteği sağlanır.
 

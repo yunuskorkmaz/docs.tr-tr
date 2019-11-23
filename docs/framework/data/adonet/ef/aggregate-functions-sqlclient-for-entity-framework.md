@@ -20,11 +20,11 @@ Bir koleksiyondaki değerlerin ortalamasını döndürür. Null değerler yok sa
 
 **Bağımsız Değişkenler**
 
-@No__t-0, `Int64`, `Double` ve `Decimal`.
+`Int32`, `Int64`, `Double`ve `Decimal`.
 
 **Dönüş değeri**
 
-@No__t türü-0.
+`expression` öğesinin türü.
 
 **Örnek**
 
@@ -40,7 +40,7 @@ Bir koleksiyondaki değerlerin ortalamasını döndürür. Null değerler yok sa
  
  **Dönüş değeri**
  
- @No__t-0.
+ Bir `Int32`.
  
  **Örnek**
  
@@ -48,11 +48,11 @@ Bir koleksiyondaki değerlerin ortalamasını döndürür. Null değerler yok sa
    
 ## <a name="countexpression"></a>COUNT (ifade)
 
-Bir koleksiyondaki öğelerin sayısını `Int32` olarak döndürür.
+Bir koleksiyondaki öğelerin sayısını `Int32`olarak döndürür.
 
 **Bağımsız Değişkenler**
 
-Bir Collection @ no__t-0T >, burada T aşağıdaki türlerden biridir:
+Bir koleksiyon\<T >, burada T aşağıdaki türlerden biridir:
 
 |   |   |   |   |
 |---|---|---|---|
@@ -61,15 +61,15 @@ Bir Collection @ no__t-0T >, burada T aşağıdaki türlerden biridir:
 
 **Dönüş değeri**
 
-@No__t-0.
+Bir `Int32`.
 
 **Örnek**
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)]
  
-## <a name="count_bigexpression"></a>COUNT_BıG (ifade)
+## <a name="count_bigexpression"></a>COUNT_BIG (ifade)
  
-Bir koleksiyondaki öğelerin sayısını `bigint` olarak döndürür.
+Bir koleksiyondaki öğelerin sayısını `bigint`olarak döndürür.
  
  **Bağımsız Değişkenler**
  
@@ -82,7 +82,7 @@ Bir koleksiyondaki öğelerin sayısını `bigint` olarak döndürür.
 
 **Dönüş değeri**
 
-@No__t-0.
+Bir `Int64`.
 
 **Örnek**
 
@@ -103,7 +103,7 @@ Bir koleksiyon (T), burada T aşağıdaki türlerden biridir:
 
 **Dönüş değeri**
 
-@No__t türü-0.
+`expression` öğesinin türü.
 
 **Örnek**
 
@@ -124,7 +124,7 @@ Bir koleksiyon (T), burada T aşağıdaki türlerden biridir:
 
 **Dönüş değeri**
 
-@No__t türü-0.
+`expression` öğesinin türü.
 
 **Örnek**
 
@@ -168,11 +168,11 @@ Koleksiyondaki tüm değerlerin toplamını döndürür.
 
 **Bağımsız Değişkenler**
 
-T 'nin şu türlerden biri olduğu bir koleksiyon (T): `Int32`, `Int64`, `Double`, `Decimal`.
+T 'nin şu türlerden biri olduğu bir koleksiyon (T): `Int32`, `Int64`, `Double``Decimal`.
 
 **Dönüş değeri**
 
-@No__t türü-0.
+`expression` öğesinin türü.
 
 **Örnek**
 

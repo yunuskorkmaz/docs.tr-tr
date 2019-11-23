@@ -2,12 +2,12 @@
 title: Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Docker kapsayıcıları için .NET Framework seçme
 ms.date: 01/07/2019
-ms.openlocfilehash: 8316d17aae09ddbd70bd80af4f06d8cb029f2752
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9e5b18e8e3482eb86c0d9dea5de56fb12f9d6256
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093758"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966886"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 
@@ -21,7 +21,7 @@ Bu senaryo için çoğu durumda, mevcut uygulamalarınızı .NET Core 'a geçirm
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>.NET Core için mevcut olmayan üçüncü taraf .NET kitaplıklarını veya NuGet paketlerini kullanma
 
-Üçüncü taraf kitaplıklar, .NET Core dahil olmak üzere tüm .NET türleri genelinde kod paylaşımına izin veren [.NET Standard](../../../standard/net-standard.md)hızla bir şekilde kabul eder. .NET Standard kitaplığı 2,0 ve farklı çerçeveler genelinde API Surface uyumluluğunun ötesinde büyük ölçüde daha büyük hale gelmiştir ve .NET Core 2. x uygulamaları ayrıca doğrudan mevcut .NET Framework kitaplıklarına başvurabilir (bkz. [.NET Framework 4.6.1 .NET Standard 2,0) desteği](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#net-framework-461-supporting-net-standard-20).
+Üçüncü taraf kitaplıklar, .NET Core dahil olmak üzere tüm .NET türleri genelinde kod paylaşımına izin veren [.NET Standard](../../../standard/net-standard.md)hızla bir şekilde kabul eder. .NET Standard kitaplığı 2,0 ve farklı çerçeveler genelinde API Surface uyumluluğunun ötesinde büyük ölçüde daha büyük hale gelmiştir ve .NET Core 2. x uygulamaları ayrıca doğrudan mevcut .NET Framework kitaplıklarına başvurabilir (bkz. [.NET Framework 4.6.1 destekleme .NET Standard 2,0](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#net-framework-461-supporting-net-standard-20)).
 
 Ayrıca, Windows [Uyumluluk Paketi](../../../core/porting/windows-compat-pack.md) windows üzerinde .NET Standard 2,0 için KULLANILABILIR olan API yüzeyini GENIŞLETMEK için kas-2017 ' de kullanıma sunulmuştur. Bu paket, Windows üzerinde çalıştırmak için çok sayıda kodu .NET Standard 2. x ' e yeniden derliyorsanız ve çok az değişiklikle.
 
@@ -51,15 +51,16 @@ Bu sırada, Azure 'daki herhangi bir platform veya hizmet, istemci API 'SI ile .
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **.NET Core Kılavuzu**  
+- **.NET Core kılavuzu** \
   [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
-- **.NET Framework 'den .NET Core 'a taşıma**  
+- **.NET Framework \ .NET Core 'A taşıma**
   [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
-- **Docker kılavuzundaki .NET Core** [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
+- **Docker kılavuzundaki .NET Core** \
+  [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
-- **.NET bileşenlerine genel bakış**  
+- **.Net bileşenlerine genel bakış** \
   [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
 
 >[!div class="step-by-step"]

@@ -1,25 +1,25 @@
 ---
-title: Visual Basic varsayılan ad alanlarının kapsamı
+title: Varsayılan Ad Alanlarının Kapsamı
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: a08d140cfc68c36c26487ab47fc82dd3bf522fa8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 8ba4d13b6d40180a88651f0503d1323f2b78f36c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581879"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343653"
 ---
-# <a name="scope-of-default-namespaces-in-visual-basic"></a>Visual Basic varsayılan ad alanlarının kapsamı
-XML ağacında temsil edilen varsayılan ad alanları sorgular kapsamında değildir. Varsayılan bir ad alanında olan XML varsa, sorguda kullanılacak nitelikli bir ad oluşturmak için bir <xref:System.Xml.Linq.XNamespace> değişkeni bildirmeniz ve yerel adla birleştirmeniz gerekir.  
+# <a name="scope-of-default-namespaces-in-visual-basic"></a>Scope of Default Namespaces in Visual Basic
+Default namespaces as represented in the XML tree are not in scope for queries. If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.  
   
- XML ağaçlarını sorgularken en yaygın sorunlardan biri, XML ağacının varsayılan bir ad alanına sahip olması ve geliştiricinin bazen sorguyu bir ad alanında olmamasına rağmen yazar.  
+ One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.  
   
- Bu konudaki ilk örnek kümesi, varsayılan bir ad alanındaki XML 'nin yüklendiği, ancak yanlış sorgulandığı tipik bir yöntemi gösterir.  
+ The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, but is queried improperly.  
   
- İkinci örnek kümesinde, bir ad alanında XML 'yi sorgulayabilmeniz için gerekli düzeltmeler gösterilmektedir.  
+ The second set of examples show the necessary corrections so that you can query XML in a namespace.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir ad alanında XML oluşturmayı ve boş bir sonuç kümesi döndüren bir sorguyu gösterir.  
+ This example shows the creation of XML in a namespace, and a query that returns an empty result set.  
   
 ### <a name="code"></a>Kod  
   
@@ -48,7 +48,7 @@ End Module
 ```  
   
 ### <a name="comments"></a>Açıklamalar  
- Bu örnek aşağıdaki sonucu üretir:  
+ This example produces the following result:  
   
 ```console  
 Result set follows:  
@@ -56,9 +56,9 @@ End of result set
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir ad alanında XML oluşturmayı ve düzgün kodlanmış bir sorguyu gösterir.  
+ This example shows the creation of XML in a namespace, and a query that is coded properly.  
   
- Yukarıdaki yanlış kodlanmış örneğin aksine, Visual Basic kullanırken doğru yaklaşım genel bir varsayılan ad alanını bildirmek ve başlatmak olur. Bu, tüm XML özelliklerini varsayılan ad alanına koyar. Doğru çalışması için örnek için başka bir değişiklik yapmanız gerekmez.  
+ In contrast to the incorrectly coded example above, the correct approach when using Visual Basic is to declare and initialize a global default namespace. This places all XML properties in the default namespace. No other modifications are required to the example to make it work properly.  
   
 ### <a name="code"></a>Kod  
   
@@ -89,7 +89,7 @@ End Module
 ```  
   
 ### <a name="comments"></a>Açıklamalar  
- Bu örnek aşağıdaki sonucu üretir:  
+ This example produces the following result:  
   
 ```console  
 Result set follows:  
@@ -101,4 +101,4 @@ End of result set
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

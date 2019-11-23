@@ -35,7 +35,7 @@ F5 'e basarak Windows hizmeti projelerini doğrudan Visual Studio geliştirme or
 
 ### <a name="install-your-service-manually-using-installutilexe-utility"></a>InstallUtil. exe yardımcı programını kullanarak hizmetinizi el ile yükleme
 
-1. **Başlat** menüsünde, **Visual Studio \<*Sürüm*>** dizinini ve sonra **vs \<*Sürüm*> için geliştirici komut istemi**' yı seçin.
+1. **Başlat** menüsünde, **Visual Studio \<*Sürüm*>** dizinini seçin ve sonra **vs \<*Sürüm*>için geliştirici komut istemi** ' yı seçin.
 
      Visual Studio için Geliştirici Komut İstemi görüntülenir.
 
@@ -47,7 +47,7 @@ F5 'e basarak Windows hizmeti projelerini doğrudan Visual Studio geliştirme or
     installutil <yourproject>.exe
     ```
 
-     Visual Studio için Geliştirici Komut İstemi kullanıyorsanız, *InstallUtil. exe* dosyası sistem yolunda olmalıdır. Aksi takdirde, yolu yola ekleyebilir veya tam yolu kullanarak çağırabilirsiniz. Bu araç, *%windir%\Microsoft.NET\Framework [64] \\ < framework_version @ no__t-2*' deki .NET Framework ile yüklenir.
+     Visual Studio için Geliştirici Komut İstemi kullanıyorsanız, *InstallUtil. exe* dosyası sistem yolunda olmalıdır. Aksi takdirde, yolu yola ekleyebilir veya tam yolu kullanarak çağırabilirsiniz. Bu araç, *%windir%\Microsoft.NET\Framework [64]\\< framework_version\>* .NET Framework ile yüklenir.
 
      Örneğin:
      - .NET Framework 4 veya 4,5 ' nin 32 bit sürümü ve sonrasında, Windows yükleme dizininiz *C:\Windows*ise, varsayılan yol *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*' dir.
@@ -55,7 +55,7 @@ F5 'e basarak Windows hizmeti projelerini doğrudan Visual Studio geliştirme or
 
 ### <a name="uninstall-your-service-manually-using-installutilexe-utility"></a>InstallUtil. exe yardımcı programını kullanarak hizmetinizi el ile kaldırın
 
-1. **Başlat** menüsünde, **Visual Studio \<*Sürüm*>** dizinini ve sonra **vs \<*Sürüm*> için geliştirici komut istemi**' yı seçin.
+1. **Başlat** menüsünde, **Visual Studio \<*Sürüm*>** dizinini seçin ve sonra **vs \<*Sürüm*>için geliştirici komut istemi** ' yı seçin.
 
      Visual Studio için Geliştirici Komut İstemi görüntülenir.
 

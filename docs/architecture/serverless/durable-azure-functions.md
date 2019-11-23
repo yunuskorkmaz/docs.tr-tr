@@ -27,7 +27,7 @@ Dayanıklı İşlevler durum bilgisi olan iş akışları, iki iç bileşene ayr
 
 Düzenlemeler, Azure Işlevlerinde tetiklenen işlemlerin diğer stilleriyle karşılaştırıldığında benzersizdir. Dayanıklı İşlevler, saat veya hatta tamamlanması gereken işlevlerin yürütülmesini sağlar. Bu tür davranışlar, çalışan bir düzenleme durumunun denetlenmesi, preemptively sonlanması veya dış olayların bildirimlerini gönderebilme gereksinimiyle birlikte gelir.
 
-Bu tür durumlarda Dayanıklı İşlevler uzantısı, genişletilmiş işlevlerle etkileşime girebilmeniz için `DurableOrchestrationClient` sınıfını sağlar. `OrchestrationClientAttribute` bağlamasını kullanarak Orchestration istemcisine erişebilirsiniz. Genellikle, bu özniteliği bir `HttpTrigger` veya `ServiceBusTrigger` gibi başka bir tetikleyici türüyle dahil edersiniz. Kaynak işlev tetiklendikten sonra, düzenleme istemcisi bir Orchestrator işlevi başlatmak için kullanılabilir.
+Bu tür durumlarda Dayanıklı İşlevler uzantısı, genişletilmiş işlevlerle etkileşime girebilmeniz için `DurableOrchestrationClient` sınıfını sağlar. `OrchestrationClientAttribute` bağlamasını kullanarak Orchestration istemcisine erişebilirsiniz. Genellikle, bu özniteliği bir `HttpTrigger` veya `ServiceBusTrigger`gibi başka bir tetikleyici türüyle dahil edersiniz. Kaynak işlev tetiklendikten sonra, düzenleme istemcisi bir Orchestrator işlevi başlatmak için kullanılabilir.
 
 ```csharp
 [FunctionName("KickOff")]
@@ -47,7 +47,7 @@ public static async Task<HttpResponseMessage> Run(
 
 Azure Işlevleri 'nde, bir Orchestrator işlevi olarak işlev gören OrchestrationTriggerAttribute ile bir işleve açıklama ekleme. Durum bilgisi olan iş akışınızı oluşturan çeşitli etkinlikleri yönetmekten sorumludur.
 
-Orchestrator işlevleri, OrchestrationTriggerAttribute dışındaki bağlamaları kullanamaz. Bu öznitelik, yalnızca DurableOrchestrationContext parametre türüyle kullanılabilir. İşlev imzasında girişlerin serisini kaldırma desteklenmediğinden başka giriş kullanılamaz. Orchestration istemcisi tarafından sağlanmış girdileri almak için Getınput \<T \> yöntemi kullanılmalıdır.
+Orchestrator işlevleri, OrchestrationTriggerAttribute dışındaki bağlamaları kullanamaz. Bu öznitelik, yalnızca DurableOrchestrationContext parametre türüyle kullanılabilir. İşlev imzasında girişlerin serisini kaldırma desteklenmediğinden başka giriş kullanılamaz. Orchestration istemcisi tarafından sağlanmış girdileri almak için Getınput\<T\> yöntemi kullanılmalıdır.
 
 Ayrıca, düzenleme işlevlerinin dönüş türleri void, Task veya JSON serileştirilebilir değeri olmalıdır.
 
@@ -81,7 +81,7 @@ Etkinlik işlevleri, iş akışını oluşturmak için bir Orchestration işlevi
 
 Düzenleme işlevlerine benzer şekilde, etkinlik işlevlerinin dönüş türleri void, Task veya JSON serileştirilebilir bir değer olmalıdır.
 
-Etkinlik işlevleri içinde oluşturulan işlenmemiş özel durumlar, çağıran Orchestrator işlevine gönderilir ve bir `TaskFailedException` olarak sunulur. Bu noktada, hata yakalanıp Orchestrator oturumu açabilir ve etkinlik yeniden denenebilir.
+Etkinlik işlevleri içinde oluşturulan işlenmemiş özel durumlar, çağıran Orchestrator işlevine gönderilir ve bir `TaskFailedException`olarak sunulur. Bu noktada, hata yakalanıp Orchestrator oturumu açabilir ve etkinlik yeniden denenebilir.
 
 ```csharp
 [FunctionName("CheckAndReserveInventory")]

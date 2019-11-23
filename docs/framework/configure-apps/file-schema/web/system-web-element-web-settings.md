@@ -15,11 +15,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699098"
 ---
-# <a name="systemweb-element-web-settings"></a>@no__t -0system. Web > öğesi (Web ayarları)
+# <a name="systemweb-element-web-settings"></a>System. Web > öğesi \<(Web ayarları)
 ASP.NET barındırma katmanının işlem genelinde davranışı nasıl yönettiği hakkında bilgi içerir.  
   
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **@no__t -3system. web >**  
+&nbsp;&nbsp; **\<System. web >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,11 +46,11 @@ Yok.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<yapılandırma >](../configuration-element.md)|Ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan her yapılandırma dosyasında kök öğesini belirtir.|  
+|[\<Yapılandırma >](../configuration-element.md)|Ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan her yapılandırma dosyasında kök öğesini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
 
-@No__t-0 öğesi ve onun alt `applicationPool` öğesi .NET Framework 3,5 SP1 itibariyle .NET Framework eklenmiştir. IIS 7,0 veya sonraki sürümlerini tümleşik modda çalıştırdığınızda, bu öğe birleşimi ASP.NET 'in iş parçacıklarını nasıl yönettiğini ve ASP.NET 'in bir IIS uygulama havuzunda barındırıldığında istekleri nasıl sıraya yazacağını yapılandırmanıza olanak tanır. IIS 7,0 veya sonraki sürümlerini klasik veya ISAPI modunda çalıştırırsanız, bu ayarlar yok sayılır.  
+`system.web` öğesi ve onun alt `applicationPool` öğesi .NET Framework 3,5 SP1 itibariyle .NET Framework eklenmiştir. IIS 7,0 veya sonraki sürümlerini tümleşik modda çalıştırdığınızda, bu öğe birleşimi ASP.NET 'in iş parçacıklarını nasıl yönettiğini ve ASP.NET 'in bir IIS uygulama havuzunda barındırıldığında istekleri nasıl sıraya yazacağını yapılandırmanıza olanak tanır. IIS 7,0 veya sonraki sürümlerini klasik veya ISAPI modunda çalıştırırsanız, bu ayarlar yok sayılır.  
   
 ## <a name="example"></a>Örnek  
 
@@ -67,11 +67,11 @@ Aşağıdaki örnek, ASP.NET bir IIS uygulama havuzunda barındırıldığında 
 </configuration>  
 ```  
   
-## <a name="element-information"></a>Öğe Bilgisi  
+## <a name="element-information"></a>Öğe Bilgileri  
   
 |||  
 |-|-|  
-|Ad Alanı||  
+|Ad alanı||  
 |Şema adı||  
 |Doğrulama dosyası||  
 |Boş olabilir||  

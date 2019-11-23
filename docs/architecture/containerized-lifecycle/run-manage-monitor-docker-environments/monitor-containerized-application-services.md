@@ -19,7 +19,7 @@ Birden çok kapsayıcıya ve mikro hizmetlere bölünen uygulamalar, tüm uygula
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Azure Izleyici 'ye Genel Bakış** \
+- **Azure izleyici \ genel bakış**
   <https://docs.microsoft.com/azure/azure-monitor/overview>
 
 - **Application Insights nedir?** \
@@ -28,7 +28,7 @@ Birden çok kapsayıcıya ve mikro hizmetlere bölünen uygulamalar, tüm uygula
 - **Azure Izleyici ölçümleri nedir?** \
   <https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-metrics>
 
-- **Azure Izleyici 'de kapsayıcı Izleme çözümü** \
+- **Azure izleyici 'de kapsayıcı izleme çözümü** \
   <https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
 ## <a name="security-and-backup-services"></a>Güvenlik ve yedekleme hizmetleri
@@ -50,5 +50,5 @@ Azure, hem bulut hem de şirket içi kaynaklarınızın dört kritik yönünü y
 - **Şirket içi kaynaklar**. [Gerçek anlamda tutarlı bir karma bulutla](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/).
 
 >[!div class="step-by-step"]
->[Önceki](manage-production-docker-environments.md)İleri
->[](../key-takeaways/index.md)
+>[Önceki](manage-production-docker-environments.md)
+>[İleri](../key-takeaways/index.md)

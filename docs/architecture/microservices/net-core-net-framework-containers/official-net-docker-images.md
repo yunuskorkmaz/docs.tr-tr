@@ -35,7 +35,7 @@ Bu tür derleme görüntüsü neden önemlidir? Bu görüntüyü üretime dağı
 
 ### <a name="in-production"></a>Üretimde
 
-Üretimde önemli olan özellikler, bir üretim .NET Core görüntüsüne göre kapsayıcıları dağıtmanıza ve başlatabilir. Bu nedenle, Docker Kayıt defterinizden Docker konaklarınıza ağ üzerinden hızla geçebilmesi için *MCR.Microsoft.com/DotNet/Core/ASPNET:2.2* tabanlı çalışma zamanı görüntüsü küçüktür. İçerik çalıştırılmaya hazırsa da, kapsayıcının sonuçları işlemeye başlaması için en hızlı süreyi etkinleştirir. Docker modelinde, derleme kapsayıcısını kullanırken DotNet derlemesini veya DotNet Publish çalıştırdığınızda olduğu gibi\# , C kodundan derleme için gerek yoktur.
+Üretimde önemli olan özellikler, bir üretim .NET Core görüntüsüne göre kapsayıcıları dağıtmanıza ve başlatabilir. Bu nedenle, Docker Kayıt defterinizden Docker konaklarınıza ağ üzerinden hızla geçebilmesi için *MCR.Microsoft.com/DotNet/Core/ASPNET:2.2* tabanlı çalışma zamanı görüntüsü küçüktür. İçerik çalıştırılmaya hazırsa da, kapsayıcının sonuçları işlemeye başlaması için en hızlı süreyi etkinleştirir. Docker modelinde, derleme kapsayıcısını kullanırken DotNet derlemesini veya dotnet publish çalıştırdığınızda olduğu gibi, C\# kodundan derleme için ihtiyacınız yoktur.
 
 Bu iyileştirilmiş görüntüde yalnızca, uygulamayı çalıştırmak için gereken ikili dosyaları ve diğer içerikleri yerleştirebilirsiniz. Örneğin, dotnet publish tarafından oluşturulan içerik yalnızca derlenmiş .NET ikilileri, görüntüleri,. js ve. CSS dosyalarını içerir. Zaman içinde, önceden içe geçmiş (çalışma zamanında gerçekleşen Il 'den yerel 'e derleme) paketleri içeren görüntüleri görürsünüz.
 
@@ -43,7 +43,7 @@ Bu iyileştirilmiş görüntüde yalnızca, uygulamayı çalıştırmak için ge
 
 Docker Hub 'ında .NET görüntü depoları araştırdığınızda, etiketlerle sınıflandırılan veya işaretli birden çok görüntü sürümü bulacaksınız. Bu Etiketler, ihtiyacınız olan sürüme bağlı olarak, aşağıdaki tabloda olduğu gibi, hangisinin kullanılacağına karar vermenize yardımcı olur:
 
-| Image | Açıklamalar |
+| Görüntü | Açıklamalar |
 |-------|----------|
 | mcr.microsoft.com/dotnet/core/aspnet:**2,2** | ASP.NET Core, yalnızca çalışma zamanı ve ASP.NET Core iyileştirmeleri, Linux ve Windows 'da (çoklu mimari) |
 | mcr.microsoft.com/dotnet/core/sdk:**2,2** | .NET Core, SDK 'lar dahil, Linux ve Windows üzerinde (çoklu mimari) |

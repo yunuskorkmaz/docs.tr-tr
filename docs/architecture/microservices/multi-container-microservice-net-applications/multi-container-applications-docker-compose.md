@@ -129,7 +129,7 @@ Bağlantı dizesi bir ortam değişkeni tarafından tanımlandığından, bu de�
 
 - Web hizmetini SQL. Data hizmetine bağlar (bir kapsayıcıda çalışan Linux veritabanı için SQL Server örneği). Bu bağımlılığı belirttiğinizde, SQL. Data kapsayıcısı zaten başlatılana kadar Catalog. API kapsayıcısı başlatılmaz; Bu önemlidir çünkü Catalog. API SQL Server veritabanının önce çalışır ve çalışıyor olması gerekir. Ancak, bu tür bir kapsayıcı bağımlılığı birçok durumda yeterli değildir çünkü Docker yalnızca kapsayıcı düzeyinde kontrol eder. Bazen hizmet (Bu durumda SQL Server) hala hazırlanmayabilir, bu nedenle, istemci mikro hizmetinizdeki üstel geri alma ile yeniden deneme mantığını uygulamanız önerilir. Bu şekilde, bir bağımlılık kapsayıcısı kısa bir süre için hazırsanız, uygulama yine de dayanıklı olacaktır.
 
-- Dış sunuculara erişime izin verecek şekilde yapılandırıldı: ek\_konaklar ayarı, dış sunuculara veya makinelere, yerel bir SQL Server gibi, Docker ana bilgisayarı dışındaki (bir geliştirme Docker ana bilgisayarı olan varsayılan Linux VM 'nin dışında) erişmenizi sağlar geliştirme PC 'nizdeki örnek.
+- Bu, dış sunuculara erişime izin verecek şekilde yapılandırıldı: ek\_konaklar ayarı, dış sunuculara veya makinelere, geliştirme PC 'nizdeki yerel bir SQL Server örneği gibi Docker Konağı dışındaki (bir geliştirme Docker ana bilgisayarı olan varsayılan Linux VM 'nin dışında) erişmenize olanak tanır.
 
 Ayrıca, aşağıdaki bölümlerde tartışacak başka, daha gelişmiş Docker-Compose. yıml ayarları da vardır.
 
@@ -175,7 +175,7 @@ Farklı ortamları hedeflerken, birden çok oluşturma dosyası kullanmanız ger
 
 Önceki bölümlerde gösterilen Basitleştirilmiş örneklerde olduğu gibi tek bir Docker-Compose. yıml dosyası kullanabilirsiniz. Ancak, çoğu uygulama için önerilmez.
 
-Varsayılan olarak, Compose iki dosyayı okur, bir Docker-Compose. yıml ve isteğe bağlı bir Docker-Compose. override. yıml dosyası. Şekil 6-11 ' de gösterildiği gibi, Visual Studio 'Yu kullanırken ve Docker desteğini etkinleştirirken, Visual Studio uygulamada hata ayıklamak için ek bir Docker-Compose. vs. Debug. g. i ml dosyası da oluşturur.\\Docker klasöründe bu dosyaya göz atabilirsiniz @no__t_ Ana çözüm klasöründe 1_.
+Varsayılan olarak, Compose iki dosyayı okur, bir Docker-Compose. yıml ve isteğe bağlı bir Docker-Compose. override. yıml dosyası. Şekil 6-11 ' de gösterildiği gibi, Visual Studio 'Yu kullanırken ve Docker desteğini etkinleştirirken, Visual Studio uygulamada hata ayıklamak için ek bir Docker-Compose. vs. Debug. g. i ml dosyası da oluşturur. bu dosyaya, App\\Docker\\.
 
 ![Docker Compose projesindeki dosyaların ekran görüntüsü.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 

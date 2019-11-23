@@ -10,7 +10,7 @@ ms.lasthandoff: 09/17/2019
 ms.locfileid: "71047602"
 ---
 # <a name="network-programming-samples"></a>Ağ Programlama Örnekleri
-Bu <xref:System.Net>bölüm <xref:System.Net.Mail> <xref:System.Net.Cache> ,,<xref:System.Net.Configuration>,,,,,,,,,,,,,,,,,,,,,,,, <xref:System.Net.Mime> <xref:System.Net.NetworkInformation> <xref:System.Net.Security> <xref:System.Net.Sockets> ve ilgili ad alanları. 
+Bu bölüm, <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets>ve ilgili ad alanlarında sınıfları kullanan indirilebilir ağ programlama örneklerine ilişkin açıklamaları ve bağlantıları içerir. 
   
 > [!NOTE]
 > Tüm örnekler, .NET Framework 2,0 ' de yayınlanan [.NET Framework SDK sürüm 2,0 örnekleri indirmesi](https://www.microsoft.com/download/confirmation.aspx?id=22181)' nde mevcuttur ve şu şekilde görüntülenebilir.
@@ -25,8 +25,8 @@ Bu <xref:System.Net>bölüm <xref:System.Net.Mail> <xref:System.Net.Cache> ,,<xr
  [HttpListener teknoloji örneği](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/y7cbb2y2(v=vs.85))  
  Bir uygulamanın içinden HTTP isteklerinin nasıl işlenmesi gerektiğini gösterir.  
  
- [HttpListener ASPX konak uygulaması örneği](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
- Barındırılan bir ASP.NET uygulamasına çağrıları yönlendiren bir http <xref:System.Net.HttpListener?displayProperty=nameWithType> sunucusu oluşturmak için sınıfının özelliklerinin nasıl kullanılacağını gösterir.
+ [HttpListener aspx konak uygulaması örnek](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
+ Barındırılan bir ASP.NET uygulamasına çağrıları yönlendiren bir HTTP sunucusu oluşturmak için <xref:System.Net.HttpListener?displayProperty=nameWithType> sınıfının özelliklerinin nasıl kullanılacağını gösterir.
   
  [Posta göndericisindeki örnek](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/whw7xbk2(v=vs.85))  
  Bir istemci uygulamasından e-posta iletilerinin nasıl gönderileceğini gösterir.  

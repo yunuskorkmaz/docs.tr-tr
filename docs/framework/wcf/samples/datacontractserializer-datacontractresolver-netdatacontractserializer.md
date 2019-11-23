@@ -10,14 +10,14 @@ ms.lasthandoff: 09/27/2019
 ms.locfileid: "71351656"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>NetDataContractSerializer İşlevselliğini Sağlamak için DataContractSerializer ve DataContractResolver Kullanma
-Bu örnek, <xref:System.Runtime.Serialization.DataContractSerializer> ' ın uygun <xref:System.Runtime.Serialization.DataContractResolver> ' in kullanımını <xref:System.Runtime.Serialization.NetDataContractSerializer> ile aynı işlevleri sağlar. Bu örnek, uygun @no__t nasıl oluşturulacağını ve <xref:System.Runtime.Serialization.DataContractSerializer> ' e nasıl ekleneceğini gösterir.
+Bu örnek, uygun bir <xref:System.Runtime.Serialization.DataContractResolver> <xref:System.Runtime.Serialization.DataContractSerializer> kullanmanın <xref:System.Runtime.Serialization.NetDataContractSerializer>ile aynı işlevleri nasıl sağladığını gösterir. Bu örnek, uygun <xref:System.Runtime.Serialization.DataContractResolver> nasıl oluşturulacağını ve <xref:System.Runtime.Serialization.DataContractSerializer>nasıl ekleneceğini gösterir.
 
 ## <a name="sample-details"></a>Örnek Ayrıntılar
- <xref:System.Runtime.Serialization.NetDataContractSerializer> <xref:System.Runtime.Serialization.DataContractSerializer> ' den çok önemli bir şekilde farklılık gösterir: <xref:System.Runtime.Serialization.NetDataContractSerializer> seri hale getirilmiş XML içindeki CLR türü bilgilerini içerir, ancak <xref:System.Runtime.Serialization.DataContractSerializer> desteklemez. Bu nedenle, <xref:System.Runtime.Serialization.NetDataContractSerializer> yalnızca serileştirme ve seri durumdan çıkarma aynı CLR türlerini paylaşıyorsa kullanılabilir. Ancak, <xref:System.Runtime.Serialization.DataContractSerializer> kullanılması önerilir çünkü performansı <xref:System.Runtime.Serialization.NetDataContractSerializer> ' den daha iyidir. @No__t-0 ' da seri hale getirilen bilgileri bir <xref:System.Runtime.Serialization.DataContractResolver> ekleyerek değiştirebilirsiniz.
+ <xref:System.Runtime.Serialization.NetDataContractSerializer> <xref:System.Runtime.Serialization.DataContractSerializer> çok önemli bir şekilde farklıdır: <xref:System.Runtime.Serialization.NetDataContractSerializer> seri hale getirilmiş XML içindeki CLR türü bilgilerini içerir, ancak <xref:System.Runtime.Serialization.DataContractSerializer> desteklemez. Bu nedenle, <xref:System.Runtime.Serialization.NetDataContractSerializer> yalnızca serileştirme ve seri durumdan çıkarma aynı CLR türlerini paylaşıyorsa kullanılabilir. Ancak, <xref:System.Runtime.Serialization.DataContractSerializer> kullanılması önerilir, çünkü performansı <xref:System.Runtime.Serialization.NetDataContractSerializer>daha iyidir. <xref:System.Runtime.Serialization.DataContractSerializer> seri hale getirilen bilgileri bir <xref:System.Runtime.Serialization.DataContractResolver> ekleyerek değiştirebilirsiniz.
 
- Bu örnek iki projeden oluşur. İlk proje, bir nesneyi seri hale getirmek için <xref:System.Runtime.Serialization.NetDataContractSerializer> kullanır. İkinci proje, ilk projeyle aynı işlevselliği sağlamak için bir <xref:System.Runtime.Serialization.DataContractResolver> ile <xref:System.Runtime.Serialization.DataContractSerializer> kullanır.
+ Bu örnek iki projeden oluşur. İlk proje, bir nesneyi seri hale getirmek için <xref:System.Runtime.Serialization.NetDataContractSerializer> kullanır. İkinci proje, ilk projeyle aynı işlevselliği sağlamak için bir <xref:System.Runtime.Serialization.DataContractResolver> <xref:System.Runtime.Serialization.DataContractSerializer> kullanır.
 
- Aşağıdaki kod örneği, DCSwithDCR projesinde <xref:System.Runtime.Serialization.DataContractSerializer> ' ye eklenen `MyDataContractResolver` adlı özel bir @no__t uygulamasını gösterir.
+ Aşağıdaki kod örneği, DCSwithDCR projesindeki <xref:System.Runtime.Serialization.DataContractSerializer> eklenen `MyDataContractResolver` adlı özel <xref:System.Runtime.Serialization.DataContractResolver> uygulamasını gösterir.
 
 ```csharp
 class MyDataContractResolver : DataContractResolver
@@ -75,6 +75,6 @@ class MyDataContractResolver : DataContractResolver
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  

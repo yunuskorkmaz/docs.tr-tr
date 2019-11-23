@@ -33,7 +33,7 @@ Bu örnek, Visual Studio Web API şablonunu temel alan basit bir proje kullanır
 
 **Şekil 4-36**. ASP.NET Core uygulaması oluşturuluyor
 
-Visual Studio 'da örnek proje oluşturmak için **Dosya** > **Yeni** > **Proje**' yi seçin, sol bölmedeki **Web** projesi türlerini ve ardından **ASP.NET Core Web uygulaması**' nı seçin.
+Visual Studio 'da örnek proje oluşturmak için **dosya** > **Yeni** > **Proje**' yi seçin, sol bölmedeki **Web** projesi türlerini seçin ve ardından **ASP.NET Core Web uygulaması**' nı seçin.
 
 Visual Studio, Web projeleri için şablonlar listeler. Örneğimiz için **API** 'yi seçerek bir ASP.NET Web API uygulaması oluşturun.
 
@@ -43,9 +43,9 @@ Framework olarak ASP.NET Core 2,2 ' i seçtiğinizi doğrulayın. .NET Core 2,2,
 
 **Şekil 4-37**. ASP.NET CORE 2,2 ve Web API proje türünü seçme
 
-.NET Core 'un önceki bir sürümüne sahipseniz, 2,2 sürümünü <https://dotnet.microsoft.com/download>indirip yükleyebilirsiniz.
+.NET Core 'un önceki bir sürümüne sahipseniz <https://dotnet.microsoft.com/download>2,2 sürümünü indirip yükleyebilirsiniz.
 
-Projeyi oluştururken Docker desteği ekleyebilirsiniz, böylece projenizi istediğiniz zaman "Dockerize" edebilirsiniz. Proje oluşturulduktan sonra Docker desteği eklemek için, Çözüm Gezgini içindeki proje düğümüne sağ tıklayın ve bağlam menüsünde**Docker desteği** **Ekle** > ' yi seçin.
+Projeyi oluştururken Docker desteği ekleyebilirsiniz, böylece projenizi istediğiniz zaman "Dockerize" edebilirsiniz. Proje oluşturulduktan sonra Docker desteği eklemek için, Çözüm Gezgini içindeki proje düğümüne sağ tıklayın ve bağlam menüsünde > **Docker desteği** **Ekle** ' yi seçin.
 
 ![Mevcut bir projeye Docker desteği eklemek için bağlam menüsü seçeneği: > > Docker desteği eklemek için (projede) öğesine sağ tıklayın.](media/add-docker-support-to-project.png)
 
@@ -63,13 +63,13 @@ Gördüğünüz gibi, Visual Studio 2017 ile Docker arasındaki tümleştirme, g
 
 Artık uygulamanızı **F5** tuşuyla veya **Play** düğmesini kullanarak çalıştırabilirsiniz.
 
-Projeyi çalıştırdıktan sonra, `docker images` komutunu kullanarak görüntüleri listeleyebilirsiniz. Visual Studio 2017 ile `mssampleapplication` projemizin otomatik dağıtımı tarafından oluşturulan görüntüyü görmeniz gerekir.
+Projeyi çalıştırdıktan sonra, `docker images` komutunu kullanarak görüntüleri listeleyebilirsiniz. Visual Studio 2017 ile projemizin otomatik dağıtımı tarafından oluşturulan `mssampleapplication` görüntüsünü görmeniz gerekir.
 
 ```console
 docker images
 ```
 
-![Docker görüntüleri komutundan konsol çıktısı, şunları içeren bir liste gösterir: Depo, etiket, görüntü KIMLIĞI, oluşturulan (Tarih) ve boyut.](media/docker-images-command.png)
+![Docker görüntüleri komutundan konsol çıktısı: depo, etiket, görüntü KIMLIĞI, oluşturulan (Tarih) ve boyut içeren bir liste gösterir.](media/docker-images-command.png)
 
 **Şekil 4-40**. Docker görüntülerinin görünümü
 
@@ -85,13 +85,13 @@ Görüntüyü, [Azure Container Registry (ACR)](https://azure.microsoft.com/serv
 
 **Şekil 4-41**. Yayın modunu seçme
 
-Komutu çalıştırırsanız, bir için `debug` ve `release` diğeri modu için oluşturulan her iki görüntüyü görürsünüz. `docker image`
+`docker image` komutunu çalıştırırsanız, biri `debug` ve diğeri `release` modu için oluşturulan her iki görüntüyü da görürsünüz.
 
 ### <a name="create-a-new-tag-for-the-image"></a>Görüntü için yeni bir etiket oluşturun
 
-Her kapsayıcı görüntüsünün kayıt defteri `loginServer` adıyla etiketlenmesi gerekir. Bu etiket, kapsayıcı görüntüleri bir görüntü kayıt defterine gönderilirken yönlendirme için kullanılır.
+Her kapsayıcı görüntüsünün, kayıt defterinin `loginServer` adı ile etiketlenmesi gerekir. Bu etiket, kapsayıcı görüntüleri bir görüntü kayıt defterine gönderilirken yönlendirme için kullanılır.
 
-Azure Container Registry bilgileri alarak Azure Portal `loginServer` adı görüntüleyebilirsiniz
+Azure Container Registry bilgileri alarak Azure portal `loginServer` adı görüntüleyebilirsiniz
 
 ![Azure Container kayıt defteri adının sağ üst tarafındaki tarayıcı görünümü.](media/loginServer-name.png)
 
@@ -115,7 +115,7 @@ Artık, şu komutla birlikte en son görüntüyü (yayın görüntüsü) alarak 
 docker tag mssampleaksapplication:latest mssampleacr.azurecr.io/mssampleaksapplication:v1
 ```
 
-Komutunu çalıştırdıktan sonra, `docker images` komutuyla görüntüleri listeleyin ve yeni etiketiyle birlikte resmi görmeniz gerekir. `docker tag`
+`docker tag` komutunu çalıştırdıktan sonra, `docker images` komutuyla görüntüleri listeleyin ve yeni etiketiyle birlikte resmi görmeniz gerekir.
 
 ![Docker görüntüleri komutundan konsol çıktısı.](media/tagged-docker-images-list.png)
 
@@ -182,7 +182,7 @@ spec:
 ```
 
 > [!NOTE]
-> Kubernetes ile dağıtım hakkında daha fazla bilgi için bkz:<https://kubernetes.io/docs/reference/kubectl/cheatsheet/>
+> Kubernetes ile dağıtım hakkında daha fazla bilgi için bkz. <https://kubernetes.io/docs/reference/kubectl/cheatsheet/>
 
 Artık, **Kubectl**kullanarak dağıtıma hazırsınız, ancak önce bu komutla aks kümesi için kimlik bilgilerini almalısınız:
 
@@ -190,11 +190,11 @@ Artık, **Kubectl**kullanarak dağıtıma hazırsınız, ancak önce bu komutla 
 az aks get-credentials --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
 ```
 
-![Yukarıdaki komuttan konsol çıkışı: "MSSampleK8Cluster as geçerli Context/root/. Kube/config içinde birleştirildi](media/getting-aks-credentials.png)
+![Yukarıdaki komuttan konsol çıkışı: "MSSampleK8Cluster,/root/.exe içinde geçerli bağlam olarak birleştirildi. Kube/config](media/getting-aks-credentials.png)
 
 **Şekil 4-47**. kimlik bilgileri alınıyor
 
-Ardından, dağıtımı başlatmak `kubectl create` için komutunu kullanın.
+Ardından, dağıtımı başlatmak için `kubectl create` komutunu kullanın.
 
 ```console
 kubectl create -f mssample-deploy.yml
@@ -210,7 +210,7 @@ Dağıtım tamamlandığında, bu komutla zamana bağlı erişebileceğiniz bir 
 az aks browse --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
 ```
 
-Ve URL `http://127.0.0.1:8001`'ye erişme.
+Ve `http://127.0.0.1:8001`URL 'sine erişme.
 
 ![Dağıtım, dizin, çoğaltma kümesi ve hizmet gösteren Kubernetes panosunun tarayıcı görünümü.](media/kubernetes-cluster-information.png)
 
@@ -222,5 +222,5 @@ Artık uygulamanız Azure 'da, bir Linux kapsayıcısı ve bir AKS Kubernetes k�
 > Bu kılavuzda [**Azure Kubernetes Service 'e (aks) dağıtım**](deploy-azure-kubernetes-service.md) bölümünde bu örnek için aks kümesini nasıl oluşturacağınız hakkında bilgi alabilirsiniz.
 
 >[!div class="step-by-step"]
->[Önceki](set-up-windows-containers-with-powershell.md)İleri
->[](../docker-devops-workflow/index.md)
+>[Önceki](set-up-windows-containers-with-powershell.md)
+>[İleri](../docker-devops-workflow/index.md)

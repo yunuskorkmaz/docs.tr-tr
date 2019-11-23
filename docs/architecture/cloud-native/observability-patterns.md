@@ -1,5 +1,5 @@
 ---
-title: Observability desenleri
+title: Gözlemlenebilirlik desenleri
 description: Bulutta yerel uygulamalar için Observability desenleri
 ms.date: 09/23/2019
 ms.openlocfilehash: 23320144c03278d631b8a1fcc1d1c0954e907296
@@ -9,7 +9,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71184878"
 ---
-# <a name="observability-patterns"></a>Observability desenleri
+# <a name="observability-patterns"></a>Gözlemlenebilirlik desenleri
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -34,7 +34,7 @@ Bu farklı günlük düzeyleri günlüğe kaydetme sırasında ayrıntı düzeyi
 
 Günlük araçlarının yüksek performansı ve ayrıntı düzeyi, geliştiricilerin sıklıkla günlüğe kaydedilmesini teşvik etmelidir. Birçok yöntem, her yöntemin giriş ve çıkış kaydını günlüğe kaydetme düzenlerini tercih. Bu yaklaşım, fazla sonlandırma gibi bir işlem olabilir, ancak geliştiricilerin daha az günlük kaydına istedikleri kadar seyrek görünür. Aslında, sorunlu bir yöntem etrafında günlük kaydı eklemenin tek amacı için dağıtımları gerçekleştirmek yaygın olmayan bir durumdur. Çok fazla günlüğe kaydetme ve çok az bir şey olmadığı tarafında hata. Bu tür bir günlüğe kaydetme işleminin otomatik olarak sağlanması için bazı araçların kullanılabileceğini unutmayın.
 
-Geleneksel uygulamalarda, günlük dosyaları genellikle yerel makinede depolanmıştı. Aslında, UNIX benzeri işletim sistemlerinde, genellikle altında `/var/log`tüm günlükleri tutmak için tanımlanmış bir klasör yapısı vardır. Tek bir makinedeki düz bir dosyaya kaydetmenin yararlılığı, bir bulut ortamında büyük ölçüde azaltılır. Günlüklerin fiziksel makinelere göre karıştırılır, Günlükler üreten uygulamaların yerel diske erişimi olmayabilir veya yerel disk çok daha geçici olabilir.
+Geleneksel uygulamalarda, günlük dosyaları genellikle yerel makinede depolanmıştı. Aslında, UNIX benzeri işletim sistemlerinde, genellikle `/var/log`altında herhangi bir günlüğü tutmak üzere tanımlanmış bir klasör yapısı vardır. Tek bir makinedeki düz bir dosyaya kaydetmenin yararlılığı, bir bulut ortamında büyük ölçüde azaltılır. Günlüklerin fiziksel makinelere göre karıştırılır, Günlükler üreten uygulamaların yerel diske erişimi olmayabilir veya yerel disk çok daha geçici olabilir.
 
 Mikro hizmetler mimarisi kullanılarak geliştirilen bulutta yerel uygulamalar Ayrıca dosya tabanlı Günlükçüler için bazı zorluklar ortaya çıkarabilir. Kullanıcı istekleri artık farklı makinelerde çalışan birden fazla hizmete yayılabilir ve herhangi bir yerel dosya sistemine erişimi olmayan sunucusuz işlevler içerebilir. Günlükleri bir kullanıcı veya bu çok sayıda hizmet ve makine üzerindeki bir oturumla ilişkilendirmek çok zor olabilir.
 
@@ -44,8 +44,8 @@ Neyse ki, dosya sistemi tabanlı günlük kaydı kullanmanın bazı harika alter
 
 Birçok hizmeti kapsayan günlük oluşturma sırasında bazı standart uygulamaları izlemek da faydalı olur. Örneğin, uzun bir etkileşimin başlangıcında bir [BAĞıNTı kimliği](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) oluşturma ve ardından bu etkileşime ilişkin her iletide günlüğe kaydetme, tüm ilgili iletileri aramanızı kolaylaştırır. Tek bir ileti bulur ve ilgili tüm iletileri bulmak için bağıntı KIMLIĞINI ayıklar. Diğer bir örnek, günlük biçiminin her hizmet için aynı olduğundan ve kullandığı dil ya da günlüğe kaydetme kitaplığının her ne kadar aynı olmasını sağlamaktır. Bu Standartlaştırma, okuma günlüklerini çok daha kolay hale getirir. Şekil 7-1, mikro hizmet mimarisinin iş akışının bir parçası olarak Merkezi günlük kaydını nasıl yükseltebileceğinizi gösterir.
 
-![Çeşitli kaynaklardaki Günlükler merkezi bir günlük deposuna alınır. **Şekil 7-1**. ](./media/centralized-logging.png)
- Çeşitli kaynaklardaki Günlükler merkezi bir günlük deposuna alınır.
+çeşitli kaynaklardan alınan ![Günlükler merkezi bir günlük deposuna alınır. **şekil 7-1**](./media/centralized-logging.png)
+. Çeşitli kaynaklardaki Günlükler merkezi bir günlük deposuna alınır.
 
 ## <a name="when-to-use-monitoring"></a>İzlemenin ne zaman kullanılacağı
 

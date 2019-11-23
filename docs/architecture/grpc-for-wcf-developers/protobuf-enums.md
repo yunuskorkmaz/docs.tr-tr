@@ -1,14 +1,13 @@
 ---
 title: Prototipsiz numaralandırmalar-WCF geliştiricileri için gRPC
 description: Prototipte numaralandırmalar bildirme ve kullanma hakkında bilgi edinin.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: f18196f54caba824d7101782a88cf3bf699560d5
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 4ea4d03bede2a9ebfd1f2c3ee56f299e918800e9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846348"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971572"
 ---
 # <a name="protobuf-enumerations"></a>Protobuf sabit listeleri
 
@@ -39,7 +38,7 @@ public enum AccountStatus
 }
 ```
 
-Prototip numaralandırma tanımlarının ilk alanları olarak sıfır sabiti **olmalıdır** . ' De C#olduğu gibi, aynı değere sahip birden fazla alan bildirebilirsiniz, ancak enum içindeki`allow_alias`seçeneğini kullanarak bu seçeneği açıkça etkinleştirmeniz gerekir:
+Prototip numaralandırma tanımlarının ilk alanları olarak sıfır sabiti **olmalıdır** . ' De C#olduğu gibi, aynı değere sahip birden fazla alan bildirebilirsiniz, ancak enum içindeki `allow_alias` seçeneğini kullanarak bu seçeneği açıkça etkinleştirmeniz gerekir:
 
 ```protobuf
 enum AccountStatus {
@@ -71,7 +70,7 @@ message Product {
 }
 ```
 
-`product.AvailableIn` `Region.NorthAmerica | Region.SouthAmerica`olarak ayarlarsanız, `3`tamsayı değer olarak serileştirilir. Bir istemci veya sunucu değeri seri durumdan çıkarmaya çalıştığında, `3` için enum tanımında bir eşleşme bulamaz ve sonuç `Region.None` olur.
+`product.AvailableIn` `Region.NorthAmerica | Region.SouthAmerica`olarak ayarlarsanız, `3`tamsayı değer olarak serileştirilir. Bir istemci veya sunucu değeri seri durumdan çıkarmaya çalıştığında, `3` için enum tanımında bir eşleşme bulamaz ve sonuç `Region.None`olur.
 
 Prototipte birden çok Enum değeri ile çalışmanın en iyi yolu, sabit listesi türünde bir `repeated` alanı kullanmaktır.
 

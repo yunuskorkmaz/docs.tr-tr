@@ -27,7 +27,7 @@ Bu konuda, müşterilerin, WCF istemcileri ve Hizmetleri geliştirirken çalış
   
 5. [Kullandığım hizmet ve istemci harika çalışıyor, ancak istemci başka bir bilgisayarda olduğunda bunları çalışmayacak mıyım? Ne oluyor?](#BKMK_q4)  
   
-6. [Türün bir istisna olduğu bir FaultException @ no__t-1özel durumu >, genel tür değil, her zaman istemcide genel bir FaultException türü aldım. Ne oluyor?](#BKMK_q5)  
+6. [Türün bir özel durum olduğu bir FaultException\<özel durumu >, genel tür değil, her zaman istemcide genel bir FaultException türü alıyorum. Ne oluyor?](#BKMK_q5)  
   
 7. [Yanıt bir veri içerdiğinde tek yönlü ve istek-yanıt işlemleri kabaca aynı hızda döndürülür. Ne oluyor?](#BKMK_q6)  
   
@@ -51,7 +51,7 @@ Bu konuda, müşterilerin, WCF istemcileri ve Hizmetleri geliştirirken çalış
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>Bazen, istemciniz ilk istekten sonraki bir sırada boşta kalırsa ikinci istekte bir MessageSecurityException aldım. Ne oluyor?  
- İkinci istek birincil olarak iki nedenden dolayı başarısız olabilir: (1) oturum zaman aşımına uğradı veya (2) hizmeti barındıran Web sunucusu geri dönüştürüldü. İlk durumda, oturum hizmetin zaman aşımına uğrayana kadar geçerli olur. Hizmet, hizmetin bağlamasında (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>) belirtilen süre içinde istemciden bir istek almadığında, hizmet güvenlik oturumunu sonlandırır. Sonraki istemci iletileri <xref:System.ServiceModel.Security.MessageSecurityException> ' a sonuçlanır. İstemci gelecek iletileri göndermek ya da durum bilgisi olan bir güvenlik bağlamı belirteci kullanmak için hizmetle güvenli bir oturum yeniden kurması gerekir. Durum bilgisi olan güvenlik bağlamı belirteçleri Ayrıca, güvenli bir oturumun, bir Web sunucusunun geri dönüştürülmekte olmasını sağlar. Güvenli bir oturumda durum bilgisi olan güvenli bağlam belirteçleri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenli bir oturum Için güvenlik bağlamı belirteci oluşturma](./feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Alternatif olarak, güvenli oturumları devre dışı bırakabilirsiniz. [@No__t-1wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) bağlamayı kullandığınızda, güvenli oturumları devre dışı bırakmak için `establishSecurityContext` özelliğini `false` olarak ayarlayabilirsiniz. Diğer bağlamalara yönelik güvenli oturumları devre dışı bırakmak için özel bir bağlama oluşturmanız gerekir. Özel bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](./feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Bu seçeneklerden herhangi birini uygulamadan önce, uygulamanızın güvenlik gereksinimlerini anlamanız gerekir.  
+ İkinci istek birincil olarak iki nedenden dolayı başarısız olabilir: (1) oturum zaman aşımına uğradı veya (2) hizmeti barındıran Web sunucusu geri dönüştürüldü. İlk durumda, oturum hizmetin zaman aşımına uğrayana kadar geçerli olur. Hizmet, hizmetin bağlamasında (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>) belirtilen süre içinde istemciden bir istek almadığında, hizmet güvenlik oturumunu sonlandırır. Sonraki istemci iletileri <xref:System.ServiceModel.Security.MessageSecurityException>sonuçlanır. İstemci gelecek iletileri göndermek ya da durum bilgisi olan bir güvenlik bağlamı belirteci kullanmak için hizmetle güvenli bir oturum yeniden kurması gerekir. Durum bilgisi olan güvenlik bağlamı belirteçleri Ayrıca, güvenli bir oturumun, bir Web sunucusunun geri dönüştürülmekte olmasını sağlar. Güvenli bir oturumda durum bilgisi olan güvenli bağlam belirteçleri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenli bir oturum Için güvenlik bağlamı belirteci oluşturma](./feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Alternatif olarak, güvenli oturumları devre dışı bırakabilirsiniz. [\<wshttpbinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) bağlamayı kullandığınızda, güvenli oturumları devre dışı bırakmak için `establishSecurityContext` özelliğini `false` olarak ayarlayabilirsiniz. Diğer bağlamalara yönelik güvenli oturumları devre dışı bırakmak için özel bir bağlama oluşturmanız gerekir. Özel bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](./feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Bu seçeneklerden herhangi birini uygulamadan önce, uygulamanızın güvenlik gereksinimlerini anlamanız gerekir.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Hizmet, yaklaşık 10 istemci etkileşim kurduktan sonra yeni istemcileri reddedecek şekilde başlatılır. Ne oluyor?  
@@ -104,7 +104,7 @@ public class MyServiceHost : ServiceHost
   
 - Olası diğer sorunlar için [Windows Communication Foundation Örnekleri çalıştıran](./samples/running-the-samples.md)örnekler konusuna bakın.  
   
-- İstemciniz Windows kimlik bilgilerini kullanıyorsa ve özel durum bir <xref:System.ServiceModel.Security.SecurityNegotiationException> ise, Kerberos 'u aşağıdaki şekilde yapılandırın.  
+- İstemciniz Windows kimlik bilgilerini kullanıyorsa ve özel durum bir <xref:System.ServiceModel.Security.SecurityNegotiationException>, Kerberos 'u aşağıdaki şekilde yapılandırın.  
   
     1. Kimlik bilgilerini istemcinin App. config dosyasındaki Endpoint öğesine ekleyin:  
   
@@ -141,12 +141,12 @@ public class MyServiceHost : ServiceHost
 - [Açıklanan Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
-## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Türün bir özel durum olduğu bir FaultException @ no__t-0Exception > oluştururken, genel tür değil, her zaman istemcide genel bir FaultException türü aldım. Ne oluyor?  
+## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Türün bir özel durum olduğu bir FaultException\<özel durumu >, genel tür değil, her zaman istemcide genel bir FaultException türü alıyorum. Ne oluyor?  
  Kendi özel hata veri türünü oluşturmanız ve bunu hata sözleşmenizin ayrıntı türü olarak bildirmeniz önemle tavsiye edilir. Nedeni sistem tarafından sağlanmış özel durum türlerini kullanmaktır:  
   
 - Hizmet odaklı uygulamaların en büyük güçlerinden birini kaldıran bir tür bağımlılığı oluşturur.  
   
-- Standart bir şekilde özel durum serileştirilme bağımlıdır. Bazıları — <xref:System.Security.SecurityException> — gibi, seri hale getirilebilir.  
+- Standart bir şekilde özel durum serileştirilme bağımlıdır. Bazıları — <xref:System.Security.SecurityException>gibi, hiç seri hale getirilebilir olamaz.  
   
 - İstemcilere iç uygulama ayrıntılarını sunar. Daha fazla bilgi için bkz. [anlaşmalar ve hizmetlerde hataları belirtme ve işleme](specifying-and-handling-faults-in-contracts-and-services.md).  
   
@@ -158,7 +158,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>Kullandığım bir X. 509.440 sertifikası kullanıyorum ve bir System. Security. Cryptography. CryptographicException aldım. Ne oluyor?  
- Bu, genellikle IIS çalışan işleminin çalıştırıldığı Kullanıcı hesabı değiştirildikten sonra oluşur. Örneğin, [!INCLUDE[wxp](../../../includes/wxp-md.md)] ' da, Aspnet_wp. exe ' nin altında çalıştığı varsayılan kullanıcı hesabını özel bir kullanıcı hesabına değiştirirseniz, bu hatayı görebilirsiniz. Özel anahtar kullanılıyorsa, onu kullanan işlemin bu anahtarı depolayan dosyaya erişmek için gerekli izinlere sahip olması gerekir.  
+ Bu, genellikle IIS çalışan işleminin çalıştırıldığı Kullanıcı hesabı değiştirildikten sonra oluşur. Örneğin, [!INCLUDE[wxp](../../../includes/wxp-md.md)], Aspnet_wp. exe ' nin altında çalıştığı varsayılan kullanıcı hesabını özel bir kullanıcı hesabına değiştirirseniz, bu hatayı görebilirsiniz. Özel anahtar kullanılıyorsa, onu kullanan işlemin bu anahtarı depolayan dosyaya erişmek için gerekli izinlere sahip olması gerekir.  
   
  Bu durumda, özel anahtarı içeren dosya için işlem hesabına yönelik okuma erişim ayrıcalıklarına sahip olmanız gerekir. Örneğin, IIS çalışan işlemi Bob hesabı altında çalışıyorsa, Bob 'un özel anahtarı içeren dosyaya okuma erişimi vermesi gerekir.  
   
@@ -170,7 +170,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>İzleme araçlarından birini kullanıyorum ve bir EndpointNotFoundException aldım. Ne oluyor?  
- Sistem tarafından sağlanmış WCF izleme mekanizması olmayan bir izleme aracı kullanıyorsanız ve bir adres filtresi uyumsuzluğu olduğunu belirten bir <xref:System.ServiceModel.EndpointNotFoundException> alırsanız, iletileri izleme yardımcı programına yönlendirmek için <xref:System.ServiceModel.Description.ClientViaBehavior> sınıfını kullanmanız gerekir ve yardımcı program bu iletileri hizmet adresine yeniden yönlendirir. @No__t-0 sınıfı, sonraki ağ adresini, `To` adresleme üstbilgisiyle belirtilen son alıcıdan ayrı olarak belirtmek için `Via` adresleme üst bilgisini değiştirir. Ancak bunu yaparken, `To` değerini oluşturmak için kullanılan uç nokta adresini değiştirmeyin.  
+ Sistem tarafından sağlanmış WCF izleme mekanizması olmayan bir izleme aracı kullanıyorsanız ve bir adres filtresi uyumsuzluğu olduğunu belirten bir <xref:System.ServiceModel.EndpointNotFoundException> alırsanız, iletileri izleme yardımcı programına yönlendirmek için <xref:System.ServiceModel.Description.ClientViaBehavior> sınıfını kullanmanız ve yardımcı programın bu iletileri hizmet adresine yönlendirmeniz gerekir. <xref:System.ServiceModel.Description.ClientViaBehavior> sınıfı, sonraki ağ adresini, `To` adresleme üstbilgisiyle belirtilen son alıcıdan ayrı olarak belirtmek için `Via` adresleme üst bilgisini değiştirir. Ancak bunu yaparken, `To` değerini oluşturmak için kullanılan uç nokta adresini değiştirmeyin.  
   
  Aşağıdaki kod örneği bir örnek istemci yapılandırma dosyası gösterir.  
   
@@ -194,7 +194,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q10"></a>   
 ## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>Temel adres nedir? Bir uç nokta adresiyle nasıl ilişki vardır?  
- Temel adres, <xref:System.ServiceModel.ServiceHost> sınıfının kök adresidir. Varsayılan olarak, hizmet yapılandırmanıza bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> sınıfı eklerseniz, ana bilgisayar yayımladığı tüm uç noktalar için Web Hizmetleri Açıklama Dili (WSDL) HTTP temel adresinden alınır ve meta veri davranışına ve "? wsdl ". ASP.NET ve IIS hakkında bilgi sahibiyseniz, taban adresi sanal dizine eşdeğerdir.  
+ Temel adres, bir <xref:System.ServiceModel.ServiceHost> sınıfının kök adresidir. Varsayılan olarak, hizmet yapılandırmanıza bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> sınıfı eklerseniz, ana bilgisayar yayımladığı tüm uç noktalar için Web Hizmetleri Açıklama Dili (WSDL), HTTP taban adresinden ve meta veri davranışına ve "? wsdl" de tüm göreli bir adrese alınır. ASP.NET ve IIS hakkında bilgi sahibiyseniz, taban adresi sanal dizine eşdeğerdir.  
   
 ## <a name="sharing-a-port-between-a-service-endpoint-and-a-mex-endpoint-using-the-nettcpbinding"></a>NetTcpBinding kullanarak bir hizmet uç noktası ve bir MEX uç noktası arasında bağlantı noktası paylaşma  
  Bir hizmetin temel adresini net. TCP:/sunucum: 8080/hizmetim olarak belirtirseniz ve aşağıdaki uç noktaları eklemek için:  
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>WCF SOAP uygulamasından bir WCF Web HTTP uygulaması çağrılırken hizmet şu hatayı döndürür: 405 yöntemine Izin verilmiyor  
- WCF Web HTTP uygulamasını çağırma (bir WCF hizmetinden <xref:System.ServiceModel.WebHttpBinding> ve <xref:System.ServiceModel.Description.WebHttpBehavior>) kullanan bir hizmet şu özel durumu oluşturabilir: `Unhandled Exception: System.ServiceModel.FaultException`1 [System. ServiceModel. ExceptionDetail]: uzak sunucu beklenmeyen bir yanıt döndürdü: (405) yöntemi değil İzin verildi. ' Bu özel durum, WCF giden <xref:System.ServiceModel.OperationContext> ' ü gelen <xref:System.ServiceModel.OperationContext> ile üzerine yazdığından oluşur. Bu sorunu çözmek için WCF Web HTTP hizmeti işlemi içinde <xref:System.ServiceModel.OperationContextScope> oluşturun. Örneğin:  
+ WCF Web HTTP uygulamasını (<xref:System.ServiceModel.WebHttpBinding> ve <xref:System.ServiceModel.Description.WebHttpBehavior>kullanan bir hizmet) bir WCF hizmetinden çağırmak şu özel durumu oluşturabilir: `Unhandled Exception: System.ServiceModel.FaultException`1 [System. ServiceModel. ExceptionDetail]: uzak sunucu beklenmeyen bir yanıt döndürdü: (405) yönteme Izin verilmiyor. ' Bu özel durum, WCF giden <xref:System.ServiceModel.OperationContext> gelen <xref:System.ServiceModel.OperationContext>üzerine yazılmasından dolayı oluşur. Bu sorunu çözmek için, WCF Web HTTP hizmeti işlemi içinde bir <xref:System.ServiceModel.OperationContextScope> oluşturun. Örneğin:  
   
 ```csharp
 public string Echo(string input)  

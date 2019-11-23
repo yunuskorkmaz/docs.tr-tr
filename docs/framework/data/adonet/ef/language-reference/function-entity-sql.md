@@ -41,7 +41,7 @@ FUNCTION function-name
  `data_type`  
  Desteklenen bir türün adı.  
   
- KOLEKSIYON (< type_definition @ no__t-0)  
+ KOLEKSIYON (< type_definition`>`)  
  Desteklenen türlerin, satırların veya başvuruların koleksiyonunu döndüren bir ifade.  
   
  REF **(** `data_type` **)**  
@@ -66,16 +66,16 @@ FUNCTION function-name
  İşlevler ayrıca modelin kendisinde de belirtilebilir. Modelde belirtilen işlevler, komutta satır içi olarak belirtilen işlevlerle aynı şekilde yürütülür. Daha fazla bilgi için bkz. [Kullanıcı tanımlı işlevler](user-defined-functions-entity-sql.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki Entity SQL komutu, döndürülen ürünlerin filtreleneceği bir tamsayı değeri alan `Products` işlevini tanımlar.  
+ Aşağıdaki Entity SQL komutu döndürülen ürünleri filtrelemek için bir tamsayı değeri alan bir işlev `Products` tanımlar.  
   
  [!code-sql[DP EntityServices Concepts#FUNCTION1](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function1)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki Entity SQL komutu, döndürülen kişileri filtrelemek için bir dize koleksiyonu alan `StringReturnsCollection` işlevini tanımlar.  
+ Aşağıdaki Entity SQL komutu, döndürülen kişileri filtrelemek için bir dize koleksiyonu alan bir işlev `StringReturnsCollection` tanımlar.  
   
  [!code-sql[DP EntityServices Concepts#FUNCTION2](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL başvurusu](entity-sql-reference.md)
-- [Entity SQL dili](entity-sql-language.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)
+- [Entity SQL Dili](entity-sql-language.md)

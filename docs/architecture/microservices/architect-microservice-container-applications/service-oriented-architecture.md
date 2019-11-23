@@ -22,5 +22,5 @@ Mikro hizmetler SOA 'den türetilir, ancak SOA, mikro hizmetler mimarisinden far
 Bu kılavuz, mikro hizmetlere odaklandığı için, bir SOA yaklaşımı mikro hizmet mimarisinde kullanılan gereksinimlerden ve tekniklerin daha az bir şekilde düşüktür. Mikro hizmet tabanlı bir uygulamanın nasıl oluşturulduğunu biliyorsanız, daha basit bir hizmet yönelimli uygulama oluşturmayı da bilirsiniz.
 
 >[!div class="step-by-step"]
->[Önceki](docker-application-state-data.md)İleri
->[](microservices-architecture.md)
+>[Önceki](docker-application-state-data.md)
+>[İleri](microservices-architecture.md)

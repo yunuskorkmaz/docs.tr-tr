@@ -1,5 +1,5 @@
 ---
-title: Kapsayıcılar ve sunucusuz uygulamalar ölçeklendirme
+title: Kapsayıcıları ve sunucusuz uygulamaları ölçeklendirme
 description: Bulut Yerel uygulamalarını Azure Kubernetes hizmeti ile ölçeklendirerek, tek tek makine kaynaklarını artırarak veya bir uygulama kümesindeki makinelerin sayısını artırarak Kullanıcı taleplerini karşılayın.
 ms.date: 09/23/2019
 ms.openlocfilehash: 2d0537fb3ed56beb4eccbf9b8c34a5d87793413b
@@ -9,7 +9,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71184801"
 ---
-# <a name="scaling-containers-and-serverless-applications"></a>Kapsayıcılar ve sunucusuz uygulamalar ölçeklendirme
+# <a name="scaling-containers-and-serverless-applications"></a>Kapsayıcıları ve sunucusuz uygulamaları ölçeklendirme
 
 Bir uygulamayı ölçeklendirmenin iki genel yolu vardır: ölçeği artırma ve genişletme. İlki, bir konağa özellik eklemek anlamına gelir, ikincisi ise toplam konak sayısına ekleme anlamına gelir. Bunu öğrenmek için kullanılan yaygın bir benzerleme vurguladı, kendinizi ve kasaların şehir genelinde nasıl ele alınacağını öğrenin. Tek bir arkadaşınız varsa, iki özellikli yarış arabasın üzerinden yarışalım yapabilirsiniz. Ancak üç veya dört ise, kapasiteyi artırmak için SUVs veya bir mini Van 'den birini almanız gerekebilir. Toplam numaranız bir düzine veya daha fazla atlama yaparken, muhtemelen daha fazla örnek (Bu durumda, daha fazla araçlar) ekleyerek ölçeği genişletme kavramını gösteren birden çok araçlar almanız (birisi bir veri yolu olmadığı müddetçe) gerekir. Bunun uygulamalarımız için nasıl uygulanacağını görelim.
 
@@ -42,7 +42,7 @@ Azure Işlevleri ölçeklendirmeyi otomatik olarak destekler. Varsayılan tüket
 
 - [Birden çok düğüm havuzu](https://docs.microsoft.com/azure/aks/use-multiple-node-pools)
 - [AKS kümesi otomatik Scaler](https://docs.microsoft.com/azure/aks/cluster-autoscaler)
-- [Öğretici: AKS 'teki Uygulamaları ölçeklendirme](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale)
+- [Öğretici: AKS 'de Uygulamaları ölçeklendirme](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale)
 - [Azure Işlevleri ölçeklendirme ve barındırma](https://docs.microsoft.com/azure/azure-functions/functions-scale)
 
 >[!div class="step-by-step"]

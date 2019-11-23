@@ -19,8 +19,8 @@ ms.locfileid: "71698202"
 Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.  
   
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<defaultProxy >**  
+[ **System. net >\<** &nbsp;&nbsp;](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultProxy >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -61,7 +61,7 @@ Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.
 ## <a name="remarks"></a>Açıklamalar  
  DefaultProxy öğesi boşsa, Internet Explorer 'daki proxy ayarları kullanılacaktır. Bu davranış .NET Framework 1,1 sürümünden farklıdır.  
   
- [Modül](module-element-network-settings.md) öğesi ortak olmayan bir tür belirtiyorsa bir özel durum oluşur, tür <xref:System.Net.IWebProxy> sınıfından türetilmez, bu nesnenin parametresiz oluşturucusundan bir özel durum oluştu veya bir özel durum alınırken hata oluştu sistem tarafından belirtilen varsayılan proxy. Özel durumun <xref:System.Exception.InnerException%2A> özelliği, hatanın kök nedeni hakkında daha fazla bilgi içermelidir.  
+ [Modül](module-element-network-settings.md) öğesi ortak olmayan bir tür belirtiyorsa, tür <xref:System.Net.IWebProxy> sınıfından türetilmez, bu nesnenin parametresiz oluşturucusundan bir özel durum oluştu veya sistem tarafından belirtilen varsayılan proxy alınırken özel durum oluştu. Özel durumun <xref:System.Exception.InnerException%2A> özelliği, hatanın kök nedeni hakkında daha fazla bilgiye sahip olmalıdır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  

@@ -20,9 +20,9 @@ Tam ve güçlü bir IDE ya da hafif ve çevik bir düzenleyiciyi tercih ediyorsa
 Herhangi bir geliştirme dilini destekleyen basit, platformlar arası bir düzenleyiciyi tercih ediyorsanız, Visual Studio Code ve Docker CLı kullanabilirsiniz. Bu ürünler, geliştirici iş akışını hızlandırma açısından kritik olan basit ancak sağlam bir deneyim sağlar. Docker geliştiricileri, "Docker for Mac" veya "Docker for Windows" (geliştirme ortamı) yükleyerek, tek bir Docker CLı kullanarak hem Windows hem de Linux (çalışma zamanı ortamı) için uygulama oluşturabilir. Ayrıca, Visual Studio Code Dockerfiles için IntelliSense ile Docker uzantılarını ve düzenleyiciden Docker komutlarını çalıştırmak için kısayol görevlerini destekler.
 
 > [!NOTE]
-> Visual Studio Code indirmek için bölümüne gidin <https://code.visualstudio.com/download>.
+> Visual Studio Code indirmek için <https://code.visualstudio.com/download>gidin.
 >
-> Mac ve Windows için Docker indirmek için adresine gidin <https://www.docker.com/products/docker>.
+> Mac ve Windows için Docker indirmek için <https://www.docker.com/products/docker>adresine gidin.
 
 ### <a name="visual-studio-with-docker-tools-windows-development-machine"></a>Visual Studio ile Docker Araçları (Windows geliştirme makinesi)
 

@@ -13,7 +13,7 @@ ms.locfileid: "72031831"
 ---
 # <a name="default-probing"></a>Varsayılan yoklama
 
-@No__t-0 örneği, bir derlemenin bağımlılıklarını bulmaktan sorumludur. Bu makalede <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> örneğinin yoklama mantığı açıklanmaktadır.
+<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> örneği, bir derlemenin bağımlılıklarını bulmaktan sorumludur. Bu makalede <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> örneğinin yoklama mantığı açıklanmaktadır.
 
 ## <a name="host-configured-probing-properties"></a>Konak yapılandırılmış yoklama özellikleri
 
@@ -21,7 +21,7 @@ ms.locfileid: "72031831"
 
 Her yoklama özelliği isteğe bağlıdır. Varsa, her özellik mutlak yolların ayrılmış bir listesini içeren bir dize değeridir. Sınırlayıcı, Windows üzerinde '; ' ve diğer tüm platformlarda ': '.
 
-|Özellik adı                 |Açıklama  |
+|Özellik Adı                 |Açıklama  |
 |------------------------------|---------|
 |`TRUSTED_PLATFORM_ASSEMBLIES`   | Platform ve uygulama derleme dosyası yollarının listesi. |
 |`PLATFORM_RESOURCE_ROOTS`       | Uydu kaynak derlemelerinin aranacağı Dizin yollarının listesi. |
@@ -31,12 +31,12 @@ Her yoklama özelliği isteğe bağlıdır. Varsa, her özellik mutlak yolların
 
 ### <a name="how-are-the-properties-populated"></a>Özellikler nasıl doldurulur?
 
-*@No__t-1myapp >. Deps. JSON* dosyasının var olup olmadığına bağlı olarak özelliklerin doldurulmasına yönelik iki ana senaryo vardır.
+*\<myapp >. Deps. JSON* dosyasının var olup olmadığına bağlı olarak özelliklerin doldurulmasına yönelik iki ana senaryo vardır.
 
-- *@No__t -1. Deps. JSON* dosyası mevcut olduğunda, araştırma özelliklerini doldurmak için ayrıştırılır.
-- *@No__t -1. Deps. JSON* dosyası mevcut olmadığında, uygulamanın dizininin tüm bağımlılıkları içermesi varsayılır. Dizin içeriği, araştırma özelliklerini doldurmak için kullanılır.
+- *\*. Deps. JSON* dosyası mevcut olduğunda, araştırma özelliklerini doldurmak için ayrıştırılır.
+- *\*. Deps. JSON* dosyası mevcut olmadığında, uygulamanın dizininin tüm bağımlılıkları içermesi varsayılır. Dizin içeriği, araştırma özelliklerini doldurmak için kullanılır.
 
-Ayrıca, başvurulan tüm çerçeveler için *@no__t -1. Deps. JSON* dosyaları benzer şekilde ayrıştırılmaz.
+Ayrıca, başvurulan tüm çerçeveler için *\*. Deps. JSON* dosyaları benzer şekilde ayrıştırılmaz.
 
 Son olarak, `ADDITIONAL_DEPS` ortam değişkeni ek bağımlılıklar eklemek için kullanılabilir.
 
@@ -51,25 +51,25 @@ Her özelliğe, yukarıdaki tablodaki Özellik adı ile <xref:System.AppContext.
 |Ortam değişkeni        |Açıklama  |
 |----------------------------|---------|
 |`COREHOST_TRACE=1`          |İzlemeyi etkinleştirilir.|
-|`COREHOST_TRACEFILE=<path>` |Varsayılan `stderr` yerine bir dosya yolunu izler.|
+|`COREHOST_TRACEFILE=<path>` |Varsayılan `stderr`yerine bir dosya yolu izler.|
 |`COREHOST_TRACE_VERBOSITY`  |Ayrıntı düzeyini 1 ' den (en düşük) 4 ' e (en yüksek) ayarlar.|
 
 ## <a name="managed-assembly-default-probing"></a>Yönetilen derleme varsayılan yoklama
 
-Yönetilen bir derlemeyi bulmaya yönelik yoklama yaparken, <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> şu şekilde görünür:
+Yönetilen bir derlemeyi bulma konusunda yoklama yaparken <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> şu zamanda sırayla görünür:
 
-- @No__t-1 ' deki <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> ile eşleşen dosyalar (dosya uzantıları kaldırıldıktan sonra).
-- Ortak dosya uzantılarıyla `APP_NI_PATHS` ' daki yerel görüntü derleme dosyaları.
+- `TRUSTED_PLATFORM_ASSEMBLIES` <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> eşleşen dosyalar (dosya uzantıları kaldırıldıktan sonra).
+- Ortak dosya uzantılarıyla `APP_NI_PATHS` içindeki yerel görüntü derleme dosyaları.
 - Ortak dosya uzantılarına sahip `APP_PATHS` içindeki derleme dosyaları.
 
 ## <a name="satellite-resource-assembly-probing"></a>Uydu (kaynak) derlemeyi yoklama
 
 Belirli bir kültürün uydu derlemesini bulmak için bir dosya yolları kümesi oluşturun.
 
-@No__t-0 ' daki her yol için-1 @no__t, <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> dizesini, Dizin ayırıcısını, <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> dizesini ve '. dll ' uzantısını ekleyin.
+`PLATFORM_RESOURCE_ROOTS` içindeki her yol için, `APP_PATHS`<xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> dizesini, Dizin ayırıcısını, <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> dizeyi ve '. dll ' uzantısını ekleyin.
 
 Eşleşen herhangi bir dosya varsa, yüklemeyi ve döndürmeyi deneyin.
 
 ## <a name="unmanaged-native-library-probing"></a>Yönetilmeyen (yerel) kitaplık yoklama
 
-Yönetilmeyen bir kitaplığı bulmaya yönelik yoklama yaparken, `NATIVE_DLL_SEARCH_DIRECTORIES`, eşleşen bir kitaplığı arayarak aranır.
+Yönetilmeyen bir kitaplığı bulmaya yönelik yoklama yaparken, `NATIVE_DLL_SEARCH_DIRECTORIES` eşleşen bir kitaplığı arayarak aranır.

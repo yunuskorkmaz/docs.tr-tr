@@ -20,5 +20,5 @@ Mikro hizmet tabanlı bir uygulama tasarlamak ve dağıtmak yeterince zor. Ancak
 Uygulamanızın birçok ayrı bileşeni de sistem durumu izleme özellikleri de içermelidir. Bu bölümdeki yönergeleri izleyerek, artma geçici kapalı kalma süresi veya karmaşık ve bulut tabanlı dağıtımlarda oluşan normal hiccups içinde sorunsuz şekilde çalışan bir uygulama oluşturabilirsiniz.
 
 >[!div class="step-by-step"]
->[Önceki](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)İleri
->[](handle-partial-failure.md)
+>[Önceki](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[İleri](handle-partial-failure.md)

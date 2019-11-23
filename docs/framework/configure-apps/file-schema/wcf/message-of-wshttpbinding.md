@@ -12,8 +12,8 @@ ms.locfileid: "73738974"
 # <a name="message-of-wshttpbinding"></a>\<wsHttpBinding \<ileti > >
 [\<wsHttpBinding >](wshttpbinding.md)'nin ileti düzeyinde güvenliğine yönelik ayarları tanımlar.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+[ **\<yapılandırma >** ](../configuration-element.md)\
+[**System. serviceModel >\<** ](system-servicemodel.md) &nbsp;&nbsp;\
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlamaları >** ](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsHttpBinding >** ](wshttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
@@ -42,7 +42,7 @@ ms.locfileid: "73738974"
 |algorithmSuite|İleti şifrelemesini ve anahtar sarması algoritmalarını ayarlar. Algoritmalar ve anahtar boyutları <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> sınıfı tarafından belirlenir. Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.<br /><br /> Varsayılan değer `Basic256` şeklindedir.|  
 |clientCredentialType|İsteğe bağlı. Güvenlik modunu kullanarak istemci kimlik doğrulaması gerçekleştirirken kullanılacak kimlik bilgisinin türünü belirtir `Message` veya `TransportWithMessageCredentials`. Aşağıdaki numaralandırma değerlerine bakın. Varsayılan, `Windows` değeridir.<br /><br /> Bu öznitelik <xref:System.ServiceModel.MessageCredentialType>türündedir.|  
 |establishSecurityContext|Güvenlik kanalının güvenli bir oturum kurup kurmadığını belirleyen bir Boole değeri. Güvenli bir oturum, uygulama iletilerini değiş tokuş etmeden önce bir güvenlik bağlamı belirteci (SCT) oluşturur. SCT oluşturulduğunda, güvenlik kanalı üst kanallara bir <xref:System.ServiceModel.Channels.ISession> arabirimi sunar. Güvenli oturumları kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenli oturum oluşturma](../../../wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> Varsayılan değer `true` şeklindedir.|  
-|negotiateServiceCredential|İsteğe bağlı. Hizmet kimlik bilgisinin istemci bant dışı olarak sağlanıp sağlanmadığını veya hizmetten istemciye bir anlaşma sürecinde elde edilip edilmeyeceğini belirten bir Boole değeri. Bu tür bir anlaşma, olağan ileti alışverişi için bir precurslı ' dır.<br /><br /> `clientCredentialType` özniteliği None, username veya Certificate değerine eşitse, bu özniteliği `false` olarak ayarlamak, hizmet sertifikasının bant dışı ve istemcinin hizmet sertifikasını belirtmesi gerektiğini (@no__t_3 kullanarak) gösterir. [ _ serviceCertificate >](servicecertificate-of-servicecredentials.md)) [\<ServiceCredentials >](servicecredentials.md) hizmeti davranışı. Bu mod, WS-Trust ve WS-SecureConversation uygulayan SOAP yığınları ile birlikte çalışabilir.<br /><br /> `ClientCredentialType` özniteliği `Windows`olarak ayarlanırsa, bu özniteliğin `false` olarak ayarlanması Kerberos tabanlı kimlik doğrulamasını belirtir. Bu, istemci ve hizmetin aynı Kerberos etki alanının parçası olması gerektiği anlamına gelir. Bu mod, Kerberos belirteç profilini (OASSıS WSS TC ' de tanımlandığı gibi) ve WS-Trust ve WS-SecureConversation ' i uygulayan SOAP yığınları ile birlikte çalışabilir.<br /><br /> Bu öznitelik `true`olduğunda, SOAP iletileri üzerinden SPNego Exchange tünelini sağlayan bir .NET SOAP anlaşmasına neden olur.<br /><br /> Varsayılan, `true` değeridir.|  
+|negotiateServiceCredential|İsteğe bağlı. Hizmet kimlik bilgisinin istemci bant dışı olarak sağlanıp sağlanmadığını veya hizmetten istemciye bir anlaşma sürecinde elde edilip edilmeyeceğini belirten bir Boole değeri. Bu tür bir anlaşma, olağan ileti alışverişi için bir precurslı ' dır.<br /><br /> `clientCredentialType` özniteliği None, username veya Certificate değerine eşitse, bu özniteliği `false` olarak ayarlamak, hizmet sertifikasının bant dışında kullanılabilir olduğunu ve istemcinin, [\<serviceCredentials >](servicecredentials.md) hizmeti davranışındaki hizmet sertifikasını ( [\<ServiceCertificate >](servicecertificate-of-servicecredentials.md)kullanarak) belirtmesi gerektiğini gösterir. Bu mod, WS-Trust ve WS-SecureConversation uygulayan SOAP yığınları ile birlikte çalışabilir.<br /><br /> `ClientCredentialType` özniteliği `Windows`olarak ayarlanırsa, bu özniteliğin `false` olarak ayarlanması Kerberos tabanlı kimlik doğrulamasını belirtir. Bu, istemci ve hizmetin aynı Kerberos etki alanının parçası olması gerektiği anlamına gelir. Bu mod, Kerberos belirteç profilini (OASSıS WSS TC ' de tanımlandığı gibi) ve WS-Trust ve WS-SecureConversation ' i uygulayan SOAP yığınları ile birlikte çalışabilir.<br /><br /> Bu öznitelik `true`olduğunda, SOAP iletileri üzerinden SPNego Exchange tünelini sağlayan bir .NET SOAP anlaşmasına neden olur.<br /><br /> Varsayılan, `true` değeridir.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite özniteliği  
   
@@ -82,7 +82,7 @@ ms.locfileid: "73738974"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Güvenlik >](security-of-wshttpbinding.md)|[\<wsHttpBinding >](wshttpbinding.md)için güvenlik ayarlarını tanımlar.|  
+|[\<güvenlik >](security-of-wshttpbinding.md)|[\<wsHttpBinding >](wshttpbinding.md)için güvenlik ayarlarını tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -94,4 +94,4 @@ ms.locfileid: "73738974"
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\< bağlama >](bindings.md)
+- [bağlama > \<](bindings.md)

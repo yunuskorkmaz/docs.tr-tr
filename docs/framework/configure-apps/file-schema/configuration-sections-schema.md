@@ -34,6 +34,6 @@ Yapılandırma bölümleri şeması, yapılandırma dosyalarında özel ayarlar�
 | [ **\<configSections** için **\<Temizleme >** >](clear-element-for-configsections.md) | Önceden tanımlanmış tüm bölümleri ve bölüm gruplarını temizler. |
 | [ **\<Temizle >** ](clear-element-for-configsections.md) | Önceden tanımlanmış tüm bölümleri ve bölüm gruplarını temizler. |
 | [ **\<configSections >** ](configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimleri içerir. |
-| [ **\<configSections** için **\<kaldırın** >](remove-element-for-configsections.md) | Önceden tanımlanmış bir bölümü veya bölüm grubunu kaldırır. |
+| [ **\<configSections** için **>\<kaldırın** >](remove-element-for-configsections.md) | Önceden tanımlanmış bir bölümü veya bölüm grubunu kaldırır. |
 | [ **\<configSections >** ve **\<sectionGroup** için **Bölüm >\<** >](section-element.md) | Bir yapılandırma bölümü bildirimi içerir. |
 | [ **\<configSections** için **sectionGroup >\<** >](sectiongroup-element-for-configsections.md) | Yapılandırma bölümleri için bir ad alanı tanımlar. |

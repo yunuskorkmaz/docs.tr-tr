@@ -14,10 +14,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 09/28/2019
 ms.locfileid: "71592059"
 ---
-# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>' @No__t-0variablename > ' değişkeni kapsayan bir blokta bir değişkeni gizliyor
+# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>'\<VariableName > ' değişkeni kapsayan bir blokta bir değişkeni gizliyor
 Bir blok içine alınmış bir değişken, başka bir yerel değişkenle aynı ada sahiptir.  
   
- **Hata KIMLIĞI:** BC30616  
+ **Hata kimliği:** BC30616  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
@@ -30,9 +30,9 @@ Bir blok içine alınmış bir değişken, başka bir yerel değişkenle aynı a
     End If  
     ```  
   
-- Bu hatanın yaygın bir nedeni, bir olay işleyicisi içinde `Catch e As Exception` ' ın kullanılması. Bu durumda, `Catch` blok değişkenini `e` yerine @no__t olarak adlandırın.  
+- Bu hatanın yaygın bir nedeni, bir olay işleyicisi içinde `Catch e As Exception` kullanmaktır. Bu durumda, `Catch` blok değişkenini `e`yerine `ex` olarak adlandırın.  
   
-- Bu hatanın daha yaygın bir kaynağı, farklı bir `Catch` bloğunda `Try` bloğu içinde belirtilen yerel bir değişkene erişme girişiminde bulunur. Bunu düzeltmek için değişkeni `Try...Catch...Finally` yapısının dışında bildirin.  
+- Bu hatanın daha yaygın bir kaynağı, farklı bir `Catch` bloğunda `Try` bloğu içinde belirtilen yerel bir değişkene erişme girişiminde bulunur. Bunu düzeltmek için değişkeni `Try...Catch...Finally` yapısı dışında bildirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

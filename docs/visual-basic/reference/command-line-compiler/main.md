@@ -14,7 +14,7 @@ ms.lasthandoff: 10/07/2019
 ms.locfileid: "72005498"
 ---
 # <a name="-main"></a>-main
-@No__t-0 yordamını içeren sınıfı veya modülü belirtir.  
+`Sub Main` yordamını içeren sınıfı veya modülü belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -22,16 +22,16 @@ ms.locfileid: "72005498"
 -main:location  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `location`  
  Gerekli. Program başladığında çağrılacak `Sub Main` yordamını içeren sınıfın veya modülün adı. Bu, **-Main: Module** veya **-Main: Namespace. Module**biçiminde olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Yürütülebilir bir dosya veya Windows yürütülebilir programı oluştururken bu seçeneği kullanın. **-Main** seçeneği atlanırsa, derleyici tüm ortak sınıflarda ve modüllerde geçerli bir paylaşılan `Sub Main` arar.  
   
- @No__t-1 yordamının çeşitli biçimlerinin tartışılması için [Visual Basic 'de ana yordama](../../../visual-basic/programming-guide/program-structure/main-procedure.md) bakın.  
+ `Main` yordamının çeşitli biçimlerinin tartışılması için [Visual Basic ana yordama](../../../visual-basic/programming-guide/program-structure/main-procedure.md) bakın.  
   
- @No__t-0 <xref:System.Windows.Forms.Form> ' den devralan bir sınıfsa, derleyici, bir @no__t 3 yordamı yoksa uygulamayı başlatan varsayılan bir `Main` yordamı sağlar. Bu, geliştirme ortamında oluşturulan komut satırında kod derlemenize olanak sağlar.  
+ `location`, <xref:System.Windows.Forms.Form>devralan bir sınıfsa derleyici, sınıfın `Main` yordamı yoksa uygulamayı başlatan varsayılan bir `Main` yordamı sağlar. Bu, geliştirme ortamında oluşturulan komut satırında kod derlemenize olanak sağlar.  
   
  [!code-vb[VbVbalrCompiler#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#16)]  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72005498"
 4. **Başlangıç nesnesi** kutusundaki değeri değiştirin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, `Test2` sınıfında `Sub Main` yordamının bulunduğunu belirten `T2.vb` ve `T3.vb` ' i derler.  
+ Aşağıdaki kod, `Test2` sınıfında `Sub Main` yordamının bulunduğunu belirterek `T2.vb` ve `T3.vb`derler.  
   
 ```console
 vbc t2.vb t3.vb -main:Test2  

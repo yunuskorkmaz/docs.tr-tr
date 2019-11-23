@@ -56,7 +56,7 @@ ms.locfileid: "73459453"
   
  Ayrıca, stile bir anahtar atayarak ve bu anahtarı denetiminizin `Style` özelliğinde belirterek belirli bir türün yalnızca belirli denetimlerine bir stil uygulayabilirsiniz.  Stiller hakkında daha fazla bilgi için bkz. [Stil oluşturma ve şablon](styling-and-templating.md)oluşturma.  
   
-### <a name="creating-a-controltemplate"></a>ControlTemplate oluşturma  
+### <a name="creating-a-controltemplate"></a>ControlTemplate oluşturarak  
  <xref:System.Windows.Style>, tek seferde birden çok denetim üzerinde özellikler ayarlamanıza olanak tanır, ancak bazen bir <xref:System.Windows.Style>oluşturarak yapabileceklerinizin ötesinde bir <xref:System.Windows.Controls.Control> görünümünü özelleştirmek isteyebilirsiniz. <xref:System.Windows.Controls.Control> sınıfından kalıtımla alan sınıfların bir <xref:System.Windows.Controls.Control>yapısını ve görünümünü tanımlayan bir <xref:System.Windows.Controls.ControlTemplate>vardır. Bir <xref:System.Windows.Controls.Control> <xref:System.Windows.Controls.Control.Template%2A> özelliği geneldir, bu sayede varsayılandan farklı bir <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.Control> sağlayabilirsiniz. Bir <xref:System.Windows.Controls.Control>görünümünü özelleştirmek için bir denetimden devralma yerine, genellikle bir <xref:System.Windows.Controls.Control> için yeni bir <xref:System.Windows.Controls.ControlTemplate> belirtebilirsiniz.  
   
  <xref:System.Windows.Controls.Button>en yaygın denetimi göz önünde bulundurun.  Bir <xref:System.Windows.Controls.Button> birincil davranışı, bir uygulamanın kullanıcı tıkladığı zaman bir eylem yapması olanaklı hale gelir.  Varsayılan olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> yükseltilmiş dikdörtgen olarak görünür.  Bir uygulama geliştirirken, düğmenin tıklama olayını işleyerek bir <xref:System.Windows.Controls.Button>davranışından faydalanmak isteyebilirsiniz, ancak düğmenin özelliklerini değiştirerek düğmenin görünümünü yapabileceklerinizi aşabilirsiniz. bu işlemi yapabilirsiniz.  Bu durumda, yeni bir <xref:System.Windows.Controls.ControlTemplate>oluşturabilirsiniz.  
@@ -104,7 +104,7 @@ ms.locfileid: "73459453"
 - [Denetim Kitaplığı](control-library.md)
 - [Veri Şablonu Oluşturmaya Genel Bakış](../data/data-templating-overview.md)
 - [Veri Bağlamaya Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)
-- [Giriş](../advanced/input-wpf.md)
+- [Girdi](../advanced/input-wpf.md)
 - [Komutu Etkinleştirme](../advanced/how-to-enable-a-command.md)
 - [İzlenecek yollar: Özel Animasyonlu Düğme Oluşturma](walkthroughs-create-a-custom-animated-button.md)
 - [Denetim Özelleştirme](control-customization.md)

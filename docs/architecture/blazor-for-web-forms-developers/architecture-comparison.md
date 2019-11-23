@@ -34,7 +34,7 @@ Denetimler, biçimlendirme ile oluşturulup Kullanıcı denetimleri olarak tesli
 
 Sayfaların Ayrıca kapsamlı bir olay yaşam döngüsü vardır. Her sayfa, ASP.NET çalışma zamanı sayfanın kodunu her istek için yürütürken oluşan başlatma, yükleme, PreRender ve kaldırma olayları için olaylar oluşturur.
 
-Bir sayfadaki denetimler genellikle denetimi sunan aynı sayfaya geri dönerek, ve bunlara `ViewState` adlı gizli form alanından bir yük ile birlikte yer alır. @No__t_0 alanı, oluşturuldukları sırada denetimlerin durumu hakkında bilgiler içerir ve ASP.NET çalışma zamanının sunucuya gönderilen içerikte yapılan değişiklikleri karşılaştırıp tanımlamasına olanak tanır.
+Bir sayfadaki denetimler genellikle denetimi sunan aynı sayfaya geri dönerek, ve bunlara `ViewState`adlı gizli form alanından bir yük ile birlikte yer alır. `ViewState` alanı, oluşturuldukları sırada denetimlerin durumu hakkında bilgiler içerir ve ASP.NET çalışma zamanının sunucuya gönderilen içerikte yapılan değişiklikleri karşılaştırıp tanımlamasına olanak tanır.
 
 ## <a name="blazor"></a>Blazor
 
@@ -52,7 +52,7 @@ Bir bileşen bir olayı işlediğinde, Blazor bileşeni işler ve işlenmiş ç�
 
 ![Blazor DOM etkileşimi](./media/architecture-comparison/blazor-dom-interaction.png)
 
-Bileşenler, olağan dışı bir kullanıcı arabirimi olayının dışına değiştiği takdirde, bunların işlenip işlenmeyeceğini el ile de belirtebilir. Blazor, yürütmenin tek bir mantıksal iş parçacığını zorlamak için `SynchronizationContext` kullanır. Bir bileşenin yaşam döngüsü yöntemleri ve Blazor tarafından oluşturulan tüm olay geri çağırmaları bu @no__t yürütülür-0.
+Bileşenler, olağan dışı bir kullanıcı arabirimi olayının dışına değiştiği takdirde, bunların işlenip işlenmeyeceğini el ile de belirtebilir. Blazor, yürütmenin tek bir mantıksal iş parçacığını zorlamak için bir `SynchronizationContext` kullanır. Bir bileşenin yaşam döngüsü yöntemleri ve Blazor tarafından oluşturulan tüm olay geri çağırmaları bu `SynchronizationContext`yürütülür.
 
 >[!div class="step-by-step"]
 >[Önceki](introduction.md)

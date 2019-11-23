@@ -1,14 +1,13 @@
 ---
 title: WCF geliştiricileri için gRPC hata işleme
 description: YAZıLACAK
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 91f5789d8ed0f01f3ce2f3f9a6c6ccf14f245290
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2c44bd9264c877a7c7a86c115b6da9f759006016
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094229"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967787"
 ---
 # <a name="error-handling"></a>Hata işleme
 
@@ -16,7 +15,7 @@ WCF, SOAP hata standardını destekleme dahil, ayrıntılı hata bilgileri sağl
 
 Ne yazık ki, gRPC 'nin geçerli sürümünde WCF 'de bulunan gelişmiş algoritmaların mümkündür yok ve yalnızca basit durum kodlarına ve meta verilere göre sınırlı yerleşik hata işleme sahip. Aşağıdaki tabloda, en sık kullanılan durum kodlarına yönelik hızlı bir kılavuz verilmiştir:
 
-| Durum kodu | Gidermek |
+| Durum Kodu | Sorun |
 | ----------- | ------- |
 | `GRPC_STATUS_UNIMPLEMENTED` | Yöntem yazılmadı. |
 | `GRPC_STATUS_UNAVAILABLE` | Tüm hizmette sorun. |
@@ -47,7 +46,7 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 
 ## <a name="catching-errors-in-grpc-clients"></a>GRPC istemcilerinde yakalama hataları
 
-WCF istemcilerinin <xref:System.ServiceModel.FaultException%601> hataları yakalayabileceğini tıpkı, bir gRPC istemcisi hataları işlemek için bir `RpcException` yakalayabilir. `RpcException` genel bir tür olmadığından farklı bloklerdeki farklı hata türlerini yakalayamaz, ancak aşağıdaki örnekte gösterildiği gibi farklı durum C#kodları için ayrı`catch`blokları bildirmek üzere *özel durum filtreleri* özelliğini kullanabilirsiniz:
+WCF istemcilerinin <xref:System.ServiceModel.FaultException%601> hataları yakalayabileceğini tıpkı, bir gRPC istemcisi hataları işlemek için bir `RpcException` yakalayabilir. `RpcException` genel bir tür olmadığından farklı bloklerdeki farklı hata türlerini yakalayamaz, ancak aşağıdaki örnekte gösterildiği gibi farklı durum C#kodları için ayrı `catch` blokları bildirmek üzere *özel durum filtreleri* özelliğini kullanabilirsiniz:
 
 ```csharp
 try

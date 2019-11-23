@@ -1,14 +1,13 @@
 ---
 title: WCF geliştiricileri için bir WCF çözümünü gRPC-gRPC 'ye geçirme
 description: Farklı türlerde WCF hizmetini gRPC 'de eşdeğerine geçirme.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 65c30b777d9981cb3291b846f698f2a69b4498fc
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 33823d20e1593323a03da12981c5a4534c4d491a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846597"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971769"
 ---
 # <a name="migrate-a-wcf-solution-to-grpc"></a>WCF çözümünü gRPC'ye geçirme
 

@@ -44,7 +44,7 @@ Birçok avantaj sağlarken, mikro hizmetler ücretsiz öğle yemeği değildir. 
 
 - İleti şifreleme/şifre çözme önemli hale gelir.
 
-Book [.net mikro hizmetleri: Microsoft 'tan ücretsiz olarak kullanılabilen Kapsayıcılı .NET uygulamaları](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)için mimari, mikro hizmet uygulamalarına yönelik iletişim desenlerinin ayrıntılı bir kapsamını sağlar. Bu bölümde, Azure bulutu 'nda bulunan uygulama seçenekleriyle birlikte bu desenlere yönelik yüksek düzeyde bir genel bakış sunuyoruz.
+[.Net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)Microsoft 'tan ücretsiz olarak sunulan mimari, mikro hizmet uygulamalarına yönelik iletişim desenlerinin ayrıntılı bir kapsamını sunmaktadır. Bu bölümde, Azure bulutu 'nda bulunan uygulama seçenekleriyle birlikte bu desenlere yönelik yüksek düzeyde bir genel bakış sunuyoruz.
 
 Bu bölümde, önce ön uç uygulamaları ve arka uç mikro hizmetleri arasındaki iletişimi ele alacağız. Ardından arka uç mikro hizmetlerinin birbirleriyle iletişim kurmasına bakacağız. Yukarı ve gRPC iletişim teknolojisini keşfereceğiz. Son olarak, hizmet kafesi teknolojisini kullanarak yeni yenilikçi iletişim desenleri inceleyeceğiz. Ayrıca, Azure bulutunun bulut Yerel iletişimini desteklemek için farklı türlerde *yedekleme hizmetleri* sağladığını de göreceğiz.
 

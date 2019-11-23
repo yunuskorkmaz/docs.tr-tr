@@ -1,14 +1,13 @@
 ---
 title: WCF geliştiricileri için gRPC-gRPC 'ye Genel Bakış
 description: GRPC 'nin geliştirilmesine kılavuzluk eden ilkeler kümesi hakkında bilgi edinin.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6980b473a6f9852a4e4f396355e98e2d3300cabe
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: a92fe7ca2f8e17126025362fcc3c190024ebf7d3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846652"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967760"
 ---
 # <a name="grpc-overview"></a>gRPC genel bakış
 
@@ -16,7 +15,7 @@ Son bölümde hem WCF hem de gRPC 'nin genesare ' a bakdıktan sonra, bu bölüm
 
 ASP.NET Core 3,0, GRPC 'nin resmi .NET uygulamasına katkıda bulunan Microsoft ekipleriyle, gRPC 'yi bir birinci sınıf vatandaşlık olarak yerel olarak destekleyen ilk ASP.NET sürümüdür. .NET ile, diğer tüm büyük programlama dilleri ve çerçeveleri ile birlikte çalışabilmeye yönelik dağıtılmış uygulamalar oluşturmak için en iyi yaklaşım önerilir.
 
-## <a name="key-principles"></a>Ana ilkeler
+## <a name="key-principles"></a>Temel ilkeler
 
 Bölüm 1 ' de anlatıldığı gibi, Google Stubby, kendi iç, genel amaçlı RPC altyapısını değiştirmek için HTTP/2 girişini kullanmak istedi. Stubby temel alınarak gRPC, standartdan faydalanabilir ve uygulanabilirliğini mobil bilgi işlem, bulut ve Nesnelerin İnterneti genişletebilirler.
 

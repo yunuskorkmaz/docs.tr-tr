@@ -2,12 +2,12 @@
 title: CQRS mikro hizmetinde okuma/sorgulama işlemleri uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | CQRS 'nin sorgular tarafının, Davber kullanarak eShopOnContainers 'daki sıralama mikro hizmeti üzerinde uygulanmasını anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 064abd084ea6b99229f995f8ca899a99b69b7bc2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 235b0e471a17e2a37a883a111cf499b7837f3ea1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740043"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972083"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS mikro hizmetinde okuma/sorgu uygulama
 
@@ -55,7 +55,7 @@ Bu Viewmodeller veya DTOs, daha sonraki bir kod parçacığında gösterilen `Or
 
 ### <a name="viewmodel-as-dynamic-type"></a>Dinamik tür olarak ViewModel
 
-Aşağıdaki kodda gösterildiği gibi, yalnızca bir sorgu tarafından döndürülen öznitelikleri temel alan *dinamik* bir tür döndürerek sorgu tarafından doğrudan bir `ViewModel` döndürülebilir. Bu, döndürülecek özniteliklerin alt kümesinin sorgunun kendisini temel aldığı anlamına gelir. Bu nedenle, sorguya veya birleşime yeni bir sütun eklerseniz, bu veriler döndürülen `ViewModel` ' a dinamik olarak eklenir.
+Aşağıdaki kodda gösterildiği gibi, yalnızca bir sorgu tarafından döndürülen öznitelikleri temel alan *dinamik* bir tür döndürerek sorgular tarafından doğrudan döndürülen bir `ViewModel`. Bu, döndürülecek özniteliklerin alt kümesinin sorgunun kendisini temel aldığı anlamına gelir. Bu nedenle, sorguya veya birleşime yeni bir sütun eklerseniz, bu veriler döndürülen `ViewModel`dinamik olarak eklenir.
 
 ```csharp
 using Dapper;
@@ -136,7 +136,7 @@ public class OrderQueries : IOrderQueries
 
 Web API 'Leri ve mikro hizmetleri kullanan geliştiriciler, özellikle yanıt türleri ve hata kodları (Standart değilse) ile ilgili olarak en iyi şekilde verilen şeydir. Bunlar XML açıklamaları ve veri ek açıklamalarında işlenir.
 
-Swagger Kullanıcı arabiriminde doğru belgeler olmadan, tüketici hangi türlerin döndürülmekte olduğunu veya hangi HTTP kodlarının döndürüleceğini bilmede değildir. Bu sorun, <xref:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute?displayProperty=nameWithType> eklenerek düzeltildiğinde, swashbuckle aşağıdaki kodda gösterildiği gibi API dönüş modeli ve değerleri hakkında daha zengin bilgiler oluşturabilir:
+Swagger Kullanıcı arabiriminde doğru belgeler olmadan, tüketici hangi türlerin döndürülmekte olduğunu veya hangi HTTP kodlarının döndürüleceğini bilmede değildir. Bu sorun <xref:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute?displayProperty=nameWithType>eklenerek düzeltildiğinde, swashbuckle aşağıdaki kodda gösterildiği gibi API dönüş modeli ve değerleri hakkında daha zengin bilgiler oluşturabilir:
 
 ```csharp
 namespace Microsoft.eShopOnContainers.Services.Ordering.API.Controllers
@@ -161,7 +161,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.API.Controllers
 }
 ```
 
-Ancak, `ProducesResponseType` özniteliği bir tür olarak dinamik kullanamaz, ancak aşağıdaki örnekte gösterildiği gibi, `OrderSummary` ViewModel DTO gibi açık türler kullanmayı gerektirir:
+Ancak, `ProducesResponseType` özniteliği bir tür olarak dinamik kullanamaz, ancak aşağıdaki örnekte gösterildiği gibi açık türlerin `OrderSummary` ViewModel ile kullanılması gerekir:
 
 ```csharp
 public class OrderSummary
@@ -189,7 +189,7 @@ Görüntüde, ViewModel türlerine ve döndürülebilecek olası HTTP durum kodl
  <https://github.com/StackExchange/dapper-dot-net>
 
 - **Julie Lerman. Veri noktaları-kaber, Entity Framework ve hibrit uygulamalar (MSDN Magazine makalesi)**  
-  <https://msdn.microsoft.com/magazine/mt703432>
+  <https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps>
 
 - **Swagger kullanan ASP.NET Core Web API Yardım Sayfaları**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>

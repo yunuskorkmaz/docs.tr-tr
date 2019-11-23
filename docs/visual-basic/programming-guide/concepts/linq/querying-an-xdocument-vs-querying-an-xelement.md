@@ -4,18 +4,18 @@ ms.date: 07/20/2015
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
 ms.openlocfilehash: 4aba08319abeb21de79b3b8511044b8272402984
 ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834943"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Bir XDocument sorgulama ve bir XElement sorgulama (Visual Basic)
-@No__t-0 aracılığıyla bir belge yüklediğinizde, sorguları <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> ile yüklerken biraz farklı bir şekilde yazmanız gerektiğini fark edeceksiniz.  
+<xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>aracılığıyla bir belge yüklediğinizde, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>aracılığıyla yükleme yaparken sorguları biraz farklı yazmanız gerektiğini fark edeceksiniz.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>XDocument. Load ve XElement. Load karşılaştırması  
- Bir XML belgesini <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> aracılığıyla bir @no__t yüklediğinizde, XML ağacının kökündeki <xref:System.Xml.Linq.XElement>, yüklenen belgenin kök öğesini içerir. Ancak, aynı XML belgesini <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> ile <xref:System.Xml.Linq.XDocument> ' a yüklediğinizde, ağacın kökü bir <xref:System.Xml.Linq.XDocument> düğümü olur ve yüklenen belgenin kök öğesi <xref:System.Xml.Linq.XDocument> ' ün alt <xref:System.Xml.Linq.XElement> düğümüdür. @No__t-0 eksenleri kök düğüme göre çalışır.  
+ Bir XML belgesini <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>aracılığıyla bir <xref:System.Xml.Linq.XElement> yüklediğinizde, XML ağacının kökündeki <xref:System.Xml.Linq.XElement> yüklenen belgenin kök öğesini içerir. Ancak, <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>aracılığıyla aynı XML belgesini bir <xref:System.Xml.Linq.XDocument> yüklediğinizde, ağacın kökü bir <xref:System.Xml.Linq.XDocument> düğümüdür ve yüklenen belgenin kök öğesi <xref:System.Xml.Linq.XDocument>izin verilen alt <xref:System.Xml.Linq.XElement> düğümüdür. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eksenleri kök düğüme göre çalışır.  
   
- Bu ilk örnek <xref:System.Xml.Linq.XElement.Load%2A> kullanarak bir XML ağacı yükler. Daha sonra ağacın kök öğelerinin alt öğelerini sorgular.  
+ Bu ilk örnek, <xref:System.Xml.Linq.XElement.Load%2A>kullanarak bir XML ağacı yükler. Daha sonra ağacın kök öğelerinin alt öğelerini sorgular.  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -46,7 +46,7 @@ Querying tree loaded with XElement.Load
 <Child3>3</Child3>  
 ```  
   
- Aşağıdaki örnek, bir <xref:System.Xml.Linq.XElement> yerine, XML ağacının <xref:System.Xml.Linq.XDocument> ' a yüklendiği özel durum ile yukarıdaki ile aynıdır.  
+ Aşağıdaki örnek, XML ağacının bir <xref:System.Xml.Linq.XElement>yerine bir <xref:System.Xml.Linq.XDocument> yüklendiği özel durum ile yukarıdaki ile aynıdır.  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -102,7 +102,7 @@ For Each e As XElement In childList
 Next  
 ```  
   
- Bu sorgu artık <xref:System.Xml.Linq.XElement> ' da belirtilen ağaçtaki sorguyla aynı şekilde çalışır. Örnek aşağıdaki çıktıyı üretir:  
+ Bu sorgu artık <xref:System.Xml.Linq.XElement>kök ağaçtaki sorgu ile aynı şekilde gerçekleştirilir. Örnek aşağıdaki çıktıyı üretir:  
   
 ```console
 Querying tree loaded with XDocument.Load  

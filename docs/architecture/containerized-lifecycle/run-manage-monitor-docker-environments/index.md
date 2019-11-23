@@ -11,7 +11,7 @@ ms.locfileid: "70295631"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Docker üretim ortamlarını çalıştırma, yönetme ve izleme
 
-Minin Kurumsal uygulamaların yüksek kullanılabilirlik ve yüksek ölçeklenebilirlik ile çalışması gerekir; BT işlemlerinin ortamları ve uygulamaları yönetebilmeleri ve izleyebilmeleri gerekir.
+Vizyon: kurumsal uygulamaların yüksek kullanılabilirlik ve yüksek ölçeklenebilirlik ile çalışması gerekir; BT işlemlerinin ortamları ve uygulamaları yönetebilmeleri ve izleyebilmeleri gerekir.
 
 Kapsayıcılı Docker uygulamaları yaşam döngüsünün bu en son bölümünde, uygulamalarınızı ölçeklenebilir, yüksek kullanılabilirlik (HA) üretim ortamlarında nasıl çalıştırabileceğiniz, yönetebileceğiniz ve izleyebileceğinizi gözlemleceksiniz.
 
@@ -20,5 +20,5 @@ Kapsayıcılı uygulamalarınızı üretimde çalıştırmanın yolu (altyapı m
 Bu bölümde, ölçeklenebilir, HA dağıtılmış uygulamaları verimli bir şekilde çalıştırmak ve BT perspektifinden bunları yönetmek ve izlemek için kullanabileceğiniz Microsoft ve diğer satıcıların belirli ürünleri ve teknolojileri inceleirsiniz.
 
 >[!div class="step-by-step"]
->[Önceki](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)İleri
->[](run-microservices-based-applications-in-production.md)
+>[Önceki](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
+>[İleri](run-microservices-based-applications-in-production.md)

@@ -22,7 +22,7 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
   
  **✓ DO** üyesi tarafından gerekli işlevselliği sağlayan en az türetilen parametre türü kullanın.  
   
- Örneğin, bir koleksiyonu tasarlandıran ve her öğeyi konsola yazdıran bir yöntem tasarlamak istediğinizi varsayalım. Bu tür bir yöntem, örneğin, <xref:System.Collections.ArrayList> veya <xref:System.Collections.IList> değil parametre olarak <xref:System.Collections.IEnumerable> almalıdır.  
+ Örneğin, bir koleksiyonu tasarlandıran ve her öğeyi konsola yazdıran bir yöntem tasarlamak istediğinizi varsayalım. Bu tür bir yöntem, örneğin <xref:System.Collections.ArrayList> veya <xref:System.Collections.IList>değil parametre olarak <xref:System.Collections.IEnumerable> almalıdır.  
   
  **X DO NOT** ayrılmış parametrelerini kullanın.  
   
@@ -34,7 +34,7 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
   
  **✓ DO** tüm yerleştirin `out` tüm değeri tarafından aşağıdaki parametreleri ve `ref` parametreleri (hariç parametre dizileri) arasında aşırı sıralama parametresinde bir tutarsızlık sonuçlanır olsa bile (bkz [üyesi Aşırı yükleme](../../../docs/standard/design-guidelines/member-overloading.md)).  
   
- @No__t-0 parametreleri ek dönüş değerleri olarak görülebilir ve bunları birlikte gruplandırmak, yöntem imzasının daha kolay anlaşılmasını sağlar.  
+ `out` parametreler ek dönüş değerleri olarak görülebilir ve bunları birlikte gruplandırmak yöntem imzasının anlaşılması daha kolay hale gelir.  
   
  **✓ DO** parametreleri üyeleri geçersiz kılarken adlandırma veya arabirim üyeleri uygulama tutarlı olmalıdır.  
   
@@ -50,7 +50,7 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
  **✓ CONSIDER** gerçekten iki durumlu değerleri desteklenir ve yalnızca Boole özellikleri başlatmak için kullanılan Oluşturucu parametreleri Boole değerlerini kullanarak.  
   
 ### <a name="validating-arguments"></a>Bağımsız değişkenler doğrulanıyor  
- **✓ DO** public, korumalı ya da açıkça gerçekleştirilen üyelerine geçirilen bağımsız değişken doğrulanamıyor. Doğrulama başarısız olursa, <xref:System.ArgumentException?displayProperty=nameWithType> veya alt sınıflarından birini oluşturun.  
+ **✓ DO** public, korumalı ya da açıkça gerçekleştirilen üyelerine geçirilen bağımsız değişken doğrulanamıyor. Doğrulama başarısız olursa, <xref:System.ArgumentException?displayProperty=nameWithType>veya alt sınıflarından birini oluşturun.  
   
  Gerçek doğrulamanın ortak veya korumalı üyenin kendisinde olması gerekmediğini unutmayın. Bu, bazı özel veya iç bir yordamın daha düşük bir düzeyinde gerçekleşecektir. Ana nokta, son kullanıcılara sunulan tüm yüzey alanının bağımsız değişkenleri denetlemesini sağlar.  
   
@@ -71,13 +71,13 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
   
  Bir bağımsız değişken bir by değeri parametresiyle geçirildiğinde, üye geçirilen gerçek bağımsız değişkenin bir kopyasını alır. Bağımsız değişken bir değer türü ise, bağımsız değişkenin bir kopyası yığına konur. Bağımsız değişken bir başvuru türü ise, başvurunun bir kopyası yığına konur. C#, Vb.net ve C++gibi en popüler CLR dilleri değere göre parametreleri geçirmek için varsayılan değer.  
   
- Bir bağımsız değişken `ref` parametresiyle geçirildiğinde, üye geçirilen gerçek bağımsız değişkene bir başvuru alır. Bağımsız değişken bir değer türü ise, yığına bağımsız değişkene bir başvuru konur. Bağımsız değişken bir başvuru türü ise, bir başvuruya başvuru, yığına konur. `Ref` parametreleri, üyenin çağıran tarafından geçirilen bağımsız değişkenleri değiştirmesine izin vermek için kullanılabilir.  
+ Bir bağımsız değişken bir `ref` parametresi aracılığıyla geçirildiğinde, üye geçirilen gerçek bağımsız değişkene bir başvuru alır. Bağımsız değişken bir değer türü ise, yığına bağımsız değişkene bir başvuru konur. Bağımsız değişken bir başvuru türü ise, bir başvuruya başvuru, yığına konur. `Ref` parametreler, üyenin çağıran tarafından geçirilen bağımsız değişkenleri değiştirmesine izin vermek için kullanılabilir.  
   
- `Out` parametreleri, bazı küçük farklılıklar ile `ref` parametrelerine benzerdir. Parametre başlangıçta atanmamış olarak kabul edilir ve bir değer atanmadan önce üye gövdesinde okunamaz. Ayrıca, parametreye, üyenin döndürdüğü bir değere atanmalıdır.  
+ `Out` parametreler, bazı küçük farklılıklar ile `ref` parametrelere benzerdir. Parametre başlangıçta atanmamış olarak kabul edilir ve bir değer atanmadan önce üye gövdesinde okunamaz. Ayrıca, parametreye, üyenin döndürdüğü bir değere atanmalıdır.  
   
  **X AVOID** kullanarak `out` veya `ref` parametreleri.  
   
- @No__t-0 veya `ref` parametrelerinin kullanılması işaretçilerle deneyim gerektirir, değer türlerinin ve başvuru türlerinin nasıl farklı olduğunu ve birden çok dönüş değeriyle yöntemleri işleme. Ayrıca, ve `ref` parametreleri arasındaki `out` fark yaygın olarak anlaşılmaz. Genel bir hedef kitle için tasarlayan çerçeve mimarları, kullanıcıların `out` veya `ref` parametreleriyle çalışmasını beklememelidir.  
+ `out` veya `ref` parametrelerinin kullanılması işaretçilerle deneyim gerektirir, değer türlerinin ve başvuru türlerinin nasıl farklı olduğunu ve birden çok dönüş değeriyle yöntemleri işleme. Ayrıca, `out` ve `ref` parametreleri arasındaki fark yaygın olarak anlaşılmaz. Genel bir hedef kitle için tasarlayan çerçeve mimarları, kullanıcıların `out` veya `ref` parametreleriyle birlikte çalışmasını beklememelidir.  
   
  **X DO NOT** başvuru türleri başvuruya göre geçirin.  
   
@@ -92,7 +92,7 @@ public class String {
 }  
 ```  
   
- Bir Kullanıcı daha sonra <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemini aşağıdaki şekilde çağırabilir:  
+ Daha sonra bir Kullanıcı <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemini aşağıdaki şekilde çağırabilir:  
   
  `String.Format("File {0} not found in {1}",new object[]{filename,directory});`  
   
@@ -138,7 +138,7 @@ public class String {
   
  **X DO NOT** kullanmak `varargs` yöntemleri, aksi takdirde üç nokta bilinir.  
   
- Gibi bazı CLR dilleri C++, `varargs` yöntemleri adlı değişken parametre listelerinin geçirilmesi için alternatif bir kural destekler. Bu kural, CLS uyumlu olmadığından çerçeve içinde kullanılmamalıdır.  
+ Gibi bazı CLR dilleri C++, `varargs` Yöntemler adlı değişken parametre listelerinin geçirilmesi için alternatif bir kural destekler. Bu kural, CLS uyumlu olmadığından çerçeve içinde kullanılmamalıdır.  
   
 ### <a name="pointer-parameters"></a>İşaretçi parametreleri  
  Genel olarak, işaretçiler iyi tasarlanmış bir yönetilen kod çerçevesinin genel yüzey alanında görünmemelidir. Çoğu zaman işaretçiler kapsüllenmelidir. Ancak bazı durumlarda, birlikte çalışabilirlik nedenleriyle işaretçiler gereklidir ve bu gibi durumlarda işaretçiler kullanılması uygundur.  
@@ -151,9 +151,9 @@ public class String {
   
  Örneğin, başlangıç dizinini geçirmeniz gerekmez, çünkü basit işaretçi aritmetiği aynı sonucu elde etmek için kullanılabilir.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- @no__t, [Framework tasarım yönergelerinden Pearson Eğitim, Inc. izni ile 0Reyazdırılmıştır: Microsoft Windows geliştirme serisi 'nin bir parçası olarak, .NET kitaplıkları için 2. sürüm @ no__t-0, Vazysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 ile Addison-Wesley Professional için kurallar, deyimler ve desenler. *  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

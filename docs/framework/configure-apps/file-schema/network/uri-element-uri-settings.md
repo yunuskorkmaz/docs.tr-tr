@@ -9,11 +9,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697434"
 ---
-# <a name="uri-element-uri-settings"></a>\<uri > öğesi (URI ayarları)
+# <a name="uri-element-uri-settings"></a>\<URI > öğesi (Uri Ayarları)
 .NET Framework Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) kullanarak ifade edilen Web adreslerini nasıl işleyeceğini belirten ayarları içerir.  
   
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<uri >**  
+&nbsp;&nbsp; **\<urı >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,8 +33,8 @@ ms.locfileid: "71697434"
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[IDN](idn-element-uri-settings.md)|Uluslararası etki alanı adı (ıDN) ayrıştırma 'nın etki alanı adlarına uygulandığını belirtir.|  
-|[iriParsing](iriparsing-element-uri-settings.md)|Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma <xref:System.Uri> ' a uygulanıp uygulanmadığını ve IRI ayrıştırma kurallarının uygulanıp uygulanamayacağını belirtir.|  
-|[schemeSettings](schemesettings-element-uri-settings.md)|Belirli düzenler için <xref:System.Uri> ' ın nasıl ayrıştıralınacağını belirtir.|  
+|[iriParsing](iriparsing-element-uri-settings.md)|<xref:System.Uri> için uluslararası kaynak tanımlayıcı (IRI) ayrıştırma uygulanıp uygulanmadığını ve IRI ayrıştırma kurallarının uygulanıp uygulanamayacağını belirtir.|  
+|[schemeSettings](schemesettings-element-uri-settings.md)|Belirli düzenler için <xref:System.Uri> nasıl ayrıştırılagösterir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71697434"
 |[yapılandırmada](../configuration-element.md)|Tüm ad alanları için ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 öğesi, <xref:System.Net> ad alanındaki sınıflar tarafından kullanılan <xref:System.Uri> sınıfının üyelerine yönelik ayarları içerir. Ayarlar IRI ve ıDN desteğini yapılandırır.  
+ `uri` öğesi, <xref:System.Net> ad alanındaki sınıflar tarafından kullanılan <xref:System.Uri> sınıfının üyelerine yönelik ayarları içerir. Ayarlar IRI ve ıDN desteğini yapılandırır.  
   
 ## <a name="example"></a>Örnek  
   

@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 19d1d5f81b5be9b843698b6e61d8571d4edfa66f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: b57741ed68b3481ad2c85b1c3d62717f09c7570e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181944"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971592"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirin
 
@@ -20,7 +20,7 @@ ASP.NET Core, bulutta iyileştirilmiş Modern Web uygulamaları oluşturmak içi
 
 ## <a name="mvc-and-razor-pages"></a>MVC ve Razor Pages
 
-ASP.NET Core MVC, Web tabanlı API 'Ler ve uygulamalar oluşturmak için yararlı olan birçok özellik sunar. MVC terimi, Kullanıcı isteklerine birkaç parçaya yanıt verme sorumluluklarını kesen bir kullanıcı arabirimi modeli olan "model-görünüm-denetleyicisi" için temsil eder. Bu düzenin yanı sıra, Razor Pages olarak ASP.NET Core uygulamalarında özellikler de uygulayabilirsiniz. Razor Pages, MVC ASP.NET Core yerleşik olarak bulunur ve yönlendirme, model bağlama vb. için aynı özellikleri kullanır. Ancak, denetleyiciler, görünümler, vb. için ayrı klasörler ve dosyalar kullanmak yerine, Razor Pages tek bir klasöre ("/Pages") konur, bu klasördeki göreli konumlarına göre rota ve işleyicileri işleyicilerle işleyebilir Denetleyici eylemleri yerine.
+ASP.NET Core MVC, Web tabanlı API 'Ler ve uygulamalar oluşturmak için yararlı olan birçok özellik sunar. MVC terimi, Kullanıcı isteklerine birkaç parçaya yanıt verme sorumluluklarını kesen bir kullanıcı arabirimi modeli olan "model-görünüm-denetleyicisi" için temsil eder. Bu düzenin yanı sıra, Razor Pages olarak ASP.NET Core uygulamalarında özellikler de uygulayabilirsiniz. Razor Pages, MVC ASP.NET Core yerleşik olarak bulunur ve yönlendirme, model bağlama vb. için aynı özellikleri kullanır. Bununla birlikte, denetleyiciler, görünümler, vb. için ayrı klasörler ve dosyalar olması yerine, Razor Pages tek bir klasöre ("/Pages") konur, bu klasördeki göreli konumlarına göre rota ve istekleri denetleyici eylemleri yerine işleyicilerle işleyebilir.
 
 Yeni bir ASP.NET Core uygulaması oluşturduğunuzda, derlemek istediğiniz uygulama türü için bir plana sahip olmanız gerekir. Visual Studio 'da çeşitli şablonlardan seçim yapmanız gerekir. En yaygın üç proje şablonu Web API 'SI, Web uygulaması ve Web uygulaması (Model-View-Controller). Bu kararı yalnızca bir proje oluştururken yapmanız mümkün olsa da, geri alınamaz bir karardır. Web API projesi standart model-görünüm-denetleyici denetleyicileri kullanır; varsayılan olarak yalnızca görünümler eksiktir. Benzer şekilde, varsayılan Web uygulaması şablonu Razor Pages kullanır ve aynı zamanda bir görünümler klasörü eksiktir. Görünüm tabanlı davranışı desteklemek için bu projelere daha sonra bir görünümler klasörü ekleyebilirsiniz. Web API ve model-görünüm-denetleyicisi projeleri varsayılan olarak bir Pages klasörü içermez, ancak daha sonra Razor Pages tabanlı davranışı desteklemek için bir tane ekleyebilirsiniz. Üç farklı türde varsayılan kullanıcı etkileşimini desteklemek için bu üç şablonu düşünebilirsiniz: veri (Web API 'SI), sayfa tabanlı ve görünüm tabanlı. Bununla birlikte, isterseniz tek bir proje içinde bunlardan herhangi birini veya tümünü karıştırabilir ve eşleştirebilirsiniz.
 
@@ -76,13 +76,13 @@ public class ProductsController : Controller
 }
 ```
 
-Razor Pages öznitelik yönlendirme kullanmaz. Bir Razor sayfasına yönelik ek yol şablonu bilgilerini `@page` yönergesinin bir parçası olarak belirtebilirsiniz:
+Razor Pages öznitelik yönlendirme kullanmaz. Razor sayfası için `@page` yönergesinin bir parçası olarak ek yol şablonu bilgilerini belirtebilirsiniz:
 
 ```csharp
 @page "{id:int}"
 ```
 
-Önceki örnekte, söz konusu sayfa bir tamsayı `id` parametresiyle bir rota ile eşleşir. Örneğin, kökünde `/Pages` bulunan *Products. cshtml* sayfasında bu yol olacaktır:
+Önceki örnekte, söz konusu sayfa bir tamsayı `id` parametresi olan bir rota ile eşleşir. Örneğin, `/Pages` kökünde bulunan *Products. cshtml* sayfasında bu yol olacaktır:
 
 ```csharp
 "/Products/123"
@@ -96,7 +96,7 @@ Model doğrulaması kullanıyorsanız, uygulamanızın geçersiz verilerle bozul
 
 Web API 'Leri için ASP.NET Core MVC [_içerik anlaşmasını_](/aspnet/core/mvc/models/formatting)destekler ve isteklerin nasıl biçimlendirilmesi gerektiğini belirtmesini sağlar. İstekte belirtilen üstbilgilere göre verileri döndüren eylemler, yanıtı XML, JSON veya desteklenen başka bir biçimde biçimlendirir. Bu özellik, farklı veri biçimi gereksinimlerine sahip birden çok istemci tarafından aynı API 'nin kullanılmasını sağlar.
 
-Web API projeleri, tek tek denetleyicilere, bir temel denetleyici sınıfına veya tüm derlemeye uygulanabilecek `[ApiController]` özniteliği kullanmayı göz önünde bulundurmalıdır. Bu öznitelik otomatik model doğrulama denetimi ekler ve geçersiz bir modele sahip herhangi bir eylem doğrulama hatalarının ayrıntılarına sahip bir BadRequest döndürür. Özniteliği aynı zamanda geleneksel bir yol kullanmak yerine tüm eylemlerin bir öznitelik yoluna sahip olmasını gerektirir ve hatalara yanıt olarak daha ayrıntılı ProblemDetails bilgileri döndürür.
+Web API projeleri, tek tek denetleyicilere, bir temel denetleyici sınıfına veya tüm derlemeye uygulanabilen `[ApiController]` özniteliğini kullanmayı göz önünde bulundurmalıdır. Bu öznitelik otomatik model doğrulama denetimi ekler ve geçersiz bir modele sahip herhangi bir eylem doğrulama hatalarının ayrıntılarına sahip bir BadRequest döndürür. Özniteliği aynı zamanda geleneksel bir yol kullanmak yerine tüm eylemlerin bir öznitelik yoluna sahip olmasını gerektirir ve hatalara yanıt olarak daha ayrıntılı ProblemDetails bilgileri döndürür.
 
 > ### <a name="references--mapping-requests-to-responses"></a>Başvurular – Istekleri yanıtlara eşleme
 >
@@ -106,9 +106,9 @@ Web API projeleri, tek tek denetleyicilere, bir temel denetleyici sınıfına ve
  > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **Model doğrulama**
  > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **Yorsa**
+> - **Filtreler**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **ApiController özniteliği**
+> - **Apicontroller özniteliği**
  > <https://docs.microsoft.com/aspnet/core/web-api/>
 
 ## <a name="working-with-dependencies"></a>Bağımlılıklarla çalışma
@@ -117,7 +117,7 @@ ASP.NET Core, için yerleşik desteğe sahiptir ve dahili olarak [bağımlılık
 
 Sınıflarınızda statik yöntemlere çağrı yapıldığında veya altyapıda yan etkileri veya bağımlılıklar olan statik özelliklere erişmek için statik Cling oluşur. Örneğin, bir statik yöntemi çağıran bir metoda sahipseniz, bu, bir veritabanına yazıyorsa, yönteminiz veritabanına sıkı bir şekilde bağlanmış olur. Bu veritabanı çağrısını kesen her şey, yönteminizi bozacaktır. Bu tür testler, statik çağrıları sahte bir şekilde ticari model oluşturma gerektirdiğinden veya yalnızca bir test veritabanıyla test edilemediğinden, bu tür yöntemlerin test edilmesi oldukça zordur. Altyapı üzerinde hiçbir bağımlılığı olmayan statik çağrılar, özellikle tamamen durum bilgisiz olanlar, çağrı yapmak için uygundur ve bir ya da pakararlılığı üzerinde hiçbir etkisi yoktur (Bu kodun ötesinde, bu kod, statik çağrının kendisindedir).
 
-Birçok geliştirici statik Cling ve küresel durum risklerini anlamakta, ancak doğrudan örnek oluşturma yoluyla kendi kodunu belirli uygulamalara sıkı bir şekilde ister. "Yeni bir tutkalla", `new` anahtar sözcüğünün kullanımı için genel bir Condemnation değil, bu kuponun bir anımsatıcı olması anlamına gelir. Statik yöntem çağrılarında olduğu gibi, dış bağımlılıkları olmayan türlerin yeni örnekleri genellikle uygulama ayrıntılarına sıkı bir şekilde kod içermez veya sınamayı daha zor hale getirir. Ancak, bir sınıfın her örneği oluşturulduğunda, bu belirli bir konumdaki belirli bir örneği sabit koda veya bu örneği bir bağımlılık olarak istemek için daha iyi bir tasarım olup olmadığını göz önünde bulundurmanız gereken kısa bir süre ayırın.
+Birçok geliştirici statik Cling ve küresel durum risklerini anlamakta, ancak doğrudan örnek oluşturma yoluyla kendi kodunu belirli uygulamalara sıkı bir şekilde ister. "Yeni, tutkalla", `new` anahtar sözcüğünün kullanımı için genel bir Condemnation değil, bu kuponun bir anımsatıcı olması amaçlanmıştır. Statik yöntem çağrılarında olduğu gibi, dış bağımlılıkları olmayan türlerin yeni örnekleri genellikle uygulama ayrıntılarına sıkı bir şekilde kod içermez veya sınamayı daha zor hale getirir. Ancak, bir sınıfın her örneği oluşturulduğunda, bu belirli bir konumdaki belirli bir örneği sabit koda veya bu örneği bir bağımlılık olarak istemek için daha iyi bir tasarım olup olmadığını göz önünde bulundurmanız gereken kısa bir süre ayırın.
 
 ### <a name="declare-your-dependencies"></a>Bağımlılıklarınızı bildirin
 
@@ -172,7 +172,7 @@ Uygulamanın uygulama ayrıntılarından ayrılmasıyla ilgili başka bir yakla�
 
 ### <a name="feature-organization"></a>Özellik organizasyonu
 
-Varsayılan olarak, ASP.NET Core uygulamalar, klasör yapısını denetleyicileri ve görünümleri ve sık sık görünüm modellerini içerecek şekilde düzenler. Bu sunucu tarafı yapıları desteklemeye yönelik istemci tarafı kodu genellikle Wwwroot klasöründe ayrı olarak depolanır. Ancak, belirli bir özellik üzerinde çalışmak bu klasörler arasında atlama gerektirdiğinden, büyük uygulamalar bu kuruluşla ilgili sorunlarla karşılaşabilir. Bu, her bir klasördeki dosya ve alt klasörlerin sayısı arttıkça daha fazla ve çok daha zor bir işlem elde Çözüm Gezgini. Bu soruna yönelik bir çözüm, uygulama kodunu dosya türüne göre değil, _özelliğe_ göre düzenleyeceğiniz bir çözümdür. Bu kuruluş stiline genellikle özellik klasörleri veya [özellik dilimleri](https://msdn.microsoft.com/magazine/mt763233.aspx) denir (Ayrıca bkz: [Dikey dilimler](https://deviq.com/vertical-slices/)).
+Varsayılan olarak, ASP.NET Core uygulamalar, klasör yapısını denetleyicileri ve görünümleri ve sık sık görünüm modellerini içerecek şekilde düzenler. Bu sunucu tarafı yapıları desteklemeye yönelik istemci tarafı kodu genellikle Wwwroot klasöründe ayrı olarak depolanır. Ancak, belirli bir özellik üzerinde çalışmak bu klasörler arasında atlama gerektirdiğinden, büyük uygulamalar bu kuruluşla ilgili sorunlarla karşılaşabilir. Bu, her bir klasördeki dosya ve alt klasörlerin sayısı arttıkça daha fazla ve çok daha zor bir işlem elde Çözüm Gezgini. Bu soruna yönelik bir çözüm, uygulama kodunu dosya türüne göre değil, _özelliğe_ göre düzenleyeceğiniz bir çözümdür. Bu kuruluş stiline genellikle özellik klasörleri veya [özellik dilimleri](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) adı verilir (Ayrıca bkz: [Dikey dilimler](https://deviq.com/vertical-slices/)).
 
 ASP.NET Core MVC bu amaca yönelik alanı destekler. Alanları kullanarak her bir alan klasöründeki ayrı denetleyici ve görünüm klasörü (Ayrıca ilişkili modeller) oluşturabilirsiniz. Şekil 7-1, alan kullanarak örnek bir klasör yapısını gösterir.
 
@@ -237,7 +237,7 @@ Bundan sonra, ConfigureServices 'daki uygulamanıza MVC desteği eklediğinizde 
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC, görünümleri bulmak için de bir kural kullanır. Görünümlerin Özellik klasörlerinizde bulunması için (yukarıdaki FeatureConvention tarafından sunulan özellik adı kullanılarak) özel bir kural ile geçersiz kılabilirsiniz. Bu yaklaşım hakkında daha fazla bilgi alabilir ve MSDN makalesinden çalışan bir örnek indirebilirsiniz [ASP.NET Core MVC Için özellik dilimleri](https://msdn.microsoft.com/magazine/mt763233.aspx).
+ASP.NET Core MVC, görünümleri bulmak için de bir kural kullanır. Görünümlerin Özellik klasörlerinizde bulunması için (yukarıdaki FeatureConvention tarafından sunulan özellik adı kullanılarak) özel bir kural ile geçersiz kılabilirsiniz. Bu yaklaşım hakkında daha fazla bilgi alabilir ve MSDN makalesinden çalışan bir örnek indirebilirsiniz [ASP.NET Core MVC Için özellik dilimleri](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
 
 ### <a name="cross-cutting-concerns"></a>Çapraz kesme konuları
 
@@ -247,7 +247,7 @@ Uygulamalar büyüdükçe, çoğaltmayı ortadan kaldırmak ve tutarlılığı s
 
 **Şekil 7-2**. Filtreler ve istek işlem hattı aracılığıyla yürütme isteği.
 
-Filtreler genellikle öznitelik olarak uygulanır, bu sayede bunları denetleyicilere veya eylemlere (veya genel olarak) uygulayabilirsiniz. Bu biçimde eklendiğinde, eylem düzeyinde belirtilen filtreler geçersiz kılınır veya denetleyici düzeyinde belirtilen filtrelerin üzerine inşa edildiğinde, kendilerine genel filtreleri geçersiz kılar. Örneğin, \[yol\] özniteliği denetleyiciler ve Eylemler arasındaki yolları oluşturmak için kullanılabilir. Benzer şekilde, yetkilendirme denetleyici düzeyinde yapılandırılabilir ve aşağıdaki örnekte gösterildiği gibi ayrı eylemler tarafından geçersiz kılınır:
+Filtreler genellikle öznitelik olarak uygulanır, bu sayede bunları denetleyicilere veya eylemlere (veya genel olarak) uygulayabilirsiniz. Bu biçimde eklendiğinde, eylem düzeyinde belirtilen filtreler geçersiz kılınır veya denetleyici düzeyinde belirtilen filtrelerin üzerine inşa edildiğinde, kendilerine genel filtreleri geçersiz kılar. Örneğin, \[Route\] özniteliği denetleyiciler ve Eylemler arasındaki yolları oluşturmak için kullanılabilir. Benzer şekilde, yetkilendirme denetleyici düzeyinde yapılandırılabilir ve aşağıdaki örnekte gösterildiği gibi ayrı eylemler tarafından geçersiz kılınır:
 
 ```csharp
 [Authorize]
@@ -297,7 +297,7 @@ public class ValidateModelAttribute : ActionFilterAttribute
 }
 ```
 
-`ValidateModelAttribute` [Ardalış. ValidateModel](https://www.nuget.org/packages/Ardalis.ValidateModel) paketini dahil ederek projenize bir NuGet bağımlılığı olarak ekleyebilirsiniz. API 'ler için, bu davranışı ayrı `ApiController` `ValidateModel` bir filtreye gerek olmadan zorlamak için özniteliğini kullanabilirsiniz.
+[Ardalış. ValidateModel](https://www.nuget.org/packages/Ardalis.ValidateModel) paketini dahil ederek projenize `ValidateModelAttribute` NuGet bağımlılığı olarak ekleyebilirsiniz. API 'Ler için `ApiController` özniteliğini, bu davranışı ayrı bir `ValidateModel` filtresine gerek olmadan zorlamak için kullanabilirsiniz.
 
 Benzer şekilde, bir filtre, bir kaydın mevcut olup olmadığını denetlemek için kullanılabilir ve eylem yürütülmeden önce bir 404 döndürebilir, bu denetimleri eylemde gerçekleştirme gereksinimini ortadan kaldırır. Ortak kuralları kullanıma aldıktan ve çözümünüzü altyapı kodu ve iş mantığını kullanıcı arabiriminden ayırmak üzere düzenledikten sonra, MVC eylem yöntemlerinizi son derece ölçülü olmalıdır:
 
@@ -311,24 +311,24 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Filtre uygulama hakkında daha fazla bilgi edinmek ve MSDN makalesinden, [gerçek dünyada ASP.NET Core MVC filtrelerinden](https://msdn.microsoft.com/magazine/mt767699.aspx)çalışan bir örnek indirmek için daha fazla bilgi edinebilirsiniz.
+Filtre uygulama hakkında daha fazla bilgi edinmek ve MSDN makalesinden, [gerçek dünyada ASP.NET Core MVC filtrelerinden](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters)çalışan bir örnek indirmek için daha fazla bilgi edinebilirsiniz.
 
 > ### <a name="references--structuring-applications"></a>Başvurular – uygulamaları yapılandırma
 >
 > - **Alanlar**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN Magazine – ASP.NET Core MVC için özellik dilimleri**  
->   <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
 > - **Filtreler**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN – gerçek dünya ASP.NET Core MVC filtreleri**  
->   <https://msdn.microsoft.com/magazine/mt767699.aspx>
+>   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>Güvenlik
 
 Web uygulamalarının güvenliğini sağlamak, çok sayıda konuyla büyük bir konudur. En temel düzeyinde güvenlik, belirli bir isteğin geldiği kişiyi öğrendiğinizden ve isteğin yalnızca gereken kaynaklara erişimi olduğundan emin olmanızı içerir. Kimlik doğrulaması, isteğin bilinen bir varlıktan geldiği kabul edilmesinin gerekip gerekmediğini görmek için, güvenilir bir veri deposundaki bir istekle girilen kimlik bilgilerini karşılaştırma işlemidir. Yetkilendirme, belirli kaynaklara erişimi kullanıcı kimliğine göre kısıtlama işlemidir. Üçüncü bir güvenlik konusu, isteklerin, en azından [SSL 'nin uygulamanız tarafından kullanıldığından emin](/aspnet/core/security/enforcing-ssl)olmanız gereken üçüncü taraflar tarafından dinleyerek dinleme yaptığı isteklerden korunuyor.
 
-### <a name="authentication"></a>Kimlik doğrulaması
+### <a name="authentication"></a>Kimlik Doğrulama
 
 ASP.NET Core kimlik, uygulamanız için oturum açma işlevlerini desteklemek için kullanabileceğiniz bir üyelik sistemidir. Bu, yerel kullanıcı hesaplarının yanı sıra Microsoft hesabı, Twitter, Facebook, Google ve daha fazlası gibi sağlayıcılardan dış oturum açma sağlayıcısı desteği için destek içerir. ASP.NET Core kimliğe ek olarak, uygulamanız Windows kimlik doğrulamasını veya [kimlik sunucusu](https://github.com/IdentityServer/IdentityServer4)gibi bir üçüncü taraf kimlik sağlayıcısını kullanabilir.
 
@@ -383,7 +383,7 @@ public class SalaryController : Controller
 
 Bu durumda, HRManager veya finans rollerinin (ya da her ikisi) birine ait olan kullanıcılar SalaryController erişimine sahip olur. Bir kullanıcının birden çok role (yalnızca birkaç tane değil) ait olmasını gerektirmek için, her seferinde gerekli bir rol belirterek özniteliği birden çok kez uygulayabilirsiniz.
 
-Birçok farklı denetleyicilerde ve eylemlerdeki belirli rol kümelerini belirtme, istenmeyen bir tekrarya yol açabilir. Yetkilendirme kurallarını kapsülleyen yetkilendirme ilkelerini yapılandırabilir ve sonra \[Yetkilendir\] özniteliği uygulanırken ayrı roller yerine ilkeyi belirtebilirsiniz:
+Birçok farklı denetleyicilerde ve eylemlerdeki belirli rol kümelerini belirtme, istenmeyen bir tekrarya yol açabilir. Yetkilendirme kurallarını kapsülleyen yetkilendirme ilkelerini yapılandırabilir ve ardından \[Yetkilendir\] özniteliğini uygularken ayrı roller yerine ilkeyi belirtebilirsiniz:
 
 ```csharp
 [Authorize(Policy = "CanViewPrivateReport")]
@@ -393,9 +393,9 @@ public IActionResult ExecutiveSalaryReport()
 }
 ```
 
-İlkeleri bu şekilde kullanarak, bu işlem için uygulanan belirli rol veya kurallardan sınırlandırılmakta olan eylemlerin türlerini ayırabilirsiniz. Daha sonra, belirli kaynaklara erişmesi gereken yeni bir rol oluşturursanız, her \[yetkilendirme\] özniteliğinde her rol listesini güncelleştirmek yerine yalnızca bir ilkeyi güncelleştirebilirsiniz.
+İlkeleri bu şekilde kullanarak, bu işlem için uygulanan belirli rol veya kurallardan sınırlandırılmakta olan eylemlerin türlerini ayırabilirsiniz. Daha sonra, belirli kaynaklara erişmesi gereken yeni bir rol oluşturursanız, her bir rol listesini her bir \[\] özniteliğinde güncelleştirmek yerine yalnızca bir ilkeyi güncelleştirebilirsiniz.
 
-#### <a name="claims"></a>Belirt
+#### <a name="claims"></a>belirt
 
 Talepler, kimliği doğrulanmış bir kullanıcının özelliklerini temsil eden ad değer çiftleridir. Örneğin, kullanıcıların çalışan numarasını bir talep olarak saklayabilirsiniz. Talepler, yetkilendirme ilkelerinin bir parçası olarak kullanılabilir. Bu örnekte gösterildiği gibi "EmployeeNumber" adlı bir talebin varlığını gerektiren "EmployeeOnly" adlı bir ilke oluşturabilirsiniz:
 
@@ -410,7 +410,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Bu ilke daha sonra yukarıda açıklandığı gibi herhangi \[bir\] denetleyiciyi ve/veya eylemi korumak için yetkilendir özniteliğiyle birlikte kullanılabilir.
+Bu ilke daha sonra yukarıda açıklandığı gibi herhangi bir denetleyiciyi ve/veya eylemi korumak için \[Yetkilendir\] özniteliğiyle birlikte kullanılabilir.
 
 #### <a name="securing-web-apis"></a>Web API 'Lerinin güvenliğini sağlama
 

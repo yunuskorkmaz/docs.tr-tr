@@ -1,14 +1,13 @@
 ---
 title: WCF geliştiricileri için WCF çift yönlü hizmetlerini gRPC-gRPC 'ye geçirme
 description: Çeşitli WCF çift yönlü hizmetini gRPC akış Hizmetleri 'ne geçirmeyi öğrenin.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 1702c9f7659f056af9009e81847f28c6e65b277c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e2248df20e5c2d8f96055d42ba684749251154bd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846599"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971877"
 ---
 # <a name="migrate-wcf-duplex-services-to-grpc"></a>WCF çift yönlü hizmetlerini gRPC'ye geçirme
 
@@ -18,7 +17,7 @@ Windows Communication Foundation (WCF) içinde çift yönlü hizmetler kullanman
 
 ## <a name="server-streaming-rpc"></a>Sunucu akış RPC
 
-[Örnek SIMPLESTOCKTICKER WCF çözümünde](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/SimpleStockTickerSample/wcf/SimpleStockTicker), *SimpleStockPriceTicker*, istemcinin bir hisse senedi sembolleri listesi ile bağlantıyı başlattığı bir çift yönlü hizmet vardır ve sunucu, güncelleştirmeleri bu şekilde göndermek için *geri çağırma arabirimini* kullanır kullanılabilir hale gelir. İstemci, sunucudan yapılan çağrılara yanıt vermek için bu arabirimi uygular.
+[Örnek SIMPLESTOCKTICKER WCF çözümünde](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/SimpleStockTickerSample/wcf/SimpleStockTicker), *SimpleStockPriceTicker*, istemcinin bir hisse senedi sembolleri listesi ile bağlantıyı başlattığı bir çift yönlü hizmet vardır ve sunucu, kullanılabilir hale geldiğinde güncelleştirmeleri göndermek için *geri çağırma arabirimini* kullanır. İstemci, sunucudan yapılan çağrılara yanıt vermek için bu arabirimi uygular.
 
 ### <a name="the-wcf-solution"></a>WCF çözümü
 
@@ -164,11 +163,11 @@ public class StockTickerService : Protos.SimpleStockTicker.SimpleStockTickerBase
 }
 ```
 
-Gördüğünüz gibi, `.proto` dosyasındaki bildirim "döndürülen" yöntemini bir `StockTickerUpdate` iletilerinin akışını söyetse de, aslında bir Vanilla `Task` döndürüyor. Akışı oluşturma işi oluşturulan kod ve gRPC çalışma zamanı kitaplıkları tarafından işlenir ve bu `IServerStreamWriter<StockTickerUpdate>` yanıt akışını kullanıma sunar.
+Gördüğünüz gibi, `.proto` dosyasındaki bildirim "döndürülen" yöntemini bir `StockTickerUpdate` iletilerinin akışını söyetse de, aslında bir Vanilla `Task`döndürüyor. Akışı oluşturma işi oluşturulan kod ve gRPC çalışma zamanı kitaplıkları tarafından işlenir ve bu `IServerStreamWriter<StockTickerUpdate>` yanıt akışını kullanıma sunar.
 
 Bağlantı açıkken, hizmet sınıfı örneğinin etkin tutulduğu bir WCF çift yönlü hizmeti 'nin aksine, gRPC hizmeti, hizmeti canlı tutmak için döndürülen görevi kullanır. Bağlantı kapatılana kadar görevin tamamlanmamış olması gerekir.
 
-Hizmet, `ServerCallContext` `CancellationToken` kullanarak istemcinin bağlantıyı kapattığını söyleyebilir. Basit bir statik yöntem `AwaitCancellation`, belirteç iptal edildiğinde tamamlanan bir görev oluşturmak için kullanılır.
+Hizmet, `ServerCallContext``CancellationToken` kullanarak istemcinin bağlantıyı kapattığını söyleyebilir. Basit bir statik yöntem `AwaitCancellation`, belirteç iptal edildiğinde tamamlanan bir görev oluşturmak için kullanılır.
 
 `Subscribe` yönteminde, bir `StockPriceSubscriber` alın ve yanıt akışına yazan bir olay işleyicisi ekleyin. Daha sonra, `subscriber`, kapatılan akışa veri yazmaya çalışmasını engellemek için hemen elden bırakmadan önce bağlantının kapatılmasını bekleyin.
 
@@ -214,9 +213,9 @@ Akış zaman uyumsuz bir `DisplayAsync` metoduna geçirilir; uygulama daha sonra
 
 #### <a name="consume-the-stream"></a>Akışı tüketme
 
-WCF, sunucunun doğrudan istemcide Yöntem çağırmasını sağlamak için geri çağırma arabirimlerini kullandı. gRPC akışları farklı şekilde çalışır. İstemci, bir `IEnumerable` döndüren yerel bir yöntemden döndürüldüğünden olduğu gibi döndürülen akışın üzerinde dolaşır ve iletileri işler.
+WCF, sunucunun doğrudan istemcide Yöntem çağırmasını sağlamak için geri çağırma arabirimlerini kullandı. gRPC akışları farklı şekilde çalışır. İstemci, bir `IEnumerable`döndüren yerel bir yöntemden döndürüldüğünden olduğu gibi döndürülen akışın üzerinde dolaşır ve iletileri işler.
 
-`IAsyncStreamReader<T>` türü bir `IEnumerator<T>`gibi çalışır: daha fazla veri ve en son değeri döndüren bir `Current` özelliği olan sürece true döndürecek bir `MoveNext` yöntemi vardır. Tek fark, `MoveNext` yönteminin yalnızca bir `bool` yerine `Task<bool>` döndürdüğünden oluşur. `ReadAllAsync` uzantısı yöntemi, akışı yeni`await foreach`sözdizimiyle kullanılabilecek standart C# bir 8`IAsyncEnumerable`kaydırır.
+`IAsyncStreamReader<T>` türü bir `IEnumerator<T>`gibi çalışır: daha fazla veri ve en son değeri döndüren bir `Current` özelliği olan sürece true döndürecek bir `MoveNext` yöntemi vardır. Tek fark, `MoveNext` yönteminin yalnızca bir `bool`yerine `Task<bool>` döndürdüğünden oluşur. `ReadAllAsync` uzantısı yöntemi, akışı yeni `await foreach` sözdizimiyle kullanılabilecek standart C# bir 8 `IAsyncEnumerable` kaydırır.
 
 ```csharp
 static async Task DisplayAsync(IAsyncStreamReader<StockTickerUpdate> stream, CancellationToken token)
@@ -273,7 +272,7 @@ Geri çağırma arabirimi aynı kalır.
 
 Şu anda bir istemciden sunucuya ve diğeri sunucudan istemciye olan iki veri akışı olduğundan, bu düzenin gRPC 'de uygulanması daha basit bir işlemdir. Ekleme ve kaldırma işlemini uygulamak için birden çok yöntem kullanılması mümkün değildir, ancak [Bölüm 3](protobuf-any-oneof.md)' te kapsanan `Any` türü veya `oneof` anahtar sözcüğü kullanılarak tek bir akışta birden fazla ileti türü geçirilebilir.
 
-Kabul edilebilir olan belirli türde bir durum için `oneof` daha iyi bir yoldur. Bir `AddSymbolRequest` ya da `RemoveSymbolRequest` tutabilecek bir `ActionMessage` kullanın.
+Kabul edilebilir olan belirli türde bir durum için `oneof` daha iyi bir yoldur. Bir `AddSymbolRequest` ya da `RemoveSymbolRequest`tutabilecek bir `ActionMessage` kullanın.
 
 ```protobuf
 message ActionMessage {
@@ -346,7 +345,7 @@ private static Task AwaitCancellation(CancellationToken token)
 }
 ```
 
-GRPC 'nin oluşturduğu `ActionMessage` sınıfı, `Add` ve `Remove` özelliklerinden yalnızca birinin ayarlanamadığına ve hangi `null` bir tür ileti kullanıldığını bulmanın geçerli bir yolu olduğunu garanti etmektedir. , ancak daha iyi bir yoldur. Kod oluşturma Ayrıca, aşağıdaki gibi görünen `ActionMessage` sınıfında bir `enum ActionOneOfCase` oluşturmuştur:
+GRPC 'nin oluşturduğu `ActionMessage` sınıfı, `Add` ve `Remove` özelliklerinden yalnızca birinin ayarlandığının ve `null` olmadığını bulmanın geçerli bir ileti türünü bulmanın geçerli bir yolu olduğunu garanti eder, ancak daha iyi bir yoldur. Kod oluşturma Ayrıca, aşağıdaki gibi görünen `ActionMessage` sınıfında bir `enum ActionOneOfCase` oluşturmuştur:
 
 ```csharp
 public enum ActionOneofCase {
@@ -463,7 +462,7 @@ private async Task HandleResponsesAsync(CancellationToken token)
 
 ### <a name="client-clean-up"></a>İstemci Temizleme
 
-Pencere kapatıldığında ve `MainWindowViewModel` atıldığı zaman (`MainWindow` `Closed` olayından), `AsyncDuplexStreamingCall` nesnesini düzgün bir şekilde elden çıkardığınızdan önerilir. Özellikle, sunucu üzerindeki akışı düzgün bir şekilde kapatmak için `RequestStream` `CompleteAsync` yöntemi çağrılmalıdır. Aşağıdaki örnek, örnek görünüm modelinden `DisposeAsync` yöntemini gösterir:
+Pencere kapatıldığında ve `MainWindowViewModel` atıldığı zaman (`MainWindow``Closed` olayından), `AsyncDuplexStreamingCall` nesnesini düzgün bir şekilde elden çıkardığınızdan önerilir. Özellikle, sunucu üzerindeki akışı düzgün bir şekilde kapatmak için `RequestStream` `CompleteAsync` yöntemi çağrılmalıdır. Aşağıdaki örnek, örnek görünüm modelinden `DisposeAsync` yöntemini gösterir:
 
 ```csharp
 public ValueTask DisposeAsync()

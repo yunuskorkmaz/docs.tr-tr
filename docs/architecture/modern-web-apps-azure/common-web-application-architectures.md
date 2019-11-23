@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Orta
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 8985434467346acc360e9a89c052803f495e87d1
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: b376f8b38749f242f4e78a10808532989e0ac834
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332003"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972140"
 ---
 # <a name="common-web-application-architectures"></a>Ortak web uygulaması mimarileri
 
@@ -155,7 +155,7 @@ Uygulama çekirdeği, varlıklar, hizmetler ve arabirimler içeren iş modelini 
 - Hizmetler
 - DTO
 
-Altyapı projesi genellikle veri erişim uygulamalarını içerir. Tipik bir ASP.NET Core Web uygulamasında bu uygulamalar, Entity Framework (EF) DbContext, tanımlanmış olan EF Core `Migration` nesneleri ve veri erişimi uygulama sınıflarını içerir. Soyut veri erişimi uygulama kodunun en yaygın yolu, [Depo tasarımı deseninin](https://deviq.com/repository-pattern/)kullanımıdır.
+Altyapı projesi genellikle veri erişim uygulamalarını içerir. Tipik bir ASP.NET Core Web uygulamasında bu uygulamalar, Entity Framework (EF) DbContext, tanımlanmış olan EF Core `Migration` nesneleri ve veri erişim uygulama sınıflarını içerir. Soyut veri erişimi uygulama kodunun en yaygın yolu, [Depo tasarımı deseninin](https://deviq.com/repository-pattern/)kullanımıdır.
 
 Veri erişimi uygulamalarına ek olarak, altyapı projesi altyapı sorunları ile etkileşimde bulunmak zorunda olan hizmetlerin uygulamalarını içermelidir. Bu hizmetler uygulama çekirdeğinde tanımlanmış arabirimleri uygulamalıdır ve bu nedenle altyapının uygulama çekirdeği projesine bir başvurusu olmalıdır.
 
@@ -163,14 +163,14 @@ Veri erişimi uygulamalarına ek olarak, altyapı projesi altyapı sorunları il
 
 - EF Core türleri (`DbContext`, `Migration`)
 - Veri erişimi uygulama türleri (depolar)
-- Altyapıya özgü hizmetler (örneğin, `FileLogger` veya) `SmtpNotifier`
+- Altyapıya özgü hizmetler (örneğin, `FileLogger` veya `SmtpNotifier`)
 
 ASP.NET Core MVC uygulamasındaki kullanıcı arabirimi katmanı, uygulamanın giriş noktasıdır. Bu proje, uygulama çekirdeği projesine başvurmalıdır ve kendi türleri uygulama çekirdeğinde tanımlanan arabirimler aracılığıyla altyapıyla kesinlikle etkileşimde bulunmalıdır. Kullanıcı arabirimi katmanında altyapı katmanı türlerine yönelik doğrudan örnek oluşturma veya statik çağrılara izin verilmelidir.
 
 ### <a name="ui-layer-types"></a>UI katman türleri
 
 - Denetleyiciler
-- Filtreler
+- FilTReleri
 - Görünümler
 - ViewModel 'lar
 - Başlangıç
@@ -208,7 +208,7 @@ Microsoft Azure tek parçalı uygulamalar dağıtmak, her örnek için adanmış
 
 Tek parçalı uygulama dağıtımlarını yönetmek için kapsayıcıları kullanmanın avantajları vardır. Kapsayıcı örneklerinin ölçeklendirilmesi, ek VM 'Leri dağıtmaktan daha hızlı ve daha kolaydır. VM 'Leri ölçeklendirmek için sanal makine ölçek kümeleri kullanılırken bile, örnek bir süre sürer. Uygulama örnekleri olarak dağıtıldığında, uygulamanın yapılandırması VM 'nin bir parçası olarak yönetilir.
 
-Docker görüntüsü olarak güncelleştirmelerin dağıtımı, çok daha hızlı ve daha verimlidir. Docker görüntüleri genellikle Saniyeler içinde başlar, piyasaya çıkarma hızlandırın. Docker örneğini aşağı doğru artırma, genellikle bir saniyeden daha az bir şekilde `docker stop` tamamlanan bir komut vermek kadar kolaydır.
+Docker görüntüsü olarak güncelleştirmelerin dağıtımı, çok daha hızlı ve daha verimlidir. Docker görüntüleri genellikle Saniyeler içinde başlar, piyasaya çıkarma hızlandırın. Docker örneğini aşağı doğru artırma, genellikle bir saniyeden daha az bir `docker stop` komutu vermekten daha kolay bir işlemdir.
 
 Kapsayıcılar, Tasarım gereği doğal olarak değişmez, ancak güncelleştirme betikleri, diskte kalan belirli bir yapılandırma veya dosya için hesabı unutabilirken, bu durumda bozuk VM 'Lerde endişelenmenize gerek kalmaz.
 
@@ -224,7 +224,7 @@ Uygulamanın geliştirilmesi sırasında, doğal işlev sınırlarının bulundu
 
 Bir uygulamayı birçok ayrı işleme ayırmak de ek yük getirir. Özellikleri farklı işlemlere ayırma daha karmaşıktır. İletişim protokolleri daha karmaşık hale gelir. Yöntem çağrıları yerine, hizmetler arasında zaman uyumsuz iletişimler kullanmanız gerekir. Mikro hizmetler mimarisine geçtiğinizde, eShopOnContainers uygulamasının mikro hizmetler sürümünde uygulanan yapı taşlarından çoğunu eklemeniz gerekir: olay veri yolu işleme, ileti dayanıklılığı ve yeniden denemeler, nihai tutarlılık ve daha fazlası.
 
-Çok daha basit [Eshoponweb Reference uygulaması](https://github.com/dotnet-architecture/eShopOnWeb) , tek Kapsayıcılı tek parçalı kapsayıcı kullanımını destekler. Uygulama, geleneksel MVC görünümlerini, Web API 'Lerini ve Razor Pages içeren bir Web uygulaması içerir. Bu uygulama, `docker-compose build` ve `docker-compose up` komutları kullanılarak çözüm kökünden başlatılabilir. Bu komut, Web projesinin kökünde `Dockerfile` bulunan ' i kullanarak Web örneği için bir kapsayıcı yapılandırır ve kapsayıcıyı belirtilen bir bağlantı noktasında çalıştırır. Bu uygulamanın kaynağını GitHub 'dan indirebilir ve yerel olarak çalıştırabilirsiniz. Bu tek parçalı uygulama avantajlarının bir kapsayıcı ortamında dağıtılması bile.
+Çok daha basit [Eshoponweb Reference uygulaması](https://github.com/dotnet-architecture/eShopOnWeb) , tek Kapsayıcılı tek parçalı kapsayıcı kullanımını destekler. Uygulama, geleneksel MVC görünümlerini, Web API 'Lerini ve Razor Pages içeren bir Web uygulaması içerir. Bu uygulama, `docker-compose build` ve `docker-compose up` komutları kullanılarak çözüm kökünden başlatılabilir. Bu komut, Web projesinin kökünde bulunan `Dockerfile` kullanarak Web örneği için bir kapsayıcı yapılandırır ve kapsayıcıyı belirtilen bir bağlantı noktasında çalıştırır. Bu uygulamanın kaynağını GitHub 'dan indirebilir ve yerel olarak çalıştırabilirsiniz. Bu tek parçalı uygulama avantajlarının bir kapsayıcı ortamında dağıtılması bile.
 
 Bir tane için Kapsayıcılı dağıtım, uygulamanın her örneğinin aynı ortamda çalıştığı anlamına gelir. Bu, erken test ve geliştirmenin gerçekleştiği geliştirici ortamını içerir. Geliştirme ekibi, uygulamayı üretim ortamıyla eşleşen kapsayıcılı bir ortamda çalıştırabilir.
 
@@ -234,11 +234,11 @@ Son olarak, uygulamayı kapsayıcı iş mantığı ve depolama sunucusu arasınd
 
 ## <a name="docker-support"></a>Docker desteği
 
-`eShopOnWeb` Proje .NET Core üzerinde çalışır. Bu nedenle, Linux tabanlı veya Windows tabanlı kapsayıcılardan çalıştırılabilir. Docker dağıtımı için SQL Server aynı konak türünü kullanmak istediğinizi unutmayın. Linux tabanlı kapsayıcılar daha küçük bir ayak izine izin verir ve tercih edilir.
+`eShopOnWeb` projesi .NET Core üzerinde çalışır. Bu nedenle, Linux tabanlı veya Windows tabanlı kapsayıcılardan çalıştırılabilir. Docker dağıtımı için SQL Server aynı konak türünü kullanmak istediğinizi unutmayın. Linux tabanlı kapsayıcılar daha küçük bir ayak izine izin verir ve tercih edilir.
 
-**Çözüm Gezgini** bir projeye sağ tıklayıp**Docker desteği** **Ekle** > ' yi seçerek var olan bir uygulamaya Docker desteği eklemek için Visual Studio 2017 veya sonraki bir sürümünü kullanabilirsiniz. Bu, gerekli dosyaları ekler ve projeyi kullanmak için değiştirir. Geçerli `eShopOnWeb` örnekte bu dosyalar zaten var.
+**Çözüm Gezgini** bir projeye sağ tıklayıp > **Docker desteği** **Ekle** ' yi seçerek var olan bir uygulamaya Docker desteği eklemek için Visual Studio 2017 veya sonraki bir sürümünü kullanabilirsiniz. Bu, gerekli dosyaları ekler ve projeyi kullanmak için değiştirir. Geçerli `eShopOnWeb` örneği zaten bu dosyaları içeriyor.
 
-Çözüm düzeyi `docker-compose.yml` dosya, hangi görüntülerin derlemesinin ve hangi kapsayıcıların başlatılabileceğinize ilişkin bilgiler içerir. Bu dosya, aynı anda birden çok `docker-compose` uygulamayı başlatmak için komutunu kullanmanıza olanak sağlar. Bu durumda, yalnızca Web projesi başlatılıyor. Ayrıca, ayrı bir veritabanı kapsayıcısı gibi bağımlılıkları yapılandırmak için de kullanabilirsiniz.
+Çözüm düzeyi `docker-compose.yml` dosyası, hangi görüntülerin derlemesinin ve hangi kapsayıcıların başlatılabileceğinize ilişkin bilgiler içerir. Dosya aynı anda birden çok uygulamayı başlatmak için `docker-compose` komutunu kullanmanıza olanak sağlar. Bu durumda, yalnızca Web projesi başlatılıyor. Ayrıca, ayrı bir veritabanı kapsayıcısı gibi bağımlılıkları yapılandırmak için de kullanabilirsiniz.
 
 ```yml
 version: '3'
@@ -260,13 +260,12 @@ networks:
       name: nat
 ```
 
-Dosya, `Web` projedeki öğesine `Dockerfile` başvurur. `docker-compose.yml` `Dockerfile` Kullanılacak temel kapsayıcıyı ve uygulamanın nasıl yapılandırılacağını belirtmek için kullanılır. `Web`' :`Dockerfile`
+`docker-compose.yml` dosya `Web` projesindeki `Dockerfile` başvurur. `Dockerfile`, kullanılacak temel kapsayıcıyı ve uygulamanın nasıl yapılandırılacağını belirtmek için kullanılır. `Web`' `Dockerfile`:
 
 ```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
-COPY *.sln .
 COPY . .
 WORKDIR /app/src/Web
 RUN dotnet restore
@@ -285,7 +284,7 @@ ENTRYPOINT ["dotnet", "Web.dll"]
 
 ### <a name="troubleshooting-docker-problems"></a>Docker sorunlarını giderme
 
-Kapsayıcılı uygulamayı çalıştırdıktan sonra, siz durduruncaya kadar çalışmaya devam eder. `docker ps` Komutuyla hangi kapsayıcıların çalıştığını görüntüleyebilirsiniz. `docker stop` Komutu kullanarak ve kapsayıcı kimliğini belirterek çalışan kapsayıcıyı durdurabilirsiniz.
+Kapsayıcılı uygulamayı çalıştırdıktan sonra, siz durduruncaya kadar çalışmaya devam eder. Hangi kapsayıcıların `docker ps` komutuyla çalıştığını görüntüleyebilirsiniz. Çalışan bir kapsayıcıyı `docker stop` komutunu kullanarak durdurabilir ve kapsayıcı KIMLIĞINI belirtebilirsiniz.
 
 Docker Kapsayıcıları çalıştırmanın, daha önce geliştirme ortamınızda kullanmayı deneyebileceğinizi belirten bağlantı noktalarına bağlanmadığını unutmayın. Çalışan bir Docker kapsayıcısı ile aynı bağlantı noktasını kullanarak bir uygulamayı çalıştırmaya veya hata ayıklamanıza çalışırsanız, sunucunun o bağlantı noktasına bağlanmadığını belirten bir hata alırsınız. Bir kez daha, kapsayıcıyı durdurmak sorunu çözmelidir.
 

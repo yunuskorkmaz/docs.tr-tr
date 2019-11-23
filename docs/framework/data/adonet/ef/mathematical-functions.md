@@ -19,7 +19,7 @@ Mutlak değer işlevini gerçekleştirir.
 
 **Bağımsız Değişkenler**
 
-`expression`: bir `Int32`, `Int64`, `Double` veya `Decimal`.
+`expression`: bir `Int32`, `Int64`, `Double`veya `Decimal`.
 
 **Dönüş değeri**
 
@@ -35,7 +35,7 @@ Belirtilen ifadenin Arkkosinüs değerini döndürür.
 
 **Bağımsız Değişkenler**
 
-`expression`: bir `Double`.
+`expression`: `Double`.
 
 **Dönüş değeri**
 
@@ -51,7 +51,7 @@ Belirtilen ifadenin arksinüs değerini döndürür.
 
 **Bağımsız Değişkenler**
 
-`expression`: bir `Double`.
+`expression`: `Double`.
 
 **Dönüş değeri**
 
@@ -67,7 +67,7 @@ Belirtilen sayısal ifadenin arktanjant değerini döndürür.
 
 **Bağımsız Değişkenler**
 
-`expression`: bir `Double`.
+`expression`: `Double`.
 
 **Dönüş değeri**
 
@@ -83,7 +83,7 @@ Tanjantı belirtilen iki sayısal ifade arasında olan radyan cinsinden açıyı
 
 **Bağımsız Değişkenler**
 
-`expression`: bir `Double`.
+`expression`: `Double`.
 
 **Dönüş değeri**
 
@@ -99,11 +99,11 @@ Belirtilen ifadeyi, bu değerden büyük veya ona eşit en küçük tamsayıya d
 
 **Bağımsız Değişkenler**
 
-`expression`: bir `Int32`, `Int64`, `Double` veya `Decimal`.
+`expression`: bir `Int32`, `Int64`, `Double`veya `Decimal`.
 
 **Dönüş değeri**
 
-@No__t-0, `Int64`, `Double` veya `Decimal`.
+`Int32`, `Int64`, `Double`veya `Decimal`.
 
 **Örnek** 
 
@@ -115,7 +115,7 @@ Radyan cinsinden belirtilen açının trigonometrik kosinüsünü hesaplar.
 
 **Bağımsız Değişkenler** 
 
-`expression`: bir `Double`. 
+`expression`: `Double`. 
 
 **Dönüş değeri** 
 
@@ -131,7 +131,7 @@ Radyan cinsinden belirtilen açıdaki trigonometrik kovaryansı hesaplar.
 
 **Bağımsız Değişkenler** 
 
-`expression`: bir `Double`. 
+`expression`: `Double`. 
 
 **Dönüş değeri** 
 
@@ -147,11 +147,11 @@ Karşılık gelen açıyı derece cinsinden döndürür.
 
 **Bağımsız Değişkenler** 
 
-`expression`: bir `Int32`, `Int64`, `Double` veya `Decimal`. 
+`expression`: bir `Int32`, `Int64`, `Double`veya `Decimal`. 
 
 **Dönüş değeri** 
 
-@No__t-0, `Int64`, `Double` veya `Decimal`. 
+`Int32`, `Int64`, `Double`veya `Decimal`. 
 
 **Örnek** 
 
@@ -163,7 +163,7 @@ Belirtilen bir sayısal ifadenin üstel değerini hesaplar.
 
 **Bağımsız Değişkenler** 
 
-`expression`: bir `Double`. 
+`expression`: `Double`. 
 
 **Dönüş değeri** 
 
@@ -177,7 +177,7 @@ Belirtilen ifadeyi ona eşit veya ondan küçük olan en büyük tamsayıya dön
 
 **Bağımsız Değişkenler** 
 
-`expression`: bir `Double`. 
+`expression`: `Double`. 
 
 **Dönüş değeri** 
 
@@ -193,7 +193,7 @@ Belirtilen `float` ifadesinin doğal logaritmasını hesaplar.
 
 **Bağımsız Değişkenler** 
 
-`expression`: bir `Double`. 
+`expression`: `Double`. 
 
 **Dönüş değeri** 
 
@@ -209,7 +209,7 @@ Belirtilen `Double` ifadesinin 10 tabanında logaritmasını döndürür.
 
 **Bağımsız Değişkenler** 
 
-`expression`: bir `Double`. 
+`expression`: `Double`. 
 
 **Dönüş değeri** 
 
@@ -221,7 +221,7 @@ A `Double`.
 
 ## <a name="pi"></a>PI ()
 
-@No__t-0 olarak Pi sabit değerini döndürür. 
+`Double`olarak Pi 'nin sabit değerini döndürür. 
 
 **Dönüş değeri** 
 
@@ -231,7 +231,7 @@ A `Double`.
 
 `SqlServer.PI()`
 
-## <a name="powernumeric_expression-power_expression"></a>Güç (numeric_expression, power_expression)
+## <a name="powernumeric_expression-power_expression"></a>Güç (numeric_expression power_expression)
 
 Belirtilen bir ifadenin değerini belirtilen bir kuvvet olarak hesaplar.
 
@@ -239,12 +239,12 @@ Belirtilen bir ifadenin değerini belirtilen bir kuvvet olarak hesaplar.
 
 |  |  |
 |--|--|
-|`numeric_expression`| @No__t-0, `Int64`, `Double` veya `Decimal`.|
-|`power_expression`| @No__t-1 ' i yükseltmek için gereken kuvveti temsil eden bir `Double`.| 
+|`numeric_expression`| `Int32`, `Int64`, `Double`veya `Decimal`.|
+|`power_expression`| `numeric_expression`yükseltebileceği kuvveti temsil eden bir `Double`.| 
 
 **Dönüş değeri** 
 
-Belirtilen `numeric_expression` ' ın belirtilen `power_expression` değeri. 
+Belirtilen `power_expression`belirtilen `numeric_expression` değeri. 
 
 **Örnek** 
 
@@ -256,11 +256,11 @@ Dereceyi radyana dönüştürür.
 
 **Bağımsız Değişkenler** 
 
-`expression`: bir `Int32`, `Int64`, `Double` veya `Decimal`. 
+`expression`: bir `Int32`, `Int64`, `Double`veya `Decimal`. 
 
 **Dönüş değeri** 
 
-@No__t-0, `Int64`, `Double` veya `Decimal`. 
+`Int32`, `Int64`, `Double`veya `Decimal`. 
 
 **Örnek** 
 
@@ -272,17 +272,17 @@ Dereceyi radyana dönüştürür.
 
 **Bağımsız Değişkenler** 
 
-@No__t-0 olarak çekirdek değeri. Çekirdek belirtilmemişse, SQL Server veritabanı altyapısı rastgele bir çekirdek değeri atar. Belirtilen bir çekirdek değeri için döndürülen sonuç her zaman aynıdır.
+`Int32`olarak çekirdek değeri. Çekirdek belirtilmemişse, SQL Server veritabanı altyapısı rastgele bir çekirdek değeri atar. Belirtilen bir çekirdek değeri için döndürülen sonuç her zaman aynıdır.
 
 **Dönüş değeri** 
 
-0 ile 1 arasında rastgele bir @no__t 0 değeri. 
+0 ile 1 arasında rastgele bir `Double` değeri. 
 
 **Örnek** 
 
 `SqlServer.RAND()`
   
-## <a name="roundnumeric_expression-lengthfunction"></a>ROUND (numeric_expression, length [, Function])
+## <a name="roundnumeric_expression-lengthfunction"></a>ROUND (numeric_expression, Uzunluk [, işlev])
 
 Belirtilen uzunluğa veya duyarlığa yuvarlanmış bir sayısal ifade döndürür. 
 
@@ -290,13 +290,13 @@ Belirtilen uzunluğa veya duyarlığa yuvarlanmış bir sayısal ifade döndür�
 
 |  |  |
 |--|--|
-|`numeric_expression`| @No__t-0, `Int64`, `Double` veya `Decimal`. 
-|`length`| @No__t-1 ' in yuvarlanacak duyarlığı temsil eden bir `Int32`. @No__t-0 pozitif bir sayı olduğunda, `numeric_expression` `length` tarafından belirtilen ondalık konum sayısına yuvarlanır. @No__t-0 negatif bir sayı olduğunda, `numeric_expression`, `length` tarafından belirtilen ondalık noktanın sol tarafında yuvarlanır.|
-|`function` | İsteğe bağlı. Gerçekleştirilecek işlemin türünü temsil eden bir `Int32`. İşlev atlandığında veya 0 değerine (varsayılan) sahip olduğunda, `numeric_expression` yuvarlanır. 0 dışında bir değer belirtildiğinde `numeric_expression` kesilir. |
+|`numeric_expression`| `Int32`, `Int64`, `Double`veya `Decimal`. 
+|`length`| `numeric_expression` yuvarlanacak duyarlılığı temsil eden bir `Int32`. `length` pozitif bir sayı olduğunda, `numeric_expression` `length`tarafından belirtilen ondalık konum sayısına yuvarlanır. `length` negatif bir sayı olduğunda, `numeric_expression` `length`tarafından belirtildiği gibi ondalık noktanın sol tarafında yuvarlanır.|
+|`function` | İsteğe bağlı. Gerçekleştirilecek işlemin türünü temsil eden bir `Int32`. İşlev atlandığında veya 0 değerine (varsayılan) sahip olduğunda `numeric_expression` yuvarlanır. 0 dışında bir değer belirtildiğinde `numeric_expression` kesilir. |
 
 **Dönüş değeri** 
 
-Belirtilen `numeric_expression` ' ın belirtilen `power_expression` değeri.
+Belirtilen `power_expression`belirtilen `numeric_expression` değeri.
 
 **Örnek** 
 
@@ -308,11 +308,11 @@ Belirtilen ifadenin pozitif (+ 1), sıfır (0) veya negatif (-1) işaretini dön
 
 **Bağımsız Değişkenler** 
 
-`expression`: `Int32`, `Int64`, `Double` veya `Decimal` 
+`expression`: `Int32`, `Int64`, `Double`veya `Decimal` 
 
 **Dönüş değeri** 
 
-@No__t-0, `Int64`, `Double` veya `Decimal`. 
+`Int32`, `Int64`, `Double`veya `Decimal`. 
 
 **Örnek** 
 
@@ -320,11 +320,11 @@ Belirtilen ifadenin pozitif (+ 1), sıfır (0) veya negatif (-1) işaretini dön
 
 ## <a name="sinexpression"></a>SIN (ifade)
 
-Radyan cinsinden belirtilen açının trigonometrik sinüsünü hesaplar ve bir `Double` ifadesi döndürür. 
+Radyan cinsinden belirtilen açının trigonometrik sinüsünü hesaplar ve `Double` bir ifade döndürür. 
 
 **Bağımsız Değişkenler** 
 
-`expression`: bir `Double`. 
+`expression`: `Double`. 
 
 **Dönüş değeri** 
 
@@ -338,7 +338,7 @@ Belirtilen ifadenin kare kökünü döndürür.
 
 **Bağımsız Değişkenler** 
 
-`expression`: bir `Double`. 
+`expression`: `Double`. 
 
 **Dönüş değeri** 
 
@@ -352,7 +352,7 @@ Belirtilen ifadenin karesini döndürür.
 
 **Bağımsız Değişkenler** 
 
-`expression`: bir `Double`. 
+`expression`: `Double`. 
 
 **Dönüş değeri** 
 

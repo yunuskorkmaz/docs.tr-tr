@@ -28,30 +28,30 @@ Ortam değişkenleri olarak depolanan veya gizli dizi Yöneticisi aracı tarafı
    Set-AzKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
    ```
 
-3. Örnek oluştururken uzantı<xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> yöntemini çağırarak anahtar kasasını uygulamanıza bir yapılandırma kaynağı olarak dahil edin. <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> Çağırmanın `AddAzureKeyVault` , kayıtlı ve önceki adımlarda anahtar kasasına erişim verilen uygulama kimliğini gerektirdiğini unutmayın.
+3. Bir <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> örneği oluştururken <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> uzantısı metodunu çağırarak, anahtar kasasını uygulamanıza bir yapılandırma kaynağı olarak ekleyin. `AddAzureKeyVault` çağırmanın, kayıtlı ve önceki adımlarda anahtar kasasına erişim verilen uygulama KIMLIĞINI gerektirdiğini unutmayın.
 
-   Ayrıca, `AddAzureKeyVault` [Microsoft. IdentityModel. clients. ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) paketine bir başvuru dahil olmak üzere, istemci gizli dizisi yerine bir sertifikayı alan aşırı yüklemesini de kullanabilirsiniz.
+   Ayrıca, [Microsoft. IdentityModel. clients. ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) paketine bir başvuru dahil olmak üzere, istemci gizli dizisi yerine bir sertifikayı alan `AddAzureKeyVault` aşırı yüklemesini de kullanabilirsiniz.
 
 > [!IMPORTANT]
 > Azure Key Vault, önceki sağlayıcılardan yapılandırma değerlerini geçersiz kılabilmesi için son yapılandırma sağlayıcısı olarak kaydetmenizi öneririz.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Uygulama gizliliklarını korumak için Azure Key Vault kullanma** \
+- **Uygulama gizli dizilerini korumak için Azure Key Vault kullanma** \
   [https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault](/azure/guidance/guidance-multitenant-identity-keyvault)
 
-- **Geliştirme sırasında uygulama gizli dizileri için güvenli depolama** \
+- **Geliştirme sırasında uygulama gizli dizileri Için güvenli depolama** \
   [https://docs.microsoft.com/aspnet/core/security/app-secrets](/aspnet/core/security/app-secrets)
 
-- **Veri korumayı yapılandırma** \
+- **Veri koruma \ yapılandırma**
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview](/aspnet/core/security/data-protection/configuration/overview)
 
-- **ASP.NET Core veri koruma anahtarı yönetimi ve ömrü** \
+- **ASP.NET Core \ veri koruma anahtarı yönetimi ve ömrü**
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
 
 - **Microsoft. Extensions. Configuration. KeyPerFile** GitHub deposu. \
   <https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile>
 
 >[!div class="step-by-step"]
->[Önceki](developer-app-secrets-storage.md)İleri
->[](../key-takeaways.md)
+>[Önceki](developer-app-secrets-storage.md)
+>[İleri](../key-takeaways.md)

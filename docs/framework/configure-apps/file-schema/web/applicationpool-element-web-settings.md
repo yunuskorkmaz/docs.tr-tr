@@ -19,8 +19,8 @@ Bir ASP.NET uygulaması IIS 7,0 veya sonraki bir sürümde tümleşik modda çal
 > Bu öğe ve özellik yalnızca ASP.NET uygulamanız IIS 7,0 veya sonraki sürümlerde barındırılıyorsa çalışmayı destekler.  
   
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. Web >** ](system-web-element-web-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<applicationPool >**  
+&nbsp;&nbsp;[ **\<System. Web >** ](system-web-element-web-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<applicationPool >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,20 +50,20 @@ Bir ASP.NET uygulaması IIS 7,0 veya sonraki bir sürümde tümleşik modda çal
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[@no__t -1System. Web >](system-web-element-web-settings.md)|ASP.NET 'in bir konak uygulamasıyla nasıl etkileşime girdiği hakkında bilgi içerir.|  
+|[System. Web > \<](system-web-element-web-settings.md)|ASP.NET 'in bir konak uygulamasıyla nasıl etkileşime girdiği hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
 
 IIS 7,0 veya sonraki bir sürümü tümleşik modda çalıştırdığınızda, bu öğe birleşimi, uygulamanın bir IIS uygulama havuzunda barındırıldığı zaman iş parçacıklarını ve sıra isteklerini nasıl yönettiğini ASP.NET yapılandırmanıza olanak tanır. IIS 6 veya IIS 7,0 'yi Klasik modda veya ISAPI modunda çalıştırırsanız, bu ayarlar yok sayılır.  
   
-@No__t-0 ayarları, .NET Framework belirli bir sürümünde çalışan tüm uygulama havuzları için geçerlidir. Ayarlar, ASPNET. config dosyasında bulunur. .NET Framework 2,0 ve 4,0 sürümleri için bu dosyanın bir sürümü vardır. (.NET Framework sürümleri ve 3,5 3,0 sürümleri, ASPNET. config dosyasını sürüm 2,0 ile paylaşır.)  
+`applicationPool` ayarları, .NET Framework belirli bir sürümünde çalışan tüm uygulama havuzları için geçerlidir. Ayarlar, ASPNET. config dosyasında bulunur. .NET Framework 2,0 ve 4,0 sürümleri için bu dosyanın bir sürümü vardır. (.NET Framework sürümleri ve 3,5 3,0 sürümleri, ASPNET. config dosyasını sürüm 2,0 ile paylaşır.)  
   
 > [!IMPORTANT]
-> @No__t-0 üzerinde IIS 7,0 çalıştırırsanız, her uygulama havuzu için ayrı bir Aspnet. config dosyası yapılandırabilirsiniz. Bu, her uygulama havuzu için iş parçacıklarının performansını uyarlamanızı sağlar.  
+> [!INCLUDE[win7](../../../../../includes/win7-md.md)]üzerinde IIS 7,0 çalıştırırsanız, her uygulama havuzu için ayrı bir Aspnet. config dosyası yapılandırabilirsiniz. Bu, her uygulama havuzu için iş parçacıklarının performansını uyarlamanızı sağlar.  
   
-@No__t-0 ayarı için, ASP.NET 4 ' .NET Framework teki varsayılan "5000" ayarı, bir CPU 'ya göre 5000 veya daha fazla istek olmadığı takdirde, tarafından denetlenen istek azaltmasını etkin bir şekilde devre dışı bırakır. Varsayılan ayar, CLR iş parçacığı havuzuna CPU başına otomatik olarak yönetilecek şekilde değişir. Zaman uyumsuz istek işlemenin çok fazla kullanımını veya ağ g/ç 'de engellenen çok uzun süreli istekleri olan uygulamalar, .NET Framework 4 ' te artan varsayılan sınırdan faydalanır. @No__t-0 ' ı sıfıra ayarlamak, ASP.NET isteklerini işlemek için yönetilen iş parçacıklarının kullanımını devre dışı bırakır. Bir uygulama bir IIS uygulama havuzunda çalıştığında, istekler IIS g/ç iş parçacığında kalır ve bu nedenle eşzamanlılık IIS iş parçacığı ayarları tarafından kısıtlanır.  
+`maxConcurrentRequestsPerCPU` ayarı için, "5000 .NET Framework" varsayılan ayarı, ASP.NET tarafından denetlenen istek azaltmasını etkin bir şekilde devre dışı bırakır, ancak CPU başına 5000 veya daha fazla istek yoksa Varsayılan ayar, CLR iş parçacığı havuzuna CPU başına otomatik olarak yönetilecek şekilde değişir. Zaman uyumsuz istek işlemenin çok fazla kullanımını veya ağ g/ç 'de engellenen çok uzun süreli istekleri olan uygulamalar, .NET Framework 4 ' te artan varsayılan sınırdan faydalanır. `maxConcurrentRequestsPerCPU` sıfıra ayarlamak, ASP.NET isteklerini işlemek için yönetilen iş parçacıklarının kullanımını devre dışı bırakır. Bir uygulama bir IIS uygulama havuzunda çalıştığında, istekler IIS g/ç iş parçacığında kalır ve bu nedenle eşzamanlılık IIS iş parçacığı ayarları tarafından kısıtlanır.  
   
-@No__t-0 ayarı, ASP.NET uygulamaları için Web. config dosyalarında ayarlanan [processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100)) öğesinin `requestQueueLimit` özniteliğiyle aynı şekilde çalışıyor. Ancak, bir Aspnet. config dosyasındaki `requestQueueLimit` ayarı bir Web. config dosyasındaki `requestQueueLimit` ayarını geçersiz kılar. Diğer bir deyişle, her iki öznitelik de ayarlanırsa (varsayılan olarak, bu true ise), ASPNET. config dosyasındaki `requestQueueLimit` ayarı önceliklidir.  
+`requestQueueLimit` ayarı, ASP.NET uygulamaları için Web. config dosyalarında ayarlanan [processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100)) öğesinin `requestQueueLimit` özniteliğiyle aynı şekilde çalışıyor. Ancak, bir Aspnet. config dosyasındaki `requestQueueLimit` ayarı bir Web. config dosyasındaki `requestQueueLimit` ayarını geçersiz kılar. Diğer bir deyişle, her iki öznitelik de ayarlanırsa (varsayılan olarak, bu true ise), ASPNET. config dosyasındaki `requestQueueLimit` ayarı önceliklidir.  
   
 ## <a name="example"></a>Örnek  
 
@@ -88,15 +88,15 @@ Aşağıdaki örnekte, aşağıdaki durumlarda Aspnet. config dosyasında ASP.NE
 </configuration>  
 ```  
   
-## <a name="element-information"></a>Öğe Bilgisi  
+## <a name="element-information"></a>Öğe Bilgileri  
   
 |||  
 |-|-|  
-|Ad Alanı||  
+|Ad alanı||  
 |Şema adı||  
 |Doğrulama dosyası||  
 |Boş olabilir||  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [@no__t -1System. Web > öğesi (Web ayarları)](system-web-element-web-settings.md)
+- [System. Web > öğesi \<(Web ayarları)](system-web-element-web-settings.md)

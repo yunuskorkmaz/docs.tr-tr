@@ -20,33 +20,33 @@ SOAP hataları bir hizmetten istemciye ve çift yönlü bir şekilde bir istemci
 
 ## <a name="sending-soap-faults"></a>SOAP hataları gönderiliyor
 
-Tanımlanan SOAP hataları, bir işlemin özel bir SOAP hata türünü belirten <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> ' dır. Bildirilmemiş SOAP hataları bir işlem için sözleşmede belirtilmemiş olanlardır.
+Tanımlanan SOAP hataları, bir işlemin özel bir SOAP hata türünü belirten <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> sahip olduğu olanlardır. Bildirilmemiş SOAP hataları bir işlem için sözleşmede belirtilmemiş olanlardır.
 
 ### <a name="sending-declared-faults"></a>Bildirilmeyen hatalar gönderiliyor
 
-Belirtilen bir SOAP hatası göndermek için, SOAP hatasının uygun olduğu hata koşulunu tespit edin ve tür parametresinin bu işlem için <xref:System.ServiceModel.FaultContractAttribute> ' de belirtilen türün yeni bir nesnesi olduğu yeni bir <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> oluşturun. Aşağıdaki kod örneği, `SampleMethod` işleminin `GreetingFault` ayrıntı türüyle bir SOAP hatası döndüre, @no__t belirtmek için-0 ' ın kullanımını gösterir.
+Belirtilen bir SOAP hatası göndermek için, SOAP hatasının uygun olduğu hata koşulunu tespit edin ve tür parametresinin bu işlem için <xref:System.ServiceModel.FaultContractAttribute> belirtilen türün yeni bir nesnesi olduğu yeni bir <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> oluşturun. Aşağıdaki kod örneği, `SampleMethod` işleminin `GreetingFault`ayrıntı türüyle bir SOAP hatası döndüre, belirtmek için <xref:System.ServiceModel.FaultContractAttribute> kullanımını gösterir.
 
 [!code-csharp[FaultContractAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#4)]
 [!code-vb[FaultContractAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#4)]
 
-@No__t-0 hata bilgilerini istemciye iletmek için, uygun hata koşulunu yakalayın ve bağımsız değişkeni olarak yeni bir `GreetingFault` nesnesi ile `GreetingFault` türünde yeni bir <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> ' i oluşturun (Aşağıdaki kod örneğinde olduğu gibi). İstemci bir WCF istemci uygulaması ise, bu, türün `GreetingFault` türünde <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> olduğu yönetilen bir özel durum olarak karşılaşır.
+`GreetingFault` hata bilgilerini istemciye iletmek için, uygun hata koşulunu yakalayın ve aşağıdaki kod örneğinde olduğu gibi, bağımsız değişken olarak yeni bir `GreetingFault` nesnesi ile `GreetingFault` türünde yeni bir <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> oluşturun. İstemci bir WCF istemci uygulaması ise, bu, türün `GreetingFault`türünde <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> yönetilen bir özel durum olarak deneyimdir.
 
 [!code-csharp[FaultContractAttribute#5](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#5)]
 [!code-vb[FaultContractAttribute#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#5)]
 
 ### <a name="sending-undeclared-faults"></a>Bildirilmemiş hatalar gönderiliyor
 
-Bildirilmemiş hataların gönderilmesi, WCF uygulamalarında sorunları hızlı bir şekilde tanılamak ve hatalarını ayıklamak için çok yararlı olabilir, ancak hata ayıklama aracı olarak kullanışlılığı sınırlıdır. Daha genel olarak, hata ayıklarken, <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliğini kullanmanız önerilir. Bu değeri true olarak belirlediğinizde, istemciler bu tür hataları <xref:System.ServiceModel.ExceptionDetail> türünde <xref:System.ServiceModel.FaultException%601> özel durum olarak deneyimlidir.
+Bildirilmemiş hataların gönderilmesi, WCF uygulamalarında sorunları hızlı bir şekilde tanılamak ve hatalarını ayıklamak için çok yararlı olabilir, ancak hata ayıklama aracı olarak kullanışlılığı sınırlıdır. Daha genel olarak, hata ayıklanırken <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliğini kullanmanız önerilir. Bu değeri true olarak belirlediğinizde, istemciler bu tür hataları <xref:System.ServiceModel.ExceptionDetail>türünde <xref:System.ServiceModel.FaultException%601> özel durumlar olarak deneyimlidir.
 
 > [!IMPORTANT]
-> Yönetilen özel durumlar iç uygulama bilgilerini kullanıma sunabileceğinden, <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> ayarı `true` ' ye ayarlandığında, WCF istemcilerinin kişisel olarak tanımlanabilir veya diğer duyarlı gibi iç hizmet işlemi özel durumları hakkında bilgi almasına izin verebilir bilgi.
+> Yönetilen özel durumlar iç uygulama bilgilerini kullanıma sunabileceğinden, <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> ayarı `true` olarak ayarlanması, WCF istemcilerinin kişisel olarak tanımlanabilir ve diğer hassas bilgiler dahil olmak üzere iç hizmet işlemi özel durumları hakkında bilgi almasına izin verebilir.
 >
-> Bu nedenle, <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> ' i `true` ' ye ayarlamak yalnızca bir hizmet uygulamasında geçici olarak hata ayıklamanın bir yolu olarak önerilir. Ayrıca, işlenmemiş yönetilen özel durumları bu şekilde döndüren bir yöntem için WSDL, <xref:System.ServiceModel.ExceptionDetail> türündeki <xref:System.ServiceModel.FaultException%601> için sözleşme içermez. İstemciler, hata ayıklama bilgilerini doğru şekilde almak için bilinmeyen bir SOAP hatası (WCF istemcilerine <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> nesnesi olarak döndürülen) olasılığını beklememelidir.
+> Bu nedenle, <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> `true` olarak ayarlamak yalnızca bir hizmet uygulamasının geçici olarak hata ayıklamanın bir yolu olarak önerilir. Ayrıca, işlenmemiş yönetilen özel durumları bu şekilde döndüren bir yöntem için WSDL, <xref:System.ServiceModel.ExceptionDetail>türündeki <xref:System.ServiceModel.FaultException%601> için anlaşma içermez. İstemciler, hata ayıklama bilgilerini doğru şekilde almak için bilinmeyen bir SOAP hatası (WCF istemcilerine <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> nesne olarak döndürülen) olasılığını beklememelidir.
 
-Bildirilmemiş bir SOAP hatası göndermek için, <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> nesnesi oluşturun (yani, genel tür <xref:System.ServiceModel.FaultException%601>) ve dizeyi oluşturucuya geçirin. Bu, <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> metodunu çağırarak, dizenin kullanılabildiği bir <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> özel durumu olarak WCF istemci uygulamalarına sunulur.
+Bildirilmemiş bir SOAP hatası göndermek için bir <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> nesnesi oluşturun (yani, genel tür <xref:System.ServiceModel.FaultException%601>değil) ve dizeyi oluşturucuya geçirin. Bu, <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> yöntemini çağırarak dizenin kullanılabildiği bir <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> özel durumu olarak WCF istemci uygulamalarına sunulur.
 
 > [!NOTE]
-> String türünde bir SOAP hatası bildirirseniz ve bunu hizmetinize <xref:System.ServiceModel.FaultException%601> olarak, tür parametresinin <xref:System.String?displayProperty=nameWithType> olduğu bir @no__t oluşturursanız, dize değeri-2 özelliğine atanır ve <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> ' ten kullanılamaz.
+> String türünde bir SOAP hatası bildirirseniz ve bunu hizmetinize, tür parametresinin <xref:System.String?displayProperty=nameWithType> dize değeri <xref:System.ServiceModel.FaultException%601.Detail%2A?displayProperty=nameWithType> özelliğine atandığı ve <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType>kullanılamayan bir <xref:System.ServiceModel.FaultException%601> olarak oluşturun.
 
 ## <a name="handling-faults"></a>Hataları işleme
 
@@ -56,27 +56,27 @@ WCF istemcilerinde, istemci uygulamalarına ilgi eden iletişim sırasında olu�
 
 - <xref:System.ServiceModel.CommunicationException>
 
-<xref:System.TimeoutException> nesne, bir işlem belirtilen zaman aşımı süresini aştığında oluşturulur.
+<xref:System.TimeoutException> nesneler, bir işlem belirtilen zaman aşımı süresini aştığında oluşturulur.
 
-<xref:System.ServiceModel.CommunicationException> nesneleri, hizmette veya istemcide bazı kurtarılabilir iletişim hatası koşulu olduğunda oluşturulur.
+<xref:System.ServiceModel.CommunicationException> nesneler, hizmette veya istemcide bir kurtarılabilir iletişim hata koşulu olduğunda oluşturulur.
 
-@No__t-0 sınıfında iki önemli türetilmiş tür ve <xref:System.ServiceModel.FaultException> ve genel <xref:System.ServiceModel.FaultException%601> türü vardır.
+<xref:System.ServiceModel.CommunicationException> sınıfında iki önemli türetilmiş tür, <xref:System.ServiceModel.FaultException> ve genel <xref:System.ServiceModel.FaultException%601> türü vardır.
 
-<xref:System.ServiceModel.FaultException> özel durum, bir dinleyici işlem sözleşmesinde beklenmez veya belirtilen bir hata aldığında oluşur; genellikle bu durum, uygulamanın hataları ayıklandığında ve hizmetin <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliği `true` ' ye ayarlı olduğunda meydana gelir.
+<xref:System.ServiceModel.FaultException> özel durumlar, bir dinleyici işlem sözleşmesinde beklenmediği veya belirtilmeyen bir hata aldığında oluşur; genellikle bu durum, uygulamanın hata ayıklaması yapıldığında ve hizmetin <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliği `true`olarak ayarlandığında oluşur.
 
-<xref:System.ServiceModel.FaultException%601> özel durum, işlem sözleşmesinde belirtilen bir hata iki yönlü bir işleme yanıt olarak alındığında (diğer bir deyişle, <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> `false` olarak ayarlanan <xref:System.ServiceModel.OperationContractAttribute> özniteliğine sahip bir yöntem) istemci üzerinde oluşturulur.
-
-> [!NOTE]
-> Bir WCF hizmeti <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliği `true` ' ye ayarlandığında, istemci bunu <xref:System.ServiceModel.ExceptionDetail> türünde bildirilmemiş bir <xref:System.ServiceModel.FaultException%601> olarak deneyimler. İstemciler, bu hatayı yakalayabilir veya <xref:System.ServiceModel.FaultException> için bir catch bloğunda hatayı işleyebilir.
-
-Genellikle, istemci ve hizmetlere yalnızca <xref:System.ServiceModel.FaultException%601>, <xref:System.TimeoutException> ve <xref:System.ServiceModel.CommunicationException> özel durum ilgi alanıdır.
+<xref:System.ServiceModel.FaultException%601> özel durumlar, işlem sözleşmesinde belirtilen bir hata iki yönlü bir işleme yanıt olarak alındığında (yani, <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> `false`olarak ayarlanan <xref:System.ServiceModel.OperationContractAttribute> özniteliği olan bir yöntem) istemci üzerinde oluşturulur.
 
 > [!NOTE]
-> Tabii ki diğer özel durumlar oluşur. Beklenmeyen özel durumlar <xref:System.OutOfMemoryException?displayProperty=nameWithType>; gibi çok zararlı arızalardır. genellikle uygulamalar bu tür yöntemleri yakalayamaz.
+> Bir WCF hizmeti <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliği `true` olarak ayarlandığında, istemci bunu <xref:System.ServiceModel.ExceptionDetail>türünde bildirilmemiş bir <xref:System.ServiceModel.FaultException%601> olarak deneyimler. İstemciler, <xref:System.ServiceModel.FaultException>için bir catch bloğunda bu hatayı yakalayabilir veya hatayı işleyebilir.
+
+Genellikle, istemci ve hizmetlere yalnızca <xref:System.ServiceModel.FaultException%601>, <xref:System.TimeoutException>ve <xref:System.ServiceModel.CommunicationException> özel durumları ilgi çekici.
+
+> [!NOTE]
+> Tabii ki diğer özel durumlar oluşur. Beklenmeyen özel durumlar <xref:System.OutOfMemoryException?displayProperty=nameWithType>gibi çok zararlı hatalara sahiptir; genellikle uygulamalar bu tür yöntemleri yakalayamaz.
 
 ### <a name="catch-fault-exceptions-in-the-correct-order"></a>Hata özel durumlarını doğru sırada yakala
 
-@No__t-0 <xref:System.ServiceModel.FaultException> ' den türediğinden ve <xref:System.ServiceModel.FaultException> <xref:System.ServiceModel.CommunicationException> ' ten türetildiğinden, bu özel durumların uygun sırada yakalanmaları önemlidir. Örneğin, <xref:System.ServiceModel.CommunicationException> ' ı ilk yakalayacak bir try/catch bloğuna sahipseniz, belirtilen ve belirtilmeyen tüm SOAP hataları orada işlenir; Özel <xref:System.ServiceModel.FaultException%601> özel durumunu işlemek için sonraki tüm catch blokları hiçbir şekilde çağrılmaz.
+<xref:System.ServiceModel.FaultException%601> <xref:System.ServiceModel.FaultException>türediğinden <xref:System.ServiceModel.FaultException> ve <xref:System.ServiceModel.CommunicationException>türettiği için, bu özel durumları uygun sırada yakalamak önemlidir. Örneğin, <xref:System.ServiceModel.CommunicationException>ilk olarak yakalayacak bir try/catch bloğuna sahipseniz, belirtilen ve belirtilmeyen tüm SOAP hataları orada işlenir; özel bir <xref:System.ServiceModel.FaultException%601> özel durumunu işlemek için sonraki tüm catch blokları hiçbir şekilde çağrılmaz.
 
 Bir işlemin belirtilen sayıda hata döndürebileceği unutulmamalıdır. Her hata benzersiz bir türdür ve ayrı olarak işlenmelidir.
 
@@ -90,9 +90,9 @@ Genellikle, istemci nesne kanalları aşağıdaki yollarla kapalıdır:
 
 - WCF istemci nesnesi geri dönüştürüldüğünde.
 
-- İstemci uygulaması <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> ' yı çağırdığında.
+- İstemci uygulaması <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>çağırdığında.
 
-- İstemci uygulaması <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> ' yı çağırdığında.
+- İstemci uygulaması <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>çağırdığında.
 
 - İstemci uygulaması, bir oturum için sonlandırma işlemi olan bir işlem çağırdığında.
 

@@ -10,18 +10,18 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/16/2019
 ms.locfileid: "72395669"
 ---
-# <a name="expressions"></a>İfadeler
+# <a name="expressions"></a>{1&gt;İfadeler&lt;1}
 
-*İfadeler* , *işlenenler* ve *işleçlerden*oluşturulur. Bir ifadenin işleçleri, işlenenlerin hangi işlemleri uygulanacağını gösterir. İşleç örnekleri `+`, `-`, `*`, `/` ve `new` ' ü içerir. İşlenenlerin örnekleri, sabit değerleri, alanları, yerel değişkenleri ve ifadeleri içerir.
+*İfadeler* , *işlenenler* ve *işleçlerden*oluşturulur. Bir ifadenin işleçleri, işlenenlerin hangi işlemleri uygulanacağını gösterir. Operatör örnekleri arasında `+`, `-`, `*`, `/`ve `new`sayılabilir. İşlenenlerin örnekleri, sabit değerleri, alanları, yerel değişkenleri ve ifadeleri içerir.
 
-Bir ifade birden çok işleç içerdiğinde, işleçlerin *önceliği* ayrı işleçlerin değerlendirilme sırasını denetler. Örneğin, `*` işleci `+` işlecinden daha yüksek önceliğe sahip olduğundan `x + y * z` ifadesi `x + (y * z)` olarak değerlendirilir.
+Bir ifade birden çok işleç içerdiğinde, işleçlerin *önceliği* ayrı işleçlerin değerlendirilme sırasını denetler. Örneğin, `*` işleci `+` işlecinden daha yüksek önceliğe sahip olduğu için `x + y * z` ifade `x + (y * z)` olarak değerlendirilir.
 
 Aynı önceliğe sahip iki işleç arasında bir işlenen gerçekleştiğinde, işleçlerin *ilişkilendirilebilirliği* , işlemlerin gerçekleştirileceği sırayı denetler:
 
-* Atama ve null birleşim işleçleri hariç olmak üzere tüm ikili işleçler *sola ilişkilendirilebilir*, yani işlemler soldan sağa yapılır. Örneğin, `x + y + z` `(x + y) + z` olarak değerlendirilir.
-* Atama işleçleri, null birleştirme `??` ve `??=` işleçleri ve koşullu işleç `?:` ' i sağ *ilişkilendirilebilir*, yani işlemler sağdan sola yapılır. Örneğin, `x = y = z` `x = (y = z)` olarak değerlendirilir.
+* Atama ve null birleşim işleçleri hariç olmak üzere tüm ikili işleçler *sola ilişkilendirilebilir*, yani işlemler soldan sağa yapılır. Örneğin, `x + y + z` `(x + y) + z`olarak değerlendirilir.
+* Atama işleçleri, null birleştirme `??` ve `??=` işleçleri ve koşullu işleç `?:`, *doğru ilişkilendirilebilir*, yani işlemler sağdan sola yapılır. Örneğin, `x = y = z` `x = (y = z)`olarak değerlendirilir.
 
-Öncelik ve ilişkilendirilebilirlik, parantezler kullanılarak denetlenebilir. Örneğin, `x + y * z` ' ı ilk önce `z` ile @no__t çarpar ve sonra sonucu `x` ' e ekler, ancak `(x + y) * z` ' ü önce `x` ve `y` ' ı ekler ve ardından sonucu @no__t 7 ile çarpar.
+Öncelik ve ilişkilendirilebilirlik, parantezler kullanılarak denetlenebilir. Örneğin, `x + y * z` önce `y` `z` ile çarpar ve sonucu `x`ekler, ancak `(x + y) * z` önce `x` ve `y` ekler ve sonra sonucu `z`ile çarpar.
 
 Çoğu işleç [*aşırı*](../language-reference/operators/operator-overloading.md)yüklenebilir. İşleç aşırı yüklemesi, Kullanıcı tanımlı operatör uygulamalarının bir veya her ikisinin de Kullanıcı tanımlı sınıf veya yapı türünde olduğu işlemler için belirtilmesine izin verir.
 

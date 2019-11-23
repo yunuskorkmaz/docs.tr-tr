@@ -11,7 +11,7 @@ ms.locfileid: "71351568"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'si Uygulama
 
-Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Communication Foundation (WCF) içindeki bulma özelliği hakkında daha fazla bilgi için bkz. [WCF bulma 'Ya genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Bir bulma proxy 'si, <xref:System.ServiceModel.Discovery.DiscoveryProxy> soyut sınıfını genişleten bir sınıf oluşturularak uygulanabilir. Bu örnekte tanımlanmış ve kullanılan çeşitli destek sınıfları vardır. `OnResolveAsyncResult`, `OnFindAsyncResult`ve .`AsyncResult` Bu sınıflar <xref:System.IAsyncResult> arabirimini uygular. @No__t hakkında daha fazla bilgi için bkz. [System. IAsyncResult arabirimi](xref:System.IAsyncResult).
+Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Communication Foundation (WCF) içindeki bulma özelliği hakkında daha fazla bilgi için bkz. [WCF bulma 'Ya genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Bir bulma proxy 'si, <xref:System.ServiceModel.Discovery.DiscoveryProxy> soyut sınıfını genişleten bir sınıf oluşturularak uygulanabilir. Bu örnekte tanımlanmış ve kullanılan çeşitli destek sınıfları vardır. `OnResolveAsyncResult`, `OnFindAsyncResult`ve `AsyncResult`. Bu sınıflar <xref:System.IAsyncResult> arabirimini uygular. <xref:System.IAsyncResult> hakkında daha fazla bilgi için bkz. [System. IAsyncResult arabirimi](xref:System.IAsyncResult).
 
  Keşif proxy 'si uygulamak, bu konunun üç ana bölümüne bölünür:
 
@@ -25,7 +25,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
 
 1. Visual Studio 2012 ' i başlatın.
 
-2. Yeni bir konsol uygulaması projesi oluşturun. @No__t-0 adlı projeyi ve çözümü `DiscoveryProxyExample` olarak adlandırın.
+2. Yeni bir konsol uygulaması projesi oluşturun. Projeyi `DiscoveryProxy` ve çözüm `DiscoveryProxyExample`adlandırın.
 
 3. Aşağıdaki başvuruları projeye ekleyin
 
@@ -50,7 +50,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     using System.Xml;
     ```
 
-3. @No__t-0 ' dan <xref:System.ServiceModel.Discovery.DiscoveryProxy> ' den türet. Aşağıdaki örnekte gösterildiği gibi, `ServiceBehavior` özniteliğini sınıfa uygulayın.
+3. `DiscoveryProxyService` <xref:System.ServiceModel.Discovery.DiscoveryProxy>türetirsiniz. Aşağıdaki örnekte gösterildiği gibi `ServiceBehavior` özniteliğini sınıfa uygulayın.
 
     ```csharp
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods
@@ -60,7 +60,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     }
     ```
 
-4. @No__t-0 sınıfının içinde kayıtlı Hizmetleri tutacak bir sözlük tanımlayın.
+4. `DiscoveryProxy` sınıfının içinde kayıtlı Hizmetleri tutacak bir sözlük tanımlayın.
 
     ```csharp
     // Repository to store EndpointDiscoveryMetadata.
@@ -320,7 +320,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     }
     ```
 
-Onbegın.. /OnEnd.. Yöntemler, sonraki bulma işlemlerine yönelik mantığı sağlar. Örneğin <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> ve <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> yöntemleri bulma proxy 'si için bulma mantığını uygular. Bulma proxy 'si bir araştırma iletisi aldığında, istemciye yanıt göndermek için bu yöntemler yürütülür. Find mantığını istediğiniz gibi değiştirebilirsiniz. Örneğin, bul işleminin bir parçası olarak algoritmalara veya uygulamaya özgü XML meta verileri ayrıştırmaya göre özel kapsam eşleştirmeyi birleştirebilirsiniz.
+Onbegın.. /OnEnd.. Yöntemler, sonraki bulma işlemlerine yönelik mantığı sağlar. Örneğin <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> ve <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> yöntemleri bulma proxy 'si için Find mantığını uygular. Bulma proxy 'si bir araştırma iletisi aldığında, istemciye yanıt göndermek için bu yöntemler yürütülür. Find mantığını istediğiniz gibi değiştirebilirsiniz. Örneğin, bul işleminin bir parçası olarak algoritmalara veya uygulamaya özgü XML meta verileri ayrıştırmaya göre özel kapsam eşleştirmeyi birleştirebilirsiniz.
 
 ### <a name="to-implement-the-asyncresult-class"></a>AsyncResult sınıfını uygulamak için
 
@@ -495,7 +495,7 @@ Onbegın.. /OnEnd.. Yöntemler, sonraki bulma işlemlerine yönelik mantığı s
     using System.ServiceModel.Discovery;
     ```
 
-3. @No__t-0 yönteminde aşağıdaki kodu ekleyin. Bu, `DiscoveryProxy` sınıfının bir örneğini oluşturur.
+3. `Main()` yöntemi içinde aşağıdaki kodu ekleyin. Bu, `DiscoveryProxy` sınıfının bir örneğini oluşturur.
 
     ```csharp
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");
@@ -546,7 +546,7 @@ Onbegın.. /OnEnd.. Yöntemler, sonraki bulma işlemlerine yönelik mantığı s
     }
     ```
 
-Bulma proxy 'sini uygulamayı tamamladınız. @No__t için devam et-0Nasıl yapılır: Bulma proxy 'Si @ no__t-0 ile kaydeden, keşfedilebilir bir hizmet uygulayın.
+Bulma proxy 'sini uygulamayı tamamladınız. [Nasıl yapılır: bulma proxy 'Sine kaydolduktan sonra bulunabilir bir hizmeti uygulama](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).
 
 ## <a name="example"></a>Örnek
 
@@ -976,6 +976,6 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Nasıl yapılır: Bulma proxy 'Si @ no__t-0 ile kaydeden bulunabilir bir hizmet uygulama
-- [Nasıl yapılır: Bir hizmeti bulmak için keşif proxy 'Si kullanan bir Istemci uygulaması uygulama @ no__t-0
-- [Nasıl yapılır: Bulma proxy 'sini test etme @ no__t-0
+- [Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [Nasıl yapılır: Keşif Proxy'sini Test Etme](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

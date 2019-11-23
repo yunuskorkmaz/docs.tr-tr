@@ -1,14 +1,13 @@
 ---
 title: WCF geliştiricileri için Docker-gRPC
 description: ASP.NET Core gRPC uygulamaları için Docker görüntüleri oluşturma
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: cc369da9494ade532187dfc8d19a94a3a037ebab
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: a5aceb4b5270cb828965e990a62db4147012adff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846678"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967833"
 ---
 # <a name="docker"></a>Docker
 
@@ -30,7 +29,7 @@ Her görüntü için, etiketlere göre ayırt edilen farklı Linux dağıtımlar
 | 3,0-Buster, 3,0 | De, 10 | Bir işletim sistemi değişkeni belirtilmemişse varsayılan görüntü. |
 | 3,0-alçam | Alçam 3,9 | Alp taban görüntüleri, Deleyden veya Ubuntu 'dan çok daha küçüktür. |
 | 3,0-disco | Ubuntu 19,04 | |
-| 3,0-Bionic | Ubuntu 18,04 | |
+| 3,0-Bionic | Ubuntu 18.04 | |
 
 Alp temel görüntüsü 100 MB boyutunda, dekor ve Ubuntu görüntüleri için 200 MB ile karşılaştırılır, ancak bazı yazılım paketleri veya kitaplıkları alçam 'nın paket yönetiminde bulunmayabilir. Hangi görüntünün kullanılacağı konusunda emin değilseniz, farklı bir dağın kullanılması için etkileyici bir ihtiyacınız yoksa varsayılan deki 'ya en iyi şekilde bakalım.
 
@@ -117,7 +116,7 @@ docker build --tag stockdata .
 
 `--tag` bayrağını (`-t`kısaltabilen), belirtilen gerçek etiket *dahil olmak üzere* görüntünün tam adını belirtir. Sonundaki `.`, yapı çalıştırılacağı *bağlamı* belirtir; Dockerfile içindeki `COPY` komutları için geçerli çalışma dizini.
 
-Tek bir çözümde birden çok uygulamanız varsa, her bir uygulama için Dockerfile dosyasını, `.csproj` dosyasının yanına, kendi klasöründe tutabilirsiniz, `docker build` ancak çözümün ve tüm projeler görüntüye kopyalanır. `--file` (veya `-f`) bayrağını kullanarak geçerli dizinin altına bir Dockerfile belirtebilirsiniz.
+Tek bir çözümde birden çok uygulamanız varsa, her bir uygulama için Dockerfile dosyasını `.csproj` dosyasının yanında tutabilirsiniz, ancak çözümün ve tüm projelerin görüntüye kopyalandığından emin olmak için yine de temel dizinden `docker build` komutunu çalıştırmalısınız. `--file` (veya `-f`) bayrağını kullanarak geçerli dizinin altına bir Dockerfile belirtebilirsiniz.
 
 ```console
 docker build --tag stockdata --file src/StockData/Dockerfile .

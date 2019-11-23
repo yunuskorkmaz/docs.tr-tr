@@ -260,9 +260,9 @@ Aşağıdaki tabloda bazı <xref:System.Windows.Duration> ayarları ve sonuçta 
 
 |Ayar|Sonuç değeri|
 |-------------|---------------------|
-|0:0: 5,5|5,5 saniye.|
-|0:30:5,5|30 dakika ve 5,5 saniye.|
-|1:30:5,5|1 saat, 30 dakika ve 5,5 saniye.|
+|0:0:5.5|5,5 saniye.|
+|0:30:5.5|30 dakika ve 5,5 saniye.|
+|1:30:5.5|1 saat, 30 dakika ve 5,5 saniye.|
 
 Kodda <xref:System.Windows.Duration> belirtmenin bir yolu, bir <xref:System.TimeSpan>oluşturmak için <xref:System.TimeSpan.FromSeconds%2A> metodunu kullanmak ve ardından bu <xref:System.TimeSpan>kullanarak yeni bir <xref:System.Windows.Duration> yapısı bildirmektir.
 

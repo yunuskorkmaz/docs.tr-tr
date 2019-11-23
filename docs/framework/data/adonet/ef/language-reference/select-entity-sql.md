@@ -21,7 +21,7 @@ SELECT [ ALL | DISTINCT ] [ topSubclause ] aliasedExpr
 SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  Bütün  
  Tekrarların sonuç kümesinde görünebilen belirtir. TÜMÜ varsayılandır.  
   
@@ -32,14 +32,14 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  Yalnızca bir öğenin belirtilmesini sağlar ve satır sarmalayıcısı eklemez.  
   
  `topSubclause`  
- Sorgunun `top(expr)` ' dan döndürülecek ilk sonuçların sayısını gösteren geçerli bir ifade.  
+ Form `top(expr)`sorgudan döndürülecek ilk sonuçların sayısını gösteren geçerli bir ifade.  
   
  [Order by](order-by-entity-sql.md) işlecinin LIMIT parametresi, sonuç kümesindeki ilk n öğeyi seçmenizi de sağlar.  
   
  `aliasedExpr`  
  Formun bir ifadesi:  
   
- `expr` `identifier` &#124; `expr`  
+ `identifier` &#124; olarak `expr` `expr`  
   
  `expr`  
  Bir sabit değer veya ifade.  
@@ -47,13 +47,13 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
 ## <a name="remarks"></a>Açıklamalar  
  SELECT yan tümcesi from, [Group By](group-by-entity-sql.md)ve [HAVING](having-entity-sql.md) yan [tümcelerinden](from-entity-sql.md)sonra değerlendirilir. SELECT yan tümcesi yalnızca şu anda kapsamda olan öğelere (FROM yan tümcesinden veya dış kapsamlardan) başvurabilir. GROUP BY yan tümcesi belirtilmişse, SELECT yan tümcesinin yalnızca GROUP BY anahtarlarına yönelik diğer adlara başvuruda bulunmasına izin verilir. FROM yan tümcesi öğelerine başvurmak için yalnızca toplama işlevlerinde izin verilir.  
   
- SELECT anahtar sözcüğünü izleyen bir veya daha fazla sorgu ifadesinin listesi, seçim listesi veya yansıtma olarak daha resmi olarak bilinir. En genel projeksiyon formu tek bir sorgu deyimidir. -1 @no__t bir koleksiyon `member1` ' ı seçerseniz, aşağıdaki örnekte gösterildiği gibi, `collection1` ' teki her bir nesne için tüm @no__t 2 değerlerinin yeni bir koleksiyonunu oluşturacaksınız.  
+ SELECT anahtar sözcüğünü izleyen bir veya daha fazla sorgu ifadesinin listesi, seçim listesi veya yansıtma olarak daha resmi olarak bilinir. En genel projeksiyon formu tek bir sorgu deyimidir. Bir koleksiyon `collection1`bir üye `member1` seçerseniz, aşağıdaki örnekte gösterildiği gibi, `collection1`içindeki her bir nesne için tüm `member1` değerlerinin yeni bir koleksiyonunu oluşturacaksınız.  
   
 ```sql  
 SELECT collection1.member1 FROM collection1  
 ```  
   
- Örneğin `customers`, `string` türünde bir `Name` özelliği olan `Customer` türünde bir koleksiyondur. `customers` ' i seçmek, aşağıdaki örnekte gösterildiği gibi bir dizeler koleksiyonu oluşturur.  
+ Örneğin, `customers`, `string`türünde bir özellik `Name` olan `Customer` türünde bir koleksiyondur. `Name` `customers` seçmek, aşağıdaki örnekte gösterildiği gibi bir dizeler koleksiyonu oluşturur.  
   
 ```sql  
 SELECT customers.Name FROM customers AS c  
@@ -64,7 +64,7 @@ SELECT customers.Name FROM customers AS c
 ## <a name="row-and-value-select-clauses"></a>Satır ve değer seçim yan tümceleri  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)], SELECT yan tümcesinin iki çeşidini destekler. İlk varyant, Row Select, SELECT anahtar sözcüğü tarafından tanımlanır ve, yansıtılmalıdır bir veya daha fazla değer belirtmek için kullanılabilir. Satır sarmalayıcı döndürülen değerlerin çevresine örtük olarak eklendiğinden, sorgu ifadesinin sonucu her zaman bir satır kümesi olur.  
   
- Satırdaki her sorgu ifadesi Select bir diğer ad belirtmelidir. Diğer ad belirtilmemişse, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] diğer ad oluşturma kurallarını kullanarak bir diğer ad oluşturmaya çalışır.  
+ Satırdaki her sorgu ifadesi Select bir diğer ad belirtmelidir. Diğer ad belirtilmemişse,[!INCLUDE[esql](../../../../../../includes/esql-md.md)] diğer ad oluşturma kurallarını kullanarak bir diğer ad oluşturmaya çalışır.  
   
  SELECT yan tümcesinin diğer varyantı, değer Select, SELECT VALUE anahtar sözcüğü tarafından tanımlanır. Yalnızca bir değerin belirtilmesini sağlar ve bir satır sarmalayıcı eklemez.  
   
@@ -76,16 +76,16 @@ SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 ```  
   
 ## <a name="all-and-distinct-modifiers"></a>Tüm ve farklı değiştiriciler  
- @No__t-0 ' ın her iki varyantı de tüm veya ayrı bir değiştirici belirtimine izin veriyor. AYRı değiştirici belirtilirse, yinelemeler sorgu ifadesi tarafından üretilen koleksiyondan kaldırılır (SELECT yan tümcesi ile ve dahil). Tüm değiştirici belirtilirse, yinelenen bir eleme gerçekleştirilmez; TÜMÜ varsayılandır.  
+ Her iki çeşit de SELECT [!INCLUDE[esql](../../../../../../includes/esql-md.md)], tümü veya ayrı bir değiştirici belirtimine izin veriyor. AYRı değiştirici belirtilirse, yinelemeler sorgu ifadesi tarafından üretilen koleksiyondan kaldırılır (SELECT yan tümcesi ile ve dahil). Tüm değiştirici belirtilirse, yinelenen bir eleme gerçekleştirilmez; TÜMÜ varsayılandır.  
   
 ## <a name="differences-from-transact-sql"></a>Transact-SQL arasındaki farklılıklar  
- Transact-SQL ' den farklı olarak [!INCLUDE[esql](../../../../../../includes/esql-md.md)], SELECT yan tümcesinde * bağımsız değişkeninin kullanımını desteklemez.  Bunun yerine, [!INCLUDE[esql](../../../../../../includes/esql-md.md)], aşağıdaki örnekte gösterildiği gibi, FROM yan tümcesindeki koleksiyon diğer adlarına başvurarak tüm kayıtları bir bütün olarak proje için sorgular sağlar.  
+ Transact-SQL ' den farklı olarak, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] SELECT yan tümcesinde * bağımsız değişkeninin kullanımını desteklemez.  Bunun yerine, [!INCLUDE[esql](../../../../../../includes/esql-md.md)], aşağıdaki örnekte gösterildiği gibi, FROM yan tümcesindeki koleksiyon diğer adlarına başvurarak tüm kayıtları proje için sorgular.  
   
 ```sql  
 SELECT * FROM T1, T2  
 ```  
   
- Önceki Transact-SQL sorgu ifadesi aşağıdaki şekilde [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ' da ifade edilir.  
+ Önceki Transact-SQL sorgu ifadesi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] aşağıdaki şekilde ifade edilir.  
   
 ```sql  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  

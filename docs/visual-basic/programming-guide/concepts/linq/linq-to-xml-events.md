@@ -1,42 +1,42 @@
 ---
-title: LINQ to XML olayları (Visual Basic)
+title: LINQ to XML Olayları
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: d35f8063fe87ee4be3dd49a3c0221cb9c47cb22e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 06191fb94f808d9a3ece8de000dec1c5de769dde
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834976"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351933"
 ---
-# <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML olayları (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] olayları, bir XML ağacı değiştiğinde size bildirim gönderilmesini sağlar.  
+# <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML Events (Visual Basic)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] events enable you to be notified when an XML tree is altered.  
   
- Bir @no__t örneğine olay ekleyebilirsiniz-0. Olay işleyicisi daha sonra bu <xref:System.Xml.Linq.XObject> ' a ve alt öğelerinden herhangi birine yapılan değişiklikler için olayları alır. Örneğin, ağacın köküne bir olay işleyicisi ekleyebilir ve ağaçtaki tüm değişiklikleri bu olay işleyicisinden işleyebilirsiniz.  
+ You can add events to an instance of any <xref:System.Xml.Linq.XObject>. The event handler will then receive events for modifications to that <xref:System.Xml.Linq.XObject> and any of its descendants. For example, you can add an event handler to the root of the tree, and handle all modifications to the tree from that event handler.  
   
- @No__t-0 olaylarının örnekleri için bkz. <xref:System.Xml.Linq.XObject.Changing> ve <xref:System.Xml.Linq.XObject.Changed>.  
+ For examples of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] events, see <xref:System.Xml.Linq.XObject.Changing> and <xref:System.Xml.Linq.XObject.Changed>.  
   
-## <a name="types-and-events"></a>Türler ve olaylar  
- Olaylarla çalışırken aşağıdaki türleri kullanın:  
+## <a name="types-and-events"></a>Types and Events  
+ You use the following types when working with events:  
   
 |Tür|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Xml.Linq.XObjectChange>|@No__t-0 için bir olay oluşturulduğunda olay türünü belirtir.|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs>|@No__t-0 ve <xref:System.Xml.Linq.XObject.Changed> olayları için veri sağlar.|  
+|<xref:System.Xml.Linq.XObjectChange>|Specifies the event type when an event is raised for an <xref:System.Xml.Linq.XObject>.|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Provides data for the <xref:System.Xml.Linq.XObject.Changing> and <xref:System.Xml.Linq.XObject.Changed> events.|  
   
- Bir XML ağacını değiştirirken aşağıdaki olaylar oluşturulur:  
+ The following events are raised when you modify an XML tree:  
   
 |Olay|Açıklama|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing>|Bu <xref:System.Xml.Linq.XObject> veya alt öğelerinden herhangi birinin değişmesinden hemen önce gerçekleşir.|  
-|<xref:System.Xml.Linq.XObject.Changed>|@No__t-0 değiştirildiğinde veya alt öğelerinden herhangi biri değiştiğinde gerçekleşir.|  
+|<xref:System.Xml.Linq.XObject.Changing>|Occurs just before this <xref:System.Xml.Linq.XObject> or any of its descendants is going to change.|  
+|<xref:System.Xml.Linq.XObject.Changed>|Occurs when an <xref:System.Xml.Linq.XObject> has changed or any of its descendants have changed.|  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Olaylar, bir XML ağacındaki bazı toplu bilgileri korumak istediğinizde faydalıdır. Örneğin, faturanın satır öğelerinin toplamı olan bir fatura toplamı korumak isteyebilirsiniz. Bu örnek, `Items` karmaşık öğesi altındaki tüm alt öğelerin toplamını korumak için olayları kullanır.  
+ Events are useful when you want to maintain some aggregate information in an XML tree. For example, you may want maintain an invoice total that is the sum of the line items of the invoice. This example uses events to maintain the total of all of the child elements under the complex element `Items`.  
   
-### <a name="code"></a>Kodlayın  
+### <a name="code"></a>Kod  
   
 ```vb  
 Module Module1  
@@ -92,7 +92,7 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Yorumlar  
+### <a name="comments"></a>Açıklamalar  
  Bu kod aşağıdaki çıktıyı üretir:  
   
 ```console  
@@ -116,4 +116,4 @@ Total:308
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Gelişmiş LINQ to XML Programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

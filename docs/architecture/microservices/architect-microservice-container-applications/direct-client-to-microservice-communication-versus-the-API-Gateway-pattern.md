@@ -81,7 +81,7 @@ API ağ geçidi modelini uygularken dikkatli olmanız gerekir. Genellikle uygula
 
 Bu nedenle, API ağ geçitleri iş sınırlarına ve istemci uygulamalarına göre ayrılmış olmalıdır ve tüm iç mikro hizmetler için tek bir toplayıcı işlevi görür.
 
-API ağ geçidi katmanını birden çok API ağ geçidine bölmek için, uygulamanızın birden çok istemci uygulaması varsa, bu, birden çok API ağ geçidi türü tanımlanırken birincil bir Özet olabilir, böylece her bir istemci uygulamasının ihtiyaçlarına yönelik olarak farklı bir façlade sağlayabilirsiniz. Bu durum, her API ağ geçidinin her bir istemci uygulama türü için uyarlanmış farklı bir API sağlayabildiği ([BFF](https://samnewman.io/patterns/architectural/bff/)) adlı bir modeldir. Aşağıdaki görüntüde gösterildiği gibi birden çok iç mikro hizmet:
+API ağ geçidi katmanını birden çok API ağ geçidine bölmek için, uygulamanızın birden çok istemci uygulaması varsa, bu, birden çok API ağ geçidi türü tanımlanırken birincil bir Özet olabilir, böylece her bir istemci uygulamasının ihtiyaçlarına yönelik olarak farklı bir façlade sağlayabilirsiniz. Bu durum, her bir API ağ geçidinin her bir istemci uygulama türü için özel bir API sağlayabildiği ([BFF](https://samnewman.io/patterns/architectural/bff/)) adlı bir modeldir. Bu, aşağıdaki görüntüde gösterildiği gibi, birden çok iç mikro hizmeti çağıran belirli bağdaştırıcı kodunu uygulayarak istemci formu faktörüne bağlı olarak, hatta istemci form faktörünü temel alan bir modeldir:
 
 ![Birden çok özel API ağ geçidini gösteren diyagram.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/multiple-custom-api-gateways.png)
 
@@ -110,7 +110,7 @@ Daha fazla bilgi için bkz. [ağ geçidi toplama stili](https://docs.microsoft.c
 - Yanıtları Önbelleğe Alma
 - Yeniden deneme ilkeleri, devre kesici ve QoS
 - Hız sınırlandırma ve kısıtlama
-- Yük Dengeleme
+- Yük dengeleme
 - Günlüğe kaydetme, izleme, bağıntı
 - Üstbilgiler, sorgu dizeleri ve talep dönüştürme
 - IP beyaz listesi
@@ -132,7 +132,7 @@ Her uygulamaya bağlı olarak API ağ geçitleri ürünleri tarafından sunulan 
 
 **Şekil 4-14**. API ağ geçidiniz için Azure API Management kullanma
 
-Azure API Management, API ağ geçidinizi ve günlük, güvenlik, ölçüm vb. gibi yönetim gereksinimlerinizi çözer. Bu durumda, Azure API Management gibi bir ürün kullanırken, bu tür API ağ geçitleri "THINNER" C# olduğundan, bir API ağ geçidine sahip olabilirsiniz. tek parçalı bileşen.
+Azure API Management, API ağ geçidinizi ve günlük, güvenlik, ölçüm vb. gibi yönetim gereksinimlerinizi çözer. Bu durumda, Azure API Management gibi bir ürün kullanırken, bu tür API ağ geçitleri "THINNER" olduğundan, tek parçalı bir bileşen üzerinde gelişebilen özel C# kod uygulamadığınızda, tek bir API ağ geçidine sahip olabilirsiniz.
 
 API Gateway ürünleri, genellikle iç mikro hizmetlerden API 'Leri filtreleyebileceğiniz ve bu tek katmandaki yayımlanmış API 'lere yetkilendirme yapan giriş iletişimi için ters bir ara sunucu gibi davranır.
 
@@ -146,7 +146,7 @@ Bu kılavuzda ve başvuru örnek uygulamasında (eShopOnContainers), mimari Azur
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) , daha basit yaklaşımlar için önerilen hafıf bir API ağ geçididir. Ocelot, özellikle sistemlerinde Birleşik giriş noktaları gerektiren mikro hizmetler mimarisi için oluşturulmuş açık kaynaklı bir .NET Core API ağ geçididir. Hafif, hızlı, ölçeklenebilir ve diğer birçok özellik arasında yönlendirme ve kimlik doğrulaması sağlar.
 
-[Eshoponcontainers başvuru uygulaması](https://github.com/dotnet-architecture/eShopOnContainers) Için Ocelot ' ı seçme ana nedeni, Ocelot 'nin mikro hizmetlerinizi dağıttığınız uygulama dağıtım ortamına dağıtabileceğiniz bir .NET Core hafif API ağ geçidi olmasından kaynaklanır/ Docker Konağı, Kubernetes vb. gibi kapsayıcılar. .NET Core temel alınarak, Linux veya Windows üzerinde dağıtmanıza izin veren platformlar arası bir platformdur.
+[Eshoponcontainers başvuru uygulaması](https://github.com/dotnet-architecture/eShopOnContainers) Için Ocelot ' ı seçmek, Ocelot 'Nin bir Docker Konağı, Kubernetes vb. gibi mikro Hizmetleri/kapsayıcıları dağıttığınız aynı uygulama dağıtım ortamına dağıtabileceğiniz bir .NET Core hafif API ağ geçididir. .NET Core temel alınarak, Linux veya Windows üzerinde dağıtmanıza izin veren platformlar arası bir platformdur.
 
 Kapsayıcılarda çalışan özel API ağ geçitlerini gösteren önceki diyagramlar, bir kapsayıcıda ve mikro hizmet tabanlı bir uygulamada Ocelot 'yi de nasıl çalıştıracağınızı tam olarak nasıl kullanabileceğinizi gösterir.
 
@@ -170,22 +170,22 @@ Ayrıca, Pazar sunumu API ağ geçitleri özelliklerinde, Apiayıklanan, Kong, M
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Chris Richardson. Model: ön uç  \ için API ağ geçidi/arka uç**
+- **Chris Richardson. Model: ön uç \ için API ağ geçidi/arka uç**
   <https://microservices.io/patterns/apigateway.html>
 
-- **API ağ geçidi deseninin**  \
+- **API ağ geçidi deseninin** \
   <https://docs.microsoft.com/azure/architecture/microservices/gateway>
 
-- **Toplama ve oluşturma deseninin**  \
+- **Toplama ve oluşturma deseninin** \
   <https://microservices.io/patterns/data/api-composition.html>
 
-- **Azure API Management**  \
+- **Azure API Management** \
   <https://azure.microsoft.com/services/api-management/>
 
-- **UDI Dahan. Hizmet odaklı bileşim**  \
+- **UDI Dahan. Hizmet odaklı bileşim** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Valar. GOTO 2016 (video) adresindeki mesajlaşma ve mikro hizmetler**  \
+- **Clemens Valar. GOTO 2016 (video) adresindeki mesajlaşma ve mikro hizmetler** \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **Bir Nutshell Içinde API ağ geçidi** (ASP.NET Core API Gateway öğreticisi serisi) \

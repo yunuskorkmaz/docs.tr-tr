@@ -1,21 +1,20 @@
 ---
 title: Hizmet kafesleri-WCF geliştiricileri için gRPC
 description: Bir Kubernetes kümesinde gRPC hizmetlerine istekleri yönlendirmek ve dengelemek için bir hizmet ağı kullanma.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6bdfa57ba47ba0105092d1c140705599b7023c78
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d20275082973f30bddbb342da90454401d4f019b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090181"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966965"
 ---
 # <a name="service-meshes"></a>Hizmet kafesleri
 
 Hizmet ağı, bir ağ içindeki yönlendirme hizmeti isteklerinin denetimini alan bir altyapı bileşenidir. Hizmet kafesleri, bir Kubernetes kümesi içindeki her türlü ağ düzeyi kaygılarını işleyebilir, örneğin:
 
 - Hizmet bulma
-- Yük Dengeleme
+- Yük dengeleme
 - Hataya dayanıklılık
 - Şifreleme
 - İzleme

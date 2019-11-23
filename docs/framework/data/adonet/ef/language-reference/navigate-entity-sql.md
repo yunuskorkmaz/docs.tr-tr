@@ -19,23 +19,23 @@ Varlıklar arasında belirlenen ilişkinin üzerine gider.
 navigate(instance-expression, [relationship-type], [to-end [, from-end] ])
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
-`instance-expression` bir varlık örneği.
+bir varlığın örneğini `instance-expression`.
 
-`relationship-type` ' ın kavramsal şema tanım dili (CSDL) dosyasından ilişki tür adı. @No__t-0 \<AD alanı >. \<ilişki türü adı > olarak nitelenir.
+kavramsal şema tanım dili (CSDL) dosyasından ilişkinin tür adını `relationship-type`. `relationship-type`, \<ad alanı > olarak nitelenir.\<ilişki türü adı >.
 
-`to` ilişki sonu.
+ilişkinin sonuna `to`.
 
-`from` ilişkinin başlangıcı.
+ilişkinin başlangıcını `from`.
 
 ## <a name="return-value"></a>Dönüş Değeri
 
-To end 'in kardinalitesi 1 ise, dönüş değeri `Ref<T>` olur. To end 'in kardinalitei n ise, dönüş değeri `Collection<Ref<T>>` olur.
+To end 'in kardinalitesi 1 ise, dönüş değeri `Ref<T>`olur. To end 'in kardinalitei n ise, dönüş değeri `Collection<Ref<T>>`olacaktır.
 
 ## <a name="remarks"></a>Açıklamalar
 
-İlişkiler Varlık Veri Modeli (EDM) ilk sınıf yapılardır. İki veya daha fazla varlık türü arasında ilişkiler kurulabilir ve kullanıcılar bir uçtan diğerine (varlık) ilişki üzerinde gezinebilirsiniz. `from` ve `to`, ilişki içinde ad çözümlemesinde hiçbir belirsizlik olmadığında koşullu olarak isteğe bağlıdır.
+İlişkiler Varlık Veri Modeli (EDM) ilk sınıf yapılardır. İki veya daha fazla varlık türü arasında ilişkiler kurulabilir ve kullanıcılar bir uçtan diğerine (varlık) ilişki üzerinde gezinebilirsiniz. ilişki içinde ad çözümlemesinde hiçbir belirsizlik olmadığında, `from` ve `to` koşullu olarak isteğe bağlıdır.
 
 GIT, O ve C alanında geçerlidir.
 
@@ -50,7 +50,7 @@ Select o.Id, navigate(o, OrderCustomer, Customer, Order)
 From LOB.Orders as o
 ```
 
-OrderCustomer `relationship` ' dır ve müşteri ve sipariş, ilişkinin `to-end` (müşteri) ve `from-end` (sıra). OrderCustomer bir n:1 ilişkisiyse, gezinme ifadesinin sonuç türü ref @ no__t-0Customer > olur.
+Burada OrderCustomer `relationship`ve müşteri ve sipariş ilişkinin `to-end` (müşteri) ve `from-end` (sipariş). OrderCustomer bir n:1 ilişkisi ise, gezinme ifadesinin sonuç türü, başvuru\<müşteri > olur.
 
 Bu ifadenin daha basit biçimi aşağıdaki şekildedir:
 
@@ -59,7 +59,7 @@ Select o.Id, navigate(o, OrderCustomer)
 From LOB.Orders as o
 ```
 
-Benzer şekilde, aşağıdaki formun bir sorgusunda, gezin ifadesi bir koleksiyon < ref @ no__t-0Order > > oluşturur.
+Benzer şekilde, aşağıdaki formun bir sorgusunda, gezinme ifadesi bir koleksiyon < ref\<sırası > > oluşturur.
 
 ```sql
 Select c.Id, navigate(c, OrderCustomer, Order, Customer)

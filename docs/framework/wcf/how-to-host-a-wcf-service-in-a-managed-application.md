@@ -14,9 +14,9 @@ ms.locfileid: "72320971"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Nasıl yapılır: yönetilen bir uygulamada bir WCF hizmetini barındırma
 
-Bir hizmeti yönetilen bir uygulama içinde barındırmak için, yönetilen uygulama kodunun içine hizmetin kodunu ekleyin, bir hizmet için imperatively kodda, bildirimli olarak yapılandırma yoluyla veya varsayılan uç noktaları kullanarak bir uç nokta tanımlayın ve ardından bir @no__t örneği-0.
+Yönetilen bir uygulama içinde bir hizmeti barındırmak için, hizmetin kodunu yönetilen uygulama kodu içine ekleyin, hizmet için bir uç nokta tanımlayın, yapılandırma yoluyla veya varsayılan uç noktaları kullanarak bir <xref:System.ServiceModel.ServiceHost>örneği oluşturun.
 
-İleti almaya başlamak için <xref:System.ServiceModel.ServiceHost> üzerinde <xref:System.ServiceModel.ICommunicationObject.Open%2A> ' ı çağırın. Bu, hizmet için dinleyiciyi oluşturur ve açar. Bir hizmetin bu şekilde barındırılması, yönetilen uygulama barındırma işinin kendisini yaptığından, genellikle "kendiliğinden barındırma" olarak adlandırılır. Hizmeti kapatmak için <xref:System.ServiceModel.ServiceHost> üzerinde <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> ' ı çağırın.
+İleti almaya başlamak için <xref:System.ServiceModel.ServiceHost><xref:System.ServiceModel.ICommunicationObject.Open%2A> çağırın. Bu, hizmet için dinleyiciyi oluşturur ve açar. Bir hizmetin bu şekilde barındırılması, yönetilen uygulama barındırma işinin kendisini yaptığından, genellikle "kendiliğinden barındırma" olarak adlandırılır. Hizmeti kapatmak için <xref:System.ServiceModel.ServiceHost><xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> çağırın.
 
 Bir hizmet Ayrıca, yönetilen bir Windows hizmetinde, Internet Information Services (IIS) veya Windows Işlem etkinleştirme hizmeti 'nde (WAS) barındırılabilir. Bir hizmet için barındırma seçenekleri hakkında daha fazla bilgi için bkz. [barındırma hizmetleri](hosting-services.md).
 
@@ -44,7 +44,7 @@ Aşağıdaki yordamda, bir konsol uygulamasında şirket içinde barındırılan
      [!code-csharp[CFX_SelfHost4#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#1)]
      [!code-vb[CFX_SelfHost4#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#1)]
 
-4. Hizmet sözleşmesi tanımlama ve uygulama. Bu örnek, hizmete girişe dayalı bir ileti döndüren `HelloWorldService` tanımlar.
+4. Hizmet sözleşmesi tanımlama ve uygulama. Bu örnek, hizmete girişe dayalı bir ileti döndüren bir `HelloWorldService` tanımlar.
 
      [!code-csharp[CFX_SelfHost4#2](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#2)]
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
@@ -52,12 +52,12 @@ Aşağıdaki yordamda, bir konsol uygulamasında şirket içinde barındırılan
     > [!NOTE]
     > Bir hizmet arabirimini tanımlama ve uygulama hakkında daha fazla bilgi için bkz. [nasıl yapılır: hizmet sözleşmesi tanımlama](how-to-define-a-wcf-service-contract.md) ve [nasıl yapılır: hizmet sözleşmesi uygulama](how-to-implement-a-wcf-contract.md).
 
-5. @No__t-0 yönteminin en üstünde, hizmetin temel adresiyle <xref:System.Uri> sınıfının bir örneğini oluşturun.
+5. `Main` yönteminin en üstünde, hizmetin temel adresiyle <xref:System.Uri> sınıfının bir örneğini oluşturun.
 
      [!code-csharp[CFX_SelfHost4#3](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#3)]
      [!code-vb[CFX_SelfHost4#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#3)]
 
-6. @No__t-0 sınıfının bir örneğini oluşturun, hizmet türünü temsil eden bir <xref:System.Type> geçirerek <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29> ' ye kadar olan temel adres Tekdüzen Kaynak tanımlayıcısı (URI). Meta veri yayımlamayı etkinleştirin ve sonra <xref:System.ServiceModel.ServiceHost> <xref:System.ServiceModel.ICommunicationObject.Open%2A> yöntemini arayarak hizmeti başlatın ve iletiyi almak için hazırlayın.
+6. Hizmet türünü ve temel adres Tekdüzen Kaynak tanımlayıcısı 'nı (URI) <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>temsil eden bir <xref:System.Type> geçirerek <xref:System.ServiceModel.ServiceHost> sınıfının bir örneğini oluşturun. Meta veri yayımlamayı etkinleştirin ve sonra <xref:System.ServiceModel.ServiceHost> <xref:System.ServiceModel.ICommunicationObject.Open%2A> yöntemini çağırıp hizmeti başlatın ve iletiyi almak için hazırlayın.
 
      [!code-csharp[CFX_SelfHost4#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#4)]
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]
@@ -69,7 +69,7 @@ Aşağıdaki yordamda, bir konsol uygulamasında şirket içinde barındırılan
 
 ## <a name="test-the-service"></a>Hizmeti test etme
 
-1. Hizmeti çalıştırmak için **Ctrl**+**F5** tuşlarına basın.
+1. Hizmeti çalıştırmak için **Ctrl**+**F5** tuşuna basın.
 
 2. **WCF Test istemcisi**'ni açın.
 
@@ -89,7 +89,7 @@ Aşağıdaki yordamda, bir konsol uygulamasında şirket içinde barındırılan
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `HelloWorldService` türünde bir hizmeti barındırmak için <xref:System.ServiceModel.ServiceHost> nesnesi oluşturur ve sonra <xref:System.ServiceModel.ServiceHost> üzerinde <xref:System.ServiceModel.ICommunicationObject.Open%2A> yöntemini çağırır. Kodda bir temel adres sağlanır, meta veri yayımlama etkindir ve varsayılan uç noktalar kullanılır.
+Aşağıdaki örnek, `HelloWorldService`türünde bir hizmeti barındırmak için bir <xref:System.ServiceModel.ServiceHost> nesnesi oluşturur ve sonra <xref:System.ServiceModel.ServiceHost>üzerinde <xref:System.ServiceModel.ICommunicationObject.Open%2A> yöntemini çağırır. Kodda bir temel adres sağlanır, meta veri yayımlama etkindir ve varsayılan uç noktalar kullanılır.
 
 [!code-csharp[CFX_SelfHost4#5](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#5)]
 [!code-vb[CFX_SelfHost4#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#5)]

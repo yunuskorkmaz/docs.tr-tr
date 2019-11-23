@@ -1,14 +1,13 @@
 ---
 title: GRPC istemci kitaplıkları oluşturma-WCF geliştiricileri için gRPC
 description: GRPC Hizmetleri için paylaşılan istemci kitaplıkları/paketleri tartışması.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: b403e7e1638496947ac7f6fc976cbeab2f435bbf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2135fe8b24a2311a31cb2bed191d290b1112bc66
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419929"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967883"
 ---
 # <a name="create-grpc-client-libraries"></a>GRPC istemci kitaplıkları oluşturma
 
@@ -19,7 +18,7 @@ Bir gRPC uygulaması için istemci kitaplıklarını dağıtmak gerekli değildi
 > [!CAUTION]
 > Önemli işlevselliği sağlamak için özel **kod kullanmamalısınız;** bunun anlamı, Işlevin, Python veya Java gibi diğer dilleri veya platformları kullanan ekipler için değil, paylaşılan kitaplığı kullanan .net ekipleri ile kısıtlandığı anlamına gelir.
 
-Farklı takımların farklı programlama dilleri ve çerçeveleri kullanması veya API 'nizin dışarıdan `.proto` erişilebilir olduğu çok platformlu bir ortamda, geliştiricilerin kendi istemcilerini oluşturabilmesi için en iyi yol mümkün olduğunca fazla ekip, gRPC hizmetinize erişebilir.
+Farklı takımların farklı programlama dilleri ve çerçeveleri kullanıldığı veya API 'nizin dışarıdan erişilebilen çok platformlu bir ortamda, geliştiricilerin kendi istemcilerini oluşturabilmesi için `.proto`, mümkün olduğunca çok ekibin gRPC hizmetinize erişebileceği sağlamanın en iyi yolu vardır.
 
 ## <a name="useful-extensions"></a>Kullanışlı uzantılar
 

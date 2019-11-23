@@ -84,9 +84,9 @@ Bir API ağ geçidi istemciler için tek bir giriş noktası sağlar ve istekler
 - [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
 - [Olay kaynağını belirleme kalıbı](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
 - [Devre Kesici desenini uygulama](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
-- [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [IoT Hub’ı](https://docs.microsoft.com/azure/iot-hub)
 - [Service Bus](https://docs.microsoft.com/azure/service-bus)
-- [Azure Cosmos DB değişiklik akışı desteğiyle çalışma](https://docs.microsoft.com/azure/cosmos-db/change-feed)
+- [Azure Cosmos DB'de destek akış değişiklik ile çalışma](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
 >[Önceki](serverless-architecture-considerations.md)

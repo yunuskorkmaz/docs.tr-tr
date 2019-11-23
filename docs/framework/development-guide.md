@@ -48,7 +48,7 @@ Bu bölümde .NET Framework uygulamalarınızı oluşturma, yapılandırma, hata
  [.NET Native ile Uygulama Derleme](./net-native/index.md)  
  Windows Mağazası uygulamalarını derlemek ve dağıtmak için .NET Native ön derleme teknolojisini nasıl kullanabileceğinizi açıklar. .NET Native yönetilen kodda (C#) yazılmış ve .NET Framework yerel koda hedefleyen uygulamaları derler.  
   
- [Security](../standard/security/index.md)  
+ [Güvenlik](../standard/security/index.md)  
  Güvenli uygulama geliştirmeyi kolaylaştıran .NET Framework sınıflar ve hizmetlerle ilgili bilgiler sağlar.  
   
  [Hata Ayıklama, İzleme ve Profil Oluşturma](./debug-trace-profile/index.md)  

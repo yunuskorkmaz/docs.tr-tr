@@ -15,35 +15,35 @@ ms.locfileid: "72002324"
 
 .NET Core, Windows, Linux ve macOS 'ta çalışan uygulamalar oluşturmaya yönelik hızlı ve modüler bir platform sağlar. IntelliSense (akıllı kod C# tamamlama) ve hata ayıklama için C# tam desteğe sahip güçlü bir düzen deneyimi almak üzere uzantıya sahip Visual Studio Code kullanın.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 1. [Visual Studio Code](https://code.visualstudio.com/)'i yükler.
 2. [.NET Core SDK](https://dotnet.microsoft.com/download)'i yükler.
 3. Visual Studio Code [ C# uzantısını](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) yükler. Visual Studio Code uzantıları nasıl yükleyeceğiniz hakkında daha fazla bilgi için bkz. [vs Code uzantısı marketi](https://code.visualstudio.com/docs/editor/extension-gallery).
 
-## <a name="hello-world"></a>Merhaba Dünya
+## <a name="hello-world"></a>Hello World
 
 .NET Core üzerinde basit bir "Merhaba Dünya" programı kullanmaya başlayalım:
 
 1. Bir proje açın:
 
-    - Visual Studio Code açın.
+    - Visual Studio Code'u açın.
     - Sol menüdeki gezgin simgesine ve ardından **klasörü aç**' a tıklayın.
-    - Projenizin içinde olmasını istediğiniz klasörü açmak için ana menüden **dosya** > **klasörü aç** ' ı seçin ve **Klasör Seç**' e tıklayın. C# Bizim örneğimizde *HelloWorld*adlı projemiz için bir klasör oluşturuluyoruz.
+    - Ana menüdeki **dosya** > **klasörü aç** ' ı seçerek C# projenizin Içinde olmasını istediğiniz klasörü açın ve **Klasör Seç**' e tıklayın. Bizim örneğimizde *HelloWorld*adlı projemiz için bir klasör oluşturuluyoruz.
 
       ![Visual Studio Code klasörü aç](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. C# Projeyi Başlat:
 
-    - Ana **menüden @no__t-** 1**Tümleşik Terminal** ' i seçerek Visual Studio Code tümleşik terminalden açın.
-    - Terminal penceresinde `dotnet new console` yazın.
+    - Ana menüden > **Tümleşik Terminal** 'yi **göster** ' i seçerek Visual Studio Code tümleşik terminalden açın.
+    - Terminal penceresinde `dotnet new console`yazın.
     - Bu komut, klasörünüzde zaten yazılmış olan basit bir "Merhaba Dünya" programı ile birlikte *HelloWorld. csproj*adlı bir C# proje dosyası içeren bir *program.cs* dosyası oluşturur.
 
       ![DotNet yeni komutu](media/with-visual-studio-code/dotnet-new-command.png)
 
 3. Derleme varlıklarını çözümleyin:
 
-    - **.NET Core 1. x**için `dotnet restore` yazın. `dotnet restore` çalıştırmak, projenizi derlemek için gereken gerekli .NET Core paketlerine erişmenizi sağlar.
+    - **.NET Core 1. x**için `dotnet restore`yazın. `dotnet restore` çalıştırmak, projenizi derlemek için gereken gerekli .NET Core paketlerine erişmenizi sağlar.
 
       ![dotnet restore komutu](media/with-visual-studio-code/dotnet-restore-command.png)
 
@@ -92,7 +92,7 @@ Ayrıca, [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Co
 ## <a name="add-a-class"></a>Sınıf ekleme
 
 1. Yeni bir sınıf eklemek için VSCode Gezgini ' ne sağ tıklayıp **yeni dosya**' yı seçin. Bu, VSCode 'da açtığınız klasöre yeni bir dosya ekler.
-2. Dosyanızı *MyClass.cs*olarak adlandırın. Bir CSharp dosyası olarak tanınabilmesi için, sonunda `.cs` uzantılı bir uzantıya kaydetmelisiniz.
+2. Dosyanızı *MyClass.cs*olarak adlandırın. Bir CSharp dosyası olarak tanınabilmesi için, bu dosyayı sonda bir `.cs` uzantısıyla kaydetmelisiniz.
 3. İlk sınıfınızı oluşturmak için aşağıdaki kodu ekleyin. *Program.cs* dosyanıza başvurabilmeniz için doğru ad alanını eklediğinizden emin olun:
 
     ``` csharp

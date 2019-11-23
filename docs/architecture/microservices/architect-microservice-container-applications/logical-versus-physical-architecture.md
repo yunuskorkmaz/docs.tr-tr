@@ -1,5 +1,5 @@
 ---
-title: Mantıksal Mimari ve fiziksel mimariye karşı
+title: Mantıksal mimari ile fiziksel mimari karşılaştırması
 description: Mantıksal ve fiziksel mimarilerin farklarını anlayın.
 ms.date: 09/20/2018
 ms.openlocfilehash: 8d1bfca190eb9b18d46625fa4afdec963eb07054
@@ -9,13 +9,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834397"
 ---
-# <a name="logical-architecture-versus-physical-architecture"></a>Mantıksal Mimari ve fiziksel mimariye karşı
+# <a name="logical-architecture-versus-physical-architecture"></a>Mantıksal mimari ile fiziksel mimari karşılaştırması
 
 Bu noktada, mantıksal mimari ve fiziksel mimari arasındaki farkın durdurulması ve ele alındığı ve bu durumun mikro hizmet tabanlı uygulamaların tasarımına nasıl uygulandığı açıklanmaktadır.
 
 Başlamak için, mikro hizmetlerin oluşturulması belirli bir teknolojinin kullanılmasını gerektirmez. Örneğin, Docker kapsayıcıları, mikro hizmet tabanlı bir mimari oluşturmak için zorunlu değildir. Bu mikro hizmetler düz işlem olarak da çalıştırılabilir. Mikro hizmetler bir mantıksal mimaridir.
 
-Üstelik, bir mikro hizmet fiziksel olarak tek bir hizmet, işlem veya kapsayıcı olarak uygulansa bile (basitlik için [Eshoponcontainers](https://aka.ms/MicroservicesArchitecture)'un ilk sürümünde gerçekleştirilen yaklaşım), iş mikro hizmeti arasında bu eşlik ve çoğu düzinelerce veya hatta yüzlerce hizmetten oluşan büyük ve karmaşık bir uygulama oluşturduğunuzda tüm durumlarda fiziksel hizmet veya kapsayıcı gerekli değildir.
+Üstelik, bir mikro hizmet fiziksel olarak tek bir hizmet, işlem veya kapsayıcı olarak uygulansa bile (basitlik için [Eshoponcontainers](https://aka.ms/MicroservicesArchitecture)'un ilk sürümünde gerçekleştirilen yaklaşım), iş mikro hizmeti ile fiziksel hizmet ya da kapsayıcı arasında bu eşlik, birçok onlarca veya hatta yüzlerce hizmetten oluşan büyük ve karmaşık bir uygulama oluştururken her durumda gerekli değildir.
 
 Bu, bir uygulamanın mantıksal mimarisi ve fiziksel mimarisi arasında bir farklılık olduğu yerdir. Bir sistemin mantıksal mimarisi ve mantıksal sınırları, bire bir-bir ' i fiziksel veya dağıtım mimarisine eşlemenize gerek yoktur. Bu durum gerçekleşebilir, ancak genellikle değildir.
 

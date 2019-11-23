@@ -13,11 +13,11 @@ ms.lasthandoff: 10/15/2019
 ms.locfileid: "72320882"
 ---
 # <a name="how-to-specify-a-client-binding-in-code"></a>Nasıl yapılır: Kodda İstemci Bağlama Belirtme
-Bu örnekte, bir Hesaplayıcı hizmeti kullanmak için bir istemci oluşturulur ve bu istemci için bağlama kodda imperatively belirtilir. İstemci, `ICalculator` arabirimini uygulayan `CalculatorService` ' a erişir ve hem hizmet hem de istemci <xref:System.ServiceModel.BasicHttpBinding> sınıfını kullanır.  
+Bu örnekte, bir Hesaplayıcı hizmeti kullanmak için bir istemci oluşturulur ve bu istemci için bağlama kodda imperatively belirtilir. İstemci, `ICalculator` arabirimini uygulayan `CalculatorService`erişir ve hem hizmet hem de istemci <xref:System.ServiceModel.BasicHttpBinding> sınıfını kullanır.  
   
  Bu yordam, hesap makinesi hizmetinin çalıştığını varsayar. Hizmeti oluşturma hakkında bilgi için bkz. [nasıl yapılır: yapılandırmada hizmet bağlaması belirtme](how-to-specify-a-service-binding-in-configuration.md). Ayrıca, istemci bileşenlerini otomatik olarak oluşturmak için [ServiceModel meta veri yardımcı programı aracı 'nı (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)WINDOWS COMMUNICATION FOUNDATION (WCF) kullanır. Araç, hizmete erişmek için istemci kodunu üretir.  
   
- İstemci iki bölümde oluşturulmuştur. Svcutil. exe `ICalculator` arabirimini uygulayan `ClientCalculator` oluşturur. Bu istemci uygulaması daha sonra `ClientCalculator` ' ın bir örneği oluşturup, ardından kodda hizmetin bağlamasını ve adresini belirterek oluşturulur.  
+ İstemci iki bölümde oluşturulmuştur. Svcutil. exe `ICalculator` arabirimini uygulayan `ClientCalculator` oluşturur. Bu istemci uygulaması daha sonra bir `ClientCalculator` örneği oluşturup ardından kodda hizmet için bağlama ve adres belirtilerek oluşturulur.  
   
  Bu örneğin kaynak kopyası için bkz. [BasicBinding](./samples/basicbinding.md) örneği.  
   
@@ -34,12 +34,12 @@ Bu örnekte, bir Hesaplayıcı hizmeti kullanmak için bir istemci oluşturulur 
      [!code-csharp[C_HowTo_CodeClientBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeclientbinding/cs/client.cs#1)]
      [!code-vb[C_HowTo_CodeClientBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeclientbinding/vb/client.vb#1)]  
   
-3. Oluşturulan istemci Ayrıca @no__t (0) uygulamasını da içerir.  
+3. Oluşturulan istemci Ayrıca `ClientCalculator`uygulamasını da içerir.  
   
      [!code-csharp[C_HowTo_CodeClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeclientbinding/cs/client.cs#2)]
      [!code-vb[C_HowTo_CodeClientBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeclientbinding/vb/client.vb#2)]  
   
-4. İstemci uygulamasında <xref:System.ServiceModel.BasicHttpBinding> sınıfını kullanan `ClientCalculator` ' ın bir örneğini oluşturun ve ardından belirtilen adresteki hizmet işlemlerini çağırın.  
+4. İstemci uygulamasında <xref:System.ServiceModel.BasicHttpBinding> sınıfını kullanan `ClientCalculator` örneğini oluşturun ve ardından belirtilen adresteki hizmet işlemlerini çağırın.  
   
      [!code-csharp[C_HowTo_CodeClientBinding#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeclientbinding/cs/client.cs#3)]
      [!code-vb[C_HowTo_CodeClientBinding#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeclientbinding/vb/client.vb#3)]  

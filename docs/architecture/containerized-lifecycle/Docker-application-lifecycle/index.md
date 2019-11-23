@@ -14,5 +14,5 @@ ms.locfileid: "70295368"
 *Kapsayıcılı uygulamaların yaşam döngüsü, geliştiriciyle başlayan bir yolculuktu. Geliştiriciler, dağıtımlar ve BT işlemlerinde, herkesin daha çevik, uçtan uca ve daha hızlı olmasına yardımcı olan, son derece daha üretken olmalarını sağlayan kapsayıcılar ve Docker 'ı uygulamayı seçer.*
 
 >[!div class="step-by-step"]
->[Önceki](../docker-containers-images-and-registries.md)İleri
->[](containers-foundation-for-devops-collaboration.md)
+>[Önceki](../docker-containers-images-and-registries.md)
+>[İleri](containers-foundation-for-devops-collaboration.md)

@@ -138,9 +138,9 @@ Bir karma yaklaşım da dahil olmak üzere mimaride kullanılabilecek geniş kap
 
 |         |IaaS     |PaaS     |Kapsayıcı|Sunucusuz|
 |---------|---------|---------|---------|----------|
-|**Ölçek**|'Nın       |Örnek |Uygulamanızda      |İşlev  |
+|**Ölçek**|VM       |Örnek |Uygulama      |İşlev  |
 |**Soyutlar**|Donanım|Platform|İşletim sistemi Konağı|Çalışma zamanı   |
-|**Birim** |'Nın       |Project  |Görüntü    |Kod      |
+|**Birim** |VM       |{1&gt;Proje (Project)&lt;1}  |Görüntü    |Kod      |
 |**Ömür**|Ay|Gün-ay|Dakika-gün|Milisaniye-dakika|
 |**Ğuna**|Uygulamalar, bağımlılıklar, çalışma zamanı ve işletim sistemi|Uygulamalar ve bağımlılıklar|Uygulamalar, bağımlılıklar ve çalışma zamanı|İşlev
 

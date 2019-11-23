@@ -9,13 +9,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698168"
 ---
-# <a name="idn-element-uri-settings"></a>\<ıdn > öğesi (URI ayarları)
+# <a name="idn-element-uri-settings"></a>\<IDN > öğesi (Uri Ayarları)
 
 Uluslararası etki alanı adı (ıDN) ayrıştırmanın bir etki alanı adına uygulandığını belirtir.
   
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<urı >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<ıdn >**  
+&nbsp;&nbsp;[ **\<URI >** ](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<ıdn >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,7 +42,7 @@ Yok.
 
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[kullanılmamışsa](uri-element-uri-settings.md)|.NET Framework Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) kullanarak ifade edilen Web adreslerini nasıl işleyeceğini belirten ayarları içerir.|  
+|[uri](uri-element-uri-settings.md)|.NET Framework Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) kullanarak ifade edilen Web adreslerini nasıl işleyeceğini belirten ayarları içerir.|  
 
 ## <a name="remarks"></a>Açıklamalar
 

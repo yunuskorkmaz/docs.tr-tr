@@ -18,5 +18,5 @@ Daha önce "bir mikro hizmet mimarisi oluştururken Docker gereklidir?" sorusunu
 Ancak, Docker kapsayıcılarına dayalı olarak da mikro hizmetler tabanlı bir uygulamayı tasarlamayı ve geliştirmeyi biliyorsanız, başka, daha basit bir uygulama modeli tasarlayabilecek ve geliştirebileceksiniz. Örneğin, çok kapsayıcılı bir yaklaşım gerektiren üç katmanlı bir uygulama tasarlayabilmeniz gerekir. Bu nedenle, mikro hizmet mimarileri kapsayıcı dünyasında önemli bir eğilim olduğundan, bu bölüm Docker Kapsayıcıları kullanılarak bir mikro hizmet mimarisi uygulamasına odaklanır.
 
 >[!div class="step-by-step"]
->[Önceki](../docker-application-development-process/docker-app-development-workflow.md)İleri
->[](microservice-application-design.md)
+>[Önceki](../docker-application-development-process/docker-app-development-workflow.md)
+>[İleri](microservice-application-design.md)

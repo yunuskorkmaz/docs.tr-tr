@@ -1,5 +1,5 @@
 ---
-title: EShopOnContainers 'ı Azure 'a dağıtma
+title: eShopOnContainers'ı Azure'a dağıtma
 description: Azure Kubernetes hizmeti, helk ve DevSpaces kullanarak eShopOnContainers uygulamasını dağıtma.
 ms.date: 06/30/2019
 ms.openlocfilehash: 21033cc904dc595193c69f3452ce2522740f8ff6
@@ -9,7 +9,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183275"
 ---
-# <a name="deploying-eshoponcontainers-to-azure"></a>EShopOnContainers 'ı Azure 'a dağıtma
+# <a name="deploying-eshoponcontainers-to-azure"></a>eShopOnContainers'ı Azure'a dağıtma
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -27,22 +27,22 @@ AKS 'e yönelik temel dağıtımlar özel CLı betikleri veya basit dağıtım d
 
 EShopOnContainers Held grafiklerini/k8s/Held klasöründe bulabilirsiniz. Şekil 2-6, uygulamanın farklı bileşenlerinin, Held tarafından yönetilen dağıtımlar tanımlamak için kullanılan bir klasör yapısına nasıl düzenlendiğini gösterir.
 
-![eshoponcontainers mimari](./media/eshoponcontainers-helm-folder.png)
-**Şekil 2-6**. EShopOnContainers Held klasörü.
+![eShopOnContainers mimarisi](./media/eshoponcontainers-helm-folder.png)
+**şekil 2-6**. EShopOnContainers Held klasörü.
 
-Her bir bileşen, bir `helm install` komut kullanılarak yüklenir. Bu komutlar kolayca betikleştirilmiş ve eShopOnContainers, farklı bileşenler arasında döngü yapan ve bunları ilgili Helu grafiklerini kullanarak yükleyen bir "tümünü dağıt" betiği sağlar. Sonuç, kaynak denetimindeki uygulamayla sürümlü, ekip üzerindeki herkesin tek satırlık bir betik komutuyla bir AKS kümesine dağıtabileceği, tekrarlanabilir bir işlemdir. Özellikle de Azure Dev Spaces birleştirildiğinde, bu, geliştiricilerin kendi mikro hizmet tabanlı bulut Yerel uygulamalarında yaptığı değişiklikleri tanılamalarını ve test etmelerini kolaylaştırır.
+Her bir bileşen bir `helm install` komutu kullanılarak yüklenir. Bu komutlar kolayca betikleştirilmiş ve eShopOnContainers, farklı bileşenler arasında döngü yapan ve bunları ilgili Helu grafiklerini kullanarak yükleyen bir "tümünü dağıt" betiği sağlar. Sonuç, kaynak denetimindeki uygulamayla sürümlü, ekip üzerindeki herkesin tek satırlık bir betik komutuyla bir AKS kümesine dağıtabileceği, tekrarlanabilir bir işlemdir. Özellikle de Azure Dev Spaces birleştirildiğinde, bu, geliştiricilerin kendi mikro hizmet tabanlı bulut Yerel uygulamalarında yaptığı değişiklikleri tanılamalarını ve test etmelerini kolaylaştırır.
 
 ## <a name="azure-dev-spaces"></a>Azure Dev Spaces
 
 Azure Dev Spaces, bireysel geliştiricilerin geliştirme sırasında Azure 'da AKS kümelerinin kendi benzersiz sürümlerini barındırmalarına yardımcı olur. Bu, yerel makine gereksinimlerini en aza indirir ve takım üyelerinin, değişikliklerinin gerçek bir AKS ortamında nasıl davranacağını hızla görüntülemesine olanak tanır. Azure Dev Spaces, geliştiricilerin dev alanlarını yönetmek ve gerektiğinde belirli bir alt dev alanına dağıtmak üzere kullanması için bir CLı sunar. Her bir alt dev alanına benzersiz bir URL alt etki alanı kullanılarak başvurulur. bu sayede, tek tek geliştiricilerin devam eden her iş ile çakışmaktan kaçınmak için, değiştirilen kümelerin yan yana dağıtımına izin verilir. Şekil 2-7 ' de, geliştirici Susıe 'nin kendi Bisiklet mikro hizmetinin kendi sürümünü geliştirme alanına dağıttığının nasıl yapıldığını görebilirsiniz. Daha sonra kendi alan adı (susie.s.dev.myapp.eus.azds.io) ile başlayan özel bir URL 'YI kullanarak yaptığı değişiklikleri test edebilir.
 
-![eshoponcontainers mimari](./media/azure-devspaces-one.png)
-**Şekil 2-7**. Geliştirici Susie, Bisiklet mikro hizmetinin kendi sürümünü dağıtır ve test eder.
+![eShopOnContainers mimarisi](./media/azure-devspaces-one.png)
+**şekil 2-7**. Geliştirici Susie, Bisiklet mikro hizmetinin kendi sürümünü dağıtır ve test eder.
 
 Aynı zamanda, geliştirici John, rezervasyonlar mikro hizmetini özelleştirip değişiklikleri test etmek için gereklidir. Şekil 2-8 ' de gösterildiği gibi, Susie değişiklikleri ile çakışmadan kendi geliştirme alanı üzerinde değişiklikleri dağıtabiyor. Kendi URL 'sini kullanarak değişikliklerini test edebilir. Bu, alan adı (john.s.dev.myapp.eus.azds.io) önekini kullanır.
 
-![eshoponcontainers mimari](./media/azure-devspaces-two.png)
-**Şekil 2-8**. Geliştirici John, rezervasyonlar mikro hizmetinin kendi sürümünü dağıtır ve diğer geliştiricilerle çakışmadan test eder.
+![eShopOnContainers mimarisi](./media/azure-devspaces-two.png)
+**şekil 2-8**. Geliştirici John, rezervasyonlar mikro hizmetinin kendi sürümünü dağıtır ve diğer geliştiricilerle çakışmadan test eder.
 
 Azure Dev Spaces kullanarak takımlar, değişiklikleri bağımsız olarak değiştirirken, dağıttığınızda ve test ederken doğrudan AKS ile çalışabilir. Bu yaklaşım, her geliştiricinin kendi AKS ortamları etkin olduğundan, ayrı ayrı barındırılan ortamların gereksinimini azaltır. Geliştiriciler, CLı kullanarak Azure Dev Spaces çalışabilir veya doğrudan Visual Studio 'dan Azure Dev Spaces için uygulamasını başlatabilir. [Azure Dev Spaces nasıl çalıştığı ve yapılandırıldığı hakkında daha fazla bilgi edinin.](https://docs.microsoft.com/azure/dev-spaces/how-dev-spaces-works)
 
@@ -53,7 +53,7 @@ EShopOnContainers örneği, çevrimiçi pazarlama kampanyalarının izlenmesi i�
 ## <a name="references"></a>Referanslar
 
 - [eShopOnContainers: AKS 'te Kubernetes kümesi oluşturma](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#create-kubernetes-cluster-in-aks)
-- [eShopOnContainers: Azure geliştirme alanları](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)
+- [eShopOnContainers: Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)
 - [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
 
 >[!div class="step-by-step"]

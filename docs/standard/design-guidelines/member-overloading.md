@@ -53,9 +53,9 @@ public static class Console {
   
  Varsayılan bağımsız değişkenler CLS uyumlu değildir.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- @no__t, [Framework tasarım yönergelerinden Pearson Eğitim, Inc. izni ile 0Reyazdırılmıştır: Microsoft Windows geliştirme serisi 'nin bir parçası olarak, .NET kitaplıkları için 2. sürüm @ no__t-0, Vazysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 ile Addison-Wesley Professional için kurallar, deyimler ve desenler. *  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

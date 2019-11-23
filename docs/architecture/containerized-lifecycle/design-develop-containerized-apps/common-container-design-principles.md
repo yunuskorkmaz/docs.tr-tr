@@ -20,5 +20,5 @@ Kapsayıcı modelinde bir kapsayıcı tek bir işlemi temsil eder. Bir kapsayıc
 Tek bir kapsayıcıda birden çok işlemi çalıştırmak istediğiniz bir senaryo bulabilirsiniz. Herhangi bir mimari belgesinde hiçbir zaman "hiç" değil, her zaman "Always" yoktur. Birden çok işlem gerektiren senaryolar için ortak bir model, [Gözetmen](http://supervisord.org/)kullanmaktır.
 
 >[!div class="step-by-step"]
->[Önceki](design-docker-applications.md)İleri
->[](monolithic-applications.md)
+>[Önceki](design-docker-applications.md)
+>[İleri](monolithic-applications.md)

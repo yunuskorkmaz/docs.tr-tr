@@ -3,18 +3,18 @@ title: Cloud Native için aday uygulamalar
 description: Bulut Yerel yaklaşımdan hangi tür uygulamaların avantajına yarar olduğunu öğrenin
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 127dca45ce8a5e025ca7511e6513afffe64e592d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 328af4081d830cf1a7959a37c2155090ec4da3ff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087686"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968292"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Cloud Native için aday uygulamalar
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Portföyünüzdeki uygulamalara bakın. Bunlardan kaç tane bulut yerel mimari için uygun? Hepsi? Belki de misiniz?
+Portföyünüzdeki uygulamalara bakın. Bunlardan kaç tane bulut yerel mimari için uygun? Bunların tümü? Belki de misiniz?
 
 Maliyet/avantaj Analizi uygulama, büyük olasılıkla bulut Yerel olması için gereken Hefty fiyat etiketini desteklememe olasılığı vardır. Cloud Native 'in maliyeti, uygulamanın iş değerini aşacak.
 
@@ -89,8 +89,6 @@ Bu konuda daha ayrıntılı bilgi edinmek için artık Cloud Native 'e çok daha
 - [Netflix kodu dağıtır](https://www.infoq.com/news/2013/06/netflix/)
 
 - [WeChat mikro hizmetlerini ölçeklendirmeye yönelik aşırı yükleme denetimi](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf)
-
-- [RayGun-örnek olay Incelemesi](https://raygun.com/case-study/ovation)
 
 >[!div class="step-by-step"]
 >[Önceki](definition.md)

@@ -4,12 +4,12 @@ description: .NET kitaplıklarında hata ayıklamayı geliştirmek için kaynak 
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 7530c984ce4bbe9e40362bd550bec57ac585a550
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 89f9e3b1fd70003c528465f29a143b157468d539
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928985"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089294"
 ---
 # <a name="source-link"></a>Kaynak Bağlantısı
 
@@ -23,7 +23,7 @@ Kaynak bağlantısı, geliştiriciler tarafından NuGet 'den .NET derlemelerinin
 
 Kaynak bağlantısı kullanma yönergeleri [DotNet/sourcelink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub deposunda bulunabilir.
 
-Kaynak bağlantısı meta verilerinin pakete başarıyla eklenmiş olduğunu doğrulamak için [NuGet Paket Gezgini](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) ' ni kullanabilirsiniz. `Repository` Meta verilerin bir açıklama tanımlayıcısı ile mevcut olduğunu ve bu. pdb dosyalarının her hedefin. dll ile bulunduğunu denetleyin.
+Kaynak bağlantısı meta verilerinin pakete başarıyla eklenmiş olduğunu doğrulamak için [NuGet Paket Gezgini](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) ' ni kullanabilirsiniz. `Repository` meta verilerin bir COMMIT tanımlayıcısı ile mevcut olduğunu ve bu. pdb dosyalarının her hedefin. dll ile bulunduğunu denetleyin.
 
 ![NuGet Paket Gezgininde kaynak bağlantısı](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet Paket Gezgininde kaynak bağlantısı")
 
@@ -33,13 +33,13 @@ Kaynak bağlantısı meta verilerinin pakete başarıyla eklenmiş olduğunu do�
 > Türlerinizi hata ayıklayıcı öznitelikleri ekleyerek bir geliştiricinin hata ayıklama deneyimini daha da geliştirebilirsiniz.
 >
 > * <xref:System.Diagnostics.DebuggerDisplayAttribute>, bir sınıfın veya alanın hata ayıklayıcı değişkeni penceresinde nasıl görüntülendiğini özelleştirebilir.
-> * <xref:System.Diagnostics.DebuggerStepThroughAttribute>hata ayıklayıcıya koda Adımlama yerine kodda adım adım ilermesini söyler.
-> * <xref:System.Diagnostics.DebuggerBrowsableAttribute>hata ayıklayıcı değişkeni penceresinde bir üyenin görüntülenip görüntülenmediğini denetler.
+> * <xref:System.Diagnostics.DebuggerStepThroughAttribute>, hata ayıklayıcıya koda adımla değil kodun içinde ilermesini söyler.
+> * <xref:System.Diagnostics.DebuggerBrowsableAttribute>, bir üyenin hata ayıklayıcı değişken pencerelerinin görüntülenip görüntülenmediğini denetler.
 
 **✔️** sembol dosyalarını yayımlamayı düşünün (`*.pdb`).
 
 > En iyi hata ayıklama deneyimi için kitaplığınızın sembol dosyalarını yayımlaması ve kaynak bağlantısı kullanması gerekir. Sembol dosyaları ve sembol paketleri hakkında daha fazla bilgi için bkz. [sembol paketleri](./nuget.md#symbol-packages).
 
 >[!div class="step-by-step"]
->[Önceki](dependencies.md)İleri
->[](publish-nuget-package.md)
+>[Önceki](dependencies.md)
+>[İleri](publish-nuget-package.md)

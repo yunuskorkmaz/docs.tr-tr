@@ -19,14 +19,14 @@ ms.locfileid: "72004827"
 # <a name="how-to-change-the-color-of-an-element-using-focus-events"></a>Nasıl yapılır: Odak Olaylarını Kullanarak Öğenin Rengini Değiştirme
 Bu örnek, <xref:System.Windows.UIElement.GotFocus> ve <xref:System.Windows.UIElement.LostFocus> olaylarını kullanarak odak kazanırsa ve kaybettiğinde bir öğenin renginin nasıl değiştirileceğini gösterir.  
   
- Bu örnek [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyasından ve arka plan kod dosyasından oluşur.  
+ Bu örnek, bir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyası ve arka plan kod dosyasından oluşur.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XAML, iki <xref:System.Windows.Controls.Button> nesnesinden oluşan Kullanıcı arabirimini oluşturur ve <xref:System.Windows.Controls.Button> nesnelerine <xref:System.Windows.UIElement.GotFocus> ve <xref:System.Windows.UIElement.LostFocus> olayları için olay işleyicileri ekler.  
+ Aşağıdaki XAML, iki <xref:System.Windows.Controls.Button> nesnesinden oluşan Kullanıcı arabirimini oluşturur ve <xref:System.Windows.UIElement.GotFocus> ve <xref:System.Windows.UIElement.LostFocus> olaylar için olay işleyicilerini <xref:System.Windows.Controls.Button> nesnelerine ekler.  
   
  [!code-xaml[gotfocusLostfocusEffectUsingEvent#GotLostFocusSampleXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/gotfocusLostfocusEffectUsingEvent/CSharp/Window1.xaml#gotlostfocussamplexaml)]  
   
- Aşağıdaki kod arkasında <xref:System.Windows.UIElement.GotFocus> ve <xref:System.Windows.UIElement.LostFocus> olay işleyicileri oluşturulur.  @No__t-0, klavye odağı aldığında, @no__t 2 ' nin <xref:System.Windows.Controls.Control.Background%2A> ' i kırmızıya değiştirilir.  @No__t-0 klavye odağını kaybettiğinde, <xref:System.Windows.Controls.Button> ' nin <xref:System.Windows.Controls.Control.Background%2A> ' i yeniden beyaza dönüştürülür.  
+ Aşağıdaki kod arkasında <xref:System.Windows.UIElement.GotFocus> ve <xref:System.Windows.UIElement.LostFocus> olay işleyicileri oluşturulur.  <xref:System.Windows.Controls.Button> klavye odağı aldığında, <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Control.Background%2A> kırmızı olarak değiştirilir.  <xref:System.Windows.Controls.Button> klavye odağını kaybettiğinde, <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Control.Background%2A> yeniden beyaza dönüştürülür.  
   
  [!code-csharp[gotfocusLostfocusEffectUsingEvent#GotLostFocusSampleEventHandlers](~/samples/snippets/csharp/VS_Snippets_Wpf/gotfocusLostfocusEffectUsingEvent/CSharp/Window1.xaml.cs#gotlostfocussampleeventhandlers)]
  [!code-vb[gotfocusLostfocusEffectUsingEvent#GotLostFocusSampleEventHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/gotfocusLostfocusEffectUsingEvent/VisualBasic/Window1.xaml.vb#gotlostfocussampleeventhandlers)]  

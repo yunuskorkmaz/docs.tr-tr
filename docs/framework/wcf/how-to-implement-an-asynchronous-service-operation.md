@@ -17,14 +17,14 @@ Windows Communication Foundation (WCF) uygulamalarında, bir hizmet işlemi, ist
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Zaman uyumsuz olarak bir hizmet işlemi uygulama  
   
-1. Hizmet sözleşmeniz sırasında, .NET zaman uyumsuz tasarım yönergelerine göre zaman uyumsuz bir yöntem çifti bildirin. @No__t-0 yöntemi bir parametre, geri çağırma nesnesi ve bir durum nesnesi alır ve bir <xref:System.IAsyncResult?displayProperty=nameWithType> ve eşleşen `End` yöntemi döndürür ve <xref:System.IAsyncResult?displayProperty=nameWithType> alır ve döndürülen değeri döndürür. Zaman uyumsuz çağrılar hakkında daha fazla bilgi için bkz. [zaman uyumsuz programlama tasarım desenleri](https://go.microsoft.com/fwlink/?LinkId=248221).  
+1. Hizmet sözleşmeniz sırasında, .NET zaman uyumsuz tasarım yönergelerine göre zaman uyumsuz bir yöntem çifti bildirin. `Begin` yöntemi bir parametre, geri çağırma nesnesi ve bir durum nesnesi alır ve bir <xref:System.IAsyncResult?displayProperty=nameWithType> ve bir <xref:System.IAsyncResult?displayProperty=nameWithType> alıp döndürülen değeri döndüren eşleşen bir `End` yöntemi döndürür. Zaman uyumsuz çağrılar hakkında daha fazla bilgi için bkz. [zaman uyumsuz programlama tasarım desenleri](https://go.microsoft.com/fwlink/?LinkId=248221).  
   
-2. Zaman uyumsuz yöntem çiftinin `Begin` yöntemini <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType> özniteliğiyle işaretleyin ve <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A?displayProperty=nameWithType> özelliğini `true` olarak ayarlayın. Örneğin, aşağıdaki kod 1 ve 2. adımları gerçekleştirir.  
+2. Zaman uyumsuz yöntem çiftinin `Begin` yöntemini <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType> özniteliğiyle işaretleyin ve <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A?displayProperty=nameWithType> özelliğini `true`olarak ayarlayın. Örneğin, aşağıdaki kod 1 ve 2. adımları gerçekleştirir.  
   
      [!code-csharp[C_SyncAsyncClient#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_syncasyncclient/cs/services.cs#6)]
      [!code-vb[C_SyncAsyncClient#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#6)]  
   
-3. Zaman uyumsuz tasarım yönergelerine göre hizmet sınıfınızda `Begin/End` Yöntem çiftini uygulayın. Örneğin, aşağıdaki kod örneğinde bir dizenin, zaman uyumsuz hizmet işleminin hem `Begin` hem de `End` bölümlerinde konsola yazıldığı bir uygulama gösterilmektedir ve `End` işleminin dönüş değeri istemciye döndürülür. Tüm kod örneği için örnek bölümüne bakın.  
+3. Zaman uyumsuz tasarım yönergelerine göre hizmet sınıfınızda `Begin/End` yöntemi çiftini uygulayın. Örneğin, aşağıdaki kod örneği, zaman uyumsuz hizmet işleminin `Begin` ve `End` bölümlerinde, bir dizenin konsola yazıldığı bir uygulamayı gösterir ve `End` işleminin dönüş değeri istemciye döndürülür. Tüm kod örneği için örnek bölümüne bakın.  
   
      [!code-csharp[C_SyncAsyncClient#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_syncasyncclient/cs/services.cs#3)]
      [!code-vb[C_SyncAsyncClient#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#3)]  
@@ -34,13 +34,13 @@ Windows Communication Foundation (WCF) uygulamalarında, bir hizmet işlemi, ist
   
 1. İle bir hizmet sözleşmesi arabirimi:  
   
-    1. Zaman uyumlu `SampleMethod` işlemi.  
+    1. Zaman uyumlu bir `SampleMethod` işlemi.  
   
     2. Zaman uyumsuz bir `BeginSampleMethod` işlemi.  
   
-    3. Zaman uyumsuz bir `BeginServiceAsyncMethod` @ no__t-1 @ no__t-2 işlem çifti.  
+    3. Zaman uyumsuz bir `BeginServiceAsyncMethod`/`EndServiceAsyncMethod` işlem çifti.  
   
-2. @No__t-0 nesnesi kullanan bir hizmet uygulamasıdır.  
+2. Bir <xref:System.IAsyncResult?displayProperty=nameWithType> nesnesi kullanan hizmet uygulamasıdır.  
   
  [!code-csharp[C_SyncAsyncClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_syncasyncclient/cs/services.cs#1)]
  [!code-vb[C_SyncAsyncClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#1)]  

@@ -19,7 +19,7 @@ ms.locfileid: "72004040"
 # <a name="annotations-overview"></a>Ek açıklamalara Genel Bakış
 Yazılı belgelerde Not veya yorum yazmak, neredeyse kendisine verilmek üzere yaptığımız çok önemli bir etkinliktir. Bu notlar veya Yorumlar, bilgilere bayrak eklemek veya daha sonra başvurmak üzere ilgilendiğiniz öğeleri vurgulamak için bir belgeye eklediğimiz "ek açıklamalardır". Yazdırılmış belgelere not yazmak kolaydır ve çok daha kolay olsa da, elektronik belgelere kişisel açıklamalar ekleyebilme özelliği, genellikle çok sınırlı olur.  
   
- Bu konu başlığı altında, yaygın olarak yapışkan notlar ve önemli birçok ek açıklama türü incelenmiştir ve Microsoft ek açıklama çerçevesinin Windows Presentation Foundation aracılığıyla uygulamalarda bu ek açıklama türlerini nasıl kolaylaştırdığını gösterir (WPF ) belge görüntüleme denetimleri.  @no__t-ek açıklamaları destekleyen <xref:System.Windows.Controls.FlowDocumentReader> ve <xref:System.Windows.Controls.FlowDocumentScrollViewer> gibi bir belge görüntüleme denetimi ve <xref:System.Windows.Controls.DocumentViewer> ve <xref:System.Windows.Controls.FlowDocumentPageViewer> gibi <xref:System.Windows.Controls.Primitives.DocumentViewerBase> ' ten türetilmiş denetimler vardır.  
+ Bu konu başlığı altında, yaygın olarak yapışkan notlar ve önemli birçok ek açıklama türü incelenmiştir ve Microsoft ek açıklama çerçevesinin Windows Presentation Foundation aracılığıyla uygulamalarda bu ek açıklama türlerini nasıl kolaylaştırdığını gösterir (WPF ) belge görüntüleme denetimleri.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] belge görüntüleme denetimlerinin yanı sıra <xref:System.Windows.Controls.FlowDocumentReader> ve <xref:System.Windows.Controls.FlowDocumentScrollViewer>, <xref:System.Windows.Controls.DocumentViewer> ve <xref:System.Windows.Controls.FlowDocumentPageViewer>gibi <xref:System.Windows.Controls.Primitives.DocumentViewerBase> türetilen denetimleri içerir.  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Yapışkan Notlar  
@@ -42,7 +42,7 @@ Yazılı belgelerde Not veya yorum yazmak, neredeyse kendisine verilmek üzere y
   
  ![Ek açıklama](./media/caf-callouts.png "CAF_Callouts") Vurgula  
   
- Kullanıcılar genellikle ilk olarak bir metin veya ilgilendiğiniz öğe seçerek ek açıklamalar oluşturur ve ek açıklama seçeneklerinin bir @no__t görüntülenmesini sağlamak için sağ tıklayın.  Aşağıdaki örnek, kullanıcıların ek açıklamalar oluşturup yönetmek için erişebileceği yönlendirilmiş komutlarla bir <xref:System.Windows.Controls.ContextMenu> bildirmek için kullanabileceğiniz [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ' yı gösterir.  
+ Kullanıcılar genellikle ilk olarak bir metin veya ilgilendiğiniz öğe seçerek ve ardından ek açıklama seçeneklerinin bir <xref:System.Windows.Controls.ContextMenu> görüntülenmesini sağlamak için sağ tıklanarak ek açıklamalar oluşturur.  Aşağıdaki örnek, kullanıcıların ek açıklamaları oluşturup yönetmek için erişebileceği yönlendirilmiş komutlarla bir <xref:System.Windows.Controls.ContextMenu> bildirmek için kullanabileceğiniz [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] gösterir.  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   

@@ -53,15 +53,15 @@ Varlığın oluşturucusunda benzer bir yaklaşım kullanılabilir ve varlığı
 
 ### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>Veri ek açıklamalarına göre modelde doğrulama özniteliklerini kullanma
 
-Gerekli veya MaxLength öznitelikleri gibi veri ek açıklamaları, [Tablo eşleme](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) bölümünde ayrıntılı olarak açıklandığı gibi EF Core veritabanı alanı özelliklerini yapılandırmak için kullanılabilir, ancak [artık EF Core varlık doğrulaması için çalışmamaları](https://github.com/aspnet/EntityFrameworkCore/issues/3680) gerekir (ne yapmaz <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> yöntemi), .NET Framework içinde EF 4. x bu yana gerçekleştirdikleri gibi.
+Gerekli veya MaxLength öznitelikleri gibi veri ek açıklamaları, [Tablo eşleme](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) bölümünde ayrıntılı olarak açıklandığı gibi EF Core veritabanı alanı özelliklerini yapılandırmak için kullanılabilir, ancak [artık EF Core varlık doğrulaması için](https://github.com/aspnet/EntityFrameworkCore/issues/3680) (<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> yöntemi değil), .NET Framework içinde EF 4. x bu yana gerçekleştirdikleri şekilde,
 
-Veri açıklamaları ve <xref:System.ComponentModel.DataAnnotations.IValidatableObject> arabirim, model bağlama sırasında, denetleyicinin her zamanki gibi işlem yapılmadan önce model doğrulama için de kullanılabilir, ancak bu modelin bir ViewModel veya DTO ve bir etki alanı modeli olmayan bir MVC veya API 'si olması amaçlanmıştır önemli.
+Veri ek açıklamaları ve <xref:System.ComponentModel.DataAnnotations.IValidatableObject> arabirimi, model bağlama sırasında, denetleyicinin her zamanki gibi işlem yapılmadan önce model doğrulama için de kullanılabilir, ancak bu modelin bir ViewModel veya DTO olması amaçlanmıştır ve bir etki alanı modeli sorunu olmadığı bir MVC veya API.
 
-Kavramsal farkı açık hale getirdiğiniz, eylemleriniz bir varlık sınıfı nesne parametresi alıyorsa `IValidatableObject` , doğrulama için veri ek açıklamalarını ve varlık sınıfını kullanmaya devam edebilirsiniz, ancak bu önerilmez. Bu durumda, işlem model bağlama sonrasında, eylem çağırmadan önce oluşur ve denetleyicinin ModelState. IsValid özelliğini denetleyerek sonucu denetleyebilir, ancak daha sonra yeniden, bu durum DbContext, EF 4. x bu yana yapıldığı gibi.
+Kavramsal farkı açık hale getirdiğiniz, eylemleriniz bir varlık sınıfı nesne parametresi alıyorsa, doğrulama için varlık sınıfında veri ek açıklamalarını ve `IValidatableObject` kullanmaya devam edebilirsiniz, ancak bu önerilmez. Bu durumda, işlem model bağlama sonrasında, eylem çağırmadan önce oluşur ve denetleyicinin ModelState. IsValid özelliğini denetleyerek sonucu denetleyebilir, ancak daha sonra yeniden, bu durum DbContext, EF 4. x bu yana yapıldığı gibi.
 
-DbContext 'in SaveChanges metodunu geçersiz kılarak, veri açıklamalarını ve `IValidatableObject.Validate` yöntemini kullanarak varlık sınıfında özel doğrulama uygulayabilirsiniz.
+DbContext 'in SaveChanges metodunu geçersiz kılarak veri açıklamalarını ve `IValidatableObject.Validate` yöntemini kullanarak varlık sınıfında özel doğrulama uygulayabilirsiniz.
 
-`IValidatableObject` [GitHub 'da bu açıklamada](https://github.com/aspnet/EntityFrameworkCore/issues/3680#issuecomment-155502539)varlıkları doğrulamak için örnek bir uygulama görebilirsiniz. Bu örnek, öznitelik tabanlı doğrulamalar yapmaz, ancak aynı geçersiz kılmada yansıma kullanarak uygulanması kolay olmalıdır.
+[GitHub 'da bu açıklamada](https://github.com/aspnet/EntityFrameworkCore/issues/3680#issuecomment-155502539)`IValidatableObject` varlıkları doğrulamak için örnek bir uygulama görebilirsiniz. Bu örnek, öznitelik tabanlı doğrulamalar yapmaz, ancak aynı geçersiz kılmada yansıma kullanarak uygulanması kolay olmalıdır.
 
 Bununla birlikte, bir DDD görünümünde, etki alanı modeli, varlıklarınızın davranış yöntemlerinde özel durumların kullanımı ile veya doğrulama kurallarını zorlamak için belirtim ve bildirim desenleri uygulayarak en iyi şekilde korunur.
 
@@ -88,10 +88,10 @@ Veri açıklamaları ile alan doğrulamayı kullanma örneğin, doğrulama tanı
 - **Oychel Appel. ASP.NET Core MVC 'de model doğrulamasına giriş** \
   <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 
-- **Rick Anderson. Doğrulama ekleme** \
+- **Rick Anderson. Doğrulama \ ekleniyor**
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
-- **Marwler. Doğrulamalardaki bildirim ile özel durum atma değiştirme** \
+- **Marwler. Doğrulamalardaki özel durumları bildirim ile değiştirme** \
   <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
 - **Belirtim ve bildirim desenleri** \
@@ -100,12 +100,12 @@ Veri açıklamaları ile alan doğrulamayı kullanma örneğin, doğrulama tanı
 - **Lev Gorodinski. Etki alanı odaklı tasarımda doğrulama (DDD)**  \
   <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
-- **Colın jakı. Etki alanı modeli doğrulaması** \
+- **Colın jakı. Etki alanı modeli doğrulama** \
   <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
 - **Jimmy Bogard. DDD dünyasında doğrulama** \
   <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]
-> [Önceki](enumeration-classes-over-enum-types.md)İleri
-> [](client-side-validation.md)
+> [Önceki](enumeration-classes-over-enum-types.md)
+> [İleri](client-side-validation.md)

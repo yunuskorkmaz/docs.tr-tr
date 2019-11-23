@@ -18,7 +18,7 @@ Uygulama oluştururken genellikle, uygulamanın dağıtımıyla sonra kararları
 > Yapılandırma dosyalarını hızlıca oluşturmak için, `/config` anahtarıyla [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) kullanın.  
   
 ## <a name="major-sections"></a>Ana bölümler  
- Windows Communication Foundation (WCF) yapılandırma şeması, aşağıdaki üç ana bölümü içerir (`serviceModel`, `bindings` ve `services`):  
+ Windows Communication Foundation (WCF) yapılandırma şeması, aşağıdaki üç ana bölümü içerir (`serviceModel`, `bindings`ve `services`):  
   
 ```xml  
 <configuration>  
@@ -58,21 +58,21 @@ Uygulama oluştururken genellikle, uygulamanın dağıtımıyla sonra kararları
 </service>  
 ```  
   
- Bu örnekte, `name` özniteliği, yapılandırmanın hangi hizmet türüyle ilgili olduğunu gösterir. Kodunuzda `HelloWorld` sözleşmesine sahip bir hizmet oluşturduğunuzda, örnek yapılandırmasında tanımlanan tüm uç noktalar ile başlatılır. Derleme yalnızca bir hizmet sözleşmesi uygularsa, hizmet kullanılabilir tek türü kullandığından `name` özniteliği atlanabilir. Öznitelik, @no__t biçiminde olması gereken bir dize alır (0)  
+ Bu örnekte, `name` özniteliği yapılandırmanın hangi hizmet türüyle ilgili olduğunu gösterir. Kodunuzda `HelloWorld` sözleşmeyle bir hizmet oluşturduğunuzda, örnek yapılandırmasında tanımlanan tüm uç noktalar ile başlatılır. Derleme yalnızca bir hizmet sözleşmesi uygularsa, hizmet kullanılabilir tek türü kullandığından `name` özniteliği atlanabilir. Öznitelik, biçiminde olması gereken bir dize alır `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
- @No__t-0 özniteliği diğer uç noktaların hizmetle iletişim kurmak için kullandığı URI 'yi belirtir. URI mutlak ya da göreli yol olabilir. Göreli bir adres sağlanmışsa, konağın bağlamada kullanılan aktarım düzeni için uygun bir temel adres sağlaması beklenir. Bir adres yapılandırılmamışsa, taban adresin bu uç noktanın adresi olduğu varsayılır.  
+ `address` özniteliği diğer uç noktaların hizmetle iletişim kurmak için kullandığı URI 'yi belirtir. URI mutlak ya da göreli yol olabilir. Göreli bir adres sağlanmışsa, konağın bağlamada kullanılan aktarım düzeni için uygun bir temel adres sağlaması beklenir. Bir adres yapılandırılmamışsa, taban adresin bu uç noktanın adresi olduğu varsayılır.  
   
- @No__t-0 özniteliği bu uç noktanın sunduğu sözleşmeyi belirtir. Hizmet uygulaması türü, anlaşma türünü uygulamalıdır. Bir hizmet uygulamasının tek bir anlaşma türü uygularsa, bu özellik atlanabilir.  
+ `contract` özniteliği bu uç noktanın sunduğu sözleşmeyi belirtir. Hizmet uygulaması türü, anlaşma türünü uygulamalıdır. Bir hizmet uygulamasının tek bir anlaşma türü uygularsa, bu özellik atlanabilir.  
   
- @No__t-0 özniteliği, bu belirli uç nokta için kullanılmak üzere önceden tanımlanmış veya özel bir bağlama seçer. Açıkça bir bağlama olmayan bir uç nokta, `BasicHttpBinding` olan varsayılan bağlama seçimini kullanır.  
+ `binding` özniteliği, bu belirli uç nokta için kullanılmak üzere önceden tanımlanmış veya özel bir bağlama seçer. Açıkça bir bağlama olmayan bir uç nokta, `BasicHttpBinding`varsayılan bağlama seçimini kullanır.  
   
 #### <a name="modifying-a-predefined-binding"></a>Önceden tanımlanmış bağlamayı değiştirme  
- Aşağıdaki örnekte, önceden tanımlanmış bir bağlama değiştirilmiştir. Daha sonra, hizmette herhangi bir uç noktayı yapılandırmak için kullanılabilir. Bağlama <xref:System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout%2A> değeri 1 saniyeye ayarlanarak değiştirilir. Özelliğin <xref:System.TimeSpan> nesnesi döndürdüğünü unutmayın.  
+ Aşağıdaki örnekte, önceden tanımlanmış bir bağlama değiştirilmiştir. Daha sonra, hizmette herhangi bir uç noktayı yapılandırmak için kullanılabilir. Bağlama <xref:System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout%2A> değeri 1 saniye olarak ayarlanarak değiştirilir. Özelliğinin bir <xref:System.TimeSpan> nesnesi döndürdüğünü unutmayın.  
   
- Değiştirilen bağlama bağlamalar bölümünde bulunur. Bu değiştirilmiş bağlama artık `endpoint` öğesindeki `binding` özniteliğini ayarlayarak herhangi bir uç nokta oluştururken kullanılabilir.  
+ Değiştirilen bağlama bağlamalar bölümünde bulunur. Bu değiştirilmiş bağlama artık `endpoint` öğesindeki `binding` özniteliği ayarlanarak herhangi bir uç nokta oluştururken kullanılabilir.  
   
 > [!NOTE]
-> Bağlamaya belirli bir ad verirseniz, hizmet uç noktasında belirtilen `bindingConfiguration` ile eşleşmesi gerekir.  
+> Bağlamaya belirli bir ad verirseniz, hizmet uç noktasında belirtilen `bindingConfiguration` onunla eşleşmelidir.  
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
@@ -89,10 +89,10 @@ Uygulama oluştururken genellikle, uygulamanın dağıtımıyla sonra kararları
 ```  
   
 ## <a name="configuring-a-behavior-to-apply-to-a-service"></a>Bir hizmete uygulanacak davranışı yapılandırma  
- Aşağıdaki örnekte, hizmet türü için belirli bir davranış yapılandırılır. @No__t-0 öğesi, [ServiceModel meta veri yardımcı programı aracının (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) hizmeti sorgulamasını ve meta verilerden Web Hizmetleri Açıklama DILI (wsdl) belgelerini oluşturmasını sağlamak için kullanılır.  
+ Aşağıdaki örnekte, hizmet türü için belirli bir davranış yapılandırılır. `ServiceMetadataBehavior` öğesi, [ServiceModel meta veri yardımcı programı aracının (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) hizmeti sorgulamak ve meta verilerden Web Hizmetleri Açıklama DILI (wsdl) belgeleri oluşturmak için kullanılır.  
   
 > [!NOTE]
-> Davranışa belirli bir ad verirseniz, hizmet veya uç nokta bölümünde belirtilen `behaviorConfiguration` ile aynı olmalıdır.  
+> Davranışa belirli bir ad verirseniz, hizmet veya uç nokta bölümünde belirtilen `behaviorConfiguration` aynı olmalıdır.  
   
 ```xml  
 <behaviors>  
@@ -116,7 +116,7 @@ Uygulama oluştururken genellikle, uygulamanın dağıtımıyla sonra kararları
  `svcutil /config:Client.exe.config http://computer:8080/Hello?wsdl`  
   
 ## <a name="specifying-a-service-with-two-endpoints-using-different-binding-values"></a>Farklı bağlama değerleri kullanarak Iki uç nokta içeren bir hizmet belirtme  
- Bu son örnekte, `HelloWorld` hizmet türü için iki uç nokta yapılandırılır. Her uç nokta, aynı bağlama türünün farklı bir özelleştirilmiş `bindingConfiguration` özniteliğini kullanır (her biri `basicHttpBinding` ' i değiştirir).  
+ Bu son örnekte, `HelloWorld` hizmet türü için iki uç nokta yapılandırılır. Her uç nokta, aynı bağlama türünde farklı bir özelleştirilmiş `bindingConfiguration` özniteliği kullanır (her biri `basicHttpBinding`değiştirir).  
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
@@ -143,7 +143,7 @@ Uygulama oluştururken genellikle, uygulamanın dağıtımıyla sonra kararları
 </bindings>  
 ```  
   
- @No__t-0 bölümü ekleyerek ve bağlamaları aşağıdaki örnekte gösterildiği gibi yapılandırarak varsayılan yapılandırmayı kullanarak aynı davranışı alabilirsiniz.  
+ Aşağıdaki örnekte gösterildiği gibi bir `protocolMapping` bölümü ekleyerek ve bağlamaları yapılandırarak varsayılan yapılandırmayı kullanarak aynı davranışı alabilirsiniz.  
   
 ```xml  
 <protocolMapping>  

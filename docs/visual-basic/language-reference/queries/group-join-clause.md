@@ -1,5 +1,5 @@
 ---
-title: Group Join Tümcesi (Visual Basic)
+title: Group Join Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryGroupJoinIn
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: 184077f2689eb64e4373d407913eefcc03b795c2
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 0546c86322663ce6c56a89e63311d0f02f88cfe4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005729"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346849"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join Tümcesi (Visual Basic)
-İki koleksiyonu tek bir hiyerarşik koleksiyonda birleştirir. JOIN işlemi, eşleşen anahtarları temel alır.  
+Combines two collections into a single hierarchical collection. The join operation is based on matching keys.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,31 +33,31 @@ Group Join element [As type] In collection _
   
 |Terim|Tanım|  
 |---|---|  
-|`element`|Gerekli. Birleştirilen koleksiyonun denetim değişkeni.|  
-|`type`|İsteğe bağlı. @No__t türü-0. @No__t-0 belirtilmemişse, `element` türü `collection` ' den çıkarsanamıyor.|  
-|`collection`|Gerekli. @No__t-0 işlecinin sol tarafındaki koleksiyonla birleştirilecek koleksiyon. @No__t-0 yan tümcesi `Join` yan tümcesinde veya başka bir `Group Join` yan tümcesinde iç içe olabilir.|  
-|`key1` `Equals` `key2`|Gerekli. Katılmakta olan koleksiyonlar için anahtarları tanımlar. Birleştirilecek koleksiyonlardan anahtarları karşılaştırmak için `Equals` işlecini kullanmanız gerekir. Birden çok anahtarı belirlemek için `And` işlecini kullanarak Birleştirme koşullarını birleştirebilirsiniz. @No__t-0 parametresi, `Join` işlecinin sol tarafındaki koleksiyondan olmalıdır. @No__t-0 parametresi, `Join` işlecinin sağ tarafındaki koleksiyondan olmalıdır.<br /><br /> JOIN koşulunda kullanılan anahtarlar, koleksiyondan birden fazla öğe içeren ifadeler olabilir. Ancak, her anahtar ifadesi yalnızca ilgili koleksiyonundan öğe içerebilir.|  
-|`expressionList`|Gerekli. Koleksiyondan öğe gruplarının nasıl toplanacağına ilişkin bir veya daha fazla ifade. Gruplanmış sonuçların üye adını belirlemek için `Group` anahtar sözcüğünü (`<alias> = Group`) kullanın. Gruba uygulanacak toplama işlevlerini de ekleyebilirsiniz.|  
+|`element`|Gerekli. The control variable for the collection being joined.|  
+|`type`|İsteğe bağlı. The type of `element`. If no `type` is specified, the type of `element` is inferred from `collection`.|  
+|`collection`|Gerekli. The collection to combine with the collection that is on the left side of the `Group Join` operator. A `Group Join` clause can be nested in a `Join` clause or in another `Group Join` clause.|  
+|`key1` `Equals` `key2`|Gerekli. Identifies keys for the collections being joined. You must use the `Equals` operator to compare keys from the collections being joined. You can combine join conditions by using the `And` operator to identify multiple keys. The `key1` parameter must be from the collection on the left side of the `Join` operator. The `key2` parameter must be from the collection on the right side of the `Join` operator.<br /><br /> The keys used in the join condition can be expressions that include more than one item from the collection. However, each key expression can contain only items from its respective collection.|  
+|`expressionList`|Gerekli. One or more expressions that identify how the groups of elements from the collection are aggregated. To identify a member name for the grouped results, use the `Group` keyword (`<alias> = Group`). You can also include aggregate functions to apply to the group.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 yan tümcesi, katılmakta olan koleksiyonlardan eşleşen anahtar değerlerini temel alarak iki koleksiyonu birleştirir. Elde edilen koleksiyon, ikinci koleksiyondaki bir öğe koleksiyonuna başvuran ve ilk koleksiyondaki anahtar değeriyle eşleşen bir üye içerebilir. İkinci koleksiyondaki gruplanmış öğelere uygulanacak toplama işlevlerini de belirtebilirsiniz. Toplama işlevleri hakkında bilgi için bkz. [Aggregate yan tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ The `Group Join` clause combines two collections based on matching key values from the collections being joined. The resulting collection can contain a member that references a collection of elements from the second collection that match the key value from the first collection. You can also specify aggregate functions to apply to the grouped elements from the second collection. For information about aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Örneğin, bir grup yönetici ve bir çalışan koleksiyonu gibi düşünün. Her iki koleksiyonun öğesi, belirli bir yöneticiye rapor veren çalışanları tanımlayan bir ManagerID özelliğine sahiptir. Bir JOIN işleminin sonuçları, eşleşen bir ManagerID değeri olan her yönetici ve çalışan için sonuç içerir. @No__t-0 işleminin sonuçları, yöneticilerin tam listesini içerir. Her yöneticinin sonucu, belirli bir yönetici için eşleşme olan çalışanların listesine başvuran bir üyeye sahip olur.  
+ Consider, for example, a collection of managers and a collection of employees. Elements from both collections have a ManagerID property that identifies the employees that report to a particular manager. The results from a join operation would contain a result for each manager and employee with a matching ManagerID value. The results from a `Group Join` operation would contain the complete list of managers. Each manager result would have a member that referenced the list of employees that were a match for the specific manager.  
   
- @No__t-0 işleminden elde edilen koleksiyon, `From` yan tümcesinde tanımlanan koleksiyondaki herhangi bir değer birleşimini ve `Group Join` yan tümcesinin `Into` yan tümcesinde tanımlanan ifadeleri içerebilir. @No__t-0 yan tümcesinin geçerli ifadeleri hakkında daha fazla bilgi için bkz. [Aggregate yan tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ The collection resulting from a `Group Join` operation can contain any combination of values from the collection identified in the `From` clause and the expressions identified in the `Into` clause of the `Group Join` clause. For more information about valid expressions for the `Into` clause, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Bir @no__t 0 işlemi, `Group Join` işlecinin sol tarafında tanımlanan koleksiyondaki tüm sonuçları döndürür. Bu, toplanmakta olan koleksiyonda eşleşme olmaması durumunda da geçerlidir. Bu, SQL 'de `LEFT OUTER JOIN` gibidir.  
+ A `Group Join` operation will return all results from the collection identified on the left side of the `Group Join` operator. This is true even if there are no matches in the collection being joined. This is like a `LEFT OUTER JOIN` in SQL.  
   
- Koleksiyonları tek bir koleksiyonda birleştirmek için `Join` yan tümcesini kullanabilirsiniz. Bu, SQL 'de `INNER JOIN` ile eşdeğerdir.  
+ You can use the `Join` clause to combine collections into a single collection. This is equivalent to an `INNER JOIN` in SQL.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, `Group Join` yan tümcesini kullanarak iki koleksiyonu birleştirir.  
+ The following code example joins two collections by using the `Group Join` clause.  
   
  [!code-vb[VbSimpleQuerySamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#14)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)

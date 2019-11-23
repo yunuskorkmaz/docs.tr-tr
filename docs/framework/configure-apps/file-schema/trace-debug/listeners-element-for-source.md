@@ -1,5 +1,5 @@
 ---
-title: <source> için <listeners> öğesi
+title: <listeners> için <source> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -14,14 +14,14 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697298"
 ---
-# <a name="listeners-element-for-source"></a>\<kaynak > için \<listeners > öğesi
-@No__t-1 için <xref:System.Diagnostics.TraceSource.Listeners%2A> koleksiyonundaki dinleyicileri ekler veya kaldırır. Dinleyici, izleme çıkışını günlük, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  
+# <a name="listeners-element-for-source"></a>\<kaynak > için \<dinleyicileri > öğesi
+<xref:System.Diagnostics.TraceSource>için <xref:System.Diagnostics.TraceSource.Listeners%2A> koleksiyonuna dinleyici ekler veya kaldırır. Dinleyici, izleme çıkışını günlük, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  
   
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<listeners >**  
+[ **System. diagnostics\<** &nbsp;&nbsp;>](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<kaynakları >** ](sources-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<kaynak >** ](source-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**dinleyicileri >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,9 +43,9 @@ ms.locfileid: "71697298"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<> Ekle](add-element-for-listeners-for-source.md)|@No__t-0 koleksiyonuna bir dinleyici ekler.|  
-|[\<remove >](remove-element-for-listeners-for-source.md)|@No__t-0 koleksiyonundan bir dinleyiciyi kaldırır.|  
-|[\<clear >](clear-element-for-listeners-for-source.md)|Bir izleme kaynağı için `Listeners` koleksiyonunu temizler.|  
+|[\<> Ekle](add-element-for-listeners-for-source.md)|`Listeners` koleksiyonuna bir dinleyici ekler.|  
+|[\<> Kaldır](remove-element-for-listeners-for-source.md)|`Listeners` koleksiyonundan bir dinleyiciyi kaldırır.|  
+|[\<Temizle >](clear-element-for-listeners-for-source.md)|İzleme kaynağı için `Listeners` koleksiyonunu temizler.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

@@ -118,7 +118,7 @@ Tek ve birden çok depolardan bağımsız olarak, her hizmetin kendi dizini olur
 
 ![Şekil 11-3 hem e-posta hem de oturum açma hizmetleri için standart bir dizin yapısı](./media/dir-struct.png)
 
-Yeni bir proje oluşturulduğunda, doğru yapıyı yerine koyan bir şablon kullanılmalıdır. Bu şablon, bir iskelet BENIOKU dosyası ve bir `azure-pipelines.yml` gibi faydalı öğeleri de içerebilir. Herhangi bir mikro hizmet mimarisinde, projeler arasında yüksek ölçüde fark, hizmetlere karşı toplu işlemler yapar ve daha zordur.
+Yeni bir proje oluşturulduğunda, doğru yapıyı yerine koyan bir şablon kullanılmalıdır. Bu şablon, bir iskelet BENIOKU dosyası ve bir `azure-pipelines.yml`gibi faydalı öğeleri de içerebilir. Herhangi bir mikro hizmet mimarisinde, projeler arasında yüksek ölçüde fark, hizmetlere karşı toplu işlemler yapar ve daha zordur.
 
 Çeşitli kaynak kodu dizinleri içeren tüm dizin için şablon oluşturma sağlayabilen birçok araç vardır. [Yeumman](https://yeoman.io/) JavaScript dünyasında popüler ve GitHub, yakın zamanda aynı işlevselliğin çoğunu sağlayan [Depo şablonları](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/)yayımlamıştır.
 
@@ -128,7 +128,7 @@ Herhangi bir projede görevleri yönetmek zor olabilir. En iyi geliştirici üre
 
 Bulutta yerel uygulamalar, geleneksel yazılım ürünlerinden daha küçük olma eğilimindedir veya en azından daha küçük hizmetlere bölünmüştür. Bu hizmetlerle ilgili sorunları veya görevleri izlemek, diğer herhangi bir yazılım projesiyle olduğu kadar önemli olmaya devam eder. Hiç kimse, bazı iş öğelerini izlemeyi kaybetmek veya bir müşteriye, sorununun düzgün şekilde günlüğe kaydedilmez. Panolar proje düzeyinde yapılandırılır, ancak her bir proje içinde, alan tanımlanabilir. Bunlar, çeşitli bileşenlerin tamamında sorunları ortadan kaldırma izni verir. Tüm işleri tek bir yerde tutmanın avantajı, iş öğelerini bir ekipten diğerine daha iyi anlaşıldığında daha kolay bir şekilde taşımanın avantajlarından biridir.
 
-Azure DevOps, önceden yapılandırılmış bir dizi popüler şablonlarla birlikte gelir. En temel yapılandırmada, tüm kullanıcılar kapsam içinde, hangi kişilerin üzerinde çalıştığı ve ne yapılması gerektiği hakkında bilgi verilir. Bu, yazılım oluşturma işleminin bu görünürlüğe sahip olması önemlidir. böylece iş, müşteriye bildirilen Önceliklendirmeleri ve tamamlanmış görevleri gerçekleştirebilir. Kuşkusuz, çok az sayıda yazılım projesi `to do`, `doing` ve `done` kadar basit bir işlem sağlar. Kullanıcıların işleme `QA` veya `Detailed Specification` gibi adımları eklemeye başlaması uzun sürmez.
+Azure DevOps, önceden yapılandırılmış bir dizi popüler şablonlarla birlikte gelir. En temel yapılandırmada, tüm kullanıcılar kapsam içinde, hangi kişilerin üzerinde çalıştığı ve ne yapılması gerektiği hakkında bilgi verilir. Bu, yazılım oluşturma işleminin bu görünürlüğe sahip olması önemlidir. böylece iş, müşteriye bildirilen Önceliklendirmeleri ve tamamlanmış görevleri gerçekleştirebilir. Kuşkusuz, çok az sayıda yazılım projesi, `to do`, `doing`ve `done`kadar basit bir işlem sağlar. Kullanıcıların `QA` veya işleme `Detailed Specification` gibi adımları eklemeye başlaması uzun sürmez.
 
 Çevik yöntemlerden daha önemli parçalarından biri, düzenli aralıklarla kendi kendine iç denetim. Bu incelemeler, takımın karşılaştığı sorunlar ve nasıl iyileştirilen hakkında öngörü sağlamak için tasarlanmıştır. Bu, genellikle geliştirme sürecinde sorun ve özellik akışını değiştirmenin anlamı anlamına gelir. Bu nedenle, pano düzenlerini ek aşamalarla genişletmek mükemmel bir durumda.
 

@@ -17,7 +17,7 @@ ms.locfileid: "72250413"
  ASP.NET Web hizmetlerinde genel türler serileştirmesini nasıl kullanacağınızı ve denetkullanacağınızı gösterir. 
 
 * [SchemaImporterExtension teknoloji örneği](../../../docs/standard/serialization/schemaimporterextension-technology-sample.md)  
- Özel bir @no__t gösterir-0.  
+ Özel bir <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>gösterir.  
   
 * [XmlSerializer ile özel serileştirme sırası](../../../docs/standard/serialization/custom-serialization-order-with-xmlserializer.md)  
  XML serileştirme için serileştirilmiş ve seri durumdan çıkarılan öğelerin sırasının nasıl kontrol edilmesi gerektiğini gösterir.  

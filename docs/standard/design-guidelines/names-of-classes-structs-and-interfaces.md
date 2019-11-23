@@ -35,11 +35,11 @@ Aşağıdaki adlandırma yönergeleri genel tür adlandırması için geçerlidi
   
  **✓ CONSIDER** adını bitiş türetilmiş adıyla sınıflar temel sınıf.  
   
- Bu çok okunabilir ve ilişkiyi açık bir şekilde açıklar. Kodda buna örnek olarak şunlar verilebilir: `ArgumentOutOfRangeException`, bu tür bir `Exception` ve `SerializableAttribute` `Attribute` türüdür. Ancak, bu kılavuz uygulanırken makul bir karardır kullanılması önemlidir; Örneğin, `Button` sınıfı bir `Control` olayıdır, ancak `Control` adında görünmeyebilir.  
+ Bu çok okunabilir ve ilişkiyi açık bir şekilde açıklar. Bu kodda bazı örnekler şunlardır: `ArgumentOutOfRangeException``Exception`ve `SerializableAttribute`olan `Attribute`türü. Ancak, bu kılavuz uygulanırken makul bir karardır kullanılması önemlidir; Örneğin, `Button` sınıfı bir tür `Control` olayıdır, ancak `Control` adında görünmez.  
   
  **✓ DO** öneki arabirimi adları harfle türü bir arabirim olduğunu belirtmek için ediyorum.  
   
- Örneğin, `IComponent` (açıklayıcı ad), `ICustomAttributeProvider` (ad tümceciği) ve `IPersistable` (sıfatıcı) uygun arabirim adlarıdır. Diğer tür adlarında olduğu gibi kısaltmaların önüne kaçının.  
+ Örneğin, `IComponent` (tanımlayıcı ad), `ICustomAttributeProvider` (ad tümceciği) ve `IPersistable` (sıfatıcı) uygun arabirim adlarıdır. Diğer tür adlarında olduğu gibi kısaltmaların önüne kaçının.  
   
  **✓ DO** göre "t" arabirimi adı öneki burada sınıfıdır arabirimi standart uygulaması bir sınıf – arabirim çifti tanımlarken yalnızca adları farklı olduğundan emin olun.  
   
@@ -66,7 +66,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  **✓ CONSIDER** kısıtlamaları belirten yerleştirilen bir tür parametresi parametresi adına üzerinde.  
   
- Örneğin, `ISession` ile kısıtlanmış bir parametre `TSession` olarak çağrılabilir.  
+ Örneğin, `ISession` kısıtlanmış bir parametre `TSession`çağrılabilir.  
   
 ## <a name="names-of-common-types"></a>Ortak türlerin adları  
  **✓ DO** türetilmiş veya belirli .NET Framework türleri uygulama türleri adlandırırken aşağıdaki tabloda açıklanan yönergeleri izleyin.  
@@ -78,7 +78,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 |`System.EventArgs`|**✓ DO** "EventArgs." soneki ekleyin|  
 |`System.Enum`|**X DO NOT** bu sınıftan türeyen; bunun yerine, dili tarafından desteklenen anahtar sözcüğü kullanın; örneğin, C# ' ta kullanmak `enum` anahtar sözcüğü.<br /><br /> **X DO NOT** "Enum" veya "Bayrağı." soneki ekleyin|  
 |`System.Exception`|**✓ DO** "Özel durum." soneki ekleyin|  
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** "Sözlük." soneki ekleyin @No__t-0 ' ın belirli bir koleksiyon türüdür, ancak bu kılavuz, aşağıdaki genel Koleksiyonlar Kılavuzu ' na göre önceliklidir.|  
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** "Sözlük." soneki ekleyin `IDictionary` belirli bir koleksiyon türüdür, ancak bu kılavuz, aşağıdaki genel Koleksiyonlar Kılavuzu üzerinden önceliklidir.|  
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ DO** "Koleksiyonu." soneki ekleyin|  
 |`System.IO.Stream`|**✓ DO** "Akış" soneki ekleyin|  
 |`CodeAccessPermission IPermission`|**✓ DO** "İzni." soneki ekleyin|  
@@ -96,9 +96,9 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  **X DO NOT** bir önek numaralandırma değeri adları (örneğin, "ad" ADO numaralandırmalar için.), "rtf" zengin metin numaralandırmalar, vb. için kullanın.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- @no__t, [Framework tasarım yönergelerinden Pearson Eğitim, Inc. izni ile 0Reyazdırılmıştır: Microsoft Windows geliştirme serisi 'nin bir parçası olarak, .NET kitaplıkları için 2. sürüm @ no__t-0, Vazysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 ile Addison-Wesley Professional için kurallar, deyimler ve desenler. *  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

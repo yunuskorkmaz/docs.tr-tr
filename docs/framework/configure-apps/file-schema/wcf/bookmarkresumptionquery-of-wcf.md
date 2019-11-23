@@ -1,5 +1,5 @@
 ---
-title: '@no__t-WCF için 0'
+title: WCF <bookmarkResumptionQuery>
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
 ms.openlocfilehash: 8cb254599a9742305ec958fd77174f4c4b8a57c2
@@ -15,14 +15,14 @@ Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kulla
   
 Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp; @ no__t-1[ **\<system. serviceModel >** ](system-servicemodel.md)\
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<tracking >** ](tracking-of-wcf.md)\
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<profiles >** \
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0trackingProfile >** ](trackingprofile-of-wcf.md)1
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9[ **&nbsp;2workflow >** ](workflow-of-wcf.md)3
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 @ no__t-10 @ no__t-11[ **&nbsp;4bookmarkResumptionQueries >** ](bookmarkresumptionqueries-of-wcf.md)5
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 @ no__t-10 @ no__t-11 @ no__t-12 @ no__t-13 **&nbsp;5bookmarkResumptionQuery >**  
+[ **\<yapılandırma >** ](../configuration-element.md)\
+[**System. serviceModel >\<** ](system-servicemodel.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<izleme >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<profilleri >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<trackingProfile >** ](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<iş akışı >** ](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bookmarkResumptionQueries >** ](bookmarkresumptionqueries-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**bookmarkResumptionQuery >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,7 +42,7 @@ Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profil
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
 
-Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır.  
+Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
   
@@ -50,9 +50,9 @@ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklan
 |---------------|-----------------|  
 |`name`|Abone olunacak yer işareti kaydının adını belirten bir dize.|  
   
-### <a name="child-elements"></a>Alt öğeler
+### <a name="child-elements"></a>Alt öğeleri
 
-Hiçbiri.
+Yok.
   
 ### <a name="parent-elements"></a>Üst öğeler  
   
@@ -64,5 +64,5 @@ Hiçbiri.
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
-- [İş akışı Izleme ve Izleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [İzleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md)
+- [İş Akışı Takip ve İzleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Profilleri](../../../windows-workflow-foundation/tracking-profiles.md)

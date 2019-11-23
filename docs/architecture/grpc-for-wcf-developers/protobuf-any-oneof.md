@@ -1,14 +1,13 @@
 ---
 title: Değişken türleri için bir veya daha fazla alan için alanların prototip geliştiriciler için gRPC
 description: İletilerle Ilgili değişken nesne türlerini temsil etmek için any türlerini ve oneof anahtar sözcüğünü nasıl kullanacağınızı öğrenin.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 10f55288eb4a6aa603228da5b4850317d6bde614
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: af3ba22c238aa80a8c6119f62d5d8914770cad68
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846387"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971611"
 ---
 # <a name="protobuf-any-and-oneof-fields-for-variant-types"></a>Değişken türleri için bir veya daha fazla alanın prototipini oluşturma
 
@@ -16,7 +15,7 @@ WCF 'de dinamik özellik türlerini (`object`türündeki Özellikler) işlemek k
 
 Prototip, birden fazla türden olabilecek değerlerle ilgilenmede iki basit seçenek sağlar. `Any` türü bilinen Prototipsiz ileti türlerini temsil edebilir, ancak `oneof` anahtar sözcüğü belirli bir ileti içinde yalnızca bir alan aralığı ayarlayabilmesinin izin verdiği.
 
-## <a name="any"></a>Kaydedilmemiş
+## <a name="any"></a>Tümü
 
 `Any`, prototipteki "iyi bilinen türlerden" biridir: desteklenen tüm dillerdeki uygulamalarla birlikte yararlı ve yeniden kullanılabilir ileti türleri koleksiyonu. `Any` türünü kullanmak için `google/protobuf/any.proto` tanımını içeri aktarmanız gerekir.
 
@@ -39,7 +38,7 @@ message ChangeNotification {
 }
 ```
 
-C# Kodda,`Any`sınıfı alanı ayarlamaya, iletiyi ayıklamanıza ve türü denetlemeye yönelik yöntemler sağlar.
+C# Kodda, `Any` sınıfı alanı ayarlamaya, iletiyi ayıklamanıza ve türü denetlemeye yönelik yöntemler sağlar.
 
 ```csharp
 public void FormatChangeNotification(ChangeNotification change)

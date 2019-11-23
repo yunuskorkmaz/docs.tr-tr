@@ -24,9 +24,9 @@ AKS kullanılmadan önce sahip olmanın önkoşulları şunlardır:
 > [!NOTE]
 > Hakkında ayrıntılı bilgi edinmek için:
 >
-> Azure-CLı:<https://docs.microsoft.com/cli/azure/index>
+> Azure-CLı: <https://docs.microsoft.com/cli/azure/index>
 >
-> Linux için Windows alt sistemi:<https://docs.microsoft.com/windows/wsl/about>
+> Linux için Windows alt sistemi: <https://docs.microsoft.com/windows/wsl/about>
 
 ## <a name="create-the-aks-environment-in-azure"></a>Azure 'da AKS ortamını oluşturma
 
@@ -56,7 +56,7 @@ AKS kümesi:
 
 **Şekil 4-18**. Azure 'dan AKS görünümü.
 
-`Azure-CLI` Ve`Kubectl`kullanılarak oluşturulan düğümü de görüntüleyebilirsiniz.
+Ayrıca, `Azure-CLI` ve `Kubectl`kullanarak oluşturulan düğümü görüntüleyebilirsiniz.
 
 İlk olarak, kimlik bilgileri alınıyor:
 
@@ -66,7 +66,7 @@ az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Clu
 
 ![Yukarıdaki komuttan konsol çıkışı: "MsSampleK8Cluster,/root/. Kube/configiçinde geçerli bağlam olarak birleştirildi.](media/get-credentials-command-result.png)
 
-**Şekil 4-19**. `aks get-credentials`komut sonucu.
+**Şekil 4-19**. `aks get-credentials` komut sonucu.
 
 Ardından, Kubectl 'den düğüm alma:
 
@@ -74,9 +74,9 @@ Ardından, Kubectl 'den düğüm alma:
 kubectl get nodes
 ```
 
-![Yukarıdaki komutun konsol çıkışı: Durumu, yaşı (çalıştırma süresi) ve sürümü olan düğümlerin listesi](media/kubectl-get-nodes-command-result.png)
+![Yukarıdaki komutun konsol çıkışı: durum, Yaş (çalıştırma süresi) ve sürüm ile düğümlerin listesi](media/kubectl-get-nodes-command-result.png)
 
-**Şekil 4-20**. `kubectl get nodes`komut sonucu.
+**Şekil 4-20**. `kubectl get nodes` komut sonucu.
 
 >[!div class="step-by-step"]
 >[Önceki](orchestrate-high-scalability-availability.md)

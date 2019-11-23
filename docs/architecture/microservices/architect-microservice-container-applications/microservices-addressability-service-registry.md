@@ -19,7 +19,7 @@ Bazı mikro hizmet dağıtım ortamlarında (kümeler olarak adlandırılır, so
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Chris Richardson. Kalıp Hizmet kayıt defteri** \
+- **Chris Richardson. Model: hizmet kayıt defteri** \
   <https://microservices.io/patterns/service-registry.html>
 
 - **Auth0. Hizmet kayıt defteri** \
@@ -29,5 +29,5 @@ Bazı mikro hizmet dağıtım ortamlarında (kümeler olarak adlandırılır, so
   <https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/>
 
 >[!div class="step-by-step"]
->[Önceki](maintain-microservice-apis.md)İleri
->[](microservice-based-composite-ui-shape-layout.md)
+>[Önceki](maintain-microservice-apis.md)
+>[İleri](microservice-based-composite-ui-shape-layout.md)

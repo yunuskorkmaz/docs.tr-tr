@@ -22,11 +22,11 @@ SELECT DEREF ( o.expression ) FROM Table AS o;
  `expression`  
  Bir koleksiyon döndüren geçerli bir sorgu ifadesi.  
   
-## <a name="return-value"></a>Dönüş değeri  
+## <a name="return-value"></a>Dönüş Değeri  
  Başvurulan varlığın değeri.  
   
 ## <a name="remarks"></a>Açıklamalar  
- DEREF işleci bir başvuru değerine başvurur ve başvurunun sonucunu üretir. Örneğin, `r`, ref @ no__t-1T > türünde bir başvuru ise, `Deref(r)` `r` tarafından başvurulan varlığı veren `T` türünde bir ifadedir. Başvuru değeri null ise veya tehlike varsa (yani, başvurunun hedefi yoksa), DEREF işlecinin sonucu null olur.  
+ DEREF işleci bir başvuru değerine başvurur ve başvurunun sonucunu üretir. Örneğin, `r` ref\<T > türünde bir başvurudur, `Deref(r)` `T` başvurduğu varlığı veren `r`türünde bir ifadedir. Başvuru değeri null ise veya tehlike varsa (yani, başvurunun hedefi yoksa), DEREF işlecinin sonucu null olur.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgusu, başvuru değeri başvurusu yapmak ve bu başvurunun sonucunu üretmek için DEREF işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
@@ -39,8 +39,8 @@ SELECT DEREF ( o.expression ) FROM Table AS o;
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL başvurusu](entity-sql-reference.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)
 - [REF](ref-entity-sql.md)
 - [CREATEREF](createref-entity-sql.md)
-- [ANAHTAR](key-entity-sql.md)
-- [Null yapılabilir yapılandırılmış türler](nullable-structured-types-entity-sql.md)
+- [KEY](key-entity-sql.md)
+- [Null Değer Atanabilir Yapılandırılmış Türler](nullable-structured-types-entity-sql.md)

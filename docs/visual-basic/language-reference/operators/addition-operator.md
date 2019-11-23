@@ -1,5 +1,5 @@
 ---
-title: + İşleç (Visual Basic)
+title: + İşleç
 ms.date: 07/20/2015
 f1_keywords:
 - vb.+
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: 3187551afb7d25470f48dad894188766a811bb0a
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 12c14b3be0562a31470ddbd2d5489ccdbdf3b62b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701004"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350286"
 ---
 # <a name="-operator-visual-basic"></a>+ İşleci (Visual Basic)
-İki sayı ekler veya sayısal bir ifadenin pozitif değerini döndürür. , İki dize ifadesini birleştirmek için de kullanılabilir.  
+Adds two numbers or returns the positive value of a numeric expression. Can also be used to concatenate two string expressions.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,81 +36,81 @@ veya
   
 |Terim|Tanım|  
 |---|---|  
-|`expression1`|Gerekli. Herhangi bir sayısal veya dize ifadesi.|  
-|`expression2`|@No__t-0 işleci negatif bir değer hesaplanmadığı için gereklidir. Herhangi bir sayısal veya dize ifadesi.|  
+|`expression1`|Gerekli. Any numeric or string expression.|  
+|`expression2`|Required unless the `+` operator is calculating a negative value. Any numeric or string expression.|  
   
 ## <a name="result"></a>Sonuç  
- @No__t-0 ve `expression2` her ikisi de sayısal ise, sonuç Aritmetik toplamdır.  
+ If `expression1` and `expression2` are both numeric, the result is their arithmetic sum.  
   
- @No__t-0 yoksa, `+` işleci bir ifadenin değiştirilmemiş değeri için *birli* kimlik işleçtir. Bu anlamda, işlem `expression1` ' ın işaretini korur, bu nedenle `expression1` negatifse sonuç negatif olur.  
+ If `expression2` is absent, the `+` operator is the *unary* identity operator for the unchanged value of an expression. In this sense, the operation consists of retaining the sign of `expression1`, so the result is negative if `expression1` is negative.  
   
- @No__t-0 ve `expression2` her iki dizise sonuç, değerlerinin birleştirilmesiyle sonuçlanır.  
+ If `expression1` and `expression2` are both strings, the result is the concatenation of their values.  
   
- @No__t-0 ve `expression2` karma türdaysa, uygulanan eylem türlerine, içeriklerine ve [seçenek katı deyimin](../../../visual-basic/language-reference/statements/option-strict-statement.md)ayarına bağlıdır. Daha fazla bilgi için "Notlar" içindeki tablolara bakın.  
+ If `expression1` and `expression2` are of mixed types, the action taken depends on their types, their contents, and the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md). For more information, see the tables in "Remarks."  
   
-## <a name="supported-types"></a>Desteklenen türler  
- İşaretsiz ve kayan nokta türleri ve `Decimal` ve `String` dahil tüm sayısal türler.  
+## <a name="supported-types"></a>Supported Types  
+ All numeric types, including the unsigned and floating-point types and `Decimal`, and `String`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Genellikle `+`, mümkün olduğunda aritmetik ekleme gerçekleştirir ve yalnızca her iki ifade de dizeler olduğunda art arda ekler.  
+ In general, `+` performs arithmetic addition when possible, and concatenates only when both expressions are strings.  
   
- Hiçbir ifade bir `Object` değilse, Visual Basic aşağıdaki eylemleri gerçekleştirir.  
+ If neither expression is an `Object`, Visual Basic takes the following actions.  
   
-|İfadelerin veri türleri|Derleyiciye göre eylem|  
+|Data types of expressions|Action by compiler|  
 |---|---|  
-|Her iki ifade de sayısal veri türleridir (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single` ya da 0)|Ekleyemiyorum. Sonuç veri türü, `expression1` ve `expression2` veri türleri için uygun bir sayısal türdür. [Işleç sonuçlarının veri türlerinde](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)"tamsayı aritmetiği" tablolarına bakın.|  
-|Her iki ifade @no__t türündedir-0|Karakter.|  
-|Bir ifade sayısal bir veri türü ve diğeri bir dizedir|@No__t-0 ise-1 @no__t ve ardından bir derleyici hatası oluşturur.<br /><br /> @No__t-0 `Off` ise, `String` ' yi örtülü olarak `Double` ' e dönüştürün ve ekleyin.<br /><br /> @No__t-0 ' ı `Double` ' e dönüştürülemiyorsa, <xref:System.InvalidCastException> özel durumu oluşturun.|  
-|Bir ifade sayısal bir veri türüdür ve diğeri [Nothing](../../../visual-basic/language-reference/nothing.md) değildir|@No__t-0 değeri sıfır olarak değer ile ekleyin.|  
-|Bir ifade bir dizedir ve diğeri `Nothing` ' dır|Birleştir, `Nothing` ile "" olarak değerlendirilir.|  
+|Both expressions are numeric data types (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, or `Double`)|Add. The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
+|Both expressions are of type `String`|Concatenate.|  
+|One expression is a numeric data type and the other is a string|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.<br /><br /> If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.|  
+|One expression is a numeric data type, and the other is [Nothing](../../../visual-basic/language-reference/nothing.md)|Add, with `Nothing` valued as zero.|  
+|One expression is a string, and the other is `Nothing`|Concatenate, with `Nothing` valued as "".|  
   
- Bir ifade `Object` ifadesiyse Visual Basic aşağıdaki eylemleri gerçekleştirir.  
+ If one expression is an `Object` expression, Visual Basic takes the following actions.  
   
-|İfadelerin veri türleri|Derleyiciye göre eylem|  
+|Data types of expressions|Action by compiler|  
 |---|---|  
-|`Object` ifadesi sayısal bir değer ve diğeri ise sayısal bir veri türüdür|@No__t-0 ise-1 @no__t ve ardından bir derleyici hatası oluşturur.<br /><br /> @No__t-0 `Off` ise ekleyin.|  
-|`Object` ifadesi sayısal bir değer ve diğeri tür `String` ' i barındırır|@No__t-0 ise-1 @no__t ve ardından bir derleyici hatası oluşturur.<br /><br /> @No__t-0 `Off` ise, `String` ' yi örtülü olarak `Double` ' e dönüştürün ve ekleyin.<br /><br /> @No__t-0 ' ı `Double` ' e dönüştürülemiyorsa, <xref:System.InvalidCastException> özel durumu oluşturun.|  
-|`Object` ifadesi bir dize ve diğeri ise sayısal bir veri türüdür|@No__t-0 ise-1 @no__t ve ardından bir derleyici hatası oluşturur.<br /><br /> @No__t-0 `Off` ise, `Object` dizesini örtülü olarak `Double` ' e dönüştürün ve ekleyin.<br /><br /> @No__t-0 dizesi `Double` ' e dönüştürülemiyorsa, <xref:System.InvalidCastException> özel durumu oluşturun.|  
-|`Object` ifadesi bir dize ve diğeri tür `String` ' i barındırır|@No__t-0 ise-1 @no__t ve ardından bir derleyici hatası oluşturur.<br /><br /> @No__t-0 `Off` ise, örtük olarak `Object` ' ye `String` ' e dönüştürün ve birleştirme.|  
+|`Object` expression holds a numeric value and the other is a numeric data type|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then add.|  
+|`Object` expression holds a numeric value and the other is of type `String`|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.<br /><br /> If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.|  
+|`Object` expression holds a string and the other is a numeric data type|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert the string `Object` to `Double` and add.<br /><br /> If the string `Object` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.|  
+|`Object` expression holds a string and the other is of type `String`|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert `Object` to `String` and concatenate.|  
   
- Her iki ifade `Object` ifadeleridir, Visual Basic aşağıdaki eylemleri gerçekleştirir (yalnızca `Option Strict Off`).  
+ If both expressions are `Object` expressions, Visual Basic takes the following actions (`Option Strict Off` only).  
   
-|İfadelerin veri türleri|Derleyiciye göre eylem|  
+|Data types of expressions|Action by compiler|  
 |---|---|  
-|@No__t-0 ifadeleri sayısal değerleri tutar|Ekleyemiyorum.|  
-|@No__t-0 ifadesi her ikisi de `String` türündedir|Karakter.|  
-|Bir `Object` ifadesi sayısal bir değer ve diğeri bir dize tutar|@No__t-0 dizesini örtük olarak `Double` ' e dönüştürün ve ekleyin.<br /><br /> @No__t-0 dizesi sayısal bir değere dönüştürülemiyorsa, bir <xref:System.InvalidCastException> özel durumu oluşturun.|  
+|Both `Object` expressions hold numeric values|Add.|  
+|Both `Object` expressions are of type `String`|Concatenate.|  
+|One `Object` expression holds a numeric value and the other holds a string|Implicitly convert the string `Object` to `Double` and add.<br /><br /> If the string `Object` cannot be converted to a numeric value, then throw an <xref:System.InvalidCastException> exception.|  
   
- @No__t-0 ifadesi [Nothing](../../../visual-basic/language-reference/nothing.md) veya <xref:System.DBNull> olarak değerlendirilirse, `+` işleci bunu "" değeriyle `String` olarak değerlendirir.  
+ If either `Object` expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md) or <xref:System.DBNull>, the `+` operator treats it as a `String` with a value of "".  
   
 > [!NOTE]
-> @No__t-0 işlecini kullandığınızda, ekleme veya dize birleştirme işleminin yapılıp yapılmayacağını belirleyemeyebilirsiniz. Belirsizliği ortadan kaldırmak ve kendi kendine belgeleme kodu sağlamak için, birleştirmek üzere `&` işlecini kullanın.  
+> When you use the `+` operator, you might not be able to determine whether addition or string concatenation will occur. Use the `&` operator for concatenation to eliminate ambiguity and to provide self-documenting code.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- @No__t-0 işleci *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The `+` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, sayı eklemek için `+` işlecini kullanır. İşlenenler her ikisi de sayısal ise, Visual Basic aritmetik sonucu hesaplar. Aritmetik sonuç, iki işlenenin toplamını temsil eder.  
+ The following example uses the `+` operator to add numbers. If the operands are both numeric, Visual Basic computes the arithmetic result. The arithmetic result represents the sum of the two operands.  
   
  [!code-vb[VbVbalrOperators#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#6)]  
   
- Dizeleri birleştirmek için `+` işlecini de kullanabilirsiniz. İşlenenler her iki dizise, Visual Basic bunları birleştirir. Birleştirme sonucu, iki işleneninin içeriğinden oluşan tek bir dizeyi temsil eder.  
+ You can also use the `+` operator to concatenate strings. If the operands are both strings, Visual Basic concatenates them. The concatenation result represents a single string consisting of the contents of the two operands one after the other.  
   
- İşlenenler karışık türlerinise, sonuç, [Option Strict deyimin](../../../visual-basic/language-reference/statements/option-strict-statement.md)ayarına bağlıdır. Aşağıdaki örnekte `Option Strict` `On` olduğunda sonuç gösterilmektedir.  
+ If the operands are of mixed types, the result depends on the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md). The following example illustrates the result when `Option Strict` is `On`.  
   
  [!code-vb[VbVbalrOperators#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class3.vb#53)]  
   
  [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
 [!code-vb[VbVbalrOperators#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#51)]  
   
- Aşağıdaki örnekte `Option Strict` `Off` olduğunda sonuç gösterilmektedir.  
+ The following example illustrates the result when `Option Strict` is `Off`.  
   
  [!code-vb[VbVbalrOperators#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#54)]  
   
  [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
 [!code-vb[VbVbalrOperators#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#52)]  
   
- Belirsizliği ortadan kaldırmak için, birleştirme için `+` yerine `&` işlecini kullanmanız gerekir.  
+ To eliminate ambiguity, you should use the `&` operator instead of `+` for concatenation.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -118,6 +118,6 @@ veya
 - [Birleştirme İşleçleri](../../../visual-basic/language-reference/operators/concatenation-operators.md)
 - [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Visual Basic aritmetik Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
 - [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)

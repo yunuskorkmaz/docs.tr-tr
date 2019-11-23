@@ -41,11 +41,11 @@ Grafiklerle ve animasyonlarla ilgili çeşitli değişiklikler yapılmıştır.
 
 - Önbelleğe alınmış bileşim
 
-  Yeni <xref:System.Windows.Media.BitmapCache> ve <xref:System.Windows.Media.BitmapCacheBrush> sınıflarını kullanarak, görsel ağacın karmaşık bir bölümünü bit eşlem olarak önbelleğe alabilir ve büyük ölçüde işleme süresini geliştirebilirsiniz. Bit eşlem, fare tıklamaları gibi kullanıcı girişine yanıt vermeye devam eder ve tıpkı herhangi bir fırçayla tıpkı diğer öğelere de boyayabilirsiniz.
+  Yeni <xref:System.Windows.Media.BitmapCache> ve <xref:System.Windows.Media.BitmapCacheBrush> sınıfları kullanarak, görsel ağacın karmaşık bir bölümünü bit eşlem olarak önbelleğe alabilir ve işleme süresini büyük ölçüde geliştirebilirsiniz. Bit eşlem, fare tıklamaları gibi kullanıcı girişine yanıt vermeye devam eder ve tıpkı herhangi bir fırçayla tıpkı diğer öğelere de boyayabilirsiniz.
 
 - Pixel Shader 3 desteği
 
-  WPF 4, uygulamaların Pixel Shader (PS) sürüm 3,0 ' i kullanarak etkileri yazmasına izin vererek WPF 3,5 SP1 'de tanıtılan <xref:System.Windows.Media.Effects.ShaderEffect> desteğinin üzerine oluşturulur. PS 3,0 gölgelendirici modeli PS 2,0 ' den daha karmaşıktır ve desteklenen donanımlar üzerinde daha da fazla etkiye olanak tanır.
+  WPF 4, uygulamaların Pixel Shader (PS) sürüm 3,0 ' i kullanarak etkileri yazmasına izin vererek WPF 3,5 SP1 'de tanıtılan <xref:System.Windows.Media.Effects.ShaderEffect> desteğinin en üstünde oluşturulur. PS 3,0 gölgelendirici modeli PS 2,0 ' den daha karmaşıktır ve desteklenen donanımlar üzerinde daha da fazla etkiye olanak tanır.
 
 - Kolaylaştırıcı İşlevler
 
@@ -55,7 +55,7 @@ Grafiklerle ve animasyonlarla ilgili çeşitli değişiklikler yapılmıştır.
 
 ## <a name="graphics-and-rendering"></a>Grafik ve Işleme
 
-WPF, yüksek kaliteli 2-b grafikler için destek içerir. İşlevsellik, fırçalar, geometriler, görüntüler, şekiller ve dönüşümler içerir. Daha fazla bilgi için bkz. [grafikler](graphics.md). Grafik öğelerinin işlenmesi <xref:System.Windows.Media.Visual> sınıfına göre belirlenir. Ekrandaki görsel nesnelerin yapısı, görsel ağaç tarafından açıklanmıştır. Daha fazla bilgi için bkz. [WPF Grafik Işlemeye genel bakış](wpf-graphics-rendering-overview.md).
+WPF, yüksek kaliteli 2-b grafikler için destek içerir. İşlevsellik, fırçalar, geometriler, görüntüler, şekiller ve dönüşümler içerir. Daha fazla bilgi için bkz. [grafikler](graphics.md). Grafik öğelerinin işlenmesi <xref:System.Windows.Media.Visual> sınıfına dayalıdır. Ekrandaki görsel nesnelerin yapısı, görsel ağaç tarafından açıklanmıştır. Daha fazla bilgi için bkz. [WPF Grafik Işlemeye genel bakış](wpf-graphics-rendering-overview.md).
 
 ### <a name="2-d-shapes"></a>2-b şekiller
 
@@ -137,7 +137,7 @@ Daha fazla bilgi için bkz. [animasyon genel bakış](animation-overview.md). Bi
 
 <a name="media"></a>
 
-## <a name="media"></a>Medyasını
+## <a name="media"></a>Ortam
 
 Görüntü, video ve ses, bilgi ve kullanıcı deneyimlerini vermenin zengin ortamlarıdır.
 
@@ -157,7 +157,7 @@ Daha fazla bilgi için bkz. [Imaging 'e genel bakış](imaging-overview.md).
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />
 ```
 
-<xref:System.Windows.Controls.MediaElement> hem video hem de sesi oynamanın yanı sıra özel Uıof 'in kolayca oluşturulmasına izin vermek için yeterince genişletilebilir.
+<xref:System.Windows.Controls.MediaElement> hem video hem de ses oynamanın yanı sıra özel Uıof 'ın kolay oluşturulmasına izin vermek için yeterince genişletilebilir.
 
 Daha fazla bilgi için [Çoklu ortama genel bakış](multimedia-overview.md)konusuna bakın.
 

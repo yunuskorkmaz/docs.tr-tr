@@ -20,9 +20,9 @@ UNION [ ALL ]
 expression  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `expression`  
- Koleksiyon ile birleştirmek için bir koleksiyon döndüren geçerli bir sorgu ifadesi tüm ifadeler aynı türde veya ortak bir temel veya türetilmiş @no__t türde olmalıdır-0.  
+ Koleksiyon ile birleştirmek için bir koleksiyon döndüren geçerli bir sorgu ifadesi tüm ifadeler aynı türde veya ortak bir temel veya türetilmiş türde olmalıdır `expression`.  
   
  UNION  
  Birden çok koleksiyonun birleştirildiğini ve tek bir koleksiyon olarak döndürüleceğini belirtir.  
@@ -31,10 +31,10 @@ expression
  Birden çok koleksiyonun birleştirildiğini ve yinelemeler dahil olmak üzere tek bir koleksiyon olarak döndürüleceğini belirtir. Belirtilmemişse, yinelemeler sonuç koleksiyonundan kaldırılır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Aynı türde veya ortak bir temel ya da türetilmiş türden bir koleksiyon `expression` olarak.  
+ Aynı türde veya ortak bir temel ya da türetilmiş türden bir koleksiyon `expression`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- UNION [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kümesi işleçlerinden biridir. Tüm [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kümesi işleçleri soldan sağa değerlendirilir. @No__t-0 kümesi işleçleri için öncelik bilgisi için, bkz. [except](except-entity-sql.md).  
+ UNION [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set işleçlerinden biridir. Tüm [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kümesi işleçleri soldan sağa değerlendirilir. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set işleçleri için öncelik bilgisi için, bkz. [except](except-entity-sql.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki Entity SQL sorgusu, iki sorgunun sonuçlarını tek bir koleksiyonda birleştirmek için UNıON ALL işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  

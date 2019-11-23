@@ -13,7 +13,7 @@ ms.locfileid: "72771977"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core için WCF DotNet-Svcutil aracı
 
-Windows Communication Foundation (WCF) **DotNet-Svcutil** Aracı, bir ağ konumundaki veya bir wsdl dosyasındaki bir Web hizmetinden meta verileri alan ve Web hizmetine erişen istemci proxy yöntemleri IÇEREN bir WCF sınıfı oluşturan bir .NET Core CLI aracıdır operasyonları.
+Windows Communication Foundation (WCF) **DotNet-Svcutil** Aracı, bir ağ konumundaki veya bir wsdl dosyasındaki bir Web hizmetinden meta verileri alan ve Web hizmeti işlemlerine erişen istemci proxy yöntemlerini IÇEREN bir WCF sınıfı oluşturan bir .NET Core CLI aracıdır.
 
 .NET Framework projelerine yönelik [**hizmet modeli meta verileri-Svcutil**](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracına benzer şekilde **DotNet-Svcutil** , .NET Core ve .NET Standard projeleriyle uyumlu bir Web hizmeti başvurusu oluşturmaya yönelik bir komut satırı aracıdır.
 
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) **DotNet-Svcutil** Aracı, bir ağ konumu
 > [!IMPORTANT]
 > Yalnızca güvenilir bir kaynaktan hizmetlere başvurmanız gerekir. Güvenilmeyen bir kaynaktan başvuruları eklemek güvenliği tehlikeye atabilir.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 <!-- markdownlint-disable MD025 -->
 
@@ -68,7 +68,7 @@ Bir Windows, macOS veya Linux komut penceresinde aşağıdaki adımları uygulay
     dotnet new web
     ```
 
-3. [@No__t_1 NuGet PAKETINI](https://nuget.org/packages/dotnet-svcutil) CLI aracı olarak yükler:  <!-- markdownlint-disable MD023 -->
+3. [`dotnet-svcutil` NuGet PAKETINI](https://nuget.org/packages/dotnet-svcutil) CLI aracı olarak yükler:  <!-- markdownlint-disable MD023 -->
     # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[DotNet-Svcutil 2. x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
@@ -76,7 +76,7 @@ Bir Windows, macOS veya Linux komut penceresinde aşağıdaki adımları uygulay
     ```
 
     # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[DotNet-Svcutil 1. x](#tab/dotnetsvcutil1x)
-    @No__t_0 proje dosyasını Düzenleyicinizde açın, `Project` öğesini düzenleyin ve aşağıdaki kodu kullanarak bir CLı araç başvurusu olarak [`dotnet-svcutil` NuGet paketini](https://nuget.org/packages/dotnet-svcutil) ekleyin:
+    `HelloSvcutil.csproj` proje dosyasını Düzenleyicinizde açın, `Project` öğesini düzenleyin ve aşağıdaki kodu kullanarak bir CLı araç başvurusu olarak [`dotnet-svcutil` NuGet paketini](https://nuget.org/packages/dotnet-svcutil) ekleyin:
 
     ```xml
     <ItemGroup>
@@ -112,15 +112,15 @@ Oluşturulan dosya _Merhaba Svcutil/ServiceReference/Reference. cs_olarak kayded
 
 ## <a name="using-the-service-reference"></a>Hizmet başvurusunu kullanma
 
-1. [@No__t_1](../tools/dotnet-restore.md) komutunu kullanarak WCF paketlerini aşağıdaki şekilde geri yükleyin:
+1. [`dotnet restore`](../tools/dotnet-restore.md) komutunu kullanarak WCF paketlerini aşağıdaki şekilde geri yükleyin:
 
     ```dotnetcli
     dotnet restore
     ```
 
-2. Kullanmak istediğiniz istemci sınıfının ve işlemin adını bulun. `Reference.cs`, hizmet üzerindeki işlemleri çağırmak için kullanılabilecek yöntemler ile `System.ServiceModel.ClientBase` devralan bir sınıf içerir. Bu örnekte, _SayHello_ hizmetinin _Hello_ işlemini çağırmak istiyorsunuz. `ServiceReference.SayHelloClient`, istemci sınıfının adıdır ve işlemi çağırmak için kullanılabilecek `HelloAsync` adlı bir yöntemi vardır.
+2. Kullanmak istediğiniz istemci sınıfının ve işlemin adını bulun. `Reference.cs`, hizmet üzerindeki işlemleri çağırmak için kullanılabilecek yöntemler ile `System.ServiceModel.ClientBase`devralan bir sınıf içerir. Bu örnekte, _SayHello_ hizmetinin _Hello_ işlemini çağırmak istiyorsunuz. `ServiceReference.SayHelloClient`, istemci sınıfının adıdır ve işlemi çağırmak için kullanılabilecek `HelloAsync` adlı bir yöntemi vardır.
 
-3. @No__t_0 dosyasını Düzenleyicinizde açın ve en üstteki hizmet başvurusu ad alanı için bir using ifadesini ekleyin:
+3. `Startup.cs` dosyasını Düzenleyicinizde açın ve en üstteki hizmet başvurusu ad alanı için bir using ifadesini ekleyin:
 
     ```csharp
     using ServiceReference;
@@ -146,7 +146,7 @@ Oluşturulan dosya _Merhaba Svcutil/ServiceReference/Reference. cs_olarak kayded
 
     ```
 
-5. [@No__t_1](../tools/dotnet-run.md) komutunu kullanarak uygulamayı aşağıdaki şekilde çalıştırın:
+5. [`dotnet run`](../tools/dotnet-run.md) komutunu kullanarak uygulamayı aşağıdaki şekilde çalıştırın:
 
     ```dotnetcli
     dotnet run
@@ -156,7 +156,7 @@ Oluşturulan dosya _Merhaba Svcutil/ServiceReference/Reference. cs_olarak kayded
 
 Şu çıktıyı görmeniz gerekir: "Hello DotNet-Svcutil!"
 
-@No__t_0 aracı parametrelerinin ayrıntılı bir açıklaması için, yardım parametresini aşağıdaki gibi geçirerek aracı çağırın:
+`dotnet-svcutil` aracı parametrelerinin ayrıntılı bir açıklaması için, yardım parametresini aşağıdaki gibi geçirerek aracı çağırın:
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[DotNet-Svcutil 2. x](#tab/dotnetsvcutil2x)
 
 ```dotnetcli

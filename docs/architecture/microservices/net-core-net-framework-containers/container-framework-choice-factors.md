@@ -30,5 +30,5 @@ Aşağıdaki karar tablosu .NET Framework veya .NET Core 'un kullanılıp kullan
 | Azure hizmetleri kullanımı | .NET Core <br/> (sonuç olarak tüm Azure hizmetleri .NET Core için istemci SDK 'larını sağlar) | .NET Framework <br/> .NET Core <br/> (sonuç olarak tüm Azure hizmetleri .NET Core için istemci SDK 'larını sağlar) |
 
 >[!div class="step-by-step"]
->[Önceki](net-framework-container-scenarios.md)İleri
->[](net-container-os-targets.md)
+>[Önceki](net-framework-container-scenarios.md)
+>[İleri](net-container-os-targets.md)

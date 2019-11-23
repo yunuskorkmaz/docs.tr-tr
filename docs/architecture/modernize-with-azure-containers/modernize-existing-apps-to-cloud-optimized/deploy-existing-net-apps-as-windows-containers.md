@@ -152,7 +152,7 @@ Bu üçünden, ACI, temel alınan işletim sistemini sürdürmenize gerek kalmaz
 
 Azure 'daki ve aynı anda PaaS (hizmet olarak platform) düzeyinde konumlandırılmış kapsayıcıları destekleyen ürünler şunlardır:
 
-- **Azure App Service**
+- **Azure uygulama hizmeti**
 - **Azure Kubernetes hizmeti (AKS ve ACS)**
 - **Azure Batch**
 

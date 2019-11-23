@@ -61,9 +61,9 @@ API ağ geçitlerine benzer şekilde, birincil işlevselliği gelen HTTP istekle
 
 |Ocelot özellikleri  | |
 | :-------- | :-------- |
-| Yönlendirme | Kimlik doğrulaması |
+| Yönlendirme | Kimlik Doğrulama |
 | İstek toplama | Yetkilendirme |
-| Hizmet bulma (Tüketil ve Eureka ile) | Sınırlama |
+| Hizmet bulma (Tüketil ve Eureka ile) | Azaltma |
 | YükDengeleme | Günlüğe kaydetme, Izleme |
 | Önbelleğe Alma | Üstbilgiler/sorgu dizesi dönüştürmesi |
 | Bağıntı geçişi | Özel ara yazılım |
@@ -119,7 +119,7 @@ Azure API Management [dört farklı katmanda](https://azure.microsoft.com/pricin
 
 - Geliştirici
 - Temel
-- Stand
+- Standard
 - Premium
 
 Geliştirici katmanı, üretim dışı iş yükleri ve değerlendirme için tasarlanmıştır. Diğer katmanlar, giderek daha fazla güç, özellik ve daha yüksek hizmet düzeyi sözleşmeleri (SLA 'Lar) sunar. Premium katmanı, [Azure sanal ağı](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) ve [çok bölgeli destek](https://docs.microsoft.com/azure/api-management/api-management-howto-deploy-multi-region)sağlar. Tüm katmanların saat başına sabit bir fiyatı vardır.

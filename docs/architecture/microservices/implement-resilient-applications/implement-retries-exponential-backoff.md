@@ -16,5 +16,5 @@ ms.locfileid: "70296065"
 Üstel geri alma ile yeniden denemeler mantığı uygulamak için birçok yaklaşım vardır.
 
 >[!div class="step-by-step"]
->[Önceki](partial-failure-strategies.md)İleri
->[](implement-resilient-entity-framework-core-sql-connections.md)
+>[Önceki](partial-failure-strategies.md)
+>[İleri](implement-resilient-entity-framework-core-sql-connections.md)

@@ -21,8 +21,8 @@ ms.locfileid: "71697493"
 Uygulamanın yalnızca ortak dil çalışma zamanının 1,0 sürümünü desteklediğini belirtir. Bu öğe kullanımdan kaldırılmıştır ve artık kullanılmamalıdır. Bunun yerine [`supportedRuntime`](supportedruntime-element.md) öğesi kullanılmalıdır.
 
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<startup >** ](startup-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requiredRuntime >**  
+&nbsp;&nbsp;[ **\<başlatma >** ](startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<requiredRuntime >**  
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -59,7 +59,7 @@ Yok.
 |Öğe|Açıklama|
 |-------------|-----------------|
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|
-|`startup`|@No__t-0 öğesi içerir.|
+|`startup`|`<requiredRuntime>` öğesini içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
  Yalnızca çalışma zamanının 1,0 sürümünü desteklemek üzere oluşturulan uygulamalar `<requiredRuntime>` öğesini kullanmalıdır. Çalışma zamanının 1,1 veya sonraki bir sürümünü kullanarak oluşturulan uygulamaların `<supportedRuntime>` öğesini kullanması gerekir.
@@ -67,7 +67,7 @@ Yok.
 > [!NOTE]
 > Yapılandırma dosyasını belirtmek için [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) işlevini kullanırsanız, çalışma zamanının tüm sürümleri için `<requiredRuntime>` öğesini kullanmanız gerekir. [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)kullandığınızda `<supportedRuntime>` öğesi yok sayılır.
 
- @No__t-0 öznitelik dizesi, .NET Framework belirtilen sürümü için yükleme klasörü adıyla eşleşmelidir. Bu dize yorumlanmadı. Çalışma zamanı başlangıç kodu eşleşen bir klasör bulamazsa, çalışma zamanı yüklenmez; başlangıç kodu bir hata iletisi gösterir ve sonlandırılıyor.
+ `version` öznitelik dizesi, .NET Framework belirtilen sürümü için yükleme klasörü adıyla eşleşmelidir. Bu dize yorumlanmadı. Çalışma zamanı başlangıç kodu eşleşen bir klasör bulamazsa, çalışma zamanı yüklenmez; başlangıç kodu bir hata iletisi gösterir ve sonlandırılıyor.
 
 > [!NOTE]
 > Microsoft Internet Explorer 'da barındırılan bir uygulama için başlangıç kodu `<requiredRuntime>` öğesini yoksayar.

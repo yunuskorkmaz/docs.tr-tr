@@ -1,14 +1,13 @@
 ---
 title: WCF geliştiricileri için GRPC neden önerilir
 description: GRPC 'nin neden modern mimarilere ve platformlara geçiş yapmak isteyen WCF geliştiricileri için iyi bir uyum olduğuna ilişkin bir tartışma.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: f96e9a059dc9f12a13c9eb5bb7184ee75d602458
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: da712e1ceee92f0a1a2661252dcda602f5dde9a0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846076"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966942"
 ---
 # <a name="why-grpc-is-recommended-for-wcf-developers"></a>WCF geliştiricilerine neden gRPC önerilir?
 
@@ -26,7 +25,7 @@ Aşağıda, gRPC 'nin diğer çözümlerin üzerinde neden olduğu ek nedenler:
 
 Daha önce anlatıldığı gibi http/1.1 yerine HTTP/2 kullanılması, insan tarafından okunabilen iletiler gereksinimini ortadan kaldırır ve bunun yerine daha hızlı bir ikili protokolü kullanır. Bu, bilgisayarların ayrıştırılmasında daha etkilidir. HTTP/2 Ayrıca, bir kuyrukta beklenmeden (HTTP/1.1 'de "satır başı (HOL) engelleme" olarak bilinen bir sorun olması gerekmeden), yanıtları tek bir bağlantı üzerinden aynı anda göndermek için de destekler. GRPC kullanılırken daha az kaynak olması gerekir ve bu, mobil cihazlarda ve yavaş ağlarda kullanılması iyi bir çözüm haline gelir.
 
-### <a name="interoperability"></a>Birlikte Çalışabilirlik
+### <a name="interoperability"></a>Birlikte çalışabilirlik
 
 .NET, Java, Python, Go, C++, Node. js, Swift, Dart, Ruby ve php dahil tüm büyük programlama dilleri ve platformları Için GRPC araçları ve kitaplıkları vardır. Her platform için protokol arabelleklerinin ikili kablo biçimi ve verimli kod üretimi sayesinde, geliştiriciler, tam platformlar arası destekten hala keyif alırken performanslı uygulamalar oluşturabilir.
 

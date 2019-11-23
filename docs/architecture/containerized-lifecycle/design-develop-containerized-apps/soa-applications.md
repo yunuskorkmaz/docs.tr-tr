@@ -20,5 +20,5 @@ Docker Kapsayıcıları hem geleneksel hizmet yönelimli mimariler hem de daha g
 Günün sonunda, kapsayıcı kümeleme çözümleri hem geleneksel bir SOA mimarisi hem de her bir mikro hizmetin veri modeline sahip olduğu daha gelişmiş bir mikro hizmet mimarisi için yararlıdır. Ayrıca, birden çok veritabanı sayesinde, SOA Hizmetleri tarafından paylaşılan tek parçalı veritabanları ile çalışmak yerine veri katmanını da ölçeklendirebilirsiniz. Bununla birlikte, verileri bölmek hakkında tartışma yalnızca mimari ve tasarım ile ilgilidir.
 
 >[!div class="step-by-step"]
->[Önceki](state-and-data-in-docker-applications.md)İleri
->[](orchestrate-high-scalability-availability.md)
+>[Önceki](state-and-data-in-docker-applications.md)
+>[İleri](orchestrate-high-scalability-availability.md)

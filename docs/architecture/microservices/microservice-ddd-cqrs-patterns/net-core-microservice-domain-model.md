@@ -2,12 +2,12 @@
 title: .NET Core ile bir mikro hizmet etki alanı modeli uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD-odaklı bir etki alanı modelinin uygulama ayrıntılarına ulaşın.
 ms.date: 10/08/2018
-ms.openlocfilehash: be8dc9339f5815139616e9785b5b3e3e5931b57e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737241"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972038"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core ile bir mikro hizmet etki alanı modeli uygulama
 
@@ -174,9 +174,9 @@ Sütunları alanlarla eşlemek için EF Core 1,1 veya sonraki bir sürüme sahip
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
 - **Julie Lerman. Veri noktaları-etki alanı odaklı tasarım için kodlama: veri odaklı Devs için Ipuçları** \
-  <https://msdn.microsoft.com/magazine/dn342868.aspx>
+  <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
-- **UDI Dahan. Tam kapsüllenmiş etki alanı modelleri oluşturma** \
+- **UDI Dahan. Tamamen kapsüllenmiş etki alanı modelleri oluşturma** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 > [!div class="step-by-step"]

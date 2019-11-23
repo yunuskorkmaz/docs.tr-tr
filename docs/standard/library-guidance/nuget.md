@@ -21,7 +21,7 @@ NuGet, .NET ekosistemi için bir paket yöneticisidir ve geliştiricilerin .NET 
 
 Bir NuGet paketi (`*.nupkg`), .NET derlemelerini ve ilişkili meta verileri içeren bir zip dosyasıdır.
 
-Bir NuGet paketi oluşturmanın iki ana yolu vardır. Daha yeni ve önerilen yol, bir SDK stili projeden paket oluşturmaktır (içeriği `<Project Sdk="Microsoft.NET.Sdk">` ile başlayan proje dosyası). Derlemeler ve hedefler pakete otomatik olarak eklenir ve geri kalan meta veriler, paket adı ve sürüm numarası gibi MSBuild dosyasına eklenir. [@No__t_1](../../core/tools/dotnet-pack.md) komutuyla derlemek, derlemeler yerine bir `*.nupkg` dosyası çıkışı verir.
+Bir NuGet paketi oluşturmanın iki ana yolu vardır. Daha yeni ve önerilen yol, bir SDK stili projeden paket oluşturmaktır (içeriği `<Project Sdk="Microsoft.NET.Sdk">`ile başlayan proje dosyası). Derlemeler ve hedefler pakete otomatik olarak eklenir ve geri kalan meta veriler, paket adı ve sürüm numarası gibi MSBuild dosyasına eklenir. [`dotnet pack`](../../core/tools/dotnet-pack.md) komutuyla derlemek, derlemeler yerine bir `*.nupkg` dosyası çıkışı verir.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -56,7 +56,7 @@ Bir NuGet paketi birçok [meta veri özelliğini](/nuget/reference/nuspec)destek
 | `PackageTags`                      | `tags`                     | Paketi tanımlayan etiketlerin ve anahtar sözcüklerin boşlukla ayrılmış bir listesi. Etiketler, paketler aranırken kullanılır.             |
 | `PackageIconUrl`                   | `iconUrl`                  | Paket için simge olarak kullanılacak bir görüntünün URL 'SI. URL HTTPS olmalıdır ve görüntü 64x64 olmalı ve saydam bir arka plana sahip olmalıdır.             |
 | `PackageProjectUrl`                | `projectUrl`               | Proje giriş sayfası veya Kaynak deposu için bir URL.             |
-| `PackageLicenseExpression`         | `license`                  | Proje lisansının [Spdx tanımlayıcısı](https://spdx.org/licenses/). Yalnızca OSı ve FSF onaylı lisanslar bir tanımlayıcı kullanabilir. Diğer lisanslar `PackageLicenseFile` kullanmalıdır. [@No__t_1 meta verileri](/nuget/reference/nuspec#license)hakkında daha fazla bilgi edinin. |
+| `PackageLicenseExpression`         | `license`                  | Proje lisansının [Spdx tanımlayıcısı](https://spdx.org/licenses/). Yalnızca OSı ve FSF onaylı lisanslar bir tanımlayıcı kullanabilir. Diğer lisanslar `PackageLicenseFile`kullanmalıdır. [`license` meta verileri](/nuget/reference/nuspec#license)hakkında daha fazla bilgi edinin. |
 
 > [!IMPORTANT]
 > Lisansı olmayan bir proje, özel bir [telif hakkı](https://choosealicense.com/no-permission/)için varsayılan olarak, diğer kişilerin kullanması mümkün değildir.

@@ -38,7 +38,7 @@ Bir kümenin ve Scheduler 'ın kavramlarıyla ilgili olarak, farklı satıcılar
 |     |   |
 |-----|---|
 | **Kubernetes** <br> Kubernetes logosunun bir görüntüsünü ![.](./media/scalable-available-multi-container-microservice-applications/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) , özellikleri düzenlemek için küme altyapısı ve kapsayıcı zamanlamalarından değişen işlevselliği sağlayan açık kaynaklı bir üründür. Ana bilgisayar kümelerinde uygulama kapsayıcılarının dağıtım, ölçeklendirme ve işlemlerini otomatikleştirmenizi sağlar. <br><br> *Kubernetes* , kolay yönetim ve bulma için uygulama kapsayıcılarını mantıksal birimlere gruplandıran kapsayıcı merkezli bir altyapı sağlar. <br><br> *Kubernetes* , Linux 'Ta, Windows 'da daha az olgun bir yerde. |
-| **Azure Kubernetes hizmeti (AKS)** <br> Azure Kubernetes hizmet logosunun bir görüntüsünü ![.](./media/scalable-available-multi-container-microservice-applications/azure-kubernetes-service-logo.png) | [Aks](https://azure.microsoft.com/services/kubernetes-service/) , Azure 'Da Kubernetes kümesinin yönetimini, dağıtımını ve işlemlerini kolaylaştıran yönetilen bir Kubernetes kapsayıcı düzenleme hizmetidir. |
+| **Azure Kubernetes Service'i (AKS)** <br> Azure Kubernetes hizmet logosunun bir görüntüsünü ![.](./media/scalable-available-multi-container-microservice-applications/azure-kubernetes-service-logo.png) | [Aks](https://azure.microsoft.com/services/kubernetes-service/) , Azure 'Da Kubernetes kümesinin yönetimini, dağıtımını ve işlemlerini kolaylaştıran yönetilen bir Kubernetes kapsayıcı düzenleme hizmetidir. |
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Microsoft Azure içinde kapsayıcı tabanlı düzenleyiciler kullanma
 
@@ -112,7 +112,7 @@ Daha fazla bilgi için [Azure dev Spaces Ile takım geliştirme](https://docs.mi
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Azure Kubernetes Service (AKS)**  \ ' i kullanmaya başlama
+- **Azure Kubernetes Service (AKS) ile çalışmaya** başlama \
   <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \

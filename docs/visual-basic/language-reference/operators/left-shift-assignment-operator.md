@@ -1,5 +1,5 @@
 ---
-title: < < = Işleci (Visual Basic)
+title: <<= İşleci
 ms.date: 07/20/2015
 f1_keywords:
 - vb.<<=
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - operator<<=
 - compound assignment statements [Visual Basic]
 ms.assetid: 8ad26613-faff-4e2f-89ee-63feee33bfda
-ms.openlocfilehash: aae71069bdcb88efa5842526dd7eb47806f248d0
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: cc89e0dadc7148b21e695a53a2e746a00ed66441
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701102"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350951"
 ---
-# <a name="-operator-visual-basic"></a>\< @ no__t-1 = Işleci (Visual Basic)
-Bir değişkenin veya özelliğin değerinde aritmetik sola kaydırma gerçekleştirir ve sonucu değişkenine veya özelliğe geri atar.  
+# <a name="-operator-visual-basic"></a>\<\<= Operator (Visual Basic)
+Performs an arithmetic left shift on the value of a variable or property and assigns the result back to the variable or property.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,23 +29,23 @@ variableorproperty <<= amount
   
 ## <a name="parts"></a>Bölümler  
  `variableorproperty`  
- Gerekli. İntegral türünün değişkeni veya özelliği (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` veya `ULong`).  
+ Gerekli. Variable or property of an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).  
   
  `amount`  
- Gerekli. @No__t-0 ' a widens bir veri türünün sayısal ifadesi.  
+ Gerekli. Numeric expression of a data type that widens to `Integer`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 işlecinin sol tarafındaki öğe basit bir skaler değişken, bir özellik veya bir dizi öğesi olabilir. Değişken veya özellik [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)olamaz.  
+ The element on the left side of the `<<=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- @No__t-0 işleci ilk olarak değişkenin veya özelliğin değerinde bir aritmetik sola kaydırma gerçekleştirir. İşleci daha sonra bu işlemin sonucunu bu değişkene veya özelliğe yeniden atar.  
+ The `<<=` operator first performs an arithmetic left shift on the value of the variable or property. The operator then assigns the result of that operation back to that variable or property.  
   
- Aritmetik vardiyalar dairesel değildir, bu da sonucun bir sonunun dışına sürüklenen bitlerin diğer uçta yeniden tanıtılmadığını gösterir. Aritmetik sola kaydırma içinde, sonuç veri türü aralığının ötesinde kaydırılan bitler atılır ve sağdaki bit konumları sıfır olarak ayarlanır.  
+ Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. In an arithmetic left shift, the bits shifted beyond the range of the result data type are discarded, and the bit positions vacated on the right are set to zero.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- [< < işleci](../../../visual-basic/language-reference/operators/left-shift-operator.md) *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. @No__t aşırı yükleme-0 işleci `<<=` işlecinin davranışını etkiler. Kodunuz, `<<` ' i aşırı yükleyen bir sınıf veya yapıda `<<=` kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The [<< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `<<` operator affects the behavior of the `<<=` operator. If your code uses `<<=` on a class or structure that overloads `<<`, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir `Integer` değişkeninin bit modelini belirtilen miktarda sola kaydırmak ve sonucu değişkenine atamak için `<<=` işlecini kullanır.  
+ The following example uses the `<<=` operator to shift the bit pattern of an `Integer` variable left by the specified amount and assign the result to the variable.  
   
  [!code-vb[VbVbalrOperators#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#13)]  
   
@@ -54,6 +54,6 @@ variableorproperty <<= amount
 - [<< İşleci](../../../visual-basic/language-reference/operators/left-shift-operator.md)
 - [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Bit Kaydırma İşleçleri](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
-- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

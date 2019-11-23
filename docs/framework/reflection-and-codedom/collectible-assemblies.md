@@ -51,7 +51,7 @@ Bu listedeki yalnızca bir öğe, derlemede yalnızca bir tür veya bir yöntem 
 > [!NOTE]
 > Çalışma zamanı, listedeki tüm öğeler için sonlandırıcılar çalıştırılıncaya kadar derlemeyi gerçekten kaldırmaz.
 
-Kullanım ömrü açısından, toplanabilir bir derlemenin oluşturulmasında oluşturulan ve kullanılan `List<int>` (ın C#) veya `List(Of Integer)` (Visual Basic) gibi oluşturulmuş bir genel tür, içeren derlemede tanımlanmış olarak kabul edilir. Genel tür tanımı veya tür bağımsız değişkenlerinden birinin tanımını içeren bir bütünleştirilmiş kod. Kullanılan kesin derleme bir uygulama ayrıntısı ve değiştirilebilir.
+Kullanım ömrü açısından, toplanabilir bir derlemenin oluşturulmasında oluşturulan ve kullanılan `List<int>` (ın C#) veya `List(Of Integer)` (Visual Basic) gibi oluşturulmuş bir genel tür, genel tür tanımını içeren derlemede veya tür bağımsız değişkenlerinden birinin tanımını içeren bir derlemede tanımlanmış olarak değerlendirilir. Kullanılan kesin derleme bir uygulama ayrıntısı ve değiştirilebilir.
  
 ## <a name="restrictions-on-collectible-assemblies"></a>Toplanabilir derlemelerdeki kısıtlamalar
 

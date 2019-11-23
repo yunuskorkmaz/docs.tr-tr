@@ -17,7 +17,8 @@ Gerekli olmasa da, proje bulutta yerel bir uygulama olarak oluşturulduğundan, 
 
 Uygulamanın mimarisi Şekil 2-5 ' de gösterilmiştir. Sol tarafta, mobil, geleneksel web ve Web tek sayfalı uygulama (SPA) türleri ile ayrılmış olan istemci uygulamalar vardır. Sağ tarafta, her biri Docker kapsayıcılarında ve Kubernetes kümelerinde barındırılabilen sistem oluşturan sunucu tarafı bileşenleridir. Geleneksel Web uygulaması, sarı renkle gösterilen ASP.NET Core MVC uygulaması tarafından desteklenir. Bu uygulama ve mobil ve Web SPA uygulamaları, tek tek mikro hizmetlerle bir veya daha fazla API ağ geçidi üzerinden iletişim kurar. API ağ geçitleri, her bir ağ geçidinin belirli bir ön uç istemcisini destekleyecek şekilde tasarlandığı anlamına gelen "ön uçlar için arka uçlar" (BFF) düzenine uyar. Tek tek mikro hizmetler, API ağ geçitlerinin sağında listelenir ve hem iş mantığını hem de bazı kalıcılık deposu türlerini içerir. Farklı hizmetler SQL Server veritabanları, Redsıs Cache örnekleri ve MongoDB/CosmosDB mağazalarını kullanır. En sağdaki, mikro hizmetler arasında iletişim kurmak için kullanılan sistemin olay veri yolu.
 
-![eShopOnContainers mimarisi @ no__t-1**şekil 2-5**. EShopOnContainers mimarisi.
+![eShopOnContainers mimarisi](./media/eshoponcontainers-architecture.png)
+**şekil 2-5**. EShopOnContainers mimarisi.
 
 Bu mimarinin sunucu tarafı bileşenleri, Azure hizmetlerine kolayca eşlenir.
 

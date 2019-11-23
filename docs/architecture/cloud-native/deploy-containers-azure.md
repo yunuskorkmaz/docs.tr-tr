@@ -1,5 +1,5 @@
 ---
-title: Azure 'da kapsayıcı dağıtma
+title: Azure’da kapsayıcıları dağıtma
 description: Azure Container Registry, Azure Kubernetes hizmeti ve Azure Dev Spaces Azure 'da kapsayıcı dağıtma.
 ms.date: 06/30/2019
 ms.openlocfilehash: 6d95db26b6a45dd6825c88693308ffe90d1ed071
@@ -9,7 +9,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183268"
 ---
-# <a name="deploying-containers-in-azure"></a>Azure 'da kapsayıcı dağıtma
+# <a name="deploying-containers-in-azure"></a>Azure’da kapsayıcıları dağıtma
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -21,8 +21,8 @@ Azure Container Registry (ACR), tüm kapsayıcı dağıtımlarınız için gör�
 
 Azure portalını veya [Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli) veya [PowerShell araçlarını](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell)kullanarak [bir kapsayıcı kayıt defteri oluşturursunuz](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal) . Yeni bir kapsayıcı kayıt defteri oluşturmak için yalnızca bir Azure aboneliği, bir kaynak grubu ve benzersiz bir ad gerekir. Şekil 3-11, kayıt defteri *adı*. azurecr.io adresinde barındırılacak bir kayıt defteri oluşturmaya yönelik temel seçenekleri gösterir.
 
-![Kapsayıcı kayıt defteri](./media/create-container-registry.png)
-**Şekil 3-11**oluşturun. Kapsayıcı kayıt defteri oluştur
+![](./media/create-container-registry.png)
+**şekil 3-11**kapsayıcı kayıt defteri oluşturun. Kapsayıcı kayıt defteri oluştur
 
 Bir kayıt defteri oluşturduktan sonra, kullanabilmeniz için kimlik doğrulaması yapmanız gerekir. Genellikle, Azure CLı komutunu kullanarak kayıt defterinde oturum açmanız gerekir:
 
@@ -36,7 +36,7 @@ Azure Container Registry bir kayıt defteri oluşturduktan sonra, kapsayıcı g�
 docker tag mycontainer myregistry.azurecr.io/mycontainer:v1
 ```
 
-Görüntüyü etiketledikten sonra, görüntüyü ACR örneğinize `docker push` göndermek için komutunu kullanın.
+Görüntüyü etiketledikten sonra, görüntüyü ACR örneğinize göndermek için `docker push` komutunu kullanın.
 
 ```console
 docker push myregistry.azurecr.io/mycontainer:v1
@@ -57,7 +57,7 @@ Kapsayıcı tabanlı uygulamanız birden çok kapsayıcı içeriyorsa, Kubernete
 Azure 'daki kaynakların çoğunda olduğu gibi, portalı kullanarak Azure Kubernetes kümeleri oluşturabilir veya Helm ya da Terkform gibi komut satırı araçları ya da altyapı Otomasyonu araçlarını kullanabilirsiniz. Yeni bir kümeye başlamak için aşağıdaki bilgileri sağlamanız gerekir:
 
 - Azure aboneliği
-- Resource group
+- Kaynak grubu
 - Kubernetes küme adı
 - Bölge
 - Kubernetes sürümü
@@ -67,8 +67,8 @@ Azure 'daki kaynakların çoğunda olduğu gibi, portalı kullanarak Azure Kuber
 
 Bu bilgiler başlamak için yeterlidir. Azure portalında oluşturma sürecinin bir parçası olarak, kümenizin aşağıdaki özelliklerine ilişkin seçenekleri de yapılandırabilirsiniz:
 
-- Ölçek
-- Kimlik doğrulaması
+- Ölçeklendir
+- Kimlik Doğrulama
 - Ağ Oluşturma
 - İzleme
 - Etiketler
@@ -92,16 +92,16 @@ Azure Dev Spaces ile çalışma işlemi aşağıdaki adımları içerir:
 3. Bir alt dev alanı yapılandırın (sisteminizin kendi sürümünüz için).
 4. Geliştirme alanına bağlanın.
 
-Bu adımların tümü, Azure CLI ve yeni `azds` komut satırı araçları kullanılarak gerçekleştirilebilir. Örneğin, belirli bir Kubernetes kümesi için yeni bir Azure dev alanı oluşturmak için, şöyle bir komut kullanacaksınız:
+Bu adımların tümü, Azure CLı ve yeni `azds` komut satırı araçları kullanılarak gerçekleştirilebilir. Örneğin, belirli bir Kubernetes kümesi için yeni bir Azure dev alanı oluşturmak için, şöyle bir komut kullanacaksınız:
 
 ```azurecli
 az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster
 ```
 
-Ardından, uygulamayı çalıştırmak için gerekli `azds prep` Docker ve hele grafik varlıklarını oluşturmak için komutunu kullanabilirsiniz. Ardından, kodunuzu kullanarak `azds up`aks 'de çalıştırırsınız. Bu komutu ilk kez çalıştırdığınızda helk grafiği yüklenir ve kapsayıcı (ler), yönergelerinizi temel alarak oluşturulup dağıtılır. İlk kez çalıştırıldığında bu işlem birkaç dakika sürebilir. Bununla birlikte, değişiklikleri yaptıktan sonra kendi alt geliştirme alanınıza `azds space select` bağlanarak bunları yalıtılmış alt geliştirme alanınızda dağıtıp hata ayıklaması yapabilirsiniz. Geliştirme alanınızı çalışır durumda yaptıktan sonra, `azds up` komutu yeniden yayımlayarak bu güncelleştirme gönderebilirsiniz ya da Visual Studio 'da veya Visual Studio Code yerleşik araçları kullanabilirsiniz. VS Code, geliştirme alanınıza bağlanmak için komut paletini kullanın. Şekil 3-12, Visual Studio 'da Azure Dev Spaces kullanarak Web uygulamanızı nasıl başlatacağınızı gösterir.
+Daha sonra, uygulamayı çalıştırmak için gerekli Docker ve Helu grafik varlıklarını oluşturmak için `azds prep` komutunu kullanabilirsiniz. Daha sonra `azds up`kullanarak kodu AKS 'de çalıştırırsınız. Bu komutu ilk kez çalıştırdığınızda helk grafiği yüklenir ve kapsayıcı (ler), yönergelerinizi temel alarak oluşturulup dağıtılır. İlk kez çalıştırıldığında bu işlem birkaç dakika sürebilir. Bununla birlikte, değişiklik yaptıktan sonra, `azds space select` kullanarak kendi alt geliştirme alanınıza bağlanabilir ve ardından, bunları yalıtılmış alt geliştirme alanınızda dağıtabilir ve hatalarını ayıklayabilirsiniz. Geliştirme alanınızı çalışır durumda yaptıktan sonra, `azds up` komutunu yeniden yayımlayarak veya Visual Studio veya Visual Studio Code yerleşik araçları ' nı kullanarak bu güncelleştirme gönderebilirsiniz. VS Code, geliştirme alanınıza bağlanmak için komut paletini kullanın. Şekil 3-12, Visual Studio 'da Azure Dev Spaces kullanarak Web uygulamanızı nasıl başlatacağınızı gösterir.
 
-![Visual Studio](./media/azure-dev-spaces-visual-studio-launchsettings.png)
-**Şekil 3-12**' de Azure dev Spaces bağlanın. Visual Studio 'da Azure Dev Spaces bağlanma
+Visual Studio 'da Azure Dev Spaces Connect](./media/azure-dev-spaces-visual-studio-launchsettings.png)
+**şekil 3-12**![. Visual Studio 'da Azure Dev Spaces bağlanma
 
 ## <a name="references"></a>Referanslar
 

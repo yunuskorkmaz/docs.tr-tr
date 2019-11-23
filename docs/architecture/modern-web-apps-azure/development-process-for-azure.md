@@ -16,7 +16,7 @@ ms.locfileid: "70849581"
 > _"Bulut sayesinde, bireyler ve küçük işletmeler parmaklarını yeniden düzenleyebilir ve kurumsal sınıf Hizmetleri anında ayarlayabilir."_  
 > _-Roy Stephan_
 
-## <a name="vision"></a>Vision
+## <a name="vision"></a>Görsel
 
 > *Visual Studio veya DotNet CLı ve Visual Studio Code ya da seçtiğiniz düzenleyiciyi kullanarak istediğiniz şekilde iyi tasarlanmış ASP .NET Core Uygulamaları geliştirin.*
 
@@ -34,7 +34,7 @@ Tam ve güçlü bir IDE ya da hafif ve çevik bir düzenleyici tercih etmeksizin
 
 [Visual Studio 2017 İndir](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
-**Visual Studio Code ve DotNet CLI** (Mac için platformlar arası araçlar, Linux ve Windows). Herhangi bir geliştirme dilini destekleyen hafif ve platformlar arası bir düzenleyiciyi tercih ediyorsanız, Microsoft Visual Studio kodu ve DotNet CLı kullanabilirsiniz. Bu ürünler, geliştirici iş akışını kolaylaştıran basit ancak sağlam bir deneyim sağlar. Ayrıca, Visual Studio Code C\# ve Web geliştirme için uzantıları destekler, bu da düzenleyici içinde IntelliSense ve kısayol görevleri sağlar.
+**Visual Studio Code ve DotNet CLI** (Mac, Linux ve Windows için platformlar arası araçlar). Herhangi bir geliştirme dilini destekleyen hafif ve platformlar arası bir düzenleyiciyi tercih ediyorsanız, Microsoft Visual Studio kodu ve DotNet CLı kullanabilirsiniz. Bu ürünler, geliştirici iş akışını kolaylaştıran basit ancak sağlam bir deneyim sağlar. Ayrıca, Visual Studio Code, düzenleyici içinde IntelliSense ve kısayol görevleri sağlayan C\# ve Web geliştirme için uzantıları destekler.
 
 [.NET Core SDK indirin](https://dotnet.microsoft.com/download)
 
@@ -88,11 +88,11 @@ ASP.NET Core uygulamanızı Azure 'a dağıtmak için geliştirme, aksi takdirde
 
 Kodunuzu ekibinizle paylaşmaya her seferinde, değişikliklerinizi yerel kaynak deponuzdan takımınızın paylaşılan kaynak deposuna göndermeniz gerekir. Özel bir dalda çalışıyorsanız, bu adım genellikle kodunuzun paylaşılan bir dala birleştirilmesi (Belki de bir [çekme isteği](https://docs.microsoft.com/azure/devops/git/pull-requests)aracılığıyla) içerir.
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Adım 3. Yapı sunucusu: Sürekli tümleştirme. derleme, test, paket
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Adım 3: Yapı sunucusu: sürekli tümleştirme. derleme, test, paket
 
 Paylaşılan uygulama kodu deposuna her yeni bir kayıt yapıldığında yapı sunucusunda yeni bir derleme tetiklenir. CI sürecinin bir parçası olarak, bu derleme uygulamayı tam olarak derleyip her şeyin beklendiği gibi çalıştığını doğrulamak için otomatikleştirilmiş testleri çalıştırmalıdır. CI işleminin nihai sonucu, dağıtıma hazırlanmak üzere Web uygulamasının paketlenmiş bir sürümü olmalıdır.
 
-#### <a name="step-4-build-server-continuous-delivery"></a>4\. adımı. Yapı sunucusu: Sürekli teslim
+#### <a name="step-4-build-server-continuous-delivery"></a>4\. adımı. Yapı sunucusu: sürekli teslim
 
 Derleme başarılı olduktan sonra, CD işlemi oluşturulan derleme yapıtlarını seçer. Bu, bir Web dağıtımı paketi içerir. Yapı sunucusu bu paketi yeni oluşturulan bir hizmet ile değiştirerek Azure App Service ' a dağıtır. Genellikle bu adım bir hazırlama ortamını hedefler, ancak bazı uygulamalar bir CD işlemi aracılığıyla doğrudan üretime dağıtılır.
 
@@ -110,5 +110,5 @@ Web uygulaması çalışırken, uygulamanın durumunu izleyebilir ve tanılama v
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
->[Önceki](test-asp-net-core-mvc-apps.md)İleri
->[](azure-hosting-recommendations-for-asp-net-web-apps.md)
+>[Önceki](test-asp-net-core-mvc-apps.md)
+>[İleri](azure-hosting-recommendations-for-asp-net-web-apps.md)

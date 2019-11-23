@@ -1,14 +1,13 @@
 ---
 title: WCF geliştiricileri için gRPC, sözlüklere yönelik prototip haritaları
 description: Prototiplerinin göstermek için nasıl kullanılacağını anlayın. NET ' in Sözlük türleri.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: aef6b0f378e7a63f362ec42642cae15b32d49a08
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 8b4f29daa263f329dc533d3ddc596d0f47c1b6e0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846331"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967421"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>Protobuf sözlük eşlemeleri
 

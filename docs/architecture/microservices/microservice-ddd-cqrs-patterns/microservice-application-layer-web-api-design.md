@@ -35,7 +35,7 @@ Ayrıntılı bir şekilde ele almak için başka bir kılavuz alır. Bu nedenle 
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **SAĞLAM Temel OOP Ilkeleri** \
+- **SOLID: temel OOP ilkeleri** \
   <https://deviq.com/solid/>
 
 - **Denetim kapsayıcıları ve bağımlılık ekleme deseninin Inversion 'ı** \
@@ -45,5 +45,5 @@ Ayrıntılı bir şekilde ele almak için başka bir kılavuz alır. Bu nedenle 
   <https://ardalis.com/new-is-glue>
 
 > [!div class="step-by-step"]
-> [Önceki](nosql-database-persistence-infrastructure.md)İleri
-> [](microservice-application-layer-implementation-web-api.md)
+> [Önceki](nosql-database-persistence-infrastructure.md)
+> [İleri](microservice-application-layer-implementation-web-api.md)

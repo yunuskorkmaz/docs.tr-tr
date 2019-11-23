@@ -12,7 +12,7 @@ ms.locfileid: "72321183"
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF Test İstemcisi (WcfTestClient.exe)
 Windows Communication Foundation (WCF) test Istemcisi (WcfTestClient. exe), kullanıcıların test parametreleri girmesini, bu girişi hizmete göndermesini ve hizmetin geri gönderdiği yanıtı görüntülemesini sağlayan bir GUI aracıdır. WCF hizmet ana bilgisayarı ile birleştirildiğinde sorunsuz bir hizmet testi deneyimi sağlar.
 
-Genellikle WCF test Istemcisini (WcfTestClient. exe) şu konumda bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`-topluluk, hangi Visual Studio düzeyine bağlı olarak "Kurumsal", "profesyonel" veya "topluluk" olabilir.
+Genellikle WCF test Istemcisini (WcfTestClient. exe) şu konumda bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` topluluk, hangi Visual Studio düzeyine bağlı olarak "Kurumsal", "profesyonel" veya "topluluk" olabilir.
 
 ## <a name="scenarios-for-using-test-client"></a>Test Istemcisi kullanma senaryoları
 
@@ -73,7 +73,7 @@ Hizmet için sözleşmeyi oluştururken belirli bir işlemi tek yönlü olarak b
 
 Bir hizmet işleminin sekmesindeki **Yeni bir ara sunucu Başlat** onay kutusu, oturum desteğini yapmanızı sağlar. Bu kutu varsayılan olarak temizlenir.
 
-Belirli bir işlem (veya aynı hizmet uç noktasındaki başka bir işlem) için test parametreleri girdiğinizde ve onay kutusuyla birden çok kez **çağır** ' a tıkladığınızda, bu işlemler bir ara sunucu paylaşır ve hizmet durumu birden çok kez kalıcıdır operasyonları.
+Belirli bir işlem (ya da aynı hizmet uç noktasındaki başka bir işlem) için test parametreleri girdiğinizde ve onay kutusuyla birden çok kez **çağır** ' a tıkladığınızda, bu işlemler bir ara sunucu paylaşır ve hizmet durumu birden çok işlem arasında kalıcı hale getirilir.
 
 **Yeni bir ara sunucu Başlat** onay kutusu işaretliyse, her **Invoke**için yeni bir ara sunucu başlatılır, önceki oturum senaryosu sonlandırılır ve hizmet durumu sıfırlanır.
 
@@ -103,7 +103,7 @@ Ara sunucu oluşturma, ikili derleme veya hizmet çağırma sırasında, düzenl
 
 #### <a name="persist-client-configuration"></a>Istemci yapılandırmasını kalıcı yap
 
-**Araçlar**->**seçenekleri**->**istemci yapılandırma** sekmesi, varsayılan olarak etkinleştirilen **Hizmetler seçeneği başlatılırken her zaman yeniden oluştur yapılandırmasını** içerir. Bu seçenek, WCF test Istemcisi 'nin bir hizmeti yükleyeceği her seferinde, en son hizmet sözleşmesi ve Service App. config dosyalarına göre bir yapılandırma dosyasını yeniden oluşturur.
+**Araçlar**->**Seçenekler**->**istemci yapılandırması** sekmesi, varsayılan olarak etkinleştirilen hizmetler seçeneği **başlatılırken her zaman yeniden oluştur yapılandırmasını** içerir. Bu seçenek, WCF test Istemcisi 'nin bir hizmeti yükleyeceği her seferinde, en son hizmet sözleşmesi ve Service App. config dosyalarına göre bir yapılandırma dosyasını yeniden oluşturur.
 
 WCF hizmetiniz için istemci yapılandırmasını düzenlediyseniz ve hizmetinize hata ayıklamak için her zaman bu güncelleştirilmiş dosyayı kullanmak istiyorsanız, yeniden **Oluştur** seçeneğinin işaretini kaldırabilirsiniz. Bunu yaparak, hizmeti güncelleştirdiğinizde ve WCF test Istemcisini yeniden açtığınızda bile, güncelleştirilmiş hizmete bağlı olarak bir yeniden üretilme yerine, Client. dll. config dosyası önceden güncelleştirmiş olursunuz.
 
@@ -112,7 +112,7 @@ Ancak, yeniden üretilen ara sunucu ile tutarlı olması için yapılandırma do
 > [!CAUTION]
 > İstemci yapılandırma dosyasını değiştirdiyseniz ve gelecekte yeniden kullanmayı seçerseniz, dosyayı aşağıdaki konumda bulabilirsiniz:
 >
-> \Documents and Settings @ no__t-0 [Kullanıcı hesabı] \Belgelerim\test Istemci projeleri.
+> \Documents and Settings\\[Kullanıcı hesabı] \Belgelerim\test Istemci projeleri.
 >
 > İstemci yapılandırma dosyasına depolanan güncelleştirilmiş kimlik bilgileri, bu klasörün Access Control listesi (ACL) tarafından korunur.
 
@@ -142,9 +142,9 @@ Ara sunucu oluşturma, ikili derleme veya hizmet çağırma sırasında, bir hiz
 
 ## <a name="location-of-files-generated-by-the-test-client"></a>Test Istemcisi tarafından oluşturulan dosyaların konumu
 
-Varsayılan olarak, WCF test Istemcisi oluşturulan istemci kodunu ve yapılandırma dosyalarını "%appdata%\Local\temp\Test Istemci projeleri" klasöründe depolar. Bu klasör, WCF test Istemcisi çıktıktan sonra silinir. Bir yapılandırma dosyası WCF test Istemcisinde değiştirilirse ve **Hizmetler başlatılırken her zaman** yapılandırmayı yeniden oluştur seçeneği devre dışı bırakılmışsa, değiştirilen dosya "My Documents\mediconfig" klasörüne, eşleme Ile "My belgelerimin test istemci projeleri" altına kopyalanır ( meta veri-adres-dosya-adı) XML dosyası bir dizin olarak.
+Varsayılan olarak, WCF test Istemcisi oluşturulan istemci kodunu ve yapılandırma dosyalarını "%appdata%\Local\temp\Test Istemci projeleri" klasöründe depolar. Bu klasör, WCF test Istemcisi çıktıktan sonra silinir. Bir yapılandırma dosyası WCF test Istemcisinde değiştirilirse ve **Hizmetler başlatılırken her zaman** yapılandırmayı yeniden oluştur seçeneği devre dışı bırakılmışsa, değiştirilen dosya, dizin olarak eşleme (meta veri-adres-dosya adı) XML dosyası olan "gizli dizi testi istemci Projelerim" altındaki "CachedConfig" klasörüne kopyalanır.
 
-Ayrıca, bir komut satırında WCF test Istemcisini başlatabilir, oluşturulan dosyaları depolamak için yeni bir yol belirtmek üzere `/ProjectPath` anahtarını kullanın veya varsayılan konumu geri yüklemek için `/RestoreProjectPath` anahtarını kullanın. Sözdizimi aşağıdaki gibidir:
+Ayrıca, WCF test Istemcisini bir komut satırında başlatabilir, oluşturulan dosyaları depolamak için yeni bir yol belirtmek üzere `/ProjectPath` anahtarını kullanabilir veya varsayılan konumu geri yüklemek için `/RestoreProjectPath` anahtarını kullanabilirsiniz. Sözdizimi aşağıdaki gibidir:
 
 `wcfTestClient.exe /ProjectPath [desired location]`
 
@@ -166,7 +166,7 @@ WCF test Istemcisi tarafından desteklenen özelliklerin listesi aşağıda veri
 
 WCF test Istemcisi tarafından desteklenmeyen özelliklerin listesi aşağıda verilmiştir:
 
-- Türler: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, <xref:System.Xml.Serialization.IXmlSerializable> arabirimini uygulayan, ilgili <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> özniteliği ve <xref:System.Xml.Linq.XDocument> ve <xref:System.Xml.Linq.XElement> türleri ile ADO.NET <xref:System.Data.DataTable> türü gibi türler.
+- Türler: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, ilgili <xref:System.Xml.Serialization.IXmlSerializable> özniteliği ve <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> ve <xref:System.Xml.Linq.XDocument> türleri ve ADO.NET <xref:System.Xml.Linq.XElement> türü de dahil olmak üzere <xref:System.Data.DataTable> arabirimini uygulayan türler.
 
 - Çift yönlü sözleşme.
 

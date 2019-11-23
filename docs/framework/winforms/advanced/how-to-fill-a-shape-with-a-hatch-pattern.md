@@ -17,10 +17,10 @@ ms.lasthandoff: 10/15/2019
 ms.locfileid: "72320066"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Nasıl yapılır: Bir Şekli Tarama Deseniyle Doldurma
-İki renkten bir tarama kalıbı yapılır: biri arka plan ve diğeri arka plan üzerinde model oluşturan satırlar için. Kapalı bir şekli tarama düzeniyle doldurmanız için <xref:System.Drawing.Drawing2D.HatchBrush> nesnesi kullanın. Aşağıdaki örnek, bir elipsin bir tarama düzeniyle nasıl doldurulacağını göstermektedir:  
+İki renkten bir tarama kalıbı yapılır: biri arka plan ve diğeri arka plan üzerinde model oluşturan satırlar için. Kapalı bir şekli tarama düzeniyle doldurmanız için <xref:System.Drawing.Drawing2D.HatchBrush> nesnesini kullanın. Aşağıdaki örnek, bir elipsin bir tarama düzeniyle nasıl doldurulacağını göstermektedir:  
   
 ## <a name="example"></a>Örnek  
- @No__t-0 Oluşturucusu üç bağımsız değişken alır: tarama stili, tarama çizgisinin rengi ve arka plan rengi. Tarama stili bağımsız değişkeni <xref:System.Drawing.Drawing2D.HatchStyle> numaralandırmasından herhangi bir değer olabilir. @No__t-0 numaralandırmasında 50 taneden fazla öğe var; Bu öğelerin bazıları aşağıdaki listede gösteriliyor:  
+ <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> Oluşturucu üç bağımsız değişken alır: tarama stili, tarama çizgisinin rengi ve arka plan rengi. Tarama stili bağımsız değişkeni <xref:System.Drawing.Drawing2D.HatchStyle> numaralandırmasından herhangi bir değer olabilir. <xref:System.Drawing.Drawing2D.HatchStyle> numaralandırmasında 50 taneden fazla öğe var; Bu öğelerin bazıları aşağıdaki listede gösteriliyor:  
   
 - <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
   
@@ -41,8 +41,8 @@ ms.locfileid: "72320066"
  [!code-csharp[System.Drawing.UsingABrush#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnek, Windows Forms kullanımı için tasarlanmıştır ve <xref:System.Windows.Forms.Control.Paint> olay işleyicisinin parametresi olan <xref:System.Windows.Forms.PaintEventArgs> @ no__t-1 ' i gerektirir.  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Yukarıdaki örnek, Windows Forms kullanımı için tasarlanmıştır ve <xref:System.Windows.Forms.Control.Paint> olay işleyicisinin bir parametresi olan <xref:System.Windows.Forms.PaintEventArgs>`e`gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

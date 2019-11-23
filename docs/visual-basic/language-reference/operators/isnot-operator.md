@@ -1,21 +1,21 @@
 ---
-title: IsNot İşleci (Visual Basic)
+title: IsNot İşleci
 ms.date: 07/20/2015
 f1_keywords:
 - vb.isnot
 helpviewer_keywords:
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-ms.openlocfilehash: 32e8f9532244679d2994b0e3d98279d75f7e77b4
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 616506f64d20e1f150b443433f1b69040136a5ba
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701045"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336070"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot İşleci (Visual Basic)
 
-İki nesne başvuru değişkenini karşılaştırır.
+Compares two object reference variables.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -24,21 +24,21 @@ result = object1 IsNot object2
 ```
 
 ## <a name="parts"></a>Bölümler
- `result` gereklidir. @No__t-0 değeri.
+ `result` Required. A `Boolean` value.
 
- `object1` gereklidir. Herhangi bir `Object` değişkeni veya ifadesi.
+ `object1` Required. Any `Object` variable or expression.
 
- `object2` gereklidir. Herhangi bir `Object` değişkeni veya ifadesi.
+ `object2` Required. Any `Object` variable or expression.
 
 ## <a name="remarks"></a>Açıklamalar
- @No__t-0 işleci, iki nesne başvurusunun farklı nesnelere başvuracağını belirler. Ancak, değer karşılaştırmaları gerçekleştirmez. @No__t-0 ve `object2` her ikisi de tam aynı nesne örneğine başvurur, `result` `False`; Aksi takdirde, @no__t 4 `True` ' tir.
+ The `IsNot` operator determines if two object references refer to different objects. However, it does not perform value comparisons. If `object1` and `object2` both refer to the exact same object instance, `result` is `False`; if they do not, `result` is `True`.
 
- `IsNot`, `Is` işlecinin tersidir. @No__t-0 ' nın avantajı, okunması zor olabilecek `Not` ve `Is` ile garip söz dizimini önlemenize olanak sağlar.
+ `IsNot` is the opposite of the `Is` operator. The advantage of `IsNot` is that you can avoid awkward syntax with `Not` and `Is`, which can be difficult to read.
 
- @No__t-0 ve `IsNot` işleçlerini kullanarak hem erken hem de geç bağlantılı nesneleri test edebilirsiniz.
+ You can use the `Is` and `IsNot` operators to test both early-bound and late-bound objects.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, aynı karşılaştırmayı gerçekleştirmek için hem `Is` işlecini hem de `IsNot` işlecini kullanır.
+ The following code example uses both the `Is` operator and the `IsNot` operator to accomplish the same comparison.
 
  [!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]
 
@@ -46,5 +46,5 @@ result = object1 IsNot object2
 
 - [Is İşleci](is-operator.md)
 - [TypeOf İşleci](typeof-operator.md)
-- [Visual Basic operatör önceliği](operator-precedence.md)
+- [Operator Precedence in Visual Basic](operator-precedence.md)
 - [Nasıl yapılır: İki Nesnenin Aynı Olup Olmadığını Test Etme](../../programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)

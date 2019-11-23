@@ -17,12 +17,12 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699178"
 ---
-# <a name="trace-element"></a>\<trace > öğesi
+# <a name="trace-element"></a>\<Trace > öğesi
 İzleme iletilerini toplayıp depolayan, depolayan ve yönlendiren dinleyicileri içerir.  
   
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<trace >**  
+[ **System. diagnostics\<** &nbsp;&nbsp;>](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<izleme >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -61,7 +61,7 @@ ms.locfileid: "71699178"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<listeners >](listeners-element-for-trace.md)|İletileri toplayan, depolayan ve yönlendiren bir dinleyici belirtir.|  
+|[\<dinleyicileri >](listeners-element-for-trace.md)|İletileri toplayan, depolayan ve yönlendiren bir dinleyici belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71699178"
 |`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `MyListener` dinleyicisini `Listeners` koleksiyonuna eklemek için `<trace>` öğesinin nasıl kullanılacağını gösterir. `MyListener` `MyListener.log` adlı bir dosya oluşturur ve çıktıyı dosyaya yazar. @No__t-0 özniteliği, izleme dinleyicisi iş parçacığı güvenli ise, genel kilidin kullanılmasına neden olan `false` olarak ayarlanır. @No__t-0 özniteliği, <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> yönteminin çağrılıp çağrılmadığına bakılmaksızın İzleme dinleyicisinin dosyaya yazmasına neden olan `true` olarak ayarlanır. @No__t-0 özniteliği 0 (sıfır) olarak ayarlanır ve bu, <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> yöntemi çağrıldığında dinleyicinin sıfır boşluk girintilemesini sağlar.  
+ Aşağıdaki örnek, `Listeners` koleksiyonuna dinleyici `MyListener` eklemek için `<trace>` öğesinin nasıl kullanılacağını gösterir. `MyListener`, `MyListener.log` adlı bir dosya oluşturur ve çıktıyı dosyaya yazar. `useGlobalLock` özniteliği, izleme dinleyicisi iş parçacığı güvenli ise, genel kilidin kullanılmasına neden olan `false`olarak ayarlanır. `autoflush` özniteliği `true`olarak ayarlanır, bu da İzleme dinleyicisinin <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> yönteminin çağrılmasının ne olursa olsun dosyaya yazmasına neden olur. `indentsize` özniteliği 0 (sıfır) olarak ayarlanır ve bu, <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> yöntemi çağrıldığında dinleyicinin sıfır boşluk girintilemesini sağlar.  
   
 ```xml  
 <configuration>  

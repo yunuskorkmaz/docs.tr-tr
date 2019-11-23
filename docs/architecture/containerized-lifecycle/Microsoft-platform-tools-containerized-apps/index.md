@@ -27,7 +27,7 @@ Tablo 3-1, Kapsayıcılı Docker uygulamaları için Microsoft DevOps 'un, Basit
 
 **Tablo 3-1.** DevOps iş akışları, herhangi bir teknolojiye açık
 
-| Ana bilgisayar | Microsoft teknolojileri | Üçüncü taraf — Azure takılabilir |
+| Konak | Microsoft teknolojileri | Üçüncü taraf — Azure takılabilir |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Docker uygulamaları için platform   | • Microsoft Visual Studio ve Visual Studio Code<br /> • .NET<br /> • Kubernetes hizmeti (AKS) Microsoft Azure<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • Herhangi bir kod Düzenleyicisi (örneğin, alt limon)<br /> • Herhangi bir dil (node. js, Java, go vb.)<br /> • Herhangi bir Orchestrator ve Scheduler<br /> • Herhangi bir Docker kayıt defteri<br /> |
 | Docker uygulamaları için DevOps     | • Azure DevOps Services<br /> • Microsoft Team Foundation Server<br /> • Azure Kubernetes hizmeti (AKS)<br /> • Azure Service Fabric<br /> | • GitHub, git, alt sürüm, vb.<br /> • Jenkins, Chef, Pupevcil hayvan, hız, CircleCI, Traviscı vb.<br /> • Şirket içi Docker Datacenter, Docker Sısınma, Mesos DC/OS, Kubernetes, vb.<br /> |
@@ -49,7 +49,7 @@ Kapsayıcılı Docker uygulamalarına yönelik Microsoft platformu ve araçları
 
     Linux komutlarına alışkın olsanız bile, bu Linux alt sistemi özelliği üzerinde çalışan bir Linux alt sistemi komut satırı ve Products (Docker, Kubernetes...) istemcileri ile Microsoft Windows ve PowerShell 'i kullanarak kapsayıcı uygulamalarınızı yönetebilirsiniz. Bu kitabın devamındaki en sevdiğiniz Microsoft Windows işletim sistemini kullanarak Linux alt sistemi altında bu araçları kullanma hakkında daha fazla bilgi edineceksiniz.
 
-  - **Açık kaynaklı araçlar** , aks, düzenleme ALTYAPıSıNıN Standart API uç noktalarını kullanıma sunduğundan, en popüler araçlar aks ile uyumludur ve çoğu durumda, Görselleştiriciler, izleme, komut satırı araçları dahil olmak üzere kutudan çıkar. ve hatta gelecekteki araçlar kullanılabilir hale gelir.
+  - **Açık kaynaklı araçlar** , aks, düzenleme ALTYAPıSıNıN Standart API uç noktalarını kullanıma sunduğundan, en popüler araçlar aks ile uyumludur ve çoğu durumda, daha fazla durumda (Görselleştiriciler, izleme, komut satırı araçları gibi) ve hatta kullanıma sunulan araçlar da dahil olmak üzere bu kutudan çıkar.
 
   - **Azure izleyici** , Azure 'un üretim ortamınızın her açısını izlemeye yönelik çözümüdür. Uygulamadan sistem tarafından oluşturulan günlük verilerini alabilmeniz için SDK 'sını hizmetlerinize ayarlayarak üretim Docker uygulamalarını izleyebilirsiniz.
 

@@ -90,7 +90,7 @@ Aşağıdaki karar tablosu, geleneksel bir Web uygulaması ve SPA arasında seç
 | **Çarpan**                                           | **Geleneksel Web uygulaması** | **Tek Sayfalı Uygulama** |
 | ---------------------------------------------------- | ----------------------- | --------------------------- |
 | JavaScript/TypeScript ile gerekli takım hakkında benzerlik | **En az**             | **Gerekli**                |
-| Betik olmadan destek tarayıcıları                   | **Destek**           | **Desteklenmiyor**           |
+| Betik olmadan destek tarayıcıları                   | **Destekleniyor**           | **Desteklenmiyor**           |
 | En az Istemci tarafı uygulama davranışı             | **İyi uygun**         | **Gereğinden fazla**                |
 | Zengin, karmaşık kullanıcı arabirimi gereksinimleri            | **Az**             | **İyi uygun**             |
 

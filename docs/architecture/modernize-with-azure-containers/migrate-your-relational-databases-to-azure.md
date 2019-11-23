@@ -112,11 +112,11 @@ Azure veritabanı geçiş hizmeti 'ni kullanarak veritabanlarının nasıl geçi
 
     <https://channel9.msdn.com/Events/Build/2017/P4008>
 
-- **Bulutta SQL veritabanı 'na SQL Server veritabanı geçişi**
+- **SQL veritabanı bulutta SQL Server veritabanını geçirme**
 
     <https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate>
 
-- **Azure SQL veritabanı**
+- **Azure SQL Veritabanı**
 
     <https://azure.microsoft.com/services/sql-database/?v=16.50>
 

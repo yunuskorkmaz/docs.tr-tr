@@ -22,19 +22,19 @@ sgen [options]
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/a @ no__t-1ssembly @ no__t-2:** _dosya adı_|*Dosya adı*tarafından belirtilen derlemede veya yürütülebilir dosyada bulunan tüm türler için serileştirme kodu oluşturur. Yalnızca bir dosya adı sağlanabilir. Bu bağımsız değişken yinelenir, son dosya adı kullanılır.|  
-|**/c @ no__t-1ompiler @ no__t-2:** _Seçenekler_|C# Derleyici geçirilecek seçeneklerini belirtir. Tüm csc.exe seçenekleri için derleyici geçirilen desteklenir. Bu derleme imzalanması gerektiğini belirtmek ve anahtar dosyasını belirtmek için kullanılabilir.|  
-|**/d @ no__t-1ebug @ no__t-2**|Bir hata ayıklayıcısı ile kullanılan bir görüntü oluşturur.|  
-|**/f @ no__t-1orce @ no__t-2**|Aynı ada sahip bir varolan derlemenin üzerine zorlar. Varsayılan değer **false**'dur.|  
+|**/a\[erleme\]:** _filename_|*Dosya adı*tarafından belirtilen derlemede veya yürütülebilir dosyada bulunan tüm türler için serileştirme kodu oluşturur. Yalnızca bir dosya adı sağlanabilir. Bu bağımsız değişken yinelenir, son dosya adı kullanılır.|  
+|**/c\[ompiler\]:** _Seçenekler_|C# Derleyici geçirilecek seçeneklerini belirtir. Tüm csc.exe seçenekleri için derleyici geçirilen desteklenir. Bu derleme imzalanması gerektiğini belirtmek ve anahtar dosyasını belirtmek için kullanılabilir.|  
+|**/d\[ebug\]**|Bir hata ayıklayıcısı ile kullanılan bir görüntü oluşturur.|  
+|**/f\[Orce\]**|Aynı ada sahip bir varolan derlemenin üzerine zorlar. Varsayılan değer **false**'dur.|  
 |**/Help veya/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|**/k @ no__t-1eep @ no__t-2**|Serileştirme derlemeye derlenen sonra oluşturulan kaynak dosyaların ve diğer geçici dosyaları silmeyi göstermez. Bu araç belirli bir tür için serileştirme kod oluşturmak olup olmadığını belirlemek için kullanılabilir.|  
-|**/n @ no__t-1ologo @ no__t-2**|Microsoft başlangıç başlığı görüntülenmesini engeller.|  
-|**/o @ no__t-1ut @ no__t-2:** _yol_|Oluşturulan derleme kaydedileceği dizini belirtir. **Not:**  Oluşturulan derleme adı giriş derleme artı "xmlSerializers.dll" adını oluşur.|  
-|**/p @ no__t-1roxytypes @ no__t-2**|XML Web hizmeti proxy türleri için yalnızca serileştirme kod oluşturur.|  
-|**/r @ no__t-1eference @ no__t-2:** _AssemblyFiles_|XML serileştirme gerektiren türleri tarafından başvurulan bir derleme belirtir. Virgülle ayrılmış birden çok derleme dosyaları kabul eder.|  
-|**/s @ no__t-1ilent @ no__t-2**|Başarı iletilerinin görüntülenmesini bastırır.|  
-|**/t @ no__t-1türü @ no__t-2:** _tür_|Belirtilen tür için yalnızca serileştirme kod oluşturur.|  
-|**/v @ no__t-1erboo @ no__t-2**|Hata ayıklama için ayrıntılı çıktı görüntüler. Listeler ile seri hale getirilemiyor hedef derleme türlerinden <xref:System.Xml.Serialization.XmlSerializer>.|  
+|**/k\[UT\]**|Serileştirme derlemeye derlenen sonra oluşturulan kaynak dosyaların ve diğer geçici dosyaları silmeyi göstermez. Bu araç belirli bir tür için serileştirme kod oluşturmak olup olmadığını belirlemek için kullanılabilir.|  
+|**/n\[ologo\]**|Microsoft başlangıç başlığı görüntülenmesini engeller.|  
+|**/o\[ut\]:** _yol_|Oluşturulan derleme kaydedileceği dizini belirtir. **Note:**  Oluşturulan derlemenin adı, giriş derlemesinin adından oluşur ve "Xmlserileştiriciler. dll".|  
+|**/p\[roxytypes\]**|XML Web hizmeti proxy türleri için yalnızca serileştirme kod oluşturur.|  
+|**/r\[eference\]:** _AssemblyFiles_|XML serileştirme gerektiren türleri tarafından başvurulan bir derleme belirtir. Virgülle ayrılmış birden çok derleme dosyaları kabul eder.|  
+|**/s\[ilent\]**|Başarı iletilerinin görüntülenmesini bastırır.|  
+|**/t\[türü\]:** _tür_|Belirtilen tür için yalnızca serileştirme kod oluşturur.|  
+|**/v\[erboo\]**|Hata ayıklama için ayrıntılı çıktı görüntüler. Listeler ile seri hale getirilemiyor hedef derleme türlerinden <xref:System.Xml.Serialization.XmlSerializer>.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  

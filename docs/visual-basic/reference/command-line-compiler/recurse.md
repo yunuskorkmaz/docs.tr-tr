@@ -22,7 +22,7 @@ Belirtilen dizinin ya da proje dizininin tüm alt dizinlerindeki kaynak kodu dos
 -recurse:[dir\]file  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `dir`  
  İsteğe bağlı. Aramanın başlamasını istediğiniz dizin. Belirtilmemişse, arama proje dizininde başlar.  
   
@@ -30,10 +30,10 @@ Belirtilen dizinin ya da proje dizininin tüm alt dizinlerindeki kaynak kodu dos
  Gerekli. Aranacak dosya (lar). Joker karakterlere izin verilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 kullanmadan proje dizinindeki tüm eşleşen dosyaları derlemek için dosya adında joker karakterler kullanabilirsiniz. Çıkış dosyası adı belirtilmemişse, derleyici, çıktı dosyasının adını işlenen ilk girdi dosyasında temel alır. Bu genellikle alfabetik olarak görüntülendiklerinde derlenen dosyalar listesindeki ilk dosyadır. Bu nedenle, `-out` seçeneğini kullanarak bir çıkış dosyası belirtmek en iyisidir.  
+ `-recurse`kullanmadan proje dizinindeki tüm eşleşen dosyaları derlemek için dosya adında joker karakterler kullanabilirsiniz. Çıkış dosyası adı belirtilmemişse, derleyici, çıktı dosyasının adını işlenen ilk girdi dosyasında temel alır. Bu genellikle alfabetik olarak görüntülendiklerinde derlenen dosyalar listesindeki ilk dosyadır. Bu nedenle, `-out` seçeneğini kullanarak bir çıkış dosyası belirtmek en iyisidir.  
   
 > [!NOTE]
-> @No__t-0 seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> `-recurse` seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki komut, geçerli dizindeki tüm Visual Basic dosyalarını derler.  
@@ -42,7 +42,7 @@ Belirtilen dizinin ya da proje dizininin tüm alt dizinlerindeki kaynak kodu dos
 vbc *.vb  
 ```  
   
- Aşağıdaki komut, `Test\ABC` dizinindeki tüm Visual Basic dosyalarını ve altındaki tüm dizinleri derler ve ardından 1 @no__t üretir.  
+ Aşağıdaki komut, `Test\ABC` dizinindeki tüm Visual Basic dosyalarını ve altındaki tüm dizinleri derler ve sonra `Test.ABC.dll`oluşturur.  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  

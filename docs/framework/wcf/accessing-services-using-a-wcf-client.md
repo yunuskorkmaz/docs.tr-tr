@@ -54,9 +54,9 @@ Svcutil.exe <file1 [,file2]>
 > [!IMPORTANT]
 > Güvenli olmayan meta veri istekleri, güvenli olmayan herhangi bir ağ isteğiyle aynı şekilde bazı riskler ortaya çıkardığında: iletişim kurduğunuz uç noktanın kim olduğunu düşünmediği kesin değilse, aldığınız bilgiler kötü amaçlı bir hizmetten meta veriler olabilir.
 
-## <a name="add-service-reference-in-visual-studio"></a>Visual Studio 'da Hizmet Başvurusu Ekle
+## <a name="add-service-reference-in-visual-studio"></a>Visual Studio'da Hizmet Başvurusu ekleyin
 
- Hizmet çalışırken, WCF istemci proxy 'sini içerecek projeye sağ tıklayın ve @no__t **Ekle**-1**hizmet başvurusu**' nu seçin. **Hizmet başvurusu Ekle Iletişim kutusunda**, çağırmak istediğiniz hizmetin URL 'sini yazın ve **Git** düğmesine tıklayın. İletişim kutusunda belirttiğiniz adreste bulunan hizmetlerin bir listesi görüntülenir. Kullanılabilir sözleşmeleri ve işlemleri görmek için hizmete çift tıklayın, oluşturulan kod için bir ad alanı belirtin ve **Tamam** düğmesine tıklayın.
+ Hizmet çalışırken, WCF istemci proxy 'sini içerecek projeye sağ tıklayın ve > **hizmet başvurusu** **Ekle** ' yi seçin. **Hizmet başvurusu Ekle Iletişim kutusunda**, çağırmak istediğiniz hizmetin URL 'sini yazın ve **Git** düğmesine tıklayın. İletişim kutusunda belirttiğiniz adreste bulunan hizmetlerin bir listesi görüntülenir. Kullanılabilir sözleşmeleri ve işlemleri görmek için hizmete çift tıklayın, oluşturulan kod için bir ad alanı belirtin ve **Tamam** düğmesine tıklayın.
 
 ## <a name="example"></a>Örnek
  Aşağıdaki kod örneği, bir hizmet için oluşturulan bir hizmet sözleşmesini gösterir.
@@ -82,7 +82,7 @@ Public Interface ICalculator
 End Interface
 ```
 
- ServiceModel meta veri yardımcı programı aracı ve **hizmet başvurusu Ekle** Visual Studio 'DA aşağıdaki WCF istemci sınıfını oluşturur. Sınıfı, genel <xref:System.ServiceModel.ClientBase%601> sınıfından devralır ve `ICalculator` arabirimini uygular. Araç ayrıca `ICalculator` arabirimini de üretir (burada gösterilmez).
+ ServiceModel meta veri yardımcı programı aracı ve **hizmet başvurusu Ekle** Visual Studio 'DA aşağıdaki WCF istemci sınıfını oluşturur. Sınıfı, genel <xref:System.ServiceModel.ClientBase%601> sınıfından devralır ve `ICalculator` arabirimini uygular. Araç ayrıca `ICalculator` arabirimini de oluşturur (burada gösterilmez).
 
 ```csharp
 public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator

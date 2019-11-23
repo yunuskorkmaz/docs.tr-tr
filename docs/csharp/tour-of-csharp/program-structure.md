@@ -10,38 +10,38 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834165"
 ---
-# <a name="program-structure"></a>Program yapısı
+# <a name="program-structure"></a>Program Yapısı
 
-' Deki C# temel kurumsal kavramlar, ***Programlar***, ***ad alanları***, ***türler***, ***Üyeler***ve ***derlemelerdir***. C#programlar bir veya daha fazla kaynak dosyadan oluşur. Programlar, üyeleri içeren ve ad alanları halinde düzenlenebilen türleri bildirir. Sınıflar ve arabirimler tür örnekleridir. Alanlar, Yöntemler, Özellikler ve olaylar üye örnekleridir. C# Programlar derlendiğinde, fiziksel olarak derlemeler halinde paketlenir. Derlemeler, sırasıyla ***uygulama*** veya ***kitaplık***uygulanıp uygulamadığına bağlı olarak `.exe` veya `.dll` dosya uzantısına sahiptir.
+' Deki C# temel kurumsal kavramlar, ***Programlar***, ***ad alanları***, ***türler***, ***Üyeler***ve ***derlemelerdir***. C#programlar bir veya daha fazla kaynak dosyadan oluşur. Programlar, üyeleri içeren ve ad alanları halinde düzenlenebilen türleri bildirir. Sınıflar ve arabirimler tür örnekleridir. Alanlar, Yöntemler, Özellikler ve olaylar üye örnekleridir. C# Programlar derlendiğinde, fiziksel olarak derlemeler halinde paketlenir. Derlemeler, sırasıyla ***uygulama*** veya ***kitaplık***uygulanıp uygulamadığına bağlı olarak dosya uzantısına `.exe` veya `.dll`sahiptir.
 
-Örnek, `Acme.Collections` adlı bir ad alanında `Stack` adlı bir sınıf bildirir:
+Örnek, `Acme.Collections`adlı bir ad alanında `Stack` adlı bir sınıf bildirir:
 
 [!code-csharp[Stack](../../../samples/snippets/csharp/tour/program-structure/program.cs#L1-L34)]
 
-Bu sınıfın tam adı `Acme.Collections.Stack` ' dır. Sınıf birçok üye içerir: `top` adlı bir alan, `Push` ve `Pop` adlı iki yöntem ve `Entry` adlı bir iç içe sınıf. @No__t-0 sınıfı üç üye içerir: `next` adlı bir alan, `data` adlı alan ve bir Oluşturucu. Örneğin kaynak kodunun dosyada depolandığını varsayarak `acme.cs`, komut satırı
+Bu sınıfın tam nitelikli adı `Acme.Collections.Stack`. Sınıf birçok üye içerir: `top`adlı bir alan, `Push` ve `Pop`adlı iki yöntem ve `Entry`adlı bir iç içe sınıf. `Entry` sınıfı üç üye içerir: `next`adlı bir alan, `data`adlı bir alan ve bir Oluşturucu. Örneğin kaynak kodunun dosyada `acme.cs`, komut satırının
 
 ```console
 csc /t:library acme.cs
 ```
 
-örneği bir kitaplık (`Main` giriş noktası olmadan) olarak derler ve `acme.dll` adlı bir derleme oluşturur.
+örneği bir kitaplık (`Main` giriş noktası olmayan kod) olarak derler ve `acme.dll`adlı bir derleme oluşturur.
 
 > [!IMPORTANT]
 > Yukarıdaki örnekler, komut satırı C# derleyicisi olarak `csc` kullanır. Bu derleyici bir Windows yürütülebiliridir. Diğer platformlarda C# kullanmak Için .NET Core araçlarını kullanmanız gerekir. .NET Core ekosistemi, komut satırı yapılarını yönetmek için `dotnet` CLı kullanır. Buna bağımlılıkları yönetme ve C# derleyicinin çağrılması dahildir. .NET Core tarafından desteklenen platformlarda bu araçların tam açıklaması için [Bu öğreticiye](../../core/tutorials/using-with-xplat-cli.md) bakın.
 
 Derlemeler, ara dil (IL) yönergeleri biçiminde çalıştırılabilir kodu ve meta veri biçimindeki sembolik bilgileri içerir. Yürütülmeden önce, bir derlemedeki IL kodu, .NET ortak dil çalışma zamanının tam zamanında (JıT) derleyicisi tarafından otomatik olarak işlemciye özgü koda dönüştürülür.
 
-Bir derleme, hem kodu hem de meta verileri içeren bir dizi işlevin kendine açıklayıcı bir birimi olduğundan, içinde C#`#include` yönergeleri ve üst bilgi dosyaları gerekmez. Belirli bir derlemede yer alan ortak türler ve Üyeler, yalnızca program derlenirken bu derlemeye C# başvurarak bir programda kullanılabilir hale getirilir. Örneğin, bu program `acme.dll` derlemesinden `Acme.Collections.Stack` sınıfını kullanır:
+Bir derleme, hem kodu hem de meta verileri içeren bir işlevsellik birimi olduğundan, içinde C#`#include` yönergeler ve üst bilgi dosyaları gerekmez. Belirli bir derlemede yer alan ortak türler ve Üyeler, yalnızca program derlenirken bu derlemeye C# başvurarak bir programda kullanılabilir hale getirilir. Örneğin, bu program `acme.dll` derlemesinden `Acme.Collections.Stack` sınıfını kullanır:
 
 [!code-csharp[UsingStack](../../../samples/snippets/csharp/tour/program-structure/Program.cs#L38-L52)]
 
-Program dosyada depolanıyorsa `example.cs` `example.cs` derlendiğinde, Acme. dll derlemesine derleyicinin/r seçeneği kullanılarak başvurulabilir:
+Program dosyada depolanıyorsa, `example.cs` derlendiğinde `example.cs`Acme. dll derlemesine derleyicinin/r seçeneği kullanılarak başvurulabilir:
 
 ```console
 csc /r:acme.dll example.cs
 ```
 
-Bu, çalıştırıldığında, çıktıyı üreten `example.exe` adlı bir çalıştırılabilir derleme oluşturur:
+Bu, çalıştırılan `example.exe`adlı bir çalıştırılabilir derleme oluşturur ve bu, çalıştırıldığında çıktıyı üretir:
 
 ```console
 100

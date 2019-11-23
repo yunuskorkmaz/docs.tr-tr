@@ -31,7 +31,7 @@ Denetleyici eylemlerinizi birim testi yaparken, yalnızca davranışlarını oda
 
 Birim testleri xUnit.net, MSTest, moq veya NUnit gibi test çerçeveleri temelinde uygulanır. EShopOnContainers örnek uygulaması için xUnit kullandık.
 
-Bir Web API denetleyicisi için bir birim testi yazdığınızda, test, mümkün olduğunca hızlı çalışacak şekilde, C \# içindeki New anahtar sözcüğünü kullanarak doğrudan denetleyici sınıfını örnekleyebilirsiniz. Aşağıdaki örnek, [xUnit](https://xunit.github.io/) 'i test çerçevesi olarak kullanırken nasıl yapılacağını gösterir.
+Bir Web API denetleyicisi için bir birim testi yazdığınızda, test, mümkün olduğunca hızlı çalışacak şekilde, C\#içindeki New anahtar sözcüğünü kullanarak doğrudan denetleyici sınıfını örnekleyebilirsiniz. Aşağıdaki örnek, [xUnit](https://xunit.github.io/) 'i test çerçevesi olarak kullanırken nasıl yapılacağını gösterir.
 
 ```csharp
 [Fact]
@@ -107,7 +107,7 @@ public class PrimeWebDefaultRequestShould
 - **Steve Smith. Tümleştirme testi** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
-- **DotNet test  \ kullanarak .NET Core 'Da birim testi**
+- **DotNet test \ kullanarak .NET Core 'Da birim testi**
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. Resmi site. \
@@ -148,7 +148,7 @@ Mikro hizmet başına birim ve tümleştirme testi, her mikro hizmette bir test 
 
 **Şekil 6-25**. EShopOnContainers 'daki test klasörü yapısı
 
-Mikro hizmet ve uygulama işlev/tümleştirme testleri, normal testler Çalıştırıcısı kullanılarak Visual Studio 'dan çalıştırılır, ancak önce çözüm sınama klasöründe yer alan bir Docker-Compose dosyaları kümesi aracılığıyla gerekli altyapı hizmetlerini başlatmanız gerekir :
+Mikro hizmet ve uygulama işlev/tümleştirme testleri, normal testler Çalıştırıcısı kullanılarak Visual Studio 'dan çalıştırılır, ancak önce çözüm sınama klasöründe yer alan bir Docker-Compose dosyaları kümesi aracılığıyla gerekli altyapı hizmetlerini başlatmanız gerekir:
 
 **Docker-Compose-test. yıml**
 

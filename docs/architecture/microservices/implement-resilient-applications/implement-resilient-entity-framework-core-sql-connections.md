@@ -49,7 +49,7 @@ Bir EF Execution strateji (yeniden deneme ilkesi) kullanırken bu işlemi yürü
 
 > System. InvalidOperationException: yapılandırılan ' Sqlserverretryingexecutionstrateji ' yürütme stratejisi, Kullanıcı tarafından başlatılan işlemleri desteklemez. İşlemdeki tüm işlemleri yeniden kullanılabilir bir birim olarak yürütmek için ' DbContext. Database. Createexecutionstrateji () ' tarafından döndürülen yürütme stratejisini kullanın.
 
-Çözüm, yürütülmesi gereken her şeyi temsil eden bir temsilciyle EF yürütme stratejisini el ile çağırmalıdır. Geçici bir hata oluşursa, yürütme stratejisi temsilciyi tekrar çağıracaktır. Örneğin, aşağıdaki kod, bir ürünü güncelleştirirken ve Productpricechangedıntegrationevent kaydedilirken iki birden çok DbContext (\_catalogContext ve ıntegrationeventlogcontext) ile eShopOnContainers içinde nasıl uygulandığını gösterir farklı bir DbContext kullanması gereken nesne.
+Çözüm, yürütülmesi gereken her şeyi temsil eden bir temsilciyle EF yürütme stratejisini el ile çağırmalıdır. Geçici bir hata oluşursa, yürütme stratejisi temsilciyi tekrar çağıracaktır. Örneğin, aşağıdaki kod, bir ürünü güncelleştirirken iki birden çok DbContext (\_catalogContext ve ıntegrationeventlogcontext) ile eShopOnContainers içinde nasıl uygulandığını gösterir ve ardından Productpricechangedıntegrationevent nesnesini kaydederek farklı bir DbContext kullanması gerekir.
 
 ```csharp
 public async Task<IActionResult> UpdateProduct(

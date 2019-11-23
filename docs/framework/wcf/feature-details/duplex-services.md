@@ -23,29 +23,29 @@ Bir çift yönlü sözleşmenin bir örneği aşağıda verilmiştir.
 [!code-csharp[c_DuplexServices#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/service.cs#0)]
 [!code-vb[c_DuplexServices#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/service.vb#0)]
 
-@No__t-0 sınıfı, birincil `ICalculatorDuplex` arabirimini uygular. Hizmet, her bir oturumun sonucunu korumak için <xref:System.ServiceModel.InstanceContextMode.PerSession> örnek modunu kullanır. @No__t-0 adlı özel bir özellik, istemciye geri çağırma kanalına erişir. Hizmet, aşağıdaki örnek kodda gösterildiği gibi geri çağırma arabirimi aracılığıyla istemciye geri dönüş iletileri göndermek için geri aramayı kullanır.
+`CalculatorService` sınıfı, birincil `ICalculatorDuplex` arabirimini uygular. Hizmet, her bir oturumun sonucunu korumak için <xref:System.ServiceModel.InstanceContextMode.PerSession> örnek modunu kullanır. `Callback` adlı bir özel özellik geri çağırma kanalına istemciye erişir. Hizmet, aşağıdaki örnek kodda gösterildiği gibi geri çağırma arabirimi aracılığıyla istemciye geri dönüş iletileri göndermek için geri aramayı kullanır.
 
 [!code-csharp[c_DuplexServices#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/service.cs#1)]
 [!code-vb[c_DuplexServices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/service.vb#1)]
 
-İstemci, hizmetten ileti almak için çift yönlü sözleşmenin geri çağırma arabirimini uygulayan bir sınıf sağlamalıdır. Aşağıdaki örnek kod, `ICalculatorDuplexCallback` arabirimini uygulayan `CallbackHandler` sınıfını gösterir.
+İstemci, hizmetten ileti almak için çift yönlü sözleşmenin geri çağırma arabirimini uygulayan bir sınıf sağlamalıdır. Aşağıdaki örnek kod, `ICalculatorDuplexCallback` arabirimini uygulayan bir `CallbackHandler` sınıfını gösterir.
 
 [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
 [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]
 
-Bir çift yönlü sözleşme için oluşturulan WCF istemcisinin, oluşturma sırasında <xref:System.ServiceModel.InstanceContext> sınıfının sağlanması gerekir. Bu <xref:System.ServiceModel.InstanceContext> sınıfı, geri çağırma arabirimini uygulayan ve hizmetten geri gönderilen iletileri işleyen bir nesnenin sitesi olarak kullanılır. @No__t-0 sınıfı, `CallbackHandler` sınıfının bir örneğiyle oluşturulur. Bu nesne hizmetten geri çağırma arabirimindeki istemciye gönderilen iletileri işler.
+Bir çift yönlü sözleşme için oluşturulan WCF istemcisinin, oluşturma sırasında bir <xref:System.ServiceModel.InstanceContext> sınıfının sağlanması gerekir. Bu <xref:System.ServiceModel.InstanceContext> sınıfı, geri çağırma arabirimini uygulayan ve hizmetten geri gönderilen iletileri işleyen bir nesnenin sitesi olarak kullanılır. Bir <xref:System.ServiceModel.InstanceContext> sınıfı, `CallbackHandler` sınıfının bir örneğiyle oluşturulur. Bu nesne hizmetten geri çağırma arabirimindeki istemciye gönderilen iletileri işler.
 
 [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
 [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]
 
-Her iki oturum iletişimini ve çift yönlü iletişimi destekleyen bir bağlama sağlamak üzere hizmetin yapılandırması ayarlanmalıdır. @No__t-0 öğesi oturum iletişimini destekler ve her yön için bir tane olmak üzere çift HTTP bağlantısı sağlayarak çift yönlü iletişime olanak sağlar.
+Her iki oturum iletişimini ve çift yönlü iletişimi destekleyen bir bağlama sağlamak üzere hizmetin yapılandırması ayarlanmalıdır. `wsDualHttpBinding` öğesi oturum iletişimini destekler ve her yön için bir tane olmak üzere çift HTTP bağlantısı sağlayarak çift yönlü iletişime olanak sağlar.
 
 İstemcisinde, aşağıdaki örnek yapılandırmada gösterildiği gibi, sunucunun istemciye bağlanmak için kullanabileceği bir adres yapılandırmanız gerekir.
 
 > [!NOTE]
-> Güvenli bir konuşma kullanarak kimlik doğrulaması başarısız olan ve çift yönlü olmayan istemciler genellikle @no__t (0) oluşturur. Ancak, güvenli bir konuşma kullanan bir çift yönlü istemci kimlik doğrulayamazsa, istemci bunun yerine bir <xref:System.TimeoutException> alır.
+> Güvenli bir konuşma kullanarak kimlik doğrulaması başarısız olan ve çift yönlü olmayan istemciler genellikle bir <xref:System.ServiceModel.Security.MessageSecurityException>oluşturur. Ancak, güvenli bir konuşma kullanan bir çift yönlü istemci kimlik doğrulaması yapamazsa, istemci bunun yerine bir <xref:System.TimeoutException> alır.
 
-@No__t-0 öğesini kullanarak bir istemci/hizmet oluşturursanız ve istemci geri çağırma uç noktasını eklemezseniz, aşağıdaki hatayı alırsınız.
+`WSHttpBinding` öğesini kullanarak bir istemci/hizmet oluşturursanız ve istemci geri çağırma uç noktasını eklemezseniz, aşağıdaki hatayı alırsınız.
 
 ```console
 HTTP could not register URL

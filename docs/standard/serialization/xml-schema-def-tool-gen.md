@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Sınıflar ve XML Şeması Belgeleri Oluşturmak için XML Şema Tanımı Aracını Kullanma'
+title: 'Nasıl yapılır: sınıflar ve XML şema belgeleri oluşturmak için XML şema tanımı aracını kullanma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
@@ -14,7 +14,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71392856"
 ---
-# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Nasıl yapılır: Sınıflar ve XML Şeması Belgeleri Oluşturmak için XML Şema Tanımı Aracını Kullanma
+# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Nasıl yapılır: sınıflar ve XML şema belgeleri oluşturmak için XML şema tanımı aracını kullanma
 XML şema tanımı Aracı (XSD.exe'nin), bir sınıf açıklayan bir XML şeması oluşturmak veya bir XML şeması tarafından tanımlanan sınıfı oluşturmak için sağlar. Aşağıdaki yordamlar bu işlemleri gerçekleştirmek nasıl kullanılacağını göstermektedir.  
   
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>Belirli bir şemaya uygun sınıflar oluşturmak için  
@@ -59,5 +59,5 @@ XML şema tanımı Aracı (XSD.exe'nin), bir sınıf açıklayan bir XML şemas�
 - [XML Serileştirmeye Giriş](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [XML Şema Tanımı Aracı (XSD.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Nasıl yapılır: Nesne serileştirme @ no__t-0
-- [Nasıl yapılır: Nesne serisini kaldırma @ no__t-0
+- [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

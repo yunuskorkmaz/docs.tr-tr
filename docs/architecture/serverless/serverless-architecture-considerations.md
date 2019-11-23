@@ -55,7 +55,7 @@ Değişiklik dizisi, eski kodun "olduğu gibi" çalışmaya devam etmesini sağl
 
 Sunucusuz mimarilerde bulunan veriler hakkında daha fazla bilgi için bkz. [Dağıtılmış veri yönetimi Için sorunlar ve çözümler](../microservices/architect-microservice-container-applications/distributed-data-management.md).
 
-## <a name="scaling"></a>Lemeyle
+## <a name="scaling"></a>Ölçeklendirme
 
 Sunucusuz "sunucu yok" anlamına gelen yaygın bir yanıltıcı olur. Aslında "daha az sunucu" gibi. Bir destek altyapısı, ölçeklendirmenin ne zaman geldiğini anlamak için önemlidir. Çoğu sunucusuz platform, olay yoğunluğu arttıkça altyapının ölçeklendirilmesi için bir denetim kümesi sağlar. Çeşitli seçeneklerden birini seçebilirsiniz, ancak stratejiniz işleve bağlı olarak farklılık gösterebilir. Ayrıca, işlevler genellikle ilgili bir ana bilgisayar altında çalıştırılır, böylece aynı konaktaki işlevler aynı ölçek seçeneklerine sahip olacaktır. Bu nedenle, ölçek gereksinimlerine göre hangi işlevlerin birlikte barındırıldığını düzenlemek ve stratejik hale eklemek gereklidir.
 

@@ -28,5 +28,5 @@ Bir kapsayıcı görüntüsü tasarladığınızda Dockerfile dosyasında bir [g
 Tek bir kapsayıcıda birden çok işlemin çalışmasını istediğiniz bir senaryo bulabilirsiniz. Bu senaryo için, kapsayıcı başına yalnızca bir giriş noktası olduğundan, kapsayıcıda gereken sayıda programı başlatan bir betiği çalıştırabilirsiniz. Örneğin, tek bir kapsayıcı içinde birden çok işlem başlatmaya dikkat çekmek için [Gözetmen](http://supervisord.org/) veya benzer bir araç kullanabilirsiniz. Ancak, kapsayıcı başına birden çok işlem tutan mimariler bulabilse de, bu yaklaşım çok yaygın değildir.
 
 >[!div class="step-by-step"]
->[Önceki](../net-core-net-framework-containers/official-net-docker-images.md)İleri
->[](containerize-monolithic-applications.md)
+>[Önceki](../net-core-net-framework-containers/official-net-docker-images.md)
+>[İleri](containerize-monolithic-applications.md)

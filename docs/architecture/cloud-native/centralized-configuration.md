@@ -19,7 +19,7 @@ Bulutta yerel uygulamalar geleneksel tek örnekli tek parçalı uygulamalar 'dan
 
 EShopOnContainers uygulaması, her mikro hizmetle yerel uygulama ayarları dosyalarını içerir. Bu dosyalar kaynak denetimine iade edilir ancak bağlantı dizeleri veya API anahtarları gibi üretim sırları dahil değildir. Üretimde, hizmet başına ortam değişkenleriyle bireysel ayarların üzerine yazılabilir. Bu, barındırılan uygulamalar için yaygın bir uygulamadır, ancak merkezi bir yapılandırma deposu sağlamaz. Yapılandırma ayarlarının merkezi yönetimini desteklemek için her mikro hizmet, yerel ayarları veya Azure Key Vault ayarları kullanımı arasında geçiş yapmak için bir ayar içerir.
 
-## <a name="azure-key-vault"></a>Azure Key Vault
+## <a name="azure-key-vault"></a>Azure anahtar kasası
 
 Azure Key Vault, belirteçlerin, parolaların, sertifikaların, API anahtarlarının ve diğer gizli parolaların güvenli bir şekilde depolanmasını sağlar. Key Vault erişim, eShopOnContainers mikro hizmetleri için bir ClientID/ClientSecret bileşiminin kullanılması gereken, uygun bir arayan kimlik doğrulaması ve yetkilendirme gerektirir. Bu kimlik bilgilerini kaynak denetimine iade etmeyin, ancak bunun yerine uygulamanın ortamında ayarlayın. AKS 'ten Key Vault doğrudan erişim, [Key Vault FlexVolume](https://github.com/Azure/kubernetes-keyvault-flexvol)kullanılarak elde edilebilir.
 

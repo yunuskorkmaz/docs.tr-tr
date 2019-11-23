@@ -127,7 +127,7 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 
 Tetikleyiciler ve bağlamaların tam listesi için bkz. [Azure işlevleri Tetikleyicileri ve bağlamaları kavramları](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
 
-## <a name="proxies"></a>Kullanıldığı
+## <a name="proxies"></a>Proxy'ler
 
 Proxy 'ler, uygulamanız için yeniden yönlendirme işlevi sağlar. Proxy 'ler bir uç noktayı kullanıma sunar ve bu uç noktayı başka bir kaynakla eşler. Proxy 'ler ile şunları yapabilirsiniz:
 

@@ -8,21 +8,21 @@ ms.locfileid: "72394326"
 ---
 ### <a name="http-headernames-constants-changed-to-static-readonly"></a>HTTP: HeaderNames sabitleri statik ReadOnly olarak değiştirildi
 
-ASP.NET Core 3,0 Preview 5 ' ten başlayarak, <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> ' daki alanlar `const` ' den `static readonly` ' ye değişti.
+ASP.NET Core 3,0 Preview 5 ' ten başlayarak, <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> alan `const` `static readonly`olarak değişir.
 
 Tartışma için bkz. [ASPNET/AspNetCore # 9514](https://github.com/aspnet/AspNetCore/issues/9514).
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-Bu alanlar `const` olarak kullanılır.
+Bu alanlar `const`için kullanılır.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Bu alanlar artık `static readonly` ' dır.
+Bu alanlar artık `static readonly`.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -36,8 +36,8 @@ Değişiklik:
 3,0 ile yeniden derleyin. Aşağıdaki yollarla bu alanları kullanan kaynak kodu bundan böyle devam edebilir:
 
 * Öznitelik bağımsız değişkeni olarak
-* Bir `switch` ifadesinde `case`
-* Başka bir @no__t tanımlarken-0
+* `switch` bildiriminde `case` olarak
+* Başka bir `const` tanımlarken
 
 Son değişikliği geçici olarak çözmek için, kendi kendine tanımlanmış üst bilgi adı sabitleri veya dize sabit değerlerini kullanmaya geçin.
 

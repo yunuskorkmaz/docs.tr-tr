@@ -60,7 +60,7 @@ public static bool ProcessPayment([ActivityTrigger] DurableActivityContext conte
 
 Bazı durumlarda, iş akışları görece uzun süre süren etkinlikleri içerebilir. Medya dosyalarının yedeklenmesini blob depolamaya vurur bir işlem düşünün. Medya dosyalarının boyutuna ve miktarına bağlı olarak, bu yedekleme işleminin tamamlanması saatler sürebilir.
 
-Bu senaryoda, `DurableOrchestrationClient` çalışan bir iş akışının durumunu denetleme özelliği yararlı olur. Bir iş akışını başlatmak için `HttpTrigger` kullanırken, `CreateCheckStatusResponse` yöntemi `HttpResponseMessage` örneğini döndürmek için kullanılabilir. Bu yanıt, istemcide çalışan işlemin durumunu denetlemek için kullanılabilecek bir URI sağlar.
+Bu senaryoda, `DurableOrchestrationClient`çalışan bir iş akışının durumunu denetleme özelliği yararlı olur. Bir iş akışını başlatmak için `HttpTrigger` kullanırken, `CreateCheckStatusResponse` yöntemi `HttpResponseMessage`örneğini döndürmek için kullanılabilir. Bu yanıt, istemcide çalışan işlemin durumunu denetlemek için kullanılabilecek bir URI sağlar.
 
 ```csharp
 [FunctionName("OrderWorkflow")]
@@ -149,7 +149,7 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-`DurableOrchestrationContext` `CreateTimer` yöntemi, stok fiyatı değişikliklerini denetlemek için döngünün bir sonraki çağrılma zamanlamasını ayarlar. `DurableOrchestrationContext` Ayrıca UTC 'de geçerli tarih saat değerini almak için bir `CurrentUtcDateTime` özelliğine sahiptir. Test için kolayca bir şekilde kullanıldığından, bu özelliğin `DateTime.UtcNow` yerine kullanılması daha iyidir.
+`DurableOrchestrationContext``CreateTimer` yöntemi, stok fiyatı değişikliklerini denetlemek için döngünün bir sonraki çağrılma zamanlamasını ayarlar. `DurableOrchestrationContext` Ayrıca UTC 'de geçerli tarih saat değerini almak için bir `CurrentUtcDateTime` özelliğine sahiptir. Test için kolayca bir şekilde kullanıldığından, bu özelliğin `DateTime.UtcNow` yerine kullanılması daha iyidir.
 
 ## <a name="recommended-resources"></a>Önerilen Kaynaklar
 

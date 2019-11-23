@@ -1,18 +1,17 @@
 ---
 title: GRPC, WCF geliştiricileri için RPC-gRPC 'ye yaklaşır
 description: WCF 'nin temel özellikleri gRPC ile karşılaştırılıyor.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 3da28968f8c8bd6c4fdba7432ffc8458d8340457
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 1ebfd102217c9685c5ff5200386c642b2017e98f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846696"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968124"
 ---
 # <a name="how-grpc-approaches-rpc"></a>gRPC'nin RPC yaklaşımı
 
-Windows Communication Foundation (WCF) ve gRPC, *uzak yordam çağrısı* (RPC) deseninin her iki uygulaması da, farklı bir makinede çalışan hizmetlere çağrı yapmayı ve farklı bir işlemde, sorunsuz bir şekilde çalışmasını sağlar istemci uygulamasında Yöntem çağrıları. WCF ve GRPC 'nin amaçlar aynı olsa da, uygulamanın ayrıntıları oldukça farklıdır.
+Windows Communication Foundation (WCF) ve gRPC, *uzak yordam çağrısı* (RPC) deseninin her iki uygulamasıdır, farklı bir makinede çalışan hizmetlere çağrı yapmayı ve farklı bir işlemde, istemci uygulamasında yalnızca Yöntem çağrılarıyla sorunsuz bir şekilde çalışır. WCF ve GRPC 'nin amaçlar aynı olsa da, uygulamanın ayrıntıları oldukça farklıdır.
 
 Aşağıdaki tabloda, WCF 'nin temel özelliklerinin gRPC ile nasıl ilişkilendirilebileceği ve kitabın geri kalanında daha ayrıntılı açıklamalar bulabileceğiniz yer verilmiştir.
 

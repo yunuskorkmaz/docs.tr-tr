@@ -18,11 +18,11 @@ Bir WCF uygulaması tarafından karşılaşılan hatalar üç gruptan birine ait
   
 3. Uygulama hataları  
   
- İletişim hataları, bir ağ kullanılamadığında, bir istemci yanlış bir adres kullandığında veya hizmet ana bilgisayarı gelen iletileri dinlemediğinde oluşur. Bu tür hatalar istemciye <xref:System.ServiceModel.CommunicationException> veya @no__t -1-türetilmiş sınıflar olarak döndürülür.  
+ İletişim hataları, bir ağ kullanılamadığında, bir istemci yanlış bir adres kullandığında veya hizmet ana bilgisayarı gelen iletileri dinlemediğinde oluşur. Bu tür hatalar istemciye <xref:System.ServiceModel.CommunicationException> veya <xref:System.ServiceModel.CommunicationException>türetilmiş sınıflar olarak döndürülür.  
   
  Ara sunucu/kanal hataları, kanal veya proxy içinde oluşan hatalardır. Bu tür hatalar şunlardır: kapatılmış bir proxy veya kanal kullanılmaya çalışılıyor, istemci ile hizmet arasında bir anlaşma uyumsuzluğu var veya istemcinin kimlik bilgileri hizmet tarafından reddedildi. Bu kategoride çok fazla sayıda farklı hata türü var, burada listelemek için çok fazla. Bu tür hatalar istemciye olduğu gibi döndürülür (özel durum nesnelerinde hiçbir dönüşüm gerçekleştirilmez).  
   
- Uygulama hataları, bir hizmet işleminin yürütülmesi sırasında oluşur. Bu tür hatalar istemciye <xref:System.ServiceModel.FaultException> veya <xref:System.ServiceModel.FaultException%601> olarak gönderilir.  
+ Uygulama hataları, bir hizmet işleminin yürütülmesi sırasında oluşur. Bu tür hatalar istemciye <xref:System.ServiceModel.FaultException> veya <xref:System.ServiceModel.FaultException%601>olarak gönderilir.  
   
  WCF 'de hata işleme, aşağıdakilerden biri veya birkaçı tarafından gerçekleştirilir:  
   
@@ -30,18 +30,18 @@ Bir WCF uygulaması tarafından karşılaşılan hatalar üç gruptan birine ait
   
 - Hata sözleşmelerini kullanma  
   
-- @No__t-0 arabirimini uygulama  
+- <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimini uygulama  
   
-- @No__t-0 olaylarını işleme  
+- <xref:System.ServiceModel.ServiceHost> olaylarını işleme  
   
 ## <a name="fault-contracts"></a>Hata sözleşmeleri  
- Hata sözleşmeleri, hizmet işlemi sırasında platformdan bağımsız bir şekilde oluşabilecek hataları tanımlamanızı sağlar. Varsayılan olarak, bir hizmet işlemi içinden oluşturulan tüm özel durumlar istemciye <xref:System.ServiceModel.FaultException> nesnesi olarak döndürülür. @No__t-0 nesnesi çok az bilgi içerecektir. Bir hata sözleşmesi tanımlayarak ve hatayı <xref:System.ServiceModel.FaultException%601> olarak döndürerek istemciye gönderilen bilgileri kontrol edebilirsiniz. Daha fazla bilgi için bkz. [anlaşmalar ve hizmetlerde hataları belirtme ve işleme](specifying-and-handling-faults-in-contracts-and-services.md).  
+ Hata sözleşmeleri, hizmet işlemi sırasında platformdan bağımsız bir şekilde oluşabilecek hataları tanımlamanızı sağlar. Varsayılan olarak, bir hizmet işlemi içinden oluşturulan tüm özel durumlar istemciye <xref:System.ServiceModel.FaultException> nesnesi olarak döndürülür. <xref:System.ServiceModel.FaultException> nesnesi çok az bilgi içerecektir. Bir hata sözleşmesi tanımlayarak ve hatayı <xref:System.ServiceModel.FaultException%601>olarak döndürerek istemciye gönderilen bilgileri denetleyebilirsiniz. Daha fazla bilgi için bkz. [anlaşmalar ve hizmetlerde hataları belirtme ve işleme](specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="ierrorhandler"></a>IErrorHandler  
- @No__t-0 arabirimi, WCF uygulamanızın hatalara nasıl yanıt vereceğini öğrenmek için daha fazla denetim sağlar.  İstemciye döndürülen hata iletisi üzerinde tam denetim sağlar ve günlüğe kaydetme gibi özel hata işleme gerçekleştirmenize olanak tanır.  @No__t-0 hakkında daha fazla bilgi edinmek ve [hata işleme ve raporlama üzerinde denetimi genişletmek](./samples/extending-control-over-error-handling-and-reporting.md) için  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi, WCF uygulamanızın hatalara nasıl yanıt vereceğini öğrenmek için daha fazla denetim sağlar.  İstemciye döndürülen hata iletisi üzerinde tam denetim sağlar ve günlüğe kaydetme gibi özel hata işleme gerçekleştirmenize olanak tanır.  <xref:System.ServiceModel.Dispatcher.IErrorHandler> ve [hata işleme ve raporlama üzerinde denetim genişletme](./samples/extending-control-over-error-handling-and-reporting.md) hakkında daha fazla bilgi için  
   
 ## <a name="servicehost-events"></a>ServiceHost olayları  
- @No__t-0 sınıfı Hizmetleri barındırır ve hataları işlemek için gerekebilecek birkaç olayı tanımlar. Örneğin:  
+ <xref:System.ServiceModel.ServiceHost> sınıfı Hizmetleri barındırır ve hataları işlemek için gerekebilecek birkaç olayı tanımlar. Örneğin:  
   
 1. <xref:System.ServiceModel.Channels.CommunicationObject.Faulted>
   

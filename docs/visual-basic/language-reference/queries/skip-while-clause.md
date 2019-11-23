@@ -1,5 +1,5 @@
 ---
-title: Skip While Tümcesi (Visual Basic)
+title: Skip While Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QuerySkipWhile
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-ms.openlocfilehash: 7f37a6fa1c9ba7fdf7978ac6853e4c2985bf72e7
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 47703e445865435f5bf5312c3fe41833ac21aa3f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004704"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333139"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Skip While Tümcesi (Visual Basic)
-Belirtilen koşul `true` olduğu sürece bir koleksiyondaki öğeleri atlar ve kalan öğeleri döndürür.  
+Bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,23 +28,23 @@ Skip While expression
   
 |Terim|Tanım|  
 |---|---|  
-|`expression`|Gerekli. İçin öğeleri test eden bir koşulu temsil eden bir ifade. İfade, bir @no__t 0 değeri veya bir `Boolean` olarak değerlendirilecek `Integer` gibi işlevsel eşdeğerini döndürmelidir.|  
+|`expression`|Gerekli. An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 yan tümcesi, sağlanan `expression` @no__t 2 ' ye dönene kadar öğeleri bir sorgu sonucunun başından atlar. @No__t-0 `false` döndürürse, sorgu kalan tüm öğeleri döndürür. @No__t-0, kalan sonuçlar için yok sayılır.  
+ The `Skip While` clause bypasses elements from the beginning of a query result until the supplied `expression` returns `false`. After `expression` returns `false`, the query returns all the remaining elements. The `expression` is ignored for the remaining results.  
   
- @No__t-0 yan tümcesi, belirli bir koşula uymayan bir sorgudaki tüm öğeleri dışlamak için `Where` yan tümcesinin `Where` tümceciğinden farklıdır. @No__t-0 yan tümcesi, yalnızca koşul karşılanmadığı sürece öğeleri dışlar. @No__t-0 yan tümcesi, sıralı bir sorgu sonucuyla çalışırken en yararlı seçenektir.  
+ The `Skip While` clause differs from the `Where` clause in that the `Where` clause can be used to exclude all elements from a query that do not meet a particular condition. The `Skip While` clause excludes elements only until the first time that the condition is not satisfied. The `Skip While` clause is most useful when you are working with an ordered query result.  
   
- @No__t-0 yan tümcesini kullanarak bir sorgu sonucunun başından belirli sayıda sonucu atlayabilirsiniz.  
+ You can bypass a specific number of results from the beginning of a query result by using the `Skip` clause.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, Birleşik Devletler ilk müşteri bulunana kadar sonuçları atlamak için `Skip While` yan tümcesini kullanır.  
+ The following code example uses the `Skip While` clause to bypass results until the first customer from the United States is found.  
   
  [!code-vb[VbSimpleQuerySamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#3)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)

@@ -22,8 +22,8 @@ ms.locfileid: "71699297"
 Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik dinleyicileri içerir.  Bu dinleyiciler, varsayılan olarak herhangi bir izleme almaz ve çalışma zamanında bu dinleyicileri almak mümkün değildir. Paylaşılan dinleyiciler ada göre kaynaklara veya izlemelere eklenebilir olarak tanımlanan dinleyiciler.  
   
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<sharedListeners >**  
+[ **System. diagnostics\<** &nbsp;&nbsp;>](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<sharedListeners >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,7 +43,7 @@ Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik dinleyicileri
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<> Ekle](add-element-for-listeners-for-trace.md)|@No__t-0 koleksiyonuna bir dinleyici ekler.|  
+|[\<> Ekle](add-element-for-listeners-for-trace.md)|`sharedListeners` koleksiyonuna bir dinleyici ekler.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -58,7 +58,7 @@ Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik dinleyicileri
  Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, <xref:System.Diagnostics.TraceSource> ve <xref:System.Diagnostics.Trace> sınıfları için `console` dinleyicisini `Listeners` koleksiyonuna eklemek için `<sharedListeners>` öğesinin nasıl kullanılacağını gösterir. Konsol izleme dinleyicisi, <xref:System.Diagnostics.TraceSource> ya da <xref:System.Diagnostics.Trace> ' e yapılan çağrılar aracılığıyla izleme bilgilerini konsola yazar.  
+ Aşağıdaki örnek, <xref:System.Diagnostics.TraceSource> ve <xref:System.Diagnostics.Trace> sınıflarının her ikisi için de `Listeners` koleksiyonuna dinleyici `console` eklemek için `<sharedListeners>` öğesinin nasıl kullanılacağını gösterir. Konsol izleme dinleyicisi, <xref:System.Diagnostics.TraceSource> ya da <xref:System.Diagnostics.Trace>çağrıları aracılığıyla izleme bilgilerini konsola yazar.  
   
 ```xml  
 <configuration>  

@@ -48,13 +48,13 @@ Uygulamanızda `HttpClientFactory` kullanabileceğiniz çeşitli yollar vardır:
 - Yazılan Istemcileri kullan
 - Oluşturulan Istemcileri kullanma
 
-Kısaltma açısından bu kılavuzda, türü `HttpClientFactory` kullanmanın en yapısal yolu gösterilmektedir, bu, yazılan Istemcileri (Hizmet Aracısı deseninin) kullanmaktır. Ancak, tüm seçenekler belgelenmiştir ve şu anda [HttpClientFactory kullanımını kapsayan bu makalede](/aspnet/core/fundamentals/http-requests#consumption-patterns)listelenmiştir.
+Kısaltma açısından bu kılavuzda, türü `HttpClientFactory`kullanmanın en yapısal yolu gösterilmektedir, bu, yazılan Istemcileri (Hizmet Aracısı deseninin) kullanmaktır. Ancak, tüm seçenekler belgelenmiştir ve şu anda [HttpClientFactory kullanımını kapsayan bu makalede](/aspnet/core/fundamentals/http-requests#consumption-patterns)listelenmiştir.
 
 ## <a name="how-to-use-typed-clients-with-httpclientfactory"></a>HttpClientFactory ile yazılan Istemcileri kullanma
 
-Bu nedenle, "yazılı Istemci" nedir? Bu yalnızca, `DefaultHttpClientFactory` tarafından eklenen `HttpClient` yapılandırılmış bir.
+Bu nedenle, "yazılı Istemci" nedir? Bu yalnızca, `DefaultHttpClientFactory`tarafından eklenen `HttpClient` yapılandırılmış bir.
 
-Aşağıdaki diyagramda, yazılan Istemcilerin `HttpClientFactory` ile nasıl kullanıldığı gösterilmektedir:
+Aşağıdaki diyagramda, yazılan Istemcilerin `HttpClientFactory`ile nasıl kullanıldığı gösterilmektedir:
 
 ![Yazılan istemcilerin HttpClientFactory ile nasıl kullanıldığını gösteren diyagram.](./media/use-httpclientfactory-to-implement-resilient-http-requests/client-application-code.png)
 
@@ -62,9 +62,9 @@ Aşağıdaki diyagramda, yazılan Istemcilerin `HttpClientFactory` ile nasıl ku
 
 Yukarıdaki görüntüde, bir ClientService (bir denetleyici veya istemci kodu tarafından kullanılan) kayıtlı `IHttpClientFactory`tarafından oluşturulan `HttpClient` kullanır. Bu fabrika, yönettiği bir havuzdan bir `HttpMessageHandler` `HttpClient` atar. `HttpClient`, `IHttpClientFactory` dı kapsayıcısına `AddHttpClient`uzantı yöntemiyle kaydedilirken Polly 'in ilkeleriyle yapılandırılabilir.
 
-Yukarıdaki yapıyı yapılandırmak için, `IServiceCollection`için `AddHttpClient()` uzantısı yöntemini içeren `Microsoft.Extensions.Http` NuGet paketini yükleyerek uygulamanıza `HttpClientFactory` ekleyin. Bu genişletme yöntemi, arabirim `IHttpClientFactory` için bir tek olarak kullanılacak `DefaultHttpClientFactory` kaydeder. `HttpMessageHandlerBuilder`için geçici bir yapılandırma tanımlar. Bir havuzdan alınan bu ileti işleyicisi (`HttpMessageHandler` nesnesi), fabrikada döndürülen `HttpClient` tarafından kullanılır.
+Yukarıdaki yapıyı yapılandırmak için, `IServiceCollection`için `AddHttpClient()` uzantısı yöntemini içeren `Microsoft.Extensions.Http` NuGet paketini yükleyerek uygulamanıza `HttpClientFactory` ekleyin. Bu genişletme yöntemi, arabirim `IHttpClientFactory`için bir tek olarak kullanılacak `DefaultHttpClientFactory` kaydeder. `HttpMessageHandlerBuilder`için geçici bir yapılandırma tanımlar. Bir havuzdan alınan bu ileti işleyicisi (`HttpMessageHandler` nesnesi), fabrikada döndürülen `HttpClient` tarafından kullanılır.
 
-Sonraki kodda, `HttpClient` kullanması gereken yazılı Istemcileri (hizmet aracıları) kaydetmek için `AddHttpClient()` nasıl kullanılabileceğini görebilirsiniz.
+Sonraki kodda, `HttpClient`kullanması gereken yazılı Istemcileri (hizmet aracıları) kaydetmek için `AddHttpClient()` nasıl kullanılabileceğini görebilirsiniz.
 
 ```csharp
 // Startup.cs
@@ -103,7 +103,7 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 
 ### <a name="httpclient-lifetimes"></a>HttpClient yaşam süreleri
 
-`IHttpClientFactory``HttpClient` bir nesne aldığınızda, yeni bir örnek döndürülür. Ancak her `HttpClient`, `HttpMessageHandler` süresinin süresinin dolmadığı sürece kaynak tüketimini azaltmak için `IHttpClientFactory` tarafından havuza alınmış ve yeniden kullanılan bir `HttpMessageHandler` kullanır.
+`IHttpClientFactory``HttpClient` bir nesne aldığınızda, yeni bir örnek döndürülür. Ancak her `HttpClient`, `HttpMessageHandler`süresinin süresinin dolmadığı sürece kaynak tüketimini azaltmak için `IHttpClientFactory` tarafından havuza alınmış ve yeniden kullanılan bir `HttpMessageHandler` kullanır.
 
 Her işleyici genellikle kendi temel aldığı HTTP bağlantılarını yönettiğinden, işleyicilerin havuzlaması istenir; gerekenden daha fazla işleyici oluşturulması bağlantı gecikmeleri oluşmasına neden olabilir. Ayrıca, bazı işleyiciler bağlantıları süresiz olarak açık tutar, bu da işleyicinin DNS değişikliklerine yeniden davranmasını engelleyebilir.
 
@@ -119,7 +119,7 @@ Her tür Istemcinin kendi yapılandırılmış işleyici yaşam süresi değeri 
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>Eklenen ve yapılandırılmış HttpClient kullanan, yazılan Istemci sınıflarınızı uygulama
 
-Önceki bir adım olarak, örnek kodda bulunan, örneğin ' BasketService ', ' CatalogService ', ' OrderingService ' vb. gibi belirlenmiş Istemci sınıflarının tanımlanması gerekir. türü belirtilmiş bir Istemci, bir `HttpClient` nesnesini kabul eden bir sınıftır ( Oluşturucu) ve bunu, uzak HTTP hizmetini çağırmak için kullanır. Örneğin:
+Önceki bir adım olarak, örnek kodda bulunan, örneğin ' BasketService ', ' CatalogService ', ' OrderingService ' vb. gibi, türü belirtilmiş istemci sınıflarının tanımlanmış olması gerekir. – türü belirtilmiş bir Istemci, bir `HttpClient` nesnesini kabul eden (Oluşturucusu aracılığıyla eklenen) ve bir uzak HTTP hizmetini çağırmak için onu kullanan bir sınıftır. Örneğin:
 
 ```csharp
 public class CatalogService : ICatalogService
@@ -152,7 +152,7 @@ Türü belirlenmiş bir Istemci, etkin bir şekilde geçici bir nesnedir, yani h
 
 ### <a name="use-your-typed-client-classes"></a>Türsüz Istemci sınıflarınızı kullanın
 
-Son olarak, klavyeyle oluşturulmuş sınıflarınız uygulandıktan ve `AddHttpClient()` ile kaydolduktan sonra, bu dosyaları, DI tarafından eklenen hizmetlere sahip olduğunuz her yerde kullanabilirsiniz. Örneğin, bir MVC web uygulamasının Razor sayfa kodunda veya denetleyicisinde eShopOnContainers 'dan aşağıdaki kodda olduğu gibi:
+Son olarak, klavyeyle oluşturulmuş sınıflarınız uygulandıktan ve `AddHttpClient()`ile kaydolduktan sonra, bu dosyaları, DI tarafından eklenen hizmetlere sahip olduğunuz her yerde kullanabilirsiniz. Örneğin, bir MVC web uygulamasının Razor sayfa kodunda veya denetleyicisinde eShopOnContainers 'dan aşağıdaki kodda olduğu gibi:
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers
@@ -181,7 +181,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 }
 ```
 
-Bu noktaya kadar, gösterilen kod yalnızca normal http isteklerini gerçekleştiriyor, ancak ' Magic ', kayıtlı belirlenmiş Istemcilerinize ilke ekleyerek ve işleyicileri temsilci seçerek aşağıdaki bölümlerde bulunur, `HttpClient` tarafından yapılacak tüm HTTP istekleri çalışır üstel geri alma, devre kesiciler veya diğer özel temsilci seçme işleyicilerini, kimlik doğrulama belirteçlerini veya başka bir özel özelliği kullanmak gibi ek güvenlik özellikleri uygulayacak şekilde hesaba katılarak dayanıklı ilkeler alma.
+Bu noktaya kadar, gösterilen kod yalnızca normal http isteklerini gerçekleştiriyor, ancak, ' Magic ', kayıtlı tür Istemcilerinize ilke ve temsilci atama işlemleri yaparak, `HttpClient` tarafından yapılacak tüm HTTP isteklerinin, üstel geri alma, devre kesiciler veya diğer özel temsilci seçme işleyicileriyle yeniden denemeler, kimlik doğrulama belirteçleri veya başka bir özel özellik gibi ek güvenlik özellikleri uygulamak için, daha fazla hesaba sahip olduğu durumlarda aşağıdaki bölümlerde gelir.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: tek bir öznitelik alma (LINQ to XML) (Visual Basic)'
+title: 'How to: Retrieve a Single Attribute (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: f56ec18933856d862f9ef9630ce3d33805f96894
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 02afbc987cf9f55d16bb56912f3eaf45cd8c9a37
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321311"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347558"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Nasıl yapılır: tek bir öznitelik alma (LINQ to XML) (Visual Basic)
-Bu konu, öznitelik adı verilen bir öğenin tek bir özniteliğinin nasıl alınacağını açıklamaktadır. Bu, belirli bir özniteliğe sahip bir öğeyi bulmak istediğiniz sorgu ifadeleri yazmak için yararlıdır.  
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>How to: Retrieve a Single Attribute (LINQ to XML) (Visual Basic)
+This topic explains how to retrieve a single attribute of an element, given the attribute name. This is useful for writing query expressions where you want to find an element that has a particular attribute.  
   
- @No__t-1 sınıfının <xref:System.Xml.Linq.XElement.Attribute%2A> yöntemi, belirtilen ada sahip <xref:System.Xml.Linq.XAttribute> değerini döndürür.  
+ The <xref:System.Xml.Linq.XElement.Attribute%2A> method of the <xref:System.Xml.Linq.XElement> class returns the <xref:System.Xml.Linq.XAttribute> with the specified name.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek <xref:System.Xml.Linq.XElement.Attribute%2A> yöntemini kullanır.  
+ The following example uses the <xref:System.Xml.Linq.XElement.Attribute%2A> method.  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -28,7 +28,7 @@ For Each e As XElement In elList
 Next  
 ```  
   
- Bu örnek, ağaçtaki `Phone` adlı tüm alt öğeleri bulur ve sonra `type` adlı özniteliği bulur.  
+ This example finds all the descendants in the tree named `Phone`, and then finds the attribute named `type`.  
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
@@ -38,7 +38,7 @@ work
 ```  
   
 ## <a name="example"></a>Örnek  
- Özniteliğin değerini almak istiyorsanız, <xref:System.Xml.Linq.XElement> nesneleriyle yaptığınız gibi, bu özniteliği de çevirebilirsiniz. Aşağıdaki örnek bunu gösterir.  
+ If you want to retrieve the value of the attribute, you can cast it, just as you do for with <xref:System.Xml.Linq.XElement> objects. The following example demonstrates this.  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -60,10 +60,10 @@ home
 work  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], <xref:System.Xml.Linq.XAttribute> sınıfı için `string` ' ye açık atama işleçleri sağlar `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, 0, 1, 2, 3, 4, 5, 6, 7, @no__t 9, 0, 1, 2, 3 ve 4.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] provides explicit cast operators for the <xref:System.Xml.Linq.XAttribute> class to `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir ad alanında olan bir özniteliği için aynı kodu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ The following example shows the same code for an attribute that is in a namespace. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -94,4 +94,4 @@ work
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML Axes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

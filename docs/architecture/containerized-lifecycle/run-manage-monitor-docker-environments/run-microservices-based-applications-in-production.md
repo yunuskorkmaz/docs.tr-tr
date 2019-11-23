@@ -32,5 +32,5 @@ Uygulamalar birden çok konak sisteminde ölçeklendirildiğinde, her bir konak 
 Düzenleyen ve zamanlayıcılar tarafından sağlanan yetenekler sıfırdan geliştirme ve oluşturma için karmaşıktır. bu nedenle, genellikle satıcılar tarafından sunulan düzenleme çözümlerini kullanmak istersiniz.
 
 >[!div class="step-by-step"]
->[Önceki](index.md)İleri
->[](manage-production-docker-environments.md)
+>[Önceki](index.md)
+>[İleri](manage-production-docker-environments.md)

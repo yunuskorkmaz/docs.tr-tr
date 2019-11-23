@@ -1,14 +1,13 @@
 ---
 title: Kanal kimlik bilgileri-WCF geliştiricileri için gRPC
 description: ASP.NET Core 3,0 ' de gRPC kanal kimlik bilgilerini uygulama ve kullanma.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 61141dc4143f36f9ac511c3369c3fde668c9d703
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: b424db49337a2dc6e3d0245d36349e3f408cdf6c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846707"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967958"
 ---
 # <a name="channel-credentials"></a>Kanal kimlik bilgileri
 
@@ -49,7 +48,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 ```
 
-`ClientCertificateMode.RequireCertificate` ayar, Kestrel istemci sertifikası sağlamayan tüm bağlantı isteklerini hemen reddetmesine neden olur, ancak sertifika doğrulanmaz. `ClientCertificateValidation` geri çağrısının eklenmesi, Kestrel işlem hattından önce istemcinin istemci sertifikasını (Bu durumda sunucu sertifikasıyla aynı *sertifika yetkilisi* tarafından verildiğini doğrulayarak) doğrulamasına olanak sağlar ASP.NET Core. bağlı.
+`ClientCertificateMode.RequireCertificate` ayar, Kestrel istemci sertifikası sağlamayan tüm bağlantı isteklerini hemen reddetmesine neden olur, ancak sertifika doğrulanmaz. `ClientCertificateValidation` geri çağrısının eklenmesi, ASP.NET Core işlem hattının kullanılabilmesi için, Kestrel istemci sertifikasını (Bu durumda sunucu sertifikasıyla aynı *sertifika yetkilisi* tarafından verildiğini doğrulayarak) doğrulamasına olanak sağlar.
 
 ### <a name="adding-aspnet-core-certificate-authentication"></a>ASP.NET Core sertifikası kimlik doğrulaması ekleme
 

@@ -1,5 +1,5 @@
 ---
-title: <configuration> için <appSettings> öğesi
+title: <appSettings> için <configuration> öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -57,7 +57,7 @@ ms.locfileid: "73119277"
 
 *Web. config* ve uygulama yapılandırma dosyalarının **\<appSettings >** öğesinde **Dosya** özniteliğini kullanabilirsiniz. Bu öznitelik, ek ayarlar sağlayan veya **\<appSettings >** öğesinde belirtilen ayarları geçersiz kılan bir yapılandırma dosyasını belirtir. **Dosya** özniteliği, bir Kullanıcı bir uygulama yapılandırma dosyasında belirtilen proje ayarlarını geçersiz kılmak istediğinde olduğu gibi, kaynak denetimi takım geliştirme senaryolarında kullanılabilir.
 
-**Dosya** özniteliği tarafından belirtilen yapılandırma dosyaları, **\<yapılandırma >** yerine **\<appSettings >** kök düğümüne sahip olmalıdır.
+Yapılandırma dosyaları tarafından belirtilen **dosya** öznitelik, bir kök düğümü olmalıdır **\<appSettings >** yerine **\<yapılandırma >** .
 
 ## <a name="example"></a>Örnek
 

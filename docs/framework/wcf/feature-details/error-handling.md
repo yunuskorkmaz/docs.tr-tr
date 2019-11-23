@@ -27,13 +27,13 @@ Daha fazla bilgi için lütfen bkz. [Microsoft Kurumsal kitaplığı](https://do
 
 ## <a name="dealing-with-expected-exceptions"></a>Beklenen özel durumlarla ilgilenme
 
-Doğru eylem kursu, her işlem veya ilgili genişletilebilirlik noktasındaki beklenen özel durumları yakalamak, ' den kurtarılıp kurtarılamayacağına karar vermek ve bir FaultException @ no__t-0T > uygun özel hatayı geri döndürmaktır.
+Doğru eylem kursu, her işlem veya ilgili genişletilebilirlik noktasındaki beklenen özel durumları yakalamak, ' dan kurtarılıp kurtarılamayacağına karar vermek ve bir FaultException\<T > uygun özel hatayı döndürmaktır.
   
 ## <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>IErrorHandler kullanarak beklenmeyen özel durumlarla ilgilenme
 
 Beklenmeyen özel durumlarla başa çıkmak için, önerilen eylem "kanca" bir IErrorHandler ' dir. Hata işleyicileri yalnızca WCF çalışma zamanı düzeyinde ("hizmet modeli" katmanı) özel durumları yakalar, bu da kanal katmanında değil. Kanal düzeyinde bir IErrorHandler 'i bağlamak için tek yol, Çoğu senaryoda önerilmeyen özel bir kanal oluşturmaktır.
 
-"Beklenmeyen özel durum" genellikle kurtarılamaz bir özel durum ya da bir işleme özel durumu değildir; Bunun yerine, beklenmeyen bir kullanıcı özel durumu. Kurtarılamaz bir özel durum (örneğin, bir bellek dışı özel durum) – genellikle [hizmet modeli özel durum işleyicisi](xref:System.ServiceModel.Dispatcher.ExceptionHandler) tarafından genel olarak işlenir. genellikle düzgün bir şekilde işlenemeyebilir ve bu tür bir özel durumu her zaman işlemek için tek neden olabilir Ek günlüğe kaydetme veya istemciye standart özel durum döndürme. İleti işlenirken bir işleme özel durumu oluşur; Örneğin, serileştirme, kodlayıcı veya biçimlendirici düzeyinde genellikle, hata işleyicisine göre müdahale etmek için çok erken veya çok geç olduğundan, genellikle bir IErrorHandler üzerinden işlenemez Bu özel durumların oluştuğu zaman. Benzer şekilde, taşıma özel durumları bir IErrorHandler üzerinde işlenemez.
+"Beklenmeyen özel durum" genellikle kurtarılamaz bir özel durum ya da bir işleme özel durumu değildir; Bunun yerine, beklenmeyen bir kullanıcı özel durumu. Kurtarılamaz bir özel durum (örneğin, bellek dışı özel durum) – genel olarak [hizmet modeli özel durum işleyicisi](xref:System.ServiceModel.Dispatcher.ExceptionHandler) tarafından genel olarak ele alınamaz. genellikle düzgün bir şekilde işlenemeyebilir ve bu tür bir özel durumu işlemenin tek nedeni ek günlüğe kaydetme veya istemciye standart özel durum döndürme olabilir. İleti işlenirken bir işleme özel durumu oluşur; Örneğin, serileştirme, kodlayıcı veya biçimlendirici düzeyinde genellikle, hata işleyicisine göre müdahale etmek için çok erken veya çok geç olduğundan, genellikle bir IErrorHandler üzerinden işlenemez Bu özel durumların oluştuğu zaman. Benzer şekilde, taşıma özel durumları bir IErrorHandler üzerinde işlenemez.
 
 Bir IErrorHandler ile, bir özel durum oluştuğunda uygulamanızın davranışını açık bir şekilde denetleyebilirsiniz. Şunları yapabilirsiniz:  
 

@@ -1,5 +1,5 @@
 ---
-title: Continue Deyimi (Visual Basic)
+title: Continue Deyimi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.continue
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Continue statement [Visual Basic]
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-ms.openlocfilehash: 9ee5fb19db6eafeb7e4bed12935d0b950d6368d6
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 20140cafb68c7e5518bf3d5fa80e56ca1c1de2c6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005110"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354119"
 ---
 # <a name="continue-statement-visual-basic"></a>Continue Deyimi (Visual Basic)
-Denetimi bir döngünün sonraki yinelemesine hemen aktarır.  
+Transfers control immediately to the next iteration of a loop.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -24,18 +24,18 @@ Continue { Do | For | While }
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0, `For` veya `While` döngüsünün içinden bu döngünün bir sonraki yinelemesine aktarabilirsiniz. Denetim, `For` veya `While` ifadesine veya `Until` veya `While` yan tümcesini içeren @no__t 2 veya `Loop` bildirimine aktarılmaya eşdeğer olan döngü koşulu testine anında geçirilir.  
+ You can transfer from inside a `Do`, `For`, or `While` loop to the next iteration of that loop. Control passes immediately to the loop condition test, which is equivalent to transferring to the `For` or `While` statement, or to the `Do` or `Loop` statement that contains the `Until` or `While` clause.  
   
- @No__t-0 ' yı döngüdeki aktarımlara izin veren herhangi bir konumda kullanabilirsiniz. Denetimin aktarılmasına izin veren kurallar [goto ifadesiyle](../../../visual-basic/language-reference/statements/goto-statement.md)aynıdır.  
+ You can use `Continue` at any location in the loop that allows transfers. The rules allowing transfer of control are the same as with the [GoTo Statement](../../../visual-basic/language-reference/statements/goto-statement.md).  
   
- Örneğin, bir döngü tamamen bir `Try` bloğu, `Catch` bloğu veya `Finally` bloğu içinde yer alıyorsa, döngünün dışına aktarmak için `Continue` ' ü kullanabilirsiniz. Diğer taraftan, `Try`... `End Try` yapısı döngü içinde yer alıyorsa, `Finally` bloğundan denetimi aktarmak için `Continue` ' yi kullanamazsınız ve bunu yalnızca tamamen dışarı aktarırsanız, `Try` veya `Catch` bloğunun dışına aktarmak için kullanabilirsiniz. _T-6... `End Try` yapısı.  
+ For example, if a loop is totally contained within a `Try` block, a `Catch` block, or a `Finally` block, you can use `Continue` to transfer out of the loop. If, on the other hand, the `Try`...`End Try` structure is contained within the loop, you cannot use `Continue` to transfer control out of the `Finally` block, and you can use it to transfer out of a `Try` or `Catch` block only if you transfer completely out of the `Try`...`End Try` structure.  
   
- Aynı türde iç içe geçmiş döngülerine sahipseniz, örneğin başka bir `Do` döngüsünde `Do` döngüsü varsa, `Continue Do` bir ifade kendisini içeren en içteki `Do` döngüsünün bir sonraki yinelemesine atlar. Aynı türdeki bir kapsayan döngünün sonraki yinelemesine atlamak için `Continue` kullanamazsınız.  
+ If you have nested loops of the same type, for example a `Do` loop within another `Do` loop, a `Continue Do` statement skips to the next iteration of the innermost `Do` loop that contains it. You cannot use `Continue` to skip to the next iteration of a containing loop of the same type.  
   
- Farklı türlerde iç içe geçmiş döngülerine sahipseniz (örneğin, bir `For` döngüsünde `Do` döngüsü), `Continue Do` veya `Continue For` ' ü kullanarak iki döngünün bir sonraki yinelemesine atlayabilirsiniz.  
+ If you have nested loops of different types, for example a `Do` loop within a `For` loop, you can skip to the next iteration of either loop by using either `Continue Do` or `Continue For`.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bir bölen sıfırsa bir dizinin sonraki sütununa atlamak için `Continue While` ifadesini kullanır. @No__t-0 bir `For` döngüsü içinde. @No__t-2 döngüsünü içeren en içteki `While` döngüsünün bir sonraki yinelemesi olan `While col < lastcol` ifadesine aktarır.  
+ The following code example uses the `Continue While` statement to skip to the next column of an array if a divisor is zero. The `Continue While` is inside a `For` loop. It transfers to the `While col < lastcol` statement, which is the next iteration of the innermost `While` loop that contains the `For` loop.  
   
  [!code-vb[VbVbalrStatements#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#14)]  
   

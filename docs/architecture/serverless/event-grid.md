@@ -33,9 +33,9 @@ Event Grid birkaç farklı senaryoya yöneliktir. Bu bölümde en yaygın olanla
 
 Event Grid, altyapı sağlandığında [Azure Otomasyonu](https://docs.microsoft.com/azure/automation) bilgilendirerek Otomasyon ve ilke zorlamayı basitleştirmeye yardımcı olabilir.
 
-### <a name="application-integration"></a>Uygulama Tümleştirme
+### <a name="application-integration"></a>Uygulama tümleştirme
 
-![Uygulama Tümleştirme](./media/app-integration.png)
+![Uygulama tümleştirme](./media/app-integration.png)
 
 Uygulamanızı diğer hizmetlere bağlamak için Event Grid kullanabilirsiniz. Standart HTTP protokollerini kullanarak, eski uygulamalar bile Event Grid iletileri yayımlamak üzere kolayca değiştirilebilir. Web kancaları, diğer hizmet ve platformların Event Grid iletileri kullanması için kullanılabilir.
 
@@ -58,7 +58,7 @@ Daha ayrıntılı bir karşılaştırma için bkz. [mesajlaşma hizmetlerini kar
 Event Grid kullanarak, aşağıdaki performans garantisi avantajlarından yararlanabilirsiniz:
 
 - 99. yüzdebirlik 'teki ikinci saniyelik uçtan uca gecikme süresi.
-- % 99,99 kullanılabilirlik.
+- %99,99 kullanılabilirlik.
 - Her bölge için saniyede 10.000.000 olay.
 - Bölge başına 100.000.000 abonelikleri.
 - 50-MS yayımcı gecikmesi.
@@ -92,23 +92,23 @@ Event Grid kullanmanın önemli bir avantajı, Azure tarafından üretilen otoma
 
 | Azure kaynağı | Olay türü | Açıklama |
 | -------------- | ---------- | ----------- |
-| Azure aboneliği | Microsoft. resources. ResourceWriteSuccess | Kaynak oluşturma veya güncelleştirme işlemi başarılı olduğunda tetiklenir. |
+| Azure aboneliği | Microsoft.Resources.ResourceWriteSuccess | Kaynak oluşturma veya güncelleştirme işlemi başarılı olduğunda tetiklenir. |
 | | Microsoft. resources. ResourceWriteFailure | Kaynak oluşturma veya güncelleştirme işlemi başarısız olduğunda tetiklenir. |
-| | Microsoft. resources. ResourceWriteCancel | Kaynak oluşturma veya güncelleştirme işlemi iptal edildiğinde tetiklenir. |
-|  | Microsoft. resources. ResourceDeleteSuccess | Kaynak silme işlemi başarılı olduğunda tetiklenir. |
+| | Microsoft.Resources.ResourceWriteCancel | Kaynak oluşturma veya güncelleştirme işlemi iptal edildiğinde tetiklenir. |
+|  | Microsoft.Resources.ResourceDeleteSuccess | Kaynak silme işlemi başarılı olduğunda tetiklenir. |
 |  | Microsoft. resources. ResourceDeleteFailure | Kaynak silme işlemi başarısız olduğunda tetiklenir. |
-| | Microsoft. resources. ResourceDeleteCancel | Bir kaynak silme işlemi iptal edildiğinde tetiklenir. Bu olay, bir şablon dağıtımı iptal edildiğinde oluşur. |
-| Blob depolama | Microsoft. Storage. Bloboluşturuldu | Bir blob oluşturulduğunda tetiklenir. |
+| | Microsoft.Resources.ResourceDeleteCancel | Bir kaynak silme işlemi iptal edildiğinde tetiklenir. Bu olay, bir şablon dağıtımı iptal edildiğinde oluşur. |
+| Blob depolama | Microsoft.Storage.BlobCreated | Bir blob oluşturulduğunda tetiklenir. |
 | | Microsoft. Storage. BlobDeleted | Blob silindiğinde tetiklenir. |
-| Olay Hub 'ları | Microsoft. EventHub. CaptureFileCreated | Bir yakalama dosyası oluşturulduğunda tetiklenir.
-| IoT Hub | Microsoft. Devices. DeviceCreated | Bir cihaz IoT Hub 'ına kaydedildiğinde yayımlandı. |
-| | Microsoft. Devices. DeviceDeleted | IoT Hub 'ından bir cihaz silindiğinde yayımlandı. |
-| Kaynak grupları | Microsoft. resources. ResourceWriteSuccess | Kaynak oluşturma veya güncelleştirme işlemi başarılı olduğunda tetiklenir. |
+| Event Hubs | Microsoft. EventHub. CaptureFileCreated | Bir yakalama dosyası oluşturulduğunda tetiklenir.
+| IOT hub'ı | Microsoft.Devices.DeviceCreated | Bir cihaz IoT Hub 'ına kaydedildiğinde yayımlandı. |
+| | Microsoft.Devices.DeviceDeleted | IoT Hub 'ından bir cihaz silindiğinde yayımlandı. |
+| Kaynak grupları | Microsoft.Resources.ResourceWriteSuccess | Kaynak oluşturma veya güncelleştirme işlemi başarılı olduğunda tetiklenir. |
 | | Microsoft. resources. ResourceWriteFailure | Kaynak oluşturma veya güncelleştirme işlemi başarısız olduğunda tetiklenir. |
-| | Microsoft. resources. ResourceWriteCancel | Kaynak oluşturma veya güncelleştirme işlemi iptal edildiğinde tetiklenir. |
-| | Microsoft. resources. ResourceDeleteSuccess | Kaynak silme işlemi başarılı olduğunda tetiklenir. |
+| | Microsoft.Resources.ResourceWriteCancel | Kaynak oluşturma veya güncelleştirme işlemi iptal edildiğinde tetiklenir. |
+| | Microsoft.Resources.ResourceDeleteSuccess | Kaynak silme işlemi başarılı olduğunda tetiklenir. |
 | | Microsoft. resources. ResourceDeleteFailure | Kaynak silme işlemi başarısız olduğunda tetiklenir. |
-| | Microsoft. resources. ResourceDeleteCancel | Bir kaynak silme işlemi iptal edildiğinde tetiklenir. Bu olay, bir şablon dağıtımı iptal edildiğinde oluşur. |
+| | Microsoft.Resources.ResourceDeleteCancel | Bir kaynak silme işlemi iptal edildiğinde tetiklenir. Bu olay, bir şablon dağıtımı iptal edildiğinde oluşur. |
 
 Daha fazla bilgi için bkz. [Azure Event Grid olay şeması](https://docs.microsoft.com/azure/event-grid/event-schema).
 
@@ -131,7 +131,7 @@ Bu bölümde, Azure Işlevleri, Logic Apps ve Event Grid oluşan Azure sunucusuz
 - [Azure Işlevleri Tetikleyicileri ve bağlamaları kavramları](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
 - [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
 - [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
-- [Azure Tablo depolama](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
+- [Azure Tablo Depolama](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
 - [Compare işlevleri 1. x ve 2. x](https://docs.microsoft.com/azure/azure-functions/functions-versions)
 - [Azure şirket içi veri ağ geçidi ile şirket içi veri kaynaklarına bağlanma](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
 - [Azure portal ilk işlevinizi oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)

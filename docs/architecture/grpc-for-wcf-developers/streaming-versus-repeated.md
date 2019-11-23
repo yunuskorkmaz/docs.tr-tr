@@ -1,14 +1,13 @@
 ---
 title: gRPC akış Hizmetleri ve yinelenen alanlar-WCF geliştiricileri için gRPC
 description: GRPC ile veri koleksiyonlarını geçirme yöntemi olarak yinelenen alanları akış Hizmetleri ile karşılaştırma.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: e48fe4882139e029dbf5b52451a2e68cb4316677
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: f2f13776586607ed489c45ebb324c0c5713bed99
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846081"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966914"
 ---
 # <a name="grpc-streaming-services-versus-repeated-fields"></a>gRPC akış Hizmetleri ve yinelenen alanlara karşı
 

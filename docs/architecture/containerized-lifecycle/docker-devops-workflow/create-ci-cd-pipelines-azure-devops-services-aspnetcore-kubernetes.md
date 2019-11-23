@@ -13,7 +13,7 @@ ms.locfileid: "70295780"
 
 Şekil 5-12 ' de, kod yönetimi, kod derleme, Docker görüntüleri oluşturma, Docker görüntüleri bir Docker kayıt defterine gönderme ve son olarak Azure 'daki bir Kubernetes kümesine dağıtım gibi uçtan uca DevOps senaryosunu görebilirsiniz.
 
-![Akışıyla Geliştirme makinesinde başlatılır. Bir depoya gönderim, bir Docker kayıt defterine gönderilen özel bir görüntü kullanarak Build/CI görevine başlar ve ardından CD/dağıt görevi tarafından, son olarak AKS 'ye itilmiş olarak kullanılır.](media/docker-workflow-ci-cd-aks.png)
+![İş akışı: geliştirme makinesinde başlatılır. Bir depoya gönderim, bir Docker kayıt defterine gönderilen özel bir görüntü kullanarak Build/CI görevine başlar ve ardından CD/dağıt görevi tarafından, son olarak AKS 'ye itilmiş olarak kullanılır.](media/docker-workflow-ci-cd-aks.png)
 
 **Şekil 5-12**. Azure 'da Docker görüntüleri oluşturma ve bir Kubernetes kümesine dağıtma CI/CD senaryosu
 
@@ -37,5 +37,5 @@ ms.locfileid: "70295780"
 ><https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 >[!div class="step-by-step"]
->[Önceki](docker-application-outer-loop-devops-workflow.md)İleri
->[](../run-manage-monitor-docker-environments/index.md)
+>[Önceki](docker-application-outer-loop-devops-workflow.md)
+>[İleri](../run-manage-monitor-docker-environments/index.md)

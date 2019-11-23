@@ -43,7 +43,7 @@ Tam ve güçlü bir IDE veya hafif ve çevik bir düzenleyiciyi tercih etmeksizi
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>Docker kapsayıcıları için .NET dilleri ve çerçeveleri
 
-Bu kılavuzun önceki bölümlerinde belirtildiği gibi, Docker Kapsayıcılı .NET uygulamaları geliştirirken .NET Framework, .NET Core veya açık kaynaklı mono projesi kullanabilirsiniz. Hangi .NET Framework 'ün kullanımda olduğuna bağlı olarak, Linux veya Windows kapsayıcılarını hedeflemek için C \#, F \# veya Visual Basic geliştirebilirsiniz. Daha ayrıntılı about.NET dil için bkz. [.NET dil stratejisi](https://devblogs.microsoft.com/dotnet/the-net-language-strategy/)blog gönderisi.
+Bu kılavuzun önceki bölümlerinde belirtildiği gibi, Docker Kapsayıcılı .NET uygulamaları geliştirirken .NET Framework, .NET Core veya açık kaynaklı mono projesi kullanabilirsiniz. Hangi .NET Framework 'ün kullanımda olduğuna bağlı olarak, Linux veya Windows kapsayıcılarını hedeflemek için C\#, F\#veya Visual Basic geliştirebilirsiniz. Daha ayrıntılı about.NET dil için bkz. [.NET dil stratejisi](https://devblogs.microsoft.com/dotnet/the-net-language-strategy/)blog gönderisi.
 
 >[!div class="step-by-step"]
 >[Önceki](../architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md)

@@ -30,20 +30,20 @@ Bu nedenle, istemci tarafı kodunda genellikle Viewmodellerini doğrularsınız.
 - **Metin girişi doğrulama ve hataları gösterme** \
   [https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
-- **Doğrulama geri çağırması** \
+- **Doğrulama geri çağırma** \
   <https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/>
 
 ### <a name="validation-in-aspnet-core-apps"></a>ASP.NET Core uygulamalarda doğrulama
 
-- **Rick Anderson. Doğrulama ekleme** \
+- **Rick Anderson. Doğrulama \ ekleniyor**
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA Web uygulamalarında doğrulama (angular 2, TypeScript, JavaScript)
 
-- **ADO KuKic. Angular 2 form doğrulaması** \
+- **ADO KuKic. Angular 2 formu doğrulama** \
   <https://scotch.io/tutorials/angular-2-form-validation>
 
-- **Form doğrulaması** \
+- **Form doğrulama** \
   <https://angular.io/guide/form-validation>
 
 - **Doğrulamasına.** Belgeleri yeniden Başlat. \
@@ -60,5 +60,5 @@ Bu nedenle, istemci tarafı kodunda genellikle Viewmodellerini doğrularsınız.
 - Çoğu durumda, istemci tarafında gereksiz doğrulama yapmak iyi bir uygulamadır çünkü uygulama öngörülü olabilir.
 
 >[!div class="step-by-step"]
->[Önceki](domain-model-layer-validations.md)İleri
->[](domain-events-design-implementation.md)
+>[Önceki](domain-model-layer-validations.md)
+>[İleri](domain-events-design-implementation.md)

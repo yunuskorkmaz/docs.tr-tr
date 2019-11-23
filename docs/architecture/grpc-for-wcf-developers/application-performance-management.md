@@ -1,14 +1,13 @@
 ---
 title: Uygulama performansı yönetimi-WCF geliştiricileri için gRPC
 description: ASP.NET Core gRPC uygulamaları için günlüğe kaydetme, ölçümler ve izleme.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6ba67fd069e7efc232f912e50c0e283facb79e9c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 2b6a30ab68cb6e2fdc81c59e7faef81064b948c1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846720"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968173"
 ---
 # <a name="application-performance-management"></a>Uygulama Performansı Yönetimi
 
@@ -56,7 +55,7 @@ Günlük iletilerini ve kullanılabilir günlük havuzlarını ve hedefleri yazm
 
 .NET Core çalışma zamanı, <xref:System.Diagnostics.Tracing.EventSource> ve <xref:System.Diagnostics.Tracing.EventCounter> sınıfları gibi API 'Leri içeren ölçümleri yayma ve gözlemlemek için bir bileşen kümesi sağlar. Bu API 'Ler, [DotNet sayaçları genel aracı](https://github.com/dotnet/diagnostics/blob/master/documentation/dotnet-counters-instructions.md)veya Windows Için olay izleme gibi dış süreçler tarafından tüketilen temel sayısal verileri göstermek için kullanılabilir. Kendi kodunuzda `EventCounter` kullanma hakkında daha fazla bilgi için [EventCounter tanıtım](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md) Öğreticisi ' ne bakın.
 
-Daha gelişmiş ölçümler ve ölçüm verilerini daha geniş veri depolarına yazmak için, [uygulama ölçümleri](https://www.app-metrics.io)adlı harika bir açık kaynak projesi vardır. Bu kitaplıklar paketi kodunuzu işaretlemek için kapsamlı bir tür kümesi sağlar. Ayrıca, Prometheus ve etkileyen, [Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)gibi zaman serisi veritabanlarını içeren farklı türlerdeki hedeflere ölçümleri yazmak için paketler sunar. [App. ölçümler. AspNetCore. Mvc](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) NuGet paketi, ASP.NET Core çerçevesi ile tümleştirme aracılığıyla otomatik olarak oluşturulan kapsamlı bir temel ölçümler kümesi ekler ve Web sitesi bu ölçümleri görüntülemek için [Şablonlar](https://www.app-metrics.io/samples/grafana/) sağlar [Grafana](https://grafana.com/) görselleştirme platformu ile.
+Daha gelişmiş ölçümler ve ölçüm verilerini daha geniş veri depolarına yazmak için, [uygulama ölçümleri](https://www.app-metrics.io)adlı harika bir açık kaynak projesi vardır. Bu kitaplıklar paketi kodunuzu işaretlemek için kapsamlı bir tür kümesi sağlar. Ayrıca, Prometheus ve etkileyen, [Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)gibi zaman serisi veritabanlarını içeren farklı türlerdeki hedeflere ölçümleri yazmak için paketler sunar. [App. ölçümler. AspNetCore. Mvc](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) NuGet paketi, ASP.NET Core çerçevesi ile tümleştirme aracılığıyla otomatik olarak oluşturulan kapsamlı bir temel ölçümler kümesi ekler ve Web sitesi bu ölçümleri [Grafana](https://grafana.com/) görselleştirme platformu ile görüntülemek için [Şablonlar](https://www.app-metrics.io/samples/grafana/) sağlar.
 
 Uygulama ölçümleri hakkında daha fazla bilgi ve belge hakkında daha fazla bilgi için [App-Metrics.io](https://app-metrics.io) Web sitesine bakın.
 

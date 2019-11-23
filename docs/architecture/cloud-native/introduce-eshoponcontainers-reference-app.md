@@ -32,8 +32,8 @@ Uygulamanın Özellikler ve gereksinimlerinin bir gözden geçirimiyle başlayal
 - Sepetten öğe düzenleme veya kaldırma
 - İptal
 - Hesap kaydetme
-- Oturum Aç
-- Oturumu Kapat
+- Oturum aç
+- Oturumu kapat
 - Siparişleri gözden geçirme
 
 Uygulamanın aşağıdaki işlevsel olmayan gereksinimleri de vardır:

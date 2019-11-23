@@ -91,7 +91,7 @@ Bu nedenle, mikro hizmetler (ve bu uygulamadaki veritabanları için de) dağıt
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Eshoponcontainers GitHub deposu. Başvuru uygulaması  \ kaynak kodu**
+- **Eshoponcontainers GitHub deposu. Başvuru uygulaması \ kaynak kodu**
   <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Mikro hizmet tabanlı bir çözümün avantajları
@@ -148,7 +148,7 @@ Dış mimari, bu kılavuzun mimari bölümünde açıklanan ilkeleri izleyerek b
 
 Örneğin, *Eshoponcontainers* örneğimizde Katalog, sepet ve Kullanıcı profili mikro hizmetleri basittir (temelde, CRUD alt sistemleri). Bu nedenle, iç mimarisi ve tasarımı basittir. Ancak, sıralama mikro hizmeti gibi daha karmaşık olan ve çok sayıda etki alanı karmaşıklığıyla sürekli değişen iş kurallarını temsil eden diğer mikro hizmetlerinize sahip olabilirsiniz. Bunlar gibi durumlarda, *Eshoponcontainers* sıralama mikro hizmetinde yaptığımız gibi, belirli bir mikro hizmet için etki alanı odaklı TASARıM (DDD) yaklaşımlarıyla tanımlananlara benzer şekilde daha gelişmiş desenler uygulamak isteyebilirsiniz. (Bu DDD desenlerinin ilerleyen bölümlerinde, *Eshoponcontainers* sıralama mikro hizmeti 'nin uygulanmasını anlatan daha sonra gözden geçiğiz.)
 
-Mikro hizmet başına farklı bir teknolojinin başka bir nedeni de her mikro hizmetin doğası olabilir. Örneğin, C \# gibi daha fazla nesne odaklı programlama dili yerine AI ve makine öğrenimi etki alanlarını hedefliyorsanız, F \# gibi işlevsel programlama dilinin kullanılması daha iyi olabilir.
+Mikro hizmet başına farklı bir teknolojinin başka bir nedeni de her mikro hizmetin doğası olabilir. Örneğin, C\#gibi daha fazla nesne odaklı programlama dili yerine AI ve makine öğrenimi etki alanlarını hedefliyorsanız, F\#gibi işlevsel programlama dilinin kullanılması daha iyi olabilir.
 
 En alttaki satır, her mikro hizmetin farklı tasarım düzenlerine göre farklı bir iç mimariye sahip olmasını sağlayabilir. Tüm mikro hizmetler, gelişmiş DDD desenleri kullanılarak uygulanmamalıdır çünkü bu, bunlar üzerinde aşırı mühendislik uygulanırlar. Benzer şekilde, sürekli değişen iş mantığı olan karmaşık mikro hizmetler, CRUD bileşenleri olarak uygulanmamalıdır ya da düşük kaliteli kodla bitemez.
 
@@ -168,7 +168,7 @@ Yazılım mimarları ve geliştiriciler tarafından kullanılan birçok mimari d
 
 - [Olay odaklı mimari](https://en.wikipedia.org/wiki/Event-driven_architecture) (Eda).
 
-Ayrıca, ASP.NET Core Web API 'Leri, NancyFx, ASP.NET Core SignalR (.NET Core 2 ile kullanılabilir), F \#, Node. js, Python, Java, C++, golang gibi birçok teknoloji ve dil ile mikro hizmetler de oluşturabilirsiniz.
+Ayrıca, ASP.NET Core Web API 'Leri, NancyFx, ASP.NET Core SignalR (.NET Core 2 ile kullanılabilir), F\#, Node. js, Python, Java, C++, golang gibi birçok teknoloji ve dil ile mikro hizmetler de oluşturabilirsiniz.
 
 Önemli nokta, belirli bir mimari deseninin veya stilin olmaması ya da herhangi bir teknolojinin tüm durumlar için doğru olması. Şekil 6-3, farklı mikro hizmetlerde kullanılabilecek bazı yaklaşımları ve teknolojileri (belirli bir sırada olmasa da) gösterir.
 

@@ -1,14 +1,13 @@
 ---
 title: WCF son noktaları ve gRPC yöntemleri-WCF geliştiricileri için gRPC
 description: ServiceContract ve OperationContract öznitelikleriyle belirtilen WCF uç noktalarının karşılaştırılması ve Protoarabelleğe göre belirtilen gRPC yöntemleri
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 1cb7fedf1fbb632438134375306801f356d7b921
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 763862a363afc6aab72335050cf4822754816c7a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846061"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966920"
 ---
 # <a name="wcf-endpoints-and-grpc-methods"></a>WCF uç noktaları ve gRPC yöntemleri
 

@@ -21,7 +21,7 @@ Bunun yerine, tam olarak yönetilen [bir hizmet olarak veritabanı (DBaaS)](http
 
 Daha sonra Azure 'da bulunan DBaaS seçeneklerine bakacağız. Microsoft 'un, açık kaynaklı ve NoSQL veritabanları için yönetilen destek sunan ve etkin bir üye olarak çeşitli açık kaynaklı tabanlara anahtar katkıları sağlayan, Azure 'u bir "açık platform" olarak tutma konusunda nasıl sorun olduğunu göreceksiniz.
 
-## <a name="azure-sql-database"></a>Azure SQL veritabanı
+## <a name="azure-sql-database"></a>Azure SQL Database
 
 [Azure SQL veritabanı](https://docs.microsoft.com/azure/sql-database/) , Microsoft SQL Server veritabanı altyapısını temel alan, özellikle zengin, genel amaçlı bir ilişkisel hizmet olarak veritabanı (DBaaS). Microsoft tarafından tam olarak yönetilir ve yüksek performanslı, güvenilir ve güvenli bir bulut veritabanıdır. Hizmet, SQL Server 'ın şirket içi sürümünde bulunan özelliklerin birçoğunu paylaşır.
 
@@ -35,7 +35,7 @@ Dakikalar içinde bir SQL veritabanı sunucusu ve veritabanı sağlayabilirsiniz
 
 SQL veritabanı dağıtımı sırasında önceki şekildeki alternatifleri göz önünde bulun:
 
-- [Tek bir veritabanı](https://docs.microsoft.com/azure/sql-database/sql-database-single-database) , bir [SQL veritabanı sunucusu](https://docs.microsoft.com/azure/sql-database/sql-database-servers)tarafından yönetilen kendi kaynak kümesi  with. Tek bir veritabanı, şirket içi SQL Server dağıtımı  in [Kapsanan veritabanına](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases) benzerdir.
+- [Tek bir veritabanı](https://docs.microsoft.com/azure/sql-database/sql-database-single-database) , bir [SQL veritabanı sunucusu](https://docs.microsoft.com/azure/sql-database/sql-database-servers)tarafından yönetilen kendi kaynak kümesiyle . Tek bir veritabanı, şirket içi SQL Server dağıtımında [içerilen bir veritabanı](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases) benzerdir.
 
 - Bir SQL veritabanları koleksiyonunun tek bir SQL veritabanı sunucusunu ayarlanan fiyata paylaştığı [elastik bir havuz](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool) . Tek veritabanları, bir grup veritabanı için fiyat performansını iyileştirmek için gerektiğinde elastik bir havuzun içine ve dışına taşınabilir.
 
@@ -51,9 +51,9 @@ Son olarak, yeni [Azure SQL veritabanı hiper ölçek](https://azure.microsoft.c
 
 Azure, geleneksel Microsoft SQL Server yığınına ek olarak, çeşitli popüler açık kaynaklı veritabanlarının yönetilen sürümlerine de sahiptir.
 
-## <a name="azure-database-for-mysql"></a>MySQL için Azure veritabanı
+## <a name="azure-database-for-mysql"></a>MySQL için Azure Veritabanı
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL) bir [Açık kaynaklı](https://en.wikipedia.org/wiki/Open-source_software) [ilişkisel veritabanı](https://en.wikipedia.org/wiki/Relational_database_management_system) is. Bu, [lamba yazılım yığınındaki](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) bir bileşendir ve Facebook, Twitter ve YouTube dahil olmak üzere çok büyük kuruluşlar tarafından kullanılır. Community sürümü ücretsiz olarak kullanılabilir ve Enterprise Edition için bir lisans satın alma işlemi gerekir. Başlangıçta 1995 ' de oluşturulan ürün, ' de 2010 Oracle tarafından edinilen Sun Microsystems tarafından 2008 ' de satın alınmış.
+[MySQL](https://en.wikipedia.org/wiki/MySQL) , [Açık kaynaklı](https://en.wikipedia.org/wiki/Open-source_software)bir [ilişkisel veritabanıdır](https://en.wikipedia.org/wiki/Relational_database_management_system). Bu, [lamba yazılım yığınındaki](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) bir bileşendir ve Facebook, Twitter ve YouTube dahil olmak üzere çok büyük kuruluşlar tarafından kullanılır. Community sürümü ücretsiz olarak kullanılabilir ve Enterprise Edition için bir lisans satın alma işlemi gerekir. Başlangıçta 1995 ' de oluşturulan ürün, ' de 2010 Oracle tarafından edinilen Sun Microsystems tarafından 2008 ' de satın alınmış.
 
 [MySQL Için Azure veritabanı](https://azure.microsoft.com/services/mysql/) , açık kaynak MySQL sunucu altyapısını temel alan, tam olarak yönetilen, kurumsal özellikli bir ilişkisel veritabanı hizmetidir. MySQL Community Edition uygulaması, ek bir ücret ödemeden aşağıdaki PaaS özelliklerini içerir:
 
@@ -97,11 +97,11 @@ MariaDB için güçlü bir aşağıdakiler vardır ve birçok büyük kuruluş t
 
 - Kurumsal düzeyde güvenlik ve uyumluluk.
 
-## <a name="azure-database-for-postgresql"></a>PostgreSQL için Azure veritabanı
+## <a name="azure-database-for-postgresql"></a>PostgreSQL için Azure Veritabanı
 
 [PostgreSQL](https://www.postgresql.org/) , 30 yıldan fazla etkin geliştirmeyi içeren, popüler, açık kaynaklı bir ilişkisel veritabanıdır. Bu, genel amaçlı ve nesne ilişkisel veritabanı yönetim sistemidir. Lisanslama, "özgürlük" olarak kabul edilir ve ürünün herhangi bir biçimde kullanımı, değiştirilmesi ve dağıtılması ücretsizdir. Apple, Red Hat ve Fujitsu gibi birçok büyük kuruluş, PostgreSQL kullanan ürünleri derlediniz.
 
-[PostgreSQL Için Azure veritabanı](https://azure.microsoft.com/services/postgresql/) , açık kaynak Postgres veritabanı altyapısını temel alan, tam olarak yönetilen bir ilişkisel veritabanı hizmetidir. Tahmin edilebilir performans, güvenlik, yüksek kullanılabilirlik ve dinamik ölçeklenebilirlik ile görev açısından kritik iş yüklerini işleyebilir. Java, Python, Node, C \# ve PHP dahil C++olmak üzere çeşitli açık kaynaklı çerçeveleri ve dilleri destekler. PostgreSQL veritabanlarının bir komut satırı arabirimi veya [Azure veri geçiş hizmeti](https://azure.microsoft.com/services/database-migration/)aracılığıyla [geçirilmesini](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) mümkün kılar.
+[PostgreSQL Için Azure veritabanı](https://azure.microsoft.com/services/postgresql/) , açık kaynak Postgres veritabanı altyapısını temel alan, tam olarak yönetilen bir ilişkisel veritabanı hizmetidir. Tahmin edilebilir performans, güvenlik, yüksek kullanılabilirlik ve dinamik ölçeklenebilirlik ile görev açısından kritik iş yüklerini işleyebilir. Java, Python, Node, C\#ve PHP dahil C++olmak üzere çeşitli açık kaynaklı çerçeveleri ve dilleri destekler. PostgreSQL veritabanlarının bir komut satırı arabirimi veya [Azure veri geçiş hizmeti](https://azure.microsoft.com/services/database-migration/)aracılığıyla [geçirilmesini](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) mümkün kılar.
 
 Hizmet, benzersiz veritabanı desenlerinizi etkileyen [yerleşik zeka](https://docs.microsoft.com/azure/postgresql/concepts-monitoring) Içerir ve PostgreSQL veritabanınızın performansını en üst düzeye çıkarmanıza yardımcı olacak özelleştirilmiş öneriler ve öngörüler sağlar. [Gelişmiş tehdit koruması](https://docs.microsoft.com/azure/postgresql/concepts-data-access-and-security-threat-protection) , veritabanınızı saatin etrafında izler ve olası kötü amaçlı etkinlikleri algılar, böylece hemen müdahale edebilmeniz için algılama sonrasında sizi uyarır.
 
@@ -109,7 +109,7 @@ PostgreSQL için Azure veritabanı iki dağıtım seçeneği olarak sunulmaktad�
 
 - [Tek sunuculu](https://docs.microsoft.com/azure/postgresql/concepts-servers) dağıtım seçeneği, birden çok veritabanı için merkezi bir yönetim noktasıdır. Şirket içi dağıtımlar için aynı PostgreSQL sunucu altyapısı vardır. Bununla birlikte, tüm kaynakları kullanmak veya kaynakları paylaşmak için birden çok veritabanı oluşturmak üzere sunucu başına tek bir veritabanı oluşturabilirsiniz. Fiyatlandırma, çekirdek ve depolama temelinde sunucu başına yapılandırılır.
 
-- [Hyperscale (Citus) seçeneği](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/)  [Citus veri](https://www.citusdata.com/)  technology tarafından desteklenir. Tek bir veritabanını yüzlerce düğüm genelinde yatay olarak ölçeklendirerek yüksek performanslı ölçeklendirmeyi etkinleştirerek, daha hızlı performans ve ölçek sunun. Bu seçenek, altyapının bellekte daha fazla veri sığdırmasını, yüzlerce düğüm üzerinde paralel hale getirmek sorguları ve veri dizinini daha hızlı şekilde erişmesini sağlar. Hiperscale özelliği, PostgreSQL için en son yeniliklerle, sürümlerle ve araçlarla uyumludur, bu sayede mevcut PostgreSQL uzmanlığınızdan yararlanabilirsiniz.
+- [Hyperscale (Citus) seçeneği](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/)  [Citus Data](https://www.citusdata.com/) teknolojisi tarafından desteklenir. Tek bir veritabanını yüzlerce düğüm genelinde yatay olarak ölçeklendirerek yüksek performanslı ölçeklendirmeyi etkinleştirerek, daha hızlı performans ve ölçek sunun. Bu seçenek, altyapının bellekte daha fazla veri sığdırmasını, yüzlerce düğüm üzerinde paralel hale getirmek sorguları ve veri dizinini daha hızlı şekilde erişmesini sağlar. Hiperscale özelliği, PostgreSQL için en son yeniliklerle, sürümlerle ve araçlarla uyumludur, bu sayede mevcut PostgreSQL uzmanlığınızdan yararlanabilirsiniz.
 
 ## <a name="cosmos-db"></a>Cosmos DB
 
@@ -157,7 +157,7 @@ Azure Tablo depolaması için yazılmış uygulamalar, hiçbir kod değişikliğ
 
 [Brownfield](https://en.wikipedia.org/wiki/Brownfield_(software_development)) uygulama senaryolarında, geliştirme ekipleri mevcut Mongo, Gremlin veya Cassandra veritabanlarını, mevcut verilerde veya uygulama kodunda en az değişiklikle Cosmos DB içine geçirebilir. Tek [alan](https://en.wikipedia.org/wiki/Greenfield_project) senaryolarında, geliştirme ekipleri MongoDB, Cassandra ve Gremlin platformları için tam olarak desteklenen açık kaynak seçenekleri de dahil olmak üzere gereksinimlerini ve tercihlerini en iyi karşılayan veri modelini seçebilirler.
 
-### <a name="consistency-models"></a>Tutarlılık modelleri
+### <a name="consistency-models"></a>Tutarlılık modeli
 
 *İlişkisel ve NoSQL* bölümünde daha önce, verilerinizin bütünlüğünü ifade eden bir terim olan *veri tutarlılığı*konusunu tartıştık. Yüksek kullanılabilirlik, düşük gecikme süresi veya her ikisi için çoğaltmaya dayanan dağıtılmış veritabanları, okuma tutarlılığı, kullanılabilirliği ve gecikme süresi arasında temel bir zorunluluğunu getirir olmalıdır.
 

@@ -17,7 +17,7 @@ ms.locfileid: "72291156"
 
 ASP.NET Core bir uygulama, bir dizi ara yazılım üzerine kurulmuştur. Middlewares, istekleri ve yanıtları işlemek için bir işlem hattına düzenlenmiş işleyicileridir. Web Forms uygulamasında HTTP işleyicileri ve modülleri benzer sorunları çözecektir. ASP.NET Core, modüller, işleyiciler, *Global.asax.cs*ve uygulama yaşam döngüsü, ara yazılım ile değiştirilmiştir. Bu bölümde, bir Blazor uygulaması bağlamında hangi ara yazılımı öğreneceksiniz.
 
-## <a name="overview"></a>Genel Bakış
+## <a name="overview"></a>Genel bakış
 
 ASP.NET Core isteği ardışık düzeni, bir dizi istekten oluşur ve bunlardan sonra çağırılır. Aşağıdaki diyagramda kavram gösterilmektedir. Yürütmenin iş parçacığı siyah okları izler.
 
@@ -40,17 +40,17 @@ Aşağıdaki tabloda, ASP.NET Core ' deki değiştirme ara yazılımı ve bileş
 |HTTP hataları            |`CustomErrorModule`          |[Durum kodu sayfaları ara yazılımı](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |Varsayılan belge       |`DefaultDocumentModule`      |[Varsayılan dosyalar ara yazılımı](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
 |Dizin tarama     |`DirectoryListingModule`     |[Dizin tarama ara yazılımı](/aspnet/core/fundamentals/static-files#enable-directory-browsing)|
-|Dinamik sıkıştırma    |`DynamicCompressionModule`   |[Yanıt sıkıştırma ara yazılımı](/aspnet/core/performance/response-compression)|
+|Dinamik sıkıştırma    |`DynamicCompressionModule`   |[Yanıt Sıkıştırma Ara Yazılımı](/aspnet/core/performance/response-compression)|
 |Başarısız istek izleme|`FailedRequestsTracingModule`|[Günlüğe kaydetme ASP.NET Core](/aspnet/core/fundamentals/logging/index#tracesource-provider)|
-|Dosya önbelleğe alma           |`FileCacheModule`            |[Yanıt önbelleğe alma ara yazılımı](/aspnet/core/performance/caching/middleware)|
-|HTTP önbelleği           |`HttpCacheModule`            |[Yanıt önbelleğe alma ara yazılımı](/aspnet/core/performance/caching/middleware)|
+|Dosya önbelleğe alma           |`FileCacheModule`            |[Yanıtları Önbelleğe Alma Ara Yazılımı](/aspnet/core/performance/caching/middleware)|
+|HTTP önbelleği           |`HttpCacheModule`            |[Yanıtları Önbelleğe Alma Ara Yazılımı](/aspnet/core/performance/caching/middleware)|
 |HTTP günlüğü           |`HttpLoggingModule`          |[Günlüğe kaydetme ASP.NET Core](/aspnet/core/fundamentals/logging/index)|
-|HTTP yeniden yönlendirme       |`HttpRedirectionModule`      |[URL yeniden yazma ara yazılımı](/aspnet/core/fundamentals/url-rewriting)|
-|ISAPI filtreleri          |`IsapiFilterModule`          |[Yazılımlar](/aspnet/core/fundamentals/middleware/index)|
-|I                  |`IsapiModule`                |[Yazılımlar](/aspnet/core/fundamentals/middleware/index)|
+|HTTP yeniden yönlendirme       |`HttpRedirectionModule`      |[URL Yeniden Yazma Ara Yazılımı](/aspnet/core/fundamentals/url-rewriting)|
+|ISAPI filtreleri          |`IsapiFilterModule`          |[Ara Yazılım](/aspnet/core/fundamentals/middleware/index)|
+|ISAPI                  |`IsapiModule`                |[Ara Yazılım](/aspnet/core/fundamentals/middleware/index)|
 |İstek filtreleme      |`RequestFilteringModule`     |[URL yeniden yazma ara yazılımı ırule](/aspnet/core/fundamentals/url-rewriting#irule-based-rule)|
-|URL yeniden yazma&#8224;   |`RewriteModule`              |[URL yeniden yazma ara yazılımı](/aspnet/core/fundamentals/url-rewriting)|
-|Statik sıkıştırma     |`StaticCompressionModule`    |[Yanıt sıkıştırma ara yazılımı](/aspnet/core/performance/response-compression)|
+|URL yeniden yazma&#8224;   |`RewriteModule`              |[URL Yeniden Yazma Ara Yazılımı](/aspnet/core/fundamentals/url-rewriting)|
+|Statik sıkıştırma     |`StaticCompressionModule`    |[Yanıt Sıkıştırma Ara Yazılımı](/aspnet/core/performance/response-compression)|
 |Statik içerik         |`StaticFileModule`           |[Statik dosya ara yazılımı](/aspnet/core/fundamentals/static-files)|
 |URL yetkilendirmesi      |`UrlAuthorizationModule`     |[ASP.NET Core kimliği](/aspnet/core/security/authentication/identity)|
 

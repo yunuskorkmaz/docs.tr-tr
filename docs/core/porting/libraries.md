@@ -35,10 +35,10 @@ Bu makalede, .NET Core 'un paketleri nasıl tanımladığı ve kullandığı ve 
 [Platformlar arası araçlarla kitaplıklar geliştirme](../tutorials/libraries.md)   
 Bu konuda, platformlar arası CLı araçları kullanılarak .NET için kitaplıkların nasıl yazılacağı açıklanmaktadır.
 
-[.NET Core için *csproj* biçimine eklemeler](../tools/csproj.md)   
+[.NET Core  *csproj* biçimine eklemeler](../tools/csproj.md)  
 Bu makalede, *csproj* ve MSBuild 'e taşıma kapsamında proje dosyasına eklenen değişiklikler özetlenmektedir.
 
-[.NET Core 'a taşıma-üçüncü taraf taraflarınızın bağımlılıklarını çözümleme](third-party-deps.md)   
+[.NET Core 'A taşıma-üçüncü taraf taraflarınızın bağımlılıklarını çözümleme](third-party-deps.md)   
 Bu konuda, üçüncü taraf bağımlılıkların taşınabilirliği ve bir NuGet paket bağımlılığı .NET Core üzerinde çalıştırılmazsa ne yapmalı anlatılmaktadır.
 
 ## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>.NET Framework kodunuzun .NET Framework 4.7.2 için yeniden hedefleniyor
@@ -92,7 +92,7 @@ Bu yaklaşım, .NET Core 'u desteklemek için kodun yeniden yapılandırılması
    - Taşınabilir olmayan kodları daha verimli bir şekilde ilgilenebilmeniz için kolayca yalıtmak ister misiniz?
    - Kodunuzu yeniden düzenlemeniz gerekiyor mu?
    - Taşınabilir olmayan türler için aynı görevi gerçekleştiren alternatif API 'Ler var mı? Örneğin, <xref:System.Net.WebClient> sınıfını kullanıyorsanız, bunun yerine <xref:System.Net.Http.HttpClient> sınıfını kullanabilirsiniz.
-   - Bir görevi gerçekleştirmek için kullanılabilecek farklı taşınabilir API 'Ler var, bu da bir iade değişikliği olmasa bile Örneğin <xref:System.Xml.Schema.XmlSchema> , XML 'yi ayrıştırmak ancak XML şema keşfi gerekmiyorsa, API 'leri kullanabilir <xref:System.Xml.Linq> ve bir API 'ye güvenmek yerine kendiniz ayrıştırma uygulayabilirsiniz.
+   - Bir görevi gerçekleştirmek için kullanılabilecek farklı taşınabilir API 'Ler var, bu da bir iade değişikliği olmasa bile Örneğin, XML ayrıştırmak için <xref:System.Xml.Schema.XmlSchema> kullanıyorsanız ancak XML şema keşfi gerekmiyorsa, API 'ye güvenmek yerine <xref:System.Xml.Linq> API 'Leri kullanabilir ve Ayrıştırma işlemini uygulayabilirsiniz.
 1. Bağlantı noktası zorlaştırılması gereken derlemeleriniz varsa .NET Framework şu an için de bu şekilde ayrılsın mı? Göz önünde bulundurmanız gereken bazı noktalar şunlardır:
    - Kitaplığınızda .NET Core ile uyumlu olmayan bazı işlevlere sahip olabilirsiniz çünkü .NET Framework veya Windows 'a özgü işlevselliği çok fazla yoğun bir şekilde kullanır. Bu işlevi şimdilik geride bırakmak ve bir .NET Core sürümünü, kaynakların bağlantı noktası için kullanılabilir olana kadar geçici olarak daha az özelliklerle kitaplığınızdan serbest bırakmak için geçerlidir.
    - Yeniden düzenleme yardım ister misiniz?

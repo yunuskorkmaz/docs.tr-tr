@@ -1,5 +1,5 @@
 ---
-title: En Iyi erişilebilirlik uygulamaları
+title: En İyi Erişilebilirlik Uygulamaları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - best practices for accessibility
@@ -12,31 +12,31 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/12/2019
 ms.locfileid: "72291395"
 ---
-# <a name="accessibility-best-practices"></a>En Iyi erişilebilirlik uygulamaları
+# <a name="accessibility-best-practices"></a>En İyi Erişilebilirlik Uygulamaları
 > [!NOTE]
-> Bu belge <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. @No__t-0 hakkında en son bilgiler için bkz. [Windows AUTOMATION API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Aşağıdaki en iyi yöntemleri denetimlerde veya uygulamalarda uygulamak, yardımcı teknoloji cihazlarını kullanan kişiler için erişilebilirliğini geliştirir. Bu en iyi uygulamalardan birçoğu iyi [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] tasarımına odaklanmaktadır. Her bir en iyi uygulama [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] denetimleri veya uygulamaları için uygulama bilgilerini içerir. Çoğu durumda, bu en iyi uygulamaları karşılayan iş [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] denetimlerine zaten dahil edilmiştir.  
+ Aşağıdaki en iyi yöntemleri denetimlerde veya uygulamalarda uygulamak, yardımcı teknoloji cihazlarını kullanan kişiler için erişilebilirliğini geliştirir. Bu en iyi uygulamalardan birçoğu, tasarım [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] iyi şekilde odaklanmaktadır. En iyi yöntemler [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] denetimleri veya uygulamaları için uygulama bilgilerini içerir. Çoğu durumda, bu en iyi uygulamaları karşılayan iş [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] denetimlerine zaten dahil edilmiştir.  
   
 <a name="Programmatic_Access"></a>   
-## <a name="programmatic-access"></a>Programlı Erişim  
- Programlı erişim, tüm [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğelerinin etiketlenmesini, özellik değerlerinin gösterilmesini ve uygun olayların ortaya çıkmasını sağlar. Standart [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] denetimlerinde, bu çalışmanın çoğu <xref:System.Windows.Automation.Peers.AutomationPeer> aracılığıyla zaten yapılır. Özel denetimler, programlı erişimin doğru bir şekilde uygulandığından emin olmak için ek çalışma gerektirir.  
+## <a name="programmatic-access"></a>Programlı erişim  
+ Programlı erişim, tüm [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğelerinin etiketlenmesini, özellik değerlerinin gösterilmesini ve uygun olayların ortaya çıkmasını sağlar. Standart [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] denetimlerinde, bu çalışmanın çoğu <xref:System.Windows.Automation.Peers.AutomationPeer>aracılığıyla zaten yapılır. Özel denetimler, programlı erişimin doğru bir şekilde uygulandığından emin olmak için ek çalışma gerektirir.  
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Tüm Kullanıcı Arabirimi öğelerine ve metnine programlı erişimi etkinleştir  
- Kullanıcı arabirimi (UI) öğeleri programlı erişimi etkinleştirmelidir. @No__t-0 standart bir [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] denetimi ise, programlı erişim desteği denetime dahil edilir. Denetim özel bir denetim ise (ortak bir denetimden veya denetimin alt sınıflandırıından oluşturulmuş bir denetimden) alt sınıflandırılacak bir denetim – daha sonra, değişiklik gerekebilecek alanlara yönelik <xref:System.Windows.Automation.Peers.AutomationPeer> uygulamasını denetlemeniz gerekir.  
+ Kullanıcı arabirimi (UI) öğeleri programlı erişimi etkinleştirmelidir. [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] standart bir [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] denetimi ise, programlı erişim desteği denetime dahil edilir. Denetim özel bir denetim ise (ortak bir denetimden veya denetimin alt sınıflandırıından oluşturulmuş bir denetimden) alt sınıflandırılacak bir denetim – daha sonra değişiklik gerekebilecek alanlara yönelik <xref:System.Windows.Automation.Peers.AutomationPeer> uygulamasını denetlemeniz gerekir.  
   
- Bu en iyi yöntem, yardımcı teknoloji satıcılarının ürününüzün @no__t (0) öğelerini tanımlamasına ve değiştirmesine olanak tanır.  
+ Bu en iyi yöntem, yardımcı teknoloji satıcılarının ürün [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]öğelerini tanımlamasına ve değiştirmesine olanak tanır.  
   
 <a name="Place_Names__Titles_and_Descriptions_on_UI_Objects_"></a>   
 ### <a name="place-names-titles-and-descriptions-on-ui-objects-frames-and-pages"></a>Kullanıcı arabirimi nesnelerine, çerçevelerine ve sayfalarına ad, başlık ve açıklama yerleştirme  
  Yardımcı teknolojiler, özellikle ekran okuyucular, gezinti düzeninde çerçeve, nesne veya sayfanın konumunu anlamak için başlığı kullanır. Bu nedenle, başlık çok açıklayıcı olmalıdır. Örneğin, Kullanıcı belirli bir alana daha fazla gezindiyseniz, "Microsoft Web sayfası" Web sayfası başlığı kullanılamaz. Açıklayıcı bir başlık, görme engelli ve ekran okuyucularına bağlı olan kullanıcılar için önemlidir. Benzer şekilde, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] denetimleri için <xref:System.Windows.Automation.AutomationProperties.NameProperty> ve <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> yardımcı teknoloji cihazları için önemlidir.  
   
- Bu en iyi yöntem, yardımcı teknolojik [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ' ın örnek denetimlerde ve uygulamalarda belirlenmesini ve işlemesini sağlar.  
+ Bu en iyi yöntem, yardımcı teknolojik, örnek denetimlerde ve uygulamalarda [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] tanımlamasına ve değiştirmesine olanak tanır.  
   
 <a name="Ensure_Programmatic_Events_are_Triggered_by_all_UI"></a>   
 ### <a name="ensure-programmatic-events-are-triggered-by-all-ui-activities"></a>Programlı olayların tüm Kullanıcı arabirimi etkinlikleri tarafından tetiklendiğinden emin olun  
- Bu en iyi yöntem, yardımcı teknolojik [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ' daki değişiklikleri dinlemesine olanak tanır ve kullanıcıya bu değişiklikleri bildirin.  
+ Bu en iyi yöntem, yardımcı teknolojik [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] değişiklikleri dinlemesi ve kullanıcıya bu değişiklikler hakkında bildirim sağlamasına olanak tanır.  
   
 <a name="User_Settings"></a>   
 ## <a name="user-settings"></a>Kullanıcı ayarları  
@@ -53,7 +53,7 @@ ms.locfileid: "72291395"
  Bu bölümdeki en iyi uygulamalar, denetimlerin veya uygulamaların renk ve görüntüleri etkin şekilde kullanmasını ve yardımcı teknolojiler tarafından kullanılmasını sağlar.  
   
 <a name="Don_t_Hard_Code_Colors"></a>   
-### <a name="dont-hard-code-colors"></a>Sabit kod renkleri  
+### <a name="dont-hard-code-colors"></a>Renkleri Sabit Kodlamayın  
  Renkli, görme zorluğu olan veya siyah beyaz bir ekran kullanan kişiler, sabit kodlanmış renklerle uygulamaları kullanmayabilir.  
   
  Bu en iyi yöntem, kullanıcıların renk birleşimlerini bireysel gereksinimlere göre ayarlamasına olanak tanır.  
@@ -66,7 +66,7 @@ ms.locfileid: "72291395"
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>   
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>Tüm Kullanıcı arabiriminin tüm DPı ayarlarına göre doğru şekilde ölçeklendirdiğinden emin olun  
- Tüm [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ' ların her inç nokta (DPI) ayarı tarafından doğru şekilde ölçeklendiğinden emin olun. Ayrıca, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğelerinin 1024 x 768 ekranına, inç başına 120 nokta (DPI) ile uygun olduğundan emin olun.  
+ Tüm [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] her nokta/inç (dpi) ayarında doğru şekilde ölçeklenebilmesini sağlayın. Ayrıca, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğelerinin 1024 x 768 ekranına, inç başına 120 nokta (DPI) ile uygun olduğundan emin olun.  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Gezinme  
@@ -74,7 +74,7 @@ ms.locfileid: "72291395"
   
 <a name="Provide_Keyboard_Interface_for_all_UI_Elements"></a>   
 ### <a name="provide-keyboard-interface-for-all-ui-elements"></a>Tüm Kullanıcı arabirimi öğeleri için klavye arabirimi sağla  
- Özellikle dikkatli olarak planlandığınızda, kullanıcılar [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ' a geçmek için başka bir yol sağlar.  
+ Özellikle dikkatli olarak planlandığınızda, kullanıcıların [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]gezinmek için başka bir yol sunmak üzere sekme duraklar.  
   
  Uygulamalar aşağıdaki klavye arabirimlerini sağlamalıdır:  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72291395"
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Gezinti standartlarını ve güçlü gezinti düzenlerini destekleme  
- Klavye gezinmesinin farklı yönleri, kullanıcıların [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ' a gezinmesinin farklı yollarını sağlar.  
+ Klavye gezinmesinin farklı yönleri, kullanıcıların [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]gezinmesinin farklı yollarını sağlar.  
   
  Uygulamalar aşağıdaki klavye arabirimlerini sağlamalıdır:  
   
@@ -114,13 +114,13 @@ ms.locfileid: "72291395"
   
 <a name="Multimodal_Interface"></a>   
 ## <a name="multimodal-interface"></a>Multimodal arabirimi  
- Bu bölümdeki en iyi uygulamalar [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ' ın, Visual öğelerine yönelik alternatifler içerdiğinden emin olun.  
+ Bu bölümdeki en iyi uygulamalar, uygulama [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] görsel öğeler için alternatifler içerdiğinden emin olmanızı sağlamaktır.  
   
 <a name="Provide_User_Selectable_Equivalents_for_Non_Text"></a>   
 ### <a name="provide-user-selectable-equivalents-for-non-text-elements"></a>Metin olmayan öğeler için Kullanıcı tarafından seçilebilir eşdeğerleri sağlama  
  Metin olmayan her öğe için, metin, döküm veya görsel geri bildirim gibi metin, döküm veya ses açıklamaları için Kullanıcı tarafından seçilebilir bir eşdeğer belirtin.  
   
- Metin olmayan öğeler; görüntüler, görüntü eşleme bölgeleri, animasyonlar, uygulamalar, çerçeveler, betikler, grafik düğmeleri, sesler, tek başına ses dosyaları ve video dahil olmak üzere çok sayıda [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğesi kapsar. Metin olmayan öğeler, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ' ın içeriğini anlamak için kullanıcının erişmesi gereken görsel bilgiler, konuşma veya genel ses bilgileri içerdiğinde önemlidir.  
+ Metin olmayan öğeler; görüntüler, görüntü eşleme bölgeleri, animasyonlar, uygulamalar, çerçeveler, betikler, grafik düğmeleri, sesler, tek başına ses dosyaları ve video dahil olmak üzere çok sayıda [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğesi kapsar. Metin olmayan öğeler, kullanıcının [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]içeriğini anlamak için erişmesi gereken görsel bilgileri, konuşmayı veya genel ses bilgilerini içerdiklerinde önemli öneme sahiptir.  
   
 <a name="Use_Color_but_also_Provide_Alternatives_to_Color"></a>   
 ### <a name="use-color-but-also-provide-alternatives-to-color"></a>Renk kullanın, ancak renk alternatifleri de sağlar  
@@ -128,7 +128,7 @@ ms.locfileid: "72291395"
   
 <a name="Use_Standard_Input_APIs_with_Devices_Independent"></a>   
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>Cihazdan bağımsız çağrılarla standart giriş API 'Lerini kullanma  
- Cihazdan bağımsız çağrılar, klavye ve fare özelliği eşitliğini sağlar ve [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] hakkında gerekli bilgileri kullanarak yardımcı teknoloji sağlar.  
+ Cihazdan bağımsız çağrılar, klavye ve fare özelliği eşitliğini sağlar, bu arada [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]hakkındaki gerekli bilgileri içeren yardımcı teknoloji sağlanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

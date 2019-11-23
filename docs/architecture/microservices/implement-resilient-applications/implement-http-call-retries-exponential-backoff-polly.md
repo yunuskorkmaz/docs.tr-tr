@@ -21,7 +21,7 @@ Aşağıdaki adımlarda, önceki bölümde açıklanan HttpClientFactory ile tü
 
 **ASP.NET Core 2,2 paketlerine başvurun**
 
-`HttpClientFactory`, .NET Core 2,1 ' den bu yana kullanılabilir ancak projenizde NuGet 'den en son ASP.NET Core 2,2 paketlerini kullanmanızı öneririz. Genellikle `AspNetCore` metapackage ve uzantı paketi `Microsoft.Extensions.Http.Polly` gerekir.
+`HttpClientFactory` .NET Core 2,1 ' den bu yana kullanılabilir, ancak projenizde NuGet 'den en son ASP.NET Core 2,2 paketlerini kullanmanızı öneririz. Genellikle `AspNetCore` metapackage ve uzantı paketi `Microsoft.Extensions.Http.Polly`gerekir.
 
 **Başlangıçta, bir istemciyi Polly 'nin yeniden deneme ilkesiyle yapılandırma**
 
@@ -36,7 +36,7 @@ services.AddHttpClient<IBasketService, BasketService>()
 
 **Addpolicyhandler ()** yöntemi, kullanacağınız `HttpClient` nesnelerine ilke ekler. Bu durumda, üstel geri alma ile http yeniden denemeleri için bir Polly ilkesi ekliyor.
 
-Daha modüler bir yaklaşıma sahip olmak için http yeniden deneme Ilkesi, aşağıdaki kodda gösterildiği gibi `Startup.cs` dosyasında ayrı bir yöntemde tanımlanabilir:
+Daha modüler bir yaklaşıma sahip olmak için http yeniden deneme Ilkesi, aşağıdaki kodda gösterildiği gibi `Startup.cs` dosyası içinde ayrı bir yöntemde tanımlanabilir:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()

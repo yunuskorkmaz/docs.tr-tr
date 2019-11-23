@@ -10,11 +10,11 @@ ms.lasthandoff: 10/15/2019
 ms.locfileid: "72320856"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>Nasıl yapılır: Yapılandırmada İstemci Bağlama Belirtme
-Bu örnekte, bir hesap makinesi hizmeti kullanmak için bir istemci konsol uygulaması oluşturulur ve bu istemcinin bağlaması yapılandırmada bildirimli olarak belirtilir. İstemci, `ICalculator` arabirimini uygulayan `CalculatorService` ' a erişir ve hem hizmet hem de istemci <xref:System.ServiceModel.BasicHttpBinding> sınıfını kullanır.  
+Bu örnekte, bir hesap makinesi hizmeti kullanmak için bir istemci konsol uygulaması oluşturulur ve bu istemcinin bağlaması yapılandırmada bildirimli olarak belirtilir. İstemci, `ICalculator` arabirimini uygulayan `CalculatorService`erişir ve hem hizmet hem de istemci <xref:System.ServiceModel.BasicHttpBinding> sınıfını kullanır.  
   
  Özetlenen yordamda, hesap makinesi hizmetinin çalıştığı varsayılmaktadır. Hizmeti oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: yapılandırmada hizmet bağlaması belirtme](how-to-specify-a-service-binding-in-configuration.md). Ayrıca, istemci bileşenlerini otomatik olarak oluşturmak için Windows Communication Foundation (WCF) tarafından sağlanan [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) kullanır. Araç, hizmete erişmek için istemci kodunu ve yapılandırmasını üretir.  
   
- İstemci iki bölümde oluşturulmuştur. Svcutil. exe `ICalculator` arabirimini uygulayan `ClientCalculator` oluşturur. Bu istemci uygulaması daha sonra `ClientCalculator` ' ın bir örneği oluşturarak oluşturulur.  
+ İstemci iki bölümde oluşturulmuştur. Svcutil. exe `ICalculator` arabirimini uygulayan `ClientCalculator` oluşturur. Bu istemci uygulaması daha sonra bir `ClientCalculator`örneği oluşturarak oluşturulur.  
   
  Genellikle, bağlama ve adres bilgilerini, kod içinde imperatively yerine bildirimli olarak yapılandırmaya göre belirlemek en iyi uygulamadır. Dağıtılmış bir hizmetin bağlamaları ve adresleri genellikle hizmet geliştirildiğinde kullanılanlardan farklı olduğundan, koddaki uç noktaların tanımlanması genellikle pratik değildir. Daha genel olarak, bağlama ve adresleme bilgilerini koddan tutmanın, uygulamayı yeniden derlemek veya yeniden dağıtmak zorunda kalmadan değiştirilmesine izin verir.  
   
@@ -35,7 +35,7 @@ Bu örnekte, bir hesap makinesi hizmeti kullanmak için bir istemci konsol uygul
      [!code-csharp[C_HowTo_ConfigureClientBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/generatedclient.cs#1)]
      [!code-csharp[C_HowTo_ConfigureClientBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/source.cs#1)]  
   
-3. Oluşturulan istemci Ayrıca @no__t (0) uygulamasını da içerir.  
+3. Oluşturulan istemci Ayrıca `ClientCalculator`uygulamasını da içerir.  
   
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/generatedclient.cs#2)]
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/source.cs#2)]  
@@ -44,7 +44,7 @@ Bu örnekte, bir hesap makinesi hizmeti kullanmak için bir istemci konsol uygul
   
      [!code-xml[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]   
             
-5. Bir uygulamada `ClientCalculator` ' ın bir örneğini oluşturun ve ardından hizmet işlemlerini çağırın.  
+5. Bir uygulamada `ClientCalculator` örneği oluşturun ve ardından hizmet işlemlerini çağırın.  
   
      [!code-csharp[C_HowTo_ConfigureClientBinding#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/client.cs#3)]  
   

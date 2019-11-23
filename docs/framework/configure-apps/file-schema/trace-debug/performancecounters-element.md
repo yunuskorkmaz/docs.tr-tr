@@ -20,8 +20,8 @@ ms.locfileid: "71697147"
 Performans sayaçları tarafından paylaşılan genel belleğin boyutunu belirtir.
 
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<performanceCounters >**  
+[ **System. diagnostics\<** &nbsp;&nbsp;>](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<performanceCounters >**  
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -56,7 +56,7 @@ Performans sayaçları, performans verilerini yayınlamak için bellek eşlemeli
 
 Genel paylaşılan belleğin boyutu yalnızca bir yapılandırma dosyası ile ayarlanabilir.  Varsayılan boyut 524.288 bEvet, en büyük boyut 33.554.432 bayttır ve en küçük boyut 32.768 bayttır.  Genel paylaşılan bellek tüm süreçler ve kategoriler tarafından paylaşıldığından, ilk Oluşturucu boyutu belirtir.  Uygulama yapılandırma dosyanızda boyutu tanımlarsanız, bu boyut yalnızca uygulamanız, performans sayaçlarının yürütülmesine neden olan ilk uygulama ise kullanılır.  Bu nedenle, `filemappingsize` değerini belirtmek için doğru konum Machine. config dosyasıdır.  Genel paylaşılan bellekteki bellek ayrı performans sayaçları tarafından yayınlanamaz, bu nedenle farklı adlara sahip çok sayıda performans sayacı örneği oluşturulursa, genel paylaşılan bellek tükenir.
 
-Ayrı paylaşılan belleğin boyutu için, no__t kayıt defteri anahtarındaki DWORD FileMappingSize değeri, önce bir değer olan HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services FILE-0 *\<category name >* \Performance yapılandırma dosyasındaki genel paylaşılan bellek için belirtilir. FileMappingSize değeri yoksa, ayrı paylaşılan bellek boyutu yapılandırma dosyasındaki genel ayarı bir dördüncü (1/4) olarak ayarlanır.
+Ayrı paylaşılan belleğin boyutu için, kayıt defteri anahtarındaki DWORD FileMappingSize değeri HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\\ *\<kategori adı >* \Performance ' a başvurulur, ardından yapılandırma dosyasında genel paylaşılan bellek için belirtilen değer gelir. FileMappingSize değeri yoksa, ayrı paylaşılan bellek boyutu yapılandırma dosyasındaki genel ayarı bir dördüncü (1/4) olarak ayarlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

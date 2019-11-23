@@ -25,12 +25,12 @@ Bir SELECT ifadesinde döndürülen nesnelerde kullanılan sıralama düzenini b
 ]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `order_by_expression`  
  Üzerinde sıralanacak bir özellik belirten geçerli bir sorgu ifadesi. Birden çok sıralama ifadesi belirlenebilir. ORDER BY yan tümcesindeki sıralama ifadelerinin sırası, sıralanmış sonuç kümesinin organizasyonunu tanımlar.  
   
- {Collation_name} Harmanla  
- ORDER BY işleminin `collation_name` ' da belirtilen harmanlamaya göre gerçekleştirilmesi gerektiğini belirtir. HARMANLAMA yalnızca dize ifadeleri için geçerlidir.  
+ HARMANLAMA {collation_name}  
+ ORDER BY işleminin, `collation_name`belirtilen harmanlamaya göre gerçekleştirilmesi gerektiğini belirtir. HARMANLAMA yalnızca dize ifadeleri için geçerlidir.  
   
  ASC  
  Belirtilen özelliğindeki değerlerin, en düşük değerden en yüksek değere göre artan sırada sıralanması gerektiğini belirtir. Bu varsayılandır.  
@@ -41,8 +41,8 @@ Bir SELECT ifadesinde döndürülen nesnelerde kullanılan sıralama düzenini b
  SıNıR `n`  
  Yalnızca ilk `n` öğe seçilecek.  
   
- Atla `n`  
- İlk @no__t 0 öğeyi atlar.  
+ `n` atla  
+ İlk `n` öğelerini atlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
  ORDER BY yan tümcesi, SELECT yan tümcesinin sonucuna mantıksal olarak uygulanır. ORDER BY yan tümcesi, seçim listesindeki öğelere diğer adlarını kullanarak başvurabilir. ORDER BY yan tümcesi, şu anda kapsamda olan diğer değişkenlere de başvurabilir. Ancak, SELECT yan tümcesi ayrı bir değiştiriciyle belirtilmişse, ORDER BY yan tümcesi yalnızca SELECT yan tümcesindeki diğer adlara başvurabilir.  
@@ -79,7 +79,7 @@ ORDER BY ...
 ```  
   
 ## <a name="restricted-keywords"></a>Kısıtlanmış anahtar sözcükler  
- Aşağıdaki anahtar sözcükler `ORDER BY` yan tümcesinde kullanıldığında tırnak işaretleri içine alınmalıdır:  
+ Aşağıdaki anahtar sözcükler, bir `ORDER BY` yan tümcesinde kullanıldığında tırnak işaretleri içine alınmalıdır:  
   
 - ÜSTÜNÜ  
   

@@ -34,14 +34,14 @@ Son 15 yıldan yönergeleri izlerseniz, büyük olasılıkla Şekil 1,1 ' de gö
 
 Tüm etki alanı mantığınızı içeren büyük bir çekirdek uygulama oluşturursunuz. Kimlik, katalog, sıralama ve daha fazlasını içeren modüller içerir. Çekirdek uygulama büyük bir ilişkisel veritabanıyla iletişim kurar. Çekirdek, işlevselliği bir HTML arabirimi aracılığıyla kullanıma sunar.
 
-Mühendisi!  Yalnızca bir tek parçalı uygulama oluşturdunuz.
+Tebrikler!  Yalnızca bir tek parçalı uygulama oluşturdunuz.
 
 Hepsi kötü değildir. Tek tek avantajlar, bazı farklı avantajlar sunmaktadır. Örneğin, bunlar basittir...
 
 - derleme
 - test
-- Dağıtımı
-- Giderilmesine
+- dağıt
+- giderilmesine
 - ölçek
 
 Günümüzde mevcut birçok başarılı uygulama tek bir şekilde oluşturulmuştur. Uygulama bir isabet ediyor ve gelişmeye devam ediyor, yineleme sonrasında yineleme, daha fazla işlevsellik ve daha fazla işlev ekliyor.

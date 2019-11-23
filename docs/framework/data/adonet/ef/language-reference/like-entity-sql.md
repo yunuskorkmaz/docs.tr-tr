@@ -18,40 +18,40 @@ Belirli bir karakterin `String` belirtilen bir Düzenle eşleşip eşleşmediği
 match [NOT] LIKE pattern [ESCAPE escape]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `match`  
- Bir `String` olarak değerlendirilen [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ifadesi.  
+ Bir `String`değerlendiren [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ifadesi.  
   
  `pattern`  
- Belirtilen @no__t eşleşecek bir örüntü-0.  
+ Belirtilen `String`eşleşecek bir örüntü.  
   
  `escape`  
  Kaçış karakteri.  
   
- BAŞLATıLMADı  
+ DEĞİL  
  Bunun sonucunu, ÖRNEĞIN, Değillenmiş olduğunu belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `string` @no__t düzeniyle eşleşiyorsa-0; Aksi takdirde, `false`.  
+ `string` düzeniyle eşleşiyorsa `true`; Aksi takdirde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- LIKE işlecini kullanan [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ifadeleri, filtre ölçütü olarak eşitlik kullanan ifadelerle çok benzer şekilde değerlendirilir. Ancak, LIKE işlecini kullanan [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ifadeleri, hem değişmez değerleri hem de joker karakterleri içerebilir.  
+ LIKE işlecini kullanan [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ifadeleri, filtre ölçütü olarak eşitlik kullanan ifadelerle çok benzer şekilde değerlendirilir. Ancak, LIKE işlecini kullanan [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ifadeleri hem değişmez değerleri hem de joker karakterleri içerebilir.  
   
- Aşağıdaki tabloda `string` deseninin sözdizimi açıklanmaktadır.  
+ Aşağıdaki tabloda `string`deseninin sözdizimi açıklanmaktadır.  
   
 |Joker Karakter|Açıklama|Örnek|  
 |------------------------|-----------------|-------------|  
-|%|Herhangi bir `string` veya daha fazla karakter.|`title like '%computer%'`, başlığın herhangi bir yerindeki `"computer"` kelimesiyle tüm başlıkları bulur.|  
-|_ (alt çizgi)|Herhangi bir tek karakter.|`firstname like '_ean'`, "DEA veya kemal gibi" `"ean` ile biten tüm dört harfli adları bulur.|  
+|%|Sıfır veya daha fazla karakterin `string`.|`title like '%computer%'`, sözcüğü başlığın herhangi bir yerinden `"computer"` tüm başlıkları bulur.|  
+|_ (alt çizgi)|Herhangi bir tek karakter.|`firstname like '_ean'`, "DEA veya kemal gibi" `"ean`ile biten dört harfli ilk adı bulur.|  
 |[ ]|Belirtilen aralıktaki ([a-f]) veya ayarlanan ([abcdef]) herhangi bir tek karakter.|`lastname like '[C-P]arsen'`, "Arsen" ile biten son adları bulur ve, Carsen veya Larsen gibi C ile P arasında tek bir karakterle başlar.|  
 |[^]|Belirtilen aralıkta ([^ a-f]) veya set ([^ abcdef]) içinde olmayan tek bir karakter.|`lastname like 'de[^l]%'`, "de" ile başlayan ve aşağıdaki harfle "l" dahil olmayan tüm son adları bulur.|  
   
 > [!NOTE]
-> @No__t-0 LIKE işleci ve KAÇıŞ yan tümcesi `System.DateTime` veya `System.Guid` değerlerine uygulanamaz.  
+> İşleç ve KAÇıŞ yan tümcesi gıbı [!INCLUDE[esql](../../../../../../includes/esql-md.md)] `System.DateTime` veya `System.Guid` değerlerine uygulanamaz.  
   
- Benzer şekilde, ASCII stili eşleştirmeyi ve Unicode düzeniyle eşleştirmeyi destekler. Tüm parametreler ASCII karakterleri olduğunda, ASCII stili eşleştirmesi gerçekleştirilir. Bir veya daha fazla bağımsız değişken Unicode ise, tüm bağımsız değişkenler Unicode 'a dönüştürülür ve Unicode deseninin eşleşmesi gerçekleştirilir. Benzer bir şekilde Unicode kullandığınızda, sondaki boşluklar önemlidir; Ancak Unicode olmayan, sondaki boşluklar önemli değildir. @No__t-0 ' nın model dize sözdizimi Transact-SQL ile aynıdır.  
+ Benzer şekilde, ASCII stili eşleştirmeyi ve Unicode düzeniyle eşleştirmeyi destekler. Tüm parametreler ASCII karakterleri olduğunda, ASCII stili eşleştirmesi gerçekleştirilir. Bir veya daha fazla bağımsız değişken Unicode ise, tüm bağımsız değişkenler Unicode 'a dönüştürülür ve Unicode deseninin eşleşmesi gerçekleştirilir. Benzer bir şekilde Unicode kullandığınızda, sondaki boşluklar önemlidir; Ancak Unicode olmayan, sondaki boşluklar önemli değildir. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] model dize sözdizimi Transact-SQL ile aynıdır.  
   
- Bir desenler, düzenli karakter ve joker karakterler içerebilir. Model eşleştirme sırasında, normal karakterler `string` karakterinde belirtilen karakterlerle tam olarak eşleşmelidir. Ancak, joker karakterler karakter dizesinin rastgele parçaları ile eşleştirilebilir. Joker karakterlerle kullanıldığında, LIKE işleci = ve! = dize karşılaştırma işleçlerinden daha esnektir.  
+ Bir desenler, düzenli karakter ve joker karakterler içerebilir. Model eşleştirme sırasında, normal karakterlerin `string`karakter olarak belirtilen karakterlerle tam olarak eşleşmesi gerekir. Ancak, joker karakterler karakter dizesinin rastgele parçaları ile eşleştirilebilir. Joker karakterlerle kullanıldığında, LIKE işleci = ve! = dize karşılaştırma işleçlerinden daha esnektir.  
   
 > [!NOTE]
 > Belirli bir sağlayıcıyı hedefliyorsanız sağlayıcıya özgü uzantıları kullanabilirsiniz. Ancak, bu tür yapılar diğer sağlayıcılar tarafından farklı şekilde değerlendirilemeyebilir. SqlServer, ilk ve son arasında tam olarak bir karakter eşleştiği ve ikinci tam olarak ilk ve son arasında olmayan bir karakterle eşleştiği [First-Last] ve [^ First-Last] desenlerini destekler.  
@@ -63,10 +63,10 @@ match [NOT] LIKE pattern [ESCAPE escape]
 "title like '%100!%%' escape '!'"  
 ```  
   
- Bu arama ifadesinde, yüzde joker karakteri (%) ünlem işareti karakteri (!) hemen sonrasında, joker karakter yerine değişmez değer olarak değerlendirilir. @No__t-0 joker karakterleri ve köşeli ayraç (`[ ]`) karakterleri dışında herhangi bir karakteri çıkış karakteri olarak kullanabilirsiniz. Önceki örnekte, ünlem işareti (!) karakteri kaçış karakteridir.  
+ Bu arama ifadesinde, yüzde joker karakteri (%) ünlem işareti karakteri (!) hemen sonrasında, joker karakter yerine değişmez değer olarak değerlendirilir. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] joker karakter ve köşeli ayraç (`[ ]`) karakterleri dışında herhangi bir karakteri çıkış karakteri olarak kullanabilirsiniz. Önceki örnekte, ünlem işareti (!) karakteri kaçış karakteridir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki iki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgusu, belirli bir karakter dizesinin belirtilen bir Düzenle eşleşip eşleşmediğini anlamak için LIKE ve KAÇıŞ işleçlerini kullanır. İlk sorgu, `Down_` karakterleriyle başlayan `Name` arar. Alt çizgi (`_`) bir joker karakter olduğundan bu sorgu KAÇıŞ seçeneğini kullanır. KAÇıŞ seçeneğini belirtmeden sorgu, `Down` sözcüğüyle başlayan ve alt çizgi karakteri dışında herhangi bir karakteri içeren `Name` değerleri arar. Sorgular AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
+ Aşağıdaki iki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgusu, belirli bir karakter dizesinin belirtilen bir Düzenle eşleşip eşleşmediğini anlamak için LIKE ve KAÇıŞ işleçlerini kullanır. İlk sorgu, `Down_`karakterlerle başlayan `Name` arar. Alt çizgi (`_`) bir joker karakter olduğundan bu sorgu KAÇıŞ seçeneğini kullanır. KAÇıŞ seçeneğini belirtmeden, sorgu, ardından alt çizgi karakteri dışında herhangi bir karakter `Down`, Word ile başlayan `Name` değerleri arar. Sorgular AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
 1. [Nasıl yapılır: PrimitiveType sonuçları döndüren bir sorgu yürütme](../how-to-execute-a-query-that-returns-primitivetype-results.md)bölümündeki yordamı izleyin.  
   

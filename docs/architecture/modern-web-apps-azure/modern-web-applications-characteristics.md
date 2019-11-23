@@ -14,7 +14,7 @@ ms.locfileid: "70374082"
 # <a name="characteristics-of-modern-web-applications"></a>Modern Web uygulamalarının özellikleri
 
 > "… uygun tasarımla, özellikler de birlikte gelir. Bu yaklaşım, bir dizi değildir ancak başarılı olmaya devam eder. "  
-> _\-Dennıs Ritchie_
+> _\- dennıs Ritchie_
 
 Modern Web uygulamalarının daha fazla Kullanıcı beklentileri ve daha önce her zamankinden daha fazla olması gerekir. Bugünün Web uygulamalarının dünyanın herhangi bir yerinden 24/7 kullanılabilir olması ve neredeyse tüm cihazlardan veya ekran boyutundan kullanılabilir olması beklenmektedir. Web uygulamaları, istek üzerine ani artışları karşılamak için güvenli, esnek ve ölçeklenebilir olmalıdır. Giderek karmaşık senaryolar, JavaScript kullanılarak istemci üzerinde oluşturulmuş zengin kullanıcı deneyimleri tarafından işlenmeli ve Web API 'Leri aracılığıyla etkin bir şekilde iletişim edilmelidir.
 
@@ -77,5 +77,5 @@ ASP.NET Core buna ek olarak, geleneksel ASP.NET 4. x Web uygulamaları oluşturm
 >   <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
->[Önceki](index.md)İleri
->[](choose-between-traditional-web-and-single-page-apps.md)
+>[Önceki](index.md)
+>[İleri](choose-between-traditional-web-and-single-page-apps.md)

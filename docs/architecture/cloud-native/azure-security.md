@@ -32,7 +32,7 @@ Tehditler listesi kurulduktan sonra, bunların azaltıcı olup olmadığına kar
 
 Değiştirilen işlemcilerin, mikro bir kapsam olmadan algılanmaları ve bu işlemcinin açık bir tasarımı hakkında bilgi sahibi olmanız zordur. Bu senaryonun gerçekleşmesi ve hafifletmemesi, büyük olasılıkla hiçbir tehdit modelinin bunun için yararlanma koruması oluşturulmasını önermez.
 
-@No__t_0 saldırıları arttırmaya izin veren hatalı erişim denetimleri (URL 'de `Id=3` `Id=2` değiştirme) veya SQL ekleme gibi daha olası tehditler, korumaları geliştirmek için daha çekici bir olasılıktır. Bu tehditlere yönelik azaltmaları, şirketin saygınlığını sunan embarırmet güvenlik boşluklarını derlemek ve engellemek için oldukça mantıklı.
+`Id` saldırıları arttırmaya izin veren hatalı erişim denetimleri (URL 'de `Id=3` `Id=2` değiştirme) veya SQL ekleme gibi daha olası tehditler, korumaları geliştirmek için daha çekici bir olasılıktır. Bu tehditlere yönelik azaltmaları, şirketin saygınlığını sunan embarırmet güvenlik boşluklarını derlemek ve engellemek için oldukça mantıklı.
 
 ## <a name="principle-of-least-privilege"></a>En az ayrıcalık ilkesi
 
@@ -86,7 +86,7 @@ Azure, kullanıcıların çoğunluğu için kullanılabilirliği ve güvenliği 
 
 Neyse ki, çoğu Azure kaynağı daha ayrıntılı erişim denetimi sağlayan bir Azure sanal ağına yerleştirilebilir. Şirket içi ağların, daha geniş dünyadan korunan özel ağları oluşturma yöntemine benzer şekilde, sanal ağlar Azure ağı içinde bulunan özel IP adresi Adaları 'lardır.
 
-Azure 'da bir sanal ağ ![Figure 10-1 ](./media/virtual-network.png)
+![Şekil 10-1 Azure 'da bir sanal ağ](./media/virtual-network.png)
 **şekil 10-1**. Azure 'da bir sanal ağ.
 
 Şirket içi ağların ağa erişimi yöneten bir güvenlik duvarı olduğu şekilde, sanal ağın sınırında benzer bir güvenlik duvarı kurabilirsiniz. Varsayılan olarak, bir sanal ağdaki tüm kaynaklar yine de Internet ile konuşabilir. Yalnızca bazı açık güvenlik duvarı özel durumu gerektiren gelen bağlantılarıdır.
@@ -109,7 +109,7 @@ RBAC, Azure 'da çalışan uygulamalara kimlik sağlayan bir sistemdir. Uygulama
 
 RBAC 'deki ilk bileşen bir güvenlik sorumlusidir. Bir güvenlik sorumlusu, bir Kullanıcı, Grup, hizmet sorumlusu veya yönetilen kimlik olabilir.
 
-![Figure 10-2 farklı güvenlik sorumlusu türü ](./media/rbac-security-principal.png)
+Şekil 10-2 ![farklı güvenlik sorumlusu türleri](./media/rbac-security-principal.png)
 **şekil 10-2**. Farklı türlerde güvenlik sorumluları.
 
 - Kullanıcı-Azure Active Directory bir hesabı olan herhangi bir Kullanıcı, bir kullanıcı.
@@ -119,11 +119,11 @@ RBAC 'deki ilk bileşen bir güvenlik sorumlusidir. Bir güvenlik sorumlusu, bir
 
 Güvenlik sorumlusu her bir kaynağa uygulanabilir. Bu, Azure Kubernetes içinde çalışan bir kapsayıcıya bir güvenlik sorumlusu atamak ve bunun Key Vault depolanan gizli dizilerle erişmesine izin vermek mümkün olduğu anlamına gelir. Azure Işlevi, çağıran bir kullanıcı için bir JWT doğrulamak üzere bir Active Directory örneğiyle iletişim kurmasına izin veren bir izni alabilir. Hizmet sorumlusu ile hizmetler etkinleştirildikten sonra, izinleri roller ve kapsamlar kullanılarak yönetilebilir.
 
-## <a name="roles"></a>Lerdir
+## <a name="roles"></a>Roller
 
 Bir güvenlik sorumlusu birçok rolü veya daha fazla bir benzerleme vurguladı, aşı birçok HATS 'yi kullanarak alabilir. Her rol, "Azure Service Bus uç noktasından iletileri oku" gibi bir dizi izin tanımlar. Güvenlik sorumlusu etkin izin kümesi, güvenlik sorumlusu 'nın sahip olduğu tüm rollere atanan tüm izinlerin birleşimidir. Azure 'da çok sayıda yerleşik rol bulunur ve kullanıcılar kendi rollerini tanımlayabilirler.
 
-![Figure 10-3 RBAC rol tanımları ](./media/rbac-role-definition.png)
+![Şekil 10-3 RBAC rol tanımları](./media/rbac-role-definition.png)
 **şekil 10-3**. RBAC rol tanımları.
 
 Azure 'da yerleşik olarak, sahip, katkıda bulunan, okuyucu ve Kullanıcı hesabı Yöneticisi gibi birçok üst düzey rol de vardır. Sahip rolüyle, bir güvenlik sorumlusu tüm kaynaklara erişebilir ve diğerlerine izin atayabilir. Katkıda bulunan, tüm kaynaklara aynı düzeyde erişime sahiptir ancak izin atayamazlar. Okuyucu yalnızca mevcut Azure kaynaklarını görüntüleyebilir ve bir kullanıcı hesabı Yöneticisi, Azure kaynaklarına erişimi yönetebilir.
@@ -148,8 +148,8 @@ Reddetme kuralları izin verme kurallarına göre önceliklidir. Artık aynı "t
 
 Imagine de, çok sayıda rol ve kapsamın olması, hizmet sorumlusunun etkin iznini belirlemek oldukça zordur. Üzerinde engelleyen reddetme kuralları, yalnızca karmaşıklığın arttırmasını sağlar. Neyse ki, herhangi bir hizmet sorumlusu için etkili izinleri gösterebilmiş bir izin Hesaplayıcısı vardır. Normalde, Şekil 10-3 ' de gösterildiği gibi, portaldaki ıAM sekmesinde bulunur.
 
-![Figure 10-4 ](./media/check-rbac.png)
-**şekil 10-4**bir App Service için izin Hesaplayıcı. Bir App Service için izin Hesaplayıcı.
+![Şekil 10-4 bir App Service için Izin Hesaplayıcı](./media/check-rbac.png)
+**şekil 10-4**. Bir App Service için izin Hesaplayıcı.
 
 ## <a name="securing-secrets"></a>Gizli dizileri güvenli hale getirme
 
@@ -157,7 +157,7 @@ Parolalar ve sertifikalar, saldırganlar için ortak bir saldırı vektördür. 
 
 Birçok güvenlik [uzmanı](https://www.troyhunt.com/password-managers-dont-have-to-be-perfect-they-just-have-to-be-better-than-not-having-one/) , kendi parolalarınızı korumak için parola Yöneticisi kullanmanın en iyi yaklaşım olduğunu önerir. Parolalarınızı tek bir konumda merkezileştirirken, son derece karmaşık parolaların kullanılmasına ve her hesap için benzersiz olduklarından emin olmayı sağlar. Azure 'da aynı sistem vardır: gizlilikler için merkezi bir mağaza.
 
-## <a name="azure-key-vault"></a>Azure Key Vault
+## <a name="azure-key-vault"></a>Azure anahtar kasası
 
 Azure Key Vault veritabanları, API anahtarları ve sertifikalar gibi şeyler için parolaları depolamak üzere merkezi bir konum sağlar. Kasaya bir gizli dizi girildiğinde bu, hiçbir zaman bir daha gösterilmemiştir ve bunu çıkarmak ve görüntülemek için komutlar tam olarak karmaşıktır. Güvende bilgiler yazılım şifrelemesi veya FIPS 140-2 düzey 2 tarafından doğrulanan donanım güvenliği modülleri kullanılarak korunur.
 
@@ -215,7 +215,7 @@ Bu denetim, SSL Labs SSL sunucu testi gibi bir dış hizmet tarafından yapılab
 
 Azure SQL veritabanları gibi hizmetler de verilerin gizli kalmasını sağlamak için TLS şifrelemesi kullanır. TLS kullanarak aktarım sırasında verilerin şifrelenmesi hakkında ilgi çekici bir bölüm, Microsoft 'un TLS çalıştıran bilgisayarlar arasındaki bağlantıyı dinlemek mümkün değildir. Bu, şirketlerin Microsoft 'un doğru ve hatta standart saldırgandan daha fazla kaynağa sahip bir durum aktörinin risk altında olabileceğini karşılayan şirketler için rahatlığını sağlamalıdır.
 
-![Figure 10-5 SSL Labs, bir Service Bus uç noktası için puanı gösteren bir rapor. **şekil 10-5**](./media/ssl-report.png)
+![Şekil 10-5 SSL Labs, bir Service Bus uç noktası için bir puan gösteren bir rapor. **şekil 10-5**](./media/ssl-report.png)
 . Service Bus uç noktası için bir puanı gösteren SSL Labs raporu.
 
 Bu şifreleme düzeyi her zaman yeterli olmayacaksa da, Azure TLS bağlantılarının oldukça güvenli hale getirilmesine güvenmelidir. Azure, şifreleme artdığı için güvenlik standartlarını gelişmeye devam edecektir. Güvenlik standartlarını izlerken ve Azure 'ı geliştirdiklerinde güncelleştiren bir kişi olduğunu bilmek iyi bir deneyimdir.
@@ -244,8 +244,8 @@ TDS 'in "saydam" bölümü, şifreli bir veritabanını kullanmak için gerekli 
 
 Bu şifreleme katmanını ayarlamanın, şifreleme sıralamasını seçmek ve ilişkili anahtarların depolanacağı Key Vault nerede olması için SQL Server Management Studio bir sihirbaz aracılığıyla çalıştırılması gerekir.
 
-![Figure ](./media/always-encrypted.png)
-**şekil 10-6**Always Encrypted kullanılarak şifrelenecek tablodaki sütunları seçme 10-6. Always Encrypted kullanılarak şifrelenecek tablodaki sütunları seçme.
+![Şekil 10-6](./media/always-encrypted.png)
+**şekil 10-6**Always Encrypted kullanılarak şifrelenecek tablodaki sütunları seçme. Always Encrypted kullanılarak şifrelenecek tablodaki sütunları seçme.
 
 Bu şifrelenmiş sütunlardan bilgileri okuyan istemci uygulamalarının, şifrelenmiş verileri okumak için özel uygulamalar yapması gerekir. Bağlantı dizelerinin `Column Encryption Setting=Enabled` ile güncelleştirilmeleri gerekir ve Key Vault istemci kimlik bilgileri alınmalıdır. SQL Server istemci daha sonra sütun şifreleme anahtarlarıyla öncelikli olmalıdır. Bu işlem yapıldıktan sonra, kalan eylemler SQL Istemcisi için standart arabirimleri kullanır. Diğer bir deyişle, SQL Client üzerinde oluşturulan kaber ve Entity Framework gibi araçlar, değişiklik yapılmadan çalışmaya devam edecektir. Always Encrypted, her dilde SQL Server her bir sürücü için kullanılamayabilir.
 
@@ -255,8 +255,8 @@ Her ikisi de istemciye özgü anahtarlarla kullanılabilecek TDE ve Always Encry
 
 Cosmos DB, Microsoft tarafından Azure 'da sunulan en yeni veritabanıdır. Güvenlik ve şifreleme konusunda baştan sona oluşturulmuştur. AES-256bit şifreleme tüm Cosmos DB veritabanları için standarttır ve devre dışı bırakılamaz. İletişim için TLS 1,2 gereksinimiyle birlikte kullanıldığında, tüm depolama çözümü şifrelenir.
 
-![Figure 10-7**şekil 10-7**Cosmos DB içindeki veri şifrelemenin akışını ](./media/cosmos-encryption.png)
-. Cosmos DB içindeki veri şifreleme akışı.
+![Şekil 10-7 Cosmos DB](./media/cosmos-encryption.png)
+**şekil 10-7**' deki veri şifreleme akışı. Cosmos DB içindeki veri şifreleme akışı.
 
 Cosmos DB müşteri şifreleme anahtarları sağlamak için sağlamasa da, takım tarafından, bunun dışında PCI DSS uyumlu olduğundan emin olmak için önemli bir iş yapılır. Cosmos DB Ayrıca Azure SQL Always Encrypted benzer bir şekilde tek sütunlu şifrelemeyi desteklemez.
 

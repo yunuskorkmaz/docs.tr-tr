@@ -49,19 +49,19 @@ Birden çok sanal makineyi Docker konakları olarak dağıtabilir ve sanal makin
 
 Ana bilgisayarların dağıtımını geleneksel dağıtım teknikleri aracılığıyla yönetebilirsiniz.
 
-@No__t_0 ve `docker-compose up` gibi komutları kullanarak Docker kapsayıcılarını komut satırından yönetebilirsiniz ve ayrıca, bu dosyayı sürekli teslim (CD) işlem hatları içinde otomatikleştirebilir ve örneğin Azure DevOps Services, Docker konaklarına dağıtabilirsiniz.
+`docker run` ve `docker-compose up`gibi komutları kullanarak Docker kapsayıcılarını komut satırından yönetebilirsiniz ve ayrıca, bu dosyayı sürekli teslim (CD) işlem hatları içinde otomatikleştirebilir ve örneğin Azure DevOps Services, Docker konaklarına dağıtabilirsiniz.
 
 ## <a name="monolithic-application-deployed-as-a-container"></a>Kapsayıcı olarak dağıtılan tek parçalı uygulama
 
 Tek parçalı dağıtımları yönetmek için kapsayıcıları kullanmanın avantajları vardır. Kapsayıcı örneklerinin ölçeklendirilmesi, ek VM 'Leri dağıtmaktan daha hızlı ve daha kolaydır.
 
-Docker görüntüsü olarak güncelleştirmelerin dağıtımı, çok daha hızlı ve daha verimlidir. Docker Kapsayıcıları genellikle Saniyeler içinde başlar, piyasaya çıkarma hızlandırın. Bir Docker kapsayıcısının aşağı doğru olması, genellikle bir saniyeden daha az bir olarak tamamlanarak `docker stop` komutunu çağırmak kadar kolaydır.
+Docker görüntüsü olarak güncelleştirmelerin dağıtımı, çok daha hızlı ve daha verimlidir. Docker Kapsayıcıları genellikle Saniyeler içinde başlar, piyasaya çıkarma hızlandırın. Bir Docker kapsayıcısının aşağı doğru olması, genellikle bir saniyeden daha az tamamlanarak `docker stop` komutunu çağırmak kadar kolaydır.
 
 Kapsayıcılar doğal olarak sabit olduğundan, Tasarım gereği, bir güncelleştirme betiği diskte kalan belirli bir yapılandırma veya dosya için hesaba izin vermetiğinden, bozuk VM 'Lerde endişelenmeniz gerekmez.
 
 Tek parçalı uygulamalar Docker 'tan faydalanabilir, ancak avantajların yalnızca ipuçlarına dokunuyoruz. Kapsayıcıları yönetmenin büyük avantajları, her bir kapsayıcı örneğinin çeşitli örneklerini ve yaşam döngüsünü yöneten kapsayıcı düzenleyicilerinin dağıtımıyla gelir. Tek parçalı uygulamayı, ölçeklendirilebilir, geliştirilmiş ve dağıtılan alt sistemlere bölmek, mikro hizmetler bölgesine giriş noktanşa noktasıdır.
 
-Tek parçalı uygulamalar kapsayıcıyla "kaldırma ve kaydırma" hakkında bilgi edinmek için, [Azure bulut ve Windows kapsayıcıları ile bu ek Microsoft kılavuzunu, modernleştirin var olan .NET uygulamalarını](../../modernize-with-azure-containers/index.md)okuyun. Ayrıca, <https://aka.ms/LiftAndShiftWithContainersEbook> PDF olarak da indirebilirsiniz.
+Tek parçalı uygulamalar kapsayıcıyla "kaldırma ve kaydırma" hakkında bilgi edinmek için, modernleştirin ' <https://aka.ms/LiftAndShiftWithContainersEbook>dan PDF olarak da yükleyebileceğiniz bu ek Microsoft kılavuzunu ve [Azure bulut ve Windows kapsayıcılarıyla modernleştirin var olan .NET uygulamalarını](../../modernize-with-azure-containers/index.md)okuyabilirsiniz.
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Azure App Service için tek bir Docker kapsayıcı uygulaması yayımlama
 

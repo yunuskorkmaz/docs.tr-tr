@@ -21,7 +21,7 @@ Farklı kişilerin bu farklı gizli dizi kümelerine erişmesi gerektiğinden, �
 
 Gizli dizileri kaynak kodu dışında tutmanın bir yolu, geliştiricilerin dize tabanlı gizli dizileri geliştirme makinelerinde [ortam değişkenleri](/aspnet/core/security/app-secrets#environment-variables) olarak ayarlaması içindir. Yapılandırma bölümlerine yuvalanmış olanlar gibi hiyerarşik adlarla gizli dizileri depolamak için ortam değişkenlerini kullandığınızda, değişkenlerini, iki nokta üst üste (:)) ayrılmış olarak, bölümlerinin tamamını içerecek şekilde isimsiz olarak vermelisiniz.
 
-Örneğin, bir ortam değişkenini `Logging:LogLevel:Default` `Debug` değere ayarlamak aşağıdaki json dosyasından bir yapılandırma değeri ile eşdeğerdir:
+Örneğin, bir ortam değişkenini `Debug` değere `Logging:LogLevel:Default` ayarlamak aşağıdaki JSON dosyasındaki bir yapılandırma değerine eşdeğerdir:
 
 ```json
 {
@@ -39,9 +39,9 @@ Ortam değişkenlerinin yaygın olarak düz metin olarak depolandığını unutm
 
 ## <a name="store-secrets-with-the-aspnet-core-secret-manager"></a>ASP.NET Core gizli Yöneticisi ile gizli dizileri depolayın
 
-ASP.NET Core [Secret Manager](/aspnet/core/security/app-secrets#secret-manager) Aracı, kaynak kodu dışında gizli dizileri tutmanın başka bir yöntemini sağlar. Gizli dizi Yöneticisi aracını kullanmak için, proje dosyanıza **Microsoft. Extensions. Configuration. SecretManager** paketini yükle. Bu bağımlılık mevcut olduğunda ve geri `dotnet user-secrets` yüklendikten sonra komut satırı gizli dizi değerini ayarlamak için kullanılabilir. Bu gizli diziler, kullanıcının profil dizinindeki bir JSON dosyasında (Ayrıntılar işletim sistemine göre değişir) kaynak koddan uzakta saklanır.
+ASP.NET Core [Secret Manager](/aspnet/core/security/app-secrets#secret-manager) Aracı, kaynak kodu dışında gizli dizileri tutmanın başka bir yöntemini sağlar. Gizli dizi Yöneticisi aracını kullanmak için, proje dosyanıza **Microsoft. Extensions. Configuration. SecretManager** paketini yükle. Bu bağımlılık mevcut olduğunda ve geri yüklendikten sonra, komut satırındaki gizli dizi değerlerini ayarlamak için `dotnet user-secrets` komutu kullanılabilir. Bu gizli diziler, kullanıcının profil dizinindeki bir JSON dosyasında (Ayrıntılar işletim sistemine göre değişir) kaynak koddan uzakta saklanır.
 
-Gizli dizi Yöneticisi aracı tarafından ayarlanan gizlilikler, gizli dizileri kullanan `UserSecretsId` projenin özelliğine göre düzenlenir. Bu nedenle, aşağıdaki kod parçacığında gösterildiği gibi, proje dosyanızda Usersecretsıd özelliğini ayarladığınızdan emin olmanız gerekir. Varsayılan değer, Visual Studio tarafından atanan bir GUID 'dir, ancak bilgisayarınızda benzersiz olduğu sürece gerçek dize önemli değildir.
+Gizli dizi Yöneticisi aracı tarafından ayarlanan gizlilikler, parolaların kullanıldığı projenin `UserSecretsId` özelliğine göre düzenlenir. Bu nedenle, aşağıdaki kod parçacığında gösterildiği gibi, proje dosyanızda Usersecretsıd özelliğini ayarladığınızdan emin olmanız gerekir. Varsayılan değer, Visual Studio tarafından atanan bir GUID 'dir, ancak bilgisayarınızda benzersiz olduğu sürece gerçek dize önemli değildir.
 
 ```xml
 <PropertyGroup>
@@ -49,10 +49,10 @@ Gizli dizi Yöneticisi aracı tarafından ayarlanan gizlilikler, gizli dizileri 
 </PropertyGroup>
 ```
 
-Bir uygulamada gizli yönetici ile depolanan gizli dizileri kullanmak, yapılandırmasındaki uygulamanın gizli `AddUserSecrets<T>` dizileri içermesi için configurationbuilder örneğine çağrı yaparak gerçekleştirilir. Genel parametre T, Usersecretıd 'nin uygulandığı derlemeden bir tür olmalıdır. Genellikle kullanımı `AddUserSecrets<Startup>` iyidir.
+Bir uygulamada gizli yönetici ile depolanan gizli dizileri kullanmak, yapılandırmasındaki uygulamanın gizli dizileri içermesi için ConfigurationBuilder örneğindeki `AddUserSecrets<T>` çağırarak gerçekleştirilir. Genel parametre T, Usersecretıd 'nin uygulandığı derlemeden bir tür olmalıdır. Genellikle `AddUserSecrets<Startup>` kullanımı iyidir.
 
-, `AddUserSecrets<Startup>()` *Program.cs*içinde `CreateDefaultBuilder` yöntemi kullanılırken geliştirme ortamı için varsayılan seçeneklere dahil edilir.
+`AddUserSecrets<Startup>()`, *program.cs*içinde `CreateDefaultBuilder` yöntemi kullanılırken geliştirme ortamı için varsayılan seçeneklere dahil edilir.
 
 >[!div class="step-by-step"]
->[Önceki](authorization-net-microservices-web-applications.md)İleri
->[](azure-key-vault-protects-secrets.md)
+>[Önceki](authorization-net-microservices-web-applications.md)
+>[İleri](azure-key-vault-protects-secrets.md)

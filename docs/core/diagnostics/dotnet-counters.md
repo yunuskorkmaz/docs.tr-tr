@@ -11,13 +11,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/15/2019
 ms.locfileid: "72321591"
 ---
-# <a name="dotnet-counters"></a>DotNet-sayaçlar
+# <a name="dotnet-counters"></a>dotnet-counters
 
 **Bu makale şu şekilde geçerlidir: ✓** .net Core 3,0 SDK ve sonraki sürümleri
 
 ## <a name="install-dotnet-counters"></a>DotNet-sayaçlar 'ı yükler
 
-@No__t-0 [NuGet paketinin](https://www.nuget.org/packages/dotnet-counters)en son sürümünü yüklemek için [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
+`dotnet-counters` [NuGet paketinin](https://www.nuget.org/packages/dotnet-counters)en son sürümünü yüklemek için [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
 
 ```dotnetcli
 dotnet tool install --global dotnet-counters
@@ -31,7 +31,7 @@ dotnet-counters [-h|--help] [--version] <command>
 
 ## <a name="description"></a>Açıklama
 
-`dotnet-counters`, geçici sistem durumu izleme ve ilk düzey performans araştırması için bir performans izleme aracıdır. @No__t-0 API 'SI aracılığıyla yayınlanan performans sayacı değerlerini gözlemleyebilirsiniz. Örneğin, `PerfView` veya `dotnet-trace` ' i kullanarak daha ciddi performans araştırmasına gerek olmadan önce şüpheli bir sorun olup olmadığını görmek için, CPU kullanımı veya .NET Core uygulamanızda oluşturulan özel durumların oranı gibi şeyleri hızlıca izleyebilirsiniz.
+`dotnet-counters`, geçici sistem durumu izleme ve ilk düzey performans araştırması için bir performans izleme aracıdır. <xref:System.Diagnostics.Tracing.EventCounter> API 'SI aracılığıyla yayınlanan performans sayacı değerlerini gözlemleyebilirsiniz. Örneğin, `PerfView` veya `dotnet-trace`kullanarak daha ciddi performans araştırmasına gerek olmadan önce kuşkulu bir sorun olup olmadığını görmek için, CPU kullanımı gibi şeyleri veya .NET Core uygulamanızda oluşturulan özel durumların oranını hızlıca izleyebilirsiniz.
 
 ## <a name="options"></a>Seçenekler
 
@@ -98,11 +98,11 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`counter_list <COUNTERS>`**
 
-  Sayaçların boşlukla ayrılmış bir listesi. Sayaçlar @no__t belirtilebilir-0. @No__t-0, niteleyen bir `counter_name` olmadan kullanılırsa, tüm sayaçlar gösterilir. Sağlayıcı ve sayaç adlarını saptamak için [DotNet-Counters listesi](#dotnet-counters-list) komutunu kullanın.
+  Sayaçların boşlukla ayrılmış bir listesi. `provider_name[:counter_name]`, sayaçlar belirtilebilir. `provider_name` uygun olmayan bir `counter_name`olmadan kullanılırsa, tüm sayaçlar gösterilir. Sağlayıcı ve sayaç adlarını saptamak için [DotNet-Counters listesi](#dotnet-counters-list) komutunu kullanın.
 
 ### <a name="examples"></a>Örnekler
 
-- @No__t-0 ' dan tüm sayaçları 3 saniyelik yenileme aralığında izleyin:
+- `System.Runtime` tüm sayaçları 3 saniyelik yenileme aralığında izleyin:
 
   ```console
   > dotnet-counters monitor --process-id 1902  --refresh-interval 3 System.Runtime
@@ -118,7 +118,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       Number of Exceptions / sec                     4
   ```
 
-- @No__t-0 ' dan yalnızca CPU kullanımını ve GC yığın boyutunu izle:
+- `System.Runtime`yalnızca CPU kullanımı ve GC yığın boyutunu izle:
 
   ```console
   > dotnet-counters monitor --process-id 1902 System.Runtime[cpu-usage,gc-heap-size]
@@ -129,7 +129,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       GC Heap Size (MB)                            811
   ```
 
-- Kullanıcı tanımlı `EventSource` ' den `EventCounter` değerlerini izleyin. Daha fazla bilgi için bkz. [öğretici: EventCounters kullanarak çok sık olaylar için performansı ölçme](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
+- Kullanıcı tanımlı `EventSource``EventCounter` değerleri izleyin. Daha fazla bilgi için bkz. [öğretici: EventCounters kullanarak çok sık olaylar için performansı ölçme](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
 
   ```console
   > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal

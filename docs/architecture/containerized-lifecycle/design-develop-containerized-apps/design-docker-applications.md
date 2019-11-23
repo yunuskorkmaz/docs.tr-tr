@@ -13,10 +13,10 @@ ms.locfileid: "70295865"
 
 Bölüm 1, kapsayıcılar ve Docker ile ilgili temel kavramları sunmuştur. Bu bilgiler, başlamak için ihtiyacınız olan temel bilgi düzeyidir. Ancak kurumsal uygulamalar, tek bir hizmet veya kapsayıcı yerine karmaşık ve birden çok hizmetten oluşabilir. Bu isteğe bağlı kullanım örnekleri için, hizmet odaklı mimari (SOA) ve daha gelişmiş mikro hizmet kavramları ve kapsayıcı düzenleme kavramları gibi tasarıma yönelik ek yaklaşımlar bilmeniz gerekir. Bu belgenin kapsamı mikro hizmetlerle sınırlı değildir, ancak herhangi bir Docker uygulaması yaşam döngüsü için, normal SOA, arka plan görevleri veya işleri ile kapsayıcılar ve Docker 'ı da kullanabileceğiniz veya hatta tek parçalı uygulama dağıtımı yaklaşımının bulunduğu.
 
-**Daha fazla bilgi** Kurumsal uygulamalar ve mikro hizmetler mimarisi hakkında daha fazla bilgi edinmek için ağ mikro Hizmetleri Kılavuzu [' nu okuyun: ](../../microservices/index.md) İçinden<https://aka.ms/MicroservicesEbook>de indirebileceğiniz Kapsayıcılı .NET uygulamaları için mimari.
+**Daha fazla bilgi** Kurumsal uygulamalar ve mikro hizmetler mimarisi hakkında daha fazla bilgi edinmek için, <https://aka.ms/MicroservicesEbook>adresinden indirebileceğiniz [Kapsayıcılı .NET uygulamaları Için net mikro hizmetler: mimari](../../microservices/index.md) makalesini okuyun.
 
 Bununla birlikte, uygulama yaşam döngüsü ve DevOps 'a girmeden önce, uygulamanızı nasıl tasarlayacağınızı ve tasarlayacağınızı ve tasarım seçimleriniz olduğunu bilmeniz önemlidir.
 
 >[!div class="step-by-step"]
->[Önceki](index.md)İleri
->[](common-container-design-principles.md)
+>[Önceki](index.md)
+>[İleri](common-container-design-principles.md)

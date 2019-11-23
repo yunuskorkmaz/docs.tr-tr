@@ -19,10 +19,10 @@ ms.locfileid: "71699774"
 Bir sınıf adını kolay bir algoritma adıyla eşleştirir, bu da bir sınıfın birçok kolay adına sahip olmasına olanak tanır.  
   
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<Cryptographrivsettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<nameEntry >**  
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Cryptographyısettings >** ](cryptographysettings-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<nameEntry >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,8 +37,8 @@ Bir sınıf adını kolay bir algoritma adıyla eşleştirir, bu da bir sınıf�
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**ada**|Gerekli öznitelik.<br /><br /> Şifreleme sınıfının uyguladığı algoritmanın kolay adını belirtir.|  
-|**class**|Gerekli öznitelik.<br /><br /> [@No__t-2cryptoClass >](cryptoclass-element.md) öğesindeki **Name** özniteliğinin değerini belirtir.|  
+|**name**|Gerekli öznitelik.<br /><br /> Şifreleme sınıfının uyguladığı algoritmanın kolay adını belirtir.|  
+|**class**|Gerekli öznitelik.<br /><br /> [\<cryptoClass >](cryptoclass-element.md) öğesindeki **Name** özniteliğinin değerini belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -54,7 +54,7 @@ Bir sınıf adını kolay bir algoritma adıyla eşleştirir, bu da bir sınıf�
  **Name** özniteliği, <xref:System.Security.Cryptography> ad alanında bulunan soyut sınıflardan birinin adı olabilir. Bir soyut şifreleme sınıfında **Create** yöntemini çağırdığınızda, soyut sınıf adı <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> yöntemine geçirilir. **CreateFromName** , **sınıf** özniteliği tarafından belirtilen türün bir örneğini döndürür. **Ad** özniteliği RSA gibi kısa bir addır, **CreateFromName** metodunu çağırırken bu adı kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir şifreleme sınıfına başvurmak ve çalışma zamanını yapılandırmak için **\<nameEntry >** öğesinin nasıl kullanılacağını gösterir. Daha sonra, "RSA" dizesini <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemine geçirebilir ve <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodunu kullanarak `MyCryptoRSAClass` nesnesini döndürebilirsiniz.  
+ Aşağıdaki örnek, bir şifreleme sınıfına başvurmak ve çalışma zamanını yapılandırmak için **\<nameEntry >** öğesinin nasıl kullanılacağını gösterir. Daha sonra "RSA" dizesini <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemine geçirebilir ve bir `MyCryptoRSAClass` nesnesi döndürmek için <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodunu kullanabilirsiniz.  
   
 ```xml  
 <configuration>  

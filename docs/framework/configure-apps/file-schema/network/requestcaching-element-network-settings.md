@@ -19,8 +19,8 @@ ms.locfileid: "71697833"
 Ağ istekleri için önbelleğe alma mekanizmasını denetler.  
   
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requestCaching >**  
+[ **System. net >\<** &nbsp;&nbsp;](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<requestCaching >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,7 +44,7 @@ Ağ istekleri için önbelleğe alma mekanizmasını denetler.
 |---------------|-----------------|  
 |`isPrivateCache`|Önbelleğin, farklı kullanıcıların bilgileri arasında yalıtım verip içermediğini belirtir. Varsayılan değer `true` şeklindedir. Bu değer, orta katman uygulamalar için `false` olmalıdır.|  
 |`disableAllCaching`|Tüm Web yanıtları için önbelleğe almanın devre dışı bırakıldığını belirtir ve program aracılığıyla geçersiz kılınamaz.|  
-|`defaultPolicyLevel`|@No__t-0 numaralandırmasındaki değerlerden biri. Varsayılan değer `BypassCache` şeklindedir.|  
+|`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel> Numaralandırmadaki değerlerden biri. Varsayılan değer `BypassCache` şeklindedir.|  
 |`unspecifiedMaximumAge`|İçeriğin süresi dolduğunda, varsayılan süreyi belirtir.|  
   
 ## <a name="policylevel-attribute"></a>policyLevel özniteliği  

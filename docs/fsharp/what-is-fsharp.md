@@ -9,7 +9,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71332728"
 ---
-# <a name="what-is-f"></a>F @ no__t-0 nedir?
+# <a name="what-is-f"></a>F\# nedir?
 
 F#, doğru ve sürdürülebilir kod yazmayı kolaylaştıran işlevsel bir programlama dilidir.
 

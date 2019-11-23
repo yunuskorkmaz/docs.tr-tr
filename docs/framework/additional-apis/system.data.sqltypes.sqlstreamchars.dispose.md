@@ -30,12 +30,12 @@ protected virtual void Dispose (bool disposing);
 ## <a name="parameters"></a>Parametreler
 
 `disposing`\
-hem yönetilen hem de yönetilmeyen kaynakları serbest bırakmak için 0 @no__t; yalnızca yönetilmeyen kaynakları serbest bırakmak için `false`.
+hem yönetilen hem de yönetilmeyen kaynakları serbest bırakmak için `true`; yalnızca yönetilmeyen kaynakları serbest bırakmak için `false`.
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> @No__t-0 Yöntemi özeldir ve doğrudan kodunuzda kullanılmamalıdır.
+> `SqlStreamChars.Dispose` Yöntemi özeldir ve doğrudan kodunuzda kullanılmamalıdır.
 >
 > Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 

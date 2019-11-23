@@ -21,10 +21,10 @@ Bu kitap, kapsayıcılara göre yeni modern uygulamalar geliştirme işlemi sır
 
 Aşağıdaki listede Docker kapsayıcılarıyla ilgili ek Microsoft e-kitapları bulabilirsiniz:
 
-- **.Net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari**  \
+- **.Net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari** \
   [https://docs.microsoft.com/dotnet/architecture/microservices/](../microservices/index.md)
 
-- **Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin**  \
+- **Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin** \
   [https://docs.microsoft.com/dotnet/architecture/modernize-with-azure-containers/](../modernize-with-azure-containers/index.md)
 
 >[!div class="step-by-step"]

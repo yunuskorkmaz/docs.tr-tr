@@ -44,9 +44,9 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|`/application:` \<*ApplicationId* &#124; *ApplicationName*\>|Yapılandırılacak COM+ uygulamasını belirtir.<br /><br /> Kısa biçim `/a`.|  
-|`/contract:` \<*ClassID* &#124; *ProgID* &#124; \*,*InterfaceID* &#124; *ArabirimAdı* &#124; 1 @ no__t-12|Hizmet için sözleşme olarak yapılandırılacak COM+ bileşenini ve arabirimini belirtir.<br /><br /> Kısa biçim `/c`.<br /><br /> Bir joker karakter (\*), bileşeni ve arabirim adlarını belirttiğinizde kullanılabilir ancak, istemediğiniz arabirimleri kullanıma sunabileceğiniz için bunu kullanmanızı öneririz.|  
-|`/hosting:` \<*ComPlus* &#124; *@no__t-* 5|COM+ barındırma modunun mi yoksa Web barındırma modunun mi kullanılacağını belirtir.<br /><br /> Kısa biçim `/h`.<br /><br /> COM+ barındırma modu ' nu kullanmak, COM+ uygulamasının açık etkinleştirilmesini gerektirir. Web barındırma modunun kullanılması, COM+ uygulamasının gerektiği şekilde otomatik olarak etkinleştirilmesini sağlar. COM+ uygulaması bir kitaplık uygulaması ise, Internet Information Services (IIS) işleminde çalışır. COM+ uygulaması bir sunucu uygulaması ise, Dllhost. exe işleminde çalışır.|  
+|`/application:` \<*applicationapplicationname* &#124;\>|Yapılandırılacak COM+ uygulamasını belirtir.<br /><br /> Kısa biçim `/a`.|  
+|`/contract:` \<*ClassID* &#124; *ProgID* &#124; \*,*InterfaceID* &#124; *InterfaceName* &#124; \*\>|Hizmet için sözleşme olarak yapılandırılacak COM+ bileşenini ve arabirimini belirtir.<br /><br /> Kısa biçim `/c`.<br /><br /> Bileşen ve arabirim adlarını belirttiğinizde joker karakter (\*) kullanılabilir olsa da, istemediğiniz arabirimleri kullanıma sunabileceğiniz için bunu kullanmanızı öneririz.|  
+|`/hosting:` \<*ComPlus* &#124; *\>*|COM+ barındırma modunun mi yoksa Web barındırma modunun mi kullanılacağını belirtir.<br /><br /> Kısa biçim `/h`.<br /><br /> COM+ barındırma modu ' nu kullanmak, COM+ uygulamasının açık etkinleştirilmesini gerektirir. Web barındırma modunun kullanılması, COM+ uygulamasının gerektiği şekilde otomatik olarak etkinleştirilmesini sağlar. COM+ uygulaması bir kitaplık uygulaması ise, Internet Information Services (IIS) işleminde çalışır. COM+ uygulaması bir sunucu uygulaması ise, Dllhost. exe işleminde çalışır.|  
 |`/webSite:` \<*Web sitename*\>|Web barındırma modu kullanıldığında, barındırma için Web sitesini belirtir (`/hosting` bayrağına bakın).<br /><br /> Kısa biçim `/w`.<br /><br /> Hiçbir Web sitesi belirtilmemişse, varsayılan Web sitesi kullanılır.|  
 |`/webDirectory:` \<*WebDirectoryName*\>|Web barındırma kullanıldığında, barındırma için sanal dizini belirtir (`/hosting` bayrağına bakın).<br /><br /> Kısa biçim `/d`.|  
 |`/mex`|Hizmetten bir sözleşme tanımı almak isteyen istemcileri desteklemek için varsayılan hizmet yapılandırmasına bir meta veri değişimi (MEX) hizmet uç noktası ekler.<br /><br /> Kısa biçim `/x`.|  
@@ -59,7 +59,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 ## <a name="examples"></a>Örnekler  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, `ItemOrders.IFinancial` bileşeninin (Onlinesbir COM+ uygulamasından) `IFinances` arayüzünü, COM+ barındırma modu kullanılarak Web Hizmetleri olarak gösterilen arabirimler kümesine ekler. Karşılaşılan hatalara ek olarak tüm uyarılar çıktı olacaktır.  
+ Aşağıdaki örnek, `ItemOrders.IFinancial` bileşeninin `IFinances` arabirimini (Onlinesbir COM+ uygulamasından), COM+ barındırma modu kullanılarak Web Hizmetleri olarak gösterilen arabirimler kümesine ekler. Karşılaşılan hatalara ek olarak tüm uyarılar çıktı olacaktır.  
   
 ### <a name="code"></a>Kod  
   
@@ -68,7 +68,7 @@ ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financia
 ```  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, `ItemInventory.Warehouse` bileşeninin (OnlineWarehouse COM+ uygulamasından) `IStockLevels` arayüzünü Web barındırma modu kullanılarak Web Hizmetleri olarak gösterilen arabirimler kümesine ekler. Web hizmeti, IIS 'nin OnlineWarehouse sanal dizininde barındırılır.  
+ Aşağıdaki örnek, Web barındırma modu kullanılarak `ItemInventory.Warehouse` bileşeninin (OnlineWarehouse COM+ uygulamasından) `IStockLevels` arabirimini Web Hizmetleri olarak gösterilen arabirimler kümesine ekler. Web hizmeti, IIS 'nin OnlineWarehouse sanal dizininde barındırılır.  
   
 ### <a name="code"></a>Kod  
   
@@ -77,7 +77,7 @@ ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.W
 ```  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, `ItemOrders.Financial` bileşeninin (Onlinescompactcom+ uygulamasından) `IFinances` arayüzünü Web Hizmetleri olarak kullanıma sunulan arabirimlerin kümesinden kaldırır.  
+ Aşağıdaki örnek, `ItemOrders.Financial` bileşeninin `IFinances` arabirimini (Onlinescompactcom+ uygulamasından) Web hizmeti olarak sunulan arabirimlerin kümesinden kaldırır.  
   
 ### <a name="code"></a>Kod  
   

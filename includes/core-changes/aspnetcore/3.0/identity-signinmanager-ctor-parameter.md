@@ -8,11 +8,11 @@ ms.locfileid: "72394002"
 ---
 ### <a name="identity-signinmanager-constructor-accepts-new-parameter"></a>Kimlik: SignInManager Oluşturucusu yeni parametreyi kabul ediyor
 
-ASP.NET Core 3,0 ' den başlayarak, `SignInManager` oluşturucusuna yeni bir `IUserConfirmation<TUser>` parametresi eklenmiştir. Daha fazla bilgi için bkz. [ASPNET/AspNetCore # 8356](https://github.com/aspnet/AspNetCore/issues/8356).
+ASP.NET Core 3,0 ' den başlayarak `SignInManager` oluşturucusuna yeni bir `IUserConfirmation<TUser>` parametresi eklenmiştir. Daha fazla bilgi için bkz. [ASPNET/AspNetCore # 8356](https://github.com/aspnet/AspNetCore/issues/8356).
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0
+3,0
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -20,7 +20,7 @@ Değişiklik için mosyon, kimlik içinde yeni e-posta/onay akışları için de
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-@No__t el ile bir @no__t oluşturursanız-1 ' in bir uygulamasını sağlayın ya da bir bağımlılık ekleme işleminden bir tane alın.
+`SignInManager`el ile oluşturuyorsanız, bir `IUserConfirmation` uygulamasını sağlayın veya bir bağımlılık ekleme işleminden bir tane alın.
 
 #### <a name="category"></a>Kategori
 

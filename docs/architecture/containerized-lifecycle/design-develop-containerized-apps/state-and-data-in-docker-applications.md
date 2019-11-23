@@ -43,7 +43,7 @@ Birimler adlandırılmış veya anonim olabilir (varsayılan). Adlandırılmış
 
 **Bağlama bağlamalarda** uzun bir süre kullanılabilir ve bir kapsayıcıdaki bağlama noktasına herhangi bir klasörün eşlenmesiyle izin veriyor. BIND takmalar, birimlerden ve bazı önemli güvenlik sorunlarından daha fazla sınırlamalara sahiptir, bu nedenle birimler önerilen seçenektir.
 
-**`tmpfs` bağlama** yalnızca konağın belleğinde yaşayan ve dosya sistemine hiçbir şekilde yazılmakta olan sanal klasörlerdir. Bunlar hızlı ve güvenlidir, ancak bellek kullanır ve yalnızca kalıcı olmayan veriler için tasarlanmıştır.
+**`tmpfs` takar** yalnızca konağın belleğinde yaşayan ve dosya sistemine hiçbir şekilde yazılmakta olan sanal klasörlerdir. Bunlar hızlı ve güvenlidir, ancak bellek kullanır ve yalnızca kalıcı olmayan veriler için tasarlanmıştır.
 
 Şekil 4-5 ' de gösterildiği gibi, normal Docker birimleri kapsayıcı dışında, ancak konak sunucusunun veya VM 'nin fiziksel sınırları içinde depolanabilir. Ancak, Docker Kapsayıcıları bir birime bir konak sunucusundan veya VM 'den diğerine erişemez. Diğer bir deyişle, bu birimlerle, farklı Docker konaklarında çalışan kapsayıcılar arasında paylaşılan verileri yönetmek mümkün değildir, ancak uzak konakları destekleyen bir birim sürücüsüyle elde edilebilir.
 

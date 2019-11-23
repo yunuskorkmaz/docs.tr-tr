@@ -17,15 +17,15 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697902"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>BypassList için \<remove > öğesi (ağ ayarları)
+# <a name="remove-element-for-bypasslist-network-settings"></a>BypassList için > öğesini \<Kaldır (ağ ayarları)
 
 Proxy atlama listesinden bir IP adresi veya DNS adı kaldırır.
 
 [ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
+[ **System. net >\<** &nbsp;&nbsp;](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultproxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BypassList >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<kaldır >**  
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -57,9 +57,9 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-@No__t-0 öğesi, IP adreslerini veya DNS sunucu adlarını tanımlayan normal ifadeleri, bir proxy sunucusunu atlayan adresler listesinden kaldırır. Adresler yapılandırma hiyerarşisinde daha önce veya yapılandırma hiyerarşisinde daha yüksek bir düzeyde tanımlandı.
+`remove` öğesi, IP adreslerini veya DNS sunucusu adlarını tanımlayan normal ifadeleri, bir proxy sunucusunu atlayan adresler listesinden kaldırır. Adresler yapılandırma hiyerarşisinde daha önce veya yapılandırma hiyerarşisinde daha yüksek bir düzeyde tanımlandı.
 
-@No__t-0 özniteliğinin değeri bir IP adresi veya ana bilgisayar adı kümesini açıklayan bir normal ifade olmalıdır.
+`address` özniteliğinin değeri bir IP adresi veya ana bilgisayar adı kümesini açıklayan bir normal ifade olmalıdır.
 
 Normal ifadeler hakkında daha fazla bilgi için bkz. [Normal ifadeleri .NET Framework](../../../../standard/base-types/regular-expressions.md).
 

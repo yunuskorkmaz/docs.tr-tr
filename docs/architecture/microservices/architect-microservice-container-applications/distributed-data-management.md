@@ -1,5 +1,5 @@
 ---
-title: Dağıtılmış veri yönetimi ile ilgili sorunlar ve çözümler
+title: Dağıtılmış veri yönetimi için sorunlar ve çözümler
 description: Mikro hizmetler dünyasında dağıtılmış veri yönetimiyle ilgili zorluk ve çözümlerin ne olduğunu öğrenin.
 ms.date: 09/20/2018
 ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
@@ -9,7 +9,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834451"
 ---
-# <a name="challenges-and-solutions-for-distributed-data-management"></a>Dağıtılmış veri yönetimi ile ilgili sorunlar ve çözümler
+# <a name="challenges-and-solutions-for-distributed-data-management"></a>Dağıtılmış veri yönetimi için sorunlar ve çözümler
 
 ## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>Sınama \#1: her mikro hizmetin sınırlarını tanımlama
 
@@ -19,7 +19,7 @@ Mikro hizmet sınırlarının tanımlanması büyük olasılıkla herkesin karş
 
 Her bağlam için farklı bir etki alanı ile birden çok uygulama bağlamı arasındaki sınırları nasıl tanımlayabilmeniz, her bir iş mikro hizmeti ve ilgili etki alanı modeli ve verileri için sınırları nasıl tanımlayabilmeniz gerekir. Bu mikro hizmetler arasındaki kuponu en aza indirmenize her zaman çalışılır. Bu kılavuz, bu kimlik ve etki alanı modeli tasarımı hakkında daha ayrıntılı bilgi, [her mikro hizmet için etki alanı modeli sınırlarını tanımlama](identify-microservice-domain-model-boundaries.md) bölümünde daha fazla ayrıntıya gider.
 
-## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Sınama \#2: çeşitli mikro hizmetlerden veri alan sorgular oluşturma
+## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Zorluk \#2: çeşitli mikro hizmetlerden veri alan sorgular oluşturma
 
 İkinci bir sınama, birkaç mikro hizmetten veri alan sorguların nasıl uygulanacağı, uzak istemci uygulamalarından gelen mikro hizmetlerle geveze iletişiminden kaçınmaya yönelik bir sınamadır. Bir örnek, bir mobil uygulamadan, sepet, Katalog ve Kullanıcı kimliği mikro hizmetleri tarafından sahip olunan Kullanıcı bilgilerini göstermesi gereken tek bir ekran olabilir. Birden fazla mikro hizmette bulunan çok sayıda tabloyu içeren bir karmaşık rapor olabilir. Doğru çözüm, sorguların karmaşıklığına bağlıdır. Ancak, sistem iletişiminizdeki verimliliği artırmak isterseniz bilgileri toplamanın bir yolu olması gerekir. En popüler çözümler şunlardır.
 
@@ -37,7 +37,7 @@ Bu merkezi veritabanının yalnızca gerçek zamanlı veriler gerektirmeyen sorg
 
 Ancak, uygulama tasarımınız karmaşık sorgular için birden fazla mikro hizmetten sürekli bilgi toplamak içeriyorsa, kötü bir tasarımın belirtisi olabilir. mikro hizmet, diğer mikro hizmetlerden mümkün olduğunca yalıtılmış olmalıdır. (Bu, her zaman soğuk veri merkezi veritabanlarını kullanması gereken raporları/Analizi dışlar.) Bu sorunun olması, mikro hizmetleri birleştirmenin bir nedeni olabilir. Güçlü bağımlılıklar, cohezme ve veri toplama ile her bir mikro hizmetin dağıtımı ve dağıtım bağımsız çalışma sınırı dengelenmesi gerekir.
 
-## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Sınama \#3: birden fazla mikro hizmet arasında tutarlılık elde etme
+## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Zorluk \#3: birden fazla mikro hizmet arasında tutarlılık elde etme
 
 Daha önce belirtildiği gibi, her mikro hizmetin sahip olduğu veriler bu mikro hizmet için özeldir ve yalnızca mikro hizmet API 'SI kullanılarak erişilebilir. Bu nedenle, sunulan bir zorluk, birden fazla mikro hizmette tutarlılık sağlarken uçtan uca iş süreçlerini uygulama.
 
@@ -59,7 +59,7 @@ Sepet tablosu sepet mikro hizmetine ait olduğundan, Katalog mikro hizmeti sepet
 
 Bu sorun için iyi bir çözüm, olay odaklı iletişim ve bir Yayımla ve abone ol sistemi ile ifade edilen mikro hizmetler arasındaki nihai tutarlılığı kullanmaktır. Bu konular, bu kılavuzda daha sonra [zaman uyumsuz olay odaklı iletişim](asynchronous-message-based-communication.md#asynchronous-event-driven-communication) bölümünde ele alınmıştır.
 
-## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Sınama \#4: mikro hizmet sınırları genelinde iletişim tasarlama
+## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Zorluk \#4: mikro hizmet sınırları genelinde iletişim tasarımı
 
 Mikro hizmet sınırları genelinde iletişim kurmak gerçek bir zorluk dır. Bu bağlamda iletişim, kullanmanız gereken Protokolü (HTTP ve REST, AMQP, mesajlaşma vb.) ifade etmez. Bunun yerine, hangi iletişim stilini kullanacağınızı ve özellikle mikro hizmetlerinizin ne şekilde bağlanmış olduğunu ele alınmaktadır. Bir başarısızlık düzeyine bağlı olarak, hata oluştuğunda sisteminizde bu hatanın etkisi önemli ölçüde farklılık gösterecektir.
 
@@ -77,19 +77,19 @@ Popüler bir yaklaşım, basitliği nedeniyle HTTP (REST) tabanlı mikro hizmetl
 
 Aslında, iç mikro hizmetleriniz açıklandığı gibi HTTP isteklerinin zincirlerini oluşturarak iletişim kurıyorsam, tek parçalı bir uygulamaya sahip olabilirsiniz ancak bir tane, işlem içi iletişim mekanizmaları yerine işlemler arasında HTTP 'yi temel alır.
 
-Bu nedenle, mikro hizmet bağımsız çalışma sınırı zorlamak ve daha iyi dayanıklılık sağlamak için, mikro hizmetler genelinde istek/yanıt iletişimi zincirlerinin kullanımını en aza indirmelisiniz. Zaman uyumsuz ileti ve olay tabanlı iletişim kullanarak ya da (zaman uyumsuz) HTTP yoklamasını, özgün HTTP isteğinden bağımsız olarak kullanarak, mikro hizmet iletişimi için yalnızca zaman uyumsuz etkileşim kullanmanız önerilir/ Yanıt çevrimi.
+Bu nedenle, mikro hizmet bağımsız çalışma sınırı zorlamak ve daha iyi dayanıklılık sağlamak için, mikro hizmetler genelinde istek/yanıt iletişimi zincirlerinin kullanımını en aza indirmelisiniz. Zaman uyumsuz ileti ve olay tabanlı iletişim kullanarak ya da (zaman uyumsuz) HTTP yoklamasını özgün HTTP isteği/yanıt döngüsünden bağımsız olarak kullanarak, mikro hizmet iletişimi için yalnızca zaman uyumsuz etkileşim kullanmanız önerilir.
 
 Zaman uyumsuz iletişimin kullanımı, [zaman uyumsuz mikro hizmet tümleştirmesi, mikro hizmetin bağımsız çalışma sınırı](communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy) ve [zaman uyumsuz ileti tabanlı iletişimi](asynchronous-message-based-communication.md)zorladığı bölümlerde bu kılavuzda daha sonra ek ayrıntılarla açıklanır.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- Üst **sınır** \
+- **Cap** 'ler \
   <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **Nihai tutarlılık** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Veri tutarlılığı** \
+- **Veri tutarlılığı öncü** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Marwler. CQRS (Komut ve Sorgu Sorumluluklarının Ayrılığı)**  \
@@ -98,7 +98,7 @@ Zaman uyumsuz iletişimin kullanımı, [zaman uyumsuz mikro hizmet tümleştirme
 - **Gerçekleştirilmiş görünüm** \
   <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
-- **Charles satırı. ACID ile temel: veritabanı Işlem Işleme** \ ' ın kaydırma pH
+- **Charles satırı. ACID ile temel: veritabanı Işlem Işleme \ kaydırma pH**
   <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
 - **Telafi işlemi** \

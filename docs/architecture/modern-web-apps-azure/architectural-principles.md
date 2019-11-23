@@ -40,7 +40,7 @@ Uygulamanın içindeki bağımlılığın yönü, uygulama ayrıntıları değil
 
 **Şekil 4-1.** Doğrudan bağımlılık grafiği.
 
-Bağımlılık Inversion ilkesini uygulamak, bir soyutlamalarda b 'nin uyguladığı bir soyutlama üzerinde Yöntemler çağırabilmesini, bir A 'nın çalışma zamanında B çağrısı yapmasını mümkün hale getirir, ancak B için derleme zamanında bir tarafından denetlenen bir arabirime bağımlı olur (Bu *nedenle, tipik olarak* derleme zamanı bağımlılığı). Çalışma zamanında, program yürütme akışı değişmeden kalır, ancak arabirimlerin tanıtımı bu arabirimlerin farklı uygulamalarının kolayca takılmasına yol açabilir.
+Bağımlılık Inversion ilkesini uygulamak, bir soyutlamalarda b 'nin uyguladığı bir soyutlama üzerinde Yöntemler çağırmasının yanı, bir A 'nın çalışma zamanında B çağrısı yapmasını olanaklı hale getirir, ancak B için derleme zamanında bir tarafından denetlenen arabirime bağımlı olur (Bu nedenle, tipik derleme zamanı bağımlılığını *tersine çevirme* ). Çalışma zamanında, program yürütme akışı değişmeden kalır, ancak arabirimlerin tanıtımı bu arabirimlerin farklı uygulamalarının kolayca takılmasına yol açabilir.
 
 ![Ters bağımlılık grafiği](./media/image4-2.png)
 
