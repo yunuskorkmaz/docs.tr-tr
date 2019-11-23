@@ -2,12 +2,12 @@
 title: Güçlü Yazılmış Uzantılar Örneği
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 5ee2f13df9d3c0841b3e8b62b1633ea4520d3860
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8dc6bca87989b1ee8e1ee440b0d64e2c196cc28f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421520"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978234"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Güçlü Yazılmış Uzantılar Örneği
 Örnek, örnek amaçları için <xref:System.ServiceModel.Syndication.SyndicationFeed> sınıfını kullanır. Ancak, bu örnekte gösterilen desenler uzantı verilerini destekleyen tüm dağıtım sınıflarıyla birlikte kullanılabilir.  
@@ -90,7 +90,7 @@ public class InReplyToElement : IXmlSerializable
   
  `InReplyToElement` sınıfı <xref:System.Xml.Serialization.IXmlSerializable> arabirimini uygular ve bu, nesne örneklerinin XML 'den nasıl okunacakları ve XML 'e yazıldığı üzerinde doğrudan denetime olanak tanır. `ReadXml` yöntemi ilk olarak `Ref`, `HRef`, `Source`ve `MediaType` özellikleri için geçirilen <xref:System.Xml.XmlReader> değerleri okur. Bilinmeyen tüm öznitelikler <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> koleksiyonunda depolanır. Tüm öznitelikler okundum, okuyucuyu bir sonraki öğeye ilerletmek için <xref:System.Xml.XmlReader.ReadStartElement> çağırılır. Bu sınıf tarafından modellenen öğede gerekli alt öğe bulunmadığından, alt öğeler `XElement` örneklerine arabelleğe alınır ve aşağıdaki kodda gösterildiği gibi <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> koleksiyonunda depolanır.  
   
-```csharp  
+```csharp
 public void ReadXml(System.Xml.XmlReader reader)  
 {  
     bool isEmpty = reader.IsEmptyElement;  
@@ -146,7 +146,7 @@ public void ReadXml(System.Xml.XmlReader reader)
   
  `WriteXml`, `InReplyToElement` yöntemi önce `Ref`, `HRef`, `Source`ve `MediaType` özelliklerinin değerlerini XML öznitelikleri olarak yazar (`WriteXml` gerçek dış öğenin kendisini yazmadan sorumludur `WriteXml`) çağıranı tarafından yapıldığı gibi). Ayrıca, aşağıdaki kodda gösterildiği gibi <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> içeriğini ve yazıcı <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> yazar.  
   
-```csharp  
+```csharp
 public void WriteXml(System.Xml.XmlWriter writer)  
 {  
     if (this.Ref != null)  
@@ -189,7 +189,7 @@ public void WriteXml(System.Xml.XmlWriter writer)
   
  `ThreadedFeed` sınıfı `SyndicationFeed` devralır ve `ThreadedItem`döndürecek `OnCreateItem` geçersiz kılar. Ayrıca, aşağıdaki kodda gösterildiği gibi `Items` koleksiyonuna `ThreadedItems`olarak erişmek için bir yöntem uygular.  
   
-```csharp  
+```csharp
 public class ThreadedFeed : SyndicationFeed  
 {  
     public ThreadedFeed()  
@@ -213,7 +213,7 @@ public class ThreadedFeed : SyndicationFeed
   
  `ThreadedItem` sınıfı `SyndicationItem` devralır ve türü kesin belirlenmiş bir özellik olarak `InReplyToElement` yapar. Bu, `InReplyTo` uzantısı verilerine kolay programlı erişim sağlar. Ayrıca, aşağıdaki kodda gösterildiği gibi, uzantı verilerini okumak ve yazmak için `TryParseElement` ve `WriteElementExtensions` uygular.  
   
-```csharp  
+```csharp
 public class ThreadedItem : SyndicationItem  
 {  
     private InReplyToElement inReplyTo;  
