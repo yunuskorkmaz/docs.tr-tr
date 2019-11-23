@@ -1,5 +1,5 @@
 ---
-title: -linkresource (Visual Basic)
+title: -linkresource
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /linkresource compiler option [Visual Basic]
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: dee5384696d543442f3280b9fdb535a7d9b6f863
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: HT
+ms.openlocfilehash: 0315645eccdc899ac9cf4d0be105297e1fa2a4c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005492"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335489"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
-Yönetilen bir kaynağa bir bağlantı oluşturur.  
+Creates a link to a managed resource.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,29 +31,29 @@ veya
 -linkres:filename[,identifier[,public|private]]  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Arguments  
  `filename`  
- Gerekli. Derlemeye bağlanacak kaynak dosyası. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.  
+ Gerekli. The resource file to link to the assembly. If the file name contains a space, enclose the name in quotation marks (" ").  
   
  `identifier`  
- İsteğe bağlı. Kaynağın mantıksal adı. Kaynağı yüklemek için kullanılan ad. Varsayılan değer, dosyanın adıdır. İsteğe bağlı olarak, dosyanın derleme bildiriminde genel mi yoksa özel mi olduğunu belirtebilirsiniz, örneğin: `-linkres:filename.res,myname.res,public`. Varsayılan olarak, `filename` derlemede ortaktır.  
+ İsteğe bağlı. The logical name for the resource. The name that is used to load the resource. The default is the name of the file. Optionally, you can specify whether the file is public or private in the assembly manifest, for example: `-linkres:filename.res,myname.res,public`. By default, `filename` is public in the assembly.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-linkresource` seçeneği, kaynak dosyasını çıkış dosyasına eklemez; Bunu yapmak için `-resource` seçeneğini kullanın.  
+ The `-linkresource` option does not embed the resource file in the output file; use the `-resource` option to do this.  
   
- `-linkresource` seçeneği `-target:module`dışında `-target` seçeneklerinden birini gerektirir.  
+ The `-linkresource` option requires one of the `-target` options other than `-target:module`.  
   
- `filename`, örneğin [Resgen. exe (kaynak dosya Oluşturucu)](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında oluşturulmuş bir .NET Framework kaynak dosyası ise, <xref:System.Resources> ad alanındaki üyelerle erişilebilir. (Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager>.) Çalışma zamanında diğer tüm kaynaklara erişmek için, <xref:System.Reflection.Assembly> sınıfında `GetManifestResource` ile başlayan yöntemleri kullanın.  
+ If `filename` is a .NET Framework resource file created, for example, by the [Resgen.exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) or in the development environment, it can be accessed with members in the <xref:System.Resources> namespace. (For more information, see <xref:System.Resources.ResourceManager>.) To access all other resources at run time, use the methods that begin with `GetManifestResource` in the <xref:System.Reflection.Assembly> class.  
   
- Dosya adı herhangi bir dosya biçimi olabilir. Örneğin, genel derleme önbelleğine yüklenebilmesi ve derlemedeki yönetilen koddan erişilebilmesi için derlemenin yerel bir DLL parçası yapmak isteyebilirsiniz.  
+ The file name can be any file format. For example, you may want to make a native DLL part of the assembly, so that it can be installed into the global assembly cache and accessed from managed code in the assembly.  
   
- `-linkresource` kısa biçimi `-linkres`.  
+ The short form of `-linkresource` is `-linkres`.  
   
 > [!NOTE]
-> `-linkresource` seçeneği Visual Studio geliştirme ortamında kullanılamaz; yalnızca komut satırından derleme yaptığınızda kullanılabilir.  
+> The `-linkresource` option is not available from the Visual Studio development environment; it is available only when you compile from the command line.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `in.vb` ve `rf.resource`kaynak dosyası bağlantılarını derler.  
+ The following code compiles `in.vb` and links to resource file `rf.resource`.  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  
@@ -61,7 +61,7 @@ vbc -linkresource:rf.resource in.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-Kaynak (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
+- [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
