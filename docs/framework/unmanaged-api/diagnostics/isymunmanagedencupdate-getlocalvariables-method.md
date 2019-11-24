@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5c8840be-ffea-447f-9c8d-178f1eaf8d06
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 48e359f8ed4d52de1cff7ca46a523f4eb80ec4c6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b5fc8b6807a4c8eb700ab3fa181a216e48a732ff
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776893"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449037"
 ---
-# <a name="isymunmanagedencupdategetlocalvariables-method"></a><span data-ttu-id="27585-102">ISymUnmanagedENCUpdate::GetLocalVariables Yöntemi</span><span class="sxs-lookup"><span data-stu-id="27585-102">ISymUnmanagedENCUpdate::GetLocalVariables Method</span></span>
-<span data-ttu-id="27585-103">Yerel değişkenlerini alır.</span><span class="sxs-lookup"><span data-stu-id="27585-103">Gets the local variables.</span></span>  
+# <a name="isymunmanagedencupdategetlocalvariables-method"></a><span data-ttu-id="94a83-102">ISymUnmanagedENCUpdate::GetLocalVariables Yöntemi</span><span class="sxs-lookup"><span data-stu-id="94a83-102">ISymUnmanagedENCUpdate::GetLocalVariables Method</span></span>
+<span data-ttu-id="94a83-103">Gets the local variables.</span><span class="sxs-lookup"><span data-stu-id="94a83-103">Gets the local variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="27585-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="27585-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94a83-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="94a83-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLocalVariables(  
@@ -38,25 +36,25 @@ HRESULT GetLocalVariables(
     [out] ULONG        *pceltFetched);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="27585-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="27585-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="94a83-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="94a83-105">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="27585-106">[in] Yöntemin meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="27585-106">[in] The metadata token of the method.</span></span>  
+ <span data-ttu-id="94a83-106">[in] The metadata token of the method.</span><span class="sxs-lookup"><span data-stu-id="94a83-106">[in] The metadata token of the method.</span></span>  
   
  `cLocals`  
- <span data-ttu-id="27585-107">[in] A `ULONG` boyutunu gösteren `rgLocals` parametresi.</span><span class="sxs-lookup"><span data-stu-id="27585-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span></span>  
+ <span data-ttu-id="94a83-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span><span class="sxs-lookup"><span data-stu-id="94a83-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span></span>  
   
  `rgLocals`  
- <span data-ttu-id="27585-108">[out] Döndürülen dizi [Isymunmanagedvariable](isymunmanagedvariable-interface.md) örnekleri.</span><span class="sxs-lookup"><span data-stu-id="27585-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span></span>  
+ <span data-ttu-id="94a83-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span><span class="sxs-lookup"><span data-stu-id="94a83-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="27585-109">[out] Bir işaretçi bir `ULONG` boyutunu alır `rgLocals` arabellek yerel öğeler içermesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="27585-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span></span>  
+ <span data-ttu-id="94a83-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span><span class="sxs-lookup"><span data-stu-id="94a83-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="27585-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="27585-110">Return Value</span></span>  
- <span data-ttu-id="27585-111">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="27585-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="94a83-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="94a83-110">Return Value</span></span>  
+ <span data-ttu-id="94a83-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="94a83-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="27585-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="27585-112">Requirements</span></span>  
- <span data-ttu-id="27585-113">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="27585-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="94a83-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="94a83-112">Requirements</span></span>  
+ <span data-ttu-id="94a83-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="94a83-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27585-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="27585-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="94a83-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="94a83-114">See also</span></span>
 
-- [<span data-ttu-id="27585-115">ISymUnmanagedENCUpdate Arabirimi</span><span class="sxs-lookup"><span data-stu-id="27585-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="94a83-115">ISymUnmanagedENCUpdate Arabirimi</span><span class="sxs-lookup"><span data-stu-id="94a83-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

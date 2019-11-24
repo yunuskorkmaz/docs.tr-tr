@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 08dff60c-f01b-4050-8865-ea3f95361c9f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5d8827f46a12bd090fa27e71072d833607d34677
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6a5b3f1e9bf1444feb73949ef7133fbd9ae35134
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777353"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446478"
 ---
-# <a name="enumcustomattributes-method"></a><span data-ttu-id="ccaec-102">EnumCustomAttributes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ccaec-102">EnumCustomAttributes Method</span></span>
-<span data-ttu-id="ccaec-103">Derleme düzeyi özel özniteliklerini alır.</span><span class="sxs-lookup"><span data-stu-id="ccaec-103">Retrieves assembly-level custom attributes.</span></span>  
+# <a name="enumcustomattributes-method"></a><span data-ttu-id="854b5-102">EnumCustomAttributes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="854b5-102">EnumCustomAttributes Method</span></span>
+<span data-ttu-id="854b5-103">Retrieves assembly-level custom attributes.</span><span class="sxs-lookup"><span data-stu-id="854b5-103">Retrieves assembly-level custom attributes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ccaec-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ccaec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="854b5-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="854b5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumCustomAttributes(  
@@ -39,30 +37,30 @@ HRESULT EnumCustomAttributes(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ccaec-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ccaec-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="854b5-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="854b5-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="ccaec-106">Numaralandırıcı tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="ccaec-106">Handle of enumerator.</span></span>  
+ <span data-ttu-id="854b5-106">Handle of enumerator.</span><span class="sxs-lookup"><span data-stu-id="854b5-106">Handle of enumerator.</span></span>  
   
  `tkType`  
- <span data-ttu-id="ccaec-107">Numaralandırılacak özniteliklerin türü.</span><span class="sxs-lookup"><span data-stu-id="ccaec-107">Type of attributes to be enumerated.</span></span> <span data-ttu-id="ccaec-108">Tüm `mdTokenNill` öznitelikler için kullanın.</span><span class="sxs-lookup"><span data-stu-id="ccaec-108">Use `mdTokenNill` for all attributes.</span></span>  
+ <span data-ttu-id="854b5-107">Type of attributes to be enumerated.</span><span class="sxs-lookup"><span data-stu-id="854b5-107">Type of attributes to be enumerated.</span></span> <span data-ttu-id="854b5-108">Use `mdTokenNill` for all attributes.</span><span class="sxs-lookup"><span data-stu-id="854b5-108">Use `mdTokenNill` for all attributes.</span></span>  
   
  `rCustomValues`  
- <span data-ttu-id="ccaec-109">Özel öznitelik belirteçleri alır.</span><span class="sxs-lookup"><span data-stu-id="ccaec-109">Receives custom attributes tokens.</span></span>  
+ <span data-ttu-id="854b5-109">Receives custom attributes tokens.</span><span class="sxs-lookup"><span data-stu-id="854b5-109">Receives custom attributes tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="ccaec-110">`rCustomValues` Dizinin boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="ccaec-110">Specifies size of `rCustomValues` array.</span></span>  
+ <span data-ttu-id="854b5-110">Specifies size of `rCustomValues` array.</span><span class="sxs-lookup"><span data-stu-id="854b5-110">Specifies size of `rCustomValues` array.</span></span>  
   
  `pcCustomValues`  
- <span data-ttu-id="ccaec-111">İsteğe bağlı olarak belirteç değerleri sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="ccaec-111">Optionally receives count of token values.</span></span>  
+ <span data-ttu-id="854b5-111">Optionally receives count of token values.</span><span class="sxs-lookup"><span data-stu-id="854b5-111">Optionally receives count of token values.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ccaec-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="ccaec-112">Return Value</span></span>  
- <span data-ttu-id="ccaec-113">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="ccaec-113">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="854b5-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="854b5-112">Return Value</span></span>  
+ <span data-ttu-id="854b5-113">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="854b5-113">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ccaec-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ccaec-114">Requirements</span></span>  
- <span data-ttu-id="ccaec-115">ALink. h gerektirir</span><span class="sxs-lookup"><span data-stu-id="ccaec-115">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="854b5-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="854b5-114">Requirements</span></span>  
+ <span data-ttu-id="854b5-115">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="854b5-115">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ccaec-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ccaec-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="854b5-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="854b5-116">See also</span></span>
 
-- [<span data-ttu-id="ccaec-117">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ccaec-117">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="ccaec-118">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ccaec-118">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="ccaec-119">ALink API</span><span class="sxs-lookup"><span data-stu-id="ccaec-119">ALink API</span></span>](index.md)
+- [<span data-ttu-id="854b5-117">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="854b5-117">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="854b5-118">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="854b5-118">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="854b5-119">ALink API</span><span class="sxs-lookup"><span data-stu-id="854b5-119">ALink API</span></span>](index.md)

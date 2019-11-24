@@ -15,35 +15,33 @@ helpviewer_keywords:
 ms.assetid: cc1a823a-3ff3-4a33-b641-96edc93d2b17
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bf8cca7751dd9705fd3c4371e36e836ca19be5c9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 057b901337ded7b5336ef673624d8d6c827c8932
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736214"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448674"
 ---
-# <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a><span data-ttu-id="64d45-102">ISymENCUnmanagedMethod::GetDocumentsForMethodCount Metodu</span><span class="sxs-lookup"><span data-stu-id="64d45-102">ISymENCUnmanagedMethod::GetDocumentsForMethodCount Method</span></span>
-<span data-ttu-id="64d45-103">Bu yöntem satır var, belge sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="64d45-103">Gets the number of documents that this method has lines in.</span></span>  
+# <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a><span data-ttu-id="700e3-102">ISymENCUnmanagedMethod::GetDocumentsForMethodCount Metodu</span><span class="sxs-lookup"><span data-stu-id="700e3-102">ISymENCUnmanagedMethod::GetDocumentsForMethodCount Method</span></span>
+<span data-ttu-id="700e3-103">Gets the number of documents that this method has lines in.</span><span class="sxs-lookup"><span data-stu-id="700e3-103">Gets the number of documents that this method has lines in.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="64d45-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="64d45-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="700e3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="700e3-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDocumentsForMethodCount(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="64d45-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="64d45-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="700e3-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="700e3-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="64d45-106">[out] Bir işaretçi bir `ULONG32` belgeleri içermesini gerekli arabellek boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="64d45-106">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the documents.</span></span>  
+ <span data-ttu-id="700e3-106">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the documents.</span><span class="sxs-lookup"><span data-stu-id="700e3-106">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the documents.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="64d45-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="64d45-107">Return Value</span></span>  
- <span data-ttu-id="64d45-108">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="64d45-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="700e3-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="700e3-107">Return Value</span></span>  
+ <span data-ttu-id="700e3-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="700e3-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="64d45-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="64d45-109">Requirements</span></span>  
- <span data-ttu-id="64d45-110">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="64d45-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="700e3-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="700e3-109">Requirements</span></span>  
+ <span data-ttu-id="700e3-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="700e3-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="64d45-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="64d45-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="700e3-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="700e3-111">See also</span></span>
 
-- [<span data-ttu-id="64d45-112">ISymENCUnmanagedMethod Arabirimi</span><span class="sxs-lookup"><span data-stu-id="64d45-112">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [<span data-ttu-id="700e3-112">ISymENCUnmanagedMethod Arabirimi</span><span class="sxs-lookup"><span data-stu-id="700e3-112">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

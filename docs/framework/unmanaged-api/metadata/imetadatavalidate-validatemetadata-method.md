@@ -15,33 +15,31 @@ helpviewer_keywords:
 ms.assetid: e5ceed11-0f54-4097-8302-883284dddbc1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5614ac6127fc07a1944889930c59db1ba7322f73
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ebb0951322f63b9f8802b7830e55976f824df21a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766935"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443407"
 ---
-# <a name="imetadatavalidatevalidatemetadata-method"></a><span data-ttu-id="efbf8-102">IMetaDataValidate::ValidateMetaData Yöntemi</span><span class="sxs-lookup"><span data-stu-id="efbf8-102">IMetaDataValidate::ValidateMetaData Method</span></span>
-<span data-ttu-id="efbf8-103">Geçerli meta veri kapsamda nesnelerin meta verilerini imzaları doğrular.</span><span class="sxs-lookup"><span data-stu-id="efbf8-103">Validates the metadata signatures of the objects in the current metadata scope.</span></span>  
+# <a name="imetadatavalidatevalidatemetadata-method"></a><span data-ttu-id="f9e05-102">IMetaDataValidate::ValidateMetaData Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f9e05-102">IMetaDataValidate::ValidateMetaData Method</span></span>
+<span data-ttu-id="f9e05-103">Validates the metadata signatures of the objects in the current metadata scope.</span><span class="sxs-lookup"><span data-stu-id="f9e05-103">Validates the metadata signatures of the objects in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="efbf8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="efbf8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f9e05-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f9e05-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ValidateMetaData ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="efbf8-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="efbf8-105">Requirements</span></span>  
- <span data-ttu-id="efbf8-106">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="efbf8-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f9e05-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f9e05-105">Requirements</span></span>  
+ <span data-ttu-id="f9e05-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f9e05-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="efbf8-107">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="efbf8-107">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f9e05-107">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f9e05-107">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="efbf8-108">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="efbf8-108">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f9e05-108">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f9e05-108">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="efbf8-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="efbf8-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f9e05-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9e05-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="efbf8-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="efbf8-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f9e05-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f9e05-110">See also</span></span>
 
-- [<span data-ttu-id="efbf8-111">IMetaDataValidate Arabirimi</span><span class="sxs-lookup"><span data-stu-id="efbf8-111">IMetaDataValidate Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)
+- [<span data-ttu-id="f9e05-111">IMetaDataValidate Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f9e05-111">IMetaDataValidate Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)

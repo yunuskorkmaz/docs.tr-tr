@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cba9e4d6-9461-4420-9614-96ff7039ec9c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf6deb4d1420e7b58e1edc7741b683beb591ca5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ce8d3356b1f9b73e33ed2d3215c7f8115e64ac70
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782095"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426642"
 ---
-# <a name="imetadatatablesgetuserstringheapsize-method"></a><span data-ttu-id="bea8c-102">IMetaDataTables::GetUserStringHeapSize Yöntemi</span><span class="sxs-lookup"><span data-stu-id="bea8c-102">IMetaDataTables::GetUserStringHeapSize Method</span></span>
-<span data-ttu-id="bea8c-103">Kullanıcı dize yığın bayt cinsinden boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="bea8c-103">Gets the size, in bytes, of the user string heap.</span></span>  
+# <a name="imetadatatablesgetuserstringheapsize-method"></a><span data-ttu-id="3cb57-102">IMetaDataTables::GetUserStringHeapSize Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3cb57-102">IMetaDataTables::GetUserStringHeapSize Method</span></span>
+<span data-ttu-id="3cb57-103">Gets the size, in bytes, of the user string heap.</span><span class="sxs-lookup"><span data-stu-id="3cb57-103">Gets the size, in bytes, of the user string heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bea8c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bea8c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3cb57-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3cb57-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetUserStringHeapSize (  
@@ -35,20 +33,20 @@ HRESULT GetUserStringHeapSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bea8c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="bea8c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3cb57-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3cb57-105">Parameters</span></span>  
  `pcbBlobs`  
- <span data-ttu-id="bea8c-106">[out] Bayt cinsinden kullanıcı dize yığın boyutu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="bea8c-106">[out] A pointer to the size, in bytes, of the user string heap.</span></span>  
+ <span data-ttu-id="3cb57-106">[out] A pointer to the size, in bytes, of the user string heap.</span><span class="sxs-lookup"><span data-stu-id="3cb57-106">[out] A pointer to the size, in bytes, of the user string heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bea8c-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bea8c-107">Requirements</span></span>  
- <span data-ttu-id="bea8c-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bea8c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3cb57-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3cb57-107">Requirements</span></span>  
+ <span data-ttu-id="3cb57-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3cb57-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bea8c-109">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="bea8c-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3cb57-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3cb57-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bea8c-110">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="bea8c-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="3cb57-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3cb57-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="bea8c-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bea8c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3cb57-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3cb57-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bea8c-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bea8c-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3cb57-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3cb57-112">See also</span></span>
 
-- [<span data-ttu-id="bea8c-113">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bea8c-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="bea8c-114">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bea8c-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="3cb57-113">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3cb57-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="3cb57-114">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3cb57-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

@@ -15,35 +15,33 @@ helpviewer_keywords:
 ms.assetid: a61866ee-221a-45b9-a1b7-395825b77872
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a75fed5e3272b783a6f8fb1a4f1c02096858b409
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 348a8cebe0fd746f3ae490484ffcca2fcb77684b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777902"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446321"
 ---
-# <a name="isymunmanagedscopegetmethod-method"></a><span data-ttu-id="a4790-102">ISymUnmanagedScope::GetMethod Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a4790-102">ISymUnmanagedScope::GetMethod Method</span></span>
-<span data-ttu-id="a4790-103">Bu kapsam içeren yöntemi alır.</span><span class="sxs-lookup"><span data-stu-id="a4790-103">Gets the method that contains this scope.</span></span>  
+# <a name="isymunmanagedscopegetmethod-method"></a><span data-ttu-id="fef9a-102">ISymUnmanagedScope::GetMethod Yöntemi</span><span class="sxs-lookup"><span data-stu-id="fef9a-102">ISymUnmanagedScope::GetMethod Method</span></span>
+<span data-ttu-id="fef9a-103">Gets the method that contains this scope.</span><span class="sxs-lookup"><span data-stu-id="fef9a-103">Gets the method that contains this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a4790-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a4790-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fef9a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fef9a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethod(  
     [out, retval] ISymUnmanagedMethod** pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a4790-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a4790-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fef9a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="fef9a-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="a4790-106">[out] Döndürülen işaretçi [Isymunmanagedmethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="a4790-106">[out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.</span></span>  
+ <span data-ttu-id="fef9a-106">[out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="fef9a-106">[out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a4790-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="a4790-107">Return Value</span></span>  
- <span data-ttu-id="a4790-108">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="a4790-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="fef9a-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="fef9a-107">Return Value</span></span>  
+ <span data-ttu-id="fef9a-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="fef9a-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a4790-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a4790-109">Requirements</span></span>  
- <span data-ttu-id="a4790-110">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a4790-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fef9a-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="fef9a-109">Requirements</span></span>  
+ <span data-ttu-id="fef9a-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="fef9a-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a4790-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a4790-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fef9a-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fef9a-111">See also</span></span>
 
-- [<span data-ttu-id="a4790-112">ISymUnmanagedScope Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a4790-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="fef9a-112">ISymUnmanagedScope Arabirimi</span><span class="sxs-lookup"><span data-stu-id="fef9a-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

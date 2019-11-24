@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4789d08f-8683-45d3-ac30-73d48c61e470
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 09c36dd65c8a4202f13d362668f74cd9a362e35a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 92e40dbe8892d48dba1c54d9cd16faa409440b24
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744361"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438108"
 ---
-# <a name="notifyfilter-enumeration"></a><span data-ttu-id="526e1-102">NOTIFY_FILTER Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="526e1-102">NOTIFY_FILTER Enumeration</span></span>
-<span data-ttu-id="526e1-103">Hata ayıklayıcı işlevleri için geri çağırmaları tanımlar.</span><span class="sxs-lookup"><span data-stu-id="526e1-103">Identifies callbacks for debugger functions.</span></span> <span data-ttu-id="526e1-104">Daha fazla bilgi için [Inotifysource2::setnotifyfilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="526e1-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  
+# <a name="notify_filter-enumeration"></a><span data-ttu-id="77f27-102">NOTIFY_FILTER Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="77f27-102">NOTIFY_FILTER Enumeration</span></span>
+<span data-ttu-id="77f27-103">Identifies callbacks for debugger functions.</span><span class="sxs-lookup"><span data-stu-id="77f27-103">Identifies callbacks for debugger functions.</span></span> <span data-ttu-id="77f27-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="77f27-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="526e1-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="526e1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="77f27-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="77f27-105">Syntax</span></span>  
   
 ```cpp  
 enum tagNOTIFY_FILTER  
@@ -41,21 +39,21 @@ enum tagNOTIFY_FILTER
 };  
 ```  
   
-## <a name="members"></a><span data-ttu-id="526e1-106">Üyeler</span><span class="sxs-lookup"><span data-stu-id="526e1-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="77f27-106">Üyeler</span><span class="sxs-lookup"><span data-stu-id="77f27-106">Members</span></span>  
   
-|<span data-ttu-id="526e1-107">Üye</span><span class="sxs-lookup"><span data-stu-id="526e1-107">Member</span></span>|<span data-ttu-id="526e1-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="526e1-108">Description</span></span>|  
+|<span data-ttu-id="77f27-107">Üye</span><span class="sxs-lookup"><span data-stu-id="77f27-107">Member</span></span>|<span data-ttu-id="77f27-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="77f27-108">Description</span></span>|  
 |------------|-----------------|  
-|`NOTIFY_FILTER_ONSYNCCALLOUT`|<span data-ttu-id="526e1-109">Bildiren [Inotifysink2::onsynccallout](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) yöntemi çağrılacak.</span><span class="sxs-lookup"><span data-stu-id="526e1-109">Indicates that the [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ONSYNCCALLENTER`|<span data-ttu-id="526e1-110">Bildiren [Inotifysink2::onsynccallenter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) yöntemi çağrılacak.</span><span class="sxs-lookup"><span data-stu-id="526e1-110">Indicates that the [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ONSYNCCALLEXIT`|<span data-ttu-id="526e1-111">Bildiren [Inotifysink2::onsynccallexit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) yöntemi çağrılacak.</span><span class="sxs-lookup"><span data-stu-id="526e1-111">Indicates that the [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ONSYNCCALLRETURN`|<span data-ttu-id="526e1-112">Bildiren [Inotifysink2::onsynccallreturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) yöntemi çağrılacak.</span><span class="sxs-lookup"><span data-stu-id="526e1-112">Indicates that the [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ALLSYNC`|<span data-ttu-id="526e1-113">Bildiren tüm [Inotifysink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) yöntemleri çağrılacak.</span><span class="sxs-lookup"><span data-stu-id="526e1-113">Indicates that all of the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) methods should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ALL`|<span data-ttu-id="526e1-114">Tüm mevcut ve gelecekteki bildirimleri etkinleştirir.</span><span class="sxs-lookup"><span data-stu-id="526e1-114">Activates all existing and future notifications.</span></span>|  
-|`NOTIFY_FILTER_NONE`|<span data-ttu-id="526e1-115">Hiçbir bildirim yöntemi çağrılmalıdır gösterir.</span><span class="sxs-lookup"><span data-stu-id="526e1-115">Indicates that no notification methods should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLOUT`|<span data-ttu-id="77f27-109">Indicates that the [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) method should be invoked.</span><span class="sxs-lookup"><span data-stu-id="77f27-109">Indicates that the [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLENTER`|<span data-ttu-id="77f27-110">Indicates that the [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) method should be invoked.</span><span class="sxs-lookup"><span data-stu-id="77f27-110">Indicates that the [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLEXIT`|<span data-ttu-id="77f27-111">Indicates that the [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) method should be invoked.</span><span class="sxs-lookup"><span data-stu-id="77f27-111">Indicates that the [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLRETURN`|<span data-ttu-id="77f27-112">Indicates that the [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) method should be invoked.</span><span class="sxs-lookup"><span data-stu-id="77f27-112">Indicates that the [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ALLSYNC`|<span data-ttu-id="77f27-113">Indicates that all of the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) methods should be invoked.</span><span class="sxs-lookup"><span data-stu-id="77f27-113">Indicates that all of the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) methods should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ALL`|<span data-ttu-id="77f27-114">Activates all existing and future notifications.</span><span class="sxs-lookup"><span data-stu-id="77f27-114">Activates all existing and future notifications.</span></span>|  
+|`NOTIFY_FILTER_NONE`|<span data-ttu-id="77f27-115">Indicates that no notification methods should be invoked.</span><span class="sxs-lookup"><span data-stu-id="77f27-115">Indicates that no notification methods should be invoked.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="526e1-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="526e1-116">Requirements</span></span>  
- <span data-ttu-id="526e1-117">**Üst bilgi:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="526e1-117">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="77f27-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="77f27-116">Requirements</span></span>  
+ <span data-ttu-id="77f27-117">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="77f27-117">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="526e1-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="526e1-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="77f27-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="77f27-118">See also</span></span>
 
-- [<span data-ttu-id="526e1-119">Tanılama Simge Deposu Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="526e1-119">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [<span data-ttu-id="77f27-119">Tanılama Simge Deposu Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="77f27-119">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

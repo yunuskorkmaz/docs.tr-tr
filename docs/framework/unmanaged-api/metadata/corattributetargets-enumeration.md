@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9fb1dff80fccc920540d370797441b3a019d766c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780916"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443876"
 ---
-# <a name="corattributetargets-enumeration"></a><span data-ttu-id="b5716-102">CorAttributeTargets Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="b5716-102">CorAttributeTargets Enumeration</span></span>
-<span data-ttu-id="b5716-103">Üzerinde bir öznitelik uygulamak için geçerli olduğundan uygulama öğesi belirtir.</span><span class="sxs-lookup"><span data-stu-id="b5716-103">Specifies the application elements on which it is valid to apply an attribute.</span></span>  
+# <a name="corattributetargets-enumeration"></a><span data-ttu-id="1bd74-102">CorAttributeTargets Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="1bd74-102">CorAttributeTargets Enumeration</span></span>
+<span data-ttu-id="1bd74-103">Specifies the application elements on which it is valid to apply an attribute.</span><span class="sxs-lookup"><span data-stu-id="1bd74-103">Specifies the application elements on which it is valid to apply an attribute.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b5716-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b5716-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1bd74-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1bd74-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorAttributeTargets  
@@ -60,39 +58,39 @@ typedef enum CorAttributeTargets
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b5716-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="b5716-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="1bd74-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="1bd74-105">Members</span></span>  
   
-|<span data-ttu-id="b5716-106">Üye</span><span class="sxs-lookup"><span data-stu-id="b5716-106">Member</span></span>|<span data-ttu-id="b5716-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b5716-107">Description</span></span>|  
+|<span data-ttu-id="1bd74-106">Üye</span><span class="sxs-lookup"><span data-stu-id="1bd74-106">Member</span></span>|<span data-ttu-id="1bd74-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1bd74-107">Description</span></span>|  
 |------------|-----------------|  
-|`catAssembly`|<span data-ttu-id="b5716-108">Öznitelik bir bütünleştirilmiş koda uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-108">Attribute can be applied to an assembly.</span></span>|  
-|`catModule`|<span data-ttu-id="b5716-109">Öznitelik, bir taşınabilir yürütülebilir (.dll veya .exe) modülü için uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-109">Attribute can be applied to a portable executable (.dll or .exe) module.</span></span>|  
-|`catClass`|<span data-ttu-id="b5716-110">Öznitelik bir sınıfa uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-110">Attribute can be applied to a class.</span></span>|  
-|`catStruct`|<span data-ttu-id="b5716-111">Öznitelik, bir yapıya uygulanabilir; diğer bir deyişle, bir değer yazın.</span><span class="sxs-lookup"><span data-stu-id="b5716-111">Attribute can be applied to a structure; that is, a value type.</span></span>|  
-|`catEnum`|<span data-ttu-id="b5716-112">Öznitelik, bir numaralandırma için uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-112">Attribute can be applied to an enumeration.</span></span>|  
-|`catConstructor`|<span data-ttu-id="b5716-113">Öznitelik, bir oluşturucu için uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-113">Attribute can be applied to a constructor.</span></span>|  
-|`catMethod`|<span data-ttu-id="b5716-114">Öznitelik, bir yönteme uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-114">Attribute can be applied to a method.</span></span>|  
-|`catProperty`|<span data-ttu-id="b5716-115">Öznitelik, bir özellik için uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-115">Attribute can be applied to a property.</span></span>|  
-|`catField`|<span data-ttu-id="b5716-116">Öznitelik, bir alan için uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-116">Attribute can be applied to a field.</span></span>|  
-|`catEvent`|<span data-ttu-id="b5716-117">Öznitelik, bir olay için uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-117">Attribute can be applied to an event.</span></span>|  
-|`catInterface`|<span data-ttu-id="b5716-118">Öznitelik, bir arabirim için uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-118">Attribute can be applied to an interface.</span></span>|  
-|`catParameter`|<span data-ttu-id="b5716-119">Öznitelik, bir parametre için uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-119">Attribute can be applied to a parameter.</span></span>|  
-|`catDelegate`|<span data-ttu-id="b5716-120">Öznitelik, bir temsilci için uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-120">Attribute can be applied to a delegate.</span></span>|  
-|`catGenericParameter`|<span data-ttu-id="b5716-121">Genel parametre özniteliği uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-121">Attribute can be applied to a generic parameter.</span></span>|  
-|`catAll`|<span data-ttu-id="b5716-122">Öznitelik, herhangi bir uygulama öğeye uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-122">Attribute can be applied to any application element.</span></span>|  
-|`catClassMembers`|<span data-ttu-id="b5716-123">Öznitelik, bir sınıf üyesine uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-123">Attribute can be applied to a member of a class.</span></span>|  
+|`catAssembly`|<span data-ttu-id="1bd74-108">Attribute can be applied to an assembly.</span><span class="sxs-lookup"><span data-stu-id="1bd74-108">Attribute can be applied to an assembly.</span></span>|  
+|`catModule`|<span data-ttu-id="1bd74-109">Attribute can be applied to a portable executable (.dll or .exe) module.</span><span class="sxs-lookup"><span data-stu-id="1bd74-109">Attribute can be applied to a portable executable (.dll or .exe) module.</span></span>|  
+|`catClass`|<span data-ttu-id="1bd74-110">Attribute can be applied to a class.</span><span class="sxs-lookup"><span data-stu-id="1bd74-110">Attribute can be applied to a class.</span></span>|  
+|`catStruct`|<span data-ttu-id="1bd74-111">Attribute can be applied to a structure; that is, a value type.</span><span class="sxs-lookup"><span data-stu-id="1bd74-111">Attribute can be applied to a structure; that is, a value type.</span></span>|  
+|`catEnum`|<span data-ttu-id="1bd74-112">Attribute can be applied to an enumeration.</span><span class="sxs-lookup"><span data-stu-id="1bd74-112">Attribute can be applied to an enumeration.</span></span>|  
+|`catConstructor`|<span data-ttu-id="1bd74-113">Attribute can be applied to a constructor.</span><span class="sxs-lookup"><span data-stu-id="1bd74-113">Attribute can be applied to a constructor.</span></span>|  
+|`catMethod`|<span data-ttu-id="1bd74-114">Attribute can be applied to a method.</span><span class="sxs-lookup"><span data-stu-id="1bd74-114">Attribute can be applied to a method.</span></span>|  
+|`catProperty`|<span data-ttu-id="1bd74-115">Attribute can be applied to a property.</span><span class="sxs-lookup"><span data-stu-id="1bd74-115">Attribute can be applied to a property.</span></span>|  
+|`catField`|<span data-ttu-id="1bd74-116">Attribute can be applied to a field.</span><span class="sxs-lookup"><span data-stu-id="1bd74-116">Attribute can be applied to a field.</span></span>|  
+|`catEvent`|<span data-ttu-id="1bd74-117">Attribute can be applied to an event.</span><span class="sxs-lookup"><span data-stu-id="1bd74-117">Attribute can be applied to an event.</span></span>|  
+|`catInterface`|<span data-ttu-id="1bd74-118">Attribute can be applied to an interface.</span><span class="sxs-lookup"><span data-stu-id="1bd74-118">Attribute can be applied to an interface.</span></span>|  
+|`catParameter`|<span data-ttu-id="1bd74-119">Attribute can be applied to a parameter.</span><span class="sxs-lookup"><span data-stu-id="1bd74-119">Attribute can be applied to a parameter.</span></span>|  
+|`catDelegate`|<span data-ttu-id="1bd74-120">Attribute can be applied to a delegate.</span><span class="sxs-lookup"><span data-stu-id="1bd74-120">Attribute can be applied to a delegate.</span></span>|  
+|`catGenericParameter`|<span data-ttu-id="1bd74-121">Attribute can be applied to a generic parameter.</span><span class="sxs-lookup"><span data-stu-id="1bd74-121">Attribute can be applied to a generic parameter.</span></span>|  
+|`catAll`|<span data-ttu-id="1bd74-122">Attribute can be applied to any application element.</span><span class="sxs-lookup"><span data-stu-id="1bd74-122">Attribute can be applied to any application element.</span></span>|  
+|`catClassMembers`|<span data-ttu-id="1bd74-123">Attribute can be applied to a member of a class.</span><span class="sxs-lookup"><span data-stu-id="1bd74-123">Attribute can be applied to a member of a class.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b5716-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b5716-124">Remarks</span></span>  
- <span data-ttu-id="b5716-125">`CorAttributeTargets` Numaralandırma değerlerinin tercih edilen birleşimi almak için bit düzeyinde bir veya işlem ile birleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="b5716-125">The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1bd74-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1bd74-124">Remarks</span></span>  
+ <span data-ttu-id="1bd74-125">The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.</span><span class="sxs-lookup"><span data-stu-id="1bd74-125">The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.</span></span>  
   
- <span data-ttu-id="b5716-126">`CorAttributeTargets` Yönetilen parallels <xref:System.AttributeTargets?displayProperty=nameWithType> sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="b5716-126">The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.</span></span>  
+ <span data-ttu-id="1bd74-126">The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.</span><span class="sxs-lookup"><span data-stu-id="1bd74-126">The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b5716-127">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b5716-127">Requirements</span></span>  
- <span data-ttu-id="b5716-128">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b5716-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1bd74-127">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1bd74-127">Requirements</span></span>  
+ <span data-ttu-id="1bd74-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1bd74-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b5716-129">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="b5716-129">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="1bd74-129">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="1bd74-129">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="b5716-130">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5716-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1bd74-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1bd74-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b5716-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b5716-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1bd74-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1bd74-131">See also</span></span>
 
-- [<span data-ttu-id="b5716-132">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="b5716-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="1bd74-132">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="1bd74-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

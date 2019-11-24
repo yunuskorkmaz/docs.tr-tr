@@ -15,45 +15,43 @@ helpviewer_keywords:
 ms.assetid: 257d6076-06e0-4d93-bb33-651fbb2b92d7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 26c9c85f22f9d8201214dc56f32718e055a97801
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4c5b8f18424ba54d9e8e14ba0a518a89e0d54796
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779268"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439472"
 ---
-# <a name="icorprofilercallback3profilerattachcomplete-method"></a><span data-ttu-id="04279-102">ICorProfilerCallback3::ProfilerAttachComplete Yöntemi</span><span class="sxs-lookup"><span data-stu-id="04279-102">ICorProfilerCallback3::ProfilerAttachComplete Method</span></span>
-<span data-ttu-id="04279-103">Ortak dil çalışma zamanı tarafından profil oluşturucu artık çağırabilirsiniz belirtmek için (CLR) olarak adlandırılan [Icorprofilerınfo3::enumjıtedfunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md) ve [Icorprofilerınfo3::enummodules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md) yakalama yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="04279-103">Called by the common language runtime (CLR) to indicate that the profiler can now call the [ICorProfilerInfo3::EnumJITedFunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md) and [ICorProfilerInfo3::EnumModules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md) catch-up methods.</span></span>  
+# <a name="icorprofilercallback3profilerattachcomplete-method"></a><span data-ttu-id="a4587-102">ICorProfilerCallback3::ProfilerAttachComplete Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a4587-102">ICorProfilerCallback3::ProfilerAttachComplete Method</span></span>
+<span data-ttu-id="a4587-103">Called by the common language runtime (CLR) to indicate that the profiler can now call the [ICorProfilerInfo3::EnumJITedFunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md) and [ICorProfilerInfo3::EnumModules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md) catch-up methods.</span><span class="sxs-lookup"><span data-stu-id="a4587-103">Called by the common language runtime (CLR) to indicate that the profiler can now call the [ICorProfilerInfo3::EnumJITedFunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md) and [ICorProfilerInfo3::EnumModules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md) catch-up methods.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="04279-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="04279-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a4587-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a4587-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ProfilerAttachComplete ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="04279-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="04279-105">Remarks</span></span>  
- <span data-ttu-id="04279-106">`ProfilerAttachComplete` Geri çağırma sonra verildiği [Icorprofilercallback3::ınitializeforattach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) yöntemi çağrılır.</span><span class="sxs-lookup"><span data-stu-id="04279-106">The `ProfilerAttachComplete` callback is issued after the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method is called.</span></span> <span data-ttu-id="04279-107">Aşağıdaki gösterir:</span><span class="sxs-lookup"><span data-stu-id="04279-107">It indicates the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a4587-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a4587-105">Remarks</span></span>  
+ <span data-ttu-id="a4587-106">The `ProfilerAttachComplete` callback is issued after the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method is called.</span><span class="sxs-lookup"><span data-stu-id="a4587-106">The `ProfilerAttachComplete` callback is issued after the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method is called.</span></span> <span data-ttu-id="a4587-107">It indicates the following:</span><span class="sxs-lookup"><span data-stu-id="a4587-107">It indicates the following:</span></span>  
   
-- <span data-ttu-id="04279-108">Profil Oluşturucu tarafından talep edilen geri çağırmaları `InitializeForAttach` etkinleştirilmiş.</span><span class="sxs-lookup"><span data-stu-id="04279-108">The callbacks that were requested by the profiler in `InitializeForAttach` have been activated.</span></span>  
+- <span data-ttu-id="a4587-108">The callbacks that were requested by the profiler in `InitializeForAttach` have been activated.</span><span class="sxs-lookup"><span data-stu-id="a4587-108">The callbacks that were requested by the profiler in `InitializeForAttach` have been activated.</span></span>  
   
-- <span data-ttu-id="04279-109">Profil Oluşturucu olmaksızın ilişkili kimlikler eksik bildirimler hakkında endişe üzerinde yakalama artık gerçekleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="04279-109">The profiler can now perform catch-up on the associated IDs without being concerned about missing notifications.</span></span>  
+- <span data-ttu-id="a4587-109">The profiler can now perform catch-up on the associated IDs without being concerned about missing notifications.</span><span class="sxs-lookup"><span data-stu-id="a4587-109">The profiler can now perform catch-up on the associated IDs without being concerned about missing notifications.</span></span>  
   
- <span data-ttu-id="04279-110">CLR, bu geri dönüş değerini yoksayar.</span><span class="sxs-lookup"><span data-stu-id="04279-110">The CLR ignores the return value from this callback.</span></span>  
+ <span data-ttu-id="a4587-110">The CLR ignores the return value from this callback.</span><span class="sxs-lookup"><span data-stu-id="a4587-110">The CLR ignores the return value from this callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="04279-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="04279-111">Requirements</span></span>  
- <span data-ttu-id="04279-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="04279-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a4587-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a4587-111">Requirements</span></span>  
+ <span data-ttu-id="a4587-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a4587-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="04279-113">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="04279-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a4587-113">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a4587-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="04279-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="04279-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a4587-114">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a4587-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="04279-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="04279-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="a4587-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4587-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="04279-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="04279-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a4587-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a4587-116">See also</span></span>
 
-- [<span data-ttu-id="04279-117">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="04279-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="04279-118">ICorProfilerInfo3 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="04279-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="04279-119">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="04279-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="04279-120">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="04279-120">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="a4587-117">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a4587-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="a4587-118">ICorProfilerInfo3 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a4587-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="a4587-119">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="a4587-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="a4587-120">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="a4587-120">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

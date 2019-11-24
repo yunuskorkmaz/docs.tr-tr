@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: b9fb1c03-417f-41d4-aed4-02cb4ade8def
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4b7a4c8dfc9e082b29d462b835886d6bf252bb39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2fe4735b7f218e89577702cde04d8d4f4de2a971
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753672"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447361"
 ---
-# <a name="corprfgcrootkind-enumeration"></a><span data-ttu-id="e064e-102">COR_PRF_GC_ROOT_KIND Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="e064e-102">COR_PRF_GC_ROOT_KIND Enumeration</span></span>
-<span data-ttu-id="e064e-103">Çöp toplama tarafından sunulan bir kök türünü belirten [Icorprofilercallback2::rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="e064e-103">Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.</span></span>  
+# <a name="cor_prf_gc_root_kind-enumeration"></a><span data-ttu-id="944b3-102">COR_PRF_GC_ROOT_KIND Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="944b3-102">COR_PRF_GC_ROOT_KIND Enumeration</span></span>
+<span data-ttu-id="944b3-103">Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.</span><span class="sxs-lookup"><span data-stu-id="944b3-103">Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e064e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e064e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="944b3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="944b3-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -37,24 +35,24 @@ typedef enum {
 } COR_PRF_GC_ROOT_KIND;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e064e-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="e064e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="944b3-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="944b3-105">Members</span></span>  
   
-|<span data-ttu-id="e064e-106">Üye</span><span class="sxs-lookup"><span data-stu-id="e064e-106">Member</span></span>|<span data-ttu-id="e064e-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e064e-107">Description</span></span>|  
+|<span data-ttu-id="944b3-106">Üye</span><span class="sxs-lookup"><span data-stu-id="944b3-106">Member</span></span>|<span data-ttu-id="944b3-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="944b3-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_STACK`|<span data-ttu-id="e064e-108">Kök yığında bir değişkendir.</span><span class="sxs-lookup"><span data-stu-id="e064e-108">The root is a variable on the stack.</span></span>|  
-|`COR_PRF_GC_ROOT_FINALIZER`|<span data-ttu-id="e064e-109">Sonlandırıcı kuyruğunda bir girdi köküdür.</span><span class="sxs-lookup"><span data-stu-id="e064e-109">The root is an entry in the finalizer queue.</span></span>|  
-|`COR_PRF_GC_ROOT_HANDLE`|<span data-ttu-id="e064e-110">Bir çöp toplama tanıtıcı köküdür.</span><span class="sxs-lookup"><span data-stu-id="e064e-110">The root is a garbage collection handle.</span></span>|  
-|`COR_PRF_GC_ROOT_OTHER`|<span data-ttu-id="e064e-111">Kök türü belirtilmemiş.</span><span class="sxs-lookup"><span data-stu-id="e064e-111">The kind of root is unspecified.</span></span>|  
+|`COR_PRF_GC_ROOT_STACK`|<span data-ttu-id="944b3-108">The root is a variable on the stack.</span><span class="sxs-lookup"><span data-stu-id="944b3-108">The root is a variable on the stack.</span></span>|  
+|`COR_PRF_GC_ROOT_FINALIZER`|<span data-ttu-id="944b3-109">The root is an entry in the finalizer queue.</span><span class="sxs-lookup"><span data-stu-id="944b3-109">The root is an entry in the finalizer queue.</span></span>|  
+|`COR_PRF_GC_ROOT_HANDLE`|<span data-ttu-id="944b3-110">The root is a garbage collection handle.</span><span class="sxs-lookup"><span data-stu-id="944b3-110">The root is a garbage collection handle.</span></span>|  
+|`COR_PRF_GC_ROOT_OTHER`|<span data-ttu-id="944b3-111">The kind of root is unspecified.</span><span class="sxs-lookup"><span data-stu-id="944b3-111">The kind of root is unspecified.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e064e-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e064e-112">Requirements</span></span>  
- <span data-ttu-id="e064e-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e064e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="944b3-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="944b3-112">Requirements</span></span>  
+ <span data-ttu-id="944b3-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="944b3-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e064e-114">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e064e-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="944b3-114">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="944b3-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e064e-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e064e-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="944b3-115">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="944b3-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e064e-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e064e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="944b3-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="944b3-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e064e-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e064e-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="944b3-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="944b3-117">See also</span></span>
 
-- [<span data-ttu-id="e064e-118">Profil Oluşturma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="e064e-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="944b3-118">Profil Oluşturma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="944b3-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

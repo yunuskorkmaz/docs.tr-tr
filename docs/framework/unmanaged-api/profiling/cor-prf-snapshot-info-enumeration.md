@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: a5906b2a-ad4a-4cc6-a421-2d7d8adf7468
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c9a7d55b5a4867dcdc4e816bd3eac2cf29c68564
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ade4f7877e39a8307a36f3a3268f79e8b4d44fd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751982"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427276"
 ---
-# <a name="corprfsnapshotinfo-enumeration"></a><span data-ttu-id="d1bfe-102">COR_PRF_SNAPSHOT_INFO Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="d1bfe-102">COR_PRF_SNAPSHOT_INFO Enumeration</span></span>
-<span data-ttu-id="d1bfe-103">Ne kadar profil oluşturucunun her çağrıda bir yığın anlık görüntüsü ile geçirilecek veriler geri belirtir [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="d1bfe-103">Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.</span></span>  
+# <a name="cor_prf_snapshot_info-enumeration"></a><span data-ttu-id="981d9-102">COR_PRF_SNAPSHOT_INFO Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="981d9-102">COR_PRF_SNAPSHOT_INFO Enumeration</span></span>
+<span data-ttu-id="981d9-103">Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.</span><span class="sxs-lookup"><span data-stu-id="981d9-103">Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d1bfe-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d1bfe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="981d9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="981d9-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum _COR_PRF_SNAPSHOT_INFO {  
@@ -36,27 +34,27 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
 } COR_PRF_SNAPSHOT_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d1bfe-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="d1bfe-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="981d9-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="981d9-105">Members</span></span>  
   
-|<span data-ttu-id="d1bfe-106">Üyeler</span><span class="sxs-lookup"><span data-stu-id="d1bfe-106">Members</span></span>|<span data-ttu-id="d1bfe-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d1bfe-107">Description</span></span>|  
+|<span data-ttu-id="981d9-106">Üyeler</span><span class="sxs-lookup"><span data-stu-id="981d9-106">Members</span></span>|<span data-ttu-id="981d9-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="981d9-107">Description</span></span>|  
 |-------------|-----------------|  
-|`COR_PRF_SNAPSHOT_DEFAULT`|<span data-ttu-id="d1bfe-108">Değerleri tüm geçirilmesi gerektiğini belirten `StackSnapshotCallback` parametreleri dışında `context` parametresi.</span><span class="sxs-lookup"><span data-stu-id="d1bfe-108">Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.</span></span>|  
-|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|<span data-ttu-id="d1bfe-109">Değerleri tüm geçirilmesi gerektiğini belirten `StackSnapshotCallback` parametreleri de dahil olmak üzere, `context` parametresi.</span><span class="sxs-lookup"><span data-stu-id="d1bfe-109">Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.</span></span>|  
-|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|<span data-ttu-id="d1bfe-110">Bir daha basit, alternatif yığın walking algoritmasının kullanılması gerektiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="d1bfe-110">Indicates that a simpler, alternative stack-walking algorithm will be used.</span></span>|  
+|`COR_PRF_SNAPSHOT_DEFAULT`|<span data-ttu-id="981d9-108">Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.</span><span class="sxs-lookup"><span data-stu-id="981d9-108">Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.</span></span>|  
+|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|<span data-ttu-id="981d9-109">Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.</span><span class="sxs-lookup"><span data-stu-id="981d9-109">Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.</span></span>|  
+|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|<span data-ttu-id="981d9-110">Indicates that a simpler, alternative stack-walking algorithm will be used.</span><span class="sxs-lookup"><span data-stu-id="981d9-110">Indicates that a simpler, alternative stack-walking algorithm will be used.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d1bfe-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d1bfe-111">Remarks</span></span>  
- <span data-ttu-id="d1bfe-112">Tarafından sağlanan değerleri `COR_PRF_SNAPSHOT_INFO` numaralandırma için parametre olarak geçirilen [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="d1bfe-112">Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="981d9-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="981d9-111">Remarks</span></span>  
+ <span data-ttu-id="981d9-112">Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="981d9-112">Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d1bfe-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d1bfe-113">Requirements</span></span>  
- <span data-ttu-id="d1bfe-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d1bfe-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="981d9-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="981d9-113">Requirements</span></span>  
+ <span data-ttu-id="981d9-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="981d9-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d1bfe-115">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d1bfe-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="981d9-115">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="981d9-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d1bfe-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d1bfe-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="981d9-116">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="981d9-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d1bfe-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d1bfe-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="981d9-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="981d9-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d1bfe-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d1bfe-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="981d9-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="981d9-118">See also</span></span>
 
-- [<span data-ttu-id="d1bfe-119">DoStackSnapshot Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d1bfe-119">DoStackSnapshot Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
-- [<span data-ttu-id="d1bfe-120">Profil Oluşturma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="d1bfe-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="981d9-119">DoStackSnapshot Yöntemi</span><span class="sxs-lookup"><span data-stu-id="981d9-119">DoStackSnapshot Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
+- [<span data-ttu-id="981d9-120">Profil Oluşturma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="981d9-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

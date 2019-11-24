@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5ed4aa83-ce56-4b9f-9237-5da7587787fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d51f26e6d3fa2c37e1588d255f04578dce5bc24
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ad4494cf3a429020099b4bd9d961341437fcd1e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780296"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447781"
 ---
-# <a name="icorprofilerfunctionenumnext-method"></a><span data-ttu-id="174ef-102">ICorProfilerFunctionEnum::Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="174ef-102">ICorProfilerFunctionEnum::Next Method</span></span>
-<span data-ttu-id="174ef-103">Belirtilen bitişik işlev sayısı dizideki geçerli konum Numaralandırıcının başlayan İşlevler, sıralı bir koleksiyonunu alır.</span><span class="sxs-lookup"><span data-stu-id="174ef-103">Gets the specified number of contiguous functions from a sequential collection of functions, starting at the enumerator's current position in the sequence.</span></span>  
+# <a name="icorprofilerfunctionenumnext-method"></a><span data-ttu-id="3d893-102">ICorProfilerFunctionEnum::Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3d893-102">ICorProfilerFunctionEnum::Next Method</span></span>
+<span data-ttu-id="3d893-103">Gets the specified number of contiguous functions from a sequential collection of functions, starting at the enumerator's current position in the sequence.</span><span class="sxs-lookup"><span data-stu-id="3d893-103">Gets the specified number of contiguous functions from a sequential collection of functions, starting at the enumerator's current position in the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="174ef-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="174ef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3d893-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3d893-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next([in]  ULONG      celt,  
@@ -36,34 +34,34 @@ HRESULT Next([in]  ULONG      celt,
              [out] ULONG *   pceltFetched);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="174ef-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="174ef-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3d893-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3d893-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="174ef-106">[in] Alınacak işlev sayısı.</span><span class="sxs-lookup"><span data-stu-id="174ef-106">[in] The number of functions to retrieve.</span></span>  
+ <span data-ttu-id="3d893-106">[in] The number of functions to retrieve.</span><span class="sxs-lookup"><span data-stu-id="3d893-106">[in] The number of functions to retrieve.</span></span>  
   
  `ids`  
- <span data-ttu-id="174ef-107">[out] Bir dizi `COR_PRF_FUNCTION` değerler, her biri alınan bir işlevi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="174ef-107">[out] An array of `COR_PRF_FUNCTION` values, each of which represents a retrieved function.</span></span>  
+ <span data-ttu-id="3d893-107">[out] An array of `COR_PRF_FUNCTION` values, each of which represents a retrieved function.</span><span class="sxs-lookup"><span data-stu-id="3d893-107">[out] An array of `COR_PRF_FUNCTION` values, each of which represents a retrieved function.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="174ef-108">[out] Gerçekte döndürülen işlev sayısı için bir işaretçi `ids` dizisi.</span><span class="sxs-lookup"><span data-stu-id="174ef-108">[out] A pointer to the number of functions actually returned in the `ids` array.</span></span>  
+ <span data-ttu-id="3d893-108">[out] A pointer to the number of functions actually returned in the `ids` array.</span><span class="sxs-lookup"><span data-stu-id="3d893-108">[out] A pointer to the number of functions actually returned in the `ids` array.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="174ef-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="174ef-109">Return Value</span></span>  
- <span data-ttu-id="174ef-110">Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.</span><span class="sxs-lookup"><span data-stu-id="174ef-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3d893-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="3d893-109">Return Value</span></span>  
+ <span data-ttu-id="3d893-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span><span class="sxs-lookup"><span data-stu-id="3d893-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="174ef-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="174ef-111">HRESULT</span></span>|<span data-ttu-id="174ef-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="174ef-112">Description</span></span>|  
+|<span data-ttu-id="3d893-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3d893-111">HRESULT</span></span>|<span data-ttu-id="3d893-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3d893-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="174ef-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="174ef-113">S_OK</span></span>|<span data-ttu-id="174ef-114">`celt` öğeleri döndürülmedi.</span><span class="sxs-lookup"><span data-stu-id="174ef-114">`celt` elements were returned.</span></span>|  
-|<span data-ttu-id="174ef-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="174ef-115">S_FALSE</span></span>|<span data-ttu-id="174ef-116">Az `celt` öğeleri döndürüldü, numaralandırma tamamlandığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="174ef-116">Fewer than `celt` elements were returned, which indicates that the enumeration is complete.</span></span>|  
+|<span data-ttu-id="3d893-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="3d893-113">S_OK</span></span>|<span data-ttu-id="3d893-114">`celt` elements were returned.</span><span class="sxs-lookup"><span data-stu-id="3d893-114">`celt` elements were returned.</span></span>|  
+|<span data-ttu-id="3d893-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="3d893-115">S_FALSE</span></span>|<span data-ttu-id="3d893-116">Fewer than `celt` elements were returned, which indicates that the enumeration is complete.</span><span class="sxs-lookup"><span data-stu-id="3d893-116">Fewer than `celt` elements were returned, which indicates that the enumeration is complete.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="174ef-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="174ef-117">Requirements</span></span>  
- <span data-ttu-id="174ef-118">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="174ef-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3d893-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3d893-117">Requirements</span></span>  
+ <span data-ttu-id="3d893-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3d893-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="174ef-119">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="174ef-119">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="3d893-119">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3d893-119">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="174ef-120">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="174ef-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3d893-120">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3d893-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="174ef-121">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="174ef-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="3d893-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d893-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="174ef-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="174ef-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3d893-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3d893-122">See also</span></span>
 
-- [<span data-ttu-id="174ef-123">ICorProfilerFunctionEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="174ef-123">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [<span data-ttu-id="174ef-124">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="174ef-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="3d893-123">ICorProfilerFunctionEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3d893-123">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [<span data-ttu-id="3d893-124">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="3d893-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
