@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ed4aa83-ce56-4b9f-9237-5da7587787fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d51f26e6d3fa2c37e1588d255f04578dce5bc24
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ad4494cf3a429020099b4bd9d961341437fcd1e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780296"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447781"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>ICorProfilerFunctionEnum::Next Yöntemi
-Belirtilen bitişik işlev sayısı dizideki geçerli konum Numaralandırıcının başlayan İşlevler, sıralı bir koleksiyonunu alır.  
+Gets the specified number of contiguous functions from a sequential collection of functions, starting at the enumerator's current position in the sequence.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,30 +36,30 @@ HRESULT Next([in]  ULONG      celt,
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Alınacak işlev sayısı.  
+ [in] The number of functions to retrieve.  
   
  `ids`  
- [out] Bir dizi `COR_PRF_FUNCTION` değerler, her biri alınan bir işlevi temsil eder.  
+ [out] An array of `COR_PRF_FUNCTION` values, each of which represents a retrieved function.  
   
  `pceltFetched`  
- [out] Gerçekte döndürülen işlev sayısı için bir işaretçi `ids` dizisi.  
+ [out] A pointer to the number of functions actually returned in the `ids` array.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
+ This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`celt` öğeleri döndürülmedi.|  
-|S_FALSE|Az `celt` öğeleri döndürüldü, numaralandırma tamamlandığını gösterir.|  
+|S_OK|`celt` elements were returned.|  
+|S_FALSE|Fewer than `celt` elements were returned, which indicates that the enumeration is complete.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

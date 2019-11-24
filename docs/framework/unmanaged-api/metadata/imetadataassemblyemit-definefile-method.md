@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 54d5a233da2bf033d960fd02961ac89eb57151d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b7ca6f9878ed2fa2d90ea93e5101f0a66ec2d5e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776290"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440211"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile Yöntemi
-Oluşturur bir `File` derleme bu derlemesi tarafından başvurulan ve ilişkili meta veri belirteci döndürür meta verilerini içeren meta veri yapısı.  
+Creates a `File` metadata structure containing metadata for assembly referenced by this assembly, and returns the associated metadata token.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,31 +39,31 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- [in] Kullanılacak dosya adı.  
+ [in] The name of the file to be consumed.  
   
  `pbHashValue`  
- [in] Bütünleştirilmiş kod ile ilişkili veri karması için bir işaretçi.  
+ [in] A pointer to the hash data associated with the assembly.  
   
  `cbHashValue`  
- [in] Bayt cinsinden boyutu `pbHashValue`.  
+ [in] The size in bytes of `pbHashValue`.  
   
  `dwFileFlags`  
- [in] Bitsel bir birleşimi `FileFlags` özellik ayarlarını belirten değerleri.  
+ [in] A bitwise combination of `FileFlags` values that specify property settings.  
   
  `pmdf`  
- [out] Döndürülen işaretçi `File` belirteci.  
+ [out] A pointer to the returned `File` token.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir `File` meta veri yapısı, meta veriler içeren dosya hariç olmak üzere bu bütünleştirilmiş kod oluşturulmuş zaman bu derlemenin parçası olan her bir dosya için tanımlanmalıdır.  
+ One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

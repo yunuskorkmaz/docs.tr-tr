@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04d569d6-a151-4957-9872-f3f694c3e4a9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a54d3cb1bb9abf740c2c9b5a9a8312a9612ae658
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 12475b1ac8a1a81e565aa689eac2ae1a9b55e73a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894461"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438279"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 Yöntemi
-Tek bir genel değişkeni tanımlar.  
+Defines a single global variable.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,31 +40,31 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>Parametreler  
  `name`  
- 'ndaki Genel değişken adı.  
+ [in] The global variable name.  
   
  `attributes`  
- 'ndaki Genel değişken öznitelikleri.  
+ [in] The global variable attributes.  
   
  `sigToken`  
- 'ndaki İmzanın meta veri belirteci.  
+ [in] The metadata token of the signature.  
   
  `addrKind`  
- 'ndaki Adres türü.  
+ [in] The address type.  
   
  `addr1`  
- 'ndaki Parametre belirtiminin ilk adresi.  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- 'ndaki Parametre belirtiminin ikinci adresi.  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- 'ndaki Parametre belirtiminin üçüncü adresi.  
+ [in] The third address for the parameter specification.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAıL veya diğer bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi** Corsya. IDL  
+ **Header:** CorSym.idl  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

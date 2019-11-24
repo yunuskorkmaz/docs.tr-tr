@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 781ed736-f30c-4816-920e-3552e36542c6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f4ad89c821e9b8e9b52e3369a347eae27ab2231
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eb4d5e1c4efd67914df95868b67ec5cc3fe6139a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748677"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444825"
 ---
 # <a name="icorprofilerinfo4requestrejit-method"></a>ICorProfilerInfo4::RequestReJIT Yöntemi
-Belirtilen işlevler tüm örneklerinin bir JIT yeniden derlemesi ister.  
+Requests a JIT recompilation of all instances of the specified functions.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,39 +36,39 @@ HRESULT RequestReJIT (
   
 ## <a name="parameters"></a>Parametreler  
  `cFunctions`  
- [in] Yeniden derlemek için işlev sayısı.  
+ [in] The number of functions to recompile.  
   
  `moduleIds`  
- [in] Belirtir `moduleId` kısmı (`module`, `methodDef`) derlenmesi için işlevleri tanımlamak çiftleri.  
+ [in] Specifies the `moduleId` portion of the (`module`, `methodDef`) pairs that identify the functions to be recompiled.  
   
  `methodIds`  
- [in] Belirtir `methodId` kısmı (`module`, `methodDef`) derlenmesi için işlevleri tanımlamak çiftleri.  
+ [in] Specifies the `methodId` portion of the (`module`, `methodDef`) pairs that identify the functions to be recompiled.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
+ This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|JIT yeniden derlemesi için tüm yöntemlerini işaretlemek için girişimde bulunuldu. Profil Oluşturucu uygulamalıdır [Icorprofilercallback4::rejıterror](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejiterror-method.md) hangi yöntemlerin JIT yeniden derlenmek üzere başarıyla işaretlenen belirlemek için yöntemi.|  
-|CORPROF_E_CALLBACK4_REQUIRED|Profil Oluşturucu uygulamalıdır [Icorprofilercallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) desteklenmesi, bu çağrı için arabirim.|  
-|CORPROF_E_REJIT_NOT_ENABLED|JIT yeniden derlemesi etkin değil. Başlatma sırasında JIT yeniden derlemesi kullanarak etkinleştirmelisiniz [Icorprofilerınfo::seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) ayarlanacak yöntemi `COR_PRF_ENABLE_REJIT` bayrağı.|  
-|E_INVALIDARG|`cFunctions` 0 ' dır veya `moduleIds` veya `methodIds` olduğu `NULL`.|  
+|S_OK|An attempt was made to mark all the methods for JIT recompilation. The profiler must implement the [ICorProfilerCallback4::ReJITError](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejiterror-method.md) method to determine which methods were successfully marked for JIT recompilation.|  
+|CORPROF_E_CALLBACK4_REQUIRED|The profiler must implement the [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface for this call to be supported.|  
+|CORPROF_E_REJIT_NOT_ENABLED|JIT recompilation has not been enabled. You must enable JIT recompilation during initialization by using the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the `COR_PRF_ENABLE_REJIT` flag.|  
+|E_INVALIDARG|`cFunctions` is 0, or `moduleIds` or `methodIds` is `NULL`.|  
 |||  
-|E_OUTOFMEMORY|CLR, belleği tükendiğinden, isteği tamamlayamadı.|  
+|E_OUTOFMEMORY|The CLR was unable to complete the request because it ran out of memory.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çağrı `RequestReJIT` belirtilen bir işlevler kümesi derlemeniz çalışma zamanı sağlamak için. Bir kod profil oluşturucu ardından kullanabilirsiniz [Icorprofilerfunctioncontrol](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) işlevleri derlenir, oluşturulan kodu ayarlamak için arabirim. Bu, şu anda yürütülen İşlevler, yalnızca gelecekteki işlev çağrılarını etkilemez. JIT yeniden derlenen belirtilen işlevlerden herhangi birinin daha önce, öyle isteme geri alma ve işlevi yeniden derlemeden eşdeğerdir. Reversibility, JIT Derleyici bir işlevi orijinal sürümünü derlediğinde korumak için yalnızca özgün sürümlerini kendi çağrılanlar inlining'i kararları için değerlendirir. JIT Derleyici bir işlevi yeniden derlenir, geçerli sürümleri (znovu veya özgün) için kendi çağrılanlar düşünür. satır içi kullanım.  
+ Call `RequestReJIT` to have the runtime recompile a specified set of functions. A code profiler can then use the [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface to adjust the code that is generated when the functions are recompiled. This does not affect currently executing functions, only future function invocations. If any of the specified functions has previously been JIT-recompiled, requesting a recompilation is equivalent to reverting and recompiling the function. To preserve reversibility, when the JIT compiler compiles the original version of a function, it considers only the original versions of its callees for inlining decisions. When the JIT compiler recompiles a function, it considers the current versions (recompiled or original) of its callees for inlining.  
   
- Bir profil oluşturucu genellikle çağrıları `RequestReJIT` profil oluşturucu yöntemleri bir veya daha fazla izleme isteyen kullanıcı girişine yanıt. `RequestReJIT` genellikle bazı iş yapın ve büyük olasılıkla tetikleyici bir çöp toplama için için çalışma zamanı askıya alır. Bu nedenle, profil oluşturucu çağırmalıdır `RequestReJIT` bir iş parçacığından, daha önce oluşturduğunuz ve bir CLR tarafından oluşturulan iş parçacığından, şu anda bir profil oluşturucu geri çağırma yürütülmüyor.  
+ A profiler typically calls `RequestReJIT` in response to user input requesting that the profiler instrument one or more methods. `RequestReJIT` typically suspends the runtime in order to do some of its work, and can potentially trigger a garbage collection. As such, the profiler should call `RequestReJIT` from a thread it previously created, and not from a CLR-created thread that is currently executing a profiler callback.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

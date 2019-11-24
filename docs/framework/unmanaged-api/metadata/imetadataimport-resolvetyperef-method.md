@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 556bccfb-61bc-4761-b1d5-de4b1c18a38f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f323e91e60c9735a51e955eaab6673ca167f294d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 800b15bb75e74898cee9d838900ea14b60620940
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951874"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431477"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef Yöntemi
-Belirtilen TypeRef <xref:System.Type> belirteci ile temsil edilen bir başvuruyu çözümler.  
+Resolves a <xref:System.Type> reference represented by the specified TypeRef token.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,34 +38,34 @@ HRESULT ResolveTypeRef (
   
 ## <a name="parameters"></a>Parametreler  
  `tr`  
- 'ndaki İçin başvurulan tür bilgilerini döndürecek olan TypeRef meta veri belirteci.  
+ [in] The TypeRef metadata token to return the referenced type information for.  
   
  `riid`  
- 'ndaki Döndürülecek arabirimin IID 'si `ppIScope`. Genellikle bu IID_IMetaDataImport olacaktır.  
+ [in] The IID of the interface to return in `ppIScope`. Typically, this would be IID_IMetaDataImport.  
   
  `ppIScope`  
- dışı Başvurulan türün tanımlandığı modül kapsamına yönelik arabirim.  
+ [out] An interface to the module scope in which the referenced type is defined.  
   
  `ptd`  
- dışı Başvurulan türü temsil eden bir TypeDef belirtecinin işaretçisi.  
+ [out] A pointer to a TypeDef token that represents the referenced type.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!IMPORTANT]
-> Birden çok uygulama etki alanı yüklenmişse bu yöntemi kullanmayın. Yöntem, uygulama etki alanı sınırlarına uymaz. Bir derlemenin birden çok sürümü yüklüyse ve aynı ad alanıyla aynı türü içeriyorsa, yöntemi bulduğu ilk türün modül kapsamını döndürür.  
+> Do not use this method if multiple application domains are loaded. The method does not respect application domain boundaries. If multiple versions of an assembly are loaded, and they contain the same type with the same namespace, the method returns the module scope of the first type it finds.  
   
- Yöntemi `ResolveTypeRef` , diğer modüllerde tür tanımını arar. Tür tanımı bulunursa, `ResolveTypeRef` bu modül kapsamına ve tür için typedef belirtecine bir arabirim döndürür.  
+ The `ResolveTypeRef` method searches for the type definition in other modules. If the type definition is found, `ResolveTypeRef` returns an interface to that module scope as well as the TypeDef token for the type.  
   
- Çözümlenecek tür başvurusunun, AssemblyRef 'nin bir çözüm kapsamı varsa, `ResolveTypeRef` yöntemi yalnızca [ımetadatadağıtıcı:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) metoduna veya [' ye yapılan çağrılarla zaten açılmış olan meta veri kapsamları içinde bir eşleşme arar. Imetadatadağıtıcı:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) yöntemi. Bunun nedeni `ResolveTypeRef` , yalnızca diskte veya derlemenin depolandığı genel derleme önbelleğinde bulunan AssemblyRef kapsamından saptanamıyor.  
+ If the type reference to be resolved has a resolution scope of AssemblyRef, the `ResolveTypeRef` method searches for a match only in the metadata scopes that have already been opened with calls to either the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method or the [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method. This is because `ResolveTypeRef` cannot determine from only the AssemblyRef scope where on disk or in the global assembly cache the assembly is stored.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** Cor. h  
+ **Header:** Cor.h  
   
- **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

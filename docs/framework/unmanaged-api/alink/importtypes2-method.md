@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 32f3ba58-9695-41e9-ba58-fd19e45ed396
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ce09eca30e1edb9e1afc02216a07955a5fed4fd2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8dae903ab76ab83ac0818c4bc4a76e81094bdf65
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787260"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445670"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 Yöntemi
-Türlerin içeri aktarımını başlatır. [ImportFile yöntemi](importfile-method.md)aracılığıyla içeri aktarılan her kapsamdan türleri içeri aktarmaya başlamak için bu yöntemi çağırın.  
+Initiates the import of types. Call this method to begin importing types from each scope imported via [ImportFile Method](importfile-method.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,28 +39,28 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- İçeri aktarılacak derleme KIMLIĞI.  
+ ID of assembly into which to import.  
   
  `FileToken`  
- İçinden içeri aktarılacak dosyanın KIMLIĞI.  
+ ID of file to from which to import.  
   
  `dwScope`  
- İçinden içeri aktarılacak sıfır tabanlı kapsam.  
+ Zero-based scope from which to import.  
   
  `phEnum`  
- Verilen kapsamdaki türler için numaralandırıcı tanıtıcısını alır.  
+ Receives enumerator handle for the types in the given scope.  
   
  `ppImportScope`  
- İsteğe bağlı olarak [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) arabirimini alır.  
+ Optionally receives [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface.  
   
  `pdwCountOfTypes`  
- İsteğe bağlı olarak, belirtilen kapsamdaki türlerin sayısını alır.  
+ Optionally receives count of types in the specified scope.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

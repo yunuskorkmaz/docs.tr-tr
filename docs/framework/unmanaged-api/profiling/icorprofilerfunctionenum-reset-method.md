@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 80046b2e-55b7-40a2-9adf-cf2763ee59c8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 98809ff5424e1da468e70d34cbb9214c1d3248f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fd3a848e5c9ac04f7c52db8d6c70e3028fe8ead6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780301"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447775"
 ---
 # <a name="icorprofilerfunctionenumreset-method"></a>ICorProfilerFunctionEnum::Reset Yöntemi
-Numaralandırıcının imleç dizisi başlangıç konumuna gider.  
+Moves the enumerator's cursor to the starting position of the sequence.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,13 +32,13 @@ HRESULT Reset();
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

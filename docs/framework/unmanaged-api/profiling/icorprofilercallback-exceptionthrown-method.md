@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: f1a23f3b-ac21-4905-8abf-8ea59f15af53
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 01e407b726ce4426f3b58bc29854b30bd6add257
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4ecbe0ef3c3021c5633b9380da2eb31cf22aa4b1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953870"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445331"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>ICorProfilerCallback::ExceptionThrown Yöntemi
-Profiler öğesine bir özel durum gerçekleştiğini bildirir.  
+Notifies the profiler that an exception has been thrown.  
   
 > [!NOTE]
-> Bu işlev yalnızca özel durum yönetilen koda ulaşırsa çağrılır.  
+> This function is called only if the exception reaches managed code.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,21 +37,21 @@ HRESULT ExceptionThrown(
   
 ## <a name="parameters"></a>Parametreler  
  `thrownObjectId`  
- 'ndaki Özel duruma neden olan nesnenin KIMLIĞI.  
+ [in] The ID of the object that caused the exception to be thrown.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yığın atık toplamaya izin veren bir durumda olmadığından profil oluşturucu bu yöntemin uygulamasında engellenmemelidir, bu nedenle preemptive çöp toplama etkinleştirilemez. Profil Oluşturucu burada ve çöp toplama denendiğinde, bu geri arama dönene kadar çalışma zamanı engellenir.  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- Profil oluşturucunun bu yöntemin uygulanması yönetilen koda veya herhangi bir şekilde bir yönetilen bellek ayırmaya yol açmaz.  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorProf. IDL, CorProf. h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı** Corguid. lib  
+ **Library:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: 'ICorProfilerInfo9:: Getnativecodestartaadresler'
+title: ICorProfilerInfo9::GetNativeCodeStartAddresses
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 80571933bc8d91c074dbee62aad50cece6277d51
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7593e8873c2714df85146903c0052a9909a95ccd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69665503"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444721"
 ---
-# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: Getnativecodestartaadresler yöntemi
+# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9::GetNativeCodeStartAddresses Method
 
-Bir FunctionID ve ReJITID verildiğinde, bu kodun Şu anda var olan tüm jıderlenen sürümlerinin yerel kod başlangıç adresini numaralandırır.
+Given a functionId and rejitId, enumerates the native code start address of all jitted versions of this code that currently exist.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,34 +35,34 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 #### <a name="parameters"></a>Parametreler
 
 `functionId` \
-'ndaki Yerel kod başlatma adresleri döndürülecek olan işlevin KIMLIĞI.
+[in] The ID of the function whose native code start addresses should be returned.
 
 `reJitId` \
-'ndaki JıT-yeniden derleme işlevinin kimliği.
+[in] The identity of the JIT-recompiled function.
 
 `cCodeStartAddresses` \
-'ndaki `codeStartAddresses` Dizinin en büyük boyutu.
+[in] The maximum size of the `codeStartAddresses` array.
 
 `pcCodeStartAddresses` \
-dışı Kullanılabilir adreslerin sayısı.
+[out] The number of available addresses.
 
 `codeStartAddresses` \
-dışı Her birinin `UINT_PTR`, belirtilen işlev için yerel gövde başlangıç adresi olan dizisi.
+[out] An array of `UINT_PTR`, each one of which is the start address for a native body for the specified function.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Katmanlı derleme etkinleştirildiğinde, bir işlevde birden fazla yerel kod gövdesi olabilir.
+When tiered compilation is enabled, a function may have more than one native code body.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Üst bilgi** CorProf. IDL, CorProf. h
+**Header:** CorProf.idl, CorProf.h
 
-**Kitaplığı** Corguid. lib
+**Library:** CorGuids.lib
 
-**.NET sürümleri:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo9 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

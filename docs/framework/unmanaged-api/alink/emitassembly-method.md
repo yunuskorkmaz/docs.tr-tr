@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 605ff39e-e5cc-4bff-8196-e8d68a9715b9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a2adf53d1e29fda077cdcf7b79891f6271993109
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6bbe5db75ded15f32a6ff3564e1116d40a745a65
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787585"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446527"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly Yöntemi
-Derlemeyi oluşturur. Derleme dosyası hariç diğer tüm dosyalar kapatıldıktan sonra bu yöntemi çağırın. İlişkisiz modüller üretilirken bu yöntemi çağırmayın.  
+Creates the assembly. Call this method after all other files are closed except for the assembly file. Do not call this method when producing unbound modules.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,13 +35,13 @@ HRESULT EmitAssembly(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Derlemenin KIMLIĞI.  
+ ID of the assembly.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

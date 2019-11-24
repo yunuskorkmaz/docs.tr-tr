@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1d0b15c9-8059-435f-9fce-346a08b9bd36
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4b99825a210a7a0f1253a01485a61bdbfeacf160
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 25a8188e3ab62c095355b72b3e63e767a6768114
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751293"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446359"
 ---
 # <a name="isymunmanagedscopegetendoffset-method"></a>ISymUnmanagedScope::GetEndOffset Metodu
-Bu kapsam için bitiş uzaklığı alır.  
+Gets the end offset for this scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,13 +34,13 @@ HRESULT GetEndOffset(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bir işaretçi bir `ULONG32` , bitiş uzaklığı alır.  
+ [out] A pointer to a `ULONG32` that receives the end offset.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -157,21 +157,21 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-ms.openlocfilehash: 5d75f60cb96ddb7bd9e24a7cdc4b8d2b61aff8f4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e99bdd106c845964f63915c87617e30eb51488f4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104185"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447306"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe Hata İletileri
-Derleme işlemi [WinMDExp. exe ' yi (Windows çalışma zamanı meta veri dışa aktarma aracı](winmdexp-exe-windows-runtime-metadata-export-tool.md) 2012 **Windows çalışma zamanı** ) çağırır. bu nedenle, WinMDExp. exe hata iletileri **hata listesi**görüntülenir. WinMDExp. exe `/target:winmdobj` seçeneği ile derlenen bir modül üzerinde çalışır. Giriş olarak derlenmiş bir modül gerektirdiğinden, derleme başarılı olmadığı sürece hata iletileri görünmez.  
+The build process calls [Winmdexp.exe (Windows Runtime Metadata Export Tool)](winmdexp-exe-windows-runtime-metadata-export-tool.md) when you use the **Windows Runtime Component** template in Visual Studio 2012, so Winmdexp.exe error messages appear in the **Error List**. Winmdexp.exe operates on a module that is compiled with the `/target:winmdobj` option. Because it requires a compiled module as input, its error messages don't appear unless compilation succeeds.  
   
- Hata iletileri, raportıkları hata koşullarına yönelik olarak gereken tüm bilgileri içerecek şekilde tasarlanmıştır. Ancak, bazı sorunlar iletiye sığmayacak kadar daha fazla bilgi gerektirir. Windows Geliştirme Merkezi 'nde [Windows çalışma zamanı bileşeni hata koşullarını tanılamada](https://go.microsoft.com/fwlink/p/?LinkId=251127) ek bilgiler bulabilirsiniz.  
+ The error messages are designed to contain all the information you need to address the error conditions they report. However, some problems require more information than will fit in the message. You can find additional information in [Diagnosing Windows Runtime component error conditions](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110)).  
   
- Sorununuz bu makalede ele alınmazsa ve iletinin sorunu gidermek için yeterli bilgi içermediğini düşünüyorsanız, lütfen bu makaledeki geri bildirim bağlantısını kullanın ve hata iletisini ekleyin. Alternatif olarak, [Microsoft Connect Web sitesinde](https://go.microsoft.com/fwlink/p/?LinkId=251130)bir hata da oluşturabilirsiniz. [Microsoft forumları](https://go.microsoft.com/fwlink/p/?LinkId=251129)hakkında daha fazla bilgi için de arama yapabilirsiniz.  
+ If your error is not discussed in that article, and you feel that the message doesn't contain sufficient information to address the issue, please use the feedback link in that article and include the error message. Alternatively, you can file a bug at the [Developer Community website](https://developercommunity.visualstudio.com/). You can also look for more information on the [Microsoft Forums](https://social.msdn.microsoft.com/Forums/).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
-- [Windows Çalışma Zamanı bileşeni hata koşullarını tanılama](https://go.microsoft.com/fwlink/p/?LinkId=251127)
+- [Diagnosing Windows Runtime component error conditions](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))

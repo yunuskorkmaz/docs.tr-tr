@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7580d546-a709-40c5-ad02-aa70d774fd0b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 46c608a644619c28709de135d7c062175b012d80
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4009f8988c90ed090c0cc3d86164af347055722f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777385"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446427"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap Metodu
-Özel bir öznitelik adı üzerinde temel alır. Meta veri özel öznitelikleri farklı olarak bu öznitelikler sembol deposundaki tutulur.  
+Gets a custom attribute based upon its name. Unlike metadata custom attributes, these attributes are held in the symbol store.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,25 +39,25 @@ HRESULT GetSymAttributePreRemap(
   
 ## <a name="parameters"></a>Parametreler  
  `parent`  
- [in] Ana meta veri belirteci.  
+ [in] The metadata token of the parent.  
   
  `name`  
- [in] Bir işaretçi bir `WCHAR` , adı içeriyor.  
+ [in] A pointer to a `WCHAR` that contains the name.  
   
  `cBuffer`  
- [in] A `ULONG32` boyutunu gösteren `buffer` dizisi.  
+ [in] A `ULONG32` that indicates the size of the `buffer` array.  
   
  `pcBuffer`  
- [out] Bir işaretçi bir `ULONG32` içeren öznitelik bayt için gerekli arabellek boyutunu alır.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the attribute bytes.  
   
  `buffer`  
- [out] Öznitelik bayt alan arabellek için işaretçi.  
+ [out] A pointer to the buffer that receives the attribute bytes.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,28 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - IALink3 interface
 ms.assetid: a96bf3cc-75a0-49c9-bf5e-4d7ad5dab716
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c4989fd403e78558b415ba29e31e6a3a4e5bbe59
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b9d727348f9706ad0b2127feab466df299ec2314
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787288"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441798"
 ---
 # <a name="ialink3-interface"></a>IALink3 Arabirimi
-Bağlayıcının bir derleme oluşturduğunda kullanacağı `SetManifestFile`bildirim dosyasını belirtmenize veya sıfırlamanıza olanak sağlayan tek bir yöntem sağlar.  
+Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [SetManifestFile Yöntemi](setmanifestfile-method.md)  
- Bağlayıcının derlemeyi oluşturduğunda kullanacağı bildirim dosyasını belirtmenize veya sıfırlamanıza olanak sağlar.  
+ Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [ALink API](index.md)  
- .NET Framework derlemeleri ve ilişkisiz modülleri oluşturmayı destekler.  
+ Supports creating .NET Framework assemblies and unbound modules.  
   
  [IALink Arabirimi](ialink-interface.md)  
- .NET Framework derlemeleri oluşturulmasına yardımcı olur.  
+ Helps in constructing .NET Framework assemblies.  
   
  [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../tools/al-exe-assembly-linker.md)  
- Modüller ya da kaynak dosyaları olan bir veya daha fazla dosyadan derleme bildirimine sahip bir dosya oluşturur.
+ Generates a file that has an assembly manifest from one or more files that are either modules or resource files.

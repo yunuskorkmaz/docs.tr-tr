@@ -14,80 +14,78 @@ helpviewer_keywords:
 ms.assetid: 3b48fd47-7397-4e2c-8bec-8157aa08978c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 10942541b781d367820301588656b2f1fc2fd006
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4ae599a0e5cdb604fd9a610728671b39c67af31
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043829"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440891"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit Arabirimi
-Oluşturabilir, değiştirebilir ve şu anda tanımlanmış kapsamda derleme hakkındaki meta verileri kaydetmek için yöntemler sağlar. Meta veriler, bellekte veya diske kaydedilmiş.  
+Provides methods to create, modify, and save metadata about the assembly in the currently defined scope. The metadata can be stored in memory or saved to disk.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ApplyEditAndContinue Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md)|Geçerli derleme kapsamı içinde belirtilen yapılan değişiklikleri güncelleştirir `pImport`.|  
-|[DefineCustomAttribute Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)|Belirtilen nesneyi, eklenecek belirtilen meta veri imzası ile özel bir öznitelik için bir tanım oluşturur ve bu özel öznitelik tanımı için bir belirteç alır.|  
-|[DefineEvent Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)|Belirtilen meta verileri imza ile bir olay için bir tanım oluşturur ve bu olay tanımı için bir belirteç alır.|  
-|[DefineField Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definefield-method.md)|Belirtilen meta verileri imza ile bir alan için bir tanım oluşturur ve bu alan tanımı için bir belirteç alır.|  
-|[DefineImportMember Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md)|Geçerli kapsamı dışında bir modülde tanımlandı ve bu başvuru tanımı için bir belirteç alır bir tür üyesi için bir tanım oluşturur.|  
-|[DefineImportType Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)|Geçerli kapsamı dışında bir modülde tanımlandı ve bu başvuru tanımına bir belirteç alır bir tür başvuru için bir tanım oluşturur.|  
-|[DefineMemberRef Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)|Geçerli kapsam dışında bir modülün bir üyesine bir başvuru için bir tanım oluşturur ve bu başvuru tanımına bir belirteç alır.|  
-|[DefineMethod Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)|Belirtilen imzayla bir yöntem için bir tanım oluşturur ve bu yöntem tanımını bir belirteç döndürür.|  
-|[DefineMethodImpl Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethodimpl-method.md)|Bir arabirimden devralınan bir yöntemi uygulaması için bir tanım oluşturur ve bu yöntem uygulaması tanımı için bir belirteç döndürür.|  
-|[DefineModuleRef Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)|Belirtilen ada sahip bir modül meta veri imzası oluşturur.|  
-|[DefineNestedType Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definenestedtype-method.md)|Meta veri imzası bir tür tanımı oluşturur ve döndürür bir `mdTypeDef` türüne ek olarak tanımlanan bir tür tarafından başvurulan tür üyesi olduğunu belirten, belirteç `tdEncloser`.|  
-|[DefineParam Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md)|Belirtilen belirteç tarafından başvurulan yöntemi için belirtilen imzaya sahip bir parametre tanımında oluşturur ve bu parametre tanımı için bir belirteç alır.|  
-|[DefinePermissionSet Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md)|Bir izin kümesi ile belirtilen meta veri imzası için bir tanım oluşturur ve bu izin kümesi tanımı için bir belirteç alır.|  
-|[DefinePinvokeMap Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)|Belirtilen belirteç tarafından başvurulan PInvoke imzası özelliklerini ayarlar.|  
-|[DefineProperty Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)|Belirtilen tür için bir özellik tanımı belirtilen oluşturur `get` ve `set` yöntemi erişimcileri ve bu özellik tanımı için bir belirteç alır.|  
-|[DefineSecurityAttributeSet Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definesecurityattributeset-method.md)|Belirtilen belirteç tarafından başvurulan nesne iliştirmek için güvenlik izinleri kümesi oluşturur.|  
-|[DefineTypeDef Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)|Ortak dil çalışma zamanı tür için bir tür tanımı oluşturur ve bu tür tanımı için bir meta veri belirteci alır.|  
-|[DefineTypeRefByName Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md)|Bir meta veri geçerli kapsamı dışında başka bir modül içinde tanımlanan bir tür için belirteç alır.|  
-|[DefineUserString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md)|Bir meta veri için belirtilen değişmez değer dize belirteci alır.|  
-|[DeleteClassLayout Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-deleteclasslayout-method.md)|Belirtilen belirteç tarafından başvurulan türü için sınıf Düzen meta veri imzası yok eder.|  
-|[DeleteFieldMarshal Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-deletefieldmarshal-method.md)|Belirtilen belirteç tarafından başvurulan nesne için meta verileri imza hazırlama PInvoke yok eder.|  
-|[DeletePinvokeMap Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-deletepinvokemap-method.md)|Belirtilen belirteç tarafından başvurulan nesne için PInvoke eşleme meta verileri yok eder.|  
-|[DeleteToken Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-deletetoken-method.md)|Belirtilen belirteç geçerli bir meta veri kapsamından siler.|  
-|[GetSaveSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-getsavesize-method.md)|Bütünleştirilmiş kodun ikili tahmini boyutu geçerli kapsamda alır.|  
-|[GetTokenFromSig Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md)|Belirtilen meta veri imzası bir belirteç alır.|  
-|[GetTokenFromTypeSpec Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md)|Bir meta veri türü belirtilen meta veri imzası belirtecini alır.|  
-|[Merge Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)|Belirtilen içeri aktarılan kapsam birleştirilecek kapsamları listesine ekler.|  
-|[MergeEnd Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md)|Birleştirmeleri geçerli kapsam için bir veya daha fazla önceki çağrılar tarafından belirtilen tüm meta veri kapsamları `IMetaDataEmit::Merge`.|  
-|[Save Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-save-method.md)|Belirtilen adresteki bir dosyaya geçerli kapsamdaki tüm meta verileri kaydeder.|  
-|[SaveToMemory Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md)|Belirtilen bellek alanına geçerli kapsamdaki tüm meta verileri kaydeder.|  
-|[SaveToStream Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md)|Belirtilen geçerli kapsamdaki tüm meta verileri kaydeder `IStream`.|  
-|[SetClassLayout Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md)|Ayarlar veya önceki bir çağrı tarafından tanımlanan bir tür sınıfı Düzen imzası güncelleştirmeler `IMetaDataEmit::DefineTypeDef`.|  
-|[SetCustomAttributeValue Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setcustomattributevalue-method.md)|Ayarlar veya önceki bir çağrı tarafından tanımlanan özel bir öznitelik değerini güncelleştirir `IMetaDataEmit::DefineCustomAttribute`.|  
-|[SetEventProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-seteventprops-method.md)|Ayarlar veya önceki bir çağrı tarafından tanımlanan bir olayın belirtilen özellik güncelleştirmelerinin `IMetaDataEmit::DefineEvent`.|  
-|[SetFieldMarshal Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setfieldmarshal-method.md)|Belirtilen belirteç tarafından başvurulan alan, yöntem dönüş ya da yöntem parametresi için bilgi hazırlama PInvoke ayarlar.|  
-|[SetFieldProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setfieldprops-method.md)|Belirtilen alan belirteci tarafından başvurulan alan için varsayılan değer güncelleştirir veya ayarlar.|  
-|[SetFieldRVA Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setfieldrva-method.md)|Göreli sanal adres alanının belirtilen belirteci tarafından başvurulan bir genel değişken değerini ayarlar.|  
-|[SetHandler Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)|Belirtilen tarafından başvurulan ayarlar `IUnknown` bir bildirim geri çağırması için belirteci yeniden eşleme olarak işaretçi.|  
-|[SetMethodImplFlags Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md)|Belirtilen belirteç tarafından başvurulan devralınan yöntem uygulaması meta veri imzası güncelleştirir veya ayarlar.|  
-|[SetMethodProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodprops-method.md)|Ayarlar veya belirtilen göreli sanal adres, bir yöntemin çağrıda tarafından tanımlanan depolandığı özellik güncelleştirmelerinin `IMetaDataEmit::DefineMethod`.|  
-|[SetModuleProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)|Güncelleştirmeler için önceki bir çağrı tarafından tanımlanan bir modül başvuruları `IMetaDataEmit::DefineModuleRef`.|  
-|[SetParamProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparamprops-method.md)|Ayarlar veya önceki bir çağrı tarafından tanımlanan bir yöntem parametresi özelliklerini değiştirir `IMetaDataEmit::DefineParam`.|  
-|[SetParent Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparent-method.md)|Kurar, önceki bir çağrı tarafından tanımlandığı gibi belirtilen üye `IMetaDataEmit::DefineMemberRef`, önceki bir çağrı tarafından tanımlanan belirtilen türün bir üyesi olan `IMetaDataEmit::DefineTypeDef`.|  
-|[SetPermissionSetProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setpermissionsetprops-method.md)|Ayarlar veya önceki bir çağrı tarafından tanımlanan bir izin kümesi meta veri imzası özelliklerini güncelleştirir `IMetaDataEmit::DefinePermissionSet`.|  
-|[SetPinvokeMap Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setpinvokemap-method.md)|Ayarlar veya önceki bir çağrı tarafından tanımlandığı şekilde bir yöntemin PInvoke imzası, özelliklerini değiştirir `IMetaDataEmit::DefinePinvokeMap`.|  
-|[SetPropertyProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setpropertyprops-method.md)|Önceki bir çağrı tarafından tanımlanan bir özellik için meta verileri içinde depolanan özellikleri ayarlar `IMetaDataEmit::DefineProperty`.|  
-|[SetRVA Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setrva-method.md)|Belirtilen yöntemin göreli sanal adres ayarlar.|  
-|[SetTypeDefProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-settypedefprops-method.md)|Önceki bir çağrı tarafından tanımlanan bir tür özelliklerini ayarlar `IMetaDataEmit::DefineTypeDef`.|  
-|[TranslateSigWithScope Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-translatesigwithscope-method.md)|Bir derleme geçerli kapsam içeri aktarır ve yeni bir meta veri imzası birleştirilmiş kapsamını alır.|  
+|[ApplyEditAndContinue Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md)|Updates the current assembly scope with the changes made in the specified `pImport`.|  
+|[DefineCustomAttribute Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)|Creates a definition for a custom attribute with the specified metadata signature, to be attached to the specified object, and gets a token to that custom attribute definition.|  
+|[DefineEvent Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)|Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.|  
+|[DefineField Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definefield-method.md)|Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.|  
+|[DefineImportMember Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md)|Creates a definition for a member of a type that is defined in a module outside the current scope, and gets a token for that reference definition.|  
+|[DefineImportType Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)|Creates a definition for a reference to a type that is defined in a module outside the current scope, and gets a token to that reference definition.|  
+|[DefineMemberRef Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)|Creates a definition for a reference to a member of a module outside the current scope, and gets a token to that reference definition.|  
+|[DefineMethod Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)|Creates a definition for a method with the specified signature, and returns a token to that method definition.|  
+|[DefineMethodImpl Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethodimpl-method.md)|Creates a definition for implementation of a method inherited from an interface, and returns a token to that method-implementation definition.|  
+|[DefineModuleRef Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)|Creates the metadata signature for a module with the specified name.|  
+|[DefineNestedType Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definenestedtype-method.md)|Creates the metadata signature of a type definition and returns an `mdTypeDef` token for that type, additionally specifying that the defined type is a member of the type referenced by `tdEncloser`.|  
+|[DefineParam Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md)|Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.|  
+|[DefinePermissionSet Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md)|Creates a definition for a permission set with the specified metadata signature, and gets a token to that permission set definition.|  
+|[DefinePinvokeMap Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)|Sets features of the PInvoke signature of the method referenced by the specified token.|  
+|[DefineProperty Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)|Creates a property definition for the specified type, with the specified `get` and `set` method accessors, and gets a token to that property definition.|  
+|[DefineSecurityAttributeSet Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definesecurityattributeset-method.md)|Creates a set of security permissions to attach to the object referenced by the specified token.|  
+|[DefineTypeDef Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)|Creates a type definition for a common language runtime type, and gets a metadata token to that type definition.|  
+|[DefineTypeRefByName Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md)|Gets a metadata token for a type that is defined in another module outside the current scope.|  
+|[DefineUserString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md)|Gets a metadata token for the specified literal string.|  
+|[DeleteClassLayout Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-deleteclasslayout-method.md)|Destroys the class layout metadata signature for the type referenced by the specified token.|  
+|[DeleteFieldMarshal Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-deletefieldmarshal-method.md)|Destroys the PInvoke marshaling metadata signature for the object referenced by the specified token.|  
+|[DeletePinvokeMap Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-deletepinvokemap-method.md)|Destroys the PInvoke mapping metadata for the object referenced by the specified token.|  
+|[DeleteToken Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-deletetoken-method.md)|Deletes the specified token from the current metadata scope.|  
+|[GetSaveSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-getsavesize-method.md)|Gets the estimated binary size of the assembly in the current scope.|  
+|[GetTokenFromSig Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md)|Gets a token for the specified metadata signature.|  
+|[GetTokenFromTypeSpec Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md)|Gets a metadata token for the type with the specified metadata signature.|  
+|[Merge Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)|Adds the specified imported scope to the list of scopes to be merged.|  
+|[MergeEnd Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md)|Merges into the current scope all the metadata scopes specified by one or more prior calls to `IMetaDataEmit::Merge`.|  
+|[Save Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-save-method.md)|Saves all metadata in the current scope to the file at the specified address.|  
+|[SaveToMemory Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md)|Saves all metadata in the current scope to the specified area of memory.|  
+|[SaveToStream Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md)|Saves all metadata in the current scope to the specified `IStream`.|  
+|[SetClassLayout Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md)|Sets or updates the class layout signature of a type defined by a prior call to `IMetaDataEmit::DefineTypeDef`.|  
+|[SetCustomAttributeValue Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setcustomattributevalue-method.md)|Sets or updates the value of a custom attribute defined by a prior call to `IMetaDataEmit::DefineCustomAttribute`.|  
+|[SetEventProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-seteventprops-method.md)|Sets or updates the specified feature of an event defined by a prior call to `IMetaDataEmit::DefineEvent`.|  
+|[SetFieldMarshal Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setfieldmarshal-method.md)|Sets the PInvoke marshaling information for the field, method return, or method parameter referenced by the specified token.|  
+|[SetFieldProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setfieldprops-method.md)|Sets or updates the default value for the field referenced by the specified field token.|  
+|[SetFieldRVA Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setfieldrva-method.md)|Sets a global variable value for the relative virtual address of the field referenced by the specified token.|  
+|[SetHandler Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)|Sets the method referenced by the specified `IUnknown` pointer as a notification callback for token remaps.|  
+|[SetMethodImplFlags Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md)|Sets or updates the metadata signature of the inherited method implementation referenced by the specified token.|  
+|[SetMethodProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodprops-method.md)|Sets or updates the feature, stored at the specified relative virtual address, of a method defined by a prior call to `IMetaDataEmit::DefineMethod`.|  
+|[SetModuleProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)|Updates references to a module defined by a prior call to `IMetaDataEmit::DefineModuleRef`.|  
+|[SetParamProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparamprops-method.md)|Sets or changes features of a method parameter that was defined by a prior call to `IMetaDataEmit::DefineParam`.|  
+|[SetParent Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparent-method.md)|Establishes that the specified member, as defined by a prior call to `IMetaDataEmit::DefineMemberRef`, is a member of the specified type, as defined by a prior call to `IMetaDataEmit::DefineTypeDef`.|  
+|[SetPermissionSetProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setpermissionsetprops-method.md)|Sets or updates features of the metadata signature of a permission set defined by a prior call to `IMetaDataEmit::DefinePermissionSet`.|  
+|[SetPinvokeMap Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setpinvokemap-method.md)|Sets or changes features of a method's PInvoke signature, as defined by a prior call to `IMetaDataEmit::DefinePinvokeMap`.|  
+|[SetPropertyProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setpropertyprops-method.md)|Sets the features stored in metadata for a property defined by a prior call to `IMetaDataEmit::DefineProperty`.|  
+|[SetRVA Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setrva-method.md)|Sets the relative virtual address of the specified method.|  
+|[SetTypeDefProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-settypedefprops-method.md)|Sets features of a type defined by a prior call to `IMetaDataEmit::DefineTypeDef`.|  
+|[TranslateSigWithScope Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-translatesigwithscope-method.md)|Imports an assembly into the current scope and gets a new metadata signature for the merged scope.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

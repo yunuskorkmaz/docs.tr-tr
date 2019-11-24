@@ -14,29 +14,27 @@ helpviewer_keywords:
 ms.assetid: c1018789-4206-455d-aacc-2d876fc0d0bb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f5307ce00160bb4151a7559daac4724367c6497
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af50c82974b779b901135795f37e3bd4c8b8c156
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940406"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440976"
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2 Arabirimi
-Havuz bildirim için yöntemleri bildirir.  
+Declares methods for sink notification.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[OnSyncCallEnter Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|Bir çağrı girerken çağrılır.|  
-|[OnSyncCallExit Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|Bir çağrı çıkarken çağrılır.|  
-|[OnSyncCallOut Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|Bir çağrı kullanıma olduğunda çağrılır.|  
-|[OnSyncCallReturn Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|Çağrısı döndürüldüğünde çağrılan.|  
+|[OnSyncCallEnter Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|Gets invoked when entering a call.|  
+|[OnSyncCallExit Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|Gets invoked when exiting a call.|  
+|[OnSyncCallOut Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|Gets invoked when a call is out.|  
+|[OnSyncCallReturn Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|Gets invoked when a call returns.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

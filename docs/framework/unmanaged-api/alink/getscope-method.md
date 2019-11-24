@@ -1,5 +1,5 @@
 ---
-title: GetScope Metodu
+title: GetScope Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IALink.GetScope
@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e1555328-2c71-4ece-b357-9eb6d3a8efc4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3a0e42e9ffb99896bdd09dbbab65eafb40cafff
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 078168ae8860f18ff6f811dcc972e3eb3c857e1d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777215"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447198"
 ---
-# <a name="getscope-method"></a>GetScope Metodu
-İçeri aktarma kapsamı alır.  
+# <a name="getscope-method"></a>GetScope Yöntemi
+Gets an import scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +37,22 @@ HRESULT GetScope(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- İçeri aktarılacak derlemenin benzersiz KIMLIĞI.  
+ Unique ID of assembly to import to.  
   
  `FileToken`  
- İçeri aktarılacak dosyanın benzersiz KIMLIĞI.  
+ Unique ID of the file to import from.  
   
  `dwScope`  
- İçeri aktarılacak sıfır tabanlı kapsam.  
+ Zero-based scope to import.  
   
  `ppImportScope`  
- Kapsam için [IMetaDataImport arabirimi](../metadata/imetadataimport-interface.md) arabirimini alır.  
+ Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

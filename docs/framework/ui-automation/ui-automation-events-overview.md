@@ -9,37 +9,37 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: d342e4382cfe227e477ab87c2ca428834010768e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5f9362814eb671a6d7a111cadb96be6d06f5cb3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042156"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441500"
 ---
 # <a name="ui-automation-events-overview"></a>UI Otomasyonu Olaylarına Genel Bakış
 > [!NOTE]
-> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]olay bildirimi, ekran okuyucular ve ekran büyüteçleri gibi yardımcı teknolojiler için önemli bir özelliktir. Bu UI Otomasyonu istemcileri, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] içinde bir şeyler olduğunda UI Otomasyon sağlayıcıları tarafından oluşturulan olayları izler ve son kullanıcıları bilgilendirmek için bu bilgileri kullanır.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] event notification is a key feature for assistive technologies such as screen readers and screen magnifiers. These UI Automation clients track events that are raised by UI Automation providers when something happens in the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] and use the information to notify end users.  
   
- Herhangi bir istemcinin herhangi bir olayı dinlememesi durumunda, hiçbir istemcinin bu olaylara abone olup olmadığı veya hiç bir şekilde değil, herhangi bir istemciye etkinlik yapmasına izin vererek verimlilik geliştirilmiştir.  
+ Efficiency is improved by allowing provider applications to raise events selectively, depending on whether any clients are subscribed to those events, or not at all, if no clients are listening for any events.  
   
 <a name="Types_of_Events"></a>   
-## <a name="types-of-events"></a>Olay türleri  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]olaylar aşağıdaki kategorilere ayrılır.  
+## <a name="types-of-events"></a>Types of Events  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events fall into the following categories.  
   
 |Olay|Açıklama|  
 |-----------|-----------------|  
-|Özellik değişikliği|Bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğe veya denetim deseninin bir özelliği değiştiğinde tetiklenir. Örneğin, bir istemcinin bir uygulamanın onay kutusu denetimini izlemesi gerekiyorsa, <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> özellik üzerinde bir özellik değişiklik olayını dinlemek için kayıt yapabilir. Onay kutusu denetimi işaretli veya işaretlenmemiş olduğunda, sağlayıcı olayı başlatır ve istemci gerektiği gibi davranabilir.|  
-|Öğe eylemi|Son Kullanıcı veya programlı etkinlikteki [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] sonuçlarda değişiklik yapıldığında, örneğin bir düğmeye tıklandığında veya aracılığıyla <xref:System.Windows.Automation.InvokePattern>çağrıldığında tetiklenir.|  
-|Yapı değişikliği|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağacın yapısı değiştiğinde harekete geçirilir. Yapı, yeni [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğeler görünür olduğunda, gizlendiği veya masaüstünde kaldırıldığında değişir.|  
-|Genel masaüstü değişikliği|Odak bir öğeden diğerine kaydırıldığında veya bir pencere kapandığında olduğu gibi, istemci için genel ilgi çekici eylemler gerçekleştiğinde tetiklenir.|  
+|Property change|Raised when a property on an [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element or control pattern changes. For example, if a client needs to monitor an application's check box control, it can register to listen for a property change event on the <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> property. When the check box control is checked or unchecked, the provider raises the event and the client can act as necessary.|  
+|Element action|Raised when a change in the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] results from end user or programmatic activity; for example, when a button is clicked or invoked through <xref:System.Windows.Automation.InvokePattern>.|  
+|Structure change|Raised when the structure of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree changes. The structure changes when new [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] items become visible, hidden, or removed on the desktop.|  
+|Global desktop change|Raised when actions of global interest to the client occur, such as when the focus shifts from one element to another, or when a window closes.|  
   
- Bazı olaylar, Kullanıcı arabiriminin durumunun değiştiği anlamına gelmez. Örneğin, Kullanıcı bir metin girişi alanını sekmeler ve sonra alanı güncelleştirmek için bir düğmeye tıkladığında, `TextChangedEvent` Kullanıcı gerçekten metni değiştirmese bile oluşturulur. Bir olayı işlerken, bir istemci uygulaması, işlem yapılmadan önce herhangi bir şeyin gerçekten değişip değişmediğini kontrol etmek için gerekli olabilir.  
+ Some events do not necessarily mean that the state of the UI has changed. For example, if the user tabs to a text entry field and then clicks a button to update the field, a `TextChangedEvent` is raised even if the user did not actually change the text. When processing an event, it may be necessary for a client application to check whether anything has actually changed before taking action.  
   
- Aşağıdaki olaylar, Kullanıcı arabiriminin durumu değiştirilmese bile oluşturulabilir.  
+ The following events may be raised even when the state of the UI has not changed.  
   
-- `AutomationPropertyChangedEvent`(değiştirilen özelliğe bağlı olarak)  
+- `AutomationPropertyChangedEvent` (depending on the property that has changed)  
   
 - `ElementSelectedEvent`  
   
@@ -48,12 +48,12 @@ ms.locfileid: "71042156"
 - `TextChangedEvent`  
   
 <a name="UI_Automation_Event_Identifiers"></a>   
-## <a name="ui-automation-event-identifiers"></a>UI Otomasyonu olay tanımlayıcıları  
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]olaylar nesneler tarafından <xref:System.Windows.Automation.AutomationEvent> tanımlanır. <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> Özelliği, olay türünü benzersiz bir şekilde tanımlayan bir değer içerir.  
+## <a name="ui-automation-event-identifiers"></a>UI Automation Event Identifiers  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] events are identified by <xref:System.Windows.Automation.AutomationEvent> objects. The <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> property contains a value that uniquely identifies the kind of event.  
   
- İçin <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> olası değerler aşağıdaki tabloda, olay bağımsız değişkenleri için kullanılan türle birlikte verilmiştir. İstemciler ve sağlayıcılar tarafından kullanılan tanımlayıcıların farklı sınıflardan aynı adlı alanları olduğunu unutmayın.  
+ The possible values for <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> are given in the following table, along with the type used for event arguments. Note that the identifiers used by clients and providers are identically named fields from different classes.  
   
-|İstemci tanımlayıcısı|Sağlayıcı tanımlayıcısı|Olay bağımsız değişkenleri türü|  
+|Client Identifier|Provider identifier|Event Arguments Type|  
 |-----------------------|-------------------------|--------------------------|  
 |<xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.AutomationElementIdentifiers.AsyncContentLoadedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|  
 |<xref:System.Windows.Automation.SelectionItemPattern.ElementAddedToSelectionEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.SelectionItemPattern.ElementRemovedFromSelectionEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.SelectionPattern.InvalidatedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.InvokePattern.InvokedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.AutomationElement.LayoutInvalidatedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.AutomationElement.MenuClosedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.AutomationElement.MenuOpenedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.TextPattern.TextChangedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.TextPattern.TextSelectionChangedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.AutomationElement.ToolTipClosedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.AutomationElementIdentifiers.MenuClosedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.AutomationElementIdentifiers.MenuOpenedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipClosedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipOpenedEvent?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.AutomationEventArgs>|  
@@ -63,23 +63,23 @@ ms.locfileid: "71042156"
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowClosedEventArgs>|  
   
 <a name="UI_Automation_Event_Arguments"></a>   
-## <a name="ui-automation-event-arguments"></a>UI Otomasyonu olay bağımsız değişkenleri  
- Aşağıdaki sınıflar olay bağımsız değişkenlerini kapsüller.  
+## <a name="ui-automation-event-arguments"></a>UI Automation Event Arguments  
+ The following classes encapsulate event arguments.  
   
 |örneği|Açıklama|  
 |-----------|-----------------|  
-|<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|Tamamlanan yükleme yüzdesi de dahil olmak üzere içeriğin zaman uyumsuz yüklemesi hakkındaki bilgileri içerir.|  
-|<xref:System.Windows.Automation.AutomationEventArgs>|Ek veri gerektirmeyen basit bir olayla ilgili bilgiler içerir.|  
-|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|Giriş odağıyla ilgili, bir öğeden diğerine değişiklik hakkındaki bilgileri içerir. Bu türün olayları, sağlayıcılar tarafından değil, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sistem tarafından tetiklenir.|  
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|Bir öğenin veya denetim deseninin özellik değerindeki bir değişiklik hakkındaki bilgileri içerir.|  
-|<xref:System.Windows.Automation.StructureChangedEventArgs>|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağaçtaki bir değişiklik hakkındaki bilgileri içerir.|  
-|<xref:System.Windows.Automation.WindowClosedEventArgs>|Bir pencere kapatma hakkında bilgi içerir.|  
+|<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|Contains information about the asynchronous loading of content, including the percentage of loading completed.|  
+|<xref:System.Windows.Automation.AutomationEventArgs>|Contains information about a simple event that requires no extra data.|  
+|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|Contains information about a change in input focus from one element to another. Events of this type are raised by the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] system, not by providers.|  
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|Contains information about a change in a property value of an element or control pattern.|  
+|<xref:System.Windows.Automation.StructureChangedEventArgs>|Contains information about a change in the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.|  
+|<xref:System.Windows.Automation.WindowClosedEventArgs>|Contains information about a window closing.|  
   
- Tüm olay bağımsız değişkeni sınıfları bir <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A> üye içerir. Bu tanımlayıcı bir <xref:System.Windows.Automation.AutomationEvent>içinde kapsüllenir.  
+ All the event argument classes contain an <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A> member. This identifier is encapsulated in an <xref:System.Windows.Automation.AutomationEvent>.  
   
- Olayları <xref:System.Windows.Automation.AutomationEvent> tanımlamak için kullanılan nesneler, içindeki alanlar ve denetim <xref:System.Windows.Automation.DockPatternIdentifiers>deseninin tanımlayıcı sınıflarında <xref:System.Windows.Automation.AutomationElementIdentifiers> bulunan sağlayıcılar tarafından alınır. Eşdeğer alanlar, içindeki <xref:System.Windows.Automation.AutomationElement> alanlardan istemci uygulamalar tarafından ve gibi denetim deseninin <xref:System.Windows.Automation.DockPattern>elde edilir.  
+ The <xref:System.Windows.Automation.AutomationEvent> objects used to identify events are obtained by providers from fields in <xref:System.Windows.Automation.AutomationElementIdentifiers> and control pattern identifier classes such as <xref:System.Windows.Automation.DockPatternIdentifiers>. The equivalent fields are obtained by client applications from fields in <xref:System.Windows.Automation.AutomationElement> and control pattern classes such as <xref:System.Windows.Automation.DockPattern>.  
   
- Olay tanımlayıcılarının listesi için bkz. [istemciler Için UI Otomasyon olayları](ui-automation-events-for-clients.md).  
+ For a list of event identifiers, see [UI Automation Events for Clients](ui-automation-events-for-clients.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

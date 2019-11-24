@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 351d4b4c-c939-486d-9471-51914a55f471
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f19dd114925ed1fd12bcc0056411c3e3d4181215
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 76d2b163f959111923bffb1348890f6fbb29828e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777088"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445683"
 ---
 # <a name="importtypes-method"></a>ImportTypes Yöntemi
-[ImportFile yöntemi](importfile-method.md)aracılığıyla içeri aktarılan her kapsamdan türlerin içeri aktarılmasını başlatır.  
+Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,28 +39,28 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- İçeri aktarılacak derlemenin KIMLIĞI.  
+ ID of the assembly to import to.  
   
  `FileToken`  
- İçeri aktarılacak dosyanın KIMLIĞI.  
+ ID of the file to import from.  
   
  `dwScope`  
- İçeri aktarılacak sıfır tabanlı kapsam.  
+ Zero-based scope to import.  
   
  `phEnum`  
- Bu kapsamdaki türler için numaralandırıcı tanıtıcısını alır.  
+ Receives enumerator handle for the types in this scope.  
   
  `ppImportScope`  
- İsteğe bağlı olarak [IMetaDataImport arabirim](../metadata/imetadataimport-interface.md) arabirimini alır.  
+ Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.  
   
  `pdwCountOfTypes`  
- İsteğe bağlı olarak, belirtilen kapsamdaki türlerin sayısını alır.  
+ Optionally receives count of types in the indicated scope.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

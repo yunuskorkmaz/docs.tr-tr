@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bed097b3-6d52-46c9-bee7-ac7910b6fc3f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e1a95b3078f4a592e28e0deb9869fc520cde811d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 047516574595f9ffcd61360f51823da73a2f9733
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779283"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439524"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach Yöntemi
-Ortak dil çalışma zamanı (CLR) profil oluşturucu bir iliştirme işleminden sonra kendi durumunu başlatmak üzere bir fırsat vermek tarafından çağrılır.  
+Called by the common language runtime (CLR) to give the profiler an opportunity to initialize its state after an attach operation.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,25 +36,25 @@ HRESULT InitializeForAttach(
   
 ## <a name="parameters"></a>Parametreler  
  `pCorProfilerInfoUnk`  
- [in] Bir arabirim işaretçisi için `ICorProfilerInfo*` arabirimi.  
+ [in] An interface pointer for the `ICorProfilerInfo*` interface.  
   
  `pvClientData`  
- [in] Geçirilen veriler için bir işaretçi [Iclrprofiling::attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) yöntemi kendi `pvClientData` parametresi. Bu parametre null ise `cbClientData` 0 (sıfır) olacaktır. Gelen döndürdüğünde CLR bu belleği serbest bırakır `InitializeForAttach`.  
+ [in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter. If this parameter is null, `cbClientData` will be 0 (zero). The CLR frees this memory when it returns from `InitializeForAttach`.  
   
  `cbClientData`  
- [in] Bayt cinsinden veri boyutu, `pvClientData` işaret eder.  
+ [in] The size, in bytes, of the data that `pvClientData` points to.  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR çağrıları `InitializeForAttach` profil oluşturucu, istek geri çağırmalar için bir fırsat vermek için.  
+ The CLR calls `InitializeForAttach` to give the profiler an opportunity to request callbacks.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

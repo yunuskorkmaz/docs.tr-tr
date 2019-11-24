@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a5906b2a-ad4a-4cc6-a421-2d7d8adf7468
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c9a7d55b5a4867dcdc4e816bd3eac2cf29c68564
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ade4f7877e39a8307a36f3a3268f79e8b4d44fd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751982"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427276"
 ---
-# <a name="corprfsnapshotinfo-enumeration"></a>COR_PRF_SNAPSHOT_INFO Numaralandırması
-Ne kadar profil oluşturucunun her çağrıda bir yığın anlık görüntüsü ile geçirilecek veriler geri belirtir [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) işlevi.  
+# <a name="cor_prf_snapshot_info-enumeration"></a>COR_PRF_SNAPSHOT_INFO Numaralandırması
+Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,21 +38,21 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
   
 |Üyeler|Açıklama|  
 |-------------|-----------------|  
-|`COR_PRF_SNAPSHOT_DEFAULT`|Değerleri tüm geçirilmesi gerektiğini belirten `StackSnapshotCallback` parametreleri dışında `context` parametresi.|  
-|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|Değerleri tüm geçirilmesi gerektiğini belirten `StackSnapshotCallback` parametreleri de dahil olmak üzere, `context` parametresi.|  
-|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|Bir daha basit, alternatif yığın walking algoritmasının kullanılması gerektiğini gösterir.|  
+|`COR_PRF_SNAPSHOT_DEFAULT`|Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.|  
+|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.|  
+|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|Indicates that a simpler, alternative stack-walking algorithm will be used.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tarafından sağlanan değerleri `COR_PRF_SNAPSHOT_INFO` numaralandırma için parametre olarak geçirilen [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) yöntemi.  
+ Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

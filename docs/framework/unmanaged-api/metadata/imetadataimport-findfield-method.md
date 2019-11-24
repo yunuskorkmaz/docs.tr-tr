@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 38cd4e16-fbb2-471c-aa73-ac51a1931ad2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1baee71b5b8575f51eb54fbc8a037a5dddd24500
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 842d6c0deb90bc45cb59454fb30fcc3544d742f1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782532"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437944"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField Yöntemi
-Bir işaretçi için fieldDef simgesi alınmış bir alan için belirteç alır tarafından belirtilen <xref:System.Type> ve belirtilen adı ve meta verileri imza sahip.  
+Gets a pointer to the FieldDef token for the field that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,35 +39,35 @@ HRESULT FindField (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- [in] Sınıf veya aramak için alan kapsayan arabirimi TypeDef belirteci. Bu değer ise `mdTokenNil`, genel bir değişken için arama yapılır.  
+ [in] The TypeDef token for the class or interface that encloses the field to search for. If this value is `mdTokenNil`, the lookup is done for a global variable.  
   
  `szName`  
- [in] Aranacak alan adı.  
+ [in] The name of the field to search for.  
   
  `pvSigBlob`  
- [in] Alan ikili meta veri imzası bir işaretçi.  
+ [in] A pointer to the binary metadata signature of the field.  
   
  `cbSigBlob`  
- [in] Bayt cinsinden boyutu `pvSigBlob`.  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmb`  
- [out] Eşleşen fieldDef simgesi belirteç için bir işaretçi.  
+ [out] A pointer to the matching FieldDef token.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kapsayan sınıfı veya arabirimi kullanarak alanı belirtin (`td`), adını (`szName`) ve isteğe bağlı olarak imzası (`pvSigBlob`).  
+ You specify the field using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
   
- İmza geçirilen `FindField` imzaları belirli bir kapsama bağlı oldukları için geçerli kapsamda oluşturulan gerekir. İmza kapsayan sınıf veya değer türü tanımlayan bir belirteç ekleyebilir. (Belirteç yerel TypeDef tabloya dizinidir). Geçerli kapsam bağlamında dışında bir çalışma zamanı imza oluşturun ve bu imza, giriş olarak kullanmak `FindField`.  
+ The signature passed to `FindField` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. (The token is an index into the local TypeDef table). You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindField`.  
   
- `FindField` sınıf veya arabirim içinde tanımlanmış olan alanlar bulur; devralınan alanları bulmaz.  
+ `FindField` finds only fields that were defined directly in the class or interface; it does not find inherited fields.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

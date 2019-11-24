@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e525aa16-c923-4b16-833b-36f1f0dd70fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b608b8818890bdb27a956a90c7987cf7c421304d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3e14230888e9bf846879d5728c2b20883fb8d53
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772275"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438733"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction Metodu
-Meta veri belirteci ve belirteç karşı belirtilen işlev için kullanılabilecek bir meta veri arabirimi örneği alır.  
+Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +37,25 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
 ## <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] İşlevi için meta verileri arabirimi ve meta veri belirteci almak için kimliği.  
+ [in] The ID of the function for which to get the metadata token and metadata interface.  
   
  `riid`  
- [in] Başvuru Kimliği örneğini almak meta verileri arabirimi.  
+ [in] The reference ID of the metadata interface to get the instance of.  
   
  `ppImport`  
- [out] Belirteci karşı belirtilen işlev için kullanılabilir meta veri arabirimi örneği adresi için bir işaretçi.  
+ [out] A pointer to the address of the metadata interface instance that can be used against the token for the specified function.  
   
  `pToken`  
- [out] Belirtilen işlev için meta veri belirteci için bir işaretçi.  
+ [out] A pointer to the metadata token for the specified function.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

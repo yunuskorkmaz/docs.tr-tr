@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7ae84d6-81e8-4cb7-a1f9-d48b6cde5d79
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a7fa192a8e8b8a876f672e36bb906a714b1266e2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 70c1d87ae32fb70f8d9f6e32b527394022459526
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736668"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446437"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument Yöntemi
-Sağlanan belge içinde satır bilgileri her yöntemin alır.  
+Gets every method that has line information in the provided document.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,22 +38,22 @@ HRESULT GetMethodsInDocument(
   
 ## <a name="parameters"></a>Parametreler  
  `document`  
- [in] Belge işaretçisi.  
+ [in] A pointer to the document.  
   
  `cMethod`  
- [in] A `ULONG32` boyutunu gösteren `pRetVal` dizisi.  
+ [in] A `ULONG32` that indicates the size of the  `pRetVal` array.  
   
  `pcMethod`  
- [out] Bir işaretçi bir `ULONG32` yöntemleri içerecek şekilde gerekli arabellek boyutunu alır.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the methods.  
   
  `pRetVal`  
- [out] Yöntemleri alan arabellek için işaretçi.  
+ [out] A pointer to the buffer that receives the methods.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

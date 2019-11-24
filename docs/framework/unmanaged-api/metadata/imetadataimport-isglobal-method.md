@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44cf6908-f555-4ae8-b2cf-24bd974bf2fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 13f8a50f3fcbe9d6e7602ca3bbeb36587ecff32c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a5dda5861343865a139f6b6b9e2794179b0727a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778792"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434722"
 ---
 # <a name="imetadataimportisglobal-method"></a>IMetaDataImport::IsGlobal Yöntemi
-Alan, yöntem veya belirtilen metaveri belirteci tarafından temsil edilen tür genel kapsamda sahip olup olmadığını gösteren bir değer alır.  
+Gets a value indicating whether the field, method, or type represented by the specified metadata token has global scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +36,19 @@ HRESULT IsGlobal (
   
 ## <a name="parameters"></a>Parametreler  
  `pd`  
- [in] Tür, alan veya yöntemi temsil eden bir meta veri belirteci.  
+ [in] A metadata token that represents a type, field, or method.  
   
  `pbGlobal`  
- [out] 1 ise, nesne genel kapsama sahip; Aksi takdirde, 0 (sıfır).  
+ [out] 1 if the object has global scope; otherwise, 0 (zero).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

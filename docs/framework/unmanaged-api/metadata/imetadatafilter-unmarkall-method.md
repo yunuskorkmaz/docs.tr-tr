@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a04d91dc-690f-4de8-8c97-55c69a8503b4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 34922a56dbe43d12207fcf55e9e73847dfad29dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5e31964271c13788e29c7ef0581afcd809c5a9fc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757490"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440131"
 ---
 # <a name="imetadatafilterunmarkall-method"></a>IMetaDataFilter::UnmarkAll Yöntemi
-Geçerli meta veri kapsamdaki tüm belirteçlerin işleme işaretleri kaldırır.  
+Removes the processing marks from all the tokens in the current metadata scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,16 +32,16 @@ HRESULT UnmarkAll ();
 ```  
   
 ## <a name="parameters"></a>Parametreler  
- `UnmarkAll` parametre almaz.  
+ `UnmarkAll` takes no parameters.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

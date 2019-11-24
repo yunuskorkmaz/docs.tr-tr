@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 190f424d-5e37-4163-a191-0895686e9476
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 12f16b9bc87ea65e2699ec902d717b08d3155b95
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 080777b656e1c3df1cc4170fe1dff6de6ddb41fc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756171"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445396"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>ICorProfilerCallback::ExceptionSearchCatcherFound Yöntemi
-Profil Oluşturucu, oluşturulan özel durum işleyicisi özel durum işleme arama aşaması bulunduğunu bildirir.  
+Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,16 +34,16 @@ RESULT ExceptionSearchCatcherFound(
   
 ## <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] Özel durum işleyicisini içeren işlev kimliği.  
+ [in] The ID of the function that contains the exception handler.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

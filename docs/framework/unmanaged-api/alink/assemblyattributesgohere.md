@@ -1,5 +1,5 @@
 ---
-title: AssemblyAttributesGoHere sınıfı (System.Runtime.CompilerServices)
+title: AssemblyAttributesGoHere Class (System.Runtime.CompilerServices)
 ms.date: 03/30/2017
 api_name:
 - System.Runtime.CompilerServices.AssemblyAttributesGoHere
@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7b26fcb6-94f4-4f09-933e-b33efe451f4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 571c2f6723e827a1b385f77724c33703ae970ae3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99d7d2bbbb0586db34b5cb7a785b0448a20ab5bc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775628"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446647"
 ---
-# <a name="assemblyattributesgohere-class"></a>AssemblyAttributesGoHere sınıfı
+# <a name="assemblyattributesgohere-class"></a>AssemblyAttributesGoHere Class
 
-ALINK tarafından özel öznitelikler hakkında bilgi depolamak için bir yer tutucu olarak kullanılır.
+Used by ALink as a placeholder to store information about custom attributes.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,11 +34,11 @@ internal sealed class AssemblyAttributesGoHere
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu tür başvurularını kaynakları içeren derlemenin özel öznitelikleri netmodule'ler içinde gömülü olması. Bu tür başvurular içeren bir veya daha fazla netmodule'ler gelen bir derleme bildirimi oluşturulurken ALink bu başvuruları bağlı bilgileri yayma gerçek özel öznitelikler için kullanır. Bu nedenle, bu tür hiç örneklenmemiş ve başvuruları yalnızca yapı işleminin bir parçası olarak kullanılır ve son derlemeye hiçbir amaca hizmet.
+References to this type might be embedded inside netmodules whose sources contain assembly custom attributes. When building an assembly manifest from one or more netmodules that contain references to these types, ALink uses information attached to these references to emit real custom attributes. As such, this type is never instantiated, and references to it are used only as part of the build process and serve no purpose in the final assembly.
 
-Bu tür başvurularını güvenlikle ilgili olmayan özel öznitelikleri belirtmek ve çoklu kullanım değildir.
+References to this type indicate custom attributes that are not security related and are not multiple-use.
 
-Bu tür ".NET Framework içinde iç" olarak işaretlenir ve bulunan <xref:System.Runtime.CompilerServices> ad alanı.
+These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
 
 ## <a name="requirements"></a>Gereksinimler
 

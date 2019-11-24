@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e48b5c64-049f-4f93-ad87-d07ae9cd5845
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bf96770dd58c9b84596c082a615f626ec723cc6c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 986ae69e7ebb8f607be5d37fab426bcc787abb26
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787239"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445646"
 ---
 # <a name="init-method"></a>Init Yöntemi
-Kullanım için [IALink arabirimini](ialink-interface.md) uygulayan nesneleri hazırlar.  
+Prepares objects implementing the [IALink Interface](ialink-interface.md) for use.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +35,16 @@ HRESULT Init(
   
 ## <a name="parameters"></a>Parametreler  
  `pDispenser`  
- Meta veri dağıtıcısının [ımetadatadağıtıserex arabirimi](../metadata/imetadatadispenserex-interface.md) işaretçisi.  
+ [IMetaDataDispenserEx Interface](../metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.  
   
  `pErrorHandler`  
- [IMetaDataError arabirimi](../metadata/imetadataerror-interface.md) işaretçisi isteğe bağlı bir hata işleme arabirimine.  
+ [IMetaDataError Interface](../metadata/imetadataerror-interface.md) pointer to an optional error handling interface.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

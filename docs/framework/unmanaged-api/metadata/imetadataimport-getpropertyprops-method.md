@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc0ff3e6-7e7d-4f6c-948d-52b28f5cb78c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e83afcf6c872927e614fce33ca96e93f0da4f497
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 247a2793bf3806f5ee38585d50b4535820dfcb69
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778880"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437064"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps Metodu
-Belirtilen belirteç tarafından temsil edilen bir özellik için meta verileri alır.  
+Gets the metadata for the property represented by the specified token.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -52,61 +50,61 @@ HRESULT GetPropertyProps (
   
 ## <a name="parameters"></a>Parametreler  
  `prop`  
- [in] Özellik için meta verileri döndürmek için temsil eden bir belirteci.  
+ [in] A token that represents the property to return metadata for.  
   
  `pClass`  
- [out] Özelliği uygulayan türü temsil eden TypeDef belirteci için bir işaretçi.  
+ [out] A pointer to the TypeDef token that represents the type that implements the property.  
   
  `szProperty`  
- [out] Özellik adını tutan bir arabellek.  
+ [out] A buffer to hold the property name.  
   
  `cchProperty`  
- [in] Geniş karakter cinsinden boyutu `szProperty`.  
+ [in] The size in wide characters of `szProperty`.  
   
  `pchProperty`  
- [out] Döndürülen geniş karakter sayısını `szProperty`.  
+ [out] The number of wide characters returned in `szProperty`.  
   
  `pdwPropFlags`  
- [out] Özelliğine uygulanan herhangi bir öznitelik bayrakları için bir işaretçi. Gelen bir bit maskesi değerdir [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) sabit listesi.  
+ [out] A pointer to any attribute flags applied to the property. This value is a bitmask from the [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumeration.  
   
  `ppvSig`  
- [out] Özelliğin meta veri imzası bir işaretçi.  
+ [out] A pointer to the metadata signature of the property.  
   
  `pbSig`  
- [out] Döndürülen bayt sayısı `ppvSig`.  
+ [out] The number of bytes returned in `ppvSig`.  
   
  `pdwCPlusTypeFlag`  
- [out] Özelliğin varsayılan değeri sabiti türünü belirten bir bayrak. CorElementType numaralandırması değerdir.  
+ [out] A flag specifying the type of the constant that is the default value of the property. This value is from the CorElementType enumeration.  
   
  `ppDefaultValue`  
- [out] Bu özellik için varsayılan değeri depolamak bayt için bir işaretçi.  
+ [out] A pointer to the bytes that store the default value for this property.  
   
  `pcchDefaultValue`  
- [out] Geniş karakter cinsinden boyutu `ppDefaultValue`, `pdwCPlusTypeFlag` olduğu ELEMENT_TYPE_STRING; Aksi takdirde, bu değeri uygun değil. Bu durumda, uzunluğunu `ppDefaultValue` tarafından belirtilen türden çıkarılan `pdwCPlusTypeFlag`.  
+ [out] The size in wide characters of `ppDefaultValue`, if `pdwCPlusTypeFlag` is ELEMENT_TYPE_STRING; otherwise, this value is not relevant. In that case, the length of `ppDefaultValue` is inferred from the type that is specified by `pdwCPlusTypeFlag`.  
   
  `pmdSetter`  
- [out] Özelliği için set erişimcisi yöntemi temsil eden MethodDef belirteci için bir işaretçi.  
+ [out] A pointer to the MethodDef token that represents the set accessor method for the property.  
   
  `pmdGetter`  
- [out] Özellik get erişimci yöntemi temsil eden MethodDef belirteci için bir işaretçi.  
+ [out] A pointer to the MethodDef token that represents the get accessor method for the property.  
   
  `rmdOtherMethod`  
- [out] Özellikle ilişkili diğer yöntemleri temsil eden MethodDef belirteçleri dizisi.  
+ [out] An array of MethodDef tokens that represent other methods associated with the property.  
   
  `cMax`  
- [in] En büyük boyutunu `rmdOtherMethod` dizisi. Tüm yöntemleri tutabilecek kadar büyük bir dizi belirtmezseniz, bunlar uyarı vermeden atlanır.  
+ [in] The maximum size of the `rmdOtherMethod` array. If you do not provide an array large enough to hold all the methods, they are skipped without warning.  
   
  `pcOtherMethod`  
- [out] Döndürülen MethodDef belirteçleri sayısı `rmdOtherMethod`.  
+ [out] The number of MethodDef tokens returned in `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

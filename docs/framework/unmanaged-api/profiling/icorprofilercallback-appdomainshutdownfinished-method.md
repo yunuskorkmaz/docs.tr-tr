@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e214af178972623bad3536565aa9bc51edc97260
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8ff7d5a593388bd3a584e031aea411dfdb6c9845
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763101"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445205"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished Yöntemi
-Profil Oluşturucu, bir uygulama etki alanı bir işlemden olduğunu bildirir.  
+Notifies the profiler that an application domain has been unloaded from a process.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,24 +35,24 @@ HRESULT AppDomainShutdownFinished(
   
 ## <a name="parameters"></a>Parametreler  
  `appDomainId`  
- [in] Uygulamanın derlemelerin saklandığı etki alanını tanımlar.  
+ [in] Identifies the domain in which the application's assemblies are stored.  
   
  `hrStatus`  
- [in] Uygulama etki alanı başarıyla kaldırılmış olup olmadığını gösteren bir HRESULT.  
+ [in] An HRESULT that indicates whether the application domain was unloaded successfully.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değerini `appDomainId` sonra bir bilgi isteği için geçerli değil [Icorprofilercallback::appdomainshutdownstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) yöntemi döndürür.  
+ The value of `appDomainId` is not valid for an information request after the [ICorProfilerCallback::AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) method returns.  
   
- Uygulama etki alanı kaldırılması, bazı bölümleri sonra devam edebilir `AppDomainCreationFinished` geri çağırma. Bir hata HRESULT içinde `hrStatus` hata gösterir. Ancak, bir başarı HRESULT içinde `hrStatus` yalnızca ilk bölümü, uygulama etki alanını kaldırma işleminin başarılı olduğunu gösterir.  
+ Some parts of unloading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the application domain has succeeded.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

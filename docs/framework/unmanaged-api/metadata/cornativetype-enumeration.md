@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e47a72f1-9609-48ed-bb34-97170d7f6890
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 846c754aeb0a710fa70e906e666f694eaa77c576
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef4788891e91608a394482319a89b8b0d258449f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781705"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436518"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType Numaralandırması
-Yönetilmeyen yerel türleri açıklayan değerlerini içerir.  
+Contains values that describe native unmanaged types.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -93,58 +91,58 @@ typedef enum CorNativeType {
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|Kullanımdan kalktı.|  
 |`NATIVE_TYPE_VOID`|Kullanımdan kalktı.|  
-|`NATIVE_TYPE_BOOLEAN`|TRUE sıfır olmayan ve FALSE olduğu bir 4 baytlık Boole değeri sıfırdır.|  
-|`NATIVE_TYPE_I1`|Bir işaretli 8 bit tam sayı değeri.|  
-|`NATIVE_TYPE_U1`|İmzalanmamış 8 bit tamsayı değeri.|  
-|`NATIVE_TYPE_I2`|Bir 16 bitlik işaretli tamsayı değeri.|  
-|`NATIVE_TYPE_U2`|Bir 16 bitlik işaretsiz tamsayı değeri.|  
-|`NATIVE_TYPE_I4`|Bir işaretli 32-bit tamsayı değeri.|  
-|`NATIVE_TYPE_U4`|Bir işaretsiz 32-bit tamsayı değeri.|  
-|`NATIVE_TYPE_I8`|Bir 64-bit işaretli tamsayı değeri.|  
-|`NATIVE_TYPE_U8`|İşaretsiz 64-bit tamsayı değeri.|  
-|`NATIVE_TYPE_R4`|4-bayt kayan nokta sayısal bir değer.|  
-|`NATIVE_TYPE_R8`|Bir 8-bayt kayan nokta sayısal değer.|  
+|`NATIVE_TYPE_BOOLEAN`|A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.|  
+|`NATIVE_TYPE_I1`|A signed 8-bit integer value.|  
+|`NATIVE_TYPE_U1`|An unsigned 8-bit integer value.|  
+|`NATIVE_TYPE_I2`|A signed 16-bit integer value.|  
+|`NATIVE_TYPE_U2`|An unsigned 16-bit integer value.|  
+|`NATIVE_TYPE_I4`|A signed 32-bit integer value.|  
+|`NATIVE_TYPE_U4`|An unsigned 32-bit integer value.|  
+|`NATIVE_TYPE_I8`|A signed 64-bit integer value.|  
+|`NATIVE_TYPE_U8`|An unsigned 64-bit integer value.|  
+|`NATIVE_TYPE_R4`|A 4-byte floating-point numeric value.|  
+|`NATIVE_TYPE_R8`|An 8-byte floating-point numeric value.|  
 |`NATIVE_TYPE_SYSCHAR`|Kullanımdan kalktı.|  
 |`NATIVE_TYPE_VARIANT`|Kullanımdan kalktı.|  
-|`NATIVE_TYPE_CURRENCY`|Yönetilen karşılık gelen sayısal bir COM tür <xref:System.Decimal> türü.|  
+|`NATIVE_TYPE_CURRENCY`|A numeric COM type that corresponds to the managed <xref:System.Decimal> type.|  
 |`NATIVE_TYPE_PTR`|Kullanımdan kalktı.|  
 |`NATIVE_TYPE_DECIMAL`|Kullanımdan kalktı.|  
 |`NATIVE_TYPE_DATE`|Kullanımdan kalktı.|  
-|`NATIVE_TYPE_BSTR`|COM birlikte çalışma.|  
-|`NATIVE_TYPE_LPSTR`|LPSTR dize değeri.|  
-|`NATIVE_TYPE_LPWSTR`|LPWSTR dize değeri.|  
-|`NATIVE_TYPE_LPTSTR`|LPTSTR dize değeri.|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|Sabit, sistem tarafından tanımlanan bir dize değeri.|  
+|`NATIVE_TYPE_BSTR`|COM Interop.|  
+|`NATIVE_TYPE_LPSTR`|An LPSTR string value.|  
+|`NATIVE_TYPE_LPWSTR`|An LPWSTR string value.|  
+|`NATIVE_TYPE_LPTSTR`|An LPTSTR string value.|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|A fixed, system-defined string value.|  
 |`NATIVE_TYPE_OBJECTREF`|Kullanımdan kalktı.|  
-|`NATIVE_TYPE_IUNKNOWN`|COM birlikte çalışma.|  
-|`NATIVE_TYPE_IDISPATCH`|COM birlikte çalışma.|  
-|`NATIVE_TYPE_STRUCT`|Bir yerel yapısı değeri.|  
-|`NATIVE_TYPE_INTF`|COM birlikte çalışma.|  
-|`NATIVE_TYPE_SAFEARRAY`|COM birlikte çalışma.|  
-|`NATIVE_TYPE_FIXEDARRAY`|Bir sabit uzunluklu dizi değeri.|  
-|`NATIVE_TYPE_INT`|Bir yerel 16 bitlik işaretli tamsayı değeri.|  
-|`NATIVE_TYPE_UINT`|Bir yerel 16 bitlik işaretsiz tamsayı değeri.|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|Kullanımdan kalktı.<br /><br /> NATIVE_TYPE_STRUCT kullanın.|  
-|`NATIVE_TYPE_BYVALSTR`|COM birlikte çalışma.|  
-|`NATIVE_TYPE_ANSIBSTR`|COM birlikte çalışma.|  
-|`NATIVE_TYPE_TBSTR`|COM birlikte çalışma.<br /><br /> BSTR veya ANSIBSTR platforma bağlı olarak seçin.|  
-|`NATIVE_TYPE_VARIANTBOOL`|Burada doğru -1 ve sıfırsa yanlış bir 2 baytlık Boole değeri.|  
-|`NATIVE_TYPE_FUNC`|Bir işlev işaretçisi.|  
-|`NATIVE_TYPE_ASANY`|Herhangi bir yerel tür referansı.|  
-|`NATIVE_TYPE_ARRAY`|Belirtilmeyen bir türün üyeleri olan bir dizi bir başvuru.|  
-|`NATIVE_TYPE_LPSTRUCT`|Yapı bir 32-bit tamsayı işaretçisi.|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|Özel bir Sıralayıcı yerel bir tür.<br /><br /> Bu, aşağıdaki biçimde bir dize tarafından izlenen gerekir: "Yerel tür adı/0Custom Sıralayıcı tür adı/0Optional tanımlama bilgisi/0" veya "{yerel türü GUID'i} / 0Custom sıralayıcı türü adı/0Optional tanımlama bilgisi/0"|  
-|`NATIVE_TYPE_ERROR`|COM birlikte çalışma.<br /><br /> ELEMENT_TYPE_I4 ile bu tür için VT_HRESULT eşler.|  
-|`NATIVE_TYPE_IINSPECTABLE`|Yerel `IInspectable` türü.|  
-|`NATIVE_TYPE_HSTRING`|Yerel `HString`.|  
-|`NATIVE_TYPE_MAX`|Geçersiz bir değer.|  
+|`NATIVE_TYPE_IUNKNOWN`|COM Interop.|  
+|`NATIVE_TYPE_IDISPATCH`|COM Interop.|  
+|`NATIVE_TYPE_STRUCT`|A native structure value.|  
+|`NATIVE_TYPE_INTF`|COM Interop.|  
+|`NATIVE_TYPE_SAFEARRAY`|COM Interop.|  
+|`NATIVE_TYPE_FIXEDARRAY`|A fixed-length array value.|  
+|`NATIVE_TYPE_INT`|A native 16-bit signed integer value.|  
+|`NATIVE_TYPE_UINT`|A native 16-bit unsigned integer value.|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|Kullanımdan kalktı.<br /><br /> Use NATIVE_TYPE_STRUCT.|  
+|`NATIVE_TYPE_BYVALSTR`|COM Interop.|  
+|`NATIVE_TYPE_ANSIBSTR`|COM Interop.|  
+|`NATIVE_TYPE_TBSTR`|COM Interop.<br /><br /> Select BSTR or ANSIBSTR depending on the platform.|  
+|`NATIVE_TYPE_VARIANTBOOL`|A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.|  
+|`NATIVE_TYPE_FUNC`|A function pointer.|  
+|`NATIVE_TYPE_ASANY`|A reference to any native type.|  
+|`NATIVE_TYPE_ARRAY`|A reference to an array with members of an unspecified type.|  
+|`NATIVE_TYPE_LPSTRUCT`|A 32-bit integer pointer to a structure.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|A custom marshaler native type.<br /><br /> This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"|  
+|`NATIVE_TYPE_ERROR`|COM Interop.<br /><br /> With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.|  
+|`NATIVE_TYPE_IINSPECTABLE`|A native `IInspectable` type.|  
+|`NATIVE_TYPE_HSTRING`|A native `HString`.|  
+|`NATIVE_TYPE_MAX`|An invalid value.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f0d721e2-b946-426d-8e20-9124bd04e4cb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32c402b20f9d7f0d370cfa6ec8376603efa8c3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4549789ea1af584c0850a535d9f6bb54f844ce0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777994"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443550"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles Yöntemi
-Geçerli derleme bildiriminde atıf yapılan dosyaları listeler.  
+Enumerates the files referenced in the current assembly manifest.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,32 +38,32 @@ HRESULT EnumFiles (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [out içinde] Numaralandırıcı bir işaretçi. Bu, bu yöntemin ilk çağrı için null bir değer olmalıdır.  
+ [in, out] A pointer to the enumerator. This must be a null value for the first call of this method.  
   
  `rFiles`  
- [out] Depolamak için kullanılan bir dizi `mdFile` meta veri belirteçleri.  
+ [out] The array used to store the `mdFile` metadata tokens.  
   
  `cMax`  
- [in] En fazla `mdFile` yerleştirilebilir belirteçleri `rFiles`.  
+ [in] The maximum number of `mdFile` tokens that can be placed in `rFiles`.  
   
  `pcTokens`  
- [out] Sayısını `mdFile` belirteçleri gerçekten yerleştirilen `rFiles`.  
+ [out] The number of `mdFile` tokens actually placed in `rFiles`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak hiçbir belirteçleri vardır. Bu durumda, `pcTokens` sıfır olarak ayarlanır.|  
+|`S_OK`|`EnumFiles` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

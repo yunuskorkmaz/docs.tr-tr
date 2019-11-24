@@ -1,5 +1,5 @@
 ---
-title: Icorprofilercallback::appdomainshutdownstarted yöntemi
+title: ICorProfilerCallback::AppDomainShutdownStarted Method
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerCallback.AppDomainShutdownStarted
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9d1cf182eaf6f245baa5d898bac3ca7d3190234
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bbb41f8fd3ac37f1c21fe8b4f6159e3d303777c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763097"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445186"
 ---
-# <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>Icorprofilercallback::appdomainshutdownstarted yöntemi
-Profil Oluşturucu, bir uygulama etki alanı bir işlemden boşaltılıyor bildirir.  
+# <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted Method
+Notifies the profiler that an application domain is being unloaded from a process.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +34,19 @@ HRESULT AppDomainShutdownStarted(
   
 ## <a name="parameters"></a>Parametreler  
  `appDomainId`  
- [in] Uygulamanın derlemelerin saklandığı etki alanını tanımlar.  
+ [in] Identifies the domain in which the application's assemblies are stored.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değerini `appDomainId` sonra herhangi bir bilgi isteği için geçerli değil `AppDomainShutdownStarted` yöntemi döndürür; bu uygulama etki alanı hakkında bilgi almak için profil oluşturucunun son şans budur.  
+ The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

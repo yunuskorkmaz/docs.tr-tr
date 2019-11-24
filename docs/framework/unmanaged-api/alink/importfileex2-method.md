@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 02c789fd-16fc-48c6-9619-56e87e2a37ca
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a1c950e9a6e53e04cc0f2e52a140612562b32ff1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7e270dbfc63c03e77cb4b0694296e48c2035b8a6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776974"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445695"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2 Yöntemi
-Derlemeleri ve ilişkisiz modülleri içeri aktarır. Bu yöntem [ImportFile yöntemine](importfile-method.md)benzer, ancak içeri aktarılan dosya diskte mevcut olmasa bile çalışıyor.  
+Imports assemblies and unbound modules. This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,34 +41,34 @@ HRESULT ImportFileEx2(
   
 ## <a name="parameters"></a>Parametreler  
  `pszFilename`  
- İçeri aktarılacak dosyanın adı.  
+ Name of file to be imported.  
   
  `pszTargetName`  
- Hedef dosyanın isteğe bağlı adı.  
+ Optional name of target file.  
   
  `pAssemblyScopeIn`  
- İsteğe bağlı içeri aktarma kapsamı [IMetaDataAssemblyImport arabirim](../metadata/imetadataassemblyimport-interface.md) arabirimi.  
+ Optional import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.  
   
  `fSmartImport`  
- TRUE ise ImportTypes kullanılır, aksi takdirde içeri aktarma işlemi el ile gerçekleştirilmelidir.  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `dwOpenFlags`  
- [OpenScope metoduna](../metadata/imetadatadispenser-openscope-method.md)geçirilecek bayraklar.  
+ Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- Derleme veya dosya için benzersiz KIMLIĞI alır.  
+ Receives unique ID for the assembly or file.  
   
  `ppAssemblyScope`  
- Derleme içeri aktarma kapsamı [IMetaDataAssemblyImport Arabirimi](../metadata/imetadataassemblyimport-interface.md) arabirimini alır. Dosya bir derleme değilse NULL olabilir.  
+ Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Can be NULL if the file is not an assembly.  
   
  `pdwCountOfScopes`  
- İçeri aktarılan dosya ve/veya kapsamların sayısını alır.  
+ Receives the number of files and/or scopes imported.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

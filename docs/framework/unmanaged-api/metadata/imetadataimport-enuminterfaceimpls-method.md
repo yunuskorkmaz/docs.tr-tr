@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d0f94949cdc82cdecd52f003f3400c43014fabf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4c819bff50e6644a733374e9863d670d3323ee68
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780458"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449528"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls Yöntemi
-Tüm arabirimleri tarafından belirtilen uygulanan numaralandırır `TypeDef`. 
+Enumerates all interfaces implemented by the specified `TypeDef`. 
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,39 +39,39 @@ HRESULT EnumInterfaceImpls (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [out içinde] Numaralandırıcı bir işaretçi.  
+ [in, out] A pointer to the enumerator.  
   
  `td`  
- [in] Arabirim uygulamaları gösteren, MethodDef sıralanması belirteçleridir TypeDef belirteç.  
+ [in] The token of the TypeDef whose MethodDef tokens representing interface implementations are to be enumerated.  
   
  `rImpls`  
- [out] Dizi MethodDef simgeleri depolamak için kullanılır.  
+ [out] The array used to store the MethodDef tokens.  
   
  `cMax`  
- [in] En büyük boyutunu `rImpls` dizisi.  
+ [in] The maximum size of the `rImpls` array.  
   
  `pcImpls`  
- [out] Döndürülen belirteç gerçek sayısını `rImpls`.  
+ [out] The actual number of tokens returned in `rImpls`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak hiçbir MethodDef belirteçleri vardır. Bu durumda, `pcImpls` sıfır olarak ayarlanır.|  
+|`S_OK`|`EnumInterfaceImpls` returned successfully.|  
+|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcImpls` is set to zero.|  
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sabit bir koleksiyonunu döndürür `mdInterfaceImpl` belirteçler tarafından belirtilen uygulanan her arabirim için `TypeDef`. Arabirimi belirteçleri, arabirimler belirtilmiş sırayla döndürülür (aracılığıyla `DefineTypeDef` veya `SetTypeDefProps`). Özellikler döndürülen `mdInterfaceImpl` belirteçleri kullanılarak sorgulanabilir [Getınterfaceımplprops](imetadataimport-getinterfaceimplprops-method.md).
+The enumeration returns a collection of `mdInterfaceImpl` tokens for each interface implemented by the specified `TypeDef`. Interface tokens are returned in the order the interfaces were specified (through `DefineTypeDef` or `SetTypeDefProps`). Properties of the returned `mdInterfaceImpl` tokens can be queried using [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

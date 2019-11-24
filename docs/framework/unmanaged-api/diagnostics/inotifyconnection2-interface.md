@@ -14,27 +14,25 @@ helpviewer_keywords:
 ms.assetid: 9868cfb3-dd51-4812-bca9-171d7829afe9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7f61f8c77799bbc7a993683421eeee4fd7277d4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d116d2ce986dd163ee7abbdd14002da690893ea
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697712"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445485"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 Arabirimi
-Kaydetme ve bağlantı bildirim kaynağı kaydını kaldırmak için kullanılan yöntemler bildirir.  
+Declares methods for registering and unregistering a connection notification source.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[RegisterNotifySource Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Belirtilen bildirim kaynak nesnesi yükler.|  
-|[UnregisterNotifySource Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Belirtilen bildirim kaynak nesnesi bağlantıyı kaldırır.|  
+|[RegisterNotifySource Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Installs a specified notification source object.|  
+|[UnregisterNotifySource Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Removes a specified notification source object from the connection.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

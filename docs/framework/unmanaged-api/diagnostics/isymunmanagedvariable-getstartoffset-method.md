@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 63021fc1-9c2d-4788-811f-fe8ca077206a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3dbe5b4e57f21970b518e4974707175f4bdcf02a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38c4819a375cdd94ee31c2744871c600d8de0b40
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778223"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446009"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>ISymUnmanagedVariable::GetStartOffset Yöntemi
-Bu değişkenin içinde üst başlangıç uzaklığını alır. Bu kapsam içinde yerel bir değişken ise, başlangıç uzaklığı kapsam için tanımlanan uzaklık içinde kalacak.  
+Gets the start offset of this variable within its parent. If this is a local variable within a scope, the start offset will fall within the offsets defined for the scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,13 +34,13 @@ HRESULT GetStartOffset(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bir işaretçi bir `ULONG32` , başlangıç uzaklığını alır.  
+ [out] A pointer to a `ULONG32` that receives the start offset.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

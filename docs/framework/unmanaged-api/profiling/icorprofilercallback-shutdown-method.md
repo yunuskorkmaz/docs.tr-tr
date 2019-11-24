@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ea194f0-a331-4855-a2ce-37393b8e5f84
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d63dd911a5f674a3ce0b02ec78de443c7aebf84
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63e41df8af85d94df068526ef69708687b341e78
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747165"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446936"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown Yöntemi
-Profil Oluşturucu, uygulamanın kapanacağını bildirir.  
+Notifies the profiler that the application is shutting down.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,20 +32,20 @@ HRESULT Shutdown();
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Profil Oluşturucu kodu güvenli bir şekilde yöntemlerine çağrılamıyor [Icorprofilerınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) sonra arabirim `Shutdown` yöntemi çağrılır. Çağrıları `ICorProfilerInfo` yöntemleri sonra tanımsız davranışa neden `Shutdown` yöntemi döndürür. Sabit belirli olaylar kapatıldıktan sonra yine de oluşabilir. Profil Oluşturucu hemen bu oluştuğunda döndürülecek ilgileniriz.  
+ The profiler code cannot safely call methods of the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface after the `Shutdown` method is called. Any calls to `ICorProfilerInfo` methods result in undefined behavior after the `Shutdown` method returns. Certain immutable events may still occur after shutdown; the profiler should take care to return immediately when this occurs.  
   
- `Shutdown` Yöntemin çağrılacağı, profili oluşturulan yönetilen uygulama yönetilen kod başladıysanız (diğer bir deyişle, ilk çerçeve işlem yığın üzerinde yönetilen). Uygulamanın yönetilmeyen kod olarak başlatıldı, ancak daha sonra yönetilen koda Atlanan, dolayısıyla örneği ortak dil çalışma zamanı (CLR), ardından oluşturma `Shutdown` çağrılmaz. Bu durumlarda, kitaplıkta profil oluşturucu içermelidir bir `DllMain` DLL_PROCESS_DETACH kullanan yordamı değeri tüm kaynakları serbest bırakın ve izlemeleri ve disk temizleme gibi verileri temizleme işlemini gerçekleştirin.  
+ The `Shutdown` method will be called only if the managed application that is being profiled started as managed code (that is, the initial frame on the process stack is managed). If the application started as unmanaged code but later jumped into managed code, thereby creating an instance of the common language runtime (CLR), then `Shutdown` will not be called. For these cases, the profiler should include in its library a `DllMain` routine that uses the DLL_PROCESS_DETACH value to free any resources and perform clean-up processing of its data, such as flushing traces to disk and so on.  
   
- Genel olarak, Profil Oluşturucu ile beklenmeyen kapatma başa gerekir. Örneğin, bir işlem Win32's durdu `TerminateProcess` yöntemi (Winbase.h içinde bildirilen). Diğer durumlarda, belirli yönetilen iş parçacıkları (arka plan iş parçacıkları) sıralı yok etme iletileri için bunları sunmakla olmadan CLR durdurulur.  
+ In general, the profiler must cope with unexpected shutdowns. For example, a process might be halted by Win32's `TerminateProcess` method (declared in Winbase.h). In other cases, the CLR will halt certain managed threads (background threads) without delivering orderly destruction messages for them.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

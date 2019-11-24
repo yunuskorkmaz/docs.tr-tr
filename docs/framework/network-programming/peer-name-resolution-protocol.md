@@ -2,53 +2,56 @@
 title: Eş Adı Çözümleme Protokolü
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 5e301620008f1aaf64e1c1467d6db8bcdcb8f6be
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c8b7b2190349323bf212d816a77f5f7810f6ca2c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047513"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428216"
 ---
 # <a name="peer-name-resolution-protocol"></a>Eş Adı Çözümleme Protokolü
-Eşler arası ortamlarda, eşler, her birinin ağ konumlarını (adresler, protokoller ve bağlantı noktaları) adlarla veya diğer tanımlayıcı türlerinden çözümlemek için belirli ad çözümleme sistemlerini kullanır. Geçmişte, eş adı çözümlemesi, etki alanı adı sistemi (DNS) içindeki diğer eksikler tarafından da doğal olarak geçici bağlantı tarafından karmaşıktır.  
+In peer-to-peer environments, peers use specific name resolution systems to resolve each other's network locations (addresses, protocols, and ports) from names or other types of identifiers. In the past, peer name resolution has been complicated by the inherently transient connectivity as well as other shortcomings within the Domain Name System (DNS).  
   
- Microsoft® Windows® Eşler arası ağ platformu, ilk olarak Windows XP için geliştirilmiş ve ardından ' de yükseltilen eş adı çözümleme Protokolü (PNRP), güvenli, ölçeklenebilir ve dinamik bir ad kaydı ve ad çözümleme protokolü ile bu sorunu çözer. Windows Vista™. PNRP geleneksel ad çözümleme sistemlerinden çok farklı çalışır ve uygulama geliştiricileri için heyecan verici yeni olanaklar sunar.  
+ The Microsoft® Windows® Peer-to-Peer Networking platform solves this problem with the Peer Name Resolution Protocol (PNRP), a secure, scalable, and dynamic name registration and name resolution protocol first developed for Windows XP and then upgraded in Windows Vista™. PNRP works very differently from traditional name resolution systems, opening up exciting new possibilities for application developers.  
   
- PNRP ile, eş adları makineye veya makinedeki ayrı uygulamalara veya hizmetlere uygulanabilir. Eş adı çözümlemesi bir adres, bağlantı noktası ve büyük olasılıkla genişletilmiş bir yük içerir. Bu sistemin avantajları arasında hata toleransı, performans sorunu olmaması ve hiçbir şekilde eski adresleri döndürmeyecek ad çözümlemeleri dahildir; Protokolü mobil kullanıcıları bulmaya yönelik harika bir çözüm haline getirme.  
+ With PNRP, peer names can be applied to the machine, or individual applications or services on the machine. A peer name resolution includes an address, port, and possibly an extended payload. Benefits of this system include fault tolerance, no bottlenecks, and name resolutions that will never return stale addresses; making the protocol an excellent solution for locating mobile users.  
   
- Güvenlik açısından, eş adları güvenli (korumalı) veya güvenli olmayan (korumasız) olarak yayımlanabilir. PNRP güvenli eş adlarını yanıltmaya karşı korumak için ortak anahtar şifrelemeyi kullanır; Her iki bilgisayar ve hizmet da PNRP ile adlandırılabilir.  
+ In terms of security, peer names can be published as secured (protected) or unsecured (unprotected). PNRP uses public key cryptography to protect secure peer names against spoofing; both computers and services can be named with PNRP.  
   
-Eş adı çözümleme protokolü aşağıdaki özellikleri gösterir:  
+The Peer Name Resolution Protocol demonstrates the following properties:  
   
-- Dağıtılmış ve neredeyse tamamen sunucusuz. Sunucular yalnızca önyükleme işlemi için gereklidir.  
+- Distributed and almost entirely serverless. Servers are only required for the bootstrapping process.  
   
-- Üçüncü tarafların katılımı olmadan güvenli ad yayını. DNS ad yayınının aksine, PNRP ad yayını anında ve finans maliyeti olmadan olur.  
+- Secure name publication without the involvement of third parties. Unlike DNS name publication, PNRP name publication is instantaneous and without financial cost.  
   
-- PNRP, eski adreslerin çözümlenmesini önleyen gerçek zamanlı olarak güncelleştirilir.  
+- PNRP updates in real-time, which prevents the resolution of stale addresses.  
   
-- PNRP aracılığıyla adların çözümlenmesi bilgisayarların ötesinde de hizmetler için ad çözümlemesine izin verir.  
+- The resolution of names via PNRP extends beyond computers by also allowing name resolution for services.  
   
-## <a name="the-systemnetpeertopeer-namespace"></a>System .net. PeerToPeer ad alanı  
+## <a name="the-systemnetpeertopeer-namespace"></a>The System.Net.PeerToPeer namespace  
   
-- PNRP işlevselliği .NET Framework sürüm 3,5 içinde <xref:System.Net.PeerToPeer> ad alanı tarafından tanımlanır. Kullanılabilir bir PNRP hizmeti ile eş adlarını kaydetmek ve çözümlemek için kullanılabilecek bir tür kümesi sağlar.  
+- PNRP functionality is defined by the <xref:System.Net.PeerToPeer> namespace within the .NET Framework version 3.5. It provides a set of types that can be used to register and resolve peer names with an available PNRP service.  
   
-- (PNRP ve özel eşdüzey çözümleyiciler <xref:System.ServiceModel.PeerResolvers> ad alanında belirtilen türler kullanılarak oluşturulabilir ve oluşturulabilir.)  
+- (PNRP and custom peer resolvers can be created and instantiated using the types provided in the <xref:System.ServiceModel.PeerResolvers> namespace.)  
   
-- Kullanılabilir bir PNRP hizmeti ile adları kaydettirmek ve çözümlemek için kullanılan temel türler aşağıdaki gibidir:  
+- The basic types used to register and resolve names with an available PNRP service are as follows:  
   
-- <xref:System.Net.PeerToPeer.Cloud>: Kapsamı dahil olmak üzere kullanılabilir bir PNRP bulutunu tanımlayan bilgileri tanımlar.  
+- <xref:System.Net.PeerToPeer.Cloud>: Defines the information describing an available PNRP cloud, including its scope.  
   
-- <xref:System.Net.PeerToPeer.PeerName>: Bir bulut içindeki bir eşi kaydettirmek ve daha sonra çözümlemek için kullanılabilen bir eş adı tanımlar.  
+- <xref:System.Net.PeerToPeer.PeerName>: Defines a peer name that can be used to register and subsequently resolve a peer within a cloud.  
   
-- <xref:System.Net.PeerToPeer.PeerNameRecord>: , Eşin iletişim kurulabileceği ağ uç noktalarını içeren bir eş için kayıt bilgilerini içeren, PNRP bulutu 'ndaki kaydı tanımlar.  
+- <xref:System.Net.PeerToPeer.PeerNameRecord>: Defines the record in PNRP cloud that contains the registration information for a peer, which includes the network endpoints at which the peer can be contacted.  
   
-- <xref:System.Net.PeerToPeer.PeerNameRegistration>: Eş adı kaydını başlatma ve durdurma yöntemleri de dahil olmak üzere bir eş adı için kayıt işlemini tanımlar.  
+- <xref:System.Net.PeerToPeer.PeerNameRegistration>: Defines the registration process for a peer name, including methods to start and stop peer name registration.  
   
-- <xref:System.Net.PeerToPeer.PeerNameResolver>: Çözüm için hem zaman uyumlu hem de zaman uyumsuz yöntemler de dahil olmak üzere bir eş adı ağ uç noktasına çözümleme işlemini tanımlar.  
+- <xref:System.Net.PeerToPeer.PeerNameResolver>: Defines the process for resolving a peer name to its network endpoint(s), including both synchronous and asynchronous methods for resolution.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>
 - [Ağ Programlama Örnekleri](network-programming-samples.md)
-- [PeerToPeer Technology örneği](https://go.microsoft.com/fwlink/?LinkID=179571)
+
+<!-- to-do: review sample links
+- [PeerToPeer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179571)
+-->

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: decd4f46-f3b2-466f-9501-e74f2b86b846
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c402dcda79f013b19b091c6309b3d71951018a18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 23d293a87112c62cb2127b435faeca258a7de226
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776360"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444229"
 ---
 # <a name="assemblyrefflags-enumeration"></a>AssemblyRefFlags Numaralandırması
-Bir bütünleştirilmiş kod başvurusu özellikleri açıklanmaktadır değerlerini içerir.  
+Contains values that describe features of an assembly reference.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,14 +36,14 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`arfFullOriginator`|Bütünleştirilmiş kod başvurusu derlemenin yayımcı hakkında tam, bütün bilgileri içerdiğini belirtir.|  
+|`arfFullOriginator`|Specifies that the assembly reference contains full, unhashed information about the publisher of the assembly.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

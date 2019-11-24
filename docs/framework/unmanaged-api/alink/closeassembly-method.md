@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f66a43bc-a5c5-4190-acbe-63fd27640634
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b7828c86018724bb934de99cab4617f9885fdca6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 70dca19075d8c896408ec78f89549b0c539280de
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787612"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446572"
 ---
 # <a name="closeassembly-method"></a>CloseAssembly Yöntemi
-Derleme işlemlerini sonlandırır. Yeni bir derlemeye veya ilişkisiz modüle başlamadan önce bu yöntemi çağırın.  
+Finalizes assembly operations. Call this method before beginning a new assembly or unbound module.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,13 +35,13 @@ HRESULT CloseAssembly(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Derlemenin KIMLIĞI.  
+ ID of the assembly.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

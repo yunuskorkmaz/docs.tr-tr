@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3cea59d-7622-4323-897a-0a464c40f77f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9ff680b337334bdb9a3994daaebf92a966e2fe4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 361f08f8c787ad4c1288c56fb1bdb4d5136933e7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775184"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442695"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>ICorProfilerModuleEnum::Next Yöntemi
-Belirtilen bitişik modül sayısı dizideki geçerli konum Numaralandırıcının başlayarak modüllerinin sıralı bir koleksiyonu alır.  
+Gets the specified number of contiguous modules from a sequential collection of modules, starting at the enumerator's current position in the sequence.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,30 +36,30 @@ HRESULT Next([in]  ULONG      celt,
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Alınacak modül sayısı.  
+ [in] The number of modules to retrieve.  
   
  `ids`  
- [out] Bir dizi `ModuleID` değerler, her biri alınan bir modülü temsil eder.  
+ [out] An array of `ModuleID` values, each of which represents a retrieved module.  
   
  `pceltFetched`  
- [out] Gerçekte döndürülen öğe sayısına bir işaretçi `ids` dizisi.  
+ [out] A pointer to the number of elements actually returned in the `ids` array.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
+ This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`celt` öğeleri döndürülmedi.|  
-|S_FALSE|Az `celt` öğeleri döndürüldü, numaralandırma tamamlandığını gösterir.|  
+|S_OK|`celt` elements were returned.|  
+|S_FALSE|Fewer than `celt` elements were returned, which indicates that the enumeration is complete.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

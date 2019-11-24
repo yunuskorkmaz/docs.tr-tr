@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2f3d74830de0541ec789081c47352beca8d81d74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4faf8646b81f92ddf65eff15fdc610d275b37864
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780705"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440013"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents Yöntemi
-Olay tanımı belirteçleri TypeDef belirteç numaralandırır.  
+Enumerates event definition tokens for the specified TypeDef token.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,35 +39,35 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [out içinde] Numaralandırıcı bir işaretçi.  
+ [in, out] A pointer to the enumerator.  
   
  `td`  
- [in] Numaralandırılacak olan olay tanımlarına olan TypeDef simgesi.  
+ [in] The TypeDef token whose event definitions are to be enumerated.  
   
  `rEvents`  
- [out] Döndürülen olaylar dizisi.  
+ [out] The array of returned events.  
   
  `cMax`  
- [in] En büyük boyutunu `rEvents` dizisi.  
+ [in] The maximum size of the `rEvents` array.  
   
  `pcEvents`  
- [out] Döndürülen olaylar gerçek sayısını `rEvents`.  
+ [out] The actual number of events returned in `rEvents`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak olay yok. Bu durumda, `pcEvents` sıfırdır.|  
+|`S_OK`|`EnumEvents` returned successfully.|  
+|`S_FALSE`|There are no events to enumerate. In that case, `pcEvents` is zero.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

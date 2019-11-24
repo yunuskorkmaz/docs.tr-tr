@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbb21e67-712b-49e7-a27c-a1e73ffd46c5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf9f6cc1e568463f2ca9afa38c10f50d0c247013
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8c5dd263401002deaee3d21f1e41b41a29faec2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755344"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427302"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps Yöntemi
-Belirtilen belirteç tarafından temsil edilen genel parametre ile ilişkili meta verileri alır.  
+Gets the metadata associated with the generic parameter represented by the specified token.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,37 +42,37 @@ HRESULT GetGenericParamProps (
   
 ## <a name="parameters"></a>Parametreler  
  `gp`  
- [in] Genel parametre meta verileri döndürülecek temsil eden belirteç.  
+ [in] The token that represents the generic parameter for which to return metadata.  
   
  `pulParamSeq`  
- [out] Sıralı konumunu `Type` üst Oluşturucusu veya yöntem parametresi.  
+ [out] The ordinal position of the `Type` parameter in the parent constructor or method.  
   
  `pdwParamFlags`  
- [out] Değerini [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) açıklayan sabit listesi `Type` genel parametresi için.  
+ [out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.  
   
  `ptOwner`  
- [out] Parametre sahibi temsil eden bir tür tanımı veya MethodDef belirteci.  
+ [out] A TypeDef or MethodDef token that represents the owner of the parameter.  
   
  `reserved`  
- [out] Sonra genişletilebilmek için ayrılmış.  
+ [out] Reserved for future extensibility.  
   
  `wzName`  
- [out] Genel parametre adı.  
+ [out] The name of the generic parameter.  
   
  `cchName`  
- [in] Boyutu `wzName` arabellek.  
+ [in] The size of the `wzName` buffer.  
   
  `pchName`  
- [out] Geniş karakterler, adı döndürülen boyutu.  
+ [out] The returned size of the name, in wide characters.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

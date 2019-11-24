@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 576fb8632818a6b8ffc3e2c0acc50eaafd074de3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d4690cb6adedc77717e577d409cb52b18b1b5ca
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766972"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443839"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention Numaralandırması
-Yönetilen kodda yapılan çağrı kuralları türlerini açıklayan değerlerini içerir.  
+Contains values that describe the types of calling conventions that are made in managed code.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -54,26 +52,26 @@ typedef enum CorCallingConvention
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Varsayılan çağırma kuralını belirtir.|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|Yöntem değişik sayıda parametreyi alır gösterir.|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|Arama için bir alan olduğunu gösterir.|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Arama için yerel bir yöntem olduğunu gösterir.|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Arama için bir özellik olduğunu gösterir.|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Çağrı yönetilmeyen olduğunu gösterir.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Bir genel yöntem örnekleme gösterir.|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Bir 64-bit PInvoke çağrısına değişken sayıda parametre isteyen bir yöntemi gösterir.|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|Geçersiz 4-bit bir değer tanımlar.|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|Çağırma kuralı alt dört bitleri tarafından açıklanan gösterir.|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Üst bit açıklayan gösteren bir `this` parametresi.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Bildiren bir `this` parametredir imzasında açıkça açıklanmıştır.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Açık bir tür bağımsız değişkeni sayısına sahip bir genel metot imzasını gösterir. Bu, bir sıradan parametre sayısı önce gelir.|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indicates a default calling convention.|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|Indicates that the method takes a variable number of parameters.|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indicates that the call is to a field.|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indicates that the call is to a local method.|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indicates that the call is to a property.|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indicates that the call is unmanaged.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indicates a generic method instantiation.|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|Describes an invalid 4-bit value.|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|Indicates that the calling convention is described by the bottom four bits.|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indicates that the top bit describes a `this` parameter.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indicates that a `this` parameter is explicitly described in the signature.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indicates a generic method signature with an explicit number of type arguments. This precedes an ordinary parameter count.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

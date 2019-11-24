@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad276f3f-b303-46ac-97e0-66a377adaa4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bd138d0418bb9667a86419d719bf0b95a4bb1b12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bee7db61beb9ed8c00cf584924be690a67d92eac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777119"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446956"
 ---
 # <a name="importfileex-method"></a>ImportFileEx Yöntemi
-Belirtilen derleme veya ilişkisiz modül içeri aktarır.  
+Imports indicated assembly or unbound module.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,31 +40,31 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>Parametreler  
  `pszFilename`  
- İçinden içeri aktarılacak dosyanın tam adı.  
+ Fully qualified name of file from which to import.  
   
  `pszTargetName`  
- Hedef dosyanın isteğe bağlı adı.  
+ Optional name of target file.  
   
  `fSmartImport`  
- TRUE ise ImportTypes kullanılır, aksi takdirde içeri aktarma işlemi el ile gerçekleştirilmelidir.  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `dwOpenFlags`  
- [OpenScope metoduna](../metadata/imetadatadispenser-openscope-method.md)geçirilecek bayraklar.  
+ Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- İçeri aktarılmakta olan dosyanın KIMLIĞINI alır.  
+ Receives ID of the file being imported.  
   
  `ppAssemblyScope`  
- Derleme içeri aktarma kapsamı [IMetaDataAssemblyImport Arabirimi](../metadata/imetadataassemblyimport-interface.md) arabirimini alır. Dosya bir derleme değilse NULL olarak ayarlanır.  
+ Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
   
  `pdwCountOfScopes`  
- İçeri aktarılan dosya ve/veya kapsamların sayısını alır.  
+ Receives count of imported files and/or scopes.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

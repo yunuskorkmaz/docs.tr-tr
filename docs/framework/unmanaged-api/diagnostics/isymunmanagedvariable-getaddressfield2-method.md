@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f25b294-72b6-4882-a49b-6c9d364b6008
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 463416165d2dbd7724d5cf0d29e40d8243ade34b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 794615994cd11ee00c2a381b9ba883cebb8233a0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778313"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446118"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a>ISymUnmanagedVariable::GetAddressField2 Yöntemi
-Bu değişken için ikinci bir adres alanı alır. Anlamını adresi türüne bağlıdır.  
+Gets the second address field for this variable. Its meaning depends on the kind of address.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,13 +34,13 @@ HRESULT GetAddressField2(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bir işaretçi bir `ULONG32` , ikinci bir adres alanı alır.  
+ [out] A pointer to a `ULONG32` that receives the second address field.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e5d03cb-97c9-4ff4-8dbd-17d94ee374d3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 38c0937804eb82d1c96a605b55a00784ba58fe13
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 44d1776e2902988353ef4fd58aca20e56203b9da
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781821"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442846"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions Numaralandırması
-Geçerli kapsam dışında bir derleme içeri aktarma sırasında davranışını denetleyen bayrak değerlerini içerir.  
+Contains flag values that control the behavior during importation of an assembly outside the current scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -48,22 +46,22 @@ typedef enum CorImportOptions {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`MDImportOptionDefault`|Silinmiş kayıtlar atlamak için varsayılan davranış gösterir.|  
-|`MDImportOptionAll`|Tüm meta veriler listelenmiş olduğunu gösterir.|  
-|`MDImportOptionAllTypeDefs`|Silinmiş olanlar da dahil olmak üzere tüm tür tanımları, listelenmiş olduğunu gösterir.|  
-|`MDImportOptionAllMethodDefs`|Silinmiş olanlar da dahil olmak üzere tüm MethodDefs listelenmiş olduğunu gösterir.|  
-|`MDImportOptionAllFieldDefs`|Silinmiş olanlar da dahil olmak üzere tüm FieldDefs listelenmiş olduğunu gösterir.|  
-|`MDImportOptionAllProperties`|Silinmiş olanlar da dahil olmak üzere tüm PropertyDefs listelenmiş olduğunu gösterir.|  
-|`MDImportOptionAllEvents`|Silinmiş olanlar da dahil olmak üzere tüm EventDefs listelenmiş olduğunu gösterir.|  
-|`MDImportOptionAllCustomAttributes`|Silinmiş olanlar da dahil olmak üzere tüm özel öznitelikleri listelenmiş olduğunu gösterir.|  
-|`MDImportOptionAllExportedTypes`|Silinmiş olanlar da dahil olmak üzere dışarı aktarılan tüm türler listelenmiş olduğunu gösterir.|  
+|`MDImportOptionDefault`|Indicates the default behavior, which is to skip deleted records.|  
+|`MDImportOptionAll`|Indicates that all metadata should be enumerated.|  
+|`MDImportOptionAllTypeDefs`|Indicates that all TypeDefs, including deleted ones, should be enumerated.|  
+|`MDImportOptionAllMethodDefs`|Indicates that all MethodDefs, including deleted ones, should be enumerated.|  
+|`MDImportOptionAllFieldDefs`|Indicates that all FieldDefs, including deleted ones, should be enumerated.|  
+|`MDImportOptionAllProperties`|Indicates that all PropertyDefs, including deleted ones, should be enumerated.|  
+|`MDImportOptionAllEvents`|Indicates that all EventDefs, including deleted ones, should be enumerated.|  
+|`MDImportOptionAllCustomAttributes`|Indicates that all custom attributes, including deleted ones, should be enumerated.|  
+|`MDImportOptionAllExportedTypes`|Indicates that all exported types, including deleted ones, should be enumerated.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

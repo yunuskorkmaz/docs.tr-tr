@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f4c2cd88-ac28-4bad-9ab1-2cf9d2de41e6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7f182dad17e28cc5d19393bb4e13d747e34249fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1b1c557eea62cae6d2ad09303441e4635abc899
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782474"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437842"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>IMetaDataImport::FindTypeDefByName Yöntemi
-TypeDef meta veriler için bir işaretçi için belirteç alır <xref:System.Type> belirtilen ada sahip.  
+Gets a pointer to the TypeDef metadata token for the <xref:System.Type> with the specified name.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +37,22 @@ HRESULT FindTypeDefByName
   
 ## <a name="parameters"></a>Parametreler  
  `szTypeDef`  
- [in] TypeDef belirteci almak üzere tür adı.  
+ [in] The name of the type for which to get the TypeDef token.  
   
  `tkEnclosingClass`  
- [in] Kapsayan sınıfı temsil eden bir tür tanımı veya TypeRef belirteci. Bulunacak tür, iç içe geçmiş bir sınıf değil, bu değeri NULL olarak ayarlayın.  
+ [in] A TypeDef or TypeRef token representing the enclosing class. If the type to find is not a nested class, set this value to NULL.  
   
  `ptd`  
- [out] Eşleşen TypeDef belirteç için bir işaretçi.  
+ [out] A pointer to the matching TypeDef token.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

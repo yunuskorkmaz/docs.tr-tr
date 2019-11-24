@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3d7cf29-1414-49e6-8aae-9b3283c4f5f0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 180eb1a3129cfcd96668ecfee11947c15c5e0915
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4bfad8b985a8ef059031464e99a8004842b276c0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776907"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445577"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps Yöntemi
-Derleme düzeyi özellikleri atar.  
+Assigns assembly-level properties.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +37,22 @@ HRESULT SetAssemblyProps(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Derlemenin KIMLIĞI.  
+ ID of the assembly.  
   
  `FileToken`  
- Özelliği tanımlayan dosya. İlişkisiz bir netmodule belirtmezse `AssemblyID` null olabilir.  
+ File that defines the property. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
   
  `Option`  
- Değiştirme seçeneğini belirtir.  
+ Indicates the option to modify.  
   
  `Value`  
- Seçeneğin yeni değeri.  
+ New value of the option.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

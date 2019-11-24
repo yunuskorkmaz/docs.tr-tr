@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 831f4665967f2cd07a7ebb4de750fbe456a82261
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ad582fc2fd1bd1d2fc9d5a0d483fdb3a51309a10
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781680"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436497"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags Numaralandırması
-Bildirim dosyaları açma bağlı meta veri davranışını denetleyen bayrak değerlerini içerir.  
+Contains flag values that control metadata behavior upon opening manifest files.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -52,26 +50,26 @@ typedef enum CorOpenFlags
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ofRead`|Yalnızca okumak için dosyanın açılması gerektiğini gösterir.|  
-|`ofWrite`|Dosya yazma için açılması gerektiğini gösterir.<br /><br /> Kullanıyorsanız `ofWrite` ne zaman bayrağı da geçmesi bir .winmd dosyası açılırken, `ofNoTransform` bayrağı.|  
-|`ofReadWriteMask`|Okuma ve yazma için bir maske.|  
-|`ofCopyMemory`|Dosya belleğe okunmalıdır gösterir. Meta verileri kendi kopyalama korumanız gerekir.|  
-|`ofCacheImage`|Kullanımdan kalktı. Bu bayrak göz ardı edilir.|  
-|`ofManifestMetadata`|Kullanımdan kalktı. Bu bayrak göz ardı edilir.|  
-|`ofReadOnly`|Okuma ve bu dosyanın açılması gerektiğini belirten bir çağrı `QueryInterface` için bir [Imetadataemit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) yapılamaz.|  
-|`ofTakeOwnership`|Bellek yapılan bir çağrı kullanılarak ayrıldı gösterir [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) ve meta verileri tarafından serbest bırakılacak.|  
-|`ofNoTypeLib`|Kullanımdan kalktı. Bu bayrak göz ardı edilir.|  
-|`ofNoTransform`|Otomatik dönüştürmeler .winmd dosyaları devre dışı olduğunu gösterir. Diğer bir deyişle, bir .NET Framework türü için bir Windows çalışma zamanı tür projeksiyonu devre dışı bırakılmalıdır. Daha fazla bilgi için [Windows çalışma zamanı ve CLR - altındaki Seçenekler .NET ve Windows çalışma zamanı ile](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
-|`ofReserved1`|İç kullanım için ayrılmıştır.|  
-|`ofReserved2`|İç kullanım için ayrılmıştır.|  
-|`ofReserved`|İç kullanım için ayrılmıştır.|  
+|`ofRead`|Indicates that the file should be opened for reading only.|  
+|`ofWrite`|Indicates that the file should be opened for writing.<br /><br /> If you are using the `ofWrite` flag when opening a .winmd file, you should also pass the `ofNoTransform` flag.|  
+|`ofReadWriteMask`|A mask for reading and writing.|  
+|`ofCopyMemory`|Indicates that the file should be read into memory. Metadata should maintain its own copy.|  
+|`ofCacheImage`|Kullanımdan kalktı. This flag is ignored.|  
+|`ofManifestMetadata`|Kullanımdan kalktı. This flag is ignored.|  
+|`ofReadOnly`|Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.|  
+|`ofTakeOwnership`|Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.|  
+|`ofNoTypeLib`|Kullanımdan kalktı. This flag is ignored.|  
+|`ofNoTransform`|Indicates that automatic transforms of .winmd files should be disabled. In other words, the projection of a Windows Runtime type to a .NET Framework type should be disabled. For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
+|`ofReserved1`|Reserved for internal use.|  
+|`ofReserved2`|Reserved for internal use.|  
+|`ofReserved`|Reserved for internal use.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

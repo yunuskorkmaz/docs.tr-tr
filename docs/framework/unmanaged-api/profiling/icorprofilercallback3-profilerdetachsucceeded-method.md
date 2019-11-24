@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05164966-16ce-4cc9-a530-43a640c00711
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8cff277179be761bb0dc78b02702e7d35ad4b6a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b044c493649b73566a2e70db2e19977a6a7b877d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779254"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439453"
 ---
 # <a name="icorprofilercallback3profilerdetachsucceeded-method"></a>ICorProfilerCallback3::ProfilerDetachSucceeded Yöntemi
-Profil Oluşturucu, ortak dil çalışma zamanı (CLR) profil oluşturucu DLL kaldırılmak üzere olduğunu bildirir.  
+Notifies the profiler that the common language runtime (CLR) is about to unload the profiler DLL.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,23 +32,23 @@ HRESULT ProfilerDetachSucceeded();
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu geri dönüş değeri yok sayıldı.  
+ The return value from this callback is ignored.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ProfilerDetachSucceeded` Tüm iş parçacığı profil oluşturucu kodu çıkılana sonra geri çağırma verildiği. Bu yöntem çağrıldığında, profil oluşturucu, kullanıcı Arabirimi veya günlük bileşeni bildirme gibi yok edici, uygun olmayan herhangi bir son dakika görevi gerçekleştirmeniz gerekir. Ancak, profil oluşturucu işlevleri bu geri çağırma sırasındaki CLR tarafından sağlanan arabirimlerindeki çağırmamalıdır (gibi [Icorprofilerınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) veya `IMetaData*` arabirimleri).  
+ The `ProfilerDetachSucceeded` callback is issued after all threads have exited the profiler's code. When this method is called, the profiler should perform any last-minute tasks that are not appropriate for its destructor, such as notifying its UI or logging component. However, the profiler must not call functions on interfaces that are provided by the CLR during this callback (such as the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) or `IMetaData*` interfaces).  
   
- CLR ayırma işlemi başarılı olduğunu göstermek için Windows uygulama olay günlüğünde bir giriş oluşturur.  
+ The CLR creates an entry in the Windows Application event log to indicate that the detach operation is successful.  
   
- Profil Oluşturucu bu geri çağrısından döndükten sonra CLR Profil Oluşturucu nesnesini serbest bırakır ve profil oluşturucu DLL kaldırır. Bu nedenle, profil oluşturucu bu geri çağrısından döndürdükten sonra Profil Oluşturucu DLL içinde gerçekleşmesi yürütme neden olan herhangi bir eylem gerçekleştirmemelisiniz. Örneğin, bu olmayan iş parçacıkları oluşturmalı veya Zamanlayıcı geri aramaları kaydetme.  
+ After the profiler returns from this callback, the CLR releases the profiler object and unloads the profiler DLL. Therefore, the profiler must not perform any actions that would cause execution to occur inside the profiler DLL after it returns from this callback. For example, it must not create threads or register timer callbacks.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

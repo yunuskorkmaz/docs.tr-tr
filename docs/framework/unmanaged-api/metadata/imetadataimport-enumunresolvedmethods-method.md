@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: eb3187d7-74cf-44b1-aeeb-7a8d2b60e3b7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74d0c2e9777a7bd3d49622fb326ecb6b58fbec07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff9827174e43fd62f3a995e9f477c6fff66b227a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782541"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449960"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods Yöntemi
-Geçerli meta veri kapsamda çözümlenmemiş yöntemleri temsil eden MemberDef belirteçleri numaralandırır.  
+Enumerates MemberDef tokens representing the unresolved methods in the current metadata scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,37 +38,37 @@ HRESULT EnumUnresolvedMethods (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [out içinde] Numaralandırıcı bir işaretçi. Bu, bu yöntemin ilk çağrı için NULL olmalıdır.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rMethods`  
- [out] Dizi MemberDef simgeleri depolamak için kullanılır.  
+ [out] The array used to store the MemberDef tokens.  
   
  `cMax`  
- [in] En büyük boyutunu `rMethods` dizisi.  
+ [in] The maximum size of the `rMethods` array.  
   
  `pcTokens`  
- [out] Döndürülen MemberDef belirteçleri sayısı `rMethods`.  
+ [out] The number of MemberDef tokens returned in `rMethods`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak hiçbir belirteçleri vardır. Bu durumda, `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumUnresolvedMethods` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çözümlenmemiş bir yöntem bildirilmiş, ancak uygulanmamıştır biridir. Yöntem işaretlenmişse, yöntem numaralandırmada `miForwardRef` ve her iki `mdPinvokeImpl` veya `miRuntime` sıfır olarak ayarlanır. Diğer bir deyişle, bir çözümlenmemiş işaretlenmiş bir sınıf yöntemi yöntemidir `miForwardRef` ancak hangi değil (PInvoke ulaşıldı) yönetilmeyen koda uygulanan ve çalışma zamanının kendisi tarafından dahili olarak uygulanan  
+ An unresolved method is one that has been declared but not implemented. A method is included in the enumeration if the method is marked `miForwardRef` and either `mdPinvokeImpl` or `miRuntime` is set to zero. In other words, an unresolved method is a class method that is marked `miForwardRef` but which is not implemented in unmanaged code (reached via PInvoke) nor implemented internally by the runtime itself  
   
- Numaralandırma modül kapsamında (Genel) veya arabirimler veya soyut sınıflar içinde tanımlanan tüm yöntemleri dışlar.  
+ The enumeration excludes all methods that are defined either at module scope (globals) or in interfaces or abstract classes.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d14cf210-81f8-46e1-8b19-6ddec0ba8b11
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d540318dabd55e9a520aedde371e0a83d612721e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36b1b2394907f242c0e8c5e277c0d1c5b3b02e1b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759497"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448909"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset Metodu
-Belirtilen uzaklık kapsayan bu yöntem en kapsayan sözlü kapsamda alır. Bu yerel değişken aramaları başlatmak için kullanılabilir.  
+Gets the most enclosing lexical scope within this method that encloses the given offset. This can be used to start local variable searches.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +35,16 @@ HRESULT GetScopeFromOffset(
   
 ## <a name="parameters"></a>Parametreler  
  `offset`  
- [in] A `ULONG` içeren uzaklığı.  
+ [in] A `ULONG` that contains the offset.  
   
  `pRetVal`  
- [out] Ayarlanmış bir işaretçi ve döndürülen [Isymunmanagedscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) arabirimi.  
+ [out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

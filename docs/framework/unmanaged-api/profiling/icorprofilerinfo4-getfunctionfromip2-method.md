@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46ff70f4-13e9-40a0-802a-0a40abcfc6a0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c133338ec0edac19f49d435df41e3081c486f51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5153a25ef87d9c06bb46b74945c8eb68eb041682
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948458"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443150"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 Yöntemi
-Yönetilen bir kod yönerge işaretçisini bir işlevin JıT yeniden derlenmiş sürümüne eşler.  
+Maps a managed code instruction pointer to the JIT-recompiled version of a function.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,28 +36,28 @@ HRESULT GetFunctionFromIP2(
   
 ## <a name="parameters"></a>Parametreler  
  `ip`  
- 'ndaki Yönetilen koddaki yönerge işaretçisi.  
+ [in] The instruction pointer in managed code.  
   
  `pFunctionId`  
- dışı İşlev KIMLIĞI.  
+ [out] The function ID.  
   
  `pReJitId`  
- dışı İşlevin JıT yeniden derlenmesi sürümünün kimliği.  
+ [out] The identity of the JIT-recompiled version of the function.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetFunctionFromIP2`, öğesine `GetFunctionFromIP`benzerdir, ancak belirtilen IP adresini içeren işlevin işlev kimliği yerine JIT-yeniden derlenmesi kimliğini alır.  
+ `GetFunctionFromIP2` is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.  
   
 > [!NOTE]
-> `GetFunctionFromIP2`bir çöp toplama tetiklenebilir, ancak `GetFunctionFromIP` olmayacaktır.  Daha fazla bilgi için bkz. [corprof_e_unsupported_call_sequence hresult](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
+> `GetFunctionFromIP2` can trigger a garbage collection, whereas `GetFunctionFromIP` will not.  For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorProf. IDL, CorProf. h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı** Corguid. lib  
+ **Library:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

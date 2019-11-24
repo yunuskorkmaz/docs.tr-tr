@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6508c989b143780090d582fd4175fe20bedeb770
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef2c518f8f3f3069e93f06de89add1385cb4e45e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745443"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445121"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished Yöntemi
-Profil Oluşturucu, bir sınıf yükleme işleminin tamamlandığını bildirir.  
+Notifies the profiler that a class has finished loading.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,24 +35,24 @@ HRESULT ClassLoadFinished(
   
 ## <a name="parameters"></a>Parametreler  
  `classId`  
- [in] Yüklenen sınıfı tanımlar.  
+ [in] Identifies the class that was loaded.  
   
  `hrStatus`  
- [in] Sınıf başarıyla yüklü olup olmadığını gösteren bir HRESULT.  
+ [in] An HRESULT that indicates whether the class loaded successfully.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değerini `classId` kadar bir bilgi isteği için geçerli değil `ClassLoadFinished` yöntemi çağrılır.  
+ The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.  
   
- Sınıf yükleme bazı bölümleri sonra devam edebilir `ClassLoadFinished` geri çağırma. Bir hata HRESULT içinde `hrStatus` hata gösterir. Ancak, bir başarı HRESULT içinde `hrStatus` yalnızca ilk bölümü sınıfı yükleme işleminin başarılı olduğunu gösterir.  
+ Some parts of loading the class might continue after the `ClassLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

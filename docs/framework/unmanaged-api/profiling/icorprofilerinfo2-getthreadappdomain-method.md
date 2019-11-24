@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a11b264-8540-4732-aa35-bc2d95b95b8e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2fa4b1c45b7bf10d167089f80686f438d54288cf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8637be3c0a59676dc52aea985d7418bfd8f247bc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782232"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443111"
 ---
 # <a name="icorprofilerinfo2getthreadappdomain-method"></a>ICorProfilerInfo2::GetThreadAppDomain Yöntemi
-İçinde belirtilen iş parçacığı şu anda kod yürüttüğünü uygulama etki alanı Kimliğini alır.  
+Gets the ID of the application domain in which the specified thread is currently executing code.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +35,19 @@ HRESULT GetThreadAppDomain(
   
 ## <a name="parameters"></a>Parametreler  
  `threadId`  
- [in] İş parçacığı belirtme kimliği.  
+ [in] The ID specifying the thread.  
   
  `pAppDomainId`  
- [out] Uygulama etki alanı kimliği için bir işaretçi.  
+ [out] A pointer to the ID of the application domain.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

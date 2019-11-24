@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad32fb84-c2b6-41cd-888d-787ff3a90449
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4eefb7ec1e7d0d130ec64531a59d1d5bbce04963
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7a46fa5319a1badc0cf28dcdbf535a6ed017c9c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968926"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437920"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember Yöntemi
-Belirtilen <xref:System.Type> ve belirtilen ad ve meta veri imzasına sahip olan alan veya yöntem için MemberDef belirtecine yönelik bir işaretçi alır.  
+Gets a pointer to the MemberDef token for field or method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,38 +39,38 @@ HRESULT FindMember (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- 'ndaki Aranacak üyeyi kapsayan sınıf veya arabirim için TypeDef belirteci. Bu değer ise `mdTokenNil`, arama genel değişken veya genel işlev için yapılır.  
+ [in] The TypeDef token for the class or interface that encloses the member to search for. If this value is `mdTokenNil`, the lookup is done for a global-variable or global-function.  
   
  `szName`  
- 'ndaki Aranacak üyenin adı.  
+ [in] The name of the member to search for.  
   
  `pvSigBlob`  
- 'ndaki Üyenin ikili meta veri imzasına yönelik bir işaretçi.  
+ [in] A pointer to the binary metadata signature of the member.  
   
  `cbSigBlob`  
- 'ndaki Bayt cinsinden boyut `pvSigBlob`.  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmb`  
- dışı Eşleşen MemberDef belirtecine yönelik bir işaretçi.  
+ [out] A pointer to the matching MemberDef token.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Üyeyi kapsayan sınıfını veya arabirimini (`td`), adını (`szName`) ve isteğe bağlı olarak imzasını (`pvSigBlob`) kullanarak belirtirsiniz. Bir sınıfta veya arabirimde aynı ada sahip birden çok üye olabilir. Bu durumda, benzersiz eşleşmeyi bulmak için üyenin imzasını geçirin.  
+ You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`). There might be multiple members with the same name in a class or interface. In that case, pass the member's signature to find the unique match.  
   
- İmzaların belirli bir kapsama `FindMember` bağlandığı için, geçirilen imza geçerli kapsamda oluşturulmuş olmalıdır. İmza, kapsayan sınıf veya değer türünü tanımlayan bir belirteç ekleyebilir. Belirteç, yerel TypeDef tablosunun bir dizinidir. Geçerli kapsamın bağlamı dışında bir çalışma zamanı imzası derlenemez ve bu imzayı girişi `FindMember`yapılacak girdi olarak kullanabilirsiniz.  
+ The signature passed to `FindMember` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMember`.  
   
- `FindMember`yalnızca sınıfta veya arabirimde doğrudan tanımlanmış olan üyeleri bulur; devralınan üyeleri bulamaz.  
+ `FindMember` finds only members that were defined directly in the class or interface; it does not find inherited members.  
   
 > [!NOTE]
-> `FindMember`bir yardımcı yöntemidir. [IMetaDataImport:: FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); öğesini çağırır Bu çağrı bir eşleşme bulamazsa, `FindMember` [IMetaDataImport:: FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)' ı çağırır.  
+> `FindMember` is a helper method. It calls [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); if that call does not find a match, `FindMember` then calls [IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** Cor. h  
+ **Header:** Cor.h  
   
- **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

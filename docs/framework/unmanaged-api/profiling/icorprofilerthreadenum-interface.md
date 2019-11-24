@@ -14,39 +14,37 @@ helpviewer_keywords:
 ms.assetid: 1e35031b-e095-4c14-9644-8deeb3081e0b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 47359cd71460732100364f07e0dc5efacc44c760
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b83706176091fd70d48e0f50a0fe5988c876f606
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597445"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447614"
 ---
 # <a name="icorprofilerthreadenum-interface"></a>ICorProfilerThreadEnum Arabirimi
-Ortak dil çalışma zamanı iş parçacıklarının koleksiyonunu sırayla yinelemek için yöntemler sağlar.  
+Provides methods to sequentially iterate through a collection of threads in the common language runtime.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-clone-method.md)|Bu bir kopyasını bir arabirim işaretçisi alır `ICorProfilerThreadEnum` arabirimi.|  
-|[GetCount Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-getcount-method.md)|Uygulama tarafından kullanılan iş parçacıklarının sayısını alır.|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-next-method.md)|İş parçacıkları Numaralandırıcının dizideki geçerli konum başlayarak, sıralı bir koleksiyonu belirtilen bitişik iş parçacığı sayısını alır.|  
-|[Reset Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-reset-method.md)|Numaralandırıcının imleç dizisi başlangıç konumuna gider.|  
-|[Skip Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-skip-method.md)|Numaralandırıcının imleç belirtilen sayıda öğeyi atlamak için geçerli konumundan ilerler.|  
+|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-clone-method.md)|Gets an interface pointer to a copy of this `ICorProfilerThreadEnum` interface.|  
+|[GetCount Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-getcount-method.md)|Gets the number of threads that are used by the application.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-next-method.md)|Gets the specified number of contiguous threads from a sequential collection of threads, starting at the enumerator's current position in the sequence.|  
+|[Reset Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-reset-method.md)|Moves the enumerator's cursor to the starting position of the sequence.|  
+|[Skip Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-skip-method.md)|Advances the enumerator's cursor from its current position to skip the specified number of elements.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorProfilerThreadEnum` Arabirimidir bir numaralandırıcı. Dizi alıcı, alıcının uygun bir hızda gönderenden çekme öğelerine sağlar. Diğer bir deyişle, böylece büyük diziler yöntemi parametre olarak geçirmeyi ile ilgili sorunları önleme açıkça dizi öğeleri akışını denetlemek için alıcıdır.  
+ The `ICorProfilerThreadEnum` interface is an enumerator. It allows the receiver of an array to pull elements from the sender at a rate that is appropriate for the receiver. In other words, the receiver is able to explicitly control the flow of array elements, thereby avoiding the problems associated with passing large arrays as method parameters.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

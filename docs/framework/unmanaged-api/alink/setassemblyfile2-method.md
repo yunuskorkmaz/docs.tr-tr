@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: eedb9125-1ef1-4000-abfc-7de86e5a1f17
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aba11ccd61b65d2a779b39db8e0e082cf4d4015b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f710ef9741869a2b4fd8473ed3ecf379cfcc56d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787222"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445592"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 Yöntemi
-Yeni bir derleme için adını ve seçeneklerini ayarlar. İlişkisiz modüller üretmeniz durumunda bu yöntemi çağırmayın.  
+Sets the name of and options for a new assembly. Do not call this method when you produce unbound modules.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +37,22 @@ HRESULT SetAssemblyFile2(
   
 ## <a name="parameters"></a>Parametreler  
  `pszFilename`  
- Bildirim dosyasının adı.  
+ Name of manifest file.  
   
  `pEmitter`  
- Bu dosya için [IMetaDataEmit2 arabirimi](../metadata/imetadataemit2-interface.md) arabirimi.  
+ [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface for this file.  
   
  `afFlags`  
- [AssemblyFlags numaralandırması](../metadata/assemblyflags-enumeration.md)tarafından temsil edilen seçenekler.  
+ Options represented by [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
   
  `pAssemblyID`  
- Oluşturulan derlemenin benzersiz KIMLIĞINI alır.  
+ Receives unique ID for the assembly being constructed.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

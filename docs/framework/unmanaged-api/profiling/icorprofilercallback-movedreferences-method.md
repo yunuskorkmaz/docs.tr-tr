@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 996c71ae-0676-4616-a085-84ebf507649d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f86c4388fd633c72e846c227d45eff09bb66cf44
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d78e7e863ab953182ea7c1ff342593b4bdf3215d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951115"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445878"
 ---
 # <a name="icorprofilercallbackmovedreferences-method"></a>ICorProfilerCallback::MovedReferences Yöntemi
-Bir sıkıştırma atık toplama işleminin sonucu olarak yığında nesnelerin yeni yerleşimini raporlamak için çağırılır.  
+Called to report the new layout of objects in the heap as a result of a compacting garbage collection.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,54 +37,54 @@ HRESULT MovedReferences(
   
 ## <a name="parameters"></a>Parametreler  
  `cMovedObjectIDRanges`  
- 'ndaki Sıkıştırma atık toplamanın sonucu olarak taşınan bitişik nesne bloklarının sayısı. Diğer `cMovedObjectIDRanges` bir deyişle, değeri `oldObjectIDRangeStart`, `newObjectIDRangeStart`, ve `cObjectIDRangeLength` dizilerinin toplam boyutudur.  
+ [in] The number of blocks of contiguous objects that moved as the result of the compacting garbage collection. That is, the value of `cMovedObjectIDRanges` is the total size of the `oldObjectIDRangeStart`, `newObjectIDRangeStart`, and `cObjectIDRangeLength` arrays.  
   
- Sonraki üç bağımsız değişkeni `MovedReferences` paralel dizilerdir. Diğer bir deyişle `oldObjectIDRangeStart[i]` `newObjectIDRangeStart[i]`,, ve `cObjectIDRangeLength[i]` hepsi bitişik nesnelerin tek bir bloğuna sorun.  
+ The next three arguments of `MovedReferences` are parallel arrays. In other words, `oldObjectIDRangeStart[i]`, `newObjectIDRangeStart[i]`, and `cObjectIDRangeLength[i]` all concern a single block of contiguous objects.  
   
  `oldObjectIDRangeStart`  
- 'ndaki Her biri, `ObjectID` bellekte bir bitişik ve canlı nesneler bloğunun başlangıç adresi olan, her biri eski (çöp önden koleksiyon) olan bir değerler dizisi.  
+ [in] An array of `ObjectID` values, each of which is the old (pre-garbage collection) starting address of a block of contiguous, live objects in memory.  
   
  `newObjectIDRangeStart`  
- 'ndaki Her biri, `ObjectID` bellekte bulunan bitişik ve canlı nesneler bloğunun başlangıç adresi olan yeni (çöp sonrası koleksiyon) olan bir değer dizisidir.  
+ [in] An array of `ObjectID` values, each of which is the new (post-garbage collection) starting address of a block of contiguous, live objects in memory.  
   
  `cObjectIDRangeLength`  
- 'ndaki Her biri bellekteki bir bitişik nesne bloğunun boyutu olan tamsayılar dizisi.  
+ [in] An array of integers, each of which is the size of a block of contiguous objects in memory.  
   
- `oldObjectIDRangeStart` Ve`newObjectIDRangeStart` dizilerinde başvurulan her bir blok için bir boyut belirtilir.  
+ A size is specified for each block that is referenced in the `oldObjectIDRangeStart` and `newObjectIDRangeStart` arrays.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!IMPORTANT]
-> Bu yöntem, 64- `MAX_ULONG` bit platformlarda 4 GB 'den büyük nesneler için boyutları raporlar. 4 GB 'den büyük nesnelerin boyutunu almak için, bunun yerine [ICorProfilerCallback4:: MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) metodunu kullanın.  
+> This method reports sizes as `MAX_ULONG` for objects that are greater than 4 GB on 64-bit platforms. To get the size of objects that are larger than 4 GB, use the [ICorProfilerCallback4::MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) method instead.  
   
- Bir sıkıştırma atık toplayıcısı, ölü nesneler tarafından kullanılan belleği geri kazanır ve serbest bırakılan alanı sıkıştırır. Sonuç olarak, canlı nesneler yığın içinde taşınabilir ve `ObjectID` önceki bildirimler tarafından dağıtılan değerler değişebilir.  
+ A compacting garbage collector reclaims the memory occupied by dead objects and compacts that freed space. As a result, live objects might be moved within the heap, and `ObjectID` values distributed by previous notifications might change.  
   
- Var olan `ObjectID` bir değerin (`oldObjectID`) aşağıdaki aralıkta olduğunu varsayın:  
+ Assume that an existing `ObjectID` value (`oldObjectID`) lies within the following range:  
   
  `oldObjectIDRangeStart[i]` <= `oldObjectID` < `oldObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
- Bu durumda, aralığın başlangıcından nesnenin başlangıcına kadar olan fark aşağıdaki gibidir:  
+ In this case, the offset from the start of the range to the start of the object is as follows:  
   
  `oldObjectID` - `oldObjectRangeStart[i]`  
   
- Aşağıdaki aralıkta `i` olan herhangi bir değeri için:  
+ For any value of `i` that is in the following range:  
   
  0 <= `i` < `cMovedObjectIDRanges`  
   
- Yeni ' ni `ObjectID` aşağıda gösterildiği gibi hesaplayabilirsiniz:  
+ you can calculate the new `ObjectID` as follows:  
   
  `newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)  
   
- Çöp toplama nesneleri eski konumlardan yeni `MovedReferences` konumlara taşıma işleminin ortasında olabileceğinden, tarafından geçirilen değerlerinhiçbirigeriçağırmasırasındageçerlideğildir.`ObjectID` Bu nedenle, profil oluşturucular bir `MovedReferences` çağrı sırasında nesneleri incelemeyi denememelidir. [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) geri çağırması, tüm nesnelerin yeni konumlarına taşındığını ve incelemesinin gerçekleştirilebileceğini gösterir.  
+ None of the `ObjectID` values passed by `MovedReferences` are valid during the callback itself, because the garbage collection might be in the middle of moving objects from old locations to new locations. Therefore, profilers should not attempt to inspect objects during a `MovedReferences` call. A [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback indicates that all objects have been moved to their new locations and inspection can be performed.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorProf. IDL, CorProf. h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı** Corguid. lib  
+ **Library:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

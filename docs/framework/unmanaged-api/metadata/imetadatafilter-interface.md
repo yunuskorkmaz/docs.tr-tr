@@ -14,34 +14,32 @@ helpviewer_keywords:
 ms.assetid: ec0856ef-8c56-40ba-bf60-86e0ce8b337f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4196ff2cb2d4ebc401076f603a8a7fdc9b9c76ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8b15f478eb3b94b7cdcab3b69d54e7cc99be13b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049966"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440171"
 ---
 # <a name="imetadatafilter-interface"></a>IMetaDataFilter Arabirimi
-İşaretleme ve meta veri belirteçleri zaten alınmış eylemleri tekrarlamayı önlemek üzere filtreleme için yöntemler sağlar.  
+Provides methods for marking and filtering metadata tokens to avoid repeating actions that have already been taken.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IsTokenMarked Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|Belirtilen meta veri belirteci işlenen olup olmadığını belirten bir değer alır.|  
-|[MarkToken Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|Belirtilen meta veri belirteci işlendiğini belirten bir değer ayarlar.|  
-|[UnmarkAll Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|Geçerli meta veri kapsamdaki tüm belirteçlerin işleme işaretleri kaldırır.|  
+|[IsTokenMarked Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|Gets a value indicating whether the specified metadata token has been processed.|  
+|[MarkToken Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|Sets a value indicating that the specified metadata token has been processed.|  
+|[UnmarkAll Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|Removes the processing marks from all the tokens in the current metadata scope.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

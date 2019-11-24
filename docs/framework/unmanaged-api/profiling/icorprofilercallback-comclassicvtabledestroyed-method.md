@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f74e06ea4cb4d7a8eace8c7852f487bbdcbcd875
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0b0683d43778c4733b476e9feef459207b9d1ee6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964623"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445033"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed Yöntemi
-Profil oluşturucuyu bir COM birlikte çalışma vtable 'ın yok edildiğini bildirir.  
+Notifies the profiler that a COM interop vtable is being destroyed.  
   
 > [!NOTE]
-> Vtables yok etme işlemi kapanmaya yakın bir şekilde gerçekleştiğinden, bu geri aramanın hiçbir şekilde gerçekleşmemesi olasıdır.  
+> This callback is likely never to occur, because the destruction of vtables occurs very close to shutdown.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,27 +39,27 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="parameters"></a>Parametreler  
  `wrappedClassId`  
- 'ndaki Bu vtable 'ın oluşturulduğu sınıfın KIMLIĞI.  
+ [in] The ID of the class for which this vtable was created.  
   
  `implementedIID`  
- 'ndaki Sınıf tarafından uygulanan arabirimin KIMLIĞI. Arabirim yalnızca dahili ise bu değer NULL olabilir.  
+ [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
   
  `pVTable`  
- 'ndaki Vtable başlangıcına yönelik bir işaretçi.  
+ [in] A pointer to the start of the vtable.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yığın atık toplamaya izin veren bir durumda olmadığından profil oluşturucu bu yöntemin uygulamasında engellenmemelidir, bu nedenle preemptive çöp toplama etkinleştirilemez. Profil Oluşturucu burada ve çöp toplama denendiğinde, bu geri arama dönene kadar çalışma zamanı engellenir.  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- Profil oluşturucunun bu yöntemin uygulanması yönetilen koda veya herhangi bir şekilde bir yönetilen bellek ayırmaya yol açmaz.  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorProf. IDL, CorProf. h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı** Corguid. lib  
+ **Library:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

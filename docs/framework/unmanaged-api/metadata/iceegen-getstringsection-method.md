@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a2267d39-69d1-4de1-bf37-f752cafacc71
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 68dc80c657c3794a416f6e142f70cfb05bee2c77
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ba8da686d1834c81111828e9856525b96f575b93
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745898"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443257"
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection Yöntemi
-Belirtilen tanıtıcı tarafından başvurulan kod bölümünde dize gösterimini alır.  
+Gets a string representation of the code section referenced by the specified handle.  
   
- Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,16 +37,16 @@ HRESULT GetStringSection (
   
 ## <a name="parameters"></a>Parametreler  
  `section`  
- [out içinde] Kod bölümüne tanıtıcısı.  
+ [in, out] The handle to the code section.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

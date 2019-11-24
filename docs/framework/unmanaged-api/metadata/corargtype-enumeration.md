@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3c1cb268-57a0-4664-91c7-f6908ff29e32
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4ae7b61d056c08691e19e639353b6ab6fb8443c6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 689295610006824be1107577c50376e79551cddc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780940"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444369"
 ---
 # <a name="corargtype-enumeration"></a>CorArgType Numaralandırması
-Yerel bir çalışma zamanı tanıtıcısı türünü açıklayan değerlerini içerir.  
+Contains values that describe the native type of a runtime handle.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,11 +45,11 @@ typedef enum CorArgType {
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93de56b6-4ae8-4cca-acdc-25a434623509
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4087bdd82041152a9946a576e0eb96bf63f177c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 041df959139a0be77f40d6aa5655ff15f93fb26f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777280"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427946"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2 Yöntemi
-İle bu yazıcısı ilişkilendirilecek olan meta veri verici arabirimi ayarlar ve hata ayıklama sembolleri yazılacağı çıktı dosyası adını ayarlar. Bu yöntem Ayrıca, program veritabanı (PDB) dosyasının son konum ayarlamanıza olanak tanır.  
+Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written. This method also lets you set the final location of the program database (PDB) file.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,25 +38,25 @@ HRESULT Initialize2(
   
 ## <a name="parameters"></a>Parametreler  
  `emitter`  
- [in] Meta veri verici arayüzü işaretçisi.  
+ [in] A pointer to the metadata emitter interface.  
   
  `tempfilename`  
- [in] Bir işaretçi bir `WCHAR` hata ayıklama sembolleri yazılır dosya adını içerir. Dosya adları kullanmayan bir yazıcı için bir dosya adı belirtilirse bu parametre yoksayılır.  
+ [in] A pointer to a `WCHAR` that contains the file name to which the debugging symbols are written. If a file name is specified for a writer that does not use file names, this parameter is ignored.  
   
  `pIStream`  
- [in] Belirtilmişse sembolleri sembol yazıcı yayan verilen <xref:System.Runtime.InteropServices.ComTypes.IStream> yerine belirtilen dosyaya `filename` parametresi. `pIStream` Parametresi isteğe bağlıdır.  
+ [in] If specified, the symbol writer emits the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. The `pIStream` parameter is optional.  
   
  `fFullBuild`  
- [in] `true` bu tam yeniden derleme; ise `false` bu artımlı bir derleme ise.  
+ [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
   
  `finalfilename`  
- [in] Bir işaretçi bir `WCHAR` diğer bir deyişle yol dizesi PDB dosyası son konumunu.  
+ [in] A pointer to a `WCHAR` that is the path string to the final location of the PDB file.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

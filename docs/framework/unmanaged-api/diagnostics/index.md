@@ -6,24 +6,22 @@ helpviewer_keywords:
 - unmanaged API reference [.NET Framework], diagnostics symbol store
 - native API reference [.NET Framework], diagnostics symbol store
 ms.assetid: ee1fbb7a-b0f9-482f-8cd0-6df37e6586a2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 418c9afdec32b685f67bd457c055476b5501b414
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2bf393f1a2f44d265038282713265fefc80bc66f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599309"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445492"
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>Tanılama Sembol Deposu (Yönetilmeyen API Başvurusu)
-Tanılama sembol deposu API, bir hata ayıklayıcı tarafından kullanım için sembol bilgisi oluşturmak bir derleyiciyi etkinleştirir.  
+The diagnostics symbol store API enables a compiler to generate symbol information for use by a debugger.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- Tanılama sembol deposu API kullanan yönetilmeyen arabirimler açıklanmaktadır.  
+ Describes the unmanaged interfaces that the diagnostics symbol store API uses.  
   
  [Tanılama Simge Deposu Sabit Listeleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
- Tanılama sembol deposu API kullandığı yönetilmeyen numaralandırmaları açıklar.  
+ Describes the unmanaged enumerations that the diagnostics symbol store API uses.  
   
  [Tanılama Simge Deposu Yapıları](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
- Tanılama sembol deposu API kullandığı yönetilmeyen yapıları açıklar.
+ Describes the unmanaged structures that the diagnostics symbol store API uses.

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 94667c1c-6d58-4aa7-b74e-530b11e2a276
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 83f8ae068552ba83a016b5484e3ac6641417fa99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f5a736d80f36afb8d0a643d4a4e36c9abff01995
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781560"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445434"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob Metodu
-Bir işaretçi ikili büyük nesne (BLOB) için belirtilen sütun dizini alır.  
+Gets a pointer to the binary large object (BLOB) at the specified column index.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +37,22 @@ HRESULT GetBlob (
   
 ## <a name="parameters"></a>Parametreler  
  `ixBlob`  
- [in] Bellek adresi alınmaya başlanacağı `ppData`.  
+ [in] The memory address from which to get `ppData`.  
   
  `pcbData`  
- [out] Bayt cinsinden boyutu için bir işaretçi, `ppData`.  
+ [out] A pointer to the size, in bytes, of `ppData`.  
   
  `ppData`  
- [out] İkili veriler için bir işaretçi işaretçisi alınır.  
+ [out] A pointer to a pointer to the binary data retrieved.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

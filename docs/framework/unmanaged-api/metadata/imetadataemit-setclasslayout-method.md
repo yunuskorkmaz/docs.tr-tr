@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2576c449-388d-4434-a0e1-9f53991e11b6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c455b5196ceafef924de59e9134b89ed62455520
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5214298c6ad9594548ab45ed583cb5b14ce1f30d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737219"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441770"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout Yöntemi
-Önceki bir çağrı tarafından tanımlanan bir sınıf için alanlarının düzenini tamamlandıktan [DefineTypeDef yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Completes the layout of fields for a class that has been defined by a prior call to [DefineTypeDef Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,34 +38,34 @@ HRESULT SetClassLayout (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- [in] Bir `mdTypeDef` belirteci dışı sınıfını belirtir.  
+ [in] An `mdTypeDef` token that specifies the class to be laid out.  
   
  `dwPackSize`  
- [in] Paketleme boyutu: 1, 2, 4, 8 veya 16 bayt sayısı. Bitişik alanları arasında bulunan bayt sayısını paketleme boyutudur.  
+ [in] The packing size: 1, 2, 4, 8 or 16 bytes. The packing size is the number of bytes between adjacent fields.  
   
  `rFieldOffsets`  
- [in] Bir dizi [cor_fıeld_offset](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) yapıları, her biri belirtir sınıfının bir alanı ve alan içindeki sınıf uzaklığını. Dizi sonlandırmak `mdTokenNil`.  
+ [in] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) structures, each of which specifies a field of the class and the field's offset within the class. Terminate the array with `mdTokenNil`.  
   
  `ulClassSize`  
- [in] Sınıf bayt cinsinden boyutu.  
+ [in] The size, in bytes, of the class.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sınıfı, başlangıçta çağırarak tanımlanır [Imetadataemit::definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) yöntemi ve sınıf alanlar için üç düzenlerden birini belirterek: otomatik, sıralı ya da açık. Normalde, otomatik düzeni kullanma ve alanları düzenlemek için en iyi yolu seçin çalışma zamanının.  
+ The class is initially defined by calling the [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) method, and specifying one of three layouts for the fields of the class: automatic, sequential, or explicit. Normally, you would use automatic layout and let the runtime choose the best way to lay out the fields.  
   
- Ancak, kodunuz yönetilmeyen düzenleme göre düzenlendiği alanları isteyebilirsiniz. Bu durumda, doğrudan ya da ardışık düzen ve çağrı seçin `SetClassLayout` alanlarının düzenini tamamlamak için:  
+ However, you might want the fields laid out according to the arrangement that unmanaged code uses. In this case, choose either sequential or explicit layout and call `SetClassLayout` to complete the layout of the fields:  
   
-- Ardışık Düzen: Paketleme boyutu belirtin. Alana göre doğal boyutu veya paketleme boyutu, hangi alanın daha küçük uzaklığı sonuçlarında hizalanır. Ayarlama `rFieldOffsets` ve `ulClassSize` sıfır.  
+- Sequential layout: Specify the packing size. A field is aligned according to either its natural size or the packing size, whichever results in the smaller offset of the field. Set `rFieldOffsets` and `ulClassSize` to zero.  
   
-- Açık düzeni: Her alanın bir uzaklık belirtin ya da sınıf boyutu ve paketleme boyutu belirtin.  
+- Explicit layout: Either specify the offset of each field or specify the class size and the packing size.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

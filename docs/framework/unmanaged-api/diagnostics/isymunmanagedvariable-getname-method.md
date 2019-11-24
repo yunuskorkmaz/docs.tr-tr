@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: eedf1ef0-9d4a-4847-a201-4e99572dfe5e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8298e7240052bdd859dbe414281d8e78984342e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77dec4332aa65f6125685db607169b3398bcab98
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778247"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446062"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>ISymUnmanagedVariable::GetName Metodu
-Bu değişken adını alır.  
+Gets the name of this variable.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,19 +37,19 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- [in] Arabellek uzunluğu, `pcchName` parametre işaret eder.  
+ [in] The length of the buffer that the `pcchName` parameter points to.  
   
  `pcchName`  
- [out] Bir işaretçi bir `ULONG32` karakter null sonlandırma dahil olmak üzere adını içerecek şekilde gerekli arabellek boyutunu alır.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.  
   
  `szName`  
- [out] Adı depolayan arabellek.  
+ [out] The buffer that stores the name.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

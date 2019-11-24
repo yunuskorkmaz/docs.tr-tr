@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5a90d16f-7929-4987-8f83-a631becf564d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ceca2133068d3ed011b9499024d127a3dd9279ed
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aae6d33166a7685e07c4d82f654f803600e37eec
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782778"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438897"
 ---
 # <a name="icorprofilerinfogetmoduleinfo-method"></a>ICorProfilerInfo::GetModuleInfo Yöntemi
-Bir modül kimliği söz konusu modülün dosya adı ve modülün üst derleme Kimliğini döndürür.  
+Given a module ID, returns the file name of the module and the ID of the module's parent assembly.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,40 +40,40 @@ HRESULT GetModuleInfo(
   
 ## <a name="parameters"></a>Parametreler  
  `moduleId`  
- [in] Bilgileri alınır modül kimliği.  
+ [in] The ID of the module for which information will be retrieved.  
   
  `ppBaseLoadAddress`  
- [out] Modülün yüklendiği temel adres.  
+ [out] The base address at which the module is loaded.  
   
  `cchName`  
- [in] Karakter cinsinden uzunluğu, `szName` dönüş arabelleği.  
+ [in] The length, in characters, of the `szName` return buffer.  
   
  `pcchName`  
- [out] Bir işaretçi döndürülür modülün dosya adının toplam karakter uzunluğu.  
+ [out] A pointer to the total character length of the module's file name that is returned.  
   
  `szName`  
- [out] Bir çağıran tarafından sağlanan geniş karakter arabelleği. Yöntem döndürüldüğünde bu arabellek modülü dosya adını içerir.  
+ [out] A caller-provided wide character buffer. When the method returns, this buffer contains the file name of the module.  
   
  `pAssemblyId`  
- [out] Modülün üst derleme kimliği için bir işaretçi.  
+ [out] A pointer to the ID of the module's parent assembly.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dinamik modüller için `szName` parametresi boş bir dize ve 0 (sıfır) taban adresidir.  
+ For dynamic modules, the `szName` parameter is an empty string, and the base address is 0 (zero).  
   
- Ancak `GetModuleInfo` yöntemi çağrıldığında modülün kimliği var. hemen sonra Profil Oluşturucu alıncaya kadar üst derlemesinin kimliği kullanılabilir olmayacak [Icorprofilercallback::moduleattachedtoassembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) geri çağırma.  
+ Although the `GetModuleInfo` method may be called as soon as the module's ID exists, the ID of the parent assembly will not be available until the profiler receives the [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) callback.  
   
- Zaman `GetModuleInfo` döndürür, doğrulamalısınız `szName` arabellek modülün tam dosya adını içerecek şekilde büyük. Bunu yapmak için değeri ile karşılaştırmak, `pcchName` değeriyle işaret `cchName` parametresi. Varsa `pcchName` işaret değerinden daha büyük bir değere `cchName`, daha büyük bir ayırma `szName` arabellek, güncelleştirme `cchName` yeni, daha büyük bir boyut ve çağrı `GetModuleInfo` yeniden.  
+ When `GetModuleInfo` returns, you must verify that the `szName` buffer was large enough to contain the full file name of the module. To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter. If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetModuleInfo` again.  
   
- Alternatif olarak, ilk çağırabilirsiniz `GetModuleInfo` sıfır uzunluklu ile `szName` arabellek doğru arabellek boyutu elde edilir. Arabellek boyutu döndürülen değere ayarlayabilirsiniz `pcchName` ve çağrı `GetModuleInfo` yeniden.  
+ Alternatively, you can first call `GetModuleInfo` with a zero-length `szName` buffer to obtain the correct buffer size. You can then set the buffer size to the value returned in `pcchName` and call `GetModuleInfo` again.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

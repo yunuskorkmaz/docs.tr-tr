@@ -6,93 +6,93 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: eb7156e0e2794fb7cb18e7bfce0e8488d0b145c3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 35754d49bf223e7afcdec32e8b24cfb749f48aa6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042771"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446856"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama
 
 > [!NOTE]
-> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).
+> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).
 
-Bu bölümde, özel bir denetim için sunucu tarafı UI Otomasyon sağlayıcısının nasıl uygulanacağı açıklanmaktadır.
+This section describes how to implement a server-side UI Automation provider for a custom control.
 
-Windows Presentation Foundation (WPF) öğeleri ve[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] öğe olmayan (için [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]tasarlanan gibi) uygulama, temelde farklıdır. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]öğeleri, öğesinden <xref:System.Windows.Automation.Peers.AutomationPeer>türetilmiş [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bir sınıf aracılığıyla destek sağlar. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Öğe olmayan öğeler, sağlayıcı arabirimlerinin uygulamaları aracılığıyla destek sağlar.
+The implementation for Windows Presentation Foundation (WPF) elements and non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elements (such as those designed for [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) is fundamentally different. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elements provide support for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] through a class derived from <xref:System.Windows.Automation.Peers.AutomationPeer>. Non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elements provide support through implementations of provider interfaces.
 
 <a name="Security_Considerations"></a>
 
 ## <a name="security-considerations"></a>Güvenlik Değerlendirmeleri
 
-Sağlayıcılar, kısmi güven ortamında çalışabilmek için yazılmalıdır. UIAutomationClient. dll kısmi güven altında çalışacak şekilde yapılandırılmadığından, sağlayıcı kodunuz bu derlemeye başvurmamalıdır. Bu durumda, kod tam güven ortamında çalıştırılabilir, ancak kısmi güven ortamında başarısız olabilir.
+Providers should be written so that they can work in a partial-trust environment. Because UIAutomationClient.dll is not configured to run under partial trust, your provider code should not reference that assembly. If it does so, the code may run in a full-trust environment but then fail in a partial-trust environment.
 
-Özellikle, UIAutomationClient. dll ' de yer <xref:System.Windows.Automation.AutomationElement>alan sınıflardan alanları kullanmayın. Bunun yerine, UIAutomationTypes. dll içindeki sınıflardan eşdeğer alanları kullanın, örneğin <xref:System.Windows.Automation.AutomationElementIdentifiers>.
+In particular, do not use fields from classes in UIAutomationClient.dll such as those in <xref:System.Windows.Automation.AutomationElement>. Instead, use the equivalent fields from classes in UIAutomationTypes.dll, such as <xref:System.Windows.Automation.AutomationElementIdentifiers>.
 
 <a name="Provider_Implementation_by_WPF_Elements"></a>
 
-## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>Windows Presentation Foundation öğelerine göre sağlayıcı uygulama
+## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>Provider Implementation by Windows Presentation Foundation Elements
 
-Bu konu hakkında daha fazla bilgi için lütfen [WPF özel denetiminin UI Otomasyonu](../wpf/controls/ui-automation-of-a-wpf-custom-control.md)' na bakın.
+For more information on this topic, please see [UI Automation of a WPF Custom Control](../wpf/controls/ui-automation-of-a-wpf-custom-control.md).
 
 <a name="Provider_Implementation_by_non_WPF_Elements"></a>
 
-## <a name="provider-implementation-by-non-wpf-elements"></a>WPF olmayan öğelere göre sağlayıcı uygulama
+## <a name="provider-implementation-by-non-wpf-elements"></a>Provider Implementation by non-WPF Elements
 
-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Framework 'ün parçası olmayan, ancak yönetilen kodda yazılmış olan özel denetimler (çoğunlukla bunlar denetimlerdir [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] ), arabirimleri uygulayarak için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] destek sağlar. Her öğe, sonraki bölümde ilk tabloda listelenen arabirimlerden en az birini uygulamalıdır. Ayrıca, öğe bir veya daha fazla denetim desenini destekliyorsa, her denetim deseni için uygun arabirimi uygulamalıdır.
+Custom controls that are not part of the [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] framework, but that are written in managed code (most often these are [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] controls), provide support for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] by implementing interfaces. Every element must implement at least one of the interfaces listed in the first table in the next section. In addition, if the element supports one or more control patterns, it must implement the appropriate interface for each control pattern.
 
-[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Sağlayıcı projeniz aşağıdaki derlemelere başvurmalıdır:
+Your [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] provider project must reference the following assemblies:
 
-- Uıautomationproviders. dll
+- UIAutomationProviders.dll
 
-- UIAutomationTypes. dll
+- UIAutomationTypes.dll
 
 - WindowsBase.dll
 
 <a name="Provider_Interfaces"></a>
 
-### <a name="provider-interfaces"></a>Sağlayıcı arabirimleri
+### <a name="provider-interfaces"></a>Provider Interfaces
 
-Her [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcının aşağıdaki arabirimlerden birini uygulaması gerekir.
-
-|Arabirim|Açıklama|
-|---------------|-----------------|
-|<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|Denetim desenleri ve özellikleri için destek de dahil olmak üzere, pencerede barındırılan basit bir denetim için işlevsellik sağlar.|
-|<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Öğesinden <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>devralır. Karmaşık bir denetimdeki bir öğe için, parça içinde gezinme, odağı ayarlama ve öğenin sınırlayıcı dikdörtgenini döndürme dahil olmak üzere işlevsellik ekler.|
-|<xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>|Öğesinden <xref:System.Windows.Automation.Provider.IRawElementProviderFragment>devralır. Belirli koordinatlarda bir alt öğe bulmak ve tüm denetimin odak durumunu ayarlamak dahil olmak üzere, karmaşık bir denetimdeki kök öğe için işlevsellik ekler.|
-
-Aşağıdaki arabirimler ek işlevsellik sağlar, ancak uygulanması gerekmez.
+Every [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] provider must implement one of the following interfaces.
 
 |Arabirim|Açıklama|
 |---------------|-----------------|
-|<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Sağlayıcının olay isteklerini izlemesini sağlar.|
-|<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|Bir parçanın [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı içerisindeki pencere tabanlı öğelerin yeniden konumlandırmalarını mümkün.|
+|<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|Provides functionality for a simple control hosted in a window, including support for control patterns and properties.|
+|<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Inherits from <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Adds functionality for an element in a complex control, including navigation within the fragment, setting focus, and returning the bounding rectangle of the element.|
+|<xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>|Inherits from <xref:System.Windows.Automation.Provider.IRawElementProviderFragment>. Adds functionality for the root element in a complex control, including locating a child element at specified coordinates and setting the focus state for the entire control.|
 
-<xref:System.Windows.Automation.Provider> Ad alanındaki diğer tüm arabirimler denetim deseninin desteği içindir.
+The following interfaces provide added functionality but are not required to be implemented.
+
+|Arabirim|Açıklama|
+|---------------|-----------------|
+|<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Enables the provider to track requests for events.|
+|<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|Enables repositioning of window-based elements within the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree of a fragment.|
+
+All other interfaces in the <xref:System.Windows.Automation.Provider> namespace are for control pattern support.
 
 <a name="Requirements_for_Non_WPF_Providers"></a>
 
-### <a name="requirements-for-non-wpf-providers"></a>WPF olmayan sağlayıcılar için gereksinimler
+### <a name="requirements-for-non-wpf-providers"></a>Requirements for Non-WPF Providers
 
-İle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]iletişim kurmak için denetiminizin aşağıdaki ana işlevleri uygulaması gerekir:
+In order to communicate with [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], your control must implement the following main areas of functionality:
 
 |İşlevi|Uygulama|
 |-------------------|--------------------|
-|Sağlayıcıyı şu şekilde kullanıma sunun[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Denetim penceresine gönderilen bir WM_GETOBJECT iletisine yanıt olarak, (veya türetilmiş bir arabirim) uygulayan <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> nesneyi döndürün. Parçalar için bu, parça kökünün sağlayıcısı olmalıdır.|
-|Özellik değerlerini sağla|Değerleri <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A> sağlamak veya geçersiz kılmak için uygulayın.|
-|İstemcinin denetimle etkileşime geçmesini sağlama|Gibi denetim desenlerini <xref:System.Windows.Automation.Provider.IInvokeProvider>destekleyen arabirimler uygulayın. Uygulamanızda bu model sağlayıcılarını döndürün <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A>.|
-|Olay oluştur|Bir istemcinin dinleyebildiğini bir olay <xref:System.Windows.Automation.Provider.AutomationInteropProvider> yükseltmek için statik yöntemlerinden birini çağırın.|
-|Bir parça içinde gezinmeyi ve odayı etkinleştir|Parçaların <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> içindeki her öğe için uygulayın. (Bir parçanın parçası olmayan öğeler için gerekli değildir.)|
-|Bir parçadaki alt öğenin odaklama ve konumunu etkinleştir|Uygulayın <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>. (Parçalama kökleri olmayan öğeler için gerekli değildir.)|
+|Expose the provider to [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|In response to a WM_GETOBJECT message sent to the control window, return the object that implements <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> (or a derived interface). For fragments, this must be the provider for the fragment root.|
+|Provide property values|Implement <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A> to provide or override values.|
+|Enable the client to interact with the control|Implement interfaces that support control patterns, such as <xref:System.Windows.Automation.Provider.IInvokeProvider>. Return these pattern providers in your implementation of <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A>.|
+|Raise events|Call one of the static methods of <xref:System.Windows.Automation.Provider.AutomationInteropProvider> to raise an event that a client can listen for.|
+|Enable navigation and focusing within a fragment|Implement <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> for each element within the fragment. (Not necessary for elements that are not part of a fragment.)|
+|Enable focusing and location of child element in a fragment|Implement <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>. (Not necessary for elements that are not fragment roots.)|
 
 <a name="Property_Values_in_Non_WPF_Providers"></a>
 
-### <a name="property-values-in-non-wpf-providers"></a>WPF olmayan sağlayıcılardaki özellik değerleri
+### <a name="property-values-in-non-wpf-providers"></a>Property Values in Non-WPF Providers
 
-[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]özel denetimler için sağlayıcılar, otomasyon sisteminin yanı sıra istemci uygulamaları tarafından kullanılabilen bazı özellikleri desteklemelidir. Windows 'da (HWNDs) barındırılan öğeler için, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] varsayılan pencere sağlayıcısından bazı özellikler alabilir, ancak diğerlerini özel sağlayıcıdan almaları gerekir.
+[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] providers for custom controls must support certain properties that can be used by the automation system as well as by client applications. For elements that are hosted in windows (HWNDs), [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] can retrieve some properties from the default window provider, but must obtain others from the custom provider.
 
-HWND tabanlı denetim sağlayıcılarının genellikle aşağıdaki özellikleri sağlaması gerekmez (alan değerleriyle tanımlanır):
+Providers for HWND based controls do not usually need to provide the following properties (identified by field values):
 
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>
 
@@ -115,79 +115,79 @@ HWND tabanlı denetim sağlayıcılarının genellikle aşağıdaki özellikleri
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> Pencerede barındırılan basit bir öğe veya parça kökü pencereden alınır; ancak, kök altındaki parçalara ayırma öğeleri (liste kutusu içindeki liste öğeleri gibi) kendi tanımlayıcılarını sağlamalıdır. Daha fazla bilgi için bkz. <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
+> The <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> of a simple element or fragment root hosted in a window is obtained from the window; however, fragment elements below the root (such as list items in a list box) must provide their own identifiers. Daha fazla bilgi için bkz. <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
 >
-> <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> Bir[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] denetimde barındırılan sağlayıcılar için döndürülmelidir. Bu durumda, varsayılan pencere sağlayıcısı doğru değeri alamıyor olabilir.
+> The <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> should be returned for providers hosted in a [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] control. In this case, the default window provider may be unable to retrieve the correct value.
 >
-> <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> Genellikle ana bilgisayar sağlayıcısı tarafından sağlanır. Örneğin, bir özel denetim öğesinden <xref:System.Windows.Forms.Control>türetildiyse, ad denetimin `Text` özelliğinden türetilir.
+> The <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> is usually supplied by the host provider. For example, if a custom control is derived from <xref:System.Windows.Forms.Control>, the name is derived from the `Text` property of the control.
 
-Örneğin, bkz. [BIR UI Otomasyon sağlayıcısından geri dönüş özellikleri](return-properties-from-a-ui-automation-provider.md).
+For example code, see [Return Properties from a UI Automation Provider](return-properties-from-a-ui-automation-provider.md).
 
 <a name="Events_in_Non_WPF_Providers"></a>
 
-### <a name="events-in-non-wpf-providers"></a>WPF olmayan sağlayıcılardaki olaylar
+### <a name="events-in-non-wpf-providers"></a>Events in Non-WPF Providers
 
-[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]sağlayıcılar, istemci uygulamalarının Kullanıcı arabirimi durumunda değişiklik bildirmesi için olayları tetiklemelidir. Aşağıdaki yöntemler olayları yükseltmek için kullanılır.
-
-|Yöntem|Açıklama|
-|------------|-----------------|
-|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|Denetim desenleri tarafından tetiklenen olaylar da dahil olmak üzere çeşitli olaylar oluşturur.|
-|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellik değiştiğinde bir olay oluşturur.|
-|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseStructureChangedEvent%2A>|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağacın yapısı değiştiğinde bir olay oluşturur; örneğin, bir öğenin kaldırılması veya eklenmesi.|
-
-Bir olayın amacı, etkinliğin [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sistem tarafından tetiklendiğine bakılmaksızın, içinde bir şeyin gerçekleşmediğini bildirmektir. Örneğin, tarafından <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> tanımlanan olay, doğrudan Kullanıcı girişi veya çağıran <xref:System.Windows.Automation.InvokePattern.Invoke%2A>istemci uygulaması tarafından her çağrıldığında oluşturulur.
-
-Bir sağlayıcı, performansı iyileştirmek için olayları seçmeli olarak oluşturabilir veya hiçbir istemci uygulama kayıtlı değilse hiçbir olay oluşturmaz. İyileştirme için aşağıdaki yöntemler kullanılır.
+[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] providers should raise events to notify client applications of changes in the state of the UI. The following methods are used to raise events.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|Bu statik özellik, herhangi bir istemci uygulamasının [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olaylara abone olup olmadığını belirtir.|
-|<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Sağlayıcının bir parça kökünde bu arabirimin uygulanması, istemcilerin parçadaki olaylar için olay işleyicilerini kaydetmesi ve kaydını silme sırasında önermesine olanak sağlar.|
+|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|Raises various events, including events triggered by control patterns.|
+|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Raises an event when a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property has changed.|
+|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseStructureChangedEvent%2A>|Raises an event when the structure of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree has changed; for example, by the removal or addition of an element.|
+
+The purpose of an event is to notify the client of something taking place in the [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], whether or not the activity is triggered by the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] system itself. For example, the event identified by <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> should be raised whenever the control is invoked, either through direct user input or by the client application calling <xref:System.Windows.Automation.InvokePattern.Invoke%2A>.
+
+To optimize performance, a provider can selectively raise events, or raise no events at all if no client application is registered to receive them. The following methods are used for optimization.
+
+|Yöntem|Açıklama|
+|------------|-----------------|
+|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|This static property specifies whether any client applications have subscribed to [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events.|
+|<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|The provider's implementation of this interface on a fragment root enables it to be advised when clients register and unregister event handlers for events on the fragment.|
 
 <a name="Non_WPF_Provider_Navigation"></a>
 
-### <a name="non-wpf-provider-navigation"></a>WPF olmayan sağlayıcı gezintisi
+### <a name="non-wpf-provider-navigation"></a>Non-WPF Provider Navigation
 
-Bir pencerede (hwnd) barındırılan özel bir düğme gibi basit denetimlerin sağlayıcılarının [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç içinde gezinmeyi desteklemesi gerekmez. Öğesinden ve öğesinden gezinti, uygulamasının uygulamasında <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>belirtilen konak penceresi için varsayılan sağlayıcı tarafından işlenir. Ancak karmaşık bir özel denetim için bir sağlayıcı uyguladığınızda, parçanın kök düğümü ve alt öğeleri arasında ve eşdüzey düğümler arasında gezinmeyi desteketmeniz gerekir.
+Providers for simple controls such as a custom button hosted in a window (HWND) do not need to support navigation within the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree. Navigation to and from the element is handled by the default provider for the host window, which is specified in the implementation of <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>. When you implement a provider for a complex custom control, however, you must support navigation between the root node of the fragment and its descendants, and between sibling nodes.
 
 > [!NOTE]
-> Kök dışındaki bir parçanın öğeleri doğrudan bir pencerede barındırıldığından ve `null` bunlardan gelen <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>ve onlardan gezinmeyi destekleyebildiğinden, öğesinden bir başvuru döndürmelidir.
+> Elements of a fragment other than the root must return a `null` reference  from <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, because they are not directly hosted in a window, and no default provider can support navigation to and from them.
 
-Parçanın yapısı, uygulamanız <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A>tarafından belirlenir. Her bir parçanın olası her bir yönü için, bu yöntem bu yöndeki öğe için sağlayıcı nesnesini döndürür. Bu yönde bir öğe yoksa, yöntem bir `null` başvuru döndürür.
+The structure of the fragment is determined by your implementation of <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A>. For each possible direction from each fragment, this method returns the provider object for the element in that direction. If there is no element in that direction, the method returns a `null` reference.
 
-Parça kökü yalnızca alt öğelere gezinmeyi destekler. Örneğin, bir liste kutusu yön <xref:System.Windows.Automation.Provider.NavigateDirection.FirstChild>olduğunda listedeki ilk öğeyi ve <xref:System.Windows.Automation.Provider.NavigateDirection.LastChild>yön olduğunda son öğeyi döndürür. Parça kökü üst veya Eşdüzey öğe üzerinde gezinmeyi desteklemez; Bu, ana bilgisayar pencere sağlayıcısı tarafından işlenir.
+The fragment root supports navigation only to child elements. For example, a list box returns the first item in the list when the direction is <xref:System.Windows.Automation.Provider.NavigateDirection.FirstChild>, and the last item when the direction is <xref:System.Windows.Automation.Provider.NavigateDirection.LastChild>. The fragment root does not support navigation to a parent or siblings; this is handled by the host window provider.
 
-Kök olmayan bir parçanın öğelerinin üst öğeye ve sahip oldukları tüm eşdüzey öğelere ve alt öğelerine gezinmeyi desteklemesi gerekir.
+Elements of a fragment that are not the root must support navigation to the parent, and to any siblings and children they have.
 
 <a name="Non_WPF_Provider_Reparenting"></a>
 
-### <a name="non-wpf-provider-reparenting"></a>WPF olmayan sağlayıcının yeniden konumlandırması
+### <a name="non-wpf-provider-reparenting"></a>Non-WPF Provider Reparenting
 
-Açılır pencereler aslında en üst düzey Windows, bu nedenle varsayılan olarak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacın alt öğesi olarak görüntülenir. Ancak, çoğu durumda, açılır pencereler bazı diğer bir denetimin mantıksal alt öğeleri. Örneğin, Birleşik giriş kutusunun aşağı açılan listesi, Birleşik giriş kutusunun mantıksal olarak bir alt öğesidir. Benzer şekilde, bir menü açılır penceresi, mantıksal olarak menünün bir alt öğesidir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], ilişkili denetimin alt öğeleri gibi görünmesi için açılır pencereler için destek sağlar.
+Pop-up windows are actually top-level windows, and so by default appear in the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree as children of the desktop. In many cases, however, pop-up windows are logically children of some other control. For example, the drop-down list of a combo box is logically a child of the combo box. Similarly, a menu pop-up window is logically a child of the menu. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] provides support to reparent pop-up windows so that they appear to be children of the associated control.
 
-Bir açılır pencereyi yeniden üst üste eklemek için:
+To reparent a pop-up window:
 
-1. Açılır pencere için bir sağlayıcı oluşturun. Bu, açılır pencere sınıfının önceden bilinmesi gerekir.
+1. Create a provider for the pop-up window. This requires that the class of the pop-up window is known in advance.
 
-2. Bu açılan pencere için her zamanki gibi tüm özellikleri ve desenleri, kendi sağında bir denetim olmasına rağmen uygulayın.
+2. Implement all properties and patterns as usual for that pop-up, as though it were a control in its own right.
 
-3. Özelliği, öğesinden <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>elde edilen değeri döndürmesi için uygulayın, burada parametresi, açılır pencerenin pencere tanıtıcıdır. <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>
+3. Implement the <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> property so that it returns the value obtained from <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, where the parameter is the window handle of the pop-up window.
 
-4. Açılır <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> pencere ve üst öğesi için, gezintinin mantıksal üst öğeden mantıksal alt öğelere doğru şekilde işlenmesini sağlamak için ve eşdüzey alt öğeler arasında uygulayın.
+4. Implement <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> for the pop-up window and its parent so that navigation is handled properly from the logical parent to the logical children, and between sibling children.
 
-Açılır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pencereyle karşılaştığında, gezinmenin varsayılan olarak geçersiz kılındığını algılar ve masaüstünün bir alt öğesi olarak karşılaşıldığında açılan pencereyi atlar. Bunun yerine, düğüm yalnızca parça aracılığıyla erişilebilir olacaktır.
+When [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] encounters the pop-up window, it recognizes that navigation is being overridden from the default, and skips over the pop-up window when it is encountered as a child of the desktop. Instead, the node will only be reachable through the fragment.
 
-Bir denetimin herhangi bir sınıfın penceresini barındırabileceği durumlar için yeniden Konumlandırıcı uygun değildir. Örneğin, bir yeniden çubuk bantlarındaki herhangi bir HWND türünü barındırabilir. Bu durumları işlemek için, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sonraki bölümde açıklandığı gibi HWND konum değişikliği alternatif bir biçimini destekler.
+Reparenting is not suitable for cases where a control can host a window of any class. For example, a rebar can host any type of HWND in its bands. To handle these cases, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] supports an alternative form of HWND relocation, as described in the next section.
 
 <a name="Non_WPF_Provider_Repositioning"></a>
 
-### <a name="non-wpf-provider-repositioning"></a>WPF olmayan sağlayıcı yeniden konumlandırma
+### <a name="non-wpf-provider-repositioning"></a>Non-WPF Provider Repositioning
 
-[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]parçalar, her biri bir pencerede (HWND) bulunan iki veya daha fazla öğe içerebilir. Her HWND, HWND 'yi kapsayan bir HWND [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 'nin bir alt öğesi olacak şekilde niteleyerek kendi varsayılan sağlayıcısına sahip olduğundan, ağaç varsayılan olarak ana pencerenin alt öğesi olarak parçadaki HWND NDS 'yi gösterir. Çoğu durumda bu, istenen davranıştır, ancak bazen ' ın [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]mantıksal yapısıyla eşleşmediğinden karışıklıklara yol açabilir.
+[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fragments may contain two or more elements that are each contained in a window (HWND). Because each HWND has its own default provider that considers the HWND to be a child of a containing HWND, the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree will, by default, show the HWNDs in the fragment as children of the parent window. In most cases this is desirable behavior, but sometimes it can lead to confusion because it does not match the logical structure of the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].
 
-Bunun iyi bir örneği bir Rebar denetimidir. Bir Rebar, her biri bir araç çubuğu, düzenleme kutusu veya Birleşik giriş kutusu gibi HWND tabanlı bir denetim içerebilen şeritler içerir. Rebar HWND için varsayılan pencere sağlayıcısı, bant denetimi olan HWNDs 'i alt öğe olarak görür ve yeniden çubuk sağlayıcı bantları alt öğe olarak görür. HWND sağlayıcısı ve Rebar sağlayıcı, çocuklarını ve alt öğelerini birleştirmeye çalışırken, hem şeritler hem de HWND tabanlı denetimler yeniden çubuğun alt öğesi olarak görünür. Ancak, mantıksal olarak yalnızca bantların alt çubuğun alt öğesi olarak görünmesi gerekir ve her bant sağlayıcısı, içerdiği denetimin varsayılan HWND sağlayıcısıyla birlikte yazılmalıdır.
+A good example of this is a rebar control. A rebar contains bands, each of which can in turn contain an HWND-based control such as a toolbar, an edit box, or a combo box. The default window provider for the rebar HWND sees the band control HWNDs as children, and the rebar provider sees the bands as children. Because the HWND provider and the rebar provider are working in tandem and combining their children, both the bands and the HWND-based controls appear as children of the rebar. Logically, however, only the bands should appear as children of the rebar, and each band provider should be coupled with the default HWND provider for the control it contains.
 
-Bunu gerçekleştirmek için, Rebar için parça kök sağlayıcısı bantları temsil eden bir alt öğe kümesi sunar. Her bant, özellikleri ve desenleri açığa çıkaran tek bir sağlayıcıya sahiptir. Uygulamasının uygulamasında, bant <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>sağlayıcısı, denetimin pencere tanıtıcısını geçirerek çağırarak <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, denetim HWND 'si için varsayılan pencere sağlayıcıyı döndürür. Son olarak, yeniden çubuk için parça kök sağlayıcısı <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> arabirimini uygular ve kendi <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> uygulamasında, belirtilen HWND 'de bulunan denetim için uygun bant sağlayıcısını döndürür.
+To accomplish this, the fragment root provider for the rebar exposes a set of children representing the bands. Each band has a single provider that may expose properties and patterns. In its implementation of <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, the band provider returns the default window provider for the control HWND, which it obtains by calling <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, passing in the control's window handle. Finally, the fragment root provider for the rebar implements the <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> interface, and in its implementation of <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> it returns the appropriate band provider for the control contained in the specified HWND.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

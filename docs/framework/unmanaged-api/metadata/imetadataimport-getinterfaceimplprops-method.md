@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: be3f5985-b1e4-4036-8602-c16e8508d4af
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2a4305b94d785a764671a2d73f43facefd0da0e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5eb735acac73d694a0719c206bd22711a8c0333
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782367"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437544"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps Yöntemi
-Meta veri belirteçleri için bir işaretçi alır <xref:System.Type> belirtilen yöntemini uygulayan ve arabirim için bu yöntem bildirir.
+Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,27 +37,27 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>Parametreler  
  `iiImpl`  
- [in] Sınıf ve arabirim belirteçleri için döndürülecek yöntemi temsil eden meta veri belirteci.  
+ [in] The metadata token representing the method to return the class and interface tokens for.  
   
  `pClass`  
- [out] Yöntemini uygulayan bir sınıfı temsil eden meta veri belirteci.  
+ [out] The metadata token representing the class that implements the method.  
   
  `ptkIface`  
- [out] Uygulanan yöntemi tanımlar arabirimi temsil eden meta veri belirteci.  
+ [out] The metadata token representing the interface that defines the implemented method.  
 
 ## <a name="remarks"></a>Açıklamalar
 
- Değeri elde `iImpl` çağırarak [Enumınterfaceımpls](imetadataimport-enuminterfaceimpls-method.md) yöntemi.
+ You obtain the value for `iImpl` by calling the [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) method.
  
- Örneğin, bir sınıf olduğunu varsayalım. bir `mdTypeDef` belirteç 0x02000007 değeri ile eşleşen türleri belirteçleri sahip üç arabirimi uygular: 
+ For example, suppose that a class has an `mdTypeDef` token value of 0x02000007 and that it implements three interfaces whose types have tokens: 
 
 - 0x02000003 (TypeDef)
 - 0x0100000A (TypeRef)
 - 0x0200001C (TypeDef)
 
-Kavramsal olarak, bu bilgileri, bir arabirim uygulaması tablosuna depolanır:
+Conceptually, this information is stored into an interface implementation table as:
 
-| Satır numarası | Sınıf simgesi | Belirteç arabirimi |
+| Row number | Class token | Interface token |
 |------------|-------------|-----------------|
 | 4          |             |                 |
 | 5          | 02000007    | 02000003        |
@@ -67,21 +65,21 @@ Kavramsal olarak, bu bilgileri, bir arabirim uygulaması tablosuna depolanır:
 | 7          |             |                 |
 | 8          | 02000007    | 0200001C        |
 
-Geri çağırırsanız, belirteç bir 4 baytlık değerdir:
+Recall, the token is a 4-byte value:
 
-- Daha düşük 3 baytlar satır numarasına tutun veya RID.
-- Belirteç türü – 0x09 için üst bayt tutar `mdtInterfaceImpl`.
+- The lower 3 bytes hold the row number, or RID.
+- The upper byte holds the token type – 0x09 for `mdtInterfaceImpl`.
 
-`GetInterfaceImplProps` bilgi tutulan belirteç tarafınıza sıradaki döndürür `iImpl` bağımsız değişken. 
+`GetInterfaceImplProps` returns the information held in the row whose token you provide in the `iImpl` argument. 
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d941102b-2679-4c49-b15e-c0fc9c53e11f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea0fbceb1e778a2f26e0625a337b803f417b59eb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2b1addc752c7238116e072c6e957d2b277ceb1e3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777253"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449393"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob Yöntemi
-Win32 kaynak blobu ve ilişkili kaynakları yayınlar.  
+Releases the Win32 resource blob and associated resources.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,13 +34,13 @@ HRESULT FreeWin32ResBlob(
   
 ## <a name="parameters"></a>Parametreler  
  `ppResBlob`  
- Yayımlanacak kaynak blobu. Bu yöntem, blob işaretçisini NULL 'a atar.  
+ The resource blob to be released. This method assigns the blob pointer to NULL.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

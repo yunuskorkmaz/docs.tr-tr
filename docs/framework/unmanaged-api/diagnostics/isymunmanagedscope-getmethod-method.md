@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a61866ee-221a-45b9-a1b7-395825b77872
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a75fed5e3272b783a6f8fb1a4f1c02096858b409
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 348a8cebe0fd746f3ae490484ffcca2fcb77684b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777902"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446321"
 ---
 # <a name="isymunmanagedscopegetmethod-method"></a>ISymUnmanagedScope::GetMethod Yöntemi
-Bu kapsam içeren yöntemi alır.  
+Gets the method that contains this scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,13 +34,13 @@ HRESULT GetMethod(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Döndürülen işaretçi [Isymunmanagedmethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) arabirimi.  
+ [out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7408d51-0bce-45a2-b58f-da4660bbc039
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 98fc95c618a7a06f5e6c219d7707af291770c06a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9973ef77a064dfe144d742d8cf12d8ae8dd2565f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781406"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447404"
 ---
 # <a name="imetadatatablesgetrow-method"></a>IMetaDataTables::GetRow Yöntemi
-Belirtilen tablo dizini altındaki tabloda belirtilen satır dizinindeki bir satır alır.  
+Gets the row at the specified row index, in the table at the specified table index.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +37,25 @@ HRESULT GetRow (
   
 ## <a name="parameters"></a>Parametreler  
  `ixTbl`  
- [in] Satır alınır tablosu dizini.  
+ [in] The index of the table from which the row will be retrieved.  
   
  `rid`  
- [in] Alınacak satırın dizini.  
+ [in] The index of the row to get.  
   
  `ppRow`  
- [out] Satır için bir işaretçi işaretçisi.  
+ [out] A pointer to a pointer to the row.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tutarlı sonuçlar döndürmez çünkü bu yöntem kullanımını önermeyiz. Ortak dil altyapısı (CLI) belgeleri GUID tablosu hakkında daha fazla bilgi için bkz. özellikle "Bölüm II: Meta veri tanımı ve anlamı". Belgeler çevrimiçi olarak kullanılabilir; bkz: [ECMA C# ve ortak dil altyapısı standartları](https://go.microsoft.com/fwlink/?LinkID=99212) MSDN'de ve [standart ECMA-335 - ortak dil altyapısı (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) Ecma uluslararası Web sitesinde.  
+ We do not recommend the use of this method, because it does not return consistent results. For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics". The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

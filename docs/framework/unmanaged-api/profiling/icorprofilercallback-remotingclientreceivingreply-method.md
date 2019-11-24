@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 15cfc300-8231-4ecb-9a04-19851c3eb484
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ff18d52091ca75152c20667d1ec1b024f44d6129
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e25cbfabc10da0c7b1095a956583bb5c7450dba9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782913"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445814"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply Yöntemi
-Uzaktan iletişim çağrısı sunucu tarafı kısmı tamamlandı ve istemci artık alma profil oluşturucu bildirir ve yanıt işlenecek.  
+Notifies the profiler that the server-side portion of a remoting call has completed and the client is now receiving and about to process the reply.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,27 +35,27 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="parameters"></a>Parametreler  
  `pCookie`  
- [in] Sağlanan değer karşılık gelecek bir değerle [Icorprofilercallback::remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) Bu koşullar altında:  
+ [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) under these conditions:  
   
-- Uzaktan iletişim GUID tanımlama bilgilerinin etkin olur.  
+- Remoting GUID cookies are active.  
   
-- Kanal ileti iletilirken başarılı olur.  
+- The channel succeeds in transmitting the message.  
   
-- GUID tanımlama bilgileri sunucu tarafı işlemini üzerinde etkindir.  
+- GUID cookies are active on the server-side process.  
   
- Bu, uzak hizmet çağrıları kolay eşlemeye izin verir.  
+ This allows easy pairing of remoting calls.  
   
  `fIsAsync`  
- [in] Bir değer `true` çağrısı ise, zaman uyumsuz; Aksi takdirde `false`.  
+ [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

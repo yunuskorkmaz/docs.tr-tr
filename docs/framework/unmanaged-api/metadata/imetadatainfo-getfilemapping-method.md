@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2868dfec-c992-4606-88bb-a8e0b6b18271
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 22af95ef4bd1fca0a8253faa6ce0e1c7a862054d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0cd2071d4410615a08e774ba30e0e8fe8d1fa7c7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782654"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436182"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping Yöntemi
-Eşleşen dosya ve tür eşlemesi bellek bölgesini alır.  
+Gets the memory region of the mapped file, and the type of mapping.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,39 +37,39 @@ HRESULT GetFileMapping (
   
 ## <a name="parameters"></a>Parametreler  
  `ppvData`  
- [out] Eşleşen dosya başlangıcı için bir işaretçi.  
+ [out] A pointer to the start of the mapped file.  
   
  `pcbData`  
- [out] Eşleştirilmiş bölge boyutu. Varsa `pdwMappingType` olduğu `fmFlat`, dosyanın boyutu budur.  
+ [out] The size of the mapped region. If `pdwMappingType` is `fmFlat`, this is the size of the file.  
   
  `pdwMappingType`  
- [out] A [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) eşleme türünü belirten değer. Ortak dil çalışma zamanı (CLR) her zaman geçerli uygulamasını döndürür `fmFlat`. Diğer değerleri, gelecekte kullanılmak üzere ayrılmıştır. Ancak, diğer değerleri gelecek sürümlerde etkinleştirilmemiş olabilir veya yayınlar hizmet için döndürülen değer her zaman doğrulamanız gerekir.  
+ [out] A [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) value that indicates the type of mapping. The current implementation of the common language runtime (CLR) always returns `fmFlat`. Other values are reserved for future use. However, you should always verify the returned value, because other values may be enabled in future versions or service releases.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|Tüm çıktıların doldurulur.|  
-|`E_INVALIDARG`|NULL bir bağımsız değişken değeri geçirildi.|  
-|`COR_E_NOTSUPPORTED`|CLR uygulamasındaki bellek bölge bilgileri sağlayamaz. Bu durum aşağıdaki nedenlerden dolayı oluşabilir:<br /><br /> -Meta veri kapsamı ile açılmış `ofWrite` veya `ofCopyMemory` bayrağı.<br />-Meta veri kapsamı olmadan açılmış `ofReadOnly` bayrağı.<br />- [Imetadatadispenser::openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) yöntemi yalnızca dosya meta veri bölümü açmak için kullanıldı.<br />-Dosya taşınabilir çalıştırılabilir (PE) dosyası değil. **Not:**  Bu koşullar CLR uygulamasının bağlıdır ve gelecek sürümleri CLR'nin zayıflar muhtemeldir.|  
+|`S_OK`|All outputs are filled.|  
+|`E_INVALIDARG`|NULL was passed as an argument value.|  
+|`COR_E_NOTSUPPORTED`|The CLR implementation cannot provide information about the memory region. This can happen for the following reasons:<br /><br /> -   The metadata scope was opened with the `ofWrite` or `ofCopyMemory` flag.<br />-   The metadata scope was opened without the `ofReadOnly` flag.<br />-   The [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method was used to open only the metadata portion of the file.<br />-   The file is not a portable executable (PE) file. **Note:**  These conditions depend on the CLR implementation, and are likely to be weakened in future versions of the CLR.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bellek, `ppvData` noktalarına, temel alınan meta veri kapsamı yalnızca açık olduğu sürece geçerlidir.  
+ The memory that `ppvData` points to is valid only as long as the underlying metadata scope is open.  
   
- Bu yöntemi çağırarak bir diskteki dosyanın meta verilerini belleğe eşlediğinizde, iş için sırayla [Imetadatadispenser::openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) yöntemi belirtmelisiniz `ofReadOnly` bayrağı ve değil belirtmelisiniz `ofWrite` veya `ofCopyMemory` bayrağı.  
+ In order for this method to work, when you map the metadata of an on-disk file into memory by calling the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method, you must specify the `ofReadOnly` flag and you must not specify the `ofWrite` or `ofCopyMemory` flag.  
   
- Her kapsam için dosya eşleme türü seçimi, CLR'nin belirli bir uygulamaya özeldir. Kullanıcı tarafından ayarlanamaz. Her zaman geçerli uygulama CLR döndürür `fmFlat` içinde `pdwMappingType`, ancak gelecekte CLR'nin sürümünü veya gelecek hizmet sürümlerini belirli bir sürümü değiştirebilirsiniz. Döndürülen değer her zaman iade etmelisiniz `pdwMappingType`, farklı alan farklı düzenler ve ofsetleri olduğundan.  
+ The choice of file mapping type for each scope is specific to a given implementation of the CLR. It cannot be set by the user. The current implementation of the CLR always returns `fmFlat` in `pdwMappingType`, but this can change in future versions of the CLR or in future service releases of a given version. You should always check the returned value in `pdwMappingType`, because different types will have different layouts and offsets.  
   
- Herhangi bir üç parametre için NULL geçirme desteklenmiyor. Yöntem döndürür `E_INVALIDARG`, ve çıkışları hiçbiri doldurulur. Eşleme türü veya bölgenin boyutunu yoksayılıyor anormal program sonlandırmada neden olabilir.  
+ Passing NULL for any of the three parameters is not supported. The method returns `E_INVALIDARG`, and none of the outputs are filled. Ignoring the mapping type or the size of the region can result in abnormal program termination.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

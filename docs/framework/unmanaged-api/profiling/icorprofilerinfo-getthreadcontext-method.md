@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 79446216-4b8b-484c-8fe3-e87dbf9df2fd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1b8afe10563d61e3ddab93e8d1b57eee4b6765c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc4643f1c90b3ea4d3b561249a4e76ff304737bd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766839"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438766"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>ICorProfilerInfo::GetThreadContext Metodu
-Şu anda belirtilen iş parçacığıyla ilişkilendirilmiş bağlam kimliğini alır.  
+Gets the context identity currently associated with the specified thread.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +35,19 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Parametreler  
  `threadId`  
- [in] İş parçacığı kimliği.  
+ [in] The ID of the thread.  
   
  `pContextId`  
- [out] Şu anda belirtilen iş parçacığıyla ilişkilendirilmiş bağlam Kimliğini bir işaretçi. İş parçacığı kendisiyle ilişkili bir bağlam yok varsa, bu işlev CORPROF_E_DATAINCOMPLETE döndürür.  
+ [out] A pointer to the context ID currently associated with the specified thread. If the thread has no context currently associated with it, this function will return CORPROF_E_DATAINCOMPLETE.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

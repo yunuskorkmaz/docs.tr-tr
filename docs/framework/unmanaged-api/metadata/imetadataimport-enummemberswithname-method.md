@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 737ccc8af41c9eca765a7ea06f29d1aec1ccfad6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ed193aab8beb0de1321aa1d52ec9f963b08b316c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758844"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441668"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName Yöntemi
-Belirtilen ada sahip belirtilen türün üyelerini temsil eden MemberDef belirteçleri numaralandırır.  
+Enumerates MemberDef tokens representing members of the specified type with the specified name.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,41 +40,41 @@ HRESULT EnumMembersWithName (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [out içinde] Numaralandırıcı bir işaretçi.  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in] Numaralandırılacak üyelere sahip türünü temsil eden bir tür tanımı belirteci.  
+ [in] A TypeDef token representing the type with members to enumerate.  
   
  `szName`  
- [in] Numaralandırıcı kapsamını sınırlayan üye adı.  
+ [in] The member name that limits the scope of the enumerator.  
   
  `rMembers`  
- [out] Dizi MemberDef simgeleri depolamak için kullanılır.  
+ [out] The array used to store the MemberDef tokens.  
   
  `cMax`  
- [in] En büyük boyutunu `rMembers` dizisi.  
+ [in] The maximum size of the `rMembers` array.  
   
  `pcTokens`  
- [out] Döndürülen MemberDef belirteçleri gerçek sayısını `rMembers`.  
+ [out] The actual number of MemberDef tokens returned in `rMembers`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, alanlar ve yöntemler, ancak özellikleri veya olayları numaralandırır. Farklı [Imetadataımport::enummembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` belirtilen ada sahip olmayan tüm alan ve üye belirteçleri atar.  
+ This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` discards all field and member tokens that do not have the specified name.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak hiçbir MemberDef belirteçleri vardır. Bu durumda, `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumTypeDefs` returned successfully.|  
+|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

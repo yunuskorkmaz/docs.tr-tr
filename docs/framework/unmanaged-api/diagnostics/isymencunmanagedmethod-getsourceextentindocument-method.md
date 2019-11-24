@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c5566ab-4ec7-4b61-9753-839bb90ae78c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e4948a853434b14845983addb0e6fa4012279084
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b8e72745eff09c6707afe5a5f20a1ddf38b239ae
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776876"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448618"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument Yöntemi
-Alır, özel bir belgede satır, metodu için satır sonu en büyük en küçük başlayın.  
+Gets the smallest start line and largest end line for the method in a specific document.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +36,19 @@ HRESULT GetSourceExtentInDocument(
   
 ## <a name="parameters"></a>Parametreler  
  `document`  
- [in] Belge işaretçisi.  
+ [in] A pointer to the document.  
   
  `pstartLine`  
- [out] Bir işaretçi bir `ULONG32` , başlangıç satırını alır.  
+ [out] A pointer to a `ULONG32` that receives the start line.  
   
  `pendLine`  
- [out] Bir işaretçi bir `ULONG32` , satır sonunu alır.  
+ [out] A pointer to a `ULONG32` that receives the end line.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

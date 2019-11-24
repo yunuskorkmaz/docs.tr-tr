@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 542c7c65-dd56-4651-b76f-5db2465e4a15
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0a8dd1f92dc36dcda58bdecbdb18e8d3509f7c6e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7e93b92b0b0b4c44955ebc7dfb9d1eb875713c27
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782167"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449718"
 ---
 # <a name="icorprofilerinfo3getfunctionenter3info-method"></a>ICorProfilerInfo3::GetFunctionEnter3Info Yöntemi
-Profil Oluşturucu tarafından bildirilen işlev yığın çerçeve ve bağımsız değişken bilgilerini sağlar [Functionenter3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) işlevi. Bu yöntem yalnızca sırasında çağrılabilir `FunctionEnter3WithInfo` geri çağırma.  
+Provides the stack frame and argument information of the function that is being reported to the profiler by the [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) function. This method can be called only during the `FunctionEnter3WithInfo` callback.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,37 +39,37 @@ HRESULT GetFunctionEnter3Info(
   
 ## <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] `FunctionID` İşlevinin giriliyor.  
+ [in] The `FunctionID` of the function that is being entered.  
   
  `eltInfo`  
- [in] Belirli bir yığın çerçevesi ilgili bilgileri temsil eder bir donuk tanıtıcısı. Profil Oluşturucu, aynı sağlamalıdır `eltInfo` tarafından verildiğini [Functionenter3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) işlevi.  
+ [in] An opaque handle that represents information about a given stack frame. The profiler should provide the same `eltInfo` that it was given by the [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) function.  
   
  `pFrameInfo`  
- [out] Genel türler belirtilen yığın çerçevesi bilgilerini temsil eden bir donuk tanıtıcısı. Bu işleyici yalnızca sırasında geçerli `FunctionEnter3WithInfo` profil oluşturucu çağrılır, geri çağırma `GetFunctionEnter3Info` yöntemi.  
+ [out] An opaque handle that represents generics information about a given stack frame. This handle is valid only during the `FunctionEnter3WithInfo` callback in which the profiler called the `GetFunctionEnter3Info` method.  
   
  `pcbArgumentInfo`  
- [out içinde] Bayt olarak toplam boyutu için bir işaretçi, [cor_prf_functıon_argument_ınfo](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) yapısı (artı ek [cor_prf_functıon_argument_range](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) tarafındanişaretedilenbağımsızdeğişkenaralıklarıiçinyapılar`pArgumentInfo`). Belirtilen boyutu yeterli değil, ERROR_INSUFFICIENT_BUFFER döndürülür ve beklenen boyut depolanan `pcbArgumentInfo`. Çağrılacak `GetFunctionEnter3Info` yalnızca beklenen değer almak için `*pcbArgumentInfo`ayarlayın `*pcbArgumentInfo`= 0 ve `pArgumentInfo`= NULL.  
+ [in, out] A pointer to the total size, in bytes, of the [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) structure (plus any additional [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures for the argument ranges pointed to by `pArgumentInfo`). If the specified size is not enough, ERROR_INSUFFICIENT_BUFFER is returned and the expected size is stored in `pcbArgumentInfo`. To call `GetFunctionEnter3Info` just to retrieve the expected value for `*pcbArgumentInfo`, set `*pcbArgumentInfo`=0 and `pArgumentInfo`=NULL.  
   
  `pArgumentInfo`  
- [out] Bir işaretçi bir [cor_prf_functıon_argument_ınfo](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) işlev bağımsız soldan sağa doğru sırayla bellekte konumlarını tanımlayan yapısı.  
+ [out] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) structure that describes the locations of the function's arguments in memory, in left-to-right order.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Profil Oluşturucu için yeterli alanı ayırmalısınız `COR_PRF_FUNCTION_ARGUMENT_INFO` denetlenen ve boyutunu belirtmeniz gerekir işlev yapısını `pcbArgumentInfo` parametresi.  
+ The profiler must allocate sufficient space for the `COR_PRF_FUNCTION_ARGUMENT_INFO` structure of the function that is being inspected, and must indicate the size in the `pcbArgumentInfo` parameter.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Functionenter3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
-- [Functionleave3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [Functiontailcall3withınfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
+- [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
+- [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
+- [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
 - [ICorProfilerInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
 - [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4c1bf9e572ee88bd299f23ebb435c1b4d24ed717
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b78d604a28ffe01000a763f7e0dd3c1630e2c186
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762923"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435916"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished Yöntemi
-Profil Oluşturucu, bir sınıf kaldırma işleminin tamamlandığını bildirir.  
+Notifies the profiler that a class has finished unloading.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +35,22 @@ HRESULT ClassUnloadFinished(
   
 ## <a name="parameters"></a>Parametreler  
  `classId`  
- [in] Kaldırılmış olan bir sınıfı tanımlar.  
+ [in] Identifies the class that was unloaded.  
   
  `hrStatus`  
- [in] Sınıf başarıyla kaldırılmış olup olmadığını gösteren bir HRESULT.  
+ [in] An HRESULT that indicates whether the class was unloaded successfully.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sınıf kaldırılması, bazı bölümleri sonra devam edebilir `ClassUnloadFinished` geri çağırma. Bir hata HRESULT içinde `hrStatus` hata gösterir. Ancak, bir başarı HRESULT içinde `hrStatus` yalnızca ilk parçası sınıfı kaldırma işleminin başarılı olduğunu gösterir.  
+ Some parts of unloading the class might continue after the `ClassUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

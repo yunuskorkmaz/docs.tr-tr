@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efc097fd9b4da668aafce90ce601a3143ea57dc7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 25c208c98802be540bde7532c53798e6f7b35446
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763177"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445955"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler Yöntemi
-Belirtilen işleme belirtilen profil oluşturucuyu ekler.  
+Attaches the specified profiler to the specified process.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,54 +39,54 @@ HRESULT AttachProfiler(
   
 ## <a name="parameters"></a>Parametreler  
  `dwProfileeProcessID`  
- [in] Profil Oluşturucu eklenmesi işlemin işlem kimliği. Bir 64-bit makinede profilli işlemin bit genişliği bit genişliğinde çağıran bir tetikleyici işlem eşleşmelidir `AttachProfiler`. Altında kullanıcı hesabı `AttachProfiler` çağrılır yönetici ayrıcalıklarına sahip, hedef işlem sistem üzerindeki herhangi bir işlem olabilir. Aksi takdirde, hedef işlem, aynı kullanıcı hesabı tarafından sahiplenilmelidir.  
+ [in] The process ID of the process to which the profiler should be attached. On a 64-bit machine, the profiled process's bitness must match the bitness of the trigger process that is calling `AttachProfiler`. If the user account under which `AttachProfiler` is called has administrative privileges, the target process may be any process on the system. Otherwise, the target process must be owned by the same user account.  
   
  `dwMillisecondsMax`  
- [in] Milisaniye cinsinden süre için `AttachProfiler` tamamlanması. Tetikleyici işlem, belirli bir profil, başlatma işlemini tamamlamak yeterli olduğu bilinen bir zaman aşımı geçmelidir.  
+ [in] The time duration, in milliseconds, for `AttachProfiler` to complete. The trigger process should pass a timeout that is known to be sufficient for the particular profiler to complete its initialization.  
   
  `pClsidProfiler`  
- [in] Yüklenecek profil oluşturucu CLSID değeri için bir işaretçi. Tetikleyici işlem, bu bellek sonra yeniden kullanabilirsiniz `AttachProfiler` döndürür.  
+ [in] A pointer to the CLSID of the profiler to be loaded. The trigger process can reuse this memory after `AttachProfiler` returns.  
   
  `wszProfilerPath`  
- [in] Yüklenecek profil oluşturucunun DLL dosyasının tam yolu. Bu dize null Sonlandırıcı dahil olmak üzere, en fazla 260 karakter içermelidir. Varsa `wszProfilerPath` null veya boş bir dize ortak dil çalışma zamanı (CLR) profil oluşturucunun DLL dosyasının konumunu CLSID kayıt defterinde bakarak bulmayı dener, `pClsidProfiler` işaret eder.  
+ [in] The full path to the profiler’s DLL file to be loaded. This string should contain no more than 260 characters, including the null terminator. If `wszProfilerPath` is null or an empty string, the common language runtime (CLR) will try to find the location of the profiler’s DLL file by looking in the registry for the CLSID that `pClsidProfiler` points to.  
   
  `pvClientData`  
- [in] Profil Oluşturucu tarafından geçirilecek veriler için bir işaretçi [Icorprofilercallback3::ınitializeforattach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) yöntemi. Tetikleyici işlem, bu bellek sonra yeniden kullanabilirsiniz `AttachProfiler` döndürür. Varsa `pvClientData` boş `cbClientData` 0 (sıfır) olmalıdır.  
+ [in] A pointer to data to be passed to the profiler by the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method. The trigger process can reuse this memory after `AttachProfiler` returns. If `pvClientData` is null, `cbClientData` must be 0 (zero).  
   
  `cbClientData`  
- [in] Bayt cinsinden veri boyutu, `pvClientData` işaret eder.  
+ [in] The size, in bytes, of the data that `pvClientData` points to.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, aşağıdaki HRESULT'ları döndürür.  
+ This method returns the following HRESULTs.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|Belirtilen profil oluşturucuyu hedef işleme başarıyla eklenmiş.|  
-|CORPROF_E_PROFILER_ALREADY_ACTIVE|Aynı zamanda etkin veya düğmelere hedef işlem için zaten bir profil oluşturucu yok.|  
-|CORPROF_E_PROFILER_NOT_ATTACHABLE|Belirtilen profil oluşturucu bağlantısını desteklemez. Tetikleyici işlem, farklı bir profil oluşturucu ekleme girişiminde bulunabilir.|  
-|CORPROF_E_PROFILEE_INCOMPATIBLE_WITH_TRIGGER|Hedef işlemin sürümü çağıran geçerli işlem ile uyumsuz olduğundan bir profil oluşturucu ek istek kurulamıyor `AttachProfiler`.|  
-|HRESULT_FROM_WIN32(ERROR_ACCESS_DENIED)|Tetikleyici işlem, kullanıcı hedef işlem erişiminiz yok.|  
-|HRESULT_FROM_WIN32(ERROR_PRIVILEGE_NOT_HELD)|Tetikleyici işlem, kullanıcı için belirtilen hedef işlemin bir profil oluşturucuyu eklemek gerekli ayrıcalıklara sahip değil. Uygulama olay günlüğü daha fazla bilgi içeriyor olabilir.|  
-|CORPROF_E_IPC_FAILED|Hedef işlemle iletişim kurulurken bir hata oluştu. Hedef işlem kapatılıyor, bu yaygın olarak gerçekleşir.|  
-|HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND)|Hedef işlem yok veya ek destekleyen bir CLR çalışmıyor. Bu durum, CLR çalışma zamanı numaralandırma yöntem çağrısından sonra kaldırılmış olduğunu gösteriyor olabilir.|  
-|HRESULT_FROM_WIN32(ERROR_TIMEOUT)|Profiler'ı yüklemek için başlangıç olmadan süresi doldu. İliştirme işlemini yeniden deneyebilirsiniz. Hedef işlem içindeki bir sonlandırıcı zaman aşımı değerinden daha uzun bir süre çalıştığında zaman aşımı oluşur.|  
-|E_INVALIDARG|Bir veya daha fazla parametreler geçersiz değerlere sahip.|  
-|E_FAIL|Bazı diğer, belirtilmeyen bir hata oluştu.|  
-|Diğer hata kodları|Profil oluşturucunun [Icorprofilercallback3::ınitializeforattach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) yöntemi hatası gösteren HRESULT döndürür `AttachProfiler` döndürür, aynı HRESULT. Bu durumda, E_NOTIMPL CORPROF_E_PROFILER_NOT_ATTACHABLE için dönüştürülür.|  
+|S_OK|The specified profiler has successfully attached to the target process.|  
+|CORPROF_E_PROFILER_ALREADY_ACTIVE|There is already a profiler active or attaching to the target process.|  
+|CORPROF_E_PROFILER_NOT_ATTACHABLE|The specified profiler does not support attachment. The trigger process may attempt to attach a different profiler.|  
+|CORPROF_E_PROFILEE_INCOMPATIBLE_WITH_TRIGGER|Unable to request a profiler attachment, because the version of the target process is incompatible with the current process that is calling `AttachProfiler`.|  
+|HRESULT_FROM_WIN32(ERROR_ACCESS_DENIED)|The user of the trigger process does not have access to the target process.|  
+|HRESULT_FROM_WIN32(ERROR_PRIVILEGE_NOT_HELD)|The user of the trigger process does not have the privileges necessary to attach a profiler to the given target process. The application event log may contain more information.|  
+|CORPROF_E_IPC_FAILED|A failure occurred when communicating with the target process. This commonly happens if the target process was shutting down.|  
+|HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND)|The target process does not exist or is not running a CLR that supports attachment. This may indicate that the CLR was unloaded since the call to the runtime enumeration method.|  
+|HRESULT_FROM_WIN32(ERROR_TIMEOUT)|The timeout expired without beginning to load the profiler. You can retry the attach operation. Timeouts occur when a finalizer in the target process runs for a longer time than the timeout value.|  
+|E_INVALIDARG|One or more parameters have invalid values.|  
+|E_FAIL|Some other, unspecified failure occurred.|  
+|Other error codes|If the profiler’s [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method returns an HRESULT that indicates failure, `AttachProfiler` returns that same HRESULT. In this case, E_NOTIMPL is converted to CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="memory-management"></a>Bellek Yönetimi  
- COM kuralları ile çağıran tutma içinde `AttachProfiler` (örneğin, tetikleyici kod profil oluşturucu geliştirici tarafından yazılan) ayırma ve veriler için bellek ayırmasını sorumludur, `pvClientData` parametre işaret eder. Ne zaman CLR yürütür `AttachProfiler` , bu çağrıda bir kopyasını bellek, `pvClientData` işaret ve hedef işlem için iletir. CLR'nin hedef işlemin içinde kendine ait kopyasını aldığında `pvClientData` bloğu, bloğun profil oluşturucu geçirir `InitializeForAttach` yöntemi ve kopyasını ayırmayı iptal eder `pvClientData` hedef işlem bloğundan.  
+ In keeping with COM conventions, the caller of `AttachProfiler` (for example, the trigger code authored by the profiler developer) is responsible for allocating and de-allocating the memory for the data that the `pvClientData` parameter points to. When the CLR executes the `AttachProfiler` call, it makes a copy of the memory that `pvClientData` points to and transmits it to the target process. When the CLR inside the target process receives its own copy of the `pvClientData` block, it passes the block to the profiler through the `InitializeForAttach` method, and then deallocates its copy of the `pvClientData` block from the target process.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

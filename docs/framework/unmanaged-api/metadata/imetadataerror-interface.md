@@ -14,35 +14,33 @@ helpviewer_keywords:
 ms.assetid: 0020b62c-ea88-40c7-a9ee-16b064f81624
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 277b93267f0537c8e499a8d8f3b456c4396a975c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 44ecb73375f8a408fb0a38c3a2e2913f92ec4ca4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966347"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441625"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError Arabirimi
-Meta veri birleştirme sırasında hataları raporlamak için bir geri çağırma mekanizması sağlar.  
+Provides a callback mechanism for reporting errors during the metadata merge.  
   
 > [!NOTE]
-> `IMetaDataError` Arabirimin istemci tarafından uygulanması gerekir.  
+> The `IMetaDataError` interface must be implemented by the client.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[OnError Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Meta veri birleştirme sırasında oluşan hataların bildirimini sağlar.|  
+|[OnError Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Provides notification of errors that occur during the metadata merge.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** Cor. h  
+ **Header:** Cor.h  
   
- **Kitaplığı** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd5e9b64-b4a3-4ba6-9be6-ddb540f4ffcf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4141c79502dae89ec228e4e39da121615f292786
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4f8cfd912a3d6f66f5f2586a8942c7ce9bd52a63
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782965"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445894"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences Yöntemi
-Profil Oluşturucu belirtilen nesne tarafından başvurulan nesneleri bellekte hakkında bilgilendirir.  
+Notifies the profiler about objects in memory that are being referenced by the specified object.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,34 +37,34 @@ HRESULT ObjectReferences(
   
 ## <a name="parameters"></a>Parametreler  
  `objectId`  
- [in] Nesnelere başvurma nesnesinin kimliği.  
+ [in] The ID of the object that is referencing objects.  
   
  `classId`  
- [in] Örneği belirtilen nesne sınıfı kimliği.  
+ [in] The ID of the class that the specified object is an instance of.  
   
  `cObjectRefs`  
- [in] Belirtilen nesne tarafından başvurulan nesne sayısını (diğer bir deyişle, içindeki öğelerin sayısını `objectRefIds` dizisi).  
+ [in] The number of objects referenced by the specified object (that is, the number of elements in the `objectRefIds` array).  
   
  `objectRefIds`  
- [in] Bir dizi tarafından başvurulan nesne kimliklerini `objectId`.  
+ [in] An array of IDs of objects that are being referenced by `objectId`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ObjectReferences` Yöntemi yığınında bir çöp toplama tamamlandıktan sonra geri kalan her bir nesne için çağrılır. Profil Oluşturucu, bir hata bu geri çağrısından dönerse, profil oluşturma hizmetleri bu geri çağırma bir sonraki atık koleksiyonuna kadar devam etmeyecek.  
+ The `ObjectReferences` method is called for each object remaining in the heap after a garbage collection has completed. If the profiler returns an error from this callback, the profiling services will discontinue invoking this callback until the next garbage collection.  
   
- `ObjectReferences` Geri çağırma ile birlikte kullanılabilir [Icorprofilercallback::rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) çalışma zamanı için bir tam nesne başvuru grafiği oluşturmak için geri çağırma. Ortak dil çalışma zamanı (CLR) her nesne başvurusu tarafından yalnızca bir kez bildirilir sağlar `ObjectReferences` yöntemi.  
+ The `ObjectReferences` callback can be used in conjunction with the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback to create a complete object reference graph for the runtime. The common language runtime (CLR) ensures that each object reference is reported only once by the `ObjectReferences` method.  
   
- Tarafından döndürülen nesne kimlikleri `ObjectReferences` çöp toplama nesneleri taşıma ortasında olabileceğinden geri kendisini sırasında geçerli değildir. Bu nedenle, profil oluşturucular sırasında nesneleri incelemek kullanmamanız gerekir bir `ObjectReferences` çağırın. Zaman [Icorprofilercallback2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) çağrıldığında çöp toplama tamamlandığında ve İnceleme güvenli bir şekilde gerçekleştirilebilir.  
+ The object IDs returned by `ObjectReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects. Therefore, profilers must not attempt to inspect objects during an `ObjectReferences` call. When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, the garbage collection is complete and inspection can be safely done.  
   
- Bir null `ClassId` belirten `objectId` kaldırılıyor türüne sahip.  
+ A null `ClassId` indicates that `objectId` has a type that is unloading.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

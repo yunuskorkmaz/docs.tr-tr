@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8685c1e-b80c-4198-8eb3-748d6f48a99e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e1be6079ed382b8ab27d0aec16bd725f5c5b9cb5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c458fef77b49f522ca21dd5487731f4d43588cea
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778896"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437104"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>IMetaDataImport::GetPinvokeMap Yöntemi
-Bir ModuleRef PInvoke çağrısına hedef derleme temsil etmek için belirteç alır.  
+Gets a ModuleRef token to represent the target assembly of a PInvoke call.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,31 +40,31 @@ HRESULT GetPinvokeMap (
   
 ## <a name="parameters"></a>Parametreler  
  `tk`  
- [in] PInvoke eşleme meta verilerini almak için fieldDef simgesi veya MethodDef belirteci.  
+ [in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.  
   
  `pdwMappingFlags`  
- [out] Eşleme için kullanılan bayraklar işaretçisi. Gelen bir bit maskesi değerdir [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) sabit listesi.  
+ [out] A pointer to flags used for mapping. This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.  
   
  `szImportName`  
- [out] Yönetilmeyen DLL hedef adı.  
+ [out] The name of the unmanaged target DLL.  
   
  `cchImportName`  
- [in] Geniş karakter cinsinden boyutu `szImportName`.  
+ [in] The size in wide characters of `szImportName`.  
   
  `pchImportName`  
- [out] Döndürülen geniş karakter sayısını `szImportName`.  
+ [out] The number of wide characters returned in `szImportName`.  
   
  `pmrImportDLL`  
- [out] Yönetilmeyen hedef nesne kitaplığı temsil eden bir ModuleRef belirteci için bir işaretçi.  
+ [out] A pointer to a ModuleRef token that represents the unmanaged target object library.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

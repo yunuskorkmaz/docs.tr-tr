@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ff298f73f02f148fc389f389ba86fd9a550998c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74088d1cd018bb07406fc7d00ff83d783a98b663
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781768"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450233"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr Numaralandırması
-Bir yöntem özelliklerini açıklayan değerlerini içerir.  
+Contains values that describe the features of a method.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -68,37 +66,37 @@ typedef enum CorMethodAttr {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`mdMemberAccessMask`|Üye erişimi belirtir.|  
-|`mdPrivateScope`|Üye başvurulamaz belirtir.|  
-|`mdPrivate`|Üye yalnızca üst türü tarafından erişilebilir olduğunu belirtir.|  
-|`mdFamANDAssem`|Üyenin alt yalnızca bu derlemedeki türleri tarafından erişilebilir olduğunu belirtir.|  
-|`mdAssem`|Üye accessibly derlemedeki hiç kimse tarafından olduğunu belirtir.|  
-|`mdFamily`|Üye yalnızca türü ve alt türleri tarafından erişilebilir olduğunu belirtir.|  
-|`mdFamORAssem`|Üye, diğer türleri ve türetilen sınıflar tarafından erişilebilir olduğunu belirtir.|  
-|`mdPublic`|Üye kapsamına erişimi olan tüm türleri tarafından erişilebilir olduğunu belirtir.|  
-|`mdStatic`|Üye türü bir parçası olarak yerine bir örnek üyesi olarak tanımlandı belirtir.|  
-|`mdFinal`|Yöntem kılınamayacağını belirtir.|  
-|`mdVirtual`|Yöntem geçersiz kılınabilir belirtir.|  
-|`mdHideBySig`|Yöntemi yalnızca ada göre değil, ada ve imzaya göre gizlediğini belirtir.|  
-|`mdVtableLayoutMask`|Sanal Tablo düzeni belirtir.|  
-|`mdReuseSlot`|Bu yöntem sanal tabloda kullanılan yuva yeniden kullanılabilir belirtir. Bu varsayılandır.|  
-|`mdNewSlot`|Yöntem her zaman sanal tablosunda yeni bir yuva alır belirtir.|  
-|`mdCheckAccessOnOverride`|Yöntemi aynı türleri için görülebilir tarafından geçersiz kılınabilir belirtir.|  
-|`mdAbstract`|Yöntem uygulanmadı belirtir.|  
-|`mdSpecialName`|Yöntem özeldir ve adını açıklayan belirtir nasıl.|  
-|`mdPinvokeImpl`|Yöntem uygulaması PInvoke kullanarak iletilir belirtir.|  
-|`mdUnmanagedExport`|Yöntemi yönetilmeyen koda verilen yönetilen bir yöntem olduğunu belirtir.|  
-|`mdReservedMask`|İç kullanım için ortak dil çalışma zamanı tarafından ayrılmış.|  
-|`mdRTSpecialName`|Ortak dil çalışma zamanı yöntemi adı kodlama denetleyeceğini belirtir.|  
-|`mdHasSecurity`|Yöntemi, kendisiyle ilişkilendirilmiş güvenlik sahip olduğunu belirtir.|  
-|`mdRequireSecObject`|Yöntemi güvenlik kodu içeren başka bir yöntemi çağıran belirtir.|  
+|`mdMemberAccessMask`|Specifies member access.|  
+|`mdPrivateScope`|Specifies that the member cannot be referenced.|  
+|`mdPrivate`|Specifies that the member is accessible only by the parent type.|  
+|`mdFamANDAssem`|Specifies that the member is accessible by subtypes only in this assembly.|  
+|`mdAssem`|Specifies that the member is accessibly by anyone in the assembly.|  
+|`mdFamily`|Specifies that the member is accessible only by type and subtypes.|  
+|`mdFamORAssem`|Specifies that the member is accessible by derived classes and by other types in its assembly.|  
+|`mdPublic`|Specifies that the member is accessible by all types with access to the scope.|  
+|`mdStatic`|Specifies that the member is defined as part of the type rather than as a member of an instance.|  
+|`mdFinal`|Specifies that the method cannot be overridden.|  
+|`mdVirtual`|Specifies that the method can be overridden.|  
+|`mdHideBySig`|Specifies that the method hides by name and signature, rather than just by name.|  
+|`mdVtableLayoutMask`|Specifies virtual table layout.|  
+|`mdReuseSlot`|Specifies that the slot used for this method in the virtual table be reused. Bu varsayılandır.|  
+|`mdNewSlot`|Specifies that the method always gets a new slot in the virtual table.|  
+|`mdCheckAccessOnOverride`|Specifies that the method can be overridden by the same types to which it is visible.|  
+|`mdAbstract`|Specifies that the method is not implemented.|  
+|`mdSpecialName`|Specifies that the method is special, and that its name describes how.|  
+|`mdPinvokeImpl`|Specifies that the method implementation is forwarded using PInvoke.|  
+|`mdUnmanagedExport`|Specifies that the method is a managed method exported to unmanaged code.|  
+|`mdReservedMask`|Reserved for internal use by the common language runtime.|  
+|`mdRTSpecialName`|Specifies that the common language runtime should check the encoding of the method name.|  
+|`mdHasSecurity`|Specifies that the method has security associated with it.|  
+|`mdRequireSecObject`|Specifies that the method calls another method containing security code.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

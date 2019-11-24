@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 40f9bd9e-16ec-447e-81b0-168c875e9866
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 502e7841f8c413aa48732bcea0b6c2178d70c061
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ffb5953c843a338b4548253457a0c3b1ca0c20f5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776451"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444304"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags Numaralandırması
-Bir derlemenin çalışma zamanı özellikleri açıklayan değerlerini içerir.  
+Contains values that describe run-time features of an assembly.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,23 +40,23 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|Dışarı aktarılan tür tanımlarını derlemeyi oluşturan dosyaları içinde örtük olduğunu belirtir. .NET Framework sürüm 1.0 ve 1.1, bu değeri ayarlamak için her zaman varsayılır.|  
-|`afImplicitResources`|Kaynak tanımları derlemeyi oluşturan dosyaları içinde örtük olduğunu belirtir. .NET Framework 1.0 ve 1.1, bu değeri ayarlamak için her zaman varsayılır.|  
-|`afNonSideBySideAppDomain`|Derleme aynı uygulama etki alanında çalıştırıyorsanız diğer sürümlerle yürütülemez belirtir.|  
-|`afNonSideBySideProcess`|Aynı işlem içinde çalıştırıyorsanız derleme diğer sürümlerle yürütülemez belirtir.|  
-|`afNonSideBySideMachine`|Aynı bilgisayarda çalışıyorsa derleme diğer sürümlerle yürütülemez belirtir.|  
+|`afImplicitExportedTypes`|Specifies that exported type definitions are implicit within the files that comprise the assembly. In the .NET Framework versions 1.0 and 1.1, this value is always assumed to be set.|  
+|`afImplicitResources`|Specifies that resource definitions are implicit within the files that comprise the assembly. In the .NET Framework 1.0 and 1.1, this value is always assumed to be set.|  
+|`afNonSideBySideAppDomain`|Specifies that the assembly cannot execute with other versions if they are running in the same application domain.|  
+|`afNonSideBySideProcess`|Specifies that the assembly cannot execute with other versions if they are running in the same process.|  
+|`afNonSideBySideMachine`|Specifies that the assembly cannot execute with other versions if they are running on the same computer.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- 0x0010 ve 0x0070 (dahil) arasında değerler, yan yana uyumluluk özelliklerini başvurulan derlemeyi tanımlamak için kullanılır. Bu değerlerin hiçbiri ayarlanmazsa derleme yan yana uyumlu olduğu varsayılır.  
+ The values between 0x0010 and 0x0070, inclusive, are used to describe side-by-side compatibility features of the referenced assembly. If none of these values are set, the assembly is assumed to be side-by-side compatible.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MsCorEE.h  
+ **Header:** MsCorEE.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

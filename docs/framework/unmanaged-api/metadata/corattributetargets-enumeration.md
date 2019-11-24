@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9fb1dff80fccc920540d370797441b3a019d766c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780916"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443876"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets Numaralandırması
-Üzerinde bir öznitelik uygulamak için geçerli olduğundan uygulama öğesi belirtir.  
+Specifies the application elements on which it is valid to apply an attribute.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -64,34 +62,34 @@ typedef enum CorAttributeTargets
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`catAssembly`|Öznitelik bir bütünleştirilmiş koda uygulanabilir.|  
-|`catModule`|Öznitelik, bir taşınabilir yürütülebilir (.dll veya .exe) modülü için uygulanabilir.|  
-|`catClass`|Öznitelik bir sınıfa uygulanabilir.|  
-|`catStruct`|Öznitelik, bir yapıya uygulanabilir; diğer bir deyişle, bir değer yazın.|  
-|`catEnum`|Öznitelik, bir numaralandırma için uygulanabilir.|  
-|`catConstructor`|Öznitelik, bir oluşturucu için uygulanabilir.|  
-|`catMethod`|Öznitelik, bir yönteme uygulanabilir.|  
-|`catProperty`|Öznitelik, bir özellik için uygulanabilir.|  
-|`catField`|Öznitelik, bir alan için uygulanabilir.|  
-|`catEvent`|Öznitelik, bir olay için uygulanabilir.|  
-|`catInterface`|Öznitelik, bir arabirim için uygulanabilir.|  
-|`catParameter`|Öznitelik, bir parametre için uygulanabilir.|  
-|`catDelegate`|Öznitelik, bir temsilci için uygulanabilir.|  
-|`catGenericParameter`|Genel parametre özniteliği uygulanabilir.|  
-|`catAll`|Öznitelik, herhangi bir uygulama öğeye uygulanabilir.|  
-|`catClassMembers`|Öznitelik, bir sınıf üyesine uygulanabilir.|  
+|`catAssembly`|Attribute can be applied to an assembly.|  
+|`catModule`|Attribute can be applied to a portable executable (.dll or .exe) module.|  
+|`catClass`|Attribute can be applied to a class.|  
+|`catStruct`|Attribute can be applied to a structure; that is, a value type.|  
+|`catEnum`|Attribute can be applied to an enumeration.|  
+|`catConstructor`|Attribute can be applied to a constructor.|  
+|`catMethod`|Attribute can be applied to a method.|  
+|`catProperty`|Attribute can be applied to a property.|  
+|`catField`|Attribute can be applied to a field.|  
+|`catEvent`|Attribute can be applied to an event.|  
+|`catInterface`|Attribute can be applied to an interface.|  
+|`catParameter`|Attribute can be applied to a parameter.|  
+|`catDelegate`|Attribute can be applied to a delegate.|  
+|`catGenericParameter`|Attribute can be applied to a generic parameter.|  
+|`catAll`|Attribute can be applied to any application element.|  
+|`catClassMembers`|Attribute can be applied to a member of a class.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CorAttributeTargets` Numaralandırma değerlerinin tercih edilen birleşimi almak için bit düzeyinde bir veya işlem ile birleştirilebilir.  
+ The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.  
   
- `CorAttributeTargets` Yönetilen parallels <xref:System.AttributeTargets?displayProperty=nameWithType> sabit listesi.  
+ The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

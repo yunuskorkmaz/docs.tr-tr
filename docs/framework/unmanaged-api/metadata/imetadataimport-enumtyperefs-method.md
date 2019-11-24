@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f6af4c1d6eb9c305358573b06da164e2344ff46e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 778ebf1d4fad0c8703964be88fdc3ff8c033bc28
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774624"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449988"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs Yöntemi
-Geçerli meta veri kapsamda tanımlanan TypeRef belirteçleri numaralandırır.  
+Enumerates TypeRef tokens defined in the current metadata scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,35 +38,35 @@ HRESULT EnumTypeRefs (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [out içinde] Numaralandırıcı bir işaretçi. Bu, bu yöntemin ilk çağrı için NULL olmalıdır.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rTypeRefs`  
- [out] TypeRef simgeleri depolamak için kullanılan dizisi.  
+ [out] The array used to store the TypeRef tokens.  
   
  `cMax`  
- [in] En büyük boyutunu `rTypeRefs` dizisi.  
+ [in] The maximum size of the `rTypeRefs` array.  
   
  `pcTypeRefs`  
- [out] Döndürülen TypeRef belirteçleri sayısı için bir işaretçi `rTypeRefs`.  
+ [out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak hiçbir belirteçleri vardır. Bu durumda, `pcTypeRefs` sıfırdır.|  
+|`S_OK`|`EnumTypeRefs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeRefs` is zero.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- TypeRef belirteci bir türü bir başvuruyu temsil eder.  
+ A TypeRef token represents a reference to a type.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

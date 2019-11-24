@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 836133e8-6108-4b9b-b0a9-bce4e08dccda
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 22c45ff77c030dcbe87e5aa53284b2cace9849ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 889fd4ec3332cbe80a035e13a5145421dc0ed5a9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759483"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448885"
 ---
 # <a name="isymunmanagedmethodgetsequencepointcount-method"></a>ISymUnmanagedMethod::GetSequencePointCount Metodu
-Bu yöntem içinde dizi noktaları sayısını alır.  
+Gets the count of sequence points within this method.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,13 +34,13 @@ HRESULT GetSequencePointCount(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bir işaretçi bir `ULONG32` dizi noktalarını içerecek şekilde gerekli arabellek boyutunu alır.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the sequence points.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

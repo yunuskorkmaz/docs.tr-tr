@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c44b0440-04bd-460a-84fb-41afecf44503
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d2c64d7ead2f7ce3d76b40f4fdc604506ee85561
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b765294826a5da4010cdd2db79b50667a6f1cdb4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777883"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446308"
 ---
 # <a name="isymunmanagedscopegetnamespaces-method"></a>ISymUnmanagedScope::GetNamespaces Metodu
-Bu kapsam içinde kullanılan ad alanlarını alır.  
+Gets the namespaces that are being used within this scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,19 +38,19 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>Parametreler  
  `cNameSpaces`  
- [in] Boyutu `namespaces` dizisi.  
+ [in] The size of the `namespaces` array.  
   
  `pcNameSpaces`  
- [out] Bir işaretçi bir `ULONG32` ad alanlarını içerecek şekilde gerekli arabellek boyutunu alır.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.  
   
  `namespaces`  
- [out] Ad alanlarını alır dizisi.  
+ [out] The array that receives the namespaces.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

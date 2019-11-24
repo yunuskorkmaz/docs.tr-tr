@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6330a9ee-8cd5-4299-86f1-b4de2c701a0d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9a73df0b73eb5043103479b7452fedc84b02819
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 715456317b880de89b6abdf1fa82acd040d17ced
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781551"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442045"
 ---
 # <a name="imetadatatablesgetblobheapsize-method"></a>IMetaDataTables::GetBlobHeapSize Yöntemi
-İkili büyük nesne (BLOB) yığını bayt cinsinden boyutunu alır.  
+Gets the size, in bytes, of the binary large object (BLOB) heap.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +35,16 @@ HRESULT GetBlobHeapSize (
   
 ## <a name="parameters"></a>Parametreler  
  `pcbBlobs`  
- [out] BLOB yığın bayt cinsinden boyutu için bir işaretçi.  
+ [out] A pointer to the size, in bytes, of the BLOB heap.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

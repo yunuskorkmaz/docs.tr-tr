@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0667ef7-1d31-4c89-a2d3-d426f023f8d2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 27b2867019085bf5b44f2ee364c07af66144d4b5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a258ce9121a287929ca5bc39c480f1ca2596e78
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782336"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437466"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps Yöntemi
-Belirtilen MethodDef tarafından başvurulan yöntemi ile ilişkili meta veri belirteci alır.  
+Gets the metadata associated with the method referenced by the specified MethodDef token.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,43 +44,43 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mb`  
- [in] Meta verileri döndürmek için yöntemin temsil eden MethodDef belirteci.  
+ [in] The MethodDef token that represents the method to return metadata for.  
   
  `pClass`  
- [out] Yöntemi uygulayan türü temsil eden bir tür tanımı belirteci için bir işaretçi.  
+ [out] A Pointer to a TypeDef token that represents the type that implements the method.  
   
  `szMethod`  
- [out] Yöntemin adı olan bir arabellek için bir işaretçi.  
+ [out] A Pointer to a buffer that has the method's name.  
   
  `cchMethod`  
- [in] İstenen boyutu `szMethod`.  
+ [in] The requested size of `szMethod`.  
   
  `pchMethod`  
- [out] Geniş karakter cinsinden boyutu işaretçi `szMethod`, ya da söz konusu olduğunda kesilmesi, yöntem adı geniş karakter gerçek sayısı.  
+ [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
   
  `pdwAttr`  
- [out] Yöntemiyle ilişkili bayrakları için bir işaretçi.  
+ [out] A pointer to any flags associated with the method.  
   
  `ppvSigBlob`  
- [out] İkili meta veri imzası yöntem bir işaretçi.  
+ [out] A pointer to the binary metadata signature of the method.  
   
  `pcbSigBlob`  
- [out] Bayt cinsinden boyutu işaretçi `ppvSigBlob`.  
+ [out] A Pointer to the size in bytes of `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] Göreli sanal adres yönteminin bir işaretçi.  
+ [out] A pointer to the relative virtual address of the method.  
   
  `pdwImplFlags`  
- [out] Herhangi bir uygulama bayrağı yöntemi için bir işaretçi.  
+ [out] A pointer to any implementation flags for the method.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

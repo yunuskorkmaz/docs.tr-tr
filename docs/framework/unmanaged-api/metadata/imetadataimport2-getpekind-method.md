@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d91c3d89-8022-4a4c-a2a2-a8af2c387507
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 91c80566ed284403ad559583a1e4f1025eb09985
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0464c61e4ff01483e10fb5708d5ed4b5f5ed63d0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755323"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445241"
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind Yöntemi
-Alır dosya taşınabilir çalıştırılabilir (PE) kod yapısını tanımlayan bir değeri, geçerli meta veri kapsamda tanımlanan genellikle bir DLL veya EXE dosyasının.  
+Gets a value identifying the nature of the code in the portable executable (PE) file, typically a DLL or EXE file, that is defined in the current metadata scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,28 +36,28 @@ HRESULT GetPEKind (
   
 ## <a name="parameters"></a>Parametreler  
  `pdwPEKind`  
- [out] Bir işaretçi değerini [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) PE dosyası açıklayan sabit listesi.  
+ [out] A pointer to a value of the [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) enumeration that describes the PE file.  
   
  `pdwMachine`  
- [out] Makine mimarisini tanımlayan bir değer için bir işaretçi. Olası değerler için sonraki bölüme bakın.  
+ [out] A pointer to a value that identifies the architecture of the machine. See the next section for possible values.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tarafından başvurulan değer `pdwMachine` parametresi aşağıdakilerden biri olabilir.  
+ The value referenced by the `pdwMachine` parameter can be one of the following.  
   
-|Değer|Makine mimarisi|  
+|Değer|Machine architecture|  
 |-----------|--------------------------|  
 |IMAGE_FILE_MACHINE_I386<br /><br /> 0x014C|x86|  
 |IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|Intel IPF|  
 |IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|X64|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fcf32c4b27324ccc54eabbb248e8c9906cf693b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc5bbba2fa4a95955e52a2e083a2097178b5d96a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782354"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437511"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps Metodu
-Belirtilen üye tanımı, adını, ikili imzası ve göreli sanal adres dahil olmak üzere, meta verileri içinde depolanan bilgilerini alır <xref:System.Type> belirtilen metaveri belirteci tarafından başvurulan üyesi. Basit bir yardımcı yöntem budur: varsa *mb* bir MethodDef ise **GetMethodProps** ; Aranan *mb* bir fieldDef simgesi ise **GetFieldProps** çağrılır. Bunlar diğer ayrıntılar için bkz. 
+Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token. This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called. See these other methods for details. 
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,52 +47,52 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mb`  
- [in] Belirteç ilişkili meta verileri almak için bir üyeye başvuruda bulunuyor.  
+ [in] The token that references the member to get the associated metadata for.  
   
  `pClass`  
- [out] Üye sınıfı temsil eden meta veri belirteci için bir işaretçi.  
+ [out] A pointer to the metadata token that represents the class of the member.  
   
  `szMember`  
- [out] Üyenin adı.  
+ [out] The name of the member.  
   
  `cchMember`  
- [in] Geniş karakter cinsinden boyutu `szMember` arabellek.  
+ [in] The size in wide characters of the `szMember` buffer.  
   
  `pchMember`  
- [out] Döndürülen adının geniş karakter cinsinden boyutu.  
+ [out] The size in wide characters of the returned name.  
   
  `pdwAttr`  
- [out] Üyeye uygulanan tüm bayrak değerleri.  
+ [out] Any flag values applied to the member.  
   
  `ppvSigBlob`  
- [out] İkili meta veri imzası üyenin bir işaretçisi.  
+ [out] A pointer to the binary metadata signature of the member.  
   
  `pcbSigBlob`  
- [out] Bayt cinsinden boyutu `ppvSigBlob`.  
+ [out] The size in bytes of `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] Göreli sanal adres üyenin bir işaretçisi.  
+ [out] A pointer to the relative virtual address of the member.  
   
  `pdwImplFlags`  
- [out] Üye ile ilişkili tüm yöntemi uygulama bayrakları.  
+ [out] Any method implementation flags associated with the member.  
   
  `pdwCPlusTypeFlag`  
- [out] İşaretler bayrak bir <xref:System.ValueType>. Biridir `ELEMENT_TYPE_*` değerleri.
+ [out] A flag that marks a <xref:System.ValueType>. It is one of the `ELEMENT_TYPE_*` values.
   
  `ppValue`  
- [out] Bu üye tarafından döndürülen bir sabit dize değeri.  
+ [out] A constant string value returned by this member.  
   
  `pcchValue`  
- [out] Karakter cinsinden boyutu `ppValue`, ya da sıfır `ppValue` bir dize tutmaz.  
+ [out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

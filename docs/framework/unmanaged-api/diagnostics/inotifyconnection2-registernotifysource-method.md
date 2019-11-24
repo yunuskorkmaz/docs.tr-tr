@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2632da80-6e4b-4429-8dee-b382745a5f81
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7d3c0d833208c91c548ea993bb6aa32e36e1f358
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 76514cfbd2e533f04c5139dbaef4429c12463106
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776643"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445466"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource Yöntemi
-Belirtilen bildirim kaynak yükler.  
+Installs a specified notification source.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,16 +37,16 @@ HRESULT RegisterNotifySource
   
 ## <a name="parameters"></a>Parametreler  
  `in_pNotifySource`  
- [in] Bildirim kaynağı olarak kullanılacak nesneyi belirtir.  
+ [in] Specifies the object to be used as the notification source.  
   
  `out_ppNotifySink`  
- [out] Bildirim havuz olarak kullanılacak nesneyi alır.  
+ [out] Receives the object to be used as the notification sink.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK.  
+ S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

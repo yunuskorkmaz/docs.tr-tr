@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d9568cf6-7f98-4cd6-ab36-0a2bd509afcc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c2e73caa3c69090bca30c8d4a907ddb619bd0ed4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7becace679b62a635d8231c3d42213f247f44190
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776327"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444171"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra Birleşimi
-Tarafından kullanılan bir adres farkı gösteren [Iceegen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) bir bölümün dışında yeniden konumlandırmakta arabirimi.  
+Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,16 +36,16 @@ typedef union  {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`highAdj`|Bölüm için adres üst ayarlama.|  
+|`highAdj`|The upper address adjustment for the section.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

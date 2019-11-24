@@ -14,45 +14,43 @@ helpviewer_keywords:
 ms.assetid: 29c6fba5-4cea-417d-b484-7ed22ebff1c9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 373ff0470e2403f91534df0c0ffe4039dbb0f832
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 289e26868ff2eb9e1d97cf084e9a888815062ea4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905417"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436312"
 ---
 # <a name="imetadataassemblyimport-interface"></a>IMetaDataAssemblyImport Arabirimi
-Erişim ve bir derleme bildirimi içeriğini incelemek için yöntemler sağlar.  
+Provides methods to access and examine the contents of an assembly manifest.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[CloseEnum Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-closeenum-method.md)|Belirtilen Numaralandırıcı tanıtıcıyı serbest bırakır.|  
-|[EnumAssemblyRefs Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumassemblyrefs-method.md)|Bir arabirim işaretçisini içeren bir numaralandırıcı alır `mdAssemblyRef` derleme meta verileri geçerli kapsamda tarafından başvurulan derlemelerin belirteçleri.|  
-|[EnumExportedTypes Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumexportedtypes-method.md)|Bir arabirim işaretçisini içeren bir numaralandırıcı alır `mdExportedType` derleme meta verileri geçerli kapsamda tarafından başvurulan COM türlerinin belirteçleri.|  
-|[EnumFiles Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumfiles-method.md)|Bir arabirim işaretçisini içeren bir numaralandırıcı alır `mdFile` derleme meta verileri geçerli kapsamda tarafından başvurulan tüm dosyaların belirteçleri.|  
-|[EnumManifestResources Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enummanifestresources-method.md)|Bir arabirim işaretçisini içeren bir numaralandırıcı alır `mdManifestResource` derleme meta verileri geçerli kapsamda tarafından başvurulan bir kaynak belirteçleri.|  
-|[FindAssembliesByName Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findassembliesbyname-method.md)|Bir dizisini alır `mdAssemblyRef` belirtilen ada sahip derlemeler için simgeleri.|  
-|[FindExportedTypeByName Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findexportedtypebyname-method.md)|Alır bir `mdExportedType` belirtilen ada sahip bir COM türü için belirteç.|  
-|[FindManifestResourceByName Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findmanifestresourcebyname-method.md)|Alır bir `mdManifestResource` belirtilen ada sahip bir kaynak için belirteç.|  
-|[GetAssemblyFromScope Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyfromscope-method.md)|Belirteç derleme için geçerli bir meta veri kapsamda alır.|  
-|[GetAssemblyProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyprops-method.md)|Belirtilen derleme özellik ayarlarını alır.|  
-|[GetAssemblyRefProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyrefprops-method.md)|Belirtilen özellik ayarları alır `mdAssemblyRef` belirteci.|  
-|[GetExportedTypeProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getexportedtypeprops-method.md)|Belirtilen COM türünün özellik ayarlarını alır.|  
-|[GetFileProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getfileprops-method.md)|Belirtilen dosyanın özellik ayarlarını alır.|  
-|[GetManifestResourceProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getmanifestresourceprops-method.md)|Belirtilen bildirim kaynağı özellik ayarlarını alır.|  
+|[CloseEnum Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-closeenum-method.md)|Releases the handle to the specified enumerator.|  
+|[EnumAssemblyRefs Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumassemblyrefs-method.md)|Gets an interface pointer to an enumerator that contains the `mdAssemblyRef` tokens of the assemblies referenced by the assembly in the current metadata scope.|  
+|[EnumExportedTypes Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumexportedtypes-method.md)|Gets an interface pointer to an enumerator that contains the `mdExportedType` tokens of the COM types referenced by the assembly in the current metadata scope.|  
+|[EnumFiles Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumfiles-method.md)|Gets an interface pointer to an enumerator that contains the `mdFile` tokens of the files referenced by the assembly in the current metadata scope.|  
+|[EnumManifestResources Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enummanifestresources-method.md)|Gets an interface pointer to an enumerator that contains the `mdManifestResource` tokens of the resources referenced by the assembly in the current metadata scope.|  
+|[FindAssembliesByName Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findassembliesbyname-method.md)|Gets an array of `mdAssemblyRef` tokens for the assemblies with the specified name.|  
+|[FindExportedTypeByName Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findexportedtypebyname-method.md)|Gets an `mdExportedType` token for the COM type with the specified name.|  
+|[FindManifestResourceByName Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findmanifestresourcebyname-method.md)|Gets an `mdManifestResource` token for the resource with the specified name.|  
+|[GetAssemblyFromScope Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyfromscope-method.md)|Gets the token for the assembly in the current metadata scope.|  
+|[GetAssemblyProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyprops-method.md)|Gets the property settings of the specified assembly.|  
+|[GetAssemblyRefProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyrefprops-method.md)|Gets the property settings of the specified `mdAssemblyRef` token.|  
+|[GetExportedTypeProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getexportedtypeprops-method.md)|Gets the property settings of the specified COM type.|  
+|[GetFileProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getfileprops-method.md)|Gets the property settings of the specified file.|  
+|[GetManifestResourceProps Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getmanifestresourceprops-method.md)|Gets the property settings of the specified manifest resource.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 574ac706a07e7fcd701ab04f923d5171bea6f64a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 462512fd2c2b33905b45bb67599b23b301fc71f7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782386"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438000"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps Metodu
-Belirteç belirtilen fieldDef simgesi tarafından başvurulan alanı ile ilişkili meta verileri alır.  
+Gets metadata associated with the field referenced by the specified FieldDef token.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,46 +45,46 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mb`  
- [in] İlgili meta verilerini almak için alan temsil eden bir fieldDef simgesi belirteci.  
+ [in] A FieldDef token that represents the field to get associated metadata for.  
   
  `pClass`  
- [out] Alanın ait sınıf türünü temsil eden bir tür tanımı belirteci için bir işaretçi.  
+ [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
   
  `szField`  
- [out] Alanın adı.  
+ [out] The name of the field.  
   
  `cchField`  
- [in] Geniş karakterler için arabellek boyutu *szField*.  
+ [in] The size in wide characters of the buffer for *szField*.  
   
  `pchField`  
- [out] Döndürülen arabellek gerçek boyutu.  
+ [out] The actual size of the returned buffer.  
   
  `pdwAttr`  
- [out] Alanın meta verileriyle ilişkili bayraklar.  
+ [out] Flags associated with the field's metadata.  
   
  `ppvSigBlob`  
- [in] Alan açıklayan ikili meta veri değeri için bir işaretçi.  
+ [in] A pointer to the binary metadata value that describes the field.  
   
  `pcbSigBlob`  
- [out] Bayt cinsinden boyutu `ppvSigBlob`.  
+ [out] The size in bytes of `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
- [out] Alanın değeri türünü belirten bir bayrak.  
+ [out] A flag that specifies the value type of the field.  
   
  `ppValue`  
- [out] Alan için sabit bir değer.  
+ [out] A constant value for the field.  
   
  `pcchValue`  
- [out] Karakter boyutu `ppValue`, veya dize varsa sıfır.  
+ [out] The size in chars of `ppValue`, or zero if no string exists.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

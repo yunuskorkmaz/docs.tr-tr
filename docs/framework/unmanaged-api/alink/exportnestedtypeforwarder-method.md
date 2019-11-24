@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 886ea6c5-6b26-4b88-8bf6-448d6d191950
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eb8112d6d2b5c2cbb257db2f20ff4be5a84e827b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cc81ccd1c754e3d34c54737f4560b4f81d5cc916
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787478"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438418"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder Metodu
-İç içe geçmiş bir tür için verilen derlemenin tür tablosuna bir tür ileticisi ekler.  
+Adds a type forwarder for a nested type to the type table of the given assembly.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,31 +40,31 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Dışarı aktarılacak derlemenin KIMLIĞI.  
+ ID of the assembly to export from.  
   
  `FileToken`  
- Türü tanımlayan dosyanın belirteç veya derleme KIMLIĞI.  
+ File token or assembly ID of file that defines the type.  
   
  `TypeToken`  
- Tür için belirteç.  
+ Token for the type.  
   
  `ParentType`  
- Üst tür belirteci.  
+ Token of parent type.  
   
  `pszTypename`  
- Dışarı aktarılacak tam tür adı.  
+ Fully qualified type name to export.  
   
  `dwFlags`  
- `ComType``tdPublic` veya`tdNested`gibi bayraklar.  
+ `ComType` flags such as `tdPublic` or `tdNested`.  
   
  `pType`  
- Dışarı aktarma türünün belirtecini alır. Bu yalnızca iç içe geçmiş türleri yayma için gereklidir.  
+ Receives token of export type. This is necessary only for emitting nested types.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

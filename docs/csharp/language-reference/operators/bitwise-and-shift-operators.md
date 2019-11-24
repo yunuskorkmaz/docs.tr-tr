@@ -1,6 +1,6 @@
 ---
-title: Bit düzeyinde and Shift işleçleri C# -başvuru
-description: İntegral türlerindeki C# işlenenleri olan bit düzeyinde mantıksal veya SHIFT işlemleri gerçekleştiren işleçler hakkında bilgi edinin.
+title: Bitwise and shift operators - C# reference
+description: Learn about C# operators that perform bitwise logical or shift operations with operands of integral types.
 ms.date: 04/18/2019
 author: pkulikov
 f1_keywords:
@@ -29,96 +29,96 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 9336ff57722e575d3ecfdb3db2b99bf7bbb6b433
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 27f7cf46bd3e344503f74527df34506d38ad4545
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039110"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428441"
 ---
-# <a name="bitwise-and-shift-operators-c-reference"></a>Bit düzeyinde ve kaydırma işleçleriC# (başvuru)
+# <a name="bitwise-and-shift-operators-c-reference"></a>Bitwise and shift operators (C# reference)
 
-Aşağıdaki işleçler [integral sayısal türlerin](../builtin-types/integral-numeric-types.md) veya [char](../keywords/char.md) türünün işlenenleri ile bit düzeyinde veya SHIFT işlemleri gerçekleştirir:
+The following operators perform bitwise or shift operations with operands of the [integral numeric types](../builtin-types/integral-numeric-types.md) or the [char](../builtin-types/char.md) type:
 
-- Birli [`~` (bit düzeyinde tamamlama)](#bitwise-complement-operator-) işleci
-- İkili [`<<` (sol SHIFT)](#left-shift-operator-) ve [`>>` (Sağ Shift)](#right-shift-operator-) kaydırma işleçleri
-- İkili [`&` (MANTıKSAL ve)](#logical-and-operator-), [`|` (mantıksal or)](#logical-or-operator-)ve [`^` (mantıksal dışlamalı veya)](#logical-exclusive-or-operator-) işleçler
+- Unary [`~` (bitwise complement)](#bitwise-complement-operator-) operator
+- Binary [`<<` (left shift)](#left-shift-operator-) and [`>>` (right shift)](#right-shift-operator-) shift operators
+- Binary [`&` (logical AND)](#logical-and-operator-), [`|` (logical OR)](#logical-or-operator-), and [`^` (logical exclusive OR)](#logical-exclusive-or-operator-) operators
 
-Bu işleçler `int`, `uint`, `long` ve `ulong` türleri için tanımlanmıştır. Her iki işlenen de diğer integral türlerindiğinde (`sbyte`, `byte`, `short`, `ushort` veya `char`), değerleri bir işlemin sonuç türü olan `int` türüne dönüştürülür. İşlenenler farklı integral türlerindiğinde, değerleri, en yakın integral türüne dönüştürülür. Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [sayısal yükseltmeler](~/_csharplang/spec/expressions.md#numeric-promotions) bölümüne bakın.
+Those operators are defined for the `int`, `uint`, `long`, and `ulong` types. When both operands are of other integral types (`sbyte`, `byte`, `short`, `ushort`, or `char`), their values are converted to the `int` type, which is also the result type of an operation. When operands are of different integral types, their values are converted to the closest containing integral type. For more information, see the [Numeric promotions](~/_csharplang/spec/expressions.md#numeric-promotions) section of the [C# language specification](~/_csharplang/spec/introduction.md).
 
-`&`, `|`ve `^` işleçleri Ayrıca `bool` türünün işlenenleri için de tanımlanmıştır. Daha fazla bilgi için bkz. [Boolean mantıksal işleçler](boolean-logical-operators.md).
+The `&`, `|`, and `^` operators are also defined for operands of the `bool` type. For more information, see [Boolean logical operators](boolean-logical-operators.md).
 
-Bit düzeyinde ve kaydırma işlemleri hiçbir şekilde taşmaya neden olmaz ve [denetlenen ve işaretlenmeyen](../keywords/checked-and-unchecked.md) bağlamlarda aynı sonuçları üretir.
+Bitwise and shift operations never cause overflow and produce the same results in [checked and unchecked](../keywords/checked-and-unchecked.md) contexts.
 
-## <a name="bitwise-complement-operator-"></a>Bit düzeyinde tamamlama işleci ~
+## <a name="bitwise-complement-operator-"></a>Bitwise complement operator ~
 
-`~` işleci, her biti ters çevirerek işleneni bir bit düzeyinde tamamlayıcı üretir:
+The `~` operator produces a bitwise complement of its operand by reversing each bit:
 
 [!code-csharp-interactive[bitwise NOT](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
 
-Sonlandırıcıları bildirmek için `~` sembolünü de kullanabilirsiniz. Daha fazla bilgi için bkz. [sonlandırıcılar](../../programming-guide/classes-and-structs/destructors.md).
+You can also use the `~` symbol to declare finalizers. For more information, see [Finalizers](../../programming-guide/classes-and-structs/destructors.md).
 
-## <a name="left-shift-operator-"></a>Sola kaydırma işleci \< \<
+## <a name="left-shift-operator-"></a>Left-shift operator \<\<
 
-`<<` işleci sol taraftaki işlenenini sağ işleneni tarafından tanımlanan bit sayısına göre sola kaydırır.
+The `<<` operator shifts its left-hand operand left by the number of bits defined by its right-hand operand.
 
-Aşağıdaki örnekte gösterildiği gibi, sol SHIFT işlemi, sonuç türü aralığının dışındaki yüksek sıralı bitleri atar ve düşük sıralı boş bit konumlarını sıfıra ayarlar:
+The left-shift operation discards the high-order bits that are outside the range of the result type and sets the low-order empty bit positions to zero, as the following example shows:
 
 [!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
-SHIFT işleçleri yalnızca `int`, `uint`, `long` ve `ulong` türleri için tanımlandığından, bir işlemin sonucu her zaman en az 32 bit içerir. Sol işlenen başka bir integral türü (`sbyte`, `byte`, `short`, `ushort` veya `char`) ise, aşağıdaki örnekte gösterildiği gibi, değeri `int` türüne dönüştürülür:
+Because the shift operators are defined only for the `int`, `uint`, `long`, and `ulong` types, the result of an operation always contains at least 32 bits. If the left-hand operand is of another integral type (`sbyte`, `byte`, `short`, `ushort`, or `char`), its value is converted to the `int` type, as the following example shows:
 
 [!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
-`<<` işlecinin sağ işleneninin kaydırma sayısını tanımladığı hakkında daha fazla bilgi için [SHIFT Operators bölümünün kaydırma sayısına](#shift-count-of-the-shift-operators) bakın.
+For information about how the right-hand operand of the `<<` operator defines the shift count, see the [Shift count of the shift operators](#shift-count-of-the-shift-operators) section.
 
-## <a name="right-shift-operator-"></a>Sağa kaydırma işleci > >
+## <a name="right-shift-operator-"></a>Right-shift operator >>
 
-`>>` işleci, sol işlenenin sağ işleneni tarafından tanımlanan bit sayısına göre sağa kayar.
+The `>>` operator shifts its left-hand operand right by the number of bits defined by its right-hand operand.
 
-Aşağıdaki örnekte gösterildiği gibi, doğru kaydırma işlemi düşük sıralı bitleri atar:
+The right-shift operation discards the low-order bits, as the following example shows:
 
 [!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
-Yüksek sıralı boş bit konumları, sol taraftaki işlenenin türüne göre aşağıdaki gibi ayarlanır:
+The high-order empty bit positions are set based on the type of the left-hand operand as follows:
 
-- Sol işlenen `int` veya `long`türünde ise, sağ SHIFT işleci bir *Aritmetik* kaydırma gerçekleştirir: sol işlenenin en önemli bit (işaret biti) değeri, yüksek sıralı boş bit konumlarına yayılır. Diğer bir deyişle, sol işlenen negatif olmayan ve negatifse bir tane olarak ayarlandıysa, yüksek sıralı boş bit konumları sıfır olarak ayarlanır.
+- If the left-hand operand is of type `int` or `long`, the right-shift operator performs an *arithmetic* shift: the value of the most significant bit (the sign bit) of the left-hand operand is propagated to the high-order empty bit positions. That is, the high-order empty bit positions are set to zero if the left-hand operand is non-negative and set to one if it's negative.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- Sol işlenen `uint` veya `ulong`türünde ise, sağ SHIFT işleci bir *mantıksal* kaydırma gerçekleştirir: yüksek sıralı boş bit konumları her zaman sıfır olarak ayarlanır.
+- If the left-hand operand is of type `uint` or `ulong`, the right-shift operator performs a *logical* shift: the high-order empty bit positions are always set to zero.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
-`>>` işlecinin sağ işleneninin kaydırma sayısını tanımladığı hakkında daha fazla bilgi için [SHIFT Operators bölümünün kaydırma sayısına](#shift-count-of-the-shift-operators) bakın.
+For information about how the right-hand operand of the `>>` operator defines the shift count, see the [Shift count of the shift operators](#shift-count-of-the-shift-operators) section.
 
-## <a name="logical-and-operator-"></a>Mantıksal AND işleci &amp;
+## <a name="logical-and-operator-"></a> Logical AND operator &amp;
 
-`&` işleci, işlenenlerinin bit düzeyinde mantıksal ve işlecini hesaplar:
+The `&` operator computes the bitwise logical AND of its operands:
 
 [!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
-`bool` işlenenleri için `&` işleci, işlenenlerinin [MANTıKSAL ve](boolean-logical-operators.md#logical-and-operator-) işlecini hesaplar. Birli `&` işleci [Adres işleçtir](pointer-related-operators.md#address-of-operator-).
+For `bool` operands, the `&` operator computes the [logical AND](boolean-logical-operators.md#logical-and-operator-) of its operands. The unary `&` operator is the [address-of operator](pointer-related-operators.md#address-of-operator-).
 
-## <a name="logical-exclusive-or-operator-"></a>Mantıksal dışlamalı OR işleci ^
+## <a name="logical-exclusive-or-operator-"></a>Logical exclusive OR operator ^
 
-`^` işleci, işlenenlerinin bit düzeyinde mantıksal XOR değeri olarak da bilinen bit düzeyinde mantıksal dışlamalı veya bir şekilde hesaplar:
+The `^` operator computes the bitwise logical exclusive OR, also known as the bitwise logical XOR, of its operands:
 
 [!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
-`bool` işlenenleri için `^` işleci, işlenenlerinin [mantıksal dışlamalı veya](boolean-logical-operators.md#logical-exclusive-or-operator-) bir listesini hesaplar.
+For `bool` operands, the `^` operator computes the [logical exclusive OR](boolean-logical-operators.md#logical-exclusive-or-operator-) of its operands.
 
-## <a name="logical-or-operator-"></a>Mantıksal OR işleci |
+## <a name="logical-or-operator-"></a>Logical OR operator |
 
-`|` işleci, işlenenlerinin bit düzeyinde mantıksal veya işlecini hesaplar:
+The `|` operator computes the bitwise logical OR of its operands:
 
 [!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
-`bool` işlenenleri için `|` işleci, işlenenlerinin [MANTıKSAL veya](boolean-logical-operators.md#logical-or-operator-) işlecini hesaplar.
+For `bool` operands, the `|` operator computes the [logical OR](boolean-logical-operators.md#logical-or-operator-) of its operands.
 
-## <a name="compound-assignment"></a>Bileşik atama
+## <a name="compound-assignment"></a>Compound assignment
 
-Bir ikili işleci için `op`, formun bileşik atama ifadesi
+For a binary operator `op`, a compound assignment expression of the form
 
 ```csharp
 x op= y
@@ -130,70 +130,70 @@ eşdeğerdir
 x = x op y
 ```
 
-`x` yalnızca bir kez değerlendirilir.
+except that `x` is only evaluated once.
 
-Aşağıdaki örnek, bileşik atamanın bit düzeyinde ve kaydırma işleçleriyle kullanımını gösterir:
+The following example demonstrates the usage of compound assignment with bitwise and shift operators:
 
 [!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
-[Sayısal yükseltmeler](~/_csharplang/spec/expressions.md#numeric-promotions)nedeniyle `op` işleminin sonucu `x` `T` türüne örtülü olarak dönüştürülebilir olmayabilir. Böyle bir durumda, `op` önceden tanımlanmış bir işleçse ve işlemin sonucu `x` `T` türüne açıkça dönüştürülesiyse, formun bileşik atama ifadesi `x op= y` eşdeğerdir `x = (T)(x op y)` `x` hariç, yalnızca bir kez değerlendirilir. Aşağıdaki örnekte bu davranış gösterilmektedir:
+Because of [numeric promotions](~/_csharplang/spec/expressions.md#numeric-promotions), the result of the `op` operation might be not implicitly convertible to the type `T` of `x`. In such a case, if `op` is a predefined operator and the result of the operation is explicitly convertible to the type `T` of `x`, a compound assignment expression of the form `x op= y` is equivalent to `x = (T)(x op y)`, except that `x` is only evaluated once. The following example demonstrates that behavior:
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
-## <a name="operator-precedence"></a>İşleç önceliği
+## <a name="operator-precedence"></a>Operator precedence
 
-Aşağıdaki liste, en yüksek öncelikten en düşüğe başlayarak bit düzeyinde ve kaydırma işleçlerini sıralar:
+The following list orders bitwise and shift operators starting from the highest precedence to the lowest:
 
-- Bit düzeyinde tamamlama işleci `~`
-- SHIFT işleçleri `<<` ve `>>`
-- Mantıksal AND işleci `&`
-- Mantıksal dışlamalı OR işleci `^`
-- Mantıksal OR işleci `|`
+- Bitwise complement operator `~`
+- Shift operators `<<` and `>>`
+- Logical AND operator `&`
+- Logical exclusive OR operator `^`
+- Logical OR operator `|`
 
-İşleç önceliğine göre uygulanan değerlendirmenin sırasını değiştirmek için parantez, `()` kullanın:
+Use parentheses, `()`, to change the order of evaluation imposed by operator precedence:
 
 [!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
-Öncelik düzeyine göre sıralanan C# işleçlerin tüm listesi için, [ C# işleçler](index.md) makalesinin [operatör önceliği](index.md#operator-precedence) bölümüne bakın.
+For the complete list of C# operators ordered by precedence level, see the [Operator precedence](index.md#operator-precedence) section of the [C# operators](index.md) article.
 
-## <a name="shift-count-of-the-shift-operators"></a>Kaydırma işleçlerinin kaydırma sayısı
+## <a name="shift-count-of-the-shift-operators"></a>Shift count of the shift operators
 
-`<<` ve `>>`kaydırma işleçleri için sağ işlenen türü, `int`için [önceden tanımlanmış bir örtülü sayısal dönüştürmeye](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) sahip `int` veya bir tür olmalıdır.
+For the shift operators `<<` and `>>`, the type of the right-hand operand must be `int` or a type that has a [predefined implicit numeric conversion](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) to `int`.
 
-`x << count` ve `x >> count` ifadelerinde, gerçek kaydırma sayısı `x` türüne aşağıdaki gibi bağlıdır:
+For the `x << count` and `x >> count` expressions, the actual shift count depends on the type of `x` as follows:
 
-- `x` türü `int` veya `uint`ise, kaydırma sayısı sağ işlenenin düşük sıralı *beş* biti tarafından tanımlanır. Diğer bir deyişle, kaydırma sayısı `count & 0x1F` (veya `count & 0b_1_1111`) olarak hesaplanır.
+- If the type of `x` is `int` or `uint`, the shift count is defined by the low-order *five* bits of the right-hand operand. That is, the shift count is computed from `count & 0x1F` (or `count & 0b_1_1111`).
 
-- `x` türü `long` veya `ulong`ise, kaydırma sayısı sağ işlenenin alt-sırası *altı* bitsiyle tanımlanır. Diğer bir deyişle, kaydırma sayısı `count & 0x3F` (veya `count & 0b_11_1111`) olarak hesaplanır.
+- If the type of `x` is `long` or `ulong`, the shift count is defined by the low-order *six* bits of the right-hand operand. That is, the shift count is computed from `count & 0x3F` (or `count & 0b_11_1111`).
 
-Aşağıdaki örnekte bu davranış gösterilmektedir:
+The following example demonstrates that behavior:
 
 [!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
 
-## <a name="enumeration-logical-operators"></a>Sabit listesi mantıksal işleçleri
+## <a name="enumeration-logical-operators"></a>Enumeration logical operators
 
-`~`, `&`, `|`ve `^` işleçleri her bir [numaralandırma](../keywords/enum.md) türü tarafından da desteklenir. Aynı numaralandırma türünün işlenenleri için, temel alınan integral türünün karşılık gelen değerlerinde bir mantıksal işlem gerçekleştirilir. Örneğin, herhangi bir `x` ve `y` bir numaralandırma türü `T` temel alınan bir tür `U` için, `x & y` ifadesi `(T)((U)x & (U)y)` ifadesiyle aynı sonucu üretir.
+The `~`, `&`, `|`, and `^` operators are also supported by any [enumeration](../keywords/enum.md) type. For operands of the same enumeration type, a logical operation is performed on the corresponding values of the underlying integral type. For example, for any `x` and `y` of an enumeration type `T` with an underlying type `U`, the `x & y` expression produces the same result as the `(T)((U)x & (U)y)` expression.
 
-Genellikle, [Flags](xref:System.FlagsAttribute) özniteliğiyle tanımlanan bir numaralandırma türü ile bit düzeyinde mantıksal işleçler kullanırsınız. Daha fazla bilgi için [Listeleme türleri](../../programming-guide/enumeration-types.md) makalesinin [numaralandırma türleri bit bayrakları](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags) bölümüne bakın.
+You typically use bitwise logical operators with an enumeration type which is defined with the [Flags](xref:System.FlagsAttribute) attribute. For more information, see the [Enumeration types as bit flags](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags) section of the [Enumeration types](../../programming-guide/enumeration-types.md) article.
 
-## <a name="operator-overloadability"></a>Operatör overloadability
+## <a name="operator-overloadability"></a>Operator overloadability
 
-Kullanıcı tanımlı bir tür `~`, `<<`, `>>`, `&`, `|`ve `^` işleçlerini [aşırı](operator-overloading.md) yükleyebilir. İkili işleç aşırı yüklendiğinde, karşılık gelen bileşik atama işleci de örtük olarak aşırı yüklenmiştir. Kullanıcı tanımlı bir tür, bileşik atama işlecini açıkça aşırı yükleyemez.
+A user-defined type can [overload](operator-overloading.md) the `~`, `<<`, `>>`, `&`, `|`, and `^` operators. When a binary operator is overloaded, the corresponding compound assignment operator is also implicitly overloaded. A user-defined type cannot explicitly overload a compound assignment operator.
 
-Kullanıcı tanımlı bir tür `T` `<<` veya `>>` işlecini aşırı yükletir, sol taraftaki işlenenin türü `T` olmalı ve sağ işlenen türü `int` olmalıdır.
+If a user-defined type `T` overloads the `<<` or `>>` operator, the type of the left-hand operand must be `T` and the type of the right-hand operand must be `int`.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
+For more information, see the following sections of the [C# language specification](~/_csharplang/spec/introduction.md):
 
-- [Bit düzeyinde tamamlama işleci](~/_csharplang/spec/expressions.md#bitwise-complement-operator)
-- [Kaydırma işleçleri](~/_csharplang/spec/expressions.md#shift-operators)
-- [Mantıksal işleçler](~/_csharplang/spec/expressions.md#logical-operators)
-- [Bileşik atama](~/_csharplang/spec/expressions.md#compound-assignment)
-- [Sayısal yükseltmeler](~/_csharplang/spec/expressions.md#numeric-promotions)
+- [Bitwise complement operator](~/_csharplang/spec/expressions.md#bitwise-complement-operator)
+- [Shift operators](~/_csharplang/spec/expressions.md#shift-operators)
+- [Logical operators](~/_csharplang/spec/expressions.md#logical-operators)
+- [Compound assignment](~/_csharplang/spec/expressions.md#compound-assignment)
+- [Numeric promotions](~/_csharplang/spec/expressions.md#numeric-promotions)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvurunun](../index.md)
+- [C# reference](../index.md)
 - [C# işleçleri](index.md)
-- [Boole mantıksal işleçler](boolean-logical-operators.md)
+- [Boolean logical operators](boolean-logical-operators.md)

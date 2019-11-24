@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9a48dbd38d357b668c2794ae6305ceb9cad3dcf4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dfbc10bdbe633450dee2e27524c29ead21fb739e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787198"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445540"
 ---
 # <a name="setpekind-method"></a>SetPEKind Yöntemi
-Taşınabilir yürütülebilir türü, makineye özgü veya makine belirsiz olarak belirler.  
+Determines the portable executable type, either machine-specific or machine-agnostic.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +37,22 @@ HRESULT SetPEKind(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Derlemenin KIMLIĞI.  
+ ID of the assembly.  
   
  `FileToken`  
- PE türü ayarlanacak dosyanın belirteci. İlişkisiz bir netmodule belirtmezse `AssemblyID` null olabilir.  
+ Token of file for which the PE type is to be set. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
   
  `dwPEKind`  
- [CorPEKind numaralandırması](../metadata/corpekind-enumeration.md)tarafından BELIRTILDIĞI gibi PE türü.  
+ The type of PE, as indicated by the [CorPEKind Enumeration](../metadata/corpekind-enumeration.md).  
   
  `dwMachine`  
- NT üstbilgisinde gösterildiği gibi hedef makine mimarisi.  
+ The target machine architecture, as indicated in the NT header.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

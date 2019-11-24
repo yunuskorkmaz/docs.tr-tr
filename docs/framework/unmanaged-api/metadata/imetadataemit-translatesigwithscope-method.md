@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c571e37d87ffd136687452dc80a823b8ddbe3359
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cea84f47a5289df4bc9c50381e18d7077b3b8dad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782058"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440485"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope Yöntemi
-Bir derleme geçerli kapsam içeri aktarır ve yeni bir meta veri imzası birleştirilmiş kapsamını alır.  
+Imports an assembly into the current scope and gets a new metadata signature for the merged scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,46 +45,46 @@ HRESULT TranslateSigWithScope (
   
 ## <a name="parameters"></a>Parametreler  
  `pAssemImport`  
- [in] Arabirim (imza tanımlandığı) alma derleme için.  
+ [in] The interface for import assembly (where the signature is defined).  
   
  `pbHashValue`  
- [in] Derleme için karma blob.  
+ [in] The hash blob for the assembly.  
   
  `cbHashValue`  
- [in] Bayt sayısı `pbHashValue`.  
+ [in] The count of bytes in `pbHashValue`.  
   
  `import`  
- [in] İçeri aktarma meta veri kapsamı için arabirim.  
+ [in] The interface for import metadata scope.  
   
  `pbSigBlob`  
- [in] İçeri aktarılacak imzası.  
+ [in] The signature to be imported.  
   
  `cbSigBlob`  
- [in] Bayt cinsinden boyutu, `pbSigBlob`.  
+ [in] The size, in bytes, of `pbSigBlob`.  
   
  `pAssemEmit`  
- [in] Dışarı aktarma derleme için arabirim.  
+ [in] The interface for export assembly.  
   
  `emit`  
- [in] Dışarı aktarma meta veri kapsamı için arabirim.  
+ [in] The interface for export metadata scope.  
   
  `pvTranslatedSig`  
- [out] Çevrilmiş imzası blob tutan arabellek.  
+ [out] The buffer to hold the translated signature blob.  
   
  `cbTranslatedSigMax`  
- [in] Bayt cinsinden kapasite, `pvTranslatedSig`.  
+ [in] The capacity, in bytes, of `pvTranslatedSig`.  
   
  `pcbTranslatedSig`  
- [out] Çevrilmiş imzasında gerçek bayt sayısı.  
+ [out] The number of actual bytes in the translated signature.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

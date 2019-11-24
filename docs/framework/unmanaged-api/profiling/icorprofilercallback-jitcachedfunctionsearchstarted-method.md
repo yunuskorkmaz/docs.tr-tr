@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5cba642c-0d80-48ee-889d-198c5044d821
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f4d35179b8ae35c03370cc3798609d6ed430cde3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d3fe6691a2d9989de002bad09c2e8f66a094f56
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782847"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448440"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted Yöntemi
-Profil Oluşturucu, arama Native Image Generator (NGen.exe) kullanarak önceden derlenen bir işlev için başlatıldığını bildirir.  
+Notifies the profiler that a search has started for a function that was compiled previously using the Native Image Generator (NGen.exe).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,28 +35,28 @@ HRESULT JITCachedFunctionSearchStarted(
   
 ## <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] Aramanın gerçekleştirildiği işlevi kimliği.  
+ [in] The ID of the function for which the search is being performed.  
   
  `pbUseCachedFunction`  
- [out] `true` yürütme altyapısı, (varsa) bir işlev önbelleğe alınmış sürümünü kullanmanız gerekir, aksi takdirde `false`. Değer ise `false`, JIT olarak derlenmiş değil bir sürümünü kullanmak yerine, işlevi yürütme altyapısı JIT derlenir.  
+ [out] `true` if the execution engine should use the cached version of a function (if available); otherwise `false`. If the value is `false`, the execution engine JIT-compiles the function instead of using a version that is not JIT-compiled.  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework sürüm 2.0 `JITCachedFunctionSearchStarted` ve [Icorprofilercallback::jıtcachedfunctionsearchfinished yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md) geri çağırmaları değil oluşturulacak normal NGen görüntülerinin tüm işlevler için. Bir profil için en iyi duruma getirilmiş NGen görüntülerinin geri çağırmaları tüm işlevler görüntüde oluşturur. Ancak, yalnızca derlenmiş just-in-time (JIT) gereken işlevi zorlamak için bu geri aramalarda kullanmaya çalışırsa, ek yükü nedeniyle, bir profil oluşturucu profil oluşturucu için iyileştirilmiş NGen görüntülerinin istemelidir. Aksi takdirde, profil oluşturucu işlevi bilgileri toplamak için yavaş bir strateji kullanmalıdır.  
+ In the .NET Framework version 2.0, the `JITCachedFunctionSearchStarted` and [ICorProfilerCallback::JITCachedFunctionSearchFinished Method](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md) callbacks will not be made for all functions in regular NGen images. Only NGen images optimized for a profile will generate callbacks for all functions in the image. However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT). Otherwise, the profiler should use a lazy strategy for gathering function information.  
   
- Profil Oluşturucular, burada, profili oluşturulmuş bir uygulama birden çok iş parçacığı aynı yöntemi aynı anda aradığınız çalışmaları desteklemesi gerekir. Örneğin, bir iş parçacığı çağrı `JITCachedFunctionSearchStarted` ve profil oluşturucu ayarlayarak yanıt *pbUseCachedFunction*JIT derlemesi zorlamak için false. Bir daha sonra çağıran iş parçacığı [Icorprofilercallback::jıtcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) ve [Icorprofilercallback::jıtcompilationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md).  
+ Profilers must support cases where multiple threads of a profiled application are calling the same method simultaneously. For example, thread A calls `JITCachedFunctionSearchStarted` and the profiler responds by setting *pbUseCachedFunction*to FALSE to force JIT compilation. Thread A then calls [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) and [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md).  
   
- Artık B çağrılar iş parçacığı `JITCachedFunctionSearchStarted` aynı işlevi. Profil Oluşturucu Niyet JIT derleme işlevi için belirtilen olsa da, profil oluşturucu için iş parçacığı A çağrısına yanıtladı önce geri çağırma iş parçacığı B gönderdiği için profil oluşturucu ikinci geri çağırma alır `JITCachedFunctionSearchStarted`. İş parçacıklarını nasıl zamanlanmış iş parçacıklarını çağrı nasıl siparişe bağlıdır.  
+ Now thread B calls `JITCachedFunctionSearchStarted` for the same function. Even though the profiler has stated its intention to JIT-compile the function, the profiler receives the second callback because thread B sends the callback before the profiler has responded to thread A's call to `JITCachedFunctionSearchStarted`. The order in which the threads make calls depends on how the threads are scheduled.  
   
- Profil oluşturucuyu yinelenen geri çağırmaları aldığında tarafından başvurulan değer ayarlamalısınız `pbUseCachedFunction` için yinelenen tüm geri çağırmalar için aynı değeri. Diğer bir deyişle, `JITCachedFunctionSearchStarted` birden çok kez aynı adlı `functionId` değeri, profil oluşturucu her zaman aynı yanıt vermelidir.  
+ When the profiler receives duplicate callbacks, it must set the value referenced by `pbUseCachedFunction` to the same value for all the duplicate callbacks. That is, when `JITCachedFunctionSearchStarted` is called multiple times with the same `functionId` value, the profiler must respond the same each time.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

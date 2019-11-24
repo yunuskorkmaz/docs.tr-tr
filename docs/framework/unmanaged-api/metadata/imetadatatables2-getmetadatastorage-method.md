@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 667a6d1e-753d-4ea2-8fd8-a8337d1bb9cd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd75fa12a95478a65d93eb07a32acf4cfd8b9632
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 302e9db3bc683eaa2b65e0b0479de721e07d56db
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782091"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442645"
 ---
 # <a name="imetadatatables2getmetadatastorage-method"></a>IMetaDataTables2::GetMetaDataStorage Metodu
-Boyut ve belirtilen bölümde depolanan meta veriler içeriğini alır.  
+Gets the size and contents of the metadata stored in the specified section.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +36,19 @@ HRESULT GetMetaDataStorage (
   
 ## <a name="parameters"></a>Parametreler  
  `ppvMd`  
- [out içinde] Bir meta veri bölümü için bir işaretçi.  
+ [in, out] A pointer to a metadata section.  
   
  `pcbMd`  
- [out] Meta veri akış boyutu.  
+ [out] The size of the metadata stream.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

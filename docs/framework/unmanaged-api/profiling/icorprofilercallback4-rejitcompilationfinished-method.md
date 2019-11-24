@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b5cff02-2005-44eb-a2bc-50214c4b0e1d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 80bff6f06851206ff01b861001c6ed7c90db7d1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a42198b1c89dbc47c6659564cf32738b683697b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758187"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439312"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished Yöntemi
-Profil Oluşturucu, just-ın-time (JIT) derleyici bir işlevi yeniden derlemeden tamamlandığını bildirir.  
+Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,27 +36,27 @@ HRESULT ReJITCompilationFinished(
   
 ## <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] Derlendiğini işlevi kimliği.  
+ [in] The ID of the function that was recompiled.  
   
  `rejitId`  
- [in] JIT yeniden derlenen işlevi kimliği.  
+ [in] The identity of the JIT-recompiled function.  
   
  `hrStatus`  
- [in] JIT yeniden derlemesi başarılı olup olmadığını belirten bir değer.  
+ [in] A value that indicates whether the JIT recompilation was successful.  
   
  `fIsSafeToBlock`  
- [in] `true` engelleme bu geri çağrısından; döndürmek çağıran iş parçacığını beklemek çalışma zamanı neden olabileceğini göstermek için `false` engelleme zamanının işlemi etkilemez belirtmek için.  
+ [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.  
   
- Değerini `true` çalışma zamanı zarar değil, ancak profil oluşturma sonuçlarından etkileyebilir.  
+ A value of `true` does not harm the runtime, but can affect the profiling results.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

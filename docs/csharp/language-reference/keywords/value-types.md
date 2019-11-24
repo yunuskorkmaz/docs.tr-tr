@@ -1,5 +1,5 @@
 ---
-title: Değer türleri- C# başvuru
+title: Value types - C# Reference
 ms.custom: seodec18
 ms.date: 11/26/2018
 f1_keywords:
@@ -9,102 +9,102 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 8703532ff8551e8bd42128eb9e8cdcf2afd9dad8
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b264be5d2589455562a19ef55b5ddf1a4e74ce15
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739669"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428458"
 ---
-# <a name="value-types-c-reference"></a>Değer türleri (C# başvuru)
+# <a name="value-types-c-reference"></a>Value types (C# Reference)
 
-İki tür değer türü vardır:
+There are two kinds of value types:
 
 - [Yapılar](struct.md)
 
 - [Sabit Listeleri](enum.md)
 
-## <a name="main-features-of-value-types"></a>Değer türlerinin ana özellikleri
+## <a name="main-features-of-value-types"></a>Main features of value types
 
-Değer türünde bir değişken, türün bir değerini içerir. Örneğin, `int` türünün bir değişkeni `42`değerini içerebilir. Bu, bir nesne olarak da bilinen tür örneğine başvuru içeren bir başvuru türü değişkeninden farklıdır. Değer türünde bir değişkene yeni bir değer atadığınızda, bu değer kopyalanır. Başvuru türündeki bir değişkene yeni bir değer atadığınızda, başvuru nesnenin kendisi değil, kopyalanır.
+A variable of a value type contains a value of the type. For example, a variable of the `int` type might contain the value `42`. This differs from a variable of a reference type, which contains a reference to an instance of the type, also known as an object. When you assign a new value to a variable of a value type, that value is copied. When you assign a new value to a variable of a reference type, the reference is copied, not the object itself.
 
-Tüm değer türleri örtük olarak <xref:System.ValueType?displayProperty=nameWithType>türetilir.
+All value types are derived implicitly from the <xref:System.ValueType?displayProperty=nameWithType>.
 
-Başvuru türlerinden farklı olarak, bir değer türünden yeni bir tür türemezsiniz. Ancak, başvuru türleri gibi yapılar, arabirimler uygulayabilir.
+Unlike with reference types, you cannot derive a new type from a value type. However, like reference types, structs can implement interfaces.
 
-Değer türü değişkenleri varsayılan olarak `null` olamaz. Ancak, karşılık gelen [null yapılabilir değer türlerinin](../builtin-types/nullable-value-types.md) değişkenleri `null`olabilir.
+Value type variables cannot be `null` by default. However, variables of the corresponding [nullable value types](../builtin-types/nullable-value-types.md) can be `null`.
 
-Her değer türünün, bu türün varsayılan değerini Başlatan örtük parametresiz bir Oluşturucusu vardır. Değer türlerinin varsayılan değerleri hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](default-values-table.md).
+Each value type has an implicit parameterless constructor that initializes the default value of that type. For information about default values of value types, see [Default values table](default-values-table.md).
 
-## <a name="simple-types"></a>Basit türler
+## <a name="simple-types"></a>Simple types
 
-*Basit türler* tarafından C# sunulan önceden tanımlanmış bir yapı türleri kümesidir ve aşağıdaki türleri içerir:
+The *simple types* are a set of predefined struct types provided by C# and comprise the following types:
 
-- [Integral türleri](../builtin-types/integral-numeric-types.md): tamsayı sayısal türleri ve [char](char.md) türü
-- [Kayan nokta türleri](../builtin-types/floating-point-numeric-types.md)
+- [Integral types](../builtin-types/integral-numeric-types.md): integer numeric types and the [char](../builtin-types/char.md) type
+- [Floating-point types](../builtin-types/floating-point-numeric-types.md)
 - [bool](bool.md)
 
-Basit türler anahtar sözcükler aracılığıyla tanımlanır, ancak bu anahtar sözcükler yalnızca <xref:System> ad alanındaki önceden tanımlanmış yapı türleri için diğer adlardır. Örneğin, [int](../builtin-types/integral-numeric-types.md) bir <xref:System.Int32?displayProperty=nameWithType>diğer adıdır. Diğer adların tam listesi için bkz. [Yerleşik türler tablosu](built-in-types-table.md).
+The simple types are identified through keywords, but these keywords are simply aliases for predefined struct types in the <xref:System> namespace. For example, [int](../builtin-types/integral-numeric-types.md) is an alias of <xref:System.Int32?displayProperty=nameWithType>. For a complete list of aliases, see [Built-in types table](built-in-types-table.md).
 
-Basit türler, bazı ek işlemlere izin veren diğer yapı türlerinden farklıdır:
+The simple types differ from other struct types in that they permit certain additional operations:
 
-- Basit türler, değişmez değerler kullanılarak başlatılabilir. Örneğin, `'A'` türü `char` bir değişmez değerdir ve `2001` `int`türü bir değişmez değerdir.
+- Simple types can be initialized by using literals. For example, `'A'` is a literal of the type `char` and `2001` is a literal of the type `int`.
 
-- [Const](const.md) anahtar sözcüğüyle basit türlerin sabitlerini bildirebilirsiniz. Diğer yapı türlerinin sabitlerinin olması mümkün değildir.
+- You can declare constants of the simple types with the [const](const.md) keyword. It's not possible to have constants of other struct types.
 
-- İşlenenleri hepsi basit tür sabitleri olan sabit ifadeler, derleme zamanında değerlendirilir.
+- Constant expressions, whose operands are all simple type constants, are evaluated at compile time.
 
-Daha fazla bilgi için, [ C# dil belirtiminin](/dotnet/csharp/language-reference/language-specification/introduction) [basit türler](~/_csharplang/spec/types.md#simple-types) bölümüne bakın.
+For more information, see the [Simple types](~/_csharplang/spec/types.md#simple-types) section of the [C# language specification](/dotnet/csharp/language-reference/language-specification/introduction).
 
-## <a name="initializing-value-types"></a>Değer türlerini başlatma
+## <a name="initializing-value-types"></a>Initializing value types
 
-Yerel değişkenlerin kullanılmadan C# önce başlatılması gerekir. Örneğin, aşağıdaki örnekte olduğu gibi, başlatma olmadan yerel bir değişken bildirebilirsiniz:
+Local variables in C# must be initialized before they are used. For example, you might declare a local variable without initialization as in the following example:
 
 ```csharp
 int myInt;
 ```
 
-Bunu, başlamadan önce kullanamazsınız. Aşağıdaki ifadeyi kullanarak başlatabilirsiniz:
+You cannot use it before you initialize it. You can initialize it using the following statement:
 
 ```csharp
 myInt = new int();  // Invoke parameterless constructor for int type.
 ```
 
-Bu ifade aşağıdaki ifadeye eşdeğerdir:
+This statement is equivalent to the following statement:
 
 ```csharp
 myInt = 0;         // Assign an initial value, 0 in this example.
 ```
 
-Tabii ki, bildirimi ve başlatmayı aşağıdaki örneklerle aynı bildirimde bulabilirsiniz:
+You can, of course, have the declaration and the initialization in the same statement as in the following examples:
 
 ```csharp
 int myInt = new int();
 ```
 
-veya
+–or–
 
 ```csharp
 int myInt = 0;
 ```
 
-[New](../operators/new-operator.md) işlecini kullanmak, belirli türde parametresiz oluşturucuyu çağırır ve varsayılan değeri değişkenine atar. Önceki örnekte, parametresiz Oluşturucu değeri `myInt``0` atanır. Parametresiz oluşturucular çağırarak atanan değerler hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](default-values-table.md).
+Using the [new](../operators/new-operator.md) operator calls the parameterless constructor of the specific type and assigns the default value to the variable. In the preceding example, the parameterless constructor assigned the value `0` to `myInt`. For more information about values assigned by calling parameterless constructors, see [Default values table](default-values-table.md).
 
-Kullanıcı tanımlı türlerle, parametresiz oluşturucuyu çağırmak için [Yeni](../operators/new-operator.md) ' yi kullanın. Örneğin, aşağıdaki ifade `Point` yapısının parametresiz oluşturucusunu çağırır:
+With user-defined types, use [new](../operators/new-operator.md) to invoke the parameterless constructor. For example, the following statement invokes the parameterless constructor of the `Point` struct:
 
 ```csharp
 var p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
-Bu çağrıdan sonra yapının kesin olarak atanması kabul edilir; diğer bir deyişle, tüm üyeleri varsayılan değerlerine başlatılır.
+After this call, the struct is considered to be definitely assigned; that is, all its members are initialized to their default values.
 
-`new` işleci hakkında daha fazla bilgi için, bkz. [Yeni](../operators/new-operator.md).
+For more information about the `new` operator, see [new](../operators/new-operator.md).
 
-Sayısal türlerin çıkışını biçimlendirme hakkında daha fazla bilgi için bkz. [sayısal sonuçlar tablosunu biçimlendirme](formatting-numeric-results-table.md).
+For information about formatting the output of numeric types, see [Formatting numeric results table](formatting-numeric-results-table.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvurunun](../index.md)
+- [C# reference](../index.md)
 - [C# anahtar sözcükleri](index.md)
-- [Başvuru türleri](reference-types.md)
-- [Null yapılabilir değer türleri](../builtin-types/nullable-value-types.md)
+- [Reference types](reference-types.md)
+- [Nullable value types](../builtin-types/nullable-value-types.md)

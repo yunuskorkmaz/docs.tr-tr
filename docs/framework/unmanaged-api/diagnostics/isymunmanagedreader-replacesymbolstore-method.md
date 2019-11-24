@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 43257761-8cb1-4eaf-8fb5-1f3980cb66cd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8721f7c30061fbfd4a761bed090b761762c3c13c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60c3537a80c39f758f46e6f2f0a5f2bcd27350b5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939036"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445727"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>ISymUnmanagedReader::ReplaceSymbolStore Yöntemi
-Var olan sembol deposunu bir Delta sembol deposu ile değiştirir. Bu yöntem [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) yöntemine benzerdir, ancak verilen Delta bir güncelleştirme yerine tam bir değişiklik olarak hareket eder.  
+Replaces the existing symbol store with a delta symbol store. This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.  
   
 > [!NOTE]
-> `filename` Ya`pIStream` da parametrelerinden yalnızca birini belirtmeniz gerekir. `filename` Belirtilmişse, sembol deposu bu dosyadaki simgelerle güncelleştirilir. Belirtilmişse, mağaza <xref:System.Runtime.InteropServices.ComTypes.IStream>içindeki verilerle güncelleştirilir. `pIStream`  
+> You need specify only one of the `filename` or `pIStream` parameters, not both. If `filename` is specified, the symbol store will be updated with the symbols in that file. If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,16 +38,16 @@ HRESULT ReplaceSymbolStore (
   
 ## <a name="parameters"></a>Parametreler  
  `filename`  
- 'ndaki Sembol deposunu içeren dosyanın adı.  
+ [in] The name of the file containing the symbol store.  
   
  `pIStream`  
- 'ndaki `filename` Parametresi için alternatif olarak kullanılan dosya akışı.  
+ [in] The file stream, used as an alternative to the `filename` parameter.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAıL veya diğer bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi** CorSym. IDL, CorSym. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

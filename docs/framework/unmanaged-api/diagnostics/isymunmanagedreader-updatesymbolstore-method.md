@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4a17d723-86b9-4f27-bd0d-b70c3259011c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d84d4fccb2cb4e500f07f6bfbfb93b8c7b81f5d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e052d9b7b2abd57b176dfe3b00afac626d422c58
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939001"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446465"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore Yöntemi
-Var olan sembol deposunu bir Delta sembol deposu ile güncelleştirir. Bu yöntem, sembol deposunu değişimleri ile orijinal taşınabilir yürütülebilir (PE) dosyası eşleşecek şekilde güncelleştirmek için Düzenle ve devam et senaryolarında kullanılır.  
+Updates the existing symbol store with a delta symbol store. This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.  
   
 > [!NOTE]
-> `filename` Ya`pIStream` da parametrelerinden yalnızca birini belirtmeniz gerekir. `filename` Belirtilmişse, sembol deposu bu dosyadaki simgelerle güncelleştirilir. Belirtilmişse, mağaza <xref:System.Runtime.InteropServices.ComTypes.IStream>içindeki verilerle güncelleştirilir. `pIStream`  
+> You need specify only one of the `filename` or `pIStream` parameters, not both. If `filename` is specified, the symbol store will be updated with the symbols in that file. If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,16 +38,16 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="parameters"></a>Parametreler  
  `filename`  
- 'ndaki Sembol deposunu içeren dosyanın adı.  
+ [in] The name of the file that contains the symbol store.  
   
  `pIStream`  
- 'ndaki `filename` Parametresi için alternatif olarak kullanılan dosya akışı.  
+ [in] The file stream, used as an alternative to the `filename` parameter.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAıL veya diğer bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi** CorSym. IDL, CorSym. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

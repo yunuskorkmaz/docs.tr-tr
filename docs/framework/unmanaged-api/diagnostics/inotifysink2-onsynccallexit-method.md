@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9d7600e-a8f5-443a-96de-67d26e130f2d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7c4932828669e61f14827934bacfec2ca0153b50
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 03b8afc1276dae6244bcf12bd0bc78c2fa5380bb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744513"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448689"
 ---
 # <a name="inotifysink2onsynccallexit-method"></a>INotifySink2::OnSyncCallExit Yöntemi
-Bir çağrı çıkarken çağrılır.  
+Gets invoked when exiting a call.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,19 +38,19 @@ HRESULT OnSyncCallExit
   
 ## <a name="parameters"></a>Parametreler  
  `in_CallID`  
- [in] Çıktı çağrı kimliği. Bkz: [call_ıd yapısı](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ [in] ID of the call being exited. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `out_ppBuffer`  
- [out] Arabellek çağırın.  
+ [out] Call buffer.  
   
  `out_pBufferSize`  
- [out] Çağrı arabelleğin bayt cinsinden boyutu.  
+ [out] Size of the call buffer, in bytes.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK.  
+ S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

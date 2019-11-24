@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01837955-ce1e-4068-b338-fd473bd77d1d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4d8829c9cb2818eafe98809c9a0d5fd8109d076
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea7605e062eb77e0488b3a9561c4d83be16fa7d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778827"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436715"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps Metodu
-İle ilişkili meta verileri alır <xref:System.Type> belirtilen TypeRef belirteci tarafından başvurulan.  
+Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,28 +39,28 @@ HRESULT GetTypeRefProps (
   
 ## <a name="parameters"></a>Parametreler  
  `tr`  
- [in] Meta verileri için döndürülecek türünü temsil eden TypeRef belirteci.  
+ [in] The TypeRef token that represents the type to return metadata for.  
   
  `ptkResolutionScope`  
- [out] Başvuru yapıldığı kapsamı için bir işaretçi. Bu değer bir AssemblyRef veya ModuleRef belirtecidir.  
+ [out] A pointer to the scope in which the reference is made. This value is an AssemblyRef or ModuleRef token.  
   
  `szName`  
- [out] Tür adı içeren bir arabelleği.  
+ [out] A buffer containing the type name.  
   
  `cchName`  
- [in] Geniş karakter cinsinden istenen boyuta `szName`.  
+ [in] The requested size in wide characters of `szName`.  
   
  `pchName`  
- [out] Geniş karakter cinsinden döndürülen boyutu `szName`.  
+ [out] The returned size in wide characters of `szName`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

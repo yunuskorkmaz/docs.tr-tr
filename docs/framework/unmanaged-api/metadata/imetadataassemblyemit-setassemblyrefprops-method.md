@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 984ec5dea757971081ce05c858788473a0f616e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5434aa2d12bd9a29a8c2fc784421442469ceb1ce
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775280"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440552"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps Yöntemi
-Belirtilen değiştirir `AssemblyRef` meta veri yapısı.  
+Modifies the specified `AssemblyRef` metadata structure.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,40 +42,40 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>Parametreler  
  `ar`  
- [in] Belirten bir meta veri belirteci `AssemblyRef` değiştirilecek meta veri yapısı.  
+ [in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.  
   
  `pbPublicKeyOrToken`  
- [in] Başvurulan derlemenin yayımcı ortak anahtarı.  
+ [in] The public key of the publisher of the referenced assembly.  
   
  `cbPublicKeyOrToken`  
- [in] Bayt cinsinden boyutu `pbPublicKeyOrToken`.  
+ [in] The size in bytes of `pbPublicKeyOrToken`.  
   
  `szName`  
- [in] Derleme kullanıcı tarafından okunabilen metin adı.  
+ [in] The human-readable text name of the assembly.  
   
  `pMetaData`  
- [in] Derleme sürümü, platforma ve yerel ayar bilgilerini içeren ASSEMBLYMETADATA örneğine bir işaretçi.  
+ [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
   
  `pbHashValue`  
- [in] Bütünleştirilmiş kod ile ilişkili veri karması için bir işaretçi.  
+ [in] A pointer to the hash data associated with the assembly.  
   
  `cbHashValue`  
- [in] Bayt cinsinden boyutu `pbHashValue`.  
+ [in] The size in bytes of `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in] Bitsel bir birleşimi [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) başvurulan derleme özniteliklerini belirten değerleri.  
+ [in] A bitwise combination of [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Oluşturmak için bir `AssemblyRef` meta veri yapısı, kullanım [Imetadataassemblyemit::defineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) yöntemi.  
+ To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) method.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

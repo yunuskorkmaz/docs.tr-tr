@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 50035799fcfa4c4b08404d63fe91e7dba85722fa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: acb772a64c8f13405f2836bb5f4f308986dce414
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758841"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447660"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers Yöntemi
-Belirtilen türün üyelerini temsil eden MemberDef belirteçleri numaralandırır.  
+Enumerates MemberDef tokens representing members of the specified type.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,40 +39,40 @@ HRESULT EnumMembers (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [out içinde] Numaralandırıcı bir işaretçi.  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in] Numaralandırılacak üyeleri olan türü temsil eden bir tür tanımı belirteci.  
+ [in] A TypeDef token representing the type whose members are to be enumerated.  
   
  `rMembers`  
- [out] Dizi MemberDef belirteçleri tutmak için kullanılır.  
+ [out] The array used to hold the MemberDef tokens.  
   
  `cMax`  
- [in] En büyük boyutunu `rMembers` dizisi.  
+ [in] The maximum size of the `rMembers` array.  
   
  `pcTokens`  
- [out] Döndürülen MemberDef belirteçleri gerçek sayısını `rMembers`.  
+ [out] The actual number of MemberDef tokens returned in `rMembers`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak hiçbir MemberDef belirteçleri vardır. Bu durumda, `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumMembers` returned successfully.|  
+|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Koleksiyonlar bir sınıfın üyelerinin sıralanırken `EnumMembers` yalnızca üyeleri döndürür (alanlar ve yöntemler, ancak **değil** özellikleri veya olayları) doğrudan sınıf üzerinde tanımlanan. Bile sınıfı, bu devralınan üyeleri için bir uygulama sağlar sınıfını devralan herhangi bir üye döndürmez. Devralınan üyeleri listeleme için arayan açıkça devralma zincirini yol gerekir. Devralma zincirini kurallarını özgün metaverileri gereğince yayılan derleyici ve dil bağlı olarak farklılık gösterebileceğini unutmayın.
+ When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class. It does not return any members that the class inherits, even if the class provides an implementation for those inherited members. To enumerate inherited members, the caller must explicitly walk the inheritance chain. Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.
  
- Özellikler ve olaylar değil numaralandırılan tarafından `EnumMembers`. Bu listeleme için kullanın [EnumProperties](imetadataimport-enumproperties-method.md) veya [EnumEvents](imetadataimport-enumevents-method.md).
+ Properties and events are not enumerated by `EnumMembers`. To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

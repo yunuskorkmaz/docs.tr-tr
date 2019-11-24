@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 40fcdbc5-3bb2-41e9-b995-40984c209a7f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3d910f9e93dbd90f9e23c5f32903a8d819ea01f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 402b5b4bc9734be59ff342a4f86f2c4a1ed23b5f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751477"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446403"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfo-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo Yöntemi
-Sembol arama bilgilerini alır.  
+Gets symbol search information.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,19 +37,19 @@ HRESULT GetSymbolSearchInfo(
   
 ## <a name="parameters"></a>Parametreler  
  `cSearchInfo`  
- [in] A `ULONG32` boyutunu gösteren `rgpSearchInfo`.  
+ [in] A `ULONG32` that indicates the size of `rgpSearchInfo`.  
   
  `pcSearchInfo`  
- [out] Bir işaretçi bir `ULONG32` arama bilgilerini içerecek biçimde gerekli arabellek boyutunu alır.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.  
   
  `rgpSearchInfo`  
- [out] Ayarlanmış bir işaretçi ve döndürülen [Isymunmanagedsymbolsearchınfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) arabirimi.  
+ [out] A pointer that is set to the returned [ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) interface.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

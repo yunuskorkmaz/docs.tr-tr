@@ -6,69 +6,67 @@ helpviewer_keywords:
 - enumerations [.NET Framework profiling]
 - unmanaged enumerations [.NET Framework], profiling
 ms.assetid: 8d5f9570-9853-4ce8-8101-df235d5b258e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 996352637f34b0b6c0d12e611a6d9e70ab85230e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc90743fb348c31bd2f7487c1573ec38a43bd3af
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757579"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447454"
 ---
 # <a name="profiling-enumerations"></a>Profil Oluşturma Numaralandırmaları
-Bu bölümde, profil oluşturma API'SİNİN kullandığı yönetilmeyen numaralandırmaları açıklar.  
+This section describes the unmanaged enumerations that the profiling API uses.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [COR_PRF_CLAUSE_TYPE Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md)  
- Kodu girdiğiniz özel durum yan tümcesi veya sol türünü belirtir.  
+ Indicates the type of exception clause that the code has just entered or left.  
   
  [COR_PRF_CODEGEN_FLAGS Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md)  
- Ayarlanabilir kod oluşturma bayraklarını tanımlayan [Icorprofilerfunctioncontrol::setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) yöntemi.  
+ Defines the code generation flags that can be set with the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method.  
   
  [COR_PRF_FINALIZER_FLAGS Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md)  
- Bir nesnenin Sonlandırıcısı açıklar.  
+ Describes the finalizer for an object.  
   
  [COR_PRF_GC_GENERATION Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)  
- Bir çöp toplama nesil tanımlar.  
+ Identifies a garbage collection generation.  
   
  [COR_PRF_GC_REASON Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md)  
- Çöp toplama oluştuğu nedenini gösterir.  
+ Indicates the reason that garbage collection is occurring.  
   
  [COR_PRF_GC_ROOT_FLAGS Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md)  
- Çöp toplayıcı kök özelliklerini gösterir.  
+ Indicates properties of a garbage collector root.  
   
  [COR_PRF_GC_ROOT_KIND Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md)  
- Tarafından sunulan çöp toplayıcı kök türünü belirten [Icorprofilercallback2::rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) geri çağırma.  
+ Indicates the kind of garbage collector root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.  
   
  [COR_PRF_HIGH_MONITOR Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)  
- Bulunan listelenenlere bayrakları sağlar [cor_prf_monıtor](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) Profiler'ı için belirtebileceğiniz numaralandırma [Icorprofilerınfo5::seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) , yüklenirken yöntemi.  
+ Provides flags in addition to those found in the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration that the profiler can specify to the [ICorProfilerInfo5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) method when it is loading.  
   
  [COR_PRF_JIT_CACHE Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md)  
- Önbelleğe alınan işlevi arama sonucu gösterir.  
+ Indicates the result of a cached function search.  
   
  [COR_PRF_MISC Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-misc-enumeration.md)  
- Özel tanımlayıcılardır belirten sabit değerleri içerir.  
+ Contains constant values that specify special identifiers.  
   
  [COR_PRF_MODULE_FLAGS Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md)  
- Bir modül özelliklerini belirtir.  
+ Specifies the properties of a module.  
   
  [COR_PRF_MONITOR Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)  
- Davranış, özellikleri veya olayları profil oluşturucu abone olmak isteyen belirtmek için kullanılan değerleri içerir.  
+ Contains values that are used to specify behavior, capabilities, or events to which the profiler wishes to subscribe.  
   
  [COR_PRF_RUNTIME_TYPE Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-runtime-type-enumeration.md)  
- Ortak dil çalışma zamanı sürümünü gösteren değerleri içerir.  
+ Contains values that indicate the version of the common language runtime.  
   
  [COR_PRF_SNAPSHOT_INFO Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md)  
- Ne kadar bir yığın profil oluşturucunun her çağrıda anlık görüntü ile geçirilecek veriler geri belirtir `StackSnapshotCallback` işlevi.  
+ Specifies how much data to pass back with a stack snapshot in each call to the profiler's `StackSnapshotCallback` function.  
   
  [COR_PRF_STATIC_TYPE Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md)  
- Bir statik alandır ve statik kalite bu durumda, alana uygulanan olup olmadığını gösterir.  
+ Indicates whether a field is static and, if so, the static quality that applies to the field.  
   
  [COR_PRF_SUSPEND_REASON Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-suspend-reason-enumeration.md)  
- Çalışma zamanı askıya alındı nedenini gösterir.  
+ Indicates the reason that the runtime was suspended.  
   
  [COR_PRF_TRANSITION_REASON Sabit Listesi](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md)  
- Yönetilmeyen kod veya tam tersi yönetilen bir geçiş nedenini gösterir.  
+ Indicates the reason for a transition from managed to unmanaged code, or vice versa.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Profil Oluşturmaya Genel Bakış](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  

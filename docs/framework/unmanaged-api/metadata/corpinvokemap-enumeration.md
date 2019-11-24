@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a876ff1ba0d2342f7975bf5adfc8ec03d21578f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17b7af7016cf88fd3ae263dd952502d515b0c833
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781639"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441563"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap Numaralandırması
-PInvoke arama seçeneklerini belirtir.  
+Specifies options for a PInvoke call.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -67,35 +65,35 @@ typedef enum  CorPinvokeMap {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`pmNoMangle`|Belirtilen üye adları kullanın.|  
-|`pmCharSetMask`|Ayrılmış.|  
-|`pmCharSetNotSpec`|Ayrılmış.|  
-|`pmCharSetAnsi`|Birden çok baytlı karakter dizeleri olarak dizelerini sıralama.|  
-|`pmCharSetUnicode`|2 baytlık karakterler Unicode dizelerini sıralama.|  
-|`pmCharSetAuto`|Otomatik olarak hedef işletim sistemi için uygun şekilde dizeleri sıralaması. Varsayılan Windows NT, Windows 2000, Windows XP ve Windows Server 2003 ailesinin Unicode bulunur. Windows 98 ve Windows Me ANSI varsayılandır|  
-|`pmBestFitUseAssem`|Ayrılmış.|  
-|`pmBestFitEnabled`|En iyi uyan eşlemeyi ANSI karakter kümesi içinde bir tam eşleşme eksik Unicode karakter gerçekleştirin.|  
-|`pmBestFitDisabled`|Unicode karakter en iyi uyan eşlemeyi gerçekleştirmeyin. Bu durumda, tüm eşlenemez karakterleri ile değiştirilecek bir '?'.|  
-|`pmBestFitMask`|Ayrılmış.|  
-|`pmThrowOnUnmappableCharUseAssem`|Ayrılmış.|  
-|`pmThrowOnUnmappableCharEnabled`|Birlikte çalışma sıralayıcısı eşlenemez bir karakterle karşılaştığında bir özel durum.|  
-|`pmThrowOnUnmappableCharDisabled`|Birlikte çalışma sıralayıcısı eşlenemez bir karakterle karşılaştığında bir özel durum oluşturması beklenmiyor.|  
-|`pmThrowOnUnmappableCharMask`|Ayrılmış|  
-|`pmSupportsLastError`|Win32 çağırmak Aranan izin `SetLastError` öznitelikli yöntemini döndürmeden önce işlevi.|  
-|`pmCallConvMask`|Ayrılmış|  
-|`pmCallConvWinapi`|Varsayılan platform çağırma kuralını kullanın. Örneğin, Windows üzerinde varsayılandır `StdCall` ve Windows CE olduğu .NET `Cdecl`.|  
-|`pmCallConvCdecl`|Kullanım `Cdecl` çağırma kuralı. Bu durumda, çağıranın yığını temizler. Bu, arama işlevlerinde sağlar `varargs` (diğer bir deyişle, değişik sayıda parametreyi kabul eden işlevler).|  
-|`pmCallConvStdcall`|Kullanım `StdCall` çağırma kuralı. Bu durumda, çağrılan yığını temizler. Bu, yönetilmeyen işlevleri çağırma platformuyla çağırmak için varsayılan kuralıdır.|  
-|`pmCallConvThiscall`|Kullanım `ThisCall` çağırma kuralı. Bu durumda ilk parametresinin olup `this` işaretçisi ve kayıtta ECX depolanır. Diğer parametreler, yığın üzerine itilir. `ThisCall` Çağırma yöntemleri yönetilmeyen DLL dosyasından dışarı aktarılan sınıflar çağırmak için kullanılır.|  
-|`pmCallConvFastcall`|Ayrılmış.|  
-|`pmMaxValue`|Ayrılmış.|  
+|`pmNoMangle`|Use each member name as specified.|  
+|`pmCharSetMask`|Reserved.|  
+|`pmCharSetNotSpec`|Reserved.|  
+|`pmCharSetAnsi`|Marshal strings as multiple-byte character strings.|  
+|`pmCharSetUnicode`|Marshal strings as Unicode 2-byte characters.|  
+|`pmCharSetAuto`|Automatically marshal strings appropriately for the target operating system. The default is Unicode on Windows NT, Windows 2000, Windows XP, and the Windows Server 2003 family; the default is ANSI on Windows 98 and Windows Me.|  
+|`pmBestFitUseAssem`|Reserved.|  
+|`pmBestFitEnabled`|Perform best-fit mapping of Unicode characters that lack an exact match in the ANSI character set.|  
+|`pmBestFitDisabled`|Do not perform best-fit mapping of Unicode characters. In this case, all unmappable characters will be replaced by a ‘?’.|  
+|`pmBestFitMask`|Reserved.|  
+|`pmThrowOnUnmappableCharUseAssem`|Reserved.|  
+|`pmThrowOnUnmappableCharEnabled`|Throw an exception when the interop marshaler encounters an unmappable character.|  
+|`pmThrowOnUnmappableCharDisabled`|Do not throw an exception when the interop marshaler encounters an unmappable character.|  
+|`pmThrowOnUnmappableCharMask`|Reserved|  
+|`pmSupportsLastError`|Allow the callee to call the Win32 `SetLastError` function before returning from the attributed method.|  
+|`pmCallConvMask`|Reserved|  
+|`pmCallConvWinapi`|Use the default platform calling convention. For example, on Windows the default is `StdCall` and on Windows CE .NET it is `Cdecl`.|  
+|`pmCallConvCdecl`|Use the `Cdecl` calling convention. In this case, the caller cleans the stack. This enables calling functions with `varargs` (that is, functions that accept a variable number of parameters).|  
+|`pmCallConvStdcall`|Use the `StdCall` calling convention. In this case, the callee cleans the stack. This is the default convention for calling unmanaged functions with platform invoke.|  
+|`pmCallConvThiscall`|Use the `ThisCall` calling convention. In this case, the first parameter is the `this` pointer and is stored in register ECX. Other parameters are pushed on the stack. The `ThisCall` calling convention is used to call methods on classes exported from an unmanaged DLL.|  
+|`pmCallConvFastcall`|Reserved.|  
+|`pmMaxValue`|Reserved.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

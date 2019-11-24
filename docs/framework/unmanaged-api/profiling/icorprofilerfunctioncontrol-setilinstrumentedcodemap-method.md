@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ecf56646-7e5f-46c4-8340-f3a04e88920f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 31caa87b1eaa48532ffb20b46c593242379c7ae8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11ce2fdccbf24fd688376cc3256f6db79a7cc352
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780338"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447845"
 ---
 # <a name="icorprofilerfunctioncontrolsetilinstrumentedcodemap-method"></a>ICorProfilerFunctionControl::SetILInstrumentedCodeMap Yöntemi
-Belirtilen işlev için kod haritası, belirtilen ortak Ara dil (CIL) map girişlerini kullanarak ayarlar.  
+Sets a code map for the specified function by using the specified Common Intermediate Language (CIL) map entries.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +35,22 @@ HRESULT SetILInstrumentedCodeMap(
   
 ## <a name="parameters"></a>Parametreler  
  `cILMapEntries`  
- [in] Eşleme girişleri sayısı.  
+ [in] The number of entries in the map.  
   
  `rgILMapEntries`  
- [in] Cor_ıl_map girişleri arayan tarafından ayrılmış dizi. Bu girişlerin aynı yorumlamasıdır [Icorprofilerınfo::setılınstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) yöntemi.  
+ [in] The caller-allocated array of COR_IL_MAP  entries. The interpretation of these entries is the same as for the [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) method.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntemi çağırarak eşlemeyi ayarlamaya izin verir çağırarak eşlemesini almak hata ayıklayıcı [Icordebugılcode2::getınstrumentedılmap](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md). Yığın izlemeleri ve değişken yaşam süreleri için hesaplama IL kaydırır eşleme dahili olarak kullanılacak hata ayıklayıcı ayrıca sağlar.  
+ Setting the mapping by calling this method allows the debugger to retrieve the mapping by calling [ICorDebugILCode2::GetInstrumentedILMap](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md). It also allows the debugger to use the mapping internally when calculating IL offsets for stack traces and variable lifetimes.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

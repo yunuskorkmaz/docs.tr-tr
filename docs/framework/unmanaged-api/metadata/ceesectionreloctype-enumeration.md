@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 124656f6-0dad-4ceb-9043-d3869ab65cde
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1218ee76a3b7a2f501f87adf1e0bc8133d5329b5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: efce0c13944b383c42cbff6a6af4795293ee2989
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781343"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444163"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType Numaralandırması
-Türünü etkilemek için değerler sağlayan `reloc` çağrıda yayılan yönerge [Iceegen::addsectionreloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
+Provides values to influence the type of `reloc` instruction emitted in a call to [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -54,30 +52,30 @@ typedef enum  {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`srRelocAbsolute`|Yalnızca bir bölüm göreli oluşturur `reloc`, gönderen bir .reloc bölüme hiçbir şey yok.|  
-|`srRelocHighLow`|Oluşturur bir `reloc` işaretçi boyutlu konumu. Platforma bağlı olarak bu BASED_HIGHLOW ya da BASED_DIR64 dönüştürülür.|  
-|`srRelocHighAdj`|Oluşturur bir `reloc` üst burada alt 16 bit dahil edilecek .reloc tabloda sonraki sözcüğe 32 bit sayı, 16 bit için.|  
-|`srRelocMapToken`|Hiçbir şey .reloc bölüme gönderirken bir belirteç Haritası yeniden konumlandırma oluşturur.|  
-|`srRelocRelative`|Göreli adres düzeltme değeri olduğunu gösterir.|  
-|`srRelocFilePos`|Yalnızca bir bölüm göreli oluşturur `reloc`, gönderen bir .reloc bölüme hiçbir şey yok. Bu `reloc` bölümünde, sanal adres bölümün göreli dosya konumu.|  
-|`srRelocCodeRelative`|Bir kod göreli adres düzeltmesi belirtir.|  
-|`srRelocIA64Imm64`|Oluşturur bir `reloc` bir IA64 bir 64 bit adresi `movl` yönergesi.|  
-|`srRelocDir64`|Oluşturur bir `reloc` 64-bit adresi.|  
-|`srRelocIA64PcRel25`|Oluşturmak bir `reloc` bir IA64 25-bit bir PC göreli adresi `br.call` yönergesi.|  
-|`srRelocIA64PcRel64`|Oluşturur bir `reloc` bir IA64 bir 64 bit bilgisayar göreli adresi `brl.call` yönergesi.|  
-|`srRelocAbsoluteTagged`|30 bit'lik bir bölümü-göreli oluşturur `reloc`etiketli işaretçi değerleri için kullanılır.|  
-|`srRelocSentinel`|Bu sabit listesi üzerindeki herhangi bir ek sağlamaya yardımcı olmak için bir sentinel değer iç ağa yansıtılır `reloc` ad dizisi.|  
-|`srNoBaseReloc`|Temel yayma değil belirtir `reloc`.|  
-|`srRelocPtr`|Bellek öncesi düzeltme içeriğinin bir bölüm yerine bir işaretçi olduğunu belirten bir değer uzaklığı.|  
+|`srRelocAbsolute`|Generates only a section-relative `reloc`, sending nothing into a .reloc section.|  
+|`srRelocHighLow`|Generates a `reloc` for a pointer-sized location. This is transformed into BASED_HIGHLOW or BASED_DIR64 depending on the platform.|  
+|`srRelocHighAdj`|Generates a `reloc` for the top 16 bits of a 32-bit number, where the bottom 16 bits are included in the next word in the .reloc table.|  
+|`srRelocMapToken`|Generates a token map relocation, sending nothing into a .reloc section.|  
+|`srRelocRelative`|Indicates that the value is a relative address fixup.|  
+|`srRelocFilePos`|Generates only a section-relative `reloc`, sending nothing into a .reloc section. This `reloc` is relative to the file position of the section, not the section's virtual address.|  
+|`srRelocCodeRelative`|Specifies a code-relative address fixup.|  
+|`srRelocIA64Imm64`|Generates a `reloc` for a 64 bit address in an ia64 `movl` instruction.|  
+|`srRelocDir64`|Generates a `reloc` for a 64-bit address.|  
+|`srRelocIA64PcRel25`|Generate a `reloc` for a 25-bit PC-relative address in an ia64 `br.call` instruction.|  
+|`srRelocIA64PcRel64`|Generates a `reloc` for a 64-bit PC-relative address in an ia64 `brl.call` instruction.|  
+|`srRelocAbsoluteTagged`|Generates a 30-bit section-relative `reloc`, used for tagged pointer values.|  
+|`srRelocSentinel`|A sentinel value to help ensure any additions to this enum are reflected to the internal `reloc` name array.|  
+|`srNoBaseReloc`|Specifies not to emit a base `reloc`.|  
+|`srRelocPtr`|A value indicating that the pre-fixup contents of memory are a pointer rather than a section offset.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

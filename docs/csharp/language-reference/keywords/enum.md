@@ -1,5 +1,5 @@
 ---
-title: enum anahtar sözcüğü C# -başvurusu
+title: enum keyword - C# Reference
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,83 +8,83 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 417f02ce9e8ee88edeb2a4dab88111cae39a8a4b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 639a3a01c9c4da13e0212bd0230acbd2af170b25
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771860"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428513"
 ---
 # <a name="enum-c-reference"></a>enum (C# Başvurusu)
 
-`enum` anahtar sözcüğü, Numaralandırıcı listesi olarak adlandırılan bir adlandırılmış sabitler kümesinden oluşan ayrı bir tür olan bir sabit listesi bildirmek için kullanılır.
+The `enum` keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list.
 
-Genellikle, ad alanındaki tüm sınıfların eşit kolaylık olmadan erişebilmesi için doğrudan bir ad alanı içinde bir numaralandırma tanımlamanız en iyisidir. Ancak, bir numaralandırma bir sınıf veya yapı içinde de iç içe olabilir.
+Usually it is best to define an enum directly within a namespace so that all classes in the namespace can access it with equal convenience. However, an enum can also be nested within a class or struct.
 
-Varsayılan olarak, ilk Numaralandırıcı 0 değerine sahiptir ve art arda her bir Numaralandırıcı değeri 1 artırılır. Örneğin, aşağıdaki numaralandırmada `Sat` `0`, `Sun` `1`, `Mon` `2`ve benzeri.
+By default, the first enumerator has the value 0, and the value of each successive enumerator is increased by 1. For example, in the following enumeration, `Sat` is `0`, `Sun` is `1`, `Mon` is `2`, and so forth.
 
 ```csharp
 enum Day {Sat, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Numaralandırıcılar, aşağıdaki örnekte gösterildiği gibi varsayılan değerleri geçersiz kılmak için başlatıcıları kullanabilir.
+Enumerators can use initializers to override the default values, as shown in the following example.
 
 ```csharp
 enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Bu numaralandırmada, öğelerin sırası `0`yerine `1` başlatmaya zorlanır. Ancak, 0 değeri olan bir sabit kullanılması önerilir. Daha fazla bilgi için bkz. [numaralandırma türleri](../../programming-guide/enumeration-types.md).
+In this enumeration, the sequence of elements is forced to start from `1` instead of `0`. However, including a constant that has the value of 0 is recommended. For more information, see [Enumeration Types](../../programming-guide/enumeration-types.md).
 
-Her numaralandırma türünün bir temel türü vardır ve bu her türlü [integral sayısal tür](../builtin-types/integral-numeric-types.md)olabilir. [Char](char.md) türü bir sabit listesinin temel alınan türü olamaz. Enumeration öğelerinin temel alınan varsayılan türü [int](../builtin-types/integral-numeric-types.md)'tir. [Byte](../builtin-types/integral-numeric-types.md)gibi başka bir integral türünün bir sabit listesini bildirmek için, aşağıdaki örnekte gösterildiği gibi, tanımlayıcıdan sonra türün ardından bir iki nokta üst üste kullanın.
+Every enumeration type has an underlying type, which can be any [integral numeric type](../builtin-types/integral-numeric-types.md). The [char](../builtin-types/char.md) type cannot be an underlying type of an enum. The default underlying type of enumeration elements is [int](../builtin-types/integral-numeric-types.md). To declare an enum of another integral type, such as [byte](../builtin-types/integral-numeric-types.md), use a colon after the identifier followed by the type, as shown in the following example.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Sabit listesi türünün değişkenine, temel alınan türün aralığında herhangi bir değer atanabilir; değerler, adlandırılmış sabitler ile sınırlı değildir.
+A variable of an enumeration type can be assigned any value in the range of the underlying type; the values are not limited to the named constants.
 
-`enum E` varsayılan değeri, ifade `(E)0`tarafından üretilen değerdir.
+The default value of an `enum E` is the value produced by the expression `(E)0`.
 
 > [!NOTE]
-> Numaralandırıcı, adında boşluk içeremez.
+> An enumerator cannot contain white space in its name.
 
-Temel alınan tür, her Numaralandırıcı için ne kadar depolama ayrılacağını belirtir. Ancak, `enum` türünden integral türüne dönüştürmek için açık bir dönüştürme gerekir. Örneğin, aşağıdaki ifade, `enum` `int`'e dönüştürmek için bir cast kullanarak, Numaralandırıcı `Sun` [int](../builtin-types/integral-numeric-types.md) türünde bir değişkene atar.
+The underlying type specifies how much storage is allocated for each enumerator. However, an explicit cast is necessary to convert from `enum` type to an integral type. For example, the following statement assigns the enumerator `Sun` to a variable of the type [int](../builtin-types/integral-numeric-types.md) by using a cast to convert from `enum` to `int`.
 
 ```csharp
 int x = (int)Day.Sun;
 ```
 
-Bit düzeyinde `OR` işlemle birleştirilebilecek öğeleri içeren bir numaralandırmaya <xref:System.FlagsAttribute?displayProperty=nameWithType> uyguladığınızda, öznitelik bazı araçlarla kullanıldığında `enum` davranışını etkiler. <xref:System.Console> sınıfı yöntemleri ve Ifade Değerlendiricisi gibi araçları kullandığınızda bu değişiklikleri fark edebilirsiniz. (Bkz. üçüncü örnek.)
+When you apply <xref:System.FlagsAttribute?displayProperty=nameWithType> to an enumeration that contains elements that can be combined with a bitwise `OR` operation, the attribute affects the behavior of the `enum` when it is used with some tools. You can notice these changes when you use tools such as the <xref:System.Console> class methods and the Expression Evaluator. (See the third example.)
 
-## <a name="robust-programming"></a>Güçlü programlama
+## <a name="robust-programming"></a>Robust programming
 
-Her türlü Sabitte olduğu gibi, bir numaralandırmanın tek tek değerlerine yapılan tüm başvurular, derleme zamanında sayısal değişmez değerlere dönüştürülür. Bu, [sabitler](../../programming-guide/classes-and-structs/constants.md)bölümünde açıklandığı gibi olası sürüm oluşturma sorunları oluşturabilir.
+Just as with any constant, all references to the individual values of an enum are converted to numeric literals at compile time. This can create potential versioning issues as described in [Constants](../../programming-guide/classes-and-structs/constants.md).
 
-Yeni Numaralandırmaların yeni sürümlerine ek değerler atama veya yeni sürümde enum üyelerinin değerlerini değiştirme, bağımlı kaynak kodu sorunlarına neden olabilir. Numaralandırma değerleri genellikle [Switch](switch.md) deyimlerinde kullanılır. `enum` türüne ek öğeler eklendiyse, switch ifadesinin varsayılan bölümü beklenmedik şekilde seçilebilir.
+Assigning additional values to new versions of enums, or changing the values of the enum members in a new version, can cause problems for dependent source code. Enum values often are used in [switch](switch.md) statements. If additional elements have been added to the `enum` type, the default section of the switch statement can be selected unexpectedly.
 
-Diğer geliştiriciler kodunuzu kullanıyorsa, yeni öğeler `enum` türlerine eklenirse kodun nasıl tepki vermesi hakkında yönergeler sağlamalısınız.
+If other developers use your code, you should provide guidelines about how their code should react if new elements are added to any `enum` types.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, `Day`bir sabit listesi bildirilmiştir. İki Numaralandırıcı açıkça tam sayıya dönüştürülür ve tamsayı değişkenlerine atanır.
+In the following example, an enumeration, `Day`, is declared. Two enumerators are explicitly converted to integer and assigned to integer variables.
 
 [!code-csharp[csrefKeywordsTypes#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#10)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, üyeleri `long`türünde olan bir `enum` bildirmek için temel tür seçeneği kullanılır. Sabit listesinin temel alınan türü `long`olsa da, numaralandırma üyelerinin bir cast kullanılarak `long` türüne açıkça dönüştürülmesi gerekir.
+In the following example, the base-type option is used to declare an `enum` whose members are of type `long`. Notice that even though the underlying type of the enumeration is `long`, the enumeration members still must be explicitly converted to type `long` by using a cast.
 
 [!code-csharp[csrefKeywordsTypes#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#11)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği, `enum` bildiriminde <xref:System.FlagsAttribute?displayProperty=nameWithType> özniteliğinin kullanımını ve etkisini gösterir.
+The following code example illustrates the use and effect of the <xref:System.FlagsAttribute?displayProperty=nameWithType> attribute on an `enum` declaration.
 
 [!code-csharp[csrefKeywordsTypes#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#12)]
 
 ## <a name="comments"></a>Açıklamalar
 
-`Flags`kaldırırsanız, örnek aşağıdaki değerleri görüntüler:
+If you remove `Flags`, the example displays the following values:
 
 `5`
 
@@ -96,9 +96,9 @@ Aşağıdaki kod örneği, `enum` bildiriminde <xref:System.FlagsAttribute?displ
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Reference](../index.md)
 - [Sabit Listesi Türleri](../../programming-guide/enumeration-types.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [Integral türleri](../builtin-types/integral-numeric-types.md)
+- [Integral types](../builtin-types/integral-numeric-types.md)
 - [Yerleşik Türler Tablosu](built-in-types-table.md)
-- [Sabit Listesi adlandırma kuralları](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
+- [Enum Naming Conventions](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)

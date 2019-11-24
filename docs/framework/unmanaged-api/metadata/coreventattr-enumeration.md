@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: dc2b3281-3820-487e-930d-350b66dc6417
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7562ec10b6822ae0ec1478cdb077578493ea0b7a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec2972605c40f4ba292f5a5f58d6d3efed53f966
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781874"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443562"
 ---
 # <a name="coreventattr-enumeration"></a>CorEventAttr Numaralandırması
-Bir olay meta verileri tanımlayan değerlerini içerir.  
+Contains values that describe the metadata of an event.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,16 +41,16 @@ typedef enum CorEventAttr {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`evSpecialName`|Olay özeldir ve adını açıklayan belirtir nasıl.|  
-|`evReservedMask`|İç kullanım için ortak dil çalışma zamanı tarafından ayrılmış.|  
-|`evRTSpecialName`|Ortak dil çalışma zamanı olay adı kodlama denetleyeceğini belirtir.|  
+|`evSpecialName`|Specifies that the event is special, and that its name describes how.|  
+|`evReservedMask`|Reserved for internal use by the common language runtime.|  
+|`evRTSpecialName`|Specifies that the common language runtime should check the encoding of the event name.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f8dd1daf3528bbc642033e254a809c18c3662ff1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 82302124828a2dab73b445128d7d847e112edd36
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779191"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448211"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps Metodu
-Belirtilen meta veri imzası ile verilen tür özelliklerini alır.  
+Gets the set of properties of the exported type with the specified metadata signature.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,34 +41,34 @@ HRESULT GetExportedTypeProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mdct`  
- [in] Bir `mdExportedType` dışarı aktarılan tür temsil eden bir meta veri belirteci.  
+ [in] An `mdExportedType` metadata token that represents the exported type.  
   
  `szName`  
- [out] Dışarı aktarılan tür adı.  
+ [out] The name of the exported type.  
   
  `cchName`  
- [in] Geniş karakter cinsinden boyutu, `szName`.  
+ [in] The size, in wide characters, of `szName`.  
   
  `pchName`  
- [out] Gerçekte döndürülen geniş karakter sayısı `szName`  
+ [out] The number of wide characters actually returned in `szName`  
   
  `ptkImplementation`  
- [out] Bir `mdFile`, `mdAssemblyRef`, veya `mdExportedType` içeren veya erişime izin verilen tür özelliklerini meta veri belirteci.  
+ [out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.  
   
  `ptkTypeDef`  
- [out] Bir işaretçi bir `mdTypeDef` dosyasındaki türünü temsil eden belirteç.  
+ [out] A pointer to an `mdTypeDef` token that represents a type in the file.  
   
  `pdwExportedTypeFlags`  
- [out] Dışarı aktarılan türe uygulandı meta verileri açıklayan bayrakları için bir işaretçi. Flags değeri bir veya daha fazla [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) değerleri.  
+ [out] A pointer to the flags that describe the metadata applied to the exported type. The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

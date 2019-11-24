@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e3fbe6c-b82a-4181-ab17-7faa1263f5b3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5db205993bc1a0665dc0003948ce805813251f48
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6a561205602920123176bd421ca2ef1b601166c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787455"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426055"
 ---
 # <a name="getfiledef-method"></a>GetFileDef Yöntemi
-Meta verilerde kullanılan gerçek FileDef belirtecini alır (ALink tarafından atanan belirtecin aksine).  
+Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +36,19 @@ HRESULT GetFileDef(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Derlemenin KIMLIĞI.  
+ ID of the assembly.  
   
  `TargetFile`  
- AddFile yönteminden veya AddImport yönteminden alınan eklenen dosyanın belirteci.  
+ Token of the added file as retrieved from AddFile Method or AddImport Method.  
   
  `pScope`  
- FileDef belirtecini alır.  
+ Receives the FileDef token.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
