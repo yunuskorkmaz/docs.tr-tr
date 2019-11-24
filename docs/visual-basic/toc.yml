@@ -970,15 +970,15 @@
         - name: ActiveX Bileşeni oluşturulamıyor
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: 'Temel sınıfı ''System.MarshalByRefObject'' olan ''<name>'' sınıfında bulunan değer türündeki ''<name>'' alanının bir üyesi olduğundan, ''<classname>'' öğesine başvurulamaz'
-          href: language-reference/error-messages/cannot-refer-to-name-because-it-is-member-of-value-typed-field-name-of-class.md
+          href: language-reference/error-messages/bc30310.md
         - name: 'Bir sınıfın örnek üyesine paylaştırılmış yöntem veya paylaştırılmış üye başlatıcıdan, sınıfın açık bir örneği olmadan başvurulamaz'
-          href: language-reference/error-messages/cannot-refer-to-an-instance-member-of-a-class.md
+          href: language-reference/error-messages/bc30369.md
         - name: Gereken geçici dosya oluşturulamıyor
           href: language-reference/error-messages/can-t-create-necessary-temporary-file.md
         - name: Yazmak için '<filename>' açılamıyor
-          href: language-reference/error-messages/can-t-open-filename-for-writing.md
+          href: language-reference/error-messages/bc2012.md
         - name: '''<classname>'' sınıfı bulunamıyor'
-          href: language-reference/error-messages/class-classname-cannot-be-found.md
+          href: language-reference/error-messages/bc31098.md
         - name: Sınıf Otomasyonu veya beklenen arabirimi desteklemiyor
           href: language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md
         - name: '''Class'' deyimi eşleşen bir ''End Class'' ile bitmelidir'
