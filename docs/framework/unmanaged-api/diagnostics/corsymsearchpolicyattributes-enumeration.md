@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7188c516d3d0a5192251697ec743e9d41f8d9072
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4fd31e6b752e13a5c43198760e9a4d62a8f77d10
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913737"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448570"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes Numaralandırması
-Sembol okuyucu ararken kullanılacak ilkeyi belirtir. Bu sabitler, [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) ve [ISymUnmanagedBinder3:: GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) yöntemleri tarafından kullanılır.  
+Specifies the policy to be used when doing a search for a symbol reader. These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.  
   
 > [!IMPORTANT]
-> Güvenilmeyen bir kaynaktan program veritabanı (PDB) dosyasını açmak için bir güvenlik riskidir.  
+> It is a security risk to open a program database (PDB) file from an untrusted source.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,13 +43,13 @@ typedef enum CorSymSearchPolicyAttributes
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|Sembol arama yolları için kayıt defterini sorgular.|  
-|`AllowSymbolServerAccess`|Bir sembol sunucusuna erişir.|  
-|`AllowOriginalPathAccess`|Hata ayıklama dizininde belirtilen yolu arar.|  
-|`AllowReferencePathAccess`|PDB 'yi. exe dosyasının olduğu yerde arar.|  
+|`AllowRegistryAccess`|Queries the registry for symbol search paths.|  
+|`AllowSymbolServerAccess`|Accesses a symbol server.|  
+|`AllowOriginalPathAccess`|Searches the path specified in the Debug directory.|  
+|`AllowReferencePathAccess`|Searches for the PDB in the place where the .exe file is.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi** CorSym. IDL, CorSym. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

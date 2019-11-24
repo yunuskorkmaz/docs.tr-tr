@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8d3080ee-39fe-4c57-8950-51323632d045
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf2a1bca6115902d96f72c19dc469d0a1c8588cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 79a9e4513a98a29edc11cc76c599f03c9c3a72b4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756222"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450118"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags Numaralandırması
-Bir modül veya bileşik görüntüsü yüklerken kayıt için kullanılan bayrak değerleri sağlar.  
+Provides flag values used for registration when installing a module or composite image.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,18 +39,18 @@ typedef enum
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`regNoCopy`|Dosyaları hedefe kopyalanmaması gereken olduğunu belirtir.|  
-|`regConfig`|Modülün veya bileşik bir yapılandırma olduğunu belirtir.|  
-|`regHasRefs`|Modülün veya bileşik sınıf başvuruları sahip olduğunu belirtir.|  
+|`regNoCopy`|Specifies that files should not be copied into the destination.|  
+|`regConfig`|Specifies that the module or composite is a configuration.|  
+|`regHasRefs`|Specifies that the module or composite has class references.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

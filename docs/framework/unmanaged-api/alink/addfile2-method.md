@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03bc49bf-a89b-4fb6-a88d-97482e061195
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c3a6892dbed172c0be3b036014d393657dbc8593
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8dadf9ec8f896b03e4918b21f5153c1b747010fd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777526"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446671"
 ---
 # <a name="addfile2-method"></a>AddFile2 Yöntemi
-Derlemeye dosya ekler. , İlişkisiz modüller oluşturmak için de kullanılabilir.  
+Adds files to the assembly. Can also be used to create unbound modules.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,25 +39,25 @@ HRESULT AddFile2(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Dosyanın eklendiği derlemenin KIMLIĞI.  
+ ID for the assembly to which the file is added.  
   
  `pszFilename`  
- Eklenecek dosyanın adı.  
+ Name of the file to be added.  
   
  `dwFlags`  
- `ffContainsNoMetaData` `FileDef` Ve`ffWriteable`gibi com+ bayrakları. `dwFlags`[DefineFile yöntemine](../metadata/imetadataassemblyemit-definefile-method.md)geçirilir.  
+ COM+ `FileDef` flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- Arabirim arabirimine [IMetaDataEmit2](../metadata/imetadataemit2-interface.md) arabirimi.  
+ Interface to [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface.  
   
  `pFileToken`  
- Eklenmekte olan dosyanın KIMLIĞINI alır.  
+ Receives ID for the file being added.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,62 +1,62 @@
 ---
 title: Framework Kitaplıkları
-description: Kitaplıkların birçok genel ve uygulamaya özel türler, algoritmalar ve yardımcı program işlevselliğine yönelik uygulamalar sağladığını öğrenin.
+description: Learn how libraries provide implementations for many general and app-specific types, algorithms, and utility functionality.
 author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 9c0b5a07277de6e87e2692ebb7c4f73c03702801
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ba3d5209571019f8ac38702939332fd953307202
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424965"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447988"
 ---
 # <a name="framework-libraries"></a>Framework Kitaplıkları
 
-.NET, temel sınıf kitaplıkları (çekirdek kümesi) veya çerçeve sınıfı kitaplıkları (tüm küme) olarak adlandırılan, expantik standart sınıf kitaplıkları kümesine sahiptir. Bu kitaplıklar birçok genel ve uygulamaya özel türler, algoritmalar ve yardımcı program işlevselliğine yönelik uygulamalar sağlar. Hem ticari hem de topluluk kitaplıkları, geniş bir bilgi işlem görevleri için raf dışı kitaplıkların kolayca kullanılmasını sağlayan Framework sınıf kitaplıklarının üzerine inşa.
+.NET has an expansive standard set of class libraries, referred to as either the base class libraries (core set) or framework class libraries (complete set). These libraries provide implementations for many general and app-specific types, algorithms and utility functionality. Both commercial and community libraries build on top of the framework class libraries, providing easy to use off-the-shelf libraries for a wide set of computing tasks.
 
-Bu kitaplıkların bir alt kümesi, her .NET uygulamasıyla birlikte sağlanır. Temel sınıf kitaplığı (BCL) API 'Lerinde her ikisi de her türlü .NET uygulamasıyla beklenmektedir, çünkü geliştiriciler istedikleri gibi popüler kitaplıkların çalışmasına gerek duyar. ASP.NET gibi BCL üzerindeki uygulamaya özgü kitaplıklar, tüm .NET uygulamalarında kullanılamaz.
+A subset of these libraries are provided with each .NET implementation. Base Class Library (BCL) APIs are expected with any .NET implementation, both because developers will want them and because popular libraries will need them to run. App-specific libraries above the BCL, such as ASP.NET, will not be available on all .NET implementations.
 
-## <a name="base-class-libraries"></a>Temel sınıf kitaplıkları
+## <a name="base-class-libraries"></a>Base Class Libraries
 
-BCL en temel tür ve yardımcı program işlevlerini sağlar ve diğer tüm .NET sınıf kitaplıklarının temelini içerir. Tüm iş yükleri için herhangi bir sapma olmadan çok genel uygulamalar sağlamayı hedefler. Uygulamalar belirli bir ilkeyi tercih edebileceğinizden, yüksek aktarım hızı veya düşük bellekli düşük CPU kullanımı için düşük gecikme süresine sahip olduğundan performans her zaman önemli bir noktadır. Bu kitaplıkların genellikle yüksek performanslı olması amaçlanmıştır ve bu çeşitli performans sorunlarına göre orta bir yaklaşım ele alınır. Çoğu uygulama için bu yaklaşım oldukça başarılı olmuştur.
+The BCL provides the most foundational types and utility functionality and are the base of all other .NET class libraries. They aim to provide very general implementations without any bias to any workload. Performance is always an important consideration, since apps might prefer a particular policy, such as low-latency to high-throughput or low-memory to low-CPU usage. These libraries are intended to be high-performance generally, and take a middle-ground approach according to these various performance concerns. For most apps, this approach has been quite successful.
 
 ## <a name="primitive-types"></a>İlkel Türler
 
-.NET, tüm programlarda kullanılan (farklı derecelerde) bir temel türler kümesi içerir. Bu türler sayılar, dizeler, baytlar ve rastgele nesneler gibi verileri içerir. Dil C# , bu türlerin anahtar sözcüklerini içerir. Bu türlerin örnek bir kümesi, eşleşen C# anahtar sözcüklerle aşağıda listelenmiştir.
+.NET includes a set of primitive types, which are used (to varying degrees) in all programs. These types contain data, such as numbers, strings, bytes and arbitrary objects. The C# language includes keywords for these types. A sample set of these types is listed below, with the matching C# keywords.
 
-* <xref:System.Object?displayProperty=nameWithType> ([nesne](../csharp/language-reference/builtin-types/reference-types.md#the-object-type))-clr türü sistemindeki en son temel sınıf. Bu, tür hiyerarşisinin köküdür.
-* <xref:System.Int16?displayProperty=nameWithType> ([kısa](../csharp/language-reference/builtin-types/integral-numeric-types.md))-16 bit işaretli bir tamsayı türü. İmzasız <xref:System.UInt16> de mevcuttur.
-* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md))-32 bitlik işaretli bir tamsayı türü. İmzasız [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) de mevcuttur.
-* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md))-bir 32 bit kayan nokta türü.
-* <xref:System.Decimal?displayProperty=nameWithType> ([Decimal](../csharp/language-reference/builtin-types/floating-point-numeric-types.md))-128 bit ondalık türü.
-* <xref:System.Byte?displayProperty=nameWithType> ([bayt](../csharp/language-reference/builtin-types/integral-numeric-types.md))-belleğin bir baytını temsil eden işaretsiz 8 bitlik bir tamsayı.
-* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md))-`true` veya `false`temsil eden bir Boole türü.
-* <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md))-Unicode karakteri temsil eden 16 bit sayısal bir tür.
-* <xref:System.String?displayProperty=nameWithType> ([dize](../csharp/language-reference/builtin-types/reference-types.md#the-string-type))-bir karakter dizisini temsil eder. `char[]`farklıdır, ancak `string`her tekil `char` Dizin oluşturmayı mümkün hale getirmenizi.
+* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/builtin-types/reference-types.md#the-object-type)) - The ultimate base class in the CLR type system. It is the root of the type hierarchy.
+* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - A 16-bit signed integer type. The unsigned <xref:System.UInt16> also exists.
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - A 32-bit signed integer type. The unsigned [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) also exists.
+* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) - A 32-bit floating-point type.
+* <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) - A 128-bit decimal type.
+* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - An unsigned 8-bit integer that represents a byte of memory.
+* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)) - A boolean type that represents `true` or `false`.
+* <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/builtin-types/char.md)) - A 16-bit numeric type that represents a Unicode character.
+* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) - Represents a series of characters. Different than a `char[]`, but enables indexing into each individual `char` in the `string`.
 
-## <a name="data-structures"></a>Veri yapıları
+## <a name="data-structures"></a>Data Structures
 
-.NET, neredeyse tüm .NET uygulamalarının iş atları olan bir veri yapıları kümesi içerir. Bunlar genellikle koleksiyonlardır, ancak diğer türleri de içerir.
+.NET includes a set of data structures that are the workhorses of almost any .NET apps. These are mostly collections, but also include other types.
 
-* <xref:System.Array>-dizin tarafından erişilebilen kesin türler nesnelerinin dizisini temsil eder. , Oluşturma başına sabit bir boyuta sahiptir.
-* <xref:System.Collections.Generic.List%601>-dizin tarafından erişilebilen nesnenin türü kesin belirlenmiş bir listesini temsil eder. Gerektiğinde otomatik olarak yeniden boyutlandırılır.
-* <xref:System.Collections.Generic.Dictionary%602>-bir anahtar tarafından dizine eklenen değerlerin koleksiyonunu temsil eder. Değerlere anahtar aracılığıyla erişilebilir. Gerektiğinde otomatik olarak yeniden boyutlandırılır.
-* <xref:System.Uri>-Tekdüzen Kaynak tanımlayıcısı 'nın (URI) nesne gösterimini ve URI 'nin bölümlerine kolay erişim sağlar.
-* <xref:System.DateTime>-genellikle günün tarih ve saati olarak ifade edilen bir anlık zaman temsil eder.
+* <xref:System.Array> - Represents an array of strongly types objects that can be accessed by index. Has a fixed size, per its construction.
+* <xref:System.Collections.Generic.List%601> - Represents a strongly typed list of objects that can be accessed by index. Is automatically resized as needed.
+* <xref:System.Collections.Generic.Dictionary%602> - Represents a collection of values that are indexed by a key. Values can be accessed via key. Is automatically resized as needed.
+* <xref:System.Uri> - Provides an object representation of a uniform resource identifier (URI) and easy access to the parts of the URI.
+* <xref:System.DateTime> - Represents an instant in time, typically expressed as a date and time of day.
 
-## <a name="utility-apis"></a>Yardımcı program API 'Leri
+## <a name="utility-apis"></a>Utility APIs
 
-.NET birçok önemli görev için işlevsellik sağlayan bir yardımcı program API 'Leri içerir.
+.NET includes a set of utility APIs that provide functionality for many important tasks.
 
-* <xref:System.Net.Http.HttpClient>-HTTP istekleri göndermeye ve URI tarafından tanımlanan bir kaynaktan HTTP yanıtlarını almaya yönelik bir API.
-* <xref:System.Xml.Linq.XDocument>-LINQ ile XML belgelerini yüklemek ve sorgulamak için bir API.
-* <xref:System.IO.StreamReader>-dosyaları okumak için bir API. 
-* <xref:System.IO.StreamWriter>-dosya yazmak için bir API.
+* <xref:System.Net.Http.HttpClient> - An API for sending HTTP requests and receiving HTTP responses from a resource identified by a URI.
+* <xref:System.Xml.Linq.XDocument> - An API for loading, and querying XML documents with LINQ.
+* <xref:System.IO.StreamReader> - An API for reading files. 
+* <xref:System.IO.StreamWriter> - An API for writing files.
 
-## <a name="app-model-apis"></a>Uygulama modeli API 'Leri
+## <a name="app-model-apis"></a>App-Model APIs
 
-Çeşitli şirketler tarafından sunulan .NET ile kullanılabilen birçok uygulama modeli vardır.
+There are many app-models that can be used with .NET, provided by several companies.
 
-* [ASP.net](https://www.asp.net) -Web siteleri ve hizmetleri oluşturmak için bir Web çerçevesi sağlar. Windows, Linux ve macOS 'ta desteklenir (ASP.NET sürümüne bağlıdır).
+* [ASP.NET](https://www.asp.net) - Provides a web framework for building Web sites and services. Supported on Windows, Linux and macOS (depends on ASP.NET version).

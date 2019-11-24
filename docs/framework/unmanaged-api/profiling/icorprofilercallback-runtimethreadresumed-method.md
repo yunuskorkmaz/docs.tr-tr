@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: da984f89-4f53-4ab0-ae6f-3e2ee6085994
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5b4464c72e8d189cea4831cb641b9ff05063ce25
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57ad0bd3ed76376421d22a84c0863d36ec2707c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747223"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430274"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>ICorProfilerCallback::RuntimeThreadResumed Yöntemi
-Profil Oluşturucu, belirtilen iş parçacığını askıya sonra ettirdi bildirir.  
+Notifies the profiler that the specified thread has resumed after being suspended.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,16 +34,16 @@ HRESULT RuntimeThreadResumed(
   
 ## <a name="parameters"></a>Parametreler  
  `threadId`  
- [in] Sürdürüldü iş parçacığı kimliği.  
+ [in] The ID of the thread that has been resumed.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

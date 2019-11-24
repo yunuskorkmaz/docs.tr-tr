@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb203853-6a6d-4027-b9e9-603a7f28b9d3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 32b7505a9e512f3c3e3e7a9fcbff40276e98ecf4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1fcb885b6e19457065c2ca9971f068b42f97147d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759354"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448350"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument Metodu
-Bir belgeyi bulur. Belge dili, satıcı ve tür isteğe bağlıdır.  
+Finds a document. The document language, vendor, and type are optional.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,25 +38,25 @@ HRESULT GetDocument (
   
 ## <a name="parameters"></a>Parametreler  
  `url`  
- [in] Belge tanımlayan URL.  
+ [in] The URL that identifies the document.  
   
  `language`  
- [in] Belge dili. Bu parametre isteğe bağlıdır.  
+ [in] The document language. This parameter is optional.  
   
  `languageVendor`  
- [in] Belge dili için satıcı kimliği. Bu parametre isteğe bağlıdır.  
+ [in] The identity of the vendor for the document language. This parameter is optional.  
   
  `documentType`  
- [in] Belge türü. Bu parametre isteğe bağlıdır.  
+ [in] The type of the document. This parameter is optional.  
   
  `pRetVal`  
- [out] Döndürülen arabirim işaretçisi.  
+ [out] A pointer to the returned interface.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

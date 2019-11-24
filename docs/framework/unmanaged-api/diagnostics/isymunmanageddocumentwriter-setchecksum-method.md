@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7e99879-421f-43ce-b193-34733cf30085
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3343710fbe4f1aba8c38e46a0a720f78944a1c10
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dbf876a514ce106c566a168f688eb3a22d3a1ea2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776928"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449050"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>ISymUnmanagedDocumentWriter::SetCheckSum Yöntemi
-Sağlama bilgilerini ayarlar.  
+Sets checksum information.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +36,19 @@ HRESULT SetCheckSum(
   
 ## <a name="parameters"></a>Parametreler  
  `algorithmId`  
- [in] Algoritma tanımlayıcısını temsil eden GUID.  
+ [in] The GUID that represents the algorithm identifier.  
   
  `checkSumSize`  
- [in] A `ULONG32` bayt cinsinden boyutunu belirten `checkSum` arabellek.  
+ [in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.  
   
  `checkSum`  
- [in] Sağlama toplamı bilgileri depolayan arabellek.  
+ [in] The buffer that stores the checksum information.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

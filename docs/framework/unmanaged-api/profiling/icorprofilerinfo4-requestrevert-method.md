@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70261da5-5933-4e25-9de0-ddf51cba56cc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5e74cb663f968cc9b1b04a912307e3b4a12e86d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7ced05692e3030bace10dab9a6793a29fac6c26
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748666"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444831"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert Yöntemi
-Tüm örneklerinin özgünlüğünü belirtilen işleve döner.  
+Reverts all instances of the specified functions to their original versions.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,50 +37,50 @@ HRESULT RequestRevert (
   
 ## <a name="parameters"></a>Parametreler  
  `cFunctions`  
- [in] Geri almak için işlev sayısı.  
+ [in] The number of functions to revert.  
   
  `moduleIds`  
- [in] Belirtir `moduleId` kısmı (`module`, `methodDef`) geri döndürülmesi işlevleri tanımlamak çiftleri.  
+ [in] Specifies the `moduleId` portion of the (`module`, `methodDef`) pairs that identify the functions to be reverted.  
   
  `methodIds`  
- [in] Belirtir `methodId` kısmı (`module`, `methodDef`) geri döndürülmesi işlevleri tanımlamak çiftleri.  
+ [in] Specifies the `methodId` portion of the (`module`, `methodDef`) pairs that identify the functions to be reverted.  
   
  `status`  
- [out] Bu konunun ilerleyen bölümlerindeki "Durumu HRESULTs" bölümünde listelenen HRESULTs dizisi. Başarı veya başarısızlık paralel dizilerde belirtilen her bir işlevin geri çalışılırken, her HRESULT gösterir `moduleIds` ve `methodIds`.  
+ [out] An array of HRESULTs listed in the "Status HRESULTs" section later in this topic. Each HRESULT indicates the success or failure of trying to revert each function specified in the parallel arrays `moduleIds` and `methodIds`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
+ This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|Tüm istekleri dönmek için girişimde bulunuldu; Ancak, hangi işlevlerin başarıyla geri alındığını belirlemek için döndürülen durum dizisi denetlenmesi gerekir.|  
-|CORPROF_E_CALLBACK4_REQUIRED|Profil Oluşturucu uygulamalıdır [Icorprofilercallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) desteklenmesi, bu çağrı için arabirim.|  
-|CORPROF_E_REJIT_NOT_ENABLED|JIT yeniden derlemesi etkin değil. Başlatma sırasında JIT yeniden derlemesi kullanarak etkinleştirmelisiniz [Icorprofilerınfo::seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) ayarlanacak yöntemi `COR_PRF_ENABLE_REJIT` bayrağı.|  
-|E_INVALIDARG|`cFunctions` 0 ' dır veya `moduleIds` veya `methodIds` olduğu `NULL`.|  
-|E_OUTOFMEMORY|CLR, belleği tükendiğinden, isteği tamamlayamadı.|  
+|S_OK|An attempt was made to revert all requests; however, the returned status array must be checked to determine which functions were successfully reverted.|  
+|CORPROF_E_CALLBACK4_REQUIRED|The profiler must implement the [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface for this call to be supported.|  
+|CORPROF_E_REJIT_NOT_ENABLED|JIT recompilation has not been enabled. You must enable JIT recompilation during initialization by using the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the `COR_PRF_ENABLE_REJIT` flag.|  
+|E_INVALIDARG|`cFunctions` is 0, or `moduleIds` or `methodIds` is `NULL`.|  
+|E_OUTOFMEMORY|The CLR was unable to complete the request because it ran out of memory.|  
   
-## <a name="status-hresults"></a>Durum HRESULTS  
+## <a name="status-hresults"></a>Status HRESULTS  
   
-|Durum dizi HRESULT|Açıklama|  
+|Status array HRESULT|Açıklama|  
 |--------------------------|-----------------|  
-|S_OK|İlgili işlevi başarıyla geri döndürüldü.|  
-|E_INVALIDARG|`moduleID` Veya `methodDef` parametresi `NULL`.|  
-|CORPROF_E_DATAINCOMPLETE|Modül henüz tam yüklü değil veya yüklenmemiş sürecinde olduğundan.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|Belirtilen modül dinamik olarak oluşturulan (örneğin `Reflection.Emit`). Bu nedenle, bu yöntem tarafından desteklenmiyor.|  
-|CORPROF_E_ACTIVE_REJIT_REQUEST_NOT_FOUND|CLR, karşılık gelen bir etkin yeniden derleme isteği bulunamadığından belirtilen işlevi döndürülemedi. Yeniden derleme hiçbir zaman istenen ya da işlev zaten döndürüldü.|  
-|Diğer|İşletim sistemi CLR denetimin dışında kalan bir hata döndürdü. Örneğin, belleğin bir sayfası erişim korumasını değiştirmek için bir sistem çağrısı başarısız olursa, işletim sistemi hata görüntülenir.|  
+|S_OK|The corresponding function was successfully reverted.|  
+|E_INVALIDARG|The `moduleID` or `methodDef` parameter is `NULL`.|  
+|CORPROF_E_DATAINCOMPLETE|The module is not fully loaded yet, or it is in the process of being unloaded.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example by `Reflection.Emit`). Therefore, it is not supported by this method.|  
+|CORPROF_E_ACTIVE_REJIT_REQUEST_NOT_FOUND|The CLR could not revert the specified function, because a corresponding active recompilation request was not found. Either the recompilation was never requested or the function was already reverted.|  
+|Diğer|The operating system returned a failure outside the control of the CLR. For example, if a system call to change the access protection of a page of memory fails, the operating system error will be displayed.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Herhangi bir revereted işlevi örnekleri olarak adlandırılır, sonraki açışınızda işlevlerin özgün sürümleri çalıştırılır. Bir işlev zaten çalışıyorsa, çalışmakta olan sürümü yürütme işlemi tamamlanır.  
+ The next time any of the revereted function instances are called, the original versions of the functions will be run. If a function is already running, it will finish executing the version that is running.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

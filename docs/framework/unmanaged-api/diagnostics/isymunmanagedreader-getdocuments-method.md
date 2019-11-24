@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3b73a3f-d089-4101-a9a9-5e0765d05b61
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7fad7fae41fed70d996fcaaa7a7cdf69403b6094
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c26c0a5f8c597613266e2e6d1998edfca8f17b82
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763357"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448334"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments Yöntemi
-Sembol deposu içerisinde tanımlanan tüm belgelerin dizisini döndürür.  
+Returns an array of all the documents defined in the symbol store.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,19 +37,19 @@ HRESULT GetDocuments (
   
 ## <a name="parameters"></a>Parametreler  
  `cDocs`  
- [in] Boyutu `pDocs` dizisi.  
+ [in] The size of the `pDocs` array.  
   
  `pcDocs`  
- [out] Dizi uzunluğu alır bir değişken için bir işaretçi.  
+ [out] A pointer to a variable that receives the array length.  
   
  `pDocs`  
- [out] Belge dizi alan bir değişken için bir işaretçi.  
+ [out] A pointer to a variable that receives the document array.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

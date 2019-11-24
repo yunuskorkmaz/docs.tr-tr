@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 667bd954-6dc6-4020-a3cb-0e8224179993
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5f6140e5f85a7ee21773c96a5abdccadaddab92e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 24279870e7406de649df56e8aad31252513e95c7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777451"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446543"
 ---
 # <a name="embedresource-method"></a>EmbedResource Yöntemi
-Gömülü bir kaynak bildirir. Bu yöntem, kaynağı aslında eklemez.  
+Declares an embedded resource. This method does not actually embed the resource.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,25 +39,25 @@ HRESULT EmbedResource(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Derlemenin KIMLIĞI.  
+ ID of the assembly.  
   
  `FileToken`  
- Kaynağı içeren dosyanın belirteç veya derleme KIMLIĞI.  
+ File token or assembly ID of file that contains the resource.  
   
  `pszResourceName`  
- Kaynağın adı.  
+ Name of the resource.  
   
  `dwOffset`  
- Kaynak RVA 'dan konum.  
+ Offset of resource from RVA.  
   
  `dwFlags`  
- `mrPublic` Ve`mrPrivate`gibi erişilebilirlik bayrakları. Bu bayraklar [DefineExportedType yöntemine](../metadata/imetadataassemblyemit-defineexportedtype-method.md)geçirilebilir.  
+ Accessibility flags such as `mrPublic` and `mrPrivate`. These flags may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

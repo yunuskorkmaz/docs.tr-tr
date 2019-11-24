@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: onaltılık dizeler ve sayısal türler arasında dönüştürme- C# Programlama Kılavuzu'
+title: 'How to: Convert Between Hexadecimal Strings and Numeric Types - C# Programming Guide'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,48 +8,48 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: e5013891db827e27b3cda55135fff4ee287cfcb4
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8b72734f9b617fed2ff65977c9a0e60f46424ae8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423145"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429446"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Nasıl yapılır: Onaltılık Dizeler ve Sayısal Türler Arasında Dönüştürme (C# Programlama Kılavuzu)
-Bu örneklerde aşağıdaki görevlerin nasıl gerçekleştirileceği gösterilmektedir:  
+These examples show you how to perform the following tasks:  
   
-- [Dizedeki](../../language-reference/builtin-types/reference-types.md)her karakterin onaltılık değerini elde edin.  
+- Obtain the hexadecimal value of each character in a [string](../../language-reference/builtin-types/reference-types.md).  
   
-- Onaltılık dizedeki her değere karşılık gelen [char](../../language-reference/keywords/char.md) 'ı alın.  
+- Obtain the [char](../../language-reference/builtin-types/char.md) that corresponds to each value in a hexadecimal string.  
   
-- Bir onaltılı `string` bir [int](../../language-reference/builtin-types/integral-numeric-types.md)'e dönüştürün.  
+- Convert a hexadecimal `string` to an [int](../../language-reference/builtin-types/integral-numeric-types.md).  
   
-- Onaltılı `string` bir [float](../../language-reference/builtin-types/floating-point-numeric-types.md)öğesine dönüştürün.  
+- Convert a hexadecimal `string` to a [float](../../language-reference/builtin-types/floating-point-numeric-types.md).  
   
-- Bir [bayt](../../language-reference/builtin-types/integral-numeric-types.md) dizisini onaltılık `string`dönüştürür.  
+- Convert a [byte](../../language-reference/builtin-types/integral-numeric-types.md) array to a hexadecimal `string`.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `string`her karakterin onaltılık değerini verir. İlk olarak `string` bir karakter dizisine ayrıştırır. Sonra sayısal değerini elde etmek için her bir karakter <xref:System.Convert.ToInt32%28System.Char%29> çağırır. Son olarak, sayıyı `string`onaltılık temsili olarak biçimlendirir.  
+ This example outputs the hexadecimal value of each character in a `string`. First it parses the `string` to an array of characters. Then it calls <xref:System.Convert.ToInt32%28System.Char%29> on each character to obtain its numeric value. Finally, it formats the number as its hexadecimal representation in a `string`.  
   
  [!code-csharp[csProgGuideTypes#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#30)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, onaltılı değerlerin bir `string` ayrıştırır ve her bir onaltılık değere karşılık gelen karakteri verir. İlk olarak, her onaltılı değeri bir dizide tek bir `string` olarak almak için [Split (Char\[\])](xref:System.String.Split(System.Char[])) yöntemini çağırır. Sonra onaltılık değeri [tamsayı](../../language-reference/builtin-types/integral-numeric-types.md)olarak temsil edilen bir ondalık değere dönüştürmek için <xref:System.Convert.ToInt32%28System.String%2CSystem.Int32%29> çağırır. Bu karakter koduna karşılık gelen karakteri almanın iki farklı yolunu gösterir. İlk teknik, bir `string`olarak tamsayı bağımsız değişkenine karşılık gelen karakteri döndüren <xref:System.Char.ConvertFromUtf32%28System.Int32%29>kullanır. İkinci teknik, `int` açıkça bir [char](../../language-reference/keywords/char.md)'a yayınlar.  
+ This example parses a `string` of hexadecimal values and outputs the character corresponding to each hexadecimal value. First it calls the [Split(Char\[\])](xref:System.String.Split(System.Char[])) method to obtain each hexadecimal value as an individual `string` in an array. Then it calls <xref:System.Convert.ToInt32%28System.String%2CSystem.Int32%29> to convert the hexadecimal value to a decimal value represented as an [int](../../language-reference/builtin-types/integral-numeric-types.md). It shows two different ways to obtain the character corresponding to that character code. The first technique uses <xref:System.Char.ConvertFromUtf32%28System.Int32%29>, which returns the character corresponding to the integer argument as a `string`. The second technique explicitly casts the `int` to a [char](../../language-reference/builtin-types/char.md).  
   
  [!code-csharp[csProgGuideTypes#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#31)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, <xref:System.Int32.Parse%28System.String%2CSystem.Globalization.NumberStyles%29> yöntemini çağırarak bir onaltılı `string` tamsayıya dönüştürmenin başka bir yolunu gösterir.  
+ This example shows another way to convert a hexadecimal `string` to an integer, by calling the <xref:System.Int32.Parse%28System.String%2CSystem.Globalization.NumberStyles%29> method.  
   
  [!code-csharp[csProgGuideTypes#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#32)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, <xref:System.BitConverter?displayProperty=nameWithType> sınıfı ve <xref:System.UInt32.Parse%2A?displayProperty=nameWithType> yöntemi kullanılarak bir onaltılı `string` bir [float](../../language-reference/builtin-types/floating-point-numeric-types.md) öğesine nasıl dönüştürüleceğini gösterir.  
+ The following example shows how to convert a hexadecimal `string` to a [float](../../language-reference/builtin-types/floating-point-numeric-types.md) by using the <xref:System.BitConverter?displayProperty=nameWithType> class and the <xref:System.UInt32.Parse%2A?displayProperty=nameWithType> method.  
   
  [!code-csharp[csProgGuideTypes#39](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#39)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, <xref:System.BitConverter?displayProperty=nameWithType> sınıfını kullanarak bir [bayt](../../language-reference/builtin-types/integral-numeric-types.md) dizisinin onaltılık dizeye nasıl dönüştürüleceğini gösterir.  
+ The following example shows how to convert a [byte](../../language-reference/builtin-types/integral-numeric-types.md) array to a hexadecimal string by using the <xref:System.BitConverter?displayProperty=nameWithType> class.  
   
  [!code-csharp[csProgGuideTypes#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#38)]  
   

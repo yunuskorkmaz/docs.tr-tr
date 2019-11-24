@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc09bad2-fb34-4d13-a521-6ec7b1a1d915
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b669921bf8d27283ba99f4ca1d97b6abc00e15db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94a571a4bc01b805387aebe5a6e23bad0b735313
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776890"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448644"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset Yöntemi
-Bir uzaklık ile ilişkili satır bilgilerini alır. Varsa uzaklık parametresi (`dwOffset`) bir dizi noktası değil. Bu yöntem, önceki uzaklığı ile ilişkili satır bilgileri alır.  
+Gets the line information associated with an offset. If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,28 +39,28 @@ HRESULT GetLineFromOffset(
   
 ## <a name="parameters"></a>Parametreler  
  `dwOffset`  
- [in] A `ULONG32` içeren uzaklığı.  
+ [in] A `ULONG32` that contains the offset.  
   
  `pline`  
- [out] Bir işaretçi bir `ULONG32` , satır alır.  
+ [out] A pointer to a `ULONG32` that receives the line.  
   
  `pcolumn`  
- [out] Bir işaretçi bir `ULONG32` , sütunu alır.  
+ [out] A pointer to a `ULONG32` that receives the column.  
   
  `pendLine`  
- [out] Bir işaretçi bir `ULONG32` , satır sonunu alır.  
+ [out] A pointer to a `ULONG32` that receives the end line.  
   
  `pendColumn`  
- [out] Bir işaretçi bir `ULONG32` , end sütunu alır.  
+ [out] A pointer to a `ULONG32` that receives the end column.  
   
  `pdwStartOffset`  
- [out] Bir işaretçi bir `ULONG32` , ilişkili dizi noktası alır.  
+ [out] A pointer to a `ULONG32` that receives the associated sequence point.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

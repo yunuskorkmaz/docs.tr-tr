@@ -1,5 +1,5 @@
 ---
-title: 'ICorProfilerInfo10:: ResumeRuntime'
+title: ICorProfilerInfo10::ResumeRuntime
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: cf599e5ded73b09d54c98dcd99f51b30c6a4ba82
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 515b42d649f68345f9924f57a91d146556480e0a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69661203"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449805"
 ---
-# <a name="icorprofilerinfo10resumeruntime-method"></a>ICorProfilerInfo10:: ResumeRuntime yöntemi
+# <a name="icorprofilerinfo10resumeruntime-method"></a>ICorProfilerInfo10::ResumeRuntime Method
 
-GC yapmadan çalışma zamanını sürdürür.
+Resumes the runtime without performing a GC.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,14 +30,14 @@ HRESULT ResumeRuntime();
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Üst bilgi** CorProf. IDL, CorProf. h
+**Header:** CorProf.idl, CorProf.h
 
-**Kitaplığı** Corguid. lib
+**Library:** CorGuids.lib
 
-**.NET sürümleri:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo10 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

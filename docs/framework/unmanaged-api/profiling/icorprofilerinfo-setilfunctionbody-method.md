@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b159c712-00f4-4fc7-a990-40bf9f642e8f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: abe0a0fc177c9ec89f4621e7defb5330c911034b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da81bd3e255898543c94d4ac64c6afbf39b6bdba
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778611"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449875"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody Yöntemi
-Belirtilen modüldeki belirtilen işlev gövdesinin yerini alır.  
+Replaces the body of the specified function in the specified module.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,29 +36,29 @@ HRESULT SetILFunctionBody(
   
 ## <a name="parameters"></a>Parametreler  
  `moduleId`  
- [in] İşlev bulunduğu modül kimliği.  
+ [in] The ID of the module in which the function resides.  
   
  `methodid`  
- [in] İşlev gövdesi değiştirmek istediğiniz belirteç.  
+ [in] The token of the function for which to replace the body.  
   
  `pbNewILMethodHeader`  
- [in] İşlev için yeni üstbilgi.  
+ [in] The new header for the function.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SetILFunctionBody` Yöntemi noktaları için yeni işlev gövdesi ve gerektiği gibi iç veri yapılarını ayarlar böylece göreli sanal adres meta verileri işlevin yerini alır.  
+ The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.  
   
- `SetILFunctionBody` Yöntemi, üzerinde hiçbir zaman just-in-time (JIT) derleyicisi tarafından derlenen işlevler çağrılabilir.  
+ The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.  
   
- Kullanım [Icorprofilerınfo::getılfunctionbodyallocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) arabellek uyumlu olmasını sağlamak yeni yöntem için alan ayırmak için yöntemi.  
+ Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

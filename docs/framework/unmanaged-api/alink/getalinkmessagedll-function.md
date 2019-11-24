@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 67985a22-88a2-4c54-8d99-4bcde9d6213e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 323e53c45a26d5703548ebe9863978f6d3929f0b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 63719d0c6e13768e9dc7ed80e52e2a293e32a8a1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787467"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449349"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll İşlevi
-İleti DLL 'sini bulur ve yükler. İleti DLL dosyası bulunamıyorsa veya yüklenemezse 0 döndürür. İleti DLL 'SI, adı bir dil KIMLIĞI, ya da geçerli dizinde olan bir alt dizinde olmalıdır.  
+Finds and loads the message DLL. Returns 0 if the message DLL could not be located or loaded. The message DLL should be either in a subdirectory whose name is a language ID, or in the current directory.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,9 +32,9 @@ HINSTANCE WINAPI GetALinkMessageDll();
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üstbilgi:** ALink. h  
+ **Header:** alink.h  
   
- **Kitaplık**: ALink. dll  
+ **Library**: alink.dll  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

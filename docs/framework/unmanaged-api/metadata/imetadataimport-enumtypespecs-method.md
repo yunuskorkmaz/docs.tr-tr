@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 75331c7b-988b-436c-9eb9-a270d37b4f06
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 81592b6da7fa7cdf275e9fa5b4b82ef0a15061c0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 42b8360ac6a7bb62f29046475d6cc98124619770
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782562"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449975"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs Yöntemi
-Geçerli meta veri kapsamda tanımlanan TypeSpec'te belirteçleri numaralandırır.  
+Enumerates TypeSpec tokens defined in the current metadata scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,35 +38,35 @@ HRESULT EnumTypeSpecs (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [out içinde] Numaralandırıcı bir işaretçi. Bu değer, bu yöntemin ilk çağrı için NULL olmalıdır.  
+ [in, out] A pointer to the enumerator. This value must be NULL for the first call of this method.  
   
  `rTypeSpecs`  
- [out] TypeSpec'te simgeleri depolamak için kullanılan dizisi.  
+ [out] The array used to store the TypeSpec tokens.  
   
  `cMax`  
- [in] En büyük boyutunu `rTypeSpecs` dizisi.  
+ [in] The maximum size of the `rTypeSpecs` array.  
   
  `pcTypeSpecs`  
- [out] Döndürülen TypeSpec'te belirteçleri sayısı `rTypeSpecs`.  
+ [out] The number of TypeSpec tokens returned in `rTypeSpecs`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeSpecs` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak hiçbir belirteçleri vardır. Bu durumda, `pcTypeSpecs` sıfırdır.|  
+|`S_OK`|`EnumTypeSpecs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeSpecs` is zero.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- TypeSpec'te belirteçleri oluşturan [Imetadataemit::gettokenfromtypespec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) yöntemi.  
+ The TypeSpec tokens are created by the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

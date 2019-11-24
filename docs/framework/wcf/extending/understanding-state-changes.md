@@ -2,160 +2,160 @@
 title: Durum Değişikliklerini Anlama
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 9f72d113c7160bdb6c4c5680669243323a30a4c1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f6ce9875a4ebecf11f1f8d08d681841773d9f841
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796946"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447490"
 ---
 # <a name="understanding-state-changes"></a>Durum Değişikliklerini Anlama
-Bu konu, kanalların sahip olduğu durumları ve geçişleri, kanal durumlarını yapılandırmak için kullanılan türleri ve bunların nasıl uygulanacağını ele alır.  
+This topic discusses the states and transitions that channels have, the types used to structure channel states, and how to implement them.  
   
-## <a name="state-machines-and-channels"></a>Durum makineleri ve kanallar  
- Örneğin yuvalar gibi iletişim ile ilgilenen nesneler, genellikle durum geçişleri ağ kaynakları ayırmaya, bağlantı yapmaya veya kabul etmeye, bağlantıları kapatmaya ve iletişimi sonlandırmayla ilişkili olan bir durum makinesi sunar. Kanal durumu makinesi, ilgili nesnenin temel uygulamasını soyutlayan bir iletişim nesnesi durumlarının Tekdüzen bir modelini sağlar. <xref:System.ServiceModel.ICommunicationObject> Arabirim bir durumlar kümesi, durum geçiş yöntemleri ve durum geçiş olayları sağlar. Tüm kanallar, kanal fabrikaları ve kanal dinleyicileri kanal durumu makinesini uygular.  
+## <a name="state-machines-and-channels"></a>State Machines and Channels  
+ Objects that deal with communication, for example sockets, usually present a state machine whose state transitions relate to allocating network resources, making or accepting connections, closing connections and terminating communication. The channel state machine provides a uniform model of the states of a communication object that abstracts the underlying implementation of that object. The <xref:System.ServiceModel.ICommunicationObject> interface provides a set of states, state transition methods and state transition events. All channels, channel factories and channel listeners implement the channel state machine.  
   
- Durum geçişi gerçekleştirildikten sonra, kapatılan, kapatılan, hatalı, açılan ve açma sinyali bir dış gözlemci oluşur.  
+ The events Closed, Closing, Faulted, Opened and Opening signal an external observer after a state transition occurs.  
   
- Bu yöntemler Iptal, kapatma ve açma (ve zaman uyumsuz eşdeğerleri) durum geçişlerine neden olur.  
+ The methods Abort, Close, and Open (and their asynchronous equivalents) cause state transitions.  
   
- State özelliği şu şekilde tanımlandığı <xref:System.ServiceModel.CommunicationState>şekilde geçerli durumu döndürür:  
+ The state property returns the current state as defined by <xref:System.ServiceModel.CommunicationState>:  
   
-## <a name="icommunicationobject-communicationobject-and-states-and-state-transition"></a>Idimmunicationobject, CommunicationObject, durumlar ve durum geçişi  
- , Çeşitli özelliklerinin yapılandırılabileceği oluşturulan durumunda başlatılır.<xref:System.ServiceModel.ICommunicationObject> Açık durumda, nesne ileti göndermek ve almak için kullanılabilir ancak özellikleri sabit olarak değerlendirilir. Kapanış durumunda, nesne artık yeni gönderme veya alma isteklerini işleyemez, ancak mevcut isteklerin, kapatma zaman aşımına ulaşılıncaya kadar tamamlanalım olasılığı vardır.  Kurtarılamaz bir hata oluşursa, nesne hata hakkında bilgi için incelenebileceği ve son olarak kapatılan hatalı duruma geçer. Kapalı durumda, nesne aslında durum makinesinin sonuna ulaştı. Bir nesne bir durumdan diğerine geçiş yaptığında önceki bir duruma geri döner.  
+## <a name="icommunicationobject-communicationobject-and-states-and-state-transition"></a>ICommunicationObject, CommunicationObject, and States and State Transition  
+ An <xref:System.ServiceModel.ICommunicationObject> starts out in the Created state where its various properties can be configured. Once in the Opened state, the object is usable for sending and receiving messages but its properties are considered immutable. Once in the Closing state, the object can no longer process new send or receive requests, but existing requests have a chance to complete until the Close timeout is reached.  If an unrecoverable error occurs, the object transitions to the Faulted state where it can be inspected for information about the error and ultimately closed. When in the Closed state the object has essentially reached the end of the state machine. Once an object transitions from one state to the next, it does not go back to a previous state.  
   
- Aşağıdaki diyagramda <xref:System.ServiceModel.ICommunicationObject> durumlar ve durum geçişleri gösterilmektedir. Durum geçişleri, üç yöntemden birini çağırarak oluşabilir: İptal edin, açın veya kapatın. Ayrıca, uygulamaya özgü diğer yöntemler çağırılmadan de kaynaklanmış olabilir. İletişim nesnesini açarken veya açtıktan sonra hatanın sonucu olarak hatalı duruma geçme gerçekleşecektir.  
+ The following diagram shows the <xref:System.ServiceModel.ICommunicationObject> states and state transitions. State transitions can be caused by calling one of the three methods: Abort, Open, or Close. They could also be caused by calling other implementation-specific methods. Transitioning to the Faulted state could happen as a result of errors while opening or after having opened the communication object.  
   
- Oluşturulan <xref:System.ServiceModel.ICommunicationObject> durumunda her bir tanesi başlatılır. Bu durumda, bir uygulama, özelliklerini ayarlayarak nesneyi yapılandırabilir. Bir nesne, oluşturulduktan sonra bir durumda olduğunda, bu, sabit olarak değerlendirilir.  
+ Every <xref:System.ServiceModel.ICommunicationObject> starts out in the Created state. In this state, an application can configure the object by setting its properties. Once an object is in a state other than Created, it is considered immutable.  
   
- ![Kanal durumu geçişi](./media/channelstatetranitionshighleveldiagram.gif "Channelstatetranitionshighleveldiagram")  
-Şekil 1. Idimmunicationobject durum makinesi.  
+ ![Dataflow diagram of the channel state transition.](./media/understanding-state-changes/channel-state-transitions.gif)  
+Figure 1. The ICommunicationObject State Machine.  
   
- Windows Communication Foundation (WCF), ve kanal durumu makinesini uygulayan <xref:System.ServiceModel.Channels.CommunicationObject> <xref:System.ServiceModel.ICommunicationObject> adlı bir soyut temel sınıf sağlar. Aşağıdaki grafik, öğesine <xref:System.ServiceModel.Channels.CommunicationObject>özgü değiştirilmiş bir durum diyagramıdır. <xref:System.ServiceModel.ICommunicationObject> Durum makinesine ek olarak, ek <xref:System.ServiceModel.Channels.CommunicationObject> Yöntemler çağrıldığında zamanlamayı gösterir.  
+ Windows Communication Foundation (WCF) provides an abstract base class named <xref:System.ServiceModel.Channels.CommunicationObject> that implements <xref:System.ServiceModel.ICommunicationObject> and the channel state machine. The following graphic is a modified state diagram that is specific to <xref:System.ServiceModel.Channels.CommunicationObject>. In addition to the <xref:System.ServiceModel.ICommunicationObject> state machine, it shows the timing when additional <xref:System.ServiceModel.Channels.CommunicationObject> methods are invoked.  
   
- ![Durum değişiklikleri](./media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
-Şekil 2. Idimmunicationobject durum makinesinin, olaylara ve korunan yöntemlere çağrılar dahil olmak üzere CommunicationObject uygulamasıdır.  
+ ![Dataflow diagram of CommunicationObject implementation state changes.](./media/understanding-state-changes/communicationobject-implementation-state-machine.gif)
+Figure 2. The CommunicationObject implementation of the ICommunicationObject state machine including calls to events and protected methods.  
   
-### <a name="icommunicationobject-events"></a>Idimmunicationobject olayları  
- <xref:System.ServiceModel.Channels.CommunicationObject>tarafından <xref:System.ServiceModel.ICommunicationObject>tanımlanan beş olayı gösterir. Bu olaylar, durum geçişleri hakkında bildirim almak için iletişim nesnesi kullanılarak kod için tasarlanmıştır. Yukarıdaki Şekil 2 ' de gösterildiği gibi, her bir olay, nesnenin durumu olay tarafından adlandırılan duruma geçtikten sonra tetiklenir. Beş olay `EventHandler` , şöyle tanımlanmış olan türüdür:  
+### <a name="icommunicationobject-events"></a>ICommunicationObject Events  
+ <xref:System.ServiceModel.Channels.CommunicationObject> exposes the five events defined by <xref:System.ServiceModel.ICommunicationObject>. These events are designed for code using the communication object to be notified of state transitions. As shown in Figure 2 above, each event is fired once after the object’s state transitions to the state named by the event. All five events are of the `EventHandler` type which is defined as:  
   
  `public delegate void EventHandler(object sender, EventArgs e);`  
   
- Uygulamada, gönderen <xref:System.ServiceModel.Channels.CommunicationObject> kendisi veya gönderen <xref:System.ServiceModel.Channels.CommunicationObject> olarak oluşturucuya (Oluşturucu aşırı yüklemesi kullanılmışsa) iletilir. <xref:System.ServiceModel.Channels.CommunicationObject> EventArgs parametresi, `e`her zaman `EventArgs.Empty`olur.  
+ In the <xref:System.ServiceModel.Channels.CommunicationObject> implementation, the sender is either the <xref:System.ServiceModel.Channels.CommunicationObject> itself or whatever was passed in as the sender to the <xref:System.ServiceModel.Channels.CommunicationObject> constructor (if that constructor overload was used). The EventArgs parameter, `e`, is always `EventArgs.Empty`.  
   
-### <a name="derived-object-callbacks"></a>Türetilmiş nesne geri çağırmaları  
- Beş olaya ek olarak, <xref:System.ServiceModel.Channels.CommunicationObject> türetilmiş bir nesnenin durum geçişleri gerçekleşmesinden önce ve sonra geri çağrılmasına izin vermek için tasarlanan sekiz korumalı sanal yöntem bildirir.  
+### <a name="derived-object-callbacks"></a>Derived Object Callbacks  
+ In addition to the five events, <xref:System.ServiceModel.Channels.CommunicationObject> declares eight protected virtual methods designed to allow a derived object to be called back before and after state transitions occur.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> Ve<xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> yöntemlerinin her biri ile ilişkili üç geri çağırmalar vardır. Örneğin, ve <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType> '<xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType>a karşılık gelen. İle <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType>ilişkili, ,<xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType>ve yöntemleridir<xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> .  
+ The <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> and <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> methods have three such callbacks associated with each of them. For example, corresponding to <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> there is <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType>, and <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType>. Associated with <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> are the <xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType>, and <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> methods.  
   
- Benzer şekilde, <xref:System.ServiceModel.Channels.CommunicationObject.Abort%2A?displayProperty=nameWithType> yöntemi karşılık gelir. <xref:System.ServiceModel.Channels.CommunicationObject.OnAbort%2A?displayProperty=nameWithType>  
+ Similarly, the <xref:System.ServiceModel.Channels.CommunicationObject.Abort%2A?displayProperty=nameWithType> method has a corresponding <xref:System.ServiceModel.Channels.CommunicationObject.OnAbort%2A?displayProperty=nameWithType>.  
   
- ,, Ve<xref:System.ServiceModel.Channels.CommunicationObject.OnAbort%2A?displayProperty=nameWithType> varsayılan bir uygulamasına sahip olmasa da, diğer geri çağırmaların durum makinesi doğruluğu için gerekli olan varsayılan bir uygulamasına sahip olması gerekir. <xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType> Bu yöntemleri geçersiz kılarsınız, temel uygulamayı çağırdığınızdan veya doğru şekilde değiştirdiğinizden emin olun.  
+ While <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType>, and <xref:System.ServiceModel.Channels.CommunicationObject.OnAbort%2A?displayProperty=nameWithType> have no default implementation, the other callbacks do have a default implementation which is necessary for state machine correctness. If you override those methods be sure to call the base implementation or correctly replace it.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType><xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> ve ilgili<xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> veolaylarını<xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> harekete geçirme. <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType>ve <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> nesne durumunu açık ve kapalı olarak ayarlayıp, ilgili <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> olayları harekete geçirme.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> and <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> fire the corresponding <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> and <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> events. <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType> and <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> set the object state to Opened and Closed respectively then fire the corresponding <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> and <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> events.  
   
-### <a name="state-transition-methods"></a>Durum geçiş yöntemleri  
- <xref:System.ServiceModel.Channels.CommunicationObject>Durdurma, kapatma ve açma uygulamalarını sağlar. Ayrıca, hatalı duruma bir durum geçişine neden olan bir hata yöntemi sağlar. Şekil 2 <xref:System.ServiceModel.ICommunicationObject> ' de, yönteme neden olan yöntemin etiketlendiği her bir geçişe (etiketlenmemiş geçişlerin, son etiketlenmiş geçişe neden olan yöntemin uygulanması içinde yer alan  
+### <a name="state-transition-methods"></a>State Transition Methods  
+ <xref:System.ServiceModel.Channels.CommunicationObject> provides implementations of Abort, Close and Open. It also provides a Fault method which causes a state transition to the Faulted state. Figure 2 shows the <xref:System.ServiceModel.ICommunicationObject> state machine with each transition labeled by the method that causes it (unlabeled transitions happen inside the implementation of the method that caused the last labeled transition).  
   
 > [!NOTE]
-> İletişim <xref:System.ServiceModel.Channels.CommunicationObject> durumu Al/ayarlar 'ın tüm uygulamaları iş parçacığı ile eşitlendi.  
+> All <xref:System.ServiceModel.Channels.CommunicationObject> implementations of communication state gets/sets are thread-synchronized.  
   
  Oluşturucu  
   
- <xref:System.ServiceModel.Channels.CommunicationObject>, bir bütün olarak nesneyi oluşturulan durumda bırakarak üç Oluşturucu sağlar. Oluşturucular şu şekilde tanımlanır:  
+ <xref:System.ServiceModel.Channels.CommunicationObject> provides three constructors, all of which leave the object in the Created state. The constructors are defined as:  
   
- İlk Oluşturucu, bir nesneyi alan Oluşturucu aşırı yüküne temsilci olarak bulunmayan parametresiz bir oluşturucudur:  
+ The first constructor is a parameterless constructor that delegates to the constructor overload that takes an object:  
   
  `protected CommunicationObject() : this(new object()) { … }`  
   
- Nesne alan Oluşturucu, iletişim nesnesi durumuna erişimi eşitlerken bu parametreyi kilitlenecek nesne olarak kullanır:  
+ The constructor that takes an object uses that parameter as the object to be locked when synchronizing access to communication object state:  
   
  `protected CommunicationObject(object mutex) { … }`  
   
- Son olarak, üçüncü bir Oluşturucu, <xref:System.ServiceModel.ICommunicationObject> olaylar tetiklendiğinde gönderici bağımsız değişkeni olarak kullanılan ek bir parametre alır.  
+ Finally, a third constructor takes an additional parameter that is used as the sender argument when <xref:System.ServiceModel.ICommunicationObject> events are fired.  
   
  `protected CommunicationObject(object mutex, object eventSender) { … }`  
   
- Önceki iki Oluşturucu göndereni bu olarak ayarlar.  
+ The previous two constructors set the sender to this.  
   
- Yöntemi aç  
+ Open Method  
   
- Koşul Durum oluşturuldu.  
+ Precondition: State is Created.  
   
- Koşul sonrası: Durum açıldı veya hatalı. Bir özel durum oluşturabilir.  
+ Post-condition: State is Opened or Faulted. May throw an exception.  
   
- Open () yöntemi iletişim nesnesini açmaya çalışır ve durumu açık olarak ayarlar. Bir hatayla karşılaşırsa, durumu hatalı olarak ayarlar.  
+ The Open() method will try to open the communication object and set the state to Opened. If it encounters an error, it will set the state to Faulted.  
   
- Yöntemi önce geçerli durumunun oluşturulduğunu denetler. Geçerli durum açılıyor veya açılırsa, bir <xref:System.InvalidOperationException>oluşturur. Geçerli durum kapanıyor veya kapanırsa, nesne sonlandırılmışsa ve <xref:System.ServiceModel.CommunicationObjectAbortedException> <xref:System.ObjectDisposedException> Aksi takdirde bir oluşturur. Geçerli durum hata oluşturursa, bir <xref:System.ServiceModel.CommunicationObjectFaultedException>oluşturur.  
+ The method first checks that the current state is Created. If the current state is Opening or Opened it throws an <xref:System.InvalidOperationException>. If the current state is Closing or Closed, it throws a <xref:System.ServiceModel.CommunicationObjectAbortedException> if the object has been terminated and <xref:System.ObjectDisposedException> otherwise. If the current state is Faulted, it throws a <xref:System.ServiceModel.CommunicationObjectFaultedException>.  
   
- Ardından, açılan durumu ayarlar ve bu sırayla Onaçýlýþ () (açýlýþ olayını başlatan), OnOpen () ve Onaçılmış () çağırır. Onaçılmış () durumu açıldı olarak ayarlar ve açılan olayı başlatır. Bunlardan herhangi biri bir özel durum oluşturursa, () hatasını () çağırır ve özel durum kabarcığa izin verir. Aşağıdaki diyagramda açık işlem daha ayrıntılı gösterilmektedir.  
+ It then sets the state to Opening and calls OnOpening() (which raises the Opening event), OnOpen() and OnOpened() in that order. OnOpened() sets the state to Opened and raises the Opened event. If any of these throws an exception, Open()calls Fault() and lets the exception bubble up. The following diagram shows the Open process in more detail.  
   
- ![Durum değişiklikleri](./media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
-Bir iç iletişim nesnesi açmak gibi özel açık mantığı uygulamak için OnOpen yöntemini geçersiz kılın.  
+ ![Dataflow diagram of ICommunicationObject.Open state changes.](./media/understanding-state-changes/ico-open-process-override-onopen.gif)  
+Override the OnOpen method to implement custom open logic such as opening an inner communication object.  
   
  Close Yöntemi  
   
- Koşul Yok.  
+ Precondition: None.  
   
- Koşul sonrası: Durum kapalı. Bir özel durum oluşturabilir.  
+ Post-condition: State is Closed. May throw an exception.  
   
- Close () yöntemi herhangi bir durumda çağrılabilir. Nesneyi normal şekilde kapatmaya çalışır. Bir hata ile karşılaşılırsa, nesneyi sonlandırır. Geçerli durum kapanış veya kapalı ise yöntem hiçbir şey yapmaz. Aksi takdirde, durumu kapanış olarak ayarlar. Özgün durum oluşturuldu, açılıyor veya hata verdi ise, Abort () öğesini çağırır (Aşağıdaki diyagrama bakın). Özgün durum açılırsa, bu sırayla OnClosing () (kapanış olayını başlatan), OnClose () ve OnClosed () çağırır. Bunlardan herhangi biri bir özel durum oluşturursa, Close () Abort () yöntemini çağırır ve özel durum kabarcığa izin verir. OnClosed () durumu kapalı olarak ayarlar ve kapalı olayı başlatır. Aşağıdaki diyagramda, kapatma işlemi daha ayrıntılı gösterilmektedir.  
+ The Close() method can be called at any state. It tries to close the object normally. If an error is encountered, it terminates the object. The method does nothing if the current state is Closing or Closed. Otherwise it sets the state to Closing. If the original state was Created, Opening or Faulted, it calls Abort() (see the following diagram). If the original state was Opened, it calls OnClosing() (which raises the Closing event), OnClose() and OnClosed() in that order. If any of these throws an exception, Close()calls Abort() and lets the exception bubble up. OnClosed() sets the state to Closed and raises the Closed event. The following diagram shows the Close process in more detail.  
   
- ![Durum değişiklikleri](./media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
-İç iletişim nesnesini kapatma gibi özel kapatma mantığını uygulamak için OnClose metodunu geçersiz kılın. Uzun süredir engelleyebilen tüm düzgün kapanma mantığı (örneğin, diğer tarafın yanıt vermesi bekleniyor), bir zaman aşımı parametresi aldığı ve Abort () öğesinin bir parçası olarak çağrılmadığı için OnClose () içinde uygulanmalıdır.  
+ ![Dataflow diagram of ICommunicationObject.Close state changes.](./media/understanding-state-changes/ico-close-process-override-onclose.gif)  
+Override the OnClose method to implement custom close logic, such as closing an inner communication object. All graceful closing logic that may block for a long time (for example, waiting for the other side to respond) should be implemented in OnClose() because it takes a timeout parameter and because it is not called as part of Abort().  
   
- Durdurma  
+ Abort  
   
- Koşul Yok.  
-Koşul sonrası: Durum kapalı. Bir özel durum oluşturabilir.  
+ Precondition: None.  
+Post-condition: State is Closed. May throw an exception.  
   
- Geçerli durum kapalıysa veya nesne daha önce sonlandırılmışsa, Abort () yöntemi hiçbir şey yapmaz (örneğin, büyük olasılıkla başka bir iş parçacığında yürütme (). Aksi halde, durumu kapatılacak şekilde ayarlar ve OnClosing () (kapanış olayını başlatan), OnAbort () ve OnClosed () Bu sırada (nesne Sonlandırılmakta, kapanmadığı için OnClose çağırmaz) çağırır. OnClosed () durumu kapalı olarak ayarlar ve kapalı olayı başlatır. Bunlardan herhangi biri bir özel durum oluştursa, bu, Iptal etme çağıranına yeniden oluşturulur. OnClosing (), OnClosed () ve OnAbort () uygulamaları engellenmemelidir (örneğin, giriş/çıkış üzerinde). Aşağıdaki diyagramda, durdurma işlemi daha ayrıntılı olarak gösterilmiştir.  
+ The Abort() method does nothing if the current state is Closed or if the object has been terminated before (for example, possibly by having Abort() executing on another thread). Otherwise it sets the state to Closing and calls OnClosing() (which raises the Closing event), OnAbort(), and OnClosed() in that order (does not call OnClose because the object is being terminated, not closed). OnClosed() sets the state to Closed and raises the Closed event. If any of these throw an exception, it is re-thrown to the caller of Abort. Implementations of OnClosing(), OnClosed() and OnAbort() should not block (for example, on input/output). The following diagram shows the Abort process in more detail.  
   
- ![Durum değişiklikleri](./media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
-Bir iç iletişim nesnesini sonlandırma gibi özel sonlandırma mantığını uygulamak için OnAbort metodunu geçersiz kılın.  
+ ![Dataflow diagram of ICommunicationObject.Abort state changes.](./media/understanding-state-changes/ico-abort-process-override-onabort.gif)  
+Override the OnAbort method to implement custom terminate logic such as terminating an inner communication object.  
   
- Dayanıklı  
+ Fault  
   
- Hata yöntemi, <xref:System.ServiceModel.Channels.CommunicationObject> <xref:System.ServiceModel.ICommunicationObject> arabirimine özeldir ve arabirimin bir parçası değildir. Bu, tamamlanma açısından burada yer alır.  
+ The Fault method is specific to <xref:System.ServiceModel.Channels.CommunicationObject> and is not part of the <xref:System.ServiceModel.ICommunicationObject> interface. It is included here for completeness.  
   
- Koşul Yok.  
+ Precondition: None.  
   
- Koşul sonrası: Durum hatalı. Bir özel durum oluşturabilir.  
+ Post-condition: State is Faulted. May throw an exception.  
   
- Hata () yöntemi, geçerli durum hata verdi veya kapatılırsa hiçbir şey yapmaz. Aksi takdirde, durumu hatalı olarak ayarlar ve hatalı olayı oluşturan Onkusurlu () öğesini çağırın. Onkusurlu, yeniden oluşturulduğu bir özel durum oluşturursa.  
+ The Fault() method does nothing if the current state is Faulted or Closed. Otherwise it sets the state to Faulted and call OnFaulted(), which raises the Faulted event. If OnFaulted throws an exception it is re-thrown.  
   
-### <a name="throwifxxx-methods"></a>ThrowIfXxx yöntemleri  
- CommunicationObject, nesne belirli bir durumdaysa özel durum oluşturmak için kullanılabilecek üç korumalı yönteme sahiptir.  
+### <a name="throwifxxx-methods"></a>ThrowIfXxx Methods  
+ CommunicationObject has three protected methods that can be used to throw exceptions if the object is in a specific state.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A>durum kapanış, kapatma veya hatalı ise bir özel durum oluşturur.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A> throws an exception if the state is Closing, Closed or Faulted.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A>durum oluşturulmadıysa bir özel durum oluşturur.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A> throws an exception if the state is not Created.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A>durum açılmadıysa bir özel durum oluşturur.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A> throws an exception if the state is not Opened.  
   
- Oluşturulan özel durumlar duruma bağlıdır. Aşağıdaki tabloda, bu durumu oluşturan bir ThrowIfXxx çağırarak oluşturulan farklı durumlar ve karşılık gelen özel durum türü gösterilmektedir.  
+ The exceptions thrown depend on the state. The following table shows the different states and the corresponding exception type thrown by calling a ThrowIfXxx that throws on that state.  
   
-|Durum|Iptal çağrıldı mı?|Özel Durum|  
+|Durum|Has Abort been called?|Özel Durum|  
 |-----------|----------------------------|---------------|  
 |Oluşturuldu|Yok|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
-|Açma|Yok|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
-|Makta|Yok|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
+|Opening|Yok|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
+|Opened|Yok|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Kapatma|Evet|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |Kapatma|Hayır|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|Closed|Evet|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>bir nesnenin önceki ve açık bir Abort çağrısıyla kapatılmış olması durumunda. Nesne üzerinde close çağrısı yaparsanız, bir <xref:System.ObjectDisposedException?displayProperty=nameWithType> oluşturulur.|  
-|Closed|Hayır|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|Alındı|Yok|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
+|Kapatıldı|Evet|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> in the case that an object was closed by a previous and explicit call of Abort. If you call Close on the object then an <xref:System.ObjectDisposedException?displayProperty=nameWithType> is thrown.|  
+|Kapatıldı|Hayır|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
+|Faulted|Yok|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   
-### <a name="timeouts"></a>Zaman Aşımları  
- Tartışıyoruz yöntemlerin birkaçı zaman aşımı parametrelerini alır. Bunlar kapalı, Açık (belirli aşırı yüklemeler ve zaman uyumsuz sürümler), OnClose ve OnOpen. Bu yöntemler uzun işlemlere izin vermek için tasarlanmıştır (örneğin, bir bağlantıyı düzgün bir şekilde kapatırken giriş/çıkış üzerinde engelleme), zaman aşımı parametresi, kesintiye uğramadan önce bu tür işlemlerin ne kadar sürdüğünü gösterir. Bu yöntemlerin herhangi birinin uygulamaları, bu zaman aşımı süresi içinde çağırana döndüğünden emin olmak için sağlanan zaman aşımı değerini kullanmalıdır. Zaman aşımı kullanmayan diğer yöntemlerin uygulamaları uzun işlemler için tasarlanmamıştır ve giriş/çıkış üzerinde engellenmemelidir.  
+### <a name="timeouts"></a>Timeouts  
+ Several of the methods we discussed take timeout parameters. These are Close, Open (certain overloads and asynchronous versions), OnClose and OnOpen. These methods are designed to allow for lengthy operations (for example, blocking on input/output while gracefully closing down a connection) so the timeout parameter indicates how long such operations can take before being interrupted. Implementations of any of these methods should use the supplied timeout value to ensure it returns to the caller within that timeout. Implementations of other methods that do not take a timeout are not designed for lengthy operations and should not block on input/output.  
   
- Özel durum, bir zaman aşımı olmayan Open () ve Close () aşırı yüklemelerdir. Bu, türetilmiş sınıf tarafından sağlanan varsayılan bir zaman aşımı değeri kullanır. <xref:System.ServiceModel.Channels.CommunicationObject>adlı <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> iki korumalı soyut özelliği gösterir ve <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> şöyle tanımlanır:  
+ The exception are the Open() and Close() overloads that do not take a timeout. These use a default timeout value supplied by the derived class. <xref:System.ServiceModel.Channels.CommunicationObject> exposes two protected abstract properties named <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> and <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> defined as:  
   
  `protected abstract TimeSpan DefaultCloseTimeout { get; }`  
   
  `protected abstract TimeSpan DefaultOpenTimeout { get; }`  
   
- Türetilmiş bir sınıf, bir zaman aşımı değeri kullanmayan Open () ve Close () aşırı yüklemeleri için varsayılan zaman aşımını sağlamak üzere bu özellikleri uygular. Ardından, Open () ve Close () uygulamaları varsayılan zaman aşımı değerini geçen bir zaman aşımı süresi alan aşırı yüklemeye temsilci sağlar, örneğin:  
+ A derived class implements these properties to provide the default timeout for the Open() and Close() overloads that do not take a timeout value. Then the Open() and Close() implementations delegate to the overload that takes a timeout passing it the default timeout value, for example:  
   
  `public void Open()`  
   
@@ -165,5 +165,5 @@ Bir iç iletişim nesnesini sonlandırma gibi özel sonlandırma mantığını u
   
  `}`  
   
-#### <a name="idefaultcommunicationtimeouts"></a>Idefaultcommunicationzamanaşımları  
- Bu arabirimin açık, gönder, al ve Kapat için varsayılan zaman aşımı değerlerini sağlamak üzere dört salt okunurdur özelliği vardır. Her uygulama, uygun şekilde varsayılan değerleri edinmekten sorumludur. Kolaylık sağlar ve <xref:System.ServiceModel.Channels.ChannelListenerBase> bu <xref:System.ServiceModel.Channels.ChannelFactoryBase> değerleri 1 dakika için varsayılan olarak yapın.
+#### <a name="idefaultcommunicationtimeouts"></a>IDefaultCommunicationTimeouts  
+ This interface has four read-only properties for providing default timeout values for open, send, receive, and close. Each implementation is responsible for obtaining the default values in whatever manner appropriate. As a convenience, <xref:System.ServiceModel.Channels.ChannelFactoryBase> and <xref:System.ServiceModel.Channels.ChannelListenerBase> default these values to 1 minute each.

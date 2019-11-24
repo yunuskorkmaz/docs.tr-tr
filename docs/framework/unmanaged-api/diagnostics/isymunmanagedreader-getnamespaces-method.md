@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3feb4796-2fab-45ce-beca-6f5bc530b971
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e0c72cd6e7dce784064f7653ba35e488061d9fd7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 458faedea418e626a6494ca2afcdbf0e034472e8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773586"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447738"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a>ISymUnmanagedReader::GetNamespaces Metodu
-Bu sembol deposundaki genel kapsamda tanımlanan ad alanları alır.  
+Gets the namespaces defined at global scope within this symbol store.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,19 +38,19 @@ HRESULT GetNamespaces (
   
 ## <a name="parameters"></a>Parametreler  
  `cNameSpaces`  
- [in] Ad alanları dizinin boyutu.  
+ [in] The size of the namespaces array.  
   
  `pcNameSpaces`  
- [out] Ad alanı listenin uzunluğunu alır bir değişken için bir işaretçi.  
+ [out] A pointer to a variable that receives the length of the namespace list.  
   
  `namespaces`  
- [out] Ad alanı listesini alır bir değişken için bir işaretçi.  
+ [out] A pointer to a variable that receives the namespace list.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

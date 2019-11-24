@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 385fc4d3-365c-4645-b7b0-6c4c5344b79f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 459a24e2ed9b97a67dc0266231fdfc32a9c853a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 533d8a5481fe9ba7e7e65775229156a9cc3cf4d7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776654"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449115"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>ISymUnmanagedDocument::HasEmbeddedSource Yöntemi
-Döndürür `true` hata ayıklama sembolleri; katıştırılmış kaynak belge varsa, aksi halde döndürür `false`.  
+Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,10 +34,10 @@ HRESULT HasEmbeddedSource(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Belge hata ayıklama sembolleri gömülü kaynak olup olmadığını belirten bir değişken için bir işaretçi.  
+ [out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK.  
+ S_OK if the method succeeds.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

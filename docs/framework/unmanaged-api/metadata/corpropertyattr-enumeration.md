@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5fb70d530af24798636972de0a4d6280dbcb8f1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d49a146a465210cea8466a75666ca3f800b090b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781637"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450134"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr Numaralandırması
-Özellik meta verileri tanımlayan değerlerini içerir.  
+Contains values that describe the metadata of a property.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,18 +42,18 @@ typedef enum CorPropertyAttr {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`prSpecialName`|Özelliği özeldir ve adını açıklayan belirtir nasıl.|  
-|`prReservedMask`|İç kullanım için ortak dil çalışma zamanı tarafından ayrılmış.|  
-|`prRTSpecialName`|Ortak dil çalışma zamanı meta veri özellik adı kodlama dahili API'lerde denetleyeceğini belirtir.|  
-|`prHasDefault`|Özelliği varsayılan değerine sahip olduğunu belirtir.|  
-|`prUnused`|Kullanılmayan.|  
+|`prSpecialName`|Specifies that the property is special, and that its name describes how.|  
+|`prReservedMask`|Reserved for internal use by the common language runtime.|  
+|`prRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the property name.|  
+|`prHasDefault`|Specifies that the property has a default value.|  
+|`prUnused`|Unused.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

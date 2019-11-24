@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 55989fa9-ab43-4f08-8eb6-2eb56fa7ca76
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0ae4ddd07a2a3d3ab9b5d024eceb43329db96915
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 36c99477e9faead5e24799d5b0ae8901f1dd13c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787500"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448715"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder Yöntemi
-Verilen derlemenin tür tablosuna bir tür ileticisi ekler.  
+Adds a type forwarder to the type table of the given assembly.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +37,22 @@ HRESULT ExportTypeForwarder(
   
 ## <a name="parameters"></a>Parametreler  
  `tkAssemblyRef`  
- Tür ileticinin başvurduğu derlemeye başvuru.  
+ Reference to the assembly to which the type forwarder refers.  
   
  `pszTypename`  
- Dışarı aktarılacak tam tür adı.  
+ Fully qualified type name to export.  
   
  `dwFlags`  
- `ComType``tdPublic` veya`tdNested`gibi bayraklar. Bu değer [DefineExportedType yöntemine](../metadata/imetadataassemblyemit-defineexportedtype-method.md)geçirilebilir.  
+ `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- , Dışarıya aktarılmış türün belirtecini alır. Bu yalnızca iç içe geçmiş türleri yayma için gereklidir.  
+ Receives the token of the exported type. This is necessary only for emitting nested types.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

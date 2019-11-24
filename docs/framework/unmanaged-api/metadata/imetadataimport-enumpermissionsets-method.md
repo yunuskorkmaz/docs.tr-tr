@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 347d7e5c-c90f-45ad-bd1e-2c7912b0b19c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a7d9874d4a609c353ae772b75a48af632bf4e85d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d0f443b5b7d2d358534e888c3fc84ad3f554119
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756538"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450049"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets Yöntemi
-Belirtilen meta veri kapsamdaki nesneler için izinleri numaralandırır.  
+Enumerates permissions for the objects in a specified metadata scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,38 +40,38 @@ HRESULT EnumPermissionSets
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [out içinde] Numaralandırıcı bir işaretçi. Bu, bu yöntemin ilk çağrı için NULL olmalıdır.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `tk`  
- [in] Olası en geniş kapsamı aramak için NULL veya arama kapsamını sınırlayan bir meta veri belirteci.  
+ [in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.  
   
  `dwActions`  
- [in] Bayrakları temsil eden <xref:System.Security.Permissions.SecurityAction> dahil edilecek değerleri `rPermission`, ya da tüm eylemleri döndürmek için sıfır.  
+ [in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.  
   
  `rPermission`  
- [out] İzni simgeleri depolamak için kullanılan dizisi.  
+ [out] The array used to store the Permission tokens.  
   
  `cMax`  
- [in] En büyük boyutunu `rPermission` dizisi.  
+ [in] The maximum size of the `rPermission` array.  
   
  `pcTokens`  
- [out] Döndürülen izni belirteçleri sayısı `rPermission`.  
+ [out] The number of Permission tokens returned in `rPermission`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak hiçbir belirteçleri vardır. Bu durumda, `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumPermissionSets` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7087864d0305f0cdb0b4977f037cf5a7c4dee18d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20556d85655a0a1bbe069a94b99c19c774a13ce6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783137"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449686"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation Metodu
-Profili oluşturulan ortak dil çalışma zamanı (CLR) sürüm bilgilerini sağlar.  
+Provides version information about the common language runtime (CLR) that is being profiled.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,43 +43,43 @@ HRESULT GetRuntimeInformation(
   
 ## <a name="parameters"></a>Parametreler  
  `pClrInstanceId`  
- [out] Bir işlemde çalışan bir CLR örneği temsilcisi kimliği. Bu, aynı `ClrInstanceID` Windows (ETW) başlangıç olayı için olay izleme olduğunu bildirir.  
+ [out] The representative ID of a running CLR instance in a process. This is the same as the `ClrInstanceID` that the event tracing for Windows (ETW) startup event reports.  
   
  `pRuntimeType`  
- [out] Çalışma zamanı türü. Bu parametre döndürür `COR_PRF_DESKTOP_CLR` Masaüstü CLR sürümü için veya `COR_PRF_CORE_CLR` çekirdek Silverlight'ta kullanılan CLR sürümü için.  
+ [out] The runtime type. This parameter returns `COR_PRF_DESKTOP_CLR` for the desktop version of the CLR, or `COR_PRF_CORE_CLR` for the core version of the CLR used in Silverlight.  
   
  `pMajorVersion`  
- [out] CLR sürüm sayısı.  
+ [out] The major version number of the CLR.  
   
  `pMinorVersion`  
- [out] İkincil sürüm numarası CLR.  
+ [out] The minor version number of the CLR.  
   
  `pBuildVersion`  
- [out] Derleme sürüm numarası CLR.  
+ [out] The build version number of the CLR.  
   
  `pQFEVersion`  
- [out] Bir yazılım güncelleştirmesiyle ilişkili CLR sürüm sayısı.  
+ [out] The version number of the CLR that is associated with a software update.  
   
  `cchVersionString`  
- [in] Arabelleğin karakter cinsinden uzunluğu, `szVersionString` işaret eder.  
+ [in] The length, in characters, of the buffer that `szVersionString` points to.  
   
  `pcchVersionString`  
- [out] Karakter cinsinden uzunluğu, `szVersionString`.  
+ [out] The length, in characters, of `szVersionString`.  
   
  `szVersionString`  
- [out] CLR sürüm dizesi.  
+ [out] The CLR version string.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her parametre için null değeri geçirmeye. Ancak, `pcchVersionString` null olamaz sürece `szVersionString` de null.  
+ You may pass null for any parameter. However, `pcchVersionString` cannot be null unless `szVersionString` is also null.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a3c97c3-1e31-47b1-bf23-386785c509c4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0b410ef46e96f75d98ee750c760b19d2a77eec2b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4f3d9bc94d25ca70e0589e1beb86b8ef96807a71
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780210"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448168"
 ---
 # <a name="icorprofilerinfogetassemblyinfo-method"></a>ICorProfilerInfo::GetAssemblyInfo Metodu
-Bir derleme kimliği kabul eder ve derlemenin adı ve bildirim, modül kimliği döndürür.  
+Accepts an assembly ID, and returns the assembly's name and the ID of its manifest module.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,36 +40,36 @@ HRESULT GetAssemblyInfo(
   
 ## <a name="parameters"></a>Parametreler  
  `assemblyId`  
- [in] Bütünleştirilmiş kod tanımlayıcısı.  
+ [in] The identifier of the assembly.  
   
  `cchName`  
- [in] Karakter cinsinden uzunluğu, `szName`.  
+ [in] The length, in characters, of `szName`.  
   
  `pcchName`  
- [out] Derleme adının toplam karakter uzunluğu bir işaretçi.  
+ [out] A pointer to the total character length of the assembly's name.  
   
  `szName`  
- [out] Bir çağıran tarafından sağlanan geniş karakter arabelleği. İşlevi döndüğünde, derlemenin adını içerir.  
+ [out] A caller-provided wide character buffer. When the function returns, it will contain the assembly's name.  
   
  `pAppDomainId`  
- [out] Derlemeyi içeren uygulama etki alanı kimliği için bir işaretçi.  
+ [out] A pointer to the ID of the application domain that contains the assembly.  
   
  `pModuleId`  
- [out] Derlemenin bildirimi modül kimliği için bir işaretçi.  
+ [out] A pointer to the ID of the assembly's manifest module.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntemin dönüşünün ardından doğrulamanız gerekir `szName` arabellek bütünleştirilmiş kodun tam adını içerecek şekilde büyük. Bunu yapmak için değeri ile karşılaştırmak, `pcchName` değeriyle işaret `cchName` parametresi. Varsa `pcchName` işaret değerinden daha büyük bir değere `cchName`, daha büyük bir ayırma `szName` arabellek, güncelleştirme `cchName` yeni, daha büyük bir boyut ve çağrı `GetAssemblyInfo` yeniden.  
+ After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the assembly. To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter. If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAssemblyInfo` again.  
   
- Alternatif olarak, ilk çağırabilirsiniz `GetAssemblyInfo` sıfır uzunluklu ile `szName` arabellek doğru arabellek boyutu elde edilir. Ardından döndürülen değere göre arabellek boyutu ayarlayabileceğiniz `pcchName` ve çağrı `GetAssemblyInfo` yeniden.  
+ Alternatively, you can first call `GetAssemblyInfo` with a zero-length `szName` buffer to obtain the correct buffer size. You can then adjust the buffer size based on the value returned in `pcchName` and call `GetAssemblyInfo` again.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

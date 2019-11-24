@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e084bc957eca9474078ed5ca3aef0276361dbe1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d2d9ca77e764fe439753f1174a42af5ef80faa59
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745530"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447712"
 ---
-# <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON Numaralandırması
-Çalışma zamanı askıya alındığından nedenini gösterir.  
+# <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON Numaralandırması
+Indicates the reason that the runtime is suspended.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,26 +42,26 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_SUSPEND_OTHER`|Çalışma zamanı belirlenemeyen bir nedenden dolayı askıya alınır.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Çalışma zamanı, çöp toplama isteğine hizmet askıya alınır.<br /><br /> Çöp toplama ile ilgili geri çağırmalar arasında oluşan [Icorprofilercallback::runtimesuspendfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) ve [Icorprofilercallback::runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) geri çağırmalar.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Çalışma zamanı askıya böylece bir `AppDomain` kapatılabilir.<br /><br /> Çalışma zamanı askıya alındı, ancak çalışma zamanının hangi iş parçacığı bulunan belirleyecek `AppDomain` diğer bir deyişle kapatmalı ve bunlar devam edince iptal etmek için bunları ayarlayın. Var olan hiçbir `AppDomain`-bu askıya alma sırasında belirli geri çağırmalar.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Kod pitching gerçekleştirilmesi, çalışma zamanı askıya alınır.<br /><br /> Kod pitching yalnızca just-ın-time (JIT) derleyici etkin kod pitching ile etkin olduğunda ensues. Pitching geri çağırmaları ortaya arasında kod `ICorProfilerCallback::RuntimeSuspendFinished` ve `ICorProfilerCallback::RuntimeResumeStarted` geri çağırmalar. **Not:**  Bu değer, 2. 0'kullanılmaması CLR JIT işlevleri .NET Framework sürüm 2.0, aralık değil.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Böylece kapanabilir çalışma zamanı askıya alınır. İşlemi tamamlamak için tüm iş parçacıkları askıya gerekir.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|Çalışma zamanı, işlemdeki hata ayıklama için askıya alındı.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|Çalışma zamanı, çöp toplama işlemi için hazırlamak üzere askıya alınır.|  
-|`COR_PRF_SUSPEND_FOR_REJIT`|Çalışma zamanı JIT yeniden derlemesi için askıya alındı.|  
+|`COR_PRF_FIELD_SUSPEND_OTHER`|The runtime is suspended for an unspecified reason.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|The runtime is suspended to service a garbage collection request.<br /><br /> The garbage collection-related callbacks occur between the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) and [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callbacks.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|The runtime is suspended so that an `AppDomain` can be shut down.<br /><br /> While the runtime is suspended, the runtime will determine which threads are in the `AppDomain` that is being shut down and set them to abort when they resume. There are no `AppDomain`-specific callbacks during this suspension.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|The runtime is suspended so that code pitching can occur.<br /><br /> Code pitching ensues only when the just-in-time (JIT) compiler is active with code pitching enabled. Code pitching callbacks occur between the `ICorProfilerCallback::RuntimeSuspendFinished` and `ICorProfilerCallback::RuntimeResumeStarted` callbacks. **Note:**  The CLR JIT does not pitch functions in the .NET Framework version 2.0, so this value is not used in 2.0.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|The runtime is suspended so that it can shut down. It must suspend all threads to complete the operation.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|The runtime is suspended for in-process debugging.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|The runtime is suspended to prepare for a garbage collection.|  
+|`COR_PRF_SUSPEND_FOR_REJIT`|The runtime is suspended for JIT recompilation.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yönetilmeyen kodda olan tüm çalışma zamanı iş parçacığı, çalışma zamanı yeniden devam edene dek bu noktada, ayrıca askıya alınır ve çalışma zamanının yeniden girmeyi deneyin kadar çalışmaya devam etmesine izin verilir. Bu, çalışma zamanı girin yeni iş parçacıkları için de geçerlidir. Çalışma zamanı içinde tüm iş parçacıkları kesilebilir kodda olmaları durumunda hemen askıya veya kesilebilir kod ulaşmadan zaman askıya istenir.  
+ All runtime threads that are in unmanaged code are permitted to continue running until they try to re-enter the runtime, at which point they will also be suspended until the runtime resumes. This also applies to new threads that enter the runtime. All threads within the runtime are either suspended immediately if they are in interruptible code, or asked to suspend when they do reach interruptible code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

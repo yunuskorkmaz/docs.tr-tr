@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6bf5a04-e03e-44f0-917a-96f6a6d3cc96
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 70ab6a94d19f1411e1f79a9f3912158ec02059ed
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c13ce443037d706f9eba49760ba76f47c5a6538
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780226"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448177"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>ICorProfilerInfo::GetAppDomainInfo Yöntemi
-Bir uygulama etki alanı kimliği kabul eder Bir uygulama etki alanı adı ve içerdiği işlem Kimliğini döndürür.  
+Accepts an application domain ID. Returns an application domain name and the ID of the process that contains it.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,33 +39,33 @@ HRESULT GetAppDomainInfo(
   
 ## <a name="parameters"></a>Parametreler  
  `appDomainId`  
- [in] Uygulama etki alanı kimliği.  
+ [in] The ID of the application domain.  
   
  `cchName`  
- [in] Karakter cinsinden uzunluğu, `szName` dönüş arabelleği.  
+ [in] The length, in characters, of the `szName` return buffer.  
   
  `pcchName`  
- [out] Uygulama etki alanı adının toplam karakter uzunluğu bir işaretçi.  
+ [out] A pointer to the total character length of the application domain name.  
   
  `szName`  
- [out] Bir çağıran tarafından sağlanan geniş karakter arabelleği. Yöntem döndürüldüğünde `szName` tam veya kısmi uygulama etki alanı adı içerir.  
+ [out] A caller-provided wide character buffer. When the method returns, `szName` will contain the full or partial application domain name.  
   
  `pProcessId`  
- [out] Uygulama etki alanını içeren işlem kimliği için bir işaretçi.  
+ [out] A pointer to the ID of the process that contains the application domain.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntemin dönüşünün ardından doğrulamanız gerekir `szName` arabelleği, uygulama etki alanının tam adını içerecek şekilde büyük. Bunu yapmak için değeri ile karşılaştırmak, `pcchName` değeriyle işaret `cchName` parametresi. Varsa `pcchName` işaret değerinden daha büyük bir değere `cchName`, daha büyük bir ayırma `szName` arabellek, güncelleştirme `cchName` yeni, daha büyük bir boyut ve çağrı `GetAppDomainInfo` yeniden.  
+ After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the application domain. To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter. If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAppDomainInfo` again.  
   
- Alternatif olarak, ilk çağırabilirsiniz `GetAppDomainInfo` sıfır uzunluklu ile `szName` arabellek doğru arabellek boyutu elde edilir. Arabellek boyutu döndürülen değere ayarlayabilirsiniz `pcchName` ve çağrı `GetAppDomainInfo` yeniden.  
+ Alternatively, you can first call `GetAppDomainInfo` with a zero-length `szName` buffer to obtain the correct buffer size. You can then set the buffer size to the value returned in `pcchName` and call `GetAppDomainInfo` again.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 864f1267-d267-4696-8df7-1f83f8444d6f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5898f2f0900b0bbe392d4dbaa8fc1db5e0e45c9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 98183ed02f8821b7c40852de2d040775d30f2518
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767010"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443747"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity Numaralandırması
-Bildirime dayalı güvenlik kullanarak gerçekleştirilebilir güvenlik eylemleri belirtir.  
+Specifies the security actions that can be performed using declarative security.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -60,34 +58,34 @@ typedef enum CorDeclSecurity {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`dclActionMask`|Ayrılmış.|  
-|`dclActionNil`|Ayrılmış.|  
-|`dclRequest`|Ayrılmış.|  
-|`dclDemand`|Çağrı yığınında daha yüksek tüm çağıranlar geçerli bir izin nesnesi tarafından belirtilen izin verilen gereklidir.|  
-|`dclAssert`|Çağıranlar yığınında daha yüksek bir kaynağa erişim izni verilmemiş bile, çağırma kodunun geçerli izin nesnesi tarafından tanımlanan kaynağa erişebilir|  
-|`dclDeny`|Erişim izni verilmiş olsa bile geçerli bir izin nesnesi tarafından belirtilen kaynak erişim olanağı arayanlar için reddedildi.|  
-|`dclPermitOnly`|Yalnızca bu izin nesnesi tarafından belirtilen kaynak kodu diğer kaynaklara erişim izni verilmiş olsa bile erişilebilir.|  
-|`dclLinktimeCheck`|Şu anki çağırıcı, belirli bir süre için belirtilen izin verilen gereklidir.|  
-|`dclInheritanceCheck`|Başka bir sınıf ya da bir yöntemini geçersiz kılma türetilen sınıfın belirtilen izin verilen gereklidir.|  
-|`dclRequestMinimum`|Çağıran kodun çalışması için gereken en düşük izinleri isteyebilir. Bu eylem, yalnızca derlemenin kapsamında kullanılabilir.|  
-|`dclRequestOptional`|Çağıran, isteğe bağlı (çalıştırmak için gerekli değildir) için ek izinler isteyebilir. Bu istek özel olarak istenen tüm izinlerin dolaylı olarak reddeder. Bu eylem, yalnızca derlemenin kapsamında kullanılabilir.|  
-|`dclRequestRefuse`|Çağıranın isteği yanlış izinleri verilmez. Bu eylem, yalnızca derlemenin kapsamında kullanılabilir.|  
-|`dclPrejitGrant`|Ayrılmış.|  
-|`dclPrejitDenied`|Ayrılmış.|  
-|`dclNonCasDemand`|Ayrılmış.|  
-|`dclNonCasLinkDemand`|Şu anki çağırıcı belirtilen izin verilen gereklidir.|  
-|`dclNonCasInheritance`|Ayrılmış.|  
-|`dclLinkDemandChoice`|Ayrılmış.|  
-|`dclInheritanceDemandChoice`|Ayrılmış.|  
-|`dclDemandChoice`|Ayrılmış.|  
-|`dclMaximumValue`|Ayrılmış.|  
+|`dclActionMask`|Reserved.|  
+|`dclActionNil`|Reserved.|  
+|`dclRequest`|Reserved.|  
+|`dclDemand`|All callers higher in the call stack are required to have been granted the permission specified by the current permission object.|  
+|`dclAssert`|The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource|  
+|`dclDeny`|The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.|  
+|`dclPermitOnly`|Only the resources specified by this permission object can be accessed, even if the code has been granted permission to access other resources.|  
+|`dclLinktimeCheck`|The immediate caller is required to have been granted the specified permission for a given period of time.|  
+|`dclInheritanceCheck`|The derived class inheriting another class or overriding a method is required to have been granted the specified permission.|  
+|`dclRequestMinimum`|The caller can request for the minimum permissions required for code to run. This action can only be used within the scope of the assembly.|  
+|`dclRequestOptional`|The caller can request for additional permissions that are optional (not required to run). This request implicitly refuses all other permissions not specifically requested. This action can only be used within the scope of the assembly.|  
+|`dclRequestRefuse`|The caller's request for permissions that might be misused will not be granted. This action can only be used within the scope of the assembly.|  
+|`dclPrejitGrant`|Reserved.|  
+|`dclPrejitDenied`|Reserved.|  
+|`dclNonCasDemand`|Reserved.|  
+|`dclNonCasLinkDemand`|The immediate caller is required to have been granted the specified permission.|  
+|`dclNonCasInheritance`|Reserved.|  
+|`dclLinkDemandChoice`|Reserved.|  
+|`dclInheritanceDemandChoice`|Reserved.|  
+|`dclDemandChoice`|Reserved.|  
+|`dclMaximumValue`|Reserved.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

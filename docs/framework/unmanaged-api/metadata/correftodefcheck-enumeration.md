@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: f9a80f1a-55af-4459-b095-8441aae16119
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ae87dd4538a9a8e88591f498c0ce77b51bfa852
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6c3c9b842bd823e8975661964480fd801779b2d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781615"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450126"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck Numaralandırması
-Başvurulan öğeleri kod iyileştirmek için tanımları için dönüştürülür denetim bayrakları belirtir.  
+Specifies flags to control which referenced items are converted to their definitions in order to optimize the code.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,18 +40,18 @@ typedef enum CorRefToDefCheck {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Tür başvurularını ve üye başvuruları tanımlara dönüştürülüp dönüştürülmeyeceğini belirtir. Varsayılan değer budur (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
-|`MDRefToDefAll`|Tüm başvurulan öğelerin tanımlarını dönüştürülmesi gerektiğini belirtir.|  
-|`MDRefToDefNone`|Başvurulan öğe tanımlarını dönüştürülmesi gerektiğini belirtir.|  
-|`MDTypeRefToDef`|Yalnızca tür başvurularını tür tanımlarına dönüştürülmesi gerektiğini belirtir.|  
-|`MDMemberRefToDef`|Yalnızca üye başvuruları tanımlara dönüştürülmesi gerektiğini belirtir. Diğer bir deyişle, üye başvuruları yöntemi tanımları veya alan tanımları dönüştürülmelidir.|  
+|`MDRefToDefDefault`|Specifies that type references and member references should be converted to definitions. This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefAll`|Specifies that all referenced items should be converted to definitions.|  
+|`MDRefToDefNone`|Specifies that no referenced items should be converted to definitions.|  
+|`MDTypeRefToDef`|Specifies that only type references should be converted to type definitions.|  
+|`MDMemberRefToDef`|Specifies that only member references should be converted to definitions. That is, member references should be converted to either method definitions or field definitions.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
