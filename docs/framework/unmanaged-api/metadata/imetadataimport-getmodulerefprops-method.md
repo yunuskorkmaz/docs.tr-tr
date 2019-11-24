@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be4408758db1cbf7839c12cb66ff395625925f69
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dce9b9c20cbc73c6a70a34afa6c348c23164ed9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779021"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437323"
 ---
-# <a name="imetadataimportgetmodulerefprops-method"></a><span data-ttu-id="53033-102">IMetaDataImport::GetModuleRefProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="53033-102">IMetaDataImport::GetModuleRefProps Method</span></span>
-<span data-ttu-id="53033-103">Belirtilen meta veri belirteci tarafından başvurulan modül adını alır.</span><span class="sxs-lookup"><span data-stu-id="53033-103">Gets the name of the module referenced by the specified metadata token.</span></span>  
+# <a name="imetadataimportgetmodulerefprops-method"></a><span data-ttu-id="c93c9-102">IMetaDataImport::GetModuleRefProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c93c9-102">IMetaDataImport::GetModuleRefProps Method</span></span>
+<span data-ttu-id="c93c9-103">Gets the name of the module referenced by the specified metadata token.</span><span class="sxs-lookup"><span data-stu-id="c93c9-103">Gets the name of the module referenced by the specified metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="53033-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="53033-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c93c9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c93c9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetModuleRefProps (  
@@ -38,29 +36,29 @@ HRESULT GetModuleRefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="53033-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="53033-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c93c9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c93c9-105">Parameters</span></span>  
  `mur`  
- <span data-ttu-id="53033-106">[in] Meta veri bilgilerini almak için modülüne başvuruyor ModuleRef meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="53033-106">[in] The ModuleRef metadata token that references the module to get metadata information for.</span></span>  
+ <span data-ttu-id="c93c9-106">[in] The ModuleRef metadata token that references the module to get metadata information for.</span><span class="sxs-lookup"><span data-stu-id="c93c9-106">[in] The ModuleRef metadata token that references the module to get metadata information for.</span></span>  
   
  `szName`  
- <span data-ttu-id="53033-107">[out] Modül adı tutan bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="53033-107">[out] A buffer to hold the module name.</span></span>  
+ <span data-ttu-id="c93c9-107">[out] A buffer to hold the module name.</span><span class="sxs-lookup"><span data-stu-id="c93c9-107">[out] A buffer to hold the module name.</span></span>  
   
  `cchName`  
- <span data-ttu-id="53033-108">[in] İstenen boyutu `szName` geniş karakter.</span><span class="sxs-lookup"><span data-stu-id="53033-108">[in] The requested size of `szName` in wide characters.</span></span>  
+ <span data-ttu-id="c93c9-108">[in] The requested size of `szName` in wide characters.</span><span class="sxs-lookup"><span data-stu-id="c93c9-108">[in] The requested size of `szName` in wide characters.</span></span>  
   
  `pchName`  
- <span data-ttu-id="53033-109">[out] Döndürülen boyutunu `szName` geniş karakter.</span><span class="sxs-lookup"><span data-stu-id="53033-109">[out] The returned size of `szName` in wide characters.</span></span>  
+ <span data-ttu-id="c93c9-109">[out] The returned size of `szName` in wide characters.</span><span class="sxs-lookup"><span data-stu-id="c93c9-109">[out] The returned size of `szName` in wide characters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="53033-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="53033-110">Requirements</span></span>  
- <span data-ttu-id="53033-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="53033-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c93c9-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c93c9-110">Requirements</span></span>  
+ <span data-ttu-id="c93c9-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c93c9-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="53033-112">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="53033-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c93c9-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c93c9-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="53033-113">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="53033-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c93c9-113">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c93c9-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="53033-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53033-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c93c9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c93c9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="53033-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="53033-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c93c9-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c93c9-115">See also</span></span>
 
-- [<span data-ttu-id="53033-116">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="53033-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="53033-117">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="53033-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="c93c9-116">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c93c9-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="c93c9-117">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c93c9-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

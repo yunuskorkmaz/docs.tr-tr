@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: bca92682-ee1e-467f-8fb0-d8d4617f82fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c04ca1d56f3e93c77f335218bb534f890e9053d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e441d4ff39632d9381e445ee99249d04539ad87
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776615"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427879"
 ---
-# <a name="isymunmanagedwriterremaptoken-method"></a><span data-ttu-id="4245b-102">ISymUnmanagedWriter::RemapToken Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4245b-102">ISymUnmanagedWriter::RemapToken Method</span></span>
-<span data-ttu-id="4245b-103">Sembol yazıcı meta veriler gösteriliyordu gibi meta veri belirteci eşleştirilmiş bildirir.</span><span class="sxs-lookup"><span data-stu-id="4245b-103">Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted.</span></span> <span data-ttu-id="4245b-104">Sembol yazıcı, sembol deposundaki eski belirteç saklanan güncelleştirmek ya da yeni bir değer veya saklı belirteciyle okuma aşamasında yeniden eşlemek karşılık gelen sembol Okuyucu için haritada kaydetmelisiniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="4245b-104">If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.</span></span>  
+# <a name="isymunmanagedwriterremaptoken-method"></a><span data-ttu-id="cdb87-102">ISymUnmanagedWriter::RemapToken Yöntemi</span><span class="sxs-lookup"><span data-stu-id="cdb87-102">ISymUnmanagedWriter::RemapToken Method</span></span>
+<span data-ttu-id="cdb87-103">Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted.</span><span class="sxs-lookup"><span data-stu-id="cdb87-103">Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted.</span></span> <span data-ttu-id="cdb87-104">If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.</span><span class="sxs-lookup"><span data-stu-id="cdb87-104">If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4245b-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4245b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cdb87-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cdb87-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT RemapToken(  
@@ -35,19 +33,19 @@ HRESULT RemapToken(
     [in] mdToken  newToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4245b-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4245b-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cdb87-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cdb87-106">Parameters</span></span>  
  `oldToken`  
- <span data-ttu-id="4245b-107">[in] Eşlendi meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="4245b-107">[in] The metadata token that was remapped.</span></span>  
+ <span data-ttu-id="cdb87-107">[in] The metadata token that was remapped.</span><span class="sxs-lookup"><span data-stu-id="cdb87-107">[in] The metadata token that was remapped.</span></span>  
   
  `newToken`  
- <span data-ttu-id="4245b-108">[in] Hangi yeni meta veri belirteci `oldToken` eşlendi.</span><span class="sxs-lookup"><span data-stu-id="4245b-108">[in] The new metadata token to which `oldToken` was remapped.</span></span>  
+ <span data-ttu-id="cdb87-108">[in] The new metadata token to which `oldToken` was remapped.</span><span class="sxs-lookup"><span data-stu-id="cdb87-108">[in] The new metadata token to which `oldToken` was remapped.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4245b-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="4245b-109">Return Value</span></span>  
- <span data-ttu-id="4245b-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="4245b-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cdb87-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="cdb87-109">Return Value</span></span>  
+ <span data-ttu-id="cdb87-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="cdb87-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4245b-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4245b-111">Requirements</span></span>  
- <span data-ttu-id="4245b-112">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4245b-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cdb87-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cdb87-111">Requirements</span></span>  
+ <span data-ttu-id="cdb87-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="cdb87-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4245b-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4245b-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cdb87-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cdb87-113">See also</span></span>
 
-- [<span data-ttu-id="4245b-114">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4245b-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="cdb87-114">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cdb87-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

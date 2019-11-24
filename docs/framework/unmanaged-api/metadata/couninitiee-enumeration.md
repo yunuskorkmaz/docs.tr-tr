@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: c42baa79-f469-4330-95a2-baf7f021c2fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3d8189365a73e85c0b9f5efb2aa03074385a3fb8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57054bdb7e3b991bc81985c02ec72a4110f31d60
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750739"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436440"
 ---
-# <a name="couninitiee-enumeration"></a><span data-ttu-id="4da62-102">COUNINITIEE Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="4da62-102">COUNINITIEE Enumeration</span></span>
-<span data-ttu-id="4da62-103">Tarafından kullanılan sabitlerini belirtir [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) ortak dil çalışma zamanı başlatılırken.</span><span class="sxs-lookup"><span data-stu-id="4da62-103">Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.</span></span>  
+# <a name="couninitiee-enumeration"></a><span data-ttu-id="f5eb6-102">COUNINITIEE Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="f5eb6-102">COUNINITIEE Enumeration</span></span>
+<span data-ttu-id="f5eb6-103">Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.</span><span class="sxs-lookup"><span data-stu-id="f5eb6-103">Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4da62-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4da62-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f5eb6-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f5eb6-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum tagCOUNINITEE  
@@ -36,22 +34,22 @@ typedef enum tagCOUNINITEE
 } COUNINITIEE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4da62-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="4da62-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f5eb6-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="f5eb6-105">Members</span></span>  
   
-|<span data-ttu-id="4da62-106">Üye</span><span class="sxs-lookup"><span data-stu-id="4da62-106">Member</span></span>|<span data-ttu-id="4da62-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4da62-107">Description</span></span>|  
+|<span data-ttu-id="f5eb6-106">Üye</span><span class="sxs-lookup"><span data-stu-id="f5eb6-106">Member</span></span>|<span data-ttu-id="f5eb6-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f5eb6-107">Description</span></span>|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|<span data-ttu-id="4da62-108">Varsayılan başlatmasını geri modunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="4da62-108">Indicates default uninitialization mode.</span></span>|  
-|`COUNINITEE_DLL`|<span data-ttu-id="4da62-109">Bir derlemeyi kaldırılması için başlatmasını geri modunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="4da62-109">Indicates uninitialization mode for unloading an assembly.</span></span>|  
+|`COUNINITEE_DEFAULT`|<span data-ttu-id="f5eb6-108">Indicates default uninitialization mode.</span><span class="sxs-lookup"><span data-stu-id="f5eb6-108">Indicates default uninitialization mode.</span></span>|  
+|`COUNINITEE_DLL`|<span data-ttu-id="f5eb6-109">Indicates uninitialization mode for unloading an assembly.</span><span class="sxs-lookup"><span data-stu-id="f5eb6-109">Indicates uninitialization mode for unloading an assembly.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4da62-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4da62-110">Requirements</span></span>  
- <span data-ttu-id="4da62-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4da62-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f5eb6-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f5eb6-110">Requirements</span></span>  
+ <span data-ttu-id="f5eb6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f5eb6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4da62-112">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="4da62-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f5eb6-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f5eb6-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4da62-113">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="4da62-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f5eb6-113">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f5eb6-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4da62-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4da62-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f5eb6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f5eb6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4da62-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4da62-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f5eb6-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f5eb6-115">See also</span></span>
 
-- [<span data-ttu-id="4da62-116">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="4da62-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="f5eb6-116">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="f5eb6-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

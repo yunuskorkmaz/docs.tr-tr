@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cf064bac-9a9f-41c5-9e1d-108ff7af3afe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ba35cd678d88389854ca2e866020ea3a9364c923
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6966d0ad2fefd8401b19d8e8dcf7776799a066b2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777666"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432558"
 ---
-# <a name="imetadataemitdefineevent-method"></a><span data-ttu-id="d95d7-102">IMetaDataEmit::DefineEvent Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d95d7-102">IMetaDataEmit::DefineEvent Method</span></span>
-<span data-ttu-id="d95d7-103">Belirtilen meta verileri imza ile bir olay için bir tanım oluşturur ve bu olay tanımı için bir belirteç alır.</span><span class="sxs-lookup"><span data-stu-id="d95d7-103">Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.</span></span>  
+# <a name="imetadataemitdefineevent-method"></a><span data-ttu-id="a09de-102">IMetaDataEmit::DefineEvent Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a09de-102">IMetaDataEmit::DefineEvent Method</span></span>
+<span data-ttu-id="a09de-103">Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.</span><span class="sxs-lookup"><span data-stu-id="a09de-103">Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d95d7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d95d7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a09de-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a09de-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineEvent (   
@@ -43,44 +41,44 @@ HRESULT DefineEvent (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d95d7-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d95d7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a09de-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a09de-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="d95d7-106">[in] Hedef sınıf veya arabirim için belirteç.</span><span class="sxs-lookup"><span data-stu-id="d95d7-106">[in] The token for the target class or interface.</span></span> <span data-ttu-id="d95d7-107">Bu bir `mdTypeDef` veya `mdTypeDefNil` belirteci.</span><span class="sxs-lookup"><span data-stu-id="d95d7-107">This is either a `mdTypeDef` or `mdTypeDefNil` token.</span></span>  
+ <span data-ttu-id="a09de-106">[in] The token for the target class or interface.</span><span class="sxs-lookup"><span data-stu-id="a09de-106">[in] The token for the target class or interface.</span></span> <span data-ttu-id="a09de-107">This is either a `mdTypeDef` or `mdTypeDefNil` token.</span><span class="sxs-lookup"><span data-stu-id="a09de-107">This is either a `mdTypeDef` or `mdTypeDefNil` token.</span></span>  
   
  `szEvent`  
- <span data-ttu-id="d95d7-108">[in] Olayın adı.</span><span class="sxs-lookup"><span data-stu-id="d95d7-108">[in] The name of the event.</span></span>  
+ <span data-ttu-id="a09de-108">[in] The name of the event.</span><span class="sxs-lookup"><span data-stu-id="a09de-108">[in] The name of the event.</span></span>  
   
  `dwEventFlags`  
- <span data-ttu-id="d95d7-109">[in] Olay bayrakları.</span><span class="sxs-lookup"><span data-stu-id="d95d7-109">[in] Event flags.</span></span>  
+ <span data-ttu-id="a09de-109">[in] Event flags.</span><span class="sxs-lookup"><span data-stu-id="a09de-109">[in] Event flags.</span></span>  
   
  `tkEventType`  
- <span data-ttu-id="d95d7-110">[in] Olay sınıfı için belirteci.</span><span class="sxs-lookup"><span data-stu-id="d95d7-110">[in] The token for the event class.</span></span> <span data-ttu-id="d95d7-111">Bu bir `mdTypeDef`, `mdTypeRef`, veya `mdTokenNil` belirteci.</span><span class="sxs-lookup"><span data-stu-id="d95d7-111">This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.</span></span>  
+ <span data-ttu-id="a09de-110">[in] The token for the event class.</span><span class="sxs-lookup"><span data-stu-id="a09de-110">[in] The token for the event class.</span></span> <span data-ttu-id="a09de-111">This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.</span><span class="sxs-lookup"><span data-stu-id="a09de-111">This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.</span></span>  
   
  `mdAddOn`  
- <span data-ttu-id="d95d7-112">[in] Olay ya da null için abone olmak için kullanılan yöntem.</span><span class="sxs-lookup"><span data-stu-id="d95d7-112">[in] The method used to subscribe to the event, or null.</span></span>  
+ <span data-ttu-id="a09de-112">[in] The method used to subscribe to the event, or null.</span><span class="sxs-lookup"><span data-stu-id="a09de-112">[in] The method used to subscribe to the event, or null.</span></span>  
   
  `mdRemoveOn`  
- <span data-ttu-id="d95d7-113">[in] Olay ya da null için aboneliğinizi iptal etmek için kullanılan yöntem.</span><span class="sxs-lookup"><span data-stu-id="d95d7-113">[in] The method used to unsubscribe to the event, or null.</span></span>  
+ <span data-ttu-id="a09de-113">[in] The method used to unsubscribe to the event, or null.</span><span class="sxs-lookup"><span data-stu-id="a09de-113">[in] The method used to unsubscribe to the event, or null.</span></span>  
   
  `mdFire`  
- <span data-ttu-id="d95d7-114">[in] (Bir türetilmiş sınıf tarafından) olay oluşturmak için kullanılan yöntem.</span><span class="sxs-lookup"><span data-stu-id="d95d7-114">[in] The method used (by a derived class) to raise the event.</span></span>  
+ <span data-ttu-id="a09de-114">[in] The method used (by a derived class) to raise the event.</span><span class="sxs-lookup"><span data-stu-id="a09de-114">[in] The method used (by a derived class) to raise the event.</span></span>  
   
  `rmdOtherMethods[]`  
- <span data-ttu-id="d95d7-115">[in] Olay ile ilişkili diğer yöntemleri için belirteçleri dizisi.</span><span class="sxs-lookup"><span data-stu-id="d95d7-115">[in] An array of tokens for other methods associated with the event.</span></span> <span data-ttu-id="d95d7-116">Dizi ile sonlandırılmış bir `mdMethodDefNil` belirteci.</span><span class="sxs-lookup"><span data-stu-id="d95d7-116">The array is terminated with a `mdMethodDefNil` token.</span></span>  
+ <span data-ttu-id="a09de-115">[in] An array of tokens for other methods associated with the event.</span><span class="sxs-lookup"><span data-stu-id="a09de-115">[in] An array of tokens for other methods associated with the event.</span></span> <span data-ttu-id="a09de-116">The array is terminated with a `mdMethodDefNil` token.</span><span class="sxs-lookup"><span data-stu-id="a09de-116">The array is terminated with a `mdMethodDefNil` token.</span></span>  
   
  `pmdEvent`  
- <span data-ttu-id="d95d7-117">[out] Olaya atanan meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="d95d7-117">[out] The metadata token assigned to the event.</span></span>  
+ <span data-ttu-id="a09de-117">[out] The metadata token assigned to the event.</span><span class="sxs-lookup"><span data-stu-id="a09de-117">[out] The metadata token assigned to the event.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d95d7-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d95d7-118">Requirements</span></span>  
- <span data-ttu-id="d95d7-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d95d7-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a09de-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a09de-118">Requirements</span></span>  
+ <span data-ttu-id="a09de-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a09de-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d95d7-120">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="d95d7-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a09de-120">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a09de-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d95d7-121">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="d95d7-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a09de-121">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a09de-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d95d7-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d95d7-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a09de-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a09de-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d95d7-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d95d7-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a09de-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a09de-123">See also</span></span>
 
-- [<span data-ttu-id="d95d7-124">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d95d7-124">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="d95d7-125">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d95d7-125">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="a09de-124">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a09de-124">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="a09de-125">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a09de-125">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
