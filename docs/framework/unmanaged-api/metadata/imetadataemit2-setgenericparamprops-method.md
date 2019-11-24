@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cd93a48d-1fed-4706-bec6-a05dc3b64fbd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0c9f104329818f47597e8735389e5e6205ca617
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7a93bbe0d7a9d9e6ff7505bbc215efa79176ad1f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777110"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440441"
 ---
-# <a name="imetadataemit2setgenericparamprops-method"></a><span data-ttu-id="c7380-102">IMetaDataEmit2::SetGenericParamProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c7380-102">IMetaDataEmit2::SetGenericParamProps Method</span></span>
-<span data-ttu-id="c7380-103">Belirtilen belirteç tarafından başvurulan genel parametre tanımı için özellik değerlerini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="c7380-103">Sets property values for the generic parameter definition referenced by the specified token.</span></span>  
+# <a name="imetadataemit2setgenericparamprops-method"></a><span data-ttu-id="1bbb8-102">IMetaDataEmit2::SetGenericParamProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1bbb8-102">IMetaDataEmit2::SetGenericParamProps Method</span></span>
+<span data-ttu-id="1bbb8-103">Sets property values for the generic parameter definition referenced by the specified token.</span><span class="sxs-lookup"><span data-stu-id="1bbb8-103">Sets property values for the generic parameter definition referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c7380-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c7380-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1bbb8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1bbb8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetGenericParamProps (  
@@ -39,32 +37,32 @@ HRESULT SetGenericParamProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c7380-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c7380-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1bbb8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1bbb8-105">Parameters</span></span>  
  `gp`  
- <span data-ttu-id="c7380-106">[in] Genel parametre tanımı için olan değerleri ayarlamak belirteç.</span><span class="sxs-lookup"><span data-stu-id="c7380-106">[in] The token for the generic parameter definition for which to set values.</span></span>  
+ <span data-ttu-id="1bbb8-106">[in] The token for the generic parameter definition for which to set values.</span><span class="sxs-lookup"><span data-stu-id="1bbb8-106">[in] The token for the generic parameter definition for which to set values.</span></span>  
   
  `dwParamFlags`  
- <span data-ttu-id="c7380-107">[in] Değerini [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) türünü genel parametresi için açıklayan sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="c7380-107">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span></span>  
+ <span data-ttu-id="1bbb8-107">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span><span class="sxs-lookup"><span data-stu-id="1bbb8-107">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span></span>  
   
  `szName`  
- <span data-ttu-id="c7380-108">[in] İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="c7380-108">[in] Optional.</span></span> <span data-ttu-id="c7380-109">Değerleri ayarlamak istediğiniz parametrenin adı.</span><span class="sxs-lookup"><span data-stu-id="c7380-109">The name of the parameter for which to set values.</span></span>  
+ <span data-ttu-id="1bbb8-108">[in] Optional.</span><span class="sxs-lookup"><span data-stu-id="1bbb8-108">[in] Optional.</span></span> <span data-ttu-id="1bbb8-109">The name of the parameter for which to set values.</span><span class="sxs-lookup"><span data-stu-id="1bbb8-109">The name of the parameter for which to set values.</span></span>  
   
  `reserved`  
- <span data-ttu-id="c7380-110">[in] Sonra genişletilebilmek için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="c7380-110">[in] Reserved for future extensibility.</span></span>  
+ <span data-ttu-id="1bbb8-110">[in] Reserved for future extensibility.</span><span class="sxs-lookup"><span data-stu-id="1bbb8-110">[in] Reserved for future extensibility.</span></span>  
   
  `rtkConstraints`  
- <span data-ttu-id="c7380-111">[in] İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="c7380-111">[in] Optional.</span></span> <span data-ttu-id="c7380-112">Tür kısıtlamaları Sıfırla sonlandırılmış dizisi.</span><span class="sxs-lookup"><span data-stu-id="c7380-112">A zero-terminated array of type constraints.</span></span> <span data-ttu-id="c7380-113">Dizi üyeleri olmalıdır bir `mdTypeDef`, `mdTypeRef`, veya `mdTypeSpec` meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="c7380-113">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span></span>  
+ <span data-ttu-id="1bbb8-111">[in] Optional.</span><span class="sxs-lookup"><span data-stu-id="1bbb8-111">[in] Optional.</span></span> <span data-ttu-id="1bbb8-112">A zero-terminated array of type constraints.</span><span class="sxs-lookup"><span data-stu-id="1bbb8-112">A zero-terminated array of type constraints.</span></span> <span data-ttu-id="1bbb8-113">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span><span class="sxs-lookup"><span data-stu-id="1bbb8-113">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c7380-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c7380-114">Requirements</span></span>  
- <span data-ttu-id="c7380-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c7380-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1bbb8-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1bbb8-114">Requirements</span></span>  
+ <span data-ttu-id="1bbb8-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1bbb8-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c7380-116">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="c7380-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="1bbb8-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1bbb8-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c7380-117">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="c7380-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="1bbb8-117">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1bbb8-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c7380-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7380-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1bbb8-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1bbb8-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c7380-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c7380-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1bbb8-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1bbb8-119">See also</span></span>
 
-- [<span data-ttu-id="c7380-120">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c7380-120">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="c7380-121">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c7380-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="1bbb8-120">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1bbb8-120">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="1bbb8-121">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1bbb8-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

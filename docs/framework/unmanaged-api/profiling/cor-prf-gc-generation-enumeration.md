@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: d6ece160-26ad-4d39-abd7-05acd6f78c48
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74e70f58600205d44a9ba052981b2cc67b3a44ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d01b864be231e5b0a3fd72dc2f3636a87c8cae83
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753814"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448634"
 ---
-# <a name="corprfgcgeneration-enumeration"></a><span data-ttu-id="85797-102">COR_PRF_GC_GENERATION Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="85797-102">COR_PRF_GC_GENERATION Enumeration</span></span>
-<span data-ttu-id="85797-103">Bir çöp toplama nesil tanımlar.</span><span class="sxs-lookup"><span data-stu-id="85797-103">Identifies a garbage-collection generation.</span></span>  
+# <a name="cor_prf_gc_generation-enumeration"></a><span data-ttu-id="beb6f-102">COR_PRF_GC_GENERATION Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="beb6f-102">COR_PRF_GC_GENERATION Enumeration</span></span>
+<span data-ttu-id="beb6f-103">Identifies a garbage-collection generation.</span><span class="sxs-lookup"><span data-stu-id="beb6f-103">Identifies a garbage-collection generation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="85797-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="85797-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="beb6f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="beb6f-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -37,31 +35,31 @@ typedef enum {
 } COR_PRF_GC_GENERATION;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="85797-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="85797-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="beb6f-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="beb6f-105">Members</span></span>  
   
-|<span data-ttu-id="85797-106">Üye</span><span class="sxs-lookup"><span data-stu-id="85797-106">Member</span></span>|<span data-ttu-id="85797-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="85797-107">Description</span></span>|  
+|<span data-ttu-id="beb6f-106">Üye</span><span class="sxs-lookup"><span data-stu-id="beb6f-106">Member</span></span>|<span data-ttu-id="beb6f-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="beb6f-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_GEN_0`|<span data-ttu-id="85797-108">Nesne, nesil 0 ' depolanır.</span><span class="sxs-lookup"><span data-stu-id="85797-108">The object is stored as generation 0.</span></span>|  
-|`COR_PRF_GC_GEN_1`|<span data-ttu-id="85797-109">Nesne, 1. nesil depolanır.</span><span class="sxs-lookup"><span data-stu-id="85797-109">The object is stored as generation 1.</span></span>|  
-|`COR_PRF_GC_GEN_2`|<span data-ttu-id="85797-110">Nesne, nesil 2'olarak depolanır.</span><span class="sxs-lookup"><span data-stu-id="85797-110">The object is stored as generation 2.</span></span>|  
-|`COR_PRF_GC_LARGE_OBJECT_HEAP`|<span data-ttu-id="85797-111">Nesne büyük nesne yığınında depolanır.</span><span class="sxs-lookup"><span data-stu-id="85797-111">The object is stored in the large-object heap.</span></span>|  
+|`COR_PRF_GC_GEN_0`|<span data-ttu-id="beb6f-108">The object is stored as generation 0.</span><span class="sxs-lookup"><span data-stu-id="beb6f-108">The object is stored as generation 0.</span></span>|  
+|`COR_PRF_GC_GEN_1`|<span data-ttu-id="beb6f-109">The object is stored as generation 1.</span><span class="sxs-lookup"><span data-stu-id="beb6f-109">The object is stored as generation 1.</span></span>|  
+|`COR_PRF_GC_GEN_2`|<span data-ttu-id="beb6f-110">The object is stored as generation 2.</span><span class="sxs-lookup"><span data-stu-id="beb6f-110">The object is stored as generation 2.</span></span>|  
+|`COR_PRF_GC_LARGE_OBJECT_HEAP`|<span data-ttu-id="beb6f-111">The object is stored in the large-object heap.</span><span class="sxs-lookup"><span data-stu-id="beb6f-111">The object is stored in the large-object heap.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="85797-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="85797-112">Remarks</span></span>  
- <span data-ttu-id="85797-113">Çöp toplayıcı, üzerinde yaş tabanlı nesiller halinde bölme nesneler tarafından bellek yönetim performansını artırır.</span><span class="sxs-lookup"><span data-stu-id="85797-113">The garbage collector improves memory management performance by dividing objects into generations based on age.</span></span> <span data-ttu-id="85797-114">Çöp toplayıcı, şu anda üç nesil, 0, 1 ve 2 yanı sıra büyük nesneler için kullanılan özel yığının kesimi numaralı kullanır.</span><span class="sxs-lookup"><span data-stu-id="85797-114">The garbage collector currently uses three generations, numbered 0, 1, and 2, plus a special heap segment that is used for large objects.</span></span> <span data-ttu-id="85797-115">Nesneleri belirli bir değere boyutu büyüktür büyük nesne yığınında depolanır.</span><span class="sxs-lookup"><span data-stu-id="85797-115">Objects whose size is larger than a particular value are stored in the large-object heap.</span></span> <span data-ttu-id="85797-116">Diğer ayrılmış nesneleri nesil 0 ait kullanıma başlatın.</span><span class="sxs-lookup"><span data-stu-id="85797-116">Other allocated objects start out belonging to generation 0.</span></span> <span data-ttu-id="85797-117">Nesil 0 çöp toplama gerçekleştikten sonra mevcut tüm nesneler, kuşak 1 yükseltilir.</span><span class="sxs-lookup"><span data-stu-id="85797-117">All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1.</span></span> <span data-ttu-id="85797-118">Nesil 1 çöp toplama gerçekleştikten sonra mevcut nesneleri 2. nesle taşıyın.</span><span class="sxs-lookup"><span data-stu-id="85797-118">Objects that exist after garbage collection occurs in generation 1 move into generation 2.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="beb6f-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="beb6f-112">Remarks</span></span>  
+ <span data-ttu-id="beb6f-113">The garbage collector improves memory management performance by dividing objects into generations based on age.</span><span class="sxs-lookup"><span data-stu-id="beb6f-113">The garbage collector improves memory management performance by dividing objects into generations based on age.</span></span> <span data-ttu-id="beb6f-114">The garbage collector currently uses three generations, numbered 0, 1, and 2, plus a special heap segment that is used for large objects.</span><span class="sxs-lookup"><span data-stu-id="beb6f-114">The garbage collector currently uses three generations, numbered 0, 1, and 2, plus a special heap segment that is used for large objects.</span></span> <span data-ttu-id="beb6f-115">Objects whose size is larger than a particular value are stored in the large-object heap.</span><span class="sxs-lookup"><span data-stu-id="beb6f-115">Objects whose size is larger than a particular value are stored in the large-object heap.</span></span> <span data-ttu-id="beb6f-116">Other allocated objects start out belonging to generation 0.</span><span class="sxs-lookup"><span data-stu-id="beb6f-116">Other allocated objects start out belonging to generation 0.</span></span> <span data-ttu-id="beb6f-117">All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1.</span><span class="sxs-lookup"><span data-stu-id="beb6f-117">All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1.</span></span> <span data-ttu-id="beb6f-118">Objects that exist after garbage collection occurs in generation 1 move into generation 2.</span><span class="sxs-lookup"><span data-stu-id="beb6f-118">Objects that exist after garbage collection occurs in generation 1 move into generation 2.</span></span>  
   
- <span data-ttu-id="85797-119">Nesiller kullanımı, çöp toplayıcı herhangi bir anda yalnızca bir alt kümesi ayrılan nesnelerin ile çalışmak olduğu anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="85797-119">The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.</span></span>  
+ <span data-ttu-id="beb6f-119">The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.</span><span class="sxs-lookup"><span data-stu-id="beb6f-119">The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.</span></span>  
   
- <span data-ttu-id="85797-120">`COR_PRF_GC_GENERATION` Numaralandırması tarafından kullanılan [cor_prf_gc_generatıon_range](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) yapısı.</span><span class="sxs-lookup"><span data-stu-id="85797-120">The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure.</span></span>  
+ <span data-ttu-id="beb6f-120">The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure.</span><span class="sxs-lookup"><span data-stu-id="beb6f-120">The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="85797-121">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="85797-121">Requirements</span></span>  
- <span data-ttu-id="85797-122">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="85797-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="beb6f-121">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="beb6f-121">Requirements</span></span>  
+ <span data-ttu-id="beb6f-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="beb6f-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="85797-123">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="85797-123">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="beb6f-123">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="beb6f-123">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="85797-124">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="85797-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="beb6f-124">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="beb6f-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="85797-125">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="85797-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="beb6f-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="beb6f-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="85797-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="85797-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="beb6f-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="beb6f-126">See also</span></span>
 
-- [<span data-ttu-id="85797-127">Profil Oluşturma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="85797-127">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="beb6f-127">Profil Oluşturma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="beb6f-127">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

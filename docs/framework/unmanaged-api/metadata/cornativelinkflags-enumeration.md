@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8027df7c-cfad-4724-bda0-7538d9519070
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6be71878ba354ebe53b4b8b9b40db3222ec828f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1362efbf518310240ce665badc93810d1c0b9b89
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781731"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450195"
 ---
-# <a name="cornativelinkflags-enumeration"></a><span data-ttu-id="cd181-102">CorNativeLinkFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="cd181-102">CorNativeLinkFlags Enumeration</span></span>
-<span data-ttu-id="cd181-103">Bağlayıcı tarafından yerel kod bağlanırken kullanılan bayrak değerleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="cd181-103">Provides flag values used by the linker when linking native code.</span></span>  
+# <a name="cornativelinkflags-enumeration"></a><span data-ttu-id="abf85-102">CorNativeLinkFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="abf85-102">CorNativeLinkFlags Enumeration</span></span>
+<span data-ttu-id="abf85-103">Provides flag values used by the linker when linking native code.</span><span class="sxs-lookup"><span data-stu-id="abf85-103">Provides flag values used by the linker when linking native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cd181-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cd181-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="abf85-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="abf85-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum  
@@ -38,24 +36,24 @@ typedef enum
 } CorNativeLinkFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="cd181-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="cd181-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="abf85-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="abf85-105">Members</span></span>  
   
-|<span data-ttu-id="cd181-106">Üye</span><span class="sxs-lookup"><span data-stu-id="cd181-106">Member</span></span>|<span data-ttu-id="cd181-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cd181-107">Description</span></span>|  
+|<span data-ttu-id="abf85-106">Üye</span><span class="sxs-lookup"><span data-stu-id="abf85-106">Member</span></span>|<span data-ttu-id="abf85-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="abf85-107">Description</span></span>|  
 |------------|-----------------|  
-|`nlfNone`|<span data-ttu-id="cd181-108">Hiçbir bayrakları belirtir.</span><span class="sxs-lookup"><span data-stu-id="cd181-108">Indicates no flags.</span></span>|  
-|`nlfLastError`|<span data-ttu-id="cd181-109">Belirten bir `setLastError` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="cd181-109">Indicates a `setLastError` keyword.</span></span>|  
-|`nlfNoMangle`|<span data-ttu-id="cd181-110">Belirten bir `nomangle` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="cd181-110">Indicates a `nomangle` keyword.</span></span>|  
-|`nlfMaxValue`|<span data-ttu-id="cd181-111">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="cd181-111">Not used.</span></span>|  
+|`nlfNone`|<span data-ttu-id="abf85-108">Indicates no flags.</span><span class="sxs-lookup"><span data-stu-id="abf85-108">Indicates no flags.</span></span>|  
+|`nlfLastError`|<span data-ttu-id="abf85-109">Indicates a `setLastError` keyword.</span><span class="sxs-lookup"><span data-stu-id="abf85-109">Indicates a `setLastError` keyword.</span></span>|  
+|`nlfNoMangle`|<span data-ttu-id="abf85-110">Indicates a `nomangle` keyword.</span><span class="sxs-lookup"><span data-stu-id="abf85-110">Indicates a `nomangle` keyword.</span></span>|  
+|`nlfMaxValue`|<span data-ttu-id="abf85-111">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="abf85-111">Not used.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="cd181-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cd181-112">Requirements</span></span>  
- <span data-ttu-id="cd181-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cd181-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="abf85-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="abf85-112">Requirements</span></span>  
+ <span data-ttu-id="abf85-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="abf85-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cd181-114">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="cd181-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="abf85-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="abf85-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="cd181-115">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="cd181-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="abf85-115">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="abf85-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="cd181-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd181-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="abf85-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="abf85-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cd181-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cd181-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="abf85-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="abf85-117">See also</span></span>
 
-- [<span data-ttu-id="cd181-118">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="cd181-118">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="abf85-118">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="abf85-118">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

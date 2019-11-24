@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8cc3b0c3-d97d-4f71-9e7d-ef2a92b4959a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 187a5e673457d2d1eebb60cc1795e9885426c6d3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8e9e08ac903423b2e121f22cc9e43a660ccfac7b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781950"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450090"
 ---
-# <a name="imetadataimportenummethods-method"></a><span data-ttu-id="278c9-102">IMetaDataImport::EnumMethods Yöntemi</span><span class="sxs-lookup"><span data-stu-id="278c9-102">IMetaDataImport::EnumMethods Method</span></span>
-<span data-ttu-id="278c9-103">Belirtilen türün yöntemlerini temsil eden MethodDef belirteçleri numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="278c9-103">Enumerates MethodDef tokens representing methods of the specified type.</span></span>  
+# <a name="imetadataimportenummethods-method"></a><span data-ttu-id="6d33c-102">IMetaDataImport::EnumMethods Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6d33c-102">IMetaDataImport::EnumMethods Method</span></span>
+<span data-ttu-id="6d33c-103">Enumerates MethodDef tokens representing methods of the specified type.</span><span class="sxs-lookup"><span data-stu-id="6d33c-103">Enumerates MethodDef tokens representing methods of the specified type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="278c9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="278c9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6d33c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6d33c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumMethods (  
@@ -39,39 +37,39 @@ HRESULT EnumMethods (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="278c9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="278c9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6d33c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6d33c-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="278c9-106">[out içinde] Numaralandırıcı bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="278c9-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="278c9-107">Bu, bu yöntemin ilk çağrı için NULL olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="278c9-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="6d33c-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="6d33c-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="6d33c-107">This must be NULL for the first call of this method.</span><span class="sxs-lookup"><span data-stu-id="6d33c-107">This must be NULL for the first call of this method.</span></span>  
   
  `cl`  
- <span data-ttu-id="278c9-108">[in] Numaralandırma için yöntemlerle türünü temsil eden bir tür tanımı belirteci.</span><span class="sxs-lookup"><span data-stu-id="278c9-108">[in] A TypeDef token representing the type with the methods to enumerate.</span></span>  
+ <span data-ttu-id="6d33c-108">[in] A TypeDef token representing the type with the methods to enumerate.</span><span class="sxs-lookup"><span data-stu-id="6d33c-108">[in] A TypeDef token representing the type with the methods to enumerate.</span></span>  
   
  `rMethods`  
- <span data-ttu-id="278c9-109">[out] MethodDef simgeleri depolamak için dizi.</span><span class="sxs-lookup"><span data-stu-id="278c9-109">[out] The array to store the MethodDef tokens.</span></span>  
+ <span data-ttu-id="6d33c-109">[out] The array to store the MethodDef tokens.</span><span class="sxs-lookup"><span data-stu-id="6d33c-109">[out] The array to store the MethodDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="278c9-110">[in] En büyük boyutunu MethodDef `rMethods` dizisi.</span><span class="sxs-lookup"><span data-stu-id="278c9-110">[in] The maximum size of the MethodDef `rMethods` array.</span></span>  
+ <span data-ttu-id="6d33c-110">[in] The maximum size of the MethodDef `rMethods` array.</span><span class="sxs-lookup"><span data-stu-id="6d33c-110">[in] The maximum size of the MethodDef `rMethods` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="278c9-111">[out] Döndürülen MethodDef belirteçleri sayısı `rMethods`.</span><span class="sxs-lookup"><span data-stu-id="278c9-111">[out] The number of MethodDef tokens returned in `rMethods`.</span></span>  
+ <span data-ttu-id="6d33c-111">[out] The number of MethodDef tokens returned in `rMethods`.</span><span class="sxs-lookup"><span data-stu-id="6d33c-111">[out] The number of MethodDef tokens returned in `rMethods`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="278c9-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="278c9-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6d33c-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="6d33c-112">Return Value</span></span>  
   
-|<span data-ttu-id="278c9-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="278c9-113">HRESULT</span></span>|<span data-ttu-id="278c9-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="278c9-114">Description</span></span>|  
+|<span data-ttu-id="6d33c-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="6d33c-113">HRESULT</span></span>|<span data-ttu-id="6d33c-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6d33c-114">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="278c9-115">`EnumMethods` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="278c9-115">`EnumMethods` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="278c9-116">Numaralandırılacak hiçbir MethodDef belirteçleri vardır.</span><span class="sxs-lookup"><span data-stu-id="278c9-116">There are no MethodDef tokens to enumerate.</span></span> <span data-ttu-id="278c9-117">Bu durumda, `pcTokens` sıfırdır.</span><span class="sxs-lookup"><span data-stu-id="278c9-117">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="6d33c-115">`EnumMethods` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="6d33c-115">`EnumMethods` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="6d33c-116">There are no MethodDef tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="6d33c-116">There are no MethodDef tokens to enumerate.</span></span> <span data-ttu-id="6d33c-117">In that case, `pcTokens` is zero.</span><span class="sxs-lookup"><span data-stu-id="6d33c-117">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="278c9-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="278c9-118">Requirements</span></span>  
- <span data-ttu-id="278c9-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="278c9-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6d33c-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6d33c-118">Requirements</span></span>  
+ <span data-ttu-id="6d33c-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6d33c-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="278c9-120">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="278c9-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6d33c-120">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6d33c-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="278c9-121">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="278c9-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6d33c-121">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6d33c-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="278c9-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="278c9-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6d33c-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d33c-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="278c9-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="278c9-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6d33c-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6d33c-123">See also</span></span>
 
-- [<span data-ttu-id="278c9-124">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="278c9-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="278c9-125">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="278c9-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="6d33c-124">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6d33c-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="6d33c-125">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6d33c-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

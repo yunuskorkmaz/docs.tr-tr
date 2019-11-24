@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1c090153-fd5f-46c7-9cff-39a78d992c8f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e4be840760782789aa91e5519f60374aca2e3941
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae682c354a7a5188611b103008a3e18f8d821260
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775256"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431933"
 ---
-# <a name="imetadataassemblyemitsetexportedtypeprops-method"></a><span data-ttu-id="aec45-102">IMetaDataAssemblyEmit::SetExportedTypeProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="aec45-102">IMetaDataAssemblyEmit::SetExportedTypeProps Method</span></span>
-<span data-ttu-id="aec45-103">Belirtilen değiştirir `ExportedType` meta veri yapısı.</span><span class="sxs-lookup"><span data-stu-id="aec45-103">Modifies the specified `ExportedType` metadata structure.</span></span>  
+# <a name="imetadataassemblyemitsetexportedtypeprops-method"></a><span data-ttu-id="ad797-102">IMetaDataAssemblyEmit::SetExportedTypeProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ad797-102">IMetaDataAssemblyEmit::SetExportedTypeProps Method</span></span>
+<span data-ttu-id="ad797-103">Modifies the specified `ExportedType` metadata structure.</span><span class="sxs-lookup"><span data-stu-id="ad797-103">Modifies the specified `ExportedType` metadata structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aec45-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="aec45-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ad797-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ad797-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetExportedTypeProps (  
@@ -38,31 +36,31 @@ HRESULT SetExportedTypeProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="aec45-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="aec45-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ad797-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ad797-105">Parameters</span></span>  
  `ct`  
- <span data-ttu-id="aec45-106">[in] Belirten bir meta veri belirteci `ExportedType` değiştirilecek meta veri yapısı.</span><span class="sxs-lookup"><span data-stu-id="aec45-106">[in] The metadata token that specifies the `ExportedType` metadata structure to be modified.</span></span>  
+ <span data-ttu-id="ad797-106">[in] The metadata token that specifies the `ExportedType` metadata structure to be modified.</span><span class="sxs-lookup"><span data-stu-id="ad797-106">[in] The metadata token that specifies the `ExportedType` metadata structure to be modified.</span></span>  
   
  `tkImplementation`  
- <span data-ttu-id="aec45-107">[in] Türde bir belirteç `File`, `AssemblyRef`, veya `ExportedType`, bu tür nasıl uygulandığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="aec45-107">[in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.</span></span>  
+ <span data-ttu-id="ad797-107">[in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.</span><span class="sxs-lookup"><span data-stu-id="ad797-107">[in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.</span></span>  
   
  `tkTypeDef`  
- <span data-ttu-id="aec45-108">[in] `TypeDef` Kod dosyasında başvurulan bir belirteç.</span><span class="sxs-lookup"><span data-stu-id="aec45-108">[in] The `TypeDef` token referenced in the code file.</span></span>  
+ <span data-ttu-id="ad797-108">[in] The `TypeDef` token referenced in the code file.</span><span class="sxs-lookup"><span data-stu-id="ad797-108">[in] The `TypeDef` token referenced in the code file.</span></span>  
   
  `dwExportedTypeFlags`  
- <span data-ttu-id="aec45-109">[in] Türü özniteliklerini belirten değerlerinin Bitsel bir birleşimi.</span><span class="sxs-lookup"><span data-stu-id="aec45-109">[in] A bitwise combination of values that specify attributes of the type.</span></span>  
+ <span data-ttu-id="ad797-109">[in] A bitwise combination of values that specify attributes of the type.</span><span class="sxs-lookup"><span data-stu-id="ad797-109">[in] A bitwise combination of values that specify attributes of the type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="aec45-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="aec45-110">Remarks</span></span>  
- <span data-ttu-id="aec45-111">Oluşturmak için bir `ExportedType` meta veri yapısı, kullanım [Imetadataassemblyemit::defineexportedtype](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="aec45-111">To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ad797-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ad797-110">Remarks</span></span>  
+ <span data-ttu-id="ad797-111">To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="ad797-111">To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aec45-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="aec45-112">Requirements</span></span>  
- <span data-ttu-id="aec45-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aec45-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ad797-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ad797-112">Requirements</span></span>  
+ <span data-ttu-id="ad797-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ad797-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aec45-114">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="aec45-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ad797-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ad797-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="aec45-115">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="aec45-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ad797-115">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ad797-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="aec45-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aec45-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ad797-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad797-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aec45-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aec45-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ad797-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ad797-117">See also</span></span>
 
-- [<span data-ttu-id="aec45-118">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="aec45-118">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="ad797-118">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ad797-118">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

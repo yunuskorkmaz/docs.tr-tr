@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 64264238-3b68-4bac-a887-36b552426a6c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 23f5a2b6b0970f3cb64ee339e6a1a409354a60e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ccc038b4420040779dae70f15e3a8827ba94180
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780959"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444109"
 ---
-# <a name="coinitiee-enumeration"></a><span data-ttu-id="d4972-102">COINITIEE Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="d4972-102">COINITIEE Enumeration</span></span>
-<span data-ttu-id="d4972-103">Tarafından kullanılan sabitlerini belirtir [Coınitializeee](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) ortak dil çalışma zamanı başlatılırken.</span><span class="sxs-lookup"><span data-stu-id="d4972-103">Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.</span></span>  
+# <a name="coinitiee-enumeration"></a><span data-ttu-id="fb5da-102">COINITIEE Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="fb5da-102">COINITIEE Enumeration</span></span>
+<span data-ttu-id="fb5da-103">Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.</span><span class="sxs-lookup"><span data-stu-id="fb5da-103">Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d4972-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d4972-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fb5da-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fb5da-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum tagCOINITEE {  
@@ -36,23 +34,23 @@ typedef enum tagCOINITEE {
 } COINITIEE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d4972-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="d4972-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="fb5da-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="fb5da-105">Members</span></span>  
   
-|<span data-ttu-id="d4972-106">Üye</span><span class="sxs-lookup"><span data-stu-id="d4972-106">Member</span></span>|<span data-ttu-id="d4972-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d4972-107">Description</span></span>|  
+|<span data-ttu-id="fb5da-106">Üye</span><span class="sxs-lookup"><span data-stu-id="fb5da-106">Member</span></span>|<span data-ttu-id="fb5da-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="fb5da-107">Description</span></span>|  
 |------------|-----------------|  
-|`COINITEE_DEFAULT`|<span data-ttu-id="d4972-108">Varsayılan başlatma modu.</span><span class="sxs-lookup"><span data-stu-id="d4972-108">Default initialization mode.</span></span> <span data-ttu-id="d4972-109">Bu çalışma zamanı başlatır ve varsayılan oluşturur <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="d4972-109">This initializes the runtime and creates the default <xref:System.AppDomain>.</span></span>|  
-|`COINITEE_DLL`|<span data-ttu-id="d4972-110">Yönetilen bir DLL'yi çalıştırılacak başlatır.</span><span class="sxs-lookup"><span data-stu-id="d4972-110">Initializes to run a managed DLL.</span></span>|  
-|`COINITEE_MAIN`|<span data-ttu-id="d4972-111">Yönetilen bir EXE çalıştırılacak başlatır.</span><span class="sxs-lookup"><span data-stu-id="d4972-111">Initializes to run a managed EXE.</span></span> <span data-ttu-id="d4972-112">Bu çalışma zamanı başlatır, ancak varsayılan oluşturmaz <xref:System.AppDomain>, hangi EXE dosyasının ana yordam girdikten sonra oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="d4972-112">This initializes the runtime but does not create the default <xref:System.AppDomain>, which is created after entering the main routine of the EXE.</span></span>|  
+|`COINITEE_DEFAULT`|<span data-ttu-id="fb5da-108">Default initialization mode.</span><span class="sxs-lookup"><span data-stu-id="fb5da-108">Default initialization mode.</span></span> <span data-ttu-id="fb5da-109">This initializes the runtime and creates the default <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="fb5da-109">This initializes the runtime and creates the default <xref:System.AppDomain>.</span></span>|  
+|`COINITEE_DLL`|<span data-ttu-id="fb5da-110">Initializes to run a managed DLL.</span><span class="sxs-lookup"><span data-stu-id="fb5da-110">Initializes to run a managed DLL.</span></span>|  
+|`COINITEE_MAIN`|<span data-ttu-id="fb5da-111">Initializes to run a managed EXE.</span><span class="sxs-lookup"><span data-stu-id="fb5da-111">Initializes to run a managed EXE.</span></span> <span data-ttu-id="fb5da-112">This initializes the runtime but does not create the default <xref:System.AppDomain>, which is created after entering the main routine of the EXE.</span><span class="sxs-lookup"><span data-stu-id="fb5da-112">This initializes the runtime but does not create the default <xref:System.AppDomain>, which is created after entering the main routine of the EXE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d4972-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d4972-113">Requirements</span></span>  
- <span data-ttu-id="d4972-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4972-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fb5da-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="fb5da-113">Requirements</span></span>  
+ <span data-ttu-id="fb5da-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fb5da-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d4972-115">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="d4972-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fb5da-115">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fb5da-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d4972-116">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="d4972-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="fb5da-116">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fb5da-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d4972-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4972-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fb5da-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fb5da-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d4972-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d4972-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb5da-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fb5da-118">See also</span></span>
 
-- [<span data-ttu-id="d4972-119">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="d4972-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="fb5da-119">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="fb5da-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

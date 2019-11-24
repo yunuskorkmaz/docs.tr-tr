@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c87f2212c761dc31a75addabca6970c5497aa2a0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 18fe0c834506d0ac4cd15fd7af4c4f15904b0f81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782422"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437578"
 ---
-# <a name="imetadataimportgeteventprops-method"></a><span data-ttu-id="51094-102">IMetaDataImport::GetEventProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="51094-102">IMetaDataImport::GetEventProps Method</span></span>
-<span data-ttu-id="51094-103">Bildirim türü, Ekle ve Kaldır Temsilciler, yöntemleri ve tüm bayraklar ve ilişkili diğer veri gibi belirtilen olay belirteci tarafından temsil edilen olay için meta veri bilgilerini alır.</span><span class="sxs-lookup"><span data-stu-id="51094-103">Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.</span></span>  
+# <a name="imetadataimportgeteventprops-method"></a><span data-ttu-id="692df-102">IMetaDataImport::GetEventProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="692df-102">IMetaDataImport::GetEventProps Method</span></span>
+<span data-ttu-id="692df-103">Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.</span><span class="sxs-lookup"><span data-stu-id="692df-103">Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51094-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="51094-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="692df-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="692df-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetEventProps (  
@@ -47,53 +45,53 @@ HRESULT GetEventProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="51094-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="51094-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="692df-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="692df-105">Parameters</span></span>  
  `ev`  
- <span data-ttu-id="51094-106">[in] Meta verilerini almak için bir olayı temsil eden olay meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="51094-106">[in] The event metadata token representing the event to get metadata for.</span></span>  
+ <span data-ttu-id="692df-106">[in] The event metadata token representing the event to get metadata for.</span><span class="sxs-lookup"><span data-stu-id="692df-106">[in] The event metadata token representing the event to get metadata for.</span></span>  
   
  `pClass`  
- <span data-ttu-id="51094-107">[out] TypeDef simgesi sınıfı temsil eden bir işaretçi, bir olay bildirir.</span><span class="sxs-lookup"><span data-stu-id="51094-107">[out] A pointer to the TypeDef token representing the class that declares the event.</span></span>  
+ <span data-ttu-id="692df-107">[out] A pointer to the TypeDef token representing the class that declares the event.</span><span class="sxs-lookup"><span data-stu-id="692df-107">[out] A pointer to the TypeDef token representing the class that declares the event.</span></span>  
   
  `szEvent`  
- <span data-ttu-id="51094-108">[out] Tarafından başvuruda bulunulan olay adı `ev`.</span><span class="sxs-lookup"><span data-stu-id="51094-108">[out] The name of the event referenced by `ev`.</span></span>  
+ <span data-ttu-id="692df-108">[out] The name of the event referenced by `ev`.</span><span class="sxs-lookup"><span data-stu-id="692df-108">[out] The name of the event referenced by `ev`.</span></span>  
   
  `pchEvent`  
- <span data-ttu-id="51094-109">[in] Geniş karakter cinsinden istenen uzunluğu `szEvent`.</span><span class="sxs-lookup"><span data-stu-id="51094-109">[in] The requested length in wide characters of `szEvent`.</span></span>  
+ <span data-ttu-id="692df-109">[in] The requested length in wide characters of `szEvent`.</span><span class="sxs-lookup"><span data-stu-id="692df-109">[in] The requested length in wide characters of `szEvent`.</span></span>  
   
  `pdwEventFlags`  
- <span data-ttu-id="51094-110">[out] Geniş karakter cinsinden uzunluk `szEvent`.</span><span class="sxs-lookup"><span data-stu-id="51094-110">[out] The returned length in wide characters of `szEvent`.</span></span>  
+ <span data-ttu-id="692df-110">[out] The returned length in wide characters of `szEvent`.</span><span class="sxs-lookup"><span data-stu-id="692df-110">[out] The returned length in wide characters of `szEvent`.</span></span>  
   
  `ptkEventType`  
- <span data-ttu-id="51094-111">[out] TypeRef veya TypeDef meta veri belirteci temsil eden bir işaretçisi <xref:System.Delegate> olay türü.</span><span class="sxs-lookup"><span data-stu-id="51094-111">[out] A pointer to a TypeRef or TypeDef metadata token representing the <xref:System.Delegate> type of the event.</span></span>  
+ <span data-ttu-id="692df-111">[out] A pointer to a TypeRef or TypeDef metadata token representing the <xref:System.Delegate> type of the event.</span><span class="sxs-lookup"><span data-stu-id="692df-111">[out] A pointer to a TypeRef or TypeDef metadata token representing the <xref:System.Delegate> type of the event.</span></span>  
   
  `pmdAddOn`  
- <span data-ttu-id="51094-112">[out] Olay işleyicileri ekler yöntemi temsil eden meta veri belirteci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="51094-112">[out] A pointer to the metadata token representing the method that adds handlers for the event.</span></span>  
+ <span data-ttu-id="692df-112">[out] A pointer to the metadata token representing the method that adds handlers for the event.</span><span class="sxs-lookup"><span data-stu-id="692df-112">[out] A pointer to the metadata token representing the method that adds handlers for the event.</span></span>  
   
  `pmdRemoveOn`  
- <span data-ttu-id="51094-113">[out] Olay işleyicilerini kaldırır yöntemi temsil eden meta veri belirteci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="51094-113">[out] A pointer to the metadata token representing the method that removes handlers for the event.</span></span>  
+ <span data-ttu-id="692df-113">[out] A pointer to the metadata token representing the method that removes handlers for the event.</span><span class="sxs-lookup"><span data-stu-id="692df-113">[out] A pointer to the metadata token representing the method that removes handlers for the event.</span></span>  
   
  `pmdFire`  
- <span data-ttu-id="51094-114">[out] Olayı oluşturan yöntemi temsil eden meta veri belirteci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="51094-114">[out] A pointer to the metadata token representing the method that raises the event.</span></span>  
+ <span data-ttu-id="692df-114">[out] A pointer to the metadata token representing the method that raises the event.</span><span class="sxs-lookup"><span data-stu-id="692df-114">[out] A pointer to the metadata token representing the method that raises the event.</span></span>  
   
  `rmdOtherMethod`  
- <span data-ttu-id="51094-115">[out] Bir olay ile ilişkili diğer yöntemleri için belirteci bir işaretçiler dizisi.</span><span class="sxs-lookup"><span data-stu-id="51094-115">[out] An array of token pointers to other methods associated with the event.</span></span>  
+ <span data-ttu-id="692df-115">[out] An array of token pointers to other methods associated with the event.</span><span class="sxs-lookup"><span data-stu-id="692df-115">[out] An array of token pointers to other methods associated with the event.</span></span>  
   
  `cMax`  
- <span data-ttu-id="51094-116">[in] En büyük boyutunu `rmdOtherMethod` dizisi.</span><span class="sxs-lookup"><span data-stu-id="51094-116">[in] The maximum size of the `rmdOtherMethod` array.</span></span>  
+ <span data-ttu-id="692df-116">[in] The maximum size of the `rmdOtherMethod` array.</span><span class="sxs-lookup"><span data-stu-id="692df-116">[in] The maximum size of the `rmdOtherMethod` array.</span></span>  
   
  `pcOtherMethod`  
- <span data-ttu-id="51094-117">[out] Döndürülen belirteç sayısı `rmdOtherMethod`.</span><span class="sxs-lookup"><span data-stu-id="51094-117">[out] The number of tokens returned in `rmdOtherMethod`.</span></span>  
+ <span data-ttu-id="692df-117">[out] The number of tokens returned in `rmdOtherMethod`.</span><span class="sxs-lookup"><span data-stu-id="692df-117">[out] The number of tokens returned in `rmdOtherMethod`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="51094-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="51094-118">Requirements</span></span>  
- <span data-ttu-id="51094-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="51094-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="692df-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="692df-118">Requirements</span></span>  
+ <span data-ttu-id="692df-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="692df-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="51094-120">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="51094-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="692df-120">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="692df-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="51094-121">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="51094-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="692df-121">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="692df-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="51094-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="51094-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="692df-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="692df-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="51094-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="51094-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="692df-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="692df-123">See also</span></span>
 
-- [<span data-ttu-id="51094-124">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="51094-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="51094-125">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="51094-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="692df-124">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="692df-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="692df-125">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="692df-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

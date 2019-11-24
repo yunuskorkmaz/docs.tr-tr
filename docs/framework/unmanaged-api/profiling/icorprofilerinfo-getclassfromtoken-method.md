@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0afc1197-2a5b-424f-8b82-9cb59a7e00db
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 335c25316b34f79b8d02eea5a7dd4ed7994fc754
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6999821412b3cdd614cb30858a0616c9f27a6baa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780173"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448117"
 ---
-# <a name="icorprofilerinfogetclassfromtoken-method"></a><span data-ttu-id="17b0f-102">ICorProfilerInfo::GetClassFromToken Metodu</span><span class="sxs-lookup"><span data-stu-id="17b0f-102">ICorProfilerInfo::GetClassFromToken Method</span></span>
-<span data-ttu-id="17b0f-103">Meta veri belirteci verilen sınıfı Kimliğini alır.</span><span class="sxs-lookup"><span data-stu-id="17b0f-103">Gets the ID of the class, given the metadata token.</span></span> <span data-ttu-id="17b0f-104">Bu yöntem .NET Framework 2.0 sürümünde artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="17b0f-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="17b0f-105">Kullanım [Icorprofilerınfo2::getclassfromtokenandtypeargs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) yerine.</span><span class="sxs-lookup"><span data-stu-id="17b0f-105">Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.</span></span>  
+# <a name="icorprofilerinfogetclassfromtoken-method"></a><span data-ttu-id="e281d-102">ICorProfilerInfo::GetClassFromToken Metodu</span><span class="sxs-lookup"><span data-stu-id="e281d-102">ICorProfilerInfo::GetClassFromToken Method</span></span>
+<span data-ttu-id="e281d-103">Gets the ID of the class, given the metadata token.</span><span class="sxs-lookup"><span data-stu-id="e281d-103">Gets the ID of the class, given the metadata token.</span></span> <span data-ttu-id="e281d-104">This method is obsolete in the .NET Framework version 2.0.</span><span class="sxs-lookup"><span data-stu-id="e281d-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="e281d-105">Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.</span><span class="sxs-lookup"><span data-stu-id="e281d-105">Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="17b0f-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="17b0f-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e281d-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e281d-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetClassFromToken(  
@@ -36,28 +34,28 @@ HRESULT GetClassFromToken(
     [out] ClassID   *pClassId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="17b0f-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="17b0f-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e281d-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e281d-107">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="17b0f-108">[in] Sınıfı içeren modül kimliği.</span><span class="sxs-lookup"><span data-stu-id="17b0f-108">[in] The ID of the module that contains the class.</span></span>  
+ <span data-ttu-id="e281d-108">[in] The ID of the module that contains the class.</span><span class="sxs-lookup"><span data-stu-id="e281d-108">[in] The ID of the module that contains the class.</span></span>  
   
  `typeDef`  
- <span data-ttu-id="17b0f-109">[in] Bir `mdTypeDef` sınıfına başvuran meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="17b0f-109">[in] An `mdTypeDef` metadata token that references the class.</span></span>  
+ <span data-ttu-id="e281d-109">[in] An `mdTypeDef` metadata token that references the class.</span><span class="sxs-lookup"><span data-stu-id="e281d-109">[in] An `mdTypeDef` metadata token that references the class.</span></span>  
   
  `cTypeArgs`  
- <span data-ttu-id="17b0f-110">[out] Sınıf kimliği için bir işaretçi</span><span class="sxs-lookup"><span data-stu-id="17b0f-110">[out] A pointer to the class ID.</span></span>  
+ <span data-ttu-id="e281d-110">[out] A pointer to the class ID.</span><span class="sxs-lookup"><span data-stu-id="e281d-110">[out] A pointer to the class ID.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="17b0f-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="17b0f-111">Remarks</span></span>  
- <span data-ttu-id="17b0f-112">Bu yöntem artık kullanılmıyor; Bunun yerine, `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` tüm türleri.</span><span class="sxs-lookup"><span data-stu-id="17b0f-112">This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e281d-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e281d-111">Remarks</span></span>  
+ <span data-ttu-id="e281d-112">This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.</span><span class="sxs-lookup"><span data-stu-id="e281d-112">This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="17b0f-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="17b0f-113">Requirements</span></span>  
- <span data-ttu-id="17b0f-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="17b0f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e281d-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e281d-113">Requirements</span></span>  
+ <span data-ttu-id="e281d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e281d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="17b0f-115">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="17b0f-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e281d-115">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e281d-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="17b0f-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17b0f-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e281d-116">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e281d-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="17b0f-117">**.NET framework sürümleri:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="17b0f-117">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="e281d-117">**.NET Framework Versions:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="e281d-117">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17b0f-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="17b0f-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e281d-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e281d-118">See also</span></span>
 
-- [<span data-ttu-id="17b0f-119">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="17b0f-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="e281d-119">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e281d-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

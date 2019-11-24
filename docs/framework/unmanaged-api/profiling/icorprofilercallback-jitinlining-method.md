@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c2f45801-dd38-4b78-b6b7-64397dc73f83
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 82af06837ead9a00923c23d4ce145015308fbbf7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 62035d623d56f7521e0a599a13bc20778e3f18d1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782796"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449905"
 ---
-# <a name="icorprofilercallbackjitinlining-method"></a><span data-ttu-id="0ff00-102">ICorProfilerCallback::JITInlining Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0ff00-102">ICorProfilerCallback::JITInlining Method</span></span>
-<span data-ttu-id="0ff00-103">Profil Oluşturucu, just-in-time (JIT) derleyici hakkında başka bir işlevi satır içi işlev eklemek için olduğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="0ff00-103">Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.</span></span>  
+# <a name="icorprofilercallbackjitinlining-method"></a><span data-ttu-id="b5bbf-102">ICorProfilerCallback::JITInlining Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b5bbf-102">ICorProfilerCallback::JITInlining Method</span></span>
+<span data-ttu-id="b5bbf-103">Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-103">Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0ff00-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0ff00-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b5bbf-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b5bbf-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT JITInlining(  
@@ -36,30 +34,30 @@ HRESULT JITInlining(
     [out] BOOL      *pfShouldInline);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0ff00-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0ff00-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b5bbf-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b5bbf-105">Parameters</span></span>  
  `callerId`  
- <span data-ttu-id="0ff00-106">[in] Hangi işlev kimliği `calleeId` işlevi eklenir.</span><span class="sxs-lookup"><span data-stu-id="0ff00-106">[in] The ID of the function into which the `calleeId` function will be inserted.</span></span>  
+ <span data-ttu-id="b5bbf-106">[in] The ID of the function into which the `calleeId` function will be inserted.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-106">[in] The ID of the function into which the `calleeId` function will be inserted.</span></span>  
   
  `calleeId`  
- <span data-ttu-id="0ff00-107">[in] Eklenecek işlev kimliği.</span><span class="sxs-lookup"><span data-stu-id="0ff00-107">[in] The ID of the function to be inserted.</span></span>  
+ <span data-ttu-id="b5bbf-107">[in] The ID of the function to be inserted.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-107">[in] The ID of the function to be inserted.</span></span>  
   
  `pfShouldInline`  
- <span data-ttu-id="0ff00-108">[out] `true` oluşmasına; eklemeye izin verecek şekilde Aksi takdirde, `false`.</span><span class="sxs-lookup"><span data-stu-id="0ff00-108">[out] `true` to allow the insertion to occur; otherwise, `false`.</span></span>  
+ <span data-ttu-id="b5bbf-108">[out] `true` to allow the insertion to occur; otherwise, `false`.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-108">[out] `true` to allow the insertion to occur; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0ff00-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0ff00-109">Remarks</span></span>  
- <span data-ttu-id="0ff00-110">Profil Oluşturucu ayarlayabilirsiniz `pfShouldInline` için `false` önlemek için `calleeId` içine eklenen gelen işlevi `callerId` işlevi.</span><span class="sxs-lookup"><span data-stu-id="0ff00-110">The profiler can set `pfShouldInline` to `false` to prevent the `calleeId` function from being inserted into the `callerId` function.</span></span> <span data-ttu-id="0ff00-111">Ayrıca, profil oluşturucu genel olarak satır içi ekleme COR_PRF_DISABLE_INLINING değerini kullanarak devre dışı bırakabilirsiniz [cor_prf_monıtor](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="0ff00-111">Also, the profiler can globally disable inline insertion by using the COR_PRF_DISABLE_INLINING value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b5bbf-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b5bbf-109">Remarks</span></span>  
+ <span data-ttu-id="b5bbf-110">The profiler can set `pfShouldInline` to `false` to prevent the `calleeId` function from being inserted into the `callerId` function.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-110">The profiler can set `pfShouldInline` to `false` to prevent the `calleeId` function from being inserted into the `callerId` function.</span></span> <span data-ttu-id="b5bbf-111">Also, the profiler can globally disable inline insertion by using the COR_PRF_DISABLE_INLINING value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-111">Also, the profiler can globally disable inline insertion by using the COR_PRF_DISABLE_INLINING value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.</span></span>  
   
- <span data-ttu-id="0ff00-112">Eklenen işlevler satır içi olmayan olaylar girerek veya bırakmak için.</span><span class="sxs-lookup"><span data-stu-id="0ff00-112">Functions inserted inline do not raise events for entering or leaving.</span></span> <span data-ttu-id="0ff00-113">Bu nedenle, profil oluşturucu ayarlamalısınız `pfShouldInline` için `false` doğru bir çağrı grafiği oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="0ff00-113">Therefore, the profiler must set `pfShouldInline` to `false` in order to produce an accurate callgraph.</span></span> <span data-ttu-id="0ff00-114">Ayarı `pfShouldInline` için `false` satır içi ekleme, genellikle hızını artırır ve eklenen yöntemi için ayrı JIT derleme olay sayısını azaltır çünkü performansı etkiler.</span><span class="sxs-lookup"><span data-stu-id="0ff00-114">Setting `pfShouldInline` to `false` will affect performance, because inline insertion typically increases speed and reduces the number of separate JIT compilation events for the inserted method.</span></span>  
+ <span data-ttu-id="b5bbf-112">Functions inserted inline do not raise events for entering or leaving.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-112">Functions inserted inline do not raise events for entering or leaving.</span></span> <span data-ttu-id="b5bbf-113">Therefore, the profiler must set `pfShouldInline` to `false` in order to produce an accurate callgraph.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-113">Therefore, the profiler must set `pfShouldInline` to `false` in order to produce an accurate callgraph.</span></span> <span data-ttu-id="b5bbf-114">Setting `pfShouldInline` to `false` will affect performance, because inline insertion typically increases speed and reduces the number of separate JIT compilation events for the inserted method.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-114">Setting `pfShouldInline` to `false` will affect performance, because inline insertion typically increases speed and reduces the number of separate JIT compilation events for the inserted method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0ff00-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0ff00-115">Requirements</span></span>  
- <span data-ttu-id="0ff00-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0ff00-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b5bbf-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b5bbf-115">Requirements</span></span>  
+ <span data-ttu-id="b5bbf-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b5bbf-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0ff00-117">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0ff00-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b5bbf-117">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b5bbf-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0ff00-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0ff00-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b5bbf-118">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b5bbf-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0ff00-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ff00-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b5bbf-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5bbf-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0ff00-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0ff00-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b5bbf-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-120">See also</span></span>
 
-- [<span data-ttu-id="0ff00-121">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0ff00-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="b5bbf-121">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b5bbf-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

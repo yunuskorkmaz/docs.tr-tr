@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: dd92dcaf-403c-464d-a254-21594985dddd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: db917820de92b2e347385afc5217c0ca190825cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 756ba2e71ca2e3e817a0a8b89165bb807368c1f9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776839"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449338"
 ---
-# <a name="isymunmanagedbinder2getreaderforfile2-method"></a><span data-ttu-id="01c82-102">ISymUnmanagedBinder2::GetReaderForFile2 Metodu</span><span class="sxs-lookup"><span data-stu-id="01c82-102">ISymUnmanagedBinder2::GetReaderForFile2 Method</span></span>
-<span data-ttu-id="01c82-103">Meta veri arayüzü ve bir dosya adı, doğru döndürür [Isymunmanagedreader](isymunmanagedreader-interface.md) modülle ilişkili hata ayıklama sembolleri okuyacaksa arabirimi.</span><span class="sxs-lookup"><span data-stu-id="01c82-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span>  
+# <a name="isymunmanagedbinder2getreaderforfile2-method"></a><span data-ttu-id="cecc5-102">ISymUnmanagedBinder2::GetReaderForFile2 Metodu</span><span class="sxs-lookup"><span data-stu-id="cecc5-102">ISymUnmanagedBinder2::GetReaderForFile2 Method</span></span>
+<span data-ttu-id="cecc5-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span><span class="sxs-lookup"><span data-stu-id="cecc5-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span>  
   
- <span data-ttu-id="01c82-104">Bu yöntem program veritabanı (PDB) dosyası için daha kapsamlı bir arama sağlar [Isymunmanagedbinder::getreaderforfile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="01c82-104">This method provides a more extensive search for the program database (PDB) file than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.</span></span>  
+ <span data-ttu-id="cecc5-104">This method provides a more extensive search for the program database (PDB) file than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="cecc5-104">This method provides a more extensive search for the program database (PDB) file than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01c82-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="01c82-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cecc5-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cecc5-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetReaderForFile2(  
@@ -40,32 +38,32 @@ HRESULT GetReaderForFile2(
     [out,retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="01c82-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="01c82-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cecc5-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cecc5-106">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="01c82-107">[in] Meta veri alma arayüzü işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="01c82-107">[in] A pointer to the metadata import interface.</span></span>  
+ <span data-ttu-id="cecc5-107">[in] A pointer to the metadata import interface.</span><span class="sxs-lookup"><span data-stu-id="cecc5-107">[in] A pointer to the metadata import interface.</span></span>  
   
  `fileName`  
- <span data-ttu-id="01c82-108">[in] Dosya adı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="01c82-108">[in] A pointer to the file name.</span></span>  
+ <span data-ttu-id="cecc5-108">[in] A pointer to the file name.</span><span class="sxs-lookup"><span data-stu-id="cecc5-108">[in] A pointer to the file name.</span></span>  
   
  `searchPath`  
- <span data-ttu-id="01c82-109">[in] Arama yolu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="01c82-109">[in] A pointer to the search path.</span></span>  
+ <span data-ttu-id="cecc5-109">[in] A pointer to the search path.</span><span class="sxs-lookup"><span data-stu-id="cecc5-109">[in] A pointer to the search path.</span></span>  
   
  `searchPolicy`  
- <span data-ttu-id="01c82-110">[in] Değerini [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) sembol Okuyucu için arama yaparken kullanılacak ilkeyi belirten sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="01c82-110">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span></span>  
+ <span data-ttu-id="cecc5-110">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span><span class="sxs-lookup"><span data-stu-id="cecc5-110">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="01c82-111">[out] Ayarlanmış bir işaretçi ve döndürülen [Isymunmanagedreader](isymunmanagedreader-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="01c82-111">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
+ <span data-ttu-id="cecc5-111">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="cecc5-111">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="01c82-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="01c82-112">Return Value</span></span>  
- <span data-ttu-id="01c82-113">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="01c82-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cecc5-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="cecc5-112">Return Value</span></span>  
+ <span data-ttu-id="cecc5-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="cecc5-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="01c82-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="01c82-114">Requirements</span></span>  
- <span data-ttu-id="01c82-115">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="01c82-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cecc5-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cecc5-114">Requirements</span></span>  
+ <span data-ttu-id="cecc5-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="cecc5-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="01c82-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="01c82-116">Remarks</span></span>  
- <span data-ttu-id="01c82-117">Yöntemi bu sürümü, modül yanındaki sağ dışındaki alanlarda PDB dosyası için arama yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="01c82-117">This version of the method can search for the PDB file in areas other than right next to the module.</span></span> <span data-ttu-id="01c82-118">Arama ilke birleştirerek denetlenebilir [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="01c82-118">The search policy can be controlled by combining [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md).</span></span> <span data-ttu-id="01c82-119">Örneğin, `AllowReferencePathAccess | AllowSymbolServerAccess` pdb yürütülebilir dosyanın yanındaki ve bir sembol sunucusu üzerinde görünür ancak kayıt defterini sorgulayın veya yürütülebilir dosyanın yolunu kullanın.</span><span class="sxs-lookup"><span data-stu-id="01c82-119">For example, `AllowReferencePathAccess | AllowSymbolServerAccess` looks for the PDB next to the executable file and on a symbol server, but does not query the registry or use the path in the executable file.</span></span> <span data-ttu-id="01c82-120">Varsa `searchPath` parametresi sağlanır, bu dizinlerin her zaman aranır.</span><span class="sxs-lookup"><span data-stu-id="01c82-120">If the `searchPath` parameter is provided, those directories will always be searched.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cecc5-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="cecc5-116">Remarks</span></span>  
+ <span data-ttu-id="cecc5-117">This version of the method can search for the PDB file in areas other than right next to the module.</span><span class="sxs-lookup"><span data-stu-id="cecc5-117">This version of the method can search for the PDB file in areas other than right next to the module.</span></span> <span data-ttu-id="cecc5-118">The search policy can be controlled by combining [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="cecc5-118">The search policy can be controlled by combining [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md).</span></span> <span data-ttu-id="cecc5-119">For example, `AllowReferencePathAccess | AllowSymbolServerAccess` looks for the PDB next to the executable file and on a symbol server, but does not query the registry or use the path in the executable file.</span><span class="sxs-lookup"><span data-stu-id="cecc5-119">For example, `AllowReferencePathAccess | AllowSymbolServerAccess` looks for the PDB next to the executable file and on a symbol server, but does not query the registry or use the path in the executable file.</span></span> <span data-ttu-id="cecc5-120">If the `searchPath` parameter is provided, those directories will always be searched.</span><span class="sxs-lookup"><span data-stu-id="cecc5-120">If the `searchPath` parameter is provided, those directories will always be searched.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01c82-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="01c82-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cecc5-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cecc5-121">See also</span></span>
 
-- [<span data-ttu-id="01c82-122">ISymUnmanagedBinder2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="01c82-122">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
-- [<span data-ttu-id="01c82-123">GetReaderForFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="01c82-123">GetReaderForFile Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)
+- [<span data-ttu-id="cecc5-122">ISymUnmanagedBinder2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cecc5-122">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
+- [<span data-ttu-id="cecc5-123">GetReaderForFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="cecc5-123">GetReaderForFile Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)
