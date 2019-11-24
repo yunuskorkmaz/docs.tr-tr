@@ -1,29 +1,29 @@
 ---
-title: Yerleşik türler tablo- C# başvuru
+title: Built-in types table - C# Reference
 ms.custom: seodec18
-description: Yerleşik C# türler için anahtar sözcükler
+description: Keywords for built-in C# types
 ms.date: 08/17/2018
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 22bdfa197e3ce9c119203c74eeb0eb8217022a68
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 77a927a7735d565390c8a5560312ee36b9e48925
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422901"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428550"
 ---
-# <a name="built-in-types-table-c-reference"></a>Yerleşik türler tablosu (C# başvuru)
+# <a name="built-in-types-table-c-reference"></a>Built-in types table (C# Reference)
 
-Aşağıdaki tabloda, <xref:System> ad alanında önceden tanımlanmış türlerin diğer C# adları olan yerleşik türler için anahtar sözcükler gösterilmektedir:
+The following table shows the keywords for built-in C# types, which are aliases of predefined types in the <xref:System> namespace:
 
-|C#türüyle|.NET türü|  
+|C# type|.NET type|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
 |[byte](../builtin-types/integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|  
 |[sbyte](../builtin-types/integral-numeric-types.md)|<xref:System.SByte?displayProperty=nameWithType>|  
-|[char](char.md)|<xref:System.Char?displayProperty=nameWithType>|  
+|[char](../builtin-types/char.md)|<xref:System.Char?displayProperty=nameWithType>|  
 |[decimal](../builtin-types/floating-point-numeric-types.md)|<xref:System.Decimal?displayProperty=nameWithType>|  
 |[double](../builtin-types/floating-point-numeric-types.md)|<xref:System.Double?displayProperty=nameWithType>|  
 |[float](../builtin-types/floating-point-numeric-types.md)|<xref:System.Single?displayProperty=nameWithType>|  
@@ -38,16 +38,16 @@ Aşağıdaki tabloda, <xref:System> ad alanında önceden tanımlanmış türler
   
 ## <a name="remarks"></a>Açıklamalar
 
-Tablodaki tüm türler, `object` ve `string`hariç, basit türler olarak adlandırılır.
+All of the types in the table, except `object` and `string`, are referred to as simple types.
 
-.NET türleri ve bunların C# tür anahtar sözcük diğer adları değiştirilebilir. Örneğin, aşağıdaki bildirimlerden birini kullanarak bir tamsayı değişkeni bildirebilirsiniz:
+The .NET types and their C# type keyword aliases are interchangeable. For example, you can declare an integer variable by using either of the following declarations:
 
 ```csharp
 int x = 123;
 System.Int32 y = 123;
 ```
 
-Belirtilen türü temsil eden <xref:System.Type?displayProperty=nameWithType> örneğini almak için [typeof](../operators/type-testing-and-cast.md#typeof-operator) işlecini kullanın:
+Use the [typeof](../operators/type-testing-and-cast.md#typeof-operator) operator to get the <xref:System.Type?displayProperty=nameWithType> instance that represents the specified type:
 
 ```csharp
 Type stringType = typeof(string);
@@ -63,10 +63,10 @@ Console.WriteLine(doubleType.FullName);
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Reference](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [Değer türleri](value-types.md)
-- [Başvuru türleri](reference-types.md)
-- [Varsayılan değerler tablosu](default-values-table.md)
+- [Value types](value-types.md)
+- [Reference types](reference-types.md)
+- [Default values table](default-values-table.md)
 - [dynamic](../builtin-types/reference-types.md)

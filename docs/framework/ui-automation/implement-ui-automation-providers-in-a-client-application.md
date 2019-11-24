@@ -8,23 +8,23 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation within applications
 - UI Automation, implementing client-side provider within application
 ms.assetid: f325f0d8-1715-41ea-85ca-45b82ffea8bc
-ms.openlocfilehash: a60253e62f814e9e3ea7ed4c5720e98e470d7f79
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 09b33b78ef8f0b62ef4f1e24c56faae783f1e8dc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043600"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435475"
 ---
 # <a name="implement-ui-automation-providers-in-a-client-application"></a>UI Otomasyon Sağlayıcıları İstemci Programına Uygulama
 > [!NOTE]
-> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konu, bir uygulama içinde bir istemci tarafı UI Otomasyon sağlayıcısının nasıl uygulanacağını gösteren örnek kodu içerir.  
+ This topic contains example code that shows how to implement a client-side UI Automation provider within an application.  
   
- Bu, yaygın olmayan bir senaryodur. Çoğu zaman, bir UI Otomasyonu istemci uygulaması, sunucu tarafı sağlayıcıları veya bir DLL içinde bulunan istemci tarafı sağlayıcıları kullanır.  
+ This is an uncommon scenario. Most often, a UI Automation client application uses server-side providers, or client-side providers that reside in a DLL.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kod, bir konsol penceresi için basit bir sağlayıcı uygular. Kod, yararlı bir işlevselliğe sahip değildir, ancak istemci kodu içinde sağlayıcıyı ayarlama ve kullanarak <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>kaydetme konusunda temel adımları göstermeye yöneliktir.  
+ The following example code implements a simple provider for a console window. The code does not have any useful functionality, but is intended to demonstrate the basic steps in setting up a provider within client code and registering it by using <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>.  
   
  [!code-csharp[UIAClientSideProvider_snip#201](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClientSideProvider_snip/CSharp/ClientImplementationProgram.cs#201)]
  [!code-vb[UIAClientSideProvider_snip#201](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClientSideProvider_snip/visualbasic/clientimplementationprogram.vb#201)]  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2d5daa5-b990-4ae5-bf2a-c0862fe58bd7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e4103925462732fa8ddc509a9538ef5b485266a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88c9f552b73af69ea4e1f64b75ed74ea762dcdfb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780368"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429932"
 ---
 # <a name="icorprofilerfunctioncontrolsetcodegenflags-method"></a>ICorProfilerFunctionControl::SetCodegenFlags Yöntemi
-Bir veya daha fazla bayraklarını ayarlar [COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md) numaralandırması için bir tam zamanında (JIT) denetimi kod oluşturma için yeniden derlenen işlevi.  
+Sets one or more flags from the [COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md) enumeration to control code generation for a just-in-time (JIT) recompiled function.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,21 +34,21 @@ HRESULT SetCodegenFlags(
   
 ## <a name="parameters"></a>Parametreler  
  `flags`  
- [in] Bir veya daha fazla bayrakları [COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md) sabit listesi.  
+ [in] One or more flags from the [COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md) enumeration.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Profil Oluşturucu bu arabirimi üzerinden bir örneğini alır [Icorprofilercallback4::getrejıtparameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md) geri çağırma. `SetCodegenFlags` kod oluşturma için znovu işlevi denetlemek profil oluşturucu sağlar. Tüm diğer JIT yeniden derleme parametreleri gibi kod oluşturma bayrakları işlevin tüm örneklerine uygulanır.  
+ The profiler obtains an instance of this interface through the [ICorProfilerCallback4::GetReJITParameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md) callback. `SetCodegenFlags` allows the profiler to control the code generation for the recompiled function. As with all other JIT recompilation parameters, the code generation flags apply to all instances of the function.  
   
- JIT Derleyici bir işlevi derlenirken başka bir kaynak tarafından belirtilen diğer bayraklar yanı sıra bu derleme bayraklar göz önünde bulundurur.  Hata ayıklayıcı diğer kaynaklar dahil, Profil Oluşturucu tarafından başlangıçta tarafından ayarlanmış kullanarak genel bayraklar [Icorprofilerınfo::seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) yöntemi (değerlerle `COR_PRF_DISABLE_INLINING` ve `COR_PRF_DISABLE_OPTIMIZATIONS`) ve profil oluşturucunun [ Icorprofilercallback::jıtınlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) geri çağırma.  JIT derleyicisi istekleri en iyi duruma getirme, en az bir kaynak için öncelik verir.  Örneğin, profil oluşturucu belirtiyorsa `COR_PRF_DISABLE_INLINING` başlangıçta belirttiğinde ancak `COR_PRF_CODEGEN_DISABLE_INLINING` içinde [Icorprofilerfunctioncontrol::setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) geri çağırma, satır içi kullanım yine de devre dışı.  Benzer şekilde, profil oluşturucu belirttiğini `COR_PRF_CODEGEN_DISABLE_INLINING` içinde `SetCodegenFlags`, ancak sonra devre dışı bırakır kullanarak satır içi [Icorprofilercallback::jıtınlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) geri çağırma, satır içi kullanım dışıdır.  
+ The JIT compiler considers these compilation flags, along with other flags specified by other sources, when compiling a function.  The other sources include the debugger, global flags set by the profiler on startup by using the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method (with the values `COR_PRF_DISABLE_INLINING` and `COR_PRF_DISABLE_OPTIMIZATIONS`), and the profiler’s [ICorProfilerCallback::JITInlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) callback.  The JIT compiler gives precedence to a source that requests the least amount of optimizing.  For example, if the profiler specifies `COR_PRF_DISABLE_INLINING` on startup, but does not specify `COR_PRF_CODEGEN_DISABLE_INLINING` in the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) callback, inlining is still disabled.  Similarly, if the profiler does not specify `COR_PRF_CODEGEN_DISABLE_INLINING` in `SetCodegenFlags`, but then disables inlining by using the [ICorProfilerCallback::JITInlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) callback, inlining is disabled.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

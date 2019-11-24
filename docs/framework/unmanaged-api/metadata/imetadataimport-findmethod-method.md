@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0f9bde1d-e306-438d-941b-d0925b322304
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4225794740b7786c6f758c9a0953d323c31a1081
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 470b6511366cef1680eaf97f9ab376736add55c4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782483"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437890"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod Yöntemi
-Bir işaretçi için MethodDef alınmış yöntemi için belirteç alır tarafından belirtilen <xref:System.Type> ve belirtilen adı ve meta verileri imza sahip.  
+Gets a pointer to the MethodDef token for the method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,35 +39,35 @@ HRESULT FindMethod (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- [in] `mdTypeDef` Belirteci aranacak üye kapsayan türü için (bir sınıf veya arabirim). Bu değer ise `mdTokenNil`, genel bir işlev için arama yapılır.  
+ [in] The `mdTypeDef` token for the type (a class or interface) that encloses the member to search for. If this value is `mdTokenNil`, then the lookup is done for a global function.  
   
  `szName`  
- [in] Aranacak yöntemin adı.  
+ [in] The name of the method to search for.  
   
  `pvSigBlob`  
- [in] İkili meta veri imzası yöntem bir işaretçi.  
+ [in] A pointer to the binary metadata signature of the method.  
   
  `cbSigBlob`  
- [in] Bayt cinsinden boyutu `pvSigBlob`.  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmb`  
- [out] Eşleşen MethodDef belirteç için bir işaretçi.  
+ [out] A pointer to the matching MethodDef token.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kapsayan sınıfı veya arabirimi kullanarak yöntemini belirtin (`td`), adını (`szName`) ve isteğe bağlı olarak imzası (`pvSigBlob`). Bir sınıfı veya arabirimi aynı ada sahip birden çok yöntem olabilir. Bu durumda, benzersiz bir eşleşme bulmak için yöntemin imzasını geçirin.  
+ You specify the method using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`). There might be multiple methods with the same name in a class or interface. In that case, pass the method's signature to find the unique match.  
   
- İmza geçirilen `FindMethod` imzaları belirli bir kapsama bağlı oldukları için geçerli kapsamda oluşturulan gerekir. İmza kapsayan sınıf veya değer türü tanımlayan bir belirteç ekleyebilir. Belirteç, yerel TypeDef tablosuna bir dizindir. Geçerli kapsam bağlamında dışında bir çalışma zamanı imza oluşturun ve bu imza olarak giriş için giriş kullanmasına `FindMethod`.  
+ The signature passed to `FindMethod` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMethod`.  
   
- `FindMethod` sınıf veya arabirim içinde tanımlanmış olan yöntemleri bulur; devralınan yöntemleri bulmaz.  
+ `FindMethod` finds only methods that were defined directly in the class or interface; it does not find inherited methods.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

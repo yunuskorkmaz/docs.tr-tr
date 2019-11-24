@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c675ce7e-76e7-45ff-8273-3b6489a2767c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 26458e2512f331ff7a8c41868c99d092cfd30977
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7f04b5c100f1fd9c44e671b883fe469b16d33fa6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737241"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440144"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute Yöntemi
-Özel bir öznitelik adı üzerinde temel alır. Meta veri özel öznitelikleri, bu özel öznitelikler sembol deposu içerisinde tutulur.  
+Gets a custom attribute based upon its name. Unlike metadata custom attributes, these custom attributes are held in the symbol store.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,25 +39,25 @@ HRESULT GetSymAttribute (
   
 ## <a name="parameters"></a>Parametreler  
  `parent`  
- [in] Öznitelik istendiği nesnesi için meta veri belirteci.  
+ [in] The metadata token for the object for which the attribute is requested.  
   
  `name`  
- [in] Bir işaretçi değişkenine almak için bir özniteliği gösterir.  
+ [in] A pointer to the variable that indicates the attribute to retrieve.  
   
  `cBuffer`  
- [in] Boyutu `buffer` dizisi.  
+ [in] The size of the `buffer` array.  
   
  `pcBuffer`  
- [out] Bir işaretçi değişkenine özniteliği veri uzunluğunu alır.  
+ [out] A pointer to the variable that receives the length of the attribute data.  
   
  `buffer`  
- [out] Bir işaretçi değişkenine öznitelik verilerini alır.  
+ [out] A pointer to the variable that receives the attribute data.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

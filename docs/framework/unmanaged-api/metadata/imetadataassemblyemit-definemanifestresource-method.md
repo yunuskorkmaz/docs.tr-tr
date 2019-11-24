@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27f6d295-0fe9-4cda-b77e-6e7d5c53df09
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 781953fe5bf209f195ef4887dff45e1902741f0c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 83170815f4aa65988bb6a6394bd466a0ba376ebf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775312"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432056"
 ---
 # <a name="imetadataassemblyemitdefinemanifestresource-method"></a>IMetaDataAssemblyEmit::DefineManifestResource Yöntemi
-Oluşturur bir `ManifestResource` belirtilen bildirim kaynağı için meta veriler içeren yapı ve ilişkili meta veri belirteci döndürür.  
+Creates a `ManifestResource` structure containing metadata for the specified manifest resource, and returns the associated metadata token.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,31 +39,31 @@ HRESULT DefineManifestResource (
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- [in] Kaynak adı.  
+ [in] The name of the resource.  
   
  `tkImplementation`  
- [in] Türü bir meta veri belirteci `mdtFile` veya `mdtAssemblyRef` kaynak sağlayıcıya eşler. Bir NULL değer, dosyanın meta verileri, katıştırılmış kaynak sağlayıcısı olduğunu gösterir.  
+ [in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider. A NULL value indicates that the file in which the metadata is embedded is the resource provider.  
   
  `dwOffset`  
- [in] Kaynak dosyası içinde başlangıcına uzaklık. Tek başına dosyalarındaki kaynaklar için bu her zaman sıfır olacaktır. Bir PE (taşınabilir çalıştırılabilir) dosyasında katıştırılmış kaynak, bir uzaklık cor.h üstbilgi dosyasında belirtilen konumda başlatan BLOB kaynağının budur.  
+ [in] The offset to the beginning of the resource within the file. For resources in standalone files, this will always be zero. If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.  
   
  `dwResourceFlags`  
- [in] Kaynak tanımı özellik ayarlarını belirten bayrağı değerlerinin Bitsel bir birleşimi.  
+ [in] A bitwise combination of flag values that specify property settings for the resource definition.  
   
  `pmdmr`  
- [out] Döndürülen meta veri belirteci için bir işaretçi.  
+ [out] A pointer to the returned metadata token.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir `ManifestResource` meta veri yapısı, her derlemenin dosyalarının uygulanan her bir kaynak için tanımlanmalıdır.  
+ One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

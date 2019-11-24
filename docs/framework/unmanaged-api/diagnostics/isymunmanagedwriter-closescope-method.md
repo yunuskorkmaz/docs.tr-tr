@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6dade525-7770-4cb4-bafd-4bb995ad0d87
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a9edfa2f8888480c72f290ee237972f3a0ed912
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 264b4487483ed5439a9809feefcdc1b20af402dc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778125"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428081"
 ---
 # <a name="isymunmanagedwriterclosescope-method"></a>ISymUnmanagedWriter::CloseScope Yöntemi
-Geçerli sözcük kapsamı kapatır.  
+Closes the current lexical scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,18 +34,18 @@ HRESULT CloseScope(
   
 ## <a name="parameters"></a>Parametreler  
  `endOffset`  
- [in] Başlangıçtan itibaren bayt sözlü kapsamda son yönergenin bitiminden noktada yönteminin uzaklığı.  
+ [in] The offset from the beginning of the method of the point at the end of the last instruction in the lexical scope, in bytes.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir kapsam kapatıldıktan sonra daha fazla değişken içinde tanımlanabilir.  
+ Once a scope is closed, no more variables can be defined within it.  
   
- [Isymunmanagedwriter::openscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) ile kullanılabilecek donuk kapsam tanımlayıcıyı döndürür [Isymunmanagedwriter::setscoperange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) daha sonra bir kapsamı tanımlamak için başlangıç ve bitiş uzaklığı. Uzaklık bu durumda, geçirilen `ISymUnmanagedWriter::OpenScope` ve `ISymUnmanagedWriter::CloseScope` göz ardı edilir. Kapsam tanımlayıcılar yalnızca geçerli yöntemi içinde geçerlidir.  
+ [ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with [ISymUnmanagedWriter::SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) to later define a scope's starting and ending offset. In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and `ISymUnmanagedWriter::CloseScope` are ignored. Scope identifiers are valid only in the current method.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

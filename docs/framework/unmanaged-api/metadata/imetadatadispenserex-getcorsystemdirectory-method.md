@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f03a2dfa60f2fbdce317d96a9e5b23c6f017dc3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da9a13a3dea34f6681f47e95c5b352a710d7458b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777748"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431206"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory Metodu
-Geçerli ortak dil çalışma zamanının (CLR) tutan dizinin alır. Bu yöntemi kullanmak için yalnızca işlem dışı hata ayıklayıcıları tarafından desteklenir. Başka bir bileşenden çağrılırsa E_NOTIMPL döndürür.  
+Gets the directory that holds the current common language runtime (CLR). This method is supported only for use by out-of-process debuggers. If called from another component, it will return E_NOTIMPL.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +37,22 @@ HRESULT GetCORSystemDirectory (
   
 ## <a name="parameters"></a>Parametreler  
  `szBuffer`  
- [out] Dizin adını almak için arabellek.  
+ [out] The buffer to receive the directory name.  
   
  `cchBuffer`  
- [in] Bayt cinsinden boyutu, `szBuffer`.  
+ [in] The size, in bytes, of `szBuffer`.  
   
  `pchBuffer`  
- [out] Gerçekte döndürülen bayt sayısı `szBuffer`.  
+ [out] The number of bytes actually returned in `szBuffer`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

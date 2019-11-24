@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9466df3f6413f86eb8558f0037b96c254b2a2e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6a741df3ea57b5e9b4fa8bc5d304bfedd1d6c15
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777345"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428014"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable Yöntemi
-Tek bir değişken, geçerli sözlü kapsamda tanımlar. Bu yöntem, bir kapsam boyunca birden çok havaalanlarından olan aynı ada sahip bir değişken için birden çok kez çağrılabilir. Bu durumda, ancak değerlerini `startOffset` ve `endOffset` parametreleri örtüşmemelidir.  
+Defines a single variable in the current lexical scope. This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,40 +43,40 @@ HRESULT DefineLocalVariable(
   
 ## <a name="parameters"></a>Parametreler  
  `name`  
- [in] Bir işaretçi bir `WCHAR` , yerel değişken adını tanımlar.  
+ [in] A pointer to a `WCHAR` that defines the local variable name.  
   
  `attributes`  
- [in] Yerel değişken öznitelikleri.  
+ [in] The local variable attributes.  
   
  `cSig`  
- [in] A `ULONG32` bayt cinsinden boyutunu belirten `signature` arabellek.  
+ [in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.  
   
  `signature`  
- [in] Yerel değişken imzası.  
+ [in] The local variable signature.  
   
  `addrKind`  
- [in] Adres türü.  
+ [in] The address type.  
   
  `addr1`  
- [in] Parametre belirtimine ilk adresi.  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in] Parametre belirtimine ikinci adresi.  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in] Parametre belirtimine üçüncü adresi.  
+ [in] The third address for the parameter specification.  
   
  `startOffset`  
- [in] Değişken için başlangıç uzaklığı. Bu parametre isteğe bağlıdır. 0 ise, bu parametre yoksayılır ve tüm kapsam boyunca değişkeni tanımlanır. Sıfır dışında bir değeri ise, geçerli kapsam içinde uzaklıklarını değişkeni döner.  
+ [in] The start offset for the variable. This parameter is optional. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
  `endOffset`  
- [in] Değişken için bitiş uzaklığı. Bu parametre isteğe bağlıdır. 0 ise, bu parametre yoksayılır ve tüm kapsam boyunca değişkeni tanımlanır. Sıfır dışında bir değeri ise, geçerli kapsam içinde uzaklıklarını değişkeni döner.  
+ [in] The end offset for the variable. This parameter is optional. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

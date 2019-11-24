@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c84f4846-9bc8-44a4-9a76-e39106d6d8b2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 50cd6d1e3666dd1f15c1e6a6b4f7dcb931b79d8d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3674c4058dba2f6185418b55b35eefb14c312f6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777068"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431234"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>ISymUnmanagedReader::GetSymbolStoreFileName Yöntemi
-Sembol deposundaki disk dosya adı sağlar.  
+Provides the on-disk file name of the symbol store.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,19 +37,19 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- [in] Boyutu `szName` arabellek.  
+ [in] The size of the `szName` buffer.  
   
  `pcchName`  
- [out] Döndürülen adının uzunluğu alan değişken işaretçisi `szName`, null sonlandırma dahil.  
+ [out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.  
   
  `szName`  
- [out] Bir işaretçi değişkenine sembol deposunun dosya adını alır.  
+ [out] A pointer to the variable that receives the file name of the symbol store.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

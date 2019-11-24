@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 025e358c-448f-4423-a2f2-57acf437c8a5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2e686e332cf1d35537e5d4306a3a9cbf9d46c47e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a628aec0823c5db07d31d33813a020606906163
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752375"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438127"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2 Yöntemi
-Bir yöntem açılır ve gerçek bölüm uzaklığı görüntüde sağlar.  
+Opens a method and provides its real section offset in the image.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +36,19 @@ HRESULT OpenMethod2(
   
 ## <a name="parameters"></a>Parametreler  
  `method`  
- [in] Meta veri belirteci açılması yöntemi.  
+ [in] The metadata token for the method to be opened.  
   
  `isect`  
- [in] Görüntüde bölüm uzaklık.  
+ [in] The section offset in the image.  
   
  `offset`  
- [in] Görüntüde uzaklığı.  
+ [in] The offset in the image.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

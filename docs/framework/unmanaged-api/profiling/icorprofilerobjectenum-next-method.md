@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c938c7c51c867d8e8d8d23390a3c16a23084fbc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b58b7131d015353c2276b6f422e93e5d6a09109
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775013"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428158"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next Yöntemi
-Belirtilen bitişik nesne sayısı dizideki geçerli konum Numaralandırıcının başlayarak nesnelerin sıralı bir koleksiyonu alır.  
+Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,22 +38,22 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Alınacak nesne sayısı.  
+ [in] The number of objects to be retrieved.  
   
  `objects`  
- [out] Bir dizi `ObjectID` değerler, her biri alınan bir nesneyi temsil eder.  
+ [out] An array of `ObjectID` values, each of which represents a retrieved object.  
   
  `pceltFetched`  
- [out] Gerçekte döndürülen öğe sayısına bir işaretçi `objects` dizisi.  
+ [out] A pointer to the number of elements actually returned in the `objects` array.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: C#başvurunun
+title: C# reference
 ms.date: 02/14/2017
 helpviewer_keywords:
 - Visual C#, language reference
@@ -8,64 +8,61 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 4fed33272dbed50100a37aa9fcd30befc46435f9
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 4875e53327e24c4b5983a4a3b79b5beced368725
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771832"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428609"
 ---
-# <a name="c-reference"></a>C#başvurunun
+# <a name="c-reference"></a>C# reference
 
-Bu bölümde, anahtar sözcükler, C# işleçler, özel karakterler, Önişlemci yönergeleri, derleyici seçenekleri ve derleyici hataları ve uyarıları hakkında başvuru malzemeleri sağlanmaktadır.  
+This section provides reference material about C# keywords, operators, special characters, preprocessor directives, compiler options, and compiler errors and warnings.  
   
 ## <a name="in-this-section"></a>Bu bölümde
 
  [C# Anahtar Sözcükleri](./keywords/index.md)  
- Anahtar sözcükler ve sözdizimi hakkında C# bilgi için bağlantılar sağlar.  
+ Provides links to information about C# keywords and syntax.  
   
  [C# İşleçleri](./operators/index.md)  
- İşleçler ve sözdizimi hakkında C# bilgi için bağlantılar sağlar.  
+ Provides links to information about C# operators and syntax.  
 
  [C# Özel Karakterleri](./tokens/index.md)  
- ' Deki C# özel bağlamsal karakterler ve kullanımları hakkındaki bilgilerin bağlantılarını sağlar.  
+ Provides links to information about special contextual characters in C# and their usage.  
 
  [C# Ön İşlemci Yönergeleri](./preprocessor-directives/index.md)  
- C# Kaynak koda ekleme için derleyici komutları hakkındaki bilgilere bağlantılar sağlar.  
+ Provides links to information about compiler commands for embedding in C# source code.  
   
  [C# Derleyici Seçenekleri](./compiler-options/index.md)  
- Derleyici seçenekleri ve bunların nasıl kullanılacağı hakkında bilgi içerir.  
+ Includes information about compiler options and how to use them.  
   
  [C# Derleyici Hataları](./compiler-messages/index.md)  
- C# Derleyici hatalarının ve uyarılarının nedenini ve düzeltmesini gösteren kod parçacıkları içerir.  
+ Includes code snippets that demonstrate the cause and correction of C# compiler errors and warnings.  
   
- [C#Dil belirtimi](../../../_csharplang/spec/introduction.md)  
- C# 6,0 dil belirtimi. Bu, C# 6,0 diline yönelik taslak bir önersahiptir. Bu belge, ECMA C# standartları Komitesi ile çalışma aracılığıyla iyileştirilcektir. Sürüm 5,0, [standart ECMA-334 5 sürümü](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf) belgesi olarak 2017 Aralık 'ta yayımlanmıştır.
+ [C# Language Specification](../../../_csharplang/spec/introduction.md)  
+ The C# 6.0 language specification. This is a draft proposal for the C# 6.0 language. This document will be refined through work with the ECMA C# standards committee. Version 5.0 has been released in December 2017 as the [Standard ECMA-334 5th Edition](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf) document.
 
-6,0 sonrası C# sürümlerde uygulanan özellikler, dil belirtimi tekliflerinde temsil edilir. Bu belgeler, bu yeni özellikleri eklemek için dil belirtimine yönelik değişimleri ' i anlatmaktadır. Bunlar taslak teklif formundadır. Bu belirtimler, resmi İnceleme için ECMA standartları Komitesi ve kurulduğu 'in C# gelecekteki bir sürümüne gönderilir.
+The features that have been implemented in C# versions after 6.0 are represented in language specification proposals. These documents describe the deltas to the language spec in order to add these new features. These are in draft proposal form. These specifications will be refined and submitted to the ECMA standards committee for formal review and incorporation into a future version of the C# Standard.
 
- [C#7,0 belirtim teklifleri](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
- 7,0 ' de C# uygulanan çeşitli yeni özellikler vardır. Bunlar, model eşleştirme, yerel işlevler, çıkış değişkeni bildirimleri, throw ifadeleri, ikili sabit değerler ve basamak ayırıcıları içerirler. Bu klasör, bu özelliklerin her biri için belirtimleri içerir.
+ [C# 7.0 Specification Proposals](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
+ There are a number of new features implemented in C# 7.0. They include pattern matching, local functions, out variable declarations, throw expressions, binary literals, and digit separators. This folder contains the specifications for each of those features.
   
- [C#7,1 belirtim teklifleri](../../../_csharplang/proposals/csharp-7.1/async-main.md)  
- 7,1 ' C# ye eklenen yeni özellikler vardır. İlk olarak, `Task` veya `Task<int>` döndüren `Main` yöntemi yazabilirsiniz. Bu, `async` değiştiricisini `Main` ' e eklemenizi sağlar. `default` ifadesi, türün çıkarsanbileceği konumlarda bir tür olmadan kullanılabilir. Ayrıca demet üye adları da çıkarsanamıyor. Son olarak, bir model eşleştirme, genel türler ile kullanılabilir.
+ [C# 7.1 Specification Proposals](../../../_csharplang/proposals/csharp-7.1/async-main.md)  
+ There are new features added in C# 7.1. First, you can write a `Main` method that returns `Task` or `Task<int>`. This enables you to add the `async` modifier to `Main`. The `default` expression can be used without a type in locations where the type can be inferred. Also, tuple member names can be inferred. Finally, pattern matching can be used with generics.
 
- [C#7,2 belirtim teklifleri](../../../_csharplang/proposals/csharp-7.2/readonly-ref.md)  
- C#7,2 çok sayıda küçük özellik ekledi. `in` anahtar sözcüğünü kullanarak, ReadOnly başvuruya göre bağımsız değişkenler geçirebilirsiniz. `Span` ve ilgili türler için derleme zamanı güvenliğini desteklemeye yönelik bir dizi alt düzey değişiklik vardır. Bazı durumlarda, sonraki bağımsız değişkenlerin konumsal olduğu adlandırılmış bağımsız değişkenleri kullanabilirsiniz. `private protected` erişim değiştiricisi, arayanların aynı derlemede uygulanan türetilmiş türlerle sınırlı olduğunu belirtmenizi sağlar. `?:` işleci, bir değişkene bir başvuruya çözüm verebilir. Ayrıca, baştaki basamak ayırıcısını kullanarak onaltılık ve ikili sayıları biçimlendirebilirsiniz.
+ [C# 7.2 Specification Proposals](../../../_csharplang/proposals/csharp-7.2/readonly-ref.md)  
+ C# 7.2 added a number of small features. You can pass arguments by readonly reference using the `in` keyword. There are a number of low-level changes to support compile-time safety for `Span` and related types. You can use named arguments where later arguments are positional, in some situations. The `private protected` access modifier enables you to specify that callers are limited to derived types implemented in the same assembly. The `?:` operator can resolve to a reference to a variable. You can also format hexadecimal and binary numbers using a leading digit separator.
 
- [C#7,3 belirtim teklifleri](../../../_csharplang/proposals/csharp-7.3/blittable.md)  
- C#7,3, birkaç küçük güncelleştirme içeren başka bir nokta sürümüdür. Yeni kısıtlamaları genel tür parametreleri üzerinde kullanabilirsiniz. Diğer değişiklikler, [`stackalloc`](./operators/stackalloc.md) ayırma kullanımı dahil `fixed` alanlarıyla çalışmayı kolaylaştırır. `ref` anahtar sözcüğüyle belirtilen yerel değişkenler, yeni depolama alanına başvurmak için reasssigned olabilir. Öznitelikleri, derleyicinin ürettiği yedekleme alanını hedefleyen otomatik uygulanan özelliklere yerleştirebilirsiniz. , Başlatıcılarda ifade değişkenleri kullanılabilir. Tanımlama grupları, eşitlik (veya eşitsizlik) için karşılaştırılabilir. Aşırı yükleme çözümlemesi için bazı geliştirmeler de vardır.
+ [C# 7.3 Specification Proposals](../../../_csharplang/proposals/csharp-7.3/blittable.md)  
+ C# 7.3 is another point release that includes several small updates. You can use new constraints on generic type parameters. Other changes make it easier to work with `fixed` fields, including using [`stackalloc`](./operators/stackalloc.md) allocations. Local variables declared with the `ref` keyword may be reassigned to refer to new storage. You can place attributes on auto-implemented properties that target the compiler-generated backing field. Expression variables can be used in initializers. Tuples can be compared for equality (or inequality). There have also been some improvements to overload resolution.
   
- [C#8,0 belirtim teklifleri](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
- C#8,0, .NET Core 3,0 ile kullanılabilir. Özellikler, null yapılabilir başvuru türleri, özyinelemeli model eşleştirme, varsayılan arabirim yöntemleri, zaman uyumsuz akışlar, aralıklar ve dizinler, using bildirimleri kullanarak ve using bildirimlerini, null birleştirme atamasını ve salt okunur örnek üyelerini içerir.
+ [C# 8.0 Specification Proposals](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
+ C# 8.0 is available with .NET Core 3.0. The features include nullable reference types, recursive pattern matching, default interface methods, async streams, ranges and indexes, pattern based using and using declarations, null coalescing assignment, and readonly instance members.
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 
- [C# Kılavuzu](../index.md)  
- Görsel C# belgeler için bir portal sağlar.  
-  
  [C# için Visual Studio Geliştirme Ortamını Kullanma](/visualstudio/get-started/csharp)  
- IDE ve düzenleyiciyi tanımlayan kavramsal ve görev konularına bağlantılar sağlar.  
+ Provides links to conceptual and task topics that describe the IDE and Editor.  
   
  [C# Programlama Kılavuzu](../programming-guide/index.md)  
- C# Programlama dilinin kullanımı hakkındaki bilgileri içerir.
+ Includes information about how to use the C# programming language.

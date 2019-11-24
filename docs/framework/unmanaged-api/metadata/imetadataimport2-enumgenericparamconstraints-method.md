@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a7d4e40-28fe-4e14-b801-4049880130e7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ba9d7f8873d15a7cab2b9893feb8563dfc971b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d1683965193801dbdee038ab06366178891fd978
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778754"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426729"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints Yöntemi
-Genel parametre kısıtlama belirtilen belirteci tarafından temsil edilen genel parametre ile ilişkili bir dizi için bir numaralandırıcı alır.  
+Gets an enumerator for an array of generic parameter constraints associated with the generic parameter represented by the specified token.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,35 +39,35 @@ HRESULT EnumGenericParamConstraints (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [out içinde] Numaralandırıcı bir işaretçi.  
+ [in, out] A pointer to the enumerator.  
   
  `tk`  
- [in]   Numaralandırılacak olan kısıtlamaları olan genel parametre temsil eden bir belirteci.  
+ [in]   A token that represents the generic parameter whose constraints are to be enumerated.  
   
  `rGenericParamConstraints`  
- [out] Numaralandırılacak genel parametre kısıtlama dizisi.  
+ [out] The array of generic parameter constraints to enumerate.  
   
  `cMax`  
- [in]   İstenen sayısı yerleştirmek için belirteçleri `rGenericParamConstraints`.  
+ [in]   The requested maximum number of tokens to place in `rGenericParamConstraints`.  
   
  `pcGenericParamConstraints`  
- [out] Belirteçleri sayısı için bir işaretçi yerleştirilen `rGenericParamConstraints`.  
+ [out] A pointer to the number of tokens placed in `rGenericParamConstraints`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints` başarıyla döndürüldü.|  
-|`S_FALSE`|`phEnum` üye öğe yok. Bu durumda, `pcGenericParameterConstraints` 0 (sıfır) olarak ayarlayın.|  
+|`S_OK`|`EnumGenericParameterConstraints` returned successfully.|  
+|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParameterConstraints` is set to 0 (zero).|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

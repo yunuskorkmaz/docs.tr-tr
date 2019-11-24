@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 43189651-a535-4803-a1d1-f1c427ace2ca
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 63ad2532240c9f18a00421281fae0d111dbfaec5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 71e2bc1d60e050d817429db5bc6926b3b16c637c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963801"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431411"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout Yöntemi
-Bir dize nesnesinin yerleşimi hakkında bilgi alır. Bu yöntem .NET Framework 4 ' te kullanım dışıdır ve yerine [ICorProfilerInfo3:: GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) yöntemi almıştır.  
+Gets information about the layout of a string object. This method is deprecated in the .NET Framework 4, and is superseded by the [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) method.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,36 +36,36 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>Parametreler  
  `pBufferLengthOffset`  
- dışı Dizenin uzunluğunu depolayan `ObjectID` işaretçiye göre konum uzaklığına yönelik bir işaretçi. Uzunluk bir `DWORD`olarak depolanır.  
+ [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string. The length is stored as a `DWORD`.  
   
 > [!NOTE]
-> Bu parametre, arabelleğin uzunluğunu değil, dizenin kendisinin uzunluğunu döndürür. Arabelleğin uzunluğu artık kullanılamıyor.  
+> This parameter returns the length of the string itself, not the length of the buffer. The length of the buffer is no longer available.  
   
  `PStringLengthOffset`  
- dışı Dizenin kendisinin uzunluğunu depolayan `ObjectID` işaretçiye göre konum uzaklığına yönelik bir işaretçi. Uzunluk bir `DWORD`olarak depolanır.  
+ [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself. The length is stored as a `DWORD`.  
   
  `pBufferOffset`  
- dışı Geniş karakter dizesini depolayan, `ObjectID` işaretçiye göre arabelleğin uzaklığına yönelik bir işaretçi.  
+ [out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, that stores the string of wide characters.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemi, aşağıdakilerin depolandığı konumların göreli `ObjectID` olarak kaydırmalarını alır: `GetStringLayout`  
+ The `GetStringLayout` method gets the offsets, relative to the `ObjectID` pointer, of the locations in which the following are stored:  
   
-- Dize arabelleğinin uzunluğu.  
+- The length of the string's buffer.  
   
-- Dizenin kendisi için uzunluğu.  
+- The length of the string itself.  
   
-- Geniş karakterlerden oluşan gerçek dizeyi içeren arabellek.  
+- The buffer that contains the actual string of wide characters.  
   
- Dizeler null ile sonlandırılmış olabilir.  
+ Strings may be null-terminated.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorProf. IDL, CorProf. h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı** Corguid. lib  
+ **Library:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

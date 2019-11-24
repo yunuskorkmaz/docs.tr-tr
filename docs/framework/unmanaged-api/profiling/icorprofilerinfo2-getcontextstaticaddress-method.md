@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b374116-0972-416a-8cf5-79213129be9a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2c5c8165d44cc3a305820f8e97c07da37f2a0693
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5d7da343148d5f1c2aa9b2b639b094f8269199b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775812"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433196"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>ICorProfilerInfo2::GetContextStaticAddress Yöntemi
-Belirtilen bağlamı kapsamında belirtilen bağlam statik alanı için adresi alır.  
+Gets the address for the specified context-static field that is in the scope of the specified context.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,34 +37,34 @@ HRESULT GetContextStaticAddress(
   
 ## <a name="parameters"></a>Parametreler  
  `classId`  
- [in] İstenen içerik statik alanı içeren sınıf kimliği.  
+ [in] The ID of the class that contains the requested context-static field.  
   
  `fieldToken`  
- [in] İstenen içerik statik alan için meta veri belirteci.  
+ [in] The metadata token for the requested context-static field.  
   
  `contextId`  
- [in] İstenen içerik statik alanı kapsamını olan bağlam kimliği.  
+ [in] The ID of the context that is the scope for the requested context-static field.  
   
  `ppAddress`  
- [out] Belirtilen bağlamı içinde statik alanı adresi için bir işaretçi.  
+ [out] A pointer to the address of the static field that is within the specified context.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetContextStaticAddress` Yöntemi aşağıdakilerden birini döndürebilir:  
+ The `GetContextStaticAddress` method may return one of the following:  
   
-- Bir CORPROF_E_DATAINCOMPLETE belirtilen statik alanı belirtilen bağlam bir adres değil atandıysa HRESULT.  
+- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
   
-- Adresleri nesnelerin çöp koleksiyonu yığınında olabilir. Çöp toplamanın ardından, profil oluşturucular geçerli olduğunu varsayın değil için bu adresleri çöp toplamanın ardından geçersiz hale gelebilir.  
+- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
   
- Bir sınıfın sınıf oluşturucusu tamamlanmadan önce `GetContextStaticAddress` bazı statik alanlar zaten başlatılmış olabilir ancak tüm kendi statik alanları için CORPROF_E_DATAINCOMPLETE döndürür ve çöp toplama nesneleri kök dizini değiştirme.  
+ Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

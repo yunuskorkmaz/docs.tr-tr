@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf064bac-9a9f-41c5-9e1d-108ff7af3afe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ba35cd678d88389854ca2e866020ea3a9364c923
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6966d0ad2fefd8401b19d8e8dcf7776799a066b2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777666"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432558"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent Yöntemi
-Belirtilen meta verileri imza ile bir olay için bir tanım oluşturur ve bu olay tanımı için bir belirteç alır.  
+Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,40 +43,40 @@ HRESULT DefineEvent (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- [in] Hedef sınıf veya arabirim için belirteç. Bu bir `mdTypeDef` veya `mdTypeDefNil` belirteci.  
+ [in] The token for the target class or interface. This is either a `mdTypeDef` or `mdTypeDefNil` token.  
   
  `szEvent`  
- [in] Olayın adı.  
+ [in] The name of the event.  
   
  `dwEventFlags`  
- [in] Olay bayrakları.  
+ [in] Event flags.  
   
  `tkEventType`  
- [in] Olay sınıfı için belirteci. Bu bir `mdTypeDef`, `mdTypeRef`, veya `mdTokenNil` belirteci.  
+ [in] The token for the event class. This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.  
   
  `mdAddOn`  
- [in] Olay ya da null için abone olmak için kullanılan yöntem.  
+ [in] The method used to subscribe to the event, or null.  
   
  `mdRemoveOn`  
- [in] Olay ya da null için aboneliğinizi iptal etmek için kullanılan yöntem.  
+ [in] The method used to unsubscribe to the event, or null.  
   
  `mdFire`  
- [in] (Bir türetilmiş sınıf tarafından) olay oluşturmak için kullanılan yöntem.  
+ [in] The method used (by a derived class) to raise the event.  
   
  `rmdOtherMethods[]`  
- [in] Olay ile ilişkili diğer yöntemleri için belirteçleri dizisi. Dizi ile sonlandırılmış bir `mdMethodDefNil` belirteci.  
+ [in] An array of tokens for other methods associated with the event. The array is terminated with a `mdMethodDefNil` token.  
   
  `pmdEvent`  
- [out] Olaya atanan meta veri belirteci.  
+ [out] The metadata token assigned to the event.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

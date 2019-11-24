@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a25a8f8b-5cfa-440d-9376-a1a1c3a9fc11
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fc7b6d1a27faf7bde46305f9c98d98351e6261b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db768c97a2d1a0fd5ee42ecfb121fb96d3092e79
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782268"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433013"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress Metodu
-Belirtilen göreli sanal adres (RVA) statik alan adresini alır.  
+Gets the address of the specified relative virtual address (RVA) static field.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,31 +36,31 @@ HRESULT GetRVAStaticAddress(
   
 ## <a name="parameters"></a>Parametreler  
  `classId`  
- [in] İstenen RVA statik alanı içeren sınıf kimliği.  
+ [in] The ID of the class that contains the requested RVA-static field.  
   
  `fieldToken`  
- [in] İstenen RVA statik alan için meta veri belirteci.  
+ [in] Metadata token for the requested RVA-static field.  
   
  `ppAddress`  
- [out] Bir işaretçi adresine RVA statik alan.  
+ [out] A pointer to the address of the RVA-static field.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetRVAStaticAddress` Yöntemi aşağıdakilerden birini döndürebilir:  
+ The `GetRVAStaticAddress` method may return one of the following:  
   
-- Bir CORPROF_E_DATAINCOMPLETE belirtilen statik alanı belirtilen bağlam bir adres değil atandıysa HRESULT.  
+- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
   
-- Adresleri nesnelerin çöp koleksiyonu yığınında olabilir. Çöp toplamanın ardından, profil oluşturucular geçerli olduğunu varsayın değil için bu adresleri çöp toplamanın ardından geçersiz hale gelebilir.  
+- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
   
- Bir sınıfın sınıf oluşturucusu tamamlanmadan önce `GetRVAStaticAddress` bazı statik alanlar zaten başlatıldı ve çöp toplama nesneleri kök dizini değiştirme ancak CORPROF_E_DATAINCOMPLETE tüm kendi statik alanları için döndürür.  
+ Before a class’s class constructor is completed, `GetRVAStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and may be rooting garbage collection objects.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

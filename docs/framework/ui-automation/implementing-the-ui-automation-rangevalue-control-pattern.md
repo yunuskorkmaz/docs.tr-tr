@@ -6,36 +6,36 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: 57986fa28a7a1bb7f70409b332147ff5b9615ec0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 04db9f97ccea10cf8c65df0f0117c272a5e868dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043418"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435109"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>UI Otomasyon RangeValue Denetim Düzeni Uygulama
 > [!NOTE]
-> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konu, olaylar ve özellikler hakkında bilgiler <xref:System.Windows.Automation.Provider.IRangeValueProvider>de dahil olmak üzere uygulama yönergelerini ve kurallarını tanıtır. Ek başvuruların bağlantıları konunun sonunda listelenmiştir.  
+ This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IRangeValueProvider>, including information about events and properties. Links to additional references are listed at the end of the topic.  
   
- <xref:System.Windows.Automation.RangeValuePattern> Denetim deseninin bir Aralık içindeki bir değere ayarlanabilir denetimleri desteklemek için kullanılır. Bu denetim modelini uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](control-pattern-mapping-for-ui-automation-clients.md).  
+ The <xref:System.Windows.Automation.RangeValuePattern> control pattern is used to support controls that can be set to a value within a range. For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
- Aralık değeri denetim modelini uygularken, aşağıdaki kılavuz ve kurallara göz önünde aklınızda olmanız gerekir:  
+## <a name="implementation-guidelines-and-conventions"></a>Implementation Guidelines and Conventions  
+ When implementing the Range Value control pattern, note the following guidelines and conventions:  
   
-- Denetimler, yerel ayar veya kullanıcı tercihlerine göre desteklenen özelliklerinin yeniden yüklenmesine izin verir. Bunun bir örneği, sıcaklığın Fahrenveya santigrat cinsinden gösterilmesi için ayarlanabilir bir termometre denetimidir.  
+- Controls allow recalibration of their supported properties based upon locale or user preference. An example of this is a thermometer control that can be set to display the temperature in Fahrenheit or Celsius.  
   
-- İlerleme çubukları veya kaydırıcılar gibi belirsiz Aralık değerlerine sahip denetimler bu değerlerin normalleştirilmesine sahip olmalıdır.  
+- Controls that have ambiguous range values, such as progress bars or sliders, should have those values normalized.  
   
- ![İlerleme çubuğu.](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
-Değerin tamsayı türünde ve en düşük ve en yüksek özellik değerlerinin, sırasıyla 0 ve 100 olarak normalleştirilme Ilerleme çubuğu örneği  
+ ![Progress bar.](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
+Example of a Progress Bar Where Value Is of Type Integer and Minimum and Maximum Property Values Are Normalized to 0 and 100, Respectively  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>   
-## <a name="required-members-for-irangevalueprovider"></a>IRangeValueProvider için gerekli Üyeler  
+## <a name="required-members-for-irangevalueprovider"></a>Required Members for IRangeValueProvider  
   
-|Gerekli üye|Üye türü|Notlar|  
+|Required member|Member type|Notlar|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Özellik|Yok.|  
@@ -45,15 +45,15 @@ Değerin tamsayı türünde ve en düşük ve en yüksek özellik değerlerinin,
 |<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Yöntemler|Yok.|  
   
- Bu denetim deseninin ilişkili olayları yok.  
+ This control pattern has no associated events.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Özel Durumlar  
- Sağlayıcılar aşağıdaki özel durumları oluşturması gerekir.  
+ Providers must throw the following exceptions.  
   
 |Özel durum türü|Koşul|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>değerinden büyük <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> veya bundan <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>küçük bir değerle çağırılır.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> is called with a value that is either greater than <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> or less than <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

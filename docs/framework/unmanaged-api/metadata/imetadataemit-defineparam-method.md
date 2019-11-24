@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d64a1ef21cd4fa4224609c7cd415c1611313769
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5c81bc82e19bce658336e4860a61f2721e17423d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777550"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431695"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam Yöntemi
-Belirtilen belirteç tarafından başvurulan yöntemi için belirtilen imzaya sahip bir parametre tanımında oluşturur ve bu parametre tanımı için bir belirteç alır.  
+Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,40 +42,40 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>Parametreler  
  `md`  
- [in] Parametresi tanımlı yöntem için belirteç.  
+ [in] The token for the method whose parameter is being defined.  
   
  `ulParamSeq`  
- [in] Parametre dizisi numarası.  
+ [in] The parameter sequence number.  
   
  `szName`  
- [in] Unicode parametrenin adı.  
+ [in] The name of the parameter in Unicode.  
   
  `dwParamFlags`  
- [in] Parametresi için bayrakları. Bu, bir bit maskesi, `CorParamAttr` değerleri.  
+ [in] Flags for the parameter. This is a bitmask of `CorParamAttr` values.  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` *\** sabit değer.  
+ [in] `ELEMENT_TYPE_` *\** for the constant value.  
   
  `pValue`  
- [in] Parametresi için sabit bir değer.  
+ [in] The constant value for the parameter.  
   
  `cchValue`  
- [in] Unicode karakter cinsinden boyutu, `pValue`.  
+ [in] The size, in Unicode characters, of `pValue`.  
   
  `ppd`  
- [out] `mdParamDef` Atanan simgesi.  
+ [out] The `mdParamDef` token assigned.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sıralı değerleri `ulParamSeq` parametreleri için 1 ile başlar. Dönüş değeri bir sıra numarası 0 sahiptir.  
+ The sequence values in `ulParamSeq` begin with 1 for parameters. A return value has a sequence number of 0.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

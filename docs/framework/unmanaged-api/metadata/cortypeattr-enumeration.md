@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5786f24f6543d4d262dd8a6389132aba02f9aacc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1586184c91619994ba0dfc9d5dcc277c10f99cf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779204"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436450"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr Numaralandırması
-Türü meta verileri gösteren değerleri içerir.  
+Contains values that indicate type metadata.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -79,46 +77,46 @@ typedef enum CorTypeAttr {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`tdVisibilityMask`|Tür görünürlük bilgileri kullanılır.|  
-|`tdNotPublic`|Türün genel kapsam içinde değil belirtir.|  
-|`tdPublic`|Tür genel kapsamda olduğunu belirtir.|  
-|`tdNestedPublic`|Türü genel görünürlük ile iç içe belirtir.|  
-|`tdNestedPrivate`|Özel bir görünürlük türü iç içe yerleştirilmiş belirtir.|  
-|`tdNestedFamily`|Tür ailesi görünürlük ile iç içe belirtir.|  
-|`tdNestedAssembly`|Derleme bir görünürlük türü iç içe yerleştirilmiş belirtir.|  
-|`tdNestedFamANDAssem`|Aile ve derleme bir görünürlük türü iç içe yerleştirilmiş belirtir.|  
-|`tdNestedFamORAssem`|Aile veya derleme bir görünürlük türü iç içe yerleştirilmiş belirtir.|  
-|`tdLayoutMask`|Düzen türü bilgilerini alır.|  
-|`tdAutoLayout`|Bu tür alanlar otomatik olarak düzenlenmiştir belirtir.|  
-|`tdSequentialLayout`|Bu tür alanlar sıralı olarak düzenlenmiştir belirtir.|  
-|`tdExplicitLayout`|Bu alanı düzeni açıkça sağlanan belirtir.|  
-|`tdClassSemanticsMask`|Anlam türü bilgilerini alır.|  
-|`tdClass`|Türün bir sınıf olduğunu belirtir.|  
-|`tdInterface`|Türün bir arabirim olup olmadığını belirtir.|  
-|`tdAbstract`|Türün Özet olup olmadığını belirtir.|  
-|`tdSealed`|Tür genişletilemez belirtir.|  
-|`tdSpecialName`|Sınıf adı özel olduğunu belirtir. Adını açıklar nasıl.|  
-|`tdImport`|Tür içe aktarılan belirtir.|  
-|`tdSerializable`|Türü seri hale getirilebilir olduğunu belirtir.|  
-|`tdWindowsRuntime`|Bu tür bir Windows çalışma zamanı türü olduğunu belirtir.|  
-|`tdStringFormatMask`|Dizeleri nasıl kodlanmış ve biçimlendirilmiş hakkında bilgi alır.|  
-|`tdAnsiClass`|Bu tür bir LPTSTR ANSI olarak yorumlar belirtir.|  
-|`tdUnicodeClass`|Bu tür bir LPTSTR Unicode olarak yorumlar belirtir.|  
-|`tdAutoClass`|Bu tür bir LPTSTR otomatik olarak yorumlar belirtir.|  
-|`tdCustomFormatClass`|Türü bir standart kodlama, sahip olduğunu belirtir belirtildiği gibi `CustomFormatMask`.|  
-|`tdCustomFormatMask`|Yerel birlikte çalışabilirliği için standart kodlama bilgi almak için bu maskesi kullanın. Bu iki bit değerlerin anlamı, belirtilmemiş.|  
-|`tdBeforeFieldInit`|Türü statik bir alana erişmek için yapılan ilk girişim önce başlatılmalıdır belirtir.|  
-|`tdForwarder`|Türü dışarı belirtir ve bir tür ileticisi.|  
-|`tdReservedMask`|Bu bayrak ve aşağıdaki bayrakları, ortak dil çalışma zamanı tarafından dahili olarak kullanılır.|  
-|`tdRTSpecialName`|Ortak dil çalışma zamanı adı kodlama denetleyeceğini belirtir.|  
-|`tdHasSecurity`|Türü güvenlik ilişkili olduğunu belirtir.|  
+|`tdVisibilityMask`|Used for type visibility information.|  
+|`tdNotPublic`|Specifies that the type is not in public scope.|  
+|`tdPublic`|Specifies that the type is in public scope.|  
+|`tdNestedPublic`|Specifies that the type is nested with public visibility.|  
+|`tdNestedPrivate`|Specifies that the type is nested with private visibility.|  
+|`tdNestedFamily`|Specifies that the type is nested with family visibility.|  
+|`tdNestedAssembly`|Specifies that the type is nested with assembly visibility.|  
+|`tdNestedFamANDAssem`|Specifies that the type is nested with family and assembly visibility.|  
+|`tdNestedFamORAssem`|Specifies that the type is nested with family or assembly visibility.|  
+|`tdLayoutMask`|Gets layout information for the type.|  
+|`tdAutoLayout`|Specifies that the fields of this type are laid out automatically.|  
+|`tdSequentialLayout`|Specifies that the fields of this type are laid out sequentially.|  
+|`tdExplicitLayout`|Specifies that field layout is supplied explicitly.|  
+|`tdClassSemanticsMask`|Gets semantic information about the type.|  
+|`tdClass`|Specifies that the type is a class.|  
+|`tdInterface`|Specifies that the type is an interface.|  
+|`tdAbstract`|Specifies that the type is abstract.|  
+|`tdSealed`|Specifies that the type cannot be extended.|  
+|`tdSpecialName`|Specifies that the class name is special. Its name describes how.|  
+|`tdImport`|Specifies that the type is imported.|  
+|`tdSerializable`|Specifies that the type is serializable.|  
+|`tdWindowsRuntime`|Specifies that this type is a Windows Runtime type.|  
+|`tdStringFormatMask`|Gets information about how strings are encoded and formatted.|  
+|`tdAnsiClass`|Specifies that this type interprets an LPTSTR as ANSI.|  
+|`tdUnicodeClass`|Specifies that this type interprets an LPTSTR as Unicode.|  
+|`tdAutoClass`|Specifies that this type interprets an LPTSTR automatically.|  
+|`tdCustomFormatClass`|Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.|  
+|`tdCustomFormatMask`|Use this mask to get non-standard encoding information for native interop. The meaning of the values of these two bits is unspecified.|  
+|`tdBeforeFieldInit`|Specifies that the type must be initialized before the first attempt to access a static field.|  
+|`tdForwarder`|Specifies that the type is exported, and a type forwarder.|  
+|`tdReservedMask`|This flag and the flags below are used internally by the common language runtime.|  
+|`tdRTSpecialName`|Specifies that the common language runtime should check the name encoding.|  
+|`tdHasSecurity`|Specifies that the type has security associated with it.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

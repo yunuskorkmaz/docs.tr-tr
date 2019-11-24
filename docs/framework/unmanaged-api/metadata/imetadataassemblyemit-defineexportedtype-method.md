@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3b4d143d8dd5391283736d0140e8f1ced1dec53e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 44f97ef498eb8e64c55fc86b9f290b9e088293f6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775332"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432075"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType Yöntemi
-Oluşturur bir `ExportedType` yapısı meta verilerini içeren, belirtilen dışarı türü ve ilişkili meta veri belirteci döndürür.  
+Creates an `ExportedType` structure containing metadata for the specified exported type, and returns the associated metadata token.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,39 +39,39 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- [in] Dışa aktarılacak tür adı. Sürüm 1.1 ortak dil çalışma zamanının dışarı aktarılan tür adı verilen ad tam eşleşmelidir `TypeDef` türü.  
+ [in] The name of type to be exported. For version 1.1 of the common language runtime, the name of the exported type must exactly match the name given in the `TypeDef` for the type.  
   
  `tkImplementation`  
- [in] Dışarı aktarılan tür burada uygulanan belirten bir belirteç. Geçerli değerler ve bunların ilişkili anlamları vardır:  
+ [in] A token specifying where the exported type is implemented. The valid values and their associated meanings are:  
   
-- `mdFile` Bu derleme içinde farklı bir dosya türü uygulanır.  
+- `mdFile` The type is implemented in a different file within this assembly.  
   
-- `mdAssemblyRef` Türü farklı bir derlemede uygulanır.  
+- `mdAssemblyRef` The type is implemented in a different assembly.  
   
-- `mdExportedTYpe` Tür, başka bir tür içinde yer alıyor.  
+- `mdExportedTYpe` The type is nested within some other type.  
   
-- `mdFileNil` Türü, bildirim olarak aynı dosya ve iç içe geçmiş bir tür değil.  
+- `mdFileNil` The type is in the same file as the manifest and is not a nested type.  
   
  `tkTypeDef`  
- [in] Bir belirteci meta veri dışarı aktarılmasına izin türünü belirtir. İçinde bu değer girilir `TypeDef` tablo dosyanızda türün uyguladığı ve yalnızca bu dosya bu derlemede olduğunda geçerlidir.  
+ [in] A token to the metadata that specifies the type to be exported. This value is entered in the `TypeDef` table in the file that implements the type and is relevant only if that file is in this assembly.  
   
  `dwExportedTypeFlags`  
- [in] Bitsel bir birleşimi [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) özellik ayarları dışarı aktarılan türü tanımlayan sabit listesi değerleri.  
+ [in] A bitwise combination of [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration values that define the property settings for the exported type.  
   
  `pmdct`  
- [out] Dışarı aktarılan tür gösteren döndürülen meta veri belirteci için bir işaretçi.  
+ [out] A pointer to the returned metadata token that indicates the exported type.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir `ExportedType` meta veri yapısı, bu derleme tarafından kullanıma sunulan ve bildirimini içeren farklı bir modül içinde uygulanan her türü için tanımlanmalıdır.  
+ An `ExportedType` metadata structure must be defined for each type that is exposed by this assembly and that is implemented in a module other than the one containing the manifest.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

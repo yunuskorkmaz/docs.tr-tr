@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8ba42d2-d9fa-43cb-bbc0-f33e1e592cb6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 061c482a7e674fd425fe627c741a11b39864ba5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: af1c3d599c5280e584ffb842c96c70a7c3d4ed08
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778866"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436881"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>IMetaDataImport::GetScopeProps Metodu
-Geçerli meta veri kapsamdaki ad ve isteğe bağlı olarak derlemesi veya modülü sürüm tanımlayıcısını alır.  
+Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,28 +38,28 @@ HRESULT GetScopeProps (
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- [out] Derleme veya modül adı için bir arabellek.  
+ [out] A buffer for the assembly or module name.  
   
  `cchName`  
- [in] Geniş karakter cinsinden boyutu `szName`.  
+ [in] The size in wide characters of `szName`.  
   
  `pchName`  
- [out] Döndürülen geniş karakter sayısını `szName`.  
+ [out] The number of wide characters returned in `szName`.  
   
  `pmvid`  
- [out, isteğe bağlı] Derleme veya Modül sürümü benzersiz olarak tanımlayan bir GUID için bir işaretçi.  
+ [out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Imetadataemit::setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) yöntemi, bu özellikleri ayarlamak için kullanılır.  
+ The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

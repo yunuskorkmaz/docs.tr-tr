@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e0ebd793-3764-4df0-8f12-0e95f60b9eae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c1ea9424c000ad3ae4918181084c89038c2ec8d1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e9ab623d5fe9fcfda2305df078e988a561afdc5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777295"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427969"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize Yöntemi
-İle bu yazıcısı ilişkilendirilecek olan meta veri verici arabirimi ayarlar ve hata ayıklama sembolleri yazılacağı çıktı dosyası adını ayarlar.  
+Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.  
   
- Bu yöntem yalnızca bir kez çağrılabilir ve diğer yazıcısı metotlarını önce çağrılmalıdır. Bazı yazarları, bir dosya adı gerektirebilir. Ancak, bu yönteme dosya adını kullanmayın yazıcılar negatif herhangi bir etkisi olmadan her zaman bir dosya adı geçirebilirsiniz.  
+ This method can be called only once, and it must be called before any other writer methods. Some writers may require a file name. However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,22 +39,22 @@ HRESULT Initialize(
   
 ## <a name="parameters"></a>Parametreler  
  `emitter`  
- [in] Meta veri verici arayüzü işaretçisi.  
+ [in] A pointer to the metadata emitter interface.  
   
  `filename`  
- [in] Hata ayıklama sembolleri yazıldığı dosyanın adı. Dosya adları kullanmayan bir yazıcı için bir dosya adı belirtilirse bu parametre yoksayılır.  
+ [in] The file name to which the debugging symbols are written. If a file name is specified for a writer that does not use file names, this parameter is ignored.  
   
  `pIStream`  
- [in] Belirtilmişse, simge yazıcı sembolleri yayar verilen <xref:System.Runtime.InteropServices.ComTypes.IStream> yerine belirtilen dosyaya `filename` parametresi. `pIStream` Parametresi isteğe bağlıdır.  
+ [in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. The `pIStream` parameter is optional.  
   
  `fFullBuild`  
- [in] `true` bu tam yeniden derleme; ise `false` bu artımlı bir derleme ise.  
+ [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

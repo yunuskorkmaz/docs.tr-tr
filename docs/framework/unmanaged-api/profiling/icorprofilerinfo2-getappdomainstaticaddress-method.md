@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a9e0ea7-a9e2-4817-b1c4-fcf15b215ea9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e68178a71d7ba73b4956a7d23854c23300301d8e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 12c9b30dc72d1ccf7bfa79ca0745ba3f2c2290c7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747854"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435881"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>ICorProfilerInfo2::GetAppDomainStaticAddress Yöntemi
-Belirtilen uygulama etki alanı kapsamı içinde belirtilen uygulama etki alanı statik alanı adresini alır.  
+Gets the address of the specified application domain-static field that is in the scope of the specified application domain.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,34 +37,34 @@ RESULT GetAppDomainStaticAddress(
   
 ## <a name="parameters"></a>Parametreler  
  `classId`  
- [in] İstenen uygulama etki alanı statik alanı içeren sınıf sınıf kimliği.  
+ [in] The class ID of the class that contains the requested application domain-static field.  
   
  `fieldToken`  
- [in] İstenen uygulama etki alanı statik alanı için meta veri belirteci.  
+ [in] The metadata token for the requested application domain-static field.  
   
  `appDomainId`  
- [in] İstenen statik alan için kapsamı uygulama etki alanı kimliği.  
+ [in] The ID of the application domain that is the scope for the requested static field.  
   
  `ppAddress`  
- [out] Belirtilen uygulama etki alanı içinde statik alanı adresi için bir işaretçi.  
+ [out] A pointer to the address of the static field that is within the specified application domain.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetAppDomainStaticAddress` Yöntemi aşağıdakilerden birini döndürebilir:  
+ The `GetAppDomainStaticAddress` method may return one of the following:  
   
-- Bir CORPROF_E_DATAINCOMPLETE belirtilen statik alanı belirtilen bağlam bir adres değil atandıysa HRESULT.  
+- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
   
-- Adresleri nesnelerin çöp koleksiyonu yığınında olabilir. Çöp toplamanın ardından, profil oluşturucular geçerli olduğunu varsayın değil için bu adresleri çöp toplamanın ardından geçersiz hale gelebilir.  
+- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
   
- Bir sınıfın sınıf oluşturucusu tamamlanmadan önce `GetAppDomainStaticAddress` bazı statik alanlar zaten başlatılmış olabilir ancak tüm kendi statik alanları için CORPROF_E_DATAINCOMPLETE döndürür ve çöp toplama nesneleri kök dizini değiştirme.  
+ Before a class’s class constructor is completed, `GetAppDomainStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

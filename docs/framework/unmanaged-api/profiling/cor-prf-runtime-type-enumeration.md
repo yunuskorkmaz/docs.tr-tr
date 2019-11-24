@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 35449514-333f-4918-9c60-7aa198d655d2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6c52f96ad9458dfd5cdedc5cc73154aa570c6759
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 26948261c571dbe963811e8e9631551685a63bdb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751968"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450374"
 ---
-# <a name="corprfruntimetype-enumeration"></a>COR_PRF_RUNTIME_TYPE Numaralandırması
-Ortak dil çalışma zamanı (CLR) sürümünü gösteren değerleri içerir: Masaüstü veya Silverlight'ta kullanılan CoreCLR.  
+# <a name="cor_prf_runtime_type-enumeration"></a>COR_PRF_RUNTIME_TYPE Numaralandırması
+Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,19 +38,19 @@ typedef enum
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`COR_PRF_DESKTOP_CLR`|CLR Masaüstü sürümü.|  
-|`COR_PRF_CORE_CLR`|Silverlight'ta kullanılan CLR, çekirdek sürümü.|  
+|`COR_PRF_DESKTOP_CLR`|The desktop version of the CLR.|  
+|`COR_PRF_CORE_CLR`|The core version of the CLR, used in Silverlight.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

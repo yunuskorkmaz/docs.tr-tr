@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 85667d38-611c-45a9-938d-930ac7a7b681
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6505995b128e31ed2a18881d31afa0bb1bfe150e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 106ffeee521f69a73628b1fb6a611abc733583f9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779417"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431880"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>IMetaDataAssemblyEmit::SetFileProps Yöntemi
-Belirtilen değiştirir `File` meta veri yapısı.  
+Modifies the specified `File` metadata structure.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,28 +38,28 @@ HRESULT SetFileProps (
   
 ## <a name="parameters"></a>Parametreler  
  `file`  
- [in] Belirten bir meta veri belirteci `File` değiştirilecek meta veri yapısı.  
+ [in] The metadata token that specifies the `File` metadata structure to be modified.  
   
  `pbHashValue`  
- [in] Bir dosyayla ilişkili veri karması işaretçisi.  
+ [in] A pointer to the hash data associated with the file.  
   
  `cbHashValue`  
- [in] Bayt cinsinden boyutu `pbHashValue`.  
+ [in] The size in bytes of `pbHashValue`.  
   
  `dwFileFlags`  
- [in] Bitsel bir birleşimi [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) dosyanın çeşitli özniteliklerini belirten değerleri.  
+ [in] A bitwise combination of [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values that specify various attributes of the file.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Oluşturmak için bir `File` meta veri yapısı, kullanım [Imetadataassemblyemit::definefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) yöntemi.  
+ To create a `File` metadata structure, use the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

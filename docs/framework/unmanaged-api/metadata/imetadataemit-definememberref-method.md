@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 21b5bcb8-ea75-4962-8acc-ad17584061e5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 38e4928ad0f3560698cbecab81a11630d67e4db2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 696389b51328e167212fb2292a873c34b9263811
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777619"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431826"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef Yöntemi
-Geçerli kapsam dışında bir modül üyesi başvuru tanımlar ve bu başvuru tanımına bir belirteç alır.  
+Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,28 +39,28 @@ HRESULT DefineMemberRef (
   
 ## <a name="parameters"></a>Parametreler  
  `tkImport`  
- [in] Belirteci için hedef üyenin sınıf veya arabirim üyesi genel olmadığından, Genel üyesiyse `mdModuleRef` söz konusu diğer dosya için belirteç.  
+ [in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.  
   
  `szName`  
- [in] Hedef üyesinin adı.  
+ [in] The name of the target member.  
   
  `pvSigBlob`  
- [in] Hedef üye imzası.  
+ [in] The signature of the target member.  
   
  `cbSigBlob`  
- [in] Bayt sayısı `pvSigBlob`.  
+ [in] The count of bytes in `pvSigBlob`.  
   
  `pmr`  
- [out] `mdMemberRef` Atanan simgesi.  
+ [out] The `mdMemberRef` token assigned.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

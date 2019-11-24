@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3480bbdb-c442-44a0-b7c6-333354503c52
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 60390fecad15dbb2c453453fa8c35556b5db6b54
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8deefe026e32a56d853e173e6a8fa3be942ccd9c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777721"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431136"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo Yöntemi
-Bu yöntem uygulanmadı. Çağrılırsa E_NOTIMPL döndürür.  
+Bu yöntem uygulanmadı. If called, it returns E_NOTIMPL.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,25 +38,25 @@ HRESULT OpenScopeOnITypeInfo (
   
 ## <a name="parameters"></a>Parametreler  
  `pITI`  
- [in] İşaretçi bir [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) kapsamı açmak tür bilgileri sağlayan arabirimi.  
+ [in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.  
   
  `dwOpenFlags`  
- [in] Açık mod bayrakları.  
+ [in] The open mode flags.  
   
  `riid`  
- [in] İstenen arabirim.  
+ [in] The desired interface.  
   
  `ppIUnk`  
- [out] Döndürülen arabirim işaretçisi için işaretçi.  
+ [out] Pointer to a pointer to the returned interface.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

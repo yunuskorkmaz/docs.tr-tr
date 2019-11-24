@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: fac7b480-7adb-4450-a5e9-690fed81ffae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a36cd3c5fb638799a735e4b4a1a98959500300b5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 89111bf7eb03d20c2010c7a20c4cd055c2a021e3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761603"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430725"
 ---
 # <a name="osinfo-structure"></a>OSINFO Yapısı
-İşletim sistemi için bir derleme veya modül ilgili ayrıntıları içerir.  
+Contains details about the operating system for an assembly or module.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,21 +38,21 @@ typedef struct {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`dwOSPlatformId`|Microsoft Windows platform işlevi tarafından tanımlanan tanımlayıcısı değerlerinden `GetVersionEx`. Aşağıdaki değerleri desteklenir:<br /><br /> -VER_PLATFORM_WIN32s, veya 0x0000, Microsoft Windows 3.1 belirtmek için.<br />-VER_PLATFORM_WIN32_WINDOWS, veya 0x0001, Windows 95, Windows 98 veya onlardan descended işletim sistemlerini belirtmek için.<br />-VER_PLATFORM_WIN32_NT, veya 0x0010, Windows NT veya ondan descended işletim sistemlerini belirtin.|  
-|`dwOSMajorVersion`|İşletim sistemi ana sürümü veya herhangi bir sürümünü belirtmek için bir NULL değer.|  
-|`dwOSMinorVersion`|İşletim sistemi alt sürümü veya herhangi bir sürümünü belirtmek için bir NULL değer.|  
+|`dwOSPlatformId`|One of the identifier values defined by the Microsoft Windows platform function `GetVersionEx`. The following values are supported:<br /><br /> -   VER_PLATFORM_WIN32s, or 0x0000, to specify Microsoft Windows 3.1.<br />-   VER_PLATFORM_WIN32_WINDOWS, or 0x0001, to specify Windows 95, Windows 98, or operating systems descended from them.<br />-   VER_PLATFORM_WIN32_NT, or 0x0010, to specify Windows NT or operating systems descended from it.|  
+|`dwOSMajorVersion`|The operating system major version, or a NULL value to indicate any version.|  
+|`dwOSMinorVersion`|The operating system minor version, or a NULL value to indicate any version.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `OSINFO` dayanır `OSVERSIONINFOEX` yapısı Microsoft Windows platform işlev için kullanılan çağrılar `GetVersionEx`. Bu yapı ASSEMBLYMETADATA yapısı tarafından işletim sistemi desteği belirtmek için kullanılır.  
+ `OSINFO` is based on the `OSVERSIONINFOEX` structure that is used in calls to the Microsoft Windows platform function `GetVersionEx`. This structure is used by the ASSEMBLYMETADATA structure to indicate its operating system support.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

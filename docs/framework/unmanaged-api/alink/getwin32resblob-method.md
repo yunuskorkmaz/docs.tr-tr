@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36997e04-f9f6-4254-a041-6767ac6c51d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b26f08548ac964fae2f4d64db50167add327eb2d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ff3103a46390c880a56ff443bfe20744f2ba0bfd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777361"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430692"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob Metodu
-Win32 kaynak blobu alır. Derleme seçeneklerini ayarladıktan sonra bu yöntemi çağırın.  
+Retrieves Win32 resource blob. Call this method after setting assembly options.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,28 +39,28 @@ HRESULT GetWin32ResBlob(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Derlemenin KIMLIĞI.  
+ ID of the assembly.  
   
  `FileToken`  
- Win32 sürüm kaynağı oluşturulurken kullanılacak dosya adını almak için kullanılan dosya belirteci  
+ File token used to retrieve the filename to be used when constructing the Win32 Version resource  
   
  `fDll`  
- Dosya DLL ise TRUE, bir EXE için false.  
+ TRUE if file is a DLL, false for an EXE.  
   
  `pszIconFile`  
- Kaynak blobuna eklenecek isteğe bağlı simge.  
+ Optional icon to insert into the resource blob.  
   
  `ppResBlob`  
- Kaynak blobu alır.  
+ Receives the resource blob.  
   
  `pcbResBlob`  
- Blobun boyutunu alır.  
+ Receives the size of the blob.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

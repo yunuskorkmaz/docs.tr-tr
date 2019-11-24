@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36c76266-71d8-48dc-bd89-54943fa659c1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 981829500e499be05a8de7c1ffb4683429a903e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4abf876681d5b04555c9f030a94b722874e326e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781858"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450282"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr Numaralandırması
-Açıklayan değerleri içeren <xref:System.Type> kullanılan çağrıları olarak genel türler için parametreleri [Imetadataemit2::definegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,22 +47,22 @@ typedef enum CorGenericParamAttr {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`gpVarianceMask`|Parametre değişikliklerinin yalnızca arabirimlerde ve temsilcilerde genel parametreleri geçerlidir.|  
-|`gpNonVariant`|Fark olmaması gösterir.|  
-|`gpCovariant`|Birlikte değişkenlik gösterir.|  
-|`gpContravariant`|Kontravaryans gösterir.|  
-|`gpSpecialConstraintMask`|Özel kısıtlamalar için uygulayabileceğiniz <xref:System.Type> parametresi.|  
-|`gpNoSpecialConstraint`|Hiçbir kısıtlaması için geçerli olduğunu gösterir <xref:System.Type> parametresi.|  
-|`gpReferenceTypeConstraint`|Bildiren <xref:System.Type> parametresi, bir başvuru türü olmalıdır.|  
-|`gpNotNullableValueTypeConstraint`|Bildiren <xref:System.Type> parametre bir null değer olamaz bir değer türü olması gerekir.|  
-|`gpDefaultConstructorConstraint`|Bildiren <xref:System.Type> parametresi, parametre almayan varsayılan bir public Oluşturucu olması gerekir.|  
+|`gpVarianceMask`|Parameter variance applies only to generic parameters for interfaces and delegates.|  
+|`gpNonVariant`|Indicates the absence of variance.|  
+|`gpCovariant`|Indicates covariance.|  
+|`gpContravariant`|Indicates contravariance.|  
+|`gpSpecialConstraintMask`|Special constraints can apply to any <xref:System.Type> parameter.|  
+|`gpNoSpecialConstraint`|Indicates that no constraint applies to the <xref:System.Type> parameter.|  
+|`gpReferenceTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a reference type.|  
+|`gpNotNullableValueTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.|  
+|`gpDefaultConstructorConstraint`|Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

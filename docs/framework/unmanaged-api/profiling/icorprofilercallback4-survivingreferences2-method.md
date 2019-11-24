@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02b51888-5d89-4e50-a915-45b7e329aad9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: beb260030914de211d227342e497daa3db287c9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3178d099db96d52f0238cfcf7e055e761687ce30
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758079"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430088"
 ---
 # <a name="icorprofilercallback4survivingreferences2-method"></a>ICorProfilerCallback4::SurvivingReferences2 Yöntemi
-Sıkıştırma dışı bir atık toplama sonucunda yığın nesnelerin yerleşimini bildirir. Profil Oluşturucu uygulanırsa, bu yöntem çağrılır [Icorprofilercallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) arabirimi. Bu geri çağırma değiştirir [Icorprofilercallback2::survivingreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md) yöntemi, daha büyük olan uzunluğu aşan bir ULONG ifade edilebilir nesne aralıklarını rapor edebilirsiniz çünkü.  
+Reports the layout of objects in the heap as a result of a non-compacting garbage collection. This method is called if the profiler has implemented the [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface. This callback replaces the [ICorProfilerCallback2::SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md) method, because it can report larger ranges of objects whose lengths exceed what can be expressed in a ULONG.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,43 +38,43 @@ HRESULT SurvivingReferences2(
   
 ## <a name="parameters"></a>Parametreler  
  `cSurvivingObjectIDRanges`  
- [in] Sıkıştırma olmayan çöp toplama işleminin sonucu olarak kurtulan bitişik nesnelerin blokların sayısı. Diğer bir deyişle, değerini `cSurvivingObjectIDRanges` boyutu `objectIDRangeStart` ve `cObjectIDRangeLength` diziler, hangi depolama bir `ObjectID` ve uzunluğu, nesnelerin her blok için sırasıyla.  
+ [in] The number of blocks of contiguous objects that survived as the result of the non-compacting garbage collection. That is, the value of `cSurvivingObjectIDRanges` is the size of the `objectIDRangeStart` and `cObjectIDRangeLength` arrays, which store an `ObjectID` and a length, respectively, for each block of objects.  
   
- Sonraki iki bağımsız değişkenleri `SurvivingReferences2` paralel dizidir. Diğer bir deyişle, `objectIDRangeStart` ve `cObjectIDRangeLength` bitişik nesnelerin aynı blok ilgilendiriyor.  
+ The next two arguments of `SurvivingReferences2` are parallel arrays. In other words, `objectIDRangeStart` and `cObjectIDRangeLength` concern the same block of contiguous objects.  
   
  `objectIDRangeStart`  
- [in] Bir dizi `ObjectID` her birinin başlangıç adresi bloğunun bitişik olduğunda, değerleri, Canlı nesneleri bellekte.  
+ [in] An array of `ObjectID` values, each of which is the starting address of a block of contiguous, live objects in memory.  
   
  `cObjectIDRangeLength`  
- [in] Her biri bellekte bitişik nesnelerin sürdüren bir blok boyutu olan bir tamsayı dizisi.  
+ [in] An array of integers, each of which is the size of a surviving block of contiguous objects in memory.  
   
- Başvurulduğundan her blok için belirtilen bir boyutu `objectIDRangeStart` dizisi.  
+ A size is specified for each block that is referenced in the `objectIDRangeStart` array.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğeleri `objectIDRangeStart` ve `cObjectIDRangeLength` diziler yorumlanabilir gibi bir nesne çöp toplamadan kurtulan olup olmadığını belirlemek için. Varsayımında bir `ObjectID` değeri (`ObjectID`) aşağıdaki aralığında yer:  
+ The elements of the `objectIDRangeStart` and `cObjectIDRangeLength` arrays should be interpreted as follows to determine whether an object survived the garbage collection. Assume that an `ObjectID` value (`ObjectID`) lies within the following range:  
   
  `ObjectIDRangeStart[i]` <= `ObjectID` < `ObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
- İçin herhangi bir değerini `i` aşağıdaki aralığında olan, nesnenin çöp toplamadan kurtulan:  
+ For any value of `i` that is in the following range, the object has survived the garbage collection:  
   
  0 <= `i` < `cSurvivingObjectIDRanges`  
   
- Sıkıştırma dışı bir atık toplama "etkin olmayan" nesnelerin kapladığı belleği geri kazanır, ancak serbest bırakılan bu alanı compact değil. Sonuç olarak, bellek için yığın döndürülür, ancak "canlı" nesne taşındı.  
+ A non-compacting garbage collection reclaims the memory occupied by "dead" objects, but does not compact that freed space. As a result, memory is returned to the heap, but no "live" objects are moved.  
   
- Ortak dil çalışma zamanı (CLR) çağıran `SurvivingReferences2` sıkıştırma olmayan çöp toplama için. Sıkıştırma çöp koleksiyonları için [MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) yerine çağrılır. Tek bir çöp toplama, tek bir nesil için sıkıştırma ve diğer olmayan sıkıştırma olabilir. Herhangi belirli nesil çöp toplama için profil oluşturucu ya da alacak bir `SurvivingReferences2` geri çağırma veya bir [MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) geri çağırma, ancak ikisine birden değil.  
+ The common language runtime (CLR) calls `SurvivingReferences2` for non-compacting garbage collections. For compacting garbage collections, [MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) is called instead. A single garbage collection can be compacting for one generation and non-compacting for another. For a garbage collection on any particular generation, the profiler will receive either a `SurvivingReferences2` callback or a [MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) callback, but not both.  
   
- Birden çok `SurvivingReferences2` geri çağırmaları alınan sınırlı iç arabelleğe alma nedeniyle ek olarak, belirli bir çöp toplama, sunucu çöp toplama sırasında birden çok geri çağırmaları ve diğer nedenlerle sırasında. Bir çöp toplama sırasında birden çok geri çağırmaları söz konusu olduğunda, bilgileri toplu olarak; içinde bildirilen tüm başvuruları `SurvivingReferences2` çöp toplama geri çağırma önceliklidir.  
+ Multiple `SurvivingReferences2` callbacks might be received during a particular garbage collection, because of limited internal buffering, multiple callbacks during server garbage collection, and other reasons. In the case of multiple callbacks during a garbage collection, the information is cumulative; all references that are reported in any `SurvivingReferences2` callback survive the garbage collection.  
   
- Profil Oluşturucu hem de uyguluyorsa [Icorprofilercallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) ve [Icorprofilercallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) arabirimleri `SurvivingReferences2` önce yöntemi çağrıldığında [Icorprofilercallback2:: SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md) yöntemi, ancak yalnızca `SurvivingReferences2` başarıyla döndürür. Profil oluşturucular hatasından gösteren HRESULT döndürebilir `SurvivingReferences2` yöntemi ikinci yöntem çağırmaktan kaçının.  
+ If the profiler implements both the [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) and the [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interfaces, the `SurvivingReferences2` method is called before the [ICorProfilerCallback2::SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md) method, but only if `SurvivingReferences2` returns successfully. Profilers can return an HRESULT that indicates failure from the `SurvivingReferences2` method to avoid calling the second method.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

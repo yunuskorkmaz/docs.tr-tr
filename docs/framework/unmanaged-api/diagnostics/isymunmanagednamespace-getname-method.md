@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 657bf91d-005a-4ea4-9298-04d1291c0bc3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4323423d3958fa1ca652c55f8f75749bb6e1ee79
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 43f32ac85bebc12d0a9253205aae3f1de0dc9e5b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759390"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433966"
 ---
 # <a name="isymunmanagednamespacegetname-method"></a>ISymUnmanagedNamespace::GetName Yöntemi
-Bu ad alanının adını alır.  
+Gets the name of this namespace.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,19 +37,19 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- [in] A `ULONG32` boyutunu gösteren `szName` arabellek.  
+ [in] A `ULONG32` that indicates the size of the `szName` buffer.  
   
  `pcchName`  
- [out] Bir işaretçi bir `ULONG32` karakter null sonlandırma dahil olmak üzere ad alanı adını içerecek şekilde gerekli arabellek boyutunu alır.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.  
   
  `szName`  
- [out] Ad alanı adını içeren arabellek için işaretçi.  
+ [out] A pointer to a buffer that contains the namespace name.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

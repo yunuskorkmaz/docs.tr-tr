@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c30a4ce3-2d3e-411a-98df-e62ac4a5dd50
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f005ee9d3d9d4b8977cd6a1838fe46015e604df5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3dfdd473b01bfe83def52f957c52e0f4d11375ad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777473"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434388"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName Yöntemi
-Bir meta veri geçerli kapsamı dışında olan Belirtilen kapsam içinde tanımlanan bir tür için belirteç alır.  
+Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,32 +37,32 @@ HRESULT DefineTypeRefByName (
   
 ## <a name="parameters"></a>Parametreler  
  `tkResolutionScope`  
- [in] Çözüm kapsamını belirten belirteç. Aşağıdaki belirteç türlerini geçerlidir:  
+ [in] The token specifying the resolution scope. The following token types are valid:  
   
-- `mdModuleRef`, çağıran tanımlanır aynı bütünleştirilmiş kodda tür tanımlı ise.  
+- `mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.  
   
-- `mdAssemblyRef`, bir çağıranın tanımlanır dışındaki bir bütünleştirilmiş kodda tür tanımlı ise.  
+- `mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.  
   
-- `mdTypeRef`, iç içe türü türü ise.  
+- `mdTypeRef`, if the type is a nested type.  
   
-- `mdModule`, türü çağıran tanımlanır aynı modülde tanımlandıysa.  
+- `mdModule`, if the type is defined in the same module in which the caller is defined.  
   
-- Türü genel olarak tanımlanmışsa null.  
+- Null, if the type is defined globally.  
   
  `szName`  
- [in] Unicode hedef türünün adı.  
+ [in] The name of the target type in Unicode.  
   
  `ptr`  
- [out] Bir işaretçi `mdTypeRef` türüne atanan belirteci.  
+ [out] A pointer to the `mdTypeRef` token that is assigned to the type.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

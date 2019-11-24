@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc663e76-e23f-49a8-bdd5-52cdf1a3b2b3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 36cb8d5865cdc4c1c8e34671010ede25d531bacf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e74bab058adda759db1fb549022608eedfef5d80
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782251"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432980"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo Yöntemi
-Belirtilen alan için geçerli bir statik türünü belirten bir değer alır.  
+Gets a value that indicates the kind of static that applies to the specified field.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,27 +36,27 @@ HRESULT GetStaticFieldInfo (
   
 ## <a name="parameters"></a>Parametreler  
  `classId`  
- [in] Statik alan tanımlandığı sınıfın Kimliğidir.  
+ [in] The ID of the class in which the static field is defined.  
   
  `fieldToken`  
- [in] Statik alan için meta veri belirteci.  
+ [in] The metadata token for the static field.  
   
  `pFieldInfo`  
- [out] Bir işaretçi değerini [cor_prf_statıc_type](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) numaralandırma belirten belirtilen alan statik olmasına ve bu nedenle, statik tür, alan için geçerli olup olmadığını.  
+ [out] A pointer to a value of the [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu bilgiler, hangi işlevin adresi statik alanı alma çağrısı belirlemek için kullanılabilir.  
+ This information can be used to determine which function to call to get the address of the static field.  
   
- Profil Oluşturucu kodu yine de, aslında bir adresi olduğundan emin olmak statik bir alan için meta verileri denetlemeniz gerekir. Statik değişmez değerler (diğer bir deyişle, sabitler) yalnızca meta verilerde mevcut ve bir adresi yok.  
+ The profiler code should still check the metadata for a static field to ensure that it actually has an address. Static literals (that is, constants) exist only in the metadata and do not have an address.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

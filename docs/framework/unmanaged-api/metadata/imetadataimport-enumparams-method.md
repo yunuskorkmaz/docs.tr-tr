@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52118dc9-fe6e-4b39-aa48-c3cc3ea4214d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d64a39dcdb6e3b26ff38106673719e475315f5dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5fa3647c86d97730e7ad6a2576dd34af75251d6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782117"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433950"
 ---
 # <a name="imetadataimportenumparams-method"></a>IMetaDataImport::EnumParams Yöntemi
-Belirtilen MethodDef belirteci tarafından başvurulan yönteminin parametreleri temsil eden ParamDef belirteçleri numaralandırır.  
+Enumerates ParamDef tokens representing the parameters of the method referenced by the specified MethodDef token.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,35 +39,35 @@ HRESULT EnumParams (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [out içinde] Numaralandırıcı bir işaretçi. Bu, bu yöntemin ilk çağrı için NULL olmalıdır.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `mb`  
- [in] Numaralandırılacak parametrelere sahip bir yöntemi temsil eden bir MethodDef belirteci.  
+ [in] A MethodDef token representing the method with the parameters to enumerate.  
   
  `rParams`  
- [out] Dizi ParamDef simgeleri depolamak için kullanılır.  
+ [out] The array used to store the ParamDef tokens.  
   
  `cMax`  
- [in] En büyük boyutunu `rParams` dizisi.  
+ [in] The maximum size of the `rParams` array.  
   
  `pcTokens`  
- [out] Döndürülen ParamDef belirteçleri sayısı `rParams`.  
+ [out] The number of ParamDef tokens returned in `rParams`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumParams` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak hiçbir belirteçleri vardır. Bu durumda, `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumParams` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

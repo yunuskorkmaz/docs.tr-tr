@@ -1,21 +1,21 @@
 ---
-title: .NET Core çalışma zamanı tanımlayıcısı (RID) kataloğu
-description: .NET Core 'da çalışma zamanı tanımlayıcısı (RID) ve RID 'Lerin nasıl kullanıldığı hakkında bilgi edinin.
+title: .NET Core Runtime IDentifier (RID) catalog
+description: Learn about the Runtime IDentifier (RID) and how RIDs are used in .NET Core.
 ms.date: 02/22/2019
-ms.openlocfilehash: e6bc3f75858d4b67cc8598e49ff4ad75521f16d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f90aabf0d10ce61dc10fcd952d66ca00e66d282d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100916"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428744"
 ---
-# <a name="net-core-rid-catalog"></a>.NET Core RID kataloğu
+# <a name="net-core-rid-catalog"></a>.NET Core RID Catalog
 
-*Çalışma zamanı tanımlayıcısı*için RID kısadır. RID değerleri, uygulamanın çalıştığı hedef platformları belirlemek için kullanılır.
-.NET paketleri tarafından, NuGet paketlerindeki platforma özgü varlıkları göstermek için kullanılırlar. Aşağıdaki değerler, RIDs örnekleri: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`veya `osx.10.12-x64`.
-Yerel bağımlılıklara sahip paketler için RID, paketin geri yüklenebileceği platformları belirler.
+RID is short for *Runtime IDentifier*. RID values are used to identify target platforms where the application runs.
+They're used by .NET packages to represent platform-specific assets in NuGet packages. The following values are examples of RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, or `osx.10.12-x64`.
+For the packages with native dependencies, the RID designates on which platforms the package can be restored.
 
-Tek bir RID, proje dosyanızın `<RuntimeIdentifier>` öğesinde ayarlanabilir. Çoklu RID 'Ler, proje dosyasının `<RuntimeIdentifiers>` öğesinde noktalı virgülle ayrılmış bir liste olarak tanımlanabilir. Ayrıca, aşağıdaki [.NET Core CLI komutlarla](./tools/index.md)`--runtime` seçeneği aracılığıyla da kullanılır:
+A single RID can be set in the `<RuntimeIdentifier>` element of your project file. Multiple RIDs can be defined as a semicolon-delimited list in the project file's `<RuntimeIdentifiers>` element. They're also used via the `--runtime` option with the following [.NET Core CLI commands](./tools/index.md):
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)
@@ -25,26 +25,26 @@ Tek bir RID, proje dosyanızın `<RuntimeIdentifier>` öğesinde ayarlanabilir. 
 - [dotnet run](./tools/dotnet-run.md)
 - [dotnet store](./tools/dotnet-store.md)
 
-Somut işletim sistemlerini temsil eden RID 'Ler genellikle şu düzene uyar: burada `[os].[version]-[architecture]-[additional qualifiers]`:
+RIDs that represent concrete operating systems usually follow this pattern: `[os].[version]-[architecture]-[additional qualifiers]` where:
 
-- `[os]`, işletim/platform sistem adıdır. Örneğin, `ubuntu`.
+- `[os]` is the operating/platform system moniker. For example, `ubuntu`.
 
-- `[version]`, işletim sistemi sürümü, noktayla ayrılmış (`.`) bir sürüm numarası biçiminde olur. Örneğin, `15.10`.
+- `[version]` is the operating system version in the form of a dot-separated (`.`) version number. For example, `15.10`.
 
-  - Sürüm, genellikle farklı platform API yüzey alanı ile birlikte işletim sisteminin birden fazla ayrı sürümünü temsil ettiğinden, **Pazarlama sürümü olmamalıdır** .
+  - The version **shouldn't** be marketing versions, as they often represent multiple discrete versions of the operating system with varying platform API surface area.
 
-- `[architecture]` işlemci mimarisidir. Örneğin: `x86`, `x64`, `arm`veya `arm64`.
+- `[architecture]` is the processor architecture. For example: `x86`, `x64`, `arm`, or `arm64`.
 
-- farklı platformları birbirinden ayırt `[additional qualifiers]`. Örneğin: `aot`.
+- `[additional qualifiers]` further differentiate different platforms. For example: `aot`.
 
-## <a name="rid-graph"></a>RID grafiği
+## <a name="rid-graph"></a>RID graph
 
-RID Graf veya çalışma zamanı geri dönüş grafiği, birbirleriyle uyumlu RID 'lerin bir listesidir. RID 'Ler, [Microsoft. NETCore. Platform](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) paketinde tanımlanır. Desteklenen RID 'Ler ve RID grafiğinin listesini CoreFX deposunda bulunan [*Runtime. JSON*](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) dosyasında görebilirsiniz. Bu dosyada, temel öğe hariç tüm RID 'lerin bir `"#import"` ifadesini içerdiğini görebilirsiniz. Bu deyimler, uyumlu RID 'Ler gösterir.
+The RID graph or runtime fallback graph is a list of RIDs that are compatible with each other. The RIDs are defined in the [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) package. You can see the list of supported RIDs and the RID graph in the [*runtime.json*](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) file, which is located at the CoreFX repo. In this file, you can see that all RIDs, except for the base one, contain an `"#import"` statement. These statements indicate compatible RIDs.
 
-NuGet paketleri geri yüklediğinde, belirtilen çalışma zamanı için tam bir eşleşme bulmaya çalışır.
-Tam eşleşme bulunamazsa NuGet, RID grafiğine göre en yakın uyumlu sistemi bulana kadar grafiği geri yönlendirir.
+When NuGet restores packages, it tries to find an exact match for the specified runtime.
+If an exact match is not found, NuGet walks back the graph until it finds the closest compatible system according to the RID graph.
 
-Aşağıdaki örnek, `osx.10.12-x64` RID için gerçek giriştir:
+The following example is the actual entry for the `osx.10.12-x64` RID:
 
 ```json
 "osx.10.12-x64": {
@@ -52,9 +52,9 @@ Aşağıdaki örnek, `osx.10.12-x64` RID için gerçek giriştir:
 }
 ```
 
-Yukarıdaki RID `osx.10.12-x64` `osx.10.11-x64`içeri aktaracağı belirtir. Bu nedenle, NuGet paketleri geri yüklediğinde, paketteki `osx.10.12-x64` için tam bir eşleşme bulmaya çalışır. NuGet belirli çalışma zamanını bulamazsa, örneğin `osx.10.11-x64` çalışma zamanları belirten paketleri geri yükleyebilir.
+The above RID specifies that `osx.10.12-x64` imports `osx.10.11-x64`. So, when NuGet restores packages, it tries to find an exact match for  `osx.10.12-x64` in the package. If NuGet cannot find the specific runtime, it can restore packages that specify `osx.10.11-x64` runtimes, for example.
 
-Aşağıdaki örnek, *çalışma zamanı. JSON* dosyasında de tanımlanan biraz daha büyük bir RID grafiği göstermektedir:
+The following example shows a slightly bigger RID graph also defined in the *runtime.json*  file:
 
 ```
     win7-x64    win7-x86
@@ -68,85 +68,85 @@ Aşağıdaki örnek, *çalışma zamanı. JSON* dosyasında de tanımlanan biraz
             any
 ```
 
-Tüm RID 'Ler sonunda `any` RID 'ye geri eşlenir.
+All RIDs eventually map back to the root `any` RID.
 
-RID 'Ler hakkında, bunlarla çalışırken göz önünde bulundurmanız gereken bazı noktalar vardır:
+There are some considerations about RIDs that you have to keep in mind when working with them:
 
-- RID 'ler **donuk dizelerdir** ve siyah kutular olarak değerlendirilmelidir.
-- Program aracılığıyla RID oluşturma.
-- Platform için önceden tanımlanmış olan RID 'leri kullanın.
-- RID 'Lerin özel olması gerekir, bu nedenle gerçek RID değerinden herhangi bir şeyi varsaymayın.
+- RIDs are **opaque strings** and should be treated as black boxes.
+- Don't build RIDs programmatically.
+- Use RIDs that are already defined for the platform.
+- The RIDs need to be specific, so don't assume anything from the actual RID value.
 
-## <a name="using-rids"></a>RID 'leri kullanma
+## <a name="using-rids"></a>Using RIDs
 
-RID 'leri kullanabilmeniz için hangi RID 'Lerin mevcut olduğunu bilmeniz gerekir. Yeni değerler platforma düzenli olarak eklenir.
-En son ve tüm sürüm için CoreFX deposunda [Runtime. JSON](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) dosyasına bakın.
+To be able to use RIDs, you have to know which RIDs exist. New values are added regularly to the platform.
+For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo.
 
-.NET Core 2,0 SDK, taşınabilir RID kavramını tanıtır. Bunlar, belirli bir sürüme veya işletim sistemi dağıtımına bağlı olmayan RID grafiğine eklenen yeni değerlerdir ve .NET Core 2,0 ve üzeri kullanılırken tercih edilen seçenektir. Çoğu dağıtım merkezi taşınabilir RID 'lerle eşlendiğinden, bunlar özellikle birden çok Linux ile ilgilenirken yararlıdır.
+.NET Core 2.0 SDK introduces the concept of portable RIDs. They are new values added to the RID graph that aren't tied to a specific version or OS distribution and are the preferred choice when using .NET Core 2.0 and higher. They're particularly useful when dealing with multiple Linux distros since most distribution RIDs are mapped to the portable RIDs.
 
-Aşağıdaki liste, her bir işletim sistemi için kullanılan en yaygın RID 'lerin küçük bir alt kümesini gösterir.
+The following list shows a small subset of the most common RIDs used for each OS.
 
-## <a name="windows-rids"></a>Windows RID 'leri
+## <a name="windows-rids"></a>Windows RIDs
 
-Yalnızca ortak değerler listelenir. En son ve tüm sürüm için CoreFX deposunda [Runtime. JSON](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) dosyasına bakın.
+Only common values are listed. For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo.
 
-- Taşınabilir (.NET Core 2,0 veya sonraki sürümler)
+- Portable (.NET Core 2.0 or later versions)
   - `win-x64`
   - `win-x86`
   - `win-arm`
   - `win-arm64`
-- Windows 7/Windows Server 2008 R2
+- Windows 7 / Windows Server 2008 R2
   - `win7-x64`
   - `win7-x86`
-- Windows 8.1/Windows Server 2012 R2
+- Windows 8.1 / Windows Server 2012 R2
   - `win81-x64`
   - `win81-x86`
   - `win81-arm`
-- Windows 10/Windows Server 2016
+- Windows 10 / Windows Server 2016
   - `win10-x64`
   - `win10-x86`
   - `win10-arm`
   - `win10-arm64`
 
-Daha fazla bilgi için bkz. [Windows üzerinde .NET Core önkoşulları](windows-prerequisites.md) .
+See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-windows) for more information.
 
-## <a name="linux-rids"></a>Linux RID 'leri
+## <a name="linux-rids"></a>Linux RIDs
 
-Yalnızca ortak değerler listelenir. En son ve tüm sürüm için CoreFX deposunda [Runtime. JSON](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) dosyasına bakın. Aşağıda listelenmeyen bir dağıtımı çalıştıran cihazlar taşınabilir RID 'Ler ile çalışabilir. Örneğin, listelenmemiş bir Linux dağıtımını çalıştıran Raspberry PI cihazları `linux-arm`hedeflenebilir.
+Only common values are listed. For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo. Devices running a distribution not listed below may work with one of the Portable RIDs. For example, Raspberry Pi devices running a Linux distribution not listed can be targeted with `linux-arm`.
 
-- Taşınabilir (.NET Core 2,0 veya sonraki sürümler)
-  - `linux-x64` (CentOS, deler, Fedora, Ubuntu ve türetmeler gibi masaüstü dağıtımlarını En Iyi şekilde)
-  - `linux-musl-x64` (alp Linux gibi [MUSL](https://wiki.musl-libc.org/projects-using-musl.html) kullanan hafif dağıtımlar)
-  - `linux-arm` (Raspberry PI gibi ARM üzerinde çalışan Linux dağıtımları)
+- Portable (.NET Core 2.0 or later versions)
+  - `linux-x64` (Most desktop distributions like CentOS, Debian, Fedora, Ubuntu and derivatives)
+  - `linux-musl-x64` (Lightweight distributions using [musl](https://wiki.musl-libc.org/projects-using-musl.html) like Alpine Linux)
+  - `linux-arm` (Linux distributions running on ARM like Raspberry Pi)
 - Red Hat Enterprise Linux
-  - `rhel-x64` (sürüm 6 ' nın üzerinde RHEL için `linux-x64` tarafından yenisiyle değiştirilmiştir)
-  - `rhel.6-x64` (.NET Core 2,0 veya sonraki sürümler)
-- Tizen (.NET Core 2,0 veya sonraki sürümler)
+  - `rhel-x64` (Superseded by `linux-x64` for RHEL above version 6)
+  - `rhel.6-x64` (.NET Core 2.0 or later versions)
+- Tizen (.NET Core 2.0 or later versions)
   - `tizen`
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-Daha fazla bilgi için bkz. [Linux üzerinde .NET Core önkoşulları](linux-prerequisites.md) .
+See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-linux) for more information.
 
 ## <a name="macos-rids"></a>macOS RIDs
 
-macOS 'Ler eski "OSX" markasını kullanır. Yalnızca ortak değerler listelenir. En son ve tüm sürüm için CoreFX deposunda [Runtime. JSON](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) dosyasına bakın.
+macOS RIDs use the older "OSX" branding. Only common values are listed. For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo.
 
-- Taşınabilir (.NET Core 2,0 veya sonraki sürümler)
-  - `osx-x64` (en düşük işletim sistemi sürümü macOS 10,12 Sierra)
-- macOS 10,10 Yosemite
+- Portable (.NET Core 2.0 or later versions)
+  - `osx-x64` (Minimum OS version is macOS 10.12 Sierra)
+- macOS 10.10  Yosemite
   - `osx.10.10-x64`
-- macOS 10,11 El Capitan
+- macOS 10.11 El Capitan
   - `osx.10.11-x64`
-- macOS 10,12 Sierra (.NET Core 1,1 veya sonraki sürümler)
+- macOS 10.12 Sierra (.NET Core 1.1 or later versions)
   - `osx.10.12-x64`
-- macOS 10,13 High Sierra (.NET Core 1,1 veya sonraki sürümler)
+- macOS 10.13 High Sierra (.NET Core 1.1 or later versions)
   - `osx.10.13-x64`
-- macOS 10,14 Mojave (.NET Core 1,1 veya sonraki sürümler)
+- macOS 10.14 Mojave (.NET Core 1.1 or later versions)
   - `osx.10.14-x64`
 
-Daha fazla bilgi için bkz. [macOS 'ta .NET Core önkoşulları](macos-prerequisites.md) .
+See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-macos) for more information.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma zamanı kimlikleri](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/readme.md)
+- [Runtime IDs](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/readme.md)

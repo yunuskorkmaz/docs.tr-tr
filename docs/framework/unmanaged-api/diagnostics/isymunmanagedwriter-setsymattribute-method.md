@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64d9b80e-b883-4539-89c7-03573185a1eb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4450c262b75a73114cb7de7de98567f053bbf564
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8a4d205586921b377147eeab80754e1a0d9e52b0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894471"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427849"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute Yöntemi
-Özel bir özniteliği adına göre tanımlar. Bu öznitelikler, meta veri özel özniteliklerinin aksine sembol deposunda tutulur.  
+Defines a custom attribute based upon its name. These attributes are held in the symbol store, unlike metadata custom attributes.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +37,22 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>Parametreler  
  `parent`  
- 'ndaki Özniteliğin tanımlandığı meta veri belirteci.  
+ [in] The metadata token for which the attribute is being defined.  
   
  `name`  
- 'ndaki Özniteliği adını içeren bir `WCHAR` işaretçisi.  
+ [in] A pointer to a `WCHAR` that contains the attribute name.  
   
  `cData`  
- 'ndaki Dizi`data` boyutunu belirten bir `ULONG32` .  
+ [in] A `ULONG32` that indicates the size of the `data` array.  
   
  `data`  
- 'ndaki Öznitelik değeri.  
+ [in] The attribute value.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAıL veya diğer bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi** CorSym. IDL, CorSym. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

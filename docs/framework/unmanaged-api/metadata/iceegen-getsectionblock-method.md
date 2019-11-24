@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 84ccbd7a8be7d90a541fb2d54baa3d7f66d3d31e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0731053fb37c775d25052a5fd99a479a44ff5862
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746119"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434873"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock Metodu
-Kod tabanının bir bölüm bloğunu alır.  
+Gets a section block of the code base.  
   
- Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,28 +40,28 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>Parametreler  
  `section`  
- [in] Bir blok kod tabanının alınacağı bölümü.  
+ [in] The section from which to retrieve a block of the code base.  
   
  `len`  
- [in] Alınacak Blok uzunluğu.  
+ [in] The length of the block to be retrieved.  
   
  `align`  
- [in] Bloğun ilk baytı hizalamak hangi bölümde başlangıcına göre bayt. Blok bölüm içindeki konumudur.  
+ [in] The byte, relative to the beginning of the section, with which to align the first byte of the block. This is the position of the block within the section.  
   
  `ppBytes`  
- [out] Alınan blok adresini alan bir konuma yönelik işaretçi.  
+ [out] A pointer to a location that receives the address of the retrieved block.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çağrı `GetSectionBlock` yalnızca diğer yöntemler tarafından işlenmemiş özel bölümü gereksinimleriniz varsa.  
+ Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

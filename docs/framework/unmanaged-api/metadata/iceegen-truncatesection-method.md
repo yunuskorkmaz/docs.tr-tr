@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0451d752-1e5c-4c9a-8bad-6cd35b7ba3df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 994f6668de3040cc9f2381356d6db06c18c9e984
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87a70587027f283ef5976089b3f2daf1204e68ec
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745886"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426120"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection Yöntemi
-Belirtilen kod bölümünde belirtilen uzunluğa göre keser.  
+Truncates the specified code section by the specified length.  
   
- Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,22 +38,22 @@ HRESULT TruncateSection (
   
 ## <a name="parameters"></a>Parametreler  
  `section`  
- [in] Truncate bölümü.  
+ [in] The section to truncate.  
   
  `len`  
- [in] Bölüm kesmek, bayt cinsinden uzunluğu.  
+ [in] The length, in bytes, by which to truncate the section.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çağrı `TruncateSection` yalnızca diğer yöntemler tarafından işlenmemiş özel bölümü gereksinimleriniz varsa.  
+ Call `TruncateSection` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

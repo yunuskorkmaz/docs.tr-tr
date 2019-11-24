@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 341972629e18213536919fe53bfae94613b4d6e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 75711b3d87699ff5db21a04351ff0acaccabb5aa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777635"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431862"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember Yöntemi
-Bir türün veya geçerli kapsam dışında tanımlanan ve bu başvuru için bir belirteç tanımlar modülü belirtilen üyesine bir başvuru oluşturur.  
+Creates a reference to the specified member of a type or module that is defined outside the current scope, and defines a token for that reference.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,48 +42,48 @@ HRESULT DefineImportMember (
   
 ## <a name="parameters"></a>Parametreler  
  `pAssemImport`  
- [in] Bir [Imetadataassemblyımport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) hedef üye içe derleme temsil eden arabirim.  
+ [in] An [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface that represents the assembly from which the target member is imported.  
   
  `pbHashValue`  
- [in] Tarafından belirtilen derleme için karma içeren bir dizi `pAssemImport`.  
+ [in] An array that contains the hash for the assembly specified by `pAssemImport`.  
   
  `cbHashValue`  
- [in] Bayt sayısı `pbHashValue` dizisi.  
+ [in] The number of bytes in the `pbHashValue` array.  
   
  `pImport`  
- [in] Bir [Imetadataımport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) hedef üye içe meta veri kapsamı temsil eden arabirim.  
+ [in] An [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface that represents the metadata scope from which the target member is imported.  
   
  `mbMember`  
- [in] Hedef üye belirleyen meta veri belirteci. Belirteç olabilir bir `mdMethodDef` (için üye yöntemi) `mdProperty` (bir üye özelliği için) veya `mdFieldDef` (için bir üye alan) belirteci.  
+ [in] The metadata token that specifies the target member. The token can be an `mdMethodDef` (for a member method), `mdProperty` (for a member property), or `mdFieldDef` (for a member field) token.  
   
  `pAssemEmit`  
- [in] Bir [Imetadataassemblyemit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) hedef üye içe içine derleme temsil eden arabirim.  
+ [in] An [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) interface that represents the assembly into which the target member is imported.  
   
  `tkParent`  
- [in] `mdTypeRef` Veya `mdModuleRef` typ nebo modul belirteci, sırasıyla, hedef üye sahip.  
+ [in] The `mdTypeRef` or `mdModuleRef` token for the type or module, respectively, that owns the target member.  
   
  `pmr`  
- [out] `mdMemberRef` Üye başvurusu için geçerli kapsamda tanımlı belirteç.  
+ [out] The `mdMemberRef` token that is defined in the current scope for the member reference.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `DefineImportMember` Yöntemi tarafından belirtilen üye, şuna `mbMember`, yani tarafından belirtilen başka bir kapsamda tanımlı `pImport`ve özelliklerini alır. Çağırmak için bu bilgileri kullanır [Imetadataemit::definememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) üyesi başvuru oluşturmak için geçerli kapsamda yöntemi.  
+ The `DefineImportMember` method looks up the member, specified by `mbMember`, that is defined in another scope, specified by `pImport`, and retrieves its properties. It uses this information to call the [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) method in the current scope to create the member reference.  
   
- Genellikle, önce kullanırsınız `DefineImportMember` yöntemi oluşturmanız gerekir, geçerli kapsam, bir tür başvurusu veya hedef üyenin üst sınıf, arabirim veya modül için modülü başvurusu. Bu başvuru için meta veri belirteci sonra geçirilen `tkParent` bağımsız değişken. Derleyici veya bağlayıcı tarafından daha çözümlenir, hedef üyenin üst başvuru oluşturmak gerekmez. Özetlersek:  
+ Generally, before you use the `DefineImportMember` method, you must create, in the current scope, a type reference or module reference for the target member's parent class, interface, or module. The metadata token for this reference is then passed in the `tkParent` argument. You do not need to create a reference to the target member's parent if it will be resolved later by the compiler or linker. Özetlersek:  
   
-- Hedef alan veya yöntem üyesiyse, kullanın [Imetadataemit::definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) veya [Imetadataemit::defineımporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) geçerli kapsamda bir tür başvurusu için oluşturmak üzere yöntemi Üyenin üst sınıfta veya üst arabirimi.  
+- If the target member is a field or method, use either the [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) or the [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) method to create a type reference, in the current scope, for the member's parent class or parent interface.  
   
-- Genel bir değişken veya genel işlev (diğer bir deyişle, bir üyesi değil bir sınıf veya arabirim) hedef üye ise kullanın [Imetadataemit::definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) geçerli kapsamda üyenin üst için bir modül başvurusu oluşturmak için yöntemi Modül.  
+- If the target member is a global variable or global function (that is, not a member of a class or interface), use the [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) method to create a module reference, in the current scope, for the member's parent module.  
   
-- Hedef üyenin üst daha sonra derleyici veya bağlayıcı tarafından çözümlenir, ardından geçirin `mdTokenNil` içinde `tkParent`. Tek senaryo, bu geçerlidir genel bir işlev olduğunda veya genel değişkeni geçerli bir modüle sonuçta bağlanacak bir .obj dosyasından içeri aktarılan ve meta veriler birleştirilir.  
+- If the target member's parent will be resolved later by the compiler or linker, then pass `mdTokenNil` in `tkParent`. The only scenario in which this applies is when a global function or global variable is being imported from a .obj file that will ultimately be linked into the current module and the metadata merged.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

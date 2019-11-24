@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 35b8f0d6-9aba-4714-adb2-62020a38fb7e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4eaf426bc9c933de1d4b774928f2b0a54dfb472
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5936ca837c9ab452e992fcb09aacb476ab37316a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636952"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431428"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>IMetaDataTables::GetUserString Metodu
 
-Geçerli kapsamdaki dize sütununda belirtilen dizindeki sabit kodlanmış bir dize alır.
+Gets the hard-coded string at the specified index in the string column in the current scope.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,23 +39,23 @@ HRESULT GetUserString (
 ## <a name="parameters"></a>Parametreler
 
 `ixUserString`\
-[in] Dizin değeri sabit kodlanmış dize alınır.
+[in] The index value from which the hard-coded string will be retrieved.
 
 `pcbData`\
-[out] Bir işaretçinin boyutuna `ppData`.
+[out] A pointer to the size of `ppData`.
 
 `ppData`\
-[out] Döndürülen dize için bir işaretçi işaretçisi.
+[out] A pointer to a pointer to the returned string.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).
 
-**Üst bilgi:** COR.h
+**Header:** Cor.h
 
-**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan
+**Library:** Used as a resource in MsCorEE.dll
 
-**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

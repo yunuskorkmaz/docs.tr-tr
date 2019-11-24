@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f2dceeb2f0b3aa9f3147157e77087dffbf2d5f85
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ca34d1d84d6f9960d021c35566f8412df321464d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939021"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429744"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize Yöntemi
-Sembol okuyucuyu, bu okuyucunun ilişkilendirildiği meta veri alma arabirimiyle birlikte modülün dosya adı ile başlatır.  
+Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.  
   
 > [!NOTE]
-> Bu yöntem yalnızca bir kez çağrılabilir ve diğer herhangi bir okuyucu yönteminden önce çağrılmalıdır.  
+> This method can be called only once, and must be called before any other reader methods.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,25 +40,25 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>Parametreler  
  `importer`  
- 'ndaki Bu okuyucunun ilişkilendirileceği meta veri alma arabirimi.  
+ [in] The metadata importer interface with which this reader will be associated.  
   
  `filename`  
- 'ndaki Modülün dosya adı. Bunun yerine `pIStream` parametresini kullanabilirsiniz.  
+ [in] The file name of the module. You can use the `pIStream` parameter instead.  
   
  `searchPath`  
- 'ndaki Arama yolu. Bu parametre isteğe bağlıdır.  
+ [in] The path to search. This parameter is optional.  
   
  `pIStream`  
- 'ndaki Dosya akışı, filename parametresine alternatif olarak kullanılır.  
+ [in] The file stream, used as an alternative to the filename parameter.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAıL veya diğer bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `filename` Ya`pIStream` da parametrelerinden yalnızca birini belirtmeniz gerekir. `searchPath` Parametresi isteğe bağlıdır.  
+ You need to specify only one of the `filename` or the `pIStream` parameters, not both. The `searchPath` parameter is optional.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi** CorSym. IDL, CorSym. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

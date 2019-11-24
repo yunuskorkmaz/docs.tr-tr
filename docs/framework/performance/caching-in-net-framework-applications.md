@@ -6,78 +6,78 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 704efed96c18f23d34d8a583d3121fc08b9e22e1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2a0d138151722a76133da45c166c51d7f3bb0a31
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046784"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428193"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework Uygulamalarında Önbelleğe Alma
-Önbelleğe alma, verileri hızlı erişim için bellekte depolamanıza olanak sağlar. Verilere yeniden erişildiğinde, uygulamalar verileri özgün kaynaktan almak yerine önbellekten alabilir. Bu, performansı ve ölçeklenebilirliği iyileştirebilir. Ayrıca, veri kaynağı geçici olarak kullanılamadığında önbelleğe alma verilerin kullanılabilir olmasını sağlar.  
+Caching enables you to store data in memory for rapid access. When the data is accessed again, applications can get the data from the cache instead of retrieving it from the original source. This can improve performance and scalability. In addition, caching makes data available when the data source is temporarily unavailable.  
   
- .NET Framework, ASP.NET dahil olmak üzere hem Windows istemci hem de sunucu uygulamalarının performansını ve ölçeklenebilirliğini artırmak için kullanabileceğiniz önbelleğe alma işlevselliği sağlar.  
+ The .NET Framework provides caching functionality that you can use to improve the performance and scalability of both Windows client and server applications, including ASP.NET.  
   
 > [!NOTE]
-> .NET Framework 3,5 ve önceki sürümlerde, ASP.net <xref:System.Web.Caching> ad alanında bellek içi önbellek uygulamasını sağladı. .NET Framework önceki sürümlerinde, önbelleğe alma yalnızca <xref:System.Web> ad alanında kullanılabilir ve bu nedenle ASP.net sınıflarında bir bağımlılık gerektirdi. .NET Framework 4 ' te, <xref:System.Runtime.Caching> ad alanı hem Web hem de Web 'e ait olmayan uygulamalar için tasarlanan API 'leri içerir.  
+> In the .NET Framework 3.5 and earlier versions, ASP.NET provided an in-memory cache implementation in the <xref:System.Web.Caching> namespace. In previous versions of the .NET Framework, caching was available only in the <xref:System.Web> namespace and therefore required a dependency on ASP.NET classes. In the .NET Framework 4, the <xref:System.Runtime.Caching> namespace contains APIs that are designed for both Web and non-Web applications.  
   
 ## <a name="caching-data"></a>Verileri Önbelleğe Alma  
- <xref:System.Runtime.Caching> Ad alanındaki sınıfları kullanarak bilgileri önbelleğe alabilirsiniz. Bu ad alanındaki önbelleğe alma sınıfları aşağıdaki özellikleri sağlar:  
+ You can cache information by using classes in the <xref:System.Runtime.Caching> namespace. The caching classes in this namespace provide the following features:  
   
-- Özel önbellek uygulamaları oluşturmak için temel sağlayan soyut türler.  
+- Abstract types that provide the foundation for creating custom cache implementations.  
   
-- Somut bellek içi nesne önbelleği uygulama.  
+- A concrete in-memory object cache implementation.  
   
- Soyut temel önbelleğe alma sınıfı (<xref:System.Runtime.Caching.ObjectCache>) aşağıdaki önbelleğe alma görevlerini tanımlar:  
+ The abstract base caching class (<xref:System.Runtime.Caching.ObjectCache>) defines the following caching tasks:  
   
-- Önbellek girişleri oluşturma ve yönetme.  
+- Creating and managing cache entries.  
   
-- Süre sonu ve çıkarma bilgilerini belirtme.  
+- Specifying expiration and eviction information.  
   
-- Önbellek girdilerindeki değişikliklere yanıt olarak oluşturulan olayları tetikleyerek.  
+- Triggering events that are raised in response to changes in cache entries.  
   
- Sınıfı, <xref:System.Runtime.Caching.ObjectCache> sınıfının bellek içi nesne önbelleği uygulamasıdır. <xref:System.Runtime.Caching.MemoryCache> En çok önbelleğe alma <xref:System.Runtime.Caching.MemoryCache> görevleri için sınıfını kullanabilirsiniz.  
-  
-> [!NOTE]
-> Sınıfı, <xref:System.Web.Caching> ad alanında tanımlanan ASP.net Cache nesnesi üzerinde modellenir. <xref:System.Runtime.Caching.MemoryCache> Bu nedenle, ASP.NET 'in önceki sürümlerinde sağlanmış mantığa benzer iç önbelleğe alma mantığı.  
-  
- WPF uygulamasında önbelleğe alma için kullanmanın bir örneği için bkz [. İzlenecek yol: Bir WPF uygulamasında](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)uygulama verilerini önbelleğe alma.  
-  
-## <a name="caching-in-aspnet-applications"></a>ASP.NET uygulamalarında önbelleğe alma  
- <xref:System.Runtime.Caching> Ad alanındaki önbelleğe alma sınıfları, ASP.NET içinde verileri önbelleğe alma işlevselliği sağlar.  
+ The <xref:System.Runtime.Caching.MemoryCache> class is an in-memory object cache implementation of the <xref:System.Runtime.Caching.ObjectCache> class. You can use the <xref:System.Runtime.Caching.MemoryCache> class for most caching tasks.  
   
 > [!NOTE]
-> Uygulamanız .NET Framework 3,5 veya önceki bir sürümü hedefliyorsa, <xref:System.Web.Caching> ad alanında tanımlanan önbelleğe alma sınıflarını kullanmanız gerekir. Daha fazla bilgi için bkz. [ASP.net Caching Overview](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
+> The <xref:System.Runtime.Caching.MemoryCache> class is modeled on the ASP.NET cache object that is defined in the <xref:System.Web.Caching> namespace. Therefore, the internal caching logic similar to the logic that was provided in earlier versions of ASP.NET.  
+  
+ For an example of how to use to caching in a WPF application, see [Walkthrough: Caching Application Data in a WPF Application](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md).  
+  
+## <a name="caching-in-aspnet-applications"></a>Caching in ASP.NET Applications  
+ The caching classes in the <xref:System.Runtime.Caching> namespace provide functionality for caching data in ASP.NET.  
   
 > [!NOTE]
-> Yeni uygulamalar geliştirirken <xref:System.Runtime.Caching.MemoryCache> sınıfını kullanmanızı öneririz. <xref:System.Runtime.Caching> Ad alanında belirtilen API, <xref:System.Web.Caching.Cache> ad alanında sağlanmış olan API 'ye benzer. Bu nedenle, ASP.NET 'in önceki sürümlerinde önbelleğe alma kullandıysanız API tanıdık gelecektir. ASP.NET uygulamalarında önbelleğe alma özelliğinin kullanımına ilişkin bir örnek için bkz [. İzlenecek yol: Uygulama verilerini ASP.NET](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))içinde önbelleğe alma.  
+> If your application targets the .NET Framework 3.5 or earlier, you must use the caching classes that are defined in the <xref:System.Web.Caching> namespace. For more information, see [ASP.NET Caching Overview](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
   
-### <a name="output-caching"></a>Çıktıyı önbelleğe alma  
- Uygulama verilerini el ile önbelleğe almak için, ASP.NET içinde <xref:System.Runtime.Caching.MemoryCache> sınıfını kullanabilirsiniz. ASP.NET ayrıca, bellek içinde sayfaların, denetimlerin ve HTTP yanıtlarının üretilen çıkışını depolayan çıkış önbelleğe almayı destekler. Çıktıyı önbelleğe alma işlemini bildirimli olarak bir ASP.NET Web sayfasında veya Web. config dosyasındaki ayarları kullanarak yapılandırabilirsiniz. Daha fazla bilgi için bkz. [önbelleğe alma Için OutputCache öğesi (ASP.NET Settings şeması)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms228124(v=vs.100)).  
+> [!NOTE]
+> When you develop new applications, we recommend that you use the <xref:System.Runtime.Caching.MemoryCache> class. The API that is provided in the <xref:System.Runtime.Caching> namespace is like the API that is provided in the <xref:System.Web.Caching.Cache> namespace. Therefore, the API will be familiar if you used caching in earlier versions of ASP.NET. For an example of how to use caching in ASP.NET applications, see [Walkthrough: Caching Application Data in ASP.NET](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100)).  
   
- ASP.NET, özel çıkış önbelleği sağlayıcıları oluşturarak çıktı önbelleğe almayı genişletmenizi sağlar. Özel sağlayıcılar kullanarak, önbelleğe alınmış içeriği diskler, bulut depolaması ve dağıtılmış önbellek motorları gibi diğer depolama cihazlarını kullanarak saklayabilirsiniz. Özel bir çıktı önbelleği sağlayıcısı oluşturmak için, <xref:System.Web.Caching.OutputCacheProvider> sınıfından türeten bir sınıf oluşturur ve uygulamayı özel çıkış önbelleği sağlayıcısını kullanacak şekilde yapılandırırsınız.  
+### <a name="output-caching"></a>Output Caching  
+ To manually cache application data, you can use the <xref:System.Runtime.Caching.MemoryCache> class in ASP.NET. ASP.NET also supports output caching, which stores the generated output of pages, controls, and HTTP responses in memory. You can configure output caching declaratively in an ASP.NET Web page or by using settings in the Web.config file. For more information, see [outputCache Element for caching (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms228124(v=vs.100)).  
   
-## <a name="caching-in-wcf-rest-services"></a>WCF REST hizmetlerinde önbelleğe alma  
- WCF REST Hizmetleri için .NET Framework, ASP.NET ' de bulunan bildirime dayalı çıktı önbelleği avantajlarından yararlanmanıza olanak sağlar. Bu, WCF REST hizmet işlemlerinizin yanıtlarını önbelleğe almanıza olanak sağlar. Kullanıcı, önbelleğe alma için yapılandırılmış bir hizmete HTTP GET isteği gönderdiğinde, ASP.NET önbelleğe alınmış yanıtı geri gönderir ve hizmet yöntemi çağrılmaz. Önbelleğin süresi dolduktan sonra, bir Kullanıcı bir HTTP GET isteği gönderdiğinde, hizmet yönteminiz çağrılır ve yanıt yeniden önbelleğe alınır.  
+ ASP.NET lets you extend output caching by creating custom output-cache providers. By using custom providers, you can store cached content using other storage devices such as disks, cloud storage, and distributed cache engines. To create a custom output cache provider, you create a class that derives from the <xref:System.Web.Caching.OutputCacheProvider> class and configure the application to use the custom output cache provider.  
   
- .NET Framework Ayrıca Koşullu HTTP alma önbelleği uygulamanıza olanak sağlar. REST senaryolarında, hizmetler tarafından [http belirtiminde](https://go.microsoft.com/fwlink/?LinkId=165800)açıklandığı gıbı akıllı http önbelleği uygulamak için genellikle kullanılan koşullu BIR http get isteği kullanılır. Daha fazla bilgi için bkz. [WCF Web HTTP Hizmetleri Için önbelleğe alma desteği](https://go.microsoft.com/fwlink/?LinkId=184598).  
+## <a name="caching-in-wcf-rest-services"></a>Caching in WCF REST Services  
+ For WCF REST services, the .NET Framework enables you to take advantage of the declarative output caching that is available in ASP.NET. This enables you to cache responses from your WCF REST service operations. When a user sends an HTTP GET request to a service that is configured for caching, ASP.NET sends back the cached response, and the service method is not called. After the cache expires, the next time that a user sends an HTTP GET request, your service method is called and the response is again cached.  
   
-## <a name="extending-caching-in-the-net-framework"></a>.NET Framework önbelleğe almayı genişletme  
- .NET Framework önbelleğe alma, genişletilebilir olacak şekilde tasarlanmıştır. Sınıfı <xref:System.Runtime.Caching.ObjectCache> , özel önbellek uygulamaları oluşturmanıza olanak sağlar. Bu sınıf, Windows Forms, Windows Presentation Foundation (WPF) ve Windows Communications Foundation (WCF) dahil olmak üzere tüm yönetilen uygulamalar için kullanılabilen üyeleri sağlar. Bunu, farklı bir depolama mekanizması kullanan bir önbellek sınıfı oluşturmak için veya önbellek işlemleri üzerinde ayrıntılı denetim istiyorsanız yapabilirsiniz.  
+ The .NET Framework also enables you to implement conditional HTTP GET caching. In REST scenarios, a conditional HTTP GET request is often used by services to implement intelligent HTTP caching as described in the [HTTP Specification](https://www.w3.org/Protocols/rfc2616/rfc2616.html). For more information, see [Caching Support for WCF Web HTTP Services](../wcf/feature-details/caching-support-for-wcf-web-http-services.md).  
   
- Önbelleğe almayı genişletmek için şunları yapabilirsiniz:  
+## <a name="extending-caching-in-the-net-framework"></a>Extending Caching in the .NET Framework  
+ Caching in the .NET Framework is designed to be extensible. The <xref:System.Runtime.Caching.ObjectCache> class enables you to create a custom cache implementation. This class provides members that are available to all managed applications, including Windows Forms, Windows Presentation Foundation (WPF), and Windows Communications Foundation (WCF). You might do this in order to create a cache class that uses a different storage mechanism, or if you want granular control over cache operations.  
   
-- <xref:System.Runtime.Caching.ObjectCache> Sınıfından türeten özel bir sınıf oluşturun ve ardından türetilmiş sınıfta özel bir önbellek uygulamasını sağlayın.  
+ To extend caching you can do the following:  
   
-- <xref:System.Runtime.Caching.MemoryCache> Sınıfından türeten bir sınıf oluşturun ve türetilmiş sınıfı özelleştirin veya genişletin. Bunun nasıl yapılacağı hakkında bir örnek için bkz. [bir ASP.NET uygulamasında birden çok Cache nesnesi kullanarak uygulama verilerini önbelleğe alma](https://blogs.msdn.microsoft.com/aspnetue/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application/).  
+- Create a custom class that derives from the <xref:System.Runtime.Caching.ObjectCache> class and then provide a custom cache implementation in the derived class.  
   
-- <xref:System.Web.Caching.OutputCacheProvider> Sınıfından türeten bir sınıf oluşturun ve uygulamayı özel çıkış önbelleği sağlayıcısını kullanacak şekilde yapılandırın.  
+- Create a class that derives from <xref:System.Runtime.Caching.MemoryCache> class and customize or extend the derived class. For an example of how to do this, see [Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application](https://blogs.msdn.microsoft.com/aspnetue/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application/).  
   
- Daha fazla bilgi için Scott Guthrie 'nin bloguna [ASP.NET 4 (VS 2010 ve .net 4,0 serisi) Ile Genişletilebilir çıkış önbelleği](https://go.microsoft.com/fwlink/?LinkId=185772) girişi bölümüne bakın.  
+- Create a class that derives from the <xref:System.Web.Caching.OutputCacheProvider> class and configure the application to use the custom output cache provider.  
+  
+ For more information, see the entry [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://weblogs.asp.net/scottgu/extensible-output-caching-with-asp-net-4-vs-2010-and-net-4-0-series) on Scott Guthrie's blog.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [İzlenecek yol: WPF uygulamasında uygulama verilerini önbelleğe alma](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
-- [İzlenecek yol: Uygulama verilerini ASP.NET içinde önbelleğe alma](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))
+- [İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Walkthrough: Caching Application Data in ASP.NET](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

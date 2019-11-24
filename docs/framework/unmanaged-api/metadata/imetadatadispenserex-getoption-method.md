@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7f794e5-8e25-4d65-850a-7c34fbfce87d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8717a1eafebf24366c35848dbe285943c107ed51
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ab74b02df959fe6e6457273e67ba3b82ae6a015c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777725"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435997"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption Yöntemi
-Geçerli meta veri kapsam için belirtilen seçenek değerini alır. Geçerli bir meta veri kapsama çağrıları nasıl işleneceğini seçeneği denetler.  
+Gets the value of the specified option for the current metadata scope. The option controls how calls to the current metadata scope are handled.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,13 +36,13 @@ HRESULT GetOption (
   
 ## <a name="parameters"></a>Parametreler  
  `optionId`  
- [in] Alınacak seçeneğini belirten bir GUID için bir işaretçi. Desteklenen GUID'lerinin listesi için Açıklamalar bölümüne bakın.  
+ [in] A pointer to a GUID that specifies the option to be retrieved. See the Remarks section for a list of supported GUIDs.  
   
  `pValue`  
- [out] Döndürülen seçeneği değeri. Bu değerin türü, belirtilen seçeneğin türünde bir değişken olacaktır.  
+ [out] The value of the returned option. The type of this value will be a variant of the specified option's type.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Aşağıdaki liste, bu yöntem için desteklenen GUID'leri gösterir. Açıklamaları için bkz. [Imetadatadispenserex::SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) yöntemi. Varsa `optionId` olduğundan bu listede değil, bu yöntem HRESULT döndürür. `E_INVALIDARG`, hatalı bir parametre belirten.  
+ The following list shows the GUIDs that are supported for this method. For descriptions, see the [IMetaDataDispenserEx::SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) method. If `optionId` is not in this list, this method returns HRESULT `E_INVALIDARG`, indicating an incorrect parameter.  
   
 - MetaDataCheckDuplicatesFor  
   
@@ -61,13 +59,13 @@ HRESULT GetOption (
 - MetaDataLinkerOptions  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

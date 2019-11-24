@@ -1,46 +1,46 @@
 ---
-title: Varsayılan değerler tablo- C# başvuru
+title: Default values table - C# reference
 ms.custom: seodec18
-description: C# Türlerin varsayılan değerlerini öğrenin.
+description: Learn what are the default values of C# types.
 ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 02f86ef8ee73ff31a6c5c9d17a44a443f72ef05e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 2f1ad5cc029b93261153e46d854cd8bf3e31ce92
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739289"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428529"
 ---
-# <a name="default-values-table-c-reference"></a>Varsayılan değerler tablosu (C# başvuru)
+# <a name="default-values-table-c-reference"></a>Default values table (C# reference)
 
-Aşağıdaki tabloda, C# türlerin varsayılan değerleri gösterilmektedir:
+The following table shows the default values of C# types:
 
 |Tür|Varsayılan değer|
 |---------|------------------|
-|Herhangi bir başvuru türü|`null`|
-|Herhangi bir [yerleşik integral sayısal türü](../builtin-types/integral-numeric-types.md)|0 (sıfır)|
-|Herhangi bir [yerleşik kayan nokta sayısal türü](../builtin-types/floating-point-numeric-types.md)|0 (sıfır)|
+|Any reference type|`null`|
+|Any [built-in integral numeric type](../builtin-types/integral-numeric-types.md)|0 (zero)|
+|Any [built-in floating-point numeric type](../builtin-types/floating-point-numeric-types.md)|0 (zero)|
 |[bool](bool.md)|`false`|
-|[char](char.md)|`'\0'` (U + 0000)|
-|[enum](enum.md)|İfade tarafından üretilen değer `(E)0`, burada `E` enum tanımlayıcısıdır.|
-|[struct](struct.md)|Tüm değer türü alanları varsayılan değerlerine ve tüm başvuru türü alanlarına ayarlanarak oluşturulan değer `null`.|
-|Herhangi bir [Nullable değer türü](../builtin-types/nullable-value-types.md)|<xref:System.Nullable%601.HasValue%2A> özelliği `false` ve <xref:System.Nullable%601.Value%2A> özelliği tanımsız bir örnek. Bu varsayılan değer null olabilen bir değer türünün *null* değeri olarak da bilinir.|
+|[char](../builtin-types/char.md)|`'\0'` (U+0000)|
+|[enum](enum.md)|The value produced by the expression `(E)0`, where `E` is the enum identifier.|
+|[struct](struct.md)|The value produced by setting all value-type fields to their default values and all reference-type fields to `null`.|
+|Any [nullable value type](../builtin-types/nullable-value-types.md)|An instance for which the <xref:System.Nullable%601.HasValue%2A> property is `false` and the <xref:System.Nullable%601.Value%2A> property is undefined. That default value is also known as the *null* value of a nullable value type.|
 
-Aşağıdaki örnekte gösterildiği gibi, bir türün varsayılan değerini oluşturmak için [varsayılan işleci](../operators/default.md) kullanın:
+Use the [default operator](../operators/default.md) to produce the default value of a type, as the following example shows:
 
 ```csharp
 int a = default(int);
 ```
 
-7,1 ' C# den başlayarak, türü varsayılan değeri olan bir değişkeni başlatmak için [`default` değişmez](../operators/default.md#default-literal) değerini kullanabilirsiniz:
+Beginning with C# 7.1, you can use the [`default` literal](../operators/default.md#default-literal) to initialize a variable with the default value of its type:
 
 ```csharp
 int a = default;
 ```
 
-Bir değer türü için, örtük parametresiz Oluşturucu, aşağıdaki örnekte gösterildiği gibi türün varsayılan değerini de üretir:
+For a value type, the implicit parameterless constructor also produces the default value of the type, as the following example shows:
 
 ```csharp-interactive
 var n = new System.Numerics.Complex();
@@ -49,14 +49,14 @@ Console.WriteLine(n);  // output: (0, 0)
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
+For more information, see the following sections of the [C# language specification](~/_csharplang/spec/introduction.md):
 
-- [Varsayılan değerler](~/_csharplang/spec/variables.md#default-values)
-- [Varsayılan oluşturucular](~/_csharplang/spec/types.md#default-constructors)
+- [Default values](~/_csharplang/spec/variables.md#default-values)
+- [Default constructors](~/_csharplang/spec/types.md#default-constructors)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvurunun](../index.md)
+- [C# reference](../index.md)
 - [C# anahtar sözcükleri](index.md)
-- [Yerleşik türler tablosu](built-in-types-table.md)
+- [Built-in types table](built-in-types-table.md)
 - [Oluşturucular](../../programming-guide/classes-and-structs/constructors.md)

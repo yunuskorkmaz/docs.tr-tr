@@ -1,6 +1,6 @@
 ---
-title: CLı ile .NET Core uygulamaları yayımlayın
-description: .NET Core SDK komut satırı arabirimi (CLı) araçlarıyla .NET Core uygulaması yayımlamayı öğrenin.
+title: Publish .NET Core apps with the CLI
+description: Learn to publish a .NET Core app with the .NET Core SDK command-line interface (CLI) tools.
 author: thraka
 ms.author: adegeo
 ms.date: 01/16/2019
@@ -8,58 +8,58 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: c8b4c60eb4ea09c8b10bd0b2fffc803d0a5fb6e0
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 41af1c708a264833f1f7217529b5c0206d405449
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834290"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428904"
 ---
-# <a name="publish-net-core-apps-with-the-cli"></a>CLı ile .NET Core uygulamaları yayımlayın
+# <a name="publish-net-core-apps-with-the-cli"></a>Publish .NET Core apps with the CLI
 
-Bu makalede, .NET Core uygulamanızı komut satırından nasıl yayımlayacağınız gösterilmektedir. .NET Core, uygulamalarınızı yayımlamanın üç yolunu sağlar. Çerçeveye bağımlı dağıtım, yerel olarak yüklenmiş .NET Core çalışma zamanını kullanan platformlar arası bir. dll dosyası üretir. Çerçeveye bağımlı yürütülebilir, yerel olarak yüklenmiş .NET Core çalışma zamanını kullanan platforma özgü bir yürütülebilir dosya oluşturur. Kendi içinde bulunan yürütülebilir bir platforma özgü yürütülebilir dosya oluşturur ve .NET Core çalışma zamanının yerel bir kopyasını içerir.
+This article demonstrates how you can publish your .NET Core application from the command line. .NET Core provides three ways to publish your applications. Framework-dependent deployment produces a cross-platform .dll file that uses the locally installed .NET Core runtime. Framework-dependent executable produces a platform-specific executable that uses the locally installed .NET Core runtime. Self-contained executable produces a platform-specific executable and includes a local copy of the .NET Core runtime.
 
-Bu yayımlama modlarına genel bakış için bkz. [.NET Core uygulama dağıtımı](index.md).
+For an overview of these publishing modes, see [.NET Core Application Deployment](index.md).
 
-CLı kullanımıyla ilgili bazı hızlı yardım mı arıyorsunuz? Aşağıdaki tabloda, uygulamanızı nasıl yayımlayacağınız hakkında bazı örnekler gösterilmektedir. Hedef Framework 'ü `-f <TFM>` parametresiyle veya proje dosyasını düzenleyerek belirtebilirsiniz. Daha fazla bilgi için bkz. [Yayımlama temelleri](#publishing-basics).
+Looking for some quick help on using the CLI? The following table shows some examples of how to publish your app. You can specify the target framework with the `-f <TFM>` parameter or by editing the project file. For more information, see [Publishing basics](#publishing-basics).
 
-| Yayımlama modu | SDK sürümü | Komut |
+| Publish Mode | SDK Version | Komut |
 | ------------ | ----------- | ------- |
-| Çerçeveye bağımlı dağıtım | 2.x | `dotnet publish -c Release` |
-| Çerçeveye bağımlı yürütülebilir dosya | 2,2 | `dotnet publish -c Release -r <RID> --self-contained false` |
+| Framework-dependent deployment | 2.x | `dotnet publish -c Release` |
+| Framework-dependent executable | 2.2 | `dotnet publish -c Release -r <RID> --self-contained false` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained false` |
-|                                | 3,0 * | `dotnet publish -c Release` |
-| Kendi kendine kapsanan dağıtım      | 2,1 | `dotnet publish -c Release -r <RID> --self-contained true` |
-|                                | 2,2 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 3.0* | `dotnet publish -c Release` |
+| Self-contained deployment      | 2.1 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
-\* SDK sürüm 3,0 kullanılırken, temel `dotnet publish` komutu çalıştırılırken çerçeveye bağlı yürütülebilir dosya varsayılan yayımlama modudur. Bu, yalnızca proje **.net core 2,1** veya **.NET Core 3,0**' i hedefliyorsa geçerlidir.
+\* When using SDK version 3.0, framework-dependent executable is the default publishing mode when running the basic `dotnet publish` command. This only applies when the project targets either **.NET Core 2.1** or **.NET Core 3.0**.
 
-## <a name="publishing-basics"></a>Yayımlama temelleri
+## <a name="publishing-basics"></a>Publishing basics
 
-Proje dosyasının `<TargetFramework>` ayarı, uygulamanızı yayımladığınızda varsayılan hedef çerçevesini belirtir. Hedef Framework 'ü geçerli bir [hedef çerçeve bilinen adı (tfd)](../../standard/frameworks.md)olarak değiştirebilirsiniz. Örneğin, projeniz `<TargetFramework>netcoreapp2.2</TargetFramework>` kullanıyorsa, .NET Core 2,2 ' i hedefleyen bir ikili oluşturulur. Bu ayarda belirtilen tfd, [`dotnet publish`](../tools/dotnet-publish.md) komutu tarafından kullanılan varsayılan hedeftir.
+The `<TargetFramework>` setting of the project file specifies the default target framework when you publish your app. You can change the target framework to any valid [Target Framework Moniker (TFM)](../../standard/frameworks.md). For example, if your project uses `<TargetFramework>netcoreapp2.2</TargetFramework>`, a binary that targets .NET Core 2.2 is created. The TFM specified in this setting is the default target used by the [`dotnet publish`](../tools/dotnet-publish.md) command.
 
-Birden fazla çerçeveyi hedeflemek istiyorsanız, `<TargetFrameworks>` ayarını noktalı virgülle ayırarak birden fazla TFı değeri olarak ayarlayabilirsiniz. @No__t-0 komutuyla çerçevelerden birini yayımlayabilirsiniz. Örneğin, `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` ' a sahipseniz ve `dotnet publish -f netcoreapp2.1` ' i çalıştırırsanız, .NET Core 2,1 ' i hedefleyen bir ikili oluşturulur.
+If you want to target more than one framework, you can set the `<TargetFrameworks>` setting to more than one TFM value separated by a semicolon. You can publish one of the frameworks with the `dotnet publish -f <TFM>` command. For example, if you have `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` and run `dotnet publish -f netcoreapp2.1`, a binary that targets .NET Core 2.1 is created.
 
-Aksi belirtilmedikçe, [`dotnet publish`](../tools/dotnet-publish.md) komutunun çıkış dizini `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` ' dir. @No__t-2 parametresiyle değiştirilmediği takdirde varsayılan **derleme yapılandırma** modu **hata ayıklaması** olur. Örneğin, `dotnet publish -c Release -f netcoreapp2.1` `myfolder/bin/Release/netcoreapp2.1/publish/` ' e yayınlar.
+Unless otherwise set, the output directory of the [`dotnet publish`](../tools/dotnet-publish.md) command is `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. The default **BUILD-CONFIGURATION** mode is **Debug** unless changed with the `-c` parameter. For example, `dotnet publish -c Release -f netcoreapp2.1` publishes to `myfolder/bin/Release/netcoreapp2.1/publish/`.
 
-.NET Core SDK 3,0 kullanırsanız, .NET Core sürümlerini 2,1, 2,2 veya 3,0 ' i hedefleyen uygulamalar için varsayılan yayımlama modu, çerçeveye bağlı yürütülebilir dosyadır.
+If you use .NET Core SDK 3.0, the default publish mode for apps that target .NET Core versions 2.1, 2.2, or 3.0 is framework-dependent executable.
 
-.NET Core SDK 2,1 kullanırsanız, .NET Core sürümleri 2,1 ' i hedefleyen uygulamalar için varsayılan yayımlama modu, 2,2 çerçeveye bağımlı dağıtımdır.
+If you use .NET Core SDK 2.1, the default publish mode for apps that target .NET Core versions 2.1, 2.2 is framework-dependent deployment.
 
-### <a name="native-dependencies"></a>Yerel bağımlılıklar
+### <a name="native-dependencies"></a>Native dependencies
 
-Uygulamanızda Yerel bağımlılıklar varsa, farklı bir işletim sisteminde çalışmayabilir. Örneğin, uygulamanız yerel Windows API 'sini kullanıyorsa macOS veya Linux üzerinde çalışmaz. Platforma özgü kod sağlamanız ve her platform için bir yürütülebilir dosya derlemeniz gerekir.
+If your app has native dependencies, it may not run on a different operating system. For example, if your app uses the native Windows API, it won't run on macOS or Linux. You would need to provide platform-specific code and compile an executable for each platform.
 
-Ayrıca, başvurduğunuz bir kitaplığın yerel bağımlılığı varsa, uygulamanız her platformda çalışmayabilir. Ancak, başvurduğunuz bir NuGet paketi, sizin için gerekli yerel bağımlılıkları işlemek üzere platforma özgü sürümlere sahiptir.
+Consider also, if a library you referenced has a native dependency, your app may not run on every platform. However, it's possible a NuGet package you're referencing has included platform-specific versions to handle the required native dependencies for you.
 
-Bir uygulamayı yerel bağımlılıklarla dağıtırken, yayımlamak istediğiniz hedef platformu belirtmek için `dotnet publish -r <RID>` anahtarını kullanmanız gerekebilir. Çalışma zamanı tanımlayıcılarının listesi için bkz. [Runtime Identifier (RID) Catalog](../rid-catalog.md).
+When distributing an app with native dependencies, you may need to use the `dotnet publish -r <RID>` switch to specify the target platform you want to publish for. For a list of runtime identifiers, see [Runtime Identifier (RID) catalog](../rid-catalog.md).
 
-Platforma özgü ikililer hakkında daha fazla bilgi, [çerçeveye bağımlı yürütülebilir](#framework-dependent-executable) ve [kendi kendine dahil edilen dağıtım](#self-contained-deployment) bölümlerinde ele alınmıştır.
+More information about platform-specific binaries is covered in the [Framework-dependent executable](#framework-dependent-executable) and [Self-contained deployment](#self-contained-deployment) sections.
 
-## <a name="sample-app"></a>Örnek uygulama
+## <a name="sample-app"></a>Sample app
 
-Yayımlama komutlarını araştırmak için aşağıdaki uygulamayı kullanabilirsiniz. Uygulama, terminalinizde aşağıdaki komutlar çalıştırılarak oluşturulur:
+You can use the following app to explore the publishing commands. The app is created by running the following commands in your terminal:
 
 ```dotnetcli
 mkdir apptest1
@@ -68,7 +68,7 @@ dotnet new console
 dotnet add package Figgle
 ```
 
-Konsol şablonu tarafından oluşturulan `Program.cs` veya `Program.vb` dosyasının aşağıdaki şekilde değiştirilmesi gerekir:
+The `Program.cs` or `Program.vb` file that is generated by the console template needs to be changed to the following:
 
 ```csharp
 using System;
@@ -86,8 +86,6 @@ namespace apptest1
 ```
 
 ```vb
-Imports System
-
 Module Program
     Sub Main(args As String())
         Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"))
@@ -95,7 +93,7 @@ Module Program
 End Module
 ```
 
-Uygulamayı çalıştırdığınızda ([`dotnet run`](../tools/dotnet-run.md)) aşağıdaki çıktı görüntülenir:
+When you run the app ([`dotnet run`](../tools/dotnet-run.md)), the following output is displayed:
 
 ```terminal
   _   _      _ _         __        __         _     _ _
@@ -106,55 +104,55 @@ Uygulamayı çalıştırdığınızda ([`dotnet run`](../tools/dotnet-run.md)) a
                      |/
 ```
 
-## <a name="framework-dependent-deployment"></a>Çerçeveye bağımlı dağıtım
+## <a name="framework-dependent-deployment"></a>Framework-dependent deployment
 
-.NET Core SDK 2. x CLı için, çerçeveye bağımlı dağıtım (FDD), temel `dotnet publish` komutu için varsayılan moddur.
+For the .NET Core SDK 2.x CLI, framework-dependent deployment (FDD) is the default mode for the basic `dotnet publish` command.
 
-Uygulamanızı FDD olarak yayımladığınızda, `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` klasöründe bir `<PROJECT-NAME>.dll` dosyası oluşturulur. Uygulamanızı çalıştırmak için çıkış klasörüne gidin ve `dotnet <PROJECT-NAME>.dll` komutunu kullanın.
+When you publish your app as an FDD, a `<PROJECT-NAME>.dll` file is created in the `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` folder. To run your app, navigate to the output folder and use the `dotnet <PROJECT-NAME>.dll` command.
 
-Uygulamanız .NET Core 'un belirli bir sürümünü hedefleyecek şekilde yapılandırılmıştır. Uygulamanızı çalıştırmak istediğiniz makinede bu hedeflenen .NET Core çalışma zamanının olması gerekir. Örneğin, uygulamanız .NET Core 2,2 hedefliyorsa, uygulamanızın üzerinde çalıştığı tüm makineler .NET Core 2,2 çalışma zamanının yüklü olması gerekir. [Yayımlama temelleri](#publishing-basics) bölümünde belirtildiği gibi, varsayılan hedef Framework 'ü değiştirmek veya birden fazla çerçeveyi hedeflemek için proje dosyanızı düzenleyebilirsiniz.
+Your app is configured to target a specific version of .NET Core. That targeted .NET Core runtime is required to be on the machine where you want to run your app. For example, if your app targets .NET Core 2.2, any machine that your app runs on must have the .NET Core 2.2 runtime installed. As stated in the [Publishing basics](#publishing-basics) section, you can edit your project file to change the default target framework or to target more than one framework.
 
-FDD yayımlama, uygulamayı çalıştıran sistemde kullanılabilir olan en son .NET Core güvenlik düzeltme ekine otomatik olarak bağlanan bir uygulama oluşturur. Derleme zamanında sürüm bağlama hakkında daha fazla bilgi için bkz. [kullanılacak .NET Core sürümünü seçme](../versions/selection.md#framework-dependent-apps-roll-forward).
+Publishing an FDD creates an app that automatically rolls-forward to the latest .NET Core security patch available on the system that runs the app. For more information on version binding at compile time, see [Select the .NET Core version to use](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-## <a name="framework-dependent-executable"></a>Çerçeveye bağımlı yürütülebilir dosya
+## <a name="framework-dependent-executable"></a>Framework-dependent executable
 
-.NET Core SDK 3. x CLı için, çerçeveye bağımlı yürütülebilir dosya (FDE), temel `dotnet publish` komutu için varsayılan moddur. Geçerli işletim sistemini hedeflemek istediğiniz sürece herhangi bir parametreyi belirtmeniz gerekmez.
+For the .NET Core SDK 3.x CLI, framework-dependent executable (FDE) is the default mode for the basic `dotnet publish` command. You don't need to specify any other parameters as long as you want to target the current operating system.
 
-Bu modda, platformlar arası uygulamanızı barındırmak için platforma özgü bir yürütülebilir ana bilgisayar oluşturulur. FDD, `dotnet` komutu biçiminde bir konak gerektirdiğinden, bu mod FDD ile benzerdir. Ana bilgisayar yürütülebilir dosya adı her platform için farklılık gösterir ve `<PROJECT-FILE>.exe` ' a benzer bir şey olarak adlandırılır. Bu yürütülebilir dosyayı, uygulamayı çalıştırmak için yine de kabul edilebilir `dotnet <PROJECT-FILE>.dll` çağırmak yerine doğrudan çalıştırabilirsiniz.
+In this mode, a platform-specific executable host is created to host your cross-platform app. This mode is similar to FDD as FDD requires a host in the form of the `dotnet` command. The host executable filename varies per platform, and is named something similar to `<PROJECT-FILE>.exe`. You can run this executable directly instead of calling `dotnet <PROJECT-FILE>.dll` which is still an acceptable way to run the app.
 
-Uygulamanız .NET Core 'un belirli bir sürümünü hedefleyecek şekilde yapılandırılmıştır. Uygulamanızı çalıştırmak istediğiniz makinede bu hedeflenen .NET Core çalışma zamanının olması gerekir. Örneğin, uygulamanız .NET Core 2,2 hedefliyorsa, uygulamanızın üzerinde çalıştığı tüm makineler .NET Core 2,2 çalışma zamanının yüklü olması gerekir. [Yayımlama temelleri](#publishing-basics) bölümünde belirtildiği gibi, varsayılan hedef Framework 'ü değiştirmek veya birden fazla çerçeveyi hedeflemek için proje dosyanızı düzenleyebilirsiniz.
+Your app is configured to target a specific version of .NET Core. That targeted .NET Core runtime is required to be on the machine where you want to run your app. For example, if your app targets .NET Core 2.2, any machine that your app runs on must have the .NET Core 2.2 runtime installed. As stated in the [Publishing basics](#publishing-basics) section, you can edit your project file to change the default target framework or to target more than one framework.
 
-Bir FDE yayımlamak, uygulamayı çalıştıran sistemde kullanılabilir en son .NET Core güvenlik düzeltme ekine otomatik olarak bağlanan bir uygulama oluşturur. Derleme zamanında sürüm bağlama hakkında daha fazla bilgi için bkz. [kullanılacak .NET Core sürümünü seçme](../versions/selection.md#framework-dependent-apps-roll-forward).
+Publishing an FDE creates an app that automatically rolls-forward to the latest .NET Core security patch available on the system that runs the app. For more information on version binding at compile time, see [Select the .NET Core version to use](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-(Geçerli platformu hedeflediğinizde .NET Core 3. x hariç) yapmanız gerekir. bir FDE yayımlamak için aşağıdaki anahtarları `dotnet publish` komutuyla kullanın:
+You must (except for .NET Core 3.x when you target the current platform) use the following switches with the `dotnet publish` command to publish an FDE:
 
-- `-r <RID>` Bu anahtar, hedef platformu belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının listesi için bkz. [Runtime Identifier (RID) Catalog](../rid-catalog.md).
+- `-r <RID>` This switch uses an identifier (RID) to specify the target platform. For a list of runtime identifiers, see [Runtime Identifier (RID) catalog](../rid-catalog.md).
 
-- `--self-contained false` Bu anahtar, .NET Core SDK olarak yürütülebilir bir FDE oluşturmasını söyler.
+- `--self-contained false` This switch tells the .NET Core SDK to create an executable as an FDE.
 
-@No__t-0 anahtarını her kullandığınızda, çıkış klasörü yolu şu şekilde değişir: `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
+Whenever you use the `-r` switch, the output folder path changes to: `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
 
-[Örnek uygulamayı](#sample-app)kullanıyorsanız, `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false` ' i çalıştırın. Bu komut şu yürütülebiliri oluşturur: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
-
-> [!NOTE]
-> **Genelleştirme sabit modunu**etkinleştirerek, dağıtımınızın toplam boyutunu azaltabilirsiniz. Bu mod, genel olarak kullanmayan ve [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)biçimlendirme kurallarını, büyük/küçük harf kurallarını ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için yararlıdır. **Genelleştirme sabit modu** ve nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
-
-## <a name="self-contained-deployment"></a>Kendi kendine kapsanan dağıtım
-
-Kendi içinde bir dağıtımı yayımladığınızda (SCD), .NET Core SDK platforma özgü bir yürütülebilir dosya oluşturur. Bir SCD yayımlamak, uygulamanızı çalıştırmak için gerekli tüm .NET Core dosyalarını içerir [, ancak .NET Core 'un yerel bağımlılıklarını](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)içermez. Uygulamanın çalışması için önce bu bağımlılıkların sistemde mevcut olması gerekir.
-
-Bir SCD yayımlandığında, en son kullanılabilir .NET Core güvenlik düzeltme ekine iletmeyen bir uygulama oluşturulur. Derleme zamanında sürüm bağlama hakkında daha fazla bilgi için bkz. [kullanılacak .NET Core sürümünü seçme](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
-
-Bir SCD yayımlamak için aşağıdaki anahtarları `dotnet publish` komutuyla kullanmanız gerekir:
-
-- `-r <RID>` Bu anahtar, hedef platformu belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının listesi için bkz. [Runtime Identifier (RID) Catalog](../rid-catalog.md).
-
-- `--self-contained true` Bu anahtar, .NET Core SDK olarak yürütülebilir bir SCD oluşturmasını söyler.
+If you use the [example app](#sample-app), run `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`. This command creates the following executable: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
-> **Genelleştirme sabit modunu**etkinleştirerek, dağıtımınızın toplam boyutunu azaltabilirsiniz. Bu mod, genel olarak kullanmayan ve [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)biçimlendirme kurallarını, büyük/küçük harf kurallarını ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için yararlıdır. **Genelleştirme sabit modu** ve nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+> You can reduce the total size of your deployment by enabling **globalization invariant mode**. This mode is useful for applications that are not globally aware and that can use the formatting conventions, casing conventions, and string comparison and sort order of the [invariant culture](xref:System.Globalization.CultureInfo.InvariantCulture). For more information about **globalization invariant mode** and how to enable it, see [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+
+## <a name="self-contained-deployment"></a>Self-contained deployment
+
+When you publish a self-contained deployment (SCD), the .NET Core SDK creates a platform-specific executable. Publishing an SCD includes all required .NET Core files to run your app but it doesn't include the [native dependencies of .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). These dependencies must be present on the system before the app runs.
+
+Publishing an SCD creates an app that doesn't roll-forward to the latest available .NET Core security patch. For more information on version binding at compile time, see [Select the .NET Core version to use](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
+
+You must use the following switches with the `dotnet publish` command to publish an SCD:
+
+- `-r <RID>` This switch uses an identifier (RID) to specify the target platform. For a list of runtime identifiers, see [Runtime Identifier (RID) catalog](../rid-catalog.md).
+
+- `--self-contained true` This switch tells the .NET Core SDK to create an executable as an SCD.
+
+> [!NOTE]
+> You can reduce the total size of your deployment by enabling **globalization invariant mode**. This mode is useful for applications that are not globally aware and that can use the formatting conventions, casing conventions, and string comparison and sort order of the [invariant culture](xref:System.Globalization.CultureInfo.InvariantCulture). For more information about **globalization invariant mode** and how to enable it, see [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core uygulama dağıtımına genel bakış](index.md)
-- [.NET Core çalışma zamanı tanımlayıcısı (RID) kataloğu](../rid-catalog.md)
+- [.NET Core Application Deployment Overview](index.md)
+- [.NET Core Runtime IDentifier (RID) catalog](../rid-catalog.md)

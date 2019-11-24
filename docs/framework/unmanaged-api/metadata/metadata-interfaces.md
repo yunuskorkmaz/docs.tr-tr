@@ -6,72 +6,70 @@ helpviewer_keywords:
 - metadata interfaces [.NET Framework]
 - interfaces (.NET Framework metadata]
 ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a704d531b1c49ffe653009e0e90f33b7a126e91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4672cb813cec4a127f7888a2273eb26c3f34c3d9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049823"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431592"
 ---
 # <a name="metadata-interfaces"></a>Meta Veri Arabirimleri
-Bu bölümde, .NET Framework türleri, yöntemleri, alanları ve benzeri tarafından kullanıma sunulan meta verilerine erişim sağlayan yönetilmeyen arabirimler açıklanmaktadır.  
+This section describes the unmanaged interfaces that provide access to the metadata exposed by the .NET Framework types, methods, fields, and so on.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)  
- Dinamik kod derleme için yöntemler sağlar.  
+ Provides methods for dynamic code compilation.  
   
  [IHostFilter Arabirimi](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)  
- İşleme için meta veri belirteçleri işaretlemek çalışma zamanı ana bilgisayar için bir yöntem sağlar.  
+ Provides a method for the run-time host to mark metadata tokens for processing.  
   
  [IMapToken Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)  
- İçeri aktarılan ve meta verileri imza yayılan arasında eşleme özellikleri sağlar.  
+ Provides mapping capabilities between imported and emitted metadata signatures.  
   
  [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- Ortak dil çalışma zamanı tarafından (CLR) gidermek ve kaynakları kullanmak için kullanılan kendi kendine açıklama modelini desteklemek için yöntemler sağlar.  
+ Provides methods that support the self-description model used by the common language runtime (CLR) to resolve and consume resources.  
   
  [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- Erişim ve bir derleme bildirimi içeriğini incelemek için yöntemler sağlar.  
+ Provides methods to access and examine the contents of an assembly manifest.  
   
  [IMetaDataConverter Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)  
- Tür kitaplıkları, meta verileri imza eşlemek için ve biri diğerine dönüştürmek için yöntemler sağlar.  
+ Provides methods to map type libraries to their metadata signatures, and to convert from one to the other.  
   
  [IMetaDataDispenser Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
- `IMetaDataDispenser` artık kullanılmıyor. Bunun yerine `IMetaDataDispenserEx` kullanın.  
+ `IMetaDataDispenser` is obsolete. Bunun yerine `IMetaDataDispenserEx` kullanın.  
   
  [IMetaDataDispenserEx Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- Alanları oluştururken veya değiştirirken meta veriler için bellek eşleme yöntemlerini sağlar.  
+ Provides methods that map areas of memory for creating or modifying metadata.  
   
  [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- Oluşturma, değiştirme ve şu anda tanımlanmış kapsamda derleme hakkındaki meta verileri depolamak için yöntemler sağlar.  
+ Provides methods to create, modify and store metadata about the assembly in the currently defined scope.  
   
  [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- Tanımlama ve yöntemleri ve oluşturucular meta verileri imzalarını tür parametreleri ile değiştirme için yöntemler sağlar <xref:System.Type?displayProperty=nameWithType>.  
+ Provides methods for defining and modifying the metadata signatures of methods and constructors with parameters of type <xref:System.Type?displayProperty=nameWithType>.  
   
  [IMetaDataError Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)  
- Hata, bir derleme için meta verileri imza çözümlenmesi sırasında raporlama için bir geri dönüş mekanizması sağlar.  
+ Provides a callback mechanism for reporting errors during the resolution of the metadata signature for an assembly.  
   
  [IMetaDataFilter Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)  
- İşaretleme ve meta veri belirteçleri zaten alınmış eylemleri tekrarlamayı önlemek üzere filtreleme için yöntemler sağlar.  
+ Provides methods for marking and filtering metadata tokens to avoid repeating actions that have already been taken.  
   
  [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- İçeri aktarma ve diğer derlemelerden türler işlemek için yöntemler sağlar.  
+ Provides methods for importing and manipulating types from other assemblies.  
   
  [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- Genişletir `IMetaDataImport` genel türleri ile çalışmaktan yeteneği sağlamak için.  
+ Extends `IMetaDataImport` to provide the capability of working with generic types.  
   
  [IMetaDataInfo Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)  
- Meta veri eşleme bilgilerini bir disk dosyasından belleğe alır bir yöntem sağlar.  
+ Provides a method that gets information about the mapping of metadata from an on-disk file into memory.  
   
  [IMetaDataTables Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- Tablo meta veri bilgilerini alma ve depolama için yöntemler sağlar.  
+ Provides methods for the storage and retrieval of metadata information in tables.  
   
  [IMetaDataTables2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)  
- Genişletir `IMetaDataTables` meta veri akışları ile çalışmak için yöntemler eklemek için.  
+ Extends `IMetaDataTables` to include methods for working with metadata streams.  
   
  [IMetaDataValidate Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)  
- Meta veri imzası doğrulama için kullanmak için yöntemler sağlar.  
+ Provides methods to use for validation of metadata signatures.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  

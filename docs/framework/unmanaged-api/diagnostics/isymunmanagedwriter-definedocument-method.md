@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3bf15b0-3250-4bbe-b9b5-c5d695289b6f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9a36e094689696b746fcf7f10c282a1b0d9c570
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 02b270677131d0960db67b0ac8db38cba2b5e2df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777831"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428046"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument Yöntemi
-Kaynak belge tanımlar. GUID'ler, bilinen diller, satıcılar ve belge türü için sağlanır.  
+Defines a source document. GUIDs are provided for known languages, vendors, and document types.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,25 +38,25 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>Parametreler  
  `url`  
- [in] Bir işaretçi bir `WCHAR` belgenin tanımlar Tekdüzen Kaynak Konum Belirleyicisi (URL) tanımlar.  
+ [in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.  
   
  `language`  
- [in] Belge dili tanımlayan bir GUID için bir işaretçi.  
+ [in] A pointer to a GUID that defines the document language.  
   
  `languageVendor`  
- [in] Belge dili satıcısının kimliğini tanımlayan bir GUID için bir işaretçi.  
+ [in] A pointer to a GUID that defines the identity of the vendor for the document language.  
   
  `documentType`  
- [in] Belge türünü tanımlayan bir GUID için bir işaretçi.  
+ [in] A pointer to a GUID that defines the type of the document.  
   
  `pRetVal`  
- [out] Döndürülen işaretçi [Isymunmanagedwriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) arabirimi.  
+ [out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

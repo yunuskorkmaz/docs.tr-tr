@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31782b36-d311-4518-8f45-25f65385af5b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a5ba90ce4523fcc55fca3f84a78fa4cfeb6a93f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 96ab77a36c0a0bddda0fca342433666dd19082d3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782821"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426189"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>ICorProfilerCallback::JITCompilationStarted Yöntemi
-Profil Oluşturucu, just-ın-time (JIT) derleyici bir işlevi derlemeye ne başlatıldığını bildirir.  
+Notifies the profiler that the just-in-time (JIT) compiler has started to compile a function.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,26 +35,26 @@ HRESULT JITCompilationStarted(
   
 ## <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] Kendisi için derleme başlatılıyor işlevi kimliği.  
+ [in] The ID of the function for which the compilation is starting.  
   
  `fIsSafeToBlock`  
- [in] Profil oluşturucuya engelleme olup olmadığını belirten bir değer çalışma zamanı işleyişini etkiler. Değer `true` engelleme, bu geri çağrısından; döndürmek çağıran iş parçacığını beklemek çalışma zamanı neden olabilir, aksi takdirde, `false`.  
+ [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
   
- Değerini rağmen `true` çalışma zamanı zarar değil, profil oluşturma sonuçlarından eğriltilebilir.  
+ Although a value of `true` will not harm the runtime, it can skew the profiling results.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Birden fazla çiftinin almak mümkündür `JITCompilationStarted` ve [Icorprofilercallback::jıtcompilationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) her işlev için şekli nedeniyle çalışma zamanı işleyen sınıf oluşturucuları çağırır. Örneğin, çalışma zamanı JIT derleme yöntemine bir başlatmaz, bunun Sınıf B sınıf oluşturucusu çalıştırılması gerekiyor. Bu nedenle, çalışma zamanı JIT derlenir B sınıfı için oluşturucu ve çalıştırır. Oluşturucu çalışırken yöntemi yeniden JIT olarak derlenmiş olması için bir neden olan bir yönteme bir çağrı yapar. Bu senaryoda, bir yöntemin ilk JIT derlemesi durdurulur. Ancak, her iki JIT derleme yöntemi bir girişimi JIT derlemesi olaylarla raporlanır. Profil Oluşturucu çağırarak yöntemi bir Microsoft Ara dili (MSIL) kodu yerine yayınlanıyorsa [Icorprofilerınfo::setılfunctionbody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) yöntemi, her ikisi için bunu gerekir `JITCompilationStarted` olaylar, ancak aynı MSIL bloğundan kullanabilir her ikisi için.  
+ It is possible to receive more than one pair of `JITCompilationStarted` and [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) calls for each function because of the way the runtime handles class constructors. For example, the runtime starts to JIT-compile method A, but the class constructor for class B needs to be run. Therefore, the runtime JIT-compiles the constructor for class B and runs it. While the constructor is running, it makes a call to method A, which causes method A to be JIT-compiled again. In this scenario, the first JIT compilation of method A is halted. However, both attempts to JIT-compile method A are reported with JIT-compilation events. If the profiler is going to replace Microsoft intermediate language (MSIL) code for method A by calling the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, it must do so for both `JITCompilationStarted` events, but it may use the same MSIL block for both.  
   
- Profil oluşturucular JIT geri çağırmalar dizisi, burada iki iş parçacığı geri çağırmaları aynı anda çağırıyorsanız durumlarda desteklemesi gerekir. Örneğin, bir iş parçacığı çağrı `JITCompilationStarted`. Ancak, bir dizi çağrıları önce `JITCompilationFinished`, iş parçacığı B çağrıları [Icorprofilercallback::exceptionsearchfunctionenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) A'ın iş parçacığından işlevi kimlikli `JITCompilationStarted` geri çağırma. İşlev kimliği henüz geçerli gerektiğini görünebilir çünkü bir çağrı `JITCompilationFinished` henüz Profil Oluşturucu tarafından almadı. Ancak, bunun gibi bir durumda, işlev kimliği geçerli olur.  
+ Profilers must support the sequence of JIT callbacks in cases where two threads are simultaneously making callbacks. For example, thread A calls `JITCompilationStarted`. However, before thread A calls `JITCompilationFinished`, thread B calls [ICorProfilerCallback::ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) with the function ID from thread A's `JITCompilationStarted` callback. It might appear that the function ID should not yet be valid because a call to `JITCompilationFinished` had not yet been received by the profiler. However, in a case like this one, the function ID is valid.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

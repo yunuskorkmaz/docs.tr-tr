@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7676c83e8b231606896cb6d1224633b4fa15e725
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d985e22ba77053127610445374b8c13ca6b97f1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777561"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431709"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType Yöntemi
-Meta veri imzası bir tür tanımı oluşturur, döndürür bir `mdTypeDef` bu tür için belirteç ve tanımlanan bir tür tarafından başvurulan tür üyesi olduğunu belirtir `tdEncloser` parametresi.  
+Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,31 +40,31 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>Parametreler  
  `szTypeDef`  
- [in] Unicode türünün adı.  
+ [in] The name of the type in Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` öznitelikleri. Bu, bir bit maskesi, `CorTypeAttr` değerleri.  
+ [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
   
  `tkExtends`  
- [in] Belirteç temel sınıf. Bu bir `mdTypeDef` veya `mdTypeRef` belirteci.  
+ [in] The token of the base class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
   
  `rtkImplements`[]  
- [in] Bu sınıf veya arabirim uyguladığı arabirimlerin belirtin belirteçleri dizisi.  
+ [in] An array of tokens that specify the interfaces that this class or interface implements.  
   
  `tdEncloser`  
- [in] Kapsayan türdeki belirteç. Dizinin son öğesi olmalı `mdTokenNil`.  
+ [in] The token of the enclosing type. The last element of the array must be `mdTokenNil`.  
   
  `ptd`  
- [out] `mdTypeDef` Atanan simgesi.  
+ [out] The `mdTypeDef` token assigned.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

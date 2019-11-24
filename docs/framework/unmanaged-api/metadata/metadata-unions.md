@@ -6,21 +6,19 @@ helpviewer_keywords:
 - unions [.NET Framework metadata]
 - metadata unions [.NET Framework]
 ms.assetid: 2c7534cf-34fa-470a-b29e-6cf5a7bd03d3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 417c40f1b0e1ba1b9f7eb39d26da236b5bb691b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d872bf352652b6cd3a07dc7796a026c797000ed
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785079"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430681"
 ---
 # <a name="metadata-unions"></a>Meta Veri Birleşmeleri
-Bu bölümde, meta veri API'si kullanan yönetilmeyen birleşimler açıklanmaktadır.  
+This section describes the unmanaged unions that the metadata API uses.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [CeeSectionRelocExtra Birleşimi](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- Tarafından kullanılan bir adres farkı gösteren [Iceegen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) bir bölümün dışında yeniden konumlandırmakta arabirimi  
+ Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

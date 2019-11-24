@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2796be32154275387da891683cc5053095f534af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39f72e670ddc700c257f50f6bad6fab702ec21b6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772320"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432766"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC Numaralandırması
-Meta veri oluşturma sırasında davranışını etkilemek için kullanılan değerler içeriyor.  
+Contains values used to influence behavior during the generation of metadata.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,19 +48,19 @@ typedef enum CorSetENC {
 |------------|-----------------|  
 |`MDSetENCOn`|Kullanımdan kalktı.|  
 |`MDSetENCOff`|Kullanımdan kalktı.|  
-|`MDUpdateENC`|Meta veri güncelleştirilebilir gelirken, belirteçleri taşınamaz gösterir.|  
-|`MDUpdateFull`|Güncelleştirmeler sırasında belirteçleri taşınabilir gösterir.|  
-|`MDUpdateExtension`|Güncelleştirmeleri yalnızca yapılan eklemeleri oluşabilir gösterir. Belirteçleri taşınamaz.|  
-|`MDUpdateIncremental`|Derleme artımlı olduğunu gösterir.|  
-|`MDUpdateDelta`|Yalnızca değiştirilen meta verilerin kaydedilmesi gerektiğini gösterir.|  
-|`MDUpdateMask`|İçerir `MDUpdateENC`, `MDUpdateFull` ve `MDUpdateIncremental`.|  
+|`MDUpdateENC`|Indicates that whereas metadata can be updated, tokens cannot be moved.|  
+|`MDUpdateFull`|Indicates that tokens can be moved during updates.|  
+|`MDUpdateExtension`|Indicates that updates can consist only of additions. Tokens cannot be moved.|  
+|`MDUpdateIncremental`|Indicates that compilation is incremental.|  
+|`MDUpdateDelta`|Indicates that only changed metadata should be saved.|  
+|`MDUpdateMask`|Includes `MDUpdateENC`, `MDUpdateFull` and `MDUpdateIncremental`.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

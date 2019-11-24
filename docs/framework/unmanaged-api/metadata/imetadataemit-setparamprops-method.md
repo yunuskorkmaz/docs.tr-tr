@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a95a3908-9f87-4084-937e-8e01ef03ad63
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f8448de17ad974bc77021a7880b7d8576c69ae75
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 813460aa027b259866b168d426fd28502b5c4465
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750919"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432501"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>IMetaDataEmit::SetParamProps Yöntemi
-Ayarlar veya önceki bir çağrı tarafından tanımlanan bir yöntem parametresi özelliklerini değiştirir [Imetadataemit::defineparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
+Sets or changes features of a method parameter that was defined by a prior call to [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,31 +40,31 @@ HRESULT SetParamProps (
   
 ## <a name="parameters"></a>Parametreler  
  `pd`  
- [in] Hedef parametresi için belirteç.  
+ [in] The token for the target parameter.  
   
  `szName`  
- [in] Unicode parametrenin adı.  
+ [in] The name of the parameter in Unicode.  
   
  `dwParamFlags`  
- [in] Parametresi için bayrakları.  
+ [in] The flags for the parameter.  
   
  `dwCPlusTypeFlag`  
- [in] ELEMENT_TYPE_ * sabit değer.  
+ [in] The ELEMENT_TYPE_* for the constant value.  
   
  `pValue`  
- [in] Parametresi için sabit bir değer.  
+ [in] The constant value for the parameter.  
   
  `cchValue`  
- [in] \(Unicode) karakter cinsinden boyutu `pValue`.  
+ [in] The size in (Unicode) characters of `pValue`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

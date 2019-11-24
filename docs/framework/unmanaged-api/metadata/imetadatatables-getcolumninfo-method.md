@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd67d9faafedf4fb92c69618d4464ebb2ce47dcc
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 854d3ad28cc00c03e903b9e1d2ce3863e3ceef17
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774252"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436100"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo Yöntemi
-Belirtilen tabloda belirtilen sütunla ilgili verileri alır.  
+Gets data about the specified column in the specified table.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,31 +42,31 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- 'ndaki İstenen tablonun dizini.  
+ [in] The index of the desired table.  
   
  `ixCol`  
- 'ndaki İstenen sütunun dizini.  
+ [in] The index of the desired column.  
   
  `poCol`  
- dışı Satırdaki sütunun uzaklığa yönelik bir işaretçi.  
+ [out] A pointer to the offset of the column in the row.  
   
  `pcbCol`  
- dışı Sütunun bayt cinsinden boyutu için bir işaretçi.  
+ [out] A pointer to the size, in bytes, of the column.  
   
  `pType`  
- dışı Sütundaki değerlerin türüne yönelik bir işaretçi.  
+ [out] A pointer to the type of the values in the column.  
   
  `ppName`  
- dışı Sütun adı işaretçisinin işaretçisi.  
+ [out] A pointer to a pointer to the column name.  
  
 ## <a name="remarks"></a>Açıklamalar
 
-Döndürülen sütun türü bir değer aralığı içinde yer alıyorsa:
+The returned column type falls within a range of values:
 
-| pType                    | Açıklama   | Yardımcı işlevi                   |
+| pType                    | Açıklama   | Helper function                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0.. 63)   | Rid           | **Isrbıtype türü**<br>**IsRidOrToken** |
-| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | Kodlanmış belirteç | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `0`..`iRidMax`<br>(0..63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Coded token | **IsCodedTokenType** <br>**IsRidOrToken** |
 | `iSHORT` (96)            | Int16         | **IsFixedType**                   |
 | `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
 | `iLONG` (98)             | Int32         | **IsFixedType**                   |
@@ -76,25 +74,25 @@ Döndürülen sütun türü bir değer aralığı içinde yer alıyorsa:
 | `iBYTE` (100)            | Bayt          | **IsFixedType**                   |
 | `iSTRING` (101)          | Dize        | **IsHeapType**                    |
 | `iGUID` (102)            | Guid          | **IsHeapType**                    |
-| `iBLOB` (103)            | Bun          | **IsHeapType**                    |
+| `iBLOB` (103)            | Blob          | **IsHeapType**                    |
 
-*Yığında* depolanan değerler (yani, `IsHeapType == true`) kullanılarak okunabilir:
+Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:
 
-- `iSTRING`: **IMetaDataTables. GetString**
-- `iGUID`: **IMetaDataTables. GetGUID**
-- `iBLOB`: **IMetaDataTables. GetBlob**
+- `iSTRING`: **IMetadataTables.GetString**
+- `iGUID`: **IMetadataTables.GetGUID**
+- `iBLOB`: **IMetadataTables.GetBlob**
 
 > [!IMPORTANT]
-> Yukarıdaki tabloda tanımlanan sabitleri kullanmak için *Cor. h* üstbilgi dosyası tarafından sunulan yönerge `#define _DEFINE_META_DATA_META_CONSTANTS` ekleyin.
+> To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Header:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

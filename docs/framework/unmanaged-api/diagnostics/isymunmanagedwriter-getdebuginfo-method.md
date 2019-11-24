@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd31c210-6829-45eb-927e-cc53932638b7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8737885015055994bff3f6066bccb551f19f74f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2b901a3dac499f1ce3f843c59122dd8fd5022147
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777313"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427955"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo Yöntemi
-Hata ayıklama dizin girdisi taşınabilir yürütülebilir (PE) dosya üst bilgisinde yazmak bir derleyici için gerekli bilgileri döndürür. Sembol yazıcı dışındaki tüm alanları doldurur `TimeDateStamp` ve `PointerToRawData`. (Derleyici bu iki alan uygun şekilde ayarlamaktan sorumludur.)  
+Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header. The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`. (The compiler is responsible for setting these two fields appropriately.)  
   
- Bir derleyici bu yöntemi çağırın, PE dosyasının işlem veri blobunu yayma, Ayarla `PointerToRawData` yayılan bir veri noktası ve IMAGE_DEBUG_DIRECTORY PE dosyasına yazmak için IMAGE_DEBUG_DIRECTORY alanındaki. Derleyici ayrıca ayarlamanız gerekir `TimeDateStamp` eşit alan `TimeDateStamp` PE dosyasının oluşturulmasını.  
+ A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file. The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,22 +40,22 @@ HRESULT GetDebugInfo(
   
 ## <a name="parameters"></a>Parametreler  
  `pIDD`  
- [out içinde] Sembol yazıcı dolduracak bir IMAGE_DEBUG_DIRECTORY işaretçisi.  
+ [in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.  
   
  `cData`  
- [in] A `DWORD` , hata ayıklama verilerin boyutunu içerir.  
+ [in] A `DWORD` that contains the size of the debug data.  
   
  `pcData`  
- [out] Bir işaretçi bir `DWORD` hata ayıklama veri içermesini gerekli arabellek boyutunu alır.  
+ [out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.  
   
  `data`  
- [out] Sembol deposu için hata ayıklama verileri tutabilecek kadar büyük arabellek için işaretçi.  
+ [out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

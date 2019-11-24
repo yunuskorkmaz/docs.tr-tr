@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ad2710a7-edb8-4493-8619-3fce235e3334
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3adc29f73a3ab4a43a399b024a6c0187f02b5851
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8433ff6e0ec550d6b0558bfb9c7698c49e98278c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750618"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436389"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString Yöntemi
-Belirtilen dize kod tabanında yayar.  
+Emits the specified string into the code base.  
   
- Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,19 +38,19 @@ HRESULT EmitString (
   
 ## <a name="parameters"></a>Parametreler  
  `lpString`  
- [in] Yaymak için dize.  
+ [in] The string to emit.  
   
  `RVA`  
- [out] Göreli sanal adres yayılan dize.  
+ [out] The relative virtual address of the emitted string.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

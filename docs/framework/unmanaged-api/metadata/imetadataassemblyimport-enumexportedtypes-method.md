@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e5912ed8-e4ce-438b-8ea3-d9e4c288d109
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 62c44d0c3bd2e931b1708abb48bc9c854431419f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 45e2348b4726447548544d975e60b93e464fb402
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751143"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450335"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes Yöntemi
-Başvurulan derleme bildiriminde geçerli meta veri kapsamda dışarı aktarılan türlerini numaralandırır.  
+Enumerates the exported types referenced in the assembly manifest in the current metadata scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,32 +38,32 @@ HRESULT EnumExportedTypes (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [out içinde] Numaralandırıcı bir işaretçi. Bu boş olmalıdır ne zaman değer `EnumExportedTypes` yöntemi ilk kez çağrılır.  
+ [in, out] A pointer to the enumerator. This must be a null value when the `EnumExportedTypes` method is called for the first time.  
   
  `rExportedTypes`  
- [out] Numaralandırmasını `mdExportedType` meta veri belirteçleri.  
+ [out] The enumeration of `mdExportedType` metadata tokens.  
   
  `cMax`  
- [in] En fazla `mdExportedType` yerleştirilebilir belirteçleri `rExportedTypes` dizisi.  
+ [in] The maximum number of `mdExportedType` tokens that can be placed in the `rExportedTypes` array.  
   
  `pcTokens`  
- [out] Sayısını `mdExportedType` belirteçleri gerçekten yerleştirilen `rExportedTypes`.  
+ [out] The number of `mdExportedType` tokens actually placed in `rExportedTypes`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak hiçbir belirteçleri vardır. Bu durumda, `pcTokens` sıfır olarak ayarlanır.|  
+|`S_OK`|`EnumExportedTypes` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 22dc6dea-b1b9-4982-a730-a022d586b117
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0bfe30567bcd8e22a82d401e00b0a6ee50407def
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74670a1477546066145bd4bbf2f123a252e10b55
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781664"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436479"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind Numaralandırması
-Çağrısından döndürülen bir taşınabilir yürütülebilir (PE) dosya açıklayan değerleri içeren [Imetadataımport2::getpekind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
+Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,22 +43,22 @@ typedef enum CorPEKind {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`peNot`|Bunun bir PE dosyası olmadığını gösterir.|  
-|`peILOnly`|Bu PE dosyası yalnızca yönetilen kod içerdiğini gösterir.|  
-|`pe32BitRequired`|Gösterir. Bu PE dosyası Win32 çağrısı yapar.|  
-|`pe32Plus`|Bu PE dosyası bir 64-bit platformda çalıştırıldığını gösterir.|  
-|`pe32Unmanaged`|Bu PE dosyası yerel kod olduğunu gösterir.|  
-|pe32BitPreferred|Bu PE dosyası platformdan bağımsız ve 32-bit ortamında yüklenmesini tercih gösterir.|  
+|`peNot`|Indicates that this is not a PE file.|  
+|`peILOnly`|Indicates that this PE file contains only managed code.|  
+|`pe32BitRequired`|Indicates that this PE file makes Win32 calls.|  
+|`pe32Plus`|Indicates that this PE file runs on a 64-bit platform.|  
+|`pe32Unmanaged`|Indicates that this PE file is native code.|  
+|pe32BitPreferred|Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu değerleri bit düzeyinde bileşimlerde kullanılır.  
+ These values can be used in bitwise combinations.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

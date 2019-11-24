@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: cf30e27c-1f7e-43a2-ba1e-01e4137301db
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2f236a74da04dfddef852514eccb02215ad2d15a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 643c9d7104c374d9141a604083f3fdcd540156c4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752376"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428395"
 ---
-# <a name="corprfcodeinfo-structure"></a>COR_PRF_CODE_INFO Yapısı
-Yerel kod bellekte bitişik bir bloğunu temsil eder.  
+# <a name="cor_prf_code_info-structure"></a>COR_PRF_CODE_INFO Yapısı
+Represents one contiguous block of native code stored in memory.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,17 +37,17 @@ typedef struct _COR_PRF_CODE_INFO {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`startAddress`|Bitişik kod bloğunu başlangıç adresi.|  
-|`size`|Blok boyutu.|  
+|`startAddress`|The starting address of the contiguous block of code.|  
+|`size`|The size of the block.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl  
+ **Header:** CorProf.idl  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

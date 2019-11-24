@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: da3b83191ce1acdf40e27c5ee1d843a1fb4a54f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5940f229e86b46bb8c5d5b2f9920a8261359f65
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750682"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436414"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc Yöntemi
-Kod tabanına .reloc yönergesi ekler.  
+Adds a .reloc instruction to the code base.  
   
- Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,25 +40,25 @@ HRESULT AddSectionReloc (
   
 ## <a name="parameters"></a>Parametreler  
  `section`  
- [in] Bellek içi kod .reloc yönerge eklenecek bölümünün.  
+ [in] The section of in-memory code to which to add a .reloc instruction.  
   
  `offset`  
- [in] Bölümün uzaklığı.  
+ [in] The offset of the section.  
   
  `relativeTo`  
- [in] Bölümüne `offset` ifade eder.  
+ [in] The section to which `offset` refers.  
   
  `relocType`  
- [in] Aşağıdakilerden birini [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) eklemek için .reloc yönerge türünü belirten değer.  
+ [in] One of the [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) values, indicating the kind of .reloc instruction to add.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

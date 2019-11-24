@@ -1,5 +1,5 @@
 ---
-title: .NET Framework erişilebilirlik yenilikleri
+title: What's new in accessibility in the .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -7,30 +7,30 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 22d70d0ee976d9c1a6aabd57e5d13dc70cd2d081
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 681328af3f3624a8398d5125b952593f2c0510c7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454262"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427694"
 ---
-# <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework erişilebilirlik yenilikleri
+# <a name="whats-new-in-accessibility-in-the-net-framework"></a>What's new in accessibility in the .NET Framework
 
-.NET Framework amaçlar, kullanıcılarınız için uygulamaları daha erişilebilir hale getirme. Erişilebilirlik özellikleri, bir uygulamanın yardımcı teknoloji kullanıcıları için uygun bir deneyim sağlamasına izin verir. .NET Framework .NET Framework başlayarak, geliştiricilerin erişilebilir uygulamalar oluşturmalarına izin veren çok sayıda erişilebilirlik geliştirmesi de vardır.
+The .NET Framework aims at making applications more accessible for your users. Accessibility features allow an application to provide an appropriate experience for users of Assistive Technology. Starting with .NET Framework 4.7.1, the .NET Framework includes a large number of accessibility improvements that allow developers to create accessible applications.
 
-## <a name="accessibility-switches"></a>Erişilebilirlik anahtarları
+## <a name="accessibility-switches"></a>Accessibility switches
 
-Uygulamanızı, .NET Framework 4,7 veya önceki bir sürümü hedefliyorsa ancak .NET Framework 4.7.1 veya üzeri sürümlerde çalışıyorsa erişilebilirlik özelliklerini kabul etmek üzere yapılandırabilirsiniz. Ayrıca, .NET Framework 4.7.1 veya üstünü hedeflerse, uygulamanızı eski özellikleri (ve erişilebilirlik özelliklerinden faydalanmaz) kullanacak şekilde de yapılandırabilirsiniz. Erişilebilirlik özelliklerini içeren .NET Framework her sürümü, uygulamanın yapılandırma dosyasının [`<runtime>`](../configure-apps/file-schema/runtime/index.md) bölümünde [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) öğesine eklediğiniz sürüme özgü bir erişilebilirlik anahtarına sahiptir. Aşağıdakiler desteklenen anahtarlardır:
+You can configure your app to opt into accessibility features if it targets .NET Framework 4.7 or an earlier version but is running on .NET Framework 4.7.1 or later. You can also configure your app to use legacy features (and not take advantage of accessibility features) if it targets .NET Framework 4.7.1 or later. Each version of the .NET Framework that includes accessibility features has a version-specific accessibility switch, which you add to the [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element in the [`<runtime>`](../configure-apps/file-schema/runtime/index.md) section of the application's configuration file. The following are the supported switches:
 
 |Version|Anahtar|
 |---|---|
-|.NET Framework 4.7.1|"Switch. UseLegacyAccessibilityFeatures"|
-|.NET Framework 4.7.2|"Switch. UseLegacyAccessibilityFeatures. 2"|
-|.NET Framework 4,8|"Switch. UseLegacyAccessibilityFeatures. 3"|
+|.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
+|.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
+|.NET Framework 4.8|"Switch.UseLegacyAccessibilityFeatures.3"|
 
-### <a name="taking-advantage-of-accessibility-enhancements"></a>Erişilebilirlik geliştirmelerinden yararlanma
+### <a name="taking-advantage-of-accessibility-enhancements"></a>Taking advantage of accessibility enhancements
 
-Yeni erişilebilirlik özellikleri, .NET Framework 4.7.1 veya üstünü hedefleyen uygulamalar için varsayılan olarak etkinleştirilmiştir. Ayrıca, .NET Framework önceki bir sürümünü hedefleyen, ancak .NET Framework 4.7.1 veya üzeri sürümlerde çalışan uygulamalar, ' a anahtar ekleyerek eski erişilebilirlik davranışlarını devre dışı bırakabilirsiniz (ve bu nedenle erişilebilirlik geliştirmelerinden faydalanabilir). [ ](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)uygulamanın yapılandırma dosyasının [`<runtime>`](../configure-apps/file-schema/runtime/index.md) bölümünde `<AppContextSwitchOverrides>` öğesi ve değerlerini `false` olarak ayarlama. Aşağıda, .NET Framework 4.7.1 ' de sunulan erişilebilirlik geliştirmelerinin nasıl kabul edilecek gösterilmektedir:
+The new accessibility features are enabled by default for applications that target .NET Framework 4.7.1 or later. In addition, applications that target an earlier version of the .NET Framework but are running on .NET Framework 4.7.1 or later can opt out of legacy accessibility behaviors (and thereby take advantage of accessibility improvements) by adding switches to the [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element in the [`<runtime>`](../configure-apps/file-schema/runtime/index.md) section of the application's configuration file and setting their value to `false`. The following shows how to opt in to accessibility enhancements introduced in .NET Framework 4.7.1:
 
 ```xml
 <runtime>
@@ -39,7 +39,7 @@ Yeni erişilebilirlik özellikleri, .NET Framework 4.7.1 veya üstünü hedefley
 </runtime>
 ```
 
-.NET Framework sonraki bir sürümünde erişilebilirlik özelliklerini kullanmayı tercih ederseniz, .NET Framework daha önceki sürümlerindeki özellikleri de açıkça kabul etmeniz gerekir. Uygulamanızı .NET Framework 4.7.1 ve 4.7.2 içindeki erişilebilirlik geliştirmelerinden faydalanmak için yapılandırmak aşağıdaki [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) öğesi gerektirir:
+If you choose to opt in to accessibility features in a later version of the .NET Framework, you must also explicitly opt in to the features from earlier versions of the .NET Framework. Configuring your app to take advantage of accessibility improvements in both .NET Framework 4.7.1 and 4.7.2 requires the following [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element:
 
 ```xml
 <runtime>
@@ -48,7 +48,7 @@ Yeni erişilebilirlik özellikleri, .NET Framework 4.7.1 veya üstünü hedefley
 </runtime>
 ```
 
-Uygulamanızı yapılandırma .NET Framework 4.7.1, 4.7.2 ve 4,8 ' deki erişilebilirlik geliştirmelerinden faydalanmak için aşağıdaki [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) öğesi gerekir:
+Configuring your app to take advantage of accessibility improvements in .NET Framework 4.7.1, 4.7.2, and 4.8 requires the following [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element:
 
 ```xml
 <runtime>
@@ -57,9 +57,9 @@ Uygulamanızı yapılandırma .NET Framework 4.7.1, 4.7.2 ve 4,8 ' deki erişile
 </runtime>
 ```
 
-### <a name="restoring-legacy-behavior"></a>Eski davranışı geri yükleme
+### <a name="restoring-legacy-behavior"></a>Restoring legacy behavior
 
-4\.7.1 ile başlayan .NET Framework sürümlerini hedefleyen uygulamalar, uygulamanın yapılandırma dosyasının [`<runtime>`](../configure-apps/file-schema/runtime/index.md) bölümündeki [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) öğesine anahtar ekleyerek ve değerlerini ayarlayarak erişilebilirlik özelliklerini devre dışı bırakabilir `true`. Örneğin, aşağıdaki yapılandırma .NET Framework 4.7.2 ' de tanıtılan erişilebilirlik özelliklerinden fazlasını giderir:
+Applications that target versions of the .NET Framework starting with 4.7.1 can disable accessibility features by adding switches to the [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element in the [`<runtime>`](../configure-apps/file-schema/runtime/index.md) section of the application's configuration file and setting their value to `true`. For example, the following configuration opts out of accessibility features introduced in .NET Framework 4.7.2:
 
 ```xml
 <runtime>
@@ -68,27 +68,27 @@ Uygulamanızı yapılandırma .NET Framework 4.7.1, 4.7.2 ve 4,8 ' deki erişile
 </runtime>
 ```
 
-## <a name="whats-new-in-accessibility-in-net-framework-48"></a>.NET Framework 4,8 ' de erişilebilirlik yenilikleri
+## <a name="whats-new-in-accessibility-in-net-framework-48"></a>What's new in accessibility in .NET Framework 4.8
 
-.NET Framework 4,8 aşağıdaki alanlarda yeni erişilebilirlik özellikleri içerir:
+.NET Framework 4.8 includes new accessibility features in the following areas:
 
 - [Windows Forms](#winforms48)
 
 - [Windows Presentation Foundation (WPF)](#wpf48)
 
-- [Windows Workflow Foundation (WF) iş akışı Tasarımcısı](#wf48)
+- [Windows Workflow Foundation (WF) workflow designer](#wf48)
 
 <a name="winforms48" />
 
 ### <a name="windows-forms"></a>Windows Forms
 
-.NET Framework 4,8 ' de Windows Forms, yaygın olarak kullanılan birçok denetime Ligegions ve Notification olayları için destek ekler. Ayrıca, bir Kullanıcı klavyeyi kullanarak bir denetime gittiğinde araç Ipuçları için destek ekler.
+In .NET Framework 4.8, Windows Forms adds support for LiveRegions and Notification Events to many commonly used controls. It also adds support for ToolTips when a user navigates to a control by using the keyboard.
 
-**Etiketler ve Durumlarlar için UııA LiveRegions desteği**
+**UIA LiveRegions Support in Labels and StatusStrips**
 
-UIA Ligegions, uygulama geliştiricilerinin, kullanıcının çalıştığı konumdan ayrı olarak bulunan bir denetimdeki metin değişikliğini ekran okuyucularına bildirmesini sağlar. Bu, örneğin, bağlantı durumunu gösteren bir <xref:System.Windows.Forms.StatusStrip> denetimi için yararlıdır. Bağlantı bırakılır ve durum değişirse geliştirici, ekran okuyucuyu bilgilendirmek isteyebilir.
+UIA LiveRegions allow application developers to notify screen readers of a text change in a control that is located apart from the location where the user is working. This is useful, for example, for a <xref:System.Windows.Forms.StatusStrip> control that shows a connection status. If the connection is dropped and the status changes, the developer might want to notify the screen reader.
 
-.NET Framework 4,8 ' den başlayarak, Windows Forms hem <xref:System.Windows.Forms.Label> hem de <xref:System.Windows.Forms.StatusStrip> denetimleri için UııA LiveRegions uygular. Örneğin, aşağıdaki kod, `label1` adlı bir <xref:System.Windows.Forms.Label> denetiminde LiveRegion kullanır:
+Starting with .NET Framework 4.8, Windows Forms implements UIA LiveRegions for both the <xref:System.Windows.Forms.Label> and <xref:System.Windows.Forms.StatusStrip> controls. For example, the following code uses the LiveRegion in a <xref:System.Windows.Forms.Label> control named `label1`:
 
 ```csharp
 public Form1()
@@ -101,9 +101,9 @@ public Form1()
 Label1.Text = “Ready!”;
 ```
 
-Ekran okuyucusu, kullanıcının uygulamayla etkileşime geçen yere bakılmaksızın "Ready" duyurur.
+Narrator announces “Ready” regardless of where the user is interacting with the application.
 
-Ayrıca, <xref:System.Windows.Forms.UserControl> bir LiveRegion olarak da uygulayabilirsiniz:
+You can also implement your <xref:System.Windows.Forms.UserControl> as a LiveRegion:
 
 ```csharp
 using System;
@@ -134,11 +134,11 @@ namespace WindowsFormsApplication
 }
 ```
 
-**UıA bildirim olayları**
+**UIA notification events**
 
-Windows 10 Fall Creators Update 'te tanıtılan UıA bildirim olayı, uygulamanızın kullanıcı arabiriminde ilgili bir denetime sahip olması gerekmeden, yalnızca olayla sağladığınız metni temel alan bir duyuru oluşturmak için bir UıA olayı tetiklenmesine olanak tanır. Bazı senaryolarda bu, uygulamanızın erişilebilirliğini önemli ölçüde artırmanın kolay bir yoludur. ' De, uzun sürebilecek bazı işlemlerin ilerlemesini bilgilendirmek için de yararlı olabilir. UııA Notification olayları hakkında daha fazla bilgi için, bkz. [masaüstü uygulamanız yenı UI bildirimi olayından mi yararlanabilir?](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/).
+The UIA Notification event, introduced in Windows 10 Fall Creators Update, allows your app to raise a UIA event, which leads to Narrator simply making an announcement based on text you supply with the event, without the need to have a corresponding control in the UI. In some scenarios, this is a straightforward way to dramatically improve the accessibility of your app. In can also be useful to notify of the progress of some process that may take a long time. For more information about UIA Notification Events, see [Can your desktop app leverage the new UI Notification event?](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/).
 
-Aşağıdaki örnek [bildirim olayını](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A)oluşturur:
+The following example raises the [Notification event](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A):
 
 ```csharp
 MethodInfo raiseMethod = typeof(AccessibleObject).GetMethod("RaiseAutomationNotification");
@@ -147,9 +147,9 @@ if (raiseMethod != null) {
 }
 ```
 
-**Klavye erişiminde araç Ipuçları**
+**ToolTips on keyboard access**
 
-.NET Framework 4.7.2 ve önceki sürümleri hedefleyen uygulamalarda, bir denetim [araç ipucu](xref:System.Windows.Forms.ToolTip) yalnızca bir fare işaretçisi denetime taşınarak açılan menü için tetiklenebilir. .NET Framework 4,8 ' den itibaren klavye kullanıcısı, değiştirici tuşları olan veya içermeyen bir sekme tuşu veya ok tuşlarını kullanarak Denetim araç ipucunu tetikleyebilirler. Bu belirli erişilebilirlik geliştirmesi ek bir [AppContext anahtarı](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)gerektirir:
+In applications that target .NET Framework 4.7.2 and earlier versions, a control [tooltip](xref:System.Windows.Forms.ToolTip) can only be triggered to pop up by moving a mouse pointer into the control. Starting with .NET Framework 4.8, a keyboard user can trigger a control’s tooltip by focusing the control using a Tab key or arrow keys with or without modifier keys. This particular accessibility enhancement requires an additional [AppContext switch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -165,37 +165,37 @@ if (raiseMethod != null) {
 </configuration>
 ```
 
-Aşağıdaki şekilde, Kullanıcı klavyeyle bir düğme seçtiğinde araç ipucunu gösterir.
+The following figure shows the tooltip when the user has selected a button with the keyboard.
 
-![Kullanıcı klavyeyle bir düğmeye gittiğinde araç ipucu](./media/tooltip.png)
+![Screenshot of tooltip when user navigates to button with the keyboard.](./media/whats-new-in-accessibility/select-tooltip-with-keyboard.png)
 
 <a name="wpf48" />
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-.NET Framework 4,8 ' den başlayarak WPF bir dizi erişilebilirlik geliştirmesi içerir.
+Starting with .NET Framework 4.8, WPF includes a number of accessibility improvements.
 
-**Ekran anlayıcıları artık daraltılmış veya gizli görünürlüğe sahip öğeleri duyurmayacak**
+**Screen narrators no longer announce elements with Collapsed or Hidden visibility**
 
-Daraltılmış veya gizli görünürlüğe sahip öğeler artık ekran okuyucu tarafından duyurulmaz. <xref:System.Windows.Visibility.Collapsed?displayProperty=nameWithType> veya <xref:System.Windows.Visibility.Hidden?displayProperty=nameWithType> görünürlüğü olan öğeleri içeren kullanıcı arabirimleri, kullanıcıya duyurduklarında ekran okuyucular tarafından yanlış temsil edilebilir. .NET Framework 4,8 ' den itibaren, WPF artık UIAutomation ağacının denetim görünümünde daraltılmış veya gizli öğeleri içermez, bu nedenle ekran okuyucular artık bu öğeleri duyurabilir.
+Elements with collapsed or hidden visibility are no longer announced by screen reader. User interfaces that contain elements with a Visibility of <xref:System.Windows.Visibility.Collapsed?displayProperty=nameWithType> or <xref:System.Windows.Visibility.Hidden?displayProperty=nameWithType> can be misrepresented by screen readers if they are announced to the user. Starting with .NET Framework 4.8, WPF no longer includes collapsed or hidden elements in the Control View of the UIAutomation tree, so the screen readers can no longer announce these elements.
 
-**Adorner tabanlı metin seçimiyle kullanılacak SelectionTextBrush özelliği**
+**SelectionTextBrush property for use with non-Adorner based text selection**
 
-.NET Framework 4.7.2, WPF, donatıcı katmanını kullanmadan <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.PasswordBox> metin seçimi çizmenize olanak tanır. Bu senaryodaki seçili metnin ön plan rengi <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType> tarafından dikte edildi.
+In the .NET Framework 4.7.2, WPF added the ability to draw <xref:System.Windows.Controls.TextBox> and <xref:System.Windows.Controls.PasswordBox> text selection without using the Adorner layer. The foreground color of the selected text in this scenario was dictated by <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType>.
 
-.NET Framework 4,8 yeni bir özellik ekler, `SelectionTextBrush`, bu, donatıcı olmayan metin seçimi kullanılırken geliştiricilerin seçili metin için belirli fırçayı seçmesine olanak tanır. Bu özellik yalnızca <xref:System.Windows.Controls.Primitives.TextBoxBase> türetilmiş denetimlerde ve donatıcı tabanlı metin seçimi etkinleştirilmiş WPF uygulamalarında <xref:System.Windows.Controls.PasswordBox> denetiminde geçerlidir. <xref:System.Windows.Controls.RichTextBox> denetimi üzerinde çalışmaz. Adorner tabanlı olmayan metin seçimi etkinleştirilmemişse, bu özellik yok sayılır.
+.NET Framework 4.8 adds a new property, `SelectionTextBrush`, that allows developers to select the specific brush for the selected text when using non-Adorner based text selection. This property works only on <xref:System.Windows.Controls.Primitives.TextBoxBase>-derived controls and the <xref:System.Windows.Controls.PasswordBox> control in WPF applications with non-Adorner-based text selection enabled. It does not work on the <xref:System.Windows.Controls.RichTextBox> control. If non-Adorner-based text selection is not enabled, this property is ignored.
 
-Bu özelliği kullanmak için XAML kodunuza eklemeniz ve uygun fırçayı ya da bağlamayı kullanmanız yeterlidir. Ortaya çıkan metin seçimi şöyle görünür:
+To use this property, simply add it to your XAML code and use the appropriate brush or binding. The resulting text selection looks like this:
 
-![Kullanıcı klavyeyle bir düğmeye gittiğinde araç ipucu](./media/selectiontextbrush-property.png)
+![Screenshot of the app running with the words Hello World selected.](./media/whats-new-in-accessibility/selectiontextbrush-property.png)
 
-`SelectionBrush` ve `SelectionTextBrush` özelliklerinin kullanımını, uygun olmayan herhangi bir arka plan ve ön plan renk kombinasyonu oluşturmak için birleştirebilirsiniz.
+You can combine the use of the `SelectionBrush` and `SelectionTextBrush` properties to generate any background and foreground color combination that you deem appropriate.
 
-**Özelliği Için UIAutomation Controllersupport desteği**
+**Support for the UIAutomation ControllerFor property**
 
-UIAutomation 'ın `ControllerFor` özelliği, bu özelliği destekleyen Otomasyon öğesi tarafından yönetilen bir Otomasyon öğeleri dizisini döndürür. Bu özellik genellikle otomatik öneri erişilebilirliği için kullanılır. `ControllerFor`, bir Otomasyon öğesi uygulama kullanıcı arabirimi veya masaüstünün bir veya daha fazla kesimini etkiliyorsa kullanılır. Aksi takdirde, denetim işleminin etkisini UI öğeleriyle ilişkilendirmek zordur. Bu özellik denetimlerin `ControllerFor` özelliği için bir değer sağlamasına olanak sağlar.
+UIAutomation’s `ControllerFor` property returns an array of automation elements that are manipulated by the automation element that supports this property. This property is commonly used for Auto-suggest accessibility. `ControllerFor` is used when an automation element affects one or more segments of the application UI or the desktop. Otherwise, it is hard to associate the impact of the control operation with UI elements. This feature adds the ability for controls to provide a value for the `ControllerFor` property.
 
-.NET Framework 4,8, <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType> yeni bir sanal yöntem ekler. `ControllerFor` özelliğine bir değer sağlamak için bu yöntemi geçersiz kılın ve bu <xref:System.Windows.Automation.Peers.AutomationPeer>tarafından geçirilmekte olan denetimler için bir `List<AutomationPeer>` döndürün:
+.NET Framework 4.8 adds a new virtual method, <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType>. To provide a value for the `ControllerFor` property, simply override this method and return a `List<AutomationPeer>` for the controls being manipulated by this <xref:System.Windows.Automation.Peers.AutomationPeer>:
 
 ```csharp
 public class AutoSuggestTextBox: TextBox
@@ -224,11 +224,11 @@ internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
 }
 ```
 
-**Klavye erişiminde araç ipuçları**
+**Tooltips on keyboard access**
 
-.NET Framework 4.7.2 ve önceki sürümlerde araç ipuçları yalnızca Kullanıcı fare imlecini bir denetim üzerine getirdiğinde görüntülenir. .NET Framework 4,8 ' de araç ipuçları klavye odağında ve klavye kısayoluyla de görüntülenir.
+In .NET Framework 4.7.2 and earlier versions, tooltips display only when the user hovers the mouse cursor over a control. In .NET Framework 4.8, tooltips also display on keyboard focus, as well as via a keyboard shortcut.
 
-Bu özelliği etkinleştirmek için bir uygulamanın, `Switch.UseLegacyAccessibilityFeatures.3` ve `Switch.UseLegacyToolTipDisplay` [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) anahtarlarını kullanarak .NET Framework 4,8 veya katılımı hedeflemesi gerekir. Aşağıda örnek bir uygulama yapılandırma dosyası verilmiştir:
+To enable this feature, an application needs to target .NET Framework 4.8 or opt-in by using the `Switch.UseLegacyAccessibilityFeatures.3` and `Switch.UseLegacyToolTipDisplay` [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) switches. The following is a sample application configuration file:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -242,20 +242,20 @@ Bu özelliği etkinleştirmek için bir uygulamanın, `Switch.UseLegacyAccessibi
 </configuration>
 ```
 
-Etkinleştirildikten sonra, araç ipucu içeren tüm denetimler, denetim klavye odağını aldıktan sonra bunu görüntüler. Araç ipucu zaman içinde veya klavye odağı değiştiğinde kapatılabilir. Kullanıcılar araç ipucunu, CTRL + SHIFT + F10 yeni klavye kısayolunu kullanarak el ile de kapatabilir. Araç ipucu kapatıldıktan sonra, aynı klavye kısayolu kullanılarak yeniden görüntülenebilir.
+Once enabled, all controls that contain a tooltip display it once the control receives keyboard focus. The tooltip can be dismissed over time or when the keyboard focus changes. Users can also dismiss the tooltip manually by using a new keyboard shortcut, Ctrl + Shift + F10. Once the tooltip has been dismissed it can be displayed again by using the same keyboard shortcut.
 
 > [!NOTE]
-> <xref:System.Windows.Controls.Ribbon.Ribbon> denetimlerindeki [Şerit Araç ipuçları](xref:System.Windows.Controls.Ribbon.RibbonToolTip) klavye odağında gösterilmez; yalnızca klavye kısayolu aracılığıyla gösterilir.
+> [Ribbon tooltips](xref:System.Windows.Controls.Ribbon.RibbonToolTip) on <xref:System.Windows.Controls.Ribbon.Ribbon> controls won’t show on keyboard focus; they only show via the keyboard shortcut.
 
-**SizeOfSet ve Positionınset UIAutomation özellikleri için destek eklendi**
+**Added Support for SizeOfSet and PositionInSet UIAutomation properties**
 
-Windows 10, uygulamalar tarafından bir küme içindeki öğelerin sayısını açıklayan iki yeni UIAutomation özelliği `SizeOfSet` ve `PositionInSet` kullanıma sunmuştur. Ekran okuyucular gibi UIAutomation istemci uygulamaları, bu özellikler için bir uygulamayı sorgulayabilir ve uygulamanın kullanıcı arabiriminin doğru bir temsilini duyurur.
+Windows 10 introduced two new UIAutomation properties, `SizeOfSet` and `PositionInSet`, which are used by applications to describe the count of items in a set. UIAutomation client applications such as screen readers can then query an application for these properties and announce an accurate representation of the application’s UI.
 
-.NET Framework 4,8 ' den başlayarak WPF, WPF uygulamalarında UIAutomation için bu iki özelliği kullanıma sunar. Bu, iki şekilde gerçekleştirilebilir:
+Starting with .NET Framework 4.8, WPF  exposes these two properties to UIAutomation in WPF applications. This can be accomplished in two ways:
 
-- Bağımlılık özelliklerini kullanarak.
+- By using dependency properties.
 
-  WPF iki yeni bağımlılık özelliği ekler <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> ve <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>. Geliştirici, değerlerini ayarlamak için XAML kullanabilir:
+  WPF adds two new dependency properties, <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> and <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>. A developer can use XAML to set their values:
 
   ```xaml
   <Button AutomationProperties.SizeOfSet="3"
@@ -268,9 +268,9 @@ Windows 10, uygulamalar tarafından bir küme içindeki öğelerin sayısını a
     AutomationProperties.PositionInSet="3">Button 3</Button>
   ```
 
-- AutomationPeer sanal yöntemlerini geçersiz kılarak.
+- By overriding AutomationPeer virtual methods.
 
-  <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> ve <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> sanal yöntemleri AutomationPeer sınıfına eklenmiştir. Bir geliştirici, aşağıdaki örnekte gösterildiği gibi, bu yöntemleri geçersiz kılarak `SizeOfSet` ve `PositionInSet` için değerler verebilir:
+  The <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> and <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> virtual methods been added to the AutomationPeer class. A developer can provide values for `SizeOfSet` and `PositionInSet` by overriding these methods, as shown in the following example:
 
   ```csharp
   public class MyButtonAutomationPeer : ButtonAutomationPeer
@@ -289,9 +289,9 @@ Windows 10, uygulamalar tarafından bir küme içindeki öğelerin sayısını a
   }
   ```
 
-Ayrıca, <xref:System.Windows.Controls.ItemsControl> örneklerdeki öğeler, geliştiriciden ek işlem yapılmadan bu özellikler için otomatik olarak bir değer sağlar. Bir <xref:System.Windows.Controls.ItemsControl> gruplandırılmışsa, gruplar koleksiyonu bir küme olarak temsil edilir ve her bir grup içindeki her bir öğe, bu grubun içindeki konumunu ve grubun boyutunu sağlamış şekilde ayrı bir küme olarak sayılır. Otomatik değerler sanallaştırmadan etkilenmez. Bir öğe gerçekleştirilmese de, bu, denetimin toplam boyutuna doğru sayılır ve eşdüzey öğelerinin kümesindeki konumu etkiler.
+In addition, items in <xref:System.Windows.Controls.ItemsControl> instances provide a value for these properties automatically without additional action from the developer. If an <xref:System.Windows.Controls.ItemsControl> is grouped, the collection of groups is represented as a set, and each group is counted as a separate set, with each item inside that group providing its position inside that group as well as the size of the group. Automatic values are not affected by virtualization. Even if an item is not realized, it is still counted toward the total size of the set and affects the position in the set of its sibling items.
 
-Otomatik değerler yalnızca uygulama .NET Framework 4,8 ' i hedefliyorsa sağlanır. .NET Framework önceki bir sürümünü hedefleyen uygulamalar için, aşağıdaki App. config dosyasında gösterildiği gibi `Switch.UseLegacyAccessibilityFeatures.3` [AppContext anahtarını](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)ayarlayabilirsiniz:
+Automatic values are only provided if the application targets .NET Framework 4.8. For applications that target an earlier version of the .NET Framework, you can set the `Switch.UseLegacyAccessibilityFeatures.3` [AppContext switch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), as shown in the following App.config file:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -307,21 +307,21 @@ Otomatik değerler yalnızca uygulama .NET Framework 4,8 ' i hedefliyorsa sağla
 
 <a name="wf48" />
 
-### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) iş akışı Tasarımcısı
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) workflow designer
 
-İş akışı Tasarımcısı .NET Framework 4,8 ' de aşağıdaki değişiklikleri içerir:
+The workflow designer includes the following changes in .NET Framework 4.8:
 
-- Ekran okuyucusu kullanan kullanıcılar, FlowSwitch durum etiketlerindeki geliştirmeleri görür.
+- Users using Narrator will see improvements in FlowSwitch case labels.
 
-- Ekran okuyucusu kullanan kullanıcılar, düğme açıklamalarındaki geliştirmeleri görür.
+- Users using Narrator will see improvements in button descriptions.
 
-- Yüksek Karşıtlık Temaları seçen kullanıcılar, öğeler arasında daha iyi kontrast oranları ve odak öğeleri için kullanılan daha belirgin seçim kutuları gibi İş Akışı Tasarımcısı ve denetimlerinin görünürlüğünde geliştirmeler görür.
+- Users who choose High Contrast themes will see improvements in the visibility of the Workflow Designer and its controls, like better contrast ratios between elements and more noticeable selection boxes used for focus elements.
 
-Uygulamanız .NET Framework 4.7.2 veya daha önceki bir sürümü hedefliyorsa, uygulama yapılandırma dosyanızda `Switch.UseLegacyAccessibilityFeatures.3` [AppContext anahtarını](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `false` olarak ayarlayarak bu değişiklikleri kabul edebilirsiniz. Daha fazla bilgi için bu makaledeki [Erişilebilirlik geliştirmelerinden yararlanma](#taking-advantage-of-accessibility-enhancements) bölümüne bakın.
+If your application targets .NET Framework 4.7.2 or an earlier version, you can opt into these changes by setting the `Switch.UseLegacyAccessibilityFeatures.3` [AppContext switch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) to `false` in your application configuration file. For more information, see the [Taking advantage of accessibility enhancements](#taking-advantage-of-accessibility-enhancements) section in this article.
 
-## <a name="whats-new-in-accessibility-in-net-framework-472"></a>.NET Framework 4.7.2 ' deki erişilebilirlik yenilikleri
+## <a name="whats-new-in-accessibility-in-net-framework-472"></a>What's new in accessibility in .NET Framework 4.7.2
 
-.NET Framework 4.7.2, aşağıdaki alanlarda yeni erişilebilirlik özellikleri içerir:
+.NET Framework 4.7.2 includes new accessibility features in the following areas:
 
 - [Windows Forms](#winforms472)
 
@@ -331,132 +331,132 @@ Uygulamanız .NET Framework 4.7.2 veya daha önceki bir sürümü hedefliyorsa, 
 
 ### <a name="windows-forms"></a>Windows Forms
 
-**Yüksek Karşıtlık temalarda işletim sistemi tanımlı renkler**
+**OS-defined colors in High Contrast themes**
 
-.NET Framework 4.7.2 ile başlayarak, Windows Forms Yüksek Karşıtlık temalarda işletim sistemi tarafından tanımlanan renkleri kullanır. Bu, aşağıdaki denetimleri etkiler:
+Starting with .NET Framework 4.7.2, Windows Forms uses colors defined by the operating system in High Contrast themes. This affects the following controls:
 
-- <xref:System.Windows.Forms.ToolStripDropDownButton> denetiminin aşağı açılan oku.
+- The drop-down arrow of the <xref:System.Windows.Forms.ToolStripDropDownButton> control.
 
-- <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.RadioButton> ve <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.ButtonBase.FlatStyle> <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> veya <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType>olarak ayarlanan denetimleri denetler. Daha önce, seçilen metin ve arka plan renkleri çok sevmiyor ve okunması zor.
+- The <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.RadioButton> and <xref:System.Windows.Forms.CheckBox> controls with <xref:System.Windows.Forms.ButtonBase.FlatStyle> set to <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> or <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType>. Previously, selected text and background colors were not contrasting and were hard to read.
 
-- <xref:System.Windows.Forms.Control.Enabled> özelliği `false`olarak ayarlanmış bir <xref:System.Windows.Forms.GroupBox> içinde içerilen denetimler.
+- Controls contained within a <xref:System.Windows.Forms.GroupBox> that has its <xref:System.Windows.Forms.Control.Enabled> property set to `false`.
 
-- <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripComboBox>ve <xref:System.Windows.Forms.ToolStripDropDownButton> denetimleri, Yüksek Karşıtlık modunda daha fazla parlaklık kontrast oranına sahiptir.
+- The <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripComboBox>, and <xref:System.Windows.Forms.ToolStripDropDownButton> controls, which have an increased luminosity contrast ratio in High Contrast Mode.
 
-- <xref:System.Windows.Forms.DataGridViewLinkCell><xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> özelliği.
+- The <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> property of the <xref:System.Windows.Forms.DataGridViewLinkCell>.
 
-**Ekran okuyucusu geliştirmeleri**
+**Narrator improvements**
 
-.NET Framework 4.7.2 ile başlayarak, ekran okuyucusu desteği aşağıdaki şekilde geliştirilmiştir:
+Starting with .NET Framework 4.7.2, Narrator support is enhanced as follows:
 
-- Bir <xref:System.Windows.Forms.ToolStripMenuItem> metnini duyurdığınızda <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> özelliğinin değerini duyurur.
+- It announces the value of the <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> property when announcing the text of a <xref:System.Windows.Forms.ToolStripMenuItem>.
 
-- Bir <xref:System.Windows.Forms.ToolStripMenuItem> <xref:System.Windows.Forms.Control.Enabled> özelliğinin `false` olarak ayarlandığını gösterir.
+- It indicates when a <xref:System.Windows.Forms.ToolStripMenuItem> has its <xref:System.Windows.Forms.Control.Enabled> property set to `false`.
 
-- <xref:System.Windows.Forms.ListView.CheckBoxes?displayProperty=nameWithType> özelliği `true`olarak ayarlandığında onay kutusunun durumu hakkında geri bildirim sağlar.
+- It gives feedback on the state of a check box when the <xref:System.Windows.Forms.ListView.CheckBoxes?displayProperty=nameWithType> property is set to `true`.
 
-- Ekran okuyucusu 'nun tarama modu odak sırası, ClickOnce indirme iletişim kutusu penceresindeki denetimlerin görsel sırasıyla tutarlıdır.
+- Narrator's Scan Mode focus order is consistent with the visual order of the controls on the ClickOnce download dialog window.
 
-**DataGridView geliştirmeleri**
+**DataGridView improvements**
 
-.NET Framework 4.7.2 ile başlayarak, <xref:System.Windows.Forms.DataGridView> denetimi aşağıdaki erişilebilirlik geliştirmelerini sunmuştur:
+Starting with .NET Framework 4.7.2, the <xref:System.Windows.Forms.DataGridView> control has introduced the following accessibility improvements:
 
-- Satırlar klavye kullanılarak sıralanabilir. Kullanıcı, geçerli sütuna göre sıralamak için F3 tuşunu kullanabilir.
+- Rows can be sorted using the keyboard. A user can use the F3 key in order to sort by the current column.
 
-- <xref:System.Windows.Forms.DataGridView.SelectionMode?displayProperty=nameWithType>, <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType>olarak ayarlandığında, sütun üst bilgisi, geçerli sütunu geçerli satırdaki hücrelerde Kullanıcı sekmeleri olarak göstermek için rengi değiştirir.
+- When the <xref:System.Windows.Forms.DataGridView.SelectionMode?displayProperty=nameWithType> is set to <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType>, the column header changes color to indicate the current column as the user tabs through the cells in the current row.
 
-- Bir <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject?displayProperty=nameWithType> <xref:System.Windows.Forms.AccessibleObject.Parent?displayProperty=nameWithType> özelliği doğru üst denetimi döndürür.
+- The <xref:System.Windows.Forms.AccessibleObject.Parent?displayProperty=nameWithType> property of a  <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject?displayProperty=nameWithType> returns the correct parent control.
 
-**Geliştirilmiş görsel ipuçları**
+**Improved visual cues**
 
-- Boş bir <xref:System.Windows.Forms.ButtonBase.Text> özelliğine sahip <xref:System.Windows.Forms.RadioButton> ve <xref:System.Windows.Forms.CheckBox> denetimleri odağı alırken bir odak göstergesi görüntüler.
+- The <xref:System.Windows.Forms.RadioButton> and <xref:System.Windows.Forms.CheckBox> controls with an empty <xref:System.Windows.Forms.ButtonBase.Text> property  display a focus indicator when they receive the focus.
 
-**Geliştirilmiş özellik Kılavuzu desteği**
+**Improved Property Grid Support**
 
-- <xref:System.Windows.Forms.PropertyGrid> Control alt öğeleri artık yalnızca bir PropertyGrid öğesi etkinleştirildiğinde <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> özelliği için bir `true` döndürür.
+- The <xref:System.Windows.Forms.PropertyGrid> control child elements now return a `true` for the  <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> property only when a PropertyGrid element is enabled.
 
-- <xref:System.Windows.Forms.PropertyGrid> Control alt öğeleri, yalnızca bir PropertyGrid öğesi Kullanıcı tarafından değiştirilebiliyorsa <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> özelliği için bir `false` döndürür.
+- The <xref:System.Windows.Forms.PropertyGrid> control child elements return a `false` for the <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> property only when a PropertyGrid element can be changed by the user.
 
-**Geliştirilmiş Klavye gezintisi**
+**Improved keyboard navigation**
 
-- <xref:System.Windows.Forms.ToolStripButton> denetimi, <xref:System.Windows.Forms.ToolStripPanel.TabStop> özelliği olan bir <xref:System.Windows.Forms.ToolStripPanel> dahil edildiğinde odağa izin verir `true`
+- The <xref:System.Windows.Forms.ToolStripButton> control allows focus when contained within a <xref:System.Windows.Forms.ToolStripPanel> that has the <xref:System.Windows.Forms.ToolStripPanel.TabStop> property set to `true`
 
 <a name="wpf472"></a>
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-**CheckBox ve RadioButton denetimlerinde yapılan değişiklikler**
+**Changes to the CheckBox and RadioButton controls**
 
-.NET Framework 4.7.1 ve önceki sürümlerde, WPF <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> ve <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> denetimleri tutarsız ve klasik ve Yüksek Karşıtlık temalarında hatalı odak görselleri.  Bu sorunlar, denetimlerin hiçbir içerik kümesi olmadığı durumlarda oluşur.  Bu, Temalar kafa karıştırıcı ve odak görselindeki geçişleri görebilir.
+In .NET Framework 4.7.1 and earlier versions, the WPF <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> and <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> controls have inconsistent and, in Classic and High Contrast themes, incorrect focus visuals.  These issues occur in cases where the controls do not have any content set.  This can make the transition between themes confusing and the focus visual hard to see.
 
-.NET Framework 4.7.2 ' de, bu görseller artık Temalar arasında daha tutarlıdır ve klasik ve Yüksek Karşıtlık temalarda daha kolay görünür.
+In .NET Framework 4.7.2, these visuals are now more consistent across themes and more easily visible in Classic and High Contrast themes.
 
-**WPF uygulamasında barındırılan WinForms denetimleri**
+**WinForms controls hosted in a WPF application**
 
-.NET Framework 4.7.1 ve önceki sürümlerde bulunan bir WPF uygulamasında barındırılan WinForms denetimi için, söz konusu katmandaki ilk veya son denetim WPF <xref:System.Windows.Forms.Integration.ElementHost> denetimi ise, kullanıcılar WinForms katmanının dışına sekmesine geçirilemedi. .NET Framework 4.7.2 ' de, kullanıcılar artık WinForms katmanının dışına sekme verebilir.
+For WinForms control hosted in a WPF application in .NET Framework 4.7.1 and earlier versions, users couldn't tab out of the WinForms layer if the first or last control in that layer is the WPF <xref:System.Windows.Forms.Integration.ElementHost> control. In .NET Framework 4.7.2, users are now able to tab out of the WinForms layer.
 
-Ancak, odağa dayanan otomatikleştirilmiş uygulamalar artık WinForms katmanını hiçbir şekilde yok etmeyebilir ve beklendiği gibi çalışmayabilir.
+However, automated applications that rely on focus never escaping the WinForms layer may no longer work as expected.
 
-## <a name="whats-new-in-accessibility-in-net-framework-471"></a>.NET Framework 4.7.1 ' deki erişilebilirlik yenilikleri
+## <a name="whats-new-in-accessibility-in-net-framework-471"></a>What's new in accessibility in .NET Framework 4.7.1
 
-.NET Framework 4.7.1, aşağıdaki alanlarda yeni erişilebilirlik özellikleri içerir:
+.NET Framework 4.7.1 includes new accessibility features in the following areas:
 
 - [Windows Presentation Foundation (WPF)](#wpf471)
 
 - [Windows Forms](#winforms471)
 
-- [ASP.NET Web denetimleri](#aspnet471)
+- [ASP.NET web controls](#aspnet471)
 
 - [.NET SDK Tools](#tools471)
 
-- [Windows Workflow Foundation (WF) İş Akışı Tasarımcısı](#wf471)
+- [Windows Workflow Foundation (WF) Workflow Designer](#wf471)
 
 <a name="wpf471"></a>
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-**Ekran okuyucu iyileştirmeleri**
+**Screen reader improvements**
 
-Erişilebilirlik iyileştirmeleri etkinleştirilmişse, .NET Framework 4.7.1, ekran okuyucularını etkileyen aşağıdaki geliştirmeleri içerir:
+If accessibility improvements are enabled, .NET Framework 4.7.1 includes the following enhancements that affect screen readers:
 
-- .NET Framework 4,7 ve önceki sürümlerde, <xref:System.Windows.Controls.Expander> denetimleri ekran okuyucular tarafından düğme olarak duyurulmuştur. .NET Framework 4.7.1 ile başlayarak, Genişletilebilir/daraltılabilir gruplar olarak doğru duyurulur.
+- In .NET Framework 4.7 and earlier versions, <xref:System.Windows.Controls.Expander> controls were announced by screen readers as buttons. Starting with .NET Framework 4.7.1, they are correctly announced as expandable/collapsible groups.
 
-- .NET Framework 4,7 ve önceki sürümlerde, <xref:System.Windows.Controls.DataGridCell> denetimleri ekran okuyucular tarafından "özel" olarak duyurulmuştur. .NET Framework 4.7.1 başlayarak, artık veri kılavuzu hücresi (yerelleştirilmiş) olarak doğru duyurulur.
+- In .NET Framework 4.7 and earlier versions, <xref:System.Windows.Controls.DataGridCell> controls were announced by screen readers as “custom.” Starting with .NET Framework 4.7.1, they are now correctly announced as data grid cell (localized).
 
-- .NET Framework 4.7.1 ile başlayarak ekran okuyucular düzenlenebilir bir <xref:System.Windows.Controls.ComboBox> adını duyurur.
+- Starting with .NET Framework 4.7.1, screen readers announce the name of an editable <xref:System.Windows.Controls.ComboBox>.
 
-- .NET Framework 4,7 ve önceki sürümlerde, <xref:System.Windows.Controls.PasswordBox> denetimleri "görünümde hiçbir öğe yok" veya aksi halde yanlış davranışa sahip olarak duyuruldu. Bu sorun, .NET Framework 4.7.1 ile başlayarak düzeltilir.
+- In .NET Framework 4.7 and earlier versions, <xref:System.Windows.Controls.PasswordBox> controls were announced as “no item in view” or had otherwise incorrect behavior. This issue is fixed starting with .NET Framework 4.7.1.
 
-**UIAutomation LiveRegion desteği**
+**UIAutomation LiveRegion support**
 
-Okuyucu gibi ekran okuyucular, kullanıcıların, genellikle odağa sahip kullanıcı arabirimi içeriğinin metinden konuşmaya çıkışıyla bir uygulamanın kullanıcı arabirimi içeriğini okumasına yardımcı olur. Ancak, bir UI öğesi değişirse ve odağa sahip değilse, kullanıcıya bildirimde bulunulmayabilir ve önemli bilgileri kaçırmayabilir. Canlı bölgeler bu sorunu çözmeye hedeflenir. Geliştirici, ekran okuyucuyu veya başka bir UIAutomation istemcisini, bir kullanıcı arabirimi öğesine önemli bir değişikliğin yapıldığını bilgilendirmek için kullanabilir. Ekran okuyucu daha sonra bu değişikliğin kullanıcısına nasıl ve ne zaman bilgi verileceğine karar verebilir.
+Screen readers such as Narrator help people read the UI contents of an application, usually by text-to-speech output of the UI content that has the focus. However, if a UI element changes and does not have the focus, the user may not be notified and may miss important information. Live regions aim at solving this problem. A developer can use them to inform the screen reader or any other UIAutomation client that an important change has been made to a UI element. The screen reader can then decide how and when to inform the user of this change.
 
-Canlı bölgeleri desteklemek için WPF 'e aşağıdaki API 'Ler eklenmiştir:
+To support live regions, the following APIs have been added to WPF:
 
-- **Livesetting** özelliğini ve **Liveregionchanged** olayını tanımlayan <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveSettingProperty?displayProperty=nameWithType> ve <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveRegionChangedEvent?displayProperty=nameWithType> alanları. XAML kullanılarak ayarlanabilir.
+- The <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveSettingProperty?displayProperty=nameWithType> and <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveRegionChangedEvent?displayProperty=nameWithType> fields, which identify the **LiveSetting** property and the **LiveRegionChanged** event. They can be set by using XAML.
 
-- Kullanıcı ARABIRIMININ önem derecesine sahip ekran okuyucuyu kullanıcıya bildiren **AutomationProperties. LiveSetting** iliştirilmiş özelliği.
+- The **AutomationProperties.LiveSetting** attached property, which informs the screen reader of the importance of the UI change to the user.
 
-- **AutomationProperties. LiveSetting** ekli özelliğini tanımlayan <xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType> özelliği.
+- The <xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType> property, which identifies the **AutomationProperties.LiveSetting** attached property.
 
-- Bir **Livesetting** değeri sağlamak için geçersiz kılınabilen <xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore%2A?displayProperty=nameWithType> yöntemi.
+- The <xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore%2A?displayProperty=nameWithType> method, which can be overridden to provide a **LiveSetting** value.
 
-- <xref:System.Windows.Automation.AutomationProperties.GetLiveSetting%2A?displayProperty=nameWithType> ve <xref:System.Windows.Automation.AutomationProperties.SetLiveSetting%2A?displayProperty=nameWithType> yöntemleri, bu da bir **Livesetting** değeri alır ve ayarlar.
+- The <xref:System.Windows.Automation.AutomationProperties.GetLiveSetting%2A?displayProperty=nameWithType> and <xref:System.Windows.Automation.AutomationProperties.SetLiveSetting%2A?displayProperty=nameWithType> methods, which get and set a **LiveSetting** value.
 
-- Aşağıdaki olası **livesetting** değerlerini tanımlayan <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> numaralandırması:
+- The <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> enumeration, which defines the following possible **LiveSetting** values:
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. Canlı bölgenin içeriği değiştiyse öğe bildirim göndermez.
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. Canlı bölgenin içeriği değiştiyse, öğesi interruptive olmayan bildirimler gönderir.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. The element does not send notifications if the content of the live region has changed.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. The element sends non-interruptive notifications if the content of the live region has changed.
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. Canlı bölgenin içeriği değiştiyse, öğesi interruptive bildirimleri gönderir.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. The element sends interruptive notifications if the content of the live region has changed.
 
-Aşağıdaki örnekte gösterildiği gibi, ilgilendiğiniz öğe üzerinde **AutomationProperties. livesetting** özelliğini ayarlayarak bir LiveRegion oluşturabilirsiniz:
+You can create a LiveRegion by setting the **AutomationProperties.LiveSetting** property on the element of interest, as shown in the following example:
 
 ```xaml
 <TextBlock Name="myTextBlock" AutomationProperties.LiveSetting="Assertive">announcement</TextBlock>
 ```
 
-Canlı bölgedeki veriler değiştiğinde ve bir ekran okuyucuyu bilgilendirmeniz gerektiğinde, aşağıdaki örnekte gösterildiği gibi, açıkça bir olay oluşturursunuz.
+When the data in the live region changes and you need to inform a screen reader, you explicitly raise an event, as shown in the following sample.
 
 ```csharp
 var peer = FrameworkElementAutomationPeer.FromElement(myTextBlock);
@@ -470,243 +470,243 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ```
 
-**Yüksek karşıtlık**
+**High contrast**
 
-.NET Framework 4.7.1 ile başlayarak, çeşitli WPF denetimlerinde yüksek karşıtlıklı geliştirmeler yapılmıştır. Artık <xref:System.Windows.SystemParameters.HighContrast%2A> teması ayarlandığında görünür olur. Bu güncelleştirmeler şunlardır:
+Starting with .NET Framework 4.7.1, improvements in high contrast have been made to various WPF controls. They are now visible when the <xref:System.Windows.SystemParameters.HighContrast%2A> theme is set. Bu güncelleştirmeler şunlardır:
 
-- <xref:System.Windows.Controls.Expander> denetimi
+- <xref:System.Windows.Controls.Expander> control
 
-  <xref:System.Windows.Controls.Expander> denetimi için odak görseli artık görülebilir. <xref:System.Windows.Controls.ComboBox>,<xref:System.Windows.Controls.ListBox>ve <xref:System.Windows.Controls.RadioButton> denetimlerinin klavye görselleri de görünür. Örneğin:
-
-  Sonra: 
-
-  ![Erişilebilirlik geliştirmelerinden önce odaklı genişletici denetimi](./media/expander-before.png)
-
-  Sonra 
-
-  ![Erişilebilirlik geliştirmelerinden sonra odak ile genişletici denetimi](./media/expander-after.png)
-
-- <xref:System.Windows.Controls.CheckBox> ve <xref:System.Windows.Controls.RadioButton> denetimleri
-
-  <xref:System.Windows.Controls.CheckBox> ve <xref:System.Windows.Controls.RadioButton> denetimlerindeki metin artık yüksek karşıtlık temalarında seçilne zaman daha kolay görülebilir. Örneğin:
+  The focus visual for the  <xref:System.Windows.Controls.Expander> control is now visible. The keyboard visuals for <xref:System.Windows.Controls.ComboBox>,<xref:System.Windows.Controls.ListBox>, and <xref:System.Windows.Controls.RadioButton> controls are visible as well. Örneğin:
 
   Sonra: 
 
-  ![Erişilebilirlik geliştirmelerinden önce odak içeren yüksek karşıtlık radyo düğmesi](./media/radio-button-before.png)
+  ![Screenshot of the expander control with focus and no focus visual.](./media/whats-new-in-accessibility/expander-control-before.png)
 
-  Sonra 
+  After: 
 
-  ![Erişilebilirlik geliştirmelerinden sonra odak ile yüksek karşıtlık radyo düğmesi](./media/radio-button-after.png)
+  ![Screenshot of the expander control with focus showing a dotted line around the control's text.](./media/whats-new-in-accessibility/expander-control-after.png)
 
-- <xref:System.Windows.Controls.ComboBox> denetimi
+- <xref:System.Windows.Controls.CheckBox> and <xref:System.Windows.Controls.RadioButton> controls
 
-  .NET Framework 4.7.1 ile başlayarak, devre dışı <xref:System.Windows.Controls.ComboBox> denetiminin kenarlığı devre dışı metinle aynı renktedir. Örneğin:
+  The text in the <xref:System.Windows.Controls.CheckBox> and <xref:System.Windows.Controls.RadioButton> controls is now easier to see when selected in high contrast themes. Örneğin:
 
   Sonra: 
 
-  ![ComboBox, erişilebilirlik geliştirmelerinden önce kenarlık ve metin devre dışı](./media/combo-disabled-before.png)
+  ![Screenshot of radio and check buttons with poor text visibility on high contrast themes.](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
 
-  Sonra   
+  After: 
 
-  ![ComboBox, erişilebilirlik iyileştirmelerinden sonra devre dışı bırakıldı kenarlık ve metin](./media/combo-disabled-after.png)
+  ![Screenshot of radio and check buttons with better text visibility on high contrast themes.](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
 
-  Ayrıca, devre dışı bırakılmış ve odaklanmış düğmeler doğru tema rengini kullanır.
+- <xref:System.Windows.Controls.ComboBox> control
+
+  Starting with .NET Framework 4.7.1, the border of a disabled <xref:System.Windows.Controls.ComboBox> control is the same color as disabled text. Örneğin:
+
+  Sonra: 
+
+  ![Screenshot of a disabled ComboBox with border and control text in different colors.](./media/whats-new-in-accessibility/combo-disabled-before.png)
+
+  After:   
+
+  ![Screenshot of a disabled ComboBox with border the same color as the control text.](./media/whats-new-in-accessibility/combo-disabled-after.png)
+
+  In addition, disabled and focused buttons use the correct theme color.
 
   Sonra:
 
-  ![Erişilebilirlik geliştirmelerinden önceki düğme teması renkleri](./media/button-themes-before.png) 
+  ![Screenshot of a black button with gray text saying Focus Me.](./media/whats-new-in-accessibility/button-theme-colors-before.png) 
 
-  Sonra 
+  After: 
 
-  ![Erişilebilirlik geliştirmelerinden sonra düğme teması renkleri](./media/button-themes-after.png) 
+  ![Screenshot of a blue button with black text saying Focus Me.](./media/whats-new-in-accessibility/button-theme-colors-after.png) 
 
-  Son olarak, .NET Framework 4,7 ve önceki sürümlerde, <xref:System.Windows.Controls.ComboBox> denetiminin stilini `Toolbar.ComboBoxStyleKey` olarak ayarlamak, açılan okun görünmez hale geçmesine neden oldu. Bu sorun, .NET Framework 4.7.1 ile başlayarak düzeltilir. Örneğin:
-
-  Sonra: 
-
-  ![Erişilebilirlik geliştirmelerinden önce Toolbar. ComboBoxStyleKey](./media/comboboxstylekey-before.png) 
-
-  Sonra 
-
-  ![Erişilebilirlik geliştirmelerinden sonra Toolbar. ComboBoxStyleKey](./media/comboboxstylekey-after.png) 
-
-- <xref:System.Windows.Controls.DataGrid> denetimi
-
-  .NET Framework 4.7.1 ile başlayarak, <xref:System.Windows.Controls.DataGrid> denetimlerinde sıralama göstergesi oku artık doğru Tema renklerini kullanır. Örneğin:
+  Finally, in .NET Framework 4.7 and earlier versions, setting a <xref:System.Windows.Controls.ComboBox> control’s style to `Toolbar.ComboBoxStyleKey` caused the drop-down arrow to be invisible. This issue is fixed starting with .NET Framework 4.7.1. Örneğin:
 
   Sonra: 
 
-  ![Erişilebilirlik geliştirmelerinden önce sıralama göstergesi oku](./media/sort-indicator-before.png) 
+  ![Screenshot of a ComboBox control with an invisible drop-down arrow.](./media/whats-new-in-accessibility/combo-box-style-key-before.png) 
 
-  Sonra   
+  After: 
 
-  ![Erişilebilirlik geliştirmelerinden sonra sıralama göstergesi oku](./media/sort-indicator-after.png) 
+  ![Screenshot of a ComBoxBox control displaying the drop-down arrow.](./media/whats-new-in-accessibility/combo-box-style-key-after.png) 
 
-  Ayrıca, .NET Framework 4,7 ve önceki sürümlerde, varsayılan bağlantı stili, fare üzerinde yüksek karşıtlık modlarında yanlış bir renge değiştirilmiştir. Bu, .NET Framework 4.7.1 ile başlayarak çözümlenir. Benzer şekilde, <xref:System.Windows.Controls.DataGrid> CheckBox sütunları, .NET Framework 4.7.1 ile başlayan klavye odağı geri bildirimi için beklenen renkleri kullanır.
+- <xref:System.Windows.Controls.DataGrid> control
+
+  Starting with .NET Framework 4.7.1, the sort indicator arrow in <xref:System.Windows.Controls.DataGrid> controls now uses correct theme colors. Örneğin:
 
   Sonra: 
 
-  ![Erişilebilirlik geliştirmelerinden önce DataGrid varsayılan bağlantı stili](./media/default-link-style-before.png) 
+  ![Screenshot of sort indicator arrow before improvements.](./media/whats-new-in-accessibility/sort-indicator-before.png) 
 
-  Sonra    
+  After:   
 
-  ![Erişilebilirlik geliştirmelerinden sonra DataGrid varsayılan bağlantı stili](./media/default-link-style-after.png) 
+  ![Screenshot of sort indicator arrow after improvements.](./media/whats-new-in-accessibility/sort-indicator-after.png) 
 
-.NET Framework 4.7.1 ' deki WPF Erişilebilirlik iyileştirmeleri hakkında daha fazla bilgi için bkz. [WPF 'de erişilebilirlik geliştirmeleri](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
+  In addition, in .NET Framework 4.7 and earlier versions, the default link style changed to an incorrect color on mouse over in high contrast modes. This is resolved starting with .NET Framework 4.7.1. Similarly, <xref:System.Windows.Controls.DataGrid> checkbox columns uses the expected colors for keyboard focus feedback starting with .NET Framework 4.7.1.
+
+  Sonra: 
+
+  ![Screenshot of a link saying Click Me! in red.](./media/whats-new-in-accessibility/default-link-style-before.png) 
+
+  After:    
+
+  ![Screenshot of a link saying Click Me! in yellow.](./media/whats-new-in-accessibility/default-link-style-after.png) 
+
+For more information on WPF accessibility improvements in .NET Framework 4.7.1, see [Accessibility improvements in WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
 <a name="winforms471"></a>
 
-### <a name="windows-forms-accessibility-improvements"></a>Windows Forms erişilebilirlik geliştirmeleri
+### <a name="windows-forms-accessibility-improvements"></a>Windows Forms accessibility improvements
 
-.NET Framework 4.7.1, Windows Forms (WinForms), aşağıdaki alanlardaki erişilebilirlik değişikliklerini içerir.
+In .NET Framework 4.7.1, Windows Forms (WinForms) includes accessibility changes in the following areas.
 
-**Yüksek Karşıtlık modunda iyileştirilmiş ekran**
+**Improved display in High Contrast mode**
 
-.NET Framework 4.7.1 ile başlayarak, çeşitli WinForms denetimleri işletim sisteminde bulunan üst karşıtlık modlarında geliştirilmiş işleme sunar. Windows 10, bazı yüksek karşıtlıklı sistem renklerinin değerlerini değiştirdi ve Windows Forms Windows 10 Win32 çerçevesini temel alır. En iyi deneyim için, Windows 'un en son sürümünde çalıştırın ve bir test uygulamasına bir App. manifest dosyası ekleyerek en son işletim sistemi değişikliklerini kabul edin ve Windows 10 desteklenen işletim sistemi satırını, aşağıdakileri içerecek şekilde not edin:
+Starting with .NET Framework 4.7.1, various WinForms controls offer improved rendering in the HighContrast modes available in the operating system. Windows 10 has changed the values for some high contrast system colors, and Windows Forms is based on the Windows 10 Win32 framework. For the best experience, run on the latest version of Windows and opt in to the latest OS changes by adding an app.manifest file in a test application and un-comment the Windows 10 supported OS  line so that it looks the following:
 
 ```xml
 <!-- Windows 10 -->
 <supportedOS Id=”{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}” />
 ```
 
-Yüksek karşıtlıklı değişikliklere örnek olarak şunlar verilebilir:
+Some examples of high contrast changes include:
 
-- <xref:System.Windows.Forms.MenuStrip> öğelerdeki onay işaretlerinin görünümü daha kolay.
+- Checkmarks in <xref:System.Windows.Forms.MenuStrip> items are easier to view.
 
-- Seçildiğinde devre dışı <xref:System.Windows.Forms.MenuStrip> öğeleri daha kolay görüntülenir.
+- When selected, disabled <xref:System.Windows.Forms.MenuStrip> items are easier to view.
 
-- Seçilen bir <xref:System.Windows.Forms.Button> denetimindeki metin seçim rengiyle karşıttır.
+- Text in a selected <xref:System.Windows.Forms.Button> control contrasts with the selection color.
 
-- Devre dışı bırakılan metin daha kolay okunabilir. Örneğin:
+- Disabled text is easier to read. Örneğin:
 
   Sonra:
 
-  ![Erişilebilirlik geliştirmelerinden önce devre dışı metin](./media/wf-disabled-before.png) 
+  ![Screenshot of an app that uses different controls running in high contrast mode before accessibility improvements.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png) 
 
-  Sonra
+  After:
 
-  ![Erişilebilirlik geliştirmelerinden sonra devre dışı metin](./media/wf-disabled-after.png) 
+  ![Screenshot of an app that uses different controls running in high contrast mode after accessibility improvements.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png) 
 
-- Iş parçacığı özel durumu Iletişim kutusunda yüksek karşıtlık geliştirmeleri.
+- High contrast improvements in the Thread Exception Dialog.
 
-**İyileştirilmiş ekran okuyucusu desteği**
+**Improved Narrator support**
 
-.NET Framework 4.7.1 Windows Forms, ekran okuyucusu için aşağıdaki erişilebilirlik geliştirmelerini içerir:
+Windows Forms in .NET Framework 4.7.1 includes the following accessibility improvements for the Narrator:
 
-- <xref:System.Windows.Forms.MonthCalendar> denetimine, diğer UI Otomasyon Araçları ile birlikte ekran okuyucusu tarafından erişilebilir.
+- The <xref:System.Windows.Forms.MonthCalendar> control can be accessed by the Narrator, as well as by other UI automation tools.
 
-- <xref:System.Windows.Forms.CheckedListBox> denetimi, bir öğenin denetim durumu değiştiğinde kullanıcıya bir liste öğesinin değerini değiştirdikleri bildirilir.
+- The <xref:System.Windows.Forms.CheckedListBox> control notifies Narrator when an item's check state has changed so the user is notified that they’ve changed the value of a list item.
 
-- <xref:System.Windows.Forms.DataGridViewCell> denetim, doğru salt okuma durumunu ekran okuyucusuna bildirir.
+- The <xref:System.Windows.Forms.DataGridViewCell> control reports the correct read-only status to Narrator.
 
-- Ekran okuyucusu artık devre dışı <xref:System.Windows.Forms.ToolStripMenuItem> metnini okuyabilir, daha önce devre dışı menü öğelerini atlar.
+- Narrator can now read disabled <xref:System.Windows.Forms.ToolStripMenuItem> text, whereas previously it would skip over disabled menu items.
 
-**UIAutomation erişilebilirlik desenleri için gelişmiş destek**
+**Enhanced support for UIAutomation accessibility patterns**
 
-.NET Framework 4.7.1 ile başlayarak, erişilebilirlik teknolojisi araçları geliştiricileri, çeşitli WinForms denetimleri için ortak API erişilebilirlik desenlerinden ve özelliklerinden faydalanabilir. Bu erişilebilirlik geliştirmeleri şunları içerir:
+Starting with .NET Framework 4.7.1, developers of accessibility technology tools can leverage common API accessibility patterns and properties for several WinForms controls. These accessibility improvements include:
 
-- <xref:System.Windows.Forms.ComboBox> ve <xref:System.Windows.Forms.ToolStripSplitButton> artık [genişletme/daraltma düzenlerini](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)destekliyor.
+- The <xref:System.Windows.Forms.ComboBox> and <xref:System.Windows.Forms.ToolStripSplitButton> now support the [expand/collapse pattern](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md).
 
-- <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, [geçiş modelini](../ui-automation/implementing-the-ui-automation-toggle-control-pattern.md)artık destekliyor.
+- The <xref:System.Windows.Forms.DataGridViewCheckBoxCell> now supports the [toggle pattern](../ui-automation/implementing-the-ui-automation-toggle-control-pattern.md).
 
-- <xref:System.Windows.Forms.ToolStripItem> denetimi <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> özelliğini ve [Genişlet/Daralt düzenlerini](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)destekler.
+- The <xref:System.Windows.Forms.ToolStripItem> control supports the <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> property and the [expand/collapse pattern](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md).
 
-- <xref:System.Windows.Forms.NumericUpDown> ve <xref:System.Windows.Forms.DomainUpDown> denetimleri <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> özelliğini destekler.
+- The <xref:System.Windows.Forms.NumericUpDown> and <xref:System.Windows.Forms.DomainUpDown> controls support the <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> property.
 
-**Geliştirilmiş özellik tarayıcı deneyimi**
+**Improved property browser experience**
 
-.NET Framework 4.7.1 ile başlayarak, Windows Forms şunları içerir:
+Starting with .NET Framework 4.7.1, Windows Forms includes:
 
-- Çeşitli açılan seçim pencereleri aracılığıyla daha iyi klavye gezintisi.
-- Gereksiz sekme duraklarının azaltılması.
-- Denetim türlerinin daha iyi raporlaması.
-- İyileştirilmiş ekran okuyucusu davranışı.
+- Better keyboard navigation through the various drop-down selection windows.
+- A reduction of unnecessary tab stops.
+- Better reporting of control types.
+- Improved narrator behavior.
 
 <a name="aspnet471"></a>
 
-### <a name="aspnet-web-controls"></a>ASP.NET Web denetimleri
+### <a name="aspnet-web-controls"></a>ASP.NET web controls
 
-.NET Framework 4.7.1 ve Visual Studio 2017 sürüm 15,3 ' den başlayarak, ASP.NET ASP.NET Web denetimlerinin Visual Studio 'da erişilebilirlik teknolojisiyle nasıl çalıştığını geliştirir. Değişiklikler şunları içerir:
+Starting with .NET Framework 4.7.1 and Visual Studio 2017 version 15.3, ASP.NET improves how ASP.NET web controls work with accessibility technology in Visual Studio. Changes include the following:
 
-- **Ayrıntılar görünümü** sihirbazındaki **alan Ekle** Iletişim kutusu ya da **ListView** sihirbazının **LISTVIEW yapılandırma** iletişim kutusu gibi denetimlerde eksik UI erişilebilirlik düzenlerini uygulamak için değişiklikler.
+- Changes to implement missing UI accessibility patterns in controls, like the **Add Field** dialog in the **Details View** wizard, or the **Configure ListView** dialog of the **ListView** wizard.
 
-- **Veri sayfalayıcı alanları Düzenleyicisi**gibi yüksek karşıtlık modunda görüntüyü geliştirmek için değişiklikler.
+- Changes to improve the display in High Contrast mode, like the **Data Pager Fields Editor**.
 
-- DataPager denetiminin **sayfalayıcı alanlarını düzenleme** Sihirbazı 'ndaki **alanlar** iletişim kutusu gibi denetimler için klavye gezinti deneyimlerini geliştirmek üzere yapılan değişiklikler, **ObjectContext 'ı Yapılandır** iletişim kutusu veya **veri Yapılandır seçimi** **veri kaynağını yapılandırma** sihirbazının iletişim kutusu.
+- Changes to improve the keyboard navigation experiences for controls, like the **Fields** dialog in the **Edit Pager Fields** wizard of the DataPager control, the **Configure ObjectContext** dialog, or the **Configure Data Selection** dialog of the **Configure Data Source** wizard.
 
 <a name="tools471"></a>
 
 ### <a name="net-sdk-tools"></a>.NET SDK Tools
 
-[Yapılandırma Düzenleyicisi aracı (SvcConfigEditor. exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) ve [hizmet izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) , değişen erişilebilirlik sorunları düzeltilirken geliştirilmiştir. Bunların çoğu, bir ad tanımlanmadığında veya belirli Kullanıcı Arabirimi Otomasyonu desenlerinin doğru uygulanmadığından küçük sorunlardır. Birçok kullanıcı bu hatalı değerleri bilmez, ancak ekran okuyucular gibi yardımcı teknolojiler kullanan müşteriler bu SDK araçlarını daha erişilebilir bulacaktır.
+The [Configuration Editor Tool (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) and [Service Trace Viewer Tool (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) have been improved by fixing varied accessibility issues. Most of these were small issues, like a name not being defined or certain UI automation patterns not being implemented correctly. While many users won’t be aware of these incorrect values, customers who use assistive technologies like screen readers will find these SDK tools more accessible.
 
-Bu geliştirmeler, klavye odağı sırası gibi önceki bazı davranışları değiştirir.
+These enhancements change some previous behaviors, such as keyboard focus order.
 
 <a name="wf471"></a>
 
-### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) İş Akışı Tasarımcısı
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) Workflow Designer
 
-İş Akışı Tasarımcısı erişilebilirlik değişiklikleri şunları içerir:
+Accessibility changes in the Workflow Designer include the following:
 
-- Sekme sırası, bazı denetimlerde soldan sağa ve yukarıdan aşağıya değişir:
+- The tab order changes to left to right and top to bottom in some controls:
 
-  - <xref:System.ServiceModel.Activities.InitializeCorrelation> etkinliğinin bağıntı verilerini ayarlamaya yönelik bağıntı Başlat penceresi.
+  - The initialize correlation window for setting correlation data for the <xref:System.ServiceModel.Activities.InitializeCorrelation> activity.
 
-  - <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.SendReply>ve <xref:System.ServiceModel.Activities.ReceiveReply> etkinlikleri için içerik tanımı penceresi.
+  - The content definition window for the <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.SendReply>, and <xref:System.ServiceModel.Activities.ReceiveReply> activities.
 
-- Klavye aracılığıyla daha fazla işlev mevcuttur:
+- More functions are available via the keyboard:
 
-  - Bir etkinliğin özelliklerini düzenlediğinizde, özellik grupları ilk odaklandığında klavye tarafından daraltılabilirler.
+  - When editing the properties of an activity, property groups can be collapsed by keyboard the first time they are focused.
 
-  - Uyarı simgeleri klavye tarafından erişilebilir.
+  - Warning icons are accessible by keyboard.
 
-  - **Özellikler** penceresindeki **daha fazla Özellikler** düğmesine klavye tarafından erişilebilir.
+  - The **More Properties** button in the **Properties** window is accessible by keyboard.
 
-  - Klavye kullanıcıları İş Akışı Tasarımcısı **bağımsız değişkenler** ve **değişkenler** bölmelerinde üst bilgi öğelerine erişebilirler.
+  - Keyboard users can access the header items in the **Arguments** and **Variables** panes of the Workflow Designer.
 
-- Odaklanılmış öğelerin şu durumlarda geliştirilmiş görünürlüğü:
+- Improved visibility of items with focus, such as when:
 
-  - İş Akışı Tasarımcısı ve etkinlik tasarımcıları tarafından kullanılan veri kılavuzlarına satır ekleme.
+  - Adding rows to data grids used by the Workflow Designer and activity designers.
 
-  - <xref:System.ServiceModel.Activities.ReceiveReply> ve <xref:System.ServiceModel.Activities.SendReply> etkinliklerindeki alanlar arasında sekme.
+  - Tabbing through fields in the <xref:System.ServiceModel.Activities.ReceiveReply> and <xref:System.ServiceModel.Activities.SendReply> activities.
 
-  - Değişkenler veya bağımsız değişkenler için varsayılan değerleri ayarlama
+  - Setting default values for variables or arguments
 
-- Ekran okuyucular artık doğru şekilde tanıyabilir:
+- Screen readers can now correctly recognize:
 
-  - İş akışı tasarımcısında ayarlanan kesme noktaları.
+  - Breakpoints set in the workflow designer.
 
-  - <xref:System.Activities.Statements.FlowSwitch%601>, <xref:System.Activities.Statements.FlowDecision>ve <xref:System.ServiceModel.Activities.CorrelationScope> etkinlikleri.
-  - <xref:System.ServiceModel.Activities.Receive> etkinliğinin içeriği.
+  - The <xref:System.Activities.Statements.FlowSwitch%601>, <xref:System.Activities.Statements.FlowDecision>, and <xref:System.ServiceModel.Activities.CorrelationScope> activities.
+  - The contents of the <xref:System.ServiceModel.Activities.Receive> activity.
 
-  - <xref:System.Activities.Statements.InvokeMethod> etkinliğinin hedef türü.
+  - The Target Type for the <xref:System.Activities.Statements.InvokeMethod> activity.
 
-  - <xref:System.Activities.Statements.TryCatch> etkinliğinin özel durum açılan kutusu ve finally bölümü.
+  - The Exception combo box and the Finally section in the <xref:System.Activities.Statements.TryCatch> activity.
 
-  - Ileti türü açılan kutusu, bağıntı başlatıcı ekleme penceresinde, Içerik tanımı penceresinde ve CorrelatesOn tanım penceresinde, ileti etkinliklerinin (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.SendReply> ve <xref:System.ServiceModel.Activities.ReceiveReply>) ayırıcı.
+  - The Message Type combo box, the splitter in the Add Correlation Initializers window, the Content Definition window, and the CorrelatesOn Definition window in the messaging activities (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.SendReply>, and <xref:System.ServiceModel.Activities.ReceiveReply>).
 
-  - Durum makinesi geçişleri ve geçiş hedefleri.
+  - State machine transitions and transitions destinations.
 
-  - <xref:System.Activities.Statements.FlowDecision> etkinliklerde ek açıklamalar ve bağlayıcılar.
+  - Annotations and connectors on <xref:System.Activities.Statements.FlowDecision> activities.
 
-  - Etkinlikler için bağlam (sağ tıklama) menüleri.
+  - The context (right-click) menus for activities.
 
-  - Özellik değeri düzenleyicileri, aramayı temizle düğmesi, kategoriye ve alfabetik sıralama düğmelerine göre ve Özellikler kılavuzundaki Ifade Düzenleyicisi iletişim kutusu.
+  - The property value editors, the Clear Search button, the By Category and Alphabetical sort buttons, and the Expression Editor dialog in the properties grid.
 
-  - İş Akışı Tasarımcısı yakınlaştırma yüzdesi.
+  - The zoom percentage in the Workflow Designer.
 
-  - <xref:System.Activities.Statements.Parallel> ve <xref:System.Activities.Statements.Pick> etkinliklerinde ayırıcı.
+  - The separator in <xref:System.Activities.Statements.Parallel> and <xref:System.Activities.Statements.Pick> activities.
 
-  - <xref:System.Activities.Statements.InvokeDelegate> etkinliği.
+  - The <xref:System.Activities.Statements.InvokeDelegate> activity.
 
-  - Sözlük Etkinlikleri (`Microsoft.Activities.AddToDictionary<TKey,TValue>`, `Microsoft.Activities.RemoveFromDictionary<TKey,TValue>`, vb.) için türleri seçin penceresi.
+  - The Select Types window for dictionary activities (`Microsoft.Activities.AddToDictionary<TKey,TValue>`, `Microsoft.Activities.RemoveFromDictionary<TKey,TValue>`, etc.).
 
-  - .NET tür araştır ve Seç penceresi.
+  - The Browse and Select .NET Type window.
 
-  - İş Akışı Tasarımcısı içerik haritaları.
+  - Breadcrumbs in the Workflow Designer.
 
-- Yüksek Karşıtlık Temaları seçen kullanıcılar, öğeler arasında daha iyi kontrast oranları ve odak öğeleri için kullanılan daha belirgin seçim kutuları gibi İş Akışı Tasarımcısı ve denetimlerinin görünürlüğünde birçok geliştirme görür.
+- Users who choose High Contrast themes will see many improvements in the visibility of the Workflow Designer and its controls, like better contrast ratios between elements and more noticeable selection boxes used for focus elements.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework yenilikler](index.md)
+- [What's new in the .NET Framework](index.md)

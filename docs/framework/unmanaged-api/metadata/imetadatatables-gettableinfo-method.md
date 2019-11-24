@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50cbe557-2322-41aa-8e0d-f967602eaa0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4844834232e34ab5dacfa34e7aa5d204ee344612
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 662b628f3cc6d2d7138f56820beaccee9c5d9e81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781354"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426664"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo Metodu
-Ad, satır boyutu, satır sayısı, sütun sayısı ve belirtilen tablonun anahtar sütunu dizinini alır.  
+Gets the name, row size, number of rows, number of columns, and key column index of the specified table.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,31 +40,31 @@ HRESULT GetTableInfo (
   
 ## <a name="parameters"></a>Parametreler  
  `ixTbl`  
- [in] Tablonun tanımlayıcısını döndürülecek özellikleri.  
+ [in] The identifier of the table whose properties to return.  
   
  `pcbRow`  
- [out] Baytlarında tablo satırı boyutunu bir işaretçi.  
+ [out] A pointer to the size, in bytes, of a table row.  
   
  `pcRows`  
- [out] Tablodaki satır sayısı için bir işaretçi.  
+ [out] A pointer to the number of rows in the table.  
   
  `pcCols`  
- [out] Tablodaki sütun sayısı için bir işaretçi.  
+ [out] A pointer to the number of columns in the table.  
   
  `piKey`  
- [out] Anahtar sütunun veya tablonun anahtar sütunu yok varsa -1 dizini için bir işaretçi.  
+ [out] A pointer to the index of the key column, or -1 if the table has no key column.  
   
  `ppName`  
- [out] Tablo adı için bir işaretçi işaretçisi.  
+ [out] A pointer to a pointer to the table name.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

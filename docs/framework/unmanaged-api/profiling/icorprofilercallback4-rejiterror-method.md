@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6b01f38fbcf1cb0439b82a933b37971515b06ac4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea9dee6e83870d1f2e0fdccffa53f16e6f18dba
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758153"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430102"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError Yöntemi
-Profil Oluşturucu, just-ın-time (JIT) derleyici yeniden derleme işleminde bir hata ile karşılaştı bildirir.  
+Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,39 +37,39 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>Parametreler  
  `moduleID`  
- [in] `ModuleID` İçinde başarısız bir yeniden derleme girişiminde bulunuldu.  
+ [in] The `ModuleID` in which the failed recompilation attempt was made.  
   
  `methodId`  
- [in] `MethodDef` Yönteminin başarısız güncellemelerden denemesi yapıldı.  
+ [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
   
  `functionId`  
- [in] Znovu veya için işaretlendi yeniden derleme yapılıyor işlevi örneği. Bu değer olabilir `NULL` (örneğin, profil oluşturucu yöntemi derlenmesi için bir geçersiz meta veri belirteci belirtilmişse) örnekleme başına temel yerine yöntemi başına temelinde hatası durumunda.  
+ [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
   
  `hrStatus`  
- [in] Hatanın yapısını gösteren HRESULT. Değerlerin bir listesi için durumu HRESULTS bölümüne bakın.  
+ [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu geri arama dönüş değerleri yok sayılır.  
+ Return values from this callback are ignored.  
   
-## <a name="status-hresults"></a>Durum HRESULTS  
+## <a name="status-hresults"></a>Status HRESULTS  
   
-|Durum dizi HRESULT|Açıklama|  
+|Status array HRESULT|Açıklama|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|`moduleID` Veya `methodDef` belirteç `NULL`.|  
-|CORPROF_E_DATAINCOMPLETE|Modül henüz tam yüklü değil veya yüklenmemiş sürecinde olduğundan.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|Belirtilen modül dinamik olarak oluşturulan (örneğin, `Reflection.Emit`) ve bu nedenle bu yöntem tarafından desteklenmiyor.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Yöntem bir toplanabilir bütünleştirilmiş koda örneği ve derlenmesi mümkün değildir. Türleri unutmayın ve yansıma olmayan bağlamda tanımlı işlevler (örneğin, `List<MyCollectibleStruct>`) toplanabilir derlemeye oluşturulabilir.|  
-|E_OUTOFMEMORY|CLR JIT yeniden derlemesi için belirtilen yöntemi işaretlemek çalışırken belleği yetersiz kaldı.|  
-|Diğer|İşletim sistemi CLR denetimin dışında kalan bir hata döndürdü. Örneğin, belleğin bir sayfası erişim korumasını değiştirmek için bir sistem çağrısı başarısız olursa, işletim sistemi hata görüntülenir.|  
+|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
+|CORPROF_E_DATAINCOMPLETE|The module is not fully loaded yet, or it is in the process of being unloaded.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
+|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
+|Diğer|The operating system returned a failure outside the control of the CLR. For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

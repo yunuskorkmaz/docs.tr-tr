@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37fd27af-8062-4904-ace4-51bb78ec600a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ff0660ef2b30e32af540fe7bef5936ab6d0a359f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b4b0682b2bddff96cb3d720900ed3aa39f06f9d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777629"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431844"
 ---
 # <a name="imetadataemitdefineimporttype-method"></a>IMetaDataEmit::DefineImportType Yöntemi
-Geçerli kapsam dışında tanımlanan ve bu başvuru için bir belirteç tanımlar belirtilen türe başvuru oluşturur.  
+Creates a reference to the specified type that is defined outside the current scope, and defines a token for that reference.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,37 +41,37 @@ HRESULT DefineImportType (
   
 ## <a name="parameters"></a>Parametreler  
  `pAssemImport`  
- [in] Bir [Imetadataassemblyımport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) içinden hedef türü alındığından derleme temsil eden arabirim.  
+ [in] An [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface that represents the assembly from which the target type is imported.  
   
  `pbHashValue`  
- [in] Tarafından belirtilen derleme için karma içeren bir dizi `pAssemImport`.  
+ [in] An array that contains the hash for the assembly specified by `pAssemImport`.  
   
  `cbHashValue`  
- [in] Bayt sayısı `pbHashValue` dizisi.  
+ [in] The number of bytes in the `pbHashValue` array.  
   
  `pImport`  
- [in] Bir [Imetadataımport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) içinden hedef türü alındığından meta veri kapsamı temsil eden arabirim.  
+ [in] An [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface that represents the metadata scope from which the target type is imported.  
   
  `tdImport`  
- [in] Bir `mdTypeDef` hedef türünü belirten bir belirteç.  
+ [in] An `mdTypeDef` token that specifies the target type.  
   
  `pAssemEmit`  
- [in] Bir [Imetadataassemblyemit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) hedef türü alınan derleme temsil eden arabirim.  
+ [in] An [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) interface that represents the assembly into which the target type is imported.  
   
  `ptr`  
- [out] `mdTypeRef` Tür başvurusu için geçerli kapsamda tanımlı belirteç.  
+ [out] The `mdTypeRef` token that is defined in the current scope for the type reference.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çağrılmadan önce [Imetadataemit::defineımportmember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) yöntemi kullanabileceğiniz `DefineImportType` üyenin üst sınıfta veya üst arabirimi için geçerli kapsam içinde bir tür başvurusu oluşturmak için yöntemi.  
+ Prior to calling the [IMetaDataEmit::DefineImportMember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) method, you can use the `DefineImportType` method to create a type reference, in the current scope, for the member's parent class or parent interface.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

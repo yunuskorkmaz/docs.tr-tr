@@ -27,234 +27,172 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6dbf36cec1bcd2ec1e96d57a889ddd9d9baef269
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 08015e2e5918ca64f601ec912a906cfb6319ed6c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663885"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427093"
 ---
 # <a name="profiling-overview"></a>Profil Oluşturmaya Genel Bakış
 
-<a name="top"></a> Bir profil oluşturucu başka bir uygulamanın yürütülmesini izleyen bir araçtır. Ortak dil çalışma zamanı (CLR) Profil Oluşturucu, ileti almak ve CLR Profil oluşturma API'ı kullanarak göndermek işlevlerini içeren bir dinamik bağlantı kitaplığı (DLL) ' dir. Profil Oluşturucu DLL çalışma zamanında CLR tarafından yüklenir.
+A profiler is a tool that monitors the execution of another application. A common language runtime (CLR) profiler is a dynamic link library (DLL) that consists of functions that receive messages from, and send messages to, the CLR by using the profiling API. The profiler DLL is loaded by the CLR at run time.
 
-Geleneksel profil oluşturma araçları, uygulamanın yürütülmesini ölçmeye odaklanır. Diğer bir deyişle, her bir işlevin veya uygulamanın zaman bellek kullanımını harcanan süreyi ölçer. Profil oluşturma API'SİNİN daha geniş bir kod kapsama araçları gibi tanılama araç sınıfı hedefler ve Gelişmiş hata ayıklama yardımları bile. Doğası gereği tüm tanılama bu kullanır. Profil oluşturma API ölçmekle kalmaz aynı zamanda bir uygulamanın yürütülmesini izler. Bu nedenle, profil oluşturma API'si asla uygulamanın kendisi tarafından kullanılmamalıdır ve uygulamanın yürütülmesi bağlı olmamalıdır (veya ondan etkilenmemelidir) profil oluşturucu.
+Traditional profiling tools focus on measuring the execution of the application. That is, they measure the time that is spent in each function or the memory usage of the application over time. The profiling API targets a broader class of diagnostic tools such as code-coverage utilities and even advanced debugging aids. These uses are all diagnostic in nature. The profiling API not only measures but also monitors the execution of an application. For this reason, the profiling API should never be used by the application itself, and the application’s execution should not depend on (or be affected by) the profiler.
 
-CLR uygulamasının profilini derlenmiş makine kodu gerekenden çok daha fazla desteği gerektirir. Uygulama etki alanları, çöp toplama, yönetilen özel durum işleme gibi CLR kavramlar tanıtılmaktadır olmasıdır (Microsoft Ara dili veya MSIL kodunu yerel makine koda dönüştürme), kod just-in-time (JIT) derleme ve benzer Özellikler. Geleneksel profil oluşturma mekanizmaları tanımlayamaz ya da bu özellikler hakkında yararlı bilgiler sağlar. Profil oluşturma API CLR ile profili oluşturulan uygulamanın performansı üzerinde çok az etkisi olan bu eksik bilgiyi verimli bir şekilde sağlar.
+Profiling a CLR application requires more support than profiling conventionally compiled machine code. This is because the CLR introduces concepts such as application domains, garbage collection, managed exception handling, just-in-time (JIT) compilation of code (converting Microsoft intermediate language, or MSIL, code into native machine code), and similar features. Conventional profiling mechanisms cannot identify or provide useful information about these features. The profiling API provides this missing information efficiently, with minimal effect on the performance of the CLR and the profiled application.
 
-Çalışma zamanında JIT derlemesi profil oluşturma için iyi fırsatlar sağlar. Profil oluşturma API JIT olarak derlenmiş silinmeden önce bir yordam için bellek içi MSIL kod akışını değiştirmek bir profil oluşturucunun sağlar. Bu şekilde, profil oluşturucu izleme kodu daha derin araştırma gerektiren belirli yordamlara dinamik olarak ekleyebilirsiniz. Bu yaklaşım geleneksel senaryolarda mümkün olsa da, CLR Profil oluşturma API'ı kullanarak uygulama çok daha kolaydır.
+JIT compilation at run time provides good opportunities for profiling. The profiling API enables a profiler to change the in-memory MSIL code stream for a routine before it is JIT-compiled. In this manner, the profiler can dynamically add instrumentation code to particular routines that need deeper investigation. Although this approach is possible in conventional scenarios, it is much easier to implement for the CLR by using the profiling API.
 
-Bu genel bakış aşağıdaki bölümlerden oluşur:
+## <a name="the-profiling-api"></a>The Profiling API
 
-- [Profil oluşturma API'si](#profiling_api)
+Typically, the profiling API is used to write a *code profiler*, which is a program that monitors the execution of a managed application.
 
-- [Desteklenen özellikler](#support)
-
-- [Bildirim iş parçacıkları](#notification_threads)
-
-- [Güvenlik](#security)
-
-- [Yönetilen ve yönetilmeyen kod Profiler kodu birleştirme](#combining_managed_unmanaged)
-
-- [Yönetilmeyen kod profili oluşturma](#unmanaged)
-
-- [COM kullanma](#com)
-
-- [Çağrı yığınları](#call_stacks)
-
-- [Geri çağrılar ve yığın derinliği](#callbacks)
-
-- [İlgili Konular](#related_topics)
-
-<a name="profiling_api"></a>
-
-## <a name="the-profiling-api"></a>Profil oluşturma API'si
-
-Genellikle, profil oluşturma API yazmak için kullanılan bir *kod profil oluşturucu*, hangi yönetilen bir uygulamanın yürütülmesini izleyen bir programdır.
-
-Profil oluşturma API, bir profil oluşturucu ile profili oluşturulan uygulamayla aynı işleme yüklenen DLL tarafından kullanılır. Profil Oluşturucu DLL bir geri arama arayüzü uygular ([Icorprofilercallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) .NET Framework sürüm 1.0 ve 1.1 [Icorprofilercallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) sürüm 2.0 ve üzeri). CLR, profili oluşturulan işlemdeki olayların profil oluşturucusuna bildirim için bu arabirimdeki yöntemleri çağırır. Profil Oluşturucu geri çalışma zamanı tarafından bulunan yöntemleri kullanarak çağırabilirsiniz [Icorprofilerınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) ve [Icorprofilerınfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) oluşturulan uygulamanın durumu hakkında bilgi edinmek için arabirim.
+The profiling API is used by a profiler DLL, which is loaded into the same process as the application that is being profiled. The profiler DLL implements a callback interface ([ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) in the .NET Framework version 1.0 and 1.1, [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) in version 2.0 and later). The CLR calls the methods in that interface to notify the profiler of events in the profiled process. The profiler can call back into the runtime by using the methods in the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) and [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) interfaces to obtain information about the state of the profiled application.
 
 > [!NOTE]
-> Profili oluşturulan uygulamayla aynı işlemde profil oluşturucu çözümünün yalnızca veri toplama bölümü çalışmalıdır. Tüm kullanıcı arabirimi ve veri analizi ayrı bir işlemde gerçekleştirilmelidir.
+> Only the data-gathering part of the profiler solution should be running in the same process as the profiled application. All user interface and data analysis should be performed in a separate process.
 
-Aşağıdaki resimde, profil oluşturucu DLL'nin profili oluşturulan uygulama ve CLR ile nasıl etkileşim kurduğu gösterilmektedir.
+The following illustration shows how the profiler DLL interacts with the application that is being profiled and the CLR.
 
-![Profil oluşturma mimarisi gösteren ekran görüntüsü.](./media/profiling-overview/profiling-architecture.png)
+![Screenshot that shows the profiling architecture.](./media/profiling-overview/profiling-architecture.png)
 
-### <a name="the-notification-interfaces"></a>Bildirim arabirimleri
+### <a name="the-notification-interfaces"></a>The Notification Interfaces
 
-[Icorprofilercallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) ve [Icorprofilercallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) bildirim arabirimleri olarak düşünülebilir. Bu arabirimler yöntemleri gibi oluşur [ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md), ve [Jıtcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md). Her zaman CLR yükler veya bir sınıf yüklemesini kaldırdığında, bir işlev derler ve bu şekilde karşılık gelen yöntemini profil oluşturucunun çağırır `ICorProfilerCallback` veya `ICorProfilerCallback2` arabirimi.
+[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) and [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) can be considered notification interfaces. These interfaces consist of methods such as [ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md), and [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md). Each time the CLR loads or unloads a class, compiles a function, and so on, it calls the corresponding method in the profiler's `ICorProfilerCallback` or `ICorProfilerCallback2` interface.
 
-Örneğin, bir profil oluşturucu iki bildirim işlevi ile kod performansını ölçebilir: [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) ve [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md). Bu zaman damgaları her bir bildirim, sonuçları toplar ve hangi işlevleri gösteren bir liste çıkışı oluşturur yalnızca en çok CPU ya da duvar saati zaman uygulama yürütmesi sırasında kullanılan.
+For example, a profiler could measure code performance through two notification functions: [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) and [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md). It just time-stamps each notification, accumulates results, and outputs a list that indicates which functions consumed the most CPU or wall-clock time during the execution of the application.
 
-### <a name="the-information-retrieval-interfaces"></a>Bilgi alım arabirimleri
+### <a name="the-information-retrieval-interfaces"></a>The Information Retrieval Interfaces
 
-Diğer ana profil oluşturma dahil arabirimdir [Icorprofilerınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) ve [Icorprofilerınfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md). Profil Oluşturucu Analizine yardımcı olmak için daha fazla bilgi edinmek için gerektiği gibi bu arabirimler çağırır. Örneğin, her CLR çağırır [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) işlevi, bir işlev tanımlayıcı sağlar. Profil Oluşturucu çağırarak o işlev ile ilgili daha fazla bilgi edinebilirsiniz [Icorprofilerınfo2::getfunctionınfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) işlevin üst sınıfı, adı ve benzeri bulmak için yöntemi.
-
-[Başa dön](#top)
-
-<a name="support"></a>
+The other main interfaces involved in profiling are [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) and [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md). The profiler calls these interfaces as required to obtain more information to help its analysis. For example, whenever the CLR calls the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function, it supplies a function identifier. The profiler can get more information about that function by calling the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method to discover the function's parent class, its name, and so on.
 
 ## <a name="supported-features"></a>Desteklenen Özellikler
 
-Profil oluşturma API çeşitli olayları ve ortak dil çalışma zamanı'nda gerçekleşen eylemler hakkında bilgi sağlar. Bu bilgileri, işlemlerin iç işleyişini izlemek ve .NET Framework uygulamanızın performansını çözümlemek için kullanabilirsiniz.
+The profiling API provides information about a variety of events and actions that occur in the common language runtime. You can use this information to monitor the inner workings of processes and to analyze the performance of your .NET Framework application.
 
-Profil oluşturma API'si aşağıdaki eylemler ve CLR içerisinde gerçekleşen olayları hakkında bilgi alır:
+The profiling API retrieves information about the following actions and events that occur in the CLR:
 
-- CLR başlatma ve kapatma olayları.
+- CLR startup and shutdown events.
 
-- Uygulama etki alanı oluşturma ve kapatma olayları.
+- Application domain creation and shutdown events.
 
-- Derleme yükleme ve kaldırma olayları.
+- Assembly loading and unloading events.
 
-- Modül yükleme ve kaldırma olayları.
+- Module loading and unloading events.
 
-- COM vtable oluşturma ve yok etme olayları.
+- COM vtable creation and destruction events.
 
-- Just-in-time (JIT) derlemeyi ve kod atışlı olaylar.
+- Just-in-time (JIT) compilation and code-pitching events.
 
-- Yükleme ve kaldırma olayları sınıfı.
+- Class loading and unloading events.
 
-- İş parçacığı oluşturma ve yok etme olayları'nı tıklatın.
+- Thread creation and destruction events.
 
-- İşlev giriş ve çıkış olayları.
+- Function entry and exit events.
 
-- Özel durumlar.
+- Exceptions.
 
-- Yönetilen ve yönetilmeyen kod yürütülmesi arasında geçişler.
+- Transitions between managed and unmanaged code execution.
 
-- Farklı çalışma zamanı bağlamları arasında geçişler.
+- Transitions between different runtime contexts.
 
-- Çalışma zamanını askıya alma hakkında bilgi sağlar.
+- Information about runtime suspensions.
 
-- Çalışma zamanı bellek yığını ve çöp toplama etkinliği hakkında bilgiler.
+- Information about the runtime memory heap and garbage collection activity.
 
-Profil oluşturma API tüm (yönetilmeyen) COM uyumlu dil üzerinden çağrılabilir.
+The profiling API can be called from any (non-managed) COM-compatible language.
 
-API, CPU ve bellek tüketimi açısından verimlidir. Profil oluşturma profili oluşturulan uygulamada yanıltıcı sonuçlara neden olabilecek kadar önemli bir değişiklik gerektirmez.
+The API is efficient with regard to CPU and memory consumption. Profiling does not involve changes to the profiled application that are significant enough to cause misleading results.
 
-Profil oluşturma API hem örnekleme hem de örnekleme yapmayan profil oluşturucuları için yararlıdır. A *örnekleme profil oluşturucu* profili normal saat vuruşlarında, örneğin 5 mili saniye inceler. A *örnekleme olmayan profil oluşturucu* bir olayın zaman uyumlu olarak olayına neden olmadan iş parçacığı ile bilgilendirilir.
+The profiling API is useful to both sampling and non-sampling profilers. A *sampling profiler* inspects the profile at regular clock ticks, say, at 5 milliseconds apart. A *non-sampling profiler* is informed of an event synchronously with the thread that causes the event.
 
 ### <a name="unsupported-functionality"></a>Desteklenmeyen İşlev
 
-Profil oluşturma API'si aşağıdaki işlevleri desteklemez:
+The profiling API does not support the following functionality:
 
-- Geleneksel Win32 yöntemleri kullanılarak profili oluşturulması gereken yönetilmeyen kod. Ancak, CLR Profil Oluşturucu yönetilen ve yönetilmeyen kod arasındaki sınırları belirlemek için geçiş olaylarını içerir.
+- Unmanaged code, which must be profiled using conventional Win32 methods. However, the CLR profiler includes transition events to determine the boundaries between managed and unmanaged code.
 
-- Kendi kendini değiştiren açı yönelimli programlama gibi amaçlarla kendi kodunu değiştiren uygulamalar.
+- Self-modifying applications that modify their own code for purposes such as aspect-oriented programming.
 
-- Profil oluşturma API'si bu bilgileri sağlamaz sağlamadığı için sınır denetimi. CLR sınırlarının tüm yönetilen kod denetimi desteği sağlar.
+- Bounds checking, because the profiling API does not provide this information. The CLR provides intrinsic support for bounds checking of all managed code.
 
-- Aşağıdaki nedenlerden dolayı desteklenmeyen uzaktan profil oluşturma:
+- Remote profiling, which is not supported for the following reasons:
 
-  - Uzaktan profil oluşturma, yürütme süresini uzatır. Profil oluşturma arabirimlerini kullandığınızda, böylece profil oluşturma sonuçlarının unduly etkilenmez, yürütme süresi en aza indirmeniz gerekir. Bu, yürütme performansını izlendiğinde özellikle doğrudur. Profil oluşturma arabirimleri bellek kullanımını izlemek veya yığın çerçeveleri, nesneleri vb. hakkında çalışma zamanı bilgileri almak için kullanıldığında, ancak uzak profil oluşturma bir kısıtlaması değil.
+  - Remote profiling extends execution time. When you use the profiling interfaces, you must minimize execution time so that profiling results will not be unduly affected. This is especially true when execution performance is being monitored. However, remote profiling is not a limitation when the profiling interfaces are used to monitor memory usage or to obtain run-time information about stack frames, objects, and so on.
 
-  - CLR kod Profilcisi bir veya daha fazla geri çağrı arabirimini, profili oluşturulan uygulamanın üzerinde çalıştığı yerel bilgisayardaki çalışma zamanı ile kaydetmelisiniz. Bu, bir uzaktan kod profil oluşturucu oluşturma özelliğini sınırlar.
+  - The CLR code profiler must register one or more callback interfaces with the runtime on the local computer on which the profiled application is running. This limits the ability to create a remote code profiler.
 
-- Yüksek kullanılabilirlik gereksinimleri olan üretim ortamlarında profil oluşturma. Profil oluşturma API'si, geliştirme zamanı tanılamalarını desteklemek üzere oluşturulmuştur. Üretim ortamlarını desteklemek için gereken ciddi testleri gerçekleştirmedi.
+- Profiling in production environments with high-availability requirements. The profiling API was created to support development-time diagnostics. It has not undergone the rigorous testing required to support production environments.
 
-[Başa dön](#top)
+## <a name="notification-threads"></a>Notification Threads
 
-<a name="notification_threads"></a>
+In most cases, the thread that generates an event also executes notifications. Such notifications (for example, [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) and [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)) do not need to supply the explicit `ThreadID`. Also, the profiler might decide to use thread-local storage to store and update its analysis blocks instead of indexing the analysis blocks in global storage, based on the `ThreadID` of the affected thread.
 
-## <a name="notification-threads"></a>Bildirim iş parçacıkları
-
-Çoğu durumda, olay oluşturan iş parçacığı da bildirimleri yürütür. Bu tür bildirimleri (örneğin, [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) ve [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)) açık sağlamanız gerekmez `ThreadID`. Ayrıca, profil oluşturucu depolamak ve analiz bloklarıyla dizin göre genel depoda analiz bloklarında yerine güncelleştirmek için iş parçacığı yerel depolama kullanmaya karar verebilir `ThreadID` etkilenen iş parçacığının.
-
-Bu geri aramaların seri halde olmadığını unutmayın. Kullanıcılar, iş parçacığı açısından güvenli veri yapıları oluşturarak ve birden çok iş parçacığından paralel erişimi önlemek gerektiğinde profil oluşturucu kodu kilitleme kodlarını korumanız gerekir. Bu nedenle, bazı durumlarda alışılmadık geri çağırmalar dizisi alabilirsiniz. Örneğin, yönetilen bir uygulama aynı kodu yürüten iki iş parçacığı ürettiğini varsayalım. Bu durumda, almak olası bir [Icorprofilercallback::jıtcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) olay bir iş parçacığından bazı işlevlere ait ve bir `FunctionEnter` geri alma önce diğer iş parçacığından [ Icorprofilercallback::jıtcompilationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) geri çağırma. Bu durumda, kullanıcı alacak bir `FunctionEnter` tam olarak yalnızca henüz derlenmiş zamanında (JIT) olmayabilen bir işlev için geri çağırma.
-
-[Başa dön](#top)
-
-<a name="security"></a>
+Note that these callbacks are not serialized. Users must protect their code by creating thread-safe data structures and by locking the profiler code where necessary to prevent parallel access from multiple threads. Therefore, in certain cases you can receive an unusual sequence of callbacks. For example, assume that a managed application is spawning two threads that are executing identical code. In this case, it is possible to receive a [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) event for some function from one thread and a `FunctionEnter` callback from the other thread before receiving the [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) callback. In this case, the user will receive a `FunctionEnter` callback for a function that may not have been fully just-in-time (JIT) compiled yet.
 
 ## <a name="security"></a>Güvenlik
 
-Bir profil oluşturucu DLL'si, ortak dil çalışma zamanı yürütme altyapısının bir parçası olarak çalışan yönetilmeyen bir DLL'dir. Yönetilen kod erişimi güvenliği sonuç olarak, kod profil oluşturucu DLL sınırlamalarına tabi değildir. Profil Oluşturucu üzerindeki tek sınırlamalar DLL aittir uygulamasını çalıştıran kullanıcının işletim sistemi tarafından uygulanmaz.
+A profiler DLL is an unmanaged DLL that runs as part of the common language runtime execution engine. As a result, the code in the profiler DLL is not subject to the restrictions of managed code access security. The only limitations on the profiler DLL are those imposed by the operating system on the user who is running the profiled application.
 
-Profiler yazarları, güvenlikle ilgili sorunlardan kaçınmak için uygun önlemleri almalıdır. Kötü niyetli bir kullanıcı değiştirememeleri Örneğin, yükleme sırasında bir erişim denetim listesine (ACL) bir profil oluşturucu DLL'si eklenmelidir.
+Profiler authors should take appropriate precautions to avoid security-related issues. For example, during installation, a profiler DLL should be added to an access control list (ACL) so that a malicious user cannot modify it.
 
-[Başa dön](#top)
+## <a name="combining-managed-and-unmanaged-code-in-a-code-profiler"></a>Combining Managed and Unmanaged Code in a Code Profiler
 
-<a name="combining_managed_unmanaged"></a>
+An incorrectly written profiler can cause circular references to itself, resulting in unpredictable behavior.
 
-## <a name="combining-managed-and-unmanaged-code-in-a-code-profiler"></a>Yönetilen ve yönetilmeyen kod Profiler kodu birleştirme
+A review of the CLR profiling API may create the impression that you can write a profiler that contains managed and unmanaged components that call each other through COM interop or indirect calls.
 
-Yanlış yazılmış bir profil oluşturucusu, beklenmeyen davranışla sonuçlanarak kendisine, döngüsel başvurulara neden olabilir.
+Although this is possible from a design perspective, the profiling API does not support managed components. A CLR profiler must be completely unmanaged. Attempts to combine managed and unmanaged code in a CLR profiler may cause access violations, program failure, or deadlocks. The managed components of the profiler will fire events back to their unmanaged components, which would subsequently call the managed components again, resulting in circular references.
 
-CLR Profil oluşturma API'si bir gözden geçirme, COM birlikte çalışması veya dolaylı aramalar birbirini çağıran yönetilen ve yönetilmeyen bileşenler içeren bir profil oluşturucu yazabileceğiniz izlenimini oluşturabilir.
+The only location where a CLR profiler can call managed code safely is in the Microsoft intermediate language (MSIL) body of a method. The recommended practice for modifying the MSIL body is to use the  JIT recompilation methods in the [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface.
 
-Bu tasarım açısından mümkün olsa da, profil oluşturma API'si yönetilen bileşenleri desteklemez. Bir CLR Profil Oluşturucu bütünüyle yönetilmemelidir. Yönetilen ve yönetilmeyen kodu bir CLR Profil Oluşturucusu'nda birleştirme girişimleri, erişim ihlallerine, program hatalarına veya kilitlenmelere neden olabilir. Profil oluşturucunun yönetilen bileşenleri, sonradan döngüsel başvurulara da yönetilen bileşenleri tekrar çağıracak geri yönetilmeyen bileşenlerine olayları ateşlenir.
+It is also possible to use the older instrumentation methods to modify MSIL. Before the just-in-time (JIT) compilation of a function is completed, the profiler can insert managed calls in the MSIL body of a method and then JIT-compile it (see the [ICorProfilerInfo::GetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md) method). This technique can successfully be used for selective instrumentation of managed code, or to gather statistics and performance data about the JIT.
 
-Burada bir CLR Profil Oluşturucu yönetilen kodu güvenle çağırabilirsiniz tek bir yöntemin Microsoft Ara dili (MSIL) gövdesi konumdur. MSIL gövdesinin değiştirilmesi için önerilen uygulama, JIT yeniden derleme yöntemlerini kullanmaktır [Icorprofilercallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) arabirimi.
+Alternatively, a code profiler can insert native hooks in the MSIL body of every managed function that calls into unmanaged code. This technique can be used for instrumentation and coverage. For example, a code profiler could insert instrumentation hooks after every MSIL block to ensure that the block has been executed. The modification of the MSIL body of a method is a very delicate operation, and there are many factors that should be taken into consideration.
 
-MSIL değiştirmek amacıyla eski araç yöntemleri kullanmak da mümkündür. Just-in-time (JIT) derleme işlev tamamlanmadan önce profiler MSIL gövdesinde bir yöntem ve sonra JIT derleme yönetilen çağrı ekleyebilirsiniz, (bkz [Icorprofilerınfo::getılfunctionbody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md) yöntemi). Bu teknik, yönetilen kod veya JIT hakkında istatistik ve performans verilerini toplamak için seçmeli araç başarıyla kullanılabilir.
+## <a name="profiling-unmanaged-code"></a>Profiling Unmanaged Code
 
-Alternatif olarak, kod profil oluşturucusu yönetilmeyen koda çağıran her yönetilen işlevin MSIL gövdesine yerel kancalar ekleyebilirsiniz. Bu teknik, Araçlar ve kapsam için kullanılabilir. Örneğin, bir kod profil oluşturucu bloğun yürütülmesini emin olmak için her MSIL bloğundan sonra araç kancaları ekleyebilirsiniz. Bir yöntemin MSIL gövdesinin değiştirilmesi çok hassas bir işlemdir ve dikkate alınması gereken birçok faktör vardır.
+The common language runtime (CLR) profiling API provides minimal support for profiling unmanaged code. The following functionality is provided:
 
-[Başa dön](#top)
+- Enumeration of stack chains. This feature enables a code profiler to determine the boundary between managed code and unmanaged code.
 
-<a name="unmanaged"></a>
+- Determination whether a stack chain corresponds to managed code or native code.
 
-## <a name="profiling-unmanaged-code"></a>Yönetilmeyen kod profili oluşturma
+In the .NET Framework versions 1.0 and 1.1, these methods are available through the in-process subset of the CLR debugging API. They are defined in the CorDebug.idl file.
 
-Profil oluşturma API'si ortak dil çalışma zamanı (CLR), yönetilmeyen kodun profilini çıkarmaya çok az destek sağlar. Aşağıdaki işlev sağlanır:
+In the .NET Framework 2.0 and later, you can use the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method for this functionality.
 
-- Yığın zincirlerini numaralandırma. Bu özellik, yönetilen kod ve yönetimsiz kod arasındaki sınırları belirlemek bir kod profil oluşturucusu sağlar.
+## <a name="using-com"></a>Using COM
 
-- Belirleme olup bir yığın zincirinin yönetilen koda veya yerel koda karşılık gelir.
+Although the profiling interfaces are defined as COM interfaces, the common language runtime (CLR) does not actually initialize COM to use these interfaces. The reason is to avoid having to set the threading model by using the [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize) function before the managed application has had a chance to specify its desired threading model. Similarly, the profiler itself should not call `CoInitialize`, because it may pick a threading model that is incompatible with the application being profiled and may cause the application to fail.
 
-.NET Framework sürüm 1.0 ve 1.1, bu yöntemler API hata ayıklama CLR'nin işlemdeki alt kullanılabilir. Bunlar CorDebug.idl dosyasında tanımlanır.
+## <a name="call-stacks"></a>Call Stacks
 
-.NET Framework 2.0 ve sonraki sürümlerinde, kullanabileceğiniz [Icorprofilerınfo2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) bu işlevselliği için yöntemi.
+The profiling API provides two ways to obtain call stacks: a stack snapshot method, which enables sparse gathering of call stacks, and a shadow stack method, which tracks the call stack at every instant.
 
-[Başa dön](#top)
+### <a name="stack-snapshot"></a>Stack Snapshot
 
-<a name="com"></a>
+A stack snapshot is a trace of the stack of a thread at an instant in time. The profiling API supports the tracing of managed functions on the stack, but it leaves the tracing of unmanaged functions to the profiler's own stack walker.
 
-## <a name="using-com"></a>COM kullanma
+For more information about how to program the profiler to walk managed stacks, see the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method in this documentation set, and [Profiler Stack Walking in the .NET Framework 2.0: Basics and Beyond](https://go.microsoft.com/fwlink/?LinkId=73638).
 
-Profil oluşturan arabirimler COM arabirimleri olarak tanımlansa da, ortak dil çalışma zamanı (CLR) aslında bu arabirimleri kullanması için com'i başlatmaz. İş parçacığı modeli kullanarak ayarlamak zorunda kalmamak için nedeni [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize) önce yönetilen uygulamanın kendi istenen iş parçacığı oluşturma modelini belirlemesine izin işlev. Benzer şekilde, profil oluşturucunun kendisi çağırmamalıdır `CoInitialize`, profili oluşturulan uygulamayla uyumsuz bir iş parçacığı modeli seçebileceği ve uygulamanın başarısız olmasına neden olabilir.
+### <a name="shadow-stack"></a>Shadow Stack
 
-[Başa dön](#top)
+Using the snapshot method too frequently can quickly create a performance issue. If you want to take stack traces frequently, your profiler should instead build a shadow stack by using the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md), and [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) exception callbacks. The shadow stack is always current and can quickly be copied to storage whenever a stack snapshot is needed.
 
-<a name="call_stacks"></a>
+A shadow stack may obtain function arguments, return values, and information about generic instantiations. This information is available only through the shadow stack and may be obtained when control is handed to a function. However, this information may not be available later during the run of the function.
 
-## <a name="call-stacks"></a>Çağrı yığınları
+## <a name="callbacks-and-stack-depth"></a>Callbacks and Stack Depth
 
-Profil oluşturma API çağrı yığınlarının alınması için iki yol sunar: çağrı yığınlarının seyrek toplama toplanmasını sağlayan yığın anlık görüntüsü yöntemi ve her anında çağrı yığınını izleyen gölge yığın yöntemi.
-
-### <a name="stack-snapshot"></a>Yığın anlık görüntüsü
-
-Yığın anlık görüntüsü bir iş parçacığı yığınının bir izleme anlık saattir. Profil oluşturma API yığın üzerinde yönetilen işlevlerin izlenmesini destekler ancak Yönetilmeyen işlevlerin izlenmesini profil oluşturucunun kendi yığın değişkenine bırakır.
-
-Profil oluşturucuyu yönetilen yığınları ilerletmek hakkında daha fazla bilgi için bkz. [Icorprofilerınfo2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) yöntemi bu belge kümesindeki ve [.NET Framework 2.0 Profiler Programlayacağınız yığını: Temeller ve ötesi](https://go.microsoft.com/fwlink/?LinkId=73638).
-
-### <a name="shadow-stack"></a>Gölge yığını
-
-Anlık görüntü yönteminin çok sık kullanılması, hızlı bir performans sorunu oluşturabilir. Yığın izlemelerini sık sık almak istiyorsanız, profil oluşturucu, bunun yerine bir gölge yığını kullanarak Sysprep.inf'in [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md), ve [Icorprofilercallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) özel durum geri aramalarını. Gölge yığını her zaman günceldir ve bir yığın anlık görüntüsü gerektiğinde hızla depoya kopyalanabilir.
-
-Gölge yığını, işlev bağımsız değişkenleri ve dönüş değerleri genel örnek oluşturma hakkında bilgi edinebilirsiniz. Bu bilgiler, yalnızca gölge yığın içinde kullanılabilir ve denetim bir işleve aktarıldığında elde edilebilir. Ancak, bu bilgiler daha sonra işlevin çalışması sırasında kullanılabilir olmayabilir.
-
-[Başa dön](#top)
-
-<a name="callbacks"></a>
-
-## <a name="callbacks-and-stack-depth"></a>Geri çağrılar ve yığın derinliği
-
-Profiler geri aramaları fazlasıyla yığın kısıtlaması olan durumlarda verilebilir ve oluşturucu geri aramasında bir yığın taşması bir işlemden hemen çıkılmasına yol açar. Bir profil oluşturucu geri çağırmalara yanıt olarak olabildiğince küçük yığın kullandığınızdan emin olmanız gerekir. Profil Oluşturucu yığın taşmasına karşı güçlü olan işlemlere karşı kullanılmak üzere tasarlanmışsa profil oluşturucunun kendisi de yığın taşmasını tetiklemekten kaçınmalıdır.
-
-[Başa dön](#top)
-
-<a name="related_topics"></a>
+Profiler callbacks may be issued in very stack-constrained circumstances, and a stack overflow in a profiler callback will lead to an immediate process exit. A profiler should make sure to use as little stack as possible in response to callbacks. If the profiler is intended for use against processes that are robust against stack overflow, the profiler itself should also avoid triggering stack overflow.
 
 ## <a name="related-topics"></a>İlgili Konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Profil Oluşturma Ortamını Ayarlama](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|Profil oluşturucuyu başlatmayı, olay bildirimlerini ayarlamayı ve bir Windows hizmeti profili açıklanmaktadır.|
-|[Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|Profil oluşturma API'SİNİN kullandığı yönetilmeyen arabirimleri açıklar.|
-|[Profil Oluşturma Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|Profil oluşturma API'SİNİN kullandığı yönetilmeyen genel statik işlevleri açıklar.|
-|[Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|Profil oluşturma API'SİNİN kullandığı yönetilmeyen numaralandırmaları açıklar.|
-|[Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|Profil oluşturma API'SİNİN kullandığı yönetilmeyen yapıları açıklar.|
+|[Profil Oluşturma Ortamını Ayarlama](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|Explains how to initialize a profiler, set event notifications, and profile a Windows Service.|
+|[Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|Describes the unmanaged interfaces that the profiling API uses.|
+|[Profil Oluşturma Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|Describes the unmanaged global static functions that the profiling API uses.|
+|[Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|Describes the unmanaged enumerations that the profiling API uses.|
+|[Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|Describes the unmanaged structures that the profiling API uses.|

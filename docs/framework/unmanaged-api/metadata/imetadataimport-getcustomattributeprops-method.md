@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6eefb243-a281-41c1-bcdc-7e17513bc446
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c714915651d8660a739d8ee6518fc3814af4c08d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a80336db4a5a8d7cfdebb7eb8d25bcb8f96e87c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782409"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437640"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>IMetaDataImport::GetCustomAttributeProps Metodu
-Kendi meta veri belirteci verilen özel özniteliğinin değerini alır.  
+Gets the value of the custom attribute, given its metadata token.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,31 +39,31 @@ HRESULT GetCustomAttributeProps (
   
 ## <a name="parameters"></a>Parametreler  
  `cv`  
- [in] Alınacak özel öznitelik temsil eden bir meta veri belirteci.  
+ [in] A metadata token that represents the custom attribute to be retrieved.  
   
  `ptkObj`  
- [out, isteğe bağlı] Özel öznitelik değiştiren nesnesini temsil eden bir meta veri belirteci. Bu değer, meta veri belirteci dışında herhangi bir türde olabilir `mdCustomAttribute`.  
+ [out, optional] A metadata token representing the object that the custom attribute modifies. This value can be any type of metadata token except `mdCustomAttribute`.  
   
  `ptkType`  
- [out, isteğe bağlı] Bir `mdMethodDef` veya `mdMemberRef` meta veri belirteci temsil eden <xref:System.Type> döndürülen özel özniteliğinin.  
+ [out, optional] An `mdMethodDef` or `mdMemberRef` metadata token representing the <xref:System.Type> of the returned custom attribute.  
   
  `ppBlob`  
- [out, isteğe bağlı] Özel öznitelik değeri olan verilerin bir dizisine bir işaretçi.  
+ [out, optional] A pointer to an array of data that is the value of the custom attribute.  
   
  `pcbSize`  
- [out, isteğe bağlı] Döndürülen verileri baytlık boyutu *`ppBlob`.  
+ [out, optional] The size in bytes of the data returned in *`ppBlob`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Özel bir öznitelik, bir veri, meta veri altyapısı tarafından anlaşılır biçimi dizisi olarak depolanır.  
+ A custom attribute is stored as an array of data, the format which is understood by the metadata engine.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

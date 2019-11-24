@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7d0d6fb7-bc9d-40f0-8163-c0d162eaba7d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85c0cc3880e4fc78d4badea329d62a6fced2a977
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: df4bfe69b22439073342693a03376a0b506f9c70
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781940"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428379"
 ---
-# <a name="corprfexclauseinfo-structure"></a>COR_PRF_EX_CLAUSE_INFO Yapısı
-Bir özel durum yan tümcesi örneği ve ilişkili çerçevesini hakkındaki bilgileri saklar.  
+# <a name="cor_prf_ex_clause_info-structure"></a>COR_PRF_EX_CLAUSE_INFO Yapısı
+Stores information about a specific exception clause instance and its associated frame.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,36 +39,36 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`clauseType`|Değerini [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) özel durum yan tümcesi yalnızca girilen kod veya sol türünü belirten sabit listesi.|  
-|`programCounter`|Yerel giriş noktası yan tümcesi işleyicisinin — Örneğin, X86 EIP kaydının içeriğini.|  
-|`framePointer`|Yan tümcesi işleyicisi için mantıksal çerçeve işaretçisi — Örneğin, X86 EBP kaydının içeriğini.|  
-|`shadowStackPointer`|Gölge yığın işaretçisi. Bu değer BSP kaydının içeriğini ve yalnızca IA64 için geçerlidir.|  
+|`clauseType`|A value of the [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) enumeration that specifies the type of exception clause the code just entered or left.|  
+|`programCounter`|The native entry point of the clause handler — for example, the contents of the X86 EIP register.|  
+|`framePointer`|The pointer to the logical frame for the clause handler — for example, the contents of the X86 EBP register.|  
+|`shadowStackPointer`|The pointer to the shadow stack. This value is the contents of the BSP register and applies only to IA64.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir özel durum bildirimi alındığında [Icorprofilerınfo2::getnotifiedexceptionclauseınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) özel durum yan tümcesinin yerel adres ve çerçeve bilgilerini almak için kullanılabilir (`catch` / `finally`/filtreleme) hakkında çalıştırılacak veya yalnızca çalıştırın.  
+ When an exception notification is received, [ICorProfilerInfo2::GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) can be used to get the native address and frame information for the exception clause (`catch`/`finally`/filter) that is about to be run or has just been run.  
   
- Bu geri aramalarda ortak dil çalışma zamanının (CLR) yürütme bir özel durum yan tümcesinin içerir:  
+ Execution of an exception clause involves these callbacks from the common language runtime (CLR):  
   
-- [Icorprofilercallback::exceptioncatcherenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)  
+- [ICorProfilerCallback::ExceptionCatcherEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)  
   
-- [Icorprofilercallback::exceptionunwindfinallyenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)  
+- [ICorProfilerCallback::ExceptionUnwindFinallyEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)  
   
-- [Icorprofilercallback::exceptionsearchfilterenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)  
+- [ICorProfilerCallback::ExceptionSearchFilterEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)  
   
-- [Icorprofilercallback::exceptioncatcherleave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)  
+- [ICorProfilerCallback::ExceptionCatcherLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)  
   
-- [Icorprofilercallback::exceptionunwindfinallyleave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)  
+- [ICorProfilerCallback::ExceptionUnwindFinallyLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)  
   
-- [Icorprofilercallback::exceptionsearchfilterleave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)  
+- [ICorProfilerCallback::ExceptionSearchFilterLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl  
+ **Header:** CorProf.idl  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

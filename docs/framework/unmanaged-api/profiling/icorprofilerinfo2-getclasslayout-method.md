@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3a36987-5666-4e2f-95b5-d0cb246502ec
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b5cec1022c9d4a2c96e4216aa09d4c0f7795b4f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37400e3b69b3884e31479fd7cdfccb473408bfbf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751819"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433398"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>ICorProfilerInfo2::GetClassLayout Metodu
-Belirtilen sınıf tarafından tanımlanan alanların bellekte Düzen hakkında bilgi alır. Diğer bir deyişle, bu yöntem, sınıfın alanlarının uzaklıkları alır.  
+Gets information about the layout, in memory, of the fields defined by the specified class. That is, this method gets the offsets of the class's fields.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,37 +38,37 @@ HRESULT GetClassLayout(
   
 ## <a name="parameters"></a>Parametreler  
  `classID`  
- [in] Düzen alınacak sınıfın Kimliğidir.  
+ [in] The ID of the class for which the layout will be retrieved.  
   
  `rFieldOffset`  
- [out içinde] Bir dizi [cor_fıeld_offset](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) yapıları belirteçleri ve ofsetleri sınıfın alanlarının her biri içerir.  
+ [in, out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) structures, each of which contains the tokens and offsets of the class's fields.  
   
  `cFieldOffset`  
- [in] Boyutu `rFieldOffset` dizisi.  
+ [in] The size of the `rFieldOffset` array.  
   
  `pcFieldOffset`  
- [out] Kullanılabilir öğeleri toplam sayısı için bir işaretçi. Varsa `cFieldOffset` 0'dır, bu değer gerekli öğelerin sayısını gösterir.  
+ [out] A pointer to the total number of available elements. If `cFieldOffset` is 0, this value indicates the number of elements needed.  
   
  `pulClassSize`  
- [out] Sınıf bayt cinsinden boyutunu içeren bir konum için bir işaretçi.  
+ [out] A pointer to a location that contains the size, in bytes, of the class.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetClassLayout` Yöntemi yalnızca sınıfı tarafından tanımlanan alanları döndürür. Sınıfının üst sınıfı alanlar da tanımlanmışsa, profil oluşturucu çağırmanız gerekir `GetClassLayout` alanlarla elde etmek için üst sınıfta.  
+ The `GetClassLayout` method returns only the fields defined by the class itself. If the class's parent class has defined fields as well, the profiler must call `GetClassLayout` on the parent class to obtain those fields.  
   
- Kullanırsanız `GetClassLayout` dize sınıflarıyla yöntemi E_INVALIDARG hata koduyla başarısız olur. Kullanım [Icorprofilerınfo2::getstringlayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) bir dizenin düzeni hakkında bilgi almak için. `GetClassLayout` Ayrıca bir dizi sınıfıyla çağrıldığında başarısız olur.  
+ If you use `GetClassLayout` with string classes, the method will fail with error code E_INVALIDARG. Use [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) to get information about the layout of a string. `GetClassLayout` will also fail when called with an array class.  
   
- Sonra `GetClassLayout` döndürür, doğrulamalısınız `rFieldOffset` arabellek kullanılabilir tüm içerecek şekilde büyük `COR_FIELD_OFFSET` yapıları. Bunu yapmak için değeri ile karşılaştırmak, `pcFieldOffset` işaret boyutu ile `rFieldOffset` boyutu tarafından ayrılmış bir `COR_FIELD_OFFSET` yapısı. Varsa `rFieldOffset` büyük değil yeterince büyük bir ayırma `rFieldOffset` arabellek, güncelleştirme `cFieldOffset` yeni, daha büyük bir boyut ve çağrı `GetClassLayout` yeniden.  
+ After `GetClassLayout` returns, you must verify that the `rFieldOffset` buffer was large enough to contain all the available `COR_FIELD_OFFSET` structures. To do this, compare the value that `pcFieldOffset` points to with the size of `rFieldOffset` divided by the size of a `COR_FIELD_OFFSET` structure. If `rFieldOffset` is not large enough, allocate a larger `rFieldOffset` buffer, update `cFieldOffset` with the new, larger size, and call `GetClassLayout` again.  
   
- Alternatif olarak, ilk çağırabilirsiniz `GetClassLayout` sıfır uzunluklu ile `rFieldOffset` arabellek doğru arabellek boyutu elde edilir. Arabellek boyutu döndürülen değere ayarlayabilirsiniz `pcFieldOffset` ve çağrı `GetClassLayout` yeniden.  
+ Alternatively, you can first call `GetClassLayout` with a zero-length `rFieldOffset` buffer to obtain the correct buffer size. You can then set the buffer size to the value returned in `pcFieldOffset` and call `GetClassLayout` again.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,29 +1,29 @@
 ---
-title: DotNet-Trace-.NET Core
-description: DotNet-Trace komut satırı aracını yükleme ve kullanma.
+title: dotnet-trace tool - .NET Core
+description: Installing and using the dotnet-trace command-line tool.
 author: sdmaclea
 ms.author: stmaclea
-ms.date: 10/14/2019
-ms.openlocfilehash: 6513cf63070bc1984006da75313e9912d76a6c95
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.date: 11/21/2019
+ms.openlocfilehash: 07eaec843e27f5d291b6d18fab53c43051794626
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321584"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428885"
 ---
-# <a name="trace-for-performance-analysis-utility-dotnet-trace"></a>Performans Analizi yardımcı programı için izleme (`dotnet-trace`)
+# <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace performance analysis utility
 
-**Bu makale şu şekilde geçerlidir:** .net Core 3,0 SDK ve sonraki sürümleri
+**This article applies to:** ✓ .NET Core 3.0 SDK and later versions
 
-## <a name="installing-dotnet-trace"></a>`dotnet-trace` yükleme
+## <a name="install-dotnet-trace"></a>Install dotnet-trace
 
-`dotnet-trace` [NuGet paketinin](https://www.nuget.org/packages/dotnet-trace)en son sürümünü yüklemek için [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
+Install `dotnet-trace` [NuGet package](https://www.nuget.org/packages/dotnet-trace) with the [dotnet tool install](../tools/dotnet-tool-install.md) command:
 
 ```dotnetcli
 dotnet tool install --global dotnet-trace
 ```
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 ```console
 dotnet-trace [-h, --help] [--version] <command>
@@ -31,32 +31,37 @@ dotnet-trace [-h, --help] [--version] <command>
 
 ## <a name="description"></a>Açıklama
 
-`dotnet-trace` Aracı, herhangi bir yerel profil oluşturucu olmadan çalışan bir işlemin .NET Core izlemelerinin toplanmasını sağlayan platformlar arası CLı genel aracıdır. .NET Core çalışma zamanının platformlar arası `EventPipe` teknolojisi etrafında oluşturulmuştur. `dotnet-trace`, Windows, Linux veya macOS 'ta aynı deneyimi sunar.
+The `dotnet-trace` tool:
+
+* Is a cross-platform .NET Core tool.
+* Enables the collection of .NET Core traces of a running process without a native profiler.
+* Is built around the cross-platform `EventPipe` technology of the .NET Core runtime.
+* Delivers the same experience on Windows, Linux, or macOS.
 
 ## <a name="options"></a>Seçenekler
 
-- **`--version`**
+- **`--version`**  
 
-DotNet-Counters yardımcı programının sürümünü görüntüleyin.
+  Displays the version of the dotnet-counters utility.
 
 - **`-h|--help`**
 
-Komut satırı yardımını göster.
+  Shows command-line help.
 
 ## <a name="commands"></a>Komutlar
 
 | Komut                                                     |
 | ----------------------------------------------------------- |
-| [DotNet-izleme toplama](#dotnet-trace-collect)               |
-| [DotNet-Trace Dönüştür](#dotnet-trace-convert)               |
-| [DotNet-izleme listesi-süreçler](#dotnet-trace-list-processes) |
-| [DotNet-izleme listesi-profiller](#dotnet-trace-list-profiles)   |
+| [dotnet-trace collect](#dotnet-trace-collect)               |
+| [dotnet-trace convert](#dotnet-trace-convert)               |
+| [dotnet-trace ps](#dotnet-trace-ps) |
+| [dotnet-trace list-profiles](#dotnet-trace-list-profiles)   |
 
-## <a name="dotnet-trace-collect"></a>DotNet-izleme toplama
+## <a name="dotnet-trace-collect"></a>dotnet-trace collect
 
-Çalışan bir işlemden bir tanılama izlemesi toplar.
+Collects a diagnostic trace from a running process.
 
-### <a name="synopsis"></a>Özeti
+### <a name="synopsis"></a>Synopsis
 
 ```console
 dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--output]
@@ -67,136 +72,146 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
 
 - **`-p|--process-id <PID>`**
 
-  İzlemeyi toplama işlemi.
+  The process to collect the trace from.
 
 - **`--buffersize <size>`**
 
-  Bellek içi dairesel arabelleğin boyutunu megabayt cinsinden ayarlar. Varsayılan 256 MB.
+  Sets the size of the in-memory circular buffer, in megabytes. Default 256 MB.
 
 - **`-o|--output <trace-file-path>`**
 
-  Toplanan izleme verileri için çıkış yolu. Belirtilmemişse, varsayılan olarak `trace.nettrace`olur.
+  The output path for the collected trace data. If not specified it defaults to `trace.nettrace`.
 
 - **`--providers <list-of-comma-separated-providers>`**
 
-  Etkinleştirilecek `EventPipe` sağlayıcılarının virgülle ayrılmış listesi. Bu sağlayıcılar `--profile <profile-name>`tarafından kapsanan tüm sağlayıcıları tamamlar. Belirli bir sağlayıcı için herhangi bir tutarsızlık varsa, buradaki yapılandırma profilden örtük yapılandırma üzerinden önceliklidir.
+  A comma-separated list of `EventPipe` providers to be enabled. These providers supplement any providers implied by `--profile <profile-name>`. If there's any inconsistency for a particular provider, this configuration takes precedence over the implicit configuration from the profile.
 
-  Bu sağlayıcı listesi şu biçimdedir:
+  This list of providers is in the form:
 
   - `Provider[,Provider]`
-  - `Provider` şu biçimdedir: `KnownProviderName[:Flags[:Level][:KeyValueArgs]]`.
-  - `KeyValueArgs` şu biçimdedir: `[key1=value1][;key2=value2]`.
+  - `Provider` is in the form: `KnownProviderName[:Flags[:Level][:KeyValueArgs]]`.
+  - `KeyValueArgs` is in the form: `[key1=value1][;key2=value2]`.
 
 - **`--profile <profile-name>`**
 
-  Yaygın izleme senaryolarına izin veren önceden tanımlanmış adlandırılmış bir dizi sağlayıcı yapılandırması succinctly.
+  A named pre-defined set of provider configurations that allows common tracing scenarios to be specified succinctly.
 
-- **`--format <NetTrace|Speedscope>`**
+- **`--format {NetTrace|Speedscope}`**
 
-  İzleme dosyası dönüştürmesi için çıkış biçimini ayarlar.
+  Sets the output format for the trace file conversion. Varsayılan, `NetTrace` değeridir.
 
-## <a name="dotnet-trace-convert"></a>DotNet-Trace Dönüştür
+## <a name="dotnet-trace-convert"></a>dotnet-trace convert
 
-Alternatif izleme çözümleme araçlarıyla kullanılmak üzere `nettrace` izlemelerini alternatif biçimlere dönüştürür.
+Converts `nettrace` traces to alternate formats for use with alternate trace analysis tools.
 
-### <a name="synopsis"></a>Özeti
+### <a name="synopsis"></a>Synopsis
 
 ```console
 dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 ```
 
-### <a name="arguments"></a>Bağımsız Değişkenler
+### <a name="arguments"></a>Arguments
 
 - **`<input-filename>`**
 
-  Dönüştürülecek giriş izleme dosyası. *Trace. NetTrace*için varsayılanlar.
+  Input trace file to be converted. Defaults to *trace.nettrace*.
 
 ### <a name="options"></a>Seçenekler
 
 - **`--format <NetTrace|Speedscope>`**
 
-  İzleme dosyası dönüştürmesi için çıkış biçimini ayarlar.
+  Sets the output format for the trace file conversion.
 
 - **`-o|--output <output-filename>`**
 
-  Çıkış dosya adı. Hedef biçimin uzantısı eklenecek.
+  Output filename. Extension of target format will be added.
 
-## <a name="dotnet-trace-list-processes"></a>DotNet-izleme listesi-süreçler
+## <a name="dotnet-trace-ps"></a>dotnet-trace ps
 
-İzlenebilir DotNet süreçlerini listeler.
+Lists dotnet processes that can be attached to.
 
-### <a name="synopsis"></a>Özeti
+### <a name="synopsis"></a>Synopsis
 
 ```console
-dotnet-trace list-processes [-h|--help]
+dotnet-trace ps [-h|--help]
 ```
 
-## <a name="dotnet-trace-list-profiles"></a>DotNet-izleme listesi-profiller
+## <a name="dotnet-trace-list-profiles"></a>dotnet-trace list-profiles
 
-Her profilde hangi sağlayıcıların ve filtrelerin olduğuna ilişkin bir açıklama ile önceden oluşturulmuş izleme profillerini listeler.
+Lists pre-built tracing profiles with a description of what providers and filters are in each profile.
 
-### <a name="synopsis"></a>Özeti
+### <a name="synopsis"></a>Synopsis
 
 ```console
 dotnet-trace list-profiles [-h|--help]
 ```
 
-## <a name="collect-a-trace-with-dotnet-trace"></a>`dotnet-trace` bir izleme toplayın
+## <a name="collect-a-trace-with-dotnet-trace"></a>Collect a trace with dotnet-trace
 
-- `dotnet-trace`kullanarak izlemeleri toplamak için öncelikle .NET Core uygulamasının işlem tanımlayıcısını (PID), izlemeleri toplanacak şekilde bulmanız gerekir.
+To collect traces using `dotnet-trace`:
 
-  - Windows 'ta, Görev Yöneticisi veya `tasklist` komutunu kullanma gibi seçenekler vardır.
-  - Linux 'ta, önemsiz seçeneği `ps` komutu kullanıyor olabilir.
+- Get the process identifier (PID) of the .NET Core application to collect traces from.
 
-Ayrıca, hangi .NET Core işlemlerinin çalıştığını, bunların PID 'leri ile birlikte öğrenmek için [DotNet-Trace List-Processes](#dotnet-trace-list-processes) komutunu da kullanabilirsiniz.
+  - On Windows, you can use Task Manager or the `tasklist` command, for example.
+  - On Linux, for example, the `ps` command.
+  - [dotnet-trace ps](#dotnet-trace-ps)
 
-- Ardından, aşağıdaki komutu çalıştırın:
+- Şu komutu çalıştırın:
 
-```console
-> dotnet-trace collect --process-id <PID>
+  ```console
+  dotnet-trace collect --process-id <PID>
+  ```
 
-Press <Enter> to exit...
-Connecting to process: <Full-Path-To-Process-Being-Profiled>/dotnet.exe
-Collecting to file: <Full-Path-To-Trace>/trace.nettrace
+  The preceding command generates output similar to the following:
+
+  ```console
+  Press <Enter> to exit...
+  Connecting to process: <Full-Path-To-Process-Being-Profiled>/dotnet.exe
+  Collecting to file: <Full-Path-To-Trace>/trace.nettrace
   Session Id: <SessionId>
   Recording trace 721.025 (KB)
-```
+  ```
 
-- Son olarak, `<Enter>` tuşuna basarak toplamayı durdurun ve `dotnet-trace` `trace.nettrace` dosyasına günlük olaylarını tamamlayacak.
+- Stop collection by pressing the `<Enter>` key. `dotnet-trace` will finish logging events to the *trace.nettrace* file.
 
-## <a name="viewing-the-trace-captured-from-dotnet-trace"></a>`dotnet-trace` yakalanan izlemeyi görüntüleme
+## <a name="view-the-trace-captured-from-dotnet-trace"></a>View the trace captured from dotnet-trace
 
-Windows 'da, `.nettrace` dosyaları yalnızca ETW veya LTTng ile toplanan izlemeler gibi, analiz için [PerfView](https://github.com/microsoft/perfview) üzerinde görüntülenebilir. Linux 'ta toplanan izlemeler için, izlemeyi PerfView 'da görüntülenmek üzere bir Windows makinesine taşıyabilirsiniz.
+On Windows, *.nettrace* files can be viewed on [PerfView](https://github.com/microsoft/perfview) for analysis: For traces collected on other platforms, the trace file can be moved to a Windows machine to be viewed on PerfView.
 
-Ayrıca, `dotnet-trace` çıkış biçimini `speedscope`olarak değiştirerek bir Linux makinesinde izlemeyi görüntüleyebilirsiniz. `-f|--format` seçeneğini kullanarak çıkış dosyası biçimini değiştirebilirsiniz-`-f speedscope`, `dotnet-trace` `speedscope` bir dosya üretmesine yol açabilir. Şu anda `nettrace` (varsayılan seçenek) ve `speedscope`arasından seçim yapabilirsiniz. `Speedscope` dosyalar <https://www.speedscope.app>açılabilirler.
+On Linux, the trace can be viewed by changing the output format of `dotnet-trace` to `speedscope`. The output file format can be changed using the `-f|--format` option - `-f speedscope` will make `dotnet-trace` produce a `speedscope` file. You can choose between `nettrace` (the default option) and `speedscope`. `Speedscope` files can be opened at <https://www.speedscope.app>.
 
 > [!NOTE]
-> .NET Core çalışma zamanı, izlemeleri `nettrace` biçiminde oluşturur ve izleme tamamlandıktan sonra speedscope (belirtilmişse) olarak dönüştürülür. Bazı dönüştürmeler veri kaybına neden olabileceğinden, özgün `nettrace` dosyası Dönüştürülen dosyanın yanında korunur.
+> The .NET Core runtime generates traces in the `nettrace` format. The traces are converted to speedscope (if specified) after the trace is completed. Since some conversions may result in loss of data, the original `nettrace` file is preserved next to the converted file.
 
-## <a name="using-dotnet-trace-to-collect-counter-values-over-time"></a>Zaman içinde sayaç değerlerini toplamak için `dotnet-trace` kullanma
+## <a name="use-dotnet-trace-to-collect-counter-values-over-time"></a>Use dotnet-trace to collect counter values over time
 
-Üretim ortamları gibi performans duyarlı ayarlarda temel sistem durumu izleme için `EventCounter` kullanmaya çalışıyorsanız ve bunları gerçek zamanlı olarak izlemek yerine izlemeleri toplamak istiyorsanız, bunu `dotnet-trace` da yapabilirsiniz.
+`dotnet-trace` can:
 
-Örneğin, çalışma zamanı performans sayacı değerlerini toplamak istiyorsanız aşağıdaki komutu kullanabilirsiniz:
+* Use `EventCounter` for basic health monitoring in performance-sensitive environments. For example, in production.
+* Collect traces so they don't need to be viewed in real time.
+
+For example, to collect runtime performance counter values, use the following command:
 
 ```console
 dotnet-trace collect --process-id <PID> --providers System.Runtime:0:1:EventCounterIntervalSec=1
 ```
 
-Bu komut, hafif sistem durumu izleme için çalışma zamanı sayaçlarına her saniye bir kez rapor vermesini söyler. `EventCounterIntervalSec=1` daha yüksek bir değerle değiştirmek (örneğin, 60) sayaç verilerinde daha az ayrıntı düzeyi olan daha küçük bir izleme toplamanıza olanak tanır.
+The preceding command tells the runtime counters to report once every second for lightweight health monitoring. Replacing `EventCounterIntervalSec=1` with a higher value (for example, 60) allows collection of a smaller trace with less granularity in the counter data.
 
-Ek yükü (ve izleme boyutunu) daha da azaltmak üzere çalışma zamanı olaylarını devre dışı bırakmak istiyorsanız, çalışma zamanı olaylarını ve yönetilen yığın profil oluşturucuyu devre dışı bırakmak için aşağıdaki komutu kullanabilirsiniz.
+The following command reduces overhead and trace size more than the preceding one:
 
 ```console
 dotnet-trace collect --process-id <PID> --providers System.Runtime:0:1:EventCounterIntervalSec=1,Microsoft-Windows-DotNETRuntime:0:1,Microsoft-DotNETCore-SampleProfiler:0:1
 ```
 
-## <a name="net-providers"></a>.NET sağlayıcıları
+The preceding command disables runtime events and the managed stack profiler.
 
-.NET Core çalışma zamanı, aşağıdaki .NET sağlayıcılarını destekler. .NET Core hem `Event Tracing for Windows (ETW)` hem de `EventPipe` izlemelerini etkinleştirmek için aynı anahtar kelimeleri kullanır.
+## <a name="net-providers"></a>.NET Providers
 
-| Sağlayıcı adı                            | Bilgiler |
+The .NET Core runtime supports the following .NET providers. .NET Core uses the same keywords to enable both `Event Tracing for Windows (ETW)` and `EventPipe` traces.
+
+| Provider name                            | Bilgiler |
 |------------------------------------------|-------------|
-| `Microsoft-Windows-DotNETRuntime`        | [Çalışma zamanı sağlayıcısı](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[CLR çalışma zamanı anahtar sözcükleri](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
-| `Microsoft-Windows-DotNETRuntimeRundown` | [Özet sağlayıcı](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[CLR Özeti anahtar sözcükleri](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |
-| `Microsoft-DotNETCore-SampleProfiler`    | Örnek profil oluşturucuyu etkinleştirilir. |
+| `Microsoft-Windows-DotNETRuntime`        | [The Runtime Provider](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[CLR Runtime Keywords](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
+| `Microsoft-Windows-DotNETRuntimeRundown` | [The Rundown Provider](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[CLR Rundown Keywords](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |
+| `Microsoft-DotNETCore-SampleProfiler`    | Enables the sample profiler. |

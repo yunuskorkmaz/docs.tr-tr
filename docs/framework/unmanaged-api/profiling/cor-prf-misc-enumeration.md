@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 619bb5de-e309-48b6-a3af-32d935a0ff46
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1dd3cf7e4badf8caa711f2a1b972d9fa14215204
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8105ba34ca400771fbc4273630f20941a4a9557d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752136"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432282"
 ---
-# <a name="corprfmisc-enumeration"></a>COR_PRF_MISC Numaralandırması
-Özel tanımlayıcılardır belirten sabit değerleri içerir.  
+# <a name="cor_prf_misc-enumeration"></a>COR_PRF_MISC Numaralandırması
+Contains constant values that specify special identifiers.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,18 +38,18 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|Tarafından kullanılan varsayılan tanımlayıcısı [Icorprofilerınfo::getmoduleınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) henüz bir derlemeye bağlı olmayan bir modül için.|  
-|`PROFILER_GLOBAL_CLASS`|Bir sınıfa ait olmayan global sabitler için varsayılan sınıf tanımlayıcısı.|  
-|`PROFILER_GLOBAL_MODULE`|Bir modüle ait olmayan, genel nesneler için varsayılan modülü tanımlayıcı.|  
+|`PROFILER_PARENT_UNKNOWN`|The default identifier used by [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) for a module that has not yet been attached to an assembly.|  
+|`PROFILER_GLOBAL_CLASS`|The default class identifier for global constants that do not belong to a class.|  
+|`PROFILER_GLOBAL_MODULE`|The default module identifier for global objects that do not belong to a module.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

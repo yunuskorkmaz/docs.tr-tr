@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bda75017-739f-4ce5-9000-f3b526e8473c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ebf8c736cdd1362cae1b1e0b734ce14bea49b18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 97b127c9a6aac0a0fefe25faf294791dcd2c8e41
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751892"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436040"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo Metodu
-Bir dizi nesnesi hakkında ayrıntılı bilgiler alır.  
+Gets detailed information about an array object.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,31 +38,31 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="parameters"></a>Parametreler  
  `objectId`  
- [in] Geçerli dizi nesnesinin kimliği.  
+ [in] The ID of a valid array object.  
   
  `cDimensions`  
- [in] Boyut (boyut sayısı) dizisi.  
+ [in] The rank (number of dimensions) of the array.  
   
  `pDimensionSizes`  
- [out] Her bir dizinin boyutu boyutunu gösteren tamsayılar içeren bir dizi.  
+ [out] An array that contains integers, each representing the size of a dimension of the array.  
   
  `pDimensionLowerBounds`  
- [out] Tamsayı içeren bir dizi, her alt temsil eden bir dizinin boyutu bağlı.  
+ [out] An array that contains integers, each representing the lower bound of a dimension of the array.  
   
  `ppData`  
- [out] Ham arabelleği göre düzenlendiğini dizi adresini bir işaretçiye C++ kuralı.  
+ [out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `pDimensionSizes` Ve `pDimensionLowerBounds` aynı dizinde her dizi konumunda bulunan öğeleri aynı varlık özelliklerini şekilde paralel, dizilerdir.  
+ The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

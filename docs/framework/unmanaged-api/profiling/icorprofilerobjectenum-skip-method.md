@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f8e498f8-f93a-4b82-bd22-55bdbf5e8d45
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b5818cb8d7da7415feb61532799df5fa5a16fd3b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c573c709e765fa723a726f5c8990ba59222ed1f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781209"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428131"
 ---
 # <a name="icorprofilerobjectenumskip-method"></a>ICorProfilerObjectEnum::Skip Yöntemi
-Belirtilen sayıda öğeyi atlanır, bu Numaralandırıcının imleci geçerli konumundan ilerler.  
+Advances the cursor of this enumerator from its current position so that the specified number of elements are skipped.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +35,19 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Atlanacak öğe sayısı.  
+ [in] The number of elements to be skipped.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu Numaralandırıcının imleç yeni konumu: (geçerli konumu) + `celt` .  
+ The new position of this enumerator's cursor is: (current position) + `celt` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

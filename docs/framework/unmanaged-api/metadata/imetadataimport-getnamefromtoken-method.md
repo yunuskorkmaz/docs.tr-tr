@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 32114ecf-8916-4ab2-a201-179c017344f1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fa6e8665e5e2194eb4a3dffad8e97a69deb202d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ed30f07fcec9c730e1514350c594399f0aa16e5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778981"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437269"
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a>IMetaDataImport::GetNameFromToken Yöntemi
-Belirtilen meta veri belirteci tarafından başvurulan nesne UTF-8 adını alır. Bu yöntem artık kullanılmıyor.  
+Gets the UTF-8 name of the object referenced by the specified metadata token. This method is obsolete.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +36,22 @@ HRESULT GetNameFromToken (
   
 ## <a name="parameters"></a>Parametreler  
  `tk`  
- [in] Adı döndürülecek nesne temsil eden belirteç.  
+ [in] The token representing the object to return the name for.  
   
  `pszUtf8NamePtr`  
- [out] Yığın UTF-8 nesnenin adına yönelik işaretçi.  
+ [out] A pointer to the UTF-8 object name in the heap.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetNameFromToken` artık kullanılmıyor. Alternatif olarak, belirteç gereklidir, gibi belirli türünü özelliklerini almak için bir yöntemi çağırmak `GetFieldProps` bir alanın veya `GetMethodProps` için bir yöntem.  
+ `GetNameFromToken` is obsolete. As an alternative, call a method to get the properties of the particular type of token required, such as `GetFieldProps` for a field or `GetMethodProps` for a method.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** 1.0  
+ **.NET Framework Versions:** 1.0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

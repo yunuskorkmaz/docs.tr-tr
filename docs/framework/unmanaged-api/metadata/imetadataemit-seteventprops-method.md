@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 271ecd7e757340becccb7bf52362487a2b277299
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 506e13ad956a01b16e36d8c71737fe0efce4c01b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737186"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450323"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps Yöntemi
-Ayarlar veya önceki bir çağrı tarafından tanımlanan bir olayın belirtilen özellik güncelleştirmelerinin [Imetadataemit::defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,34 +41,34 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>Parametreler  
  `ev`  
- [in] Olay belirteç.  
+ [in] The event token.  
   
  `dwEventFlags`  
- [in] Olay bayrakları. Bu, bir bit maskesi, `CorEventAttr` değerleri.  
+ [in] Event flags. This is a bitmask of `CorEventAttr` values.  
   
  `tkEventType`  
- [in] Olay sınıfı için belirteci. Bu bir `mdTypeDef` veya `mdTypeRef` belirteci.  
+ [in] The token for the event class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
   
  `mdAddOn`  
- [in] Olay ya da null için abone olmak için kullanılan yöntem.  
+ [in] The method used to subscribe to the event, or null.  
   
  `mdRemoveOn`  
- [in] Olay ya da null için aboneliğinizi iptal etmek için kullanılan yöntem.  
+ [in] The method used to unsubscribe to the event, or null.  
   
  `mdFire`  
- [in] (Bir türetilmiş sınıf tarafından) olay oluşturmak için kullanılan yöntem.  
+ [in] The method used (by a derived class) to raise the event.  
   
  `rmdOtherMethods[]`  
- [in] Olay ile ilişkili diğer yöntemleri için belirteçleri dizisi. Dizinin son öğesi olmalı `mdMethodDefNil`.  
+ [in] An array of tokens for other methods associated with the event. The last element of the array must be `mdMethodDefNil`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

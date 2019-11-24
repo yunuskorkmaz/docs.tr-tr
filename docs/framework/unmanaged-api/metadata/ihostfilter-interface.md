@@ -14,35 +14,33 @@ helpviewer_keywords:
 ms.assetid: e79456b1-045b-4a84-9714-2ea560ff75ea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c437d1856e1aa9526516c0a1d1ca931d8ed25c80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 90f7899beea204ea53a587200807ccd807cd6c11
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965783"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426143"
 ---
 # <a name="ihostfilter-interface"></a>IHostFilter Arabirimi
-Belirtilen belirtecin işleneceğini göstermek için bir yöntem sağlar.  
+Provides a method to indicate that a specified token will be processed.  
   
 > [!NOTE]
-> `IHostFilter` Arabirimin istemci tarafından uygulanması gerekir.  
+> The `IHostFilter` interface must be implemented by the client.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[MarkToken Yöntemi](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Belirtilen meta veri belirtecinin işleneceğini belirtir.|  
+|[MarkToken Yöntemi](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Indicates that the specified metadata token will be processed.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** Cor. h  
+ **Header:** Cor.h  
   
- **Kitaplığı** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

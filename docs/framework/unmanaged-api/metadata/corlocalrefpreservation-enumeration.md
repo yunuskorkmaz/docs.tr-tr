@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 44757163-1228-4213-a4c4-d4de503cc75d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6338034d6714e8770e06ff61994fdf4433eb1684
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 706ea37101f9f961e92d8cef2cf508c1dd0d56c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781783"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450248"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation Sabit Listesi
-Yerel başvurular alınmasına yönelik bayrak değerlerini içerir.  
+Contains flag values for the treatment of local references.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,16 +39,16 @@ typedef enum CorLocalRefPreservation
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|Yerel başvuru korur.|  
-|`MDPreserveLocalTypeRef`|Yerel tür başvurularını korur.|  
-|`MDPreserveLocalMemberRef`|Yerel üye başvuruları korur.|  
+|`MDPreserveLocalRefsNone`|Preserve no local references.|  
+|`MDPreserveLocalTypeRef`|Preserve local type references.|  
+|`MDPreserveLocalMemberRef`|Preserve local member references.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

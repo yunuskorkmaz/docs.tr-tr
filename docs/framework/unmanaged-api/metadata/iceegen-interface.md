@@ -14,48 +14,46 @@ helpviewer_keywords:
 ms.assetid: 383d20b0-efe9-4e71-8fb8-1186b2e7d0c0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6fb081c48abf899b44da1c1351efa3f6036f1c8d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae3c372951de00b097d0a8437039a3a85bf3aabf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050213"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426157"
 ---
 # <a name="iceegen-interface"></a>ICeeGen Arabirimi
-Dinamik kod derleme için yöntemler sağlar.  
+Provides methods for dynamic code compilation.  
   
- Bu arabirim artık kullanılmıyor ve kullanılmamalıdır.  
+ This interface is obsolete and should not be used.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[AddSectionReloc Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)|Kullanımdan kalktı. Kod tabanına .reloc yönergesi ekler.|  
-|[AllocateMethodBuffer Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-allocatemethodbuffer-method.md)|Kullanımdan kalktı. Bir yöntem için belirtilen boyutta bir arabellek oluşturur ve yöntemin göreli sanal adres alır.|  
-|[ComputePointer Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-computepointer-method.md)|Kullanımdan kalktı. Belirtilen kod bölümüne yönelik arabellek belirler.|  
-|[EmitString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-emitstring-method.md)|Kullanımdan kalktı. Belirtilen dize kod tabanında yayar.|  
-|[GenerateCeeFile Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceefile-method.md)|Kullanımdan kalktı. Şu anda bu yüklenen kod tabanı içeren bir kod tabanı dosyası oluşturur `ICeeGen`.|  
-|[GenerateCeeMemoryImage Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceememoryimage-method.md)|Kullanımdan kalktı. Kod tabanı için bellekte bir görüntü oluşturur.|  
-|[GetIlSection Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getilsection-method.md)|Kullanımdan kalktı. Belirtilen tanıtıcı tarafından başvurulan temel Ara dil kodu bölümünü alır.|  
-|[GetIMapTokenIface Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getimaptokeniface-method.md)|Kullanımdan kalktı. Belirtilen belirteç tarafından başvurulan arabirimi alır.|  
-|[GetMethodBuffer Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getmethodbuffer-method.md)|Kullanımdan kalktı. Uygun boyutta bir arabellek yöntemi için belirtilen göreli sanal adresindeki alır.|  
-|[GetSectionBlock Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectionblock-method.md)|Kullanımdan kalktı. Kod tabanının bir bölüm bloğunu alır.|  
-|[GetSectionCreate Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectioncreate-method.md)|Kullanımdan kalktı. Oluşturur ve belirtilen ada ve bayrak değerini kullanarak bir kod bölümü alır.|  
-|[GetSectionDataLen Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectiondatalen-method.md)|Kullanımdan kalktı. Belirtilen bölüm uzunluğunu alır.|  
-|[GetString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstring-method.md)|Kullanımdan kalktı. Belirtilen göreli sanal adresindeki depolanan dizesini alır.|  
-|[GetStringSection Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstringsection-method.md)|Kullanımdan kalktı. Belirtilen tanıtıcı tarafından başvurulan kod bölümünde dize gösterimini alır.|  
-|[TruncateSection Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-truncatesection-method.md)|Kullanımdan kalktı. Belirtilen kod bölümünde belirtilen uzunluğa göre keser.|  
+|[AddSectionReloc Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)|Kullanımdan kalktı. Adds a .reloc instruction to the code base.|  
+|[AllocateMethodBuffer Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-allocatemethodbuffer-method.md)|Kullanımdan kalktı. Creates a buffer of the specified size for a method, and gets the relative virtual address of the method.|  
+|[ComputePointer Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-computepointer-method.md)|Kullanımdan kalktı. Determines the buffer for the specified code section.|  
+|[EmitString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-emitstring-method.md)|Kullanımdan kalktı. Emits the specified string into the code base.|  
+|[GenerateCeeFile Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceefile-method.md)|Kullanımdan kalktı. Generates a code-base file that contains the code base currently loaded into this `ICeeGen`.|  
+|[GenerateCeeMemoryImage Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceememoryimage-method.md)|Kullanımdan kalktı. Generates an image in memory for the code base.|  
+|[GetIlSection Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getilsection-method.md)|Kullanımdan kalktı. Gets the section of the intermediate language code base referenced by the specified handle.|  
+|[GetIMapTokenIface Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getimaptokeniface-method.md)|Kullanımdan kalktı. Gets the interface referenced by the specified token.|  
+|[GetMethodBuffer Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getmethodbuffer-method.md)|Kullanımdan kalktı. Gets a buffer of the appropriate size for the method at the specified relative virtual address.|  
+|[GetSectionBlock Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectionblock-method.md)|Kullanımdan kalktı. Gets a section block of the code base.|  
+|[GetSectionCreate Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectioncreate-method.md)|Kullanımdan kalktı. Generates and gets a code section using the specified name and flag values.|  
+|[GetSectionDataLen Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectiondatalen-method.md)|Kullanımdan kalktı. Gets the length of the specified section.|  
+|[GetString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstring-method.md)|Kullanımdan kalktı. Gets the string stored at the specified relative virtual address.|  
+|[GetStringSection Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstringsection-method.md)|Kullanımdan kalktı. Gets a string representation of the code section referenced by the specified handle.|  
+|[TruncateSection Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-truncatesection-method.md)|Kullanımdan kalktı. Truncates the specified code section by the specified length.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

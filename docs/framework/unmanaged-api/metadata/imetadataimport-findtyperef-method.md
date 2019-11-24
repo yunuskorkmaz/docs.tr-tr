@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1b2bbf3f-943e-412e-b66c-e802431b055c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8159b5245598993a2075fb402b280f9ab4cb2cfa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21a69d120cc732ca6659f77abc9f8ea0c993271e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782468"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437793"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>IMetaDataImport::FindTypeRef Yöntemi
-Bir işaretçi için TypeRef belirteci alır <xref:System.Type> Belirtilen kapsam içinde olan ve belirtilen ada sahip bir başvuru.  
+Gets a pointer to the TypeRef token for the <xref:System.Type> reference that is in the specified scope and that has the specified name.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +37,22 @@ HRESULT FindTypeRef (
   
 ## <a name="parameters"></a>Parametreler  
  `tkResolutionScope`  
- [in] Modül, derleme veya türünü belirten bir ModuleRef, AssemblyRef veya TypeRef belirteci sırasıyla, hangi tür başvurusu tanımlanır.  
+ [in] A ModuleRef, AssemblyRef, or TypeRef token that specifies the module, assembly, or type, respectively, in which the type reference is defined.  
   
  `szName`  
- [in] Aramak için türü başvuru adı.  
+ [in] The name of the type reference to search for.  
   
  `ptr`  
- [out] Eşleşen TypeRef belirteci için bir işaretçi.  
+ [out] A pointer to the matching TypeRef token.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

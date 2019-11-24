@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 91a7ce63-f5b8-4f16-b2c4-e1d0baa88944
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 455f71c5b576d1b57db591dab2a3e59f8a5eed67
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 84c41e467c57afd2562e7aa8dd72ce4796249667
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777291"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438573"
 ---
 # <a name="exporttype-method"></a>ExportType Yöntemi
-Bir türün verilebilir olduğunu belirtir.  
+Specifies that a type is exportable.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,28 +39,28 @@ HRESULT ExportType(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Dışarı aktarılacak derlemenin KIMLIĞI.  
+ ID of the assembly to export from.  
   
  `FileToken`  
- Dışarı aktarılabilir türü tanımlayan dosyanın dosya belirteci veya derleme KIMLIĞI.  
+ File token or assembly ID of file that defines the exportable type.  
   
  `TypeToken`  
- Dışarı aktarılabilir yapılacak tür belirteci.  
+ Token of type to be made exportable.  
   
  `pszTypename`  
- Dışarı aktarılabilir hale getirmek için tam tür adı.  
+ Fully qualified type name to be made exportable.  
   
  `dwFlags`  
- `ComType``tdPublic` veya`tdNested`gibi bayraklar. Bu parametre [DefineExportedType yöntemine](../metadata/imetadataassemblyemit-defineexportedtype-method.md)geçirilebilir.  
+ `ComType` flags such as `tdPublic` or `tdNested`. This parameter may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- İçe aktarılmış tür için belirteç alır.  
+ Receives token for exported type.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6b1fcd11-c7fb-4be2-8910-abc862d4caf4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9b7138d403bc84ab377301b82d697fd137416c6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 064374285216e9fb054b299937087f1ca7c351a4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781589"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432878"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType Numaralandırması
-Ortak dil çalışma zamanı tarafından bir nesne seri nasıl belirtir.  
+Specifies how an object is serialized by the common language runtime.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -59,33 +57,33 @@ typedef enum CorSerializationType {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|Nesnenin seri hale getirme tanımsızdır.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|Bir Boolean türünde nesne seri hale getirilmiş|  
-|`SERIALIZATION_TYPE_CHAR`|Nesnesi, bir karakter türü olarak seri hale getirilir.|  
-|`SERIALIZATION_TYPE_I1`|İmzalı bir 1 baytlık tamsayı olarak serileştirilmiş nesne.|  
-|`SERIALIZATION_TYPE_U1`|Nesne, işaretsiz bir 1 baytlık tamsayı olarak sıralanır.|  
-|`SERIALIZATION_TYPE_I2`|Nesne bir imzalı 2 baytlık tamsayı olarak sıralanır.|  
-|`SERIALIZATION_TYPE_U2`|Nesne, işaretsiz 2 baytlık tamsayı olarak sıralanır.|  
-|`SERIALIZATION_TYPE_I4`|İmzalı bir 4 baytlık tamsayı olarak serileştirilmiş nesne.|  
-|`SERIALIZATION_TYPE_U4`|Nesne, işaretsiz bir 4 baytlık tamsayı olarak sıralanır.|  
-|`SERIALIZATION_TYPE_I8`|Nesne bir işaretli 8 baytlık tamsayı sıralanır.|  
-|`SERIALIZATION_TYPE_U8`|İmzalanmamış 8 baytlık tamsayı olarak serileştirilmiş nesne.|  
-|`SERIALIZATION_TYPE_R4`|4-bayt kayan nokta serileştirilmiş nesne.|  
-|`SERIALIZATION_TYPE_R8`|8-bayt kayan nokta serileştirilmiş nesne.|  
-|`SERIALIZATION_TYPE_STRING`|Nesne System.String türünde seri hale getirilir.|  
-|`SERIALIZATION_TYPE_SZARRAY`|Nesne seri hale getirilmiş bir tek boyutlu, sıfır alt sınırı dizisi.|  
-|`SERIALIZATION_TYPE_TYPE`|Nesne genel bir tür seri hale getirilir.|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Nesne etiketli bir nesnesi olarak seri hale getirilir.|  
-|`SERIALIZATION_TYPE_FIELD`|Bir alan olarak serileştirilmiş nesne.|  
-|`SERIALIZATION_TYPE_PROPERTY`|Nesnenin bir özellik olarak seri hale getirilir.|  
-|`SERIALIZATION_TYPE_ENUM`|Nesne sabit olarak seri hale getirilir.|  
+|`SERIALIZATION_TYPE_UNDEFINED`|Serialization of the object is undefined.|  
+|`SERIALIZATION_TYPE_BOOLEAN`|Object is serialized as a Boolean type|  
+|`SERIALIZATION_TYPE_CHAR`|Object is serialized as a character type.|  
+|`SERIALIZATION_TYPE_I1`|Object is serialized as a signed 1-byte integer.|  
+|`SERIALIZATION_TYPE_U1`|Object is serialized as an unsigned 1-byte integer.|  
+|`SERIALIZATION_TYPE_I2`|Object is serialized as a signed 2-byte integer.|  
+|`SERIALIZATION_TYPE_U2`|Object is serialized as an unsigned 2-byte integer.|  
+|`SERIALIZATION_TYPE_I4`|Object is serialized as a signed 4-byte integer.|  
+|`SERIALIZATION_TYPE_U4`|Object is serialized as an unsigned 4-byte integer.|  
+|`SERIALIZATION_TYPE_I8`|Object is serialized as a signed 8-byte integer.|  
+|`SERIALIZATION_TYPE_U8`|Object is serialized as an unsigned 8-byte integer.|  
+|`SERIALIZATION_TYPE_R4`|Object is serialized as a 4-byte floating point.|  
+|`SERIALIZATION_TYPE_R8`|Object is serialized as an 8-byte floating point.|  
+|`SERIALIZATION_TYPE_STRING`|Object is serialized as a System.String type.|  
+|`SERIALIZATION_TYPE_SZARRAY`|Object is serialized as a single-dimensional, zero lower-bound array.|  
+|`SERIALIZATION_TYPE_TYPE`|Object is serialized as a generic type.|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Object is serialized as a tagged object.|  
+|`SERIALIZATION_TYPE_FIELD`|Object is serialized as a field.|  
+|`SERIALIZATION_TYPE_PROPERTY`|Object is serialized as a property.|  
+|`SERIALIZATION_TYPE_ENUM`|Object is serialized as an enumeration.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

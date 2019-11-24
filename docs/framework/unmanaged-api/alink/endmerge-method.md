@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1d03bb15-a2c8-4a04-8fc6-b126c89c3778
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 88f594117fffedb6acafef26a9e834dd951ea5bb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cacf7eab1e53f590ad46fd98ed2f5dcbd14cd30a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787532"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434411"
 ---
 # <a name="endmerge-method"></a>EndMerge Yöntemi
-Tüm özel özniteliklerin yayma kapsamıyla birleştirildiğini gösterir.  
+Indicates that all custom attributes have been merged into the emit scope.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,13 +35,13 @@ HRESULT EndMerge(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Derlemenin KIMLIĞI.  
+ ID of the assembly.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK döndürür.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

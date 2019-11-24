@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 12ec27277fe57bd1a291c2cfe491ea2c6f40c30e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c83a55a74542d94559b50b89ef784de0bd55d0db
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851155"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427339"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall İşlevi
-Profil oluşturucuyu Şu anda yürütülmekte olan işlevin başka bir işleve tail çağrısı gerçekleştirmek üzere olduğunu bildirir.  
+Notifies the profiler that the currently executing function is about to perform a tail call to another function.  
   
 > [!NOTE]
-> `FunctionTailcall` İşlev 2,0 .NET Framework sürümünde kullanımdan kaldırılmıştır. Çalışmaya devam eder, ancak bir performans cezası olur. Bunun yerine [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) işlevini kullanın.  
+> The `FunctionTailcall` function is deprecated in the .NET Framework version 2.0. It will continue to work, but will incur a performance penalty. Use the [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) function instead.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,31 +37,31 @@ void __stdcall FunctionTailcall (
   
 ## <a name="parameters"></a>Parametreler  
  `funcID`  
- 'ndaki Bir tail çağrısı yapmak üzere olan şu anda yürütülmekte olan işlevin tanımlayıcısı.  
+ [in] The identifier of the currently executing function that is about to make a tail call.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tail çağrısının hedef işlevi geçerli yığın çerçevesini kullanır ve doğrudan kuyruk çağrısını yapan işlevin çağıranına döndürülür. Bu, bir tail çağrısının hedefi olan bir işlev için [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) geri çağrısının verilmeyeceği anlamına gelir.  
+ The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call. This means that a [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) callback will not be issued for a function that is the target of a tail call.  
   
- `FunctionTailcall` İşlev bir geri çağırmasıdır; uygulamanız gerekir. Uygulamanın `__declspec`(`naked`) depolama sınıfı özniteliğini kullanması gerekir.  
+ The `FunctionTailcall` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- Yürütme altyapısı, bu işlevi çağırmadan önce hiçbir kaydı kaydetmez.  
+ The execution engine does not save any registers before calling this function.  
   
-- Girişte, kayan nokta birimi (FPU) dahil olmak üzere, kullandığınız tüm Yazmaçları kaydetmelisiniz.  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- Çıkışta, çağıran tarafından gönderilen tüm parametreleri kaldırarak yığını geri yüklemeniz gerekir.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- , Atık toplamayı `FunctionTailcall` ertelendirip, uygulamanın engellenmemelidir. Yığın atık toplama kolay bir durumda olmadığından uygulama çöp toplamayı denememelidir. Çöp toplama denendiğinde, çalışma zamanı dönüşene kadar `FunctionTailcall` engeller.  
+ The implementation of `FunctionTailcall` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionTailcall` returns.  
   
- Ayrıca, `FunctionTailcall` işlev yönetilen koda çağrı içermemelidir veya herhangi bir şekilde yönetilen bellek ayırmaya neden olur.  
+ Also, the `FunctionTailcall` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorProf. IDL  
+ **Header:** CorProf.idl  
   
- **Kitaplığı** Corguid. lib  
+ **Library:** CorGuids.lib  
   
- **.NET Framework sürümleri:** 1,1, 1,0  
+ **.NET Framework Versions:** 1.1, 1.0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

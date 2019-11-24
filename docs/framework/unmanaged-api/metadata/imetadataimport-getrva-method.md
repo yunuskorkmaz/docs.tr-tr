@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea422217-988b-4acd-b2db-c55357938275
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d305aa59c1b9e9e1225b30f12e36fc689d584db1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3a5cadc1b5a9df7967aae271ff10296843121dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778890"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436960"
 ---
 # <a name="imetadataimportgetrva-method"></a>IMetaDataImport::GetRVA Metodu
-Göreli sanal adres (RVA) ve yöntem veya belirtilen belirteci tarafından temsil edilen alan uygulama bayraklarını alır.  
+Gets the relative virtual address (RVA) and the implementation flags of the method or field represented by the specified token.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +37,22 @@ HRESULT GetRVA (
   
 ## <a name="parameters"></a>Parametreler  
  `tk`  
- [in] İçin RVA döndürmek için kod nesneyi temsil eden bir MethodDef veya fieldDef simgesi meta veri belirteci. Bir fieldDef simgesi belirteci ise alan genel bir değişken olmalıdır.  
+ [in] A MethodDef or FieldDef metadata token that represents the code object to return the RVA for. If the token is a FieldDef, the field must be a global variable.  
   
  `pulCodeRVA`  
- [out] Göreli sanal adres belirteci tarafından temsil edilen kod nesnenin bir işaretçi.  
+ [out] A pointer to the relative virtual address of the code object represented by the token.  
   
  `pdwImplFlags`  
- [out] Uygulama bayrakları yöntemi için bir işaretçi. Gelen bir bit maskesi değerdir [Cormethodımpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) sabit listesi. Değerini `pdwImplFlags` geçerli yalnızca `tk` MethodDef belirtecidir.  
+ [out] A pointer to the implementation flags for the method. This value is a bitmask from the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration. The value of `pdwImplFlags` is valid only if `tk` is a MethodDef token.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

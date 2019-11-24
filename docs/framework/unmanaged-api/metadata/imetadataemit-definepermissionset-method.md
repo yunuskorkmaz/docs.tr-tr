@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36cffbf7-82ca-4cf9-bf60-50ab491ac2d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 16675e8bfde74c1f9c30ac9d52f8eeb919d22477
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4e11a52c977de7796043868e80c147d8cfd1f506
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777530"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431578"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>IMetaDataEmit::DefinePermissionSet Yöntemi
-Bir izin kümesi ile belirtilen meta veri imzası için bir tanım oluşturur ve bu izin kümesi tanımı için bir belirteç alır.  
+Creates a definition for a permission set with the specified metadata signature, and gets a token to that permission set definition.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,28 +39,28 @@ HRESULT DefinePermissionSet (
   
 ## <a name="parameters"></a>Parametreler  
  `tk`  
- [in] Donatılmış olmalıdır nesne.  
+ [in] The object to be decorated.  
   
  `dwAction`  
- [in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) kullanılacak bildirim temelli güvenlik türünü belirten bir değer.  
+ [in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.  
   
  `pvPermission`  
- [in] BLOB izni.  
+ [in] The permission BLOB.  
   
  `cbPermission`  
- [in] Bayt cinsinden boyutu, `pvPermission`.  
+ [in] The size, in bytes, of `pvPermission`.  
   
  `ppm`  
- [out] İzin verilen belirteç.  
+ [out] The returned permission token.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

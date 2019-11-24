@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7f230961-23a6-4d56-ad2d-7a876d65705f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5e00e7f39bc2f8c14db0676102a52089c7710bd6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57515ac4670b9b7e25bb496851347a62e1b246df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772258"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438716"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass Yöntemi
-Array sınıfı belirtilen sınıf olup olmadığını belirler.  
+Determines whether the specified class is an array class.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +37,28 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>Parametreler  
  `classId`  
- [in] İncelenecek sınıfın Kimliğidir.  
+ [in] The ID of the class to be examined.  
   
  `pBaseElemType`  
- [out] Dizi öğelerin türünü belirten CorElementType sabit değeri için bir işaretçi.  
+ [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
   
  `pBaseClassId`  
- [out] Kullanılabilir olduğunda, dizi öğelerinin sınıf kimliği için bir işaretçi.  
+ [out] A pointer to the class ID of the array elements, when available.  
   
  `pcRank`  
- [out] (Diğer bir deyişle, boyut sayısı) dizi boyut sayısını belirten bir tamsayı işaretçisi.  
+ [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir dizi sınıfı belirtilen sınıf ise `IsArrayClass` yöntemi bir S_OK HRESULT ve null olmayan çıkış parametreleri için değerleri döndürür. Aksi takdirde S_FALSE döndürür.  
+ If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

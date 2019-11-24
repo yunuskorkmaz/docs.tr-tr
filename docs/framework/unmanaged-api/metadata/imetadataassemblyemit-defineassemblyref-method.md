@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b284b18-0084-4b3a-912a-5ebe9f29c88b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c150f4bda901627fc21ed54926c3cf959bb829a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c88b7a401a19b1bd0e02edab7ef7bbee1372199e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776297"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432085"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef Yöntemi
-Oluşturur bir `AssemblyRef` yapısı bu derlemeye başvuran bir derleme için meta verileri içeren ve ilişkili meta veri belirteci döndürür.  
+Creates an `AssemblyRef` structure containing metadata for the assembly that this assembly references, and returns the associated metadata token.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,42 +42,42 @@ HRESULT DefineAssemblyRef (
   
 ## <a name="parameters"></a>Parametreler  
  `pbPublicKeyOrToken`  
- [in] Başvurulan derlemenin yayımcı ortak anahtarı. Yardımcı işlevini [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) Bu parametre olarak geçirmek için ortak anahtar karması almak için kullanılabilir.  
+ [in] The public key of the publisher of the referenced assembly. The helper function [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) can be used to get the hash of the public key to pass as this parameter.  
   
  `cbPublicKeyOrToken`  
- [in] Bayt cinsinden boyutu `pbPublicKeyOrToken`.  
+ [in] The size in bytes of `pbPublicKeyOrToken`.  
   
  `szName`  
- [in] Derleme kullanıcı tarafından okunabilen metin adı. Bu değer, 1024 karakteri aşmamalıdır.  
+ [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
   
  `pMetaData`  
- [in] Başvurulan derlemenin sürümü, platforma ve yerel ayar bilgilerini içeren ASSEMBLYMETADATA örneği.  
+ [in] An ASSEMBLYMETADATA instance that contains the version, platform and locale information of the referenced assembly.  
   
  `pbHashValue`  
- [in] Başvurulan bütünleştirilmiş kod ile ilişkili veri karması. İsteğe bağlı.  
+ [in] The hash data associated with the referenced assembly. İsteğe bağlı.  
   
  `cbHashValue`  
- [in] Bayt cinsinden boyutu `pbHashValue`.  
+ [in] The size in bytes of `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in] Bitsel bir birleşimi [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) yürütme altyapısı davranışını etkileyen değerleri.  
+ [in] A bitwise combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that influence the behavior of the execution engine.  
   
  `pmdar`  
- [out] Döndürülen işaretçi `AssemblyRef` meta veri belirteci.  
+ [out] A pointer to the returned `AssemblyRef` metadata token.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir `AssemblyRef` meta veri yapısı, bu derlemenin başvurduğu her derleme için tanımlanmış olması gerekir.  
+ One `AssemblyRef` metadata structure must be defined for each assembly that this assembly references.  
   
- Çalışma zamanında derleme çözümleyiciye bilgileri "yerleşik olarak" temsil ettikleri bir gösterge ile başvurulan bir derlemenin ayrıntılarını geçirilir. Derleme Çözücü sonra ilke uygulanır.  
+ At run time, the details of a referenced assembly are passed to the assembly resolver with an indication that they represent the "as built" information. The assembly resolver then applies policy.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Header:** Cor.h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
