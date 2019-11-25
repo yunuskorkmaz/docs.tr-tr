@@ -2,72 +2,72 @@
 title: 'Nasıl yapılır: Güvenilir Bir Oturumda İleti Alma ve Gönderme'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: aad4eae870e3ba603c56a28a620fe8bc0e31ceb6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58a392fc6295e82f41e08c80a3343b4059afad7e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778371"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141684"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Nasıl yapılır: Güvenilir Bir Oturumda İleti Alma ve Gönderme
 
-Bu konuda, bu tür bir oturumu destekleyen sistem tarafından sağlanan bağlamalar, ancak değil, varsayılan olarak kullanarak bir güvenilir oturum etkinleştirmek için gereken adımlar açıklanmaktadır. Kesin kod kullanarak bir güvenilir oturum etkinleştirmek ya da yapılandırma dosyanızdaki bildirimli olarak. Bu yordam, güvenilir oturum etkinleştirmek ve iletileri, gönderildiği aynı sırada ulşamasını işleyebileceği için hizmet ve istemci yapılandırma dosyalarını kullanır.
+Bu konu, bu tür bir oturumu destekleyen ancak varsayılan olarak değil, sistem tarafından belirtilen bağlamalardan birini kullanarak güvenilir bir oturumu etkinleştirmek için gereken adımları açıklar. Yapılandırma dosyanızda kod kullanarak veya bildirimli olarak güvenilir bir oturum imperatively etkinleştirirsiniz. Bu yordam, güvenilir oturumu etkinleştirmek ve iletilerin gönderildikleri sırada gelmesi için istemci ve hizmet yapılandırma dosyalarını kullanır.
 
-Uç nokta yapılandırma öğesi içeren bu yordamı önemli bir parçası olan bir `bindingConfiguration` adlı bir bağlama yapılandırmasını başvuran öznitelik `Binding1`. [  **\<Bağlama >** ](../../../../docs/framework/misc/binding.md) yapılandırma öğesi güvenilir oturumlar etkinleştirmek için bu ada başvuran `enabled` özniteliği [  **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100)) öğesine `true`. Ayarlayarak güvenilir oturum için belirttiğiniz sıralı teslim Güvenceleri `ordered` özniteliğini `true`.
+Bu yordamın anahtar bölümü, uç nokta yapılandırma öğesinin `Binding1`adlı bağlama yapılandırmasına başvuran bir `bindingConfiguration` özniteliği içermisimdir. [ **\<binding >** ](../../configure-apps/file-schema/wcf/bindings.md) yapılandırma öğesi, [ **\<reliablesession >** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100)) öğesinin `enabled` özniteliğini `true`olarak ayarlayarak güvenilir oturumları etkinleştirmek için bu ada başvurur. `ordered` özniteliğini `true`olarak ayarlayarak güvenilir oturum için sıralı teslim bildirimlerini belirtirsiniz.
 
-Bu örnekte kaynak kopyası için bkz: [WS güvenilir oturum](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
+Bu örneğin kaynak kopyası için bkz. [WS güvenilir oturumu](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 
-### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>Güvenilir oturum kullanılacak WSHttpBinding hizmetini yapılandırma
+### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>Güvenli bir oturum kullanmak için bir WSHttpBinding ile hizmeti yapılandırma
 
-1. Hizmet türü için bir hizmet anlaşmasını tanımlar.
+1. Hizmet türü için bir hizmet sözleşmesi tanımlayın.
 
    [!code-csharp[c_HowTo_UseReliableSession#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1121)]
 
-1. Hizmet sözleşmesi bir hizmet sınıfında uygulayın. Adres veya bağlama bilgileri hizmeti uygulaması içinde belirtilmemiş unutmayın. Yapılandırma dosyasından adresi veya bağlama bilgileri almak üzere kod yazmak için gerekli değildir.
+1. Hizmet sözleşmesini bir hizmet sınıfına uygulayın. Adresin veya bağlama bilgilerinin hizmet uygulamasının içinde belirtilmediğini unutmayın. Yapılandırma dosyasından adresi veya bağlama bilgilerini almak için kod yazmanız gerekmez.
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
-1. Oluşturma bir *Web.config* yapılandırmak için bir uç nokta için bir dosya `CalculatorService` kullanan <xref:System.ServiceModel.WSHttpBinding> etkin ve sıralı teslim gerekli iletilerin güvenilir oturum ile.
+1. Güvenilir oturum etkinken <xref:System.ServiceModel.WSHttpBinding> kullanan `CalculatorService` için bir uç nokta yapılandırmak üzere bir *Web. config* dosyası oluşturun ve gerekli iletilerin sıralı teslimini yapın.
 
    [!code-xml[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]
 
-1. Oluşturma bir *Service.svc* satırını içeren dosya:
+1. Satırı içeren bir *Service. svc* dosyası oluşturun:
 
    ```
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
-1. Bir yerde *Service.svc* Internet Information Services (IIS) sanal dizininizin dosyasında.
+1. *Service. svc* dosyasını Internet INFORMATION SERVICES (IIS) sanal dizinine yerleştirin.
 
-### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Güvenilir oturum kullanılacak WSHttpBinding istemciyi Yapılandırma
+### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Güvenli bir oturum kullanmak için istemciyi bir WSHttpBinding ile yapılandırma
 
-1. Kullanım [ServiceModel meta veri yardımcı Programracı (*Svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) hizmet meta verilerinden kodu oluşturmak için komut satırından:
+1. Hizmet meta verilerinden kod oluşturmak için, komut satırından [ServiceModel meta veri yardımcı programı aracını (*Svcutil. exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) kullanın:
 
    ```console
    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
    ```
 
-1. Oluşturulan istemci içeren `ICalculator` istemci uygulaması karşılaması gereken hizmet sözleşmesini tanımlayan arabirimi.
+1. Oluşturulan istemci, istemci uygulamasının karşılaması gereken hizmet sözleşmesini tanımlayan `ICalculator` arabirimini içerir.
 
    [!code-csharp[C_HowTo_UseReliableSession#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1221)]
 
-1. Oluşturulan istemci uygulaması da uygulamasını içerir `ClientCalculator`. Adres ve bağlama bilgilerini herhangi bir uygulama hizmetinin içinde belirtilmemiş unutmayın. Yapılandırma dosyasından adresi veya bağlama bilgileri almak üzere kod yazmak için gerekli değildir.
+1. Oluşturulan istemci uygulaması, `ClientCalculator`uygulamasını da içerir. Adres ve bağlama bilgilerinin, hizmet uygulamasının içinde herhangi bir yerde belirtilmediğini unutmayın. Yapılandırma dosyasından adresi veya bağlama bilgilerini almak için kod yazmanız gerekmez.
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 
-1. *Svcutil.exe* ayrıca kullanan istemci yapılandırmasını oluşturur <xref:System.ServiceModel.WSHttpBinding> sınıfı. Yapılandırma dosyası adı *App.config* Visual Studio kullanarak.
+1. *Svcutil. exe* , <xref:System.ServiceModel.WSHttpBinding> sınıfını kullanan istemcinin yapılandırmasını da oluşturur. Visual Studio kullanırken yapılandırma dosyasını *app. config* olarak adlandırın.
 
    [!code-xml[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]
 
-1. Bir örneğini oluşturmak `ClientCalculator` uygulamada ve hizmet işlemleri çağırın.
+1. Bir uygulamada `ClientCalculator` örneği oluşturun ve hizmet işlemlerini çağırın.
 
    [!code-csharp[C_HowTo_UseReliableSession#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1223)]
 
-1. Derleyin ve istemci çalıştırın.
+1. İstemcisini derleyin ve çalıştırın.
 
 ## <a name="example"></a>Örnek
 
-Birçok sistem tarafından sağlanan bağlamalar güvenilir oturumlar varsayılan olarak destekler. Bu güncelleştirmeler şunlardır:
+Sistem tarafından sunulan bağlamalardan bazıları varsayılan olarak güvenilir oturumları destekler. Bu güncelleştirmeler şunlardır:
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 
@@ -75,7 +75,7 @@ Birçok sistem tarafından sağlanan bağlamalar güvenilir oturumlar varsayıla
 
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 
-Güvenilir oturumlar destekleyen özel bağlama oluşturma örneği için bkz: [nasıl yapılır: HTTPS ile özel bir güvenilir oturum bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
+Güvenilir oturumları destekleyen özel bir bağlamanın nasıl oluşturulacağı hakkında bir örnek için bkz. [nasıl yapılır: https Ile özel bir güvenilir oturum bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

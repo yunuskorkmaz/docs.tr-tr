@@ -2,17 +2,17 @@
 title: WCF Hizmetleri için Basitleştirilmiş Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 57aa92eb0a2978ab463c368ed70fb298cc5fb90d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c78f5ca281c784a8f554ad1f4e3a1f245eee4914
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038869"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141857"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF Hizmetleri için Basitleştirilmiş Yapılandırma
 Bu örnek, Windows Communication Foundation (WCF) kullanarak tipik bir hizmetin ve istemcinin nasıl uygulanacağını ve yapılandırılacağını gösterir. Bu örnek, diğer tüm temel teknoloji örnekleri için temeldir.  
   
- Hizmet ile iletişim kurmak için bir uç nokta sunan bu hizmet, içindeki [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]Basitleştirilmiş yapılandırmayı kullanır. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]Öncesinde, uç nokta genellikle aşağıdaki örnek yapılandırma kodunda gösterildiği gibi bir yapılandırma dosyasında (Web. config) tanımlanır.  
+ Hizmetle iletişim kurmak için bir uç nokta sunan bu hizmet, .NET Framework 4 ' te Basitleştirilmiş yapılandırmayı kullanır. .NET Framework 4 ' ten önce, uç nokta genellikle aşağıdaki örnek yapılandırma kodunda gösterildiği gibi bir yapılandırma dosyasında (Web. config) tanımlanmıştır.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -37,7 +37,7 @@ Bu örnek, Windows Communication Foundation (WCF) kullanarak tipik bir hizmetin 
 </configuration>  
 ```  
   
- ' De [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], öğesiisteğebağlıdır.`<service>` Bir hizmet herhangi bir uç nokta tanımlamıyorsa, uygulanan her temel adres ve sözleşme için bir uç nokta hizmete eklenir. Bitiş noktasını ve bağlamanın adres düzeni tarafından belirlendiği temel adres, sözleşmenin adına eklenir. Aşağıdaki kod örneği, Basitleştirilmiş bir yapılandırma dosyasını göstermektedir. Yapılandırıldığı gibi, hizmete aynı bilgisayardaki bir istemci `http://localhost/servicemodelsamples/service.svc` tarafından erişilebilir. Uzak bilgisayarlardaki istemcilerin hizmete erişmesi için localhost yerine tam etki alanı adı belirtilmelidir. Hizmet varsayılan olarak meta verileri kullanıma sunmaz. Bu nedenle hizmet, <xref:System.ServiceModel.Description.ServiceMetadataBehavior> davranışı etkinleştirir.  
+ .NET Framework 4 ' te, `<service>` öğesi isteğe bağlıdır. Bir hizmet herhangi bir uç nokta tanımlamıyorsa, uygulanan her temel adres ve sözleşme için bir uç nokta hizmete eklenir. Bitiş noktasını ve bağlamanın adres düzeni tarafından belirlendiği temel adres, sözleşmenin adına eklenir. Aşağıdaki kod örneği, Basitleştirilmiş bir yapılandırma dosyasını göstermektedir. Yapılandırıldığı gibi, hizmete aynı bilgisayardaki bir istemci tarafından `http://localhost/servicemodelsamples/service.svc` erişilebilir. Uzak bilgisayarlardaki istemcilerin hizmete erişmesi için localhost yerine tam etki alanı adı belirtilmelidir. Hizmet varsayılan olarak meta verileri kullanıma sunmaz. Bu nedenle hizmet, <xref:System.ServiceModel.Description.ServiceMetadataBehavior> davranışını etkinleştirir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -74,7 +74,7 @@ Bu örnek, Windows Communication Foundation (WCF) kullanarak tipik bir hizmetin 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   

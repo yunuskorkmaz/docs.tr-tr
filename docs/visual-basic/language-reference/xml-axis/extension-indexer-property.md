@@ -1,5 +1,5 @@
 ---
-title: Extension Indexer Özelliği (Visual Basic)
+title: Extension Indexer Özelliği
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlPropertyExtensionIndexer
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: 660cebadc78d260350f2849f7f4926f9cef7c8d2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5f91dc8a6b1a0d82daa4891cf826c16e2716839f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582193"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352694"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Extension Indexer Özelliği (Visual Basic)
-Bir koleksiyondaki tek tek öğelere erişim sağlar.  
+Provides access to individual elements in a collection.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,29 +29,29 @@ object(index)
   
 |Terim|Tanım|  
 |---|---|  
-|`object`|Gerekli. Sorgulanabilir bir koleksiyon. Diğer bir deyişle, <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Linq.IQueryable%601> uygulayan bir koleksiyon.|  
-|(|Gerekli. Dizin Oluşturucu özelliğinin başlangıcını gösterir.|  
-|`index`|Gerekli. Koleksiyonun bir öğesinin sıfır tabanlı konumunu belirten bir tamsayı ifadesi.|  
-|)|Gerekli. Dizin Oluşturucu özelliğinin sonunu belirtir.|  
+|`object`|Gerekli. A queryable collection. That is, a collection that implements <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>.|  
+|(|Gerekli. Denotes the start of the indexer property.|  
+|`index`|Gerekli. An integer expression that specifies the zero-based position of an element of the collection.|  
+|)|Gerekli. Denotes the end of the indexer property.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Koleksiyonda belirtilen konumdan nesne veya dizin Aralık dışında `Nothing`.  
+ The object from the specified location in the collection, or `Nothing` if the index is out of range.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir koleksiyondaki tek tek öğelere erişmek için uzantı Indexer özelliğini kullanabilirsiniz. Bu Indexer özelliği genellikle XML ekseni özelliklerinin çıkışında kullanılır. XML Child ve XML alt öğe ekseni özellikleri <xref:System.Xml.Linq.XElement> nesnelerinin veya bir öznitelik değerinin koleksiyonlarını döndürür.  
+ You can use the extension indexer property to access individual elements in a collection. This indexer property is typically used on the output of XML axis properties. The XML child and XML descendent axis properties return collections of <xref:System.Xml.Linq.XElement> objects or an attribute value.  
   
- Visual Basic derleyici, uzantı Dizin Oluşturucu özelliklerini `ElementAtOrDefault` yöntemine yapılan çağrılara dönüştürür. Dizi Indexer 'ın aksine, Dizin aralık dışında `ElementAtOrDefault` yöntemi `Nothing` döndürür. Bu davranış, bir koleksiyondaki öğe sayısını kolayca belirleyene zaman yararlı olur.  
+ The Visual Basic compiler converts extension indexer properties to calls to the `ElementAtOrDefault` method. Unlike an array indexer, the `ElementAtOrDefault` method returns `Nothing` if the index is out of range. This behavior is useful when you cannot easily determine the number of elements in a collection.  
   
- Bu Indexer özelliği <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Linq.IQueryable%601> uygulayan koleksiyonlar için bir uzantı özelliği gibidir: yalnızca koleksiyonda bir Dizin Oluşturucu veya varsayılan özellik yoksa kullanılır.  
+ This indexer property is like an extension property for collections that implement <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>: it is used only if the collection does not have an indexer or a default property.  
   
- @No__t_0 veya <xref:System.Xml.Linq.XAttribute> nesneleri koleksiyonundaki ilk öğenin değerine erişmek için XML `Value` özelliğini kullanabilirsiniz. Daha fazla bilgi için bkz. [XML Value özelliği](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ To access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects, you can use the XML `Value` property. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir <xref:System.Xml.Linq.XElement> nesneleri koleksiyonundaki ikinci alt düğüme erişmek için uzantı dizin oluşturucunun nasıl kullanılacağını gösterir. Koleksiyona, `contact` nesnesinde `phone` adlı tüm alt öğeleri alan alt eksen özelliği kullanılarak erişilir.  
+ The following example shows how to use the extension indexer to access the second child node in a collection of <xref:System.Xml.Linq.XElement> objects. The collection is accessed by using the child axis property, which gets all child elements named `phone` in the `contact` object.  
   
  [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  
   
- Bu kod aşağıdaki metni görüntüler:  
+ This code displays the following text:  
   
  `Second phone number: 425-555-0145`  
   
@@ -60,5 +60,5 @@ object(index)
 - <xref:System.Xml.Linq.XElement>
 - [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/index.md)
 - [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Creating XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML Value Özelliği](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

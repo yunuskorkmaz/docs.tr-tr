@@ -1,5 +1,5 @@
 ---
-title: Aşırı Yüklemeler (Visual Basic)
+title: Aşırı Yüklemeler
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Overloads
@@ -10,62 +10,62 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: 838207fe3ac5b8f57d030617546b9b7fa25dc939
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 44823b409cfa81dc889aabacf101fac90bf851e0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663534"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351403"
 ---
 # <a name="overloads-visual-basic"></a>Aşırı Yüklemeler (Visual Basic)
 
-Bir özelliğin ya da yordamın bir veya daha fazla var olan özellikler veya aynı ada sahip yordamları gizlediğini belirtir.
+Specifies that a property or procedure redeclares one or more existing properties or procedures with the same name.
 
 ## <a name="remarks"></a>Açıklamalar
 
-*Aşırı yükleme* aynı kapsamda belirli bir özellik veya yordam adı için birden fazla tanım sağlayan uygulamadır. Bir özellik veya yordamı farklı imzayla redeclaring bazen adlı *imzaya göre gizleme*.
+*Overloading* is the practice of supplying more than one definition for a given property or procedure name in the same scope. Redeclaring a property or procedure with a different signature is sometimes called *hiding by signature*.
 
 ## <a name="rules"></a>Kurallar
 
-- **Bildirim bağlamı.** Kullanabileceğiniz `Overloads` yalnızca bir özellik veya yordamı bildirim deyiminde.
+- **Declaration Context.** You can use `Overloads` only in a property or procedure declaration statement.
 
-- **Birleşik değiştiriciler.** Belirtemezsiniz `Overloads` ile birlikte [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) aynı yordam bildirimi.
+- **Combined Modifiers.** You cannot specify `Overloads` together with [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) in the same procedure declaration.
 
-- **Farklar gereklidir.** *İmza* Bu bildirimde her bir özellik veya aşırı yordamı imzasının farklı olmalıdır. İmza özelliği ya da yordamın adı ile birlikte aşağıdaki oluşur:
+- **Required Differences.** The *signature* in this declaration must be different from the signature of every property or procedure that it overloads. The signature comprises the property or procedure name together with the following:
 
-  - parametre sayısı
+  - the number of parameters
 
-  - Parametreler sırası
+  - the order of the parameters
 
-  - parametrelerinin veri türleri
+  - the data types of the parameters
 
-  - Tür parametreleri (için genel bir yordam) sayısı
+  - the number of type parameters (for a generic procedure)
 
-  - dönüş türü (yalnızca bir dönüştürme işleci yordam)
+  - the return type (only for a conversion operator procedure)
 
-  Tüm aşırı yüklemeler aynı ada sahip olmalıdır, ancak her diğer tüm kişilerden gelen bir veya daha önceki gizliliğinize farklı olmalıdır. Bu özellik veya yordam kodu çağırdığında, kullanılacak hangi sürümünü ayırt etmek derleyicinin sağlar.
+  All overloads must have the same name, but each must differ from all the others in one or more of the preceding respects. This allows the compiler to distinguish which version to use when code calls the property or procedure.
 
-- **İzin verilmeyen farklar.** Bir veya daha fazlasını değiştirme, imzasının parçası olmadıklarından bir özelliği ya da yordamın, aşırı yükleme için geçerli değil:
+- **Disallowed Differences.** Changing one or more of the following is not valid for overloading a property or procedure, because they are not part of the signature:
 
-  - (bir yordam için) bir değer olup olmadığını döndürür
+  - whether or not it returns a value (for a procedure)
 
-  - (bir dönüşüm işleci dışında) dönüş değerinin veri türü
+  - the data type of the return value (except for a conversion operator)
 
-  - Tür parametreleri ve parametre adları
+  - the names of the parameters or type parameters
 
-  - (için genel bir yordam) tür parametrelerindeki kısıtlamalar
+  - the constraints on the type parameters (for a generic procedure)
 
-  - parametre değiştiricisi anahtar sözcükleri (gibi `ByRef` veya `Optional`)
+  - parameter modifier keywords (such as `ByRef` or `Optional`)
 
-  - özellik veya yordamı değiştiricisi anahtar sözcükleri (gibi `Public` veya `Shared`)
+  - property or procedure modifier keywords (such as `Public` or `Shared`)
 
-- **İsteğe bağlı bir değiştirici.** Kullanmak zorunda değil `Overloads` aynı sınıf içinde birden fazla aşırı yüklenmiş özellikler ya da yordamlar tanımlarken değiştiricisi. Ancak, kullanırsanız `Overloads` bildirimleri her birinde, bunların tümünde kullanmanız gerekir.
+- **Optional Modifier.** You do not have to use the `Overloads` modifier when you are defining multiple overloaded properties or procedures in the same class. However, if you use `Overloads` in one of the declarations, you must use it in all of them.
 
-- **Gölgeleme ve aşırı yükleme.** `Overloads` Ayrıca varolan bir üye gölge ya da taban sınıfında aşırı yüklenmiş üyelerin kümesini kullanılabilir. Kullanırken `Overloads` bu şekilde, özellik veya yöntem ile aynı ada ve aynı parametre listesi temel sınıf üye olarak bildirmek ve sağladığınız değil `Shadows` anahtar sözcüğü.
+- **Shadowing and Overloading.** `Overloads` can also be used to shadow an existing member, or set of overloaded members, in a base class. When you use `Overloads` in this way, you declare the property or method with the same name and the same parameter list as the base class member, and you do not supply the `Shadows` keyword.
 
-Kullanırsanız `Overrides`, derleyicinin dolaylı olarak ekler `Overloads` kitaplığınızı API'leri ile çalışmak üzere C# daha kolay.
+If you use `Overrides`, the compiler implicitly adds `Overloads` so that your library APIs work with C# more easily.
 
-`Overloads` Bu bağlamda değiştirici kullanılabilir:
+The `Overloads` modifier can be used in these contexts:
 
 - [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
 
@@ -79,6 +79,6 @@ Kullanırsanız `Overrides`, derleyicinin dolaylı olarak ekler `Overloads` kita
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Yordam Aşırı Yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
-- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [İşleç Yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
-- [Nasıl yapılır: Bir dönüşüm işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Nasıl yapılır: Dönüştürme İşleci Tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

@@ -1,5 +1,5 @@
 ---
-title: Visual Basic'de IEnumerable uygulama
+title: Implementing IEnumerable
 ms.date: 07/31/2018
 helpviewer_keywords:
 - control flow [Visual Basic]
@@ -7,95 +7,95 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: b13fd85ae01fd0b6f3c963d87a372add930be99d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f40fcf7e0724addc478b261dcd36d09e1d8a751a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61975305"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333695"
 ---
-# <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>İzlenecek yol: Visual Basic'te IEnumerable(Of T) uygulama
-<xref:System.Collections.Generic.IEnumerable%601> Arabirimi, aynı anda bir öğe değerlerini bir dizi döndüren sınıflar tarafından uygulanır. Aynı anda bir öğe ile çalışmak için eksiksiz veri Seti yüklemek gerekmez veri döndüren avantajı. Yalnızca tek bir öğe verileri yüklemek için yeterli bellek kullanmak zorunda. Uygulayan sınıflar `IEnumerable(T)` arabirimi ile kullanılabilir `For Each` döngüler veya LINQ sorguları.  
+# <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>İzlenecek yol: Visual Basic'de IEnumerable(Of T) Uygulama
+The <xref:System.Collections.Generic.IEnumerable%601> interface is implemented by classes that can return a sequence of values one item at a time. The advantage of returning data one item at a time is that you do not have to load the complete set of data into memory to work with it. You only have to use sufficient memory to load a single item from the data. Classes that implement the `IEnumerable(T)` interface can be used with `For Each` loops or LINQ queries.  
   
- Örneğin, büyük bir metin dosyası okuma ve her satırın belirli arama ölçütleri ile eşleşen dosyasından dönüş bir uygulamayı düşünün. Uygulama, belirtilen ölçütlerle eşleşen dosyanın satırlar döndürülecek LINQ sorgusu kullanır. LINQ sorgusu kullanarak dosya içeriğini sorgulamak için uygulama dosyasının içeriğini bir dizi veya koleksiyon yükleyebilir. Ancak, bir dizi veya koleksiyon tüm dosya yüklenirken gerekenden çok daha fazla bellek kullanılmasına neden olur. LINQ sorgusu, bunun yerine arama ölçütleriyle eşleşen değerler döndüren bir numaralandırılabilir sınıfını kullanarak dosya içeriklerini sorgulayabilir. Yalnızca birkaç döndüren sorgular eşleşen değerler çok daha az bellek tüketen.  
+ For example, consider an application that must read a large text file and return each line from the file that matches particular search criteria. The application uses a LINQ query to return lines from the file that match the specified criteria. To query the contents of the file by using a LINQ query, the application could load the contents of the file into an array or a collection. However, loading the whole file into an array or collection would consume far more memory than is required. The LINQ query could instead query the file contents by using an enumerable class, returning only values that match the search criteria. Queries that return only a few matching values would consume far less memory.  
   
- Uygulayan bir sınıf oluşturabilirsiniz <xref:System.Collections.Generic.IEnumerable%601> kaynak verileri numaralandırılabilir veri olarak kullanıma sunmak için arabirim. Sınıfınızın uyguladığı `IEnumerable(T)` arabirimi uygulayan başka bir sınıf gerektiren <xref:System.Collections.Generic.IEnumerator%601> kaynak veri içerisinde yineleme yapmak için arabirim. Bu iki sınıf veri öğelerini belirli bir tür olarak sıralı olarak döndürülecek etkinleştirin.  
+ You can create a class that implements the <xref:System.Collections.Generic.IEnumerable%601> interface to expose source data as enumerable data. Your class that implements the `IEnumerable(T)` interface will require another class that implements the <xref:System.Collections.Generic.IEnumerator%601> interface to iterate through the source data. These two classes enable you to return items of data sequentially as a specific type.  
   
- Bu kılavuzda, uygulayan bir sınıf oluşturur `IEnumerable(Of String)` arabirimi ve uygulayan bir sınıf `IEnumerator(Of String)` bir metin dosyası bir satırı okumak için arabirim.  
+ In this walkthrough, you will create a class that implements the `IEnumerable(Of String)` interface and a class that implements the `IEnumerator(Of String)` interface to read a text file one line at a time.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="creating-the-enumerable-class"></a>Numaralandırılabilir sınıfı oluşturma  
+## <a name="creating-the-enumerable-class"></a>Creating the Enumerable Class  
   
-**Numaralandırılabilir sınıf projesi oluşturma**
+**Create the enumerable class project**
 
-1. Visual Basic'te üzerinde **dosya** menüsünde **yeni** ve ardından **proje**.
+1. In Visual Basic, on the **File** menu, point to **New** and then click **Project**.
 
-1. İçinde **yeni proje** iletişim kutusundaki **proje türleri** bölmesinde emin olun **Windows** seçilir. Seçin **sınıf kitaplığı** içinde **şablonları** bölmesi. İçinde **adı** kutusuna `StreamReaderEnumerable`ve ardından **Tamam**. Yeni Proje görüntülenir.
+1. In the **New Project** dialog box, in the **Project Types** pane, make sure that **Windows** is selected. Select **Class Library** in the **Templates** pane. In the **Name** box, type `StreamReaderEnumerable`, and then click **OK**. The new project is displayed.
 
-1. İçinde **Çözüm Gezgini**Class1.vb dosyaya sağ tıklayın ve tıklayın **Yeniden Adlandır**. Dosyayı Yeniden Adlandır `StreamReaderEnumerable.vb` ve ENTER tuşuna basın. Dosya yeniden adlandırılırken da yeniden adlandırmak sınıfa `StreamReaderEnumerable`. Bu sınıf uygulayacak `IEnumerable(Of String)` arabirimi.
+1. In **Solution Explorer**, right-click the Class1.vb file and click **Rename**. Rename the file to `StreamReaderEnumerable.vb` and press ENTER. Renaming the file will also rename the class to `StreamReaderEnumerable`. This class will implement the `IEnumerable(Of String)` interface.
 
-1. StreamReaderEnumerable projeye sağ tıklayın, fareyle **Ekle**ve ardından **yeni öğe**. Seçin **sınıfı** şablonu. İçinde **adı** kutusuna `StreamReaderEnumerator.vb` tıklatıp **Tamam**.
+1. Right-click the StreamReaderEnumerable project, point to **Add**, and then click **New Item**. Select the **Class** template. In the **Name** box, type `StreamReaderEnumerator.vb` and click **OK**.
 
- Bu projedeki ilk sınıf numaralandırılabilir sınıftır ve uygulayacak `IEnumerable(Of String)` arabirimi. Bu genel arabirimi uygulayan <xref:System.Collections.IEnumerable> arabirimi ve bu sınıf tüketicilerinin olarak yazılan değerleri erişebilirsiniz garantiler `String`.  
+ The first class in this project is the enumerable class and will implement the `IEnumerable(Of String)` interface. This generic interface implements the <xref:System.Collections.IEnumerable> interface and guarantees that consumers of this class can access values typed as `String`.  
   
-**IEnumerable uygulamak için kod ekleyin**
+**Add the code to implement IEnumerable**
 
-1. StreamReaderEnumerable.vb dosyasını açın.
+1. Open the StreamReaderEnumerable.vb file.
 
-2. Sonra satırında `Public Class StreamReaderEnumerable`, aşağıdaki komutu yazın ve ENTER tuşuna basın.
+2. On the line after `Public Class StreamReaderEnumerable`, type the following and press ENTER.
 
      [!code-vb[VbVbalrIteratorWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#1)]
 
-   Visual Basic sınıf tarafından gerekli üyeleri ile otomatik olarak doldurur `IEnumerable(Of String)` arabirimi.
+   Visual Basic automatically populates the class with the members that are required by the `IEnumerable(Of String)` interface.
   
-3. Numaralandırılabilir bu sınıfı aynı anda bir metin dosyası bir satırından satırları oku. Bir dosya yolu giriş parametresi olarak alan bir Genel oluşturucu kullanıma sunmak için sınıfa aşağıdaki kodu ekleyin.
+3. This enumerable class will read lines from a text file one line at a time. Add the following code to the class to expose a public constructor that takes a file path as an input parameter.
 
      [!code-vb[VbVbalrIteratorWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#2)]
 
-4. Uygulamanıza <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> yöntemi `IEnumerable(Of String)` arabirimi yeni bir örneğini döndürür `StreamReaderEnumerator` sınıfı. Uygulamasını `GetEnumerator` yöntemi `IEnumerable` arabirimi yapılabilir `Private`yalnızca üyelerinin kullanıma sunmak sahip olduğunuz için `IEnumerable(Of String)` arabirimi. Visual Basic için oluşturulan kodu değiştirme `GetEnumerator` aşağıdaki kodla yöntemleri.
+4. Your implementation of the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method of the `IEnumerable(Of String)` interface will return a new instance of the `StreamReaderEnumerator` class. The implementation of the `GetEnumerator` method of the `IEnumerable` interface can be made `Private`, because you have to expose only members of the `IEnumerable(Of String)` interface. Replace the code that Visual Basic generated for the `GetEnumerator` methods with the following code.
 
      [!code-vb[VbVbalrIteratorWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#3)]  
   
-**IEnumerator uygulamak için kod ekleyin**
+**Add the code to implement IEnumerator**
 
-1. StreamReaderEnumerator.vb dosyasını açın.
+1. Open the StreamReaderEnumerator.vb file.
 
-2. Sonra satırında `Public Class StreamReaderEnumerator`, aşağıdaki komutu yazın ve ENTER tuşuna basın.
+2. On the line after `Public Class StreamReaderEnumerator`, type the following and press ENTER.
 
      [!code-vb[VbVbalrIteratorWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#4)]
 
-   Visual Basic sınıf tarafından gerekli üyeleri ile otomatik olarak doldurur `IEnumerator(Of String)` arabirimi.
+   Visual Basic automatically populates the class with the members that are required by the `IEnumerator(Of String)` interface.
 
-3. Numaralandırıcı sınıfı metin dosyasını açıp ' % s'dosya g/ç satırları dosyasından okumak için gerçekleştirir. Bir dosya yolu giriş parametresi olarak alan bir Genel oluşturucu kullanımına sunun ve metin dosyası okuma için sınıfa aşağıdaki kodu ekleyin.
+3. The enumerator class opens the text file and performs the file I/O to read the lines from the file. Add the following code to the class to expose a public constructor that takes a file path as an input parameter and open the text file for reading.
 
      [!code-vb[VbVbalrIteratorWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#5)]
 
-4. `Current` Özellikleri hem de `IEnumerator(Of String)` ve `IEnumerator` arabirimleri metin dosyasından geçerli öğeyi iade bir `String`. Uygulamasını `Current` özelliği `IEnumerator` arabirimi yapılabilir `Private`yalnızca üyelerinin kullanıma sunmak sahip olduğunuz için `IEnumerator(Of String)` arabirimi. Visual Basic için oluşturulan kodu değiştirme `Current` aşağıdaki kodla özellikleri.
+4. The `Current` properties for both the `IEnumerator(Of String)` and `IEnumerator` interfaces return the current item from the text file as a `String`. The implementation of the `Current` property of the `IEnumerator` interface can be made `Private`, because you have to expose only members of the `IEnumerator(Of String)` interface. Replace the code that Visual Basic generated for the `Current` properties with the following code.
 
      [!code-vb[VbVbalrIteratorWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#6)]
 
-5. `MoveNext` Yöntemi `IEnumerator` arabirimi metin dosyasındaki bir sonraki öğeye gider ve tarafından döndürülen değerin güncelleştirmeleri `Current` özelliği. Okumak için daha fazla öğe varsa `MoveNext` yöntemi döndürür `False`; Aksi takdirde `MoveNext` yöntemi döndürür `True`. Aşağıdaki kodu ekleyin `MoveNext` yöntemi.
+5. The `MoveNext` method of the `IEnumerator` interface navigates to the next item in the text file and updates the value that is returned by the `Current` property. If there are no more items to read, the `MoveNext` method returns `False`; otherwise the `MoveNext` method returns `True`. Add the following code to the `MoveNext` method.
 
      [!code-vb[VbVbalrIteratorWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#7)]
 
-6. `Reset` Yöntemi `IEnumerator` arabirimi metin dosyası başlangıcına işaret edecek şekilde yineleyici yönlendirir ve geçerli öğe değerini temizler. Aşağıdaki kodu ekleyin `Reset` yöntemi.
+6. The `Reset` method of the `IEnumerator` interface directs the iterator to point to the start of the text file and clears the current item value. Add the following code to the `Reset` method.
 
      [!code-vb[VbVbalrIteratorWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#8)]
 
-7. `Dispose` Yöntemi `IEnumerator` arabirimi garanti yineleyici edildiğinde önce tüm yönetilmeyen kaynaklar serbest bırakılır. Tarafından kullanılan dosya tanıtıcısı `StreamReader` nesne yönetilmeyen bir kaynağı ve yineleyici örneği yok önce kapatılması gerekir. Visual Basic için oluşturulan kodu değiştirme `Dispose` yöntemini aşağıdaki kod ile.
+7. The `Dispose` method of the `IEnumerator` interface guarantees that all unmanaged resources are released before the iterator is destroyed. The file handle that is used by the `StreamReader` object is an unmanaged resource and must be closed before the iterator instance is destroyed. Replace the code that Visual Basic generated for the `Dispose` method with the following code.
 
      [!code-vb[VbVbalrIteratorWalkthrough#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#9)] 
   
-## <a name="using-the-sample-iterator"></a>Örnek yineleyici kullanma
+## <a name="using-the-sample-iterator"></a>Using the Sample Iterator
 
- Numaralandırılabilir bir sınıf uygulayan bir nesne gerektiren denetim yapıları birlikte kodunuzda kullanabileceğiniz `IEnumerable`, gibi bir `For Next` döngü veya LINQ sorgusu. Aşağıdaki örnekte gösterildiği `StreamReaderEnumerable` bir LINQ Sorgu.  
+ You can use an enumerable class in your code together with control structures that require an object that implements `IEnumerable`, such as a `For Next` loop or a LINQ query. The following example shows the `StreamReaderEnumerable` in a LINQ query.  
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/Module1.vb#10)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Denetim Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [For Each...Next Deyimi](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

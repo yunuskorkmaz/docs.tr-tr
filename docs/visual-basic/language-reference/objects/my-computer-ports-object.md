@@ -1,34 +1,34 @@
 ---
-title: My. Computer. Ports nesnesi (Visual Basic)
+title: My.Computer.Ports Nesnesi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Ports object
 - Ports object
 ms.assetid: 244ede4e-25b7-445b-9fd6-163550cce193
-ms.openlocfilehash: 2122dc099b36494aa44e538fdf3683dc9e9640fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 83874131655fd0bc2aac788c3beeaa1ca74195a6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966022"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332016"
 ---
 # <a name="mycomputerports-object"></a>My.Computer.Ports Nesnesi
-Bilgisayarın seri bağlantı noktalarına erişmek için bir özellik ve bir yöntem sağlar.  
+Provides a property and a method for accessing the computer's serial ports.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `My.Computer.Ports` Nesnesinin yöntemleri ve özellikleri hakkında daha fazla bilgi için bkz <xref:Microsoft.VisualBasic.Devices.Ports>.  
+ For information about the methods and properties of the `My.Computer.Ports` object, see <xref:Microsoft.VisualBasic.Devices.Ports>.  
   
- Daha fazla bilgi için bkz. [bilgisayarın bağlantı noktalarına erişme](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
+ For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
   
 > [!NOTE]
-> Bilgisayarın seri bağlantı noktalarına erişmek için <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> sınıfın özelliklerini ve yöntemlerini de kullanabilirsiniz.  
+> You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Ad alanı:** <xref:Microsoft.VisualBasic.Devices>  
+ **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Sınıf:** <xref:Microsoft.VisualBasic.Devices.Ports>  
+ **Class:** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
- **Derleme** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

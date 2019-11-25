@@ -1,5 +1,5 @@
 ---
-title: Let Tümcesi (Visual Basic)
+title: Let Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryLet
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: 88166a040823cfefe623f672e556c364d652a7fc
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 63eaf97016db259870eb77199651ecbdc5f809c7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004734"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350429"
 ---
 # <a name="let-clause-visual-basic"></a>Let Tümcesi (Visual Basic)
-Bir değeri hesaplar ve sorgu içindeki yeni bir değişkene atar.  
+Computes a value and assigns it to a new variable within the query.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,22 +28,22 @@ Let variable = expression [, ...]
   
 |Terim|Tanım|  
 |---|---|  
-|`variable`|Gerekli. Sağlanan ifadenin sonuçlarına başvurmak için kullanılabilecek bir diğer ad.|  
-|`expression`|Gerekli. Değerlendirilecek ve belirtilen değişkene atanacak bir ifade.|  
+|`variable`|Gerekli. An alias that can be used to reference the results of the supplied expression.|  
+|`expression`|Gerekli. An expression that will be evaluated and assigned to the specified variable.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 yan tümcesi, her sorgu sonucu için değerleri hesaplamanızı ve bir diğer ad kullanarak bunları başvurmanızı sağlar. Diğer ad, `Where` yan tümcesi gibi diğer yan tümcelerde kullanılabilir. @No__t-0 yan tümcesi, sorguda yer alan bir ifade yan tümcesi için bir diğer ad belirtebileceğiniz ve ifade yan tümcesinin her kullanıldığı her seferinde yerine geçecek bir sorgu deyimi oluşturmanıza olanak sağlar.  
+ The `Let` clause enables you to compute values for each query result and reference them by using an alias. The alias can be used in other clauses, such as the `Where` clause. The `Let` clause enables you to create a query statement that is easier to read because you can specify an alias for an expression clause included in the query and substitute the alias each time the expression clause is used.  
   
- @No__t-2 yan tümcesinde herhangi bir sayıda `variable` ve `expression` ataması ekleyebilirsiniz. Her atamayı virgülle ayırın (,).  
+ You can include any number of `variable` and `expression` assignments in the `Let` clause. Separate each assignment with a comma (,).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, ürünlerde yüzde 10 indirimi hesaplamak için `Let` yan tümcesini kullanır.  
+ The following code example uses the `Let` clause to compute a 10 percent discount on products.  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)

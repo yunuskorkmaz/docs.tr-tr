@@ -9,15 +9,15 @@ helpviewer_keywords:
 - parts [WPF], ListBox
 - ListBox [WPF], styles and templates
 ms.assetid: fc5764cb-c27b-495b-88d4-d969a8213ccb
-ms.openlocfilehash: 279683752e6767bbf3e5bc359ec1e72193602c00
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cb7043a21020193a4b2a2569ec610f311834a698
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459286"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283749"
 ---
 # <a name="listbox-styles-and-templates"></a>ListBox Stilleri ve Şablonları
-Bu konuda <xref:System.Windows.Controls.ListBox> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+Bu konuda <xref:System.Windows.Controls.ListBox> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için varsayılan <xref:System.Windows.Controls.ControlTemplate> değiştirebilirsiniz. Daha fazla bilgi için bkz. [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="listbox-parts"></a>ListBox bölümleri  
  <xref:System.Windows.Controls.ListBox> denetiminde hiç adlandırılmış bölüm yok.  
@@ -41,13 +41,13 @@ Bu konuda <xref:System.Windows.Controls.ListBox> denetimine yönelik stiller ve 
   
 |VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Normal|Ortak durumlar|Varsayılan durum.|  
 |Gelme olayından|Ortak durumlar|Fare işaretçisi denetimin üzerine yerleştirilir.|  
 |Devre dışı|Ortak durumlar|Öğe devre dışı bırakıldı.|  
 |Diğinize|Odaklardaki durumlar|Öğe odağa sahip.|  
 |Odaklanmadan gözetle|Odaklardaki durumlar|Öğe odağa sahip değil.|  
 |Değilken|SelectionStates|Öğe seçilmemiş.|  
-|Seçildiğinde|SelectionStates|Öğe currentlylevha seçildi.|  
+|Seçildi|SelectionStates|Öğe currentlylevha seçildi.|  
 |Selectedunodaklanmış|SelectionStates|Öğe seçilir, ancak odağa sahip değildir.|  
 |Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
 |Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
@@ -71,4 +71,4 @@ Bu konuda <xref:System.Windows.Controls.ListBox> denetimine yönelik stiller ve 
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
 - [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)
+- [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md)

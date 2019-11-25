@@ -1,19 +1,19 @@
 ---
-title: <permission> (Visual Basic)
+title: <permission>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 904d573514bf35b773d47321b7fd3b6a86e90262
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 71b00b669804e644d1171480192b9d55455bdf53
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524692"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352271"
 ---
-# <a name="permission-visual-basic"></a>\<permission > (Visual Basic)
-Üye için gerekli izinleri belirtir.  
+# <a name="permission-visual-basic"></a>\<permission> (Visual Basic)
+Specifies a required permission for the member.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,18 +23,18 @@ ms.locfileid: "72524692"
   
 ## <a name="parameters"></a>Parametreler  
  `member`  
- Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında kurallı öğe adına `member` çevirir. @No__t_0 tırnak işaretleri ("") içine alın.  
+ A reference to a member or field that is available to be called from the current compilation environment. The compiler checks that the given code element exists and translates `member` to the canonical element name in the output XML. Enclose `member` in quotation marks (" ").  
   
  `description`  
- Üyeye erişim açıklaması.  
+ A description of the access to the member.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Üyenin erişimini belgelemek için `<permission>` etiketini kullanın. Bir üyeye erişimi belirtmek için <xref:System.Security.PermissionSet> sınıfını kullanın.  
+ Use the `<permission>` tag to document the access of a member. Use the <xref:System.Security.PermissionSet> class to specify access to a member.  
   
- Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
+ Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `ReadFile` yöntemi tarafından <xref:System.Security.Permissions.FileIOPermission> gerektiğini belirtmek için `<permission>` etiketini kullanır.  
+ This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   

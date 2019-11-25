@@ -1,5 +1,5 @@
 ---
-title: WithEvents (Visual Basic)
+title: WithEvents
 ms.date: 07/20/2015
 f1_keywords:
 - vb.WithEvents
@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: 50d5a768393e90d28d150b451405e35e6f4c7953
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 2309c675b50a2025d73841a47fe8e30e7cecd522
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583036"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350751"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-Bir veya daha fazla tanımlanmış üye değişkeninin, olayları tetiklebilecek bir sınıfın örneğine başvurmayacağını belirtir.
+Specifies that one or more declared member variables refer to an instance of a class that can raise events.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir değişken `WithEvents` kullanılarak tanımlandığında, bir yöntemin, `Handles` anahtar sözcüğünü kullanarak değişkenin olaylarını işlediğini bildirimli olarak belirtebilirsiniz.
+When a variable is defined using `WithEvents`, you can declaratively specify that a method handles the variable's events using the `Handles` keyword.
 
-@No__t_0 yalnızca sınıf veya modül düzeyinde kullanabilirsiniz. Bu, bir `WithEvents` değişkeni için bildirim bağlamının bir sınıf veya modül olması ve kaynak dosya, ad alanı, yapı veya yordam olamayacağı anlamına gelir.
+You can use `WithEvents` only at class or module level. This means the declaration context for a `WithEvents` variable must be a class or module and cannot be a source file, namespace, structure, or procedure.
 
-Yapı üyesi üzerinde `WithEvents` kullanamazsınız.
+You cannot use `WithEvents` on a structure member.
 
-@No__t_0 ile yalnızca bağımsız değişkenleri (diziler değil) bildirebilirsiniz.
+You can declare only individual variables—not arrays—with `WithEvents`.
 
 ## <a name="rules"></a>Kurallar
 
-**Öğe türleri.** Sınıf örneklerini kabul edebilmeleri için `WithEvents` değişkenlerini nesne değişkenleri olacak şekilde bildirmeniz gerekir. Ancak, bunları `Object` olarak bildiremezsiniz. Bunları, olayları yükseltebilen belirli bir sınıf olarak bildirmeniz gerekir.
+**Element Types.** You must declare `WithEvents` variables to be object variables so that they can accept class instances. However, you cannot declare them as `Object`. You must declare them as the specific class that can raise the events.
 
-@No__t_0 değiştiricisi Bu bağlamda kullanılabilir: [Dim ekstresi](../../../visual-basic/language-reference/statements/dim-statement.md)
+The `WithEvents` modifier can be used in this context: [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)
 
 ## <a name="example"></a>Örnek
 
@@ -41,6 +41,6 @@ Dim WithEvents app As Application
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İşlendiğini](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
 - [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)

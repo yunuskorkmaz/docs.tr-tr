@@ -1,32 +1,32 @@
 ---
-title: Başvurum (Visual Basic)
+title: Başvurum
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My feature
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
-ms.openlocfilehash: accf2464f7d8ead8bcd73c9704bea4fd5d2e410b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0dbec31504563e581d6d5a97ef7b4b2ac3ee189
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802394"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351693"
 ---
 # <a name="my-reference-visual-basic"></a>Başvurum (Visual Basic)
-`My` Özelliği, kullanımı kolay erişim için yaygın olarak kullanılan yöntemleri, özellikleri ve olayları vererek programlama daha hızlı ve kolay hale getirir. Bu tabloda yer alan nesneleri `My`ve her biri ile gerçekleştirdiği eylemleri.  
+The `My` feature makes programming faster and easier by giving you intuitive access to commonly used methods, properties, and events. This table lists the objects contained in `My`, and the actions that can be performed with each.  
   
-|**Eylem**|**Nesne**|  
+|**Action**|**Object**|  
 |----------------|----------------|  
-|Uygulama bilgileri ve Hizmetleri erişme.|`My.Application` Nesnesi aşağıdaki sınıfları içerir:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> tüm projelerde kullanılabilen üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Windows Forms uygulamalarında kullanılabilir üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> Konsol uygulamalarında kullanılabilir üyeleri sağlar.|  
-|Ana bilgisayar ve kendi kaynakları, hizmetleri ve veri erişim.|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|  
-|Geçerli projede forms erişme.|[My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
-|Uygulama günlüğüne erişme.|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|  
-|Geçerli web isteği erişme.|[My.Request Nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)|  
-|Kaynak öğelere erişme.|[My.Resources Nesnesi](../../../visual-basic/language-reference/objects/my-resources-object.md)|  
-|Geçerli web yanıtı erişme.|[My.Response Nesnesi](../../../visual-basic/language-reference/objects/my-response-object.md)|  
-|Kullanıcı ve uygulama düzeyi ayarları erişme.|[My.Settings Nesnesi](../../../visual-basic/language-reference/objects/my-settings-object.md)|  
-|Geçerli kullanıcının güvenlik bağlamı erişme.|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|  
-|Geçerli proje tarafından başvurulan XML Web hizmetlerine erişme.|[My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
+|Accessing application information and services.|The `My.Application` object consists of the following classes:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides members that are available in all projects.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> provides members available in Windows Forms applications.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications.|  
+|Accessing the host computer and its resources, services, and data.|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|  
+|Accessing the forms in the current project.|[My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
+|Accessing the application log.|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|  
+|Accessing the current web request.|[My.Request Nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)|  
+|Accessing resource elements.|[My.Resources Nesnesi](../../../visual-basic/language-reference/objects/my-resources-object.md)|  
+|Accessing the current web response.|[My.Response Nesnesi](../../../visual-basic/language-reference/objects/my-response-object.md)|  
+|Accessing user and application level settings.|[My.Settings Nesnesi](../../../visual-basic/language-reference/objects/my-settings-object.md)|  
+|Accessing the current user's security context.|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|  
+|Accessing XML Web services referenced by the current project.|[My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

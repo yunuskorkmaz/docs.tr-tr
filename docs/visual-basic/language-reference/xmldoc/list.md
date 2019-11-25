@@ -1,5 +1,5 @@
 ---
-title: <list> (Visual Basic)
+title: <list>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - listheader XML tag
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 5d4295d485611e75e8b6c8d8f95e079654f0cfa3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: db5c571d2f2c59419c886f6596f4e4dbd30d7baf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524756"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352317"
 ---
-# <a name="list-visual-basic"></a>\<list > (Visual Basic)
-Bir liste veya tablo tanımlar.  
+# <a name="list-visual-basic"></a>\<list> (Visual Basic)
+Defines a list or table.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,25 +40,25 @@ Bir liste veya tablo tanımlar.
   
 ## <a name="parameters"></a>Parametreler  
  `type`  
- Listenin türü. Bir madde işaretli liste için "madde işareti", numaralandırılmış liste için "numara" veya iki sütunlu bir tablo için "Tablo" olmalıdır.  
+ The type of the list. Must be a "bullet" for a bulleted list, "number" for a numbered list, or "table" for a two-column table.  
   
  `term`  
- Yalnızca `type` "Table" olduğunda kullanılır. Description etiketinde tanımlanan, tanımlanacak bir terim.  
+ Only used when `type` is "table." A term to define, which is defined in the description tag.  
   
  `description`  
- @No__t_0 "Bullet" veya "Number" olduğunda `description`, `type` "Tablo" olduğunda, `description` `term` tanımıdır.  
+ When `type` is "bullet" or "number," `description` is an item in the list When `type` is "table," `description` is the definition of `term`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 bloğu, bir tablo ya da tanım listesinin başlığını tanımlar. Tablo tanımlarken, yalnızca başlıktaki `term` için bir giriş sağlamanız gerekir.  
+ The `<listheader>` block defines the heading of either a table or definition list. When defining a table, you only have to supply an entry for `term` in the heading.  
   
- Listedeki her öğe `<item>` bloğuyla belirtilir. Tanım listesi oluştururken hem `term` hem de `description` belirtmeniz gerekir. Ancak, bir tablo, madde işaretli liste veya numaralandırılmış liste için yalnızca `description` bir giriş sağlamanız gerekir.  
+ Each item in the list is specified with an `<item>` block. When creating a definition list, you must specify both `term` and `description`. However, for a table, bulleted list, or numbered list, you only have to supply an entry for `description`.  
   
- Bir liste veya tablo gerektiği kadar çok sayıda `<item>` bloğuyla bulunabilir.  
+ A list or table can have as many `<item>` blocks as needed.  
   
- Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
+ Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, açıklamalar bölümünde madde işaretli bir liste tanımlamak için `<list>` etiketini kullanır.  
+ This example uses the `<list>` tag to define a bulleted list in the remarks section.  
   
  [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  
   

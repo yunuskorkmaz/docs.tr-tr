@@ -1,5 +1,5 @@
 ---
-title: Sayısal Veri Türleri (Visual Basic)
+title: Sayısal Veri Türleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - integral types [Visual Basic], Visual Basic
@@ -23,60 +23,60 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 75e60cb2a3a934956099ce6fc7d81bf6ecea4d11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc8b630eebc48e5733344a00664b453360769c0b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663381"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346318"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Sayısal Veri Türleri (Visual Basic)
-Visual Basic sağlayan birkaç *sayısal veri türleri* çeşitli gösterimlerini numaraları işlemek için. *İntegral* türleri yalnızca (pozitif, negatif ve sıfır) tamsayılar, temsil ve *nonintegral* türleri tamsayı ve kesirli bölümleri ile sayıları temsil eder.  
+Visual Basic supplies several *numeric data types* for handling numbers in various representations. *Integral* types represent only whole numbers (positive, negative, and zero), and *nonintegral* types represent numbers with both integer and fractional parts.  
   
- Visual Basic veri türleri yan yana karşılaştırmasını gösteren bir tablo için bkz: [veri türleri](../../../../visual-basic/language-reference/data-types/index.md).  
+ For a table showing a side-by-side comparison of the Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="integral-numeric-types"></a>Tamsayı sayısal türleri  
- *Tam sayı veri türleri* kesirli bölümleri olmadan yalnızca sayıları temsil eden olanlardır.  
+## <a name="integral-numeric-types"></a>Integral Numeric Types  
+ *Integral data types* are those that represent only numbers without fractional parts.  
   
- *İmzalı* tam sayı veri türleri [SByte veri türü](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md) (8-bit) [kısa veri türü](../../../../visual-basic/language-reference/data-types/short-data-type.md) (16-bit) [tamsayı veri türü](../../../../visual-basic/language-reference/data-types/integer-data-type.md) (32-bit) ve [ Long veri türü](../../../../visual-basic/language-reference/data-types/long-data-type.md) (64-bit). Kesirli sayılar yerine tamsayı her zaman bir değişken depoluyorsa, şu türlerden biri olarak bildirin.  
+ The *signed* integral data types are [SByte Data Type](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md) (8-bit), [Short Data Type](../../../../visual-basic/language-reference/data-types/short-data-type.md) (16-bit), [Integer Data Type](../../../../visual-basic/language-reference/data-types/integer-data-type.md) (32-bit), and [Long Data Type](../../../../visual-basic/language-reference/data-types/long-data-type.md) (64-bit). If a variable always stores integers rather than fractional numbers, declare it as one of these types.  
   
- *İşaretsiz* integral türleri [Byte veri türü](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8-bit) [UShort veri türü](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16-bit) [Uınteger veri türü](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32-bit) ve [ ULong veri türü](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64-bit). Bir değişken ikili verileri veya bilinmeyen Doğa veri içeriyorsa, bu türlerden biri olarak bildirin.  
-  
-### <a name="performance"></a>Performans  
- Aritmetik işlemler, diğer veri türlerine sahip tam sayı türlerinden daha hızlıdır. İle hızlı oldukları `Integer` ve `UInteger` Visual Basic'te türler.  
-  
-### <a name="large-integers"></a>Büyük tamsayı  
- Daha büyük bir tamsayı tutmak gerekirse `Integer` veri türü tutabilir, kullanabileceğiniz `Long` veri türü yerine. `Long` değişkenleri-9,223,372,036,854,775,808 9.223.372.036.854.775.807 ile sayılar içerebilir. İşlemleriyle `Long` biraz daha yavaş çalışır ile `Integer`.  
-  
- Daha da büyük değerler gerekiyorsa, kullanabileceğiniz [ondalık veri türü](../../../../visual-basic/language-reference/data-types/decimal-data-type.md). İçinde 79,228,162,514,264,337,593,543,950,335 aracılığıyla-79,228,162,514,264,337,593,543,950,335 gelen sayıları tutabilir bir `Decimal` herhangi bir ondalık basamak kullanmazsanız değişkeni. Ancak, işlemleriyle `Decimal` sayılardır herhangi bir sayısal veri türü ile oldukça yavaştır.  
-  
-### <a name="small-integers"></a>Küçük tamsayı  
- Tam aralığının gerekmiyorsa `Integer` kullanabileceğiniz veri türü `Short` -32.768 32.767 aracılığıyla tam tutabilen veri türü. En küçük tamsayı aralığı için `SByte` -128 ile 127'den tamsayı veri türü tutar. Ortak dil çalışma zamanı değişkenlerinin küçük tamsayının tutulması çok büyük bir sayı varsa, bazen depolayabilir, `Short` ve `SByte` değişkenleri daha verimli bir şekilde ve bellek tüketimi kaydedin. Ancak, işlemleriyle `Short` ve `SByte` biraz daha yavaş çalışır ile `Integer`.  
-  
-### <a name="unsigned-integers"></a>İşaretsiz tamsayı  
- Biliyorsanız, negatif bir sayı tutmak, değişkeni hiçbir zaman işlemesi gerekmez, kullanabileceğiniz *imzasız türler*`Byte`, `UShort`, `UInteger`, ve `ULong`. Bu veri türlerinin her biri bir pozitif tamsayı iki kez büyük, karşılık gelen türü işaretli olarak tutabilir (`SByte`, `Short`, `Integer`, ve `Long`). Performans açısından her bir işaretsiz türe karşılık gelen imzalı türü olarak tam olarak etkilidir. Özellikle, `UInteger` paylaşır `Integer` tüm basit sayısal veri türleri en verimli olmanın farkı.  
-  
-## <a name="nonintegral-numeric-types"></a>Nonintegral sayısal türler  
- *Nonintegral veri türleri* hem tamsayı hem de kesirli bölümleri sayıları temsil eden olanlardır.  
-  
- Nonintegral sayısal veri türleri `Decimal` (128-bit sabit nokta), [tek veri türü](../../../../visual-basic/language-reference/data-types/single-data-type.md) (32 bit kayan nokta), ve [Double veri türü](../../../../visual-basic/language-reference/data-types/double-data-type.md) (64-bit kayan nokta). Bunların tümü imzalı türleridir. Bir değişken bir kesir içeriyorsa bu türlerinden biri olarak bildirin.  
-  
- `Decimal` bir kayan nokta veri türü değil. `Decimal` ikili bir tamsayı ve ondalık kesir değeri hangi kısmı olduğunu belirten bir tamsayı Ölçeklendirme çarpanı numarasına sahip.  
-  
- Kullanabileceğiniz `Decimal` para değerleri değişkenleri. Duyarlılık değerlerinin avantajlarındandır. `Double` Veri türü daha hızlı ve daha az bellek gerektirir, ancak yuvarlama hataları tabi olduğu. `Decimal` Veri türünü tam doğruluk ondalık basamak 28 korur.  
-  
- Kayan nokta (`Single` ve `Double`) daha büyük aralıklar sağlayamayacaksınız `Decimal` numaraları ancak yuvarlama hataları tabi olabilir. Kayan nokta türlerini destekleyen değerinden daha az önemli basamak `Decimal` ancak büyük büyüklük değerini temsil edebilir.  
-  
- Nonintegral sayı değerleri ifade edilemez mmmEeee içinde AAA olan *Mantis* (önemli basamak) ve eee *üs* (10 'un bir kuvveti). En yüksek pozitif nonintegral türlerinin 7.9228162514264337593543950335E + 28 için değerler `Decimal`, 3.4028235E + 38 `Single`ve 1.79769313486231570E + 308 `Double`.  
+ The *unsigned* integral types are [Byte Data Type](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8-bit), [UShort Data Type](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16-bit), [UInteger Data Type](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32-bit), and [ULong Data Type](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64-bit). If a variable contains binary data, or data of unknown nature, declare it as one of these types.  
   
 ### <a name="performance"></a>Performans  
- `Double` geçerli platformda işlemci çift duyarlıklı kayan nokta işlemleri kesirli veri türleri en verimli olmasıdır. Ancak, işlemleriyle `Double` gibi tam sayı türleri gibi ile kısa sürede olmayan `Integer`.  
+ Arithmetic operations are faster with integral types than with other data types. They are fastest with the `Integer` and `UInteger` types in Visual Basic.  
   
-### <a name="small-magnitudes"></a>Küçük Massively  
- En küçük olası Büyüklük (yakın), 0 ile sayılar için `Double` değişkenleri tutabilir sayı kadar - 4.94065645841246544E küçük-324 negatif değerler ve 4.94065645841246544E-324 pozitif değerler için.  
+### <a name="large-integers"></a>Large Integers  
+ If you need to hold an integer larger than the `Integer` data type can hold, you can use the `Long` data type instead. `Long` variables can hold numbers from -9,223,372,036,854,775,808 through 9,223,372,036,854,775,807. Operations with `Long` are slightly slower than with `Integer`.  
   
-### <a name="small-fractional-numbers"></a>Küçük kesirli sayılar  
- Tam aralığının gerekmiyorsa `Double` kullanabileceğiniz veri türü `Single` from - 3.4028235E + 38 3.4028235E + 38 aracılığıyla kayan nokta sayıları tutabilir veri türü. İçin en küçük massively `Single` değişkenleri şunlardır:-1.401298E-negatif değerler ve 1.401298E 45-45 pozitif değerler için. Çok sayıda küçük bir kayan noktalı sayıların tutan değişken varsa, ortak dil çalışma zamanı bazen depolayabilir, `Single` değişkenleri daha verimli bir şekilde ve bellek tüketimi kaydedin.  
+ If you need even larger values, you can use the [Decimal Data Type](../../../../visual-basic/language-reference/data-types/decimal-data-type.md). You can hold numbers from -79,228,162,514,264,337,593,543,950,335 through 79,228,162,514,264,337,593,543,950,335 in a `Decimal` variable if you do not use any decimal places. However, operations with `Decimal` numbers are considerably slower than with any other numeric data type.  
+  
+### <a name="small-integers"></a>Small Integers  
+ If you do not need the full range of the `Integer` data type, you can use the `Short` data type, which can hold integers from -32,768 through 32,767. For the smallest integer range, the `SByte` data type holds integers from -128 through 127. If you have a very large number of variables that hold small integers, the common language runtime can sometimes store your `Short` and `SByte` variables more efficiently and save memory consumption. However, operations with `Short` and `SByte` are somewhat slower than with `Integer`.  
+  
+### <a name="unsigned-integers"></a>Unsigned Integers  
+ If you know that your variable never needs to hold a negative number, you can use the *unsigned types*`Byte`, `UShort`, `UInteger`, and `ULong`. Each of these data types can hold a positive integer twice as large as its corresponding signed type (`SByte`, `Short`, `Integer`, and `Long`). In terms of performance, each unsigned type is exactly as efficient as its corresponding signed type. In particular, `UInteger` shares with `Integer` the distinction of being the most efficient of all the elementary numeric data types.  
+  
+## <a name="nonintegral-numeric-types"></a>Nonintegral Numeric Types  
+ *Nonintegral data types* are those that represent numbers with both integer and fractional parts.  
+  
+ The nonintegral numeric data types are `Decimal` (128-bit fixed point), [Single Data Type](../../../../visual-basic/language-reference/data-types/single-data-type.md) (32-bit floating point), and [Double Data Type](../../../../visual-basic/language-reference/data-types/double-data-type.md) (64-bit floating point). They are all signed types. If a variable can contain a fraction, declare it as one of these types.  
+  
+ `Decimal` is not a floating-point data type. `Decimal` numbers have a binary integer value and an integer scaling factor that specifies what portion of the value is a decimal fraction.  
+  
+ You can use `Decimal` variables for money values. The advantage is the precision of the values. The `Double` data type is faster and requires less memory, but it is subject to rounding errors. The `Decimal` data type retains complete accuracy to 28 decimal places.  
+  
+ Floating-point (`Single` and `Double`) numbers have larger ranges than `Decimal` numbers but can be subject to rounding errors. Floating-point types support fewer significant digits than `Decimal` but can represent values of greater magnitude.  
+  
+ Nonintegral number values can be expressed as mmmEeee, in which mmm is the *mantissa* (the significant digits) and eee is the *exponent* (a power of 10). The highest positive values of the nonintegral types are 7.9228162514264337593543950335E+28 for `Decimal`, 3.4028235E+38 for `Single`, and 1.79769313486231570E+308 for `Double`.  
+  
+### <a name="performance"></a>Performans  
+ `Double` is the most efficient of the fractional data types, because the processors on current platforms perform floating-point operations in double precision. However, operations with `Double` are not as fast as with the integral types such as `Integer`.  
+  
+### <a name="small-magnitudes"></a>Small Magnitudes  
+ For numbers with the smallest possible magnitude (closest to 0), `Double` variables can hold numbers as small as -4.94065645841246544E-324 for negative values and 4.94065645841246544E-324 for positive values.  
+  
+### <a name="small-fractional-numbers"></a>Small Fractional Numbers  
+ If you do not need the full range of the `Double` data type, you can use the `Single` data type, which can hold floating-point numbers from -3.4028235E+38 through 3.4028235E+38. The smallest magnitudes for `Single` variables are -1.401298E-45 for negative values and 1.401298E-45 for positive values. If you have a very large number of variables that hold small floating-point numbers, the common language runtime can sometimes store your `Single` variables more efficiently and save memory consumption.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

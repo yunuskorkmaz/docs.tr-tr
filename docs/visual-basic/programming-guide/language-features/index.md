@@ -1,86 +1,86 @@
 ---
-title: Visual Basic Dil Özellikleri
+title: Dil Özellikleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cb0b017410e991628bad59a6986ba37426c913f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053788"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345062"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic Dil Özellikleri
-Aşağıdaki konuları tanıtır ve Visual Basic, nesne yönelimli programlama dilini temel bileşenlerini tartışın. Formlar ve denetimler kullanarak uygulamanız için kullanıcı arabirimi oluşturduktan sonra uygulama davranışını tanımlayan kodu yazmanız gerekir. Tüm modern programlama dili olarak Visual Basic bir dizi ortak programlama yapıları ve Dil öğelerini destekler.  
+The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language. After creating the user interface for your application using forms and controls, you need to write the code that defines the application's behavior. As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.  
   
- Diğer dillerde programlanmış, bu bölümde yer alan malzeme çoğunu tanıdık görünebilir. Visual Basic olay temelli doğasını yapıları çoğunu diğer dillerdeki benzer olsa da, bazı farklar ortaya çıkarır.  
+ If you have programmed in other languages, much of the material covered in this section might seem familiar. While most of the constructs are similar to those in other languages, the event-driven nature of Visual Basic introduces some subtle differences.  
   
- Programlama konusunda yeniyseniz, bu bölümdeki malzeme temel yapı taşlarını kodu yazmak için bir giriş işlevi görür. Temel kavramları anladığınızda, Visual Basic kullanarak güçlü uygulamalar oluşturabilirsiniz.  
+ If you are new to programming, the material in this section serves as an introduction to the basic building blocks for writing code. Once you understand the basics, you can create powerful applications using Visual Basic.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- Kodunuzu daha kompakt ve güçlü bildirme ve birden çok ilişkili değerler tutan dizileri kullanma hale açıklanır.  
+ Discusses making your code more compact and powerful by declaring and using arrays, which hold multiple related values.  
   
  [Öğe Başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- Bir koleksiyon oluşturun ve başlangıç değer kümesi ile doldurmak etkinleştiren koleksiyon başlatıcıları açıklar.  
+ Describes collection initializers, which enable you to create a collection and populate it with an initial set of values.  
   
  [Sabitler ve Sabit Listeleri](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)  
- İlgili sabit değerleri kümesi dahil olmak üzere, yinelenen kullanmak için değişmeyen değerleri depolamak açıklanır.  
+ Discusses storing unchanging values for repeated use, including sets of related constant values.  
   
  [Denetim Akışı](../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- Akışını programınızın yürütme işlemi gösterilmektedir.  
+ Shows how to regulate the flow of your program's execution.  
   
  [Veri Türleri](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Hangi tür verileri bir programlama öğesi içerebilir ve bu verileri nasıl depolandığını açıklar.  
+ Describes what kinds of data a programming element can hold and how that data is stored.  
   
  [Bildirilen Öğeler](../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- Programlama öğeleri bildirebilirsiniz, adları ve özelliklerini kapsar ve derleyicinin bunları başvuruları nasıl çözümler.  
+ Covers programming elements you can declare, their names and characteristics, and how the compiler resolves references to them.  
   
  [Temsilciler](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- Temsilciler ve Visual Basic'te nasıl kullanıldığı bir giriş sağlar.  
+ Provides an introduction to delegates and how they are used in Visual Basic.  
   
  [Erken ve Geç Bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- Bir nesne bir nesne değişkeni ve ilişkili erken ve geç bağlama nesneleri arasındaki farklar atandığında, derleyici tarafından gerçekleştirilen bir bağlama tanımlar.  
+ Describes binding, which is performed by the compiler when an object is assigned to an object variable, and the differences between early-bound and late-bound objects.  
   
  [Hata Türleri](../../../visual-basic/programming-guide/language-features/error-types.md)  
- Söz dizimi hatalarını, çalışma zamanı hataları ve mantık hatalarını genel bir bakış sağlar.  
+ Provides an overview of syntax errors, run-time errors, and logic errors.  
   
  [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)  
- Bildirme ve olayları kullanma işlemi gösterilmektedir.  
+ Shows how to declare and use events.  
   
  [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
- Arabirimleri nedir ve nasıl bunları uygulamalarınızda kullanabileceğiniz anlatılmaktadır.  
+ Describes what interfaces are and how you can use them in your applications.  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Tanıtan konulara bağlantılar sağlar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] özellikleri ve programlama.  
+ Provides links to topics that introduce [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] features and programming.  
   
  [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- Nesneler ve sınıflar, nasıl kullanıldığı, ilişkilerini, birbiriyle ve özellikleri, yöntemleri ve olayları ortaya genel bir bakış sağlar.  
+ Provides an overview of objects and classes, how they are used, their relationships to each other, and the properties, methods, and events they expose.  
   
  [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- Değeri tutan öğeleri, verimli bir şekilde kullanma ve bunları yeni değerler elde etmek üzere bir araya getirilebileceğini öğrenin işleyen kod öğelerini açıklar.  
+ Describes the code elements that manipulate value-holding elements, how to use them efficiently, and how to combine them to yield new values.  
   
  [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- Açıklar `Sub`, `Function`, `Property`, ve `Operator` özyinelemeli ve aşırı yüklenmiş yordamlar gibi gelişmiş konular yanı sıra, yordamlar.  
+ Describes `Sub`, `Function`, `Property`, and `Operator` procedures, as well as advanced topics such as recursive and overloaded procedures.  
   
  [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)  
- Bildirim ve yürütülebilir deyimleri açıklar.  
+ Describes declaration and executable statements.  
   
  [Dizeler](../../../visual-basic/programming-guide/language-features/strings/index.md)  
- Visual Basic'de dizeleri kullanma hakkında temel kavramları açıklayan konulara bağlantılar sağlar.  
+ Provides links to topics that describe the basic concepts about using strings in Visual Basic.  
   
  [Değişkenler](../../../visual-basic/programming-guide/language-features/variables/index.md)  
- Değişkenleri tanıtır ve Visual Basic'te kullanmayı açıklar.  
+ Introduces variables and describes how to use them in Visual Basic.  
   
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Visual Basic'de XML kullanmayı açıklayan konulara bağlantılar sağlar.  
+ Provides links to topics that describe how to use XML in Visual Basic.  
   
 ## <a name="related-sections"></a>İlgili Bölümler
 
  [Koleksiyonlar](../../../visual-basic/programming-guide/concepts/collections.md)  
- .NET Framework tarafından sağlanan koleksiyon türlerinin bazılarını açıklar. Basit koleksiyonların ve anahtar/değer çiftleri nasıl yapılacağı açıklanır.  
+ Describes some of the types of collections that are provided by the .NET Framework. Demonstrates how to use simple collections and collections of key/value pairs.  
   
  [Visual Basic Dili Başvurusu](../../../visual-basic/language-reference/index.md)  
- Visual Basic programlamanın çeşitli yönleri hakkında başvuru bilgileri sağlar.
+ Provides reference information on various aspects of Visual Basic programming.

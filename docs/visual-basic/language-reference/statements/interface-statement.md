@@ -1,5 +1,5 @@
 ---
-title: Interface Deyimi (Visual Basic)
+title: Interface Deyimi
 ms.date: 05/12/2018
 f1_keywords:
 - vb.Interface
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 68590702835e47e5f0f2e0380bc0fe4017d5eb15
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: b606f24cf3baa13746834dfbf7ca6b9215fd3558
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582665"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348051"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface Deyimi (Visual Basic)
-Bir arabirimin adını bildirir ve arabirimin içerdiği üyelerin tanımlarını tanıtır.  
+Declares the name of an interface and introduces the definitions of the members that the interface comprises.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,80 +37,80 @@ End Interface
   
 |Terim|Tanım|  
 |---|---|  
-|`attributelist`|İsteğe bağlı. Bkz. [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|İsteğe bağlı. Aşağıdakilerden biri olabilir:<br /><br /> -   [ortak](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [korumalı](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [özel](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [korumalı arkadaş](../../language-reference/modifiers/protected-friend.md)<br/>- [özel korumalı](../../language-reference/modifiers/private-protected.md)<br /><br /> [Visual Basic erişim düzeylerine](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)bakın.|  
-|`Shadows`|İsteğe bağlı. Bkz. [gölgeler](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`name`|Gerekli. Bu arabirimin adı. Bkz. [tanımlanmış öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|İsteğe bağlı. Bunun genel bir arabirim olduğunu belirtir.|  
-|`typelist`|[Anahtar sözcüğünü](../../../visual-basic/language-reference/statements/of-clause.md) kullanıyorsanız gereklidir. Bu arabirim için tür parametrelerinin listesi. İsteğe bağlı olarak, her tür parametresi `In` ve `Out` genel değiştiriciler kullanılarak değişken olarak bildirilemez. Bkz. [tür listesi](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|İsteğe bağlı. Bu arabirimin, başka bir arabirim veya arabirimlerin özniteliklerini ve üyelerini devralandığını belirtir. Bkz. [Inherits açıklaması](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
-|`interfacenames`|@No__t_0 ifadesini kullanıyorsanız gereklidir. Bu arabirimin türettiği arabirimlerin adları.|  
-|`modifiers`|İsteğe bağlı. Tanımlanmakta olan arabirim üyesi için uygun değiştiriciler.|  
-|`Property`|İsteğe bağlı. Arabirimin üyesi olan bir özelliği tanımlar.|  
-|`Function`|İsteğe bağlı. Arabirimin üyesi olan bir `Function` yordamını tanımlar.|  
-|`Sub`|İsteğe bağlı. Arabirimin üyesi olan bir `Sub` yordamını tanımlar.|  
-|`Event`|İsteğe bağlı. Arabirimin üyesi olan bir olayı tanımlar.|  
-|`Interface`|İsteğe bağlı. Bu arabirim içinde iç içe geçmiş bir arabirim tanımlar. İç içe arabirim tanımının bir `End Interface` ifadesiyle sonlandırılması gerekir.|  
-|`Class`|İsteğe bağlı. Arabirimin üyesi olan bir sınıfı tanımlar. Üye sınıfı tanımının bir `End Class` ifadesiyle sonlandırılması gerekir.|  
-|`Structure`|İsteğe bağlı. Arabirimin üyesi olan bir yapıyı tanımlar. Üye yapısı tanımının bir `End Structure` ifadesiyle sonlandırılması gerekir.|  
-|`membername`|Arabirimin bir üyesi olarak tanımlanan her özellik, yordam, olay, arabirim, sınıf veya yapı için gereklidir. Üyenin adı.|  
-|`End Interface`|@No__t_0 tanımını sonlandırır.|  
+|`attributelist`|İsteğe bağlı. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|İsteğe bağlı. Can be one of the following:<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|İsteğe bağlı. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`name`|Gerekli. Name of this interface. See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`Of`|İsteğe bağlı. Specifies that this is a generic interface.|  
+|`typelist`|Required if you use the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword. List of type parameters for this interface. Optionally, each type parameter can be declared variant by using `In` and `Out` generic modifiers. See [Type List](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|İsteğe bağlı. Indicates that this interface inherits the attributes and members of another interface or interfaces. See [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`interfacenames`|Required if you use the `Inherits` statement. The names of the interfaces from which this interface derives.|  
+|`modifiers`|İsteğe bağlı. Appropriate modifiers for the interface member being defined.|  
+|`Property`|İsteğe bağlı. Defines a property that is a member of the interface.|  
+|`Function`|İsteğe bağlı. Defines a `Function` procedure that is a member of the interface.|  
+|`Sub`|İsteğe bağlı. Defines a `Sub` procedure that is a member of the interface.|  
+|`Event`|İsteğe bağlı. Defines an event that is a member of the interface.|  
+|`Interface`|İsteğe bağlı. Defines an interface that is a nested within this interface. The nested interface definition must terminate with an `End Interface` statement.|  
+|`Class`|İsteğe bağlı. Defines a class that is a member of the interface. The member class definition must terminate with an `End Class` statement.|  
+|`Structure`|İsteğe bağlı. Defines a structure that is a member of the interface. The member structure definition must terminate with an `End Structure` statement.|  
+|`membername`|Required for each property, procedure, event, interface, class, or structure defined as a member of the interface. The name of the member.|  
+|`End Interface`|Terminates the `Interface` definition.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- *Arabirim* , Özellikler ve yordamlar gibi bir üye kümesini tanımlar, bu sınıfların ve yapıların uygulayabilirler. Arabirim, iç çalışmalarını değil yalnızca üyelerin imzalarını tanımlar.  
+ An *interface* defines a set of members, such as properties and procedures, that classes and structures can implement. The interface defines only the signatures of the members and not their internal workings.  
   
- Bir sınıf veya yapı, arabirim tarafından tanımlanan her üye için kod sağlayarak arabirimini uygular. Son olarak, uygulama bu sınıf veya yapıdan bir örnek oluşturduğunda, bir nesne var ve bellekte çalışır. Daha fazla bilgi için bkz. [nesneler ve sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) ve [arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ A class or structure implements the interface by supplying code for every member defined by the interface. Finally, when the application creates an instance from that class or structure, an object exists and runs in memory. For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) and [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- Yalnızca ad alanı veya modül düzeyinde `Interface` kullanabilirsiniz. Bu, bir arabirim için *bildirim bağlamının* bir kaynak dosya, ad alanı, sınıf, yapı, modül veya arabirim olması gerektiği anlamına gelir ve bir yordam veya blok olamaz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ You can use `Interface` only at namespace or module level. This means the *declaration context* for an interface must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block. For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Varsayılan olarak, [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md) erişimi için arabirimler. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz. Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Interfaces default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access. You can adjust their access levels with the access modifiers. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Arabirimleri iç içe geçirme.** Bir arabirimi diğeri içinde tanımlayabilirsiniz. Dış arabirime *kapsayan arabirim*denir ve iç arabirime *iç içe arabirim*denir.  
+- **Nesting Interfaces.** You can define one interface within another. The outer interface is called the *containing interface*, and the inner interface is called a *nested interface*.  
   
-- **Üye bildirimi.** Bir özelliğin veya yordamın bir arabirimin üyesi olarak bildirimini yaptığınızda, yalnızca bu özelliğin veya yordamın *imzasını* tanımlamanız gerekir. Buna öğe türü (özellik veya yordam), parametreleri ve parametre türleri ve dönüş türü dahildir. Bu nedenle, üye tanımı yalnızca bir kod satırı kullanır ve `End Function` veya `End Property` gibi sonlandırma deyimleri bir arabirimde geçerli değildir.  
+- **Member Declaration.** When you declare a property or procedure as a member of an interface, you are defining only the *signature* of that property or procedure. This includes the element type (property or procedure), its parameters and parameter types, and its return type. Because of this, the member definition uses only one line of code, and terminating statements such as `End Function` or `End Property` are not valid in an interface.  
   
-     Buna karşılık, bir sabit listesi veya yapı ya da iç içe bir sınıf ya da arabirim tanımladığınızda, veri üyelerini eklemek gereklidir.  
+     In contrast, when you define an enumeration or structure, or a nested class or interface, it is necessary to include their data members.  
   
-- **Üye değiştiricileri.** Modül üyelerini tanımlarken erişim değiştiricilerini veya [aşırı yüklemeler](../../../visual-basic/language-reference/modifiers/overloads.md)hariç [paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md) ya da herhangi bir yordam değiştiricisini belirtebilirsiniz. [Gölgelerin](../../../visual-basic/language-reference/modifiers/shadows.md)bulunduğu herhangi bir üyeyi bildirebilir ve [salt okunur](../../../visual-basic/language-reference/modifiers/readonly.md) veya [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)gibi bir özelliği tanımlarken [varsayılan](../../../visual-basic/language-reference/modifiers/default.md) ' i kullanabilirsiniz.  
+- **Member Modifiers.** You cannot use any access modifiers when defining module members, nor can you specify [Shared](../../../visual-basic/language-reference/modifiers/shared.md) or any procedure modifier except [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md). You can declare any member with [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md), and you can use [Default](../../../visual-basic/language-reference/modifiers/default.md) when defining a property, as well as [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) or [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
   
-- **Devralmayı.** Arabirim [Inherits ifadesini](../../../visual-basic/language-reference/statements/inherits-statement.md)kullanıyorsa, bir veya daha fazla temel arabirim belirtebilirsiniz. Her biri aynı ada sahip bir üye tanımlasa bile iki arabirimden devralma yapabilirsiniz. Bunu yaparsanız, uygulama kodunun hangi üyeyi uygulamakta olduğunu belirtmek için ad nitelemesini kullanması gerekir.  
+- **Inheritance.** If the interface uses the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), you can specify one or more base interfaces. You can inherit from two interfaces even if they each define a member with the same name. If you do so, the implementing code must use name qualification to specify which member it is implementing.  
   
-     Arabirim, daha kısıtlayıcı erişim düzeyine sahip başka bir arabirimden devralınabilir. Örneğin, bir `Public` arabirimi `Friend` arabiriminden devralınabilir.  
+     An interface cannot inherit from another interface with a more restrictive access level. For example, a `Public` interface cannot inherit from a `Friend` interface.  
   
-     Arabirim, içinde iç içe geçmiş bir arabirimden devralınabilir.  
+     An interface cannot inherit from an interface nested within it.  
   
-- **Paylaşır.** Bir sınıf bu arabirimi uygulamak için [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) ifadesini kullandığında, arabirim içinde tanımlanan her üyeyi uygulamalıdır. Ayrıca, uygulama kodundaki her imza, bu arabirimde tanımlanan karşılık gelen imzayla tam olarak eşleşmelidir. Ancak, uygulama kodundaki üyenin adı, arabirimde tanımlanan üye adıyla eşleşmek zorunda değildir.  
+- **Implementation.** When a class uses the [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) statement to implement this interface, it must implement every member defined within the interface. Furthermore, each signature in the implementing code must exactly match the corresponding signature defined in this interface. However, the name of the member in the implementing code does not have to match the member name as defined in the interface.  
   
-     Bir sınıf bir yordamı uygularken, yordamı `Shared` olarak belirleyemez.  
+     When a class is implementing a procedure, it cannot designate the procedure as `Shared`.  
   
-- **Varsayılan özellik.** Arabirim, özellik adı kullanılmadan başvurulabilen en az bir özelliği *varsayılan özelliği*olarak belirtebilir. Böyle bir özelliği [varsayılan](../../../visual-basic/language-reference/modifiers/default.md) değiştiriciyle bildirerek belirtirsiniz.  
+- **Default Property.** An interface can specify at most one property as its *default property*, which can be referenced without using the property name. You specify such a property by declaring it with the [Default](../../../visual-basic/language-reference/modifiers/default.md) modifier.  
   
-     Bunun anlamı, bir arabirimin varsayılan bir özelliği yalnızca hiçbiri devralırsa tanımlayabileceğini unutmayın.  
+     Notice that this means that an interface can define a default property only if it inherits none.  
   
 ## <a name="behavior"></a>Davranış  
   
-- **Erişim düzeyi.** Tüm arabirim üyelerinin dolaylı olarak [genel](../../../visual-basic/language-reference/modifiers/public.md) erişimi vardır. Üye tanımlarken herhangi bir erişim değiştiricisi kullanamazsınız. Ancak, arabirimini uygulayan bir sınıf, uygulanan her üye için bir erişim düzeyi bildirebilirler.  
+- **Access Level.** All interface members implicitly have [Public](../../../visual-basic/language-reference/modifiers/public.md) access. You cannot use any access modifier when defining a member. However, a class implementing the interface can declare an access level for each implemented member.  
   
-     Bir değişkene bir sınıf örneği atarsanız, üyelerinin erişim düzeyi, değişkenin veri türünün temel alınan arabirim veya uygulama sınıfı olmasına bağlı olarak değişebilir. Aşağıdaki örnek bunu göstermektedir.  
+     If you assign a class instance to a variable, the access level of its members can depend on whether the data type of the variable is the underlying interface or the implementing class. Aşağıdaki örnek bunu göstermektedir.  
   
      [!code-vb[VbVbalrStatements#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#39)]  
   
-     @No__t_0 aracılığıyla sınıf üyelerine eriştiğinizde, bunların hepsi ortak erişime sahiptir. Ancak, üyelere `varAsClass` aracılığıyla erişmeniz durumunda `doSomething` `Sub` yordamının özel erişimi vardır.  
+     If you access class members through `varAsInterface`, they all have public access. However, if you access members through `varAsClass`, the `Sub` procedure `doSomething` has private access.  
   
-- **Kapsam.** Arabirim, ad alanı, sınıf, yapı veya modül genelinde kapsamdadır.  
+- **Scope.** An interface is in scope throughout its namespace, class, structure, or module.  
   
-     Her arabirim üyesinin kapsamı tüm arabirimdir.  
+     The scope of every interface member is the entire interface.  
   
-- **Süre.** Bir arabirimin yaşam süresi yoktur ve üyeleri bunu yapmaz. Bir sınıf bir arabirim uygulamışsa ve bu sınıfın bir örneği olarak bir nesne oluşturulduğunda, nesnenin çalıştığı uygulama içinde yaşam süresi vardır. Daha fazla bilgi için bkz. [Class deyimindeki](../../../visual-basic/language-reference/statements/class-statement.md)"Lifetime".  
+- **Lifetime.** An interface does not itself have a lifetime, nor do its members. When a class implements an interface and an object is created as an instance of that class, the object has a lifetime within the application in which it is running. For more information, see "Lifetime" in [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir `Property` ifadesiyle ve bir `Function` ifadesiyle uygulanması gereken `thisInterface` adlı bir arabirim tanımlamak için `Interface` ifadesini kullanır.  
+ The following example uses the `Interface` statement to define an interface named `thisInterface`, which must be implemented with a `Property` statement and a `Function` statement.  
   
  [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
   
- @No__t_0 ve `Function` deyimlerinin, arabirim içinde `End Property` ve `End Function` biten blokları tanıtmadığını unutmayın. Arabirim yalnızca üyelerinin imzalarını tanımlar. Tam `Property` ve `Function` blokları `thisInterface` uygulayan bir sınıfta görüntülenir.  
+ Note that the `Property` and `Function` statements do not introduce blocks ending with `End Property` and `End Function` within the interface. The interface defines only the signatures of its members. The full `Property` and `Function` blocks appear in a class that implements `thisInterface`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -121,7 +121,7 @@ End Interface
 - [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Genel Arabirimlerde Varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- ['Ndaki](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
-- [Dışı](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

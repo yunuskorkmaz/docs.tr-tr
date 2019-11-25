@@ -1,17 +1,17 @@
 ---
-title: Windows sistemlerinde büyük nesne yığını
+title: Windows-.NET üzerinde LOH
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: 618db9faff137e6ff0f878c928e3a889cff37838
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5125b76dd26ffa4fb363ecf8449f65b490f57b93
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120930"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283615"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows sistemlerinde büyük nesne yığını
 
@@ -22,7 +22,7 @@ ms.locfileid: "73120930"
 
 ## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>Bir nesnenin büyük nesne yığınında nasıl sona ereceği ve GC 'nin bunları nasıl işleyeceği
 
-Bir nesne 85.000 bayttan büyükse veya eşitse, büyük bir nesne olarak kabul edilir. Bu sayı performans ayarlaması tarafından belirlendi. Bir nesne ayırma isteği 85.000 veya daha fazla bayt için olduğunda, çalışma zamanı onu büyük nesne yığınında ayırır.
+Bir nesne boyut olarak 85.000 bayttan büyükse veya eşitse, büyük bir nesne olarak kabul edilir. Bu sayı performans ayarlaması tarafından belirlendi. Bir nesne ayırma isteği 85.000 veya daha fazla bayt için olduğunda, çalışma zamanı onu büyük nesne yığınında ayırır.
 
 Bunun ne anlama geldiğini anlamak için .NET GC ile ilgili bazı temelleri incelemek yararlı olacaktır.
 
@@ -48,7 +48,7 @@ Bir çöp toplama tetiklendiğinde, GC canlı nesneler aracılığıyla izler ve
 ![Şekil 1: bir gen 0 GC ve Gen 1 GC](media/loh/loh-figure-1.jpg)\
 Şekil 1: nesil 0 ve 1. nesil GC.
 
-Şekil 2 ' nin, `Obj1` ve `Obj2` yok eden bir 2. nesil GC sonrasında, GC 'nin `Obj1` ve `Obj2`ile dolu boş alan olduğunu ve daha sonra @no__t_ için bir ayırma isteğini karşılamak üzere kullanıldığını gösterir. 4_. Son nesneden sonraki `Obj3`, segmentin sonuna kadar olan boşluk, ayırma isteklerini karşılamak için de kullanılabilir.
+Şekil 2 ' nin, `Obj1` ve `Obj2` yok eden bir 2. nesil GC 'den sonra, GC 'nin `Obj1` ve `Obj2`tarafından kaplanan boş alan olduğunu ve daha sonra `Obj4`için bir ayırma isteğini karşılamak üzere kullanıldığını gösterir. Son nesneden sonraki `Obj3`, segmentin sonuna kadar olan boşluk, ayırma isteklerini karşılamak için de kullanılabilir.
 
 ![Şekil 2: bir gen 2 GC 'den sonra](media/loh/loh-figure-2.jpg)\
 Şekil 2:2. nesil GC 'den sonra
@@ -154,7 +154,7 @@ Bu performans sayaçları genellikle performans sorunlarını araştırmaya yön
 
 Performans sayaçlarından bakmak için yaygın olarak kullanılan bir yöntem, performans Izleyicisine (Perfmon. exe) sahiptir. İlgilendiğiniz işlemlere yönelik ilginç sayaç eklemek için "Sayaç Ekle" öğesini kullanın. Şekil 4 ' ün gösterdiği gibi, performans sayacı verilerini bir günlük dosyasına kaydedebilirsiniz:
 
-performans sayaçlarını eklemeyi gösteren ![ekran göstereni.](media/large-object-heap/add-performance-counter.png)
+performans sayaçlarını eklemeyi gösteren ekran görüntüsünü ![.](media/large-object-heap/add-performance-counter.png)
 Şekil 4:2. nesil GC sonrasında LOH
 
 Performans sayaçları programlama yoluyla da sorgulanabilir. Birçok kişi bu şekilde rutin test sürecinin bir parçası olarak toplanır. Sıradan olmayan değerlere sahip sayaçları fark ettikleri zaman, araştırmaya yardımcı olacak daha ayrıntılı veriler almak için başka bir yöntem kullanır.
@@ -306,7 +306,7 @@ LOH 'nin VM [parçalanmaya](/windows/desktop/api/memoryapi/nf-memoryapi-virtualf
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-Bu komut, hata ayıklayıcıya ayrılır ve çağrı yığınını yalnızca, [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 'tan daha büyük bir ayırma boyutuyla çağrılırsa (0x800000) gösterir.
+Bu komut, hata ayıklayıcıya kesilir ve çağrı yığınını yalnızca, [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 'tan daha büyük bir ayırma boyutuyla (0x800000) çağrıldığında çağrı yığınını gösterir.
 
 CLR 2,0, parçaların (büyük ve küçük nesne yığınlarıyla birlikte) sıklıkla alındığı ve yayımlandığı senaryolar için yararlı olabilecek *VM hoarding* adlı bir özellik ekledi. VM hoarding belirtmek için barındırma API 'SI aracılığıyla `STARTUP_HOARD_GC_VM` adlı bir başlangıç bayrağı belirtirsiniz. CLR, boş kesimleri yeniden işletim sistemine serbest bırakmak yerine bu kesimlerdeki belleği kaydeder ve bir bekleme listesine koyar. (CLR 'nin bunu çok büyük kesimler için yapamadığını unutmayın.) CLR daha sonra yeni segment isteklerini karşılamak için bu segmentleri kullanır. Uygulamanız yeni bir kesime bir dahaki sefer ihtiyaç duyduğunda, CLR, yeterince büyük bir bulması durumunda bu bekleme listesinden bir tane kullanır.
 

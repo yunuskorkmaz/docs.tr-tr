@@ -1,5 +1,5 @@
 ---
-title: Sub Deyimi (Visual Basic)
+title: Sub Deyimi
 ms.date: 05/12/2018
 f1_keywords:
 - vb.Sub
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 7dc0ea1f1b30f5ffb0db8917538adf440c5ef891
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: da498a5e0a3633eb98882aaed145fcd21ab169fd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583197"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346448"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub Deyimi (Visual Basic)
 
-Bir `Sub` yordamını tanımlayan adı, parametreleri ve kodu bildirir.
+Declares the name, parameters, and code that define a `Sub` procedure.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -55,15 +55,15 @@ End Sub
 
 - `attributelist`
 
-  İsteğe bağlı. Bkz. [öznitelik listesi](attribute-list.md).
+  İsteğe bağlı. See [Attribute List](attribute-list.md).
 
 - `Partial`
 
-  İsteğe bağlı. Kısmi bir yöntemin tanımını gösterir. Bkz. [kısmi Yöntemler](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).
+  İsteğe bağlı. Indicates definition of a partial method. See [Partial Methods](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).
 
 - `accessmodifier`
 
-  İsteğe bağlı. Aşağıdakilerden biri olabilir:
+  İsteğe bağlı. Can be one of the following:
 
   - [Public](../modifiers/public.md)
 
@@ -77,11 +77,11 @@ End Sub
 
   - [Private Protected](../../language-reference/modifiers/private-protected.md)
 
-  [Visual Basic erişim düzeylerine](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)bakın.
+  See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
 - `proceduremodifiers`
 
-  İsteğe bağlı. Aşağıdakilerden biri olabilir:
+  İsteğe bağlı. Can be one of the following:
 
   - [Overloads](../modifiers/overloads.md)
 
@@ -99,91 +99,91 @@ End Sub
 
 - `Shared`
 
-  İsteğe bağlı. Bkz. [paylaşılan](../modifiers/shared.md).
+  İsteğe bağlı. See [Shared](../modifiers/shared.md).
 
 - `Shadows`
 
-  İsteğe bağlı. Bkz. [gölgeler](../modifiers/shadows.md).
+  İsteğe bağlı. See [Shadows](../modifiers/shadows.md).
 
 - `Async`
 
-  İsteğe bağlı. Bkz. [zaman uyumsuz](../modifiers/async.md).
+  İsteğe bağlı. See [Async](../modifiers/async.md).
 
 - `name`
 
-  Gerekli. Yordamın adı. Bkz. [tanımlanmış öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Bir sınıf için bir Oluşturucu yordamı oluşturmak için, bir `Sub` yordamının adını `New` anahtar sözcüğüne ayarlayın. Daha fazla bilgi için bkz. [nesne ömrü: nesneleri oluşturma ve yok etme](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+  Gerekli. Name of the procedure. See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword. For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 - `typeparamlist`
 
-  İsteğe bağlı. Genel bir yordamın tür parametrelerinin listesi. Bkz. [tür listesi](type-list.md).
+  İsteğe bağlı. List of type parameters for a generic procedure. See [Type List](type-list.md).
 
 - `parameterlist`
 
-  İsteğe bağlı. Bu yordamın parametrelerini temsil eden yerel değişken adlarının listesi. Bkz. [parametre listesi](parameter-list.md).
+  İsteğe bağlı. List of local variable names representing the parameters of this procedure. See [Parameter List](parameter-list.md).
 
 - `Implements`
 
-  İsteğe bağlı. Bu yordamın, her biri bu yordamın kapsayan sınıf veya yapı tarafından uygulanan bir arabirimde tanımlanan bir veya daha fazla `Sub` yordamlarını uyguladığını gösterir. Bkz. [Implements açıklaması](implements-statement.md).
+  İsteğe bağlı. Indicates that this procedure implements one or more `Sub` procedures, each one defined in an interface implemented by this procedure's containing class or structure. See [Implements Statement](implements-statement.md).
 
 - `implementslist`
 
-  @No__t_0 sağlanırsa gereklidir. Uygulanan `Sub` yordamlarının listesi.
+  Required if `Implements` is supplied. List of `Sub` procedures being implemented.
 
   `implementedprocedure [ , implementedprocedure ... ]`
 
-  Her `implementedprocedure` aşağıdaki söz dizimi ve bölümlere sahiptir:
+  Each `implementedprocedure` has the following syntax and parts:
 
   `interface.definedname`
 
-  |Bölümüyle|Açıklama|
+  |Part|Açıklama|
   |---|---|
-  |`interface`|Gerekli. Bu yordamın kapsayan sınıf veya yapı tarafından uygulanan bir arabirimin adı.|
-  |`definedname`|Gerekli. Yordamın `interface` tanımladığı ad.|
+  |`interface`|Gerekli. Name of an interface implemented by this procedure's containing class or structure.|
+  |`definedname`|Gerekli. Name by which the procedure is defined in `interface`.|
 
 - `Handles`
 
-  İsteğe bağlı. Bu yordamın bir veya daha fazla belirli olayı işleyebileceğini belirtir. Bkz. [işleyiciler](handles-clause.md).
+  İsteğe bağlı. Indicates that this procedure can handle one or more specific events. See [Handles](handles-clause.md).
 
 - `eventlist`
 
-  @No__t_0 sağlanırsa gereklidir. Bu yordamın işleyeceği olayların listesi.
+  Required if `Handles` is supplied. List of events this procedure handles.
 
   `eventspecifier [ , eventspecifier ... ]`
 
-  Her `eventspecifier` aşağıdaki söz dizimi ve bölümlere sahiptir:
+  Each `eventspecifier` has the following syntax and parts:
 
   `eventvariable.event`
 
-  |Bölümüyle|Açıklama|
+  |Part|Açıklama|
   |---|---|
-  |`eventvariable`|Gerekli. Olayı oluşturan sınıfın veya yapının veri türüyle belirtilen nesne değişkeni.|
-  |`event`|Gerekli. Bu yordamın işleyeceği olayın adı.|
+  |`eventvariable`|Gerekli. Object variable declared with the data type of the class or structure that raises the event.|
+  |`event`|Gerekli. Name of the event this procedure handles.|
 
 - `statements`
 
-  İsteğe bağlı. Bu yordam içinde çalıştırılacak deyimler bloğu.
+  İsteğe bağlı. Block of statements to run within this procedure.
 
 - `End Sub`
 
-  Bu yordamın tanımını sonlandırır.
+  Terminates the definition of this procedure.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Tüm yürütülebilir kodların bir yordamın içinde olması gerekir. Çağırma koduna bir değer döndürmek istemediğiniz zaman `Sub` prosedürü kullanın. Bir değer döndürmek istediğinizde `Function` prosedürü kullanın.
+All executable code must be inside a procedure. Use a `Sub` procedure when you don't want to return a value to the calling code. Use a `Function` procedure when you want to return a value.
 
-## <a name="defining-a-sub-procedure"></a>Bir alt yordam tanımlama
+## <a name="defining-a-sub-procedure"></a>Defining a Sub Procedure
 
-Bir `Sub` yordamını yalnızca modül düzeyinde tanımlayabilirsiniz. Bir alt yordamın bildirim bağlamı, bu nedenle bir sınıf, yapı, modül veya arabirim olmalıdır ve kaynak dosya, bir ad alanı, yordam veya bir blok olamaz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](declaration-contexts-and-default-access-levels.md).
+You can define a `Sub` procedure only at the module level. The declaration context for a sub procedure must, therefore, be a class, a structure, a module, or an interface and can't be a source file, a namespace, a procedure, or a block. For more information, see [Declaration Contexts and Default Access Levels](declaration-contexts-and-default-access-levels.md).
 
-yordamları, genel erişim için varsayılan `Sub`. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz.
+`Sub` procedures default to public access. You can adjust their access levels by using the access modifiers.
 
-Yordam `Implements` anahtar sözcüğünü kullanıyorsa, kapsayan sınıf veya yapının, `Class` veya `Structure` deyimlerinden hemen sonraki bir `Implements` ifadesine sahip olması gerekir. @No__t_0 deyimin `implementslist` belirtilen her arabirimi içermesi gerekir. Ancak, bir arabirimin `Sub` tanımladığı adın (`definedname`) bu yordamın adıyla eşleşmesi gerekmez (`name`).
+If the procedure uses the `Implements` keyword, the containing class or structure must have an `Implements` statement that immediately follows its `Class` or `Structure` statement. The `Implements` statement must include each interface that's specified in `implementslist`. However, the name by which an interface defines the `Sub` (in `definedname`) doesn't have to match the name of this procedure (in `name`).
 
-## <a name="returning-from-a-sub-procedure"></a>Bir alt yordamdan dönme
+## <a name="returning-from-a-sub-procedure"></a>Returning from a Sub Procedure
 
-Bir `Sub` yordamı çağıran koda döndüğünde, yürütme onu çağıran deyimden sonra ifadesiyle devam eder.
+When a `Sub` procedure returns to the calling code, execution continues with the statement after the statement that called it.
 
-Aşağıdaki örnekte, bir `Sub` yordamından döndürülen bir dönüş gösterilmektedir.
+The following example shows a return from a `Sub` procedure.
 
 ```vb
 Sub mySub(ByVal q As String)
@@ -191,46 +191,46 @@ Sub mySub(ByVal q As String)
 End Sub
 ```
 
-@No__t_0 ve `Return` deyimleri, bir `Sub` yordamından anında çıkış oluşmasına neden olur. Herhangi bir sayıda `Exit Sub` ve `Return` deyimi yordamda herhangi bir yerde görünebilir ve `Exit Sub` ve `Return` deyimlerini karıştırabilirsiniz.
+The `Exit Sub` and `Return` statements cause an immediate exit from a `Sub` procedure. Any number of `Exit Sub` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Sub` and `Return` statements.
 
-## <a name="calling-a-sub-procedure"></a>Bir alt yordamı çağırma
+## <a name="calling-a-sub-procedure"></a>Calling a Sub Procedure
 
-Bir ifadede yordam adını kullanarak bir `Sub` yordamı çağırır ve ardından bu adı parantez içindeki bağımsız değişken listesiyle takip edersiniz. Parantezleri yalnızca herhangi bir bağımsız değişken belirtmezseniz atlayabilirsiniz. Ancak, her zaman parantezleri eklerseniz kodunuz daha okunabilir.
+You call a `Sub` procedure by using the procedure name in a statement and then following that name with its argument list in parentheses. You can omit the parentheses only if you don't supply any arguments. However, your code is more readable if you always include the parentheses.
 
-@No__t_0 yordamı ve `Function` yordamı parametrelere sahip olabilir ve bir dizi deyim gerçekleştirebilir. Ancak, bir `Function` yordam bir değer döndürür ve bir `Sub` yordamı değildir. Bu nedenle, bir ifadede `Sub` yordamı kullanamazsınız.
+A `Sub` procedure and a `Function` procedure  can have parameters and perform a series of statements. However, a `Function` procedure returns a value, and a `Sub` procedure doesn't. Therefore, you can't use a `Sub` procedure in an expression.
 
-Bir `Sub` yordamını çağırdığınızda `Call` anahtar sözcüğünü kullanabilirsiniz, ancak bu anahtar sözcük çoğu kullanımlar için önerilmez. Daha fazla bilgi için bkz. [Call deyimleri](call-statement.md).
+You can use the `Call` keyword when you call a `Sub` procedure, but that keyword isn't recommended for most uses. For more information, see [Call Statement](call-statement.md).
 
-Visual Basic bazen, iç verimliliği artırmak için aritmetik ifadeleri yeniden düzenler. Bu nedenle, bağımsız değişken listeniz diğer yordamları çağıran ifadeler içeriyorsa, bu ifadelerin belirli bir sırada çağrılacağını varsaymamalıdır.
+Visual Basic sometimes rearranges arithmetic expressions to increase internal efficiency. For that reason, if your argument list includes expressions that call other procedures, you shouldn't assume that those expressions will be called in a particular order.
 
-## <a name="async-sub-procedures"></a>Zaman uyumsuz alt yordamlar
+## <a name="async-sub-procedures"></a>Async Sub Procedures
 
-Async özelliğini kullanarak, zaman uyumsuz işlevleri açık geri çağırmaları kullanmadan çağırabilir veya kodunuzu birden çok işlev veya lambda ifadesine el ile böedebilirsiniz.
+By using the Async feature, you can invoke asynchronous functions without using explicit callbacks or manually splitting your code across multiple functions or lambda expressions.
 
-Bir yordamı [zaman uyumsuz](../modifiers/async.md) değiştiriciyle işaretlerseniz, yordamda [await](../../../visual-basic/language-reference/operators/await-operator.md) işlecini kullanabilirsiniz. Denetim, `Async` yordamındaki bir `Await` ifadesine ulaştığında denetim çağırana döner ve beklenen görev tamamlanana kadar yordamdaki ilerleme durumu askıya alınır. Görev tamamlandığında, yürütme yordamda çalışmaya çalışabilir.
+If you mark a procedure with the [Async](../modifiers/async.md) modifier, you can use the [Await](../../../visual-basic/language-reference/operators/await-operator.md) operator in the procedure. When control reaches an `Await` expression in the `Async` procedure, control returns to the caller, and progress in the procedure is suspended until the awaited task completes. When the task is complete, execution can resume in the procedure.
 
 > [!NOTE]
-> Bir `Async` yordamı, henüz tamamlanmamış ilk beklenen nesne ile karşılaşıldığında ya da `Async` yordamının sonuna ulaşıldığında, hangisi önce gerçekleşirse arayan öğesine geri döner.
+> An `Async` procedure returns to the caller when either the first awaited object that’s not yet complete is encountered or the end of the `Async` procedure is reached, whichever occurs first.
 
-Ayrıca, `Async` değiştiricisiyle bir [Işlev ifadesini](function-statement.md) işaretleyebilirsiniz. @No__t_0 işlevi <xref:System.Threading.Tasks.Task%601> veya <xref:System.Threading.Tasks.Task> dönüş türüne sahip olabilir. Bu konunun ilerleyen kısımlarında yer alan örnek, <xref:System.Threading.Tasks.Task%601> dönüş türüne sahip bir `Async` işlevi gösterir.
+You can also mark a [Function Statement](function-statement.md) with the `Async` modifier. An `Async` function can have a return type of <xref:System.Threading.Tasks.Task%601> or <xref:System.Threading.Tasks.Task>. An example later in this topic shows an `Async` function that has a return type of <xref:System.Threading.Tasks.Task%601>.
 
-`Async` `Sub` yordamlar öncelikle bir değerin döndürülmeyeceğini olay işleyicileri için kullanılır. Bir `Async` `Sub` yordamı beklenemez ve bir `Async` `Sub` yordamının çağıranı `Sub` yordamının oluşturduğunu özel durumları yakalayamaz.
+`Async` `Sub` procedures are primarily used for event handlers, where a value can't be returned. An `Async` `Sub` procedure can't be awaited, and the caller of an `Async` `Sub` procedure can't catch exceptions that the `Sub` procedure throws.
 
-@No__t_0 yordam [ByRef](../modifiers/byref.md) parametreleri bildiremez.
+An `Async` procedure can't declare any [ByRef](../modifiers/byref.md) parameters.
 
-@No__t_0 yordamları hakkında daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama](../../../visual-basic/programming-guide/concepts/async/index.md), [zaman uyumsuz programlarda denetim akışı](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)ve [zaman uyumsuz dönüş türleri](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
+For more information about `Async` procedures, see [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md), [Control Flow in Async Programs](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md), and [Async Return Types](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir `Sub` yordamının gövdesini oluşturan adı, parametreleri ve kodu tanımlamak için `Sub` ifadesini kullanır.
+The following example uses the `Sub` statement to define the name, parameters, and code that form the body of a `Sub` procedure.
 
 [!code-vb[VbVbalrStatements#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#58)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, `DelayAsync` dönüş türü <xref:System.Threading.Tasks.Task%601> olan bir `Async` `Function`. `DelayAsync`, bir tamsayı döndüren bir `Return` bildirimine sahiptir. Bu nedenle `DelayAsync` işlev bildirimi `Task(Of Integer)` dönüş türüne sahip olmalıdır. Dönüş türü `Task(Of Integer)` olduğu için, aşağıdaki deyimde gösterildiği gibi, `DoSomethingAsync` `Await` ifadenin değerlendirmesi bir tamsayı üretir: `Dim result As Integer = Await delayTask`.
+In the following example, `DelayAsync` is an `Async` `Function` that has a return type of <xref:System.Threading.Tasks.Task%601>. `DelayAsync` has a `Return` statement that returns an integer. Therefore, the function declaration of `DelayAsync` must have a return type of `Task(Of Integer)`. Because the return type is `Task(Of Integer)`, the evaluation of the `Await` expression in `DoSomethingAsync` produces an integer, as the following statement shows: `Dim result As Integer = Await delayTask`.
 
-@No__t_0 yordam bir `Async Sub` yordamının bir örneğidir. @No__t_0 bir `Async` işlevi olduğundan, aşağıdaki ifadede gösterildiği gibi, `DoSomethingAsync` çağrısı için de beklenen bir görev olmalıdır: `Await DoSomethingAsync()`. Bir `Await` ifadesi içerdiğinden `startButton_Click` `Sub` yordamının `Async` değiştiricisi ile tanımlanması gerekir.
+The `startButton_Click` procedure is an example of an `Async Sub` procedure. Because `DoSomethingAsync` is an `Async` function, the task for the call to `DoSomethingAsync` must be awaited, as the following statement shows: `Await DoSomethingAsync()`. The `startButton_Click` `Sub` procedure must be defined with the `Async` modifier because it has an `Await` expression.
 
 [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]
 
@@ -241,7 +241,7 @@ Aşağıdaki örnekte, `DelayAsync` dönüş türü <xref:System.Threading.Tasks
 - [Parametre Listesi](parameter-list.md)
 - [Dim Deyimi](dim-statement.md)
 - [Call Deyimi](call-statement.md)
-- [Durumunu](of-clause.md)
+- [Of](of-clause.md)
 - [Parametre Dizileri](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
 - [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Yordam Sorunlarını Giderme](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)

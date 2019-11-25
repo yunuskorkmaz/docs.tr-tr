@@ -1,24 +1,24 @@
 ---
-title: Sıfır Tabanlı ve Visual Basic'te bir tabanlı dize erişimi
+title: Zero-based vs. One-based String Access
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
-ms.openlocfilehash: cc8f286de41d7e44225e889e73ff3c7b1fdbd881
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 97e60038bc7ec0f030939d0980b786bffebcfb9a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591753"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354294"
 ---
-# <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Sıfır Tabanlı ve Visual Basic'te bir tabanlı dize erişimi
-Bu konuda, Visual Basic ve .NET Framework bir dizedeki karakter erişimi nasıl sağladığını karşılaştırır. Visual Basic işlevi bağlı olarak, sıfır tabanlı ve bir tabanlı erişim sağlar ancak .NET Framework, her zaman bir dizedeki karakter sıfır tabanlı erişim sağlar.  
+# <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Visual Basic'de Sıfır Tabanlı ve Bir Tabanlı Dize Erişimi
+This topic compares how Visual Basic and the .NET Framework provide access to the characters in a string. The .NET Framework always provides zero-based access to the characters in a string, whereas Visual Basic provides zero-based and one-based access, depending on the function.  
   
-## <a name="one-based"></a>Bir tabanlı  
- Visual Basic bir tabanlı işlevi örneği için göz önünde bulundurun `Mid` işlevi. İşlem alt dizeyi, konum 1 ile başlayan başlayacağı karakter konumunu belirten bir bağımsız değişken alır. .NET Framework <xref:System.String.Substring%2A?displayProperty=nameWithType> yöntemi alır karakter dizinini alt dizeyi olduğu başlatmak için dizedeki başlangıç konumu 0 ile. Bu nedenle, bir dize "ABCDE" varsa, karakterlerin tek tek ile kullanılmak üzere 1,2,3,4,5 numaralandırılır `Mid` işlevi, ancak ile kullanılmak üzere 0,1,2,3,4 <xref:System.String.Substring%2A?displayProperty=nameWithType> yöntemi.  
+## <a name="one-based"></a>One-Based  
+ For an example of a one-based Visual Basic function, consider the `Mid` function. It takes an argument that indicates the character position at which the substring will start, starting with position 1. The .NET Framework <xref:System.String.Substring%2A?displayProperty=nameWithType> method takes an index of the character in the string at which the substring is to start, starting with position 0. Thus, if you have a string "ABCDE", the individual characters are numbered 1,2,3,4,5 for use with the `Mid` function, but 0,1,2,3,4 for use with the <xref:System.String.Substring%2A?displayProperty=nameWithType> method.  
   
-## <a name="zero-based"></a>Sıfır tabanlı  
- Sıfır tabanlı bir Visual Basic işlev örneği için göz önünde bulundurun `Split` işlevi. Bir dizeyi böler ve alt dizeler içeren bir dizi döndürür. .NET Framework <xref:System.String.Split%2A?displayProperty=nameWithType> yöntemi ayrıca bir dizeyi böler ve alt dizeler içeren bir dizi döndürür. Çünkü `Split` işlevi ve <xref:System.String.Split%2A> yöntem .NET Framework diziler döndürür, sıfır tabanlı olması gerekir.  
+## <a name="zero-based"></a>Zero-Based  
+ For an example of a zero-based Visual Basic function, consider the `Split` function. It splits a string and returns an array containing the substrings. The .NET Framework <xref:System.String.Split%2A?displayProperty=nameWithType> method also splits a string and returns an array containing the substrings. Because the `Split` function and <xref:System.String.Split%2A> method return .NET Framework arrays, they must be zero-based.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -26,4 +26,4 @@ Bu konuda, Visual Basic ve .NET Framework bir dizedeki karakter erişimi nasıl 
 - <xref:Microsoft.VisualBasic.Strings.Split%2A>
 - <xref:System.String.Substring%2A>
 - <xref:System.String.Split%2A>
-- [Visual Basic'de dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Introduction to Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

@@ -1,5 +1,5 @@
 ---
-title: Özyinelemeli Yordamlar (Visual Basic)
+title: Özyinelemeli Yordamlar
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: b08a06a07f134b7c95251848862d39339e59fe61
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 646d4e29ed7a0b6367d4b35a7f8641bcf659e616
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274351"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352551"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Özyinelemeli Yordamlar (Visual Basic)
 
-*Özyinelemeli* yordam kendisini çağıran bir yordamdır. Genel olarak, Visual Basic kodu yazmak için en etkili yol değildir.  
+A *recursive* procedure is one that calls itself. In general, this is not the most effective way to write Visual Basic code.  
   
- Aşağıdaki yordam, orijinal bağımsız değişkeninin faktöriyelini hesaplamak için özyineleme kullanır.  
+ The following procedure uses recursion to calculate the factorial of its original argument.  
   
  [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
-## <a name="considerations-with-recursive-procedures"></a>Özyinelemeli yordamlarla ilgili konular
+## <a name="considerations-with-recursive-procedures"></a>Considerations with Recursive Procedures
 
- **Koşulları sınırlandırma**. Özyineleme 'yi sonlandıran en az bir koşul için test etmek üzere yinelemeli bir yordam tasarlaması gerekir ve ayrıca makul sayıda özyinelemeli çağrı içinde böyle bir koşulun karşılanmadığı durumu da işlemeniz gerekir. Başarısız olmadan karşılanabilecek en az bir koşul olmadan, yordamınız sonsuz bir döngüde yürütmenin yüksek bir riskini çalıştırır.
+ **Limiting Conditions**. You must design a recursive procedure to test for at least one condition that can terminate the recursion, and you must also handle the case where no such condition is satisfied within a reasonable number of recursive calls. Without at least one condition that can be met without fail, your procedure runs a high risk of executing in an infinite loop.
 
- **Bellek kullanımı**. Uygulamanızın yerel değişkenler için sınırlı miktarda alanı vardır. Her bir yordam kendi kendine her çağırdığında, yerel değişkenlerinin ek kopyaları için bu alanın daha fazlasını kullanır. Bu işlem süresiz olarak devam ederse, bir <xref:System.StackOverflowException> hataya neden olur.
+ **Memory Usage**. Your application has a limited amount of space for local variables. Each time a procedure calls itself, it uses more of that space for additional copies of its local variables. If this process continues indefinitely, it eventually causes a <xref:System.StackOverflowException> error.
 
- **Verimlilik**. Özyineleme için neredeyse her zaman bir döngü kullanabilirsiniz. Döngü, bağımsız değişken geçirme, ek depolama başlatma ve değer döndürme ek yüküne sahip değildir. Performans özyinelemeli çağrılar olmadan çok daha iyi olabilir.
+ **Efficiency**. You can almost always substitute a loop for recursion. A loop does not have the overhead of passing arguments, initializing additional storage, and returning values. Your performance can be much better without recursive calls.
 
- **Karşılıklı özyineleme**. İki yordam de varsa, çok kötü performans veya sonsuz bir döngü gözlemleyebilirsiniz. Böyle bir tasarım, tek bir özyinelemeli yordamla aynı sorunları sunar, ancak algılaması ve hata ayıklaması zor olabilir.
+ **Mutual Recursion**. You might observe very poor performance, or even an infinite loop, if two procedures call each other. Such a design presents the same problems as a single recursive procedure, but can be harder to detect and debug.
 
- **Parantez Ile çağırma**. Bir `Function` yordam yinelemeli olarak çağırdığında, bağımsız değişken listesi olmasa bile, parantez ile yordam adını izlemelisiniz. Aksi takdirde, işlev adı işlevin dönüş değerini temsil eden olarak alınır.
+ **Calling with Parentheses**. When a `Function` procedure calls itself recursively, you must follow the procedure name with parentheses, even if there is no argument list. Otherwise, the function name is taken as representing the return value of the function.
 
- **Test ediliyor**. Özyinelemeli bir yordam yazarsanız, her zaman sınırlandırma koşullarını karşıladığından emin olmak için bunu dikkatle sınamanız gerekir. Ayrıca çok fazla özyinelemeli çağrı olduğundan belleği tükendiğinizden emin olmanız gerekir.
+ **Testing**. If you write a recursive procedure, you should test it very carefully to make sure it always meets some limiting condition. You should also ensure that you cannot run out of memory due to having too many recursive calls.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

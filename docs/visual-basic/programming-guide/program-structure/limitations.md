@@ -1,5 +1,5 @@
 ---
-title: Visual Basic Sınırlamaları
+title: Sınırlamalar
 ms.date: 07/20/2015
 helpviewer_keywords:
 - limits
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 9fa0844f4508906ae30b936e41fb4392b74d1437
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f7e19977a011565bb4b1536af5cab195f8a01017
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648725"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347363"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic Sınırlamaları
-Visual Basic'in önceki sürümlerindeki kodda, uzunluğu, değişkeni adları, modülleri ve modül boyutu izin verilen değişken sayısı gibi sınırlar zorunlu. Visual Basic. NET'te, bu kısıtlamalar, yazmak ve kodunuzu düzenleme büyük özgürlüğünü esnek.  
+Earlier versions of Visual Basic enforced boundaries in code, such as the length of variable names, the number of variables allowed in modules, and module size. In Visual Basic .NET, these restrictions have been relaxed, giving you greater freedom in writing and arranging your code.  
   
- Fiziksel sınırlarına derleme zamanı değerlendirmeleri hakkında daha çalışma zamanı bellek bağımlıdır. Akıllıca programlama uygulamaları kullanır ve büyük uygulamalar birden çok sınıflar ve modüller bölmek, iç bir Visual Basic sınırlaması karşılaşıldığında tutulmaları olasılığı yoktur.  
+ Physical limits are dependent more on run-time memory than on compile-time considerations. If you use prudent programming practices, and divide large applications into multiple classes and modules, then there is very little chance of encountering an internal Visual Basic limitation.  
   
- Aşırı durumlarda karşılaşabileceğiniz bazı sınırlamalar aşağıda verilmiştir:  
+ The following are some limitations that you might encounter in extreme cases:  
   
-- **Ad uzunluğu.** Her bildirilmiş programlama öğesinin adı karakter sayısı yoktur. Öğe adı sağlandıysa bu maksimum tüm nitelik dizisi için geçerlidir. Bkz: [bildirilen öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+- **Name Length.** There is a maximum number of characters for the name of every declared programming element. This maximum applies to an entire qualification string if the element name is qualified. See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
-- **Satır uzunluğu.** En fazla 65535 karakterden fiziksel bir kaynak kod satırı yoktur. Mantıksal kaynak kodu satır satır devamlılığı karakterleri kullanırsanız, uzun olabilir. Bkz: [nasıl yapılır: Kodda deyimleri bölme ve birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
+- **Line Length.** There is a maximum of 65535 characters in a physical line of source code. The logical source code line can be longer if you use line continuation characters. See [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
-- **Dizi boyutları.** Boyutları için bir dizi bildirebilirsiniz sayısı üst sınırı yoktur. Bu, bir dizi öğesine belirlemek için kullanabileceğiniz kaç dizinleri sınırlar. Bkz: [dizi boyutları Visual Basic'te](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
+- **Array Dimensions.** There is a maximum number of dimensions you can declare for an array. This limits how many indexes you can use to specify an array element. See [Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
   
-- **Dize uzunluğu.** Tek bir dizede depolayabilirsiniz Unicode karakter sayısı yoktur. Bkz: [dize veri türünde](../../../visual-basic/language-reference/data-types/string-data-type.md).  
+- **String Length.** There is a maximum number of Unicode characters you can store in a single string. See [String Data Type](../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
-- **Ortam dize uzunluğu.** En fazla bir komut satırı bağımsız değişken olarak kullanılan herhangi bir ortam dize için 32.768 karakter yoktur. Bu tüm platformlarda sınırlamasıdır.  
+- **Environment String Length.** There is a maximum of 32768 characters for any environment string used as a command-line argument. This is a limitation on all platforms.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Visual Basic adlandırma kuralları](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

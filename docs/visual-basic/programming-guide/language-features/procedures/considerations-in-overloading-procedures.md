@@ -1,5 +1,5 @@
 ---
-title: Yordamları Aşırı Yüklemeye İlişkin Düşünceler (Visual Basic)
+title: Yordamları Aşırı Yüklemeye İlişkin Düşünceler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - signatures [Visual Basic], ParamArray arguments
@@ -25,65 +25,65 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: bd5b0032ca63ccb2f2cc30d72a5b3f3c7eb3c346
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 4a0cfe176a59b3f90f5850ae8b4e34784c400c6b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775732"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351004"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Yordamları Aşırı Yüklemeye İlişkin Düşünceler (Visual Basic)
-Bir yordamı aşırı yüklerken, her aşırı yüklenmiş sürüm için farklı bir *imza* kullanmanız gerekir. Bu genellikle her sürümün farklı bir parametre listesi belirtmesi gerektiği anlamına gelir. Daha fazla bilgi için [yordam aşırı](./procedure-overloading.md)yüklemesinde "farklı imza" başlığına bakın.  
+When you overload a procedure, you must use a different *signature* for each overloaded version. This usually means each version must specify a different parameter list. For more information, see "Different Signature" in [Procedure Overloading](./procedure-overloading.md).  
   
- Bir `Function` yordamını `Sub` yordamı ile aşırı yükleyebilir ve tam tersi olarak, farklı imzaları vardır. İki aşırı yükleme yalnızca, bir dönüş değerine sahip ve diğeri değil ' de farklı olamaz.  
+ You can overload a `Function` procedure with a `Sub` procedure, and vice versa, provided they have different signatures. Two overloads cannot differ only in that one has a return value and the other does not.  
   
- Bir özelliği, bir yordamı aşırı yükle aynı şekilde ve aynı kısıtlamalara sahip olacak şekilde aşırı yükleyebilirsiniz. Ancak, bir yordamı özellik ile aşırı yükleyemez veya tam tersi de geçerlidir.  
+ You can overload a property the same way you overload a procedure, and with the same restrictions. However, you cannot overload a procedure with a property, or vice versa.  
   
-## <a name="alternatives-to-overloaded-versions"></a>Aşırı yüklenmiş sürümlerin alternatifleri  
- Bazen, özellikle bağımsız değişkenlerin varlığı isteğe bağlı olduğunda veya bu sayının değişken olduğu durumlarda aşırı yüklenmiş sürümlerin alternatifleri vardır.  
+## <a name="alternatives-to-overloaded-versions"></a>Alternatives to Overloaded Versions  
+ You sometimes have alternatives to overloaded versions, particularly when the presence of arguments is optional or their number is variable.  
   
- İsteğe bağlı bağımsız değişkenlerin tüm diller tarafından desteklenmeyeceğini ve parametre dizilerinin Visual Basic sınırlı olduğunu aklınızda bulundurun. Birçok farklı dilde yazılmış koddan çağrılabilir olabilecek bir yordam yazıyorsanız, aşırı yüklenmiş sürümler en büyük esnekliği sunar.  
+ Keep in mind that optional arguments are not necessarily supported by all languages, and parameter arrays are limited to Visual Basic. If you are writing a procedure that is likely to be called from code written in any of several different languages, overloaded versions offer the greatest flexibility.  
   
-### <a name="overloads-and-optional-arguments"></a>Aşırı yüklemeler ve Isteğe bağlı bağımsız değişkenler  
- Çağıran kod isteğe bağlı olarak bir veya daha fazla bağımsız değişken sağlayabilir ya da atlayabilir, birden fazla aşırı yüklü sürümü tanımlayabilir veya isteğe bağlı parametreleri kullanabilirsiniz.  
+### <a name="overloads-and-optional-arguments"></a>Overloads and Optional Arguments  
+ When the calling code can optionally supply or omit one or more arguments, you can define multiple overloaded versions or use optional parameters.  
   
-#### <a name="when-to-use-overloaded-versions"></a>Aşırı yüklenmiş sürümlerin ne zaman kullanılacağı  
- Aşağıdaki durumlarda aşırı yüklenmiş bir dizi sürümü tanımlamayı düşünebilirsiniz:  
+#### <a name="when-to-use-overloaded-versions"></a>When to Use Overloaded Versions  
+ You can consider defining a series of overloaded versions in the following cases:  
   
-- Yordam kodundaki mantık, çağıran kodun isteğe bağlı bir bağımsız değişken olmasına bağlı olarak önemli ölçüde farklılık gösteriyor.  
+- The logic in the procedure code is significantly different depending on whether the calling code supplies an optional argument or not.  
   
-- Yordam kodu, çağıran kodun isteğe bağlı bir bağımsız değişken sağlayıp sağlamadığını güvenilir bir şekilde test edemez. Bu durum, örneğin, çağıran kodun sağlaması beklenmediği bir varsayılan değer için olası bir aday yoksa olur.  
+- The procedure code cannot reliably test whether the calling code has supplied an optional argument. This is the case, for example, if there is no possible candidate for a default value that the calling code could not be expected to supply.  
   
-#### <a name="when-to-use-optional-parameters"></a>Isteğe bağlı parametrelerin ne zaman kullanılacağı  
- Aşağıdaki durumlarda bir veya daha fazla isteğe bağlı parametre tercih edebilirsiniz:  
+#### <a name="when-to-use-optional-parameters"></a>When to Use Optional Parameters  
+ You might prefer one or more optional parameters in the following cases:  
   
-- Çağıran kod için isteğe bağlı bir bağımsız değişken sağlamadan yalnızca gerekli olan eylem, parametreyi varsayılan bir değere ayarlayamamalıdır. Böyle bir durumda, bir veya daha fazla `Optional` parametresiyle tek bir sürüm tanımlarsanız yordam kodu daha karmaşık olabilir.  
+- The only required action when the calling code does not supply an optional argument is to set the parameter to a default value. In such a case, the procedure code can be less complicated if you define a single version with one or more `Optional` parameters.  
   
- Daha fazla bilgi için bkz. [Isteğe bağlı parametreler](./optional-parameters.md).  
+ For more information, see [Optional Parameters](./optional-parameters.md).  
   
-### <a name="overloads-and-paramarrays"></a>Aşırı yüklemeler ve ParamArrays  
- Çağıran kod, değişken sayıda bağımsız değişken geçebilirler, birden fazla aşırı yüklenmiş sürüm tanımlayabilir veya bir parametre dizisi kullanabilirsiniz.  
+### <a name="overloads-and-paramarrays"></a>Overloads and ParamArrays  
+ When the calling code can pass a variable number of arguments, you can define multiple overloaded versions or use a parameter array.  
   
-#### <a name="when-to-use-overloaded-versions"></a>Aşırı yüklenmiş sürümlerin ne zaman kullanılacağı  
- Aşağıdaki durumlarda aşırı yüklenmiş bir dizi sürümü tanımlamayı düşünebilirsiniz:  
+#### <a name="when-to-use-overloaded-versions"></a>When to Use Overloaded Versions  
+ You can consider defining a series of overloaded versions in the following cases:  
   
-- Çağıran kodun parametre dizisine çok az sayıda değerden fazlasını geçirmediğini bilirsiniz.  
+- You know that the calling code never passes more than a small number of values to the parameter array.  
   
-- Yordam kodundaki mantık, çağıran kodun kaç değere geçirdiğine bağlı olarak önemli ölçüde farklılık gösteriyor.  
+- The logic in the procedure code is significantly different depending on how many values the calling code passes.  
   
-- Çağıran kod, farklı veri türlerinin değerlerini geçirebilir.  
+- The calling code can pass values of different data types.  
   
-#### <a name="when-to-use-a-parameter-array"></a>Parametre dizisi ne zaman kullanılır?  
- Aşağıdaki durumlarda bir `ParamArray` parametresi tarafından daha iyi hizmet verilmiştir:  
+#### <a name="when-to-use-a-parameter-array"></a>When to Use a Parameter Array  
+ You are better served by a `ParamArray` parameter in the following cases:  
   
-- Çağıran kodun parametre dizisine kaç değer geçirebildiğini tahmin edemeyeceksiniz ve bu da büyük bir sayı olabilir.  
+- You are not able to predict how many values the calling code can pass to the parameter array, and it could be a large number.  
   
-- Yordamın mantığı, çağıran kodun geçtiği tüm değerlerle yinelemesine, temelde her değer üzerinde aynı işlemleri gerçekleştirmenize olanak sağlar.  
+- The procedure logic lends itself to iterating through all the values the calling code passes, performing essentially the same operations on every value.  
   
- Daha fazla bilgi için bkz. [parametre dizileri](./parameter-arrays.md).  
+ For more information, see [Parameter Arrays](./parameter-arrays.md).  
   
-## <a name="implicit-overloads-for-optional-parameters"></a>Isteğe bağlı parametreler için örtük aşırı yüklemeler  
- [Isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) parametresine sahip bir yordam, biri isteğe bağlı parametre ve diğeri olmadan olan iki aşırı yüklenmiş yordama eşdeğerdir. Bu tür bir yordamı, bunlardan birine karşılık gelen bir parametre listesi ile aşırı yükleyemezsiniz. Aşağıdaki bildirimlerde bu gösterilmektedir.  
+## <a name="implicit-overloads-for-optional-parameters"></a>Implicit Overloads for Optional Parameters  
+ A procedure with an [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) parameter is equivalent to two overloaded procedures, one with the optional parameter and one without it. You cannot overload such a procedure with a parameter list corresponding to either of these. The following declarations illustrate this.  
   
  [!code-vb[VbVbcnProcedures#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#58)]  
   
@@ -91,35 +91,35 @@ Bir yordamı aşırı yüklerken, her aşırı yüklenmiş sürüm için farklı
   
  [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
- Birden fazla isteğe bağlı parametreye sahip bir yordam için, önceki örnekteki şuna benzer şekilde, mantığa göre gelen bir dizi örtük aşırı yükleme vardır.  
+ For a procedure with more than one optional parameter, there is a set of implicit overloads, arrived at by logic similar to that in the preceding example.  
   
-## <a name="implicit-overloads-for-a-paramarray-parameter"></a>ParamArray parametresi için örtük aşırı yüklemeler  
- Derleyici, bir [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametresi ile bir yordamı, çağıran kodun parametre dizisine ne kadar başarılı bir şekilde (örneğin, aşağıdaki şekilde) geçirdiklerinde farklılık gösteren sınırsız sayıda aşırı yüklemeye sahip olacak şekilde değerlendirir:  
+## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Implicit Overloads for a ParamArray Parameter  
+ The compiler considers a procedure with a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter to have an infinite number of overloads, differing from each other in what the calling code passes to the parameter array, as follows:  
   
-- Çağıran kodun `ParamArray` bir bağımsız değişken sağlamamasının bir aşırı yüklemesi  
+- One overload for when the calling code does not supply an argument to the `ParamArray`  
   
-- Çağıran kod `ParamArray` öğesi türünün tek boyutlu dizisini sağladığı zaman için bir aşırı yükleme  
+- One overload for when the calling code supplies a one-dimensional array of the `ParamArray` element type  
   
-- Her pozitif tamsayı için, çağıran kod bu sayıda bağımsız değişken sağladığı zaman için bir aşırı yükleme, her `ParamArray` öğesi türü  
+- For every positive integer, one overload for when the calling code supplies that number of arguments, each of the `ParamArray` element type  
   
- Aşağıdaki bildirimlerde bu örtük aşırı yüklemeler gösterilmektedir.  
+ The following declarations illustrate these implicit overloads.  
   
  [!code-vb[VbVbcnProcedures#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#68)]  
   
  [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
- Parametre dizisi için tek boyutlu bir dizi alan bir parametre listesiyle bu tür bir yordamı aşırı yükleyemezsiniz. Ancak, diğer örtük aşırı yüklemelerin imzalarını kullanabilirsiniz. Aşağıdaki bildirimlerde bu gösterilmektedir.  
+ You cannot overload such a procedure with a parameter list that takes a one-dimensional array for the parameter array. However, you can use the signatures of the other implicit overloads. The following declarations illustrate this.  
   
  [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
-## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Aşırı yükleme için alternatif olarak Türsüz programlama  
- Çağıran kodun bir parametreye farklı veri türleri geçirmeye izin vermek istiyorsanız, alternatif bir yaklaşım türsüz bir programdır. Tür denetimini, [Strict ifadesiyle](../../../../visual-basic/language-reference/statements/option-strict-statement.md) ya da [-optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) derleyici seçeneğiyle `Off` olarak ayarlayabilirsiniz. Daha sonra parametrenin veri türünü bildirmeniz gerekmez. Ancak bu yaklaşım, aşırı yükleme ile karşılaştırıldığında aşağıdaki dezavantajlara sahiptir:  
+## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Typeless Programming as an Alternative to Overloading  
+ If you want to allow the calling code to pass different data types to a parameter, an alternative approach is typeless programming. You can set the type checking switch to `Off` with either the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) or the [-optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) compiler option. Then you do not have to declare the parameter's data type. However, this approach has the following disadvantages compared to overloading:  
   
-- Türsüz programlama daha az verimli yürütme kodu üretir.  
+- Typeless programming produces less efficient execution code.  
   
-- Yordamın anticipates geçirildiği her veri türü için test olması gerekir.  
+- The procedure must test for every data type it anticipates being passed.  
   
-- Çağıran kod, yordamın desteklemediği bir veri türünü geçerse derleyici bir hata sinyalini alamaz.  
+- The compiler cannot signal an error if the calling code passes a data type that the procedure does not support.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

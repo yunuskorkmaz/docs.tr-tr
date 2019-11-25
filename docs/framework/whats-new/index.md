@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: be6f6b2d2213e96bc4e695ffbf7bc77f755ed492
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ffcb288995975433bdd915362fccca03f345b5f5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454991"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281662"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework yenilikler
 
@@ -69,9 +69,9 @@ Bir uygulamanın yardımcı teknoloji kullanıcıları için uygun bir deneyim s
 
 #### <a name="base-classes"></a>Temel sınıflar
 
-**Şifrelemeye göre daha az FIPS etkisi**. .NET Framework önceki sürümlerinde, Sistem şifreleme kitaplıkları "FIPS modunda" yapılandırıldığında, <xref:System.Security.Cryptography.SHA256Managed> gibi yönetilen şifreleme sağlayıcısı sınıfları <xref:System.Security.Cryptography.CryptographicException> oluşturur. Bu özel durumlar, Sistem şifreleme kitaplıklarının aksine, şifreleme sağlayıcısı sınıflarının yönetilen sürümlerinin FIPS (Federal bilgi Işleme standartları) 140-2 sertifikası olmadığı için oluşturulur. Bazı geliştiricilerin geliştirme makineleri FIPS modunda olduğundan, özel durumlar genellikle üretim sistemlerinde oluşturulur.
+**Şifrelemeye göre daha az FIPS etkisi**. .NET Framework önceki sürümlerinde, <xref:System.Security.Cryptography.SHA256Managed> gibi yönetilen şifreleme sağlayıcısı sınıfları, Sistem şifreleme kitaplıkları "FIPS modunda" yapılandırıldığında bir <xref:System.Security.Cryptography.CryptographicException> oluşturur. Bu özel durumlar, Sistem şifreleme kitaplıklarının aksine, şifreleme sağlayıcısı sınıflarının yönetilen sürümlerinin FIPS (Federal bilgi Işleme standartları) 140-2 sertifikası olmadığı için oluşturulur. Bazı geliştiricilerin geliştirme makineleri FIPS modunda olduğundan, özel durumlar genellikle üretim sistemlerinde oluşturulur.
 
-Varsayılan olarak, .NET Framework 4,8 ' i hedefleyen uygulamalarda aşağıdaki yönetilen şifreleme sınıfları artık bu durumda <xref:System.Security.Cryptography.CryptographicException> oluşturmaz:
+.NET Framework 4,8 ' i hedefleyen uygulamalarda varsayılan olarak, aşağıdaki yönetilen şifreleme sınıfları artık bu durumda bir <xref:System.Security.Cryptography.CryptographicException> oluşturmaz:
 
 - <xref:System.Security.Cryptography.MD5Cng>
 - <xref:System.Security.Cryptography.MD5CryptoServiceProvider>
@@ -80,7 +80,7 @@ Varsayılan olarak, .NET Framework 4,8 ' i hedefleyen uygulamalarda aşağıdaki
 - <xref:System.Security.Cryptography.RIPEMD160Managed>
 - <xref:System.Security.Cryptography.SHA256Managed>
 
-Bunun yerine, bu sınıflar şifreleme işlemlerini bir sistem şifreleme kitaplığına yönlendirir. Bu değişiklik, geliştirici ortamları ve üretim ortamları arasındaki kafa karıştırıcı bir farkı etkili bir şekilde kaldırır ve yerel bileşenlerin ve yönetilen bileşenlerin aynı şifreleme ilkesi altında çalışmasını sağlar. Bu özel durumlara bağımlı uygulamalar, AppContext anahtarını `Switch.System.Security.Cryptography.UseLegacyFipsThrow` ' ı `true` ' i ayarlayarak önceki davranışı geri yükleyebilir. Daha fazla bilgi için bkz. [yönetilen şifreleme SıNıFLARı FIPS modunda Cryptographyıexception](../migration-guide/retargeting/4.7.2-4.8.md#managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode)oluşturmaz.
+Bunun yerine, bu sınıflar şifreleme işlemlerini bir sistem şifreleme kitaplığına yönlendirir. Bu değişiklik, geliştirici ortamları ve üretim ortamları arasındaki kafa karıştırıcı bir farkı etkili bir şekilde kaldırır ve yerel bileşenlerin ve yönetilen bileşenlerin aynı şifreleme ilkesi altında çalışmasını sağlar. Bu özel durumlara bağımlı uygulamalar, AppContext anahtar `Switch.System.Security.Cryptography.UseLegacyFipsThrow` `true`olarak ayarlayarak önceki davranışı geri yükleyebilir. Daha fazla bilgi için bkz. [yönetilen şifreleme SıNıFLARı FIPS modunda Cryptographyıexception](../migration-guide/retargeting/4.7.2-4.8.md#managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode)oluşturmaz.
 
 **ZLib 'in güncelleştirilmiş sürümünün kullanımı**
 
@@ -94,7 +94,7 @@ Bunun yerine, bu sınıflar şifreleme işlemlerini bir sistem şifreleme kitapl
 
 Sistem durumu uç noktaları, Hizmetleri sistem durumlarına göre yönetmek için Orchestration araçları tarafından yaygın olarak kullanılır. Sistem durumu denetimleri, bir hizmetin kullanılabilirliği ve performansı hakkında bildirimler izlemek ve bu bildirimleri sağlamak için izleme araçları tarafından da kullanılabilir.
 
-**Servicehealthbehavior** <xref:System.ServiceModel.Description.IServiceBehavior> ' i GENIŞLETEN bir WCF hizmeti davranışıdır.  <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> koleksiyonuna eklendiğinde, bir hizmet davranışı şunları yapar:
+**Servicehealthbehavior** , <xref:System.ServiceModel.Description.IServiceBehavior>GENIŞLETEN bir WCF hizmeti davranışıdır.  <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> koleksiyonuna eklendiğinde, bir hizmet davranışı şunları yapar:
 
 - HTTP yanıt kodlarıyla hizmet sistem durumu döndürür. Bir HTTP/GET Health araştırma isteği için HTTP durum kodunu bir sorgu dizesinde belirtebilirsiniz.
 
@@ -136,20 +136,20 @@ Sistem durumu uç noktasını açığa çıkarmak ve WCF hizmeti durum bilgileri
   </behaviors>
   ```
 
-Hizmetin sistem durumu, `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded`) gibi sorgu parametreleri kullanılarak sorgulanabilir ve her sorgu parametresi için bir HTTP yanıt kodu belirlenebilir. Bir sorgu parametresi için HTTP yanıt kodu atlanırsa, varsayılan olarak bir 503 HTTP yanıt kodu kullanılır. Örneğin:
+Hizmetin sistem durumu, `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded`) gibi sorgu parametreleri kullanılarak sorgulanabilir ve her sorgu parametresi için bir HTTP yanıt kodu belirtilebilir. Bir sorgu parametresi için HTTP yanıt kodu atlanırsa, varsayılan olarak bir 503 HTTP yanıt kodu kullanılır. Örneğin:
 
 - OnServiceFailure: `https://contoso:81/Service1?health&OnServiceFailure=450`
 
-  [ServiceHost. State](xref:System.ServiceModel.Channels.CommunicationObject.State) <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType> ' den büyükse, 450 http yanıt durum kodu döndürülür.
+  ServiceHost olduğunda bir 450 HTTP yanıt durum kodu döndürülür. [durum](xref:System.ServiceModel.Channels.CommunicationObject.State) <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>'den büyük.
 Sorgu parametreleri ve örnekleri:
 
 - OnDispatcherFailure: `https://contoso:81/Service1?health&OnDispatcherFailure=455`
 
-  Bir 455 HTTP yanıt durum kodu, kanal sevkiyatlarından birinin durumu <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType> ' dan büyükse döndürülür.
+  Bir 455 HTTP yanıt durum kodu, kanal sevkiyatlarından birinin durumu <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>daha büyükse döndürülür.
 
 - OnListenerFailure: `https://contoso:81/Service1?health&OnListenerFailure=465`
 
-  Kanal dinleyicilerinin herhangi birinin durumu <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType> ' dan büyükse, 465 HTTP yanıt durum kodu döndürülür.
+  Kanal dinleyicilerinin herhangi birinin durumu <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>daha büyükse, 465 HTTP yanıt durum kodu döndürülür.
 
 - Onthrottleyüztexcebaşında: `https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
 
@@ -161,7 +161,7 @@ Sorgu parametreleri ve örnekleri:
 
   - Aksi takdirde, 200 döndürülür.
 
-Hizmet sistem durumu, `https://contoso:81/Service1?health&Xml` gibi bir sorgu dizesi belirterek, `https://contoso:81/Service1?health` veya XML gibi bir sorgu dizesi belirterek HTML içinde görüntülenebilir. `https://contoso:81/Service1?health&NoContent` gibi bir sorgu dizesi boş bir HTML sayfası döndürüyor.
+Hizmet sistem durumu, `https://contoso:81/Service1?health&Xml`gibi bir sorgu dizesi belirterek, `https://contoso:81/Service1?health` veya XML gibi bir sorgu dizesi belirterek HTML içinde görüntülenebilir. `https://contoso:81/Service1?health&NoContent` gibi bir sorgu dizesi boş bir HTML sayfası döndürüyor.
 
 <a name="wpf48" />
 
@@ -171,7 +171,7 @@ Hizmet sistem durumu, `https://contoso:81/Service1?health&Xml` gibi bir sorgu di
 
 .NET Framework 4,8 ' de WPF, Monitor v2 DPı tanıma ve karma mod DPı ölçeklendirme için destek ekler. Yüksek DPı geliştirmesi hakkında daha fazla bilgi için bkz. [Windows üzerinde yüksek DPI masaüstü uygulaması geliştirme](/windows/win32/hidpi/high-dpi-desktop-application-development-on-windows) .
 
-.NET Framework 4,8, karma mod DPı ölçeklendirmesini (Windows 10 Nisan 2018 ' den başlayarak) destekleyen platformlar üzerindeki yüksek DPı WPF uygulamalarında barındırılan HWNDs ve Windows Forms birlikte çalışabilirlik desteğini geliştirir. Barındırılan HWNDs veya Windows Forms denetimleri [Setthreaddpihostingbehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) ve [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext)çağırarak karışık mod DPI ölçekli pencereler olarak oluşturulduysa, her bir Monitor v2 WPF uygulamasında barındırılabilir ve boyutlandırılabilir ve uygun şekilde ölçeklendirildi. Bu tür barındırılan içerikler yerel DPı 'de işlenmez; Bunun yerine, işletim sistemi barındırılan içeriği uygun boyuta ölçeklendirir. Monitör başına v2 DPı tanıma moduna yönelik destek Ayrıca, WPF denetimlerinin yüksek DPı uygulamasındaki yerel bir pencerede barındırılmasına (yani, üstü olarak) olanak tanır.
+.NET Framework 4,8, karma mod DPı ölçeklendirmesini (Windows 10 Nisan 2018 ' den başlayarak) destekleyen platformlar üzerindeki yüksek DPı WPF uygulamalarında barındırılan HWNDs ve Windows Forms birlikte çalışabilirlik desteğini geliştirir. Barındırılan HWNDs veya Windows Forms denetimleri [Setthreaddpihostingbehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) ve [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext)çağırarak karışık modlu DPI ölçekli pencereler olarak oluşturulduysa, her bir Monitor v2 WPF uygulamasında barındırılabilir ve uygun şekilde boyutlandırılabilir ve ölçeklenirler. Bu tür barındırılan içerikler yerel DPı 'de işlenmez; Bunun yerine, işletim sistemi barındırılan içeriği uygun boyuta ölçeklendirir. Monitör başına v2 DPı tanıma moduna yönelik destek Ayrıca, WPF denetimlerinin yüksek DPı uygulamasındaki yerel bir pencerede barındırılmasına (yani, üstü olarak) olanak tanır.
 
 Karma mod yüksek DPı ölçeklendirme desteğini etkinleştirmek için aşağıdaki [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) anahtarlarını uygulama yapılandırma dosyasına ayarlayabilirsiniz:
 
@@ -201,7 +201,7 @@ Karma mod yüksek DPı ölçeklendirme desteğini etkinleştirmek için aşağı
 
 - [Temel sınıflar](#core-472)
 - [ASP.NET](#asp-net472)
-- [İşlemleri](#net472)
+- [Ağ](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -314,7 +314,7 @@ PFX içeri aktarma isteğe bağlı olarak, sabit sürücüyü atlayarak özel an
 
 - Bu şekilde yüklenen anahtarlar neredeyse her zaman Windows CNG aracılığıyla yüklenir. Bu nedenle, çağıranlar, CERT gibi uzantı yöntemlerini çağırarak özel anahtara erişmelidir [. GetRSAPrivateKey ()](xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey%2A). <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PrivateKey?displayProperty=nameWithType> özelliği çalışmıyor.
 
-- Eski <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PrivateKey?displayProperty=nameWithType> özelliği sertifikalarla birlikte çalışmadıklarından, geliştiricilerin kısa ömürlü anahtarlara geçmeden önce ciddi testler gerçekleştirmesi gerekir.
+- Eski <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PrivateKey?displayProperty=nameWithType> özelliği sertifikalarla çalışmadıklarından, geliştiricilerin kısa ömürlü anahtarlara geçmeden önce ciddi testler gerçekleştirmesi gerekir.
 
 **PKCS # 10 sertifika imzalama istekleri ve X. 509.440 ortak anahtar sertifikalarının programlı bir şekilde oluşturulması**
 
@@ -340,7 +340,7 @@ Dim cStream = New CryptoStream(stream, transform, mode, leaveOpen:=true)
 
 **DeflateStream 'de değişiklikleri açma**
 
-.NET Framework 4.7.2 ile başlayarak, <xref:System.IO.Compression.DeflateStream> sınıfındaki açma işlemlerinin uygulanması varsayılan olarak yerel Windows API 'Lerini kullanacak şekilde değiştirilmiştir. Genellikle bu, önemli ölçüde performans geliştirmesine neden olur.
+.NET Framework 4.7.2 ' den itibaren, <xref:System.IO.Compression.DeflateStream> sınıfında açma işlemlerinin uygulanması, varsayılan olarak yerel Windows API 'Lerini kullanacak şekilde değiştirilmiştir. Genellikle bu, önemli ölçüde performans geliştirmesine neden olur.
 
 Windows API 'Leri kullanarak açma desteği, .NET Framework 4.7.2 ' i hedefleyen uygulamalar için varsayılan olarak etkinleştirilmiştir. .NET Framework önceki sürümlerini hedefleyen ancak .NET Framework 4.7.2 altında çalışan uygulamalar, uygulama yapılandırma dosyasına aşağıdaki [AppContext anahtarını](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) ekleyerek bu davranışı kabul edebilir:
 
@@ -350,9 +350,9 @@ Windows API 'Leri kullanarak açma desteği, .NET Framework 4.7.2 ' i hedefleyen
 
 **Ek koleksiyon API 'Leri**
 
-.NET Framework 4.7.2, <xref:System.Collections.Generic.SortedSet%601> ve <xref:System.Collections.Generic.HashSet%601> türlerine bir dizi yeni API ekler. Bu güncelleştirmeler şunlardır:
+.NET Framework 4.7.2, <xref:System.Collections.Generic.SortedSet%601> ve <xref:System.Collections.Generic.HashSet%601> türlerine bir dizi yeni API ekler. Bunlar:
 
-- `TryGetValue` yöntemleri, diğer koleksiyon türlerinde kullanılan try modelini bu iki türe genişletir. Yöntemler şunlardır:
+- diğer koleksiyon türlerinde kullanılan try modelini bu iki türe genişleten `TryGetValue` yöntemleri. Yöntemler şunlardır:
 
   - [Genel bool HashSet\<T >. TryGetValue (T equalValue, out gerçek değeri)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
   - [Genel bool SortedSet\<T >. TryGetValue (T equalValue, out gerçek değeri)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
@@ -397,7 +397,7 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 **Aynı site tanımlama bilgileri için destek**
 
-[SameSite](https://tools.ietf.org/html/draft-west-first-party-cookies-07) , bir tarayıcının bir siteler arası istekle birlikte tanımlama bilgisi göndermesini engeller. .NET Framework 4.7.2, değeri <xref:System.Web.SameSiteMode?displayProperty=nameWithType> numaralandırma üyesi olan bir <xref:System.Web.HttpCookie.SameSite?displayProperty=nameWithType> özelliği ekler. Değeri <xref:System.Web.SameSiteMode.Strict?displayProperty=nameWithType> veya <xref:System.Web.SameSiteMode.Lax?displayProperty=nameWithType> ise, ASP.NET, set-Cookie başlığına `SameSite` özniteliğini ekler. SameSite desteği <xref:System.Web.HttpCookie> nesnelerine, <xref:System.Web.Security.FormsAuthentication> ve <xref:System.Web.SessionState> tanımlama bilgilerine de uygulanır.
+[SameSite](https://tools.ietf.org/html/draft-west-first-party-cookies-07) , bir tarayıcının bir siteler arası istekle birlikte tanımlama bilgisi göndermesini engeller. .NET Framework 4.7.2, değeri <xref:System.Web.SameSiteMode?displayProperty=nameWithType> numaralandırma üyesi olan bir <xref:System.Web.HttpCookie.SameSite?displayProperty=nameWithType> özelliği ekler. Değeri <xref:System.Web.SameSiteMode.Strict?displayProperty=nameWithType> veya <xref:System.Web.SameSiteMode.Lax?displayProperty=nameWithType>ise, ASP.NET, set-Cookie başlığına `SameSite` özniteliğini ekler. SameSite desteği <xref:System.Web.HttpCookie> nesneler için, <xref:System.Web.Security.FormsAuthentication> ve <xref:System.Web.SessionState> tanımlama bilgilerine de uygulanır.
 
 <xref:System.Web.HttpCookie> nesne için SameSite ' i aşağıdaki gibi ayarlayabilirsiniz:
 
@@ -434,11 +434,11 @@ Web yapılandırma dosyasını değiştirerek <xref:System.Web.Security.FormsAut
 
 <a name="net472" />
 
-#### <a name="networking"></a>Ağ Oluşturma
+#### <a name="networking"></a>Ağ
 
 **HttpClientHandler özelliklerinin uygulanması**
 
-.NET Framework 4.7.1, <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType> sınıfına sekiz özellik ekledi. Ancak, ikisi bir <xref:System.PlatformNotSupportedException>oluşturdu. .NET Framework 4.7.2 artık bu özellikler için bir uygulama sağlar. Özellikler şunlardır:
+.NET Framework 4.7.1 <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType> sınıfına sekiz özellik ekledi. Ancak, ikisi bir <xref:System.PlatformNotSupportedException>oluşturdu. .NET Framework 4.7.2 artık bu özellikler için bir uygulama sağlar. Özellikler şunlardır:
 
 - <xref:System.Net.Http.HttpClientHandler.CheckCertificateRevocationList>
 - <xref:System.Net.Http.HttpClientHandler.SslProtocols>
@@ -451,21 +451,21 @@ Web yapılandırma dosyasını değiştirerek <xref:System.Web.Security.FormsAut
 
 Büyüyen uyumluluk ve güvenlik talepleri birçok müşterinin Multi-Factor Authentication (MFA) kullanmasını gerektirir. Ayrıca, geçerli en iyi uygulamalar Kullanıcı parolalarını doğrudan bağlantı dizelerine dahil etmekten kaçınarak. Bu değişiklikleri desteklemek için, 4.7.2 ve [Azure AD kimlik doğrulamasını](/azure/sql-database/sql-database-aad-authentication-configure)desteklemek üzere mevcut "Authentication" anahtar sözcüğü için yeni bir değer ekleyerek [SQLClient bağlantı dizelerini](xref:System.Data.SqlClient.SqlConnection.ConnectionString) Active Directory ".NET Framework genişletir. Yeni etkileşimli Yöntem, yerel ve Federal Azure AD kullanıcılarını ve Azure AD Konuk kullanıcılarını destekler. Bu yöntem kullanıldığında, Azure AD tarafından uygulanan MFA kimlik doğrulaması SQL veritabanları için desteklenir. Ayrıca, kimlik doğrulama işlemi, en iyi güvenlik uygulamalarına uyacak şekilde bir Kullanıcı parolası ister.
 
-.NET Framework önceki sürümlerinde SQL bağlantısı yalnızca <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryPassword?displayProperty=nameWithType> ve <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryIntegrated?displayProperty=nameWithType> seçeneklerini destekliyordu. Bunların her ikisi de, MFA 'yı desteklemeyen, etkileşimli olmayan [adal protokolünün](/azure/active-directory/develop/active-directory-authentication-libraries)bir parçasıdır. Yeni <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryInteractive?displayProperty=nameWithType> seçeneği ile, SQL bağlantısı MFA 'yı ve mevcut kimlik doğrulama yöntemlerini (parola ve tümleşik kimlik doğrulaması) destekler, böylece kullanıcılar bağlantı dizesinde kalıcı parolalar olmadan Kullanıcı parolalarını etkileşimli olarak girebilir.
+.NET Framework önceki sürümlerinde SQL bağlantısı yalnızca <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryPassword?displayProperty=nameWithType> ve <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryIntegrated?displayProperty=nameWithType> seçeneklerini destekliyordu. Bunların her ikisi de, MFA 'yı desteklemeyen, etkileşimli olmayan [adal protokolünün](/azure/active-directory/develop/active-directory-authentication-libraries)bir parçasıdır. Yeni <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryInteractive?displayProperty=nameWithType> seçeneğiyle, SQL bağlantısı MFA 'yı ve mevcut kimlik doğrulama yöntemlerini (parola ve tümleşik kimlik doğrulaması) destekler, böylece kullanıcılar bağlantı dizesinde kalıcı parolalar olmadan Kullanıcı parolalarını etkileşimli olarak girebilir.
 
 Daha fazla bilgi ve örnek için [.net blogdaki](https://devblogs.microsoft.com/dotnet/net-framework-4-7-2-developer-pack-early-access-build-3056-is-available/)"SQL--Azure AD Universal ve Multi-Factor Authentication support" başlığına bakın.
 
 **Always Encrypted sürüm 2 için destek**
 
-NET Framework 4.7.2, şifreleme tabanlı Always Encrypted destekler. Always Encrypted orijinal sürümü, şifreleme anahtarlarının istemciden hiçbir şekilde ayrılmayacağı istemci tarafı bir şifreleme teknolojisidir. Encde tabanlı Always Encrypted, istemci isteğe bağlı olarak, SQL Server bir parçası olarak kabul edilebilir ancak SQL Server kodu ile oynanamaz güvenli bir hesaplama varlığı olan güvenli bir kuşya şifreleme anahtarlarını gönderebilir. .NET Framework 4.7.2, kuşatma tabanlı Always Encrypted desteklemek için, <xref:System.Data.SqlClient> ad alanına aşağıdaki türleri ve üyeleri ekler:
+NET Framework 4.7.2, şifreleme tabanlı Always Encrypted destekler. Always Encrypted orijinal sürümü, şifreleme anahtarlarının istemciden hiçbir şekilde ayrılmayacağı istemci tarafı bir şifreleme teknolojisidir. Encde tabanlı Always Encrypted, istemci isteğe bağlı olarak, SQL Server bir parçası olarak kabul edilebilir ancak SQL Server kodu ile oynanamaz güvenli bir hesaplama varlığı olan güvenli bir kuşya şifreleme anahtarlarını gönderebilir. Kuşatma tabanlı Always Encrypted desteklemek için .NET Framework 4.7.2, <xref:System.Data.SqlClient> ad alanına aşağıdaki türleri ve üyeleri ekler:
 
 - <xref:System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl?displayProperty=nameWithType>, şifreleme tabanlı Always Encrypted URI 'sini belirtir.
 
 - Tüm kuşve sağlayıcılarının türetildiği soyut bir sınıf olan <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider>.
 
-- <xref:System.Data.SqlClient.SqlEnclaveSession>, belirli bir şifreleme oturumunun durumunu kapsüller.
+- <xref:System.Data.SqlClient.SqlEnclaveSession>, belirli bir şifreleme oturumunun durumunu kapsülleyen.
 
-- <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>, belirli bir kanıtlama protokolünü yürütmek için gereken bilgileri almak üzere SQL Server tarafından kullanılan kanıtlama parametrelerini sağlar.
+- <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>, belirli bir kanıtlama protokolünü yürütmek için gereken bilgileri almak üzere SQL Server tarafından kullanılan kanıtlama parametrelerini sağlayan.
 
 Uygulama yapılandırma dosyası daha sonra, şifreleme sağlayıcısı için işlevselliği sağlayan soyut <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> sınıfının somut bir uygulamasını belirtir. Örneğin:
 
@@ -517,9 +517,9 @@ Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagn
 
 **ResourceDictionary sahiplerini bulma**
 
-.NET Framework 4.7.2 ile başlayarak bir tanılama Yardımcısı, belirli bir <xref:Windows.UI.Xaml.ResourceDictionary> ' ın sahiplerini bulabilir. (Özelliği, üretim uygulamalarına göre değil, tanılama yardımcıları tarafından kullanılır.) Bir <xref:Windows.UI.Xaml.ResourceDictionary>her değişiklik yapıldığında WPF, değişiklikten etkilenebilecek tüm [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) başvurularını otomatik olarak bulur.
+.NET Framework 4.7.2 ile başlayarak bir tanılama Yardımcısı, belirli bir <xref:Windows.UI.Xaml.ResourceDictionary>sahiplerini bulabilir. (Özelliği, üretim uygulamalarına göre değil, tanılama yardımcıları tarafından kullanılır.) Bir <xref:Windows.UI.Xaml.ResourceDictionary>her değişiklik yapıldığında WPF, değişiklikten etkilenebilecek tüm [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) başvurularını otomatik olarak bulur.
 
-Visual Studio 'nun "Düzenle ve devam et" özelliği gibi bir tanılama Yardımcısı, bu, [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvurularını işlemek için bunu genişletmek isteyebilir. Bu işlemin ilk adımı, sözlüğün sahiplerini bulledir; diğer bir deyişle, `Resources` özelliği sözlüğe başvuran tüm nesneleri bulmak için (doğrudan veya <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType> özelliği aracılığıyla dolaylı olarak). <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType> sınıfında uygulanan üç yeni statik yöntem, bir `Resources` özelliğine sahip olan temel türlerin her biri için, bu adımı destekler:
+Visual Studio 'nun "Düzenle ve devam et" özelliği gibi bir tanılama Yardımcısı, bu, [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvurularını işlemek için bunu genişletmek isteyebilir. Bu işlemin ilk adımı, sözlüğün sahiplerini bulledir; diğer bir deyişle, `Resources` özelliği sözlüğüne başvuran tüm nesneleri bulmak için (doğrudan veya <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType> özelliği aracılığıyla dolaylı olarak). <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType> sınıfında uygulanan üç yeni statik yöntem, bir `Resources` özelliğine sahip olan temel türlerin her biri için, bu adımı destekler:
 
 - [`public static IEnumerable<FrameworkElement> GetFrameworkElementOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetFrameworkElementOwners%2A)
 
@@ -531,9 +531,9 @@ Visual Studio 'nun "Düzenle ve devam et" özelliği gibi bir tanılama Yardımc
 
 **StaticResource başvurularını bulma**
 
-Bir tanılama Yardımcısı, bir [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvurusu çözümlendiğinde artık bildirim alabilir. (Özelliği, üretim uygulamalarına göre değil, tanılama yardımcıları tarafından kullanılır.) Visual Studio "Düzenle ve devam et" özelliği gibi bir tanılama Yardımcısı, bir kaynağın <xref:Windows.UI.Xaml.ResourceDictionary> değişikliklerinde değeri olduğunda tüm kullanımlarını güncelleştirmek isteyebilir. WPF bunu, [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) başvuruları için otomatik olarak yapar, ancak bu şekilde bu, [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvuruları için bunu yapmaz. .NET Framework 4.7.2 ile başlayarak, tanılama Yardımcısı bu bildirimleri statik kaynak kullanımlarını bulmak için kullanabilir.
+Bir tanılama Yardımcısı, bir [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvurusu çözümlendiğinde artık bildirim alabilir. (Özelliği, üretim uygulamalarına göre değil, tanılama yardımcıları tarafından kullanılır.) Visual Studio "Düzenle ve devam et" özelliği gibi bir tanılama Yardımcısı, bir <xref:Windows.UI.Xaml.ResourceDictionary> değiştiğinde bir kaynağın tüm kullanımlarını güncelleştirmek isteyebilir. WPF bunu, [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) başvuruları için otomatik olarak yapar, ancak bu şekilde bu, [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvuruları için bunu yapmaz. .NET Framework 4.7.2 ile başlayarak, tanılama Yardımcısı bu bildirimleri statik kaynak kullanımlarını bulmak için kullanabilir.
 
-Bildirim yeni <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType> olayı tarafından uygulanır:
+Bildirim, yeni <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType> olayı tarafından uygulanır:
 
 ```csharp
 public static event EventHandler<StaticResourceResolvedEventArgs> StaticResourceResolved;
@@ -589,7 +589,7 @@ Windows Forms uygulama için, uygulama bildirimi yerine uygulama yapılandırma 
 
 - [Temel sınıflar](#core471)
 - [Ortak dil çalışma zamanı (CLR)](#clr)
-- [İşlemleri](#net471)
+- [Ağ](#net471)
 - [ASP.NET](#asp-net471)
 
 Ayrıca, .NET Framework 4.7.1 ' deki önemli bir odak, bir uygulamanın yardımcı teknoloji kullanıcıları için uygun bir deneyim sağlamasına izin veren gelişmiş erişilebilirliğe sahiptir. .NET Framework 4.7.1 ' deki erişilebilirlik geliştirmeleri hakkında daha fazla bilgi için [.NET Framework erişilebilirlik](whats-new-in-accessibility.md)yenilikleri bölümüne bakın.
@@ -614,7 +614,7 @@ Yapılandırma üreticileri, geliştiricilerin uygulamalar için yapılandırma 
 
 **Değer tanımlama grubu türleri seri hale getirilebilir**
 
-.NET Framework 4.7.1 ile başlayarak, <xref:System.ValueTuple?displayProperty=nameWithType> ve ilişkili genel türleri [seri hale getirilebilir](xref:System.SerializableAttribute)olarak işaretlenir ve bu da ikili serileştirme sağlar. Bu, <xref:System.Tuple%603> ve <xref:System.Tuple%604>gibi kayıt düzeni türlerinin değer tanımlama grubu türlerine daha kolay olmasını sağlamalıdır. Daha fazla bilgi için, [.NET Framework 4.7.1 çalışma zamanı ve derleyici özellikleri](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) blog gönderisinde "derleyici--ValueTuple" seri hale getirilebilir "başlığına bakın.
+.NET Framework 4.7.1 ile başlayarak, <xref:System.ValueTuple?displayProperty=nameWithType> ve ilişkili genel türleri, ikili Serileştirmeye izin veren [seri hale getirilebilir](xref:System.SerializableAttribute)olarak işaretlenir. Bu, <xref:System.Tuple%603> ve <xref:System.Tuple%604>gibi kayıt düzeni türlerinin değer tanımlama grubu türlerine daha kolay olmasını sağlamalıdır. Daha fazla bilgi için, [.NET Framework 4.7.1 çalışma zamanı ve derleyici özellikleri](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) blog gönderisinde "derleyici--ValueTuple" seri hale getirilebilir "başlığına bakın.
 
 **Salt okuma başvuruları desteği**
 
@@ -626,15 +626,15 @@ Yapılandırma üreticileri, geliştiricilerin uygulamalar için yapılandırma 
 
 **Çöp toplama performansı iyileştirmeleri**
 
-.NET Framework 4.7.1 'teki çöp toplama (GC) değişiklikleri, özellikle büyük nesne yığını (LOH) ayırmaları için genel performansı geliştirir. .NET Framework 4.7.1 ' de, arka plan GC (BGC) SOH 'yi ortaya çıkaran zaman, LOH ayırmalarının oluşmasına izin veren küçük nesne yığını (SOH) ve LOH ayırmaları için ayrı kilitler kullanılır. Sonuç olarak, çok sayıda LOH ayırması yapan uygulamalar, ayırma Kilidi çakışması ve gelişmiş performans konusunda bir azalma görmeniz gerekir. Daha fazla bilgi için, [.NET Framework 4.7.1 çalışma zamanı ve derleyici özellikleri](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) blog gönderisindeki "çalışma zamanı--GC performansı iyileştirmeleri" bölümüne bakın.
+.NET Framework 4.7.1 'teki çöp toplama (GC) değişiklikleri, özellikle büyük nesne yığını (LOH) ayırmaları için genel performansı geliştirir. .NET Framework 4.7.1 ' de, arka plan GC, SOH 'yi ortaya çıkaran zaman, LOH ayırmalarının oluşmasına izin veren küçük nesne yığını (SOH) ve LOH ayırmaları için ayrı kilitler kullanılır. Sonuç olarak, çok sayıda LOH ayırması yapan uygulamalar, ayırma Kilidi çakışması ve gelişmiş performans konusunda bir azalma görmeniz gerekir. Daha fazla bilgi için, [.NET Framework 4.7.1 çalışma zamanı ve derleyici özellikleri](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) blog gönderisindeki "çalışma zamanı--GC performansı iyileştirmeleri" bölümüne bakın.
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Ağ Oluşturma
+#### <a name="networking"></a>Ağ
 
 **Message. HashAlgorithm için SHA-2 desteği**
 
-.NET Framework 4,7 ve önceki sürümlerde, <xref:System.Messaging.Message.HashAlgorithm%2A?displayProperty=nameWithType> özelliği yalnızca <xref:System.Messaging.HashAlgorithm.Md5?displayProperty=nameWithType> ve <xref:System.Messaging.HashAlgorithm.Sha?displayProperty=nameWithType> değerlerini destekliyordu. .NET Framework 4.7.1 ile başlayarak, <xref:System.Messaging.HashAlgorithm.Sha256?displayProperty=nameWithType>, <xref:System.Messaging.HashAlgorithm.Sha384?displayProperty=nameWithType> ve <xref:System.Messaging.HashAlgorithm.Sha512?displayProperty=nameWithType> de desteklenir. Bu değerin gerçekten kullanılıp kullanılmadığını, <xref:System.Messaging.Message> örneğinin kendisi karma olmadığından ve yalnızca MSMQ 'ya değer geçirdiğinden MSMQ 'ya bağlıdır. Daha fazla bilgi için, [.NET Framework 4.7.1 ASP.net ve yapılandırma özellikleri](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/) blog gönderisinin "Message. HASHALGORITHM için SHA-2 desteği" bölümüne bakın.
+.NET Framework 4,7 ve önceki sürümlerde, <xref:System.Messaging.Message.HashAlgorithm%2A?displayProperty=nameWithType> özelliği yalnızca <xref:System.Messaging.HashAlgorithm.Md5?displayProperty=nameWithType> ve <xref:System.Messaging.HashAlgorithm.Sha?displayProperty=nameWithType> değerlerini destekliyordu. .NET Framework 4.7.1 ile başlayarak, <xref:System.Messaging.HashAlgorithm.Sha256?displayProperty=nameWithType>, <xref:System.Messaging.HashAlgorithm.Sha384?displayProperty=nameWithType>ve <xref:System.Messaging.HashAlgorithm.Sha512?displayProperty=nameWithType> de desteklenir. Bu değerin gerçekten kullanılıp kullanılmadığını, <xref:System.Messaging.Message> örneğinin kendisi karma olmadığından ve yalnızca MSMQ 'ya değer geçirdiğinden MSMQ 'ya bağlıdır. Daha fazla bilgi için, [.NET Framework 4.7.1 ASP.net ve yapılandırma özellikleri](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/) blog gönderisinin "Message. HASHALGORITHM için SHA-2 desteği" bölümüne bakın.
 
 <a name="asp-net471" />
 
@@ -642,7 +642,7 @@ Yapılandırma üreticileri, geliştiricilerin uygulamalar için yapılandırma 
 
 **ASP.NET uygulamalarındaki yürütme adımları**
 
-ASP.NET, 23 olay içeren önceden tanımlanmış bir işlem hattındaki istekleri işler. ASP.NET, her olay işleyicisini yürütme adımı olarak yürütür. ASP.NET ' nin .NET Framework 4,7 ' e kadar olan sürümlerinde, yerel ve yönetilen iş parçacıkları arasında geçiş yapmak nedeniyle ASP.NET yürütme bağlamını akamaz. Bunun yerine, ASP.NET yalnızca <xref:System.Web.HttpContext> ' ı seçmeli olarak akar. .NET Framework 4.7.1 ile başlayarak, <xref:System.Web.HttpApplication.OnExecuteRequestStep(System.Action{System.Web.HttpContextBase,System.Action})?displayProperty=nameWithType> Yöntemi ayrıca modüllerin çevresel verileri geri yüklemesine olanak tanır. Bu özellik, izleme, profil oluşturma, tanılama veya işlemlerle ilgili kitaplıklara, örneğin, uygulamanın yürütme akışı hakkında endişeleri hedefleder. Daha fazla bilgi için, [.NET Framework 4.7.1 ASP.net ve yapılandırma özellikleri](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/) blog gönderisine "ASP.net Execution Step Feature" bölümüne bakın.
+ASP.NET, 23 olay içeren önceden tanımlanmış bir işlem hattındaki istekleri işler. ASP.NET, her olay işleyicisini yürütme adımı olarak yürütür. ASP.NET ' nin .NET Framework 4,7 ' e kadar olan sürümlerinde, yerel ve yönetilen iş parçacıkları arasında geçiş yapmak nedeniyle ASP.NET yürütme bağlamını akamaz. Bunun yerine, ASP.NET yalnızca <xref:System.Web.HttpContext>akar. .NET Framework 4.7.1 ile başlayarak, <xref:System.Web.HttpApplication.OnExecuteRequestStep(System.Action{System.Web.HttpContextBase,System.Action})?displayProperty=nameWithType> Yöntemi ayrıca modüllerin çevresel verileri geri yüklemesine olanak tanır. Bu özellik, izleme, profil oluşturma, tanılama veya işlemlerle ilgili kitaplıklara, örneğin, uygulamanın yürütme akışı hakkında endişeleri hedefleder. Daha fazla bilgi için, [.NET Framework 4.7.1 ASP.net ve yapılandırma özellikleri](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/) blog gönderisine "ASP.net Execution Step Feature" bölümüne bakın.
 
 **ASP.NET HttpCookie ayrıştırma**
 
@@ -671,7 +671,7 @@ ASP.NET, 23 olay içeren önceden tanımlanmış bir işlem hattındaki istekler
 .NET Framework 4,7, aşağıdaki alanlardaki yeni özellikler içerir:
 
 - [Temel sınıflar](#Core47)
-- [İşlemleri](#net47)
+- [Ağ](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
@@ -683,11 +683,11 @@ ASP.NET, 23 olay içeren önceden tanımlanmış bir işlem hattındaki istekler
 
 #### <a name="base-classes"></a>Temel sınıflar
 
-.NET Framework 4,7 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> tarafından Serileştirmeyi geliştirir:
+.NET Framework 4,7 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>tarafından Serileştirmeyi geliştirir:
 
-**Eliptik eğri şifrelemesi (ECC) * Ile gelişmiş işlevler**
+**Eliptik eğri şifrelemesi (ECC) Ile gelişmiş işlevsellik***
 
-.NET Framework 4,7 ' de, bir nesnenin önceden oluşturulmuş bir anahtarı göstermesini sağlamak için <xref:System.Security.Cryptography.ECDsa> ve <xref:System.Security.Cryptography.ECDiffieHellman> sınıflarına `ImportParameters(ECParameters)` yöntemleri eklenmiştir. Açık eğri parametreleri kullanılarak anahtarı dışarı aktarmak için bir `ExportParameters(Boolean)` yöntemi de eklenmiştir.
+.NET Framework 4,7 ' de, bir nesnenin zaten oluşturulmuş bir anahtarı göstermesini sağlamak için <xref:System.Security.Cryptography.ECDsa> ve <xref:System.Security.Cryptography.ECDiffieHellman> sınıflarına `ImportParameters(ECParameters)` yöntemler eklenmiştir. Açık eğri parametreleri kullanılarak anahtarı dışarı aktarmak için bir `ExportParameters(Boolean)` yöntemi de eklenmiştir.
 
 .NET Framework 4,7 ayrıca ek eğriler (Brainpool eğrisi paketi dahil) için destek de ekler ve yeni <xref:System.Security.Cryptography.ECDsa.Create%2A> ve <xref:System.Security.Cryptography.ECDiffieHellman.Create%2A> Factory yöntemleriyle oluşturma kolaylığı için önceden tanımlanmış tanımlar ekledi.
 
@@ -695,11 +695,11 @@ GitHub 'da [4,7 .NET Framework şifreleme geliştirmesi örneği](https://gist.g
 
 **DataContractJsonSerializer tarafından denetim karakterleri için daha iyi destek**
 
-.NET Framework 4,7 ' de, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ECMAScript 6 standardı ile uyum içinde denetim karakterlerini dizileştirir. Bu davranış, .NET Framework 4,7 ' i hedefleyen uygulamalar için varsayılan olarak etkindir ve .NET Framework 4,7 altında çalışan ancak .NET Framework önceki bir sürümünü hedefleyen uygulamalar için bir kabul etme özelliğidir. Daha fazla bilgi için bkz. [.NET Framework 4,7 ' de yeniden hedefleme değişiklikleri](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+.NET Framework 4,7 ' de, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ECMAScript 6 standardı ile uyum içinde denetim karakterlerini seri hale getirir. Bu davranış, .NET Framework 4,7 ' i hedefleyen uygulamalar için varsayılan olarak etkindir ve .NET Framework 4,7 altında çalışan ancak .NET Framework önceki bir sürümünü hedefleyen uygulamalar için bir kabul etme özelliğidir. Daha fazla bilgi için bkz. [.NET Framework 4,7 ' de yeniden hedefleme değişiklikleri](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
 
 <a name="net47" />
 
-#### <a name="networking"></a>Ağ Oluşturma
+#### <a name="networking"></a>Ağ
 
 .NET Framework 4,7, ağla ilgili aşağıdaki özelliği ekler:
 
@@ -741,7 +741,7 @@ WCF, .NET Framework 4,7 ' den itibaren, varsayılan ileti güvenlik protokolü o
 
 **WCF uygulamalarının ve WCF serileştirmenin güvenilirliği geliştirildi**
 
-WCF, yarış koşullarını ortadan kaldıran bir dizi kod değişikliği içerir, böylece performansı ve serileştirme seçeneklerinin güvenilirliğini geliştirir. Bu güncelleştirmeler şunlardır:
+WCF, yarış koşullarını ortadan kaldıran bir dizi kod değişikliği içerir, böylece performansı ve serileştirme seçeneklerinin güvenilirliğini geliştirir. Bunlar:
 
 - **SocketConnection. BeginRead** ve **SocketConnection. Read**çağrılarına zaman uyumsuz ve zaman uyumlu kod karıştırma için daha iyi destek.
 - **Sharedconnectionlistener** ve **DuplexChannelBinder**ile bağlantı iptal edildiğinde iyileştirilmiş güvenilirlik.
@@ -768,11 +768,11 @@ Yüksek DPı desteği, uygulama yapılandırma dosyanızda [\<System. Windows. F
 
 **Windows WM_POINTER iletilerine dayalı bir dokunmatik/Stilus yığını desteği**
 
-Artık Windows Ink Services platformu (WıSS) yerine [WM_POINTER iletilerine](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) dayalı bir dokunmatik/Stilus yığını kullanma seçeneğiniz vardır. Bu, .NET Framework bir katılım özelliğidir. Daha fazla bilgi için bkz. [.NET Framework 4,7 ' de yeniden hedefleme değişiklikleri](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+Artık Windows mürekkep hizmetleri platformu (WıSS) yerine [WM_POINTER iletilerine](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) dayalı bir dokunmatik/Stilus yığını kullanma seçeneğiniz vardır. Bu, .NET Framework bir katılım özelliğidir. Daha fazla bilgi için bkz. [.NET Framework 4,7 ' de yeniden hedefleme değişiklikleri](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
 
 **WPF yazdırma API 'Leri için yeni uygulama**
 
-WPF 'nin <xref:System.Printing.PrintQueue?displayProperty=nameWithType> sınıfındaki yazdırma API 'Leri, kullanım dışı olan [XPS yazdırma API](/windows/desktop/printdocs/xps-printing)'Si yerine Windows [yazdırma belgesi paketi API](/windows/desktop/printdocs/tailored-app-printing-api) 'sini çağırır. Bu değişikliğin uygulama uyumluluğuna etkisi için [.NET Framework 4,7 ' deki yeniden hedefleme değişiklikleri](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)bölümüne bakın.
+WPF 'nin <xref:System.Printing.PrintQueue?displayProperty=nameWithType> sınıfında bulunan yazdırma API 'Leri, kullanım dışı olan [XPS yazdırma API](/windows/desktop/printdocs/xps-printing)'Si yerine Windows [yazdırma belgesi paketi API](/windows/desktop/printdocs/tailored-app-printing-api) 'sini çağırır. Bu değişikliğin uygulama uyumluluğuna etkisi için [.NET Framework 4,7 ' deki yeniden hedefleme değişiklikleri](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)bölümüne bakın.
 
 <a name="v462" />
 
@@ -792,7 +792,7 @@ WPF 'nin <xref:System.Printing.PrintQueue?displayProperty=nameWithType> sınıf�
 
 - [Windows Presentation Foundation (WPF)](#WPF462)
 
-- [Windows Workflow Foundation (WF)](#WF462)
+- {1&gt;Windows Workflow Foundation (WF)&lt;1}
 
 - [ClickOnce](#clickonce-1)
 
@@ -816,7 +816,7 @@ Veri ek açıklama Doğrulayıcıları bir sınıf özelliğine bir veya daha fa
 
 2. Kaynak dosyası App_LocalResources klasöründe depolanır.
 
-3. Yerelleştirilmiş kaynaklar dosyasının adı, `DataAnnotation.Localization.{`*adı*`}.resx` ' dir; burada *ad* , *languageCode*`-`*ülke/RegionCode* veya *languageCode*biçiminde bir kültür adıdır.
+3. Yerelleştirilmiş kaynaklar dosyasının adı `DataAnnotation.Localization.{`*adı*`}.resx`, burada *ad* *languageCode*`-`*ülke/RegionCode* veya *languageCode*biçiminde bir kültür adıdır.
 
 4. Kaynağın anahtar adı, <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> özniteliğe atanan dizedir ve değeri yerelleştirilmiş hata iletisidir.
 
@@ -895,7 +895,7 @@ End Interface
 
 .NET Framework 4.6.2 karakterler [Unicode standardı, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/)temel alınarak sınıflandırılır. .NET Framework 4,6 ve .NET Framework 4.6.1, karakterler Unicode 6,3 karakter kategorilerine göre sınıflandırıldı.
 
-Unicode 8,0 desteği, <xref:System.Globalization.CharUnicodeInfo> sınıfı ve ona bağımlı tür ve yöntemlere göre karakterlerin sınıflandırmasıyla sınırlıdır. Bunlara <xref:System.Globalization.StringInfo> sınıfı, aşırı yüklenmiş <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> yöntemi ve .NET Framework normal ifade altyapısı tarafından tanınan [karakter sınıfları](../../standard/base-types/character-classes-in-regular-expressions.md) dahildir.  Karakter ve dize karşılaştırma ve sıralama bu değişiklikten etkilenmez ve temel alınan işletim sistemine veya Windows 7 sistemlerinde, .NET Framework tarafından belirtilen karakter verilerinde kullanılmaya devam eder.
+Unicode 8,0 desteği, <xref:System.Globalization.CharUnicodeInfo> sınıfı ve kendisine bağımlı tür ve yöntemlere göre karakterlerin sınıflandırmasıyla sınırlıdır. Bunlara <xref:System.Globalization.StringInfo> sınıfı, aşırı yüklenmiş <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> yöntemi ve .NET Framework normal ifade altyapısı tarafından tanınan [karakter sınıfları](../../standard/base-types/character-classes-in-regular-expressions.md) dahildir.  Karakter ve dize karşılaştırma ve sıralama bu değişiklikten etkilenmez ve temel alınan işletim sistemine veya Windows 7 sistemlerinde, .NET Framework tarafından belirtilen karakter verilerinde kullanılmaya devam eder.
 
 Unicode 6,0 ' den Unicode 7,0 ' e karakter kategorilerindeki değişiklikler için bkz. Unicode [Standart, sürüm 7.0.0](https://www.unicode.org/versions/Unicode7.0.0/) , Unicode konsorsiyum Web sitesi. Unicode 7,0 ' den Unicode 8,0 ' e yapılan değişiklikler için bkz. Unicode [Standart, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) , Unicode konsorsiyum Web sitesi.
 
@@ -907,7 +907,7 @@ Unicode 6,0 ' den Unicode 7,0 ' e karakter kategorilerindeki değişiklikler iç
 
 .NET Framework 4.6.2, anahtarları FIPS 186-2 1024 bit sınırını aşan DSA (dijital Imza algoritması) x509 sertifikaları için destek ekler.
 
-.NET Framework 4.6.2, FIPS 186-3 'in daha büyük anahtar boyutlarını desteklemeye ek olarak, karma algoritmaların SHA-2 ailesiyle (SHA256, SHA384 ve SHA512 olur) imzaları hesaplama olanağı sağlar. FIPS 186-3 desteği yeni <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> sınıfı tarafından sağlanır.
+.NET Framework 4.6.2, FIPS 186-3 'in daha büyük anahtar boyutlarını desteklemeye ek olarak, karma algoritmaların SHA-2 ailesiyle (SHA256, SHA384 ve SHA512 olur) imzaları hesaplama olanağı sağlar. FIPS 186-3 desteği yeni <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> sınıfı tarafından sağlanmaktadır.
 
 .NET Framework 4,6 ' deki <xref:System.Security.Cryptography.RSA> sınıfında son değişiklikler ve .NET Framework 4.6.1 ' deki <xref:System.Security.Cryptography.ECDsa> sınıfı ile birlikte, <xref:System.Security.Cryptography.DSA> 4.6.2 içindeki .NET Framework soyut temel sınıf, çağıranların atama olmadan bu işlevselliği kullanmasına izin vermek için ek yöntemlere sahiptir. Aşağıdaki örnekte gösterildiği gibi, verileri imzalamak için <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> uzantısı yöntemini çağırabilirsiniz.
 
@@ -951,9 +951,9 @@ End Function
 
 **Ecdıfıehellman anahtar türetme yordamlarına yönelik girişler için daha fazla açıklık**
 
-.NET Framework 3,5, üç farklı anahtar türetme Işlevi (KDF) yordamlarına sahip Eliptik Eğri Diffie-Hellman anahtar anlaşması için destek eklendi. Yordamlara yapılan girişler ve yordamları, <xref:System.Security.Cryptography.ECDiffieHellmanCng> nesnesindeki özellikler aracılığıyla yapılandırılmıştır. Ancak her bir yordam her giriş özelliğini okumadığından, geliştiricinin geçmişte karışıklık için çok fazla yer vardır.
+.NET Framework 3,5, üç farklı anahtar türetme Işlevi (KDF) yordamlarına sahip Eliptik Eğri Diffie-Hellman anahtar anlaşması için destek eklendi. Yordamlarına yapılan girişler ve yordamlar, <xref:System.Security.Cryptography.ECDiffieHellmanCng> nesnesindeki özellikler aracılığıyla yapılandırılmıştır. Ancak her bir yordam her giriş özelliğini okumadığından, geliştiricinin geçmişte karışıklık için çok fazla yer vardır.
 
-.NET Framework 4.6.2 ' de bunu ele almak için, bu KDF yordamlarını ve bunların girişlerini daha net bir şekilde temsil etmek üzere <xref:System.Security.Cryptography.ECDiffieHellman> taban sınıfına aşağıdaki üç yöntem eklenmiştir:
+.NET Framework 4.6.2 ' de bunu ele almak için, bu KDF yordamlarını ve bunların girişlerini daha net bir şekilde temsil etmek üzere <xref:System.Security.Cryptography.ECDiffieHellman> temel sınıfına aşağıdaki üç yöntem eklenmiştir:
 
 |Ecdıfıfiehellman yöntemi|Açıklama|
 |----------------------------|-----------------|
@@ -963,7 +963,7 @@ End Function
 
 **Kalıcı anahtar simetrik şifreleme desteği**
 
-Windows şifreleme kitaplığı (CNG), kalıcı simetrik anahtarları depolama ve donanımla depolanan simetrik anahtarları kullanma desteği eklendi ve .NET Framework 4.6.2 geliştiricilerin bu özelliği kullanmasını mümkün hale getirir.  Anahtar adları ve anahtar sağlayıcılarının kavramı uygulamaya özgü olduğundan, bu özelliğin kullanılması tercih edilen fabrika yaklaşımı yerine (`Aes.Create` ' ı çağırmak gibi) somut uygulama türleri oluşturucusunun kullanılmasını gerektirir.
+Windows şifreleme kitaplığı (CNG), kalıcı simetrik anahtarları depolama ve donanımla depolanan simetrik anahtarları kullanma desteği eklendi ve .NET Framework 4.6.2 geliştiricilerin bu özelliği kullanmasını mümkün hale getirir.  Anahtar adları ve anahtar sağlayıcılarının kavramı uygulamaya özgü olduğundan, bu özelliğin kullanılması tercih edilen fabrika yaklaşımı (örneğin, `Aes.Create`çağırma) yerine somut uygulama türleri oluşturucusunun kullanılmasını gerektirir.
 
 AES (<xref:System.Security.Cryptography.AesCng>) ve 3DES (<xref:System.Security.Cryptography.TripleDESCng>) algoritmaları için kalıcı anahtar simetrik şifreleme desteği vardır. Örneğin:
 
@@ -1006,9 +1006,9 @@ End Function
 
 **SHA-2 karma için SignedXml desteği**
 
-.NET Framework 4.6.2, RSA-SHA256, RSA-SHA384 ve RSA-SHA512 olur PKCS # 1 imza yöntemleri, SHA256, SHA384 ve SHA512 olur Reference Digest algoritmalarına yönelik <xref:System.Security.Cryptography.Xml.SignedXml> sınıfına destek ekler.
+.NET Framework 4.6.2, RSA-SHA256, RSA-SHA384 ve RSA-SHA512 olur PKCS # 1 imza yöntemlerine, SHA256, SHA384 ve SHA512 olur başvuru Özet algoritmalarına yönelik <xref:System.Security.Cryptography.Xml.SignedXml> sınıfına destek ekler.
 
-URI sabitleri <xref:System.Security.Cryptography.Xml.SignedXml> ' da kullanıma sunuldu:
+URI sabitlerinin tümü <xref:System.Security.Cryptography.Xml.SignedXml>açıktır:
 
 |SignedXml alanı|Sabit|
 |---------------------|--------------|
@@ -1019,13 +1019,13 @@ URI sabitleri <xref:System.Security.Cryptography.Xml.SignedXml> ' da kullanıma 
 |<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA512Url>|"http://www.w3.org/2001/04/xmlenc#sha512"|
 |<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA512Url>|"http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"|
 
- Bu algoritmalara yönelik destek eklemek için özel bir <xref:System.Security.Cryptography.SignatureDescription> işleyicisini <xref:System.Security.Cryptography.CryptoConfig> ' a kaydetmiş olan tüm programlar geçmişte oldukları gibi çalışmaya devam eder, ancak artık platform Varsayılanları olduğundan, <xref:System.Security.Cryptography.CryptoConfig> kaydı artık gerekli değildir.
+ Bu algoritmalara yönelik destek eklemek için <xref:System.Security.Cryptography.CryptoConfig> özel bir <xref:System.Security.Cryptography.SignatureDescription> işleyicisini kaydetmiş olan programlar geçmişte oldukları gibi çalışmaya devam eder, ancak artık platform Varsayılanları olduğundan, <xref:System.Security.Cryptography.CryptoConfig> kaydı artık gerekli değildir.
 
 <a name="SQLClient" />
 
 ### <a name="sqlclient"></a>SqlClient
 
-SQL Server için .NET Framework Veri Sağlayıcısı (<xref:System.Data.SqlClient?displayProperty=nameWithType>), .NET Framework 4.6.2 aşağıdaki yeni özellikleri içerir:
+SQL Server için .NET Framework Veri Sağlayıcısı (<xref:System.Data.SqlClient?displayProperty=nameWithType>) .NET Framework 4.6.2 aşağıdaki yeni özellikleri içerir:
 
 **Azure SQL veritabanları ile bağlantı havuzu oluşturma ve zaman aşımları**
 
@@ -1039,13 +1039,13 @@ Yeni `PoolBlockingPeriod` anahtar sözcüğünün eklenmesi, uygulamanız için 
 
 Azure SQL veritabanına bağlanan bir uygulama için bağlantı havuzu engelleme süresi devre dışıdır ve başka bir SQL Server örneğine bağlanan bir uygulama için bağlantı havuzu engelleme süresi etkindir. Varsayılan değer budur. Sunucu uç noktası adı aşağıdakilerden biriyle sonlanıyorsa, Azure SQL veritabanı olarak kabul edilir:
 
-- . database.windows.net
+- .database.windows.net
 
-- . database.chinacloudapi.cn
+- .database.chinacloudapi.cn
 
-- . database.usgovcloudapi.net
+- .database.usgovcloudapi.net
 
-- . database.cloudapi.de
+- .database.cloudapi.de
 
 <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock>
 
@@ -1103,7 +1103,7 @@ Müşteriler, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer
 </runtime>
 ```
 
-Bu özellik etkinleştirildiğinde, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> nesnesi tarih ve saat verilerinin serisini kaldırmak için <xref:System.TimeZone> türü yerine <xref:System.TimeZoneInfo> türünü kullanır. <xref:System.TimeZoneInfo>, geçmiş saat dilimi verileriyle çalışmayı olanaklı kılan birden çok ayarlama kuralını destekler;   <xref:System.TimeZone> yok.
+Bu özellik etkinleştirildiğinde, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> nesnesi tarih ve saat verilerinin serisini kaldırmak için <xref:System.TimeZone> türü yerine <xref:System.TimeZoneInfo> türünü kullanır. <xref:System.TimeZoneInfo>, geçmişteki saat dilimi verileriyle çalışmayı olanaklı kılan birden çok ayarlama kuralını destekler;   <xref:System.TimeZone>.
 
 <xref:System.TimeZoneInfo> yapısı ve saat dilimi ayarlamaları hakkında daha fazla bilgi için bkz. [saat dilimine genel bakış](../../standard/datetime/time-zone-overview.md).
 
@@ -1111,7 +1111,7 @@ Bu özellik etkinleştirildiğinde, <xref:System.Runtime.Serialization.Json.Data
 
 WCF, istemci uygulamalarında, istedikleri uygulamayla en iyi şekilde eşleşen URI 'yi dinleyen hizmete her zaman bağlanabildiğini sağlayan yeni bir uygulama ayarına sahiptir. Bu uygulama ayarı `false` (varsayılan) olarak ayarlandığında, <xref:System.ServiceModel.NetNamedPipeBinding> kullanan istemciler, istenen URI 'nin bir alt dizesi olan bir URI üzerinde dinleme yapan bir hizmete bağlanmaya çalışmak için mümkündür.
 
-Örneğin, bir istemci `net.pipe://localhost/Service1` ' a dinleyen bir hizmete bağlanmaya çalışır, ancak bu makinede yönetici ayrıcalığıyla çalışan farklı bir hizmet `net.pipe://localhost` ' i dinler. Bu uygulama ayarı `false` olarak ayarlandığında, istemci yanlış hizmete bağlanmaya çalışır. Uygulama ayarını `true` olarak ayarladıktan sonra istemci her zaman en iyi eşleşen hizmete bağlanır.
+Örneğin, bir istemci `net.pipe://localhost/Service1`dinlemeye bir hizmete bağlanmaya çalışır, ancak bu makinede yönetici ayrıcalığıyla çalışan farklı bir hizmet `net.pipe://localhost`dinler. Bu uygulama ayarı `false`olarak ayarlandığında, istemci yanlış hizmete bağlanmaya çalışır. Uygulama ayarını `true`olarak ayarladıktan sonra istemci her zaman en iyi eşleşen hizmete bağlanır.
 
 > [!NOTE]
 > <xref:System.ServiceModel.NetNamedPipeBinding> kullanan istemciler, tam bitiş noktası adresi yerine hizmetin temel adresine (varsa) göre hizmetleri bulur. Bu ayarın her zaman çalıştığından emin olmak için, hizmetin benzersiz bir temel adres kullanması gerekir.
@@ -1146,9 +1146,9 @@ SSL 3,0, aktarım güvenliği ile NetTcp kullanırken güvenli bir bağlantı an
 
 **Grup sıralaması**
 
-Verileri gruplamak için <xref:System.Windows.Data.CollectionView> nesnesi kullanan bir uygulama, artık grupların nasıl sıralanacağını açıkça bildirebilirler. Açık sıralama, bir uygulama grupları dinamik olarak eklediğinde ya da kaldırırken veya gruplandırmada yer alan öğe özelliklerinin değerini değiştirdiğinde oluşan sezgisel olmayan sıralama sorununa yöneliktir. Ayrıca, gruplama özelliklerinin karşılaştırmalarını tam koleksiyonun sıralamasını grupların sıralaması olarak taşıyarak Grup oluşturma işleminin performansını da artırır.
+Verileri gruplamak için bir <xref:System.Windows.Data.CollectionView> nesnesi kullanan bir uygulama, artık grupların nasıl sıralanacağını açıkça bildirebilirler. Açık sıralama, bir uygulama grupları dinamik olarak eklediğinde ya da kaldırırken veya gruplandırmada yer alan öğe özelliklerinin değerini değiştirdiğinde oluşan sezgisel olmayan sıralama sorununa yöneliktir. Ayrıca, gruplama özelliklerinin karşılaştırmalarını tam koleksiyonun sıralamasını grupların sıralaması olarak taşıyarak Grup oluşturma işleminin performansını da artırır.
 
-Grup sıralamasını desteklemek için, yeni <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A?displayProperty=nameWithType> ve <xref:System.ComponentModel.GroupDescription.CustomSort%2A?displayProperty=nameWithType> özellikleri <xref:System.ComponentModel.GroupDescription> nesnesi tarafından üretilen grup koleksiyonunun nasıl sıralanacağını anlatmaktadır. Bu, aynı ada sahip <xref:System.Windows.Data.ListCollectionView> özelliklerinin veri öğelerinin nasıl sıralanacağını betimleyen yönteme benzerdir.
+Grup sıralamasını desteklemek için, yeni <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A?displayProperty=nameWithType> ve <xref:System.ComponentModel.GroupDescription.CustomSort%2A?displayProperty=nameWithType> özellikleri <xref:System.ComponentModel.GroupDescription> nesnesi tarafından üretilen grup koleksiyonunun nasıl sıralanacağını anlatmaktadır. Bu, benzer <xref:System.Windows.Data.ListCollectionView> özelliklerinin veri öğelerinin nasıl sıralanacağını betimleyen yönteme benzerdir.
 
 <xref:System.Windows.Data.PropertyGroupDescription> sınıfının iki yeni statik özelliği <xref:System.Windows.Data.PropertyGroupDescription.CompareNameAscending%2A> ve <xref:System.Windows.Data.PropertyGroupDescription.CompareNameDescending%2A>, en yaygın durumlarda kullanılabilir.
 
@@ -1178,9 +1178,9 @@ Yumuşak klavye desteği, bir WPF uygulamalarında, dokunma girişi metin giriş
 
 WPF uygulamaları için yüksek DPı ve hibrit DPı ortamlarının en son kullanımını desteklemek için, .NET Framework 4.6.2 ' deki WPF, izleme başına tanımayı sağlar. WPF uygulamanızın monitör başına DPı kullanan bir duruma gelmesini sağlama hakkında daha fazla bilgi için bkz. GitHub 'da [örnekler ve Geliştirici Kılavuzu](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) .
 
-.NET Framework önceki sürümlerinde, WPF uygulamaları sistem DPı farkındaylardır. Diğer bir deyişle, uygulamanın kullanıcı arabirimi, uygulamanın işlendiği izleyicinin DPı değerine bağlı olarak, işletim sistemi tarafından uygun şekilde ölçeklendirilir. ,
+.NET Framework önceki sürümlerinde, WPF uygulamaları sistem DPı farkındaylardır. Diğer bir deyişle, uygulamanın kullanıcı arabirimi, uygulamanın işlendiği izleyicinin DPı değerine bağlı olarak, işletim sistemi tarafından uygun şekilde ölçeklendirilir.
 
-.NET Framework 4.6.2 altında çalışan uygulamalar için, uygulama yapılandırma dosyanızın [\<runtime >](../configure-apps/file-schema/runtime/runtime-element.md) bölümüne aşağıdaki şekilde bir yapılandırma AÇıKLAMASı ekleyerek WPF uygulamalarında MONITÖR başına DPI değişikliklerini devre dışı bırakabilirsiniz:
+.NET Framework 4.6.2 altında çalışan uygulamalar için, uygulama yapılandırma dosyanızın [\<çalışma zamanı >](../configure-apps/file-schema/runtime/runtime-element.md) bölümüne aşağıdaki şekilde bir yapılandırma AÇıKLAMASı ekleyerek WPF uygulamalarında MONITÖR başına DPI değişikliklerini devre dışı bırakabilirsiniz:
 
 ```xml
 <runtime>
@@ -1198,7 +1198,7 @@ WPF uygulamaları için yüksek DPı ve hibrit DPı ortamlarının en son kullan
 
 WF, 4,5 .NET Framework başlayarak hem Visual Studio C# tasarımcısında hem de kod iş akışlarında ifadeleri destekler. Yeniden barındırılan İş Akışı Tasarımcısı, bir WF 'nin Visual Studio dışında bir uygulamada olmasını İş Akışı Tasarımcısı sağlayan bir temel özelliktir (örneğin, WPF).  Windows Workflow Foundation, yeniden barındırılan İş Akışı Tasarımcısı ifadeleri C# ve IntelliSense 'i destekleme yeteneği sağlar. Daha fazla bilgi için [Windows Workflow Foundation bloguna](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)bakın.
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` ' dan .NET Framework önceki .NET Framework sürümlerinde, bir müşteri Visual Studio 'dan bir iş akışı projesi yeniden oluştururken WF Tasarımcısı IntelliSense bozulur. Proje derlemesi başarılı olsa da, iş akışı türleri tasarımcıda bulunmadı ve eksik iş akışı türleri için IntelliSense uyarıları **hata listesi** penceresinde görünür. .NET Framework 4.6.2 Bu sorunu giderir ve IntelliSense 'i kullanılabilir hale getirir.
+.NET Framework 4.6.2 ' den önceki .NET Framework sürümlerindeki `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`, bir müşteri, Visual Studio 'dan bir iş akışı projesi yeniden oluştururken WF Tasarımcısı IntelliSense bozulur. Proje derlemesi başarılı olsa da, iş akışı türleri tasarımcıda bulunmadı ve eksik iş akışı türleri için IntelliSense uyarıları **hata listesi** penceresinde görünür. .NET Framework 4.6.2 Bu sorunu giderir ve IntelliSense 'i kullanılabilir hale getirir.
 
 **İş akışı Izleme olan iş akışı v1 uygulamaları artık FIPS modunda çalıştırılır**
 
@@ -1236,11 +1236,11 @@ Dönüştürülmüş masaüstü uygulamaları, UWP API 'Lerinin, canlı kutucuk 
 
 ### <a name="debugging-improvements"></a>Hata ayıklama geliştirmeleri
 
-*Yönetilmeyen hata ayıklama API 'si* , bir <xref:System.NullReferenceException> oluşturulduğunda ek analizler gerçekleştirmek için .NET Framework geliştirilmiştir. böylece, tek bir kaynak kodu satırındaki hangi değişkenin `null` olduğunu tespit etmek mümkündür.   Bu senaryoyu desteklemek için, yönetilmeyen hata ayıklama API 'sine aşağıdaki API 'Ler eklenmiştir.
+*Yönetilmeyen hata ayıklama API 'si* , bir <xref:System.NullReferenceException> oluşturulduğunda ek analizler gerçekleştirmek için .NET Framework geliştirilmiştir. böylece, tek bir kaynak kodu satırındaki hangi değişkenin `null`olduğunu tespit etmek mümkündür.   Bu senaryoyu desteklemek için, yönetilmeyen hata ayıklama API 'sine aşağıdaki API 'Ler eklenmiştir.
 
-- Yönetilen değişkenlerin yerel evlerini açığa çıkaran [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md), [ıcordebugvariablehome](../unmanaged-api/debugging/icordebugvariablehome-interface.md)ve [ıcordebugvariablehomeenum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) arabirimleri. Bu, <xref:System.NullReferenceException> olduğunda ve `null` olan yerel konuma karşılık gelen yönetilen değişkeni tespit etmek üzere geriye doğru çalışacak hata ayıklayıcıların bazı kod akışı analizini yapmasına olanak sağlar.
+- Yönetilen değişkenlerin yerel evlerini açığa çıkaran [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md), [ıcordebugvariablehome](../unmanaged-api/debugging/icordebugvariablehome-interface.md)ve [ıcordebugvariablehomeenum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) arabirimleri. Bu, bir <xref:System.NullReferenceException> gerçekleştiğinde hata ayıklayıcıların bazı kod akışı analizini yapmasına ve `null`yerel konuma karşılık gelen yönetilen değişkeni belirlemede geriye doğru çalışabilmesine olanak sağlar.
 
-- [ICorDebugType2:: GetTypeId](../unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) yöntemi ICorDebugType için [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md)olarak bir eşleme sağlar ve bu da hata ayıklayıcının ICorDebugType örneği olmadan bir [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) elde etmesine olanak tanır. [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) üzerindeki mevcut API 'ler, türün sınıf yerleşimini belirlemede kullanılabilir.
+- [ICorDebugType2:: GetTypeId](../unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) yöntemi ıcordebugtype için [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md)bir eşleme sağlar ve bu da hata ayıklayıcının ICorDebugType örneği olmadan bir [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) almasına olanak tanır. [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) mevcut API 'ler, daha sonra türün sınıf yerleşimini belirlemede kullanılabilir.
 
 <a name="v461" />
 
@@ -1300,7 +1300,7 @@ Müşterilerin HSM 'de depolanan sütun ana anahtarlarıyla korunan Always Encry
 
 **AlwaysOn <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> bağlantı davranışı geliştirildi**
 
-SqlClient artık otomatik olarak bir AlwaysOn kullanılabilirlik grubuna (AG) daha hızlı bağlantılar sağlar. Uygulamanızın farklı bir alt ağda bir AlwaysOn kullanılabilirlik grubuna (AG) bağlanıp bağlanmadığını saydam bir şekilde algılar ve geçerli etkin sunucuyu hızlıca bulup sunucuya bağlantı sağlar. Bu sürümden önce, bir uygulamanın bir AlwaysOn kullanılabilirlik grubuna bağlanmakta olduğunu göstermek için bağlantı dizesini `"MultisubnetFailover=true"` içerecek şekilde ayarlaması gerekiyordu. Bağlantı anahtar sözcüğünü `true` ' a ayarlamadan, bir uygulama bir AlwaysOn kullanılabilirlik grubuna bağlanılırken bir zaman aşımı yaşar. Bu sürümde, bir uygulamanın artık `true` <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> *ayarlaması gerekmez.* Always on kullanılabilirlik grupları için SqlClient desteği hakkında daha fazla bilgi için bkz. [yüksek kullanılabilirlik Için SqlClient desteği, olağanüstü durum kurtarma](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
+SqlClient artık otomatik olarak bir AlwaysOn kullanılabilirlik grubuna (AG) daha hızlı bağlantılar sağlar. Uygulamanızın farklı bir alt ağda bir AlwaysOn kullanılabilirlik grubuna (AG) bağlanıp bağlanmadığını saydam bir şekilde algılar ve geçerli etkin sunucuyu hızlıca bulup sunucuya bağlantı sağlar. Bu sürümden önce, bir uygulamanın bir AlwaysOn kullanılabilirlik grubuna bağlanmakta olduğunu göstermek için bağlantı dizesini `"MultisubnetFailover=true"` içerecek şekilde ayarlaması gerekiyordu. Bağlantı anahtar sözcüğünü `true`olarak ayarlamadan, bir uygulama bir AlwaysOn kullanılabilirlik grubuna bağlanılırken bir zaman aşımı yaşar. Bu sürümde, bir uygulamanın artık `true` <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> *ayarlaması gerekmez.* Always on kullanılabilirlik grupları için SqlClient desteği hakkında daha fazla bilgi için bkz. [yüksek kullanılabilirlik Için SqlClient desteği, olağanüstü durum kurtarma](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
 <a name="WPF461" />
 
@@ -1310,7 +1310,7 @@ Windows Presentation Foundation birkaç iyileştirme ve değişiklik içerir.
 
 **İyileştirilmiş performans**
 
-Dokunma olaylarının tetiklendiği gecikme .NET Framework 4.6.1 düzeltildi. Ayrıca, <xref:System.Windows.Controls.RichTextBox> denetimine yazmak hızlı giriş sırasında işleme iş parçacığını artık erişemez.
+Dokunma olaylarının tetiklendiği gecikme .NET Framework 4.6.1 düzeltildi. Ayrıca, bir <xref:System.Windows.Controls.RichTextBox> denetimine yazmak hızlı giriş sırasında işleme iş parçacığını artık erişemez.
 
 **Yazım denetimi geliştirmeleri**
 
@@ -1349,7 +1349,7 @@ WPF 'nin önceki sürümlerinde özel sözlükler dışlanan kelimeleri ve otoma
 
 **DirectX uzantıları**
 
-WPF, DX10 ve DX11 içeriğiyle birlikte çalışabilmeyi kolaylaştıran <xref:System.Windows.Interop.D3DImage> ' in yeni uygulamalarını sağlayan bir [NuGet paketi](https://go.microsoft.com/fwlink/?LinkID=691342) içerir. Bu paketin kodu açık kaynaklıdır ve [GitHub 'da](https://github.com/Microsoft/WPFDXInterop)kullanılabilir.
+WPF, DX10 ve DX11 içeriğiyle birlikte çalışabilmeyi kolaylaştıran yeni <xref:System.Windows.Interop.D3DImage> uygulamaları sağlayan bir [NuGet paketi](https://go.microsoft.com/fwlink/?LinkID=691342) içerir. Bu paketin kodu açık kaynaklıdır ve [GitHub 'da](https://github.com/Microsoft/WPFDXInterop)kullanılabilir.
 
 <a name="WWF461" />
 
@@ -1377,11 +1377,11 @@ Yönetilmeyen profil oluşturma API 'SI aşağıdaki şekilde geliştirilmiştir
 
 - [ICorProfilerInfo7](../unmanaged-api/profiling/icorprofilerinfo7-interface.md) arabirimindeki pdb 'leri 'e erişmek için daha iyi destek.
 
-  ASP.NET Core, derleme işlemleri için Roslyn tarafından bellek içinde derlenmesi çok daha yaygın hale geliyor. Profil oluşturma araçları kuran geliştiriciler için bu, geçmişte diskte serileştirilmiş olan pdb 'leri artık mevcut olmayabilir. Profil Oluşturucu araçları genellikle kodu, kod kapsamı veya satır içi performans analizi gibi görevler için kaynak satırlara eşlemek için pdb 'leri kullanır. [ICorProfilerInfo7](../unmanaged-api/profiling/icorprofilerinfo7-interface.md) arabirimi artık, bu profil oluşturucu araçlarının bellek içi pdb verilerine erişimi sağlamak için [ICorProfilerInfo7:: GetInMemorySymbolsLength](../unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md) ve [ICorProfilerInfo7:: ReadInMemorySymbols](../unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md)adlı iki yeni yöntem içerir. Yeni API 'Leri kullanarak, bir profil oluşturucu bellek içi PDB 'nin içeriğini bir bayt dizisi olarak edinebilir ve sonra onu işleyebilir ya da diskte seri hale getirebilirsiniz.
+  ASP.NET Core, derleme işlemleri için Roslyn tarafından bellek içinde derlenmesi çok daha yaygın hale geliyor. Profil oluşturma araçları kuran geliştiriciler için bu, geçmişte diskte serileştirilmiş olan pdb 'leri artık mevcut olmayabilir. Profil Oluşturucu araçları genellikle kodu, kod kapsamı veya satır içi performans analizi gibi görevler için kaynak satırlara eşlemek için pdb 'leri kullanır. [ICorProfilerInfo7](../unmanaged-api/profiling/icorprofilerinfo7-interface.md) arabirimi artık iki yeni yöntem Içerir: [ICorProfilerInfo7:: GetInMemorySymbolsLength](../unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md) ve [ICorProfilerInfo7:: ReadInMemorySymbols](../unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md), bu Profiler araçlarının yenı API 'leri kullanarak bellek içi pdb verilerine erişimi sağlamak için, bir profil oluşturucu bellek içi pdb 'nin içeriğini bayt dizisi olarak edinebilir ve sonra işleyebilir veya diske serileştirmez.
 
 - ICorProfiler arabirimiyle daha iyi izleme.
 
-  Dinamik izleme için `ICorProfiler` API 'Leri yeniden JIT işlevini kullanan profil oluşturucular, artık bazı meta verileri değiştirebilir. Daha önce böyle araçlar, herhangi bir zamanda Il 'yi işaretleyebilir, ancak meta veriler yalnızca modül yükleme sırasında değiştirilebilir. Il meta verilere başvurduğundan, bu, yapılabilecek izleme türlerini sınırlandırıyor. Modül yüklendikten sonra yeni `AssemblyRef`, `TypeRef`, `TypeSpec`, `MemberRef`, `MemberSpec`ve `UserString` ekleyerek meta veri düzenlemelerinin bir alt kümesini desteklemek için [ICorProfilerInfo7:: ApplyMetaData](../unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) metodunu ekleyerek bu limitlerin bazılarını yükseltilmemiş sunuyoruz. kaydeden. Bu değişiklik, mümkün olan çok daha geniş bir izleme sağlar.
+  Dinamik izleme için `ICorProfiler` API 'Leri yeniden JIT işlevini kullanan profil oluşturucular artık bazı meta verileri değiştirebilir. Daha önce böyle araçlar, herhangi bir zamanda Il 'yi işaretleyebilir, ancak meta veriler yalnızca modül yükleme sırasında değiştirilebilir. Il meta verilere başvurduğundan, bu, yapılabilecek izleme türlerini sınırlandırıyor. Modül yüklendikten sonra yeni `AssemblyRef`, `TypeRef`, `TypeSpec`, `MemberRef`, `MemberSpec`ve `UserString` kayıtları ekleyerek meta veri düzenlemelerinin bir alt kümesini desteklemek üzere [ICorProfilerInfo7:: ApplyMetaData](../unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) metodunu ekleyerek bu limitlerden bazılarını yükseltilmemiş sunuyoruz. Bu değişiklik, mümkün olan çok daha geniş bir izleme sağlar.
 
 <a name="NGEN461" />
 
@@ -1389,7 +1389,7 @@ Yönetilmeyen profil oluşturma API 'SI aşağıdaki şekilde geliştirilmiştir
 
 Çapraz makine olay izleme, müşterilerin A makinesinde bir programı profilini oluşturmasını ve B makinesi üzerinde kaynak satırı eşleme ile profil oluşturma verilerine bakmaya olanak sağlar. .NET Framework önceki sürümlerini kullanarak, Kullanıcı profili oluşturulan tüm modülleri ve yerel görüntüleri profili oluşturulmuş Kaynak-yerel eşlemeyi oluşturmak için Il PDB 'sini içeren analiz makinesine makine. Bu işlem, dosyalar görece küçük olduğunda (örneğin, telefon uygulamaları için), dosyalar masaüstü sistemlerinde çok büyük olabilir ve kopyalamak için önemli bir zaman gerekebilir.
 
-Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi içeren bir PDB oluşturabilir. Makineler arası olay izleme senaryolarımızda, A makinesi tarafından oluşturulan yerel görüntü PDB 'sini B makinesine kopyalamak ve Il PDB 'nin kaynaktan Il eşlemesini ve yerel görüntü PDB 'nin ana-yerel görüntüsünü okumak üzere [hata ayıklama arabirimi erişim API 'lerini](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference) kullanmak için gereklidir eşlemeleri. Her iki eşlemeyi de birleştirmek, kaynaktan yerel eşleme sağlar. Yerel görüntü PDB tüm modüllerden ve yerel görüntülerden çok daha küçük olduğundan, A makinesinden B makinesine kopyalama işlemi çok daha hızlıdır.
+Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi içeren bir PDB oluşturabilir. Makineler arası olay izleme senaryolarımızda, A makinesi tarafından oluşturulan yerel görüntü PDB 'sini B makinesine kopyalamak ve Il PDB 'nin kaynaktan Il eşlemesini ve yerel görüntü PDB 'nin Il-to-to-Native eşlemesini okumak için [hata ayıklama arabirimi erişim API 'lerini](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference) kullanmak için gereklidir. Her iki eşlemeyi de birleştirmek, kaynaktan yerel eşleme sağlar. Yerel görüntü PDB tüm modüllerden ve yerel görüntülerden çok daha küçük olduğundan, A makinesinden B makinesine kopyalama işlemi çok daha hızlıdır.
 
 <a name="v46" />
 
@@ -1423,15 +1423,15 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
     </appSettings>
     ```
 
-    Uygulamalar üzerinde .NET Framework 4,6 ' i hedefleyin, varsayılan olarak `true` olur. .NET Framework önceki bir sürümünü hedefleyen .NET Framework 4,6 üzerinde çalışan uygulamalarda, varsayılan olarak `false` ' dır. Yapılandırma ayarı `true` olarak ayarlanarak etkinleştirilebilir.
+    Uygulamalar üzerinde .NET Framework 4,6 ' i hedefleyin, varsayılan olarak `true`. .NET Framework önceki bir sürümünü hedefleyen .NET Framework 4,6 üzerinde çalışan uygulamalarda, varsayılan olarak `false`. Yapılandırma ayarı `true`olarak ayarlanarak etkinleştirilebilir.
 
   - **HTTP/2 desteği (Windows 10)**
 
     [Http/2](https://www.wikipedia.org/wiki/HTTP/2) , çok daha iyi bağlantı kullanımı (istemci ve sunucu arasında daha az gidiş dönüş) sağlayan yenı bir http Protokolü sürümüdür ve bu sayede kullanıcılar için daha düşük gecikme süresi Web sayfası yüklemesi oluşur.  Web sayfaları (hizmetler 'in aksine) HTTP/2 ' den en iyi şekilde faydalanır çünkü protokol, tek bir deneyimin bir parçası olarak istenen birden çok yapıtı için iyileştirmiştir. .NET Framework 4,6 ' de ASP.NET 'e HTTP/2 desteği eklenmiştir. Ağ işlevselliği birden çok katmanda mevcut olduğundan, Windows 'da, IIS 'de ve ASP.NET ' de HTTP/2 ' yi etkinleştirmek için yeni özellikler gerekiyordu. ASP.NET ile HTTP/2 kullanmak için Windows 10 ' da çalıştırıyor olmanız gerekir.
 
-    HTTP/2, varsayılan olarak, <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> API kullanan Windows 10 Evrensel Windows Platformu (UWP) uygulamaları için de desteklenir.
+    HTTP/2 Ayrıca, <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> API kullanan Windows 10 Evrensel Windows Platformu (UWP) uygulamaları için varsayılan olarak desteklenir.
 
-    ASP.NET uygulamalarında [PUSH_PROMISE](https://http2.github.io/http2-spec/#PUSH_PROMISE) özelliğini kullanmanın bir yolunu sağlamak için <xref:System.Web.HttpResponse> sınıfına <xref:System.Web.HttpResponse.PushPromise%28System.String%29> ve <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>iki aşırı yüklemeye sahip yeni bir yöntem eklenmiştir.
+    ASP.NET uygulamalarında [PUSH_PROMISE](https://http2.github.io/http2-spec/#PUSH_PROMISE) özelliğini kullanmanın bir yolunu sağlamak için <xref:System.Web.HttpResponse> sınıfına <xref:System.Web.HttpResponse.PushPromise%28System.String%29> ve <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>olmak üzere iki aşırı yüklemeye sahip yeni bir yöntem eklenmiştir.
 
     > [!NOTE]
     > ASP.NET Core HTTP/2 ' yi desteklese de, anında PROMISE özelliği için destek henüz eklenmemiş.
@@ -1448,7 +1448,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   - **Rastgele dize karma algoritmaları**
 
-    .NET Framework 4,5, [rastgele bir dize karma algoritması](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)sunmuştur. Ancak, ASP.NET tarafından, kararlı bir karma koda bağımlı bazı ASP.NET özellikleri nedeniyle desteklenmez. .NET Framework 4,6 ' de, rastgele dize karma algoritmaları artık desteklenmektedir. Bu özelliği etkinleştirmek için `aspnet:UseRandomizedStringHashAlgorithm` yapılandırma ayarını kullanın.
+    .NET Framework 4,5, [rastgele bir dize karma algoritması](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)sunmuştur. Ancak, ASP.NET tarafından, kararlı bir karma koda bağımlı bazı ASP.NET özellikleri nedeniyle desteklenmez. .NET Framework 4,6 ' de, rastgele dize karma algoritmaları artık desteklenmektedir. Bu özelliği etkinleştirmek için `aspnet:UseRandomizedStringHashAlgorithm` config ayarını kullanın.
 
     ```xml
     <appSettings>
@@ -1464,7 +1464,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   .NET Framework 4,6, 64 bit JıT derleyicisinin yeni bir sürümünü (özgün olarak kod adı RyuJIT) sunar. Yeni 64 bit derleyicisi, eski 64 bit JıT derleyicisi üzerinde önemli performans iyileştirmeleri sağlar. Yeni 64 bit derleyici, .NET Framework 4,6 üzerinde çalışan 64 bit süreçler için etkinleştirilmiştir. Uygulamanız 64 bit ya da AnyCPU olarak derlenirse ve bir 64-bit işletim sisteminde çalışıyorsa, 64 bitlik bir işlemde çalışır. Yeni derleyiciye geçişi mümkün olduğunca saydam hale getirmek için dikkatli olunurken, davranıştaki değişiklikler mümkündür. Yeni JıT derleyicisini kullanırken karşılaşılan sorunları doğrudan öğrenmek istiyoruz. Yeni 64-bit JıT derleyicisi ile ilgili olabilecek bir sorunla karşılaşırsanız lütfen [Microsoft Connect](https://connect.microsoft.com/) üzerinden bizimle iletişim kurun.
 
-  Yeni 64-bit JıT derleyicisi Ayrıca, <xref:System.Numerics> ad alanındaki SıMD özellikli türlerle birlikte kullanıldığında, iyi performans iyileştirmeleri elde eden, donanım SıMD hızlandırma özelliklerini de içerir.
+  Yeni 64-bit JıT derleyicisi Ayrıca, <xref:System.Numerics> ad alanındaki SıMD özellikli türlerle birlikte kullanıldığında, iyi performans iyileştirmeleri sağlayan donanım SıMD hızlandırma özelliklerini de içerir.
 
 - **Derleme yükleyici geliştirmeleri**
 
@@ -1496,15 +1496,15 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   - **Şifreleme güncelleştirmeleri**
 
-    <xref:System.Security.Cryptography?displayProperty=nameWithType> API 'SI, [WINDOWS CNG şifreleme API 'lerini](/windows/desktop/SecCNG/cng-reference)destekleyecek şekilde güncelleştiriliyor. Önceki .NET Framework sürümleri, <xref:System.Security.Cryptography?displayProperty=nameWithType> uygulamasının temeli olarak [Windows şifreleme API 'lerinin önceki bir sürümünde](/windows/desktop/SecCrypto/cryptography-portal) tamamıyla güvendi. Belirli uygulama kategorileri için önemli olan [modern şifreleme algoritmalarını](/windows/desktop/SecCNG/cng-features#suite-b-support)DESTEKLEDIĞINDEN CNG API 'sini desteklemeye yönelik isteklerdir.
+    <xref:System.Security.Cryptography?displayProperty=nameWithType> API 'SI, [WINDOWS CNG şifreleme API 'lerini](/windows/desktop/SecCNG/cng-reference)destekleyecek şekilde güncelleştiriliyor. Önceki .NET Framework sürümleri, <xref:System.Security.Cryptography?displayProperty=nameWithType> uygulamanın temeli olarak [Windows şifreleme API 'lerinin önceki bir sürümünde](/windows/desktop/SecCrypto/cryptography-portal) tamamıyla güvendi. Belirli uygulama kategorileri için önemli olan [modern şifreleme algoritmalarını](/windows/desktop/SecCNG/cng-features#suite-b-support)DESTEKLEDIĞINDEN CNG API 'sini desteklemeye yönelik isteklerdir.
 
     .NET Framework 4,6, Windows CNG şifreleme API 'Lerini desteklemek için aşağıdaki yeni geliştirmeleri içerir:
 
-    - X509 sertifikaları, `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` ve `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` için, mümkün olduğunda CAPı tabanlı bir uygulama yerine, CNG tabanlı bir uygulama döndüren bir genişletme yöntemleri kümesi. (Bazı smartcards, vb. için hala CAPı gerekir ve API geri dönüşü işler).
+    - X509 sertifikaları, `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` ve `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)`için, mümkün olduğunda CAPı tabanlı bir uygulama yerine, CNG tabanlı bir uygulama döndüren bir genişletme yöntemleri kümesi. (Bazı smartcards, vb. için hala CAPı gerekir ve API geri dönüşü işler).
 
     - RSA algoritmasının CNG uygulamasını sağlayan <xref:System.Security.Cryptography.RSACng?displayProperty=nameWithType> sınıfı.
 
-    - Yaygın eylemlerin artık atama gerektirmemesi için RSA API geliştirmeleri. Örneğin, <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> nesnesi kullanarak verileri şifrelemek, .NET Framework önceki sürümlerinde aşağıdakiler gibi bir kod gerektirir.
+    - Yaygın eylemlerin artık atama gerektirmemesi için RSA API geliştirmeleri. Örneğin, <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> nesne kullanarak verileri şifrelemek, .NET Framework önceki sürümlerinde aşağıdakiler gibi bir kod gerektirir.
 
       [!code-csharp[WhatsNew.Casting#1](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]
       [!code-vb[WhatsNew.Casting#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
@@ -1528,11 +1528,11 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   - **Uyumluluk anahtarları**
 
-    Yeni <xref:System.AppContext> sınıfı, kitaplık yazıcılarının kullanıcılarına yeni işlevsellik için Tekdüzen bir geri alma mekanizması sağlamasını sağlayan yeni bir uyumluluk özelliği ekler. Bir kapatma isteğini iletmek için bileşenler arasında gevşek olarak bağlanmış bir sözleşme oluşturur. Bu özellik, genellikle mevcut işlevlere bir değişiklik yapıldığında önemlidir. Buna karşılık, yeni işlevsellik için zaten örtük bir katılım vardır.
+    Yeni <xref:System.AppContext> sınıfı, kitaplık yazıcılarının kullanıcılarına yönelik yeni işlevler için Tekdüzen bir geri alma mekanizması sağlamasını sağlayan yeni bir uyumluluk özelliği ekler. Bir kapatma isteğini iletmek için bileşenler arasında gevşek olarak bağlanmış bir sözleşme oluşturur. Bu özellik, genellikle mevcut işlevlere bir değişiklik yapıldığında önemlidir. Buna karşılık, yeni işlevsellik için zaten örtük bir katılım vardır.
 
     <xref:System.AppContext>, kitaplıklar uyumluluk anahtarlarını tanımlar ve kullanıma sunar, ancak bunlara bağlı olan kod bu anahtarları kitaplık davranışını etkileyecek şekilde ayarlayabilir. Varsayılan olarak, kitaplıklar yeni işlevselliği sağlar ve yalnızca, anahtar ayarlanmışsa (yani, önceki işlevleri sağlar) değiştirir.
 
-    Bir uygulama (veya bir kitaplık) bir anahtarın değerini (her zaman bir <xref:System.Boolean> değeri), bağımlı bir kitaplığın tanımladığı şekilde bildirebilir. Anahtar her zaman örtük `false` ' dır. Anahtarın `true` olarak ayarlanması bunu sağlar. Anahtarın `false` olarak ayarlanması, yeni davranışı sağlar.
+    Bir uygulama (veya bir kitaplık), bağımlı bir kitaplığın tanımladığı bir anahtarın (her zaman bir <xref:System.Boolean> değeri) değerini bildirebilir. Anahtar her zaman örtük `false`. Anahtarın `true` için ayarlanması etkinleştirilir. Anahtarın `false` olarak ayarlanması, yeni davranışı sağlar.
 
     ```csharp
     AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", true);
@@ -1620,7 +1620,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   - **HDPı geliştirmeleri**
 
-    WPF 'de HDPı desteği artık .NET Framework 4,6 ' de daha iyidir. Kenarlıkların bulunduğu denetimlerde kırpma örneklerini azaltmak için yerleşim yuvarlama sırasında değişiklikler yapılmıştır. Varsayılan olarak, bu özellik yalnızca <xref:System.Runtime.Versioning.TargetFrameworkAttribute> ' ı .NET 4,6 olarak ayarlandıysa etkindir.  Framework 'ün önceki sürümlerini hedefleyen ancak .NET Framework 4,6 üzerinde çalışan uygulamalar, App. config dosyasının [\<runtime >](../configure-apps/file-schema/runtime/runtime-element.md) bölümüne aşağıdaki satırı ekleyerek yeni davranışı kabul edebilir:
+    WPF 'de HDPı desteği artık .NET Framework 4,6 ' de daha iyidir. Kenarlıkların bulunduğu denetimlerde kırpma örneklerini azaltmak için yerleşim yuvarlama sırasında değişiklikler yapılmıştır. Varsayılan olarak, bu özellik yalnızca <xref:System.Runtime.Versioning.TargetFrameworkAttribute> .NET 4,6 olarak ayarlandıysa etkindir.  Framework 'ün önceki sürümlerini hedefleyen ancak .NET Framework 4,6 üzerinde çalışan uygulamalar, App. config dosyasının [\<runtime >](../configure-apps/file-schema/runtime/runtime-element.md) bölümüne aşağıdaki satırı ekleyerek yeni davranışı kabul edebilir:
 
     ```xml
     <AppContextSwitchOverrides
@@ -1628,13 +1628,13 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
     />
     ```
 
-    Farklı DPı ayarlarına (çok DPı Kurulum) sahip birden çok izleyiciden oluşan WPF pencereleri, artık Blacked-Out bölgeleri olmadan tamamen işlenir. Bu yeni davranışı devre dışı bırakmak için App. config dosyasının `<appSettings>` bölümüne aşağıdaki satırı ekleyerek bu davranıştan vazgeçebilirsiniz:
+    Farklı DPı ayarlarına (çok DPı Kurulum) sahip birden çok izleyiciden oluşan WPF pencereleri, artık Blacked-Out bölgeleri olmadan tamamen işlenir. Bu yeni davranışı devre dışı bırakmak için App. config dosyasının `<appSettings>` bölümüne aşağıdaki satırı ekleyerek bu davranışı iptal edebilirsiniz:
 
     ```xml
     <add key="EnableMultiMonitorDisplayClipping" value="true"/>
     ```
 
-    DPı ayarı temelinde sağ imleci otomatik olarak yükleme desteği <xref:System.Windows.Input.Cursor?displayProperty=nameWithType> ' a eklenmiştir.
+    <xref:System.Windows.Input.Cursor?displayProperty=nameWithType>'ye DPı ayarı temelinde sağ imleci otomatik olarak yükleme desteği eklenmiştir.
 
   - **Dokunmatik daha iyidir**
 
@@ -1673,7 +1673,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
     - **Farklı kanal fabrikaları kullanma**
 
-      Kullanıcılar ayrıca, farklı kanal fabrikaları tarafından oluşturulan kanallar kullanılarak gönderilen iletilerin farklı temel HTTP bağlantıları kullanmasını sağlayan bir özelliği etkinleştirebilir. Bu özelliği etkinleştirmek için, kullanıcıların aşağıdaki `appSetting` ' ı `true` olarak ayarlaması gerekir:
+      Kullanıcılar ayrıca, farklı kanal fabrikaları tarafından oluşturulan kanallar kullanılarak gönderilen iletilerin farklı temel HTTP bağlantıları kullanmasını sağlayan bir özelliği etkinleştirebilir. Bu özelliği etkinleştirmek için, kullanıcıların aşağıdaki `appSetting` `true`olarak ayarlaması gerekir:
 
       ```xml
       <appSettings>
@@ -1683,7 +1683,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
 - **Windows Workflow Foundation (WWF)**
 
-  Artık, isteği zaman aşımından önce bekleyen bir "protokol dışı" yer işareti olduğunda, bir iş akışı hizmetinin bir sıra dışı işlem isteğine açık olacağı saniye sayısını belirtebilirsiniz. "Protokol dışı" yer işareti, bekleyen alma etkinlikleriyle ilgili olmayan bir yer işaretidir. Bazı etkinlikler, kendi uygulamalarında protokol olmayan yer işaretleri oluşturur, bu nedenle protokol olmayan bir yer işaretinin mevcut olduğu açık olmayabilir. Bu durum ve seçim dahildir. Bu nedenle, bir durum makinesi ile uygulanan veya bir çekme etkinliği içeren bir iş akışı hizmetiniz varsa, muhtemelen protokol olmayan yer işaretlerine sahip olursunuz. Bu aralığı, App. config dosyanızın `appSettings` bölümüne aşağıdakine benzer bir satır ekleyerek belirtirsiniz:
+  Artık, isteği zaman aşımından önce bekleyen bir "protokol dışı" yer işareti olduğunda, bir iş akışı hizmetinin bir sıra dışı işlem isteğine açık olacağı saniye sayısını belirtebilirsiniz. "Protokol dışı" yer işareti, bekleyen alma etkinlikleriyle ilgili olmayan bir yer işaretidir. Bazı etkinlikler, kendi uygulamalarında protokol olmayan yer işaretleri oluşturur, bu nedenle protokol olmayan bir yer işaretinin mevcut olduğu açık olmayabilir. Bu durum ve seçim dahildir. Bu nedenle, bir durum makinesi ile uygulanan veya bir çekme etkinliği içeren bir iş akışı hizmetiniz varsa, muhtemelen protokol olmayan yer işaretlerine sahip olursunuz. Uygulama. config dosyanızın `appSettings` bölümüne aşağıdakine benzer bir satır ekleyerek aralığı belirtirsiniz:
 
   ```xml
   <add key="microsoft:WorkflowServices:FilterResumeTimeoutInSeconds" value="60"/>
@@ -1701,7 +1701,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
 - **İşlemler**
 
-  Artık <xref:System.Transactions.TransactionException> ' dan türetilmiş bir özel durumun oluşturulmasına neden olan işlem için dağıtılmış işlem tanımlayıcıyı ekleyebilirsiniz. Bunu, App. config dosyanızın `appSettings` bölümüne aşağıdaki anahtarı ekleyerek yapabilirsiniz:
+  Artık <xref:System.Transactions.TransactionException> ' den türetilen bir özel durumun oluşturulmasına neden olan işlem için dağıtılmış işlem tanımlayıcıyı ekleyebilirsiniz. Bunu, App. config dosyanızın `appSettings` bölümüne aşağıdaki anahtarı ekleyerek yapabilirsiniz:
 
   ```xml
   <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/>
@@ -1709,7 +1709,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   Varsayılan değer `false` şeklindedir.
 
-- **İşlemleri**
+- **Ağ**
 
   - **Yuva yeniden kullanımı**
 
@@ -1721,7 +1721,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
     - <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> özelliği.
 
-    Varsayılan olarak, `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` kayıt defteri anahtarının `HWRPortReuseOnSocketBind` değeri 0x1 olarak ayarlanmadığı müddetçe <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> özelliği `false`. HTTP bağlantılarında yerel bağlantı noktası yeniden kullanımını etkinleştirmek için <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> özelliğini `true`olarak ayarlayın. Bu, <xref:System.Net.Http.HttpClient> ve <xref:System.Net.HttpWebRequest> giden tüm giden TCP yuvası bağlantılarının, yerel bağlantı noktası yeniden kullanımını sağlayan yeni bir Windows 10 yuva seçeneği olan [SO_REUSE_UNICASTPORT](/windows/desktop/WinSock/sol-socket-socket-options)kullanmasına neden olur.
+    Varsayılan olarak, `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` kayıt defteri anahtarının `HWRPortReuseOnSocketBind` değeri 0x1 olarak ayarlanmadığı müddetçe <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> özelliği `false`. HTTP bağlantılarında yerel bağlantı noktası yeniden kullanımını etkinleştirmek için <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> özelliğini `true`olarak ayarlayın. Bu, <xref:System.Net.Http.HttpClient> ve <xref:System.Net.HttpWebRequest> giden tüm giden TCP yuvası bağlantılarının, yerel bağlantı noktası yeniden kullanımını sağlayan yeni bir Windows 10 yuva seçeneği [SO_REUSE_UNICASTPORT](/windows/desktop/WinSock/sol-socket-socket-options)kullanmasına neden olur.
 
     Yalnızca bir yuva uygulaması yazan geliştiriciler, bağlama sırasında giden yuvaların yerel bağlantı noktalarını yeniden kullanabilmesi için <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType> gibi bir yöntemi çağırırken <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> seçeneğini belirtebilir.
 
@@ -1755,7 +1755,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
 - **Açık kaynaklı .NET Framework paketleri**
 
-  Sabit koleksiyonlar, [SIMD API 'leri](https://go.microsoft.com/fwlink/?LinkID=518639)ve <xref:System.Net.Http> ad alanında bulunanlar gibi ağ API 'leri gibi .NET Core paketleri artık [GitHub](https://github.com/)'da açık kaynak paketleri olarak kullanılabilir. Koda erişmek için bkz. [GitHub üzerinde Corefx](https://github.com/dotnet/corefx). Daha fazla bilgi ve bu paketlere katkıda bulunma hakkında daha fazla bilgi için bkz. GitHub 'da [.NET Core ve açık kaynak](../get-started/net-core-and-open-source.md), [.net giriş sayfası](https://github.com/dotnet/home).
+  Sabit koleksiyonlar, [SIMD API 'leri](https://go.microsoft.com/fwlink/?LinkID=518639)ve <xref:System.Net.Http> ad alanında bulunan gibi ağ API 'leri gibi .NET Core paketleri artık [GitHub](https://github.com/)'da açık kaynak paketleri olarak kullanılabilir. Koda erişmek için bkz. [GitHub üzerinde Corefx](https://github.com/dotnet/corefx). Daha fazla bilgi ve bu paketlere katkıda bulunma hakkında daha fazla bilgi için bkz. GitHub 'da [.NET Core ve açık kaynak](../get-started/net-core-and-open-source.md), [.net giriş sayfası](https://github.com/dotnet/home).
 
 <a name="v452" />
 
@@ -1801,7 +1801,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
   - [SetEventMask2 Yöntemi](../unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
   - [AddAssemblyReference Yöntemi](../unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)
 
-  Önceki `ICorProfiler` uygulamaları bağımlı derlemelerin yavaş yüklenmesini destekliyordu. Yeni profil oluşturma API 'Leri, uygulama tam olarak başlatıldıktan sonra yüklenmesi yerine, profil oluşturucu tarafından doğrudan yüklenebilir olarak eklenen bağımlı derlemeler gerektirir. Bu değişiklik, mevcut `ICorProfiler` API 'Lerinin kullanıcılarını etkilemez.
+  Önceki `ICorProfiler` uygulamalar bağımlı derlemelerin geç yüklenmesini destekliyordu. Yeni profil oluşturma API 'Leri, uygulama tam olarak başlatıldıktan sonra yüklenmesi yerine, profil oluşturucu tarafından doğrudan yüklenebilir olarak eklenen bağımlı derlemeler gerektirir. Bu değişiklik, mevcut `ICorProfiler` API 'Leri kullanıcılarını etkilemez.
 
 - **Hata ayıklama geliştirmeleri.** Aşağıdaki yeni yönetilmeyen hata ayıklama API 'Leri, bir profil Oluşturucu ile daha iyi tümleştirme sağlar. Artık Profiler tarafından yerleştirilen meta verilere, Ayrıca, döküm hata ayıklaması sırasında derleyici ReJIT istekleri tarafından oluşturulan yerel değişkenlere ve koda erişebilirsiniz.
 
@@ -1834,7 +1834,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
                                           enlistmentOptions As EnlistmentOptions) As Enlistment
   ```
 
-  Yöntemi, <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> yöntemine yanıt olarak <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> tarafından daha önce oluşturulmuş bir kayıt tarafından kullanılabilir. İşlemi bir MSDTC işlemine yükseltmek ve promotable listesini dayanıklı bir listeye "dönüştürmek" için `System.Transactions` ister. Bu yöntem başarıyla tamamlandıktan sonra <xref:System.Transactions.IPromotableSinglePhaseNotification> arabirimine artık `System.Transactions` tarafından başvurulmayacak ve gelecekteki tüm bildirimler sunulan <xref:System.Transactions.ISinglePhaseNotification> arabirimine ulaşacaktır. Söz konusu kayıt, işlem günlüğü ve kurtarmayı destekleyen dayanıklı bir liste olarak davranmalıdır. Ayrıntılar için <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> bakın. Ayrıca, kayıt <xref:System.Transactions.ISinglePhaseNotification>desteklemelidir.  Bu yöntem, *yalnızca* bir <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> çağrısı işlenirken çağrılabilir. Bu durumda, <xref:System.Transactions.TransactionException> özel durumu oluşturulur.
+  Yöntemi, <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> yöntemine yanıt olarak <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> tarafından daha önce oluşturulmuş bir kayıt tarafından kullanılabilir. İşlemi bir MSDTC işlemine yükseltmek ve promotable listesini dayanıklı bir listeye "dönüştürmek" için `System.Transactions` sorar. Bu yöntem başarıyla tamamlandıktan sonra, <xref:System.Transactions.IPromotableSinglePhaseNotification> arabirimine artık `System.Transactions`tarafından başvurulmayacak ve gelecekteki tüm bildirimler belirtilen <xref:System.Transactions.ISinglePhaseNotification> arabirimine gönderilir. Söz konusu kayıt, işlem günlüğü ve kurtarmayı destekleyen dayanıklı bir liste olarak davranmalıdır. Ayrıntılar için <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> bakın. Ayrıca, kayıt <xref:System.Transactions.ISinglePhaseNotification>desteklemelidir.  Bu yöntem, *yalnızca* bir <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> çağrısı işlenirken çağrılabilir. Böyle değilse, bir <xref:System.Transactions.TransactionException> özel durumu oluşturulur.
 
 <a name="v451" />
 
@@ -1876,7 +1876,7 @@ Windows Forms iyileştirmeleri şunlardır:
   - <xref:System.Windows.Forms.TreeView>
   - <xref:System.Windows.Forms.DataGridView> bazı yönleri (desteklenen ek denetimler için bkz. [4.5.2 sürümündeki yeni özellikler](#v452) )
 
-  Bu özelliği etkinleştirmek için yapılandırma dosyasına (App. config) yeni bir \<appSettings > öğesi ekleyin ve `EnableWindowsFormsHighDpiAutoResizing` öğesini `true` olarak ayarlayın:
+  Bu özelliği etkinleştirmek için yapılandırma dosyasına (App. config) yeni bir \<appSettings > öğesi ekleyin ve `EnableWindowsFormsHighDpiAutoResizing` öğesini `true`olarak ayarlayın:
 
   ```xml
   <appSettings>
@@ -1894,7 +1894,7 @@ Visual Studio 2013 .NET Framework uygulamalarınızın hata ayıklaması sıras�
 
 - Windows Çalışma Zamanı bileşenleri için daha iyi özel durum desteği. [!INCLUDE[win81](../../../includes/win81-md.md)], Windows Mağazası uygulamalarından kaynaklanan özel durumlar, özel duruma neden olan hata hakkındaki bilgileri, dil sınırları boyunca korur. Bu özellik hakkında bilgi edinmek için [.NET Framework 4.5.1 duyurusunun](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)"Windows Mağazası uygulama geliştirme" bölümünde bulabilirsiniz.
 
-Visual Studio 2013 başlayarak, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalarını ve masaüstü uygulamalarını iyileştirmek için [yönetilen profil temelli Iyileştirme aracı 'nı (Mpgo. exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) kullanabilirsiniz.
+Visual Studio 2013 başlayarak, Windows 8. x mağaza uygulamalarını ve masaüstü uygulamalarını en iyi duruma getirmek için [yönetilen profil temelli Iyileştirme aracı 'nı (Mpgo. exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) kullanabilirsiniz.
 
 ASP.NET 4.5.1 içindeki yeni özellikler için bkz. [Visual Studio 2013 Sürüm notları ASP.NET and Web Tools](/aspnet/visual-studio/overview/2013/release-notes).
 
@@ -1944,7 +1944,7 @@ ASP.NET 4.5.1 içindeki yeni özellikler için bkz. [Visual Studio 2013 Sürüm 
 
 - Birden çok kapsam.
 
-- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar oluştururken kullanabileceğiniz MEF alt kümesi. Bu alt küme NuGet galerisinden [indirilebilir bir paket](https://go.microsoft.com/fwlink/?LinkId=256238) olarak kullanılabilir. Paketi yüklemek için, projenizi Visual Studio 'da açın, **Proje** menüsünden **NuGet Paketlerini Yönet** ' i seçin ve `Microsoft.Composition` paketini çevrimiçi olarak arayın.
+- Windows 8. x Mağazası uygulamaları oluştururken kullanabileceğiniz MEF alt kümesi. Bu alt küme NuGet galerisinden [indirilebilir bir paket](https://go.microsoft.com/fwlink/?LinkId=256238) olarak kullanılabilir. Paketi yüklemek için, projenizi Visual Studio 'da açın, **Proje** menüsünden **NuGet Paketlerini Yönet** ' i seçin ve `Microsoft.Composition` paketini çevrimiçi olarak arayın.
 
 Daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)](../mef/index.md).
 
@@ -1956,9 +1956,9 @@ Daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)](../mef/index
 
 ### <a name="tools"></a>Araçlar
 
-.NET Framework 4,5, kaynak dosya Oluşturucu (Resgen. exe), bir .NET Framework derlemesine gömülü bir. resources dosyasından [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalarda kullanılmak üzere bir. resw dosyası oluşturmanıza olanak sağlar. Daha fazla bilgi için bkz. [Resgen. exe (kaynak dosya Oluşturucu)](../tools/resgen-exe-resource-file-generator.md).
+.NET Framework 4,5, kaynak dosya Oluşturucu (Resgen. exe), bir. resources .NET Framework dosyasındaki Windows 8. x Mağaza uygulamalarında kullanılmak üzere bir. resw dosyası oluşturmanıza olanak sağlar. Daha fazla bilgi için bkz. [Resgen. exe (kaynak dosya Oluşturucu)](../tools/resgen-exe-resource-file-generator.md).
 
-Yönetilen profil temelli Iyileştirme (Mpgo. exe), yerel görüntü derlemelerini iyileştirerek uygulama başlangıç süresini, bellek kullanımını (çalışma kümesi boyutu) ve aktarım hızını iyileştirmenize olanak sağlar. Komut satırı aracı, yerel görüntü uygulama derlemeleri için profil verileri oluşturur. Bkz. [Mpgo. exe (yönetilen profil temelli Iyileştirme aracı)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Visual Studio 2013 başlayarak, Mpgo. exe ' yi kullanarak [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalarını ve masaüstü uygulamalarını en iyi duruma getirebilirsiniz.
+Yönetilen profil temelli Iyileştirme (Mpgo. exe), yerel görüntü derlemelerini iyileştirerek uygulama başlangıç süresini, bellek kullanımını (çalışma kümesi boyutu) ve aktarım hızını iyileştirmenize olanak sağlar. Komut satırı aracı, yerel görüntü uygulama derlemeleri için profil verileri oluşturur. Bkz. [Mpgo. exe (yönetilen profil temelli Iyileştirme aracı)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Visual Studio 2013 başlayarak, Mpgo. exe ' yi kullanarak Windows 8. x mağaza uygulamalarını ve masaüstü uygulamalarını en iyi duruma getirebilirsiniz.
 
 <a name="parallel" />
 
@@ -1980,7 +1980,7 @@ Web Forms, WebSocket desteği, zaman uyumsuz işleyiciler, performans geliştirm
 
 .NET Framework 4,5, HTTP uygulamaları için yeni bir programlama arabirimi sağlar. Daha fazla bilgi için bkz. yeni <xref:System.Net.Http?displayProperty=nameWithType> ve <xref:System.Net.Http.Headers?displayProperty=nameWithType> ad alanları.
 
-Ayrıca, mevcut <xref:System.Net.HttpListener> ve ilgili sınıfları kullanarak bir WebSocket bağlantısı kabul etmek ve bunlarla etkileşim kurmak için yeni bir programlama arabirimi de mevcuttur. Daha fazla bilgi için yeni <xref:System.Net.WebSockets> ad alanı ve <xref:System.Net.HttpListener> sınıfına bakın.
+Ayrıca, mevcut <xref:System.Net.HttpListener> ve ilgili sınıfları kullanarak bir WebSocket bağlantısı kabul etmek ve bunlarla etkileşim kurmak için yeni bir programlama arabirimi de mevcuttur. Daha fazla bilgi için bkz. yeni <xref:System.Net.WebSockets> ad alanı ve <xref:System.Net.HttpListener> sınıfı.
 
 Ayrıca, 4,5 .NET Framework aşağıdaki ağ geliştirmelerini içerir:
 
@@ -1988,11 +1988,11 @@ Ayrıca, 4,5 .NET Framework aşağıdaki ağ geliştirmelerini içerir:
 
 - Uluslararası etki alanı adı (ıDN) ayrıştırma desteği. Daha fazla bilgi için bkz. <xref:System.Uri> ve ilgili sınıflar.
 
-- E-posta adresi uluslararası duruma getirme (EAı) desteği. Daha fazla bilgi için <xref:System.Net.Mail> ad alanı ' na bakın.
+- E-posta adresi uluslararası duruma getirme (EAı) desteği. Daha fazla bilgi için <xref:System.Net.Mail> ad alanına bakın.
 
-- Geliştirilmiş IPv6 desteği. Daha fazla bilgi için <xref:System.Net.NetworkInformation> ad alanı ' na bakın.
+- Geliştirilmiş IPv6 desteği. Daha fazla bilgi için <xref:System.Net.NetworkInformation> ad alanına bakın.
 
-- Çift modlu yuva desteği. Daha fazla bilgi için <xref:System.Net.Sockets.Socket> ve <xref:System.Net.Sockets.TcpListener> sınıflarına bakın.
+- Çift modlu yuva desteği. Daha fazla bilgi için bkz. <xref:System.Net.Sockets.Socket> ve <xref:System.Net.Sockets.TcpListener> sınıfları.
 
 <a name="client" />
 
@@ -2000,7 +2000,7 @@ Ayrıca, 4,5 .NET Framework aşağıdaki ağ geliştirmelerini içerir:
 
 .NET Framework 4,5 ' de, Windows Presentation Foundation (WPF) aşağıdaki alanlarda değişiklikler ve iyileştirmeler içerir:
 
-- Yeni <xref:System.Windows.Controls.Ribbon.Ribbon> denetimi, hızlı erişim araç çubuğu, uygulama menüsü ve sekmeler barındıran bir şerit kullanıcı arabirimi uygulamanıza olanak sağlar.
+- Hızlı erişim araç çubuğu, uygulama menüsü ve sekmeler barındıran bir şerit kullanıcı arabirimi uygulamanıza olanak sağlayan yeni <xref:System.Windows.Controls.Ribbon.Ribbon> denetimi.
 
 - Zaman uyumlu ve zaman uyumsuz veri doğrulamayı destekleyen yeni <xref:System.ComponentModel.INotifyDataErrorInfo> arabirimi.
 
@@ -2048,7 +2048,7 @@ Ayrıca, 4,5 .NET Framework aşağıdaki ağ geliştirmelerini içerir:
 
 - XML Düzenleyici araç ipuçları.
 
-- <xref:System.ServiceModel.ChannelFactory> önbelleğe alma desteği.
+- önbelleğe alma desteği <xref:System.ServiceModel.ChannelFactory>.
 
 - İkili kodlayıcı sıkıştırma desteği.
 
@@ -2106,7 +2106,7 @@ Daha fazla bilgi için bkz. [Windows Communication Foundation](https://go.micros
 
   - Kalıcı bir iş akışı örneği ve onun iş akışı tanımı arasında eşleme sağlayan yeni <xref:System.Activities.WorkflowIdentity> sınıfı.
 
-  - Aynı konakta birden çok iş akışı sürümünün yan yana yürütülmesi <xref:System.ServiceModel.Activities.WorkflowServiceHost> ' dır.
+  - <xref:System.ServiceModel.Activities.WorkflowServiceHost>dahil olmak üzere aynı ana bilgisayarda birden çok iş akışı sürümünün yan yana yürütülmesi.
 
   - Dinamik güncelleştirmede, kalıcı bir iş akışı örneğinin tanımını değiştirme özelliği.
 
@@ -2118,7 +2118,7 @@ Daha fazla bilgi için bkz. [Windows Workflow Foundation](https://go.microsoft.c
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar belirli form faktörleri için tasarlanmıştır ve Windows işletim sisteminin gücünden yararlanır. 4,5 veya 4.5.1 .NET Framework bir alt kümesi, veya Visual Basic kullanarak C# Windows için [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları oluşturmak için kullanılabilir. Bu alt küme [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] olarak adlandırılır ve Windows Geliştirme Merkezi 'nde bir [genel bakışta](https://go.microsoft.com/fwlink/?LinkId=228491) ele alınmıştır.
+Windows 8. x Mağazası uygulamaları belirli form faktörleri için tasarlanmıştır ve Windows işletim sisteminin gücünden yararlanır. Veya Visual Basic kullanarak C# Windows için Windows 8. x Mağazası uygulamaları oluşturmak üzere 4,5 veya 4.5.1 .NET Framework bir alt kümesi mevcuttur. Bu alt küme [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] olarak adlandırılır ve Windows Geliştirme Merkezi 'nde bir [genel bakışta](https://go.microsoft.com/fwlink/?LinkId=228491) ele alınmıştır.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Taşınabilir sınıf kitaplıkları <a name="portable" />
 
@@ -2128,6 +2128,6 @@ Visual Studio 2012 ' deki (ve sonraki sürümlerde) taşınabilir sınıf kitapl
 
 - [.NET Framework ve Bant Dışı Yayınlar](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework erişilebilirlik yenilikleri](whats-new-in-accessibility.md)
-- [Visual Studio 2017 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2017)
+- [Visual Studio 2017'deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2017)
 - [ASP.NET](/aspnet)
-- [Görseldeki yeniliklerC++](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
+- [Visual Studio C++ 'daki yenilikler](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

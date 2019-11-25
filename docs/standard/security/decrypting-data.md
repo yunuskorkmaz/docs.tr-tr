@@ -13,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cf0ffae2c5803324d4941581855d5dc10224e07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e287d3c73df247febf99967a9dc4b0413f01def0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795232"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353858"
 ---
 # <a name="decrypting-data"></a>Verilerin Şifresini Çözme
 
-Şifre çözme, şifreleme ters işlemidir. Gizli anahtar şifreleme için anahtar ve IV verileri şifrelemek için kullanılan bilmeniz gerekir. Ortak anahtar şifrelemesi için ortak anahtarı (verileri özel anahtarla şifrelenmiş olan ise) ya da özel anahtarı (veri ortak anahtarı kullanarak şifrelenmişse) bilmeniz gerekir.
+Decryption is the reverse operation of encryption. For secret-key encryption, you must know both the key and IV that were used to encrypt the data. For public-key encryption, you must know either the public key (if the data was encrypted using the private key) or the private key (if the data was encrypted using the public key).
 
-## <a name="symmetric-decryption"></a>Simetrik şifre çözme
+## <a name="symmetric-decryption"></a>Symmetric Decryption
 
-Simetrik algoritmaları ile şifrelenmiş verilerin şifrelerinin simetrik algoritmaları ile verileri şifrelemek için kullanılan işlem aynıdır. <xref:System.Security.Cryptography.CryptoStream> Sınıfı .NET Framework tarafından sağlanan simetrik şifreleme sınıfları ile herhangi bir yönetilen bir akışı nesneden okunan verilerin şifresini çözmek için kullanılır.
+The decryption of data encrypted with symmetric algorithms is similar to the process used to encrypt data with symmetric algorithms. The <xref:System.Security.Cryptography.CryptoStream> class is used with symmetric cryptography classes provided by the .NET Framework to decrypt data read from any managed stream object.
 
-Aşağıdaki örnek yeni bir örneğini oluşturma işlemini gösterir <xref:System.Security.Cryptography.RijndaelManaged> sınıfı ve şifre çözme işlemleri gerçekleştirmek için kullanmak bir <xref:System.Security.Cryptography.CryptoStream> nesne. Bu örnekte, önce yeni bir örneğini oluşturur **RijndaelManaged** sınıfı. Sonraki oluşturur bir **CryptoStream** nesne ve yönetilen bir akışa değerine adlı başlatır `myStream`. Ardından, **CreateDecryptor** yönteminden **RijndaelManaged** sınıfı, aynı anahtar ve şifreleme için kullanılan ve geçirilerek IV geçirilir **CryptoStream** Oluşturucu. Son olarak, **CryptoStreamMode.Read** numaralandırma geçirilen **CryptoStream** okuma erişimi stream belirtmek için oluşturucu.
+The following example illustrates how to create a new instance of the <xref:System.Security.Cryptography.RijndaelManaged> class and use it to perform decryption on a <xref:System.Security.Cryptography.CryptoStream> object. This example first creates a new instance of the **RijndaelManaged** class. Next it creates a **CryptoStream** object and initializes it to the value of a managed stream called `myStream`. Next, the **CreateDecryptor** method from the **RijndaelManaged** class is passed the same key and IV that was used for encryption and is then passed to the **CryptoStream** constructor. Finally, the **CryptoStreamMode.Read** enumeration is passed to the **CryptoStream** constructor to specify read access to the stream.
 
 ```vb
 Dim rmCrypto As New RijndaelManaged()
@@ -40,15 +40,14 @@ RijndaelManaged rmCrypto = new RijndaelManaged();
 CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateDecryptor(Key, IV), CryptoStreamMode.Read);
 ```
 
-Aşağıdaki örnek, bir akış oluşturma, akış çözme, akıştan okumak ve akışları kapatma işlemin tümünü gösterir. A <xref:System.Net.Sockets.TcpListener> nesnesi dinleme nesnesi için bir bağlantı yapıldığında, ağ akışı başlatır oluşturulur. Kullanarak ağ akışı çözülür **CryptoStream** sınıfı ve **RijndaelManaged** sınıfı. Bu örnek, anahtar ve IV değerleri başarıyla aktarılan veya önceden varılmış olduğunu varsayar. Şifrelemek ve bu değerleri aktarmak için gereken kodu göstermez.
+The following example shows the entire process of creating a stream, decrypting the stream, reading from the stream, and closing the streams. A <xref:System.Net.Sockets.TcpListener> object is created that initializes a network stream when a connection to the listening object is made. The network stream is then decrypted using the **CryptoStream** class and the **RijndaelManaged** class. This example assumes that the key and IV values have been either successfully transferred or previously agreed upon. It does not show the code needed to encrypt and transfer these values.
 
 ```vb
-Imports System
-Imports System.Net.Sockets
-Imports System.Threading
 Imports System.IO
 Imports System.Net
+Imports System.Net.Sockets
 Imports System.Security.Cryptography
+Imports System.Threading
 
 Module Module1
     Sub Main()
@@ -105,11 +104,11 @@ End Module
 
 ```csharp
 using System;
-using System.Net.Sockets;
-using System.Threading;
 using System.IO;
 using System.Net;
+using System.Net.Sockets;
 using System.Security.Cryptography;
+using System.Threading;
 
 class Class1
 {
@@ -171,15 +170,15 @@ class Class1
 }
 ```
 
-Önceki örnek çalışmaya dinleyiciye şifreli bir bağlantı yapılmalıdır. Bağlantı anahtarı, IV ve dinleyicisi kullanılan algoritmasını kullanmanız gerekir. Bu tür bir bağlantı kurulur, şifresi ve konsolda görüntülenen.
+For the previous sample to work, an encrypted connection must be made to the listener. The connection must use the same key, IV, and algorithm used in the listener. If such a connection is made, the message is decrypted and displayed to the console.
 
-## <a name="asymmetric-decryption"></a>Asimetrik şifre çözme
+## <a name="asymmetric-decryption"></a>Asymmetric Decryption
 
-Genellikle, bir taraf (bir taraf) hem bir genel ve özel anahtarı oluşturur ve bellekte veya şifreleme anahtar kapsayıcısını, anahtarın depolandığı. Toplu bir ardından ortak anahtarı başka bir tarafa (taraf B) gönderir. Ortak anahtar kullanarak, B taraf verileri şifreler ve taraf A'ya verileri gönderir Verileri aldıktan sonra diğer bir karşılık gelen özel anahtar kullanarak şifresini çözer. Şifre çözme taraf bir taraf B verileri şifrelemek için kullanılan ortak anahtara karşılık gelen özel anahtar kullanıyorsa başarılı olur.
+Typically, a party (party A) generates both a public and private key and stores the key either in memory or in a cryptographic key container. Party A then sends the public key to another party (party B). Using the public key, party B encrypts data and sends the data back to party A. After receiving the data, party A decrypts it using the private key that corresponds. Decryption will be successful only if party A uses the private key that corresponds to the public key Party B used to encrypt the data.
 
-Depolama hakkında bilgi için bkz: güvenli şifreleme anahtar kapsayıcısı ve daha sonra asimetrik anahtar almak nasıl bir asimetrik anahtar [nasıl yapılır: Bir anahtar kapsayıcısında asimetrik anahtarlar Store](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).
+For information on how to store an asymmetric key in secure cryptographic key container and how to later retrieve the asymmetric key, see [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).
 
-Aşağıdaki örnek, bir simetrik anahtar ve IV temsil eden bayt dizilerinin şifrelerinin gösterir. Asimetrik ortak anahtardan çıkarmayı hakkında bilgi için <xref:System.Security.Cryptography.RSACryptoServiceProvider> kolayca gönderebileceğiniz bir üçüncü taraf görmek için bir biçimde nesne [veri şifreleme](../../../docs/standard/security/encrypting-data.md).
+The following example illustrates the decryption of two arrays of bytes that represent a symmetric key and IV. For information on how to extract the asymmetric public key from the <xref:System.Security.Cryptography.RSACryptoServiceProvider> object in a format that you can easily send to a third party, see [Encrypting Data](../../../docs/standard/security/encrypting-data.md).
 
 ```vb
 'Create a new instance of the RSACryptoServiceProvider class.

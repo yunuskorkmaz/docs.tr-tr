@@ -1,5 +1,5 @@
 ---
-title: Structure ekstresi (Visual Basic)
+title: Structure Yapısı
 ms.date: 05/12/2018
 f1_keywords:
 - vb.Structure
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: ac128e257269ca301400bd8b294539d1ec836cab
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 120f836b9d49c00e9c53af0d1fc832e22c8cbbb8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038613"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346452"
 ---
 # <a name="structure-statement"></a>Structure Yapısı
 
-Bir yapının adını bildirir ve yapının içerdiği değişkenlerin, özelliklerin, olayların ve yordamların tanımını tanıtır.
+Declares the name of a structure and introduces the definition of the variables, properties, events, and procedures that the structure comprises.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,76 +38,76 @@ End Structure
 
 |Terim|Tanım|
 |---|---|
-|`attributelist`|İsteğe bağlı. Bkz. [öznitelik listesi](attribute-list.md).|
-|`accessmodifier`|İsteğe bağlı. Aşağıdakilerden biri olabilir:<br /><br /> -   [ortak](../modifiers/public.md)<br />-   [korumalı](../modifiers/protected.md)<br />-   [arkadaş](../modifiers/friend.md)<br />-   [özel](../modifiers/private.md)<br />- [korumalı arkadaş](../modifiers/protected-friend.md)<br/>- [özel korumalı](../modifiers/private-protected.md) <br /><br /> [Visual Basic erişim düzeylerine](../../programming-guide/language-features/declared-elements/access-levels.md)bakın.|
-|`Shadows`|İsteğe bağlı. Bkz. [gölgeler](../modifiers/shadows.md).|
-|`Partial`|İsteğe bağlı. Yapının kısmi bir tanımını gösterir. [Kısmi](../modifiers/partial.md)gör.|
-|`name`|Gerekli. Bu yapının adı. Bkz. [tanımlanmış öğe adları](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`Of`|İsteğe bağlı. Bunun genel bir yapı olduğunu belirtir.|
-|`typelist`|[Anahtar sözcüğünü](of-clause.md) kullanıyorsanız gereklidir. Bu yapının tür parametrelerinin listesi. Bkz. [tür listesi](type-list.md).|
-|`Implements`|İsteğe bağlı. Bu yapının bir veya daha fazla arabirimin üyelerini uyguladığını gösterir. Bkz. [Implements açıklaması](implements-statement.md).|
-|`interfacenames`|`Implements` ifadesini kullanıyorsanız gereklidir. Bu yapının uyguladığı arabirimlerin adları.|
-|`datamemberdeclarations`|Gerekli. Yapının *veri üyelerini* bildiren sıfır veya daha fazla `Const`, `Dim`, `Enum` veya `Event` deyimleri.|
-|`methodmemberdeclarations`|İsteğe bağlı. `Function`, `Operator`, `Property`veya `Sub` yordamlarının, yapının *Yöntem üyeleri* olarak işlev gösteren sıfır veya daha fazla bildirimi.|
-|`End Structure`|Gerekli. `Structure` tanımını sonlandırır.|
+|`attributelist`|İsteğe bağlı. See [Attribute List](attribute-list.md).|
+|`accessmodifier`|İsteğe bağlı. Can be one of the following:<br /><br /> -   [Public](../modifiers/public.md)<br />-   [Protected](../modifiers/protected.md)<br />-   [Friend](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />- [Protected Friend](../modifiers/protected-friend.md)<br/>- [Private Protected](../modifiers/private-protected.md) <br /><br /> See [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|
+|`Shadows`|İsteğe bağlı. See [Shadows](../modifiers/shadows.md).|
+|`Partial`|İsteğe bağlı. Indicates a partial definition of the structure. See [Partial](../modifiers/partial.md).|
+|`name`|Gerekli. Name of this structure. See [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`Of`|İsteğe bağlı. Specifies that this is a generic structure.|
+|`typelist`|Required if you use the [Of](of-clause.md) keyword. List of type parameters for this structure. See [Type List](type-list.md).|
+|`Implements`|İsteğe bağlı. Indicates that this structure implements the members of one or more interfaces. See [Implements Statement](implements-statement.md).|
+|`interfacenames`|Required if you use the `Implements` statement. The names of the interfaces this structure implements.|
+|`datamemberdeclarations`|Gerekli. Zero or more `Const`, `Dim`, `Enum`, or `Event` statements declaring *data members* of the structure.|
+|`methodmemberdeclarations`|İsteğe bağlı. Zero or more declarations of `Function`, `Operator`, `Property`, or `Sub` procedures, which serve as *method members* of the structure.|
+|`End Structure`|Gerekli. Terminates the `Structure` definition.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-`Structure` deyiminiz, özelleştirebileceğiniz bir bileşik değer türü tanımlar. *Yapı* , önceki Visual Basic sürümlerindeki Kullanıcı tanımlı tür (udt) genelleştirmesidir. Daha fazla bilgi için bkz. [yapılar](../../programming-guide/language-features/data-types/structures.md).
+The `Structure` statement defines a composite value type that you can customize. A *structure* is a generalization of the user-defined type (UDT) of previous versions of Visual Basic. For more information, see [Structures](../../programming-guide/language-features/data-types/structures.md).
 
-Yapılar sınıflarla aynı özelliklerin birçoğunu destekler. Örneğin, yapıların özellikleri ve yordamları olabilir, arabirimler uygulayabilir ve parametreli oluşturuculara sahip olabilirler. Ancak, devralma, bildirimler ve kullanım gibi alanlardaki yapılar ve sınıflar arasında önemli farklılıklar vardır. Ayrıca, sınıflar başvuru türleridir ve yapılardır değer türlerdir. Daha fazla bilgi için bkz. [yapılar ve sınıflar](../../programming-guide/language-features/data-types/structures-and-classes.md).
+Structures support many of the same features as classes. For example, structures can have properties and procedures, they can implement interfaces, and they can have parameterized constructors. However, there are significant differences between structures and classes in areas such as inheritance, declarations, and usage. Also, classes are reference types and structures are value types. For more information, see [Structures and Classes](../../programming-guide/language-features/data-types/structures-and-classes.md).
 
-Yalnızca ad alanı veya modül düzeyinde `Structure` kullanabilirsiniz. Bu, bir yapının *bildirim bağlamının* bir kaynak dosya, ad alanı, sınıf, yapı, modül veya arabirim olması ve bir yordam veya blok olamayacağı anlamına gelir. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](declaration-contexts-and-default-access-levels.md).
+You can use `Structure` only at namespace or module level. This means the *declaration context* for a structure must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block. For more information, see [Declaration Contexts and Default Access Levels](declaration-contexts-and-default-access-levels.md).
 
-Varsayılan yapılar [arkadaş](../modifiers/friend.md) erişimine sahiptir. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz. Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md).
+Structures default to [Friend](../modifiers/friend.md) access. You can adjust their access levels with the access modifiers. For more information, see [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
 ## <a name="rules"></a>Kurallar
 
-- **İç içe geçme.** Bir yapıyı diğeri içinde tanımlayabilirsiniz. Dış yapıya *kapsayan yapı*denir ve iç yapıya *iç içe yapı*denir. Ancak, iç içe bir yapının üyelerine kapsayan yapı aracılığıyla erişemezsiniz. Bunun yerine, iç içe yapının veri türünün bir değişkenini bildirmeniz gerekir.
+- **Nesting.** You can define one structure within another. The outer structure is called the *containing structure*, and the inner structure is called a *nested structure*. However, you cannot access a nested structure's members through the containing structure. Instead, you must declare a variable of the nested structure's data type.
 
-- **Üye bildirimi.** Bir yapının her üyesini bildirmeniz gerekir. Bir yapıyla hiçbir şey devraldığı için bir yapı üyesi [korunamıyor](../modifiers/protected.md) veya `Protected Friend`. Ancak, yapının kendisi `Protected` veya `Protected Friend` olabilir.
+- **Member Declaration.** You must declare every member of a structure. A structure member cannot be [Protected](../modifiers/protected.md) or `Protected Friend` because nothing can inherit from a structure. The structure itself, however, can be `Protected` or `Protected Friend`.
   
-     Bir yapıda sıfır veya daha fazla paylaşılmayan değişken ya da paylaşılmayan, özel olmayan olaylar bildirebilirsiniz. Bazıları paylaşılmamış olsa bile yalnızca sabitler, Özellikler ve yordamlar olamaz.
+     You can declare zero or more nonshared variables or nonshared, noncustom events in a structure. You cannot have only constants, properties, and procedures, even if some of them are nonshared.
 
-- **Başlatılmasında.** Bir yapının paylaşılmayan veri üyesinin değerini, bildiriminin bir parçası olarak başlatılamaz. Bu tür bir veri üyesini yapıda parametreli bir Oluşturucu aracılığıyla ya da yapının bir örneğini oluşturduktan sonra üyeye bir değer atamanız gerekir.
+- **Initialization.** You cannot initialize the value of any nonshared data member of a structure as part of its declaration. You must either initialize such a data member by means of a parameterized constructor on the structure, or assign a value to the member after you have created an instance of the structure.
 
-- **Devralmayı.** Bir yapı, tüm yapıların devraldığı <xref:System.ValueType> dışındaki herhangi bir türden devralınabilir. Özellikle, bir yapı diğerinden devralınabilir.
+- **Inheritance.** A structure cannot inherit from any type other than <xref:System.ValueType>, from which all structures inherit. In particular, one structure cannot inherit from another.
 
-     <xref:System.ValueType>belirtmek için bile, bir yapı tanımında [Inherits ifadesini](inherits-statement.md) kullanamazsınız.
+     You cannot use the [Inherits Statement](inherits-statement.md) in a structure definition, even to specify <xref:System.ValueType>.
 
-- **Paylaşır.** Yapı [Implements ifadesini](implements-statement.md)kullanıyorsa, `interfacenames` belirttiğiniz her arabirim tarafından tanımlanan her üyeyi uygulamanız gerekir.
+- **Implementation.** If the structure uses the [Implements Statement](implements-statement.md), you must implement every member defined by every interface you specify in `interfacenames`.
 
-- **Varsayılan özellik.** Bir yapı [varsayılan değiştiricisini kullanarak](../modifiers/default.md) en çok bir özelliği *varsayılan özelliği*olarak belirtebilir. Daha fazla bilgi için bkz. [Default](../modifiers/default.md).
+- **Default Property.** A structure can specify at most one property as its *default property*, using the [Default](../modifiers/default.md) modifier. For more information, see [Default](../modifiers/default.md).
 
 ## <a name="behavior"></a>Davranış
 
-- **Erişim düzeyi.** Bir yapı içinde, her üyeyi kendi erişim düzeyiyle bildirebilirsiniz. Tüm yapı üyeleri varsayılan olarak [genel](../modifiers/public.md) erişime sahiptir. Yapının kendisine daha kısıtlı bir erişim düzeyi varsa, erişim değiştiricilerine erişim düzeylerini ayarlasanız bile bu, erişimi otomatik olarak kısıtlar.
+- **Access Level.** Within a structure, you can declare each member with its own access level. All structure members default to [Public](../modifiers/public.md) access. Note that if the structure itself has a more restricted access level, this automatically restricts access to its members, even if you adjust their access levels with the access modifiers.
 
-- **Kapsam.** Bir yapı, kapsayan ad alanı, sınıf, yapı veya modül genelinde kapsamdadır.
+- **Scope.** A structure is in scope throughout its containing namespace, class, structure, or module.
 
-     Her yapı üyesinin kapsamı tüm yapısıdır.
+     The scope of every structure member is the entire structure.
 
-- **Süre.** Bir yapının yaşam süresi yoktur. Bunun yerine, bu yapının her örneğinin diğer tüm örneklerden bağımsız bir yaşam süresi vardır.
+- **Lifetime.** A structure does not itself have a lifetime. Rather, each instance of that structure has a lifetime independent of all other instances.
 
-     Bir örneğin yaşam süresi, [Yeni bir işleç](../operators/new-operator.md) yan tümcesi tarafından oluşturulduğunda başlar. Bu, kendisini tutan değişkenin ömrü sona erdiğinde sona erer.
+     The lifetime of an instance begins when it is created by a [New Operator](../operators/new-operator.md) clause. It ends when the lifetime of the variable that holds it ends.
 
-     Bir yapı örneğinin ömrünü genişletemezsiniz. Statik yapı işlevselliğine yaklaşık bir modül tarafından sağlanır. Daha fazla bilgi için bkz. [module deyimleri](module-statement.md).
+     You cannot extend the lifetime of a structure instance. An approximation to static structure functionality is provided by a module. For more information, see [Module Statement](module-statement.md).
 
-     Yapı üyelerinin yaşam sürelerinin nasıl ve nerede bildirilmesine bağlı olarak yaşam süreleri vardır. Daha fazla bilgi için bkz. [Class deyimindeki](class-statement.md)"Lifetime".
+     Structure members have lifetimes depending on how and where they are declared. For more information, see "Lifetime" in [Class Statement](class-statement.md).
 
-- **Yeter.** Bir yapının dışındaki kodun bir üyenin adını bu yapının adıyla nitelemeniz gerekir.
+- **Qualification.** Code outside a structure must qualify a member's name with the name of that structure.
 
-     İç içe yerleştirilmiş bir yapı içindeki kod, bir programlama öğesine nitelenmemiş bir başvuru yaparsa, Visual Basic iç içe yapıdaki öğeyi, ardından kapsayan yapısını ve bu öğeyi en dıştaki içeren en dıştaki öğeyi arar. Daha fazla bilgi için bkz. [bildirilmemiş öğelere başvurular](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+     If code inside a nested structure makes an unqualified reference to a programming element, Visual Basic searches for the element first in the nested structure, then in its containing structure, and so on out to the outermost containing element. For more information, see [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 
-- **Bellek tüketimi.** Tüm bileşik veri türlerinde olduğu gibi, üyelerinin nominal depolama ayırmalarını birlikte ekleyerek bir yapının toplam bellek tüketimini güvenle hesaplayabilirsiniz. Ayrıca, bellekteki depolama sırasının bildirimin sıralamayla aynı olduğunu güvenli bir şekilde varsayamaz. Bir yapının depolama yerleşimini denetetmeniz gerekiyorsa, <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliğini `Structure` ifadesine uygulayabilirsiniz.
+- **Memory Consumption.** As with all composite data types, you cannot safely calculate the total memory consumption of a structure by adding together the nominal storage allocations of its members. Furthermore, you cannot safely assume that the order of storage in memory is the same as your order of declaration. If you need to control the storage layout of a structure, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the `Structure` statement.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir çalışan için ilgili verilerin bir kümesini tanımlamak üzere `Structure` ifadesini kullanır. Veri öğelerinin duyarlılığını yansıtmak için `Public`, `Friend` ve `Private` üyelerinin kullanımını gösterir. Ayrıca yordamı, özelliği ve olay üyelerini gösterir.
+The following example uses the `Structure` statement to define a set of related data for an employee. It shows the use of `Public`, `Friend`, and `Private` members to reflect the sensitivity of the data items. It also shows procedure, property, and event members.
 
 [!code-vb[VbVbalrStatements#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#57)]
 
-`Structure`s kullanma hakkında daha fazla bilgi için bkz. [yapı değişkeni](../../programming-guide/language-features/data-types/structure-variables.md).
+For more information on how to use `Structure`s, see [Structure Variable](../../programming-guide/language-features/data-types/structure-variables.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

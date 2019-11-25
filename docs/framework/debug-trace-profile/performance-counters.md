@@ -6,33 +6,17 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 02163f923bc93a1cf377cc608b5f390472c60edd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a592cbb49c1b9ec8f36b90f2ec1097f6c84efbe9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121595"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281818"
 ---
-# <a name="performance-counters-in-the-net-framework"></a>.NET Framework'teki Performans Sayaçları
+# <a name="performance-counters-in-the-net-framework"></a>.NET Framework performans sayaçları
+
 Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)'nde bulabileceğiniz performans sayaçlarının bir listesini sağlar.  
-  
-- [Özel durum performans sayaçları](#exception)  
-  
-- [Birlikte çalışabilirlik performans sayaçları](#interop)  
-  
-- [JıT performans sayaçları](#jit)  
-  
-- [Performans sayaçları yükleniyor](#loading)  
-  
-- [Kilit ve iş parçacığı performans sayaçları](#lockthread)  
-  
-- [Bellek performans sayaçları](#memory)  
-  
-- [Ağ performans sayaçları](#networking)  
-  
-- [Güvenlik performans sayaçları](#security)  
-  
-<a name="exception"></a>   
+
 ## <a name="exception-performance-counters"></a>Özel durum performans sayaçları  
  Performans konsolu .NET CLR özel durumları kategorisi, bir uygulama tarafından oluşturulan özel durumlar hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
@@ -43,8 +27,7 @@ Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-ve
 |**Filtre sayısı/sn**|Saniye başına yürütülen .NET özel durum filtrelerinin sayısını görüntüler. Özel durum filtresi, bir özel durumun işlenmiş olup olmamasından bağımsız olarak değerlendirilir.<br /><br /> Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
 |**Finallys sayısı/sn**|Saniye başına yürütülen son blok sayısını görüntüler. Try bloğunun çıkış şeklinden bağımsız olarak bir finally bloğunun yürütülmesi garanti edilir.  Yalnızca bir özel durum için yürütülen finally blokları sayılır; normal kod yollarındaki son bloklar Bu sayaç tarafından sayılmaz.<br /><br /> Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
 |**Catch derinliğine/sn 'ye throw**|Özel durumu, saniye başına işlenen çerçeveye özel durum veren kareden geçen yığın çerçevelerinin sayısını görüntüler. Bir özel durum işleyicisi girildiğinde bu sayaç sıfıra sıfırlanır, bu yüzden iç içe geçmiş özel durumlar işleyicinin işleyici yığın derinliğini gösterir.<br /><br /> Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
-  
-<a name="interop"></a>   
+     
 ## <a name="interop-performance-counters"></a>Birlikte çalışabilirlik performans sayaçları  
  Performans konsolu .NET CLR birlikte çalışma kategorisi, bir uygulamanın COM bileşenleri, COM+ Hizmetleri ve dış tür kitaplıklarıyla etkileşimi hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
@@ -55,8 +38,7 @@ Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-ve
 |**Saplamalar sayısı**|Ortak dil çalışma zamanı tarafından oluşturulan geçerli saplamalar sayısını görüntüler. Saplamalar, bağımsız değişkenleri sıralama ve yönetilen değerden yönetilmeyen koda döndürme ve bir COM birlikte çalışma çağrısı sırasında veya platform çağırma çağrısı sırasında sorumludur.|  
 |**TLB dışarı aktarma sayısı/sn**|Daha sonraki kullanımlar için ayrılmıştır.|  
 |**TLB içeri aktarma sayısı/sn**|Daha sonraki kullanımlar için ayrılmıştır.|  
-  
-<a name="jit"></a>   
+    
 ## <a name="jit-performance-counters"></a>JIT performans sayaçları  
  Performans konsolu .NET CLR JıT kategorisi, JıT derlenmiş kod hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
@@ -68,8 +50,7 @@ Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-ve
 |**Anında derlenen IL bayt/sn**|Saniye başına JıT olarak derlenen MSIL bayt sayısını görüntüler. Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
 |**Standart JIT sorunları**|Uygulama başladıktan sonra JıT derleyicisinin derleyemeyeceği en yüksek Yöntem sayısını görüntüler. Bu hata, MSIL doğrulanamazsa veya JıT derleyicisinde bir iç hata varsa meydana gelebilir.|  
 |**Anında derlenen toplam IL bayt sayısı**|Uygulamanın başlatılmasından bu yana JıT ile derlenen toplam MSIL bayt sayısını görüntüler. Bu sayaç, derlenen **IL bayt** sayısı ile eşdeğerdir.|  
-  
-<a name="loading"></a>   
+     
 ## <a name="loading-performance-counters"></a>Performans sayaçları yükleniyor  
  Performans konsolu .NET CLR Yükleme kategorisi, yüklenen derlemeler, sınıflar ve uygulama etki alanları hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
@@ -91,8 +72,7 @@ Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-ve
 |**Bellekten kaldırılan toplam AppDomain**|Uygulama başladıktan sonra bellekten kaldırılan uygulama etki alanlarının toplam sayısını görüntüler. Bir uygulama etki alanı yüklenip birden çok kez kaldırıldığında, bu sayaç uygulama etki alanının her kaldırıldığında artar.|  
 |**Toplam derleme sayısı**|Uygulama başladıktan sonra yüklenen derlemelerin toplam sayısını görüntüler. Derleme birden çok uygulama etki alanında etki alanı nötr olarak yüklenirse, bu sayaç yalnızca bir kez artırılır.|  
 |**Toplam yüklenen sınıf**|Uygulamanın başlatılmasından bu yana tüm derlemelerde yüklenen sınıfların birikmiş sayısını görüntüler.|  
-  
-<a name="lockthread"></a>   
+   
 ## <a name="lock-and-thread-performance-counters"></a>Kilit ve iş parçacığı performans sayaçları  
  Performans konsolu .NET CLR LocksAndThreads kategorisi, bir uygulamanın kullandığı yönetilen kilitler ve iş parçacıkları hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
@@ -108,8 +88,7 @@ Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-ve
 |**En yüksek kuyruk uzunluğu**|Uygulamanın başlatılmasından bu yana yönetilen bir kilit almayı bekleyen iş parçacıklarının toplam sayısını görüntüler.|  
 |**tanınan iş parçacığı oranı/sn**|Bir saniyede çalışma zamanı tarafından tanınan iş parçacığı sayısını görüntüler. Bu iş parçacıkları karşılık gelen bir yönetilen iş parçacığı nesnesiyle ilişkilendirilir. Çalışma zamanı bu iş parçacıklarını oluşturmaz, ancak çalışma zamanı içinde en az bir kez çalıştırılırlar.<br /><br /> Yalnızca benzersiz iş parçacıkları izlenir; çalışma zamanını yeniden girerek veya iş parçacığının çıktıktan sonra yeniden oluşturulmuş iş parçacığı KIMLIĞINE sahip iş parçacıkları iki kez sayılmaz.<br /><br /> Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
 |**Toplam çekişmeler sayısı**|Çalışma zamanındaki iş parçacıklarının yönetilen kilit alma girişimi başarısız olan toplam sayısını görüntüler.|  
-  
-<a name="memory"></a>   
+    
 ## <a name="memory-performance-counters"></a>Bellek performans sayaçları  
  Performans konsolu .NET CLR bellek kategorisi, çöp toplayıcısı hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
@@ -133,15 +112,15 @@ Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-ve
 |**Gen 1 yığın boyutu**|1\. nesil geçerli bayt sayısını görüntüler; Bu sayaç, 1. nesil en büyük boyutunu görüntülemez. Nesneler bu Neste doğrudan ayrılmamış; Bunlar, önceki nesil 0 çöp toplamalarından yükseltilir. Bu sayaç her ayırmada değil çöp toplamanın sonunda güncelleştirilir.|  
 |**G 1 yükseltilen bayt/sn**|1\. nesil 2 ' ye kadar yükseltilen saniye başına bayt sayısını görüntüler. Yalnızca Sonlandırılmayı beklediği için yükseltilen nesneler bu sayaca dahil edilmez.<br /><br /> Bellek, atık toplama işlemi yaparken yükseltilir. 2\. nesil, en eski nesil olduğundan hiçbir şey yükseltilmez. Bu sayaç, saniye başına oluşturulan çok uzun süreli nesnelerin göstergesidir.<br /><br /> Bu sayaç, son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
 |**Gen 2 yığın boyutu**|2\. nesil geçerli bayt sayısını görüntüler. Nesneler bu Neste doğrudan ayrılmamış; önceki nesil 1 atık koleksiyonlar sırasında 1. kuşak 'den yükseltilir. Bu sayaç her ayırmada değil çöp toplamanın sonunda güncelleştirilir.|  
-|**Büyük nesne yığın boyutu**|Büyük nesne yığınının geçerli boyutunu bayt cinsinden görüntüler. Yaklaşık 85.000 bayttan büyük nesneler çöp toplayıcı tarafından büyük nesneler olarak değerlendirilir ve özel bir yığında doğrudan ayrılır; nesiller aracılığıyla yükseltilmez. Bu sayaç her ayırmada değil çöp toplamanın sonunda güncelleştirilir.|  
+|**Büyük nesne yığın boyutu**|Büyük nesne yığınının geçerli boyutunu bayt cinsinden görüntüler. Yaklaşık 85.000 bayttan büyük nesneler çöp toplayıcı tarafından büyük nesneler olarak değerlendirilir ve özel bir yığında doğrudan ayrılır. Nesiller aracılığıyla yükseltilmez. Bu sayaç her ayırmada değil çöp toplamanın sonunda güncelleştirilir.|  
 |**İşlem KIMLIĞI**|İzlenmekte olan CLR işlem örneğinin işlem KIMLIĞINI görüntüler.|  
 |**Yükseltilen sonlandırma-bellek, Gen 0 ' dan**|1\. nesil 0 ' dan 1 ' e yükseltilen bellek baytlarını yalnızca Sonlandırılmayı beklediği için görüntüler. Bu sayaç toplu değildir; Son atık toplamanın sonunda gözlemlenen değeri görüntüler.|  
 |**Gen 0 ' dan yükseltilen bellek**|Atık toplamayı sürdüren ve 1. nesil 0 ' dan 1 ' e yükseltilen bellek baytlarını görüntüler. Yalnızca Sonlandırılmayı beklediği için yükseltilen nesneler bu sayaca dahil edilmez. Bu sayaç toplu değildir; Son atık toplamanın sonunda gözlemlenen değeri görüntüler.|  
 |**Gen 1 ' den yükseltilen bellek**|Çöp toplama işlemini sürdüren ve 1. nesil 2 ' den 2 ' ye yükseltilen bellek baytlarını görüntüler. Yalnızca Sonlandırılmayı beklediği için yükseltilen nesneler bu sayaca dahil edilmez. Bu sayaç toplu değildir; Son atık toplamanın sonunda gözlemlenen değeri görüntüler. Bu sayaç, son çöp toplama işlemi yalnızca 0. kuşak bir koleksiyon ise 0 ' a sıfırlanır.|  
-  
-<a name="networking"></a>   
+     
 ## <a name="networking-performance-counters"></a>Ağ performans sayaçları  
- Performans konsolu .NET CLR ağ kategorisi, bir uygulamanın ağ üzerinden gönderdiği ve aldığı veriler hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
+
+Performans konsolu .NET CLR ağ kategorisi, bir uygulamanın ağ üzerinden gönderdiği ve aldığı veriler hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
@@ -167,7 +146,7 @@ Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-ve
   
 - Aralık başına belirli bir geçiş yapan nesne sayısını ölçen Aralık başına sayaçlar (normalde saniyede).  
   
- Olaylar için ağ performans sayaçları şunları içerir:  
+Olaylar için ağ performans sayaçları şunları içerir:  
   
 - **Kurulan bağlantılar**  
   
@@ -175,7 +154,7 @@ Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-ve
   
 - **Gönderilen veri birimleri**  
   
- Bu performans sayaçları, işlem başladıktan sonra sayımlar sağlar. Oluşturulan <xref:System.Net.Sockets.Socket> bağlantı sayısı, oluşturulan bir akış yuvası bağlantısı için bir uygulama tarafından açık <xref:System.Net.Sockets.Socket> Yöntem çağrıları ve diğer sınıflar tarafından yapılan iç çağrılar (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient>ve <xref:System.Net.Sockets.TcpClient>içerir Örneğin,) <xref:System.Net.Sockets.Socket> sınıfı  
+ Bu performans sayaçları, işlem başladıktan sonra sayımlar sağlar. Oluşturulan <xref:System.Net.Sockets.Socket> bağlantı sayısı, oluşturulan bir akış yuvası bağlantısı için bir uygulama tarafından açık <xref:System.Net.Sockets.Socket> Yöntem çağrıları ve diğer sınıfların (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient>ve <xref:System.Net.Sockets.TcpClient>) (örneğin, <xref:System.Net.Sockets.Socket> sınıfına) yapılan iç çağrılardır.  
   
  **Alınan veri birimleri** ve **gönderilen veri birimleri** için sayımlar, bir uygulamanın açık <xref:System.Net.Sockets.Socket> yöntemi çağrıları kullanılarak gönderilen veya alınan veri birimi paketleri içerir (örneğin,<xref:System.Net.Sockets.UdpClient><xref:System.Net.Sockets.Socket>). Sınıfı. **Alınan** veri birimleri ve **gönderilen** veri birimleri, bir veri birimi için Ortalama bir boyut varsayarak, veri birimleri kullanılarak gönderilen veya alınan bayt sayısı çok kaba bir ölçü sağlamak için de kullanılabilir.  
   
@@ -236,8 +215,7 @@ for (int i = 0; i < Array.Length; i++)
 - ".NET CLR Networking 4.0.0.0"-yukarıdaki yuva sayaçlarının yanı sıra .NET Framework sürüm 4 ve üzeri sürümlerde desteklenen yeni performans sayaçları. Bu yeni sayaçlar <xref:System.Net.HttpWebRequest> nesneler hakkında performans bilgileri sağlar.  
   
  Bir uygulamadaki performans sayaçlarına erişme ve bunları yönetme hakkında daha fazla bilgi için bkz. [performans sayaçları](performance-counters.md).  
-  
-<a name="security"></a>   
+    
 ## <a name="security-performance-counters"></a>Güvenlik performans sayaçları  
  Performans konsolu .NET CLR güvenlik kategorisi, ortak dil çalışma zamanının bir uygulama için gerçekleştirdiği güvenlik denetimleri hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   

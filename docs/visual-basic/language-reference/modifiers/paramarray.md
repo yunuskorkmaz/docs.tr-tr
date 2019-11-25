@@ -1,5 +1,5 @@
 ---
-title: ParamArray (Visual Basic)
+title: ParamArray
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ParamArray
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic]
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
-ms.openlocfilehash: 8fc5d1afd9e9723e6b3c58e100b0519ef8fdfab4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbc87bffebc265e6062512e96fc29a64334b3c65
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968370"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351366"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
-Bir yordam parametresinin, belirtilen türde öğe için isteğe bağlı bir dizi aldığını belirtir. `ParamArray`, yalnızca bir parametre listesinin son parametresinde kullanılabilir.  
+Specifies that a procedure parameter takes an optional array of elements of the specified type. `ParamArray` can be used only on the last parameter of a parameter list.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ParamArray`yordama rastgele sayıda bağımsız değişken geçirmenize olanak sağlar. Bir `ParamArray` parametre, her zaman [ByVal](../../../visual-basic/language-reference/modifiers/byval.md)kullanılarak bildirilmiştir.  
+ `ParamArray` allows you to pass an arbitrary number of arguments to the procedure. A `ParamArray` parameter is always declared using [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).  
   
- Uygun veri türünde bir diziyi, virgülle ayrılmış bir `ParamArray` değer listesini veya hiç bir şeyi geçirerek bir parametreye bir veya daha fazla bağımsız değişken sağlayabilirsiniz. Ayrıntılar için, [parametre dizilerindeki](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)"ParamArray çağırma" konusuna bakın.  
+ You can supply one or more arguments to a `ParamArray` parameter by passing an array of the appropriate data type, a comma-separated list of values, or nothing at all. For details, see "Calling a ParamArray" in [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   
 > [!IMPORTANT]
-> Süresiz olarak büyük olabilecek bir dizi ile uğraşmanız durumunda, uygulamanızın bazı iç kapasitesini çok fazla çalıştırmaya yönelik bir risk vardır. Çağıran koddan bir parametre dizisini kabul ediyorsanız, uzunluğunu sınamanız ve uygulamanız için çok büyükse uygun adımları uygulamanız gerekir.  
+> Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array from the calling code, you should test its length and take appropriate steps if it is too large for your application.  
   
- `ParamArray` Değiştirici şu bağlamlarda kullanılabilir:  
+ The `ParamArray` modifier can be used in these contexts:  
   
  [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
   

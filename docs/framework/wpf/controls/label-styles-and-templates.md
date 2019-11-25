@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Label [WPF], styles and templates
 - states [WPF], Label
 ms.assetid: c1d5359a-8e4a-4925-ab3e-e92bf6694859
-ms.openlocfilehash: c3bf4dc629bbb3e4ea21862c6893b001749f4649
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 35fcd9c15bf44d15a08c16d58847698c5ec6e574
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459393"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283499"
 ---
 # <a name="label-styles-and-templates"></a>Etiket Stilleri ve Şablonları
-Bu konuda <xref:System.Windows.Controls.Label> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+Bu konuda <xref:System.Windows.Controls.Label> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için varsayılan <xref:System.Windows.Controls.ControlTemplate> değiştirebilirsiniz. Daha fazla bilgi için bkz. [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="label-parts"></a>Etiket bölümleri  
  <xref:System.Windows.Controls.Label> denetiminde hiç adlandırılmış bölüm yok.  
@@ -49,4 +49,4 @@ Bu konuda <xref:System.Windows.Controls.Label> denetimine yönelik stiller ve ş
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
 - [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)
+- [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md)

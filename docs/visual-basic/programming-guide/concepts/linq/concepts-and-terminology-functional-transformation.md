@@ -1,81 +1,81 @@
 ---
-title: Kavramlar ve terminoloji (Işlevsel dönüşüm) (Visual Basic)
+title: Kavramlar ve Terimler (İşlevsel Dönüşüm)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: 763321d99edf404ee17e8ec29af5424a378f83b1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: efc1fc5bb738e3d5d9d3fa2a8226c37da69c045c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046603"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345702"
 ---
-# <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Kavramlar ve terminoloji (Işlevsel dönüşüm) (Visual Basic)
-Bu konu, saf işlevsel dönüştürmelerin kavramlarını ve terminolojisini tanıtır. Veri dönüştürme yaklaşımı, genellikle programa, daha ayrıntılı bir şekilde daha hızlı ve hata ayıklama ve daha geleneksel, kesinlik temelli programlama açısından daha kolay olan kodu verir.
+# <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Concepts and Terminology (Functional Transformation) (Visual Basic)
+This topic introduces the concepts and terminology of pure functional transformations. The functional transformation approach to transforming data yields code that is often quicker to program, more expressive, and easier to debug and maintain than more traditional, imperative programming.
 
-Bu bölümdeki konuların işlevsel programlamayı tam olarak açıklamak için düşünülmediğini unutmayın. Bunun yerine, bu konular XML 'i bir şekilden diğerine dönüştürmeyi kolaylaştıran bazı işlevsel programlama özelliklerini belirler.
+Note that the topics in this section are not intended to fully explain functional programming. Instead, these topics identify some of the functional programming capabilities that make it easier to transform XML from one shape to another.
 
-## <a name="what-is-pure-functional-transformation"></a>Saf Işlevsel dönüştürme nedir?
+## <a name="what-is-pure-functional-transformation"></a>What Is Pure Functional Transformation?
 
-*Saf işlevsel dönüşümde*, *saf işlevler*olarak adlandırılan bir işlevler kümesi, bir dizi yapısal veriyi özgün formdan başka bir biçime dönüştürmeyi tanımlar. "Saf" sözcüğü, işlevlerin birleştirilebilen şekilde olduğunubelirtir ve şunları gerektirir:
+In *pure functional transformation*, a set of functions, called *pure functions*, define how to transform a set of structured data from its original form into another form. The word "pure" indicates that the functions are *composable*, which requires that they are:
 
-- *Kendi kendine dahil*olmak üzere, bağımsız olarak sıralanmış ve daha sonra programın geri kalanı olmadan bir arada ve yeniden düzenlenecek şekilde yeniden düzenlenebilir. Saf dönüşümler, ortamları hakkında bilgi sahibi değildir veya etkilemez. Diğer bir deyişle, dönüşümde kullanılan işlevlerin *yan etkileri*yoktur.
+- *Self-contained*, so that they can be freely ordered and rearranged without entanglement or interdependencies with the rest of the program. Pure transformations have no knowledge of or effect upon their environment. That is, the functions used in the transformation have no *side effects*.
 
-- *Durum bilgisiz*, aynı veya aynı girişte aynı işlevin veya belirli bir işlev kümesinin yürütülmesi her zaman aynı çıkışa neden olur. Saf dönüşümlerinin önceki kullanımları belleği yoktur.
+- *Stateless*, so that executing the same function or specific set of functions on the same input will always result in the same output. Pure transformations have no memory of their prior use.
 
 > [!IMPORTANT]
-> Bu öğreticinin geri kalanında, "saf işlev" terimi, belirli bir dil özelliği değil, programlama yaklaşımını göstermek için genel anlamda kullanılır.
+> In the rest of this tutorial, the term "pure function" is used in a general sense to indicate a programming approach, and not a specific language feature.
 >
-> Saf işlevlerin Visual Basic işlev olarak uygulanması gerektiğini unutmayın.
+> Note that pure functions must be implemented as functions in Visual Basic.
 >
-> Ayrıca, saf işlevleri içinde C++saf sanal yöntemlerle karıştırmayın. İkincisi, kapsayan sınıfın soyut olduğunu ve hiçbir Yöntem gövdesinin sağlanmadığını gösterir.
+> Also, you should not confuse pure functions with pure virtual methods in C++. The latter indicates that the containing class is abstract and that no method body is supplied.
 
-### <a name="functional-programming"></a>Fonksiyonel programlama
+### <a name="functional-programming"></a>Functional Programming
 
-*Fonksiyonel programlama* , saf işlevsel dönüştürmeyi doğrudan destekleyen bir programlama yaklaşımıdır.
+*Functional programming* is a programming approach that directly supports pure functional transformation.
 
-Geçmişte, genel amaçlı işlevsel programlama dilleri, örneğin, ML, düzen, Haskell ve F#, birincil olarak akademik topluluk ile ilgilenmiştir. Visual Basic saf işlevsel dönüştürmeleri yazmak her zaman mümkün olsa da, bunu yapmanın zorluğunu çoğu programcıya etkileyici bir seçenek yapmamıştır. Daha sonraki Visual Basic sürümleriyle, lambda ifadeleri ve tür çıkarımı gibi yeni dil yapıları BT programlamanın çok daha kolay ve daha üretken olmasını sağlar.
+Historically, general-purpose functional programming languages, such as ML, Scheme, Haskell, and F#, have been primarily of interest to the academic community. Although it has always been possible to write pure functional transformations in Visual Basic, the difficulty of doing so has not made it an attractive option to most programmers. With later versions of Visual Basic, however, new language constructs such as lambda expressions and type inference make it functional programming much easier and more productive.
 
-Fonksiyonel programlama hakkında daha fazla bilgi için bkz [. fonksiyonel programlama vs. Kesinlik temelli programlama (Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)).
+For more information about functional programming, see [Functional Programming vs. Imperative Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md).
 
-#### <a name="domain-specific-fp-languages"></a>Etki alanına özgü FP dilleri
+#### <a name="domain-specific-fp-languages"></a>Domain-Specific FP Languages
 
-Genel fonksiyonel programlama dilleri çok daha fazla benimsemese de, etki alanına özgü belirli işlevsel programlama dillerinin başarısı daha iyidir. Örneğin, birçok Web sayfasının görünümünü ve kullanımını belirlemede Geçişli Stil Sayfaları (CSS) kullanılır ve Genişletilebilir Stil sayfası dil dönüşümleri (XSLT) stil sayfaları, XML veri işleme açısından kapsamlı olarak kullanılır. XSLT hakkında daha fazla bilgi için bkz. [XSLT dönüştürmeleri](../../../../standard/data/xml/xslt-transformations.md).
+Although general functional programming languages have not been widely adopted, specific domain-specific functional programming languages have had better success. For example, Cascading Style Sheets (CSS) are used to determine the look and feel of many Web pages, and Extensible Stylesheet Language Transformations (XSLT) style sheets are used extensively in XML data manipulation. For more information about XSLT, see [XSLT Transformations](../../../../standard/data/xml/xslt-transformations.md).
 
 ## <a name="terminology"></a>Terminoloji
 
-Aşağıdaki tabloda, işlevsel dönüşümlerle ilgili bazı terimler tanımlanmaktadır.
+The following table defines some terms related to functional transformations.
 
-daha yüksek sıralı (birinci sınıf) işlev \
-Programlı bir nesne olarak değerlendirilenebilir bir işlev. Örneğin, daha yüksek sıralı bir işlev başka işlevlere geçirilebilir veya bu işlevlerden döndürülebilir. Visual Basic, temsilciler ve lambda ifadeleri, daha yüksek sıralı işlevleri destekleyen dil özelliklerdir. Daha yüksek sıralı bir işlev yazmak için temsilcileri almak üzere bir veya daha fazla bağımsız değişken bildirir ve genellikle bunu çağırırken Lambda ifadelerini kullanırsınız. Standart sorgu işleçlerinin birçoğu daha yüksek sıralı işlevlerdir.
+higher-order (first-class) function \
+A function that can be treated as a programmatic object. For example, a higher-order function can be passed to or returned from other functions. In Visual Basic, delegates and lambda expressions are language features that support higher-order functions. To write a higher-order function, you declare one or more arguments to take delegates, and you often use lambda expressions when calling it. Many of the standard query operators are higher-order functions.
 
-Daha fazla bilgi için bkz. [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
+For more information, see [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
 
-Lambda ifadesi \
-Temelde, bir temsilci türünün beklendiği her yerde kullanılabilecek bir satır içi anonim işlev. Bu, lambda ifadelerinin basitleştirilmiş bir tanımıdır, ancak Bu öğreticinin amaçları doğrultusunda yeterlidir.
+lambda expression \
+Essentially, an inline anonymous function that can be used wherever a delegate type is expected. This is a simplified definition of lambda expressions, but it is adequate for the purposes of this tutorial.
 
-Hakkında daha fazla bilgi için bkz. [lambda ifadeleri](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+For more information about, see [Lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
-koleksiyon
-Genellikle tek biçimli bir tür için yapılandırılmış bir veri kümesi. LINQ ile uyumlu olmak için bir <xref:System.Collections.IEnumerable> koleksiyonun arabirimini <xref:System.Linq.IQueryable> veya arabirimini (ya da <xref:System.Linq.IQueryable%601>kendi genel karşılıklarından <xref:System.Collections.Generic.IEnumerator%601> birini veya) uygulaması gerekir.
+collection \
+A structured set of data, usually of a uniform type. To be compatible with LINQ, a collection must implement the <xref:System.Collections.IEnumerable> interface or the <xref:System.Linq.IQueryable> interface (or one of their generic counterparts, <xref:System.Collections.Generic.IEnumerator%601> or <xref:System.Linq.IQueryable%601>).
 
-tanımlama grubu (anonim türler) \
-Bir matematiksel kavram olan tanımlama grubu, belirli bir türün her biri için sınırlı bir nesne dizisidir. Bir tanımlama grubu sıralı liste olarak da bilinir. Anonim türler, bu kavramın bir dil uygulamasıdır. Bu, adlandırılmamış bir sınıf türünün bildirilmesini ve bu türden bir nesnenin aynı anda oluşturulmasını sağlar.
+tuple (anonymous types) \
+A mathematical concept, a tuple is a finite sequence of objects, each of a specific type. A tuple is also known as an ordered list. Anonymous types are a language implementation of this concept, which enable an unnamed class type to be declared and an object of that type to be instantiated at the same time.
 
-Daha fazla bilgi için bkz. [anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+For more information, see  [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
-Tür çıkarımı (örtük yazma) \
-Bir derleyicinin açık tür bildirimi yokluğunda bir değişkenin türünü belirleme özelliği.
+type inference (implicit typing) \
+The ability of a compiler to determine the type of a variable in the absence of an explicit type declaration.
 
-Daha fazla bilgi için bkz. [Yerel tür çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
+For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
 
-ertelenmiş yürütme ve geç değerlendirme \
-Çözümlenmiş değeri gerçekten gerekli olana kadar bir ifadenin değerlendirilme ertelenmesi. Ertelenmiş yürütme, koleksiyonlarda desteklenir.
+deferred execution and lazy evaluation \
+The delaying of evaluation of an expression until its resolved value is actually required. Deferred execution is supported in collections.
 
-Daha fazla bilgi için bkz. [temel sorgu işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) ve [ertelenmiş yürütme ve yavaş değerlendirme LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+For more information, see [Basic Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) and [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
 
-Bu dil özellikleri, bu bölümün tamamında kod örneklerinde kullanılacaktır.
+These language features will be used in code samples throughout this section.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Saf Işlevsel dönüşümlere giriş (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [İşlevsel Programlama ve Kesinlik temelli programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Functional Programming vs. Imperative Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

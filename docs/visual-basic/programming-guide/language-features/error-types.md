@@ -1,5 +1,5 @@
 ---
-title: Hata Türleri (Visual Basic)
+title: Hata Türleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions, types
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: 5be91162d5c178fc032fba32605107c3fcd4d16b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 04320c7a2fd27749e6de24f0ad21cc51c86ddda2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197201"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345152"
 ---
 # <a name="error-types-visual-basic"></a>Hata Türleri (Visual Basic)
-Visual Basic, hatalar üç kategoriden birine ayrılır: sözdizimi hataları, çalışma zamanı hataları ve mantık hataları.
+In Visual Basic, errors fall into one of three categories: syntax errors, run-time errors, and logic errors.
 
-## <a name="syntax-errors"></a>Sözdizimi hataları
- *Sözdizimi hataları* , kod yazarken görüntülenen olanlardır. Visual Studio kullanıyorsanız Visual Basic, kodu **kod düzenleyici** penceresinde yazarken kodu denetler ve bir sözcüğün yanlış olması veya bir dil öğesinin yanlış şekilde kullanılması gibi bir hata yaparsanız sizi uyarır. Komut satırından derlerseniz Visual Basic sözdizimi hatası hakkında bilgi içeren bir derleyici hatası görüntüler. Sözdizimi hataları en yaygın hata türüdür. Bunları, kodlama ortamında, her gerçekleştiğinde kolayca çözebilirsiniz.
+## <a name="syntax-errors"></a>Syntax Errors
+ *Syntax errors* are those that appear while you write code. If you're using Visual Studio, Visual Basic checks your code as you type it in the **Code Editor** window and alerts you if you make a mistake, such as misspelling a word or using a language element improperly. If you compile from the command line, Visual Basic displays a compiler error with information about the syntax error. Syntax errors are the most common type of errors. You can fix them easily in the coding environment as soon as they occur.
 
 > [!NOTE]
-> `Option Explicit` deyimin sözdizimi hatalarından kaçınmanın bir yolu vardır. Bu, uygulamada kullanılacak tüm değişkenleri önceden bildirmeye zorlar. Bu nedenle, bu değişkenler kodda kullanıldığında, her tipografik hata hemen yakalanır ve düzeltilebilir.
+> The `Option Explicit` statement is one means of avoiding syntax errors. It forces you to declare, in advance, all the variables to be used in the application. Therefore, when those variables are used in the code, any typographic errors are caught immediately and can be fixed.
 
-## <a name="run-time-errors"></a>Çalışma zamanı hataları
- *Çalışma zamanı hataları* yalnızca kodunuzu derleyip çalıştırdıktan sonra görüntülenen olanlardır. Bunlar, sözdizimi hataları olmayan, ancak yürütülmeyecek şekilde doğru görünebilen kodu içerir. Örneğin, bir dosyayı açmak için doğru bir kod satırı yazabilirsiniz. Ancak dosya yoksa, uygulama dosyayı açamaz ve bir özel durum oluşturur. Hatalı kodu yeniden yazarak veya [özel durum işlemeyi](../../language-reference/statements/try-catch-finally-statement.md)kullanarak ve sonra yeniden oluşturup yeniden çalıştırarak birçok çalışma zamanı hatasını giderebilirsiniz.
+## <a name="run-time-errors"></a>Run-Time Errors
+ *Run-time errors* are those that appear only after you compile and run your code. These involve code that may appear to be correct in that it has no syntax errors, but that will not execute. For example, you might correctly write a line of code to open a file. But if the file does not exist, the application cannot open the file, and it throws an exception. You can fix most run-time errors by rewriting the faulty code or by using [exception handling](../../language-reference/statements/try-catch-finally-statement.md), and then recompiling and rerunning it.
   
-## <a name="logic-errors"></a>Mantık hataları
- *Mantık hataları* , uygulama kullanımda olduktan sonra görüntülenen olanlardır. Bunlar genellikle geliştirici tarafından yapılan hatalı varsayımlar veya kullanıcı eylemlerine yanıt olarak istenmeyen ya da beklenmeyen sonuçlardır. Örneğin, yanlış yazılan bir anahtar bir yönteme yanlış bilgiler verebilir ya da bu durum olmadığı zaman bir yönteme geçerli bir değer sağlanması gerektiğini varsayabilirsiniz. Mantıksal hatalar [özel durum işleme](../../language-reference/statements/try-catch-finally-statement.md) kullanılarak işlenebilse de (örneğin, bir bağımsız değişkenin bir <xref:System.ArgumentNullException>`Nothing` olup olmadığını test ederek) en yaygın olarak, mantığdaki hatayı düzelterek ve uygulamayı yeniden derlemeden değinilmesi gerekir .
+## <a name="logic-errors"></a>Logic Errors
+ *Logic errors* are those that appear once the application is in use. They are most often faulty assumptions made by the developer, or unwanted or unexpected results in response to user actions. For example, a mistyped key might provide incorrect information to a method, or you may assume that a valid value is always supplied to a method when that is not the case. Although logic errors can be handled by using [exception handling](../../language-reference/statements/try-catch-finally-statement.md) (for example, by testing whether an argument is `Nothing` and throwing an <xref:System.ArgumentNullException>), most commonly they should be addressed by correcting the error in logic and recompiling the application.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

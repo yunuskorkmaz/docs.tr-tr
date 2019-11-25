@@ -1,27 +1,27 @@
 ---
-title: Arayan bilgileri (Visual Basic)
+title: Arayan Bilgileri
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: d9dc542ee9b800cfe6342f868ff9c2b170a4beec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c87b540a68f4d0219918fed66de6c1b635104a9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642359"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349469"
 ---
-# <a name="caller-information-visual-basic"></a>Arayan bilgileri (Visual Basic)
+# <a name="caller-information-visual-basic"></a>Caller Information (Visual Basic)
 Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodunun dosya yolunu, kaynak kodundaki satır numarasını ve arayanın üye adını alabilirsiniz. Bu bilgiler, tanılama araçlarının izlenmesine, oluşturulmasına ve bu araçlarda hata ayıklanmasına yardımcı olur.  
   
- Bu bilgileri elde etmek için her biri varsayılan değere sahip isteğe bağlı parametrelere uygulanan öznitelikler kullanabilirsiniz. Aşağıdaki tabloda tanımlanan arayan bilgisi öznitelikleri listelenmektedir <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanı:  
+ Bu bilgileri elde etmek için her biri varsayılan değere sahip isteğe bağlı parametrelere uygulanan öznitelikler kullanabilirsiniz. The following table lists the Caller Info attributes that are defined in the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace:  
   
 |Öznitelik|Açıklama|Tür|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Kaynak dosyasının arayanı içeren tam yolu. Bu, derleme zamanındaki dosya yoludur.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Yöntemin çağrıldığı kaynak dosyadaki satır numarası.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Arayanın yöntemi veya özellik adı. Bkz: [üye adları](#MEMBERNAMES) bu konuda.|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Arayanın yöntemi veya özellik adı. See [Member Names](#MEMBERNAMES) later in this topic.|`String`|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, Arayanın Bilgisi özniteliklerinin nasıl kullanılacağı gösterilmiştir. Her çağrıda `TraceMessage` yöntemi arayan bilgileri isteğe bağlı parametrelerin bağımsız değişkenleri olarak değiştirilir.  
+ Aşağıdaki örnekte, Arayanın Bilgisi özniteliklerinin nasıl kullanılacağı gösterilmiştir. On each call to the `TraceMessage` method, the caller information is substituted as arguments to the optional parameters.  
   
 ```vb  
 Private Sub DoProcessing()  
@@ -51,18 +51,18 @@ End Sub
   
  Arayan Bilgisi öznitelikleri, bir parametreyi isteğe bağlı hale getirmez. Bunun yerine, bağımsız değişken atlandığında geçirilen varsayılan değeri etkilerler.  
   
- Arayan Bilgisi değerleri, derleme zamanında Ara Dile (IL) değişmez değerler olarak verilir. Tersine sonuçlar <xref:System.Exception.StackTrace%2A> özelliği için özel durumlar, sonuçlar gizlemeden etkilenmez etkilenmez.  
+ Arayan Bilgisi değerleri, derleme zamanında Ara Dile (IL) değişmez değerler olarak verilir. Unlike the results of the <xref:System.Exception.StackTrace%2A> property for exceptions, the results aren't affected by obfuscation.  
   
  Arayan bilgisini denetlemek veya gizlemek için isteğe bağlı bağımsız değişkenleri açıkça sağlayabilirsiniz.  
   
-### <a name="MEMBERNAMES"></a> Üye adları  
- Kullanabileceğiniz `CallerMemberName` üye adı olarak belirtmekten kaçınmak için öznitelik bir `String` çağrılan yöntemin bağımsız değişken. Bu tekniği kullanarak, sorundan kaçınmak, **düzenlemeyi yeniden adlandırma** değişmez `String` değerleri. Bu, özellikle aşağıdaki görevler için yararlı olur:  
+### <a name="MEMBERNAMES"></a> Member Names  
+ You can use the `CallerMemberName` attribute to avoid specifying the member name as a `String` argument to the called method. By using this technique, you avoid the problem that **Rename Refactoring** doesn't change the `String` values. Bu, özellikle aşağıdaki görevler için yararlı olur:  
   
 - İzleme ve tanılama yordamlarını kullanma.  
   
-- Uygulama <xref:System.ComponentModel.INotifyPropertyChanged> veri bağlama sırasında arabirim. Bu arabirim, bir nesnenin özelliğinin bağlama denetimine özelliğin değiştirildiğini bildirmesini ve böylece denetimin güncelleştirilmiş bilgileri görüntüleyebilmesini sağlar. Olmadan `CallerMemberName` öznitelik, özellik adını değişmez değer olarak belirtmeniz gerekir.  
+- Implementing the <xref:System.ComponentModel.INotifyPropertyChanged> interface when binding data. Bu arabirim, bir nesnenin özelliğinin bağlama denetimine özelliğin değiştirildiğini bildirmesini ve böylece denetimin güncelleştirilmiş bilgileri görüntüleyebilmesini sağlar. Without the `CallerMemberName` attribute, you must specify the property name as a literal.  
   
- Aşağıdaki grafik üyesi kullandığınızda döndürülen adlarını gösterir. `CallerMemberName` özniteliği.  
+ The following chart shows the member names that are returned when you use the `CallerMemberName` attribute.  
   
 |Çağrının oluştuğu yer|Üye adı sonucu|  
 |-------------------------|------------------------|  
@@ -76,7 +76,7 @@ End Sub
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öznitelikler (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
-- [Ortak öznitelikler (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
+- [Attributes (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
+- [Common Attributes (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
 - [İsteğe Bağlı Parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [Programlama Kavramları (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+- [Programming Concepts (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)

@@ -1,5 +1,5 @@
 ---
-title: '>> İşleç (Visual Basic)'
+title: '>> İşleç'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.>>
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: 337d651e831dc2ab132056f6e9a1f2b5300bf7f8
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: cabf8c569435cc0fc98282f5e8f5fd410e6708dc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701322"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347818"
 ---
-# <a name="-operator-visual-basic"></a>> > Işleci (Visual Basic)
-Bit bir düzende aritmetik sağa kaydırma gerçekleştirir.  
+# <a name="-operator-visual-basic"></a>>> Operator (Visual Basic)
+Performs an arithmetic right shift on a bit pattern.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,69 +28,69 @@ result = pattern >> amount
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Gerekli. Integral sayısal değeri. Bit deseninin kaydırinme sonucu. Veri türü `pattern` ' dır.  
+ Gerekli. Integral numeric value. The result of shifting the bit pattern. The data type is the same as that of `pattern`.  
   
  `pattern`  
- Gerekli. Integral sayısal ifadesi. Kaydırılan bit deseninin. Veri türü bir tam sayı türü olmalıdır (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` veya `ULong`).  
+ Gerekli. Integral numeric expression. The bit pattern to be shifted. The data type must be an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).  
   
  `amount`  
- Gerekli. Sayısal ifade. Bit deseninin kaydırılacak bit sayısı. Veri türü `Integer` olmalı veya `Integer` ' e genişlemelidir.  
+ Gerekli. Numeric expression. The number of bits to shift the bit pattern. The data type must be `Integer` or widen to `Integer`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Aritmetik vardiyalar dairesel değildir, bu da sonucun bir sonunun dışına sürüklenen bitlerin diğer uçta yeniden tanıtılmadığını gösterir. Aritmetik sağa kaydırma ' de, en sağdaki bit konumlarından daha fazla kaydırılan bitler atılır ve en soldaki (oturum açma) biti, sol taraftaki bit konumlarına yayılır. Bu, `pattern` negatif bir değere sahipse, karıştırılmış konumların tek olarak ayarlandığı anlamına gelir; Aksi takdirde, sıfır olarak ayarlanır.  
+ Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. In an arithmetic right shift, the bits shifted beyond the rightmost bit position are discarded, and the leftmost (sign) bit is propagated into the bit positions vacated at the left. This means that if `pattern` has a negative value, the vacated positions are set to one; otherwise they are set to zero.  
   
- @No__t-0, `UShort`, `UInteger` ve `ULong` veri türlerinin işaretsiz olduğunu ve bu nedenle yaymaya yönelik bir oturum açma işlemi olmadığını unutmayın. @No__t-0 herhangi bir işaretsiz türde ise, karıştırılmış konumlar her zaman sıfır olarak ayarlanır.  
+ Note that the data types `Byte`, `UShort`, `UInteger`, and `ULong` are unsigned, so there is no sign bit to propagate. If `pattern` is of any unsigned type, the vacated positions are always set to zero.  
   
- Sonucun tutabileceğinden daha fazla bite göre kaydırmasını engellemek için, Visual Basic `amount` değeri `pattern` veri türüne karşılık gelen bir boyut maskesiyle. Bu değerlerin ikili dosyası ve kaydırma miktarı için kullanılır. Boyut maskeleri aşağıdaki gibidir:  
+ To prevent shifting by more bits than the result can hold, Visual Basic masks the value of `amount` with a size mask corresponding to the data type of `pattern`. The binary AND of these values is used for the shift amount. The size masks are as follows:  
   
-|@No__t veri türü-0|Boyut maskesi (ondalık)|Boyut maskesi (onaltılık)|  
+|Data type of `pattern`|Size mask (decimal)|Size mask (hexadecimal)|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`, `Byte`|7|& H00000007|  
-|`Short`, `UShort`|15|& H0000000F|  
-|`Integer`, `UInteger`|31|& H0000001F|  
-|`Long`, `ULong`|63|& H0000003F|  
+|`SByte`, `Byte`|7|&H00000007|  
+|`Short`, `UShort`|15|&H0000000F|  
+|`Integer`, `UInteger`|31|&H0000001F|  
+|`Long`, `ULong`|63|&H0000003F|  
   
- @No__t-0 sıfırsa, `result` değeri `pattern` değeri ile aynıdır. @No__t-0 negatifse, imzasız bir değer olarak alınır ve uygun boyut maskesiyle maskelenir.  
+ If `amount` is zero, the value of `result` is identical to the value of `pattern`. If `amount` is negative, it is taken as an unsigned value and masked with the appropriate size mask.  
   
- Aritmetik vardiyalar hiçbir şekilde taşma özel durumu oluşturmaz.  
+ Arithmetic shifts never generate overflow exceptions.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- @No__t-0 işleci *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The `>>` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, tam sayı değerlerinde aritmetik sağa kaymalar gerçekleştirmek için `>>` işlecini kullanır. Sonuç, kaydırılan deyimden her zaman aynı veri türüne sahiptir.  
+ The following example uses the `>>` operator to perform arithmetic right shifts on integral values. The result always has the same data type as that of the expression being shifted.  
   
  [!code-vb[VbVbalrOperators#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#14)]  
   
- Önceki örneğin sonuçları aşağıdaki gibidir:  
+ The results of the preceding example are as follows:  
   
-- `result1`, 2560 (0000 1010 0000 0000).  
+- `result1` is 2560 (0000 1010 0000 0000).  
   
-- `result2`, 160 (0000 0000 1010 0000).  
+- `result2` is 160 (0000 0000 1010 0000).  
   
-- `result3`, 2 ' dir (0000 0000 0000 0010).  
+- `result3` is 2 (0000 0000 0000 0010).  
   
-- `result4`, 640 (0000 0010 1000 0000).  
+- `result4` is 640 (0000 0010 1000 0000).  
   
-- `result5` 0 ' dır (sağa kaydırılan 15 konum).  
+- `result5` is 0 (shifted 15 places to the right).  
   
- @No__t-0 için SHIFT miktarı 18 ve 15 olarak hesaplanır, bu da 2 ' ye eşittir.  
+ The shift amount for `result4` is calculated as 18 AND 15, which equals 2.  
   
- Aşağıdaki örnek, negatif bir değer üzerinde aritmetik vardiyaları gösterir.  
+ The following example shows arithmetic shifts on a negative value.  
   
  [!code-vb[VbVbalrOperators#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#55)]  
   
- Önceki örneğin sonuçları aşağıdaki gibidir:  
+ The results of the preceding example are as follows:  
   
-- `negresult1`,-512 (1111 1110 0000 0000).  
+- `negresult1` is -512 (1111 1110 0000 0000).  
   
-- `negresult2`,-1 ' dir (işaret biti yayılır).  
+- `negresult2` is -1 (the sign bit is propagated).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bit Kaydırma İşleçleri](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [>>= İşleci](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)
-- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic aritmetik Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

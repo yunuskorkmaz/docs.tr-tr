@@ -1,5 +1,5 @@
 ---
-title: Kullanıcı Verilerine Erişme (Visual Basic)
+title: Kullanıcı Verilerine Erişme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - domain names [Visual Basic], retrieving
@@ -11,25 +11,26 @@ helpviewer_keywords:
 - login names [Visual Basic]
 - examples [Visual Basic], accessing user data
 ms.assetid: 32492a15-ee59-4a63-a1f1-9b24cc13140a
-ms.openlocfilehash: e5d18adcb331162a72da0adb4018d1d59ecc072e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 463d3bc77237482d4cd568b9558bb72cd19e7216
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014121"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349212"
 ---
 # <a name="accessing-user-data-visual-basic"></a>Kullanıcı Verilerine Erişme (Visual Basic)
-Bu bölüm ile ilgili konuları içerir `My.User` nesne ve ile gerçekleştirebileceğiniz görevler.  
+
+This section contains topics dealing with the `My.User` object and tasks that you can accomplish with it.  
   
- `My.User` Nesnesi uygulayan bir nesne döndürerek oturum açan kullanıcı ile ilgili bilgilere erişim sağlar <xref:System.Security.Principal.IPrincipal> arabirimi.  
+ The `My.User` object provides access to information about the logged-on user by returning an object that implements the <xref:System.Security.Principal.IPrincipal> interface.  
   
 ## <a name="tasks"></a>Görevler  
   
-|Bitiş|Bkz. |  
+|Bitiş|Bkz.|  
 |--------|---------|  
-|Kullanıcının oturum açma adını Al|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
-|Uygulamayı Windows kimlik doğrulaması kullanıyorsa, kullanıcının etki alanı adını alma|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
-|Kullanıcının rolünü belirleme|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
+|Get the user's login name|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
+|Get the user's domain name, if the application uses Windows authentication|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
+|Determine the user's role|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

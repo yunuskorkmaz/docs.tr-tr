@@ -1,50 +1,50 @@
 ---
-title: Zaman uyumsuz görevleri bir süre sonra iptal et (Visual Basic)
+title: Zaman Uyumsuz Görevleri Belirli Bir Süre Sonunda İptal Etme
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: 37cc1936dc9c55e0dadb4ccb57d549f3653a11b0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4b1cfe03e0bbcc0e601a1ec641c95bd68266b7c8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419830"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347956"
 ---
-# <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>Zaman uyumsuz görevleri bir süre sonra iptal et (Visual Basic)
+# <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>Cancel Async Tasks after a Period of Time (Visual Basic)
 
-İşlemin bitmesini beklemek istemiyorsanız <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> yöntemini kullanarak zaman uyumsuz bir işlemi bir süre sonra iptal edebilirsiniz. Bu yöntem, `CancelAfter` ifadesi tarafından belirlenen süre içinde tamamlanmamış olan ilişkili görevlerin iptalini zamanlar.
+You can cancel an asynchronous operation after a period of time by using the  <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> method if you don't want to wait for the operation to finish. This method schedules the cancellation of any associated tasks that aren’t complete within the period of time that’s designated by the `CancelAfter` expression.
 
-Bu örnek, bir Web sitesi listesini indirmek ve her birinin içindekilerin uzunluğunu göstermek için [zaman uyumsuz bir görevi veya görev listesini (Visual Basic) iptal](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) etmek üzere geliştirilmiş koda ekler.
+This example adds to the code that’s developed in [Cancel an Async Task or a List of Tasks (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to download a list of websites and to display the length of the contents of each one.
 
 > [!NOTE]
-> Örnekleri çalıştırmak için, bilgisayarınızda Visual Studio 2012 veya sonraki bir sürümü ve .NET Framework 4,5 veya üzeri bir sürümü yüklü olmalıdır.
+> To run the examples, you must have Visual Studio 2012 or later and the .NET Framework 4.5 or later installed on your computer.
 
-## <a name="downloading-the-example"></a>Örnek indiriliyor
+## <a name="downloading-the-example"></a>Downloading the Example
 
-Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten indirebilirsiniz: uygulamanızı Ince ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) yapın ve ardından aşağıdaki adımları izleyin.
+You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.
 
-1. İndirdiğiniz dosyayı sıkıştırmasını açın ve ardından Visual Studio 'Yu başlatın.
+1. Decompress the file that you downloaded, and then start Visual Studio.
 
-2. Menü çubuğunda **Dosya**, **Aç**, **Proje/çözüm**' ü seçin.
+2. On the menu bar, choose **File**, **Open**, **Project/Solution**.
 
-3. **Proje Aç** iletişim kutusunda, açtığınız örnek kodu tutan klasörü açın ve ardından AsyncFineTuningVB için çözüm (. sln) dosyasını açın.
+3. In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.
 
-4. **Çözüm Gezgini**, **zaman** hatası ve ardından **Başlangıç projesi olarak ayarla**' yı seçin.
+4. In **Solution Explorer**, open the shortcut menu for the **CancelAfterTime** project, and then choose **Set as StartUp Project**.
 
-5. Projeyi çalıştırmak için F5 tuşunu seçin.
+5. Choose the F5 key to run the project.
 
-     Projeyi hata ayıklamadan çalıştırmak için CTRL + F5 tuşlarını seçin.
+     Choose the Ctrl+F5 keys to run the project without debugging it.
 
-6. Çıktının tüm Web siteleri, Web sitesi veya bazı Web siteleri için çıktıyı gösterebileceğini doğrulamak için programı birkaç kez çalıştırın.
+6. Run the program several times to verify that the output might show output for all websites, no websites, or some web sites.
 
- Projeyi indirmek istemiyorsanız, bu konunun sonundaki MainWindow. xaml. vb dosyasını gözden geçirebilirsiniz.
+ If you don't want to download the project, you can review the MainWindow.xaml.vb file at the end of this topic.
 
-## <a name="building-the-example"></a>Örnek oluşturma
+## <a name="building-the-example"></a>Building the Example
 
-Bu konudaki örnek, bir görev listesini iptal etmek için [zaman uyumsuz bir görevi veya görev listesini iptal etmek (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) için geliştirilmiş projeye ekler. Örnek, aynı kullanıcı arabirimini kullanır, ancak **iptal** düğmesi açıkça kullanılmaz.
+The example in this topic adds to the project that's developed in [Cancel an Async Task or a List of Tasks (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to cancel a list of tasks. The example uses the same UI, although the **Cancel** button isn’t used explicitly.
 
-Örneği kendiniz oluşturmak için, "örneği Indirme" bölümündeki yönergeleri izleyin, ancak **Başlangıç projesi**olarak iptal eden **ınlıftasks** ' ı seçin. Bu konudaki değişiklikleri bu projeye ekleyin.
+To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelAListOfTasks** as the **StartUp Project**. Add the changes in this topic to that project.
 
-Görevler iptal edildi olarak işaretlenmeden önce en uzun süreyi belirtmek için, aşağıdaki örnekte gösterildiği gibi `startButton_Click``CancelAfter` bir çağrı ekleyin. Toplama, yıldız işareti ile işaretlenir.
+To specify a maximum time before the tasks are marked as canceled, add a call to `CancelAfter` to `startButton_Click`, as the following example shows. The addition is marked with asterisks.
 
 ```vb
 Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)
@@ -74,7 +74,7 @@ Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-Çıktının tüm Web siteleri, Web sitesi veya bazı Web siteleri için çıktıyı gösterebileceğini doğrulamak için programı birkaç kez çalıştırın. Aşağıdaki çıktı bir örnektir:
+Run the program several times to verify that the output might show output for all websites, no websites, or some web sites. The following output is a sample:
 
 ```console
 Length of the downloaded string: 35990.
@@ -88,11 +88,11 @@ Downloads canceled.
 
 ## <a name="complete-example"></a>Tam Örnek
 
-Aşağıdaki kod, örnek için MainWindow. xaml. vb dosyasının tüm metinkodudur. Yıldız işaretleri bu örnek için eklenen öğeleri işaretler.
+The following code is the complete text of the MainWindow.xaml.vb file for the example. Asterisks mark the elements that were added for this example.
 
-<xref:System.Net.Http>için bir başvuru eklemeniz gerektiğini unutmayın.
+Notice that you must add a reference for <xref:System.Net.Http>.
 
-Projeyi [zaman uyumsuz örnekten indirebilirsiniz: uygulamanızı hassas bir şekilde ayarlama](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+You can download the project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -195,8 +195,8 @@ End Class
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Async ve await ile zaman uyumsuz programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [İzlenecek yol: Async ve await kullanarak Web 'e erişme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Zaman uyumsuz bir görevi veya görev listesini iptal etme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
-- [Zaman uyumsuz uygulamanızda ince ayar yapma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Zaman uyumsuz örnek: uygulamanıza Ince ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Cancel an Async Task or a List of Tasks (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
+- [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

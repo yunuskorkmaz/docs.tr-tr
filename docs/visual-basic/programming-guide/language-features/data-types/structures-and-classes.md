@@ -1,5 +1,5 @@
 ---
-title: Yapılar ve Sınıflar (Visual Basic)
+title: Yapılar ve Sınıflar
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
@@ -9,82 +9,82 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: b947109f99d94b0ecb1d798835c311f2374e96fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3353935a74bb77fa4a630e706aa425063c7a610a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601022"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346325"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Yapılar ve Sınıflar (Visual Basic)
-Visual Basic, yapılar ve sınıflar, her iki varlık aynı özelliklerin çoğunu destekler sonucuyla sözdizimi birleştirir. Ancak, ayrıca önemli farklar vardır yapılar ve sınıflar arasında.  
+Visual Basic unifies the syntax for structures and classes, with the result that both entities support most of the same features. However, there are also important differences between structures and classes.  
   
- Sınıfları, başvuru türleri olan avantajı sahiptir — bir başvurusu geçirme tüm veri yapısı değişkenle geçirerek daha verimlidir. Öte yandan, yapıları genel yığında bellek ayırma gerektirmez.  
+ Classes have the advantage of being reference types — passing a reference is more efficient than passing a structure variable with all its data. On the other hand, structures do not require allocation of memory on the global heap.  
   
- Bir yapısından devralınamaz çünkü yapıları genişletilmesi gerekmeyen nesneler için kullanılmalıdır. Oluşturmak istediğiniz nesne küçük örnek boyutu ve yapıları ve sınıfları performans özellikleri dikkate yapıları kullanın.  
+ Because you cannot inherit from a structure, structures should be used only for objects that do not need to be extended. Use structures when the object you wish to create has a small instance size, and take into account the performance characteristics of classes versus structures.  
   
-## <a name="similarities"></a>Benzerlikler  
- Yapılar ve sınıflar, şu açılardan benzerdir:  
+## <a name="similarities"></a>Similarities  
+ Structures and classes are similar in the following respects:  
   
-- Her ikisi de *kapsayıcı* türleri, içerdikleri diğer türleri üyeleri olarak anlamına gelir.  
+- Both are *container* types, meaning that they contain other types as members.  
   
-- Her ikisi de, Oluşturucular, yöntemler, özellikler, alanlar, sabitleri, numaralandırmalar, olayları ve olay işleyicileri içerebilen üyeleri var. Ancak, bu üyeleri bildirilen ile karıştırmayın *öğeleri* bir yapının.  
+- Both have members, which can include constructors, methods, properties, fields, constants, enumerations, events, and event handlers. However, do not confuse these members with the declared *elements* of a structure.  
   
-- Her ikisi de üyeleri erişim düzeyleri individualized. Örneğin, bir üye bildirilebilir `Public` ve başka bir `Private`.  
+- Members of both can have individualized access levels. For example, one member can be declared `Public` and another `Private`.  
   
-- Her ikisi de arabirim uygulayabilir.  
+- Both can implement interfaces.  
   
-- Her ikisi de Oluşturucular, parametrelerle veya parametresiz paylaşılan sahip.  
+- Both can have shared constructors, with or without parameters.  
   
-- Her ikisi de ortaya koyabileceğiniz bir *varsayılan özellik*, koşuluyla özellik en az bir parametre alır.  
+- Both can expose a *default property*, provided that property takes at least one parameter.  
   
-- Her ikisi de bildirme ve olayları tetikleyebilir ve her ikisi de temsilciler bildirebilirsiniz.  
+- Both can declare and raise events, and both can declare delegates.  
   
-## <a name="differences"></a>Farkları  
- Yapılar ve sınıflar aşağıdaki Bununla farklılık gösterir:  
+## <a name="differences"></a>Differences  
+ Structures and classes differ in the following particulars:  
   
-- Yapıları, *değer türleri*; sınıflardır *başvuru türleri*. Bir yapı türünün değişkenini yapısı verileri içeren yerine verileri bir sınıf türü olarak bir başvuru içeren yapar.  
+- Structures are *value types*; classes are *reference types*. A variable of a structure type contains the structure's data, rather than containing a reference to the data as a class type does.  
   
-- Yığın ayırma yapıları kullanın. yığın ayırma sınıflarını kullanın.  
+- Structures use stack allocation; classes use heap allocation.  
   
-- Tüm yapı öğeleri `Public` değişkenleri tarafından varsayılan; sınıf ve sabitler `Private` olsa da diğer sınıf üyeleri varsayılan olarak `Public` varsayılan olarak. Sınıf üyeleri için bu davranış Visual Basic 6.0 sistem varsayılanlarını ile uyumluluk sağlar.  
+- All structure elements are `Public` by default; class variables and constants are `Private` by default, while other class members are `Public` by default. This behavior for class members provides compatibility with the Visual Basic 6.0 system of defaults.  
   
-- Bir yapı paylaşılmayan en az bir değişken veya paylaşılmayan, noncustom olmalıdır; olay öğesi bir sınıf tamamen boş olabilir.  
+- A structure must have at least one nonshared variable or nonshared, noncustom event element; a class can be completely empty.  
   
-- Yapı öğeleri olarak bildirilemez `Protected`; sınıf üyeleri olabilir.  
+- Structure elements cannot be declared as `Protected`; class members can.  
   
-- Yalnızca yapı yordamı olaylarını işleyebileceğinizi bir [paylaşılan](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` yordamı ve yalnızca, [AddHandler deyimi](../../../../visual-basic/language-reference/statements/addhandler-statement.md); herhangi bir sınıf yordam ya da kullanarakolaylarıişleyebilir[ İşleme](../../../../visual-basic/language-reference/statements/handles-clause.md) anahtar sözcüğü veya `AddHandler` deyimi. Daha fazla bilgi için [olayları](../../../../visual-basic/programming-guide/language-features/events/index.md).  
+- A structure procedure can handle events only if it is a [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` procedure, and only by means of the [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md); any class procedure can handle events, using either the [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) keyword or the `AddHandler` statement. For more information, see [Events](../../../../visual-basic/programming-guide/language-features/events/index.md).  
   
-- Yapı değişken bildirimleri başlatıcılar veya ilk boyutları diziler için belirtilemez; sınıf değişken bildirimlerini kullanabilirsiniz.  
+- Structure variable declarations cannot specify initializers or initial sizes for arrays; class variable declarations can.  
   
-- Yapıları örtük olarak devralmak <xref:System.ValueType?displayProperty=nameWithType> sınıfı ve her türden; devralınamaz sınıflar devralınan herhangi bir sınıf veya sınıflar dışında <xref:System.ValueType?displayProperty=nameWithType>.  
+- Structures implicitly inherit from the <xref:System.ValueType?displayProperty=nameWithType> class and cannot inherit from any other type; classes can inherit from any class or classes other than <xref:System.ValueType?displayProperty=nameWithType>.  
   
-- Yapıları devralınabilir değil; sınıflardır.  
+- Structures are not inheritable; classes are.  
   
-- Yapıları hiçbir zaman sonlandırılır, ortak dil çalışma zamanı (CLR) hiçbir zaman çağırır <xref:System.Object.Finalize%2A> herhangi bir yapının; metodunda sınıfları, çağıran atıktoplayıcı tarafından (GC) sonlandırılır <xref:System.Object.Finalize%2A> başvuru active vardır algıladığında bir sınıf Kalan.  
+- Structures are never terminated, so the common language runtime (CLR) never calls the <xref:System.Object.Finalize%2A> method on any structure; classes are terminated by the garbage collector (GC), which calls <xref:System.Object.Finalize%2A> on a class when it detects there are no active references remaining.  
   
-- Bir yapının bir oluşturucu gerektirmez; bir sınıf yapar.  
+- A structure does not require a constructor; a class does.  
   
-- Yapıları olabilir yalnızca parametreleri; izlerseniz paylaşılmayan oluşturucular sınıfları bunları parametrelerle veya parametresiz olabilir.  
+- Structures can have nonshared constructors only if they take parameters; classes can have them with or without parameters.  
   
- Her yapı daha genel bir parametresiz oluşturucu örtük daha vardır. Bu oluşturucu, yapının tüm veri öğeleri varsayılan değerlerine başlatır. Bu davranış tanımlanamaz.  
+ Every structure has an implicit public constructor without parameters. This constructor initializes all the structure's data elements to their default values. You cannot redefine this behavior.  
   
-## <a name="instances-and-variables"></a>Örnekler ve değişkenleri  
- Yapılar değer türleri olduğundan, her bir yapı değişken kalıcı olarak tek tek yapısı örneğine bağlı. Ancak başvuru türleri sınıflardır ve bir nesne değişkeninin için çeşitli sınıf örneklerinin farklı zamanlarda başvuruda bulunabilir. Bu ayrım kullanımınızı yapılar ve sınıflar aşağıdaki şekillerde etkiler:  
+## <a name="instances-and-variables"></a>Instances and Variables  
+ Because structures are value types, each structure variable is permanently bound to an individual structure instance. But classes are reference types, and an object variable can refer to various class instances at different times. This distinction affects your usage of structures and classes in the following ways:  
   
-- **Başlatma.** Yapısı değişkeni örtük olarak bir başlatma yapısı parametresiz oluşturucu kullanılarak öğeleri içerir. Bu nedenle, `Dim s As struct1` eşdeğerdir `Dim s As struct1 = New struct1()`.  
+- **Initialization.** A structure variable implicitly includes an initialization of the elements using the structure's parameterless constructor. Therefore, `Dim s As struct1` is equivalent to `Dim s As struct1 = New struct1()`.  
   
-- **Değişkenleri atanıyor.** Başka bir yapı değişkenine atayın veya yapısı örneği için bir yordam bağımsız değişkeninin geçirmek, geçerli öğelerin değerlerinin tüm değişken yeni yapısına kopyalanır. Başka bir nesne değişkenine atayın veya bir nesne değişkeni geçirmek için bir yordam, yalnızca başvuru işaretçi kopyalanır.  
+- **Assigning Variables.** When you assign one structure variable to another, or pass a structure instance to a procedure argument, the current values of all the variable elements are copied to the new structure. When you assign one object variable to another, or pass an object variable to a procedure, only the reference pointer is copied.  
   
-- **Hiçbir şey atanıyor.** Değer atayabilirsiniz [hiçbir şey](../../../../visual-basic/language-reference/nothing.md) değişkeni, ancak örnek bir yapıya devam değişkeniyle ilişkilendirilecek. Yine, yöntemlerinin çağrılması ve değişken öğeleri atama tarafından başlatılır ancak veri öğelerine erişebilirsiniz.  
+- **Assigning Nothing.** You can assign the value [Nothing](../../../../visual-basic/language-reference/nothing.md) to a structure variable, but the instance continues to be associated with the variable. You can still call its methods and access its data elements, although variable elements are reinitialized by the assignment.  
   
-     Buna karşılık, bir nesne değişkeninin ayarlarsanız, `Nothing`, herhangi bir sınıfı örnekten ilişkisini kaldırın ve başka bir örneği atamak kadar hiç üye değişkeni erişemezsiniz.  
+     In contrast, if you set an object variable to `Nothing`, you dissociate it from any class instance, and you cannot access any members through the variable until you assign another instance to it.  
   
-- **Birden çok örneği.** Bir nesne değişkeninin farklı sınıf örneklerinin farklı zamanlarda atanmış olabilir ve birden fazla nesne değişkenleri aynı anda aynı sınıf örneğine bakabilirsiniz. Sınıf üyelerinin değerlerini için yaptığınız değişiklikler, aynı örneğine işaret eden başka bir değişken üzerinden erişildiğinde bu üyeler etkiler.  
+- **Multiple Instances.** An object variable can have different class instances assigned to it at different times, and several object variables can refer to the same class instance at the same time. Changes you make to the values of class members affect those members when accessed through another variable pointing to the same instance.  
   
-     Yapı öğeleri, ancak kendi örneği içinde yalıtılır. Değişiklikleri değerlerine değil yansıtılır herhangi diğer yapı değişkenleri, aynı diğer durumlarda bile `Structure` bildirimi.  
+     Structure elements, however, are isolated within their own instance. Changes to their values are not reflected in any other structure variables, even in other instances of the same `Structure` declaration.  
   
-- **Eşitlik.** İki yapıları eşitlik testi ile bir öğeye göre test gerçekleştirilmesi gerekir. İki nesne değişkenini kullanarak karşılaştırılabilir <xref:System.Object.Equals%2A> yöntemi. <xref:System.Object.Equals%2A> iki değişken aynı örneğine kılınmayacağını gösterir.  
+- **Equality.** Equality testing of two structures must be performed with an element-by-element test. Two object variables can be compared using the <xref:System.Object.Equals%2A> method. <xref:System.Object.Equals%2A> indicates whether the two variables point to the same instance.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: Tür Yükseltme (Visual Basic)
+title: Tür Yükseltme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic], scope
@@ -10,59 +10,59 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: 02d53770186f7600b190231dc73938ff1589cef6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa05bd7dc87510aedb0facadf4b7590c8ec57d1f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610353"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345270"
 ---
 # <a name="type-promotion-visual-basic"></a>Tür Yükseltme (Visual Basic)
-Modül içindeki bir programlama öğesi bildirdiğinizde, Visual Basic modülü içeren ad alanı kapsamında yükseltir. Bu olarak bilinir *türü promosyon*.  
+When you declare a programming element in a module, Visual Basic promotes its scope to the namespace containing the module. This is known as *type promotion*.  
   
- Aşağıdaki örnek, bir modül iskelet tanımını ve bu modül iki üyeleri gösterir.  
+ The following example shows a skeleton definition of a module and two members of that module.  
   
  [!code-vb[VbVbalrDeclaredElements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#1)]  
   
- İçinde `projModule`, programlama Modül düzeyinde bildirilen öğeler için yükseltilen `projNamespace`. Önceki örnekte `basicEnum` ve `innerClass` yükseltilir, ancak `numberSub` Modül düzeyinde bildirilmediğinden değildir.  
+ Within `projModule`, programming elements declared at module level are promoted to `projNamespace`. In the preceding example, `basicEnum` and `innerClass` are promoted, but `numberSub` is not, because it is not declared at module level.  
   
-## <a name="effect-of-type-promotion"></a>Tür promosyonu etkisi  
- Tür promosyonu etkisini nitelik dize modül adını içerecek şekilde gerekmeyen ' dir. Aşağıdaki örnek önceki örnekte iki yordam çağrıları yapar.  
+## <a name="effect-of-type-promotion"></a>Effect of Type Promotion  
+ The effect of type promotion is that a qualification string does not need to include the module name. The following example makes two calls to the procedure in the preceding example.  
   
  [!code-vb[VbVbalrDeclaredElements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#2)]  
   
- Önceki örnekte, ilk çağrı, tam nitelenmiş dizeleri kullanır. Ancak, bu tür yükseltme nedeniyle gerekli değildir. İkinci çağrı da erişir modülün üyeleri dahil etmeden `projModule` nitelik Dizelerdeki.  
+ In the preceding example, the first call uses complete qualification strings. However, this is not necessary because of type promotion. The second call also accesses the module's members without including `projModule` in the qualification strings.  
   
-## <a name="defeat-of-type-promotion"></a>Tür yükseltme zorluğunu  
- Tür yükseltme, ad alanı aynı ada sahip bir üye modülü üye olarak zaten varsa, bu modül üyenin engellenmediğinden. Aşağıdaki örnek, bir numaralandırma ve aynı ad alanı içinde bir modül bir çatı tanımı gösterilmektedir.  
+## <a name="defeat-of-type-promotion"></a>Defeat of Type Promotion  
+ If the namespace already has a member with the same name as a module member, type promotion is defeated for that module member. The following example shows a skeleton definition of an enumeration and a module within the same namespace.  
   
  [!code-vb[VbVbalrDeclaredElements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#3)]  
   
- Önceki örnekte, Visual Basic sınıf düzeyine yükseltilemiyor `abc` için `thisNameSpace` zaten var olduğundan ad alanı düzeyinde aynı ada sahip bir sabit listesi. Erişim için `abcSub`, tam nitelenmiş dize kullanmalısınız `thisNamespace.thisModule.abc.abcSub`. Ancak, sınıf `xyz` hala yükseltilir ve erişebileceğiniz `xyzSub` kısa nitelik dize ile `thisNamespace.xyz.xyzSub`.  
+ In the preceding example, Visual Basic cannot promote class `abc` to `thisNameSpace` because there is already an enumeration with the same name at namespace level. To access `abcSub`, you must use the full qualification string `thisNamespace.thisModule.abc.abcSub`. However, class `xyz` is still promoted, and you can access `xyzSub` with the shorter qualification string `thisNamespace.xyz.xyzSub`.  
   
-### <a name="defeat-of-type-promotion-for-partial-types"></a>Kısmi türler için tür yükseltme zorluğunu  
- Bir sınıf veya yapı içinde bir modül kullanıyorsa [kısmi](../../../../visual-basic/language-reference/modifiers/partial.md) anahtar sözcüğü, tür yükseltme, bu sınıf veya yapı için otomatik olarak engellenmediğinden aynı ada sahip bir üye ad alanına sahip olup olmadığını. Diğer öğeleri modüldeki tür yükseltme için yine de uygundur.  
+### <a name="defeat-of-type-promotion-for-partial-types"></a>Defeat of Type Promotion for Partial Types  
+ If a class or structure inside a module uses the [Partial](../../../../visual-basic/language-reference/modifiers/partial.md) keyword, type promotion is automatically defeated for that class or structure, whether or not the namespace has a member with the same name. Other elements in the module are still eligible for type promotion.  
   
- **Sonuçları.** Tür promosyonu kısmi tanımı, zorluğunu, beklenmeyen sonuçlar ve hatta derleyici hataları neden olabilir. Aşağıdaki örnek, bir sınıfın biri içinde bir modül olan iskelet kısmi tanımları gösterir.  
+ **Consequences.** Defeat of type promotion of a partial definition can cause unexpected results and even compiler errors. The following example shows skeleton partial definitions of a class, one of which is inside a module.  
   
  [!code-vb[VbVbalrDeclaredElements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#4)]  
   
- Önceki örnekte, geliştiricinin iki kısmi tanımlarını birleştirmek için derleyici beklenebilir `sampleClass`. Ancak, derleyici kısmi tanım içinde promosyon düşünmez `sampleModule`. Sonuç olarak, iki ayrı ve farklı sınıflar derlemek çalışır, hem adlandırılmış `sampleClass` ancak farklı nitelik yolları.  
+ In the preceding example, the developer might expect the compiler to merge the two partial definitions of `sampleClass`. However, the compiler does not consider promotion for the partial definition inside `sampleModule`. As a result, it attempts to compile two separate and distinct classes, both named `sampleClass` but with different qualification paths.  
   
- Yalnızca tam yollarının aynı olduğunda derleyici kısmi tanımları birleştirir.  
+ The compiler merges partial definitions only when their fully qualified paths are identical.  
   
-## <a name="recommendations"></a>Öneriler  
- Aşağıdaki öneriler, iyi bir programlama uygulama temsil eder.  
+## <a name="recommendations"></a>Recommendations  
+ The following recommendations represent good programming practice.  
   
-- **Benzersiz adları.** Programlama öğelerine adlandırma üzerinde tam denetime sahiptir, bu her zaman her yerde benzersiz adlar kullanacak şekilde iyi bir fikirdir. Aynı adlara ek onay gerektirir ve kodunuzun okunmasını zorlaştırabilir. Bunlar ayrıca ince hatalar ve beklenmeyen sonuçlara yol açabilir.  
+- **Unique Names.** When you have full control over the naming of programming elements, it is always a good idea to use unique names everywhere. Identical names require extra qualification and can make your code harder to read. They can also lead to subtle errors and unexpected results.  
   
-- **Tam nitelenmiş.** Modüller ve diğer öğeleri aynı ad ile çalışırken, güvenli bir yaklaşım her zaman tam nitelenmiş için tüm programlama öğeleri kullanmaktır. Tür promosyonu modülü üyesi engellenmediğinden ve tam olarak bu üyede nitelendirmeyin, yanlışlıkla farklı bir programlama öğesine erişebilir.  
+- **Full Qualification.** When you are working with modules and other elements in the same namespace, the safest approach is to always use full qualification for all programming elements. If type promotion is defeated for a module member and you do not fully qualify that member, you could inadvertently access a different programming element.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Module Deyimi](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Namespace Deyimi](../../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)
-- [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Nasıl yapılır: Bir değişkenin kapsamını denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Nasıl yapılır: Bir Değişkenin Kapsamını Denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

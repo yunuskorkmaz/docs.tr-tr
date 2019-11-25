@@ -1,5 +1,5 @@
 ---
-title: 'Nesne Ömrü: Nesneler oluşturma ve yok etme (Visual Basic)'
+title: 'Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Constructor
@@ -22,82 +22,82 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 932f56a9a277360b11c551aaa1faf819f8e07fe6
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 8d9647fa490077f9f6ef82f30eccc4d5ee271985
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796679"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346102"
 ---
-# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Nesne Ömrü: Nesneler oluşturma ve yok etme (Visual Basic)
+# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme (Visual Basic)
 
-Bir sınıf örneği, bir nesnesi, `New` anahtar sözcüğü kullanılarak oluşturulur. Başlatma görevleri genellikle yeni nesnelerde kullanılmadan önce gerçekleştirilmelidir. Ortak başlatma görevleri, dosyaları açmayı, veritabanlarına bağlanmayı ve kayıt defteri anahtarlarının değerlerini okumayı içerir. Visual Basic, *oluşturucular* (başlatma üzerinde denetime izin veren özel yöntemler) adlı yordamları kullanarak yeni nesnelerin başlatılmasını denetler.
+An instance of a class, an object, is created by using the `New` keyword. Initialization tasks often must be performed on new objects before they are used. Common initialization tasks include opening files, connecting to databases, and reading values of registry keys. Visual Basic controls the initialization of new objects using procedures called *constructors* (special methods that allow control over initialization).
 
-Bir nesne kapsamdan ayrıldığında, ortak dil çalışma zamanı (CLR) tarafından serbest bırakılır. Visual Basic, yok *ediciler*adlı yordamları kullanarak sistem kaynakları sürümünü denetler. Birlikte, oluşturucular ve Yıkıcılar sağlam ve öngörülebilir sınıf kitaplıklarının oluşturulmasını destekler.
+After an object leaves scope, it is released by the common language runtime (CLR). Visual Basic controls the release of system resources using procedures called *destructors*. Together, constructors and destructors support the creation of robust and predictable class libraries.
 
-## <a name="using-constructors-and-destructors"></a>Oluşturucular ve yıkıcıları kullanma
+## <a name="using-constructors-and-destructors"></a>Using Constructors and Destructors
 
-Oluşturucular ve Yıkıcılar nesnelerin oluşturulmasını ve yok edilmesini denetler. Visual Basic `Sub New` ve `Sub Finalize` , nesneleribaşlatma`Class_Terminate` ve yok etme ' daki ve yordamları, Visual Basic 6,0 ve önceki sürümlerde kullanılan veyöntemlerinideğiştirir.`Class_Initialize`
+Constructors and destructors control the creation and destruction of objects. The `Sub New` and `Sub Finalize` procedures in Visual Basic initialize and destroy objects; they replace the `Class_Initialize` and `Class_Terminate` methods used in Visual Basic 6.0 and earlier versions.
 
-### <a name="sub-new"></a>Yeni Sub
+### <a name="sub-new"></a>Sub New
 
-Oluşturucu `Sub New` , bir sınıf oluşturulduğunda yalnızca bir kez çalıştırılabilir. Aynı sınıftan ya da türetilmiş bir sınıftan başka bir oluşturucunun kod ilk satırında dışında, açıkça çağrılamaz. Ayrıca, `Sub New` yöntemi içindeki kod her zaman bir sınıftaki diğer koddan önce çalışır. Bir sınıf için açıkça `Sub New` bir `Sub New` yordam tanımlamadıysanız Visual Basic, çalışma zamanında örtük olarak bir Oluşturucu oluşturur.
+The `Sub New` constructor can run only once when a class is created. It cannot be called explicitly anywhere other than in the first line of code of another constructor from either the same class or from a derived class. Furthermore, the code in the `Sub New` method always runs before any other code in a class. Visual Basic implicitly creates a `Sub New` constructor at run time if you do not explicitly define a `Sub New` procedure for a class.
 
-Bir sınıf için Oluşturucu oluşturmak için, sınıf tanımında herhangi bir yerde `Sub New` adlı bir yordam oluşturun. Parametreli bir Oluşturucu oluşturmak için, aşağıdaki kodda olduğu gibi, diğer herhangi bir yordam `Sub New` için bağımsız değişkenler belirttiğinizde olduğu gibi, bağımsız değişkenlerin adlarını ve veri türlerini belirtin:
+To create a constructor for a class, create a procedure named `Sub New` anywhere in the class definition. To create a parameterized constructor, specify the names and data types of arguments to `Sub New` just as you would specify arguments for any other procedure, as in the following code:
 
 [!code-vb[VbVbalrOOP#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#42)]
 
-Oluşturucular, aşağıdaki kodda olduğu gibi sıklıkla aşırı yüklenmiştir:
+Constructors are frequently overloaded, as in the following code:
 
 [!code-vb[VbVbalrOOP#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#116)]
 
-Başka bir sınıftan türetilmiş bir sınıf tanımladığınızda, temel sınıfın hiçbir parametre alan erişilebilir bir Oluşturucusu yoksa, oluşturucunun ilk satırı temel sınıfın oluşturucusuna bir çağrı olmalıdır. Yukarıdaki oluşturucuyu içeren temel sınıfa yapılan bir çağrı (örneğin, `MyBase.New(s)`). Aksi takdirde `MyBase.New` , isteğe bağlıdır ve Visual Basic çalışma zamanı onu örtülü olarak çağırır.
+When you define a class derived from another class, the first line of a constructor must be a call to the constructor of the base class, unless the base class has an accessible constructor that takes no parameters. A call to the base class that contains the above constructor, for example, would be `MyBase.New(s)`. Otherwise, `MyBase.New` is optional, and the Visual Basic runtime calls it implicitly.
 
-Üst nesnenin oluşturucusunu çağırmak için kodu yazdıktan sonra, `Sub New` yordama ek başlatma kodu ekleyebilirsiniz. `Sub New`Parametreli bir Oluşturucu olarak çağrıldığında bağımsız değişkenleri kabul edebilir. Bu parametreler, Oluşturucu çağıran yordamdan geçirilir, örneğin, `Dim AnObject As New ThisClass(X)`.
+After you write the code to call the parent object's constructor, you can add any additional initialization code to the `Sub New` procedure. `Sub New` can accept arguments when called as a parameterized constructor. These parameters are passed from the procedure calling the constructor, for example, `Dim AnObject As New ThisClass(X)`.
 
 ### <a name="sub-finalize"></a>Sub Finalize
 
-Nesneleri serbest bırakmadan önce clr, bir `Finalize` `Sub Finalize` yordamı tanımlayan nesneler için yöntemini otomatik olarak çağırır. `Finalize` Yöntemi, dosyaları kapatmak ve durum bilgilerini kaydetmek için kod gibi bir nesne yok etmeden önce yürütülmesi gereken kodu içerebilir. Yürütmeye `Sub Finalize`yönelik hafif bir performans cezası var, bu nedenle yalnızca nesneleri açıkça `Sub Finalize` serbest bırakmanız gerektiğinde bir yöntemi tanımlamanız gerekir.
+Before releasing objects, the CLR automatically calls the `Finalize` method for objects that define a `Sub Finalize` procedure. The `Finalize` method can contain code that needs to execute just before an object is destroyed, such as code for closing files and saving state information. There is a slight performance penalty for executing `Sub Finalize`, so you should define a `Sub Finalize` method only when you need to release objects explicitly.
 
 > [!NOTE]
-> CLR içindeki çöp toplayıcı *yönetilmeyen nesneleri*, işletim sisteminin doğrudan ÇALıŞTıRDıĞı nesneleri clr ortamının dışında vermez (ve kullanamaz). Bunun nedeni, farklı yönetilmeyen nesnelerin farklı yollarla atılmalıdır. Bu bilgiler, yönetilmeyen nesneyle doğrudan ilişkili değildir; nesnenin belgelerinde bulunması gerekir. Yönetilmeyen nesneler kullanan bir sınıf, kendi `Finalize` metodunda onları atmalıdır.
+> The garbage collector in the CLR does not (and cannot) dispose of *unmanaged objects*, objects that the operating system executes directly, outside the CLR environment. This is because different unmanaged objects must be disposed of in different ways. That information is not directly associated with the unmanaged object; it must be found in the documentation for the object. A class that uses unmanaged objects must dispose of them in its `Finalize` method.
 
-`Finalize` Yıkıcı, yalnızca ait olduğu sınıftan veya türetilmiş sınıflardan çağrılabilen, korunan bir yöntemdir. Bir nesne yok `Finalize` edildiğinde sistem otomatik olarak çağrılır, bu nedenle türetilmiş sınıfın `Finalize` uygulamasının dışından açık `Finalize` bir şekilde çağırmamalıdır.
+The `Finalize` destructor is a protected method that can be called only from the class it belongs to, or from derived classes. The system calls `Finalize` automatically when an object is destroyed, so you should not explicitly call `Finalize` from outside of a derived class's `Finalize` implementation.
 
-Bir nesne hiçbir şey olarak ayarlandığında çalıştırılan bir şekilde, genellikle bir nesnenin kapsam kaybettiğinde ve Visual Basic `Finalize` yıkıcıyı çağırdığında bir gecikme vardır. `Class_Terminate` Visual Basic .net, kaynakları hemen serbest bırakmak için herhangi bir <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>zamanda açıkça çağrılabilecek ikinci bir yıkıcı türü sağlar.
+Unlike `Class_Terminate`, which executes as soon as an object is set to nothing, there is usually a delay between when an object loses scope and when Visual Basic calls the `Finalize` destructor. Visual Basic .NET allows for a second kind of destructor, <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>, which can be explicitly called at any time to immediately release resources.
 
 > [!NOTE]
-> `Finalize` Yıkıcı, uygulama tarafından işlenemediği ve uygulamanın sonlandırılmasına neden olabileceği için özel durumlar oluşturmaz.
+> A `Finalize` destructor should not throw exceptions, because they cannot be handled by the application and can cause the application to terminate.
 
-### <a name="how-new-and-finalize-methods-work-in-a-class-hierarchy"></a>Yeni ve sonlandırma yöntemlerinin bir sınıf hiyerarşisinde çalışması
+### <a name="how-new-and-finalize-methods-work-in-a-class-hierarchy"></a>How New and Finalize Methods Work in a Class Hierarchy
 
-Bir sınıf örneği oluşturulduğunda, ortak dil çalışma zamanı (CLR), bu nesnede varsa adlı `New`bir yordamı yürütmeye çalışır. `New`, bir nesne içindeki diğer herhangi bir `constructor` kod yürütülmeden önce yeni nesneleri başlatmak için kullanılan adlı bir yordam türüdür. Bir `New` Oluşturucu, dosyaları açmak, veritabanlarına bağlanmak, değişkenleri başlatmak ve bir nesne kullanılmadan önce gerçekleştirilmesi gereken diğer görevlerden yararlanmak için kullanılabilir.
+Whenever an instance of a class is created, the common language runtime (CLR) attempts to execute a procedure named `New`, if it exists in that object. `New` is a type of procedure called a `constructor` that is used to initialize new objects before any other code in an object executes. A `New` constructor can be used to open files, connect to databases, initialize variables, and take care of any other tasks that need to be done before an object can be used.
 
-Türetilmiş bir sınıfın bir örneği oluşturulduğunda, `Sub New` önce temel sınıfın Oluşturucusu yürütülür ve ardından türetilmiş sınıflardaki oluşturucular tarafından yürütülür. Bu durum, bir `Sub New` oluşturucudaki ilk kod satırı, sınıf hiyerarşisinde kendisinin hemen üzerinde bulunan sınıfının oluşturucusunu çağırmak için sözdizimini `MyBase.New()`kullandığından oluşur. Daha `Sub New` sonra Oluşturucu, temel sınıfa yönelik oluşturucuya ulaşılana kadar sınıf hiyerarşisindeki her sınıf için çağrılır. Bu noktada, temel sınıf için oluşturucudaki kod yürütülür ve ardından tüm türetilmiş sınıflarda bulunan kod ve en son türetilen sınıflardaki kod son olarak yürütülür.
+When an instance of a derived class is created, the `Sub New` constructor of the base class executes first, followed by constructors in derived classes. This happens because the first line of code in a `Sub New` constructor uses the syntax `MyBase.New()`to call the constructor of the class immediately above itself in the class hierarchy. The `Sub New` constructor is then called for each class in the class hierarchy until the constructor for the base class is reached. At that point, the code in the constructor for the base class executes, followed by the code in each constructor in all derived classes and the code in the most derived classes is executed last.
 
-![Sınıf hiyerarşisi oluşturucularını ve devralmayı gösteren ekran görüntüsü.](./media/object-lifetime-how-objects-are-created-and-destroyed/subnew-constructor-inheritance.gif)
+![Screenshot showing class hierarchy constructors and inheritance.](./media/object-lifetime-how-objects-are-created-and-destroyed/subnew-constructor-inheritance.gif)
 
-Bir nesne artık gerekli olmadığında, CLR bellekten boşaltmadan önce bu <xref:System.Object.Finalize%2A> nesnenin yöntemini çağırır. Yöntemi, durum bilgilerini kaydetme `destructor` , veritabanlarına yönelik dosya ve veritabanına bağlantı kapatma gibi temizleme görevlerini gerçekleştirdiğinden ve nesneyi serbest bırakmadan önce gerçekleştirilmesi gereken diğer görevlere yönelik olarak adlandırılır. <xref:System.Object.Finalize%2A>
+When an object is no longer needed, the CLR calls the <xref:System.Object.Finalize%2A> method for that object before freeing its memory. The <xref:System.Object.Finalize%2A> method is called a `destructor` because it performs cleanup tasks, such as saving state information, closing files and connections to databases, and other tasks that must be done before releasing the object.
 
-![Finalize yöntemi yıkıcısını gösteren ekran görüntüsü.](./media/object-lifetime-how-objects-are-created-and-destroyed/finalize-method-destructor.gif)
+![Screenshot showing the Finalize method destructor.](./media/object-lifetime-how-objects-are-created-and-destroyed/finalize-method-destructor.gif)
 
-## <a name="idisposable-interface"></a>IDisposable arabirimi
+## <a name="idisposable-interface"></a>IDisposable Interface
 
-Sınıf örnekleri genellikle Windows işleyicileri ve veritabanı bağlantıları gibi CLR tarafından yönetilmeyen kaynakları denetler. Bu kaynaklar, nesne çöp toplayıcı tarafından yok `Finalize` edildiğinde yayımlanabilmeleri için sınıfının yönteminde atılmalıdır. Ancak çöp toplayıcı yalnızca CLR daha fazla boş bellek gerektirdiğinde nesneleri yok eder. Bu, nesnenin kapsam dışına çıkana kadar uzun sürebileceği anlamına gelir.
+Class instances often control resources not managed by the CLR, such as Windows handles and database connections. These resources must be disposed of in the `Finalize` method of the class, so that they will be released when the object is destroyed by the garbage collector. However, the garbage collector destroys objects only when the CLR requires more free memory. This means that the resources may not be released until long after the object goes out of scope.
 
-Atık toplamayı tamamlamak için sınıflarınız, <xref:System.IDisposable> arabirimi uygularsa sistem kaynaklarını etkin bir şekilde yönetmeye yönelik bir mekanizma sağlayabilir. <xref:System.IDisposable>, istemcileri bir nesne <xref:System.IDisposable.Dispose%2A>kullanmayı tamamlarsa çağrı gereken tek bir yöntemine sahiptir. Yöntemi, <xref:System.IDisposable.Dispose%2A> kaynakları hemen serbest bırakmak ve dosya ve veritabanı bağlantıları kapatma gibi görevleri gerçekleştirmek için kullanabilirsiniz. Yok edicinin aksine, yöntemi otomatik olarak çağrılmaz. <xref:System.IDisposable.Dispose%2A> `Finalize` Bir sınıfın istemcileri, kaynakları hemen serbest <xref:System.IDisposable.Dispose%2A> bırakmak istediğinizde açıkça çağırmalıdır.
+To supplement garbage collection, your classes can provide a mechanism to actively manage system resources if they implement the <xref:System.IDisposable> interface. <xref:System.IDisposable> has one method, <xref:System.IDisposable.Dispose%2A>, which clients should call when they finish using an object. You can use the <xref:System.IDisposable.Dispose%2A> method to immediately release resources and perform tasks such as closing files and database connections. Unlike the `Finalize` destructor, the <xref:System.IDisposable.Dispose%2A> method is not called automatically. Clients of a class must explicitly call <xref:System.IDisposable.Dispose%2A> when you want to immediately release resources.
 
-### <a name="implementing-idisposable"></a>IDisposable uygulama
+### <a name="implementing-idisposable"></a>Implementing IDisposable
 
-<xref:System.IDisposable> Arabirimi uygulayan bir sınıf şu kod bölümlerini içermelidir:
+A class that implements the <xref:System.IDisposable> interface should include these sections of code:
 
-- Nesnenin atılmış olup olmadığını izlemek için bir alan:
+- A field for keeping track of whether the object has been disposed:
 
   ```vb
   Protected disposed As Boolean = False
   ```
 
-- <xref:System.IDisposable.Dispose%2A> Sınıfının kaynaklarını serbest bırakır. Bu yöntem, <xref:System.IDisposable.Dispose%2A> taban sınıfının ve `Finalize` yöntemleri tarafından çağrılmalıdır:
+- An overload of the <xref:System.IDisposable.Dispose%2A> that frees the class's resources. This method should be called by the <xref:System.IDisposable.Dispose%2A> and `Finalize` methods of the base class:
 
   ```vb
   Protected Overridable Sub Dispose(ByVal disposing As Boolean)
@@ -111,7 +111,7 @@ Atık toplamayı tamamlamak için sınıflarınız, <xref:System.IDisposable> ar
   End Sub
   ```
 
-- Yalnızca aşağıdaki kodu <xref:System.IDisposable.Dispose%2A> içeren bir uygulamasıdır:
+- An implementation of <xref:System.IDisposable.Dispose%2A> that contains only the following code:
 
   ```vb
   Public Sub Dispose() Implements IDisposable.Dispose
@@ -120,7 +120,7 @@ Atık toplamayı tamamlamak için sınıflarınız, <xref:System.IDisposable> ar
   End Sub
   ```
 
-- Yalnızca aşağıdaki kodu içeren `Finalize` yöntemi geçersiz kılma:
+- An override of the `Finalize` method that contains only the following code:
 
   ```vb
   Protected Overrides Sub Finalize()
@@ -129,9 +129,9 @@ Atık toplamayı tamamlamak için sınıflarınız, <xref:System.IDisposable> ar
   End Sub
   ```
 
-### <a name="deriving-from-a-class-that-implements-idisposable"></a>IDisposable uygulayan bir sınıftan türetme
+### <a name="deriving-from-a-class-that-implements-idisposable"></a>Deriving from a Class that Implements IDisposable
 
-<xref:System.IDisposable> Arabirimi uygulayan bir taban sınıftan türetilen bir sınıf, atılmalıdır ek kaynaklar kullanmadığı takdirde hiçbir temel yöntemi geçersiz kılmalıdır. Bu durumda, türetilmiş sınıf türetilmiş sınıfın kaynaklarını atmak için temel sınıfın `Dispose(disposing)` yöntemini geçersiz kılmalıdır. Bu geçersiz kılma, temel sınıfın `Dispose(disposing)` yöntemini çağırmalıdır.
+A class that derives from a base class that implements the <xref:System.IDisposable> interface does not need to override any of the base methods unless it uses additional resources that need to be disposed. In that situation, the derived class should override the base class's `Dispose(disposing)` method to dispose of the derived class's resources. This override must call the base class's `Dispose(disposing)` method.
 
 ```vb
 Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -145,20 +145,20 @@ Protected Overrides Sub Dispose(ByVal disposing As Boolean)
 End Sub
 ```
 
-Türetilmiş bir sınıf temel sınıfın <xref:System.IDisposable.Dispose%2A> ve `Finalize` yöntemlerinin üzerine içermemelidir. Bu yöntemler türetilmiş sınıfın bir örneğinden çağrıldığında, taban sınıfın bu yöntemlerin uygulanması, türetilmiş sınıfın `Dispose(disposing)` yönteminin geçersiz kılmasını çağırır.
+A derived class should not override the base class's <xref:System.IDisposable.Dispose%2A> and `Finalize` methods. When those methods are called from an instance of the derived class, the base class's implementation of those methods call the derived class's override of the `Dispose(disposing)` method.
 
-## <a name="garbage-collection-and-the-finalize-destructor"></a>Çöp toplama ve sonlandırma yıkıcısı
+## <a name="garbage-collection-and-the-finalize-destructor"></a>Garbage Collection and the Finalize Destructor
 
-.NET Framework, kullanılmayan kaynakları düzenli aralıklarla serbest bırakmak için *başvuru izleme atık toplama* sistemini kullanır. Visual Basic 6,0 ve önceki sürümler, kaynakları yönetmek için *başvuru sayımı* adlı farklı bir sistem kullandı. Her iki sistem de aynı işlevi otomatik olarak gerçekleştirse de, bazı önemli farklılıklar vardır.
+The .NET Framework uses the *reference-tracing garbage collection* system to periodically release unused resources. Visual Basic 6.0 and earlier versions used a different system called *reference counting* to manage resources. Although both systems perform the same function automatically, there are a few important differences.
 
-Sistem bu nesne nesnelerinin artık gerekli olmadığını belirlediğinde CLR nesneleri düzenli olarak yok eder. Sistem kaynakları kısa tedarik edildiğinde nesneler daha hızlı serbest bırakılır ve aksi takdirde daha az sıklıkta yayımlanır. Bir nesne kapsamı kaybettiğinde ve CLR yayımlandığında, Visual Basic 6,0 ve önceki sürümlerde bulunan nesnelerden farklı olarak, nesnenin yok edileceği tam olarak belirleyemeyeceğiniz anlamına gelir. Böyle bir durumda, nesneler *belirleyici olmayan bir ömrüne*sahip olarak kabul edilir. Çoğu durumda, belirleyici olmayan ömür, bir nesne kapsamı kaybettiğinde, `Finalize` yıkıcının hemen yürütülmeyeceğini hatırlayabileceğiniz sürece uygulamaları nasıl yazacağınız değişmez.
+The CLR periodically destroys objects when the system determines that such objects are no longer needed. Objects are released more quickly when system resources are in short supply, and less frequently otherwise. The delay between when an object loses scope and when the CLR releases it means that, unlike with objects in Visual Basic 6.0 and earlier versions, you cannot determine exactly when the object will be destroyed. In such a situation, objects are said to have *non-deterministic lifetime*. In most cases, non-deterministic lifetime does not change how you write applications, as long as you remember that the `Finalize` destructor may not immediately execute when an object loses scope.
 
-Çöp toplama sistemleri arasındaki başka bir farklılık, ' nin `Nothing`kullanımını içerir. Visual Basic 6,0 ve önceki sürümlerde başvuru saymadan yararlanmak için, programcılar bazen nesne değişkenlerine, `Nothing` bu değişkenlerin tuttuğu başvuruları serbest bırakmak için atanır. Değişken nesneye en son başvuruyu içeriyorsa, nesnenin kaynakları hemen serbest bırakılır. Visual Basic sonraki sürümlerinde, bu yordamın hala değerli olduğu durumlar olabilir, ancak bunun gerçekleştirilmesi hiçbir zaman başvurulan nesnenin kaynaklarını hemen serbest bırakmaya neden olmaz. Kaynakları hemen serbest bırakmak için, varsa nesnenin <xref:System.IDisposable.Dispose%2A> yöntemini kullanın. ' A bir değişken `Nothing` ayarlamanız gereken tek zaman ömrü, çöp toplayıcının yalnız bırakılmış nesneleri algılamak için aldığı zamana göreli bir süredir.
+Another difference between the garbage-collection systems involves the use of `Nothing`. To take advantage of reference counting in Visual Basic 6.0 and earlier versions, programmers sometimes assigned `Nothing` to object variables to release the references those variables held. If the variable held the last reference to the object, the object's resources were released immediately. In later versions of Visual Basic, while there may be cases in which this procedure is still valuable, performing it never causes the referenced object to release its resources immediately. To release resources immediately, use the object's <xref:System.IDisposable.Dispose%2A> method, if available. The only time you should set a variable to `Nothing` is when its lifetime is long relative to the time the garbage collector takes to detect orphaned objects.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IDisposable.Dispose%2A>
-- [Bileşenlerin başlatılması ve sonlandırılması](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
+- [Initialization and Termination of Components](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
 - [New İşleci](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [Yönetilmeyen Kaynakları Temizleme](../../../../standard/garbage-collection/unmanaged.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)

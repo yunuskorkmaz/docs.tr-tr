@@ -1,31 +1,31 @@
 ---
-title: Visual Basic'de XML
-description: XML ve LINQ, XML özellikleri, Visual Basic kodu için kullanmayı öğrenin.
+title: XML
+description: Learn how to use XML and LINQ to XML features in your Visual Basic code.
 ms.date: 10/20/2017
 helpviewer_keywords:
 - LINQ to XML [Visual Basic]
 ms.assetid: 954b6e40-1246-4185-a018-4061724fcae9
-ms.openlocfilehash: 6ae69a54a9aa4585a0aaed95c80bfd12ce473953
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bcc6a91c8c20d7e1277000ed76fd59e2e8ba7ee
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780360"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330799"
 ---
 # <a name="xml-in-visual-basic"></a>Visual Basic'de XML
 
-Visual Basic ile etkileşim kurmak bağlayabileceğinizi tümleşik dil desteği sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+Visual Basic provides integrated language support that enables it to interact with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>Bu bölümde  
 
- Bu bölümdeki konular kullanarak tanıtmak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Visual Basic ile.  
+ The topics in this section introduce using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] with Visual Basic.  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[LINQ to XML Visual Basic'de genel bakış](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|Visual Basic nasıl desteklediğini açıklar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Visual Basic'de XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)|XML değişmez değer nesneleri kullanarak oluşturmayı açıklar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Visual Basic'de XML düzenleme](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)|Visual Basic kullanarak XML yüklenemedi ve açıklar.|  
-|[Visual Basic'de XML'e erişme](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|XML eksen özelliklerini açıklar ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML öğeleri ve özniteliklerinin erişmek için yöntemleri.|  
+|[Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|Describes how Visual Basic supports [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)|Describes how to create XML literal objects by using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Manipulating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)|Describes how to load and parse XML by using Visual Basic.|  
+|[Accessing XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|Describes the XML axis properties and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] methods for accessing XML elements and attributes.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

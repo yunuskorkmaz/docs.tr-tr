@@ -1,5 +1,5 @@
 ---
-title: Aşırı Yükleme Çözümü (Visual Basic Başvurusu)
+title: Aşırı Yükleme Çözümü
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -10,53 +10,53 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e69136b1e3015055cad9852bf04151f57558b88
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792032"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352641"
 ---
 # <a name="overload-resolution-visual-basic"></a>Aşırı Yükleme Çözümü (Visual Basic Başvurusu)
-Visual Basic Derleyicisi aşırı yüklenmiş sürümlerinde tanımlanan bir yordam çağrısı karşılaştığında derleyici çağırmak için aşırı yüklemeleri, karar vermeniz gerekir. Bunu aşağıdaki adımları uygulayarak yapar:  
+When the Visual Basic compiler encounters a call to a procedure that is defined in several overloaded versions, the compiler must decide which of the overloads to call. It does this by performing the following steps:  
   
-1. **Erişilebilirlik.** Bu, çağrıyı yapan kod bunu çağırma engelleyen erişim düzeyine sahip hiçbir aşırı yüklemeyle ortadan kaldırır.  
+1. **Erişilebilirlik.** It eliminates any overload with an access level that prevents the calling code from calling it.  
   
-2. **Parametre sayısı.** Bu, çağrıyı sağlanan daha farklı bir dizi parametre tanımlar hiçbir aşırı yüklemeyle ortadan kaldırır.  
+2. **Number of Parameters.** It eliminates any overload that defines a different number of parameters than are supplied in the call.  
   
-3. **Parametre veri türleri.** Derleyici, örnek yöntemler tercih üzerinde genişletme yöntemleri sağlar. Herhangi bir örnek yöntemi yalnızca yordam çağrısı eşleştirilecek dönüştürmeleri genişletme gerektiren bulunursa, tüm uzantı yöntemleri bırakılır ve derleyici yalnızca örnek yöntemi adayları ile devam eder. Bu tür bir örnek yöntem bulunursa, örneği ve genişletme yöntemleri ile devam eder.  
+3. **Parameter Data Types.** The compiler gives instance methods preference over extension methods. If any instance method is found that requires only widening conversions to match the procedure call, all extension methods are dropped and the compiler continues with only the instance method candidates. If no such instance method is found, it continues with both instance and extension methods.  
   
-     Bu adımda, çağırma bağımsız değişkenlerinin veri türleri için aşırı yüklemesi'içinde tanımlanan parametre türleri olarak değiştirilemez hiçbir aşırı yüklemeyle ortadan kaldırır.  
+     In this step, it eliminates any overload for which the data types of the calling arguments cannot be converted to the parameter types defined in the overload.  
   
-4. **Daraltma dönüştürmeleri.** Bu çağırma bağımsız değişken türleri için tanımlanan parametre türleri bir daraltma dönüşümü gerektirir hiçbir aşırı yüklemeyle ortadan kaldırır. Bu tür denetimi olup geçiş geçerlidir ([Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) olan `On` veya `Off`.  
+4. **Narrowing Conversions.** It eliminates any overload that requires a narrowing conversion from the calling argument types to the defined parameter types. This is true whether the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On` or `Off`.  
   
-5. **En az genişletme.** Derleyici çiftler halinde kalan aşırı göz önünde bulundurur. Her bir çifti için tanımlanan parametrelerin veri türlerini karşılaştırır. Tüm aşırı yüklemeler türlerinde diğer karşılık gelen türlerine genişletmek, derleyici ikinci ortadan kaldırır. Diğer bir deyişle, en az genişletme miktarını gerektiren aşırı korur.  
+5. **Least Widening.** The compiler considers the remaining overloads in pairs. For each pair, it compares the data types of the defined parameters. If the types in one of the overloads all widen to the corresponding types in the other, the compiler eliminates the latter. That is, it retains the overload that requires the least amount of widening.  
   
-6. **Tek aday.** Aşırı yüklemeler tek kadar çiftler halinde aşırı kalır ve aşırı yükleyen çağrısı çözümler considering devam eder. Derleyici, tek bir aday için aşırı azaltılamaz, bir hata oluşturur.  
+6. **Single Candidate.** It continues considering overloads in pairs until only one overload remains, and it resolves the call to that overload. If the compiler cannot reduce the overloads to a single candidate, it generates an error.  
   
- Aşağıdaki çizimde, bir dizi çağırmak için aşırı yüklenmiş sürümleri belirleyen işlemi gösterilmektedir.  
+ The following illustration shows the process that determines which of a set of overloaded versions to call.  
   
- ![Aşırı yükleme çözünürlüğü işlemi Akış Diyagramı](./media/overload-resolution/determine-overloaded-version.gif "aşırı yüklenmiş sürümleri arasında çözümleme")    
+ ![Flow diagram of overload resolution process](./media/overload-resolution/determine-overloaded-version.gif "Resolving among overloaded versions")    
   
- Aşağıdaki örnekte, bu aşırı yükleme çözünürlüğü işlemi gösterilmektedir.  
+ The following example illustrates this overload resolution process.  
   
  [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
  [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
- İlk çağrıda nedeniyle derleyici ilk aşırı yükleme ortadan ilk bağımsız değişken türünü (`Short`) daraltır karşılık gelen parametre türüne (`Byte`). Çünkü ikinci aşırı yükleme her bağımsız değişken türü, daha sonra üçüncü aşırı yükleme ortadan kaldırır (`Short` ve `Single`) üçüncü aşırı yükleme türüne karşılık gelen widens (`Integer` ve `Single`). İsteğe bağlı olarak derleyici arama için kullanır, böylece daha az genişletme, ikinci aşırı yükleme gerektirir.  
+ In the first call, the compiler eliminates the first overload because the type of the first argument (`Short`) narrows to the type of the corresponding parameter (`Byte`). It then eliminates the third overload because each argument type in the second overload (`Short` and `Single`) widens to the corresponding type in the third overload (`Integer` and `Single`). The second overload requires less widening, so the compiler uses it for the call.  
   
- İkinci çağrıda, derleyici aşırı daraltma göndermemeniz hiçbirini ortadan olamaz. Daha az bir bağımsız değişken türlerini genişletme ile ikinci aşırı yükleme çağırabilirsiniz çünkü aynı nedenle, ilk çağrıda olduğu gibi üçüncü aşırı yükleme kaldırır. Ancak, derleyici ilk ve ikinci aşırı yükler arasında çözümlenemiyor. Her diğer karşılık gelen türe widens bir tanımlanan parametre türüne sahip (`Byte` için `Short`, ancak `Single` için `Double`). Derleyici, bu nedenle bir aşırı yükleme çözünürlüğü hata oluşturur.  
+ In the second call, the compiler cannot eliminate any of the overloads on the basis of narrowing. It eliminates the third overload for the same reason as in the first call, because it can call the second overload with less widening of the argument types. However, the compiler cannot resolve between the first and second overloads. Each has one defined parameter type that widens to the corresponding type in the other (`Byte` to `Short`, but `Single` to `Double`). The compiler therefore generates an overload resolution error.  
   
-## <a name="overloaded-optional-and-paramarray-arguments"></a>İsteğe bağlı olarak aşırı yüklendi ve ParamArray bağımsız değişkenleri  
- Son parametre bildirilen dışında aynı imzaya bir yordamın iki aşırı yükleme varsa [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) birinde ve [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) diğerinde derleyici bir çağrı bu yordamı çözümler aşağıdaki gibidir:  
+## <a name="overloaded-optional-and-paramarray-arguments"></a>Overloaded Optional and ParamArray Arguments  
+ If two overloads of a procedure have identical signatures except that the last parameter is declared [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in one and [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in the other, the compiler resolves a call to that procedure as follows:  
   
-|Son bağımsız değişken olarak çağrı yaparsa|Son bağımsız değişken olarak bildirme aşırı yükleme çağrısı derleyici çözümler|  
+|If the call supplies the last argument as|The compiler resolves the call to the overload declaring the last argument as|  
 |---|---|  
-|Herhangi bir değer (atlanmış bağımsız değişkeni)|`Optional`|  
-|Tek bir değer|`Optional`|  
-|İki veya daha fazla virgülle ayrılmış bir liste değerleri|`ParamArray`|  
-|(Boş bir dizi dahil) herhangi bir uzunlukta bir dizi|`ParamArray`|  
+|No value (argument omitted)|`Optional`|  
+|A single value|`Optional`|  
+|Two or more values in a comma-separated list|`ParamArray`|  
+|An array of any length (including an empty array)|`ParamArray`|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -64,10 +64,10 @@ Visual Basic Derleyicisi aşırı yüklenmiş sürümlerinde tanımlanan bir yor
 - [Parametre Dizileri](./parameter-arrays.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
 - [Yordam Sorunlarını Giderme](./troubleshooting-procedures.md)
-- [Nasıl yapılır: Bir yordamın birden fazla sürümünü tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Nasıl yapılır: Aşırı yüklenmiş bir yordamı çağırma](./how-to-call-an-overloaded-procedure.md)
-- [Nasıl yapılır: İsteğe bağlı parametreler isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Nasıl yapılır: Belirsiz sayıda parametre isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Nasıl yapılır: Bir Yordamın Birden Fazla Sürümünü Tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Nasıl yapılır: Aşırı Yüklenmiş Bir Yordamı Çağırma](./how-to-call-an-overloaded-procedure.md)
+- [Nasıl yapılır: İsteğe Bağlı Parametreler İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](./considerations-in-overloading-procedures.md)
 - [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Genişletme Yöntemleri](./extension-methods.md)

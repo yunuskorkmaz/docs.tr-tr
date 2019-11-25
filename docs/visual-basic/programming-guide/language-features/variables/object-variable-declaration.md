@@ -1,5 +1,5 @@
 ---
-title: Nesne Değişken Bildirimi (Visual Basic)
+title: Nesne Değişken Bildirimi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - early binding [Visual Basic]
@@ -12,28 +12,28 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-ms.openlocfilehash: 9e57d49965537a45bc62b9078079389efcfb2e2c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1964e3768124dde1deeabfada9006ff5a59def0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598741"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351809"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Nesne Değişken Bildirimi (Visual Basic)
-Bir normal bir bildirim deyiminin bir nesne değişkenini bildirmek için kullanın. Veri türü için ya da belirttiğiniz `Object` (diğer bir deyişle, [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)) veya nesne olduğu oluşturulacak daha belirli bir sınıf.  
+You use a normal declaration statement to declare an object variable. For the data type, you specify either `Object` (that is, the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)) or a more specific class from which the object is to be created.  
   
- Bir değişken olarak bildirme `Object` olarak bildirme aynı <xref:System.Object?displayProperty=nameWithType>.  
+ Declaring a variable as `Object` is the same as declaring it as <xref:System.Object?displayProperty=nameWithType>.  
   
- Belirli nesne sınıfı sahip bir değişken bildirdiğinizde tüm yöntemler ve o sınıfın ve devraldığı sınıfları tarafından kullanıma sunulan özellikler erişebilirsiniz. Değişkenle bildirirseniz <xref:System.Object>, yalnızca üyelerinin erişebildiğinizi <xref:System.Object> sınıf özelliğini sürece `Option Strict Off` geç bağlamaya izin vermek için.  
+ When you declare a variable with a specific object class, it can access all the methods and properties exposed by that class and the classes from which it inherits. If you declare the variable with <xref:System.Object>, it can access only the members of the <xref:System.Object> class, unless you turn `Option Strict Off` to allow late binding.  
   
 ## <a name="declaration-syntax"></a>Bildirim Sözdizimi  
- Bir nesne değişkenini bildirmek için aşağıdaki sözdizimini kullanın:  
+ Use the following syntax to declare an object variable:  
   
 ```vb  
 Dim variablename As [New] { objectclass | Object }  
 ```  
   
- Ayrıca belirtebileceğiniz [genel](../../../../visual-basic/language-reference/modifiers/public.md), [korumalı](../../../../visual-basic/language-reference/modifiers/protected.md), [arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, [özel](../../../../visual-basic/language-reference/modifiers/private.md), [paylaşılan](../../../../visual-basic/language-reference/modifiers/shared.md), veya [statik](../../../../visual-basic/language-reference/modifiers/static.md) bildirimi. Aşağıdaki örnek bildirimleri geçerlidir:  
+ You can also specify [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, [Private](../../../../visual-basic/language-reference/modifiers/private.md), [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), or [Static](../../../../visual-basic/language-reference/modifiers/static.md) in the declaration. The following example declarations are valid:  
   
 ```vb  
 Private objA As Object  
@@ -41,30 +41,30 @@ Static objB As System.Windows.Forms.Label
 Dim objC As System.OperatingSystem  
 ```  
   
-## <a name="late-binding-and-early-binding"></a>Geç bağlama ve erken bağlama  
- Bazen belirli sınıf kodunuzu çalışana kadar bilinmiyor. Bu durumda, nesne değişkeni ile bildirilmelidir `Object` veri türü. Bu genel bir tür nesneyi başvuru oluşturur ve belirli bir sınıf, çalışma zamanında atanır. Bu adlandırılır *geç bağlama*. Geç bağlama ek yürütme süresi gerektirir. Ayrıca, kodunuzun en son kendisine atadığınız sınıfının özellikleri ve yöntemleri için sınırlar. Kodunuzu farklı bir sınıfın üyeleri erişmeye çalışırsa, bu çalışma zamanı hatalarına neden olabilir.  
+## <a name="late-binding-and-early-binding"></a>Late Binding and Early Binding  
+ Sometimes the specific class is unknown until your code runs. In this case, you must declare the object variable with the `Object` data type. This creates a general reference to any type of object, and the specific class is assigned at run time. This is called *late binding*. Late binding requires additional execution time. It also limits your code to the methods and properties of the class you have most recently assigned to it. This can cause run-time errors if your code attempts to access members of a different class.  
   
- Derleme zamanında belirli sınıf bildiğinizde, bu sınıfı olmasını nesne değişkeni bildirmelidir. Bu adlandırılır *erken bağlama*. Erken bağlama performansını artırır ve tüm yöntemler ve Özellikler belirli bir sınıfın kod erişiminizi güvence altına alır. Önceki örnek bildirimlerinde, değişken `objA` yalnızca sınıfın nesneleri kullanan <xref:System.Windows.Forms.Label?displayProperty=nameWithType>, belirtmeniz gerekir `As System.Windows.Forms.Label` kendi bildirimi.  
+ When you know the specific class at compile time, you should declare the object variable to be of that class. This is called *early binding*. Early binding improves performance and guarantees your code access to all the methods and properties of the specific class. In the preceding example declarations, if variable `objA` uses only objects of class <xref:System.Windows.Forms.Label?displayProperty=nameWithType>, you should specify `As System.Windows.Forms.Label` in its declaration.  
   
-### <a name="advantages-of-early-binding"></a>Erken bağlama avantajları  
- Belirli bir sınıf olarak bir nesne değişkeni bildirme çeşitli avantajlar sağlar:  
+### <a name="advantages-of-early-binding"></a>Advantages of Early Binding  
+ Declaring an object variable as a specific class gives you several advantages:  
   
-- Otomatik tür denetleme  
+- Automatic type checking  
   
-- Belirli bir sınıfın tüm üyeleri için erişim garantisi  
+- Guaranteed access to all members of the specific class  
   
-- Kod Düzenleyicisi'nde Microsoft IntelliSense desteği  
+- Microsoft IntelliSense support in the Code Editor  
   
-- Geliştirilmiş kod okunabilirliğini  
+- Improved readability of your code  
   
-- Kodunuzu daha az hataları  
+- Fewer errors in your code  
   
-- Hataları sırasında yakalanan derleme zamanı yerine çalışma zamanı  
+- Errors caught at compile time rather than run time  
   
-- Daha hızlı kod yürütme  
+- Faster code execution  
   
-## <a name="access-to-object-variable-members"></a>Nesne değişkeni üye erişimi  
- Zaman `Option Strict` etkinleştirilmişse `On`, yalnızca yöntemleri ve özellikleri ile kaydedilebilmeniz bu sınıfın bir nesne değişkenine erişebilir. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="access-to-object-variable-members"></a>Access to Object Variable Members  
+ When `Option Strict` is turned `On`, an object variable can access only the methods and properties of the class with which you declare it. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 ' Option statements must precede all other source file lines.  
@@ -84,10 +84,10 @@ Public Sub accessMembers()
 End Sub  
 ```  
   
- Bu örnekte, `p` yalnızca üyelerinin kullanabileceği <xref:System.Object> kendisi, hangi içermeyen sınıf `Left` özelliği. Öte yandan, `q` türü olarak bildirildi <xref:System.Windows.Forms.Label>, tüm yöntemleri ve özellikleri kullanabilmesi için <xref:System.Windows.Forms.Label> sınıfını <xref:System.Windows.Forms> ad alanı.  
+ In this example, `p` can use only the members of the <xref:System.Object> class itself, which do not include the `Left` property. On the other hand, `q` was declared to be of type <xref:System.Windows.Forms.Label>, so it can use all the methods and properties of the <xref:System.Windows.Forms.Label> class in the <xref:System.Windows.Forms> namespace.  
   
-## <a name="flexibility-of-object-variables"></a>Nesne değişkenleri esnekliği  
- Devralma Hiyerarşisi nesneleri ile çalışırken, nesne değişkenini bildirmek için kullanılacak hangi sınıfın vardır. Bu seçim yaparken, nesne ataması bir sınıf üyelerine erişimi karşı esnekliğini dengelemeniz gerekir. Örneğin, yol açar Devralma Hiyerarşisi düşünün <xref:System.Windows.Forms.Form?displayProperty=nameWithType> sınıfı:  
+## <a name="flexibility-of-object-variables"></a>Flexibility of Object Variables  
+ When working with objects in an inheritance hierarchy, you have a choice of which class to use for declaring your object variables. In making this choice, you must balance flexibility of object assignment against access to members of a class. For example, consider the inheritance hierarchy that leads to the <xref:System.Windows.Forms.Form?displayProperty=nameWithType> class:  
   
  <xref:System.Object>  
   
@@ -103,7 +103,7 @@ End Sub
   
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.Windows.Forms.Form>  
   
- Uygulamanızı form adlı bir sınıf tanımlar varsayalım `specialForm`, sınıfından devralan <xref:System.Windows.Forms.Form>. Özellikle çok başvuran bir nesne değişkeninin bildirebilirsiniz `specialForm`aşağıdaki örnekte gösterildiği gibi.  
+ Suppose your application defines a form class called `specialForm`, which inherits from class <xref:System.Windows.Forms.Form>. You can declare an object variable that refers specifically to `specialForm`, as the following example shows.  
   
 ```vb  
 Public Class specialForm  
@@ -113,25 +113,25 @@ End Class
 Dim nextForm As New specialForm  
 ```  
   
- Değişken bildirimi önceki örnekte sınırlar `nextForm` sınıfındaki nesneler için `specialForm`, ancak tüm yöntemleri ve özellikleri de getirir `specialForm` kullanılabilir `nextForm`, içinden tüm sınıflar gibi tüm üyelerinin yanı sıra `specialForm` devralır.  
+ The declaration in the preceding example limits the variable `nextForm` to objects of class `specialForm`, but it also makes all the methods and properties of `specialForm` available to `nextForm`, as well as all the members of all the classes from which `specialForm` inherits.  
   
- Daha genel bir nesne değişkeninin türü olmasını bildirerek yapabileceğiniz <xref:System.Windows.Forms.Form>aşağıdaki örnekte gösterildiği gibi.  
+ You can make an object variable more general by declaring it to be of type <xref:System.Windows.Forms.Form>, as the following example shows.  
   
 ```vb  
 Dim anyForm As System.Windows.Forms.Form  
 ```  
   
- Önceki örnekte bildirimi için uygulamanızda herhangi bir biçimde atamanıza olanak sağlar `anyForm`. Ancak, ancak `anyForm` sınıfın tüm üyeleri erişebilir <xref:System.Windows.Forms.Form>, herhangi bir ek yöntemleri veya özellikleri gibi özel formlar için tanımlanan kullanamazsınız `specialForm`.  
+ The declaration in the preceding example lets you assign any form in your application to `anyForm`. However, although `anyForm` can access all the members of class <xref:System.Windows.Forms.Form>, it cannot use any of the additional methods or properties defined for specific forms such as `specialForm`.  
   
- Türetilen sınıflar için bir taban sınıfın tüm üyeleri kullanılabilir, ancak ek üyeler türetilmiş bir sınıfın temel sınıf için kullanılamaz.  
+ All the members of a base class are available to derived classes, but the additional members of a derived class are unavailable to the base class.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Nesne Değişkeni Ataması](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
 - [Nesne Değişkeni Değerleri](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Nasıl yapılır: Bir nesne değişkeni bildirme ve Visual Basic'te bir nesne atama](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
-- [Nasıl yapılır: Bir nesnenin üyelerine erişim](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [How to: Declare an Object Variable and Assign an Object to It in Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [Nasıl yapılır: Bir Nesnenin Üyelerine Erişme](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
 - [New İşleci](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

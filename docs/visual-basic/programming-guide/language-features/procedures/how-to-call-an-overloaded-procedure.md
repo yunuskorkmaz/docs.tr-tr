@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) aşırı yüklenmiş bir yordamı çağırma'
+title: 'Nasıl yapılır: Aşırı Yüklenmiş Bir Yordamı Çağırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-ms.openlocfilehash: d325c09516b4ce03facedce86f17ea49480b997a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d983f5f6183c33141079ed35171f7a73f254450f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666020"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340202"
 ---
-# <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Nasıl yapılır: (Visual Basic) aşırı yüklenmiş bir yordamı çağırma
-Bir yordamı aşırı yükleme çağrısının esneklik avantajlarındandır. Çağıran kod, yordama geçirin ve ardından bunu geçirerek hangi bağımsız değişkenleri ne olursa olsun bir tek yordam adı çağırmak için gereken bilgileri elde edebilirsiniz.  
+# <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Nasıl yapılır: Aşırı Yüklenmiş Bir Yordamı Çağırma (Visual Basic)
+The advantage of overloading a procedure is in the flexibility of the call. The calling code can obtain the information it needs to pass to the procedure and then call a single procedure name, no matter what arguments it is passing.  
   
-### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>Tanımlanan birden fazla sürümü olan bir yordam çağırmak için  
+### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>To call a procedure that has more than one version defined  
   
-1. Çağıran kod içinde yordama geçirmeye hangi verileri belirler.  
+1. In the calling code, determine which data to pass to the procedure.  
   
-2. Yordam çağrısı bağımsız değişken listesinde veriyi sunmaktan normal bir şekilde yazın. Bağımsız değişken parametre listesinde yordamı için tanımlanan sürümlerinden birini eşleştiğinden emin olun.  
+2. Write the procedure call in the normal way, presenting the data in the argument list. Be sure the arguments match the parameter list in one of the versions defined for the procedure.  
   
-3. Yordam çağırmak için hangi sürümünü gerekmez. Visual Basic, bağımsız değişken listesi ile eşleşen sürüm denetim geçer.  
+3. You do not have to determine which version of the procedure to call. Visual Basic passes control to the version matching your argument list.  
   
-     Aşağıdaki örnek çağrıları `post` yordam içinde bildirilen [nasıl yapılır: Bir yordamın birden fazla sürümünü tanımlama](./how-to-define-multiple-versions-of-a-procedure.md). Müşteri Kimliği alır, olup olmadığını belirleyen bir `String` veya `Integer`ve ardından her iki durumda da aynı yordamı çağırır.  
+     The following example calls the `post` procedure declared in [How to: Define Multiple Versions of a Procedure](./how-to-define-multiple-versions-of-a-procedure.md). It obtains the customer identification, determines whether it is a `String` or an `Integer`, and then in either case calls the same procedure.  
   
      [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   
@@ -38,9 +38,9 @@ Bir yordamı aşırı yükleme çağrısının esneklik avantajlarındandır. Ç
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
 - [Yordam Sorunlarını Giderme](./troubleshooting-procedures.md)
-- [Nasıl yapılır: Bir yordamın birden fazla sürümünü tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Nasıl yapılır: İsteğe bağlı parametreler isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Nasıl yapılır: Belirsiz sayıda parametre isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Nasıl yapılır: Bir Yordamın Birden Fazla Sürümünü Tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Nasıl yapılır: İsteğe Bağlı Parametreler İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](./considerations-in-overloading-procedures.md)
 - [Aşırı Yükleme Çözümü](./overload-resolution.md)
 - [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)

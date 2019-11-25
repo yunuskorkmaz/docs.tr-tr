@@ -1,27 +1,27 @@
 ---
-title: Anonim Tür Tanımı (Visual Basic)
+title: Anonim Tür Tanımı
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: 5f6486965d9e44524420975523e10ded32a135b7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f8ac26577a7fbef865605a7ecf643fa733b2c2c0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755221"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344923"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Anonim Tür Tanımı (Visual Basic)
 
-Anonim bir türün bir örneği bildirimine yanıt olarak, derleyicinin türü için belirtilen özellikleri içeren yeni bir sınıf tanımı oluşturur.
+In response to the declaration of an instance of an anonymous type, the compiler creates a new class definition that contains the specified properties for the type.
 
-## <a name="compiler-generated-code"></a>Derleyicinin ürettiği kodu
+## <a name="compiler-generated-code"></a>Compiler-Generated Code
 
-Aşağıdaki tanımını `product`, derleyici özellikleri içeren yeni bir sınıf tanımı oluşturur `Name`, `Price`, ve `OnHand`.
+For the following definition of `product`, the compiler creates a new class definition that contains properties `Name`, `Price`, and `OnHand`.
 
 [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]
 
-Sınıf tanımı aşağıdaki gibi özellik tanımları içerir. Var olduğuna dikkat edin hiçbir `Set` anahtar özellikleri için yöntemi. Anahtar özelliklerin değerlerini salt okunurdur.
+The class definition contains property definitions similar to the following. Notice that there is no `Set` method for the key properties. The values of key properties are read-only.
 
 ```vb
 Public Class $Anonymous1
@@ -52,38 +52,38 @@ Public Class $Anonymous1
 End Class
 ```
 
-Ayrıca, parametresiz bir oluşturucu anonim tür tanımlarını içerir. Parametreler gerektiren oluşturuculara izin verilmez.
+In addition, anonymous type definitions contain a parameterless constructor. Constructors that require parameters are not permitted.
 
-Tür tanımı, bir anonim tür bildirimi en az bir anahtar özellik içeriyorsa, devralınan üç üyeleri geçersiz kılar <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, ve <xref:System.Object.ToString%2A>. Anahtar özellik, yalnızca bildirilmişse <xref:System.Object.ToString%2A> geçersiz kılınır. Geçersiz kılmalar, aşağıdaki işlevleri sağlar:
+If an anonymous type declaration contains at least one key property, the type definition overrides three members inherited from <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. If no key properties are declared, only <xref:System.Object.ToString%2A> is overridden. The overrides provide the following functionality:
 
-- `Equals` döndürür `True` iki anonim tür örnekleri aynı örneği varsa ya da aşağıdaki koşulları karşıladıkları:
+- `Equals` returns `True` if two anonymous type instances are the same instance, or if they meet the following conditions:
 
-  - Özellikleri aynı sayıda sahiptirler.
+  - They have the same number of properties.
 
-  - Özellikler aynı sırada aynı ada sahip bildirilir ve aynı tür çıkarımı yapılan. Adı karşılaştırmalar büyük küçük harfe duyarlı değildir.
+  - The properties are declared in the same order, with the same names and the same inferred types. Name comparisons are not case-sensitive.
 
-  - Özellikleri en az biri olan bir anahtar özellik ve `Key` anahtar sözcüğü, aynı özelliklerine uygulanır.
+  - At least one of the properties is a key property, and the `Key` keyword is applied to the same properties.
 
-  - Anahtar özellikler karşılık gelen her çift karşılaştırması döndürür `True`.
+  - Comparison of each corresponding pair of key properties returns `True`.
 
-    Örneğin, aşağıdaki örnekte, `Equals` döndürür `True` yalnızca `employee01` ve `employee08`. Her satır neden yeni örnek eşleşmiyor nedenini belirtir. önceki yorumun `employee01`.
+    For example, in the following examples, `Equals` returns `True` only for `employee01` and `employee08`. The comment before each line specifies the reason why the new instance does not match `employee01`.
 
     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]
 
-- `GetHashcode` uygun şekilde benzersiz bir GetHashCode algoritması sağlar. Algoritması yalnızca anahtar özellikler karma kodunu hesaplamak için kullanır.
+- `GetHashcode` provides an appropriately unique GetHashCode algorithm. The algorithm uses only the key properties to compute the hash code.
 
-- `ToString` Aşağıdaki örnekte gösterildiği gibi bitişik özellik değerleri, bir dize döndürür. Hem anahtar hem de anahtar olmayan özellikler dahil edilir.
+- `ToString` returns a string of concatenated property values, as shown in the following example. Both key and non-key properties are included.
 
   [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]
 
-Anonim bir türün açıkça adlandırılmış özellikleri ile oluşturulan bu yöntemleri çakışamaz. Diğer bir deyişle, kullanamazsınız `.Equals`, `.GetHashCode`, veya `.ToString` adlı bir özelliği için.
+Explicitly named properties of an anonymous type cannot conflict with these generated methods. That is, you cannot use `.Equals`, `.GetHashCode`, or `.ToString` to name a property.
 
-En az bir içeren anonim tür tanımlarını anahtar özellik de uygulama <xref:System.IEquatable%601?displayProperty=nameWithType> arabirimi, burada `T` anonim tür türüdür.
+Anonymous type definitions that include at least one key property also implement the <xref:System.IEquatable%601?displayProperty=nameWithType> interface, where `T` is the type of the anonymous type.
 
 > [!NOTE]
-> Anonim türde bildirimlerden, yalnızca aynı bütünleştirilmiş kodda ortaya özelliklerini aynı ada sahip ve aynı tür çıkarımı yapılan, özellikler aynı sırada bildirilir ve aynı özellikleri anahtar özellikler işaretlendi, anonim türdeki oluşturun.
+> Anonymous type declarations create the same anonymous type only if they occur in the same assembly, their properties have the same names and the same inferred types, the properties are declared in the same order, and the same properties are marked as key properties.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Nasıl yapılır: Özellik adları ve türleri anonim türde bildirimlerden çıkarma](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Nasıl yapılır: Anonim Tip Bildirimlerinden Özellik Adları ve Türlerini Çıkarma](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

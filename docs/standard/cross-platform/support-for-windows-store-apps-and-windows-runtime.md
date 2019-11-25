@@ -1,5 +1,5 @@
 ---
-title: Windows Mağazası uygulamaları ve Windows Çalışma Zamanı için .NET Framework desteği
+title: Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,68 +11,68 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2f46d21123ecfda4bd336edbbd79fabf01e002a4
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 15d6262fb5e7dfb99759f0f85c9a197157713300
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835337"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204951"
 ---
-# <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows Mağazası uygulamaları ve Windows Çalışma Zamanı için .NET Framework desteği
+# <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği
 
-.NET Framework 4,5 Windows Çalışma Zamanı bir dizi yazılım geliştirme senaryosunu destekler. Bu senaryolar üç kategoriye ayrılır:
+The .NET Framework 4.5 supports a number of software development scenarios with the Windows Runtime. Bu senaryolar üç kategoriye ayrılır:
 
-- [Veya Visual Basic C# kullanan Windows Mağazası uygulamaları için yol haritası](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))bölümünde açıklandığı gibi XAML denetimleriyle [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları geliştirme, [Windows Mağazası UYGULAMALARıNA yönelik](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)) [Nasıl TOS (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))ve .net hakkında genel bakış.
+- Developing Windows 8.x Store apps with XAML controls, as described in [Roadmap for Windows Store apps using C# or Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [How tos (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), and [.NET for Windows Store apps overview](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
-- .NET Framework ile oluşturduğunuz [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalarında kullanılmak üzere sınıf kitaplıkları geliştirme.
+- Developing class libraries to use in the Windows 8.x Store apps that you create with the .NET Framework.
 
-- ' De paketlenmiş Windows Çalışma Zamanı bileşenleri geliştirme. Windows Çalışma Zamanı destekleyen herhangi bir programlama dili tarafından kullanılabilen WinMD dosyaları. Örneğin, [ve Visual Basic ' de C# Windows çalışma zamanı bileşenleri oluşturma](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)konusuna bakın.
+- Developing Windows Runtime Components, packaged in .WinMD files, which can be used by any programming language that supports the Windows Runtime. For example, see [Creating Windows Runtime Components in C# and Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
-Bu konuda, .NET Framework üç kategori için sağladığı destek özetlenmektedir ve Windows Çalışma Zamanı bileşenlere yönelik senaryolar açıklanmaktadır. İlk bölüm, .NET Framework ve Windows Çalışma Zamanı arasındaki ilişki hakkında temel bilgileri içerir ve yardım sisteminde ve IDE 'de karşılaşabileceğiniz bazı odlıtıes 'leri açıklar. [İkinci bölümde](#WindowsRuntimeComponents) Windows çalışma zamanı bileşenleri geliştirmeye yönelik senaryolar açıklanmaktadır.
+This topic outlines the support that the .NET Framework provides for all three categories, and describes the scenarios for Windows Runtime Components. The first section includes basic information about the relationship between the .NET Framework and the Windows Runtime, and explains some oddities you might encounter in the Help system and the IDE. The [second section](#WindowsRuntimeComponents) discusses scenarios for developing Windows Runtime Components.
 
-## <a name="the-basics"></a>Temel bilgiler
+## <a name="the-basics"></a>Temeller
 
-.NET Framework, daha önce [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] sağlayarak ve Windows Çalışma Zamanı kendisini destekleyerek listelenen üç geliştirme senaryosunu destekler.
+The .NET Framework supports the three development scenarios listed earlier by providing [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], and by supporting the Windows Runtime itself.
 
-- [.NET Framework ve Windows çalışma zamanı ad alanları](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) .NET Framework sınıf kitaplıklarının kolaylaştırılmış bir görünümünü sağlar ve yalnızca [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları ve Windows çalışma zamanı bileşenleri oluşturmak için kullanabileceğiniz türleri ve üyeleri içerir.
+- [.NET Framework and Windows Runtime namespaces](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) provides a streamlined view of the .NET Framework class libraries and include only the types and members you can use to create Windows 8.x Store apps and Windows Runtime Components.
 
-  - @No__t-0 uygulaması veya Windows Çalışma Zamanı bileşeni geliştirmek için Visual Studio 'Yu (Visual Studio 2012 veya üzeri) kullandığınızda, bir başvuru derlemeleri kümesi yalnızca ilgili türleri ve üyeleri görmenizi sağlar.
+  - When you use Visual Studio (Visual Studio 2012 or later) to develop a Windows 8.x Store app or a Windows Runtime component, a set of reference assemblies ensures that you see only the relevant types and members.
 
-  - Bu kolaylaştırılmış API kümesi, .NET Framework içinde çoğaltılan özelliklerin veya yinelenen Windows Çalışma Zamanı özelliklerinin kaldırılmasına göre basitleştirilmiştir. Örneğin, koleksiyon türlerinin yalnızca genel sürümlerini içerir ve XML belge nesne modeli Windows Çalışma Zamanı XML API kümesi tarafından da ortadan kalkar.
+  - This streamlined API set is simplified further by the removal of features that are duplicated within the .NET Framework or that duplicate Windows Runtime features. For example, it contains only the generic versions of collection types, and the XML document object model is eliminated in favor of the Windows Runtime XML API set.
 
-  - Yalnızca işletim sistemi API 'sini sardığı özellikler de kaldırılır, çünkü Windows Çalışma Zamanı yönetilen koddan kolayca çağrı yapılır.
+  - Features that simply wrap the operating system API are also removed, because the Windows Runtime is easy to call from managed code.
 
-  @No__t-0 hakkında daha fazla bilgi edinmek için bkz. [Windows Mağazası uygulamalarına yönelik .NET genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). API seçim işlemi hakkında bilgi edinmek için .NET blogdaki [Metro stili uygulamalar için .net](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) başlığına bakın.
+  To read more about the [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], see the [.NET for Windows Store apps overview](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). To read about the API selection process, see the [.NET for Metro style apps](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) entry in the .NET blog.
 
-- [Windows çalışma zamanı](/uwp/api/) , [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları oluşturmaya yönelik kullanıcı arabirimi öğelerini sağlar ve işletim sistemi özelliklerine erişim sağlar. .NET Framework gibi Windows Çalışma Zamanı, C# ve Visual Basic derleyicilerinin .NET Framework sınıf kitaplıklarını kullandıkları gibi Windows çalışma zamanı kullanmasını sağlayan meta verilere sahiptir. .NET Framework, bazı farkları gizleyerek Windows Çalışma Zamanı kullanmayı kolaylaştırır:
+- The [Windows Runtime](/uwp/api/) provides the user interface elements for building Windows 8.x Store apps, and provides access to operating system features. Like the .NET Framework, the Windows Runtime has metadata that enables the C# and Visual Basic compilers to use the Windows Runtime the way they use the .NET Framework class libraries. The .NET Framework makes it easier to use the Windows Runtime by hiding some differences:
 
-  - Olay işleyicilerini ekleme ve kaldırma deseni gibi .NET Framework ve Windows Çalışma Zamanı arasındaki programlama desenleriyle ilgili bazı farklılıklar gizlidir. .NET Framework modelini kullanmanız yeterlidir.
+  - Some differences in programming patterns between the .NET Framework and the Windows Runtime, such as the pattern for adding and removing event handlers, are hidden. Sadece .NET Framework desenini kullanın.
 
-  - Yaygın olarak kullanılan türlerde bazı farklılıklar (örneğin, ilkel türler ve koleksiyonlar) gizlidir. .NET Framework türünü, bu makalenin ilerleyen kısımlarında [IDE 'de görünür olan farklılıklar](#DifferencesVisibleInIDE)bölümünde anlatıldığı gibi kullanmanız yeterlidir.
+  - Yaygın olarak kullanılan türlerdeki bazı farklılıklar (örneğin, ilkel türler ve koleksiyonlar) gizlidir. You simply use the .NET Framework type, as discussed in [Differences That Are Visible in the IDE](#DifferencesVisibleInIDE), later in this article.
 
-Çoğu zaman, Windows Çalışma Zamanı için .NET Framework desteği saydamdır. Sonraki bölümde, yönetilen kod ve Windows Çalışma Zamanı arasındaki bazı görünür farklılıklar ele alınmaktadır.
+Most of the time, .NET Framework support for the Windows Runtime is transparent. The next section discusses some of the apparent differences between managed code and the Windows Runtime.
 
 <a name="AboutReferenceDocumentation"></a>
 
-### <a name="the-net-framework-and-the-windows-runtime-reference-documentation"></a>.NET Framework ve Windows Çalışma Zamanı başvuru belgeleri
+### <a name="the-net-framework-and-the-windows-runtime-reference-documentation"></a>The .NET Framework and the Windows Runtime Reference Documentation
 
-Windows Çalışma Zamanı ve .NET Framework belge kümeleri birbirinden farklıdır. Bir tür veya üye üzerindeki Yardımı göstermek için F1 tuşuna basarsanız, uygun kümeden başvuru belgeleri görüntülenir. Ancak [Windows çalışma zamanı başvuruya](/uwp/api/) göz atadıysanız, Puzzling görünen örneklerle karşılaşabilirsiniz:
+The Windows Runtime and the .NET Framework documentation sets are separate. Eğer bir tür veya üyede Yardım'ı görüntülemek için F1'e basarsanız, uygun kümeden başvuru belgeleri görüntülenir. However, if you browse through the [Windows Runtime reference](/uwp/api/) you might encounter examples that seem puzzling:
 
-- @No__t-0 arabirimi gibi konularda Visual Basic veya C#için bildirim söz dizimi yoktur. Bunun yerine, söz dizimi bölümünün üzerinde bir Note (Bu durumda, ".NET: Bu arabirim System. Collections. Generic. IEnumerable @ no__t-0T >") üzerinde görünür. Bunun nedeni, .NET Framework ve Windows Çalışma Zamanı farklı arabirimlere benzer işlevler sağlamaktır. Ayrıca, davranış farklılıkları vardır: `IIterable`, Numaralandırıcı döndürmek için <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> yöntemi yerine `First` yöntemine sahiptir. Ortak bir görevi yerine getirmenin farklı bir yolunu öğrenmeye zorlamak yerine .NET Framework, yönetilen kodunuzun bildiğiniz türü kullanacak şekilde görünmesini sağlayarak Windows Çalışma Zamanı destekler. IDE 'de `IIterable` arabirimini görmezsiniz ve bu nedenle, Windows Çalışma Zamanı başvuru belgelerinde onunla karşılaşacağınız tek yol doğrudan bu belgelerde gezinmelidir.
+- Topics such as the <xref:Windows.Foundation.Collections.IIterable%601> interface don't have declaration syntax for Visual Basic or C#. Instead, a note appears above the syntax section (in this case, ".NET: This interface appears as System.Collections.Generic.IEnumerable\<T>"). This is because the .NET Framework and the Windows Runtime provide similar functionality with different interfaces. Ayrıca, davranışsal farklılıklar da bulunur: numaralandırıcıyı döndürmek için `IIterable`, bir `First` yöntemi yerine bir <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> yöntemine sahiptir. Instead of forcing you to learn a different way of performing a common task, the .NET Framework supports the Windows Runtime by making your managed code appear to use the type you're familiar with. You won't see the `IIterable` interface in the IDE, and therefore the only way you'll encounter it in the Windows Runtime reference documentation is by browsing through that documentation directly.
 
-- @No__t-0 belgelerinde yakından ilgili bir sorun görülmektedir: parametre türleri farklı diller için farklı görünüyor. Ve C# Visual Basic için parametre türleri <xref:System.String?displayProperty=nameWithType> ve <xref:System.Uri?displayProperty=nameWithType> ' dir. Bunun nedeni, .NET Framework kendi `String` ve `Uri` türlerine sahip olması ve bu tür yaygın olarak kullanılan türler için, .NET Framework kullanıcılarına şeyler yaparken farklı bir yöntem öğrenmeyi zorlamaktır. IDE 'de .NET Framework, karşılık gelen Windows Çalışma Zamanı türlerini gizler.
+- The <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)> documentation illustrates a closely related issue: Its parameter types appear to be different for different languages. C# ve Visual Basic için, parametre türleri <xref:System.String?displayProperty=nameWithType> ve <xref:System.Uri?displayProperty=nameWithType>'dir. Yine bu durum, .NET Framework kendi `String` ve `Uri` türlerine sahip olduğu içindir ve bunun gibi yaygın şekilde kullanılan türler için .NET Framework kullanıcılarını bunu yapmak üzere farklı bir yol öğrenmeye zorlamak anlamsızdır. In the IDE, the .NET Framework hides the corresponding Windows Runtime types.
 
-- @No__t-0 yapısı gibi birkaç durumda .NET Framework, aynı ada ancak daha fazla işlevselliğe sahip bir tür sağlar. Örneğin, bir Oluşturucu ve özellik konuları kümesi `GridLength` ile ilişkilendirilir, ancak yalnızca Visual Basic ve C# üyeleri yönetilen kodda kullanılabilir olduğundan söz dizimi blokları vardır. Windows Çalışma Zamanı, yapılar yalnızca alanlara sahiptir. Windows Çalışma Zamanı yapısı, eşdeğer işlevselliği sağlamak için bir yardımcı sınıfı <xref:Windows.UI.Xaml.GridLengthHelper> gerektirir. Yönetilen kodu yazarken IDE 'de bu yardımcı sınıfı görmezsiniz.
+- In a few cases, such as the <xref:Windows.UI.Xaml.GridLength> structure, the .NET Framework provides a type with the same name but more functionality. Örneğin, bir yapıcı ve özellik konuları kümesi `GridLength` ile ilişkilidir, ancak üyeler yalnızca yönetilen kodda mevcut olduğundan sadece Visual Basic ve #C için söz dizimi blokları vardır. In the Windows Runtime, structures have only fields. The Windows Runtime structure requires a helper class, <xref:Windows.UI.Xaml.GridLengthHelper>, to provide equivalent functionality. Yönetilen kodu yazarken bu yardımcı sınıfını IDE'de görmezsiniz.
 
-- IDE 'de Windows Çalışma Zamanı türler <xref:System.Object?displayProperty=nameWithType> ' dan türeme görünür. @No__t-0 ' dan devralınan üyelere sahip oldukları gibi görünürler (<xref:System.Object.ToString%2A?displayProperty=nameWithType> gibi). Bu Üyeler, türlerin gerçekten <xref:System.Object> ' dan Devralındığı ve Windows Çalışma Zamanı türlerinin <xref:System.Object> ' e yayınlanmasının gerektiği gibi çalışır. Bu işlevsellik, Windows Çalışma Zamanı için .NET Framework sağladığı desteğin bir parçasıdır. Ancak, Windows Çalışma Zamanı başvuru belgelerindeki türleri görüntülediğinizde, böyle bir üye görünmez. Bu belirgin devralınan üyelere yönelik belgeler <xref:System.Object?displayProperty=nameWithType> başvuru belgeleriyle sağlanır.
+- In the IDE, Windows Runtime types appear to derive from <xref:System.Object?displayProperty=nameWithType>. <xref:System.Object> gibi, <xref:System.Object.ToString%2A?displayProperty=nameWithType>'den devralınan üyelere sahip oldukları görünür. These members operate as they would if the types actually inherited from <xref:System.Object>, and Windows Runtime types can be cast to <xref:System.Object>. This functionality is part of the support that the .NET Framework provides for the Windows Runtime. However, if you view the types in the Windows Runtime reference documentation, no such members appear. Görünen bu devralınmış üyelere ait belgeler, <xref:System.Object?displayProperty=nameWithType> başvuru belgeleri tarafından sağlanır.
 
 <a name="DifferencesVisibleInIDE"></a>
 
-### <a name="differences-that-are-visible-in-the-ide"></a>IDE 'de görünür olan farklılıklar
+### <a name="differences-that-are-visible-in-the-ide"></a>IDE içerisinde Görünür Farklar
 
-JavaScript kullanarak Windows için derlenmiş bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulaması için uygulama mantığını sağlamak C# üzere içinde yazılmış Windows çalışma zamanı bileşeni kullanma gibi daha gelişmiş programlama senaryolarında, bu farklar IDE 'de ve belgelerde görünür. Bileşeniniz JavaScript 'e `IDictionary<int, string>` ' ı döndürdüğünde ve JavaScript hata ayıklayıcısında buna baktığınızda, JavaScript Windows Çalışma Zamanı türünü kullandığından, `IMap<int, string>` ' in yöntemlerini görürsünüz. İki dilde farklı şekilde görüntülenen bazı yaygın olarak kullanılan koleksiyon türleri aşağıdaki tabloda gösterilmiştir:
+In more advanced programming scenarios, such as using a Windows Runtime component written in C# to provide the application logic for a Windows 8.x Store app built for Windows using JavaScript, such differences are apparent in the IDE as well as in the documentation. When your component returns an `IDictionary<int, string>` to JavaScript, and you look at it in the JavaScript debugger, you'll see the methods of `IMap<int, string>` because JavaScript uses the Windows Runtime type. Aşağıdaki tabloda, iki dilde farklı olarak görüntülenen yaygın şekilde kullanılan bazı koleksiyon türleri gösterilmiştir:
 
-|Windows Çalışma Zamanı türü|Karşılık gelen .NET Framework türü|
+|Windows Runtime type|İlgili .NET Framework türü|
 |--------------------------------------------------------------|---------------------------------------|
 |`IIterable<T>`|`IEnumerable<T>`|
 |`IIterator<T>`|`IEnumerator<T>`|
@@ -86,82 +86,82 @@ JavaScript kullanarak Windows için derlenmiş bir [!INCLUDE[win8_appname_long](
 |`Windows.UI.Xaml.Data.PropertyChangedEventHandler`|`System.ComponentModel.PropertyChangedEventHandler`|
 |`Windows.UI.Xaml.Data.PropertyChangedEventArgs`|`System.ComponentModel.PropertyChangedEventArgs`|
 
-Windows Çalışma Zamanı, `IMap<K, V>` ve `IMapView<K, V>` `IKeyValuePair` kullanılarak tekrarlandırılır. Bunları yönetilen koda geçirdiğinizde, `IDictionary<TKey, TValue>` ve `IReadOnlyDictionary<TKey, TValue>` olarak görünürler, doğal olarak `System.Collections.Generic.KeyValuePair<TKey, TValue>` kullanarak bunları numaralandırın.
+In the Windows Runtime, `IMap<K, V>` and `IMapView<K, V>` are iterated using `IKeyValuePair`. Bunları yönetilen koda geçirdiğinizde `IDictionary<TKey, TValue>` ve `IReadOnlyDictionary<TKey, TValue>` olarak görünürler, bu nedenle doğal olarak bunları numaralandırmak için `System.Collections.Generic.KeyValuePair<TKey, TValue>`'i kullanın.
 
-Arabirimlerin yönetilen kodda görünme yöntemi, bu arabirimleri uygulayan türlerin görünme şeklini etkiler. Örneğin `PropertySet` sınıfı, yönetilen kodda `IDictionary<TKey, TValue>` olarak görünen `IMap<K, V>` uygular. `PropertySet` `IMap<K, V>` yerine 1 @no__t uygulamış gibi görünür, bu nedenle yönetilen kodda @no__t sözlüklerde .NET Framework-4 yöntemi gibi davranan bir `Add` yöntemine sahip olduğu görülüyor. @No__t-0 yöntemine sahip görünmüyor.
+Arabirimlerin yönetilen kodda görüntülenme şekli, bu arabirimlerin uygulanma şeklini etkiler. Örneğin, `PropertySet` sınıfı, yönetilen kodda `IMap<K, V>` olarak görünen `IDictionary<TKey, TValue>`'i uygular. `PropertySet`, `IDictionary<TKey, TValue>` yerine `IMap<K, V>`'i uyguluyormuş gibi görünür, bu nedenle yönetilen kodda, .NET Framework sözlüklerinde `Add` yöntemi gibi davranan bir `Add` yöntemine sahipmiş gibi görünür. Bir `Insert` yöntemine sahipmiş gibi görünmez.
 
-Windows Çalışma Zamanı bileşeni oluşturmak için .NET Framework kullanma hakkında daha fazla bilgi ve JavaScript ile böyle bir bileşeni nasıl kullanacağınızı gösteren bir anlatım için, bkz. [ve Visual Basic üzerinde C# Windows çalışma zamanı bileşenleri oluşturma](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
+For more information about using the .NET Framework to create a Windows Runtime component, and a walkthrough that shows how to use such a component with JavaScript, see [Creating Windows Runtime Components in C# and Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
-### <a name="primitive-types"></a>İlkel türler
+### <a name="primitive-types"></a>İlkel Türler
 
-Yönetilen kodda Windows Çalışma Zamanı doğal kullanımını etkinleştirmek için .NET Framework temel türler, kodunuzda Windows Çalışma Zamanı temel türler yerine görünür. .NET Framework, `Int32` yapısı gibi basit türler `Int32.TryParse` yöntemi gibi birçok yararlı özellik ve yönteme sahiptir. Buna karşılık, Windows Çalışma Zamanı ilkel türler ve yapılar yalnızca alanlara sahiptir. Yönetilen kodda temel elemanlar kullandığınızda, bunlar .NET Framework gibi görünürler ve normalde yaptığınız gibi .NET Framework türlerinin özelliklerini ve yöntemlerini kullanabilirsiniz. Aşağıdaki listede bir Özet verilmiştir:
+To enable the natural use of the Windows Runtime in managed code, .NET Framework primitive types appear instead of Windows Runtime primitive types in your code. .NET Framework'te, `Int32` yapısı gibi ilkel türler, `Int32.TryParse` yöntemi gibi birçok yararlı özellik ve yönteme sahiptir. By contrast, primitive types and structures in the Windows Runtime have only fields. Yönetilen kodda ilkelleri kullandığınızda, .NET Framework türleri gibi görünürler ve normalde yaptığınız gibi .NET Framework türlerinin özellik ve yöntemlerini kullanabilirsiniz. Aşağıdaki liste bir özet sağlar:
 
-- Windows Çalışma Zamanı temel elemanlar için `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (Unicode karakterlerinden oluşan sabit bir koleksiyon), `Enum`, `UInt32`, `UInt64` ve `Guid`, 0 ad alanında aynı adın türünü kullanır.
+- For the Windows Runtime primitives `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (an immutable collection of Unicode characters), `Enum`, `UInt32`, `UInt64`, and `Guid`, use the type of the same name in the `System` namespace.
 
-- @No__t-0 için `System.Byte` kullanın.
+- `UInt8` için `System.Byte`'i kullanın.
 
-- @No__t-0 için `System.Char` kullanın.
+- `Char16` için `System.Char`'i kullanın.
 
-- @No__t-0 arabirimi için `System.Object` ' i kullanın.
+- `IInspectable` arabirimi için `System.Object`'i kullanın.
 
-- @No__t-0 için, bir `System.Int32` üyesi olan bir yapı kullanın.
+- `HRESULT` için, bir `System.Int32` üyesi olan bir yapı kullanın.
 
-Arabirim türlerinde olduğu gibi, bu gösterimi yalnızca, .NET Framework projeniz JavaScript kullanılarak oluşturulan [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] bir uygulama tarafından kullanılan Windows Çalışma Zamanı bir bileşen olduğunda görürsünüz.
+As with interface types, the only time you might see evidence of this representation is when your .NET Framework project is a Windows Runtime component that is used by a Windows 8.x Store app built using JavaScript.
 
-Yönetilen kodda .NET Framework eşdeğerleri olarak görünen diğer temel, yaygın olarak kullanılan Windows Çalışma Zamanı türleri, <xref:System.DateTimeOffset?displayProperty=nameWithType> yapısı olarak yönetilen kodda görünen `Windows.Foundation.DateTime` yapısını ve <xref:System.TimeSpan?displayProperty=nameWithType> olarak görünen @no__t 2 yapısını içerir yapısı.
+Other basic, commonly used Windows Runtime types that appear in managed code as their .NET Framework equivalents include the `Windows.Foundation.DateTime` structure, which appears in managed code as the <xref:System.DateTimeOffset?displayProperty=nameWithType> structure, and the `Windows.Foundation.TimeSpan` structure, which appears as the <xref:System.TimeSpan?displayProperty=nameWithType> structure.
 
-### <a name="other-differences"></a>Diğer farklılıklar
+### <a name="other-differences"></a>Diğer Farklar
 
-Birkaç durumda, .NET Framework türlerin kodunuzda Windows Çalışma Zamanı türler yerine görünmesini, sizin de eylemde bulunması gerekir. Örneğin, <xref:Windows.Foundation.Uri?displayProperty=nameWithType> sınıfı .NET Framework kodda <xref:System.Uri?displayProperty=nameWithType> olarak görünür. <xref:System.Uri?displayProperty=nameWithType> göreli bir URI 'ye izin verir, ancak <xref:Windows.Foundation.Uri?displayProperty=nameWithType> mutlak bir URI gerektirir. Bu nedenle, bir Windows Çalışma Zamanı yöntemine bir URI geçirdiğinizde mutlak olduğundan emin olmanız gerekir. Bkz. [WINDOWS çalışma zamanı URI 'Yi geçirme](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
+In a few cases, the fact that .NET Framework types appear in your code instead of Windows Runtime types requires action on your part. For example, the <xref:Windows.Foundation.Uri?displayProperty=nameWithType> class appears as <xref:System.Uri?displayProperty=nameWithType> in .NET Framework code. <xref:System.Uri?displayProperty=nameWithType> allows a relative URI, but <xref:Windows.Foundation.Uri?displayProperty=nameWithType> requires an absolute URI. Therefore, when you pass a URI to a Windows Runtime method, you must ensure that it's absolute. See [Passing a URI to the Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
 
 <a name="WindowsRuntimeComponents"></a>
 
-## <a name="scenarios-for-developing-windows-runtime-components"></a>Windows Çalışma Zamanı bileşenleri geliştirmeye yönelik senaryolar
+## <a name="scenarios-for-developing-windows-runtime-components"></a>Windows Çalışma Zamanı Bileşenleri Geliştirme Senaryoları
 
-Yönetilen Windows Çalışma Zamanı bileşenleri için desteklenen senaryolar aşağıdaki genel ilkelere bağlıdır:
+The scenarios that are supported for managed Windows Runtime Components depend on the following general principles:
 
-- .NET Framework kullanılarak oluşturulan Windows Çalışma Zamanı bileşenleri diğer Windows Runtimelibraries hiçbir görünür fark içermez. Örneğin, yönetilen kod kullanarak yerel bir Windows Çalışma Zamanı bileşenini yeniden uygularsanız, iki bileşen outwardly olarak ayırt edilemez. Bileşeninizin yönetilen kodda yazıldığı olgu, bu kodun kendisi tarafından yönetilen kodu olsa bile, onu kullanan koda görünmez. Ancak, dahili olarak, bileşeniniz doğru yönetilen koddur ve ortak dil çalışma zamanı (CLR) üzerinde çalıştırılır.
+- Windows Runtime Components that are built using the .NET Framework have no apparent differences from other Windows Runtimelibraries. For example, if you re-implement a native Windows Runtime component by using managed code, the two components are outwardly indistinguishable. Kodun kendisi yönetilen kod olsa bile bileşeninizin yönetilen kodda yazıldığı gerçeği, bunu kullanan kod için görünmezdir. Ancak, dahili olarak, kodunuz doğru yönetilen koddur ve ortak dil çalışma zamanı (CLR) üzerinde çalışır.
 
-- Bileşenler, uygulama mantığını, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Kullanıcı arabirimi denetimlerini veya her ikisini de uygulayan türler içerebilir.
-
-  > [!NOTE]
-  > UI öğelerini uygulama mantığınızdan ayırmak iyi bir uygulamadır. Ayrıca, JavaScript ve HTML kullanarak Windows için oluşturulmuş bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamasındaki [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Kullanıcı arabirimi denetimlerini kullanamazsınız.
-
-- Bir bileşen [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulaması veya birden fazla çözüme ekleyebileceğiniz yeniden kullanılabilir bir bileşen için Visual Studio çözümü içindeki bir proje olabilir.
+- Components can contain types that implement application logic, Windows 8.x Store UI controls, or both.
 
   > [!NOTE]
-  > Bileşeniniz yalnızca veya Visual Basic ile C# kullanılacaksa, bunu Windows çalışma zamanı bir bileşen yapmak için bir neden yoktur. Bunun yerine sıradan bir .NET Framework sınıf kitaplığı yaparsanız, ortak API yüzeyini Windows Çalışma Zamanı türlerine kısıtlamak zorunda kalmazsınız.
+  > UI öğelerini uygulama mantığından ayırmak iyi bir yöntemdir. Also, you can't use Windows 8.x Store UI controls in a Windows 8.x Store app built for Windows using JavaScript and HTML.
 
-- Windows Çalışma Zamanı <xref:Windows.Foundation.Metadata.VersionAttribute> özniteliğini kullanarak yeniden kullanılabilir bileşenlerin sürümlerini, hangi türlerin (ve bir tür içindeki hangi üyelerin) farklı sürümlere eklendiğini belirlemek için serbest bırakabilirsiniz.
+- A component can be a project within a Visual Studio solution for a Windows 8.x Store app, or a reusable component that you can add to multiple solutions.
 
-- Bileşeninizdeki türler Windows Çalışma Zamanı türlerinden türetilebilir. Denetimler <xref:Windows.UI.Xaml.Controls.Primitives> ad alanındaki temel denetim türlerinden veya <xref:Windows.UI.Xaml.Controls.Button> gibi daha fazla tamamlanmış denetimden türetilebilir.
+  > [!NOTE]
+  > If your component will be used only with C# or Visual Basic, there's no reason to make it a Windows Runtime component. If you make it an ordinary .NET Framework class library instead, you don't have to restrict its public API surface to Windows Runtime types.
+
+- You can release versions of reusable components by using the Windows Runtime <xref:Windows.Foundation.Metadata.VersionAttribute> attribute to identify which types (and which members within a type) were added in different versions.
+
+- The types in your component can derive from Windows Runtime types. Controls can derive from the primitive control types in the <xref:Windows.UI.Xaml.Controls.Primitives> namespace or from more finished controls such as <xref:Windows.UI.Xaml.Controls.Button>.
 
   > [!IMPORTANT]
-  > @No__t-0 ve .NET Framework 4,5 ' den başlayarak, bir yönetilen Windows Çalışma Zamanı bileşenindeki tüm ortak türlerin mühürlenmesi gerekir. Başka bir Windows Çalışma Zamanı bileşenindeki bir tür onlardan türetilemez. Bileşeninize polimorfik davranış sağlamak istiyorsanız, bir arabirim oluşturabilir ve bunu polimorfik türlerde uygulayabilirsiniz.
+  > Starting with [!INCLUDE[win8](../../../includes/win8-md.md)] and the .NET Framework 4.5, all public types in a managed Windows Runtime component must be sealed. A type in another Windows Runtime component can't derive from them. Eğer bileşeninizde polimorfik davranış sağlamak istiyorsanız, bir arabirim oluşturabilir ve bu arabirimi polimorfik türlere uygulayabilirsiniz.
 
-- Bileşeninizdeki ortak türlerin tüm parametreleri ve dönüş türleri Windows Çalışma Zamanı türler olmalıdır (bileşeninizin tanımladığı Windows Çalışma Zamanı türler dahil).
+- All parameter and return types on the public types in your component must be Windows Runtime types (including the Windows Runtime types that your component defines).
 
-Aşağıdaki bölümlerde yaygın senaryolar örnekleri sağlanmaktadır.
+Aşağıdaki bölümler ortak senaryo örneklerini sağlar.
 
-### <a name="application-logic-for-a-includewin8_appname_longincludeswin8-appname-long-mdmd-app-with-javascript"></a>JavaScript ile [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulaması için uygulama mantığı
+### <a name="application-logic-for-a-windows-8x-store-app-with-javascript"></a>Application Logic for a Windows 8.x Store App with JavaScript
 
-JavaScript kullanarak Windows için [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulaması geliştirirken, uygulama mantığının bazı bölümlerinin yönetilen kodda daha iyi performans veya geliştirilmesine daha kolay olduğunu fark edebilirsiniz. JavaScript .NET Framework sınıf kitaplıklarını doğrudan kullanamaz, ancak sınıf kitaplığını a yapabilirsiniz. WinMD dosyası. Bu senaryoda Windows Çalışma Zamanı bileşeni uygulamanın ayrılmaz bir parçasıdır, bu nedenle sürüm öznitelikleri sağlamak mantıklı değildir.
+When you develop a Windows 8.x Store app for Windows using JavaScript, you might find that some parts of the application logic perform better in managed code, or are easier to develop. JavaScript, .NET Framework sınıf kitaplıklarını doğrudan kullanamaz, ancak bir .WinMD dosyasını sınıf kitaplığı yapabilirsiniz. In this scenario, the Windows Runtime component is an integral part of the app, so it doesn't make sense to provide version attributes.
 
-### <a name="reusable-includewin8_appname_longincludeswin8-appname-long-mdmd-ui-controls"></a>Yeniden kullanılabilir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] UI denetimleri
+### <a name="reusable-windows-8x-store-ui-controls"></a>Reusable Windows 8.x Store UI Controls
 
-Bir dizi ilgili Kullanıcı arabirimi denetimini yeniden kullanılabilir bir Windows Çalışma Zamanı bileşende paketleyebilir. Bileşen kendi kendine pazarlama yapabilir veya oluşturduğunuz uygulamalarda bir öğe olarak kullanılabilir. Bu senaryoda, uyumluluğu geliştirmek için Windows Çalışma Zamanı <xref:Windows.Foundation.Metadata.VersionAttribute> özniteliğini kullanmak mantıklı olur.
+You can package a set of related UI controls in a reusable Windows Runtime component. Bileşen kendi üzerinde pazarlanabilir veya kendi oluşturduğunuz uygulamalarda bir öğe olarak kullanılabilir. In this scenario, it makes sense to use the Windows Runtime <xref:Windows.Foundation.Metadata.VersionAttribute> attribute to improve compatibility.
 
-### <a name="reusable-application-logic-from-existing-net-framework-apps"></a>Mevcut .NET Framework uygulamalardan yeniden kullanılabilir uygulama mantığı
+### <a name="reusable-application-logic-from-existing-net-framework-apps"></a>Varolan .NET Framework Uygulamalarından Yeniden Kullanılabilir Uygulama Mantığı
 
-Yönetilen kodu, mevcut masaüstü uygulamalarınızdan tek başına Windows Çalışma Zamanı bileşeni olarak paketleyebilir. Bu, bileşeni, veya JavaScript kullanılarak C++ oluşturulan [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalarında ve C# veya Visual Basic oluşturulan @no__t 2 uygulamalarında kullanmanıza olanak sağlar. Kod için birden çok yeniden kullanım senaryosu varsa, sürüm oluşturma bir seçenektir.
+You can package managed code from your existing desktop apps as a standalone Windows Runtime component. This enables you to use the component in Windows 8.x Store apps built using C++ or JavaScript, as well as in Windows 8.x Store apps built using C# or Visual Basic. Kod için birden çok yeniden kullanılabilir senaryo varsa sürümleme bir seçenektir.
 
 ## <a name="related-topics"></a>İlgili Konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Windows Mağazası uygulamalarına yönelik .NET genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|@No__t-0 uygulamaları ve Windows RuntimeComponents oluşturmak için kullanabileceğiniz .NET Framework türlerini ve üyelerini açıklar. (Windows Geliştirme Merkezi 'nde.)|
-|[Veya Visual Basic kullanarak C# Windows Mağazası uygulamaları için yol haritası](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Birçok hızlı başlangıç konusu, kılavuz ve en iyi yöntem dahil olmak üzere veya Visual Basic C# kullanarak [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları geliştirmeye başlamanıza yardımcı olacak temel kaynakları sağlar. (Windows Geliştirme Merkezi 'nde.)|
-|[Nasıl yapılır (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|Birçok hızlı başlangıç konusu, kılavuz ve en iyi yöntem dahil olmak üzere veya Visual Basic C# kullanarak [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları geliştirmeye başlamanıza yardımcı olacak temel kaynakları sağlar. (Windows Geliştirme Merkezi 'nde.)|
-|[Ve Visual Basic içinde C# Windows çalışma zamanı bileşenleri oluşturma](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|.NET Framework kullanarak Windows Çalışma Zamanı bileşenin nasıl oluşturulduğunu açıklar, JavaScript kullanarak Windows için oluşturulan [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamasının bir parçası olarak nasıl kullanılacağını açıklar ve Visual Studio ile birlikte nasıl hata ayıklaması yapılacağını açıklar. (Windows Geliştirme Merkezi 'nde.)|
-|[Windows Çalışma Zamanı başvurusu](/uwp/api/)|Windows Çalışma Zamanı için başvuru belgeleri. (Windows Geliştirme Merkezi 'nde.)|
-|[Windows Çalışma Zamanı URI geçirme](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Yönetilen koddan Windows Çalışma Zamanı bir URI geçirdiğinizde ortaya çıkabilecek bir sorunu ve bunu nasıl önleyebileceğinizi açıklar.|
+|[.NET for Windows Store apps overview](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Describes the .NET Framework types and members that you can use to create Windows 8.x Store apps and Windows RuntimeComponents. (Windows Geliştirme Merkezi'nde.)|
+|[Roadmap for Windows Store apps using C# or Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Provides key resources to help you get started developing Windows 8.x Store apps by using C# or Visual Basic, including many Quickstart topics, guidelines, and best practices. (Windows Geliştirme Merkezi'nde.)|
+|[How tos (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|Provides key resources to help you get started developing Windows 8.x Store apps by using C# or Visual Basic, including many Quickstart topics, guidelines, and best practices. (Windows Geliştirme Merkezi'nde.)|
+|[Creating Windows Runtime Components in C# and Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|Describes how to create a Windows Runtime component using the .NET Framework, explains how to use it as part of a Windows 8.x Store app built for Windows using JavaScript, and describes how to debug the combination with Visual Studio. (Windows Geliştirme Merkezi'nde.)|
+|[Windows Runtime reference](/uwp/api/)|The reference documentation for the Windows Runtime. (Windows Geliştirme Merkezi'nde.)|
+|[URI'yı Windows Çalışma Zamanı'na Geçirme](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Describes an issue that can arise when you pass a URI from managed code to the Windows Runtime, and how to avoid it.|

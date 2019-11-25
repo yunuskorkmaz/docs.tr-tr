@@ -1,5 +1,5 @@
 ---
-title: Nesne Türünü Belirleme (Visual Basic)
+title: Nesne Türünü Belirleme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], discovering which an object belongs to
@@ -9,38 +9,38 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a77cc0603a0b61f58a4aa703c4b1e6ef4c26729c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050525"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345193"
 ---
 # <a name="determining-object-type-visual-basic"></a>Nesne Türünü Belirleme (Visual Basic)
-Genel nesne değişkenleri (diğer bir deyişle, değişkenleri olarak bildirdiğiniz `Object`) herhangi bir sınıftan nesneleri içerebilir. Türü değişkenlerindeki kullanırken `Object`, nesnenin sınıfına göre farklı eylemlerde gerekebilir; örneğin, bazı nesneler belirli bir özelliği veya yöntemi desteklemiyor olabilir. Visual Basic nesne türü bir nesne değişkenine depolandığını belirleyen iki yol sunar: `TypeName` işlevi ve `TypeOf...Is` işleci.  
+Generic object variables (that is, variables you declare as `Object`) can hold objects from any class. When using variables of type `Object`, you may need to take different actions based on the class of the object; for example, some objects might not support a particular property or method. Visual Basic provides two means of determining which type of object is stored in an object variable: the `TypeName` function and the `TypeOf...Is` operator.  
   
-## <a name="typename-and-typeofis"></a>TypeName ve TypeOf... Olduğu  
- `TypeName` İşlevi bir dize döndürür ve aşağıdaki kod parçasını gösterildiği depolamak veya bir nesne sınıfı adını görüntülemek gereken en iyi seçenektir:  
+## <a name="typename-and-typeofis"></a>TypeName and TypeOf…Is  
+ The `TypeName` function returns a string and is the best choice when you need to store or display the class name of an object, as shown in the following code fragment:  
   
  [!code-vb[VbVbalrOOP#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#92)]  
   
- `TypeOf...Is` İşleci, bir nesnenin türü, test etmek için en iyi seçenek, bir dize karşılaştırma kullanmaktan çok daha hızlı olduğundan `TypeName`. Aşağıdaki kod parçası kullanan `TypeOf...Is` içinde bir `If...Then...Else` deyimi:  
+ The `TypeOf...Is` operator is the best choice for testing an object's type, because it is much faster than an equivalent string comparison using `TypeName`. The following code fragment uses `TypeOf...Is` within an `If...Then...Else` statement:  
   
  [!code-vb[VbVbalrOOP#93](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#93)]  
   
- Bir sözcük uyarı son İşte. `TypeOf...Is` İşleci döndürür `True` bir nesne belirli bir tür ya da belirli bir türden türetilir. Hemen Visual Basic ile yaptığınız her şey, normalde, dizeler ve tamsayılar gibi nesneler olarak düşünülebilir bazı öğeleri içeren nesneleri içerir. Bu nesnelerin türetilmiştir ve yöntemleri devralan <xref:System.Object>. Geçirildiğinde bir `Integer` ve ile değerlendirilen `Object`, `TypeOf...Is` işleci döndürür `True`. Aşağıdaki örnek, rapor parametresi `InParam` hem de bir `Object` ve `Integer`:  
+ A word of caution is due here. The `TypeOf...Is` operator returns `True` if an object is of a specific type, or is derived from a specific type. Almost everything you do with Visual Basic involves objects, which include some elements not normally thought of as objects, such as strings and integers. These objects are derived from and inherit methods from <xref:System.Object>. When passed an `Integer` and evaluated with `Object`, the `TypeOf...Is` operator returns `True`. The following example reports that the parameter `InParam` is both an `Object` and an `Integer`:  
   
  [!code-vb[VbVbalrOOP#94](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#94)]  
   
- Aşağıdaki örnek, her ikisi de kullanır `TypeOf...Is` ve `TypeName` kendisine geçirilen nesne türünü belirlemek için `Ctrl` bağımsız değişken. `TestObject` Yordam çağrılarını `ShowType` denetimleri üç farklı tür ile.  
+ The following example uses both `TypeOf...Is` and `TypeName` to determine the type of object passed to it in the `Ctrl` argument. The `TestObject` procedure calls `ShowType` with three different kinds of controls.  
   
 #### <a name="to-run-the-example"></a>Örneği çalıştırmak için  
   
-1. Yeni bir Windows uygulaması projesi oluşturma ve ekleme bir <xref:System.Windows.Forms.Button> denetimi, bir <xref:System.Windows.Forms.CheckBox> denetimi ve bir <xref:System.Windows.Forms.RadioButton> forma.  
+1. Create a new Windows Application project and add a <xref:System.Windows.Forms.Button> control, a <xref:System.Windows.Forms.CheckBox> control, and a <xref:System.Windows.Forms.RadioButton> control to the form.  
   
-2. Formunuzdaki düğmesinden çağrı `TestObject` yordamı.  
+2. From the button on your form, call the `TestObject` procedure.  
   
-3. Formunuza aşağıdaki kodu ekleyin:  
+3. Add the following code to your form:  
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   

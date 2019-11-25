@@ -1,5 +1,5 @@
 ---
-title: If...Then...Else Deyimi (Visual Basic)
+title: If...Then...Else Deyimi
 ms.date: 04/16/2018
 f1_keywords:
 - vb.ElseIf
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: db81a1c41809b563d5f9d0777c3feb064c5e540b
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: f505755caeb9cc3cfeeb1ba83b6de15f48314103
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400705"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351157"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else Deyimi (Visual Basic)
 
@@ -48,79 +48,79 @@ End If
 If condition Then [ statements ] [ Else [ elsestatements ] ]
 ```
 
-## <a name="quick-links-to-example-code"></a>Örnek koda hızlı bağlantılar
+## <a name="quick-links-to-example-code"></a>Quick links to example code
 
-Bu makale, `If`... öğesinin kullanımını gösteren birkaç örnek içerir. `Then`... `Else` ifade:
+This article includes several examples that illustrate uses of the `If`...`Then`...`Else` statement:
 
-- [Çok satırlı sözdizimi örneği](#multi-line)
-- [İç içe geçmiş sözdizimi örneği](#nested)
-- [Tek satırlık sözdizimi örneği](#single-line)
+- [Multiline syntax example](#multi-line)
+- [Nested syntax example](#nested)
+- [Single-line syntax example](#single-line)
 
 ## <a name="parts"></a>Bölümler
 
 `condition` \
-Gerekli. İfadesini. Örtük olarak dönüştürülebilir `True` birveri`False`türü veya ya da olarak değerlendirilmelidir. `Boolean`
+Gerekli. Expression. Must evaluate to `True` or `False`, or to a data type that is implicitly convertible to `Boolean`.
 
-İfade [hiçbir şey](../../../visual-basic/language-reference/nothing.md) `False`olarak değerlendirilen [null yapılabilir](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` bir değişkense, koşul ifade gibi değerlendirilir ve `ElseIf` bloklar varsa değerlendirilir veya `Else` blok ise varsa yürütülür.
+If the expression is a [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` variable that evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the condition is treated as if the expression is `False`, and the `ElseIf` blocks are evaluated if they exist, or the `Else` block is executed if it exists.
 
 `Then` \
-Tek satır sözdiziminde gereklidir; çok satırlı sözdiziminde isteğe bağlı.
+Required in the single-line syntax; optional in the multiline syntax.
 
 `statements` \
-İsteğe bağlı. Takip `If`eden bir veya daha fazla deyim... `Then` ,`condition` olarak değerlendirilirse`True`yürütülür.
+İsteğe bağlı. One or more statements following `If`...`Then` that are executed if `condition` evaluates to `True`.
 
 `elseifcondition` \
-Varsa `ElseIf` gereklidir. İfadesini. Örtük olarak dönüştürülebilir `True` birveri`False`türü veya ya da olarak değerlendirilmelidir. `Boolean`
+Required if `ElseIf` is present. Expression. Must evaluate to `True` or `False`, or to a data type that is implicitly convertible to `Boolean`.
 
 `elseifstatements` \
-İsteğe bağlı. Takip `ElseIf`eden bir veya daha fazla deyim... `Then` ,`elseifcondition` olarak değerlendirilirse`True`yürütülür.
+İsteğe bağlı. One or more statements following `ElseIf`...`Then` that are executed if `elseifcondition` evaluates to `True`.
 
 `elsestatements` \
-İsteğe bağlı. Önceki `condition` veya `elseifcondition` ifade olarak`True`değerlendirilen bir veya daha fazla deyim.
+İsteğe bağlı. One or more statements that are executed if no previous `condition` or `elseifcondition` expression evaluates to `True`.
 
 `End If` \
-Öğesinin `If`çok satırlı sürümünü sonlandırır... `Then`... `Else` engelle.
+Terminates the multiline version of `If`...`Then`...`Else` block.
 
 ## <a name="remarks"></a>Açıklamalar
 
-### <a name="multiline-syntax"></a>Çok satırlı sözdizimi
+### <a name="multiline-syntax"></a>Multiline syntax
 
-Bir `If`... `Then`... ifadesiyle karşılaşıldı, `condition` test edildi. `Else` `condition` İse ,`True` aşağıdaki`Then` deyimler yürütülür. `condition` İse ,`False`her bir`ElseIf` ifade (varsa) sırayla değerlendirilir. Bir `True` `ElseIf` oluşturulduğunda, ilişkili olan deyimler hemen sonrasında yürütülür. `elseifcondition` , Olarak `elseifcondition` `True`hesaplanırsa `Else` veya deyim yoksa, `ElseIf` Aşağıdaki deyimler yürütülür. `Then`, Veya `ElseIf` `End If`sonraki deyimlerini yürüttükten sonra, yürütme aşağıdaki deyimle devam eder. `Else`
+When an `If`...`Then`...`Else` statement is encountered, `condition` is tested. If `condition` is `True`, the statements following `Then` are executed. If `condition` is `False`, each `ElseIf` statement (if there are any) is evaluated in order. When a `True` `elseifcondition` is found, the statements immediately following the associated `ElseIf` are executed. If no `elseifcondition` evaluates to `True`, or if there are no `ElseIf` statements, the statements following `Else` are executed. After executing the statements following `Then`, `ElseIf`, or `Else`, execution continues with the statement following `End If`.
 
-`ElseIf` Ve`Else` yan tümceleri her ikisi de isteğe bağlıdır. `ElseIf` Bir`If`... içinde istediğiniz sayıda yan tümce olabilir. `Then`... deyimi, ancak `Else` yan `ElseIf` tümce sonrasında hiçbir yan tümce görünmeyebilir. `Else` `If`... `Then`... `Else` deyimler birbirini içinde iç içe olabilir.
+The `ElseIf` and `Else` clauses are both optional. You can have as many `ElseIf` clauses as you want in an `If`...`Then`...`Else` statement, but no `ElseIf` clause can appear after an `Else` clause. `If`...`Then`...`Else` statements can be nested within each other.
 
-Çok satırlı sözdiziminde, `If` deyimin ilk satırdaki tek bir ifade olması gerekir. `ElseIf`, ,`Else`Ve deyimleri`End If` önünde yalnızca bir çizgi etiketi olabilir. `If`... `Then`... `Else` Block bir`End If` ifadesiyle bitmelidir.
+In the multiline syntax, the `If` statement must be the only statement on the first line. The `ElseIf`, `Else`, and `End If` statements can be preceded only by a line label. The `If`...`Then`...`Else` block must end with an `End If` statement.
 
 > [!TIP]
-> [Seç... Case deyimi](../../../visual-basic/language-reference/statements/select-case-statement.md) , birkaç olası değeri olan tek bir ifadeyi değerlendirirken daha kullanışlı olabilir.
+> The [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md) might be more useful when you evaluate a single expression that has several possible values.
 
-### <a name="single-line-syntax"></a>Tek satır sözdizimi
+### <a name="single-line-syntax"></a>Single-Line syntax
 
-Doğru ise yürütmek üzere kod ile tek bir koşul için tek satırlık sözdizimini kullanabilirsiniz. Ancak, çok satırlı sözdizimi daha fazla yapı ve esneklik sağlar ve okunması, bakımını yapmak ve hata ayıklaması daha kolay olur.
+You can use the single-line syntax for a single condition with code to execute if it's true. However, the multiple-line syntax provides more structure and flexibility and is easier to read, maintain, and debug.
 
-Bir deyimin tek satırlı `If`olup olmadığını belirlemek için anahtarsözcüğüincelenir.`Then` Aynı satırdaki bir yorum dışında bir şey görünürse `Then` , ifadesi tek satırlık `If` bir ifade olarak değerlendirilir. Yoksa `Then` , birden çok satırlık `If`bir başlangıç olmalıdır... `Then`... `Else`.
+What follows the `Then` keyword is examined to determine whether a statement is a single-line `If`. If anything other than a comment appears after `Then` on the same line, the statement is treated as a single-line `If` statement. If `Then` is absent, it must be the start of a multiple-line `If`...`Then`...`Else`.
 
-Tek satır sözdiziminde, bir `If`... sonucu olarak birden çok deyim yürütülebileceğini sağlayabilirsiniz. `Then` karar. Tüm deyimler aynı satırda olmalıdır ve iki nokta üst üste ile ayrılmalıdır.
+In the single-line syntax, you can have multiple statements executed as the result of an `If`...`Then` decision. All statements must be on the same line and be separated by colons.
 
-## <a name="multiline-syntax-example"></a>Çok satırlı sözdizimi örneği
+## <a name="multiline-syntax-example"></a>Multiline syntax example
 
 <a name="multi-line"></a>
 
-Aşağıdaki örnek, `If`... öğesinin çok satırlı sözdiziminin kullanımını gösterir. `Then`... `Else` bildirim.
+The following example illustrates the use of the multiline syntax of the `If`...`Then`...`Else` statement.
 
 [!code-vb[VbVbalrStatements#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#101)]
 
-## <a name="nested-syntax-example"></a>İç içe geçmiş sözdizimi örneği
+## <a name="nested-syntax-example"></a>Nested syntax example
 
 <a name="nested"></a>
 
-Aşağıdaki örnek iç içe geçmiş `If`... `Then`... `Else` deyimlerini.
+The following example contains nested `If`...`Then`...`Else` statements.
 
 [!code-vb[VbVbalrStatements#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#102)]
 
-## <a name="single-line-syntax-example"></a>Tek satırlık sözdizimi örneği
+## <a name="single-line-syntax-example"></a>Single-Line syntax example
 
-<a name="single-line"></a>Aşağıdaki örnek, tek satırlık sözdiziminin kullanımını gösterir.
+<a name="single-line"></a> The following example illustrates the use of the single-line syntax.
 
 [!code-vb[VbVbalrStatements#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#103)]
 
@@ -132,5 +132,5 @@ Aşağıdaki örnek iç içe geçmiş `If`... `Then`... `Else` deyimlerini.
 - [Select...Case Deyimi](../../../visual-basic/language-reference/statements/select-case-statement.md)
 - [İç İçe Geçmiş Denetim Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
 - [Karar Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [Visual Basic mantıksal ve bit düzeyinde Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [If İşleci](../../../visual-basic/language-reference/operators/if-operator.md)

@@ -1,5 +1,5 @@
 ---
-title: Parametreler ve Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)
+title: Parametreler ve Bağımsız Değişkenler Arasındaki Farklar
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: a69b956c7cffcc2a26916d6fc92f23dd4e2322d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4249dbf86bd1bfa7ef08e94059d2880333e9a92
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864253"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341370"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Parametreler ve Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)
-Çoğu durumda, bir yordam içinde bunu çağrıldıktan koşullar hakkında bazı bilgiler olması gerekir. Yinelenen veya paylaşılan görevleri gerçekleştiren bir yordam her çağrı için farklı bilgileri kullanır. Bu bilgiler, değişkenleri, sabitleri ve onu çağırdığınızda yordama geçirdiğiniz ifadeleri oluşur.  
+In most cases, a procedure must have some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
   
- Bu yordamı bilgiler iletmek için yordamı tanımlar. bir *parametre*, ve çağıran kod geçirir bir *bağımsız değişken* parametreye. Parametre olarak park boşluk ve bağımsız değişken bir otomobilin olarak düşünebilirsiniz. Yalnızca farklı otomobil park boşluk farklı zamanlarda park gibi çağıran kodun BT'nin yordam çağrıları her zaman aynı parametresi için farklı bir bağımsız değişken geçirebilirsiniz.  
+ To communicate this information to the procedure, the procedure defines a *parameter*, and the calling code passes an *argument* to that parameter. You can think of the parameter as a parking space and the argument as an automobile. Just as different automobiles can park in a parking space at different times, the calling code can pass a different argument to the same parameter every time that it calls the procedure.  
   
 ## <a name="parameters"></a>Parametreler  
- A *parametre* yordamı çağırdığınızda, geçirmeniz bekliyor. bir değeri temsil eder. Yordam bildirimi parametrelerini tanımlar.  
+ A *parameter* represents a value that the procedure expects you to pass when you call it. The procedure's declaration defines its parameters.  
   
- Tanımladığınızda bir `Function` veya `Sub` yordamı, belirttiğiniz bir *parametre listesi* yordam adına hemen arkasından parantez içinde. Her parametre için bir ad, bir veri türü ve geçirme mekanizma belirtin ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). Ayrıca, bir parametrenin isteğe bağlı olduğunu gösterebilir. Başka bir deyişle, çağırma kodunun kendisi için bir değer geçirmek yok.  
+ When you define a `Function` or `Sub` procedure, you specify a *parameter list* in parentheses immediately following the procedure name. For each parameter, you specify a name, a data type, and a passing mechanism ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). You can also indicate that a parameter is optional. This means that the calling code does not have to pass a value for it.  
   
- Her parametre adı olarak hizmet veren bir *yerel değişken* yordamda. Parametre adı herhangi bir değişken aynı şekilde kullanırsınız.  
+ The name of each parameter serves as a *local variable* in the procedure. You use the parameter name the same way you use any other variable.  
   
 ## <a name="arguments"></a>Arguments  
- Bir *bağımsız değişken* yordamı çağırdığınızda bir yordam parametresi için geçirdiğiniz değer temsil eder. Yordamı çağırdığında, çağıran kodun bağımsız değişkenleri sağlar.  
+ An *argument* represents the value that you pass to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure.  
   
- Çağırdığınızda bir `Function` veya `Sub` yordamı, eklediğiniz bir *bağımsız değişken listesi* yordam adına hemen arkasından parantez içinde. Her bağımsız değişken listesinde aynı konumda parametresine karşılık gelir.  
+ When you call a `Function` or `Sub` procedure, you include an *argument list* in parentheses immediately following the procedure name. Each argument corresponds to the parameter in the same position in the list.  
   
- Parametre tanımında aksine, bağımsız değişken adları yok. Her bağımsız değişkeni sıfır veya daha fazla değişkenler, sabitler ve sabit değerleri içeren bir ifade ' dir. Değerlendirilmiş ifadeyi veri türüne karşılık gelen parametre için tanımlanan veri türü genellikle eşleşmesi gerekir ve her durumda parametre türüne dönüştürülebilir olmalıdır.  
+ In contrast to parameter definition, arguments do not have names. Each argument is an expression, which can contain zero or more variables, constants, and literals. The data type of the evaluated expression should typically match the data type defined for the corresponding parameter, and in any case it must be convertible to the parameter type.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -44,8 +44,8 @@ ms.locfileid: "61864253"
 - [İşlev Yordamları](./function-procedures.md)
 - [Özellik Yordamları](./property-procedures.md)
 - [İşleç Yordamları](./operator-procedures.md)
-- [Nasıl yapılır: Bir yordamın parametresini tanımlama](./how-to-define-a-parameter-for-a-procedure.md)
-- [Nasıl yapılır: Bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)
+- [Nasıl yapılır: Bir Yordamın Parametresini Tanımlama](./how-to-define-a-parameter-for-a-procedure.md)
+- [Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme](./how-to-pass-arguments-to-a-procedure.md)
 - [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)
 - [Özyinelemeli Yordamlar](./recursive-procedures.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)

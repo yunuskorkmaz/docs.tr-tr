@@ -1,29 +1,29 @@
 ---
-title: Atomlanmış XName ve XNamespace nesneleri (LINQ to XML) (Visual Basic)
+title: Parçalara Ayrılmış XName ve XNamespace Nesneleri (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-ms.openlocfilehash: ae6d21c21aac4455e7932015c131fb4295673056
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 0ffed5d00364f6614b439480607ed521f52754ec
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351834"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345728"
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Atomlanmış XName ve XNamespace nesneleri (LINQ to XML) (Visual Basic)
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)
 
-<xref:System.Xml.Linq.XName> ve <xref:System.Xml.Linq.XNamespace> nesneleri *atomlanmış*; diğer bir deyişle, aynı nitelikli adı içeriyorsa, aynı nesneye başvurur. Bu, sorgular için performans avantajları verir: İki atomılı adı eşitlik için karşılaştırdığınızda, temel alınan ara dilin yalnızca iki başvuruyu aynı nesneye işaret edip etmediğini belirlemesi gerekir. Temel alınan kodun, zaman alıcı olabilecek dize karşılaştırmaları yapması gerekmez.
+<xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> objects are *atomized*; that is, if they contain the same qualified name, they refer to the same object. This yields performance benefits for queries: When you compare two atomized names for equality, the underlying intermediate language only has to determine whether the two references point to the same object. The underlying code does not have to do string comparisons, which would be time consuming.
 
-## <a name="atomization-semantics"></a>Atomleştirme semantiği
+## <a name="atomization-semantics"></a>Atomization Semantics
 
-Atomleştirme, iki <xref:System.Xml.Linq.XName> nesnesinin aynı yerel ada sahip olması ve aynı ad alanında olmaları durumunda aynı örneği paylaştıkları anlamına gelir. Aynı şekilde, iki <xref:System.Xml.Linq.XNamespace> nesnesi aynı ad alanı URI 'sine sahip ise, aynı örneği paylaşır.
+Atomization means that if two <xref:System.Xml.Linq.XName> objects have the same local name, and they are in the same namespace, they share the same instance. In the same way, if two <xref:System.Xml.Linq.XNamespace> objects have the same namespace URI, they share the same instance.
 
-Atomlanmış nesneleri etkinleştirmek için bir sınıf için, sınıf için Oluşturucu genel değil, özel olmalıdır. Bunun nedeni, oluşturucunun genel olması, atomsuz olmayan bir nesne oluşturmanız olabilir. @No__t-0 ve <xref:System.Xml.Linq.XNamespace> sınıfları bir dizeyi <xref:System.Xml.Linq.XName> veya <xref:System.Xml.Linq.XNamespace> ' e dönüştürmek için örtük bir dönüştürme işleci uygular. Bu nesnelerin bir örneğini alma işlemi budur. Oluşturucuya erişilemediği için bir oluşturucuyu kullanarak bir örnek alınamaz.
+For a class to enable atomized objects, the constructor for the class must be private, not public. This is because if the constructor were public, you could create a non-atomized object. The <xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> classes implement an implicit conversion operator to convert a string into an <xref:System.Xml.Linq.XName> or <xref:System.Xml.Linq.XNamespace>. This is how you get an instance of these objects. You cannot get an instance by using a constructor, because the constructor is inaccessible.
 
-<xref:System.Xml.Linq.XName> ve <xref:System.Xml.Linq.XNamespace> eşitlik ve eşitsizlik işleçlerini da uygular ve karşılaştırılan iki nesnenin aynı örneğe başvuru olup olmadığını tespit edin.
+<xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> also implement the equality and inequality operators, to determine whether the two objects being compared are references to the same instance.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod bazı <xref:System.Xml.Linq.XElement> nesneleri oluşturur ve aynı adların aynı örneği paylaşılacağını gösterir.
+The following code creates some <xref:System.Xml.Linq.XElement> objects and demonstrates that identical names share the same instance.
 
 ```vb
 Dim r1 As New XElement("Root", "data1")
@@ -44,16 +44,16 @@ Else
 End If
 ```
 
-Bu örnek aşağıdaki çıktıyı üretir:
+This example produces the following output:
 
 ```console
 r1 and r2 have names that refer to the same instance.
 The name of r1 and the name in 'n' refer to the same instance.
 ```
 
-Daha önce bahsedildiği gibi, atomlanmış nesnelerin avantajı, bir parametre olarak <xref:System.Xml.Linq.XName> alan eksen yöntemlerinden birini kullandığınızda, eksen yönteminin yalnızca iki adların istenen öğeleri seçmek için aynı örneğe başvurulacağını belirlemesi gerekir.
+As mentioned earlier, the benefit of atomized objects is that when you use one of the axis methods that take an <xref:System.Xml.Linq.XName> as a parameter, the axis method only has to determine that two names reference the same instance to select the desired elements.
 
-Aşağıdaki örnek, <xref:System.Xml.Linq.XName> ' ı <xref:System.Xml.Linq.XContainer.Descendants%2A> yöntem çağrısına geçirir ve daha sonra atomleştirme düzeniyle daha iyi performansa sahiptir.
+The following example passes an <xref:System.Xml.Linq.XName> to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method call, which then has better performance because of the atomization pattern.
 
 ```vb
 Dim root As New XElement("Root", New XElement("C1", 1), New XElement("Z1", New XElement("C1", 2), New XElement("C1", 1)))
@@ -65,7 +65,7 @@ For Each z As var In query
 Next
 ```
 
-Bu örnek aşağıdaki çıktıyı üretir:
+This example produces the following output:
 
 ```xml
 <C1>1</C1>
@@ -74,4 +74,4 @@ Bu örnek aşağıdaki çıktıyı üretir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Performans (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

@@ -1,5 +1,5 @@
 ---
-title: Visual Basic'de Diziler
+title: Diziler
 ms.date: 12/06/2017
 f1_keywords:
 - vb.Array
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: 12846b80f04e9fa6d1188485ad55b061cd2863fa
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 9dfe7814b00b4d060fa4ab9aa594faa948217d8d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758856"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351859"
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic'de Diziler
 
-Bir dizi terimiyle gösterilen değerler kümesidir *öğeleri*, mantıksal olarak ilgili arasındaki ilişki. Örneğin, bir dizi, dilbilgisi okulundaki her sınıfta Öğrenciler sayısının oluşabilir; dizinin her öğesi tek bir sınıf Öğrenci sayısıdır. Benzer şekilde, bir sınıf için bir öğrenci derece, bir dizi oluşabilir; dizinin her öğesi, bir tek sınıf hizmetidir.
+An array is a set of values, which are termed *elements*, that are logically related to each other. For example, an array may consist of the number of students in each grade in a grammar school; each element of the array is the number of students in a single grade. Similarly, an array may consist of a student's grades for a class; each element of the array is a single grade.
 
-Bu, bizim veri öğelerinin her biri depolamak için olası bağımsız değişkenler olur. Öğrenci derece uygulamamız analiz edilirse, örneğin, ayrı bir değişken için her öğrencinin sınıf, gibi kullanabiliriz `englishGrade1`, `englishGrade2`vb. Bu yaklaşım, üç önemli sınırlamaları vardır:
+It is possible individual variables to store each of our data items. For example, if our application analyzes student grades, we can use a separate variable for each student's grade, such as `englishGrade1`, `englishGrade2`, etc. This approach has three major limitations:
 
-- Tasarım zamanında işlemek sahibiz tam olarak kaç derece bilmek sahibiz.
-- Derece çok sayıda hızlı işleme zahmetli hale gelir. Bu sırayla bir uygulama ciddi hatalar olması olasılığı çok daha kolaylaştırır.
-- Elde etmek zordur. Eklediğimiz her bir yeni sınıf uygulama değiştirilmiş, yeniden derlenen, imzalanmasını ve gerektirir.
+- We have to know at design time exactly how many grades we have to handle.
+- Handling large numbers of grades quickly becomes unwieldy. This in turn makes an application much more likely to have serious bugs.
+- It is difficult to maintain. Each new grade that we add requires that the application be modified, recompiled, and redeployed.
 
-Dizi kullanarak, aynı adla ilgili değerlere için bakın ve çağrılan kullanma bir *dizin* veya *alt simge* dizideki konumuna göre tek tek bir öğeyi tanımlamak için. Bir dizideki öğelerin toplam sayısından daha az bir dizi aralığı 0'dan dizinler. Bir dizinin boyutu tanımlamak için Visual Basic sözdizimini kullandığınızda, dizideki öğelerin toplam sayısını değil en yüksek dizinini belirtin. Bir birim olarak dizi çalışabilirsiniz ve öğeleri yineleme özelliğini, tasarım zamanında içeren tam olarak kaç öğenin bilmek gerek serbest bırakır.
+By using an array, you can refer to these related values by the same name, and use a number that’s called an *index* or *subscript* to identify an individual element based on its position in the array. The indexes of an array range from 0 to one less than the total number of elements in the array. When you use Visual Basic syntax to define the size of an array, you specify its highest index, not the total number of elements in the array. You can work with the array as a unit, and the ability to iterate its elements frees you from needing to know exactly how many elements it contains at design time.
 
-Açıklama önce hızlı bazı örnekler:
+Some quick examples before explanation:
 
 ```vb
 ' Declare a single-dimension array of 5 numbers.
@@ -51,258 +51,258 @@ Dim matrix = New Integer(3, 2) {{1, 2, 3}, {2, 3, 4}, {3, 4, 5}, {4, 5, 6}}
 Dim sales()() As Double = New Double(11)() {}
 ```
 
-## <a name="array-elements-in-a-simple-array"></a>Basit bir dizide dizi öğeleri
+## <a name="array-elements-in-a-simple-array"></a>Array elements in a simple array
 
-Adlı bir dizi oluşturalım `students` Öğrenci sayısı, dilbilgisi okulundaki her sınıfta depolamak için. Dizinleri öğelerin aralığının 0-6 arasıdır. Bu dizi kullanarak, yedi değişken bildirilmesinden daha kolay olacaktır.
+Let's create an array named `students` to store the number of students in each grade in a grammar school. The indexes of the elements range from 0 through 6. Using this array is simpler than declaring seven variables.
 
-Aşağıdaki çizimde gösterildiği `students` dizisi. Dizinin her öğesi için:
+The following illustration shows the `students` array. For each element of the array:
 
-- Öğenin dizini dereceyi temsil eder (0 dizini dereceyi temsil eder).
+- The index of the element represents the grade (index 0 represents kindergarten).
 
-- Öğesi içinde yer alan değer o derecedeki Öğrenci sayısını temsil eder.
+- The value that’s contained in the element represents the number of students in that grade.
 
-![Öğrenciler sayıdan oluşan bir diziyi gösteren diyagram](./media/index/students-array-elements.gif)
+![Diagram showing an array of the numbers of students](./media/index/students-array-elements.gif)
 
-Aşağıdaki örnek, bir dizi oluşturur ve Visual Basic kodu içerir:
+The following example contains the Visual Basic code that creates and uses the array:
 
 [!code-vb[simple-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/simple-array.vb)]
 
-Örneğin, üç şeyi yapar:
+The example does three things:
 
-- Bunu bildiren bir `students` dizisi yedi öğe ile. Sayı `6` dizide bildirimi dizideki son dizini belirtir; bir değer dizideki öğelerin sayısından küçük.
-- Değer, dizideki her öğeye atar. Dizi adını kullanarak ve parantez içinde tek tek öğenin dizini de dahil olmak üzere dizi öğelerine erişebilirsiniz.
-- Her dizi değerini listeler. Örnekte bir [ `For` ](../../../language-reference/statements/for-next-statement.md) dizin numarası ile dizideki her öğeye erişmek için deyimi.
+- It declares a `students` array with seven elements. The number `6` in the array declaration indicates the last index in the array; it is one less than the number of elements in the array.
+- It assigns values to each element in the array. Array elements are accessed by using the array name and including the index of the individual element in parentheses.
+- It lists each value of the array. The example uses a [`For`](../../../language-reference/statements/for-next-statement.md) statement to access each element of the array by its index number.
 
-`students` Önceki örnekte dizisi olduğundan tek boyutlu dizi bir dizin kullanır. Birden fazla dizin veya alt simge kullanan dizi olarak adlandırılan *çok boyutlu*. Daha fazla bilgi için bu makalenin devamını görmek ve [Visual Basic'de dizi boyutları](../../language-features/arrays/array-dimensions.md).
+The `students` array in the preceding example is a one-dimensional array because it uses one index. An array that uses more than one index or subscript is called *multidimensional*. For more information, see the rest of this article and [Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md).
 
-## <a name="creating-an-array"></a>Bir dizi oluşturma
+## <a name="creating-an-array"></a>Creating an array
 
-Bir dizinin boyutu, çeşitli yollarla tanımlayabilirsiniz:
+You can define the size of an array in several ways:
 
-- Dizi bildirildiğinde boyutu belirtebilirsiniz:
+- You can specify the size when the array is declared:
 
   [!code-vb[creating1](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#1)]
 
-- Kullanabileceğiniz bir `New` yan tümcesi oluşturulduğunda bir dizinin boyutunu sağlamak için:
+- You can use a `New` clause to supply the size of an array when it’s created:
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-Var olan bir dizi varsa, boyutunu kullanarak tanımlayabilirsiniz [ `ReDim` ](../../../language-reference/statements/redim-statement.md) deyimi. Belirtebilirsiniz `ReDim` deyimi bir dizideki değerleri koruyabilir veya boş dizi oluşturmasını belirtebilirsiniz. Aşağıdaki örnek, farklı kullanımlarını gösterir `ReDim` mevcut dizinin boyutunu değiştirmek için deyimi.
+If you have an existing array, you can redefine its size by using the [`ReDim`](../../../language-reference/statements/redim-statement.md) statement. You can specify that the `ReDim` statement keep the values that are in the array, or you can specify that it create an empty array. The following example shows different uses of the `ReDim` statement to modify the size of an existing array.
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
-Daha fazla bilgi için [ReDim deyimi](../../../language-reference/statements/redim-statement.md).
+For more information, see the [ReDim Statement](../../../language-reference/statements/redim-statement.md).
 
-## <a name="storing-values-in-an-array"></a>Bir dizideki değerleri saklama
+## <a name="storing-values-in-an-array"></a>Storing values in an array
 
-Bir dizideki her konum türünden dizin kullanarak erişebileceğiniz `Integer`. Depolayın ve parantez içindeki dizinini kullanarak her dizi konumuna başvurarak dizideki değerleri alın. Dizinler çok boyutlu diziler için virgülle (,) tarafından ayrılır. Her dizi boyutu için bir dizine ihtiyacınız var.
+You can access each location in an array by using an index of type `Integer`. You can store and retrieve values in an array by referencing each array location by using its index enclosed in parentheses. Indexes for multidimensional arrays are separated by commas (,). You need one index for each array dimension.
 
-Aşağıdaki örnek, dizilerde değerler depolanıp bazı deyimleri gösterir.
+The following example shows some statements that store and retrieve values in arrays.
 
 [!code-vb[store-and-retrieve](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/store-and-retrieve.vb)]
 
-## <a name="populating-an-array-with-array-literals"></a>Dizi değişmez değerleri olan bir dizi doldurma
+## <a name="populating-an-array-with-array-literals"></a>Populating an array with array literals
 
-Dizi değişmez değeri kullanarak başlangıç değer kümesi ile bir dizi oluşturduğunuzda, aynı anda doldurabilirsiniz. Küme ayraçları içine alınmış bir virgülle ayrılmış değerler listesi, dizi değişmez değeri oluşur (`{}`).
+By using an array literal, you can populate an array with an initial set of values at the same time that you create it. An array literal consists of a list of comma-separated values that are enclosed in braces (`{}`).
 
-Dizi değişmez değeri kullanarak dizi oluşturduğunuzda, dizi türü sağlarsınız veya dizi türünü saptamak için tür çıkarımını kullanın. Aşağıdaki örnek, her iki seçeneği gösterir.
+When you create an array by using an array literal, you can either supply the array type or use type inference to determine the array type. The following example shows both options.
 
 [!code-vb[create-with-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#4)]
 
-Tür çıkarımı kullandığınızda, dizinin türü tarafından belirlenir *baskın tür* değişmez değerler listesinde. Baskın tür, dizideki diğer tüm türlerin genişleyebileceği türüdür. Bu benzersiz tür belirlenemiyorsa, baskın tür dizideki diğer tüm türleri daraltmak benzersiz türüdür. Bu benzersiz türlerden hiçbiri belirlenemezse, baskın türdür `Object`. Örneğin, dizi değişmez değerine sağlanan değerler listesi türü değerler içeriyorsa `Integer`, `Long`, ve `Double`, ortaya çıkan dizi türünde `Double`. Çünkü `Integer` ve `Long` yalnızca genişletmek `Double`, `Double` baskın türdür. Daha fazla bilgi için [Widening ve daraltma dönüşümleri](../../language-features/data-types/widening-and-narrowing-conversions.md).
+When you use type inference, the type of the array is determined by the *dominant type* in the list of literal values. The dominant type is the type to which all other types in the array can widen. If this unique type can’t be determined, the dominant type is the unique type to which all other types in the array can narrow. If neither of these unique types can be determined, the dominant type is `Object`. For example, if the list of values that’s supplied to the array literal contains values of type `Integer`, `Long`, and `Double`, the resulting array is of type `Double`. Because `Integer` and `Long` widen only to `Double`, `Double` is the dominant type. For more information, see [Widening and Narrowing Conversions](../../language-features/data-types/widening-and-narrowing-conversions.md).
 
 > [!NOTE]
-> Tür çıkarımı, yerel bir tür üye değişkenlerinde olarak tanımlanan diziler için kullanabilirsiniz. Açık tür tanımı yoksa, dizi değişmez değerleri sınıf düzeyinde tanımlanan tür dizilerdir `Object[]`. Daha fazla bilgi için [yerel tür çıkarımı](../variables/local-type-inference.md).
+> You can use type inference only for arrays that are defined as local variables in a type member. If an explicit type definition is absent, arrays defined with array literals at the class level are of type `Object[]`. For more information, see [Local type inference](../variables/local-type-inference.md).
 
-Önceki örnekte tanımlayan Not `values` türünde bir dizi olarak `Double` tüm dizi değişmez değerleri türü olmasına rağmen `Integer`. Dizi değişmez değerleri için genişletebilirsiniz çünkü bu bir dizi oluşturabilirsiniz `Double` değerleri.
+Note that the previous example defines `values` as an array of type `Double` even though all the array literals are of type `Integer`. You can create this array because the values in the array literal can widen to `Double` values.
 
-Ayrıca oluşturabilir ve çok boyutlu bir dizi kullanarak doldurmak *iç içe geçmiş dizi değişmez değerleri*. İç içe geçmiş dizi değişmez değerleri, sonuçta elde edilen diziyle tutarlı olan bir dizi boyutları olması gerekir. Aşağıdaki örnekte, iç içe geçmiş dizi değişmez değerlerini kullanarak iki boyutlu bir tamsayı dizisi oluşturur.
+You can also create and populate a multidimensional array by using *nested array literals*. Nested array literals must have a number of dimensions that’s consistent with the resulting array. The following example creates a two-dimensional array of integers by using nested array literals.
 
 [!code-vb[nested-array-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#5)]
 
-İç içe geçmiş dizi değişmez değerleri oluşturma ve bir dizi doldurmak için kullanılırken, iç içe geçmiş dizi değişmez değerlerinde öğe sayısı eşleşmezse bir hata oluşur. Dizi değişmez değerleri boyutlardan farklı sayıda sahip şekilde dizi değişkenini açıkça bildirirseniz hata da oluşur.
+When using nested array literals to create and populate an array, an error occurs if the number of elements in the nested array literals don't match. An error also occurs if you explicitly declare the array variable to have a different number of dimensions than the array literals.
 
-Tek boyutlu diziler için yapabildiğiniz gibi çok boyutlu bir dizi iç içe geçmiş dizi değişmez değerleri ile oluştururken üzerinde tür çıkarımı güvenebilirsiniz. Tüm iç içe yerleştirme düzeyinin tüm dizi değişmez değerleri tüm değerler için baskın tür gösterilen türüdür. Aşağıdaki örnek, türünde iki boyutlu bir dizi oluşturur. `Double[,]` türü değerlerinin `Integer` ve `Double`.
+Just as you can for one-dimensional arrays, you can rely on type inference when creating a multidimensional array with nested array literals. The inferred type is the dominant type for all the values in all the array literals for all nesting level. The following example creates a two-dimensional array of type `Double[,]` from values that are of type `Integer` and `Double`.
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
-Diğer örnekler için [nasıl yapılır: Visual Basic'te dizi değişkeni başlatma](../../language-features/arrays/how-to-initialize-an-array-variable.md).
+For additional examples, see [How to: Initialize an Array Variable in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
 
-## <a name="iterating-through-an-array"></a>Bir dizi boyunca gezinme
+## <a name="iterating-through-an-array"></a>Iterating through an array
 
-Bir dizi aracılığıyla yineleme yaptığınızda, dizideki her öğe düşük dizine en yüksek veya en yüksek erişim için en düşük. Genellikle, kullanın [için... Sonraki deyimi](../../../language-reference/statements/for-next-statement.md) veya [her biri için... Sonraki deyimi](../../../language-reference/statements/for-each-next-statement.md) dizi öğelerinde yineleme yapmak için. Dizi üst sınırları bilmediğinizde çağırabilirsiniz <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType> en yüksek dizin değerini almak için yöntemi. En düşük dizin değeri hemen hemen aynıdır ancak her zaman 0 çağırabilirsiniz <xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType> dizini en düşük değerini almak için yöntemi.
+When you iterate through an array, you access each element in the array from the lowest index to the highest or from the highest to the lowest. Typically, use either the [For...Next Statement](../../../language-reference/statements/for-next-statement.md) or the [For Each...Next Statement](../../../language-reference/statements/for-each-next-statement.md) to iterate through the elements of an array. When you don't know the upper bounds of the array, you can call the <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType> method to get the highest value of the index. Although lowest index value is almost always 0, you can call the <xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType> method to get the lowest value of the index.
 
-Aşağıdaki örnek, kullanarak tek boyutlu bir dizi aracılığıyla yinelenir [ `For...Next` ](../../../language-reference/statements/for-next-statement.md) deyimi.
+The following example iterates through a one-dimensional array by using the [`For...Next`](../../../language-reference/statements/for-next-statement.md) statement.
 
 [!code-vb[iterate-one-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]
 
-Aşağıdaki örneği kullanarak çok boyutlu bir dizi yinelenir. bir [ `For...Next` ](../../../language-reference/statements/for-next-statement.md) deyimi. <xref:System.Array.GetUpperBound%2A> Yönteminin boyutu belirten bir parametre vardır. `GetUpperBound(0)` İlk boyutun yüksek dizin döndürür ve `GetUpperBound(1)` İkinci boyutun yüksek dizin döndürür.
+The following example iterates through a multidimensional array by using a [`For...Next`](../../../language-reference/statements/for-next-statement.md) statement. The <xref:System.Array.GetUpperBound%2A> method has a parameter that specifies the dimension. `GetUpperBound(0)` returns the highest index of the first dimension, and `GetUpperBound(1)` returns the highest index of the second dimension.
 
 [!code-vb[iterate-two-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]
 
-Aşağıdaki örnekte bir [her biri için... Sonraki deyimi](../../../language-reference/statements/for-each-next-statement.md)tek boyutlu bir dizi ve iki boyutlu bir dizi aracılığıyla yineleme yapmak için.
+The following example uses a [For Each...Next Statement](../../../language-reference/statements/for-each-next-statement.md)to iterate through a one-dimensional array and a two-dimensional array.
 
 [!code-vb[iterate-for-each-next](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate-for-each-next.vb)]
 
-## <a name="array-size"></a>Dizi boyutu
+## <a name="array-size"></a>Array size
 
-Bir dizinin boyutu, tüm boyutlarının uzunluklarının ürünüdür. Bu, şu anda dizide yer alan öğelerin toplam sayısını temsil eder.  Örneğin, aşağıdaki örnekte, her boyutta, dört öğelerle 2 boyutlu bir dizi bildirir. Örneğin çıktısında gösterildiği gibi dizinin boyutu 16'dır (veya (3 + 1) * (3 + 1).
+The size of an array is the product of the lengths of all its dimensions. It represents the total number of elements currently contained in the array.  For example, the following example declares a 2-dimensional array with four elements in each dimension. As the output from the example shows, the array's size is 16 (or (3 + 1) * (3 + 1).
 
 [!code-vb[array-size](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size.vb)]
 
 > [!NOTE]
-> Bu tartışma dizisi boyutunun basit diziler için geçerli değildir. Basit diziler ve düzensiz bir dizi boyutunu belirleme hakkında daha fazla bilgi için bkz. [basit dizileri](#jagged-arrays) bölümü.
+> This discussion of array size does not apply to jagged arrays. For information on jagged arrays and determining the size of a jagged array, see the [Jagged arrays](#jagged-arrays) section.
 
-Bir dizinin boyutu kullanarak bulabilirsiniz <xref:System.Array.Length%2A?displayProperty=nameWithType> özelliği. Kullanarak çok boyutlu bir dizinin her boyutunun uzunluğunu bulabilirsiniz <xref:System.Array.GetLength%2A?displayProperty=nameWithType> yöntemi.
+You can find the size of an array by using the <xref:System.Array.Length%2A?displayProperty=nameWithType> property. You can find the length of each dimension of a multidimensional array by using the <xref:System.Array.GetLength%2A?displayProperty=nameWithType> method.
 
-Ona yeni bir dizi nesnesi atayarak veya kullanarak, bir dizi değişkenini boyutlandırabilirsiniz [ `ReDim` deyimi](../../../language-reference/statements/redim-statement.md) deyimi. Aşağıdaki örnekte `ReDim` 100 öğeli bir dizi için 51 öğeli bir dizi değiştirmek için deyimi.
+You can resize an array variable by assigning a new array object to it or by using the [`ReDim` Statement](../../../language-reference/statements/redim-statement.md) statement. The following example uses the `ReDim` statement to change a 100-element array to a 51-element array.
 
 [!code-vb[resize-an-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size2.vb)]
 
-Bir dizinin boyutu ile uğraşırken akılda tutulması gereken birkaç şey vardır.
+There are several things to keep in mind when dealing with the size of an array.
 
 |||
 |---|---|
-|Boyut uzunluğu|Her boyutun dizini 0 tabanlıdır; için üst sınır 0'dan aralıkları anlamına gelir. Bu nedenle, belirli bir boyutun uzunluğu o boyut bildirilen üst sınırdan büyük biridir.|
-|Uzunluk sınırları|Bir dizinin her boyutunun uzunluğu en büyük değerini sınırlıdır `Integer` olan veri türü <xref:System.Int32.MaxValue?displayProperty=nameWithType> veya (2 ^ 31) - 1. Ancak, bir dizinin toplam boyutu ayrıca sistemdeki kullanılabilir bellek ile sınırlıdır. Bir diziyi başlatmaya çalışırsanız, kullanılabilir bellek miktarını aşıyor, çalışma zamanı bir <xref:System.OutOfMemoryException>.|
-|Boyut ve öğe boyutu|Bir dizinin boyutu, öğelerin veri türü bağımsızdır. Boyutu her zaman öğelerin, bellekte kullandıkları bayt sayısını değil toplam sayısını temsil eder.|
-|Bellek tüketimi|Bir dizinin bellekte depolanma ilgili varsayımlar yapılması güvenli değildir. Aynı dizi 64-bit sistemde 32-bit sistemde daha fazla bellek tüketebilir şekilde depolama farklı veri genişliği platformlarda değişir. Bir diziyi başlattığınızda sistem yapılandırmasına bağlı olarak ortak dil çalışma zamanı (CLR) depolama öğeleri mümkün olduğunca birbirine yakın paketlemek için veya onları doğal donanım sınırlarına göre hizalamak için atayabilirsiniz. Ayrıca, bir dizi bir depolama alanı yükü, denetim bilgileri için gerektirir ve bu yükü eklenen her boyutla artar.|
+|Dimension Length|The index of each dimension is 0-based, which means it ranges from 0 to its upper bound. Therefore, the length of a given dimension is one greater than the declared upper bound of that dimension.|
+|Length Limits|The length of every dimension of an array is limited to the maximum value of the `Integer` data type, which is <xref:System.Int32.MaxValue?displayProperty=nameWithType> or (2 ^ 31) - 1. However, the total size of an array is also limited by the memory available on your system. If you attempt to initialize an array that exceeds the amount of available memory, the runtime throws an <xref:System.OutOfMemoryException>.|
+|Size and Element Size|An array's size is independent of the data type of its elements. The size always represents the total number of elements, not the number of bytes that they consume in memory.|
+|Memory Consumption|It is not safe to make any assumptions regarding how an array is stored in memory. Storage varies on platforms of different data widths, so the same array can consume more memory on a 64-bit system than on a 32-bit system. Depending on system configuration when you initialize an array, the common language runtime (CLR) can assign storage either to pack elements as close together as possible, or to align them all on natural hardware boundaries. Also, an array requires a storage overhead for its control information, and this overhead increases with each added dimension.|
 
-## <a name="the-array-type"></a>Dizi türü
+## <a name="the-array-type"></a>The array type
 
-Her dizi öğelerine veri türünden farklı bir veri türü var. Tüm diziler için tek bir veri türü yoktur. Bunun yerine, bir dizi veri türü boyut sayısına göre belirlenir veya *derece*, dizi ve dizideki öğelerin veri türü. İki dizi aynı veri türünden yalnızca zaman aynı dereceye sahip oldukları yazın ve öğeleri aynı veri türüne sahip değişkenlerdir. Bir dizideki boyutların uzunlukları dizinin veri türünü etkilemek değil.
+Every array has a data type, which differs from the data type of its elements. There is no single data type for all arrays. Instead, the data type of an array is determined by the number of dimensions, or *rank*, of the array, and the data type of the elements in the array. Two array variables are of the same data type only when they have the same rank and their elements have the same data type. The lengths of the dimensions of an array do not influence the array data type.
 
-Her dizi öğesinden devralınan <xref:System.Array?displayProperty=nameWithType> sınıfı ve bir değişken türü olmasını bildirebilirsiniz `Array`, ancak türünde bir dizi oluşturamazsınız `Array`. Örneğin, aşağıdaki kod bildirir ancak `arr` değişken türünde olmasını `Array` ve çağıran <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> dizinin türü dizi oluşturmak için gereken yöntemini kanıtlar olmasını Object [].
+Every array inherits from the <xref:System.Array?displayProperty=nameWithType> class, and you can declare a variable to be of type `Array`, but you cannot create an array of type `Array`. For example, although the following code declares the `arr` variable to be of type `Array` and calls the <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> method to instantiate the array, the array's type proves to be Object[].
 
 [!code-vb[array-class](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-class.vb)]
 
-Ayrıca, [ReDim deyimi](../../../language-reference/statements/redim-statement.md) türü olarak bildirilmiş bir değişken üzerinde çalışamaz `Array`. Bu nedenlerle ve tür güvenliği için her dizinin belirli bir tür olarak bildirilmesi önerilir.
+Also, the [ReDim Statement](../../../language-reference/statements/redim-statement.md) cannot operate on a variable declared as type `Array`. For these reasons, and for type safety, it is advisable to declare every array as a specific type.
 
-Veri türü diziye veya öğelerine çeşitli şekillerde bulabilirsiniz.
+You can find out the data type of either an array or its elements in several ways.
 
-- Çağırabilirsiniz <xref:System.Object.GetType%2A> yöntemi almak için bir değişken üzerinde bir <xref:System.Type> değişkeninin çalışma zamanı türünü temsil eden nesne. <xref:System.Type> Nesnesi, özelliklerinde ve yöntemlerinde kapsamlı bilgiler içerir.
-- Değişken geçirebilirsiniz <xref:Microsoft.VisualBasic.Information.TypeName%2A> almak için işlevi bir `String` ile çalışma zamanı türünün adı.
+- You can call the <xref:System.Object.GetType%2A> method on the variable to get a <xref:System.Type> object that represents the run-time type of the variable. The <xref:System.Type> object holds extensive information in its properties and methods.
+- You can pass the variable to the <xref:Microsoft.VisualBasic.Information.TypeName%2A> function to get a `String` with the name of run-time type.
 
-Aşağıdaki örnek, hem çağırır `GetType` yöntemi ve `TypeName` işlevi bir dizi türünü belirlemek için. Dizi türü `Byte(,)`. Unutmayın <xref:System.Type.BaseType%2A?displayProperty=nameWithType> özelliği de gösterir bayt dizisinin temel tür olduğunu <xref:System.Array> sınıfı.
+The following example calls the both the `GetType` method and the `TypeName` function to determine the type of an array. The array type is `Byte(,)`. Note that the <xref:System.Type.BaseType%2A?displayProperty=nameWithType> property also indicates that the base type of the byte array is the <xref:System.Array> class.
 
 [!code-vb[array-type](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-type.vb)]
 
-## <a name="arrays-as-return-values-and-parameters"></a>Dönüş değerleri ve parametreler olarak diziler
+## <a name="arrays-as-return-values-and-parameters"></a>Arrays as return values and parameters
 
-Bir diziden döndürülecek bir `Function` yordamı, dönüş türü olarak dizi veri türü ve boyut sayısına belirtin [Function deyimi](../../../language-reference/statements/function-statement.md). İşlevin içinde aynı veri türü ve boyut sayısına sahip bir yerel dizi değişkenini bildirin. İçinde [dönüş deyimi](../../../language-reference/statements/return-statement.md), parantez olmadan yerel dizi değişkenini içerir.
+To return an array from a `Function` procedure, specify the array data type and the number of dimensions as the return type of the [Function Statement](../../../language-reference/statements/function-statement.md). Within the function, declare a local array variable with same data type and number of dimensions. In the [Return Statement](../../../language-reference/statements/return-statement.md), include the local array variable without parentheses.
 
-Bir parametre olarak bir dizi belirtmek için bir `Sub` veya `Function` yordamı, parametreyi belirtilen veri türü ve boyut sayısına bir dizi olarak tanımlayın. Yordam çağrısı içinde aynı veri türü ve boyut sayısına sahip bir dizi değişken geçirin.
+To specify an array as a parameter to a `Sub` or `Function` procedure, define the parameter as an array with a specified data type and number of dimensions. In the call to the procedure, pass an array variable with the same data type and number of dimensions.
 
-Aşağıdaki örnekte, `GetNumbers` işlevinin döndürdükleriyle bir `Integer()`, tek boyutlu bir dizi türü `Integer`. `ShowNumbers` Yordamı kabul eden bir `Integer()` bağımsız değişken.
+In the following example, the `GetNumbers` function returns an `Integer()`, a one-dimensional array of type `Integer`. The `ShowNumbers` procedure accepts an `Integer()` argument.
 
 [!code-vb[return-value-and-params](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/return-values-and-params.vb)]
 
-Aşağıdaki örnekte, `GetNumbersMultiDim` işlevinin döndürdükleriyle bir `Integer(,)`, türünde iki boyutlu bir dizi `Integer`.  `ShowNumbersMultiDim` Yordamı kabul eden bir `Integer(,)` bağımsız değişken.
+In the following example, the `GetNumbersMultiDim` function returns an `Integer(,)`, a two-dimensional array of type `Integer`.  The `ShowNumbersMultiDim` procedure accepts an `Integer(,)` argument.
 
 [!code-vb[multidimensional-return-value](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/return-values-and-params-2d.vb)]
 
-## <a name="jagged-arrays"></a>Basit diziler
+## <a name="jagged-arrays"></a>Jagged arrays
 
-Bazen uygulamanızdaki veri yapısı iki boyutludur ancak dikdörtgen değildir. Örneğin, ayın her günü yüksek Sıcaklığın hakkında veri depolamak için bir dizi kullanabilirsiniz. Dizinin ilk boyutu ayı temsil eder, ancak ikinci boyuttaki gün sayısını temsil eder ve bir ay içindeki gün sayısını Tekdüzen değildir. A *düzensiz dizi*, da adlandırılan bir *dizi*, bu tür senaryolar için tasarlanmıştır. Basit bir dizi, öğeleri dizi da olan bir dizidir. Düzensiz bir dizi ve düzensiz bir dizideki her öğe bir veya daha fazla boyuta sahip olabilir.
+Sometimes the data structure in your application is two-dimensional but not rectangular. For example, you might use an array to store data about the high temperature of each day of the month. The first dimension of the array represents the month, but the second dimension represents the number of days, and the number of days in a month is not uniform. A *jagged array*, which is also called an *array of arrays*, is designed for such scenarios. A jagged array is an array whose elements are also arrays. A jagged array and each element in a jagged array can have one or more dimensions.
 
-Aşağıdaki örnek, her öğesi Günlerden oluşan olan bir dizi ay kullanır. Farklı aylar farklı gün sayılarına sahip olduğundan bu örnek bir düzensiz dizi kullanır.  Örneğin, düzensiz bir dizi oluşturun, bunun için değerler atayın ve almak ve değerlerini görüntülemek gösterilmektedir.
+The following example uses an array of months, each element of which is an array of days. The example uses a jagged array because different months have different numbers of days.  The example shows how to create a jagged array, assign values to it, and retrieve and display its values.
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-Önceki örnekte değerlerini bir öğeye göre temelinde düzensiz dizi kullanarak atar bir `For...Next` döngü. İç içe geçmiş dizi değişmez değerleri kullanarak basit bir dizi öğelerine değerleri de atayabilirsiniz. Ancak, kullanma girişimi iç içe geçmiş dizi değişmez değerleri (örneğin, `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) derleyici hatası oluşturur [BC30568](../../../,,/../misc/bc30568.md). Hatayı düzeltmek için iç diziyi parantez içine alın. Parantezler değerlendirilecek dizi değişmez değer ifadesinin değerlendirilmesini ve aşağıdaki örnekte gösterildiği gibi dış dizi değişmez değeri, sonuçta elde edilen değerleri kullanılır.
+The previous example assigns values to the jagged array on an element-by-element basis by using a `For...Next` loop. You can also assign values to the elements of a jagged array by using nested array literals. However, the attempt to use nested array literals (for example, `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) generates compiler error [BC30568](../../../,,/../misc/bc30568.md). To correct the error, enclose the inner array literals in parentheses. The parentheses force the array literal expression to be evaluated, and the resulting values are used with the outer array literal, as the following example shows.
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
-Düzensiz bir dizi, diziler öğeleri içeren tek boyutlu bir dizidir. Bu nedenle, <xref:System.Array.Length%2A?displayProperty=nameWithType> özelliği ve `Array.GetLength(0)` yöntemi tek boyutlu bir dizideki öğelerin sayısını döndürür ve `Array.GetLength(1)` oluşturur bir <xref:System.IndexOutOfRangeException> düzensiz bir dizi çok boyutlu olmadığı için. Her alt dizinin 's değerini alarak her alt dizinin içindeki öğelerin sayısını belirlemek <xref:System.Array.Length%2A?displayProperty=nameWithType> özelliği. Aşağıdaki örnek, düzensiz bir dizideki öğelerin sayısını belirlemek nasıl gösterir.
+A jagged array is a one-dimensional array whose elements contain arrays. Therefore, the <xref:System.Array.Length%2A?displayProperty=nameWithType> property and the `Array.GetLength(0)` method return the number of elements in the one-dimensional array, and `Array.GetLength(1)` throws an <xref:System.IndexOutOfRangeException> because a jagged array is not multidimensional. You determine the number of elements in each subarray by retrieving the value of each subarray's <xref:System.Array.Length%2A?displayProperty=nameWithType> property. The following example illustrates how to determine the number of elements in a jagged array.
 
 [!code-vb[jagged-array-size](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-length.vb)]
 
-## <a name="zero-length-arrays"></a>Sıfır uzunluklu dizilerin kullanımı
+## <a name="zero-length-arrays"></a>Zero-length arrays
 
-Visual Basic arasında başlatılmamış bir dizi ayırır (değeri olan bir dizi `Nothing`) ve bir *sıfır uzunluklu dizi* veya boş dizi (hiçbir öğe içermeyen bir dizi.) Başlatılmamış bir dizi değil dimensioned bir veya herhangi bir değer atanmış vardı. Örneğin:
+Visual Basic differentiates between a uninitialized array (an array whose value is `Nothing`) and a *zero-length array* or empty array (an array that has no elements.) An uninitialized array is one that has not been dimensioned or had any values assigned to it. Örneğin:
 
 ```vb
 Dim arr() As String
 ```
 
-Sıfır uzunluklu dizi -1 olan bir boyut ile bildirilir. Örneğin:
+A zero-length array is declared with a dimension of -1. Örneğin:
 
 ```vb
 Dim arrZ(-1) As String
 ```
 
-Aşağıdaki koşullarda sıfır uzunlukta bir dizi oluşturmanız gerekebilir:
+You might need to create a zero-length array under the following circumstances:
 
-- Riski olmadan bir <xref:System.NullReferenceException> özel durum, kodunuzu gerekir üyelerine erişme <xref:System.Array> gibi sınıf <xref:System.Array.Length%2A> veya <xref:System.Array.Rank%2A>, veya Visual Basic işlevi çağırmak <xref:Microsoft.VisualBasic.Information.UBound%2A>.
+- Without risking a <xref:System.NullReferenceException> exception, your code must access members of the <xref:System.Array> class, such as <xref:System.Array.Length%2A> or <xref:System.Array.Rank%2A>, or call a Visual Basic function such as <xref:Microsoft.VisualBasic.Information.UBound%2A>.
 
-- Denetlenecek zorunluluğunu ortadan kaldırarak kodunuzu basit tutmak istediğiniz `Nothing` bir özel durum olarak.
+- You want to keep your code simple by not having to check for `Nothing` as a special case.
 
-- Kodunuz, bir veya daha fazla yordamlar için sıfır uzunlukta bir dizi geçirmenizi gerektiren ya da bir veya birden çok sıfır uzunlukta bir dizi döndürür bir uygulama programlama arabirimi (API) ile etkileşim kurar.
+- Your code interacts with an application programming interface (API) that either requires you to pass a zero-length array to one or more procedures or returns a zero-length array from one or more procedures.
 
-## <a name="splitting-an-array"></a>Bir dizi bölme
+## <a name="splitting-an-array"></a>Splitting an array
 
-Bazı durumlarda tek bir dizi birden çok dizisi bölün gerekebilir. Bu noktayı veya dizi Bölünecek olduğu noktaları belirleyerek ve ardından dizi iki veya daha fazla ayrı diziye kopyalamıştır içerir.
+In some cases, you may need to split a single array into multiple arrays. This involves identifying the point or points at which the array is to be split, and then spitting the array into two or more separate arrays.
 
 > [!NOTE]
-> Bu bölümde bazı sınırlayıcıyı dize dizisi olarak tek bir dize bölme ele almaz. Bir dizeyi bölerken hakkında daha fazla bilgi için bkz: <xref:System.String.Split%2A?displayProperty=nameWithType> yöntemi.
+> This section does not discuss splitting a single string into a string array based on some delimiter. For information on splitting a string, see the <xref:System.String.Split%2A?displayProperty=nameWithType> method.
 
-Bir dizi bölme en yaygın ölçütlerini şunlardır:
+The most common criteria for splitting an array are:
 
-- Dizideki öğelerin sayısı Örneğin, birden çok belirtilen sayıda öğeyi bir dizi yaklaşık olarak eşit bölümlerinin sayıya bölmek isteyebilirsiniz. Bu amaçla tarafından döndürülen değer kullanabileceğiniz <xref:System.Array.Length%2A?displayProperty=nameWithType> veya <xref:System.Array.GetLength%2A?displayProperty=nameWithType> yöntemi.
+- Dizideki öğelerin sayısı For example, you might want to split an array of more than a specified number of elements into a number of approximately equal parts. For this purpose, you can use the value returned by either the <xref:System.Array.Length%2A?displayProperty=nameWithType> or <xref:System.Array.GetLength%2A?displayProperty=nameWithType> method.
 
-- Dizi yeri belirten bir sınırlayıcı hizmet veren bir öğenin değerini bölmeniz gerekir. Belirli bir değeri çağırarak arayabilirsiniz <xref:System.Array.FindIndex%2A?displayProperty=nameWithType> ve <xref:System.Array.FindLastIndex%2A?displayProperty=nameWithType> yöntemleri.
+- The value of an element, which serves as a delimiter that indicates where the array should be split. You can search for a specific value by calling the <xref:System.Array.FindIndex%2A?displayProperty=nameWithType> and <xref:System.Array.FindLastIndex%2A?displayProperty=nameWithType> methods.
 
-Dizin veya dizinleri, dizi bölme saptadıktan sonra daha sonra tek tek dizileri çağırarak oluşturabilirsiniz <xref:System.Array.Copy%2A?displayProperty=nameWithType> yöntemi.
+Once you've determined the index or indexes at which the array should be split, you can then create the individual arrays by calling the <xref:System.Array.Copy%2A?displayProperty=nameWithType> method.
 
-Aşağıdaki örnek, bir dizi yaklaşık aynı boyutta iki diziye ayırır. (İlk diziyi dizi öğelerinin toplam sayı tek ise ikinciden bir daha fazla öğe yok.)
+The following example splits an array into two arrays of approximately equal size. (If the total number of array elements is odd, the first array has one more element than the second.)
 
 [!code-vb[splitting-an-array-by-length](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split1.vb)]
 
-Aşağıdaki örnek iki dizi değeri dizi sınırlayıcı hizmet veren "zzz" olan bir öğe olup olmamasına göre bir dize dizisi ayıran. Yeni dizileri sınırlayıcısı içeren öğe içermez.
+The following example splits a string array into two arrays based on the presence of an element whose value is "zzz", which serves as the array delimiter. The new arrays do not include the element that contains the delimiter.
 
 [!code-vb[splitting-an-array-by-delimiter](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split2.vb)]
 
-## <a name="joining-arrays"></a>Diziler katılma
+## <a name="joining-arrays"></a>Joining arrays
 
-Ayrıca, bir sayı dizisi tek büyük bir diziye birleştirebilirsiniz. Bunu yapmak için ayrıca kullandığınız <xref:System.Array.Copy%2A?displayProperty=nameWithType> yöntemi.
+You can also combine a number of arrays into a single larger array. To do this, you also use the <xref:System.Array.Copy%2A?displayProperty=nameWithType> method.
 
 > [!NOTE]
-> Bu bölümde, bir dize dizisi, tek bir dize olarak katılma açıklanmamıştır. Dize dizisi birleştirme hakkında daha fazla bilgi için bkz: <xref:System.String.Join%2A?displayProperty=nameWithType> yöntemi.
+> This section does not discuss joining a string array into a single string. For information on joining a string array, see the <xref:System.String.Join%2A?displayProperty=nameWithType> method.
 
-Yeni bir diziye her dizinin öğeleri kopyalamadan önce böylece yeni bir dizi tutabilecek kadar büyük dizi başlattıysanız ilk sağlamalıdır. Bunu iki yoldan biriyle yapabilirsiniz:
+Before copying the elements of each array into the new array, you must first ensure that you have initialized the array so that it is large enough to accommodate the new array. Bunu iki yoldan biriyle yapabilirsiniz:
 
-- Kullanım [ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md) deyimini yeni öğeleri eklemeden önce bir dizi dinamik olarak genişletin. En kolay yöntemi budur ancak büyük diziler kopyalarken aşırı bellek kullanımı ve performans düşüşü ile sonuçlanabilir.
-- Yeni büyük dizisi için gerekli öğelerin toplam sayısını hesaplama ve her kaynak dizinin öğeleri ekleyin.
+- Use the [`ReDim Preserve`](../../../language-reference/statements/redim-statement.md) statement to dynamically expand the array before adding new elements to it. This is the easiest technique, but it can result in performance degradation and excessive memory consumption when you are copying large arrays.
+- Calculate the total number of elements needed for the new large array, then add the elements of each source array to it.
 
-Aşağıdaki örnek, tek bir dizi dört dizilerle on öğe eklemek için ikinci yaklaşım kullanır.
+The following example uses the second approach to add four arrays with ten elements each to a single array.
 
 [!code-vb[joining-an-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/join.vb)]
 
-Bu durumda kaynak diziler tüm küçük olduğundan, size her yeni dizinin öğeleri eklemek gibi biz de dinamik olarak dizi genişletebilirsiniz. Aşağıdaki örnek yapar.
+Since in this case the source arrays are all small, we can also dynamically expand the array as we add the elements of each new array to it. The following example does that.
 
 [!code-vb[joining-an-array-dynamically](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/join2.vb)]
 
-## <a name="collections-as-an-alternative-to-arrays"></a>Dizilere alternatif olarak koleksiyonlar
+## <a name="collections-as-an-alternative-to-arrays"></a>Collections as an alternative to arrays
 
-Dizileri oluşturmak ve güçlü şekilde yazılan nesnelerin sabit sayıda ile çalışmak için ekseriyetle faydalıdır. Koleksiyonlar nesne grupları ile çalışmak için daha esnek bir yol sağlar. Dizilerden farklı olarak gerektiren açıkça ile bir dizinin boyutunu değiştirmeniz [ `ReDim` deyimi](../../../language-reference/statements/redim-statement.md), koleksiyonlar büyütün ve dinamik bir uygulama değişikliği ihtiyaçlarını Daralt.
+Arrays are most useful for creating and working with a fixed number of strongly typed objects. Collections provide a more flexible way to work with groups of objects. Unlike arrays, which require that you explicitly change the size of an array with the [`ReDim` Statement](../../../language-reference/statements/redim-statement.md), collections grow and shrink dynamically as the needs of an application change.
 
-Kullanırken `ReDim` dizi redimension için Visual Basic yeni bir dizi oluşturur ve önceki sürümleri. Bu, yürütme zamanı alır. Öğelerin sayısı sık sık değişiyorsa veya ihtiyacınız olan çalıştığınız öğe sayısını tahmin edemiyorsanız, bu nedenle, genellikle daha iyi performans bir koleksiyon kullanarak elde.
+When you use `ReDim` to redimension an array, Visual Basic creates a new array and releases the previous one. This takes execution time. Therefore, if the number of items you are working with changes frequently, or you cannot predict the maximum number of items you need, you'll usually obtain better performance by using a collection.
 
-Bazı koleksiyonlar için koleksiyona eklediğiniz ve böylece anahtarını kullanarak hızlı bir şekilde nesnesi alabilirsiniz herhangi bir nesneye bir anahtar atayabilirsiniz.
+For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
 
-Koleksiyonunuz tek bir veri türünde öğeler içeriyorsa, sınıflarda birini kullanabilirsiniz <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanı. Genel koleksiyon tür güvenliği sağlar, böylece başka bir veri türü eklenebilir.
+If your collection contains elements of only one data type, you can use one of the classes in the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace. A generic collection enforces type safety so that no other data type can be added to it.
 
-Koleksiyonlar hakkında daha fazla bilgi için bkz. [koleksiyonları](../../concepts/collections.md).
+For more information about collections, see [Collections](../../concepts/collections.md).
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Terim|Tanım|
 |----------|----------------|
-|[Visual Basic'de dizi boyutları](../../language-features/arrays/array-dimensions.md)|Boyut sayısı ve boyutları açıklar.|
-|[Nasıl yapılır: Visual Basic'te dizi değişkeni başlatma](../../language-features/arrays/how-to-initialize-an-array-variable.md)|İlk değerlerle dizilerin doldurmak açıklar.|
-|[Nasıl yapılır: Visual Basic'te dizi Sırala](../../language-features/arrays/how-to-sort-an-array.md)|Bir dizinin öğeleri alfabetik olarak sıralamak gösterilmektedir.|
-|[Nasıl yapılır: Bir diziyi başka diziye atama](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Bir dizi başka bir dizi değişkenine atamak için adımları ve kuralları açıklar.|
-|[Dizilerle İlgili Sorun Giderme](../../language-features/arrays/troubleshooting-arrays.md)|Dizilerle çalışırken ortaya çıkan bazı ortak sorunları açıklar.|
+|[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|Explains rank and dimensions in arrays.|
+|[How to: Initialize an Array Variable in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Describes how to populate arrays with initial values.|
+|[How to: Sort An Array in Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Shows how to sort the elements of an array alphabetically.|
+|[Nasıl yapılır: Bir Diziyi Başka Diziye Atama](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Describes the rules and steps for assigning an array to another array variable.|
+|[Dizilerle İlgili Sorun Giderme](../../language-features/arrays/troubleshooting-arrays.md)|Discusses some common problems that arise when working with arrays.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

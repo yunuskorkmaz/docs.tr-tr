@@ -8,27 +8,26 @@ dev_langs:
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 272c224c8a1c5061392856685f374237f8a10579
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 9b456dc407f634e7f40f69bbac9b6d932f1f4420
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956868"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350702"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>DOM Özniteliklerine Erişim
 
-Öznitelikleri, öğesinin alt öğesi değil, öğesinin özelliklerdir. Bu ayrım, XML Belge Nesne Modeli (DOM) eşdüzey, üst ve alt düğümlerine gitmek için kullanılan yöntemler nedeniyle önemlidir. Örneğin, **previouseşdüzey** ve **nexteşdüzey** Yöntemler bir öğeden bir özniteliğe veya öznitelikler arasında gezinmek için kullanılmaz. Bunun yerine, bir özniteliği bir öğesinin özelliğidir ve bir öğesi tarafından sahiplenilir ve **ParentNode** özelliğine **sahip** değildir ve farklı gezinme yöntemlerine sahiptir.
+Attributes are properties of the element, not children of the element. This distinction is important because of the methods used to navigate sibling, parent, and child nodes of the XML Document Object Model (DOM). For example, the **PreviousSibling** and **NextSibling** methods are not used to navigate from an element to an attribute or between attributes. Instead, an attribute is a property of an element and is owned by an element, has an **OwnerElement** property and not a **parentNode** property, and has distinct methods of navigation.
 
-Geçerli düğüm bir öğe olduğunda, öğesiyle ilişkili herhangi bir öznitelik olup olmadığını görmek için **HasAttribute** metodunu kullanın. Bir öğenin öznitelikleri olduğu bilindiğinde, özniteliklere erişmek için birden çok yöntem vardır. Öğesinden tek bir özniteliği almak için, **XmlElement** 'Nin **GetAttribute** ve **GetAttributeNode** yöntemlerini kullanabilirsiniz veya tüm öznitelikleri bir koleksiyonda elde edebilirsiniz. Koleksiyonu yinelemek gerekirse, koleksiyonu almak yararlı olur. Öğesinin tüm özniteliklerini istiyorsanız, tüm özniteliklerini bir koleksiyona almak için öğesinin **Attributes** özelliğini kullanın.
+When the current node is an element, use the **HasAttribute** method to see if there are any attributes associated with the element. Once it is known that an element has attributes, there are multiple methods for accessing attributes. To retrieve a single attribute from the element, you can use the **GetAttribute** and **GetAttributeNode** methods of the **XmlElement** or you can obtain all the attributes into a collection. Obtaining the collection is useful if you need to iterate over the collection. If you want all attributes from the element, use the **Attributes** property of the element to retrieve all the attributes into a collection.
 
-## <a name="retrieving-all-attributes-into-a-collection"></a>Tüm öznitelikleri bir koleksiyona alma
+## <a name="retrieving-all-attributes-into-a-collection"></a>Retrieving All Attributes into a Collection
 
-Bir öğe düğümünün tüm özniteliklerinin bir koleksiyona yerleştirileceğini istiyorsanız, **XmlElement. Attributes** özelliğini çağırın. Bu, bir öğenin tüm özniteliklerini içeren **XmlAttributeCollection** 'ı alır. **XmlAttributeCollection** sınıfı **xmlnamednode** eşlemesinden devralır. Bu nedenle, koleksiyonda bulunan Yöntemler ve özellikler, **XmlAttributeCollection** sınıfına özgü yöntemlere ve özelliklere ek olarak adlandırılmış bir düğüm eşlemesinde bulunan özellikleri içerir, örneğin **ItemOf** özelliği veya **append** yöntemi. Öznitelik koleksiyonundaki her öğe bir **XmlAttribute** düğümünü temsil eder. Bir öğedeki öznitelik sayısını bulmak için **XmlAttributeCollection**' ı alın ve koleksiyonda kaç **XmlAttribute** düğümünün olduğunu görmek için **Count** özelliğini kullanın.
+If you want all the attributes of an element node put into a collection, call the **XmlElement.Attributes** property. This gets the **XmlAttributeCollection** that contains all the attributes of an element. The **XmlAttributeCollection** class inherits from the **XmlNamedNode** map. Therefore, the methods and properties available on the collection include those available on a named node map in addition to methods and properties specific to the **XmlAttributeCollection** class, such as the **ItemOf** property or the **Append** method. Each item in the attribute collection represents an **XmlAttribute** node. To find the number of attributes on an element, get the **XmlAttributeCollection**, and use the **Count** property to see how many **XmlAttribute** nodes are in the collection.
 
-Aşağıdaki kod örneği, bir öznitelik koleksiyonunun nasıl alınacağını ve döngü dizini için **Count** yönteminin nasıl kullanılacağını gösterir. Kod bundan sonra koleksiyondan tek bir özniteliğin nasıl alınacağını ve değerinin nasıl görüntüleneceğini gösterir.
+The following code example shows how to retrieve an attribute collection and, using the **Count** method for the looping index, iterate over it. The code then shows how to retrieve a single attribute from the collection and display its value.
 
 ```vb
-Imports System
 Imports System.IO
 Imports System.Xml
 
@@ -116,11 +115,11 @@ public class Sample
 }
 ```
 
-Bu örnek aşağıdaki çıktıyı görüntüler:
+This example displays the following output:
 
 **Output**
 
-Koleksiyondaki tüm öznitelikleri görüntüleyin.
+Display all the attributes in the collection.
 
 ```console
 genre = novel
@@ -130,9 +129,9 @@ Display the attribute information.
 sale item
 ```
 
-Bir öznitelik koleksiyonundaki bilgiler, ad veya dizin numarası ile alınabilir. Yukarıdaki örnekte, verilerin ada göre nasıl alınacağını gösterilmektedir. Sonraki örnek, verilerin dizin numarasına göre nasıl alınacağını gösterir.
+The information in an attribute collection can be retrieved by name or index number. The example above shows how to retrieve data by name. The next example shows how to retrieve data by index number.
 
-**XmlAttributeCollection** bir koleksiyon olduğundan ve ad ya da dizine göre yinelenebilir olduğundan, bu örnek, sıfır tabanlı bir dizin kullanarak koleksiyonun ilk özniteliğini seçip giriş olarak **baseUri. xml**dosyasını kullanarak gösterir.
+Because the **XmlAttributeCollection** is a collection and can be iterated over by name or index, this example shows selecting the first attribute out of the collection using a zero-based index and using the following file, **baseuri.xml**, as input.
 
 ### <a name="input"></a>Giriş
 
@@ -147,7 +146,6 @@ Bir öznitelik koleksiyonundaki bilgiler, ad veya dizin numarası ile alınabili
 Option Explicit On
 Option Strict On
 
-Imports System
 Imports System.IO
 Imports System.Xml
 
@@ -192,12 +190,11 @@ public class Sample
 }
 ```
 
-## <a name="retrieving-an-individual-attribute-node"></a>Tek bir öznitelik düğümünü alma
+## <a name="retrieving-an-individual-attribute-node"></a>Retrieving an Individual Attribute Node
 
-Bir öğeden tek bir öznitelik düğümü almak için <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType> yöntemi kullanılır. **XmlAttribute**türünde bir nesne döndürür. Bir **XmlAttribute**olduktan sonra, <xref:System.Xml.XmlAttribute?displayProperty=nameWithType> sınıfında bulunan tüm yöntemler ve özellikler, **Owner öğesini**bulma gibi bu nesnede kullanılabilir.
+To retrieve a single attribute node from an element, the <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType> method is used. It returns an object of type **XmlAttribute**. Once you have an **XmlAttribute**, all the methods and properties available in the <xref:System.Xml.XmlAttribute?displayProperty=nameWithType> class are available on that object, such as finding the **OwnerElement**.
 
 ```vb
-Imports System
 Imports System.IO
 Imports System.Xml
 
@@ -257,7 +254,7 @@ using System.Xml;
 }
 ```
 
-Ayrıca, bir önceki örnekte gösterildiği gibi, öznitelik koleksiyonundan tek bir öznitelik düğümü alındığında da yapabilirsiniz. Aşağıdaki kod örneği, **DocumentElement** özelliği olarak da bilinen XML belge ağacının kökünden dizin numarasıyla tek bir özniteliği almak için nasıl bir kod satırı yazılacağını gösterir.
+You can also do as shown in the previous example, where a single attribute node is retrieved from the attribute collection. The following code example shows how one line of code can be written to retrieve a single attribute by index number from the root of the XML document tree, also known as the **DocumentElement** property.
 
 ```csharp
 XmlAttribute attr = doc.DocumentElement.Attributes[0];

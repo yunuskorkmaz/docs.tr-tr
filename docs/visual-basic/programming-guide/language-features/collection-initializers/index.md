@@ -1,94 +1,94 @@
 ---
-title: Koleksiyon Başlatıcıları (Visual Basic)
+title: Koleksiyon Başlatıcıları
 ms.date: 07/20/2015
 f1_keywords:
 - vb.CollectionInitializer
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: 538efc11e477a4e90b7bca286da4ed56105d7ecb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbdd116298c530ae54677631eff7dac2f22c0fe2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906834"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346775"
 ---
 # <a name="collection-initializers-visual-basic"></a>Koleksiyon Başlatıcıları (Visual Basic)
 
-*Koleksiyon başlatıcıları* bir koleksiyon oluşturun ve başlangıç değer kümesi ile doldurmak sağlayan bir kısaltılmış sözdizimi sağlar. Koleksiyon başlatıcıları, bilinen değerler, örneğin, menü seçeneklerini veya kategoriler, başlangıç bir sayısal değer kümesi, bir statik bir gün veya ay adları veya coğrafi konumları gibi gibi dize listesi listesi koleksiyonundan oluştururken kullanışlı bir doğrulama için kullanılan durumların listesi.
+*Collection initializers* provide a shortened syntax that enables you to create a collection and populate it with an initial set of values. Collection initializers are useful when you are creating a collection from a set of known values, for example, a list of menu options or categories, an initial set of numeric values, a static list of strings such as day or month names, or geographic locations such as a list of states that is used for validation.
 
-Koleksiyonlar hakkında daha fazla bilgi için bkz. [koleksiyonları](../../../../visual-basic/programming-guide/concepts/collections.md).
+For more information about collections, see [Collections](../../../../visual-basic/programming-guide/concepts/collections.md).
 
-Koleksiyon Başlatıcısı kullanarak tanımlamak `From` anahtar sözcüğünü ayraçları (`{}`). Bu bölümünde açıklanan dizi değişmez değer sözdizimine benzer [diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md). Aşağıdaki örnekler, koleksiyon başlatıcıları koleksiyonları oluşturmak için kullanmak için çeşitli yollar gösterir.
+You identify a collection initializer by using the `From` keyword followed by braces (`{}`). This is similar to the array literal syntax that is described in [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md). The following examples show various ways to use collection initializers to create collections.
 
 [!code-vb[VbVbalrCollectionInitializers#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#1)]
 
 > [!NOTE]
-> C# koleksiyon başlatıcıları de sağlar. Koleksiyon başlatıcıları C#, Visual Basic koleksiyon başlatıcıları aynı işlevleri sağlar. C# koleksiyon başlatıcıları hakkında daha fazla bilgi için bkz: [nesne ve koleksiyon başlatıcıları](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).
+> C# also provides collection initializers. C# collection initializers provide the same functionality as Visual Basic collection initializers. For more information about C# collection initializers, see [Object and Collection Initializers](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).
 
 ## <a name="syntax"></a>Sözdizimi
 
-Küme ayraçları içine alınmış bir virgülle ayrılmış değerler listesi, bir koleksiyon Başlatıcısı oluşur (`{}`), öncesinde `From` anahtar sözcüğü, aşağıdaki kodda gösterildiği gibi.
+A collection initializer consists of a list of comma-separated values that are enclosed in braces (`{}`), preceded by the `From` keyword, as shown in the following code.
 
 [!code-vb[VbVbalrCollectionInitializers#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#2)]
 
-Oluşturduğunuzda, bir toplama gibi bir <xref:System.Collections.Generic.List%601> veya <xref:System.Collections.Generic.Dictionary%602>, aşağıdaki kodda gösterildiği gibi koleksiyon başlatıcısı önce koleksiyon türü sağlamalısınız.
+When you create a collection, such as a <xref:System.Collections.Generic.List%601> or a <xref:System.Collections.Generic.Dictionary%602>, you must supply the collection type before the collection initializer, as shown in the following code.
 
 [!code-vb[VbVbalrCollectionInitializers#13](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#13)]
 
 > [!NOTE]
-> Aynı koleksiyon nesnesini başlatmak için bir koleksiyon Başlatıcısı ile bir nesne Başlatıcı birleştirin olamaz. Nesne başlatıcıları, nesneleri bir koleksiyon başlatıcısında başlatmak için kullanabilirsiniz.
+> You cannot combine both a collection initializer and an object initializer to initialize the same collection object. You can use object initializers to initialize objects in a collection initializer.
 
-## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Koleksiyon Başlatıcısı kullanarak bir koleksiyon oluşturma
+## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Creating a Collection by Using a Collection Initializer
 
-Koleksiyon Başlatıcısı kullanarak bir koleksiyon oluşturduğunuzda, koleksiyon başlatıcısı tarafından sağlanan her bir değeri uygun geçirilir `Add` koleksiyonun yöntemi. Örneğin, oluşturduğunuz bir <xref:System.Collections.Generic.List%601> koleksiyon Başlatıcısı kullanarak, her koleksiyon başlatıcısı bir dize değeri geçirilir <xref:System.Collections.Generic.List%601.Add%2A> yöntemi. Belirtilen tür, bir koleksiyon Başlatıcısı kullanarak oluşturmak istiyorsanız, geçerli koleksiyon türü olması gerekir. Geçerli koleksiyon türleri uygulayan sınıflar içeren <xref:System.Collections.Generic.IEnumerable%601> arabirim veya devralınan <xref:System.Collections.CollectionBase> sınıfı. Belirtilen tür de ortaya koymalıdır bir `Add` aşağıdaki ölçütlere uyan yöntemi.
+When you create a collection by using a collection initializer, each value that is supplied in the collection initializer is passed to the appropriate `Add` method of the collection. For example, if you create a <xref:System.Collections.Generic.List%601> by using a collection initializer, each string value in the collection initializer is passed to the <xref:System.Collections.Generic.List%601.Add%2A> method. If you want to create a collection by using a collection initializer, the specified type must be valid collection type. Examples of valid collection types include classes that implement the <xref:System.Collections.Generic.IEnumerable%601> interface or inherit the <xref:System.Collections.CollectionBase> class. The specified type must also expose an `Add` method that meets the following criteria.
 
-- `Add` Yöntemi kullanılabilir olmalıdır, koleksiyon Başlatıcısı çağrılan kapsam. `Add` Yöntemi ortak olmayan yöntemlere koleksiyonun burada erişilebilir bir senaryoda koleksiyon Başlatıcısı kullanıyorsanız ortak olması gerekmez.
+- The `Add` method must be available from the scope in which the collection initializer is being called. The `Add` method does not have to be public if you are using the collection initializer in a scenario where non-public methods of the collection can be accessed.
 
-- `Add` Yöntemi bir örnek üyesi olmalıdır veya `Shared` koleksiyon sınıfı veya bir genişletme yöntemi üyesi.
+- The `Add` method must be an instance member or `Shared` member of the collection class, or an extension method.
 
-- Bir `Add` yöntemi bulunmalıdır eşleşebilecek, koleksiyon Başlatıcısı sağlanan türler için aşırı yükleme çözünürlüğü kurallarına göre.
+- An `Add` method must exist that can be matched, based on overload resolution rules, to the types that are supplied in the collection initializer.
 
- Örneğin, aşağıdaki kod örneğinde nasıl oluşturulacağını gösterir bir `List(Of Customer)` koleksiyon Başlatıcısı kullanarak koleksiyonu. Kod çalıştırdığınızda, her `Customer` nesnesi `Add(Customer)` genel listenin yöntemi.
+ For example, the following code example shows how to create a `List(Of Customer)` collection by using a collection initializer. When the code is run, each `Customer` object is passed to the `Add(Customer)` method of the generic list.
 
 [!code-vb[VbVbalrCollectionInitializers#9](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#9)]
 
-Aşağıdaki kod örneği, bir koleksiyon Başlatıcısı kullanmaz eşdeğer kod gösterir.
+The following code example shows equivalent code that does not use a collection initializer.
 
 [!code-vb[VbVbalrCollectionInitializers#10](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#10)]
 
-Koleksiyon varsa bir `Add` Oluşturucusu eşleşen parametrelere sahip yöntemi `Customer` nesnesi, parametre değerlerini içe `Add` yöntemi içinde koleksiyon başlatıcıları, sonraki bölümde açıklandığı gibi. Koleksiyon gibi yoksa bir `Add` yöntemi oluşturmak için kullanabileceğiniz bir genişletme yöntemi olarak. Oluşturma örneği için bir `Add` yöntemi bir koleksiyon için bir genişletme yöntemi olarak bkz [nasıl yapılır: Oluşturma bir koleksiyon başlatıcısı tarafından kullanılan uzantı ekleme metodu](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Koleksiyon Başlatıcısı ile kullanılabilecek özel bir koleksiyon oluşturma örneği için bkz: [nasıl yapılır: Koleksiyon başlatıcısı tarafından kullanılan bir koleksiyon oluşturma](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).
+If the collection has an `Add` method that has parameters that match the constructor for the `Customer` object, you could nest parameter values for the `Add` method within collection initializers, as discussed in the next section. If the collection does not have such an `Add` method, you can create one as an extension method. For an example of how to create an `Add` method as an extension method for a collection, see [How to: Create an Add Extension Method Used by a Collection Initializer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). For an example of how to create a custom collection that can be used with a collection initializer, see [How to: Create a Collection Used by a Collection Initializer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).
 
-## <a name="nesting-collection-initializers"></a>Koleksiyon başlatıcıları iç içe geçirme
+## <a name="nesting-collection-initializers"></a>Nesting Collection Initializers
 
-Değerleri belirli bir aşırı yüklemesini tanımlamak için bir koleksiyon Başlatıcısı içinde iç içe bir `Add` oluşturulan koleksiyon için yöntemi. Geçirilen değerlerin `Add` yöntemi virgülle ayırarak ve ayraçlar içinde (`{}`), bir dizi değişmez değeri ya da koleksiyon Başlatıcısı içinde yaptığınız gibi.
+You can nest values within a collection initializer to identify a specific overload of an `Add` method for the collection that is being created. The values passed to the `Add` method must be separated by commas and enclosed in braces (`{}`), like you would do in an array literal or collection initializer.
 
-İç içe geçmiş değerleri kullanarak bir koleksiyon oluşturduğunuzda, iç içe geçmiş değer listedeki her öğe için bir bağımsız değişken olarak geçirilir `Add` öğe türleri eşleşen yöntemi. Örneğin, aşağıdaki kod örneği oluşturur bir <xref:System.Collections.Generic.Dictionary%602> türünü anahtarları olan içinde `Integer` ve türünde değerleri olan `String`. Her iç içe geçmiş değer listeleri için eşleştirilir <xref:System.Collections.Generic.Dictionary%602.Add%2A> yöntemi `Dictionary`.
+When you create a collection by using nested values, each element of the nested value list is passed as an argument to the `Add` method that matches the element types. For example, the following code example creates a <xref:System.Collections.Generic.Dictionary%602> in which the keys are of type `Integer` and the values are of type `String`. Each of the nested value lists is matched to the <xref:System.Collections.Generic.Dictionary%602.Add%2A> method for the `Dictionary`.
 
 [!code-vb[VbVbalrCollectionInitializers#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#5)]
 
-Önceki kod örneğinde, aşağıdaki koda eşdeğerdir.
+The previous code example is equivalent to the following code.
 
 [!code-vb[VbVbalrCollectionInitializers#6](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#6)]
 
-Yalnızca iç içe geçmiş değer listelerinden ilk iç içe geçme düzeyini gönderilen `Add` yöntemi için koleksiyon türü. Daha derin iç içe geçme düzeyi dizi değişmez değer olarak kabul edilir ve iç içe geçmiş değer listeleri için eşleşmeyen `Add` yöntemi herhangi bir koleksiyon.
+Only nested value lists from the first level of nesting are sent to the `Add` method for the collection type. Deeper levels of nesting are treated as array literals and the nested value lists are not matched to the `Add` method of any collection.
 
 ## <a name="related-topics"></a>İlgili Konular
 
 |Başlık|Açıklama|
 |---|---|
-|[Nasıl yapılır: Oluşturma bir koleksiyon başlatıcısı tarafından kullanılan uzantı ekleme metodu](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Adlı bir genişletme yöntemi oluşturma işlemi gösterilmektedir `Add` bir koleksiyon Başlatıcısı değerlerle doldurmak için kullanılabilir.|
-|[Nasıl yapılır: Koleksiyon başlatıcısı tarafından kullanılan bir koleksiyon oluşturma](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Dahil ederek bir koleksiyon Başlatıcısı kullanımını etkinleştirmek gösterilmiştir bir `Add` yöntemini uygulayan bir koleksiyon sınıfı `IEnumerable`.|
+|[Nasıl yapılır: Öğe Başlatıcısı Tarafından Kullanılan Bir Uzantı Ekleme Yöntemi Oluşturma](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Shows how to create an extension method called `Add` that can be used to populate a collection with values from a collection initializer.|
+|[Nasıl yapılır: Öğe Başlatıcısı Tarafından Kullanılan Bir Koleksiyon Oluşturma](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Shows how to enable use of a collection initializer by including an `Add` method in a collection class that implements `IEnumerable`.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Koleksiyonlar](../../../../visual-basic/programming-guide/concepts/collections.md)
 - [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [New İşleci](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [Otomatik Uygulanan Özellikler](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [Nasıl yapılır: Visual Basic'te dizi değişkeni başlatma](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
 - [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Nasıl yapılır: Öğe listesi oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Nasıl yapılır: Öğe Listesi Oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)

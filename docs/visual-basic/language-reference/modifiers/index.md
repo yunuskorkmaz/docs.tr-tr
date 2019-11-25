@@ -1,16 +1,16 @@
 ---
-title: Değiştiriciler (Visual Basic)
+title: Değiştiriciler
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 466d69ec966037ae3a980bba381fc61be52f30e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0379a0d0571a66bda4df06f5c2d3282d80034cae
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051188"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351535"
 ---
 # <a name="modifiers-visual-basic"></a>Değiştiriciler (Visual Basic)
-Bu bölümdeki konular, Visual Basic çalışma zamanı değiştiriciler belgeleyin.  
+The topics in this section document Visual Basic run-time modifiers.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
@@ -29,13 +29,13 @@ Bu bölümdeki konular, Visual Basic çalışma zamanı değiştiriciler belgele
   
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
- [İçinde](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
+ [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
   
  [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)  
   
  [Key](../../../visual-basic/language-reference/modifiers/key.md)  
   
- [Modül \<anahtar sözcüğü >](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
+ [Module \<keyword>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
   
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
@@ -49,7 +49,7 @@ Bu bölümdeki konular, Visual Basic çalışma zamanı değiştiriciler belgele
   
  [Optional](../../../visual-basic/language-reference/modifiers/optional.md)  
   
- [Çıkış](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
+ [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
  [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   

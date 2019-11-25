@@ -1,5 +1,5 @@
 ---
-title: Return Deyimi (Visual Basic)
+title: Return Deyimi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Return
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: edaaf09f5a984344f7e89c9da988c529774934e9
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: efc85a3a844898345aa2d16926ba0e35d7346d1b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583265"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333009"
 ---
 # <a name="return-statement-visual-basic"></a>Return Deyimi (Visual Basic)
-@No__t_0, `Sub`, `Get`, `Set` veya `Operator` yordamı çağıran koda denetim döndürür.  
+Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,22 +27,22 @@ Return
 Return expression  
 ```  
   
-## <a name="part"></a>Bölümüyle  
+## <a name="part"></a>Part  
  `expression`  
- @No__t_0, `Get` veya `Operator` yordamında gereklidir. Çağırma koduna döndürülecek değeri temsil eden ifade.  
+ Required in a `Function`, `Get`, or `Operator` procedure. Expression that represents the value to be returned to the calling code.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir `Sub` veya `Set` yordamında `Return`, bir `Exit Sub` veya `Exit Property` ifadesiyle eşdeğerdir ve `expression` sağlanmamalıdır.  
+ In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.  
   
- @No__t_0, `Get` veya `Operator` yordamında, `Return` deyimin `expression` içermesi gerekir ve `expression` yordamın dönüş türüne dönüştürülebilir bir veri türü olarak değerlendirilmelidir. Bir `Function` veya `Get` yordamında, dönüş değeri olarak kullanılacak yordam adına bir ifade atama ve sonra bir `Exit Function` ya da `Exit Property` deyimi yürütme alternatifi de vardır. @No__t_0 yordamında `Return expression` kullanmanız gerekir.  
+ In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure. In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement. In an `Operator` procedure, you must use `Return expression`.  
   
- Aynı yordamda uygun olan çok sayıda `Return` deyimi ekleyebilirsiniz.  
+ You can include as many `Return` statements as appropriate in the same procedure.  
   
 > [!NOTE]
-> Bir `Finally` bloğundaki kod, bir `Try` `Return` deyimden sonra çalışır, ancak bu `Return` deyimin yürütmeden önce `Catch` bloğunda. Bir `Return` deyimleri, bir `Finally` bloğuna dahil edilemez.  
+> The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes. A `Return` statement cannot be included in a `Finally` block.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, yordamı başka bir şey yapmak zorunda olmadığında çağırma koduna geri dönmek için `Return` ifadesini birkaç kez kullanır.  
+ The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   

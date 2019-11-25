@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Belirli bir özniteliğe (C#) sahip bir öğe bulun'
+title: Belirli bir özniteliğe (C#) sahip bir öğe bulma
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: da2d1691af6268a97e1f586e92c26bbb26906100
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 106885b8658c493caab3101e6b4ce921589076eb
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593599"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141156"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Nasıl yapılır: Belirli bir özniteliğe (C#) sahip bir öğe bulun
+# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Belirli bir özniteliğe (C#) sahip bir öğe bulma
 Bu konu, belirli bir değere sahip bir özniteliğe sahip olan bir öğenin nasıl bulunacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Örnek, "Faturalandırma" değerine sahip `Address` bir `Type` özniteliğe sahip olan öğenin nasıl bulunacağını gösterir.  
+ Örnek, "Faturalandırma" değerine sahip bir `Type` özniteliğine sahip `Address` öğesinin nasıl bulunacağını gösterir.  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Tipik satın alma siparişi (LINQ to XML](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: tipik satın alma siparişi (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrder.xml");  
@@ -43,7 +43,7 @@ foreach (XElement el in address)
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Bir ad alanında](./sample-xml-file-typical-purchase-order-in-a-namespace.md)tipik satın alma siparişi.  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında tipik satın alma siparişi](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrderInNamespace.xml");  

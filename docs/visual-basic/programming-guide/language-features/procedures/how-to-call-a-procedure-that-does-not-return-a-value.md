@@ -1,30 +1,30 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) bir değer döndürmeyen bir yordam çağırma'
+title: 'Nasıl yapılır: Değer Döndürmeyen Bir Yordam Çağırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-ms.openlocfilehash: 6e3ce2a184ca5411a6a016929a16bf3d67e669ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a5de98c6edf795a11bd9f0465aa6919f09eebfa
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864240"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340954"
 ---
-# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir değer döndürmeyen bir yordam çağırma
-A `Sub` yordamın çağrıldığı koda bir değer döndürmüyor. Bunu açıkça çağıran bir tek başına deyimiyle çağırmanız. Bir ifade içinde adını kullanarak çağrılamıyor.  
+# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Nasıl yapılır: Değer Döndürmeyen Bir Yordam Çağırma (Visual Basic)
+A `Sub` procedure does not return a value to the calling code. You call it explicitly with a stand-alone calling statement. You cannot call it by simply using its name within an expression.  
   
-### <a name="to-call-a-sub-procedure"></a>Bir alt yordam çağırmak için  
+### <a name="to-call-a-sub-procedure"></a>To call a Sub procedure  
   
-1. Adını `Sub` yordamı.  
+1. Specify the name of the `Sub` procedure.  
   
-2. Parantez içine bağımsız değişken listesi için yordamın adıyla izleyin. Hiçbir bağımsız değişken varsa, isteğe bağlı olarak ayraçları atlayabilirsiniz. Ancak, parantezler kullanarak kodunuzu okumayı kolaylaştırır.  
+2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
   
-3. Bağımsız değişken listesi parantezlerinin virgülle ayırarak yerleştirin. Bağımsız değişkenler aynı sırada sağladığınız emin olun, `Sub` yordamı karşılık gelen parametreleri tanımlar.  
+3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Sub` procedure defines the corresponding parameters.  
   
-     Aşağıdaki örnek, Visual Basic çağırır <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> uygulama penceresini etkinleştirmek için işlevi. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> pencere başlığı tek bağımsız değişken olarak alır. Çağrıldığı koda bir değer döndürmez. Bir not defteri işlemi çalışmıyor, örneği oluşturur. bir <xref:System.ArgumentException>. `Shell` Yordam uygulamalardır belirtilen yolda varsayar.  
+     The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> function to activate an application window. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> takes the window title as its sole argument. It does not return a value to the calling code. If a Notepad process is not running, the example throws an <xref:System.ArgumentException>. The `Shell` procedure assumes the applications are in the paths specified.  
   
      [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
   
@@ -36,6 +36,6 @@ A `Sub` yordamın çağrıldığı koda bir değer döndürmüyor. Bunu açıkç
 - [Alt Yordamlar](./sub-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Nasıl yapılır: Bir yordam oluşturma](./how-to-create-a-procedure.md)
-- [Nasıl yapılır: Bir değer döndüren bir yordam çağırma](./how-to-call-a-procedure-that-returns-a-value.md)
-- [Nasıl yapılır: Visual Basic olay işleyicisi çağırma](./how-to-call-an-event-handler.md)
+- [Nasıl yapılır: Yordam Oluşturma](./how-to-create-a-procedure.md)
+- [Nasıl yapılır: Değer Döndüren Bir Yordam Çağırma](./how-to-call-a-procedure-that-returns-a-value.md)
+- [How to: Call an Event Handler in Visual Basic](./how-to-call-an-event-handler.md)

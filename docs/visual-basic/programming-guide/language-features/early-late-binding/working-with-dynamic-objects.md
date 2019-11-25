@@ -1,26 +1,26 @@
 ---
-title: Dinamik Nesnelerle Çalışma (Visual Basic)
+title: Dinamik Nesnelerle Çalışma
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic objects [Visual Basic]
 ms.assetid: bdee2a00-07ff-46f9-86dd-fdac9b99cc97
-ms.openlocfilehash: ea7d7aae1cd79a0243a9c721b5e3958fba82f84f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20d007fb48e1db352bab6d8e25d2e60e02554732
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973192"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345172"
 ---
 # <a name="working-with-dynamic-objects-visual-basic"></a>Dinamik Nesnelerle Çalışma (Visual Basic)
-Dinamik nesneler sağlayan başka bir deyişle, dışındaki `Object` türüne, nesneye geç bağlama çalışma zamanında. Dinamik Nesne, tanımlanan dinamik arabirimleri kullanarak çalışma zamanında özellikler ve yöntemler gibi üyeleri sunan <xref:System.Dynamic> ad alanı. Sınıfları kullanabilirsiniz <xref:System.Dynamic> bir statik türü veya biçimi eşleşmeyen veri yapıları ile çalışma nesneleri oluşturmak için ad alanı. IronPython ve Ironruby gibi dinamik dilleri tanımlanan dinamik nesneler de kullanabilirsiniz. Dinamik nesneler oluşturma veya dinamik dilinde tanımlandığı bir dinamik nesnesini gösteren örnekler için bkz: [izlenecek yol: Dinamik nesneler oluşturma ve kullanma](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md), <xref:System.Dynamic.DynamicObject>, veya <xref:System.Dynamic.ExpandoObject>.  
+Dynamic objects provide another way, other than the `Object` type, to late bind to an object at run time. A dynamic object exposes members such as properties and methods at run time by using dynamic interfaces that are defined in the <xref:System.Dynamic> namespace. You can use the classes in the <xref:System.Dynamic> namespace to create objects that work with data structures that do not match a static type or format. You can also use the dynamic objects that are defined in dynamic languages such as IronPython and IronRuby. For examples that show how to create dynamic objects or use a dynamic object defined in a dynamic language, see [Walkthrough: Creating and Using Dynamic Objects](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md), <xref:System.Dynamic.DynamicObject>, or <xref:System.Dynamic.ExpandoObject>.  
   
- Visual Basic bağlar nesnelere dinamik dil çalışma zamanı ve IronPython ve Ironruby gibi dinamik dilleri kullanarak <xref:System.Dynamic.IDynamicMetaObjectProvider> arabirimi. Uygulayan sınıflar örnekleri `IDynamicMetaObjectProvider` arabirimi <xref:System.Dynamic.DynamicObject> ve <xref:System.Dynamic.ExpandoObject> sınıfları.  
+ Visual Basic binds to objects from the dynamic language runtime and dynamic languages such as IronPython and IronRuby by using the <xref:System.Dynamic.IDynamicMetaObjectProvider> interface. Examples of classes that implement the `IDynamicMetaObjectProvider` interface are the <xref:System.Dynamic.DynamicObject> and <xref:System.Dynamic.ExpandoObject> classes.  
   
- Geç bağlama çağrı uygulayan bir nesne için yapılması durumunda `IDynamicMetaObjectProvider` arabirim, o arabirimini kullanarak dinamik nesnesine Visual Basic bağlar. Uygulamayan bir nesneye bir geç bağlanan çağrı yapılırsa `IDynamicMetaObjectProvider` arabirimi veya çağrı `IDynamicMetaObjectProvider` arabirimi başarısız olursa, Visual Basic, Visual Basic çalışma zamanı geç bağlama özellikleri kullanarak nesnesine bağlar.  
+ If a late-bound call is made to an object that implements the `IDynamicMetaObjectProvider` interface, Visual Basic binds to the dynamic object by using that interface. If a late-bound call is made to an object that does not implement the `IDynamicMetaObjectProvider` interface, or if the call to the `IDynamicMetaObjectProvider` interface fails, Visual Basic binds to the object by using the late-binding capabilities of the Visual Basic runtime.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Dynamic.DynamicObject>
 - <xref:System.Dynamic.ExpandoObject>
-- [İzlenecek yol: Dinamik nesneler oluşturma ve kullanma](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [Walkthrough: Creating and Using Dynamic Objects](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
 - [Erken ve Geç Bağlama](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)

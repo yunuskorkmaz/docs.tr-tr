@@ -1,89 +1,89 @@
 ---
-title: Dize İşlevleri (Visual Basic)
+title: Dize İşlevleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 0002a3dd19b493f690f91f9b6c68a9241e6d6ea0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 2608159e28ee63a0fdb10c82054fd65efe79ac62
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582997"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349973"
 ---
 # <a name="string-functions-visual-basic"></a>Dize İşlevleri (Visual Basic)
 
-Aşağıdaki tabloda, <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> sınıfında dizeleri aramak ve işlemek için Visual Basic sağladığı işlevler listelenmektedir. Visual Basic iç işlevler olarak kabul edilebilir. diğer bir deyişle, örneklerin gösterdiği gibi, bunları bir sınıfın açık üyeleri olarak çağırmanız gerekmez. Ek yöntemler ve bazı durumlarda tamamlayıcı Yöntemler <xref:System.String?displayProperty=nameWithType> sınıfında kullanılabilir.
+The following table lists the functions that Visual Basic provides in the <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> class to search and manipulate strings. They can be regarded as Visual Basic intrinsic functions; that is, you do not have to call them as explicit members of a class, as the examples show. Additional methods, and in some cases complementary methods, are available in the <xref:System.String?displayProperty=nameWithType> class.
 
-|.NET Framework yöntemi|Açıklama|
+|.NET Framework method|Açıklama|
 |---------------------------|-----------------|
-|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Bir karaktere karşılık gelen karakter kodunu temsil eden `Integer` değerini döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Belirtilen karakter koduyla ilişkili karakteri döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Belirtilen filtre ölçütlerine göre `String` dizisinin bir alt kümesini içeren sıfır tabanlı bir dizi döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Biçim `String` ifadesinde bulunan yönergelere göre biçimlendirilen bir dize döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Sistem denetim masasında tanımlanan para birimi simgesini kullanarak para birimi değeri olarak biçimlendirilen bir ifade döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Tarih/saat değerini gösteren bir dize ifadesi döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Sayı olarak biçimlendirilen bir ifade döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|% Karakteriyle bir yüzde (yani, 100 ile çarpılmış) olarak biçimlendirilen bir ifade döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|Bir dizenin diğeri içindeki ilk örneğinin başlangıç konumunu belirten bir tamsayı döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|Dizenin sağ tarafından başlayarak bir dizenin diğeri içindeki ilk oluşumunun konumunu döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.Join%2A>|Bir dizide bulunan bir dizi alt dizenin birleştirilmesiyle oluşturulan bir dize döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|Küçük harfe dönüştürülmüş bir dize veya karakter döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.Left%2A>|Dizenin sol tarafından belirtilen sayıda karakter içeren bir dize döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Dizedeki karakter sayısını içeren bir tamsayı döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Belirtilen uzunluğa ayarlanmış belirtilen dizeyi içeren sola hizalanmış bir dize döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Belirtilen dizenin başında boşluk olmayan bir kopyasını içeren bir dize döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Bir dizeden belirtilen sayıda karakter içeren bir dize döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Belirtilen bir alt dizenin belirtilen sayıda başka bir alt dizeyle değiştirildiği bir dize döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.Right%2A>|Dizenin sağ tarafından belirtilen sayıda karakter içeren bir dize döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Belirtilen uzunluğa ayarlanmış belirtilen dizeyi içeren sağa hizalanmış bir dize döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Belirtilen dizenin sonunda boşluk olmayan bir kopyasını içeren bir dize döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.Space%2A>|Belirtilen sayıda boşluktan oluşan bir dize döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Belirtilen sayıda alt dize içeren sıfır tabanlı, tek boyutlu bir dizi döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Dize karşılaştırmasının sonucuna bağlı olarak-1, 0 veya 1 döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Belirtilen şekilde dönüştürülmüş bir dize döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Belirtilen karakterin belirtilen sayıda yinelenmesinden oluşan bir dize veya nesne döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Belirtilen dizenin karakter sırasının tersine döndürüldüğü bir dize döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Belirtilen dizenin başında veya sonunda boşluk olmayan bir kopyasını içeren bir dize döndürür.|
-|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Belirtilen dizeyi büyük harfe dönüştürülmüş olarak içeren bir dize veya karakter döndürür.|
+|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Returns an `Integer` value representing the character code corresponding to a character.|
+|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Returns the character associated with the specified character code.|
+|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Returns a zero-based array containing a subset of a `String` array based on specified filter criteria.|
+|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Returns a string formatted according to instructions contained in a format `String` expression.|
+|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Returns an expression formatted as a currency value using the currency symbol defined in the system control panel.|
+|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Returns a string expression representing a date/time value.|
+|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Returns an expression formatted as a number.|
+|<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|Returns an expression formatted as a percentage (that is, multiplied by 100) with a trailing % character.|
+|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|Returns an integer specifying the start position of the first occurrence of one string within another.|
+|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|Returns the position of the first occurrence of one string within another, starting from the right side of the string.|
+|<xref:Microsoft.VisualBasic.Strings.Join%2A>|Returns a string created by joining a number of substrings contained in an array.|
+|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|Returns a string or character converted to lowercase.|
+|<xref:Microsoft.VisualBasic.Strings.Left%2A>|Returns a string containing a specified number of characters from the left side of a string.|
+|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Returns an integer that contains the number of characters in a string.|
+|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Returns a left-aligned string containing the specified string adjusted to the specified length.|
+|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Returns a string containing a copy of a specified string with no leading spaces.|
+|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Returns a string containing a specified number of characters from a string.|
+|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Returns a string in which a specified substring has been replaced with another substring a specified number of times.|
+|<xref:Microsoft.VisualBasic.Strings.Right%2A>|Returns a string containing a specified number of characters from the right side of a string.|
+|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Returns a right-aligned string containing the specified string adjusted to the specified length.|
+|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Returns a string containing a copy of a specified string with no trailing spaces.|
+|<xref:Microsoft.VisualBasic.Strings.Space%2A>|Returns a string consisting of the specified number of spaces.|
+|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Returns a zero-based, one-dimensional array containing a specified number of substrings.|
+|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Returns -1, 0, or 1, based on the result of a string comparison.|
+|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Returns a string converted as specified.|
+|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Returns a string or object consisting of the specified character repeated the specified number of times.|
+|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Returns a string in which the character order of a specified string is reversed.|
+|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Returns a string containing a copy of a specified string with no leading or trailing spaces.|
+|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Returns a string or character containing the specified string converted to uppercase.|
 
-Dizelerin, sisteminizin yerel ayarında (`Text`) veya karakterlerin iç ikili gösterimlerine (`Binary`) göre belirlenen büyük/küçük harf duyarsız metin sıralama düzeni kullanılarak karşılaştırıldığını ayarlamak için [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) ifadesini kullanabilirsiniz. Varsayılan metin karşılaştırma yöntemi `Binary` ' dır.
+You can use the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) statement to set whether strings are compared using a case-insensitive text sort order determined by your system's locale (`Text`) or by the internal binary representations of the characters (`Binary`). The default text comparison method is `Binary`.
 
-## <a name="example-ucase"></a>Örnek: UCase
+## <a name="example-ucase"></a>Example: UCase
 
-Bu örnek, bir dizenin büyük bir sürümünü döndürmek için `UCase` işlevini kullanır.
+This example uses the `UCase` function to return an uppercase version of a string.
 [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]
 
-## <a name="example-ltrim"></a>Örnek: LTrim
+## <a name="example-ltrim"></a>Example: LTrim
 
-Bu örnek, baştaki boşlukları ve `RTrim` işlevini bir dize değişkeninden sondaki boşlukları park etmek için `LTrim` işlevini kullanır. Her iki boşluk türünü de atmak için `Trim` işlevini kullanır.
+This example uses the `LTrim` function to strip leading spaces and the `RTrim` function to strip trailing spaces from a string variable. It uses the `Trim` function to strip both types of spaces.
 
 [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]
 
-## <a name="example-mid"></a>Örnek: PARÇAAL
+## <a name="example-mid"></a>Example: Mid
 
-Bu örnek, bir dizeden belirtilen sayıda karakteri döndürmek için `Mid` işlevini kullanır.
+This example uses the `Mid` function to return a specified number of characters from a string.
 
 [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]
 
-## <a name="example-len"></a>Örnek: Len
+## <a name="example-len"></a>Example: Len
 
-Bu örnek, bir dizedeki karakter sayısını döndürmek için `Len` kullanır.
+This example uses `Len` to return the number of characters in a string.
 
 [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]
 
-## <a name="example-instr"></a>Örnek: InStr
+## <a name="example-instr"></a>Example: InStr
 
-Bu örnek `InStr` işlevini kullanarak bir dizenin diğeri içindeki ilk oluşumunun konumunu döndürür.
+This example uses the `InStr` function to return the position of the first occurrence of one string within another.
 
 [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]
 
-## <a name="example-format"></a>Örnek: biçim
+## <a name="example-format"></a>Example: Format
 
-Bu örnek, hem `String` biçimlerini hem de Kullanıcı tanımlı biçimleri kullanarak değerleri biçimlendirmek için `Format` işlevinin çeşitli kullanımlarını gösterir. Tarih ayırıcısı (`/`), zaman ayırıcısı (`:`) ve ı/PM göstergeleri (`t` ve `tt`) için, sisteminiz tarafından görünen gerçek biçimli çıktı, kodun kullandığı yerel ayar ayarlarına bağlıdır. Geliştirme ortamında saat ve tarihler görüntülendiğinde, kod yerel ayarının kısa saat biçimi ve kısa tarih biçimi kullanılır.
+This example shows various uses of the `Format` function to format values using both `String` formats and user-defined formats. For the date separator (`/`), time separator (`:`), and the AM/PM indicators (`t` and `tt`), the actual formatted output displayed by your system depends on the locale settings the code is using. When times and dates are displayed in the development environment, the short time format and short date format of the code locale are used.
 
 > [!NOTE]
-> 24 saatlik bir saat kullanan yerel ayarlarda, ı/PM göstergeleri (`t` ve `tt`) hiçbir şey görüntülemez.
+> For locales that use a 24-hour clock, the AM/PM indicators (`t` and `tt`) display nothing.
 
 [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]
 
@@ -92,4 +92,4 @@ Bu örnek, hem `String` biçimlerini hem de Kullanıcı tanımlı biçimleri kul
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Dize Düzenleme Özeti](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
-- [System. String sınıf yöntemleri](xref:System.String#methods)
+- [System.String class methods](xref:System.String#methods)

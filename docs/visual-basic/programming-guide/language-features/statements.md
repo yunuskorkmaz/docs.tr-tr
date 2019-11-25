@@ -1,5 +1,5 @@
 ---
-title: Visual Basic'deki Deyimler
+title: Deyimler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -15,236 +15,236 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-ms.openlocfilehash: e66acae5e98d561883f4ad59853dfd862c8ebfee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f63f0f0212913f95baab2a8a43c4b7f25a859cd9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946464"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352497"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic'deki Deyimler
 
-Visual Basic'te bir deyim eksiksiz bir yönergedir. Anahtar sözcükleri, işleçler, değişkenleri, sabitleri ve ifadeleri içerebilir. Her deyim aşağıdaki kategorilerden birine ait:
+A statement in Visual Basic is a complete instruction. It can contain keywords, operators, variables, constants, and expressions. Each statement belongs to one of the following categories:
 
-- **Bildirim deyimleri**, bir değişken, sabit değer ya da yordamın adını ve bir veri türü de belirtebilirsiniz.
+- **Declaration Statements**, which name a variable, constant, or procedure, and can also specify a data type.
 
-- **Executable deyimleri**, Eylemler başlatın. Bu deyimler bir yöntem veya işlev çağırabilir ve döngü veya kod blokları boyunca dal. Executable deyimleri dahil **atama deyimleri**, hangi atama bir değer veya ifade bir değişken veya sabit değer.
+- **Executable Statements**, which initiate actions. These statements can call a method or function, and they can loop or branch through blocks of code. Executable statements include **Assignment Statements**, which assign a value or expression to a variable or constant.
 
-Bu konu, her kategori açıklar. Ayrıca, bu konuda, tek bir satırda birden çok deyim bir araya getirilebileceğini öğrenin ve çoklu satırlar üzerinde bir deyim devam etme açıklanmaktadır.
+This topic describes each category. Also, this topic describes how to combine multiple statements on a single line and how to continue a statement over multiple lines.
 
-## <a name="declaration-statements"></a>Bildirim deyimleri
+## <a name="declaration-statements"></a>Declaration statements
 
-Bildirim deyimleri, ad ve yordamları, değişkenleri, özellikleri, diziler ve sabitleri tanımlamak için kullanın. Bir programlama öğesi bildirdiğinizde, kendi veri türü, erişim düzeyi ve kapsam tanımlayabilirsiniz. Daha fazla bilgi için [bildirilen öğe özellikleri](./declared-elements/declared-element-characteristics.md).
+You use declaration statements to name and define procedures, variables, properties, arrays, and constants. When you declare a programming element, you can also define its data type, access level, and scope. For more information, see [Declared Element Characteristics](./declared-elements/declared-element-characteristics.md).
 
-Aşağıdaki örnek, üç bildirimleri içerir.
+The following example contains three declarations.
 
 [!code-vb[VbVbalrStatements#80](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#80)]
 
-İlk bildirimi `Sub` deyimi. Kendi eşleşen birlikte `End Sub` deyimi, adında bir yordamı bildirir `applyFormat`. Ayrıca, belirtir `applyFormat` olduğu `Public`, yani bu başvurduğu herhangi bir kodu çağırabilir.
+The first declaration is the `Sub` statement. Together with its matching `End Sub` statement, it declares a procedure named `applyFormat`. It also specifies that `applyFormat` is `Public`, which means that any code that can refer to it can call it.
 
-İkinci bildirimi `Const` sabiti bildirir deyimi `limit`, belirten `Integer` veri türü ve değeri 33.
+The second declaration is the `Const` statement, which declares the constant `limit`, specifying the `Integer` data type and a value of 33.
 
-Üçüncü bildirimi `Dim` değişkeni bildirir deyimi `thisWidget`. Veri türü belirli bir nesnesi, nesne oluşturulduğu yani `Widget` sınıfı. Bir değişken, herhangi bir başlangıç veri türü veya kullanmakta olduğunuz uygulamada kullanıma sunulan herhangi bir nesne türü olmasını bildirebilirsiniz.
+The third declaration is the `Dim` statement, which declares the variable `thisWidget`. The data type is a specific object, namely an object created from the `Widget` class. You can declare a variable to be of any elementary data type or of any object type that is exposed in the application you are using.
 
-### <a name="initial-values"></a>Başlangıç değerleri
+### <a name="initial-values"></a>Initial Values
 
-Bildirim bir deyim içeren kod çalıştığında, Visual Basic bildirilen öğe için gerekli bellek ayırır. Öğe bir değeri tutar, Visual Basic, kendi veri türü için varsayılan değer başlatır. Daha fazla bilgi için "Davranışı" bölümüne bakın. [Dim deyimi](../../language-reference/statements/dim-statement.md).
+When the code containing a declaration statement runs, Visual Basic reserves the memory required for the declared element. If the element holds a value, Visual Basic initializes it to the default value for its data type. For more information, see "Behavior" in [Dim Statement](../../language-reference/statements/dim-statement.md).
 
-Aşağıdaki örnekte gösterildiği gibi bir başlangıç değeri bir değişken, bildiriminin bir parçası olarak atayabilirsiniz.
+You can assign an initial value to a variable as part of its declaration, as the following example illustrates.
 
 [!code-vb[VbVbalrStatements#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#81)]
 
-Bir nesne değişkeninin bir değişken ise kullanarak bildirme zaman açıkça kendi sınıfının bir örneğini oluşturabilirsiniz [New işleci](../../../visual-basic/language-reference/operators/new-operator.md) anahtar sözcüğü, aşağıdaki örnek gösterir.
+If a variable is an object variable, you can explicitly create an instance of its class when you declare it by using the [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) keyword, as the following example illustrates.
 
 [!code-vb[VbVbalrStatements#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#82)]
 
-Yürütme, bildirim deyimindeki ulaşana kadar bir bildirim deyiminde belirttiğiniz başlangıç değeri bir değişkene atanmaz unutmayın. O zamana kadar değişken veri türü için varsayılan değeri içerir.
+Note that the initial value you specify in a declaration statement is not assigned to a variable until execution reaches its declaration statement. Until that time, the variable contains the default value for its data type.
 
-## <a name="executable-statements"></a>Executable deyimleri
+## <a name="executable-statements"></a>Executable statements
 
-Yürütülebilir bir deyimin bir eylem gerçekleştirir. Bu dalı başka bir yere kodda, birkaç deyimleri, döngü bir yordam çağırma veya bir ifadeyi değerlendirir. Atama ifadesi, yürütülebilir bir deyimin özel bir durumdur.
+An executable statement performs an action. It can call a procedure, branch to another place in the code, loop through several statements, or evaluate an expression. An assignment statement is a special case of an executable statement.
 
-Aşağıdaki örnekte bir `If...Then...Else` denetim yapısı farklı bir değişken değerine göre kod bloklarını çalıştırmak için. Her kod bloğu içinde bir `For...Next` belirtilen sayıda döngü çalıştırır.
+The following example uses an `If...Then...Else` control structure to run different blocks of code based on the value of a variable. Within each block of code, a `For...Next` loop runs a specified number of times.
 
 [!code-vb[VbVbalrStatements#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#83)]
 
-`If` Parametresinin değerini yukarıdaki örnekte deyimi denetler `clockwise`. Değer ise `True`, çağrı `spinClockwise` yöntemi `aWidget`. Değer ise `False`, çağrı `spinCounterClockwise` yöntemi `aWidget`. `If...Then...Else` Denetim yapısı ile sona erer `End If`.
+The `If` statement in the preceding example checks the value of the parameter `clockwise`. If the value is `True`, it calls the `spinClockwise` method of `aWidget`. If the value is `False`, it calls the `spinCounterClockwise` method of `aWidget`. The `If...Then...Else` control structure ends with `End If`.
 
-`For...Next` Her blok içindeki döngü uygun yöntemini çağırır birkaç kez değerine eşit `revolutions` parametresi.
+The `For...Next` loop within each block calls the appropriate method a number of times equal to the value of the `revolutions` parameter.
 
-## <a name="assignment-statements"></a>Atama deyimleri
+## <a name="assignment-statements"></a>Assignment statements
 
-Değer atama işlecinin sağ tarafında kabul oluşan atama işlemleri atama deyimleri yürütmek (`=`) ve aşağıdaki örnekte olduğu gibi sol taraftaki öğesinde depolama.
+Assignment statements carry out assignment operations, which consist of taking the value on the right side of the assignment operator (`=`) and storing it in the element on the left, as in the following example.
 
 [!code-vb[VbVbalrStatements#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#73)]
 
-Önceki örnekte, atama ifadesi değişmez değer 42 değişkeninde depolar. `v`.
+In the preceding example, the assignment statement stores the literal value 42 in the variable `v`.
 
-### <a name="eligible-programming-elements"></a>Uygun programlama öğeleri
+### <a name="eligible-programming-elements"></a>Eligible programming elements
 
-Programlama öğesine atama işlecinin sol tarafındaki kabul edin ve bir değer olmalıdır. Bir değişken veya özellik değil olmalıdır bir deyişle [salt okunur](../../../visual-basic/language-reference/modifiers/readonly.md), veya bir dizi öğesi olması gerekir. Atama ifadesi bağlamında, bu tür bir öğe adlandırılır bir *lvalue*, "sol değeri."
+The programming element on the left side of the assignment operator must be able to accept and store a value. This means it must be a variable or property that is not [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), or it must be an array element. In the context of an assignment statement, such an element is sometimes called an *lvalue*, for "left value."
 
-Atama işlecinin sağ tarafında değer değişmez değerleri, sabitleri, değişkenleri, özellikleri, dizi öğeleri, diğer ifadeler veya işlev çağrıları, herhangi bir birleşimini içerebilir bir ifade tarafından oluşturulur. Aşağıdaki örnek bunu göstermektedir.
+The value on the right side of the assignment operator is generated by an expression, which can consist of any combination of literals, constants, variables, properties, array elements, other expressions, or function calls. Aşağıdaki örnek bunu göstermektedir.
 
 [!code-vb[VbVbalrStatements#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#74)]
 
-Önceki örnekte, değişken tuttuğu değeri ekler `y` değişkeninde tutulan değere `z`ve ardından işlev çağrısı tarafından döndürülen değer ekler `findResult`. Bu ifadenin toplam değeri ardından değişkeninde depolanan `x`.
+The preceding example adds the value held in variable `y` to the value held in variable `z`, and then adds the value returned by the call to function `findResult`. The total value of this expression is then stored in variable `x`.
 
-### <a name="data-types-in-assignment-statements"></a>Veri türlerini atama deyimleri
+### <a name="data-types-in-assignment-statements"></a>Data types in assignment statements
 
-Sayısal değerlere ek olarak atama işleci de atayabilirsiniz `String` aşağıdaki örnekte gösterildiği gibi değerleri.
+In addition to numeric values, the assignment operator can also assign `String` values, as the following example illustrates.
 
 [!code-vb[VbVbalrStatements#75](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#75)]
 
-De atayabilirsiniz `Boolean` değerlerini kullanarak bir `Boolean` değişmez değer veya `Boolean` ifade, aşağıdaki örnek olarak gösterilmiştir.
+You can also assign `Boolean` values, using either a `Boolean` literal or a `Boolean` expression, as the following example illustrates.
 
 [!code-vb[VbVbalrStatements#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#76)]
 
-Benzer şekilde, programlama öğeleri için uygun değerleri atayabilirsiniz `Char`, `Date`, veya `Object` veri türü. Bu örneği oluşturulduğu sınıfı olarak bildirilmiş bir öğeye bir nesne örneği de atayabilirsiniz.
+Similarly, you can assign appropriate values to programming elements of the `Char`, `Date`, or `Object` data type. You can also assign an object instance to an element declared to be of the class from which that instance is created.
 
-### <a name="compound-assignment-statements"></a>Bileşik atama deyimleri
+### <a name="compound-assignment-statements"></a>Compound assignment statements
 
-*Bileşik atama deyimleri* ilk önce bir programlama öğesine atama bir ifade üzerinde bir işlem gerçekleştirin. Aşağıdaki örnekte, bu işleçler birini gösterilmektedir `+=`, işlecin sol tarafındaki değişkeninin değeri ifade sağdaki değerini artırır.
+*Compound assignment statements* first perform an operation on an expression before assigning it to a programming element. The following example illustrates one of these operators, `+=`, which increments the value of the variable on the left side of the operator by the value of the expression on the right.
 
 [!code-vb[VbVbalrStatements#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#77)]
 
-Yukarıdaki örnekte, 1 değerine ekler `n`ve ardından yeni değeri depolar `n`. Bir toplu özelliktir aşağıdaki ifadenin eşdeğeri:
+The preceding example adds 1 to the value of `n`, and then stores that new value in `n`. It is a shorthand equivalent of the following statement:
 
 [!code-vb[VbVbalrStatements#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#78)]
 
-Bu tür işleçleri kullanarak çeşitli bileşik atama işlemleri gerçekleştirilebilir. Bu işleçler ve bunlar hakkında daha fazla bilgi listesi için bkz: [atama işleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md).
+A variety of compound assignment operations can be performed using operators of this type. For a list of these operators and more information about them, see [Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md).
 
-Birleştirme atama işleci (`&=`), mevcut sonuna bir dize eklemek için yararlıdır aşağıdaki örnekte gösterildiği gibi dizeleri.
+The concatenation assignment operator (`&=`) is useful for adding a string to the end of already existing strings, as the following example illustrates.
 
 [!code-vb[VbVbalrStatements#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#79)]
 
-### <a name="type-conversions-in-assignment-statements"></a>Atama deyimleri, tür dönüştürmeleri
+### <a name="type-conversions-in-assignment-statements"></a>Type Conversions in Assignment Statements
 
-Bir değişken, özelliği veya dizi öğesi atadığınız değeri bu hedef öğeye uygun bir veri türünde olmalıdır. Genel olarak, aynı veri türü, hedef öğenin değerini oluşturmak denemelisiniz. Ancak, bazı türleri, atama sırasında diğer türlere dönüştürülebilir.
+The value you assign to a variable, property, or array element must be of a data type appropriate to that destination element. In general, you should try to generate a value of the same data type as that of the destination element. However, some types can be converted to other types during assignment.
 
-Veri türleri arasında dönüştürme hakkında daha fazla bilgi için bkz: [Visual Basic'de tür dönüştürmeleri](./data-types/type-conversions.md). Kısaca, Visual Basic widens, başka bir tür, belirli bir türde bir değer otomatik olarak dönüştürür. A *dönüştürme genişletme* olan biri, her zaman çalışma zamanında başarılı olur ve tüm verileri kaybetmez. Örneğin, Visual Basic dönüştürür bir `Integer` değerini `Double` , çünkü uygun olduğunda `Integer` için widens `Double`. Daha fazla bilgi için [Widening ve daraltma dönüşümleri](./data-types/widening-and-narrowing-conversions.md).
+For information on converting between data types, see [Type Conversions in Visual Basic](./data-types/type-conversions.md). In brief, Visual Basic automatically converts a value of a given type to any other type to which it widens. A *widening conversion* is one in that always succeeds at run time and does not lose any data. For example, Visual Basic converts an `Integer` value to `Double` when appropriate, because `Integer` widens to `Double`. For more information, see [Widening and Narrowing Conversions](./data-types/widening-and-narrowing-conversions.md).
 
-*Daraltma dönüştürmeleri* çalışma zamanında hata veya veri kaybı riski taşıyan (olanlar değil genişletme). Derleyici örtük olarak ayarlayarak tüm dönüştürmeler gerçekleştirmek için yönlendirebilir veya bir tür dönüştürme işlevini kullanarak bir daraltma dönüşümü açıkça gerçekleştirebilirsiniz `Option Strict Off`. Daha fazla bilgi için [örtük ve açık dönüştürmeler](./data-types/implicit-and-explicit-conversions.md).
+*Narrowing conversions* (those that are not widening) carry a risk of failure at run time, or of data loss. You can perform a narrowing conversion explicitly by using a type conversion function, or you can direct the compiler to perform all conversions implicitly by setting `Option Strict Off`. For more information, see [Implicit and Explicit Conversions](./data-types/implicit-and-explicit-conversions.md).
 
-## <a name="putting-multiple-statements-on-one-line"></a>Birden çok deyim bir satıra koyarak
+## <a name="putting-multiple-statements-on-one-line"></a>Putting multiple statements on one line
 
-Virgül ile ayrılmış tek bir satırda birden çok deyime sahip olabilir (`:`) karakter. Aşağıdaki örnek bunu göstermektedir.
+You can have multiple statements on a single line separated by the colon (`:`) character. Aşağıdaki örnek bunu göstermektedir.
 
 [!code-vb[VbVbalrStatements#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#70)]
 
-Bu söz dizimi biçimi bazen kullanışlı olsa kodunuzu okunması ve düzenlenmesi zor hale getirir. Bu nedenle, bir deyimi bir satıra tutmanız önerilir.
+Though occasionally convenient, this form of syntax makes your code hard to read and maintain. Thus, it is recommended that you keep one statement to a line.
 
-## <a name="continuing-a-statement-over-multiple-lines"></a>Bir deyim çoklu satırlar üzerinde devam etme
+## <a name="continuing-a-statement-over-multiple-lines"></a>Continuing a statement over multiple lines
 
-Bir deyimi, genellikle bir satıra sığacak, ancak çok uzun olduğunda, bir boşluk bir alt çizgi karakteriyle oluşan bir satır devamlılığı sırası kullanılarak sonraki satıra devam edebilirsiniz (`_`) başı tarafından izlenen. Aşağıdaki örnekte, `MsgBox` yürütülebilir deyimi üzerinde iki satır devam edilir.
+A statement usually fits on one line, but when it is too long, you can continue it onto the next line using a line-continuation sequence, which consists of a space followed by an underscore character (`_`) followed by a carriage return. In the following example, the `MsgBox` executable statement is continued over two lines.
 
 [!code-vb[VbVbalrStatements#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#71)]
 
-### <a name="implicit-line-continuation"></a>Örtük satır devamlılığı
+### <a name="implicit-line-continuation"></a>Implicit line continuation
 
-Çoğu durumda, bir deyim sonraki ardışık satırda alt çizgi karakterini kullanmaya olmadan devam edebilirsiniz (`_`). Aşağıdaki sözdizimi öğeleri ifadesi örtük olarak kodun sonraki satırında devam edin.
+In many cases, you can continue a statement on the next consecutive line without using the underscore character (`_`). The following syntax elements implicitly continue the statement on the next line of code.
 
-- Sonra bir virgül (`,`). Örneğin:
+- After a comma (`,`). Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#1)]
 
-- Bir açık parantez sonra (`(`) veya bir kapanış parantezi önce (`)`). Örneğin:
+- After an open parenthesis (`(`) or before a closing parenthesis (`)`). Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#2)]
 
-- Sonra bir açık küme ayracı (`{`) veya bir kapanış küme ayracını önce (`}`). Örneğin:
+- After an open curly brace (`{`) or before a closing curly brace (`}`). Örneğin:
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    Daha fazla bilgi için [nesne başlatıcıları: Adlandırılmış ve anonim türler](./objects-and-classes/object-initializers-named-and-anonymous-types.md) veya [koleksiyon başlatıcıları](./collection-initializers/index.md).
+    For more information, see [Object Initializers: Named and Anonymous Types](./objects-and-classes/object-initializers-named-and-anonymous-types.md) or [Collection Initializers](./collection-initializers/index.md).
 
-- Sonra açık bir gömülü ifade (`<%=`) veya bir katıştırılmış deyim bitiminden önce (`%>`) içinde bir XML değişmez değeri. Örneğin:
+- After an open embedded expression (`<%=`) or before the close of an embedded expression (`%>`) within an XML literal. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#4)]
 
-   Daha fazla bilgi için [XML'de katıştırılmış ifadeler](./xml/embedded-expressions-in-xml.md).
+   For more information, see [Embedded Expressions in XML](./xml/embedded-expressions-in-xml.md).
 
-- Birleştirme işleci sonra (`&`). Örneğin:
+- After the concatenation operator (`&`). Örneğin:
 
    [!code-vb[VbVbcnConventions#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/vb/Class1.vb#9)]
 
-   Daha fazla bilgi için [işleçleri listelenir işlevselliğe göre](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- Atama İşleçleri sonra (`=`, `&=`, `:=`, `+=`, `-=`, `*=`, `/=`, `\=`, `^=`, `<<=`, `>>=`). Örneğin:
+- After assignment operators (`=`, `&=`, `:=`, `+=`, `-=`, `*=`, `/=`, `\=`, `^=`, `<<=`, `>>=`). Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   Daha fazla bilgi için [işleçleri listelenir işlevselliğe göre](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- İkili işleçler sonra (`+`, `-`, `/`, `*`, `Mod`, `<>`, `<`, `>`, `<=`, `>=`, `^`, `>>`, `<<`, `And`, `AndAlso`, `Or`, `OrElse`, `Like`, `Xor`) içinde bir ifade. Örneğin:
+- After binary operators (`+`, `-`, `/`, `*`, `Mod`, `<>`, `<`, `>`, `<=`, `>=`, `^`, `>>`, `<<`, `And`, `AndAlso`, `Or`, `OrElse`, `Like`, `Xor`) within an expression. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#7)]
 
-   Daha fazla bilgi için [işleçleri listelenir işlevselliğe göre](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- Sonra `Is` ve `IsNot` işleçleri. Örneğin:
+- After the `Is` and `IsNot` operators. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#8)]
 
-   Daha fazla bilgi için [işleçleri listelenir işlevselliğe göre](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- Bir üye niteleyicisi karakterinden sonraki (`.`) ve üye adından önce. Örneğin:
+- After a member qualifier character (`.`) and before the member name. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   Ancak, bir satır devamlılığı karakteri içermelidir (`_`) kullanıldığında bir üye niteleyicisi karakterinden `With` deyimi veya bir tür için başlatma listesindeki değerlerin sağlama. Atama işlecinden sonra satır sonu göz önünde bulundurun (örneğin, `=`) kullanırken `With` deyimleri ya da nesne başlatma listeler. Örneğin:
+   However, you must include a line-continuation character (`_`) following a member qualifier character when you are using the `With` statement or supplying values in the initialization list for a type. Consider breaking the line after the assignment operator (for example, `=`) when you are using `With` statements or object initialization lists. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   Daha fazla bilgi için [ile... End With deyimi](../../../visual-basic/language-reference/statements/with-end-with-statement.md) veya [nesne başlatıcıları: Adlandırılmış ve anonim türler](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
+   For more information, see [With...End With Statement](../../../visual-basic/language-reference/statements/with-end-with-statement.md) or [Object Initializers: Named and Anonymous Types](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
 
-- Bir XML eksen özellik niteleyicisi sonra (`.` veya `.@` veya `...`). Ancak, bir satır devamlılığı karakteri içermelidir (`_`) belirttiğinizde üye niteleyicisi kullanırken `With` anahtar sözcüğü. Örneğin:
+- After an XML axis property qualifier (`.` or `.@` or `...`). However, you must include a line-continuation character (`_`) when you specify a member qualifier when you are using the `With` keyword. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#9)]
 
-   Daha fazla bilgi için [XML eksen özellikleri](../../../visual-basic/language-reference/xml-axis/index.md).
+   For more information, see [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/index.md).
 
-- Daha az sonra-işareti (<) veya daha büyük bir önce-işareti (`>`) belirttiğinizde bir öznitelik. Ayrıca sonra bir büyük-işareti (`>`) belirttiğinizde bir öznitelik. Ancak, bir satır devamlılığı karakteri içermelidir (`_`) belirttiğinizde derleme düzeyi veya modül düzeyinde öznitelikler. Örneğin:
+- After a less-than sign (<) or before a greater-than sign (`>`) when you specify an attribute. Also after a greater-than sign (`>`) when you specify an attribute. However, you must include a line-continuation character (`_`) when you specify assembly-level or module-level attributes. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#10)]
 
-   Daha fazla bilgi için [öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md).
+   For more information, see [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md).
 
-- Sorgu işleçlerden önce ve sonra (`Aggregate`, `Distinct`, `From`, `Group By`, `Group Join`, `Join`, `Let`, `Order By`, `Select`, `Skip`, `Skip While`, `Take`, `Take While`, `Where`, `In`, `Into`, `On`, `Ascending`, ve `Descending`). Birden çok anahtar sözcükleri yapılan sorgu işleçlerinin anahtar sözcükleri arasına bir satır sonu olamaz (`Order By`, `Group Join`, `Take While`, ve `Skip While`). Örneğin:
+- Before and after query operators (`Aggregate`, `Distinct`, `From`, `Group By`, `Group Join`, `Join`, `Let`, `Order By`, `Select`, `Skip`, `Skip While`, `Take`, `Take While`, `Where`, `In`, `Into`, `On`, `Ascending`, and `Descending`). You cannot break a line between the keywords of query operators that are made up of multiple keywords (`Order By`, `Group Join`, `Take While`, and `Skip While`). Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#11)]
 
-   Daha fazla bilgi için [sorguları](../../../visual-basic/language-reference/queries/index.md).
+   For more information, see [Queries](../../../visual-basic/language-reference/queries/index.md).
 
-- Sonra `In` anahtar sözcüğü bir `For Each` deyimi. Örneğin:
+- After the `In` keyword in a `For Each` statement. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#12)]
 
-   Nesne, salt okunur.[For Each...Next Deyimi](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+   For more information, see [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).
 
-- Sonra `From` bir koleksiyon başlatıcısında anahtar sözcüğü. Örneğin:
+- After the `From` keyword in a collection initializer. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#13)]
 
-   Daha fazla bilgi için [koleksiyon başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
+   For more information, see [Collection Initializers](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
 
-## <a name="adding-comments"></a>Açıklama ekleme
+## <a name="adding-comments"></a>Adding comments
 
-Kaynak kodu her zaman bile yazdığı Programcı açıklayıcı değil. Kodlarını belge yardımcı olmak için bu nedenle, Yorumlar embedded serbest ayraç kullanımı çoğu programcılar olun. Kod açıklamaları bir yordam ya da belirli bir yönerge herkese okuma veya daha sonra Bununla çalışmaya açıklayabilir. Visual Basic, derleme sırasında açıklamaları yok sayar ve derlenmiş kodu etkilemez.
+Source code is not always self-explanatory, even to the programmer who wrote it. To help document their code, therefore, most programmers make liberal use of embedded comments. Comments in code can explain a procedure or a particular instruction to anyone reading or working with it later. Visual Basic ignores comments during compilation, and they do not affect the compiled code.
 
-Açıklama satırı tırnak işaretiyle başlar (`'`) veya `REM` ardından bir boşluk. Bunlar herhangi bir kod içinde dışında bir dizede eklenebilir. Bir deyim için bir açıklama eklemek için kesme işareti ekleyin veya `REM` ve ardından yorumun deyimi sonra. Açıklamalar, ayrıca kendi ayrı bir satıra gidebilirsiniz. Aşağıdaki örnek bu olasılıklar gösterilmektedir.
+Comment lines begin with an apostrophe (`'`) or `REM` followed by a space. They can be added anywhere in code, except within a string. To append a comment to a statement, insert an apostrophe or `REM` after the statement, followed by the comment. Comments can also go on their own separate line. The following example demonstrates these possibilities.
 
 [!code-vb[VbVbalrStatements#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#72)]
 
-## <a name="checking-compilation-errors"></a>Derleme hataları denetleniyor
+## <a name="checking-compilation-errors"></a>Checking compilation errors
 
-Sonra bir satırlık bir kod yazarsanız, satır (hata iletisi de görünebilir) dalgalı mavi bir çizgi görüntülenir, ifadede sözdizimi hatası var. (Görev listesinde arama veya fare işaretçisi hatasıyla üzerine gelin ve hata iletisini okuyarak) deyimiyle nerede olduğunu bulmak ve düzeltmek için gerekir. Kodunuzda tüm söz dizimi hataları düzelttik kadar programınızı doğru şekilde derlenmesi başarısız olur.
+If, after you type a line of code, the line is displayed with a wavy blue underline (an error message may appear as well), there is a syntax error in the statement. You must find out what is wrong with the statement (by looking in the task list, or hovering over the error with the mouse pointer and reading the error message) and correct it. Until you have fixed all syntax errors in your code, your program will fail to compile correctly.
 
-## <a name="related-sections"></a>İlgili bölümler
+## <a name="related-sections"></a>Related sections
 
 |Terim|Tanım|
 |---|---|
-|[Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)|Atama İşleçleri gibi kapsayan dil başvurusu sayfalara bağlantılar sağlar `=`, `*=`, ve `&=`.|
-|[İşleçler ve İfadeler](./operators-and-expressions/index.md)|Öğelerinin yeni değerleri yield işleçlerle nasıl birleştirileceğini gösterir.|
-|[Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Tek bir deyimde birden çok çizgiye bölün ve aynı satırda birden çok deyim koyun gösterir.|
-|[Nasıl yapılır: Etiket Deyimleri](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Bir kod satırı etiket gösterilmektedir.|
+|[Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)|Provides links to language reference pages covering assignment operators such as `=`, `*=`, and `&=`.|
+|[İşleçler ve İfadeler](./operators-and-expressions/index.md)|Shows how to combine elements with operators to yield new values.|
+|[Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Shows how to break a single statement into multiple lines and how to place multiple statements on the same line.|
+|[Nasıl yapılır: Etiket Deyimleri](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Shows how to label a line of code.|

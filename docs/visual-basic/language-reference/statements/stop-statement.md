@@ -1,5 +1,5 @@
 ---
-title: Stop Deyimi (Visual Basic)
+title: Stop Deyimi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Stop
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: e9382ee34842fc3a3b4b23f71848bda602c99780
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 497c5f207b2228412411cc3eb01976564f82bd6c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583217"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346475"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop Deyimi (Visual Basic)
-Yürütmeyi askıya alır.  
+Suspends execution.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,15 +29,15 @@ Stop
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yürütmeyi askıya almak için `Stop` deyimlerini yordamların herhangi bir yerinde yerleştirebilirsiniz. @No__t_0 deyimin kullanılması, kodda kesme noktası ayarlamaya benzerdir.  
+ You can place `Stop` statements anywhere in procedures to suspend execution. Using the `Stop` statement is similar to setting a breakpoint in the code.  
   
- @No__t_0 deyimin yürütülmesi askıya alınır, ancak `End` aksine, derlenmiş bir çalıştırılabilir (. exe) dosyasında karşılaşılmadığı takdirde hiçbir dosyayı kapatmaz veya hiçbir değişkeni temizlemez.  
+ The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.  
   
 > [!NOTE]
-> Tümleşik geliştirme ortamı (IDE) dışında çalışan kodda `Stop` ifadesine karşılaşılırsa, hata ayıklayıcı çağrılır. Bu, kodun hata ayıklama veya perakende modunda derlenmesinden bağımsız olarak geçerlidir.  
+> If the `Stop` statement is encountered in code that is running outside of the integrated development environment (IDE), the debugger is invoked. This is true regardless of whether the code was compiled in debug or retail mode.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `For...Next` döngüsü aracılığıyla her yineleme için yürütmeyi askıya almak üzere `Stop` ifadesini kullanır.  
+ This example uses the `Stop` statement to suspend execution for each iteration through the `For...Next` loop.  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   

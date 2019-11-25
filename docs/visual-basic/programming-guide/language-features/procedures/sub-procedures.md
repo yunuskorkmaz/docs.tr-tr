@@ -1,5 +1,5 @@
 ---
-title: Alt Yordamlar (Visual Basic)
+title: Alt Yordamlar
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
@@ -11,64 +11,64 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: b70594e002bbf08f0890586e78df901ccb26c7ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7848dc07d6462622685cdbea92202585f4d5d2c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791827"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352530"
 ---
 # <a name="sub-procedures-visual-basic"></a>Alt Yordamlar (Visual Basic)
-A `Sub` yordamdır kapsadığı Visual Basic deyimleri bir dizi `Sub` ve `End Sub` deyimleri. `Sub` Yordamı bir görevi gerçekleştirir ve çağıran koda denetim döndürür, ancak çağrıldığı koda bir değer döndürmez.  
+A `Sub` procedure is a series of Visual Basic statements enclosed by the `Sub` and `End Sub` statements. The `Sub` procedure performs a task and then returns control to the calling code, but it does not return a value to the calling code.  
   
- Yordam çağrıldığında, her zaman kendi deyimleri, sonra yürütülebilir ilk deyimi'ile başlayan yürütülür `Sub` deyimi ve ilk görmektesiniz `End Sub`, `Exit Sub`, veya `Return` deyimiyle karşılaşıldı.  
+ Each time the procedure is called, its statements are executed, starting with the first executable statement after the `Sub` statement and ending with the first `End Sub`, `Exit Sub`, or `Return` statement encountered.  
   
- Tanımlayabileceğiniz bir `Sub` modülleri, sınıfları ve yapıları yordamda. Varsayılan olarak, olduğu `Public`, anlamına yerden çağırabilirsiniz uygulamanızdaki modül, sınıf veya yapının, tanımlandığı da erişebilir. Terim *yöntemi*, açıklayan bir `Sub` veya `Function` kendi tanımlama dışından erişilen gelen yordamı modül, sınıf veya yapı. Daha fazla bilgi için [yordamları](./index.md).  
+ You can define a `Sub` procedure in modules, classes, and structures. By default, it is `Public`, which means you can call it from anywhere in your application that has access to the module, class, or structure in which you defined it. The term, *method*, describes a `Sub` or `Function` procedure that is accessed from outside its defining module, class, or structure. For more information, see [Procedures](./index.md).  
   
- A `Sub` yordamı, sabitleri, değişkenleri veya kendisine çağıran kod tarafından geçirilen ifadeler gibi bir bağımsız değişken alabilir.  
+ A `Sub` procedure can take arguments, such as constants, variables, or expressions, which are passed to it by the calling code.  
   
 ## <a name="declaration-syntax"></a>Bildirim Sözdizimi  
- Bildirmek için söz dizimi bir `Sub` yordam şu şekildedir:  
+ The syntax for declaring a `Sub` procedure is as follows:  
   
- `[` *değiştiriciler* `] Sub` *subname* `[(` *parameterlist* `)]`  
+ `[` *modifiers* `] Sub`  *subname* `[(` *parameterlist* `)]`  
   
  `' Statements of the Sub procedure.`  
   
  `End Sub`  
   
- `modifiers` Erişim düzeyi ve aşırı yüklemesi, geçersiz kılma, paylaşımı ve gölgeleme hakkında bilgileri belirtebilirsiniz. Daha fazla bilgi için [Sub deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ The `modifiers` can specify access level and information about overloading, overriding, sharing, and shadowing. For more information, see [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
   
-## <a name="parameter-declaration"></a>Parametre bildirimi  
- Size nasıl parametre adı ile veri türünü belirten bir değişken bildirmek için benzer şekilde, her yordam parametresinin bildirin. Geçirme mekanizması belirtebilirsiniz ve parametrenin isteğe bağlı olduğundan veya bir parametre dizisi.  
+## <a name="parameter-declaration"></a>Parameter Declaration  
+ You declare each procedure parameter similarly to how you declare a variable, specifying the parameter name and data type. You can also specify the passing mechanism, and whether the parameter is optional or a parameter array.  
   
- Parametre listesindeki her parametre için sözdizimi aşağıdaki gibidir:  
+ The syntax for each parameter in the parameter list is as follows:  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*`As`*veri türü*  
+ `[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*  `As`  *datatype*  
   
- Parametre isteğe bağlıysa, varsayılan değer bildiriminin bir parçası olarak da belirtmeniz gerekir. Varsayılan bir değer belirtmek için sözdizimi aşağıdaki gibidir:  
+ If the parameter is optional, you must also supply a default value as part of its declaration. The syntax for specifying a default value is as follows:  
   
- `Optional [ByVal | ByRef]`  *parametername*`As`*datatype*`=`*defaultvalue*  
+ `Optional [ByVal | ByRef]`  *parametername*  `As`  *datatype*  `=`  *defaultvalue*  
   
-### <a name="parameters-as-local-variables"></a>Yerel değişkenleri olarak Parametreler  
- Her bir parametre, yordama denetimi başarılı olduğunda, yerel bir değişken olarak kabul edilir. Bu, yaşam süresi yordamın aynıdır ve kapsamı bütün bir yordamdır anlamına gelir.  
+### <a name="parameters-as-local-variables"></a>Parameters as Local Variables  
+ When control passes to the procedure, each parameter is treated as a local variable. This means that its lifetime is the same as that of the procedure, and its scope is the whole procedure.  
   
-## <a name="calling-syntax"></a>Arama söz dizimi  
- Çağırdığınızda bir `Sub` açıkça tek başına bir deyim çağırma yordamı. Adı bir ifade kullanarak çağrılamıyor. İsteğe bağlı olmayan tüm bağımsız değişkenler için değerler sağlaması gerekir ve bağımsız değişken listesi parantez içine almalısınız. Hiçbir bağımsız değişken sağlanmadıysa, parantezler isteğe bağlı olarak atlayabilirsiniz. Kullanımını `Call` anahtar sözcüğü isteğe bağlıdır, ancak önerilmez.  
+## <a name="calling-syntax"></a>Calling Syntax  
+ You invoke a `Sub` procedure explicitly with a stand-alone calling statement. You cannot call it by using its name in an expression. You must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses. The use of the `Call` keyword is optional but not recommended.  
   
- Bir çağrı sözdizimi bir `Sub` yordam şu şekildedir:  
+ The syntax for a call to a `Sub` procedure is as follows:  
   
  `[Call]`  *subname* `[(` *argumentlist* `)]`  
   
- Çağırabilirsiniz bir `Sub` yöntemi tanımlayan bir sınıf dışında. İlk olarak kullanmak zorunda `New` sınıfının bir örneğini oluşturmak veya, bir yöntem çağırmak için anahtar sözcüğü bir sınıf örneği döndürür. Daha fazla bilgi için [New işleci](../../../../visual-basic/language-reference/operators/new-operator.md). Ardından çağırmak için aşağıdaki söz dizimini kullanabilirsiniz `Sub` örneği nesnesi üzerinde yöntemi:  
+ You can call a `Sub` method from outside the class that defines it. First, you have to use the `New` keyword to create an instance of the class, or call a method that returns an instance of the class. For more information, see [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md). Then, you can use the following syntax to call the `Sub` method on the instance object:  
   
- *Nesne*. *MethodName*`[(`*argumentlist*`)]`  
+ *Object*.*methodname*`[(`*argumentlist*`)]`  
   
-### <a name="illustration-of-declaration-and-call"></a>Bildirim ve çağrı gösterimi  
- Aşağıdaki `Sub` yordamı uygulamasıdır gerçekleştirmek üzere hangi görev bilgisayar işleci bildirir ve ayrıca bir zaman damgasını gösterir. Bu kod, her görevin başlangıcında çoğaltmak yerine uygulama yalnızca çağırır `tellOperator` çeşitli konumlardan. Her çağrı bir dizede geçirir `task` Başlatılmakta olan görevi tanımlayan bir bağımsız değişken.  
+### <a name="illustration-of-declaration-and-call"></a>Illustration of Declaration and Call  
+ The following `Sub` procedure tells the computer operator which task the application is about to perform, and also displays a time stamp. Instead of duplicating this code at the start of every task, the application just calls `tellOperator` from various locations. Each call passes a string in the `task` argument that identifies the task being started.  
   
  [!code-vb[VbVbcnProcedures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#2)]  
   
- Aşağıdaki örnek, tipik bir çağrı gösterir `tellOperator`.  
+ The following example shows a typical call to `tellOperator`.  
   
  [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
@@ -80,5 +80,5 @@ A `Sub` yordamdır kapsadığı Visual Basic deyimleri bir dizi `Sub` ve `End Su
 - [İşleç Yordamları](./operator-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Nasıl yapılır: Bir değer döndürmeyen bir yordam çağırma](./how-to-call-a-procedure-that-does-not-return-a-value.md)
-- [Nasıl yapılır: Visual Basic olay işleyicisi çağırma](./how-to-call-an-event-handler.md)
+- [Nasıl yapılır: Değer Döndürmeyen Bir Yordam Çağırma](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+- [How to: Call an Event Handler in Visual Basic](./how-to-call-an-event-handler.md)

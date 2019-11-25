@@ -1,5 +1,5 @@
 ---
-title: Visual Basic'de Yordamlar
+title: Yordamlar
 ms.date: 04/28/2017
 helpviewer_keywords:
 - procedures [Visual Basic], structured code
@@ -8,62 +8,62 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: 4b6dfe30268aef7dc61f130c2775e2cc0d1503e8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b959f4b6986bc325c97c7cbe9aeee0341832f6cc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635625"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345989"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic'de Yordamlar
-A *yordamı* Visual Basic deyimleri tarafından bir bildirim deyiminin içine bloğudur (`Function`, `Sub`, `Operator`, `Get`, `Set`) ile eşleşen bir `End` bildirimi. Visual Basic'te tüm yürütülebilir deyimleri bazı yordam içinde olmalıdır.  
+A *procedure* is a block of Visual Basic statements enclosed by a declaration statement (`Function`, `Sub`, `Operator`, `Get`, `Set`) and a matching `End` declaration. All executable statements in Visual Basic must be within some procedure.  
   
-## <a name="calling-a-procedure"></a>Bir yordamı çağırma  
- Başka bir yerde kodda bir yordam çağırma. Bu olarak bilinen bir *yordam çağrısı*. Yordam tamamlandığında çalışan, denetimi olarak da bilinen, çağrılan kodu üretebiliyorsa *kodu çağırma*. Çağıran bir deyim ya da yordamın adını belirtir ve denetim için aktarımları bir deyimi içindeki bir ifadenin kodudur.  
+## <a name="calling-a-procedure"></a>Calling a Procedure  
+ You invoke a procedure from some other place in the code. This is known as a *procedure call*. When the procedure is finished running, it returns control to the code that invoked it, which is known as the *calling code*. The calling code is a statement, or an expression within a statement, that specifies the procedure by name and transfers control to it.  
   
-## <a name="returning-from-a-procedure"></a>Döndüren bir yordam  
- Bir yordam, çalışması tamamlandığında çağrıldığı koda denetimini döndürür. Bunu yapmak için bunu kullanabilirsiniz bir [dönüş deyimi](../../../../visual-basic/language-reference/statements/return-statement.md), uygun [çıkış bildirimi](../../../../visual-basic/language-reference/statements/exit-statement.md) yordamı veya yordam bildirimi [son \<anahtar sözcüğü > deyimi](../../../../visual-basic/language-reference/statements/end-keyword-statement.md)deyimi. Denetim noktasını yordam çağrısının çağrıldığı koda ardından geçer.  
+## <a name="returning-from-a-procedure"></a>Returning from a Procedure  
+ A procedure returns control to the calling code when it has finished running. To do this, it can use a [Return Statement](../../../../visual-basic/language-reference/statements/return-statement.md), the appropriate [Exit Statement](../../../../visual-basic/language-reference/statements/exit-statement.md) statement for the procedure, or the procedure's [End \<keyword> Statement](../../../../visual-basic/language-reference/statements/end-keyword-statement.md) statement. Control then passes to the calling code following the point of the procedure call.  
   
-- İle bir `Return` deyimi, denetimi döndürür hemen çağrıldığı koda. Deyimlerini aşağıdaki `Return` deyimi çalıştırmayın. Birden fazla aboneliğiniz `Return` aynı yordamındaki.  
+- With a `Return` statement, control returns immediately to the calling code. Statements following the `Return` statement do not run. You can have more than one `Return` statement in the same procedure.  
   
-- İle bir `Exit Sub` veya `Exit Function` deyimi, denetimi döndürür hemen çağrıldığı koda. Deyimlerini aşağıdaki `Exit` deyimi çalıştırmayın. Birden fazla aboneliğiniz `Exit` aynı yordamı ve deyiminde karıştırmak `Return` ve `Exit` deyimleri aynı yordam içinde.  
+- With an `Exit Sub` or `Exit Function` statement, control returns immediately to the calling code. Statements following the `Exit` statement do not run. You can have more than one `Exit` statement in the same procedure, and you can mix `Return` and `Exit` statements in the same procedure.  
   
-- Bir yordam varsa `Return` veya `Exit` deyimleri varmadan ile bir `End Sub` veya `End Function`, `End Get`, veya `End Set` son deyim yordamı gövdesi aşağıdaki deyimi. `End` Deyimi döndürür denetimi hemen çağrıldığı koda. Tek sahip `End` bir yordamındaki.  
+- If a procedure has no `Return` or `Exit` statements, it concludes with an `End Sub` or `End Function`, `End Get`, or `End Set` statement following the last statement of the procedure body. The `End` statement returns control immediately to the calling code. You can have only one `End` statement in a procedure.  
   
 ## <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler  
- Çoğu durumda, bir yordam her çağırdığında farklı veri çalışması gerekiyor. Bu bilgiler, bir yordama yordam çağrısı bir parçası olarak geçirebilirsiniz. Sıfır veya daha fazla yordamın tanımlar *parametreleri*, her temsil eden bir değer geçirin için bekler. Yordam tanımındaki her parametresine karşılık gelen olduğu bir *bağımsız değişken* yordam çağrısında. Bağımsız değişken, belirli bir yordamı çağrıda karşılık gelen parametresine geçirdiğiniz değerini temsil eder.  
+ In most cases, a procedure needs to operate on different data each time you call it. You can pass this information to the procedure as part of the procedure call. The procedure defines zero or more *parameters*, each of which represents a value it expects you to pass to it. Corresponding to each parameter in the procedure definition is an *argument* in the procedure call. An argument represents the value you pass to the corresponding parameter in a given procedure call.  
   
-## <a name="types-of-procedures"></a>Yordamları türleri  
- Visual Basic çeşitli türlerde yordamlar kullanır:  
+## <a name="types-of-procedures"></a>Types of Procedures  
+ Visual Basic uses several types of procedures:  
   
-- [Alt yordamlar](./sub-procedures.md) Eylemler gerçekleştirir ancak çağrıldığı koda bir değer döndürmüyor.  
+- [Sub Procedures](./sub-procedures.md) perform actions but do not return a value to the calling code.  
   
-- Olay işleme yordamlar `Sub` kullanıcı eylemi veya bir programda bir örneği tarafından oluşturulan bir olaya yanıt olarak yürütülen yordamları.  
+- Event-handling procedures are `Sub` procedures that execute in response to an event raised by user action or by an occurrence in a program.  
   
-- [İşlev yordamları](./function-procedures.md) çağrıldığı koda bir değer döndürür. Sonuç döndürülmeden önce diğer eylemleri gerçekleştirebilirsiniz.
+- [Function Procedures](./function-procedures.md) return a value to the calling code. They can perform other actions before returning.
 
-    Bazı işlevler yazılan C# dönüş bir *başvuru dönüş değeri*. Çağıranlar işlevi dönüş değeri değiştirebilirsiniz ve bu değişiklik çağrılan nesnenin durumunda yansıtılır. Visual Basic 2017'den itibaren bir değer başvuru ile döndürülemez olsa da Visual Basic kodunu başvuru dönüş değerleri kullanabilir. Daha fazla bilgi için [başvuru dönüş değerleri](ref-return-values.md).
+    Some functions written in C# return a *reference return value*. Function callers can modify the return value, and this modification is reflected in the state of the called object. Starting with Visual Basic 2017, Visual Basic code can consume reference return values, although it cannot return a value by reference. For more information, see [Reference return values](ref-return-values.md).
   
-- [Özellik yordamları](./property-procedures.md) dönün ve nesne veya modülleri özelliklerinin değerlerini atayın.  
+- [Property Procedures](./property-procedures.md) return and assign values of properties on objects or modules.  
   
-- [İşleç yordamları](./operator-procedures.md) birini veya her ikisini işlenenler olduğunda, bir yeni tanımlı sınıf veya yapı standart işlecinin davranışını tanımlayın.  
+- [Operator Procedures](./operator-procedures.md) define the behavior of a standard operator when one or both of the operands is a newly-defined class or structure.  
   
-- [Visual Basic'de genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) bir veya daha fazla tanımlama *tür parametrelerindeki* çağıran kod belirli geçirebilirsiniz. böylece normal parametrelerinin yanı sıra veri türleri bu çağrıda saat.  
+- [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) define one or more *type parameters* in addition to their normal parameters, so the calling code can pass specific data types each time it makes a call.  
   
-## <a name="procedures-and-structured-code"></a>Yordamlar ve yapılandırılmış kod  
- Her uygulamanızdaki yürütülebilir kod satırı gibi bazı yordam içinde olmalıdır `Main`, `calculate`, veya `Button1_Click`. Büyük yordamları küçük parçalara ayırabilir, uygulamanızı daha okunabilir olur.  
+## <a name="procedures-and-structured-code"></a>Procedures and Structured Code  
+ Every line of executable code in your application must be inside some procedure, such as `Main`, `calculate`, or `Button1_Click`. If you subdivide large procedures into smaller ones, your application is more readable.  
   
- Yordamları, sık kullanılan hesaplama, metin ve denetim ve veritabanı işlemleri gibi yinelenen veya paylaşılan görevleri gerçekleştirmek için faydalıdır. Uygulamanız için yapı taşı olarak yordamları kullanabilmeniz için kodunuza, pek çok farklı yerden bir yordam çağırabilir.  
+ Procedures are useful for performing repeated or shared tasks, such as frequently used calculations, text and control manipulation, and database operations. You can call a procedure from many different places in your code, so you can use procedures as building blocks for your application.  
   
- Kodunuzu yordamları ile yapılandırılması size aşağıdaki avantajları sunar:  
+ Structuring your code with procedures gives you the following benefits:  
   
-- Yordamları programlarınızın ayrı mantıksal birimler halinde bölmek sağlar. Programın tamamındaki yordamları olmadan hata ayıklama çok daha fazla ayrı birimleri kolayca hata ayıklaması yapabilirsiniz.  
+- Procedures allow you to break your programs into discrete logical units. You can debug separate units more easily than you can debug an entire program without procedures.  
   
-- Bir programda kullanmak için yordamlar geliştirmek sonra diğer programlara, genellikle çok az kayıpla veya hiç değişiklik kullanabilirsiniz. Kod yinelemesinden kaçınmak yardımcı olur.  
+- After you develop procedures for use in one program, you can use them in other programs, often with little or no modification. This helps you avoid code duplication.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Bir yordam oluşturma](./how-to-create-a-procedure.md)
+- [Nasıl yapılır: Yordam Oluşturma](./how-to-create-a-procedure.md)
 - [Alt Yordamlar](./sub-procedures.md)
 - [İşlev Yordamları](./function-procedures.md)
 - [Özellik Yordamları](./property-procedures.md)
@@ -71,5 +71,5 @@ A *yordamı* Visual Basic deyimleri tarafından bir bildirim deyiminin içine bl
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Özyinelemeli Yordamlar](./recursive-procedures.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
-- [Visual Basic'de genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
 - [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

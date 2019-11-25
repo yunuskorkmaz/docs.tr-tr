@@ -1,5 +1,5 @@
 ---
-title: Visual Basic ile Dosya Erişimi
+title: File Access
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file access
@@ -14,34 +14,36 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-ms.openlocfilehash: f9cbb255dea8c6915951b5099f40bfd0ba66c8aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22bcd0f1f3acb0c0ad899b83ad2d879ead948f12
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960309"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348905"
 ---
 # <a name="file-access-with-visual-basic"></a>Visual Basic ile Dosya Erişimi
-`My.Computer.FileSystem` Nesne dosyaları ve klasörleri ile çalışmaya yönelik araçlar sağlar. Özelliklerini, yöntemlerini ve olaylarını oluşturma, kopyalama, taşıma, araştırmak ve dosya ve klasörleri silme için izin verin. `My.Computer.FileSystem` eski işlevleri daha iyi performans sağlar (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput`, vs.), sağlanan Visual Basic tarafından geriye dönük uyumluluk için.  
+
+The `My.Computer.FileSystem` object provides tools for working with files and folders. Its properties, methods, and events allow you to create, copy, move, investigate, and delete files and folders. `My.Computer.FileSystem` provides better performance than the legacy functions (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput`, etc.) that are provided by Visual Basic for backward compatibility.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Dosyalardan Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- Kullanma ile ilgili konuları listeler `My.Computer.FileSystem` nesne dosyalarını okuma  
+ Lists topics dealing with using the `My.Computer.FileSystem` object to read from files  
   
  [Dosyalara Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
- Kullanma ile ilgili konuları listeler `My.Computer.FileSystem` dosyalarına yazılacak nesne  
+ Lists topics dealing with using the `My.Computer.FileSystem` object to write to files  
   
  [Dosya ve Dizin Oluşturma, Silme ve Taşıma](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- Kullanma ile ilgili konuları listeler `My.Computer.FileSystem` oluşturma, kopyalama, silme ve taşıma dosyalar ve klasörler için nesne.  
+ Lists topics dealing with using the `My.Computer.FileSystem` object to creating, copying, deleting and moving files and folders.  
   
  [TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
- Nasıl kullanılacağı ele alınmaktadır `TextFieldReader` günlükleri gibi metin dosyalarını ayrıştırmak için.  
+ Discusses how to use the `TextFieldReader` to parse text files such as logs.  
   
  [Dosya Kodlamaları](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
- Dosya kodlamaları ve bunların kullanımını açıklar.  
+ Describes file encodings and their use.  
   
- [İzlenecek yol: Dosyaları ve dizinleri Visual Basic'te düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Dosya ve klasörleri hakkında bilgi raporları bir yardımcı oluşturulacağını gösterir.  
+ [Walkthrough: Manipulating Files and Directories in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ Demonstrates how to create a utility that reports information about files and folders.  
   
- [Sorun giderme: Okuma ve dosyalara metin yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
- Metin dosyaları için okuma ve yazma sırasında sık karşılaşılan sorunlar listeler ve her biri için çözümler önerir.
+ [Sorun Giderme: Metin Dosyalarını Okuma ve Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
+ Lists common problems encountered when reading and writing to text files, and suggests remedies for each.

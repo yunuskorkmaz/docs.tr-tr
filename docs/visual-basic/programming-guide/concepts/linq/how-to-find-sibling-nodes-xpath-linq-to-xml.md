@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: eşdüzey düğümleri bulma (XPath-LINQ to XML) (Visual Basic)'
+title: 'How to: Find Sibling Nodes (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
-ms.openlocfilehash: 9640c8708082965515d4b90c979519f7efdaa2ba
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 52151c939bbf67df37a9535b1081ff902d357123
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582703"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344635"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: eşdüzey düğümleri bulma (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)
 
-Belirli bir ada sahip bir düğümün tüm eşdüzey düzeylerini bulmak isteyebilirsiniz. Bağlam düğümü de belirli bir ada sahipse, sonuçta elde edilen koleksiyon bağlam düğümünü içerebilir.
+You might want to find all siblings of a node that have a specific name. The resulting collection might include the context node if the context node also has the specific name.
 
-XPath ifadesi:
+The XPath expression is:
 
 `../Book`
 
 ## <a name="example"></a>Örnek
 
-Bu örnek önce bir `Book` öğesi bulur ve sonra `Book` adlı tüm eşdüzey öğeleri bulur. Elde edilen koleksiyon, bağlam düğümünü içerir.
+This example first finds a `Book` element, and then finds all sibling elements named `Book`. The resulting collection includes the context node.
 
-Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: kitaplar (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
+This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
 
 ```vb
 Dim books As XDocument = XDocument.Load("Books.xml")
@@ -44,7 +44,7 @@ For Each el As XElement In list1
 Next
 ```
 
-Bu örnek aşağıdaki çıktıyı üretir:
+This example produces the following output:
 
 ```console
 Results are identical
@@ -71,4 +71,4 @@ Results are identical
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XPath kullanıcıları için LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

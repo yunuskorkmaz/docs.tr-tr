@@ -1,39 +1,39 @@
 ---
-title: Visual Basic'de Dizeler
+title: Dizeler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, strings
 - strings [Visual Basic], Visual Basic
 ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
-ms.openlocfilehash: 856927baa06019f7827bf9751352069f0fc37829
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db79284e45161f87e447fec7ab7faf91093a3fd7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024592"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344331"
 ---
 # <a name="strings-in-visual-basic"></a>Visual Basic'de Dizeler
-Bu bölümde, Visual Basic'de dizeleri kullanma ardındaki temel kavramları açıklar.  
+This section describes the basic concepts behind using strings in Visual Basic.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Visual Basic'de dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- Visual Basic'de dizeleri kullanma ardındaki temel kavramları açıklayan konulara listeler.  
+ [Introduction to Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
+ Lists topics that describe the basic concepts behind using strings in Visual Basic.  
   
- [Nasıl yapılır: Visual Basic'de bir StringBuilder kullanarak dize oluşturma](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
- Verimli bir şekilde çok sayıda küçük dizelerden uzun bir dize oluşturma işlemini gösterir.  
+ [How to: Create Strings Using a StringBuilder in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
+ Demonstrates how to efficiently create a long string from many smaller strings.  
   
- [Nasıl yapılır: Dize içinde arama](../../../../visual-basic/programming-guide/language-features/strings/how-to-search-within-a-string.md)  
- Bir alt dizenin ilk geçtiği dizini belirlemek nasıl gösterir.  
+ [Nasıl yapılır: Dize İçinde Arama](../../../../visual-basic/programming-guide/language-features/strings/how-to-search-within-a-string.md)  
+ Demonstrates how to determine the index of the first occurrence of a substring.  
   
- [Dizeler ve Visual Basic'te diğer veri türleri arasında dönüştürme](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
- Dizeleri diğer veri türlerine dönüştürmek nasıl açıklayan konulara listeler.  
+ [Converting Between Strings and Other Data Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
+ Lists topics that describe how to convert strings into other data types.  
   
- [Visual Basic'de dizeleri doğrulama](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
- Dizeleri doğrulama nasıl ele almaktadır konuları listeler.  
+ [Validating Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
+ Lists topics that discuss how to validate strings.  
   
- [İzlenecek yol: Şifreleme ve şifresini çözme Visual Basic'de dizeleri](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
- Şifreleme ve dizeleri şifreleme hizmeti sağlayıcısı sürümü Üçlü Veri şifreleme standardı algoritması kullanılarak şifre çözme işlemi gösterilmektedir.  
+ [Walkthrough: Encrypting and Decrypting Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
+ Demonstrates how to encrypt and decrypt strings by using the cryptographic service provider version of the Triple Data Encryption Standard algorithm.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic dil özellikleri](../../../../visual-basic/programming-guide/language-features/index.md)
+- [Visual Basic Language Features](../../../../visual-basic/programming-guide/language-features/index.md)

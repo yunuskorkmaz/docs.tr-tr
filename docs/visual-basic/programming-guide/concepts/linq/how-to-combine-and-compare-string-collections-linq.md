@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (Visual Basic)'
+title: 'Nasıl yapılır: Dize Koleksiyonlarını Birleştirme ve Karşılaştırma (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: d521e56f9ae311eea53028ba189416db289839cd
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: e9bc8a5f88585bd8625633c54796a1c658c7a7af
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352887"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348431"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Nasıl yapılır: Dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (Visual Basic)
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>How to: Combine and Compare String Collections (LINQ) (Visual Basic)
 
-Bu örnekte, metin satırları içeren dosyaların nasıl birleştiriyapılacağı ve sonuçların nasıl sıralanacağını gösterilmektedir. Özellikle, iki metin satırı kümesinde basit bir birleştirme, birleşim ve bir kesişimin nasıl gerçekleştirileceğini gösterir.
+This example shows how to merge files that contain lines of text and then sort the results. Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.
 
-### <a name="to-set-up-the-project-and-the-text-files"></a>Projeyi ve metin dosyalarını ayarlamak için
+### <a name="to-set-up-the-project-and-the-text-files"></a>To set up the project and the text files
 
-1. Bu adları names1. txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin:
+1. Copy these names into a text file that is named names1.txt and save it in your project folder:
 
     ```text
     Bankov, Peter
@@ -30,7 +30,7 @@ Bu örnekte, metin satırları içeren dosyaların nasıl birleştiriyapılacağ
     Garcia, Debra
     ```
 
-2. Bu adları names2. txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin. İki dosyanın bazı adları yaygın olarak olduğunu unutmayın.
+2. Copy these names into a text file that is named names2.txt and save it in your project folder. Note that the two files have some names in common.
 
     ```text
     Liu, Jinghao
@@ -165,9 +165,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>Kod Derleniyor
 
-System. Linq ad alanı için `Imports` ifadesiyle bir VB.NET konsol uygulaması projesi oluşturun.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

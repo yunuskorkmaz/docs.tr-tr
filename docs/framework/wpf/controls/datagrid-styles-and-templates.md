@@ -9,20 +9,20 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: d1ef962132f4c057229c8150a8d49809ce8c7430
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 066e8c9ce1112399be8128d0821498f0d56a3dc3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460395"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283798"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid Stilleri ve Şablonları
-Bu konuda <xref:System.Windows.Controls.DataGrid> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+Bu konuda <xref:System.Windows.Controls.DataGrid> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için varsayılan <xref:System.Windows.Controls.ControlTemplate> değiştirebilirsiniz. Daha fazla bilgi için bkz. [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="datagrid-parts"></a>DataGrid bölümleri  
  Aşağıdaki tabloda <xref:System.Windows.Controls.DataGrid> denetimi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümüyle|Tür|Açıklama|  
+|Bölümüyle|Type|Açıklama|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Sütun üst bilgilerini içeren satır.|  
   
@@ -35,7 +35,7 @@ Bu konuda <xref:System.Windows.Controls.DataGrid> denetimine yönelik stiller ve
   
 |VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Normal|Ortak durumlar|Varsayılan durum.|  
 |Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|  
 |Invalidodaklanmış|Doğrulama durumları|Denetim geçerli değil ve odağa sahip.|  
 |Invalidunodaklanmış|Doğrulama durumları|Denetim geçerli değil ve odağa sahip değil.|  
@@ -49,7 +49,7 @@ Bu konuda <xref:System.Windows.Controls.DataGrid> denetimine yönelik stiller ve
   
 |VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Normal|Ortak durumlar|Varsayılan durum.|  
 |Gelme olayından|Ortak durumlar|Fare işaretçisi hücrenin üzerine konumlandırılır.|  
 |Diğinize|Odaklardaki durumlar|Hücre odağa sahip.|  
 |Odaklanmadan gözetle|Odaklardaki durumlar|Hücrede odak yok|  
@@ -57,7 +57,7 @@ Bu konuda <xref:System.Windows.Controls.DataGrid> denetimine yönelik stiller ve
 |Aralıklarla|CurrentStates|Hücre geçerli hücre değil.|  
 |Ekran|Interactionstates|Hücre, görüntüleme modundadır.|  
 |Düzenleme|Interactionstates|Hücre düzenleme modunda.|  
-|Seçildiğinde|SelectionStates|Hücre seçildi.|  
+|Seçildi|SelectionStates|Hücre seçildi.|  
 |Değilken|SelectionStates|Hücre seçilmemiş.|  
 |Invalidodaklanmış|Doğrulama durumları|Hücre geçerli değil ve odağa sahip.|  
 |Invalidunodaklanmış|Doğrulama durumları|Hücre geçerli değil ve odağı yok.|  
@@ -71,7 +71,7 @@ Bu konuda <xref:System.Windows.Controls.DataGrid> denetimine yönelik stiller ve
   
 |VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Normal|Ortak durumlar|Varsayılan durum.|  
 |Gelme olayından|Ortak durumlar|Fare işaretçisi, satırın üzerine yerleştirilir.|  
 |MouseOver_Editing|Ortak durumlar|Fare işaretçisi, satırın üzerine konumlandırılır ve satır düzenleme modundadır.|  
 |MouseOver_Selected|Ortak durumlar|Fare işaretçisi, satırın üzerine konumlandırılır ve satır seçilir.|  
@@ -89,7 +89,7 @@ Bu konuda <xref:System.Windows.Controls.DataGrid> denetimine yönelik stiller ve
 ## <a name="datagridrowheader-parts"></a>DataGridRowHeader parçaları  
  Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DataGridRowHeader> öğesi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümüyle|Tür|Açıklama|  
+|Bölümüyle|Type|Açıklama|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Üstteki satır üstbilgisini yeniden boyutlandırmak için kullanılan öğe.|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Satır üstbilgisini alttan yeniden boyutlandırmak için kullanılan öğe.|  
@@ -99,7 +99,7 @@ Bu konuda <xref:System.Windows.Controls.DataGrid> denetimine yönelik stiller ve
   
 |VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Normal|Ortak durumlar|Varsayılan durum.|  
 |Gelme olayından|Ortak durumlar|Fare işaretçisi, satırın üzerine yerleştirilir.|  
 |MouseOver_CurrentRow|Ortak durumlar|Fare işaretçisi, satırın üzerine konumlandırılır ve satır geçerli satırdır.|  
 |MouseOver_CurrentRow_Selected|Ortak durumlar|Fare işaretçisi, satırın üzerine konumlandırılır ve satır geçerli ve seçilir.|  
@@ -122,7 +122,7 @@ Bu konuda <xref:System.Windows.Controls.DataGrid> denetimine yönelik stiller ve
 ## <a name="datagridcolumnheaderspresenter-parts"></a>DataGridColumnHeadersPresenter bölümleri  
  Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> öğesi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümüyle|Tür|Açıklama|  
+|Bölümüyle|Type|Açıklama|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Sütun üst bilgileri için yer tutucu.|  
   
@@ -138,7 +138,7 @@ Bu konuda <xref:System.Windows.Controls.DataGrid> denetimine yönelik stiller ve
 ## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader parçaları  
  Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> öğesi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümüyle|Tür|Açıklama|  
+|Bölümüyle|Type|Açıklama|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Sol taraftaki sütun üst bilgisini yeniden boyutlandırmak için kullanılan öğe.|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Sağdaki sütun üst bilgisini yeniden boyutlandırmak için kullanılan öğesi.|  
@@ -148,9 +148,9 @@ Bu konuda <xref:System.Windows.Controls.DataGrid> denetimine yönelik stiller ve
   
 |VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Normal|Ortak durumlar|Varsayılan durum.|  
 |Gelme olayından|Ortak durumlar|Fare işaretçisi denetimin üzerine yerleştirilir.|  
-|Basılması|Ortak durumlar|Denetime basıldığında.|  
+|Basılan|Ortak durumlar|Denetime basıldığında.|  
 |Sortascbitiriliyor|SortStates|Sütun artan düzende sıralanır.|  
 |Sortazalan|SortStates|Sütun, azalan düzende sıralanır.|  
 |Olmayan|SortStates|Sütun sıralanmaz.|  
@@ -176,4 +176,4 @@ Bu konuda <xref:System.Windows.Controls.DataGrid> denetimine yönelik stiller ve
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
 - [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)
+- [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md)

@@ -1,63 +1,63 @@
 ---
-title: Visual Basic'de Normal İfadeleri MaskedTextBox Denetimi ile Kullanma
+title: Normal İfadeleri MaskedTextBox Denetimi ile Kullanma
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: e0165fb8d573878ae19378b2656d89627680b804
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12d500fa0ff4945dcf2d5009bdba6d337834707e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024514"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346258"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic'de Normal İfadeleri MaskedTextBox Denetimi ile Kullanma
-Bu örnek ile çalışmak için basit normal ifadeler dönüştürülmesi gösterilmektedir <xref:System.Windows.Forms.MaskedTextBox> denetimi.  
+This example demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.  
   
-## <a name="description-of-the-masking-language"></a>Maskeleme dil açıklaması  
- Standart <xref:System.Windows.Forms.MaskedTextBox> dil maskeleme temel olarak kullanılan `Masked Edit` denetim Visual Basic 6. 0've kullanıcılara bu platformundan geçirildiğinde tanımanız gerekir.  
+## <a name="description-of-the-masking-language"></a>Description of the Masking Language  
+ The standard <xref:System.Windows.Forms.MaskedTextBox> masking language is based on the one used by the `Masked Edit` control in Visual Basic 6.0 and should be familiar to users migrating from that platform.  
   
- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Özelliği <xref:System.Windows.Forms.MaskedTextBox> denetimi kullanmak için hangi giriş maskesi belirtir. Maske, en az biri aşağıdaki tabloda maskeleme öğelerden oluşan bir dize olmalıdır.  
+ The <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of the <xref:System.Windows.Forms.MaskedTextBox> control specifies what input mask to use. The mask must be a string composed of one or more of the masking elements from the following table.  
   
-|Maskeleme öğesi|Açıklama|Normal ifade öğesi|  
+|Masking element|Açıklama|Regular expression element|  
 |---------------------|-----------------|--------------------------------|  
-|0|0 ile 9 arasında tek bir basamak. Giriş gerekli.|\d|  
-|9|Sayı veya boşluk. Giriş isteğe bağlı.|[\d]?|  
-|#|Sayı veya boşluk. Giriş isteğe bağlı. Bu konum maskesi boş bırakılırsa, bir boşluk olarak işlenir. (+) Artı ve eksi (-) işareti izin verilir.|[\d+-]?|  
-|L|ASCII harfi. Giriş gerekli.|[a-zA-Z]|  
-|?|ASCII harfi. Giriş isteğe bağlı.|[a-zA-Z]?|  
-|&|karakter. Giriş gerekli.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|C|karakter. Giriş isteğe bağlı.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
-|BİR|Alfasayısal. Giriş isteğe bağlı.|\W|  
-|biçimindeki telefon numarasıdır.|Kültüre uygun ondalık yer tutucusu.|Kullanılabilir değil.|  
-|,|Kültüre uygun binlerce yer tutucu.|Kullanılabilir değil.|  
-|:|Kültüre uygun zaman ayırıcı.|Kullanılabilir değil.|  
-|/|Kültüre uygun tarih ayırıcı.|Kullanılabilir değil.|  
-|$|Kültüre uygun bir para birimi simgesi.|Kullanılabilir değil.|  
-|\<|Tüm karakterleri küçük harfe izleyin dönüştürür.|Kullanılabilir değil.|  
-|>|Tüm karakterleri büyük harfe izleyin dönüştürür.|Kullanılabilir değil.|  
-|&#124;|Önceki shift yukarı alır ya da aşağı kaydır.|Kullanılabilir değil.|  
-|&#92;|Bir sabit değer içinde kapatma bir maske karakter çıkışları. "\\\\" için bir ters eğik çizgi kaçış sırası.|&#92;|  
-|Tüm diğer karakterler.|Sabit değerler. Tüm maske olmayan öğeler olarak kendilerini içinde görünür <xref:System.Windows.Forms.MaskedTextBox>.|Tüm diğer karakterler.|  
+|0|Any single digit between 0 and 9. Entry required.|\d|  
+|9|Digit or space. Entry optional.|[ \d]?|  
+|#|Digit or space. Entry optional. If this position is left blank in the mask, it will be rendered as a space. Plus (+) and minus (-) signs are allowed.|[ \d+-]?|  
+|L|ASCII letter. Entry required.|[a-zA-Z]|  
+|?|ASCII letter. Entry optional.|[a-zA-Z]?|  
+|&|Character. Entry required.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
+|C|Character. Entry optional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
+|BİR|Alphanumeric. Entry optional.|\W|  
+|biçimindeki telefon numarasıdır.|Culture-appropriate decimal placeholder.|Not available.|  
+|,|Culture-appropriate thousands placeholder.|Not available.|  
+|:|Culture-appropriate time separator.|Not available.|  
+|/|Culture-appropriate date separator.|Not available.|  
+|$|Culture-appropriate currency symbol.|Not available.|  
+|\<|Converts all characters that follow to lowercase.|Not available.|  
+|>|Converts all characters that follow to uppercase.|Not available.|  
+|&#124;|Undoes a previous shift up or shift down.|Not available.|  
+|&#92;|Escapes a mask character, turning it into a literal. "\\\\" is the escape sequence for a backslash.|&#92;|  
+|All other characters.|Literals. All non-mask elements will appear as themselves within <xref:System.Windows.Forms.MaskedTextBox>.|All other characters.|  
   
- Ondalık (.), binde (,), zaman (:), tarih (/) ve uygulamanın kültür tarafından tanımlandığı şekilde bu sembolleri görüntüleme (USD) para birimi sembolleri varsayılan. Bunları kullanarak başka bir kültür için bir simge görüntülemek için zorlayabilirsiniz <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> özelliği.  
+ The decimal (.), thousandths (,), time (:), date (/), and currency ($) symbols default to displaying those symbols as defined by the application's culture. You can force them to display symbols for another culture by using the <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> property.  
   
-## <a name="regular-expressions-and-masks"></a>Normal ifadeler ve maskeleri  
- Kullanıcı girişini doğrulamak için normal ifadeler ve maskelerini kullanabilirsiniz, ancak bunlar tamamen eşdeğer değildir. Normal ifadeler daha karmaşık desenlerle maskeleri daha ifade edebilirsiniz, ancak daha temellerini ve ilgili kültürel bir biçimde maskeleri aynı bilgileri ifade edebilirsiniz.  
+## <a name="regular-expressions-and-masks"></a>Regular Expressions and Masks  
+ Although you can use regular expressions and masks to validate user input, they are not completely equivalent. Regular expressions can express more complex patterns than masks, but masks can express the same information more succinctly and in a culturally relevant format.  
   
- Aşağıdaki tabloda her biri için dört normal ifadeler ve eşdeğer maske karşılaştırır.  
+ The following table compares four regular expressions and the equivalent mask for each.  
   
-|Normal ifade|Maskesi|Notlar|  
+|Normal ifade|Mask|Notlar|  
 |------------------------|----------|-----------|  
-|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|`/` Maske karakter olduğu mantıksal tarih ayırıcı ve uygulamanın geçerli kültür için uygun tarih ayırıcı olarak kullanıcıya görünür.|  
-|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|Biçimde bir tarih (gün, ay kısaltması ve yıl) tarafından iki küçük harf ve ardından ilk büyük harfle ayın üç harfli kısaltması görüntülendiği Amerika Birleşik Devletleri.|  
-|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|ABD telefon numarası alan kodu isteğe bağlı. Kullanıcı, isteğe bağlı karakterler girin istiyorsanız değil, Filiz boşluk girin veya doğrudan ilk 0 tarafından temsil edilen maskesi konumda fare işaretçisi yerleştirin.|  
-|`$\d{6}.00`|`$999,999.00`|Para birimi değeri için 0 ile 999999 aralığında. Para birimi, 214.748,3648 ve ondalık karakterler çalışma zamanında kültüre özgü eşdeğerleri ile değiştirilecek.|  
+|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|The `/` character in the mask is a logical date separator, and it will appear to the user as the date separator appropriate to the application's current culture.|  
+|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|A date (day, month abbreviation, and year) in United States format in which the three-letter month abbreviation is displayed with an initial uppercase letter followed by two lowercase letters.|  
+|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|United States phone number, area code optional. If the user does not wish to enter the optional characters, she can either enter spaces or place the mouse pointer directly at the position in the mask represented by the first 0.|  
+|`$\d{6}.00`|`$999,999.00`|A currency value in the range of 0 to 999999. The currency, thousandth, and decimal characters will be replaced at run-time with their culture-specific equivalents.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>
-- [Visual Basic'de dizeleri doğrulama](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
+- [Validating Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
 - [MaskedTextBox Denetimi](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: dab708bfbc33458bc2664c0d04757f0badcc2575
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419384"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141607"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Örtük olarak yazılan yerel değişkenlerC# (Programlama Kılavuzu)
 
@@ -30,13 +30,13 @@ Aşağıdaki örneklerde, yerel değişkenlerin `var`ile bildirilebilecek çeşi
 - [For](../../language-reference/keywords/for.md) Initialization ifadesinde.
 
     ```csharp
-    for(var x = 1; x < 10; x++)
+    for (var x = 1; x < 10; x++)
     ```
 
 - Bir [foreach](../../language-reference/keywords/foreach-in.md) başlatma bildiriminde.
 
     ```csharp
-    foreach(var item in list){...}
+    foreach (var item in list) {...}
     ```
 
 - Bir [using](../../language-reference/keywords/using-statement.md) ifadesinde.
@@ -45,7 +45,7 @@ Aşağıdaki örneklerde, yerel değişkenlerin `var`ile bildirilebilecek çeşi
     using (var file = new StreamReader("C:\\myfile.txt")) {...}
     ```
 
-Daha fazla bilgi için bkz. [nasıl yapılır: bir sorgu Ifadesinde örtük olarak yazılan yerel değişkenleri ve dizileri kullanma](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
+Daha fazla bilgi için bkz. [bir sorgu ifadesinde örtük olarak yazılan yerel değişkenleri ve dizileri kullanma](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
 
 ## <a name="var-and-anonymous-types"></a>var ve anonim türler
 
@@ -63,7 +63,7 @@ Aşağıdaki kısıtlamalar, örtük olarak belirlenmiş değişken bildirimleri
 
 - `var` sınıf kapsamındaki alanlarda kullanılamaz.
 
-- `var` kullanılarak belirtilen değişkenler başlatma ifadesinde kullanılamaz. Diğer bir deyişle, bu ifade yasal`: int i = (i = 20);`, ancak bu ifade derleme zamanı hatası veriyor: `var i = (i = 20);`
+- `var` kullanılarak belirtilen değişkenler başlatma ifadesinde kullanılamaz. Diğer bir deyişle, bu ifade geçerli: `int i = (i = 20);` ancak bu ifade derleme zamanı hatası veriyor: `var i = (i = 20);`
 
 - Birden çok örtük olarak yazılmış değişkenler aynı ifadede başlatılamaz.
 
@@ -95,7 +95,7 @@ Ancak `var` kullanımı, kodunuzun diğer geliştiriciler için anlaşılması d
 
 - [C#Başvurunun](../../language-reference/index.md)
 - [Örtük Olarak Yazılan Diziler](../arrays/implicitly-typed-arrays.md)
-- [Nasıl yapılır: Sorgu İfadesinde Türü Örtük Olarak Belirlenmiş Yerel Değişkenleri ve Dizileri Kullanma](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
+- [Sorgu ifadesinde örtük olarak yazılan yerel değişkenleri ve dizileri kullanma](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [Anonim Tipler](anonymous-types.md)
 - [Nesne ve Koleksiyon Başlatıcıları](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)

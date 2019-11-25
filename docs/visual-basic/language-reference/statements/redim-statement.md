@@ -1,5 +1,5 @@
 ---
-title: ReDim Deyimi (Visual Basic)
+title: ReDim Deyimi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ReDim
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: a9384ba118df2a84fbd2581e6a8bacb58e41ddcc
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: fabfd9a45d47cc1b881b3743181a03e89158f939
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582079"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346745"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim Deyimi (Visual Basic)
-, Bir dizi değişkeni için depolama alanını yeniden konumlandırır.  
+Reallocates storage space for an array variable.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,59 +46,59 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 |Terim|Tanım|  
 |----------|----------------|  
-|`Preserve`|İsteğe bağlı. Yalnızca son boyutun boyutunu değiştirirken mevcut dizideki verileri korumak için kullanılan değiştirici.|  
-|`name`|Gerekli. Dizi değişkeninin adı. Bkz. [tanımlanmış öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`boundlist`|Gerekli. Yeniden tanımlanmış dizinin her boyutunun sınırları listesi.|  
+|`Preserve`|İsteğe bağlı. Modifier used to preserve the data in the existing array when you change the size of only the last dimension.|  
+|`name`|Gerekli. Name of the array variable. See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`boundlist`|Gerekli. List of bounds of each dimension of the redefined array.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Önceden tanımlanmış bir dizinin bir veya daha fazla boyutunun boyutunu değiştirmek için `ReDim` ifadesini kullanabilirsiniz. Büyük bir diziniz varsa ve öğelerin bazılarını artık gerekmiyorsa, `ReDim` dizi boyutunu azaltarak belleği serbest bırakabilirsiniz. Öte yandan, dizide daha fazla öğe gerekiyorsa `ReDim` bunları ekleyebilir.  
+ You can use the `ReDim` statement to change the size of one or more dimensions of an array that has already been declared. If you have a large array and you no longer need some of its elements, `ReDim` can free up memory by reducing the array size. On the other hand, if your array needs more elements, `ReDim` can add them.  
   
- @No__t_0 deyimleri yalnızca diziler için tasarlanmıştır. Yapı değerleri (yalnızca tek bir değer içeren değişkenler), koleksiyonlar veya yapılar üzerinde geçerli değildir. @No__t_0 türünde olacak bir değişken bildirirseniz, `ReDim` deyimin yeni diziyi oluşturmak için yeterli tür bilgilerine sahip olmadığını unutmayın.  
+ The `ReDim` statement is intended only for arrays. It's not valid on scalars (variables that contain only a single value), collections, or structures. Note that if you declare a variable to be of type `Array`, the `ReDim` statement doesn't have sufficient type information to create the new array.  
   
- Yalnızca yordam düzeyinde `ReDim` kullanabilirsiniz. Bu nedenle, değişken için bildirim bağlamı bir yordam olmalıdır; Kaynak dosya, ad alanı, arabirim, sınıf, yapı, modül veya blok olamaz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ You can use `ReDim` only at procedure level. Therefore, the declaration context for the variable must be a procedure; it can't be a source file, a namespace, an interface, a class, a structure, a module, or a block. For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Birden çok değişken.** Aynı bildirim deyimindeki birkaç dizi değişkenini yeniden boyutlandırabilir ve her değişken için `name` ve `boundlist` parçalarını belirtebilirsiniz. Birden çok değişken virgülle ayrılır.  
+- **Multiple Variables.** You can resize several array variables in the same declaration statement and specify the `name` and `boundlist` parts for each variable. Multiple variables are separated by commas.  
   
-- **Dizi sınırları.** @No__t_0 içindeki her giriş, bu boyutun alt ve üst sınırlarını belirtebilir. Alt sınır her zaman 0 (sıfır) olur. Üst sınır, boyutun uzunluğunu değil, bu boyut için mümkün olan en yüksek dizin değeridir (üst sınır artı bir değerdir). Her boyutun dizini, üst sınır değeri ile 0 arasında değişebilir.  
+- **Array Bounds.** Each entry in `boundlist` can specify the lower and upper bounds of that dimension. The lower bound is always 0 (zero). The upper bound is the highest possible index value for that dimension, not the length of the dimension (which is the upper bound plus one). The index for each dimension can vary from 0 through its upper bound value.  
   
-     @No__t_0 boyut sayısı, dizinin orijinal boyut sayısıyla (derece) eşleşmelidir.  
+     The number of dimensions in `boundlist` must match the original number of dimensions (rank) of the array.  
   
-- **Veri türleri.** @No__t_0 ifade, bir dizi değişkeninin veya öğelerinin veri türünü değiştiremiyor.  
+- **Data Types.** The `ReDim` statement cannot change the data type of an array variable or its elements.  
   
-- **Başlatılmasında.** @No__t_0 deyimin dizi öğeleri için yeni başlatma değerleri sağlayamaz.  
+- **Initialization.** The `ReDim` statement cannot provide new initialization values for the array elements.  
   
-- **Sırası.** @No__t_0 ifade, dizinin derecesini (boyut sayısı) değiştiremiyor.  
+- **Rank.** The `ReDim` statement cannot change the rank (the number of dimensions) of the array.  
   
-- **Preserve ile yeniden boyutlandırma.** @No__t_0 kullanırsanız, yalnızca dizinin son boyutunu yeniden boyutlandırabilirsiniz. Diğer tüm boyutlar için, var olan dizinin bir ilişkisini belirtmeniz gerekir.  
+- **Resizing with Preserve.** If you use `Preserve`, you can resize only the last dimension of the array. For every other dimension, you must specify the bound of the existing array.  
   
-     Örneğin, dizide yalnızca bir boyut varsa, en son ve yalnızca boyutu değiştirdiğiniz için bu boyutu yeniden boyutlandırabilir ve dizinin tüm içeriğini koruyabilirsiniz. Ancak, dizide iki veya daha fazla boyut varsa, `Preserve` kullanırsanız yalnızca son boyutun boyutunu değiştirebilirsiniz.  
+     For example, if your array has only one dimension, you can resize that dimension and still preserve all the contents of the array, because you are changing the last and only dimension. However, if your array has two or more dimensions, you can change the size of only the last dimension if you use `Preserve`.  
   
-- **Özelliklerinin.** @No__t_0, bir değer dizisini tutan bir özellik üzerinde kullanabilirsiniz.  
+- **Properties.** You can use `ReDim` on a property that holds an array of values.  
   
 ## <a name="behavior"></a>Davranış  
   
-- **Dizi değiştirme.** `ReDim` var olan diziyi serbest bırakır ve aynı dereceye sahip yeni bir dizi oluşturur. Yeni dizi, dizi değişkeninde yayınlanan dizinin yerini alır.  
+- **Array Replacement.** `ReDim` releases the existing array and creates a new array with the same rank. The new array replaces the released array in the array variable.  
   
-- **Preserve olmadan başlatma.** @No__t_0 belirtmezseniz, `ReDim` veri türleri için varsayılan değeri kullanarak yeni dizinin öğelerini başlatır.  
+- **Initialization without Preserve.** If you do not specify `Preserve`, `ReDim` initializes the elements of the new array by using the default value for their data type.  
   
-- **Preserve ile başlatma.** @No__t_0 belirtirseniz, öğeleri varolan diziden yeni diziye kopyalar Visual Basic.  
+- **Initialization with Preserve.** If you specify `Preserve`, Visual Basic copies the elements from the existing array to the new array.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, dizideki mevcut verileri kaybetmeden dinamik bir dizinin en son boyutunun boyutunu artırır ve sonra boyutu kısmi veri kaybıyla azaltır. Son olarak, boyutu özgün değerine geri düşürür ve tüm dizi öğelerini yeniden başlatır.  
+ The following example increases the size of the last dimension of a dynamic array without losing any existing data in the array, and then decreases the size with partial data loss. Finally, it decreases the size back to its original value and reinitializes all the array elements.  
   
  [!code-vb[VbVbalrStatements#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#52)]  
   
- @No__t_0 deyimleri, üç boyutlu yeni bir dizi oluşturur. Her boyut 10 ' un bir bağı ile bildirildiği için her boyutun dizi dizini 0 ile 10 arasında değişebilir. Aşağıdaki tartışmada, üç boyut katman, satır ve sütun olarak adlandırılır.  
+ The `Dim` statement creates a new array with three dimensions. Each dimension is declared with a bound of 10, so the array index for each dimension can range from 0 through 10. In the following discussion, the three dimensions are referred to as layer, row, and column.  
   
- İlk `ReDim`, değişken `intArray` var olan dizinin yerini alan yeni bir dizi oluşturur. `ReDim` varolan dizideki tüm öğeleri yeni diziye kopyalar. Ayrıca, her katmandaki her satırın sonuna 10 daha fazla sütun ekler ve bu yeni sütunlardaki öğeleri 0 ' a (dizinin öğe türü olan `Integer` varsayılan değeri) başlatır.  
+ The first `ReDim` creates a new array which replaces the existing array in variable `intArray`. `ReDim` copies all the elements from the existing array into the new array. It also adds 10 more columns to the end of every row in every layer and initializes the elements in these new columns to 0 (the default value of `Integer`, which is the element type of the array).  
   
- İkinci `ReDim` başka bir yeni dizi oluşturur ve uygun olan tüm öğeleri kopyalar. Ancak, her katmandaki her satırın sonundan beş sütun kaybolur. Bu sütunları kullanmayı bitirdiğinizde bu bir sorun değildir. Büyük bir dizinin boyutunu azaltmak artık ihtiyaç duymayacak belleği serbest bırakabilirsiniz.  
+ The second `ReDim` creates another new array and copies all the elements that fit. However, five columns are lost from the end of every row in every layer. This is not a problem if you have finished using these columns. Reducing the size of a large array can free up memory that you no longer need.  
   
- Üçüncü `ReDim` başka bir yeni dizi oluşturur ve her katmandaki her satırın sonundan başka beş sütunu kaldırır. Bu kez, var olan herhangi bir öğeyi kopyalamaz. Bu ifade, diziyi özgün boyutuna geri döndürür. Deyimin `Preserve` değiştiricisini içermediğinden, tüm dizi öğelerini özgün varsayılan değerlerine ayarlar.  
+ The third `ReDim` creates another new array and removes another five columns from the end of every row in every layer. This time it does not copy any existing elements. This statement reverts the array to its original size. Because the statement doesn't include the `Preserve` modifier, it sets all array elements to their original default values.  
   
- Daha fazla örnek için bkz. [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ For additional examples, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

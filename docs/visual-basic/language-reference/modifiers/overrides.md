@@ -1,5 +1,5 @@
 ---
-title: Geçersiz Kılmalar (Visual Basic)
+title: Geçersiz Kılmalar
 ms.date: 07/20/2015
 f1_keywords:
 - Overrides
@@ -13,46 +13,46 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 7fff91d993743574d13030aa3d5cc1e462e76838
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 04f1cb27d6a8366c2dd13f8fdc1d975d382f1cfd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751033"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351382"
 ---
 # <a name="overrides-visual-basic"></a>Geçersiz Kılmalar (Visual Basic)
 
-Bir özelliğin ya da yordamın bir aynı adlı bir özellik ya da bir temel sınıftan devralınan yordamın kıldığını belirtir.
+Specifies that a property or procedure overrides an identically named property or procedure inherited from a base class.
 
 ## <a name="rules"></a>Kurallar
 
-- **Bildirim bağlamı.** Kullanabileceğiniz `Overrides` yalnızca bir özellik veya yordamı bildirim deyiminde.
+- **Declaration Context.** You can use `Overrides` only in a property or procedure declaration statement.
 
-- **Birleşik değiştiriciler.** Belirtemezsiniz `Overrides` ile birlikte `Shadows` veya `Shared` aynı bildirimde. Bir geçersiz kılma öğesi örtük olarak geçersiz kılınabilir olduğundan birleştiremezsiniz `Overridable` ile `Overrides`.
+- **Combined Modifiers.** You cannot specify `Overrides` together with `Shadows` or `Shared` in the same declaration. Because an overriding element is implicitly overridable, you cannot combine `Overridable` with `Overrides`.
 
-- **Eşleşen imzalar.** Bu bildirim imzası tam olarak eşleşmelidir *imza* özellik ya da onu geçersiz kılar yordamı. Başka bir deyişle, aynı sırayla, aynı veri türleriyle parametreleri aynı sayıda parametre listeleri olmalıdır.
+- **Matching Signatures.** The signature of this declaration must exactly match the *signature* of the property or procedure that it overrides. This means the parameter lists must have the same number of parameters, in the same order, with the same data types.
 
-  İmza ek olarak, geçersiz kılma bildirimi de tam olarak şu eşleşmelidir:
+  In addition to the signature, the overriding declaration must also exactly match the following:
 
-  - Erişim düzeyi
+  - The access level
 
-  - Dönüş türü, varsa
+  - The return type, if any
 
-- **Genel imzalar.** Genel bir yordam için imza türü parametre sayısını içerir. Bu nedenle, geçersiz kılma bildirimi de bu açısından temel sınıftaki sürümün eşleşmesi gerekir.
+- **Generic Signatures.** For a generic procedure, the signature includes the number of type parameters. Therefore, the overriding declaration must match the base class version in that respect as well.
 
-- **Ek eşleştirme.** Temel sınıftaki sürümün imzası eşleşen ek olarak, bu bildirimi Ayrıca, şu açılardan eşleşmesi gerekir:
+- **Additional Matching.** In addition to matching the signature of the base class version, this declaration must also match it in the following respects:
 
-  - Erişim düzeyi değiştirici (gibi [genel](../../../visual-basic/language-reference/modifiers/public.md))
+  - Access-level modifier (such as [Public](../../../visual-basic/language-reference/modifiers/public.md))
 
-  - Her parametre mekanizması geçirme ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
+  - Passing mechanism of each parameter ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
 
-  - Genel bir yordam üzerinde her tür parametresi kısıtlaması listeler
+  - Constraint lists on each type parameter of a generic procedure
 
-- **Gölgeleme ve geçersiz kılma.** Devralınan bir öğe hem gölgeleme ve geçersiz kılma bulunabileceğini, ancak iki yaklaşım arasında önemli farklar vardır. Daha fazla bilgi için [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+- **Shadowing and Overriding.** Both shadowing and overriding redefine an inherited element, but there are significant differences between the two approaches. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
 
-Kullanırsanız `Overrides`, derleyicinin dolaylı olarak ekler `Overloads` kitaplığınızı API'leri ile çalışmak üzere C# daha kolay.
+If you use `Overrides`, the compiler implicitly adds `Overloads` so that your library APIs work with C# more easily.
 
-`Overrides` Bu bağlamda değiştirici kullanılabilir:
+The `Overrides` modifier can be used in these contexts:
 
 - [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
 
@@ -66,6 +66,6 @@ Kullanırsanız `Overrides`, derleyicinin dolaylı olarak ekler `Overloads` kita
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
-- [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)

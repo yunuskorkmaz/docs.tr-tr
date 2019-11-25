@@ -1,5 +1,5 @@
 ---
-title: Dosyaları ve dizinleri Visual Basic'te düzenleme
+title: Dosyaları ve Dizinleri Düzenleme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -15,147 +15,150 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 4d0aac533759f8cc20ac4f19d7f0e49fef17bf56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052527"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333802"
 ---
-# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>İzlenecek yol: Dosyaları ve dizinleri Visual Basic'te düzenleme
-Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu listeler ve bir dizinde metin dosyaları inceler, küçük bir uygulamanın nasıl oluşturulacağını açıklar. Her seçili metin dosyası için dosya öznitelikleri ve içeriğindeki birinci satırın uygulama sağlar. Bir günlük dosyasına yazmak için bir seçenek yoktur.  
+# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>İzlenecek Yol: Visual Basic'te Dosyaları ve Dizinleri Düzenleme
+
+This walkthrough provides an introduction to the fundamentals of file I/O in Visual Basic. It describes how to create a small application that lists and examines text files in a directory. For each selected text file, the application provides file attributes and the first line of content. There is an option to write information to a log file.  
   
- Bu izlenecek yolda üyeleri kullanan `My.Computer.FileSystem Object`, Visual Basic'te kullanılabilir olduğu. Daha fazla bilgi edinmek için bkz. <xref:Microsoft.VisualBasic.FileIO.FileSystem>. İzlenecek yol sonunda sınıflarını kullanan eşdeğer bir örnek sağlanır <xref:System.IO> ad alanı.  
+ This walkthrough uses members of the `My.Computer.FileSystem Object`, which are available in Visual Basic. Daha fazla bilgi edinmek için bkz. <xref:Microsoft.VisualBasic.FileIO.FileSystem>. At the end of the walkthrough, an equivalent example is provided that uses classes from the <xref:System.IO> namespace.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
-1. Üzerinde **dosya** menüsünü tıklatın **yeni proje**.  
+1. On the **File** menu, click **New Project**.  
   
-     **Yeni Proje** iletişim kutusu görünür.  
+     The **New Project** dialog box appears.  
   
-2. İçinde **yüklü şablonlar** bölmesini genişletin **Visual Basic**ve ardından **Windows**. İçinde **şablonları** Orta tıklayarak bölmesinde **Windows Forms uygulaması**.  
+2. In the **Installed Templates** pane, expand **Visual Basic**, and then click **Windows**. In the **Templates** pane in the middle, click **Windows Forms Application**.  
   
-3. İçinde **adı** kutusuna `FileExplorer` proje adını ayarlayın ve ardından **Tamam**.  
+3. In the **Name** box, type `FileExplorer` to set the project name, and then click **OK**.  
   
-     Visual Studio projeyi ekler **Çözüm Gezgini**, ve Windows Forms Tasarımcısı açılır.  
+     Visual Studio adds the project to **Solution Explorer**, and the Windows Forms Designer opens.  
   
-4. Denetimler aşağıdaki tabloda forma eklemek ve karşılık gelen özelliklerini ayarlayın.  
+4. Add the controls in the following table to the form, and set the corresponding values for their properties.  
   
     |Denetim|Özellik|Değer|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Ad**|`filesListBox`|  
-    |**Düğme**|**Ad**<br /><br /> **Metin**|`browseButton`<br /><br /> **Göz atma**|  
-    |**Düğme**|**Ad**<br /><br /> **Metin**|`examineButton`<br /><br /> **İnceleyin**|  
-    |**CheckBox**|**Ad**<br /><br /> **Metin**|`saveCheckBox`<br /><br /> **Sonuçları Kaydet**|  
+    |**Düğme**|**Ad**<br /><br /> **Metin**|`browseButton`<br /><br /> **Browse**|  
+    |**Düğme**|**Ad**<br /><br /> **Metin**|`examineButton`<br /><br /> **Examine**|  
+    |**CheckBox**|**Ad**<br /><br /> **Metin**|`saveCheckBox`<br /><br /> **Save Results**|  
     |**FolderBrowserDialog**|**Ad**|`FolderBrowserDialog1`|  
   
-### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Bir klasör seçin ve bir klasördeki dosyaları Listele  
+### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>To select a folder, and list files in a folder  
   
-1. Oluşturma bir `Click` için olay işleyicisi `browseButton` formdaki bir denetime çift tıklayın. Kod Düzenleyicisi açılır.  
+1. Create a `Click` event handler for `browseButton` by double-clicking the control on the form. The Code Editor opens.  
   
-2. Aşağıdaki kodu ekleyin `Click` olay işleyicisi.  
+2. Add the following code to the `Click` event handler.  
   
      [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
-     `FolderBrowserDialog1.ShowDialog` Çağrı açılır **klasöre Gözat** iletişim kutusu. Sonra kullanıcı **Tamam**, <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> özelliği gönderilen bağımsız değişken olarak `ListFiles` sonraki adımda eklenen yöntemi.  
+     The `FolderBrowserDialog1.ShowDialog` call opens the **Browse For Folder** dialog box. After the user clicks **OK**, the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> property is sent as an argument to the `ListFiles` method, which is added in the next step.  
   
-3. Aşağıdaki `ListFiles` yöntemi.  
+3. Add the following `ListFiles` method.  
   
      [!code-vb[VbVbcnMyFileSystem#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#104)]  
   
-     Bu kod önce temizler **ListBox**.  
+     This code first clears the **ListBox**.  
   
-     <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> Yöntemi ardından dizeleri, dizindeki her dosya için bir koleksiyonunu alır. `GetFiles` Yöntemi belirli bir desenle eşleşen dosyaları almak için bir arama deseni bağımsız değişkeni kabul eder. Bu örnekte, yalnızca uzantısı .txt sahip dosyalar döndürülür.  
+     The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> method then retrieves a collection of strings, one for each file in the directory. The `GetFiles` method accepts a search pattern argument to retrieve files that match a particular pattern. In this example, only files that have the extension .txt are returned.  
   
-     Tarafından döndürülen dizeler `GetFiles` yöntemi ardından eklenir **ListBox**.  
+     The strings that are returned by the `GetFiles` method are then added to the **ListBox**.  
   
-4. Uygulamayı çalıştırın. Tıklayın **Gözat** düğmesi. İçinde **klasöre Gözat** iletişim kutusu, .txt dosyaları içeren bir klasörü klasörü seçin ve tıklayın **Tamam**.  
+4. Uygulamayı çalıştırın. Click the **Browse** button. In the **Browse For Folder** dialog box, browse to a folder that contains .txt files, and then select the folder and click **OK**.  
   
-     `ListBox` Seçilen klasördeki .txt dosyalarının bir listesini içerir.  
+     The `ListBox` contains a list of .txt files in the selected folder.  
   
-5. Uygulamanın çalışmayı durdurur.  
+5. Stop running the application.  
   
-### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>Bir dosyanın özniteliklerini alma ve bir metin dosyasından içerik  
+### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>To obtain attributes of a file, and content from a text file  
   
-1. Oluşturma bir `Click` için olay işleyicisi `examineButton` formdaki bir denetime çift tıklayın.  
+1. Create a `Click` event handler for `examineButton` by double-clicking the control on the form.  
   
-2. Aşağıdaki kodu ekleyin `Click` olay işleyicisi.  
+2. Add the following code to the `Click` event handler.  
   
      [!code-vb[VbVbcnMyFileSystem#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#105)]  
   
-     Kod içinde bir öğe seçildiğinde doğrular `ListBox`. Ardından dosya yolu girdisinden elde `ListBox`. <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> Yöntemi, dosyanın hala varolup olmadığını denetlemek için kullanılır.  
+     The code verifies that an item is selected in the `ListBox`. It then obtains the file path entry from the `ListBox`. The <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> method is used to check whether the file still exists.  
   
-     Dosya yolu için bağımsız değişken olarak gönderilen `GetTextForOutput` sonraki adımda eklenen yöntemi. Bu yöntem dosya bilgileri içeren bir dize döndürür. Dosya bilgileri görünür bir **MessageBox**.  
+     The file path is sent as an argument to the `GetTextForOutput` method, which is added in the next step. This method returns a string that contains file information. The file information appears in a **MessageBox**.  
   
-3. Aşağıdaki `GetTextForOutput` yöntemi.  
+3. Add the following `GetTextForOutput` method.  
   
      [!code-vb[VbVbcnMyFileSystem#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#107)]  
   
-     Kod <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> dosya parametrelerini elde etmek için yöntemi. Dosya parametrelerini eklenen bir <xref:System.Text.StringBuilder>.  
+     The code uses the <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> method to obtain file parameters. The file parameters are added to a <xref:System.Text.StringBuilder>.  
   
-     <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> Yöntemi okur dosya içeriğine bir <xref:System.IO.StreamReader>. İlk satırının içeriğini elde edilen `StreamReader` ve eklendiğinden `StringBuilder`.  
+     The <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> method reads the file contents into a <xref:System.IO.StreamReader>. The first line of the contents is obtained from the `StreamReader` and is added to the `StringBuilder`.  
   
-4. Uygulamayı çalıştırın. Tıklayın **Gözat**, .txt dosyaları içeren bir klasöre göz atın. **Tamam**'ı tıklatın.  
+4. Uygulamayı çalıştırın. Click **Browse**, and browse to a folder that contains .txt files. **Tamam**'a tıklayın.  
   
-     Bir dosya seçin `ListBox`ve ardından **inceleyin**. A `MessageBox` dosya bilgilerini gösterir.  
+     Select a file in the `ListBox`, and then click **Examine**. A `MessageBox` shows the file information.  
   
-5. Uygulamanın çalışmayı durdurur.  
+5. Stop running the application.  
   
-### <a name="to-add-a-log-entry"></a>Günlük girdisi eklemek için  
+### <a name="to-add-a-log-entry"></a>To add a log entry  
   
-1. Sonuna aşağıdaki kodu ekleyin `examineButton_Click` olay işleyicisi.  
+1. Add the following code to the end of the `examineButton_Click` event handler.  
   
      [!code-vb[VbVbcnMyFileSystem#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#106)]  
   
-     Bu kod, seçilen dosya ile aynı dizine günlük dosyasına koymak için günlük dosyası yolu ayarlar. Geçerli tarih ve saate dosya bilgilerin günlük girişinin metnini ayarlayın.  
+     The code sets the log file path to put the log file in the same directory as that of the selected file. The text of the log entry is set to the current date and time followed by the file information.  
   
-     <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> Yöntemi ile `append` değişkenini `True`, günlüğü girdisi oluşturmak için kullanılır.  
+     The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method, with the `append` argument set to `True`, is used to create the log entry.  
   
-2. Uygulamayı çalıştırın. Bir metin dosyasına göz atın, onu seçip `ListBox`seçin **Sonuçları Kaydet** onay kutusunu işaretleyin ve ardından **inceleyin**. Günlük girişi için yazıldığını doğrulayın `log.txt` dosya.  
+2. Uygulamayı çalıştırın. Browse to a text file, select it in the `ListBox`, select the **Save Results** check box, and then click **Examine**. Verify that the log entry is written to the `log.txt` file.  
   
-3. Uygulamanın çalışmayı durdurur.  
+3. Stop running the application.  
   
-### <a name="to-use-the-current-directory"></a>Geçerli dizin kullanmak için  
+### <a name="to-use-the-current-directory"></a>To use the current directory  
   
-1. İçin bir olay işleyicisi oluşturun `Form1_Load` formun çift tıklayın.  
+1. Create an event handler for `Form1_Load` by double-clicking the form.  
   
-2. Olay işleyicisine aşağıdaki kodu ekleyin.  
+2. Add the following code to the event handler.  
   
      [!code-vb[VbVbcnMyFileSystem#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#102)]  
   
-     Bu kod, geçerli dizine klasör tarayıcı varsayılan dizinini ayarlar.  
+     This code sets the default directory of the folder browser to the current directory.  
   
-3. Uygulamayı çalıştırın. Tıkladığınızda **Gözat** ilk kez **klasöre Gözat** geçerli dizine iletişim kutusu açılır.  
+3. Uygulamayı çalıştırın. When you click **Browse** the first time, the **Browse For Folder** dialog box opens to the current directory.  
   
-4. Uygulamanın çalışmayı durdurur.  
+4. Stop running the application.  
   
-### <a name="to-selectively-enable-controls"></a>Seçmeli olarak denetimleri etkinleştirmek için  
+### <a name="to-selectively-enable-controls"></a>To selectively enable controls  
   
-1. Aşağıdaki `SetEnabled` yöntemi.  
+1. Add the following `SetEnabled` method.  
   
      [!code-vb[VbVbcnMyFileSystem#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#108)]  
   
-     `SetEnabled` Yöntemi etkinleştirir veya bir öğe olup olmadığını seçildiğinde bağlı olarak denetimleri devre dışı bırakan `ListBox`.  
+     The `SetEnabled` method enables or disables controls depending on whether an item is selected in the `ListBox`.  
   
-2. Oluşturma bir `SelectedIndexChanged` için olay işleyicisi `filesListBox` çift tıklayarak `ListBox` form denetimi.  
+2. Create a `SelectedIndexChanged` event handler for `filesListBox` by double-clicking the `ListBox` control on the form.  
   
-3. Bir çağrı ekleyin `SetEnabled` yeni `filesListBox_SelectedIndexChanged` olay işleyicisi.  
+3. Add a call to `SetEnabled` in the new `filesListBox_SelectedIndexChanged` event handler.  
   
-4. Bir çağrı ekleyin `SetEnabled` sonunda `browseButton_Click` olay işleyicisi.  
+4. Add a call to `SetEnabled` at the end of the `browseButton_Click` event handler.  
   
-5. Bir çağrı ekleyin `SetEnabled` sonunda `Form1_Load` olay işleyicisi.  
+5. Add a call to `SetEnabled` at the end of the `Form1_Load` event handler.  
   
-6. Uygulamayı çalıştırın. **Sonuçları Kaydet** onay kutusunu ve **inceleyin** içinde bir öğe seçili değilse düğmesi devre dışı `ListBox`.  
+6. Uygulamayı çalıştırın. The **Save Results** check box and the **Examine** button are disabled if an item is not selected in the `ListBox`.  
   
-## <a name="full-example-using-mycomputerfilesystem"></a>My.Computer.FileSystem kullanarak tam örnek  
- Tam bir örnek aşağıda verilmiştir.  
+## <a name="full-example-using-mycomputerfilesystem"></a>Full example using My.Computer.FileSystem  
+
+ Following is the complete example.  
   
  [!code-vb[VbVbcnMyFileSystem#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#101)]  
   
-## <a name="full-example-using-systemio"></a>System.IO kullanarak tam örnek  
- Aşağıdaki eşdeğer sınıflardan örnekte <xref:System.IO> kullanmak yerine ad alanı `My.Computer.FileSystem` nesneleri.  
+## <a name="full-example-using-systemio"></a>Full example using System.IO  
+
+ The following equivalent example uses classes from the <xref:System.IO> namespace instead of using `My.Computer.FileSystem` objects.  
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
@@ -164,4 +167,4 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [İzlenecek yol: .NET Framework yöntemlerini kullanarak dosyaları düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [İzlenecek Yol: .NET Framework Yöntemlerini Kullanarak Dosyaları Düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

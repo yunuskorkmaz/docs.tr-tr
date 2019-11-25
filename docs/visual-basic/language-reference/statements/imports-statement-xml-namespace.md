@@ -1,5 +1,5 @@
 ---
-title: Imports ekstresi-XML ad alanı (Visual Basic)
+title: Imports Statement - XML Namespace
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ImportsXmlns
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 0fca0caecfd69580510a539317856209108e5a32
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 52864e4d1c8183b6243025e72368d23627049c84
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581765"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351058"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports Deyimi (XML Ad Alanı)
 
-XML sabit değerleri ve XML eksen özelliklerinde kullanılmak üzere XML ad alanı öneklerini içeri aktarır.
+Imports XML namespace prefixes for use in XML literals and XML axis properties.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -29,32 +29,32 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="parts"></a>Bölümler
 
 `xmlNamespacePrefix`  
-İsteğe bağlı. XML öğelerinin ve özniteliklerin `xmlNamespaceName` başvurduğu dize. @No__t_0 sağlanmazsa, içeri aktarılan XML ad alanı varsayılan XML ad alanıdır. Geçerli bir XML tanımlayıcısı olmalıdır. Daha fazla bilgi için bkz. [BELIRTILEN XML öğelerinin ve özniteliklerin adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).
+İsteğe bağlı. The string by which XML elements and attributes can refer to `xmlNamespaceName`. If no `xmlNamespacePrefix` is supplied, the imported XML namespace is the default XML namespace. Must be a valid XML identifier. For more information, see [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).
 
 `xmlNamespaceName`  
-Gerekli. İçeri aktarılmakta olan XML ad alanını tanımlayan dize.
+Gerekli. The string identifying the XML namespace being imported.
 
 ## <a name="remarks"></a>Açıklamalar
 
-XML değişmez değerleri ve XML eksen özellikleriyle kullanabileceğiniz ya da `GetXmlNamespace` işlecine geçirilen parametreler olarak genel XML ad alanlarını tanımlamak için `Imports` ifadesini kullanabilirsiniz. (Tür adlarının kodunuzda kullanıldığı yerde kullanılabilecek bir diğer adı içeri aktarmak için `Imports` deyimin kullanımı hakkında bilgi için bkz. [Imports bildirisi (.net ad alanı ve türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) @No__t_2 ifadesini kullanarak bir XML ad alanı bildirmek için sözdizimi, XML 'de kullanılan söz dizimiyle aynıdır. Bu nedenle, bir XML dosyasından bir ad alanı bildirimi kopyalayabilir ve bunu bir `Imports` ifadesinde kullanabilirsiniz.
+You can use the `Imports` statement to define global XML namespaces that you can use with XML literals and XML axis properties, or as parameters passed to the `GetXmlNamespace` operator. (For information about using the `Imports` statement to import an alias that can be used where type names are used in your code, see [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) The syntax for declaring an XML namespace by using the `Imports` statement is identical to the syntax used in XML. Therefore, you can copy a namespace declaration from an XML file and use it in an `Imports` statement.
 
-XML ad alanı önekleri, aynı ad alanından daha tekrarlı XML öğeleri oluşturmak istediğinizde faydalıdır. @No__t_0 ifadesiyle belirtilen XML ad alanı öneki, dosyadaki tüm kod için kullanılabilir olduğunu anlamlı bir şekilde geneldir. XML öğesi değişmez değerleri oluştururken ve XML eksen özelliklerine eriştiğinizde bu özelliği kullanabilirsiniz. Daha fazla bilgi için bkz. [XML öğesi değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) ve [xml eksen özellikleri](../../../visual-basic/language-reference/xml-axis/index.md).
+XML namespace prefixes are useful when you want to repeatedly create XML elements that are from the same namespace. The XML namespace prefix declared with the `Imports` statement is global in the sense that it is available to all code in the file. You can use it when you create XML element literals and when you access XML axis properties. For more information, see [XML Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) and [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/index.md).
 
-Bir ad alanı öneki olmadan (örneğin, `Imports <xmlns="http://SomeNameSpace>"`) genel bir XML ad alanı tanımlarsanız, bu ad alanı varsayılan XML ad alanı olarak kabul edilir. Varsayılan XML ad alanı, açıkça bir ad alanı belirtmeyen hiçbir XML öğesi değişmez değeri veya XML özniteliği eksen özellikleri için kullanılır. Varsayılan ad alanı, belirtilen ad alanı boş ad alanı (yani, `xmlns=""`) ise de kullanılır. Varsayılan XML ad alanı, XML değişmez değerlerinde veya bir ad alanına sahip olmayan XML öznitelik ekseni özellikleriyle XML öznitelikleri için geçerlidir.
+If you define a global XML namespace without a namespace prefix (for example, `Imports <xmlns="http://SomeNameSpace>"`), that namespace is considered the default XML namespace. The default XML namespace is used for any XML element literals or XML attribute axis properties that do not explicitly specify a namespace. The default namespace is also used if the specified namespace is the empty namespace (that is, `xmlns=""`). The default XML namespace does not apply to XML attributes in XML literals or to XML attribute axis properties that do not have a namespace.
 
-*Yerel xml ad alanları*olarak ADLANDıRıLAN bir XML sabit DEĞERINDE tanımlanmış XML ad alanları, genel olarak `Imports` BILDIRIMIYLE tanımlanan xml ad alanlarından önceliklidir. @No__t_0 ifadesiyle tanımlanan XML ad alanları, bir Visual Basic projesi için içeri aktarılan XML ad alanları üzerinden önceliklidir. Bir XML sabit değeri bir XML ad alanı tanımlıyorsa, bu yerel ad alanı katıştırılmış ifadeler için uygulanmaz.
+XML namespaces that are defined in an XML literal, which are called *local XML namespaces*, take precedence over XML namespaces that are defined by the `Imports` statement as global. XML namespaces that are defined by the `Imports` statement take precedence over XML namespaces imported for a Visual Basic project. If an XML literal defines an XML namespace, that local namespace does not apply to embedded expressions.
 
-Genel XML ad alanları, .NET Framework ad alanları ile aynı kapsam ve tanım kurallarını izler. Sonuç olarak, bir .NET Framework ad alanını içeri aktarabileceğiniz her yerde genel bir XML ad alanı tanımlamak için bir `Imports` ifadesini ekleyebilirsiniz. Bu hem kod dosyalarını hem de proje düzeyinde içeri aktarılan ad alanlarını içerir. Proje düzeyinde içeri aktarılan ad alanları hakkında bilgi için bkz. [Başvurular sayfası, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).
+Global XML namespaces follow the same scoping and definition rules as .NET Framework namespaces. As a result, you can include an `Imports` statement to define a global XML namespace anywhere you can import a .NET Framework namespace. This includes both code files and project-level imported namespaces. For information about project-level imported namespaces, see [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).
 
-Her kaynak dosya, herhangi bir sayıda `Imports` deyimi içerebilir. Bunlar, `Option Strict` deyimi gibi seçenek bildirimlerini izlemelidir ve `Module` veya `Class` deyimleri gibi programlama öğesi bildirimlerinin önüne gelmelidir.
+Each source file can contain any number of `Imports` statements. These must follow option declarations, such as the `Option Strict` statement, and they must precede programming element declarations, such as `Module` or `Class` statements.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `ns` önek olarak tanımlanmış bir varsayılan XML ad alanını ve bir XML ad alanını içeri aktarır. Ardından, her iki ad alanını kullanan XML değişmez değerleri oluşturur.
+The following example imports a default XML namespace and an XML namespace identified with the prefix `ns`. It then creates XML literals that use both namespaces.
 
 [!code-vb[VbXMLSamples#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/Module1.vb#45)]
 
-Bu kod aşağıdaki metni görüntüler:
+This code displays the following text:
 
 ```xml
 <ns:outer xmlns="http://DefaultNamespace"
@@ -67,11 +67,11 @@ Bu kod aşağıdaki metni görüntüler:
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `ns` XML ad alanı önekini içeri aktarır. Daha sonra ad alanı önekini kullanan bir XML sabit değeri oluşturur ve öğenin son formunu görüntüler.
+The following example imports the XML namespace prefix `ns`. It then creates an XML literal that uses the namespace prefix and displays the element's final form.
 
 [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]
 
-Bu kod aşağıdaki metni görüntüler:
+This code displays the following text:
 
 ```xml
 <ns:outer xmlns:ns="http://SomeNamespace">
@@ -82,15 +82,15 @@ Bu kod aşağıdaki metni görüntüler:
 </ns:outer>
 ```
 
-Derleyicinin XML ad alanı önekini genel bir önekten yerel ön ek tanımına dönüştürdüğüne dikkat edin.
+Notice that the compiler converted the XML namespace prefix from a global prefix to a local prefix definition.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `ns` XML ad alanı önekini içeri aktarır. Daha sonra bir XML sabit değeri oluşturmak için ad alanının önekini kullanır ve `ns:name` nitelenmiş ada sahip ilk alt düğüme erişir.
+The following example imports the XML namespace prefix `ns`. It then uses the prefix of the namespace to create an XML literal and access the first child node with the qualified name `ns:name`.
 
 [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]
 
-Bu kod aşağıdaki metni görüntüler:
+This code displays the following text:
 
 `Patrick Hines`
 

@@ -1,5 +1,5 @@
 ---
-title: Kod Açıklamaları (Visual Basic)
+title: Kod Açıklamaları
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Uncomment button
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 3635d52532789133a345d9a9228efae869c8c223
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 189810393db42c54cb8a0f97b22b3d1514d9a7c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945612"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346167"
 ---
 # <a name="comments-in-code-visual-basic"></a>Kod Açıklamaları (Visual Basic)
-Kod örneklerini okurken genellikle açıklama simgesiyle (`'`) karşılaşırsınız. Bu simge, Visual Basic derleyicisine onu izleyen metni veya *yorumu*yoksaymasını söyler. Açıklamalar, okuyan kişinin yararına olması için koda eklenmiş kısa ve açıklayıcı notlardır.  
+As you read the code examples, you often encounter the comment symbol (`'`). This symbol tells the Visual Basic compiler to ignore the text following it, or the *comment*. Açıklamalar, okuyan kişinin yararına olması için koda eklenmiş kısa ve açıklayıcı notlardır.  
   
  Tüm yordamlara, ilgili yordamın işlevsel özelliklerini (neler yaptığını) açıklayan kısa bir açıklama ile başlanması iyi bir programlama uygulamasıdır. Bu hem sizin yararınıza, hem de kodu inceleyen herhangi bir kişinin yararına olur. Gerçekleştirme ayrıntılarını (yordamın bunu nasıl yaptığı), işlevsel özellikleri anlatan açıklamalardan ayırmalısınız. Açıklamaya gerçekleştirme ayrıntılarını eklediğinizde, işlevi güncelleştirirken bunları da güncelleştirmeyi unutmayın.  
   
@@ -35,7 +35,7 @@ Kod örneklerini okurken genellikle açıklama simgesiyle (`'`) karşılaşırs�
  [!code-vb[VbVbcnConventions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#17)]  
   
 ## <a name="commenting-guidelines"></a>Açıklamalara İlişkin Kurallar  
- Aşağıdaki tabloda, kodun bir bölümünden önce hangi tür açıklamaların gelebileceğine dair genel kurallar verilmektedir. Bunlar önerilerdir; Visual Basic, yorum eklemek için kuralları zorlamaz. Hem sizin, hem de kodu okuyan herhangi bir kişinin işine en çok yarayacak şeyleri yazın.  
+ Aşağıdaki tabloda, kodun bir bölümünden önce hangi tür açıklamaların gelebileceğine dair genel kurallar verilmektedir. These are suggestions; Visual Basic does not enforce rules for adding comments. Hem sizin, hem de kodu okuyan herhangi bir kişinin işine en çok yarayacak şeyleri yazın.  
   
 |||  
 |---|---|  
@@ -54,15 +54,15 @@ Kod örneklerini okurken genellikle açıklama simgesiyle (`'`) karşılaşırs�
   
 - Açıklamalar, aynı satırdaki bir satır devamlılığı dizisinden sonra gelemez.  
   
- Bir veya daha fazla kod satırı seçip **açıklamayı** seçerek (![Visual Studio 'da Visual Basic Açıklama düğmesi) ve açıklama ' ![yı seçerek bir kod bloğu için açıklama sembolleri ekleyebilir veya kaldırabilirsiniz.](./media/comments-in-code/visual-basic-comment-button.gif) Visual Studio 'da temel açıklama Kaldır düğmesi. ) düğmelerini düzenleyin. ](./media/comments-in-code/visual-basic-uncomment-button.gif)  
+ You can add or remove comment symbols for a block of code by selecting one or more lines of code and choosing the **Comment** (![The Visual Basic Comment button in Visual Studio.](./media/comments-in-code/visual-basic-comment-button.gif)) and **Uncomment** (![The Visual Basic Uncomment button in Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) buttons on the **Edit** toolbar.  
   
 > [!NOTE]
-> Ayrıca, metin `REM` anahtar sözcüğüyle metinden önce kodunuza yorum ekleyebilirsiniz. Ancak simge ve **Açıklama açıklama**/ekleme düğmelerinin kullanımı daha kolaydır ve daha az alan ve bellek gerektirir. `'`  
+> You can also add comments to your code by preceding the text with the `REM` keyword. However, the `'` symbol and the **Comment**/**Uncomment** buttons are easier to use and require less space and memory.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temel ınstınts-kodunuzu XML açıklamalarıyla belgeleme](https://msdn.microsoft.com/magazine/dd722812.aspx)
-- [Nasıl yapılır: XML belgeleri oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Basic Instincts - Documenting Your Code With XML Comments](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
+- [Nasıl yapılır: XML Belgesi Oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)
 - [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [REM Deyimi](../../../visual-basic/language-reference/statements/rem-statement.md)

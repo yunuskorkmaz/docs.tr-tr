@@ -1,5 +1,5 @@
 ---
-title: Visual Basic'te Dosyalara Yazma
+title: Dosyalara Yazma
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], writing to files
@@ -8,54 +8,58 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-ms.openlocfilehash: 92e9d717eb52fa393d9215068d8fe70c84f613ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787445"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352132"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Visual Basic'te Dosyalara Yazma
-Bu bölümde, dosyalara yazma ilgili görevlerin nasıl gerçekleştirileceği açıklanmaktadır.  
+
+This section explains how to perform tasks that involve writing to files.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Dosyalara metin yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
- Metin dosyaları yazma işlemi gösterilmektedir.  
+
+ [Nasıl Yapılır: Dosyalara Metin Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
+ Demonstrates how to write to text files.  
   
- [Nasıl yapılır: Metin dosyalarına ekleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
- Bir metin dosyasına metin ekleneceği gösterilmiştir.  
+ [Nasıl Yapılır: Metin Dosyalarına Ekleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
+ Demonstrates how to append text to a text file.  
   
- [Nasıl yapılır: İkili dosyalara yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
- Bir ikili dosyaya yazma işlemi gösterilmektedir.  
+ [Nasıl Yapılır: İkili Dosyalara Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
+ Demonstrates how to write to a binary file.  
   
- [Nasıl yapılır: Dosyalara metin yazma Belgelerim dizini](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
- Oluşturun ve yeni bir metin dosyasına yazma anlatılmıştır **Belgelerim** dizin.  
+ [Nasıl Yapılır: Belgelerim Dizinindeki Dosyalara Metin Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
+ Demonstrates how to create and write to a new text file in the **My Documents** directory.  
   
- [Nasıl yapılır: StreamWriter ile dosyalara metin yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
- Bir dosyaya yazmak gösterilmiştir bir <xref:System.IO.StreamWriter?displayProperty=nameWithType> nesne.  
+ [Nasıl Yapılır: StreamWriter ile Dosyalara Metin Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
+ Demonstrates how to write to a file with a <xref:System.IO.StreamWriter?displayProperty=nameWithType> object.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- Açıklar `My.Computer.FileSystem` nesne ve yöntemleri ve özellikleri.  
+ Describes the `My.Computer.FileSystem` object and its methods and properties.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>  
- Açıklar `OpenTextFileWriter` yöntemi.  
+ Describes the `OpenTextFileWriter` method.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>  
- Açıklar `WriteAllBytes` yöntemi.  
+ Describes the `WriteAllBytes` method.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
- Açıklar `WriteAllText` yöntemi.  
+ Describes the `WriteAllText` method.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Dosyalardan Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- Dosyaları okuma ilgili görevlerin nasıl gerçekleştirileceğini açıklar.  
+ Explains how to perform tasks that involve reading from files.  
   
  [Dosya ve Dizin Oluşturma, Silme ve Taşıma](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- Oluşturma, silme, taşıma ve dosya ve dizinleri yeniden adlandırma ilgili görevlerin nasıl gerçekleştirileceğini açıklar.  
+ Explains how to perform tasks that involve creating, deleting, moving, and renaming files and directories.  
   
  [Verileri Panoda Depolama ve Panodan Okuma](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
- İle ilişkili görevleri nasıl gerçekleştireceğinizi açıklayan `My.Computer.Clipboard`verileri okuma veya verileri panoya yazma gibi.  
+ Explains how to perform tasks that are associated with `My.Computer.Clipboard`, such as reading data from or writing data to the Clipboard.  
   
  [Dosya Kodlamaları](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
- Dosya kodlamaları için genel bir bakış sağlar.
+ Provides an overview of file encodings.

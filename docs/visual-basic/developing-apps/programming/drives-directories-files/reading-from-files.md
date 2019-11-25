@@ -1,5 +1,5 @@
 ---
-title: Visual Basic'te Dosyaları Okuma
+title: Dosyaları Okuma
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data [Visual Basic], reading from files
@@ -8,60 +8,64 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: f81ee980d861ac0eb41df9c41b3966512589af12
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: afba0df89aabad7ddf8b641fbab421800718deb3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593376"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333818"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Visual Basic'te Dosyaları Okuma
-Bu bölümde, dosyaları okuma ile ilişkili olan görevlerin nasıl gerçekleştirileceği açıklanmaktadır.  
+
+This section explains how to perform tasks that are associated with reading from files.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Metin dosyalarını okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
- Bir metin dosyasından okuma işlemini gösterir.  
+
+ [How to: Read from Text Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
+ Demonstrates how to read from a text file.  
   
- [Nasıl yapılır: Virgülle ayrılmış metin dosyalarından okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
- Sınırlandırılmış metin dosyasından okuma işlemini gösterir.  
+ [Nasıl Yapılır: Virgülle Ayrılmış Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ Demonstrates how to read from a delimited text file.  
   
- [Nasıl yapılır: Sabit genişlikli metin dosyalarından okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
- Sabit genişlikte metin dosyasından okuma işlemini gösterir.  
+ [Nasıl Yapılır: Sabit Genişlikli Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+ Demonstrates how to read from a fixed-width text file.  
   
- [Nasıl yapılır: Birden çok biçimli metin dosyalarını okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
- Birden çok biçimli metin dosyasından okuma işlemini gösterir.  
+ [Nasıl Yapılır: Birden Çok Biçimli Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ Demonstrates how to read from a text file with multiple formats.  
   
- [Nasıl yapılır: İkili dosyaları okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
- Bir ikili dosyadan okuma işlemini gösterir.  
+ [Nasıl Yapılır: İkili Dosyalardan Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
+ Demonstrates how to read from a binary file.  
   
- [Nasıl yapılır: StreamReader olan dosyalardaki metni okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
- Nasıl kullanılacağını gösteren bir <xref:System.IO.StreamReader> bir dosyasından okunamıyor.  
+ [Nasıl Yapılır: StreamReader Olan Dosyalardan Metin Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
+ Demonstrates how to use a <xref:System.IO.StreamReader> to read from a file.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- Açıklar `My.Computer.FileSystem` nesne ve üyelerini.  
+ Describes the `My.Computer.FileSystem` object and its members.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>  
- Açıklar `ReadAllText` yöntemi.  
+ Describes the `ReadAllText` method.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>  
- Açıklar `ReadAllBytes` yöntemi.  
+ Describes the `ReadAllBytes` method.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A>  
- Açıklar `OpenTextFieldParser` yöntemi.  
+ Describes the `OpenTextFieldParser` method.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>  
- Açıklar `OpenTextFileReader` yöntemi.  
+ Describes the `OpenTextFileReader` method.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Verileri Panoda Depolama ve Panodan Okuma](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
- İle ilişkili görevleri nasıl gerçekleştireceğinizi açıklayan `My.Computer.Clipboard`verileri okuma veya verileri panoya yazma gibi.  
+ Explains how to perform tasks that are associated with `My.Computer.Clipboard`, such as reading data from or writing data to the Clipboard.  
   
  [TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
- Metin dosyalarını okuma genel bir bakış sağlar `TextFieldParser` nesne.  
+ Provides an overview of reading text files with the `TextFieldParser` object.  
   
- [İzlenecek yol: Dosyaları ve dizinleri Visual Basic'te düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Nasıl kullanılacağını gösteren `My` özelliğiyle dosyalar ve dizinler.  
+ [Walkthrough: Manipulating Files and Directories in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ Demonstrates how to use the `My` feature with files and directories.  
   
- [İzlenecek yol: .NET Framework yöntemlerini kullanarak dosyaları düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Dosyalar ve dizinler ile .NET Framework yöntemlerini nasıl yapılacağı açıklanır.
+ [İzlenecek Yol: .NET Framework Yöntemlerini Kullanarak Dosyaları Düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ Demonstrates how to use .NET Framework methods with files and directories.

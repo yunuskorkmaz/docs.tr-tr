@@ -1,73 +1,46 @@
 ---
 title: F# yükleme
-description: Ortamınıza göre yüklemeyi F# öğrenin.
+description: Learn how to install F# based on your environment.
 ms.date: 09/05/2019
-ms.openlocfilehash: dffa30eac0bdb59c85a66dca6cafd62b25daa572
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 592a4c7763266cee68809fca84f9604d7e96b8f1
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855797"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204867"
 ---
-# <a name="install-f"></a>F 'yi yükler\#
+# <a name="install-f"></a>Install F\#
 
-Ortamınıza bağlı olarak F# birden çok şekilde yükleyebilirsiniz.
+You can install F# in multiple ways, depending on your environment.
 
-## <a name="install-f-with-visual-studio"></a>Visual F# Studio ile Install
+## <a name="install-f-with-visual-studio"></a>Install F# with Visual Studio
 
-[Visual Studio 'yu](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) ilk kez indiriyorsanız, Ilk olarak Visual Studio yükleyicisi 'ni yükler. Yükleyiciden uygun Visual Studio SKU 'sunu yükleme. Zaten yüklüyse **Değiştir**' e tıklayın.
+If you're downloading [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) for the first time, it will first install the Visual Studio installer. Install the appropriate SKU of Visual Studio from the installer. If you already have it installed, click **Modify**.
 
-Daha sonra Iş yüklerinin bir listesini görürsünüz. ASP.NET Core projelerine yönelik destek ve .NET Core desteğini F# yükleyecek **ASP.net ve Web geliştirme '** yi seçin.
+You'll next see a list of Workloads. Select **ASP.NET and web development** which will install F# support and .NET Core support for ASP.NET Core projects.
 
-Sonra sağ alt taraftaki **Değiştir** ' e tıklayın.  Bu işlem, seçtiğiniz her şeyi yükler. Ardından Başlat ' a tıklayarak Visual Studio 2017 F# ' i dil desteğiyleaçabilirsiniz.
+Next, click **Modify** in the lower right-hand side.  This will install everything you have selected. You can then open Visual Studio 2017 with F# language support by clicking **Launch**.
 
-## <a name="install-f-with-visual-studio-for-mac"></a>Mac için Visual Studio F# ile yüklensin
+## <a name="install-f-with-visual-studio-code"></a>Install F# with Visual Studio Code
 
-F#, seçtiğiniz yapılandırma bağımsız olarak [Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)varsayılan olarak yüklenir.
+First, ensure you have [git installed](https://git-scm.com/download) and available on your PATH. You can verify that it is installed correctly by typing `git --version` at a command prompt and pressing **Enter**.
 
-Yüklemesi tamamlandıktan sonra, "Visual Studio 'Yu Başlat" ı seçin. MacOS 'ta Finder aracılığıyla da başlatabilirsiniz.
+Next, install the [.NET Core SDK](https://dotnet.microsoft.com/download).
 
-## <a name="install-f-with-visual-studio-code"></a>Visual Studio Code F# ile yüklensin
+You will then need [Visual Studio Code](https://code.visualstudio.com) installed.
 
-Proje şablonlarını kullanabilmeniz için, git ' in sizin YOLUNUZDA [yüklü](https://git-scm.com/download) ve kullanılabilir olması gerekir. Bir komut istemine yazıp `git --version` **ENTER**tuşuna basarak doğru şekilde yüklendiğini doğrulayabilirsiniz.
+Next, click the Extensions icon and search for "Ionide":
 
-### <a name="macostabmacos"></a>[macOS](#tab/macos)
+The only plugin required for F# support in Visual Studio Code is [Ionide-fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp). However, you can also install [Ionide-FAKE](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) to get [FAKE](https://fake.build/) support and [Ionide-Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) to get [Paket](https://fsprojects.github.io/Paket/) support. FAKE and Paket are additional F# community tools for building projects and managing dependencies, respectively.
 
-[Mono](https://www.mono-project.com) , [ F# etkileşimli](../tutorials/fsharp-interactive/index.md) destek için kullanılır. MacOS 'ta mono yüklemenin en kolay yolu homebrew aracılığıyla yapılır. Yalnızca aşağıdakileri terminalinize yazmanız yeterlidir:
+## <a name="install-f-with-visual-studio-for-mac"></a>Install F# with Visual Studio for Mac
 
-```console
-brew install mono
-```
+F# is installed by default in [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), no matter which configuration you choose.
 
-[.NET Core SDK](https://dotnet.microsoft.com/download)de yükler.
+After the install completes, choose "Start Visual Studio". You can also launch it through Finder on macOS.
 
-### <a name="linuxtablinux"></a>[Linux](#tab/linux)
+## <a name="install-f-on-a-build-server"></a>Install F# on a Build Server
 
-[Mono](https://www.mono-project.com) , [ F# etkileşimli](../tutorials/fsharp-interactive/index.md) destek için kullanılır. Decan veya Ubuntu kullanıyorsanız, aşağıdakileri kullanabilirsiniz:
+If you are using .NET Core or .NET Framework via the .NET SDK, you simply need to install the .NET SDK on your build server. It has everything you need.
 
-```console
-sudo apt-get update
-sudo apt-get install mono-complete fsharp
-```
-
-[.NET Core SDK](https://dotnet.microsoft.com/download)de yükler.
-
-### <a name="windowstabwindows"></a>[Windows](#tab/windows)
-
-[Visual Studio 'yu desteğiyle F# birlikte](#install-f-with-visual-studio)yüklersiniz. Bu, kod yazmak, derlemek ve yürütmek F# için gerekli tüm bileşenleri yüklüyor.
-
-[.NET Core SDK](https://dotnet.microsoft.com/download)de yükler.
-
----
-
-Daha sonra [Visual Studio Code](https://code.visualstudio.com) yüklenmesi gerekir.
-
-Sonra, uzantılar simgesine tıklayın ve "ıonıde" araması yapın:
-
-Visual Studio Code ' de destek için F# gereken tek eklenti [ıonıde-FSharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)' dir. Ancak, [paket](https://fsprojects.github.io/Paket/) desteğini almak için [sahte](https://fsharp.github.io/FAKE/) destek ve [ıonıde-paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) sağlamak üzere [ıonıde-sahte](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) ' i de yükleyebilirsiniz. SAHTE ve paket, sırasıyla F# projeler oluşturmaya ve bağımlılıkları yönetmeye yönelik ek topluluk araçlarıdır.
-
-## <a name="install-f-on-a-build-server"></a>Derleme F# sunucusuna yüklensin
-
-.NET Core veya .NET SDK aracılığıyla .NET Framework kullanıyorsanız, derleme sunucunuza .NET SDK 'yı yüklemeniz yeterlidir. İhtiyacınız olan her şeye sahiptir.
-
-.NET Framework kullanıyorsanız ve .NET **SDK kullanmıyorsanız,** [Visual Studio derleme araçları SKU](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16) 'sunu Windows sunucunuza yüklemeniz gerekecektir. Yükleyicide, **.net masaüstü derleme araçları** ' nı seçin ve ardından yükleyici menüsünün sağ tarafındaki  **F# derleyici** bileşenini seçin.
+If you are using .NET Framework and you are **not** using the .NET SDK, then you will need to install the [Visual Studio Build Tools SKU](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16) onto your Windows Server. In the installer, select **.NET desktop build tools** and then select the **F# compiler** component on the right side of the installer menu.

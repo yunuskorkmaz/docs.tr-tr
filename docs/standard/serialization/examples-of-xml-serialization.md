@@ -13,16 +13,16 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: c206faf81868d6e871327a73ef0680936b132918
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 17ad1b4b5eae38a4f1dc90e154841b1315dea1b2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459256"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349772"
 ---
 # <a name="examples-of-xml-serialization"></a>XML Serileştirme Örnekleri
 
-XML serileştirme birden fazla formdan, karmaşık için basit sürebilir. Örneğin, [XML serileştirmesini tanıtma](../../../docs/standard/serialization/introducing-xml-serialization.md)bölümünde gösterildiği gibi, yalnızca genel alanlardan ve özelliklerden oluşan bir sınıfı seri hale getirebilirsiniz. Aşağıdaki kod örnekleri, belirli bir XML şeması (XSD) belgesine uyan bir XML akışı oluşturmak için XML serileştirmesini kullanma dahil çeşitli gelişmiş senaryolara yönelik olarak ele verilmektedir.
+XML serileştirme birden fazla formdan, karmaşık için basit sürebilir. For example, you can serialize a class that simply consists of public fields and properties, as shown in [Introducing XML Serialization](../../../docs/standard/serialization/introducing-xml-serialization.md). The following code examples address various advanced scenarios, including how to use XML serialization to generate an XML stream that conforms to a specific XML Schema (XSD) document.
 
 ## <a name="serializing-a-dataset"></a>Bir veri kümesi seri hale getirilmedi
 
@@ -74,7 +74,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>Bir XmlElement ve XmlNode seri hale getirilmedi
 
-Ayrıca, aşağıdaki kod örneğinde gösterildiği gibi bir <xref:System.Xml.XmlElement> veya <xref:System.Xml.XmlNode> sınıfının örneklerini seri hale getirebilirsiniz.
+You can also serialize instances of an <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -203,12 +203,11 @@ public class Item
 
 ## <a name="serializing-a-class-that-implements-the-icollection-interface"></a>Bu ICollection arabirimini uygulayan bir sınıf seri hale getirilmedi
 
-Uygulanarak, kendi koleksiyon sınıfları oluşturabilirsiniz <xref:System.Collections.ICollection> arabirim ve kullanma <xref:System.Xml.Serialization.XmlSerializer> bu sınıfların örneklerini serileştirmek için. Arabirimini uygulayan bir sınıf unutmayın <xref:System.Collections.ICollection> arabirimi, yalnızca sınıfı tarafından bulunan koleksiyonun seri hale getirilmiş. Herhangi bir genel özelliklerini veya sınıfa eklediğiniz alanları serileştirilecek değil. Sınıf, seri hale getirilecek bir **Add** yöntemi ve bir **öğe** özelliğiC# (Dizin Oluşturucu) içermelidir.
+Uygulanarak, kendi koleksiyon sınıfları oluşturabilirsiniz <xref:System.Collections.ICollection> arabirim ve kullanma <xref:System.Xml.Serialization.XmlSerializer> bu sınıfların örneklerini serileştirmek için. Arabirimini uygulayan bir sınıf unutmayın <xref:System.Collections.ICollection> arabirimi, yalnızca sınıfı tarafından bulunan koleksiyonun seri hale getirilmiş. Herhangi bir genel özelliklerini veya sınıfa eklediğiniz alanları serileştirilecek değil. The class must include an **Add** method and an **Item** property (C# indexer) to be serialized.
 
 ```vb
-Imports System
-Imports System.IO
 Imports System.Collections
+Imports System.IO
 Imports System.Xml.Serialization
 
 Public Class Test
@@ -298,8 +297,8 @@ End Class
 
 ```csharp
 using System;
-using System.IO;
 using System.Collections;
+using System.IO;
 using System.Xml.Serialization;
 
 public class Test {
@@ -364,19 +363,18 @@ public class Employee {
 
 Kes ve bir .cs veya .vb dosya adı uzantısı ile yeniden adlandırılamaz bir metin dosyası aşağıdaki kod örneği yapıştırın. C# veya Visual Basic derleyici dosya derlemek için kullanın. Daha sonra yürütülebilir dosya adını kullanarak çalıştırın.
 
-Bu örnek, bir nesne örneğinin nasıl oluşturulup <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> yöntemi kullanılarak bir dosya akışına serileştirildiği göstermek için basit bir senaryo kullanır. XML akışı bir dosyaya kaydedilir ve aynı dosya daha sonra geri okur ve <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> yöntemi kullanılarak özgün nesnenin bir kopyasına yeniden oluşturulur.
+This example uses a simple scenario to demonstrate how an instance of an object is created and serialized into a file stream using the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method. The XML stream is saved to a file, and the same file is then read back and reconstructed into a copy of the original object using the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method.
 
 Bu örnekte, bir sınıf adlı `PurchaseOrder` serileştirilmiş ve ardından seri durumdan. İkinci adında bir sınıf `Address` ortak alan adlı de dahil olduğundan `ShipTo` ayarlanmalıdır bir `Address`. Benzer şekilde, bir `OrderedItem` çünkü sınıfı dahil, bir dizi `OrderedItem` nesneleri ayarlanmalıdır `OrderedItems` alan. Son olarak, adlı bir sınıf `Test` serileştirir ve sınıflar çıkarır kodu içerir.
 
-`CreatePO` Yöntemi oluşturur `PurchaseOrder`, `Address`, ve `OrderedItem` sınıf nesneleri ve ortak alan değerlerini ayarlar. Yöntemi ayrıca, `PurchaseOrder`serileştirmek ve serisini kaldırmak için kullanılan <xref:System.Xml.Serialization.XmlSerializer> sınıfının bir örneğini oluşturur. Kodun oluşturucuya serileştirilecek sınıfın türünü geçirdiğine unutmayın. Kod ayrıca XML akışını bir XML belgesine yazmak için kullanılan bir `FileStream` oluşturur.
+`CreatePO` Yöntemi oluşturur `PurchaseOrder`, `Address`, ve `OrderedItem` sınıf nesneleri ve ortak alan değerlerini ayarlar. The method also constructs an instance of the <xref:System.Xml.Serialization.XmlSerializer> class that is used to serialize and deserialize the `PurchaseOrder`. Note that the code passes the type of the class that will be serialized to the constructor. The code also creates a `FileStream` that is used to write the XML stream to an XML document.
 
-`ReadPo` Yöntemi biraz basittir. Yalnızca seri durumdan çıkarılacak nesne oluşturur ve değerlerine okur. `CreatePo` yönteminde olduğu gibi, ilk olarak bir <xref:System.Xml.Serialization.XmlSerializer>oluşturmanız gerekir ve bu sınıf türünü oluşturucuya seri durumdan çıkarılacak şekilde geçirerek. Ayrıca, bir <xref:System.IO.FileStream> XML belgesi okumak için gereklidir. Nesneleri seri durumdan çıkarılacak çağrısı <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> yöntemiyle <xref:System.IO.FileStream> bağımsız değişken olarak. Seri durumdan çıkarılmış nesne türü için bir nesne değişkeni dönüştürülmelidir `PurchaseOrder`. Kodu daha sonra seri durumdan çıkarılmış değerlerini okur `PurchaseOrder`. Gerçek XML görmek için oluşturulan PO.xml dosya ayrıca okuyabilirsiniz Not çıktı.
+`ReadPo` Yöntemi biraz basittir. Yalnızca seri durumdan çıkarılacak nesne oluşturur ve değerlerine okur. As with the `CreatePo` method, you must first construct an <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor. Ayrıca, bir <xref:System.IO.FileStream> XML belgesi okumak için gereklidir. Nesneleri seri durumdan çıkarılacak çağrısı <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> yöntemiyle <xref:System.IO.FileStream> bağımsız değişken olarak. Seri durumdan çıkarılmış nesne türü için bir nesne değişkeni dönüştürülmelidir `PurchaseOrder`. Kodu daha sonra seri durumdan çıkarılmış değerlerini okur `PurchaseOrder`. Gerçek XML görmek için oluşturulan PO.xml dosya ayrıca okuyabilirsiniz Not çıktı.
 
 ```vb
-Imports System
+Imports System.IO
 Imports System.Xml
 Imports System.Xml.Serialization
-Imports System.IO
 Imports Microsoft.VisualBasic
 
 ' The XmlRoot attribute allows you to set an alternate name
@@ -553,9 +551,9 @@ End Class 'Test
 
 ```csharp
 using System;
+using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
-using System.IO;
 
 // The XmlRoot attribute allows you to set an alternate name
 // (PurchaseOrder) for the XML element and its namespace. By
@@ -774,6 +772,6 @@ XML çıktısı aşağıdakine benzer.
 - [XML Serileştirmeye Giriş](introducing-xml-serialization.md)
 - [Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme](controlling-xml-serialization-using-attributes.md)
 - [XML Serileştirmeyi Denetleyen Öznitelikler](attributes-that-control-xml-serialization.md)
-- [XmlSerializer sınıfı](xref:System.Xml.Serialization.XmlSerializer)
+- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
 - [Nasıl yapılır: Nesne Serileştirme](how-to-serialize-an-object.md)
 - [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](how-to-deserialize-an-object.md)

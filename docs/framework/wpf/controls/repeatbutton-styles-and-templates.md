@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ControlTemplate [WPF], RepeatButton
 - states [WPF], RepeatButton
 ms.assetid: fd340743-f44f-4990-9077-085301469670
-ms.openlocfilehash: 9c6a8ad0a954d244fb693e25965ab52dda114068
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8585e98536fd908daa11f21da395cab44924d612
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459855"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283422"
 ---
 # <a name="repeatbutton-styles-and-templates"></a>RepeatButton Stilleri ve Şablonları
 
-Bu konuda <xref:System.Windows.Controls.Primitives.RepeatButton> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).
+Bu konuda <xref:System.Windows.Controls.Primitives.RepeatButton> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için varsayılan <xref:System.Windows.Controls.ControlTemplate> değiştirebilirsiniz. Daha fazla bilgi için bkz. [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 
 ## <a name="repeatbutton-parts"></a>RepeatButton bölümleri
 
@@ -30,9 +30,9 @@ Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.RepeatButton> dene
 
 |VisualState adı|VisualStateGroup adı|Açıklama|
 |-|-|-|
-|Olağan|Ortak durumlar|Varsayılan durum.|
+|Normal|Ortak durumlar|Varsayılan durum.|
 |Gelme olayından|Ortak durumlar|Fare işaretçisi denetimin üzerine yerleştirilir.|
-|Basılması|Ortak durumlar|Denetime basıldığında.|
+|Basılan|Ortak durumlar|Denetime basıldığında.|
 |Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|
 |Diğinize|Odaklardaki durumlar|Denetim odağa sahiptir.|
 |Odaklanmadan gözetle|Odaklardaki durumlar|Denetimin odağı yok.|
@@ -59,4 +59,4 @@ Tüm örnek için bkz. [ControlTemplates Ile stillendirme örneği](https://gith
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
 - [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)
+- [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md)

@@ -1,33 +1,34 @@
 ---
-title: Modüller (Visual Basic)
+title: Modüller
 ms.date: 07/20/2015
 helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
-ms.openlocfilehash: 0bb33b102358fd2d0290fd413b09448255522856
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48092fd39128f0068a27029541216c9dd9ba9d97
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778657"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344178"
 ---
 # <a name="modules-visual-basic"></a>Modüller (Visual Basic)
-Visual Basic dizeleri, sistem bilgileri alma, dosya ve dizin işlemlerini gerçekleştirmek matematiksel hesaplamalar gerçekleştirmek düzenleme dahil olmak üzere, kodunuzun ortak görevleri basitleştirmek etkinleştirmeniz ve benzeri birkaç modülü sağlar. Aşağıdaki tabloda, Visual Basic tarafından sağlanan modülleri listeler.  
+
+Visual Basic provides several modules that enable you to simplify common tasks in your code, including manipulating strings, performing mathematical calculations, getting system information, performing file and directory operations, and so on. The following table lists the modules provided by Visual Basic.  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.Constants>|Çeşitli sabitleri içerir. Bu sabitler, kodunuzda her yerde kullanılabilir.|  
-|<xref:Microsoft.VisualBasic.ControlChars>|Yazdırma ve metin görüntüleme için sabit bir denetim karakterleri içeriyor.|  
-|<xref:Microsoft.VisualBasic.Conversion>|Ondalık sayılar diğer tabanlara Dönüştür üyeleri diğerine sayıları dizeleri, dizeleri sayılara ve bir veri türü içeriyor.|  
-|<xref:Microsoft.VisualBasic.DateAndTime>|Geçerli tarih veya saat, tarih hesaplamaları gerçekleştirmek, bir tarih veya saat döndürür, tarih veya saat ayarlayın veya bir işlemin süresi zaman üyeler içerir.|  
-|<xref:Microsoft.VisualBasic.ErrObject>|Çalışma zamanı hataları ve yükseltmek veya bir hata temizlemek için yöntemleri hakkında bilgi içerir.|  
-|<xref:Microsoft.VisualBasic.FileSystem>|Dosya, dizin veya klasör ve sistem işlemleri üyeleri içerir.|  
-|<xref:Microsoft.VisualBasic.Financial>|Finansal hesaplamalar gerçekleştirmek için kullanılan yordamları içerir.|  
-|<xref:Microsoft.VisualBasic.Globals>|Geçerli komut dosyası altyapısı sürümü hakkında bilgi içerir.|  
-|<xref:Microsoft.VisualBasic.Information>|İade, test veya dizi boyutu, tür adları vb. gibi bilgi doğrulamak üyeler içerir.|  
-|<xref:Microsoft.VisualBasic.Interaction>|İçeren üye nesneleri, uygulamalar ve sistemlerle etkileşim.|  
-|<xref:Microsoft.VisualBasic.Strings>|Bir dizenin uzunluğunu alma, bir dize arama dizeleri, biçimlendirme gibi dize işlemlerini gerçekleştirmek ve benzeri üyeler içerir.|  
-|<xref:Microsoft.VisualBasic.VBMath>|İçeren üyeleri matematiksel işlemler gerçekleştirin.|  
+|<xref:Microsoft.VisualBasic.Constants>|Contains miscellaneous constants. These constants can be used anywhere in your code.|  
+|<xref:Microsoft.VisualBasic.ControlChars>|Contains constant control characters for printing and displaying text.|  
+|<xref:Microsoft.VisualBasic.Conversion>|Contains members that convert decimal numbers to other bases, numbers to strings, strings to numbers, and one data type to another.|  
+|<xref:Microsoft.VisualBasic.DateAndTime>|Contains members that get the current date or time, perform date calculations, return a date or time, set the date or time, or time the duration of a process.|  
+|<xref:Microsoft.VisualBasic.ErrObject>|Contains information about run-time errors and methods to raise or clear an error.|  
+|<xref:Microsoft.VisualBasic.FileSystem>|Contains members that perform file, directory or folder, and system operations.|  
+|<xref:Microsoft.VisualBasic.Financial>|Contains procedures that are used to perform financial calculations.|  
+|<xref:Microsoft.VisualBasic.Globals>|Contains information about the current scripting engine version.|  
+|<xref:Microsoft.VisualBasic.Information>|Contains the members that return, test for, or verify information such as array size, type names, and so on.|  
+|<xref:Microsoft.VisualBasic.Interaction>|Contains members interact with objects, applications, and systems.|  
+|<xref:Microsoft.VisualBasic.Strings>|Contains members that perform string operations such as reformatting strings, searching a string, getting the length of a string, and so on.|  
+|<xref:Microsoft.VisualBasic.VBMath>|Contains members perform mathematical operations.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

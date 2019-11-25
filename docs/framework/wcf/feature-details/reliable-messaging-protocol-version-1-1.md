@@ -2,79 +2,79 @@
 title: Güvenilir Mesajlaşma Protokolü sürüm 1.1
 ms.date: 03/30/2017
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
-ms.openlocfilehash: 349c4dec8f127640d2709abcd63295aace6826df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9320787317131f42c4a82c6114a16fdea87567f4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754108"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283306"
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Güvenilir Mesajlaşma Protokolü sürüm 1.1
 
-Bu konu, Windows Communication Foundation (WCF) uygulama ayrıntılarını WS-ReliableMessaging içermektedir. Şubat 2007 (sürüm 1.1) Protokolü HTTP aktarımı kullanarak birlikte çalışma için gerekli. WCF WS-ReliableMessaging kısıtlamaları ve bu konuda açıklanan açıklamalar izler. İle başlayarak WS-ReliableMessaging sürüm 1.1 protokolünü uygulandığını unutmayın [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].
+Bu konuda, HTTP taşıması kullanılarak birlikte çalışabilirlik için gereken WS-ReliableMessaging Şubat 2007 (sürüm 1,1) protokolü için Windows Communication Foundation (WCF) uygulama ayrıntıları ele alınmaktadır. WCF, bu konuda açıklanan kısıtlamalar ve açıklamalar ile WS-ReliableMessaging belirtimini izler. WS-ReliableMessaging sürüm 1,1 protokolünün .NET Framework 3,5 ' den başlayarak uygulandığını unutmayın.
 
-WS-ReliableMessaging protokolü WCF uygulandığına Şubat 2007 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.
+WS-ReliableMessaging Şubat 2007 protokolü, <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>tarafından WCF 'de uygulanır.
 
-Kolaylık olması için konunun aşağıdaki rolleri kullanır:
+Kolaylık olması için, konusu aşağıdaki rolleri kullanır:
 
-- Başlatan: WS güvenilir ileti sırası oluşturma başlatan istemci.
+- Başlatıcı: WS-güvenilir Ileti sırası oluşturmayı Başlatan istemci.
 
-- Yanıtlayıcı: Hizmet başlatanın isteği alır.
+- Yanıtlayıcı: başlatıcısının isteklerini alan hizmet.
 
- Bu belge, aşağıdaki tabloda ad alanlarını ve önekleri kullanır.
+ Bu belge aşağıdaki tablodaki ön ekleri ve ad alanlarını kullanır.
 
-|Ön eki|Ad Alanı|
+|Prefix|Ad Alanı|
 |-|-|
-|wsrm|http://docs.oasis-open.org/ws-rx/wsrm/200702|
-|netrm|http://schemas.microsoft.com/ws/2006/05/rm|
+|WSRM|http://docs.oasis-open.org/ws-rx/wsrm/200702|
+|Netra|http://schemas.microsoft.com/ws/2006/05/rm|
 |s|http://www.w3.org/2003/05/soap-envelope|
-|wsa|http://schemas.xmlsoap.org/ws/2005/08/addressing|
-|wsse|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|
+|WSA|http://schemas.xmlsoap.org/ws/2005/08/addressing|
+|WSO|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|
 |wsrmp|http://docs.oasis-open.org/ws-rx/wsrmp/200702|
 |netrmp|http://schemas.microsoft.com/ws-rx/wsrmp/200702|
-|WSP|(WS-Policy 1.2 veya WS-Policy 1.5)|
+|WSP|(WS-Policy 1,2 ya da WS-Policy 1,5)|
 
 ## <a name="messaging"></a>İleti
 
-### <a name="sequence-creation"></a>Dizisi oluşturma
+### <a name="sequence-creation"></a>Sıra oluşturma
 
-WCF uygulayan `CreateSequence` ve `CreateSequenceResponse` iletileri güvenilir bir Mesajlaşma kurmak için sıra. Aşağıdaki kısıtlamalar uygulanır:
+WCF, güvenilir bir mesajlaşma sırası oluşturmak için `CreateSequence` ve `CreateSequenceResponse` iletilerini uygular. Aşağıdaki kısıtlamalar geçerlidir:
 
-- B1101: WCF başlatıcı olarak aynı uç nokta başvurusu kullanır `CreateSequence` iletinin `ReplyTo`, `AcksTo` ve `Offer/Endpoint`.
+- B1101: WCF başlatıcısı `CreateSequence` iletisinin `ReplyTo`, `AcksTo` ve `Offer/Endpoint`aynı uç nokta başvurusunu kullanır.
 
-- R1102: `AcksTo`, `ReplyTo` Ve `Offer/Endpoint` uç nokta başvurularının `CreateSequence` ileti octet-wise eşleşecek şekilde aynı dize temsilleri adresi değerlerle sahip olmalıdır.
+- R1102: `CreateSequence` iletisindeki `AcksTo`, `ReplyTo` ve `Offer/Endpoint` uç nokta başvuruları, sekizli temelinde eşleşecek şekilde özdeş dize gösterimlerine sahip adres değerlerine sahip olmalıdır.
 
-  - WCF Yanıtlayıcı doğrular URI kısmı `AcksTo`, `ReplyTo` ve `Endpoint` uç nokta başvuruları özdeş bir dizisini oluşturmadan önce.
+  - WCF Yanıtlayıcı, bir sıra oluşturmadan önce `AcksTo`, `ReplyTo` ve `Endpoint` uç nokta başvurularının URI kısmının aynı olduğunu doğrular.
 
-- R1103: `AcksTo`, `ReplyTo` Ve `Offer/Endpoint` uç nokta başvurularının `CreateSequence` ileti başvuru parametrelerinin aynı olmalıdır.
+- R1103: `CreateSequence` iletisindeki `AcksTo`, `ReplyTo` ve `Offer/Endpoint` uç nokta başvuruları aynı başvuru parametreleri kümesine sahip olmalıdır.
 
-  - WCF zorunlu değildir, ancak bu başvuruyu varsayar parametrelerinin `AcksTo`, `ReplyTo` ve `Offer/Endpoint` uç nokta başvuruda bulunan `CreateSequence` aynıdır ve başvuru parametreleri kullanan `ReplyTo` için uç nokta başvurusu onayları ve ters sıra iletileri.
+  - WCF zorunlu değildir, ancak `CreateSequence` başvuru parametrelerinin `AcksTo`, `ReplyTo` ve `Offer/Endpoint` uç nokta başvurularının aynı olduğunu varsayar ve, bildirimlerin ve listesiyse iletileri için `ReplyTo` uç nokta başvurusundan başvuru parametrelerini kullanır.
 
-- B1104: WCF Başlatıcı isteğe bağlı oluşturmaz `Expires` veya `Offer/Expires` öğesinde `CreateSequence` ileti.
+- B1104: WCF başlatıcısı `CreateSequence` iletisinde isteğe bağlı `Expires` veya `Offer/Expires` öğesi oluşturmaz.
 
-- B1105: Erişirken `CreateSequence` WCF Yanıtlayıcı ileti kullanan `Expires` değerini `CreateSequence` öğesi olarak `Expires` değerini `CreateSequenceResponse` öğesi. Aksi durumda, WCF Yanıtlayıcı okur ve yoksayar `Expires` ve `Offer/Expires` değerleri.
+- B1105: `CreateSequence` iletisine erişirken, WCF Yanıtlayıcı, `CreateSequenceResponse` öğesindeki `Expires` değeri olarak `CreateSequence` öğesinde `Expires` değerini kullanır. Aksi takdirde, WCF Yanıtlayıcısı `Expires` ve `Offer/Expires` değerlerini okur ve yoksayar.
 
-- B1106: Erişirken `CreateSequenceResponse` ileti WCF Başlatıcı okur isteğe bağlı `Expires` değer ancak bunları kullanmaz.
+- B1106: `CreateSequenceResponse` iletisine erişirken, WCF başlatıcısı isteğe bağlı `Expires` değerini okur, ancak kullanmaz.
 
-- B1107: WCF Başlatıcı hem Yanıtlayıcı her zaman isteğe bağlı Oluştur `IncompleteSequenceBehavior` öğesinde `CreateSequence/Offer` ve `CreateSequenceResponse` öğeleri.
+- B1107: WCF başlatıcısı ve Yanıtlayıcı, `CreateSequence/Offer` ve `CreateSequenceResponse` öğelerinde her zaman isteğe bağlı `IncompleteSequenceBehavior` öğesini oluşturur.
 
-- B1108: WCF kullanan yalnızca `DiscardFollowingFirstGap` ve `NoDiscard` değerler `IncompleteSequenceBehavior` öğesi.
+- B1108: WCF `IncompleteSequenceBehavior` öğesinde yalnızca `DiscardFollowingFirstGap` ve `NoDiscard` değerlerini kullanır.
 
-  - WS-ReliableMessaging yararlanan `Offer` iki oturum form bağıntılı dizileri gruplarıdır kurmak için bir mekanizma.
+  - WS-ReliableMessaging, bir oturum oluşturan iki boyutlu bağlantılı diziyi oluşturmak için `Offer` mekanizmasını kullanır.
 
-- B1109: Varsa `CreateSequence` içeren bir `Offer` öğesi, tek yönlü WCF Yanıtlayıcı reddeder sunulan dizisi ile yanıt vererek bir `CreateSequenceResponse` olmadan bir `Accept` öğesi.
+- B1109: `CreateSequence`, bir `Offer` öğesi içeriyorsa, bir `Accept` öğesi olmadan bir `CreateSequenceResponse` ile yanıt vererek WCF Yanıtlayıcının sunulan sırayı reddettiği şekilde reddeder.
 
-- B1110: Güvenilir bir Mesajlaşma Yanıtlayıcı sunulan dizisi reddederse, WCF Başlatıcı yeni kurulan dizisi hataları.
+- B1110: güvenilir bir mesajlaşma Yanıtlayıcısı sunulan sırayı reddederse, WCF başlatıcısı yeni oluşturulan sırayı hata.
 
-- B1111: Varsa `CreateSequence` içermeyen bir `Offer` öğe, çift yönlü WCF Yanıtlayıcı reddeder sunulan dizisi ile yanıt vererek bir `CreateSequenceRefused` hata.
+- B1111: `CreateSequence` bir `Offer` öğesi içermiyorsa, iki yönlü WCF Yanıtlayıcısı, bir `CreateSequenceRefused` hatası ile yanıt vererek sunulan sırayı reddeder.
 
-- R1112: İki ters sıraları kullanarak kurulduğunda `Offer` mekanizması `[address]` özelliği `CreateSequenceResponse/Accept/AcksTo` uç nokta Başvurusu ' % s'hedef URI eşleşmelidir, `CreateSequence` ileti baytı.
+- R1112: `Offer` mekanizması kullanılarak iki listesiyse dizisi oluşturulduğunda, `CreateSequenceResponse/Accept/AcksTo` uç noktası başvurusunun `[address]` özelliği Byte için `CreateSequence` ileti baytının hedef URI 'siyle eşleşmelidir.
 
-- R1113: İki ters sıraları kullanarak kurulduğunda `Offer` mekanizması, her iki dizileri için Yanıtlayıcı başlatıcıdan akan tüm iletileri aynı uç nokta başvurusu gönderilmelidir.
+- R1113: `Offer` mekanizması kullanılarak iki listesiyse dizisi oluşturulduğunda, her iki sıranın de başlatıcıdan yanıtlayanın akışını sağlamak için aynı uç nokta başvurusuna gönderilmesi gerekir.
 
-WCF WS-ReliableMessaging Başlarıcı ve Yanıtlayıcı arasında güvenilir oturumlar kurmak için kullanır. Güvenilir oturum açmak için tek yönlü, istek-yanıt ve tam WCF WS-ReliableMessaging uygulamasını sağlar çift yönlü Mesajlaşma desenleri. WS-ReliableMessaging `Offer` mekanizmasını `CreateSequence` ve `CreateSequenceResponse` iki bağıntılı listesiyse serileri ve tüm uç noktalar iletisi için uygun bir oturumu Protokolü sağlar bilgisayarlarıyla oluşturmanıza imkan tanır. WCF oturum tutarlılığı için uçtan uca koruma dahil olmak üzere oturum için güvenlik garantisi sunduğundan, aynı hedefe yönelik aynı taraf iletiler ulaşmasını sağlamak pratik bir yöntemdir. Bu, "ardışık-yedekleme" dizisi bildirimleri, uygulama iletilerinde de sağlar. Bu nedenle, kısıtlamaları R1102 R1112 ve R1113 WCF için geçerlidir.
+WCF, başlatıcı ve Yanıtlayıcı arasında güvenilir oturumlar oluşturmak için WS-ReliableMessaging kullanır. WCF WS-ReliableMessaging uygulamasının tek yönlü, istek-yanıt ve tam çift yönlü mesajlaşma desenleri için güvenilir bir oturum sağlar. `CreateSequence` ve `CreateSequenceResponse` üzerindeki WS-ReliableMessaging `Offer` mekanizması, iki bağıntılı dönüştürme sırası oluşturmanıza ve tüm ileti uç noktaları için uygun bir oturum Protokolü sağlamanıza olanak tanır. WCF, oturum bütünlüğü için uçtan uca koruma dahil olmak üzere bu tür bir oturum için güvenlik garantisi sağladığından, aynı tarafa yönelik iletilerin aynı hedefe ulaşmasını sağlamak yararlıdır. Bu Ayrıca, uygulama iletilerinde "Piggy-," sıralı bildirimleri de sağlar. Bu nedenle, R1102, R1112 ve R1113 kısıtlamaları WCF için geçerlidir.
 
-Örneği bir `CreateSequence` ileti.
+`CreateSequence` iletisine bir örnek.
 
 ```xml
 <s:Envelope>
@@ -103,7 +103,7 @@ WCF WS-ReliableMessaging Başlarıcı ve Yanıtlayıcı arasında güvenilir otu
 </s:Envelope>
 ```
 
-Örneği bir `CreateSequenceResponse` ileti.
+`CreateSequenceResponse` iletisine bir örnek.
 
 ```xml
 <s:Envelope>
@@ -126,21 +126,21 @@ WCF WS-ReliableMessaging Başlarıcı ve Yanıtlayıcı arasında güvenilir otu
 </s:Envelope>
 ```
 
-### <a name="closing-a-sequence"></a>Bir dizi kapatma
+### <a name="closing-a-sequence"></a>Bir diziyi kapatma
 
-WCF kullanan `CloseSequence` ve `CloseSequenceResponse` iletileri güvenilir Mesajlaşma kaynak tarafından başlatılan bir kapatma işlemi için. WCF güvenilir Mesajlaşma hedef kapatma başlatılmaz ve WCF güvenilir Mesajlaşma kaynak güvenilir Mesajlaşma hedef tarafından başlatılan bir kapatma desteklemez. Aşağıdaki kısıtlamalar uygulanır:
+WCF, güvenilir bir mesajlaşma kaynağı tarafından başlatılan kapatmadan `CloseSequence` ve `CloseSequenceResponse` iletilerini kullanır. WCF güvenilir mesajlaşma hedefi kapatmaları başlatmaz ve WCF güvenilir mesajlaşma kaynağı, güvenilir mesajlaşma hedefi ile başlatılan bir kapanışı desteklemez. Aşağıdaki kısıtlamalar geçerlidir:
 
-- B1201: WCF güvenilir Mesajlaşma kaynağı her zaman gönderdiği bir `CloseSequence` dizisi kapatmak için ileti.
+- B1201: WCF güvenilir mesajlaşma kaynağı, diziyi kapatmak için her zaman bir `CloseSequence` iletisi gönderir.
 
-- B1202: Güvenilir Mesajlaşma kaynak göndermeden önce onay sırası iletilerin tam aralığının bekler `CloseSequence` ileti.
+- B1202: güvenilir mesajlaşma kaynağı, `CloseSequence` iletisini göndermeden önce tam dizi iletilerinin onay gelmesini bekler.
 
-- B1203: Güvenilir Mesajlaşma kaynağı her zaman isteğe bağlı içerir `LastMsgNumber` öğe dizisi iletileri içermediği sürece.
+- B1203: güvenilir mesajlaşma kaynağı her zaman isteğe bağlı `LastMsgNumber` öğesi içerir, çünkü dizi ileti içermez.
 
-- R1204: Güvenilir Mesajlaşma hedef kapatma göndererek gerçekleştirmemelidir bir `CloseSequence` ileti.
+- R1204: güvenilir mesajlaşma hedefi `CloseSequence` bir ileti göndererek kapatmaları başlatmamalıdır.
 
-- B1205: Alma bağlı bir `CloseSequence` ileti WCF güvenilir Mesajlaşma kaynak dizisi eksik olarak değerlendirir ve bir hata gönderir.
+- B1205: `CloseSequence` bir ileti aldıktan sonra, WCF güvenilir mesajlaşma kaynağı, diziyi tamamlanmamış olarak değerlendirir ve bir hata gönderir.
 
- Örneği bir `CloseSequence` ileti.
+ `CloseSequence` iletisine bir örnek.
 
 ```xml
 <s:Envelope>
@@ -161,7 +161,7 @@ WCF kullanan `CloseSequence` ve `CloseSequenceResponse` iletileri güvenilir Mes
 </s:Envelope>
 ```
 
-Örnek `CloseSequenceResponse` ileti:
+Örnek `CloseSequenceResponse` iletisi:
 
 ```xml
 <s:Envelope>
@@ -184,19 +184,19 @@ WCF kullanan `CloseSequence` ve `CloseSequenceResponse` iletileri güvenilir Mes
 </s:Envelope>
 ```
 
-### <a name="sequence-termination"></a>Sonlandırma sırası
+### <a name="sequence-termination"></a>Sıra sonlandırma
 
-WCF öncelikle kullanır `TerminateSequence/TerminateSequenceResponse` tamamladıktan sonra el sıkışması `CloseSequence/CloseSequenceResponse` anlaşması. WCF güvenilir Mesajlaşma hedef sonlandırma başlatılmaz ve güvenilir Mesajlaşma kaynak, hedef tarafından başlatılan bir güvenilir Mesajlaşma sonlandırma desteklemez. Aşağıdaki kısıtlamalar uygulanır:
+WCF, `CloseSequence/CloseSequenceResponse` el sıkışmasını tamamladıktan sonra `TerminateSequence/TerminateSequenceResponse` el sıkışmasını kullanır. WCF güvenilir mesajlaşma hedefi sonlandırmayı başlatmaz ve güvenilir mesajlaşma kaynağı, güvenilir bir mesajlaşma hedefi tarafından başlatılan sonlandırmayı desteklemez. Aşağıdaki kısıtlamalar geçerlidir:
 
-- B1301: Yalnızca WCF Başlatıcı gönderir `TerminateSequence` ileti başarıyla tamamlanmasından sonra `CloseSequence/CloseSequenceResponse` anlaşması.
+- B1301: WCF başlatıcısı, `CloseSequence/CloseSequenceResponse` el sıkışmasının başarıyla tamamlanmasından sonra yalnızca `TerminateSequence` iletisi gönderir.
 
-- R1302: WCF doğrular `LastMsgNumber` öğedir tutarlı tamamında `CloseSequence` ve `TerminateSequence` iletileri için belirli bir dizi. Diğer bir deyişle `LastMsgNumber` değil tüm mevcut `CloseSequence` ve `TerminateSequence` iletileri veya mevcut ve tüm aynı `CloseSequence` ve `TerminateSequence` iletileri.
+- R1302: WCF `LastMsgNumber` öğesinin belirli bir sıra için tüm `CloseSequence` ve `TerminateSequence` iletileri arasında tutarlı olduğunu doğrular. Bu, `LastMsgNumber` tüm `CloseSequence` ve `TerminateSequence` iletilerinde mevcut olmadığı ya da tüm `CloseSequence` ve `TerminateSequence` iletilerinde aynı olduğu anlamına gelir.
 
-- B1303: Alırken bir `TerminateSequence` sonra ileti `CloseSequence/CloseSequenceResponse` güvenilir Mesajlaşma hedef el sıkışması, yanıt veren ile bir `TerminateSequenceResponse` ileti. Güvenilir Mesajlaşma kaynak göndermeden önce son onayı olduğundan `TerminateSequence` ileti güvenilir Mesajlaşma hedef bilir olmadan emin olabilirsiniz dizisi sona ereceğini ve kaynaklara hemen geri kazanır.
+- B1303: `CloseSequence/CloseSequenceResponse` el sıkışması sonrasında `TerminateSequence` bir ileti alınırken, güvenilir mesajlaşma hedefi bir `TerminateSequenceResponse` iletisiyle yanıt verir. Güvenilir Mesajlaşma kaynağında `TerminateSequence` iletisini göndermeden önce son onay bulunduğundan, güvenilir mesajlaşma hedefi, dizinin bittiğini şüpheli olmadan bilir ve kaynakları hemen geri kazanır.
 
-- B1304: Alırken bir `TerminateSequence` öncesinde ileti `CloseSequence/CloseSequenceResponse` WCF güvenilir Mesajlaşma hedef el sıkışması, yanıt veren ile bir `TerminateSequenceResponse` ileti. Güvenilir Mesajlaşma hedef dizideki tutarsızlık olduğunu belirlerse, güvenilir Mesajlaşma hedef istemcinin alma olanağı sağlamak için kaynakları tekrar kullanılabilir hale getirme önce bir uygulamayı hedef belirtilen saat bekler son onayı. Aksi halde, güvenilir Mesajlaşma hedef kaynaklar hemen geri kazanır ve uygulama hedef sıra yükselterek şüpheli ile biten gösterir `Faulted` olay.
+- B1304: `CloseSequence/CloseSequenceResponse` El sıkışmadan önce `TerminateSequence` bir ileti alınırken, WCF güvenilir mesajlaşma hedefi bir `TerminateSequenceResponse` iletisiyle yanıt verir. Güvenilir Mesajlaşma hedefi, dizide herhangi bir tutarsızlık olmadığını belirlerse, güvenilir mesajlaşma hedefi bir uygulamanın hedefi olarak belirtilen süre için geri kazanma kaynaklarından önce bekler ve istemciye alma şansı sağlar son onay. Aksi takdirde, güvenilir mesajlaşma hedefi kaynakları anında geri kazanır ve `Faulted` olayını yükselterek sıranın, dizi ile bitip bitmediğini belirtir.
 
-Örneği bir `TerminateSequence` ileti.
+`TerminateSequence` iletisine bir örnek.
 
 ```xml
 <s:Envelope>
@@ -217,7 +217,7 @@ WCF öncelikle kullanır `TerminateSequence/TerminateSequenceResponse` tamamlad�
 </s:Envelope>
 ```
 
-Örnek `TerminateSequenceResponse` ileti:
+Örnek `TerminateSequenceResponse` iletisi:
 
 ```xml
 <s:Envelope>
@@ -242,11 +242,11 @@ WCF öncelikle kullanır `TerminateSequence/TerminateSequenceResponse` tamamlad�
 
 ### <a name="sequences"></a>Diziler
 
-Dizilerine uygulama kısıtlamaları listesi verilmiştir:
+Diziler için uygulanan kısıtlamaların listesi aşağıda verilmiştir:
 
-- B1401:WCF oluşturur ve erişimleri numaraları daha yüksek sıralı `xs:long`'s maksimum kapsamlı değeri, 9223372036854775807.
+- B1401: WCF `xs:long`en yüksek kapsamlı değerden (9223372036854775807) daha yüksek sıra numarası üretir ve erişir.
 
-Örneği bir `Sequence` başlığı.
+`Sequence` üst bilgisi örneği.
 
 ```xml
 <wsrm:Sequence s:mustUnderstand="1">
@@ -257,9 +257,9 @@ Dizilerine uygulama kısıtlamaları listesi verilmiştir:
 
 ### <a name="request-acknowledgement"></a>İstek onayı
 
-WCF kullanan `AckRequested` tutma mekanizması olarak başlığı.
+WCF `AckRequested` üst bilgisini etkin tut mekanizması olarak kullanır.
 
-Örneği bir `AckRequested` başlığı.
+`AckRequested` üst bilgisi örneği.
 
 ```xml
 <wsrm:AckRequested>
@@ -269,13 +269,13 @@ WCF kullanan `AckRequested` tutma mekanizması olarak başlığı.
 
 ### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement
 
-WCF WS-Reliable Mesajlaşma sağlanan sıralı onayları için bir "ardışık" mekanizması kullanır. Aşağıdaki kısıtlamalar uygulanır:
+WCF, WS-güvenilir mesajlaşmada belirtilen sıra bildirimleri için bir "Piggy-Back" mekanizması kullanır. Aşağıdaki kısıtlamalar geçerlidir:
 
-- R1601: İki ters sıraları kullanarak kurulduğunda `Offer` mekanizması `SequenceAcknowledgement` üst bilgisi için hedeflenen alıcı aktarılan herhangi bir uygulama iletisi içinde eklenmesi. Uzak uç noktada bir paketle gönderilen erişebilir `SequenceAcknowledgement` başlığı.
+- R1601: `Offer` mekanizması kullanılarak iki listesiyse dizisi oluşturulduğunda, `SequenceAcknowledgement` üst bilgisi amaçlanan alıcıya aktarılan herhangi bir uygulama iletisine dahil edilebilir. Uzak uç noktanın, bir PIDA desteklenen `SequenceAcknowledgement` üstbilgisine erişebilmesi gerekir.
 
-- B1602: WCF oluşturmaz `SequenceAcknowledgement` içeren üst bilgiler `Nack` öğeleri. WCF doğrular ve her `Nack` öğesi bir sıra numarası içeriyor, ancak Aksi halde yoksayar `Nack` öğe ve değer.
+- B1602: WCF, `Nack` öğeleri içeren `SequenceAcknowledgement` üst bilgileri oluşturmaz. WCF her bir `Nack` öğesinin bir sıra numarası içerdiğini doğrular, aksi takdirde `Nack` öğesini ve değerini yoksayar.
 
- Örneği bir `SequenceAcknowledgement` başlığı.
+ `SequenceAcknowledgement` üst bilgisi örneği.
 
 ```xml
 <wsrm:SequenceAcknowledgement>
@@ -286,11 +286,11 @@ WCF WS-Reliable Mesajlaşma sağlanan sıralı onayları için bir "ardışık" 
 
 ### <a name="ws-reliablemessaging-faults"></a>WS-ReliableMessaging hataları
 
-Bir listesi WS-ReliableMessaging hataları WCF uygulaması için geçerli olan sınırlamalar aşağıda verilmiştir. Aşağıdaki kısıtlamalar uygulanır:
+WS-ReliableMessaging hatalarının WCF uygulaması için uygulanan kısıtlamaların listesi aşağıda verilmiştir. Aşağıdaki kısıtlamalar geçerlidir:
 
-- B1701: WCF oluşturmaz `MessageNumberRollover` hataları.
+- B1701: WCF `MessageNumberRollover` hata oluşturmaz.
 
-- B1702: Hizmet uç noktası, bağlantı sınırına ulaştığında ve yeni bağlantı işlenemiyor, SOAP 1.2 WCF iç içe bir oluşturur `CreateSequenceRefused` alt kod, hata `netrm:ConnectionLimitReached`aşağıdaki örnekte gösterildiği gibi.
+- B1702: SOAP 1,2 üzerinde, hizmet uç noktası bağlantı sınırına ulaştığında ve yeni bağlantıları işleyemezse, WCF aşağıdaki örnekte gösterildiği gibi iç içe geçmiş bir `CreateSequenceRefused` `netrm:ConnectionLimitReached`hata alt kodu oluşturur.
 
 ```xml
 <s:Envelope>
@@ -318,89 +318,89 @@ Bir listesi WS-ReliableMessaging hataları WCF uygulaması için geçerli olan s
 
 ### <a name="ws-addressing-faults"></a>WS-Addressing hataları
 
-WS-Addressing WS-ReliableMessaging kullandığından WCF WS-ReliableMessaging uygulama oluşturabilir ve WS-Addressing hataları iletme. Bu bölüm, WCF açıkça oluşturur ve WS-ReliableMessaging katmanında iletir WS-Addressing hataları kapsar:
+WS-ReliableMessaging WS-Addressing kullandığından WCF WS-ReliableMessaging uygulamasının WS-Addressing hataları oluşturup iletebileceği. Bu bölümde, WCF 'nin WS-ReliableMessaging katmanında açıkça oluşturduğu ve ilettiği WS-Addressing hataları ele alınmaktadır:
 
-- B1801:WCF oluşturur ve iletir `Message Addressing Header Required` aşağıdakilerden biri doğruysa, hata:
+- B1801: WCF aşağıdakilerden biri doğru olduğunda `Message Addressing Header Required` hatasını üretir ve iletir:
 
-  - A `CreateSequence`, `CloseSequence` veya `TerminateSequence` ileti eksik bir `MessageId` başlığı.
+  - `CreateSequence`, `CloseSequence` veya `TerminateSequence` iletisinde `MessageId` üstbilgisi eksik.
 
-  - A `CreateSequence`, `CloseSequence` veya `TerminateSequence` ileti eksik bir `ReplyTo` başlığı.
+  - `CreateSequence`, `CloseSequence` veya `TerminateSequence` iletisinde `ReplyTo` üstbilgisi eksik.
 
-  - A `CreateSequenceResponse`, `CloseSequenceResponse`, veya `TerminateSequenceResponse` ileti eksik bir `RelatesTo` başlığı.
+  - `CreateSequenceResponse`, `CloseSequenceResponse`veya `TerminateSequenceResponse` iletisinde `RelatesTo` üstbilgisi eksik.
 
-- B1802:WCF oluşturur ve iletir `Endpoint Unavailable` , dinleme bitiş noktası yoktur belirtmek için hata adresleme üstbilgilerinde incelenmesi göre sırası işleyebilir `CreateSequence` ileti.
+- B1802: WCF, `CreateSequence` iletisindeki adresleme üstbilgilerinin incelenmesi temelinde diziyi işleyebilmesinin bir uç nokta dinleme olmadığını belirten `Endpoint Unavailable` hatasını üretir ve iletir.
 
-## <a name="protocol-composition"></a>İletişim kuralı oluşturma
+## <a name="protocol-composition"></a>Protokol oluşturma
 
-### <a name="composition-with-ws-addressing"></a>WS-Addressing ile oluşturma
+### <a name="composition-with-ws-addressing"></a>WS-Addressing oluşturma
 
-WCF WS-Addressing iki sürümlerini destekler: WS-Addressing 2004/08 WS-ADDR ve W3C WS-Addressing 1.0 önerileri [WS-ADDR-CORE] ve [WS-ADDR SOAP].
+WCF iki WS-Addressing sürümü destekler: WS-Addressing 2004/08 [WS-ADDR] ve W3C WS-Addressing 1,0 önerileri [WS-ADDR-CORE] ve [WS-ADDR-SOAP].
 
-While WS-ReliableMessaging belirtimi bahsetmeleri yalnızca WS-Addressing 2004/08, onu kısıtlamaz kullanılacak WS-Addressing sürümü. WCF için uygulanan kısıtlamaları listesi verilmiştir:
+WS-ReliableMessaging belirtiminde yalnızca WS-Addressing 2004/08 bahsetirken, WS-Addressing sürümü kullanılacak şekilde kısıtlanmaz. WCF için uygulanan kısıtlamaların listesi aşağıda verilmiştir:
 
-- R2101: WS-Addressing 2004/08 hem WS-Addressing 1.0 WS-Reliable Mesajlaşma ile kullanılabilir.
+- R2101: hem WS-Addressing 2004/08 hem de WS-Addressing 1,0, WS-güvenilir mesajlaşma ile kullanılabilir.
 
-- R2102: Belirli bir WS-ReliableMessaging dizisi veya bir çift ters dizileri kullanılarak bağıntılı boyunca bir tek WS-Addressing sürümü kullanılmalıdır `Offer` mekanizması.
+- R2102: tek bir WS-Addressing sürümü, belirli bir WS-ReliableMessaging sırası boyunca veya `Offer` mekanizması kullanılarak bağıntılı bir convero dizileri çifti kullanılmalıdır.
 
-### <a name="composition-with-soap"></a>SOAP ile oluşturma
+### <a name="composition-with-soap"></a>SOAP ile bileşim
 
-WCF SOAP 1.1 ve SOAP 1.2 WS-Reliable Mesajlaşma ile kullanılmasını destekler.
+WCF, hem SOAP 1,1 hem de WS-güvenilir mesajlaşma ile SOAP 1,2 kullanımını destekler.
 
-### <a name="composition-with-ws-security-and-ws-secureconversation"></a>WS-güvenlik ve WS-SecureConversation ile oluşturma
+### <a name="composition-with-ws-security-and-ws-secureconversation"></a>WS-Security ve WS-SecureConversation ile birleştirme
 
-WCF ile WS-Secure Conversation güvenli aktarım (HTTPS), WS-güvenlik ile oluşturma ve oluşturma'yı kullanarak WS-ReliableMessaging dizileri için koruma sağlar. WS-ReliableMessaging 1.1 protokolü, WS-güvenlik 1.1 ve WS-Secure konuşma 1.3 Protokolü birlikte kullanılmalıdır. WCF için uygulanan kısıtlamaları listesi verilmiştir:
+WCF, güvenli aktarım (HTTPS), WS-Security ile bileşim ve WS-Secure konuşmasıyla bileşim kullanarak WS-ReliableMessaging dizileri için koruma sağlar. WS-ReliableMessaging 1,1 protokolü, WS-güvenlik 1,1 ve WS-Secure konuşma 1,3 Protokolü birlikte kullanılmalıdır. WCF için uygulanan kısıtlamaların listesi aşağıda verilmiştir:
 
-- R2301: Bir WS-ReliableMessaging dizisini bütünlüğünün yanı sıra bütünlüğünü ve tek tek iletilerin gizliliğini korumak için WS-Secure Conversation kullanılmalıdır WCF gerektirir.
+- R2301: tek tek iletilerin bütünlüğünden ve gizliliğine ek olarak bir WS-ReliableMessaging dizisinin bütünlüğünü korumak Için, WCF WS-Secure konuşmasının kullanılması gerektiğini gerektirir.
 
-- R2302:AWS-Secure Conversation oturumu WS-ReliableMessaging sequence(s) kurmadan önce oluşturulması gerekir.
+- R2302: AWS-Secure konuşma oturumunun, WS-ReliableMessaging sırası kurulmadan önce oluşturulması gerekir.
 
-- R2303: WS-ReliableMessaging dizisi ömrü oturumunun ömrü, WS-Secure Conversation aşarsa `SecurityContextToken` kullanarak WS-Secure Conversation gerekir yenilenmiş karşılık gelen WS-Secure konuşma yenileme bağlama kullanılarak oluşturulmuş.
+- R2303: WS-ReliableMessaging dizisi ömrü WS-Secure konuşma oturumunun ömrünü aşarsa, WS-Secure konuşması kullanılarak belirlenen `SecurityContextToken`, karşılık gelen WS-Secure konuşma yenileme bağlaması kullanılarak yenilenmelidir.
 
-- B2304:WS-ReliableMessaging dizisi veya bir çift bağlantılı listesiyse dizileri tek bir WS-SecureConversation oturumuna bağlı her zaman.
+- B2304: WS-ReliableMessaging sırası veya bir çift bağıntılı dönüştürme dizisi her zaman tek bir WS-SecureConversation oturumuna bağlanır.
 
-- R2305: WS-Secure Conversation ile oluşan, gerektiren WCF Yanıtlayıcı `CreateSequence` iletisi içeren `wsse:SecurityTokenReference` öğesi ve `wsrm:UsesSequenceSTR` başlığı.
+- R2305: WS-Secure konuşmasıyla birlikte kullanıldığında, WCF Yanıtlayıcı `CreateSequence` iletisinin `wsse:SecurityTokenReference` öğesini ve `wsrm:UsesSequenceSTR` üst bilgisini içermesini gerektirir.
 
- Örneği bir `UsesSequenceSTR` başlığı.
+ `UsesSequenceSTR` üst bilgisi örneği.
 
 ```xml
 <wsrm:UsesSequenceSTR></wsrm:UsesSequenceSTR>
 ```
 
-### <a name="composition-with-ssltls-sessions"></a>SSL/TLS oturumlarını ile oluşturma
+### <a name="composition-with-ssltls-sessions"></a>SSL/TLS oturumlarıyla bileşim
 
-WCF ile SSL/TLS oturumları oluşturma desteklemez:
+WCF, SSL/TLS oturumları ile oluşturmayı desteklemez:
 
-- B2401: WCF oluşturmaz `wsrm:UsesSequenceSSL` başlığı.
+- B2401: WCF `wsrm:UsesSequenceSSL` üstbilgisini oluşturmaz.
 
-- R2402: Güvenilir bir Mesajlaşma Başlatıcı değil göndermelisiniz bir `CreateSequence` ile ileti bir `wsrm:UsesSequenceSSL` WCF Yanıtlayıcı için üst bilgi.
+- R2402: güvenilir bir mesajlaşma başlatıcısı, WCF Yanıtlayıcıa `wsrm:UsesSequenceSSL` üst bilgisine sahip `CreateSequence` bir ileti göndermemelidir.
 
-### <a name="composition-with-ws-policy"></a>WS-Policy ile oluşturma
+### <a name="composition-with-ws-policy"></a>WS-Policy ile birleşim
 
-WCF WS-Policy iki sürümlerini destekler: WS-Policy 1.2 ve WS-Policy 1.5.
+WCF iki WS-Policy sürümünü destekler: WS-Policy 1,2 ve WS-Policy 1,5.
 
-## <a name="ws-reliablemessaging-ws-policy-assertion"></a>WS-ReliableMessaging WS-ilke onaylama
+## <a name="ws-reliablemessaging-ws-policy-assertion"></a>WS-ReliableMessaging WS-Ilke onaylama
 
-WCF kullanan WS-ReliableMessaging WS-Policy onaylama `wsrm:RMAssertion` uç noktaları özelliklerini tanımlamak için. WCF için uygulanan kısıtlamaları listesi verilmiştir:
+WCF uç noktalar özelliklerini anlatmak için WS-ReliableMessaging WS-Ilke onaylama `wsrm:RMAssertion` kullanır. WCF için uygulanan kısıtlamaların listesi aşağıda verilmiştir:
 
-- B3001: WCF ekler `wsrmn:RMAssertion` WS-Policy onaylama için `wsdl:binding` öğeleri. WCF destekleyen iki ek `wsdl:binding` ve `wsdl:port` öğeleri.
+- B3001: WCF `wsrmn:RMAssertion` WS-Policy assertion 'ı `wsdl:binding` öğelerine iliştirir. WCF her iki eki de `wsdl:binding` ve `wsdl:port` öğelerini destekler.
 
-- B3002: WCF hiçbir zaman oluşturur `wsp:Optional` etiketi.
+- B3002: WCF `wsp:Optional` etiketini hiçbir şekilde oluşturmaz.
 
-- B3003: Erişirken `wsrmp:RMAssertion` WCF WS-Policy onaylama yoksayar `wsp:Optional` etiketleyin ve WS-RM ilke zorunlu olarak değerlendirir.
+- B3003: `wsrmp:RMAssertion` WS-Policy assertion 'a erişirken, WCF `wsp:Optional` etiketini yoksayar ve WS-RM ilkesini zorunlu olarak değerlendirir.
 
-- R3004: WCF ile SSL/TLS oturumlarını compose değil çünkü belirten ilke WCF kabul etmiyor `wsrmp:SequenceTransportSecurity`.
+- R3004: WCF, SSL/TLS oturumları ile oluşturulmadığından, WCF `wsrmp:SequenceTransportSecurity`belirten ilkeyi kabul etmez.
 
-- B3005: WCF her zaman oluşturur `wsrmp:DeliveryAssurance` öğesi.
+- B3005: WCF her zaman `wsrmp:DeliveryAssurance` öğesini oluşturur.
 
-- B3006: WCF her zaman belirtir `wsrmp:ExactlyOnce` teslim güvencesi.
+- B3006: WCF her zaman `wsrmp:ExactlyOnce` teslimat güvencesini belirtir.
 
-- B3007: WCF oluşturur ve WS-ReliableMessaging onaylama aşağıdaki özelliklerini okur ve bunlar üzerindeki denetimi WCF sağlar`ReliableSessionBindingElement`:
+- B3007: WCF, WS-ReliableMessaging onaylaması 'nın aşağıdaki özelliklerini oluşturur ve okur ve bunlara WCF`ReliableSessionBindingElement`üzerinde denetim sağlar:
 
   - `netrmp:InactivityTimeout`
 
   - `netrmp:AcknowledgementInterval`
 
-  Örneği bir `RMAssertion`.
+  Bir `RMAssertion`örneği.
 
   ```xml
   <wsrmp:RMAssertion>
@@ -420,11 +420,11 @@ WCF kullanan WS-ReliableMessaging WS-Policy onaylama `wsrm:RMAssertion` uç nokt
 
 ## <a name="flow-control-ws-reliablemessaging-extension"></a>Akış denetimi WS-ReliableMessaging uzantısı
 
-WCF WS-ReliableMessaging genişletilebilirlik dizisi ileti akışı üzerinde isteğe bağlı ek sıkı denetim sağlamak için kullanır.
+WCF, sıralı ileti akışı üzerinde isteğe bağlı ek daha sıkı denetim sağlamak için WS-ReliableMessaging genişletilebilirliği kullanır.
 
-Akış denetimi etkin ayarlayarak <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled?displayProperty=nameWithType> özelliğini `true`. WCF için uygulanan kısıtlamaları listesi verilmiştir:
+Akış denetimi, <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled?displayProperty=nameWithType> özelliği `true`olarak ayarlanarak etkinleştirilir. WCF için uygulanan kısıtlamaların listesi aşağıda verilmiştir:
 
-- B4001: Güvenilir Mesajlaşma akış denetimi etkinleştirildiğinde, WCF oluşturur bir `netrm:BufferRemaining` öğesi genişletilmesinde öğesinde `SequenceAcknowledgement` aşağıdaki örnekte gösterildiği gibi başlığı.
+- B4001: güvenilir mesajlaşma akış denetimi etkinleştirildiğinde, WCF, aşağıdaki örnekte gösterildiği gibi `SequenceAcknowledgement` üstbilgisinin öğe genişletilebilirliği içinde bir `netrm:BufferRemaining` öğesi oluşturur.
 
   ```xml
   <wsrm:SequenceAcknowledgement>
@@ -434,136 +434,136 @@ Akış denetimi etkin ayarlayarak <xref:System.ServiceModel.Channels.ReliableSes
   </wsrm:SequenceAcknowledgement>
   ```
 
-- B4002: Güvenilir Mesajlaşma akış denetimi etkinleştirilmiş olsa, WCF gerektirmez bir `netrm:BufferRemaining` öğesinde `SequenceAcknowledgement` başlığı.
+- B4002: güvenilir mesajlaşma akışı denetimi etkin olsa bile, WCF `SequenceAcknowledgement` üst bilgisinde `netrm:BufferRemaining` öğesi gerektirmez.
 
-- B4003: WCF güvenilir Mesajlaşma hedef kullanan `netrm:BufferRemaining` kaç yeni, iletileri göstermek için ara belleğe alabilir.
+- B4003: WCF güvenilir mesajlaşma hedefi, kaç yeni iletinin arabelleğe alınacağını göstermek için `netrm:BufferRemaining` kullanır.
 
-- B4004:when güvenilir Mesajlaşma akış denetimi etkin olduğunda, WCF güvenilir Mesajlaşma kaynak değerini kullanır `netrm:BufferRemaining` kısıtlama ileti aktarım için.
+- B4004: güvenilir mesajlaşma akış denetimi etkinleştirildiğinde, WCF güvenilir mesajlaşma kaynağı ileti aktarımını azaltmak için `netrm:BufferRemaining` değerini kullanır.
 
-- B4005: WCF oluşturur `netrm:BufferRemaining` tamsayı değerleri 0 ile kapsamlı 4096 arasında ve 0 arasında tamsayı değerlerini okur ve `xs:int`'s `maxInclusive` 214748364 kapsamlı değeri.
+- B4005: WCF, dahil 0 ile 4096 arasında `netrm:BufferRemaining` tamsayı değerleri üretir ve 0 ile `xs:int``maxInclusive` değeri 214748364 dahil olmak üzere tamsayı değerlerini okur.
 
-## <a name="message-exchange-patterns"></a>İleti Exchange desenleri
+## <a name="message-exchange-patterns"></a>İleti değişimi desenleri
 
-Bu bölümde, WS-ReliableMessaging farklı ileti Exchange desenleri için kullanıldığında, WCF'ın davranışını tanımlar. Her ileti değişim deseni için aşağıdaki iki dağıtım senaryoları olarak kabul edilir:
+Bu bölümde, WS-ReliableMessaging farklı Ileti değişimi desenleri için kullanıldığında WCF 'nin davranışı açıklanmaktadır. Her Ileti değişim deseninin aşağıdaki iki dağıtım senaryosu göz önünde bulundurulmalıdır:
 
-- Adreslenebilir olmayan Başlatıcı: Başlatıcı bir güvenlik duvarı ardında kaldığı; Yanıtlayıcı Başlatıcısı yalnızca HTTP yanıtları için ileti teslim edebilirsiniz.
+- Adreslenebilir Başlatıcı: Başlatıcı bir güvenlik duvarının arkasında; Yanıtlayıcı yalnızca HTTP yanıtlarında iletileri başlatıcıya teslim edebilir.
 
-- Başlatıcı adreslenebilir: Başlatıcı hem Yanıtlayıcı HTTP isteklerini gönderilebilir; diğer bir deyişle, iki ters HTTP bağlantı kurulur.
+- Adreslenebilir Başlatıcı: Başlatıcı ve Yanıtlayıcı, HTTP istekleri olarak gönderilebilir; diğer bir deyişle, iki listesiyse http bağlantısı kurulabilir.
 
 ### <a name="one-way-non-addressable-initiator"></a>Tek yönlü, adreslenebilir olmayan Başlatıcı
 
 #### <a name="binding"></a>Bağlama
 
-WCF bir HTTP kanalı üzerinden bir dizisi kullanırken bir yönlü ileti değişim deseni sağlar. WCF HTTP isteklerini yanıtlayan gelen tüm iletileri Başlatıcı iletmek için tüm ileti başlatıcıdan Yanıtlayıcı ve HTTP yanıtları aktarmaya kullanır.
+WCF, tek bir HTTP kanalı üzerinden tek bir sıra kullanan tek yönlü ileti değişim modelini sağlar. WCF, yanıtlayanın tüm iletilerini başlatıcıdan başlatıcıya iletmek için, başlatıcıdan gelen tüm iletileri yanıtlayan ve HTTP yanıtlarına iletmek üzere HTTP isteklerini kullanır.
 
-#### <a name="createsequence-exchange"></a>CreateSequence Exchange
+#### <a name="createsequence-exchange"></a>CreateSequence değişimi
 
-WCF Başlatıcı ileten bir `CreateSequence` ileti olmadan `Offer` öğe üzerinde bir HTTP isteği ve bekliyor `CreateSequenceResponse` HTTP yanıt iletisi. WCF Yanıtlayıcı bir dizisini oluşturur ve iletir `CreateSequenceResponse` ileti olmadan `Accept` HTTP yanıtını öğesi.
+WCF başlatıcısı, HTTP isteğinde `Offer` öğesi olmayan bir `CreateSequence` iletisi iletir ve HTTP yanıtında `CreateSequenceResponse` iletisi bekler. WCF Yanıtlayıcı bir dizi oluşturur ve `CreateSequenceResponse` iletisini HTTP yanıtında `Accept` öğesi olmadan aktarır.
 
 #### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement
 
-WCF Başlatıcı yanıtlama bir onayları tüm iletileri işleyen `CreateSequence` iletisi ve hata iletileri. WCF Yanıtlayıcı her zaman HTTP yanıtını tüm dizisi için tek başına bir bildirim gönderir ve `AckRequested` iletileri.
+WCF başlatıcısı, `CreateSequence` ileti ve hata iletileri hariç tüm iletilerin yanıtı hakkında bildirimleri onaylar. WCF Yanıtlayıcı her zaman HTTP yanıtında tüm sıra ve `AckRequested` iletilerine tek başına bir onay iletir.
 
-#### <a name="closesequence-exchange"></a>CloseSequence Exchange
+#### <a name="closesequence-exchange"></a>CloseSequence değişimi
 
-WCF Başlatıcı ileten bir `CloseSequence` bekliyor ve bir HTTP isteği iletisi `CreateSequenceResponse` HTTP yanıt iletisi. WCF Yanıtlayıcı iletir `CloseSequenceResponse` HTTP yanıt iletisi.
+WCF başlatıcısı HTTP isteğine bir `CloseSequence` iletisi iletir ve HTTP yanıtında `CreateSequenceResponse` iletisi bekler. WCF Yanıtlayıcı, `CloseSequenceResponse` iletisini HTTP yanıtında iletir.
 
-#### <a name="terminatesequence-exchange"></a>TerminateSequence Exchange
+#### <a name="terminatesequence-exchange"></a>TerminateSequence değişimi
 
-WCF Başlatıcı ileten bir `TerminateSequence` bekliyor ve bir HTTP isteği iletisi `TerminateSequenceResponse` HTTP yanıt iletisi. WCF Yanıtlayıcı iletir `TerminateSequenceResponse` HTTP yanıt iletisi.
+WCF başlatıcısı HTTP isteğine bir `TerminateSequence` iletisi iletir ve HTTP yanıtında `TerminateSequenceResponse` iletisi bekler. WCF Yanıtlayıcı, `TerminateSequenceResponse` iletisini HTTP yanıtında iletir.
 
 ### <a name="one-way-addressable-initiator"></a>Tek yönlü, adreslenebilir Başlatıcı
 
 #### <a name="binding"></a>Bağlama
 
-WCF sağlayan bir dizisi üzerinde kullanırken bir yönlü ileti değişim deseni gelen ve giden bir HTTP kanalı. WCF HTTP isteklerini tüm ileti aktarmaya kullanır. Tüm HTTP yanıtlarını bir boş gövdesi ve 202 HTTP durum kodu ' var.
+WCF, tek yönlü bir ileti değişim modelini bir gelen ve bir giden HTTP kanalı üzerinden tek bir sıra kullanarak sağlar. WCF, tüm iletileri iletmek için HTTP isteklerini kullanır. Tüm HTTP yanıtlarının boş bir gövdesi ve HTTP 202 durum kodu vardır.
 
-#### <a name="createsequence-exchange"></a>CreateSequence Exchange
+#### <a name="createsequence-exchange"></a>CreateSequence değişimi
 
-WCF Başlatıcı ileten bir `CreateSequence` ileti olmadan `Offer` öğe üzerinde bir HTTP isteği. WCF Yanıtlayıcı bir dizisini oluşturur ve iletir `CreateSequenceResponse` ileti olmadan `Accept` öğe üzerinde bir HTTP isteği.
+WCF başlatıcısı, HTTP isteğinde `Offer` öğesi olmayan bir `CreateSequence` iletisi iletir. WCF Yanıtlayıcı bir dizi oluşturur ve `CreateSequenceResponse` iletisini bir HTTP isteğindeki `Accept` öğesi olmadan aktarır.
 
 ### <a name="duplex-addressable-initiator"></a>Çift yönlü, adreslenebilir Başlatıcı
 
 #### <a name="binding"></a>Bağlama
 
-WCF sağlayan iki kullanarak tam olarak zaman uyumsuz, çift yönlü ileti değişim deseni dizilerinin üzerinde bir gelen ve giden bir HTTP kanalı. Bu ileti değişim deseni ile karışık `Request/Reply`, `Addressable` sınırlı bir şekilde Başlatıcı ileti değişim deseni. WCF HTTP isteklerini tüm ileti aktarmaya kullanır. Tüm HTTP yanıtlarını bir boş gövdesi ve 202 HTTP durum kodu ' var.
+WCF, bir gelen ve bir giden HTTP kanalı üzerinden iki sıra kullanan tam zaman uyumsuz, iki yönlü bir ileti değişim modelini sağlar. Bu ileti değişim deseninin `Request/Reply`, `Addressable` Başlatıcı iletisi değişim düzeniyle sınırlı bir şekilde karışık olması. WCF, tüm iletileri iletmek için HTTP isteklerini kullanır. Tüm HTTP yanıtlarının boş bir gövdesi ve HTTP 202 durum kodu vardır.
 
-#### <a name="createsequence-exchange"></a>CreateSequence Exchange
+#### <a name="createsequence-exchange"></a>CreateSequence değişimi
 
-WCF Başlatıcı ileten bir `CreateSequence` ile ileti bir `Offer` öğe üzerinde bir HTTP isteği. WCF Yanıtlayıcı sağlar `CreateSequence` sahip bir `Offer` öğesi, ardından bir dizi oluşturur ve iletir `CreateSequenceResponse` ile ileti bir `Accept` öğesi.
+WCF başlatıcısı bir HTTP isteğindeki `Offer` öğesi ile bir `CreateSequence` iletisi iletir. WCF Yanıtlayıcı, `CreateSequence` bir `Offer` öğesi olmasını sağlar, sonra bir dizi oluşturur ve `CreateSequenceResponse` iletisini bir `Accept` öğesiyle iletir.
 
-#### <a name="sequence-lifetime"></a>Dizisi ömrü
+#### <a name="sequence-lifetime"></a>Sıra ömrü
 
-WCF iki diziyi bir tam yönlü oturum olarak değerlendirir.
+WCF iki diziyi bir tam çift yönlü oturum olarak değerlendirir.
 
-Bir sıralı hataları bir hata oluşturma sırasında uzak uç noktanın hem dizileri hata WCF bekliyor. Bir sıralı hataları bir hataya okuma sırasında WCF hem dizileri hataları.
+Bir sıra hatası oluşturan bir hata üretildiğinde, WCF uzak uç noktanın her iki diziyi de hatasına neden bekler. Bir sıra hata veren bir hata okunduktan sonra, WCF hataları her iki diziyi de sıralar.
 
-WCF giden kendi dizisi kapatın ve gelen kendi sıra üzerinde iletileri işleme devam edebilirsiniz. Buna karşılık, WCF gelen dizisi kapatma işlemi ve bu giden kendi sıra üzerinde iletileri göndermeye devam edebilirsiniz.
+WCF, giden sırasını kapatabilir ve gelen sırasındaki iletileri işlemeye devam edebilir. Buna karşılık, WCF gelen sıranın kapatılmasını işleyebilir ve giden sırasına göre iletileri gönderilmeye devam edebilir.
 
 ### <a name="request-reply-and-one-way-non-addressable-initiator"></a>İstek-yanıt ve tek yönlü, adreslenebilir olmayan Başlatıcı
 
 #### <a name="binding"></a>Bağlama
 
-WCF tek yönlü sağlar ve istek-yanıt ileti değişim deseni iki kullanarak tek HTTP kanalı serileri. WCF HTTP isteklerini yanıtlayan gelen tüm iletileri Başlatıcı iletmek için tüm ileti başlatıcıdan Yanıtlayıcı ve HTTP yanıtları aktarmaya kullanır.
+WCF, tek yönlü ve istek-yanıt iletisi değişim modelini bir HTTP kanalı üzerinden iki sıra kullanarak sağlar. WCF, yanıtlayanın tüm iletilerini başlatıcıdan başlatıcıya iletmek için, başlatıcıdan gelen tüm iletileri yanıtlayan ve HTTP yanıtlarına iletmek üzere HTTP isteklerini kullanır.
 
-#### <a name="createsequence-exchange"></a>CreateSequence Exchange
+#### <a name="createsequence-exchange"></a>CreateSequence değişimi
 
-WCF Başlatıcı ileten bir `CreateSequence` ile ileti bir `Offer` öğe üzerinde bir HTTP isteği ve bekliyor `CreateSequenceResponse` HTTP yanıt iletisi. WCF Yanıtlayıcı bir dizisini oluşturur ve iletir `CreateSequenceResponse` ile ileti bir `Accept` HTTP yanıtını öğesi.
+WCF başlatıcısı bir HTTP isteğindeki `Offer` öğesi ile bir `CreateSequence` iletisi iletir ve HTTP yanıtında `CreateSequenceResponse` iletisi bekler. WCF Yanıtlayıcı bir dizi oluşturur ve `CreateSequenceResponse` iletisini HTTP yanıtında bir `Accept` öğesi ile iletir.
 
-#### <a name="one-way-message"></a>Tek yönlü mesaj
+#### <a name="one-way-message"></a>Tek yönlü Ileti
 
-WCF Başlatıcı bir tek yönlü mesaj alışverişi başarıyla tamamlamak için bir istek sırası iletisi HTTP isteğini iletir ve tek başına bir alan `SequenceAcknowledgement` HTTP yanıt iletisi. `SequenceAcknowledgement` Aktarılan iletiyi kabul etmeniz gerekir.
+Tek yönlü bir ileti değişimini başarıyla tamamlayabilmeniz için, WCF başlatıcısı HTTP isteğine bir istek sırası iletisi aktarır ve HTTP yanıtında tek başına `SequenceAcknowledgement` iletisi alır. `SequenceAcknowledgement` aktarılan iletiyi kabul etmelidir.
 
-WCF Yanıtlayıcı bir bildirim, bir hata veya bir boş gövdesi ve 202 HTTP durum kodu ile bir yanıt isteğine yanıt.
+WCF Yanıtlayıcı, isteği bir onaylama, hata ya da boş bir gövde ve HTTP 202 durum koduna sahip bir Yanıt ile yanıtlayabilir.
 
-#### <a name="two-way-messages"></a>İki şekilde iletileri
+#### <a name="two-way-messages"></a>İki yönlü Ileti
 
-İki yönlü ileti değişimi Protokolü başarıyla tamamlamak için WCF Başlatıcı HTTP isteğini bir istek sırası iletisi aktarır ve HTTP yanıtını yanıt sırası iletisi alır. Yanıt taşımalıdır bir `SequenceAcknowledgement` istek sırası iletisi sıkan aktarılan.
+İki yönlü ileti değişimi protokolünü başarıyla tamamlayabilmeniz için, WCF başlatıcısı HTTP isteğine bir istek sırası iletisi aktarır ve HTTP yanıtında bir yanıt sırası iletisi alır. Yanıt, iletilen istek sırası iletisini bildiren bir `SequenceAcknowledgement` taşımalıdır.
 
-WCF Yanıtlayıcı bir uygulama yanıt, bir hata veya bir boş gövdesi ve 202 HTTP durum kodu ile bir yanıt isteğine yanıt.
+WCF Yanıtlayıcı, isteği bir uygulama Yanıtla, bir hata veya boş bir gövde ve HTTP 202 durum koduna sahip bir Yanıt ile yanıtlayabilir.
 
-Tek yönlü iletileri varlığını ve uygulama yanıt zamanlaması nedeniyle istek sırası ileti sıra numarası ve yanıt ileti sıra numarası ile hiçbir bağıntısı vardır.
+Tek yönlü iletiler ve uygulama yanıtlarının zamanlaması nedeniyle, istek sırası iletisinin sıra numarası ve yanıt iletisinin sıra numarası bağıntı içermez.
 
-#### <a name="retrying-replies"></a>Yanıt yeniden deneniyor
+#### <a name="retrying-replies"></a>Yanıtları yeniden deneme
 
-WCF için iki yönlü ileti exchange Protokolü bağıntısı HTTP isteği-yanıt bağıntısı kullanır. Bu nedenle, WCF Başlatıcı istek sırası iletisi onaylandığında bir istek sırası iletisi yeniden deneniyor durdurmaz ancak yerine ne zaman HTTP yanıtı yürüten bir `SequenceAcknowledgement`, uygulama yanıtı veya hata. WCF Yanıtlayıcı yanıt, yanıt bağıntılı isteğin HTTP yanıtını yeniden dener.
+WCF, iki yönlü ileti değişimi Protokolü bağıntısı için HTTP isteği-Yanıtla bağıntısını kullanır. Bu nedenle, WCF başlatıcısı istek sırası iletisi kabul edildiğinde, ancak HTTP yanıtı bir `SequenceAcknowledgement`, uygulama yanıtı veya hata taşımadığında bir istek sırası iletisinin yeniden denenmediğini durdurur. WCF Yanıtlayıcı, yanıtın bağıntılı olduğu isteğin HTTP yanıtında yanıtları yeniden dener.
 
-#### <a name="closesequence-exchange"></a>CloseSequence Exchange
+#### <a name="closesequence-exchange"></a>CloseSequence değişimi
 
-Tüm yanıt sırası iletileri ve tüm one-way isteğini sırası iletileri için onayları aldıktan sonra WCF Başlatıcı ileten bir `CloseSequence` iletisi için HTTP isteğinde istek sırası ve bekliyor `CloseSequenceResponse` HTTP yanıtını.
+Tüm yanıt sırası iletilerini ve tüm tek yönlü istek sırası iletilerini aldıktan sonra, WCF başlatıcısı bir HTTP isteğindeki istek sırası için bir `CloseSequence` iletisi iletir ve HTTP yanıtında `CloseSequenceResponse` bekler.
 
-İstek sırası örtük olarak kapatılmadan yanıt sırası kapatır. WCF Başlatıcı içerir yanıt sırasının son yani `SequenceAcknowledgement` üzerinde `CloseSequence` iletisi ve yanıt sırası yok bir `CloseSequence` exchange.
+İstek dizisinin kapatılması, yanıt sırasını örtük olarak kapatır. Bu, WCF başlatıcısının `CloseSequence` iletisindeki yanıt sırasının son `SequenceAcknowledgement` içerdiği ve yanıt sırasının bir `CloseSequence` Exchange 'e sahip olmadığı anlamına gelir.
 
-Tüm yanıtlar onaylanmalarını ve iletir WCF Yanıtlayıcı sağlar `CloseSequenceResponse` HTTP yanıt iletisi.
+WCF Yanıtlayıcı tüm yanıtların kabul edilmesini sağlar ve `CloseSequenceResponse` iletisini HTTP yanıtında iletir.
 
-#### <a name="terminatesequence-exchange"></a>TerminateSequence Exchange
+#### <a name="terminatesequence-exchange"></a>TerminateSequence değişimi
 
-Alma sonra `CloseSequenceResponse` WCF Başlatıcı ileti iletir bir `TerminateSequence` iletisi için HTTP isteğinde istek sırası ve bekliyor `TerminateSequenceResponse` HTTP yanıtını.
+`CloseSequenceResponse` iletisini aldıktan sonra, WCF başlatıcısı bir HTTP isteğindeki istek sırası için bir `TerminateSequence` iletisi iletir ve HTTP yanıtında `TerminateSequenceResponse` bekler.
 
-Gibi `CloseSequence` değişimi, örtük olarak istek sırası sonlandırma yanıt sırası sonlandırır. WCF Başlatıcı içerir yanıt sırasının son yani `SequenceAcknowledgement` üzerinde `TerminateSequence` iletisi ve yanıt sırası yok bir `TerminateSequence` exchange.
+`CloseSequence` değişimi gibi, istek dizisinin sonlandırılması yanıt sırasını dolaylı olarak sonlandırır. Bu, WCF başlatıcısının `TerminateSequence` iletisindeki yanıt sırasının son `SequenceAcknowledgement` içerdiği ve yanıt sırasının bir `TerminateSequence` Exchange 'e sahip olmadığı anlamına gelir.
 
-WCF Yanıtlayıcı iletir `TerminateSequenceResponse` HTTP yanıt iletisi.
+WCF Yanıtlayıcı, `TerminateSequenceResponse` iletisini HTTP yanıtında iletir.
 
 ### <a name="requestreply-addressable-initiator"></a>İstek/yanıt, adreslenebilir Başlatıcı
 
 #### <a name="binding"></a>Bağlama
 
-WCF sağlayan iki kullanarak istek-yanıt ileti değişim deseni dizilerinin üzerinde bir gelen ve giden bir HTTP kanalı. Bu ileti değişim deseni ile karışık `Duplex, Addressable` sınırlı bir şekilde Başlatıcı ileti değişim deseni. WCF HTTP isteklerini tüm ileti aktarmaya kullanır. Tüm HTTP yanıtlarını bir boş gövdesi ve 202 HTTP durum kodu ' var.
+WCF, bir gelen ve bir giden HTTP kanalı üzerinden iki sıra kullanarak istek-yanıt iletisi değişim modelini sağlar. Bu ileti değişim deseninin `Duplex, Addressable` Başlatıcı iletisi değişim düzeniyle sınırlı bir şekilde karışık şekilde karışabilir. WCF, tüm iletileri iletmek için HTTP isteklerini kullanır. Tüm HTTP yanıtlarının boş bir gövdesi ve HTTP 202 durum kodu vardır.
 
-#### <a name="createsequence-exchange"></a>CreateSequence Exchange
+#### <a name="createsequence-exchange"></a>CreateSequence değişimi
 
-WCF Başlatıcı ileten bir `CreateSequence` ile ileti bir `Offer` öğe üzerinde bir HTTP isteği. WCF Yanıtlayıcı sağlar `CreateSequence` sahip bir `Offer` öğesi, ardından bir dizi oluşturur ve iletir `CreateSequenceResponse` ile ileti bir `Accept` öğesi.
+WCF başlatıcısı bir HTTP isteğindeki `Offer` öğesi ile bir `CreateSequence` iletisi iletir. WCF Yanıtlayıcı, `CreateSequence` `Offer` bir öğesi olmasını sağlar ve `CreateSequenceResponse` iletisini bir `Accept` öğesiyle iletir.
 
 #### <a name="requestreply-correlation"></a>İstek/yanıt bağıntısı
 
-Aşağıdaki, tüm ilişkili istekleri ve yanıtları için geçerlidir:
+Tüm bağıntılı istekler ve yanıtlar için aşağıdakiler geçerlidir:
 
-- WCF sağlar, tüm uygulama istek iletileri ayı bir `ReplyTo` uç nokta başvurusu ve `MessageId`.
+- WCF, tüm uygulama istek iletilerinin `ReplyTo` bir uç nokta başvurusu ve bir `MessageId`almasını sağlar.
 
-- WCF her uygulama istek iletisi kullanıcının yerel uç nokta başvurusu geçerli `ReplyTo`. Yerel uç nokta başvurusu `CreateSequence` iletinin `ReplyTo` başlatıcısının ve `CreateSequence` iletinin `To` Yanıtlayıcı için.
+- WCF her bir uygulama isteği iletisinin `ReplyTo`için Yerel uç nokta başvurusunu uygular. Yerel uç nokta başvurusu, başlatıcı için `CreateSequence` iletisinin `ReplyTo` ve yanıtlayanın `CreateSequence` iletisinin `To`.
 
-- WCF sağlar, gelen istek iletisi ayı bir `MessageId` ve `ReplyTo`.
+- WCF, gelen istek iletilerinin bir `MessageId` ve `ReplyTo`almasını sağlar.
 
-- WCF sağlar `ReplyTo` daha önce tanımlanan tüm uygulama istek iletisi uç nokta Başvurusu'nın URI eşleşen yerel uç nokta başvurusu.
+- WCF, `ReplyTo` uç nokta başvurusunun tüm uygulama istek iletilerinin URI 'sinin, daha önce tanımlanan yerel uç nokta başvurusuyla eşleştiğinden emin olur.
 
-- WCF sağlar tüm yanıtlar doğru ayı `RelatesTo` ve `To` aşağıdaki üst bilgileri `wsa` bağıntı kuralları istek/yanıt.
+- WCF, tüm yanıtların, istek/yanıt bağıntı kuralları `wsa` takip eden doğru `RelatesTo` ve `To` üstbilgilerini kapsamasını sağlar.

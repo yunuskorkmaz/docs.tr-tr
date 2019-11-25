@@ -1,5 +1,5 @@
 ---
-title: Program Yapısı ve Kod Kuralları (Visual Basic)
+title: Program Yapısı ve Kod Kuralları
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions
@@ -13,73 +13,73 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: 9dbe8fe977b2aa11573ab7a1ac1d79be0b5204af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bacd532361de18936bac96c631f7f7247246b1de
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624328"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347292"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Program Yapısı ve Kod Kuralları (Visual Basic)
-Bu bölümde tipik Visual Basic program yapısı sunar, basit bir Visual Basic program, "Hello, World" sağlar ve Visual Basic kod kurallarını açıklar. Kod kuralları bir programın mantığı değil, ancak fiziksel yapısı ve görünüm odaklanan önerilerdir. Bunların izlenmesi kodunuzun okuyun, anlamak ve bakımını kolaylaştırır. Kod kuralları, diğerlerinin yanı sıra şunları içerebilir:  
+This section introduces the typical Visual Basic program structure, provides a simple Visual Basic program, "Hello, World", and discusses Visual Basic code conventions. Code conventions are suggestions that focus not on a program's logic but on its physical structure and appearance. Following them makes your code easier to read, understand, and maintain. Code conventions can include, among others:  
   
-- Etiketleme ve açıklama kodu için standart biçimler.  
+- Standardized formats for labeling and commenting code.  
   
-- Aralık, biçimlendirme ve girintileme kodu yönergeleri.  
+- Guidelines for spacing, formatting, and indenting code.  
   
-- Nesneler, değişkenler ve yordamlar için adlandırma kuralları.  
+- Naming conventions for objects, variables, and procedures.  
   
- Aşağıdaki konular, iyi kullanım örneklerinin yanı sıra Visual Basic programları için programlama yönergeleri kümesi sunar.  
+ The following topics present a set of programming guidelines for Visual Basic programs, along with examples of good usage.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Visual Basic programının yapısı](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
- Visual Basic program öğeleri'ne genel bakış sağlar.  
+ [Structure of a Visual Basic Program](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
+ Provides an overview of the elements that make up a Visual Basic program.  
   
- [Visual Basic'de ana yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md)  
- Başlangıç olarak görev yapar ve uygulamanız için genel denetim yordamı açıklar.  
+ [Main Procedure in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)  
+ Discusses the procedure that serves as the starting point and overall control for your application.  
   
  [References ve Imports Deyimi](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- Diğer derlemelerde nesnelere başvuru anlatılmaktadır.  
+ Discusses how to reference objects in other assemblies.  
   
- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- Ad alanları nesneleri derlemeler içinde nasıl düzenlediğini açıklar.  
+ [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
+ Describes how namespaces organize objects within assemblies.  
   
- [Visual Basic adlandırma kuralları](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
- Yordamları, sabitleri, değişkenleri, bağımsız değişkenleri ve nesneleri adlandırmak için genel yönergeleri içerir.  
+ [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
+ Includes general guidelines for naming procedures, constants, variables, arguments, and objects.  
   
- [Visual Basic kodlama kuralları](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
- Bu belgede örnek oluşturmak için kullanılan kılavuzları gözden geçirir.  
+ [Visual Basic Coding Conventions](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
+ Reviews the guidelines used in developing the samples in this documentation.  
   
  [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- Derleyici, diğerlerini yoksayması için yönlendirirken belirli kod bloklarının seçmeli olarak derlemek açıklar.  
+ Describes how to compile particular blocks of code selectively while directing the compiler to ignore others.  
   
  [Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
- Uzun deyimlerin birkaç satıra bölebilir ve kısa deyimlerin bir satır birleştirme işlemi gösterilmektedir.  
+ Shows how to divide long statements into multiple lines and combine short statements on one line.  
   
  [Nasıl yapılır: Kodun Bölümlerini Daraltma ve Gizleme](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)  
- Daraltma ve gizleme Visual Basic kod bölümlerini Kod Düzenleyicisi gösterilmektedir.  
+ Shows how to collapse and hide sections of code in the Visual Basic code editor.  
   
  [Nasıl yapılır: Etiket Deyimleri](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)  
- Bir kullanım için ifadelerle gibi tanımlamak için kod satırı olarak işaretlemek gösterilmektedir `On Error Goto`.  
+ Shows how to mark a line of code to identify it for use with statements such as `On Error Goto`.  
   
  [Code'daki Özel Karakterler](../../../visual-basic/programming-guide/program-structure/special-characters-in-code.md)  
- Nasıl ve nerede gösterir sayısal olmayan ve alfabetik olmayan karakterler kullanmak için.  
+ Shows how and where to use non-numeric and non-alphabetic characters.  
   
  [Code’daki Açıklamalar](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)  
- Kodunuza nasıl açıklayıcı yorumlar ekleme açıklanmaktadır.  
+ Discusses how to add descriptive comments to your code.  
   
  [Code’da Öğe Adları Olarak Anahtar Sözcükler](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)  
- Köşeli ayraçlar kullanılmasını açıklar (`[]`) Visual Basic anahtar sözcükleri olan değişken adlarının sınırlandırılması için.  
+ Describes how to use brackets (`[]`) to delimit variable names that are also Visual Basic keywords.  
   
  [Me, My, MyBase ve MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
- Bir Visual Basic programının öğelerine başvurmaya yarayan çeşitli yolları açıklar.  
+ Describes various ways to refer to elements of a Visual Basic program.  
   
- [Visual Basic sınırlamaları](../../../visual-basic/programming-guide/program-structure/limitations.md)  
- Visual Basic dahilindeki bilindik kodlama sınırlarının kaldırılmasını açıklar.  
+ [Visual Basic Limitations](../../../visual-basic/programming-guide/program-structure/limitations.md)  
+ Discusses the removal of known coding limits within Visual Basic.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Tipografi ve Kod Kuralları](../../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- Visual Basic için standart kodlama kuralları sağlar.  
+ Provides standard coding conventions for Visual Basic.  
   
  [Kod Yazma](/visualstudio/ide/writing-code-in-the-code-and-text-editor)  
- Yazmak ve kodunuzu yönetmenizi kolaylaştıran özellikler açıklanmaktadır.
+ Describes features that make it easier for you to write and manage your code.

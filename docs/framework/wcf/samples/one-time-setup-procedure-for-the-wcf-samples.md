@@ -2,12 +2,12 @@
 title: Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 90463a83b8a10085d4df90a2832886e43c51c734
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7dbc4a1b5235c0cb6aa154379358c7761bc4ab1d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424924"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141843"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) örneklerinin çoğu Internet Information
 
 1. ASP.NET ayarlandığından emin olun. ASP.NET ayarlama hakkında daha fazla bilgi için bkz. [Internet Information Service barındırma yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).
 
-2. [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] yüklü olduğundan emin olun. V 4.0 (veya üzeri) için şu dizinde arama yapın: **\Windows\microsoft.NET\Framework**
+2. .NET Framework 4 ' ün yüklü olduğundan emin olun. V 4.0 (veya üzeri) için şu dizinde arama yapın: **\Windows\microsoft.NET\Framework**
 
 3. Visual Studio 2012 yüklü değilse ve işletim sisteminiz Windows Server 2008 SP2 veya üstü değilse, [düzeltme 251798](https://go.microsoft.com/fwlink/?LinkId=184693)' i yükleme.
 
@@ -37,15 +37,15 @@ Windows Communication Foundation (WCF) örneklerinin çoğu Internet Information
     ```
 
     > [!WARNING]
-    > Komutu `aspnet_regiis –i –enable` çalıştırmak, varsayılan uygulama havuzunun, aynı bilgisayardaki diğer uygulamalar için uyumsuzluk sorunları oluşturabilecek [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]kullanarak çalıştırılmasını sağlayacak.
+    > Komutu `aspnet_regiis –i –enable` çalıştırmak, varsayılan uygulama havuzunun, aynı bilgisayardaki diğer uygulamalar için uyumsuzluk sorunları oluşturabilecek .NET Framework 4 kullanarak çalıştırılmasını sağlayacak.
 
 5. Örnekler tarafından kullanılan bağlantı noktalarını etkinleştirmeye yönelik [güvenlik duvarı yönergelerini](../../../../docs/framework/wcf/samples/firewall-instructions.md) izleyin.
 
-6. Şu varsayılan dizini denetle: \<InstallDrive >: **\Wf_wcf_samples**. Örnekler daha önce yüklenmişse, bu varsayılan dizindir.
+6. Şu varsayılan dizini denetle: InstallDrive >: **\ WF_WCF_Samples**\<. Örnekler daha önce yüklenmişse, bu varsayılan dizindir.
 
 7. Örnekler yüklü değilse, örnekleri için [C#](https://go.microsoft.com/fwlink/?LinkId=190939)örnek indirme konumundan yükleyin.
 
-8. Örnekleri yükledikten sonra şu adrese gidin: \<InstallDrive >: **\Wf_wcf_samples\wcf\setup\\**
+8. Örnekleri yükledikten sonra şu adrese gidin: \<InstallDrive >: **\ WF_WCF_Samples \WCF\Setup\\**
 
 9. **Setupvroot. bat** toplu iş dosyasını çalıştırın. Aşağıdaki adımlar gerçekleştirilir:
 
@@ -65,7 +65,7 @@ Windows Communication Foundation (WCF) örneklerinin çoğu Internet Information
 
 11. Bilgisayarda C:\logs dizini oluşturun; bazı örnekler bekleniyor olabilir. Uygun hesabın bu klasöre verilen yazma erişimi olduğundan emin olun. Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)]ve Windows Server 2008 R2 için bu hesap, **ağ hizmetidir**. [!INCLUDE[lserver](../../../../includes/lserver-md.md)]için, hesap NT Authority\Network Service ' dir. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]için, hesap ASPNET ' dir.
 
-12. Setupcerttool. bat dosyasını çalıştırın. Bu dosya \<InstallPath > \WF_WCF_Samples\WCF\Setup\ klasöründe bulunur.  Bu betik aşağıdaki görevleri gerçekleştirir:
+12. Setupcerttool. bat dosyasını çalıştırın. Bu dosya \<InstallPath > \ WF_WCF_Samples \WCF\Setup\ klasöründe bulunur.  Bu betik aşağıdaki görevleri gerçekleştirir:
 
     - FindPrivateKey aracını oluşturun.
 

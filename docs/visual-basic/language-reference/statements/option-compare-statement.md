@@ -1,5 +1,5 @@
 ---
-title: Option Compare ekstresi (Visual Basic)
+title: Option Compare Deyimi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Compare
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: efd033e6c12637b8dc12fb886f46a267e677aa42
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 7538466c8f4b90e2e655a2ec762d8c545546a481
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775504"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344426"
 ---
 # <a name="option-compare-statement"></a>Option Compare Deyimi
-Dize verilerini karşılaştırırken kullanılacak varsayılan karşılaştırma yöntemini bildirir.  
+Declares the default comparison method to use when comparing string data.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,52 +38,52 @@ Option Compare { Binary | Text }
   
 |Terim|Tanım|  
 |---|---|  
-|`Binary`|İsteğe bağlı. Karakterlerin iç ikili gösterimlerine göre türetilmiş bir sıralama düzenini temel alan dize karşılaştırmalarına neden olur.<br /><br /> Bu tür karşılaştırma, özellikle dizeler metin olarak yorumlanmaması gereken karakterler içeriyorsa yararlıdır. Bu durumda, büyük/küçük harf duyarlı gibi alfabetik denklikleri karşılaştırma yapmak istemezsiniz.|  
-|`Text`|İsteğe bağlı. Sisteminizin yerel ayarı tarafından belirlenen büyük/küçük harf duyarsız metin sıralama düzeni temelinde dize karşılaştırmaları sonucu oluşur.<br /><br /> Bu tür bir karşılaştırma, Dizeleriniz tüm metin karakterlerini içeriyorsa ve büyük/küçük harf duyarlı ve yakından ilgili mektuplar gibi hesap alfabetik denklikleri, bunları karşılaştırmak istiyorsanız yararlıdır. Örneğin, `A` ve `a` eşit olacak şekilde düşünmek ve `Ä` ve `ä` önce `B` ve `b` önce gelmesi isteyebilirsiniz.|  
+|`Binary`|İsteğe bağlı. Results in string comparisons based on a sort order derived from the internal binary representations of the characters.<br /><br /> This type of comparison is useful especially if the strings can contain characters that are not to be interpreted as text. In this case, you do not want to bias comparisons with alphabetical equivalences, such as case insensitivity.|  
+|`Text`|İsteğe bağlı. Results in string comparisons based on a case-insensitive text sort order determined by your system's locale.<br /><br /> This type of comparison is useful if your strings contain all text characters, and you want to compare them taking into account alphabetic equivalences such as case insensitivity and closely related letters. For example, you might want to consider `A` and `a` to be equal, and `Ä` and `ä` to come before `B` and `b`.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanıldıysa, `Option Compare` deyimi herhangi bir diğer kaynak kodu deyiminden önce bir dosyada yer almalıdır.  
+ If used, the `Option Compare` statement must appear in a file before any other source code statements.  
   
- @No__t_0 ifadesinde dize karşılaştırma yöntemi (`Binary` veya `Text`) belirtilir.  Varsayılan metin karşılaştırma yöntemi `Binary` ' dır.  
+ The `Option Compare` statement specifies the string comparison method (`Binary` or `Text`).  The default text comparison method is `Binary`.  
   
- @No__t_0 karşılaştırma, her dizedeki her bir karakterin sayısal Unicode değerini karşılaştırır. @No__t_0 karşılaştırma, her Unicode karakteri geçerli kültürün sözcük temelli anlam temelinde karşılaştırır.  
+ A `Binary` comparison compares the numeric Unicode value of each character in each string. A `Text` comparison compares each Unicode character based on its lexical meaning in the current culture.  
   
- Microsoft Windows 'da sıralama düzeni kod sayfası tarafından belirlenir. Daha fazla bilgi için bkz. [kod sayfaları](/cpp/c-runtime-library/code-pages).  
+ In Microsoft Windows, sort order is determined by the code page. For more information, see [Code Pages](/cpp/c-runtime-library/code-pages).  
   
- Aşağıdaki örnekte, Ingilizce/Avrupa kod sayfasındaki (ANSI 1252) karakterler, tipik bir ikili sıralama düzeni üreten `Option Compare Binary` kullanılarak sıralanır.  
+ In the following example, characters in the English/European code page (ANSI 1252) are sorted by using `Option Compare Binary`, which produces a typical binary sort order.  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- Aynı kod sayfasında aynı karakterler `Option Compare Text` kullanılarak sıralandığında, aşağıdaki metin sıralama düzeni oluşturulur.  
+ When the same characters in the same code page are sorted by using `Option Compare Text`, the following text sort order is produced.  
   
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
-## <a name="when-an-option-compare-statement-is-not-present"></a>Bir Option Compare deyimleri mevcut olmadığında  
- Kaynak kodu `Option Compare` bir ifade içermiyorsa, derleme sayfasındaki **karşılaştırma ayarı seçeneği** [, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. Komut satırı derleyicisini kullanırsanız, [-OptionCompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) derleyici seçeneği tarafından belirtilen ayar kullanılır.  
+## <a name="when-an-option-compare-statement-is-not-present"></a>When an Option Compare Statement Is Not Present  
+ If the source code does not contain an `Option Compare` statement, the **Option Compare** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. If you use the command-line compiler, the setting specified by the [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) compiler option is used.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-#### <a name="to-set-option-compare-in-the-ide"></a>IDE 'de seçenek karşılaştırması ayarlamak için  
+#### <a name="to-set-option-compare-in-the-ide"></a>To set Option Compare in the IDE  
   
-1. **Çözüm Gezgini**bir proje seçin. **Proje** menüsünde **Özellikler**' e tıklayın.  
+1. In **Solution Explorer**, select a project. On the **Project** menu, click **Properties**.  
   
-2. **Derle** sekmesine tıklayın.  
+2. Click the **Compile** tab.  
   
-3. **Seçenek karşılaştırma** kutusunda değeri ayarlayın.  
+3. Set the value in the **Option Compare** box.  
   
- Bir proje oluşturduğunuzda, **Derle** sekmesindeki **Seçenek karşılaştırma** ayarı, **Seçenekler** iletişim kutusundaki **Seçenek karşılaştırma** ayarına ayarlanır. Bu ayarı değiştirmek için, **Araçlar** menüsünde **Seçenekler**' e tıklayın. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler**' i genişletin ve ardından **vb Varsayılanları**' na tıklayın. **Vb Varsayılanları** içindeki ilk varsayılan ayar **ikili**' dır.  
+ When you create a project, the **Option Compare** setting on the **Compile** tab is set to the **Option Compare** setting in the **Options** dialog box. To change this setting, on the **Tools** menu, click **Options**. In the **Options** dialog box, expand **Projects and Solutions**, and then click **VB Defaults**. The initial default setting in **VB Defaults** is **Binary**.  
   
-#### <a name="to-set-option-compare-on-the-command-line"></a>Komut satırında seçenek karşılaştırması ayarlamak için  
+#### <a name="to-set-option-compare-on-the-command-line"></a>To set Option Compare on the command line  
   
-- **Vbc** komutuna [-OptionCompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) derleyici seçeneğini ekleyin.  
+- Include the [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) compiler option in the **vbc** command.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, ikili karşılaştırmayı varsayılan dize karşılaştırma yöntemi olarak ayarlamak için `Option Compare` ifadesini kullanır. Bu kodu kullanmak için `Option Compare Binary` deyimin açıklamasını kaldırın ve kaynak dosyanın en üstüne yerleştirin.  
+ The following example uses the `Option Compare` statement to set the binary comparison as the default string comparison method. To use this code, uncomment the `Option Compare Binary` statement, and put it at the top of the source file.  
   
  [!code-vb[VbVbalrStatements#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#45)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, büyük/küçük harf duyarsız metin sıralama düzenini varsayılan dize karşılaştırma yöntemi olarak ayarlamak için `Option Compare` ifadesini kullanır. Bu kodu kullanmak için `Option Compare Text` deyimin açıklamasını kaldırın ve kaynak dosyanın en üstüne yerleştirin.  
+ The following example uses the `Option Compare` statement to set the case-insensitive text sort order as the default string comparison method. To use this code, uncomment the `Option Compare Text` statement, and put it at the top of the source file.  
   
  [!code-vb[VbVbalrStatements#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#46)]  
   
@@ -96,7 +96,7 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [Karşılaştırma İşleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [Visual Basic karşılaştırma Işleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Like İşleci](../../../visual-basic/language-reference/operators/like-operator.md)
 - [Dize İşlevleri](../../../visual-basic/language-reference/functions/string-functions.md)
 - [Option Explicit Deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)

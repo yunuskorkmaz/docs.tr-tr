@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: f43cd61fbcb3c1c872961476449822c574f76cff
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: b55b2f9266477a0bb12c39840c9f2108a5c0f0c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835277"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283915"
 ---
 # <a name="net-architectural-components"></a>.NET mimari bileşenleri
 
@@ -88,7 +88,7 @@ UWP hakkında daha fazla bilgi edinmek için bkz. [Evrensel Windows platformu gi
 
 C# Dil ve ortak dil ALTYAPıSı (CLI) belirtimleri [Ecma International®](https://www.ecma-international.org/)aracılığıyla standartlaştırılmıştır. Bu standartların ilk sürümleri, Aralık 2001 ' de ECMA tarafından yayımlanmıştır.
 
-Standartlardaki sonraki düzeltmeler, programlama dilleri Technical komite ([TC49](https://www.ecma-international.org/memento/tc49.htm)) içinde TC49C#-tg2 () ve TC49-TG3 (CLI) görev grupları tarafından geliştirilmiştir ve ECMA genel derlemesi ve sonrasında ISO/IEC JTC 1 tarafından benimsenmiştir ISO hızlı Izleme süreci aracılığıyla.
+Standartlardaki sonraki düzeltmeler, programlama dilleri Technical komite ([TC49](https://www.ecma-international.org/memento/tc49.htm)) içinde TC49C#-tg2 () ve TC49-TG3 (CLI) görev grupları tarafından geliştirilmiştir ve ECMA genel DERLEMESI tarafından ve ardından ISO/IEC JTC 1 tarafından ISO hızlı izleme işlemi aracılığıyla benimsenmiştir.
 
 ### <a name="latest-standards"></a>En son standartlar
 
@@ -106,10 +106,10 @@ Resmi ISO/ıEC belgeleri ISO/ıEC [genel kullanıma açık standartlar](https://
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim yapma](choosing-core-framework-server.md)
+- [Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
 - [.NET Core Kılavuzu](../core/index.md)
 - [.NET Framework Kılavuzu](../framework/index.md)
-- [C#Rehberi](../csharp/index.md)
-- [F#Rehberi](../fsharp/index.md)
+- [C# Kılavuzu](../csharp/index.yml)
+- [F# Kılavuzu](../fsharp/index.md)
 - [VB.NET kılavuzu](../visual-basic/index.md)

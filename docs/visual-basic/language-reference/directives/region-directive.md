@@ -1,5 +1,5 @@
 ---
-title: '#Bölge yönergesi (Visual Basic)'
+title: '#Region Yönergesi'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Region
@@ -10,15 +10,16 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: eaaf0f8279ec905767be3f364a88357f0d393bba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cf9b103486378d001b588aa285f590980b51bb8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61812651"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343790"
 ---
 # <a name="region-directive"></a>#Region Yönergesi
-Daraltır ve Visual Basic dosyalarında kod bölümlerini gizler.  
+
+Collapses and hides sections of code in Visual Basic files.  
   
 ## <a name="syntax"></a>Sözdizimi  
 
@@ -31,14 +32,16 @@ Daraltır ve Visual Basic dosyalarında kod bölümlerini gizler.
   
 |Terim|Tanım|  
 |---|---|  
-|`identifier_string`|Gerekli. Bunu daraltıldığında bir bölge başlığı olarak davranan dize. Bölgeleri varsayılan olarak daraltılır.|  
-|`#End Region`|Sonlandırır `#Region` blok.|  
+|`identifier_string`|Gerekli. String that acts as the title of a region when it is collapsed. Regions are collapsed by default.|  
+|`#End Region`|Terminates the `#Region` block.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `#Region` genişletmek veya daraltmak için anahat oluşturma özelliği Visual Studio Kod Düzenleyicisi'nin kullanırken kod bloğu belirtmek için. Yerleştirebilirsiniz veya *iç içe*, benzer bölgeleri gruplamak için başka bölgelerde bulunan bölge.  
+
+ Use the `#Region` directive to specify a block of code to expand or collapse when using the outlining feature of the Visual Studio Code Editor. You can place, or *nest*, regions within other regions to group similar regions together.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `#Region` yönergesi.  
+
+ This example uses the `#Region` directive.  
   
  [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   

@@ -1,37 +1,37 @@
 ---
-title: 'Nasıl yapılır: Bir Web hizmetini zaman uyumsuz çağırma (Visual Basic)'
+title: 'Nasıl Yapılır: Web Hizmetini Zaman Uyumsuz Çağırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: 01d2fad6be94f23457ba37cbb15521765e0bea17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0eeb358ba38836ba6302f98f9e3e0314b83510f0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943825"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352130"
 ---
-# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Nasıl yapılır: Bir Web hizmetini zaman uyumsuz çağırma (Visual Basic)
+# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Nasıl Yapılır: Web Hizmetini Zaman Uyumsuz Çağırma (Visual Basic)
 
-Bu örnek, zaman uyumsuz yöntem çağrısı sonucu alabilmeleri Web hizmetinin zaman uyumsuz işleyicisi olaya bir işleyici ekler. Bu örnekte kullanılan DemoTemperatureService Web hizmeti `http://www.xmethods.net`.
+This example attaches a handler to a Web service's asynchronous handler event, so that it can retrieve the result of an asynchronous method call. This example used the DemoTemperatureService Web service at `http://www.xmethods.net`.
 
-Bir Web hizmeti projenizde, Visual Studio tümleşik geliştirme ortamı (IDE) başvuruda bulunduğunuzda eklendiği `My.WebServices` nesne ve IDE, belirtilen bir Web hizmetine erişmek için bir istemci proxy sınıfı oluşturur
+When you reference a Web service in your project in the Visual Studio Integrated Development Environment (IDE), it is added to the `My.WebServices` object, and the IDE generates a client proxy class to access a specified Web service
 
-Proxy sınıfı zaman uyumlu olarak, Web hizmeti yöntemlerini çağırmanızı sağlar. Burada, uygulamanızın işlevi için bekler. Ayrıca, zaman uyumsuz yöntem çağırma yardımcı olmak için ek üyeler proxy oluşturur. Her Web hizmeti işlev için *NameOfWebServiceFunction*, proxy oluşturur bir *NameOfWebServiceFunction* `Async` alt yordam, bir *NameOfWebServiceFunction* `Completed` olay ve *NameOfWebServiceFunction* `CompletedEventArgs` sınıfı. Bu örnek, zaman uyumsuz üyeler erişmek için nasıl kullanılacağını gösterir `getTemp` işlevi DemoTemperatureService Web hizmeti.
+The proxy class allows you to call the Web service methods synchronously, where your application waits for the function to complete. In addition, the proxy creates additional members to help call the method asynchronously. For each Web service function, *NameOfWebServiceFunction*, the proxy creates a *NameOfWebServiceFunction*`Async` subroutine, a *NameOfWebServiceFunction*`Completed` event, and a *NameOfWebServiceFunction*`CompletedEventArgs` class. This example demonstrates how to use the asynchronous members to access the `getTemp` function of the DemoTemperatureService Web service.
 
 > [!NOTE]
-> ASP.NET desteklemediğinden Web uygulamalarında, bu kod işe yaramazsa `My.WebServices` nesne.
+> This code does not work in Web applications, because ASP.NET does not support the `My.WebServices` object.
 
-### <a name="to-call-a-web-service-asynchronously"></a>Zaman uyumsuz olarak bir Web hizmetini çağırmak için
+### <a name="to-call-a-web-service-asynchronously"></a>To call a Web service asynchronously
 
-1. DemoTemperatureService Web hizmeti başvurusu `http://www.xmethods.net`. Adres
+1. Reference the DemoTemperatureService Web service at `http://www.xmethods.net`. The address is
 
     ```
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl
     ```
 
-2. İçin bir olay işleyicisi ekleme `getTempCompleted` olay:
+2. Add an event handler for the `getTempCompleted` event:
 
     ```vb
     Private Sub getTempCompletedHandler(ByVal sender As Object,
@@ -42,15 +42,15 @@ Proxy sınıfı zaman uyumlu olarak, Web hizmeti yöntemlerini çağırmanızı 
     ```
 
     > [!NOTE]
-    > Kullanamazsınız `Handles` deyimi bir olay işleyicisi ile ilişkilendirilecek `My.WebServices` nesnenin olayları.
+    > You cannot use the `Handles` statement to associate an event handler with the `My.WebServices` object's events.
 
-3. Olay işleyicisi için eklenmişse izlemek için alan ekleme `getTempCompleted` olay:
+3. Add a field to track if the event handler has been added to the `getTempCompleted` event:
 
     ```vb
     Private handlerAttached As Boolean = False
     ```
 
-4. Olay işleyicisi eklemek için bir yöntem ekleyin `getTempCompleted` gerekirse, olay ve çağrılacak `getTempAsync` yöntemi:
+4. Add a method to add the event handler to the `getTempCompleted` event, if necessary, and to call the `getTempAsync` method:
 
     ```vb
     Sub CallGetTempAsync(ByVal zipCode As Integer)
@@ -64,7 +64,7 @@ Proxy sınıfı zaman uyumlu olarak, Web hizmeti yöntemlerini çağırmanızı 
     End Sub
     ```
 
-    Çağrılacak `getTemp` yöntemi zaman uyumsuz olarak Web, çağrı `CallGetTempAsync` yöntemi. Web yöntemi sona erdiğinde, dönüş değerinin geçirilen `getTempCompletedHandler` olay işleyicisi.
+    To call the `getTemp` Web method asynchronously, call the `CallGetTempAsync` method. When the Web method finishes, its return value is passed to the `getTempCompletedHandler` event handler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

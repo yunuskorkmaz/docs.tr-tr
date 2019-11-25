@@ -4,12 +4,12 @@ description: Analiz için kullanım bilgilerini toplayan, hangi verilerin toplan
 author: KathleenDollard
 ms.date: 08/27/2019
 ms.custom: seodec18
-ms.openlocfilehash: 253f69392f034e330a75ed387d9346e8a5ae2a08
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: ecb8dbed036a04726867d004dbadf6205c1fa09f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133693"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281768"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK telemetri
 
@@ -19,7 +19,7 @@ Toplanan veriler anonimdir ve [Creative Commons Attribution Lisansı](https://cr
 
 ## <a name="scope"></a>Kapsam
 
-`dotnet`iki işleve sahiptir: uygulamaları çalıştırmak ve CLı komutlarını yürütmek için. Aşağıdaki biçimde bir uygulamayı başlatmak `dotnet` için kullanılırken telemetri toplanmaz:
+`dotnet` iki işleve sahiptir: uygulamaları çalıştırmak ve CLı komutlarını yürütmek için. Bir uygulamayı aşağıdaki biçimde başlatmak için `dotnet` kullanılırken telemetri *toplanmaz* :
 
 - `dotnet [path-to-app].dll`
 
@@ -31,13 +31,13 @@ Telemetri, şöyle [.NET Core CLI komutlardan](index.md)biri kullanılarak *topl
 
 ## <a name="how-to-opt-out"></a>Devre dışı bırakma
 
-.NET Core SDK telemetri özelliği varsayılan olarak etkindir. Telemetri özelliğini devre dışı bırakmak için, `DOTNET_CLI_TELEMETRY_OPTOUT` ortam değişkenini veya `true`olarak `1` ayarlayın. 
+.NET Core SDK telemetri özelliği varsayılan olarak etkindir. Telemetri özelliğini devre dışı bırakmak için `DOTNET_CLI_TELEMETRY_OPTOUT` ortam değişkenini `1` veya `true`olarak ayarlayın. 
 
-Başarılı bir yükleme gerçekleştiğinde .NET Core SDK yükleyicisi tarafından tek bir telemetri girişi de gönderilir. Devre dışı bırakmak için, .NET Core SDK `DOTNET_CLI_TELEMETRY_OPTOUT` yüklemeden önce ortam değişkenini ayarlayın.
+Başarılı bir yükleme gerçekleştiğinde .NET Core SDK yükleyicisi tarafından tek bir telemetri girişi de gönderilir. Devre dışı bırakmak için, .NET Core SDK yüklemeden önce `DOTNET_CLI_TELEMETRY_OPTOUT` ortam değişkenini ayarlayın.
 
 ## <a name="disclosure"></a>Savunmasız
 
-.NET Core SDK, [.NET Core CLI komutlarından](index.md) birini (örneğin, `dotnet build`) ilk kez çalıştırdığınızda aşağıdakine benzer metni görüntüler. Metin, çalıştırmakta olduğunuz SDK sürümüne bağlı olarak biraz farklılık gösterebilir. Bu "ilk çalıştırma" deneyimi, Microsoft 'un veri toplamayı nasıl bildisidir.
+.NET Core SDK, [.NET Core CLI komutlarından](index.md) birini ilk kez çalıştırdığınızda (örneğin, `dotnet build`) aşağıdakine benzer metni görüntüler. Metin, çalıştırmakta olduğunuz SDK sürümüne bağlı olarak biraz farklılık gösterebilir. Bu "ilk çalıştırma" deneyimi, Microsoft 'un veri toplamayı nasıl bildisidir.
 
 ```console
 Telemetry
@@ -51,11 +51,11 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 Telemetri özelliği, Kullanıcı adları veya e-posta adresleri gibi kişisel verileri toplamaz. Kodunuzu taramaz ve ad, depo veya yazar gibi proje düzeyi verileri ayıklamaz. Veriler, [Azure izleyici](https://azure.microsoft.com/services/monitor/) teknolojisini kullanan Microsoft sunucularına güvenli bir şekilde gönderilir, sınırlı erişim altında tutulur ve güvenli [Azure depolama](https://azure.microsoft.com/services/storage/) sistemlerinden katı güvenlik denetimleri altında yayımlanır.
 
-Gizliliğinizi korumak bizim için önemlidir. Telemetrinin hassas verileri toplamasını veya verilerin güvenle veya uygun şekilde işlenmekte olduğunu düşünüyorsanız, [DotNet/CLI](https://github.com/dotnet/cli/issues) deposunda bir sorun yapın veya araştırma [dotnet@microsoft.com](mailto:dotnet@microsoft.com) için bir e-posta gönderin.
+Gizliliğinizi korumak bizim için önemlidir. Telemetrinin hassas verileri toplamasını veya verilerin güvenli veya uygun şekilde işlenmekte olduğunu düşünüyorsanız, [DotNet/CLI](https://github.com/dotnet/cli/issues) deposunda bir sorun yapın veya araştırma için [dotnet@microsoft.com](mailto:dotnet@microsoft.com) bir e-posta gönderin.
 
 Telemetri özelliği aşağıdaki verileri toplar:
 
-| SDK sürümleri | Veri |
+| SDK sürümleri | Veriler |
 |--------------|------|
 | Tümü          | Çağırma zaman damgası. |
 | Tümü          | Komut çağrıldı (örneğin, "Build"), 2,1 'den başlayarak karma hale getirilmiş. |
@@ -66,7 +66,7 @@ Telemetri özelliği aşağıdaki verileri toplar:
 | Tümü          | Telemetri profili: isteğe bağlı bir değer yalnızca açık Kullanıcı kabul etme ve Microsoft 'ta dahili olarak kullanılan bir değerdir. |
 | > = 2.0        | Komut bağımsız değişkenleri ve seçenekleri: birkaç bağımsız değişken ve seçenek toplanır (rastgele dizeler değil). [Toplanan seçeneklere](#collected-options)bakın. 2\.1.300 sonrasında karma hale getirilir. |
 | > = 2.0         | SDK 'nın bir kapsayıcıda çalışıp çalışmadığını belirtir. |
-| > = 2.0         | 2,1 ' den `TargetFramework` başlayarak karma hale getirilmiş hedef çerçeveler (olaydan). |
+| > = 2.0         | 2,1 ' den başlayarak karma hale getirilmiş hedef çerçeveler (`TargetFramework` olayından). |
 | > = 2.0         | Karma medya Access Control (MAC) adresi: bir makine için bir şifreleme (SHA256) anonim ve benzersiz KIMLIĞI. |
 | > = 2.0         | Karma hale getirilmiş geçerli çalışma dizini. |
 | > = 2.0         | Karma yükleyici exe dosya adına sahip başarı raporunu yükleme. |
@@ -83,11 +83,11 @@ Bazı komutlar ek veriler gönderir. Bir komut alt kümesi ilk bağımsız deği
 |-----------------------|-----------------------------------------|
 | `dotnet help <arg>`   | İçin komut yardımı sorgulanırken.  |
 | `dotnet new <arg>`    | Şablon adı (karma).             |
-| `dotnet add <arg>`    | Sözcük `package` veya .`reference`      |
-| `dotnet remove <arg>` | Sözcük `package` veya .`reference`      |
-| `dotnet list <arg>`   | Sözcük `package` veya .`reference`      |
-| `dotnet sln <arg>`    | , Veya `add` `list` sözcüğü.`remove`    |
-| `dotnet nuget <arg>`  | , Veya `delete` `locals` sözcüğü.`push` |
+| `dotnet add <arg>`    | `package` veya `reference`sözcük.      |
+| `dotnet remove <arg>` | `package` veya `reference`sözcük.      |
+| `dotnet list <arg>`   | `package` veya `reference`sözcük.      |
+| `dotnet sln <arg>`    | `add`, `list`veya `remove`sözcük.    |
+| `dotnet nuget <arg>`  | `delete`, `locals`veya `push`sözcük. |
 
 Bir komut alt kümesi, kullanıldıkları takdirde, değerleriyle birlikte, seçili seçenekleri gönderir:
 
@@ -97,12 +97,12 @@ Bir komut alt kümesi, kullanıldıkları takdirde, değerleriyle birlikte, seç
 | `--language`            | `dotnet new`                                                                                   |
 | `--configuration`       | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`                  |
 | `--framework`           | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest` |
-| `--runtime`             | `dotnet build`,`dotnet publish`                                                              |
+| `--runtime`             | `dotnet build`, `dotnet publish`                                                              |
 | `--platform`            | `dotnet vstest`                                                                                |
 | `--logger`              | `dotnet vstest`                                                                                |
 | `--sdk-package-version` | `dotnet migrate`                                                                               |
 
-`--verbosity` Ve`--sdk-package-version`dışında, diğer tüm değerler .NET Core 2.1.100 SDK ile başlayarak karma hale getirilir.
+`--verbosity` ve `--sdk-package-version`dışında, diğer tüm değerler .NET Core 2.1.100 SDK ile başlayarak karma hale getirilir.
 
 ## <a name="net-core-clisdk-crash-exception-telemetry-collected"></a>.NET Core CLI/SDK kilitlenme özel durum telemetrisi toplandı
 
@@ -114,7 +114,7 @@ Bir komut alt kümesi, kullanıldıkları takdirde, değerleriyle birlikte, seç
 
 Aşağıdaki örnek, toplanan veri türünü gösterir:
 
-```
+```console
 System.IO.IOException
 at System.ConsolePal.WindowsConsoleStream.Write(Byte[] buffer, Int32 offset, Int32 count)
 at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)

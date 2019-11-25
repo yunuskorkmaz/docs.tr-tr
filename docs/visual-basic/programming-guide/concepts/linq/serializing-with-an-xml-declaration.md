@@ -1,24 +1,24 @@
 ---
-title: Serileştirmek bir XML bildirimi (Visual Basic)
+title: XML Bildirimi ile Serileştirme
 ms.date: 07/20/2015
 ms.assetid: 8726f79e-2bb0-4ba0-969d-197cca591647
-ms.openlocfilehash: f51dacb0f89e1042ba9875bec10a0cb1fe25f889
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96c95b4c94290016684721a194ca31a836a49740
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786444"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350627"
 ---
-# <a name="serializing-with-an-xml-declaration-visual-basic"></a>Serileştirmek bir XML bildirimi (Visual Basic)
-Bu konuda, serileştirme bir XML bildirimi oluşturup oluşturmayacağını denetlemek nasıl açıklanmaktadır.  
+# <a name="serializing-with-an-xml-declaration-visual-basic"></a>Serializing with an XML Declaration (Visual Basic)
+This topic describes how to control whether serialization generates an XML declaration.  
   
-## <a name="xml-declaration-generation"></a>XML bildirimi oluşturma  
- Seri hale getirme için bir <xref:System.IO.File> veya <xref:System.IO.TextWriter> kullanarak <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> yöntemi veya <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> yöntem bir XML bildirimi oluşturur. Ne zaman serileştirmek için bir <xref:System.Xml.XmlWriter>, yazıcı ayarları (belirtilen bir <xref:System.Xml.XmlWriterSettings> nesne) veya bir XML bildirimi oluşturulup oluşturulmayacağını belirler.  
+## <a name="xml-declaration-generation"></a>XML Declaration Generation  
+ Serializing to a <xref:System.IO.File> or a <xref:System.IO.TextWriter> using the <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> method or the <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> method generates an XML declaration. When you serialize to an <xref:System.Xml.XmlWriter>, the writer settings (specified in an <xref:System.Xml.XmlWriterSettings> object) determine whether an XML declaration is generated or not.  
   
- Kullanarak bir dize cricheditdoc::m_brtf `ToString` elde edilen XML yöntemi, bir XML bildirimi içermez.  
+ If you are serializing to a string using the `ToString` method, the resulting XML will not include an XML declaration.  
   
 ### <a name="serializing-with-an-xml-declaration"></a>XML Bildirimi ile Serileştirme  
- Aşağıdaki örnek, oluşturur bir <xref:System.Xml.Linq.XElement>, belgeyi bir dosyaya kaydeder ve sonra dosyanın konsola yazdırır:  
+ The following example creates an <xref:System.Xml.Linq.XElement>, saves the document to a file, and then prints the file to the console:  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -29,7 +29,7 @@ Dim str As String = File.ReadAllText("Root.xml")
 Console.WriteLine(str)  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -38,8 +38,8 @@ Console.WriteLine(str)
 </Root>  
 ```  
   
-### <a name="serializing-without-an-xml-declaration"></a>Bir XML bildirimi seri hale getirme  
- Aşağıdaki örnek nasıl kaydedileceğini gösterir bir <xref:System.Xml.Linq.XElement> için bir <xref:System.Xml.XmlWriter>.  
+### <a name="serializing-without-an-xml-declaration"></a>Serializing without an XML Declaration  
+ The following example shows how to save an <xref:System.Xml.Linq.XElement> to an <xref:System.Xml.XmlWriter>.  
   
 ```vb  
 Dim sb As StringBuilder = New StringBuilder()  
@@ -55,7 +55,7 @@ End Using
 Console.WriteLine(sb.ToString())  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```xml  
 <Root><Child>child content</Child></Root>  
@@ -63,4 +63,4 @@ Console.WriteLine(sb.ToString())
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [(Visual Basic) XML ağaçlarını serileştirme](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [Serializing XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

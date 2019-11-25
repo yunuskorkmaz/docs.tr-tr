@@ -1,5 +1,5 @@
 ---
-title: /= İşleci (Visual Basic)
+title: /= İşleci
 ms.date: 07/20/2015
 f1_keywords:
 - vb./=
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - operator /=
 - compound assignment statements [Visual Basic]
 ms.assetid: a1e22d0e-8380-4761-9da1-84fb51c34821
-ms.openlocfilehash: b4855e8270a329f9345339060a323b5ca9cd9792
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: a8a031e968df90496a4e263ae78d47045ccdc923
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592183"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331043"
 ---
 # <a name="-operator-visual-basic"></a>/= İşleci (Visual Basic)
-Bir değişkenin veya özelliğin değerini bir ifadenin değerine böler ve kayan nokta sonucunu değişkenine veya özelliğe atar.  
+Divides the value of a variable or property by the value of an expression and assigns the floating-point result to the variable or property.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,32 +28,32 @@ variableorproperty /= expression
   
 ## <a name="parts"></a>Bölümler  
  `variableorproperty`  
- Gerekli. Herhangi bir sayısal değişken veya özellik.  
+ Gerekli. Any numeric variable or property.  
   
  `expression`  
- Gerekli. Herhangi bir sayısal ifade.  
+ Gerekli. Any numeric expression.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 işlecinin sol tarafındaki öğe basit bir skaler değişken, bir özellik veya bir dizi öğesi olabilir. Değişken veya özellik [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)olamaz.  
+ The element on the left side of the `/=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- @No__t-0 işleci ilk olarak değişkenin değerini (işlecin sol tarafında), ifadenin değeri (işlecin sağ tarafında) ile ayırır (işlecin sağ tarafındaki). İşleci daha sonra bu işlemin kayan nokta sonucunu değişkenine veya özelliğe atar.  
+ The `/=` operator first divides the value of the variable or property (on the left-hand side of the operator) by the value of the expression (on the right-hand side of the operator). The operator then assigns the floating-point result of that operation to the variable or property.  
   
- Bu ifade, soldaki değişkene veya özelliğe `Double` değeri atar. @No__t-0 `On` ise, `variableorproperty` `Double` olmalıdır. @No__t-0 `Off` ise, Visual Basic örtük bir dönüştürme gerçekleştirir ve elde edilen değeri, çalışma zamanında olası bir hatayla `variableorproperty` ' ye atar. Daha fazla bilgi için bkz. [genişletme ve daraltma dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) ve [Option Strict deyimdir](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+ This statement assigns a `Double` value to the variable or property on the left. If `Option Strict` is `On`, `variableorproperty` must be a `Double`. If `Option Strict` is `Off`, Visual Basic performs an implicit conversion and assigns the resulting value to `variableorproperty`, with a possible error at run time. For more information, see [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- [/İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. @No__t aşırı yükleme-0 işleci `/=` işlecinin davranışını etkiler. Kodunuz, `/` ' i aşırı yükleyen bir sınıf veya yapıda `/=` kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `/` operator affects the behavior of the `/=` operator. If your code uses `/=` on a class or structure that overloads `/`, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir `Integer` değişkenini ikinci kez bölmek ve bölümü ilk değişkene atamak için `/=` işlecini kullanır.  
+ The following example uses the `/=` operator to divide one `Integer` variable by a second and assign the quotient to the first variable.  
   
  [!code-vb[VbVbalrOperators#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [/İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
-- [\\ = Işleci](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
+- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

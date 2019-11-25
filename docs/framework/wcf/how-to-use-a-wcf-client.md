@@ -1,5 +1,5 @@
 ---
-title: 'Öğretici: Windows Communication Foundation istemcisi kullanma'
+title: 'Tutorial: Use a Windows Communication Foundation client'
 ms.date: 03/19/2019
 helpviewer_keywords:
 - WCF clients [WCF], using
@@ -7,34 +7,34 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 5c280933c81ef54ba58181e3005e30775b9b8e42
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d0ef525db16b2b2cedeea5fa03376fb4f3489a4a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928895"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346764"
 ---
-# <a name="tutorial-use-a-windows-communication-foundation-client"></a>Öğretici: Windows Communication Foundation istemcisi kullanma
+# <a name="tutorial-use-a-windows-communication-foundation-client"></a>Tutorial: Use a Windows Communication Foundation client
 
-Bu öğreticide, temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken beş görevin son açıklaması açıklanır. Öğreticilere genel bakış için bkz [. Öğretici: Windows Communication Foundation uygulamaları](getting-started-tutorial.md)ile çalışmaya başlayın.
+This tutorial describes the last of five tasks required to create a basic Windows Communication Foundation (WCF) application. For an overview of the tutorials, see [Tutorial: Get started with Windows Communication Foundation applications](getting-started-tutorial.md).
 
-Bir Windows Communication Foundation (WCF) proxy oluşturup yapılandırdıktan sonra, bir istemci örneği oluşturup istemci uygulamasını derleyebilirsiniz. Daha sonra WCF hizmeti ile iletişim kurmak için kullanabilirsiniz. 
+After you've created and configured a Windows Communication Foundation (WCF) proxy, you create a client instance and compile the client application. You then use it to communicate with the WCF service. 
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
 >
-> - WCF istemcisini kullanmak için kod ekleyin.
-> - WCF istemcisini test edin.
+> - Add code to use the WCF client.
+> - Test the WCF client.
 
-## <a name="add-code-to-use-the-wcf-client"></a>WCF istemcisini kullanmak için kod ekleme
+## <a name="add-code-to-use-the-wcf-client"></a>Add code to use the WCF client
 
-İstemci kodu aşağıdaki adımları yapar:
+The client code does the following steps:
 
-- WCF istemcisini başlatır.
-- Oluşturulan proxy 'den hizmet işlemlerini çağırır.
-- İşlem çağrısı tamamlandıktan sonra istemciyi kapatır.
+- Instantiates the WCF client.
+- Calls the service operations from the generated proxy.
+- Closes the client after the operation call is completed.
 
-**GettingStartedClient** projesinden **program.cs** veya **Module1. vb** dosyasını açın ve kodunu aşağıdaki kodla değiştirin:
+Open the **Program.cs** or **Module1.vb** file from the **GettingStartedClient** project and replace its code with the following code:
 
 ```csharp
 using System;
@@ -87,7 +87,6 @@ namespace GettingStartedClient
 ```
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.ServiceModel
@@ -135,27 +134,27 @@ Module Module1
 End Module
 ```
 
-İçeri aktaran `using` C# (görsel`Imports` için) veya (for Visual Basic) bildirimine dikkat edin. `GettingStartedClient.ServiceReference1` Bu ifade, Visual Studio 'Nun **hizmet başvurusu Ekle** işleviyle oluşturduğu kodu içeri aktarır. Kod, WCF ara sunucusunu başlatır ve hesap makinesi hizmetinin sunduğu hizmet işlemlerinin her birini çağırır. Ardından, proxy 'yi kapatır ve programı sonlandırır.
+Notice the `using` (for Visual C#) or `Imports` (for Visual Basic) statement that imports `GettingStartedClient.ServiceReference1`. This statement imports the code that Visual Studio generated with the **Add Service Reference** function. The code instantiates the WCF proxy and calls each of the service operations that the calculator service exposes. It then closes the proxy and ends the program.
 
-## <a name="test-the-wcf-client"></a>WCF istemcisini test etme
+## <a name="test-the-wcf-client"></a>Test the WCF client
 
-### <a name="test-the-application-from-visual-studio"></a>Uygulamayı Visual Studio 'dan test etme
+### <a name="test-the-application-from-visual-studio"></a>Test the application from Visual Studio
 
-1. Çözümü kaydedin ve oluşturun.
+1. Save and build the solution.
 
-2. **GettingStartedLib** klasörünü seçin ve ardından kısayol menüsünde **Başlangıç projesi olarak ayarla** ' yı seçin.
+2. Select the **GettingStartedLib** folder, and then select **Set as Startup Project** from the shortcut menu.
 
-3. **Başlangıç projeleri**' nden, açılan listeden **GettingStartedLib** ' i seçin, sonra **Çalıştır** ' ı seçin veya **F5**tuşuna basın.
+3. From **Startup Projects**, select **GettingStartedLib** from the drop-down list, then select **Run** or press **F5**.
 
-### <a name="test-the-application-from-a-command-prompt"></a>Uygulamayı bir komut isteminden test etme
+### <a name="test-the-application-from-a-command-prompt"></a>Test the application from a command prompt
 
-1. Yönetici olarak bir komut istemi açın ve ardından Visual Studio çözüm dizininize gidin. 
+1. Open a command prompt as an administrator, and then navigate to your Visual Studio solution directory. 
 
-2. Hizmeti başlatmak için: *Gettingstartedhost\bin\debug\gettingstartedhost.exe*girin.
+2. To start the service: Enter *GettingStartedHost\bin\Debug\GettingStartedHost.exe*.
 
-3. İstemcisini başlatmak için: Başka bir komut istemi açın, Visual Studio çözüm dizininize gidin ve *Gettingstartedclient\bin\debug\gettingstartedclient.exe*yazın.
+3. To start the client: Open another command prompt, navigate to your Visual Studio solution directory, then enter *GettingStartedClient\bin\Debug\GettingStartedClient.exe*.
 
-   *GettingStartedHost. exe* aşağıdaki çıktıyı üretir:
+   *GettingStartedHost.exe* produces the following output:
 
    ```text
    The service is ready.
@@ -171,7 +170,7 @@ End Module
    Return: 3.14285714285714
    ```
 
-   *GettingStartedClient. exe* aşağıdaki çıktıyı üretir:
+   *GettingStartedClient.exe* produces the following output:
 
    ```text
    Add(100,15.99) = 115.99
@@ -184,15 +183,15 @@ End Module
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Artık WCF başlangıç öğreticisindeki tüm görevleri tamamladınız. Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
+You've now completed all the tasks in the WCF get started tutorial. In this tutorial, you learned how to:
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
 >
-> - WCF istemcisini kullanmak için kod ekleyin.
-> - WCF istemcisini test edin.
+> - Add code to use the WCF client.
+> - Test the WCF client.
 
-Adımlardan birinde sorun veya hatalar varsa, bunları gidermek için sorun giderme makalesindeki adımları izleyin.
+If you have problems or errors in any of the steps, follow the steps in the troubleshooting article to fix them.
 
 > [!div class="nextstepaction"]
-> [WCF öğreticileri ile çalışmaya başlama hakkında sorun giderme](troubleshooting-the-getting-started-tutorial.md)
+> [Troubleshoot the Get started with WCF tutorials](troubleshooting-the-getting-started-tutorial.md)

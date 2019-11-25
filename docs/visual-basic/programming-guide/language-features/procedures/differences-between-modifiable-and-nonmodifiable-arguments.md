@@ -1,5 +1,5 @@
 ---
-title: Değiştirilebilir ve Değiştirilemez Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)
+title: Değiştirilebilir ve Değiştirilemez Bağımsız Değişkenler Arasındaki Farklar
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -8,44 +8,44 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: a880ae8c13eebd5d9d325468098e058f58d3fa71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 989795ee2cdd3a78b71bad4d95cf9b384c2719bd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665955"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341385"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Değiştirilebilir ve Değiştirilemez Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)
-Bir yordamı çağırdığınızda, genellikle bir veya daha fazla bağımsız değişken geçirin. Her bir bağımsız değişkenin temel alınan bir programlama öğesine karşılık gelir. Temel alınan öğeleri hem bağımsız değiştirilebilir veya değiştirilemez olabilir.  
+When you call a procedure, you typically pass one or more arguments to it. Each argument corresponds to an underlying programming element. Both the underlying elements and the arguments themselves can be either modifiable or nonmodifiable.  
   
-## <a name="modifiable-and-nonmodifiable-elements"></a>Öğeler değiştirilebilir ve değiştirilemez  
- Bir programlama öğesi olabilir bir *değiştirilebilir öğesi*, değişen değeri olabilir veya *değiştirilemez öğenin*, oluşturulduktan sonra sabit bir değere sahip.  
+## <a name="modifiable-and-nonmodifiable-elements"></a>Modifiable and Nonmodifiable Elements  
+ A programming element can be either a *modifiable element*, which can have its value changed, or a *nonmodifiable element*, which has a fixed value once it has been created.  
   
- Aşağıdaki tabloda, değiştirilebilir ve değiştirilemez programlama öğelerini listeler.  
+ The following table lists modifiable and nonmodifiable programming elements.  
   
-|Değiştirilebilir öğeleri|Değiştirilemez öğeleri|  
+|Modifiable elements|Nonmodifiable elements|  
 |-------------------------|----------------------------|  
-|Salt okunur hariç nesne değişkenleri (yordamların içinde bildirilen), yerel değişkenleri de dahil olmak üzere|Salt okunur değişkenler, alanlar ve Özellikler|  
-|Salt okunur dışında alanlar (üye değişkenleri) modülleri, sınıflar ve yapılar|Sabit ve değişmez değerleri|  
-|Salt okunur dışındaki özellikleri|Numaralandırma üyeleri|  
-|Dizi öğeleri|İfadeler (öğeleri değiştirilebilir olsa bile)|  
+|Local variables (declared inside procedures), including object variables, except for read-only|Read-only variables, fields, and properties|  
+|Fields (member variables of modules, classes, and structures), except for read-only|Constants and literals|  
+|Properties, except for read-only|Enumeration members|  
+|Array elements|Expressions (even if their elements are modifiable)|  
   
-## <a name="modifiable-and-nonmodifiable-arguments"></a>Değiştirilebilir ve değiştirilemez bağımsız değişkenler  
- A *değiştirilebilir bağımsız değişken* değiştirilebilir bir temel alınan öğe biridir. Çağıran kod, herhangi bir zamanda yeni bir değer depolayabilir ve bağımsız değişken geçirirseniz [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), yordamda kod çağıran koddaki temel alınan öğe de değiştirebilirsiniz.  
+## <a name="modifiable-and-nonmodifiable-arguments"></a>Modifiable and Nonmodifiable Arguments  
+ A *modifiable argument* is one with a modifiable underlying element. The calling code can store a new value at any time, and if you pass the argument [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the code in the procedure can also modify the underlying element in the calling code.  
   
- A *değiştirilemez bağımsız değişken* değiştirilemez bir alt öğeye sahip ya da geçirilir [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Değiştirilebilir bir öğe olsa bile, yordamı çağıran kod, temel alınan öğe değiştiremezsiniz. Çağıran kod, değiştirilemez bir öğeyse, değiştiremezsiniz.  
+ A *nonmodifiable argument* either has a nonmodifiable underlying element or is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). The procedure cannot modify the underlying element in the calling code, even if it is a modifiable element. If it is a nonmodifiable element, the calling code itself cannot modify it.  
   
- Değişiklik, temel alınan öğe çağıran koddaki etkilemez ancak bu, çağrılan yordam değiştirilemez bir bağımsız değişken yerel kopyasına değiştirebilirsiniz.  
+ The called procedure might modify its local copy of a nonmodifiable argument, but that modification does not affect the underlying element in the calling code.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yordamlar](./index.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
-- [Nasıl yapılır: Bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)
+- [Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme](./how-to-pass-arguments-to-a-procedure.md)
 - [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)
 - [Değere ve Başvuruya Göre Bağımsız Değişken Geçirme Arasındaki Farklar](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [Nasıl yapılır: Bir yordam bağımsız değişkeninin değerini değiştirme](./how-to-change-the-value-of-a-procedure-argument.md)
-- [Nasıl yapılır: Bir yordam bağımsız değişkenini değer değişikliklerine karşı koruma](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Nasıl yapılır: Bağımsız değişkeni değere göre geçirilecek şekilde zorlama](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Nasıl yapılır: Bir Yordam Bağımsız Değişkeninin Değerini Değiştirme](./how-to-change-the-value-of-a-procedure-argument.md)
+- [Nasıl yapılır: Bir Yordam Bağımsız Değişkenini Değer Değişikliklerine Karşı Koruma](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Nasıl yapılır: Bağımsız Değişkeni Değere Göre Geçirilecek Şekilde Zorlama](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](./passing-arguments-by-position-and-by-name.md)
 - [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

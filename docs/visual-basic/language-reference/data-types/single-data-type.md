@@ -1,5 +1,5 @@
 ---
-title: Single Veri Türü (Visual Basic)
+title: Single Veri Türü
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Single
@@ -20,32 +20,34 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: af75f5eb5a4281f6efae8ec3c9442ce2b28f595e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60a688c510f6e36dca5809566b37a388429e18c7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646995"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343927"
 ---
 # <a name="single-data-type-visual-basic"></a>Single Veri Türü (Visual Basic)
-Ayrı tutma IEEE 32-bit (4-bayt) tek duyarlıklı kayan nokta sayı değerini - 3.4028235E + 38 arasında değişen imzalı ile - 1.401298E-45 negatif değerleri ve 1.401298E-45 3.4028235E + 38 pozitif değerler için aracılığıyla. Tek duyarlıklı sayılar yaklaşık bir gerçek sayı olarak depolar.  
+
+Holds signed IEEE 32-bit (4-byte) single-precision floating-point numbers ranging in value from -3.4028235E+38 through -1.401298E-45 for negative values and from 1.401298E-45 through 3.4028235E+38 for positive values. Single-precision numbers store an approximation of a real number.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `Single` veri türü, tam veri genişliği gerektirmeyen kayan nokta değerleri içerecek şekilde `Double`. Bazı durumlarda ortak dil çalışma zamanı paketi mümkün olabilir, `Single` değişkenleri yakından birlikte ve bellek tüketimi.  
+
+ Use the `Single` data type to contain floating-point values that do not require the full data width of `Double`. In some cases the common language runtime might be able to pack your `Single` variables closely together and save memory consumption.  
   
- Varsayılan değer olan `Single` 0'dır.  
+ The default value of `Single` is 0.  
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
-- **Duyarlık.** Kayan noktalı sayı ile çalıştığınızda, bunlar her zaman kesin bir gösterimi bellekte olmadığını aklınızda bulundurun. Değer karşılaştırması gibi bazı işlemleri öğesinden bu beklenmeyen sonuçlara neden olabilir ve `Mod` işleci. Daha fazla bilgi için [veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Precision.** When you work with floating-point numbers, keep in mind that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
-- **Genişletme.** `Single` Widens veri türü için `Double`. Yani dönüştürebilirsiniz `Single` için `Double` karşılaşmadan bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
+- **Widening.** The `Single` data type widens to `Double`. This means you can convert `Single` to `Double` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.  
   
-- **Sondaki sıfırlar.** Kayan nokta veri türleri, sondaki 0 karakterleri, herhangi bir iç gösterimi yoktur. Örneğin, bunlar 4.2 4.2000 arasında ayrılmaz. Sonuç olarak, sondaki 0 karakterleri görüntülediğinizde veya kayan nokta değerlerini yazdırma görünmez.  
+- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing 0 characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing 0 characters do not appear when you display or print floating-point values.  
   
-- **Tür karakterleri.** Değişmez değer türü karakterinin `F` sabit değerine zorlar `Single` veri türü. Tanımlayıcı türü karakteri ekleme `!` herhangi bir tanımlayıcı zorlar `Single`.  
+- **Type Characters.** Appending the literal type character `F` to a literal forces it to the `Single` data type. Appending the identifier type character `!` to any identifier forces it to `Single`.  
   
-- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Single?displayProperty=nameWithType> yapısı.  
+- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Single?displayProperty=nameWithType> structure.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

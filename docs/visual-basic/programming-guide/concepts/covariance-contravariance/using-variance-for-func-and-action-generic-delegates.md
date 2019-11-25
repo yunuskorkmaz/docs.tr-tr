@@ -1,23 +1,23 @@
 ---
-title: Func ve eylem genel temsilcileri için varyans kullanma (Visual Basic)
+title: İşlev ve Eylem Genel Temsilcileri için Varyans Kullanma
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: a85d6ae2fa32547958e557bbe45b9405e9b660ef
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2678abd03f55224720d00509dc44f2db16551193
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524249"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349041"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Func ve eylem genel temsilcileri için varyans kullanma (Visual Basic)
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Using Variance for Func and Action Generic Delegates (Visual Basic)
 
-Bu örnekler, `Func` Kovaryans ve karşıtlık farkının nasıl kullanılacağını ve yöntemlerin yeniden kullanımını etkinleştirmek ve kodunuzda daha fazla esneklik sağlamak için genel Temsilciler `Action` gösterir.
+These examples demonstrate how to use covariance and contravariance in the `Func` and `Action` generic delegates to enable reuse of methods and provide more flexibility in your code.
 
-Kovaryans ve değişken varyans hakkında daha fazla bilgi için bkz. [temsilcilerin varyansı (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
+For more information about covariance and contravariance, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
 
-## <a name="using-delegates-with-covariant-type-parameters"></a>Birlikte değişken tür parametrelerine sahip temsilciler kullanma
+## <a name="using-delegates-with-covariant-type-parameters"></a>Using Delegates with Covariant Type Parameters
 
-Aşağıdaki örnekte, genel `Func` temsilcilerde kovaryans desteğinin avantajları gösterilmektedir. @No__t_0 yöntemi `String` türünün bir parametresini alır ve `Employee` türünün bir nesnesini döndürür. Ancak, `Employee` `Person` devraldığı için bu yöntemi `Func(Of String, Person)` temsilcisine atayabilirsiniz.
+The following example illustrates the benefits of covariance support in the generic `Func` delegates. The `FindByTitle` method takes a parameter of the `String` type and returns an object of the `Employee` type. However, you can assign this method to the `Func(Of String, Person)` delegate because `Employee` inherits `Person`.
 
 ```vb
 ' Simple hierarchy of classes.
@@ -54,9 +54,9 @@ Class Finder
 End Class
 ```
 
-## <a name="using-delegates-with-contravariant-type-parameters"></a>Değişken karşıtı tür parametreleriyle temsilciler kullanma
+## <a name="using-delegates-with-contravariant-type-parameters"></a>Using Delegates with Contravariant Type Parameters
 
-Aşağıdaki örnekte, genel `Action` Temsilcilerde değişken olmayan varyans desteğinin avantajları gösterilmektedir. @No__t_0 yöntemi `Person` türünün bir parametresini alır. Ancak, `Employee` `Person` devraldığı için bu yöntemi `Action(Of Employee)` temsilcisine atayabilirsiniz.
+The following example illustrates the benefits of contravariance support in the generic `Action` delegates. The `AddToContacts` method takes a parameter of the `Person` type. However, you can assign this method to the `Action(Of Employee)` delegate because `Employee` inherits `Person`.
 
 ```vb
 Public Class Person
@@ -94,5 +94,5 @@ End Class
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kovaryans ve değişken varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
+- [Covariance and Contravariance (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 - [Genel Türler](../../../../standard/generics/index.md)

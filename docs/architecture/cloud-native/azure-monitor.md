@@ -1,15 +1,15 @@
 ---
-title: Azure Izleyici
+title: Azure İzleyici
 description: Sisteminizin üzerinde görünürlük elde etmek için Azure Izleyici 'yi kullanma.
 ms.date: 09/23/2019
-ms.openlocfilehash: fa7b4e103f4d1245710f88319271a9e8b7a24b04
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 27503627217c71e4090674945830f6332b202a5b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087689"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281643"
 ---
-# <a name="azure-monitor"></a>Azure Izleyici
+# <a name="azure-monitor"></a>Azure İzleyici
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -34,7 +34,7 @@ Yapay zeka veya Machine Learning olmadan modern uygulama tamamlanmaz. Bu uçta, 
 
 Application Insights, kayıtları bulmak, özetlemek ve hatta grafikleri çizmek için kullanılabilecek kusto adlı güçlü bir sorgu dili sağlar. Örneğin, bu sorgu, 2007 Kasım ayının tüm kayıtlarını bulur, bunları durumlarına göre gruplayın ve bir pasta grafiği olarak ilk 10 ' u çizmez.
 
-```
+```kusto
 StormEvents
 | where StartTime >= datetime(2007-11-01) and StartTime < datetime(2007-12-01)
 | summarize count() by State

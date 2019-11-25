@@ -5,54 +5,55 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-ms.openlocfilehash: 5c08ec3f5618abc601c17cf0d32d583bf21db683
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f79c6d2a564571f8b753f322a79e91a01b1cf2f
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656107"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142010"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Windows Workflow Foundation’daki Yenilikler
-Windows Workflow Foundation (WF) [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] birkaç geliştirme paradigmalarını önceki sürümlerden değiştirir. İş akışları oluşturup, yürütme, korumak ve çok sayıda yeni işlevler uygulamak daha kolaydır. En son sürümü kullanmak için .NET 3.0 ve .NET 3.5 iş akışı uygulamalarını geçirme hakkında daha fazla bilgi için bkz. [geçiş kılavuzuna](migration-guidance.md).  
+
+.NET Framework 4 ' te Windows Workflow Foundation (WF), önceki sürümlerden birkaç geliştirme paradigmalarına değiştirir. İş akışları artık yeni işlevlerin oluşturulması, yürütülmesi ve bakımını yapmak ve bir ana bilgisayarı uygulamak daha kolay. .NET 3,0 ve .NET 3,5 iş akışı uygulamalarını en son sürümü kullanacak şekilde geçirme hakkında daha fazla bilgi için bkz. [Geçiş Kılavuzu](migration-guidance.md).  
   
 ## <a name="workflow-activity-model"></a>İş akışı etkinlik modeli  
- Etkinlik artık kullanmak yerine bir iş akışı oluşturulurken, temel birimidir <xref:System.Workflow.Activities.SequentialWorkflowActivity> veya <xref:System.Workflow.Activities.StateMachineWorkflowActivity> sınıfları. <xref:System.Activities.Activity> Sınıfı, temel iş akışı davranışını özetini sağlar. Etkinlik yazarlar ardından uygulayabilirsiniz ya da <xref:System.Activities.CodeActivity> temel özel etkinlik işlevselliği veya <xref:System.Activities.NativeActivity> avantajlarına çalışma zamanı kullanan özel etkinlik işlevleri için. <xref:System.Activities.Activity> Yeni davranışlar diğer açısından bildirimli olarak ifade etmek için etkinlik yazarları tarafından kullanılan bir sınıftır <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, veya <xref:System.Activities.DynamicActivity> nesneleri özel olarak geliştirilmiş veya dahil olup [yerleşik etkinlik Kitaplık](net-framework-4-5-built-in-activity-library.md).  
+ Etkinlik artık <xref:System.Workflow.Activities.SequentialWorkflowActivity> veya <xref:System.Workflow.Activities.StateMachineWorkflowActivity> sınıfları kullanmak yerine iş akışı oluşturma temel birimidir. <xref:System.Activities.Activity> sınıfı, iş akışı davranışının temel soyutlamasını sağlar. Etkinlik yazarları daha sonra temel özel etkinlik işlevselliği için <xref:System.Activities.CodeActivity> ya da çalışma zamanının kapsamını kullanan özel etkinlik işlevselliği için <xref:System.Activities.NativeActivity> uygulayabilir. <xref:System.Activities.Activity>, etkinlik yazarları tarafından, özel olarak geliştirilmiş veya [yerleşik etkinlik kitaplığına](net-framework-4-5-built-in-activity-library.md)dahil olan diğer <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>veya <xref:System.Activities.DynamicActivity> nesneleri açısından bildirimli olarak ifade etmek için kullanılan bir sınıftır.  
   
 ## <a name="rich-composite-activity-options"></a>Zengin bileşik etkinlik seçenekleri  
- <xref:System.Activities.Statements.Flowchart> model rastgele döngü ve koşullu dallanmayı yazarların bir güçlü yeni denetim akışı etkinliği var. <xref:System.Activities.Statements.Flowchart> Olay temelli ve ile uygulanan daha önce yalnızca gönderebildiğini bir programlama modeli sağlar <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. Yordam iş akışları gibi geleneksel akış denetimi yapıları, model yeni akış denetimi etkinlikleri fayda <xref:System.Activities.Statements.TryCatch> ve <xref:System.Activities.Statements.Switch%601>.  
+ <xref:System.Activities.Statements.Flowchart>, yazarların rastgele döngüleri ve koşullu dallanmayı modeletmesine olanak tanıyan güçlü bir yeni denetim akışı etkinliğidir. <xref:System.Activities.Statements.Flowchart>, daha önce yalnızca <xref:System.Workflow.Activities.StateMachineWorkflowActivity>uygulanabilir olan olay odaklı bir programlama modeli sağlar. Yordamsal iş akışları, <xref:System.Activities.Statements.TryCatch> ve <xref:System.Activities.Statements.Switch%601>gibi geleneksel akış denetimi yapılarını modeleden yeni akış denetimi etkinliklerinden yararlanır.  
   
 ## <a name="expanded-built-in-activity-library"></a>Genişletilmiş yerleşik etkinlik kitaplığı  
- Etkinlik Kitaplığı'nın yeni özellikler içerir:  
+ Etkinlik kitaplığının yeni özellikleri şunlardır:  
   
-- Yeni akış denetimi etkinlikleri gibi <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.Pick>, <xref:System.Activities.Statements.TryCatch>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.Switch%601>, ve <xref:System.Activities.Statements.ParallelForEach%601>.  
+- <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.Pick>, <xref:System.Activities.Statements.TryCatch>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.Switch%601>ve <xref:System.Activities.Statements.ParallelForEach%601>gibi yeni akış denetimi etkinlikleri.  
   
-- Üye verileri gibi düzenlemek için etkinlikleri <xref:System.Activities.Statements.Assign> ve koleksiyon etkinlikleri gibi <xref:System.Activities.Statements.AddToCollection%601>.  
+- <xref:System.Activities.Statements.Assign> gibi üye verilerini düzenleme etkinlikleri ve <xref:System.Activities.Statements.AddToCollection%601>gibi koleksiyon etkinlikleri.  
   
-- Etkinlikleri gibi işlemleri, denetleme <xref:System.Activities.Statements.TransactionScope> ve <xref:System.Activities.Statements.Compensate>.  
+- <xref:System.Activities.Statements.TransactionScope> ve <xref:System.Activities.Statements.Compensate>gibi işlemleri denetlemeye yönelik etkinlikler.  
   
-- Yeni etkinlikler gibi Mesajlaşma <xref:System.ServiceModel.Activities.SendContent> ve <xref:System.ServiceModel.Activities.ReceiveReply>.  
+- <xref:System.ServiceModel.Activities.SendContent> ve <xref:System.ServiceModel.Activities.ReceiveReply>gibi yeni mesajlaşma etkinlikleri.  
   
 ## <a name="explicit-activity-data-model"></a>Açık etkinlik veri modeli  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] Depolama veya veri taşıma için yeni seçenekler içerir. Bir etkinliği kullanarak verileri depolanabilir <xref:System.Activities.Variable>. Bir etkinlik içine ve dışına veri taşıma, özelleştirilmiş bir bağımsız değişken türleri hangi yönde veri taşıma olduğunu belirlemek için kullanılır. Bu türler <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument>, ve <xref:System.Activities.OutArgument>. Daha fazla bilgi için [Windows Workflow Foundation veri modeli](data-model.md).  
+ .NET Framework 4, verileri depolamaya veya taşımaya yönelik yeni seçenekler içerir. Veriler, <xref:System.Activities.Variable>kullanarak bir etkinlikte depolanabilir. Verileri bir etkinliğin içine ve dışına taşırken, hangi yön verilerinin taşınmakta olduğunu belirlemede özelleştirilmiş bağımsız değişken türleri kullanılır. Bu türler <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument>ve <xref:System.Activities.OutArgument>. Daha fazla bilgi için bkz. [veri modeli Windows Workflow Foundation](data-model.md).  
   
-## <a name="enhanced-hosting-persistence-and-tracking-options"></a>Gelişmiş, Kalıcılık, barındırma ve izleme seçenekleri  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] aşağıdaki gibi Kalıcılık geliştirmeleri içerir:  
+## <a name="enhanced-hosting-persistence-and-tracking-options"></a>Gelişmiş barındırma, kalıcılık ve Izleme seçenekleri  
+ .NET Framework 4, aşağıdakiler gibi Kalıcılık geliştirmeleri içerir:  
   
-- İş akışları dahil olmak üzere, çalıştırmak için daha fazla seçenek <xref:System.ServiceModel.Activities.WorkflowServiceHost>, <xref:System.Activities.WorkflowApplication>, ve <xref:System.Activities.WorkflowInvoker>.  
+- <xref:System.ServiceModel.Activities.WorkflowServiceHost>, <xref:System.Activities.WorkflowApplication>ve <xref:System.Activities.WorkflowInvoker>dahil iş akışlarını çalıştırmaya yönelik daha fazla seçenek vardır.  
   
-- İş akışı durumu açıkça kalıcı verileri kullanarak <xref:System.Activities.Statements.Persist> etkinlik.  
+- İş akışı durum verileri <xref:System.Activities.Statements.Persist> etkinliği kullanılarak açık bir şekilde kalıcı hale getirilir.  
   
-- Bir konak kalıcı bir <xref:System.Activities.ActivityInstance> bu eklentiyi olmadan.  
+- Bir konak, kaldırmadan <xref:System.Activities.ActivityInstance> kalıcı hale getirebilirler.  
   
-- Bir iş akışı belirtebilirsiniz no-bölgeleri Kalıcılık no-persist bölge çıkana kadar ertelenir böylece kalıcı yapılamıyor, verilerle çalışırken kalıcı.  
+- Bir iş akışı kalıcı olmayacak verilerle çalışırken kalıcı olmayan bölgeler belirtebilir, böylece kalıcı olmayan bölge kalana kadar Kalıcılık ertelenir.  
   
-- Akışı yapılan işlemler bir iş akışı kullanarak <xref:System.Activities.Statements.TransactionScope>.  
+- İşlemler, <xref:System.Activities.Statements.TransactionScope>kullanarak bir iş akışına alınabilir.  
   
-- İzleme, kullanarak daha kolay gerçekleştirilir <xref:System.Activities.Tracking.TrackingParticipant>.  
+- İzleme <xref:System.Activities.Tracking.TrackingParticipant>kullanarak daha kolay bir şekilde gerçekleştirilir.  
   
-- Sistem olay günlüğüne izleme kullanarak sağlanan <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
+- Sistem olay günlüğüne izleme <xref:System.Activities.Tracking.EtwTrackingParticipant>kullanılarak sağlanır.  
   
-- Bekleyen bir iş akışını sürdürme yönetilen kullanarak bir <xref:System.Activities.Bookmark> nesne.  
+- Bekleyen bir iş akışını sürdürmek artık <xref:System.Activities.Bookmark> nesnesi kullanılarak yönetilir.  
   
-## <a name="easier-ability-to-extend-wf-designer-experience"></a>Daha kolay WF Tasarımcısı deneyimini genişleten olanağı  
- Yeni WF Tasarımcısı, Windows Presentation Foundation (WPF) üzerinde oluşturulmuş ve Visual Studio dışında WF tasarımcısını yeniden barındırma sırasında kullanmak için daha kolay bir modeli sağlar ve ayrıca özel etkinlik tasarımcıları oluşturmak için daha kolay mekanizmaları sağlar. Daha fazla bilgi için [iş akışı tasarım deneyimini özelleştirme](customizing-the-workflow-design-experience.md).
+## <a name="easier-ability-to-extend-wf-designer-experience"></a>WF Tasarımcısı deneyimini genişletmek daha kolay olur  
+ Yeni WF Tasarımcısı Windows Presentation Foundation (WPF) üzerine kurulmuştur ve Visual Studio dışında WF tasarımcısını yeniden barındırırken kullanılacak daha kolay bir model sağlar ve ayrıca özel etkinlik tasarımcıları oluşturmak için daha kolay mekanizmalar sağlar. Daha fazla bilgi için bkz. [Iş akışı tasarım deneyimini özelleştirme](customizing-the-workflow-design-experience.md).

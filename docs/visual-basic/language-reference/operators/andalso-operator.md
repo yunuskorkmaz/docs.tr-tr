@@ -1,5 +1,5 @@
 ---
-title: AndAlso Işleci (Visual Basic)
+title: AndAlso İşleci
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AndAlso
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: a52f598c8a7c7a79b0f2436f1add7b3eb5d5261b
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: b3801c7e05142e1bc793e3c9d49a6f6991756f9d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835222"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350243"
 ---
-# <a name="andalso-operator-visual-basic"></a>AndAlso Işleci (Visual Basic)
-İki ifadeye kısa devre mantıksal birlikte uygular.  
+# <a name="andalso-operator-visual-basic"></a>AndAlso İşleci (Visual Basic)
+Performs short-circuiting logical conjunction on two expressions.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,49 +27,49 @@ ms.locfileid: "71835222"
 result = expression1 AndAlso expression2  
 ```  
   
-## <a name="parts"></a>Parçaya  
+## <a name="parts"></a>Bölümler  
   
-|Sözleşme Dönemi|Tanım|  
+|Terim|Tanım|  
 |---|---|  
-|`result`|Gereklidir. Herhangi bir `Boolean` ifadesi. Sonuç, iki ifadenin karşılaştırmasının `Boolean` sonucu olur.|  
-|`expression1`|Gereklidir. Herhangi bir `Boolean` ifadesi.|  
-|`expression2`|Gereklidir. Herhangi bir `Boolean` ifadesi.|  
+|`result`|Gerekli. Any `Boolean` expression. The result is the `Boolean` result of comparison of the two expressions.|  
+|`expression1`|Gerekli. Any `Boolean` expression.|  
+|`expression2`|Gerekli. Any `Boolean` expression.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derlenmiş kod, başka bir ifadenin sonucuna bağlı olarak bir ifadenin değerlendirmesini atlayabiliyorsa, mantıksal bir işlemin *kısa devre dışı* olduğu söylenir. Değerlendirilen ilk ifadenin sonucu işlemin nihai sonucunu belirlerse, nihai sonucu değiştiremediğinden ikinci ifadeyi değerlendirmeye gerek yoktur. Atlanan ifade karmaşık olduğunda veya yordam çağrıları içeriyorsa, kısa devre dışı hale getirebilirsiniz performansı iyileştirebilir.  
+ A logical operation is said to be *short-circuiting* if the compiled code can bypass the evaluation of one expression depending on the result of another expression. If the result of the first expression evaluated determines the final result of the operation, there is no need to evaluate the second expression, because it cannot change the final result. Short-circuiting can improve performance if the bypassed expression is complex, or if it involves procedure calls.  
   
- Her iki ifade `True` ' ı değerlendirirken, `result` `True` ' dir. Aşağıdaki tabloda `result` ' ın nasıl belirlendiği gösterilmektedir.  
+ If both expressions evaluate to `True`, `result` is `True`. The following table illustrates how `result` is determined.  
   
-|@No__t-0 ise|Ve `expression2`|@No__t-0 değeri|  
+|If `expression1` is|And `expression2` is|The value of `result` is|  
 |---|---|---|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`False`|  
-|`False`|(değerlendirilmedi)|`False`|  
+|`False`|(not evaluated)|`False`|  
   
 ## <a name="data-types"></a>Veri Türleri  
- @No__t-0 işleci yalnızca [Boole veri türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md)için tanımlanır. Visual Basic, ifadeyi değerlendirmeden önce her işleneni gerektiği gibi `Boolean` ' a dönüştürür. Sonucu sayısal bir türe atarsanız, Visual Basic `Boolean` ' dan bu türe dönüştürür `False` `0` olur ve `True` `-1` olur.
-Daha fazla bilgi için bkz. [Boole tür dönüştürmeleri](../data-types/boolean-data-type.md#type-conversions).
+ The `AndAlso` operator is defined only for the [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic converts each operand as necessary to `Boolean` before evaluating the expression. If you assign the result to a numeric type, Visual Basic converts it from `Boolean` to that type such that `False` becomes `0` and `True` becomes `-1`.
+For more information, see [Boolean Type Conversions](../data-types/boolean-data-type.md#type-conversions).
   
-## <a name="overloading"></a>Aşırı yükleme  
- [And işleci](../../../visual-basic/language-reference/operators/and-operator.md) ve [IsFalse işleci](../../../visual-basic/language-reference/operators/isfalse-operator.md) *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışlarını yeniden tanımlayabileceği anlamına gelir. @No__t aşırı yükleme-0 ve `IsFalse` işleçleri `AndAlso` işlecinin davranışını etkiler. Kodunuz, `And` ve `IsFalse` ' yi aşırı yükleyen bir sınıf veya yapı üzerinde `AndAlso` kullanıyorsa, yeniden tanımlanmış davranışlarını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a>Aşırı Yükleme  
+ The [And Operator](../../../visual-basic/language-reference/operators/and-operator.md) and the [IsFalse Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md) can be *overloaded*, which means that a class or structure can redefine their behavior when an operand has the type of that class or structure. Overloading the `And` and `IsFalse` operators affects the behavior of the `AndAlso` operator. If your code uses `AndAlso` on a class or structure that overloads `And` and `IsFalse`, be sure you understand their redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, iki ifadeye mantıksal bir birlikte gerçekleştirmek için `AndAlso` işlecini kullanır. Sonuç, tüm konkatılmış ifadenin doğru olup olmadığını temsil eden bir `Boolean` değeridir. İlk ifade `False` ise, ikincisi değerlendirilmez.  
+ The following example uses the `AndAlso` operator to perform a logical conjunction on two expressions. The result is a `Boolean` value that represents whether the entire conjoined expression is true. If the first expression is `False`, the second is not evaluated.  
   
  [!code-vb[VbVbalrOperators#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#24)]  
   
- Yukarıdaki örnek sırasıyla `True`, `False` ve `False` sonuçları üretir. @No__t-0 hesaplamasında ikinci ifade değerlendirilmez çünkü ilki zaten `False` ' dir. Ancak, ikinci ifade `thirdCheck` hesaplamasında değerlendirilir.  
+ The preceding example produces results of `True`, `False`, and `False`, respectively. In the calculation of `secondCheck`, the second expression is not evaluated because the first is already `False`. However, the second expression is evaluated in the calculation of `thirdCheck`.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir dizinin öğeleri arasında belirli bir değeri arayan `Function` yordamını gösterir. Dizi boşsa veya dizi uzunluğu aşılmışsa, `While` açıklaması dizi öğesini arama değerine karşı test etmez.  
+ The following example shows a `Function` procedure that searches for a given value among the elements of an array. If the array is empty, or if the array length has been exceeded, the `While` statement does not test the array element against the search value.  
   
  [!code-vb[VbVbalrOperators#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#25)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Mantıksal/bit düzeyinde Işleçler (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
-- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [IŞLEVLERE göre listelenen işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [And Işleci](../../../visual-basic/language-reference/operators/and-operator.md)
-- [IsFalse Işleci](../../../visual-basic/language-reference/operators/isfalse-operator.md)
-- [Visual Basic mantıksal ve bit düzeyinde Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [And İşleci](../../../visual-basic/language-reference/operators/and-operator.md)
+- [IsFalse İşleci](../../../visual-basic/language-reference/operators/isfalse-operator.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

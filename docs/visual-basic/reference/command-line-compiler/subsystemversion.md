@@ -1,24 +1,24 @@
 ---
-title: -subsystemversion (Visual Basic)
+title: -subsystemversion
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /subsystemversion compiler option [Visual Basic]
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: e42501a002d808f31dc3d599dc030e96c573a22f
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: a977bc4cff822de551bf82d0f31707e9b2b6ea41
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380316"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348531"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 
-Böylece Windows yürütülebilir dosyayı çalışabileceği sürümleri belirleme oluşturulan yürütülebilir dosyanın çalıştırılabileceği alt en düşük sürümünü belirtir. En yaygın olarak, bu seçeneği, yürütülebilir dosyanın daha eski Windows sürümleri ile kullanılamayan belirli güvenlik özellikleri yararlanabilir sağlar.
+Specifies the minimum version of the subsystem on which the generated executable file can run, thereby determining the versions of Windows on which the executable file can run. Most commonly, this option ensures that the executable file can leverage particular security features that aren’t available with older versions of Windows.
 
 > [!NOTE]
-> Alt belirtmek için kullanın [-hedef](../../../csharp/language-reference/compiler-options/target-compiler-option.md) derleyici seçeneği.
+> To specify the subsystem itself, use the [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) compiler option.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,15 +30,15 @@ Böylece Windows yürütülebilir dosyayı çalışabileceği sürümleri belirl
 
 `major.minor`
 
-Alt sistem sürümünü, birincil ve ikincil sürüme bir nokta gösterimi ifade olarak gerekli olan en düşük. Örneğin, bir uygulama için 6.01, bu seçenek değerini ayarlarsanız bu konunun ilerleyen bölümlerindeki bir tabloda açıklandığı gibi Windows 7'den eski bir işletim sisteminde çalıştıramazsınız belirtebilirsiniz. Değerleri belirtmelisiniz `major` ve `minor` tamsayılar olarak.
+The minimum required version of the subsystem, as expressed in a dot notation for major and minor versions. For example, you can specify that an application can't run on an operating system that's older than Windows 7 if you set the value of this option to 6.01, as the table later in this topic describes. You must specify the values for `major` and `minor` as integers.
 
-Baştaki sıfırları `minor` sürümü, sürüm değişmez ancak Sondaki sıfırları yapın. Örneğin, aynı sürüme 6.1 ve 6.01 bakın, ancak farklı bir sürüme 6.10 başvuruyor. Alt sürüm iki basamak Karışıklığı önlemek için ifade öneririz.
+Leading zeroes in the `minor` version don't change the version, but trailing zeroes do. For example, 6.1 and 6.01 refer to the same version, but 6.10 refers to a different version. We recommend expressing the minor version as two digits to avoid confusion.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Aşağıdaki tabloda Windows ortak alt sistemi sürümlerini listeler.
+The following table lists common subsystem versions of Windows.
 
-|Windows sürümü|Alt sistem sürümü|
+|Windows version|Subsystem version|
 |---------------------|-----------------------|
 |Windows 2000|5.00|
 |Windows XP|5.01|
@@ -50,9 +50,9 @@ Aşağıdaki tabloda Windows ortak alt sistemi sürümlerini listeler.
 
 ## <a name="default-values"></a>Varsayılan değerler
 
-Varsayılan değer olan **- subsystemversion** derleyici seçeneği, aşağıdaki listede koşul bağlıdır:
+The default value of the **-subsystemversion** compiler option depends on the conditions in the following list:
 
-- Aşağıdaki listedeki herhangi bir derleyici seçeneği ayarlanırsa varsayılan değeri 6.02 şöyledir:
+- The default value is 6.02 if any compiler option in the following list is set:
 
   - [-target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)
 
@@ -60,16 +60,16 @@ Varsayılan değer olan **- subsystemversion** derleyici seçeneği, aşağıdak
 
   - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
 
-- Varsayılan 6.00 MSBuild kullanıyorsanız, .NET Framework 4.5, hedeflediğiniz ve bu listede daha önce belirtilmiş derleyici seçeneklerinden herhangi birini ayarlamasını yapmadığınızı değerdir.
+- The default value is 6.00 if you're using MSBuild, you're targeting .NET Framework 4.5, and you haven't set any of the compiler options that were specified earlier in this list.
 
-- Yukarıdaki koşulların hiçbiri doğru olması durumunda varsayılan 4.00 değerdir.
+- The default value is 4.00 if none of the previous conditions is true.
 
 ## <a name="setting-this-option"></a>Bu seçeneği ayarlama
 
-Ayarlanacak **- subsystemversion** derleyici seçeneğini Visual Studio'da .vbproj dosyasını açın ve için bir değer belirtmeniz gerekir `SubsystemVersion` MSBuild XML özelliği. Visual Studio IDE'de bu seçeneği ayarlanamaz. Daha fazla bilgi için bu konuda daha önce "Varsayılan değerler" konusuna bakın veya [yaygın MSBuild proje özellikleri](/visualstudio/msbuild/common-msbuild-project-properties).
+To set the **-subsystemversion** compiler option in Visual Studio, you must open the .vbproj file and specify a value for the `SubsystemVersion` property in the MSBuild XML. You can't set this option in the Visual Studio IDE. For more information, see "Default values" earlier in this topic or [Common MSBuild Project Properties](/visualstudio/msbuild/common-msbuild-project-properties).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
 
 - [MSBuild Özellikleri](/visualstudio/msbuild/msbuild-properties)

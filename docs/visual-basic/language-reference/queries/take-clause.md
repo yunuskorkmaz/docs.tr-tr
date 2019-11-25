@@ -1,5 +1,5 @@
 ---
-title: Take Tümcesi (Visual Basic)
+title: Take Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryTake
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: 32a4c7fd7f1e2f6fe640f3f53f15579f014759d5
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3082954ef84560ccb70f7a47cd3532f622829392
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004720"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349641"
 ---
 # <a name="take-clause-visual-basic"></a>Take Tümcesi (Visual Basic)
-Bir koleksiyonun başından itibaren belirtilen sayıda bitişik öğeyi döndürür.  
+Returns a specified number of contiguous elements from the start of a collection.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,25 +26,25 @@ Take count
   
 ## <a name="parts"></a>Bölümler  
  `count`  
- Gerekli. Döndürülecek dizi öğe sayısını değerlendiren bir değer veya ifade.  
+ Gerekli. A value or an expression that evaluates to the number of elements of the sequence to return.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 yan tümcesi, bir sorgunun bir sonuç listesinin başından itibaren belirtilen sayıda bitişik öğe içermesini sağlar. Eklenecek öğe sayısı `count` parametresiyle belirtilir.  
+ The `Take` clause causes a query to include a specified number of contiguous elements from the start of a results list. The number of elements to include is specified by the `count` parameter.  
   
- Sorgunun herhangi bir segmentinden bir veri aralığı döndürmek için `Skip` yan tümcesiyle `Take` yan tümcesini kullanabilirsiniz. Bunu yapmak için aralığın ilk öğesinin dizinini `Skip` yan tümcesine ve aralığın boyutunu `Take` yan tümcesine geçirin. Bu durumda, `Take` yan tümcesinin `Skip` yan tümcesinden sonra belirtilmesi gerekir.  
+ You can use the `Take` clause with the `Skip` clause to return a range of data from any segment of a query. To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause. In this case, the `Take` clause must be specified after the `Skip` clause.  
   
- Bir sorguda `Take` yan tümcesini kullandığınızda sonuçların, `Take` yan tümcesinin amaçlanan sonuçları içermesini sağlayacak bir sırada döndürüldüğünden emin olmanız da gerekebilir. Sorgu sonuçlarını sıralama hakkında daha fazla bilgi için bkz. [order by yan tümcesi](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ When you use the `Take` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Take` clause to include the intended results. For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- Belirtilen koşula bağlı olarak yalnızca belirli öğelerin döndürülüp döndürülmeyeceğini belirtmek için `TakeWhile` yan tümcesini kullanabilirsiniz.  
+ You can use the `TakeWhile` clause to specify that only certain elements be returned, depending on a supplied condition.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, sayfalardaki bir sorgudan veri döndürmek için `Skip` yan tümcesiyle birlikte `Take` yan tümcesini kullanır. GetCustomers işlevi, belirtilen başlangıç dizini değerine kadar listedeki müşterileri atlamak için `Skip` yan tümcesini kullanır ve bu dizin değerinden itibaren müşterilerin bir sayfasını döndürmek için `Take` yan tümcesini kullanır.  
+ The following code example uses the `Take` clause together with the `Skip` clause to return data from a query in pages. The GetCustomers function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)

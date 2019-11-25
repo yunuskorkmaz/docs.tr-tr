@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir belirsiz sayıda parametre (Visual Basic) isteyen bir yordamı aşırı yükleme'
+title: 'Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
@@ -10,48 +10,48 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 047d566c13f03803d2e5c3bc6cce0db56df4a3f0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955747"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345844"
 ---
-# <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Nasıl yapılır: Bir belirsiz sayıda parametre (Visual Basic) isteyen bir yordamı aşırı yükleme
-Bir yordam varsa bir [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametresi, parametre dizisi için tek boyutlu bir dizi alan aşırı yüklenmiş bir sürümünü tanımlayamaz. Daha fazla bilgi için bkz: "Örtük aşırı yüklemeleri için bir ParamArray parametresiyle" [aşırı yükleme yordamları Hususlarına](./considerations-in-overloading-procedures.md).  
+# <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme (Visual Basic)
+If a procedure has a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter, you cannot define an overloaded version taking a one-dimensional array for the parameter array. For more information, see "Implicit Overloads for a ParamArray Parameter" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
   
-### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>Değişken sayıda parametre isteyen bir yordamı aşırı yükleme için  
+### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>To overload a procedure that takes a variable number of parameters  
   
-1. Yordam ve kod mantıksal avantajlarından çağırma sürümlerinden birden fazla aşırı anlamamıza bir `ParamArray` parametresi. "Aşırı yüklemeler ve ParamArrays" konularına bakın [yordamları aşırı yüklemeye ilişkin düşünceler](./considerations-in-overloading-procedures.md).  
+1. Ascertain that the procedure and calling code logic benefits from overloaded versions more than from a `ParamArray` parameter. See "Overloads and ParamArrays" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
   
-2. Sağlanan değerler hangi sayıda yordam parametre listesi değişken parçası kabul etmelidir belirleyin. Bu değer harf içerebilir ve tek tek boyutlu bir dizi harf içerebilir.  
+2. Determine which numbers of supplied values the procedure should accept in the variable part of the parameter list. This might include the case of no value, and it might include the case of a single one-dimensional array.  
   
-3. Sağlanan değerler kabul edilebilir her sayısı için yazma bir `Sub` veya `Function` bildirim deyimindeki, karşılık gelen parametre listesi tanımlar. Ya da kullanmayın `Optional` veya `ParamArray` anahtar sözcüğü Bu aşırı yüklenmiş bir sürüm.  
+3. For each acceptable number of supplied values, write a `Sub` or `Function` declaration statement that defines the corresponding parameter list. Do not use either the `Optional` or the `ParamArray` keyword in this overloaded version.  
   
-4. Her bildiriminde önünde `Sub` veya `Function` anahtar sözcüğü ile [aşırı](../../../../visual-basic/language-reference/modifiers/overloads.md) anahtar sözcüğü.  
+4. In each declaration, precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.  
   
-5. Her bildirimi çağıran kod, bildirimin parametre listesine karşılık gelen değerlerini sağlayan, yürütülecek yordamı kod yazın.  
+5. Following each declaration, write the procedure code that should execute when the calling code supplies values corresponding to that declaration's parameter list.  
   
-6. Her bir yordam sonlandırmak `End Sub` veya `End Function` uygun şekilde deyimi.  
+6. Terminate each procedure with the `End Sub` or `End Function` statement as appropriate.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, tanımlı bir yordam gösterir. bir [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametresi ve aşırı yüklenmiş yordamları eşdeğer bir dizi.  
+ The following example shows a procedure defined with a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter, and then an equivalent set of overloaded procedures.  
   
  [!code-vb[VbVbcnProcedures#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#69)]  
   
  [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
- Böyle bir yordam bir parametre listesiyle parametre dizisi için tek boyutlu bir dizi alan aşırı yükleyemez. Ancak, bir örtük aşırı imzalarını kullanabilirsiniz. Aşağıdaki bildirimleri bu göstermektedir.  
+ You cannot overload such a procedure with a parameter list that takes a one-dimensional array for the parameter array. However, you can use the signatures of the other implicit overloads. The following declarations illustrate this.  
   
  [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
- Çağıran kod tarafından sağlanan bir veya daha fazla değer için olup olmadığını sınamak aşırı yüklenmiş sürümleri kodda yok `ParamArray` parametresi veya ise, kaç tane. Visual Basic denetim çağırma bağımsız değişken listesiyle eşleşen sürüme geçer.  
+ The code in the overloaded versions does not have to test whether the calling code supplied one or more values for the `ParamArray` parameter, or if so, how many. Visual Basic passes control to the version matching the calling argument list.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Çünkü bir yordama bir `ParamArray` parametre kümesi aşırı yüklü sürümler için eşdeğerdir, örtük Bu aşırı yüklemeler birine karşılık gelen bir parametre listesi ile bu tür bir yordamı aşırı yüklenemez. Daha fazla bilgi için [aşırı yükleme yordamları Hususlarına](./considerations-in-overloading-procedures.md).  
+ Because a procedure with a `ParamArray` parameter is equivalent to a set of overloaded versions, you cannot overload such a procedure with a parameter list corresponding to any of these implicit overloads. For more information, see [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Süresiz olarak büyük olabilecek bir dizi işlem olduğunda, uygulamanızın bazı iç kapasite taşmasını riski yoktur. Bir parametre dizisi kabul ederseniz, çağıran kodun geçirilen dizinin uzunluğunu test etmek ve uygulamanız için çok büyük ise, uygulamanız gereken adımlar gerekir.  
+ Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array, you should test for the length of the array the calling code passed to it, and take appropriate steps if it is too large for your application.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -61,7 +61,7 @@ Bir yordam varsa bir [ParamArray](../../../../visual-basic/language-reference/mo
 - [Parametre Dizileri](./parameter-arrays.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
 - [Yordam Sorunlarını Giderme](./troubleshooting-procedures.md)
-- [Nasıl yapılır: Bir yordamın birden fazla sürümünü tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Nasıl yapılır: Aşırı yüklenmiş bir yordamı çağırma](./how-to-call-an-overloaded-procedure.md)
-- [Nasıl yapılır: İsteğe bağlı parametreler isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Nasıl yapılır: Bir Yordamın Birden Fazla Sürümünü Tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Nasıl yapılır: Aşırı Yüklenmiş Bir Yordamı Çağırma](./how-to-call-an-overloaded-procedure.md)
+- [Nasıl yapılır: İsteğe Bağlı Parametreler İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Aşırı Yükleme Çözümü](./overload-resolution.md)

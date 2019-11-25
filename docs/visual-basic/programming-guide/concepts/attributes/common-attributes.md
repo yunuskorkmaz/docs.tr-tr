@@ -1,87 +1,87 @@
 ---
-title: Ortak öznitelikler (Visual Basic)
+title: Ortak Öznitelikler
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 5bc568279a6952fdc5e0a000b1208cd7f9cfd6e7
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2889411779a275baa8c91862d4cac2f820d660d0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524287"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353522"
 ---
-# <a name="common-attributes-visual-basic"></a>Ortak öznitelikler (Visual Basic)
+# <a name="common-attributes-visual-basic"></a>Common Attributes (Visual Basic)
 
-Bu konuda Visual Basic programlarında en yaygın olarak kullanılan öznitelikler açıklanmaktadır.
+This topic describes the attributes that are most commonly used in Visual Basic programs.
 
-- [Genel öznitelikler](#Global)
+- [Global Attributes](#Global)
 
-- [Kullanımdan kaldırılmış öznitelik](#Obsolete)
+- [Obsolete Attribute](#Obsolete)
 
-- [Koşullu öznitelik](#Conditional)
+- [Conditional Attribute](#Conditional)
 
-- [Arayan bilgileri öznitelikleri](#CallerInfo)
+- [Caller Info Attributes](#CallerInfo)
 
-- [Visual Basic öznitelikleri](#VB)
+- [Visual Basic Attributes](#VB)
 
-## <a name="Global"></a>Genel öznitelikler
+## <a name="Global"></a> Global Attributes
 
-Çoğu öznitelik sınıflar veya yöntemler gibi belirli dil öğelerine uygulanır; Ancak, bazı öznitelikler geneldir, tüm derleme veya modül için geçerlidir. Örneğin, <xref:System.Reflection.AssemblyVersionAttribute> özniteliği aşağıdaki gibi bir derlemeye sürüm bilgilerini eklemek için kullanılabilir:
+Most attributes are applied to specific language elements such as classes or methods; however, some attributes are global—they apply to an entire assembly or module. For example, the <xref:System.Reflection.AssemblyVersionAttribute> attribute can be used to embed version information into an assembly, like this:
 
 ```vb
 <Assembly: AssemblyVersion("1.0.0.0")>
 ```
 
-Genel öznitelikler, herhangi bir üst düzey `Imports` deyimden sonra ve herhangi bir tür, modül veya ad alanı bildirimlerinden sonra kaynak kodunda görünür. Genel öznitelikler birden çok kaynak dosyasında görünebilir, ancak dosyaların tek bir derleme geçişinde derlenmesi gerekir. Visual Basic projeler için genel öznitelikler genellikle AssemblyInfo. vb dosyasına konur (Visual Studio 'da bir proje oluşturduğunuzda dosya otomatik olarak oluşturulur).
+Global attributes appear in the source code after any top-level `Imports` statements and before any type, module, or namespace declarations. Global attributes can appear in multiple source files, but the files must be compiled in a single compilation pass. For Visual Basic projects, global attributes are generally put in the AssemblyInfo.vb file (the file is created automatically when you create a project in Visual Studio).
 
-Derleme öznitelikleri, bir derleme hakkında bilgi sağlayan değerlerdir. Bunlar aşağıdaki kategorilere ayrılır:
+Assembly attributes are values that provide information about an assembly. They fall into the following categories:
 
-- Bütünleştirilmiş kod kimliği öznitelikleri
+- Assembly identity attributes
 
-- Bilgilendirici öznitelikler
+- Informational attributes
 
-- Bütünleştirilmiş kod bildirim öznitelikleri
+- Assembly manifest attributes
 
-### <a name="assembly-identity-attributes"></a>Bütünleştirilmiş kod kimliği öznitelikleri
+### <a name="assembly-identity-attributes"></a>Assembly Identity Attributes
 
-Üç öznitelik (varsa, güçlü bir ad varsa) bir derlemenin kimliğini belirleme: ad, sürüm ve kültür. Bu öznitelikler, derlemenin tam adını oluşturur ve kodda başvuru yaptığınızda gereklidir. Öznitelikleri kullanarak bir derlemenin sürümünü ve kültürünü ayarlayabilirsiniz. Bununla birlikte, ad değeri derleyici tarafından, derleme [bilgileri Iletişim kutusunda](/visualstudio/ide/reference/assembly-information-dialog-box)VISUAL Studio IDE veya derleme oluşturulduğunda derleme Bağlayıcısı (al. exe) tarafından ayarlanır. @No__t_0 özniteliği, derlemenin birden çok kopyasının birlikte kullanılıp kullanılamayacağını belirtir.
+Three attributes (with a strong name, if applicable) determine the identity of an assembly: name, version, and culture. These attributes form the full name of the assembly and are required when you reference it in code. You can set an assembly's version and culture using attributes. However, the name value is set by the compiler, the Visual Studio IDE in the [Assembly Information Dialog Box](/visualstudio/ide/reference/assembly-information-dialog-box), or the Assembly Linker (Al.exe) when the assembly is created, based on the file that contains the assembly manifest. The <xref:System.Reflection.AssemblyFlagsAttribute> attribute specifies whether multiple copies of the assembly can coexist.
 
-Aşağıdaki tabloda kimlik öznitelikleri gösterilmektedir.
-
-|Öznitelik|Amaç|
-|---------------|-------------|
-|<xref:System.Reflection.AssemblyName>|Bir derlemenin kimliğini tam olarak açıklar.|
-|<xref:System.Reflection.AssemblyVersionAttribute>|Bir derlemenin sürümünü belirtir.|
-|<xref:System.Reflection.AssemblyCultureAttribute>|Derlemenin desteklediği kültürü belirtir.|
-|<xref:System.Reflection.AssemblyFlagsAttribute>|Bir derlemenin aynı bilgisayarda, aynı işlemde veya aynı uygulama etki alanında yan yana yürütmeyi destekleyip desteklemediğini belirtir.|
-
-### <a name="informational-attributes"></a>Bilgilendirici öznitelikler
-
-Bir derlemeye ek şirket veya ürün bilgileri sağlamak için bilgilendirici öznitelikleri kullanabilirsiniz. Aşağıdaki tabloda <xref:System.Reflection?displayProperty=nameWithType> ad alanında tanımlanan bilgilendirici öznitelikler gösterilmektedir.
+The following table shows the identity attributes.
 
 |Öznitelik|Amaç|
 |---------------|-------------|
-|<xref:System.Reflection.AssemblyProductAttribute>|Bir derleme bildirimi için bir ürün adı belirten özel bir özniteliği tanımlar.|
-|<xref:System.Reflection.AssemblyTrademarkAttribute>|Bir derleme bildirimi için ticari marka belirten özel bir özniteliği tanımlar.|
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Bir derleme bildirimi için bilgilendirici bir sürüm belirten özel bir özniteliği tanımlar.|
-|<xref:System.Reflection.AssemblyCompanyAttribute>|Bir derleme bildirimi için bir şirket adı belirten özel bir özniteliği tanımlar.|
-|<xref:System.Reflection.AssemblyCopyrightAttribute>|Bir derleme bildirimi için bir telif hakkı belirten özel bir özniteliği tanımlar.|
-|<xref:System.Reflection.AssemblyFileVersionAttribute>|Derleyiciye Win32 dosya sürümü kaynağı için belirli bir sürüm numarası kullanmasını söyler.|
-|<xref:System.CLSCompliantAttribute>|Derlemenin ortak dil belirtimi (CLS) ile uyumlu olup olmadığını gösterir.|
+|<xref:System.Reflection.AssemblyName>|Fully describes the identity of an assembly.|
+|<xref:System.Reflection.AssemblyVersionAttribute>|Specifies the version of an assembly.|
+|<xref:System.Reflection.AssemblyCultureAttribute>|Specifies which culture the assembly supports.|
+|<xref:System.Reflection.AssemblyFlagsAttribute>|Specifies whether an assembly supports side-by-side execution on the same computer, in the same process, or in the same application domain.|
 
-### <a name="assembly-manifest-attributes"></a>Bütünleştirilmiş kod bildirim öznitelikleri
+### <a name="informational-attributes"></a>Informational Attributes
 
-Derleme bildiriminde bilgi sağlamak için bütünleştirilmiş kod bildirim özniteliklerini kullanabilirsiniz. Buna Başlık, açıklama, varsayılan diğer ad ve yapılandırma dahildir. Aşağıdaki tabloda <xref:System.Reflection?displayProperty=nameWithType> ad alanında tanımlanan derleme bildirimi öznitelikleri gösterilmektedir.
+You can use informational attributes to provide additional company or product information for an assembly. The following table shows the informational attributes defined in the <xref:System.Reflection?displayProperty=nameWithType> namespace.
 
 |Öznitelik|Amaç|
 |---------------|-------------|
-|<xref:System.Reflection.AssemblyTitleAttribute>|Bir derleme bildirimi için derleme başlığını belirten özel bir özniteliği tanımlar.|
-|<xref:System.Reflection.AssemblyDescriptionAttribute>|Bir derleme bildirimi için derleme açıklamasını belirten özel bir özniteliği tanımlar.|
-|<xref:System.Reflection.AssemblyConfigurationAttribute>|Derleme bildirimi için bir derleme yapılandırması (perakende veya hata ayıklama) belirten özel bir öznitelik tanımlar.|
-|<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Bir derleme bildirimi için kolay bir varsayılan diğer ad tanımlar|
+|<xref:System.Reflection.AssemblyProductAttribute>|Defines a custom attribute that specifies a product name for an assembly manifest.|
+|<xref:System.Reflection.AssemblyTrademarkAttribute>|Defines a custom attribute that specifies a trademark for an assembly manifest.|
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Defines a custom attribute that specifies an informational version for an assembly manifest.|
+|<xref:System.Reflection.AssemblyCompanyAttribute>|Defines a custom attribute that specifies a company name for an assembly manifest.|
+|<xref:System.Reflection.AssemblyCopyrightAttribute>|Defines a custom attribute that specifies a copyright for an assembly manifest.|
+|<xref:System.Reflection.AssemblyFileVersionAttribute>|Instructs the compiler to use a specific version number for the Win32 file version resource.|
+|<xref:System.CLSCompliantAttribute>|Indicates whether the assembly is compliant with the Common Language Specification (CLS).|
 
-## <a name="Obsolete"></a>Kullanımdan kaldırılmış öznitelik
+### <a name="assembly-manifest-attributes"></a>Assembly Manifest Attributes
 
-@No__t_0 özniteliği, bir program varlığını artık kullanım için önerilmeyen bir şekilde işaretler. Kullanımdan kalktı olarak işaretlenen bir varlığın her kullanımı, özniteliğin nasıl yapılandırıldığına bağlı olarak bir uyarı veya hata oluşturur. Örneğin:
+You can use assembly manifest attributes to provide information in the assembly manifest. This includes title, description, default alias, and configuration. The following table shows the assembly manifest attributes defined in the <xref:System.Reflection?displayProperty=nameWithType> namespace.
+
+|Öznitelik|Amaç|
+|---------------|-------------|
+|<xref:System.Reflection.AssemblyTitleAttribute>|Defines a custom attribute that specifies an assembly title for an assembly manifest.|
+|<xref:System.Reflection.AssemblyDescriptionAttribute>|Defines a custom attribute that specifies an assembly description for an assembly manifest.|
+|<xref:System.Reflection.AssemblyConfigurationAttribute>|Defines a custom attribute that specifies an assembly configuration (such as retail or debug) for an assembly manifest.|
+|<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Defines a friendly default alias for an assembly manifest|
+
+## <a name="Obsolete"></a> Obsolete Attribute
+
+The `Obsolete` attribute marks a program entity as one that is no longer recommended for use. Each use of an entity marked obsolete will subsequently generate a warning or an error, depending on how the attribute is configured. Örneğin:
 
 ```vb
 <System.Obsolete("use class B")>
@@ -100,9 +100,9 @@ Class B
 End Class
 ```
 
-Bu örnekte `Obsolete` özniteliği sınıf `A` ve yönteme `B.OldMethod` uygulanır. @No__t_0 uygulanan öznitelik oluşturucusunun ikinci bağımsız değişkeni `true` olarak ayarlandığı için, bu yöntem bir derleyici hatasına neden olur, ancak sınıf `A` kullanılması yalnızca bir uyarı oluşturur. Ancak `B.NewMethod` çağırmak, hiçbir uyarı veya hata üretir.
+In this example the `Obsolete` attribute is applied to class `A` and to method `B.OldMethod`. Because the second argument of the attribute constructor applied to `B.OldMethod` is set to `true`, this method will cause a compiler error, whereas using class `A` will just produce a warning. Calling `B.NewMethod`, however, produces no warning or error.
 
-Öznitelik oluşturucusuna ilk bağımsız değişken olarak girilen dize, uyarının veya hatanın bir parçası olarak görüntülenir. Örneğin, önceki tanımlarla birlikte kullandığınızda, aşağıdaki kod iki uyarı ve bir hata oluşturur:
+The string provided as the first argument to attribute constructor will be displayed as part of the warning or error. For example, when you use it with the previous definitions, the following code generates two warnings and one error:
 
 ```vb
 ' Generates 2 warnings:
@@ -116,22 +116,22 @@ b.NewMethod()
 ' b.OldMethod()
 ```
 
-Sınıf `A` için iki uyarı oluşturulur: biri sınıf başvurusunun bildirimi ve diğeri sınıf oluşturucusu içindir.
+Two warnings for class `A` are generated: one for the declaration of the class reference, and one for the class constructor.
 
-@No__t_0 özniteliği bağımsız değişkenler olmadan kullanılabilir, ancak öğenin neden kullanımdan kalkdığına ve bunun yerine ne tür bir açıklama dahil edilmesi önerilir.
+The `Obsolete` attribute can be used without arguments, but including an explanation of why the item is obsolete and what to use instead is recommended.
 
-@No__t_0 özniteliği tek kullanım özniteliğidir ve özniteliklere izin veren herhangi bir varlığa uygulanabilir. `Obsolete`, <xref:System.ObsoleteAttribute> için bir diğer addır.
+The `Obsolete` attribute is a single-use attribute and can be applied to any entity that allows attributes. `Obsolete` is an alias for <xref:System.ObsoleteAttribute>.
 
-## <a name="Conditional"></a>Koşullu öznitelik
+## <a name="Conditional"></a> Conditional Attribute
 
-@No__t_0 özniteliği, bir yöntemi ön işleme tanımlayıcısına bağımlı hale getirir. @No__t_0 özniteliği <xref:System.Diagnostics.ConditionalAttribute> için bir diğer addır ve bir yönteme veya öznitelik sınıfına uygulanabilir.
+The `Conditional` attribute makes the execution of a method dependent on a preprocessing identifier. The `Conditional` attribute is an alias for <xref:System.Diagnostics.ConditionalAttribute>, and can be applied to a method or an attribute class.
 
-Bu örnekte, programa özgü tanılama bilgilerinin görüntülenmesini etkinleştirmek veya devre dışı bırakmak için bir yönteme `Conditional` uygulanır:
+In this example, `Conditional` is applied to a method to enable or disable the display of program-specific diagnostic information:
 
 ```vb
 #Const TRACE_ON = True
-Imports System
 Imports System.Diagnostics
+
 Module TestConditionalAttribute
     Public Class Trace
         <Conditional("TRACE_ON")>
@@ -148,9 +148,9 @@ Module TestConditionalAttribute
 End Module
 ```
 
-@No__t_0 tanımlayıcı tanımlanmamışsa, izleme çıktısı görüntülenmez.
+If the `TRACE_ON` identifier is not defined, no trace output will be displayed.
 
-@No__t_0 özniteliği genellikle hata ayıklama derlemeleri için izleme ve günlüğe kaydetme özelliklerini etkinleştirmek üzere `DEBUG` tanımlayıcısı ile kullanılır, ancak bunun gibi sürüm yapılarında desteklenmez:
+The `Conditional` attribute is often used with the `DEBUG` identifier to enable trace and logging features for debug builds but not in release builds, like this:
 
 ```vb
 <Conditional("DEBUG")>
@@ -159,7 +159,7 @@ Shared Sub DebugMethod()
 End Sub
 ```
 
-Koşullu olarak işaretlenen bir yöntem çağrıldığında, belirtilen ön işleme simgesinin varlığı veya yokluğu, çağrının eklenip eklenmeyeceğini veya atlanmadığını belirler. Sembol tanımlanmışsa, çağrı dahil edilir; Aksi takdirde, çağrı atlanır. @No__t_0 kullanmak, bir temizleyici, daha zarif ve `#if…#endif` bloklar içindeki yöntemlere benzer bir diğer hataya açık bir alternatiftir:
+When a method marked as conditional is called, the presence or absence of the specified preprocessing symbol determines whether the call is included or omitted. If the symbol is defined, the call is included; otherwise, the call is omitted. Using `Conditional` is a cleaner, more elegant, and less error-prone alternative to enclosing methods inside `#if…#endif` blocks, like this:
 
 ```vb
 #If DEBUG Then
@@ -168,11 +168,11 @@ Koşullu olarak işaretlenen bir yöntem çağrıldığında, belirtilen ön iş
 #End If
 ```
 
-Koşullu Yöntem bir sınıf veya yapı bildiriminde bir yöntem olmalıdır ve dönüş değeri içermemelidir.
+A conditional method must be a method in a class or struct declaration and must not have a return value.
 
-### <a name="using-multiple-identifiers"></a>Birden çok tanımlayıcı kullanma
+### <a name="using-multiple-identifiers"></a>Using Multiple Identifiers
 
-Bir yöntemde birden çok `Conditional` özniteliği varsa, koşullu simgelerden en az biri tanımlanmışsa yönteme bir çağrı dahil edilir (başka bir deyişle, semboller OR işleci kullanılarak mantıksal olarak birbirlerine bağlanır). Bu örnekte, `A` ya da `B` varlığı bir yöntem çağrısına neden olur:
+If a method has multiple `Conditional` attributes, a call to the method is included if at least one of the conditional symbols is defined (in other words, the symbols are logically linked together by using the OR operator). In this example, the presence of either `A` or `B` will result in a method call:
 
 ```vb
 <Conditional("A"), Conditional("B")>
@@ -181,7 +181,7 @@ Shared Sub DoIfAorB()
 End Sub
 ```
 
-VE işlecini kullanarak sembolleri mantıksal olarak bağlama etkisini elde etmek için, seri koşullu yöntemleri tanımlayabilirsiniz. Örneğin, aşağıdaki ikinci yöntem yalnızca `A` ve `B` tanımlanmışsa yürütülür:
+To achieve the effect of logically linking symbols by using the AND operator, you can define serial conditional methods. For example, the second method below will execute only if both `A` and `B` are defined:
 
 ```vb
 <Conditional("A")>
@@ -195,9 +195,9 @@ Shared Sub DoIfAandB()
 End Sub
 ```
 
-### <a name="using-conditional-with-attribute-classes"></a>Öznitelik sınıfları ile koşullu kullanma
+### <a name="using-conditional-with-attribute-classes"></a>Using Conditional with Attribute Classes
 
-@No__t_0 özniteliği bir öznitelik sınıfı tanımına da uygulanabilir. Bu örnekte, özel öznitelik `Documentation` yalnızca hata ayıklama tanımlanmışsa meta verilere bilgi ekler.
+The `Conditional` attribute can also be applied to an attribute class definition. In this example, the custom attribute `Documentation` will only add information to the metadata if DEBUG is defined.
 
 ```vb
 <Conditional("DEBUG")>
@@ -218,42 +218,42 @@ Class SampleClass
 End Class
 ```
 
-## <a name="CallerInfo"></a>Arayan bilgileri öznitelikleri
+## <a name="CallerInfo"></a> Caller Info Attributes
 
-Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodun dosya yolunu, kaynak kodundaki satır numarasını ve arayanın üye adını elde edebilirsiniz.
+Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. You can obtain the file path of the source code, the line number in the source code, and the member name of the caller.
 
-Üye çağıran bilgilerini almak için, isteğe bağlı parametrelere uygulanan öznitelikleri kullanırsınız. Her isteğe bağlı parametre varsayılan bir değer belirtir. Aşağıdaki tabloda <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanında tanımlanan çağıran bilgi öznitelikleri listelenmektedir:
+To obtain member caller information, you use attributes that are applied to optional parameters. Each optional parameter specifies a default value. The following table lists the Caller Info attributes that are defined in the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace:
 
 |Öznitelik|Açıklama|Tür|
 |---|---|---|
-|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Kaynak dosyasının arayanı içeren tam yolu. Bu, derleme zamanının yoludur.|`String`|
-|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Yöntemin çağrıldığı kaynak dosyadaki satır numarası.|`Integer`|
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Çağıranın Yöntem adı veya özellik adı. Daha fazla bilgi için bkz. [arayan bilgileri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
+|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Kaynak dosyasının arayanı içeren tam yolu. This is the path at compile time.|`String`|
+|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Line number in the source file from which the method is called.|`Integer`|
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Method name or property name of the caller. For more information, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
 
-Arayan bilgileri öznitelikleri hakkında daha fazla bilgi için bkz. [arayan bilgileri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
+For more information about the Caller Info attributes, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
 
-## <a name="VB"></a>Visual Basic öznitelikleri
+## <a name="VB"></a> Visual Basic Attributes
 
-Aşağıdaki tablo Visual Basic özgü öznitelikleri listeler.
+The following table lists the attributes that are specific to Visual Basic.
 
 |Öznitelik|Amaç|
 |---------------|-------------|
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|Derleyicinin sınıfın bir COM nesnesi olarak kullanıma sunulduğunu belirtir.|
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Modül üyelerine yalnızca modül için gereken nitelik kullanılarak erişilmesine izin verir.|
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Dosya girişi ve çıkış işlevleriyle kullanılmak üzere bir yapıda sabit uzunluklu dizenin boyutunu belirtir.|
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Dosya girişi ve çıkış işlevleriyle kullanılmak üzere bir yapıda sabit bir dizinin boyutunu belirtir.|
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Indicates to the compiler that the class should be exposed as a COM object.|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Allows module members to be accessed using only the qualification needed for the module.|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Specifies the size of a fixed-length string in a structure for use with file input and output functions.|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Specifies the size of a fixed array in a structure for use with file input and output functions.|
 
 ### <a name="comclassattribute"></a>COMClassAttribute
 
-Visual Basic COM bileşenleri oluşturma işlemini basitleştirmek için `COMClassAttribute` kullanın. COM nesneleri .NET Framework derlemelerinden oldukça farklıdır ve `COMClassAttribute` olmadan Visual Basic bir COM nesnesi oluşturmak için birkaç adımı izlemeniz gerekir. @No__t_0 ile işaretlenmiş sınıflar için, derleyici bu adımların çoğunu otomatik olarak gerçekleştirir.
+Use `COMClassAttribute` to simplify the process of creating COM components from Visual Basic. COM objects are considerably different from .NET Framework assemblies, and without `COMClassAttribute`, you need to follow a number of steps to generate a COM object from Visual Basic. For classes marked with `COMClassAttribute`, the compiler performs many of these steps automatically.
 
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute
 
-Modül üyelerine yalnızca modül için gereken nitelik kullanılarak erişilmesine izin vermek için `HideModuleNameAttribute` kullanın.
+Use `HideModuleNameAttribute` to allow module members to be accessed by using only the qualification needed for the module.
 
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute
 
-Visual Basic sabit uzunluklu bir dize oluşturmaya zorlamak için `VBFixedStringAttribute` kullanın. Dizeler varsayılan olarak değişken uzunluktadır ve bu öznitelik, dizeleri dosyalara depolarken yararlı olur. Aşağıdaki kod bunu gösterir:
+Use `VBFixedStringAttribute` to force Visual Basic to create a fixed-length string. Strings are of variable length by default, and this attribute is useful when storing strings to files. The following code demonstrates this:
 
 ```vb
 Structure Worker
@@ -267,13 +267,13 @@ End Structure
 
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute
 
-Boyut olarak düzeltilen dizileri bildirmek için `VBFixedArrayAttribute` kullanın. Visual Basic dizeleri gibi diziler, varsayılan olarak değişken uzunluktadır. Bu öznitelik, dosyalara veri serileştirilirken veya verileri yazarken faydalıdır.
+Use `VBFixedArrayAttribute` to declare arrays that are fixed in size. Like Visual Basic strings, arrays are of variable length by default. This attribute is useful when serializing or writing data to files.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic Programming Guide](../../../../visual-basic/programming-guide/index.md)
 - [Öznitelikler](../../../../standard/attributes/index.md)
-- [Yansıma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Yansıma kullanarak özniteliklere erişme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

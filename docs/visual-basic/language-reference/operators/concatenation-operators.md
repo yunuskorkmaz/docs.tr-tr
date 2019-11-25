@@ -1,19 +1,19 @@
 ---
-title: Birleştirme İşleçleri (Visual Basic)
+title: Birleştirme İşleçleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: d787368b-3713-47ff-bce8-f112720a673a
-ms.openlocfilehash: f22a50fc26108d879d1dcdcce02078b5c41aad4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 797b9bc03ef07e8c0810a1c53e855f39faf782c0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778579"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331491"
 ---
 # <a name="concatenation-operators-visual-basic"></a>Birleştirme İşleçleri (Visual Basic)
-Visual Basic içinde tanımlanan birleştirme işleçleri şunlardır:  
+The following are the concatenation operators defined in Visual Basic.  
   
  [& İşleci](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
   
@@ -23,5 +23,5 @@ Visual Basic içinde tanımlanan birleştirme işleçleri şunlardır:
 
 - <xref:System.Text>
 - <xref:System.Text.StringBuilder>
-- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Visual Basic'de birleştirme işleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Concatenation Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

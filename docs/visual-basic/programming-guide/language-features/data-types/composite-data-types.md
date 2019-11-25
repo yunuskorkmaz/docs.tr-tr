@@ -1,5 +1,5 @@
 ---
-title: Bileşik Veri Türleri (Visual Basic)
+title: Bileşik Veri Türleri
 ms.date: 04/25/2017
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,38 +11,38 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: 768559c7a6caf064f7529786675e51ce19667d6b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 1c099c5082f1c4173a50c70998c99135c94821e6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581709"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346382"
 ---
 # <a name="composite-data-types-visual-basic"></a>Bileşik Veri Türleri (Visual Basic)
-Visual Basic tedariklerini temel veri türlerine ek olarak, yapılar, diziler ve sınıflar gibi *bileşik veri türleri* oluşturmak için farklı türlerdeki öğeleri de birleştirebilirsiniz. Birleşik veri türlerini temel türler ve diğer bileşik türlerden oluşturabilirsiniz. Örneğin, bir yapı öğeleri dizisi veya dizi üyeleri olan bir yapı tanımlayabilirsiniz.  
+In addition to the elementary data types Visual Basic supplies, you can also assemble items of different types to create *composite data types* such as structures, arrays, and classes. You can build composite data types from elementary types and from other composite types. For example, you can define an array of structure elements, or a structure with array members.  
   
 ## <a name="data-types"></a>Veri Türleri  
- Bileşik tür, bileşenlerinden herhangi birinin veri türünden farklıdır. Örneğin, bir dizi `Integer` öğesi `Integer` veri türünde değildir.  
+ A composite type is different from the data type of any of its components. For example, an array of `Integer` elements is not of the `Integer` data type.  
   
- Dizi veri türü, normalde öğe türü, parantezler ve gereken virgüller kullanılarak temsil edilir. Örneğin, tek boyutlu bir `String` öğeleri `String()` olarak temsil edilir ve iki boyutlu bir dizi `Boolean` öğesi `Boolean(,)` olarak temsil edilir.  
+ An array data type is normally represented using the element type, parentheses, and commas as necessary. For example, a one-dimensional array of `String` elements is represented as `String()`, and a two-dimensional array of `Boolean` elements is represented as `Boolean(,)`.  
   
-## <a name="structure-types"></a>Yapı türleri  
- Tüm yapıları kapsayan tek bir veri türü yoktur. Bunun yerine, bir yapının her tanımı, iki yapı aynı sırada aynı öğeleri tanımlasa bile benzersiz bir veri türünü temsil eder. Ancak, aynı yapının iki veya daha fazla örneğini oluşturursanız Visual Basic, bunları aynı veri türünde olacak şekilde değerlendirir.  
+## <a name="structure-types"></a>Structure Types  
+ There is no single data type comprising all structures. Instead, each definition of a structure represents a unique data type, even if two structures define identical elements in the same order. However, if you create two or more instances of the same structure, Visual Basic considers them to be of the same data type.  
   
 ## <a name="tuples"></a>Demetler
 
-Kayıt düzeni, türleri önceden tanımlanmış iki veya daha fazla alan içeren hafif bir yapıdır. Tanımlama grupları Visual Basic 2017 ' den başlayarak desteklenir. Tanımlama alanları, bağımsız değişkenleri başvuruya göre geçirmek veya döndürülen alanları daha ağır bir sınıfta veya yapıda paketlemek zorunda kalmadan, tek bir yöntem çağrısından birden çok değer döndürmek için en yaygın olarak kullanılır. Tanımlama grupları hakkında daha fazla bilgi için [Tanımlama grupları](tuples.md) konusuna bakın.
+A tuple is a lightweight structure that contains two or more fields whose types are predefined. Tuples are supported starting with Visual Basic 2017. Tuples are most commonly used to return multiple values from a single method call without having to pass arguments by reference or packaging the returned fields in a more heavy-weight class or structure. See the [Tuples](tuples.md) topic for more information on tuples.
 
-## <a name="array-types"></a>Dizi türleri  
- Tüm dizileri kapsayan tek veri türü yok. Bir dizinin belirli bir örneğinin veri türü aşağıdaki şekilde belirlenir:  
+## <a name="array-types"></a>Array Types  
+ There is no single data type comprising all arrays. The data type of a particular instance of an array is determined by the following:  
   
-- Bir dizi olması  
+- The fact of being an array  
   
-- Dizinin derecesi (boyut sayısı)  
+- The rank (number of dimensions) of the array  
   
-- Dizinin öğe türü  
+- The element type of the array  
   
- Özellikle, belirli bir boyutun uzunluğu örneğin veri türünün bir parçası değildir. Aşağıdaki örnek bunu göstermektedir.  
+ In particular, the length of a given dimension is not part of the instance's data type. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Dim arrayA( ) As Byte = New Byte(12) {}  
@@ -52,22 +52,22 @@ Dim arrayD( , ) As Short
 Dim arrayE( , ) As Short = New Short(4, 10) {}  
 ```  
   
- Yukarıdaki örnekte, `arrayA` ve `arrayB` dizi değişkenleri, farklı uzunluklara başlatılmalarına rağmen aynı veri türünde (`Byte()`) olarak değerlendirilir. @No__t_0 ve `arrayC` değişkenleri, öğe türleri farklı olduğundan aynı türde değil. @No__t_0 ve `arrayD` değişkenleri, dereceleri farklı olduğundan aynı türde değil. @No__t_0 ve `arrayE` değişkenleri aynı türde olmalıdır — `Short(,)` — `arrayD` henüz başlatılmamış olsa da, dereceleri ve öğe türleri aynı olduğundan.  
+ In the preceding example, array variables `arrayA` and `arrayB` are considered to be of the same data type — `Byte()` — even though they are initialized to different lengths. Variables `arrayB` and `arrayC` are not of the same type because their element types are different. Variables `arrayC` and `arrayD` are not of the same type because their ranks are different. Variables `arrayD` and `arrayE` have the same type — `Short(,)` — because their ranks and element types are the same, even though `arrayD` is not yet initialized.  
   
- Diziler hakkında daha fazla bilgi için bkz. [diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ For more information on arrays, see [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="class-types"></a>Sınıf Türleri  
- Tüm sınıflardan oluşan tek bir veri türü yoktur. Bir sınıf başka bir sınıftan devralınabilir olsa da, her biri ayrı bir veri türüdür. Aynı sınıfın birden çok örneği aynı veri türündedir. Bir sınıf örneği değişkenini diğerine atarsanız, yalnızca aynı veri türüne sahip olmaları gerekmez, bellekte aynı sınıf örneğine işaret ederler.  
+ There is no single data type comprising all classes. Although one class can inherit from another class, each is a separate data type. Multiple instances of the same class are of the same data type. If you assign one class instance variable to another, not only do they have the same data type, they point to the same class instance in memory.  
   
- Sınıflar hakkında daha fazla bilgi için bkz. [nesneler ve sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+ For more information on classes, see [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [Visual Basic genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic dönüşümler yazın](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Nasıl yapılır: Değişkende Birden Fazla Değer Tutma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)

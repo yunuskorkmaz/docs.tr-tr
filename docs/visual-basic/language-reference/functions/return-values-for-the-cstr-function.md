@@ -1,5 +1,5 @@
 ---
-title: CStr İşlevinin Dönüş Değerleri (Visual Basic)
+title: CStr İşlevinin Dönüş Değerleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - times [Visual Basic], CStr Function return values
@@ -11,27 +11,27 @@ helpviewer_keywords:
 - dates [Visual Basic]
 - String data type [Visual Basic], converting
 ms.assetid: 3aa744e7-1419-45d5-85e3-e5abc2953673
-ms.openlocfilehash: cd525ea5a295411e509f3bc37285675d15a8c4f4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a40777c7290ec6d8c0d032f2edca5d889e20f04
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930043"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349997"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>CStr İşlevinin Dönüş Değerleri (Visual Basic)
-Aşağıdaki tabloda, farklı veri `CStr` `expression`türleri için dönüş değerleri açıklanmaktadır.  
+The following table describes the return values for `CStr` for different data types of `expression`.  
   
-|Eğer `expression` tür ise|`CStr`döndürdüğü|  
+|If `expression` type is|`CStr` returns|  
 |-----------------------------|--------------------|  
-|[Boolean Veri Türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|"True" veya "false" içeren bir dize.|  
-|[Date Veri Türü](../../../visual-basic/language-reference/data-types/date-data-type.md)|Sisteminizin kısa tarih biçiminde `Date` bir değer (Tarih ve saat) içeren bir dize.|  
-|[Sayısal Veri Türleri](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|Sayıyı temsil eden bir dize.|  
+|[Boolean Veri Türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|A string containing "True" or "False".|  
+|[Date Veri Türü](../../../visual-basic/language-reference/data-types/date-data-type.md)|A string containing a `Date` value (date and time) in the short date format of your system.|  
+|[Sayısal Veri Türleri](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|A string representing the number.|  
   
-## <a name="cstr-and-date"></a>CStr ve Tarih  
- `Date` Tür her zaman hem tarih hem de saat bilgilerini içerir. Tür dönüştürme amaçları doğrultusunda Visual Basic, 1/1/0001 (yıl 1 ' den 1 ' de) tarih için nötr bir *değer* ve 00:00:00 (gece yarısı) zaman için nötr bir değer olacak şekilde değerlendirir. `CStr`Sonuç dizesinde nötr değerler içermez. Örneğin, bir dizeye dönüştürürseniz `#January 1, 0001 9:30:00#` , sonuç "9:30:00 har" olur; tarih bilgileri bastırılır. Ancak, tarih bilgileri özgün `Date` değerde hala bulunur ve gibi işlevlerle <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>kurtarılabilir.  
+## <a name="cstr-and-date"></a>CStr and Date  
+ The `Date` type always contains both date and time information. For purposes of type conversion, Visual Basic considers 1/1/0001 (January 1 of the year 1) to be a *neutral value* for the date, and 00:00:00 (midnight) to be a neutral value for the time. `CStr` does not include neutral values in the resulting string. For example, if you convert `#January 1, 0001 9:30:00#` to a string, the result is "9:30:00 AM"; the date information is suppressed. However, the date information is still present in the original `Date` value and can be recovered with functions such as <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
   
 > [!NOTE]
-> `CStr` İşlevi, uygulamanın geçerli kültür ayarlarına bağlı olarak dönüşümünü gerçekleştirir. Belirli bir kültürdeki bir sayının dize gösterimini almak için, sayının `ToString(IFormatProvider)` metodunu kullanın. Örneğin, türünde `Double` bir <xref:System.Double.ToString%2A?displayProperty=nameWithType> değer bir `String`değeri olarak dönüştürülürken kullanın.  
+> The `CStr` function performs its conversion based on the current culture settings for the application. To get the string representation of a number in a particular culture, use the number's `ToString(IFormatProvider)` method. For example, use <xref:System.Double.ToString%2A?displayProperty=nameWithType> when converting a value of type `Double` to a `String`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

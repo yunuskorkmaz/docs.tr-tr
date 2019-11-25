@@ -1,33 +1,33 @@
 ---
-title: .NET Framework Başvuru Bilgisi (Visual Basic)
+title: .NET Framework Başvuru Bilgisi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - language reference [Visual Basic], .NET Framework
 - .NET Framework [Visual Basic], reference
 - .NET Framework class library [Visual Basic], reference information
 ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
-ms.openlocfilehash: 8c1b6b6a53264be5716a4132cebca78449b30d8d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: ebf9040fc16666d7e40e95981d5ceee97e716acb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593054"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352847"
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>.NET Framework Başvuru Bilgisi (Visual Basic)
-Bu konuda, .NET Framework sınıf kitaplığı ile çalışma hakkında daha fazla bilgi için bağlantılar sağlar.  
+This topic provides links to information about how to work with the .NET Framework class library.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Başlarken](../../framework/get-started/index.md)  
  .NET Framework'e kapsamlı bir genel bakış ve ek kaynaklara bağlantılar sağlar.  
   
  [Sınıf Kitaplığına Genel Bakış](../../standard/class-library-overview.md)  
- Sınıfları, arabirimleri ve geliştirme işlemini hızlandırmak ve sistem işlevlerine erişmek için Yardım değer türlerini tanıtır.  
+ Introduces the classes, interfaces, and value types that help expedite and optimize the development process and provide access to system functionality.  
   
  [Geliştirme Kılavuzu](../../framework/development-guide.md)  
- Oluşturma, yapılandırma, hata ayıklama, güvenliğini sağlama ve uygulamanızı dağıtmak da dahil olmak üzere uygulama geliştirme için tüm temel teknoloji alanları ve görevleri için bir kılavuz sağlar. Bu konuda ayrıca dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı oluşturma hakkında bilgi sağlar.  
+ Provides a guide to all key technology areas and tasks for application development, including creating, configuring, debugging, securing, and deploying your application. This topic also provides information about dynamic programming, interoperability, extensibility, memory management, and threading.  
   
  [Araçlar](../../framework/tools/index.md)  
- Geliştirmek, yapılandırmak ve .NET Framework teknolojilerini kullanarak uygulamalar dağıtmak için kullanabileceğiniz araçları açıklar.  
+ Describes the tools that you can use to develop, configure, and deploy applications by using .NET Framework technologies.  
   
- [.NET API tarayıcısı](../../../api/index.md)  
- Sözdizimi, kod örnekleri ve .NET Framework ad alanları her sınıf için ilgili bilgiler sağlar.
+ [.NET API Browser](../../../api/index.md)  
+ Provides syntax, code examples, and related information for each class in the .NET Framework namespaces.

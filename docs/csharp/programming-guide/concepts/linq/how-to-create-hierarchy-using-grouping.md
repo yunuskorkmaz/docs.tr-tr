@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Gruplandırma (C#) kullanarak hiyerarşi oluşturma'
+title: Gruplandırma (C#) kullanarak hiyerarşi oluşturma
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: 7d9a58e5b36d6096c156f458c8ba700e04fd8eca
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c5a96b02595446b2efa01868cc88377c3a5151c9
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593843"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141309"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a>Nasıl yapılır: Gruplandırma (C#) kullanarak hiyerarşi oluşturma
+# <a name="how-to-create-hierarchy-using-grouping-c"></a>Gruplandırma (C#) kullanarak hiyerarşi oluşturma
 Bu örnek, verilerin nasıl gruplanıp gruplandırılmasının yanı sıra gruplandırma temelli XML oluşturmayı gösterir.  
   
 ## <a name="example"></a>Örnek  
  Bu örnek öncelikle verileri bir kategoriye göre gruplandırır, ardından XML hiyerarşisinin gruplamayı yansıtan yeni bir XML dosyası oluşturur.  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Sayısal veri (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: sayısal veri (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ControlTemplate [WPF], Thumb
 - parts [WPF], Thumb
 ms.assetid: 86a49235-62d9-414e-923e-53126e3f930a
-ms.openlocfilehash: c2114a02016db96d898a394b6892b6d3042d81ff
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 0d0d88e3b527beacfa5f879027e696aa75b18147
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458244"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283689"
 ---
 # <a name="thumb-styles-and-templates"></a>Parmak Stilleri ve Şablonları
 
-Bu konuda <xref:System.Windows.Controls.Primitives.Thumb> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).
+Bu konuda <xref:System.Windows.Controls.Primitives.Thumb> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için varsayılan <xref:System.Windows.Controls.ControlTemplate> değiştirebilirsiniz. Daha fazla bilgi için bkz. [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 
 ## <a name="thumb-parts"></a>Parmak parçaları
 
@@ -30,9 +30,9 @@ Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.Thumb> denetimi i�
 
 |VisualState adı|VisualStateGroup adı|Açıklama|
 |-|-|-|
-|Olağan|Ortak durumlar|Varsayılan durum.|
+|Normal|Ortak durumlar|Varsayılan durum.|
 |Gelme olayından|Ortak durumlar|Fare işaretçisi denetimin üzerine yerleştirilir.|
-|Basılması|Ortak durumlar|Denetime basıldığında.|
+|Basılan|Ortak durumlar|Denetime basıldığında.|
 |Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|
 |Diğinize|Odaklardaki durumlar|Denetim odağa sahiptir.|
 |Odaklanmadan gözetle|Odaklardaki durumlar|Denetimin odağı yok.|
@@ -59,4 +59,4 @@ Tüm örnek için bkz. [ControlTemplates Ile stillendirme örneği](https://gith
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
 - [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)
+- [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md)

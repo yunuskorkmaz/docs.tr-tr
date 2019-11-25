@@ -1,5 +1,5 @@
 ---
-title: Not İşleci (Visual Basic)
+title: Not İşleci
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Not
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-ms.openlocfilehash: 5ebc5f9dbf674a9a6560bd96b3e8c9edcae08a81
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 08b091ccf6c50438b5ad9d6c445510112abe7418
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701076"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348301"
 ---
 # <a name="not-operator-visual-basic"></a>Not İşleci (Visual Basic)
-@No__t-0 ifadesinde mantıksal Olumsuzlaştırma veya sayısal bir ifadede bit tabanlı Olumsuzlaştırma gerçekleştirir.  
+Performs logical negation on a `Boolean` expression, or bitwise negation on a numeric expression.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,52 +32,52 @@ result = Not expression
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Gerekli. Herhangi bir `Boolean` veya sayısal ifade.  
+ Gerekli. Any `Boolean` or numeric expression.  
   
  `expression`  
- Gerekli. Herhangi bir `Boolean` veya sayısal ifade.  
+ Gerekli. Any `Boolean` or numeric expression.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 ifadeleri için aşağıdaki tabloda `result` nasıl belirlendiği gösterilmektedir.  
+ For `Boolean` expressions, the following table illustrates how `result` is determined.  
   
-|@No__t-0 ise|@No__t-0 değeri|  
+|If `expression` is|The value of `result` is|  
 |------------------------|------------------------------|  
 |`True`|`False`|  
 |`False`|`True`|  
   
- Sayısal ifadeler için `Not` işleci herhangi bir sayısal ifadenin bit değerlerini tersine çevirir ve aşağıdaki tabloya göre `result` ' de karşılık gelen biti ayarlar.  
+ For numeric expressions, the `Not` operator inverts the bit values of any numeric expression and sets the corresponding bit in `result` according to the following table.  
   
-|Bit `expression` ise|@No__t-0 ' daki bit|  
+|If bit in `expression` is|The bit in `result` is|  
 |-------------------------------|----------------------------|  
 |1\.|0|  
 |0|1\.|  
   
 > [!NOTE]
-> Mantıksal ve bit düzeyinde işleçler diğer aritmetik ve ilişkisel işleçlerden daha düşük önceliğe sahip olduğundan, doğru yürütmeyi sağlamak için herhangi bir bit düzeyinde işlemin parantez içine alınması gerekir.  
+> Since the logical and bitwise operators have a lower precedence than other arithmetic and relational operators, any bitwise operations should be enclosed in parentheses to ensure accurate execution.  
   
 ## <a name="data-types"></a>Veri Türleri  
- Boolean Olumsuzlaştırma için sonucun veri türü `Boolean` ' dır. Bit düzeyinde olumsuzlama için, sonuç veri türü `expression` ' y i ile aynıdır. Ancak, ifade `Decimal` ise sonuç `Long` ' dir.  
+ For a Boolean negation, the data type of the result is `Boolean`. For a bitwise negation, the result data type is the same as that of `expression`. However, if expression is `Decimal`, the result is `Long`.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- @No__t-0 işleci *aşırı*yüklenebilir, yani işleneni Bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The `Not` operator can be *overloaded*, which means that a class or structure can redefine its behavior when its operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir `Boolean` ifadesinde mantıksal olumsuzlama gerçekleştirmek için `Not` işlecini kullanır. Sonuç, ifadenin değerinin ters çevirmeyi temsil eden bir `Boolean` değeridir.  
+ The following example uses the `Not` operator to perform logical negation on a `Boolean` expression. The result is a `Boolean` value that represents the reverse of the value of the expression.  
   
  [!code-vb[VbVbalrOperators#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#33)]  
   
- Yukarıdaki örnek sırasıyla `False` ve `True` sonuçları üretir.  
+ The preceding example produces results of `False` and `True`, respectively.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, sayısal bir ifadenin ayrı bitlerini mantıksal olarak gerçekleştirmek için `Not` işlecini kullanır. Sonuç deseninin biti, işaret biti dahil olmak üzere işlenen deseninin karşılık gelen bitin ters olarak ayarlanır.  
+ The following example uses the `Not` operator to perform logical negation of the individual bits of a numeric expression. The bit in the result pattern is set to the reverse of the corresponding bit in the operand pattern, including the sign bit.  
   
  [!code-vb[VbVbalrOperators#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#34)]  
   
- Yukarıdaki örnek sırasıyla – 11, – 9 ve – 7 sonuçlarını üretir.  
+ The preceding example produces results of –11, –9, and –7, respectively.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Mantıksal/bit düzeyinde Işleçler (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
-- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic mantıksal ve bit düzeyinde Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

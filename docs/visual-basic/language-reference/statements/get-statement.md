@@ -1,5 +1,5 @@
 ---
-title: Get açıklaması (Visual Basic)
+title: Get Deyimi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Get
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: d76155b8ff29e4f5e9206ae8fc689fa4fcaf3b8c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9560faf90d531c32f104dbd053a7c1f5584cfb1b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581829"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351181"
 ---
 # <a name="get-statement"></a>Get Deyimi
-Bir özelliğin değerini almak için kullanılan bir `Get` özellik yordamı bildirir.  
+Declares a `Get` property procedure used to retrieve the value of a property.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,43 +33,43 @@ End Get
   
 |Terim|Tanım|  
 |---|---|  
-|`attributelist`|İsteğe bağlı. Bkz. [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Bu özelliğindeki `Get` ve `Set` deyimlerinin en az birinde isteğe bağlı. Aşağıdakilerden biri olabilir:<br /><br /> -   [korumalı](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [özel](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> [Visual Basic erişim düzeylerine](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)bakın.|  
-|`statements`|İsteğe bağlı. @No__t_0 özellik yordamı çağrıldığında çalışan bir veya daha fazla deyim.|  
-|`End Get`|Gerekli. @No__t_0 özelliği yordamının tanımını sonlandırır.|  
+|`attributelist`|İsteğe bağlı. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Optional on at most one of the `Get` and `Set` statements in this property. Can be one of the following:<br /><br /> -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`statements`|İsteğe bağlı. One or more statements that run when the `Get` property procedure is called.|  
+|`End Get`|Gerekli. Terminates the definition of the `Get` property procedure.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Özellik `WriteOnly` olarak işaretlenmedikçe her özelliğin `Get` Özellik yordamına sahip olması gerekir. @No__t_0 yordamı, özelliğin geçerli değerini döndürmek için kullanılır.  
+ Every property must have a `Get` property procedure unless the property is marked `WriteOnly`. The `Get` procedure is used to return the current value of the property.  
   
- Visual Basic bir ifade özelliğin değerini istediğinde bir özelliğin `Get` yordamını otomatik olarak çağırır.  
+ Visual Basic automatically calls a property's `Get` procedure when an expression requests the property's value.  
   
- Özellik bildiriminin gövdesi, Property [ifadesiyle](../../../visual-basic/language-reference/statements/property-statement.md) `End Property` ifadesiyle yalnızca özelliğin `Get` ve `Set` yordamlarını içerebilir. Bu yordamlar dışında bir şey depolayamazsınız. Özellikle, özelliğin geçerli değerini depolayaamaz. Özellik yordamlarından birinde depolursa, diğer özellik yordamının bu değeri, özelliğin dışında depolamanız gerekir. Her zamanki yaklaşım, değeri özelliği ile aynı düzeyde belirtilen [özel](../../../visual-basic/language-reference/modifiers/private.md) bir değişkende depokullanmaktır. Bir `Get` yordamını, uygulandığı özelliğin içinde tanımlamanız gerekir.  
+ The body of the property declaration can contain only the property's `Get` and `Set` procedures between the [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. It cannot store anything other than those procedures. In particular, it cannot store the property's current value. You must store this value outside the property, because if you store it inside either of the property procedures, the other property procedure cannot access it. The usual approach is to store the value in a [Private](../../../visual-basic/language-reference/modifiers/private.md) variable declared at the same level as the property. You must define a `Get` procedure inside the property to which it applies.  
   
- @No__t_0 yordamı, `Get` ifadesinde `accessmodifier` kullanmadığınız durumlar dışında, kendisini kapsayan özelliğin erişim düzeyi olur.  
+ The `Get` procedure defaults to the access level of its containing property unless you use `accessmodifier` in the `Get` statement.  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Karışık erişim düzeyleri.** Okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak `Get` ya da `Set` yordamı için farklı bir erişim düzeyi belirtebilirsiniz, ancak her ikisini birden belirtemezsiniz. Bunu yaparsanız, yordam erişim düzeyinin özelliğin erişim düzeyinden daha kısıtlayıcı olması gerekir. Örneğin, özellik `Friend` olarak bildirilirse, `Private` `Get` yordamını bildirebilirsiniz, ancak `Public`.  
+- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Get` procedure `Private`, but not `Public`.  
   
-     @No__t_0 özelliği tanımlıyorsanız, `Get` yordamı tüm özelliği temsil eder. Özelliği için iki erişim düzeyi ayarlayacağından, `Get` için farklı bir erişim düzeyi bildiremezsiniz.  
+     If you are defining a `ReadOnly` property, the `Get` procedure represents the entire property. You cannot declare a different access level for `Get`, because that would set two access levels for the property.  
   
-- **Dönüş türü.** [Property deyimleri](../../../visual-basic/language-reference/statements/property-statement.md) , döndürdüğü değerin veri türünü bildirebilir. @No__t_0 yordam bu veri türünü otomatik olarak döndürür. Herhangi bir veri türü veya bir numaralandırma, yapı, sınıf veya arabirim adı belirtebilirsiniz.  
+- **Return Type.** The [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) can declare the data type of the value it returns. The `Get` procedure automatically returns that data type. You can specify any data type or the name of an enumeration, structure, class, or interface.  
   
-     @No__t_0 deyimin `returntype` belirtmezse yordam `Object` döndürür.  
+     If the `Property` statement does not specify `returntype`, the procedure returns `Object`.  
   
 ## <a name="behavior"></a>Davranış  
   
-- **Bir yordamdan dönme.** @No__t_0 yordamı çağıran koda döndüğünde, yürütme özelliği değeri istenen deyimin içinde devam eder.  
+- **Returning from a Procedure.** When the `Get` procedure returns to the calling code, execution continues within the statement that requested the property value.  
   
-     `Get` özellik yordamları, [return ifadesini](../../../visual-basic/language-reference/statements/return-statement.md) kullanarak ya da dönüş değerini özellik adına atayarak bir değer döndürebilir. Daha fazla bilgi için [Işlev deyimindeki](../../../visual-basic/language-reference/statements/function-statement.md)"dönüş değeri" başlığına bakın.  
+     `Get` property procedures can return a value using either the [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) or by assigning the return value to the property name. For more information, see "Return Value" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).  
   
-     @No__t_0 ve `Return` deyimleri, bir özellik yordamından anında çıkış oluşmasına neden olur. Herhangi bir sayıda `Exit Property` ve `Return` deyimi yordamda herhangi bir yerde görünebilir ve `Exit Property` ve `Return` deyimlerini karıştırabilirsiniz.  
+     The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.  
   
-- **Dönüş değeri.** Bir `Get` yordamından bir değer döndürmek için, değeri özellik adına atayabilir ya da bir [Return ifadesine](../../../visual-basic/language-reference/statements/return-statement.md)dahil edebilirsiniz. @No__t_0 deyimleri aynı anda `Get` yordam dönüş değerini atar ve yordamdan çıkar.  
+- **Return Value.** To return a value from a `Get` procedure, you can either assign the value to the property name or include it in a [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md). The `Return` statement simultaneously assigns the `Get` procedure return value and exits the procedure.  
   
-     Özellik adına bir değer atamadan `Exit Property` kullanırsanız, `Get` yordamı özelliğin veri türü için varsayılan değeri döndürür. Daha fazla bilgi için [Işlev deyimindeki](../../../visual-basic/language-reference/statements/function-statement.md)"dönüş değeri" başlığına bakın.  
+     If you use `Exit Property` without assigning a value to the property name, the `Get` procedure returns the default value for the property's data type. For more information, see "Return Value" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).  
   
-     Aşağıdaki örnekte, salt okuma özelliğinin `quoteForTheDay` özel değişkende tutulan değeri döndürebileceği iki yol gösterilmektedir `quoteValue`.  
+     The following example illustrates two ways the read-only property `quoteForTheDay` can return the value held in the private variable `quoteValue`.  
   
      [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
   
@@ -78,7 +78,7 @@ End Get
      [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir özelliğin değerini döndürmek için `Get` ifadesini kullanır.  
+ The following example uses the `Get` statement to return the value of a property.  
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
   

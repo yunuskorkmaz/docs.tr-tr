@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: bir Office Open XML belgesini değiştirme (Visual Basic)'
+title: 'How to: Modify an Office Open XML Document'
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 0eb8704608fa7d529b32e44e754c0274d7a67b1d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 623376a68ee2f032fb53d51b61c4c5881b0b9e18
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319954"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336021"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Nasıl yapılır: bir Office Open XML belgesini değiştirme (Visual Basic)
-Bu konu, bir Office Open XML belgesi açan, değiştiren ve kaydeden bir örnek gösterir.  
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>How to: Modify an Office Open XML Document (Visual Basic)
+This topic presents an example that opens an Office Open XML document, modifies it, and saves it.  
   
- Office Open XML hakkında daha fazla bilgi için bkz. [Eric beyaz blogu](http://www.ericwhite.com).  
+ For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Örnek  
- Bu örnek belgedeki ilk paragraf öğesini bulur. Paragraftan metni alır ve ardından paragraftaki tüm metin çalıştırmalarını siler. Büyük harfe dönüştürülmüş ilk paragraf metniyle oluşan yeni bir metin çalıştırması oluşturur. Daha sonra değiştirilmiş XML 'i Open XML paketine serileştirir ve kapatır.  
+ This example finds the first paragraph element in the document. It retrieves the text from the paragraph, and then deletes all text runs in the paragraph. It creates a new text run that consists of the first paragraph text that has been converted to upper case. It then serializes the changed XML into the Open XML package and closes it.  
   
- Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. @No__t-0 ad alanındaki türleri kullanır.  
+ This example uses classes found in the WindowsBase assembly. It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -135,9 +135,9 @@ Module Module1
 End Module  
 ```  
   
- Bu programı çalıştırdıktan sonra `SampleDoc.docx` ' ı açarsanız, bu programın belgedeki ilk paragrafı büyük harflere dönüştürdüğünü görebilirsiniz.  
+ If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.  
   
- [Kaynak Office Open XML belgesi (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)bölümünde açıklanan örnek Open XML belgesiyle birlikte çalıştırıldığında, bu örnek aşağıdaki çıktıyı üretir:  
+ When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:  
   
 ```console  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
@@ -145,4 +145,4 @@ New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Gelişmiş sorgu teknikleri (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

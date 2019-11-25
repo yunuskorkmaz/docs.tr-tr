@@ -1,31 +1,31 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) büyük XML belgelerinin akış dönüşümünü gerçekleştirme'
+title: 'How to: Perform Streaming Transform of Large XML Documents'
 ms.date: 07/20/2015
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-ms.openlocfilehash: 8761f5fbf4e6137c1ae6b202b6717579c6f78d4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58bc76e6f2a269b0baac009f1247d5e94d508cbd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789135"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344503"
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Nasıl yapılır: (Visual Basic) büyük XML belgelerinin akış dönüşümünü gerçekleştirme
-Bazen büyük XML dosyalarını dönüştürme ve uygulamanızı yazın, böylece bellek Ayak izi uygulamanın öngörülebilir gerekir. Çok büyük bir XML dosyası ile XML ağacı doldurma denerseniz, bellek kullanımınızı orantılı dosya boyutunu (diğer bir deyişle, aşırı). Bu nedenle, bir akış teknik yerine kullanmanız gerekir.  
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>How to: Perform Streaming Transform of Large XML Documents (Visual Basic)
+Sometimes you have to transform large XML files, and write your application so that the memory footprint of the application is predictable. If you try to populate an XML tree with a very large XML file, your memory usage will be proportional to the size of the file (that is, excessive). Therefore, you should use a streaming technique instead.  
   
- Akış teknikleri, burada yalnızca bir kez kaynak belge işlemek gereken ve belge sırada öğeleri işleyebilir durumlarda en iyi şekilde uygulanır. Belirli standart sorgu işleçleri gibi <xref:System.Linq.Enumerable.OrderBy%2A>kaynağına yineleme, tüm verileri Topla, sıralanmasını ve son sıradaki ilk öğeyi yield. İlk öğeyi oluşturan önce kaynağına gerçekleştiren bir sorgu işlecini kullanmak, bir küçük bellek Ayak izi'ı uygulamanız için korumaz unutmayın.  
+ Streaming techniques are best applied in situations where you need to process the source document only once, and you can process the elements in document order. Certain standard query operators, such as <xref:System.Linq.Enumerable.OrderBy%2A>, iterate their source, collect all of the data, sort it, and then finally yield the first item in the sequence. Note that if you use a query operator that materializes its source before yielding the first item, you will not retain a small memory footprint for your application.  
   
- Açıklanan tekniği kullanıyor olsanız bile [nasıl yapılır: Stream (Visual Basic) üst bilgilere erişimle XML parçalarının](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), dönüştürülen belgeyi, bellek kullanımı çok olacaktır içeren bir XML ağacı derlemek deneyin.  
+ Even if you use the technique described in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), if you try to assemble an XML tree that contains the transformed document, memory usage will be too great.  
   
- İki temel yaklaşım vardır. Ertelenen işlem özelliklerini kullanmak için bir yaklaşım ise <xref:System.Xml.Linq.XStreamingElement>. Başka bir yaklaşım oluşturmaktır bir <xref:System.Xml.XmlWriter>ve yeteneklerini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] öğelerine yazmak için bir <xref:System.Xml.XmlWriter>. Bu konuda, her iki yaklaşım gösterilmektedir.  
+ There are two main approaches. One approach is to use the deferred processing characteristics of <xref:System.Xml.Linq.XStreamingElement>. Another approach is to create an <xref:System.Xml.XmlWriter>, and use the capabilities of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to write elements to an <xref:System.Xml.XmlWriter>. This topic demonstrates both approaches.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek örnekte geliştirir [nasıl yapılır: Stream (Visual Basic) üst bilgilere erişimle XML parçalarının](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ The following example builds on the example in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- Bu örnekte ertelenmiş yürütme yeteneklerini <xref:System.Xml.Linq.XStreamingElement> çıkış akışı. Bu örnek, bir küçük bellek Ayak izi korurken çok büyük bir belge dönüştürebilirsiniz.  
+ This example uses the deferred execution capabilities of <xref:System.Xml.Linq.XStreamingElement> to stream the output. This example can transform a very large document while maintaining a small memory footprint.  
   
- Unutmayın özel eksen (`StreamCustomerItem`) ve böylece bir belgeye bekliyor özellikle yazılmış olan `Customer`, `Name`, ve `Item` öğeleri ve öğeler aşağıdaki Source.xml belgeyi olduğu gibi düzenlenir. Geçersiz bir belge ayrıştırılacak ancak daha sağlam bir uygulama hazırlanması.  
+ Note that the custom axis (`StreamCustomerItem`) is specifically written so that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the following Source.xml document. A more robust implementation, however, would be prepared to parse an invalid document.  
   
- Kaynak belge Source.xml verilmiştir:  
+ The following is the source document, Source.xml:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -246,15 +246,15 @@ End Class
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte de geliştirir [nasıl yapılır: Stream (Visual Basic) üst bilgilere erişimle XML parçalarının](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ The following example also builds on the example in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- Bu örnekte yeteneğini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] öğelerine yazmak için bir <xref:System.Xml.XmlWriter>. Bu örnek, bir küçük bellek Ayak izi korurken çok büyük bir belge dönüştürebilirsiniz.  
+ This example uses the capability of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to write elements to an <xref:System.Xml.XmlWriter>. This example can transform a very large document while maintaining a small memory footprint.  
   
- Unutmayın özel eksen (`StreamCustomerItem`) ve böylece bir belgeye bekliyor özellikle yazılmış olan `Customer`, `Name`, ve `Item` öğeleri ve öğeler aşağıdaki Source.xml belgeyi olduğu gibi düzenlenir. Daha sağlam bir uygulama, ancak bir XSD kaynak belge ya da doğrulamak veya geçersiz bir belge ayrıştırmak hazır olacaktır.  
+ Note that the custom axis (`StreamCustomerItem`) is specifically written so that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the following Source.xml document. A more robust implementation, however, would either validate the source document with an XSD, or would be prepared to parse an invalid document.  
   
- Bu örnek aynı kaynak belge Source.xml, bu konuda önceki örnekteki gibi kullanır. Ayrıca, tam olarak aynı çıktı üretir.  
+ This example uses the same source document, Source.xml, as the previous example in this topic. It also produces exactly the same output.  
   
- Kullanarak <xref:System.Xml.Linq.XStreamingElement> çıkış XML akış yazmak üzerinden tercih edilir bir <xref:System.Xml.XmlWriter>.  
+ Using <xref:System.Xml.Linq.XStreamingElement> for streaming the output XML is preferred over writing to an <xref:System.Xml.XmlWriter>.  
   
 ```vb  
 Module Module1  
@@ -441,4 +441,4 @@ End Class
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Gelişmiş LINQ to XML programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

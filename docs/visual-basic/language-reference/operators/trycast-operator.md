@@ -1,5 +1,5 @@
 ---
-title: TryCast İşleci (Visual Basic)
+title: TryCast İşleci
 ms.date: 07/20/2015
 f1_keywords:
 - vb.trycast
@@ -7,35 +7,35 @@ f1_keywords:
 helpviewer_keywords:
 - TryCast keyword [Visual Basic]
 ms.assetid: d1ef5d47-fef4-491e-b014-1d910628f65c
-ms.openlocfilehash: c0eea4565d5040bb00743fc7864ac15b0fccdea9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53306575cfc385039be3939fd87cf993b4509af4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013471"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348209"
 ---
 # <a name="trycast-operator-visual-basic"></a>TryCast İşleci (Visual Basic)
-Bir özel durum oluşturmaz bir tür dönüştürme işlemini ortaya çıkarır.  
+Introduces a type conversion operation that does not throw an exception.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Denenen bir dönüştürme başarısız olursa `CType` ve `DirectCast` hem throw bir <xref:System.InvalidCastException> hata. Bu, uygulamanızın performansını olumsuz yönde etkileyebilir. `TryCast` döndürür [hiçbir şey](../../../visual-basic/language-reference/nothing.md), olası bir özel durumu işlemek zorunda kalmak yerine, yalnızca döndürülen karşı test sonucu böylece `Nothing`.  
+ If an attempted conversion fails, `CType` and `DirectCast` both throw an <xref:System.InvalidCastException> error. This can adversely affect the performance of your application. `TryCast` returns [Nothing](../../../visual-basic/language-reference/nothing.md), so that instead of having to handle a possible exception, you need only test the returned result against `Nothing`.  
   
- Kullandığınız `TryCast` anahtar sözcüğü kullandığınız aynı şekilde [CType işlevi](../../../visual-basic/language-reference/functions/ctype-function.md) ve [DirectCast işleci](../../../visual-basic/language-reference/operators/directcast-operator.md) anahtar sözcüğü. Siz ifade ilk bağımsız değişken ve ikinci bağımsız değişken olarak öğesine dönüştürmek için bir tür olarak sağlayın. `TryCast` yalnızca başvuru türleri sınıflar ve arabirimler gibi çalışır. İki tür arasında bir ilişki devralma ya da uygulanmasını gerektirir. Bu, bir türden devralamaz gerekir veya diğer uygulama anlamına gelir.  
+ You use the `TryCast` keyword the same way you use the [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) and the [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) keyword. You supply an expression as the first argument and a type to convert it to as the second argument. `TryCast` operates only on reference types, such as classes and interfaces. It requires an inheritance or implementation relationship between the two types. This means that one type must inherit from or implement the other.  
   
-## <a name="errors-and-failures"></a>Hataları  
- `TryCast` Devralma ya da uygulanmasını ilişkisi olduğunu algılarsa bir derleyici hatası oluşturur. Ancak, bir derleyici hatası eksikliği başarılı bir dönüştürme garanti etmez. İstenen dönüştürme daraltma, çalışma zamanında başarısız. Böyle bir durumda `TryCast` döndürür [hiçbir şey](../../../visual-basic/language-reference/nothing.md).  
+## <a name="errors-and-failures"></a>Errors and Failures  
+ `TryCast` generates a compiler error if it detects that no inheritance or implementation relationship exists. But the lack of a compiler error does not guarantee a successful conversion. If the desired conversion is narrowing, it could fail at run time. If this happens, `TryCast` returns [Nothing](../../../visual-basic/language-reference/nothing.md).  
   
 ## <a name="conversion-keywords"></a>Dönüşüm Anahtar Sözcükleri  
- Tür Dönüşüm anahtar sözcükleri karşılaştırması aşağıdaki gibidir.  
+ A comparison of the type conversion keywords is as follows.  
   
-|Anahtar sözcüğü|Veri türleri|Bağımsız değişken ilişkisi|Çalışma zamanı hatası|  
+|Keyword|Veri türleri|Argument relationship|Run-time failure|  
 |---|---|---|---|  
-|[CType İşlevi](../../../visual-basic/language-reference/functions/ctype-function.md)|Herhangi bir veri türü|İki veri türleri arasında genişletme veya daraltma dönüştürmesi tanımlanmalıdır|Oluşturur <xref:System.InvalidCastException>|  
-|[DirectCast İşleci](../../../visual-basic/language-reference/operators/directcast-operator.md)|Herhangi bir veri türü|Bir türden devralamaz veya diğer türü uyguluyor|Oluşturur <xref:System.InvalidCastException>|  
-|`TryCast`|Yalnızca başvuru türleri|Bir türden devralamaz veya diğer türü uyguluyor|Döndürür [hiçbir şey](../../../visual-basic/language-reference/nothing.md)|  
+|[CType İşlevi](../../../visual-basic/language-reference/functions/ctype-function.md)|Any data types|Widening or narrowing conversion must be defined between the two data types|Throws <xref:System.InvalidCastException>|  
+|[DirectCast İşleci](../../../visual-basic/language-reference/operators/directcast-operator.md)|Any data types|One type must inherit from or implement the other type|Throws <xref:System.InvalidCastException>|  
+|`TryCast`|Reference types only|One type must inherit from or implement the other type|Returns [Nothing](../../../visual-basic/language-reference/nothing.md)|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir `TryCast`.  
+ The following example shows how to use `TryCast`.  
   
  [!code-vb[VbVbalrKeywords#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#6)]  
   

@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl yapılır: üst öğenin bir özniteliğini bulma (XPath-LINQ to XML) (Visual Basic)'
+title: 'How to: Find an Attribute of the Parent (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
-ms.openlocfilehash: ce8fbb828a5ea8df79f449d50f1d61702a4e3df2
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: c4cb2f2e52aeaa42fd69b83c19c47fd205d48cbc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249923"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352953"
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: üst öğenin bir özniteliğini bulma (XPath-LINQ to XML) (Visual Basic)
-Bu konu başlığı altında, üst öğeye gitme ve bir özniteliği bulma gösterilmektedir.  
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>How to: Find an Attribute of the Parent (XPath-LINQ to XML) (Visual Basic)
+This topic shows how to navigate to the parent element and find an attribute of it.  
   
- XPath ifadesi:  
+ The XPath expression is:  
   
  `../@id`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek öncelikle bir `Author` öğesi bulur. Daha sonra üst öğenin `id` özniteliğini bulur.  
+ This example first finds an `Author` element. It then finds the `id` attribute of the parent element.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: kitaplar (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim books As XDocument = XDocument.Load("Books.xml")  
@@ -40,7 +40,7 @@ End If
 Console.WriteLine(att1)  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```console  
 Results are identical  
@@ -49,4 +49,4 @@ id="bk101"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XPath kullanıcıları için LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

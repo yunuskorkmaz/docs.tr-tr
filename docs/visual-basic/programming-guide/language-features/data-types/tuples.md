@@ -1,56 +1,56 @@
 ---
-title: Visual Basic tanımlama grupları
+title: Demetler
 ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: fdca36e47d0b1234a8964d7475354a726a61f085
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: e0310f31d7becb1f79bb023a277bd565421b44fb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524583"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350493"
 ---
-# <a name="tuples-visual-basic"></a>Tanımlama grupları (Visual Basic)
+# <a name="tuples-visual-basic"></a>Tuples (Visual Basic)
 
-Visual Basic 2017 ' den itibaren Visual Basic dili, tanımlama gruplarını oluşturmayı ve tanımlama gruplarının öğelerine erişimi kolaylaştıran tanımlama grupları için yerleşik destek sunar. Kayıt düzeni, belirli bir sayı ve değer dizisi olan basit bir veri yapısıdır. Kayıt kümesini örneklediğinizde, her bir değerin (veya öğesinin) numarasını ve veri türünü tanımlarsınız. Örneğin, 2 demet (veya çift) iki öğeye sahiptir. Birincisi bir `Boolean` değeri olabilir, ikincisi ise bir `String`. Tanımlama grupları birden çok değeri tek bir nesnede depolamayı kolaylaştırdığından, genellikle bir yöntemden birden çok değer döndürmenin hafif bir yolu olarak kullanılırlar.
+Starting with Visual Basic 2017, the Visual Basic language offers built-in support for tuples that makes creating tuples and accessing the elements of tuples easier. A tuple is a lightweight data structure that has a specific number and sequence of values. When you instantiate the tuple, you define the number and the data type of each value (or element). For example, a 2-tuple (or pair) has two elements. The first might be a `Boolean` value, while the second is a `String`. Because tuples make it easy to store multiple values in a single object, they are often used as a lightweight way to return multiple values from a method.
 
 > [!IMPORTANT]
-> Tanımlama grubu desteği <xref:System.ValueTuple> türünü gerektirir. .NET Framework 4,7 yüklü değilse, NuGet galerisinde bulunan `System.ValueTuple` NuGet paketini eklemeniz gerekir. Bu paket olmadan şuna benzer bir derleme hatası alabilirsiniz, "önceden tanımlanmış tür ' ValueTuple (Of,,,) ' tanımlanmamış veya içeri aktarılmaz."
+> Tuple support requires the <xref:System.ValueTuple> type. If the .NET Framework 4.7 is not installed, you must add the NuGet package `System.ValueTuple`, which is available on the NuGet Gallery. Without this package, you may get a compilation error similar to, "Predefined type 'ValueTuple(Of,,,)' is not defined or imported."
 
-## <a name="instantiating-and-using-a-tuple"></a>Tanımlama grubu örneği oluşturma ve kullanma
+## <a name="instantiating-and-using-a-tuple"></a>Instantiating and using a tuple
 
-Noktalı virgülle ayrılmış değerler ım ayraçları ekleyerek bir tanımlama grubu örneğini oluşturabilirsiniz. Bu değerlerin her biri, kayıt düzeni alanı haline gelir. Örneğin, aşağıdaki kod, ilk değeri olarak bir `Date`, ikincisinin `String` ve üçüncü olarak bir `Boolean` olan Üçlü (veya 3-kayıt) tanımlar.
+You instantiate a tuple by enclosing its comma-delimited values im parentheses. Each of those values then becomes a field of the tuple. For example, the following code defines a triple (or 3-tuple) with a `Date` as its first value, a `String` as its second, and a `Boolean` as its third.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#1)]
 
-Varsayılan olarak, bir tanımlama grubu içindeki her bir alanın adı dize `Item` oluşur. Bu 3 kayıt düzeni için `Date` alanı `Item1`, `String` alanı `Item2` ve `Boolean` alanı `Item3`. Aşağıdaki örnek, önceki kod satırında oluşturulan kayıt kümesi alanlarının değerlerini görüntüler
+By default, the name of each field in a tuple consists of the string `Item` along with the field's one-based position in the tuple. For this 3-tuple, the `Date` field is `Item1`, the `String` field is `Item2`, and the `Boolean` field is `Item3`. The following example displays the values of fields of the tuple instantiated in the previous line of code
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#2)]
 
-Visual Basic bir tanımlama grubu alanları okuma-yazma; bir tanımlama grubu örnekledikten sonra, değerlerini değiştirebilirsiniz. Aşağıdaki örnek, önceki örnekte oluşturulan kayıt düzeninin üç alanının ikisini değiştirir ve sonucu görüntüler.
+The fields of a Visual Basic tuple are read-write; after you've instantiated a tuple, you can modify its values. The following example modifies two of the three fields of the tuple created in the previous example and displays the result.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#3)]
 
-## <a name="instantiating-and-using-a-named-tuple"></a>Adlandırılmış bir tanımlama grubu örneği oluşturma ve kullanma
+## <a name="instantiating-and-using-a-named-tuple"></a>Instantiating and using a named tuple
 
-Bir tanımlama grubu alanları için varsayılan adları kullanmak yerine, kendi adlarınızı kayıt düzeni öğelerine atayarak *adlandırılmış bir tanımlama grubu* örneğini oluşturabilirsiniz. Kayıt düzeni alanlarına, kendilerine atanan adlarıyla *veya* varsayılan adlarıyla erişilebilir. Aşağıdaki örnek, birinci alanı `EventDate`, ikinci `Name` ve üçüncü `IsHoliday` açıkça adı dışında, daha önceden aynı 3 kayıt hattı oluşturur. Ardından alan değerlerini görüntüler, değiştirir ve alan değerlerini yeniden görüntüler.
+Rather than using default names for a tuple's fields, you can instantiate a *named tuple* by assigning your own names to the tuple's elements. The tuple's fields can then be accessed by their assigned names *or* by their default names. The following example instantiates the same 3-tuple as previously, except that it explicitly names the first field `EventDate`, the second `Name`, and the third `IsHoliday`. It then displays the field values, modifies them, and displays the field values again.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#4)]
 
-## <a name="inferred-tuple-element-names"></a>Gösterilen demet öğesi adları
+## <a name="inferred-tuple-element-names"></a>Inferred tuple element names
 
-Visual Basic 15,3 ' den başlayarak, Visual Basic demet öğelerinin adlarını çıkarabilir; Bunları açıkça atamanız gerekmez. Çıkarsanan tanımlama grubu adları, bir dizi değişkenden bir tanımlama grubu başlattığınızda ve demet öğesi adının değişken adıyla aynı olmasını istediğinizde faydalıdır.
+Starting with Visual Basic 15.3, Visual Basic can infer the names of tuple elements; you do not have to assign them explicitly. Inferred tuple names are useful when you initialize a tuple from a set of variables, and you want the tuple element name to be the same as the variable name.
 
-Aşağıdaki örnek, açıkça adlandırılmış üç öğe, `state`, `stateName` ve `capital` içeren `stateInfo` bir tanımlama grubu oluşturur. Öğeleri adlandırırken, demet başlatma bildiriminin adlandırılmış öğeleri, aynı adlı değişkenlerin değerlerini atadığını unutmayın.
+The following example creates a `stateInfo` tuple that contains three explicitly named elements, `state`, `stateName`, and `capital`. Note that, in naming the elements, the tuple initialization statement simply assigns the named elements the values of the identically named variables.
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#1)]
 
-Öğeler ve değişkenler aynı ada sahip olduğundan, aşağıdaki örnekte gösterildiği gibi Visual Basic derleyici alanların adlarını çıkarsalabilir.
+Because elements and variables have the same name, the Visual Basic compiler can infer the names of the fields, as the following example shows.
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-Gösterilen demet öğesi adlarını etkinleştirmek için, Visual Basic projenizin (\*. vbproj) dosyasında kullanmak üzere Visual Basic derleyicisinin sürümünü tanımlamanız gerekir:
+To enable inferred tuple element names, you must define the version of the Visual Basic compiler to use in your Visual Basic project (\*.vbproj) file:
 
 ```xml
 <PropertyGroup>
@@ -58,70 +58,70 @@ Gösterilen demet öğesi adlarını etkinleştirmek için, Visual Basic projeni
 </PropertyGroup>
 ```
 
-Sürüm numarası, 15,3 ile başlayan Visual Basic derleyicisinin herhangi bir sürümü olabilir. Belirli bir derleyici sürümünü sabit kodlamak yerine, sisteminizde yüklü Visual Basic derleyicisinin en son sürümüyle derlemek için `LangVersion` değeri olarak "en son" i de belirtebilirsiniz.
+The version number can be any version of the Visual Basic compiler starting with 15.3. Rather than hard-coding a specific compiler version, you can also specify "Latest" as the value of `LangVersion` to compile with the most recent version of the Visual Basic compiler installed on your system.
 
-Daha fazla bilgi için, [Visual Basic dil sürümünü ayarlama](../../../language-reference/configure-language-version.md)bölümüne bakın.
+For more information, see [setting the Visual Basic language version](../../../language-reference/configure-language-version.md).
 
-Bazı durumlarda Visual Basic derleyici, aday adından demet öğesi adı çıkarsanamıyor ve demet alanına yalnızca varsayılan adı kullanılarak başvurulabilir (örneğin, `Item1`, `Item2` vb.). Bunlar şunları içerir:
+In some cases, the Visual Basic compiler cannot infer the tuple element name from the candidate name, and the tuple field can only be referenced using its default name, such as `Item1`, `Item2`, etc. These include:
 
-- Aday adı, `Item3`, `Rest` veya `ToString` gibi bir demet üyesinin adı ile aynıdır.
+- The candidate name is the same as the name of a tuple member, such as `Item3`, `Rest`, or `ToString`.
 
-- Aday adı kayıt düzeninde yinelenir.
+- The candidate name is duplicated in the tuple.
 
-Alan adının çıkarımı başarısız olduğunda, Visual Basic bir derleyici hatası oluşturmaz veya çalışma zamanında oluşturulan bir özel durumdur. Bunun yerine, demet alanlarına `Item1` ve `Item2` gibi önceden tanımlanmış adlarıyla başvurulmalıdır.
+When field name inference fails, Visual Basic does not generate a compiler error, nor is an exception thrown at runtime. Instead, tuple fields must be referenced by their predefined names, such as `Item1` and `Item2`.
 
-## <a name="tuples-versus-structures"></a>Tanımlama grupları ve yapılar
+## <a name="tuples-versus-structures"></a>Tuples versus structures
 
-Visual Basic tanımlama grubu, **System. ValueTuple** genel türlerinden birinin bir örneği olan bir değer türüdür. Örneğin, önceki örnekte tanımlanan `holiday` tanımlama grubu <xref:System.ValueTuple%603> yapısının bir örneğidir. Veriler için hafif bir kapsayıcı olacak şekilde tasarlanmıştır. Kayıt düzeni, birden fazla veri öğesiyle bir nesne oluşturmayı kolaylaştıran bir özel yapının sahip olabileceği bazı özelliklerden oluşur. Bu güncelleştirmeler şunlardır:
+A Visual Basic tuple is a value type that is an instance of one of the a **System.ValueTuple** generic types. For example, the `holiday` tuple defined in the previous example is an instance of the <xref:System.ValueTuple%603> structure. It is designed to be a lightweight container for data. Since the tuple aims to make it easy to create an object with multiple data items, it lacks some of the features that a custom structure might have. Bu güncelleştirmeler şunlardır:
 
-- Özel Üyeler. Tanımlama grubu için kendi özelliklerinizi, yöntemlerinizi veya olaylarını tanımlayamazsınız.
+- Custom members. You cannot define your own properties, methods, or events for a tuple.
 
-- Doğrulamasına. Alanlara atanan verileri doğrulayamazsınız.
+- Validation. You cannot validate the data assigned to fields.
 
-- Değiştirilemezlik. Visual Basic tanımlama grupları değişebilir. Buna karşılık, özel bir yapı, bir örneğin değişebilir mi yoksa sabit mi olduğunu denetlemenize olanak tanır.
+- Immutability. Visual Basic tuples are mutable. In contrast, a custom structure allows you to control whether an instance is mutable or immutable.
 
-Özel Üyeler, özellik ve alan doğrulama veya imlik kullanılabilirliği önemliyse, bir özel değer türü tanımlamak için Visual Basic [yapısı](../../../language-reference/statements/structure-statement.md) ifadesini kullanmanız gerekir.
+If custom members, property and field validation, or immutability are important, you should use the Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) statement to define a custom value type.
 
-Visual Basic bir tanımlama grubu, değer **Etuple** türünün üyelerini devralınır. Alanlarına ek olarak, bunlar aşağıdaki yöntemleri içerir:
+A Visual Basic tuple does inherit the members of its **ValueTuple** type. In addition to its fields, these include the following methods:
 
 | Üye | Açıklama |
 | ---|---|
-| CompareTo | Geçerli tanımlama grubunu aynı sayıda öğeye sahip başka bir tanımlama grubu ile karşılaştırır. |
-| Eşittir | Geçerli tanımlama grubunun başka bir demet veya nesneye eşit olup olmadığını belirler. |
-| GetHashCode | Geçerli örnek için karma kodu hesaplar. |
-| Yönte | Bu tanımlama grubunun dize gösterimini döndürür, burada `Item1` ve `Item2` demet 'in alanlarının değerlerini temsil eder `(Item1, Item2...)`. |
+| CompareTo | Compares the current tuple to another tuple with the same number of elements. |
+| Eşittir | Determines whether the current tuple is equal to another tuple or object. |
+| GetHashCode | Calculates the hash code for the current instance. |
+| ToString | Returns the string representation of this tuple, which takes the form `(Item1, Item2...)`, where `Item1` and `Item2` represent the values of the tuple's fields. |
 
-Ayrıca, **Valuetuple** türleri <xref:System.Collections.IStructuralComparable> ve <xref:System.Collections.IStructuralEquatable> arabirimlerini uygular ve bu da müşteri Karşılaştırıcılar tanımlamanızı sağlar.
+In addition, the **ValueTuple** types implement <xref:System.Collections.IStructuralComparable> and <xref:System.Collections.IStructuralEquatable> interfaces, which allow you to define customer comparers.
 
-## <a name="assignment-and-tuples"></a>Atama ve tanımlama grupları
+## <a name="assignment-and-tuples"></a>Assignment and tuples
 
-Visual Basic, aynı sayıda alana sahip demet türleri arasında atamayı destekler. Aşağıdakilerden biri doğruysa alan türleri dönüştürülebilir:
+Visual Basic supports assignment between tuple types that have the same number of fields. The field types can be converted if one of the following is true:
 
-- Kaynak ve hedef alanı aynı türde.
+- The source and target field are of the same type.
 
-- Kaynak türü için bir genişletme (veya örtük) hedef türüne dönüştürme tanımlanır.
+- A widening (or implicit) conversion of the source type to the target type is defined.
 
-- `Option Strict` `On` ve kaynak türünün hedef türüne bir daraltma (veya açık) dönüştürmesi tanımlanmıştır. Bu dönüştürme, kaynak değer hedef türü aralığının dışındaysa bir özel durum oluşturabilir.
+- `Option Strict` is `On`, and a narrowing (or explicit) conversion of the source type to the target type is defined. This conversion can throw an exception if the source value is outside the range of the target type.
 
-Diğer dönüşümler atamalar için değerlendirilmez. Demet türleri arasında izin verilen atama türlerine bakalım.
+Other conversions are not considered for assignments. Let's look at the kinds of assignments that are allowed between tuple types.
 
-Aşağıdaki örneklerde kullanılan değişkenleri göz önünde bulundurun:
+Consider these variables used in the following examples:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#1)]
 
-@No__t_0 ve `anonymous` ilk iki değişken, alanlar için belirtilen semantik adlara sahip değildir. Alan adları varsayılan `Item1` ve `Item2`. Son iki değişken, `named` ve `differentName` semantik alan adlarına sahiptir. Bu iki tanımlama alanının alanlar için farklı adlara sahip olduğunu unutmayın.
+The first two variables, `unnamed` and `anonymous`, do not have semantic names provided for the fields. Their field names are the default `Item1` and `Item2`. The last two variables, `named` and `differentName` have semantic field names. Note that these two tuples have different names for the fields.
 
-Bu başlıkların dördü, aynı sayıda alana sahiptir (' parametre sayısı ' olarak adlandırılır) ve bu alanların türleri aynıdır. Bu nedenle, bu atamaların hepsi çalışır:
+All four of these tuples have the same number of fields (referred to as 'arity'), and the types of those fields are identical. Therefore, all of these assignments work:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#2)]
 
-Başlıkların adlarının atanmadığından emin olun. Alanların değerleri, kayıt grubundaki alanların sırasını izleyerek atanır.
+Notice that the names of the tuples are not assigned. The values of the fields are assigned following the order of the fields in the tuple.
 
-Son olarak, `named` ilk alanı bir `Integer` olsa ve `conversion` ilk alanı bir `Long` olsa da, `named` tanımlama grubunu `conversion` tanımlama listesine atayabiliriz. Bu atama başarılı olur çünkü bir `Integer` `Long` dönüştürmek, genişleyen bir dönüştürmedir.
+Finally, notice that we can assign the `named` tuple to the `conversion` tuple, even though the first field of `named` is an `Integer`, and the first field of `conversion` is a `Long`. This assignment succeeds because converting an `Integer` to a `Long` is a widening conversion.
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
-Farklı sayıda alan içeren diziler atanamaz:
+Tuples with different numbers of fields are not assignable:
 
 ```vb
 ' Does not compile.
@@ -131,43 +131,43 @@ var differentShape = (1, 2, 3)
 named = differentShape
 ```
 
-## <a name="tuples-as-method-return-values"></a>Yöntem dönüş değerleri olarak tanımlama grubu
+## <a name="tuples-as-method-return-values"></a>Tuples as method return values
 
-Bir yöntem yalnızca tek bir değer döndürebilir. Genellikle, bir yöntem çağrısını birden çok değer döndürecek şekilde istersiniz. Bu kısıtlamayı geçici olarak çözmek için birkaç yol vardır:
+A method can return only a single value. Frequently, though, you'd like a method call to return multiple values. There are several ways to work around this limitation:
 
-- Özellikleri veya alanları yöntemi tarafından döndürülen değerleri temsil eden özel bir sınıf veya yapı oluşturabilirsiniz. Bu nedenle ağır bir çözümdür; yalnızca amacı bir yöntem çağrısından değerleri almak olan özel bir tür tanımlamanızı gerektirir.
+- You can create a custom class or structure whose properties or fields represent values returned by the method. Thus is a heavyweight solution; it requires that you define a custom type whose only purpose is to retrieve values from a method call.
 
-- Yönteminden tek bir değer döndürebilir ve diğer değerleri yöntemine başvuruya göre geçirerek döndürebilirsiniz. Bu, başvuruya göre geçirdiğiniz değişkenin değerinin yanlışlıkla üzerine yazılması için bir değişken ve riskleri örnekleyerek oluşan ek yükünü içerir.
+- You can return a single value from the method, and return the remaining values by passing them by reference to the method. This involves the overhead of instantiating a variable and risks inadvertently overwriting the value of the variable that you pass by reference.
 
-- Birden çok dönüş değerini almak için basit bir çözüm sağlayan bir tanımlama grubu kullanabilirsiniz.
+- You can use a tuple, which provides a lightweight solution to retrieving multiple return values.
 
-Örneğin, .NET 'teki **Tryparo** yöntemleri ayrıştırma işleminin başarılı olup olmadığını belirten bir `Boolean` değer döndürür. Ayrıştırma işleminin sonucu, metoduna verilen başvuruya göre geçirilen bir değişkende döndürülür. Normalde, <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> gibi bir ayrıştırma yöntemine yapılan bir çağrı aşağıdaki gibi görünür:
+For example, the **TryParse** methods in .NET return a `Boolean` value that indicates whether the parsing operation succeeded. The result of the parsing operation is returned in a variable passed by reference to the method. Normally, a call to the a parsing method such as <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> looks like the following:
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#1)]
 
-Çağrısı, kendi yöntemdeki <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> yöntemine sarımızda, ayrıştırma işleminden bir tanımlama grubu döndürebiliriz. Aşağıdaki örnekte, `NumericLibrary.ParseInteger` <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> yöntemini çağırır ve iki öğesi olan adlandırılmış bir tanımlama grubu döndürür.
+We can return a tuple from the parsing operation if we wrap the call to the <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> method in our own method. In the following example, `NumericLibrary.ParseInteger` calls the <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> method and returns a named tuple with two elements.
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
 
-Daha sonra aşağıdaki gibi kodla yöntemi çağırabilirsiniz:
+You can then call the method with code like the following:
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#3)]
 
-## <a name="visual-basic-tuples-and-tuples-in-the-net-framework"></a>.NET Framework Visual Basic tanımlama grupları ve tanımlama grupları
+## <a name="visual-basic-tuples-and-tuples-in-the-net-framework"></a>Visual Basic tuples and tuples in the .NET Framework
 
-Visual Basic tanımlama grubu, .NET Framework 4,7 ' de tanıtılan **System. ValueTuple** genel türlerinden birinin bir örneğidir. .NET Framework Ayrıca bir dizi genel **System. Tuple** sınıfı içerir. Ancak, bu sınıflar, Visual Basic tanımlama tiplerinden ve **System. ValueTuple** genel türlerinden farklı çeşitli yollarla farklılık gösterir:
+A Visual Basic tuple is an instance of one of the **System.ValueTuple** generic types, which were introduced in the .NET Framework 4.7. The .NET Framework also includes a set of generic **System.Tuple** classes. These classes, however, differ from Visual Basic tuples and the **System.ValueTuple** generic types in a number of ways:
 
-- **Demet** sınıflarının öğeleri `Item1`, `Item2` vb. adlı özelliklerdir. Visual Basic tanımlama tiplerinde ve **Valuetuple** türlerinde, demet öğeleri alanlardır.
+- The elements of the **Tuple** classes are properties named `Item1`, `Item2`, and so on. In Visual Basic tuples and the **ValueTuple** types, tuple elements are fields.
 
-- Bir **demet** örneğinin veya bir **Valuetuple** örneğinin öğelerine anlamlı adlar atayamazsınız. Visual Basic alanların anlamını karşılayan adlar atamanıza izin verir.
+- You cannot assign meaningful names to the elements of a **Tuple** instance or of a **ValueTuple** instance. Visual Basic allows you to assign names that communicate the meaning of the fields.
 
-- Bir **tanımlama grubu** örneğinin özellikleri salt okunurdur; tanımlama grupları sabittir. Visual Basic tanımlama tiplerinde ve **Valuetuple** türlerinde, demet alanları okuma-yazma ' dır; tanımlama grupları değişebilir.
+- The properties of a **Tuple** instance are read-only; the tuples are immutable. In Visual Basic tuples and the **ValueTuple** types, tuple fields are read-write; the tuples are mutable.
 
-- Genel **demet** türleri başvuru türleridir. Bu **demet** türlerinin kullanılması, nesneleri ayırmayı gösterir. Etkin yollarda bu, uygulamanızın performansı üzerinde ölçülebilir bir etkiye sahip olabilir. Visual Basic tanımlama grupları ve **Valuetuple** türleri değer türlerdir.
+- The generic **Tuple** types are reference types. Using these **Tuple** types means allocating objects. On hot paths, this can have a measurable impact on your application's performance. Visual Basic tuples and the **ValueTuple** types are value types.
 
-@No__t_0 sınıftaki genişletme yöntemleri, Visual Basic tanımlama grupları ve .NET **demet** nesneleri arasında dönüştürme yapmayı kolaylaştırır. **ToTuple** yöntemi bir Visual Basic tanımlama grubunu bir .net **demet** nesnesine dönüştürür ve **tovaluetuple** yöntemi bir .net **demet** nesnesini bir Visual Basic tanımlama grubu öğesine dönüştürür.
+Extension methods in the <xref:System.TupleExtensions> class make it easy to convert between Visual Basic tuples and .NET **Tuple** objects. The **ToTuple** method converts a Visual Basic tuple to a .NET **Tuple** object, and the **ToValueTuple** method converts a .NET **Tuple** object to a Visual Basic tuple.
 
-Aşağıdaki örnek bir tanımlama grubu oluşturur, bunu bir .NET **demet** nesnesine dönüştürür ve Visual Basic bir tanımlama grubu geri dönüştürür. Daha sonra örnek, eşit olduklarından emin olmak için bu tanımlama grubunu orijinal bir ile karşılaştırır.
+The following example creates a tuple, converts it to a .NET **Tuple** object, and converts it back to a Visual Basic tuple. The example then compares this tuple with the original one to ensure that they are equal.
 
 [!code-vb[Convert](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple2.vb#1)]
 

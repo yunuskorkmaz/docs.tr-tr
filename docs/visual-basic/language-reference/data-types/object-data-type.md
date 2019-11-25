@@ -1,5 +1,5 @@
 ---
-title: Nesne veri türü (Visual Basic)
+title: Nesne Veri Türü
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Object
@@ -10,26 +10,26 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 1ac906494c49810e3d389591b1044f412e7320bc
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 2ccb9b69b865c259d078ed9642d63c7f83514756
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68513042"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343961"
 ---
 # <a name="object-data-type"></a>Nesne Veri Türü
 
-Nesnelere başvuran adresleri tutar. Herhangi bir başvuru türünü (String, Array, Class veya Interface) bir `Object` değişkene atayabilirsiniz. Bir `Object` değişken, herhangi bir değer türünün (sayısal, `Boolean`, `Char`, `Date`, yapı veya sabit listesi) verilerine de başvurabilir.
+Holds addresses that refer to objects. You can assign any reference type (string, array, class, or interface) to an `Object` variable. An `Object` variable can also refer to data of any value type (numeric, `Boolean`, `Char`, `Date`, structure, or enumeration).
 
 ## <a name="remarks"></a>Açıklamalar
 
-`Object` Veri türü, uygulamanızın tanıdığı herhangi bir nesne örneği de dahil olmak üzere herhangi bir veri türünün verilerini işaret edebilir. Derleme `Object` zamanında, değişkenin işaret edebilecekleri veri türünü bilmediğinizde ' i kullanın.
+The `Object` data type can point to data of any data type, including any object instance your application recognizes. Use `Object` when you do not know at compile time what data type the variable might point to.
 
-`Object` Öğesinin`Nothing` varsayılan değeri (null başvurusu).
+The default value of `Object` is `Nothing` (a null reference).
 
 ## <a name="data-types"></a>Veri Türleri
 
-Bir `Object` değişkene herhangi bir veri türü için değişken, sabit veya ifade atayabilirsiniz. Şu anda başvurduğu bir `Object` değişkenin veri türünü öğrenmek için, <xref:System.Type?displayProperty=nameWithType> sınıfının <xref:System.Type.GetTypeCode%2A> yöntemini kullanabilirsiniz. Aşağıdaki örnek bunu göstermektedir.
+You can assign a variable, constant, or expression of any data type to an `Object` variable. To determine the data type an `Object` variable currently refers to, you can use the <xref:System.Type.GetTypeCode%2A> method of the <xref:System.Type?displayProperty=nameWithType> class. Aşağıdaki örnek bunu göstermektedir.
 
 ```vb
 Dim myObject As Object
@@ -38,31 +38,31 @@ Dim datTyp As Integer
 datTyp = Type.GetTypeCode(myObject.GetType())
 ```
 
-`Object` Veri türü bir başvuru türüdür. Ancak, Visual Basic bir `Object` değişkeni bir değer türünün verilerine başvurduğunda değer türü olarak değerlendirir.
+The `Object` data type is a reference type. However, Visual Basic treats an `Object` variable as a value type when it refers to data of a value type.
 
 ## <a name="storage"></a>Depolama
 
-Başvurduğu veri türü ne olursa olsun, bir `Object` değişken veri değerinin kendisini içermez, bunun yerine değer için bir işaretçi. Bilgisayar belleğinde her zaman dört bayt kullanır, ancak bu, değişkenin değerini temsil eden veriler için depolama alanı içermez. Verileri bulmak için işaretçiyi kullanan kod nedeniyle, `Object` değer türlerini tutan değişkenlerin açık olarak belirlenmiş değişkenlerle erişimi biraz daha yavaştır.
+Whatever data type it refers to, an `Object` variable does not contain the data value itself, but rather a pointer to the value. It always uses four bytes in computer memory, but this does not include the storage for the data representing the value of the variable. Because of the code that uses the pointer to locate the data, `Object` variables holding value types are slightly slower to access than explicitly typed variables.
 
 ## <a name="programming-tips"></a>Programlama İpuçları
 
-- **Birlikte çalışma konuları.** Otomasyon veya com nesneleri gibi .NET Framework için yazılmayan bileşenlerle ilgili bir arabiriminiz varsa, diğer ortamlardaki işaretçi türlerinin Visual Basic `Object` türüyle uyumlu olmadığını göz önünde bulundurun.
+- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that pointer types in other environments are not compatible with the Visual Basic `Object` type.
 
-- **Performans.** `Object` Türü ile bildirdiğiniz bir değişken, herhangi bir nesneye başvuru içermesi için yeterince esnektir. Ancak, bu tür bir değişkende bir yöntemi veya özelliği çağırdığınızda, her zaman *geç bağlamaya* (çalışma zamanında) tabi olursunuz. *Erken bağlamayı* zorlamak için (derleme zamanında) ve daha iyi performans, değişkeni belirli bir sınıf adıyla bildirin veya belirli bir veri türüne atayın.
+- **Performance.** A variable you declare with the `Object` type is flexible enough to contain a reference to any object. However, when you invoke a method or property on such a variable, you always incur *late binding* (at run time). To force *early binding* (at compile time) and better performance, declare the variable with a specific class name, or cast it to the specific data type.
 
-  Bir nesne değişkeni bildirdiğinizde, örneğin <xref:System.OperatingSystem>Genelleştirilmiş `Object` tür yerine belirli bir sınıf türü kullanmayı deneyin. Özelliklerine ve yöntemlerine erişebilmek için, <xref:System.Windows.Forms.TextBox> yerine, kullanılabilir olan <xref:System.Windows.Forms.Control>en özel sınıfı da kullanmanız gerekir. Kullanılabilir sınıf adlarını bulmak için genellikle **nesne tarayıcısı** **sınıfları** listesini kullanabilirsiniz.
+  When you declare an object variable, try to use a specific class type, for example <xref:System.OperatingSystem>, instead of the generalized `Object` type. You should also use the most specific class available, such as <xref:System.Windows.Forms.TextBox> instead of <xref:System.Windows.Forms.Control>, so that you can access its properties and methods. You can usually use the **Classes** list in the **Object Browser** to find available class names.
 
-- **Kan.** Tüm veri türleri ve tüm başvuru türleri `Object` veri türüne göre genişledir. Bu, herhangi bir türü bir `Object` <xref:System.OverflowException?displayProperty=nameWithType> hatayla karşılaşmadan dönüştürmek üzere dönüştürebileceğiniz anlamına gelir.
+- **Widening.** All data types and all reference types widen to the `Object` data type. This means you can convert any type to `Object` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
 
-  Ancak, değer türleri `Object`arasında dönüştürme yaparsanız, Visual Basic, yürütmeyi daha yavaş hale getiren *kutulama* ve *kutudan*çıkarma adlı işlemleri gerçekleştirir.
+  However, if you convert between value types and `Object`, Visual Basic performs operations called *boxing* and *unboxing*, which make execution slower.
 
-- **Tür karakterleri.** `Object`değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok.
+- **Type Characters.** `Object` has no literal type character or identifier type character.
 
-- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Object?displayProperty=nameWithType> sınıftır.
+- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Object?displayProperty=nameWithType> class.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir nesne `Object` örneğine işaret eden bir değişken gösterir.
+The following example illustrates an `Object` variable pointing to an object instance.
 
 ```vb
 Dim objDb As Object
@@ -78,5 +78,5 @@ objDb = myCollection.Item(1)
 - [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-- [Nasıl yapılır: Iki nesnenin Ilgili olup olmadığını belirleme](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
-- [Nasıl yapılır: Iki nesnenin aynı olup olmadığını belirleme](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [Nasıl yapılır: İki Nesnenin İlgili Olup Olmadığını Belirleme](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Nasıl yapılır: İki Nesnenin Aynı Olup Olmadığını Belirleme](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
