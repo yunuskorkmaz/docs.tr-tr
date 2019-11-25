@@ -1,38 +1,38 @@
 ---
-title: (Visual Basic) XML ağacına öğe, öznitelik ve düğümleri ekleme
+title: XML Ağacına Öğe, Öznitelik ve Düğümler Ekleme
 ms.date: 07/20/2015
 ms.assetid: e243e694-c987-43aa-8b22-1e33dace582c
-ms.openlocfilehash: 35d3bdb27342dd7a871778ad4749db4d6849bd60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d3d3a27194bb022434f09778dbf3960bd0b9853
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021862"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345820"
 ---
-# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a><span data-ttu-id="ae197-102">(Visual Basic) XML ağacına öğe, öznitelik ve düğümleri ekleme</span><span class="sxs-lookup"><span data-stu-id="ae197-102">Adding Elements, Attributes, and Nodes to an XML Tree (Visual Basic)</span></span>
-<span data-ttu-id="ae197-103">Varolan bir XML ağacına içeriği (öğe, öznitelik, yorumlar, işleme yönergeleri, metin ve CDATA) ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ae197-103">You can add content (elements, attributes, comments, processing instructions, text, and CDATA) to an existing XML tree.</span></span>  
+# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a><span data-ttu-id="ece36-102">Adding Elements, Attributes, and Nodes to an XML Tree (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ece36-102">Adding Elements, Attributes, and Nodes to an XML Tree (Visual Basic)</span></span>
+<span data-ttu-id="ece36-103">You can add content (elements, attributes, comments, processing instructions, text, and CDATA) to an existing XML tree.</span><span class="sxs-lookup"><span data-stu-id="ece36-103">You can add content (elements, attributes, comments, processing instructions, text, and CDATA) to an existing XML tree.</span></span>  
   
-## <a name="methods-for-adding-content"></a><span data-ttu-id="ae197-104">İçerik ekleme yöntemleri</span><span class="sxs-lookup"><span data-stu-id="ae197-104">Methods for Adding Content</span></span>  
- <span data-ttu-id="ae197-105">Aşağıdaki yöntemler alt içeriğin bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument>:</span><span class="sxs-lookup"><span data-stu-id="ae197-105">The following methods add child content to an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XDocument>:</span></span>  
+## <a name="methods-for-adding-content"></a><span data-ttu-id="ece36-104">Methods for Adding Content</span><span class="sxs-lookup"><span data-stu-id="ece36-104">Methods for Adding Content</span></span>  
+ <span data-ttu-id="ece36-105">The following methods add child content to an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XDocument>:</span><span class="sxs-lookup"><span data-stu-id="ece36-105">The following methods add child content to an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XDocument>:</span></span>  
   
-|<span data-ttu-id="ae197-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="ae197-106">Method</span></span>|<span data-ttu-id="ae197-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ae197-107">Description</span></span>|  
+|<span data-ttu-id="ece36-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="ece36-106">Method</span></span>|<span data-ttu-id="ece36-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ece36-107">Description</span></span>|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Add%2A>|<span data-ttu-id="ae197-108">İçeriği, içerik alt sonunda ekler <xref:System.Xml.Linq.XContainer>.</span><span class="sxs-lookup"><span data-stu-id="ae197-108">Adds content at the end of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|<span data-ttu-id="ae197-109">İçeriği, içerik alt başında ekler <xref:System.Xml.Linq.XContainer>.</span><span class="sxs-lookup"><span data-stu-id="ae197-109">Adds content at the beginning of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|<span data-ttu-id="ece36-108">Adds content at the end of the child content of the <xref:System.Xml.Linq.XContainer>.</span><span class="sxs-lookup"><span data-stu-id="ece36-108">Adds content at the end of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|<span data-ttu-id="ece36-109">Adds content at the beginning of the child content of the <xref:System.Xml.Linq.XContainer>.</span><span class="sxs-lookup"><span data-stu-id="ece36-109">Adds content at the beginning of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
   
- <span data-ttu-id="ae197-110">Aşağıdaki yöntemlerden içerik eşdüzey düğümleri olarak eklemek bir <xref:System.Xml.Linq.XNode>.</span><span class="sxs-lookup"><span data-stu-id="ae197-110">The following methods add content as sibling nodes of an <xref:System.Xml.Linq.XNode>.</span></span> <span data-ttu-id="ae197-111">Eşdüzey içeriği için eklediğiniz en yaygın düğüm <xref:System.Xml.Linq.XElement>, geçerli eşdüzey içeriği gibi diğer düğümleri türlerine ekleyebilirsiniz ancak <xref:System.Xml.Linq.XText> veya <xref:System.Xml.Linq.XComment>.</span><span class="sxs-lookup"><span data-stu-id="ae197-111">The most common node to which you add sibling content is <xref:System.Xml.Linq.XElement>, although you can add valid sibling content to other types of nodes such as <xref:System.Xml.Linq.XText> or <xref:System.Xml.Linq.XComment>.</span></span>  
+ <span data-ttu-id="ece36-110">The following methods add content as sibling nodes of an <xref:System.Xml.Linq.XNode>.</span><span class="sxs-lookup"><span data-stu-id="ece36-110">The following methods add content as sibling nodes of an <xref:System.Xml.Linq.XNode>.</span></span> <span data-ttu-id="ece36-111">The most common node to which you add sibling content is <xref:System.Xml.Linq.XElement>, although you can add valid sibling content to other types of nodes such as <xref:System.Xml.Linq.XText> or <xref:System.Xml.Linq.XComment>.</span><span class="sxs-lookup"><span data-stu-id="ece36-111">The most common node to which you add sibling content is <xref:System.Xml.Linq.XElement>, although you can add valid sibling content to other types of nodes such as <xref:System.Xml.Linq.XText> or <xref:System.Xml.Linq.XComment>.</span></span>  
   
-|<span data-ttu-id="ae197-112">Yöntem</span><span class="sxs-lookup"><span data-stu-id="ae197-112">Method</span></span>|<span data-ttu-id="ae197-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ae197-113">Description</span></span>|  
+|<span data-ttu-id="ece36-112">Yöntem</span><span class="sxs-lookup"><span data-stu-id="ece36-112">Method</span></span>|<span data-ttu-id="ece36-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ece36-113">Description</span></span>|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|<span data-ttu-id="ae197-114">Sonra içerik ekler <xref:System.Xml.Linq.XNode>.</span><span class="sxs-lookup"><span data-stu-id="ae197-114">Adds content after the <xref:System.Xml.Linq.XNode>.</span></span>|  
-|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|<span data-ttu-id="ae197-115">Önce içeriği ekler <xref:System.Xml.Linq.XNode>.</span><span class="sxs-lookup"><span data-stu-id="ae197-115">Adds content before the <xref:System.Xml.Linq.XNode>.</span></span>|  
+|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|<span data-ttu-id="ece36-114">Adds content after the <xref:System.Xml.Linq.XNode>.</span><span class="sxs-lookup"><span data-stu-id="ece36-114">Adds content after the <xref:System.Xml.Linq.XNode>.</span></span>|  
+|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|<span data-ttu-id="ece36-115">Adds content before the <xref:System.Xml.Linq.XNode>.</span><span class="sxs-lookup"><span data-stu-id="ece36-115">Adds content before the <xref:System.Xml.Linq.XNode>.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="ae197-116">Örnek</span><span class="sxs-lookup"><span data-stu-id="ae197-116">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ece36-116">Örnek</span><span class="sxs-lookup"><span data-stu-id="ece36-116">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="ae197-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ae197-117">Description</span></span>  
- <span data-ttu-id="ae197-118">Aşağıdaki örnek, iki XML ağaçlarını oluşturur ve bir ağaçları değiştirir.</span><span class="sxs-lookup"><span data-stu-id="ae197-118">The following example creates two XML trees, and then modifies one of the trees.</span></span>  
+### <a name="description"></a><span data-ttu-id="ece36-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ece36-117">Description</span></span>  
+ <span data-ttu-id="ece36-118">The following example creates two XML trees, and then modifies one of the trees.</span><span class="sxs-lookup"><span data-stu-id="ece36-118">The following example creates two XML trees, and then modifies one of the trees.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="ae197-119">Kod</span><span class="sxs-lookup"><span data-stu-id="ae197-119">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="ece36-119">Kod</span><span class="sxs-lookup"><span data-stu-id="ece36-119">Code</span></span>  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -64,8 +64,8 @@ xmlTree.Add(srcTree.Element("Child9"))
 Console.WriteLine(xmlTree)  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="ae197-120">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ae197-120">Comments</span></span>  
- <span data-ttu-id="ae197-121">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="ae197-121">This code produces the following output:</span></span>  
+### <a name="comments"></a><span data-ttu-id="ece36-120">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ece36-120">Comments</span></span>  
+ <span data-ttu-id="ece36-121">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="ece36-121">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -80,6 +80,6 @@ Console.WriteLine(xmlTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ae197-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ae197-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ece36-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ece36-122">See also</span></span>
 
-- [<span data-ttu-id="ae197-123">(LINQ to XML) XML ağaçlarını değiştirme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ae197-123">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [<span data-ttu-id="ece36-123">Modifying XML Trees (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ece36-123">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

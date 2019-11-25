@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: DataContractSerializer kullanarak serileştirme (Visual Basic)'
+title: 'How to: Serialize Using DataContractSerializer'
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
-ms.openlocfilehash: 5b747f505b0314c082929fbce25a67f79dd4af35
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 6c4142673cc374fbc6202e5806d1e9016cc81893
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835161"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352366"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a><span data-ttu-id="4f6d0-102">Nasıl yapılır: DataContractSerializer kullanarak serileştirme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4f6d0-102">How to: Serialize Using DataContractSerializer (Visual Basic)</span></span>
-<span data-ttu-id="4f6d0-103">Bu konuda, <xref:System.Runtime.Serialization.DataContractSerializer> kullanarak seri hale getirilen ve seri hale getirilen bir örnek gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="4f6d0-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a><span data-ttu-id="1cc8b-102">How to: Serialize Using DataContractSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1cc8b-102">How to: Serialize Using DataContractSerializer (Visual Basic)</span></span>
+<span data-ttu-id="1cc8b-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="1cc8b-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4f6d0-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="4f6d0-104">Example</span></span>  
- <span data-ttu-id="4f6d0-105">Aşağıdaki örnek <xref:System.Xml.Linq.XElement> nesneleri içeren bir dizi nesne oluşturur.</span><span class="sxs-lookup"><span data-stu-id="4f6d0-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="4f6d0-106">Daha sonra bunları metin dosyalarına serileştirir ve metin dosyalarından serileştirir.</span><span class="sxs-lookup"><span data-stu-id="4f6d0-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
+## <a name="example"></a><span data-ttu-id="1cc8b-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="1cc8b-104">Example</span></span>  
+ <span data-ttu-id="1cc8b-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span><span class="sxs-lookup"><span data-stu-id="1cc8b-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="1cc8b-106">It then serializes them to text files, and then deserializes them from the text files.</span><span class="sxs-lookup"><span data-stu-id="1cc8b-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
   
 ```vb  
 Imports System  
@@ -72,7 +72,7 @@ Public Class XElementNullContainer
 End Class  
 ```  
   
- <span data-ttu-id="4f6d0-107">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="4f6d0-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="1cc8b-107">This example produces the following output:</span><span class="sxs-lookup"><span data-stu-id="1cc8b-107">This example produces the following output:</span></span>  
   
 ```console  
 Testing for type: System.Xml.Linq.XElement  
@@ -83,6 +83,6 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4f6d0-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4f6d0-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1cc8b-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1cc8b-108">See also</span></span>
 
-- [<span data-ttu-id="4f6d0-109">XElement nesneleri içeren nesne grafiklerini serileştirme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4f6d0-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [<span data-ttu-id="1cc8b-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1cc8b-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

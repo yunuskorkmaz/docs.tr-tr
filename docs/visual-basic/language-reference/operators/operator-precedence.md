@@ -1,5 +1,5 @@
 ---
-title: Visual Basic'de İşleç Önceliği
+title: İşleç Önceliği
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arithmetic operators [Visual Basic], precedence
@@ -14,71 +14,71 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: df40aced45442c9c7895c8d10ece64b21e292508
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 318fcc3f35276ba0b2061ba9677c5fde29429f6f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659921"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348273"
 ---
-# <a name="operator-precedence-in-visual-basic"></a><span data-ttu-id="eac28-102">Visual Basic'de İşleç Önceliği</span><span class="sxs-lookup"><span data-stu-id="eac28-102">Operator Precedence in Visual Basic</span></span>
-<span data-ttu-id="eac28-103">Bir ifadede birkaç işlem gerçekleştiğinde, her parça, *işleç önceliği*olarak adlandırılan önceden belirlenmiş bir sırada değerlendirilir ve çözümlenir.</span><span class="sxs-lookup"><span data-stu-id="eac28-103">When several operations occur in an expression, each part is evaluated and resolved in a predetermined order called *operator precedence*.</span></span>
+# <a name="operator-precedence-in-visual-basic"></a><span data-ttu-id="81181-102">Visual Basic'de İşleç Önceliği</span><span class="sxs-lookup"><span data-stu-id="81181-102">Operator Precedence in Visual Basic</span></span>
+<span data-ttu-id="81181-103">When several operations occur in an expression, each part is evaluated and resolved in a predetermined order called *operator precedence*.</span><span class="sxs-lookup"><span data-stu-id="81181-103">When several operations occur in an expression, each part is evaluated and resolved in a predetermined order called *operator precedence*.</span></span>
 
-## <a name="precedence-rules"></a><span data-ttu-id="eac28-104">Öncelik kuralları</span><span class="sxs-lookup"><span data-stu-id="eac28-104">Precedence Rules</span></span>
- <span data-ttu-id="eac28-105">İfadeler birden fazla kategoriden işleçler içerdiğinde, bunlar aşağıdaki kurallara göre değerlendirilir:</span><span class="sxs-lookup"><span data-stu-id="eac28-105">When expressions contain operators from more than one category, they are evaluated according to the following rules:</span></span>
+## <a name="precedence-rules"></a><span data-ttu-id="81181-104">Precedence Rules</span><span class="sxs-lookup"><span data-stu-id="81181-104">Precedence Rules</span></span>
+ <span data-ttu-id="81181-105">When expressions contain operators from more than one category, they are evaluated according to the following rules:</span><span class="sxs-lookup"><span data-stu-id="81181-105">When expressions contain operators from more than one category, they are evaluated according to the following rules:</span></span>
 
-- <span data-ttu-id="eac28-106">Aritmetik ve birleştirme işleçleri aşağıdaki bölümde açıklanan öncelik sırasına sahiptir ve tümü karşılaştırma, mantıksal ve bit düzeyinde operatörlerden daha önceliklidir.</span><span class="sxs-lookup"><span data-stu-id="eac28-106">The arithmetic and concatenation operators have the order of precedence described in the following section, and all have greater precedence than the comparison, logical, and bitwise operators.</span></span>
+- <span data-ttu-id="81181-106">The arithmetic and concatenation operators have the order of precedence described in the following section, and all have greater precedence than the comparison, logical, and bitwise operators.</span><span class="sxs-lookup"><span data-stu-id="81181-106">The arithmetic and concatenation operators have the order of precedence described in the following section, and all have greater precedence than the comparison, logical, and bitwise operators.</span></span>
 
-- <span data-ttu-id="eac28-107">Tüm karşılaştırma işleçleri eşit önceliğe sahiptir ve tümü mantıksal ve bit düzeyinde operatörlerden daha önceliklidir, ancak aritmetik ve birleştirme işleçlerinden daha düşük önceliğe sahiptir.</span><span class="sxs-lookup"><span data-stu-id="eac28-107">All comparison operators have equal precedence, and all have greater precedence than the logical and bitwise operators, but lower precedence than the arithmetic and concatenation operators.</span></span>
+- <span data-ttu-id="81181-107">All comparison operators have equal precedence, and all have greater precedence than the logical and bitwise operators, but lower precedence than the arithmetic and concatenation operators.</span><span class="sxs-lookup"><span data-stu-id="81181-107">All comparison operators have equal precedence, and all have greater precedence than the logical and bitwise operators, but lower precedence than the arithmetic and concatenation operators.</span></span>
 
-- <span data-ttu-id="eac28-108">Mantıksal ve bit düzeyinde işleçler aşağıdaki bölümde açıklanan öncelik sırasına sahiptir ve tümünün aritmetik, birleştirme ve karşılaştırma işleçlerinden daha düşük önceliği vardır.</span><span class="sxs-lookup"><span data-stu-id="eac28-108">The logical and bitwise operators have the order of precedence described in the following section, and all have lower precedence than the arithmetic, concatenation, and comparison operators.</span></span>
+- <span data-ttu-id="81181-108">The logical and bitwise operators have the order of precedence described in the following section, and all have lower precedence than the arithmetic, concatenation, and comparison operators.</span><span class="sxs-lookup"><span data-stu-id="81181-108">The logical and bitwise operators have the order of precedence described in the following section, and all have lower precedence than the arithmetic, concatenation, and comparison operators.</span></span>
 
-- <span data-ttu-id="eac28-109">Eşit önceliğe sahip işleçler, ifadede göründükleri sırada soldan sağa değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="eac28-109">Operators with equal precedence are evaluated left to right in the order in which they appear in the expression.</span></span>
+- <span data-ttu-id="81181-109">Operators with equal precedence are evaluated left to right in the order in which they appear in the expression.</span><span class="sxs-lookup"><span data-stu-id="81181-109">Operators with equal precedence are evaluated left to right in the order in which they appear in the expression.</span></span>
 
-## <a name="precedence-order"></a><span data-ttu-id="eac28-110">Öncelik sırası</span><span class="sxs-lookup"><span data-stu-id="eac28-110">Precedence Order</span></span>
- <span data-ttu-id="eac28-111">İşleçler aşağıdaki öncelik sırasına göre değerlendirilir:</span><span class="sxs-lookup"><span data-stu-id="eac28-111">Operators are evaluated in the following order of precedence:</span></span>
+## <a name="precedence-order"></a><span data-ttu-id="81181-110">Precedence Order</span><span class="sxs-lookup"><span data-stu-id="81181-110">Precedence Order</span></span>
+ <span data-ttu-id="81181-111">Operators are evaluated in the following order of precedence:</span><span class="sxs-lookup"><span data-stu-id="81181-111">Operators are evaluated in the following order of precedence:</span></span>
 
-### <a name="await-operator"></a><span data-ttu-id="eac28-112">Await İşleci</span><span class="sxs-lookup"><span data-stu-id="eac28-112">Await Operator</span></span>
- <span data-ttu-id="eac28-113">Await</span><span class="sxs-lookup"><span data-stu-id="eac28-113">Await</span></span>
+### <a name="await-operator"></a><span data-ttu-id="81181-112">Await İşleci</span><span class="sxs-lookup"><span data-stu-id="81181-112">Await Operator</span></span>
+ <span data-ttu-id="81181-113">Await</span><span class="sxs-lookup"><span data-stu-id="81181-113">Await</span></span>
 
-### <a name="arithmetic-and-concatenation-operators"></a><span data-ttu-id="eac28-114">Aritmetik ve birleştirme Işleçleri</span><span class="sxs-lookup"><span data-stu-id="eac28-114">Arithmetic and Concatenation Operators</span></span>
- <span data-ttu-id="eac28-115">Üs (`^`)</span><span class="sxs-lookup"><span data-stu-id="eac28-115">Exponentiation (`^`)</span></span>
+### <a name="arithmetic-and-concatenation-operators"></a><span data-ttu-id="81181-114">Arithmetic and Concatenation Operators</span><span class="sxs-lookup"><span data-stu-id="81181-114">Arithmetic and Concatenation Operators</span></span>
+ <span data-ttu-id="81181-115">Exponentiation (`^`)</span><span class="sxs-lookup"><span data-stu-id="81181-115">Exponentiation (`^`)</span></span>
 
- <span data-ttu-id="eac28-116">Birli kimlik ve olumsuzlama`+`( `–`,)</span><span class="sxs-lookup"><span data-stu-id="eac28-116">Unary identity and negation (`+`, `–`)</span></span>
+ <span data-ttu-id="81181-116">Unary identity and negation (`+`, `–`)</span><span class="sxs-lookup"><span data-stu-id="81181-116">Unary identity and negation (`+`, `–`)</span></span>
 
- <span data-ttu-id="eac28-117">Çarpma ve kayan nokta bölmesi (`*`,) `/`</span><span class="sxs-lookup"><span data-stu-id="eac28-117">Multiplication and floating-point division (`*`, `/`)</span></span>
+ <span data-ttu-id="81181-117">Multiplication and floating-point division (`*`, `/`)</span><span class="sxs-lookup"><span data-stu-id="81181-117">Multiplication and floating-point division (`*`, `/`)</span></span>
 
- <span data-ttu-id="eac28-118">Tamsayı bölümü (`\`)</span><span class="sxs-lookup"><span data-stu-id="eac28-118">Integer division (`\`)</span></span>
+ <span data-ttu-id="81181-118">Integer division (`\`)</span><span class="sxs-lookup"><span data-stu-id="81181-118">Integer division (`\`)</span></span>
 
- <span data-ttu-id="eac28-119">Modüler aritmetik (`Mod`)</span><span class="sxs-lookup"><span data-stu-id="eac28-119">Modular arithmetic (`Mod`)</span></span>
+ <span data-ttu-id="81181-119">Modular arithmetic (`Mod`)</span><span class="sxs-lookup"><span data-stu-id="81181-119">Modular arithmetic (`Mod`)</span></span>
 
- <span data-ttu-id="eac28-120">Toplama ve çıkarma (`+`, `–`)</span><span class="sxs-lookup"><span data-stu-id="eac28-120">Addition and subtraction (`+`, `–`)</span></span>
+ <span data-ttu-id="81181-120">Addition and subtraction (`+`, `–`)</span><span class="sxs-lookup"><span data-stu-id="81181-120">Addition and subtraction (`+`, `–`)</span></span>
 
- <span data-ttu-id="eac28-121">Dize birleştirme (`&`)</span><span class="sxs-lookup"><span data-stu-id="eac28-121">String concatenation (`&`)</span></span>
+ <span data-ttu-id="81181-121">String concatenation (`&`)</span><span class="sxs-lookup"><span data-stu-id="81181-121">String concatenation (`&`)</span></span>
 
- <span data-ttu-id="eac28-122">Aritmetik bit kaydırma (`<<`, `>>`)</span><span class="sxs-lookup"><span data-stu-id="eac28-122">Arithmetic bit shift (`<<`, `>>`)</span></span>
+ <span data-ttu-id="81181-122">Arithmetic bit shift (`<<`, `>>`)</span><span class="sxs-lookup"><span data-stu-id="81181-122">Arithmetic bit shift (`<<`, `>>`)</span></span>
 
-### <a name="comparison-operators"></a><span data-ttu-id="eac28-123">Karşılaştırma İşleçleri</span><span class="sxs-lookup"><span data-stu-id="eac28-123">Comparison Operators</span></span>
- <span data-ttu-id="eac28-124">Tüm karşılaştırma işleçleri (`=`, `<>`, `<` `<=`,, `>`, ,,`Is`,, .`TypeOf`.. `IsNot` `>=` `Like` `Is`)</span><span class="sxs-lookup"><span data-stu-id="eac28-124">All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)</span></span>
+### <a name="comparison-operators"></a><span data-ttu-id="81181-123">Karşılaştırma İşleçleri</span><span class="sxs-lookup"><span data-stu-id="81181-123">Comparison Operators</span></span>
+ <span data-ttu-id="81181-124">All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)</span><span class="sxs-lookup"><span data-stu-id="81181-124">All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)</span></span>
 
-### <a name="logical-and-bitwise-operators"></a><span data-ttu-id="eac28-125">Mantıksal ve Bit Düzeyinde İşleçler</span><span class="sxs-lookup"><span data-stu-id="eac28-125">Logical and Bitwise Operators</span></span>
- <span data-ttu-id="eac28-126">Değilleme`Not`()</span><span class="sxs-lookup"><span data-stu-id="eac28-126">Negation (`Not`)</span></span>
+### <a name="logical-and-bitwise-operators"></a><span data-ttu-id="81181-125">Mantıksal ve Bit Düzeyinde İşleçler</span><span class="sxs-lookup"><span data-stu-id="81181-125">Logical and Bitwise Operators</span></span>
+ <span data-ttu-id="81181-126">Negation (`Not`)</span><span class="sxs-lookup"><span data-stu-id="81181-126">Negation (`Not`)</span></span>
 
- <span data-ttu-id="eac28-127">Birlikte (`And`, `AndAlso`)</span><span class="sxs-lookup"><span data-stu-id="eac28-127">Conjunction (`And`, `AndAlso`)</span></span>
+ <span data-ttu-id="81181-127">Conjunction (`And`, `AndAlso`)</span><span class="sxs-lookup"><span data-stu-id="81181-127">Conjunction (`And`, `AndAlso`)</span></span>
 
- <span data-ttu-id="eac28-128">Kapsamlı ayırıcı (`Or`, `OrElse`)</span><span class="sxs-lookup"><span data-stu-id="eac28-128">Inclusive disjunction (`Or`, `OrElse`)</span></span>
+ <span data-ttu-id="81181-128">Inclusive disjunction (`Or`, `OrElse`)</span><span class="sxs-lookup"><span data-stu-id="81181-128">Inclusive disjunction (`Or`, `OrElse`)</span></span>
 
- <span data-ttu-id="eac28-129">Dışlamalı ayırıcı (`Xor`)</span><span class="sxs-lookup"><span data-stu-id="eac28-129">Exclusive disjunction (`Xor`)</span></span>
+ <span data-ttu-id="81181-129">Exclusive disjunction (`Xor`)</span><span class="sxs-lookup"><span data-stu-id="81181-129">Exclusive disjunction (`Xor`)</span></span>
 
-### <a name="comments"></a><span data-ttu-id="eac28-130">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="eac28-130">Comments</span></span>
- <span data-ttu-id="eac28-131">`=` İşleci atama işleci değil yalnızca eşitlik karşılaştırma işleçtir.</span><span class="sxs-lookup"><span data-stu-id="eac28-131">The `=` operator is only the equality comparison operator, not the assignment operator.</span></span>
+### <a name="comments"></a><span data-ttu-id="81181-130">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="81181-130">Comments</span></span>
+ <span data-ttu-id="81181-131">The `=` operator is only the equality comparison operator, not the assignment operator.</span><span class="sxs-lookup"><span data-stu-id="81181-131">The `=` operator is only the equality comparison operator, not the assignment operator.</span></span>
 
- <span data-ttu-id="eac28-132">Dize birleştirme işleci (`&`) bir aritmetik işleç değil, ancak önceliğe göre Aritmetik işleçlerle gruplandırılır.</span><span class="sxs-lookup"><span data-stu-id="eac28-132">The string concatenation operator (`&`) is not an arithmetic operator, but in precedence it is grouped with the arithmetic operators.</span></span>
+ <span data-ttu-id="81181-132">The string concatenation operator (`&`) is not an arithmetic operator, but in precedence it is grouped with the arithmetic operators.</span><span class="sxs-lookup"><span data-stu-id="81181-132">The string concatenation operator (`&`) is not an arithmetic operator, but in precedence it is grouped with the arithmetic operators.</span></span>
 
- <span data-ttu-id="eac28-133">`Is` Ve`IsNot` işleçleri nesne başvurusu karşılaştırma işleçleridir.</span><span class="sxs-lookup"><span data-stu-id="eac28-133">The `Is` and `IsNot` operators are object reference comparison operators.</span></span> <span data-ttu-id="eac28-134">İki nesnenin değerlerini karşılaştırmazlar; yalnızca iki nesne değişkeninin aynı nesne örneğine başvurmadığını belirlemesini denetler.</span><span class="sxs-lookup"><span data-stu-id="eac28-134">They do not compare the values of two objects; they check only to determine whether two object variables refer to the same object instance.</span></span>
+ <span data-ttu-id="81181-133">The `Is` and `IsNot` operators are object reference comparison operators.</span><span class="sxs-lookup"><span data-stu-id="81181-133">The `Is` and `IsNot` operators are object reference comparison operators.</span></span> <span data-ttu-id="81181-134">They do not compare the values of two objects; they check only to determine whether two object variables refer to the same object instance.</span><span class="sxs-lookup"><span data-stu-id="81181-134">They do not compare the values of two objects; they check only to determine whether two object variables refer to the same object instance.</span></span>
 
-## <a name="associativity"></a><span data-ttu-id="eac28-135">İlişkilendirilebilirlik</span><span class="sxs-lookup"><span data-stu-id="eac28-135">Associativity</span></span>
- <span data-ttu-id="eac28-136">Eşit önceliğe sahip işleçler bir ifadede birlikte görüntülendiğinde, örneğin çarpma ve bölme gibi, derleyici, her işlemi soldan sağa karşılaştığı şekilde değerlendirir.</span><span class="sxs-lookup"><span data-stu-id="eac28-136">When operators of equal precedence appear together in an expression, for example multiplication and division, the compiler evaluates each operation as it encounters it from left to right.</span></span> <span data-ttu-id="eac28-137">Aşağıdaki örnek bunu göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="eac28-137">The following example illustrates this.</span></span>
+## <a name="associativity"></a><span data-ttu-id="81181-135">İlişkilendirilebilirlik</span><span class="sxs-lookup"><span data-stu-id="81181-135">Associativity</span></span>
+ <span data-ttu-id="81181-136">When operators of equal precedence appear together in an expression, for example multiplication and division, the compiler evaluates each operation as it encounters it from left to right.</span><span class="sxs-lookup"><span data-stu-id="81181-136">When operators of equal precedence appear together in an expression, for example multiplication and division, the compiler evaluates each operation as it encounters it from left to right.</span></span> <span data-ttu-id="81181-137">Aşağıdaki örnek bunu göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="81181-137">The following example illustrates this.</span></span>
 
 ```vb
 Dim n1 As Integer = 96 / 8 / 4
@@ -86,12 +86,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)
 ```
 
- <span data-ttu-id="eac28-138">İlk ifade, Bölüm 96/8 ' i (12 ' de sonuç olarak) değerlendirir ve sonra Bölüm 12/4 ' dir ve bu da üç ile sonuçlanır.</span><span class="sxs-lookup"><span data-stu-id="eac28-138">The first expression evaluates the division 96 / 8 (which results in 12) and then the division 12 / 4, which results in three.</span></span> <span data-ttu-id="eac28-139">Derleyici işlemleri `n1` soldan sağa değerlendirdiği için, bu sıra için `n2`açıkça belirtildiği zaman değerlendirme aynı olur.</span><span class="sxs-lookup"><span data-stu-id="eac28-139">Because the compiler evaluates the operations for `n1` from left to right, the evaluation is the same when that order is explicitly indicated for `n2`.</span></span> <span data-ttu-id="eac28-140">Her `n1` ikisi `n2` de üç ile oluşur.</span><span class="sxs-lookup"><span data-stu-id="eac28-140">Both `n1` and `n2` have a result of three.</span></span> <span data-ttu-id="eac28-141">Bunun aksine `n3` 48 sonucu vardır, çünkü parantezler derleyicinin önce 8/4 ' i değerlendirmesini zorlar.</span><span class="sxs-lookup"><span data-stu-id="eac28-141">By contrast, `n3` has a result of 48, because the parentheses force the compiler to evaluate 8 / 4 first.</span></span>
+ <span data-ttu-id="81181-138">The first expression evaluates the division 96 / 8 (which results in 12) and then the division 12 / 4, which results in three.</span><span class="sxs-lookup"><span data-stu-id="81181-138">The first expression evaluates the division 96 / 8 (which results in 12) and then the division 12 / 4, which results in three.</span></span> <span data-ttu-id="81181-139">Because the compiler evaluates the operations for `n1` from left to right, the evaluation is the same when that order is explicitly indicated for `n2`.</span><span class="sxs-lookup"><span data-stu-id="81181-139">Because the compiler evaluates the operations for `n1` from left to right, the evaluation is the same when that order is explicitly indicated for `n2`.</span></span> <span data-ttu-id="81181-140">Both `n1` and `n2` have a result of three.</span><span class="sxs-lookup"><span data-stu-id="81181-140">Both `n1` and `n2` have a result of three.</span></span> <span data-ttu-id="81181-141">By contrast, `n3` has a result of 48, because the parentheses force the compiler to evaluate 8 / 4 first.</span><span class="sxs-lookup"><span data-stu-id="81181-141">By contrast, `n3` has a result of 48, because the parentheses force the compiler to evaluate 8 / 4 first.</span></span>
 
- <span data-ttu-id="eac28-142">Bu davranış nedeniyle, operatörlerin Visual Basic olarak *sola ilişkilendirilebilir* olduğu söylenir.</span><span class="sxs-lookup"><span data-stu-id="eac28-142">Because of this behavior, operators are said to be *left associative* in Visual Basic.</span></span>
+ <span data-ttu-id="81181-142">Because of this behavior, operators are said to be *left associative* in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="81181-142">Because of this behavior, operators are said to be *left associative* in Visual Basic.</span></span>
 
-## <a name="overriding-precedence-and-associativity"></a><span data-ttu-id="eac28-143">Öncelik ve birleşim özelliklerini geçersiz kılma</span><span class="sxs-lookup"><span data-stu-id="eac28-143">Overriding Precedence and Associativity</span></span>
- <span data-ttu-id="eac28-144">Bir ifadenin bazı bölümlerinin diğerlerinden önce değerlendirilmesini zorlamak için parantezleri kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="eac28-144">You can use parentheses to force some parts of an expression to be evaluated before others.</span></span> <span data-ttu-id="eac28-145">Bu, hem öncelik sırasını hem de sola ilişkilendirilebilirliği geçersiz kılabilir.</span><span class="sxs-lookup"><span data-stu-id="eac28-145">This can override both the order of precedence and the left associativity.</span></span> <span data-ttu-id="eac28-146">Visual Basic, dış öğelerden önce parantez içine alınmış işlemleri her zaman gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="eac28-146">Visual Basic always performs operations that are enclosed in parentheses before those outside.</span></span> <span data-ttu-id="eac28-147">Bununla birlikte, parantez içinde parantez kullanmadığınız müddetçe, parantez içinde normal öncelik ve ilişkilendirilebilirlik sağlar.</span><span class="sxs-lookup"><span data-stu-id="eac28-147">However, within parentheses, it maintains ordinary precedence and associativity, unless you use parentheses within the parentheses.</span></span> <span data-ttu-id="eac28-148">Aşağıdaki örnek bunu göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="eac28-148">The following example illustrates this.</span></span>
+## <a name="overriding-precedence-and-associativity"></a><span data-ttu-id="81181-143">Overriding Precedence and Associativity</span><span class="sxs-lookup"><span data-stu-id="81181-143">Overriding Precedence and Associativity</span></span>
+ <span data-ttu-id="81181-144">You can use parentheses to force some parts of an expression to be evaluated before others.</span><span class="sxs-lookup"><span data-stu-id="81181-144">You can use parentheses to force some parts of an expression to be evaluated before others.</span></span> <span data-ttu-id="81181-145">This can override both the order of precedence and the left associativity.</span><span class="sxs-lookup"><span data-stu-id="81181-145">This can override both the order of precedence and the left associativity.</span></span> <span data-ttu-id="81181-146">Visual Basic always performs operations that are enclosed in parentheses before those outside.</span><span class="sxs-lookup"><span data-stu-id="81181-146">Visual Basic always performs operations that are enclosed in parentheses before those outside.</span></span> <span data-ttu-id="81181-147">However, within parentheses, it maintains ordinary precedence and associativity, unless you use parentheses within the parentheses.</span><span class="sxs-lookup"><span data-stu-id="81181-147">However, within parentheses, it maintains ordinary precedence and associativity, unless you use parentheses within the parentheses.</span></span> <span data-ttu-id="81181-148">Aşağıdaki örnek bunu göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="81181-148">The following example illustrates this.</span></span>
 
 ```vb
 Dim a, b, c, d, e, f, g As Double
@@ -111,13 +111,13 @@ g = (a - (b + c)) / (d * e)
 ' The preceding line sets g to 0.5.
 ```
 
-## <a name="see-also"></a><span data-ttu-id="eac28-149">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="eac28-149">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81181-149">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="81181-149">See also</span></span>
 
-- [<span data-ttu-id="eac28-150">= İşleci</span><span class="sxs-lookup"><span data-stu-id="eac28-150">= Operator</span></span>](../../../visual-basic/language-reference/operators/assignment-operator.md)
-- [<span data-ttu-id="eac28-151">Is İşleci</span><span class="sxs-lookup"><span data-stu-id="eac28-151">Is Operator</span></span>](../../../visual-basic/language-reference/operators/is-operator.md)
-- [<span data-ttu-id="eac28-152">IsNot İşleci</span><span class="sxs-lookup"><span data-stu-id="eac28-152">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [<span data-ttu-id="eac28-153">Like İşleci</span><span class="sxs-lookup"><span data-stu-id="eac28-153">Like Operator</span></span>](../../../visual-basic/language-reference/operators/like-operator.md)
-- [<span data-ttu-id="eac28-154">TypeOf İşleci</span><span class="sxs-lookup"><span data-stu-id="eac28-154">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)
-- [<span data-ttu-id="eac28-155">Await İşleci</span><span class="sxs-lookup"><span data-stu-id="eac28-155">Await Operator</span></span>](../../../visual-basic/language-reference/operators/await-operator.md)
-- [<span data-ttu-id="eac28-156">İşlevselliğe Göre Listelenmiş İşleçler</span><span class="sxs-lookup"><span data-stu-id="eac28-156">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="eac28-157">İşleçler ve İfadeler</span><span class="sxs-lookup"><span data-stu-id="eac28-157">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [<span data-ttu-id="81181-150">= İşleci</span><span class="sxs-lookup"><span data-stu-id="81181-150">= Operator</span></span>](../../../visual-basic/language-reference/operators/assignment-operator.md)
+- [<span data-ttu-id="81181-151">Is İşleci</span><span class="sxs-lookup"><span data-stu-id="81181-151">Is Operator</span></span>](../../../visual-basic/language-reference/operators/is-operator.md)
+- [<span data-ttu-id="81181-152">IsNot İşleci</span><span class="sxs-lookup"><span data-stu-id="81181-152">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [<span data-ttu-id="81181-153">Like İşleci</span><span class="sxs-lookup"><span data-stu-id="81181-153">Like Operator</span></span>](../../../visual-basic/language-reference/operators/like-operator.md)
+- [<span data-ttu-id="81181-154">TypeOf İşleci</span><span class="sxs-lookup"><span data-stu-id="81181-154">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)
+- [<span data-ttu-id="81181-155">Await İşleci</span><span class="sxs-lookup"><span data-stu-id="81181-155">Await Operator</span></span>](../../../visual-basic/language-reference/operators/await-operator.md)
+- [<span data-ttu-id="81181-156">İşlevselliğe Göre Listelenmiş İşleçler</span><span class="sxs-lookup"><span data-stu-id="81181-156">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="81181-157">İşleçler ve İfadeler</span><span class="sxs-lookup"><span data-stu-id="81181-157">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

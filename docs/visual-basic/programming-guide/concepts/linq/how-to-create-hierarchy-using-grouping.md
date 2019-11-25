@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) gruplandırma kullanarak hiyerarşi oluşturma'
+title: 'How to: Create Hierarchy Using Grouping'
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
-ms.openlocfilehash: dea189d9d689cfba661fd84cb52f8e6658935a30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fea3e008e0bb18ae92f8883d08be4f27929b9fd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855419"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341590"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a><span data-ttu-id="f02ac-102">Nasıl yapılır: (Visual Basic) gruplandırma kullanarak hiyerarşi oluşturma</span><span class="sxs-lookup"><span data-stu-id="f02ac-102">How to: Create Hierarchy Using Grouping (Visual Basic)</span></span>
-<span data-ttu-id="f02ac-103">Bu örnek verileri gruplandırmak ve ardından XML gruplandırma işlemine göre nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="f02ac-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
+# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a><span data-ttu-id="d725b-102">How to: Create Hierarchy Using Grouping (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d725b-102">How to: Create Hierarchy Using Grouping (Visual Basic)</span></span>
+<span data-ttu-id="d725b-103">This example shows how to group data, and then generate XML based on the grouping.</span><span class="sxs-lookup"><span data-stu-id="d725b-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f02ac-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="f02ac-104">Example</span></span>  
- <span data-ttu-id="f02ac-105">Bu örnekte ilk grupları verileri bir kategoriye göre ardından gruplandırma içinde XML hiyerarşisini yansıtır yeni bir XML dosyası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="f02ac-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
+## <a name="example"></a><span data-ttu-id="d725b-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="d725b-104">Example</span></span>  
+ <span data-ttu-id="d725b-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span><span class="sxs-lookup"><span data-stu-id="d725b-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
   
- <span data-ttu-id="f02ac-106">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Sayısal veriler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="f02ac-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="d725b-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="d725b-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim doc As XElement = XElement.Load("Data.xml")  
@@ -40,7 +40,7 @@ Dim newData As XElement = _
 Console.WriteLine(newData)  
 ```  
   
- <span data-ttu-id="f02ac-107">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="f02ac-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="d725b-107">This example produces the following output:</span><span class="sxs-lookup"><span data-stu-id="d725b-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -79,6 +79,6 @@ Console.WriteLine(newData)
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f02ac-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f02ac-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d725b-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d725b-108">See also</span></span>
 
-- [<span data-ttu-id="f02ac-109">Gelişmiş sorgu teknikleri (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f02ac-109">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [<span data-ttu-id="d725b-109">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d725b-109">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

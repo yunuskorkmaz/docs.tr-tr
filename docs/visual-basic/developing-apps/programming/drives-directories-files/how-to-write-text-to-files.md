@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Visual Basic'te dosyalara metin yazma"
+title: 'Nasıl Yapılır: Dosyalara Metin Yazma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
@@ -7,55 +7,57 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
-ms.openlocfilehash: 7f9702469afbe9fdaa9bf727f5f70459ce884d6e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ce1ee59ba71af6bb13e05a5bce37a2f7eee37712
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623252"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334468"
 ---
-# <a name="how-to-write-text-to-files-in-visual-basic"></a><span data-ttu-id="b2a07-102">Nasıl yapılır: Visual Basic'te dosyalara metin yazma</span><span class="sxs-lookup"><span data-stu-id="b2a07-102">How to: Write Text to Files in Visual Basic</span></span>
-<span data-ttu-id="b2a07-103"><xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> Yöntemi, dosyalara metin yazma için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="b2a07-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be used to write text to files.</span></span> <span data-ttu-id="b2a07-104">Belirtilen dosya yoksa oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="b2a07-104">If the specified file does not exist, it is created.</span></span>  
+# <a name="how-to-write-text-to-files-in-visual-basic"></a><span data-ttu-id="41027-102">Nasıl Yapılır: Visual Basic'te Dosyalara Metin Yazma</span><span class="sxs-lookup"><span data-stu-id="41027-102">How to: Write Text to Files in Visual Basic</span></span>
+
+<span data-ttu-id="41027-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be used to write text to files.</span><span class="sxs-lookup"><span data-stu-id="41027-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be used to write text to files.</span></span> <span data-ttu-id="41027-104">If the specified file does not exist, it is created.</span><span class="sxs-lookup"><span data-stu-id="41027-104">If the specified file does not exist, it is created.</span></span>  
   
-## <a name="procedure"></a><span data-ttu-id="b2a07-105">Yordam</span><span class="sxs-lookup"><span data-stu-id="b2a07-105">Procedure</span></span>  
+## <a name="procedure"></a><span data-ttu-id="41027-105">Yordam</span><span class="sxs-lookup"><span data-stu-id="41027-105">Procedure</span></span>  
   
-#### <a name="to-write-text-to-a-file"></a><span data-ttu-id="b2a07-106">Bir dosyaya metin yazma</span><span class="sxs-lookup"><span data-stu-id="b2a07-106">To write text to a file</span></span>  
+#### <a name="to-write-text-to-a-file"></a><span data-ttu-id="41027-106">To write text to a file</span><span class="sxs-lookup"><span data-stu-id="41027-106">To write text to a file</span></span>  
   
-- <span data-ttu-id="b2a07-107">Kullanım `WriteAllText` metin dosyasını ve yazılacak metin belirten bir dosyaya yazmak için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="b2a07-107">Use the `WriteAllText` method to write text to a file, specifying the file and text to be written.</span></span> <span data-ttu-id="b2a07-108">Bu örnek, satır Yazar `"This is new text."` adlı dosyaya `test.txt`, var olan herhangi bir metin dosyasındaki metni ekleme.</span><span class="sxs-lookup"><span data-stu-id="b2a07-108">This example writes the line `"This is new text."` to the file named `test.txt`, appending the text to any existing text in the file.</span></span>  
+- <span data-ttu-id="41027-107">Use the `WriteAllText` method to write text to a file, specifying the file and text to be written.</span><span class="sxs-lookup"><span data-stu-id="41027-107">Use the `WriteAllText` method to write text to a file, specifying the file and text to be written.</span></span> <span data-ttu-id="41027-108">This example writes the line `"This is new text."` to the file named `test.txt`, appending the text to any existing text in the file.</span><span class="sxs-lookup"><span data-stu-id="41027-108">This example writes the line `"This is new text."` to the file named `test.txt`, appending the text to any existing text in the file.</span></span>  
   
      [!code-vb[VbFileIOWrite#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#3)]  
   
-#### <a name="to-write-a-series-of-strings-to-a-file"></a><span data-ttu-id="b2a07-109">Dizeleri bir dizi bir dosyaya yazmak için</span><span class="sxs-lookup"><span data-stu-id="b2a07-109">To write a series of strings to a file</span></span>  
+#### <a name="to-write-a-series-of-strings-to-a-file"></a><span data-ttu-id="41027-109">To write a series of strings to a file</span><span class="sxs-lookup"><span data-stu-id="41027-109">To write a series of strings to a file</span></span>  
   
-- <span data-ttu-id="b2a07-110">Dize koleksiyonu döngü.</span><span class="sxs-lookup"><span data-stu-id="b2a07-110">Loop through the string collection.</span></span> <span data-ttu-id="b2a07-111">Kullanım `WriteAllText` eklenecek dize ve hedef dosya belirtme bir dosyaya metin yazma yöntemi ve ayarı `append` için `True`.</span><span class="sxs-lookup"><span data-stu-id="b2a07-111">Use the `WriteAllText` method to write text to a file, specifying the target file and string to be added and setting `append` to `True`.</span></span>  
+- <span data-ttu-id="41027-110">Loop through the string collection.</span><span class="sxs-lookup"><span data-stu-id="41027-110">Loop through the string collection.</span></span> <span data-ttu-id="41027-111">Use the `WriteAllText` method to write text to a file, specifying the target file and string to be added and setting `append` to `True`.</span><span class="sxs-lookup"><span data-stu-id="41027-111">Use the `WriteAllText` method to write text to a file, specifying the target file and string to be added and setting `append` to `True`.</span></span>  
   
-     <span data-ttu-id="b2a07-112">Bu örnek, dosyaların adlarını Yazar `Documents and Settings` dizininden `FileList.txt`, arasında daha iyi okunabilirlik için her bir satır başı ekleme döndürür.</span><span class="sxs-lookup"><span data-stu-id="b2a07-112">This example writes the names of the files in the `Documents and Settings` directory to `FileList.txt`, inserting a carriage return between each for better readability.</span></span>  
+     <span data-ttu-id="41027-112">This example writes the names of the files in the `Documents and Settings` directory to `FileList.txt`, inserting a carriage return between each for better readability.</span><span class="sxs-lookup"><span data-stu-id="41027-112">This example writes the names of the files in the `Documents and Settings` directory to `FileList.txt`, inserting a carriage return between each for better readability.</span></span>  
   
      [!code-vb[VbFileIOWrite#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#4)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="b2a07-113">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="b2a07-113">Robust Programming</span></span>  
- <span data-ttu-id="b2a07-114">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="b2a07-114">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="41027-113">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="41027-113">Robust Programming</span></span>  
+
+ <span data-ttu-id="41027-114">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="41027-114">The following conditions may cause an exception:</span></span>  
   
-- <span data-ttu-id="b2a07-115">Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunluklu bir dize olan, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya cihaz yoludur (ile başlayan \\ \\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="b2a07-115">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
+- <span data-ttu-id="41027-115">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="41027-115">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
   
-- <span data-ttu-id="b2a07-116">Çünkü bu yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="b2a07-116">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
+- <span data-ttu-id="41027-116">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="41027-116">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
-- <span data-ttu-id="b2a07-117">`File` mevcut olmayan bir yola işaret (<xref:System.IO.FileNotFoundException> veya <xref:System.IO.DirectoryNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="b2a07-117">`File` points to a path that does not exist (<xref:System.IO.FileNotFoundException> or <xref:System.IO.DirectoryNotFoundException>).</span></span>  
+- <span data-ttu-id="41027-117">`File` points to a path that does not exist (<xref:System.IO.FileNotFoundException> or <xref:System.IO.DirectoryNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="41027-117">`File` points to a path that does not exist (<xref:System.IO.FileNotFoundException> or <xref:System.IO.DirectoryNotFoundException>).</span></span>  
   
-- <span data-ttu-id="b2a07-118">Dosya başka bir işlem tarafından kullanılıyor veya bir g/ç hatası oluşuyor (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="b2a07-118">The file is in use by another process, or an I/O error occurs (<xref:System.IO.IOException>).</span></span>  
+- <span data-ttu-id="41027-118">The file is in use by another process, or an I/O error occurs (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="41027-118">The file is in use by another process, or an I/O error occurs (<xref:System.IO.IOException>).</span></span>  
   
-- <span data-ttu-id="b2a07-119">Yolun sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="b2a07-119">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
+- <span data-ttu-id="41027-119">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="41027-119">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
   
-- <span data-ttu-id="b2a07-120">Yolda bir dosya veya dizin adı iki nokta üst üste (:) içeriyor veya biçimi geçersiz (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="b2a07-120">A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
+- <span data-ttu-id="41027-120">A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="41027-120">A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
   
-- <span data-ttu-id="b2a07-121">Kullanıcı yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="b2a07-121">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
+- <span data-ttu-id="41027-121">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="41027-121">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
   
-- <span data-ttu-id="b2a07-122">Tam ve çağrısı disktir `WriteAllText` başarısız (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="b2a07-122">The disk is full, and the call to `WriteAllText` fails (<xref:System.IO.IOException>).</span></span>  
+- <span data-ttu-id="41027-122">The disk is full, and the call to `WriteAllText` fails (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="41027-122">The disk is full, and the call to `WriteAllText` fails (<xref:System.IO.IOException>).</span></span>  
   
- <span data-ttu-id="b2a07-123">Kısmi güven bağlamda çalıştırıyorsanız, kod bir özel durum yetersiz ayrıcalıklar nedeniyle fırlatabilir.</span><span class="sxs-lookup"><span data-stu-id="b2a07-123">If you are running in a partial-trust context, the code might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="b2a07-124">Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../../../framework/misc/code-access-security-basics.md).</span><span class="sxs-lookup"><span data-stu-id="b2a07-124">For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md).</span></span>  
+ <span data-ttu-id="41027-123">If you are running in a partial-trust context, the code might throw an exception due to insufficient privileges.</span><span class="sxs-lookup"><span data-stu-id="41027-123">If you are running in a partial-trust context, the code might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="41027-124">For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md).</span><span class="sxs-lookup"><span data-stu-id="41027-124">For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2a07-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b2a07-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="41027-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="41027-125">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
-- [<span data-ttu-id="b2a07-126">Nasıl yapılır: Metin dosyalarını okuma</span><span class="sxs-lookup"><span data-stu-id="b2a07-126">How to: Read from Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+- [<span data-ttu-id="41027-126">How to: Read from Text Files</span><span class="sxs-lookup"><span data-stu-id="41027-126">How to: Read from Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

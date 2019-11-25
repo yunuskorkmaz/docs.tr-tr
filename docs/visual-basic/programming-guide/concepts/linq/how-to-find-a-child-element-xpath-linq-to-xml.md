@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: alt öğe bulma (XPath-LINQ to XML) (Visual Basic)'
+title: 'How to: Find a Child Element (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: adb46c98-a650-42e2-b62d-835920fe8421
-ms.openlocfilehash: 9dac53f70882791fb05265d4a04444c98adff451
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 3697dabb1b277ceab7b7bb9be54b72ef8be6974d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249984"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353038"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="84730-102">Nasıl yapılır: alt öğe bulma (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84730-102">How to: Find a Child Element (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="84730-103">Bu konu, XPath alt öğe eksenini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> yöntemiyle karşılaştırır.</span><span class="sxs-lookup"><span data-stu-id="84730-103">This topic compares the XPath child element axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> method.</span></span>  
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="aa886-102">How to: Find a Child Element (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aa886-102">How to: Find a Child Element (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="aa886-103">This topic compares the XPath child element axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> method.</span><span class="sxs-lookup"><span data-stu-id="aa886-103">This topic compares the XPath child element axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> method.</span></span>  
   
- <span data-ttu-id="84730-104">XPath ifadesi `DeliveryNotes` ' dır.</span><span class="sxs-lookup"><span data-stu-id="84730-104">The XPath expression is `DeliveryNotes`.</span></span>  
+ <span data-ttu-id="aa886-104">The XPath expression is `DeliveryNotes`.</span><span class="sxs-lookup"><span data-stu-id="aa886-104">The XPath expression is `DeliveryNotes`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="84730-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="84730-105">Example</span></span>  
- <span data-ttu-id="84730-106">Bu örnek `DeliveryNotes` alt öğesini bulur.</span><span class="sxs-lookup"><span data-stu-id="84730-106">This example finds the child element `DeliveryNotes`.</span></span>  
+## <a name="example"></a><span data-ttu-id="aa886-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="aa886-105">Example</span></span>  
+ <span data-ttu-id="aa886-106">This example finds the child element `DeliveryNotes`.</span><span class="sxs-lookup"><span data-stu-id="aa886-106">This example finds the child element `DeliveryNotes`.</span></span>  
   
- <span data-ttu-id="84730-107">Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="84730-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="aa886-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="aa886-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -39,13 +39,13 @@ End If
 Console.WriteLine(el1)  
 ```  
   
- <span data-ttu-id="84730-108">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="84730-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="aa886-108">This example produces the following output:</span><span class="sxs-lookup"><span data-stu-id="aa886-108">This example produces the following output:</span></span>  
   
 ```console
 Results are identical  
 <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="84730-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="84730-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa886-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aa886-109">See also</span></span>
 
-- [<span data-ttu-id="84730-110">XPath kullanıcıları için LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84730-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="aa886-110">LINQ to XML for XPath Users (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aa886-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

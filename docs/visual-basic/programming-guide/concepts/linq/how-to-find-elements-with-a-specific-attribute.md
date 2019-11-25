@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: belirli bir özniteliğe sahip öğeleri bulma (XPath-LINQ to XML) (Visual Basic)'
+title: 'How to: Find Elements with a Specific Attribute (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: 39d635eb3d80a4a72647397313c77dac09777206
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: ef8dd26d40f15d3d5a27f0ca5d62f7337f2054ca
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250097"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343682"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="e3e1b-102">Nasıl yapılır: belirli bir özniteliğe sahip öğeleri bulma (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e3e1b-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="e3e1b-103">Bazen belirli bir özniteliğe sahip olan tüm öğeleri bulmak isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e3e1b-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="e3e1b-104">Özniteliğin içeriğiyle ilgili endişeleriniz yok.</span><span class="sxs-lookup"><span data-stu-id="e3e1b-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="e3e1b-105">Bunun yerine, özniteliğinin varlığına göre ' ı seçmek istersiniz.</span><span class="sxs-lookup"><span data-stu-id="e3e1b-105">Instead, you want to select based on the existence of the attribute.</span></span>  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="eb34e-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eb34e-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="eb34e-103">Sometimes you want to find all elements that have a specific attribute.</span><span class="sxs-lookup"><span data-stu-id="eb34e-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="eb34e-104">You are not concerned about the contents of the attribute.</span><span class="sxs-lookup"><span data-stu-id="eb34e-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="eb34e-105">Instead, you want to select based on the existence of the attribute.</span><span class="sxs-lookup"><span data-stu-id="eb34e-105">Instead, you want to select based on the existence of the attribute.</span></span>  
   
- <span data-ttu-id="e3e1b-106">XPath ifadesi:</span><span class="sxs-lookup"><span data-stu-id="e3e1b-106">The XPath expression is:</span></span>  
+ <span data-ttu-id="eb34e-106">The XPath expression is:</span><span class="sxs-lookup"><span data-stu-id="eb34e-106">The XPath expression is:</span></span>  
   
  `./*[@Select]`  
   
-## <a name="example"></a><span data-ttu-id="e3e1b-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="e3e1b-107">Example</span></span>  
- <span data-ttu-id="e3e1b-108">Aşağıdaki kod yalnızca `Select` özniteliğine sahip öğeleri seçer.</span><span class="sxs-lookup"><span data-stu-id="e3e1b-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
+## <a name="example"></a><span data-ttu-id="eb34e-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="eb34e-107">Example</span></span>  
+ <span data-ttu-id="eb34e-108">The following code selects just the elements that have the `Select` attribute.</span><span class="sxs-lookup"><span data-stu-id="eb34e-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
   
 ```vb  
 Dim doc As XElement = _   
@@ -51,7 +51,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- <span data-ttu-id="e3e1b-109">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="e3e1b-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="eb34e-109">This example produces the following output:</span><span class="sxs-lookup"><span data-stu-id="eb34e-109">This example produces the following output:</span></span>  
   
 ```console
 Results are identical  
@@ -59,6 +59,6 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e3e1b-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e3e1b-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eb34e-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="eb34e-110">See also</span></span>
 
-- [<span data-ttu-id="e3e1b-111">XPath kullanıcıları için LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e3e1b-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="eb34e-111">LINQ to XML for XPath Users (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eb34e-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

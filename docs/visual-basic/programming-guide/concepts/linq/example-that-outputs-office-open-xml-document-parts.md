@@ -1,21 +1,21 @@
 ---
-title: Office Open XML belge kısımları (Visual Basic) çıkaran örnek
+title: Office Open XML Belge Kısımları Çıkaran Örnek
 ms.date: 07/20/2015
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-ms.openlocfilehash: 98ef8390c75b7efbf57040e9723c117a6ae18a66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47a4ac649fb370145962247e07e1d8841411cac0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931578"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353505"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a><span data-ttu-id="b53e1-102">Office Open XML belge kısımları (Visual Basic) çıkaran örnek</span><span class="sxs-lookup"><span data-stu-id="b53e1-102">Example that Outputs Office Open XML Document Parts (Visual Basic)</span></span>
-<span data-ttu-id="b53e1-103">Bu konuda, bir Office Open XML belgesi açın ve erişim bölümleri içindeki gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="b53e1-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a><span data-ttu-id="4bab0-102">Example that Outputs Office Open XML Document Parts (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4bab0-102">Example that Outputs Office Open XML Document Parts (Visual Basic)</span></span>
+<span data-ttu-id="4bab0-103">This topic shows how to open an Office Open XML document and access parts within it.</span><span class="sxs-lookup"><span data-stu-id="4bab0-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b53e1-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="b53e1-104">Example</span></span>  
- <span data-ttu-id="b53e1-105">Aşağıdaki örnek, bir Office Open XML belge açılır ve belge ve stil bölümlerini konsola yazdırır.</span><span class="sxs-lookup"><span data-stu-id="b53e1-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
+## <a name="example"></a><span data-ttu-id="4bab0-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="4bab0-104">Example</span></span>  
+ <span data-ttu-id="4bab0-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span><span class="sxs-lookup"><span data-stu-id="4bab0-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
   
- <span data-ttu-id="b53e1-106">Bu örnek WindowsBase derlemesinden sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="b53e1-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="b53e1-107">Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="b53e1-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="4bab0-106">This example uses classes from the WindowsBase assembly.</span><span class="sxs-lookup"><span data-stu-id="4bab0-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="4bab0-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span><span class="sxs-lookup"><span data-stu-id="4bab0-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Const fileName As String = "SampleDoc.docx"  
@@ -64,6 +64,6 @@ Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Re
 End Using  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b53e1-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b53e1-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4bab0-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4bab0-108">See also</span></span>
 
-- [<span data-ttu-id="b53e1-109">Ayrıntılar Office Open XML WordprocessingML belgelerinin (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b53e1-109">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [<span data-ttu-id="4bab0-109">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4bab0-109">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

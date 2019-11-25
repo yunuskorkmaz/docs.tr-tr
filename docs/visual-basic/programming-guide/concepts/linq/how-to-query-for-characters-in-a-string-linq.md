@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: bir dizedeki karakterleri sorgulama (LINQ) (Visual Basic)'
+title: 'Nasıl yapılır: Bir Dizedeki Karakterleri Sorgulama (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: f2102a8cb149fa9c7886826e509bf254fad5eb95
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9da6d5abd6155a7af5ec59e17693e8acae7e7b73
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582719"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347716"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a><span data-ttu-id="ddb7c-102">Nasıl yapılır: bir dizedeki karakterleri sorgulama (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ddb7c-102">How to: Query for Characters in a String (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a><span data-ttu-id="3a1f0-102">How to: Query for Characters in a String (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3a1f0-102">How to: Query for Characters in a String (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="ddb7c-103">@No__t_0 sınıfı genel <xref:System.Collections.Generic.IEnumerable%601> arabirimini gerçekleştirdiğinden, herhangi bir dize bir karakter dizisi olarak sorgulanabilir.</span><span class="sxs-lookup"><span data-stu-id="ddb7c-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="ddb7c-104">Ancak bu, LINQ 'in yaygın bir kullanımı değildir.</span><span class="sxs-lookup"><span data-stu-id="ddb7c-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="ddb7c-105">Karmaşık kalıp eşleştirme işlemleri için <xref:System.Text.RegularExpressions.Regex> sınıfını kullanın.</span><span class="sxs-lookup"><span data-stu-id="ddb7c-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>
+<span data-ttu-id="3a1f0-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span><span class="sxs-lookup"><span data-stu-id="3a1f0-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="3a1f0-104">However, this is not a common use of LINQ.</span><span class="sxs-lookup"><span data-stu-id="3a1f0-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="3a1f0-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span><span class="sxs-lookup"><span data-stu-id="3a1f0-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>
 
-## <a name="example"></a><span data-ttu-id="ddb7c-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="ddb7c-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="3a1f0-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="3a1f0-106">Example</span></span>
 
-<span data-ttu-id="ddb7c-107">Aşağıdaki örnek, içerdiği sayısal basamak sayısını belirlemede bir dizeyi sorgular.</span><span class="sxs-lookup"><span data-stu-id="ddb7c-107">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="ddb7c-108">Sorgunun ilk kez yürütüldükten sonra "yeniden kullanılır" olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="ddb7c-108">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="ddb7c-109">Sorgunun kendisi gerçek sonuçları depolamadığından bu mümkündür.</span><span class="sxs-lookup"><span data-stu-id="ddb7c-109">This is possible because the query itself does not store any actual results.</span></span>
+<span data-ttu-id="3a1f0-107">The following example queries a string to determine the number of numeric digits it contains.</span><span class="sxs-lookup"><span data-stu-id="3a1f0-107">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="3a1f0-108">Note that the query is "reused" after it is executed the first time.</span><span class="sxs-lookup"><span data-stu-id="3a1f0-108">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="3a1f0-109">This is possible because the query itself does not store any actual results.</span><span class="sxs-lookup"><span data-stu-id="3a1f0-109">This is possible because the query itself does not store any actual results.</span></span>
 
 ```vb
 Class QueryAString
@@ -56,11 +56,11 @@ End Class
 ' ABCDE99F
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="ddb7c-110">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="ddb7c-110">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="3a1f0-110">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="3a1f0-110">Compiling the Code</span></span>
 
-<span data-ttu-id="ddb7c-111">System. Linq ad alanı için `Imports` ifadesiyle bir VB.NET konsol uygulaması projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="ddb7c-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="3a1f0-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span><span class="sxs-lookup"><span data-stu-id="3a1f0-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ddb7c-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ddb7c-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3a1f0-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3a1f0-112">See also</span></span>
 
-- [<span data-ttu-id="ddb7c-113">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ddb7c-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="ddb7c-114">Nasıl yapılır: LINQ sorgularını normal Ifadelerle birleştirme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ddb7c-114">How to: Combine LINQ Queries with Regular Expressions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+- [<span data-ttu-id="3a1f0-113">LINQ and Strings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3a1f0-113">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
+- [<span data-ttu-id="3a1f0-114">How to combine LINQ queries with regular expressions (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3a1f0-114">How to combine LINQ queries with regular expressions (Visual Basic)</span></span>](how-to-combine-linq-queries-with-regular-expressions.md)
