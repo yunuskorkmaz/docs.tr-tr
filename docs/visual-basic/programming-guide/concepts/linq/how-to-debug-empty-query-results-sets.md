@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl Yapılır: Boş sorgu sonuçları kümelerinde hata ayıkla (Visual Basic)'
+title: 'How to: Debug Empty Query Results Sets'
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 6fc194432b1d44c1214da32d2c6978a4eeb316dc
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 21c161a702338c0c6943fa09212deaea7fdd72f9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351783"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353070"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Nasıl yapılır: Boş sorgu sonuçları kümelerinde hata ayıkla (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>How to: Debug Empty Query Results Sets (Visual Basic)
 
-XML ağaçlarını sorgularken en yaygın sorunlardan biri, XML ağacının varsayılan bir ad alanına sahip olması ve geliştiricinin bazen sorguyu bir ad alanında olmamasına rağmen yazar.
+One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.
 
-Bu konudaki ilk örnek kümesi, varsayılan bir ad alanındaki XML 'nin yüklendiği ve yanlış sorgulandığı tipik bir yöntemi gösterir.
+The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, and is queried improperly.
 
-İkinci örnek kümesinde, bir ad alanında XML 'yi sorgulayabilmeniz için gerekli düzeltmeler gösterilmektedir.
+The second set of examples show the necessary corrections so that you can query XML in a namespace.
 
-Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).
+For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, bir ad alanında XML oluşturmayı ve boş bir sonuç kümesi döndüren bir sorguyu gösterir.
+This example shows creation of XML in a namespace, and a query that returns an empty result set.
 
 ```vb
 Dim root As XElement = _
@@ -43,7 +43,7 @@ Next
 Console.WriteLine("End of result set")
 ```
 
-Bu örnek aşağıdaki sonucu üretir:
+This example produces the following result:
 
 ```console
 Result set follows:
@@ -52,9 +52,9 @@ End of result set
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, bir ad alanında XML oluşturmayı ve düzgün kodlanmış bir sorguyu gösterir.
+This example shows creation of XML in a namespace, and a query that is coded properly.
 
-Çözüm, genel bir varsayılan ad alanını bildirmek ve başlatmak. Bu, tüm XML özelliklerini varsayılan ad alanına koyar. Doğru çalışması için örnek için başka bir değişiklik yapmanız gerekmez.
+The solution is to declare and initialize a global default namespace. This places all XML properties in the default namespace. No other modifications are required to the example to make it work properly.
 
 ```vb
 Imports <xmlns="http://www.adventure-works.com">
@@ -82,7 +82,7 @@ Module Module1
 End Module
 ```
 
-Bu örnek aşağıdaki sonucu üretir:
+This example produces the following result:
 
 ```console
 Result set follows:
@@ -94,4 +94,4 @@ End of result set
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

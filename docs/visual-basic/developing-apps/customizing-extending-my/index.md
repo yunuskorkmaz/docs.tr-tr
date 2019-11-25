@@ -1,46 +1,46 @@
 ---
-title: Visual Basic ile Projeleri Özelleştirme ve My Özelliklerini Genişletme
+title: Projeleri Özelleştirme ve My Özelliklerini Genişletme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 97933a9d014a54d5b6e333090cddccace99fcc3c
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: e6ed43aeff90295f71590bcee180ca1e0f88e5ff
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960939"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330333"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Visual Basic ile Projeleri Özelleştirme ve My Özelliklerini Genişletme
 
-Proje şablonlarını, ek `My` nesneleri sağlamak için özelleştirebilirsiniz. Bu, diğer geliştiricilerin nesnelerinizi bulmasını ve kullanmasını kolaylaştırır.
+You can customize project templates to provide additional `My` objects. This makes it easy for other developers to find and use your objects.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-- [Visual Basic ad alanını genişletme](extending-the-my-namespace.md)  
- Visual Basic `My` ad alanına özel üye ve değerlerin nasıl ekleneceğini açıklar.
+- [Extending the My Namespace in Visual Basic](extending-the-my-namespace.md)  
+ Describes how to add custom members and values to the `My` namespace in Visual Basic.
 - [My Uzantılarını Paketleme ve Dağıtma](packaging-and-deploying-custom-my-extensions.md)  
- Visual Studio şablonları kullanarak özel `My` ad alanı uzantılarının nasıl yayımlanacağını açıklar.
+ Describes how to publish custom `My` namespace extensions by using Visual Studio templates.
 - [Visual Basic Uygulama Modelini Genişletme](extending-the-visual-basic-application-model.md)  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> sınıfının üyelerini geçersiz kılarak uygulama modeli için kendi uzantılarınızın nasıl belirtileceğini açıklar.
+ Describes how to specify your own extensions to the application model by overriding members of the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> class.
 - [My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme](customizing-which-objects-are-available-in-my.md)  
- Projenizin \_MYTYPE koşullu derleme sabiti ayarlanarak hangi `My` nesnelerinin etkinleştirildiğini nasıl denetleyebileceğinizi açıklar.
+ Describes how to control which `My` objects are enabled by setting your project's \_MYTYPE conditional-compilation constant.
 
-## <a name="related-sections"></a>İlgili bölümler
+## <a name="related-sections"></a>Related sections
 
 - [My Özelliğiyle Geliştirme](../development-with-my/index.md)  
- Varsayılan olarak farklı proje türlerinde hangi `My` nesnelerinin kullanılabildiğini açıklar.
+ Describes which `My` objects are available in different project types by default.
 - [Visual Basic Uygulama Modeline Genel Bakış](../development-with-my/overview-of-the-visual-basic-application-model.md)  
- Windows Forms uygulamalarının davranışını denetlemek için Visual Basic modelini açıklar.
+ Describes Visual Basic's model for controlling the behavior of Windows Forms applications.
 - [My Özellikleri Proje Türüne Nasıl Bağımlıdır](../development-with-my/how-my-depends-on-project-type.md)  
- Varsayılan olarak farklı proje türlerinde hangi `My` nesnelerinin kullanılabildiğini açıklar.
+ Describes which `My` objects are available in different project types by default.
 - [Koşullu Derleme](../../programming-guide/program-structure/conditional-compilation.md)  
- Derleyicinin diğer bölümleri derlemek ve hariç tutmak için kodun belirli bölümlerini seçmek üzere koşullu derlemeyi nasıl kullandığını açıklar.
+ Discusses how the compiler uses conditional-compilation to select particular sections of code to compile and exclude other sections.
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- Geçerli uygulamayla ilgili özellikler, Yöntemler ve olaylar sağlayan `My` nesnesini açıklar.
+ Describes the `My` object that provides properties, methods, and events related to the current application.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic ile uygulama geliştirme](../index.md)
+- [Developing Applications with Visual Basic](../index.md)

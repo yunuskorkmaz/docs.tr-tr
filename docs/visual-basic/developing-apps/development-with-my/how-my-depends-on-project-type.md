@@ -1,59 +1,62 @@
 ---
-title: My Özellikleri Proje Türüne Nasıl Bağımlıdır (Visual Basic)
+title: My Özellikleri Proje Türüne Nasıl Bağımlıdır
 ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 989329da7dc57cd50b9ce6c88117152d0cb93d66
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 975b8feb001bcab22185be0a360b0512de099b79
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775194"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330276"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My Özellikleri Proje Türüne Nasıl Bağımlıdır (Visual Basic)
-`My` yalnızca belirli bir proje türü için gereken nesneleri kullanıma sunar. Örneğin, `My.Forms` nesnesi bir Windows Forms uygulamasında kullanılabilir ancak konsol uygulamasında kullanılamaz. Bu konuda, farklı proje türlerinde hangi `My` nesnelerinin kullanılabildiği açıklanmaktadır.  
+
+`My` exposes only those objects required by a particular project type. For example, the `My.Forms` object is available in a Windows Forms application but not available in a console application. This topic describes which `My` objects are available in different project types.  
   
-## <a name="my-in-windows-applications-and-web-sites"></a>My Windows Uygulamaları ve Web siteleri  
- `My` yalnızca geçerli proje türünde yararlı olan nesneleri kullanıma sunar; geçerli olmayan nesneleri bastırır. Örneğin, aşağıdaki görüntüde `My` nesne modeli bir Windows Forms projesinde gösterilmektedir.  
+## <a name="my-in-windows-applications-and-web-sites"></a>My in Windows Applications and Web Sites  
+
+ `My` exposes only objects that are useful in the current project type; it suppresses objects that are not applicable. For example, the following image shows the `My` object model in a Windows Forms project.  
   
- ![Windows Forms uygulamasındaki nesnem modelini gösteren diyagram.](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
+ ![Diagram that shows the My object model in a Windows Forms application.](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
   
- Bir Web sitesi projesinde, ilgili olmayan nesneleri (`My.Forms` nesnesi gibi) gösterirken, bir Web geliştiricisi ile ilgili nesneleri (`My.Request` ve `My.Response` nesneleri gibi) kullanıma sunar `My`. Aşağıdaki görüntüde `My` nesne modeli bir Web sitesi projesinde gösterilmektedir:  
+ In a Web site project, `My` exposes objects that are relevant to a Web developer (such as the `My.Request` and `My.Response` objects) while suppressing objects that are not relevant (such as the `My.Forms` object). The following image shows the `My` object model in a Web site project:  
   
- ![Web uygulamasındaki nesnem modelini gösteren diyagram.](./media/how-my-depends-on-project-type/my-object-model-web.png)  
+ ![Diagram that shows the My object model in a Web application.](./media/how-my-depends-on-project-type/my-object-model-web.png)  
   
-## <a name="project-details"></a>Proje ayrıntıları  
- Aşağıdaki tabloda sekiz proje türü için varsayılan olarak hangi `My` nesnelerinin etkinleştirildiği gösterilmektedir: Windows uygulaması, sınıf kitaplığı, konsol uygulaması, Windows Denetim Kitaplığı, Web denetim kitaplığı, Windows hizmeti, boş ve Web sitesi.  
+## <a name="project-details"></a>Project Details  
+
+ The following table shows which `My` objects are enabled by default for eight project types: Windows application, class Library, console application, Windows control library, Web control library, Windows service, empty, and Web site.  
   
- @No__t_0 nesnesinin üç sürümü, `My.Computer` nesnesinin iki sürümü ve `My.User` nesnesinin iki sürümü vardır. Bu sürümler hakkındaki ayrıntılar, tablodan sonraki dipnotlara göre verilmiştir.  
+ There are three versions of the `My.Application` object, two versions of the `My.Computer` object, and two versions of `My.User` object; details about these versions are given in the footnotes after the table.  
   
-|Nesnem|Windows uygulaması|Sınıf Kitaplığı|Konsol Uygulaması|Windows Denetim Kitaplığı|Web Denetim Kitaplığı|Windows Hizmeti|Olmamalıdır|Web Sitesi|  
+|My Object|Windows Application|Sınıf Kitaplığı|Konsol Uygulaması|Windows Control Library|Web Denetim Kitaplığı|Windows Hizmeti|Empty|Web Sitesi|  
 |---|---|---|---|---|---|---|---|---|  
-|`My.Application`|**Evet** <sup>1</sup>|**Evet** <sup>2</sup>|**Evet** <sup>3</sup>|**Evet** <sup>2</sup>|Hayır|**Evet** <sup>3</sup>|Hayır|Hayır|  
-|`My.Computer`|**Evet** <sup>4</sup>|**Evet** <sup>4</sup>|**Evet** <sup>4</sup>|**Evet** <sup>4</sup>|**Evet** <sup>5</sup>|**Evet** <sup>4</sup>|Hayır|**Evet** <sup>5</sup>|  
+|`My.Application`|**Yes** <sup>1</sup>|**Yes** <sup>2</sup>|**Yes** <sup>3</sup>|**Yes** <sup>2</sup>|Hayır|**Yes** <sup>3</sup>|Hayır|Hayır|  
+|`My.Computer`|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>5</sup>|**Yes** <sup>4</sup>|Hayır|**Yes** <sup>5</sup>|  
 |`My.Forms`|**Yes**|Hayır|Hayır|**Yes**|Hayır|Hayır|Hayır|Hayır|  
 |`My.Log`|Hayır|Hayır|Hayır|Hayır|Hayır|Hayır|Hayır|**Yes**|  
 |`My.Request`|Hayır|Hayır|Hayır|Hayır|Hayır|Hayır|Hayır|**Yes**|  
 |`My.Resources`|**Yes**|**Yes**|**Yes**|**Yes**|**Yes**|**Yes**|Hayır|Hayır|  
 |`My.Response`|Hayır|Hayır|Hayır|Hayır|Hayır|Hayır|Hayır|**Yes**|  
 |`My.Settings`|**Yes**|**Yes**|**Yes**|**Yes**|**Yes**|**Yes**|Hayır|Hayır|  
-|`My.User`|**Evet** <sup>6</sup>|**Evet** <sup>6</sup>|**Evet** <sup>6</sup>|**Evet** <sup>6</sup>|**Evet** <sup>7</sup>|**Evet** <sup>6</sup>|Hayır|**Evet** <sup>7</sup>|  
+|`My.User`|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>7</sup>|**Yes** <sup>6</sup>|Hayır|**Yes** <sup>7</sup>|  
 |`My.WebServices`|**Yes**|**Yes**|**Yes**|**Yes**|**Yes**|**Yes**|Hayır|Hayır|  
   
- <sup>1</sup> Windows Forms `My.Application` sürümü. Konsol sürümünden türetilir (bkz. Note 3); uygulamanın pencereleri ile etkileşim kurma desteği ekler ve Visual Basic uygulama modeli sağlar.  
+ <sup>1</sup> Windows Forms version of `My.Application`. Derives from the console version (see Note 3); adds support for interacting with the application's windows and provides the Visual Basic Application model.  
   
- `My.Application` <sup>2</sup> kitaplığı sürümü. Bir uygulama için gereken temel işlevselliği sağlar: uygulama günlüğüne yazmak ve uygulama bilgilerine erişmek için Üyeler sağlar.  
+ <sup>2</sup> Library version of `My.Application`. Provides the basic functionality needed by an application: provides members for writing to the application log and accessing application information.  
   
- `My.Application` <sup>3</sup> konsol sürümü. Kitaplık sürümünden türetilir (bkz. Note 2) ve uygulamanın komut satırı bağımsız değişkenlerine ve ClickOnce dağıtım bilgilerine erişmek için ek Üyeler ekler.  
+ <sup>3</sup> Console version of `My.Application`. Derives from the library version (see Note 2), and adds additional members for accessing the application's command-line arguments and ClickOnce deployment information.  
   
- <sup>4</sup> `My.Computer` Windows sürümü. Sunucu sürümünden türetilir (bkz. Note 5) ve bir istemci makinesinde klavye, ekran ve fare gibi faydalı nesnelere erişim sağlar.  
+ <sup>4</sup> Windows version of `My.Computer`. Derives from the Server version (see Note 5), and provides access to useful objects on a client machine, such as the keyboard, screen, and mouse.  
   
- `My.Computer` <sup>5</sup> sunucu sürümü. Bilgisayar hakkında ad, saate erişim vb. gibi temel bilgileri sağlar.  
+ <sup>5</sup> Server version of `My.Computer`. Provides basic information about the computer, such as the name, access to the clock, and so on.  
   
- `My.User` <sup>6</sup> Windows sürümü. Bu nesne, iş parçacığının geçerli kimliğiyle ilişkili.  
+ <sup>6</sup> Windows version of `My.User`. This object is associated with the thread's current identity.  
   
- `My.User` <sup>7</sup> Web sürümü. Bu nesne, uygulamanın geçerli HTTP isteğinin kullanıcı kimliğiyle ilişkili.  
+ <sup>7</sup> Web version of `My.User`. This object is associated with the user identity of the application's current HTTP request.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -63,7 +66,7 @@ ms.locfileid: "72775194"
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
 - [My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 - [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [-tanımla (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+- [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [My.Request Nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)
 - [My.Response Nesnesi](../../../visual-basic/language-reference/objects/my-response-object.md)

@@ -1,5 +1,5 @@
 ---
-title: Parametre Dizileri (Visual Basic)
+title: Parametre Dizileri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - parameter arrays [Visual Basic], about parameter arrays
@@ -10,47 +10,47 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: 285a5f10e2394fcb001a652fad66e8128b9fbc1a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ffb532fbac70b9aa8ab210450e4d9207f5e0291f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424613"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351120"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Parametre Dizileri (Visual Basic)
-Genellikle, yordam bildiriminin belirttiğinden daha fazla bağımsız değişkenle bir yordam çağrılamaz. Sınırsız sayıda bağımsız değişkene ihtiyacınız olduğunda bir *parametre dizisi*bildirebilirsiniz ve bu, bir yordamın bir parametre için bir dizi değer kabul etmesine izin verir. Yordamı tanımlarken parametre dizisindeki öğelerin sayısını bilmeniz gerekmez. Dizi boyutu, yordamın her çağrısıyla ayrı ayrı belirlenir.  
+Usually, you cannot call a procedure with more arguments than the procedure declaration specifies. When you need an indefinite number of arguments, you can declare a *parameter array*, which allows a procedure to accept an array of values for a parameter. You do not have to know the number of elements in the parameter array when you define the procedure. The array size is determined individually by each call to the procedure.  
   
-## <a name="declaring-a-paramarray"></a>ParamArray bildirme  
- Parametre listesinde bir parametre dizisini göstermek için [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) anahtar sözcüğünü kullanırsınız. Aşağıdaki kurallar geçerlidir:  
+## <a name="declaring-a-paramarray"></a>Declaring a ParamArray  
+ You use the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) keyword to denote a parameter array in the parameter list. Aşağıdaki kurallar geçerlidir:  
   
-- Bir yordam yalnızca bir parametre dizisi tanımlayabilir ve yordam tanımındaki son parametre olmalıdır.  
+- A procedure can define only one parameter array, and it must be the last parameter in the procedure definition.  
   
-- Parametre dizisinin değere göre geçirilmesi gerekir. Yordam tanımına [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) anahtar sözcüğünü açıkça eklemek iyi bir programlama uygulamasıdır.  
+- The parameter array must be passed by value. It is good programming practice to explicitly include the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword in the procedure definition.  
   
-- Parametre dizisi otomatik olarak isteğe bağlıdır. Varsayılan değeri, parametre dizisinin öğe türünün boş bir boyutlu dizisidir.  
+- The parameter array is automatically optional. Its default value is an empty one-dimensional array of the parameter array's element type.  
   
-- Parametre dizisinin önceki tüm parametreleri gerekli olmalıdır. Parametre dizisi, tek bir isteğe bağlı parametre olmalıdır.  
+- All parameters preceding the parameter array must be required. The parameter array must be the only optional parameter.  
   
-## <a name="calling-a-paramarray"></a>ParamArray çağırma  
- Bir parametre dizisini tanımlayan bir yordamı çağırdığınızda, bağımsız değişkenini aşağıdaki yöntemlerle sağlayabilirsiniz:  
+## <a name="calling-a-paramarray"></a>Calling a ParamArray  
+ When you call a procedure that defines a parameter array, you can supply the argument in any one of the following ways:  
   
-- Nothing — Yani, [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) bağımsız değişkenini atlayabilirsiniz. Bu durumda, yordama boş bir dizi geçirilir. [Nothing](../../../../visual-basic/language-reference/nothing.md) anahtar sözcüğünü açıkça geçirirseniz, yordama bir null dizi geçirilir ve çağrılan yordam bu koşulu Denetmezse bir NullReferenceException öğesine neden olabilir.
+- Nothing — that is, you can omit the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argument. In this case, an empty array is passed to the procedure. If you explicitly pass the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, a null array is passed to the procedure and may result in a NullReferenceException if the called procedure does not check for this condition.
   
-- Virgülle ayırarak rastgele sayıda bağımsız değişken listesi. Her bağımsız değişkenin veri türü `ParamArray` öğe türüne örtük olarak dönüştürülebilir olmalıdır.  
+- A list of an arbitrary number of arguments, separated by commas. The data type of each argument must be implicitly convertible to the `ParamArray` element type.  
   
-- Parametre dizisinin öğe türüyle aynı öğe türüne sahip bir dizi.  
+- An array with the same element type as the parameter array's element type.  
   
- Her durumda, yordam içindeki kod parametre dizisini, `ParamArray` veri türüyle aynı veri türü öğeleriyle tek boyutlu bir dizi olarak değerlendirir.  
+ In all cases, the code within the procedure treats the parameter array as a one-dimensional array with elements of the same data type as the `ParamArray` data type.  
   
 > [!IMPORTANT]
-> Süresiz olarak büyük olabilecek bir dizi ile uğraşmanız durumunda, uygulamanızın bazı iç kapasitesini çok fazla çalıştırmaya yönelik bir risk vardır. Bir parametre dizisini kabul ediyorsanız, çağıran kodun kendisine geçirildiği dizinin boyutunu test etmelisiniz. Uygulamanız için çok büyükse uygun adımları uygulayın. Daha fazla bilgi için bkz. [diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+> Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array, you should test for the size of the array that the calling code passed to it. Take appropriate steps if it is too large for your application. For more information, see [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek `calcSum`işlevini tanımlar ve çağırır. Parametre `args` `ParamArray` değiştiricisi, işlevin değişken sayıda bağımsız değişken kabul etmesine olanak sağlar.  
+ The following example defines and calls the function `calcSum`. The `ParamArray` modifier for the parameter `args` enables the function to accept a variable number of arguments.  
   
  [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
- Aşağıdaki örnek, bir parametre dizisi ile bir yordam tanımlar ve parametre dizisine geçirilen tüm dizi öğelerinin değerlerini çıkarır.  
+ The following example defines a procedure with a parameter array, and outputs the values of all the array elements passed to the parameter array.  
   
  [!code-vb[VbVbcnProcedures#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#48)]  
   

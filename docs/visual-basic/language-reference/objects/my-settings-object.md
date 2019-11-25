@@ -1,5 +1,5 @@
 ---
-title: My.Settings nesnesi (Visual Basic)
+title: My.Settings Nesnesi
 ms.date: 07/20/2015
 f1_keywords:
 - My.MySettingsProperty.Settings
@@ -7,63 +7,63 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 9533e8e1ccc51078fefcf6bf73feb2683ae8febb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9560a51332ea596d4cf2228f1e07c158a0457ece
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625277"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350354"
 ---
 # <a name="mysettings-object"></a>My.Settings Nesnesi
-Özellikler ve uygulama ayarlarının erişmek için yöntemler sağlar.  
+Provides properties and methods for accessing the application's settings.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `My.Settings` Nesne uygulamanın ayarlarına erişim sağlar ve dinamik olarak depolamak ve özellik ayarlarını ve uygulamanızın diğer bilgilerini almak sağlar. Daha fazla bilgi için [uygulama ayarlarını yönetme (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+ The `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application. For more information, see [Managing Application Settings (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="properties"></a>Özellikler  
- Özelliklerini `My.Settings` nesne, uygulamanızın ayarlarına erişim sağlar. Ayarlar eklemek veya kaldırmak için kullanın **ayarlar Tasarımcısı**.  
+ The properties of the `My.Settings` object provide access to your application's settings. To add or remove settings, use the **Settings Designer**.  
   
- Her ayarının bir **adı**, **türü**, **kapsam**, ve **değer**, ve bu ayarlar belirler nasıl her ayar erişmek için özelliği görünür `My.Settings` nesnesi:  
+ Each setting has a **Name**, **Type**, **Scope**, and **Value**, and these settings determine how the property to access each setting appears in the `My.Settings` object:  
   
-- **Adı** özelliğin adını belirler.  
+- **Name** determines the name of the property.  
   
-- **Tür** özelliğin türünü belirler.  
+- **Type** determines the type of the property.  
   
-- **Kapsam** özelliği salt okunur olup olmadığını gösterir. Değer ise **uygulama**, özelliği değer ise salt okunur; **kullanıcı**, okuma-yazma özelliği.  
+- **Scope** indicates if the property is read-only. If the value is **Application**, the property is read-only; if the value is **User**, the property is read-write.  
   
-- **Değer** özelliğinin varsayılan değerdir.  
+- **Value** is the default value of the property.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |---|---|  
-|`Reload`|Son kaydedilen değerler kullanıcı ayarlarının yeniden yükler.|  
-|`Save`|Geçerli kullanıcı ayarları kaydeder.|  
+|`Reload`|Reloads the user settings from the last saved values.|  
+|`Save`|Saves the current user settings.|  
   
- `My.Settings` Nesnesi de sağlar Gelişmiş özellikleri ve yöntemleri, devralınan <xref:System.Configuration.ApplicationSettingsBase> sınıfı.  
+ The `My.Settings` object also provides advanced properties and methods, inherited from the <xref:System.Configuration.ApplicationSettingsBase> class.  
   
 ## <a name="tasks"></a>Görevler  
- Aşağıdaki tabloda, ilgili görev örnekleri listelenir `My.Settings` nesne.  
+ The following table lists examples of tasks involving the `My.Settings` object.  
   
-|Bitiş|Bkz. |  
+|Bitiş|Bkz.|  
 |---|---|  
-|Uygulama ayarını oku|[Nasıl yapılır: Visual Basic'te uygulama ayarlarını okuma](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
-|Bir kullanıcı ayarı|[Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını değiştirme](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|Kullanıcı ayarlarını kalıcı yapma|[Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını kalıcı yapma](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Kullanıcı ayarları için bir özellik kılavuzu oluşturma|[Nasıl yapılır: Visual Basic'te kullanıcı ayarları için özellik kılavuzu oluşturma](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|Read an application setting|[How to: Read Application Settings in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|Change a user setting|[How to: Change User Settings in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|Persist user settings|[How to: Persist User Settings in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|Create a property grid for user settings|[How to: Create Property Grids for User Settings in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>Örnek  
- Bu örnek değeri görüntüler `Nickname` ayarı.  
+ This example displays the value of the `Nickname` setting.  
   
  [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
   
- Bu örneğin çalışması, uygulamanız olmalıdır bir `Nickname` biriminin türü `String`.  
+ For this example to work, your application must have a `Nickname` setting, of type `String`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Configuration.ApplicationSettingsBase>
-- [Nasıl yapılır: Visual Basic'te uygulama ayarlarını okuma](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
-- [Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını değiştirme](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
-- [Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını kalıcı yapma](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
-- [Nasıl yapılır: Visual Basic'te kullanıcı ayarları için özellik kılavuzu oluşturma](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [How to: Read Application Settings in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [How to: Change User Settings in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [How to: Persist User Settings in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [How to: Create Property Grids for User Settings in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
 - [Uygulama Ayarlarını Yönetme](/visualstudio/ide/managing-application-settings-dotnet)

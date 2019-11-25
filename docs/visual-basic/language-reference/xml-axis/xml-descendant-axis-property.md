@@ -1,5 +1,5 @@
 ---
-title: XML Descendant Axis Özelliği (Visual Basic)
+title: XML Descendant Axis Özelliği
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlPropertyDescendantsAxis
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: e2c3e01808d3eeb18f6753a5fc79b8627e7f323b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: b2bf524214fa8ecca215d50c198b23d127e3b400
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582225"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349440"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML Descendant Axis Özelliği (Visual Basic)
 
-Aşağıdakilerin alt öğeleri için erişim sağlar: <xref:System.Xml.Linq.XElement> nesnesi, <xref:System.Xml.Linq.XDocument> nesnesi, <xref:System.Xml.Linq.XElement> nesneleri koleksiyonu veya <xref:System.Xml.Linq.XDocument> nesneleri koleksiyonu.
+Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -29,40 +29,40 @@ object...<descendant>
 
 ## <a name="parts"></a>Bölümler
 
-`object` gerekiyor. @No__t_0 nesnesi, <xref:System.Xml.Linq.XDocument> nesnesi, <xref:System.Xml.Linq.XElement> nesneleri koleksiyonu veya <xref:System.Xml.Linq.XDocument> nesneleri koleksiyonu.
+`object` Required. An <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.
 
-`...<` gerekiyor. Alt eksen özelliğinin başlangıcını gösterir.
+`...<` Required. Denotes the start of a descendant axis property.
 
-`descendant` gerekiyor. [@No__t_0 biçiminde erişmek için alt düğümlerin adı.
+`descendant` Required. Name of the descendant nodes to access, of the form [`prefix:]name`.
 
-|Bölümüyle|Açıklama|
+|Part|Açıklama|
 |----------|-----------------|
-|`prefix`|İsteğe bağlı. Alt düğüm için XML ad alanı öneki. Bir `Imports` ekstresi kullanılarak tanımlanmış bir genel XML ad alanı olmalıdır.|
-|`name`|Gerekli. Alt düğümün yerel adı. [BELIRTILEN XML öğelerinin ve özniteliklerin adlarına](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)bakın.|
+|`prefix`|İsteğe bağlı. XML namespace prefix for the descendant node. Must be a global XML namespace that is defined by using an `Imports` statement.|
+|`name`|Gerekli. Local name of the descendant node. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
 
-`>` gerekiyor. Alt eksen özelliğinin sonunu belirtir.
+`>` Required. Denotes the end of a descendant axis property.
 
 ## <a name="return-value"></a>Dönüş Değeri
 
-@No__t_0 nesneleri koleksiyonu.
+A collection of <xref:System.Xml.Linq.XElement> objects.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Alt düğümlere bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument> nesnesinden veya <xref:System.Xml.Linq.XElement> ya da <xref:System.Xml.Linq.XDocument> nesnelerinden oluşan bir koleksiyondan ad ile erişmek için bir XML alt eksen özelliği kullanabilirsiniz. Döndürülen koleksiyondaki ilk alt düğümün değerine erişmek için XML `Value` özelliğini kullanın. Daha fazla bilgi için bkz. [XML Value özelliği](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
+You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects. Use the XML `Value` property to access the value of the first descendant node in the returned collection. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
 
-Visual Basic derleyici, alt eksen özelliklerini <xref:System.Xml.Linq.XContainer.Descendants%2A> yöntemine yapılan çağrılara dönüştürür.
+The Visual Basic compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.
 
-## <a name="xml-namespaces"></a>XML ad alanları
+## <a name="xml-namespaces"></a>XML Namespaces
 
-Alt eksen özelliğindeki ad, `Imports` ifadesiyle Global olarak belirtilen yalnızca XML ad alanlarını kullanabilir. XML öğesi değişmez değerleri içinde yerel olarak belirtilen XML ad alanlarını kullanamaz. Daha fazla bilgi için bkz. [Imports bildirisi (XML ad alanı)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
+The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement. It cannot use XML namespaces declared locally within XML element literals. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `name` adlı ilk alt düğümün değerine ve `contacts` nesnesinden `phone` adlı tüm alt düğümlerin değerlerine nasıl erişebileceğini gösterir.
+The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.
 
 [!code-vb[VbXMLSamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#25)]
 
-Bu kod aşağıdaki metni görüntüler:
+This code displays the following text:
 
 `Name: Patrick Hines`
 
@@ -70,11 +70,11 @@ Bu kod aşağıdaki metni görüntüler:
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `ns` bir XML ad alanı öneki olarak bildirir. Daha sonra bir XML sabit değeri oluşturmak için ad alanının önekini kullanır ve `ns:name` nitelenmiş ada sahip ilk alt düğümün değerine erişir.
+The following example declares `ns` as an XML namespace prefix. It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.
 
 [!code-vb[VbXMLSamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples12.vb#26)]
 
-Bu kod aşağıdaki metni görüntüler:
+This code displays the following text:
 
 `Name: Patrick Hines`
 
@@ -83,5 +83,5 @@ Bu kod aşağıdaki metni görüntüler:
 - <xref:System.Xml.Linq.XElement>
 - [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/index.md)
 - [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Creating XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

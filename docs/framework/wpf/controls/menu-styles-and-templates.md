@@ -9,15 +9,15 @@ helpviewer_keywords:
 - templates [WPF], Menu
 - parts [WPF], Menu
 ms.assetid: b89da183-9b87-42c6-ac53-731a42c7b09e
-ms.openlocfilehash: 979ed7292a0f6582753305d1a7704c48aa751003
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3ce0be1fdeeee1465c2facb414cc7a081b268eb5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460213"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283471"
 ---
 # <a name="menu-styles-and-templates"></a>Menü Stilleri ve Şablonları
-Bu konuda <xref:System.Windows.Controls.Menu> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+Bu konuda <xref:System.Windows.Controls.Menu> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için varsayılan <xref:System.Windows.Controls.ControlTemplate> değiştirebilirsiniz. Daha fazla bilgi için bkz. [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="menu-parts"></a>Menü bölümleri  
  <xref:System.Windows.Controls.Menu> denetiminde hiç adlandırılmış bölüm yok.  
@@ -36,7 +36,7 @@ Bu konuda <xref:System.Windows.Controls.Menu> denetimine yönelik stiller ve şa
 ## <a name="menuitem-parts"></a>MenuItem parçaları  
  Aşağıdaki tabloda <xref:System.Windows.Controls.Menu> denetimi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümüyle|Tür|Açıklama|  
+|Bölümüyle|Type|Açıklama|  
 |-|-|-|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Alt menünün alanı.|  
   
@@ -77,4 +77,4 @@ Bu konuda <xref:System.Windows.Controls.Menu> denetimine yönelik stiller ve şa
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
 - [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)
+- [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md)

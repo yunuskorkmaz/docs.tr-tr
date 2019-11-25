@@ -8,30 +8,30 @@ dev_langs:
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ced76a0bb28a91824676f496b28143a921b987de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3224250b08a780b87b9b7f96547830b0563daadf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62027257"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351947"
 ---
 # <a name="extending-the-dom"></a>DOM Genişletme
 
-Microsoft .NET Framework XML belge nesne modeli (DOM) uygulaması sağlayan bir temel sınıf kümesi içerir. <xref:System.Xml.XmlNode>Ve onun türetilmiş sınıfları, yöntemleri ve gidin olanak tanıyan özellikler sorgulamak ve içeriği ve yapısı bir XML belgesi değiştirme sağlar.
+The Microsoft .NET Framework includes a base set of classes that provides an implementation of the XML Document Object Model (DOM). The <xref:System.Xml.XmlNode>, and its derived classes, provides methods and properties that allow you to navigate, query, and modify the content and structure of an XML document.
 
-XML içeriği kullanılarak DOM'a belleğe yüklendiğinde oluşturulan düğümleri düğüm adı, düğüm türü vb. gibi bilgileri içerir. Temel sınıflar sağlamadığı belirli düğüm bilgileri gerektiren burada durumlar olabilir. Örneğin, satır numarasını ve düğümün konumu görmek isteyebilirsiniz. Bu durumda, yeni sınıflar mevcut DOM sınıflarından ve ek işlevler ekleyin.
+When XML content is loaded into memory using the DOM, the nodes created contain information such as node name, node type, and so on. There may be occasions where you require specific node information that the base classes do not provide. For example, you may want to see the line number and position of the node. In this case, you can derive new classes from the existing DOM classes and add additional functionality.
 
-Yeni sınıflar türetilirken iki genel kurallar şunlardır:
+There are two general guidelines when deriving new classes:
 
-- Hiçbir zaman türetilir, önerilen <xref:System.Xml.XmlNode> sınıfı. Bunun yerine, ilgilendiğiniz düğüm türü için karşılık gelen sınıf sınıfların türetilmesi önerilir. Öznitelik düğümleri hakkında ek bilgi döndürmek isterseniz, örneğin, türetebilirsiniz <xref:System.Xml.XmlAttribute> sınıfı.
+- It is recommended that you never derive from the <xref:System.Xml.XmlNode> class. Instead, it is recommended that you derive classes from the class corresponding to the node type that you are interested in. For example, if you want to return additional information on attribute nodes, you can derive from the <xref:System.Xml.XmlAttribute> class.
 
-- Düğüm oluşturma yöntemleri dışında bir işlevi geçersiz kılarken, her zaman temel sürümü, işlev çağrısı ve ardından herhangi bir ek işleme ekleyin önerilir.
+- Except for the node creation methods, it is recommended that when overriding a function, you should always call the base version of the function and then add any additional processing.
 
-## <a name="creating-your-own-node-instances"></a>Kendi düğüm örnekleri oluşturma
+## <a name="creating-your-own-node-instances"></a>Creating Your Own Node Instances
 
-<xref:System.Xml.XmlDocument> Sınıf düğümü oluşturma yöntemleri içerir. Bir XML dosyası yüklendiğinde düğümleri oluşturmak için bu yöntem çağrılır. Bir belge yüklendiğinde düğüm örneklerinizin oluşturulmasını sağlayacak şekilde bu yöntemleri geçersiz kılabilirsiniz. Genişlettiyseniz, örneğin, <xref:System.Xml.XmlElement> devralan sınıf <xref:System.Xml.XmlDocument> sınıf ve geçersiz kılma <xref:System.Xml.XmlDocument.CreateElement%2A> yöntemi.
+The <xref:System.Xml.XmlDocument> class contains node creation methods. When an XML file is loaded, these methods are called to create the nodes. You can override these methods so that your node instances are created when a document is loaded. For example, if you have extended the <xref:System.Xml.XmlElement> class, you would inherit the <xref:System.Xml.XmlDocument> class and override the <xref:System.Xml.XmlDocument.CreateElement%2A> method.
 
-Aşağıdaki örnek nasıl geçersiz kılınacağını gösterir <xref:System.Xml.XmlDocument.CreateElement%2A> uygulamanıza döndürülecek yöntemi <xref:System.Xml.XmlElement> sınıfı.
+The following example shows how to override the <xref:System.Xml.XmlDocument.CreateElement%2A> method to return your implementation of the <xref:System.Xml.XmlElement> class.
 
 ```vb
 Class LineInfoDocument
@@ -54,11 +54,11 @@ class LineInfoDocument : XmlDocument
 }
 ```
 
-## <a name="extending-a-class"></a>Bir sınıf genişletme
+## <a name="extending-a-class"></a>Extending a Class
 
-Bir sınıf genişletmek için var olan DOM sınıflarının birinden sınıfınıza türetilir. Ardından, herhangi bir sanal yöntem ya da temel sınıfta özellikleri geçersiz kılabilir veya kendi uygulamanızı ekleyin.
+To extend a class, derive your class from one of the existing DOM classes. You can then override any of the virtual methods or properties in the base class, or add your own.
 
-Aşağıdaki örnekte, yeni bir sınıf oluşturulduğunda uygulayan <xref:System.Xml.XmlElement> sınıfı ve <xref:System.Xml.IXmlLineInfo> arabirimi. Ek yöntemleri ve özellikleri satır bilgileri toplamak kullanıcıların sağlayan tanımlanır.
+In the following example, a new class is created, which implements the <xref:System.Xml.XmlElement> class and the <xref:System.Xml.IXmlLineInfo> interface. Additional methods and properties are defined which allows users to gather line information.
 
 ```vb
 Class LineInfoElement
@@ -124,10 +124,9 @@ class LineInfoElement : XmlElement, IXmlLineInfo {
 
 ### <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir XML belgesi içindeki öğelerin sayısını sayar:
+The following example counts the number of elements in an XML document:
 
 ```vb
-Imports System
 Imports System.Xml
 Imports System.IO
 
@@ -225,7 +224,7 @@ public class Test {
 
 #### <a name="input"></a>Giriş
 
-Book.XML
+book.xml
 
 ```xml
 <!--sample XML fragment-->
@@ -241,17 +240,17 @@ Book.XML
 Number of elements in book.xml: 3
 ```
 
-## <a name="node-event-handler"></a>Düğüm olay işleyicisi
+## <a name="node-event-handler"></a>Node Event Handler
 
-DOM .NET Framework uygulamasını ayrıca Al ve düğümleri bir XML belgesi değiştirdiğinizde olayları işlemek için sağlayan bir olay sistemi içerir. Kullanarak <xref:System.Xml.XmlNodeChangedEventHandler> ve <xref:System.Xml.XmlNodeChangedEventArgs> sınıfları yakalayabilirsiniz `NodeChanged`, `NodeChanging`, `NodeInserted`, `NodeInserting`, `NodeRemoved`, ve `NodeRemoving` olayları.
+The .NET Framework implementation of the DOM also includes an event system that enables you to receive and handle events when nodes in an XML document change. Using the <xref:System.Xml.XmlNodeChangedEventHandler> and <xref:System.Xml.XmlNodeChangedEventArgs> classes, you can capture `NodeChanged`, `NodeChanging`, `NodeInserted`, `NodeInserting`, `NodeRemoved`, and `NodeRemoving` events.
 
-Özgün DOM sınıflarda gibi olay işleme işlemi tam olarak aynı türetilmiş sınıflarda çalışır.
+The event-handling process works exactly the same in derived classes as it would in the original DOM classes.
 
-Düğüm olay işleme hakkında daha fazla bilgi için bkz. [olayları](../../../../docs/standard/events/index.md) ve <xref:System.Xml.XmlNodeChangedEventHandler>.
+For more information regarding node event handling, see [Events](../../../../docs/standard/events/index.md) and <xref:System.Xml.XmlNodeChangedEventHandler>.
 
-## <a name="default-attributes-and-the-createelement-method"></a>Varsayılan öznitelikler ve CreateElement yöntemi
+## <a name="default-attributes-and-the-createelement-method"></a>Default Attributes and the CreateElement Method
 
-Kılıyorsa <xref:System.Xml.XmlDocument.CreateElement%2A> varsayılan belgesi düzenlenirken yeni öğeler oluştururken, öznitelikleri eklenip eklenmeyeceği türetilen bir sınıfta yöntemi. Düzenlenirken bir sorun budur. Çünkü <xref:System.Xml.XmlDocument.CreateElement%2A> yöntemdir varsayılan öznitelikler eklemek için sorumlu bir <xref:System.Xml.XmlDocument>, bu işlev kodu gerekir <xref:System.Xml.XmlDocument.CreateElement%2A> yöntemi. Yüklüyorsanız, size bir <xref:System.Xml.XmlDocument> , düzgün işlenecek, varsayılan öznitelikler içerir. Varsayılan öznitelikler hakkında daha fazla bilgi için bkz. [DOM öğeleri için yeni öznitelikler oluşturma](creating-new-attributes-for-elements-in-the-dom.md).
+If you are overriding the <xref:System.Xml.XmlDocument.CreateElement%2A> method in a derived class, default attributes are not added when you are creating new elements while editing the document. This is only an issue while editing. Because the <xref:System.Xml.XmlDocument.CreateElement%2A> method is responsible for adding default attributes to an <xref:System.Xml.XmlDocument>, you must code this functionality in the <xref:System.Xml.XmlDocument.CreateElement%2A> method. If you are loading an <xref:System.Xml.XmlDocument> that includes default attributes, they will be handled correctly. For more information on default attributes, see [Creating New Attributes for Elements in the DOM](creating-new-attributes-for-elements-in-the-dom.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

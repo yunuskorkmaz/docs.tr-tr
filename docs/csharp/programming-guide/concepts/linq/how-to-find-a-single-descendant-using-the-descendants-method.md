@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Alt öğeler yöntemini (C#) kullanarak tek bir alt öğe bulma'
+title: Alt öğeler yöntemini kullanarak tek bir alt öğe bulma (C#)
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: 29cac5a666f7e9a560c550ad20a5bb68d02ee1ea
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 59d8cfb93ec527a6ceaa58b422a154e16d712533
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253792"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141203"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Nasıl yapılır: Alt öğeler yöntemini (C#) kullanarak tek bir alt öğe bulma
-Tek bir benzersiz şekilde <xref:System.Xml.Linq.XContainer.Descendants%2A> adlandırılmış öğe bulmak için bir kodu hızlı bir şekilde yazmak üzere eksen yöntemini kullanabilirsiniz. Bu teknik özellikle belirli bir ada sahip belirli bir alt öğe bulmak istediğinizde yararlıdır. İstenen öğeye gitmek için kodu yazabilirsiniz, ancak <xref:System.Xml.Linq.XContainer.Descendants%2A> eksen kullanılarak kodun yazılması genellikle daha hızlı ve kolaydır.  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Alt öğeler yöntemini kullanarak tek bir alt öğe bulma (C#)
+Tek bir benzersiz şekilde adlandırılmış öğe bulmak için kodu hızlı bir şekilde yazmak üzere <xref:System.Xml.Linq.XContainer.Descendants%2A> eksen yöntemini kullanabilirsiniz. Bu teknik özellikle belirli bir ada sahip belirli bir alt öğe bulmak istediğinizde yararlıdır. İstenen öğeye gitmek için kodu yazabilirsiniz, ancak <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni kullanılarak kodun yazılması genellikle daha hızlı ve kolaydır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, <xref:System.Linq.Enumerable.First%2A> standart sorgu işlecini kullanır.  
+ Bu örnek <xref:System.Linq.Enumerable.First%2A> standart sorgu işlecini kullanır.  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  

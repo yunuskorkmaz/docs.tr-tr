@@ -2,19 +2,19 @@
 title: <behaviors>
 ms.date: 03/30/2017
 ms.assetid: 0e5da4e6-1aa5-466c-924e-f10efee57f0b
-ms.openlocfilehash: a87966f643fe46d0ef69f843dc306151ca7c18bb
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: bcdd26f038b343040d81b0add83bf166a5e3151f
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400591"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74139693"
 ---
 # <a name="behaviors"></a>\<davranışlar >
-Bu öğe, ve `endpointBehaviors` `serviceBehaviors`adlı iki alt koleksiyonu tanımlar.  Her koleksiyon, sırasıyla bitiş noktaları ve hizmetler tarafından tüketilen davranış öğelerini tanımlar. Her davranış öğesi, benzersiz `name` özniteliği tarafından tanımlanır. İle [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)]başlayarak, bağlamaların ve davranışların bir ada sahip olması gerekmez. Varsayılan yapılandırma ve ad Less bağlamaları ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../../../wcf/simplified-configuration.md) ve Basitleştirilmiş yapılandırma.  
+Bu öğe `endpointBehaviors` ve `serviceBehaviors`adlı iki alt koleksiyonu tanımlar.  Her koleksiyon, sırasıyla bitiş noktaları ve hizmetler tarafından tüketilen davranış öğelerini tanımlar. Her davranış öğesi benzersiz `name` özniteliğiyle tanımlanır. .NET Framework 4 ' den başlayarak bağlamalar ve davranışlar bir ada sahip olmak için gerekli değildir. Varsayılan yapılandırma ve ad Less bağlamaları ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../../../wcf/simplified-configuration.md) ve Basitleştirilmiş yapılandırma.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<davranışlar >**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<davranışları >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,10 +44,10 @@ Bu öğe, ve `endpointBehaviors` `serviceBehaviors`adlı iki alt koleksiyonu tan
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<system.serviceModel>](system-servicemodel.md)|Tüm Windows Communication Foundation (WCF) yapılandırma öğelerinin kök öğesi.|  
+|[\<system. serviceModel >](system-servicemodel.md)|Tüm Windows Communication Foundation (WCF) yapılandırma öğelerinin kök öğesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Koleksiyondan belirli bir davranışı `<remove>` kaldırmak için öğesini kullanabilirsiniz. Bunu yapmak için, `name` `<remove>` öğesinin özniteliğinde kaldırılacak davranışın adını sağlamanız yeterlidir.  Ayrıca, `<clear>` bir davranış koleksiyonunun, koleksiyonun tüm içeriğini temizleyerek boş bir şekilde başlamasını sağlamak için öğesini de kullanabilirsiniz.  
+ Koleksiyondan belirli bir davranışı kaldırmak için `<remove>` öğesini kullanabilirsiniz. Bunu yapmak için, `<remove>` öğesinin `name` özniteliğinde kaldırılacak davranışın adını sağlamanız yeterlidir.  Ayrıca, koleksiyonun tüm içeriğini temizleyerek bir davranış koleksiyonunun boş bir şekilde başlamasını sağlamak için `<clear>` öğesini de kullanabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

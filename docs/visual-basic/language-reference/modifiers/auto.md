@@ -1,5 +1,5 @@
 ---
-title: Otomatik (Visual Basic)
+title: Otomatik
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Auto
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-ms.openlocfilehash: e4beb320b3aa0cadb790dd3ab92255496bc32f05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ea46e5f8b882bb986f23e792b240bad0c5be7a5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802713"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351612"
 ---
 # <a name="auto-visual-basic"></a>Otomatik (Visual Basic)
-Visual Basic dizeleri dış bildirilen dış yordam adına göre .NET Framework kurallarına göre sıralaması olduğunu belirtir.  
+Specifies that Visual Basic should marshal strings according to .NET Framework rules based on the external name of the external procedure being declared.  
   
- Projenizin dışında tanımlı bir yordamı çağırdığınızda, Visual Basic Derleyicisi yordamı doğru şekilde çağrılacak olmalıdır bilgilere erişimi yok. Bu bilgileri yordamı bulunduğu, nasıl tanımlandığını, çağrı sırası ve dönüş türü içeren ve isteğe bağlı olarak dize karakteri kullanır ayarlayın. [Declare Deyimi'nin](../../../visual-basic/language-reference/statements/declare-statement.md) bir dış yordam bir başvuru oluşturur ve bu gerekli bilgileri sağlar.  
+ When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it must have to call the procedure correctly. This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.  
   
- `charsetmodifier` Kısmını `Declare` deyimi bir dış yordam çağrısı sırasında dizelerini hazırlama için karakter kümesi bilgileri sağlar. Ayrıca, Visual Basic dış dosya için dış yordam adının nasıl arama etkiler. `Auto` Değiştiricisi, Visual Basic dizeleri .NET Framework kurallarına göre sıralaması ve ilk arama yaparsanız ve büyük olasılıkla çalışma zamanı platformunun temel karakter belirlemelisiniz, dış yordam adının değiştirilmesi gerektiğini belirtir başarısız olur. Daha fazla bilgi için bkz: "Karakter kümesi" [Declare Deyimi'nin](../../../visual-basic/language-reference/statements/declare-statement.md).  
+ The `charsetmodifier` part in the `Declare` statement supplies the character set information for marshaling strings during a call to the external procedure. It also affects how Visual Basic searches the external file for the external procedure name. The `Auto` modifier specifies that Visual Basic should marshal strings according to .NET Framework rules, and that it should determine the base character set of the run-time platform and possibly modify the external procedure name if the initial search fails. For more information, see "Character Sets" in [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md).  
   
- Herhangi bir karakter kümesi değiştiricisi belirtilmişse `Ansi` varsayılandır.  
+ If no character set modifier is specified, `Ansi` is the default.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Auto` Bu bağlamda değiştirici kullanılabilir:  
+ The `Auto` modifier can be used in this context:  
   
  [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
 ## <a name="smart-device-developer-notes"></a>Akıllı Cihaz Geliştirici Notları  
- Bu anahtar sözcük desteklenmiyor.  
+ This keyword is not supported.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Bir ad alanındaki tüm düğümleri bul (C#)'
+title: Bir ad alanındaki tüm düğümleri bulma (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: f8a6f33084417e0dd489002eaa5d2de509e30d39
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253782"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141188"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Nasıl yapılır: Bir ad alanındaki tüm düğümleri bul (C#)
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Bir ad alanındaki tüm düğümleri bulma (C#)
 Söz konusu ad alanındaki tüm düğümleri bulmak için her öğe veya özniteliğin ad alanı üzerinde filtre uygulayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
@@ -46,7 +46,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Örnek  
  Aşağıdaki sorgu tarafından erişilen XML dosyası, satın alma emirlerini iki farklı ad alanında içerir. Sorgu, yalnızca ad alanlarından birindeki öğeleri içeren yeni bir ağaç oluşturur.  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Birleştirilmiş satın alma](./sample-xml-file-consolidated-purchase-orders.md)siparişleri.  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birleştirilmiş satın alma siparişleri](./sample-xml-file-consolidated-purchase-orders.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  

@@ -1,12 +1,12 @@
 ---
 title: Öznitelikler (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 7b78d5832c15d3d1142b80d2ccb96a72e4e20390
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374378"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141557"
 ---
 # <a name="attributes-c"></a>Öznitelikler (C#)
 
@@ -23,25 +23,25 @@ ms.locfileid: "70374378"
 
 Öznitelikler, her bir bildirime yerleştirilebilecek, ancak belirli bir öznitelik, geçerli olduğu bildirimlerin türlerini kısıtlayabilir. ' C#De, geçerli olduğu varlık bildiriminin üzerine köşeli ayraç ([]) içine alınmış özniteliğin adını yerleştirerek bir özniteliği belirtirsiniz.
 
-Bu örnekte, <xref:System.SerializableAttribute> özniteliği bir sınıfa belirli bir özelliği uygulamak için kullanılır:
+Bu örnekte, bir sınıfa belirli bir özelliği uygulamak için <xref:System.SerializableAttribute> özniteliği kullanılır:
 
-[!code-csharp[Using the serializable attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
+[!code-csharp[Using the serializable attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
 
-Özniteliğine <xref:System.Runtime.InteropServices.DllImportAttribute> sahip bir yöntem aşağıdaki örnekte olduğu gibi bildirilmiştir:
+<xref:System.Runtime.InteropServices.DllImportAttribute> özniteliğine sahip bir yöntem aşağıdaki örnekte olduğu gibi bildirilmiştir:
 
 [!code-csharp[Declaring a method to import from an external library](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#2)]
 
 Aşağıdaki örnekte gösterildiği gibi, bir bildirime birden fazla öznitelik yerleştirilebilecek:
 
-[!code-csharp[Including the interop namespace](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
-[!code-csharp[Declaring two way marshaling for arguments](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
+[!code-csharp[Including the interop namespace](~/samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
+[!code-csharp[Declaring two way marshaling for arguments](~/samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
 
-Bazı öznitelikler, belirli bir varlık için birden çok kez belirtilebilir. Bu tür bir çok kullanım özniteliğine <xref:System.Diagnostics.ConditionalAttribute>örnek:
+Bazı öznitelikler, belirli bir varlık için birden çok kez belirtilebilir. Bu tür bir çok kullanım özniteliğine örnek <xref:System.Diagnostics.ConditionalAttribute>:
 
-[!code-csharp[Using the conditional attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
+[!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
-> Kurala göre, tüm öznitelik adları, bunları .NET kitaplıklarında diğer öğelerden ayırt etmek için "Attribute" kelimesiyle biter. Ancak, koddaki öznitelikleri kullanırken öznitelik sonekini belirtmeniz gerekmez. Örneğin, `[DllImport]` öğesine `[DllImportAttribute]`eşdeğerdir, ancak `DllImportAttribute` özniteliğin .NET Framework sınıf kitaplığındaki gerçek adıdır.
+> Kurala göre, tüm öznitelik adları, bunları .NET kitaplıklarında diğer öğelerden ayırt etmek için "Attribute" kelimesiyle biter. Ancak, koddaki öznitelikleri kullanırken öznitelik sonekini belirtmeniz gerekmez. Örneğin, `[DllImport]` `[DllImportAttribute]`eşdeğerdir, ancak `DllImportAttribute` özniteliğin .NET Framework sınıf kitaplığındaki gerçek adıdır.
 
 ### <a name="attribute-parameters"></a>Öznitelik parametreleri
 
@@ -65,7 +65,7 @@ Bir öznitelik hedefini açıkça tanımlamak için aşağıdaki sözdizimini ku
 [target : attribute-list]
 ```
 
-Olası `target` değerler listesi aşağıdaki tabloda gösterilmiştir.
+Olası `target` değerleri listesi aşağıdaki tabloda gösterilmiştir.
 
 |Hedef değer|Uygulandığı öğe:|
 |------------------|----------------|
@@ -79,7 +79,7 @@ Olası `target` değerler listesi aşağıdaki tabloda gösterilmiştir.
 |`return`|Metodun, özellik dizin oluşturucusunun veya `get` Özellik erişimcisinin dönüş değeri|
 |`type`|Struct, Class, Interface, Enum veya Delegate|
 
-[Otomatik uygulanan](../../../properties.md)bir özellik `field` için oluşturulan yedekleme alanına bir öznitelik uygulamak için hedef değeri belirtin.
+[Otomatik uygulanan bir özellik](../../../properties.md)için oluşturulan yedekleme alanına bir öznitelik uygulamak üzere `field` Target değerini belirtirsiniz.
 
 Aşağıdaki örnek, derlemeler ve modüllere özniteliklerin nasıl uygulanacağını gösterir. Daha fazla bilgi için bkz. [ortak özniteliklerC#()](common-attributes.md).
 
@@ -95,16 +95,16 @@ Aşağıdaki örnek, içindeki C#yöntemlere, yöntem parametrelerine ve yöntem
 [!code-csharp[Applying attributes to different code elements](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#6)]
 
 > [!NOTE]
-> Üzerinde `ValidatedContract` geçerli olarak tanımlanan hedeflerin ne olursa olsun `return` , yalnızca dönüş değerleri için geçerli olarak tanımlansa bile `ValidatedContract` hedefin belirtilmesi gerekir. Diğer bir deyişle, derleyici belirsiz öznitelik hedeflerini çözümlemek `AttributeUsage` için bilgileri kullanmaz. Daha fazla bilgi için bkz. [AttributeUsageC#()](attributeusage.md).
+> `ValidatedContract` tanımlanan hedeflerden bağımsız olarak, `ValidatedContract` yalnızca dönüş değerleri uygulamak üzere tanımlansa bile `return` hedefi belirtilmelidir. Diğer bir deyişle, derleyici belirsiz öznitelik hedeflerini çözümlemek için `AttributeUsage` bilgilerini kullanmaz. Daha fazla bilgi için bkz. [AttributeUsageC#()](attributeusage.md).
 
 ## <a name="common-uses-for-attributes"></a>Öznitelikler için ortak kullanımlar
 
 Aşağıdaki listede, kod içindeki özniteliklerin yaygın kullanımları yer almaktadır:
 
-- Yöntemin SOAP protokolü üzerinden `WebMethod` çağrılabilir olması gerektiğini göstermek için Web hizmetlerindeki özniteliği kullanılarak yöntemleri işaretleme. Daha fazla bilgi için bkz. <xref:System.Web.Services.WebMethodAttribute>.
+- Metodun SOAP protokolü üzerinden çağrılabilir olması gerektiğini göstermek için Web hizmetlerindeki `WebMethod` özniteliğini kullanarak yöntemleri işaretleme. Daha fazla bilgi için bkz. <xref:System.Web.Services.WebMethodAttribute>.
 - Yerel kodla birlikte çalışırken yöntem parametrelerinin nasıl hazırlanacağını açıklama. Daha fazla bilgi için bkz. <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
 - Sınıflar, Yöntemler ve arabirimler için COM özelliklerini açıklama.
-- <xref:System.Runtime.InteropServices.DllImportAttribute> Sınıfını kullanarak yönetilmeyen kodu çağırma.
+- Yönetilmeyen kod <xref:System.Runtime.InteropServices.DllImportAttribute> sınıfını kullanarak çağrılıyor.
 - Derlemenizi başlık, sürüm, açıklama veya ticari marka açısından açıklama.
 - Bir sınıfın kalıcılığı için hangi üyelerin serileştirmek gerektiğini açıklama.
 - XML ile serileştirme için sınıf üyeleri ve XML düğümleri arasında nasıl eşleme yapılacağı açıklanır.
@@ -119,7 +119,7 @@ Daha fazla bilgi için bkz.:
 
 - [Özel öznitelikler (C#) oluşturma](creating-custom-attributes.md)  
 - [Yansıma (C#) kullanarak özniteliklere erişme](accessing-attributes-by-using-reflection.md)  
-- [Nasıl yapılır: Öznitelikleri kullanarak C/C++ Union oluşturma (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Öznitelikleri kullanarak C/C++ Union oluşturma ()C#](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Ortak öznitelikler (C#)](common-attributes.md)  
 - [Arayan bilgileri (C#)](../caller-information.md)  
 

@@ -1,5 +1,5 @@
 ---
-title: Mod İşleci (Visual Basic)
+title: Mod İşleci
 ms.date: 04/24/2018
 f1_keywords:
 - vb.Mod
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: 08e3eec08ba099e6f5c7796a459c55de09afa917
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: b7552550d4b0496d6ad7ee76a7327054d544b874
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929326"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350912"
 ---
-# <a name="mod-operator-visual-basic"></a>Mod işleci (Visual Basic)
+# <a name="mod-operator-visual-basic"></a>Mod operator (Visual Basic)
 
-İki sayıyı böler ve yalnızca kalanı döndürür.
+Divides two numbers and returns only the remainder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,26 +32,26 @@ result = number1 Mod number2
 ## <a name="parts"></a>Bölümler
 
 `result` \
-Gerekli. Herhangi bir sayısal değişken veya özellik.
+Gerekli. Any numeric variable or property.
 
 `number1` \
-Gerekli. Herhangi bir sayısal ifade.
+Gerekli. Any numeric expression.
 
 `number2` \
-Gerekli. Herhangi bir sayısal ifade.
+Gerekli. Any numeric expression.
 
-## <a name="supported-types"></a>Desteklenen türler
+## <a name="supported-types"></a>Supported types
 
-Tüm sayısal türler. Bu, imzasız ve kayan nokta türlerini `Decimal`içerir.
+All numeric types. This includes the unsigned and floating-point types and `Decimal`.
 
 ## <a name="result"></a>Sonuç
 
-Sonuç, öğesinden `number2`bölündükten sonra `number1` kalanı. Örneğin, ifade `14 Mod 4` 2 olarak değerlendirilir.
+The result is the remainder after `number1` is divided by `number2`. For example, the expression `14 Mod 4` evaluates to 2.
 
 > [!NOTE]
-> Olumsuz ve mod arasında negatif sayıların farklı sonuçlarıyla birlikte *kalan* ve *mod* arasında bir farklılık vardır. Visual Basic işleci, .NET Framework `op_Modulus` işleci ve temeldeki REM Il yönergesinin hepsi bir geri kalan işlem gerçekleştirir. [](<xref:System.Reflection.Emit.OpCodes.Rem>) `Mod`
+> There is a difference between *remainder* and *modulus* in mathematics, with different results for negative numbers. The `Mod` operator in Visual Basic, the .NET Framework `op_Modulus` operator, and the underlying [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL instruction all perform a remainder operation.
 
-Bir `Mod` işlemin sonucu, `number1`bölünün işaretini korur, ve bu nedenle pozitif veya negatif olabilir. Sonuç her zaman (-`number2`, `number2`), hariç değişir. Örneğin:
+The result of a `Mod` operation retains the sign of the dividend, `number1`, and so it may be positive or negative. The result is always in the range (-`number2`, `number2`), exclusive. Örneğin:
 
 ```vb
 Public Module Example
@@ -71,48 +71,48 @@ End Module
 
 ## <a name="remarks"></a>Açıklamalar
 
-`number1` Ya`number2` da bir kayan nokta değeri ise, bölmenin kayan nokta geri kalanı döndürülür. Sonucun veri türü, `number1` ve `number2`veri türleri ile bölme işleminden kaynaklanan tüm olası değerleri tutabilecek en küçük veri türüdür.
+If either `number1` or `number2` is a floating-point value, the floating-point remainder of the division is returned. The data type of the result is the smallest data type that can hold all possible values that result from division with the data types of `number1` and `number2`.
 
-Ya da hiçbir şey değerlendirilirse, sıfır olarak değerlendirilir. [](../../../visual-basic/language-reference/nothing.md) `number1` `number2`
+If `number1` or `number2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.
 
-İlgili işleçler şunları içerir:
+Related operators include the following:
 
-- [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) bir bölmenin tamsayı bölümünü döndürür. Örneğin, ifade `14 \ 4` 3 olarak değerlendirilir.
+- The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient of a division. For example, the expression `14 \ 4` evaluates to 3.
 
-- [/İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) , kayan noktalı bir sayı olarak kalanı dahil olmak üzere tam bölümü döndürür. Örneğin, ifade `14 / 4` 3,5 olarak değerlendirilir.
+- The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) returns the full quotient, including the remainder, as a floating-point number. For example, the expression `14 / 4` evaluates to 3.5.
 
-## <a name="attempted-division-by-zero"></a>Sıfıra bölme denendi
+## <a name="attempted-division-by-zero"></a>Attempted division by zero
 
-Sıfır olarak `Mod` değerlendirilirse, işlecin davranışı işlenenlerinin veri türüne bağlıdır: `number2`
+If `number2` evaluates to zero, the behavior of the `Mod` operator depends on the data type of the operands:
 
-- Derleme zamanında belirlenemiyorsa integral <xref:System.DivideByZeroException> bölüm bir `number2` özel durum oluşturur ve derleme zamanında sıfır olarak değerlendirilirse bir `number2` derleme zamanı hatası `BC30542 Division by zero occurred while evaluating this expression` oluşturur.
-- Kayan nokta bölmesi döndürülür <xref:System.Double.NaN?displayProperty=nameWithType>.
+- An integral division throws a <xref:System.DivideByZeroException> exception if `number2` cannot be determined in compile-time and generates a compile-time error `BC30542 Division by zero occurred while evaluating this expression` if `number2` is evaluated to zero at compile-time.
+- A floating-point division returns <xref:System.Double.NaN?displayProperty=nameWithType>.
 
-## <a name="equivalent-formula"></a>Denk formül
+## <a name="equivalent-formula"></a>Equivalent formula
 
-İfade `a Mod b` aşağıdaki formüllerden birine eşdeğerdir:
+The expression `a Mod b` is equivalent to either of the following formulas:
 
 `a - (b * (a \ b))`
 
 `a - (b * Fix(a / b))`
 
-## <a name="floating-point-imprecision"></a>Kayan nokta noktasında kesinlik eksikliği
+## <a name="floating-point-imprecision"></a>Floating-point imprecision
 
-Kayan noktalı sayılarla çalışırken her zaman bellekte kesin bir ondalık gösterimine sahip olmadıkları unutulmamalıdır. Bu, değer karşılaştırması ve `Mod` işleç gibi belirli işlemlerden beklenmeyen sonuçlara neden olabilir. Daha fazla bilgi için bkz. [sorun giderme veri türleri](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+When you work with floating-point numbers, remember that they do not always have a precise decimal representation in memory. This can lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
 
 ## <a name="overloading"></a>Aşırı Yükleme
 
-İşleç aşırı yüklenebilir, yani bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. `Mod` Kodunuz, bu tür `Mod` bir aşırı yükleme içeren bir sınıf veya yapının örneği için geçerliyse, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
+The `Mod` operator can be *overloaded*, which means that a class or structure can redefine its behavior. If your code applies `Mod` to an instance of a class or structure that includes such an overload, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, iki sayıyı `Mod` bölmek ve yalnızca geri kalanı döndürmek için işlecini kullanır. Her iki sayı de bir kayan noktalı sayı ise sonuç, kalanı temsil eden bir kayan noktalı sayıdır.
+The following example uses the `Mod` operator to divide two numbers and return only the remainder. If either number is a floating-point number, the result is a floating-point number that represents the remainder.
 
 [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, kayan nokta işlenenlerinin olası noktasında kesinlik eksikliği gösterir. İlk ifadede işlenen `Double`ve 0,2, saklı bir değeri 0.20000000000000001 olan sonsuz bir yinelenen ikili kesirdir. İkinci ifadede, değişmez değer türü karakteri `D` her iki işleneni olarak `Decimal`zorlar ve 0,2 kesin bir gösterimine sahiptir.
+The following example demonstrates the potential imprecision of floating-point operands. In the first statement, the operands are `Double`, and 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001. In the second statement, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation.
 
 [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]
 
@@ -121,8 +121,8 @@ Aşağıdaki örnek, kayan nokta işlenenlerinin olası noktasında kesinlik eks
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Fix%2A>
 - [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Veri Türü Sorunlarını Giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Visual Basic aritmetik Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)

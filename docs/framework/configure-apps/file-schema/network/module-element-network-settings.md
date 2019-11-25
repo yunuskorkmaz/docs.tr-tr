@@ -8,21 +8,21 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 15f4d10a70dc3c6abd32869f5b7b0006a799b4bf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 78f6418160b80096214c6e37268a5a90498d6d4d
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698037"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089246"
 ---
-# <a name="module-element-network-settings"></a>\<module > öğesi (ağ ayarları)
+# <a name="module-element-network-settings"></a>\<Module > öğesi (ağ ayarları)
 Uygulamaya yeni bir proxy modülü ekler.  
-  
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<module >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<modülü >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -38,7 +38,7 @@ Uygulamaya yeni bir proxy modülü ekler.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`type`|Proxy 'yi uygulayan, tam nitelikli tür adı (<xref:System.Type.FullName%2A> özelliği tarafından belirtilir) ve derleme adı (<xref:System.Reflection.Assembly.FullName%2A> özelliği ile belirtilir).|  
+|`type`|Proxy 'yi uygulayan, tam nitelikli tür adı (<xref:System.Type.FullName%2A> özelliği tarafından belirtilir) ve derleme adı (<xref:System.Reflection.Assembly.FullName%2A> özelliği tarafından belirtilir).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -50,9 +50,9 @@ Uygulamaya yeni bir proxy modülü ekler.
 |[defaultProxy](defaultproxy-element-network-settings.md)|Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 öğesi, <xref:System.Net.IWebProxy> arabirimini uygulayan proxy sınıflarını kaydeder. Proxy sınıfı kaydedildikten sonra, desteklenen proxy aracılığıyla bilgi istemek için `module` kullanılabilir.  
+ `module` öğesi <xref:System.Net.IWebProxy> arabirimini uygulayan proxy sınıflarını kaydeder. Proxy sınıfına kaydolduktan sonra, `module` desteklenen proxy aracılığıyla bilgi istemek için kullanılabilir.  
   
- @No__t-0 özniteliğinin değeri, modülün sınıf adı ve karşılık gelen dinamik bağlantı kitaplığının (DLL) adı olmalıdır.  
+ `type` özniteliğin değeri, modülün sınıf adı ve karşılık gelen dinamik bağlantı kitaplığının (DLL) adı olmalıdır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  

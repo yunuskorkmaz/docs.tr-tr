@@ -1,6 +1,6 @@
 ---
-title: Visual Basic Dili İzlenecek Yolu
-description: Visual Basic geliştirmede yaygın senaryolar için adım adım yönergeler
+title: Language Walkthroughs
+description: Step-by-step instructions for common scenarios in Visual Basic development
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, walkthroughs
@@ -8,76 +8,76 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: f6a4c5b5376c5ee746bb0fadfeeac7ac9793e91f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a6e45e31e2678ce05dc0f637ed1121b54d8d6cbb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040944"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352838"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic Dili İzlenecek Yolu
 
-İzlenecek yollar, yaygın senaryolar için adım adım yönergeler sunarak ürün veya belirli bir özellik alanı hakkında öğrenmeye başlamak için iyi bir yer sunar.
+Walkthroughs give step-by-step instructions for common scenarios, which makes them a good place to start learning about the product or a particular feature area.
 
-- [Zaman uyumsuz program yazma](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Async](language-reference/modifiers/async.md) ve [await](language-reference/operators/await-operator.md)kullanarak zaman uyumsuz bir çözümün nasıl oluşturulacağını gösterir.
+- [Writing an Async Program](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ Shows how to create an asynchronous solution by using [Async](language-reference/modifiers/async.md) and [Await](language-reference/operators/await-operator.md).
 
-- [Olayları bildirme ve oluşturma](programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- Visual Basic ' de olayların nasıl bildirilip yapıldığını gösterir.
+- [Declaring and Raising Events](programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
+ Illustrates how events are declared and raised in Visual Basic.
 
-- [Olayları işleme](programming-guide/language-features/events/walkthrough-handling-events.md)  
- Standart `WithEvents` anahtar sözcüğünü veya yeni `AddHandler`/`RemoveHandler` anahtar sözcüklerini kullanarak olayların nasıl işleneceğini gösterir.
+- [Handling Events](programming-guide/language-features/events/walkthrough-handling-events.md)  
+ Shows how to handle events using either the standard `WithEvents` keyword or the new `AddHandler`/`RemoveHandler` keywords.
 
-- [Arabirimleri oluşturma ve uygulama](programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
- Arabirimlerin Visual Basic nasıl bildirildiği ve uygulandığını gösterir.
+- [Creating and Implementing Interfaces](programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
+ Shows how interfaces are declared and implemented in Visual Basic.
 
-- [Sınıfları tanımlama](programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
- Bir sınıfın ve alanlarını, özelliklerini, yöntemlerini ve olaylarını nasıl tanımlayabileceğinizi açıklar.
+- [Defining Classes](programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
+ Describes how to declare a class and its fields, properties, methods, and events.
 
-- [Visual Basic sorguları yazma](programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu ifadeleri yazmak için Visual Basic dil özelliklerini nasıl kullanabileceğinizi gösterir.
+- [Writing Queries in Visual Basic](programming-guide/concepts/linq/walkthrough-writing-queries.md)  
+ Demonstrates how you can use Visual Basic language features to write [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query expressions.
 
-- [Visual Basic 'te IEnumerable (Of T) uygulama](programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
- `IEnumerable(Of String)` arabirimini uygulayan bir sınıfın ve bir metin dosyasını tek bir satırda okumak için `IEnumerator(Of String)` arabirimini uygulayan bir sınıf oluşturmayı gösterir.
+- [Implementing IEnumerable(Of T) in Visual Basic](programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
+ Demonstrates how to create a class that implements the `IEnumerable(Of String)` interface and a class that implements the `IEnumerator(Of String)` interface to read a text file one line at a time.
 
-- [Windows API 'Lerini çağırma](programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
- `Declare` deyimlerinin nasıl kullanılacağını ve Windows API 'Lerinin nasıl çağrılacağını açıklar. API çağrısı için sıralama denetlemek ve bir API çağrısını bir sınıfın yöntemi olarak göstermek için özniteliklerini kullanma hakkında bilgiler içerir.
+- [Calling Windows APIs](programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
+ Explains how to use `Declare` statements and call Windows APIs. Includes information about using attributes to control marshaling for the API call and how to expose an API call as a method of a class.
 
-- [Visual Basic ile COM nesneleri oluşturma](programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- Hem hem de COM sınıfı şablonu olmadan Visual Basic COM nesnelerinin nasıl oluşturulacağını gösterir.
+- [Creating COM Objects with Visual Basic](programming-guide/com-interop/walkthrough-creating-com-objects.md)  
+ Demonstrates how to create COM objects in Visual Basic, both with and without the COM class template.
 
-- [COM nesneleriyle devralma uygulama](programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- Sınıf içeren bir COM nesnesi oluşturmak için Visual Basic 6,0 ' nin nasıl kullanılacağını gösterir ve ardından bunu Visual Basic temel sınıf olarak kullanır.
+- [Implementing Inheritance with COM Objects](programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ Demonstrates how to use Visual Basic 6.0 to create a COM object containing a class, and then use it as a base class in Visual Basic.
 
-- [My. Application. log bilgisinin nereden yazabileceğini belirleme](developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
- Varsayılan `My.Application.Log` ayarlarını ve uygulamanız için ayarların nasıl belirleneceğini açıklar.
+- [Determining Where My.Application.Log Writes Information](developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ Describes the default `My.Application.Log` settings and how to determine the settings for your application.
 
-- [My. Application. log dosyası yazma bilgilerini değiştirme](developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
- Olay bilgilerini günlüğe kaydetmek için varsayılan `My.Application.Log` ve `My.Log` ayarlarının nasıl geçersiz kılınacağını ve `Log` nesnesinin diğer günlük dinleyicilerine yazmasına neden olduğunu gösterir.
+- [Changing Where My.Application.Log Writes Information](developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ Shows how to override the default `My.Application.Log` and `My.Log` settings for logging event information and cause the `Log` object to write to other log listeners.
 
-- [My. Application. log çıktımı filtreleniyor](developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)  
- `My.Application.Log` nesnesi için varsayılan günlük filtrelemesinin nasıl değiştirileceğini gösterir.
+- [Filtering My.Application.Log Output](developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)  
+ Demonstrates how to change the default log filtering for the `My.Application.Log` object.
 
-- [Özel günlük dinleyicileri oluşturma](developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
- Özel bir günlük dinleyicisinin nasıl oluşturulduğunu ve `My.Application.Log` nesnesinin çıkışını dinlemek için nasıl yapılandırılacağını gösterir.
+- [Creating Custom Log Listeners](developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
+ Demonstrates how to create a custom log listener and configure it to listen to the output of the `My.Application.Log` object.
 
-- [Yönetilen derlemelerden tür ekleme](../standard/assembly/embed-types-visual-studio.md)  
- Bir derlemenin ve bu türden türleri katıştıran bir istemci programının nasıl oluşturulduğunu açıklar.
+- [Embedding Types from Managed Assemblies](../standard/assembly/embed-types-visual-studio.md)  
+ Describes how to create an assembly and a client program that embeds types from it.
 
-- [Parolaların karmaşık olduğunu doğrulama (Visual Basic)](programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
- Güçlü parola özelliklerinin nasıl denetlenmesi gerektiğini ve bir dize parametresini, bir parolanın başarısız olup olmadığını kontrol eden bilgilerle güncelleştirmeyi gösterir.
+- [Validating That Passwords Are Complex (Visual Basic)](programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
+ Demonstrates how to check for strong-password characteristics and update a string parameter with information about which checks a password fails.
 
-- [Visual Basic dizeleri şifreleme ve şifresini çözme](programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
- Dizeleri şifrelemek ve şifrelerini çözmek için <xref:System.Security.Cryptography.DESCryptoServiceProvider> sınıfını nasıl kullanacağınızı gösterir.
+- [Encrypting and Decrypting Strings in Visual Basic](programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
+ Shows how to use the <xref:System.Security.Cryptography.DESCryptoServiceProvider> class to encrypt and decrypt strings.
 
-- [Visual Basic dosya ve klasörleri düzenleme](developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Bir dosya hakkındaki bilgileri öğrenmek, bir dosyada dize aramak ve dosyaya yazmak için Visual Basic işlevlerinin nasıl kullanılacağını gösterir.
+- [Manipulating Files and Folders in Visual Basic](developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ Demonstrates how to use Visual Basic functions to determine information about a file, search for a string in a file, and write to a file.
 
-- [.NET Framework yöntemlerini kullanarak dosyaları düzenleme](developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Bir dosya hakkındaki bilgileri belirlemede, dosyada dize aramak ve dosyaya yazmak için .NET Framework yöntemlerinin nasıl kullanılacağını gösterir.
+- [Manipulating Files Using .NET Framework Methods](developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ Demonstrates how to use .NET Framework methods to determine information about a file, search for a string in a file, and write to a file.
 
-- [Visual Basic bir nesneyi kalıcı hale getirme](programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
- Basit bir nesne oluşturmayı ve verilerini bir dosyaya nasıl kalıcı hale getirebileceğinizi gösterir.
+- [Persisting an Object in Visual Basic](programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
+ Demonstrates how to create a simple object and persist its data to a file.
 
 - [İzlenecek Yol: Kullanımdan Üret Özelliği ile Önce Test Desteği](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
- Öncelikle birim testlerini yazacağınız ve sonra testlerin başarılı olması için kaynak kodu yazdığınız test ilk geliştirmenin nasıl yapılacağını gösterir.
+ Demonstrates how to do test-first development, in which you first write unit tests and then write the source code to make the tests succeed.

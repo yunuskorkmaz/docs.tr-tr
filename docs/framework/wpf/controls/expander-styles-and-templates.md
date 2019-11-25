@@ -9,15 +9,15 @@ helpviewer_keywords:
 - states [WPF], Expander
 - parts [WPF], Expander
 ms.assetid: da2e5a1c-5230-4c21-98a5-59c7895facd7
-ms.openlocfilehash: 26989474f264161be12bcc14fed614fdc7f775b6
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 39f81aacb24b0b68b550da622b1e3038eb9eac9b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460333"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283519"
 ---
 # <a name="expander-styles-and-templates"></a>Genişletici Stilleri ve Şablonları
-Bu konuda <xref:System.Windows.Controls.Expander> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+Bu konuda <xref:System.Windows.Controls.Expander> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için varsayılan <xref:System.Windows.Controls.ControlTemplate> değiştirebilirsiniz. Daha fazla bilgi için bkz. [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="expander-parts"></a>Genişletici parçaları  
  <xref:System.Windows.Controls.Expander> denetiminde hiç adlandırılmış bölüm yok.  
@@ -27,7 +27,7 @@ Bu konuda <xref:System.Windows.Controls.Expander> denetimine yönelik stiller ve
   
 |VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Normal|Ortak durumlar|Varsayılan durum.|  
 |Gelme olayından|Ortak durumlar|Fare işaretçisi denetimin üzerine yerleştirilir.|  
 |Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|  
 |Diğinize|Odaklardaki durumlar|Denetim odağa sahiptir.|  
@@ -60,4 +60,4 @@ Bu konuda <xref:System.Windows.Controls.Expander> denetimine yönelik stiller ve
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
 - [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)
+- [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md)

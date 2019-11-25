@@ -1,300 +1,273 @@
 ---
-title: Çöp toplamanın temelleri
-description: Çöp toplayıcısının nasıl çalıştığını ve en iyi performans için nasıl yapılandırılabileceğini öğrenin.
-ms.date: 03/08/2018
+title: Fundamentals of garbage collection
+description: Learn how the garbage collector works and how it can be configured for optimum performance.
+ms.date: 11/15/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
-- garbage collection, background garbage collection
-- garbage collection, concurrent garbage collection
-- garbage collection, server garbage collection
-- garbage collection, workstation garbage collection
+- garbage collection, background
+- garbage collection, concurrent
+- garbage collection, server
+- garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: 840fe972192c6beb5d84017c288455f1cdf52177
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ea8aef03d2f5837f35ecb31209e57853c0c8257b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121239"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330425"
 ---
-# <a name="fundamentals-of-garbage-collection"></a>Çöp toplamanın temelleri
+# <a name="fundamentals-of-garbage-collection"></a>Fundamentals of garbage collection
 
-<a name="top"></a>Ortak dil çalışma zamanında (CLR), çöp toplayıcı otomatik bellek yöneticisi olarak görev yapar. Aşağıdaki avantajları sağlar:
+In the common language runtime (CLR), the garbage collector (GC) serves as an automatic memory manager. It provides the following benefits:
 
-- Oluşturduğunuz nesneler için el ile bellek boşaltmaya gerek kalmadan uygulamanızı geliştirmenize olanak sağlar.
+- Enables you to develop your application without having to manually free memory.
 
-- Yönetilen yığında nesneleri verimli bir şekilde ayırır.
+- Allocates objects on the managed heap efficiently.
 
-- Artık kullanılmayan nesneleri geri kazanır, hafızasını temizler ve belleğin gelecekteki ayırmalarda kullanılabilmesini önler. Yönetilen nesneler, ile başlamak için otomatik olarak temiz içerik alır, bu nedenle oluşturucuların her veri alanını başlatması gerekmez.
+- Reclaims objects that are no longer being used, clears their memory, and keeps the memory available for future allocations. Managed objects automatically get clean content to start with, so their constructors do not have to initialize every data field.
 
-- Bir nesnenin başka bir nesnenin içeriğini kullanabilmesi için bellek güvenliği sağlar.
+- Provides memory safety by making sure that an object cannot use the content of another object.
 
- Bu konuda çöp toplamanın temel kavramları açıklanmaktadır.
+This article describes the core concepts of garbage collection.
 
-<a name="fundamentals_of_memory"></a>
+## <a name="fundamentals-of-memory"></a>Fundamentals of memory
 
-## <a name="fundamentals-of-memory"></a>Belleğin temelleri
+The following list summarizes important CLR memory concepts.
 
-Aşağıdaki listede, önemli CLR belleği kavramları özetlenmektedir.
+- Each process has its own, separate virtual address space. All processes on the same computer share the same physical memory and the page file, if there is one.
 
-- Her işlemin kendi kendine ayrı bir sanal adres alanı vardır. Aynı bilgisayardaki tüm işlemlerin aynı fiziksel belleği paylaştığı ve varsa sayfa dosyasını paylaştığı bir işlem.
+- By default, on 32-bit computers, each process has a 2-GB user-mode virtual address space.
 
-- Varsayılan olarak, 32 bit bilgisayarlarda, her işlemin 2 GB 'lık bir Kullanıcı modu sanal adres alanı vardır.
+- As an application developer, you work only with virtual address space and never manipulate physical memory directly. The garbage collector allocates and frees virtual memory for you on the managed heap.
 
-- Bir uygulama geliştiricisi olarak yalnızca sanal adres alanı ile çalışır ve fiziksel belleği doğrudan hiçbir şekilde işlemeyin. Çöp toplayıcı, yönetilen yığında sizin için sanal belleği ayırır ve serbest bırakır.
+  If you are writing native code, you use Windows functions to work with the virtual address space. These functions allocate and free virtual memory for you on native heaps.
 
-  Yerel kod yazıyorsanız, sanal adres alanı ile çalışmak için Win32 işlevlerini kullanırsınız. Bu işlevler, yerel yığınlardaki sanal belleği ayırır ve boşaltır.
+- Virtual memory can be in three states:
 
-- Sanal bellek üç durumda olabilir:
+  - Free. The block of memory has no references to it and is available for allocation.
 
-  - Süz. Bellek bloğunun kendisine başvuru yoktur ve ayırma için kullanılabilir.
+  - Reserved. The block of memory is available for your use and cannot be used for any other allocation request. However, you cannot store data to this memory block until it is committed.
 
-  - Ayrılamadı. Bellek bloğu kullanım için kullanılabilir ve diğer herhangi bir ayırma isteği için kullanılamaz. Ancak, bu bellek bloğunda verileri kaydedilene kadar depoleyemez.
+  - Committed. The block of memory is assigned to physical storage.
 
-  - Yazıldı. Bellek bloğu fiziksel depolamaya atanır.
+- Virtual address space can get fragmented. This means that there are free blocks, also known as holes, in the address space. When a virtual memory allocation is requested, the virtual memory manager has to find a single free block that is large enough to satisfy that allocation request. Even if you have 2 GB of free space, the allocation that requires 2 GB will be unsuccessful unless all of that free space is in a single address block.
 
-- Sanal adres alanı parçalanabilir. Bu, adres alanında delik olarak da bilinen boş blokların olduğu anlamına gelir. Sanal bellek ayırma istendiğinde, sanal bellek yöneticisinin, bu ayırma isteğini karşılamak için yeterince büyük olan tek bir ücretsiz blok bulması gerekir. 2 GB boş alan olsa bile, tüm bu boş alan tek bir adres bloğunda yer almadığı takdirde 2 GB gerektiren ayırma başarısız olur.
+- You can run out of memory if there isn't enough virtual address space to reserve or physical space to commit.
 
-- Ayrılacak sanal adres alanı tükenmeniz veya fiziksel alanın kaydedilmesi için bellek tükeniyor.
+  The page file is used even if physical memory pressure (that is, demand for physical memory) is low. The first time physical memory pressure is high, the operating system must make room in physical memory to store data, and it backs up some of the data that is in physical memory to the page file. That data is not paged until it's needed, so it's possible to encounter paging in situations where the physical memory pressure is low.
 
-Fiziksel bellek baskısı (yani fiziksel bellek talebi) düşük olsa bile sayfa dosyanız kullanılır. Fiziksel bellek basıncını ilk kez yüksek olduğunda, işletim sisteminin verileri depolamak için fiziksel bellekte yer yapması gerekir ve fiziksel bellekteki bazı verileri sayfa dosyasına yedekler. Bu veriler, gerekli olana kadar sayfalanmadığı için fiziksel bellek basıncının çok düşük olduğu durumlarda sayfalama ile karşılaşmak mümkündür.
+## <a name="conditions-for-a-garbage-collection"></a>Conditions for a garbage collection
 
-[Başa dön](#top)
+Garbage collection occurs when one of the following conditions is true:
 
-<a name="conditions_for_a_garbage_collection"></a>
+- The system has low physical memory. This is detected by either the low memory notification from the OS or low memory as indicated by the host.
 
-## <a name="conditions-for-a-garbage-collection"></a>Çöp toplama koşulları
+- The memory that is used by allocated objects on the managed heap surpasses an acceptable threshold. This threshold is continuously adjusted as the process runs.
 
-Çöp toplama, aşağıdaki koşullardan biri doğru olduğunda gerçekleşir:
+- The <xref:System.GC.Collect%2A?displayProperty=nameWithType> method is called. In almost all cases, you do not have to call this method, because the garbage collector runs continuously. This method is primarily used for unique situations and testing.
 
-- Sistemde fiziksel bellek yetersiz. Bu, ana bilgisayar tarafından belirtilen işletim sistemi ya da düşük bellekten düşük bellek bildirimi tarafından algılanır.
+## <a name="the-managed-heap"></a>The managed heap
 
-- Yönetilen yığında ayrılmış nesneler tarafından kullanılan bellek, kabul edilebilir bir eşik geçirir. İşlem çalışırken bu eşik sürekli olarak ayarlanır.
+After the garbage collector is initialized by the CLR, it allocates a segment of memory to store and manage objects. This memory is called the managed heap, as opposed to a native heap in the operating system.
 
-- <xref:System.GC.Collect%2A?displayProperty=nameWithType> yöntemi çağrılır. Neredeyse tüm durumlarda, çöp toplayıcı sürekli çalıştığından bu yöntemi çağırmanız gerekmez. Bu yöntem öncelikle benzersiz durumlar ve test için kullanılır.
+There is a managed heap for each managed process. All threads in the process allocate memory for objects on the same heap.
 
-[Başa dön](#top)
-
-<a name="the_managed_heap"></a>
-
-## <a name="the-managed-heap"></a>Yönetilen yığın
-
-Çöp toplayıcı CLR tarafından başlatıldıktan sonra, nesneleri depolamak ve yönetmek için bir bellek segmenti ayırır. Bu bellek, işletim sistemindeki yerel bir yığının aksine yönetilen yığın olarak adlandırılır.
-
-Yönetilen her işlem için yönetilen bir yığın vardır. İşlemdeki tüm iş parçacıkları aynı yığında nesneler için bellek ayırır.
-
-Bellek ayırmak için, çöp toplayıcı Win32 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) işlevini çağırır ve yönetilen uygulamalar için bir seferde bir bellek segmentini ayırır. Çöp toplayıcı aynı zamanda kesimleri gereken şekilde ayırır ve Win32 [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) işlevini çağırarak kesimleri işletim sistemine (herhangi bir nesne temizlenmeden sonra) yeniden yayınlar.
+To reserve memory, the garbage collector calls the Windows [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) function and reserves one segment of memory at a time for managed applications. The garbage collector also reserves segments, as needed, and releases segments back to the operating system (after clearing them of any objects) by calling the Windows [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) function.
 
 > [!IMPORTANT]
-> Çöp toplayıcı tarafından ayrılan parçaların boyutu uygulamaya özgüdür ve düzenli güncelleştirmeler de dahil olmak üzere herhangi bir zamanda değiştirilebilir. Uygulamanız, belirli bir kesim boyutuna ilişkin varsayımları asla belirtmemelidir veya buna bağlı olarak, kesim ayırmaları için kullanılabilir bellek miktarını yapılandırmayı denemelidir.
+> The size of segments allocated by the garbage collector is implementation-specific and is subject to change at any time, including in periodic updates. Your app should never make assumptions about or depend on a particular segment size, nor should it attempt to configure the amount of memory available for segment allocations.
 
-Yığın üzerinde daha az nesne ayrılmışsa, çöp toplayıcının yapması gereken daha az iş vardır. Nesneleri ayırdığınızda, yalnızca 15 bayta ihtiyacınız olduğunda 32 baytlık bir dizi tahsis etme gibi gereksinimlerinizi aşan yuvarlanmış değerler kullanmayın.
+The fewer objects allocated on the heap, the less work the garbage collector has to do. When you allocate objects, do not use rounded-up values that exceed your needs, such as allocating an array of 32 bytes when you need only 15 bytes.
 
-Çöp toplama tetiklendiğinde çöp toplayıcı, ölü nesneler tarafından kullanılan belleği geri kazanır. Geri kazanma işlemi, canlı nesneleri bir araya gelecek şekilde sıkıştırır ve atılacak alan kaldırıldıktan sonra yığın daha küçük hale getirir. Bu, birlikte ayrılan nesnelerin, konumlarını korumak için yönetilen yığında birlikte kalmasını sağlar.
+When a garbage collection is triggered, the garbage collector reclaims the memory that is occupied by dead objects. The reclaiming process compacts live objects so that they are moved together, and the dead space is removed, thereby making the heap smaller. This ensures that objects that are allocated together stay together on the managed heap, to preserve their locality.
 
-Çöp koleksiyonlarının sürekliliği (sıklığı ve süresi), ayırma hacminin ve yönetilen yığında kalan bellek miktarının sonucudur.
+The intrusiveness (frequency and duration) of garbage collections is the result of the volume of allocations and the amount of survived memory on the managed heap.
 
-Yığın iki sayfa@@ 'nin birikmesi olarak düşünülebilir: [büyük nesne yığını](large-object-heap.md) ve küçük nesne yığını.
+The heap can be considered as the accumulation of two heaps: the [large object heap](large-object-heap.md) and the small object heap.
 
-[Büyük nesne yığını](large-object-heap.md) 85.000 bayt ve daha büyük olan çok büyük nesneler içerir. Büyük nesne yığınındaki nesneler genellikle dizilerdir. Örnek nesnesinin son derece büyük olması nadir bir durumdur.
+The [large object heap](large-object-heap.md) contains very large objects that are 85,000 bytes and larger. The objects on the large object heap are usually arrays. It is rare for an instance object to be extremely large.
 
-[Başa dön](#top)
+> [!TIP]
+> You can [configure the threshold size](../../core/run-time-config/garbage-collector.md#large-object-heap-threshold) for objects to go on the large object heap.
 
-<a name="generations"></a>
+## <a name="generations"></a>Generations
 
-## <a name="generations"></a>İse
+The heap is organized into generations so it can handle long-lived and short-lived objects. Garbage collection primarily occurs with the reclamation of short-lived objects that typically occupy only a small part of the heap. There are three generations of objects on the heap:
 
-Yığın, uzun süreli ve kısa süreli nesneleri işleyebilmesi için nesiller halinde düzenlenir. Çöp toplama öncelikli olarak genellikle yığının yalnızca küçük bir kısmını kaplayan kısa süreli nesneler geri kazanma ile gerçekleşir. Yığında üç Neste nesne vardır:
+- **Generation 0**. This is the youngest generation and contains short-lived objects. An example of a short-lived object is a temporary variable. Garbage collection occurs most frequently in this generation.
 
-- **Nesil 0**. Bu, kardeşinizin nesli ve kısa süreli nesneler içerir. Kısa süreli bir nesne örneği, geçici bir değişkendir. Çöp toplama bu nesde en sık oluşur.
+  Newly allocated objects form a new generation of objects and are implicitly generation 0 collections. However, if they are large objects, they go on the large object heap in a generation 2 collection.
 
-  Yeni ayrılmış nesneler yeni nesil nesneler oluşturur ve büyük nesneler olmadıkları müddetçe örtük olarak nesil 0 koleksiyonlardır ve bu durumda 2. nesil bir koleksiyonda büyük nesne yığınında gider.
+  Most objects are reclaimed for garbage collection in generation 0 and do not survive to the next generation.
 
-  Çoğu nesne, oluşturma 0 ' da çöp toplama için geri kazanılır ve bir sonraki nesle devam etmez.
+- **Generation 1**. This generation contains short-lived objects and serves as a buffer between short-lived objects and long-lived objects.
 
-- **1. nesil**. Bu nesil, kısa süreli nesneler içerir ve kısa süreli nesneler ve uzun süreli nesneler arasında bir arabellek işlevi görür.
+- **Generation 2**. This generation contains long-lived objects. An example of a long-lived object is an object in a server application that contains static data that's live for the duration of the process.
 
-- **2. nesil**. Bu nesil uzun süreli nesneler içerir. Uzun süreli bir nesne örneği, işlem süresince canlı olan statik verileri içeren bir sunucu uygulamasındaki nesnedir.
+Garbage collections occur on specific generations as conditions warrant. Collecting a generation means collecting objects in that generation and all its younger generations. A generation 2 garbage collection is also known as a full garbage collection, because it reclaims all objects in all generations (that is, all objects in the managed heap).
 
-Atık koleksiyonlar belirli nesiller üzerinde koşullar garanti olarak oluşur. Oluşturma toplanması, bu kuşak ve tüm küçük nesiller içindeki nesnelerin toplanması anlamına gelir. 2\. nesil atık toplama, tüm nesiller içindeki tüm nesneleri geri kazanır (yani, yönetilen yığındaki tüm nesneler) olduğu için tam çöp toplama olarak da bilinir.
+### <a name="survival-and-promotions"></a>Survival and promotions
 
-### <a name="survival-and-promotions"></a>Acil ihtiyaç ve promosyonlar
+Objects that are not reclaimed in a garbage collection are known as survivors and are promoted to the next generation. Objects that survive a generation 0 garbage collection are promoted to generation 1; objects that survive a generation 1 garbage collection are promoted to generation 2; and objects that survive a generation 2 garbage collection remain in generation 2.
 
-Atık toplamada geri kazanımayan nesneler, acil sanal öğeler olarak bilinir ve bir sonraki nesil olarak yükseltilir. Nesil 0 atık toplamayı sürdüren nesneler 1. nesil olarak yükseltilir; 1. nesil atık toplamayı sürdüren nesneler 2. nesil olarak yükseltilir; ve 2. nesil bir atık toplamayı sürdüren nesneler 2. kuşak olarak kalır.
+When the garbage collector detects that the survival rate is high in a generation, it increases the threshold of allocations for that generation. The next collection gets a substantial size of reclaimed memory. The CLR continually balances two priorities: not letting an application's working set get too large by delaying garbage collection and not letting the garbage collection run too frequently.
 
-Çöp toplayıcı, bir kuşakma hızının yüksek olduğunu algıladığında, bu kuşak için ayırmaların eşiğini artırır, bu nedenle sonraki koleksiyon, geri kazanılan bellek miktarını önemli ölçüde alır. CLR sürekli olarak iki öncelik dengeler: bir uygulamanın çalışma kümesinin çöp toplamayı erteleyerek çok büyük almasını ve çöp toplamanın çok sık çalışmasına izin vermez.
+### <a name="ephemeral-generations-and-segments"></a>Ephemeral generations and segments
 
-### <a name="ephemeral-generations-and-segments"></a>Kısa ömürlü Nesler ve segmentler
+Because objects in generations 0 and 1 are short-lived, these generations are known as the ephemeral generations.
 
-Nesil 0 ve 1 ' deki nesneler kısa süreli olduğundan, bu nesiller, kısa ömürlü nesiller olarak bilinir.
+Ephemeral generations must be allocated in the memory segment that is known as the ephemeral segment. Each new segment acquired by the garbage collector becomes the new ephemeral segment and contains the objects that survived a generation 0 garbage collection. The old ephemeral segment becomes the new generation 2 segment.
 
-Kısa ömürlü nesiller, kısa ömürlü segment olarak bilinen bellek segmentinde ayrılmalıdır. Çöp toplayıcı tarafından alınan her yeni segment, yeni kısa ömürlü segment olur ve 0. nesil atık toplamayı izleyen nesneleri içerir. Eski kısa ömürlü segment, yeni nesil 2 segmentine dönüşür.
-
-Kısa ömürlü segmentin boyutu sistemin 32 veya 64 bit olmasına ve çalıştırdığı çöp toplayıcı türüne bağlı olarak farklılık gösterir. Varsayılan değerler aşağıdaki tabloda gösterilmiştir.
+The size of the ephemeral segment varies depending on whether a system is 32-bit or 64-bit, and on the type of garbage collector it is running. Default values are shown in the following table.
 
 ||32 bit:|64 bit|
 |-|-------------|-------------|
-|İş istasyonu GC|16 MB|256 MB|
-|Sunucu GC|64 MB|4 GB|
-|> 4 mantıksal CPU içeren sunucu GC|32 MB|2 GB|
-|> 8 mantıksal CPU 'Lar ile sunucu GC|16 MB|1 GB|
+|Workstation GC|16 MB|256 MB|
+|Server GC|64 MB|4 GB|
+|Server GC with > 4 logical CPUs|32 MB|2 GB|
+|Server GC with > 8 logical CPUs|16 MB|1 GB|
 
-Kısa ömürlü segment 2. nesil nesneleri içerebilir. 2\. nesil nesneler birden çok segment kullanabilir (işleminiz için gereken ve belleğin izin verdiği kadar).
+The ephemeral segment can include generation 2 objects. Generation 2 objects can use multiple segments (as many as your process requires and memory allows for).
 
-Kısa ömürlü atık toplamanın serbest bırakılan bellek miktarı, kısa ömürlü segmentin boyutuyla sınırlıdır. Serbest bırakılan bellek miktarı, ölü nesneler tarafından kullanılan alanla orantılıdır.
+The amount of freed memory from an ephemeral garbage collection is limited to the size of the ephemeral segment. The amount of memory that is freed is proportional to the space that was occupied by the dead objects.
 
-[Başa dön](#top)
+## <a name="what-happens-during-a-garbage-collection"></a>What happens during a garbage collection
 
-<a name="what_happens_during_a_garbage_collection"></a>
+A garbage collection has the following phases:
 
-## <a name="what-happens-during-a-garbage-collection"></a>Çöp toplama sırasında ne olur?
+- A marking phase that finds and creates a list of all live objects.
 
-Bir çöp toplama işlemi aşağıdaki aşamaları içerir:
+- A relocating phase that updates the references to the objects that will be compacted.
 
-- Tüm canlı nesnelerin listesini bulan ve oluşturan bir işaretleme aşaması.
+- A compacting phase that reclaims the space occupied by the dead objects and compacts the surviving objects. The compacting phase moves objects that have survived a garbage collection toward the older end of the segment.
 
-- Düzenlenecek nesneler için başvuruları güncelleştiren bir değiştirme aşaması.
+  Because generation 2 collections can occupy multiple segments, objects that are promoted into generation 2 can be moved into an older segment. Both generation 1 and generation 2 survivors can be moved to a different segment, because they are promoted to generation 2.
 
-- Yok sayılma nesnelerinin kapladığı alanı geri kazanır ve kalan nesneleri sıkıştırarak bir düzenleme aşaması. Sıkıştırma aşaması, bir atık toplamayı, segmentin eski ucuna doğru bir şekilde taşımış nesneleri hareket ettirir.
+  Ordinarily, the large object heap (LOH) is not compacted, because copying large objects imposes a performance penalty. However, in .NET Core and in .NET Framework 4.5.1 and later, you can use the <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> property to compact the large object heap on demand. In addition, the LOH is automatically compacted when a hard limit is set by specifying either:
 
-  2\. nesil koleksiyonlar birden çok parçayı kaplayabildiğinden, 2. nesil olarak yükseltilen nesneler eski bir kesime taşınabilir. 2\. nesil ve 2. nesil ve 2. nesil daha fazla VNet, 1. kuşak olarak yükseltildikleri için farklı bir kesime taşınabilir.
+  - a memory limit on a container, or
+  - the [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitcomplus_gcheaphardlimit) or [GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) run-time configuration options
 
-  Genellikle büyük nesne yığını düzenlenmez, çünkü büyük nesneleri kopyalamak bir performans cezası uygular. Ancak, .NET Framework 4.5.1 ile başlayarak, büyük nesne yığınını isteğe bağlı olarak sıkıştırmak için <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> özelliğini kullanabilirsiniz.
+The garbage collector uses the following information to determine whether objects are live:
 
-Çöp toplayıcı, nesnelerin canlı olup olmadığını anlamak için aşağıdaki bilgileri kullanır:
+- **Stack roots**. Stack variables provided by the just-in-time (JIT) compiler and stack walker. JIT optimizations can lengthen or shorten regions of code within which stack variables are reported to the garbage collector.
 
-- **Yığın kökleri**. Tam zamanında (JıT) derleyici ve yığın denetçisi tarafından sunulan yığın değişkenleri. JıT iyileştirmelerinin, yığın değişkenlerinin çöp toplayıcısına bildirildiği kod bölgelerini uzatabilir veya kısaltabileceğini unutmayın.
+- **Garbage collection handles**. Handles that point to managed objects and that can be allocated by user code or by the common language runtime.
 
-- **Çöp toplama tutamaçları**. Yönetilen nesneleri işaret eden ve Kullanıcı kodu veya ortak dil çalışma zamanı tarafından ayrılabilen işler.
+- **Static data**. Static objects in application domains that could be referencing other objects. Each application domain keeps track of its static objects.
 
-- **Statik veriler**. Uygulama etki alanlarında diğer nesnelere başvurıbir statik nesneler. Her uygulama etki alanı, kendi statik nesnelerini izler.
+Before a garbage collection starts, all managed threads are suspended except for the thread that triggered the garbage collection.
 
-Çöp toplama başlamadan önce, çöp toplamayı tetikleyen iş parçacığı hariç tüm yönetilen iş parçacıkları askıya alınır.
+The following illustration shows a thread that triggers a garbage collection and causes the other threads to be suspended.
 
-Aşağıdaki çizimde, çöp toplamayı tetikleyen ve diğer iş parçacıklarının askıya alınmasına neden olan bir iş parçacığı gösterilmektedir.
+![When a thread triggers a Garbage Collection](./media/gc-triggered.png)
 
-![Bir iş parçacığı bir çöp toplama işlemi tetiklerse](../../../docs/standard/garbage-collection/media/gc-triggered.png "Bir iş parçacığı bir çöp toplama işlemi tetiklerse")
+## <a name="manipulate-unmanaged-resources"></a>Manipulate unmanaged resources
 
-[Başa dön](#top)
+If managed objects reference unmanaged objects by using their native file handles, you have to explicitly free the unmanaged objects, because the garbage collector only tracks memory on the managed heap.
 
-<a name="manipulating_unmanaged_resources"></a>
+Users of the managed object may not dispose the native resources used by the object. To perform the cleanup, you can make the managed object finalizable. Finalization consists of cleanup actions that execute when the object is no longer in use. When the managed object dies, it performs cleanup actions that are specified in its finalizer method.
 
-## <a name="manipulating-unmanaged-resources"></a>Yönetilmeyen kaynakları düzenleme
+When a finalizable object is discovered to be dead, its finalizer is put in a queue so that its cleanup actions are executed, but the object itself is promoted to the next generation. Therefore, you have to wait until the next garbage collection that occurs on that generation (which is not necessarily the next garbage collection) to determine whether the object has been reclaimed.
 
-Yönetilen nesneleriniz, kendi yerel dosya tutamaçlarını kullanarak yönetilmeyen nesnelere başvuru yaptığından, atık toplayıcı yalnızca yönetilen yığında belleği izlediğinden, yönetilmeyen nesneleri açık bir şekilde serbest yapmanız gerekir.
+For more information about finalization, see <xref:System.Object.Finalize?displayProperty=nameWithType>.
 
-Yönetilen nesnenizin kullanıcıları, nesne tarafından kullanılan yerel kaynakları yok edebilir. Temizleme işlemini gerçekleştirmek için, yönetilen nesnenizin sonlandırılabilir olmasını sağlayabilirsiniz. Sonlandırma, nesne artık kullanımda olmadığında yürütmeniz gereken Temizleme eylemlerinden oluşur. Yönetilen nesneniz, sonlandırıcı yönteminde belirtilen temizleme eylemlerini gerçekleştirir.
+## <a name="workstation-and-server-garbage-collection"></a>Workstation and server garbage collection
 
-Sonlandırılabilir bir nesnenin etkin olmadığı tespit edildiğinde, temizleme eylemlerinin yürütülmesi için Sonlandırıcı bir sıraya konur, ancak nesnenin kendisi bir sonraki oluşturmaya yükseltilir. Bu nedenle, nesnenin geri kazanılıp kazanılmadığını öğrenmek için bu kuşada gerçekleşen sonraki atık toplamaya (bir sonraki atık toplama olması gerekmez) kadar beklemeniz gerekir.
+The garbage collector is self-tuning and can work in a wide variety of scenarios. You can use a [configuration file setting](../../core/run-time-config/garbage-collector.md#flavors-of-garbage-collection) to set the type of garbage collection based on the characteristics of the workload. The CLR provides the following types of garbage collection:
 
-[Başa dön](#top)
+- Workstation garbage collection (GC) is designed for client apps. It is the default GC flavor for standalone apps. For hosted apps, for example, those hosted by ASP.NET, the host determines the default GC flavor.
 
-<a name="workstation_and_server_garbage_collection"></a>
+  Workstation garbage collection can be concurrent or non-concurrent. Concurrent garbage collection enables managed threads to continue operations during a garbage collection. [Background garbage collection](#background-workstation-garbage-collection) replaces [concurrent garbage collection](#concurrent-garbage-collection) in .NET Framework 4 and later versions.
 
-## <a name="workstation-and-server-garbage-collection"></a>İş istasyonu ve sunucu atık toplama
+- Server garbage collection, which is intended for server applications that need high throughput and scalability.
 
-Çöp toplayıcı kendi kendini ayarlamadır ve çok çeşitli senaryolarda çalışabilir. Bir yapılandırma dosyası ayarını, iş yükünün özelliklerine göre çöp toplamanın türünü ayarlamak için kullanabilirsiniz. CLR aşağıdaki çöp toplama türlerini sağlar:
+  - In .NET Core, server garbage collection can be non-concurrent or background.
 
-- Tüm istemci iş istasyonları ve tek başına bilgisayarlar için olan iş istasyonu atık toplama. Bu, çalışma zamanı yapılandırma şemasında [\<gcServer > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) için varsayılan ayardır.
+  - In .NET Framework 4.5 and later versions, server garbage collection can be non-concurrent or background (background garbage collection replaces concurrent garbage collection). In .NET Framework 4 and previous versions, server garbage collection is non-concurrent.
 
-  İş istasyonu atık toplama işlemi eşzamanlı olabilir veya eşzamanlı olmayan bir şekilde olabilir. Eşzamanlı atık toplama, yönetilen iş parçacıklarının bir çöp toplama sırasında işlemlere devam etmesine olanak sağlar.
+The following illustration shows the dedicated threads that perform the garbage collection on a server:
 
-  .NET Framework 4 ' ten başlayarak, arka plan atık toplama, eşzamanlı çöp toplama yerini alır.
+![Server Garbage Collection Threads](./media/gc-server.png)
 
-- Yüksek aktarım hızı ve ölçeklenebilirlik gerektiren sunucu uygulamalarına yönelik olan sunucu çöp toplama. Sunucu atık toplama, eş zamanlı olmayan veya arka plan olabilir.
+### <a name="compare-workstation-and-server-garbage-collection"></a>Compare workstation and server garbage collection
 
-Aşağıdaki çizimde, bir sunucusunda çöp toplamayı gerçekleştiren adanmış iş parçacıkları gösterilmektedir.
+The following are threading and performance considerations for workstation garbage collection:
 
-![Sunucu atık toplama Iş parçacıkları](../../../docs/standard/garbage-collection/media/gc-server.png "Sunucu atık toplama Iş parçacıkları")
+- The collection occurs on the user thread that triggered the garbage collection and remains at the same priority. Because user threads typically run at normal priority, the garbage collector (which runs on a normal priority thread) must compete with other threads for CPU time. (Threads that run native code are not suspended on either server or workstation garbage collection.)
 
-### <a name="configuring-garbage-collection"></a>Çöp toplamayı yapılandırma
+- Workstation garbage collection is always used on a computer that has only one processor, regardless of the [configuration setting](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
 
-CLR 'nin gerçekleştirmesini istediğiniz çöp toplamanın türünü belirtmek için çalışma zamanı yapılandırma şemasının [\<gcServer > öğesini](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) kullanabilirsiniz. Bu öğenin `enabled` özniteliği `false` (varsayılan) olarak ayarlandığında, CLR iş istasyonu atık toplama işlemini gerçekleştirir. `enabled` özniteliğini `true`olarak belirlediğinizde, CLR sunucu çöp toplama işlemini gerçekleştirir.
+The following are threading and performance considerations for server garbage collection:
 
-Eşzamanlı atık toplama, çalışma zamanı yapılandırma şemasının [\<gcConcurrent > öğesiyle](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) belirtildi. Varsayılan ayar `enabled` ' dır. Bu ayar hem eşzamanlı hem de arka plan çöp toplamayı denetler.
+- The collection occurs on multiple dedicated threads that are running at `THREAD_PRIORITY_HIGHEST` priority level.
 
-Ayrıca, yönetilmeyen barındırma arabirimleriyle sunucu çöp toplamayı belirtebilirsiniz. ASP.NET ve SQL Server, uygulamanız bu ortamların birinde barındırılıyorsa sunucu çöp toplamayı otomatik olarak etkinleştirdiğine unutmayın.
+- A heap and a dedicated thread to perform garbage collection are provided for each CPU, and the heaps are collected at the same time. Each heap contains a small object heap and a large object heap, and all heaps can be accessed by user code. Objects on different heaps can refer to each other.
 
-### <a name="comparing-workstation-and-server-garbage-collection"></a>İş istasyonu ve sunucu çöp toplamayı karşılaştırma
+- Because multiple garbage collection threads work together, server garbage collection is faster than workstation garbage collection on the same size heap.
 
-İş istasyonu çöp toplama işlemi için iş parçacığı ve performans değerlendirmeleri aşağıda verilmiştir:
+- Server garbage collection often has larger size segments. However, this is only a generalization: segment size is implementation-specific and is subject to change. Don't make assumptions about the size of segments allocated by the garbage collector when tuning your app.
 
-- Koleksiyon, çöp toplamayı tetikleyen ve aynı önceliğe kalan Kullanıcı iş parçacığında oluşur. Kullanıcı iş parçacıkları genellikle normal öncelikte çalıştığı için çöp toplayıcı (normal bir öncelikli iş parçacığı üzerinde çalışır), CPU süresi için diğer iş parçacıklarıyla rekabet etmelidir.
+- Server garbage collection can be resource-intensive. For example, imagine that there are 12 processes that use server GC running on a computer that has 4 processors. If all the processes happen to collect garbage at the same time, they would interfere with each other, as there would be 12 threads scheduled on the same processor. If the processes are active, it's not a good idea to have them all use server GC.
 
-  Yerel kod çalıştıran iş parçacıkları askıya alınmaz.
+If you're running hundreds of instances of an application, consider using workstation garbage collection with concurrent garbage collection disabled. This will result in less context switching, which can improve performance.
 
-- İş istasyonu çöp toplama, [\<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) ayarından bağımsız olarak yalnızca bir işlemciye sahip olan bir bilgisayarda kullanılır. Sunucu çöp toplamayı belirtirseniz, CLR eşzamanlılık devre dışı olan iş istasyonu çöp toplamayı kullanır.
+## <a name="background-workstation-garbage-collection"></a>Background workstation garbage collection
 
-Aşağıda sunucu çöp toplama için iş parçacığı ve performans konuları verilmiştir:
+In background workstation garbage collection, ephemeral generations (0 and 1) are collected as needed while the collection of generation 2 is in progress. Background workstation garbage collection is performed on a dedicated thread and applies only to generation 2 collections.
 
-- Koleksiyon `THREAD_PRIORITY_HIGHEST` öncelik düzeyinde çalışan birden fazla adanmış iş parçacığında oluşur.
-
-- Her CPU için bir yığın ve bir ayrılmış iş parçacığı her CPU için sağlanır ve sayfa@@ 'ler aynı anda toplanır. Her yığın küçük bir nesne yığını ve büyük bir nesne yığını içerir ve tüm yığınlara Kullanıcı kodu tarafından erişilebilir. Farklı yığınlardaki nesneler birbirlerine başvurabilir.
-
-- Birden çok çöp toplama iş parçacığı birlikte çalıştığından, sunucu çöp toplama, aynı boyuttaki yığında iş istasyonu atık toplamadan daha hızlıdır.
-
-- Sunucu çöp toplama genellikle daha büyük boyut segmentlerine sahiptir. Bununla birlikte, bunun yalnızca bir Genelleştirme olduğunu unutmayın: segment boyutu uygulamaya özgüdür ve değişikliğe tabidir. Uygulamanızı ayarlamaya yönelik çöp toplayıcı tarafından ayrılan segmentlerin boyutu hakkında bir varsayımın olmaması gerekir.
-
-- Sunucu atık toplama, kaynak kullanımı yoğun olabilir. Örneğin, 4 işlemcili bir bilgisayarda çalışan 12 işlem varsa, sunucu çöp toplama işlemi kullanılıyorsa 48 adanmış çöp toplama iş parçacığı olacaktır. Yüksek bellek yükleme durumunda, tüm süreçler çöp toplama işlemini başlatırsanız, çöp toplayıcının zamanlamaya göre 48 iş parçacığı olacaktır.
-
-Bir uygulamanın yüzlerce örneğini çalıştırıyorsanız, eşzamanlı atık toplama devre dışı bırakılmış iş istasyonu çöp toplamayı kullanmayı düşünün. Bu, performansı iyileştirebilen daha az bağlam geçişe neden olur.
-
-[Başa dön](#top)
-
-<a name="concurrent_garbage_collection"></a>
-
-## <a name="concurrent-garbage-collection"></a>Eşzamanlı atık toplama
-
-İş istasyonu veya sunucu çöp toplama bölümünde, iş parçacıklarının, koleksiyon süresince büyük bir süre için çöp toplamayı gerçekleştiren adanmış bir iş parçacığıyla eşzamanlı olarak çalışmasını sağlayan eşzamanlı atık toplamayı etkinleştirebilirsiniz. Bu seçenek, kuşak 2 ' de yalnızca çöp koleksiyonlarını etkiler; nesil 0 ve 1 her zaman eşzamanlı değildir çünkü çok hızlı tamamlanır.
-
-Eşzamanlı atık toplama, bir koleksiyon için duraklamaları en aza indirerek etkileşimli uygulamaların daha fazla yanıt vermesini sağlar. Yönetilen iş parçacıkları, eşzamanlı atık toplama iş parçacığı çalışırken çoğu zaman çalışmaya devam edebilir. Çöp toplama işlemi gerçekleşirken bu, daha kısa duraklamalar oluşur.
-
-Birkaç işlem çalışırken performansı artırmak için, eşzamanlı atık toplamayı devre dışı bırakın. Bunu, uygulamanın yapılandırma dosyasına bir [\<gcConcurrent > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) ekleyerek ve `enabled` özniteliğinin değerini `"false"` olarak ayarlayarak yapabilirsiniz.
-
-Eş zamanlı çöp toplama, adanmış bir iş parçacığında gerçekleştirilir. Varsayılan olarak, CLR, eşzamanlı atık toplama özellikli iş istasyonu çöp toplamayı çalıştırır. Bu, tek işlemci ve çok işlemcili bilgisayarlar için geçerlidir.
-
-Eşzamanlı atık toplama sırasında yığın üzerinde küçük nesneler ayırma olanağınız, eşzamanlı bir atık toplama başladığında kısa ömürlü kesimde kalan nesnelerle sınırlıdır. Segmentin sonuna ulaştığınızda, küçük nesne ayırmaları yapmak için gereken yönetilen iş parçacıkları askıya alındığında eşzamanlı çöp toplama işleminin bitmesini beklemeniz gerekecektir.
-
-Eşzamanlı atık toplama işlemi, eşzamanlı toplama sırasında nesneleri ayırabilmeniz için biraz daha büyük bir çalışma kümesine (eşzamanlı olmayan Çöp toplamakla karşılaştırıldığında) sahiptir. Ancak, ayırdığı nesneler çalışma kümesinin bir parçası haline geldiği için bu, performansı etkileyebilir. Temelde, eşzamanlı atık toplama, daha kısa duraklamalar için bazı CPU ve bellek ile ilgili bir süre
-
-Aşağıdaki çizimde ayrı bir adanmış iş parçacığında gerçekleştirilen eşzamanlı çöp toplama gösterilmektedir.
-
-![Eşzamanlı atık toplama Iş parçacıkları](../../../docs/standard/garbage-collection/media/gc-concurrent.png "Eşzamanlı atık toplama Iş parçacıkları")
-
-[Başa dön](#top)
-
-<a name="background_garbage_collection"></a>
-
-## <a name="background-workstation-garbage-collection"></a>Arka plan iş istasyonu çöp toplama
-
-Arka plan atık toplama, .NET Framework 4 ile başlayarak eşzamanlı iş istasyonu çöp toplama yerini alır ve .NET Framework 4,5 ile başlayan eşzamanlı sunucu çöp toplama yerini alır.  Arka plan atık toplamada, 2. nesil toplama işlemi devam ederken, kısa ömürlü nesiller (0 ve 1) gerektiği şekilde toplanır. Özel bir iş parçacığında gerçekleştirilir ve yalnızca 2. nesil koleksiyonlar için geçerlidir. Arka plan atık toplama otomatik olarak varsayılan olarak etkindir ve .NET Framework uygulamalarında [\<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) yapılandırma ayarıyla etkinleştirilebilir veya devre dışı bırakılabilir. 
+Background garbage collection is enabled by default and can be enabled or disabled with the [gcConcurrent](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) configuration setting in .NET Framework apps or the [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) setting in .NET Core apps.
 
 > [!NOTE]
-> Arka plan atık toplama yalnızca .NET Framework 4 ve üzeri sürümlerde kullanılabilir. .NET Framework 4 ' te yalnızca iş istasyonu çöp toplama için desteklenir. .NET Framework 4,5 ' den başlayarak, arka plan atık toplama hem iş istasyonu hem de sunucu çöp toplama için kullanılabilir.
+> Background garbage collection replaces [concurrent garbage collection](#concurrent-garbage-collection) and is available in .NET Framework 4 and later versions. In .NET Framework 4, it's supported only for workstation garbage collection. Starting with .NET Framework 4.5, background garbage collection is available for both workstation and server garbage collection.
 
-Arka plan atık toplama sırasında kısa ömürlü oluşumlara yönelik bir koleksiyon, ön plan atık toplama olarak bilinir. Ön plan atık koleksiyonları gerçekleştiğinde, tüm yönetilen iş parçacıkları askıya alınır.
+A collection on ephemeral generations during background garbage collection is known as foreground garbage collection. When foreground garbage collections occur, all managed threads are suspended.
 
-Arka plan atık toplama işlemi devam ederken ve nesil 0 ' da yeterli nesne ayırdığınızda CLR, 1. nesil bir ön plan atık toplama işlemi gerçekleştirir. Adanmış arka plan atık toplama iş parçacığı, ön plan atık toplama için bir istek olup olmadığını anlamak için sık kullanılan güvenli noktaları denetler. Varsa, ön plan atık toplama işleminin gerçekleşmesi için arka plan koleksiyonu kendisini askıya alır. Ön plan atık toplama işlemi tamamlandıktan sonra, adanmış arka plan atık toplama iş parçacığı ve Kullanıcı iş parçacıkları sürdürülür.
+When background garbage collection is in progress and you've allocated enough objects in generation 0, the CLR performs a generation 0 or generation 1 foreground garbage collection. The dedicated background garbage collection thread checks at frequent safe points to determine whether there is a request for foreground garbage collection. If there is, the background collection suspends itself so that foreground garbage collection can occur. After the foreground garbage collection is completed, the dedicated background garbage collection thread and user threads resume.
 
-Arka plan atık toplama sırasında kısa ömürlü çöp koleksiyonları gerçekleşebildiğinden arka plan atık toplama, eşzamanlı atık toplama tarafından uygulanan ayırma kısıtlamalarını ortadan kaldırır. Bu, arka plan atık toplamanın kısa ömürlü nesillerdeki ölü nesneleri kaldırabileceği ve 1. nesil atık toplama sırasında gerekirse yığını genişletebileceği anlamına gelir.
+Background garbage collection removes allocation restrictions imposed by concurrent garbage collection, because ephemeral garbage collections can occur during background garbage collection. Background garbage collection can remove dead objects in ephemeral generations. It can also expand the heap if needed during a generation 1 garbage collection.
 
-Aşağıdaki çizimde, bir iş istasyonunda ayrı bir adanmış iş parçacığında gerçekleştirilen arka plan atık toplama işlemi gösterilmektedir:
+The following illustration shows background garbage collection performed on a separate dedicated thread on a workstation:
 
-![Arka plan iş istasyonu çöp toplamayı gösteren diyagram.](./media/fundamentals/background-workstation-garbage-collection.png "Arka plan iş istasyonu çöp toplamayı gösteren diyagram.")
+![Background workstation garbage collection](./media/fundamentals/background-workstation-garbage-collection.png)
 
-[Başa dön](#top)
+### <a name="background-server-garbage-collection"></a>Background server garbage collection
 
-<a name="background_server_garbage_collection"></a>
+Starting with .NET Framework 4.5, background server garbage collection is the default mode for server garbage collection.
 
-## <a name="background-server-garbage-collection"></a>Arka plan sunucusu çöp toplama
+Background server garbage collection functions similarly to background workstation garbage collection, described in the previous section, but there are a few differences:
 
-.NET Framework 4,5 ile başlayarak, arka plan sunucusu çöp toplama sunucu çöp toplama için varsayılan moddur. Bu modu seçmek için, [\<gcServer > öğesinin](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) `enabled` özniteliğini çalışma zamanı yapılandırma şemasında `true` olarak ayarlayın. Bu mod, önceki bölümde açıklanan arka plan iş istasyonu çöp toplamasına benzer şekilde çalışır, ancak birkaç farklılık vardır. Arka plan iş istasyonu çöp toplama, bir adanmış arka plan atık toplama iş parçacığı kullanır, ancak arka plan sunucusu çöp toplama, genellikle her mantıksal işlemci için ayrılmış bir iş parçacığı kullanır. İş istasyonu arka plan atık toplama iş parçacığından farklı olarak, bu iş parçacıkları zaman aşımına uğrar.
+- Background workstation garbage collection uses one dedicated background garbage collection thread, whereas background server garbage collection uses multiple threads. Typically, there's a dedicated thread for each logical processor.
 
-Aşağıdaki çizimde, bir sunucudaki ayrı bir adanmış iş parçacığında gerçekleştirilen arka plan atık toplama işlemi gösterilmektedir:
+- Unlike the workstation background garbage collection thread, these threads do not time out.
 
-![Arka plan sunucusu çöp toplamayı gösteren diyagram.](./media/fundamentals/background-server-garbage-collection.png "Arka plan sunucusu çöp toplamayı gösteren diyagram.")
+The following illustration shows background garbage collection performed on a separate dedicated thread on a server:
+
+![Background server garbage collection](./media/fundamentals/background-server-garbage-collection.png)
+
+## <a name="concurrent-garbage-collection"></a>Concurrent garbage collection
+
+> [!TIP]
+> This section applies to:
+>
+> - .NET Framework 3.5 and earlier for workstation garbage collection
+> - .NET Framework 4 and earlier for server garbage collection
+>
+> Concurrent garbage is replaced by [background garbage collection](#background-workstation-garbage-collection) in later versions.
+
+In workstation or server garbage collection, you can [enable concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md), which enables threads to run concurrently with a dedicated thread that performs the garbage collection for most of the duration of the collection. This option affects only garbage collections in generation 2; generations 0 and 1 are always non-concurrent because they finish very fast.
+
+Concurrent garbage collection enables interactive applications to be more responsive by minimizing pauses for a collection. Managed threads can continue to run most of the time while the concurrent garbage collection thread is running. This results in shorter pauses while a garbage collection is occurring.
+
+Concurrent garbage collection is performed on a dedicated thread. By default, the CLR runs workstation garbage collection with concurrent garbage collection enabled. This is true for single-processor and multi-processor computers.
+
+The following illustration shows concurrent garbage collection performed on a separate dedicated thread.
+
+![Concurrent Garbage Collection Threads](./media/gc-concurrent.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Atık Toplama](../../../docs/standard/garbage-collection/index.md)
+- [Configuration options for GC](../../core/run-time-config/garbage-collector.md)
+- [Garbage collection](index.md)

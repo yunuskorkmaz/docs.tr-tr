@@ -2,29 +2,29 @@
 title: 'Hizmet: Güvenlik Doğrulama ve Kimlik Doğrulama Hataları'
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
-ms.openlocfilehash: 5843d25eb26bdd9facc324a2af50c6b02c5ad7c8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 399249926bcb1383fd33f60510c2c212c6f4261c
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613593"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204574"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>Hizmet: Güvenlik Doğrulama ve Kimlik Doğrulama Hataları
-Sayaç adı: Güvenlik Doğrulama ve Kimlik Doğrulama Hataları  
+Counter name: Security Validation and Authentication Failures  
   
 ## <a name="description"></a>Açıklama  
- Her bir ileti "Güvenlik çağrıları yetkilendirilmedi" sayacı tarafından kapsanmayan bir güvenlik sorunu nedeniyle reddedilmesi Bu sayaç artırılır. Bu tür sorunlar şunlardır:  
+ This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter. Such problems include:  
   
-- İstemci belirteci iletiden okunamıyor.  
+- Client token cannot be read from the message.  
   
-- İstemci belirteci (örneğin, hatalı parola) kimlik doğrulaması başarısız oldu.  
+- Client token has failed authentication (for example, bad password).  
   
-- İmza doğrulaması başarısız oldu (örneğin, iletiyi oynanmadığını).  
+- Signature verification has failed (for example, the message has been tampered).  
   
-- İleti yeniden yürütme bir saldırı sırasında gerçekleşebilir bir önceki bir yineleniyor.  
+- The message is a duplicate from a previous one, which can happen during a replay attack.  
   
-- Bir şifre çözme hatası oluştu.  
+- A decryption failure has occurred.  
   
-- Gereken bazı öğeleri (örneğin, eksik bir zaman damgası veya şifrelenmiş veriler engelleme) gelen iletiyi yok.  
+- Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.  
   
-- TLSNEGO/SPNEGO anlaşması sırasında hatalar oluştu.
+- Errors have occurred during TLSNEGO/SPNEGO handshake.

@@ -1,28 +1,28 @@
 ---
-title: (Visual Basic) XML ağaçlarını serileştirme
+title: XML Ağaçlarını Serileştirme
 ms.date: 07/20/2015
 ms.assetid: 2c340695-a726-4030-85be-6975d8a149cf
-ms.openlocfilehash: ddcd82a3fe8beea87913227ed0ff86fa3974bd11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b91078ff7f1b0410f97be9bc9ed3601f3ca0733
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786457"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351044"
 ---
-# <a name="serializing-xml-trees-visual-basic"></a>(Visual Basic) XML ağaçlarını serileştirme
-Bir XML ağacı seri hale getirme, XML XML ağacından oluşturma anlamına gelir. ' In somut bir uygulama için bir dosyaya serileştirmek <xref:System.IO.TextWriter> sınıfı veya somut bir uygulama bir <xref:System.Xml.XmlWriter>.  
+# <a name="serializing-xml-trees-visual-basic"></a>Serializing XML Trees (Visual Basic)
+Serializing an XML tree means generating XML from the XML tree. You can serialize to a file, to a concrete implementation of the <xref:System.IO.TextWriter> class, or to a concrete implementation of an <xref:System.Xml.XmlWriter>.  
   
- Serileştirme çeşitli yönlerini denetleyebilirsiniz. Örneğin, girinti serileştirilmiş XML verilip verilmeyeceğini ve bir XML bildirimi yazılıp yazılmayacağını denetleyebilirsiniz.  
+ You can control various aspects of serialization. For example, you can control whether to indent the serialized XML, and whether to write an XML declaration.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[Serileştirirken Boşlukları Koruma](../../../../visual-basic/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)|XML ağaçlarını serileştirme boşluk davranışını denetlemek nasıl açıklar.|  
-|[Serileştirmek bir XML bildirimi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-with-an-xml-declaration.md)|Bir XML bildirimi içeren bir XML ağacı seri hale getirmek açıklar.|  
-|[Dosya, TextWriters ve XmlWriters Serileştirme](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|Belgeyi seri hale getirmek açıklar bir <xref:System.IO.File>, <xref:System.IO.TextWriter>, veya bir <xref:System.Xml.XmlWriter>.|  
-|[(Çağrılıyor XSLT) XmlReader'a serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|Nasıl oluşturulacağını açıklar bir <xref:System.Xml.XmlReader> bir XML ağacı içeriğini okumak başka bir modül sağlar.|  
+|[Serileştirirken Boşlukları Koruma](../../../../visual-basic/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)|Describes how to control white space behavior when you serialize XML trees.|  
+|[Serializing with an XML Declaration (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-with-an-xml-declaration.md)|Describes how to serialize an XML tree that includes an XML declaration.|  
+|[Dosya, TextWriters ve XmlWriters Serileştirme](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|Describes how to serialize a document to a <xref:System.IO.File>, a <xref:System.IO.TextWriter>, or an <xref:System.Xml.XmlWriter>.|  
+|[Serializing to an XmlReader (Invoking XSLT) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|Describes how to create a <xref:System.Xml.XmlReader> that enables another module to read the contents of an XML tree.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Programlama Kılavuzu (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Projeksiyon türünü denetleme (C#)'
+title: Projeksiyon türünü denetleme (C#)
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
-ms.openlocfilehash: a44f7616beba3e07f6e44cc279c67468abc779e3
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: cb7c272fbe67c0700b5740691befc483993f4e29
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204097"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141357"
 ---
-# <a name="how-to-control-the-type-of-a-projection-c"></a>Nasıl yapılır: Projeksiyon türünü denetleme (C#)
-Projeksiyon, tek bir veri kümesini alma, filtreleme, şeklini değiştirme ve hatta türünü değiştirme işlemidir. Çoğu sorgu ifadesi tahminleri gerçekleştirir. Bu bölümde gösterilen sorgu ifadelerinin çoğu, ' <xref:System.Collections.Generic.IEnumerable%601> ın <xref:System.Xml.Linq.XElement>' i değerlendirin, ancak başka türden Koleksiyonlar oluşturmak için projeksiyonun türünü kontrol edebilirsiniz. Bu konuda bunun nasıl yapılacağı gösterilmektedir.  
+# <a name="how-to-control-the-type-of-a-projection-c"></a>Projeksiyon türünü denetleme (C#)
+Projeksiyon, tek bir veri kümesini alma, filtreleme, şeklini değiştirme ve hatta türünü değiştirme işlemidir. Çoğu sorgu ifadesi tahminleri gerçekleştirir. Bu bölümde gösterilen sorgu ifadelerinin çoğu, <xref:System.Xml.Linq.XElement><xref:System.Collections.Generic.IEnumerable%601> değerlendirin, ancak başka türden Koleksiyonlar oluşturmak için projeksiyonun türünü kontrol edebilirsiniz. Bu konuda bunun nasıl yapılacağı gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek yeni bir türü `Customer`tanımlar. Sorgu ifadesi daha sonra `Customer` `Select` yan tümcesinde yeni nesneler oluşturur. Bu, sorgu ifadesinin <xref:System.Collections.Generic.IEnumerable%601> `Customer`türünün olmasına neden olur.  
+ Aşağıdaki örnek, `Customer`yeni bir türü tanımlar. Sorgu ifadesi daha sonra `Select` yan tümcesinde yeni `Customer` nesneleri başlatır. Bu, sorgu ifadesinin türünün `Customer`<xref:System.Collections.Generic.IEnumerable%601> olmasına neden olur.  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 public class Customer  

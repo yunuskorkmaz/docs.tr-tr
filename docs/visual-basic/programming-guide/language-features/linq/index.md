@@ -1,53 +1,53 @@
 ---
-title: Visual Basic'de LINQ
+title: LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: 286e6266ef8f11a7a09a9e9fe898276a6734a96d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea6754d9d93a7d400ac3494b01b850374e9ec02d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756500"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354174"
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic'de LINQ
-Bu bölümde genel bakış, örnekler ve anlamak ve Visual Basic kullanmanıza yardımcı olacak bilgiler içerir ve [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
+This section contains overviews, examples, and background information that will help you understand and use Visual Basic and [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- Tanıtılmaktadır [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcıları, işleçler, sorgunun yapısı ve dil özellikleri.  
+ [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ Provides an introduction to [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] providers, operators, query structure, and language features.  
   
- [Nasıl yapılır: Bir veritabanını sorgulama](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)  
- Bir SQL Server veritabanına bağlanma ve LINQ kullanarak bir sorguyu nasıl bir örnek sağlar.  
+ [How to: Query a Database](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)  
+ Provides an example of how to connect to a SQL Server database and execute a query by using LINQ.  
   
- [Nasıl yapılır: Bir saklı yordamı çağırma](../../../../visual-basic/programming-guide/language-features/linq/how-to-call-a-stored-procedure-by-using-linq.md)  
- Bir SQL Server veritabanına bağlanma ve bir saklı yordamı LINQ kullanarak çağırma ilişkin bir örnek sağlar.  
+ [How to: Call a Stored Procedure](../../../../visual-basic/programming-guide/language-features/linq/how-to-call-a-stored-procedure-by-using-linq.md)  
+ Provides an example of how to connect to a SQL Server database and call a stored procedure by using LINQ.  
   
- [Nasıl yapılır: Bir veritabanındaki verileri değiştirme](../../../../visual-basic/programming-guide/language-features/linq/how-to-modify-data-in-a-database-by-using-linq.md)  
- Bir SQL sunucusu veritabanına bağlanın ve alma ve LINQ kullanarak verileri değiştirme örneği sağlar.  
+ [How to: Modify Data in a Database](../../../../visual-basic/programming-guide/language-features/linq/how-to-modify-data-in-a-database-by-using-linq.md)  
+ Provides an example of how to connect to a SQL Server database and retrieve and modify data by using LINQ.  
   
- [Nasıl yapılır: Birleştirmeleri kullanarak veri birleştirme](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)  
- LINQ kullanarak veritabanını birleştirmeler için benzer bir şekilde veri görünümlerle nasıl örnekleri sağlar.  
+ [How to: Combine Data with Joins](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)  
+ Provides examples of how to join data in a manner similar to database joins by using LINQ.  
   
- [Nasıl yapılır: Sorgu sonuçlarını sıralama](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)  
- Sorgu sonuçlarını LINQ kullanarak sıralama ilişkin bir örnek sağlar.  
+ [How to: Sort Query Results](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)  
+ Provides an example of how to order the results of a query by using LINQ.  
   
- [Nasıl yapılır: Sorgu sonuçlarını filtreleme](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)  
- Arama ölçütleri LINQ kullanarak sorguya ekleme konusunda bir örnek sağlar.  
+ [How to: Filter Query Results](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)  
+ Provides an example of how to include search criteria in a query by using LINQ.  
   
- [Nasıl yapılır: Count, Sum veya Average verisi](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)  
- Count, Sum veya Average verisi LINQ kullanarak bir sorgudan döndürülen için toplama işlevleri ekleme örnekleri sağlar.  
+ [How to: Count, Sum, or Average Data](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)  
+ Provides examples of how to include aggregate functions to Count, Sum, or Average data returned from a query by using LINQ.  
   
- [Nasıl yapılır: Bir sorgu sonucunda en düşük ve en fazla değeri bulma](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
- LINQ kullanarak bir sorgudan döndürülen verileri, minimum ve maksimum değerleri belirlemek için toplama işlevleri ekleme örnekleri sağlar.  
+ [How to: Find the Minimum or Maximum Value in a Query Result](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
+ Provides examples of how to include aggregate functions to determine the minimum and maximum values of data returned from a query by using LINQ.  
   
- [Nasıl yapılır: Bir LINQ Sorgu sonucunu belirli bir tür olarak döndürme](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
- Anonim bir tür olarak yerine belirli bir tür olarak bir LINQ sorgusunun sonuçları döndürmek nasıl bir örnek sağlar.  
+ [Nasıl yapılır: Bir LINQ Sorgu Sonucunu Belirli Bir Tür Olarak Döndürme](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
+ Provides an example of how to return the results of a LINQ query as a specific type instead of as an anonymous type.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ (dil ile tümleşik sorgu)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
-- [LINQ to XML Visual Basic'de genel bakış](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
+- [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
 - [LINQ to DataSet Genel Bakış](../../../../framework/data/adonet/linq-to-dataset-overview.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

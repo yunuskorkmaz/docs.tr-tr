@@ -1,51 +1,51 @@
 ---
-title: Visual Basic'de Değişkenlerle İlgili Sorun Giderme
+title: Değişkenlerle İlgili Sorun Giderme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: 31aca95bb292ecd0bb04fda6ded83d4af8be0e2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 929540788e8134760446e02c3377e78d00ca17d9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598613"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351767"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Visual Basic'de Değişkenlerle İlgili Sorun Giderme
-Bu sayfada Visual Basic'te değişkenler ile çalışırken oluşabilecek bazı yaygın sorunlar listelenir.  
+This page lists some common problems that can occur when working with variables in Visual Basic.  
   
-## <a name="unable-to-access-members-of-an-object"></a>Bir nesnenin üyelerine erişmek için  
- Kodunuzu bir özellik veya yöntem bir nesne üzerinde erişmeye çalışırsa, iki olası hata sonuçları vardır:  
+## <a name="unable-to-access-members-of-an-object"></a>Unable to Access Members of an Object  
+ If your code attempts to access a property or method on an object, there are two possible error outcomes:  
   
-- Belirli bir tür olması ve ardından o türe göre tanımlanmamış bir üye başvurmak için nesne değişkenini bildirirseniz, derleyici bir hata iletisi oluşturabilir.  
+- The compiler can generate an error message if you declare the object variable to be of a specific type and then refer to a member not defined by that type.  
   
-- Çalışma zamanı <xref:System.MemberAccessException> bir nesne değişkenine atanan nesne kodunuzu erişmeye üye kullanıma sunmuyor oluşur. Bir değişken, söz konusu olduğunda [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md), üyesi değilse bu durum da edinebilirsiniz `Public`. Geç bağlama yalnızca erişime olmasıdır `Public` üyeleri.  
+- A run-time <xref:System.MemberAccessException> occurs when the object assigned to an object variable does not expose the member your code is trying to access. In the case of a variable of [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md), you can also get this exception if the member is not `Public`. This is because late binding allows access only to `Public` members.  
   
- Zaman [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md) kümeleri tür denetimini `On`, yalnızca yöntemleri ve özellikleri ile kaydedilebilmeniz bu sınıfın bir nesne değişkenine erişebilir. Aşağıdaki örnek bunu göstermektedir.  
+ When the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) sets type checking `On`, an object variable can access only the methods and properties of the class with which you declare it. Aşağıdaki örnek bunu göstermektedir.  
 
  [!code-vb[VbVbalrVariables#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#2)]  
   
- Bu örnekte, `p` yalnızca üyelerinin kullanabileceği <xref:System.Object> kendisi, hangi içermeyen sınıf `Left` özelliği. Öte yandan, `q` türü olarak bildirildi <xref:System.Windows.Forms.Label>, tüm yöntemleri ve özellikleri kullanabilmesi için <xref:System.Windows.Forms.Label> sınıfını <xref:System.Windows.Forms> ad alanı.  
+ In this example, `p` can use only the members of the <xref:System.Object> class itself, which do not include the `Left` property. On the other hand, `q` was declared to be of type <xref:System.Windows.Forms.Label>, so it can use all the methods and properties of the <xref:System.Windows.Forms.Label> class in the <xref:System.Windows.Forms> namespace.  
   
-### <a name="correct-approach"></a>Doğru yaklaşımı  
- Bir nesne belirli bir sınıfın tüm üyeleri erişebilmesi için mümkün olduğunda, sınıf türünde olması gereken nesne değişkeni bildirme. Bu, örneğin, derleme zamanında tür nesne bilmiyorsanız işlemi yapamazsınız, ayarlamalısınız `Option Strict` için `Off` ve olmaya değişkenini tanımlamak [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md). Bu nesneleri değişkene atanan herhangi bir tür sağlar ve şu anda atanmış nesneyi kabul edilebilir bir tür olduğundan emin olmak için önlem almalısınız. Kullanabileceğiniz [TypeOf işleci](../../../../visual-basic/language-reference/operators/typeof-operator.md) bunun belirlenmesi için.  
+### <a name="correct-approach"></a>Correct Approach  
+ To be able to access all the members of an object of a particular class, declare the object variable to be of the type of that class when possible. If you cannot do this, for example if you do not know the object type at compile time, you must set `Option Strict` to `Off` and declare the variable to be of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). This allows objects of any type to be assigned to the variable, and you should take steps to ensure that the currently assigned object is of an acceptable type. You can use the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to make this determination.  
   
-## <a name="other-components-cannot-access-your-variable"></a>Diğer bileşenleri Değişkeninizi erişemiyor  
- Visual Basic adları *büyük küçük harf duyarsız*. İki adı yalnızca alfabetik durumda farklıysa, derleyici bunları aynı adı olarak yorumlar. Örneğin, göz önünde bulundurur `ABC` ve `abc` aynı bildirilen öğeye başvurmak üzere.  
+## <a name="other-components-cannot-access-your-variable"></a>Other Components Cannot Access Your Variable  
+ Visual Basic names are *case-insensitive*. If two names differ in alphabetic case only, the compiler interprets them as the same name. For example, it considers `ABC` and `abc` to refer to the same declared element.  
   
- Ancak, ortak dil çalışma zamanı (CLR) kullanan *büyük/küçük harfe* bağlama. Bir derleme veya bir DLL üretmek ve diğer derlemeleri kullandırmak, bu nedenle, adları artık büyük küçük harf duyarlıdır. Örneğin, adında bir öğe ile bir sınıf tanımlama `ABC`, ve diğer derlemeler ortak dil çalışma zamanı aracılığıyla sınıfınızın kullanın, öğesine başvurmalıdır `ABC`. Daha sonra sınıfı yeniden derleyin ve öğenin adını değiştirmek `abc`, kendi sınıfınızı kullanarak diğer derlemeler bu öğe artık erişemez. Bu nedenle, bir derleme güncelleştirilmiş bir sürümünü serbest bıraktığınızda, ortak öğeleri alfabetik durumunu değiştirmemesi gerekir.  
+ However, the common language runtime (CLR) uses *case-sensitive* binding. Therefore, when you produce an assembly or a DLL and make it available to other assemblies, your names are no longer case-insensitive. For example, if you define a class with an element called `ABC`, and other assemblies make use of your class through the common language runtime, they must refer to the element as `ABC`. If you subsequently recompile your class and change the element's name to `abc`, the other assemblies using your class can no longer access that element. Therefore, when you release an updated version of an assembly, you should not change the alphabetic case of any public elements.  
   
- Daha fazla bilgi için [ortak dil çalışma zamanı](../../../../standard/clr.md).  
+ For more information, see [Common Language Runtime](../../../../standard/clr.md).  
   
-### <a name="correct-approach"></a>Doğru yaklaşımı  
- Diğer bileşenleri, değişkenlere erişmek izin vermek için bunlar büyük/küçük harfe değilmiş gibi adlarını kabul eder. Sınıf veya modül test ederken, diğer derlemeler beklediğiniz değişkenlerine bağlama emin olun. Bir bileşen yayımladıktan sonra kullanımları değiştirme dahil olmak üzere var olan değişken adlarının herhangi bir değişiklik yapmayın.  
+### <a name="correct-approach"></a>Correct Approach  
+ To allow other components to access your variables, treat their names as if they were case-sensitive. When you are testing your class or module, make sure other assemblies are binding to the variables you expect them to. Once you have published a component, do not make any modifications to existing variable names, including changing their cases.  
   
-## <a name="wrong-variable-being-used"></a>Yanlış değişken kullanılıyor  
- Aynı ada sahip birden fazla değişken varsa, Visual Basic Derleyicisi her başvuru adı çözümlemeye çalışır. Farklı kapsam değişkenleri varsa, derleyici en dar kapsamdan bildirimiyle başvuru çözümler. Bunlar aynı kapsamda varsa, çözümlemesi başarısız olur ve derleyici bir hata bildirir. Daha fazla bilgi için [bildirilmiş öğelere başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+## <a name="wrong-variable-being-used"></a>Wrong Variable Being Used  
+ When you have more than one variable with the same name, the Visual Basic compiler attempts to resolve each reference to that name. If the variables have different scope, the compiler resolves a reference to the declaration with the narrowest scope. If they have the same scope, the resolution fails and the compiler signals an error. For more information, see [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
-### <a name="correct-approach"></a>Doğru yaklaşımı  
- Aynı ada ancak farklı kapsam değişkenleri kullanmaktan kaçının. Diğer derlemeleri veya projeleri kullanıyorsanız, bu dış bileşenleri mümkün olduğunca tanımlanan herhangi bir adı kullanarak kaçının. Aynı ada sahip birden fazla değişken varsa, her başvuru uygun emin olun. Daha fazla bilgi için [bildirilmiş öğelere başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+### <a name="correct-approach"></a>Correct Approach  
+ Avoid using variables with the same name but different scope. If you are using other assemblies or projects, avoid using any names defined in those external components as much as possible. If you have more than one variable with the same name, be sure you qualify every reference to it. For more information, see [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -53,8 +53,8 @@ Bu sayfada Visual Basic'te değişkenler ile çalışırken oluşabilecek bazı 
 - [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Nesne Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Nasıl yapılır: Bir nesnenin üyelerine erişim](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [Nasıl yapılır: Bir Nesnenin Üyelerine Erişme](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
 - [Nesne Değişkeni Değerleri](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Nasıl yapılır: Bir nesne değişkeninin için hangi türe başvurduğunu belirleme](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
+- [Nasıl yapılır: Bir Nesne Değişkeninin Hangi Türe Başvurduğunu Belirleme](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
 - [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

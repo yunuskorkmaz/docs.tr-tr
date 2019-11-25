@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: c98035ef0b4ea1add22b09fb9927bcd49c00cd9b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d9cf092cf47d4fb70b15033d039777d3279b633a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920037"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283569"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Özelleştirilebilir Görünümü olan Denetim Oluşturma
 
@@ -52,9 +52,9 @@ Bu konu aşağıdaki bölümleri içermektedir:
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
-Bu konu başlığı altında, var olan bir denetim için yeni bir <xref:System.Windows.Controls.ControlTemplate> oluşturmayı bildiğiniz, bir denetim sözleşmesindeki öğelerin ne olduğu hakkında bilgi sahibi olduğunuz ve [var olan bir denetimin görünümünü özelleştirme bölümünde açıklanan kavramları anladığınızı varsayılmaktadır ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+Bu konu başlığı altında, var olan bir denetim için yeni <xref:System.Windows.Controls.ControlTemplate> oluşturma, bir denetim sözleşmesindeki öğelerin ne olduğu hakkında bilgi sahibi olduğu ve [bir denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md)bölümünde ele alınan kavramların anlaşılması gerektiğini varsaymaktadır.
 
 > [!NOTE]
 > Görünümü özelleştirilmiş bir denetim oluşturmak için, <xref:System.Windows.Controls.Control> sınıfından devralan bir denetim veya <xref:System.Windows.Controls.UserControl>dışındaki alt sınıflarından birini oluşturmanız gerekir.  <xref:System.Windows.Controls.UserControl> devralan bir denetim, hızlı bir şekilde oluşturulabilecek bir denetimdir, ancak bir <xref:System.Windows.Controls.ControlTemplate> kullanmaz ve görünümünü özelleştiremezsiniz.
@@ -77,7 +77,7 @@ Bir denetimin <xref:System.Windows.Controls.ControlTemplate> görsel yapısını
 
 ## <a name="defining-the-visual-structure-and-visual-behavior-of-a-control-in-a-controltemplate"></a>Bir ControlTemplate içindeki bir denetimin görsel yapısını ve görsel davranışını tanımlama
 
-Özel denetiminizi parçalar ve durumlar modelini kullanarak oluşturduğunuzda, denetimin görsel yapısını ve görsel davranışını kendi mantığı yerine <xref:System.Windows.Controls.ControlTemplate> tanımlarsınız.  Bir denetimin görsel yapısı, denetimi oluşturan <xref:System.Windows.FrameworkElement> nesnelerinin bir bileşiminin oluşur.  Görsel davranış, denetimin belirli bir durumda olduğunda görünme yöntemidir.   Bir denetimin görsel yapısını ve görsel davranışını belirten <xref:System.Windows.Controls.ControlTemplate> oluşturma hakkında daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).
+Özel denetiminizi parçalar ve durumlar modelini kullanarak oluşturduğunuzda, denetimin görsel yapısını ve görsel davranışını kendi mantığı yerine <xref:System.Windows.Controls.ControlTemplate> tanımlarsınız.  Bir denetimin görsel yapısı, denetimi oluşturan <xref:System.Windows.FrameworkElement> nesnelerinin bir bileşiminin oluşur.  Görsel davranış, denetimin belirli bir durumda olduğunda görünme yöntemidir.   Bir denetimin görsel yapısını ve görsel davranışını belirten <xref:System.Windows.Controls.ControlTemplate> oluşturma hakkında daha fazla bilgi için, bkz. [bir denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 
 `NumericUpDown` denetimi örneğinde, görsel yapı iki <xref:System.Windows.Controls.Primitives.RepeatButton> denetimi ve bir <xref:System.Windows.Controls.TextBlock>içerir.  Bu denetimleri `NumericUpDown` denetimin koduna eklerseniz--------------bu denetimlerin konumları geri alınamaz.  Denetimin görsel yapısını ve kendi kodunda görsel davranışını tanımlamak yerine <xref:System.Windows.Controls.ControlTemplate>tanımlamanız gerekir.  Ardından, düğmelerin ve <xref:System.Windows.Controls.TextBlock> konumunu özelleştirmek için bir uygulama geliştiricisi ve <xref:System.Windows.Controls.ControlTemplate> değiştirilebilmesi için `Value` negatifse hangi davranışın gerçekleşeceğini belirtin.
 
@@ -85,7 +85,7 @@ Aşağıdaki örnek, `Value`arttırmak için bir <xref:System.Windows.Controls.P
 
 [!code-xaml[VSMCustomControl#VisualStructure](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]
 
-`NumericUpDown` denetiminin görsel bir davranışı, negatifse değerin kırmızı bir yazı tipinde olması olur.  `Value` negatifse, koddaki <xref:System.Windows.Controls.TextBlock> <xref:System.Windows.Controls.TextBlock.Foreground%2A> değiştirirseniz `NumericUpDown` her zaman kırmızı negatif bir değer gösterilir. <xref:System.Windows.Controls.ControlTemplate><xref:System.Windows.VisualState> nesneleri ekleyerek <xref:System.Windows.Controls.ControlTemplate> denetimin görsel davranışını belirlersiniz.  Aşağıdaki örnek, `Positive` ve `Negative` durumları için <xref:System.Windows.VisualState> nesneleri gösterir.  `Positive` ve `Negative` birbirini dışlamalı (denetim her zaman iki ' de olur), bu nedenle örnek <xref:System.Windows.VisualState> nesnelerini tek bir <xref:System.Windows.VisualStateGroup>koyar.  Denetim `Negative` duruma geçtiğinde, <xref:System.Windows.Controls.TextBlock> <xref:System.Windows.Controls.TextBlock.Foreground%2A> kırmızıya döner.  Denetim `Positive` durumundaysa, <xref:System.Windows.Controls.TextBlock.Foreground%2A> özgün değerine geri döner.  Bir <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.VisualState> nesneleri tanımlama, bir [ControlTemplate oluşturarak var olan bir denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md)konusunda daha fazla ele alınmıştır.
+`NumericUpDown` denetiminin görsel bir davranışı, negatifse değerin kırmızı bir yazı tipinde olması olur.  `Value` negatifse, koddaki <xref:System.Windows.Controls.TextBlock> <xref:System.Windows.Controls.TextBlock.Foreground%2A> değiştirirseniz `NumericUpDown` her zaman kırmızı negatif bir değer gösterilir. <xref:System.Windows.Controls.ControlTemplate><xref:System.Windows.VisualState> nesneleri ekleyerek <xref:System.Windows.Controls.ControlTemplate> denetimin görsel davranışını belirlersiniz.  Aşağıdaki örnek, `Positive` ve `Negative` durumları için <xref:System.Windows.VisualState> nesneleri gösterir.  `Positive` ve `Negative` birbirini dışlamalı (denetim her zaman iki ' de olur), bu nedenle örnek <xref:System.Windows.VisualState> nesnelerini tek bir <xref:System.Windows.VisualStateGroup>koyar.  Denetim `Negative` duruma geçtiğinde, <xref:System.Windows.Controls.TextBlock> <xref:System.Windows.Controls.TextBlock.Foreground%2A> kırmızıya döner.  Denetim `Positive` durumundaysa, <xref:System.Windows.Controls.TextBlock.Foreground%2A> özgün değerine geri döner.  Bir <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.VisualState> nesneleri tanımlama, bir [Denetim için şablon oluşturma konusunda](../../../desktop-wpf/themes/how-to-create-apply-template.md)daha ayrıntılı olarak ele alınmıştır.
 
 > [!NOTE]
 > <xref:System.Windows.Controls.ControlTemplate>kök <xref:System.Windows.FrameworkElement> <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> ekli özelliği ayarladığınızdan emin olun.
@@ -168,7 +168,7 @@ Tüm durumları güncelleştiren tek bir yöntem, <xref:System.Windows.VisualSta
 
 Denetim zaten bu durumda olduğunda <xref:System.Windows.VisualStateManager.GoToState%2A> bir durum adı geçirirseniz <xref:System.Windows.VisualStateManager.GoToState%2A> hiçbir şey yapmaz, bu nedenle denetimin geçerli durumunu denetlemeniz gerekmez.  Örneğin, `Value` bir negatif sayıdan başka negatif bir sayıya değişirse, `Negative` durumunun film şeridi kesintiye uğramaz ve Kullanıcı denetimde bir değişiklik görmez.
 
-<xref:System.Windows.VisualStateManager>, <xref:System.Windows.VisualStateManager.GoToState%2A>çağırdığınızda hangi durumun çıkaceğini belirleyen <xref:System.Windows.VisualStateGroup> nesneleri kullanır. Denetim her zaman <xref:System.Windows.Controls.ControlTemplate> tanımlanan her <xref:System.Windows.VisualStateGroup> için tek bir durumdur ve yalnızca aynı <xref:System.Windows.VisualStateGroup>başka bir duruma geçtiğinde bir durumu bırakır. Örneğin, `NumericUpDown` denetiminin <xref:System.Windows.Controls.ControlTemplate>, `Positive` ve `Negative`<xref:System.Windows.VisualState> nesnelerini bir <xref:System.Windows.VisualStateGroup> ve `Focused` `Unfocused`nesneleri başka bir<xref:System.Windows.VisualState> tanımlar. (Denetim `Positive` durumdan `Negative` duruma geçtiğinde veya bunun tersi durumda, denetim `Focused` veya `Unfocused` içinde kalırsa, bu konunun [tam örnek](#complete_example) bölümünde tanımlanan `Focused` ve `Unfocused`<xref:System.Windows.VisualState> bakabilirsiniz. durumunda.
+<xref:System.Windows.VisualStateManager>, <xref:System.Windows.VisualStateManager.GoToState%2A>çağırdığınızda hangi durumun çıkaceğini belirleyen <xref:System.Windows.VisualStateGroup> nesneleri kullanır. Denetim her zaman <xref:System.Windows.Controls.ControlTemplate> tanımlanan her <xref:System.Windows.VisualStateGroup> için tek bir durumdur ve yalnızca aynı <xref:System.Windows.VisualStateGroup>başka bir duruma geçtiğinde bir durumu bırakır. Örneğin, `NumericUpDown` denetiminin <xref:System.Windows.Controls.ControlTemplate>, `Positive` ve `Negative`<xref:System.Windows.VisualState> nesnelerini bir <xref:System.Windows.VisualStateGroup> ve `Focused` `Unfocused`nesneleri başka bir <xref:System.Windows.VisualState> tanımlar. (Denetim `Positive` durumdan `Negative` duruma geçtiğinde veya bunun tersi durumda, denetim `Focused` veya `Unfocused` durumunda kalırsa, bu konunun [tam örnek](#complete_example) bölümünde tanımlanan `Focused` ve `Unfocused`<xref:System.Windows.VisualState> bakabilirsiniz.
 
 Bir denetimin durumunun değiştirebildiği üç tipik konum vardır:
 
@@ -255,5 +255,5 @@ Aşağıdaki örnekte `NumericUpDown`mantığı gösterilmektedir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)
+- [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md)
 - [Denetim Özelleştirme](control-customization.md)

@@ -9,7 +9,7 @@
 - name: .NET Masaüstü Kılavuzu - WPF
   href: desktop-wpf/
 - name: 'C# Kılavuzu'
-  href: csharp/
+  href: csharp/index.yml
 - name: 'F# Kılavuzu'
   href: fsharp/
 - name: Visual Basic Kılavuzu

@@ -2,48 +2,48 @@
 title: C# İfadeleri
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: c8417217064fcc1f7de5b1a9b8055743fc8cd263
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: d1728758a4f1af76c2d08695a83c0f9acc3dde3e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660652"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140088"
 ---
 # <a name="c-expressions"></a>C# İfadeleri
-.NET Framework 4.5 ile başlayarak C# ifadeleri, Windows Workflow Foundation (WF) desteklenir. Yeni C# kullanım .NET Framework 4.5 hedefleyen iş akışı projeleri Visual Studio 2012'de oluşturulan C# ifadeler ve Visual Basic iş akışı projeleri Visual Basic deyimleri kullanacak. Varolan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] iş akışı projeleri, Visual Basic deyimleri kullanacak şekilde geçirilebilir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] dil ve bu projeyi bağımsız olarak desteklenir. Bu konu, C# ifadeleri genel bakış sağlar. [!INCLUDE[wf1](../../../includes/wf1-md.md)].
+.NET Framework 4,5 ' den başlayarak C# , WINDOWS Workflow FOUNDATION (WF) içinde ifadeler desteklenir. Visual C# Studio 2012 ' de oluşturulan yeni iş akışı projeleri .NET Framework 4,5 kullanın C# ve Visual Basic iş akışı projeleri Visual Basic ifadelerini kullanır. Visual Basic ifadelerini kullanan mevcut .NET Framework 4 iş akışı projeleri proje dilinden bağımsız olarak [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] geçirilebilir ve desteklenir. Bu konu, [!INCLUDE[wf1](../../../includes/wf1-md.md)]C# ifadelerde bir genel bakış sağlar.
 
-## <a name="using-c-expressions-in-workflows"></a>C# ifadeleri iş akışlarında kullanma
+## <a name="using-c-expressions-in-workflows"></a>İş C# akışlarında ifadeleri kullanma
 
-- [C# ifadeleri iş akışı Tasarımcısı'nda kullanma](csharp-expressions.md#WFDesigner)
+- [İş Akışı Tasarımcısı C# ifadeleri kullanma](csharp-expressions.md#WFDesigner)
 
   - [Geriye dönük uyumluluk](csharp-expressions.md#BackwardCompat)
 
-- [Kod akışlarında C# ifadeleri kullanma](csharp-expressions.md#CodeWorkflows)
+- [Kod C# iş akışlarında ifadeleri kullanma](csharp-expressions.md#CodeWorkflows)
 
-- [XAML iş akışlarında C# ifadeleri kullanma](csharp-expressions.md#XamlWorkflows)
+- [XAML C# iş akışlarında ifadeleri kullanma](csharp-expressions.md#XamlWorkflows)
 
-  - [Derlenmiş Xaml](csharp-expressions.md#CompiledXaml)
+  - [Derlenen xaml](csharp-expressions.md#CompiledXaml)
 
-  - [Bağımsız Xaml](csharp-expressions.md#LooseXaml)
+  - [Gevşek XAML](csharp-expressions.md#LooseXaml)
 
-- [C# ifadelerini kullanarak XAMLX iş akışı Hizmetleri](csharp-expressions.md#WFServices)
+- [XAMLX C# iş akışı hizmetlerinde ifadeleri kullanma](csharp-expressions.md#WFServices)
 
-### <a name="WFDesigner"></a> C# ifadeleri iş akışı Tasarımcısı'nda kullanma
+### <a name="WFDesigner"></a>İş Akışı Tasarımcısı C# ifadeleri kullanma
 
-.NET Framework 4.5 ile başlayarak C# ifadeleri, Windows Workflow Foundation (WF) desteklenir. C#.NET Framework 4.5 kullanım hedefleyen iş akışı projeleri Visual Studio 2012'de oluşturulan C# Visual Basic iş akışı projeleri Visual Basic deyimleri kullanırken ifadeler. İstenen C# ifadesini belirtmek için etiketli kutuya yazın **bir C# ifadesi girin**. Bu etiketi, etkinlik Tasarımcısı'nda veya iş akışı tasarımcısında etkinlik seçili olduğunda Özellikler penceresinde görüntülenir. Aşağıdaki örnekte, iki `WriteLine` etkinlikleri içinde yer alır bir `Sequence` içinde bir `NoPersistScope`.
+.NET Framework 4,5 ' den başlayarak C# , WINDOWS Workflow FOUNDATION (WF) içinde ifadeler desteklenir. C#Visual Studio 2012 ' de oluşturulan iş akışı projeleri .NET Framework 4,5 C# ' i hedef Visual Basic iş akışı projeleri Visual Basic ifadeler kullanır. İstenen C# ifadeyi belirtmek için,  **C# ifadeyi ifade girin**etiketli kutuya yazın. Bu etiket, tasarımcı içinde etkinlik seçildiğinde veya iş akışı tasarımcısında etkinlik olduğunda Özellikler penceresinde görüntülenir. Aşağıdaki örnekte, iki `WriteLine` etkinlik `NoPersistScope`içindeki bir `Sequence` içinde yer alır.
 
-![Otomatik olarak oluşturulan sıralı etkinlik gösteren ekran görüntüsü.](./media/csharp-expressions/auto-surround-sequence-activity.png)
+![Otomatik olarak oluşturulan bir sıra etkinliğini gösteren ekran görüntüsü.](./media/csharp-expressions/auto-surround-sequence-activity.png)
 
 > [!NOTE]
-> C# ifadeleri yalnızca Visual Studio'da desteklenir ve yeniden barındırılan iş akışı Tasarımcısı'nda desteklenmez. Yeniden barındırılan tasarımcıda desteklenen yeni WF45 özellikler hakkında daha fazla bilgi için bkz. [yeniden barındırılan iş akışı tasarımcısında yeni Workflow Foundation 4.5 özellikleri desteği](wf-features-in-the-rehosted-workflow-designer.md).
+> C#ifadeler yalnızca Visual Studio 'da desteklenir ve yeniden barındırılan iş akışı tasarımcısında desteklenmez. Yeniden barındırılan tasarımcıda desteklenen yeni WF45 özellikleri hakkında daha fazla bilgi için bkz. [yeniden barındırılan iş akışı Tasarımcısı yeni Workflow Foundation 4,5 özellikleri Için destek](wf-features-in-the-rehosted-workflow-designer.md).
 
-#### <a name="BackwardCompat"></a> Geriye dönük uyumluluk
+#### <a name="BackwardCompat"></a>Geriye dönük uyumluluk
 
-Varolan bir Visual Basic deyimleri [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] için geçirilen C# iş akışı projeleri [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] desteklenir. Visual Basic ifadeleri iş akışı Tasarımcısı'nda görüntülendiğinde, var olan Visual Basic ifadesinin metin ile değiştirilir **değer XAML ayarlandığı**, Visual Basic ifade geçerli C# sözdizimi olmadığı sürece. Visual Basic ifade geçerli C# sözdizimi, ardından ifadesi görüntülenir. Visual Basic deyimleri C# ' tan güncelleştirmek için iş akışı Tasarımcısı'nda düzenlemek ve eşdeğer C# ifadesi belirtin. Visual Basic deyimleri için C#, ancak ifadeler dönüştürülür C# ve Visual Basic geri değil iş akışı tasarımcısında güncelleştirildikten sonra güncelleştirmek için gerekli değildir.
+[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 'e geçirilmiş mevcut .NET Framework 4 C# iş akışı projelerindeki Visual Basic ifadeler desteklenir. Visual Basic ifadeleri iş akışı tasarımcısında görüntülendiğinde, Visual Basic ifadesi geçerli C# bir sözdizimi olmadığı takdirde, varolan Visual Basic IFADESININ metni **xaml 'de ayarlanmış**olarak değiştirilmiştir. Visual Basic ifadesi geçerli C# sözdizimidir, ifade görüntülenir. Visual Basic ifadelerini ' ye C#güncelleştirmek için, onları iş akışı tasarımcısında düzenleyebilir ve denk C# ifadeyi belirtebilirsiniz. Visual Basic ifadelerin C#' a güncelleştirilmesi gerekmez, ancak ifadeler ' e dönüştürüledikleri C# iş akışı tasarımcısında güncelleştirildikten sonra Visual Basic geri döndürülemez.
 
-### <a name="CodeWorkflows"></a> Kod akışlarında C# ifadeleri kullanma
+### <a name="CodeWorkflows"></a>Kod C# iş akışlarında ifadeleri kullanma
 
-C# ifadelerini desteklenir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] kod tabanlı iş akışları, ancak iş akışı çağrılmadan önce C# ifadelerini kullanarak derlenmelidir <xref:System.Activities.XamlIntegration.TextExpressionCompiler.Compile%2A?displayProperty=nameWithType>. İş akışı yazarları kullanabileceğiniz `CSharpValue` gelerek bir ifadenin temsil etmek için ve `CSharpReference` bir ifadenin lvalue temsil etmek için. Aşağıdaki örnekte, bir iş akışı ile oluşturulan bir `Assign` etkinliği ve bir `WriteLine` etkinlik yer alan bir `Sequence` etkinlik. A `CSharpReference` için belirtilen `To` bağımsız değişkeni `Assign`, ifadenin lvalue temsil eder. A `CSharpValue` için belirtilen `Value` bağımsız değişkeni `Assign`ve `Text` bağımsız değişkeni `WriteLine`, bu iki ifade için r temsil eder.
+C#ifadeler [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] kod tabanlı iş akışlarında desteklenir, ancak iş akışı çağrmadan önce, C# ifadelerin <xref:System.Activities.XamlIntegration.TextExpressionCompiler.Compile%2A?displayProperty=nameWithType>kullanılarak derlenmesi gerekir. Workflow yazarları, bir ifadenin r-değerini temsil etmek için `CSharpValue` kullanabilir ve bir ifadenin l-değerini temsil `CSharpReference`. Aşağıdaki örnekte, bir `Assign` etkinliği ve bir `Sequence` etkinliğinde bulunan `WriteLine` etkinliği ile bir iş akışı oluşturulur. `Assign``To` bağımsız değişkeni için `CSharpReference` belirtilir ve ifadenin l-değerini temsil eder. `Assign``Value` bağımsız değişkeni ve `WriteLine``Text` bağımsız değişkeni için `CSharpValue` belirtilir ve bu iki ifade için r-değeri temsil eder.
 
 ```csharp
 Variable<int> n = new Variable<int>
@@ -73,7 +73,7 @@ CompileExpressions(wf);
 WorkflowInvoker.Invoke(wf);
 ```
 
-İş akışı oluşturulur, sonra C# ifadelerini çağırarak derlenir `CompileExpressions` yardımcı yöntem ve iş akışı çağrılır. Aşağıdaki örnek, `CompileExpressions` yöntemi.
+İş akışı oluşturulduktan sonra, C# ifadeler `CompileExpressions` yardımcı yöntemi çağırarak ve sonra iş akışı çağrıldığında derlenir. Aşağıdaki örnek `CompileExpressions` yöntemidir.
 
 ```csharp
 static void CompileExpressions(Activity activity)
@@ -124,9 +124,9 @@ static void CompileExpressions(Activity activity)
 ```
 
 > [!NOTE]
-> Varsa C# ifadeleri derlenmemiş, bir <xref:System.NotSupportedException> aşağıdakine benzer bir ileti ile iş akışı çalıştırıldığında oluşturulur: `Expression Activity type 'CSharpValue`1' çalıştırmak için derleme gerektirir.  İş akışı derlendiğinden emin olun.'
+> C# İfadeler derlenmeyecekse, iş akışı aşağıdakine benzer bir iletiyle çağrıldığında bir <xref:System.NotSupportedException> oluşturulur: `Expression Activity type 'CSharpValue`1 ' çalıştırmak için derleme gerektirir.  Lütfen iş akışının derlendiğinden emin olun. '
 
-İş akışı kullanan özel kodunuz tabanlıysa `DynamicActivity`, bazı değişiklikler daha sonra `CompileExpressions` yöntemi gereklidir, aşağıdaki kod örneğinde gösterildiği gibi.
+Özel kod tabanlı iş akışınız `DynamicActivity`kullanıyorsa, aşağıdaki kod örneğinde gösterildiği gibi, `CompileExpressions` yönteminde bazı değişiklikler yapmanız gerekir.
 
 ```csharp
 static void CompileExpressions(DynamicActivity dynamicActivity)
@@ -177,33 +177,33 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
 }
 ```
 
-Çeşitli farklılıklar vardır `CompileExpressions` C# ifadelerini dinamik etkinliğinde derler aşırı yükleme.
+Dinamik bir etkinlikte C# ifadeleri derleyen `CompileExpressions` aşırı yüklemede çeşitli farklılıklar vardır.
 
-- Parametre `CompileExpressions` olduğu bir `DynamicActivity`.
+- `CompileExpressions` parametresi bir `DynamicActivity`.
 
-- Ad alanı ve tür adı kullanılarak alınır `DynamicActivity.Name` özelliği.
+- Tür adı ve ad alanı `DynamicActivity.Name` özelliği kullanılarak alınır.
 
-- `TextExpressionCompilerSettings.ForImplementation` ayarlanır `true`.
+- `TextExpressionCompilerSettings.ForImplementation` `true`olarak ayarlanır.
 
-- `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` yerine adlı `CompiledExpressionInvoker.SetCompiledExpressionRoot`.
+- `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` `CompiledExpressionInvoker.SetCompiledExpressionRoot`yerine çağrılır.
 
-Kodda ifadeleri ile çalışma hakkında daha fazla bilgi için bkz. [yazma iş akışları, etkinlikler ve ifadeler kullanarak kesinliği kod](authoring-workflows-activities-and-expressions-using-imperative-code.md).
+Koddaki ifadelerle çalışma hakkında daha fazla bilgi için, bkz. [using Iş akışları, etkinlikler ve ifadeleri, zorunlu kod kullanarak yazma](authoring-workflows-activities-and-expressions-using-imperative-code.md).
 
-### <a name="XamlWorkflows"></a> XAML iş akışlarında C# ifadeleri kullanma
+### <a name="XamlWorkflows"></a>XAML C# iş akışlarında ifadeleri kullanma
 
-C# ifadelerini XAML iş akışlarında desteklenir. Derlenmiş XAML iş akışı bir tür derlenir ve gevşek XAML iş akışı çalışma zamanı tarafından yüklenir ve iş akışı yürütüldüğünde bir etkinlik ağacına derlenir.
+C#ifadeler XAML iş akışlarında desteklenir. Derlenmiş XAML iş akışları bir türe derlenir ve gevşek XAML iş akışları çalışma zamanı tarafından yüklenir ve iş akışı yürütüldüğünde bir etkinlik ağacına derlenir.
 
-- [Derlenmiş Xaml](csharp-expressions.md#CompiledXaml)
+- [Derlenen xaml](csharp-expressions.md#CompiledXaml)
 
-- [Bağımsız Xaml](csharp-expressions.md#LooseXaml)
+- [Gevşek XAML](csharp-expressions.md#LooseXaml)
 
-#### <a name="CompiledXaml"></a> Derlenmiş Xaml
+#### <a name="CompiledXaml"></a>Derlenen xaml
 
-C# ifadeleri bir türe hedefleyen bir C# iş akışı projesi bir parçası olarak derlenen derlenmiş XAML iş akışlarında desteklenir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Derlenmiş XAML iş akışı yazma Visual Studio'da varsayılan türü olduğu ve oluşturulan C# iş akışı projeleri Visual Studio hedefleyen [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] C# ifadeleri kullanın.
+C#ifadeler, [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]hedefleyen bir C# iş akışı projesinin parçası olarak bir türe derlenen derlenmiş xaml iş akışlarında desteklenir. Derlenmiş XAML, Visual Studio 'da varsayılan iş akışı yazma türüdür ve C# Visual Studio 'da oluşturulan iş akışı projeleri [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] kullanın. C#
 
-#### <a name="LooseXaml"></a> Bağımsız Xaml
+#### <a name="LooseXaml"></a>Gevşek XAML
 
-C# ifadelerini gevşek XAML iş akışlarında desteklenir. İş akışı ana bilgisayar programı yükleyen ve gevşek XAML iş akışı çağırır hedeflemelidir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], ve <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> ayarlanmalıdır `true` (varsayılan değer `false`). Ayarlanacak <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> için `true`, oluşturun bir <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> ile örnek kendi <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> özelliğini `true`ve bunu bir parametre olarak geçiriyoruz <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>. Varsa `CompileExpressions` ayarlı değil `true`, <xref:System.NotSupportedException> aşağıdakine benzer bir ileti ile oluşturulur: `Expression Activity type 'CSharpValue`1' çalıştırmak için derleme gerektirir.  İş akışı derlendiğinden emin olun.'
+C#ifadeler gevşek XAML iş akışlarında desteklenir. Gevşek XAML iş akışını yükleyen ve çağıran iş akışı konak programı [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]hedeflemelidir ve <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> `true` olarak ayarlanması gerekir (varsayılan değer `false`). <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> `true`olarak ayarlamak için <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> özelliği `true`olarak ayarlanmış bir <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> örneği oluşturun ve <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>bir parametre olarak geçirin. `CompileExpressions` `true`olarak ayarlanmamışsa aşağıdakine benzer bir ileti içeren bir <xref:System.NotSupportedException> oluşturulur: `Expression Activity type 'CSharpValue`1 ' çalıştırmak için derleme gerektirir.  Lütfen iş akışının derlendiğinden emin olun. '
 
 ```csharp
 ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
@@ -214,11 +214,11 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;
 ```
 
-XAML iş akışları ile çalışma hakkında daha fazla bilgi için bkz. [seri hale getirme iş akışları ve etkinlikler XAML gelen ve giden](serializing-workflows-and-activities-to-and-from-xaml.md).
+XAML iş akışlarıyla çalışma hakkında daha fazla bilgi için bkz. [xaml 'de ve xaml 'de Iş akışlarını ve etkinlikleri serileştirme](serializing-workflows-and-activities-to-and-from-xaml.md).
 
-### <a name="WFServices"></a> C# ifadelerini kullanarak XAMLX iş akışı Hizmetleri
+### <a name="WFServices"></a>XAMLX C# iş akışı hizmetlerinde ifadeleri kullanma
 
-C# ifadelerini XAMLX iş akışı hizmetlerinde desteklenir. Ek bir adım gerekli değildir sonra bir iş akışı hizmeti IIS ya da WAS içinde barındırıldığında, ancak XAML iş akışı hizmeti, şirket içinde barındırılan, C# ifadelerini derlenmelidir. C# ifadelerini şirket içinde barındırılan XAMLX iş akışı hizmeti içinde derlemek için önce XAMLX dosyasına yüklemek bir `WorkflowService`ve ardından geçirmek `Body` , `WorkflowService` için `CompileExpressions` önceki açıklanan yöntemi [kullanarak C# ifadeleri iş akışlarında kod](csharp-expressions.md#CodeWorkflows) bölümü. Aşağıdaki örnekte, bir XAMLX iş akışı hizmeti yüklenir, C# ifadelerini derlenir ve sonra iş akışı hizmeti açılır ve istekleri için bekler.
+C#ifadeler XAMLX iş akışı hizmetlerinde desteklenir. Bir iş akışı hizmeti IIS 'de barındırıldığında veya ek adımlar gerekli olmadığında, ancak XAML iş akışı hizmeti kendiliğinden barındırılıyorsa, C# ifadelerin derlenmesi gerekir. Kendi kendine barındırılan C# bir xamlx iş akışı hizmetindeki ifadeleri derlemek için, önce xamlx dosyasını bir `WorkflowService`yükleyin ve ardından `WorkflowService` `Body`, [kod iş akışlarında önceki C# ifadeleri kullanma](csharp-expressions.md#CodeWorkflows) bölümünde açıklanan `CompileExpressions` yöntemine geçirin. Aşağıdaki örnekte, bir XAMLX iş akışı hizmeti yüklenir, C# ifadeler derlenir ve sonra iş akışı hizmeti açılır ve istekler için bekler.
 
 ```csharp
 // Load the XAMLX workflow service.
@@ -243,7 +243,7 @@ Console.WriteLine("Press enter to quit");
 Console.ReadLine();
 ```
 
-C# ifadelerini derlenmemiş, `Open` işlemi başarılı olur, ancak iş akışı, çağrıldığında başarısız olur. Aşağıdaki `CompileExpressions` yöntemi ile aynıdır önceki yöntem [kullanarak C# ifadeleri iş akışlarında kod](csharp-expressions.md#CodeWorkflows) bölümü.
+C# İfadeler derlenmediği zaman, `Open` işlemi başarılı olur ancak iş akışı çağrıldığında başarısız olur. Aşağıdaki `CompileExpressions` yöntemi, [kod iş akışlarında önceki C# using deyimleriyle](csharp-expressions.md#CodeWorkflows) aynı yöntemle aynıdır.
 
 ```csharp
 static void CompileExpressions(Activity activity)

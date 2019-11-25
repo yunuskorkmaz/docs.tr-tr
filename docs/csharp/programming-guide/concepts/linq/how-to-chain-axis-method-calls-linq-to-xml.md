@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: zincir ekseni Yöntem çağrıları (LINQ to XML) (C#)'
+title: Eksen yöntemi çağrılarının zinciri oluşturma (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: 3dfb2849bc2e2af9290738ed06938f80f3416f72
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ccfbf516a7fddbef357bfb0072288e250768616b
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418407"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141439"
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Nasıl yapılır: zincir ekseni Yöntem çağrıları (LINQ to XML) (C#)
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Eksen yöntemi çağrılarının zinciri oluşturma (LINQ to XML) (C#)
 Kodunuzda kullanacağınız ortak bir model, bir eksen yöntemi çağırmak ve sonra uzantı yöntemi eksenlerinden birini çağırmalıdır.  
   
  Bir öğe koleksiyonu döndüren `Elements` adında iki eksen vardır: <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> yöntemi ve <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> yöntemi. Ağaçta verilen bir derinlikte belirtilen bir adın tüm öğelerini bulmak için bu iki ekseni birleştirebilirsiniz.  

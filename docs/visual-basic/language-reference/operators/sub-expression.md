@@ -1,20 +1,20 @@
 ---
-title: Alt İfade (Visual Basic)
+title: Alt İfade
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [Visual Basic], sub expression
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: 2330b410f54b54d8f6cb7d8ad6f9b39a3f4d31bc
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d284e629ea0b0a4e9b6eb9e098612bb07c38723b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701342"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350906"
 ---
 # <a name="sub-expression-visual-basic"></a>Alt İfade (Visual Basic)
-Bir altyordam lambda ifadesi tanımlayan parametreleri ve kodu bildirir.  
+Declares the parameters and code that define a subroutine lambda expression.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -30,30 +30,30 @@ End Sub
   
 |Terim|Tanım|  
 |---|---|  
-|`parameterlist`|İsteğe bağlı. Yordamın parametrelerini temsil eden yerel değişken adlarının bir listesi. Liste boş olduğunda bile parantezler mevcut olmalıdır. Daha fazla bilgi için bkz. [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`statement`|Gerekli. Tek bir ifade.|  
-|`statements`|Gerekli. Deyimler listesi.|  
+|`parameterlist`|İsteğe bağlı. A list of local variable names that represent the parameters of the procedure. The parentheses must be present even when the list is empty. For more information, see [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`statement`|Gerekli. A single statement.|  
+|`statements`|Gerekli. A list of statements.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- *Lambda ifadesi* , bir ada sahip olmayan ve bir veya daha fazla deyimi yürüten bir altyordam. @No__t-0 ' a bir bağımsız değişken hariç, bir temsilci türü kullanabileceğiniz her yerde lambda ifadesini kullanabilirsiniz. Temsilciler ve temsilcilerle lambda ifadelerinin kullanımı hakkında daha fazla bilgi için bkz. [Delegate deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md) ve [gevşek temsilci dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ A *lambda expression* is a subroutine that does not have a name and that executes one or more statements. You can use a lambda expression anywhere that you can use a delegate type, except as an argument to `RemoveHandler`. For more information about delegates, and the use of lambda expressions with delegates, see [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) and [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Lambda İfadesi Sözdizimi  
- Bir lambda ifadesinin sözdizimi, standart bir alt yordamın sözdizimine benzer. Farklar şunlardır:  
+ The syntax of a lambda expression resembles that of a standard subroutine. The differences are as follows:  
   
-- Lambda ifadesinin adı yoktur.  
+- A lambda expression does not have a name.  
   
-- Lambda ifadesi `Overloads` veya `Overrides` gibi bir değiştiriciye sahip olamaz.  
+- A lambda expression cannot have a modifier, such as `Overloads` or `Overrides`.  
   
-- Tek satırlık lambda ifadesinin gövdesi bir ifade değil, deyim olmalıdır. Gövde, bir alt yordam çağrısından oluşabilir, ancak bir işlev yordamına çağrı değildir.  
+- The body of a single-line lambda expression must be a statement, not an expression. The body can consist of a call to a sub procedure, but not a call to a function procedure.  
   
-- Bir lambda ifadesinde, tüm parametrelerin belirtilen veri türleri olmalıdır veya tüm parametrelerin çıkarsanmalıdır.  
+- In a lambda expression, either all parameters must have specified data types or all parameters must be inferred.  
   
-- İsteğe bağlı ve `ParamArray` parametrelerine Lambda ifadelerinde izin verilmez.  
+- Optional and `ParamArray` parameters are not permitted in lambda expressions.  
   
-- Lambda ifadelerinde genel parametrelere izin verilmez.  
+- Generic parameters are not permitted in lambda expressions.  
   
 ## <a name="example"></a>Örnek  
- Aşağıda, konsola bir değer yazan bir lambda ifadesinin örneği verilmiştir. Örnek, bir altyordam için hem tek satırlı hem çok satırlı lambda ifadesi sözdizimini gösterir. Daha fazla örnek için bkz. [lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Following is an example of a lambda expression that writes a value to the console. The example shows both the single-line and multiline lambda expression syntax for a subroutine. For more examples, see [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   

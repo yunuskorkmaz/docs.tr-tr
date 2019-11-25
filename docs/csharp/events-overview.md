@@ -1,16 +1,16 @@
 ---
-title: Olaylara Giriş
+title: Olaylara giriş
 description: Bu genel bakışta olaylar için .NET Core ve dil tasarımı hedeflerimizin olayları hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: b1fd2ebe2ae91b55c9179f280d8894f6b40ced9b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ceae2b9319a1de9f01102987735c7db2c2883f18
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771912"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138525"
 ---
-# <a name="introduction-to-events"></a>Olaylara Giriş
+# <a name="introduction-to-events"></a>Olaylara giriş
 
 [Öncekini](delegates-patterns.md)
 
@@ -26,13 +26,13 @@ Bir olaya abone olmak Ayrıca iki nesne (olay kaynağı ve olay havuzu) arasınd
 
 ## <a name="design-goals-for-event-support"></a>Olay desteği için tasarım hedefleri
 
-Olaylar için dil tasarımı bu hedefleri hedefler.
+Olaylar için dil tasarımı bu hedefleri hedefler:
 
-İlk olarak, bir olay kaynağı ve olay havuzu arasında çok az sayıda bağlantısı etkinleştirin. Bu iki bileşen aynı kuruluş tarafından yazılamaz ve tamamen farklı zamanlamalarda bile güncelleştirilemeyebilir.
+- Bir olay kaynağı ve olay havuzu arasında çok az sayıda bağlantısı etkinleştirin. Bu iki bileşen aynı kuruluş tarafından yazılamaz ve tamamen farklı zamanlamalarda bile güncelleştirilemeyebilir.
 
-İkinci olarak, bir olaya abone olmak ve aynı olaydan aboneliği kaldırmak çok basittir.
+- Bir olaya abone olmak ve aynı olaydan aboneliği kaldırmak çok basittir.
 
-Son olarak, olay kaynakları birden çok olay abonesini desteklemelidir. Ayrıca, ekli olay abonesi olmadan da destek sağlamalıdır.
+- Olay kaynakları birden çok olay abonesini desteklemelidir. Ayrıca, ekli olay abonesi olmadan da destek sağlamalıdır.
 
 Olayların hedeflerinin temsilcilerle ilgili hedeflere çok benzediğinden emin olabilirsiniz.
 Bu nedenle, olay dili desteğinin temsilci dili desteği üzerine kurulmuştur.
@@ -69,7 +69,7 @@ EventHandler<FileListArgs> onProgress = (sender, eventArgs) =>
 fileLister.Progress += onProgress;
 ```
 
-Handler yöntemi genellikle yukarıda gösterildiği gibi ' on ' öneki ve olay adından gelir.
+Handler yöntemi, yukarıda gösterildiği gibi genellikle ' on ' önekini ve olay adını izler.
 
 `-=` işlecini kullanarak aboneliğinizi kaldırabilirsiniz:
 

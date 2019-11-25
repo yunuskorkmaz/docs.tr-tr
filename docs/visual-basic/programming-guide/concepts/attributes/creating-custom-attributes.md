@@ -1,17 +1,17 @@
 ---
-title: Özel öznitelikler oluşturma (Visual Basic)
+title: Özel Öznitelikler Oluşturma
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 3b1b03f69229bd4d824d6fff734b83400c2aab44
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 773a3e8e974f37a1554892dd3441c115681c5bae
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524292"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350153"
 ---
-# <a name="creating-custom-attributes-visual-basic"></a>Özel öznitelikler oluşturma (Visual Basic)
+# <a name="creating-custom-attributes-visual-basic"></a>Creating Custom Attributes (Visual Basic)
 
-Meta verilerde hızlı ve kolay bir şekilde öznitelik tanımları tanımlamayı sağlayan, <xref:System.Attribute> doğrudan veya dolaylı olarak türetilen bir sınıf olan bir öznitelik sınıfı tanımlayarak kendi özel öznitelerinizi oluşturabilirsiniz. Türleri, türünü yazan programcının adıyla etiketlemek istediğinizi varsayalım. Özel bir `Author` öznitelik sınıfı tanımlayabilirsiniz:
+You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy. Suppose you want to tag types with the name of the programmer who wrote the type. You might define a custom `Author` attribute class:
 
 ```vb
 <System.AttributeUsage(System.AttributeTargets.Class Or
@@ -27,9 +27,9 @@ Public Class Author
 End Class
 ```
 
-Sınıf adı özniteliğin adı, `Author`. @No__t_0 türetilir, bu nedenle özel bir öznitelik sınıfıdır. Oluşturucunun parametreleri özel özniteliğin konumsal parametreleridir. Bu örnekte, `name` konumsal bir parametredir. Tüm genel okuma/yazma alanları veya özellikleri parametreler olarak adlandırılır. Bu durumda, `version` tek parametre olarak adlandırılır. @No__t_1 özniteliğini yalnızca sınıf ve `Structure` bildirimlerinde geçerli hale getirmek için `AttributeUsage` özniteliğinin kullanımını unutmayın.
+The class name is the attribute's name, `Author`. It is derived from `System.Attribute`, so it is a custom attribute class. The constructor's parameters are the custom attribute's positional parameters. In this example, `name` is a positional parameter. Any public read-write fields or properties are named parameters. In this case, `version` is the only named parameter. Note the use of the `AttributeUsage` attribute to make the `Author` attribute valid only on class and `Structure` declarations.
 
-Bu yeni özniteliği şu şekilde kullanabilirsiniz:
+You could use this new attribute as follows:
 
 ```vb
 <Author("P. Ackerman", Version:=1.1)>
@@ -38,7 +38,7 @@ Class SampleClass
 End Class
 ```
 
-`AttributeUsage` adlandırılmış bir parametreye sahiptir ve bu, özel bir özniteliği tek veya çoklu kullanımı yapmak için `AllowMultiple`. Aşağıdaki kod örneğinde, Multiuse özniteliği oluşturulur.
+`AttributeUsage` has a named parameter, `AllowMultiple`, with which you can make a custom attribute single-use or multiuse. In the following code example, a multiuse attribute is created.
 
 ```vb
 ' multiuse attribute
@@ -49,7 +49,7 @@ Public Class Author
     Inherits System.Attribute
 ```
 
-Aşağıdaki kod örneğinde, aynı türde birden çok öznitelik bir sınıfa uygulanır.
+In the following code example, multiple attributes of the same type are applied to a class.
 
 ```vb
 <Author("P. Ackerman", Version:=1.1),
@@ -61,14 +61,14 @@ End Class
 ```
 
 > [!NOTE]
-> Öznitelik sınıfınız bir özellik içeriyorsa, bu özellik oku-yaz olmalıdır.
+> If your attribute class contains a property, that property must be read-write.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Reflection>
-- [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic Programming Guide](../../../../visual-basic/programming-guide/index.md)
 - [Özel Öznitelikler Yazma](../../../../standard/attributes/writing-custom-attributes.md)
-- [Yansıma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Öznitelikler (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Yansıma kullanarak özniteliklere erişme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Attributes (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
+- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
 - [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

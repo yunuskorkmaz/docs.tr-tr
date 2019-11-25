@@ -1,49 +1,49 @@
 ---
 title: F# kod biçimlendirme yönergeleri
-description: Biçimlendirme kuralları bilgi F# kod.
-ms.date: 02/08/2019
-ms.openlocfilehash: 8be5337d3f593c7e5a2f32cb7231cb7f759fb509
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+description: Kod biçimlendirme F# yönergeleri hakkında bilgi edinin.
+ms.date: 11/04/2019
+ms.openlocfilehash: 895c8211731b47bd4c59d762d5806cfc1bfe232d
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833898"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089311"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# kod biçimlendirme yönergeleri
 
-Bu makalede kod biçimlendirme için yönergeler sunar. böylece, F# kodu:
+Bu makalede, kodunuzun biçimi için kodunuzun F# nasıl formatılmasıyla ilgili yönergeler sunulmaktadır:
 
-* Genel olarak daha okunaklı görüntülenebilir
-* Visual Studio Araçları ve diğer düzenleyiciler biçimlendirme tarafından uygulanan kuralları uygun olan
-* Benzer şekilde diğer kod çevrimiçi
+* Genellikle daha okunaklı olarak görüntülendi
+* , Visual Studio ve diğer düzenleyicilerde biçimlendirme araçları tarafından uygulanan kurallara uygun.
+* Çevrimiçi diğer koda benzer
 
-Bu kılavuzu temel alan [kapsamlı bir kılavuz F# biçimlendirme kuralları](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) tarafından [Anh-Dung Phan](https://github.com/dungpa).
+Bu yönergeler, kuralları [Anh-Dung Phan](https://github.com/dungpa)göre [biçimlendirmeye yönelik F# kapsamlı bir kılavuza](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) dayanır.
 
-## <a name="general-rules-for-indentation"></a>Girinti için genel kurallar
+## <a name="general-rules-for-indentation"></a>Girintileme için genel kurallar
 
-F#önemli boşluk, varsayılan olarak kullanır. Aşağıdaki yönergeleri Bu getirebilir bazı zorluklar juggle nasıl dair yönergeler sağlamak üzere tasarlanmıştır.
+F#Varsayılan olarak önemli boşluk kullanır. Aşağıdaki kılavuzlar, bu, uygulayabileceğine dair bazı güçlüklerin nasıl ele alınacağını gösteren yönergeler sağlamaya yöneliktir.
 
-### <a name="using-spaces"></a>Alanları kullanma
+### <a name="using-spaces"></a>Boşluk kullanma
 
-Girinti gerekli olduğunda, boşluk, sekme değil kullanmanız gerekir. En az bir alan gereklidir. Kuruluşunuz için Girintileme kullanmak için boşluk sayısını belirtmek için kodlama standartları oluşturabilirsiniz. girinti girinti oluştuğu her düzeyde iki, üç veya dört boşluk tipiktir.
+Girintileme gerekli olduğunda, sekmeler değil, boşluk kullanmanız gerekir. En az bir alan gereklidir. Kuruluşunuz, girintileme için kullanılacak boşluk sayısını belirtmek için kodlama standartları oluşturabilir; Her bir düzeyde girintileme her zamanki iki, üç veya dört boş girinti.
 
-**Girinti başına 4 alan öneririz.**
+**Girintileme başına 4 boşluk öneriyoruz.**
 
-Bu, programların girinti öznel bir konudur belirtti. Değişimleri Tamam, ancak izlemeniz gereken ilk kural *girinti tutarlılığını*. Genel olarak kabul edilen bir girinti stilini seçin ve kod temelinizde sistematik olarak kullanın.
+Bu şekilde, programların girintileme öznel bir önemi olur. Çeşitlemeler Tamam, ancak izlemeniz gereken ilk kural *girintileme tutarlılığından*oluşur. Genellikle kabul edilen bir girintileme stili seçin ve kod tabanınızın tamamında sistematik olarak kullanın.
 
 ## <a name="formatting-white-space"></a>Boşluk biçimlendirme
 
-F#boşluk büyük/küçük harfe duyarlıdır. Çoğu semantiğe boşluk tarafından uygun girintisini ele alınmaktadır ancak dikkate alınması gereken bazı hususlar vardır.
+F#boşluk duyarlıdır. Beyaz boşluktan çok sayıda anlambilim doğru girintileme kapsamında olmakla birlikte göz önünde bulundurmanız gereken bazı şeyler vardır.
 
-### <a name="formatting-operators-in-arithmetic-expressions"></a>Biçimlendirme işleçleri aritmetik ifadelerde
+### <a name="formatting-operators-in-arithmetic-expressions"></a>Aritmetik İfadelerdeki biçimlendirme işleçleri
 
-Her zaman ikili aritmetik ifadeler beyaz boşluk kullanın:
+Her zaman ikili aritmetik ifadelerin etrafında boşluk kullanın:
 
 ```fsharp
 let subtractThenAdd x = x - 1 + 3
 ```
 
-Birli `-` işleçleri negating değeri her zaman olmalıdır hemen izleyin:
+Birli `-` işleçleri, her zaman yoksayıdıkları değere sahip olmalıdır:
 
 ```fsharp
 // OK
@@ -53,18 +53,18 @@ let negate x = -x
 let negateBad x = - x
 ```
 
-Sonra bir boşluk karakteri ekleme `-` işleci diğerleri için Kafa karışıklığına neden olabilir.
+`-` işlecinden sonra bir boşluk karakteri eklemek diğerleri için karışıklık oluşmasına neden olabilir.
 
-Özet olarak, her zaman önemlidir:
+Özetle, her zaman için önemlidir:
 
-* İkili işleçler boşluk ile çevreleyen
-* Hiçbir zaman bir birli işleç sonra boşluk sahip
+* Boşluk ile ikili işleçler çevreleme
+* Birli işleçten sonra hiç bir sondaki boşluk yok
 
-İkili aritmetik işleç kılavuz özellikle önemlidir. Bir ikili kapsamak başarısız olan `-` bazı biçimlendirme seçeneklerini ile birleştirildiğinde işleci, bir tekil yorumlanması için açabilir `-`.
+İkili aritmetik işleç Kılavuzu özellikle önemlidir. Belirli biçimlendirme seçenekleriyle birleştirildiğinde bir ikili `-` işlecinin sarlamaması, tek bir `-`olarak yorumlanmasına yol açabilir.
 
-### <a name="surround-a-custom-operator-definition-with-white-space"></a>Boşluk içeren bir özel işleç tanımını çevreleyen
+### <a name="surround-a-custom-operator-definition-with-white-space"></a>Bir özel operatör tanımını boşluk ile çevreleyin
 
-Her zaman bir işleç tanımını kapsamak için boşluk kullanın:
+Her zaman bir operatör tanımını çevrelemek için boşluk kullanın:
 
 ```fsharp
 // OK
@@ -74,11 +74,11 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-İle başlayan herhangi bir özel işleç için `*` ve birden fazla karakter olan, derleyici belirsizlik önlemek için tanım başlangıcına bir beyaz alanı eklemeniz gerekir. Bu nedenle, yalnızca tek bir boşluk karakteri ile tüm işleçleri tanımlarını çevreleyen öneririz.
+`*` ile başlayan ve birden fazla karakter içeren herhangi bir özel operatör için, bir derleyici belirsizliğini önlemek için tanımın başlangıcına boşluk eklemeniz gerekir. Bu nedenle, tek bir boşluk karakteriyle tüm işleçlerin tanımlarını çevrelemeyi öneririz.
 
-### <a name="surround-function-parameter-arrows-with-white-space"></a>İşlev parametresi oklar boşluk ile çevreleyen
+### <a name="surround-function-parameter-arrows-with-white-space"></a>Boşluk işlevi parametre okları boşluk ile
 
-Bir işlev imzası tanımlarken, beyaz boşluk kullanmak `->` sembol:
+Bir işlevin imzasını tanımlarken, `->` sembolü etrafında boşluk kullanın:
 
 ```fsharp
 // OK
@@ -88,9 +88,9 @@ type MyFun = int -> int -> string
 type MyFunBad = int->int->string
 ```
 
-### <a name="surround-function-arguments-with-white-space"></a>İşlev bağımsız değişkenleri boşluk ile çevreleyen
+### <a name="surround-function-arguments-with-white-space"></a>Boşluk ile çevreleme işlevi bağımsız değişkenleri
 
-Bir işlev tanımlarken, her bağımsız değişken beyaz boşluk kullanın.
+Bir işlevi tanımlarken, her bağımsız değişken etrafında boşluk kullanın.
 
 ```fsharp
 // OK
@@ -100,11 +100,34 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
+### <a name="place-parameters-on-a-new-line-for-very-long-member-definitions"></a>Çok uzun üye tanımları için parametreleri yeni bir satıra yerleştir
+
+Çok uzun bir üye tanımınız varsa, parametreleri yeni satırlara yerleştirip bir kapsamı girintileyin.
+
+```fsharp
+type C() =
+    member _.LongMethodWithLotsOfParameters(
+        aVeryLongType: AVeryLongTypeThatYouNeedToUse
+        aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse
+        aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+        // ... the body of the method follows
+```
+
+Bu, oluşturucular için de geçerlidir:
+
+```fsharp
+type C(
+    aVeryLongType: AVeryLongTypeThatYouNeedToUse
+    aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse
+    aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+    // ... the body of the class follows
+```
+
 ### <a name="type-annotations"></a>Tür ek açıklamaları
 
-#### <a name="right-pad-function-argument-type-annotations"></a>Sağ paneli işlevi bağımsız değişkeni tür ek açıklamaları
+#### <a name="right-pad-function-argument-type-annotations"></a>Sağ panel işlevi bağımsız değişken türü ek açıklamaları
 
-Tür ek açıklamaları değişkenleriyle tanımlarken, sonra boşluk kullanmak `:` sembol:
+Tür ek açıklamalarıyla bağımsız değişkenler tanımlarken, `:` simgesinden sonra boşluk kullanın:
 
 ```fsharp
 // OK
@@ -114,9 +137,9 @@ let complexFunction (a: int) (b: int) c = a + b + c
 let complexFunctionBad (a :int) (b :int) (c:int) = a + b + c
 ```
 
-#### <a name="surround-return-type-annotations-with-white-space"></a>Surround dönüş türü ek açıklamaları boşluk ile
+#### <a name="surround-return-type-annotations-with-white-space"></a>Boşluk içeren surround dönüş türü ek açıklamaları
 
-Bir let bağlı işlev veya değer türü ek açıklaması içinde (dönüş türü bir işlev söz konusu olduğunda), önce ve sonra boşluk kullanmak `:` sembol:
+Bir izin-bağlantılı işlevinde veya değer türü ek açıklamasında (bir işlev durumunda dönüş türü), `:` simgesinden önce ve sonra boşluk kullanın:
 
 ```fsharp
 // OK
@@ -128,16 +151,16 @@ let expensiveToComputeBad2 :int = 2
 let myFunBad (a: decimal) b c:decimal = a + b + c
 ```
 
-## <a name="formatting-blank-lines"></a>Boş satırlar biçimlendirme
+## <a name="formatting-blank-lines"></a>Boş satırları biçimlendirme
 
-* Ayrı en üst düzey işlev ve sınıf tanımları iki boş satırlar.
-* Yöntemi tanımları bir sınıf içinde tek bir boş satır tarafından ayrılır.
-* Ek boş satırlar (gerektiğinde) ilgili işlev gruplarını birbirinden ayırmak için kullanılabilir. Boş satırlar bir sürü ilgili one-liners (örneğin, sahte uygulamaları kümesi) arasında atlanabilir.
-* Boş satırlar işlevleri'nde gerektiğinde, mantıksal bölümler belirtmek için kullanın.
+* En üst düzey işlev ve sınıf tanımlarını iki boş satır ile ayırın.
+* Bir sınıf içindeki yöntem tanımları, tek bir boş satırla ayrılır.
+* İlgili işlevlerin gruplarını ayırmak için fazladan boş satırlar kullanılabilir (gelişigüzel). Bir arada ilgili tek bir grup (örneğin, bir kukla uygulamalar kümesi) arasında boş satırlar atlanabilir.
+* Mantıksal bölümleri göstermek için işlevlerde boş satırları gelişigüzel bir şekilde kullanın.
 
-## <a name="formatting-comments"></a>Açıklamalar Biçimlendirme
+## <a name="formatting-comments"></a>Biçimlendirme açıklamaları
 
-Genellikle birden çok çift eğik çizgi açıklamalarını derinlikli ML stil bloğu açıklamaları tercih eder.
+Genellikle, ML stili blok açıklamaları üzerinde birden çok çift eğik açıklama tercih eder.
 
 ```fsharp
 // Prefer this style of comments when you want
@@ -149,7 +172,7 @@ Genellikle birden çok çift eğik çizgi açıklamalarını derinlikli ML stil 
 *)
 ```
 
-Satır içi açıklamalara ilk harfini büyük harfe.
+Satır içi yorumların ilk harfi büyük harfle yazılmalıdır.
 
 ```fsharp
 let f x = x + 1 // Increment by one.
@@ -157,9 +180,9 @@ let f x = x + 1 // Increment by one.
 
 ## <a name="naming-conventions"></a>Adlandırma kuralları
 
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>CamelCase sınıfı bağlı, ifade bağlı ve bağlama deseni değerleri ve işlevleri için kullanın.
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Sınıf bağlantılı, ifadeye göre ve kalıp bağlantılı değerler ve işlevler için camelCase kullanın
 
-Sık karşılaşılan ve kabul edilen F# tüm adları desen veya yerel değişkenler olarak bağlı ve işlev tanımları camelCase stili.
+Yerel değişkenler veya kalıp eşleşmeleri F# ve işlev tanımları ile bağlantılı tüm adlar Için camelCase kullanmak için ortak ve kabul edilebilir bir stil.
 
 ```fsharp
 // OK
@@ -172,7 +195,7 @@ let addIAndJ I J = I+J
 let AddIAndJ i j = i + j
 ```
 
-Yerel olarak bağlı işlevler sınıflardaki camelCase de kullanmalısınız.
+Sınıflarda yerel olarak bağlantılı işlevlerin de camelCase kullanması gerekir.
 
 ```fsharp
 type MyClass() =
@@ -186,9 +209,9 @@ type MyClass() =
     member x.Result = doSomething()
 ```
 
-### <a name="use-camelcase-for-module-bound-public-functions"></a>Genel modül bağlı işlevler için camelCase kullanın
+### <a name="use-camelcase-for-module-bound-public-functions"></a>Modül bağlantılı ortak işlevler için camelCase kullanın
 
-Bir modül bağlı işlev genel API parçası olduğunda, camelCase kullanmanız gerekir:
+Modül bağlantılı bir işlev ortak bir API 'nin parçasıysa, camelCase kullanmalıdır:
 
 ```fsharp
 module MyAPI =
@@ -197,22 +220,22 @@ module MyAPI =
     let publicFunctionTwo param1 param2 param3 = ...
 ```
 
-### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>İç ve özel modül bağlı değerleri ve işlevleri için camelCase kullanın
+### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>İç ve özel modüle yönelik değerler ve işlevler için camelCase kullanın
 
-CamelCase aşağıdakiler dahil olmak üzere özel modül bağlı değerleri için kullanın:
+Aşağıdakiler de dahil olmak üzere, özel modül bağlantılı değerler için camelCase kullanın:
 
-* Komut geçici işlevleri
+* Betiklerdeki geçici işlevler
 
-* Değerleri modülü veya türü iç uygulama yapma
+* Modül veya türün iç uygulamasını oluşturan değerler
 
 ```fsharp
 let emailMyBossTheLatestResults =
     ...
 ```
 
-### <a name="use-camelcase-for-parameters"></a>CamelCase parametrelerini kullanın.
+### <a name="use-camelcase-for-parameters"></a>Parametreler için camelCase kullanın
 
-Tüm parametreler camelCase .NET adlandırma kurallarına uygun olarak kullanmanız gerekir.
+Tüm parametrelerin, .NET adlandırma kurallarına uygun olarak camelCase kullanması gerekir.
 
 ```fsharp
 module MyModule =
@@ -222,9 +245,9 @@ type MyClass() =
     member this.MyMethod(paramOne, paramTwo) = ...
 ```
 
-### <a name="use-pascalcase-for-modules"></a>Modüller için PascalCase kullan
+### <a name="use-pascalcase-for-modules"></a>Modüller için PascalCase kullanın
 
-(Üst düzey, iç, özel, iç içe geçmiş) tüm modülleri PascalCase kullanmanız gerekir.
+Tüm modüller (üst düzey, iç, özel, iç içe) PascalCase kullanmalıdır.
 
 ```fsharp
 module MyTopLevelModule
@@ -236,9 +259,9 @@ module Helpers =
     ...
 ```
 
-### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>Tür bildirimleri, üyeleri ve etiketler için PascalCase kullanın
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>Tür bildirimleri, Üyeler ve Etiketler için PascalCase kullanın
 
-Sınıfları, arabirimleri, yapılar, numaralandırmalar, temsilciler, kayıtlar ve ayrılmış birleşimler tüm PascalCase ile adlandırılmalıdır. Üye türleri ve kayıtları ve ayrılmış birleşimler için etiketleri içinde PascalCase de kullanmalısınız.
+Sınıflar, arabirimler, yapılar, numaralandırmalar, temsilciler, kayıtlar ve ayırt edici birleşimler PascalCase ile adlandırılmalıdır. Kayıt ve ayrılmış birleşimler için türler ve Etiketler içindeki Üyeler PascalCase de kullanmalıdır.
 
 ```fsharp
 type IMyInterface =
@@ -256,19 +279,19 @@ type SchoolPerson =
     | Administrator
 ```
 
-### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>.NET için iç yapılar için PascalCase kullanın
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>.NET 'e iç yapılar için PascalCase kullanın
 
-Ad alanları, özel durumlar, olayları ve proje /`.dll` adları PascalCase de kullanmalıdır. Yalnızca bu diğer .NET dilleri tüketicilere daha doğal tüketime yapar, ayrıca karşılaşma olasılığı yüksek olan .NET adlandırma kuralları ile tutarlı olur.
+Ad alanları, özel durumlar, olaylar ve proje/`.dll` adları PascalCase ' i de kullanmalıdır. Bu, diğer .NET dillerinden gelen tüketimin tüketicilere daha doğal bir fikir sunmasına değil, büyük olasılıkla karşılaşabileceğiniz .NET adlandırma kurallarıyla de tutarlıdır.
 
-### <a name="avoid-underscores-in-names"></a>Adları alt çizgi kaçının
+### <a name="avoid-underscores-in-names"></a>Adlarda alt çizgileri önleyin
 
-Tarihsel olarak, bazı F# kitaplıkları adları alt çizgi kullanılan. Kısmen, .NET adlandırma kuralları ile çakışıyor çünkü ancak bu artık yaygın olarak, kabul edilir. Bununla birlikte, bazı F# programcılar kullanın alt çizgi yoğun, kısmen geçmiş nedenlerle ve dayanıklılık ve saygı önemlidir. Ancak, bir seçeneğiniz mi kullanılacağını hakkında başkaları tarafından stili genellikle yanıtlamadığı unutmayın.
+Geçmişte, bazı F# kitaplıklarda adlarda alt çizgiler kullanıldı. Ancak, bu, kısmen kabul edilmez, kısmen de .NET adlandırma kurallarına çakışıyor. Bu şekilde, bazı F# programcılar büyük ölçüde, kısmen geçmiş nedenlerle alt çizgi kullanır ve tolerans ve saygı önemli öneme sahiptir. Bununla birlikte, stilin genellikle onu kullanıp kullanmayacağınızı belirten bir seçeneğe sahip olan diğerlerinin beğenmediğini unutmayın.
 
-Bazı özel durumlar, alt çizgi yaygın olduğu yerel bileşenleriyle birlikte içerir.
+Bazı özel durumlar yerel bileşenlerle birlikte çalışmaya dahildir ve alt çizgiler çok yaygındır.
 
-### <a name="use-standard-f-operators"></a>Kullanım standart F# işleçleri
+### <a name="use-standard-f-operators"></a>Standart F# işleçleri kullanma
 
-Aşağıdaki işleçleri tanımlanan F# standart kitaplığı ve tanımlama eşdeğerleri yerine kullanılmalıdır. Bu kod daha okunabilir ve kullanılan deyimsel bir hale gelir gibi bu işleçleri kullanarak önerilir. Arka plan OCaml veya işlev başka bir programlama dilinde geliştiricilere, farklı deyimleri için alışkın olabilir. Aşağıdaki liste önerilen özetler F# işleçleri.
+Aşağıdaki işleçler F# standart kitaplıkta tanımlanmıştır ve eşdeğerleri tanımlamak yerine kullanılmalıdır. Bu işleçlerin kullanılması, kodun daha okunaklı ve farklı hale getirme eğilimi için önerilir. OCaml veya diğer işlevsel programlama dilinde arka plan içeren geliştiriciler farklı ıoms 'ye alışkın olabilir. Aşağıdaki listede önerilen F# işleçler özetlenmektedir.
 
 ```fsharp
 x |> f // Forward pipeline
@@ -288,23 +311,23 @@ x &&& y // Bitwise and, also for working with “flags” enumeration
 x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 ```
 
-### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Genel türler için öneki sözdizimini kullanın (`Foo<T>`) sonek söz dizimi yerine (`T Foo`)
+### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Sonek sözdizimi (`T Foo`) içinde genel türler (`Foo<T>`) için önek sözdizimini kullanın
 
-F#genel türler adlandırma iki sonek ML stili devralır (örneğin, `int list`) öneki .NET stili yanı sıra (örneğin, `list<int>`). Tercih ettiğiniz beş belirli türlerini hariç .NET stili:
+F#, genel türleri (örneğin, `int list`) ve önek .NET stili (örneğin, `list<int>`) adlandırmanın sonek ML stilini devralır. Beş özel tür hariç .NET stilini tercih edin:
 
-1. İçin F# listeleri, sonek biçimi kullanın: `int list` yerine `list<int>`.
-2. İçin F# seçenekleri, sonek biçimi kullanın: `int option` yerine `option<int>`.
-3. İçin F# değer seçenekleri sonek biçimi kullanın: `int voption` yerine `voption<int>`.
-4. İçin F# diziler, söz dizimi adı kullanın `int[]` yerine `int array` veya `array<int>`.
-5. Başvuru hücreleri için kullanmak `int ref` yerine `ref<int>` veya `Ref<int>`.
+1. Listeler F# için sonek biçimini kullanın: `list<int>`yerine `int list`.
+2. Seçenekler F# için sonek biçimini kullanın: `option<int>`yerine `int option`.
+3. Değer F# seçenekleri için sonek biçimini kullanın: `voption<int>`yerine `int voption`.
+4. Diziler F# için `int array` veya `array<int>`yerine sözdizimsel adı `int[]` kullanın.
+5. Başvuru hücreleri için `ref<int>` veya `Ref<int>`yerine `int ref` kullanın.
 
-Önek biçimi diğer tüm türleri için kullanın.
+Diğer tüm türler için önek formunu kullanın.
 
-## <a name="formatting-tuples"></a>Diziler biçimlendirme
+## <a name="formatting-tuples"></a>Tanımlama gruplarını biçimlendirme
 
-Parantez içine alınmış bir tanımlama grubu örneklemesine olmalıdır ve sınırlandırma virgül içinde tek bir boşluk, örneğin gelmelidir: `(1, 2)`, `(x, y, z)`.
+Tanımlama grubu örneklemesi parantez içine alınmalıdır ve içindeki sınırlandırma virgüllerin arkasından tek bir boşluk gelmelidir, örneğin: `(1, 2)`, `(x, y, z)`.
 
-Parantez içinde tanımlama desen eşleştirme atlamak için yaygın olarak kabul edilir:
+Tanımlama gruplarının düzeniyle eşleştirilirken parantezleri atlamak için genellikle kabul edilir:
 
 ```fsharp
 let (x, y) = z // Destructuring
@@ -317,7 +340,7 @@ match x, y with
 | x, y -> 1
 ```
 
-Tanımlama grubu işlevinin dönüş değerini ise parantez atlamak için yaygın olarak kabul edilir:
+Kayıt düzeni bir işlevin dönüş değeri ise ayraçları atlamak için de kabul edilir:
 
 ```fsharp
 // OK
@@ -327,11 +350,11 @@ let update model msg =
     | _ -> model, [ msg ]
 ```
 
-Özet olarak, parantez içine alınmış demet örneklemeleri tercih eder, ancak tanımlama grubu desen eşleştirme veya bir dönüş değeri için kullanılırken, parantez önlemek ince değerlendirilir.
+Özet ' te, parantez içine alınmış demet örneklemeleri tercih eder, ancak kalıp eşleme veya dönüş değeri için tanımlama grupları kullanıldığında, ayraçları önlemek için ince olarak kabul edilir.
 
-## <a name="formatting-discriminated-union-declarations"></a>Ayırt edici birleşim bildirimleri biçimlendirme
+## <a name="formatting-discriminated-union-declarations"></a>Ayırt edici birleşim bildirimlerini biçimlendirme
 
-Girinti `|` 4 boşluklarla tür tanımı:
+Tür tanımındaki `|` 4 boşlukla Girintile:
 
 ```fsharp
 // OK
@@ -347,9 +370,9 @@ type Volume =
 | ImperialPint of float
 ```
 
-## <a name="formatting-discriminated-unions"></a>Ayrılmış birleşimler biçimlendirme
+## <a name="formatting-discriminated-unions"></a>Ayırt edici birleşimleri biçimlendirme
 
-Örneklenen ayrılmış birden çok satırda ayrılmış birleşimler, girinti ile yeni bir kapsam içerdiği veri vermeniz gerekir:
+Birden çok satıra bölünen oluşturulmuş ayrılmış birleşimler, içerilen verileri girintileme ile yeni bir kapsam olarak vermelidir:
 
 ```fsharp
 let tree1 =
@@ -358,7 +381,7 @@ let tree1 =
          BinaryNode(BinaryValue 3, BinaryValue 4))
 ```
 
-Kapatma parantezinden ayrıca yeni bir satıra olabilir:
+Kapanış parantezi de yeni bir satır üzerinde olabilir:
 
 ```fsharp
 let tree1 =
@@ -368,9 +391,9 @@ let tree1 =
     )
 ```
 
-## <a name="formatting-record-declarations"></a>Biçimlendirme kayıt bildirimi
+## <a name="formatting-record-declarations"></a>Kayıt bildirimlerini biçimlendirme
 
-Girinti `{` türü tanımı tarafından 4 alanları ve alan listesinde aynı satırda başlatın:
+Tür tanımındaki `{`, 4 boşlukla Girintile ve alan listesini aynı satırda Başlat:
 
 ```fsharp
 // OK
@@ -396,7 +419,7 @@ type PostalAddress =
     }
 ```
 
-Yeni bir satır ve yeni bir satıra kapatma belirteci açma belirteci yerleştirerek arabirim uygulamaları veya üyeleri kaydında bildiriyorsanız tercih edilir:
+Kayıt üzerinde arabirim uygulamaları veya Üyeler bildirirken, açma belirtecinin yeni bir satıra yerleştirilmesi ve yeni bir satırdaki kapatma belirteci tercih edilir:
 
 ```fsharp
 // Declaring additional members on PostalAddress
@@ -417,13 +440,13 @@ type MyRecord =
 
 ## <a name="formatting-records"></a>Kayıtları biçimlendirme
 
-Kısa kayıtları tek satırda yazılabilir:
+Kısa kayıtlar tek bir satırda yazılabilir:
 
 ```fsharp
 let point = { X = 1.0; Y = 0.0 }
 ```
 
-Uzun kayıtları yeni satırlar için etiketleri kullanmanız gerekir:
+Daha uzun olan kayıtlar, Etiketler için yeni satırları kullanmalıdır:
 
 ```fsharp
 let rainbow =
@@ -431,10 +454,10 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Açılış yerleştirme belirteci yeni bir satıra içerikleri üzerinde bir kapsam sekmeli ve yeni bir satıra kapatma belirteci kullanıyorsanız tercih edilir:
+Açma belirtecinin yeni bir satıra yerleştirilmesi, bir kapsam üzerinde sekmeli içerikler ve yeni bir satırdaki kapatma belirteci, şu durumlarda tercih edilir:
 
-* Kod girintileme farklı kapsamlarla kayıtları dolaşma
-* Bir işleve öğesine ekleyerek sorgularınızı
+* Farklı girintileme kapsamları ile koddaki kayıtları taşıma
+* Bir işleve boru oluşturma
 
 ```fsharp
 let rainbow =
@@ -464,19 +487,19 @@ let foo a =
         })
 ```
 
-Bu kuralların listesi ve dizi öğeleri için geçerlidir.
+Liste ve dizi öğeleri için aynı kurallar geçerlidir.
 
-## <a name="formatting-copy-and-update-record-expressions"></a>Kopyalama ve güncelleştirme kayıt ifadeleri biçimlendirme
+## <a name="formatting-copy-and-update-record-expressions"></a>Copy ve Update kayıt ifadelerini biçimlendirme
 
-Benzer yönergeleri uygulamak için bir kayıt kopyalama ve güncelleştirme hala bir kayıt ifadesidir.
+Bir kopyalama ve güncelleştirme kayıt ifadesi hala bir kayıt olduğundan benzer yönergeler geçerlidir.
 
-Kısa ifade tek bir satırda uygun:
+Kısa ifadeler tek bir satıra uygun olabilir:
 
 ```fsharp
 let point2 = { point with X = 1; Y = 2 }
 ```
 
-Daha uzun ifadeleri, yeni satırları kullanmanız gerekir:
+Daha uzun ifadeler yeni satırları kullanmalıdır:
 
 ```fsharp
 let rainbow2 =
@@ -485,7 +508,7 @@ let rainbow2 =
         Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Ve olarak kayıt yönergeleriyle, için küme ayraçlarını ayrı satırlara atayın ve bir kapsam ifadesiyle sağ girinti isteyebilirsiniz. Parantez olmadan isteğe bağlı bir değerle kaydırma gibi bazı özel durumlarda, tek bir satırda bir küme ayracı tutmanız gerekebileceğini unutmayın:
+Kayıt kılavuzunda olduğu gibi, küme ayraçları için ayrı satırlar atamak ve bir kapsamın sağına doğru bir kapsamını girintilemek isteyebilirsiniz. Parantez olmadan isteğe bağlı bir değeri sarmalama gibi bazı özel durumlarda, bir satır için bir küme ayracı tutmanız gerekebilir:
 
 ```fsharp
 type S = { F1: int; F2: string }
@@ -502,18 +525,18 @@ let newState =
     }
 ```
 
-## <a name="formatting-lists-and-arrays"></a>Biçimlendirme listeler ve diziler
+## <a name="formatting-lists-and-arrays"></a>Listeleri ve dizileri biçimlendirme
 
-Yazma `x :: l` etrafındaki boşlukları ile `::` işleci (`::` dolayısıyla boşluklarla çevrili bir içtakı işleci).
+`::` işleci etrafında boşluklarla `x :: l` yazın (`::`, boşluklarla çevrelenen bir ındüzeltiltir.)
 
-Liste ve tek bir satıra bildirilen diziler boşlukla ayraç sonra ve kapatma köşeli ayraç önce sahip olmalıdır:
+Tek bir satırda tanımlanan liste ve diziler, açma köşeli ayracından sonra ve kapatma parantezinden önce bir boşluk içermelidir:
 
 ```fsharp
 let xs = [ 1; 2; 3 ]
 let ys = [| 1; 2; 3; |]
 ```
 
-Her zaman en az bir alanı arasında iki farklı küme ayracı gibi işleçler kullanın. Örneğin, arasına boşluk bırakın bir `[` ve `{`.
+Her zaman iki farklı küme ayracı benzeri işleç arasında en az bir boşluk kullanın. Örneğin, `[` bir `{`arasında boşluk bırakın.
 
 ```fsharp
 // OK
@@ -531,9 +554,9 @@ Her zaman en az bir alanı arasında iki farklı küme ayracı gibi işleçler k
  { IngredientName = "Lemon"; Quantity = 1 }]
 ```
 
-Aynı kılavuz listeler veya diziler dizileri için geçerlidir.
+Aynı kılavuz, tanımlama gruplarının listeleri veya dizileri için geçerlidir.
 
-Kayıtlar gibi listeler ve birden çok satırda bölme diziler benzer bir kural uygulayın:
+Birden çok satıra bölünen listeler ve diziler, kayıt olarak benzer bir kuralı izler:
 
 ```fsharp
 let pascalsTriangle =
@@ -550,17 +573,59 @@ let pascalsTriangle =
     |]
 ```
 
-Ve kayıtlarla olduğu gibi açılış ve kapanış köşeli ayraçlar kendi satırında bildirme taşıma kodda gezinmeye ve İşlevler halinde yöneltme kolaylaştıracaktır.
+Kayıtlarda olduğu gibi, açılış ve kapanış köşeli ayracını kendi satırlarıyla birlikte bildirmek, kodun etrafında ve boru işlevlerine daha kolay bir şekilde sahip olmasını sağlar.
 
-## <a name="formatting-if-expressions"></a>Biçimlendirme IF ifadeleri
+Program aracılığıyla diziler ve listeler oluştururken, her zaman bir değer oluşturulduğunda `do ... yield` üzerinde `->` tercih edin:
 
-Koşullular girintilerini bunları oluşturan ifadeler boyutlarını bağlıdır. Varsa `cond`, `e1` ve `e2` kısa ve basit bunları bir satıra yazın:
+```fsharp
+// Preferred
+let squares = [ for x in 1..10 -> x*x ]
+
+// Not preferred
+let squares' = [ for x in 1..10 do yield x*x ]
+```
+
+Verilerin koşullu olarak üretilebileceği durumlarda `yield` belirtmek için gerekli F# dilin daha eski sürümleri veya değerlendirilecek ardışık ifadeler olabilir. Daha eski F# bir dil sürümüyle derlemeniz gerekmedikçe bu `yield` anahtar sözcüklerini kaldırmayı tercih edin:
+
+```fsharp
+// Preferred
+let daysOfWeek includeWeekend =
+    [
+        "Monday"
+        "Tuesday"
+        "Wednesday"
+        "Thursday"
+        "Friday"
+        if includeWeekend then
+            "Saturday"
+            "Sunday"
+    ]
+
+// Not preferred
+let daysOfWeek' includeWeekend =
+    [
+        yield "Monday"
+        yield "Tuesday"
+        yield "Wednesday"
+        yield "Thursday"
+        yield "Friday"
+        if includeWeekend then
+            yield "Saturday"
+            yield "Sunday"
+    ]
+```
+
+Bazı durumlarda `do...yield` okunabilirlik konusunda yardımcı olabilir. Bu durumlarda, öznel, dikkate alınması gerekir.
+
+## <a name="formatting-if-expressions"></a>İfadeleri biçimlendirme
+
+Koşullular girintileme, bunları yapan ifadelerin boyutlarına bağlıdır. `cond`, `e1` ve `e2` kısaysa, bunları tek satıra yazmanız yeterlidir:
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-Ya da `cond`, `e1` veya `e2` uzun, ancak çok satırlı değil:
+`cond`, `e1` veya `e2` daha uzunsa, çok satırlı olmayan:
 
 ```fsharp
 if cond
@@ -568,7 +633,7 @@ then e1
 else e2
 ```
 
-Herhangi bir ifadenin çok satırlı varsa:
+Deyimlerden herhangi biri çok satırlıdır:
 
 ```fsharp
 if cond then
@@ -577,7 +642,7 @@ else
     e2
 ```
 
-İle birden çok koşullular `elif` ve `else` aynı kapsamda girintili `if`:
+`elif` ve `else` birden çok koşul `if`aynı kapsamda girintilenir:
 
 ```fsharp
 if cond1 then e1
@@ -586,9 +651,9 @@ elif cond3 then e3
 else e4
 ```
 
-### <a name="pattern-matching-constructs"></a>Desen eşleştirme yapıları
+### <a name="pattern-matching-constructs"></a>Model eşleştirme yapıları
 
-Kullanım bir `|` her bir match yan tümcesinin hiçbir girintilemeli. Kısa ifade ise, her alt ifade de basit ise tek bir satırı kullanarak düşünebilirsiniz.
+Bir eşleşmenin her tümcesi için, girintileme olmadan bir `|` kullanın. İfade kısaysa, her alt ifade da basit olduğunda tek bir satır kullanmayı düşünebilirsiniz.
 
 ```fsharp
 // OK
@@ -604,7 +669,7 @@ match l with
     | [] -> failwith "Couldn't find David"
 ```
 
-İfade sağ tarafındaki oka desen çok büyük ise, taşıyabilir girintili bir adımdan aşağıdaki satırı `match` / `|`.
+Bir düzenin sağ tarafındaki ifade çok büyükse, bu satırı aşağıdaki satıra taşıyın, `match`/`|`bir adım girintilenir.
 
 ```fsharp
 match lam with
@@ -616,7 +681,7 @@ match lam with
 
 ```
 
-Desen tarafından başlangıç anonim işlev eşleme `function`, genellikle çok Girintile değil. Örneğin, bir kapsam şu şekilde girintileme uygundur:
+`function`tarafından başlayan anonim işlevlerin örüntüme göre, genellikle çok fazla girintileme kullanılmamalıdır. Örneğin, bir kapsamı aşağıda gösterildiği gibi girintileme iyi bir şekilde belirlenir:
 
 ```fsharp
 lambdaList
@@ -626,7 +691,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-Desen tarafından tanımlanan İşlevler, `let` veya `let rec` girintili 4 boşluk, başlattıktan sonra olmalıdır `let`bile `function` anahtar sözcüğü kullanılır:
+`let` veya `let rec` tarafından tanımlanan işlevlerde desenler eşleştirme, `function` anahtar sözcüğü kullanılsa bile `let`başlatıldıktan sonra 4 boşluk olmalıdır:
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -635,11 +700,11 @@ let rec sizeLambda acc = function
     | Var v -> succ acc
 ```
 
-Oklar hizalama önermiyoruz.
+Okları hizalamayı önermiyoruz.
 
-## <a name="formatting-trywith-expressions"></a>Biçimlendirme bir try / ifadelerle
+## <a name="formatting-trywith-expressions"></a>Try/with ifadelerini biçimlendirme
 
-Özel durum türüne göre desen girintili aynı düzeyde `with`.
+Özel durum türünde model eşleştirme, `with`aynı düzeyde girintilenmelidir.
 
 ```fsharp
 try
@@ -654,11 +719,11 @@ with
     printfn "A second that was a multiple of 3"
 ```
 
-## <a name="formatting-function-parameter-application"></a>İşlev parametresi uygulama biçimlendirme
+## <a name="formatting-function-parameter-application"></a>İşlev parametresi uygulamasını biçimlendirme
 
-Genel olarak, çoğu işlev parametre uygulama aynı çizgi üzerinde gerçekleştirilir.
+Genellikle, çoğu işlev parametresi uygulaması aynı satırda yapılır.
 
-Yeni bir satıra bir işlev parametreleri uygulamak istiyorsanız, bunları bir kapsama göre Girintile.
+Parametreleri yeni bir satırdaki bir işleve uygulamak istiyorsanız, bunları bir kapsama göre girintileyin.
 
 ```fsharp
 // OK
@@ -678,7 +743,7 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-Aynı yönergeleri işlevi bağımsız değişken olarak lambda ifadeleri için geçerlidir. Bir lambda ifadesinin gövdesi gövdesi başka bir satır varsa bir kapsamla girintili
+İşlev bağımsız değişkenleri olarak lambda ifadeleri için de aynı yönergeler geçerlidir. Lambda ifadesinin gövdesi ise, gövde başka bir çizgiye sahip olabilir ve bu da bir kapsama göre girintilenir
 
 ```fsharp
 let printListWithOffset a list1 =
@@ -694,13 +759,13 @@ let printListWithOffset a list1 =
         list1
 ```
 
-Ancak, bir lambda ifadesinin gövdesinin birden fazla satır varsa bunu ayrı bir işleve hesaba katarak göz önünde bulundurun yerine tek bir bağımsız değişken bir işleve uygulanmış bir çok satırlı yapısı vardır.
+Ancak, bir lambda ifadesinin gövdesi birden fazla satırsa, bir işleve tek bir bağımsız değişken olarak uygulanan çok satırlı bir yapının olması yerine ayrı bir işleve düzenleme göz önünde bulundurun.
 
-### <a name="formatting-infix-operators"></a>Biçimlendirme içtakı işleçleri
+### <a name="formatting-infix-operators"></a>Hatalı bir şekilde biçimlendirme işleçleri
 
-Boşluklarla ayrı işleçler. Bu kuralın istisnaları belirgin `!` ve `.` işleçleri.
+İşleçleri boşluklara göre ayırın. Bu kuralın belirgin özel durumları `!` ve `.` işleçleridir.
 
-İçtakı ifadeler aynı sütunda eklemedir Tamam şunlardır:
+Indüzeltilme ifadeleri aynı sütundaki sıralama için Tamam:
 
 ```fsharp
 acc +
@@ -712,9 +777,9 @@ let function1 arg1 arg2 arg3 arg4 =
     arg3 + arg4
 ```
 
-### <a name="formatting-pipeline-operators"></a>Ardışık Düzen operatörleri biçimlendirme
+### <a name="formatting-pipeline-operators"></a>Biçimlendirme işlem hattı işleçleri
 
-İşlem hattı `|>` işleçleri, bunlar çalışır ifadeleri altında gitmesini.
+İşlem hattı `|>` işleçleri üzerinde çalıştıkları ifadelerin altına gitmelidir.
 
 ```fsharp
 // Preferred approach
@@ -737,9 +802,9 @@ let methods2 = System.AppDomain.CurrentDomain.GetAssemblies()
             |> Array.concat
 ```
 
-### <a name="formatting-modules"></a>Modüller biçimlendirme
+### <a name="formatting-modules"></a>Biçimlendirme modülleri
 
-Yerel bir modülde kod göreli modül girintili gerekir, ancak üst düzey bir modülde kod girintili. Namespace öğelerini girintili gerekmez.
+Yerel modüldeki kodun modüle bağlı olması gerekir, ancak üst düzey modüldeki kod girintilenmemelidir. Ad alanı öğelerinin girintili olması gerekmez.
 
 ```fsharp
 // A is a top-level module.
@@ -757,9 +822,9 @@ module A2 =
     let function2 a b = a*a - b*b
 ```
 
-### <a name="formatting-object-expressions-and-interfaces"></a>Nesne ifadeleri ve arabirimler biçimlendirme
+### <a name="formatting-object-expressions-and-interfaces"></a>Nesne ifadelerini ve arabirimleri biçimlendirme
 
-Nesne ifadeleri ve arabirimler hizalanmayacak ile aynı şekilde `member` sonra 4 alan girintili.
+Nesne ifadeleri ve arabirimler, `member` 4 boşluktan sonra girintilendiği şekilde hizalanmalıdır.
 
 ```fsharp
 let comparer =
@@ -771,9 +836,9 @@ let comparer =
               reversed.CompareTo (rev s2) }
 ```
 
-### <a name="formatting-white-space-in-expressions"></a>Boşluk ifadelerde biçimlendirme
+### <a name="formatting-white-space-in-expressions"></a>İfadelerde boşluk biçimlendirme
 
-Gereksiz boşluk önlemek F# ifadeler.
+F# İfadelerde gereksiz boşluk kullanmaktan kaçının.
 
 ```fsharp
 // OK
@@ -783,7 +848,7 @@ spam (ham.[1])
 spam ( ham.[ 1 ] )
 ```
 
-Adlandırılmış bağımsız değişkenler de olmamalıdır boşluk çevresindeki `=`:
+Adlandırılmış bağımsız değişkenler de `=`çevreleyen boşluk içermemelidir:
 
 ```fsharp
 // OK
@@ -795,7 +860,7 @@ let makeStreamReader x = new System.IO.StreamReader(path = x)
 
 ## <a name="formatting-attributes"></a>Biçimlendirme öznitelikleri
 
-[Öznitelikleri](../language-reference/attributes.md) bir yapısı yerleştirilir:
+[Öznitelikler](../language-reference/attributes.md) bir yapının üzerine yerleştirilir:
 
 ```fsharp
 [<SomeAttribute>]
@@ -811,19 +876,19 @@ type MyRecord =
       Label2: string }
 ```
 
-### <a name="formatting-attributes-on-parameters"></a>Parametreleri biçimlendirme öznitelikleri
+### <a name="formatting-attributes-on-parameters"></a>Parametrelerde öznitelikleri biçimlendirme
 
-Öznitelikleri parametreleri yerde de olabilir. Bu durumda, aynı satırda parametre adından önce ve sonra yerleştirin:
+Öznitelikler, parametrelere de yer alabilir. Bu durumda, daha sonra parametresiyle aynı satıra ve adından önce yerleştirin:
 
 ```fsharp
 // Defines a class that takes an optional value as input defaulting to false.
 type C() =
-    member __.M([<Optional; DefaultParameterValue(false)>] doSomething: bool)
+    member _.M([<Optional; DefaultParameterValue(false)>] doSomething: bool)
 ```
 
-### <a name="formatting-multiple-attributes"></a>Birden çok öznitelik biçimlendirme
+### <a name="formatting-multiple-attributes"></a>Birden çok özniteliği biçimlendirme
 
-Bir parametre değil bir yapı için birden çok öznitelik uygulandığında, bunlar yok her satıra bir öznitelik olduğunu yerleştirilmelidir:
+Bir parametre olmayan bir yapı için birden çok öznitelik uygulandığında, her satır için bir öznitelik olması gibi yerleştirilmelidir:
 
 ```fsharp
 [<Struct>]
@@ -833,11 +898,11 @@ type MyRecord =
       Label2: string }
 ```
 
-Bir parametre uygulandığında, bunlar aynı satırda olmalıdır ve ayrılmış bir `;` ayırıcı.
+Bir parametreye uygulandığında, bunların aynı satırda olmaları ve bir `;` ayırıcısı ile ayrılması gerekir.
 
-## <a name="formatting-literals"></a>Biçimlendirme değişmez değerleri
+## <a name="formatting-literals"></a>Sabit değerleri biçimlendirme
 
-[F#değişmez değerler](../language-reference/literals.md) kullanarak `Literal` özniteliği öznitelik kendi satırına yerleştirin ve PascalCase adlandırma kullanın:
+`Literal` özniteliğini kullanan değişmez değerler, özniteliği kendi satırına yerleştirip PascalCase adlandırmayı kullanmalıdır: [ F# ](../language-reference/literals.md)
 
 ```fsharp
 [<Literal>]
@@ -847,4 +912,4 @@ let Path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
-Öznitelik değeri ile aynı satırda yerleştirmekten kaçının.
+Özniteliği değeri ile aynı satıra yerleştirmekten kaçının.

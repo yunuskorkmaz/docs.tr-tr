@@ -1,5 +1,5 @@
 ---
-title: Bildirilen Öğe Özellikleri (Visual Basic)
+title: Bildirilen Öğe Özellikleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic], lifetime
@@ -13,28 +13,28 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: f0ec2c56403e43f2ce04b394a1a4a59eafaa7311
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 4e03cd28fed5e0ae109337739251c11a0ff3424a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912982"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331622"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Bildirilen Öğe Özellikleri (Visual Basic)
-A *karakteristik* bildirilen bir öğe kod ile nasıl etkileşim kurabileceğine etkiler o öğenin bir parçasıdır. Bildirilen her öğe bir veya daha fazla ilişkili aşağıdaki özelliklere sahiptir:  
+A *characteristic* of a declared element is an aspect of that element that affects how code can interact with it. Every declared element has one or more of the following characteristics associated with it:  
   
-- *Veri türü* — öğesi değerlerini tutabileceği ve bu değerleri nasıl depolar. Daha fazla bilgi için [veri türleri](../../../../visual-basic/language-reference/data-types/index.md).  
+- *Data type* — the values the element can hold, and how it stores those values. For more information, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
   
-- *Yaşam süresi* — süre yürütme sırasında öğe olduğu için kullanılabilir. Daha fazla bilgi için [Visual Basic'de ömür](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+- *Lifetime* — the period of execution time during which the element is available for use. For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
-- *Kapsam* — adıyla nitelemeden öğesine başvurabilir tüm kod kümesi. Daha fazla bilgi için [nasıl yapılır: Bir değişkenin kapsamını denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+- *Scope* — the set of all code that can refer to the element without qualifying its name. For more information, see [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
-- *Erişim düzeyi* — iznini sağlamak için kod öğesi kullanın. Daha fazla bilgi için [nasıl yapılır: Bir değişkenin kullanılabilirliğini denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+- *Access level* — the permission for code to make use of the element. For more information, see [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
-## <a name="characteristics-of-the-elements"></a>Öğelerin özellikleri  
- Aşağıdaki tabloda, bildirilen öğeler ve her birine Uygula özellikleri gösterilmektedir.  
+## <a name="characteristics-of-the-elements"></a>Characteristics of the Elements  
+ The following table shows the declared elements and the characteristics that apply to each one.  
   
-|Öğe|Veri Türü|Ömür|Kapsam <sup>1</sup>|Erişim düzeyi|  
+|Öğe|Veri Türü|Ömür|Scope <sup>1</sup>|Access Level|  
 |-------------|---------------|--------------|------------------------|------------------|  
 |Değişken|Evet|Evet|Evet|Evet|  
 |Sabit|Evet|Hayır|Evet|Evet|  
@@ -42,24 +42,24 @@ A *karakteristik* bildirilen bir öğe kod ile nasıl etkileşim kurabileceğine
 |Yapı|Hayır|Hayır|Evet|Evet|  
 |Özellik|Evet|Evet|Evet|Evet|  
 |Yöntem|Hayır|Evet|Evet|Evet|  
-|Yordam (`Sub` veya `Function`)|Hayır|Evet|Evet|Evet|  
-|Yordam parametresi|Evet|Evet|Evet|Hayır|  
-|İşlev döndürme|Evet|Evet|Evet|Hayır|  
+|Procedure (`Sub` or `Function`)|Hayır|Evet|Evet|Evet|  
+|Procedure parameter|Evet|Evet|Evet|Hayır|  
+|Function return|Evet|Evet|Evet|Hayır|  
 |İşleç|Evet|Hayır|Evet|Evet|  
 |Arabirim|Hayır|Hayır|Evet|Evet|  
 |örneği|Hayır|Hayır|Evet|Evet|  
 |Olay|Hayır|Hayır|Evet|Evet|  
 |Temsilci|Hayır|Hayır|Evet|Evet|  
   
- <sup>1</sup> kapsam bazen olarak adlandırılır *görünürlük*.  
+ <sup>1</sup> Scope is sometimes referred to as *visibility*.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bildirilen Öğeler](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic'de ömür](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Visual Basic'de erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

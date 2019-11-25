@@ -1,5 +1,5 @@
 ---
-title: Distinct Tümcesi (Visual Basic)
+title: Distinct Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryDistinct
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Distinct statement [Visual Basic]
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
-ms.openlocfilehash: e8d3e38261a04c4d29faab351d24d6710413b09a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 94471898807ef4552564c3e01465f2b2f6211d0c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004794"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335373"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct Tümcesi (Visual Basic)
-Sonraki sorgu yan tümcelerinde yinelenen değerleri ortadan kaldırmak için geçerli aralık değişkeninin değerlerini kısıtlar.  
+Restricts the values of the current range variable to eliminate duplicate values in subsequent query clauses.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -25,16 +25,16 @@ Distinct
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Benzersiz öğelerin bir listesini döndürmek için `Distinct` yan tümcesini kullanabilirsiniz. @No__t-0 yan tümcesi sorgunun yinelenen sorgu sonuçlarını yoksaymasına neden olur. @No__t-0 yan tümcesi, `Select` yan tümcesi tarafından belirtilen tüm dönüş alanları için yinelenen değerler için geçerlidir. @No__t-0 yan tümcesi belirtilmemişse, `Distinct` yan tümcesi `From` yan tümcesinde tanımlanan sorgu için Aralık değişkenine uygulanır. Aralık değişkeni sabit bir tür değilse, sorgu Yalnızca türün tüm üyeleri var olan bir sorgu sonucuyla eşleşiyorsa sorgu sonucunu yoksayar.  
+ You can use the `Distinct` clause to return a list of unique items. The `Distinct` clause causes the query to ignore duplicate query results. The `Distinct` clause applies to duplicate values for all return fields specified by the `Select` clause. If no `Select` clause is specified, the `Distinct` clause is applied to the range variable for the query identified in the `From` clause. If the range variable is not an immutable type, the query will only ignore a query result if all members of the type match an existing query result.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sorgu ifadesi bir müşteri listesini ve müşteri siparişlerinin bir listesini birleştirir. @No__t-0 yan tümcesi, benzersiz müşteri adları ve sipariş tarihlerinin listesini döndürmek için dahil edilmiştir.  
+ The following query expression joins a list of customers and a list of customer orders. The `Distinct` clause is included to return a list of unique customer names and order dates.  
   
  [!code-vb[VbSimpleQuerySamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#20)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
 - [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)

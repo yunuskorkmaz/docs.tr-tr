@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 9a8db0670fff604cc9db8279ab1566e6e3fd3c8d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 29792726567373c907898cf6ced9891577f11588
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320684"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141634"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma
 Bir Windows Communication Foundation (WCF) hizmetini yapılandırma dosyası ile yapılandırmak, dağıtım noktasında, tasarım zamanında değil, uç nokta ve hizmet davranışı verileri sağlama esnekliği sağlar. Bu konu başlığı altında sunulan birincil teknikler özetlenmektedir.  
   
- WCF hizmeti, .NET Framework yapılandırma teknolojisi kullanılarak yapılandırılabilir. En yaygın olarak, XML öğeleri bir WCF hizmetini barındıran bir Internet Information Services (IIS) sitesi için Web. config dosyasına eklenir. Öğeler, bir makine temelinde, uç nokta adresleri (hizmetle iletişim kurmak için kullanılan gerçek adresler) gibi ayrıntıları değiştirmenize izin verir. Ayrıca, WCF, bir hizmet için en temel özellikleri hızlıca seçmenizi sağlayan, sistem tarafından sunulan çeşitli öğeleri içerir. @No__t-0 ' dan başlayarak WCF, WCF yapılandırma gereksinimlerini kolaylaştıran yeni bir varsayılan yapılandırma modeliyle gelir. Belirli bir hizmet için herhangi bir WCF yapılandırması sağlamazsanız, çalışma zamanı, hizmetinizi bazı standart uç noktalarla ve varsayılan bağlama/davranışla otomatik olarak yapılandırır. Uygulamada, yapılandırma yazma, WCF uygulamalarının Programlamanın önemli bir parçasıdır.  
+ WCF hizmeti, .NET Framework yapılandırma teknolojisi kullanılarak yapılandırılabilir. En yaygın olarak, XML öğeleri bir WCF hizmetini barındıran bir Internet Information Services (IIS) sitesi için Web. config dosyasına eklenir. Öğeler, bir makine temelinde, uç nokta adresleri (hizmetle iletişim kurmak için kullanılan gerçek adresler) gibi ayrıntıları değiştirmenize izin verir. Ayrıca, WCF, bir hizmet için en temel özellikleri hızlıca seçmenizi sağlayan, sistem tarafından sunulan çeşitli öğeleri içerir. WCF, .NET Framework 4 ' te başlayarak WCF yapılandırma gereksinimlerini kolaylaştıran yeni bir varsayılan yapılandırma modeliyle gelir. Belirli bir hizmet için herhangi bir WCF yapılandırması sağlamazsanız, çalışma zamanı, hizmetinizi bazı standart uç noktalarla ve varsayılan bağlama/davranışla otomatik olarak yapılandırır. Uygulamada, yapılandırma yazma, WCF uygulamalarının Programlamanın önemli bir parçasıdır.  
   
  Daha fazla bilgi için bkz. [Hizmetler Için bağlamaları yapılandırma](configuring-bindings-for-wcf-services.md). En yaygın kullanılan öğelerin listesi için bkz. [sistem tarafından sunulan bağlamalar](system-provided-bindings.md). Varsayılan uç noktalar, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](./samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](simplified-configuration.md) ve Basitleştirilmiş yapılandırma.  
   
@@ -28,7 +28,7 @@ Bir Windows Communication Foundation (WCF) hizmetini yapılandırma dosyası ile
   
  Visual Studio 'da, son yapılandırma dosyasını oluşturmak için App. config adlı dosya kullanılır. Yapılandırma için gerçekten kullanılan son ad, derleme adına bağlıdır. Örneğin, "Cohowınara. exe" adlı bir derlemenin son yapılandırma dosyası adı "Cohowınara. exe. config" vardır. Ancak, yalnızca App. config dosyasını değiştirmeniz gerekir. Bu dosyada yapılan değişiklikler derleme zamanında son uygulama yapılandırma dosyasına otomatik olarak yapılır.  
   
- App. config dosyasını kullanarak, yapılandırma sistemi App. config dosyasını, uygulama başladığında ve yapılandırma uygulandığında Machine. config dosyasının içeriğiyle birleştirir. Bu mekanizma, Machine. config dosyasında makine genelindeki ayarların tanımlanmasını sağlar. Machine. config dosyasının ayarlarını geçersiz kılmak için App. config dosyası kullanılabilir; Ayrıca, Machine. config dosyasındaki ayarları, kullanıldıkları şekilde de kilitle. Web. config durumunda, yapılandırma sistemi tüm dizinlerde Web. config dosyalarını, uygulanan yapılandırma ile uygulama dizinine birleştirir. Yapılandırma ve ayar öncelikleri hakkında daha fazla bilgi için <xref:System.Configuration> ad alanındaki konulara bakın.  
+ App. config dosyasını kullanarak, yapılandırma sistemi App. config dosyasını, uygulama başladığında ve yapılandırma uygulandığında Machine. config dosyasının içeriğiyle birleştirir. Bu mekanizma, Machine. config dosyasında makine genelindeki ayarların tanımlanmasını sağlar. Machine. config dosyasının ayarlarını geçersiz kılmak için App. config dosyası kullanılabilir; Ayrıca, Machine. config dosyasındaki ayarları, kullanıldıkları şekilde de kilitle. Web. config durumunda, yapılandırma sistemi tüm dizinlerde Web. config dosyalarını, uygulanan yapılandırma ile uygulama dizinine birleştirir. Yapılandırma ve ayar öncelikleri hakkında daha fazla bilgi için, <xref:System.Configuration> ad alanındaki konulara bakın.  
   
 ## <a name="major-sections-of-the-configuration-file"></a>Yapılandırma dosyasının ana bölümleri  
  Yapılandırma dosyasındaki ana bölümler aşağıdaki öğeleri içerir.  
@@ -66,57 +66,57 @@ Bir Windows Communication Foundation (WCF) hizmetini yapılandırma dosyası ile
 > [!NOTE]
 > Bağlamalar ve davranışlar bölümleri isteğe bağlıdır ve yalnızca gerekli olduğunda dahil edilir.  
   
-### <a name="the-services-element"></a>@No__t-0services > öğesi  
- @No__t-0 öğesi, uygulamanın barındırdığı tüm hizmetlere ilişkin belirtimleri içerir. @No__t-0 ' da Basitleştirilmiş yapılandırma modeliyle başlayarak bu bölüm isteğe bağlıdır.  
+### <a name="the-services-element"></a>\<Services > öğesi  
+ `services` öğesi, uygulamanın barındırdığı tüm hizmetlere ilişkin belirtimleri içerir. .NET Framework 4 ' te Basitleştirilmiş yapılandırma modeliyle başlayarak bu bölüm isteğe bağlıdır.  
   
- [\<hizmetleri >](../configure-apps/file-schema/wcf/services.md)  
+ [\<Hizmetleri >](../configure-apps/file-schema/wcf/services.md)  
   
-### <a name="the-service-element"></a>@No__t-0service > öğesi  
+### <a name="the-service-element"></a>\<Service > öğesi  
  Her hizmet şu özniteliklere sahiptir:  
   
 - `name`. Hizmet sözleşmesinin bir uygulamasını sağlayan türü belirtir. Bu, ad alanı, nokta ve daha sonra tür adından oluşan tam nitelikli bir addır. Örneğin `"MyNameSpace.myServiceType"`.  
   
-- `behaviorConfiguration`. @No__t-1 öğesinde bulunan `behavior` öğelerinden birinin adını belirtir. Belirtilen davranış, hizmetin kimliğe bürünmeye izin verip etmeyeceğini gibi eylemleri yönetir. Değeri boş bir addır veya `behaviorConfiguration` sağlanmamışsa, varsayılan hizmet davranışı kümesi hizmete eklenir.  
+- `behaviorConfiguration`. `behaviors` öğesinde bulunan `behavior` öğelerinden birinin adını belirtir. Belirtilen davranış, hizmetin kimliğe bürünmeye izin verip etmeyeceğini gibi eylemleri yönetir. Değeri boş bir ad ise veya `behaviorConfiguration` sağlanmazsa, varsayılan hizmet davranışı kümesi hizmete eklenir.  
   
-- [\< hizmet >](../configure-apps/file-schema/wcf/service.md)  
+- [\<Hizmeti >](../configure-apps/file-schema/wcf/service.md)  
   
-### <a name="the-endpoint-element"></a>@No__t-0endpoint > öğesi  
+### <a name="the-endpoint-element"></a>\<uç noktası > öğesi  
  Her uç nokta, aşağıdaki özniteliklerle temsil edilen bir adres, bağlama ve bir sözleşme gerektirir:  
   
 - `address`. Hizmetin temel adresine göreli olarak verilen mutlak bir adres veya hizmet olan Tekdüzen Kaynak tanımlayıcısı 'nı (URI) belirtir. Boş bir dizeye ayarlanırsa, uç noktanın hizmet için <xref:System.ServiceModel.ServiceHost> oluşturulurken belirtilen temel adreste kullanılabilir olduğunu gösterir.  
   
-- `binding`. Genellikle <xref:System.ServiceModel.WSHttpBinding> gibi sistem tarafından sağlanmış bir bağlamayı belirtir, ancak kullanıcı tanımlı bağlamayı da belirtebilir. Belirtilen bağlama, kullanılan aktarım, güvenlik ve kodlama türünü ve güvenilir oturumların, işlemlerin veya akışın desteklenip desteklenmediğini ya da etkin olup olmadığını belirler.  
+- `binding`. Genellikle <xref:System.ServiceModel.WSHttpBinding>gibi sistem tarafından sağlanmış bir bağlamayı belirtir, ancak kullanıcı tanımlı bağlamayı da belirtebilir. Belirtilen bağlama, kullanılan aktarım, güvenlik ve kodlama türünü ve güvenilir oturumların, işlemlerin veya akışın desteklenip desteklenmediğini ya da etkin olup olmadığını belirler.  
   
-- `bindingConfiguration`. Bir bağlamanın varsayılan değerlerinin değiştirilmesi gerekiyorsa, bu, `bindings` öğesinde uygun `binding` öğesi yapılandırılarak yapılabilir. Bu özniteliğe, varsayılan değerleri değiştirmek için kullanılan `binding` öğesinin `name` özniteliğiyle aynı değer verilmelidir. Hiçbir ad verilmezse veya bağlamada `bindingConfiguration` belirtilmemişse, son noktada bağlama türünün varsayılan bağlaması kullanılır.  
+- `bindingConfiguration`. Bir bağlamanın varsayılan değerlerinin değiştirilmesi gerekiyorsa, bu, `bindings` öğesinde uygun `binding` öğesi yapılandırılarak yapılabilir. Bu özniteliğe, varsayılan değerleri değiştirmek için kullanılan `binding` öğesinin `name` özniteliğiyle aynı değer verilmelidir. Hiçbir ad verilmezse veya bağlamada hiçbir `bindingConfiguration` belirtilmemişse, son noktada bağlama türünün varsayılan bağlaması kullanılır.  
   
 - `contract`. Sözleşmeyi tanımlayan arabirimi belirtir. Bu, `service` öğesinin `name` özniteliği tarafından belirtilen ortak dil çalışma zamanı (CLR) türünde uygulanan arabirimdir.  
   
-- [\<uç nokta >](../configure-apps/file-schema/wcf/endpoint-element.md)  
+- [uç nokta > \<](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
-### <a name="the-bindings-element"></a>@No__t-0bindings > öğesi  
- @No__t-0 öğesi, herhangi bir hizmette tanımlı herhangi bir uç nokta tarafından kullanılabilecek tüm bağlamaların belirtimlerini içerir.  
+### <a name="the-bindings-element"></a>\<bağlamaları > öğesi  
+ `bindings` öğesi, herhangi bir hizmette tanımlı herhangi bir uç nokta tarafından kullanılabilecek tüm bağlamaların belirtimlerini içerir.  
   
- [\<bindings >](../configure-apps/file-schema/wcf/bindings.md)  
+ [\<bağlamaları >](../configure-apps/file-schema/wcf/bindings.md)  
   
-### <a name="the-binding-element"></a>@No__t-0binding > öğesi  
- @No__t-1 öğesinde yer alan `binding` öğeleri, sistem tarafından belirtilen bağlamalardan biri olabilir ( [sistem tarafından belirtilen bağlamaları](system-provided-bindings.md)görebilir) veya özel bir bağlama (bkz. [Özel Bağlamalar](./extending/custom-bindings.md)). @No__t-0 öğesi, `endpoint` öğesinin `bindingConfiguration` özniteliğinde belirtilen uç nokta ile bağlamayı ilişkilendiren bir `name` özniteliğine sahiptir. Ad belirtilmemişse, o bağlama o bağlama türünün varsayılan değerine karşılık gelir.  
+### <a name="the-binding-element"></a>\<bağlama > öğesi  
+ `bindings` öğesinde bulunan `binding` öğeleri, sistem tarafından belirtilen bağlamalardan biri olabilir ( [sistem tarafından belirtilen bağlamaları](system-provided-bindings.md)görebilir) veya özel bir bağlama (bkz. [Özel Bağlamalar](./extending/custom-bindings.md)). `binding` öğesinde, bağlamayı `endpoint` öğesinin `bindingConfiguration` özniteliğinde belirtilen uç noktayla ilişkilendiren bir `name` özniteliği vardır. Ad belirtilmemişse, o bağlama o bağlama türünün varsayılan değerine karşılık gelir.  
   
 Hizmetleri ve istemcileri yapılandırma hakkında daha fazla bilgi için bkz. [WCF hizmetlerini yapılandırma](configuring-services.md).
   
- [\< bağlama >](../misc/binding.md)  
+ [bağlama > \<](../configure-apps/file-schema/wcf/bindings.md)  
   
-### <a name="the-behaviors-element"></a>@No__t-0davranışlar > öğesi  
- Bu, bir hizmetin davranışlarını tanımlayan `behavior` öğelerinin kapsayıcı öğesidir.  
+### <a name="the-behaviors-element"></a>\<davranışlar > öğesi  
+ Bu, bir hizmetin davranışlarını tanımlayan `behavior` öğeleri için bir kapsayıcı öğesidir.  
   
  [\<davranışlar >](../configure-apps/file-schema/wcf/behaviors.md)  
   
-### <a name="the-behavior-element"></a>@No__t-0behavior > öğesi  
- Her `behavior` öğesi bir `name` özniteliğiyle tanımlanır ve < `throttling` > veya özel bir davranış gibi sistem tarafından sağlanan bir davranış sağlar. Ad verilmezse, bu davranış öğesi varsayılan hizmet veya uç nokta davranışına karşılık gelir.  
+### <a name="the-behavior-element"></a>\<Behavior > öğesi  
+ Her `behavior` öğesi bir `name` özniteliğiyle tanımlanır ve <`throttling`> veya özel bir davranış gibi sistem tarafından sağlanan bir davranış sağlar. Ad verilmezse, bu davranış öğesi varsayılan hizmet veya uç nokta davranışına karşılık gelir.  
   
  [\<davranış >](../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Bağlama ve davranış yapılandırmalarının kullanımı  
- WCF, yapılandırmada bir başvuru sistemi kullanarak uç noktalar arasında yapılandırmaların paylaşılmasını kolaylaştırır. Yapılandırma değerlerini bir uç noktaya doğrudan atamak yerine, bağlama ilgili yapılandırma değerleri `<binding>` bölümündeki `bindingConfiguration` öğelerinde gruplandırılır. Bağlama yapılandırması, bağlamada adlandırılmış bir ayar grubudur. Uç noktalar daha sonra ada göre `bindingConfiguration` ' a başvurabilir.  
+ WCF, yapılandırmada bir başvuru sistemi kullanarak uç noktalar arasında yapılandırmaların paylaşılmasını kolaylaştırır. Yapılandırma değerlerini bir uç noktaya doğrudan atamak yerine, bağlama ilgili yapılandırma değerleri `<binding>` bölümündeki `bindingConfiguration` öğelerinde gruplandırılır. Bağlama yapılandırması, bağlamada adlandırılmış bir ayar grubudur. Uç noktalar daha sonra ada göre `bindingConfiguration` başvurabilir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -148,9 +148,9 @@ Hizmetleri ve istemcileri yapılandırma hakkında daha fazla bilgi için bkz. [
 </configuration>  
 ```  
   
- @No__t-1 ' in `name` `<binding>` öğesinde ayarlanır. @No__t-0, bağlama türünün kapsamı içinde benzersiz bir dize olmalıdır — bu durumda, [< BasicHttpBinding @ no__t-2](../configure-apps/file-schema/wcf/basichttpbinding.md)veya varsayılan bağlamaya başvuracak boş bir değer. Uç nokta `bindingConfiguration` özniteliğini bu dizeye ayarlayarak yapılandırmaya bağlanır.  
+ `bindingConfiguration` `name` `<binding>` öğesinde ayarlanır. `name`, bağlama türünün kapsamı içinde benzersiz bir dize olmalıdır — bu durumda, [< basicHttpBinding\>](../configure-apps/file-schema/wcf/basichttpbinding.md)ya da varsayılan bağlamaya başvuracak boş bir değer. Uç nokta, `bindingConfiguration` özniteliğini bu dizeye ayarlayarak yapılandırmaya bağlanır.  
   
- @No__t-0, aşağıdaki örnekte gösterildiği gibi aynı şekilde uygulanır.  
+ `behaviorConfiguration`, aşağıdaki örnekte gösterildiği gibi aynı şekilde uygulanır.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -188,7 +188,7 @@ Hizmetleri ve istemcileri yapılandırma hakkında daha fazla bilgi için bkz. [
   
  `~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc`
   
- @No__t-0 dosyanız aşağıdaki içeriğe sahiptir:  
+ `~\Web.config` dosyanız aşağıdaki içeriğe sahiptir:  
   
 ```xml  
 <configuration>  
@@ -222,7 +222,7 @@ Hizmetleri ve istemcileri yapılandırma hakkında daha fazla bilgi için bkz. [
   
  ~ \Child\service.exe konumunda bulunan hizmet, hem serviceDebug hem de serviceMetadata davranışlarına sahip olsa da çalışır. ~ \Service.exe yolunda bulunan hizmette yalnızca serviceDebug davranışı olur. Ne olacağı, aynı ada sahip iki davranış koleksiyonunun (Bu durumda boş dize) birleştirilmesidir.  
   
- Ayrıca, \<clear > etiketini kullanarak davranış koleksiyonlarını temizleyebilir ve \<remove > etiketini kullanarak koleksiyonlardan ayrı davranışları kaldırmış olabilirsiniz. Örneğin, aşağıdaki iki yapılandırma alt hizmetin yalnızca serviceMetadata davranışına sahip olmasına neden olur:  
+ Ayrıca, \<Remove > etiketini kullanarak \<Clear > etiketini kullanarak ve tek davranışları koleksiyondan kaldırdığınızda, davranış koleksiyonlarını temizleyebilirsiniz. Örneğin, aşağıdaki iki yapılandırma alt hizmetin yalnızca serviceMetadata davranışına sahip olmasına neden olur:  
   
 ```xml  
 <configuration>  
@@ -260,11 +260,11 @@ Hizmetleri ve istemcileri yapılandırma hakkında daha fazla bilgi için bkz. [
   
  Davranış birleştirme, yapılandırma içindeki uç nokta davranışları ve hizmet davranışları için geçerlidir.  
   
- Bir alt davranış koleksiyonu, üst davranış koleksiyonunda zaten bulunan bir davranış içeriyorsa, alt davranış üst öğeyi geçersiz kılar. Bu nedenle, bir üst davranış koleksiyonu `<serviceMetadata httpGetEnabled="False" />` ve bir alt davranış koleksiyonu `<serviceMetadata httpGetEnabled="True" />` ise, alt davranış davranış koleksiyonundaki üst davranışı geçersiz kılar ve httpGetEnabled "true" olacaktır.  
+ Bir alt davranış koleksiyonu, üst davranış koleksiyonunda zaten bulunan bir davranış içeriyorsa, alt davranış üst öğeyi geçersiz kılar. Bu nedenle, bir üst davranış koleksiyonu `<serviceMetadata httpGetEnabled="False" />` ve bir alt davranış koleksiyonu `<serviceMetadata httpGetEnabled="True" />`olsaydı, alt davranış davranış koleksiyonundaki üst davranışı geçersiz kılar ve httpGetEnabled "true" olacaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Basitleştirilmiş Yapılandırma](simplified-configuration.md)
 - [WCF hizmetlerini yapılandırma](configuring-services.md)
-- [\< hizmet >](../configure-apps/file-schema/wcf/service.md)
-- [\< bağlama >](../misc/binding.md)
+- [\<Hizmeti >](../configure-apps/file-schema/wcf/service.md)
+- [bağlama > \<](../configure-apps/file-schema/wcf/bindings.md)

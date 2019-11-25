@@ -1,5 +1,5 @@
 ---
-title: My. Response nesnesi (Visual Basic)
+title: My.Response Nesnesi
 ms.date: 07/20/2015
 f1_keywords:
 - My.MyWebExtension.Response
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: a50701998011c25c600c2a3763459c1aba3cc59a
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 522814ad48fb7548032b8a37779bb3ff6ca62413
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567459"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350651"
 ---
 # <a name="myresponse-object"></a>My.Response Nesnesi
-İle ilişkili <xref:System.Web.HttpResponse> nesneyi alır <xref:System.Web.UI.Page>. Bu nesne bir istemciye HTTP yanıt verileri göndermenizi ve bu yanıt hakkındaki bilgileri eklemenizi sağlar.  
+Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>. This object allows you to send HTTP response data to a client and contains information about that response.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Nesne, sayfayla ilişkili geçerli <xref:System.Web.HttpResponse> nesneyi içerir. `My.Response`  
+ The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.  
   
- `My.Response` Nesne yalnızca ASP.NET uygulamalarında kullanılabilir.  
+ The `My.Response` object is only available for ASP.NET applications.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `My.Request` nesnesinden üstbilgi koleksiyonunu alır ve `My.Response` nesneyi ASP.NET sayfasına yazmak için kullanır.  
+ The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   

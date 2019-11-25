@@ -1,5 +1,5 @@
 ---
-title: Çevrim Yapıları (Visual Basic)
+title: Çevrim Yapıları
 ms.date: 07/20/2015
 helpviewer_keywords:
 - control flow [Visual Basic], loops
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: 56165eecce5e73c4e06235dac1691774fb39b794
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a75205a7d52c332094d624d082e5db3e89447f5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906873"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353922"
 ---
 # <a name="loop-structures-visual-basic"></a>Çevrim Yapıları (Visual Basic)
-Visual Basic döngü yapıları, bir veya daha fazla kod satırlarını art arda çalıştırmanıza olanak tanır. Bir koşul olana kadar döngü yapısı deyimlerinde yineleyebilirsiniz `True`, bir koşul olana kadar `False`, belirtilen numarası sayısı veya bir kez her öğe için bir koleksiyon.  
+Visual Basic loop structures allow you to run one or more lines of code repetitively. You can repeat the statements in a loop structure until a condition is `True`, until a condition is `False`, a specified number of times, or once for each element in a collection.  
   
- Aşağıdaki resimde, bir koşul true olana kadar bir dizi ifadeleri çalıştırılan bir döngü yapısı gösterilmektedir:  
+ The following illustration shows a loop structure that runs a set of statements until a condition becomes true:  
   
- ![Do gösteren akış çizelgesi... Döngü kadar.](./media/loop-structures/do-until-loop-true-condition.gif)  
+ ![Flow chart that shows a Do...Until loop.](./media/loop-structures/do-until-loop-true-condition.gif)  
   
-## <a name="while-loops"></a>While döngülerini  
- `While`... `End While` oluşturma deyimleri bir dizi koşul içinde belirtilen sürece çalıştırır `While` deyimi `True`. Daha fazla bilgi için [sırada... End While deyimi](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  
+## <a name="while-loops"></a>While Loops  
+ The `While`...`End While` construction runs a set of statements as long as the condition specified in the `While` statement is `True`. For more information, see [While...End While Statement](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  
   
-## <a name="do-loops"></a>Döngüler yapın  
- `Do`... `Loop` oluşturma, test başına veya sonuna kadar döngü yapısı bir koşulu olanak sağlar. Koşul kalırken döngüyü verilip verilmeyeceğini belirtebilirsiniz `True` veya oluncaya kadar `True`. Daha fazla bilgi için [yapın... Döngü deyimi](../../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+## <a name="do-loops"></a>Do Loops  
+ The `Do`...`Loop` construction allows you to test a condition at either the beginning or the end of a loop structure. You can also specify whether to repeat the loop while the condition remains `True` or until it becomes `True`. For more information, see [Do...Loop Statement](../../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
-## <a name="for-loops"></a>Döngüler için  
- `For`... `Next` yapım kümesi birkaç kez döngü gerçekleştirir. Bir döngü denetim değişkeni olarak da adlandırılan kullanan bir *sayacı*yinelemeleri izlemek için. Başlangıç ve bitiş değerlerini Bu sayaç için belirtin ve isteğe bağlı olarak, bir yineleme sonraki artırır tutarı belirtebilirsiniz. Daha fazla bilgi için [için... Sonraki deyimi](../../../../visual-basic/language-reference/statements/for-next-statement.md).  
+## <a name="for-loops"></a>For Loops  
+ The `For`...`Next` construction performs the loop a set number of times. It uses a loop control variable, also called a *counter*, to keep track of the repetitions. You specify the starting and ending values for this counter, and you can optionally specify the amount by which it increases from one repetition to the next. For more information, see [For...Next Statement](../../../../visual-basic/language-reference/statements/for-next-statement.md).  
   
-## <a name="for-each-loops"></a>Her döngü için  
- `For Each`... `Next` oluşturma bir koleksiyondaki her öğe için bir kez ifadeler kümesi çalıştırır. Döngü denetim değişkeni belirtin, ancak başlangıç veya bitiş değerlerinin de belirlemek zorunda değilsiniz. Nesne, salt okunur.[For Each...Next Deyimi](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+## <a name="for-each-loops"></a>For Each Loops  
+ The `For Each`...`Next` construction runs a set of statements once for each element in a collection. You specify the loop control variable, but you do not have to determine starting or ending values for it. For more information, see [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

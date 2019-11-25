@@ -1,5 +1,5 @@
 ---
-title: Açık (Visual Basic)
+title: Açık
 ms.date: 07/20/2015
 f1_keywords:
 - vb.on
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - On keyword [Visual Basic]
 ms.assetid: 8619c328-1637-4f41-b466-cbe693f4fe73
-ms.openlocfilehash: 7e466775c2634c89e1357b90e028d3d83e248322
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fdbb3d2b8266c87175eb813ef16f260907faa68
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944826"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331845"
 ---
 # <a name="on-visual-basic"></a>Açık (Visual Basic)
-Bir çalışma zamanı hatası yanıt sunar veya bir derleyici seçeneğini açar.  
+Introduces a response to a run-time error or turns a compiler option on.  
   
- Sorgularda birleştirilen koleksiyonlar için anahtarları tanımlar.  
+ In queries, identifies keys for the collections being joined.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `On` Anahtar sözcüğü bu bağlamda kullanılır:  
+ The `On` keyword is used in these contexts:  
   
  [Group Join Yan Tümcesi](../../visual-basic/language-reference/queries/group-join-clause.md)  
   

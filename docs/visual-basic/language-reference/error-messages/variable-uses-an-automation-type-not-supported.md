@@ -1,27 +1,27 @@
 ---
-title: Değişken, Visual Basic'de desteklenmeyen bir Otomasyon türünü kullanıyor
+title: Variable uses an Automation type not supported
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID458
 ms.assetid: bde4f4da-493b-452c-b6e4-1d370edba4cd
-ms.openlocfilehash: d369930752989ff69ee17359e85118f3af4b70b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 944c0c63cd0d7ae7f9ff770fd123231464af1eaf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766902"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344837"
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>Değişken, Visual Basic'de desteklenmeyen bir Otomasyon türünü kullanıyor
 
-Bir tür kitaplığı veya Visual Basic tarafından desteklenmeyen bir veri türüne sahip nesne kitaplığı içinde tanımlanan bir değişkeni kullanacak şekilde çalıştı.
+You tried to use a variable defined in a type library or object library that has a data type not supported by Visual Basic.
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-- Visual Basic tarafından tanınan bir türde bir değişken kullanın.
+- Use a variable of a type recognized by Visual Basic.
 
-     -veya-
+     veya
 
-- Kullanırken bu hatayla karşılaşırsanız `FileGet` veya `FileGetObject`, emin kullanmaya çalıştığınız dosya kaydedilmişti ile `FilePut` veya `FilePutObject`.
+- If you encounter this error while using `FileGet` or `FileGetObject`, make sure the file you are trying to use was written to with `FilePut` or `FilePutObject`.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

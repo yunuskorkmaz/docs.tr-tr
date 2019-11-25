@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 403c4e76e302536513b9de0694ab7b0de621d5d2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f4e8ea9fb0643a4a434bf20fa719c3fd2d01435b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455525"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089327"
 ---
 # <a name="attached-properties-overview"></a>Ekli Özelliklere Genel Bakış
 
@@ -60,7 +60,7 @@ WPF 'in iliştirilmiş bir özelliği tanımladığı en tipik senaryo, bir üst
 
 ## Koddaki Ekli Özellikler<a name="attached_properties_code"></a>
 
-WPF 'deki Ekli özellikler, kolay get/set erişimi için tipik CLR "sarmalayıcı" yöntemlerine sahip değildir. Bunun nedeni, iliştirilmiş özelliğin, özelliğin ayarlandığı örnekler için CLR ad alanının bir parçası olması değildir. Ancak, XAML ayrıştırıldığında XAML işlemcisi bu değerleri ayarlayabilmelidir. Etkin bir eklenmiş özellik kullanımını desteklemek için, iliştirilmiş özelliğin sahip türü **Get_PropertyName_** ve **Set_PropertyName_** biçiminde adanmış erişimci yöntemleri uygulamalıdır. Bu adanmış erişimci yöntemleri, kodda ekli özelliği almak veya ayarlamak için de kullanışlıdır. Bir kod perspektifinden, iliştirilmiş bir özellik, özellik erişimcileri yerine Yöntem erişimcilerine sahip bir yedekleme alanıyla benzerdir ve bu alan, özellikle tanımlanmış olması gereken herhangi bir nesne üzerinde bulunabilir.
+WPF 'deki Ekli özellikler, kolay get/set erişimi için tipik CLR "sarmalayıcı" yöntemlerine sahip değildir. Bunun nedeni, iliştirilmiş özelliğin, özelliğin ayarlandığı örnekler için CLR ad alanının bir parçası olması değildir. Ancak, XAML ayrıştırıldığında XAML işlemcisi bu değerleri ayarlayabilmelidir. Etkin bir eklenmiş özellik kullanımını desteklemek için, iliştirilmiş özelliğin sahip türü, **Get_PropertyName_** ve **Set_PropertyName_** biçiminde adanmış erişimci yöntemleri uygulamalıdır. Bu adanmış erişimci yöntemleri, kodda ekli özelliği almak veya ayarlamak için de kullanışlıdır. Bir kod perspektifinden, iliştirilmiş bir özellik, özellik erişimcileri yerine Yöntem erişimcilerine sahip bir yedekleme alanıyla benzerdir ve bu alan, özellikle tanımlanmış olması gereken herhangi bir nesne üzerinde bulunabilir.
 
 Aşağıdaki örnek, kodda ekli bir özelliği nasıl ayarlayakullanabileceğinizi gösterir. Bu örnekte, `myCheckBox` <xref:System.Windows.Controls.CheckBox> sınıfının bir örneğidir.
 
@@ -91,7 +91,7 @@ Daha önce bahsedildiği gibi, özellik değeri devralmayı kullanmak istiyorsan
 
 Sınıfınız, ekli özelliği başka türlerde kullanım için tamamen tanımlıyorsa, sınıfın <xref:System.Windows.DependencyObject>türetmesini gerektirmez. Ancak, iliştirilmiş özelliği de bağımlılık özelliği olan genel WPF modelini izlerseniz <xref:System.Windows.DependencyObject> türetmeniz gerekir.
 
-<xref:System.Windows.DependencyProperty>türünde bir `public static readonly` alanı bildirerek iliştirilmiş özelliği bir bağımlılık özelliği olarak tanımlayın. Bu alanı, <xref:System.Windows.DependencyProperty.RegisterAttached%2A> yönteminin dönüş değerini kullanarak tanımlarsınız. Alan adının eklenmiş özellik adıyla eşleşmesi gerekir, bu, tanımlayıcı alanları adlandırmanın, temsil ettiği özelliklere karşı, belirlenen WPF düzenine uymak için `Property`. İliştirilmiş özellik sağlayıcısı, ekli özellik için erişimci olarak static **Get_PropertyName_** ve **Set_PropertyName_** yöntemleri sağlamalıdır; Bunun başarısız olması, özellik sisteminin ekli özelliği kullanmasına neden olur.
+<xref:System.Windows.DependencyProperty>türünde bir `public static readonly` alanı bildirerek iliştirilmiş özelliği bir bağımlılık özelliği olarak tanımlayın. Bu alanı, <xref:System.Windows.DependencyProperty.RegisterAttached%2A> yönteminin dönüş değerini kullanarak tanımlarsınız. Alan adının eklenmiş özellik adıyla eşleşmesi gerekir, bu, tanımlayıcı alanları adlandırmanın, temsil ettiği özelliklere karşı, belirlenen WPF düzenine uymak için `Property`. İliştirilmiş özellik sağlayıcısı, ekli özellik için erişimci olarak statik **Get_PropertyName_** ve **Set_PropertyName_** yöntemleri sağlamalıdır; Bunun başarısız olması, özellik sisteminin ekli özelliği kullanmasına neden olur.
 
 > [!NOTE]
 > İliştirilmiş özelliğin al erişimcisini atlarsanız, özelliğindeki veri bağlama Visual Studio ve Visual Studio için Blend gibi tasarım araçları 'nda çalışmaz.
@@ -116,14 +116,14 @@ Sınıfınız, ekli özelliği başka türlerde kullanım için tamamen tanıml�
 
 - `value` nesnesi, uygulamanızda daha belirli bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.SetDock%2A> metodu onu <xref:System.Windows.Controls.Dock>olarak yazdığında, bu değer yalnızca söz konusu numaralandırmaya ayarlanabilir. Bu yöntemin değerinin, biçimlendirme içindeki iliştirilmiş özellik kullanımında ekli özelliğinizle karşılaştığında XAML yükleyicisindeki gelen giriş olduğunu unutmayın. Bu giriş, biçimlendirmede XAML öznitelik değeri olarak belirtilen değerdir. Bu nedenle, kullandığınız tür için tür dönüştürmesi, değer seri hale getirici veya biçimlendirme uzantısı desteğinin olması gerekir. bu şekilde, uygun tür öznitelik değerinden (sonunda yalnızca bir dize) oluşturulabilir.
 
-Aşağıdaki örnek, bağımlılık özelliği kaydını (<xref:System.Windows.DependencyProperty.RegisterAttached%2A> yöntemi kullanılarak) ve **Get_PropertyName_** ve **Set_PropertyName_** erişimcileri gösterir. Örnekte, ekli özellik adı `IsBubbleSource`. Bu nedenle, erişimciler `GetIsBubbleSource` ve `SetIsBubbleSource`olarak adlandırılmalıdır.
+Aşağıdaki örnekte, bağımlılık özelliği kaydı (<xref:System.Windows.DependencyProperty.RegisterAttached%2A> yöntemi kullanılarak) ve **Get_PropertyName_** ve **Set_PropertyName_** erişimcileri gösterilmektedir. Örnekte, ekli özellik adı `IsBubbleSource`. Bu nedenle, erişimciler `GetIsBubbleSource` ve `SetIsBubbleSource`olarak adlandırılmalıdır.
 
 [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
 [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
 #### <a name="attached-property-attributes"></a>İliştirilmiş özellik öznitelikleri
 
-WPF, yansıma işlemlerine eklenen özellikler hakkında bilgi sağlamak için tasarlanan çeşitli [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] tanımlar ve tasarımcılar gibi tipik yansıma ve özellik bilgileri kullanıcılarına. İliştirilmiş özelliklerde sınırsız kapsam türü olduğundan, tasarımcıların XAML kullanan belirli bir teknoloji uygulamasında tanımlanmış tüm iliştirilmiş özelliklerin genel bir listesini kullanarak kullanıcıların aşırı yük duymaması için bir yol gerekir. WPF 'nin Ekli Özellikler için tanımladığı [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)], belirli bir iliştirilmiş özelliğin bir Özellikler penceresinde gösterilmesi gereken durumları kapsama almak için kullanılabilir. Kendi özel ekli özellikleri için de bu öznitelikleri uygulamayı düşünebilirsiniz. [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] amacı ve sözdizimi, uygun başvuru sayfalarında açıklanmıştır:
+WPF, yansıma işlemlerine eklenen özellikler hakkında bilgi sağlamak için tasarlanan çeşitli .NET özniteliklerini ve tasarımcılar gibi yansıma ve özellik bilgilerinin tipik kullanıcılarını tanımlar. İliştirilmiş özelliklerde sınırsız kapsam türü olduğundan, tasarımcıların XAML kullanan belirli bir teknoloji uygulamasında tanımlanmış tüm iliştirilmiş özelliklerin genel bir listesini kullanarak kullanıcıların aşırı yük duymaması için bir yol gerekir. WPF 'nin Ekli Özellikler için tanımladığı .NET öznitelikleri, belirli bir iliştirilmiş özelliğin bir Özellikler penceresinde gösterilmesi gereken durumları kapsama almak için kullanılabilir. Kendi özel ekli özellikleri için de bu öznitelikleri uygulamayı düşünebilirsiniz. .NET özniteliklerinin amacı ve sözdizimi, uygun başvuru sayfalarında açıklanmıştır:
 
 - <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 

@@ -1,5 +1,5 @@
 ---
-title: Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları (Visual Basic)
+title: Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [XML in Visual Basic]
@@ -8,43 +8,43 @@ helpviewer_keywords:
 - attribute names [XML in Visual Basic]
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
-ms.openlocfilehash: dbe85b456f46c40c9cc9a703b38e11992edd24cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 12fbd1f4332391b1acdcf12e101d82627ebbeaff
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598272"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335993"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları (Visual Basic)
-Bu konu, XML öğeleri ve özniteliklerinin XML değişmez değerlerinde adlandırmak için Visual Basic yönergeler sağlar.  XML değişmez değer, yerel adı veya tam ad belirtebilirsiniz. Bir tam adı, bir XML ad alanı öneki, bir iki nokta üst üste ve yerel ad oluşur. XML ad alanı öneklerini hakkında daha fazla bilgi için bkz: [XML öğesi değişmez değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+This topic provides Visual Basic guidelines for naming XML elements and attributes in XML literals.  In an XML literal, you can specify a local name or a qualified name. A qualified name consists of an XML namespace prefix, a colon, and a local name. For more information about XML namespace prefixes, see [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="rules"></a>Kurallar  
- Bir yerel ad öğe veya Visual Basic'te öznitelik şu kurallara uyması gerekir.  
+ A local name of an element or attribute in Visual Basic must adhere to the following rules.  
   
-- Bu ad alanı ile başlayabilirsiniz. Alfabetik bir karakter veya alt çizgi ile başlamalıdır (`_`).  
+- It can begin with a namespace. It must begin with an alphabetical character or an underscore (`_`).  
   
-- Yalnızca alfabetik karakterler, ondalık sayılar, alt çizgi, nokta (.) ve kısa çizgi içermelidir (-).  
+- It must contain only alphabetical characters, decimal digits, underscores, periods (.), and hyphens (-).  
   
-- Çok 1024 karakterden uzun olmamalıdır.  
+- It must not be more than 1,024 characters long.  
   
-- Görünen adlarında iki nokta üst üste ad düzenleme gösterir. Bu nedenle, yalnızca belirli bir adı için bir XML ad alanı belirtmek için iki nokta üst üste kullanabilirsiniz.  
+- Colons that appear in names indicate namespace demarcation. Therefore, you can use colons only to specify an XML namespace for a particular name.  
   
- Ayrıca, aşağıdaki kılavuz uyması.  
+ In addition, you should adhere to the following guideline.  
   
-- XML 1.0 belirtimi "xml" herhangi bir büyük harf Çeşitleme dizesi ile başlayan tüm adlarını saklar. Bu nedenle, bu öğeyi adlarını ve öznitelik adları kullanmayın.  
+- The XML 1.0 specification reserves all names starting with the string "xml", of any capitalization variation. Therefore, do not use those names for your element and attribute names.  
   
-### <a name="name-length-guidelines"></a>Ad uzunluğu yönergeleri  
- Pratik olursa olsun bir ad öğesi doğasını açıkça hala tanımlanırken olabildiğince kısa olmalıdır. Bu, kodunuzun okunabilirliği geliştirir ve satır uzunluğu ve kaynak dosya boyutunu azaltır.  
+### <a name="name-length-guidelines"></a>Name Length Guidelines  
+ As a practical matter, a name should be as short as possible while still clearly identifying the nature of the element. This improves the readability of your code and reduces line length and source-file size.  
   
- Ancak, adınız, yeterince öğe veya nasıl kodunuzun kullandığı tanımlamaz, bu nedenle kısa olmamalıdır. Bu, kodunuzun okunabilirliği için önemlidir. Başka birisi tarafından anlayabilmek çalışıyor ya da sizin, uzun bir süre sonra yazdığınız kullanmak istiyorsanız, uygun öğe adları zamandan tasarruf edebilirsiniz.  
+ However, your name should not be so short that it does not adequately describe the element or how your code uses it. This is important for the readability of your code. If somebody else is trying to understand it, or if you yourself are looking at it a long time after you wrote it, appropriate element names can save time.  
   
-## <a name="case-sensitivity-in-names"></a>Adları büyük/küçük harf duyarlılığı  
- XML öğe adları büyük/küçük harfe duyarlıdır. Bu, Visual Basic Derleyicisi alfabetik yalnızca farklı iki ad karşılaştırır, bunları farklı adlar yorumlar, anlamına gelir. Örneğin, Yorumlar `ABC` ve `abc` öğeleri ayırmak için başvuru olarak.  
+## <a name="case-sensitivity-in-names"></a>Case Sensitivity in Names  
+ XML element names are case sensitive. This means that when the Visual Basic compiler compares two names that differ in alphabetical case only, it interprets them as different names. For example, it interprets `ABC` and `abc` as referring to separate elements.  
   
-## <a name="xml-namespaces"></a>XML ad alanları  
- Bir XML öğesi değişmez değeri oluştururken, XML ad alanı öneki öğe adı belirtebilirsiniz. Daha fazla bilgi için [XML öğesi değişmez değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+## <a name="xml-namespaces"></a>XML Namespaces  
+ When creating an XML element literal, you can specify the XML namespace prefix for the element name. For more information, see [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML Öğesi Değişmez Değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

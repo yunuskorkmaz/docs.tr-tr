@@ -6,81 +6,81 @@ helpviewer_keywords:
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-ms.openlocfilehash: 40a1b5062d45b7b540af7058b82b77c664070d2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9fc8a4aeeeca40f71ed9114a9db40b9a56e5fe6b
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119773"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204566"
 ---
 # <a name="shadow-copying-assemblies"></a>Gölge Kopyalama Derlemeleri
 
-Gölge kopyalama, uygulama etki alanında kullanılan derlemelerin uygulama etki alanının kaldırılması gerekmeden güncelleştirilmesini sağlar. Bu özellikle, ASP.NET siteleri gibi sürekli kullanılabilir olması gereken uygulamalar için yararlıdır.
+Shadow copying enables assemblies that are used in an application domain to be updated without unloading the application domain. This is particularly useful for applications that must be available continuously, such as ASP.NET sites.
 
 > [!IMPORTANT]
-> [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalarda gölge kopyalama desteklenmez.
+> Shadow copying is not supported in Windows 8.x Store apps.
 
-Ortak dil çalışma zamanı, derleme yüklendiğinde bir derleme dosyasını kilitler, bu nedenle dosya derleme kaldırılana kadar güncelleştirilemez. Bir uygulama etki alanından bir derlemeyi kaldırmak için tek yol, uygulama etki alanını da kaldıracağından, normal koşullarda, kendisini kullanan tüm uygulama etki alanları kaldırılana kadar disk üzerinde bir derleme güncelleştirilemez.
+The common language runtime locks an assembly file when the assembly is loaded, so the file cannot be updated until the assembly is unloaded. The only way to unload an assembly from an application domain is by unloading the application domain, so under normal circumstances, an assembly cannot be updated on disk until all the application domains that are using it have been unloaded.
 
-Bir uygulama etki alanı, gölge kopya dosyalarına yapılandırıldığında, uygulama yolundan gelen derlemeler başka bir konuma kopyalanır ve bu konumdan yüklenir. Kopya kilitli, ancak özgün derleme dosyasının kilidi açık ve güncelleştirilmiş olabilir.
+When an application domain is configured to shadow copy files, assemblies from the application path are copied to another location and loaded from that location. The copy is locked, but the original assembly file is unlocked and can be updated.
 
 > [!IMPORTANT]
-> Gölge kopyası olabilecek tek derlemeler, uygulama etki alanı yapılandırıldığında <xref:System.AppDomainSetup.ApplicationBase%2A> ve <xref:System.AppDomainSetup.PrivateBinPath%2A> özellikleriyle belirtilen uygulama dizininde veya alt dizinlerinde depolanırlar. Genel derleme önbelleğinde depolanan derlemeler gölge kopyası değildir.
+> The only assemblies that can be shadow copied are those stored in the application directory or its subdirectories, specified by the <xref:System.AppDomainSetup.ApplicationBase%2A> and <xref:System.AppDomainSetup.PrivateBinPath%2A> properties when the application domain is configured. Assemblies stored in the global assembly cache are not shadow copied.
 
-Bu makale aşağıdaki bölümleri içerir:
+This article contains the following sections:
 
-- [Gölge kopyalamayı etkinleştirmek ve kullanmak](#EnablingAndUsing) , temel kullanımı ve gölge kopyalama için kullanılabilen seçenekleri açıklar.
+- [Enabling and Using Shadow Copying](#EnablingAndUsing) describes the basic use and the options that are available for shadow copying.
 
-- [Başlangıç performansı](#StartupPerformance) , başlangıç performansını geliştirmek için .NET Framework 4 ' te gölge kopyalama için yapılan değişiklikleri ve önceki sürümlerin davranışına döndürmeyi açıklar.
+- [Startup Performance](#StartupPerformance) describes the changes that are made to shadow copying in the .NET Framework 4 to improve startup performance, and how to revert to the behavior of earlier versions.
 
-- [Kullanılmayan Yöntemler](#ObsoleteMethods) , .NET Framework 2,0 ' de gölge kopyalamayı denetleyen özelliklerde ve yöntemlerde yapılan değişiklikleri açıklar.
+- [Obsolete Methods](#ObsoleteMethods) describes the changes that were made to the properties and methods that control shadow copying in the .NET Framework 2.0.
 
 <a name="EnablingAndUsing"></a>
 
 ## <a name="enabling-and-using-shadow-copying"></a>Gölge Kopyalamayı Etkinleştirme ve Kullanma
 
-Gölge kopyalama için bir uygulama etki alanı yapılandırmak üzere <xref:System.AppDomainSetup> sınıfının özelliklerini aşağıdaki şekilde kullanabilirsiniz:
+You can use the properties of the <xref:System.AppDomainSetup> class as follows to configure an application domain for shadow copying:
 
-- <xref:System.AppDomainSetup.ShadowCopyFiles%2A> özelliğini `"true"`dize değerine ayarlayarak gölge kopyalamayı etkinleştirin.
+- Enable shadow copying by setting the <xref:System.AppDomainSetup.ShadowCopyFiles%2A> property to the string value `"true"`.
 
-  Varsayılan olarak, bu ayar, uygulama yolundaki tüm derlemelerin yüklenmeden önce bir indirme önbelleğine kopyalanmasını sağlar. Bu, diğer bilgisayarlardan indirilen dosyaları depolamak için ortak dil çalışma zamanı tarafından tutulan önbelleğidir ve artık gerekli olmadığında ortak dil çalışma zamanı dosyaları otomatik olarak siler.
+  By default, this setting causes all assemblies in the application path to be copied to a download cache before they are loaded. This is the same cache maintained by the common language runtime to store files downloaded from other computers, and the common language runtime automatically deletes the files when they are no longer needed.
 
-- İsteğe bağlı olarak, <xref:System.AppDomainSetup.CachePath%2A> özelliğini ve <xref:System.AppDomainSetup.ApplicationName%2A> özelliğini kullanarak gölge kopyalanmış dosyalar için özel bir konum ayarlayın.
+- Optionally set a custom location for shadow copied files by using the <xref:System.AppDomainSetup.CachePath%2A> property and the <xref:System.AppDomainSetup.ApplicationName%2A> property.
 
-  Konumun temel yolu, <xref:System.AppDomainSetup.ApplicationName%2A> özelliği bir alt dizin olarak <xref:System.AppDomainSetup.CachePath%2A> özelliğine bitiştirerek oluşturulur. Derlemeler, temel yolun kendisi için değil, bu yolun alt dizinlerine kopyalanırlar.
-
-  > [!NOTE]
-  > <xref:System.AppDomainSetup.ApplicationName%2A> özelliği ayarlanmamışsa, <xref:System.AppDomainSetup.CachePath%2A> özelliği yok sayılır ve indirme önbelleği kullanılır. Hiçbir özel durum oluşturulmaz.
-
-  Özel bir konum belirtirseniz, artık gerekli olmadığında dizinleri ve kopyalanan dosyaları temizlemek sizin sorumluluğunuzdadır. Bunlar otomatik olarak silinmez.
-
-  Gölge kopyalanmış dosyalar için özel bir konum ayarlamak isteyebileceğiniz birkaç neden vardır. Uygulamanız çok sayıda kopya oluşturursa gölge kopyalanmış dosyalar için özel bir konum ayarlamak isteyebilirsiniz. İndirme önbelleği, kullanım süresine göre değil, boyutla sınırlandırılır, bu nedenle ortak dil çalışma zamanının hala kullanımda olan bir dosyayı silmeye çalışmaları mümkündür. Özel bir konum ayarlamaya yönelik başka bir nedenden dolayı, uygulamanızı çalıştıran kullanıcıların indirme önbelleği için ortak dil çalışma zamanının kullandığı dizin konumuna yazma erişimi olmaz.
-
-- İsteğe bağlı olarak, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> özelliğini kullanarak gölge kopyalanmış derlemeleri sınırlayın.
-
-  Bir uygulama etki alanı için gölge kopyalamayı etkinleştirdiğinizde varsayılan değer, uygulama yolundaki tüm derlemeleri (yani, <xref:System.AppDomainSetup.ApplicationBase%2A> ve <xref:System.AppDomainSetup.PrivateBinPath%2A> özellikleri tarafından belirtilen dizinlerde) kopyalamaktır. Yalnızca gölge kopyalamak istediğiniz dizinleri içeren bir dize oluşturarak ve bu dizeyi <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> özelliğine atayarak, seçili dizinlere kopyalamayı sınırlayabilirsiniz. Dizinleri noktalı virgülle ayırın. Gölge kopyası olan tek derlemeler seçili dizinlerdeki olanlardır.
+  The base path for the location is formed by concatenating the <xref:System.AppDomainSetup.ApplicationName%2A> property to the <xref:System.AppDomainSetup.CachePath%2A> property as a subdirectory. Assemblies are shadow copied to subdirectories of this path, not to the base path itself.
 
   > [!NOTE]
-  > <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> özelliğine bir dize atamadıysanız veya bu özelliği `null`ayarlarsanız, <xref:System.AppDomainSetup.ApplicationBase%2A> ve <xref:System.AppDomainSetup.PrivateBinPath%2A> özellikleri tarafından belirtilen dizinlerdeki tüm derlemeler gölge kopyalanır.
+  > If the <xref:System.AppDomainSetup.ApplicationName%2A> property is not set, the <xref:System.AppDomainSetup.CachePath%2A> property is ignored and the download cache is used. No exception is thrown.
+
+  If you specify a custom location, you are responsible for cleaning up the directories and copied files when they are no longer needed. They are not deleted automatically.
+
+  There are a few reasons why you might want to set a custom location for shadow copied files. You might want to set a custom location for shadow copied files if your application generates a large number of copies. The download cache is limited by size, not by lifetime, so it is possible that the common language runtime will attempt to delete a file that is still in use. Another reason to set a custom location is when users running your application do not have write access to the directory location the common language runtime uses for the download cache.
+
+- Optionally limit the assemblies that are shadow copied by using the <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> property.
+
+  When you enable shadow copying for an application domain, the default is to copy all assemblies in the application path — that is, in the directories specified by the <xref:System.AppDomainSetup.ApplicationBase%2A> and <xref:System.AppDomainSetup.PrivateBinPath%2A> properties. You can limit the copying to selected directories by creating a string that contains only those directories you want to shadow copy, and assigning the string to the <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> property. Separate the directories with semicolons. The only assemblies that are shadow copied are the ones in the selected directories.
+
+  > [!NOTE]
+  > If you don’t assign a string to the <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> property, or if you set this property to `null`, all assemblies in the directories specified by the <xref:System.AppDomainSetup.ApplicationBase%2A> and <xref:System.AppDomainSetup.PrivateBinPath%2A> properties are shadow copied.
 
   > [!IMPORTANT]
-  > Dizin yolları noktalı virgül içermemelidir, çünkü noktalı virgül sınırlayıcı karakterdir. Noktalı virgül için kaçış karakteri yoktur.
+  > Directory paths must not contain semicolons, because the semicolon is the delimiter character. There is no escape character for semicolons.
 
 <a name="StartupPerformance"></a>
 
 ## <a name="startup-performance"></a>Başlangıç Performansı
 
-Gölge kopyalama kullanan bir uygulama etki alanı başladığında, uygulama dizinindeki derlemeler gölge kopya dizinine kopyalanırken veya zaten o konumda olduklarında doğrulanırken bir gecikme olur. .NET Framework 4 ' den önce, tüm derlemeler geçici bir dizine kopyalandı. Her derleme, derleme adını doğrulamak için açıldı ve tanımlayıcı ad doğrulanmıştı. Her derleme, gölge kopya dizinindeki kopyadan daha yakın bir zamanda güncelleştirilip güncelleştirilmediğini görmek için denetlendi. Bu durumda, gölge kopya dizinine kopyalanmıştı. Son olarak, geçici kopyalar atılır.
+When an application domain that uses shadow copying starts, there is a delay while assemblies in the application directory are copied to the shadow copy directory, or verified if they are already in that location. Before the .NET Framework 4, all assemblies were copied to a temporary directory. Each assembly was opened to verify the assembly name, and the strong name was validated. Each assembly was checked to see whether it had been updated more recently than the copy in the shadow copy directory. If so, it was copied to the shadow copy directory. Finally, the temporary copies were discarded.
 
-.NET Framework 4 ' ten itibaren, varsayılan başlangıç davranışı, uygulama dizinindeki her derlemenin dosya tarih ve saatini, gölge kopya dizinindeki kopyanın dosya tarihi ve saati ile doğrudan karşılaştırmaktır. Derleme güncellendiyse, .NET Framework önceki sürümlerinde olduğu gibi aynı yordam kullanılarak kopyalanır; Aksi takdirde, gölge kopya dizinindeki kopya yüklenir.
+Beginning with the .NET Framework 4, the default startup behavior is to directly compare the file date and time of each assembly in the application directory with the file date and time of the copy in the shadow copy directory. If the assembly has been updated, it is copied by using the same procedure as in earlier versions of the .NET Framework; otherwise, the copy in the shadow copy directory is loaded.
 
-Elde edilen performans iyileştirmesi, derlemelerin sık olarak değişmediğinden ve değişiklikler genellikle derlemelerin küçük bir alt kümesinde oluştuğu uygulamalar için en iyisidir. Bir uygulama içindeki derlemelerin büyük bir bölümü sıklıkla değiştiğinde yeni varsayılan davranış bir performans gerilemesine neden olabilir. Yapılandırma dosyasına [\<shadowCopyVerifyByTimestamp > öğesini](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) ekleyerek, .NET Framework önceki sürümlerinin başlangıç davranışını `enabled="false"`ile geri yükleyebilirsiniz.
+The resulting performance improvement is largest for applications in which assemblies do not change frequently and changes usually occur in a small subset of assemblies. If a majority of assemblies in an application change frequently, the new default behavior might cause a performance regression. You can restore the startup behavior of previous versions of the .NET Framework by adding the [\<shadowCopyVerifyByTimestamp> element](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) to the configuration file, with `enabled="false"`.
 
 <a name="ObsoleteMethods"></a>
 
 ## <a name="obsolete-methods"></a>Eski Yöntemler
 
-<xref:System.AppDomain> sınıfı, bir uygulama etki alanında gölge kopyalamayı denetlemek için kullanılabilen <xref:System.AppDomain.SetShadowCopyFiles%2A> ve <xref:System.AppDomain.ClearShadowCopyPath%2A>gibi çeşitli yöntemlere sahiptir, ancak bunlar .NET Framework sürüm 2,0 ' de artık kullanılmıyor olarak işaretlendi. Bir uygulama etki alanını gölge kopyalama için yapılandırmanın önerilen yolu <xref:System.AppDomainSetup> sınıfının özelliklerini kullanmaktır.
+The <xref:System.AppDomain> class has several methods, such as <xref:System.AppDomain.SetShadowCopyFiles%2A> and <xref:System.AppDomain.ClearShadowCopyPath%2A>, that can be used to control shadow copying on an application domain, but these have been marked obsolete in the .NET Framework version 2.0. The recommended way to configure an application domain for shadow copying is to use the properties of the <xref:System.AppDomainSetup> class.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -88,4 +88,4 @@ Elde edilen performans iyileştirmesi, derlemelerin sık olarak değişmediğind
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [\<shadowCopyVerifyByTimestamp > öğesi](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [\<shadowCopyVerifyByTimestamp> Element](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

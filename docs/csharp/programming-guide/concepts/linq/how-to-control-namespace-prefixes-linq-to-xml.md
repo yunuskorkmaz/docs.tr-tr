@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Denetim ad alanı önekleriC#() (LINQ to XML)'
+title: Ad alanı öneklerini denetleme (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: 5b836be46001b660547532311b1b507ff234975f
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9f43c0804d8c830fa75f1e1390cb578c5f5d5106
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710159"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141387"
 ---
-# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Nasıl yapılır: Denetim ad alanı önekleriC#() (LINQ to XML)
+# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Ad alanı öneklerini denetleme (C#) (LINQ to XML)
 Bu konu, bir XML ağacını serileştirilirken ad alanı öneklerini nasıl denetleyebileceğinizi açıklar.  
   
  Birçok durumda, ad alanı öneklerini denetlemek gerekli değildir.  
@@ -18,14 +18,14 @@ Bu konu, bir XML ağacını serileştirilirken ad alanı öneklerini nasıl dene
   
  Bu, ad alanı öneklerini denetlemenin en yaygın nedenidir.  
   
- Ad alanı öneklerini denetlemenin bir diğer yaygın nedeni, kullanıcıların XML belgesini el ile düzenlemesini ve kullanıcının yazması için uygun olan ad alanı önekleri oluşturmasını istemesidir. Örneğin, bir XSD belgesi oluşturuluyor olabilirsiniz. Şemaların kuralları, şema ad alanı için önek `xs` olarak `xsd` ya da ' i kullanmanızı önerir.  
+ Ad alanı öneklerini denetlemenin bir diğer yaygın nedeni, kullanıcıların XML belgesini el ile düzenlemesini ve kullanıcının yazması için uygun olan ad alanı önekleri oluşturmasını istemesidir. Örneğin, bir XSD belgesi oluşturuluyor olabilirsiniz. Şemaların kuralları, şema ad alanı öneki olarak `xs` veya `xsd` kullanmanızı önerir.  
   
- Ad alanı öneklerini denetlemek için ad alanlarını bildiren öznitelikleri eklersiniz. Ad alanlarını belirli öneklerle bildirirseniz, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serileştirilirken ad alanı öneklerini kabul etmeye çalışır.  
+ Ad alanı öneklerini denetlemek için ad alanlarını bildiren öznitelikleri eklersiniz. Ad alanlarını belirli öneklerle bildirirseniz [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serileştirilirken ad alanı öneklerini kabul etmeye çalışır.  
   
- Önekiyle bir ad alanı bildiren bir öznitelik oluşturmak için, özniteliği adının ad alanının olduğu <xref:System.Xml.Linq.XNamespace.Xmlns%2A>ve özniteliğin adı ad alanı öneki olan bir öznitelik oluşturursunuz. Özniteliğin değeri, ad alanının URI 'sidir.  
+ Önekiyle bir ad alanı bildiren bir öznitelik oluşturmak için, özniteliğin adının ad alanının <xref:System.Xml.Linq.XNamespace.Xmlns%2A>olduğu ve özniteliğin adının ad alanı öneki olduğu bir öznitelik oluşturursunuz. Özniteliğin değeri, ad alanının URI 'sidir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek iki ad alanı bildirir. `http://www.adventure-works.com` Ad alanının `www.fourthcoffee.com` öneki olduğunu ve ad alanının öneki `fc`olduğunu belirtir. `aw`  
+ Bu örnek iki ad alanı bildirir. `http://www.adventure-works.com` ad alanının `aw`öneki olduğunu ve `www.fourthcoffee.com` ad alanının `fc`ön ekine sahip olduğunu belirtir.  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  

@@ -1,27 +1,27 @@
 ---
-title: Genel ad alanları (Visual Basic) ile çalışma (LINQ to XML)
+title: Genel Ad Alanları ile Çalışma (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: 93c7c654e43b579456633dea90ba6a362ff095f7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 80510e370e0a9c7ab27cb5177d9b547ead82715c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582353"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350989"
 ---
-# <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Genel ad alanları (Visual Basic) ile çalışma (LINQ to XML)
-Visual Basic XML sabit değerlerinin temel özelliklerinden biri, `Imports` ifadesini kullanarak XML ad alanlarını bildirme yeteneğidir. Bu özelliği kullanarak, ön ek kullanan bir XML ad alanı bildirebilir veya varsayılan bir XML ad alanı bildirebilirsiniz.  
+# <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Working with Global Namespaces (Visual Basic) (LINQ to XML)
+One of the key features of XML literals in Visual Basic is the capability to declare XML namespaces by using the `Imports` statement. Using this feature, you can declare an XML namespace that uses a prefix, or you can declare a default XML namespace.  
   
- Bu özellik iki durumda yararlıdır. İlk olarak, XML değişmez değerlerinde belirtilen ad alanları, katıştırılmış ifadeler içine taşımaz. Genel ad alanlarını bildirmek, katıştırılmış ifadeleri ad alanlarıyla birlikte kullanmak için yapmanız gereken iş miktarını azaltır. İkincisi, XML özellikleriyle ad alanlarını kullanabilmeniz için genel ad alanlarını bildirmeniz gerekir.  
+ This capability is useful in two situations. First, namespaces declared in XML literals do not carry over into embedded expressions. Declaring global namespaces reduces the amount of work that you have to do to use embedded expressions with namespaces. Second, you must declare global namespaces in order to use namespaces with XML properties.  
   
- Genel ad alanlarını proje düzeyinde bildirebilirsiniz. Genel ad alanlarını modül düzeyinde bildirebilirsiniz ve bu da proje düzeyi genel ad alanlarını geçersiz kılar. Son olarak, bir XML sabit değerinde genel ad alanlarını geçersiz kılabilirsiniz.  
+ You can declare global namespaces at the project level. You can also declare global namespaces at the module level, which overrides the project-level global namespaces. Finally, you can override global namespaces in an XML literal.  
   
- Genel olarak tanımlanmış ad alanlarında bulunan XML değişmez değerlerini veya xml özelliklerini kullanırken, Visual Studio 'da üzerine giderek, XML değişmez değerlerinin veya özelliklerinin genişletilmiş adını görebilirsiniz. Genişletilmiş adı bir araç ipucunda görürsünüz.  
+ When using XML literals or XML properties that are in globally-declared namespaces, you can see the expanded name of XML literals or properties by hovering over them in Visual Studio. You will see the expanded name in a tooltip.  
   
- @No__t_1 yöntemini kullanarak genel bir ad alanına karşılık gelen bir <xref:System.Xml.Linq.XNamespace> nesnesi alabilirsiniz.  
+ You can get an <xref:System.Xml.Linq.XNamespace> object that corresponds to a global namespace using the `GetXmlNamespace` method.  
   
-## <a name="examples-of-global-namespaces"></a>Genel ad alanı örnekleri  
- Aşağıdaki örnek, `Imports` ifadesini kullanarak varsayılan bir genel ad alanı bildirir ve sonra bu ad alanındaki bir <xref:System.Xml.Linq.XElement> nesnesini başlatmak için bir XML sabit değeri kullanır:  
+## <a name="examples-of-global-namespaces"></a>Examples of Global Namespaces  
+ The following example declares a default global namespace by using the `Imports` statement, and then uses an XML literal to initialize an <xref:System.Xml.Linq.XElement> object in that namespace:  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -34,13 +34,13 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com" />  
 ```  
   
- Aşağıdaki örnek bir ön eki olan genel bir ad alanı bildirir ve sonra bir öğeyi başlatmak için bir XML değişmez değeri kullanır:  
+ The following example declares a global namespace with a prefix, and then uses an XML literal to initialize an element:  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -53,14 +53,14 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com" />  
 ```  
   
-## <a name="global-namespaces-and-embedded-expressions"></a>Genel ad alanları ve katıştırılmış Ifadeler  
- XML değişmez değerlerinde belirtilen ad alanları, gömülü ifadeler içine taşımaz. Aşağıdaki örnek bir varsayılan ad alanı bildirir. Daha sonra `Child` öğesi için gömülü bir ifade kullanır.  
+## <a name="global-namespaces-and-embedded-expressions"></a>Global Namespaces and Embedded Expressions  
+ Namespaces that are declared in XML literals do not carry over into embedded expressions. The following example declares a default namespace. It then uses an embedded expression for the `Child` element.  
   
 ```vb  
 Dim root As XElement = _  
@@ -70,7 +70,7 @@ Dim root As XElement = _
 Console.WriteLine(root)  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com">  
@@ -78,9 +78,9 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- Gördüğünüz gibi, elde edilen XML, `Child` öğesinin ad alanı olmaması için bir varsayılan ad alanı bildirimi içerir.  
+ As you can see, the resulting XML includes a declaration of a default namespace so that the `Child` element is in no namespace.  
   
- Ad alanını katıştırılmış ifadede aşağıdaki gibi yeniden bildirebilirsiniz:  
+ You could re-declare the namespace in the embedded expression, as follows:  
   
 ```vb  
 Dim root As XElement = _  
@@ -90,7 +90,7 @@ Dim root As XElement = _
 Console.WriteLine(root)  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com">  
@@ -98,7 +98,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- Ancak bu, daha iyi bir yaklaşım olan genel varsayılan ad alanından kullanılmak üzere daha kısaberdır. Genel varsayılan ad alanı ile, XML değişmez değerlerini ad alanları bildirmeden kullanabilirsiniz. Elde edilen XML, genel olarak belirtilen varsayılan ad alanında olacaktır.  
+ However, this is more cumbersome to use than the global default namespace, which is a better approach. With the global default namespace, you can use XML literals without declaring namespaces. The resulting XML will be in the globally-declared default namespace.  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -113,7 +113,7 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com">  
@@ -121,8 +121,8 @@ End Module
 </Root>  
 ```  
   
-## <a name="using-namespaces-with-xml-properties"></a>XML özellikleriyle ad alanlarını kullanma  
- Bir ad alanında olan bir XML ağacıyla çalışıyorsanız ve XML özelliklerini kullanıyorsanız, XML özelliklerinin de doğru ad alanında olması için genel bir ad alanı kullanmanız gerekir. Aşağıdaki örnek, bir ad alanında bir XML ağacını bildirir. Daha sonra `Child` öğelerinin sayısını yazdırır.  
+## <a name="using-namespaces-with-xml-properties"></a>Using Namespaces with XML Properties  
+ If you are working with an XML tree that is in a namespace, and you use XML properties, then you must use a global namespace so that the XML properties will also be in the correct namespace. The following example declares an XML tree in a namespace. It then prints the count of `Child` elements.  
   
 ```vb  
 Dim root As XElement = _  
@@ -132,13 +132,13 @@ Dim root As XElement = _
 Console.WriteLine(root.<Child>.Count())  
 ```  
   
- Bu örnek `Child` öğesi olmadığını gösterir. Aşağıdaki çıktıyı üretir:  
+ This example indicates that there are no `Child` elements. It produces the following output:  
   
 ```console  
 0  
 ```  
   
- Ancak, varsayılan bir genel ad alanı bildirirseniz, hem XML değişmez değeri hem de XML özelliği varsayılan genel ad alanında bulunur:  
+ If, however, you declare a default global namespace, then both the XML literal and the XML property are in the default global namespace:  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -154,13 +154,13 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek, bir `Child` öğesi olduğunu gösterir. Aşağıdaki çıktıyı üretir:  
+ This example indicates that there is one `Child` element. It produces the following output:  
   
 ```console  
 1  
 ```  
   
- Ön eki olan genel bir ad alanı bildirirseniz, öneki hem XML değişmez değerleri hem de XML özellikleri için kullanabilirsiniz:  
+ If you declare a global namespace that has a prefix, you can use the prefix for both XML literals and XML properties:  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -176,8 +176,8 @@ Module Module1
 End Module  
 ```  
   
-## <a name="xnamespace-and-global-namespaces"></a>XNamespace ve Global ad alanları  
- @No__t_1 yöntemini kullanarak bir <xref:System.Xml.Linq.XNamespace> nesnesi alabilirsiniz:  
+## <a name="xnamespace-and-global-namespaces"></a>XNamespace and Global Namespaces  
+ You can get an <xref:System.Xml.Linq.XNamespace> object by using the `GetXmlNamespace` method:  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -191,7 +191,7 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```console  
 http://www.adventure-works.com  
@@ -199,4 +199,4 @@ http://www.adventure-works.com
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

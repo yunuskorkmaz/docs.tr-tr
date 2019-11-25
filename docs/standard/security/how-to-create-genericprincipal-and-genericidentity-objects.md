@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f768242bffe619051779f87e950138ae9fcec6c
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 37f5543ceaca83a024132c5d010b6d969876454f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353180"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353823"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Nasıl yapılır: GenericPrincipal ve GenericIdentity Nesneleri Oluşturma
 
-Bir Windows etki alanından bağımsız olarak bulunan bir yetkilendirme şeması oluşturmak için <xref:System.Security.Principal.GenericIdentity> sınıfını <xref:System.Security.Principal.GenericPrincipal> sınıfıyla birlikte kullanabilirsiniz.
+You can use the <xref:System.Security.Principal.GenericIdentity> class in conjunction with the <xref:System.Security.Principal.GenericPrincipal> class to create an authorization scheme that exists independent of a Windows domain.
 
-### <a name="to-create-a-genericprincipal-object"></a>GenericPrincipal nesnesi oluşturmak için
+### <a name="to-create-a-genericprincipal-object"></a>To create a GenericPrincipal object
 
-1. Identity sınıfının yeni bir örneğini oluşturun ve onu tutmak istediğiniz adla başlatın. Aşağıdaki kod, yeni bir **GenericIdentity** nesnesi oluşturur ve `MyUser` adıyla başlatır.
+1. Create a new instance of the identity class and initialize it with the name you want it to hold. The following code creates a new **GenericIdentity** object and initializes it with the name `MyUser`.
 
     ```vb
     Dim myIdentity As New GenericIdentity("MyUser")
@@ -36,7 +36,7 @@ Bir Windows etki alanından bağımsız olarak bulunan bir yetkilendirme şemas�
     GenericIdentity myIdentity = new GenericIdentity("MyUser");
     ```
 
-2. **GenericPrincipal** sınıfının yeni bir örneğini oluşturun ve daha önce oluşturulan **GenericIdentity** nesnesiyle ve bu sorumluya ilişkilendirilmesini istediğiniz rolleri temsil eden dizeler dizisiyle başlatın. Aşağıdaki kod örneği, bir yönetici rolünü ve Kullanıcı rolünü temsil eden dizelerin dizisini belirtir. **GenericPrincipal** daha sonra önceki **GenericIdentity** ve String dizisi ile başlatılır.
+2. Create a new instance of the **GenericPrincipal** class and initialize it with the previously created **GenericIdentity** object and an array of strings that represent the roles that you want associated with this principal. The following code example specifies an array of strings that represent an administrator role and a user role. The **GenericPrincipal** is then initialized with the previous **GenericIdentity** and the string array.
 
     ```vb
     Dim myStringArray As String() = {"Manager", "Teller"}
@@ -48,7 +48,7 @@ Bir Windows etki alanından bağımsız olarak bulunan bir yetkilendirme şemas�
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. Geçerli iş parçacığına asıl eklemek için aşağıdaki kodu kullanın. Bu, sorumlunun birkaç kez doğrulanması gerektiği durumlarda, uygulamanızda çalışan diğer kod tarafından doğrulanması veya <xref:System.Security.Permissions.PrincipalPermission> nesnesi tarafından doğrulanması gerekir. Principal nesnesinde, iş parçacığına iliştirmeden rol tabanlı doğrulama işlemi gerçekleştirmeye devam edebilirsiniz. Daha fazla bilgi için bkz. [Principal nesnesini değiştirme](../../../docs/standard/security/replacing-a-principal-object.md).
+3. Use the following code to attach the principal to the current thread. This is valuable in situations where the principal must be validated several times, it must be validated by other code running in your application, or it must be validated by a <xref:System.Security.Permissions.PrincipalPermission> object. You can still perform role-based validation on the principal object without attaching it to the thread. For more information, see [Replacing a Principal Object](../../../docs/standard/security/replacing-a-principal-object.md).
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -60,10 +60,9 @@ Bir Windows etki alanından bağımsız olarak bulunan bir yetkilendirme şemas�
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği, **GenericPrincipal** ve **GenericIdentity**'nin bir örneğinin nasıl oluşturulacağını göstermektedir. Bu kod, bu nesnelerin değerlerini konsola görüntüler.
+The following code example demonstrates how to create an instance of a **GenericPrincipal** and a **GenericIdentity**. This code displays the values of these objects to the console.
 
 ```vb
-Imports System
 Imports System.Security.Principal
 Imports System.Threading
 
@@ -134,7 +133,7 @@ public class Class1
 }
 ```
 
-Yürütüldüğünde, uygulama aşağıdakine benzer bir çıktı görüntüler.
+When executed, the application displays output similar to the following.
 
 ```console
 The Name is: MyIdentity

@@ -1,5 +1,5 @@
 ---
-title: MustInherit (Visual Basic)
+title: MustInherit
 ms.date: 07/20/2015
 f1_keywords:
 - MustInherit
@@ -10,40 +10,40 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-ms.openlocfilehash: 05b1e6b646c519216eba2d4f0df7a3e32f3dafbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 30befaaf194d78d26a57f29c59bf0a603e9f07a3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661255"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351504"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
-Bir sınıf yalnızca temel sınıf olarak kullanılabilir ve doğrudan bir nesne oluşturamazsınız belirtir.  
+Specifies that a class can be used only as a base class and that you cannot create an object directly from it.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Amacı, bir *temel sınıfı* (olarak da bilinen bir *soyut sınıf*) bundan türetilmiş tüm sınıflara ortak işlevselliği tanımlamaktır. Bu, türetilmiş sınıfları ortak öğeleri yeniden tanımlamak zorunda kalmaktan kurtarır. Bazı durumlarda, bu ortak işlevselliği kullanışlı bir nesne haline getirmek için eksiksiz değildir ve eksik işlevselliğe her türetilmiş bir sınıf tanımlar. Böyle bir durumda, tüketici kod yalnızca türetilmiş sınıflardan nesneleri oluşturmak için istediğiniz. Kullandığınız `MustInherit` bunu zorunlu kılmak için taban sınıfta.  
+ The purpose of a *base class* (also known as an *abstract class*) is to define functionality that is common to all the classes derived from it. This saves the derived classes from having to redefine the common elements. In some cases, this common functionality is not complete enough to make a usable object, and each derived class defines the missing functionality. In such a case, you want the consuming code to create objects only from the derived classes. You use `MustInherit` on the base class to enforce this.  
   
- Başka bir kullanımını bir `MustInherit` sınıfı, bir dizi ilgili sınıflar için bir değişken kısıtlamak için. Bir temel sınıf tanımlayabilir ve tüm ilgili sınıflar bundan türetir. Temel sınıfın türetilmiş sınıfların tümü için ortak olan herhangi bir işlevsellik sağlayan gerekmez, ancak değerleri değişkenlere atamak için bir filtre olarak hizmet verebilir. Visual Basic kullanan kod temel sınıf olarak bir değişken bildiriyorsa, yalnızca bir nesne türetilmiş sınıflarının birinden bu değişkene atamanıza izin verir.  
+ Another use of a `MustInherit` class is to restrict a variable to a set of related classes. You can define a base class and derive all these related classes from it. The base class does not need to provide any functionality common to all the derived classes, but it can serve as a filter for assigning values to variables. If your consuming code declares a variable as the base class, Visual Basic allows you to assign only an object from one of the derived classes to that variable.  
   
- .NET Framework birkaç tanımlar `MustInherit` sınıfları, aralarında <xref:System.Array>, <xref:System.Enum>, ve <xref:System.ValueType>. <xref:System.ValueType> bir değişken kısıtlayan bir taban sınıfın bir örnektir. Tüm değer türleri türetin <xref:System.ValueType>. Bir değişken olarak bildirirseniz <xref:System.ValueType>, değer türleri yalnızca bu değişkene atayabilirsiniz.  
+ The .NET Framework defines several `MustInherit` classes, among them <xref:System.Array>, <xref:System.Enum>, and <xref:System.ValueType>. <xref:System.ValueType> is an example of a base class that restricts a variable. All value types derive from <xref:System.ValueType>. If you declare a variable as <xref:System.ValueType>, you can assign only value types to that variable.  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Bildirim bağlamı.** Kullanabileceğiniz `MustInherit` yalnızca bir `Class` deyimi.  
+- **Declaration Context.** You can use `MustInherit` only in a `Class` statement.  
   
-- **Birleşik değiştiriciler.** Belirtemezsiniz `MustInherit` ile birlikte `NotInheritable` aynı bildirimde.  
+- **Combined Modifiers.** You cannot specify `MustInherit` together with `NotInheritable` in the same declaration.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, zorla devralma ve geçersiz kılma zorlanmış gösterir. Temel sınıf `shape` bir değişkeni tanımlar `acrossLine`. Sınıfları `circle` ve `square` öğesinden türetilen `shape`. Bunlar tanımını devral `acrossLine`, ancak işlev tanımlamanız gerekir `area` Bu hesaplamayı şekli her tür için farklı olduğu için.  
+ The following example illustrates both forced inheritance and forced overriding. The base class `shape` defines a variable `acrossLine`. The classes `circle` and `square` derive from `shape`. They inherit the definition of `acrossLine`, but they must define the function `area` because that calculation is different for each kind of shape.  
   
  [!code-vb[VbVbalrKeywords#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#2)]  
   
- Bildirebilirsiniz `shape1` ve `shape2` türünde olmasını `shape`. Ancak, bir nesneden oluşturamazsınız `shape` işlevinin işlevselliğine eksik olduğundan `area` ve işaretlenmiş `MustInherit`.  
+ You can declare `shape1` and `shape2` to be of type `shape`. However, you cannot create an object from `shape` because it lacks the functionality of the function `area` and is marked `MustInherit`.  
   
- Olarak bildirilen çünkü `shape`, değişkenleri `shape1` ve `shape2` nesnelere türetilmiş sınıflardan kısıtlanmıştır `circle` ve `square`. Visual Basic, bu değişkenler için herhangi bir nesneye atamak yüksek düzeyde bir tür güvenliği sağlayan izin vermez.  
+ Because they are declared as `shape`, the variables `shape1` and `shape2` are restricted to objects from the derived classes `circle` and `square`. Visual Basic does not allow you to assign any other object to these variables, which gives you a high level of type safety.  
   
 ## <a name="usage"></a>Kullanım  
- `MustInherit` Bu bağlamda değiştirici kullanılabilir:  
+ The `MustInherit` modifier can be used in this context:  
   
  [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   

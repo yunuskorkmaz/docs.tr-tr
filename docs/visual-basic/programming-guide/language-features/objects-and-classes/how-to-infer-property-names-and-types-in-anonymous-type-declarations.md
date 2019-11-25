@@ -1,78 +1,78 @@
 ---
-title: 'Nasıl yapılır: Anonim Türde Bildirimlerden Özellik Adları ve Türlerini Çıkarma (Visual Basic)'
+title: 'Nasıl yapılır: Anonim Türde Bildirimlerden Özellik Adları ve Türlerini Çıkarma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inferring property names [Visual Basic]
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 5bd4e0a760bcedf8f5e96c2cebe3a71b9050a420
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 89a39e8e9cd66b1d774da70be47c7c6824cccef2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582278"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350031"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Nasıl yapılır: Anonim Türde Bildirimlerden Özellik Adları ve Türlerini Çıkarma (Visual Basic)
 
-Anonim türler, özelliklerin veri türlerini doğrudan belirtmek için bir mekanizma sağlar. Tüm özelliklerin türleri algılanır. Aşağıdaki örnekte, `Name` ve `Price` türleri, bunları başlatmak için kullanılan değerlerden doğrudan algılanır.
+Anonymous types provide no mechanism for directly specifying the data types of properties. Types of all properties are inferred. In the following example, the types of `Name` and `Price` are inferred directly from the values that are used to initialize them.
 
 [!code-vb[VbVbalrAnonymousTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#1)]
 
-Anonim türler Ayrıca diğer kaynaklardan özellik adlarını ve türlerini de çıkarabilir. Aşağıdaki bölümler, çıkarım mümkün olduğu durumların bir listesini ve olmadığı durumlara örnekler sağlar.
+Anonymous types can also infer property names and types from other sources. The sections that follow provide a list of the circumstances where inference is possible, and examples of situations where it is not.
 
-## <a name="successful-inference"></a>Başarılı çıkarım
+## <a name="successful-inference"></a>Successful Inference
 
-#### <a name="anonymous-types-can-infer-property-names-and-types-from-the-following-sources"></a>Anonim türler, aşağıdaki kaynaklardan özellik adlarını ve türlerini çıkarabilir:
+#### <a name="anonymous-types-can-infer-property-names-and-types-from-the-following-sources"></a>Anonymous types can infer property names and types from the following sources:
 
-- Değişken adlarından. Anonim tür `anonProduct`, `productName` ve `productPrice` iki özelliğe sahip olur. Veri türleri, sırasıyla `String` ve `Double` orijinal değişkenlerle olur.
+- From variable names. Anonymous type `anonProduct` will have two properties, `productName` and `productPrice`. Their data types will be those of the original variables, `String` and `Double`, respectively.
 
   [!code-vb[VbVbalrAnonymousTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#11)]
 
-- Diğer nesnelerin özelliğinden veya alan adlarından. Örneğin, `Name` ve `ID` özelliklerini içeren bir `CarClass` türünün `car` nesnesini düşünün. @No__t_0 yeni bir anonim tür örneği oluşturmak için, `Name` ve `car` nesnesinden değerler ile başlatılan `ID` özellikleriyle şunları yazabilirsiniz:
+- From property or field names of other objects. For example, consider a `car` object of a `CarClass` type that includes `Name` and `ID` properties. To create a new anonymous type instance, `car1`, with `Name` and `ID` properties that are initialized with the values from the `car` object, you can write the following:
 
   [!code-vb[VbVbalrAnonymousTypes#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#34)]
 
-  Önceki bildirim, `car2` anonim tür tanımlayan daha uzun kod satırıyla eşdeğerdir.
+  The previous declaration is equivalent to the longer line of code that defines anonymous type `car2`.
 
   [!code-vb[VbVbalrAnonymousTypes#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#35)]
 
-- XML üye adlarından.
+- From XML member names.
 
   [!code-vb[VbVbalrAnonymousTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#12)]
 
-  @No__t_0 için sonuç türü, <xref:System.Collections.IEnumerable> (Of XElement) türünde bir `Book` bir özelliğe sahiptir.
+  The resulting type for `anon` would have one property, `Book`, of type <xref:System.Collections.IEnumerable>(Of XElement).
 
-- Aşağıdaki örnekte `SomeFunction` gibi parametresi olmayan bir işlevden.
+- From a function that has no parameters, such as `SomeFunction` in the following example.
 
   ```vb
   Dim sc As New SomeClass
   Dim anon1 = New With {Key sc.SomeFunction()}
   ```
 
-  Aşağıdaki kodda `anon2` değişkeni, `First` adlı bir karakter olan bir özelliğine sahip anonim bir türdür. Bu kod, işlev <xref:System.Linq.Enumerable.First%2A> tarafından döndürülen harfi "E" olarak görüntüler.
+  The variable `anon2` in the following code is an anonymous type that has one property, a character named `First`. This code will display a letter "E," the letter that is returned by function <xref:System.Linq.Enumerable.First%2A>.
 
   [!code-vb[VbVbalrAnonymousTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#13)]
 
-## <a name="inference-failures"></a>Çıkarım arızaları
+## <a name="inference-failures"></a>Inference Failures
 
-#### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>Ad çıkarımı, aşağıdakiler dahil olmak üzere birçok durumda başarısız olur:
+#### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>Name inference will fail in many circumstances, including the following:
 
-- Çıkarımı, bir yöntem, Oluşturucu veya bağımsız değişken gerektiren parametreli bir özellik çağrısından türetilir. @No__t_1 bir veya daha fazla bağımsız değişken varsa `anon1` önceki bildirimi başarısız olur.
+- The inference derives from the invocation of a method, a constructor, or a parameterized property that requires arguments. The previous declaration of `anon1` fails if `someFunction` has one or more arguments.
 
   ```vb
   ' Not valid.
   ' Dim anon3 = New With {Key sc.someFunction(someArg)}
   ```
 
-  Yeni bir özellik adına atama sorunu çözer.
+  Assignment to a new property name solves the problem.
 
   ```vb
   ' Valid.
   Dim anon4 = New With {Key .FunResult = sc.someFunction(someArg)}
   ```
 
-- Çıkarımı karmaşık bir ifadeden türetilir.
+- The inference derives from a complex expression.
 
   ```vb
   Dim aString As String = "Act "
@@ -80,22 +80,22 @@ Anonim türler Ayrıca diğer kaynaklardan özellik adlarını ve türlerini de 
   ' Dim label = New With {Key aString & "IV"}
   ```
 
-  Hata, ifadenin sonucu bir özellik adına atanarak çözülebilir.
+  The error can be resolved by assigning the result of the expression to a property name.
 
   [!code-vb[VbVbalrAnonymousTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#14)]
 
-- Birden çok özellik için çıkarım aynı ada sahip iki veya daha fazla özellik oluşturur. Önceki örneklerde bildirimlere geri döndüğünüzde, hem `product.Name` hem de `car1.Name` aynı anonim türdeki özellikler olarak listelenemez. Bunun nedeni, bunların her biri için çıkarılan tanımlayıcının `Name` olacaktır.
+- Inference for multiple properties produces two or more properties that have the same name. Referring back to declarations in earlier examples, you cannot list both `product.Name` and `car1.Name` as properties of the same anonymous type. This is because the inferred identifier for each of these would be `Name`.
 
   ```vb
   ' Not valid.
   ' Dim anon5 = New With {Key product.Name, Key car1.Name}
   ```
 
-  Bu sorun, değerler ayrı özellik adlarına atanarak çözülebilir.
+  The problem can be solved by assigning the values to distinct property names.
 
   [!code-vb[VbVbalrAnonymousTypes#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#36)]
 
-  Büyük/küçük harf ve küçük harfler arasındaki değişiklikler iki adı farklı hale getirir.
+  Note that changes in case (changes between uppercase and lowercase letters) do not make two names distinct.
 
   ```vb
   Dim price = 0
@@ -103,18 +103,18 @@ Anonim türler Ayrıca diğer kaynaklardan özellik adlarını ve türlerini de 
   ' Dim anon7 = New With {Key product.Price, Key price}
   ```
 
-- Bir özelliğin başlangıç türü ve değeri henüz kurulu olmayan başka bir özelliğe bağlıdır. Örneğin, `.LastName` zaten başlatılmadığı müddetçe `.IDName = .LastName` anonim tür bildiriminde geçerli değildir.
+- The initial type and value of one property depends on another property that is not yet established. For example, `.IDName = .LastName` is not valid in an anonymous type declaration unless `.LastName` is already initialized.
 
   ```vb
   ' Not valid.
   ' Dim anon8 = New With {Key .IDName = .LastName, Key .LastName = "Jones"}
   ```
 
-  Bu örnekte, özelliklerinin bildirildiği sırayı tersine çevirerek sorunu çözebilirsiniz.
+  In this example, you can fix the problem by reversing the order in which the properties are declared.
 
   [!code-vb[VbVbalrAnonymousTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#15)]
 
-- Anonim türün Özellik adı bir <xref:System.Object> üyesinin adı ile aynıdır. Örneğin, `Equals` bir <xref:System.Object> yöntemi olduğu için aşağıdaki bildirim başarısız olur.
+- A property name of the anonymous type is the same as the name of a member of <xref:System.Object>. For example, the following declaration fails because `Equals` is a method of <xref:System.Object>.
 
   ```vb
   ' Not valid.
@@ -122,7 +122,7 @@ Anonim türler Ayrıca diğer kaynaklardan özellik adlarını ve türlerini de 
   '                       "greater than", Key .Less = "less than"}
   ```
 
-  Özellik adını değiştirerek sorunu çözebilirsiniz:
+  You can fix the problem by changing the property name:
 
   [!code-vb[VbVbalrAnonymousTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#16)]
 

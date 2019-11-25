@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: Iki konum yolunun birleşimini bulma (XPath-LINQ to XML) (C#)'
+title: İki konum yolunun birleşimini bulma (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
-ms.openlocfilehash: ebb2ddc3a7ba5e08e99cecca01294e5ad3182e8b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 17a3310f367cb68b3b80b1a3f30af40428f6d2c7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253854"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141215"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>Nasıl yapılır: Iki konum yolunun birleşimini bulma (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>İki konum yolunun birleşimini bulma (XPath-LINQ to XML) (C#)
 XPath, iki XPath konum yolunun sonuçlarının birleşimini bulmanızı sağlar.  
   
  XPath ifadesi:  
   
  `//Category|//Price`  
   
- <xref:System.Linq.Enumerable.Concat%2A> Standart sorgu işlecini kullanarak aynı sonuçları elde edebilirsiniz.  
+ Aynı sonuçları, <xref:System.Linq.Enumerable.Concat%2A> standart sorgu işlecini kullanarak elde edebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek tüm `Category` öğeleri ve tüm `Price` öğeleri bulur ve bunları tek bir koleksiyona ekler. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Sorgunun sonuçları sıralamak için çağrı <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> yaptığı unutulmamalıdır. XPath ifadesi değerlendirmesi sonuçları da belge sırasıyla bulunur.  
+ Bu örnek, tüm `Category` öğelerini ve tüm `Price` öğeleri bulur ve bunları tek bir koleksiyona ekler. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgusunun sonuçları sıralamak için <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> çağırdığına unutmayın. XPath ifadesi değerlendirmesi sonuçları da belge sırasıyla bulunur.  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Sayısal veri (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: sayısal veri (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XDocument data = XDocument.Load("Data.xml");  

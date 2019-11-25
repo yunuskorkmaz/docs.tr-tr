@@ -9,20 +9,20 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 29b5c351031b799c148c1e4f525e7bdcf96480bb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 92671001733f525188ba3c7bcf3ed3c55615e301
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460775"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283784"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox Stilleri ve Şablonları
-Bu konuda <xref:System.Windows.Controls.ComboBox> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+Bu konuda <xref:System.Windows.Controls.ComboBox> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için varsayılan <xref:System.Windows.Controls.ControlTemplate> değiştirebilirsiniz. Daha fazla bilgi için bkz. [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="combobox-parts"></a>ComboBox bölümleri  
  Aşağıdaki tabloda <xref:System.Windows.Controls.ComboBox> denetimi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümüyle|Tür|Açıklama|  
+|Bölümüyle|Type|Açıklama|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.ComboBox>metnini içerir.|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Birleşik giriş kutusundaki öğeleri içeren açılır liste.|  
@@ -34,7 +34,7 @@ Bu konuda <xref:System.Windows.Controls.ComboBox> denetimine yönelik stiller ve
   
 |VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Normal|Ortak durumlar|Varsayılan durum.|  
 |Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|  
 |Gelme olayından|Ortak durumlar|Fare işaretçisi <xref:System.Windows.Controls.ComboBox> denetimin üzerinde.|  
 |Diğinize|Odaklardaki durumlar|Denetim odağa sahiptir.|  
@@ -43,7 +43,7 @@ Bu konuda <xref:System.Windows.Controls.ComboBox> denetimine yönelik stiller ve
 |Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
 |Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
 |Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
-|yapılamaz|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> özelliği `true`.|  
+|Yapılamaz|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> özelliği `true`.|  
 |Düzenlenemez|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> özelliği `false`.|  
   
 ## <a name="comboboxitem-parts"></a>ComboBoxItem parçaları  
@@ -54,12 +54,12 @@ Bu konuda <xref:System.Windows.Controls.ComboBox> denetimine yönelik stiller ve
   
 |VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Normal|Ortak durumlar|Varsayılan durum.|  
 |Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|  
 |Gelme olayından|Ortak durumlar|Fare işaretçisi <xref:System.Windows.Controls.ComboBox> denetimin üzerinde.|  
 |Diğinize|Odaklardaki durumlar|Denetim odağa sahiptir.|  
 |Odaklanmadan gözetle|Odaklardaki durumlar|Denetimin odağı yok.|  
-|Seçildiğinde|SelectionStates|Öğe şu anda seçili durumda.|  
+|Seçildi|SelectionStates|Öğe şu anda seçili durumda.|  
 |Değilken|SelectionStates|Öğe seçilmemiş.|  
 |Selectedunodaklanmış|SelectionStates|Öğe seçilir, ancak odağa sahip değildir.|  
 |Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
@@ -84,4 +84,4 @@ Bu konuda <xref:System.Windows.Controls.ComboBox> denetimine yönelik stiller ve
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
 - [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)
+- [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md)

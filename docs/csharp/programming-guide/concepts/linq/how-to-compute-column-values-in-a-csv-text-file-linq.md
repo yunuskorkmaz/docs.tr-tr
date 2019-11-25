@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Bir CSV metin dosyasındaki (LINQ) (C#) sütun değerlerini hesaplama'
+title: CSV metin dosyasında (LINQ) sütun değerlerini hesaplama (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 08b4f936532b3ba3744ec31dc691b166e7ba7109
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a48850e8f6229b80ebd9207bb1b7353f8b0c9e02
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594016"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141362"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Nasıl yapılır: Bir CSV metin dosyasındaki (LINQ) (C#) sütun değerlerini hesaplama
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>CSV metin dosyasında (LINQ) sütun değerlerini hesaplama (LINQ) (C#)
 Bu örnek, bir. csv dosyasının sütunlarında Sum, Average, min ve Max gibi toplam hesaplamaların nasıl gerçekleştirileceğini gösterir. Burada gösterilen örnek ilkeler diğer yapılandırılmış metin türlerine uygulanabilir.  
   
 ## <a name="to-create-the-source-file"></a>Kaynak dosyayı oluşturmak için  
@@ -156,10 +156,10 @@ class SumColumns
  */  
 ```  
   
- Sorgu, her metin satırını bir <xref:System.String.Split%2A> diziye dönüştürmek için yöntemini kullanarak işe yarar. Her dizi öğesi bir sütunu temsil eder. Son olarak, her sütundaki metin sayısal gösterimine dönüştürülür. Dosyanız sekmeyle ayrılmış bir dosya ise, `Split` yöntemindeki bağımsız değişkeni olarak `\t`güncelleştirmeniz yeterlidir.  
+ Sorgu, her metin satırını bir diziye dönüştürmek için <xref:System.String.Split%2A> yöntemi kullanılarak işe yarar. Her dizi öğesi bir sütunu temsil eder. Son olarak, her sütundaki metin sayısal gösterimine dönüştürülür. Dosyanız sekmeyle ayrılmış bir dosya ise, `\t` için `Split` yöntemindeki bağımsız değişkeni güncelleştirmeniz yeterlidir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- System. C# LINQ ve System.IO ad alanları `using` için yönergeler içeren bir konsol uygulaması projesi oluşturun.  
+ System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: My.Forms ve My.WebServices ile Sağlanan Varsayılan Nesne Örnekleri (Visual Basic)
+title: My.Forms ve My.WebServices ile Sağlanan Varsayılan Nesne Örnekleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.WebServices object [Visual Basic], developing applications
@@ -7,24 +7,26 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Forms
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-ms.openlocfilehash: ca31e1c40c77bf7f42d246019d81f4ffaed646e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d06df4bd023892429b2aaefdd624398a6546d06d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014459"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330212"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>My.Forms ve My.WebServices ile Sağlanan Varsayılan Nesne Örnekleri (Visual Basic)
-[My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) ve [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) nesneleri, forms, veri kaynakları ve uygulamanız tarafından kullanılan XML Web Hizmetleri erişim sağlar. Koleksiyonları sağlayarak bunu *varsayılan örnekleri* bu nesnelerin her biri.  
+
+The [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) and [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) objects provide access to forms, data sources, and XML Web services used by your application. They do this by providing collections of *default instances* of each of these objects.  
   
-## <a name="default-instances"></a>Varsayılan örnekleri  
- Varsayılan bir örnek olması gerekmez ve çalışma zamanı tarafından sağlanan sınıfının bir örneği olduğu bildirildi ve örneği kullanarak `Dim` ve `New` deyimleri. Aşağıdaki örnek nasıl sahip olabileceğiniz bildirilmiş ve bir örneğini örneği gösterir. bir <xref:System.Windows.Forms.Form> adlı sınıf `Form1`, ve nasıl artık bu varsayılan örneğini almak <xref:System.Windows.Forms.Form> aracılığıyla sınıf `My.Forms`.  
+## <a name="default-instances"></a>Default Instances  
+
+ A default instance is an instance of the class that is provided by the runtime and does not need to be declared and instantiated using the `Dim` and `New` statements. The following example demonstrates how you might have declared and instantiated an instance of a <xref:System.Windows.Forms.Form> class called `Form1`, and how you are now able to get a default instance of this <xref:System.Windows.Forms.Form> class through `My.Forms`.  
   
  [!code-vb[VbVbcnMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#5)]  
   
  [!code-vb[VbVbcnMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#6)]  
   
- `My.Forms` Nesnesi için varsayılan örneklerinin bir koleksiyonunu döndürür her `Form` projenizde var. sınıfı. Benzer şekilde, `My.WebServices` uygulamanızda bir başvuru oluşturduğunuz her Web hizmeti proxy sınıfın varsayılan bir örnek sağlar.  
+ The `My.Forms` object returns a collection of default instances for every `Form` class that exists in your project. Similarly, `My.WebServices` provides a default instance of the proxy class for every Web service that you have created a reference to in your application.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

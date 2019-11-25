@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Değişkende birden çok değer tut (Visual Basic)'
+title: 'Nasıl yapılır: Değişkende Birden Fazla Değer Tutma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,36 +11,36 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 8d07a34a98303f9d220dba0a3c955120b421340e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d452fbf35f9d200348234b38c40f8636f0ec4b4e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054192"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350016"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Nasıl yapılır: Değişkende birden çok değer tut (Visual Basic)
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Nasıl yapılır: Değişkende Birden Fazla Değer Tutma (Visual Basic)
 
-Bir değişken, *bileşik veri türünde*olduğunu bildirirseniz birden fazla değeri tutar.
+A variable holds more than one value if you declare it to be of a *composite data type*.
 
-[Bileşik veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) yapılar, diziler ve sınıflar içerir. Bileşik veri türünün bir değişkeni, Öğesel veri türlerinin ve diğer bileşik türlerin bir birleşimini tutabilir. Yapılar ve sınıflar, kodu ve verileri içerebilir.
+[Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) include structures, arrays, and classes. A variable of a composite data type can hold a combination of elementary data types and other composite types. Structures and classes can hold code as well as data.
 
-## <a name="to-hold-more-than-one-value-in-a-variable"></a>Bir değişkende birden fazla değeri tutmak için
+## <a name="to-hold-more-than-one-value-in-a-variable"></a>To hold more than one value in a variable
 
-1. Değişkeniniz için kullanmak istediğiniz bileşik veri türünü saptayın.
+1. Determine what composite data type you want to use for your variable.
 
-2. Bileşik veri türü önceden tanımlanmamışsa, değişkeninizin onu kullanabilmesi için onu tanımlayın.
+2. If the composite data type is not already defined, define it so that your variable can use it.
 
-    - [Structure ifadesiyle](../../../../visual-basic/language-reference/statements/structure-statement.md)bir yapı tanımlayın.
+    - Define a structure with a [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md).
 
-    - [Dim ifadesiyle](../../../../visual-basic/language-reference/statements/dim-statement.md)bir dizi tanımlayın.
+    - Define an array with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
 
-    - [Sınıf ifadesiyle](../../../../visual-basic/language-reference/statements/class-statement.md)bir sınıf tanımlayın.
+    - Define a class with a [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md).
 
-3. Değişkeninizi bir `Dim` ifadesiyle bildirin.
+3. Declare your variable with a `Dim` statement.
 
-4. Bir `As` yan tümcesiyle değişken adını izleyin.
+4. Follow the variable name with an `As` clause.
 
-5. Uygun bileşik veri türünün adı ile anahtarsözcüğünüizleyin.`As`
+5. Follow the `As` keyword with the name of the appropriate composite data type.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

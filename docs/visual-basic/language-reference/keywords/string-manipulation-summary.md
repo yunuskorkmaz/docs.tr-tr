@@ -1,36 +1,36 @@
 ---
-title: Dize Düzenleme Özeti (Visual Basic)
+title: Dize Düzenleme Özeti
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 - manipulating strings [Visual Basic]
 - strings [Visual Basic], manipulating
 ms.assetid: 5d3197eb-fe66-417e-9e2a-20450660c9c6
-ms.openlocfilehash: db57633e2de0c4ae898c242ea754c5f5c2fcd211
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91c3808e3b17d8e91e6b29ca7c306c61354db607
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802602"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351651"
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>Dize Düzenleme Özeti (Visual Basic)
-Visual Basic dili anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaç tarafından düzenlenir ve kullanın.  
+Visual Basic language keywords and run-time library members are organized by purpose and use.  
   
 |Eylem|Dil öğesi|  
 |------------|----------------------|  
-|İki dizeyi karşılaştırın.|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|  
-|Dizeleri dönüştürür.|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
-|Bir dize tersine çevirir.|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>, <xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|  
-|Küçük veya büyük harfe Dönüştür.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>, <xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
-|Bir dizenin karakter yinelenen oluşturun.|<xref:Microsoft.VisualBasic.Strings.Space%2A>, <xref:Microsoft.VisualBasic.Strings.StrDup%2A>|  
-|Bir dizenin uzunluğunu bulabilirsiniz.|<xref:Microsoft.VisualBasic.Strings.Len%2A>|  
-|Dize biçimi.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>, <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>, <xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>, <xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|  
-|Dizeleri işlemek.|<xref:Microsoft.VisualBasic.Strings.InStr%2A>, <xref:Microsoft.VisualBasic.Strings.Left%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Mid%2A>, <xref:Microsoft.VisualBasic.Strings.Right%2A>, <xref:Microsoft.VisualBasic.Strings.RTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Trim%2A>|  
-|Dize karşılaştırma kurallarını ayarlayın.|[Karşılaştırma seçeneği](../../../visual-basic/language-reference/statements/option-compare-statement.md)|  
-|ASCII ve ANSI değerlerle birlikte çalışır.|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|  
-|Belirtilen bir alt dizenin yerini alır.|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|  
-|Filtre tabanlı dize dizisi döndürür.|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|  
-|Belirtilen sayıda alt dize döndürür.|<xref:Microsoft.VisualBasic.Strings.Split%2A>, <xref:Microsoft.VisualBasic.Strings.Join%2A>|  
+|Compare two strings.|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|  
+|Convert strings.|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
+|Reverse a string.|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>, <xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|  
+|Convert to lowercase or uppercase.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>, <xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
+|Create a string of repeating characters.|<xref:Microsoft.VisualBasic.Strings.Space%2A>, <xref:Microsoft.VisualBasic.Strings.StrDup%2A>|  
+|Find the length of a string.|<xref:Microsoft.VisualBasic.Strings.Len%2A>|  
+|Format a string.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>, <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>, <xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>, <xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|  
+|Manipulate strings.|<xref:Microsoft.VisualBasic.Strings.InStr%2A>, <xref:Microsoft.VisualBasic.Strings.Left%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Mid%2A>, <xref:Microsoft.VisualBasic.Strings.Right%2A>, <xref:Microsoft.VisualBasic.Strings.RTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Trim%2A>|  
+|Set string comparison rules.|[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|  
+|Work with ASCII and ANSI values.|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|  
+|Replace a specified substring.|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|  
+|Return a filter-based string array.|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|  
+|Return a specified number of substrings.|<xref:Microsoft.VisualBasic.Strings.Split%2A>, <xref:Microsoft.VisualBasic.Strings.Join%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

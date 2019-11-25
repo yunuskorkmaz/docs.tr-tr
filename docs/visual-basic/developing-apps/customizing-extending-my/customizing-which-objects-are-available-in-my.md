@@ -1,76 +1,76 @@
 ---
-title: My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme (Visual Basic)
+title: My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: bb3f8eb2e8b1cf5bce364fc4b3ce0587769bb5f9
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 0387aca08e3a31b0a2045369919894d88caf5b76
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775207"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330324"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme (Visual Basic)
 
-Bu konuda, projenizin `_MYTYPE` koşullu derleme sabiti ayarlanarak hangi `My` nesnelerinin etkinleştirildiğini nasıl denetleyebileceği açıklanmaktadır. Visual Studio tümleşik geliştirme ortamı (IDE) proje türüyle eşitlenmiş bir proje için `_MYTYPE` koşullu derleme sabiti tutar.  
+This topic describes how you can control which `My` objects are enabled by setting your project's `_MYTYPE` conditional-compilation constant. The Visual Studio Integrated Development Environment (IDE) keeps the `_MYTYPE` conditional-compilation constant for a project in sync with the project's type.  
   
-## <a name="predefined-_mytype-values"></a>Önceden tanımlanmış \_MYTYPE değerleri  
+## <a name="predefined-_mytype-values"></a>Predefined \_MYTYPE Values  
 
-@No__t_1 koşullu derleme sabitini ayarlamak için `/define` derleyici seçeneğini kullanmanız gerekir. @No__t_0 sabiti için kendi değerini belirtirken, dize değerini ters eğik çizgi/tırnak işareti (\\ ") sıralarında almalısınız. Örneğin, şunu kullanabilirsiniz:  
+You must use the `/define` compiler option to set the `_MYTYPE` conditional-compilation constant. When specifying your own value for the `_MYTYPE` constant, you must enclose the string value in backslash/quotation mark (\\") sequences. For example, you could use:  
   
 ```console  
 /define:_MYTYPE=\"WindowsForms\"  
 ```  
   
- Bu tabloda, `_MYTYPE` koşullu derleme sabitinin çeşitli proje türleri için ne şekilde ayarlandığı gösterilmektedir.  
+ This table shows what the `_MYTYPE` conditional-compilation constant is set to for several project types.  
   
-|Proje türü|\_MYTYPE değeri|  
+|Project type|\_MYTYPE value|  
 |------------------|--------------------|  
-|Sınıf Kitaplığı|Pencerelerin|  
-|Konsol Uygulaması|Konsola|  
-|Web|Web|  
-|Web Denetim Kitaplığı|'Dan|  
-|Windows uygulaması|WindowsForms|  
-|Windows uygulaması, özel `Sub Main` ile Başlarken|"WindowsFormsWithCustomSubMain"|  
-|Windows Denetim Kitaplığı|Pencerelerin|  
-|Windows Hizmeti|Konsola|  
-|Olmamalıdır|Olmamalıdır|  
+|Sınıf Kitaplığı|"Windows"|  
+|Konsol Uygulaması|"Console"|  
+|Web|"Web"|  
+|Web Denetim Kitaplığı|"WebControl"|  
+|Windows Application|"WindowsForms"|  
+|Windows Application, when starting with custom `Sub Main`|"WindowsFormsWithCustomSubMain"|  
+|Windows Control Library|"Windows"|  
+|Windows Hizmeti|"Console"|  
+|Empty|"Empty"|  
   
 > [!NOTE]
-> Tüm koşullu derleme dizesi karşılaştırmaları, `Option Compare` deyimin nasıl ayarlandığına bakılmaksızın büyük/küçük harfe duyarlıdır.  
+> All conditional-compilation string comparisons are case-sensitive, regardless of how the `Option Compare` statement is set.  
   
-## <a name="dependent-_my-compilation-constants"></a>Bağımlı \_MY derleme sabitleri  
+## <a name="dependent-_my-compilation-constants"></a>Dependent \_MY Compilation Constants  
 
-Koşullu derleme sabiti `_MYTYPE`, diğer `_MY` derleme sabitlerinin değerlerini denetler:  
+The `_MYTYPE` conditional-compilation constant, in turn, controls the values of several other `_MY` compilation constants:  
   
 |\_MYTYPE|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_MYFORMS|\_MYUSERTYPE|\_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|Konsola|Konsola|Pencerelerin|Tanımlayan|Pencerelerin|TRUE|  
-|Özel|Tanımlayan|Tanımlayan|Tanımlayan|Tanımlayan|Tanımlayan|  
-|Olmamalıdır|Tanımlayan|Tanımlayan|Tanımlayan|Tanımlayan|Tanımlayan|  
-|Web|Tanımlayan|Web|YANLÝÞ|Web|YANLÝÞ|  
-|'Dan|Tanımlayan|Web|YANLÝÞ|Web|TRUE|  
-|"Windows" veya ""|Pencerelerin|Pencerelerin|Tanımlayan|Pencerelerin|TRUE|  
-|WindowsForms|WindowsForms|Pencerelerin|TRUE|Pencerelerin|TRUE|  
-|"WindowsFormsWithCustomSubMain"|Konsola|Pencerelerin|TRUE|Pencerelerin|TRUE|  
+|"Console"|"Console"|"Windows"|Undefined|"Windows"|TRUE|  
+|"Custom"|Undefined|Undefined|Undefined|Undefined|Undefined|  
+|"Empty"|Undefined|Undefined|Undefined|Undefined|Undefined|  
+|"Web"|Undefined|"Web"|FALSE|"Web"|FALSE|  
+|"WebControl"|Undefined|"Web"|FALSE|"Web"|TRUE|  
+|"Windows" or ""|"Windows"|"Windows"|Undefined|"Windows"|TRUE|  
+|"WindowsForms"|"WindowsForms"|"Windows"|TRUE|"Windows"|TRUE|  
+|"WindowsFormsWithCustomSubMain"|"Console"|"Windows"|TRUE|"Windows"|TRUE|  
   
- Varsayılan olarak, tanımsız koşullu derleme sabitleri `FALSE` olarak çözümlenir. Varsayılan davranışı geçersiz kılmak için projenizi derlerken tanımsız sabitler için değerler belirtebilirsiniz.  
+ By default, undefined conditional-compilation constants resolve to `FALSE`. You can specify values for the undefined constants when compiling your project to override the default behavior.  
   
 > [!NOTE]
-> @No__t_0 "Custom" olarak ayarlandığında, proje `My` ad alanını içerir, ancak nesne içermez. Ancak, `_MYTYPE` "Empty" olarak ayarlamak derleyicinin `My` ad alanını ve nesnelerini eklemesini engeller.  
+> When `_MYTYPE` is set to "Custom", the project contains the `My` namespace, but it contains no objects. However, setting `_MYTYPE` to "Empty" prevents the compiler from adding the `My` namespace and its objects.  
   
- Bu tabloda `_MY` derleme sabitlerinin önceden tanımlanmış değerlerinin etkileri açıklanmaktadır.  
+ This table describes the effects of the predefined values of the `_MY` compilation constants.  
   
 |Sabit|Açıklama|  
 |--------------|-------------|  
-|`_MYAPPLICATIONTYPE`|Sabit "Console," Windows "veya" WindowsForms "ise `My.Application` etkinleştirilir:<br /><br /> -"Console" sürümü <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> türetilir. ve "Windows" sürümünden daha az üye içeriyor.<br />-"Windows" sürümü <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> türetilir. ve "WindowsForms" sürümünden daha az üye içeriyor.<br />-@No__t_0 "WindowsForms" sürümü <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> türetilir. @No__t_0 sabiti "winexe" olarak tanımlanmışsa, sınıf bir `Sub Main` yöntemi içerir.|  
-|`_MYCOMPUTERTYPE`|Sabit "Web" veya "Windows" ise `My.Computer` etkinleştirilir:<br /><br /> -"Web" sürümü <xref:Microsoft.VisualBasic.Devices.ServerComputer> türetilir ve "Windows" sürümünden daha az üyeye sahiptir.<br />-@No__t_0 "Windows" sürümü <xref:Microsoft.VisualBasic.Devices.Computer> türetilir.|  
-|`_MYFORMS`|Sabit `TRUE` `My.Forms` etkinleştirilir.|  
-|`_MYUSERTYPE`|Sabit "Web" veya "Windows" ise `My.User` etkinleştirilir:<br /><br /> -@No__t_0 "Web" sürümü geçerli HTTP isteğinin kullanıcı kimliğiyle ilişkili.<br />-@No__t_0 "Windows" sürümü iş parçacığının geçerli sorumlusu ile ilişkili.|  
-|`_MYWEBSERVICES`|Sabit `TRUE` `My.WebServices` etkinleştirilir.|  
-|`_MYTYPE`|@No__t_0, `My.Request` ve `My.Response`, sabit "Web" ise izin vermez.|  
+|`_MYAPPLICATIONTYPE`|Enables `My.Application`, if the constant is "Console," Windows," or "WindowsForms":<br /><br /> -   The "Console" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>. and has fewer members than the "Windows" version.<br />-   The "Windows" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>.and has fewer members than the "WindowsForms" version.<br />-   The "WindowsForms" version of `My.Application` derives from <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>. If the `TARGET` constant is defined to be "winexe", then the class includes a `Sub Main` method.|  
+|`_MYCOMPUTERTYPE`|Enables `My.Computer`, if the constant is "Web" or "Windows":<br /><br /> -   The "Web" version derives from <xref:Microsoft.VisualBasic.Devices.ServerComputer>, and has fewer members than the "Windows" version.<br />-   The "Windows" version of `My.Computer` derives from <xref:Microsoft.VisualBasic.Devices.Computer>.|  
+|`_MYFORMS`|Enables `My.Forms`, if the constant is `TRUE`.|  
+|`_MYUSERTYPE`|Enables `My.User`, if the constant is "Web" or "Windows":<br /><br /> -   The "Web" version of `My.User` is associated with the user identity of the current HTTP request.<br />-   The "Windows" version of `My.User` is associated with the thread's current principal.|  
+|`_MYWEBSERVICES`|Enables `My.WebServices`, if the constant is `TRUE`.|  
+|`_MYTYPE`|Enables `My.Log`, `My.Request`, and `My.Response`, if the constant is "Web".|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -80,7 +80,7 @@ Koşullu derleme sabiti `_MYTYPE`, diğer `_MY` derleme sabitlerinin değerlerin
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
 - [My Özellikleri Proje Türüne Nasıl Bağımlıdır](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
 - [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [-tanımla (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+- [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [My.Request Nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)
 - [My.Response Nesnesi](../../../visual-basic/language-reference/objects/my-response-object.md)

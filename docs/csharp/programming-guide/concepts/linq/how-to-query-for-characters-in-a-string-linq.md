@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: Dizedeki karakterleri sorgulama (LINQ) (C#)'
+title: 'Nasıl yapılır: bir dizedeki karakterleri sorgulama (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: 1212ebcf264aab756eca1acb81ae617c2218a065
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bc72c4370ff408a60f48aa020a16dae7f48f702a
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592883"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140967"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Nasıl yapılır: Dizedeki karakterleri sorgulama (LINQ) (C#)
-<xref:System.String> Sınıfı genel<xref:System.Collections.Generic.IEnumerable%601> arabirimi uyguladığından, herhangi bir dize bir karakter dizisi olarak sorgulanabilir. Ancak bu, LINQ 'in yaygın bir kullanımı değildir. Karmaşık kalıp eşleştirme işlemleri için <xref:System.Text.RegularExpressions.Regex> sınıfını kullanın.  
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Nasıl yapılır: bir dizedeki karakterleri sorgulama (LINQ) (C#)
+<xref:System.String> sınıfı genel <xref:System.Collections.Generic.IEnumerable%601> arabirimini gerçekleştirdiğinden, herhangi bir dize bir karakter dizisi olarak sorgulanabilir. Ancak bu, LINQ 'in yaygın bir kullanımı değildir. Karmaşık kalıp eşleştirme işlemleri için <xref:System.Text.RegularExpressions.Regex> sınıfını kullanın.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, içerdiği sayısal basamak sayısını belirlemede bir dizeyi sorgular. Sorgunun ilk kez yürütüldükten sonra "yeniden kullanılır" olduğunu unutmayın. Sorgunun kendisi gerçek sonuçları depolamadığından bu mümkündür.  
@@ -55,9 +55,9 @@ class QueryAString
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- System. C# LINQ ve System.IO ad alanları `using` için yönergeler içeren bir konsol uygulaması projesi oluşturun.  
+ System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ ve dizeler (C#)](./linq-and-strings.md)
-- [Nasıl yapılır: LINQ sorgularını normal Ifadelerle birleştirme (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)
+- [LINQ sorgularını normal ifadelerle birleştirme (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)

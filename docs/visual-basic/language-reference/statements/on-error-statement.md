@@ -1,5 +1,5 @@
 ---
-title: On Error Deyimi (Visual Basic)
+title: On Error Deyimi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.OnError
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 4474b217147aca74f2c6e5376c8f55318a05bf4a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d62c2ba1849b7015ed877d503220026a2dfeff57
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046510"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353815"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error Deyimi (Visual Basic)
-Bir hata işleme yordamını sunar ve yordamın içindeki konumunu belirtir; , hata işleme yordamını devre dışı bırakmak için de kullanılabilir. `On Error` İfade yapılandırılmamış hata işlemede kullanılır ve yapılandırılmış özel durum işleme yerine kullanılabilir. [Yapılandırılmış özel durum işleme](../../../standard/exceptions/index.md) .NET içinde yerleşiktir, genellikle daha etkilidir, bu nedenle uygulamanızda çalışma zamanı hatalarını işlerken önerilir.
+Enables an error-handling routine and specifies the location of the routine within a procedure; can also be used to disable an error-handling routine. The `On Error` statement is used in unstructured error handling and can be used instead of structured exception handling. [Structured exception handling](../../../standard/exceptions/index.md) is built into .NET, is generally more efficient, and so is recommended when handling runtime errors in your application.
 
- Hata işleme veya özel durum işleme olmadan, oluşan tüm çalışma zamanı hataları önemli: bir hata iletisi görüntülenir ve yürütme durdu.
+ Without error handling or exception handling, any run-time error that occurs is fatal: an error message is displayed, and execution stops.
 
 > [!NOTE]
-> Anahtar sözcüğü, geri uyumluluk için desteklenen [hata bildiriminde](../../../visual-basic/language-reference/statements/error-statement.md)de kullanılır. `Error`
+> The `Error` keyword is also used in the [Error Statement](../../../visual-basic/language-reference/statements/error-statement.md), which is supported for backward compatibility.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,74 +47,74 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 
 |Terim|Tanım|
 |---|---|
-|`GoTo`*satır*|Gerekli *satır* bağımsız değişkeninde belirtilen satırda başlayan hata işleme yordamını sunar. *Satır* bağımsız değişkeni herhangi bir satır etiketi veya satır numarasıdır. Bir çalışma zamanı hatası oluşursa, dalları belirtilen satıra göre kontrol edin ve hata işleyicisini etkin hale getirir. Belirtilen satır, `On Error` deyimle aynı yordamda veya bir derleme zamanı hatasıyla oluşmalıdır.|
-|`GoTo 0`|Etkin hata işleyicisini geçerli yordamda devre dışı bırakır ve öğesini olarak `Nothing`sıfırlar.|
-|`GoTo -1`|Etkin özel durumu geçerli yordamda devre dışı bırakır ve öğesini olarak `Nothing`sıfırlar.|
-|`Resume Next`|Bir çalışma zamanı hatası oluştuğunda, denetimin Hatanın gerçekleştiği deyimin hemen ardından ifadeye ve yürütmenin bu noktadan devam edeceğini belirtir. Nesnelere erişmek yerine `On Error GoTo` bu formu kullanın.|
+|`GoTo` *line*|Enables the error-handling routine that starts at the line specified in the required *line* argument. The *line* argument is any line label or line number. If a run-time error occurs, control branches to the specified line, making the error handler active. The specified line must be in the same procedure as the `On Error` statement or a compile-time error will occur.|
+|`GoTo 0`|Disables enabled error handler in the current procedure and resets it to `Nothing`.|
+|`GoTo -1`|Disables enabled exception in the current procedure and resets it to `Nothing`.|
+|`Resume Next`|Specifies that when a run-time error occurs, control goes to the statement immediately following the statement where the error occurred, and execution continues from that point. Use this form rather than `On Error GoTo` when accessing objects.|
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!NOTE]
-> Yapılandırılmamış özel durum işleme ve `On Error` bildirisini kullanmak yerine kodunuzda yapılandırılmış özel durum işlemeyi kullanmanızı öneririz. Daha fazla bilgi için bkz [. TRY... Yakala... Finally ekstresi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
+> We recommend that you use structured exception handling in your code whenever possible, rather than using unstructured exception handling and the `On Error` statement. For more information, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
 
- Bir "etkin" hata işleyicisi bir `On Error` deyime göre açılmış bir hatadır. Bir "etkin" hata işleyicisi, bir hatayı işleme sürecinde olan etkin bir işleyicidir.
+ An "enabled" error handler is one that is turned on by an `On Error` statement. An "active" error handler is an enabled handler that is in the process of handling an error.
 
- Hata işleyicisi etkinken bir hata oluşursa `Resume`(hata ve bir `Exit Sub` `Exit Function`,, veya `Exit Property` bildiri arasında), geçerli yordamın hata işleyicisi hatayı işleyemez. Denetim, çağıran yordama döner.
+ If an error occurs while an error handler is active (between the occurrence of the error and a `Resume`, `Exit Sub`, `Exit Function`, or `Exit Property` statement), the current procedure's error handler cannot handle the error. Control returns to the calling procedure.
   
- Çağıran yordamın etkin bir hata işleyicisi varsa, hatayı işlemek için etkinleştirilir. Çağıran yordamın hata işleyicisi de etkinse, etkin ancak etkin olmayan bir hata işleyicisi bulunana kadar, denetim önceki çağrı yordamlarıyla geri geçirilir. Böyle bir hata işleyicisi bulunmazsa, hata gerçekten gerçekleştiği noktada önemli olur.
+ If the calling procedure has an enabled error handler, it is activated to handle the error. If the calling procedure's error handler is also active, control passes back through previous calling procedures until an enabled, but inactive, error handler is found. If no such error handler is found, the error is fatal at the point at which it actually occurred.
   
- Hata işleyicisi denetimi bir çağrı yordamına geri geçirdiğinde, bu yordam geçerli yordam olur. Herhangi bir yordamda hata işleyicisi tarafından bir hata işlendikten sonra, yürütme geçerli yordamda `Resume` deyimin tarafından belirlenen noktada devam eder.
+ Each time the error handler passes control back to a calling procedure, that procedure becomes the current procedure. Once an error is handled by an error handler in any procedure, execution resumes in the current procedure at the point designated by the `Resume` statement.
   
 > [!NOTE]
-> Hata işleme yordamı bir `Sub` yordam `Function` veya yordam değildir. Bir satır etiketi veya satır numarası tarafından işaretlenen kodun bir bölümüdür.
+> An error-handling routine is not a `Sub` procedure or a `Function` procedure. It is a section of code marked by a line label or a line number.
   
-## <a name="number-property"></a>Number özelliği
- Hata işleme yordamları, hatanın nedenini öğrenmek için `Number` `Err` nesnesinin özelliğindeki değeri kullanır. Yordam, diğer herhangi bir hata gerçekleşebilmesi veya bir hataya `Err` neden olabilecek bir yordam çağrılmadan önce, nesne içindeki ilgili özellik değerlerini test etmelidir veya kaydeder. `Err` Nesnedeki özellik değerleri yalnızca en son hatayı yansıtır. İle `Err.Number` ilişkili hata iletisi içinde `Err.Description`bulunur.  
+## <a name="number-property"></a>Number Property
+ Error-handling routines rely on the value in the `Number` property of the `Err` object to determine the cause of the error. The routine should test or save relevant property values in the `Err` object before any other error can occur or before a procedure that might cause an error is called. The property values in the `Err` object reflect only the most recent error. The error message associated with `Err.Number` is contained in `Err.Description`.  
   
 ## <a name="throw-statement"></a>Throw Deyimi  
- `Err.Raise` Yöntemiyle oluşturulan bir hata, özelliği, `Exception` <xref:System.Exception> sınıfının yeni oluşturulmuş bir örneğine ayarlar. Türetilmiş özel durum türleri için özel durumların çıkarılmasını desteklemek amacıyla, dilde bir `Throw` ifade desteklenir. Bu, oluşturulacak özel durum örneği olan tek bir parametre alır. Aşağıdaki örnek, bu özelliklerin mevcut özel durum işleme desteğiyle nasıl kullanılabileceğini göstermektedir:
+ An error that is raised with the `Err.Raise` method sets the `Exception` property to a newly created instance of the <xref:System.Exception> class. In order to support the raising of exceptions of derived exception types, a `Throw` statement is supported in the language. This takes a single parameter that is the exception instance to be thrown. The following example shows how these features can be used with the existing exception handling support:
 
  [!code-vb[VbVbalrErrorHandling#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#17)]  
   
- `On Error GoTo` Deyimin, özel durum sınıfından bağımsız olarak tüm hataları yakaladığı konusunda dikkat edin.
+ Notice that the `On Error GoTo` statement traps all errors, regardless of the exception class.
   
-## <a name="on-error-resume-next"></a>Hata durumunda devamında
- `On Error Resume Next`yürütmeye, çalışma zamanı hatasına neden olan deyimin hemen ardından gelen deyimle devam etmesine neden olur ya da `On Error Resume Next` deyimin bulunduğu yordamın en son çağrısından hemen sonra gelen deyimle devam eder. Bu ifade, yürütmenin çalışma zamanı hatasına rağmen devam etmesine izin verir. Hatanın gerçekleştiği hata işleme yordamını, yordamı yordamın içindeki başka bir konuma aktarmak yerine yerleştirebilirsiniz. Başka `On Error Resume Next` bir yordam çağrıldığında bir ifade devre dışı bırakılır, bu nedenle bu yordamda satır `On Error Resume Next` içi hata işleme istiyorsanız, çağrılan her yordamda bir ifade yürütmelisiniz.
+## <a name="on-error-resume-next"></a>On Error Resume Next
+ `On Error Resume Next` causes execution to continue with the statement immediately following the statement that caused the run-time error, or with the statement immediately following the most recent call out of the procedure containing the `On Error Resume Next` statement. This statement allows execution to continue despite a run-time error. You can place the error-handling routine where the error would occur rather than transferring control to another location within the procedure. An `On Error Resume Next` statement becomes inactive when another procedure is called, so you should execute an `On Error Resume Next` statement in each called routine if you want inline error handling within that routine.
   
 > [!NOTE]
-> Diğer nesnelere erişim sırasında oluşturulan hatalar `On Error GoTo` işlenirken Yapıtercihedilebilir.`On Error Resume Next` Bir `Err` nesneyle her bir etkileşime geçtikten sonra Denetim, kod tarafından hangi nesneye erişildiğine ilişkin belirsizliği ortadan kaldırır. Hangi nesnenin içinde `Err.Number`hata kodu yerleştirdiğini ve hangi nesnenin ilk olarak hatayı (içinde `Err.Source`belirtilen nesne) üretdiğini de unutmayın.
+> The `On Error Resume Next` construct may be preferable to `On Error GoTo` when handling errors generated during access to other objects. Checking `Err` after each interaction with an object removes ambiguity about which object was accessed by the code. You can be sure which object placed the error code in `Err.Number`, as well as which object originally generated the error (the object specified in `Err.Source`).
 
-## <a name="on-error-goto-0"></a>Hatada git 0
- `On Error GoTo 0`geçerli yordamda hata işlemeyi devre dışı bırakır. Yordam 0 sayılı bir satır içerse bile, hata işleme kodunun başlangıcı olarak line 0 belirtmez. `On Error GoTo 0` Bir ifade olmadan, bir yordam çıkıldığında bir hata işleyicisi otomatik olarak devre dışı bırakılır.
+## <a name="on-error-goto-0"></a>On Error GoTo 0
+ `On Error GoTo 0` disables error handling in the current procedure. It doesn't specify line 0 as the start of the error-handling code, even if the procedure contains a line numbered 0. Without an `On Error GoTo 0` statement, an error handler is automatically disabled when a procedure is exited.
 
-## <a name="on-error-goto--1"></a>Hatada GoTo-1
- `On Error GoTo -1`geçerli yordamda özel durumu devre dışı bırakır. Yordam numaralandırılmış bir satır içerse de, hata işleme kodunun başlangıcı olarak Line-1 ' i belirtmez. `On Error GoTo -1` Bir ifade olmadan, bir yordama çıkıldığında bir özel durum otomatik olarak devre dışı bırakılır.
+## <a name="on-error-goto--1"></a>On Error GoTo -1
+ `On Error GoTo -1` disables the exception in the current procedure. It does not specify line -1 as the start of the error-handling code, even if the procedure contains a line numbered -1. Without an `On Error GoTo -1` statement, an exception is automatically disabled when a procedure is exited.
 
- Hata oluştuğunda hata işleme kodunun çalıştırılmasını engellemek için, aşağıdaki parçada olduğu gibi, hata işleme `Exit Sub`yordamının `Exit Function`hemen öncesine `Exit Property` bir, veya ifadesini yerleştirin:
+ To prevent error-handling code from running when no error has occurred, place an `Exit Sub`, `Exit Function`, or `Exit Property` statement immediately before the error-handling routine, as in the following fragment:
 
  [!code-vb[VbVbalrErrorHandling#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#18)]
 
- Burada, hata işleme kodu `Exit Sub` ifadeyi izler ve yordam akışından ayırmak için `End Sub` deyimden önce gelir. Hata işleme kodunu bir yordamda herhangi bir yere yerleştirebilirsiniz.
+ Here, the error-handling code follows the `Exit Sub` statement and precedes the `End Sub` statement to separate it from the procedure flow. You can place error-handling code anywhere in a procedure.
 
-## <a name="untrapped-errors"></a>Yakalangeri al hataları
- Nesneler yürütülebilir bir dosya olarak çalıştırıldığında denetim uygulamasına nesneler üzerinde yakalangeri dönüş hataları döndürülür. Geliştirme ortamında, yalnızca uygun seçenekler ayarlandıysa denetim uygulamasına geri dönüş hataları döndürülür. Hata ayıklama sırasında ayarlanması gereken seçeneklerin açıklaması, nasıl ayarlanacağı ve konağın sınıf oluşturup oluşturamayacağını gösteren bir açıklama için ana bilgisayar uygulamanızın belgelerine bakın.
+## <a name="untrapped-errors"></a>Untrapped Errors
+ Untrapped errors in objects are returned to the controlling application when the object is running as an executable file. Within the development environment, untrapped errors are returned to the controlling application only if the proper options are set. See your host application's documentation for a description of which options should be set during debugging, how to set them, and whether the host can create classes.
 
- Diğer nesnelere erişen bir nesne oluşturursanız, geri aktardıkları işlenmemiş hataları işlemeye çalışırsınız. Bu durumda, içindeki `Err.Number` hata kodlarını kendi hatalardan biriyle eşleyin ve sonra bunları nesnenizin çağıranına geri geçirin. Hata kodunuzu `VbObjectError` sabite ekleyerek hatayı belirtmeniz gerekir. Örneğin, hata kodunuz 1052 ise, aşağıdaki gibi atayın:
+ If you create an object that accesses other objects, you should try to handle any unhandled errors they pass back. If you cannot, map the error codes in `Err.Number` to one of your own errors and then pass them back to the caller of your object. You should specify your error by adding your error code to the `VbObjectError` constant. For example, if your error code is 1052, assign it as follows:
 
  [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]
 
 > [!CAUTION]
-> Windows dinamik bağlantı kitaplıkları (dll 'Ler) çağrıları sırasında sistem hataları özel durum oluşturmaz ve Visual Basic hata yakalama ile yakalanamaz. DLL işlevlerini çağırırken, her dönüş değerini başarılı veya başarısız (API belirtimlerine göre) olarak denetlemeniz gerekir ve hata durumunda `Err` `LastDLLError` nesnenin özelliğindeki değeri kontrol edin.
+> System errors during calls to Windows dynamic-link libraries (DLLs) do not raise exceptions and cannot be trapped with Visual Basic error trapping. When calling DLL functions, you should check each return value for success or failure (according to the API specifications), and in the event of a failure, check the value in the `Err` object's `LastDLLError` property.
 
 ## <a name="example"></a>Örnek
- Bu örnek öncelikle bir yordam `On Error GoTo` içindeki bir hata işleme yordamının konumunu belirtmek için ifadesini kullanır. Örnekte, sıfıra bölme girişimi 6 hata numarasını üretir. Hata, hata işleme yordamında işlenir ve denetim daha sonra hataya neden olan ifadeye döndürülür. `On Error GoTo 0` İfade hata yakalamayı kapatır. Daha sonra `On Error Resume Next` , Next ifadesinin oluşturduğu hatanın bağlamı belirli bir şekilde tanınabilmesi için hata yakalamayı erteleme için bu ifade kullanılır. Hata işlendikten sonra `Err` nesnenin özelliklerini temizlemek için kullanıldığını unutmayın. `Err.Clear`
+ This example first uses the `On Error GoTo` statement to specify the location of an error-handling routine within a procedure. In the example, an attempt to divide by zero generates error number 6. The error is handled in the error-handling routine, and control is then returned to the statement that caused the error. The `On Error GoTo 0` statement turns off error trapping. Then the `On Error Resume Next` statement is used to defer error trapping so that the context for the error generated by the next statement can be known for certain. Note that `Err.Clear` is used to clear the `Err` object's properties after the error is handled.
 
  [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]
 
 ## <a name="requirements"></a>Gereksinimler
- **Uzayına** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)
+ **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)
 
- **Derleme** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: Belirli bir öğe adı (C#) Ile alt öğeleri bul'
+title: Belirli bir öğe adı (C#) ile alt öğeleri bulma
 ms.date: 07/20/2015
 ms.assetid: f684da20-bee9-47f5-9607-7e3fd7e67470
-ms.openlocfilehash: 8c859c555109a6f68a6b4290c536b10114620f3d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b3200a2fdf75dbf52079a2b3d27aa1a88d313406
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253692"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141086"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Nasıl yapılır: Belirli bir öğe adı (C#) Ile alt öğeleri bul
-Bazen belirli bir ada sahip tüm alt öğeleri bulmak isteyebilirsiniz. Tüm alt öğeler boyunca yinelemek için kod yazabilirsiniz, ancak <xref:System.Xml.Linq.XContainer.Descendants%2A> eksenin kullanımı daha kolaydır.  
+# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Belirli bir öğe adı (C#) ile alt öğeleri bulma
+Bazen belirli bir ada sahip tüm alt öğeleri bulmak isteyebilirsiniz. Tüm alt öğeler boyunca yinelemek için kod yazabilirsiniz, ancak <xref:System.Xml.Linq.XContainer.Descendants%2A> eksenini kullanmak daha kolaydır.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, öğe adına göre alt öğelerin nasıl bulunacağını gösterir.  

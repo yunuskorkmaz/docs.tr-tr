@@ -1,19 +1,19 @@
 ---
-title: <param> (Visual Basic)
+title: <param>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: c62eab6b1fb1ba1cc7de83c12d7205cf0bbe46fa
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4405fdf2defbb27aa2146d20083fd406d1f07236
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524724"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352292"
 ---
-# <a name="param-visual-basic"></a>\<param > (Visual Basic)
-Bir parametre adı ve açıklama tanımlar.  
+# <a name="param-visual-basic"></a>\<param> (Visual Basic)
+Defines a parameter name and description.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,24 +23,24 @@ Bir parametre adı ve açıklama tanımlar.
   
 ## <a name="parameters"></a>Parametreler  
  `name`  
- Bir yöntem parametresinin adı. Adı çift tırnak işareti ("") içine alın.  
+ The name of a method parameter. Enclose the name in double quotation marks (" ").  
   
  `description`  
- Parametresi için bir açıklama.  
+ A description for the parameter.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Metodun parametrelerinden birini açıklayacak bir yöntem bildirimine ilişkin açıklamada `<param>` etiketinin kullanılması gerekir.  
+ The `<param>` tag should be used in the comment for a method declaration to describe one of the parameters for the method.  
   
- @No__t_0 etiketinin metni aşağıdaki konumlarda görünür:  
+ The text for the `<param>` tag will appear in the following locations:  
   
-- IntelliSense parametre bilgileri. Daha fazla bilgi için bkz. [IntelliSense kullanma](/visualstudio/ide/using-intellisense).  
+- Parameter Info of IntelliSense. For more information, see [Using IntelliSense](/visualstudio/ide/using-intellisense).  
   
-- Nesne Tarayıcısı. Daha fazla bilgi için bkz. [kod yapısını görüntüleme](/visualstudio/ide/viewing-the-structure-of-code).  
+- Object Browser. For more information, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
+ Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `id` parametresini anlatmak için `<param>` etiketini kullanır.  
+ This example uses the `<param>` tag to describe the `id` parameter.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

@@ -1,17 +1,17 @@
 ---
-title: 'Nasıl yapılır: Ad alanındaki öğeleri bulma (XPath-LINQ to XML) (C#)'
+title: Bir ad alanında öğeleri bulma (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
-ms.openlocfilehash: d85426cf7a7073c35b51157e59687e2b3bcdcf8a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: da9d819be5234a2429b6eab276f89bd0d877d4a7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253676"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141075"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>Nasıl yapılır: Ad alanındaki öğeleri bulma (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>Bir ad alanında öğeleri bulma (XPath-LINQ to XML) (C#)
 
-XPath ifadeleri, belirli bir ad alanındaki düğümleri bulabilir. XPath ifadeleri ad alanlarını belirtmek için ad alanı öneklerini kullanır. Ad alanı önekleri içeren bir XPath ifadesini ayrıştırmak için, uygulayan <xref:System.Xml.IXmlNamespaceResolver>XPath yöntemlerine bir nesne geçirmeniz gerekir. Bu örnekte, <xref:System.Xml.XmlNamespaceManager>kullanılır.
+XPath ifadeleri, belirli bir ad alanındaki düğümleri bulabilir. XPath ifadeleri ad alanlarını belirtmek için ad alanı öneklerini kullanır. Ad alanı önekleri içeren bir XPath ifadesini ayrıştırmak için, <xref:System.Xml.IXmlNamespaceResolver>uygulayan XPath yöntemlerine bir nesne geçirmeniz gerekir. Bu örnek <xref:System.Xml.XmlNamespaceManager>kullanır.
 
 XPath ifadesi:
 
@@ -19,7 +19,7 @@ XPath ifadesi:
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, iki ad alanı içeren bir XML ağacını okur. XML belgesini okumak <xref:System.Xml.XmlReader> için bir kullanır. Daha sonra öğesinden ve <xref:System.Xml.XmlNameTable> <xref:System.Xml.XmlReader> <xref:System.Xml.XmlNamespaceManager> arasında bir alır. <xref:System.Xml.XmlNameTable> Öğeleri seçerken kullanır <xref:System.Xml.XmlNamespaceManager> .
+Aşağıdaki örnek, iki ad alanı içeren bir XML ağacını okur. XML belgesini okumak için bir <xref:System.Xml.XmlReader> kullanır. Daha sonra <xref:System.Xml.XmlReader>ve <xref:System.Xml.XmlNameTable><xref:System.Xml.XmlNamespaceManager> bir <xref:System.Xml.XmlNameTable> alır. Öğeleri seçerken <xref:System.Xml.XmlNamespaceManager> kullanır.
 
 ```csharp
 XmlReader reader = XmlReader.Create("ConsolidatedPurchaseOrders.xml");

@@ -1,5 +1,5 @@
 ---
-title: DirectCast İşleci (Visual Basic)
+title: DirectCast İşleci
 ms.date: 07/20/2015
 f1_keywords:
 - vb.directCast
@@ -7,39 +7,39 @@ f1_keywords:
 helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
-ms.openlocfilehash: 628ce4f06b91d0f514f71dea3aad8ea0fee6dccf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ea29b80cf27bbb2c21a8cebbfaa0a294e05f11d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778553"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331315"
 ---
 # <a name="directcast-operator-visual-basic"></a>DirectCast İşleci (Visual Basic)
-Devralma veya uygulaması temel bir tür dönüştürme işlemini ortaya çıkarır.  
+Introduces a type conversion operation based on inheritance or implementation.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `DirectCast` Visual Basic çalışma zamanı Yardımcısı yordamları biraz sağlayabilmesi için dönüştürme için daha iyi performans kullanmaz `CType` ve veri türünden dönüştürme yaparken `Object`.  
+ `DirectCast` does not use the Visual Basic run-time helper routines for conversion, so it can provide somewhat better performance than `CType` when converting to and from data type `Object`.  
   
- Kullandığınız `DirectCast` anahtar sözcüğü benzer şekilde, kullandığınız [CType işlevi](../../../visual-basic/language-reference/functions/ctype-function.md) ve [TryCast işleci](../../../visual-basic/language-reference/operators/trycast-operator.md) anahtar sözcüğü. Siz ifade ilk bağımsız değişken ve ikinci bağımsız değişken olarak öğesine dönüştürmek için bir tür olarak sağlayın. `DirectCast` iki bağımsız değişkenlerinin veri türleri arasında bir ilişki devralma ya da uygulanmasını gerektirir. Bu, bir türden devralamaz gerekir veya diğer uygulama anlamına gelir.  
+ You use the `DirectCast` keyword similar to the way you use the [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) and the [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md) keyword. You supply an expression as the first argument and a type to convert it to as the second argument. `DirectCast` requires an inheritance or implementation relationship between the data types of the two arguments. This means that one type must inherit from or implement the other.  
   
-## <a name="errors-and-failures"></a>Hataları  
- `DirectCast` Devralma ya da uygulanmasını ilişkisi olduğunu algılarsa bir derleyici hatası oluşturur. Ancak, bir derleyici hatası eksikliği başarılı bir dönüştürme garanti etmez. İstenen dönüştürme daraltma, çalışma zamanında başarısız. Bu durumda, çalışma zamanı oluşturur bir <xref:System.InvalidCastException> hata.  
+## <a name="errors-and-failures"></a>Errors and Failures  
+ `DirectCast` generates a compiler error if it detects that no inheritance or implementation relationship exists. But the lack of a compiler error does not guarantee a successful conversion. If the desired conversion is narrowing, it could fail at run time. If this happens, the runtime throws an <xref:System.InvalidCastException> error.  
   
 ## <a name="conversion-keywords"></a>Dönüşüm Anahtar Sözcükleri  
- Tür Dönüşüm anahtar sözcükleri karşılaştırması aşağıdaki gibidir.  
+ A comparison of the type conversion keywords is as follows.  
   
-|Anahtar sözcüğü|Veri türleri|Bağımsız değişken ilişkisi|Çalışma zamanı hatası|  
+|Keyword|Veri türleri|Argument relationship|Run-time failure|  
 |---|---|---|---|  
-|[CType İşlevi](../../../visual-basic/language-reference/functions/ctype-function.md)|Herhangi bir veri türü|İki veri türleri arasında genişletme veya daraltma dönüştürmesi tanımlanmalıdır|Oluşturur <xref:System.InvalidCastException>|  
-|`DirectCast`|Herhangi bir veri türü|Bir türden devralamaz veya diğer türü uyguluyor|Oluşturur <xref:System.InvalidCastException>|  
-|[TryCast İşleci](../../../visual-basic/language-reference/operators/trycast-operator.md)|Yalnızca başvuru türleri|Bir türden devralamaz veya diğer türü uyguluyor|Döndürür [hiçbir şey](../../../visual-basic/language-reference/nothing.md)|  
+|[CType İşlevi](../../../visual-basic/language-reference/functions/ctype-function.md)|Any data types|Widening or narrowing conversion must be defined between the two data types|Throws <xref:System.InvalidCastException>|  
+|`DirectCast`|Any data types|One type must inherit from or implement the other type|Throws <xref:System.InvalidCastException>|  
+|[TryCast İşleci](../../../visual-basic/language-reference/operators/trycast-operator.md)|Reference types only|One type must inherit from or implement the other type|Returns [Nothing](../../../visual-basic/language-reference/nothing.md)|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek iki kullanımlarını gösterir `DirectCast`, çalıştırma ve biri başarısız biri başarılı.  
+ The following example demonstrates two uses of `DirectCast`, one that fails at run time and one that succeeds.  
   
  [!code-vb[VbVbalrKeywords#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#1)]  
   
- Önceki örnekte, çalışma zamanı türü `q` olduğu `Double`. `CType` çünkü başarılı `Double` dönüştürülebilir `Integer`. Ancak, ilk `DirectCast` çalışma zamanı türü için çalışma zamanında başarısız oluyor `Double` ile herhangi bir devralma ilişkisi yoktur `Integer`rağmen bir dönüşümü yok. İkinci `DirectCast` çünkü türünden dönüştürür başarılı <xref:System.Windows.Forms.Form> türüne <xref:System.Windows.Forms.Control>, içinden <xref:System.Windows.Forms.Form> devralır.  
+ In the preceding example, the run-time type of `q` is `Double`. `CType` succeeds because `Double` can be converted to `Integer`. However, the first `DirectCast` fails at run time because the run-time type of `Double` has no inheritance relationship with `Integer`, even though a conversion exists. The second `DirectCast` succeeds because it converts from type <xref:System.Windows.Forms.Form> to type <xref:System.Windows.Forms.Control>, from which <xref:System.Windows.Forms.Form> inherits.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

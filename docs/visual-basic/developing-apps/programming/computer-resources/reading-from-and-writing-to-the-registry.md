@@ -1,42 +1,45 @@
 ---
-title: Kayıt Defterini Okuma ve Yazma (Visual Basic)
+title: Kayıt Defterini Okuma ve Yazma
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Registry object, tasks
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-ms.openlocfilehash: fcc13d82a2b27221c13f9277585c21196b47003d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 89db9ef9db4235c069d6239d32e4f8679fbabf0b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591470"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349758"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Kayıt Defterini Okuma ve Yazma (Visual Basic)
-Bu konuda, görev ve kayıt defteri ile ilişkili olan kavramsal konular açıklanmaktadır.  
+
+This topic describes task and conceptual topics that are associated with the registry.  
   
- Visual Basic'te programlama, Visual Basic veya .NET Framework'ün kayıt defteri sınıfları tarafından sağlanan işlevleri yoluyla kayıt defterine erişim seçebilirsiniz. Kayıt defteri konakların bilgilerini makinede barındırılan uygulamalardan bilgi yanı sıra işletim sistemi. Kayıt defteri ile çalışma, sistem kaynakları için uygun olmayan erişimine izin vererek güvenliği tehlikeye atabilir veya korumalı bilgileri.  
+ When programming in Visual Basic, you can choose to access the registry by means of either the functions provided by Visual Basic or the registry classes of the .NET Framework. The registry hosts information from the operating system as well as information from applications hosted on the machine. Working with the registry may compromise security by allowing inappropriate access to system resources or protected information.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Bir kayıt defteri anahtarı oluşturma ve değerini ayarlama](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
- Nasıl kullanılacağını açıklar `CreateSubKey` ve `SetValue` yöntemlerinin `My.Computer.Registry` nesne bir kayıt defteri anahtarı oluşturma ve değerini ayarlayın.  
+
+ [Nasıl Yapılır: Kayıt Defteri Anahtarı Oluşturma ve Değerini Ayarlama](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
+ Describes how to use the `CreateSubKey` and `SetValue` methods of the `My.Computer.Registry` object to create a registry key and set its value.  
   
- [Nasıl yapılır: Kayıt defteri anahtarından değer okuma](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)  
- Nasıl kullanılacağını açıklar `GetValue` yöntemi `My.Computer.Registry` kayıt defteri anahtarından değer okuma için nesne.  
+ [Nasıl Yapılır: Kayıt Defteri Anahtarından Değer Okuma](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)  
+ Describes how to use the `GetValue` method of the `My.Computer.Registry` object to read a value from a registry key.  
   
- [Nasıl yapılır: Bir kayıt defteri anahtarını silme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
- Nasıl kullanılacağını açıklar `DeleteSubKey` yöntemi `My.Computer.Registry.CurrentUser` özelliği bir kayıt defteri anahtarını silin.  
+ [Nasıl Yapılır: Kayıt Defteri Anahtarını Silme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
+ Describes how to use the `DeleteSubKey` method of the `My.Computer.Registry.CurrentUser` property to delete a registry key.  
   
  [Microsoft.Win32 Ad Alanını Kullanarak Kayıt Defterini Okuma ve Yazma](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- Nasıl kullanılacağını açıklar `Registry` ve `RegistryKey` kayıt defterine erişim için .NET Framework'ün sınıfları.  
+ Describes how to use the `Registry` and `RegistryKey` classes of the .NET Framework to access the registry.  
   
  [Güvenlik ve Kayıt Defteri](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
- Kayıt defteriyle ilgili güvenlik sorunları açıklar.  
+ Discusses security issues involving the registry.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- Listeler ve üyelerini açıklar `My.Computer.Registry` nesne.  
+ Lists and explains members of the `My.Computer.Registry` object.  
   
  <xref:Microsoft.Win32.Registry>  
- Genel bir bakış sunan `Registry` bireysel anahtarları ve üyelerine bağlantılarıyla birlikte bir sınıf.
+ Presents an overview of the `Registry` class, along with links to individual keys and members.

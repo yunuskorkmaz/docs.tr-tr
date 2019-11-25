@@ -1,5 +1,5 @@
 ---
-title: AddHandler ekstresi (Visual Basic)
+title: AddHandler Deyimi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AddHandlerMethod
@@ -8,15 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: 95277f532488b0cf56114e5ee94dc3528e3a2e02
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: c110116af75d4fb39c016b8d6afcdb707fa6599b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004537"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350185"
 ---
 # <a name="addhandler-statement"></a>AddHandler Deyimi
-Çalışma zamanında bir olayı olay işleyicisiyle ilişkilendirir.  
+Associates an event with an event handler at run time.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,19 +27,19 @@ AddHandler event, AddressOf eventhandler
 ## <a name="parts"></a>Bölümler  
 |||
 |---|---|
-|olay|İşlenecek etkinliğin adı.|  
-|`eventhandler`|Olayı işleyen yordamın adı.|
+|olay|The name of the event to handle.|  
+|`eventhandler`|The name of a procedure that handles the event.|
 |||
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 ve `RemoveHandler` deyimleri, program yürütme sırasında herhangi bir zamanda olay işlemeyi başlatıp durdurmalarını sağlar.  
+ The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling at any time during program execution.  
   
- @No__t-0 yordamının imzası, olay `event` ' in imzasıyla aynı olmalıdır.  
+ The signature of the `eventhandler` procedure must match the signature of the event `event`.  
   
- @No__t-0 anahtar sözcüğü ve `AddHandler` deyimlerinin her ikisi de belirli olayları işleyen belirli yordamları belirtmenizi sağlar, ancak farklar vardır. @No__t-0 ekstresi çalışma zamanında yordamları olaylara bağlar. Belirli bir olayı işlediğini belirtmek için bir yordam tanımlarken `Handles` anahtar sözcüğünü kullanın. Daha fazla bilgi için bkz. [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).  
+ The `Handles` keyword and the `AddHandler` statement both allow you to specify that particular procedures handle particular events, but there are differences. The `AddHandler` statement connects procedures to events at run time. Use the `Handles` keyword when defining a procedure to specify that it handles a particular event. For more information, see [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).  
   
 > [!NOTE]
-> Özel olaylar için `AddHandler` ifadesinde olayın `AddHandler` erişimcisi çağırılır. Özel olaylar hakkında daha fazla bilgi için bkz. [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md).  
+> For custom events, the `AddHandler` statement invokes the event's `AddHandler` accessor. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
@@ -47,6 +47,6 @@ AddHandler event, AddressOf eventhandler
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [RemoveHandler Deyimi](../../../visual-basic/language-reference/statements/removehandler-statement.md)
-- [İşlendiğini](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)

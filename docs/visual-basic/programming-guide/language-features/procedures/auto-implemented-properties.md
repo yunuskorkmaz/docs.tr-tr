@@ -1,5 +1,5 @@
 ---
-title: Otomatik Uygulanan Özellikler (Visual Basic)
+title: Otomatik Uygulanan Özellikler
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AutoProperty
@@ -8,29 +8,29 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: f2e25c7bcd3556f93dfedee7aa8e49bb14888123
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b322bd2215c95298be0a33ace1f3590a63878e24
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254026"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350377"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Otomatik Uygulanan Özellikler (Visual Basic)
-*Otomatik uygulanan özellikler* `Get` `Set` , kod yazmak zorunda kalmadan bir sınıfın özelliğini hızlı bir şekilde belirtmenizi sağlar. Otomatik uygulanan bir özellik için kod yazdığınızda, Visual Basic Derleyicisi otomatik olarak, ilişkili `Get` ve `Set` yordamları oluşturmaya ek olarak özellik değişkenini depolamak için bir özel alan oluşturur.  
+*Auto-implemented properties* enable you to quickly specify a property of a class without having to write code to `Get` and `Set` the property. When you write code for an auto-implemented property, the Visual Basic compiler automatically creates a private field to store the property variable in addition to creating the associated `Get` and `Set` procedures.  
   
- Otomatik uygulanan özellikler ile, varsayılan değer de dahil olmak üzere tek bir satırda bildirilebilecek bir özellik. Aşağıdaki örnek, üç özellik bildirimini gösterir.  
+ With auto-implemented properties, a property, including a default value, can be declared in a single line. The following example shows three property declarations.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#1)]  
   
- Otomatik uygulanan bir özellik, özellik değerinin özel bir alanda depolandığı bir özelliğe eşdeğerdir. Aşağıdaki kod örneği, otomatik olarak uygulanan bir özelliği gösterir.  
+ An auto-implemented property is equivalent to a property for which the property value is stored in a private field. The following code example shows an auto-implemented property.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#5)]  
   
- Aşağıdaki kod örneği, önceki otomatik uygulanan özellik örneği için denk kodu gösterir.  
+ The following code example shows the equivalent code for the previous auto-implemented property example.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#2)]  
   
- Aşağıdaki kod, salt okunur özellikleri uygulamayı gösterir:  
+ The following code show implementing readonly properties:  
   
 ```vb  
 Class Customer  
@@ -44,58 +44,58 @@ Class Customer
 End Class  
 ```  
   
- Örneğinde gösterildiği gibi başlatma ifadeleriyle özelliğe atayabilirsiniz veya kapsayan türün oluşturucusunda özelliklere atayabilirsiniz.  Herhangi bir zamanda ReadOnly özelliklerinin yedekleme alanlarına atayabilirsiniz.  
+ You can assign to the property with initialization expressions as shown in the example, or you can assign to the properties in the containing type’s constructor.  You can assign to the backing fields of readonly properties at any time.  
   
-## <a name="backing-field"></a>Destek alanı  
- Otomatik olarak uygulanan bir özellik bildirdiğinizde, Visual Basic otomatik olarak, özellik değerini içerecek şekilde, *yedekleme alanı* olarak adlandırılan gizli bir özel alan oluşturur. Yedekleme alanı adı, önce bir alt çizgi (_) tarafından gerçekleştirilen otomatik uygulanan özellik adıdır. Örneğin, adlı `ID`otomatik uygulanan bir özellik bildirirseniz, yedekleme alanı olarak adlandırılır `_ID`. Aynı zamanda adlı `_ID`sınıfınızın bir üyesini dahil ederseniz, bir adlandırma çakışması üretir ve bir derleyici hatası Visual Basic rapor edebilirsiniz.  
+## <a name="backing-field"></a>Backing Field  
+ When you declare an auto-implemented property, Visual Basic automatically creates a hidden private field called the *backing field* to contain the property value. The backing field name is the auto-implemented property name preceded by an underscore (_). For example, if you declare an auto-implemented property named `ID`, the backing field is named `_ID`. If you include a member of your class that is also named `_ID`, you produce a naming conflict and Visual Basic reports a compiler error.  
   
- Ayrıca, yedekleme alanı aşağıdaki özelliklere sahiptir:  
+ The backing field also has the following characteristics:  
   
-- , Özelliği gibi farklı bir erişim düzeyine `Private` `Public`sahip olsa bile, yedekleme alanı için erişim değiştiricisi her zaman olur.  
+- The access modifier for the backing field is always `Private`, even when the property itself has a different access level, such as `Public`.  
   
-- Özelliği olarak `Shared`işaretlenmişse, yedekleme alanı da paylaşılır.  
+- If the property is marked as `Shared`, the backing field also is shared.  
   
-- Özelliği için belirtilen öznitelikler, yedekleme alanı için geçerlidir.  
+- Attributes specified for the property do not apply to the backing field.  
   
-- Yedekleme alanına, sınıf içindeki koddan ve izleme penceresi gibi hata ayıklama araçlarından erişilebilir. Ancak, yedekleme alanı bir IntelliSense sözcük tamamlama listesinde gösterilmez.  
+- The backing field can be accessed from code within the class and from debugging tools such as the Watch window. However, the backing field does not show in an IntelliSense word completion list.  
   
-## <a name="initializing-an-auto-implemented-property"></a>Otomatik uygulanan özellik başlatılıyor  
- Bir alanı başlatmak için kullanılabilecek herhangi bir ifade, otomatik olarak uygulanan bir özelliğin başlatılması için geçerlidir. Otomatik uygulanan bir özelliği başlattığınızda, ifade değerlendirilir ve özellik `Set` yordamına geçirilir. Aşağıdaki kod örnekleri, başlangıç değerlerini içeren bazı otomatik uygulanmış özellikleri gösterir.  
+## <a name="initializing-an-auto-implemented-property"></a>Initializing an Auto-Implemented Property  
+ Any expression that can be used to initialize a field is valid for initializing an auto-implemented property. When you initialize an auto-implemented property, the expression is evaluated and passed to the `Set` procedure for the property. The following code examples show some auto-implemented properties that include initial values.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#3)]  
   
- Bir `Interface`veya işaretli `MustOverride`bir üyesi olan bir otomatik uygulanan özelliği başlatamıyor.  
+ You cannot initialize an auto-implemented property that is a member of an `Interface`, or one that is marked `MustOverride`.  
   
- Otomatik uygulanan bir özelliği bir `Structure`üyesi olarak bildirdiğinizde, yalnızca olarak `Shared`işaretlenmişse otomatik uygulanan özelliğini başlatabilirsiniz.  
+ When you declare an auto-implemented property as a member of a `Structure`, you can only initialize the auto-implemented property if it is marked as `Shared`.  
   
- Otomatik uygulanan bir özelliği dizi olarak bildirdiğinizde açık dizi sınırları belirtemezsiniz. Ancak, aşağıdaki örneklerde gösterildiği gibi bir dizi başlatıcısı kullanarak bir değer sağlayabilirsiniz.  
+ When you declare an auto-implemented property as an array, you cannot specify explicit array bounds. However, you can supply a value by using an array initializer, as shown in the following examples.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#4)]  
   
-## <a name="property-definitions-that-require-standard-syntax"></a>Standart sözdizimi gerektiren özellik tanımları  
- Otomatik uygulanan özellikler kullanışlı ve birçok programlama senaryosunu destekler. Ancak, otomatik olarak uygulanan bir özelliği kullanabileceğiniz durumlar vardır ve bunun yerine standart ya da *genişletilmiş*, özellik sözdizimini kullanmanız gerekir.  
+## <a name="property-definitions-that-require-standard-syntax"></a>Property Definitions That Require Standard Syntax  
+ Auto-implemented properties are convenient and support many programming scenarios. However, there are situations in which you cannot use an auto-implemented property and must instead use standard, or *expanded*, property syntax.  
   
- Aşağıdakilerden birini yapmak istiyorsanız genişletilmiş özellik tanımı sözdizimini kullanmanız gerekir:  
+ You have to use expanded property-definition syntax if you want to do any one of the following:  
   
-- Yordamda gelen değerleri `Get` `Set` doğrulamak için kod gibi bir özelliğin veya yordamına kod ekleyin. `Set` Örneğin, bir telefon numarasını temsil eden bir dizenin, özellik değerini ayarlamadan önce gereken sayıda rakamları içerdiğini doğrulamak isteyebilirsiniz.  
+- Add code to the `Get` or `Set` procedure of a property, such as code to validate incoming values in the `Set` procedure. For example, you might want to verify that a string that represents a telephone number contains the required number of numerals before setting the property value.  
   
-- `Get` Ve`Set` yordamı için farklı erişilebilirlik belirtin. Örneğin, `Set` yordamı `Private` ve `Get` yordamı yapmakisteyebilirsiniz.`Public`  
+- Specify different accessibility for the `Get` and `Set` procedure. For example, you might want to make the `Set` procedure `Private` and the `Get` procedure `Public`.  
   
-- Olan özellikleri oluşturun `WriteOnly`.  
+- Create properties that are `WriteOnly`.  
   
-- Parametreli özellikleri kullanın (Özellikler `Default` dahil). Özelliği için bir parametre belirtmek veya `Set` yordamın ek parametrelerini belirtmek için genişletilmiş bir özellik bildirmeniz gerekir.  
+- Use parameterized properties (including `Default` properties). You must declare an expanded property in order to specify a parameter for the property, or to specify additional parameters for the `Set` procedure.  
   
-- Yedekleme alanına bir öznitelik yerleştirin veya yedekleme alanının erişim düzeyini değiştirin.  
+- Place an attribute on the backing field, or change the access level of the backing field.  
   
-- Yedekleme alanı için XML açıklamaları sağlayın.  
+- Provide XML comments for the backing field.  
   
-## <a name="expanding-an-auto-implemented-property"></a>Otomatik uygulanan bir özellik genişletiliyor  
- Otomatik uygulanan bir özelliği `Get` bir veya `Set` yordamı içeren genişletilmiş bir özelliğe dönüştürmeniz gerekiyorsa, Visual Basic kod `Get` Düzenleyicisi otomatik olarak ve `Set` yordamlarını oluşturabilir ve `End Property`özelliği için bildirim. Bu kod, imleci `Property` deyimden sonra boş bir satıra yerleştirirseniz, bir `G` (için `Get`) veya bir `S` (için `Set`) yazın ve ENTER tuşuna basın. Visual Basic kod Düzenleyicisi, bir `Get` `Property` deyimin sonunda ENTER `Set` tuşuna bastığınızda salt okunurdur ve salt yazılır özellikler için otomatik olarak or yordamını üretir.  
+## <a name="expanding-an-auto-implemented-property"></a>Expanding an Auto-Implemented Property  
+ If you have to convert an auto-implemented property to an expanded property that contains a `Get` or `Set` procedure, the Visual Basic Code Editor can automatically generate the `Get` and `Set` procedures and `End Property` statement for the property. The code is generated if you put the cursor on a blank line following the `Property` statement, type a `G` (for `Get`) or an `S` (for `Set`) and press ENTER. The Visual Basic Code Editor automatically generates the `Get` or `Set` procedure for read-only and write-only properties when you press ENTER at the end of a `Property` statement.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Visual Basic varsayılan bir özellik bildirin ve çağırın](./how-to-declare-and-call-a-default-property.md)
-- [Nasıl yapılır: Karışık erişim düzeylerine sahip bir özellik bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)

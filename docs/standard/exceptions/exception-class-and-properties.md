@@ -8,38 +8,36 @@ helpviewer_keywords:
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 283b3b1aa0d56b50b6f9e67b66de3e0b68ae2331
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e17fa07fe2dd19cdcd03bc923940abfef886219c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970956"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283132"
 ---
 # <a name="exception-class-and-properties"></a>Özel durum sınıfı ve özellikleri
 
-<xref:System.Exception> Özel durumları devraldığı taban sınıfı. Örneğin, <xref:System.InvalidCastException> sınıf hiyerarşisi aşağıdaki gibidir:
+<xref:System.Exception> sınıfı, özel durumların devraldığı temel sınıftır. Örneğin, <xref:System.InvalidCastException> sınıf hiyerarşisi aşağıdaki gibidir:
 
-```
-Object
-  Exception
-    SystemException
-       InvalidCastException
-```
+<xref:System.Object>\
+&nbsp;&nbsp;<xref:System.Exception>\
+&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.SystemException>\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.InvalidCastException>
 
-<xref:System.Exception> Sınıfı daha kolay bir özel durum anlama sağlamak, aşağıdaki özelliklere sahiptir.
+<xref:System.Exception> sınıfı, bir özel durumun daha kolay anlaşılmasına yardımcı olan aşağıdaki özelliklere sahiptir.
 
-| Özellik Adı | Açıklama |
+| Özellik adı | Açıklama |
 | ------------- | ----------- |
-| <xref:System.Exception.Data> | Bir <xref:System.Collections.IDictionary> , anahtar-değer çiftlerinde rastgele verileri tutar. |
-| <xref:System.Exception.HelpLink> | Özel durumun nedeni hakkında kapsamlı bilgi sağlayan bir Yardım dosyası, URL (veya URN) barındırabilir. |
-| <xref:System.Exception.InnerException> | Bu özellik, oluşturmak ve özel durum işleme sırasında özel durum bir dizi korumak için kullanılabilir. Daha önce Yakalanan özel durumların içeren yeni bir özel durum oluşturmak için kullanabilirsiniz. Özgün özel durum ikinci özel durum tarafından yakalanabilir <xref:System.Exception.InnerException> özelliği, ek bilgileri incelemek için ikinci özel durumu işleyen kodu sağlar. Örneğin, hatalı biçimlendirilmiş bir bağımsız değişken alan bir yöntem olduğunu varsayalım.  Kodu bir bağımsız değişken okumaya çalışır, ancak bir özel durum oluşturulur. Yöntemi özel durumu yakalar ve oluşturur bir <xref:System.FormatException>. Bir özel durum nedenini belirlemek için çağıranın yeteneğini artırmak için bazen bir yardımcı yordam tarafından oluşturulan bir özel durum yakalamak ve sonra gerçekleşen hata göstergesi daha özel durum için bir yöntem için uygun olabilir. Yeni ve daha anlamlı bir özel durum oluşturulabilir, özgün özel durum iç özel duruma başvuru yeri ayarlanabilir. Bu daha anlamlı ardından çağırana özel durum. Bu işlevsellik ile önce oluşturulan bir özel durum ile biten bir dizi bağlantılı özel durumları oluşturabileceğini unutmayın. |
-| <xref:System.Exception.Message> | Özel durumun nedeni hakkında ayrıntılar sağlar.
-| <xref:System.Exception.Source> | Alır veya uygulama ya da hataya neden nesne adını ayarlar. |
-| <xref:System.Exception.StackTrace>| Bir hata oluştuğu belirlemek için kullanılan bir yığın izlemeyi içerir. Hata ayıklama bilgileri kullanılabiliyorsa, yığın izlemesi kaynak dosya adı ve program satır numarasını içerir. |
+| <xref:System.Exception.Data> | Anahtar-değer çiftlerinde rastgele verileri tutan bir <xref:System.Collections.IDictionary>. |
+| <xref:System.Exception.HelpLink> | Bir özel durumun nedeni hakkında kapsamlı bilgiler sağlayan bir yardım dosyasına bir URL (veya URN) tutabilir. |
+| <xref:System.Exception.InnerException> | Bu özellik, özel durum işleme sırasında bir dizi özel durum oluşturmak ve korumak için kullanılabilir. Daha önce yakalanan özel durumları içeren yeni bir özel durum oluşturmak için bunu kullanabilirsiniz. Özgün özel durum, <xref:System.Exception.InnerException> özelliğindeki ikinci özel durum tarafından yakalanarak ek bilgileri incelemek için ikinci özel durumu işleyen koda izin verebilir. Örneğin, yanlış biçimli bir bağımsız değişken alan bir yönteminiz olduğunu varsayalım.  Kod bağımsız değişkenini okumaya çalışır, ancak bir özel durum oluşturulur. Yöntemi özel durumu yakalar ve bir <xref:System.FormatException>oluşturur. Çağıranın bir özel durumun oluşturulma nedenini belirleme yeteneğini geliştirmek için bazen bir yöntem, bir yardımcı yordam tarafından oluşturulan bir özel durumu yakalamak ve sonra gerçekleşen hatanın daha fazla olması için bir özel durum oluşturması istenebilir. İç özel durum başvurusunun orijinal özel duruma ayarlanbildiği yeni ve daha anlamlı bir özel durum oluşturulabilir. Daha sonra bu daha anlamlı bir özel durum çağırana eklenebilir. Bu işlevselliğe, ilk olarak oluşturulan özel durumla biten bir dizi bağlantılı özel durum oluşturduğunu unutmayın. |
+| <xref:System.Exception.Message> | Özel durumun nedeni hakkında ayrıntılı bilgi sağlar.
+| <xref:System.Exception.Source> | Uygulamanın veya hataya neden olan nesnenin adını alır veya ayarlar. |
+| <xref:System.Exception.StackTrace>| Bir hatanın nerede oluştuğunu belirlemede kullanılabilecek bir yığın izlemesi içerir. Yığın izlemesi, hata ayıklama bilgisi varsa kaynak dosya adı ve program satırı numarasını içerir. |
 
-Devralınan sınıflar çoğu <xref:System.Exception> değil ek üyelerini uygulama veya ek işlevsellik sağlar; bunlar yalnızca devralınacak <xref:System.Exception>. Bu nedenle, özel durum sınıfları, özel durum adı ve özel durum'içinde yer alan bilgileri hiyerarşideki bir özel durum için en önemli bilgiler bulunabilir.
+<xref:System.Exception> 'ten kalıtımla alan sınıfların çoğu ek üye uygulamaz veya ek işlevsellik sağlamaz; yalnızca <xref:System.Exception>devralınır. Bu nedenle, bir özel durum için en önemli bilgiler özel durum sınıfları, özel durum adı ve özel durumda bulunan bilgiler hiyerarşisinde bulunabilir.
 
-Throw ve catch öğesinden türetilen nesneler öneririz <xref:System.Exception>, ancak türetilen herhangi bir nesne oluşturabilecek <xref:System.Object> sınıfı bir özel durum olarak. Tüm diller oluşturmak ve yakalamak öğesinden türetilen olmayan nesneler sürümlerin desteklendiğini unutmayın ve <xref:System.Exception>.
+Yalnızca <xref:System.Exception>türettiğiniz nesneler oluşturmanızı ve yakalanmasını öneririz, ancak <xref:System.Object> sınıfından türetilmiş herhangi bir nesneyi özel durum olarak oluşturabilirsiniz. Tüm dillerin <xref:System.Exception>türetmeyen nesneleri üretilmesini ve bu nesnelerin nasıl desteklemediğini unutmayın.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

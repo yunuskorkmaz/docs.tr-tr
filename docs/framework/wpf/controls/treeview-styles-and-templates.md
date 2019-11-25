@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], TreeView
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-ms.openlocfilehash: f6dbe54324a5ad5e2f85719d819c035abfd644b1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 45276d23380fe956fc3d59b90d5baae23ee8a7e2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460192"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283630"
 ---
 # <a name="treeview-styles-and-templates"></a>TreeView Stilleri ve Şablonları
-Bu konuda <xref:System.Windows.Controls.TreeView> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+Bu konuda <xref:System.Windows.Controls.TreeView> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için varsayılan <xref:System.Windows.Controls.ControlTemplate> değiştirebilirsiniz. Daha fazla bilgi için bkz. [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="treeview-parts"></a>TreeView parçaları  
  <xref:System.Windows.Controls.TreeView> denetiminde hiç adlandırılmış bölüm yok.  
@@ -36,7 +36,7 @@ Bu konuda <xref:System.Windows.Controls.TreeView> denetimine yönelik stiller ve
 ## <a name="treeviewitem-parts"></a>TreeViewItem parçalar  
  Aşağıdaki tabloda <xref:System.Windows.Controls.TreeViewItem> denetimi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümüyle|Tür|Açıklama|  
+|Bölümüyle|Type|Açıklama|  
 |----------|----------|-----------------|  
 |PART_Header|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.Controls.TreeView> denetiminin üst bilgi içeriğini içeren bir görsel öğe.|  
   
@@ -45,7 +45,7 @@ Bu konuda <xref:System.Windows.Controls.TreeView> denetimine yönelik stiller ve
   
 |VisualState adı|VisualStateGroup adı|Açıklama|  
 |----------------------|---------------------------|-----------------|  
-|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Normal|Ortak durumlar|Varsayılan durum.|  
 |Gelme olayından|Ortak durumlar|Fare işaretçisi <xref:System.Windows.Controls.TreeViewItem>yerleştirilir.|  
 |Devre dışı|Ortak durumlar|<xref:System.Windows.Controls.TreeViewItem> devre dışı bırakıldı.|  
 |Diğinize|Odaklardaki durumlar|<xref:System.Windows.Controls.TreeViewItem> odağa sahip.|  
@@ -54,7 +54,7 @@ Bu konuda <xref:System.Windows.Controls.TreeView> denetimine yönelik stiller ve
 |Tılan|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> denetimi daraltılır.|  
 |HasItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> öğeler vardır.|  
 |Noıtems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> öğe yok.|  
-|Seçildiğinde|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> seçilidir.|  
+|Seçildi|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> seçilidir.|  
 |SelectedInactive|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> seçili ancak etkin değil.|  
 |Değilken|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> seçilmemiş.|  
 |Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
@@ -79,4 +79,4 @@ Bu konuda <xref:System.Windows.Controls.TreeView> denetimine yönelik stiller ve
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
 - [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)
+- [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md)

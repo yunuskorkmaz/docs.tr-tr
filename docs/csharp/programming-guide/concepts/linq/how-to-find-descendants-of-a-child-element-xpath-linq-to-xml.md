@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Alt öğenin alt öğelerini bul (XPath-LINQ to XML) (C#)'
+title: Bir alt öğenin alt öğelerini bulma (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
-ms.openlocfilehash: f17d723aa03c45daa4e7e741ea6b14c637537ccf
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: fb3e20ce21c1f6d2a71f2f71b8acec7cecf0f3ed
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253711"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141101"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>Nasıl yapılır: Alt öğenin alt öğelerini bul (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>Bir alt öğenin alt öğelerini bulma (XPath-LINQ to XML) (C#)
 Bu konu başlığı altında, bir alt öğenin belirli bir ada sahip öğeleri nasıl alınacağı gösterilmektedir.  
   
  XPath ifadesi:  
@@ -17,7 +17,7 @@ Bu konu başlığı altında, bir alt öğenin belirli bir ada sahip öğeleri n
  `./Paragraph//Text/text()`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir sözcük işleme belgesinin XML gösteriminden metin ayıklama sorunlarının benzetimini yapar. Önce tüm `Paragraph` öğeleri seçer ve ardından her `Paragraph` bir öğenin tüm `Text` alt öğelerini seçer. Bu, `Text` `Comment` öğesinin alt öğelerini seçmeyin.  
+ Bu örnek, bir sözcük işleme belgesinin XML gösteriminden metin ayıklama sorunlarının benzetimini yapar. Önce tüm `Paragraph` öğelerini seçer ve ardından her bir `Paragraph` öğesinin tüm `Text` alt öğelerini seçer. Bu, `Comment` öğesinin alt öğe `Text` öğelerini seçmeyin.  
   
 ```csharp  
 XElement root = XElement.Parse(  

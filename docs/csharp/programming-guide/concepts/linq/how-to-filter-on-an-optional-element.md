@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Isteğe bağlı bir öğe (C#) üzerinde filtrele'
+title: İsteğe bağlı bir öğeyi filtreleme (C#)
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c9f844619cbb3d7a66ca66989baa900e0fd7bc2f
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253829"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141246"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a>Nasıl yapılır: Isteğe bağlı bir öğe (C#) üzerinde filtrele
+# <a name="how-to-filter-on-an-optional-element-c"></a>İsteğe bağlı bir öğeyi filtreleme (C#)
 Bazen, XML belgenizde bulunduğundan emin olmasanız da bir öğeye filtre uygulamak isteyebilirsiniz. Arama, belirli bir öğede alt öğe yoksa, filtre uygulayarak bir null başvuru özel durumu tetiklememesi için yürütülmelidir. Aşağıdaki örnekte, `Child5` öğesinin bir `Type` alt öğesi yoktur, ancak sorgu yine de doğru yürütülür.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, <xref:System.Xml.Linq.Extensions.Elements%2A> genişletme yöntemini kullanır.  
+ Bu örnek <xref:System.Xml.Linq.Extensions.Elements%2A> uzantısı yöntemini kullanır.  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  

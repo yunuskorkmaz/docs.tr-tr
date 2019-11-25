@@ -1,45 +1,47 @@
 ---
-title: Visual Basic'te Programlama
+title: Programming
 ms.date: 07/20/2015
 helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 68c200b3e47a0f96963e5872c854633a7c24e938
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 048bc70c2b5416d4377c5abcfdaf18a9312068db
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423983"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352116"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic'te Programlama
-Bu bölümde, Visual Basic uygulamanızı oluştururken daha fazla bilgi edinmek isteyebileceğiniz programlama görevleri açıklanmaktadır.  
+
+This section discusses programming tasks that you may want to learn more about as you create your Visual Basic application.  
   
 ## <a name="in-this-section"></a>Bu bölümde  
+
  [Bilgisayar Kaynaklarına Erişme](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
- Uygulamanın çalıştığı bilgisayar hakkındaki bilgilere erişmek ve bilgisayarı denetlemek için `My.Computer` nesnesinin nasıl kullanılacağına ilişkin belgeler içerir.  
+ Contains documentation on how to use the `My.Computer` object to access information about the computer on which an application runs and how to control the computer.  
   
  [Uygulamadan Günlüğe Bilgi Kaydetme](../../../visual-basic/developing-apps/programming/log-info/index.md)  
- `My.Application.Log` ve `My.Log` nesneleri kullanarak uygulamanızdaki bilgilerin nasıl günlüğe kaydedilmesine ve uygulamanın günlüğe kaydetme yeteneklerini genişletmenize ilişkin belgeler içerir.  
+ Contains documentation on how to log information from your application using the `My.Application.Log` and `My.Log` objects, and how to extend the application's logging capabilities.  
   
  [Kullanıcı Verilerine Erişme](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
- `My.User` nesnesini kullanarak gerçekleştirebileceğiniz görevlere ilişkin belgeler içerir.  
+ Contains documentation on tasks that you can accomplish using the `My.User` object.  
   
  [Uygulama Formlarına Erişme](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)  
- `My.Forms` ve `My.Application` nesnelerini kullanarak bir uygulamanın formlarına erişme belgelerini içerir.  
+ Contains documentation on accessing an application's forms by using the `My.Forms` and `My.Application` objects.  
   
  [Uygulama Web Hizmetlerine Erişme](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
- `My.WebServices` nesnesi kullanılarak uygulama tarafından başvurulan Web hizmetlerine erişme hakkında belge içerir.  
+ Contains documentation on how to access the Web services referenced by the application using the `My.WebServices` object.  
   
  [Uygulama Ayarlarına Erişme](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
- `My.Settings` nesnesini kullanarak bir uygulamanın ayarlarına erişme belgelerini içerir.  
+ Contains documentation on accessing an application's settings using the `My.Settings` object.  
   
  [Sürücüleri, Dizinleri ve Dosyaları İşleme](drives-directories-files/index.md)  
- `My.Computer.FileSystem` nesnesini kullanarak dosya sistemine erişme hakkında belge içerir.  
+ Contains documentation on how to access the file system using the `My.Computer.FileSystem` object.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic dil özellikleri](../../../visual-basic/programming-guide/language-features/index.md)
+- [Visual Basic Language Features](../../../visual-basic/programming-guide/language-features/index.md)
 - [Programlama Kavramları](../../../visual-basic/programming-guide/concepts/index.md)
 - [Koleksiyonlar](../../../visual-basic/programming-guide/concepts/collections.md)
-- [Visual Basic ile uygulama geliştirme](../../../visual-basic/developing-apps/index.md)
+- [Developing Applications with Visual Basic](../../../visual-basic/developing-apps/index.md)

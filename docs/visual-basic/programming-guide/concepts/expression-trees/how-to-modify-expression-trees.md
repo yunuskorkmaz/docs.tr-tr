@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl yapılır: Ifade ağaçlarını değiştirme (Visual Basic)'
+title: 'Nasıl Yapılır: İfade Ağaçlarını Değiştirme'
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-ms.openlocfilehash: ac196b56f178659765437a97a25f46c04f8040fa
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 12ccad6df7d6c7d91ebc290163db362eae173209
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054208"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353755"
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>Nasıl yapılır: Ifade ağaçlarını değiştirme (Visual Basic)
+# <a name="how-to-modify-expression-trees-visual-basic"></a>How to: Modify Expression Trees (Visual Basic)
 
-Bu konu başlığı altında, bir ifade ağacının nasıl değiştirileceği gösterilmektedir. İfade ağaçları sabittir ve bu, doğrudan değiştirilemediği anlamına gelir. Bir ifade ağacını değiştirmek için, var olan bir ifade ağacının bir kopyasını oluşturmanız ve kopyayı oluşturduğunuzda gerekli değişiklikleri yapmanız gerekir. Sınıfını, <xref:System.Linq.Expressions.ExpressionVisitor> var olan bir ifade ağacında çapraz geçiş yapmak ve bulduğu her düğümü kopyalamak için kullanabilirsiniz.
+This topic shows you how to modify an expression tree. Expression trees are immutable, which means that they cannot be modified directly. To change an expression tree, you must create a copy of an existing expression tree and when you create the copy, make the required changes. You can use the <xref:System.Linq.Expressions.ExpressionVisitor> class to traverse an existing expression tree and to copy each node that it visits.
 
-## <a name="to-modify-an-expression-tree"></a>Bir ifade ağacını değiştirmek için
+## <a name="to-modify-an-expression-tree"></a>To modify an expression tree
 
-1. Yeni bir **konsol uygulaması** projesi oluşturun.
+1. Create a new **Console Application** project.
 
-2. Ad`System.Linq.Expressions` alanı `Imports` için dosyasına bir ifade ekleyin.
+2. Add an `Imports` statement to the file for the `System.Linq.Expressions` namespace.
 
-3. `AndAlsoModifier` Sınıfını projenize ekleyin.
+3. Add the `AndAlsoModifier` class to your project.
 
     ```vb
     Public Class AndAlsoModifier
@@ -45,11 +45,11 @@ Bu konu başlığı altında, bir ifade ağacının nasıl değiştirileceği g�
     End Class
     ```
 
-    Bu sınıf <xref:System.Linq.Expressions.ExpressionVisitor> sınıfını devralır ve koşullu `AND` işlemleri temsil eden ifadeleri değiştirmek için özelleştirilmiştir. Bu işlemleri koşullu `AND` sunucudan koşullu `OR`olarak değiştirir. Bunu yapmak için, koşullu <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> `AND` ifadeler ikili ifadeler olarak temsil edildiği için sınıf temel tür yöntemini geçersiz kılar. Yönteminde, kendisine geçirilen ifade koşullu `AND` bir işlemi temsil ediyorsa, kod koşullu `OR` işleci `AND` içeren yeni bir ifade oluşturur `VisitBinary` işlecinde. Geçirilen `VisitBinary` ifade koşullu `AND` bir işlemi temsil ediyorsa, yöntemi temel sınıf uygulamasına erteler. Temel sınıf yöntemleri, geçirilen ifade ağaçları gibi düğümleri oluşturur, ancak düğümlerin alt ağaçları, ziyaretçi tarafından yinelemeli olarak üretilen ifade ağaçları ile değiştirilmiştir.
+    This class inherits the <xref:System.Linq.Expressions.ExpressionVisitor> class and is specialized to modify expressions that represent conditional `AND` operations. It changes these operations from a conditional `AND` to a conditional `OR`. To do this, the class overrides the <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> method of the base type, because conditional `AND` expressions are represented as binary expressions. In the `VisitBinary` method, if the expression that is passed to it represents a conditional `AND` operation, the code constructs a new expression that contains the conditional `OR` operator instead of the conditional `AND` operator. If the expression that is passed to `VisitBinary` does not represent a conditional `AND` operation, the method defers to the base class implementation. The base class methods construct nodes that are like the expression trees that are passed in, but the nodes have their sub trees replaced with the expression trees that are produced recursively by the visitor.
 
-4. Ad`System.Linq.Expressions` alanı `Imports` için dosyasına bir ifade ekleyin.
+4. Add an `Imports` statement to the file for the `System.Linq.Expressions` namespace.
 
-5. Bir ifade ağacı oluşturmak `Main` ve bunu değiştirecek yönteme geçirmek için Module1. vb dosyasındaki yöntemine kod ekleyin.
+5. Add code to the `Main` method in the Module1.vb file to create an expression tree and pass it to the method that will modify it.
 
     ```vb
     Dim expr As Expression(Of Func(Of String, Boolean)) = _
@@ -67,11 +67,11 @@ Bu konu başlığı altında, bir ifade ağacının nasıl değiştirileceği g�
     ' name => ((name.Length > 10) || name.StartsWith("G"))
     ```
 
-    Kod, koşullu `AND` bir işlem içeren bir ifade oluşturur. Daha sonra `AndAlsoModifier` sınıfın bir örneğini oluşturur ve bu sınıfın `Modify` yöntemine ifadeyi geçirir. Hem özgün hem de değiştirilen ifade ağaçları değişikliği göstermek için çıktılardır.
+    The code creates an expression that contains a conditional `AND` operation. It then creates an instance of the `AndAlsoModifier` class and passes the expression to the `Modify` method of this class. Both the original and the modified expression trees are outputted to show the change.
 
-6. Uygulamayı derleyin ve çalıştırın.
+6. Compile and run the application.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Ifade ağaçlarını yürütme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [İfade ağaçları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)

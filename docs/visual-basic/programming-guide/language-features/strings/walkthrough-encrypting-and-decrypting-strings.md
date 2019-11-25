@@ -1,5 +1,5 @@
 ---
-title: Visual Basic dizeleri şifreleme ve şifresini çözme
+title: Dize Şifreleme ve Şifresini Çözme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - encryption [Visual Basic], strings
@@ -7,72 +7,72 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: ee8691fedb537d1aa588eaac61624b445da64d1f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 36e405c7362993471d3e6da8e319bccb854e1026
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944421"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343577"
 ---
-# <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>İzlenecek yol: Visual Basic dizeleri şifreleme ve şifresini çözme
-Bu izlenecek yol, Üçlü Veri şifreleme standardı <xref:System.Security.Cryptography.DESCryptoServiceProvider> (<xref:System.Security.Cryptography.TripleDES>) algoritmasının şifreleme hizmeti sağlayıcısı (CSP) sürümünü kullanarak dizeleri şifrelemek ve şifrelerini çözmek için sınıfını nasıl kullanacağınızı gösterir. İlk adım, 3DES algoritmasını kapsülleyen bir basit sarmalayıcı sınıfı oluşturmak ve şifrelenmiş verileri Base-64 kodlu bir dize olarak depolar. Daha sonra, bu sarmalayıcı özel kullanıcı verilerini genel olarak erişilebilen bir metin dosyasında güvenli bir şekilde depolamak için kullanılır.  
+# <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>İzlenecek yol: Visual Basic'de Dizeleri Şifreleme ve Şifresini Çözme
+This walkthrough shows you how to use the <xref:System.Security.Cryptography.DESCryptoServiceProvider> class to encrypt and decrypt strings using the cryptographic service provider (CSP) version of the Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) algorithm. The first step is to create a simple wrapper class that encapsulates the 3DES algorithm and stores the encrypted data as a base-64 encoded string. Then, that wrapper is used to securely store private user data in a publicly accessible text file.  
   
- Şifreleme kullanarak Kullanıcı gizli dizilerini koruyabilir (örneğin, parolalar) ve kimlik bilgilerini yetkisiz kullanıcılar tarafından okunamaz hale getirebilirsiniz. Bu, kullanıcının varlıklarını koruyan ve Red olmayan bir kullanıcının kimliğinin çalınma karşı korunmasına izin verebilir. Şifreleme, kullanıcının verilerine yetkisiz kullanıcıların erişmesini da koruyabilir.  
+ You can use encryption to protect user secrets (for example, passwords) and to make credentials unreadable by unauthorized users. This can protect an authorized user's identity from being stolen, which protects the user's assets and provides non-repudiation. Encryption can also protect a user's data from being accessed by unauthorized users.  
   
- Daha fazla bilgi için bkz. [Şifreleme Hizmetleri](../../../../standard/security/cryptographic-services.md).  
+ For more information, see [Cryptographic Services](../../../../standard/security/cryptographic-services.md).  
   
 > [!IMPORTANT]
-> Rijndadel (şimdi Gelişmiş Şifreleme Standardı [AES] olarak adlandırılır) ve üçlü veri şifreleme standardı (3DES) algoritmaları, daha fazla hesaplama yoğunluğu sağladığından DES 'ten daha fazla güvenlik sağlar. Daha fazla bilgi için bkz. <xref:System.Security.Cryptography.DES> ve <xref:System.Security.Cryptography.Rijndael>.  
+> The Rijndael (now referred to as Advanced Encryption Standard [AES]) and Triple Data Encryption Standard (3DES) algorithms provide greater security than DES because they are more computationally intensive. Daha fazla bilgi için bkz. <xref:System.Security.Cryptography.DES> ve <xref:System.Security.Cryptography.Rijndael>.  
   
-### <a name="to-create-the-encryption-wrapper"></a>Şifreleme sarmalayıcısı oluşturmak için  
+### <a name="to-create-the-encryption-wrapper"></a>To create the encryption wrapper  
   
-1. Şifreleme ve şifre çözme yöntemlerini kapsüllemek için sınıfıoluşturun.`Simple3Des`  
+1. Create the `Simple3Des` class to encapsulate the encryption and decryption methods.  
   
      [!code-vb[VbVbalrStrings#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#38)]  
   
-2. `Simple3Des` Sınıfını içeren dosyanın başlangıcına şifreleme ad alanı için bir içeri aktarma ekleyin.  
+2. Add an import of the cryptography namespace to the start of the file that contains the `Simple3Des` class.  
   
      [!code-vb[VbVbalrStrings#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#77)]  
   
-3. `Simple3Des` Sınıfında, 3DES şifreleme hizmeti sağlayıcısını depolamak için bir özel alan ekleyin.  
+3. In the `Simple3Des` class, add a private field to store the 3DES cryptographic service provider.  
   
      [!code-vb[VbVbalrStrings#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#39)]  
   
-4. Belirtilen anahtarın karmasından belirtilen uzunlukta bir bayt dizisi oluşturan özel bir yöntem ekleyin.  
+4. Add a private method that creates a byte array of a specified length from the hash of the specified key.  
   
      [!code-vb[VbVbalrStrings#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#41)]  
   
-5. 3DES şifreleme hizmeti sağlayıcısını başlatmak için bir Oluşturucu ekleyin.  
+5. Add a constructor to initialize the 3DES cryptographic service provider.  
   
-     `key` Parametresi `EncryptData` ve yöntemlerini`DecryptData` denetler.  
+     The `key` parameter controls the `EncryptData` and `DecryptData` methods.  
   
      [!code-vb[VbVbalrStrings#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#40)]  
   
-6. Bir dizeyi şifreleyen ortak bir yöntem ekleyin.  
+6. Add a public method that encrypts a string.  
   
      [!code-vb[VbVbalrStrings#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#42)]  
   
-7. Bir dizenin şifresini çözdüğü bir genel yöntem ekleyin.  
+7. Add a public method that decrypts a string.  
   
      [!code-vb[VbVbalrStrings#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#43)]  
   
-     Sarmalayıcı sınıfı artık Kullanıcı varlıklarını korumak için kullanılabilir. Bu örnekte, özel kullanıcı verilerini genel olarak erişilebilen bir metin dosyasında güvenli bir şekilde depolamak için kullanılır.  
+     The wrapper class can now be used to protect user assets. In this example, it is used to securely store private user data in a publicly accessible text file.  
   
-### <a name="to-test-the-encryption-wrapper"></a>Şifreleme sarmalayıcısı 'ı test etmek için  
+### <a name="to-test-the-encryption-wrapper"></a>To test the encryption wrapper  
   
-1. Ayrı bir sınıfta, bir dizeyi şifrelemek ve kullanıcının Belgelerim klasörüne yazmak için `EncryptData` sarmalayıcının yöntemini kullanan bir yöntem ekleyin.  
+1. In a separate class, add a method that uses the wrapper's `EncryptData` method to encrypt a string and write it to the user's My Documents folder.  
   
      [!code-vb[VbVbalrStrings#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#78)]  
   
-2. Kullanıcının Belgelerim klasöründeki şifreli dizeyi okuyan ve sarmalayıcı `DecryptData` yöntemiyle dizenin şifresini çözdüğü bir yöntem ekleyin.  
+2. Add a method that reads the encrypted string from the user's My Documents folder and decrypts the string with the wrapper's `DecryptData` method.  
   
      [!code-vb[VbVbalrStrings#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#79)]  
   
-3. `TestEncoding` Ve`TestDecoding` yöntemlerini çağırmak için Kullanıcı arabirimi kodu ekleyin.  
+3. Add user interface code to call the `TestEncoding` and `TestDecoding` methods.  
   
 4. Uygulamayı çalıştırın.  
   
-     Uygulamayı test ettiğinizde, yanlış parola sağlarsanız verilerin şifresini çözmediğine dikkat edin.  
+     When you test the application, notice that it will not decrypt the data if you provide the wrong password.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

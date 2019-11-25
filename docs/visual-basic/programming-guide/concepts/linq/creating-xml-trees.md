@@ -1,29 +1,29 @@
 ---
-title: XML ağaçları (Visual Basic) oluşturma
+title: XML Ağaçları Oluşturma
 ms.date: 07/20/2015
 ms.assetid: e86ba12b-17de-4579-81bb-66322b84cfbe
-ms.openlocfilehash: f22dcb111b3c6da01fa60b3ea918b91cb89031b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 971b1a31c016eb88c80a8898cb92d7e6ad28d34e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028492"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354279"
 ---
-# <a name="creating-xml-trees-visual-basic"></a>XML ağaçları (Visual Basic) oluşturma
-En yaygın XML görevlerinden birini ve bir XML ağacı oluşturma. Bu bölümde, bunları oluşturmak için çeşitli yollar açıklanmaktadır.  
+# <a name="creating-xml-trees-visual-basic"></a>Creating XML Trees (Visual Basic)
+One of the most common XML tasks is constructing an XML tree. This section describes several ways to create them.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[İşlevsel oluşturma (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)|İşlevsel oluşturma, genel bir bakış sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. İşlevsel oluşturma, XML ağacı bir kısmını veya tamamını tek bir deyimde oluşturmanıza olanak sağlar. Bu konuda, bir XML ağacı oluştururken sorgular ekleme da gösterilmektedir.|  
-|[Visual Basic'de XML değişmez değerlerine giriş](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)|XML değişmez değerlerini kullanarak, Visual Basic'te ağaçları oluşturma için hızlı bir giriş sağlar. Bu konuda, XML değişmez değerlerini Visual Basic belgeleri bağlantılarını içerir.|  
-|[Kopyalama ve Düğmelere (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/cloning-vs-attaching.md)|Düğüm (düğüm kopyalanmış ve daha sonra eklenen) var olan XML ağacından ekleme ve (bunlar yalnızca eklenir) üst öğe ile düğüm ekleme arasındaki farkı gösterir.|  
-|[Ayrıştırma XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)|Çeşitli kaynaklardan gelen XML ayrıştırma işlemi gösterilmektedir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] üst kısmındaki katmanlı <xref:System.Xml.XmlReader>, XML ayrıştırmak için kullanılır.|  
-|[Nasıl yapılır: Bir XML ağacını XmlWriter (LINQ to XML) ile doldurun (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md)|Bir XML ağacı kullanarak doldurmak üzere gösterilmiştir bir <xref:System.Xml.XmlWriter>.|  
-|[Nasıl yapılır: XSD (LINQ to XML) kullanarak doğrulama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)|Bir XML ağacı XSD kullanarak doğrulama işlemini göstermektedir.|  
-|[XElement ve XDocument Nesnelerinin Geçerli İçeriği](../../../../visual-basic/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects.md)|Oluşturucular ve öğelerini ve belgeleri için içerik eklemek için kullanılan yöntemleri geçirilebilir geçerli bağımsız değişkenleri açıklanır.|  
+|[Functional Construction (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)|Provides an overview of functional construction in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Functional construction enables you to create all or part of your XML tree in a single statement. This topic also shows how to embed queries when constructing an XML tree.|  
+|[Introduction to XML Literals in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)|Provides a quick introduction to creating trees in Visual Basic by using XML literals. This topic includes links to the Visual Basic documentation of XML literals.|  
+|[Cloning vs. Attaching (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/cloning-vs-attaching.md)|Demonstrates the difference between adding nodes from an existing XML tree (nodes are cloned and then added) and adding nodes with no parent (they are simply attached).|  
+|[Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)|Shows how to parse XML from a variety of sources. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is layered on top of <xref:System.Xml.XmlReader>, which is used to parse the XML.|  
+|[How to: Populate an XML Tree with an XmlWriter (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md)|Shows how to populate an XML tree by using an <xref:System.Xml.XmlWriter>.|  
+|[How to: Validate Using XSD (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)|Shows how to validate an XML tree using XSD.|  
+|[XElement ve XDocument Nesnelerinin Geçerli İçeriği](../../../../visual-basic/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects.md)|Describes the valid arguments that can be passed to the constructors and methods that are used to add content to elements and documents.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Programlama Kılavuzu (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

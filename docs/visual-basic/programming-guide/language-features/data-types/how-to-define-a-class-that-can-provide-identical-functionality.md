@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) farklı veri türlerinde aynı işlevselliği sağlayabilen bir sınıf tanımlama'
+title: 'Nasıl yapılır: Farklı Veri Türlerinde Aynı İşlevselliği Sağlayabilen Bir Sınıf Tanımlama'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
@@ -26,60 +26,60 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 19988e766d0f9ec895a24dddfcd17d0854aaf8ad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d80623d9e55358d37aa45f11f1525c80a09b91a6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757403"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350050"
 ---
-# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Nasıl yapılır: (Visual Basic) farklı veri türlerinde aynı işlevselliği sağlayabilen bir sınıf tanımlama
-Bir sınıf tanımlayabilir, farklı veri türlerinde aynı işlevselliği sağlayan nesneleri oluşturabileceğiniz öğesinden. Bunu yapmak için bir veya daha fazla belirttiğiniz *tür parametrelerindeki* tanımında. Sınıf çeşitli veri türlerini kullanan nesneler için bir şablon olarak hizmet verebilir. Bu şekilde tanımlanan bir sınıfa bir *genel sınıf*.  
+# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Nasıl yapılır: Farklı Veri Türlerinde Aynı İşlevselliği Sağlayabilen Bir Sınıf Tanımlama (Visual Basic)
+You can define a class from which you can create objects that provide identical functionality on different data types. To do this, you specify one or more *type parameters* in the definition. The class can then serve as a template for objects that use various data types. A class defined in this way is called a *generic class*.  
   
- Genel bir sınıf tanımlamanın yararı, yalnızca bir kez tanımlayın ve kodunuzu çok çeşitli veri türleri kullanan birçok nesneler oluşturmak için kullanabilirsiniz ' dir. Sınıf ile daha iyi performans sonuçlanır `Object` türü.  
+ The advantage of defining a generic class is that you define it just once, and your code can use it to create many objects that use a wide variety of data types. This results in better performance than defining the class with the `Object` type.  
   
- Sınıflara ek olarak tanımlayabilir ve genel yapılar, arabirimler, yordamları ve temsilciler kullanın.  
+ In addition to classes, you can also define and use generic structures, interfaces, procedures, and delegates.  
   
-### <a name="to-define-a-class-with-a-type-parameter"></a>Bir tür parametresi ile bir sınıf tanımlamak için  
+### <a name="to-define-a-class-with-a-type-parameter"></a>To define a class with a type parameter  
   
-1. Normal bir şekilde tanımlayan sınıf.  
+1. Define the class in the normal way.  
   
-2. Ekleme `(Of` *typeparameter* `)` sonrasında hemen bir tür parametresi belirtmek için sınıf adı.  
+2. Add `(Of` *typeparameter*`)` immediately after the class name to specify a type parameter.  
   
-3. Birden fazla tür parametresi varsa, parantez içinde virgülle ayrılmış bir liste olun. Yineleme `Of` anahtar sözcüğü.  
+3. If you have more than one type parameter, make a comma-separated list inside the parentheses. Do not repeat the `Of` keyword.  
   
-4. Kodunuzu basit atama dışında bir tür parametresi üzerinde işlemler gerçekleştirirse, o tür parametreyle izleyin bir `As` yan tümcesi bir veya daha fazla eklemek için *kısıtlamaları*. Kısıtlama türü, tür parametresi için sağlanan aşağıdaki gibi bir gereksinimi karşılayan garanti eder:  
+4. If your code performs operations on a type parameter other than simple assignment, follow that type parameter with an `As` clause to add one or more *constraints*. A constraint guarantees that the type supplied for that type parameter satisfies a requirement such as the following:  
   
-    - Bir işlem gibi destekleyen `>`, kodunuzu gerçekleştiren  
+    - Supports an operation, such as `>`, that your code performs  
   
-    - Kodunuzu erişen bir yöntemi gibi bir üye destekler  
+    - Supports a member, such as a method, that your code accesses  
   
-    - Parametresiz bir Oluşturucu  
+    - Exposes a parameterless constructor  
   
-     Kısıtlamalardan belirtmezseniz, yalnızca işlemler ve kodunuzu kullanabileceğiniz üyeleri tarafından desteklenen olanlardır [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md). Daha fazla bilgi için [tür listesi](../../../../visual-basic/language-reference/statements/type-list.md).  
+     If you do not specify any constraints, the only operations and members your code can use are those supported by the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). For more information, see [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
   
-5. Sağlanan türüyle belirtilecek olan her sınıf üyesi tanımlamak ve bildirirken `As` `typeparameter`. Bu, iç depolama alanı, yordam parametreleri ve dönüş değerleri için geçerlidir.  
+5. Identify every class member that is to be declared with a supplied type, and declare it `As` `typeparameter`. This applies to internal storage, procedure parameters, and return values.  
   
-6. Kodunuzun kullandığı yalnızca işlemler ve için sağlayabilirler herhangi bir veri türü tarafından desteklenen yöntemleri mutlaka `itemType`.  
+6. Be sure your code uses only operations and methods that are supported by any data type it can supply to `itemType`.  
   
-     Aşağıdaki örnek çok basit bir listeyi yöneten bir sınıf tanımlar. İç dizide listesini tutar `items`ve kod kullanarak liste öğelerini veri türünü bildirebilirsiniz. Parametreli bir kurucu kullanarak sağlayan çokluğun ayarlamak üzere kod `items`, ve parametresiz bir oluşturucu bu ayarlar 9 (için toplam 10 öğe).  
+     The following example defines a class that manages a very simple list. It holds the list in the internal array `items`, and the using code can declare the data type of the list elements. A parameterized constructor allows the using code to set the upper bound of `items`, and the parameterless constructor sets this to 9 (for a total of 10 items).  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
-     Bir sınıftan bildirebilirsiniz `simpleList` listesini tutmak için `Integer` değerleri, bir listesi için başka bir sınıf `String` değerleri ve başka tutacak `Date` değerleri. Üyeleri listele veri türünü hariç, tüm bu sınıflardan oluşturulan nesnelerin aynı şekilde davranır.  
+     You can declare a class from `simpleList` to hold a list of `Integer` values, another class to hold a list of `String` values, and another to hold `Date` values. Except for the data type of the list members, objects created from all these classes behave identically.  
   
-     Kod kullanarak tür bağımsız değişkeni için sağladığı `itemType` iç bir tür gibi olabilir `Boolean` veya `Double`, bir yapı, bir numaralandırma veya sınıf, uygulamanızı tanımlayan bir dahil olmak üzere herhangi bir türde.  
+     The type argument that the using code supplies to `itemType` can be an intrinsic type such as `Boolean` or `Double`, a structure, an enumeration, or any type of class, including one that your application defines.  
   
-     Sınıf sınayabilirsiniz `simpleList` aşağıdaki kod ile.  
+     You can test the class `simpleList` with the following code.  
   
      [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](../../../../standard/language-independence-and-language-independent-components.md)
-- [,](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [Tür Listesi](../../../../visual-basic/language-reference/statements/type-list.md)
 - [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)

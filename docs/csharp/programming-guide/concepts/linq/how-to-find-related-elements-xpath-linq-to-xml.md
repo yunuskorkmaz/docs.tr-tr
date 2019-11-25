@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Ilgili öğeleri bul (XPath-LINQ to XML) (C#)'
+title: İlgili öğeleri bulma (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 2aa3f6c6c2c2ac327ff2dffc206cdd294e12d7a2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cdc281d0b08ee7b7f93ac28b14e82fa113a3379d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253639"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141025"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Nasıl yapılır: Ilgili öğeleri bul (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>İlgili öğeleri bulma (XPath-LINQ to XML) (C#)
 Bu konu başlığı altında, başka bir öğenin değeri tarafından başvurulan bir özniteliği seçme öğesinin nasıl alınacağı gösterilmektedir.  
   
  XPath ifadesi:  
@@ -17,11 +17,11 @@ Bu konu başlığı altında, başka bir öğenin değeri tarafından başvurula
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek 12 `Order` . öğesini bulur ve ardından o sipariş için müşteriyi bulur.  
+ Bu örnek, 12. `Order` öğesini bulur ve ardından o sipariş için müşteriyi bulur.  
   
  .NET 'teki bir listede dizin oluşturmanın ' sıfır ' tabanlı olduğunu unutmayın. XPath koşulunda bir düğümler koleksiyonuna dizin oluşturma işlemi ' One ' tabanlıdır. Bu örnek, bu farkı yansıtır.  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  

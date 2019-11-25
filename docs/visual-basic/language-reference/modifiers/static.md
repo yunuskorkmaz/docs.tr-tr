@@ -1,5 +1,5 @@
 ---
-title: Statik (Visual Basic)
+title: Statik
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Static
@@ -7,42 +7,42 @@ helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-ms.openlocfilehash: f1031fe005a2fc264b50116b8ea3311dc7065dbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f020756466888f51298abb423997906ddc7caff7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647638"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350754"
 ---
 # <a name="static-visual-basic"></a>Statik (Visual Basic)
-Bir veya daha fazla bildirilmiş yerel değişkenin içinde bildirildikleri yordam sonlandırmasından sonra en son değerlerini korur ve devam etmek için olduğunu belirtir.  
+Specifies that one or more declared local variables are to continue to exist and retain their latest values after termination of the procedure in which they are declared.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Normalde, bir yerel değişken bir yordamda yordamı durdurur hemen sonra mevcut olmaktan çıkar. Bir statik değişken varolmaya devam eder ve en son değerini korur. Kodunuzu yordamı çağıran bir sonraki açışınızda değişkeni yeniden ve hala kendisine atanmış en son değeri içerir. Statik bir değişken sınıfın veya modül içinde tanımlanan ömrü varolmaya devam eder.  
+ Normally, a local variable in a procedure ceases to exist as soon as the procedure stops. A static variable continues to exist and retains its most recent value. The next time your code calls the procedure, the variable is not reinitialized, and it still holds the latest value that you assigned to it. A static variable continues to exist for the lifetime of the class or module that it is defined in.  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Bildirim bağlamı.** Kullanabileceğiniz `Static` yalnızca yerel değişkenlerde. Bildirim bağlamı başka bir deyişle bir `Static` değişkeni bir yordam ya da bir yordamda bir blok olmalıdır ve kaynak dosyası, ad alanı, sınıf, yapı veya modül olamaz.  
+- **Declaration Context.** You can use `Static` only on local variables. This means the declaration context for a `Static` variable must be a procedure or a block in a procedure, and it cannot be a source file, namespace, class, structure, or module.  
   
-     Kullanamazsınız `Static` yapısı yordam içinde.  
+     You cannot use `Static` inside a structure procedure.  
   
-- Veri türlerini `Static` yerel değişkenler nelze odvodit. Daha fazla bilgi için [yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+- The data types of `Static` local variables cannot be inferred. For more information, see [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
-- **Birleşik değiştiriciler.** Belirtemezsiniz `Static` ile birlikte `ReadOnly`, `Shadows`, veya `Shared` aynı bildirimde.  
+- **Combined Modifiers.** You cannot specify `Static` together with `ReadOnly`, `Shadows`, or `Shared` in the same declaration.  
   
 ## <a name="behavior"></a>Davranış  
- İçinde statik bir değişken bildirdiğinizde bir `Shared` yordamı, yalnızca bir kopyasını statik değişken tüm uygulama için kullanılabilir. Çağrısı bir `Shared` yordamı kullanarak sınıf adı, sınıfın bir örneğine işaret eden bir değişken değil.  
+ When you declare a static variable in a `Shared` procedure, only one copy of the static variable is available for the whole application. You call a `Shared` procedure by using the class name, not a variable that points to an instance of the class.  
   
- Olmayan bir yordamda bir statik değişken bildirdiğinizde `Shared`, yalnızca bir kopyasını değişkeni, sınıfın her örneği için kullanılabilir. Paylaşılmayan bir yordam, sınıfın belirli bir örneğine işaret eden bir değişkeni kullanarak çağırın.  
+ When you declare a static variable in a procedure that isn't `Shared`, only one copy of the variable is available for each instance of the class. You call a non-shared procedure by using a variable that points to a specific instance of the class.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kullanımını gösterir `Static`.  
+ The following example demonstrates the use of `Static`.  
   
  [!code-vb[VbVbalrKeywords#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#5)]  
   
- `Static` Değişkeni `totalSales` yalnızca bir kez 0 olarak başlatılır. Girdiğiniz her zaman `updateSales`, `totalSales` yine de hesaplanan en son değerine sahip.  
+ The `Static` variable `totalSales` is initialized to 0 only one time. Each time that you enter `updateSales`, `totalSales` still has the most recent value that you calculated for it.  
   
- `Static` Bu bağlamda değiştirici kullanılabilir:  
+ The `Static` modifier can be used in this context:  
   
  [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
@@ -50,7 +50,7 @@ Bir veya daha fazla bildirilmiş yerel değişkenin içinde bildirildikleri yord
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Visual Basic'de ömür](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Değişken Bildirimi](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Yerel Çıkarım](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

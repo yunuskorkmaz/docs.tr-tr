@@ -1,25 +1,25 @@
 ---
-title: Ayrıntılar Office Open XML WordprocessingML belgelerinin (Visual Basic)
+title: Office Open XML WordprocessingML Belgelerinin Ayrıntıları
 ms.date: 07/20/2015
 ms.assetid: 6b1e155c-7174-4244-a6de-0fddf9a0b0d7
-ms.openlocfilehash: ae684ddcb194000da6bf66d96fb1027d925d7f21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca3feddd93695bfa654241e796f041e3e1fea4a5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977648"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354217"
 ---
-# <a name="details-of-office-open-xml-wordprocessingml-documents-visual-basic"></a>Ayrıntılar Office Open XML WordprocessingML belgelerinin (Visual Basic)
-Bu bölüm, Office Open XML WordprocessingML belgelerinin ayrıntıları hakkında bilgi sağlar. Bu, Open XML belgesinin belge ve stil bölümlerini örneklerini gösterir.  
+# <a name="details-of-office-open-xml-wordprocessingml-documents-visual-basic"></a>Details of Office Open XML WordprocessingML Documents (Visual Basic)
+This section provides information about the details of Office Open XML WordprocessingML documents. It shows examples of the document and style parts of an Open XML document.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[Stillerle WordprocessingML Belgesi](../../../../visual-basic/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)|Bir Office Open XML WordprocessingML belgesinin Belge bölümü gösterilmektedir.|  
-|[WordprocessingML Belgesinin Stil Kısmı](../../../../visual-basic/programming-guide/concepts/linq/style-part-of-a-wordprocessingml-document.md)|Bir Office Open XML WordprocessingML belgesinin stil kısmı gösterir.|  
-|[Office Open XML belge kısımları (Visual Basic) çıkaran örnek](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)|Bir Office Open XML WordprocessingML belgesi açar ve konsola kısımları çıkaran bir örnek sağlar.|  
+|[Stillerle WordprocessingML Belgesi](../../../../visual-basic/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)|Shows the document part of an Office Open XML WordprocessingML document.|  
+|[WordprocessingML Belgesinin Stil Kısmı](../../../../visual-basic/programming-guide/concepts/linq/style-part-of-a-wordprocessingml-document.md)|Shows the style part of an Office Open XML WordprocessingML document.|  
+|[Example that Outputs Office Open XML Document Parts (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)|Provides an example that opens an Office Open XML WordprocessingML document, and outputs the parts to the console.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -5,12 +5,12 @@ description: .NET Framework Windows 8.1 üzerine yüklemeyi öğrenin
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 3959e6c9f45897b799b3305893580ec881b02f8d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: a7dd68c8e47fa004ec3861cefe1afd56f14e7068
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853897"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283043"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>Windows 8.1 ve Windows Server 2012 R2’de .NET Framework Yükleme
 
@@ -20,7 +20,7 @@ ms.locfileid: "70853897"
 
 Bu yönergeler, ihtiyacınız olan .NET Framework sürümlerini yüklemenize yardımcı olur. [.NET Framework 4,8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) en son sürümdür. Windows 8.1 ve Windows Server 2012 R2 'de desteklenir ve [Windows 10 mayıs 2019 güncelleştirmesi](https://support.microsoft.com/help/4028685/windows-10-get-the-update)ile birlikte bulunur.
 
-## <a name="net-framework-8"></a>.NET Framework 8
+## <a name="net-framework-48"></a>.NET Framework 4,8
 
 > [!div class="button"]
 > [4,8 .NET Framework indirin](https://dotnet.microsoft.com/download/dotnet-framework/net48)
@@ -33,7 +33,7 @@ Bu yönergeler, ihtiyacınız olan .NET Framework sürümlerini yüklemenize yar
 
 .NET Framework 3,5 ile 3,5 .NET Framework 1,0 için oluşturulmuş uygulamaları destekler.
 
-## <a name="help"></a>Help
+## <a name="help"></a>Yardım
 
 .NET Framework yüklü olan doğru sürümü alamazsanız, [Yardım Için Microsoft 'a başvurabilirsiniz](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help) .
 

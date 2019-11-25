@@ -1,5 +1,5 @@
 ---
-title: SyncLock ekstresi (Visual Basic)
+title: SyncLock Deyimi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.SyncLock
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: e981ee727b66ecda392014fd3ee8ca6f1526cd2e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 0f430edce99513b0de9ef437d70648a128b336b8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578893"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352811"
 ---
 # <a name="synclock-statement"></a>SyncLock Deyimi
-Bloğu yürütmeden önce bir ifade bloğu için özel bir kilit elde edin.  
+Acquires an exclusive lock for a statement block before executing the block.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,62 +29,62 @@ End SyncLock
   
 ## <a name="parts"></a>Bölümler  
  `lockobject`  
- Gerekli. Bir nesne başvurusunu değerlendiren ifade.  
+ Gerekli. Expression that evaluates to an object reference.  
   
  `block`  
- İsteğe bağlı. Kilit elde edildiğinde yürütülecek deyimler bloğu.  
+ İsteğe bağlı. Block of statements that are to execute when the lock is acquired.  
   
  `End SyncLock`  
- Bir `SyncLock` bloğunu sonlandırır.  
+ Terminates a `SyncLock` block.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 deyimleri, birden çok iş parçacığının aynı anda ekstre bloğunu yürütmemesini sağlar. `SyncLock`, başka bir iş parçacığı yürütülene kadar her bir iş parçacığının blok girmesini önler.  
+ The `SyncLock` statement ensures that multiple threads do not execute the statement block at the same time. `SyncLock` prevents each thread from entering the block until no other thread is executing it.  
   
- @No__t_0 en yaygın kullanımı, verilerin birden fazla iş parçacığı tarafından aynı anda güncelleştirilmesini sağlar. Verileri işleyen deyimlerin kesintiye uğramadan tamamlanması gerekiyorsa, bunları bir `SyncLock` bloğunun içine koyun.  
+ The most common use of `SyncLock` is to protect data from being updated by more than one thread simultaneously. If the statements that manipulate the data must go to completion without interruption, put them inside a `SyncLock` block.  
   
- Özel bir kilit tarafından korunan bir ifade bloğu bazen *kritik bir bölüm*olarak adlandırılır.  
+ A statement block protected by an exclusive lock is sometimes called a *critical section*.  
   
 ## <a name="rules"></a>Kurallar  
   
-- Dallanma. Bloğunun dışından bir `SyncLock` bloğuna dallandırılamıyor.  
+- Branching. You cannot branch into a `SyncLock` block from outside the block.  
   
-- Nesne değerini kilitle. @No__t_0 değeri `Nothing` olamaz. Kilit nesnesini bir `SyncLock` ifadesinde kullanmadan önce oluşturmanız gerekir.  
+- Lock Object Value. The value of `lockobject` cannot be `Nothing`. You must create the lock object before you use it in a `SyncLock` statement.  
   
-     @No__t_1 bloğunu yürütürken `lockobject` değerini değiştiremezsiniz. Mekanizma, kilit nesnesinin değişmeden kalmasını gerektirir.  
+     You cannot change the value of `lockobject` while executing a `SyncLock` block. The mechanism requires that the lock object remain unchanged.  
   
-- @No__t_1 bloğunda [await](../../../visual-basic/language-reference/operators/await-operator.md) işlecini kullanamazsınız.  
+- You can't use the [Await](../../../visual-basic/language-reference/operators/await-operator.md) operator in a `SyncLock` block.  
   
 ## <a name="behavior"></a>Davranış  
   
-- Mekanizmadır. Bir iş parçacığı `SyncLock` deyimine ulaştığında, `lockobject` ifadesini değerlendirir ve ifadenin döndürdüğü nesne üzerinde dışlamalı bir kilit elde edene kadar yürütmeyi askıya alır. Başka bir iş parçacığı `SyncLock` ifadesine ulaştığında, ilk iş parçacığı `End SyncLock` ifadesini çalıştırana kadar bir kilit almaz.  
+- Mechanism. When a thread reaches the `SyncLock` statement, it evaluates the `lockobject` expression and suspends execution until it acquires an exclusive lock on the object returned by the expression. When another thread reaches the `SyncLock` statement, it does not acquire a lock until the first thread executes the `End SyncLock` statement.  
   
-- Korumalı veriler. @No__t_0 bir `Shared` değişkense, dışlamalı kilit, herhangi bir iş parçacığı yürütülürken sınıfın herhangi bir örneğindeki bir iş parçacığının `SyncLock` bloğunu yürütmesini engeller. Bu, tüm örnekler arasında paylaşılan verileri korur.  
+- Protected Data. If `lockobject` is a `Shared` variable, the exclusive lock prevents a thread in any instance of the class from executing the `SyncLock` block while any other thread is executing it. This protects data that is shared among all the instances.  
   
-     @No__t_0 bir örnek değişkenidir (`Shared` değil), kilit, geçerli örnekte çalışan bir iş parçacığının aynı anda aynı örnekteki diğer bir iş parçacığıyla `SyncLock` bloğunu yürütmesini engeller. Bu, bireysel örnek tarafından tutulan verileri korur.  
+     If `lockobject` is an instance variable (not `Shared`), the lock prevents a thread running in the current instance from executing the `SyncLock` block at the same time as another thread in the same instance. This protects data maintained by the individual instance.  
   
-- Alma ve yayınlama. @No__t_0 bloğu, `Try` bloğunun `lockobject` üzerinde dışlamalı bir kilit elde `Try...Finally` oluşturma gibi davranır ve `Finally` bloğu bunu serbest bırakır. Bu nedenle, bloğundan nasıl çıktığınızda bağımsız olarak `SyncLock` bloğu kilit sürümünü garanti eder. Bu, işlenmemiş bir özel durum durumunda bile geçerlidir.  
+- Acquisition and Release. A `SyncLock` block behaves like a `Try...Finally` construction in which the `Try` block acquires an exclusive lock on `lockobject` and the `Finally` block releases it. Because of this, the `SyncLock` block guarantees release of the lock, no matter how you exit the block. This is true even in the case of an unhandled exception.  
   
-- Çerçeve çağrıları. @No__t_0 bloğu, <xref:System.Threading> ad alanındaki `Monitor` sınıfının `Enter` ve `Exit` yöntemlerini çağırarak dışlamalı kilidi alır ve yayınlar.  
+- Framework Calls. The `SyncLock` block acquires and releases the exclusive lock by calling the `Enter` and `Exit` methods of the `Monitor` class in the <xref:System.Threading> namespace.  
   
-## <a name="programming-practices"></a>Programlama uygulamaları  
- @No__t_0 ifadesi her zaman yalnızca sınıfınıza ait olan bir nesne olarak değerlendirilir. Geçerli örneğe ait verileri korumak için bir `Private` nesne değişkeni veya tüm örneklerde ortak olan verileri korumak için bir `Private Shared` nesne değişkeni bildirmeniz gerekir.  
+## <a name="programming-practices"></a>Programming Practices  
+ The `lockobject` expression should always evaluate to an object that belongs exclusively to your class. You should declare a `Private` object variable to protect data belonging to the current instance, or a `Private Shared` object variable to protect data common to all instances.  
   
- Örnek verileri için bir kilit nesnesi sağlamak üzere `Me` anahtar sözcüğünü kullanmamalısınız. Sınıfınıza dış kod, sınıfınızın bir örneğine başvuru içeriyorsa, bu başvuruyu sizinki farklı verileri koruyan bir `SyncLock` bloğu için bir kilit nesnesi olarak kullanabilir. Bu şekilde, sınıfınız ve diğer sınıfı birbirini ilgisiz `SyncLock` bloklarını yürütmelerini engelleyebilir. Aynı dizeyi kullanan işlemdeki diğer kodlar aynı kilidi paylaştığından, bir dizedeki aynı şekilde kilitleme sorunlu olabilir.  
+ You should not use the `Me` keyword to provide a lock object for instance data. If code external to your class has a reference to an instance of your class, it could use that reference as a lock object for a `SyncLock` block completely different from yours, protecting different data. In this way, your class and the other class could block each other from executing their unrelated `SyncLock` blocks. Similarly locking on a string can be problematic since any other code in the process using the same string will share the same lock.  
   
- Ayrıca, paylaşılan veriler için bir kilit nesnesi sağlamak üzere `Me.GetType` metodunu kullanmamalısınız. Bunun nedeni, `GetType` her zaman belirli bir sınıf adı için aynı `Type` nesnesini döndürmektedir. Dış kod, sınıfınıza `GetType` çağırabilir ve kullanmakta olduğunuz kilit nesnesini alabilir. Bu, iki sınıfın `SyncLock` bloklarında birbirini engellemesine neden olur.  
+ You should also not use the `Me.GetType` method to provide a lock object for shared data. This is because `GetType` always returns the same `Type` object for a given class name. External code could call `GetType` on your class and obtain the same lock object you are using. This would result in the two classes blocking each other from their `SyncLock` blocks.  
   
 ## <a name="examples"></a>Örnekler  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, bir ileti listesini tutan bir sınıfı gösterir. Bir dizideki iletileri ve bu dizinin son kullanılan öğesini bir değişkende tutar. @No__t_0 yordamı son öğeyi artırır ve yeni iletiyi depolar. Bu iki işlem `SyncLock` ve `End SyncLock` deyimleri tarafından korunur, çünkü son öğe artdıktan sonra yeni ileti, diğer herhangi bir iş parçacığının son öğeyi yeniden artırılabilmesi için önce depolanmalıdır.  
+ The following example shows a class that maintains a simple list of messages. It holds the messages in an array and the last used element of that array in a variable. The `addAnotherMessage` procedure increments the last element and stores the new message. Those two operations are protected by the `SyncLock` and `End SyncLock` statements, because once the last element has been incremented, the new message must be stored before any other thread can increment the last element again.  
   
- @No__t_0 sınıfı tüm örnekleri arasında bir ileti listesi paylaşmışsa, `messagesList` ve `messagesLast` değişkenleri `Shared` olarak bildirilebilecek. Bu durumda, değişken `messagesLock`, her örnek tarafından kullanılan tek bir kilit nesnesi olacak şekilde `Shared` de olmalıdır.  
+ If the `simpleMessageList` class shared one list of messages among all its instances, the variables `messagesList` and `messagesLast` would be declared as `Shared`. In this case, the variable `messagesLock` should also be `Shared`, so that there would be a single lock object used by every instance.  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbalrThreading#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/Class1.vb#1)]  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, iş parçacıklarını ve `SyncLock` kullanır. @No__t_0 deyimin bulunduğu sürece, ifade bloğu kritik bir bölümdür ve `balance` hiçbir zaman negatif bir sayı haline geçmez. @No__t_2 anahtar sözcüğünü bırakma etkisini görmek için `SyncLock` ve `End SyncLock` deyimlerini açıklama ekleyebilirsiniz.  
+ The following example uses threads and `SyncLock`. As long as the `SyncLock` statement is present, the statement block is a critical section and `balance` never becomes a negative number. You can comment out the `SyncLock` and `End SyncLock` statements to see the effect of leaving out the `SyncLock` keyword.  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbalrThreading#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/class2.vb#21)]  
@@ -95,4 +95,4 @@ End SyncLock
 
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
-- [Eşitleme temelleri 'ne genel bakış](../../../standard/threading/overview-of-synchronization-primitives.md)
+- [Overview of synchronization primitives](../../../standard/threading/overview-of-synchronization-primitives.md)

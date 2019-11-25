@@ -1,27 +1,27 @@
 ---
-title: My.User nesnesi (Visual Basic)
+title: My.User Nesnesi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.User property
 - My.User object
 ms.assetid: caa7462e-2149-4bdb-8850-802b80b93cbf
-ms.openlocfilehash: 7154b52f6bbd45756702deccbec3d8d45778b641
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26ecb4a29080a8691217e1093805a7b40f63f022
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050304"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350646"
 ---
 # <a name="myuser-object"></a>My.User Nesnesi
-Geçerli kullanıcı ile ilgili bilgilere erişim sağlar.  
+Provides access to information about the current user.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemleri ve özellikleri hakkında bilgi için `My.User` nesne, bkz: <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.  
+ For information about the methods and properties of the `My.User` object, see <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.  
   
- Daha fazla bilgi için [kullanıcı verilerine erişme](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
+ For more information, see [Accessing User Data](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Derleme:** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

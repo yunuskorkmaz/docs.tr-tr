@@ -1,5 +1,5 @@
 ---
-title: As Tümcesi (Visual Basic)
+title: As Yan Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.as
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 4b0ebbb6a86cc2c71882427afd33e7d9e0fe7a04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf1acbfeee150f1ea353ce134a4e94dab9928e8a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945099"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350170"
 ---
 # <a name="as-clause-visual-basic"></a>As Tümcesi (Visual Basic)
-Tanıtır bir `As` yan tümcesi bir bildirim deyiminin veya bir genel tür parametresi kısıtlaması listede bir veri türü tanımlar.  
+Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `As` Anahtar sözcüğü bu bağlamda kullanılabilir:  
+ The `As` keyword can be used in these contexts:  
   
  [Aggregate Yan Tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
@@ -37,9 +37,9 @@ Tanıtır bir `As` yan tümcesi bir bildirim deyiminin veya bir genel tür param
   
  [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [İçin... Next deyimi](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [For...Next Statements](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [Her biri için... Next deyimi](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For Each...Next Statements](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -57,13 +57,13 @@ Tanıtır bir `As` yan tümcesi bir bildirim deyiminin veya bir genel tür param
   
  [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Deneyin... Catch... Finally deyimleri](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Try...Catch...Finally Statements](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Yeni değişken oluşturma](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [Nasıl yapılır: Yeni Değişken Oluşturma](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
 - [Veri Türleri](../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Değişken Bildirimi](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)
-- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

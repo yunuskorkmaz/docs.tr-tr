@@ -4,12 +4,12 @@ description: Kodunuzu XML belge açıklamalarıyla belgeleme ve derleme zamanın
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: a9142b36586de4d08dec6c4b72bfd1725b4830ac
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c858a92309710a0ac6b68e9194f2d7ef4c9577a0
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037662"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140671"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Kodunuzu XML açıklamalarıyla belgeleme
 
@@ -21,16 +21,16 @@ Tüm diğer yorumlar gibi XML belgesi açıklamaları derleyici tarafından yok 
 
 XML dosyasını, derleme zamanında aşağıdakilerden birini yaparak oluşturabilirsiniz:
 
-- Komut satırından .NET Core ile bir uygulama geliştiriyorsanız,. csproj proje dosyanızın `<PropertyGroup>` bölümüne bir [Belgetadosya öğesi](/visualstudio/msbuild/common-msbuild-project-properties) ekleyebilirsiniz. Aşağıdaki örnek, derleme ile aynı kök dosya adına sahip proje dizininde bir XML dosyası oluşturur:
+- Komut satırından .NET Core ile bir uygulama geliştiriyorsanız,. csproj proje dosyanızın `<PropertyGroup>` bölümüne `GenerateDocumentationFile` öğesi ekleyebilirsiniz. Belge dosyasının yolunu doğrudan [`DocumentationFile` öğesi](/visualstudio/msbuild/common-msbuild-project-properties)kullanarak da belirtebilirsiniz. Aşağıdaki örnek, derleme ile aynı kök dosya adına sahip proje dizininde bir XML dosyası oluşturur:
 
+   ```xml
+   <GenerateDocumentationFile>true</GenerateDocumentationFile>
+   ```
+   
+   Bu, aşağıdaki gibi eşdeğerdir:
+   
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-   ```
-
-   Ayrıca, XML dosyasının tam mutlak veya göreli yolunu ve adını belirtebilirsiniz. Aşağıdaki örnek, XML dosyasını bir uygulamanın hata ayıklama sürümüyle aynı dizinde oluşturur:
-
-   ```xml
-   <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
 - Visual Studio 'Yu kullanarak bir uygulama geliştiriyorsanız, projeye sağ tıklayıp **Özellikler**' i seçin. Özellikler iletişim kutusunda **derleme** sekmesini seçin ve **XML belge dosyasını**denetleyin. Derleyicinin dosyayı yazdıkları konumu da değiştirebilirsiniz.

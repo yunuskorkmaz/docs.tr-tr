@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: b00f5dd31ba572a2c8fb5301cc7ae9ddda77f0e5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9b5d839bb4a678f105e128671fbda729e2c730b7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045045"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141797"
 ---
 # <a name="duplex"></a>Çift Yönlü
 
-Çift yönlü örnek, bir çift yönlü sözleşmenin nasıl tanımlanacağını ve uygulanacağını gösterir. Çift yönlü iletişim, bir istemci bir hizmetle oturum kurduğunda ve hizmete, hizmetin istemciye geri ileti gönderebileceği bir kanal veren bir kanala sahip olduğunda gerçekleşir. Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. Bir çift yönlü sözleşme, istemciden hizmete bir birincil arabirim ve hizmetten istemciye bir geri çağırma arabirimi olarak tanımlanmış bir arabirim çifti olarak tanımlanır. Bu örnekte, `ICalculatorDuplex` arabirimi istemcinin matematik işlemleri gerçekleştirmesini sağlar ve sonucu bir oturum üzerinden hesaplıyor. Hizmet, `ICalculatorDuplexCallback` arabirimdeki sonuçları döndürür. Bir çift yönlü sözleşme, istemci ve hizmet arasında gönderilen ileti kümesiyle ilişkilendirilmesi için bir bağlam kurulması gerektiğinden oturum gerektirir.
+Çift yönlü örnek, bir çift yönlü sözleşmenin nasıl tanımlanacağını ve uygulanacağını gösterir. Çift yönlü iletişim, bir istemci bir hizmetle oturum kurduğunda ve hizmete, hizmetin istemciye geri ileti gönderebileceği bir kanal veren bir kanala sahip olduğunda gerçekleşir. Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. Bir çift yönlü sözleşme, istemciden hizmete bir birincil arabirim ve hizmetten istemciye bir geri çağırma arabirimi olarak tanımlanmış bir arabirim çifti olarak tanımlanır. Bu örnekte, `ICalculatorDuplex` arabirimi istemcinin matematik işlemleri gerçekleştirmesini sağlar ve sonucu bir oturum üzerinden hesaplıyor. Hizmet, `ICalculatorDuplexCallback` arabirimindeki sonuçları döndürür. Bir çift yönlü sözleşme, istemci ve hizmet arasında gönderilen ileti kümesiyle ilişkilendirilmesi için bir bağlam kurulması gerektiğinden oturum gerektirir.
 
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
@@ -46,7 +46,7 @@ public interface ICalculatorDuplexCallback
 }
 ```
 
-Sınıfı, birincil `ICalculatorDuplex` arabirimini uygular. `CalculatorService` Hizmet, her bir <xref:System.ServiceModel.InstanceContextMode.PerSession> oturumun sonucunu korumak için örnek modunu kullanır. Adlı `Callback` özel özellik, istemciye geri çağırma kanalına erişmek için kullanılır. Hizmet geri çağırma arabirimi aracılığıyla istemciye ileti göndermek için geri aramayı kullanır.
+`CalculatorService` sınıfı, birincil `ICalculatorDuplex` arabirimini uygular. Hizmet, her bir oturumun sonucunu korumak için <xref:System.ServiceModel.InstanceContextMode.PerSession> örnek modunu kullanır. İstemciye geri çağırma kanalına erişmek için `Callback` adlı bir özel özellik kullanılır. Hizmet geri çağırma arabirimi aracılığıyla istemciye ileti göndermek için geri aramayı kullanır.
 
 ```csharp
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
@@ -85,7 +85,7 @@ public class CalculatorService : ICalculatorDuplex
 }
 ```
 
-İstemci, hizmetten ileti almak için çift yönlü sözleşmenin geri çağırma arabirimini uygulayan bir sınıf sağlamalıdır. Örnekte, `ICalculatorDuplexCallback` arabirimi uygulamak için `CallbackHandler` bir sınıf tanımlanmıştır.
+İstemci, hizmetten ileti almak için çift yönlü sözleşmenin geri çağırma arabirimini uygulayan bir sınıf sağlamalıdır. Örnekte, `ICalculatorDuplexCallback` arabirimini uygulamak için bir `CallbackHandler` sınıfı tanımlanmıştır.
 
 ```csharp
 public class CallbackHandler : ICalculatorDuplexCallback
@@ -102,7 +102,7 @@ public class CallbackHandler : ICalculatorDuplexCallback
 }
 ```
 
-Bir çift yönlü sözleşme için oluşturulan ara sunucu, oluşturma sırasında <xref:System.ServiceModel.InstanceContext> bir için bir sağlanması gerekir. Bu <xref:System.ServiceModel.InstanceContext> , geri çağırma arabirimini uygulayan ve hizmetten geri gönderilen iletileri işleyen bir nesnenin sitesi olarak kullanılır. <xref:System.ServiceModel.InstanceContext> , `CallbackHandler` Sınıfının bir örneğiyle oluşturulur. Bu nesne hizmetten geri çağırma arabirimindeki istemciye gönderilen iletileri işler.
+Bir çift yönlü sözleşme için oluşturulan ara sunucu, oluşturma sırasında bir <xref:System.ServiceModel.InstanceContext> sağlanmasını gerektirir. Bu <xref:System.ServiceModel.InstanceContext>, geri çağırma arabirimini uygulayan ve hizmetten geri gönderilen iletileri işleyen bir nesnenin sitesi olarak kullanılır. Bir <xref:System.ServiceModel.InstanceContext> `CallbackHandler` sınıfının örneğiyle oluşturulur. Bu nesne hizmetten geri çağırma arabirimindeki istemciye gönderilen iletileri işler.
 
 ```csharp
 // Construct InstanceContext to handle messages on callback interface.
@@ -139,7 +139,7 @@ Console.ReadLine();
 client.Close();
 ```
 
-Yapılandırma, hem oturum iletişimini hem de çift yönlü iletişimi destekleyen bir bağlama sunacak şekilde değiştirilmiştir. , `wsDualHttpBinding` Oturum iletişimini destekler ve her yön için bir tane olmak üzere çift http bağlantısı sağlayarak çift yönlü iletişime olanak sağlar. Hizmette, yapılandırmadaki tek fark, kullanılan bağlamadır. İstemcisinde, aşağıdaki örnek yapılandırmada gösterildiği gibi sunucunun istemciye bağlanmak için kullanabileceği bir adresi yapılandırmanız gerekir.
+Yapılandırma, hem oturum iletişimini hem de çift yönlü iletişimi destekleyen bir bağlama sunacak şekilde değiştirilmiştir. `wsDualHttpBinding`, oturum iletişimini destekler ve her yön için bir tane olmak üzere çift HTTP bağlantısı sağlayarak çift yönlü iletişime olanak sağlar. Hizmette, yapılandırmadaki tek fark, kullanılan bağlamadır. İstemcisinde, aşağıdaki örnek yapılandırmada gösterildiği gibi sunucunun istemciye bağlanmak için kullanabileceği bir adresi yapılandırmanız gerekir.
 
 ```xml
 <client>
@@ -171,7 +171,7 @@ Yapılandırma, hem oturum iletişimini hem de çift yönlü iletişimi destekle
 3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
 
     > [!IMPORTANT]
-    > İstemciyi bir çapraz makine yapılandırmasında çalıştırırken, "localhost" `address` öğesini [ \< \<istemci > öğesi > uç noktası](../../configure-apps/file-schema/wcf/endpoint-of-client.md) özniteliğinde ve ' ın `clientBaseAddress` özniteliği ile değiştirdiğinizden emin olun. [ Aşağıdaki\<](../../../../docs/framework/misc/binding.md) şekilde gösterildiği gibi, [ \<WSDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) öğesinin > öğesini uygun makinenin adı ile bağlama:
+    > İstemciyi bir siteler arası yapılandırmada çalıştırırken, aşağıdaki şekilde gösterildiği gibi, "localhost" öğesini [\<client > öğesinin\<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) hem de `clientBaseAddress` [WSDualHttpBinding\<](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) öğesinin > [bağlama\<](../../configure-apps/file-schema/wcf/bindings.md) öğesinin `address` özniteliğinde değiştirdiğinizden emin olun:
 
     ```xml
     <client>
@@ -191,6 +191,6 @@ Yapılandırma, hem oturum iletişimini hem de çift yönlü iletişimi destekle
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Duplex`

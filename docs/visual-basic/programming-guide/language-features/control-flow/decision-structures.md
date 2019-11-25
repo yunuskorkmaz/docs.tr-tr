@@ -1,5 +1,5 @@
 ---
-title: Karar Yapıları (Visual Basic)
+title: Karar Yapıları
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [Visual Basic], control flow
@@ -9,41 +9,41 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: f0df649c4be50e9cadd51258c89137b68b4ffe22
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d0d4039ff2edc61ee8b4b732c6adcb6e420d73ea
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963193"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353971"
 ---
 # <a name="decision-structures-visual-basic"></a>Karar Yapıları (Visual Basic)
-Visual Basic, test koşullarını test etmenizi ve bu testin sonuçlarına bağlı olarak farklı işlemler gerçekleştirmenizi sağlar. Bir koşulu doğru veya yanlış olarak, bir ifadenin çeşitli değerleri için ya da bir dizi deyim yürüttüğünüzde oluşturulan çeşitli özel durumlar için test edebilirsiniz.  
+Visual Basic lets you test conditions and perform different operations depending on the results of that test. You can test for a condition being true or false, for various values of an expression, or for various exceptions generated when you execute a series of statements.  
   
- Aşağıdaki çizimde, bir koşulu test eden ve doğru ya da yanlış olmasına bağlı olarak farklı eylemler alan bir karar yapısı gösterilmektedir.  
+ The following illustration shows a decision structure that tests for a condition being true and takes different actions depending on whether it is true or false.  
   
- ![Öğesinin akış grafiği If...Then...Else oluşturma.](./media/decision-structures/if-then-else-construction.gif)  
+ ![A flow chart of an If...Then...Else construction.](./media/decision-structures/if-then-else-construction.gif)  
   
-## <a name="ifthenelse-construction"></a>If...Then...Else oluşturma  
- `If...Then...Else`kurulumlarını bir veya daha fazla koşulu test etmenize ve her koşula bağlı olarak bir veya daha fazla deyim çalıştırmanıza izin verir. Koşulları test edebilir ve aşağıdaki yollarla işlem yapabilirsiniz:  
+## <a name="ifthenelse-construction"></a>If...Then...Else Construction  
+ `If...Then...Else` constructions let you test for one or more conditions and run one or more statements depending on each condition. You can test conditions and take actions in the following ways:  
   
-- Bir koşul varsa bir veya daha fazla deyimi çalıştırma`True`  
+- Run one or more statements if a condition is `True`  
   
-- Bir koşul varsa bir veya daha fazla deyimi çalıştırma`False`  
+- Run one or more statements if a condition is `False`  
   
-- Bir koşul `True` varsa ve diğer durumlarda bazı deyimleri Çalıştır`False`  
+- Run some statements if a condition is `True` and others if it is `False`  
   
-- Önceki bir koşul varsa, daha fazla durum test edin`False`  
+- Test an additional condition if a prior condition is `False`  
   
- Tüm bu olasılıkları sunan denetim yapısı [If...Then...Else bildirisi](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Yalnızca bir testiniz ve çalıştırmak için bir deyiminiz varsa, tek satırlık bir sürüm kullanabilirsiniz. Daha karmaşık koşullar ve eylemler kümesine sahipseniz, çok satırlı sürümü kullanabilirsiniz.  
+ The control structure that offers all these possibilities is the [If...Then...Else Statement](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). You can use a single-line version if you have just one test and one statement to run. If you have a more complex set of conditions and actions, you can use the multiple-line version.  
   
-## <a name="selectcase-construction"></a>Select...Case oluşturma  
- Oluşturma `Select...Case` , bir ifadeyi bir kez değerlendirmenizi ve farklı olası değerlere göre farklı deyim kümelerini çalıştırmanızı sağlar. Daha fazla bilgi için bkz [Select...Case bildirisi](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
+## <a name="selectcase-construction"></a>Select...Case Construction  
+ The `Select...Case` construction lets you evaluate an expression one time and run different sets of statements based on different possible values. For more information, see [Select...Case Statement](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
-## <a name="trycatchfinally-construction"></a>Try...Catch...Finally yapım  
- `Try...Catch...Finally`kurulumlarını, deyimlerinizin herhangi biri özel duruma neden olursa denetimi koruyan bir ortam altında deyim kümesi çalıştırmanızı sağlar. Farklı özel durumlar için farklı eylemler gerçekleştirebilirsiniz. Ne olursa olsun, tüm `Try...Catch...Finally` oluşturma işleminden çıkmadan önce çalışan bir kod bloğu belirtebilirsiniz. Daha fazla bilgi için bkz [Try...Catch...Finally ekstresi](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+## <a name="trycatchfinally-construction"></a>Try...Catch...Finally Construction  
+ `Try...Catch...Finally` constructions let you run a set of statements under an environment that retains control if any one of your statements causes an exception. You can take different actions for different exceptions. You can optionally specify a block of code that runs before you exit the whole `Try...Catch...Finally` construction, regardless of what occurs. For more information, see [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 > [!NOTE]
-> Birçok denetim yapısında, bir anahtar sözcüğe tıkladığınızda yapıdaki tüm anahtar sözcükler vurgulanır. `If` Örneğin, bir `ElseIf` `Then` `Else` yapıyatıkladığınızda`End If` ,,,, ve oluşturma içindeki tüm örnekleri vurgulanır.`If` `If...Then...Else` Sonraki veya önceki vurgulanmış anahtar sözcüğe geçmek için CTRL + SHIFT + aşağı ok veya CTRL + SHIFT + yukarı ok tuşlarına basın.  
+> For many control structures, when you click a keyword, all of the keywords in the structure are highlighted. For instance, when you click `If` in an `If...Then...Else` construction, all instances of `If`, `Then`, `ElseIf`, `Else`, and `End If` in the construction are highlighted. To move to the next or previous highlighted keyword, press CTRL+SHIFT+DOWN ARROW or CTRL+SHIFT+UP ARROW.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

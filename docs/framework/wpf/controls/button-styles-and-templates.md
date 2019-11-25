@@ -9,15 +9,15 @@ helpviewer_keywords:
 - templates [WPF], Button
 - ControlTemplate [WPF], Button
 ms.assetid: e223c759-f8c4-4717-acfb-b1e40bdf5f3b
-ms.openlocfilehash: 64764d43191d30c191c5d6519982b16cfc86d26e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ef9f85848ebdda9dc4ae15d0f54847eacd46e24d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460959"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283575"
 ---
 # <a name="button-styles-and-templates"></a>Düğme Stilleri ve Şablonları
-Bu konuda <xref:System.Windows.Controls.Button> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için, varsayılan <xref:System.Windows.Controls.ControlTemplate> ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+Bu konuda <xref:System.Windows.Controls.Button> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için varsayılan <xref:System.Windows.Controls.ControlTemplate> değiştirebilirsiniz. Daha fazla bilgi için bkz. [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="button-parts"></a>Düğme bölümleri  
  <xref:System.Windows.Controls.Button> denetiminde hiç adlandırılmış bölüm yok.  
@@ -27,9 +27,9 @@ Bu konuda <xref:System.Windows.Controls.Button> denetimine yönelik stiller ve �
   
 |VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
-|Olağan|Ortak durumlar|Varsayılan durum.|  
+|Normal|Ortak durumlar|Varsayılan durum.|  
 |Gelme olayından|Ortak durumlar|Fare işaretçisi denetimin üzerine yerleştirilir.|  
-|Basılması|Ortak durumlar|Denetime basıldığında.|  
+|Basılan|Ortak durumlar|Denetime basıldığında.|  
 |Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|  
 |Diğinize|Odaklardaki durumlar|Denetim odağa sahiptir.|  
 |Odaklanmadan gözetle|Odaklardaki durumlar|Denetimin odağı yok.|  
@@ -55,4 +55,4 @@ Bu konuda <xref:System.Windows.Controls.Button> denetimine yönelik stiller ve �
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
 - [Denetim Özelleştirme](control-customization.md)
 - [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)
+- [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md)

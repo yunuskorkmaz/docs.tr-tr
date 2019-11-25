@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Iki klasörün Içeriğini karşılaştırma (LINQ) (C#)'
+title: İki klasörün içeriğini karşılaştırma (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: df71712ca1b59c706ede66488af8b1580677e299
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f64c82fcc63085c9479b0a3af91f0bdf5ee9eb95
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924232"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141400"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Nasıl yapılır: Iki klasörün Içeriğini karşılaştırma (LINQ) (C#)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>İki klasörün içeriğini karşılaştırma (LINQ) (C#)
 Bu örnekte iki dosya listesi karşılaştırmanın üç yolu gösterilmektedir:  
   
 - İki dosya listelerinin aynı olup olmadığını belirten bir Boolean değeri sorgulayarak.  
@@ -21,7 +21,7 @@ Bu örnekte iki dosya listesi karşılaştırmanın üç yolu gösterilmektedir:
     > [!NOTE]
     > Burada gösterilen teknikler, herhangi bir türdeki nesne dizilerini karşılaştırmak için uyarlanmıştır.  
   
- Burada `FileComparer` gösterilen sınıf, standart sorgu işleçleri ile birlikte özel bir karşılaştırıcı sınıfının nasıl kullanılacağını gösterir. Sınıfı, gerçek dünyada senaryolarda kullanılmak üzere tasarlanmamıştır. Her bir klasörün içeriğinin aynı olup olmadığını anlamak için her bir dosyanın bayt cinsinden adını ve uzunluğunu kullanır. Gerçek dünyada bir senaryoda, daha kapsamlı bir eşitlik denetimi gerçekleştirmek için bu karşılaştırıcıyı değiştirmelisiniz.  
+ Burada gösterilen `FileComparer` sınıfı, standart sorgu Işleçleri ile birlikte özel bir karşılaştırıcı sınıfının nasıl kullanılacağını gösterir. Sınıfı, gerçek dünyada senaryolarda kullanılmak üzere tasarlanmamıştır. Her bir klasörün içeriğinin aynı olup olmadığını anlamak için her bir dosyanın bayt cinsinden adını ve uzunluğunu kullanır. Gerçek dünyada bir senaryoda, daha kapsamlı bir eşitlik denetimi gerçekleştirmek için bu karşılaştırıcıyı değiştirmelisiniz.  
   
 ## <a name="example"></a>Örnek  
   
@@ -126,7 +126,7 @@ namespace QueryCompareTwoDirs
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- System. C# LINQ ve System.IO ad alanları `using` için yönergeler içeren bir konsol uygulaması projesi oluşturun.  
+ System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

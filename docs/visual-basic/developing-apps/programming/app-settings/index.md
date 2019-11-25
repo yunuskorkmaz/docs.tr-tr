@@ -1,34 +1,37 @@
 ---
-title: (Visual Basic) uygulama ayarlarına erişme
+title: Accessing application settings
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
-ms.openlocfilehash: 56bce47aa37b536c494e43d26bead3114e7dcfa1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49f65e9c39a29056cb1c552f0d577fcf0d75d658
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014420"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353240"
 ---
-# <a name="accessing-application-settings-visual-basic"></a>(Visual Basic) uygulama ayarlarına erişme
-Bu bölüm açıklayan konular içerir `My.Settings` nesne ve görevleri, gerçekleştirmenize olanak tanır.  
+# <a name="accessing-application-settings-visual-basic"></a>Accessing application settings (Visual Basic)
+
+This section contains topics describing the `My.Settings` object and the tasks it enables you to accomplish.  
   
 ## <a name="mysettings"></a>My.Settings  
- Özelliklerini `My.Settings` nesne, uygulamanızın ayarlarına erişim sağlar. Ayarlar eklemek veya kaldırmak için kullanın **ayarları** bölmesinde **Proje Tasarımcısı**.  
+
+ The properties of the `My.Settings` object provide access to your application's settings. To add or remove settings, use the **Settings** pane of the **Project Designer**.  
   
- Yöntemlerinin `My.Settings` nesne geçerli kullanıcı ayarlarını kaydetmek veya son kaydedilen değerler kullanıcı ayarlarına döndürmek olanak sağlar.  
+ The methods of the `My.Settings` object allow you to save the current user settings or revert the user settings to the last saved values.  
   
 ## <a name="tasks"></a>Görevler  
- Aşağıdaki tabloda, bir uygulamanın formların nasıl gösteren örnekler listelenmektedir.  
+
+ The following table lists examples showing how to access an application's forms.  
   
-|Bitiş|Bkz. |  
+|Bitiş|Bkz.|  
 |--------|---------|  
-|Bir kullanıcı ayarı değerini güncelleştirin|[Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını değiştirme](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|Bir özellik kılavuzunda görüntü uygulama ve kullanıcı ayarları|[Nasıl yapılır: Visual Basic'te kullanıcı ayarları için özellik kılavuzu oluşturma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
-|Güncelleştirilmiş kullanıcı ayarı değerleri kaydedin|[Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını kalıcı yapma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Kullanıcı ayarları değerlerini belirlemek|[Nasıl yapılır: Visual Basic'te uygulama ayarlarını okuma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|Update the value of a user setting|[How to: Change User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|Display application and user settings in a property grid|[How to: Create Property Grids for User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|Save updated user setting values|[How to: Persist User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|Determine the values of user settings|[How to: Read Application Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

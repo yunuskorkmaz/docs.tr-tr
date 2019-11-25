@@ -1,19 +1,19 @@
 ---
 title: Await işleci- C# başvuru
 ms.custom: seodec18
-ms.date: 08/30/2019
+ms.date: 11/08/2019
 f1_keywords:
 - await_CSharpKeyword
 helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 5ed9d467bcbfa37a9809a530d11b3692fd2b984e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 36cb4a5def6b75281edbe878d89af0c18ab226ec
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036332"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140650"
 ---
 # <a name="await-operator-c-reference"></a>Await işleci (C# başvuru)
 
@@ -32,13 +32,15 @@ Yukarıdaki örnekte, 7,1 ile C# başlayan [zaman uyumsuz `Main` yöntemi](../..
 
 `await` işlecinin işleneni genellikle şu .NET türlerinden biridir: <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask>veya <xref:System.Threading.Tasks.ValueTask%601>. Ancak, herhangi bir zaman awasever ifadesi `await` işlecinin işleneni olabilir. Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [awasever ifadeleri](~/_csharplang/spec/expressions.md#awaitable-expressions) bölümüne bakın.
 
+8,0 ' C# den başlayarak, zaman uyumsuz veri akışını kullanmak için `await foreach` ifadesini kullanabilirsiniz. Daha fazla bilgi için [ C# 8,0](../../whats-new/csharp-8.md) sürümündeki yenilikler makalesindeki [zaman uyumsuz akışlar](../../whats-new/csharp-8.md#asynchronous-streams) bölümüne bakın.
+
 İfade türü `t` <xref:System.Threading.Tasks.Task%601> veya <xref:System.Threading.Tasks.ValueTask%601>ise `await t` ifade türü `TResult`. `t` türü <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.ValueTask>ise, `await t` türü `void`olur. Her iki durumda da `t` bir özel durum oluşturursa, `await t` özel durumu yeniden oluşturur. Özel durum işleme hakkında daha fazla bilgi için, [try-catch beyanı](../keywords/try-catch.md) makalesindeki [zaman uyumsuz metotlar bölümünde özel durumlar](../keywords/try-catch.md#exceptions-in-async-methods) bölümüne bakın.
 
 `async` ve `await` anahtar sözcükleri C# 5 ve sonraki sürümlerde kullanılabilir.
 
 ## <a name="await-operator-in-the-main-method"></a>Main yönteminde Await işleci
 
-7,1 ' C# den başlayarak, uygulama giriş noktası olan [`Main` yöntemi](../../programming-guide/main-and-command-args/index.md)`Task`veya`Task<int>`döndürebilir, onun gövdesinde`await`işlecini kullanabilmeniz için zaman uyumsuz olmasını sağlayabilir. Önceki C# sürümlerde`Main`yönteminin zaman uyumsuz bir işlemin tamamlanmasını beklediği için, karşılık gelen async yöntemi tarafından döndürülen<xref:System.Threading.Tasks.Task%601>örneğinin<xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType>özelliğinin değerini alabilirsiniz. Değer üretmeyen zaman uyumsuz işlemler için <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemini çağırabilirsiniz. Dil sürümünü seçme hakkında daha fazla bilgi için bkz [ C# . dil sürümü oluşturma](../configure-language-version.md).
+7,1 ' C# den başlayarak, uygulama giriş noktası olan [`Main` yöntemi](../../programming-guide/main-and-command-args/index.md)`Task`veya`Task<int>`döndürebilir, onun gövdesinde`await`işlecini kullanabilmeniz için zaman uyumsuz olmasını sağlayabilir. Önceki C# sürümlerde `Main` yönteminin zaman uyumsuz bir işlemin tamamlanmasını beklediği için, karşılık gelen async yöntemi tarafından döndürülen <xref:System.Threading.Tasks.Task%601> örneğinin <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> özelliğinin değerini alabilirsiniz. Değer üretmeyen zaman uyumsuz işlemler için <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemini çağırabilirsiniz. Dil sürümünü seçme hakkında daha fazla bilgi için bkz [ C# . dil sürümü oluşturma](../configure-language-version.md).
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -53,3 +55,4 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 - [Zaman uyumsuz programlama](../../async.md)
 - [Zaman uyumsuz, derinlemesine](../../../standard/async-in-depth.md)
 - [İzlenecek yol: Async ve await kullanarak Web 'e erişme](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Öğretici: 8,0 ve .NET Core 3,0 kullanarak C# zaman uyumsuz akışlar oluşturma ve kullanma](../../tutorials/generate-consume-asynchronous-stream.md)

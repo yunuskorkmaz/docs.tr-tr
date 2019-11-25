@@ -1,44 +1,44 @@
 ---
-title: Windows XP 'de .NET Framework yüklemesi
-description: .NET Framework Windows XP 'ye yüklemeyi öğrenin.
+title: Install the .NET Framework on Windows XP
+description: Learn how to install the .NET Framework on Windows XP.
 ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 17354c8aaf9131bbcf5e2274eff44d9af611582c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7d7ad0f86ff327c3273664fc1c7395c88d38a5bf
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853860"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204723"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Windows XP ve Windows Server 2003’te .NET Framework Yükleme
 
 > [!NOTE]
-> Windows XP artık Microsoft tarafından desteklenmemektedir. Desteklenen ve .NET Framework en son sürümünü içeren Windows 10 ' a yükseltmenizi öneririz. Bu belge yalnızca faydalı bir sorun giderme kılavuzu olarak sağlanır.
+> Windows XP is no longer supported by Microsoft. We recommend you upgrade to Windows 10, which is supported and includes the latest version of the .NET Framework. This document is provided solely as a helpful troubleshooting guide.
 
-.NET Framework Windows üzerinde birçok uygulama çalıştırmak için gereklidir. Yüklemek için aşağıdaki yönergeleri kullanabilirsiniz. Bir uygulamayı çalıştırmayı ve makinenizde aşağıdaki iletişim kutusunu görmenizi tamamladıktan sonra bu sayfada ulaşmış olabilirsiniz.
+The .NET Framework is required to run many applications on Windows. You can use the following instructions to install it. You may have arrived on this page after trying to run an application and seeing the following dialog on your machine.
 
-![Bu uygulama başlatılamadı](./media/this-application-could-not-be-started.png)
+![This application could not be started](./media/this-application-could-not-be-started.png)
 
-Bu yönergeler, ihtiyacınız olan .NET Framework sürümlerini yüklemenize yardımcı olur. [.NET Framework 4,8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) en son sürümdür. Windows XP ve Windows Server 2003 ' de desteklenmez. [Windows 10 mayıs 2019 güncelleştirmesine](https://support.microsoft.com/help/4028685/windows-10-get-the-update)dahildir.
+These instructions will help you install the .NET Framework versions you need. The [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) is the latest version. It is not supported on Windows XP and Windows Server 2003. It is included with [Windows 10 May 2019 Update](https://support.microsoft.com/help/4028685/windows-10-get-the-update).
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 
-[.NET Framework 4.0.3](https://go.microsoft.com/fwlink/?LinkID=213834) , Windows XP ve windows Server 2003 ' de desteklenen en son .NET Framework sürümdür. .NET Framework 4.0.3, önce [.NET Framework 4 ' ün](https://go.microsoft.com/fwlink/?LinkID=213834) yüklenmesini gerektirir. Bu .NET Framework sürümlerinin her ikisi de artık Microsoft tarafından desteklenmemektedir.
+The [.NET Framework 4.0.3](https://www.microsoft.com/download/details.aspx?id=29053) is the latest supported .NET Framework version on Windows XP and Windows Server 2003. The .NET Framework 4.0.3 requires that the [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40) is installed first. Both of these .NET Framework versions are no longer supported by Microsoft.
 
 ## <a name="net-framework-4"></a>.NET Framework 4
 
-Windows XP 'de [.NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) ' ü yükleyebilirsiniz. Artık Microsoft tarafından desteklenmemektedir.
+You can install the [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40) on Windows XP. It's no longer supported by Microsoft.
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
-Windows XP 'de [3,5 .NET Framework](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) yükleyebilirsiniz.
+You can install the [.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) on Windows XP.
 
-.NET Framework 3,5 3,5 ile .NET Framework 1,0 için oluşturulan uygulamaları çalıştırmak için kullanılabilir.
+The .NET Framework 3.5 can be used to run applications built for .NET Framework 1.0 through 3.5.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework indirin](https://dotnet.microsoft.com/download)
+- [Download the .NET Framework](https://dotnet.microsoft.com/download)
 - [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](troubleshoot-blocked-installations-and-uninstallations.md)
-- [Geliştiriciler için .NET Framework yüklemesi](guide-for-developers.md)
+- [Install the .NET Framework for developers](guide-for-developers.md)

@@ -6,63 +6,63 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: a59e47e529a5002c806e37dba7267b2cf8318a35
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: cbae03c52f3cc39f7afd422a34b16e99a60d9f3a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912707"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283214"
 ---
 # <a name="endpoint-addresses"></a>Uç Noktası Adresleri
-Her uç nokta bulun ve uç noktayı tanımlamak için kullanılır, ilişkili bir adresi vardır. Bu adres, öncelikle bir Tekdüzen Kaynak Tanımlayıcısı (uç nokta konumu belirten URI), oluşur. Uç nokta adresini Windows Communication Foundation (WCF) programlama modeli tarafından temsil edilir <xref:System.ServiceModel.EndpointAddress> isteğe bağlı içeren sınıf <xref:System.ServiceModel.EndpointAddress.Identity%2A> bitiş noktası diğer uç noktalar tarafından kimlik doğrulaması sağlayan özelliği, Exchange, iletileri ve isteğe bağlı bir dizi <xref:System.ServiceModel.EndpointAddress.Headers%2A> hizmete erişmek için gereken diğer bir SOAP üstbilgileri tanımlayan özellikleri. İsteğe bağlı üst bilgiler ek sağlayın ve daha ayrıntılı tanımlamak veya hizmet uç noktası ile etkileşime geçmek için adresleme bilgi. Bir uç nokta adresini kablo bir WS-Addressing uç nokta başvurusu (EPR) temsil edilir.  
+Her uç nokta kendisiyle ilişkili bir adrese sahiptir ve uç noktayı bulmak ve tanımlamak için kullanılır. Bu adres, birincil olarak bitiş noktasının konumunu belirten bir Tekdüzen Kaynak tanımlayıcısı 'nı (URI) içerir. Uç nokta adresi Windows Communication Foundation (WCF) programlama <xref:System.ServiceModel.EndpointAddress> modelinde temsil edilir. Bu, ile ileti alışverişi yapan diğer uç noktalar tarafından uç noktanın kimlik doğrulamasını sağlayan isteğe bağlı bir <xref:System.ServiceModel.EndpointAddress.Identity%2A> özelliğini ve hizmete erişmek için gereken diğer SOAP üstbilgilerini tanımlayan bir isteğe bağlı <xref:System.ServiceModel.EndpointAddress.Headers%2A> özellikleri içerir. İsteğe bağlı üstbilgiler, hizmet uç noktasını tanımlamak veya bunlarla etkileşim kurmak için ek ve daha ayrıntılı adresleme bilgileri sağlar. Bir uç noktanın adresi, bir WS-Addressing uç nokta başvurusu (EPR) olarak Tel göre temsil edilir.  
   
-## <a name="uri-structure-of-an-address"></a>URI bir adresinin yapısı  
- Çoğu taşımalar için URI adresi dört bölümden oluşur. Örneğin, dört bölümden URI'ın `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` aşağıda listelenen:  
+## <a name="uri-structure-of-an-address"></a>Bir adresin URI yapısı  
+ Çoğu taşımanın adres URI 'sinin dört bölümü vardır. Örneğin, URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` dört bölümü aşağıdaki gibi oluşturulabilir:  
   
-- Düzeni: `http:`
+- Düzen: `http:`
   
 - Makine: `www.fabrikam.com`  
   
-- (isteğe bağlı) Bağlantı noktası: 322  
+- seçim Bağlantı noktası: 322  
   
-- Yol: /mathservice.svc/secureEndpoint  
+- Yol:/mathservice.svc/secureEndpoint  
   
-## <a name="defining-an-address-for-a-service"></a>Bir hizmet için bir adres tanımlama  
- Bir hizmet için uç nokta adresi ya da kesin kod veya bildirimli olarak ile yapılandırma kullanılarak belirtilebilir. Bağlamalarında ve adreslerinde dağıtılan bir hizmette hizmet geliştirilen kullandığı olanlardan genellikle farklı olduğundan uç noktaları kodda tanımlama genellikle pratik değildir. Genel olarak, kod yerine yapılandırma kullanarak hizmet uç noktaları tanımlamak daha yararlı olur. Bağlama tutulması ve adresleme bilgilerini kodunun dışında yeniden derleyin veya uygulama yeniden dağıtmaya gerek kalmadan değiştirmek sağlar.  
+## <a name="defining-an-address-for-a-service"></a>Bir hizmet için adres tanımlama  
+ Bir hizmet için uç nokta adresi, kod kullanılarak veya bildirimli olarak yapılandırma yoluyla imperatively belirtilebilir. Dağıtılmış bir hizmetin bağlamaları ve adresleri genellikle hizmet geliştirildiğinde kullanılanlardan farklı olduğundan, koddaki uç noktaların tanımlanması genellikle pratik değildir. Genellikle, kod yerine yapılandırma kullanarak hizmet uç noktaları tanımlamak daha pratik bir yapılandırmadır. Bağlama ve adresleme bilgilerini koddan tutmanın, uygulamayı yeniden derlemek veya yeniden dağıtmak zorunda kalmadan değiştirilmesine izin verir.  
   
-### <a name="defining-an-address-in-configuration"></a>Yapılandırmada bir adresi tanımlama  
- Bir uç nokta yapılandırma dosyasında tanımlamak için [ \<uç noktası >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) öğesi. Ayrıntılar ve bir örnek için bkz. [bir uç nokta adresi belirtme](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+### <a name="defining-an-address-in-configuration"></a>Yapılandırmada bir adres tanımlama  
+ Bir yapılandırma dosyasında bir uç nokta tanımlamak için [\<uç noktası >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) öğesini kullanın. Ayrıntılar ve bir örnek için bkz. [bir uç nokta adresi belirtme](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
-### <a name="defining-an-address-in-code"></a>Kodda bir adresi tanımlama  
- Bir uç nokta adresi koduyla oluşturulabilir <xref:System.ServiceModel.EndpointAddress> sınıfı. Ayrıntılar ve bir örnek için bkz. [bir uç nokta adresi belirtme](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+### <a name="defining-an-address-in-code"></a>Kodda bir adres tanımlama  
+ <xref:System.ServiceModel.EndpointAddress> sınıfıyla kodda bir uç nokta adresi oluşturulabilir. Ayrıntılar ve bir örnek için bkz. [bir uç nokta adresi belirtme](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
-### <a name="endpoints-in-wsdl"></a>WSDL, uç noktaları  
- Bir uç nokta adresi de NWSDL içine bir WS-Addressing EPR öğesi içinde karşılık gelen uç noktanın temsil edilebilir `wsdl:port` öğesi. EPR uç noktanın adresini ve bunun yanı sıra herhangi bir adres özelliklerini içerir. Ayrıntılar ve bir örnek için bkz. [bir uç nokta adresi belirtme](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+### <a name="endpoints-in-wsdl"></a>WSDL 'deki uç noktalar  
+ Bir uç nokta adresi, WSDL 'de karşılık gelen uç noktanın `wsdl:port` öğesi içinde bir WS-Addressing EPR öğesi olarak da gösterilebilir. EPR, uç noktanın adresini ve tüm adres özelliklerini içerir. Ayrıntılar ve bir örnek için bkz. [bir uç nokta adresi belirtme](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
-## <a name="multiple-iis-binding-support-in-net-framework-35"></a>Birden fazla IIS desteği, .NET Framework 3.5 bağlama  
- Internet hizmet sağlayıcıları, genellikle site yoğunluğu ve daha düşük toplam sahip olma maliyeti artırmak için birçok uygulama aynı sunucu ve site üzerinde barındırın. Bu uygulamalar genellikle farklı temel adreslerine bağlıdır. Bir Internet Information Services (IIS) Web sitesi, birden çok uygulama içerebilir. Bir sitedeki uygulamaları bir veya daha fazla IIS bağlamaları erişilebilir.  
+## <a name="multiple-iis-binding-support-in-net-framework-35"></a>.NET Framework 3,5 ' de birden çok IIS bağlama desteği  
+ Internet hizmet sağlayıcıları genellikle, site yoğunluğunu artırmak ve toplam sahiplik maliyetini azaltmak için aynı sunucu ve sitede birçok uygulamayı barındırır. Bu uygulamalar genellikle farklı temel adreslere bağlanır. Internet Information Services (IIS) Web sitesi, birden çok uygulama içerebilir. Bir sitedeki uygulamalara bir veya daha fazla IIS bağlaması aracılığıyla erişilebilir.  
   
- IIS bağlamaları, iki bilgi parçasını sağlar: bir bağlama protokolü ve bağlama bilgileri. Bağlama Protokolü iletişim oluştuğu düzenini tanımlar ve bağlama bilgileri siteye erişmek için kullanılan bilgiler bunlardır.  
+ IIS bağlamaları iki bilgi parçasını sağlar: bağlama protokolü ve bağlama bilgileri. Bağlama protokolü, iletişimin gerçekleştiği düzeni tanımlar ve bağlama bilgileri siteye erişmek için kullanılan bilgiler.  
   
- Aşağıdaki örnek, bir IIS bağlaması içinde mevcut olabilecek bileşenleri gösterilmektedir:  
+ Aşağıdaki örnek, bir IIS bağlamasında bulunabilecek bileşenleri göstermektedir:  
   
 - Bağlama protokolü: HTTP  
   
 - Bağlama bilgileri: IP adresi, bağlantı noktası, ana bilgisayar üstbilgisi  
   
- IIS her şeması için birden çok taban adresi sonuçlanır her site için birden çok bağlamaları belirtebilirsiniz. Öncesinde [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF birden çok adresi için bir şema desteklemiyor ve belirtilmiş olması durumunda, oluşturdu bir <xref:System.ArgumentException> etkinleştirme sırasında.  
+ IIS her bir site için birden çok bağlama belirtebilir ve bu, her bir şema için birden çok temel adrese neden olur. .NET Framework 3,5 ' den önce, WCF bir şema için birden çok adresi desteklememiş ve belirtilmişse, etkinleştirme sırasında bir <xref:System.ArgumentException> oluşturdu.  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] Birden çok uygulama ile aynı sitede aynı düzeni için farklı temel adresler barındırmak Internet hizmet sağlayıcıları sağlar.  
+ .NET Framework 3,5, Internet servis sağlayıcılarının aynı sitede aynı düzen için farklı temel adreslere sahip birden çok uygulamayı barındırmalarını sağlar.  
   
- Örneğin, bir site aşağıdaki temel adresler içerebilir:  
+ Örneğin, bir site aşağıdaki temel adresleri içerebilir:  
   
 - `http://payroll.myorg.com/Service.svc`
   
 - `http://shipping.myorg.com/Service.svc`
   
- İle [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], AppDomain düzeyinde bir önek filtresi yapılandırma dosyasında belirtirsiniz. Bunu [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) önekleri listesini içeren öğe. IIS tarafından sağlanan gelen temel adresler, isteğe bağlı bir ön ek listesini göre filtrelenir. Öneki belirtilmediğinde, varsayılan olarak, tüm adresleri üzerinden geçirilir. Doğrudan geçiş yapılacak bu şema için yalnızca eşleşen temel adres ön eki sonuçları belirterek.  
+ .NET Framework 3,5 ile yapılandırma dosyasında AppDomain düzeyinde bir önek filtresi belirtirsiniz. Bunu, ön eklerin bir listesini içeren [\<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) öğesi ile yapabilirsiniz. IIS tarafından sağlanan gelen temel adresler, isteğe bağlı önek listesine göre filtrelenir. Varsayılan olarak, bir ön ek belirtilmediğinde tüm adresler geçirilir. Ön ek belirtildiğinde, bu düzenin geçirilmesi için yalnızca eşleşen temel adreste sonuç elde olur.  
   
- Önek filtreleri kullanan yapılandırma koduna ilişkin bir örnek verilmiştir.  
+ Aşağıda, ön ek filtrelerini kullanan yapılandırma kodu örneği verilmiştir.  
   
 ```xml  
 <system.serviceModel>  
@@ -75,16 +75,16 @@ Her uç nokta bulun ve uç noktayı tanımlamak için kullanılır, ilişkili bi
 </system.serviceModel>  
 ```  
   
- Önceki örnekte `net.tcp://payroll.myorg.com:8000` ve `http://shipping.myorg.com:8000` aracılığıyla geçirilir, kendi şemaları için yalnızca temel adresler.  
+ Yukarıdaki örnekte, `net.tcp://payroll.myorg.com:8000` ve `http://shipping.myorg.com:8000`, kendisine geçirilen kendi şemaları için tek temel adreslerdir.  
   
- `baseAddressPrefixFilter` Joker karakterleri desteklemiyor.  
+ `baseAddressPrefixFilter` joker karakterleri desteklemez.  
   
- IIS tarafından sağlanan temel adresler adresleri yok diğer düzenleri bağlı olabilir `baseAddressPrefixFilters` listesi. Bu adresleri filtrelenir değil.  
+ IIS tarafından sağlanan temel adresler, `baseAddressPrefixFilters` listesinde bulunmayan diğer şemalara bağlantılı adreslere sahip olabilir. Bu adresler filtrelenmez.  
   
-## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a>Birden fazla IIS bağlama desteği .NET Framework 4 ve üzeri  
- .NET 4'te başlayarak, IIS'de birden çok bağlamaları desteğini ayarlayarak tek bir temel adresi seçmek zorunda kalmadan etkinleştirebilirsiniz <xref:System.ServiceModel.ServiceHostingEnvironment>'s <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> ayarı TRUE. Bu destek, HTTP protokol şemaları için sınırlıdır.  
+## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a>.NET Framework 4 ve üzeri sürümlerde birden çok IIS bağlama desteği  
+ .NET 4 ' te başlayarak, tek bir temel adres seçmek zorunda kalmadan IIS 'de birden çok bağlama desteğini etkinleştirmek için <xref:System.ServiceModel.ServiceHostingEnvironment><xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> ayarını doğru olarak ayarlayabilirsiniz. Bu destek HTTP protokol şemaları ile sınırlıdır.  
   
- MultipleSiteBindingsEnabled kullanan yapılandırma koduna ilişkin bir örnek verilmiştir [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).  
+ Aşağıda, [\<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)Çoğulsitebindingsenabled kullanan yapılandırma kodu örneği verilmiştir.  
   
 ```xml  
 <system.serviceModel>  
@@ -93,49 +93,49 @@ Her uç nokta bulun ve uç noktayı tanımlamak için kullanılır, ilişkili bi
 </system.serviceModel>  
 ```  
   
- Bu ayar kullanılarak birden çok site bağlamaları etkinleştirildiğinde baseAddressPrefixFilters ayarları, hem HTTP hem de HTTP olmayan protokolleri için göz ardı edilir.  
+ Bu ayar kullanılarak birden çok site bağlaması etkinleştirildiğinde, hem HTTP hem de HTTP olmayan protokoller için herhangi bir baseAddressPrefixFilters ayarı yok sayılır.  
   
- Ayrıntılar ve örnekler için bkz. [birden fazla IIS Site bağlamasını destekleme](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) ve <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
+ Ayrıntılar ve örnekler için bkz. [birden fazla IIS site bağlamasını destekleme](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) ve <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
   
-## <a name="extending-addressing-in-wcf-services"></a>WCF hizmetlerinde adresleme genişletme  
- WCF hizmetleri modeli ele alan varsayılan uç nokta adresini URI aşağıdaki amaçlarla kullanır:  
+## <a name="extending-addressing-in-wcf-services"></a>WCF Hizmetlerinde adresleme 'yi genişletme  
+ WCF hizmetlerinin varsayılan adresleme modeli, aşağıdaki amaçlar için uç nokta adresi URI 'sini kullanır:  
   
-- Uç nokta için iletileri dinleyen konum hizmeti dinleme adresini belirtmek için  
+- Hizmet dinleme adresini belirtmek için uç noktanın iletileri dinlediği konum,  
   
-- SOAP adresi filtresi belirtmek için bir uç nokta adresi SOAP üst bilgi olarak bekler.  
+- SOAP adres filtresini belirtmek için, bir uç noktanın bir SOAP üst bilgisi beklediği adres.  
   
- Değerlerin her biri bu amaçlar için ayrı ayrı yararlı senaryoları kapsıyor adresleme birkaç uzantılarına olanak veren belirtilebilir:  
+ Bu amaçların her biri için değerler ayrı olarak belirlenebilir ve yararlı senaryolar kapsayan çeşitli adresleme uzantılarına izin verir:  
   
-- SOAP aracıları: bir istemci tarafından gönderilen bir iletinin son hedefine erişmeden önce iletiyi işleyen bir veya daha fazla ek hizmetler erişir. SOAP aracıları, önbelleğe alma, yönlendirme, Yük Dengeleme veya şema doğrulama iletilerinde gibi çeşitli görevler gerçekleştirebilirsiniz. Bu senaryo için ayrı bir fiziksel adresi iletiler göndererek gerçekleştirilir (`via`) aracı yerine yalnızca bir mantıksal adresine hedefleyen (`wsa:To`) ultimate hedef hedefleyen.  
+- SOAP aracıları: istemci tarafından gönderilen bir ileti, son hedefine ulaşmadan önce iletiyi işleyen bir veya daha fazla ek hizmetten geçer. SOAP aracıları, iletilerde önbelleğe alma, yönlendirme, Yük Dengeleme veya şema doğrulama gibi çeşitli görevleri gerçekleştirebilir. Bu senaryo, yalnızca nihai hedefi hedefleyen mantıksal bir adrese (`wsa:To`) değil, aracı hedefleyen ayrı bir fiziksel adrese (`via`) ileti gönderilerek gerçekleştirilir.  
   
-- Dinleme bitiş noktasının adresini özel bir URI ve farklı bir değere ayarlamak, `listenURI` özelliği.  
+- Uç noktanın dinleme adresi özel bir URI 'dir ve `listenURI` özelliğinden farklı bir değere ayarlanır.  
   
- Taşıma adres `via` olduğu bir ileti başlangıçta göndermesi gereken diğer bir uzak adres çekmek konumu tarafından belirtilen belirtir `to` parametresi hizmet olduğu yer. Çoğu Internet senaryoda `via` URI aynıdır <xref:System.ServiceModel.EndpointAddress.Uri%2A> son özelliği `to` hizmetinin adresini. Yalnızca el ile yönlendirme yapmanız gerekir, bu iki adreslerini birbirinden ayırt edecek.  
+ `via` belirttiği Aktarım adresi, bir iletinin başlangıçta hizmetin bulunduğu `to` parametresi tarafından belirtilen başka bir uzak adresle aynı şekilde gönderilmesi gerektiği konumdur. Çoğu Internet senaryosunda `via` URI, hizmetin son `to` adresinin <xref:System.ServiceModel.EndpointAddress.Uri%2A> özelliğiyle aynıdır. El ile yönlendirme yapmanız gerektiğinde, bu iki adres arasında ayrım yapmanız gerekir.  
   
-### <a name="addressing-headers"></a>Adres üstbilgileri  
- Bir uç nokta temel URI'sini ek olarak bir veya daha fazla SOAP üstbilgileri çözülebilir. Bu faydalı olduğu senaryolar bir kümesi, burada aracıların hedeflenen SOAP başlıkları da eklediğinizden istemcilerin bu uç noktanın bir uç nokta gerektiriyor SOAP Ara senaryoları kümesidir.  
+### <a name="addressing-headers"></a>Adresleme üstbilgileri  
+ Bir uç nokta, temel URI 'sine ek olarak bir veya daha fazla SOAP üst bilgisi tarafından çözülebilir. Bu çok sayıda senaryo kümesi, bir uç noktanın, bu uç noktanın istemcilerine, aracıların hedeflediği SOAP üstbilgilerini içermesini gerektiren bir dizi SOAP aracı senaryolarından biridir.  
   
- Özel adres üstbilgileri iki yolla tanımlayabilirsiniz — kod veya yapılandırma kullanarak:  
+ Özel adres üstbilgilerini, kod ya da yapılandırma kullanarak iki şekilde tanımlayabilirsiniz:  
   
-- Kullanarak kod içinde özel adres üstbilgileri oluşturma <xref:System.ServiceModel.Channels.AddressHeader> sınıfı ve ardından oluşumunu kullanılan bir <xref:System.ServiceModel.EndpointAddress>.  
+- Kod içinde, <xref:System.ServiceModel.Channels.AddressHeader> sınıfını kullanarak özel adres üstbilgileri oluşturun ve sonra bir <xref:System.ServiceModel.EndpointAddress>yapıta kullanılır.  
   
-- Özel bir yapılandırmada [ \<üstbilgileri >](../../configure-apps/file-schema/wcf/headers.md) altı olarak belirtilen [ \<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) öğesi.  
+- Yapılandırmada, özel [\<üstbilgileri >](../../configure-apps/file-schema/wcf/headers.md) [\<uç nokta >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) öğesinin alt öğesi olarak belirtilir.  
   
- Dağıtımdan sonra üstbilgileri değiştirmenize izin verdiğinden, yapılandırma kod, genellikle tercih edilir.  
+ Yapılandırma genellikle kod için tercih edilir, çünkü dağıtımdan sonra üst bilgileri değiştirmenizi sağlar.  
   
 ### <a name="custom-listening-addresses"></a>Özel dinleme adresleri  
- Dinleme adresi uç noktasının URI'sini farklı bir değere ayarlayabilirsiniz. Uç nokta aslında burada dinler adresi bir özel ağ adresi bilgileriyse sağlamak SOAP adresi, aracı, genel bir SOAP olduğu Ara senaryolarda kullanışlıdır.  
+ Dinleme adresini bitiş noktasının URI 'sinden farklı bir değere ayarlayabilirsiniz. Bu, genel bir SOAP aracısıyla gösterilen ve uç noktanın gerçekten dinlediği adresin özel bir ağ adresi olduğu bir genel SOAP aracı olan ara senaryolarda yararlıdır.  
   
- Kod veya yapılandırma kullanarak özel bir dinleme adresi belirtebilirsiniz:  
+ Kod ya da yapılandırma kullanarak özel bir dinleme adresi belirtebilirsiniz:  
   
-- Kod içinde ekleyerek bir özel dinleme adresi belirtin. bir <xref:System.ServiceModel.Description.ClientViaBehavior> uç noktanın davranışı koleksiyon sınıfı.  
+- Kod içinde, uç noktanın davranış koleksiyonuna bir <xref:System.ServiceModel.Description.ClientViaBehavior> sınıfı ekleyerek özel bir dinleme adresi belirtin.  
   
-- Yapılandırması, bir özel dinleme adresiyle belirtin `ListenUri` hizmetinin özniteliği [ \<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-element.md) öğesi.  
+- Yapılandırma bölümünde, hizmet [\<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-element.md) öğesinin `ListenUri` özniteliğiyle özel bir dinleme adresi belirtin.  
   
 ### <a name="custom-soap-address-filter"></a>Özel SOAP adresi filtresi  
- <xref:System.ServiceModel.EndpointAddress.Uri%2A> Birlikte kullanılan <xref:System.ServiceModel.EndpointAddress.Headers%2A> uç noktanın SOAP adresi filtresi tanımlamak için özellik (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Varsayılan olarak, bu filtre gelen iletisine sahip olduğunu doğrular bir `To` uç noktayla eşleşen ileti üst bilgisi kullanıcının URI ve tüm gerekli uç nokta üstbilgileri iletide.  
+ <xref:System.ServiceModel.EndpointAddress.Uri%2A>, bir uç noktanın SOAP adresi filtresi (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>) tanımlamak için herhangi bir <xref:System.ServiceModel.EndpointAddress.Headers%2A> özelliği ile birlikte kullanılır. Bu filtre, varsayılan olarak, gelen bir iletinin bitiş noktasının URI 'siyle eşleşen bir `To` ileti üst bilgisi olduğunu ve tüm gerekli uç nokta üstbilgilerinin iletide bulunduğunu doğrular.  
   
- Bazı senaryolarda, bir uç nokta, temel alınan aktarımda ve yalnızca bunlar uygun gelen tüm iletileri alır. `To` başlığı. Kullanıcı bunu etkinleştirmek için kullanabilir <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> sınıfı.  
+ Bazı senaryolarda, bir uç nokta, yalnızca uygun `To` üstbilgisiyle değil, temel alınan aktarıma gelen tüm iletileri alır. Bunu etkinleştirmek için Kullanıcı <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> sınıfını kullanabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

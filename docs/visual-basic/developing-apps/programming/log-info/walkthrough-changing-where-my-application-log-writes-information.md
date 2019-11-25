@@ -1,44 +1,44 @@
 ---
-title: My. Application. log dosyası yazma bilgilerini değiştirme (Visual Basic)
+title: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: 358638d50e347334487665b950b33a045b6a39f9
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: bdee0a91360580b156c1734ef4c82139b18ce2b5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524415"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336732"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme (Visual Basic)
 
-Uygulamanızda oluşan olaylarla ilgili bilgileri günlüğe kaydetmek için `My.Application.Log` ve `My.Log` nesnelerini kullanabilirsiniz. Bu izlenecek yol, varsayılan ayarların nasıl geçersiz kılınacağını ve `Log` nesnesinin diğer günlük dinleyicilerine yazmasına neden olduğunu gösterir.
+You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application. This walkthrough shows how to override the default settings and cause the `Log` object to write to other log listeners.
 
 ## <a name="prerequisites"></a>Prerequisites
 
-@No__t_0 nesnesi, çeşitli günlük dinleyicilerine bilgi yazabilir. Yapılandırmaları değiştirmeden önce günlük dinleyicilerinin geçerli yapılandırmasını belirlemeniz gerekir. Daha fazla bilgi için bkz. [Izlenecek yol: My. Application. log bilgisinin nereden yazabileceğini belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
+The `Log` object can write information to several log listeners. You need to determine the current configuration of the log listeners before changing the configurations. For more information, see [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
 
-[Nasıl yapılır: bir metin dosyasına olay bilgilerini yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md) veya [nasıl yapılır: uygulama olay günlüğüne yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md).
+You may want to review [How to: Write Event Information to a Text File](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md) or [How to: Write to an Application Event Log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md).
 
-### <a name="to-add-listeners"></a>Dinleyicileri eklemek için
+### <a name="to-add-listeners"></a>To add listeners
 
-1. **Çözüm Gezgini** içinde App. config öğesine sağ tıklayın ve **Aç**' ı seçin.
+1. Right-click app.config in **Solution Explorer** and choose **Open**.
 
-     \- veya-
+     \- or -
 
-     App. config dosyası yoksa:
+     If there is no app.config file:
 
-    1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
+    1. On the **Project** menu, choose **Add New Item**.
 
-    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası**' nı seçin.
+    2. From the **Add New Item** dialog box, select **Application Configuration File**.
 
     3. **Ekle**'yi tıklatın.
 
-2. @No__t_3 bölümünde "DefaultSource" `name` özniteliğine sahip `<source>` bölümü altındaki `<listeners>` bölümünü bulun. @No__t_0 bölümü, üst düzey `<configuration>` bölümünde `<system.diagnostics>` bölümünde bulunur.
+2. Locate the `<listeners>` section, under the `<source>` section with the `name` attribute "DefaultSource", in the `<sources>` section. The `<sources>` section is in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
 
-3. Bu öğeleri bu `<listeners>` bölümüne ekleyin.
+3. Add these elements to that `<listeners>` section.
 
     ```xml
     <!-- Uncomment to connect the application file log. -->
@@ -53,11 +53,11 @@ Uygulamanızda oluşan olaylarla ilgili bilgileri günlüğe kaydetmek için `My
     <!-- <add name="Console" /> -->
     ```
 
-4. @No__t_0 iletileri almak istediğiniz günlük dinleyicilerinin açıklamasını kaldırın.
+4. Uncomment the log listeners that you want to receive `Log` messages.
 
-5. Üst düzey `<configuration>` bölümündeki `<system.diagnostics>` bölümünde `<sharedListeners>` bölümünü bulun.
+5. Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
 
-6. Bu öğeleri bu `<sharedListeners>` bölümüne ekleyin.
+6. Add these elements to that `<sharedListeners>` section.
 
     ```xml
     <add name="FileLog"
@@ -88,7 +88,7 @@ Uygulamanızda oluşan olaylarla ilgili bilgileri günlüğe kaydetmek için `My
          initializeData="true" />
     ```
 
-7. App. config dosyasının içeriği aşağıdaki XML 'e benzer olmalıdır:
+7. The content of the app.config file should be similar to the following XML:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -147,39 +147,39 @@ Uygulamanızda oluşan olaylarla ilgili bilgileri günlüğe kaydetmek için `My
     </configuration>
     ```
 
-### <a name="to-reconfigure-a-listener"></a>Bir dinleyiciyi yeniden yapılandırmak için
+### <a name="to-reconfigure-a-listener"></a>To reconfigure a listener
 
-1. @No__t_1 bölümünden dinleyicinin `<add>` öğesini bulun.
+1. Locate the listener's `<add>` element from the `<sharedListeners>` section.
 
-2. @No__t_0 özniteliği dinleyici türünün adını verir. Bu tür <xref:System.Diagnostics.TraceListener> sınıfından devralması gerekir. Doğru türün kullanıldığından emin olmak için kesin adlandırılmış tür adını kullanın. Daha fazla bilgi için, aşağıdaki "kesin adlandırılmış türe başvurmak Için" bölümüne bakın.
+2. The `type` attribute gives the name of the listener type. This type must inherit from the <xref:System.Diagnostics.TraceListener> class. Use the strongly named type name to ensure that the right type is used. For more information, see the "To reference a strongly named type" section below.
 
-     Kullanabileceğiniz bazı türler şunlardır:
+     Some types that you can use are:
 
-    - Bir dosya günlüğüne yazan <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> dinleyicisi.
+    - A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> listener, which writes to a file log.
 
-    - @No__t_1 parametresi tarafından belirtilen bilgisayar olay günlüğüne bilgi yazan <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> dinleyicisi.
+    - A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> listener, which writes information to the computer event log specified by the `initializeData` parameter.
 
-    - @No__t_0 ve <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> dinleyicileri `initializeData` parametresinde belirtilen dosyaya yazar.
+    - The <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> and <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> listeners, which write to the file specified in the `initializeData` parameter.
 
-    - Komut satırı konsoluna yazan <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> dinleyicisi.
+    - A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> listener, which writes to the command-line console.
 
-     Diğer günlük dinleyicisi türlerinin yazma bilgileri hakkında daha fazla bilgi için, bu türün belgelerine başvurun.
+     For information about where other types of log listeners write information, consult that type's documentation.
 
-3. Uygulama, log dinleyicisi nesnesini oluşturduğunda, `initializeData` özniteliğini Oluşturucu parametresi olarak geçirir. @No__t_0 özniteliğinin anlamı, izleme dinleyicisine bağlıdır.
+3. When the application creates the log-listener object, it passes the `initializeData` attribute as the constructor parameter. The meaning of the `initializeData` attribute depends on the trace listener.
 
-4. Günlük dinleyicisini oluşturduktan sonra uygulama, dinleyicinin özelliklerini ayarlar. Bu özellikler `<add>` öğesindeki diğer öznitelikler tarafından tanımlanır. Belirli bir dinleyicinin özellikleri hakkında daha fazla bilgi için, bu dinleyicinin türüne yönelik belgelere bakın.
+4. After creating the log listener, the application sets the listener's properties. These properties are defined by the other attributes in the `<add>` element. For more information on the properties for a particular listener, see the documentation for that listener's type.
 
-### <a name="to-reference-a-strongly-named-type"></a>Kesin adlandırılmış türe başvurmak için
+### <a name="to-reference-a-strongly-named-type"></a>To reference a strongly named type
 
-1. Doğru türün günlük dinleyiciniz için kullanıldığından emin olmak için tam tür adı ve kesin adlandırılmış derleme adını kullandığınızdan emin olun. Kesin adlandırılmış türün sözdizimi aşağıdaki gibidir:
+1. To ensure that the right type is used for your log listener, make sure to use the fully qualified type name and the strongly named assembly name. The syntax of a strongly named type is as follows:
 
-     \<*tür adı*>, \<*derleme adı*>, \<*sürüm numarası*>, \<*kültür*>, \<*tanımlayıcı ad* 0
+     \<*type name*>, \<*assembly name*>, \<*version number*>, \<*culture*>, \<*strong name*>
 
-2. Bu kod örneği, bu durumda "System. Diagnostics. FileLogTraceListener" tam türü için kesin adlandırılmış tür adının nasıl belirleneceğini göstermektedir.
+2. This code example shows how to determine the strongly named type name for a fully qualified type—"System.Diagnostics.FileLogTraceListener" in this case.
 
      [!code-vb[VbVbalrMyApplicationLog#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#15)]
 
-     Bu çıktı, yukarıdaki "dinleyicileri ekleme" yordamında olduğu gibi kesin adlandırılmış bir türe benzersiz olarak başvurmak için kullanılabilir.
+     This is the output, and it can be used to uniquely reference a strongly named type, as in the "To add listeners" procedure above.
 
      `Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`
 

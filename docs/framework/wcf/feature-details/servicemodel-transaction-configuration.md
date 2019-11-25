@@ -4,25 +4,25 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-ms.openlocfilehash: d5bb81c618e3b27df32763948dbe56c9b37995e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8c8c9ebff259ccd991768afb8cdf9925a66aad0
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747712"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141617"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel İşlem Yapılandırması
-Windows Communication Foundation (WCF) hizmeti için işlem yapılandırmak için üç öznitelikleri sağlar: `transactionFlow`, `transactionProtocol`, ve `transactionTimeout`.  
+Windows Communication Foundation (WCF), bir hizmetin işlemlerini yapılandırmak için üç öznitelik sağlar: `transactionFlow`, `transactionProtocol`ve `transactionTimeout`.  
   
-## <a name="configuring-transactionflow"></a>TransactionFlow yapılandırma  
- WCF sağlar içeren önceden tanımlanmış bağlamaları çoğu `transactionFlow` ve `transactionProtocol` öznitelikleri böylece bağlama gelen işlemleri belirli işlem akış protokolü kullanarak belirli bir uç nokta için kabul edecek şekilde yapılandırabilirsiniz. Ayrıca, kullanabileceğiniz `transactionFlow` öğesi ve kendi `transactionProtocol` kendi özel bağlama oluşturmak için öznitelik. Yapılandırma öğeleri ayarlama hakkında daha fazla bilgi için bkz. [ \<bağlama >](../../../../docs/framework/misc/binding.md) ve [WCF yapılandırma şeması](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
+## <a name="configuring-transactionflow"></a>TransactionFlow yapılandırılıyor  
+ Önceden tanımlanmış bağlamaları WCF, belirli bir işlem akış protokolünü kullanarak belirli bir uç nokta için gelen işlemleri kabul edecek şekilde yapılandırmak üzere `transactionFlow` ve `transactionProtocol` özniteliklerini içerir. Ayrıca, kendi özel bağlamalarınızı oluşturmak için `transactionFlow` öğesini ve `transactionProtocol` özniteliğini kullanabilirsiniz. Yapılandırma öğelerini ayarlama hakkında daha fazla bilgi için bkz. [\<bağlama >](../../configure-apps/file-schema/wcf/bindings.md) ve [WCF yapılandırma şeması](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
   
- `transactionFlow` Özniteliği, işlem akışı bağlamayı kullanan hizmet uç noktaları için etkin olup olmadığını belirtir.  
+ `transactionFlow` özniteliği, işlem akışının bağlamayı kullanan hizmet uç noktaları için etkin olup olmadığını belirtir.  
   
 ## <a name="configuring-transactionprotocol"></a>TransactionProtocol yapılandırma  
- `transactionProtocol` Özniteliği bağlamayı kullanan hizmet uç noktaları ile kullanılacak işlem protokolünü belirler.  
+ `transactionProtocol` özniteliği, bağlamayı kullanan hizmet uç noktaları ile kullanılacak işlem protokolünü belirtir.  
   
- Bir kullanım yanı sıra, işlem akışını desteklemek için belirtilen bağlama WS-AtomicTransaction Protokolü yapılandıran bir yapılandırma bölümünü örneği verilmiştir.  
+ Aşağıda, belirli bir bağlamayı işlem akışını destekleyecek şekilde yapılandıran bir yapılandırma bölümünün yanı sıra WS-AtomicTransaction protokolünü kullanın.  
   
 ```xml  
 <netNamedPipeBinding>  
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) hizmeti için işlem yapılandırmak içi
 ```  
   
 ## <a name="configuring-transactiontimeout"></a>TransactionTimeout yapılandırma  
- Yapılandırabileceğiniz `transactionTimeout` özniteliği için WCF hizmetinizi `behavior` yapılandırma dosyasının öğesi. Aşağıdaki kod, bunun nasıl yapılacağı gösterilmektedir.  
+ WCF hizmetiniz için `transactionTimeout` özniteliğini yapılandırma dosyasının `behavior` öğesinde yapılandırabilirsiniz. Aşağıdaki kod bunun nasıl yapılacağını göstermektedir.  
   
 ```xml  
 <configuration>  
@@ -54,15 +54,15 @@ Windows Communication Foundation (WCF) hizmeti için işlem yapılandırmak içi
 </configuration>  
 ```  
   
- `transactionTimeout` Özniteliği içinde yeni bir işlem hizmeti oluşturulan tamamlamalısınız süreyi belirtir. Olarak kullanılan <xref:System.Transactions.TransactionScope> yeni bir işlem oluşturur herhangi bir işlem için zaman aşımı ve <xref:System.ServiceModel.OperationBehaviorAttribute> uygulanan <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> özelliği `true`.  
+ `transactionTimeout` özniteliği, hizmette oluşturulan yeni bir işlemin tamamlanma süresini belirtir. Yeni bir işlem kuran tüm işlemler için <xref:System.Transactions.TransactionScope> zaman aşımı olarak kullanılır ve <xref:System.ServiceModel.OperationBehaviorAttribute> uygulanmışsa <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> özelliği `true`olarak ayarlanır.  
   
- Zaman aşımı süre oluşturma işleminin tamamlanması 1. Aşama için iki aşamalı tamamlama protokolü belirtir.  
+ Zaman aşımı, iki aşamalı işleme protokolünde işlem 1 ' in tamamlanmasına kadar işlemin oluşturulmasından geçen süreyi belirtir.  
   
- İçinde bu öznitelik ayarlanırsa bir `service` yapılandırma bölümü, en az bir yöntem ile ilgili hizmetin uygulanacağını <xref:System.ServiceModel.OperationBehaviorAttribute>, hangi <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> özelliği `true`.  
+ Bu öznitelik `service` yapılandırma bölümünde ayarlandıysa, karşılık gelen hizmetin <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> özelliğinin `true`olarak ayarlandığı en az bir yöntemi <xref:System.ServiceModel.OperationBehaviorAttribute>uygulamanız gerekir.  
   
- Kullanılan zaman aşımı değeri bu arasında daha küçük değer olduğunu unutmayın `transactionTimeout` yapılandırma ayarı ve tüm <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> özelliği.  
+ Kullanılan zaman aşımı değerinin bu `transactionTimeout` yapılandırma ayarı ve <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> özelliği arasındaki daha küçük bir değer olduğunu unutmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<bağlama >](../../../../docs/framework/misc/binding.md)
+- [bağlama > \<](../../configure-apps/file-schema/wcf/bindings.md)
 - [WCF Yapılandırma Şeması](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

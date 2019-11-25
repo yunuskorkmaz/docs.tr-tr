@@ -1,5 +1,5 @@
 ---
-title: Visual Basic'de Aritmetik İşleçler
+title: Aritmetik İşleçler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type safety
@@ -13,92 +13,92 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: a1854e35e32a31dbf531e6705a7968434dd02e44
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8ded8d7111bd37cf8762a202b728e814aa5a082b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593248"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352654"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic'de Aritmetik İşleçler
-Aritmetik işleçler değişmez değerleri, değişkenleri, diğer ifadeler, işlevi ve özellik çağrılarını ve sabitleri tarafından temsil edilen sayısal değerleri hesaplama ilgili alışık olduğunuz aritmetik işlemleri çoğunu gerçekleştirmek için kullanılır. Ayrıca aritmetik sınıflandırılmış işlenenden tek bit düzeyinde işlem ve bunların bit düzenleri sola veya sağa kaydırma bit kaydırma işleçleri şunlardır.  
+Arithmetic operators are used to perform many of the familiar arithmetic operations that involve the calculation of numeric values represented by literals, variables, other expressions, function and property calls, and constants. Also classified with arithmetic operators are the bit-shift operators, which act at the level of the individual bits of the operands and shift their bit patterns to the left or right.  
   
-## <a name="arithmetic-operations"></a>Aritmetik işlemler  
- İki değer ile birlikte bir ifadede ekleyebileceğiniz [+ işleci](../../../../visual-basic/language-reference/operators/addition-operator.md), ya da başka birinden çıkarma [-işleci (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), aşağıdaki örnekte de gösterildiği gibi.  
+## <a name="arithmetic-operations"></a>Arithmetic Operations  
+ You can add two values in an expression together with the [+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md), or subtract one from another with the [- Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), as the following example demonstrates.  
   
  [!code-vb[VbVbalrOperators#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#57)]  
   
- Değilleme de kullanır [-işleci (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), ancak yalnızca bir işlenen, aşağıdaki örnek gösterir.  
+ Negation also uses the [- Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), but with only one operand, as the following example demonstrates.  
   
  [!code-vb[VbVbalrOperators#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#58)]  
   
- Çarpma ve bölme kullanım [* işleci](../../../../visual-basic/language-reference/operators/multiplication-operator.md) ve [/ işleci (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), sırasıyla aşağıdaki örnekte de gösterildiği gibi.  
+ Multiplication and division use the [* Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md) and [/ Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), respectively, as the following example demonstrates.  
   
  [!code-vb[VbVbalrOperators#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#59)]  
   
- Üs kullanır [^ işleci](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), aşağıdaki örnekte de gösterildiği gibi.  
+ Exponentiation uses the [^ Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), as the following example demonstrates.  
   
  [!code-vb[VbVbalrOperators#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#60)]  
   
- Tamsayı bölme yazımının kullanarak [\ işleci (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md). Sayının tamsayı bölme döndürür, diğer bir deyişle, sayısını temsil eden tamsayı bölen bir hatırlatıcı göz önüne alarak olmadan bölünen bölebilirsiniz. Bölen hem de Tamsayı türünde olması gerekir (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, ve `ULong`) için bu işleci. Diğer tüm türlerin bir integral türe önce dönüştürülmelidir. Aşağıdaki örnek, Tamsayı bölme gösterir.  
+ Integer division is carried out using the [\ Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md). Integer division returns the quotient, that is, the integer that represents the number of times the divisor can divide into the dividend without consideration of any remainder. Both the divisor and the dividend must be integral types (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, and `ULong`) for this operator. All other types must be converted to an integral type first. The following example demonstrates integer division.  
   
  [!code-vb[VbVbalrOperators#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#61)]  
   
- Modulus aritmetik kullanarak gerçekleştirilir [Mod işleci](../../../../visual-basic/language-reference/operators/mod-operator.md). Bu işleç kalanı bölen bölünen bölme işleminden sayısı bir tamsayı döndürür. Bölen hem bölünen integral türleri ise, döndürülen değer tam sayı. Bölen ve bölünen kayan nokta türleri ise, döndürülen değer aynı zamanda kayan nokta. Aşağıdaki örnek, bu davranış gösterir.  
+ Modulus arithmetic is performed using the [Mod Operator](../../../../visual-basic/language-reference/operators/mod-operator.md). This operator returns the remainder after dividing the divisor into the dividend an integral number of times. If both divisor and dividend are integral types, the returned value is integral. If divisor and dividend are floating-point types, the returned value is also floating-point. The following example demonstrates this behavior.  
   
  [!code-vb[VbVbalrOperators#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#62)]  
   
  [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
-### <a name="attempted-division-by-zero"></a>Denenen sıfıra bölme  
- Sıfıra bölme, söz konusu veri türlerine bağlı olarak farklı sonuçlar sahiptir. İntegral bulunduğu (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), .NET Framework oluşturur bir <xref:System.DivideByZeroException> özel durum. Bölme işlemleri, `Decimal` veya `Single` veri türü, .NET Framework ayrıca oluşturur bir <xref:System.DivideByZeroException> özel durum.  
+### <a name="attempted-division-by-zero"></a>Attempted Division by Zero  
+ Division by zero has different results depending on the data types involved. In integral divisions (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), the .NET Framework throws a <xref:System.DivideByZeroException> exception. In division operations on the `Decimal` or `Single` data type, the .NET Framework also throws a <xref:System.DivideByZeroException> exception.  
   
- Kayan nokta bölümler ilgili olarak `Double` veri türü, hiçbir özel durum ve sonucu temsil eden sınıf üyesidir <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, veya <xref:System.Double.NegativeInfinity>bölünen bağlı olarak. Aşağıdaki tabloda özetlenmiştir bölmek çalışılırken çeşitli sonuçlarını bir `Double` sıfır değeri.  
+ In floating-point divisions involving the `Double` data type, no exception is thrown, and the result is the class member representing <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, or <xref:System.Double.NegativeInfinity>, depending on the dividend. The following table summarizes the various results of attempting to divide a `Double` value by zero.  
   
-|Bölünen veri türü|Bölen veri türü|Bölünen değer|Sonuç|  
+|Dividend data type|Divisor data type|Dividend value|Sonuç|  
 |---|---|---|---|  
-|`Double`|`Double`|0|<xref:System.Double.NaN> (matematiksel olarak tanımlanmış bir sayı değil)|  
+|`Double`|`Double`|0|<xref:System.Double.NaN> (not a mathematically defined number)|  
 |`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity>|  
 |`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity>|  
   
- Catch ne zaman bir <xref:System.DivideByZeroException> özel durum, bu işleme yardımcı olacak üyeleri kullanabilirsiniz. Örneğin, <xref:System.Exception.Message%2A> özelliği, özel durum için ileti metni içerir. Daha fazla bilgi için [deneyin... Catch... Finally deyimini](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ When you catch a <xref:System.DivideByZeroException> exception, you can use its members to help you handle it. For example, the <xref:System.Exception.Message%2A> property holds the message text for the exception. For more information, see [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
-## <a name="bit-shift-operations"></a>Bit kaydırma işleçlerini  
- Bit kaydırma işlemi bir bit desenine aritmetik kaydırma uygular. Sağ işlenen deseni kaydırmak için konum sayısına belirtirken deseni sol işlenende yer alır. Soldan sağa düzen kaydırma [>> işleci](../../../../visual-basic/language-reference/operators/right-shift-operator.md) veya sol [<< işleci](../../../../visual-basic/language-reference/operators/left-shift-operator.md).  
+## <a name="bit-shift-operations"></a>Bit-Shift Operations  
+ A bit-shift operation performs an arithmetic shift on a bit pattern. The pattern is contained in the operand on the left, while the operand on the right specifies the number of positions to shift the pattern. You can shift the pattern to the right with the [>> Operator](../../../../visual-basic/language-reference/operators/right-shift-operator.md) or to the left with the [<< Operator](../../../../visual-basic/language-reference/operators/left-shift-operator.md).  
   
- Desen işlenen veri türünde olmalıdır `SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, veya `ULong`. Kaydırma miktarı işlenen veri türünde olmalıdır `Integer` veya genişlemesi gerekir `Integer`.  
+ The data type of the pattern operand must be `SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`. The data type of the shift amount operand must be `Integer` or must widen to `Integer`.  
   
- Sonucu ucunu kaydırılacak bitlerin diğer sonunda yeniden girmesini yok anlamına gelir özelliği aritmetik kaydırmalar döngüsel, değildir. Bir kaydırma işleci boşaltılmış bit konumları gibi ayarlayın:  
+ Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. The bit positions vacated by a shift are set as follows:  
   
-- aritmetik sola kaydırma için 0  
+- 0 for an arithmetic left shift  
   
-- 0 için bir pozitif sayı aritmetik sağa kaydırma  
+- 0 for an arithmetic right shift of a positive number  
   
-- İmzasız veri türü aritmetik sağa kaydırma için 0 (`Byte`, `UShort`, `UInteger`, `ULong`)  
+- 0 for an arithmetic right shift of an unsigned data type (`Byte`, `UShort`, `UInteger`, `ULong`)  
   
-- aritmetik sağa kaydırma, negatif bir sayı 1 (`SByte`, `Short`, `Integer`, veya `Long`)  
+- 1 for an arithmetic right shift of a negative number (`SByte`, `Short`, `Integer`, or `Long`)  
   
- Aşağıdaki örnek kaydırır bir `Integer` sağa ve sola değeri.  
+ The following example shifts an `Integer` value both left and right.  
   
  [!code-vb[VbVbalrOperators#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#64)]  
   
- Aritmetik kaydırmalar hiçbir zaman taşması özel durumları oluşturur.  
+ Arithmetic shifts never generate overflow exceptions.  
   
-## <a name="bitwise-operations"></a>Bit düzeyinde işlemler  
- Mantıksal işleçler olan yanı sıra `Not`, `Or`, `And`, ve `Xor` de sayısal değerleri üzerinde kullanıldığında bit düzeyinde aritmetik işlemleri. Daha fazla bilgi için bkz: "Bit düzeyinde işlemler" [mantıksal ve bit düzeyinde işleçler Visual Basic'te](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md).  
+## <a name="bitwise-operations"></a>Bitwise Operations  
+ In addition to being logical operators, `Not`, `Or`, `And`, and `Xor` also perform bitwise arithmetic when used on numeric values. For more information, see "Bitwise Operations" in [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md).  
   
-## <a name="type-safety"></a>Tür güvenliği  
- İşlenenler, normalde aynı türde olmalıdır. Örneğin eklenmesiyle yapıyorsanız, bir `Integer` değişken, onu diğerine eklemeniz `Integer` değişkeni ve ata sonucu türünde bir değişkene `Integer` de.  
+## <a name="type-safety"></a>Type Safety  
+ Operands should normally be of the same type. For example, if you are doing addition with an `Integer` variable, you should add it to another `Integer` variable, and you should assign the result to a variable of type `Integer` as well.  
   
- Tek yönlü iyi tür kullanımı uyumlu olmak için kodlama yöntemi kullanmaktır [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md). Ayarlarsanız `Option Strict On`, Visual Basic otomatik olarak gerçekleştirir *tür kullanımı uyumlu* dönüşümler. Eklemeyi denerseniz, örneğin, bir `Integer` değişkenini bir `Double` değişkeni ve değer atayın bir `Double` değişken, işlem normalde, çünkü devam ettiği bir `Integer` değer dönüştürülebilir `Double` veri kaybı olmadan. Güvenli olmayan tür dönüştürme, diğer yandan, bir derleyici hatası ile neden `Option Strict On`. Eklemeyi denerseniz, örneğin, bir `Integer` değişkenini bir `Double` değişkeni ve değer atayın bir `Integer` değişken, bir derleyici hatası, çünkü sonuçları bir `Double` değişkeni örtük olarak dönüştürülemez yazın `Integer`.  
+ One way to ensure good type-safe coding practice is to use the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md). If you set `Option Strict On`, Visual Basic automatically performs *type-safe* conversions. For example, if you try to add an `Integer` variable to a `Double` variable and assign the value to a `Double` variable, the operation proceeds normally, because an `Integer` value can be converted to `Double` without loss of data. Type-unsafe conversions, on the other hand, cause a compiler error with `Option Strict On`. For example, if you try to add an `Integer` variable to a `Double` variable and assign the value to an `Integer` variable, a compiler error results, because a `Double` variable cannot be implicitly converted to type `Integer`.  
   
- Ayarlarsanız `Option Strict Off`, ancak beklenmeyen veri veya duyarlık kaybına neden olabilir, ancak Visual Basic, gerçekleşmesi örtük daraltma dönüştürmelerini tanır. Bu nedenle, kullandığınız olan öneririz `Option Strict On` üretim kodu yazarken. Daha fazla bilgi için [Widening ve daraltma dönüşümleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ If you set `Option Strict Off`, however, Visual Basic allows implicit narrowing conversions to take place, although they can result in the unexpected loss of data or precision. For this reason, we recommend that you use `Option Strict On` when writing production code. For more information, see [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Aritmetik İşleçler](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Bit Kaydırma İşleçleri](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
-- [Visual Basic'de Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Visual Basic'de birleştirme işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
-- [Visual Basic'de mantıksal ve bit düzeyinde işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [İşleçlerin Etkili Bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

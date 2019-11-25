@@ -1,5 +1,5 @@
 ---
-title: My. Request nesnesi (Visual Basic)
+title: My.Request Nesnesi
 ms.date: 07/20/2015
 f1_keywords:
 - My.MyWebExtension.Request
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - My.Request object
 ms.assetid: 93d5f0e2-6b60-4a2c-8652-d90216f6ad10
-ms.openlocfilehash: da17872acb839cdcdfa7f80c3f58f26dc25d0ab5
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 22329bc501c9bb75b1336dd5384ab5b23a98ac21
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567465"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350686"
 ---
 # <a name="myrequest-object"></a>My.Request Nesnesi
-İstenen sayfa için nesneyi alır. <xref:System.Web.HttpRequest>  
+Gets the <xref:System.Web.HttpRequest> object for the requested page.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `My.Request` Nesne, geçerli HTTP isteğiyle ilgili bilgiler içerir.  
+ The `My.Request` object contains information about the current HTTP request.  
   
- `My.Request` Nesne yalnızca ASP.NET uygulamaları için kullanılabilir.  
+ The `My.Request` object is available only for ASP.NET applications.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `My.Request` nesnesinden üstbilgi koleksiyonunu alır ve `My.Response` nesneyi ASP.NET sayfasına yazmak için kullanır.  
+ The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 4fcf01c9f65f2b1bd11462a6f7d61b3551f37b86
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 332a88530010197187ca3ea787e152b0c95a5514
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320658"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141589"
 ---
 # <a name="configuring-wcf-services"></a>WCF hizmetlerini yapılandırma
 
@@ -19,7 +19,7 @@ Hizmet sözleşmenizi tasarladıktan ve uyguladıktan sonra, hizmetinizi yapıla
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Basitleştirilmiş Yapılandırma](simplified-configuration.md)  
- @No__t-0 ' dan başlayarak WCF, WCF yapılandırma gereksinimlerini kolaylaştıran yeni bir varsayılan yapılandırma modeliyle gelir. Belirli bir hizmet için herhangi bir WCF yapılandırması sağlamazsanız, çalışma zamanı hizmetinizi otomatik olarak varsayılan uç noktalar, bağlamalar ve davranışlar ile yapılandırır.  
+ WCF, .NET Framework 4 ' te başlayarak WCF yapılandırma gereksinimlerini kolaylaştıran yeni bir varsayılan yapılandırma modeliyle gelir. Belirli bir hizmet için herhangi bir WCF yapılandırması sağlamazsanız, çalışma zamanı hizmetinizi otomatik olarak varsayılan uç noktalar, bağlamalar ve davranışlar ile yapılandırır.  
   
  [Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma](configuring-services-using-configuration-files.md)  
  Windows Communication Foundation (WCF) hizmeti, .NET Framework yapılandırma teknolojisi kullanılarak yapılandırılabilir. En yaygın olarak, XML öğeleri bir WCF hizmetini barındıran bir Internet Information Services (IIS) sitesi için Web. config dosyasına eklenir. Öğeler, bir makine temelinde, uç nokta adresleri (hizmetle iletişim kurmak için kullanılan gerçek adresler) gibi ayrıntıları değiştirmenize izin verir.  

@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Visual Basic'te kayıt defteri anahtarını silme"
+title: 'Nasıl Yapılır: Kayıt Defteri Anahtarını Silme'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.DeleteSetting
@@ -11,39 +11,42 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: 2e0c8990fcc55bc4208b1c23690ff748b7167002
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f38301a3a717a35b98e55804d6435d046bbbbab4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662765"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345647"
 ---
-# <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te kayıt defteri anahtarını silme
-<xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> Ve <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> yöntemleri, kayıt defteri anahtarlarını silmek için kullanılabilir.  
+# <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kayıt Defteri Anahtarını Silme
+
+The <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> and <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> methods can be used to delete registry keys.  
   
 ## <a name="procedure"></a>Yordam  
   
-#### <a name="to-delete-a-registry-key"></a>Bir kayıt defteri anahtarını silin  
+#### <a name="to-delete-a-registry-key"></a>To delete a registry key  
   
-- Kullanım `DeleteSubKey` yöntemi bir kayıt defteri anahtarını silin. Bu örnek, ' % s'anahtarı yazılım/TestApp CurrentUser kovanında siler. Bu, uygun dize olan kodda değişiklik veya bu kullanıcı tarafından sağlanan bilgileri kullanır.  
+- Use the `DeleteSubKey` method to delete a registry key. This example deletes the key Software/TestApp in the CurrentUser hive. You can change this in the code to the appropriate string, or have it rely on user-supplied information.  
   
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- `DeleteSubKey` Yöntem, anahtar/değer çifti mevcut değilse boş bir dize döndürür.  
+
+ The `DeleteSubKey` method returns an empty string if the key/value pair does not exist.  
   
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Anahtar adı `Nothing` (<xref:System.ArgumentNullException>).  
+- The name of the key is `Nothing` (<xref:System.ArgumentNullException>).  
   
-- Kullanıcının kayıt defteri anahtarları silme izni yok (<xref:System.Security.SecurityException>).  
+- The user does not have permissions to delete registry keys (<xref:System.Security.SecurityException>).  
   
-- Anahtar adı 255 karakter sınırını aşıyor (<xref:System.ArgumentException>).  
+- The key name exceeds the 255-character limit (<xref:System.ArgumentException>).  
   
-- Kayıt defteri anahtarı salt okunurdur (<xref:System.UnauthorizedAccessException>).  
+- The registry key is read-only (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Kayıt defteri çağrıları başarısız yeterli ya da çalışma zamanı izinler verilmezse (<xref:System.Security.Permissions.RegistryPermission>) veya kullanıcı oluşturma veya ayarlarına yazma için doğru erişim (ACL'ler tarafından belirlendiği şekilde) sahip değil. Örneğin, kod erişim güvenlik izni olan yerel bir uygulama işletim sistemi izniniz olmayabilir.  
+
+ Registry calls fail if either sufficient run-time permissions are not granted (<xref:System.Security.Permissions.RegistryPermission>) or if the user does not have the correct access (as determined by the ACLs) for creating or writing to settings. For example, a local application that has the code access security permission might not have operating system permission.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

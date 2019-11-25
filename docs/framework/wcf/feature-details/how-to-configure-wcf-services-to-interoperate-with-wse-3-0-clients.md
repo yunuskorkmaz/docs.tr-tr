@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: WCF Hizmetlerini WSE 3.0 İstemcileriyle Birlikte Çalışmak için Yapılandırma'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 0349c9ba76b3f240bf98daa0e095b415bc98a87c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bd9f2bec94ca45f76590f64366428a00edd5d6ea
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045932"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141750"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Nasıl yapılır: WCF Hizmetlerini WSE 3.0 İstemcileriyle Birlikte Çalışmak için Yapılandırma
 
@@ -19,13 +19,13 @@ Windows Communication Foundation (WCF) Hizmetleri, WCF Hizmetleri WS-Addressing 
 
     WS-Addressing belirtiminin Ağustos 2004 sürümünün ileti kodlama için kullanıldığını belirtmek için, özel bir bağlama oluşturulması gerekir.
 
-    1. Hizmetin yapılandırma [dosyasının \<bağlama >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) bir alt [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) ekleyin.
+    1. Hizmetin yapılandırma dosyasının [\<bağlamaları >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) için bir alt [\<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) ekleyin.
 
-    2. `name` CustomBinding > bir [ \<bağlama](../../../../docs/framework/misc/binding.md) [> ekleyip özniteliği ayarlayarak bağlama için bir ad belirtin. \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+    2. [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) ve `name` özniteliğini ayarlayarak [\<bağlama >](../../configure-apps/file-schema/wcf/bindings.md) ekleyerek bağlama için bir ad belirtin.
 
-    3. Bağlama > bir alt [ \<güvenlik](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) [> ekleyerek, wva3,0 ile uyumlu olan iletilerin güvenliğini sağlamak için kullanılan WS-Security belirtimlerinin bir kimlik doğrulama modunu ve sürümünü belirtin. \<](../../../../docs/framework/misc/binding.md)
+    3. [\<bağlama >](../../configure-apps/file-schema/wcf/bindings.md)bir alt [\<GÜVENLIK >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) ekleyerek wva3,0 ile uyumlu olan iletilerin güvenlIğInI sağlamak Için kullanılan WS-Security belirtimlerinin bir kimlik doğrulaması modunu ve sürümünü belirtin.
 
-        Kimlik doğrulama modunu ayarlamak için `authenticationMode` [ \<güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)özniteliğini ayarlayın. Bir kimlik doğrulama modu, WVA3,0 'de bir anahtar güvenlik onayı ile kabaca eşdeğerdir. Aşağıdaki tablo, WCF 'de kimlik doğrulama modlarını WSE3,0 'de anahtar güvenlik onayları ile eşler.
+        Kimlik doğrulama modunu ayarlamak için [\<güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)`authenticationMode` özniteliğini ayarlayın. Bir kimlik doğrulama modu, WVA3,0 'de bir anahtar güvenlik onayı ile kabaca eşdeğerdir. Aşağıdaki tablo, WCF 'de kimlik doğrulama modlarını WSE3,0 'de anahtar güvenlik onayları ile eşler.
 
         |WCF kimlik doğrulama modu|WVA3,0 anahtar güvenlik onayı|
         |-----------------------------|----------------------------------------|
@@ -36,24 +36,24 @@ Windows Communication Foundation (WCF) Hizmetleri, WCF Hizmetleri WS-Addressing 
         |<xref:System.ServiceModel.Configuration.AuthenticationMode.UserNameOverTransport>|`usernameOverTransportSecurity`|
         |<xref:System.ServiceModel.Configuration.AuthenticationMode.UserNameForCertificate>|`usernameForCertificateSecurity`|
 
-        \*`mutualCertificate10Security` Ve`mutualCertificate11Security` anahtar güvenlik onayları arasındaki başlıca farklardan biri, Wo 'un soap iletilerini güvenli hale getirmek için kullandığı WS-Security belirtiminin sürümüdür. İçin `mutualCertificate10Security`WS-Security 1,0 kullanılır, ancak için `mutualCertificate11Security`WS-Security 1,1 kullanılır. WCF için, WS-Security belirtiminin sürümü `messageSecurityVersion` [ \<güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)özniteliğinde belirtilir.
+        `mutualCertificate10Security` ve `mutualCertificate11Security` anahtar güvenlik onayları arasındaki birincil farklardan biri \*, Wo 'un SOAP iletilerini güvenli hale getirmek için kullandığı WS-Security belirtiminin sürümüdür. WS-Security 1,0 `mutualCertificate10Security`için `mutualCertificate11Security`için WS-Security 1,1 kullanılır. WCF için, WS-Security belirtiminin sürümü [\<güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)`messageSecurityVersion` özniteliğinde belirtilir.
 
-        SOAP iletilerini güvenli hale getirmek için kullanılan WS-Security belirtiminin sürümünü ayarlamak için `messageSecurityVersion` [ \<güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)özniteliğini ayarlayın. Wva3,0 ile birlikte çalışmak için `messageSecurityVersion` özniteliğinin değerini olarak <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10%2A>ayarlayın.
+        SOAP iletilerini güvenli hale getirmek için kullanılan WS-Security belirtiminin sürümünü ayarlamak için [\<güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)`messageSecurityVersion` özniteliğini ayarlayın. WVA3,0 ile birlikte çalışmak için `messageSecurityVersion` özniteliğinin değerini <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10%2A>olarak ayarlayın.
 
-    4. WS-Addressing belirtiminin 2004 Ağustos sürümünün WCF tarafından bir [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) ekleyerek ve `messageVersion` değerini değerine <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>ayarlayarak belirtin.
+    4. WS-Addressing belirtiminin 2004 Ağustos sürümünün WCF tarafından [\<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) ekleyerek ve `messageVersion` değerine <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>olarak ayarlandığını belirtin.
 
         > [!NOTE]
-        > SOAP 1,2 kullanırken `messageVersion` özniteliğini olarak <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>ayarlayın.
+        > SOAP 1,2 kullanırken `messageVersion` özniteliğini <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>olarak ayarlayın.
 
 2. Hizmetin özel bağlamayı kullandığını belirtin.
 
-    1. Endpoint > öğesinin `binding` özniteliğini olarak`customBinding`ayarlayın. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)
+    1. [\<endpoint >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) öğesinin `binding` özniteliğini `customBinding`olarak ayarlayın.
 
-    2. Endpoint > `bindingConfiguration` [öğesinin özniteliğini özel bağlama için bağlama > özniteliğinde \<](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) belirtilen [ \<değere ayarlayın](../../../../docs/framework/misc/binding.md) `name` .
+    2. [\<endpoint >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) öğesinin `bindingConfiguration` özniteliğini özel bağlamanın [\<Binding >](../../configure-apps/file-schema/wcf/bindings.md) `name` özniteliğinde belirtilen değere ayarlayın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği, `Service.HelloWorldService` wva3,0 istemcileriyle birlikte çalışmak için özel bir bağlama kullandığını belirtir. Özel bağlama, WS-Addressing 2004 Ağustos sürümünün ve WS-Security 1,1 belirtim kümesinin, değiştirilen iletileri kodlamak için kullanıldığını belirtir. İletiler, <xref:System.ServiceModel.Configuration.AuthenticationMode.AnonymousForCertificate> kimlik doğrulama modu kullanılarak güvenli hale getirilir.
+Aşağıdaki kod örneği, `Service.HelloWorldService` WVA3,0 istemcileriyle birlikte çalışmak için özel bir bağlama kullandığını belirtir. Özel bağlama, WS-Addressing 2004 Ağustos sürümünün ve WS-Security 1,1 belirtim kümesinin, değiştirilen iletileri kodlamak için kullanıldığını belirtir. İletilerin güvenliği <xref:System.ServiceModel.Configuration.AuthenticationMode.AnonymousForCertificate> kimlik doğrulama modu kullanılarak yapılır.
 
 ```xml
 <configuration>
@@ -94,4 +94,4 @@ Aşağıdaki kod örneği, `Service.HelloWorldService` wva3,0 istemcileriyle bir
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Sistem tarafından sağlanmış bağlamayı özelleştirme](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+- [Nasıl yapılır: Sistem Tarafından Sağlanan Bir Bağlamayı Özelleştirme](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)

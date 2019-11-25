@@ -1,5 +1,5 @@
 ---
-title: XML CDATA Değişmez Değeri (Visual Basic)
+title: XML CDATA Değişmez Değeri
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlLiteralCdata
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: 248f3cf31f686de3af2ea06012aa4a6d4f3f29fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 72e899e7bd30f2edf0e88207bb3b75bdf36fa11c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942913"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349429"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA Değişmez Değeri (Visual Basic)
-Bir <xref:System.Xml.Linq.XCData> nesneyi temsil eden sabit değer.  
+A literal representing an <xref:System.Xml.Linq.XCData> object.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,33 +26,33 @@ Bir <xref:System.Xml.Linq.XCData> nesneyi temsil eden sabit değer.
   
 ## <a name="parts"></a>Bölümler  
  `<![CDATA[`  
- Gerekli. XML CDATA bölümünün başlangıcını gösterir.  
+ Gerekli. Denotes the start of the XML CDATA section.  
   
  `content`  
- Gerekli. XML CDATA bölümünde görünecek metin içeriği.  
+ Gerekli. Text content to appear in the XML CDATA section.  
   
  `]]>`  
- Gerekli. Bölümün sonunu gösterir.  
+ Gerekli. Denotes the end of the section.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bir <xref:System.Xml.Linq.XCData> nesne.  
+ An <xref:System.Xml.Linq.XCData> object.  
   
 ## <a name="remarks"></a>Açıklamalar  
- XML CDATA kısımları, kendisini içeren XML ile birlikte dahil edilmelidir, ancak ayrıştırılmaz olması gereken ham metni içerir. Bir XML CDATA bölümü, herhangi bir metin içerebilir. Bu, ayrılmış XML karakterleri içerir. XML CDATA bölümü "]] >" dizisiyle biter. Bu, aşağıdaki noktaları gösterir:  
+ XML CDATA sections contain raw text that should be included, but not parsed, with the XML that contains it. A XML CDATA section can contain any text. This includes reserved XML characters. The XML CDATA section ends with the sequence "]]>". This implies the following points:  
   
-- Gömülü ifade sınırlayıcıları geçerli XML CDATA içeriği olduğundan, bir XML CDATA değişmez değerinde gömülü bir ifade kullanamazsınız.  
+- You cannot use an embedded expression in an XML CDATA literal because the embedded expression delimiters are valid XML CDATA content.  
   
-- "]] >" Değerini içeremediğinden `content` XML CDATA bölümleri iç içe geçirilemez.  
+- XML CDATA sections cannot be nested, because `content` cannot contain the value "]]>".  
   
- Bir değişkene bir XML CDATA sabit değeri atayabilir veya onu bir XML öğesi değişmez değerine dahil edebilirsiniz.  
+ You can assign an XML CDATA literal to a variable, or include it in an XML element literal.  
   
 > [!NOTE]
-> Bir XML sabit değeri birden fazla satıra yayılabilir, ancak satır devamlılık karakterlerini kullanmaz. Bu sayede bir XML belgesinden içerik kopyalayabilir ve doğrudan bir Visual Basic programına yapıştırabilirsiniz.  
+> An XML literal can span multiple lines but does not use line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
   
- Visual Basic derleyici, XML CDATA değişmez değerini <xref:System.Xml.Linq.XCData.%23ctor%2A> oluşturucuya bir çağrıya dönüştürür.  
+ The Visual Basic compiler converts the XML CDATA literal to a call to the <xref:System.Xml.Linq.XCData.%23ctor%2A> constructor.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, "Literal \<XML > etiketleri içerebilir" metnini içeren bir CDATA bölümü oluşturur.  
+ The following example creates a CDATA section that contains the text "Can contain literal \<XML> tags".  
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   
@@ -61,4 +61,4 @@ Bir <xref:System.Xml.Linq.XCData> nesneyi temsil eden sabit değer.
 - <xref:System.Xml.Linq.XCData>
 - [XML Öğesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
 - [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Creating XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

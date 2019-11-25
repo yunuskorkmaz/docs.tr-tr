@@ -1,5 +1,5 @@
 ---
-title: Devralma Temelleri (Visual Basic)
+title: Devralma Temelleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - derived classes [Visual Basic], inheritance
@@ -20,98 +20,98 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: 8a75b75ef9acb4c89f4c7d05f1410d4ca70e680b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 89fcf2a14d8938d536aa72628218242811baa1a2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582741"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350829"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Devralma Temelleri (Visual Basic)
 
-@No__t_0 deyimleri, bir *temel sınıf*olarak bilinen mevcut bir sınıfa göre *türetilmiş sınıf*olarak adlandırılan yeni bir sınıfı bildirmek için kullanılır. Türetilmiş sınıflar devralınır ve temel sınıfta tanımlanan özellikleri, yöntemleri, olayları, alanları ve sabitleri genişletebilir. Aşağıdaki bölümde, devralma için bazı kurallar ve sınıfların devralınması veya Devralındığı şekilde değiştirmek için kullanabileceğiniz değiştiriciler açıklanmaktadır:
+The `Inherits` statement is used to declare a new class, called a *derived class*, based on an existing class, known as a *base class*. Derived classes inherit, and can extend, the properties, methods, events, fields, and constants defined in the base class. The following section describes some of the rules for inheritance, and the modifiers you can use to change the way classes inherit or are inherited:
 
-- Varsayılan olarak, `NotInheritable` anahtar sözcüğüyle işaretlenmedikçe tüm sınıflar devralınabilir. Sınıflar, projenizdeki diğer sınıflardan veya projenizin başvurduğu diğer derlemelerin sınıflarından devralınabilir.
+- By default, all classes are inheritable unless marked with the `NotInheritable` keyword. Classes can inherit from other classes in your project or from classes in other assemblies that your project references.
 
-- Birden çok devralmaya izin veren dillerden farklı olarak Visual Basic sınıflarda yalnızca tekli devralmaya izin verir; diğer bir deyişle, türetilmiş sınıfların yalnızca bir taban sınıfı olabilir. Sınıflarda birden çok devralmaya izin verilmese de sınıflar, aynı uçları etkin bir şekilde gerçekleştirebilen birden çok arabirim uygulayabilir.
+- Unlike languages that allow multiple inheritance, Visual Basic allows only single inheritance in classes; that is, derived classes can have only one base class. Although multiple inheritance is not allowed in classes, classes can implement multiple interfaces, which can effectively accomplish the same ends.
 
-- Bir temel sınıfta kısıtlı öğelerin sunulmasını engellemek için, türetilmiş bir sınıfın erişim türü, taban sınıfına eşit veya daha kısıtlayıcı olmalıdır. Örneğin, bir `Public` sınıfı bir `Friend` veya `Private` sınıfı alamaz ve bir `Friend` sınıfı `Private` sınıfını alamaz.
+- To prevent exposing restricted items in a base class, the access type of a derived class must be equal to or more restrictive than its base class. For example, a `Public` class cannot inherit a `Friend` or a `Private` class, and a `Friend` class cannot inherit a `Private` class.
 
-## <a name="inheritance-modifiers"></a>Devralma değiştiricileri
+## <a name="inheritance-modifiers"></a>Inheritance Modifiers
 
-Visual Basic devralmayı desteklemek için aşağıdaki sınıf düzeyi deyimleri ve değiştiricilerini tanıtır:
+Visual Basic introduces the following class-level statements and modifiers to support inheritance:
 
-- `Inherits` ifade — temel sınıfı belirtir.
+- `Inherits` statement — Specifies the base class.
 
-- `NotInheritable` değiştirici — programcıların sınıfı temel sınıf olarak kullanmasını engeller.
+- `NotInheritable` modifier — Prevents programmers from using the class as a base class.
 
-- `MustInherit` değiştirici — sınıfın yalnızca temel sınıf olarak kullanılması amaçlandığını belirtir. @No__t_0 sınıflarının örnekleri doğrudan oluşturulamaz; yalnızca türetilmiş bir sınıfın temel sınıf örnekleri olarak oluşturulabilirler. ( C++ Ve C#gibi diğer programlama dilleri, bu tür bir sınıfı anlatmak için *soyut sınıf* terimini kullanır.)
+- `MustInherit` modifier — Specifies that the class is intended for use as a base class only. Instances of `MustInherit` classes cannot be created directly; they can only be created as base class instances of a derived class. (Other programming languages, such as C++ and C#, use the term *abstract class* to describe such a class.)
 
-## <a name="overriding-properties-and-methods-in-derived-classes"></a>Türetilmiş sınıflarda özellikleri ve yöntemleri geçersiz kılma
+## <a name="overriding-properties-and-methods-in-derived-classes"></a>Overriding Properties and Methods in Derived Classes
 
-Varsayılan olarak, türetilmiş bir sınıf, temel sınıfından özellikleri ve yöntemleri devralır. Devralınan bir özelliğin veya yöntemin türetilmiş sınıfta farklı davranması gerekiyorsa, *geçersiz kılınabilir*. Diğer bir deyişle, türetilmiş sınıfta yönteminin yeni bir uygulamasını tanımlayabilirsiniz. Özelliklerin ve yöntemlerin nasıl geçersiz kılınabileceğini denetlemek için aşağıdaki değiştiriciler kullanılır:
+By default, a derived class inherits properties and methods from its base class. If an inherited property or method has to behave differently in the derived class it can be *overridden*. That is, you can define a new implementation of the method in the derived class. The following modifiers are used to control how properties and methods are overridden:
 
-- `Overridable` — bir sınıftaki özelliğin veya yöntemin türetilmiş bir sınıfta geçersiz kılınmasına Izin verir.
+- `Overridable` — Allows a property or method in a class to be overridden in a derived class.
 
-- `Overrides` — temel sınıfta tanımlanan bir `Overridable` özelliğini veya yöntemini geçersiz kılar.
+- `Overrides` — Overrides an `Overridable` property or method defined in the base class.
 
-- `NotOverridable` — bir özelliğin veya yöntemin devralan bir sınıfta geçersiz kılınmasını önler. Varsayılan olarak, `Public` Yöntemler `NotOverridable`.
+- `NotOverridable` — Prevents a property or method from being overridden in an inheriting class. By default, `Public` methods are `NotOverridable`.
 
-- `MustOverride` — türetilmiş bir sınıfın özelliği veya yöntemi geçersiz kılmasını gerektirir. @No__t_0 anahtar sözcüğü kullanıldığında, yöntem tanımı yalnızca `Sub`, `Function` veya `Property` deyiminden oluşur. Başka hiçbir deyime izin verilmez ve özellikle `End Sub` veya `End Function` deyimi yoktur. `MustOverride` Yöntemler `MustInherit` sınıflarında bildirilmelidir.
+- `MustOverride` — Requires that a derived class override the property or method. When the `MustOverride` keyword is used, the method definition consists of just the `Sub`, `Function`, or `Property` statement. No other statements are allowed, and specifically there is no `End Sub` or `End Function` statement. `MustOverride` methods must be declared in `MustInherit` classes.
 
-Bordroları işlemek için sınıflar tanımlamak istediğinizi varsayalım. Tipik bir hafta için bordroları hesaplayan bir `RunPayroll` yöntemi içeren genel bir `Payroll` sınıfı tanımlayabilirsiniz. Daha sonra `Payroll`, çalışan primi dağıtılırken kullanılabilecek daha özelleştirilmiş bir `BonusPayroll` sınıfı için temel sınıf olarak kullanabilirsiniz.
+Suppose you want to define classes to handle payroll. You could define a generic `Payroll` class that contains a `RunPayroll` method that calculates payroll for a typical week. You could then use `Payroll` as a base class for a more specialized `BonusPayroll` class, which could be used when distributing employee bonuses.
 
-@No__t_0 sınıfı, temel `Payroll` sınıfında tanımlanan `PayEmployee` yöntemini alabilir ve geçersiz kılabilir.
+The `BonusPayroll` class can inherit, and override, the `PayEmployee` method defined in the base `Payroll` class.
 
-Aşağıdaki örnek, `PayEmployee` devralınmış bir yöntemi geçersiz kılan `BonusPayroll` bir temel sınıf, `Payroll,` ve türetilmiş bir sınıf tanımlar. Bir yordam `RunPayroll`, bir `Payroll` nesnesini ve `BonusPayroll` nesnesini oluşturup her iki nesnenin `PayEmployee` yöntemini yürüten `Pay` bir işleve geçirir.
+The following example defines a base class, `Payroll,` and a derived class, `BonusPayroll`, which overrides an inherited method, `PayEmployee`. A procedure, `RunPayroll`, creates and then passes a `Payroll` object and a `BonusPayroll` object to a function, `Pay`, that executes the `PayEmployee` method of both objects.
 
 [!code-vb[VbVbalrOOP#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#28)]
 
-## <a name="the-mybase-keyword"></a>MyBase anahtar sözcüğü
+## <a name="the-mybase-keyword"></a>The MyBase Keyword
 
-@No__t_0 anahtar sözcüğü, sınıfın geçerli örneğinin temel sınıfına başvuran bir nesne değişkeni gibi davranır. `MyBase`, türetilmiş bir sınıfta geçersiz kılınan veya gölgeli temel sınıf üyelerine erişmek için kullanılır. Özellikle, bir temel sınıf oluşturucusunu türetilmiş sınıf oluşturucusundan açıkça çağırmak için `MyBase.New` kullanılır.
+The `MyBase` keyword behaves like an object variable that refers to the base class of the current instance of a class. `MyBase` is frequently used to access base class members that are overridden or shadowed in a derived class. In particular, `MyBase.New` is used to explicitly call a base class constructor from a derived class constructor.
 
-Örneğin, temel sınıftan devralınan bir yöntemi geçersiz kılan türetilmiş bir sınıf tasarlamakta olduğunuzu varsayalım. Geçersiz kılınan yöntem, temel sınıfta yöntemi çağırabilir ve döndürülen değeri aşağıdaki kod parçasında gösterildiği gibi değiştirebilir:
+For example, suppose you are designing a derived class that overrides a method inherited from the base class. The overridden method can call the method in the base class and modify the return value as shown in the following code fragment:
 
 [!code-vb[VbVbalrOOP#109](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#109)]
 
-Aşağıdaki listede `MyBase` kullanımı için kısıtlamalar açıklanmaktadır:
+The following list describes restrictions on using `MyBase`:
 
-- `MyBase`, anlık temel sınıfa ve devralınan üyelerine başvurur. Sınıftaki `Private` üyelere erişmek için kullanılamaz.
+- `MyBase` refers to the immediate base class and its inherited members. It cannot be used to access `Private` members in the class.
 
-- `MyBase` gerçek bir nesne değil, anahtar sözcüktür. `MyBase` bir değişkene atanamaz, yordamlara geçirilemez veya `Is` karşılaştırmayla kullanılamıyor.
+- `MyBase` is a keyword, not a real object. `MyBase` cannot be assigned to a variable, passed to procedures, or used in an `Is` comparison.
 
-- @No__t_0 niteleyen yöntemin, anlık temel sınıfta tanımlanması gerekmez; Bunun yerine, dolaylı olarak devralınan bir temel sınıfta tanımlanabilir. @No__t_0 uygun bir başvurunun doğru derlenmesi için, bazı temel sınıflar, çağrıda görünen ad ve parametre türleriyle eşleşen bir yöntem içermelidir.
+- The method that `MyBase` qualifies does not have to be defined in the immediate base class; it may instead be defined in an indirectly inherited base class. In order for a reference qualified by `MyBase` to compile correctly, some base class must contain a method matching the name and types of parameters that appear in the call.
 
-- @No__t_1 temel sınıf yöntemlerini çağırmak için `MyBase` kullanamazsınız.
+- You cannot use `MyBase` to call `MustOverride` base class methods.
 
-- `MyBase` kendisini nitelemek için kullanılamaz. Bu nedenle, aşağıdaki kod geçerli değildir:
+- `MyBase` cannot be used to qualify itself. Therefore, the following code is not valid:
 
   `MyBase.MyBase.BtnOK_Click()`
 
-- `MyBase` modüllerde kullanılamaz.
+- `MyBase` cannot be used in modules.
 
-- `MyBase`, temel sınıf farklı bir derlemese `Friend` olarak işaretlenen temel sınıf üyelerine erişmek için kullanılamaz.
+- `MyBase` cannot be used to access base class members that are marked as `Friend` if the base class is in a different assembly.
 
-Daha fazla bilgi ve diğer bir örnek için bkz. [nasıl yapılır: türetilmiş bir sınıf tarafından gizlenen bir değişkene erişme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).
+For more information and another example, see [How to: Access a Variable Hidden by a Derived Class](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).
 
-## <a name="the-myclass-keyword"></a>MyClass anahtar sözcüğü
+## <a name="the-myclass-keyword"></a>The MyClass Keyword
 
-@No__t_0 anahtar sözcüğü, başlangıçta uygulanmış olan bir sınıfın geçerli örneğine başvuran bir nesne değişkeni gibi davranır. `MyClass` benzer `Me`, ancak `MyClass` her yöntem ve özellik çağrısı, yöntem veya özellik [NotOverridable](../../../../visual-basic/language-reference/modifiers/notoverridable.md)gibi değerlendirilir. Bu nedenle, yöntem veya özellik türetilmiş bir sınıfta geçersiz kılınmadan etkilenmez.
+The `MyClass` keyword behaves like an object variable that refers to the current instance of a class as originally implemented. `MyClass` resembles `Me`, but every method and property call on `MyClass` is treated as if the method or property were [NotOverridable](../../../../visual-basic/language-reference/modifiers/notoverridable.md). Therefore, the method or property is not affected by overriding in a derived class.
 
-- `MyClass` gerçek bir nesne değil, anahtar sözcüktür. `MyClass` bir değişkene atanamaz, yordamlara geçirilemez veya `Is` karşılaştırmayla kullanılamıyor.
+- `MyClass` is a keyword, not a real object. `MyClass` cannot be assigned to a variable, passed to procedures, or used in an `Is` comparison.
 
-- `MyClass`, kapsayan sınıfa ve devralınan üyelerine başvurur.
+- `MyClass` refers to the containing class and its inherited members.
 
-- `MyClass`, `Shared` üyeleri için bir niteleyici olarak kullanılabilir.
+- `MyClass` can be used as a qualifier for `Shared` members.
 
-- `MyClass`, bir `Shared` yöntemi içinde kullanılamaz, ancak bir sınıfın paylaşılan üyesine erişmek için bir örnek yöntemi içinde kullanılabilir.
+- `MyClass` cannot be used inside a `Shared` method, but can be used inside an instance method to access a shared member of a class.
 
-- `MyClass` standart modüllerde kullanılamaz.
+- `MyClass` cannot be used in standard modules.
 
-- `MyClass`, temel sınıfta tanımlanan ve bu sınıfta sağlanmış yöntemin uygulanması olmayan bir yöntemi nitelemek için kullanılabilir. Bu tür bir başvuru, `MyBase.`*yöntemiyle*aynı anlama sahiptir.
+- `MyClass` can be used to qualify a method that is defined in a base class and that has no implementation of the method provided in that class. Such a reference has the same meaning as `MyBase.`*Method*.
 
-Aşağıdaki örnek `Me` ve `MyClass` karşılaştırır.
+The following example compares `Me` and `MyClass`.
 
 ```vb
 Class baseClass
@@ -145,7 +145,7 @@ Class testClasses
 End Class
 ```
 
-@No__t_0 `testMethod` geçersiz kılsa bile, `useMyClass` içindeki `MyClass` anahtar sözcüğü geçersiz kılma etkilerini artırır ve derleyici, `testMethod` temel sınıf sürümüne çağrıyı çözer.
+Even though `derivedClass` overrides `testMethod`, the `MyClass` keyword in `useMyClass` nullifies the effects of overriding, and the compiler resolves the call to the base class version of `testMethod`.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

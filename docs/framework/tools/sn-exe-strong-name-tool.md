@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: dc9b8beafe1b174543afaf9da7e7180638d561ff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90cad6529b3ac2a8afedaca0c43d5c7561dcf9e6
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104351"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138970"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Tanımlayıcı Ad Aracı)
 Tanımlayıcı ad Aracı (sn. exe), derlemelerin [güçlü adlarla](../../standard/assembly/strong-named.md)imzalanmanıza yardımcı olur. Sn.exe; temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.  
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |`-o infile [outfile]`|*Indosyadan* ortak anahtarı ayıklar ve bir. csv dosyasında depolar. Ortak anahtarın her baytı virgülle ayrılır. Bu biçim, kaynak kodunda başlatılmış diziler olarak anahtarlara ilişkin sabit kodlama başvuruları için yararlıdır. Bir *çıkışdosyası*belirtmezseniz, bu seçenek çıktıyı panoya yerleştirir. **Note:**  Bu seçenek, girişin yalnızca bir ortak anahtar olduğunu doğrulamaz. `infile` özel anahtara sahip bir anahtar çifti içeriyorsa, özel anahtar de ayıklanır.|  
 |`-p infile outfile [hashalg]`|Ortak anahtarı *InFile* içindeki anahtar çiftinden ayıklar ve isteğe bağlı olarak *HashAlg*tarafından belirtilen RSA algoritmasını kullanarak bu dosyayı *çıkışdosyası*içinde depolar. Bu ortak anahtar, derleme [Bağlayıcısı (al. exe)](al-exe-assembly-linker.md)için **/delaysign +** ve **/keyfile** seçeneklerini kullanarak bir derlemeyi gecikmeli imzalamak için kullanılabilir. Derleme gecikmeli imzalanmış olduğunda, yalnızca ortak anahtar derleme zamanında ayarlanır ve özel anahtarı bulunduğunda, daha sonra eklenecek bir imza için dosyada alan ayrılır.|  
 |`-pc container outfile [hashalg]`|*Kapsayıcıda* anahtar çiftinden ortak anahtarı ayıklar ve *çıkışdosyası*içinde depolar. *HashAlg* seçeneğini KULLANıRSANıZ, RSA algoritması ortak anahtarı ayıklamak için kullanılır.|  
-|`-Pb [y &#124; n]`|Tanımlayıcı ad atlama ilkesinin uygulatılıp uygulatılmayacağı belirtir. *Y*belirtirseniz, tam güvenle derlemeler için tanımlayıcı adlar, tam güven <xref:System.AppDomain>yüklendiğinde doğrulanmaz. *N*belirtirseniz, tanımlayıcı adlar doğruluk için onaylanır, ancak belirli bir tanımlayıcı ad için desteklenmez. <xref:System.Security.Permissions.StrongNameIdentityPermission> tam güvenle derlemeler üzerinde hiçbir etkisi yoktur. Bir tanımlayıcı ad eşleştirmesi için kendi denetiminizi gerçekleştirmeniz gerekir.<br /><br /> Ne `y` ne de `n` belirtilmemişse, bu seçenek geçerli ayarı görüntüler. Varsayılan, `y` değeridir. **Note:**  64 bit bilgisayarlarda, bu parametreyi hem 32 bit hem de sn. exe ' nin 64 bit örneklerinde ayarlamanız gerekir.|  
+|`-Pb [y|n]`|Tanımlayıcı ad atlama ilkesinin uygulatılıp uygulatılmayacağı belirtir. *Y*belirtirseniz, tam güvenle derlemeler için tanımlayıcı adlar, tam güven <xref:System.AppDomain>yüklendiğinde doğrulanmaz. *N*belirtirseniz, tanımlayıcı adlar doğruluk için onaylanır, ancak belirli bir tanımlayıcı ad için desteklenmez. <xref:System.Security.Permissions.StrongNameIdentityPermission> tam güvenle derlemeler üzerinde hiçbir etkisi yoktur. Bir tanımlayıcı ad eşleştirmesi için kendi denetiminizi gerçekleştirmeniz gerekir.<br /><br /> Ne `y` ne de `n` belirtilmemişse, bu seçenek geçerli ayarı görüntüler. Varsayılan, `y` değeridir. **Note:**  64 bit bilgisayarlarda, bu parametreyi hem 32 bit hem de sn. exe ' nin 64 bit örneklerinde ayarlamanız gerekir.|  
 |`-q[uiet]`|Sessiz mod kullanılacağını belirtir; başarı iletilerinin görüntülenmesini engeller.|  
 |`-R[a] assembly infile`|Önceden imzalanmış veya gecikmeli imzalanmış bir derlemeyi *InFile*içindeki anahtar çifti ile yeniden imzalar.<br /><br /> **-Ra** kullanılıyorsa, karmalar derlemedeki tüm dosyalar için yeniden hesaplanır.|  
 |`-Rc[a] assembly container`|Önceden imzalanmış veya gecikmeli imzalanmış bir derlemeyi *kapsayıcıda*anahtar çifti ile yeniden imzalar.<br /><br /> **-RCA** kullanılıyorsa, karmalar derlemedeki tüm dosyalar için yeniden hesaplanır.|  

@@ -8,122 +8,124 @@ dev_langs:
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cbef07e3db294dd4c0ffca1f25c15ec39e6ecf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e9445f16b6470b1d2066fcae749b1623ec5e11ac
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647939"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138953"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>DOM Öğeleri için Yeni Öznitelikler Oluşturma
-Yeni öznitelikler oluşturma öznitelikleri düğümler, ancak bir öğe düğümü özellikleridir ve içerdiği diğer düğüm türleri oluşturmaktan daha farklı bir **XmlAttributeCollection** öğeyle ilişkili. Bir öznitelik oluşturun ve öğe eklemek için birden çok yolu vardır:  
-  
-- Öğe düğümü edinin ve kullanın **SetAttribute** o öğenin özniteliği koleksiyona bir öznitelik eklemek için.  
-  
-- Oluşturma bir **XmlAttribute** düğümü kullanan **CreateAttribute** yöntemi, öğe düğümü alın ve ardından kullanmak **SetAttributeNode** bu öznitelik koleksiyon düğümü eklemek için öğe.  
-  
- Aşağıdaki örnek, bir öznitelik kullanarak bir öğe ekleme işlemi gösterilmektedir **SetAttribute** yöntemi.  
-  
-```vb  
-Imports System  
-Imports System.IO  
-Imports System.Xml  
-  
-public class Sample  
-  
-  public shared sub Main()  
-  
-  Dim doc as XmlDocument = new XmlDocument()  
-  doc.LoadXml("<book xmlns:bk='urn:samples' bk:ISBN='1-861001-57-5'>" & _  
-              "<title>Pride And Prejudice</title>" & _  
-              "</book>")  
-  Dim root as XmlElement = doc.DocumentElement  
-  
-  'Add a new attribute.  
-  root.SetAttribute("genre", "urn:samples", "novel")  
-  
-  Console.WriteLine("Display the modified XML...")  
-  Console.WriteLine(doc.InnerXml)  
-  
-  end sub  
-end class  
+
+Yeni özniteliklerin oluşturulması diğer düğüm türlerini oluşturmaktan farklıdır, çünkü öznitelikler düğüm değildir, ancak bir öğe düğümünün özellikleri olduğundan ve öğesiyle ilişkili bir **XmlAttributeCollection** içinde yer alır. Bir öznitelik oluşturup bir öğeye iliştirmek için birden çok yol vardır:
+
+- Öğe düğümünü alın ve bu öğenin öznitelik koleksiyonuna bir öznitelik eklemek için **SetAttribute** kullanın.
+
+- **CreateAttribute** metodunu kullanarak bir **XmlAttribute** düğümü oluşturun, öğe düğümünü alın, sonra düğümü bu öğenin öznitelik koleksiyonuna eklemek için **SetAttributeNode** kullanın.
+
+Aşağıdaki örnek **SetAttribute** yöntemi kullanılarak bir öğeye bir özniteliği nasıl ekleneceğini göstermektedir:
+
+```vb
+Imports System.IO
+Imports System.Xml
+
+Public Class Sample
+
+    Public Shared Sub Main()
+
+        Dim doc As New XmlDocument()
+        doc.LoadXml("<book xmlns:bk='urn:samples' bk:ISBN='1-861001-57-5'>" & _
+                    "<title>Pride And Prejudice</title>" & _
+                    "</book>")
+        Dim root As XmlElement = doc.DocumentElement
+
+        ' Add a new attribute.
+        root.SetAttribute("genre", "urn:samples", "novel")
+
+        Console.WriteLine("Display the modified XML...")
+        Console.WriteLine(doc.InnerXml)
+    End Sub
+End Class
 ```  
   
-```csharp  
-using System;  
-using System.IO;  
-using System.Xml;  
+```csharp
+using System;
+using System.IO;
+using System.Xml;
+
+public class Sample
+{
+    public static void Main()
+    {
+        var doc = new XmlDocument();
+        doc.LoadXml("<book xmlns:bk='urn:samples' bk:ISBN='1-861001-57-5'>" +
+                    "<title>Pride And Prejudice</title>" +
+                    "</book>");
+        XmlElement root = doc.DocumentElement;
+
+        // Add a new attribute.
+        root.SetAttribute("genre", "urn:samples", "novel");
+
+        Console.WriteLine("Display the modified XML...");
+        Console.WriteLine(doc.InnerXml);
+    }
+}
+```
+
+Aşağıdaki örnek, **CreateAttribute** yöntemi kullanılarak oluşturulan yeni bir özniteliği gösterir. Daha sonra, **SetAttributeNode** yöntemini kullanarak **Book** öğesinin öznitelik koleksiyonuna eklenen özniteliği gösterir.
+
+Aşağıdaki XML verildiğinde:
   
-public class Sample  
-{  
-  public static void Main()  
-  {  
-    XmlDocument doc = new XmlDocument();  
-    doc.LoadXml("<book xmlns:bk='urn:samples' bk:ISBN='1-861001-57-5'>" +  
-                "<title>Pride And Prejudice</title>" +  
-                "</book>");  
-    XmlElement root = doc.DocumentElement;  
-  
-    // Add a new attribute.  
-    root.SetAttribute("genre", "urn:samples", "novel");  
-  
-    Console.WriteLine("Display the modified XML...");  
-    Console.WriteLine(doc.InnerXml);  
-  }  
-```  
-  
- Aşağıdaki örnek yeni bir gösterir kullanarak oluşturulan öznitelik **CreateAttribute** yöntemi. Daha sonra bir öznitelik koleksiyonu için eklenen öznitelik gösterir **kitap** öğesini kullanarak **SetAttributeNode** yöntemi.  
-  
- Aşağıdaki XML verilen:  
-  
-```xml  
-<book genre='novel' ISBN='1-861001-57-5'>  
-<title>Pride And Prejudice</title>  
-</book>  
-```  
-  
- Yeni bir öznitelik oluşturun ve bir değer verin:  
-  
-```vb  
-Dim attr As XmlAttribute = doc.CreateAttribute("publisher")  
-   attr.Value = "WorldWide Publishing"  
-```  
-  
-```csharp  
-XmlAttribute attr = doc.CreateAttribute("publisher");  
-attr.Value = "WorldWide Publishing";  
-```  
-  
- ve öğesine ekleyin:  
-  
-```vb  
-doc.DocumentElement.SetAttributeNode(attr)  
-```  
-  
-```csharp  
-doc.DocumentElement.SetAttributeNode(attr);  
-```  
-  
- **Output**  
-  
-```xml  
-<book genre="novel" ISBN="1-861001-57-5" publisher="WorldWide Publishing">  
-<title>Pride And Prejudice</title>  
-</book>  
-```  
-  
- Tam kod örneği şu yolda bulunabilir: <xref:System.Xml.XmlDocument.CreateAttribute%2A>.  
-  
- Oluşturabilirsiniz bir **XmlAttribute** düğüm ve kullanım **Insertbefore** veya **InsertAfter** yöntemleri bir koleksiyon içinde uygun konuma yerleştirin. Aynı ada sahip bir öznitelik mevcut öznitelik koleksiyonda zaten varsa **XmlAttribute** koleksiyon ve yeni düğüm kaldırılır **XmlAttribute** düğümüne eklenir. Bu aynı şekilde gerçekleştirir **SetAttribute** yöntemi. Var olan bir düğüm yapmak için bir başvuru noktası olarak bir parametre olarak bu yöntemleri ele **Insertbefore** ve **InsertAfter**. Bir başvuru düğümü yeni düğümü için varsayılan ekleneceği konum gösteren sağlayamazsanız **InsertAfter** yöntemdir koleksiyonu başında yeni düğümü eklemek için. İçin varsayılan konum **Insertbefore**, hiçbir referans düğümün sağlanırsa, koleksiyonun sonuna ulaştı.  
-  
- Oluşturduysanız bir **XmlNamedNodeMap** öznitelikleri, öznitelik adı'nı kullanarak ekleyebilirsiniz <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Daha fazla bilgi için [NamedNodeMaps ve NodeLists içindeki düğüm koleksiyonları](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).  
-  
-## <a name="default-attributes"></a>Varsayılan öznitelikler  
- Varsayılan özniteliği için bildirilmiş bir öğe oluşturun, ardından varsayılan değerine sahip yeni bir varsayılan öznitelik XML belge nesne modeli (DOM) tarafından oluşturulur ve öğesine bağlı. Varsayılan öznitelik alt düğümler de şu anda oluşturulur.  
-  
-## <a name="attribute-child-nodes"></a>Öznitelik alt düğümleri  
- Bir öznitelik düğümü değeri alt düğümlerinden olur. Geçerli alt düğümleri yalnızca iki tür vardır: **XmlText** düğümleri ve **XmlEntityReference** düğümleri. Alt düğümleri anlamında gibi yöntemlerin bunlar **işlevi FirstChild** ve **LastChild** alt düğümleri olarak işlemeye. Bu ayrım alt düğümleri sahip bir öznitelik, öznitelikler veya öznitelik alt düğümleri kaldırmaya çalışırken önemlidir. Daha fazla bilgi için [DOM'da bir öğe düğümünden öznitelikleri kaldırma](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
-  
+```xml
+<book genre='novel' ISBN='1-861001-57-5'>
+<title>Pride And Prejudice</title>
+</book>
+```
+
+Yeni bir öznitelik oluşturun ve bu değere bir değer verin:
+
+```vb
+Dim attr As XmlAttribute = doc.CreateAttribute("publisher")
+attr.Value = "WorldWide Publishing"
+```
+
+```csharp
+XmlAttribute attr = doc.CreateAttribute("publisher");
+attr.Value = "WorldWide Publishing";
+```
+
+ve öğesini öğesine ekleyin:
+
+```vb
+doc.DocumentElement.SetAttributeNode(attr)
+```
+
+```csharp
+doc.DocumentElement.SetAttributeNode(attr);
+```
+
+**Output**
+
+```xml
+<book genre="novel" ISBN="1-861001-57-5" publisher="WorldWide Publishing">
+<title>Pride And Prejudice</title>
+</book>
+```
+
+Tam kod örneği <xref:System.Xml.XmlDocument.CreateAttribute%2A>' de bulunabilir.
+
+Ayrıca, bir **XmlAttribute** düğümü oluşturabilir ve bunu koleksiyondaki uygun konuma yerleştirmek Için **InsertBefore** veya **InsertAfter** yöntemlerini kullanabilirsiniz. Öznitelik koleksiyonunda aynı ada sahip bir öznitelik zaten varsa, var olan **XmlAttribute** düğümü koleksiyondan kaldırılır ve yeni **XmlAttribute** düğümü eklenir. Bu, **SetAttribute** yöntemiyle aynı şekilde çalışır. Bu yöntemler, var olan bir düğümü bir parametre olarak, **InsertBefore** ve **InsertAfter**yapmak için başvuru noktası olarak alır. Yeni düğümün nereye yerleştirileceğini belirten bir başvuru düğümü sağlamazsanız, **InsertAfter** yöntemi için varsayılan değer, koleksiyonun başlangıcına yeni düğüm eklemek olur. Hiçbir başvuru düğümü sağlanmazsa, **InsertBefore**varsayılan konumu koleksiyonun sonunda olur.
+
+Özniteliklerin **XmlNamedNodeMap** oluşturduysanız, <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A> yöntemini kullanarak bir özniteliği ada göre ekleyebilirsiniz. Daha fazla bilgi için bkz. [NamedNodeMaps ve NodeLists Içindeki düğüm koleksiyonları](node-collections-in-namednodemaps-and-nodelists.md).
+
+## <a name="default-attributes"></a>Varsayılan öznitelikler
+
+Varsayılan bir özniteliğe sahip olarak belirtilen bir öğesi oluşturursanız, varsayılan değeri olan yeni bir varsayılan öznitelik, XML Belge Nesne Modeli (DOM) tarafından oluşturulur ve öğesine eklenir. Varsayılan özniteliğin alt düğümleri de şu anda oluşturulur.
+
+## <a name="attribute-child-nodes"></a>Öznitelik alt düğümleri
+
+Öznitelik düğümünün değeri, alt düğümleri haline gelir. Yalnızca iki tür geçerli alt düğüm vardır: **XmlText** düğümleri ve **XmlEntityReference** düğümleri. Bunlar, **FirstChild** ve **LastChild** gibi yöntemlerin alt düğümler olarak işlenmesi açısından önemli olan alt düğümlerdir. Alt düğümlere sahip bir özniteliğin bu ayrım özelliği, öznitelikleri veya öznitelik alt düğümlerini kaldırmaya çalışırken önemlidir. Daha fazla bilgi için bkz. [Dom 'daki bir öğe düğümünden öznitelikleri kaldırma](removing-attributes-from-an-element-node-in-the-dom.md).
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Belge Nesne Modeli (DOM)](xml-document-object-model-dom.md)

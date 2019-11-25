@@ -2,12 +2,12 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 766dab35541465da15ccb1090d41b22332aafd0e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: cdaaacf0dfa75209d001f6e8d6ac7175816048aa
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739044"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140802"
 ---
 # <a name="custombinding"></a>\<customBinding >
 
@@ -182,7 +182,7 @@ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklan
 |Öznitelik|Açıklama|
 |---------------|-----------------|
 |closeTimeout|Bir kapatma işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir <xref:System.TimeSpan> değeri. Bu değer, <xref:System.TimeSpan.Zero>eşit veya ondan büyük olmalıdır. Varsayılan değer 00:01:00 ' dir.|
-|name|Bağlamanın yapılandırma adını içeren bir dize. Bu değer, özel bağlama için kimlik dizesi görevi gören Kullanıcı tanımlı bir dizedir. [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)]başlayarak bağlamalar ve davranışları bir ada sahip olmak için gerekli değildir. Varsayılan yapılandırma ve ad Less bağlamaları ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../../../wcf/simplified-configuration.md) ve Basitleştirilmiş yapılandırma.|
+|name|Bağlamanın yapılandırma adını içeren bir dize. Bu değer, özel bağlama için kimlik dizesi görevi gören Kullanıcı tanımlı bir dizedir. .NET Framework 4 ' den başlayarak bağlamalar ve davranışlar bir ada sahip olmak için gerekli değildir. Varsayılan yapılandırma ve ad Less bağlamaları ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../../../wcf/simplified-configuration.md) ve Basitleştirilmiş yapılandırma.|
 |openTimeout|Bir açık işlemin tamamlanabilmesi için belirtilen zaman aralığını belirten bir <xref:System.TimeSpan> değeri. Bu değer, <xref:System.TimeSpan.Zero>eşit veya ondan büyük olmalıdır. Varsayılan değer 00:01:00 ' dir.|
 |receiveTimeout|Alma işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir <xref:System.TimeSpan> değeri. Bu değer, <xref:System.TimeSpan.Zero>eşit veya ondan büyük olmalıdır. Varsayılan değer 00:01:00 ' dir.|
 |Binding üstündeki SendTimeout|Bir gönderme işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir <xref:System.TimeSpan> değeri. Bu değer, <xref:System.TimeSpan.Zero>eşit veya ondan büyük olmalıdır. Varsayılan değer 00:01:00 ' dir.|
@@ -194,7 +194,7 @@ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklan
 |[\<compositeDuplex >](compositeduplex.md)|Özel bağlamaya iki yönlü mesajlaşma belirtir. Çift yönlü iletişimleri yerel olarak (örneğin, HTTP) izin verilmeyen aktarımlarla birlikte kullanılır. Bunun aksine TCP, çift yönlü iletişimleri yerel olarak sağlar ve hizmetin istemciye geri ileti gönderebilmesi için bu bağlama öğesinin kullanılmasını gerektirmez.<br /><br /> İstemci, iletişim kurmak ve bağlantı kurmak için hizmetin bir adresini kullanıma sunmalıdır. Bu istemci adresi `ClientBaseAddress` özniteliği tarafından sağlanır.<br /><br /> Bu öğe <xref:System.ServiceModel.Configuration.CompositeDuplexElement>türündedir.|
 |[\<pnrpPeerResolver >](pnrppeerresolver.md)|Eş adı çözümleme Protokolü (PNRP) eş adı çözümleyicisini belirtir. Bu öğe <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>türündedir.|
 |[Reliableoturum > \<](reliablesession.md)|WS-güvenilir mesajlaşma için ayarı belirtir. Bu öğe özel bir bağlamaya eklendiğinde, elde edilen kanal, tam olarak bir kez teslimat hakkı destekleyebilir. Bu öğe <xref:System.ServiceModel.Configuration.ReliableSessionElement>türündedir.|
-|[\<Güvenlik >](security-of-custombinding.md)|Özel bağlamanın güvenliği için seçenekleri belirtir. Bu öğe <xref:System.ServiceModel.Configuration.SecurityElement>türündedir.|
+|[\<güvenlik >](security-of-custombinding.md)|Özel bağlamanın güvenliği için seçenekleri belirtir. Bu öğe <xref:System.ServiceModel.Configuration.SecurityElement>türündedir.|
 |[\<sslStreamSecurity >](sslstreamsecurity.md)|SSL akışı bağlamasının güvenlik ayarlarını belirtir. Bu öğe <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>türündedir.|
 |[\<transactionFlow >](transactionflow.md)|Bağlamanın işlem akışını ve `transactionProtocol` özniteliği tarafından kullanılacak protokolü desteklediğini belirtir. Bu öğe <xref:System.ServiceModel.Configuration.TransactionFlowElement>türündedir.|
 |[windowsStreamSecurity > \<](windowsstreamsecurity.md)|Özel bağlamanın akış güvenliğini sağlama seçeneklerini belirtir. Bu öğe <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>türündedir.|
@@ -299,7 +299,7 @@ Sistem tarafından sağlanmış bir bağlamayı değiştirmek için özel bağla
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.Configuration.BindingsSection>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [\< bağlama >](bindings.md)
+- [bağlama > \<](bindings.md)
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)
 - [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)
