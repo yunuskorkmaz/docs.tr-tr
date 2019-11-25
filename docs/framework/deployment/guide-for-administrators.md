@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dc842713a16df8e5ada5ad6c71ca19f91ecbc405
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052152"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975561"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Yöneticiler için .NET Framework Dağıtım Kılavuzu
 
@@ -21,7 +21,7 @@ Bu adım adım makalede, bir sistem yöneticisinin Microsoft System Center Confi
 > [!NOTE]
 > Bu belgede başvurulan yazılım, sınırlama olmadan, .NET Framework 4,5, System Center Configuration Manager ve Active Directory, her biri lisans hüküm ve koşullarına tabidir. Bu yönergeler, bu tür lisans koşullarını ve koşulları gözden geçirilmiş yazılımların sahipleri tarafından kabul edildiği varsaymaktadır. Bu yönergeler, bu tür lisans anlaşmalarının koşullarından feragat etmiş sayılmaz.
 >
-> .NET Framework için destek hakkında daha fazla bilgi için Microsoft Desteği Web sitesindeki [Microsoft .NET Framework destek yaşam döngüsü ilkesi](https://go.microsoft.com/fwlink/?LinkId=196607) ' ne bakın.
+> .NET Framework için destek hakkında daha fazla bilgi için Microsoft Desteği Web sitesinde [.NET Framework resmi destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) ' ne bakın.
 
 Bu konu aşağıdaki bölümleri içermektedir:
 
@@ -83,9 +83,9 @@ Bir koleksiyon oluşturmak için:
 
 5. Sınırlama koleksiyonu belirtmek için **Gözden** geçirme ' yi seçin.
 
-6. **Üyelik kuralları** sayfasında **Kural Ekle**' yi ve ardından **doğrudan kural** ' ı seçerek **doğrudan üyelik kuralı oluşturma Sihirbazı**' nı açın. Seçin **sonraki**.
+6. **Üyelik kuralları** sayfasında **Kural Ekle**' yi ve ardından **doğrudan kural** ' ı seçerek **doğrudan üyelik kuralı oluşturma Sihirbazı**' nı açın. **İleri ' yi**seçin.
 
-7. Kaynak **Ara** sayfasında, **kaynak sınıfı** listesinde **sistem kaynağı**' nı seçin. **Öznitelik adı** listesinde **ad**' ı seçin. **Değer** alanında, girin `%`ve ardından **İleri**' yi seçin.
+7. Kaynak **Ara** sayfasında, **kaynak sınıfı** listesinde **sistem kaynağı**' nı seçin. **Öznitelik adı** listesinde **ad**' ı seçin. **Değer** alanına `%`girin ve ardından **İleri**' yi seçin.
 
 8. **Kaynak Seç** sayfasında, .NET Framework dağıtmak istediğiniz her bilgisayar için onay kutusunu seçin. **İleri**' yi seçin ve ardından Sihirbazı doldurun.
 
@@ -107,9 +107,9 @@ Bir paket oluşturmak için:
 
 4. **Paket ve program oluşturma Sihirbazı**' nın **paket** sayfasında, aşağıdaki bilgileri girin:
 
-    - Ada`.NET Framework 4.5`
+    - Ad: `.NET Framework 4.5`
 
-    - Üreticisini`Microsoft`
+    - Üretici: `Microsoft`
 
     - Dil. `English (US)`
 
@@ -121,9 +121,9 @@ Bir paket oluşturmak için:
 
     1. **Ad:** `.NET Framework 4.5`
 
-    2. **Komut satırı:** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (komut satırı seçenekleri, bu adımların ardından tabloda açıklanmıştır)
+    2. **Komut satırı:** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (komut satırı seçenekleri bu adımların ardından tabloda açıklanmıştır)
 
-    3. **Çalışmaz** **Gizli**öğesini seçin.
+    3. Şunu **Çalıştır:** **Gizli**öğesini seçin.
 
     4. **Program çalışabilir:** Kullanıcının oturum açmış olmasından bağımsız olarak programın çalıştıracağınızı belirten seçeneği belirleyin.
 
@@ -133,11 +133,11 @@ Aşağıdaki tablo, 7. adımda belirtilen komut satırı seçeneklerini açıkla
 
 |Seçenek|Açıklama|
 |------------|-----------------|
-|**/q**|Sessiz modu ayarlar. Hiçbir kullanıcı girişine gerek yoktur ve hiçbir çıktı gösterilmez.|
-|**/ norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, Yapılandırma Yöneticisi'nin bilgisayarı yeniden başlatmayı üstlenmesi gerekir.|
-|**/ChainingPackage** *PackageName*|Zincirlemeyi yapan paketin adını belirtir. Bu bilgiler, [Microsoft müşteri deneyimini geliştirme programı (CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244)için kaydolup diğer yükleme oturum bilgileriyle birlikte raporlanır. Paket adı boşluk içeriyorsa, çift tırnak işaretlerini sınırlayıcılar olarak kullanın; Örneğin: **/chainingpackage "zincirleme ürün"** .|
+|**anahtarın**|Sessiz modu ayarlar. Hiçbir kullanıcı girişine gerek yoktur ve hiçbir çıktı gösterilmez.|
+|**/norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, Yapılandırma Yöneticisi'nin bilgisayarı yeniden başlatmayı üstlenmesi gerekir.|
+|**/ChainingPackage** *PackageName*|Zincirlemeyi yapan paketin adını belirtir. Bu bilgiler, Microsoft Müşteri Deneyimini Geliştirme Programı (CEIP) için kaydolup diğer yükleme oturum bilgileriyle birlikte raporlanır. Paket adı boşluk içeriyorsa, çift tırnak işaretlerini sınırlayıcılar olarak kullanın; Örneğin: **/chainingpackage "zincirleme ürün"** .|
 
-Bu adımlar, .NET Framework 4.5 adlı bir paket oluşturur. Program, .NET Framework 4.5'in sessiz bir kurulumunu dağıtır. Sessiz yüklemede, kullanıcılar yükleme işlemiyle etkileşime girmez ve zincirleme uygulama, dönüş kodunu yakalayıp yeniden başlatmayı işleymelidir; bkz. [bir yükleme paketinden Ilerleme bilgileri alma](https://go.microsoft.com/fwlink/?LinkId=179606).
+Bu adımlar, .NET Framework 4.5 adlı bir paket oluşturur. Program, .NET Framework 4.5'in sessiz bir kurulumunu dağıtır. Sessiz yüklemede, kullanıcılar yükleme işlemiyle etkileşime girmez ve zincirleme uygulama, dönüş kodunu yakalayıp yeniden başlatmayı işleymelidir; bkz. [bir yükleme paketinden Ilerleme bilgileri alma](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).
 
 <a name="select_dist_point"></a>
 
@@ -179,18 +179,18 @@ Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz t�
 
 4. **Giriş** sekmesinde, **dağıtım** grubunda, **Dağıt**' ı seçin.
 
-5. **Yazılım Dağıtma Sihirbazı**'nın **genel** sayfasında, **Araştır**' ı seçin ve daha önce oluşturduğunuz koleksiyonu seçin. Seçin **sonraki**.
+5. **Yazılım Dağıtma Sihirbazı**'nın **genel** sayfasında, **Araştır**' ı seçin ve daha önce oluşturduğunuz koleksiyonu seçin. **İleri ' yi**seçin.
 
 6. Sihirbazın **içerik** sayfasında, yazılımı dağıtmak istediğiniz noktanın görüntülendiğini doğrulayın ve ardından **İleri**' yi seçin.
 
-7. Sihirbazın **dağıtım ayarları** sayfasında, **eylemin** **yüklenmek**üzere ayarlandığını ve **amacın** **gerekli**olarak ayarlandığını onaylayın. Bu, yazılım paketinin hedeflenen bilgisayarlarda zorunlu bir yükleme olmasını sağlar. Seçin **sonraki**.
+7. Sihirbazın **dağıtım ayarları** sayfasında, **eylemin** **yüklenmek**üzere ayarlandığını ve **amacın** **gerekli**olarak ayarlandığını onaylayın. Bu, yazılım paketinin hedeflenen bilgisayarlarda zorunlu bir yükleme olmasını sağlar. **İleri ' yi**seçin.
 
-8. Sihirbazın **zamanlama** sayfasında, .NET Framework yüklenmesini istediğiniz tarihi belirtin. Bir yükleme süresi atamak için **Yeni** ' yi seçebilir veya yazılımın kullanıcı oturum açtığında ya da kapalıyken veya mümkün olan en kısa sürede yüklenmesine izin verebilirsiniz. Seçin **sonraki**.
+8. Sihirbazın **zamanlama** sayfasında, .NET Framework yüklenmesini istediğiniz tarihi belirtin. Bir yükleme süresi atamak için **Yeni** ' yi seçebilir veya yazılımın kullanıcı oturum açtığında ya da kapalıyken veya mümkün olan en kısa sürede yüklenmesine izin verebilirsiniz. **İleri ' yi**seçin.
 
 9. Sihirbazın **Kullanıcı deneyimi** sayfasında varsayılan değerleri kullanın ve **İleri**' yi seçin.
 
     > [!WARNING]
-    > Üretim ortamınızın, dağıtım çizelgesi için farklı seçimler olmasını gerektiren ilkeleri olabilir. Bu seçenekler hakkında daha fazla bilgi için [bkz. tanıtım adı özellikleri: Zamanlama sekmesi](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
+    > Üretim ortamınızın, dağıtım çizelgesi için farklı seçimler olmasını gerektiren ilkeleri olabilir. Bu seçenekler hakkında daha fazla bilgi için bkz. [tanıtım adı özellikleri: Zamanlama sekmesi](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
 
 10. Sihirbazın **dağıtım noktaları** sayfasında, varsayılan değerleri kullanın ve **İleri**' yi seçin.
 
@@ -236,12 +236,12 @@ Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz t�
 
 Aşağıdaki günlük dosyaları .NET Framework kurulum sırasında oluşturulur:
 
-- %Temp%\Microsoft .NET Framework *Version*\*. txt
-- %Temp%\Microsoft .NET Framework *Version*\*. html
+- %temp%\Microsoft .NET Framework *sürüm*\*. txt
+- %temp%\Microsoft .NET Framework *sürüm*\*. html
 
 Burada *Sürüm* , yüklemekte olduğunuz .NET Framework sürümü (4,5 veya 4.7.2 gibi).
 
-Ayrıca, .NET Framework yükleme komutunda `/log` komut satırı seçeneğini kullanarak, günlük dosyalarının yazıldığı dizini de belirtebilirsiniz. Daha fazla bilgi için bkz. [geliştiriciler için .NET Framework dağıtım kılavuzu](deployment-guide-for-developers.md#command-line-options).
+Ayrıca, .NET Framework yükleme komutundaki `/log` komut satırı seçeneğini kullanarak, günlük dosyalarının yazıldığı dizini de belirtebilirsiniz. Daha fazla bilgi için bkz. [geliştiriciler için .NET Framework dağıtım kılavuzu](deployment-guide-for-developers.md#command-line-options).
 
 [Günlük toplama aracını](https://www.microsoft.com/download/details.aspx?id=12493) , .NET Framework günlük dosyalarını toplamak ve dosyaların boyutunu azaltan sıkıştırılmış dolap (. cab) dosyası oluşturmak için kullanabilirsiniz.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: ad8d7075e609a1b03ec403b91126bbce7084923f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c6e29781f566fac0fd1219ac842a4838d631afb6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423149"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969711"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Dize, değeri Text olan <xref:System.String> türünde bir nesnedir. Dahili olarak, metin, <xref:System.Char> nesnelerinin sıralı salt okunurdur koleksiyonu olarak depolanır. C# Dizenin sonunda null sonlandırma karakteri yoktur; Bu nedenle C# , bir dize herhangi bir sayıda katıştırılmış null karakteri (' \ 0 ') içerebilir. Bir dizenin <xref:System.String.Length%2A> özelliği, Unicode karakterlerin sayısını değil, içerdiği `Char` nesne sayısını temsil eder. Bir dizedeki tek tek Unicode kod noktalarına erişmek için <xref:System.Globalization.StringInfo> nesnesini kullanın.  
@@ -37,7 +37,7 @@ Dize, değeri Text olan <xref:System.String> türünde bir nesnedir. Dahili olar
   
  [!code-csharp[csProgGuideStrings#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#25)]  
   
- Özgün dizedeki arama ve değiştirme işlemleri gibi değişikliklere dayalı yeni dizeler oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: dize Içeriklerini değiştirme](../../how-to/modify-string-contents.md).  
+ Özgün dizedeki arama ve değiştirme işlemleri gibi değişikliklere dayalı yeni dizeler oluşturma hakkında daha fazla bilgi için bkz. [dize içeriğini değiştirme](../../how-to/modify-string-contents.md).  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Normal ve tam dize sabit değerleri  
  Aşağıdaki örnekte gösterildiği gibi, tarafından C#verilen kaçış karakterlerini katıştırmanız gerektiğinde normal dize değişmez değerlerini kullanın:  
@@ -54,7 +54,7 @@ Dize, değeri Text olan <xref:System.String> türünde bir nesnedir. Dahili olar
 |---------------------|--------------------|----------------------|  
 |\\'|Tek tırnak|0x0027|  
 |\\"|Çift tırnak|0x0022|  
-|\\\\ |sola|0x005C|  
+|\\\\ |Sola|0x005C|  
 |izin|Null|0x0000|  
 |\|Uyarı|0x0007|  
 |\b|Geri Al tuşu|0x0008|  
@@ -91,7 +91,7 @@ Kodlarınızın okunabilirliğini ve bakımlılığını artırmak için dize il
 .NET türlerini biçimlendirme hakkında daha fazla bilgi için bkz. [.net 'Teki biçimlendirme türleri](../../../standard/base-types/formatting-types.md).
   
 ## <a name="substrings"></a>Dizelerin  
- Alt dize, bir dizede yer alan herhangi bir karakter dizisidir. Özgün dizenin bir bölümünden yeni bir dize oluşturmak için <xref:System.String.Substring%2A> yöntemini kullanın. <xref:System.String.IndexOf%2A> yöntemini kullanarak bir alt dizenin bir veya daha fazla örneğini arayabilirsiniz. Belirtilen bir alt dizenin tüm oluşumlarını yeni bir dizeyle değiştirmek için <xref:System.String.Replace%2A> yöntemini kullanın. <xref:System.String.Substring%2A> yöntemi gibi, <xref:System.String.Replace%2A> aslında yeni bir dize döndürür ve özgün dizeyi değiştirmez. Daha fazla bilgi için bkz. [nasıl yapılır: dizeleri arama](../../how-to/search-strings.md) ve [nasıl yapılır: dize içeriklerini değiştirme](../../how-to/modify-string-contents.md).  
+ Alt dize, bir dizede yer alan herhangi bir karakter dizisidir. Özgün dizenin bir bölümünden yeni bir dize oluşturmak için <xref:System.String.Substring%2A> yöntemini kullanın. <xref:System.String.IndexOf%2A> yöntemini kullanarak bir alt dizenin bir veya daha fazla örneğini arayabilirsiniz. Belirtilen bir alt dizenin tüm oluşumlarını yeni bir dizeyle değiştirmek için <xref:System.String.Replace%2A> yöntemini kullanın. <xref:System.String.Substring%2A> yöntemi gibi, <xref:System.String.Replace%2A> aslında yeni bir dize döndürür ve özgün dizeyi değiştirmez. Daha fazla bilgi için bkz. [dizeleri arama](../../how-to/search-strings.md) ve [dize içeriğini değiştirme](../../how-to/modify-string-contents.md).
   
  [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
@@ -131,12 +131,12 @@ string s = String.Empty;
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[Nasıl yapılır: Dize İçeriklerini Değiştirme](../../how-to/modify-string-contents.md)|Dizeleri dönüştürme ve dizelerin içeriğini değiştirme tekniklerini gösterir.|  
-|[Nasıl yapılır: Dizeleri Karşılaştırma](../../how-to/compare-strings.md)|Dizelerin sıralı ve kültüre özgü karşılaştırmalarının nasıl gerçekleştirileceğini gösterir.|  
-|[Nasıl yapılır: Birden Çok Dizeyi Birleştirme](../../how-to/concatenate-multiple-strings.md)|Birden çok dizeyi tek tek birleştirmek için çeşitli yollar gösterir.|
-|[Nasıl yapılır: String.Split Kullanarak Dizeleri Ayrıştırma](../../how-to/parse-strings-using-split.md)|Dizeleri ayrıştırmak için `String.Split` yönteminin nasıl kullanılacağını gösteren kod örnekleri içerir.|  
-|[Nasıl yapılır: dizeleri arama](../../how-to/search-strings.md)|Dizelerde belirli metin veya desenler için aramanın nasıl kullanılacağını açıklar.|  
-|[Nasıl yapılır: Bir Dizenin Sayısal bir Değeri Temsil Edip Etmediğini Belirleme](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Geçerli bir sayısal değer olup olmadığını görmek için bir dizeyi güvenli bir şekilde ayrıştırmayı gösterir.|  
+|[Dize içeriklerini değiştirme](../../how-to/modify-string-contents.md)|Dizeleri dönüştürme ve dizelerin içeriğini değiştirme tekniklerini gösterir.|  
+|[Dizeleri karşılaştırma](../../how-to/compare-strings.md)|Dizelerin sıralı ve kültüre özgü karşılaştırmalarının nasıl gerçekleştirileceğini gösterir.|  
+|[Birden çok dizeyi birleştirme](../../how-to/concatenate-multiple-strings.md)|Birden çok dizeyi tek tek birleştirmek için çeşitli yollar gösterir.|
+|[String. Split kullanarak dizeleri ayrıştırma](../../how-to/parse-strings-using-split.md)|Dizeleri ayrıştırmak için `String.Split` yönteminin nasıl kullanılacağını gösteren kod örnekleri içerir.|  
+|[Dizeleri arama](../../how-to/search-strings.md)|Dizelerde belirli metin veya desenler için aramanın nasıl kullanılacağını açıklar.|  
+|[Bir dizenin sayısal bir değeri temsil edip etmediğini belirleme](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Geçerli bir sayısal değer olup olmadığını görmek için bir dizeyi güvenli bir şekilde ayrıştırmayı gösterir.|  
 |[Dize ilişkilendirme](../../language-reference/tokens/interpolated.md)|Dizeleri biçimlendirmek için uygun bir sözdizimi sağlayan dize ilişkilendirme özelliğini açıklar.|
 |[Temel Dize İşlemleri](../../../standard/base-types/basic-string-operations.md)|Temel dize işlemleri gerçekleştirmek için <xref:System.String?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder?displayProperty=nameWithType> yöntemlerini kullanan konulara bağlantılar sağlar.|  
 |[Dizeleri Ayrıştırma](../../../standard/base-types/parsing-strings.md)|.NET temel türlerinin dize temsillerini karşılık gelen türlerin örneklerine nasıl dönüştüreceğiniz açıklanmıştır.|  

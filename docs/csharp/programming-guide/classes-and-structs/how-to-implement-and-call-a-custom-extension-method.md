@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Özel bir genişletme yöntemi uygulama ve çağırma- C# Programlama Kılavuzu'
+title: Özel bir genişletme yöntemi uygulama ve çağırma- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 26ad1d2251388237e186d1ba0e885fd7def66467
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f3d96c033380698ade37c49ecbfeed14f05d3e11
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596873"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970888"
 ---
-# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Nasıl yapılır: Özel bir genişletme yöntemi uygulayın ve çağırın (C# Programlama Kılavuzu)
+# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Özel bir genişletme yöntemi uygulama ve çağırma (C# Programlama Kılavuzu)
 Bu konu başlığı altında, tüm .NET türleri için kendi genişletme yöntemlerinizi nasıl uygulanacağı gösterilmektedir. İstemci kodu, uzantıları içeren DLL 'ye bir başvuru ekleyerek ve uzantı yöntemlerinin tanımlandığı ad alanını belirten bir [using](../../language-reference/keywords/using-directive.md) yönergesi ekleyerek uzantı yöntemlerinizi kullanabilir.  
   
 ## <a name="to-define-and-call-the-extension-method"></a>Genişletme yöntemini tanımlamak ve çağırmak için  
@@ -25,14 +25,14 @@ Bu konu başlığı altında, tüm .NET türleri için kendi genişletme yöntem
   
 3. Metodun ilk parametresi, yöntemin üzerinde çalıştığı türü belirtir; önünde [Bu](../../language-reference/keywords/this.md) değiştiriciye sahip olmalıdır.  
   
-4. Çağıran kodda, uzantı yöntemi sınıfını içeren `using` [ad alanını](../../language-reference/keywords/namespace.md) belirtmek için bir yönerge ekleyin.  
+4. Çağıran kodda, uzantı yöntemi sınıfını içeren [ad alanını](../../language-reference/keywords/namespace.md) belirtmek için bir `using` yönergesi ekleyin.  
   
 5. Yöntemleri, tür üzerinde örnek yöntemmiş gibi çağırın.  
   
-     İlk parametrenin, işlecin uygulandığı türü temsil ettiğinden ve derleyicinin zaten nesnenizin türünü bildiği için kodu çağırarak belirtildiğine unutmayın. Yalnızca 2 ile `n`parametreler için bağımsız değişkenler sağlamanız gerekir.  
+     İlk parametrenin, işlecin uygulandığı türü temsil ettiğinden ve derleyicinin zaten nesnenizin türünü bildiği için kodu çağırarak belirtildiğine unutmayın. Parametreleri yalnızca 2 ' den `n`için bağımsız değişkenler sağlamanız gerekir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `WordCount` `CustomExtensions.StringExtension` sınıfında adlı bir genişletme yöntemi uygular. Yöntemi, ilk yöntem parametresi <xref:System.String> olarak belirtilen sınıfında çalışır. Ad alanı uygulama ad alanına aktarılır ve yöntemi `Main` yöntemi içinde çağırılır. `CustomExtensions`  
+ Aşağıdaki örnek, `CustomExtensions.StringExtension` sınıfında `WordCount` adlı bir genişletme yöntemi uygular. Yöntemi, ilk yöntem parametresi olarak belirtilen <xref:System.String> sınıfında çalışır. `CustomExtensions` ad alanı uygulama ad alanına aktarılır ve yöntemi `Main` yönteminin içinde çağırılır.  
   
  [!code-csharp[csProgGuideExtensionMethods#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#1)]  
   

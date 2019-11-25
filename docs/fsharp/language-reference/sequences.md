@@ -1,20 +1,20 @@
 ---
 title: Diziler
 description: Büyük, sıralı bir F# veri koleksiyonunuz olduğunda ancak tüm öğeleri kullanmak zorunda olmadığınız durumlarda dizileri nasıl kullanacağınızı öğrenin.
-ms.date: 02/19/2019
-ms.openlocfilehash: 76aeeb8b89ed8146ee1b7f909af6bf0764fcc55d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 34e03f1cead0a9f678f637afcb6c8397ef7572bc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424975"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971441"
 ---
 # <a name="sequences"></a>Diziler
 
 > [!NOTE]
 > Bu makaledeki API başvuru bağlantıları sizi MSDN 'ye götürür.  Docs.microsoft.com API başvurusu tamamlanmadı.
 
-*Dizi* , tek bir türdeki öğelerin mantıksal bir dizisidir. Diziler özellikle büyük, sıralı bir veri koleksiyonunuz olduğunda ancak tüm öğeleri kullanmak zorunda olmadığında yararlıdır. Tek tek dizi öğeleri yalnızca gerekli olduğu gibi hesaplanır, bu nedenle bir sıra, tüm öğelerin kullanılmadığı durumlarda bir listeden daha iyi performans sağlayabilir. Diziler, `System.Collections.Generic.IEnumerable`için bir diğer ad olan `seq<'T>` türü tarafından temsil edilir. Bu nedenle, `System.IEnumerable` uygulayan .NET Framework her türlü tür bir sıra olarak kullanılabilir. [Seq modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) , diziler içeren düzenlemelere yönelik destek sağlar.
+*Dizi* , tek bir türdeki öğelerin mantıksal bir dizisidir. Diziler özellikle büyük, sıralı bir veri koleksiyonunuz olduğunda ancak tüm öğeleri kullanmak zorunda olmadığında yararlıdır. Tek tek dizi öğeleri yalnızca gerekli olduğu gibi hesaplanır, bu nedenle bir sıra, tüm öğelerin kullanılmadığı durumlarda bir listeden daha iyi performans sağlayabilir. Diziler, <xref:System.Collections.Generic.IEnumerable%601>için bir diğer ad olan `seq<'T>` türü tarafından temsil edilir. Bu nedenle, <xref:System.Collections.Generic.IEnumerable%601> arabirimini uygulayan tüm .NET türleri bir dizi olarak kullanılabilir. [Seq modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) , diziler içeren düzenlemelere yönelik destek sağlar.
 
 ## <a name="sequence-expressions"></a>Dizi Ifadeleri
 
@@ -22,17 +22,17 @@ ms.locfileid: "73424975"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Dizi ifadeleri, sıranın değerlerini üreten F# ifadelerden oluşur. `yield` anahtar sözcüğünü, sıranın bir parçası haline gelen değerler oluşturmak için kullanabilirler.
-
-Aşağıda bir örnek verilmiştir.
+Dizi ifadeleri, sıranın değerlerini üreten F# ifadelerden oluşur. Ayrıca, programlı olarak değerler oluşturabilirsiniz:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1503.fs)]
 
-Aşağıdaki örnekte gösterildiği gibi, `yield`yerine `->` işlecini kullanabilirsiniz, bu durumda `do` anahtar sözcüğünü atlayabilirsiniz.
+Önceki örnek, değeri dizinin bir parçası olacak bir ifade belirtmenize olanak sağlayan `->` işlecini kullanır. `->` yalnızca, izleyen kodun her bölümü bir değer döndürürse kullanabilirsiniz.
+
+Alternatif olarak, aşağıdaki isteğe bağlı bir `yield` `do` anahtar sözcüğünü belirtebilirsiniz:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1504.fs)]
 
-Aşağıdaki kod, Grid 'i temsil eden bir dizi içindeki bir dizinle birlikte koordinat çiftlerinin bir listesini oluşturur.
+Aşağıdaki kod, Grid 'i temsil eden bir dizi içindeki bir dizinle birlikte koordinat çiftlerinin bir listesini oluşturur. İlk `for` ifadesinin bir `do` belirtilmesini gerektirdiğini unutmayın.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1505.fs)]
 
@@ -40,9 +40,34 @@ Bir dizide kullanılan `if` ifadesi bir filtredir. Örneğin, yalnızca asal say
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1506.fs)]
 
-Bir yinelemede `yield` veya `->` kullandığınızda, her yinelemenin sıranın tek bir öğesi oluşturması beklenir. Her yineleme bir dizi öğe üretirse, `yield!`kullanın. Bu durumda, her yinelemede oluşturulan öğeler, son diziyi oluşturmak için birleştirilir.
+Daha önce belirtildiği gibi, `if`bir `else` dalı olmadığından, burada `do` gereklidir. `->`kullanmaya çalışırsanız, tüm dallar bir değer döndürmediğinden bir hata alırsınız.
 
-Birden çok ifadeyi bir dizi ifadesinde birlikte birleştirebilirsiniz. Her bir ifade tarafından oluşturulan öğeler birlikte birleştirilir. Bir örnek için, bu konunun "örnekler" bölümüne bakın.
+## <a name="the-yield-keyword"></a>`yield!` anahtar sözcüğü
+
+Bazen, bir dizi öğeyi başka bir diziye eklemek isteyebilirsiniz. Bir diziyi başka bir diziye dahil etmek için `yield!` anahtar sözcüğünü kullanmanız gerekir:
+
+```fsharp
+// Repeats '1 2 3 4 5' ten times
+seq {
+    for _ in 1..10 do
+        yield! seq { 1; 2; 3; 4; 5}
+}
+```
+
+`yield!` düşünmenin bir diğer yolu da bir iç diziyi düzleştirir ve bunu kapsayan dizide içerir.
+
+Bir ifadede `yield!` kullanıldığında, diğer tüm tek değerler `yield` anahtar sözcüğünü kullanmalıdır:
+
+```fsharp
+// Combine repeated values with their values
+seq {
+    for x in 1..10 do
+        yield x
+        yield! seq { for i in 1..x -> i}
+}
+```
+
+Önceki örnekte yalnızca `x` belirtmek, sıranın hiçbir değer üretmesine neden olur.
 
 ## <a name="examples"></a>Örnekler
 
@@ -50,7 +75,7 @@ Birden çok ifadeyi bir dizi ifadesinde birlikte birleştirebilirsiniz. Her bir 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1507.fs)]
 
-Aşağıdaki kod, her biri iki faktörden ve üründen oluşan üç öğe tanımlama bilgisinden oluşan bir çarpma tablosu oluşturmak için `yield` kullanır.
+Aşağıdaki örnek, her biri iki etmenden ve üründen oluşan üç öğe tanımlama bilgisinden oluşan bir çarpma tablosu oluşturur:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1508.fs)]
 
@@ -62,7 +87,7 @@ Aşağıdaki örnek, tek bir diziyi tek bir son sırada birleştirmek için `yie
 
 Diziler, [listelerle](lists.md)aynı işlevlerin birçoğunu destekler. Diziler, anahtar oluşturma işlevlerini kullanarak gruplandırma ve sayma gibi işlemleri de destekler. Diziler Ayrıca subsequences ayıklamak için daha farklı işlevleri destekler.
 
-Listeler, diziler, kümeler ve haritalar gibi birçok veri türü, sıralanabilir koleksiyonlar olduklarından örtük dizilerdir. Bağımsız değişken olarak bir sıra alan bir işlev, `System.Collections.Generic.IEnumerable<'T>`uygulayan tüm .NET Framework veri türlerine F# ek olarak ortak veri türleriyle çalışır. Bu, yalnızca listeler alabilen bir bağımsız değişken olarak liste alan bir işleve kontrast sağlar. `seq<'T>` türü `IEnumerable<'T>`için bir tür kısaltmadır. Bu, ' de F#diziler, listeler, kümeler ve haritalar içeren genel `System.Collections.Generic.IEnumerable<'T>`uygulayan tüm türler ve ayrıca çoğu .NET Framework koleksiyon türü `seq` türüyle uyumludur ve bir sıranın beklendiği her yerde kullanılabilir.
+Listeler, diziler, kümeler ve haritalar gibi birçok veri türü, sıralanabilir koleksiyonlar olduklarından örtük dizilerdir. Bağımsız değişken olarak bir sıra alan bir işlev, `System.Collections.Generic.IEnumerable<'T>`uygulayan tüm .NET veri türlerine F# ek olarak, ortak veri türleriyle birlikte çalışır. Bu, yalnızca listeler alabilen bir bağımsız değişken olarak liste alan bir işleve kontrast sağlar. `seq<'T>` türü `IEnumerable<'T>`için bir tür kısaltmadır. Bu, ' de F#diziler, listeler, kümeler ve haritalar içeren genel `System.Collections.Generic.IEnumerable<'T>`uygulayan tüm türler ve ayrıca çoğu .net koleksiyon türü, `seq` türüyle uyumludur ve bir sıranın beklendiği her yerde kullanılabilir.
 
 ## <a name="module-functions"></a>Modül Işlevleri
 

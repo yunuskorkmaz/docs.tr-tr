@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <TimeSpan_LegacyFormatMode> element
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
-ms.openlocfilehash: c835e1bcef7bbfdc990c8db177eafed4ec6bb30c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d9eedf52f5d711412e4549e39e6ea23abb68ff3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115209"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968903"
 ---
 # <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > öğesi
 
@@ -75,13 +75,13 @@ Aşağıdaki örnek bir <xref:System.TimeSpan> nesnesini örnekleyerek, destekle
 
 Örneği .NET Framework 3,5 veya önceki bir sürümde çalıştırdığınızda aşağıdaki çıktıyı görüntüler:
 
-```
+```console
 12:30:45
 ```
 
 Bu, örneği .NET Framework 4 veya sonraki bir sürümde çalıştırırsanız, çıktının dışında da farklılık gösterir:
 
-```
+```console
 Invalid Format
 ```
 

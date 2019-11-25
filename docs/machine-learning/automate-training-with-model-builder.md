@@ -4,12 +4,12 @@ description: Makine öğrenimi modelini otomatik olarak eğiteiçin ML.NET model
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 77fe56dba3532617ad9fb0c89bfaac7c8e031ce7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929475"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971518"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Model Oluşturucu nedir ve nasıl çalışır?
 
@@ -39,9 +39,9 @@ Senaryo, verilerinizi kullanarak yapmak istediğiniz tahmin türünün bir açı
 
 Model Oluşturucu 'da, bir makine öğrenimi model türü seçmeniz gerekir. Modelin türü, yapmaya çalıştığınız tahmine göre farklılık gösterir.
 
-Bir sayıyı tahmin eden senaryolar için makine öğrenimi model türü çağırılır `regression`.
+Bir sayıyı tahmin eden senaryolar için makine öğrenimi model türü `regression`olarak adlandırılır.
 
-Bir kategoriyi tahmin eden senaryolar için model türü olur `classification`. İki tür sınıflandırma vardır:
+Bir kategoriyi tahmin eden senaryolar için model türü `classification`. İki tür sınıflandırma vardır:
 
 - yalnızca 2 kategorinin bulunduğu yer: `binary classification`.
 - üç veya daha fazla kategorinin bulunduğu yer: `multiclass classification`.
@@ -60,7 +60,7 @@ Senaryonuz iki kategoriye sınıflandırma gerektiriyorsa, bu şablonu kendi ver
 
 #### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>Kategori tahmin etme (üç veya daha fazla kategori olduğunda)
 
-Birden çok Lass sınıflandırması, verileri üç veya daha fazla sınıfa kategorize etmek için kullanılabilir. 
+Birden çok Lass sınıflandırması, verileri üç veya daha fazla sınıfa kategorize etmek için kullanılabilir.
 
 ![Belge ve ürün sınıflandırması, destek bileti yönlendirmesi ve müşteri sorunu önceliklendirmesi dahil birden çok Lass sınıflandırması örnekleri](media/multiclass-classification-examples.png)
 
@@ -111,13 +111,13 @@ Henüz kendi verileriniz yoksa, bu veri kümelerinden birini deneyin:
 
 |Senaryo|Model türü|Veri|Etiketle|Özellikler|
 |-|-|-|-|-|
-|Fiyat tahmini|Regresyon|[taxı tarifeli havayolu verileri](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tarifeli havayolu|Seyahat süresi, uzaklık|
-|Anomali algılama|İkili sınıflandırma|[ürün satış verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ürün satışları|Başından|
-|Yaklaşım analizi|İkili sınıflandırma|[Web sitesi açıklama verileri](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiket (negatif yaklaşım olduğunda 0, pozitif olduğunda 1)|Açıklama, yıl|
-|Sahtekarlık algılama|İkili sınıflandırma|[kredi kartı verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Sınıf (sahte olduğunda 1, aksi durumda 0)|Miktar, v1-V28 (anonimleştirilmiş Özellikler)|
-|Metin sınıflandırması|Birden çok Lass sınıflandırması|[GitHub sorun verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Alan|Başlık, açıklama|
+|Fiyat tahmini|regresyon|[taxı tarifeli havayolu verileri](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tarifeli havayolu|Seyahat süresi, uzaklık|
+|Anomali algılama|ikili sınıflandırma|[ürün satış verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ürün satışları|Başından|
+|Yaklaşım Analizi|ikili sınıflandırma|[Web sitesi açıklama verileri](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiket (negatif yaklaşım olduğunda 0, pozitif olduğunda 1)|Açıklama, yıl|
+|Sahtekarlık algılama|ikili sınıflandırma|[kredi kartı verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Sınıf (sahte olduğunda 1, aksi durumda 0)|Miktar, v1-V28 (anonimleştirilmiş Özellikler)|
+|Metin sınıflandırması|birden çok Lass sınıflandırması|[GitHub sorun verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Alan|Başlık, açıklama|
 
-## <a name="train"></a>Eğitim
+## <a name="train"></a>eğit
 
 Senaryonuzu, verilerinizi ve etiketini seçtikten sonra model Oluşturucu modeli izleyin.
 
@@ -127,11 +127,11 @@ Eğitim, model Oluşturucu 'nun, senaryonuza yönelik soruların nasıl yanıtla
 
 Model Oluşturucu otomatik makine öğrenimi (Otomatikml) kullandığından, eğitim sırasında sizin için herhangi bir giriş veya ayarlama gerekmez.
 
-## <a name="evaluate"></a>değerlendirmesini
+## <a name="evaluate"></a>Değerlendirmesini
 
 Değerlendirme, eğitilen modeli kullanarak yeni test verileriyle tahminleri yapabilir ve daha sonra tahmine göre ne kadar iyi olduğunu ölçmeye yönelik bir işlemdir.
 
-Model Oluşturucu eğitim verilerini bir eğitim kümesine ve bir test kümesine böler. Eğitim verileri (% 80) modelinizi ve test verilerini eğiteetmek için kullanılır (% 20) , modelinizi değerlendirmek için geri tutulur. Model Oluşturucu, modelin ne kadar iyi olduğunu ölçmek için ölçümleri kullanır. Kullanılan belirli ölçümler modelin türüne bağlıdır. Daha fazla bilgi için bkz. [model değerlendirme ölçümleri](resources/metrics.md).
+Model Oluşturucu eğitim verilerini bir eğitim kümesine ve bir test kümesine böler. Eğitim verileri (%80) modelinizi ve test verilerini eğiteetmek için kullanılır (%20) , modelinizi değerlendirmek için geri tutulur. Model Oluşturucu, modelin ne kadar iyi olduğunu ölçmek için ölçümleri kullanır. Kullanılan belirli ölçümler modelin türüne bağlıdır. Daha fazla bilgi için bkz. [model değerlendirme ölçümleri](resources/metrics.md).
 
 ## <a name="improve"></a>Enizi
 

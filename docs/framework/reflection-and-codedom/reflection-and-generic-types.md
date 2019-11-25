@@ -4,6 +4,7 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
+- cpp
 helpviewer_keywords:
 - generics [.NET Framework], reflection emit
 - reflection emit, generic types
@@ -15,15 +16,15 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-ms.openlocfilehash: b4d36cb04494b01f8864ec36639ab33339d4b087
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0a7d38c8177aa8f2c5f45dcc62a0ae6e5aaca2a7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130079"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975445"
 ---
 # <a name="reflection-and-generic-types"></a>Yansıma ve Genel Türler
-<a name="top"></a>Yansıma görünüm noktasından, genel bir tür ve sıradan bir tür arasındaki fark, genel bir türün bir tür parametreleri kümesiyle (genel tür tanımı ise) veya tür bağımsız değişkenlerine (oluşturulmuş bir tür ise) ilişkilendirilme türüdür. Genel bir yöntem aynı şekilde sıradan bir yöntemden farklıdır.  
+Yansıma görünüm noktasından, genel bir tür ve sıradan bir tür arasındaki fark, genel bir türün bir tür parametreleri kümesiyle (genel tür tanımı ise) veya tür bağımsız değişkenlerine (oluşturulmuş bir tür ise) ilişkilendirilme türüdür. Genel bir yöntem aynı şekilde sıradan bir yöntemden farklıdır.  
   
  Yansımanın genel türleri ve yöntemleri nasıl işlediğini anlamak için iki anahtar vardır:  
   
@@ -39,20 +40,7 @@ ms.locfileid: "73130079"
  Burada ele alınan yöntemleri gösteren kod için bkz. [nasıl yapılır: yansıma Ile genel türleri İnceleme ve örnek oluşturma](how-to-examine-and-instantiate-generic-types-with-reflection.md).  
   
  Aşağıdaki tartışmada, tür parametreleri ve bağımsız değişkenler ile açık veya kapalı oluşturulmuş türler arasındaki fark gibi genel türlerde terminoloji hakkında bilgi sahibi olduğu varsayılır. Daha fazla bilgi için bkz. [Genel türler](../../standard/generics/index.md).  
-  
- Bu genel bakış aşağıdaki bölümlerden oluşur:  
-  
-- [Bu genel bir tür veya yöntem mi?](#is_this_a_generic_type_or_method)  
-  
-- [Kapalı genel türler üretiliyor](#generating_closed_generic_types)  
-  
-- [Tür bağımsız değişkenleri ve tür parametreleri inceleniyor](#examining_type_arguments)  
-  
-- [Invaryantlar](#invariants)  
-  
-- [İlgili konular](#related_topics)  
-  
-<a name="is_this_a_generic_type_or_method"></a>   
+
 ## <a name="is-this-a-generic-type-or-method"></a>Bu genel bir tür veya yöntem mi?  
  Bir <xref:System.Type>örneğiyle temsil edilen bilinmeyen bir türü incelemek için yansıma kullandığınızda, bilinmeyen türün genel olup olmadığını anlamak için <xref:System.Type.IsGenericType%2A> özelliğini kullanın. Tür genel ise `true` döndürür. Benzer şekilde, <xref:System.Reflection.MethodInfo> sınıfının bir örneğiyle temsil edilen bilinmeyen bir yöntemi incelediğinizde, yöntemin genel olup olmadığını anlamak için <xref:System.Reflection.MethodBase.IsGenericMethod%2A> özelliğini kullanın.  
   
@@ -62,24 +50,18 @@ ms.locfileid: "73130079"
  Genel tür ve yöntem tanımları, instantiable türlerin oluşturulduğu şablonlardır. .NET Framework sınıf kitaplığındaki <xref:System.Collections.Generic.Dictionary%602>gibi genel türler genel tür tanımlardır.  
   
 ### <a name="is-the-type-or-method-open-or-closed"></a>Tür veya yöntem açık veya kapalı mı?  
- Tüm kapsayan türlerin tür parametreleri de dahil olmak üzere, instantiable türleri tüm tür parametreleri için kullanılıyorsa, genel tür veya yöntem kapalıdır. Yalnızca kapalıysa bir genel türün örneğini oluşturabilirsiniz. <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> özelliği, bir tür açıksa `true` döndürür. Yöntemler için <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> yöntemi aynı işlevi gerçekleştirir.  
-  
- [Başa dön](#top)  
-  
-<a name="generating_closed_generic_types"></a>   
+ Tüm kapsayan türlerin tür parametreleri de dahil olmak üzere, instantiable türleri tüm tür parametreleri için kullanılıyorsa, genel tür veya yöntem kapalıdır. Yalnızca kapalıysa bir genel türün örneğini oluşturabilirsiniz. <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> özelliği, bir tür açıksa `true` döndürür. Yöntemler için <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> yöntemi aynı işlevi gerçekleştirir.   
+
 ## <a name="generating-closed-generic-types"></a>Kapalı genel türler üretiliyor  
  Genel bir tür veya yöntem tanımınız olduktan sonra, kapalı bir genel yöntem için bir <xref:System.Reflection.MethodInfo> oluşturmak üzere kapalı bir genel tür veya <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> yöntemi oluşturmak için <xref:System.Type.MakeGenericType%2A> yöntemini kullanın.  
   
 ### <a name="getting-the-generic-type-or-method-definition"></a>Genel tür veya yöntem tanımını alma  
  Genel tür veya yöntem tanımı olmayan açık bir genel tür veya yönteminiz varsa, bunun örneklerini oluşturamazsınız ve eksik olan tür parametrelerini sağlayamazsınız. Genel bir tür veya yöntem tanımınız olmalıdır. Genel tür tanımını almak için <xref:System.Type.GetGenericTypeDefinition%2A> yöntemini veya genel yöntem tanımını elde etmek için <xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A> metodunu kullanın.  
   
- Örneğin, `Dictionary<int, string>` temsil eden bir <xref:System.Type> nesneniz varsa (Visual Basic ' de`Dictionary(Of Integer, String)`) ve türü `Dictionary<string, MyClass>`oluşturmak istiyorsanız <xref:System.Type.GetGenericTypeDefinition%2A> öğesini temsil eden bir <xref:System.Type> almak için `Dictionary<TKey, TValue>` yöntemini kullanabilirsiniz <xref:System.Type.MakeGenericType%2A> `Dictionary<int, MyClass>`temsil eden bir <xref:System.Type> üretme yöntemi.  
+ Örneğin, `Dictionary<int, string>` temsil eden bir <xref:System.Type> nesneniz varsa (Visual Basic 'de`Dictionary(Of Integer, String)`) ve türü `Dictionary<string, MyClass>`oluşturmak istiyorsanız <xref:System.Type.GetGenericTypeDefinition%2A> öğesini temsil eden bir <xref:System.Type> almak için `Dictionary<TKey, TValue>` yöntemini kullanarak <xref:System.Type.MakeGenericType%2A> temsil eden bir <xref:System.Type> üretebilirsiniz.  
   
- Genel tür olmayan bir açık genel tür örneği için, bu konunun devamındaki "tür parametresi veya tür bağımsız değişkeni" başlığına bakın.  
-  
- [Başa dön](#top)  
-  
-<a name="examining_type_arguments"></a>   
+ Genel tür olmayan bir açık genel tür örneği için, bu konunun devamındaki "tür parametresi veya tür bağımsız değişkeni" başlığına bakın.   
+
 ## <a name="examining-type-arguments-and-type-parameters"></a>Tür bağımsız değişkenleri ve tür parametreleri inceleniyor  
  Bir genel türün tür parametrelerini veya tür bağımsız değişkenlerini temsil eden <xref:System.Type> nesnelerinin bir dizisini almak için <xref:System.Type.GetGenericArguments%2A?displayProperty=nameWithType> yöntemini kullanın ve bir genel yöntem için aynı yapmak için <xref:System.Reflection.MethodInfo.GetGenericArguments%2A?displayProperty=nameWithType> metodunu kullanın.  
   
@@ -132,17 +114,11 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  Bir tür parametresinin birlikte değişken veya değişken karşıtı olup olmadığını öğrenmek için, <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> maskesini <xref:System.Type.GenericParameterAttributes%2A> özelliği tarafından döndürülen <xref:System.Reflection.GenericParameterAttributes> değerine uygulayın. Sonuç <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, tür parametresi sabit olur. Bkz. [Kovaryans ve değişken varyansı](../../standard/generics/covariance-and-contravariance.md).  
   
 #### <a name="special-constraints"></a>Özel kısıtlamalar  
- Bir tür parametresinin özel kısıtlamalarını öğrenmek için, <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> maskesini <xref:System.Type.GenericParameterAttributes%2A> özelliği tarafından döndürülen <xref:System.Reflection.GenericParameterAttributes> değerine uygulayın. Sonuç <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, özel kısıtlama yoktur. Bir tür parametresi, bir başvuru türü, null yapılamayan bir değer türü ve parametresiz bir oluşturucuya sahip olacak şekilde kısıtlanabilir.  
-  
- [Başa dön](#top)  
-  
-<a name="invariants"></a>   
+ Bir tür parametresinin özel kısıtlamalarını öğrenmek için, <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> maskesini <xref:System.Type.GenericParameterAttributes%2A> özelliği tarafından döndürülen <xref:System.Reflection.GenericParameterAttributes> değerine uygulayın. Sonuç <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, özel kısıtlama yoktur. Bir tür parametresi, bir başvuru türü, null yapılamayan bir değer türü ve parametresiz bir oluşturucuya sahip olacak şekilde kısıtlanabilir.    
+
 ## <a name="invariants"></a>Invaryantlar  
  Genel türler için yansımayla ilgili yaygın koşullara yönelik sabit koşulların bir tablosu için bkz. <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>. Genel yöntemlerle ilgili ek terimler için bkz. <xref:System.Reflection.MethodBase.IsGenericMethod%2A?displayProperty=nameWithType>.  
-  
- [Başa dön](#top)  
-  
-<a name="related_topics"></a>   
+
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  

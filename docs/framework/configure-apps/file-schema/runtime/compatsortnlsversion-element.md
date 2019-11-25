@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-ms.openlocfilehash: f13265e2056c8eca62cd510154dd7c096eeabb00
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5de760fe07283ddee36b3475fa0975c8d46776e5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73117674"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969253"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > öğesi
 Çalışma zamanının, dize karşılaştırmaları yaparken eski sıralama düzenlerini kullanması gerektiğini belirtir.  
@@ -55,7 +55,7 @@ ms.locfileid: "73117674"
 |`runtime`|Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework 4 ' te <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> sınıfı tarafından gerçekleştirilen dize karşılaştırma, sıralama ve büyük/küçük harf işlemleri Unicode 5,1 standardına uygun olduğundan, <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> ve <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> gibi dize karşılaştırma yöntemlerinin sonuçları, önceki ' nin önceki sürümlerinden farklı olabilir. .NET Framework. Uygulamanız eski davranışa bağımlıysa, uygulamanızın yapılandırma dosyasına `<CompatSortNLSVersion>` öğesini ekleyerek .NET Framework 3,5 ve önceki sürümlerde kullanılan dize karşılaştırma ve sıralama kurallarını geri yükleyebilirsiniz.  
+ .NET Framework 4 ' te <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> sınıfı tarafından gerçekleştirilen dize karşılaştırma, sıralama ve büyük/küçük harf işlemleri Unicode 5,1 standardına uygun olduğundan, <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> ve <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> gibi dize karşılaştırma yöntemlerinin sonuçları .NET Framework önceki sürümlerinden farklı olabilir. Uygulamanız eski davranışa bağımlıysa, uygulamanızın yapılandırma dosyasına `<CompatSortNLSVersion>` öğesini ekleyerek .NET Framework 3,5 ve önceki sürümlerde kullanılan dize karşılaştırma ve sıralama kurallarını geri yükleyebilirsiniz.  
   
 > [!IMPORTANT]
 > Eski dize karşılaştırma ve sıralama kurallarını geri yüklemek, sort00001000.dll dinamik bağlantı kitaplığının yerel sistemde kullanılabilir olmasını da gerektirir.  
@@ -68,15 +68,15 @@ ms.locfileid: "73117674"
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- .NET Framework 4 ' te örneği çalıştırdığınızda aşağıdaki çıktıyı görüntüler.  
+ .NET Framework 4 ' te örneği çalıştırdığınızda aşağıdaki çıktıyı görüntüler:
   
-```  
+```console
 sta follows a in the sort order.  
 ```  
   
- Bu, örneği .NET Framework 3,5 ' de çalıştırdığınızda görüntülenen çıktıdan tamamen farklıdır.  
+ Bu, örneği .NET Framework 3,5 ' de çalıştırdığınızda görüntülenen çıktıdan tamamen farklıdır:
   
-```  
+```console
 sta equals a in the sort order.  
 ```  
   

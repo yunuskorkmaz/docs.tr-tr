@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 450463100782f98b6ded0781b1d3c19b0db97534
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: d6d471cd27f35de6325a130e6c909d13cb1dcc85
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151770"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972735"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Alfabetik Listelenmiş C# Derleyici Seçenekleri
 
@@ -39,7 +39,7 @@ Aşağıdaki derleyici seçenekleri alfabetik olarak sıralanır. Kategorik bir 
 |-katıştır|Tüm kaynak dosyalarını PDB 'ye ekleyin.|
 |-Embed:\<dosya listesi >|PDB 'ye belirli dosyaları ekleyin.|
 |-errorendlocation|Her hatanın bitiş konumunun çıkış satırı ve sütunu.|
-|-hata günlüğü\<: Dosya >|Tüm derleyici ve çözümleyici tanılamayı günlüğe kaydetmek için bir dosya belirtin.|
+|-hata günlüğü:\<Dosya >|Tüm derleyici ve çözümleyici tanılamayı günlüğe kaydetmek için bir dosya belirtin.|
 |[-errorreport](errorreport-compiler-option.md)|İç derleyici hatalarının nasıl işleneceğini belirtir: Prompt, Send veya None. Varsayılan değer None ' dır.|
 |[-filealign](filealign-compiler-option.md)|Çıkış dosyası bölümleri için kullanılan hizalamayı belirtir.|
 |[-fullpaths](fullpaths-compiler-option.md)|Derleyicinin tam olarak nitelenmiş yollar oluşturmasına neden olur.|
@@ -48,7 +48,7 @@ Aşağıdaki derleyici seçenekleri alfabetik olarak sıralanır. Kategorik bir 
 |-artımlı|Artımlı derlemeyi [eski] izin vermez.|
 |[-keycontainer](keycontainer-compiler-option.md)|Bir tanımlayıcı ad anahtar kapsayıcısı belirtir.|
 |[-keyfile](keyfile-compiler-option.md)|Tanımlayıcı ad anahtar dosyasını belirtir.|
-|[-langversion:\<dize >](langversion-compiler-option.md)|Dil sürümünü belirtin: Varsayılan, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7,1, 7,2, 7,3 veya en son |
+|[-langversion:\<dize >](langversion-compiler-option.md)|Dil sürümünü belirtin: varsayılan, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7,1, 7,2, 7,3 veya en son |
 |[-lib](lib-compiler-option.md)|Başvuruların aranacağı ek dizinleri belirtir.|
 |[-link](link-compiler-option.md)|Belirtilen derlemelerdeki COM türü bilgilerini proje için kullanılabilir hale getirir.|
 |[-linkresource](linkresource-compiler-option.md)|Belirtilen kaynağı bu derlemeye bağlar.|
@@ -90,5 +90,5 @@ Aşağıdaki derleyici seçenekleri alfabetik olarak sıralanır. Kategorik bir 
 
 - [C# Derleyici Seçenekleri](index.md)
 - [Kategorilere Göre Listelenen C# Derleyici Seçenekleri](listed-by-category.md)
-- [Nasıl yapılır: Visual Studio komut satırı için ortam değişkenlerini ayarlama](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [\<Derleyici > öğesi](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [Visual Studio komut satırı için ortam değişkenlerini ayarlama](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [\<derleyici > öğesi](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

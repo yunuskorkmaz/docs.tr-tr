@@ -4,12 +4,12 @@ description: Bu öğreticide, Web sitesi açıklamalarından yaklaşımı sını
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 454b9c94d717d7af098ee982d9eaffe18f1c347c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1b5a3f6c7d70c95916b99d386924347642e6d7e3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774413"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974771"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Öğretici: ML.NET 'de ikili sınıflandırmayla Web sitesi açıklamalarını çözümleyin
 
@@ -67,7 +67,7 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
 1. Ardından, giriş verileriniz ve tahminlerinizi için sınıflar oluşturun. Projenize yeni bir sınıf ekleyin:
 
-    - **Çözüm Gezgini**, projeye sağ tıklayın ve ardından  > **Yeni öğe** **Ekle**' yi seçin.
+    - **Çözüm Gezgini**, projeye sağ tıklayın ve ardından > **Yeni öğe** **Ekle** ' yi seçin.
 
     - **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *SentimentData.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 
@@ -80,6 +80,7 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
     [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
 ### <a name="how-the-data-was-prepared"></a>Verilerin nasıl hazırlandığını
+
 `SentimentData`giriş veri kümesi sınıfı, Kullanıcı yorumları için bir `string` (`SentimentText`) ve bir`Sentiment``bool` (pozitif) ya da 0 (negatif) değeri için bir değer içerir. Her iki alana de eklenen [Loadcolumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) öznitelikleri vardır ve bu, her alanın veri dosyası sırasını açıklar.  Ayrıca, `Sentiment` özelliğinin, `Label` alanı olarak belirlemek için [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A) özniteliği vardır. Aşağıdaki örnek dosya bir başlık satırına sahip değildir ve şuna benzer:
 
 |Sentimentmetni                         |Yaklaşım (etiket) |
@@ -96,9 +97,10 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 Bu öğretici için en önemli özellik `Prediction` ' dır.
 
 ## <a name="load-the-data"></a>Verileri yükleme
+
 ML.NET içindeki veriler [ıdataview sınıfı](xref:Microsoft.ML.IDataView)olarak temsil edilir. `IDataView`, tablo verilerini (sayısal ve metin) tanımlamaya yönelik esnek ve verimli bir yoldur. Veriler bir metin dosyasından veya gerçek zamanlı olarak (örneğin, SQL veritabanı veya günlük dosyaları) `IDataView` nesnesine yüklenebilir.
 
-[Mlcontext sınıfı](xref:Microsoft.ML.MLContext) tüm ml.NET işlemleri için bir başlangıç noktasıdır. @No__t_0 başlatmak, model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ML.NET ortamı oluşturur. Bu, kavramsal olarak, Entity Framework `DBContext` ' a benzer.
+[Mlcontext sınıfı](xref:Microsoft.ML.MLContext) tüm ml.NET işlemleri için bir başlangıç noktasıdır. `mlContext` başlatmak, model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ML.NET ortamı oluşturur. Bu, kavramsal olarak, Entity Framework `DBContext` ' a benzer.
 
 Uygulamayı hazırlayın ve sonra verileri yükleyin:
 

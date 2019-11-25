@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: fe7704b9366bf46f0c9965f78ce441000ead6334
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1ac8964f915206205d5c9e6ab782fcaa59bf2a99
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460785"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975724"
 ---
 # <a name="control-authoring-overview"></a>Denetim Yazımına Genel Bakış
 
@@ -36,7 +36,7 @@ Tarihsel olarak, var olan bir denetimden özelleştirilmiş bir deneyim almak is
   > [!NOTE]
   > <xref:System.Windows.Controls.RadioButton> bir <xref:System.Windows.DataTemplate>kullanabilse de, bu örnekte <xref:System.Windows.DataTemplate> yeterli değildir.  <xref:System.Windows.DataTemplate>, bir denetimin içeriğinin görünümünü tanımlar. <xref:System.Windows.Controls.RadioButton>söz konusu olduğunda içerik, <xref:System.Windows.Controls.RadioButton> seçili olup olmadığını gösteren dairenin sağında görüntülenir.  Trafik ışığı örneğinde radyo düğmesi yalnızca "hafif" bir daire olmalıdır. Durma ışığı için görünüm gereksinimi <xref:System.Windows.Controls.RadioButton>varsayılan görünüşünün dışında olduğundan, <xref:System.Windows.Controls.ControlTemplate>yeniden tanımlanması gerekir.  Genel olarak <xref:System.Windows.DataTemplate> bir denetimin içeriğini (veya verilerini) tanımlamak için kullanılır ve bir denetimin nasıl yapılandırıldığını tanımlamak için bir <xref:System.Windows.Controls.ControlTemplate> kullanılır.
 
-- **Tetikleyiciler.** <xref:System.Windows.Trigger>, bir denetimin görünümünü ve davranışını yeni bir denetim oluşturmadan dinamik olarak değiştirmenize olanak sağlar. Örneğin, uygulamanızda birden çok <xref:System.Windows.Controls.ListBox> denetimine sahip olduğunuzu ve her bir <xref:System.Windows.Controls.ListBox> öğelerin seçildiklerinde kalın ve kırmızı olmasını istediğinizi varsayalım. İlk işlem, <xref:System.Windows.Controls.ListBox> devralan bir sınıf oluşturabilir ve seçilen öğenin görünümünü değiştirmek için <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> metodunu geçersiz kılabilir, ancak seçilen öğenin görünümünü değiştiren bir <xref:System.Windows.Controls.ListBoxItem> stiline tetikleyici eklemek daha iyi bir yaklaşımdır. . Tetikleyici, özellik değerlerini değiştirmenize veya bir özelliğin değerine göre eylem yapmanıza olanak sağlar. Bir <xref:System.Windows.EventTrigger>, bir olay gerçekleştiğinde eylemler gerçekleştirmenizi sağlar.
+- **Tetikleyiciler.** <xref:System.Windows.Trigger>, bir denetimin görünümünü ve davranışını yeni bir denetim oluşturmadan dinamik olarak değiştirmenize olanak sağlar. Örneğin, uygulamanızda birden çok <xref:System.Windows.Controls.ListBox> denetimine sahip olduğunuzu ve her bir <xref:System.Windows.Controls.ListBox> öğelerin seçildiklerinde kalın ve kırmızı olmasını istediğinizi varsayalım. İlk işlem, <xref:System.Windows.Controls.ListBox> devralan bir sınıf oluşturabilir ve seçilen öğenin görünümünü değiştirmek için <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> metodunu geçersiz kılabilir, ancak seçilen öğenin görünümünü değiştiren bir <xref:System.Windows.Controls.ListBoxItem> stiline tetikleyici eklemek daha iyi bir yaklaşımdır. Tetikleyici, özellik değerlerini değiştirmenize veya bir özelliğin değerine göre eylem yapmanıza olanak sağlar. Bir <xref:System.Windows.EventTrigger>, bir olay gerçekleştiğinde eylemler gerçekleştirmenizi sağlar.
 
 Stiller, şablonlar ve Tetikleyiciler hakkında daha fazla bilgi için bkz. [Stil oluşturma ve şablon](styling-and-templating.md)oluşturma.
 
@@ -187,7 +187,7 @@ Veri bağlama hakkında daha fazla bilgi için bkz. [veri bağlamaya genel bakı
 
 ### <a name="design-for-designers"></a>Tasarımcılar için tasarım
 
-[!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] özel WPF denetimlerine yönelik destek almak için (örneğin, Özellikler penceresi ile özellik düzenlemesi), bu yönergeleri izleyin.  [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]için geliştirme hakkında daha fazla bilgi için bkz. [Visual Studio 'DA xaml tasarlama](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
+Visual Studio için WPF Tasarımcısında özel WPF denetimleri için destek almak üzere (örneğin, Özellikler penceresi ile özellik düzenlemesi), bu yönergeleri izleyin.  WPF Tasarımcısı için geliştirme hakkında daha fazla bilgi için bkz. [Visual Studio 'DA xaml tasarlama](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
 
 #### <a name="dependency-properties"></a>Bağımlılık Özellikleri
 

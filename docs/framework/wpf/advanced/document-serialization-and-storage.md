@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: d56968ad390d4681b3c1bb1580a864f9a9f0e10c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ff0555105f219db5ed891c02400b0587c825718e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424297"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974655"
 ---
 # <a name="document-serialization-and-storage"></a>Belge Serileştirme ve Depolama
 
@@ -43,7 +43,7 @@ Uygulamalar genellikle kullanıcının belgeleri farklı bir ortama veya farklı
 
 ### <a name="xps-print-path"></a>XPS yazdırma yolu
 
-Microsoft .NET Framework XPS yazdırma yolu Ayrıca, Yazdırma çıktısı aracılığıyla belge yazmak için genişletilebilir bir mekanizma sağlar.  XPS hem belge dosyası biçimi olarak hem de [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]için yerel yazdırma kuyruğu biçiminde hizmet verir.  XPS belgeleri, bir ara biçime dönüştürmeye gerek olmadan doğrudan XPS uyumlu yazıcılara gönderilebilir.  Yazdırma yolu çıkış seçenekleri ve özellikleri hakkında daha fazla bilgi için bkz. [yazdırmayla Ilgili genel bakış](printing-overview.md) .
+Microsoft .NET Framework XPS yazdırma yolu Ayrıca, Yazdırma çıktısı aracılığıyla belge yazmak için genişletilebilir bir mekanizma sağlar.  XPS hem belge dosyası biçimi hem de Windows Vista için yerel yazdırma kuyruğu biçimidir.  XPS belgeleri, bir ara biçime dönüştürmeye gerek olmadan doğrudan XPS uyumlu yazıcılara gönderilebilir.  Yazdırma yolu çıkış seçenekleri ve özellikleri hakkında daha fazla bilgi için bkz. [yazdırmayla Ilgili genel bakış](printing-overview.md) .
 
 <a name="PluginSerializers"></a>
 
@@ -55,7 +55,7 @@ Eklenti serileştiricileri, derleme zamanında her olası biçim için doğrudan
 
 ### <a name="using-a-plug-in-serializer"></a>Eklenti serileştirici kullanma
 
-Eklenti serileştiricileri kullanımı basittir.  <xref:System.Windows.Documents.Serialization.SerializerProvider> sınıfı, sistemde yüklü olan her eklenti için bir <xref:System.Windows.Documents.Serialization.SerializerDescriptor> nesnesini numaralandırır.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> özelliği, geçerli yapılandırmaya bağlı olarak yüklenen eklentileri filtreler ve seri hale getiricinin uygulama tarafından yüklenip kullanılabileceğini doğrular.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor> Ayrıca, <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> ve <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>gibi diğer özellikleri de sağlar; bu da uygulamanın, kullanıcının kullanılabilir çıkış biçimi için bir serileştirici seçmesini istemek için kullanabileceği.  XPS için varsayılan bir eklenti serileştirici .NET Framework ile sağlanır ve her zaman numaralandırılır.  Kullanıcı bir çıkış biçimi seçtikten sonra, <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> yöntemi belirli biçim için bir <xref:System.Windows.Documents.Serialization.SerializerWriter> oluşturmak için kullanılır.  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> daha sonra yöntem, belge akışını veri deposuna çıkarmak için çağrılabilir.
+Eklenti serileştiricileri kullanımı basittir.  <xref:System.Windows.Documents.Serialization.SerializerProvider> sınıfı, sistemde yüklü olan her eklenti için bir <xref:System.Windows.Documents.Serialization.SerializerDescriptor> nesnesini numaralandırır.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> özelliği, geçerli yapılandırmaya bağlı olarak yüklenen eklentileri filtreler ve seri hale getiricinin uygulama tarafından yüklenip kullanılabileceğini doğrular.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor> Ayrıca, <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> ve <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>gibi diğer özellikleri de sağlar; bu da uygulamanın, kullanıcının kullanılabilir çıkış biçimi için bir serileştirici seçmesini istemek için kullanabileceği.  XPS için varsayılan bir eklenti serileştirici .NET Framework ile sağlanır ve her zaman numaralandırılır.  Kullanıcı bir çıkış biçimi seçtikten sonra, <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> yöntemi belirli biçim için bir <xref:System.Windows.Documents.Serialization.SerializerWriter> oluşturmak için kullanılır.  <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A?displayProperty=nameWithType> yöntemi daha sonra belge akışını veri deposuna çıkarmak için çağrılabilir.
 
 Aşağıdaki örnek, bir "PlugInFileFilter" özelliğinde <xref:System.Windows.Documents.Serialization.SerializerProvider> yöntemini kullanan bir uygulamayı gösterir.  PlugInFileFilter yüklü eklentileri numaralandırır ve bir <xref:Microsoft.Win32.SaveFileDialog>için kullanılabilir dosya seçenekleriyle bir filtre dizesi oluşturur.
 

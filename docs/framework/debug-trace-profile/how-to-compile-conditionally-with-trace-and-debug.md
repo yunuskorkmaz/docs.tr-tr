@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06d1ef8e1508aefa8c9ed9327b89f58ff6976fa
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a2cb2ef473d6870da47e0e4c00fecf6bd60707f3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052758"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975578"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme
 Geliştirme sırasında bir uygulamada hata ayıklarken, hem izleme hem de hata ayıklama çıkışı Visual Studio 'daki çıkış penceresine gider. Ancak, dağıtılmış bir uygulamada izleme özelliklerini dahil etmek için, izlenen uygulamalarınızı **Trace** derleyici yönergesi etkinken derlemeniz gerekir. Bu, izleme kodunun uygulamanızın yayın sürümüne derlenmesini sağlar. **İzleme** yönergesini etkinleştirmezseniz, derleme sırasında tüm izleme kodu yok sayılır ve dağıtacağınız yürütülebilir koda dahil edilmez.  
   
  Hem izleme hem de hata ayıklama yöntemlerinin ilişkili koşullu öznitelikleri vardır. Örneğin, izlemenin koşullu özniteliği **true**ise, tüm Trace deyimleri bir derlemeye (derlenmiş bir. exe dosyası veya. dll) dahil edilir; **Trace** Conditional özniteliği **false**ise, Trace deyimleri dahil edilmez.  
   
- Bir derleme veya her ikisi için de **Trace** veya **Debug** koşullu özniteliği açık olabilir ya da hiçbiri. Bu nedenle, dört tür derleme vardır: **Hata ayıklama**, **izleme**, her ikisi de veya hiçbiri. Üretim dağıtımı için bazı yayın yapıları ne içermez; Çoğu hata ayıklama derlemesi her ikisini de içerir.  
+ Bir derleme veya her ikisi için de **Trace** veya **Debug** koşullu özniteliği açık olabilir ya da hiçbiri. Bu nedenle, dört tür derleme vardır: **hata ayıklama**, **izleme**, her ikisi de veya hiçbiri. Üretim dağıtımı için bazı yayın yapıları ne içermez; Çoğu hata ayıklama derlemesi her ikisini de içerir.  
   
  Uygulamanız için derleyici ayarlarını birkaç şekilde belirtebilirsiniz:  
   
@@ -59,7 +59,7 @@ Geliştirme sırasında bir uygulamada hata ayıklarken, hem izleme hem de hata 
   
      Yukarıdaki örneklerde kullanılan koşullu derleme yönergelerinin anlamı aşağıdaki gibidir:  
   
-    |Yönergesi|Açıklama|  
+    |Deki|Açıklama|  
     |---------------|-------------|  
     |`vbc`|Visual Basic derleyici|  
     |`csc`|C#Derleyici|  
@@ -67,7 +67,7 @@ Geliştirme sırasında bir uygulamada hata ayıklarken, hem izleme hem de hata 
     |`-d:`|Koşullu derleme sembolünü tanımlar|  
   
     > [!NOTE]
-    > Büyük harflerle TRACE veya DEBUG yazmanız gerekir. Koşullu derleme komutları hakkında daha fazla bilgi için, komut `vbc /?` isteminde (Visual Basic için) `csc /?` veya ( C#için) girin. Daha fazla bilgi için, bkz. [komut satırından oluşturma](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) veya [komut satırı derleyicisini çağırma](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
+    > Büyük harflerle TRACE veya DEBUG yazmanız gerekir. Koşullu derleme komutları hakkında daha fazla bilgi için, komut isteminde `vbc /?` (Visual Basic için) veya `csc /?` ( C#için) girin. Daha fazla bilgi için, bkz. [komut satırından oluşturma](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) veya [komut satırı derleyicisini çağırma](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>#CONST veya #define kullanarak koşullu derleme gerçekleştirmek için  
   
@@ -79,7 +79,7 @@ Geliştirme sırasında bir uygulamada hata ayıklarken, hem izleme hem de hata 
     ||**#CONST TRACE = false**|İzlemeyi devre dışı bırakır|  
     ||**#CONST DEBUG = true**|Hata ayıklamayı sağlar|  
     ||**#CONST DEBUG = false**|Hata ayıklamayı devre dışı bırakır|  
-    |**C#**|**#define TRACE**|İzlemeyi etkinleştirilir|  
+    |**C#**|**#define Izleme**|İzlemeyi etkinleştirilir|  
     ||**#undef Izleme**|İzlemeyi devre dışı bırakır|  
     ||**hata ayıklama #define**|Hata ayıklamayı sağlar|  
     ||**hata ayıklama #undef**|Hata ayıklamayı devre dışı bırakır|  
@@ -88,7 +88,7 @@ Geliştirme sırasında bir uygulamada hata ayıklarken, hem izleme hem de hata 
   
 Derleyici yönergesini kaynak kodınızdan silin.  
   
-\- veya -  
+\- veya-  
   
 Derleyici yönergesini açıklama.  
   
@@ -98,9 +98,9 @@ Derleyici yönergesini açıklama.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İzleme ve İşaretleme Uygulamaları](tracing-and-instrumenting-applications.md)
-- [Nasıl yapılır: Izleme anahtarları oluşturma, başlatma ve yapılandırma](how-to-create-initialize-and-configure-trace-switches.md)
+- [Nasıl yapılır: İzleme Anahtarları Oluşturma, Başlatma ve Yapılandırma](how-to-create-initialize-and-configure-trace-switches.md)
 - [İzleme Anahtarları](trace-switches.md)
 - [İzleme Dinleyicileri](trace-listeners.md)
-- [Nasıl yapılır: Uygulama koduna Izleme deyimleri ekleme](how-to-add-trace-statements-to-application-code.md)
-- [Nasıl yapılır: Visual Studio komut satırı için ortam değişkenlerini ayarlama](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](how-to-add-trace-statements-to-application-code.md)
+- [Visual Studio komut satırı için ortam değişkenlerini ayarlama](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [Nasıl yapılır: Komut Satırı Derleyicisini Çağırma](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

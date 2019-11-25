@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: model eşleştirme ve ve olarak işleç kullanarak güvenli bir şekilde atama'
+title: Desenler ve as işleçlerini kullanarak güvenli bir şekilde atama
 description: Değişkenleri farklı bir türe güvenle dönüştürmek için model eşleştirme tekniklerini kullanmayı öğrenin. Türleri güvenli bir şekilde dönüştürmek için model eşleştirmeyi ve as işleçlerini da kullanabilirsiniz.
 ms.date: 09/05/2018
 helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 8d090df1338c535b11a7fd3ec32f6d1cb00b338f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 762f8135063f7256ce7a167c65013703d9249039
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739687"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973087"
 ---
-# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Nasıl yapılır: model eşleştirme ve ve olarak işleç kullanarak güvenli bir şekilde atama
+# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Desenler ve as işleçlerini kullanarak güvenli bir şekilde atama
 
 Nesneler çok biçimli olduğundan, bir taban sınıf türü değişkeni türetilmiş bir [türü](../programming-guide/types/index.md)tutmak mümkündür. Türetilmiş türün örnek üyelerine erişmek için değeri türetilmiş türe [dönüştürmek](../programming-guide/types/casting-and-type-conversions.md) gerekir. Ancak, bir atama <xref:System.InvalidCastException>oluşturma riskini oluşturur. C#yalnızca başarılı olacağı zaman bir tür dönüştürme gerçekleştiren [model eşleştirme](../pattern-matching.md) deyimleri sağlar. C#Ayrıca, bir değerin belirli bir türde olup olmadığını test etmek için [de ve işlecini](../language-reference/operators/type-testing-and-cast.md#is-operator) [de sağlar](../language-reference/operators/type-testing-and-cast.md#as-operator) .
 

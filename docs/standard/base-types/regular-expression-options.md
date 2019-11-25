@@ -12,29 +12,29 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 4cc62696cb6589151e3abc59bbea64b693e8b3a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121724"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972108"
 ---
 # <a name="regular-expression-options"></a>Normal İfade Seçenekleri
 
-<a name="Top"></a>Varsayılan olarak, bir giriş dizesinin normal ifade deseninin herhangi bir sabit karakter ile karşılaştırılması büyük/küçük harfe duyarlıdır, normal ifade deseninin boşluk değeri, değişmez boşluk karakterleri olarak yorumlanır ve grupları normal bir ifadede yakalanıyor örtük olarak ve açıkça adlandırılmaktadır. Normal ifade seçeneklerini belirterek, varsayılan normal ifade davranışının bu ve diğer birçok yönlerini değiştirebilirsiniz. Aşağıdaki tabloda listelenen bu seçenekler, normal ifade deseninin bir parçası olarak satır içi olarak dahil edilebilir veya bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıf oluşturucusuna veya statik kalıp eşleştirme yöntemine <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> numaralandırma değeri olarak sağlanabilir.
+Varsayılan olarak, bir giriş dizesinin normal ifade deseninin herhangi bir sabit karakter ile karşılaştırılması büyük/küçük harfe duyarlıdır, normal ifade deseninin boşluk değeri, değişmez boşluk karakterleri olarak yorumlanır ve grupları normal bir ifadede yakalanıyor örtük olarak ve açıkça adlandırılmaktadır. Normal ifade seçeneklerini belirterek, varsayılan normal ifade davranışının bu ve diğer birçok yönlerini değiştirebilirsiniz. Aşağıdaki tabloda listelenen bu seçenekler, normal ifade deseninin bir parçası olarak satır içi olarak dahil edilebilir veya bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıf oluşturucusuna veya statik kalıp eşleştirme yöntemine <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> numaralandırma değeri olarak sağlanabilir.
 
 |RegexOptions üyesi|Satır içi karakter|Efekt|
 |-------------------------|----------------------|------------|
-|<xref:System.Text.RegularExpressions.RegexOptions.None>|Yok|Varsayılan davranışı kullanın. Daha fazla bilgi için bkz. [varsayılan seçenekler](#Default).|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|Büyük küçük harf duyarlı eşleme kullanın. Daha fazla bilgi için bkz. [büyük/küçük harfe duyarsız eşleşme](#Case).|
-|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|`^` ve `$` her satırın başlangıcını ve sonunu (giriş dizesinin başı ve sonu yerine) eşleştirmek için çok satırlı modunu kullanın. Daha fazla bilgi için bkz. [çok satırlı mod](#Multiline).|
-|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Nokta (.) her karakterle (`\n`hariç her karakter yerine) eşleştiğinde tek satırlık modu kullanın. Daha fazla bilgi için bkz. [tekline modu](#Singleline).|
-|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Adsız grupları yakalamayın. Yalnızca geçerli yakalamalar, form `(?<`*adı*`>` alt *ifade*`)`açıkça adlandırılmış veya numaralandırılmış gruplarıdır. Daha fazla bilgi için [yalnızca açık yakalamalar](#Explicit)bölümüne bakın.|
-|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Yok|Normal ifadeyi bir derleme için derleyin. Daha fazla bilgi için bkz. [derlenmiş normal ifadeler](#Compiled).|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Kaçışsız boşluğu düzeninden hariç tutun ve bir sayı işaretinden sonra açıklamaları etkinleştirin (`#`). Daha fazla bilgi için bkz. boşluğu [Yoksay](#Whitespace).|
-|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Yok|Arama yönünü değiştirin. Arama, soldan sağa yerine sağdan sola gider. Daha fazla bilgi için bkz. [sağdan sola mod](#RightToLeft).|
-|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Yok|İfade için ECMAScript uyumlu davranışı etkinleştirin. Daha fazla bilgi için bkz. [ECMAScript eşleştirme davranışı](#ECMAScript).|
-|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|Yok|Dildeki kültürel farklarını yoksayın. Daha fazla bilgi için bkz. [sabit kültür kullanılarak karşılaştırma](#Invariant).|
+|<xref:System.Text.RegularExpressions.RegexOptions.None>|Yok|Varsayılan davranışı kullanın. Daha fazla bilgi için bkz. [varsayılan seçenekler](#default-options).|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|Büyük küçük harf duyarlı eşleme kullanın. Daha fazla bilgi için bkz. [büyük/küçük harfe duyarsız eşleşme](#case-insensitive-matching).|
+|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|`^` ve `$` her satırın başlangıcını ve sonunu (giriş dizesinin başı ve sonu yerine) eşleştirmek için çok satırlı modunu kullanın. Daha fazla bilgi için bkz. [çok satırlı mod](#multiline-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Nokta (.) her karakterle (`\n`hariç her karakter yerine) eşleştiğinde tek satırlık modu kullanın. Daha fazla bilgi için bkz. [tek satırlık mod](#single-line-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Adsız grupları yakalamayın. Yalnızca geçerli yakalamalar, form `(?<`*adı*`>` alt *ifade*`)`açıkça adlandırılmış veya numaralandırılmış gruplarıdır. Daha fazla bilgi için [yalnızca açık yakalamalar](#explicit-captures-only)bölümüne bakın.|
+|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Yok|Normal ifadeyi bir derleme için derleyin. Daha fazla bilgi için bkz. [derlenmiş normal ifadeler](#compiled-regular-expressions).|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Kaçışsız boşluğu düzeninden hariç tutun ve bir sayı işaretinden sonra açıklamaları etkinleştirin (`#`). Daha fazla bilgi için bkz. boşluğu [Yoksay](#ignore-white-space).|
+|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Yok|Arama yönünü değiştirin. Arama, soldan sağa yerine sağdan sola gider. Daha fazla bilgi için bkz. [sağdan sola mod](#right-to-left-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Yok|İfade için ECMAScript uyumlu davranışı etkinleştirin. Daha fazla bilgi için bkz. [ECMAScript eşleştirme davranışı](#ecmascript-matching-behavior).|
+|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|Yok|Dildeki kültürel farklarını yoksayın. Daha fazla bilgi için bkz. [sabit kültür kullanılarak karşılaştırma](#comparison-using-the-invariant-culture).|
 
 ## <a name="specifying-the-options"></a>Seçenekleri belirtme
 
@@ -108,8 +108,6 @@ Salt okunurdur <xref:System.Text.RegularExpressions.Regex.Options%2A?displayProp
 
 Aşağıdaki bölümlerde, .NET içindeki normal ifade tarafından desteklenen seçenekler listelenmektedir.
 
-<a name="Default"></a>
-
 ## <a name="default-options"></a>Varsayılan Seçenekler
 
 <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> seçeneği, hiçbir seçenek belirtilmediğini ve normal ifade altyapısının varsayılan davranışını kullandığını gösterir. Bu, aşağıdakileri içerir:
@@ -135,10 +133,6 @@ Aşağıdaki bölümlerde, .NET içindeki normal ifade tarafından desteklenen s
 
 <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> seçeneği, normal ifade altyapısının varsayılan davranışını temsil ettiğinden, yöntem çağrısında nadiren açıkça belirtilir. Bunun yerine `options` parametresi olmayan bir Oluşturucu veya statik kalıp eşleştirme yöntemi çağırılır.
 
-[Başa dön](#Top)
-
-<a name="Case"></a>
-
 ## <a name="case-insensitive-matching"></a>Büyük/küçük harfe duyarsız eşleşme
 
 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> seçeneği veya `i` satır içi seçeneği, büyük/küçük harfe duyarsız eşleşme sağlar. Varsayılan olarak, geçerli kültürün büyük/küçük harf kuralları kullanılır.
@@ -152,10 +146,6 @@ Aşağıdaki örnek, büyük/küçük harfe duyarsız karşılaştırma sağlama
 
 [!code-csharp[Conceptual.Regex.Language.Options#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/case2.cs#2)]
 [!code-vb[Conceptual.Regex.Language.Options#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/case2.vb#2)]
-
-[Başa dön](#Top)
-
-<a name="Multiline"></a>
 
 ## <a name="multiline-mode"></a>Çok satırlı mod
 
@@ -184,10 +174,6 @@ Aşağıdaki örnek, tek satırlı seçeneğini ayarlamak için `(?m)` satır i�
 [!code-csharp[Conceptual.Regex.Language.Options#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/multiline2.cs#4)]
 [!code-vb[Conceptual.Regex.Language.Options#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/multiline2.vb#4)]
 
-[Başa dön](#Top)
-
-<a name="Singleline"></a>
-
 ## <a name="single-line-mode"></a>Tek satırlık mod
 
 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneği veya `s` inline seçeneği, normal ifade altyapısının giriş dizesini tek bir satırdan oluşan gibi işleme almasına neden olur. Bu, nokta (`.`) dil öğesinin davranışını, yeni satır karakteri için `\n` veya \U000ahariç her karakterle eşleştirmek yerine her karakterle eşleşecek şekilde değiştirerek yapar.
@@ -202,10 +188,6 @@ Aşağıdaki örnek, tek satır modunu etkinleştirmek için `(?s)` satır içi 
 [!code-csharp[Conceptual.Regex.Language.Options#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/singleline1.cs#5)]
 [!code-vb[Conceptual.Regex.Language.Options#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/singleline1.vb#5)]
 
-[Başa dön](#Top)
-
-<a name="Explicit"></a>
-
 ## <a name="explicit-captures-only"></a>Yalnızca açık yakalamalar
 
 Varsayılan olarak, yakalama grupları, normal ifade deseninin parantez kullanılarak tanımlanır. Adlandırılmış gruplara `(?<`*ad*`>`alt *ifade*`)` dil seçeneği tarafından bir ad veya sayı atanır, ancak adlandırılmamış gruplara dizin tarafından erişilebilir. <xref:System.Text.RegularExpressions.GroupCollection> nesnesinde, adlandırılmamış gruplar adlandırılmış gruplardan önce gelmeli.
@@ -216,7 +198,7 @@ Gruplandırma yapıları genellikle yalnızca birden çok dil öğesine nicelik 
 
 yalnızca bir nokta, ünlem işareti veya soru işaretiyle biten cümleleri bir belgeden ayıklamak için tasarlanmıştır; yalnızca elde edilen cümle (<xref:System.Text.RegularExpressions.Match> nesnesi tarafından temsil edilir) ilgilenir. Koleksiyondaki tek sözcükler değildir.
 
-Normal ifade altyapısının hem <xref:System.Text.RegularExpressions.GroupCollection> hem de <xref:System.Text.RegularExpressions.CaptureCollection> koleksiyon nesnelerini doldurması gerektiğinden, daha sonra kullanılmayan grupları yakalama pahalı olabilir. Alternatif olarak, yalnızca geçerli yakalamalarınızın `(?<`*ad*`>` alt *ifade* tarafından belirlenen açıkça adlandırılmış veya numaralandırılmış gruplar olduğunu belirtmek için <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> seçeneğini veya `n` satır içi seçeneğini kullanabilirsiniz @no__t_6 oluşturma.
+Normal ifade altyapısının hem <xref:System.Text.RegularExpressions.GroupCollection> hem de <xref:System.Text.RegularExpressions.CaptureCollection> koleksiyon nesnelerini doldurması gerektiğinden, daha sonra kullanılmayan grupları yakalama pahalı olabilir. Alternatif olarak, yalnızca geçerli yakalamalar açıkça adlandırılmış veya `(?<`*adı*`>` alt *ifade*`)` yapısı tarafından atanan numaralandırılmış grupları belirtmek için <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> seçeneğini veya `n` satır içi seçeneğini kullanabilirsiniz.
 
 Aşağıdaki örnek, <xref:System.Text.RegularExpressions.Regex.Match%2A> yöntemi <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> seçeneği olmadan ve ile çağrıldığında `\b\(?((\w+),?\s?)+[\.!?]\)?` normal ifade deseninin döndürdüğü eşleşmeler hakkındaki bilgileri görüntüler. İlk yöntem çağrısının çıktısı gösterdiği gibi, normal ifade altyapısı <xref:System.Text.RegularExpressions.GroupCollection> ve <xref:System.Text.RegularExpressions.CaptureCollection> koleksiyon nesnelerini yakalanan alt dizeler hakkında bilgilerle tamamen doldurur. İkinci yöntem `options` <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>olarak ayarlandığı için, gruplar hakkındaki bilgileri yakalamaz.
 
@@ -244,10 +226,6 @@ Son olarak, Grup grubuna göre otomatik yakalamaları bastırmak için `(?n:)` s
 [!code-csharp[Conceptual.Regex.Language.Options#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/explicit3.cs#11)]
 [!code-vb[Conceptual.Regex.Language.Options#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/explicit3.vb#11)]
 
-[Başa dön](#Top)
-
-<a name="Compiled"></a>
-
 ## <a name="compiled-regular-expressions"></a>Derlenmiş normal Ifadeler
 
 Varsayılan olarak, .NET 'teki normal ifadeler yorumlanır. Bir <xref:System.Text.RegularExpressions.Regex> nesnesi örneği oluşturulduğunda veya statik bir <xref:System.Text.RegularExpressions.Regex> yöntemi çağrıldığında, normal ifade deseninin bir dizi özel işlem kodları olarak ayrıştırılıp bir yorumlayıcı, normal ifadeyi çalıştırmak için bu işlem kodları kullanır. Bu bir zorunluluğunu getirir içerir: normal ifade altyapısını başlatma maliyeti, çalışma zamanı performansının masrafına göre küçültülebilir.
@@ -269,10 +247,6 @@ Ancak, bu performans geliştirmesi yalnızca aşağıdaki koşullarda oluşur:
 
 > [!NOTE]
 > <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> seçeneği, önceden tanımlanmış derlenmiş normal ifadeler içeren bir özel amaçlı derleme oluşturan <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> yöntemiyle ilgisiz değildir.
-
-[Başa dön](#Top)
-
-<a name="Whitespace"></a>
 
 ## <a name="ignore-white-space"></a>Boşluğu yoksay
 
@@ -302,7 +276,7 @@ Aşağıdaki örnek, aşağıdaki normal ifade düzenlerini tanımlar:
 
 `\b \(? ( (?>\w+) ,?\s? )+  [\.!?] \)? # Matches an entire sentence.`
 
-Bu model, [yalnızca açık yakalamalar](#Explicit) bölümünde tanımlanan düzene benzer, ancak model boşluk boşluğu yoksaymak için <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> seçeneğini kullanır.
+Bu model, [yalnızca açık yakalamalar](#explicit-captures-only) bölümünde tanımlanan düzene benzer, ancak model boşluk boşluğu yoksaymak için <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> seçeneğini kullanır.
 
 [!code-csharp[Conceptual.Regex.Language.Options#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace1.cs#12)]
 [!code-vb[Conceptual.Regex.Language.Options#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace1.vb#12)]
@@ -311,10 +285,6 @@ Aşağıdaki örnek, `(?x)` deseninin boşluk olduğunu yoksaymak için satır i
 
 [!code-csharp[Conceptual.Regex.Language.Options#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace2.cs#13)]
 [!code-vb[Conceptual.Regex.Language.Options#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace2.vb#13)]
-
-[Başa dön](#Top)
-
-<a name="RightToLeft"></a>
 
 ## <a name="right-to-left-mode"></a>Sağdan sola mod
 
@@ -342,10 +312,6 @@ Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmışt
 |`,?`|Sıfır veya bir virgül karakteri eşleştirin.|
 |`\s`|Bir boşluk karakteri ile eşleştirin.|
 |`\d{4}`|Dört ondalık basamağı eşleştirin.|
-
-[Başa dön](#Top)
-
-<a name="ECMAScript"></a>
 
 ## <a name="ecmascript-matching-behavior"></a>ECMAScript eşleştirme davranışı
 
@@ -386,10 +352,6 @@ ECMAScript ve kurallı normal ifadelerin davranışı üç alanda farklılık g�
   |`\0` ardından 0 ile 2 sekizlik basamak|Sekizlik olarak yorumlayın. Örneğin, `\044` her zaman sekizlik bir değer olarak yorumlanır ve "$" anlamına gelir.|Aynı davranış.|
   |`\` sonra 1 ile 9 arasında bir rakam ve ardından ek ondalık basamak yok,|Bir geri başvuru olarak yorumlayın. Örneğin, bir dokuzuncu yakalama grubu mevcut olmasa bile `\9` her zaman geri başvuru 9 anlamına gelir. Yakalama grubu yoksa, normal ifade ayrıştırıcısı bir <xref:System.ArgumentException>oluşturur.|Tek bir ondalık basamak yakalama grubu varsa, bu basamağa geri başvuru. Aksi takdirde, değeri değişmez değer olarak yorumlayın.|
   |`\` sonra 1 ile 9 arasında bir rakam ve ardından ek ondalık basamaklar|Basamakları ondalık değer olarak yorumlayın. Bu yakalama grubu varsa, ifadeyi bir geri başvuru olarak yorumlayın.<br /><br /> Aksi takdirde, önde gelen sekizlik basamakları sekizlik 377 ' e kadar yorumlayın; diğer bir deyişle, yalnızca değerin düşük 8 bitini göz önünde bulundurun. Kalan basamakları değişmez değer olarak yorumlayın. Örneğin, ifadede `\3000`, Grup 300 yakalama varsa, geri başvuru 300 olarak yorumlayın; yakalama grubu 300 yoksa, sekizli 300 ve sonrasında 0 olarak yorumlanır.|Bir yakalamaya başvurabilen ondalık bir değere mümkün olduğunca çok basamak dönüştürerek bir geri başvuru olarak yorumlayın. Herhangi bir basamak dönüştürülemiyorsa, sekizlik basamağı 377 ' e kadar olan önde gelen sekizlik basamakları kullanarak sekizlik olarak yorumlayın; kalan basamakları değişmez değer olarak yorumlayın.|
-
-[Başa dön](#Top)
-
-<a name="Invariant"></a>
 
 ## <a name="comparison-using-the-invariant-culture"></a>Sabit kültür kullanılarak karşılaştırma
 

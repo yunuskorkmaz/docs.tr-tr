@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 663dd7a785200ddbc78cc0cd1fb5b43531982f42
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5803d656d765f3f4fe3039e28b9c06202218fcfc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458949"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973983"
 ---
 # <a name="dependency-properties-overview"></a>Bağımlılık özelliklerine genel bakış
 
@@ -139,7 +139,7 @@ Daha fazla bilgi için bkz. [Stil oluşturma ve şablon](../controls/styling-and
 ### <a name="animations"></a>Animasyonlar
 Bağımlılık özellikleri canlandırılabilirler. Bir animasyon uygulandığında ve çalışırken, animasyon değeri, özelliğin başka türlü herhangi bir değerden (yerel bir değer gibi) daha yüksek bir önceliğe göre çalışır.
 
-Aşağıdaki örnek, bir <xref:System.Windows.Controls.Button> özelliğindeki <xref:System.Windows.Controls.Control.Background%2A> hareketlendirir (Teknik olarak <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Background%2A>olarak boş bir <xref:System.Windows.Media.SolidColorBrush> belirtmek için özellik öğesi söz dizimi kullanılarak canlandırılır), <xref:System.Windows.Media.SolidColorBrush.Color%2A> özelliği doğrudan canlandırılmış).
+Aşağıdaki örnek, bir <xref:System.Windows.Controls.Button> özelliğindeki <xref:System.Windows.Controls.Control.Background%2A> hareketlendirir (Teknik olarak, <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Background%2A>olarak boş bir <xref:System.Windows.Media.SolidColorBrush> belirtmek için özellik öğesi söz dizimi kullanılarak canlandırılır, <xref:System.Windows.Media.SolidColorBrush.Color%2A> özelliği doğrudan canlandırılmış olan özelliktir).
 
 [!code-xaml[PropertiesOvwSupport#MiniAnimate](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#minianimate)]
 
@@ -168,7 +168,7 @@ Aşağıdaki örnek bir bağlamayı gösterir ve önceki bağlama örneğinde g�
 Daha fazla bilgi için bkz. [özellik değeri devralma](property-value-inheritance.md).
 
 ### <a name="wpf-designer-integration"></a>WPF Tasarımcısı tümleştirmesi
-Bağımlılık özellikleri olarak uygulanan özelliklere sahip özel bir denetim, uygun [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] desteğini alır. Bir örnek, doğrudan ve iliştirilmiş bağımlılık özelliklerini **Özellikler** penceresiyle düzenleme olanağıdır. Daha fazla bilgi için bkz. [Denetim yazma genel bakış](../controls/control-authoring-overview.md).
+Bağımlılık özellikleri olarak uygulanan özelliklere sahip özel bir denetim, Visual Studio desteği için uygun WPF tasarımcısını alır. Bir örnek, doğrudan ve iliştirilmiş bağımlılık özelliklerini **Özellikler** penceresiyle düzenleme olanağıdır. Daha fazla bilgi için bkz. [Denetim yazma genel bakış](../controls/control-authoring-overview.md).
 
 ## <a name="dependency-property-value-precedence"></a>Bağımlılık özelliği değer önceliği
 Bir bağımlılık özelliğinin değerini aldığınızda, büyük olasılıkla WPF özellik sistemine katılan diğer özellik tabanlı girdilerden herhangi biri aracılığıyla o özellikte ayarlanmış bir değer elde edersiniz. Bağımlılık özelliği değer önceliği bulunur, böylece özelliklerin değerlerini elde etmek için çeşitli senaryolar öngörülebilir bir şekilde etkileşim kurabilir.

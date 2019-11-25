@@ -9,38 +9,27 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: 7f5969bc6f73b2260ae1ffa4b0026d5b4119ff88
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c589e85a0bbfb3f0b5858698ffb2a294ff88cf2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134266"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973776"
 ---
 # <a name="dataflow-task-parallel-library"></a>Veri Akışı (Görev Paralel Kitaplığı)
-<a name="top"></a>Görev paralel kitaplığı (TPL), eşzamanlılık özellikli uygulamaların sağlamlığını artırmaya yardımcı olmak için veri akışı bileşenleri sağlar. Bu veri akışı bileşenleri, her toplu olarak *TPL veri akışı kitaplığı*olarak adlandırılır. Bu veri akışı modeli, büyük parçalı veri akışı ve ardışık düzen oluşturma görevleri için işlem içi ileti geçirme sağlayarak aktör temelli programlamayı teşvik eder. Veri akışı bileşenleri, TPL 'nin türler ve Zamanlama altyapısında derleyin ve zaman uyumsuz programlama için C#, Visual Basic ve F# dil desteğiyle tümleştirin. Bu veri akışı bileşenleri, birbirleriyle zaman uyumsuz olarak iletişim kurması gereken birden fazla işleminiz varsa veya verileri elde ettikçe işlemek istiyorsanız kullanışlıdır. Örneğin, web kamerasından gelen görüntü verilerini işleyen bir uygulamayı düşünün. Veri akışı modelini kullanarak, uygulama görüntü karelerini kullanılabilir oldukça işleyebilir. Uygulama görüntü çerçevelerini iyileştirdiği gibi, örneğin, hafif düzeltme veya kırmızı göz azaltma gerçekleştirerek, veri akışı bileşenleri için bir işlem *hattı* oluşturabilirsiniz. Ardışık düzenin her aşaması, görüntüyü dönüştürmek için TPL tarafından sağlanan işlevsellik gibi daha büyük parçalı paralellik işlevlerini kullanabilir.  
+Görev Paralel Kitaplığı (TPL) eşzamanlılık kullanan uygulamaların sağlamlığını artırmak için veri akışı bileşenleri sağlar. Bu veri akışı bileşenleri, her toplu olarak *TPL veri akışı kitaplığı*olarak adlandırılır. Bu veri akışı modeli, büyük parçalı veri akışı ve ardışık düzen oluşturma görevleri için işlem içi ileti geçirme sağlayarak aktör temelli programlamayı teşvik eder. Veri akışı bileşenleri, TPL 'nin türler ve Zamanlama altyapısında derleyin ve zaman uyumsuz programlama için C#, Visual Basic ve F# dil desteğiyle tümleştirin. Bu veri akışı bileşenleri, birbirleriyle zaman uyumsuz olarak iletişim kurması gereken birden fazla işleminiz varsa veya verileri elde ettikçe işlemek istiyorsanız kullanışlıdır. Örneğin, web kamerasından gelen görüntü verilerini işleyen bir uygulamayı düşünün. Veri akışı modelini kullanarak, uygulama görüntü karelerini kullanılabilir oldukça işleyebilir. Uygulama görüntü çerçevelerini iyileştirdiği gibi, örneğin, hafif düzeltme veya kırmızı göz azaltma gerçekleştirerek, veri akışı bileşenleri için bir işlem *hattı* oluşturabilirsiniz. Ardışık düzenin her aşaması, görüntüyü dönüştürmek için TPL tarafından sağlanan işlevsellik gibi daha büyük parçalı paralellik işlevlerini kullanabilir.  
   
  Bu belge, TPL Veri Akışı Kitaplığı'nın ana hatlarını sunmaktadır. Programlama modelini, önceden tanımlı veri akışı bloğu türlerini ve veri akışı bloklarının uygulamanızın özel gereksinimlerini karşılaması için nasıl yapılandırılabileceğini açıklar.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
-  
- Bu belgede aşağıdaki bölümler yer alır:  
-  
-- [Programlama modeli](#model)  
-  
-- [Önceden tanımlanmış veri akışı blok türleri](#predefined_types)  
-  
-- [Veri akışı blok davranışını yapılandırma](#behavior)  
-  
-- [Özel veri akışı blokları](#custom)  
-  
-<a name="model"></a>   
-## <a name="programming-model"></a>Programlama Modeli  
+
+## <a name="programming-model"></a>Programlama Modeli
  TPL Veri Akışı Kitaplığı, ileti geçirmenin yanı sıra yüksek veri hacmine ve düşük gecikmeye sahip CPU yoğun ve I/O yoğun uygulamalarını paralelleştirmek için bir temel sağlar. Ayrıca, verilerin arabelleğe nasıl alınacağı ve sistemde nasıl hareket edeceği konusunda doğrudan denetim olanağı sağlar. Veri akışı programlama modelini daha iyi anlamak için, diskten zaman uyumsuz olarak görüntü yükleyen ve bu görüntülerin bileşimini oluşturan bir uygulamayı düşünün. Geleneksel programlama modelleri, görevleri koordine etmek ve paylaşılan verilere erişmek için genellikle kilitler gibi eşitleme nesneleri ve geri çağrılar kullanmanızı gerektirir. Veri akışı programlama modelini kullanarak, görüntüleri diskten okundukça işleyen veri akışı nesneleri oluşturabilirsiniz. Veri akışı modelinde, verinin kullanılabilir olduğunda nasıl işleneceğini ve varsa veriler arsındaki bağımlılıkları siz belirtirsiniz. Veriler arasındaki bağımlılıkları çalışma zamanı yönettiği için, paylaşılan verilere erişimi eşitleme gereksinimini genellikle önleyebilirsiniz. Ek olarak, çalışma programları işi verilerinin zaman uyumsuz gelişine göre belirlendiği için, veri akışı temel iş parçacıklarını etkin olarak yöneterek uygulamanın hassaslığını ve veri hacmini artırabilir. Bir Windows Forms uygulamasında görüntü işlemeyi uygulamak için veri akışı programlama modelini kullanan bir örnek için, bkz. [izlenecek yol: bir Windows Forms uygulamasında veri akışı kullanma](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ### <a name="sources-and-targets"></a>Kaynaklar ve Hedefler  
  TPL veri akışı kitaplığı, verileri arabelleğe alan ve işleyen veri yapıları olan *veri akışı bloklarından*oluşur. TPL üç tür veri akışı bloğunu tanımlar: *kaynak blokları*, *hedef blokları*ve *yayıcı blokları*. Bir kaynak blok, veriler için kaynak görevi görür ve okunabilir. Bir hedef blok, veriler için alıcı görevi görür ve yazılabilir. Bir yayıcı blok, hem kaynak blok hem de hedef blok olarak görev görür ve hem okunabilir, hem de yazılabilir. TPL, kaynakları temsil temek için <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> arabirimini, hedefleri temsil etmek için <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> arabirimini ve yayıcıları temsil etmek için <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType> arabirimini tanımlar. <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602>, hem <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> hem de <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> arabirimlerinden devralır.  
   
- TPL Veri Akışı Kitaplığı <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> ve <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> arabirimlerini uygulayan önceden tanımlı birkaç veri akışı bloğu türü sağlar. Bu veri akışı bloğu türleri, [önceden tanımlanmış veri akışı blok türleri](#predefined_types)bölümünde bu belgede açıklanır.  
+ TPL Veri Akışı Kitaplığı <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> ve <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> arabirimlerini uygulayan önceden tanımlı birkaç veri akışı bloğu türü sağlar. Bu veri akışı bloğu türleri, [önceden tanımlanmış veri akışı blok türleri](#predefined-dataflow-block-types)bölümünde bu belgede açıklanır.  
   
 ### <a name="connecting-blocks"></a>Blokları Bağlama  
  Veri akışı bloklarından oluşan doğrusal diziler veya veri akışı bloklarının grafikleri olan *ağlardan*oluşan *ardışık düzenleri*oluşturmak için veri akışı bloklarını bağlayabilirsiniz. Ardışık düzen, bir ağ türüdür. Bir ardışık düzen veya ağda, kaynaklar, veriler kullanılabilir oldukça zaman uyumsuz olarak hedeflere yayarlar. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> yöntemi, bir kaynak veri akışı bloğunu hedef bloğa bağlar. Bir kaynak sıfır veya daha fazla hedefe bağlanabilir; hedeflere sıfır veya daha fazla kaynaktan bağlanılabilir. Bir ardışık düzen veya ağda eşzamanlı olarak veri akışı bloğu ekleme ve kaldırma işlemleri yapabilirsiniz. Önceden tanımlı veri akışı bloğu türleri bağlama ve bağlantıyı kaldırma işlemlerinin iş parçacığı güvenliğini tüm boyutlarıyla işler.  
@@ -54,7 +43,7 @@ ms.locfileid: "73134266"
 > Önceden tanımlı veri akışı bloklarının her biri iletilerin alındıkları sırayla gönderilmesini sağladığından, kaynak bloğun sonraki iletiyi işleyebilmesi için kaynak bloktaki her ileti okunmalıdır. Bu nedenle, birden çok hedefi tek bir kaynağa bağlamak için filtreleme kullandığınızda her iletiyi en az bir hedef bloğun aldığından emin olun. Aksi halde, uygulamanız kilitlenebilir.  
   
 ### <a name="message-passing"></a>İleti Geçirme  
- Veri akışı programlama modeli, *ileti geçirme*kavramı ile ilgilidir. Bu, bir programın bağımsız bileşenlerinin iletiler göndererek birbirleriyle iletişim kuracağı kavramdır. Uygulama bileşenleri arasında ileti yayın bir yolu, hedef veri akışı blokları gönderisini ileti göndermek için <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> yöntemleri çağırmak ve zaman uyumsuz olarak <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A><xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A>ve kaynak bloklarında ileti alma yöntemlerini <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A>. Giriş verilerini baş düğüme (bir hedef bloğu) gönderip, çıkış verilerini ardışık düzenin terminal düğümünden veya ağın terminal düğümlerinden (bir veya daha fazla kaynak blok) alarak, bu yöntemleri veri akışı ardışık düzenleri veya ağlarla birleştirebilirsiniz. Ayrıca, verilere sahip olan kullanılabilir kaynakların ilkinden okuyup o veri üzerinde işlem yapabilmek için <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A> yöntemini de kullanabilirsiniz.  
+ Veri akışı programlama modeli, *ileti geçirme*kavramı ile ilgilidir. Bu, bir programın bağımsız bileşenlerinin iletiler göndererek birbirleriyle iletişim kuracağı kavramdır. İletileri uygulama bileşenleri arasında yaymaya yönelik bir yol, hedef veri akışı blokları gönderisini (<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> zaman uyumlu olarak hareket eder; <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> zaman uyumsuz olarak davranır) ve kaynak bloklarında ileti almak için <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A>ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A> yöntemlerini çağırmak için <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> yöntemlerini çağırmalıdır. Giriş verilerini baş düğüme (bir hedef bloğu) gönderip, çıkış verilerini ardışık düzenin terminal düğümünden veya ağın terminal düğümlerinden (bir veya daha fazla kaynak blok) alarak, bu yöntemleri veri akışı ardışık düzenleri veya ağlarla birleştirebilirsiniz. Ayrıca, verilere sahip olan kullanılabilir kaynakların ilkinden okuyup o veri üzerinde işlem yapabilmek için <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A> yöntemini de kullanabilirsiniz.  
   
  Kaynak blokları <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A?displayProperty=nameWithType> yöntemini çağırarak hedef bloklara veri sunar. Hedef blok, sunulan bir iletiye üç şekilde cevap verebilir: İletiyi kabul edebilir, iletiyi reddedebilir veya iletiyi erteleyebilir. Hedef iletiyi kabul ettiğinde, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> yöntemi döndürülür<xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Accepted>. Hedef iletiyi reddettiğinde, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> yöntemi döndürülür<xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Declined>. Hedef, kaynaktan daha fazla ileti almak istemediğinde <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> değeri döndürülür<xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.DecliningPermanently>. Önceden tanımlı kaynak blok türleri bu tür bir dönüş değeri alındığında bağlantılı hedeflere ileti sunmaz ve bu tür hedeflerle otomatik olarak bağlantılarını keserler.  
   
@@ -78,10 +67,7 @@ ms.locfileid: "73134266"
  [!code-vb[TPLDataflow_Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#11)]  
   
  Bir veri akışı bloğunun tamamlanma durumu hakkında ek bilgi edinmek için devamlılık görevinin gövdesinde <xref:System.Threading.Tasks.Task.IsCanceled%2A> gibi özellikleri de kullanabilirsiniz. Devamlılık ve hata işlemeyle ilgili daha fazla bilgi için, bkz. devamlılık görevleri, [Görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md)ve [özel durum Işleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) [kullanarak görevleri zincirleme](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
-  
- [[en üste git](#top)]  
-  
-<a name="predefined_types"></a>   
+
 ## <a name="predefined-dataflow-block-types"></a>Önceden Tanımlı Veri Akışı Bloğu Türleri  
  TPL Veri Akışı Kitaplığı, birkaç önceden tanımlı veri akışı bloğu türü sağlar. Bu türler üç kategoriye ayrılmıştır: *arabelleğe alma blokları*, *Yürütme blokları*ve *Gruplandırma blokları*. Aşağıdaki bölümlerde, bu kategorileri oluşturan blok türleri açıklanmaktadır.  
   
@@ -201,10 +187,7 @@ ms.locfileid: "73134266"
  [!code-vb[TPLDataflow_Overview#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#9)]  
   
  Hem sonuçları hem de program bir veritabanından okurken oluşan tüm özel durumları yakalamak için <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> kullanan bir örnek için bkz. [Izlenecek yol: verimliliği artırmak Için BatchBlock ve BatchedJoinBlock kullanma](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md).  
-  
- [[en üste git](#top)]  
-  
-<a name="behavior"></a>   
+
 ## <a name="configuring-dataflow--block-behavior"></a>Veri Akışı Bloğu Davranışını Yapılandırma  
  Veri akışı bloğu türlerinin oluşturucusuna bir <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions?displayProperty=nameWithType> sağlayarak ek seçenekleri etkinleştirebilirsiniz. Bu seçenekler, arkaplandaki görevi yöneten zamanlayıcı ve paralellik derecesi gibi davranışları denetler. <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions>, belirli veri akışı bloğu türlerine özel davranışları belirtmek için devralınmış özelliklere de sahiptir. Aşağıdaki tabloda, her veri akışı bloğu türüyle hangi seçenek türünün ilişkili olduğunu özetlenmektedir.  
   
@@ -254,16 +237,11 @@ ms.locfileid: "73134266"
   
  <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> gibi birleştirme bloğu türleri için, doyumsuz mod, blok tarafından verilerin kendilerine karşılık gelen birleştirilecek veriler mevcut olmasa bile hemen kabul edildiği anlamına gelir. Doyumsuz olmayan mod ise, bloğun her hedefinde birleştirme işlemini tamamlayacak bir ileti olana kadar gelen tüm iletileri ertelemesi anlamına gelir. Ertelenen iletilerden herhangi biri artık kullanılabilir değilse, birleştirme bloğu ertelenen tüm iletileri bırakır ve işlemi yeniden başlatır. <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> sınıfı için doyumsuz ve doyumsuz olmayan davranış benzerdir, ancak doyumsuz olmayan modda bir <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> nesnesi, ayrı kaynaklardan bir toplu işi tamamlayacak sayıda ileti gelene kadar tüm gelen iletileri erteler.  
   
- Bir veri akışı bloğunda doyumsuz olmayan modu ayarlamak için, <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> özelliğini `False` olarak ayarlayın. Birden çok JOIN bloğunun bir veri kaynağını daha verimli bir şekilde paylaşmasını sağlamak üzere Greedy modunun nasıl kullanılacağını gösteren bir örnek için bkz. [nasıl yapılır: birden çok kaynaktan veri okumak Için JoinBlock kullanma](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md).  
-  
- [[en üste git](#top)]  
-  
-<a name="custom"></a>   
+ Bir veri akışı bloğunda doyumsuz olmayan modu ayarlamak için, <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> özelliğini `False` olarak ayarlayın. Birden çok JOIN bloğunun bir veri kaynağını daha verimli bir şekilde paylaşmasını sağlamak üzere Greedy modunun nasıl kullanılacağını gösteren bir örnek için bkz. [nasıl yapılır: birden çok kaynaktan veri okumak Için JoinBlock kullanma](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md).
+
 ## <a name="custom-dataflow-blocks"></a>Özel Veri Akışı Blokları  
- TPL Veri Akışı Kitaplığı pek çok önceden tanımlı blok türü sunsa da özel davranışları olan ek blok türleri oluşturabilirsiniz. Mevcut blok türlerinin davranışlarını kapsayan karmaşık bir blok oluşturmak için doğrudan <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> veya <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> arabirimini uygulayın ya da <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> yöntemini kullanın. Özel veri akışı blok işlevlerinin nasıl uygulanacağını gösteren örnekler için bkz. [Izlenecek yol: özel bir veri akışı blok türü oluşturma](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md).  
-  
- [[en üste git](#top)]  
-  
+ TPL Veri Akışı Kitaplığı pek çok önceden tanımlı blok türü sunsa da özel davranışları olan ek blok türleri oluşturabilirsiniz. Mevcut blok türlerinin davranışlarını kapsayan karmaşık bir blok oluşturmak için doğrudan <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> veya <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> arabirimini uygulayın ya da <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> yöntemini kullanın. Özel veri akışı blok işlevlerinin nasıl uygulanacağını gösteren örnekler için bkz. [Izlenecek yol: özel bir veri akışı blok türü oluşturma](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md).
+
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  

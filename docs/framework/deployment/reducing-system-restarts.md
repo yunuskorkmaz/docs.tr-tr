@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9da78fb161a906f6ef266f98a9f13633da91b61c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e2b030508897f13cce1fc6439809b98bbae17813
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052034"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975667"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma
-.NET Framework 4,5 yükleyicisi, yükleme sırasında mümkün olduğunda sistemin yeniden başlatılmasını engellemek için [yeniden başlatma yöneticisini](https://go.microsoft.com/fwlink/?LinkId=231425) kullanır. Uygulama kurulum programınız .NET Framework yüklerse, bu özellikten yararlanmak için yeniden başlatma yöneticisiyle arabirim oluşturabilir. Daha fazla bilgi için [nasıl yapılır: .NET Framework 4,5 Yükleyicisinden](how-to-get-progress-from-the-dotnet-installer.md)ilerleme durumunu alın.  
+.NET Framework 4,5 yükleyicisi, yükleme sırasında mümkün olduğunda sistemin yeniden başlatılmasını engellemek için [yeniden başlatma yöneticisini](/windows/win32/rstmgr/about-restart-manager) kullanır. Uygulama kurulum programınız .NET Framework yüklerse, bu özellikten yararlanmak için yeniden başlatma yöneticisiyle arabirim oluşturabilir. Daha fazla bilgi için bkz. [nasıl yapılır: .NET Framework 4,5 Yükleyicisinden Ilerleme durumu alma](how-to-get-progress-from-the-dotnet-installer.md).  
   
 ## <a name="reasons-for-a-restart"></a>Yeniden başlatma nedenleri  
  .NET Framework 4,5 yüklemesi, yükleme sırasında bir .NET Framework 4 uygulaması kullanılıyorsa sistemin yeniden başlatılmasını gerektirir. Bunun nedeni 4,5 .NET Framework .NET Framework 4 dosyalarını değiştirmesi ve yükleme sırasında bu dosyaların kullanılabilir olmasını gerektirmesidir. Çoğu durumda, yeniden başlatma, kullanımda olan preemptively algılama ve closing.NET Framework 4 uygulamaları tarafından engellenebilir. Ancak bazı sistem uygulamaları kapatılmamalıdır. Bu durumlarda yeniden başlatmanın önlenemez.  
@@ -29,12 +29,12 @@ ms.locfileid: "71052034"
  ![Şu anda çalışmakta olan programları listeleyerek uygulamayı kapat iletişim kutusu.](./media/reducing-system-restarts/close-application-dialog.png)  
   
 ## <a name="using-a-chained-installer"></a>Zincir yükleyici kullanma  
- .NET Framework uygulamanıza yeniden dağıtmak istiyorsanız, ancak kendi kurulum programınızı ve Kullanıcı arabirimini kullanmak istiyorsanız, kurulum sürecinize .NET Framework kurulum işlemini ekleyebilirsiniz. Zincirleme yüklemeleri hakkında daha fazla bilgi için bkz. [geliştiriciler Için dağıtım kılavuzu](deployment-guide-for-developers.md). Zincirleme yüklemedeki sistem yeniden başlatmaları azaltmak için .NET Framework yükleyicisi, kapatılacak uygulamaların listesini kullanarak kurulum programınızı sağlar. Kurulum programınızın bu bilgileri kullanıcıya ileti kutusu gibi bir kullanıcı arabirimi aracılığıyla sağlaması, kullanıcının yanıtını alması ve sonra yanıtı .NET Framework yükleyiciye geri geçirmesi gerekir. Bir zincir yükleyici örneği için bkz [. nasıl yapılır: .NET Framework 4,5 Yükleyicisinden](how-to-get-progress-from-the-dotnet-installer.md)ilerleme durumunu alın.  
+ .NET Framework uygulamanıza yeniden dağıtmak istiyorsanız, ancak kendi kurulum programınızı ve Kullanıcı arabirimini kullanmak istiyorsanız, kurulum sürecinize .NET Framework kurulum işlemini ekleyebilirsiniz. Zincirleme yüklemeleri hakkında daha fazla bilgi için bkz. [geliştiriciler Için dağıtım kılavuzu](deployment-guide-for-developers.md). Zincirleme yüklemedeki sistem yeniden başlatmaları azaltmak için .NET Framework yükleyicisi, kapatılacak uygulamaların listesini kullanarak kurulum programınızı sağlar. Kurulum programınızın bu bilgileri kullanıcıya ileti kutusu gibi bir kullanıcı arabirimi aracılığıyla sağlaması, kullanıcının yanıtını alması ve sonra yanıtı .NET Framework yükleyiciye geri geçirmesi gerekir. Bir zincir yükleyici örneği için, [nasıl yapılır: .NET Framework 4,5 Yükleyicisinden Ilerleme durumunu alma](how-to-get-progress-from-the-dotnet-installer.md)makalesine bakın.  
   
- Bir zincir yükleyici kullanıyorsanız, ancak uygulamaları kapatmak için kendi ileti kutusunu sağlamak istemiyorsanız, .NET Framework kurulum işlemini zincirleyebilirsiniz komut satırındaki `/showrmui` ve `/passive` seçeneklerini kullanabilirsiniz. Bu seçenekleri birlikte kullandığınızda, yükleyici, sistemin yeniden başlatılmasını önlemek için kapatıladıklarında uygulamaları kapatmak için ileti kutusunu gösterir. Bu ileti kutusu, tam kullanıcı arabirimi altında olduğu gibi pasif modda aynı şekilde davranır. Yeniden dağıtılabilir .NET Framework için komut satırı seçeneklerinin tam kümesini görmek üzere [geliştiriciler Için dağıtım kılavuzu](deployment-guide-for-developers.md) ' na bakın.  
+ Bir zincir yükleyici kullanıyorsanız, ancak uygulamaları kapatmak için kendi ileti kutusunu sağlamak istemiyorsanız, .NET Framework kurulum işlemini zincirdığınızda komut satırındaki `/showrmui` ve `/passive` seçeneklerini kullanabilirsiniz. Bu seçenekleri birlikte kullandığınızda, yükleyici, sistemin yeniden başlatılmasını önlemek için kapatıladıklarında uygulamaları kapatmak için ileti kutusunu gösterir. Bu ileti kutusu, tam kullanıcı arabirimi altında olduğu gibi pasif modda aynı şekilde davranır. Yeniden dağıtılabilir .NET Framework için komut satırı seçeneklerinin tam kümesini görmek üzere [geliştiriciler Için dağıtım kılavuzu](deployment-guide-for-developers.md) ' na bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dağıtım](index.md)
 - [Geliştiriciler için Dağıtım Kılavuzu](deployment-guide-for-developers.md)
-- [Nasıl yapılır: .NET Framework 4,5 Yükleyicisinden Ilerleme durumunu alın](how-to-get-progress-from-the-dotnet-installer.md)
+- [Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](how-to-get-progress-from-the-dotnet-installer.md)

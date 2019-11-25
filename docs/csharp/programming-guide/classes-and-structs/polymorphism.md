@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: e98399ac49e70f9139281ab75947c4acaf2dee7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: be075c358d9ca2c36b6d173fca983c16f6b0d78c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922076"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970338"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Çok Biçimlilik (C# Programlama Kılavuzu)
 Çok biçimlilik, kapsülleme ve devralma sonrasında nesne odaklı programlama için genellikle üçüncü olarak adlandırılır. Çok biçimlilik, "çoktan şekillendirilmiş" anlamına gelen ve iki ayrı yönü bulunan bir Yunan kelimedir:  
@@ -26,11 +26,11 @@ ms.locfileid: "69922076"
   
 2. Temel sınıf yöntemine tek bir çağrı aracılığıyla herhangi bir türetilmiş sınıfta uygun yöntemi çağırmak için bir sanal yöntem kullanın.  
   
- İlk olarak `Shape`, adlı bir temel sınıf ve, ve `Triangle`gibi türetilmiş sınıflar `Rectangle` `Circle`oluşturun. Sınıfa bir sanal `Draw`Yöntem verin ve sınıfın temsil ettiği belirli şekli çizmek için her türetilmiş sınıfta bunu geçersiz kılın. `Shape` Bir `List<Shape>` nesne oluşturun ve buna bir daire, üçgen ve dikdörtgen ekleyin. Çizim yüzeyini güncelleştirmek için, listeyi yinelemek ve listedeki her `Shape` bir nesnede `Draw` yöntemi çağırmak için bir [foreach](../../language-reference/keywords/foreach-in.md) döngüsü kullanın. Listedeki her nesnenin tanımlanmış bir türü `Shape`olsa da, çağrılacak olan çalışma zamanı türüdür (türetilen her sınıftaki yöntemin geçersiz kılınan sürümü).  
+ İlk olarak, `Shape`adlı bir temel sınıf ve `Rectangle`, `Circle`ve `Triangle`gibi türetilmiş sınıflar oluşturun. `Shape` sınıfına `Draw`adlı sanal bir yöntem verin ve sınıfın temsil ettiği belirli şekli çizmek için her türetilmiş sınıfta bunu geçersiz kılın. `List<Shape>` nesne oluşturun ve buna bir daire, üçgen ve dikdörtgen ekleyin. Çizim yüzeyini güncelleştirmek için, listeyi yinelemek ve listedeki her bir `Shape` nesnesinde `Draw` yöntemini çağırmak için bir [foreach](../../language-reference/keywords/foreach-in.md) döngüsü kullanın. Listedeki her bir nesne, belirtilen `Shape`türüne sahip olsa da, çağrılacak çalışma zamanı türüdür (her türetilmiş sınıfta yönteminin geçersiz kılınan sürümü).  
   
  [!code-csharp[csProgGuideInheritance#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#50)]  
   
- ' C#De, Kullanıcı tanımlı türler dahil olmak üzere tüm türler öğesinden <xref:System.Object>devraldığı için her tür polimorfik olur.  
+ ' C#De, Kullanıcı tanımlı türler dahil olmak üzere tüm türler <xref:System.Object>' den devraldığı için her tür polimorfik olur.  
   
 ## <a name="polymorphism-overview"></a>Çok biçimlilik genel bakış  
   
@@ -54,7 +54,7 @@ ms.locfileid: "69922076"
  Sanal yöntemler ve özellikler, türetilmiş sınıfların bir yöntemin temel sınıf uygulamasını kullanmaya gerek kalmadan bir temel sınıfı genişletmesine imkan tanır. Daha fazla bilgi için bkz. [geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma](./versioning-with-the-override-and-new-keywords.md). Bir arabirim, bir yöntemi veya uygulamasının türetilmiş sınıflara ayrılmakta olduğu yöntemler kümesini tanımlamak için başka bir yol sağlar. Daha fazla bilgi için bkz. [arabirimler](../interfaces/index.md).  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>Temel sınıf üyelerini yeni üyelerle gizleme  
- Türetilmiş üyenin bir temel sınıftaki üye ile aynı ada sahip olmasını istiyorsanız, ancak sanal çağrıya katılmasını istemiyorsanız, [New](../../language-reference/keywords/new-modifier.md) anahtar sözcüğünü kullanabilirsiniz. `new` Anahtar sözcüğü, değiştirilmekte olan bir sınıf üyesinin dönüş türünden önce konur. Aşağıdaki kod bir örnek sağlar:  
+ Türetilmiş üyenin bir temel sınıftaki üye ile aynı ada sahip olmasını istiyorsanız, ancak sanal çağrıya katılmasını istemiyorsanız, [New](../../language-reference/keywords/new-modifier.md) anahtar sözcüğünü kullanabilirsiniz. `new` anahtar sözcüğü, değiştirilmekte olan bir sınıf üyesinin dönüş türünden önce konur. Aşağıdaki kod bir örnek sağlar:  
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   
@@ -67,15 +67,15 @@ ms.locfileid: "69922076"
   
  [!code-csharp[csProgGuideInheritance#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#22)]  
   
- Türetilmiş bir sınıf, bir geçersiz kılma [korumalı](../../language-reference/keywords/sealed.md)olarak bildirerek sanal devralmayı durdurabilir. Bu, `sealed` anahtar sözcüğünü sınıf üye bildiriminde `override` anahtar sözcükten önce yerleştirmeyi gerektirir. Aşağıdaki kod bir örnek sağlar:  
+ Türetilmiş bir sınıf, bir geçersiz kılma [korumalı](../../language-reference/keywords/sealed.md)olarak bildirerek sanal devralmayı durdurabilir. Bu, sınıf üye bildiriminde `override` anahtar sözcüğünden önce `sealed` anahtar sözcüğünü yerleştirmeyi gerektirir. Aşağıdaki kod bir örnek sağlar:  
   
  [!code-csharp[csProgGuideInheritance#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#24)]  
   
- Önceki örnekte, yöntemi `DoWork` artık C 'den türetilmiş hiçbir sınıf için sanal değildir. B türüne veya tür A 'ya dönüştürülseler bile, C örnekleri için hala sanal bir. Sealed yöntemleri, aşağıdaki örnekte gösterildiği gibi `new` anahtar sözcüğü kullanılarak türetilmiş sınıflar tarafından değiştirilebilir:  
+ Önceki örnekte, yöntem `DoWork` artık C 'den türetilmiş hiçbir sınıfta sanal değildir. B türüne veya tür A 'ya dönüştürülseler bile, C örnekleri için hala sanal bir. Sealed yöntemleri, aşağıdaki örnekte gösterildiği gibi, `new` anahtar sözcüğü kullanılarak türetilmiş sınıflar tarafından değiştirilebilir:  
   
  [!code-csharp[csProgGuideInheritance#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#25)]  
   
- Bu durumda, `DoWork` d üzerinde d türünde bir değişken kullanılarak çağrılırsa, yeni `DoWork` çağırılır. D örneğine erişmek için c, B veya a türünde bir değişken kullanılırsa, öğesine `DoWork` yapılan bir çağrı, sanal devralma kurallarını izleyerek bu çağrıları c sınıfında `DoWork` uygulamasına yönlendirmeyecektir.  
+ Bu durumda, d üzerinde `DoWork`, D türünde bir değişken kullanılarak çağrılırsa, yeni `DoWork` çağırılır. C, B veya A türündeki bir değişken D örneğine erişmek için kullanılırsa, `DoWork` çağrısı, sanal devralma kurallarını izleyerek bu çağrıları C sınıfında `DoWork` uygulamasına yönlendirirsiniz.  
   
 ### <a name="accessing-base-class-virtual-members-from-derived-classes"></a>Türetilmiş sınıflardan temel sınıf sanal üyelerine erişme  
  Bir yöntemi veya özelliği değiştirilmiş veya geçersiz kılan türetilmiş bir sınıf, `base` anahtar sözcüğünü kullanarak temel sınıftaki yönteme veya özelliğe erişmeye devam edebilir. Aşağıdaki kod bir örnek sağlar:  
@@ -85,7 +85,7 @@ ms.locfileid: "69922076"
  Daha fazla bilgi için bkz. [Base](../../language-reference/keywords/base.md).  
   
 > [!NOTE]
-> Sanal üyelerin kendi uygulamalarında bu üyenin temel `base` sınıf uygulamasını çağırmak için kullanılması önerilir. Temel sınıf davranışının oluşmasına izin vermek, türetilmiş sınıfın türetilmiş sınıfa özgü davranış uygulamaya odaklanmalarını sağlar. Temel sınıf uygulama çağrılıp, davranışını temel sınıfın davranışıyla uyumlu hale getirmek için türetilmiş sınıfa kadar olur.  
+> Sanal üyelerin, kendi uygulamalarında bu üyenin temel sınıf uygulamasını çağırmak için `base` kullanması önerilir. Temel sınıf davranışının oluşmasına izin vermek, türetilmiş sınıfın türetilmiş sınıfa özgü davranış uygulamaya odaklanmalarını sağlar. Temel sınıf uygulama çağrılıp, davranışını temel sınıfın davranışıyla uyumlu hale getirmek için türetilmiş sınıfa kadar olur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69922076"
   
 - [Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme](./knowing-when-to-use-override-and-new-keywords.md)  
   
-- [Nasıl yapılır: ToString yöntemini geçersiz kılma](./how-to-override-the-tostring-method.md)  
+- [ToString yöntemini geçersiz kılma](./how-to-override-the-tostring-method.md)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -102,6 +102,6 @@ ms.locfileid: "69922076"
 - [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](./abstract-and-sealed-classes-and-class-members.md)
 - [Yöntemler](./methods.md)
 - [Olaylar](../events/index.md)
-- [Özellikler](./properties.md)
+- [Veri Erişimi](./properties.md)
 - [Dizin Oluşturucular](../indexers/index.md)
 - [Türler](../types/index.md)

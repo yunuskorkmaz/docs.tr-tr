@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: fbd4df8820073a3cdf2a8d5aad9c56bd7ca751df
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 36704d56b66de977ac7f63fd7e766c925ef9023b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460522"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974679"
 ---
 # <a name="documents-in-wpf"></a>WPF'deki Belgeler
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], Windows 'un önceki nesinden daha kolay erişilmesi ve okunması için tasarlanan yüksek kaliteli içerik oluşturulmasına olanak tanıyan çok çeşitli belge özellikleri sunmaktadır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], gelişmiş özellik ve kalite özelliklerine ek olarak belge görüntüleme, paketleme ve güvenlik için tümleşik hizmetler de sağlar. Bu konuda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belge türleri ve belge paketleme hakkında bir giriş sunulmaktadır.  
@@ -125,13 +125,13 @@ ms.locfileid: "73460522"
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>XPS belgeleri  
- XML Kağıt Belirtimi (XPS) belgesi, işleme için gereken tüm kaynakları ve bilgileri içeren bir veya daha fazla sabit belge içeren bir pakettir.  XPS ayrıca yerel [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] yazdırma biriktirme dosyası biçimidir.  Bir <xref:System.Windows.Xps.Packaging.XpsDocument> standart ZIP veri kümesinde depolanır ve resim ve yazı tipi dosyaları gibi XML ve ikili bileşenlerin bir birleşimini içerebilir. [Packagerelationsevk](#PackageRelationships) edilen içerik ve belgeyi tam olarak işlemek için gereken kaynaklar arasındaki bağımlılıkları tanımlamak için kullanılır.  <xref:System.Windows.Xps.Packaging.XpsDocument> tasarımı, birden çok kullanımı destekleyen tek ve yüksek uygunlukta bir belge çözümü sağlar:  
+ XML Kağıt Belirtimi (XPS) belgesi, işleme için gereken tüm kaynakları ve bilgileri içeren bir veya daha fazla sabit belge içeren bir pakettir.  XPS ayrıca yerel Windows Vista yazdırma biriktirme dosyası biçimidir.  Bir <xref:System.Windows.Xps.Packaging.XpsDocument> standart ZIP veri kümesinde depolanır ve resim ve yazı tipi dosyaları gibi XML ve ikili bileşenlerin bir birleşimini içerebilir. [Packagerelationsevk](#PackageRelationships) edilen içerik ve belgeyi tam olarak işlemek için gereken kaynaklar arasındaki bağımlılıkları tanımlamak için kullanılır.  <xref:System.Windows.Xps.Packaging.XpsDocument> tasarımı, birden çok kullanımı destekleyen tek ve yüksek uygunlukta bir belge çözümü sağlar:  
   
 - Tek, taşınabilir ve dağıtımı kolay bir dosya olarak düzeltilen belge içeriğini ve kaynakları okuma, yazma ve depolama.  
   
 - XPS Görüntüleyici uygulamasıyla belge görüntüleme.  
   
-- [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]yerel yazdırma kuyruğu çıkış biçiminde belge çıktısı.  
+- Windows Vista 'nın yerel yazdırma kuyruğu çıkış biçiminde belge çıktısı.  
   
 - Belgeleri doğrudan XPS uyumlu bir yazıcıya yönlendirme.  
   

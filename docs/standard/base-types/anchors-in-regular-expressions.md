@@ -17,28 +17,27 @@ helpviewer_keywords:
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 ms.custom: seodec18
-ms.openlocfilehash: bf5e98f895c17a3ab9b16e63601fa40fb9e15417
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 53f16e65a3cd19cd516756f3a2d036039964e021
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140549"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971366"
 ---
 # <a name="anchors-in-regular-expressions"></a>Normal İfadelerdeki Tutturucular
-<a name="top"></a>Tutturucular veya atomik sıfır Genişlik onayları, bir eşleşmenin gerçekleşmesi gereken dizede bir konum belirtin. Arama ifadenizde bir yer işareti kullandığınızda, normal ifade motoru dize veya harcama karakterleri boyunca ilerlemez; sadece belirtilen konumda bir eşleşme arar. Örneğin `^` , eşleşmenin bir satır veya dize başında başlaması gerektiğini belirtir. Bu nedenle `^http:` normal ifadesi, sadece bir satırın başında gerçekleştiğinde "http:" ile eşleşir. Aşağıdaki tabloda, .NET 'teki normal ifadeler tarafından desteklenen bağlantılar listelenmektedir.  
+Yer işaretleri veya atomik sıfır genişlik onayları, eşleşme gerçekleşmesi gereken dizedeki bir konumu belirtir. Arama ifadenizde bir yer işareti kullandığınızda, normal ifade motoru dize veya harcama karakterleri boyunca ilerlemez; sadece belirtilen konumda bir eşleşme arar. Örneğin `^` , eşleşmenin bir satır veya dize başında başlaması gerektiğini belirtir. Bu nedenle `^http:` normal ifadesi, sadece bir satırın başında gerçekleştiğinde "http:" ile eşleşir. Aşağıdaki tabloda, .NET 'teki normal ifadeler tarafından desteklenen bağlantılar listelenmektedir.  
   
 |Yer işareti|Açıklama|  
 |------------|-----------------|  
-|`^`|Varsayılan olarak, eşleşme dizenin başlangıcında gerçekleşmelidir; çok satırlı modda, satırın başlangıcında gerçekleşmelidir. Daha fazla bilgi için bkz. [dize veya satır başlangıcı](#Start).|  
-|`$`|Varsayılan olarak, eşleşme dizenin sonunda veya dizenin sonundaki `\n` önce gerçekleşmelidir; çok satırlı modda, satırın sonunda veya satırın sonundaki `\n` önce gerçekleşmelidir. Daha fazla bilgi için bkz. [dize veya satır sonu](#End).|  
-|`\A`|Eşleşme yalnızca dizenin başında gerçekleşmelidir (çok satır desteği yok). Daha fazla bilgi için bkz. [yalnızca dize başlangıcı](#StartOnly).|  
-|`\Z`|Eşleşme dizenin sonunda veya dizenin sonundaki `\n` önce gerçekleşmelidir. Daha fazla bilgi için bkz. [dize sonu veya yeni satır](#EndOrNOnly)sonu.|  
-|`\z`|Eşleşme sadece dizenin sonunda gerçekleşmelidir. Daha fazla bilgi için bkz. [yalnızca dize sonu](#EndOnly).|  
-|`\G`|Eşleşme önceki eşleşmenin sona erdiği konumda başlamalıdır. Daha fazla bilgi için bkz. [bitişik eşleşmeler](#Contiguous).|  
-|`\b`|Eşleşme bir kelime sınırında gerçekleşmemelidir. Daha fazla bilgi için bkz. [sözcük sınırı](#WordBoundary).|  
-|`\B`|Eşleşme bir sözcük sınırında gerçekleşmemelidir. Daha fazla bilgi için bkz. [sözcük olmayan sınır](#NonwordBoundary).|  
-  
-<a name="Start"></a>   
+|`^`|Varsayılan olarak, eşleşme dizenin başlangıcında gerçekleşmelidir; çok satırlı modda, satırın başlangıcında gerçekleşmelidir. Daha fazla bilgi için bkz. [dize veya satır başlangıcı](#start-of-string-or-line-).|  
+|`$`|Varsayılan olarak, eşleşme dizenin sonunda veya dizenin sonundaki `\n` önce gerçekleşmelidir; çok satırlı modda, satırın sonunda veya satırın sonundaki `\n` önce gerçekleşmelidir. Daha fazla bilgi için bkz. [dize veya satır sonu](#end-of-string-or-line-).|  
+|`\A`|Eşleşme yalnızca dizenin başında gerçekleşmelidir (çok satır desteği yok). Daha fazla bilgi için bkz. [yalnızca dize başlangıcı](#start-of-string-only-a).|  
+|`\Z`|Eşleşme dizenin sonunda veya dizenin sonundaki `\n` önce gerçekleşmelidir. Daha fazla bilgi için bkz. [dize sonu veya yeni satır](#end-of-string-or-before-ending-newline-z)sonu.|  
+|`\z`|Eşleşme sadece dizenin sonunda gerçekleşmelidir. Daha fazla bilgi için bkz. [yalnızca dize sonu](#end-of-string-only-z).|  
+|`\G`|Eşleşme önceki eşleşmenin sona erdiği konumda başlamalıdır. Daha fazla bilgi için bkz. [bitişik eşleşmeler](#contiguous-matches-g).|  
+|`\b`|Eşleşme bir kelime sınırında gerçekleşmemelidir. Daha fazla bilgi için bkz. [sözcük sınırı](#word-boundary-b).|  
+|`\B`|Eşleşme bir sözcük sınırında gerçekleşmemelidir. Daha fazla bilgi için bkz. [sözcük olmayan sınır](#non-word-boundary-b).|  
+
 ## <a name="start-of-string-or-line-"></a>Dize veya Satır Başlangıcı: ^  
  `^` Bağlayıcısı, varsayılan olarak, aşağıdaki düzenin dizenin ilk karakter konumunda başlaması gerektiğini belirtir. <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> seçeneğiyle `^` kullanıyorsanız (bkz. [normal Ifade seçenekleri](../../../docs/standard/base-types/regular-expression-options.md)), eşleşme her satırın başlangıcında gerçekleşmelidir.  
   
@@ -63,59 +62,44 @@ ms.locfileid: "73140549"
 |`\s\d{4}`|Ardından dört ondalık basamak gelen bir boşluğu eşleştirin.|  
 |<code>(-(\d{4}&#124;present))?</code>|Ardından dört ondalık basamak veya "var" dizesi gelen bir tirenin sıfır veya bir oluşumunu eşleştirin. Bu altıncı yakalama grubudur. Ayrıca yedinci bir yakalama grubunu içerir.|  
 |`,?`|Bir virgülün sıfır veya bir oluşumunu eşleştirin.|  
-|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|Aşağıdakilerin bir veya daha fazla oluşumunu eşleştirin: bir boşluk, dört ondalık basamak, ardından dört ondalık basamak veya "var" dizesi gelen bir tirenin sıfır veya bir oluşumu ve sıfır veya bir virgül. Bu beşinci yakalama grubudur.|  
-  
- [Başa dön](#top)  
-  
-<a name="End"></a>   
+|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|Aşağıdakilerin bir veya daha fazla oluşumunu eşleştirin: bir boşluk, dört ondalık basamak, ardından dört ondalık basamak veya "var" dizesi gelen bir tirenin sıfır veya bir oluşumu ve sıfır veya bir virgül. Bu beşinci yakalama grubudur.| 
+
 ## <a name="end-of-string-or-line-"></a>Dize veya Satır Sonu: $  
  `$` Bağlayıcısı, önceki düzenin giriş dizesinin sonunda veya giriş dizesinin sonundaki `\n` önce gerçekleşmesi gerektiğini belirtir.  
   
  Eğer `$` öğesini <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> seçeneği ile birlikte kullanıyorsanız eşleşme aynı zamanda satırın sonunda da oluşabilir. `$` `\n` eşleştiğini, ancak `\r\n` eşleştirmediğini (satır başı ve yeni satır karakterlerinin veya CR/LF birleşimi) unutmayın. CR/LF karakter birleşimini eşleştirmek için `\r?$` normal ifade düzenine dahil edin.  
   
- Aşağıdaki örnek, `$` bağlayıcısını [dize veya satır başlangıcı](#Start) bölümündeki örnekte kullanılan normal ifade düzenine ekler. Beş satırlık metin içeren özgün giriş dizesi ile kullanıldığında <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> yöntemi bir eşleşme bulamaz, çünkü ilk satırın sonu `$` deseni ile eşleşmez. Özgün giriş dizesi bir dize dizisine bölündüğünde <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> yöntemi beş satırının her birini eşlemede başarılı olur. <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> yöntemi, `options` öğesine ayarlanmış <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> parametresi ile çağrıldığında hiçbir eşleşme bulunmaz, çünkü normal ifade deseni satır başı öğesini (\u+000D) hesaba katmaz. Ancak, `$` `\r?$`ile değiştirerek normal ifade deseninin değiştirildiği zaman, <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> yönteminin `options` parametresiyle yeniden <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> olarak çağrılması, beş eşleşme bulduğunu bulur.  
+ Aşağıdaki örnek, `$` bağlayıcısını [dize veya satır başlangıcı](#start-of-string-or-line-) bölümündeki örnekte kullanılan normal ifade düzenine ekler. Beş satırlık metin içeren özgün giriş dizesi ile kullanıldığında <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> yöntemi bir eşleşme bulamaz, çünkü ilk satırın sonu `$` deseni ile eşleşmez. Özgün giriş dizesi bir dize dizisine bölündüğünde <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> yöntemi beş satırının her birini eşlemede başarılı olur. <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> yöntemi, `options` öğesine ayarlanmış <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> parametresi ile çağrıldığında hiçbir eşleşme bulunmaz, çünkü normal ifade deseni satır başı öğesini (\u+000D) hesaba katmaz. Ancak, `$` `\r?$`ile değiştirerek normal ifade deseninin değiştirildiği zaman, <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> yönteminin `options` parametresiyle yeniden <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> olarak çağrılması, beş eşleşme bulduğunu bulur.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring1.cs#2)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]  
-  
- [Başa dön](#top)  
-  
-<a name="StartOnly"></a>   
+ [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]     
+
 ## <a name="start-of-string-only-a"></a>Yalnızca Dize Başlangıcı: \A  
  `\A` Bağlayıcısı, giriş dizesinin başlangıcında bir eşleşmenin gerçekleşmesi gerektiğini belirtir. Bu, `^` çıpası ile aynıdır, ancak `\A` <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> seçeneğini yoksayar. Bu nedenle, çok satırlı bir girdi dizesinde yalnızca ilk satırın başı ile eşleşebilir.  
   
  Aşağıdaki örnek, `^` ve `$` yer işaretlerine ait örnekler ile benzerdir. Bu, bazı profesyonel bebete ekiplerinin varolduğu yıllar hakkında bilgi çıkaran bir normal ifadede `\A` bağlayıcısını kullanır. Giriş dizesi beş satır içerir. <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> yöntemine yönelik çağrı yalnızca normal ifade deseni ile eşleşen girdi dizesindeki ilk alt dizeyi bulur. Örnekte gösterildiği gibi <xref:System.Text.RegularExpressions.RegexOptions.Multiline> seçeneğinin etkisi yoktur.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring2.cs#3)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring2.vb#3)]  
-  
- [Başa dön](#top)  
-  
-<a name="EndOrNOnly"></a>   
+ [!code-vb[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring2.vb#3)]     
+
 ## <a name="end-of-string-or-before-ending-newline-z"></a>Dize Sonu veya Yeni Satır Sonlandırmadan Önce: \z  
  `\Z` Bağlayıcısı, giriş dizesinin sonunda veya giriş dizesinin sonundaki `\n` önce bir eşleşmenin gerçekleşmesi gerektiğini belirtir. Bu, `$` çıpası ile aynıdır, ancak `\Z` <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> seçeneğini yoksayar. Bu nedenle, çok satırlı bir dizede, yalnızca son satırın sonuyla veya `\n`önceki son satırdan eşleşemez.  
   
  `\Z` `\n` eşleştiğini ancak `\r\n` (CR/LF karakter birleşimi) eşleştirmediğini unutmayın. CR/LF eşleştirmek için normal ifade düzenine `\r?\Z` ekleyin.  
   
- Aşağıdaki örnek, bazı profesyonel bebete ekiplerinin varolduğu yıllar hakkında bilgi çıkaran, [dize veya satır başlangıcı](#Start) bölümündeki örneğe benzer bir normal ifadede `\Z` bağlayıcısını kullanır. Normal ifadede `\r?\Z` alt ifade `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\Z` bir dizenin sonuyla eşleşir ve ayrıca `\n` veya `\r\n`biten bir dizeyle eşleşir. Sonuç olarak, dizideki her bir öğe normal ifade deseni ile eşleşir.  
+ Aşağıdaki örnek, bazı profesyonel bebete ekiplerinin varolduğu yıllar hakkında bilgi çıkaran, [dize veya satır başlangıcı](#start-of-string-or-line-) bölümündeki örneğe benzer bir normal ifadede `\Z` bağlayıcısını kullanır. Normal ifadede `\r?\Z` alt ifade `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\Z` bir dizenin sonuyla eşleşir ve ayrıca `\n` veya `\r\n`biten bir dizeyle eşleşir. Sonuç olarak, dizideki her bir öğe normal ifade deseni ile eşleşir.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring2.cs#4)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring2.vb#4)]  
-  
- [Başa dön](#top)  
-  
-<a name="EndOnly"></a>   
+ [!code-vb[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring2.vb#4)]     
+
 ## <a name="end-of-string-only-z"></a>Yalnızca Dize Sonu: \z  
  `\z` Bağlayıcısı, giriş dizesinin sonunda bir eşleşmenin gerçekleşmesi gerektiğini belirtir. `$` Language öğesi gibi `\z` <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> seçeneğini yoksayar. `\Z` Language öğesinden farklı olarak, `\z` bir dizenin sonundaki bir `\n` karakteriyle eşleşmez. Bu nedenle, yalnızca giriş dizesinin son satırı ile eşleşebilir.  
   
  Aşağıdaki örnek, bazı profesyonel bebete ekiplerinin varolduğu yıllar hakkında bilgi çıkaran, önceki bölümdeki örnekle özdeş olan bir normal ifadede `\z` bağlayıcısını kullanır. Örnek, `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`normal ifade örüntüsünün bulunduğu bir dize dizisindeki beş öğeden her birini eşleştirmeye çalışır. Dizelerden ikisi satır başı ve satır besleme karakteri ile, bir tanesi satır besleme karakteri ile, iki tanesi ise ne satır başı ne de satır besleme karakteri ile biter. Çıktıda gösterildiği gibi yalnızca bir satır başı veya satır besleme karakteri olmayan dizeler desen ile eşleşir.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring3.cs#5)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring3.vb#5)]  
-  
- [Başa dön](#top)  
-  
-<a name="Contiguous"></a>   
+ [!code-vb[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring3.vb#5)]    
+
 ## <a name="contiguous-matches-g"></a>Bitişik Eşleştirmeler: \G  
  `\G` Bağlayıcısı, bir eşleşmenin önceki eşleşmenin sona erdiği noktada gerçekleşmesi gerektiğini belirtir. Bu yer işaretini <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> veya <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> yöntemi ile kullandığınızda tüm eşleşmelerin bitişik olmasını sağlar.  
   
@@ -133,11 +117,8 @@ ms.locfileid: "73140549"
 |`\s?`|Sıfır veya bir boşluğu eşleştirin.|  
 |`\w*`|Sıfır veya daha fazla sözcük karakteriyle eşleş.|  
 |`(\w+\s?\w*)`|Ardından sıfır veya bir boşluk gelen ve ardından sıfır veya daha fazla sözcük karakteri gelen bir veya daha fazla sözcük karakterini eşleştirin. Bu ilk yakalama grubudur.|  
-|`,?`|Sabit bir virgül karakterinin sıfır veya bir oluşumunu eşleştirin.|  
-  
- [Başa dön](#top)  
-  
-<a name="WordBoundary"></a>   
+|`,?`|Sabit bir virgül karakterinin sıfır veya bir oluşumunu eşleştirin.|     
+
 ## <a name="word-boundary-b"></a>Sözcük Sınırı: \b  
  `\b` Bağlayıcısı, bir sözcük karakteri (`\w` dil öğesi) ile bir sözcük olmayan karakter (`\W` Language öğesi) arasındaki bir sınır üzerinde eşleşme olması gerektiğini belirtir. Sözcük karakteri alfasayısal karakterler ve alt çizgilerden oluşur; sözcük olmayan bir karakter ise alfasayısal veya bir alt çizgi olmayan herhangi bir karakterdir. (Daha fazla bilgi için bkz. [karakter sınıfları](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) Eşleşme, dizenin başındaki veya sonundaki bir sözcük sınırında de gerçekleşebilir.  
   
@@ -154,10 +135,7 @@ ms.locfileid: "73140549"
 |`are`|"Olan" alt dizesini eşleştirin.|  
 |`\w*`|Sıfır veya daha fazla sözcük karakteriyle eşleş.|  
 |`\b`|Eşlemeyi bir sözcük sınırında sonlandır.|  
-  
- [Başa dön](#top)  
-  
-<a name="NonwordBoundary"></a>   
+
 ## <a name="non-word-boundary-b"></a>Sözcük Olmayan Sınır: \B  
  `\B` Bağlayıcısı, eşleşmenin bir sözcük sınırında gerçekleşmemelidir. Bu, `\b` yer işaretinin tersidir.  
   

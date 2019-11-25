@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: eadb456bafb1703c687e73c6aecc81c9dccae72c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bf0b4e5f85da48ad5d7cb08efd09ff925b6b04d9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739573"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975538"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework sürümleri ve bağımlılıklar
 
@@ -64,7 +64,7 @@ Tabloda, ✓ ile işaretlenmiş ve **Windows 'a** dahil edilen ve Windows **Serv
   > [!NOTE]
   > .NET Framework 4.5.1 ve .NET Framework 4,5 burada yalnızca örnek olarak kullanılır. Açıklanan ilke, üzerinde çalıştığı sistemde yüklü olandan daha sonraki bir sürümü .NET Framework hedefleyen tüm uygulamalar için geçerlidir.  
   
-.NET Framework bazı değişiklikler uygulama kodunuzda değişiklik yapılmasını gerektirebilir. .NET Framework 4,5 veya sonraki sürümlerde mevcut bir uygulamayı çalıştırıyorsanız, bkz. [uygulama uyumluluğu](application-compatibility.md). Geçerli sürümü yükleme hakkında daha fazla bilgi için bkz. [geliştiriciler için .NET Framework yükleme](../install/guide-for-developers.md). .NET Framework için destek hakkında daha fazla bilgi için Microsoft Desteği Web sitesindeki [Microsoft .NET Framework destek yaşam döngüsü ilkesi](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework) ' ne bakın.  
+.NET Framework yapılan bazı değişiklikler, uygulama kodunuzda değişiklik yapılmasını gerektirebilir; Mevcut uygulamalarınızı .NET Framework 4,5 veya sonraki sürümlerle çalıştırmadan önce bkz. [uygulama uyumluluğu](application-compatibility.md) . Geçerli sürümü yükleme hakkında daha fazla bilgi için bkz. [geliştiricilerin .NET Framework yükleme](../install/guide-for-developers.md). .NET Framework için destek hakkında daha fazla bilgi için bkz. .NET Web sitesinde [.NET Framework resmi destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) .
   
 ## <a name="target-and-run-apps-for-older-versions"></a>Daha eski sürümler için uygulamaları hedefleme ve çalıştırma  
 
@@ -85,5 +85,5 @@ Ayrıca, uygulamanız 2,0, 3,0 veya 3,5 sürümünü hedefliyorsa, kullanıcıla
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sürüm uyumluluğu](version-compatibility.md)
-- [Microsoft .NET Framework destek yaşam döngüsü ilkesi](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+- [.NET Framework resmi destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../install/troubleshoot-blocked-installations-and-uninstallations.md)

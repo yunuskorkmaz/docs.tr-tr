@@ -7,29 +7,23 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 787c6221b651a53dbb932a5a9d0edea123e1d97d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046429"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974926"
 ---
 # <a name="interop-etw-events"></a>Birlikte Çalışma ETW Olayları
-<a name="top"></a>Birlikte çalışma olayları, Microsoft ara dili (MSIL) saplama oluşturma ve önbelleğe alma hakkında bilgi yakalar.  
-  
- Bu kategori aşağıdaki olaylardan oluşur:  
-  
-- [ILStubGenerated olayı](#ilstubgenerated_event)  
-  
-- [ILStubCacheHit olayı](#ilstubcachehit_event)  
-  
-<a name="ilstubgenerated_event"></a>   
-## <a name="ilstubgenerated-event"></a>ILStubGenerated olayı  
- Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir. (Daha fazla bilgi için bkz. [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md).)  
+Birlikte çalışma olayları, Microsoft ara dili (MSIL) saplama oluşturma ve önbelleğe alma hakkında bilgi yakalar.  
+
+## <a name="ilstubgenerated-event"></a>ILStubGenerated olayı
+
+Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir. (Daha fazla bilgi için bkz. [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md).)  
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`InteropKeyword`(0x2000)|Bilgilendirici (4)|  
+|`InteropKeyword` (0x2000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -39,7 +33,7 @@ ms.locfileid: "71046429"
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Modül kimliği|Win: UInt16|Modül tanımlayıcısı.|  
 |StubMethodID|Win: UInt64|Saplama yöntemi tanımlayıcısı.|  
@@ -53,15 +47,13 @@ ms.locfileid: "71046429"
 |StubMethodILCode|Win: UnicodeString|Saplama yöntemi için MSIL kodu.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
- [Başa dön](#top)  
-  
-<a name="ilstubcachehit_event"></a>   
 ## <a name="ilstubcachehit-event"></a>ILStubCacheHit olayı  
- Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
+
+Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`InteropKeyword`(0x2000)|Bilgilendirici (4)|  
+|`InteropKeyword` (0x2000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -71,7 +63,7 @@ ms.locfileid: "71046429"
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Modül kimliği|Win: UInt16|Modül tanımlayıcısı.|  
 |StubMethodID|Win: UInt64|Saplama yöntemi tanımlayıcısı.|  
@@ -80,8 +72,6 @@ ms.locfileid: "71046429"
 |ManagedInteropMethodName|Win: UnicodeString|Yönetilen birlikte çalışma yönteminin adı.|  
 |ManagedInteropMethodSignature|Win: UnicodeString|Managed Interop yönteminin imzası.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
-  
- [Başa dön](#top)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1d13c4c3e27b5af5b3c3e84995cae3df94a307d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052074"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975688"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework ve Uygulamaları Dağıtma
 
@@ -66,7 +66,7 @@ Bu makale, .NET Framework uygulamanıza dağıtmaya başlamanıza yardımcı olu
 
 **Bakım**
 
-- Genel bilgiler için [.NET Framework bloguna](https://go.microsoft.com/fwlink/p/?LinkId=254977) bakın
+- Genel bilgiler için [.NET Framework bloguna](https://devblogs.microsoft.com/dotnet/)bakın.
 
 - [Sürümler algılanıyor](../migration-guide/how-to-determine-which-versions-are-installed.md)
 
@@ -118,7 +118,7 @@ Bu makale, .NET Framework uygulamanıza dağıtmaya başlamanıza yardımcı olu
 
 ## <a name="packaging-and-distributing-net-framework-applications"></a>.NET Framework uygulamalarını paketleme ve dağıtma
 
-.NET Framework yönelik paketleme ve dağıtım bilgilerinin bazıları, belgelerinin diğer bölümlerinde açıklanmıştır. Bu bölümler, hiçbir kayıt defteri girişi gerektirmeyen [derleme](../../standard/assembly/index.md)adlı, [tanımlayıcı adlı derlemelerin](../../standard/assembly/strong-named.md)yanı sıra ad yanıltmayı ve [derleme sürümü oluşturmayı](../../standard/assembly/versioning.md) önleyen, kendi kendini açıklayan birimler hakkında bilgi sağlar , DLL çakışmaları ile ilişkili birçok sorunu ele alınmaktadır. Aşağıdaki bölümlerde .NET Framework uygulamalarını paketleme ve dağıtma hakkında bilgi sağlanmaktadır.
+.NET Framework yönelik paketleme ve dağıtım bilgilerinin bazıları, belgelerinin diğer bölümlerinde açıklanmıştır. Bu bölümler, hiçbir kayıt defteri girişi gerektirmeyen [derlemeler](../../standard/assembly/index.md)adlı, [tanımlayıcı ADLı derlemeler](../../standard/assembly/strong-named.md)ve DLL çakışmaları ile ilişkili birçok sorunu ele veren [derleme sürümü oluşturmayı sağlayan bütünleştirilmiş kod](../../standard/assembly/versioning.md)adı verilen, kendi kendini açıklayan birimler hakkında bilgiler sağlar. Aşağıdaki bölümlerde .NET Framework uygulamalarını paketleme ve dağıtma hakkında bilgi sağlanmaktadır.
 
 ### <a name="packaging"></a>Paketleme
 
@@ -136,7 +136,7 @@ Bu makale, .NET Framework uygulamanıza dağıtmaya başlamanıza yardımcı olu
 
      Bu seçenekle, Windows Installer ile kullanmak üzere. msi dosyaları oluşturur veya uygulamanızı başka bir yükleyiciyle kullanmak üzere paketlemenize yardımcı olursunuz.
 
-### <a name="distribution"></a>Dağıtım
+### <a name="distribution"></a>Dağılı
 
 .NET Framework, uygulamaları dağıtmak için aşağıdaki seçenekleri sağlar:
 
@@ -163,7 +163,7 @@ Güvenlik konuları, uygulamanızı nasıl dağıtabileceğinizi da etkileyebili
 |Başlık|Açıklama|
 |-----------|-----------------|
 |[Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](how-the-runtime-locates-assemblies.md)|Ortak dil çalışma zamanının, bir bağlama isteğini karşılamak için hangi derlemeyi kullanacağınızı nasıl belirlediğini açıklar.|
-|[Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](best-practices-for-assembly-loading.md)|<xref:System.InvalidCastException> ,<xref:System.MissingMethodException>, Ve diğer hatalara yol açabilecek kimlik tür sorunlarından kaçınmanın yollarını açıklar.|
+|[Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](best-practices-for-assembly-loading.md)|<xref:System.InvalidCastException>, <xref:System.MissingMethodException>ve diğer hatalara yol açabilecek kimlik tür sorunlarından kaçınmanın yollarını açıklar.|
 |[.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](reducing-system-restarts.md)|Mümkün olan her durumda yeniden başlatma Işlemini önleyen ve .NET Framework yükleyen uygulamaların nasıl yararlanacağı açıklanmaktadır.|
 |[Yöneticiler için Dağıtım Kılavuzu](guide-for-administrators.md)|Bir sistem yöneticisinin, System Center Configuration Manager (SCCM) kullanarak bir ağ üzerinde .NET Framework ve sistem bağımlılıklarını nasıl dağıtabilebileceğini açıklar.|
 |[Geliştiriciler için Dağıtım Kılavuzu](deployment-guide-for-developers.md)|Geliştiricilerin kullanıcıların bilgisayarlarına uygulamalarına .NET Framework nasıl yükleyebileceğini açıklar.|
@@ -171,7 +171,7 @@ Güvenlik konuları, uygulamanızı nasıl dağıtabileceğinizi da etkileyebili
 |[ClickOnce Uygulamalarını Yayımlama](/visualstudio/deployment/publishing-clickonce-applications)|Bir Windows Forms uygulamasının nasıl paketleneceğini ve bir ağdaki istemci bilgisayarlara ClickOnce ile nasıl dağıtılacağını açıklar.|
 |[Kaynakları Paketleme ve Dağıtma](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|.NET Framework, kaynakları paketlemek ve dağıtmak için kullandığı hub ve bağlı bileşen modelini açıklar; Kaynak adlandırma kurallarını, geri dönüş işlemini ve paketleme alternatiflerini içerir.|
 |[Birlikte Çalışma Uygulamasını Dağıtma](../interop/deploying-an-interop-application.md)|Genellikle bir .NET Framework istemci derlemesi, farklı COM tür kitaplıklarını temsil eden bir veya daha fazla birlikte çalışma derlemesi ve bir veya daha fazla kayıtlı COM bileşeni içeren birlikte çalışma uygulamalarının nasıl teslim edileceğini ve yükleneceğini açıklar.|
-|[Nasıl yapılır: .NET Framework 4,5 Yükleyicisinden Ilerleme durumunu alın](how-to-get-progress-from-the-dotnet-installer.md)|Kurulum ilerleme durumunun kendi görünümünü gösterirken .NET Framework kurulum işleminin sessizce nasıl başlatılmasını ve izleneceğini açıklar.|
+|[Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](how-to-get-progress-from-the-dotnet-installer.md)|Kurulum ilerleme durumunun kendi görünümünü gösterirken .NET Framework kurulum işleminin sessizce nasıl başlatılmasını ve izleneceğini açıklar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

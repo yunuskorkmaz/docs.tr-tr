@@ -6,26 +6,26 @@ helpviewer_keywords:
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 2c659d433830a279a88fea766ceaa8efd7429b1f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9f939fa0f03aa00ea35405ce569d762486f4cb33
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051966"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975649"
 ---
 # <a name="developing-web-apps-with-aspnet"></a>ASP.NET ile Web uygulamaları geliştirme
 
 ASP.NET, Web uygulamaları oluşturmak için .NET Framework bir teknolojidir. ASP.NET hakkında daha fazla bilgi için bkz.
 
 - [ASP.NET belgeleri](/aspnet/overview)
-- [ASP.NET MVC](https://go.microsoft.com/fwlink/p/?LinkID=227227)
-- [ASP.NET Web Sayfaları](https://go.microsoft.com/fwlink/p/?LinkId=251040)
-- [ASP.NET Web API](https://go.microsoft.com/fwlink/p/?LinkId=251041)  
+- [ASP.NET MVC](https://dotnet.microsoft.com/apps/aspnet/mvc)
+- [ASP.NET Web Sayfaları](https://dotnet.microsoft.com/apps/aspnet/web-apps)
+- [ASP.NET Web API](https://dotnet.microsoft.com/apps/aspnet/apis)  
 - [Azure 'da bir ASP.NET Framework Web uygulaması oluşturma](/azure/app-service/app-service-web-get-started-dotnet-framework)
 
 ## <a name="developing-web-apps-with-aspnet-core"></a>ASP.NET Core ile Web uygulamaları geliştirme
 
-ASP.NET Core, ASP.NET'in yeniden 4.x. ASP.NET Core avantajlarından bazıları, ASP.NET ' den fazla yararlar sağlar:
+ASP.NET Core, ASP.NET 4. x ' in bir tasarlayadır. ASP.NET Core avantajlarından bazıları, ASP.NET ' den fazla yararlar sağlar:
 
 - Platformlar arası.
 - Taaner ve daha modüler.

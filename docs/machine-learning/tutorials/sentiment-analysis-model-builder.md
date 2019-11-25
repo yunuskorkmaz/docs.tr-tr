@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4a97fb70caafd7b0003830259ddbb0ec72a2ca8a
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180264"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974805"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Öğretici: ML.NET model Oluşturucu kullanarak Web uygulamasındaki Web sitesindeki açıklamaları çözümleme
 
@@ -19,7 +19,7 @@ Bir Web uygulamasının içinde gerçek zamanlı açıklamalardan yaklaşımı �
 
 Bu öğreticide, Web sitesi açıklamalarından gerçek zamanlı olarak yaklaşım sınıflandıran bir ASP.NET Core Razor Pages uygulamasının nasıl oluşturulacağı gösterilmektedir.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -36,7 +36,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://github.com/dotnet/machinelearning-samples) deposunda bulabilirsiniz.
 
-## <a name="pre-requisites"></a>Önkoşullar
+## <a name="pre-requisites"></a>Ön koşullar
 
 Önkoşul ve Yükleme yönergelerinin bir listesi için [model Oluşturucu Yükleme Kılavuzu](../how-to-guides/install-model-builder.md)' nu ziyaret edin.
 
@@ -58,10 +58,10 @@ Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://githu
 
 *Vivtox-250-Line-Data. tsv* veri kümesindeki her satır, visede bir kullanıcı tarafından bırakılan farklı bir gözden geçirmeyi temsil eder. İlk sütun metnin (0-Toxic, 1 ' in Toxic) yaklaşımını temsil eder ve ikinci sütun Kullanıcı tarafından bırakılan yorumu temsil eder. Sütunlar sekmelerle ayrılır. Veriler aşağıdaki gibi görünür:
 
-| Duygu | Sentimentmetni |
+| Yaklaşım | Sentimentmetni |
 | :---: | :---: |
-1 | = = İşlenmemiş = = dude, o Carl resmini geri yüklemeniz veya başka bir şey yapmanız gerekir.
-1 | = = TAMAM! = = ıM, DAHA SONRA BIR WIKI 'YI DAHA SONRA!!!
+1\. | = = İşlenmemiş = = dude, o Carl resmini geri yüklemeniz veya başka bir şey yapmanız gerekir.
+1\. | = = TAMAM! = = ıM, DAHA SONRA BIR WIKI 'YI DAHA SONRA!!!
 0 | Bunu umuyoruz.
 
 ## <a name="choose-a-scenario"></a>Senaryo seçin
@@ -70,12 +70,12 @@ Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://githu
 
 Modelinize eğitebilmeniz için, model Oluşturucu tarafından sağlanan kullanılabilir makine öğrenimi senaryoları listesinden seçim yapmanız gerekir.
 
-1. **Çözüm Gezgini**, *SentimentRazor* projesine sağ tıklayın ve **Ekle** > **Machine Learning**' yı seçin.
+1. **Çözüm Gezgini**, *SentimentRazor* projesine sağ tıklayın ve > **Ekle** **Machine Learning**' yi seçin.
 1. Bu örnek için senaryo, yaklaşım analiziydi. Model Oluşturucu aracının *senaryo* adımında **yaklaşım Analizi** senaryosunu seçin.
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
-Model Oluşturucu iki kaynaktan verileri, bir SQL Server veritabanını veya `csv` veya `tsv` biçiminde yerel bir dosyayı kabul eder.
+Model Oluşturucu, bir SQL Server veritabanı veya `csv` veya `tsv` biçimindeki yerel bir dosya olan iki kaynaktan verileri kabul eder.
 
 1. Model Oluşturucu aracının veri adımında, veri kaynağı açılır listesinden **Dosya** ' yı seçin.
 1. **Dosya seçin** metin kutusunun yanındaki düğmeyi seçin ve dosya Gezgini 'ni kullanarak, *vibtox-250-Line-Data. tsv* dosyasına gidin ve seçin.
@@ -124,7 +124,7 @@ Eğitim sürecinin bir sonucu olarak iki proje oluşturulacaktır.
 
 ### <a name="configure-the-predictionengine-pool"></a>PredictionEngine havuzunu yapılandırma
 
-Tek bir tahmin yapmak için bir [@no__t](xref:Microsoft.ML.PredictionEngine%602)oluşturmanız gerekir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) , iş parçacığı açısından güvenli değildir. Ayrıca, uygulamanızın içinde gerek duyduğu her yerde bir örneği oluşturmanız gerekir. Uygulamanız büyüdükçe, bu işlem yönetilebilir hale gelebilir. Daha iyi performans ve iş parçacığı güvenliği için, uygulamanız genelinde kullanılmak üzere bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nesnesi oluşturan bağımlılık ekleme ve `PredictionEnginePool` hizmeti birleşimini kullanın.
+Tek bir tahmin yapmak için bir [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)oluşturmanız gerekir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) , iş parçacığı açısından güvenli değildir. Ayrıca, uygulamanızın içinde gerek duyduğu her yerde bir örneği oluşturmanız gerekir. Uygulamanız büyüdükçe, bu işlem yönetilebilir hale gelebilir. Daha iyi performans ve iş parçacığı güvenliği için, uygulamanız genelinde kullanılmak üzere [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nesnelerinin bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) oluşturan bağımlılık ekleme ve `PredictionEnginePool` hizmeti birleşimini kullanın.
 
 1. *Microsoft.Extensions.ml* NuGet paketini yükler:
 
@@ -160,16 +160,16 @@ Tek bir tahmin yapmak için bir [@no__t](xref:Microsoft.ML.PredictionEngine%602)
 
         string fullPath = Path.Combine(assemblyFolderPath, relativePath);
         return fullPath;
-    }    
+    }
     ```
 
-1. @No__t-2 ' i ayarlamak için `Startup` sınıf oluşturucusunda `GetAbsolutePath` yöntemini kullanın.
+1. `_modelPath`ayarlamak için `Startup` sınıf oluşturucusunda `GetAbsolutePath` yöntemi kullanın.
 
     ```csharp
     _modelPath = GetAbsolutePath("MLModel.zip");
     ```
 
-1. @No__t-1 yönteminde uygulamanız için `PredictionEnginePool` yapılandırın:
+1. `ConfigureServices` yönteminde uygulamanız için `PredictionEnginePool` yapılandırın:
 
     ```csharp
     services.AddPredictionEnginePool<ModelInput, ModelOutput>()
@@ -178,7 +178,7 @@ Tek bir tahmin yapmak için bir [@no__t](xref:Microsoft.ML.PredictionEngine%602)
 
 ### <a name="create-sentiment-analysis-handler"></a>Yaklaşım Analizi işleyicisi oluşturma
 
-Tahmine dayalı, uygulamanın ana sayfasında yapılır. Bu nedenle, Kullanıcı girişi alan ve bir tahmin eklenmesi için `PredictionEnginePool` kullanan bir yöntem.
+Tahmine dayalı, uygulamanın ana sayfasında yapılır. Bu nedenle, Kullanıcı girişini alan ve bir tahmin eklenmesi için `PredictionEnginePool` kullanan bir yöntem.
 
 1. *Pages* dizininde bulunan *Index.cshtml.cs* dosyasını açın ve aşağıdaki using deyimlerini ekleyin:
 
@@ -187,26 +187,26 @@ Tahmine dayalı, uygulamanın ana sayfasında yapılır. Bu nedenle, Kullanıcı
     using SentimentRazorML.Model;
     ```
 
-    @No__t-1 sınıfında yapılandırılmış `PredictionEnginePool` ' ı kullanmak için, onu kullanmak istediğiniz modelin oluşturucusuna yazmanız gerekir.
+    `Startup` sınıfında yapılandırılan `PredictionEnginePool` kullanmak için, bu dosyayı kullanmak istediğiniz modelin oluşturucusuna eklemek gerekir.
 
-1. @No__t-1 sınıfının içindeki `PredictionEnginePool` ' a başvuracak bir değişken ekleyin.
+1. `IndexModel` sınıfının içindeki `PredictionEnginePool` başvurmak için bir değişken ekleyin.
 
     ```csharp
     private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
     ```
 
-1. @No__t-0 sınıfında bir Oluşturucu oluşturun ve buna `PredictionEnginePool` hizmetini ekleyin.
+1. `IndexModel` sınıfında bir Oluşturucu oluşturun ve `PredictionEnginePool` hizmetini ona ekleyin.
 
     ```csharp
     public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
     {
         _predictionEnginePool = predictionEnginePool;
-    }    
+    }
     ```
 
 1. Web sayfasından alınan Kullanıcı girişinden tahminleri yapmak için `PredictionEnginePool` kullanan bir yöntem işleyicisi oluşturun.
 
-    1. @No__t-0 yönteminin altında, `OnGetAnalyzeSentiment` adlı yeni bir yöntem oluşturun
+    1. `OnGet` yönteminin altında, adlı yeni bir yöntem oluşturun `OnGetAnalyzeSentiment`
 
         ```csharp
         public IActionResult OnGetAnalyzeSentiment([FromQuery] string text)
@@ -215,25 +215,25 @@ Tahmine dayalı, uygulamanın ana sayfasında yapılır. Bu nedenle, Kullanıcı
         }
         ```
 
-    1. @No__t-0 yönteminin içinde, kullanıcının girişi boş veya null olduğunda *nötr* yaklaşım döndürün.
+    1. `OnGetAnalyzeSentiment` yönteminin içinde, kullanıcının girişi boş veya null olduğunda *nötr* yaklaşım döndürün.
 
         ```csharp
         if (String.IsNullOrEmpty(text)) return Content("Neutral");
         ```
 
-    1. Geçerli bir giriş verildiğinde @no__t yeni bir örneğini oluşturun-0.
+    1. Geçerli bir giriş verildiğinde `ModelInput`yeni bir örneğini oluşturun.
 
         ```csharp
         var input = new ModelInput { SentimentText = text };
         ```
 
-    1. Duymayı tahmin etmek için `PredictionEnginePool` kullanın.
+    1. Yaklaşımı tahmin etmek için `PredictionEnginePool` kullanın.
 
         ```csharp
         var prediction = _predictionEnginePool.Predict(input);
         ```
 
-    1. Tahmin edilen `bool` değerini aşağıdaki kodla Toxic öğesine dönüştürün.
+    1. Tahmin edilen `bool` değerini, aşağıdaki kodla Toxic öğesine dönüştürün.
 
         ```csharp
         var sentiment = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
@@ -247,7 +247,7 @@ Tahmine dayalı, uygulamanın ana sayfasında yapılır. Bu nedenle, Kullanıcı
 
 ### <a name="configure-the-web-page"></a>Web sayfasını yapılandırma
 
-@No__t-0 tarafından döndürülen sonuçlar, `Index` Web sayfasında dinamik olarak görüntülenir.
+`OnGetAnalyzeSentiment` tarafından döndürülen sonuçlar, `Index` Web sayfasında dinamik olarak görüntülenir.
 
 1. *Pages* dizinindeki *Index. cshtml* dosyasını açın ve içeriğini şu kodla değiştirin:
 
@@ -283,11 +283,11 @@ Uygulama başlatıldığında, *model Oluşturucu* seyrek erişimli yazın! meti
 
 ![Tahmin edilen yaklaşım penceresiyle pencere çalıştırma](./media/sentiment-analysis-model-builder/web-app.png)
 
-Model Oluşturucu tarafından oluşturulan projelere daha sonra başka bir çözümün içinde başvurulmaları gerekiyorsa, bunları `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` dizininde bulabilirsiniz.
+Model Oluşturucu tarafından oluşturulan projelere daha sonra başka bir çözümün içinde başvurulmaları gerekiyorsa, bunları `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` dizin içinde bulabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
+Bu öğreticide, nasıl yapılacağını öğrendiniz:
 > [!div class="checklist"]
 >
 > - ASP.NET Core Razor Pages uygulaması oluşturma

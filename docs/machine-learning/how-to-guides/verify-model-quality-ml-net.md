@@ -3,14 +3,14 @@ title: Makine öğrenme modeli kalitesini değerlendirmek için ölçümleri hes
 description: Makine öğrenimi modeli kalitesini ML.NET ile değerlendirmek ve doğrulamak için ölçümleri hesaplamayı öğrenin
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 529003913b166c966e131b006800f944096605b7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d6409307cd283ae67d7546c4dc6e19e6089a0766
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855568"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975835"
 ---
-# <a name="calculate-metrics-to-evaluate-machine-learning-model-quality"></a>Makine öğrenme modeli kalitesini değerlendirmek için ölçümleri hesaplama 
+# <a name="calculate-metrics-to-evaluate-machine-learning-model-quality"></a>Makine öğrenme modeli kalitesini değerlendirmek için ölçümleri hesaplama
 
 > [!NOTE]
 > Bu konu, şu anda önizleme aşamasında olan ML.NET 'e başvurur ve malzemeler değişebilir. Daha fazla bilgi için [ml.net](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) sayfasını ziyaret edin.

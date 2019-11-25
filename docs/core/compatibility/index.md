@@ -2,12 +2,12 @@
 title: Son değişiklikleri değerlendir-.NET Core
 description: .NET Core 'un .NET sürümleri genelinde geliştiriciler için uyumluluğu sürdürme yolları hakkında bilgi edinin.
 ms.date: 06/10/2019
-ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739354"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973645"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>.NET Core 'daki kırılmaya karşı değişiklikleri değerlendir
 
@@ -103,7 +103,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını *değiştirir
 
   Bir geçersiz kılma ile tanışın, önceki tüketicilerin [taban](../../csharp/language-reference/keywords/base.md)çağrılırken geçersiz kılma üzerinde atlama yapılmasına neden olabilir.
 
-- **sınıfın daha önce Oluşturucusu yoksa, bir sınıfa bir Oluşturucu eklemek ✔️ varsayılan (parametresiz) bir Oluşturucu ile birlikte**
+- **sınıfın daha önce Oluşturucusu yoksa, bir sınıfa bir Oluşturucu eklemek ✔️ parametresiz bir Oluşturucu ile birlikte**
 
    Ancak, parametresiz oluşturucuyu eklemeden daha önceden hiç oluşturucuya *sahip olmayan bir* sınıfa bir Oluşturucu eklemeye izin verilmez.
 

@@ -7,23 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-ms.openlocfilehash: da4a766e2617308cb33b9673a88db9e7a954152a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2f4dc428a247275f9919c4a8b6e6944a558eef0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935323"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968234"
 ---
-# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>Öznitelik '\<attributename >' birden çok kez uygulanamaz
-Öznitelik yalnızca bir kez uygulanabilir. `AttributeUsage` Özniteliği bir öznitelik birden çok kez uygulanabilir olup olmadığını belirler.  
+# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>'\<AttributeName > ' özniteliği birden çok kez uygulanamaz
+
+Özniteliği yalnızca bir kez uygulanabilir. `AttributeUsage` özniteliği bir özniteliğin birden çok kez uygulanıp uygulanamayacağını belirler.  
   
- **Hata Kimliği:** BC30663  
+ **Hata kimliği:** BC30663  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Öznitelik yalnızca bir kez uygulanır emin olun.  
+1. Özniteliğin yalnızca bir kez uygulandığından emin olun.  
   
-2. Geliştirdiğiniz özel öznitelikler kullanıyorsanız, değiştirmeyi göz önünde bulundurun, `AttributeUsage` birden çok öznitelik kullanımı, aşağıdaki örnek olarak izin vermek için özniteliği.  
+2. Geliştirdiğiniz özel öznitelikler kullanıyorsanız, aşağıdaki örnekte olduğu gibi, `AttributeUsage` özniteliğini birden çok öznitelik kullanımına izin verecek şekilde değiştirmeyi düşünün.  
   
 ```vb  
 <AttributeUsage(AllowMultiple := True)>  

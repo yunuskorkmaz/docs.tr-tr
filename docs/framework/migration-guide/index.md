@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-ms.openlocfilehash: 350d5400b4e1df7238702ce925c974eecb2a0d7a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2fa992e1c0897d360f322581888c51dca8d8a734
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457955"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974981"
 ---
 # <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>4,8, 4,7, 4,6 ve 4,5 .NET Framework geçiş kılavuzu
 
@@ -40,6 +40,5 @@ Uygulamanızı önceki .NET Framework sürümlerinden 4,5, 4.5.1, 4.5.2, 4,6, 4.
 - [Nasıl yapılır: .NET Framework 4 veya sonraki sürümleri desteklemek için uygulama yapılandırma](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [Yenilikler](../whats-new/index.md)
 - [Sınıf Kitaplığında Artık Kullanılmayanlar](../whats-new/whats-obsolete.md)
-- [.NET Framework sürümü ve derleme bilgileri](https://go.microsoft.com/fwlink/?LinkId=201701)
-- [Microsoft .NET Framework destek yaşam döngüsü Ilkesi](https://go.microsoft.com/fwlink/?LinkId=196607)
+- [.NET Framework resmi destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [.NET Framework 4 geçiş sorunları](net-framework-4-migration-issues.md)

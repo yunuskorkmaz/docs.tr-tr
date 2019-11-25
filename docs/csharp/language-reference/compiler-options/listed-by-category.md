@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 7319d424b84d5edd41fc255e3aea763da55961a9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5cd5607c25dabd8f56ebb58366116666e8e649ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606735"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972713"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Kategorilere Göre Listelenen C# Derleyici Seçenekleri
 
@@ -96,7 +96,7 @@ Aşağıdaki derleyici seçenekleri kategoriye göre sıralanır. Alfabetik bir 
 |[-codepage](codepage-compiler-option.md)|Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını belirtir.|
 |[-yardım](help-compiler-option.md)|Stdout için derleyici seçeneklerini listeler.|
 |[-highentropyva](highentropyva-compiler-option.md)|Yürütülebilir dosyanın adres alanı düzeni rastgele seçme (ASLR) öğesini desteklediğini belirtir.|
-|[-langversion](langversion-compiler-option.md)|Dil sürümünü belirtin: Varsayılan, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7,1, 7,2, 7,3 veya en son |
+|[-langversion](langversion-compiler-option.md)|Dil sürümünü belirtin: varsayılan, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7,1, 7,2, 7,3 veya en son |
 |[-main](main-compiler-option.md)|**Main** yönteminin konumunu belirtir.|
 |[-noconfig](noconfig-compiler-option.md)|Derleyicinin Csc. rsp ile derlenmeyeceğini söyler.|
 |[-nologo](nologo-compiler-option.md)|Derleyici başlık bilgilerini gizler.|
@@ -117,4 +117,4 @@ Aşağıdaki derleyici seçenekleri kategoriye göre sıralanır. Alfabetik bir 
 
 - [C# Derleyici Seçenekleri](index.md)
 - [Alfabetik Listelenmiş C# Derleyici Seçenekleri](listed-alphabetically.md)
-- [Nasıl yapılır: Visual Studio komut satırı için ortam değişkenlerini ayarlama](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Visual Studio komut satırı için ortam değişkenlerini ayarlama](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

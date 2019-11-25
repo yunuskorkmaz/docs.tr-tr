@@ -2,21 +2,21 @@
 title: <add> / <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: dee2cd482efc841b7320ed2114a05000255466f3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 809e6d5504b56f86eb09a5d57931f922e1c18348
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850526"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973818"
 ---
-# <a name="add-of-baseaddressprefixfilter"></a>\<\<baseAddressPrefixFilter > > ekleyin
+# <a name="add-of-baseaddressprefixfilter"></a>\<\<baseAddressPrefixFilter > ekleyin >
 IIS 'de bir Windows Communication Foundation (WCF) uygulaması barındırırken uygun Internet Information Services (IIS) bağlamalarını seçmek için bir mekanizma sağlayan doğrudan geçiş filtresini belirten bir yapılandırma öğesini temsil eder.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceHostingEnvironment >** ](servicehostingenvironment.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<baseAddressPrefixFilters >** ](baseaddressprefixfilters.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Ekle**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,7 +35,7 @@ IIS 'de bir Windows Communication Foundation (WCF) uygulaması barındırırken 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|prefix|Temel adresin bir bölümünü eşleştirmek için kullanılan bir URI.|  
+|koy|Temel adresin bir bölümünü eşleştirmek için kullanılan bir URI.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -44,7 +44,7 @@ IIS 'de bir Windows Communication Foundation (WCF) uygulaması barındırırken 
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters >](baseaddressprefixfilters.md)|IIS 'de bir Windows Communication Foundation (WCF) uygulaması barındırırken uygun IIS bağlamalarını seçme mekanizması sağlayan doğrudan geçiş filtrelerini belirten yapılandırma öğeleri koleksiyonu.|  
+|[baseAddressPrefixFilters > \<](baseaddressprefixfilters.md)|IIS 'de bir Windows Communication Foundation (WCF) uygulaması barındırırken uygun IIS bağlamalarını seçme mekanizması sağlayan doğrudan geçiş filtrelerini belirten yapılandırma öğeleri koleksiyonu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Önek filtresi, paylaşılan barındırma sağlayıcılarının, hizmet tarafından hangi URI 'Lerin kullanılacağını belirtmek için bir yol sağlar. Paylaşılan ana bilgisayarların aynı sitede aynı düzen için farklı temel adreslere sahip birden çok uygulamayı barındırmalarını sağlar.  
@@ -53,9 +53,9 @@ IIS 'de bir Windows Communication Foundation (WCF) uygulaması barındırırken 
   
  IIS, her bir site için birden çok IIS bağlaması belirtmeyi destekler ve bu, her bir şema için birden çok temel adrese neden Bir site altında barındırılan bir WCF hizmeti her bir şema için yalnızca bir temel adrese bağlamaya izin verdiğinden, barındırılan hizmetin gerekli temel adresini seçmek için önek filtresi özelliğini kullanabilirsiniz. IIS tarafından sağlanan gelen temel adresler, isteğe bağlı önek listesi filtresine göre filtrelenir.  
   
- Örneğin, siteniz aşağıdaki temel adresleri içerebilir.  
+ Örneğin, siteniz aşağıdaki temel adresleri içerebilir:
   
-```  
+``` 
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  
@@ -73,12 +73,12 @@ http://test2.fabrikam.com/Service.svc
 </system.serviceModel>
 ```  
   
- Bu örnekte, `net.tcp://test1.fabrikam.com:8000` ve `http://test2.fabrikam.com:9000` kendisine geçirilmesine izin verilen kendi şemaları için tek temel adreslerdir.  
+ Bu örnekte, `net.tcp://test1.fabrikam.com:8000` ve `http://test2.fabrikam.com:9000`, kendisine geçirilmesine izin verilen kendi şemaları için tek temel adreslerdir.  
   
  Varsayılan olarak, ön ek belirtilmediğinde tüm adresler geçirilir. Ön eki belirtmek yalnızca ilgili düzenin eşleşen temel adresinin geçirilmesine izin verir.  
   
 > [!NOTE]
-> Filtre herhangi bir joker karakteri desteklemiyor. Buna ek olarak, IIS tarafından sağlanan BaseAddresses, `baseAddressPrefixFilters` listede bulunmayan diğer şemalara göre adreslere sahip olabilir. Bu adresler filtrelenmez.  
+> Filtre herhangi bir joker karakteri desteklemiyor. Ayrıca, IIS tarafından sağlanan baseAddresses, `baseAddressPrefixFilters` listesinde bulunmayan diğer şemalara ait adreslere sahip olabilir. Bu adresler filtrelenmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

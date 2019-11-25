@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: fea12a32d39f98ddc575e2d538e7501d2ff49768
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3573959a1e10b475a9867631767de5d10a08b9ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590551"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969771"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Sabit listesi türleriC# (Programlama Kılavuzu)
 
@@ -45,14 +45,14 @@ Sayısal bir tür yerine bir sabit listesi kullanmanın avantajları aşağıda 
 
 - Visual Studio 'da, IntelliSense tanımlı değerleri listeler.
 
-Numaralandırıcı listesindeki öğeler için değer belirtmeyin, değerler otomatik olarak 1 ' den artırılır. Önceki örnekte, `Day.Sunday` 0 değerine sahiptir, `Day.Monday` değeri 1 ' dir ve bu şekilde devam eder. Yeni `Day` bir nesne oluşturduğunuzda, bir değeri açıkça atamadıysanız, varsayılan `Day.Sunday` değeri (0) olur. Bir sabit listesi oluşturduğunuzda, en mantıksal varsayılan değeri seçin ve sıfıra bir değer verin. Bu, tüm Numaralandırmaların, oluşturulduklarında açıkça bir değer atamadığı takdirde, bu varsayılan değere sahip olmasına neden olur.
+Numaralandırıcı listesindeki öğeler için değer belirtmeyin, değerler otomatik olarak 1 ' den artırılır. Önceki örnekte, `Day.Sunday` 0 değerine sahiptir, `Day.Monday` 1 değeri vardır ve bu şekilde devam eder. Yeni bir `Day` nesnesi oluşturduğunuzda, açıkça bir değer atamadıysanız varsayılan değeri `Day.Sunday` (0) olur. Bir sabit listesi oluşturduğunuzda, en mantıksal varsayılan değeri seçin ve sıfıra bir değer verin. Bu, tüm Numaralandırmaların, oluşturulduklarında açıkça bir değer atamadığı takdirde, bu varsayılan değere sahip olmasına neden olur.
 
-Değişken `meetingDay` `Day`türünde `Day`ise (açık bir atama olmadan), yalnızca tarafından tanımlanan değerlerden birini atayabilirsiniz. Toplantı günü değişirse, öğesinden `Day` öğesine `meetingDay`yeni bir değer atayabilirsiniz:
+Değişken `meetingDay` `Day`tür ise (açık bir atama olmadan), yalnızca `Day`tarafından tanımlanan değerlerden birini atayabilirsiniz. Toplantı günü değişirse, `meetingDay``Day` yeni bir değer atayabilirsiniz:
 
 [!code-csharp[csProgGuideEnums#4](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#4)]
 
 > [!NOTE]
-> Herhangi bir rastgele tamsayı değeri `meetingDay`atamak mümkündür. Örneğin, bu kod satırı bir hata oluşturmaz: `meetingDay = (Day) 42`. Ancak, örtük beklentide bir numaralandırma değişkeninin yalnızca enum tarafından tanımlanan değerlerden birini tutacağından bunu yapmanız gerekmez. Sabit listesi türünde bir değişkene rastgele bir değer atamak için, hatalara yönelik yüksek riskli bir hata ortaya çıkaracak.
+> `meetingDay`için herhangi bir rastgele tamsayı değeri atamak mümkündür. Örneğin, bu kod satırı bir hata oluşturmaz: `meetingDay = (Day) 42`. Ancak, örtük beklentide bir numaralandırma değişkeninin yalnızca enum tarafından tanımlanan değerlerden birini tutacağından bunu yapmanız gerekmez. Sabit listesi türünde bir değişkene rastgele bir değer atamak için, hatalara yönelik yüksek riskli bir hata ortaya çıkaracak.
 
 Bir numaralandırma türünün Numaralandırıcı listesindeki öğelere herhangi bir değer atayabilir ve hesaplanan değerleri de kullanabilirsiniz:
 
@@ -62,31 +62,31 @@ Bir numaralandırma türünün Numaralandırıcı listesindeki öğelere herhang
 
 Bir numaralandırma türü örneğini, Numaralandırıcı listesinde tanımlanan değerlerin herhangi bir birleşimini depolamak üzere bir numaralandırma türü örneği sağlayan bit bayraklarını tanımlamak için kullanabilirsiniz. (Tabii ki, bazı birleşimler program kodunuzda anlamlı veya izin verilebilir olmayabilir.)
 
-<xref:System.FlagsAttribute?displayProperty=nameWithType> Özniteliği uygulayarak ve değerlerini uygun şekilde tanımlayarak bir bit bayrakları numaralandırması oluşturursunuz; bu `AND`sayede, `OR` `NOT` ve `XOR` bit düzeyinde işlemler gerçekleştirilebilir. Bir bit bayrakları numaralandırmasında, "hiçbir bayrak ayarlanmadı" anlamına gelen değeri sıfır olan adlandırılmış sabiti ekleyin. "Bayrak ayarlanmamışsa" bir değere sıfır değeri vermeyin.
+<xref:System.FlagsAttribute?displayProperty=nameWithType> özniteliğini uygulayarak ve değerleri uygun şekilde tanımlayarak, `AND`, `OR`, `NOT` ve `XOR` bit düzeyinde işlemler gerçekleştirilmeleri için bir bit bayrakları numaralandırması oluşturursunuz. Bir bit bayrakları numaralandırmasında, "hiçbir bayrak ayarlanmadı" anlamına gelen değeri sıfır olan adlandırılmış sabiti ekleyin. "Bayrak ayarlanmamışsa" bir değere sıfır değeri vermeyin.
 
-Aşağıdaki örnekte, `Day` sabit listesinin adında `Days`başka bir sürümü tanımlanmıştır. `Days``Flags` özniteliğine sahiptir ve her değere 2 ' nin sonraki daha yüksek gücüne atanır. Bu, `Days` `Days.Tuesday | Days.Thursday`değeri olan bir değişken oluşturmanıza olanak sağlar.
+Aşağıdaki örnekte, `Days`adlı `Day` numaralandırmasının başka bir sürümü tanımlanmıştır. `Days` `Flags` özniteliğine sahiptir ve her değere 2 ' nin sonraki daha yüksek gücüne atanır. Bu, değeri `Days.Tuesday | Days.Thursday`olan `Days` bir değişken oluşturmanıza olanak sağlar.
 
 [!code-csharp[csProgGuideEnums#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#2)]
 
-Bir numaralandırıcıda bayrak ayarlamak için aşağıdaki örnekte gösterildiği gibi `OR` bit düzeyinde işlecini kullanın:
+Bir numaralandırıcıda bayrak ayarlamak için aşağıdaki örnekte gösterildiği gibi bit düzeyinde `OR` işlecini kullanın:
 
 [!code-csharp[csProgGuideEnums#6](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#6)]
 
-Belirli bir bayrağın ayarlanmış olup olmadığını anlamak için aşağıdaki örnekte gösterildiği gibi `AND` bit düzeyinde bir işlem kullanın:
+Belirli bir bayrağın ayarlanmış olup olmadığını anlamak için aşağıdaki örnekte gösterildiği gibi bit düzeyinde `AND` işlem kullanın:
 
 [!code-csharp[csProgGuideEnums#7](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#7)]
 
-<xref:System.FlagsAttribute?displayProperty=nameWithType> Özniteliği ile numaralandırma türlerini tanımlarken göz önünde bulundurmanız gerekenler hakkında daha fazla bilgi için, bkz <xref:System.Enum?displayProperty=nameWithType>.
+<xref:System.FlagsAttribute?displayProperty=nameWithType> özniteliğiyle numaralandırma türlerini tanımlarken göz önünde bulundurmanız gerekenler hakkında daha fazla bilgi için, bkz. <xref:System.Enum?displayProperty=nameWithType>.
 
 ## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>Enum değerlerini bulma ve işlemek için System. Enum yöntemlerini kullanma
 
-Tüm numaralandırmalar <xref:System.Enum?displayProperty=nameWithType> türün örnekleridir. Yeni sınıfları öğesinden <xref:System.Enum?displayProperty=nameWithType>türetemezsiniz, ancak kendi yöntemlerini kullanarak bir numaralandırma örneğindeki değerleri hakkında bilgi bulabilir ve bunları değiştirebilirsiniz.
+Tüm numaralandırmalar <xref:System.Enum?displayProperty=nameWithType> türünün örnekleridir. <xref:System.Enum?displayProperty=nameWithType>yeni sınıflar türetemezsiniz, ancak kendi yöntemlerini kullanarak bir numaralandırma örneğindeki değerleri hakkında bilgi bulabilir ve bunları değiştirebilirsiniz.
 
 [!code-csharp[csProgGuideEnums#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#5)]
 
 Daha fazla bilgi için bkz. <xref:System.Enum?displayProperty=nameWithType>.
 
-Ayrıca, bir uzantı yöntemi kullanarak bir numaralandırma için yeni bir yöntem oluşturabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Bir numaralandırma](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)Için yeni bir yöntem oluşturun.
+Ayrıca, bir uzantı yöntemi kullanarak bir numaralandırma için yeni bir yöntem oluşturabilirsiniz. Daha fazla bilgi için bkz. [bir numaralandırma için yeni bir yöntem oluşturma](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Office programlama- C# programlama kılavuzunda adlandırılmış ve Isteğe bağlı bağımsız değişkenleri kullanma'
+title: Office programlama- C# programlama kılavuzunda adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 90b60a6410ffbe7f9802b01bf3303b6e842a1424
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d7efd13f26912f8cd944bcbc5568e9bbca92c3a0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002793"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970500"
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Nasıl yapılır: Office Programlamada Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenleri Kullanma (C# Programlama Kılavuzu)
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma (C# Programlama Kılavuzu)
 
 Adlandırılmış bağımsız değişkenler ve isteğe bağlı bağımsız değişkenler C# , 4 ' te tanıtılan ve C# programlamada kolaylık, esneklik ve okunabilirliği geliştirir. Ayrıca, bu özellikler Microsoft Office Automation API 'Leri gibi COM arabirimlerine erişimi büyük ölçüde kolaylaştırır.
 
@@ -54,13 +54,13 @@ Bu yordamları gerçekleştirmek için bilgisayarınızda Microsoft Office Word 
 
 1. **Çözüm Gezgini**, *program.cs* dosyasına sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
-2. Kod dosyasının en üstüne aşağıdaki `using` yönergelerini ekleyin:
+2. Aşağıdaki `using` yönergelerini kod dosyasının en üstüne ekleyin:
 
      [!code-csharp[csProgGuideNamedAndOptional#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#4)]
 
 ## <a name="to-display-text-in-a-word-document"></a>Bir Word belgesinde metin göstermek için
 
-1. *Program.cs*' deki `Program` sınıfında, bir Word uygulaması ve Word belgesi oluşturmak için aşağıdaki yöntemi ekleyin. [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) yönteminde dört isteğe bağlı parametre vardır. Bu örnek, varsayılan değerlerini kullanır. Bu nedenle, çağırma ifadesinde herhangi bir bağımsız değişken gerekmez.
+1. *Program.cs*içindeki `Program` sınıfında, bir Word uygulaması ve Word belgesi oluşturmak için aşağıdaki yöntemi ekleyin. [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) yönteminde dört isteğe bağlı parametre vardır. Bu örnek, varsayılan değerlerini kullanır. Bu nedenle, çağırma ifadesinde herhangi bir bağımsız değişken gerekmez.
 
      [!code-csharp[csProgGuideNamedAndOptional#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#6)]
 
@@ -74,7 +74,7 @@ Bu yordamları gerçekleştirmek için bilgisayarınızda Microsoft Office Word 
 
      [!code-csharp[csProgGuideNamedAndOptional#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#8)]
 
-2. Projeyi çalıştırmak için <kbd>CTRL</kbd>+<kbd>F5</kbd> tuşlarına basın. Belirtilen metni içeren bir Word belgesi görüntülenir.
+2. Projeyi çalıştırmak için <kbd>CTRL</kbd>+<kbd>F5</kbd> tuşuna basın. Belirtilen metni içeren bir Word belgesi görüntülenir.
 
 ## <a name="to-change-the-text-to-a-table"></a>Metni bir tabloya dönüştürmek için
   
@@ -82,23 +82,23 @@ Bu yordamları gerçekleştirmek için bilgisayarınızda Microsoft Office Word 
 
      ![ConvertToTable yöntemi için parametrelerin listesi](./media/how-to-use-named-and-optional-arguments-in-office-programming/convert-table-parameters.png)
 
-     Adlandırılmış ve isteğe bağlı bağımsız değişkenler yalnızca değiştirmek istediğiniz parametrelerin değerlerini belirtmenizi sağlar. Basit bir tablo oluşturmak için `DisplayInWord` yönteminin sonuna aşağıdaki kodu ekleyin. Bağımsız değişkeni, `range` ' daki metin dizesindeki virgüllerin tablonun hücrelerini ayırabelirtir.
+     Adlandırılmış ve isteğe bağlı bağımsız değişkenler yalnızca değiştirmek istediğiniz parametrelerin değerlerini belirtmenizi sağlar. Basit bir tablo oluşturmak için `DisplayInWord` yönteminin sonuna aşağıdaki kodu ekleyin. Bağımsız değişkeni, `range` içindeki metin dizesindeki virgüllerin tablonun hücrelerini ayırabelirtir.
 
      [!code-csharp[csProgGuideNamedAndOptional#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#9)]
 
-     Önceki sürümlerinde C#, aşağıdaki kodda gösterildiği gibi `ConvertToTable` ' e yapılan çağrı her parametre için bir başvuru bağımsız değişkeni gerektirir:
+     Önceki sürümlerinde C#, aşağıdaki kodda gösterildiği gibi, `ConvertToTable` çağrısı her parametre için bir başvuru bağımsız değişkeni gerektirir:
   
      [!code-csharp[csProgGuideNamedAndOptional#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#14)]
 
-2. Projeyi çalıştırmak için <kbd>CTRL</kbd>+<kbd>F5</kbd> tuşlarına basın.
+2. Projeyi çalıştırmak için <kbd>CTRL</kbd>+<kbd>F5</kbd> tuşuna basın.
 
 ## <a name="to-experiment-with-other-parameters"></a>Diğer parametrelerle denemek için
 
-1. Tabloyu bir sütun ve üç satıra sahip olacak şekilde değiştirmek için, `DisplayInWord` ' daki son satırı aşağıdaki deyimle değiştirin ve ardından <kbd>CTRL</kbd>+<kbd>F5</kbd>yazın.  
+1. Tabloyu tek bir sütuna ve üç satıra sahip olacak şekilde değiştirmek için `DisplayInWord` son satırını aşağıdaki deyimle değiştirin ve ardından <kbd>CTRL</kbd>+<kbd>F5</kbd>yazın.  
 
      [!code-csharp[csProgGuideNamedAndOptional#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#10)]
 
-2. Tablo için önceden tanımlanmış bir biçim belirtmek üzere `DisplayInWord` ' daki son satırı aşağıdaki deyimle değiştirin ve <kbd>CTRL</kbd>+<kbd>F5</kbd>yazın. Biçim, [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>) sabitlerinden herhangi biri olabilir.
+2. Tablo için önceden tanımlanmış bir biçim belirtmek üzere `DisplayInWord` son satırını aşağıdaki deyimle değiştirin ve ardından <kbd>CTRL</kbd>+<kbd>F5</kbd>yazın. Biçim, [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>) sabitlerinden herhangi biri olabilir.
 
      [!code-csharp[csProgGuideNamedAndOptional#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#11)]
 

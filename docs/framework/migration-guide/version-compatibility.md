@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: c3e2368bc5977d7f50ae7ecea8557c5c545e82a4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455600"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974949"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework sürüm uyumluluğu
 
@@ -53,9 +53,9 @@ Uygulamanız veya bileşeniniz .NET Framework 4,5 ' de beklendiği gibi çalış
 
 - .NET Framework 3,5 uygulamanız varsa Ayrıca bkz. [.NET Framework 4 geçiş sorunları](../migration-guide/net-framework-4-migration-issues.md).
 
-- .NET Framework 2,0 uygulamanız varsa, [.NET Framework 3,5 SP1 'Deki değişikliklere](https://go.microsoft.com/fwlink/?LinkId=186989)de bakın.
+- .NET Framework 2,0 uygulamanız varsa, [.NET Framework 3,5 SP1 'Deki değişikliklere](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10))de bakın.
 
-- .NET Framework 1,1 uygulamanız varsa, [.NET Framework 2,0 ' deki değişikliklere](https://go.microsoft.com/fwlink/?LinkID=125263)de bakın.
+- .NET Framework 1,1 uygulamanız varsa, [.NET Framework 2,0 ' deki değişikliklere](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10))de bakın.
 
 - Var olan kaynak kodu .NET Framework 4,5 veya onun noktası sürümlerinde çalışacak şekilde yeniden derliyorsanız veya var olan bir kaynak kod tabanından .NET Framework 4,5 ya da onun noktası sürümlerini hedefleyen bir uygulamanın veya bileşenin yeni bir sürümünü geliştiriyorsanız, [ne olduğunu denetleyin Eski türler ve Üyeler için sınıf kitaplığında kullanımdan kalkmıştır](../whats-new/whats-obsolete.md) ve açıklanan geçici çözümü uygulayın. (Önceden derlenen kod, eski olarak işaretlenen türlere ve üyelere karşı çalışmaya devam edecektir.)
 
@@ -72,5 +72,5 @@ Sorununuz için uygun bir geçici çözüm bulamazsanız, .NET Framework 4,5 ' i
 - [Yenilikler](../whats-new/index.md)
 - [Sınıf Kitaplığında Artık Kullanılmayanlar](../whats-new/whats-obsolete.md)
 - [Uygulama Uyumluluğu](../migration-guide/application-compatibility.md)
-- [Microsoft .NET Framework destek yaşam döngüsü Ilkesi](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [.NET Framework resmi destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [.NET Framework 4 geçiş sorunları](../migration-guide/net-framework-4-migration-issues.md)

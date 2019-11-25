@@ -2,21 +2,21 @@
 title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: a22623c0856dd6d9b7c8c75e0b3feccc2d9350bd
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: cdf3264d1631db8e61bbcc4f6febd7008099251b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850192"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968723"
 ---
-# <a name="baseaddressprefixfilters"></a>\<baseAddressPrefixFilters >
+# <a name="baseaddressprefixfilters"></a>baseAddressPrefixFilters > \<
 IIS 'de Windows Communication Foundation (WCF) uygulamasını barındırırken uygun Internet Information Services (IIS) bağlamalarını seçmek için bir mekanizma sağlayan geçiş filtrelerini belirten yapılandırma öğelerinin bir koleksiyonunu temsil eder.  
   
 > [!WARNING]
-> \<baseAddressPrefixFilters >, "localhost" değerini tanımıyor. Bunun yerine tam makine adını kullanın.  
+> \<baseAddressPrefixFilters > "localhost" değerini tanımıyor. Bunun yerine tam makine adını kullanın.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceHostingEnvironment >** ](servicehostingenvironment.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<baseAddressPrefixFilters >**  
   
@@ -55,9 +55,9 @@ IIS 'de Windows Communication Foundation (WCF) uygulamasını barındırırken u
   
  IIS, her bir site için birden çok IIS bağlaması belirtmeyi destekler ve bu, her bir şema için birden çok temel adrese neden Bir site altında barındırılan bir WCF hizmeti her bir şema için yalnızca bir temel adrese bağlamaya izin verdiğinden, barındırılan hizmetin gerekli temel adresini seçmek için önek filtresi özelliğini kullanabilirsiniz. IIS tarafından sağlanan gelen temel adresler, isteğe bağlı önek listesi filtresine göre filtrelenir.  
   
- Örneğin, siteniz aşağıdaki temel adresleri içerebilir.  
+ Örneğin, siteniz aşağıdaki temel adresleri içerebilir:
   
-```  
+``` 
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  
@@ -75,12 +75,12 @@ http://test2.fabrikam.com/Service.svc
 </system.serviceModel>
 ```  
   
- Bu örnekte, `net.tcp://test1.fabrikam.com:8000` ve `http://test2.fabrikam.com:9000` kendisine geçirilmesine izin verilen kendi şemaları için tek temel adreslerdir.  
+ Bu örnekte, `net.tcp://test1.fabrikam.com:8000` ve `http://test2.fabrikam.com:9000`, kendisine geçirilmesine izin verilen kendi şemaları için tek temel adreslerdir.  
   
  Varsayılan olarak, ön ek belirtilmediğinde tüm adresler geçirilir. Ön eki belirtmek yalnızca ilgili düzenin eşleşen temel adresinin geçirilmesine izin verir.  
   
 > [!NOTE]
-> Filtre herhangi bir joker karakteri desteklemiyor. Buna ek olarak, IIS tarafından sağlanan BaseAddresses, `baseAddressPrefixFilters` listede bulunmayan diğer şemalara göre adreslere sahip olabilir. Bu adresler filtrelenmez.  
+> Filtre herhangi bir joker karakteri desteklemiyor. Ayrıca, IIS tarafından sağlanan baseAddresses, `baseAddressPrefixFilters` listesinde bulunmayan diğer şemalara ait adreslere sahip olabilir. Bu adresler filtrelenmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

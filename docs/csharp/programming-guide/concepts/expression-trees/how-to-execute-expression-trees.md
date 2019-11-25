@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Ifade ağaçlarını yürütme (C#)'
+title: İfade ağaçlarını yürütme (C#)
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 4a73201d06d21964a40fbbe57fa952da35c5942c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e7d408ea154572dc8b45d2e67bca3f05837868d2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924365"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969890"
 ---
-# <a name="how-to-execute-expression-trees-c"></a>Nasıl yapılır: Ifade ağaçlarını yürütme (C#)
+# <a name="how-to-execute-expression-trees-c"></a>İfade ağaçlarını yürütme (C#)
 Bu konu başlığı altında, bir ifade ağacının nasıl yürütüleceği gösterilmektedir. Bir ifade ağacının yürütülmesi bir değer döndürebilir veya bir yöntemi çağırmak gibi yalnızca bir eylem gerçekleştirebilir.  
   
- Yalnızca Lambda ifadelerini temsil eden ifade ağaçları yürütülebilir. Lambda ifadelerini temsil eden ifade ağaçları veya <xref:System.Linq.Expressions.LambdaExpression> <xref:System.Linq.Expressions.Expression%601>türündedir. Bu ifade ağaçlarını yürütmek için, yürütülebilir bir <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> temsilci oluşturmak üzere yöntemini çağırın ve ardından temsilciyi çağırın.  
+ Yalnızca Lambda ifadelerini temsil eden ifade ağaçları yürütülebilir. Lambda ifadelerini temsil eden ifade ağaçları <xref:System.Linq.Expressions.LambdaExpression> veya <xref:System.Linq.Expressions.Expression%601>türündedir. Bu ifade ağaçlarını yürütmek için <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> yöntemini çağırarak yürütülebilir bir temsilci oluşturun ve ardından temsilciyi çağırın.  
   
 > [!NOTE]
-> Temsilcinin türü bilinmiyorsa, diğer bir deyişle, lambda ifadesi türündedir <xref:System.Linq.Expressions.LambdaExpression> ve değil <xref:System.Linq.Expressions.Expression%601> <xref:System.Delegate.DynamicInvoke%2A> , yöntemi doğrudan çağırmak yerine temsilci üzerinde çağırmanız gerekir.  
+> Temsilcinin türü bilinmiyorsa, diğer bir deyişle, lambda ifadesi <xref:System.Linq.Expressions.LambdaExpression> türüdür ve <xref:System.Linq.Expressions.Expression%601>değil, temsilci üzerinde <xref:System.Delegate.DynamicInvoke%2A> yöntemini çağırmanız gerekir.  
   
  Bir ifade ağacı bir lambda ifadesini temsil etmez, <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> yöntemini çağırarak, gövdesi olarak özgün ifade ağacını içeren yeni bir lambda ifadesi oluşturabilirsiniz. Ardından, bu bölümde daha önce anlatıldığı gibi lambda ifadesini çalıştırabilirsiniz.  
   
@@ -49,4 +49,4 @@ Console.WriteLine(result);
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İfade ağaçları (C#)](./index.md)
-- [Nasıl yapılır: Ifade ağaçlarını değiştirme (C#)](./how-to-modify-expression-trees.md)
+- [İfade ağaçlarını değiştirme (C#)](./how-to-modify-expression-trees.md)

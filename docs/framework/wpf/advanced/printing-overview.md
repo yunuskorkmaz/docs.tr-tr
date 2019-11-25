@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: d578b9834ca39a33e284d3066eef85890c224a2f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5204165370459466b1258897e72c488ab7e7fadb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740816"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975773"
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış
-Microsoft .NET Framework ile, Windows Presentation Foundation (WPF) kullanan uygulama geliştiricilerinin zengin yeni bir yazdırma ve yazdırma sistemi yönetim API 'Leri kümesi vardır. [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], bu yazdırma sistemi geliştirmelerinden bazıları, yönetilmeyen kod kullanan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamalar ve geliştiriciler oluşturan geliştiriciler tarafından da kullanılabilir. Bu yeni işlevselliğin çekirdeği, yeni XML Kağıt Belirtimi (XPS) dosya biçimi ve XPS yazdırma yoludur.  
+Microsoft .NET Framework ile, Windows Presentation Foundation (WPF) kullanan uygulama geliştiricilerinin zengin yeni bir yazdırma ve yazdırma sistemi yönetim API 'Leri kümesi vardır. Windows Vista ile, bu yazdırma sistemi geliştirmelerinden bazıları, yönetilmeyen kod kullanan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamalar ve geliştiriciler oluşturan geliştiriciler tarafından da kullanılabilir. Bu yeni işlevselliğin çekirdeği, yeni XML Kağıt Belirtimi (XPS) dosya biçimi ve XPS yazdırma yoludur.  
   
  Bu konu, aşağıdaki bölümleri içerir.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: f7f8c25844f41dd8915c0f4404d6714b4c81233c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 039ae0cb314eba2f1bb3e5b39f2127a5e694f334
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458466"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974150"
 ---
 # <a name="collection-type-dependency-properties"></a>Koleksiyon Türü Bağımlılık Özellikleri
 Bu konu, özelliğin türünün bir koleksiyon türü olduğu bir bağımlılık özelliğinin nasıl uygulanacağı hakkında rehberlik ve önerilen desenler sağlar.  
@@ -28,8 +28,11 @@ Bu konu, özelliğin türünün bir koleksiyon türü olduğu bir bağımlılık
 ## <a name="initializing-the-collection-beyond-the-default-value"></a>Koleksiyon varsayılan değerin ötesinde başlatılıyor  
  Bir bağımlılık özelliği oluşturduğunuzda, özelliğin varsayılan değerini başlangıç alanı değeri olarak belirtmeyin. Bunun yerine, bağımlılık özelliği meta verileri aracılığıyla varsayılan değeri belirtirsiniz. Eğer özelliği bir başvuru türü ise, bağımlılık özelliği meta verilerinde belirtilen varsayılan değer örnek başına varsayılan değer değildir; Bunun yerine, türün tüm örnekleri için geçerli olan varsayılan bir değerdir. Bu nedenle, bir koleksiyon özelliği meta verileri tarafından tanımlanan tekil statik koleksiyonu, yeni oluşturulan örnekler için çalışma varsayılan değeri olarak kullanmamaya dikkat etmeniz gerekir. Bunun yerine, koleksiyon değerini sınıf Oluşturucu mantığınızın bir parçası olarak benzersiz bir (örnek) koleksiyona ayarladığınızdan emin olmanız gerekir. Aksi takdirde, istemeden tek bir sınıf oluşturmuş olursunuz.  
   
- Aşağıdaki örneği göz önünde bulundurun. Örneğin aşağıdaki bölümünde bir sınıf `Aquarium`tanımı gösterilmektedir. Sınıfı, bir <xref:System.Windows.FrameworkElement> tür kısıtlaması ile genel <xref:System.Collections.Generic.List%601> türünü kullanan `AquariumObjects`koleksiyon türü bağımlılık özelliğini tanımlar. Bağımlılık özelliği için <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> çağrısında, meta veriler varsayılan değeri yeni bir genel <xref:System.Collections.Generic.List%601>olarak belirler.  
-  
+ Aşağıdaki örneği göz önünde bulundurun. Aşağıdaki örnek bölümünde, varsayılan değere sahip bir kusur içeren `Aquarium`sınıf için tanım gösterilmektedir. Sınıfı, bir <xref:System.Windows.FrameworkElement> tür kısıtlaması ile genel <xref:System.Collections.Generic.List%601> türünü kullanan `AquariumObjects`koleksiyon türü bağımlılık özelliğini tanımlar. Bağımlılık özelliği için <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> çağrısında, meta veriler varsayılan değeri yeni bir genel <xref:System.Collections.Generic.List%601>olarak belirler.
+
+> [!WARNING]
+> Aşağıdaki kod doğru şekilde davranmaz.
+
  [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
  [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   

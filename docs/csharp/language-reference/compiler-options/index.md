@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: dab91ddd1f2b9c91560329eeb1c51ca7f6f175bd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 787f9c5fff79eb67e2d74043782532c1fc4034b5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455254"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972758"
 ---
 # <a name="c-compiler-options"></a>C# Derleyici Seçenekleri
 
@@ -29,7 +29,7 @@ Visual Studio 'da, *Web. config* dosyasında derleyici seçeneklerini ayarlarsı
 
 - [CSC. exe Ile komut satırı oluşturma](command-line-building-with-csc-exe.md) Komut satırından görsel C# uygulama oluşturma hakkında bilgi.
 
-- [Nasıl yapılır: Visual Studio komut satırı Için ortam değişkenlerini ayarlama](how-to-set-environment-variables-for-the-visual-studio-command-line.md) Komut satırı yapılarını etkinleştirmek için *vsvars32. bat* dosyasını çalıştırmaya yönelik adımları sağlar.
+- [Visual Studio komut satırı için ortam değişkenlerini ayarlama](how-to-set-environment-variables-for-the-visual-studio-command-line.md) Komut satırı yapılarını etkinleştirmek için *vsvars32. bat* dosyasını çalıştırmaya yönelik adımları sağlar.
 
 - [Kategoriye göre listelenen derleyici seçenekleri C# ](listed-by-category.md) Derleyici seçeneklerinin kategorik bir listesi.
 

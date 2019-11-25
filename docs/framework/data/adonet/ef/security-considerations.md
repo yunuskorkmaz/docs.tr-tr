@@ -2,12 +2,12 @@
 title: Güvenlik konuları (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039861"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968410"
 ---
 # <a name="security-considerations-entity-framework"></a>Güvenlik konuları (Entity Framework)
 Bu konuda Entity Framework uygulamaları geliştirmeye, dağıtmaya ve çalıştırmaya özgü güvenlik konuları açıklanmaktadır. Ayrıca, güvenli .NET Framework uygulamalar oluşturmaya yönelik önerileri de izlemeniz gerekir. Daha fazla bilgi için bkz. [Güvenliğe genel bakış](../security-overview.md).  
@@ -119,11 +119,11 @@ Bu konuda Entity Framework uygulamaları geliştirmeye, dağıtmaya ve çalışt
  Potansiyel olarak güvenilmeyen çağıranlara gösterilen metotlardan <xref:System.Linq.IQueryable%601> türlerini aşağıdaki nedenlerle döndürmekten kaçının:  
   
 - <xref:System.Linq.IQueryable%601> bir türü kullanıma sunan bir sorgu tüketicisi, güvenli verileri açığa çıkaran veya sonuç kümesinin boyutunu artıran sonuçlar üzerinde Yöntemler çağırabilir. Örneğin, aşağıdaki yöntem imzasını göz önünde bulundurun:  
-  
-    ```csharp  
-    public IQueryable<Customer> GetCustomer(int customerId)  
-    ```  
-  
+
+    ```csharp
+    public IQueryable<Customer> GetCustomer(int customerId)
+    ```
+
     Bu sorgunun bir tüketicisi, sorgunun ortaya çıkarmak istemediğiniz verileri almak için döndürülen `IQueryable<Customer>` `.Include("Orders")` çağırabilir. Bu, yöntemin dönüş türü <xref:System.Collections.Generic.IEnumerable%601> ve sonuçları üreten bir Yöntem (`.ToList()`gibi) çağırarak önlenebilir.  
   
 - Sonuçlar üzerinde tekrarlandığı zaman sorgular yürütüldüğü için, bir <xref:System.Linq.IQueryable%601> türü sunan bir sorgu tüketicisi oluşturulan özel durumları yakalayabilir. <xref:System.Linq.IQueryable%601> Özel durumlar, tüketiciye yönelik tasarlanmamış bilgiler içerebilir.  

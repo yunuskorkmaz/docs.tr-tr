@@ -2,33 +2,36 @@
 title: WCF Web HTTP Hata İşleme
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: 491c39d97c48e2f92ff258ac42b9576d407b898e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34912bccaefb645541f47d083c5c307b20ff77c5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648413"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975952"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF Web HTTP Hata İşleme
-Windows Communication Foundation (WCF) Web HTTP hata işleme hataları, HTTP durum kodu belirtin ve dönüş hata ayrıntıları (örneğin, XML veya JSON) işlem olarak aynı biçimi kullanarak WCF Web HTTP hizmetinden döndürmenizi sağlar.  
+Windows Communication Foundation (WCF) Web HTTP hatası işleme, WCF Web HTTP hizmetlerinden bir HTTP durum kodu belirten hata döndürmenizi ve işlemle aynı biçimi (örneğin, XML veya JSON) kullanarak hata ayrıntılarını döndürmenizi sağlar.  
   
 ## <a name="wcf-web-http-error-handling"></a>WCF Web HTTP Hata İşleme  
- <xref:System.ServiceModel.Web.WebFaultException> Sınıfı, bir HTTP durum kodu belirtmenizi sağlar bir oluşturucu tanımlar. Bu durum kodu, ardından istemciye döndürülür. Genel bir sürümünü <xref:System.ServiceModel.Web.WebFaultException> sınıfı <xref:System.ServiceModel.Web.WebFaultException%601> oluşan hata hakkında bilgi içeren kullanıcı tanımlı bir tür döndürmenizi sağlar. İstemciye döndürülen ve işlem tarafından belirtilen biçimi kullanarak bu özel nesne seri hale getirilir. Aşağıdaki örnek, bir HTTP durum kodunu döndürmek gösterilmektedir.  
+ <xref:System.ServiceModel.Web.WebFaultException> sınıfı, bir HTTP durum kodu belirtmenizi sağlayan bir oluşturucu tanımlar. Bu durum kodu daha sonra istemciye döndürülür. <xref:System.ServiceModel.Web.WebFaultException> sınıfının genel bir sürümü <xref:System.ServiceModel.Web.WebFaultException%601>, oluşan hata hakkında bilgi içeren Kullanıcı tanımlı bir tür döndürmenizi sağlar. Bu özel nesne, işlem tarafından belirtilen biçim kullanılarak serileştirilir ve istemciye döndürülür. Aşağıdaki örnek, bir HTTP durum kodunun nasıl döndürülmesini göstermektedir.  
   
-```  
-Public string Operation1()  
-{   // Operation logic  
-   // ...  
-   Throw new WebFaultException(HttpStatusCode.Forbidden);  
+```csharp
+public string Operation1()
+{
+    // Operation logic  
+   // ...
+   throw new WebFaultException(HttpStatusCode.Forbidden);
 }  
 ```  
   
- Aşağıdaki örnek, bir HTTP durum kodu ve ek bilgileri kullanıcı tanımlı bir tür dönmek gösterilmektedir. `MyErrorDetail` gerçekleşen hata hakkında ek bilgi içeren bir kullanıcı tanımlı türdür.  
+ Aşağıdaki örnek, bir HTTP durum kodunun ve ek bilgilerin Kullanıcı tanımlı bir tür içinde nasıl döndürülmesini göstermektedir. `MyErrorDetail`, oluşan hata hakkında ek bilgiler içeren Kullanıcı tanımlı bir türdür.  
   
-```  
-Public string Operation2()  
+```csharp
+public string Operation2()
+{
    // Operation logic  
-   // ...   MyErrorDetail detail = new MyErrorDetail  
+   // ...
+   MyErrorDetail detail = new MyErrorDetail()
    {  
       Message = "Error Message",  
       ErrorCode = 123,  
@@ -37,17 +40,17 @@ Public string Operation2()
 }  
 ```  
   
- Yukarıdaki kod Yasak durum kodunu ve örneği içeren bir gövde ile bir HTTP yanıtı döndürür `MyErrorDetails` nesne. Biçimi `MyErrorDetails` nesnesi tarafından belirlenir:  
+ Önceki kod, yasak durum koduna ve `MyErrorDetails` nesnesinin bir örneğini içeren bir gövdeye sahip HTTP yanıtı döndürür. `MyErrorDetails` nesnesinin biçimi tarafından belirlenir:  
   
-- Değerini `ResponseFormat` parametresinin <xref:System.ServiceModel.Web.WebGetAttribute> veya <xref:System.ServiceModel.Web.WebInvokeAttribute> hizmet işlemi belirtilen özniteliği.  
+- Hizmet işleminde belirtilen <xref:System.ServiceModel.Web.WebGetAttribute> veya <xref:System.ServiceModel.Web.WebInvokeAttribute> özniteliğinin `ResponseFormat` parametresi değeri.  
   
-- Değerini <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.  
+- <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>değeri.  
   
-- Değerini <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> erişerek özelliği <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
+- <xref:System.ServiceModel.Web.OutgoingWebResponseContext>erişerek <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> özelliğinin değeri.  
   
- Biçimlendirme işlemi bu değerleri nasıl etkilediği hakkında daha fazla bilgi için bkz. [WCF Web HTTP biçimlendirme](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
+ Bu değerlerin işlemin biçimlendirmesini nasıl etkilediği hakkında daha fazla bilgi için bkz. [WCF Web http biçimlendirmesi](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
   
- <xref:System.ServiceModel.Web.WebFaultException> olan bir <xref:System.ServiceModel.FaultException> ve bu nedenle hata özel durum programlama modeli SOAP uç noktalarını kullanıma yanı sıra HTTP uç noktalarını web hizmetleri için kullanılabilir.  
+ <xref:System.ServiceModel.Web.WebFaultException> bir <xref:System.ServiceModel.FaultException> ve bu nedenle, SOAP bitiş noktalarının yanı sıra Web HTTP uç noktaları sunan hizmetler için hata özel durum programlama modeli olarak kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

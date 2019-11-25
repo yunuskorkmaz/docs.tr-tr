@@ -6,12 +6,12 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: da2d764e678debc78a25faeb8e48facb44fc4021
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 263004e67bf88af4182788e8c74cb410460e9201
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929417"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971413"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>ML.NET ile otomatik makine öğrenimi
 
@@ -22,7 +22,7 @@ Otomatik makine öğrenimi, otomatik model seçme ve eğitim gerçekleştiren bi
 - Özellik seçimi ve model eğitimi için kullanılan kaynak kodu (modeli anlamak için)
 
 > [!NOTE]
-> Bu özellik şu anda önizleme aşamasındadır ve malzemeler değişebilir. 
+> Bu özellik şu anda önizleme aşamasındadır ve malzemeler değişebilir.
 
 Otomatik ML Şu anda ikili sınıflandırmanın makine öğrenimi [görevleriyle](resources/tasks.md) , birden çok Lass sınıflandırmasıyla ve gerileme ile sınırlıdır. Diğer makine öğrenimi görevleri sonraki sürümlerde desteklenecektir.
 

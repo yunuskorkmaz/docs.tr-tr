@@ -6,33 +6,33 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: d53f2d209d6fb0a6f3cadb96245338060ece87db
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f73ea93fe76f31c81935dbfb29183c247e41d8cd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780294"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975280"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Veri hizmeti Istemci kitaplığı oluşturuluyor (WCF Veri Hizmetleri)
-Öğesini uygulayan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] bir veri hizmeti, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışın açığa çıkarılan veri modelini açıklayan bir hizmet meta verileri belgesi döndürebilir. Daha fazla bilgi için bkz [. OData: Hizmet meta verileri](https://go.microsoft.com/fwlink/?LinkId=186070)belgesi. Visual Studio 'daki **hizmet başvurusu Ekle** iletişim kutusunu kullanarak tabanlı bir hizmete başvuru [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]ekleyebilirsiniz. Bu aracı, bir istemci projesinde bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış tarafından döndürülen meta verilere başvuru eklemek için kullandığınızda, aşağıdaki eylemleri gerçekleştirir:  
+Açık Veri Protokolü 'Nü (OData) uygulayan bir veri hizmeti, OData akışı tarafından sunulan veri modelini açıklayan bir hizmet meta verileri belgesi döndürebilir. Daha fazla bilgi için bkz. [OData: hizmet meta verileri belgesi](https://go.microsoft.com/fwlink/?LinkId=186070). OData tabanlı bir hizmete başvuru eklemek için Visual Studio 'daki **hizmet başvurusu Ekle** iletişim kutusunu kullanabilirsiniz. İstemci projesindeki bir OData akışı tarafından döndürülen meta verilere başvuru eklemek için bu aracı kullandığınızda, aşağıdaki eylemleri gerçekleştirir:  
   
 - Veri hizmetinden hizmet meta veri belgesini ister ve döndürülen meta verileri yorumlar.  
   
     > [!NOTE]
-    > Döndürülen meta veriler, istemci projesinde bir. edmx dosyası olarak depolanır. Bu. edmx dosyası, Entity Framework tarafından kullanılan bir. edmx dosyası biçiminde olmadığından Varlık Veri Modeli Tasarımcısı kullanılarak açılamaz. XML düzenleyicisini veya herhangi bir metin düzenleyicisini kullanarak bu meta veri dosyasını görüntüleyebilirsiniz. Daha fazla bilgi için bkz [ \[. mc-edmx\]: Veri Hizmetleri paketleme biçimi](https://go.microsoft.com/fwlink/?LinkID=178833) belirtimi için varlık veri modeli  
+    > Döndürülen meta veriler, istemci projesinde bir. edmx dosyası olarak depolanır. Bu. edmx dosyası, Entity Framework tarafından kullanılan bir. edmx dosyası biçiminde olmadığından Varlık Veri Modeli Tasarımcısı kullanılarak açılamaz. XML düzenleyicisini veya herhangi bir metin düzenleyicisini kullanarak bu meta veri dosyasını görüntüleyebilirsiniz. Daha fazla bilgi için bkz [.\[mc-EDMX\]: varlık veri modeli veri Hizmetleri paketleme biçimi](https://go.microsoft.com/fwlink/?LinkID=178833) belirtimi  
   
-- Hizmetinden devralan <xref:System.Data.Services.Client.DataServiceContext>bir varlık kapsayıcı sınıfı olarak hizmetin temsilini oluşturur. Oluşturulan bu varlık kapsayıcı sınıfı, Varlık Veri Modeli araçlarının oluşturduğu varlık kapsayıcısına benzer. Daha fazla bilgi için bkz. [nesne hizmetlerine genel bakış (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)).  
+- <xref:System.Data.Services.Client.DataServiceContext>devralan bir varlık kapsayıcı sınıfı olarak hizmetin temsilini oluşturur. Oluşturulan bu varlık kapsayıcı sınıfı, Varlık Veri Modeli araçlarının oluşturduğu varlık kapsayıcısına benzer. Daha fazla bilgi için bkz. [nesne hizmetlerine genel bakış (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)).  
   
 - Hizmet meta verilerinde bulduğu veri modeli türleri için veri sınıfları oluşturur.  
   
-- Projeye `System.Data.Services.Client` derlemeye bir başvuru ekler.  
+- Projeye `System.Data.Services.Client` derlemesine bir başvuru ekler.  
   
- Daha fazla bilgi için [nasıl yapılır: Veri hizmeti başvurusu](how-to-add-a-data-service-reference-wcf-data-services.md)ekleyin.  
+ Daha fazla bilgi için bkz. [nasıl yapılır: veri hizmeti başvurusu ekleme](how-to-add-a-data-service-reference-wcf-data-services.md).  
   
- İstemci veri hizmeti sınıfları, komut isteminde [DataSvcUtil. exe](wcf-data-service-client-utility-datasvcutil-exe.md) Aracı kullanılarak da oluşturulabilir. Daha fazla bilgi için [nasıl yapılır: Istemci veri hizmeti sınıflarını](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)el ile oluşturun.  
+ İstemci veri hizmeti sınıfları, komut isteminde [DataSvcUtil. exe](wcf-data-service-client-utility-datasvcutil-exe.md) Aracı kullanılarak da oluşturulabilir. Daha fazla bilgi için bkz. [nasıl yapılır: El Ile Istemci veri hizmeti sınıfları oluşturma](how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
   
 ## <a name="client-data-type-mapping"></a>İstemci veri türü eşleme  
- Visual Studio 'da **hizmet başvurusu Ekle** iletişim kutusunu veya `DataSvcUtil.exe` bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışı temel alan istemci veri sınıfları oluşturmak için aracı kullandığınızda, .NET Framework veri türleri veri modelinden aşağıdaki gibi temel türler ile eşleştirilir:  
+ Bir OData akışına dayalı istemci veri sınıfları oluşturmak için Visual Studio 'daki **hizmet başvurusu Ekle** iletişim kutusunu veya `DataSvcUtil.exe` aracını kullandığınızda, .NET Framework veri türleri veri modelinden temel alınan türlere aşağıdaki gibi eşlenir:  
   
 |Veri modeli türü|.NET Framework veri türü|  
 |---------------------|------------------------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "70780294"
 |`Edm.Single`|<xref:System.Single>|  
 |`Edm.String`|<xref:System.String>|  
   
- Daha fazla bilgi için bkz [. OData: İlkel veri türleri](https://go.microsoft.com/fwlink/?LinkId=186072).  
+ Daha fazla bilgi için bkz. [OData: Ilkel veri türleri](https://go.microsoft.com/fwlink/?LinkId=186072).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

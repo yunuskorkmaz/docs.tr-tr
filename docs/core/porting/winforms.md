@@ -5,14 +5,14 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 7480c86af1acd482adff5e3e24dc229f24af0e5b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 64920f1d226fcc8265d0be252d4751f2ba278cc1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216325"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973284"
 ---
-# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Nasıl Yapılır: .NET Core 'a Windows Forms masaüstü uygulaması bağlantı noktası
+# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Windows Forms masaüstü uygulamasının .NET Core 'a bağlantı noktası oluşturma
 
 Bu makalede Windows Forms tabanlı masaüstü uygulamanızın .NET Framework .NET Core 3,0 ' ye nasıl bağlantı kurulacağı açıklanmaktadır. .NET Core 3,0 SDK Windows Forms uygulamaları için destek içerir. Windows Forms hala yalnızca Windows Framework ' ü ve Windows üzerinde çalışır. Bu örnek, projenizi oluşturmak ve yönetmek için .NET Core SDK CLı kullanır.
 
@@ -25,7 +25,7 @@ Bu makalede, geçiş için kullanılan dosya türlerini tanımlamak için çeşi
 | **MyFormsCore. csproj** | Oluşturduğunuz yeni .NET Core projesinin adı. |
 | **MyAppCore. exe** | .NET Core Windows Forms uygulaması çalıştırılabilir. |
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 - İstediğiniz tasarımcı çalışması için [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) .
 
@@ -115,20 +115,20 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 ## <a name="fix-assembly-info-generation"></a>Derleme bilgileri oluşturmayı çözme
 
-.NET Framework ile oluşturulan Windows Forms projeler, oluşturulacak derlemenin sürümü `AssemblyInfo.cs` gibi derleme özniteliklerini içeren bir dosya içerir. SDK stilindeki projeler, SDK proje dosyasını temel alarak bu bilgileri sizin için otomatik olarak oluşturur. Her iki tür "derleme bilgisi" de bir çakışma oluşturur. Otomatik oluşturmayı devre dışı bırakarak bu sorunu çözün. Bu, projeyi mevcut `AssemblyInfo.cs` dosyanızı kullanmaya zorlar.
+.NET Framework ile oluşturulan Windows Forms projeleri, oluşturulacak derlemenin sürümü gibi derleme özniteliklerini içeren bir `AssemblyInfo.cs` dosyası içerir. SDK stilindeki projeler, SDK proje dosyasını temel alarak bu bilgileri sizin için otomatik olarak oluşturur. Her iki tür "derleme bilgisi" de bir çakışma oluşturur. Otomatik oluşturmayı devre dışı bırakarak bu sorunu çözün. Bu, projeyi mevcut `AssemblyInfo.cs` dosyanızı kullanmaya zorlar.
 
-Ana `<PropertyGroup>` düğüme eklemenin üç ayarı vardır. 
+Ana `<PropertyGroup>` düğümüne eklemek için üç ayar vardır. 
 
 - **Generateassemblyınfo**\
-Bu özelliği `false`' a ayarladığınızda, derleme özniteliklerini oluşturmaz. Bu, .NET Framework projesinden mevcut `AssemblyInfo.cs` dosya ile çakışmayı önler.
+Bu özelliği `false`ayarladığınızda, derleme özniteliklerini oluşturmaz. Bu, .NET Framework projeden varolan `AssemblyInfo.cs` dosyası ile çakışmayı önler.
 
 - **AssemblyName**\
-Bu özelliğin değeri, derlerken oluşturulan çıkış ikilisi olur. Ada eklenen bir uzantıya gerek yoktur. Örneğin, kullanılarak `MyCoreApp` üretir `MyCoreApp.exe`.
+Bu özelliğin değeri, derlerken oluşturulan çıkış ikilisi olur. Ada eklenen bir uzantıya gerek yoktur. Örneğin, `MyCoreApp` kullanmak `MyCoreApp.exe`üretir.
 
 - **RootNamespace**\
 Projeniz tarafından kullanılan varsayılan ad alanı. Bu, .NET Framework projesinin varsayılan ad alanıyla eşleşmelidir.
 
-Bu üç öğeyi `<PropertyGroup>` `MyFormsCore.csproj` dosyadaki düğümüne ekleyin:
+Bu üç öğeyi `MyFormsCore.csproj` dosyasındaki `<PropertyGroup>` düğümüne ekleyin:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
@@ -150,7 +150,7 @@ Bu üç öğeyi `<PropertyGroup>` `MyFormsCore.csproj` dosyadaki düğümüne ek
 
 Şu anda **Myformscore. csproj** projesi hiçbir kodu derlemez. Varsayılan olarak, .NET Core projeleri geçerli dizine ve tüm alt dizinlere tüm kaynak kodlarını otomatik olarak ekler. Projeyi, .NET Framework projesinden bir göreli yol kullanarak kod içerecek şekilde yapılandırmanız gerekir. .NET Framework projeniz, formlarınızın simgeleri ve kaynakları için **. resx** dosyalarını kullandıysanız, bunları da eklemeniz gerekir. 
 
-Aşağıdaki `<ItemGroup>` düğümü projenize ekleyin. Her bir bildirimde alt dizinler içeren bir dosya glob kalıbı bulunur.
+Aşağıdaki `<ItemGroup>` düğümünü projenize ekleyin. Her bir bildirimde alt dizinler içeren bir dosya glob kalıbı bulunur.
 
 ```xml
   <ItemGroup>
@@ -159,13 +159,13 @@ Aşağıdaki `<ItemGroup>` düğümü projenize ekleyin. Her bir bildirimde alt 
   </ItemGroup>
 ```
 
-Alternatif olarak, .NET Framework projenizdeki her `<Compile>` dosya `<EmbeddedResource>` için bir veya girişi oluşturabilirsiniz.
+Alternatif olarak, .NET Framework projenizdeki her dosya için bir `<Compile>` veya `<EmbeddedResource>` girişi oluşturabilirsiniz.
 
 ## <a name="add-nuget-packages"></a>NuGet paketleri Ekle
 
 .NET Framework projesi tarafından başvurulan her bir NuGet paketini .NET Core projesine ekleyin. 
 
-Büyük olasılıkla .NET Framework Windows Forms uygulamanızın, projeniz tarafından başvurulan tüm NuGet paketlerinin listesini içeren bir **Packages. config** dosyası vardır. .NET Core projesine hangi NuGet paketlerinin ekleneceğini öğrenmek için bu listeye bakabilirsiniz. Örneğin, .NET Framework `MetroFramework`projesi, `MetroFramework.Design`, ve `MetroFramework.Fonts` NuGet paketlerine başvuruyorsa, her birini Visual Studio ya da **SolutionFolder** dizininden .NET Core CLI ile projeye ekleyin:
+Büyük olasılıkla .NET Framework Windows Forms uygulamanızın, projeniz tarafından başvurulan tüm NuGet paketlerinin listesini içeren bir **Packages. config** dosyası vardır. .NET Core projesine hangi NuGet paketlerinin ekleneceğini öğrenmek için bu listeye bakabilirsiniz. Örneğin, .NET Framework projesi `MetroFramework`, `MetroFramework.Design`ve `MetroFramework.Fonts` NuGet paketlerine başvuruyorsa, her birini Visual Studio ya da **SolutionFolder** dizinindeki .NET Core CLI ile projeye ekleyin:
 
 ```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework
@@ -210,7 +210,7 @@ SolutionFolder
     └───MyControlsCore.csproj   <--- New project for core controls
 ```
 
-`MyControlsCore.csproj` Proje ve daha önce oluşturulan `MyFormsCore.csproj` proje arasındaki farkları göz önünde bulundurun.
+`MyControlsCore.csproj` projesi ile daha önce oluşturulan `MyFormsCore.csproj` projesi arasındaki farkları göz önünde bulundurun.
 
 ```diff
  <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
@@ -260,7 +260,7 @@ SolutionFolder
 </Project>
 ```
 
-Görebileceğiniz gibi, `<OutputType>` düğüm kaldırılmıştır ve bu, derleyicinin çalıştırılabilir yerine bir kitaplık oluşturmasını sağlar. `<AssemblyName>` Ve`<RootNamespace>` değiştirildi. Özellikle, `<RootNamespace>` taşıma yaptığınız Windows Forms denetimleri kitaplığı ad alanıyla eşleşmelidir. Son olarak, `<Compile>` ve `<EmbeddedResource>` düğümleri, taşıma yaptığınız Windows Forms denetimleri kitaplığının klasörünü işaret etmek üzere ayarlanmıştı.
+Gördüğünüz gibi, `<OutputType>` düğümü kaldırılmıştır ve bu, derleyicinin çalıştırılabilir yerine bir kitaplık oluşturmasını sağlar. `<AssemblyName>` ve `<RootNamespace>` değiştirildi. Özellikle `<RootNamespace>`, taşıma yaptığınız Windows Forms denetimleri kitaplığı ad alanıyla eşleşmelidir. Son olarak, `<Compile>` ve `<EmbeddedResource>` düğümleri, taşıma yaptığınız Windows Forms denetimleri kitaplığının klasörünü işaret etmek üzere ayarlanmıştı.
 
 Ardından, ana .NET Core **Myformscore. csproj** projesinde yeni .net Core Windows Forms denetim kitaplığına başvuru ekleyin. Visual Studio ya da **SolutionFolder** dizininden .NET Core CLI bir başvuru ekleyin:
 
@@ -296,7 +296,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 Bu makalede açıklandığı gibi, Visual Studio 2019 yalnızca .NET Framework projelerinde form tasarımcısını destekler. Yan yana .NET Core projesi oluşturarak, formları tasarlamak için .NET Framework projesi kullanırken projenizi .NET Core ile test edebilirsiniz. Çözüm dosyanız hem .NET Framework hem de .NET Core projelerini içerir. .NET Framework projesindeki formlarınızı ve denetimlerinizi ekleyin ve tasarlayın ve .NET Core projelerine eklediğimiz dosya glob desenlerine bağlı olarak, .NET Core projelerine yeni veya değiştirilmiş dosyalar otomatik olarak dahil edilir.
 
-Visual Studio 2019 Windows Form Tasarımcısı desteklediğinde, .NET Core proje dosyanızın içeriğini kopyalayabilir/.NET Framework proje dosyasına yapıştırabilirsiniz. Sonra `<Source>` ve`<EmbeddedResource>` öğeleriyle eklenen glob düzenlerini silin. Uygulamanız tarafından kullanılan herhangi bir proje başvurusunun yolunu düzeltin. Bu, .NET Framework projesini bir .NET Core projesine etkin bir şekilde yükseltir.
+Visual Studio 2019 Windows Form Tasarımcısı desteklediğinde, .NET Core proje dosyanızın içeriğini kopyalayabilir/.NET Framework proje dosyasına yapıştırabilirsiniz. Ardından `<Source>` ve `<EmbeddedResource>` öğeleriyle eklenen glob düzenlerini silin. Uygulamanız tarafından kullanılan herhangi bir proje başvurusunun yolunu düzeltin. Bu, .NET Framework projesini bir .NET Core projesine etkin bir şekilde yükseltir.
  
 ## <a name="next-steps"></a>Sonraki adımlar
 

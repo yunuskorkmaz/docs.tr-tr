@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: db0df68aa89cdd5c8bf94ad95a2b8bc9b36d5685
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d834f0c4517f4ff9fe8645257d5a947c03893881
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786213"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968405"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML’den DataSet Schema Bilgilerini Yükleme
-A <xref:System.Data.DataSet> (tablolarının, sütunlarının, ilişkilerin ve kısıtlamalarının) şeması programlı bir şekilde tanımlanabilir, bir veya bir <xref:System.Data.Common.DataAdapter>XML belgesinden **Fill** ya da **FillSchema** yöntemleriyle oluşturulur. Bir XML belgesinden **veri kümesi** şema bilgilerini yüklemek Için, **veri kümesinin** **ReadXmlSchema** veya **InferXmlSchema** yöntemini kullanabilirsiniz. **ReadXmlSchema** , XML şeması tanım DILI (xsd) şeması veya satır Içi XML şemasına sahıp bir XML belgesi Içeren belgeden **veri kümesi** şema bilgilerini yüklemenize veya çıkarmanıza olanak sağlar. **InferXmlSchema** , BELIRTTIĞINIZ belirli XML ad alanlarını YOKSAYARAK şemayı XML belgesinden çıkarmanızı sağlar.  
+Bir <xref:System.Data.DataSet> şeması (tablolar, sütunlar, ilişkiler ve kısıtlamalar) programlı bir şekilde tanımlanabilir, bir <xref:System.Data.Common.DataAdapter>**Fill** veya **FillSchema** yöntemleri tarafından oluşturulur veya bir XML belgesinden yüklenebilir. Bir XML belgesinden **veri kümesi** şema bilgilerini yüklemek Için, **veri kümesinin** **ReadXmlSchema** veya **InferXmlSchema** yöntemini kullanabilirsiniz. **ReadXmlSchema** , XML şeması tanım DILI (xsd) şeması veya satır Içi XML şemasına sahıp bir XML belgesi Içeren belgeden **veri kümesi** şema bilgilerini yüklemenize veya çıkarmanıza olanak sağlar. **InferXmlSchema** , BELIRTTIĞINIZ belirli XML ad alanlarını YOKSAYARAK şemayı XML belgesinden çıkarmanızı sağlar.  
   
 > [!NOTE]
 > Bir **veri** kümesindeki tablo SıRALAMASı, xsd yapıları (iç içe geçmiş ilişkiler gibi) kullanılarak bellekte oluşturulmuş bir **veri kümesini** aktarmak IÇIN Web Hizmetleri veya XML serileştirme kullandığınızda korunmayabilir. Bu nedenle, **veri kümesinin** alıcısının bu durumda tablo sıralamasına bağlı olmaması gerekir. Ancak, aktarılan **veri kümesinin** şeması, bellek içi OLUŞTURULMASı yerine xsd dosyalarından okunmadıysa tablo sıralaması her zaman korunur.  
@@ -40,7 +40,7 @@ dataSet.ReadXmlSchema("schema.xsd");
 ```  
   
 ```vb  
-Dim xmlStream As System.IO.StreamReader = New System.IO.StreamReader ("schema.xsd");  
+Dim xmlStream As New System.IO.StreamReader("schema.xsd")
 Dim dataSet As DataSet = New DataSet  
 dataSet.ReadXmlSchema(xmlStream)  
 xmlStream.Close()  
@@ -73,7 +73,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- Önceki XML belgesindeki öğeler için belirtilen öznitelikler nedeniyle, **ınsecollection** 'ın bir **XmlReadMode** 'u olan **ReadXmlSchema** yöntemi ve **ReadXml** yöntemi, içindeki her öğe için tablo oluşturur. belgedeki **Kategoriler**, **KategoriNo**, **CategoryName**, **Açıklama**, **Ürünler**, **ProductID**, **ReorderLevel**ve **Discontinued**. (Daha fazla bilgi için bkz. [XML 'Den veri kümesi Ilişkisel yapısını](inferring-dataset-relational-structure-from-xml.md)anlamak.) Ancak, daha uygun bir yapı yalnızca **Kategoriler** ve **Ürünler** tabloları oluşturmak ve ardından **Kategoriler** tablosunda **CategoryID**, **CategoryName**ve **Description** sütunları oluşturmak ve **Products** tablosundaki ProductID, **ReorderLevel**ve **Discontinued** sütunları. Çıkarılan şemanın XML öğelerinde belirtilen öznitelikleri yoksaymasını sağlamak için, **InferXmlSchema** yöntemini kullanın ve aşağıdaki örnekte gösterildiği gibi, **OFFICEVERILERININ** yok sayılacak XML ad alanını belirtin.  
+ Önceki XML belgesindeki öğeler için belirtilen öznitelikler nedeniyle, **ınsecollection** 'ın bir **XmlReadMode** değeri olan **ReadXmlSchema** yöntemi ve **ReadXml** yöntemi, belgedeki her öğe için tablolar oluşturacak: **Kategoriler**, **CategoryID**, **CategoryName**, **Description**, **Products**, **ProductID**, **ReorderLevel**ve **Discontinued**. (Daha fazla bilgi için bkz. [XML 'Den veri kümesi Ilişkisel yapısını](inferring-dataset-relational-structure-from-xml.md)anlamak.) Ancak, daha uygun bir yapı yalnızca **Kategoriler** ve **ürün** tabloları oluşturmak ve ardından **Kategoriler** tablosunda **CategoryID**, **CategoryName**ve **Description** sütunları, **Products** tablosundaki **ProductID**, **ReorderLevel**ve **Discontinued** sütunları oluşturmak için kullanılabilir. Çıkarılan şemanın XML öğelerinde belirtilen öznitelikleri yoksaymasını sağlamak için, **InferXmlSchema** yöntemini kullanın ve aşağıdaki örnekte gösterildiği gibi, **OFFICEVERILERININ** yok sayılacak XML ad alanını belirtin.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  

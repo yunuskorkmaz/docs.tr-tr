@@ -4,22 +4,22 @@ description: .NET Core 'da yönetilen derleme yükleme algoritması ayrıntılar
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: bf95cbd0eebed064f0198ae9b0f7a4288a938f8a
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 312a320676be6eb453697e0704ab771a6707618b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105367"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973507"
 ---
 # <a name="managed-assembly-loading-algorithm"></a>Yönetilen derleme yükleme algoritması
 
 Yönetilen derlemeler, çeşitli aşamalar içeren bir algoritmayla bulunur ve yüklenir.
 
-Uydu derlemeleri ve `WinRT` derlemeler hariç tüm yönetilen derlemeler aynı algoritmayı kullanır.
+Uydu derlemeleri ve `WinRT` derlemeleri dışındaki tüm yönetilen derlemeler aynı algoritmayı kullanır.
 
 ## <a name="when-are-managed-assemblies-loaded"></a>Yönetilen derlemeler ne zaman yüklenir?
 
-Yönetilen bir derleme yükünü tetiklemek için en yaygın mekanizma statik bir derleme başvurusudur. Bu başvurular, kod başka bir derlemede tanımlı bir tür kullandığında derleyici tarafından eklenir. Bu derlemeler çalışma zamanının gerektirdiği`load-by-name`şekilde yüklenir ().
+Yönetilen bir derleme yükünü tetiklemek için en yaygın mekanizma statik bir derleme başvurusudur. Bu başvurular, kod başka bir derlemede tanımlı bir tür kullandığında derleyici tarafından eklenir. Bu derlemeler çalışma zamanının gerektirdiği şekilde yüklenir (`load-by-name`).
 
 Belirli API 'lerin doğrudan kullanımı da yükleri tetikleyecektir:
 
@@ -28,43 +28,43 @@ Belirli API 'lerin doğrudan kullanımı da yükleri tetikleyecektir:
 |<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyName%2A?displayProperty=nameWithType>|`Load-by-name`|[Bu](../../csharp/language-reference/keywords/this.md) örnek.|
 |<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath%2A?displayProperty=nameWithType><p><xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromNativeImagePath%2A?displayProperty=nameWithType>|Yoldan yükle.|[Bu](../../csharp/language-reference/keywords/this.md) örnek.|
 <xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromStream%2A?displayProperty=nameWithType>|Nesnesinden yükle.|[Bu](../../csharp/language-reference/keywords/this.md) örnek.|
-|<xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>|Yeni <xref:System.Runtime.Loader.AssemblyLoadContext> bir örnekteki yoldan yükleme|Yeni <xref:System.Runtime.Loader.AssemblyLoadContext> örnek.|
-<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>|<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> Örnekteki yoldan yükleyin.<p><xref:System.Runtime.Loader.AssemblyLoadContext.Resolving> Öğesine<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>bir işleyici ekler. İşleyici, derlemenin bağımlılıklarını dizinden yükleyecek.|<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> Örnek.|
-|<xref:System.Reflection.Assembly.Load(System.Reflection.AssemblyName)?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.String)?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>|`Load-by-name`.|Çağırandan çıkarsandı.<p>Yöntemleri <xref:System.Runtime.Loader.AssemblyLoadContext> tercih edin.|
-|<xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.Byte[],System.Byte[])?displayProperty=nameWithType>|Nesnesinden yükle.|Çağırandan çıkarsandı.<p>Yöntemleri <xref:System.Runtime.Loader.AssemblyLoadContext> tercih edin.|
-<xref:System.Type.GetType(System.String)?displayProperty=nameWithType><p><xref:System.Type.GetType(System.String,System.Boolean)?displayProperty=nameWithType><p><xref:System.Type.GetType(System.String,System.Boolean,System.Boolean)?displayProperty=nameWithType>|`Load-by-name`.|Çağırandan çıkarsandı.<p>Bağımsız`assemblyResolver` değişken içeren yöntemleri tercih <xref:System.Type.GetType%2A?displayProperty=nameWithType> edin.|
-<xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>|Tür `name` , derleme nitelikli genel tür tanımlıyor, a `Load-by-name`tetikleyicisi.|Çağırandan çıkarsandı.<p>Derleme <xref:System.Type.GetType%2A?displayProperty=nameWithType> nitelikli tür adları kullanırken tercih edilir.|
-<xref:System.Activator.CreateInstance(System.String,System.String)?displayProperty=nameWithType><p><xref:System.Activator.CreateInstance(System.String,System.String,System.Object[])?displayProperty=nameWithType><p><xref:System.Activator.CreateInstance(System.String,System.String,System.Boolean,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,System.Object[])?displayProperty=nameWithType>|`Load-by-name`.|Çağırandan çıkarsandı.<p>Bağımsız<xref:System.Type> değişken alan yöntemler tercih <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> edin.|
+|<xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>|Yeni bir <xref:System.Runtime.Loader.AssemblyLoadContext> örneğindeki yoldan yükleme|Yeni <xref:System.Runtime.Loader.AssemblyLoadContext> örneği.|
+<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>|<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> örneğindeki yoldan yükleyin.<p><xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>için <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving> işleyicisi ekler. İşleyici, derlemenin bağımlılıklarını dizinden yükleyecek.|<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> örneği.|
+|<xref:System.Reflection.Assembly.Load(System.Reflection.AssemblyName)?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.String)?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>|`Load-by-name`.|Çağırandan çıkarsandı.<p><xref:System.Runtime.Loader.AssemblyLoadContext> yöntemleri tercih edin.|
+|<xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.Byte[],System.Byte[])?displayProperty=nameWithType>|Yeni bir <xref:System.Runtime.Loader.AssemblyLoadContext> örneğindeki nesnesinden yükle.|Yeni <xref:System.Runtime.Loader.AssemblyLoadContext> örneği.|
+<xref:System.Type.GetType(System.String)?displayProperty=nameWithType><p><xref:System.Type.GetType(System.String,System.Boolean)?displayProperty=nameWithType><p><xref:System.Type.GetType(System.String,System.Boolean,System.Boolean)?displayProperty=nameWithType>|`Load-by-name`.|Çağırandan çıkarsandı.<p>`assemblyResolver` bağımsız değişkenle <xref:System.Type.GetType%2A?displayProperty=nameWithType> Yöntemler tercih edin.|
+<xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>|Tür `name`, derleme nitelikli genel türü açıklar, bir `Load-by-name`tetikler.|Çağırandan çıkarsandı.<p>Derleme nitelikli tür adlarını kullanırken <xref:System.Type.GetType%2A?displayProperty=nameWithType> tercih edin.|
+<xref:System.Activator.CreateInstance(System.String,System.String)?displayProperty=nameWithType><p><xref:System.Activator.CreateInstance(System.String,System.String,System.Object[])?displayProperty=nameWithType><p><xref:System.Activator.CreateInstance(System.String,System.String,System.Boolean,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,System.Object[])?displayProperty=nameWithType>|`Load-by-name`.|Çağırandan çıkarsandı.<p><xref:System.Type> bağımsız değişken alan <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> Yöntemler tercih edin.|
 
 ## <a name="algorithm"></a>Algoritmalar
 
 Aşağıdaki algoritma, çalışma zamanının yönetilen bir derlemeyi nasıl yüklediğini açıklar.
 
-1. `active` Öğesini<xref:System.Runtime.Loader.AssemblyLoadContext>saptayın.
+1. `active` <xref:System.Runtime.Loader.AssemblyLoadContext>belirleme.
 
-    - Statik derleme başvurusu `active` <xref:System.Runtime.Loader.AssemblyLoadContext> için, başvuran derlemeyi yükleyen örnek olur.
-    - Tercih edilen API 'ler `active` <xref:System.Runtime.Loader.AssemblyLoadContext> açık hale getirir.
-    - Diğer API 'Ler `active`. <xref:System.Runtime.Loader.AssemblyLoadContext> Bu API 'ler için, <xref:System.Runtime.Loader.AssemblyLoadContext.CurrentContextualReflectionContext?displayProperty=nameWithType> özelliği kullanılır. Değeri ise `null`, çıkartılan <xref:System.Runtime.Loader.AssemblyLoadContext> örnek kullanılır.
+    - Statik derleme başvurusu için, `active` <xref:System.Runtime.Loader.AssemblyLoadContext> başvuran derlemeyi yükleyen örneğidir.
+    - Tercih edilen API 'Ler `active` <xref:System.Runtime.Loader.AssemblyLoadContext> açık hale getirir.
+    - Diğer API 'Ler `active` <xref:System.Runtime.Loader.AssemblyLoadContext>çıkarçıkar. Bu API 'Ler için <xref:System.Runtime.Loader.AssemblyLoadContext.CurrentContextualReflectionContext?displayProperty=nameWithType> özelliği kullanılır. Değeri `null`ise, çıkartılan <xref:System.Runtime.Loader.AssemblyLoadContext> örneği kullanılır.
     - Yukarıdaki tabloya bakın.
 
-2. Yöntemler için, etkin <xref:System.Runtime.Loader.AssemblyLoadContext> derlemeyi yükler. `Load-by-name` Öncelik sırasına göre:
-    - `cache-by-name`Denetleniyor.
+2. `Load-by-name` yöntemler için, etkin <xref:System.Runtime.Loader.AssemblyLoadContext> derlemeyi yükler. Öncelik sırasına göre:
+    - `cache-by-name`denetleniyor.
 
-    - <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> İşlevi çağrılıyor.
+    - <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> işlevi çağrılıyor.
 
-    - Örneklerin önbelleği denetleniyor ve [yönetilen derleme varsayılan araştırma](default-probing.md#managed-assembly-default-probing) mantığı çalıştırılıyor. <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>
+    - <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> örneklerinin önbelleği denetleniyor ve [yönetilen derleme varsayılan araştırma](default-probing.md#managed-assembly-default-probing) mantığı çalıştırılıyor.
 
-    - Etkin assemblyloadcontext için olay oluşturma. <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType>
+    - Etkin AssemblyLoadContext için <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> olayı oluşturma.
 
-    - <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Olayı oluşturma.
+    - <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayını oluşturma.
 
-3. Diğer yük `active` <xref:System.Runtime.Loader.AssemblyLoadContext> türleri için, derlemeyi yükler. Öncelik sırasına göre:
-    - `cache-by-name`Denetleniyor.
+3. Diğer yük türleri için `active` <xref:System.Runtime.Loader.AssemblyLoadContext> derlemeyi yükler. Öncelik sırasına göre:
+    - `cache-by-name`denetleniyor.
 
     - Belirtilen yoldan veya ham derleme nesnesinden yükleniyor.
 
 4. Her iki durumda da, bir derleme yeni yüklenmişse:
-   - <xref:System.AppDomain.AssemblyLoad?displayProperty=nameWithType> Olay tetiklenir.
-   - <xref:System.Runtime.Loader.AssemblyLoadContext> Derlemenin`cache-by-name`örneğine bir başvuru eklenir.
+   - <xref:System.AppDomain.AssemblyLoad?displayProperty=nameWithType> olay tetiklenir.
+   - Derlemenin <xref:System.Runtime.Loader.AssemblyLoadContext> örneğinin `cache-by-name`bir başvuru eklenir.
 
-5. Derleme bulunursa, `active` <xref:System.Runtime.Loader.AssemblyLoadContext> örnek `cache-by-name`için gerektiğinde bir başvuru eklenir.
+5. Derleme bulunursa, `active` <xref:System.Runtime.Loader.AssemblyLoadContext> örneğinin `cache-by-name`gerektiğinde bir başvuru eklenir.

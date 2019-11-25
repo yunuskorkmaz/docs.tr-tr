@@ -2,20 +2,20 @@
 title: Veri Sözleşmesi Çözücü Kullanma
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: b1c545d84db68f4b13925dd9088cc9d81050b5e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9082d2979cf9bd0837635af567d69ef34c2e312
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918573"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975969"
 ---
 # <a name="using-a-data-contract-resolver"></a>Veri Sözleşmesi Çözücü Kullanma
-Veri sözleşmesi Çözücü bilinen türleri dinamik olarak yapılandırmanıza olanak sağlar. Bilinen türler seri hale getirme veya bir veri anlaşması tarafından beklendiği bir türü seri durumdan çıkarılırken zaman gerekli değildir. Bilinen türler hakkında daha fazla bilgi için bkz: [veri sözleşme bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Normalde, bilinen türleri statik olarak belirtilir. Bir işlem olası tüm türleri bilmek zorunda anlamına gelir, uygulama işlemi sırasında alabilirsiniz. Bu doğru değildir ve bilinen türleri dinamik olarak belirtmek için önemli senaryolar vardır.  
+Bir veri anlaşması Çözümleyicisi, bilinen türleri dinamik olarak yapılandırmanıza olanak tanır. Bir veri sözleşmesinin beklenmediği bir tür serileştirildiğinde veya seri durumdan çıkarılırken bilinen türler gereklidir. Bilinen türler hakkında daha fazla bilgi için bkz. [veri sözleşmesi bilinen türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Bilinen türler normalde statik olarak belirtilir. Bu durum, işlem uygulanırken bir işlemin alabileceği tüm olası türleri bilmeniz gerektiği anlamına gelir. Bu, doğru olmayan ve bilinen türleri dinamik olarak belirleyebilen senaryolar vardır.  
   
-## <a name="creating-a-data-contract-resolver"></a>Veri sözleşmesi Çözücü oluşturma  
- Veri sözleşmesi Çözücü oluşturulmasını ilgilendirir iki yöntem uygulama <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> ve <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>. Bu iki yöntem serileştirme ve seri durumundan çıkarma sırasında sırasıyla kullanılan geri çağırmaları uygulayın. <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> Yöntemi serileştirme sırasında çağrılır ve bir veri anlaşması türü alır ve için eşleyen bir `xsi:type` ad ve ad alanı. <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> Yöntemi seri durumundan çıkarma sırasında çağrılır ve alan bir `xsi:type` ad ve ad alanı ve bir veri anlaşması türü giderir. Bu yöntemlerin ikisi de sahip bir `knownTypeResolver` tür çözümleyici uygulamanızda bilinen varsayılan kullanmak için kullanılan parametre.  
+## <a name="creating-a-data-contract-resolver"></a>Veri anlaşması Çözümleyicisi oluşturma  
+ Bir veri anlaşması Çözümleyicisi oluşturmak, <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> ve <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>iki yöntem uygulamayı içerir. Bu iki yöntem sırasıyla serileştirme ve seri durumundan çıkarma sırasında kullanılan geri çağırmaları uygular. <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> yöntemi serileştirme sırasında çağrılır ve bir veri anlaşması türü alır ve bunu bir `xsi:type` adı ve ad alanına eşler. <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> yöntemi, seri durumundan çıkarma sırasında çağrılır ve bir `xsi:type` adı ve ad alanı alır ve bunu bir veri anlaşması türünde çözer. Bu yöntemlerin her ikisinde de uygulamanızda varsayılan bilinen tür çözümleyici 'yi kullanmak için kullanılabilecek bir `knownTypeResolver` parametresi vardır.  
   
- Aşağıdaki örnek nasıl uygulayacağınızı gösteren bir <xref:System.Runtime.Serialization.DataContractResolver> adlı bir veri anlaşması türü gelen ve giden eşlemek için `Customer` veri Sözleşme türünden türetilmiş `Person`.  
+ Aşağıdaki örnek, `Person`veri sözleşmesi türünden türetilmiş `Customer` adlı bir veri sözleşmesi türü ile eşlemek için <xref:System.Runtime.Serialization.DataContractResolver> nasıl uygulanacağını gösterir.  
   
 ```csharp  
 public class MyCustomerResolver : DataContractResolver  
@@ -49,15 +49,15 @@ public class MyCustomerResolver : DataContractResolver
 }  
 ```  
   
- Sonra tanımladığınız bir <xref:System.Runtime.Serialization.DataContractResolver> aktararak kullanabilirsiniz <xref:System.Runtime.Serialization.DataContractSerializer> aşağıdaki örnekte gösterildiği gibi Oluşturucusu.  
+ Bir <xref:System.Runtime.Serialization.DataContractResolver> tanımladıktan sonra, aşağıdaki örnekte gösterildiği gibi onu <xref:System.Runtime.Serialization.DataContractSerializer> oluşturucusuna geçirerek kullanabilirsiniz.  
   
-```  
+```csharp
 XmlObjectSerializer serializer = new DataContractSerializer(typeof(Customer), null, Int32.MaxValue, false, false, null, new MyCustomerResolver());  
 ```  
   
- Belirtebileceğiniz bir <xref:System.Runtime.Serialization.DataContractResolver> çağrıda <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A?displayProperty=nameWithType> veya <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A?displayProperty=nameWithType> yöntemleri, aşağıdaki örnekte gösterildiği gibi.  
+ Aşağıdaki örnekte gösterildiği gibi, <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A?displayProperty=nameWithType> veya <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A?displayProperty=nameWithType> yöntemlerine yapılan çağrıda bir <xref:System.Runtime.Serialization.DataContractResolver> belirtebilirsiniz.  
   
-```  
+```csharp
 MemoryStream ms = new MemoryStream();  
 DataContractSerializer serializer = new DataContractSerializer(typeof(Customer));  
 XmlDictionaryWriter writer = XmlDictionaryWriter.CreateDictionaryWriter(XmlWriter.Create(ms));  
@@ -67,9 +67,9 @@ ms.Position = 0;
 Console.WriteLine(((Customer)serializer.ReadObject(XmlDictionaryReader.CreateDictionaryReader(XmlReader.Create(ms)), false, new MyCustomerResolver()));  
 ```  
   
- Veya üzerinde ayarlanmış <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> aşağıdaki örnekte gösterildiği gibi.  
+ Ya da aşağıdaki örnekte gösterildiği gibi <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> ayarlayabilirsiniz.  
   
-```  
+```csharp
 ServiceHost host = new ServiceHost(typeof(MyService));  
   
 ContractDescription cd = host.Description.Endpoints[0].Contract;  
@@ -85,7 +85,7 @@ if (serializerBehavior == null)
 SerializerBehavior.DataContractResolver = new MyCustomerResolver();  
 ```  
   
- Veri sözleşmesi Çözücü hizmet için uygulanan bir öznitelik uygulayarak bildirimli olarak belirtebilirsiniz.  Daha fazla bilgi için [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) örnek. Bu örnek "KnownAssembly" adlı bir öznitelik uygular bu hizmetin davranışı için özel veri anlaşması çözümleyici ekler.  
+ Bir hizmete uygulanabilen bir öznitelik uygulayarak bir veri anlaşması çözümleyicisini bildirimli olarak belirtebilirsiniz.  Daha fazla bilgi için bkz. [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) örneği. Bu örnek, hizmetin davranışına özel bir veri sözleşme Çözümleyicisi ekleyen "KnownAssembly" adlı bir öznitelik uygular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

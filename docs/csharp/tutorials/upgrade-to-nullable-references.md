@@ -4,16 +4,16 @@ description: Bu gelişmiş öğretici, null yapılabilir başvuru türlerine gir
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 9cb9ac1b292e61d6a8a5f84be29a6a6c323725fc
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039679"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969342"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Öğretici: mevcut kodu Nullable başvuru türleriyle geçirme
 
-C#8, null olabilen değer türleri için aynı şekilde, başvuru türlerini tamamlayan **null yapılabilir başvuru türlerini**tanıtır. Türe bir `?` ekleyerek **null olabilen bir başvuru türü** olarak bir değişken bildirirsiniz. Örneğin `string?`, Nullable `string` temsil eder. Tasarım amacınızı daha net bir şekilde ifade etmek için bu yeni türleri kullanabilirsiniz: bazı değişkenlerin *her zaman bir değeri olması gerekir*, bazılarında *bir değer eksik*olabilir. Bir başvuru türünün varolan değişkenleri, null olamayan bir başvuru türü olarak yorumlanır. 
+C#8, null olabilen değer türleri için aynı şekilde, başvuru türlerini tamamlayan **null yapılabilir başvuru türlerini**tanıtır. Türe bir `?` ekleyerek **null olabilen bir başvuru türü** olarak bir değişken bildirirsiniz. Örneğin `string?`, null yapılabilir bir `string`temsil eder. Tasarım amacınızı daha net bir şekilde ifade etmek için bu yeni türleri kullanabilirsiniz: bazı değişkenlerin *her zaman bir değeri olması gerekir*, bazılarında *bir değer eksik*olabilir. Bir başvuru türünün varolan değişkenleri, null olamayan bir başvuru türü olarak yorumlanır. 
 
 Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
@@ -32,7 +32,7 @@ Bu öğreticide, Visual Studio veya C# .NET Core CLI dahil olmak üzere, .net ha
 
 ## <a name="explore-the-sample-application"></a>Örnek uygulamayı keşfet
 
-Geçirilecek örnek uygulama bir RSS Akış okuyucusu web uygulamasıdır. Tek bir RSS akışından okur ve en son makalelerin özetlerini görüntüler. Siteyi ziyaret etmek için makalelerden birine tıklayabilirsiniz. Uygulama nispeten yenidir ancak null yapılabilir başvuru türleri kullanılabilir olmadan önce yazılmıştır. Uygulama için gösterilen ve bu önemli dil özelliğinden yararlanmamak için sunulan tasarım kararları.
+Geçirilecek örnek uygulama bir RSS Akış okuyucusu web uygulamasıdır. Tek bir RSS akışından okur ve en son makalelerin özetlerini görüntüler. Siteyi ziyaret etmek için makalelerden herhangi birini seçebilirsiniz. Uygulama nispeten yenidir ancak null yapılabilir başvuru türleri kullanılabilir olmadan önce yazılmıştır. Uygulama için gösterilen ve bu önemli dil özelliğinden yararlanmamak için sunulan tasarım kararları.
 
 Örnek uygulama, uygulamanın ana işlevlerini doğrulayan bir birim testi kitaplığı içerir. Oluşturulan uyarılara göre herhangi bir uygulamayı değiştirirseniz, bu proje güvenli bir şekilde yükseltmeyi daha kolay hale getirir. Başlangıç kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start) GitHub deposundan indirebilirsiniz.
 

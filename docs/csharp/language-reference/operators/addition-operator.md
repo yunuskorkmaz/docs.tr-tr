@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 709994632d704c6a9c6c7f4fc7180ae08cb901d7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e6a190e3d6e283f2ce3b1690ec2bfd15d50dfc6e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039087"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972632"
 ---
 # <a name="-and--operators-c-reference"></a>+ ve + = işleçleri (C# başvuru)
 
@@ -61,7 +61,7 @@ eşdeğerdir
 x = x + y
 ```
 
-`x` yalnızca bir kez değerlendirilir.
+`x` hariç, yalnızca bir kez değerlendirilir.
 
 Aşağıdaki örnek `+=` işlecinin kullanımını gösterir:
 
@@ -81,7 +81,7 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 
 - [C#başvurunun](../index.md)
 - [C# işleçleri](index.md)
-- [Nasıl yapılır: birden çok dizeyi birleştirme](../../how-to/concatenate-multiple-strings.md)
+- [Birden çok dizeyi birleştirme](../../how-to/concatenate-multiple-strings.md)
 - [Olaylar](../../programming-guide/events/index.md)
 - [Aritmetik işleçler](arithmetic-operators.md)
 - [-ve-= işleçleri](subtraction-operator.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: ea780fc983ed46c8a5ccb54ab618d1a0a2a928d1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 13597275460c075309b7457485a17655cf93f251
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597096"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971091"
 ---
 # <a name="constructors-c-programming-guide"></a>Oluşturucular (C# Programlama Kılavuzu)
 
@@ -24,11 +24,11 @@ Sınıfınız için bir Oluşturucu sağlamazsanız, C# nesneyi örnekleyen ve v
 
 ## <a name="constructor-syntax"></a>Oluşturucu sözdizimi
 
-Oluşturucu, adı türünün adı ile aynı olan bir yöntemdir. Yöntemi imzasında yalnızca Yöntem adı ve parametre listesi bulunur; dönüş türü içermez. Aşağıdaki örnek adlı `Person`bir sınıf için oluşturucuyu gösterir.
+Oluşturucu, adı türünün adı ile aynı olan bir yöntemdir. Yöntemi imzasında yalnızca Yöntem adı ve parametre listesi bulunur; dönüş türü içermez. Aşağıdaki örnek, `Person`adlı bir sınıf için oluşturucuyu gösterir.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#1)]  
 
-Bir Oluşturucu tek bir deyim olarak uygulan, bir [ifade gövdesi tanımı](../statements-expressions-operators/expression-bodied-members.md)kullanabilirsiniz. Aşağıdaki örnek, oluşturucusunun `Location` *adı*adlı tek bir dize parametresine sahip olan bir sınıfı tanımlar. İfade gövdesi tanımı, bağımsız değişkenini `locationName` alana atar.
+Bir Oluşturucu tek bir deyim olarak uygulan, bir [ifade gövdesi tanımı](../statements-expressions-operators/expression-bodied-members.md)kullanabilirsiniz. Aşağıdaki örnek, oluşturucusunun *adı*adlı tek bir dize parametresine sahip bir `Location` sınıfını tanımlar. İfade gövdesi tanımı, `locationName` alanına bağımsız değişkenini atar.
 
 [!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
@@ -55,7 +55,7 @@ Daha fazla bilgi ve örnek için bkz. [statik oluşturucular](./static-construct
   
  [Statik Oluşturucular](./static-constructors.md)  
   
- [Nasıl yapılır: Kopya Oluşturucu yazma](./how-to-write-a-copy-constructor.md)  
+ [Kopya Oluşturucu yazma](./how-to-write-a-copy-constructor.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

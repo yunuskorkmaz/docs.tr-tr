@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ae9c406e91bc947ec73bb2393bb05962ca41177
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962582"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974363"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>Dosya İletişim Kutusu Özel Yerleri İçin Bilinen Klasör GUID'leri
-Bir <xref:System.Guid> koleksiyona<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> klasör eklerken [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] bilinen bir klasörü belirtmek için kullanılır. Bilinen klasör GUID 'Leri büyük/küçük harfe duyarlı değildir ve Windows SDK KnownFolders. h dosyasında tanımlanmıştır.  
+Bir <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> koleksiyonuna klasör eklerken bir Windows Vista bilinen klasörü belirtmek için <xref:System.Guid> kullanırsınız. Bilinen klasör GUID 'Leri büyük/küçük harfe duyarlı değildir ve Windows SDK KnownFolders. h dosyasında tanımlanmıştır.  
   
 > [!NOTE]
-> Bazı durumlarda, öğesine eklenen bilinen bir klasör, <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> **sık kullanılan bağlantılar** alanında gösterilmeyecektir. Örneğin, belirtilen bilinen klasör, uygulamayı çalıştıran bilgisayarda yoksa, bilinen klasör gösterilmez.  
+> Bazı durumlarda, <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> eklenen bilinen bir klasör, **sık kullanılan bağlantılar** alanında gösterilmeyecektir. Örneğin, belirtilen bilinen klasör, uygulamayı çalıştıran bilgisayarda yoksa, bilinen klasör gösterilmez.  
   
 ## <a name="list-of-guids"></a>GUID 'lerin listesi  
- Aşağıdaki tabloda, bilinen [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] klasörler ve bunların ilişkili <xref:System.Guid>listesi listelenmektedir.  
+ Aşağıdaki tabloda, Windows Vista bilinen klasörleri ve bunlarla ilişkili <xref:System.Guid>listelenmektedir.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -61,7 +61,7 @@ Bir <xref:System.Guid> koleksiyona<xref:System.Windows.Forms.FileDialog.CustomPl
  Bilgisayar  
  0AC0837C-BBF8-452A-850D-79D08E667CA7  
   
- Çakışma  
+ Uzantıları  
  4BFEFB45-347D-4006-A5BE-AC0CB0567192  
   
  Bağlantılar  
@@ -85,7 +85,7 @@ Bir <xref:System.Guid> koleksiyona<xref:System.Windows.Forms.FileDialog.CustomPl
  İndirmeler  
  374DE290-123F-4565-9164-39C4925E467B  
   
- Sık Kullanılanlar  
+ Larını  
  1777F761-68AD-4D8A-87BD-30B759FA33GG  
   
  Yazı Tipleri  
@@ -115,7 +115,7 @@ Bir <xref:System.Guid> koleksiyona<xref:System.Windows.Forms.FileDialog.CustomPl
  LocalizedResourcesDir  
  2A00375E-224C-49DE-B8D1-440DF7EF3DDC  
   
- Müzik  
+ öğelerini  
  4BD8D571-6D19-48D3-BE97-422220080E43  
   
  NetHood  
@@ -289,4 +289,4 @@ Bir <xref:System.Guid> koleksiyona<xref:System.Windows.Forms.FileDialog.CustomPl
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [Nasıl yapılır: Dosya Iletişim kutusuna özel yer ekleme](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [Nasıl Yapılır: Dosya İletişim Kutusuna Özel Yer Ekleme](how-to-add-a-custom-place-to-a-file-dialog-box.md)

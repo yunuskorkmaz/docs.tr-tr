@@ -19,12 +19,12 @@ helpviewer_keywords:
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 ms.custom: seodec18
-ms.openlocfilehash: b427c579b4190acaf715147908b38ea57ab7aea3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd6b24a6dd893f0c522573a0e19914164c15141f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120636"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973943"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET 'teki dizeleri kullanmak için en iyi uygulamalar
 
@@ -316,7 +316,7 @@ Kullanıcılara sayılar ve tarih ve saatler gibi dize olmayan verileri görünt
 
 Bir dizenin belirlenen bir kültür veya [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)kuralları kullanılarak biçimlendirilmesi gerektiğini açıkça belirtmek için aşağıdakileri yapabilirsiniz:
 
-- <xref:System.String.Format%2A?displayProperty=nameWithType> ve `ToString` yöntemlerini kullanırken, <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> veya <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>gibi `provider` parametresine sahip bir aşırı yüklemeyi çağırın ve bunu istenen kültürü temsil eden bir <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> örneği olan <xref:System.Globalization.CultureInfo> özelliğine geçirin veya <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> özelliği.
+- <xref:System.String.Format%2A?displayProperty=nameWithType> ve `ToString` yöntemlerini kullanırken, <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> veya <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>gibi `provider` parametresine sahip bir aşırı yüklemeyi çağırın ve <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliği, istenen kültürü temsil eden bir <xref:System.Globalization.CultureInfo> örneği veya <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> özelliğini geçirin.
 
 - Dize birleştirme için derleyicinin örtük dönüştürmeler gerçekleştirmesine izin vermeyin. Bunun yerine, `provider` parametresine sahip `ToString` aşırı yüklemesini çağırarak açık bir dönüştürme gerçekleştirin. Örneğin, derleyici bir <xref:System.Double> değerini aşağıdaki C# koddaki bir dizeye dönüştürürken, geçerli kültürü dolaylı olarak kullanır:
 
@@ -340,7 +340,7 @@ Dize olmayan verileri iki veri veya biçimlendirilmiş veri olarak kalıcı hale
 Aşağıdaki örnek, veriyi kalıcı hale getirmek için kültüre duyarlı biçimlendirme kullanma sonucunda oluşan sınırlı taşınabilirliği gösterir. Örnek, bir tarih ve saat değerleri dizisini bir dosyaya kaydeder. Bu değerler, İngilizce (Amerika Birleşik Devletleri) kültürünün kuralları kullanılarak biçimlendirilir. Uygulama geçerli iş parçacığı kültürünü Fransızca (İsviçre) olarak değiştirdikten sonra, geçerli kültürün biçimlendirme kurallarını kullanarak kaydedilen değerleri okumaya çalışır. Veri öğelerinin ikisini okuma denemesi, bir <xref:System.FormatException> özel durumu oluşturur ve tarih dizisi artık <xref:System.DateTime.MinValue> değerine eşit olan iki yanlış öğeyi içerir.
 
 [!code-csharp[Conceptual.Strings.BestPractices#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
- [!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
+[!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
 
 Ancak, <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliğini <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> ve <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>çağrılarındaki <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> ile değiştirirseniz, aşağıdaki çıktıda gösterildiği gibi kalıcı tarih ve saat verileri başarıyla geri yüklenir:
 

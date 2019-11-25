@@ -2,12 +2,12 @@
 title: Sağlayıcı Bildirimi Belirtimi
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: bef4868ccc52d287baaceca32c4943723be7531f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a9dca140588be26035b235109c48049ce01e9ce1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040489"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973881"
 ---
 # <a name="provider-manifest-specification"></a>Sağlayıcı Bildirimi Belirtimi
 Bu bölümde, bir veri deposu sağlayıcısının veri deposundaki türleri ve işlevleri nasıl destekleyebileceği açıklanmaktadır.  
@@ -93,7 +93,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 #### <a name="using-a-provider-manifest-token"></a>Sağlayıcı bildirim belirteci kullanma  
  Çevrimdışı senaryo için, belirteç SSDL gösteriminden çekilir. SSDL, bir ProviderManifestToken belirtmenize olanak tanır (daha fazla bilgi için bkz. [şema öğesi (ssdl)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) ). Örneğin, bir bağlantı açılamadığı için SSDL, bildirimle ilgili bilgileri belirten bir sağlayıcı bildirim belirtecine sahiptir.  
   
-```csharp  
+```csharp
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   

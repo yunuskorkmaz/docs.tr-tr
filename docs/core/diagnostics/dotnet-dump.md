@@ -4,12 +4,12 @@ description: DotNet-dump komut satırı aracını yükleme ve kullanma.
 author: sdmaclea
 ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: 7eba0cba28f0575be4b374b26e9aca26a70df603
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321598"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973450"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Döküm toplama ve çözümleme yardımcı programı (`dotnet-dump`)
 
@@ -18,9 +18,9 @@ ms.locfileid: "72321598"
 > [!NOTE]
 > macOS 'ta `dotnet-dump` desteklenmez.
 
-## <a name="installing-dotnet-dump"></a>@No__t yükleniyor-0
+## <a name="installing-dotnet-dump"></a>`dotnet-dump` yükleniyor
 
-@No__t-0 [NuGet paketinin](https://www.nuget.org/packages/dotnet-dump)en son sürümünü yüklemek için [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
+`dotnet-dump` [NuGet paketinin](https://www.nuget.org/packages/dotnet-dump)en son sürümünü yüklemek için [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
 
 ```dotnetcli
 dotnet tool install -g dotnet-dump
@@ -34,7 +34,7 @@ dotnet-dump [-h|--help] [--version] <command>
 
 ## <a name="description"></a>Açıklama
 
-@No__t-0 genel Aracı, Linux üzerinde `lldb` gibi bir yerel hata ayıklayıcı olmadan Windows ve Linux dökümlerinin toplanması ve çözümlenmesi için bir yoldur. Bu araç, tam olarak çalışan `lldb` olmadığı alp Linux gibi platformlarda önemlidir. @No__t-0 aracı, çökmeleri ve çöp toplayıcıyı (GC) çözümlemek için SOS komutları çalıştırmanızı sağlar, ancak yerel yığın çerçevelerini görüntülemek gibi şeyler desteklenmez.
+`dotnet-dump` genel Aracı, Linux üzerinde `lldb` gibi yerel bir hata ayıklayıcı olmadan Windows ve Linux dökümlerinin toplanması ve çözümlenmesi için bir yoldur. Bu araç, tam olarak çalışan `lldb` olmadığı alp Linux gibi platformlarda önemlidir. `dotnet-dump` Aracı, çökmeleri ve çöp toplayıcıyı (GC) çözümlemek için SOS komutları çalıştırmanızı sağlar, ancak yerel yığın çerçevelerini görüntüleme gibi şeyler desteklenmez.
 
 ## <a name="options"></a>Seçenekler
 
@@ -75,7 +75,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`--type <Heap|Mini>`**
 
-  İşlemden toplanan bilgi türlerini belirleyen Dumb türünü belirtir. İki tür vardır:
+  İşlemden toplanan bilgi türlerini belirleyen döküm türünü belirtir. İki tür vardır:
 
   - `Heap`-modül listelerini, iş parçacığı listelerini, tüm yığınları, özel durum bilgilerini, tanıtıcı bilgilerini ve eşlenmiş görüntüler hariç tüm belleği içeren büyük ve görece kapsamlı bir döküm.
   - `Mini`-modül listelerini, iş parçacığı listelerini, özel durum bilgilerini ve tüm yığınları içeren küçük bir döküm.
@@ -88,8 +88,8 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
   Belirtilmezse:
 
-  - Windows üzerinde *.\dump_YYYYMMDD_HHMMSS.dmp* varsayılan olarak belirlenmiştir.
-  - Linux üzerinde *./core_YYYYMMDD_HHMMSS* varsayılandır.
+  - Varsayılan olarak *. \ dump_YYYYMMDD_HHMMSS. dmp* Windows üzerinde.
+  - Linux üzerinde varsayılan olarak *./core_YYYYMMDD_HHMMSS* .
 
   YYYYMMDD yıl/ay/gün ve SSMMSS saat/dakika/saniye şeklindedir.
 
@@ -146,19 +146,19 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `gcroot <arguments>`                | Belirtilen adresteki bir nesneye başvurular (veya köklerle) hakkındaki bilgileri görüntüler.              |
 | `gcwhere <arguments>`               | Geçirilen bağımsız değişkenin GC yığınındaki konumu görüntüler.                               |
 | `ip2md <arguments>`                 | JıT kodundaki belirtilen adreste MethodDesc yapısını görüntüler.                       |
-| `histclear <arguments>`             | @No__t-0 komutlarının ailesi tarafından kullanılan tüm kaynakları serbest bırakır.                                |
+| `histclear <arguments>`             | `hist*` komutlarının ailesi tarafından kullanılan tüm kaynakları serbest bırakır.                                |
 | `histinit <arguments>`              | Hatası ayıklanana kaydedilen yük günlüğünden SOS yapılarını başlatır.                     |
-| `histobj <arguments>`               | @No__t-0 ile ilgili çöp toplama stres günlüğü yeniden konumlarını görüntüler.              |
+| `histobj <arguments>`               | `<arguments>`ilgili çöp toplama stres günlüğü yeniden konumlarını görüntüler.              |
 | `histobjfind <arguments>`           | Belirtilen adresteki bir nesneye başvuran tüm günlük girişlerini görüntüler.               |
 | `histroot <arguments>`              | Belirtilen kökün tanıtımlarıyla ve yeniden konumlandırılmalarıyla ilişkili bilgileri görüntüler.        |
 | `lm|modules`                        | İşlemdeki yerel modülleri görüntüler.                                                   |
-| `name2ee <arguments>`               | @No__t-0 için MethodTable yapısını ve EEClass yapısını görüntüler.                |
-| `pe|printexception <arguments>`     | @No__t-0 adresindeki özel durum sınıfından türetilmiş tüm nesneleri görüntüler.             |
+| `name2ee <arguments>`               | `<argument>`için MethodTable yapısını ve EEClass yapısını görüntüler.                |
+| `pe|printexception <arguments>`     | Adres `<argument>`özel durum sınıfından türetilmiş tüm nesneleri görüntüler.             |
 | `setsymbolserver <arguments>`       | Sembol sunucusu desteğini sunar                                                             |
 | `syncblk <arguments>`               | SyncBlock tutucusu bilgilerini görüntüler.                                                           |
 | `threads|setthread <threadid>`      | SOS komutlarının geçerli iş parçacığı KIMLIĞINI ayarlar veya görüntüler.                                  |
 
-## <a name="using-dotnet-dump"></a>@No__t kullanma-0
+## <a name="using-dotnet-dump"></a>`dotnet-dump` kullanma
 
 İlk adım bir döküm toplamaktır. Bir temel döküm oluşturulmuşsa bu adım atlanabilir. İşletim sistemi veya .NET Core çalışma zamanının yerleşik [döküm oluşturma özelliği](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md#configurationpolicy) , her biri çekirdek dökümler oluşturabilir.
 
@@ -218,7 +218,7 @@ HResult: 80131604
 
 ## <a name="special-instructions-for-docker"></a>Docker için özel yönergeler
 
-Docker altında çalışıyorsanız, döküm toplama `SYS_PTRACE` özellikleri (`--cap-add=SYS_PTRACE` veya `--privileged`) gerektirir.
+Docker altında çalışıyorsanız, döküm toplama `SYS_PTRACE` yetenekler (`--cap-add=SYS_PTRACE` veya `--privileged`) gerektirir.
 
 Microsoft .NET Core SDK Linux Docker görüntülerinde, bazı `dotnet-dump` komutları aşağıdaki özel durumu oluşturabilir:
 

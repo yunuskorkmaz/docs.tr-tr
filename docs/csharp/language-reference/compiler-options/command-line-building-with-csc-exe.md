@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 9dcc1837ca9c5c1fae3cd6a2a9d03b7e80423627
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dfd494ceb631a8f86cc3a249e5168c1f413e7e4f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040374"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972907"
 ---
 # <a name="command-line-build-with-cscexe"></a>Csc. exe ile komut satırı oluşturma
 
@@ -18,18 +18,18 @@ Bir komut isteminde yürütülebilir C# dosyasının adını (*CSC. exe*) yazara
 
 **Visual Studio için geliştirici komut istemi** kullanıyorsanız, tüm gerekli ortam değişkenleri sizin için ayarlanır. Bu araca erişme hakkında daha fazla bilgi için bkz. [Visual Studio için geliştirici komut istemi](../../../framework/tools/developer-command-prompt-for-vs.md) konusu.
 
-Standart bir komut Istemi penceresi kullanıyorsanız, bilgisayarınızdaki herhangi bir alt dizinden *CSC. exe* ' yi çağırabilmeniz için önce yolunu ayarlamanız gerekir. Ayrıca, komut satırı yapılarını desteklemek üzere uygun ortam değişkenlerini ayarlamak için *vsvars32. bat* dosyasını çalıştırmanız gerekir. *Vsvars32. bat*hakkında daha fazla bilgi için, bkz [. nasıl yapılır: Visual Studio komut satırı](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)için ortam değişkenlerini ayarlayın.
+Standart bir komut Istemi penceresi kullanıyorsanız, bilgisayarınızdaki herhangi bir alt dizinden *CSC. exe* ' yi çağırabilmeniz için önce yolunu ayarlamanız gerekir. Ayrıca, komut satırı yapılarını desteklemek üzere uygun ortam değişkenlerini ayarlamak için *vsvars32. bat* dosyasını çalıştırmanız gerekir. *Vsvars32. bat*hakkında daha fazla bilgi için, bkz. [Visual Studio komut satırı için ortam değişkenlerini ayarlama](./how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
 Yalnızca Windows yazılım geliştirme seti (SDK) olan bir bilgisayarda çalışıyorsanız, C# **Microsoft .NET Framework SDK** menü seçeneğinden açtığınız **SDK komut isteminde**derleyiciyi kullanabilirsiniz.
 
 Ayrıca C# programlarını program aracılığıyla oluşturmak için MSBuild'i kullanabilirsiniz. Daha fazla bilgi için bkz. [MSBuild](/visualstudio/msbuild/msbuild).
 
-*CSC. exe* yürütülebilir dosyası genellikle\\ *Windows* dizini altındaki Microsoft. NET\Framework *\<Version >* klasöründe bulunur. Bu dosyanın yeri, belirli bir bilgisayarın tam yapılandırmasına bağlı olarak değişebilir. Bilgisayarınızda .NET Framework'ün birden fazla sürümü yüklüyse, bu dosyanın birden fazla sürümünü bulacaksınız. Bu tür yüklemeler hakkında daha fazla bilgi için bkz. [nasıl yapılır: hangi .NET Framework sürümlerinin yüklendiğini belirleme](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+*CSC. exe* yürütülebilir dosyası genellikle *Windows* dizini altındaki Microsoft. NET\Framework\\ *\<sürüm >* klasöründedir. Bu dosyanın yeri, belirli bir bilgisayarın tam yapılandırmasına bağlı olarak değişebilir. Bilgisayarınızda .NET Framework'ün birden fazla sürümü yüklüyse, bu dosyanın birden fazla sürümünü bulacaksınız. Bu tür yüklemeler hakkında daha fazla bilgi için bkz. [nasıl yapılır: hangi .NET Framework sürümlerinin yüklendiğini belirleme](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!TIP]
-> Visual Studio IDE kullanarak bir proje oluşturduğunuzda, **CSC** komutunu ve ilgili derleyici seçeneklerini **Çıkış** penceresinde görüntüleyebilirsiniz. Bu bilgileri göstermek için aşağıdaki yönergeleri [izleyin: Günlük verilerinin ayrıntı düzeyini **normal** veya **ayrıntılı**olarak değiştirmek](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) için yapı günlüğü dosyalarını görüntüleyin, kaydedin ve yapılandırın. Projenizi yeniden oluşturduktan sonra, C# derleyicinin çağrılmasını bulmak Için **CSC** **Çıkış** penceresinde arama yapın.
+> Visual Studio IDE kullanarak bir proje oluşturduğunuzda, **CSC** komutunu ve ilgili derleyici seçeneklerini **Çıkış** penceresinde görüntüleyebilirsiniz. Bu bilgileri görüntülemek için nasıl yapılır: günlük verilerinin ayrıntı düzeyini **normal** veya **ayrıntılı**olarak değiştirmek üzere [derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) konusundaki yönergeleri izleyin. Projenizi yeniden oluşturduktan sonra, C# derleyicinin çağrılmasını bulmak Için **CSC** **Çıkış** penceresinde arama yapın.
 
- **Bu konudaki**
+ **Bu konuda**
 
 - [Komut satırı söz dizimi için kurallar](#rules-for-command-line-syntax-for-the-c-compiler)
 
@@ -43,17 +43,17 @@ C# Derleyici, işletim sistemi komut satırında verilen bağımsız değişkenl
 
 - Bağımsız değişkenler boşluk veya sekme olan boşluk ile sınırlandırılmıştır.
 
-- Giriş işareti karakteri (^) bir kaçış karakteri veya sınırlayıcı olarak tanınmıyor. Karakter, programdaki `argv` diziye geçirilmeden önce işletim sistemindeki komut satırı ayrıştırıcısı tarafından işlenir.
+- Giriş işareti karakteri (^) bir kaçış karakteri veya sınırlayıcı olarak tanınmıyor. Karakter, programdaki `argv` dizisine geçirilmeden önce, işletim sistemindeki komut satırı ayrıştırıcısı tarafından işlenir.
 
 - Çift tırnak işaretleri ("String") içine alınmış bir dize, içinde yer alan boşluklardan bağımsız olarak tek bir bağımsız değişken olarak yorumlanır. Tırnak içine alınmış bir dize bir bağımsız değişkene gömülebilir.
 
-- Önünde ters eğik çizgi (\\") olan bir çift tırnak işareti, sabit değer çift tırnak işareti karakteri (") olarak yorumlanır.
+- Önünde ters eğik çizgi (\\") olan çift tırnak işareti, sabit değer çift tırnak işareti karakteri (") olarak yorumlanır.
 
 - Ters eğik çizgiler, bir çift tırnak işaretinden hemen önce gelmedikleri takdirde tam olarak yorumlanır.
 
-- İki ters eğik çizgi daha sonra çift tırnak işareti kullanıyorsa, bir ters eğik çizgi her çift eğik çizgi için `argv` diziye konur ve çift tırnak işareti dize sınırlayıcısı olarak yorumlanır.
+- İki ters eğik çizgi daha sonra çift tırnak işaretiyle, bir ters eğik çizgi, her ters eğik çizgi çifti için `argv` dizisine konur ve çift tırnak işareti bir dize sınırlayıcısı olarak yorumlanır.
 
-- Tek bir ters eğik çizgiden sonra çift tırnak işareti varsa, her ters eğik çizgi çifti için bir ters eğik `argv` çizgi konur ve çift tırnak işareti kalan ters eğik çizgi için "kaçışlı" olur. Bu, içinde `argv`bir sabit değer çift tırnak işareti (") eklenmesine neden olur.
+- Tek bir ters eğik çizgiden sonra çift tırnak işareti varsa, her ters eğik çizgi çiftinin `argv` dizisine bir ters eğik çizgi konur ve çift tırnak işareti geri kalan ters eğik çizgi ile "kaçışdır". Bu, `argv`bir sabit değer çift tırnak işareti (") eklenmesine neden olur.
 
 ## <a name="sample-command-lines-for-the-c-compiler"></a>C# Derleyici için örnek komut satırları
 
@@ -103,5 +103,5 @@ Derleyiciyi çağırma sonucu olarak oluşturulan nesne ( *. obj*) dosyaları yo
 - [Kategorilere Göre Listelenen C# Derleyici Seçenekleri](./listed-by-category.md)
 - [Ana() ve Komut Satırı Bağımsız Değişkenleri](../../programming-guide/main-and-command-args/index.md)
 - [Komut Satırı Bağımsız Değişkenleri](../../programming-guide/main-and-command-args/command-line-arguments.md)
-- [Nasıl yapılır: Komut satırı bağımsız değişkenlerini görüntüle](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Nasıl yapılır: komut satırı bağımsız değişkenlerini görüntüleme](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
 - [Ana() Dönüş Değerleri](../../programming-guide/main-and-command-args/main-return-values.md)

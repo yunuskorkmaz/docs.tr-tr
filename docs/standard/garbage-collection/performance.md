@@ -6,48 +6,30 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 833bf46b973988196fea37da18bac9923ecd6dcc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141374"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974758"
 ---
 # <a name="garbage-collection-and-performance"></a>Çöp Toplama ve Performans
 
-<a name="top"></a>Bu konuda çöp toplama ve bellek kullanımı ile ilgili sorunlar açıklanmaktadır. Yönetilen yığınla ilgili sorunları ele alır ve çöp toplamanın uygulamalarınız üzerindeki etkisinin nasıl en aza indirgenebileceğini açıklar. Her başlıkta, problemleri araştırmak için kullanabileceğiniz prosedürlerin bağlantıları yer alır.
-
-Bu konu aşağıdaki bölümleri içermektedir:
-
-- [Performans analizi araçları](#performance_analysis_tools)
-
-- [Performans sorunlarını giderme](#troubleshooting_performance_issues)
-
-- [Sorun giderme yönergeleri](#troubleshooting_guidelines)
-
-- [Performans denetimi yordamları](#performance_check_procedures)
-
-<a name="performance_analysis_tools"></a>
+Bu konuda, çöp toplama ve bellek kullanımı ile ilgili sorunlar açıklanmaktadır. Yönetilen yığınla ilgili sorunları ele alır ve çöp toplamanın uygulamalarınız üzerindeki etkisinin nasıl en aza indirgenebileceğini açıklar. Her başlıkta, problemleri araştırmak için kullanabileceğiniz prosedürlerin bağlantıları yer alır.
 
 ## <a name="performance-analysis-tools"></a>Performans Analiz Araçları
 
-Aşağıdaki bölümlerde, bellek kullanımı ve çöp toplama sorunlarını araştırmak için kullanılabilen araçlar açıklanmaktadır. Bu konunun ilerleyen kısımlarında sunulan [yordamlar](#performance_check_procedures) Bu araçlara başvurur.
-
-<a name="perf_counters"></a>
+Aşağıdaki bölümlerde, bellek kullanımı ve çöp toplama sorunlarını araştırmak için kullanılabilen araçlar açıklanmaktadır. Bu konunun ilerleyen kısımlarında sunulan [yordamlar](#performance-check-procedures) Bu araçlara başvurur.
 
 ### <a name="memory-performance-counters"></a>Bellek Performans Sayaçları
 
 Performans verilerini toplamak için performans sayaçlarını kullanabilirsiniz. Yönergeler için bkz. [çalışma zamanı profili oluşturma](../../../docs/framework/debug-trace-profile/runtime-profiling.md). Performans sayaçlarının .NET CLR bellek kategorisi, [.NET Framework performans sayaçları](../../../docs/framework/debug-trace-profile/performance-counters.md)bölümünde açıklandığı gibi, çöp toplayıcı hakkında bilgi sağlar.
-
-<a name="sos"></a>
 
 ### <a name="debugging-with-sos"></a>SOS ile hata ayıklama
 
 Yönetilen yığında nesneleri incelemek için [Windows hata ayıklayıcı (WinDbg)](/windows-hardware/drivers/debugger/index) kullanabilirsiniz.
 
 WinDbg 'yi yüklemek için, [Windows Için hata ayıklama araçları 'Nı karşıdan yükle](/windows-hardware/drivers/debugger/debugger-download-tools) sayfasından Windows Için hata ayıklama araçları 'nı yükleyin.
-
-<a name="etw"></a>
 
 ### <a name="garbage-collection-etw-events"></a>Çöp Toplama ETW Olayları
 
@@ -61,8 +43,6 @@ Windows için olay izleme (ETW), .NET Framework tarafından sağlanan ve profil 
 
 ETW olay günlüğü verimlidir ve çöp toplamayla ilgili hiçbir performans sorununu gizlemez. Bir işlem, ETW olaylarıyla birlikte kendi olaylarını sağlayabilir. Günlüğe kaydedildiğinde, yığın problemlerinin nasıl ve ne zaman oluştuğunu belirlemek için hem uygulamanın olayları hem de çöp toplama olayları eşleştirilebilir. Örneğin bir sunucu uygulaması, olayları bir istemci isteğinin başında ve sonunda sağlayabilir.
 
-<a name="profiling_api"></a>
-
 ### <a name="the-profiling-api"></a>Profil oluşturma API 'SI
 
 Ortak dil çalışma zamanı (CLR) profil oluşturma arabirimleri, çöp toplama işlemi sırasında etkilenen nesneler hakkında detaylı bilgi sağlar. Bir çöp toplama işlemi başladığında ve bittiğinde bir profil oluşturucu bildirim alabilir. Her nesildeki nesnelerin bir tanımlaması dahil olmak üzere yönetilen yığındaki nesneler hakkında raporlar sağlayabilir. Daha fazla bilgi için bkz. [profil oluşturma genel bakış](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).
@@ -72,10 +52,6 @@ Profil oluşturucular kapsamlı bilgi sağlayabilir. Ancak karmaşık profil olu
 ### <a name="application-domain-resource-monitoring"></a>Uygulama Etki Alanı Kaynak İzleme
 
 .NET Framework 4 ' te başlayarak, uygulama etki alanı kaynak izleme (ARM), ana bilgisayarların uygulama etki alanı tarafından CPU ve bellek kullanımını izlemesini sağlar. Daha fazla bilgi için bkz. [uygulama etki alanı kaynak izleme](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).
-
-[Başa dön](#top)
-
-<a name="troubleshooting_performance_issues"></a>
 
 ## <a name="troubleshooting-performance-issues"></a>Performans Sorunlarını Giderme
 
@@ -167,7 +143,7 @@ Sanal belleğin parçalanması toplamanın segment eklemesini engelliyorsa, bunu
 
 - Büyük nesne yığınının sık sık yığın segmentlerinin ayrılmasına ve boşaltılmasına neden olan büyük geçici nesnelerin oluşturulması.
 
-  Bir uygulama CLR'yi barındırdığı sırada çöp toplayıcıdan segmentlerini tutmasını isteyebilir. Bu, segment ayırma sıklığını azaltır. Bu, [startup_flags sabit LISTESININ](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)STARTUP_HOARD_GC_VM bayrağını kullanılarak gerçekleştirilir.
+  Bir uygulama CLR'yi barındırdığı sırada çöp toplayıcıdan segmentlerini tutmasını isteyebilir. Bu, segment ayırma sıklığını azaltır. Bu, [startup_flags numaralandırmasında](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)STARTUP_HOARD_GC_VM bayrağı kullanılarak gerçekleştirilir.
 
 |Performans denetimleri|
 |------------------------|
@@ -213,10 +189,6 @@ Bir koleksiyonun süresi, öncelikle ayırma sonrası varlığını sürdüren n
 |------------------------|
 |[Yüksek CPU kullanımının çöp toplamadan kaynaklanıp kaynaklanmadığını belirleme.](#HighCPU)<br /><br /> [Çöp toplamanın sonunda bir kesme noktası ayarlayın.](#GenBreak)|
 
-[Başa dön](#top)
-
-<a name="troubleshooting_guidelines"></a>
-
 ## <a name="troubleshooting-guidelines"></a>Sorun Giderme Kılavuzları
 
 Bu bölümde, araştırmalarınıza başlamadan önce göz önünde bulundurmanız gereken yönergeler açıklanmaktadır.
@@ -258,10 +230,6 @@ Aşağıdaki yordam, yönetilen yığını ölçmek için nasıl bir kesme nokta
   Bu komut, derleme 2 nesneleri atık toplama için geri alındıktan sonra, **restart** yürütüldüğünde kesmeyi zorlar.
 
   Sunucu çöp toplama işleminde, yalnızca bir iş parçacığı **yeniden**çağırır. bu nedenle kesme noktası yalnızca 2. nesil atık toplama sırasında gerçekleşir.
-
-[Başa dön](#top)
-
-<a name="performance_check_procedures"></a>
 
 ## <a name="performance-check-procedures"></a>Performans Denetim Prosedürleri
 

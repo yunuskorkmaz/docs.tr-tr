@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f4d4e2b3806d2c4d84b59e1cd44eb03ab7b278c9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: be619f8e84b176872361fdd43faa9c704832c8e0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052833"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975597"
 ---
 # <a name="enabling-jit-attach-debugging"></a>JIT-Ekleme Hata Ayıklamayı Etkinleştirme
 JıT-Attach hata ayıklaması, hatalar ile ilgili bir hata ayıklayıcıyı bir işleme iliştirirken veya belirli yöntemler veya işlevler tarafından tetikleniyorsa kullanılan tümceciktir.  
@@ -21,19 +21,19 @@ JıT-Attach hata ayıklaması, hatalar ile ilgili bir hata ayıklayıcıyı bir 
   
 - İşlenmemiş özel durumlar (hem yerel hem de yönetilen kodda).  
   
-- <xref:System.Environment.FailFast%2A?displayProperty=nameWithType>Method veya [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) Işlevi (Windows 7 ailesi).  
+- <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> Method veya [RaiseFailFastException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raisefailfastexception) Işlevi (Windows 7 ailesi).  
   
 - Çalışma zamanı önemli hataları.  
   
  JıT-Attach hata ayıklaması, aşağıdaki yöntemler ve işlevlere yapılan çağrılar tarafından da tetiklenir:  
   
-- <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>yöntemidir.  
+- <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> yöntemi.  
   
-- <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType>yöntemidir.  
+- <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> yöntemi.  
   
-- [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) Işlevi (Win32).  
+- [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) Işlevi (Win32).  
   
- .NET Framework 4 ' den önce, .NET Framework yerel ve yönetilen hata ayıklayıcıların davranışını denetlemek için ayrı kayıt defteri anahtarları sağladı. .NET Framework 4 ' te başlayarak, Denetim tek bir kayıt defteri anahtarı altında birleştirilir: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Bu anahtar için ayarlayabileceğiniz değerler, bir hata ayıklayıcının çağrılıp çağrılmadığını ve varsa Kullanıcı etkileşimi gerektiren bir iletişim kutusuyla çağrılması gerektiğini belirtir. Bu kayıt defteri anahtarını ayarlama hakkında daha fazla bilgi için bkz. [otomatik hata ayıklamayı yapılandırma](https://go.microsoft.com/fwlink/?LinkId=181767).  
+ .NET Framework 4 ' den önce, .NET Framework yerel ve yönetilen hata ayıklayıcıların davranışını denetlemek için ayrı kayıt defteri anahtarları sağladı. .NET Framework 4 ' te başlayarak, Denetim tek bir kayıt defteri anahtarı altında birleştirilir: HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Bu anahtar için ayarlayabileceğiniz değerler, bir hata ayıklayıcının çağrılıp çağrılmadığını ve varsa Kullanıcı etkileşimi gerektiren bir iletişim kutusuyla çağrılması gerektiğini belirtir. Bu kayıt defteri anahtarını ayarlama hakkında daha fazla bilgi için bkz. [otomatik hata ayıklamayı yapılandırma](/windows/win32/debug/configuring-automatic-debugging).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

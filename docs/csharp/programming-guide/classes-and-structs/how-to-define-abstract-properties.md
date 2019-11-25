@@ -1,28 +1,28 @@
 ---
-title: 'Nasıl yapılır: Soyut özellikleri tanımlama- C# Programlama Kılavuzu'
+title: Özet özelliklerini tanımlama- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 57fd2ed3a26bf5986f9c8a1a6cae6b041811e84c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1b6dc1dfe932ffff161b0eef667bd35a75b66cf9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970895"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970997"
 ---
-# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Nasıl yapılır: Soyut özellikleri tanımlama (C# Programlama Kılavuzu)
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Özet özellikleri tanımlama (C# Programlama Kılavuzu)
 Aşağıdaki örnek, [soyut](../../language-reference/keywords/abstract.md) özelliklerin nasıl tanımlanacağını gösterir. Soyut özellik bildirimi, özellik erişimcilerinin bir uygulamasını sağlamaz--sınıfın özellikleri desteklediğini bildirir, ancak erişimci uygulamasını türetilmiş sınıflara bırakır. Aşağıdaki örnek, temel bir sınıftan devralınan soyut özelliklerin nasıl uygulanacağını gösterir.  
   
  Bu örnek, her biri ayrı ayrı derlenen üç dosyadan oluşur ve sonuçta elde edilen derlemeye sonraki derleme tarafından başvurulur:  
   
-- abstractshape.CS: `Shape` bir soyut `Area` özellik içeren sınıf.  
+- abstractshape.cs: soyut bir `Area` özelliği içeren `Shape` sınıfı.  
   
-- shapes.cs: `Shape` Sınıfının alt sınıfları.  
+- shapes.cs: `Shape` sınıfının alt sınıfları.  
   
-- shapetest.cs: Bazı `Shape`türetilmiş nesnelerin bölümlerini görüntüleyen bir test programı.  
+- shapetest.cs: bazı `Shape`türetilmiş nesnelerin bölümlerini görüntüleyen bir test programı.  
   
  Örneği derlemek için aşağıdaki komutu kullanın:  
   
@@ -31,7 +31,7 @@ Aşağıdaki örnek, [soyut](../../language-reference/keywords/abstract.md) öze
  Bu, shapetest. exe yürütülebilir dosyasını oluşturur.  
   
 ## <a name="example"></a>Örnek  
- Bu dosya, türünün `Shape` `Area` `double`özelliğini içeren sınıfını bildirir.  
+ Bu dosya, `double`türünün `Area` özelliğini içeren `Shape` sınıfını bildirir.  
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
@@ -41,15 +41,15 @@ Aşağıdaki örnek, [soyut](../../language-reference/keywords/abstract.md) öze
     public abstract double Area  
     ```  
   
-- Soyut bir özellik bildirirken (Bu örnekte olduğu `Area` gibi), yalnızca hangi özellik erişimcilerinin kullanılabilir olduğunu, ancak uygulamadıklarını belirtmeniz yeterlidir. Bu örnekte, yalnızca bir [Get](../../language-reference/keywords/get.md) erişimcisi bulunur, bu nedenle özellik salt okunurdur.  
+- Soyut bir özellik bildirirken (Bu örnekte `Area` gibi), yalnızca hangi özellik erişimcilerinin kullanılabildiğini, ancak uygulamadığını belirtirsiniz. Bu örnekte, yalnızca bir [Get](../../language-reference/keywords/get.md) erişimcisi bulunur, bu nedenle özellik salt okunurdur.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, öğesinin üç alt kümesini `Shape` ve kendi uygulamasını sağlamak için `Area` özelliği nasıl geçersiz kıladığını gösterir.  
+ Aşağıdaki kod `Shape` üç alt kümesini ve kendi uygulamasını sağlamak için `Area` özelliğini nasıl geçersiz kıladığını gösterir.  
   
  [!code-csharp[csProgGuideInheritance#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#2)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, bir dizi `Shape`türetilmiş nesne oluşturan ve alanlarının baskılarını yazdıran bir test programı gösterir.  
+ Aşağıdaki kod `Shape`türetilmiş bir nesne oluşturan bir test programı gösterir ve kendi alanını yazdırır.  
   
  [!code-csharp[csProgGuideInheritance#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#3)]  
   
@@ -58,4 +58,4 @@ Aşağıdaki örnek, [soyut](../../language-reference/keywords/abstract.md) öze
 - [C# Programlama Kılavuzu](../index.md)
 - [Sınıflar ve Yapılar](./index.md)
 - [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](./abstract-and-sealed-classes-and-class-members.md)
-- [Özellikler](./properties.md)
+- [Veri Erişimi](./properties.md)

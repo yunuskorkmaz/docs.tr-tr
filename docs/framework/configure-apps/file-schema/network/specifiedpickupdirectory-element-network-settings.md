@@ -8,21 +8,21 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: 47aa357dac8b6bf71ce8c391004af16f8c98e347
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1acc724bb14c3610f14d06452c30b3d5dac42e13
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697600"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089071"
 ---
 # <a name="specifiedpickupdirectory-element-network-settings"></a>\<Belirtilmedipickupdirectory > öğesi (ağ ayarları)
 , Bir Basit Posta Aktarım Protokolü (SMTP) sunucusu için yerel dizini yapılandırır.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<mailSettings >** ](mailsettings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<smtp >** ](smtp-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<Belirtilmedipickupdirectory >**  
+[ **\<configuration >** ](../configuration-element.md) \
+[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**mailSettings >** ](mailsettings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<smtp >** ](smtp-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Belirtilmedipickupdirectory >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -48,10 +48,10 @@ ms.locfileid: "71697600"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<smtp > öğesi (ağ ayarları)](smtp-element-network-settings.md)|Basit Posta Aktarım Protokolü (SMTP) posta gönderme seçeneklerini yapılandırır.|  
+|[\<SMTP > öğesi (ağ ayarları)](smtp-element-network-settings.md)|Basit Posta Aktarım Protokolü (SMTP) posta gönderme seçeneklerini yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 özniteliği, uygulamaların posta iletilerini SMTP sunucusu tarafından işlenmek üzere kaydetmediği dizini ayarlar.  
+ `specifiedPickupDirectory` özniteliği, uygulamaların posta iletilerini SMTP sunucusu tarafından işlenecek şekilde kaydetmediği dizini ayarlar.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte posta toplama dizini olarak c:\maildrop belirtilir.  

@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850790"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969418"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: İlk C# programınızı çalıştırma
   durationInMinutes: 2
   content: >
-    Etkileşimli pencerede aşağıdaki kodu çalıştırın. Bunu yapmak için, etkileşimli pencereye aşağıdaki kod bloğunu yazın ve **Çalıştır** düğmesine tıklayın:
+    Etkileşimli pencerede aşağıdaki kodu çalıştırın. **Odak modunu girin** düğmesini seçin. Ardından, etkileşimli pencereye aşağıdaki kod bloğunu yazın ve **Çalıştır**' ı seçin:
 
 
     ```csharp
@@ -34,10 +34,10 @@ items:
     ```
 
 
-    Tebrikler! İlk C# programınızı çalıştırdık. Bu, "Merhaba Dünya!" iletisini yazdıran basit bir programdır. Bu iletiyi yazdırmak <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> için yöntemini kullandı. `Console`Konsol penceresini temsil eden bir türdür. `WriteLine`, bu metin konsoluna bir `Console` metin satırı yazdıran türün bir yöntemidir.
+    Mühendisi! İlk C# programınızı çalıştırdık. Bu, "Merhaba Dünya!" iletisini yazdıran basit bir programdır. Bu iletiyi yazdırmak için <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> yöntemini kullandı. `Console`, konsol penceresini temsil eden bir türdür. `WriteLine`, metin konsoluna metin satırı yazdıran `Console` türünün bir yöntemidir.
 
 
-    Daha fazlasını taşıyıp daha fazla inceleyelim. Bu dersin geri kalanı, ' de `string` C#metni temsil eden türüyle çalışmayı araştırır. `Console` Türü gibi`string` , türün yöntemleri vardır. `string` Yöntemler metinle çalışır.
+    Daha fazlasını taşıyıp daha fazla inceleyelim. Bu dersin geri kalanı, içindeki C#metni temsil eden `string` türüyle çalışmayı araştırır. `Console` türü gibi `string` türünün yöntemleri vardır. `string` yöntemleri metinle birlikte çalışır.
 
 
     > [!NOTE]
@@ -46,7 +46,7 @@ items:
 - title: Değişkenleri bildirme ve kullanma
   durationInMinutes: 3
   content: >
-    İlk programınız `string` "Merhaba Dünya!" öğesini yazdırıldı ekranda.
+    İlk programınız "Merhaba Dünya!" `string` yazdırıldı ekranda.
 
 
     > [!TIP]
@@ -68,7 +68,7 @@ items:
     ```
 
 
-    İlk satır bir değişken `aFriend` bildirir ve buna "fatura" değeri atar. İkinci satır, adı yazdırır.
+    İlk satır bir değişken bildirir, `aFriend` ve bir "fatura" değeri atar. İkinci satır, adı yazdırır.
 
 
     Bildirdiğiniz herhangi bir değişkene farklı değerler atayabilirsiniz. Adı arkadaşlarınızla birine dönüştürebilirsiniz. Bu iki satırı, zaten eklemiş olduğunuz kodu izleyerek etkileşimli pencereye ekleyin:
@@ -83,7 +83,7 @@ items:
     ```
 
 
-    Aynı kod satırının, `aFriend` değişkende depolanan değere göre iki farklı ileti yazdırdığına dikkat edin.
+    Aynı kod satırının `aFriend` değişkeninde depolanan değere göre iki farklı ileti yazdırdığına dikkat edin.
 
 
     Ayrıca, son iki iletinin "Hello" sözcüğünün eksik olduğunu fark etmiş olabilirsiniz. Şimdi bunu düzeldelim.  İletiyi şu şekilde yazdıracak satırları değiştirin:
@@ -96,18 +96,18 @@ items:
     ```
 
 
-    Sonuçları görmek için yeniden **Çalıştır** ' a tıklayın.
+    Sonuçları görmek için yeniden **Çalıştır** ' ı seçin.
 
 
-    `+` **Değişkenlerden** ve **sabit** dizelerdeki dizeleri derlemek için kullanıyorsunuz. Daha iyi bir yoldur.
+    **Değişkenlerden** ve **sabit** dizelerdeki dizeleri derlemek için `+` kullanıyorsunuz. Daha iyi bir yoldur.
 
-    Metnin değişkenin değeri ile değiştirilmesini söylemek `{` C# için `}` , ve karakterleri arasına bir değişken yerleştirebilirsiniz.
+    Metnin değişkenin değeriyle değiştirilmesini söylemek C# için `{` ve `}` karakterleri arasına bir değişken yerleştirebilirsiniz.
 
 
     Bu, [dize ilişkilendirme](../../language-reference/tokens/interpolated.md)olarak adlandırılır.
 
 
-    Dizenin açılış tırnağından önce bir `$` eklerseniz, gibi `aFriend`değişkenleri, küme ayraçları arasındaki dizenin içine ekleyebilirsiniz. Deneyin:
+    Dizenin açılış tırnağından önce bir `$` eklerseniz, küme ayraçları arasındaki dizenin içinde `aFriend`gibi değişkenleri ekleyebilirsiniz. Deneyin:
 
 
 
@@ -118,7 +118,7 @@ items:
     ```
 
 
-    Sonuçları görmek için yeniden **Çalıştır** ' a tıklayın. "Merhaba {aFriend}" yerine ileti "Hello Maira" olmalıdır.
+    Sonuçları görmek için yeniden **Çalıştır** ' ı seçin. "Merhaba {aFriend}" yerine ileti "Hello Maira" olmalıdır.
 
 
     > [!NOTE]
@@ -144,7 +144,7 @@ items:
     ```
 
 
-    Dizelerle daha fazlasını keşfettireceğiz, dizelerin bir harf koleksiyonundan daha fazla olduğunu fark edeceksiniz. Kullanarak `Length`bir dizenin uzunluğunu bulabilirsiniz. `Length`, bir dizenin **özelliğidir** ve bu dizedeki karakter sayısını döndürür. Aşağıdaki kodu etkileşimli pencerenin altına ekleyin:
+    Dizelerle daha fazlasını keşfettireceğiz, dizelerin bir harf koleksiyonundan daha fazla olduğunu fark edeceksiniz. `Length`kullanarak bir dizenin uzunluğunu bulabilirsiniz. `Length` bir dizenin **özelliğidir** ve bu dizedeki karakter sayısını döndürür. Aşağıdaki kodu etkileşimli pencerenin altına ekleyin:
 
 
     ```csharp
@@ -158,7 +158,7 @@ items:
 
     > [!TIP]
 
-    > Bu, kendi kendinize araştırmak için iyi bir zamandır. Bunu ekrana metin `Console.WriteLine()` yazdığınızı öğrendiniz. Değişkenleri bildirme ve dizeleri birlikte birleştirme hakkında daha fazla öğrendiniz. Etkileşimli pencerede deneyin. Pencerede, **IntelliSense** adlı bir özellik bulunur ve yapabilecekleriniz için öneriler sağlar. Öğesinden sonra `.` biryazın.`d` `firstFriend` Kullanabileceğiniz özellikler ve yöntemler için önerilerin bir listesini görürsünüz.
+    > Bu, kendi kendinize araştırmak için iyi bir zamandır. `Console.WriteLine()` ekrana metin yazdığınızı öğrendiniz. Değişkenleri bildirme ve dizeleri birlikte birleştirme hakkında daha fazla öğrendiniz. Etkileşimli pencerede deneyin. Pencerede, **IntelliSense** adlı bir özellik bulunur ve yapabilecekleriniz için öneriler sağlar. `firstFriend``d` sonra `.` yazın. Kullanabileceğiniz özellikler ve yöntemler için önerilerin bir listesini görürsünüz.
 
 
     > [!NOTE]
@@ -167,12 +167,12 @@ items:
 - title: Dizelerle daha fazlasını yapın
   durationInMinutes: 5
   content: >
-    İletileri yazdırmak için bir **Yöntem** <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>kullanıyorsunuz. **Yöntemi** , bazı eylemleri uygulayan bir kod bloğudur. Bir ada sahip olduğundan, ona erişebilirsiniz.
+    İletileri yazdırmak için <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>bir **Yöntem**kullanıyorsunuz. **Yöntemi** , bazı eylemleri uygulayan bir kod bloğudur. Bir ada sahip olduğundan, ona erişebilirsiniz.
 
 
     Dizelerinizin görüntülenmesini istemediğiniz baştaki veya sondaki boşlukların olduğunu varsayalım. Dizelerin içindeki boşlukları **kırpmak** istiyorsunuz.
 
-    Yöntemi ve ilgili yöntemleri <xref:System.String.TrimStart%2A> ve <xref:System.String.TrimEnd%2A> bunu çalışır. <xref:System.String.Trim%2A> Baştaki ve sondaki boşlukları kaldırmak için yalnızca bu yöntemleri kullanabilirsiniz. Aşağıdaki kodu deneyin:
+    <xref:System.String.Trim%2A> yöntemi ve ilgili yöntemler <xref:System.String.TrimStart%2A> ve <xref:System.String.TrimEnd%2A> işler. Baştaki ve sondaki boşlukları kaldırmak için yalnızca bu yöntemleri kullanabilirsiniz. Aşağıdaki kodu deneyin:
 
 
     ```csharp
@@ -199,10 +199,10 @@ items:
     ```
 
 
-    Bu örnek, dizeler ile çalışmaya yönelik birkaç önemli kavramı güçlendirir. Dizeleri işleyen yöntemler, değişiklikleri yerinde yapmak yerine yeni dize nesneleri döndürür. `Trim` Yöntemlerin herhangi birine yönelik her çağrının yeni bir dize döndürdüğünü, ancak özgün iletiyi değiştirmediğini görebilirsiniz.
+    Bu örnek, dizeler ile çalışmaya yönelik birkaç önemli kavramı güçlendirir. Dizeleri işleyen yöntemler, değişiklikleri yerinde yapmak yerine yeni dize nesneleri döndürür. `Trim` metotlarından birine yapılan her çağrının yeni bir dize döndürdüğünü, ancak özgün iletiyi değiştirmediğini görebilirsiniz.
 
 
-    Bir dizeyle çalışmak için kullanılabilecek başka yöntemler vardır. Örneğin, büyük olasılıkla bir düzenleyicide veya Word işlemcisinde bir arama ve değiştirme komutu kullandınız. Yöntemi <xref:System.String.Replace%2A> , bir dizede benzer bir şey yapar. Bir alt dizeyi arar ve farklı bir metinle değiştirir. Yöntemi iki parametre alır. **** <xref:System.String.Replace%2A> Bunlar parantez arasındaki dizelerdir. İlk dize, aranacak metindir. İkinci dize, ile değiştirilecek metindir. Kendiniz deneyin. Bu kodu ekleyin. Değişkenden sonra yazmaya `.Re` başladığınızda ipuçlarına bakmak için yazın: `sayHello`
+    Bir dizeyle çalışmak için kullanılabilecek başka yöntemler vardır. Örneğin, büyük olasılıkla bir düzenleyicide veya Word işlemcisinde bir arama ve değiştirme komutu kullandınız. <xref:System.String.Replace%2A> yöntemi bir dizedeki benzer bir şey yapar. Bir alt dizeyi arar ve farklı bir metinle değiştirir. <xref:System.String.Replace%2A> yöntemi iki **parametre**alır. Bunlar parantez arasındaki dizelerdir. İlk dize, aranacak metindir. İkinci dize, ile değiştirilecek metindir. Kendiniz deneyin. Bu kodu ekleyin. `sayHello` değişkenden sonra `.Re` yazmaya başladığınızda ipuçlarına bakmak için yazın:
 
 
     ```csharp
@@ -218,7 +218,7 @@ items:
     ```
 
 
-    Diğer iki yararlı yöntem, bir dizeyi tümüyle büyük veya küçük harf yapar. Aşağıdaki kodu deneyin. **IntelliSense** 'in şunu yazmakta `To`başladığınızda ipuçları nasıl sağladığını görmek için yazın:
+    Diğer iki yararlı yöntem, bir dizeyi tümüyle büyük veya küçük harf yapar. Aşağıdaki kodu deneyin. **IntelliSense** 'in `To`yazarken nasıl ipuçları sağladığını görmek için yazın:
 
 
     ```csharp
@@ -236,7 +236,7 @@ items:
 - title: Dizeleri arama
   durationInMinutes: 10
   content: >
-    *Arama ve değiştirme* işleminin diğer bölümü bir dizedeki metni bulmasından oluşur. Arama için <xref:System.String.Contains%2A> yöntemini kullanabilirsiniz. Bir dize bunun içinde bir alt dize içerip içermeyeceğini söyler. Araştırmak <xref:System.String.Contains%2A>için aşağıdaki kodu deneyin:
+    *Arama ve değiştirme* işleminin diğer bölümü bir dizedeki metni bulmasından oluşur. Arama için <xref:System.String.Contains%2A> yöntemini kullanabilirsiniz. Bir dize bunun içinde bir alt dize içerip içermeyeceğini söyler. <xref:System.String.Contains%2A>araştırmak için aşağıdaki kodu deneyin:
 
 
     ```csharp
@@ -250,13 +250,13 @@ items:
     ```
 
 
-    Yöntemi, aradığınız dize bulunursa size söyleyen bir Boole değeri döndürür. **** <xref:System.String.Contains%2A> **Boole** değeri bir `true` veya bir `false` değer depolar. Daha sonraki bir derste **Boolean** değerler hakkında daha fazla bilgi edineceksiniz.
+    <xref:System.String.Contains%2A> yöntemi, aradığınız dize bulunursa size söyleyen bir **Boole** değeri döndürür. **Boolean** bir `true` veya `false` değeri depolar. Daha sonraki bir derste **Boolean** değerler hakkında daha fazla bilgi edineceksiniz.
 
 
     ***Sına***
 
 
-    Benzer iki yöntem <xref:System.String.StartsWith%2A> vardır ve <xref:System.String.EndsWith%2A> aynı zamanda bir dizedeki alt dizeleri arar. Bu, dizenin başında veya sonunda bir alt dize bulur. Önceki örneği yerine <xref:System.String.StartsWith%2A> <xref:System.String.EndsWith%2A>vekullanmak için değiştirmeyi deneyin. <xref:System.String.Contains%2A> Bir dizenin başlangıcında "Siz" veya "güle" araması yapın. Bir dizenin sonunda "Merhaba" veya "güle" araması yapın.
+    Aynı zamanda bir dizedeki alt dizeleri de arayacak <xref:System.String.StartsWith%2A> ve <xref:System.String.EndsWith%2A> iki benzer yöntem vardır. Bu, dizenin başında veya sonunda bir alt dize bulur. Önceki örneği <xref:System.String.Contains%2A>yerine <xref:System.String.StartsWith%2A> ve <xref:System.String.EndsWith%2A> kullanacak şekilde değiştirmeyi deneyin. Bir dizenin başlangıcında "Siz" veya "güle" araması yapın. Bir dizenin sonunda "Merhaba" veya "güle" araması yapın.
 
 
     > [!NOTE]
@@ -264,7 +264,7 @@ items:
     > Dizenin sonundaki metni test ettiğinizde noktalarınızı izleyin. Dize bir noktayla biterdiğinde, noktayla biten bir dizeyi denetlemeniz gerekir.
 
 
-    "Siz" `true` ve "Merhaba" ile başlayıp, "güle" ile başlamak için false ve "hoşlanal" ile başlamak için yapmanız gerekir.
+    "Siz" ile başlayıp "Merhaba" ile başlayıp "güle" ile başlamak için yanlış `true` almalısınız.
 
 
     > [!NOTE]
@@ -296,10 +296,10 @@ items:
 
     > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
 - content: >-
-    C# Öğreticiye "Merhaba C#" giriş sayfasını tamamladınız. Sonraki etkileşimli öğreticiye başlamak için aşağıdaki bağlantıda **bulunan C# sayılara** tıklayabilir veya .NET Core SDK indirmek, makinenizde bir proje oluşturmak ve kodlamaya devam etmek için [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret edebilirsiniz. "Sonraki adımlar" bölümü, sizi bu öğreticilere geri getirir.
+    C# Öğreticiye "Merhaba C#" giriş sayfasını tamamladınız. Sonraki etkileşimli öğreticiye başlamak için aşağıdaki bağlantıdan ** C# numaraları** seçebilirsiniz veya .NET Core SDK indirmek, makinenizde bir proje oluşturmak ve kodlamaya devam etmek için [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret edebilirsiniz. "Sonraki adımlar" bölümü, sizi bu öğreticilere geri getirir.
 
 
-    `string` Tür hakkında daha fazla bilgi için:
+    `string` türü hakkında daha fazla bilgi için:
 
     - [Dizeler hakkında](../../programming-guide/strings/index.md)Programlama Kılavuzu konusu. [ C# ](../../programming-guide/index.md)
 

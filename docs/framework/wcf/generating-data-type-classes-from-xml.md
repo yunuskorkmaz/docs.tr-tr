@@ -2,12 +2,12 @@
 title: XML'den Veri Türü Sınıfları Oluşturma
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: bf5596211e78842153b7406273626a7fa3c3aeea
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 977b12b5c61c196a4f033361d37785e4ed0af73a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990281"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975850"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>XML'den Veri Türü Sınıfları Oluşturma
 .NET Framework 4,5, XML 'den veri türü sınıfları oluşturmak için yeni bir özellik içerir. Bu konu başlığında, .NET blog RSS akışı için otomatik olarak veri türleri oluşturma açıklanır.  
@@ -28,13 +28,13 @@ ms.locfileid: "70990281"
   
 3. **Düzenle**, **Özel Yapıştır**, **XML 'i sınıflar olarak Yapıştır**' ı seçin.  
   
-4. ,, `link`, `rss` `rssChannel` `rssChannelImage`Ve adlı`rssChannelItemGuid` sınıflar, RSS akışındaki öğelere erişmek için gerekli üyelerle birlikte oluşturulur. `rssChannelItem`  
+4. `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` ve `rssChannelItemGuid` adlı sınıflar, RSS akışındaki öğelere erişmek için gerekli üyelerle birlikte oluşturulur.  
   
 ### <a name="using-the-generated-classes"></a>Oluşturulan sınıfları kullanma  
   
-1. Sınıflar oluşturulduktan sonra, diğer sınıflar gibi kodda kullanılabilirler. Aşağıdaki kod örneği, `rssChannelImage` sınıfının yeni bir örneğini döndürür.  
+1. Sınıflar oluşturulduktan sonra, diğer sınıflar gibi kodda kullanılabilirler. Aşağıdaki kod örneği `rssChannelImage` sınıfının yeni bir örneğini döndürür.  
   
-    ```csharp  
+    ```csharp
     var channelImage = new rssChannelImage()   
     {   
         title = "MyImage",   

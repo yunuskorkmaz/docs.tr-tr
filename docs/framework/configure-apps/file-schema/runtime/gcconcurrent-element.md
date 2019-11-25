@@ -1,5 +1,5 @@
 ---
-title: <gcConcurrent> Öğesi
+title: gcConcurrent öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcConcurrent
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-ms.openlocfilehash: 4897462e20b193496c44d26923d0d0e2a13f7dd6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5957337aa960a0d5f445249b410dbfaddb7b08e9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116807"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969228"
 ---
 # <a name="gcconcurrent-element"></a>\<gcConcurrent > öğesi
 
 Ortak dil çalışma zamanının ayrı bir iş parçacığında çöp toplama işlemi yapıp yapmadığını belirtir.
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<gcConcurrent >**  
+[\<yapılandırma >](../configuration-element.md)\
+&nbsp;&nbsp;[\<çalışma zamanı >](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<gcConcurrent >
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -39,9 +39,9 @@ Ortak dil çalışma zamanının ayrı bir iş parçacığında çöp toplama i�
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanının çöp toplamayı eşzamanlı olarak çalıştırmasını belirtir.|
+|`enabled`|Gerekli öznitelik.<br /><br />Çalışma zamanının çöp toplamayı eşzamanlı olarak çalıştırmasını belirtir.|
 
-## <a name="enabled-attribute"></a>enabled özniteliği
+#### <a name="enabled-attribute"></a>enabled özniteliği
 
 |Değer|Açıklama|
 |-----------|-----------------|
@@ -61,14 +61,16 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-.NET Framework 4 ' ten önce, iş istasyonu atık toplama, farklı bir iş parçacığında arka planda çöp toplamayı gerçekleştiren eşzamanlı çöp toplama işlemini destekliyordu. .NET Framework 4 ' te, eşzamanlı atık toplama, arka plan GC ile değiştirilmiştir ve bu da ayrı bir iş parçacığında arka planda çöp toplama işlemi gerçekleştirir. .NET Framework 4,5 ' den başlayarak, arka plan koleksiyonu sunucu atık koleksiyonunda kullanılabilir hale geldi. `<gcConcurrent>` öğesi, çalışma zamanının, varsa veya ön planda çöp toplama gerçekleştirip gerçekleştirmediğini kontrol eder.
+.NET Framework 4 ' ten önce iş istasyonu atık toplama, farklı bir iş parçacığında arka planda çöp toplamayı gerçekleştiren eşzamanlı çöp toplama işlemini destekliyordu. .NET Framework 4 ' te, eşzamanlı atık toplama, arka plan GC ile değiştirilmiştir ve bu da ayrı bir iş parçacığında arka planda çöp toplama işlemi gerçekleştirir. .NET Framework 4,5 ' den başlayarak, arka plan koleksiyonu sunucu atık toplamada kullanılabilir duruma geldi. **GcConcurrent** öğesi, çalışma zamanının, varsa veya ön planda çöp toplama gerçekleştirip gerçekleştirmediğini kontrol eder.
 
 ### <a name="to-disable-background-garbage-collection"></a>Arka plan atık toplamayı devre dışı bırakmak için
 
 > [!WARNING]
-> .NET Framework 4 ile başlayarak, eşzamanlı atık toplama arka plan atık toplama işlemi tarafından değiştirilir. *Eşzamanlı* ve *arka plan* terimleri .NET Framework belgelerde birbirinin yerine kullanılır. Arka plan atık toplamayı devre dışı bırakmak için, bu makalede anlatıldığı gibi `<gcConcurrent>` öğesini kullanın.
+> .NET Framework 4 ' ten itibaren, eşzamanlı atık toplama, arka plan atık toplama ile değiştirilmiştir. *Eşzamanlı* ve *arka plan* terimleri .NET Framework belgelerde birbirinin yerine kullanılır. Arka plan atık toplamayı devre dışı bırakmak için, bu makalede anlatıldığı gibi **gcConcurrent** öğesini kullanın.
 
-Varsayılan olarak, çalışma zamanı, gecikme süresi için en iyi duruma getirilmiş olan eşzamanlı veya arka plan çöp toplamayı kullanır. Uygulamanız ağır Kullanıcı etkileşimi içeriyorsa, çöp toplama işlemini gerçekleştirmek için uygulamanın duraklatma süresini en aza indirmek için eşzamanlı çöp toplamayı etkin bırakın. `<gcConcurrent>` öğesinin `enabled` özniteliğini `false`olarak ayarlarsanız, çalışma zamanı işleme için optimize edilmiş, eşzamanlı olmayan çöp toplamayı kullanır. Aşağıdaki yapılandırma dosyası arka plan atık toplamayı devre dışı bırakır.
+Varsayılan olarak, çalışma zamanı, gecikme süresi için en iyi duruma getirilmiş olan eşzamanlı veya arka plan çöp toplamayı kullanır. Uygulamanız ağır Kullanıcı etkileşimi içeriyorsa, çöp toplama işlemini gerçekleştirmek için uygulamanın duraklatma süresini en aza indirmek için eşzamanlı çöp toplamayı etkin bırakın. **GcConcurrent** öğesinin `enabled` özniteliğini `false`olarak ayarlarsanız, çalışma zamanı işleme için optimize edilmiş, eşzamanlı olmayan çöp toplamayı kullanır.
+
+Aşağıdaki yapılandırma dosyası arka plan atık toplamayı devre dışı bırakır:
 
 ```xml
 <configuration>
@@ -78,13 +80,13 @@ Varsayılan olarak, çalışma zamanı, gecikme süresi için en iyi duruma geti
 </configuration>
 ```
 
- Makine yapılandırma dosyasında bir `<gcConcurrentSetting>` ayarı varsa, tüm .NET Framework uygulamalar için varsayılan değeri tanımlar. Makine yapılandırma dosyası ayarı, uygulama yapılandırma dosyası ayarını geçersiz kılar.
+Makine yapılandırma dosyasında bir **gcConcurrentSetting** ayarı varsa, tüm .NET Framework uygulamalar için varsayılan değeri tanımlar. Makine yapılandırma dosyası ayarı, uygulama yapılandırma dosyası ayarını geçersiz kılar.
 
- Eş zamanlı ve arka plan atık toplama hakkında daha fazla bilgi için [çöp toplama temelleri](../../../../standard/garbage-collection/fundamentals.md) makalesinin [eş zamanlı çöp toplama](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection) bölümüne bakın.
+Eş zamanlı ve arka plan atık toplama hakkında daha fazla bilgi için [çöp toplama temelleri](../../../../standard/garbage-collection/fundamentals.md) makalesinin [eş zamanlı çöp toplama](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection), [arka plan Iş Istasyonu çöp toplama](../../../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)ve [arka plan sunucusu çöp toplama](../../../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection) bölümlerine bakın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, eşzamanlı atık toplamayı mümkün bir şekilde sunar:
+Aşağıdaki örnek, arka plan atık toplamayı mümkün bir şekilde sunar:
 
 ```xml
 <configuration>

@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: dinamik sorgular oluşturmak için Ifade ağaçları kullanma (C#)'
+title: Dinamik sorgular oluşturmak için ifade ağaçları kullanma (C#)
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 7f18539dba17f9fcb8769ca56d977908c58e6579
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 36a81b145b6a9a25c22243f63cfb71a6a39c5891
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418684"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969871"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Nasıl yapılır: dinamik sorgular oluşturmak için Ifade ağaçları kullanma (C#)
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Dinamik sorgular oluşturmak için ifade ağaçları kullanma (C#)
 LINQ içinde, ifade ağaçları, <xref:System.Linq.IQueryable%601>uygulayan veri kaynaklarını hedefleyen yapısal sorguları temsil etmek için kullanılır. Örneğin, LINQ sağlayıcısı ilişkisel veri depolarını sorgulamak için <xref:System.Linq.IQueryable%601> arabirimini uygular. Derleyici C# , bu tür veri kaynaklarını hedefleyen sorguları, çalışma zamanında bir ifade ağacı oluşturan koda derler. Sorgu sağlayıcısı daha sonra ifade ağacı veri yapısına çapraz geçiş yapabilir ve veri kaynağı için uygun bir sorgu diline çevirebilir.  
   
  İfade ağaçları Ayrıca LINQ içinde <xref:System.Linq.Expressions.Expression%601>tür değişkenlerine atanan Lambda ifadelerini temsil etmek için de kullanılır.  
@@ -108,5 +108,5 @@ foreach (string company in results)
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İfade ağaçları (C#)](./index.md)
-- [Nasıl yapılır: Ifade ağaçlarını yürütme (C#)](./how-to-execute-expression-trees.md)
+- [İfade ağaçlarını yürütme (C#)](./how-to-execute-expression-trees.md)
 - [Nasıl yapılır: çalışma zamanında koşul filtrelerini dinamik olarak belirtme](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)

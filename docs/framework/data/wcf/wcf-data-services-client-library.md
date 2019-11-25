@@ -6,23 +6,23 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 545442b0086361c8ce8c0482801afc10b1fee96e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e078ba07072f71332aa2f19681b142df946ec391
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779676"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975070"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Veri Hizmetleri İstemci Kitaplığı
-Herhangi bir uygulama, bir http [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]isteği gönderebileceği ve bir veri hizmetinin döndürdüğü [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışı işlebiliyorsanız, tabanlı bir veri hizmetiyle etkileşime geçebilir. Bu birlikte çalışabilirlik, çok çeşitli [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]web özellikli uygulamalardan erişim tabanlı hizmetlere erişmenizi sağlar. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].NET Framework veya Silverlight tabanlı uygulamalardan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları kullanırken daha zengin bir programlama deneyimi sağlayan istemci kitaplıklarını içerir.  
+Bir HTTP isteği gönderebileceği ve bir veri hizmetinin döndürdüğü OData akışını işlebiliyorsanız, herhangi bir uygulama açık veri Protokolü (OData) tabanlı bir veri hizmeti ile etkileşime geçebilir. Bu birlikte çalışabilirlik, çok çeşitli web özellikli uygulamalardan OData tabanlı hizmetlere erişmenizi sağlar. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], .NET Framework veya Silverlight tabanlı uygulamalardan OData akışlarını kullanırken daha zengin bir programlama deneyimi sağlayan istemci kitaplıklarını içerir.  
   
- İstemci kitaplığının <xref:System.Data.Services.Client.DataServiceContext> iki ana sınıfı sınıfı <xref:System.Data.Services.Client.DataServiceQuery%601> ve sınıfıdır. Sınıfı <xref:System.Data.Services.Client.DataServiceContext> , belirtilen bir veri hizmetine göre desteklenen işlemleri kapsüller. Hizmetler [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] durum bilgisiz olsa da bağlam değildir. Bu nedenle, değişiklik yönetimi gibi <xref:System.Data.Services.Client.DataServiceContext> özellikleri desteklemek için veri hizmeti ile etkileşimler arasında istemcideki durumu korumak için sınıfını kullanabilirsiniz. Bu sınıf Ayrıca kimlikleri yönetir ve değişiklikleri izler. Sınıfı <xref:System.Data.Services.Client.DataServiceQuery%601> , belirli bir varlık kümesine karşı bir sorguyu temsil eder.  
+ İstemci kitaplığının iki ana sınıfı <xref:System.Data.Services.Client.DataServiceContext> sınıfıdır ve <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfıdır. <xref:System.Data.Services.Client.DataServiceContext> sınıfı, belirtilen bir veri hizmetine göre desteklenen işlemleri kapsüller. OData Hizmetleri durum bilgisiz olmasına karşın bağlam değildir. Bu nedenle, değişiklik yönetimi gibi özellikleri desteklemek için veri hizmeti ile etkileşimler arasında istemcideki durumu korumak için <xref:System.Data.Services.Client.DataServiceContext> sınıfını kullanabilirsiniz. Bu sınıf Ayrıca kimlikleri yönetir ve değişiklikleri izler. <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfı, belirli bir varlık kümesine karşı bir sorguyu temsil eder.  
   
- Bu bölümde, istemci kitaplıklarının bir .NET Framework istemci uygulamasına erişmek ve verileri değiştirmek için nasıl kullanılacağı açıklanmaktadır. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığını Silverlight tabanlı bir uygulamayla kullanma hakkında daha fazla bilgi için, bkz. [WCF veri Hizmetleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=186016). Diğer istemci kitaplıkları, bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışı diğer türlerde uygulamalarda kullanmanıza olanak sağlayan kullanılabilir. Daha fazla bilgi için bkz. [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185796).  
+ Bu bölümde, istemci kitaplıklarının bir .NET Framework istemci uygulamasına erişmek ve verileri değiştirmek için nasıl kullanılacağı açıklanmaktadır. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığını Silverlight tabanlı bir uygulamayla kullanma hakkında daha fazla bilgi için, bkz. [WCF veri Hizmetleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=186016). Diğer istemci kitaplıkları, bir OData akışını diğer türlerde uygulamalarda kullanmanıza olanak sağlayan kullanılabilir. Daha fazla bilgi için bkz. [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185796).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Veri Hizmeti İstemci Kitaplığı Oluşturma](generating-the-data-service-client-library-wcf-data-services.md)  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Akışlara dayalı istemci kitaplığı ve istemci veri hizmeti sınıflarının nasıl oluşturulacağını açıklar.  
+ OData akışlarını temel alan istemci kitaplığı ve istemci veri hizmeti sınıflarının nasıl oluşturulacağını açıklar.  
   
  [Veri Hizmetini Sorgulama](querying-the-data-service-wcf-data-services.md)  
  İstemci kitaplıklarını kullanarak bir veri hizmetinin .NET Framework tabanlı bir uygulamadan nasıl sorgulanılacağını açıklar.  
@@ -40,7 +40,7 @@ Herhangi bir uygulama, bir http [!INCLUDE[ssODataFull](../../../../includes/ssod
  İstemci kitaplıklarını kullanarak tek bir toplu işte veri hizmetine birden çok isteğin nasıl gönderileceğini açıklar.  
   
  [Veriyi Denetimlere Bağlama](binding-data-to-controls-wcf-data-services.md)  
- Denetimlerin bir veri hizmeti tarafından döndürülen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışa nasıl bağlanacağını açıklar.  
+ Denetimlerin bir veri hizmeti tarafından döndürülen bir OData akışına nasıl bağlanacağını açıklar.  
   
  [Hizmet İşlemleri Çağırma](calling-service-operations-wcf-data-services.md)  
  Hizmet işlemlerini çağırmak için istemci kitaplığının nasıl kullanılacağını açıklar.  

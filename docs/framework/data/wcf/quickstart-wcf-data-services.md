@@ -5,22 +5,22 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: df6806cd77e7ff109d79f7ba61866763de4c7fc1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d0002182c5ae519c36348acdd2587bca499fe72e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790369"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975135"
 ---
 # <a name="quickstart-wcf-data-services"></a>Hızlı Başlangıç (WCF Veri Hizmetleri)
 
-Bu hızlı başlangıç [, Başlarken ' de yer](getting-started-with-wcf-data-services.md)alan konuları [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] destekleyen bir dizi görev aracılığıyla WCF veri Hizmetleri ve hakkında bilgi sahibi olmanıza yardımcı olur.
+Bu hızlı başlangıç, Başlarken ile ilgili konuları destekleyen bir dizi görev aracılığıyla WCF Veri Hizmetleri ve açık veri Protokolü (OData) hakkında bilgi sahibi olmanıza yardımcı [olur.](getting-started-with-wcf-data-services.md)
 
 ## <a name="what-youll-learn"></a>Ne öğrenirsiniz
 
 Bu hızlı başlangıçta bulunan ilk görevde, Northwind örnek veritabanından bir OData akışını açığa çıkarmak için bir veri hizmetinin nasıl oluşturulacağı gösterilmektedir. Sonraki konularda, OData akışına bir Web tarayıcısı kullanarak erişecek ve ayrıca istemci kitaplıklarını kullanarak OData akışını tüketen bir Windows Presentation Foundation (WPF) istemci uygulaması oluşturacaksınız.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Bu hızlı başlangıcı tamamlayabilmeniz için aşağıdaki bileşenleri yüklemelisiniz:
 

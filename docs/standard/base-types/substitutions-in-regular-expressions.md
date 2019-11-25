@@ -13,28 +13,28 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 5934a342f653f294c07e00d38d51dae6b159dab9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: db0e2234055c6869c4cf55196d9f3b62a6996c96
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122486"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972058"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Normal İfadelerdeki Değişimler
-<a name="Top"></a>Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir. Giriş dizesinde eşleşen metnin yerini alacak metnin tümünü veya bir kısmını tanımlamak için normal bir ifade deseni kullanırlar. Değiştirme deseni, değişmez karakterlerin yanı sıra bir veya birden çok değiştirmeden oluşabilir. Değiştirme desenleri, `replacement` parametresine ve <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemine sahip <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> yönteminin aşırı yüklemeleri için sağlanır. Yöntemler, eşleşen deseninin `replacement` parametresi tarafından tanımlanan desenli yerini alır.  
+Değişimler, yalnızca değişiklik desenleri içinde tanınan dil öğeleridir. Giriş dizesinde eşleşen metnin yerini alacak metnin tümünü veya bir kısmını tanımlamak için normal bir ifade deseni kullanırlar. Değiştirme deseni, değişmez karakterlerin yanı sıra bir veya birden çok değiştirmeden oluşabilir. Değiştirme desenleri, `replacement` parametresine ve <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemine sahip <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> yönteminin aşırı yüklemeleri için sağlanır. Yöntemler, eşleşen deseninin `replacement` parametresi tarafından tanımlanan desenli yerini alır.  
   
  .NET Framework, aşağıdaki tabloda listelenen değişim öğelerini tanımlar.  
   
 |Değiştirme|Açıklama|  
 |------------------|-----------------|  
-|$ *numarası*|*Sayı*ile tanımlanan yakalama grubuyla eşleşen son alt dizeyi içerir; burada *sayı* , değiştirme dizesinde bir ondalık değerdir. Daha fazla bilgi için bkz. [numaralandırılmış bir grubu değiştirme](#Numbered).|  
-|$ { *Name* }|Değiştirme dizesinde `(?<`*adı*`> )` tarafından belirtilen adlandırılmış grupla eşleşen son alt dizeyi içerir. Daha fazla bilgi için bkz. [adlandırılmış bir grubu değiştirme](#Named).|  
-|$$|Değiştirme dizesinde tek bir "$" değişmez değerini içerir. Daha fazla bilgi için, bkz. ["$" sembolünü değiştirme](#DollarSign).|  
-|$&|Değiştirme dizesinde tüm eşleşmenin bir kopyasını içerir. Daha fazla bilgi için bkz. [tüm eşleşmeyi değiştirme](#EntireMatch).|  
-|$\`|Giriş dizesinin tüm metini, değiştirme dizininde eşleşmenin önüne ekler. Daha fazla bilgi için, bkz. [metni eşleştirmeden önce değiştirme](#BeforeMatch).|  
-|$'|Giriş dizesinin tüm metini, değiştirme dizininde eşleşmenin sonrasına ekler. Daha fazla bilgi için bkz. [eşleştirmeden sonra metni değiştirme](#AfterMatch).|  
-|$+|Değiştirme dizesinde yakalanan son grubu içerir. Daha fazla bilgi için bkz. [son yakalanan grubu değiştirme](#LastGroup).|  
-|$_|Değiştirme dizesinde tüm giriş dizesinin bir kopyasını içerir. Daha fazla bilgi için, bkz. [tüm giriş dizesini değiştirme](#EntireString).|  
+|$ *numarası*|*Sayı*ile tanımlanan yakalama grubuyla eşleşen son alt dizeyi içerir; burada *sayı* , değiştirme dizesinde bir ondalık değerdir. Daha fazla bilgi için bkz. [numaralandırılmış bir grubu değiştirme](#substituting-a-numbered-group).|  
+|$ { *Name* }|Değiştirme dizesinde `(?<`*adı*`> )` tarafından belirtilen adlandırılmış grupla eşleşen son alt dizeyi içerir. Daha fazla bilgi için bkz. [adlandırılmış bir grubu değiştirme](#substituting-a-named-group).|  
+|$$|Değiştirme dizesinde tek bir "$" değişmez değerini içerir. Daha fazla bilgi için, bkz. ["$" sembolünü değiştirme](#substituting-a--character).|  
+|$&|Değiştirme dizesinde tüm eşleşmenin bir kopyasını içerir. Daha fazla bilgi için bkz. [tüm eşleşmeyi değiştirme](#substituting-the-entire-match).|  
+|$\`|Giriş dizesinin tüm metini, değiştirme dizininde eşleşmenin önüne ekler. Daha fazla bilgi için, bkz. [metni eşleştirmeden önce değiştirme](#substituting-the-text-before-the-match).|  
+|$'|Giriş dizesinin tüm metini, değiştirme dizininde eşleşmenin sonrasına ekler. Daha fazla bilgi için bkz. [eşleştirmeden sonra metni değiştirme](#substituting-the-text-after-the-match).|  
+|$+|Değiştirme dizesinde yakalanan son grubu içerir. Daha fazla bilgi için bkz. [son yakalanan grubu değiştirme](#substituting-the-last-captured-group).|  
+|$\_|Değiştirme dizesinde tüm giriş dizesinin bir kopyasını içerir. Daha fazla bilgi için, bkz. [tüm giriş dizesini değiştirme](#substituting-the-entire-input-string).|  
   
 ## <a name="substitution-elements-and-replacement-patterns"></a>Değişim Öğeleri ve Değiştirme Desenleri  
  Değişimler, bir değiştirme deseninde tanınan tek özel yapılarıdır. Karakter kaçışları dahil diğer normal ifade dili öğelerinden hiçbiri ve herhangi bir karakterle eşleşen nokta (`.`) desteklenir. Benzer şekilde, değişim dil öğeleri yalnızca değiştirme desenlerinde tanınır ve normal ifade desenlerinde hiçbir zaman geçerli değildirler.  
@@ -43,12 +43,11 @@ ms.locfileid: "73122486"
   
 > [!NOTE]
 > Bir normal ifade içindeki bir değiştirme desenine benzer işlevsellik için, bir yeniden başvuru kullanın. Geri başvurular hakkında daha fazla bilgi için bkz. [Backreference yapıları](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
-  
-<a name="Numbered"></a>   
+
 ## <a name="substituting-a-numbered-group"></a>Numaralandırılmış Bir Grubu Değiştirme  
  `$`*Number* Language öğesi, değişim *dizesindeki yakalama grubuyla* eşleşen son alt dizeyi içerir; burada *sayı* yakalama grubunun dizinidir. Örneğin, değişim deseninin `$1` eşleşen alt dizenin ilk yakalanan grupla değiştirileceğini gösterir. Numaralandırılmış yakalama grupları hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
- `$` izleyen tüm basamaklar, *sayı* grubuna ait olarak yorumlanır. Amacınız bu değilse, onun yerine adlandırılmış bir grup kullanabilirsiniz. Örneğin, yerine konacak dizeyi, "1" numarasıyla birlikte yakalanan ilk grubun değeri olarak tanımlamak için `$11` yerine `${1}1` değiştirme dizesini kullanabilirsiniz. Daha fazla bilgi için bkz. [adlandırılmış bir grubu değiştirme](#Named).  
+ `$` izleyen tüm basamaklar, *sayı* grubuna ait olarak yorumlanır. Amacınız bu değilse, onun yerine adlandırılmış bir grup kullanabilirsiniz. Örneğin, yerine konacak dizeyi, "1" numarasıyla birlikte yakalanan ilk grubun değeri olarak tanımlamak için `$11` yerine `${1}1` değiştirme dizesini kullanabilirsiniz. Daha fazla bilgi için bkz. [adlandırılmış bir grubu değiştirme](#substituting-a-named-group).  
   
  `(?<`*ad*`>)` sözdizimi kullanılarak açıkça atanan grupları yakalama, soldan sağa doğru bir şekilde numaralandırılır. Adlandırılmış gruplar da, son adlandırılmamış grubun dizininin bir büyüğünden başlanarak, soldan sağa doğru numaralandırılır. Örneğin, normal ifadede `(\w)(?<digit>\d)`, `digit` adlı grubun dizini 2 ' dir.  
   
@@ -69,10 +68,7 @@ ms.locfileid: "73122486"
 |`[.,]?`|Sıfır veya bir nokta ya da virgülü eşleştirin.|  
 |`\d*`|Sıfır veya daha fazla ondalık basamağı eşleştirin.|  
 |`(\s?\d+[.,]?\d*)`|Ardından bir veya birden fazla ondalık basamak, sıfır veya bir nokta veya virgül, sıfır veya daha fazla ondalık basamak gelen bir beyaz alanı eşleştirin. Bu ilk yakalama grubudur. Değiştirme deseninin `$1`olduğu için, <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> yöntemine yapılan çağrı, eşleşen alt dizenin tamamını bu yakalanan grupla değiştirir.|  
-  
- [Başa dön](#Top)  
-  
-<a name="Named"></a>   
+
 ## <a name="substituting-a-named-group"></a>Adlandırılmış Bir Grubu Değiştirme  
  `${`*adı*`}` Language öğesi, *ad* yakalama grubuyla eşleşen son alt dizenin yerini alır; burada *ad* , `(?<`*adı*`>)` Language öğesi tarafından tanımlanan bir yakalama grubunun adıdır. Adlandırılmış yakalama grupları hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
@@ -95,10 +91,7 @@ ms.locfileid: "73122486"
 |`[.,]?`|Sıfır veya bir nokta ya da virgülü eşleştirin.|  
 |`\d*`|Sıfır veya daha fazla ondalık basamağı eşleştirin.|  
 |`(?<amount>\s?\d[.,]?\d*)`|Ardından bir veya birden fazla ondalık basamak, sıfır veya bir nokta veya virgül, sıfır veya daha fazla ondalık basamak gelen bir beyaz alanı eşleştirin. Bu, `amount`adlı yakalama grubudur. Değiştirme deseninin `${amount}`olduğu için, <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> yöntemine yapılan çağrı, eşleşen alt dizenin tamamını bu yakalanan grupla değiştirir.|  
-  
- [Başa dön](#Top)  
-  
-<a name="DollarSign"></a>   
+
 ## <a name="substituting-a--character"></a>Bir "$" Karakterini Değiştirme  
  `$$` değiştirme, değiştirilmiş dizeye bir sabit değer "$" karakteri ekler.  
   
@@ -116,8 +109,7 @@ ms.locfileid: "73122486"
 |`\.`|Bir noktayı eşleştirin (ondalık ayırıcı).|  
 |`(\d+)`|Bir veya daha fazla ondalık basamağı eşleştirin. Bu, üçüncü yakalama grubudur.|  
 |`(\.(\d+))?`|Bir noktanın sıfır veya bir örneğini, ardından bir veya birden çok ondalık basamak gelecek şekilde eşleştirin. Bu ikinci yakalama grubudur.|  
-  
-<a name="EntireMatch"></a>   
+
 ## <a name="substituting-the-entire-match"></a>Tüm Eşleştirmeyi Değiştirme  
  `$&` değiştirme, değiştirme dizesinde tüm eşleşmeyi içerir. Genellikle, eşleştirilen dizenin başlangıcına veya sonuna bir alt dize eklemek için kullanılır. Örneğin, `($&)` değiştirme kalıbı her eşleşmenin başına ve sonuna parantez ekler. Eşleşme yoksa `$&` değiştirme hiçbir etkiye sahip olmaz.  
   
@@ -135,10 +127,7 @@ ms.locfileid: "73122486"
 |`$`|Giriş dizesinin sonuyla eşleş.|  
   
  `"$&"` değiştirme düzeniyle her eşleşmenin başına ve sonuna bir sabit değer tırnak işareti eklenir.  
-  
- [Başa dön](#Top)  
-  
-<a name="BeforeMatch"></a>   
+
 ## <a name="substituting-the-text-before-the-match"></a>Eşleştirmeden Önceki Metni Değiştirme  
  ``$` `` değiştirme, eşleşen dizeyi eşleştirmede tüm giriş dizesiyle değiştirir. Yani, giriş dizesini eşleştirmeye kadar çoğaltırken, eşleştirilen metni kaldırır. Eşleştirilen metni izleyen metin, sonuç dizesinde değiştirilmez. Bir giriş dizesinde birden çok eşleştirme varsa, değiştirme metni, metnin daha önceki eşleştirmelerle değiştirildiği dizeden değil, özgün giriş dizesinden türetilir. \(örnek bir çizim sağlar.\) eşleşme yoksa, ``$` `` değiştirme hiçbir etkiye sahip değildir.  
   
@@ -155,11 +144,8 @@ ms.locfileid: "73122486"
 |2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
 |3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
 |4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**EE5|  
-|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**|  
-  
- [Başa dön](#Top)  
-  
-<a name="AfterMatch"></a>   
+|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**| 
+
 ## <a name="substituting-the-text-after-the-match"></a>Eşleştirmeden Sonraki Metni Değiştirme  
  `$'` değiştirme, eşleşen dizeyi eşleştirdikten sonra tüm giriş dizesiyle değiştirir. Yani, giriş dizesini eşleştirmeden sonra çoğaltırken, eşleştirilen metni kaldırır. Eşleştirilen metinden önce gelen metin, sonuç dizesinde değiştirilmez. Eşleşme yoksa `$'` değiştirme hiçbir etkiye sahip olmaz.  
   
@@ -177,10 +163,7 @@ ms.locfileid: "73122486"
 |3|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc**dd4ee5**dd4ee5|  
 |4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd**EE5**EE5|  
 |5|14|<xref:System.String.Empty?displayProperty=nameWithType>|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee|  
-  
- [Başa dön](#Top)  
-  
-<a name="LastGroup"></a>   
+
 ## <a name="substituting-the-last-captured-group"></a>Yakalanan Son Grubu Değiştirme  
  `$+` değiştirme, eşleşen dizeyi en son yakalanan grupla değiştirir. Yakalanan grup yoksa veya en son yakalanan grubun değeri <xref:System.String.Empty?displayProperty=nameWithType>ise, `$+` değiştirme hiçbir etkiye sahip olmaz.  
   
@@ -198,10 +181,7 @@ ms.locfileid: "73122486"
 |`\s`|Bir boşluk karakteri ile eşleştirin.|  
 |`\1`|İlk yakalanan grubu eşleştirin.|  
 |`\b`|Eşlemeyi bir sözcük sınırında sonlandır.|  
-  
- [Başa dön](#Top)  
-  
-<a name="EntireString"></a>   
+
 ## <a name="substituting-the-entire-input-string"></a>Tüm Giriş Dizesini Değiştirme  
  `$_` değiştirme, eşleşen dizeyi tüm giriş dizesiyle değiştirir. Diğer bir deyişle, eşleştirilen metni kaldırır ve eşleştirilen metni içeren tüm dize ile değiştirir.  
   

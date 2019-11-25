@@ -7,32 +7,20 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48e1c2271d6d011296d347e7d74fb363cc4d8527
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834545"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974911"
 ---
 # <a name="method-etw-events"></a>Yöntem ETW Olayları
 
-<a name="top"></a>Bu olaylar yöntemlere özgü bilgiler toplar. Bu olayların yükü sembol çözümlemesi için gereklidir. Ayrıca, bu olaylar yöntemin kaç kez çağrıldığı gibi yararlı bilgiler sağlar.
+Bu olaylar yöntemlere özgü bilgiler toplar. Bu olayların yükü sembol çözümlemesi için gereklidir. Ayrıca, bu olaylar yöntemin kaç kez çağrıldığı gibi yararlı bilgiler sağlar.
 
 Tüm Yöntem olayları "bilgilendirme (4)" düzeyine sahiptir. Tüm Yöntem ayrıntılı olayları "verbose (5)" düzeyine sahiptir.
 
-Tüm Yöntem olayları `JITKeyword` (0x10) anahtar sözcüğü veya çalışma zamanı sağlayıcısı altındaki `NGenKeyword` (0x20) anahtar sözcüğü ya da Özet sağlayıcının altında `JitRundownKeyword` (0x10) veya `NGENRundownKeyword` (0x20) ile oluşturulur.
-
-CLR yöntemi olayları aşağıda verilmiştir:
-
-- [CLR yöntemi olayları](#clr_method_events)
-
-- [CLR Yöntem Işaretleyici olayları](#clr_method_marker_events)
-
-- [CLR metodu ayrıntılı olayları](#clr_method_verbose_events)
-
-- [Methodjtingstarted olayı](#methodjittingstarted_event)
-
-<a name="clr_method_events"></a>
+Tüm Yöntem olayları `JITKeyword` (0x10) anahtar sözcüğü veya çalışma zamanı sağlayıcısı altındaki `NGenKeyword` (0x20) anahtar sözcüğü veya Özet sağlayıcının altında `JitRundownKeyword` (0x10) veya `NGENRundownKeyword` (0x20) tarafından oluşturulur.
 
 ## <a name="clr-method-events"></a>CLR yöntemi olayları
 
@@ -56,7 +44,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|Alan adı|Veri türü|Açıklama|
+|alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |Methoddıd|Win: UInt64|Metodun benzersiz tanımlayıcısı. JıT yardımcı yöntemleri için bu, yönteminin başlangıç adresine ayarlanır.|
 |Modül kimliği|Win: UInt64|Bu yöntemin ait olduğu modülün tanımlayıcısı (JıT yardımcıları için 0).|
@@ -66,13 +54,9 @@ Aşağıdaki tabloda olay verileri gösterilmektedir:
 |MethodFlags|Win: UInt32|0x1: dinamik yöntem.<br /><br /> 0x2: genel yöntem.<br /><br /> 0x4: JıT derlenmiş kod yöntemi (Aksi takdirde NGEN yerel görüntü kodu).<br /><br /> 0x8: yardımcı yöntemi.|
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
 
-[Başa dön](#top)
-
-<a name="clr_method_marker_events"></a>
-
 ## <a name="clr-method-marker-events"></a>CLR Yöntem Işaretleyici olayları
 
-Bu olaylar yalnızca Özet sağlayıcının altında oluşturulur. Bir başlangıç veya bitiş Özeti sırasında Yöntem numaralandırması sonunu işaret eder. (Diğer bir deyişle, `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword` veya `AppDomainResourceManagementRundownKeyword` anahtar sözcüğü etkinleştirildiğinde bunlar oluşturulur.)
+Bu olaylar yalnızca Özet sağlayıcının altında oluşturulur. Bir başlangıç veya bitiş Özeti sırasında Yöntem numaralandırması sonunu işaret eder. (Diğer bir deyişle, `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword`veya `AppDomainResourceManagementRundownKeyword` anahtar sözcüğü etkinleştirildiğinde bunlar oluşturulur.)
 
 Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
@@ -93,13 +77,9 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|Alan adı|Veri türü|Açıklama|
+|alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
-
-[Başa dön](#top)
-
-<a name="clr_method_verbose_events"></a>
 
 ## <a name="clr-method-verbose-events"></a>CLR metodu ayrıntılı olayları
 
@@ -123,7 +103,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|Alan adı|Veri türü|Açıklama|
+|alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |Methoddıd|Win: UInt64|Metodun benzersiz tanıtıcısı. JıT yardımcı yöntemleri için, yönteminin başlangıç adresine ayarlanır.|
 |Modül kimliği|Win: UInt64|Bu yöntemin ait olduğu modülün tanımlayıcısı (JıT yardımcıları için 0).|
@@ -135,10 +115,6 @@ Aşağıdaki tabloda olay verileri gösterilmektedir:
 |MethodName|Win: UnicodeString|Yöntemiyle ilişkili tam sınıf adı.|
 |MethodSignature|Win: UnicodeString|Metodun imzası (tür adlarının virgülle ayrılmış listesi).|
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
-
-[Başa dön](#top)
-
-<a name="methodjittingstarted_event"></a>
 
 ## <a name="methodjittingstarted-event"></a>Methodjtingstarted olayı
 
@@ -159,7 +135,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|Alan adı|Veri türü|Açıklama|
+|alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |Methoddıd|Win: UInt64|Metodun benzersiz tanıtıcısı.|
 |Modül kimliği|Win: UInt64|Bu yöntemin ait olduğu modülün tanımlayıcısı.|

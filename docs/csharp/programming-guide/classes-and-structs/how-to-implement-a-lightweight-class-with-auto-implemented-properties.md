@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Otomatik uygulanan özelliklerle hafif bir sınıf uygulama- C# Programlama Kılavuzu'
+title: Otomatik uygulanan özelliklerle hafif bir sınıf uygulama- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 626a44fbaa65f48e0d9fe66d83c44abb07eba379
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: b5bf2e84ffe47cd1eaf17e877a20a700e98339ff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926752"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970916"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Nasıl yapılır: Otomatik uygulanan özelliklerle hafif bir sınıf uygulama (C# Programlama Kılavuzu)
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Otomatik uygulanan özelliklerle hafif bir sınıf uygulama (C# Programlama Kılavuzu)
 
 Bu örnek, yalnızca bir otomatik uygulanan özellikler kümesini kapsüllemek için hizmet veren sabit bir basit sınıfın nasıl oluşturulacağını gösterir. Başvuru türü semantiğini kullanmanız gerektiğinde, yapı yerine bu tür yapıyı kullanın.
 
@@ -21,12 +21,12 @@ Değişmez bir özelliği iki şekilde yapabilirsiniz:
 
 - [Set](../../language-reference/keywords/set.md) erişimcisinin [Private](../../language-reference/keywords/private.md)olarak bildirilmesini sağlayabilirsiniz.  Özelliği yalnızca tür içinde ayarlanabilir, ancak tüketicilere sabittir.
 
-  Özel `set` bir erişimci bildirdiğinizde, özelliği başlatmak için bir nesne Başlatıcısı kullanamazsınız. Bir Oluşturucu veya Factory yöntemi kullanmanız gerekir.
+  Özel bir `set` erişimcisi bildirdiğinizde, özelliği başlatmak için bir nesne Başlatıcısı kullanamazsınız. Bir Oluşturucu veya Factory yöntemi kullanmanız gerekir.
 - Yalnızca [Get](../../language-reference/keywords/get.md) erişimcisini bildirebilirsiniz. Bu, özelliği türün Oluşturucusu dışında her yerde sabit hale getirir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, otomatik uygulanan özellikleri olan sabit bir sınıfı uygulamak için iki yol göstermektedir. Her bir şekilde, bir özel `set` ve özelliklerden `get` biri olan özelliklerden birini bildirir.  İlk sınıf yalnızca özellikleri başlatmak için bir Oluşturucu kullanır ve ikinci sınıf Oluşturucu çağıran bir statik fabrika yöntemi kullanır.
+Aşağıdaki örnek, otomatik uygulanan özellikleri olan sabit bir sınıfı uygulamak için iki yol göstermektedir. Her bir şekilde, özel bir `set` özelliklerden birini ve yalnızca bir `get` özelliklerden birini bildirir.  İlk sınıf yalnızca özellikleri başlatmak için bir Oluşturucu kullanır ve ikinci sınıf Oluşturucu çağıran bir statik fabrika yöntemi kullanır.
 
 ```csharp
 // This class is immutable. After an object is created,
@@ -121,6 +121,6 @@ Derleyici, otomatik uygulanan her özellik için yedekleme alanları oluşturur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özellikler](./properties.md)
+- [Veri Erişimi](./properties.md)
 - [struct](../../language-reference/keywords/struct.md)
 - [Nesne ve Koleksiyon Başlatıcıları](./object-and-collection-initializers.md)
