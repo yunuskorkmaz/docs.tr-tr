@@ -1,5 +1,5 @@
 ---
-title: End ekstresi (Visual Basic)
+title: End Deyimi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.End
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 66dba1df125a08b8ae05519a0c66edb6da15ceaa
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: cb2fb4abb21b7b9c6575cec4aca1374f63687607
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583419"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343731"
 ---
 # <a name="end-statement"></a>End Deyimi
-Yürütmeyi hemen sonlandırır.  
+Terminates execution immediately.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,32 +31,32 @@ End
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tüm uygulamayı çalışmayı durdurmayı zorlamak için `End` ifadesini bir yordamın her yerinden yerleştirebilirsiniz. `End`, `Open` ifadesiyle açılan tüm dosyaları kapatır ve tüm uygulamanın değişkenlerini temizler. Nesneleri, nesnelerine başvuruları tutan başka hiçbir program yoksa ve kodun hiçbiri çalışmıyorsa, uygulama kapanır.  
+ You can place the `End` statement anywhere in a procedure to force the entire application to stop running. `End` closes any files opened with an `Open` statement and clears all the application's variables. The application closes as soon as there are no other programs holding references to its objects and none of its code is running.  
   
 > [!NOTE]
-> @No__t_0 ifade kodu yürütmeyi aniden durduruyor ve `Dispose` veya `Finalize` yöntemini ya da başka bir Visual Basic kodu çağırmaz. Diğer programlar tarafından tutulan nesne başvuruları geçersiz kılınır. Bir `Try` veya `Catch` bloğunda `End` ifadesiyle karşılaşılırsa, denetim karşılık gelen `Finally` bloğuna geçmez.  
+> The `End` statement stops code execution abruptly, and does not invoke the `Dispose` or `Finalize` method, or any other Visual Basic code. Object references held by other programs are invalidated. If an `End` statement is encountered within a `Try` or `Catch` block, control does not pass to the corresponding `Finally` block.  
   
- @No__t_0 deyimin yürütülmesi askıya alınır, ancak `End` aksine, derlenmiş bir çalıştırılabilir (. exe) dosyasında karşılaşılmadığı takdirde hiçbir dosyayı kapatmaz veya hiçbir değişkeni temizlemez.  
+ The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.  
   
- @No__t_0, açık olabilecek kaynaklara katılmaksızın uygulamanızı sonlandırdığından, kullanmadan önce düzgün bir şekilde kapatmayı denemeniz gerekir. Örneğin, uygulamanızda açık bir form varsa, denetim `End` bildirimine ulaşmadan önce bunları kapatmanız gerekir.  
+ Because `End` terminates your application without attending to any resources that might be open, you should try to close down cleanly before using it. For example, if your application has any forms open, you should close them before control reaches the `End` statement.  
   
- @No__t_0 gelişigüzel ve yalnızca hemen durdurmanız gerektiğinde kullanmanız gerekir. Bir yordamı ([Return deyimleri](../../../visual-basic/language-reference/statements/return-statement.md) ve [Exit ifadesini](../../../visual-basic/language-reference/statements/exit-statement.md)) sonlandırmak için normal yollar, yordamı yalnızca düzgün bir şekilde kapatmaz, aynı zamanda çağıran koda düzgün bir şekilde kapatma fırsatı verir. Örneğin, bir konsol uygulaması, `Main` yordamından yalnızca `Return` olabilir.  
+ You should use `End` sparingly, and only when you need to stop immediately. The normal ways to terminate a procedure ([Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) and [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)) not only close down the procedure cleanly but also give the calling code the opportunity to close down cleanly. A console application, for example, can simply `Return` from the `Main` procedure.  
   
 > [!IMPORTANT]
-> @No__t_0 ifade <xref:System> ad alanındaki <xref:System.Environment> sınıfının <xref:System.Environment.Exit%2A> yöntemini çağırır. <xref:System.Environment.Exit%2A> için `UnmanagedCode` izninizin olması gerekir. Bunu yapmazsanız <xref:System.Security.SecurityException> bir hata oluşur.  
+> The `End` statement calls the <xref:System.Environment.Exit%2A> method of the <xref:System.Environment> class in the <xref:System> namespace. <xref:System.Environment.Exit%2A> requires that you have `UnmanagedCode` permission. If you do not, a <xref:System.Security.SecurityException> error occurs.  
   
- Daha sonra ek bir anahtar sözcük olduğunda [End \<keyword > deyimleri](../../../visual-basic/language-reference/statements/end-keyword-statement.md) uygun yordamın veya bloğun tanımının sonuna göre ayırıcıları. Örneğin, `End Function` bir `Function` yordamının tanımını sonlandırır.  
+ When followed by an additional keyword, [End \<keyword> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md) delineates the end of the definition of the appropriate procedure or block. For example, `End Function` terminates the definition of a `Function` procedure.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, Kullanıcı istediğinde kod yürütmeyi sonlandırmak için `End` ifadesini kullanır.  
+ The following example uses the `End` statement to terminate code execution if the user requests it.  
   
  [!code-vb[VbVersHelp60Controls#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVersHelp60Controls/VB/Form1.vb#64)]  
   
 ## <a name="smart-device-developer-notes"></a>Akıllı Cihaz Geliştirici Notları  
- Bu ifade desteklenmiyor.  
+ This statement is not supported.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Security.Permissions.SecurityPermissionFlag>
 - [Stop Deyimi](../../../visual-basic/language-reference/statements/stop-statement.md)
-- [End \<keyword > ekstresi](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+- [End \<keyword> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md)

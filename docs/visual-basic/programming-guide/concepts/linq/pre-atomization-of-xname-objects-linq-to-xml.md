@@ -1,23 +1,23 @@
 ---
-title: Parçalara ayırma öncesi XName nesneleri (LINQ to XML) (Visual Basic)
+title: Parçalara Ayırma Öncesi XName Nesneleri (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 06ea104b-f44c-4bb2-9c34-889ae025c80d
-ms.openlocfilehash: 250b7aa8060c8196c28725fded090e2a63a0ee54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a87a37c5fe2fc29ca980c77d9c775b2b1e909cc1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665851"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353111"
 ---
-# <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a>Parçalara ayırma öncesi XName nesneleri (LINQ to XML) (Visual Basic)
-LINQ to XML performansını artırmak için bir yolu önceden küçük parçalara etmektir <xref:System.Xml.Linq.XName> nesneleri. Parçalara ayırma öncesi anlamına gelir, bir dizeye atadığınız bir <xref:System.Xml.Linq.XName> oluşturucuları kullanarak XML ağacı oluşturmadan önce nesne <xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XAttribute> sınıfları. Ardından, oluşturucuya bir dizeyi geçirmek yerine, kullandığınız dizesine örtük dönüştürme <xref:System.Xml.Linq.XName>, başlatılmış geçirdiğiniz <xref:System.Xml.Linq.XName> nesne.  
+# <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a>Pre-Atomization of XName Objects (LINQ to XML) (Visual Basic)
+One way to improve performance in LINQ to XML is to pre-atomize <xref:System.Xml.Linq.XName> objects. Pre-atomization means that you assign a string to an <xref:System.Xml.Linq.XName> object before you create the XML tree by using the constructors of the <xref:System.Xml.Linq.XElement> and  <xref:System.Xml.Linq.XAttribute> classes. Then, instead of passing a string to the constructor, which would use the implicit conversion from string to <xref:System.Xml.Linq.XName>, you pass the initialized <xref:System.Xml.Linq.XName> object.  
   
- Bu, belirli adları yinelenen büyük bir XML ağacı oluştururken performansı artırır. Bunu yapmak için bildirmek ve başlatmak <xref:System.Xml.Linq.XName> XML ağacı oluşturmak ve ardından kullanmadan önce nesneleri <xref:System.Xml.Linq.XName> öğe ve öznitelik adları için dizeleri belirtmek yerine, nesneleri. Çok sayıda öğe (veya öznitelikleri) oluşturuyorsanız bu teknik, aynı ada sahip önemli ölçüde performans kazanımı sağlayabilir.  
+ This improves performance when you create a large XML tree in which specific names are repeated. To do this, you declare and initialize <xref:System.Xml.Linq.XName> objects before you construct the XML tree, and then use the <xref:System.Xml.Linq.XName> objects instead of specifying strings for the element and attribute names. This technique can yield significant performance gains if you are creating a large number of elements (or attributes) with the same name.  
   
- Parçalara ayırma öncesi kendi senaryonuza kullanılması gerektiği, karar vermek için test etmeniz gerekir.  
+ You should test pre-atomization with your scenario to decide if you should use it.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte bu gösterir.  
+ The following example demonstrates this.  
   
 ```vb  
 Dim Root__1 As XName = "Root"  
@@ -29,7 +29,7 @@ Dim root__2 As New XElement(Root__1, New XElement(Data, New XAttribute(ID, "1"),
 Console.WriteLine(root__2)  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```xml  
 <Root>  
@@ -39,7 +39,7 @@ Console.WriteLine(root__2)
 </Root>  
 ```  
   
- Aşağıdaki örnek, XML belgesi bir ad alanında olduğu aynı tekniği gösterir:  
+ The following example shows the same technique where the XML document is in a namespace:  
   
 ```vb  
 Dim aw As XNamespace = "http://www.adventure-works.com"  
@@ -52,7 +52,7 @@ Dim root__2 As New XElement(Root__1, New XAttribute(XNamespace.Xmlns + "aw", aw)
 Console.WriteLine(root__2)  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com">  
@@ -62,7 +62,7 @@ Console.WriteLine(root__2)
 </aw:Root>  
 ```  
   
- Aşağıdaki örnek, ne, büyük olasılıkla gerçek dünyada karşınıza çıkacak için daha benzer. Bu örnekte, öğenin içeriğini bir sorgu tarafından sağlanır:  
+ The following example is more similar to what you will likely encounter in the real world. In this example, the content of the element is supplied by a query:  
   
 ```vb  
 Dim Root__1 As XName = "Root"  
@@ -76,7 +76,7 @@ Dim t2 As DateTime = DateTime.Now
 Console.WriteLine("Time to construct:{0}", t2 - t1)  
 ```  
   
- Önceki örnekte, adları değil önceden parçalara ayrılmış aşağıdaki örnek, daha iyi gerçekleştirir:  
+ The previous example performs better than the following example, in which names are not pre-atomized:  
   
 ```vb  
 Dim t1 As DateTime = DateTime.Now  
@@ -88,5 +88,5 @@ Console.WriteLine("Time to construct:{0}", t2 - t1)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Performans (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
-- [Parçalara ayrılmış XName ve XNamespace nesneleri (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)
+- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)

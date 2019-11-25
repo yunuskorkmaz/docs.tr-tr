@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl yapılır: bir öğenin yüzeysel değerini alma (Visual Basic)'
+title: 'How to: Retrieve the Shallow Value of an Element'
 ms.date: 07/20/2015
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
-ms.openlocfilehash: 184186a92865b022118b9989633a97c75274e7f4
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 7449d6d1230313aef6005284270370bb9d243a3f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320430"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346905"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>Nasıl yapılır: bir öğenin yüzeysel değerini alma (Visual Basic)
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>How to: Retrieve the Shallow Value of an Element (Visual Basic)
 
-Bu konu, bir öğenin yüzeysel değerinin nasıl alınacağını gösterir. Yüzeysel değer, tek bir dizeye birleştirilmiş tüm alt öğelerin değerlerini içeren derin değeri aksine, yalnızca belirli bir öğenin değeridir.
+This topic shows how to get the shallow value of an element. The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.
 
-Bir öğe değerini, ya da <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliğini kullanarak aldığınızda, derin değeri elde edersiniz. Yüzeysel değeri almak için, aşağıdaki örnekte gösterildiği gibi `ShallowValue` genişletme yöntemini kullanabilirsiniz. Yüzeysel değer alma, içeriğine göre öğeleri seçmek istediğinizde faydalıdır.
+When you retrieve an element value by using either casting or the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property, you retrieve the deep value. To retrieve the shallow value, you can use the `ShallowValue` extension method, as shown in the following example. Retrieving the shallow value is useful when you want to select elements based on their content.
 
-Aşağıdaki örnek, bir öğenin yüzeysel değerini alan bir genişletme yöntemi bildirir. Daha sonra, hesaplanmış bir değer içeren tüm öğeleri listelemek için bir sorgudaki genişletme yöntemini kullanır.
+The following example declares an extension method that retrieves the shallow value of an element. It then uses the extension method in a query to list all elements that contain a calculated value.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki metin dosyası, Report. xml, bu örneğin kaynağıdır.
+The following text file, Report.xml, is the source for this example.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -67,7 +67,7 @@ Module Module1
 End Module
 ```
 
-Bu örnek aşağıdaki çıktıyı üretir:
+This example produces the following output:
 
 ```console
 Column  Name="CustomerId"   =Customer.CustomerId.Heading
@@ -78,4 +78,4 @@ Column  Name="Name"         =Customer.Name
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML Axes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

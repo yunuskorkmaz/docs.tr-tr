@@ -1,5 +1,5 @@
 ---
-title: -tanımla (Visual Basic)
+title: -define
 ms.date: 03/10/2018
 helpviewer_keywords:
 - -d compiler option [Visual Basic]
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: 5b2c0173416418f67446c5441a93e5b06e93dc12
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: fd0875f09bf3ba7211ede500aa0da45f8b7cd2c7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002375"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344771"
 ---
-# <a name="-define-visual-basic"></a>-tanımla (Visual Basic)
-Koşullu derleyici sabitlerini tanımlar.  
+# <a name="-define-visual-basic"></a>-define (Visual Basic)
+Defines conditional compiler constants.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,30 +35,30 @@ veya
   
 |Terim|Tanım|  
 |---|---|  
-|`symbol`|Gerekli. Tanımlanacak simge.|  
-|`value`|İsteğe bağlı. @No__t atanacak değer-0. @No__t-0 bir dizeyse, tırnak işaretleri yerine ters eğik çizgi/tırnak işareti dizileri (\\ ") arasına alınmalıdır. Hiçbir değer belirtilmemişse, true olarak alınır.|  
+|`symbol`|Gerekli. The symbol to define.|  
+|`value`|İsteğe bağlı. The value to assign `symbol`. If `value` is a string, it must be surrounded by backslash/quotation-mark sequences (\\") instead of quotation marks. If no value is specified, then it is taken to be True.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 seçeneği, kaynak dosyanızda `#Const` önişlemcisi yönergesini kullanmayla benzer bir etkiye sahiptir, ancak `-define` ile tanımlanmış sabitler ortak olur ve projedeki tüm dosyalar için geçerlidir.  
+ The `-define` option has an effect similar to using a `#Const` preprocessor directive in your source file, except that constants defined with `-define` are public and apply to all files in the project.  
   
- Bu seçenek tarafından oluşturulan sembolleri, kaynak dosyaları koşullu olarak derlemek için `#If`... `Then`... `#Else` yönergesi ile kullanabilirsiniz.  
+ You can use symbols created by this option with the `#If`...`Then`...`#Else` directive to compile source files conditionally.  
   
- `-d`, `-define` ' in kısa biçimidir.  
+ `-d` is the short form of `-define`.  
   
- Sembol tanımlarını ayırmak için virgül kullanarak, `-define` ile birden çok sembol tanımlayabilirsiniz.  
+ You can define multiple symbols with `-define` by using a comma to separate symbol definitions.  
   
-|Visual Studio tümleşik geliştirme ortamında/define ayarlamak için|  
+|To set /define in the Visual Studio integrated development environment|  
 |---|  
-|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Derle** sekmesine tıklayın.<br />3. **Gelişmiş**'e tıklayın.<br />4. **Özel sabitler** kutusundaki değeri değiştirin.|  
+|1.  Have a project selected in **Solution Explorer**. On the **Project** menu, click **Properties**. <br />2.  Click the **Compile** tab.<br />3.  Click **Advanced**.<br />4.  Modify the value in the **Custom Constants** box.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, iki koşullu derleyici sabiti tanımlar ve kullanır.  
+ The following code defines and then uses two conditional compiler constants.  
   
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
 - [#If...Then...#Else Yönergesi](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [#Const Yönergesi](../../../visual-basic/language-reference/directives/const-directive.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -1,5 +1,5 @@
 ---
-title: Anahtar (Visual Basic)
+title: Anahtar
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AnonymousKey
@@ -8,53 +8,53 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-ms.openlocfilehash: e13a773f0b585a5c8803a77c7aaad441d90dfe75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92c8809779d6cab524f67ee47f355b72ab152403
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053957"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351512"
 ---
 # <a name="key-visual-basic"></a>Anahtar (Visual Basic)
-`Key` Anahtar sözcüğü anonim türler, özellikler için davranışını belirtmenize imkan tanır. Anonim tür örnekleri veya bir karma kod değerleri hesaplama arasındaki testlerinde anahtar özellikleri arttıkça, yalnızca özellikleri belirleyin. Anahtar özelliklerin değerlerini değiştirilemez.  
+The `Key` keyword enables you to specify behavior for properties of anonymous types. Only properties you designate as key properties participate in tests of equality between anonymous type instances, or calculation of hash code values. The values of key properties cannot be changed.  
   
- Anahtar sözcüğünü koyarak bir anahtar özellik olarak belirlediğiniz anonim bir türün bir özellik `Key` başlatma listesi bildiriminde önünde. Aşağıdaki örnekte, `Airline` ve `FlightNo` anahtar özellikleri, ancak `Gate` değil.  
+ You designate a property of an anonymous type as a key property by placing the keyword `Key` in front of its declaration in the initialization list. In the following example, `Airline` and `FlightNo` are key properties, but `Gate` is not.  
   
  [!code-vb[VbVbalrAnonymousTypes#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#26)]  
   
- Yeni bir anonim tür oluşturulduğunda, doğrudan devralan <xref:System.Object>. Derleyici, üç devralınan üyeleri geçersiz kılar: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, ve <xref:System.Object.ToString%2A>. İçin üretilen geçersiz kılma kod <xref:System.Object.Equals%2A> ve <xref:System.Object.GetHashCode%2A> anahtar özelliklerini temel alır. Tür, anahtar özellik varsa <xref:System.Object.GetHashCode%2A> ve <xref:System.Object.Equals%2A> geçersiz kılınmadığını.  
+ When a new anonymous type is created, it inherits directly from <xref:System.Object>. The compiler overrides three inherited members: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. The override code that is produced for <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> is based on key properties. If there are no key properties in the type, <xref:System.Object.GetHashCode%2A> and <xref:System.Object.Equals%2A> are not overridden.  
   
 ## <a name="equality"></a>Eşitlik  
- Aynı türdeki örneklerin olmaları durumunda ve bunların anahtar özelliklerinin değerler eşitse, iki anonim tür örnekleri eşit olur. Aşağıdaki örneklerde, `flight2` eşittir `flight1` aynı anonim örneklerini olduklarından önceki örnekteki tür değerleri kendi anahtar özellikleri için eşleşen sahip olur. Ancak, `flight3` eşit değildir `flight1` , bir anahtar özellik için farklı bir değer içerdiğinden `FlightNo`. Örnek `flight4` aynı türde değil `flight1` çünkü bunlar farklı özellikleri anahtar özellik olarak belirleyin.  
+ Two anonymous type instances are equal if they are instances of the same type and if the values of their key properties are equal. In the following examples, `flight2` is equal to `flight1` from the previous example because they are instances of the same anonymous type and they have matching values for their key properties. However, `flight3` is not equal to `flight1` because it has a different value for a key property, `FlightNo`. Instance `flight4` is not the same type as `flight1` because they designate different properties as key properties.  
   
  [!code-vb[VbVbalrAnonymousTypes#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#27)]  
   
- Yalnızca anahtar olmayan özellikleri olan adı, türü, sırası ve değeri, aynı iki örneği bildirilmişse iki örnek eşit değildir. Örneği anahtar özellikleri olmadan yalnızca kendisine eşittir.  
+ If two instances are declared with only non-key properties, identical in name, type, order, and value, the two instances are not equal. An instance without key properties is equal only to itself.  
   
- İki anonim tür örnekleri altında aynı anonim tür örnekleri olan koşullar hakkında daha fazla bilgi için bkz. [anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+ For more information about the conditions under which two anonymous type instances are instances of the same anonymous type, see [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
-## <a name="hash-code-calculation"></a>Karma kod hesaplama  
- Gibi <xref:System.Object.Equals%2A>, tanımlanan karma işlevi <xref:System.Object.GetHashCode%2A> türü anahtar özellikleri anonim bir tür temel alınır. Aşağıdaki örnekler arasındaki etkileşimler anahtar özellikleri ve karma kod değerlerini gösterir.  
+## <a name="hash-code-calculation"></a>Hash Code Calculation  
+ Like <xref:System.Object.Equals%2A>, the hash function that is defined in <xref:System.Object.GetHashCode%2A> for an anonymous type is based on the key properties of the type. The following examples show the interaction between key properties and hash code values.  
   
- Anahtar olmayan özellikler eşleşen değerler olmasa bile, tüm anahtar özellikleri için aynı değerlere sahip anonim bir türün örneklerinin aynı karma kodu değeri var. Aşağıdaki ifade döndürür `True`.  
+ Instances of an anonymous type that have the same values for all key properties have the same hash code value, even if non-key properties do not have matching values. The following statement returns `True`.  
   
  [!code-vb[VbVbalrAnonymousTypes#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#37)]  
   
- Bir veya daha fazla anahtar özelliği için farklı değerlere sahip anonim bir türün örneklerinin farklı bir karma kod değerlere sahip. Aşağıdaki ifade döndürür `False`.  
+ Instances of an anonymous type that have different values for one or more key properties have different hash code values. The following statement returns `False`.  
   
  [!code-vb[VbVbalrAnonymousTypes#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#38)]  
   
- Farklı özellikleri anahtar özellik olarak belirlediğiniz anonim türlerin örneklerini örnekleri aynı türde değil. Adları ve değerleri tüm özelliklerin aynı olsa bile farklı bir karma kod değerlere sahiptirler. Aşağıdaki ifade döndürür `False`.  
+ Instances of anonymous types that designate different properties as key properties are not instances of the same type. They have different hash code values even when the names and values of all properties are the same. The following statement returns `False`.  
   
  [!code-vb[VbVbalrAnonymousTypes#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#39)]  
   
-## <a name="read-only-values"></a>Salt okunur değerleri  
- Anahtar özelliklerin değerlerini değiştirilemez. Örneğin, `flight1` önceki örneklerde, `Airline` ve `FlightNo` alanları salt okunur ancak `Gate` değiştirilebilir.  
+## <a name="read-only-values"></a>Read-Only Values  
+ The values of key properties cannot be changed. For example, in `flight1` in the earlier examples, the `Airline` and `FlightNo` fields are read-only, but `Gate` can be changed.  
   
  [!code-vb[VbVbalrAnonymousTypes#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#28)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Anonim Tip Tanımı](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
-- [Nasıl yapılır: Özellik adları ve türleri anonim türde bildirimlerden çıkarma](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Nasıl yapılır: Anonim Tip Bildirimlerinden Özellik Adları ve Türlerini Çıkarma](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

@@ -1,5 +1,5 @@
 ---
-title: Visual Basic'de İşleç Önceliği
+title: İşleç Önceliği
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arithmetic operators [Visual Basic], precedence
@@ -14,71 +14,71 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: df40aced45442c9c7895c8d10ece64b21e292508
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 318fcc3f35276ba0b2061ba9677c5fde29429f6f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659921"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348273"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic'de İşleç Önceliği
-Bir ifadede birkaç işlem gerçekleştiğinde, her parça, *işleç önceliği*olarak adlandırılan önceden belirlenmiş bir sırada değerlendirilir ve çözümlenir.
+When several operations occur in an expression, each part is evaluated and resolved in a predetermined order called *operator precedence*.
 
-## <a name="precedence-rules"></a>Öncelik kuralları
- İfadeler birden fazla kategoriden işleçler içerdiğinde, bunlar aşağıdaki kurallara göre değerlendirilir:
+## <a name="precedence-rules"></a>Precedence Rules
+ When expressions contain operators from more than one category, they are evaluated according to the following rules:
 
-- Aritmetik ve birleştirme işleçleri aşağıdaki bölümde açıklanan öncelik sırasına sahiptir ve tümü karşılaştırma, mantıksal ve bit düzeyinde operatörlerden daha önceliklidir.
+- The arithmetic and concatenation operators have the order of precedence described in the following section, and all have greater precedence than the comparison, logical, and bitwise operators.
 
-- Tüm karşılaştırma işleçleri eşit önceliğe sahiptir ve tümü mantıksal ve bit düzeyinde operatörlerden daha önceliklidir, ancak aritmetik ve birleştirme işleçlerinden daha düşük önceliğe sahiptir.
+- All comparison operators have equal precedence, and all have greater precedence than the logical and bitwise operators, but lower precedence than the arithmetic and concatenation operators.
 
-- Mantıksal ve bit düzeyinde işleçler aşağıdaki bölümde açıklanan öncelik sırasına sahiptir ve tümünün aritmetik, birleştirme ve karşılaştırma işleçlerinden daha düşük önceliği vardır.
+- The logical and bitwise operators have the order of precedence described in the following section, and all have lower precedence than the arithmetic, concatenation, and comparison operators.
 
-- Eşit önceliğe sahip işleçler, ifadede göründükleri sırada soldan sağa değerlendirilir.
+- Operators with equal precedence are evaluated left to right in the order in which they appear in the expression.
 
-## <a name="precedence-order"></a>Öncelik sırası
- İşleçler aşağıdaki öncelik sırasına göre değerlendirilir:
+## <a name="precedence-order"></a>Precedence Order
+ Operators are evaluated in the following order of precedence:
 
 ### <a name="await-operator"></a>Await İşleci
  Await
 
-### <a name="arithmetic-and-concatenation-operators"></a>Aritmetik ve birleştirme Işleçleri
- Üs (`^`)
+### <a name="arithmetic-and-concatenation-operators"></a>Arithmetic and Concatenation Operators
+ Exponentiation (`^`)
 
- Birli kimlik ve olumsuzlama`+`( `–`,)
+ Unary identity and negation (`+`, `–`)
 
- Çarpma ve kayan nokta bölmesi (`*`,) `/`
+ Multiplication and floating-point division (`*`, `/`)
 
- Tamsayı bölümü (`\`)
+ Integer division (`\`)
 
- Modüler aritmetik (`Mod`)
+ Modular arithmetic (`Mod`)
 
- Toplama ve çıkarma (`+`, `–`)
+ Addition and subtraction (`+`, `–`)
 
- Dize birleştirme (`&`)
+ String concatenation (`&`)
 
- Aritmetik bit kaydırma (`<<`, `>>`)
+ Arithmetic bit shift (`<<`, `>>`)
 
 ### <a name="comparison-operators"></a>Karşılaştırma İşleçleri
- Tüm karşılaştırma işleçleri (`=`, `<>`, `<` `<=`,, `>`, ,,`Is`,, .`TypeOf`.. `IsNot` `>=` `Like` `Is`)
+ All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)
 
 ### <a name="logical-and-bitwise-operators"></a>Mantıksal ve Bit Düzeyinde İşleçler
- Değilleme`Not`()
+ Negation (`Not`)
 
- Birlikte (`And`, `AndAlso`)
+ Conjunction (`And`, `AndAlso`)
 
- Kapsamlı ayırıcı (`Or`, `OrElse`)
+ Inclusive disjunction (`Or`, `OrElse`)
 
- Dışlamalı ayırıcı (`Xor`)
+ Exclusive disjunction (`Xor`)
 
 ### <a name="comments"></a>Açıklamalar
- `=` İşleci atama işleci değil yalnızca eşitlik karşılaştırma işleçtir.
+ The `=` operator is only the equality comparison operator, not the assignment operator.
 
- Dize birleştirme işleci (`&`) bir aritmetik işleç değil, ancak önceliğe göre Aritmetik işleçlerle gruplandırılır.
+ The string concatenation operator (`&`) is not an arithmetic operator, but in precedence it is grouped with the arithmetic operators.
 
- `Is` Ve`IsNot` işleçleri nesne başvurusu karşılaştırma işleçleridir. İki nesnenin değerlerini karşılaştırmazlar; yalnızca iki nesne değişkeninin aynı nesne örneğine başvurmadığını belirlemesini denetler.
+ The `Is` and `IsNot` operators are object reference comparison operators. They do not compare the values of two objects; they check only to determine whether two object variables refer to the same object instance.
 
 ## <a name="associativity"></a>İlişkilendirilebilirlik
- Eşit önceliğe sahip işleçler bir ifadede birlikte görüntülendiğinde, örneğin çarpma ve bölme gibi, derleyici, her işlemi soldan sağa karşılaştığı şekilde değerlendirir. Aşağıdaki örnek bunu göstermektedir.
+ When operators of equal precedence appear together in an expression, for example multiplication and division, the compiler evaluates each operation as it encounters it from left to right. Aşağıdaki örnek bunu göstermektedir.
 
 ```vb
 Dim n1 As Integer = 96 / 8 / 4
@@ -86,12 +86,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)
 ```
 
- İlk ifade, Bölüm 96/8 ' i (12 ' de sonuç olarak) değerlendirir ve sonra Bölüm 12/4 ' dir ve bu da üç ile sonuçlanır. Derleyici işlemleri `n1` soldan sağa değerlendirdiği için, bu sıra için `n2`açıkça belirtildiği zaman değerlendirme aynı olur. Her `n1` ikisi `n2` de üç ile oluşur. Bunun aksine `n3` 48 sonucu vardır, çünkü parantezler derleyicinin önce 8/4 ' i değerlendirmesini zorlar.
+ The first expression evaluates the division 96 / 8 (which results in 12) and then the division 12 / 4, which results in three. Because the compiler evaluates the operations for `n1` from left to right, the evaluation is the same when that order is explicitly indicated for `n2`. Both `n1` and `n2` have a result of three. By contrast, `n3` has a result of 48, because the parentheses force the compiler to evaluate 8 / 4 first.
 
- Bu davranış nedeniyle, operatörlerin Visual Basic olarak *sola ilişkilendirilebilir* olduğu söylenir.
+ Because of this behavior, operators are said to be *left associative* in Visual Basic.
 
-## <a name="overriding-precedence-and-associativity"></a>Öncelik ve birleşim özelliklerini geçersiz kılma
- Bir ifadenin bazı bölümlerinin diğerlerinden önce değerlendirilmesini zorlamak için parantezleri kullanabilirsiniz. Bu, hem öncelik sırasını hem de sola ilişkilendirilebilirliği geçersiz kılabilir. Visual Basic, dış öğelerden önce parantez içine alınmış işlemleri her zaman gerçekleştirir. Bununla birlikte, parantez içinde parantez kullanmadığınız müddetçe, parantez içinde normal öncelik ve ilişkilendirilebilirlik sağlar. Aşağıdaki örnek bunu göstermektedir.
+## <a name="overriding-precedence-and-associativity"></a>Overriding Precedence and Associativity
+ You can use parentheses to force some parts of an expression to be evaluated before others. This can override both the order of precedence and the left associativity. Visual Basic always performs operations that are enclosed in parentheses before those outside. However, within parentheses, it maintains ordinary precedence and associativity, unless you use parentheses within the parentheses. Aşağıdaki örnek bunu göstermektedir.
 
 ```vb
 Dim a, b, c, d, e, f, g As Double

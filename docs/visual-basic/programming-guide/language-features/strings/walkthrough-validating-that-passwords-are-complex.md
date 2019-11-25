@@ -1,22 +1,22 @@
 ---
-title: Parolalar karmaşıklık (Visual Basic) doğrulanıyor
+title: Validating Passwords Complexity
 ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: ff0ac933be917b5604966240ff1fbd331a34ba77
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e8697379a6fbb5cc15b60291e5b822897c2c013
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663623"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348323"
 ---
-# <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>İzlenecek yol: Parolaların karmaşık olduğunu doğrulama (Visual Basic)
-Bu yöntem, bazı güçlü parola özelliklerini denetler ve bir dize parametresi başarısız parola denetleyen hakkında bilgilerle güncelleştirir.  
+# <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>İzlenecek yol: Parolaların Karmaşık Olduğunu Doğrulama (Visual Basic)
+This method checks for some strong-password characteristics and updates a string parameter with information about which checks the password fails.  
   
- Parolalar güvenli bir sistemde bir kullanıcıyı yetkilendirmek için kullanılabilir. Ancak, parola yetkisiz kullanıcıların tahmin zor olması gerekir. Saldırganlar kullanabileceğiniz bir *sözlük saldırıları* tüm bir sözlük (veya birden çok sözlükleri farklı dillerde) bir kelimelerin gezinir ve herhangi bir kelimelerin bir kullanıcının parolasını çalışıp çalışmadığını test programı. Zayıf parolalarda "Yankees'in" veya "Mustang" gibi hızlı bir şekilde tahmin edilebilir. Güçlü parolalar gibi "? 'L1N3vaFiNdMeyeP@sSWerd! ", Tahmin edilebilir çok daha düşüktür. Parola korumalı bir sistem kullanıcıların güçlü parolalar seçtiğinizden emin olun.  
+ Passwords can be used in a secure system to authorize a user. However, the passwords must be difficult for unauthorized users to guess. Attackers can use a *dictionary attack* program, which iterates through all of the words in a dictionary (or multiple dictionaries in different languages) and tests whether any of the words work as a user's password. Weak passwords such as "Yankees" or "Mustang" can be guessed quickly. Stronger passwords, such as "?You'L1N3vaFiNdMeyeP@sSWerd!", are much less likely to be guessed. A password-protected system should ensure that users choose strong passwords.  
   
- Güçlü bir parola (büyük harf, küçük harfler, sayısal ve özel karakterler bir karışımını içeren) karmaşıktır ve bir sözcük değildir. Bu örnek, karmaşıklık doğrulamak nasıl gösterir.  
+ A strong password is complex (containing a mixture of uppercase, lowercase, numeric, and special characters) and is not a word. This example demonstrates how to verify complexity.  
   
 ## <a name="example"></a>Örnek  
   
@@ -24,26 +24,26 @@ Bu yöntem, bazı güçlü parola özelliklerini denetler ve bir dize parametres
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu parolayı içeren dizeyi geçirerek bu yöntemi çağırın.  
+ Call this method by passing the string that contains that password.  
   
- Bu örnek gerektirir:  
+ This example requires:  
   
-- Üye erişimi <xref:System.Text.RegularExpressions> ad alanı. Ekleme bir `Imports` üye adları kodunuzda tamamen niteleyemiyorsanız deyimi. Daha fazla bilgi için [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Access to the members of the <xref:System.Text.RegularExpressions> namespace. Add an `Imports` statement if you are not fully qualifying member names in your code. For more information, see [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Güvenlik  
- Parola ağ üzerinden taşıyorsanız, verileri aktarmak için güvenli bir yöntem kullanmanız gerekir. Daha fazla bilgi için [ASP.NET Web uygulaması güvenliği](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
+ If you're moving the password across a network, you need to use a secure method for transferring data. For more information, see [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
- Doğruluğunu geliştirebilir `ValidatePassword` karmaşıklık denetimleri ekleyerek işlevi:  
+ You can improve the accuracy of the `ValidatePassword` function by adding additional complexity checks:  
   
-- Parola ve onun alt dizeler kullanıcının adını, kullanıcı kimliği ve uygulama tanımlı bir sözlük karşı karşılaştırın. Ayrıca, görsel olarak benzer karakterler karşılaştırmaları yaparken eşdeğer olarak kabul eder. Örneğin, "e" ve "m" harf "1" ve "3" simgeleridir eşdeğer olarak kabul eder.  
+- Compare the password and its substrings against the user's name, user identifier, and an application-defined dictionary. In addition, treat visually similar characters as equivalent when performing the comparisons. For example, treat the letters "l" and "e" as equivalent to the numerals "1" and "3".  
   
-- Yalnızca bir büyük harf karakter varsa, parolanın ilk karakteri olmadığından emin olun.  
+- If there is only one uppercase character, make sure it is not the password's first character.  
   
-- Parola en son iki karakter harf karakterler olduğundan emin olun.  
+- Make sure that the last two characters of the password are letter characters.  
   
-- Klavyenin üst satırdaki tüm sembolleri girilen parolaları izin vermez.  
+- Do not allow passwords in which all the symbols are entered from the keyboard's top row.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Text.RegularExpressions.Regex>
-- [ASP.NET Web uygulaması güvenliği](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))
+- [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))

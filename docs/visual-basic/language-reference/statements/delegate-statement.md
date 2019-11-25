@@ -1,5 +1,5 @@
 ---
-title: Temsilci ekstresi (Visual Basic)
+title: Delegate Deyimi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Delegate
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 4a8260da4d2224551de71fd54f734007c7fa214f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 662d2c3c0767adfe406e0a6f1b1e6dccd704e795
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583451"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354069"
 ---
 # <a name="delegate-statement"></a>Delegate Deyimi
-Bir temsilciyi bildirmek için kullanılır. Temsilci, bir türün `Shared` yöntemine veya bir nesnenin örnek metoduna başvuran bir başvuru türüdür. Bu temsilci sınıfının bir örneğini oluşturmak için eşleşen parametre ve dönüş türleri olan herhangi bir yordam kullanılabilir. Yordam daha sonra temsilci örneği aracılığıyla çağrılabilir.  
+Used to declare a delegate. A delegate is a reference type that refers to a `Shared` method of a type or to an instance method of an object. Any procedure with matching parameter and return types can be used to create an instance of this delegate class. The procedure can then later be invoked by means of the delegate instance.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,49 +28,49 @@ Bir temsilciyi bildirmek için kullanılır. Temsilci, bir türün `Shared` yön
   
 |Terim|Tanım|  
 |---|---|  
-|`attrlist`|İsteğe bağlı. Bu temsilci için uygulanan özniteliklerin listesi. Birden çok öznitelik virgülle ayrılır. [Öznitelik listesini](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraç içine almalısınız ("`<`" ve "`>`").|  
-|`accessmodifier`|İsteğe bağlı. Temsilciye erişebilecek kodu belirtir. Aşağıdakilerden biri olabilir:<br /><br /> - [genel](../../../visual-basic/language-reference/modifiers/public.md). Temsilciyi bildiren öğeye erişebilen tüm kodlar buna erişebilir.<br />-   [korumalı](../../../visual-basic/language-reference/modifiers/protected.md). Yalnızca temsilcinin sınıfı veya türetilmiş bir sınıf içindeki kodlar buna erişebilir.<br />-   [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md). Temsilciye yalnızca aynı derleme içindeki kod erişebilir.<br />[özel](../../../visual-basic/language-reference/modifiers/private.md)- . Yalnızca temsilciyi bildiren öğesi içindeki kod erişebilir.<br /><br /> yalnızca temsilcinin sınıfı, türetilmiş bir sınıf veya aynı derleme içindeki[korunan arkadaş](../../language-reference/modifiers/protected-friend.md) kodu -  temsilciye erişebilir. <br />yalnızca temsilcinin sınıfı içindeki veya aynı derlemede bulunan türetilmiş bir sınıftaki[özel korumalı](../../language-reference/modifiers/private-protected.md) kod -  temsilciye erişebilir. |  
-|`Shadows`|İsteğe bağlı. Bu temsilcinin, bir temel sınıfta aynı adlı programlama öğesi veya aşırı yüklenmiş öğeler kümesi tarafından yeniden bildirdiğini ve gizlediğini belirtir. Herhangi bir tür tanımlanmış öğeyi başka bir tür ile gölgelendirebilmeniz gerekir.<br /><br /> Gölgelendirilmiş bir öğe, gölgeleme öğesinin erişilemez olması dışında, kendisini gölgelendirilebilen türetilmiş sınıfın içinden kullanılamaz. Örneğin, bir `Private` öğesi bir temel sınıf öğesini göltikten sonra, `Private` öğesine erişim izni olmayan kod bunun yerine temel sınıf öğesine erişir.|  
-|`Sub`|İsteğe bağlı, ancak `Sub` ya da `Function` görünmelidir. Bu yordamı bir değer döndürmeyen `Sub` bir yöntem olarak bildirir.|  
-|`Function`|İsteğe bağlı, ancak `Sub` ya da `Function` görünmelidir. Bu yordamı bir değer döndüren bir temsilci `Function` yordamı olarak bildirir.|  
-|`name`|Gerekli. Temsilci türünün adı; Standart değişken adlandırma kurallarını izler.|  
-|`typeparamlist`|İsteğe bağlı. Bu temsilcinin tür parametrelerinin listesi. Birden çok tür parametresi virgülle ayrılır. İsteğe bağlı olarak, her tür parametresi `In` ve `Out` genel değiştiriciler kullanılarak değişken olarak bildirilemez. [Tür listesini](../../../visual-basic/language-reference/statements/type-list.md) parantez içine almalısınız ve bunu `Of` anahtar sözcüğüyle birlikte vermelisiniz.|  
-|`parameterlist`|İsteğe bağlı. Çağrıldığında yordama geçirilen parametrelerin listesi. [Parametre listesini](../../../visual-basic/language-reference/statements/parameter-list.md) parantez içine almalısınız.|  
-|`type`|Bir `Function` yordamı belirtirseniz gereklidir. Dönüş değerinin veri türü.|  
+|`attrlist`|İsteğe bağlı. List of attributes that apply to this delegate. Multiple attributes are separated by commas. You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").|  
+|`accessmodifier`|İsteğe bağlı. Specifies what code can access the delegate. Can be one of the following:<br /><br /> - [Public](../../../visual-basic/language-reference/modifiers/public.md). Any code that can access the element that declares the delegate can access it.<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md). Only code within the delegate's class or a derived class can access it.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Only code within the same assembly can access the delegate.<br />- [Private](../../../visual-basic/language-reference/modifiers/private.md). Only code within the element that declares the delegate can access it.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) Only code within the delegate's class, a derived class, or the same assembly can access the delegate. <br />- [Private Protected](../../language-reference/modifiers/private-protected.md) Only code within the delegate's class or in a derived class in the same assembly can access the delegate. |  
+|`Shadows`|İsteğe bağlı. Indicates that this delegate redeclares and hides an identically named programming element, or set of overloaded elements, in a base class. You can shadow any kind of declared element with any other kind.<br /><br /> A shadowed element is unavailable from within the derived class that shadows it, except from where the shadowing element is inaccessible. For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.|  
+|`Sub`|Optional, but either `Sub` or `Function` must appear. Declares this procedure as a delegate `Sub` procedure that does not return a value.|  
+|`Function`|Optional, but either `Sub` or `Function` must appear. Declares this procedure as a delegate `Function` procedure that returns a value.|  
+|`name`|Gerekli. Name of the delegate type; follows standard variable naming conventions.|  
+|`typeparamlist`|İsteğe bağlı. List of type parameters for this delegate. Multiple type parameters are separated by commas. Optionally, each type parameter can be declared variant by using `In` and `Out` generic modifiers. You must enclose the [Type List](../../../visual-basic/language-reference/statements/type-list.md) in parentheses and introduce it with the `Of` keyword.|  
+|`parameterlist`|İsteğe bağlı. List of parameters that are passed to the procedure when it is called. You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.|  
+|`type`|Required if you specify a `Function` procedure. Data type of the return value.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 ifade, bir temsilci sınıfının parametresini ve dönüş türlerini tanımlar. Bu temsilci sınıfının bir örneğini oluşturmak için, eşleşen parametreleri ve dönüş türlerini içeren herhangi bir yordam kullanılabilir. Daha sonra yordam, temsilcinin `Invoke` yöntemi çağırarak temsilci örneği aracılığıyla çağrılabilir.  
+ The `Delegate` statement defines the parameter and return types of a delegate class. Any procedure with matching parameters and return types can be used to create an instance of this delegate class. The procedure can then later be invoked by means of the delegate instance, by calling the delegate's `Invoke` method.  
   
- Temsilciler ad alanı, modül, sınıf veya yapı düzeyinde bildirilebilecek, ancak bir yordam içinde bildirilemez.  
+ Delegates can be declared at the namespace, module, class, or structure level, but not within a procedure.  
   
- Her temsilci sınıfı, bir nesne yönteminin belirtimini geçen bir oluşturucuyu tanımlar. Bir temsilci oluşturucusuna bağımsız değişken bir yönteme veya bir lambda ifadesine başvuru olmalıdır.  
+ Each delegate class defines a constructor that is passed the specification of an object method. An argument to a delegate constructor must be a reference to a method, or a lambda expression.  
   
- Bir yönteme başvuru belirtmek için aşağıdaki sözdizimini kullanın:  
+ To specify a reference to a method, use the following syntax:  
   
- `AddressOf` [`expression`.] `methodname`  
+ `AddressOf` [`expression`.]`methodname`  
   
- @No__t_0 derleme zamanı türü, imzası temsilci sınıfının imzasıyla eşleşen belirtilen adda bir yöntemi içeren bir sınıfın veya arabirimin adı olmalıdır. @No__t_0, paylaşılan bir yöntem ya da bir örnek yöntemi olabilir. Sınıfının varsayılan yöntemi için bir temsilci oluştursanız bile `methodname` isteğe bağlı değildir.  
+ The compile-time type of the `expression` must be the name of a class or an interface that contains a method of the specified name whose signature matches the signature of the delegate class. The `methodname` can be either a shared method or an instance method. The `methodname` is not optional, even if you create a delegate for the default method of the class.  
   
- Bir lambda ifadesi belirtmek için aşağıdaki sözdizimini kullanın:  
+ To specify a lambda expression, use the following syntax:  
   
- `Function` ([`parm` as `type`, `parm2` as `type2`,...])  `expression`  
+ `Function` ([`parm` As `type`, `parm2` As `type2`, ...]) `expression`  
   
- İşlevin imzası, temsilci türü ile aynı olmalıdır. Lambda ifadeleri hakkında daha fazla bilgi için bkz. [lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ The signature of the function must match that of the delegate type. For more information about lambda expressions, see [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- Temsilciler hakkında daha fazla bilgi için bkz. [Temsilciler](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
+ For more information about delegates, see [Delegates](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, iki sayı üzerinde çalışan ve bir sayı döndüren bir temsilciyi bildirmek için `Delegate` bildirimini kullanır. @No__t_0 yöntemi bu tür bir temsilcinin örneğini alır ve sayı çiftleri üzerinde çalışmak için onu kullanır.  
+ The following example uses the `Delegate` statement to declare a delegate for operating on two numbers and returning a number. The `DelegateTest` method takes an instance of a delegate of this type and uses it to operate on pairs of numbers.  
   
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Durumunu](../../../visual-basic/language-reference/statements/of-clause.md)
+- [Of](../../../visual-basic/language-reference/statements/of-clause.md)
 - [Temsilciler](../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Kovaryans ve Kontravaryans](../../programming-guide/concepts/covariance-contravariance/index.md)
-- ['Ndaki](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
-- [Dışı](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

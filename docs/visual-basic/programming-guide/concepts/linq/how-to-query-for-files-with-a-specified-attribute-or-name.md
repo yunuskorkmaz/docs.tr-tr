@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: Belirli bir öznitelik veya ada (Visual Basic) sahip dosyaları sorgulama'
+title: 'Nasıl Yapılır: Belirli bir Öznitelik veya Ada Sahip Dosyaları Sorgulama'
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 05dfe3e88274efe8d817defcac2f47efe053b12b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 68b8f02e3c7f53092ef91f2b8b96736a644a7fd1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586491"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347696"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Nasıl yapılır: Belirli bir öznitelik veya ada (Visual Basic) sahip dosyaları sorgulama
-Bu örnek nasıl (örneğin, ".txt") belirtilen dosya adı uzantısına sahip tüm dosyaları bulmak belirtilen dizin ağacında gösterir. Ayrıca oluşturma saatini temel alan ağacında ya da yeni veya eski dosyayı iade işlemini de gösterir.  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>How to: Query for Files with a Specified Attribute or Name (Visual Basic)
+This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree. It also shows how to return either the newest or oldest file in the tree based on the creation time.  
   
 ## <a name="example"></a>Örnek  
   
@@ -61,9 +61,9 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
-VB.NET konsol uygulama projesi oluşturmak bir `Imports` System.Linq ad alanı bildirimi.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Objects'in (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

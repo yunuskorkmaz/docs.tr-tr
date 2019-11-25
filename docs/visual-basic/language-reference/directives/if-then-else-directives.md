@@ -1,5 +1,5 @@
 ---
-title: '#If... Sonra... #Else yönergeleri (Visual Basic)'
+title: '#If...Then...#Else Yönergeleri'
 ms.date: 04/11/2018
 f1_keywords:
 - vb.#EndIf
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: aaf5e7dd82cebf734da59e9feb89174705468a4b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 40e93b718241c9819e3c0fd84595e76eb0c86472
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580087"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343821"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else Yönergeleri
 
-Seçili Visual Basic kodu bloklarını koşullu olarak derler.
+Conditionally compiles selected blocks of Visual Basic code.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,26 +47,26 @@ Seçili Visual Basic kodu bloklarını koşullu olarak derler.
 ## <a name="parts"></a>Bölümler
 
 `expression`  
-@No__t_0 ve `#ElseIf` deyimleri için gereklidir, başka bir yerde. Yalnızca bir veya daha fazla koşullu derleyici sabiti, sabit değer ve işleçlerden oluşan, `True` veya `False` değerlendirilen herhangi bir ifade.
+Required for `#If` and `#ElseIf` statements, optional elsewhere. Any expression, consisting exclusively of one or more conditional compiler constants, literals, and operators, that evaluates to `True` or `False`.
 
 `statements`  
-@No__t_0 bildiri bloğu için gerekli, başka bir yerde. İlişkili ifade `True` olarak değerlendirilirse derlenen program satırları veya derleyici yönergeleri Visual Basic.
+Required for `#If` statement block, optional elsewhere. Visual Basic program lines or compiler directives that are compiled if the associated expression evaluates to `True`.
 
 `#End If`  
-@No__t_0 bildiri bloğunu sonlandırır.
+Terminates the `#If` statement block.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yüzeyde, `#If...Then...#Else` yönergelerinin davranışı `If...Then...Else` deyimleriyle aynı şekilde görünür. Ancak, `#If...Then...#Else` yönergeleri derleyicinin derlendiğini değerlendirir, ancak `If...Then...Else` deyimleri çalışma zamanında koşulları değerlendirir.
+On the surface, the behavior of the `#If...Then...#Else` directives appears the same as that of the `If...Then...Else` statements. However, the `#If...Then...#Else` directives evaluate what is compiled by the compiler, whereas the `If...Then...Else` statements evaluate conditions at run time.
 
-Koşullu derleme genellikle farklı platformlar için aynı programı derlemek için kullanılır. Hata ayıklama kodunun yürütülebilir bir dosyada görünmesini engellemek için de kullanılır. Koşullu derleme sırasında dışlanan kod, son yürütülebilir dosyadan tamamen atlandığından, boyut veya performans üzerinde hiçbir etkisi olmaz.
+Conditional compilation is typically used to compile the same program for different platforms. It is also used to prevent debugging code from appearing in an executable file. Code excluded during conditional compilation is completely omitted from the final executable file, so it has no effect on size or performance.
 
-Herhangi bir değerlendirmenin sonucuna bakılmaksızın, tüm ifadeler `Option Compare Binary` kullanılarak değerlendirilir. @No__t_0 deyimi `#If` ve `#ElseIf` deyimlerindeki ifadeleri etkilemez.
+Regardless of the outcome of any evaluation, all expressions are evaluated using `Option Compare Binary`. The `Option Compare` statement does not affect expressions in `#If` and `#ElseIf` statements.
 
 > [!NOTE]
-> @No__t_0, `#Else`, `#ElseIf` ve `#End If` yönergelerinin tek satırlık formu yoktur. Diğer hiçbir kod, yönergelerden biriyle aynı satırda görünemez.
+> No single-line form of the `#If`, `#Else`, `#ElseIf`, and `#End If` directives exists. No other code can appear on the same line as any of the directives.
 
-Koşullu derleme bloğunun içindeki deyimler, tamamlanmış Mantıksal deyimler olmalıdır. Örneğin, yalnızca bir işlevin özniteliklerini koşullu olarak derlenemez, ancak işlevi öznitelikleri ile birlikte koşullu olarak bildirebilirsiniz:
+The statements within a conditional compilation block must be complete logical statements. For example, you cannot conditionally compile only the attributes of a function, but you can conditionally declare the function along with its attributes:
 
 ```vb
 #If DEBUG Then
@@ -80,7 +80,7 @@ Public Function SomeFunction() As String
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, belirli deyimlerin derlenip derlenmeyeceğini anlamak için `#If...Then...#Else` yapısını kullanır.
+This example uses the `#If...Then...#Else` construct to determine whether to compile certain statements.
 
 [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]
 

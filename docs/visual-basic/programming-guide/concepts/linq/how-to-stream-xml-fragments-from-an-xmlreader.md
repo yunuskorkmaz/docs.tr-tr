@@ -1,29 +1,29 @@
 ---
-title: "Nasıl yapılır: bir XmlReader 'dan XML parçalarını akışa alma (Visual Basic)"
+title: 'How to: Stream XML Fragments from an XmlReader'
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-ms.openlocfilehash: 3edb9cbbe9b649a5b4d232a3937e6f322b4a6b7d
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: abefc8c6e75ae41c47135a2e89cdb3be6a8e5cd6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835153"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346219"
 ---
-# <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Nasıl yapılır: bir XmlReader 'dan XML parçalarını akışa alma (Visual Basic)
-Büyük XML dosyalarını işlemek zorunda olduğunuzda, tüm XML ağacının belleğe yüklenmesi mümkün olmayabilir. Bu konuda <xref:System.Xml.XmlReader> kullanılarak parçaların nasıl akışının yapılacağı gösterilmektedir.  
+# <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>How to: Stream XML Fragments from an XmlReader (Visual Basic)
+When you have to process large XML files, it might not be feasible to load the whole XML tree into memory. This topic shows how to stream fragments using an <xref:System.Xml.XmlReader>.  
   
- @No__t-1 nesnelerini okumak için <xref:System.Xml.XmlReader> kullanmanın en etkili yöntemlerinden biri kendi özel eksen yönteminizi yazmaktır. Bir Axis yöntemi genellikle bu konudaki örnekte gösterildiği gibi, <xref:System.Collections.Generic.IEnumerable%601> ' dan <xref:System.Xml.Linq.XElement> gibi bir koleksiyon döndürür. Özel eksen yönteminde, <xref:System.Xml.Linq.XNode.ReadFrom%2A> yöntemini çağırarak XML parçasını oluşturduktan sonra, `yield return` kullanarak koleksiyonu döndürün. Bu, özel eksen yönteminiz için ertelenmiş yürütme semantiğini sağlar.  
+ One of the most effective ways to use an <xref:System.Xml.XmlReader> to read <xref:System.Xml.Linq.XElement> objects is to write your own custom axis method. An axis method typically returns a collection such as <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, as shown in the example in this topic. In the custom axis method, after you create the XML fragment by calling the <xref:System.Xml.Linq.XNode.ReadFrom%2A> method, return the collection using `yield return`. This provides deferred execution semantics to your custom axis method.  
   
- @No__t-0 nesnesinden bir XML ağacı oluşturduğunuzda, <xref:System.Xml.XmlReader> ' in bir öğe üzerinde konumlandırılması gerekir. @No__t-0 yöntemi, öğenin kapanış etiketini okuuncaya kadar döndürmez.  
+ When you create an XML tree from an <xref:System.Xml.XmlReader> object, the <xref:System.Xml.XmlReader> must be positioned on an element. The <xref:System.Xml.Linq.XNode.ReadFrom%2A> method does not return until it has read the close tag of the element.  
   
- Kısmi bir ağaç oluşturmak istiyorsanız, <xref:System.Xml.XmlReader> ' ı örnekleyebilirsiniz, okuyucuyu <xref:System.Xml.Linq.XElement> ağacına dönüştürmek istediğiniz düğüme konumlandırabilirsiniz ve sonra <xref:System.Xml.Linq.XElement> nesnesini oluşturabilirsiniz.  
+ If you want to create a partial tree, you can instantiate an <xref:System.Xml.XmlReader>, position the reader on the node that you want to convert to an <xref:System.Xml.Linq.XElement> tree, and then create the <xref:System.Xml.Linq.XElement> object.  
   
- [Nasıl yapılır: başlık bilgilerine erişimi olan XML parçalarını akışa alma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) , daha karmaşık bir belgeyi akışa alma hakkında bilgi ve bir örnek içerir.  
+ The topic [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) contains information and an example on how to stream a more complex document.  
   
- [Nasıl yapılır: büyük XML belgelerinin (Visual Basic) akış dönüşümünü gerçekleştirme](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) , küçük bir bellek parmak izini sağlarken çok büyük XML belgelerini dönüştürmek için LINQ to XML kullanmayla bir örnek içerir.  
+ The topic [How to: Perform Streaming Transform of Large XML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contains an example of using LINQ to XML to transform extremely large XML documents while maintaining a small memory footprint.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek bir özel eksen yöntemi oluşturur. @No__t-0 sorgusu kullanarak sorgulayabilirsiniz. @No__t-0 özel eksen yöntemi, yinelenen bir `Child` öğesi olan bir belgeyi okumak için özel olarak tasarlanan bir yöntemdir.  
+ This example creates a custom axis method. You can query it by using a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. The custom axis method, `StreamRootChildDoc`, is a method that is designed specifically to read a document that has a repeating `Child` element.  
   
 ```vb  
 Module Module1  
@@ -136,16 +136,16 @@ Public Class StreamChildEnumerator
 End Class  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```console  
 bbb  
 ccc  
 ```  
   
- Bu örnekte, kaynak belge çok küçüktür. Ancak, milyonlarca `Child` öğesi olsa bile, bu örnekte küçük bir bellek ayak izine sahip olmaya devam edersiniz.  
+ In this example, the source document is very small. However, even if there were millions of `Child` elements, this example would still have a small memory footprint.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Visual Basic 'te IEnumerable (Of T) uygulama](../../../../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)
-- [XML 'yi ayrıştırma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Walkthrough: Implementing IEnumerable(Of T) in Visual Basic](../../../../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)
+- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

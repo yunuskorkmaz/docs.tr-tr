@@ -1,62 +1,62 @@
 ---
-title: Gölgeleme ve Geçersiz Kılma Arasındaki Farklar (Visual Basic)
+title: Gölgeleme ve Geçersiz Kılma Arasındaki Farklar
 ms.date: 07/20/2015
 helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: 8fcf43040e9cbbcb2a59b1e1cf8c1f58951d5d87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d1ebdcd0a23dff69a7acca22268c03e30ec06d9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610470"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345410"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Gölgeleme ve Geçersiz Kılma Arasındaki Farklar (Visual Basic)
-Bir temel sınıftan devralınan bir sınıf tanımladığınızda, bazen bir veya daha fazla türetilmiş sınıf içinde temel sınıf öğe yeniden tanımlamak istersiniz. Gölgeleme ve geçersiz kılma ikisi de bu amaç için olan.  
+When you define a class that inherits from a base class, you sometimes want to redefine one or more of the base class elements in the derived class. Shadowing and overriding are both available for this purpose.  
   
 ## <a name="comparison"></a>Karşılaştırma  
- Gölgeleme ve geçersiz kılma her ikisi de bir temel sınıftan türetilmiş bir sınıf devralır ve her ikisini de diğerine ile bildirilen bir öğe yeniden kullanılır. Ancak, ikisi arasındaki önemli farklar vardır.  
+ Shadowing and overriding are both used when a derived class inherits from a base class, and both redefine one declared element with another. But there are significant differences between the two.  
   
- Aşağıdaki tabloda, geçersiz kılma ile gölgeleme karşılaştırır.  
+ The following table compares shadowing with overriding.  
   
 ||||  
 |---|---|---|  
-|Karşılaştırma noktası|Gölge Kullanım|Geçersiz kılma|  
-|Amaç|Türetilen bir sınıfta zaten tanımlanmış bir üye tanıtan sonraki bir temel sınıf değişikliği karşı korur|Bir yordam veya özellik ile aynı çağrı sırası farklı uygulamalarını tanımlayarak çok biçimlilik başarır<sup>1</sup>|  
-|Yeniden tanımlanan öğe|Herhangi bir öğe türü bildirilen|Yalnızca bir yordam (`Function`, `Sub`, veya `Operator`) veya özellik|  
-|Öğe yeniden tanımlama|Herhangi bir öğe türü bildirilen|Yalnızca bir yordam veya özellik ile aynı çağrı sırası<sup>1</sup>|  
-|Erişim düzeyini öğesi yeniden tanımlama|Herhangi bir erişim düzeyi|Geçersiz kılınan öğe erişim düzeyi değiştirilemez|  
-|Okunabilirlik ve yazılabilirlik öğesini tanımlayarak|Herhangi bir birleşimi|Okunabilirlik veya geçersiz kılınan özelliğin yazılabilirlik değiştiremezsiniz|  
-|Yeniden tanımlama üzerinden denetleme|Temel sınıf öğesi uygulayabilir veya gölgeleme engelle|Temel sınıf öğesi belirtebilirsiniz `MustOverride`, `NotOverridable`, veya `Overridable`|  
-|Anahtar sözcüğü kullanım|`Shadows` türetilen sınıfta önerilir; `Shadows` ne kabul `Shadows` ya da `Overrides` belirtilen<sup>2</sup>|`Overridable` veya `MustOverride` temel sınıfta; gerekli `Overrides` türetilen sınıfta gerekli|  
-|Öğesi, türetilmiş bir sınıftan türetilen sınıflar tarafından tanımlayarak, devralma|Öğe gölgeleme tarafından devralınan sınıflar;'daha fazla türetilmiş Gölgeli öğe gizlenmiş<sup>3</sup>|Öğe geçersiz kılma tarafından devralınan sınıflar;'daha fazla türetilmiş Geçersiz kılınan öğe hala geçersiz kılındı|  
+|Point of comparison|Gölge Kullanım|Overriding|  
+|Amaç|Protects against a subsequent base-class modification that introduces a member you have already defined in your derived class|Achieves polymorphism by defining a different implementation of a procedure or property with the same calling sequence<sup>1</sup>|  
+|Redefined element|Any declared element type|Only a procedure (`Function`, `Sub`, or `Operator`) or property|  
+|Redefining element|Any declared element type|Only a procedure or property with the identical calling sequence<sup>1</sup>|  
+|Access level of redefining element|Any access level|Cannot change access level of overridden element|  
+|Readability and writability of redefining element|Any combination|Cannot change readability or writability of overridden property|  
+|Control over redefining|Base class element cannot enforce or prohibit shadowing|Base class element can specify `MustOverride`, `NotOverridable`, or `Overridable`|  
+|Keyword usage|`Shadows` recommended in derived class; `Shadows` assumed if neither `Shadows` nor `Overrides` specified<sup>2</sup>|`Overridable` or `MustOverride` required in base class; `Overrides` required in derived class|  
+|Inheritance of redefining element by classes deriving from your derived class|Shadowing element inherited by further derived classes; shadowed element still hidden<sup>3</sup>|Overriding element inherited by further derived classes; overridden element still overridden|  
   
- <sup>1</sup> *arama sırası* öğe türü oluşur (`Function`, `Sub`, `Operator`, veya `Property`), adı, parametre listesi ve dönüş türü. Bir özellik veya tersine içeren bir yordamı geçersiz kılamaz. Yordamın bir türü geçersiz kılınamaz (`Function`, `Sub`, veya `Operator`) ile başka bir tür.  
+ <sup>1</sup> The *calling sequence* consists of the element type (`Function`, `Sub`, `Operator`, or `Property`), name, parameter list, and return type. You cannot override a procedure with a property, or the other way around. You cannot override one kind of procedure (`Function`, `Sub`, or `Operator`) with another kind.  
   
- <sup>2</sup> ya da belirtmezseniz `Shadows` veya `Overrides`, derleyici kullanmak istediğiniz hangi tür yeniden tanımlama emin olmanıza yardımcı olacak bir uyarı iletisi verir. Uyarıyı yoksay, gölgelendirme mekanizması kullanılır.  
+ <sup>2</sup> If you do not specify either `Shadows` or `Overrides`, the compiler issues a warning message to help you be sure which kind of redefinition you want to use. If you ignore the warning, the shadowing mechanism is used.  
   
- <sup>3</sup> gölgeleme öğe başka bir türetilmiş sınıfta erişilemez durumdaysa gölgeleme devralınmaz. Örneğin, gölgelendirme öğesi olarak bildirirseniz `Private`, özgün öğe gölgeleme öğe yerine, türetilen bir sınıftan türetilen sınıf devralır.  
+ <sup>3</sup> If the shadowing element is inaccessible in a further derived class, shadowing is not inherited. For example, if you declare the shadowing element as `Private`, a class deriving from your derived class inherits the original element instead of the shadowing element.  
   
 ## <a name="guidelines"></a>Kuralları  
- Normalde, aşağıdaki durumlarda geçersiz kılma kullanın:  
+ You normally use overriding in the following cases:  
   
-- Çok biçimli türetilmiş sınıflar tanımlarsınız.  
+- You are defining polymorphic derived classes.  
   
-- Aynı öğe türü ve çağrı sırası zorunlu derleyici yaşama güvenliği kullanmanız gerekir.  
+- You want the safety of having the compiler enforce the identical element type and calling sequence.  
   
- Normalde, aşağıdaki durumlarda gölgeleme kullanın:  
+ You normally use shadowing in the following cases:  
   
-- Temel sınıfınız değiştirilebilir ve sizinki aynı adı kullanarak bir öğe tanımlama beklenir.  
+- You anticipate that your base class might be modified and define an element using the same name as yours.  
   
-- Öğe türü değiştirme veya arama sırası isterler.  
+- You want the freedom of changing the element type or calling sequence.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic'de gölgeleme](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [Nasıl yapılır: Değişkeninizle aynı ada sahip bir değişkeni gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
-- [Nasıl yapılır: Devralınmış değişkeni gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
-- [Nasıl yapılır: Türetilmiş sınıf tarafından gizlenen bir değişkene erişme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Nasıl yapılır: Değişkeninizle Aynı Adı Taşıyan Bir Değişkeni Gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [Nasıl yapılır: Devralınmış Değişkeni Gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
+- [Nasıl yapılır: Türetilmiş Sınıf Tarafından Gizlenen Bir Değişkene Erişme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)

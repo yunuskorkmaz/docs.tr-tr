@@ -1,5 +1,5 @@
 ---
-title: If İşleci (Visual Basic)
+title: If İşleci
 ms.date: 07/20/2015
 f1_keywords:
 - vb.IfOperator
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 483b58dd9c79c716fdc3d272cf699e33dec9c671
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 6d25519dac31dc91f8560fd3252ba3e2622de370
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799017"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331011"
 ---
 # <a name="if-operator-visual-basic"></a>If İşleci (Visual Basic)
 
-İki değerden birini koşullu olarak döndürmek için kısa devre değerlendirmesi kullanır. `If` işleci, üç bağımsız değişkenle veya iki bağımsız değişkenle çağrılabilir.
+Uses short-circuit evaluation to conditionally return one of two values. The `If` operator can be called with three arguments or with two arguments.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,38 +28,38 @@ ms.locfileid: "72799017"
 If( [argument1,] argument2, argument3 )
 ```
 
-## <a name="if-operator-called-with-three-arguments"></a>Eğer işleci üç bağımsız değişkenle çağrılırsa
+## <a name="if-operator-called-with-three-arguments"></a>If operator called with three arguments
 
-`If` üç bağımsız değişken kullanılarak çağrıldığında, ilk bağımsız değişken, `Boolean`olarak yayınlanabileceğiniz bir değer olarak değerlendirilmelidir. Bu `Boolean` değeri, diğer iki bağımsız değişkenin hangisinin değerlendirileceğini ve döndürüldüğünü belirlemektir. Aşağıdaki liste yalnızca `If` işleci üç bağımsız değişken kullanılarak çağrıldığında geçerlidir.
+When `If` is called by using three arguments, the first argument must evaluate to a value that can be cast as a `Boolean`. That `Boolean` value will determine which of the other two arguments is evaluated and returned. The following list applies only when the `If` operator is called by using three arguments.
 
 ### <a name="parts"></a>Bölümler
 
 |Terim|Tanım|
 |---|---|
-|`argument1`|Gerekli. `Boolean`. Değerlendirmek ve döndürmek için diğer bağımsız değişkenlerden hangisinin verileceğini belirler.|
-|`argument2`|Gerekli. `Object`. `argument1` `True`değerlendirilirse, değerlendirilir ve döndürülür.|
-|`argument3`|Gerekli. `Object`. `argument1` `False` değerlendirilirse veya `argument1` [hiçbir şey](../../../visual-basic/language-reference/nothing.md)olarak değerlendirilen [null yapılabilir](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)`Boolean` bir değişken ise, değerlendirilir ve döndürülür.|
+|`argument1`|Gerekli. `Boolean`. Determines which of the other arguments to evaluate and return.|
+|`argument2`|Gerekli. `Object`. Evaluated and returned if `argument1` evaluates to `True`.|
+|`argument3`|Gerekli. `Object`. Evaluated and returned if `argument1` evaluates to `False` or if `argument1` is a [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)`Boolean` variable that evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md).|
 
-Üç bağımsız değişkenle çağrılan `If` işleci, kısa devre değerlendirmesi kullanması dışında `IIf` işlevi gibi çalışır. `IIf` işlev her zaman bağımsız değişkenlerini değerlendirir, ancak üç bağımsız değişkenine sahip bir `If` işleci yalnızca iki tane değerlendirir. İlk `If` bağımsız değişkeni değerlendirilir ve sonuç bir `Boolean` değeri, `True` veya `False`olarak ayarlanır. Değer `True`, `argument2` değerlendirilir ve değeri döndürülür, ancak `argument3` değerlendirilmez. `Boolean` ifadesinin değeri `False`, `argument3` değerlendirilir ve değeri döndürülür, ancak `argument2` değerlendirilmez. Aşağıdaki örneklerde, üç bağımsız değişken kullanıldığında `If` kullanımı gösterilmektedir:
+An `If` operator that is called with three arguments works like an `IIf` function except that it uses short-circuit evaluation. An `IIf` function always evaluates all three of its arguments, whereas an `If` operator that has three arguments evaluates only two of them. The first `If` argument is evaluated and the result is cast as a `Boolean` value, `True` or `False`. If the value is `True`, `argument2` is evaluated and its value is returned, but `argument3` is not evaluated. If the value of the `Boolean` expression is `False`, `argument3` is evaluated and its value is returned, but `argument2` is not evaluated. The following examples illustrate the use of `If` when three arguments are used:
 
 [!code-vb[VbVbalrOperators#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#100)]
 
-Aşağıdaki örnek, kısa devre değerlendirmesinin değerini gösterir. Örnek, `divisor` sıfır olduğu durumlar dışında değişken `divisor` değişken `number` bölmek için iki deneme gösterir. Bu durumda, 0 döndürülmeli ve bir çalışma zamanı hatası sonucunda, Bölüm gerçekleştirmek için bir deneme yapılmamalıdır. `If` ifade kısa devre değerlendirmesi kullandığından, ilk bağımsız değişkenin değerine bağlı olarak ikinci ya da üçüncü bağımsız değişkeni değerlendirir. İlk bağımsız değişken true ise, bölen sıfır değildir ve ikinci bağımsız değişkeni değerlendirmek ve bölme gerçekleştirmek güvenlidir. İlk bağımsız değişken false ise, yalnızca üçüncü bağımsız değişken değerlendirilir ve 0 döndürülür. Bu nedenle, bölen 0 olduğunda, bölme gerçekleştirmek için bir deneme yapılmaz ve hata sonucu yoktur. Ancak, `IIf` kısa devre değerlendirmesi kullanmıyorsa, ilk bağımsız değişken false olduğunda bile ikinci bağımsız değişken değerlendirilir. Bu, çalışma zamanı sıfıra bölme hatasına neden olur.
+The following example illustrates the value of short-circuit evaluation. The example shows two attempts to divide variable `number` by variable `divisor` except when `divisor` is zero. In that case, a 0 should be returned, and no attempt should be made to perform the division because a run-time error would result. Because the `If` expression uses short-circuit evaluation, it evaluates either the second or the third argument, depending on the value of the first argument. If the first argument is true, the divisor is not zero and it is safe to evaluate the second argument and perform the division. If the first argument is false, only the third argument is evaluated and a 0 is returned. Therefore, when the divisor is 0, no attempt is made to perform the division and no error results. However, because `IIf` does not use short-circuit evaluation, the second argument is evaluated even when the first argument is false. This causes a run-time divide-by-zero error.
 
 [!code-vb[VbVbalrOperators#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#101)]
 
-## <a name="if-operator-called-with-two-arguments"></a>Eğer işleci iki bağımsız değişkenle çağrılırsa
+## <a name="if-operator-called-with-two-arguments"></a>If operator called with two arguments
 
-`If` ilk bağımsız değişkeni atlanabilir. Bu, işlecin yalnızca iki bağımsız değişken kullanılarak çağrılmasına olanak sağlar. Aşağıdaki liste yalnızca `If` işleci iki bağımsız değişkenle çağrıldığında geçerlidir.
+The first argument to `If` can be omitted. This enables the operator to be called by using only two arguments. The following list applies only when the `If` operator is called with two arguments.
 
 ### <a name="parts"></a>Bölümler
 
 |Terim|Tanım|
 |---|---|
-|`argument2`|Gerekli. `Object`. Başvuru veya null yapılabilir bir tür olmalıdır. `Nothing`dışında bir şeyi değerlendirirken değerlendirilir ve döndürülür.|
-|`argument3`|Gerekli. `Object`. `argument2` `Nothing`değerlendirilirse, değerlendirilir ve döndürülür.|
+|`argument2`|Gerekli. `Object`. Must be a reference or nullable type. Evaluated and returned when it evaluates to anything other than `Nothing`.|
+|`argument3`|Gerekli. `Object`. Evaluated and returned if `argument2` evaluates to `Nothing`.|
 
-`Boolean` bağımsız değişkeni atlandığında, ilk bağımsız değişken bir başvuru veya null yapılabilir bir tür olmalıdır. İlk bağımsız değişken `Nothing`değerlendirilirse, ikinci bağımsız değişkenin değeri döndürülür. Diğer tüm durumlarda, ilk bağımsız değişkenin değeri döndürülür. Aşağıdaki örnek, bu değerlendirmenin nasıl çalıştığını göstermektedir:
+When the `Boolean` argument is omitted, the first argument must be a reference or nullable type. If the first argument evaluates to `Nothing`, the value of the second argument is returned. In all other cases, the value of the first argument is returned. The following example illustrates how this evaluation works:
 
 [!code-vb[VbVbalrOperators#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#102)]
 

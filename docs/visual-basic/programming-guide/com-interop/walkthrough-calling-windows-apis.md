@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Windows API 'Lerini çağırma (Visual Basic)"
+title: "İzlenecek yol: Windows API'larını Çağırma"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - DLLs, calling
@@ -11,141 +11,141 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 8e6d3e7f84c96d145a48daa27918cbb2cb3b61ac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ec6b8ddc8769fadde52aaebd6ad3701183fac77a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958305"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74338674"
 ---
-# <a name="walkthrough-calling-windows-apis-visual-basic"></a>İzlenecek yol: Windows API 'Lerini çağırma (Visual Basic)
-Windows API 'Leri, Windows işletim sisteminin bir parçası olan dinamik bağlantı kitaplıkları (dll). Bunları kendi kendine eşdeğer prosedürleri yazmak zor olduğunda görevleri gerçekleştirmek için kullanabilirsiniz. Örneğin, Windows, açık ve koyu gölgeler `FlashWindowEx` arasında bir uygulama için başlık çubuğunu yapmanızı sağlayan adlı bir işlev sağlar.  
+# <a name="walkthrough-calling-windows-apis-visual-basic"></a>İzlenecek yol: Windows API'larını Çağırma (Visual Basic)
+Windows APIs are dynamic-link libraries (DLLs) that are part of the Windows operating system. You use them to perform tasks when it is difficult to write equivalent procedures of your own. For example, Windows provides a function named `FlashWindowEx` that lets you make the title bar for an application alternate between light and dark shades.  
   
- Kodunuzda Windows API 'Lerini kullanmanın avantajı, önceden yazılmış ve kullanılması bekleyen çok sayıda faydalı işlev içerdiğinden, geliştirme süresini kaydedebildiğinden. Olumsuz bir deyişle, Windows API 'Lerinin, bir şeyler doğru olduğunda ve bu işlemleri geri almak zor olabilir.  
+ The advantage of using Windows APIs in your code is that they can save development time because they contain dozens of useful functions that are already written and waiting to be used. The disadvantage is that Windows APIs can be difficult to work with and unforgiving when things go wrong.  
   
- Windows API 'Leri, birlikte çalışabilirlik özel kategorisini temsil eder. Windows API 'Leri yönetilen kod kullanmaz, yerleşik tür kitaplıkları yoktur ve Visual Studio ile kullanılandan farklı veri türlerini kullanır. Bu farklılıklar nedeniyle ve Windows API 'Leri COM nesneleri olmadığından, Windows API 'Leri ile birlikte çalışabilirlik ve .NET Framework platform Invoke veya PInvoke kullanılarak gerçekleştirilir. Platform çağırma, yönetilen kodun DLL 'lerde uygulanan yönetilmeyen işlevleri çağırmasına olanak sağlayan bir hizmettir. Daha fazla bilgi için bkz. [YÖNETILMEYEN DLL işlevlerini](../../../framework/interop/consuming-unmanaged-dll-functions.md)kullanma. Visual Basic ' de, `Declare` ifadesini kullanarak veya `DllImport` özniteliğini boş bir yordama uygulayarak, PInvoke kullanabilirsiniz.  
+ Windows APIs represent a special category of interoperability. Windows APIs do not use managed code, do not have built-in type libraries, and use data types that are different than those used with Visual Studio. Because of these differences, and because Windows APIs are not COM objects, interoperability with Windows APIs and the .NET Framework is performed using platform invoke, or PInvoke. Platform invoke is a service that enables managed code to call unmanaged functions implemented in DLLs. For more information, see [Consuming Unmanaged DLL Functions](../../../framework/interop/consuming-unmanaged-dll-functions.md). You can use PInvoke in Visual Basic by using either the `Declare` statement or applying the `DllImport` attribute to an empty procedure.  
   
- Windows API çağrıları geçmişte Visual Basic Programlamanın önemli bir parçasıdır, ancak Visual Basic .NET ile nadiren gerekli değildir. Mümkün olduğunda, Windows API çağrıları yerine görevleri gerçekleştirmek için .NET Framework yönetilen kodu kullanmanız gerekir. Bu izlenecek yol, Windows API 'Lerini kullanmanın gerekli olduğu durumlar hakkında bilgi sağlar.  
+ Windows API calls were an important part of Visual Basic programming in the past, but are seldom necessary with Visual Basic .NET. Whenever possible, you should use managed code from the .NET Framework to perform tasks, instead of Windows API calls. This walkthrough provides information for those situations in which using Windows APIs is necessary.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="api-calls-using-declare"></a>Declare kullanan API çağrıları  
- Windows API 'lerini çağırmak için en yaygın yol, `Declare` ifadesini kullanmaktır.  
+## <a name="api-calls-using-declare"></a>API Calls Using Declare  
+ The most common way to call Windows APIs is by using the `Declare` statement.  
   
-### <a name="to-declare-a-dll-procedure"></a>Bir DLL yordamı bildirmek için  
+### <a name="to-declare-a-dll-procedure"></a>To declare a DLL procedure  
   
-1. Çağırmak istediğiniz işlevin adını, ayrıca bağımsız değişkenlerini, bağımsız değişken türlerini ve dönüş değerini ve onu içeren DLL 'nin adını ve konumunu saptayın.  
+1. Determine the name of the function you want to call, plus its arguments, argument types, and return value, as well as the name and location of the DLL that contains it.  
   
     > [!NOTE]
-    > Windows API 'Leri hakkında tüm bilgiler için, Platform SDK 'Sı Windows API 'sindeki Win32 SDK belgelerine bakın. Windows API 'Lerinin kullandığı sabitler hakkında daha fazla bilgi için Platform SDK 'sına dahil edilen Windows. h gibi üst bilgi dosyalarını inceleyin.  
+    > For complete information about the Windows APIs, see the Win32 SDK documentation in the Platform SDK Windows API. For more information about the constants that Windows APIs use, examine the header files such as Windows.h included with the Platform SDK.  
   
-2. **Dosya** menüsünde **Yeni** ' ye ve ardından **Proje**' ye tıklayarak yeni bir Windows uygulaması projesi açın. **Yeni Proje** iletişim kutusu görünür.  
+2. Open a new Windows Application project by clicking **New** on the **File** menu, and then clicking **Project**. The **New Project** dialog box appears.  
   
-3. Visual Basic proje şablonları listesinden **Windows uygulaması** ' nı seçin. Yeni proje görüntülenir.  
+3. Select **Windows Application** from the list of Visual Basic project templates. The new project is displayed.  
   
-4. Aşağıdaki `Declare` işlevi, dll 'yi kullanmak istediğiniz sınıfa veya modüle ekleyin:  
+4. Add the following `Declare` function either to the class or module in which you want to use the DLL:  
   
      [!code-vb[VbVbalrInterop#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#9)]  
   
-### <a name="parts-of-the-declare-statement"></a>Declare Ifadesinin kısımları  
- Bu `Declare` ifade aşağıdaki öğeleri içerir.  
+### <a name="parts-of-the-declare-statement"></a>Parts of the Declare Statement  
+ The `Declare` statement includes the following elements.  
   
-#### <a name="auto-modifier"></a>Otomatik değiştirici  
- `Auto` Değiştirici, çalışma zamanına, ortak dil çalışma zamanı kurallarına (veya belirtilmişse diğer ad) göre Yöntem adına göre dize dönüştürmesini söyler.  
+#### <a name="auto-modifier"></a>Auto modifier  
+ The `Auto` modifier instructs the runtime to convert the string based on the method name according to common language runtime rules (or alias name if specified).  
   
-#### <a name="lib-and-alias-keywords"></a>Lib ve Alias anahtar sözcükleri  
- `Function` Anahtar sözcüğünü izleyen ad, programınızın içeri aktarılan işleve erişmek için kullandığı addır. Bu, aradığınız işlevin gerçek adı ile aynı olabilir veya herhangi bir geçerli yordam adı kullanabilir ve sonra, `Alias` Aradığınız işlevin gerçek adını belirtmek için anahtar sözcüğünü kullanabilirsiniz.  
+#### <a name="lib-and-alias-keywords"></a>Lib and Alias keywords  
+ The name following the `Function` keyword is the name your program uses to access the imported function. It can be the same as the real name of the function you are calling, or you can use any valid procedure name and then employ the `Alias` keyword to specify the real name of the function you are calling.  
   
- `Lib` Anahtar sözcüğünü ve ardından, aradığınız işlevi içeren dll 'nin adını ve konumunu belirtin. Windows sistem dizinlerinde bulunan dosyaların yolunu belirtmeniz gerekmez.  
+ Specify the `Lib` keyword, followed by the name and location of the DLL that contains the function you are calling. You do not need to specify the path for files located in the Windows system directories.  
   
- Aradığınız işlevin adı geçerli bir Visual Basic yordam adı değilse veya uygulamanızdaki diğer öğelerin adı ile çakışıyorsa, anahtarsözcüğünükullanın.`Alias` `Alias`çağrılan işlevin doğru adını gösterir.  
+ Use the `Alias` keyword if the name of the function you are calling is not a valid Visual Basic procedure name, or conflicts with the name of other items in your application. `Alias` indicates the true name of the function being called.  
   
-#### <a name="argument-and-data-type-declarations"></a>Bağımsız değişken ve veri türü bildirimleri  
- Bağımsız değişkenleri ve veri türlerini bildirin. Bu bölüm, Windows 'un kullandığı veri türleri Visual Studio veri türlerine karşılık gelmediğinden zor olabilir. Visual Basic, değişkenleri *sıralama*adlı bir işlem olan uyumlu veri türlerine dönüştürerek sizin için çok sayıda iş yapar. <xref:System.Runtime.InteropServices> Ad alanında tanımlanan <xref:System.Runtime.InteropServices.MarshalAsAttribute> özniteliği kullanarak bağımsız değişkenlerin nasıl sıralanarak açıkça kontrol edebilirsiniz.  
+#### <a name="argument-and-data-type-declarations"></a>Argument and Data Type Declarations  
+ Declare the arguments and their data types. This part can be challenging because the data types that Windows uses do not correspond to Visual Studio data types. Visual Basic does a lot of the work for you by converting arguments to compatible data types, a process called *marshaling*. You can explicitly control how arguments are marshaled by using the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute defined in the <xref:System.Runtime.InteropServices> namespace.  
   
 > [!NOTE]
-> Önceki Visual Basic sürümleri, parametreleri `As Any`bildirmenize izin ver, yani herhangi bir veri türü verisinin kullanılabileceği anlamına gelir. Visual Basic, tüm `Declare` deyimler için belirli bir veri türü kullanmanızı gerektirir.  
+> Previous versions of Visual Basic allowed you to declare parameters `As Any`, meaning that data of any data type could be used. Visual Basic requires that you use a specific data type for all `Declare` statements.  
   
-#### <a name="windows-api-constants"></a>Windows API sabitleri  
- Bazı bağımsız değişkenler sabitler birleşimleridir. Örneğin, `MessageBox` Bu izlenecek yolda gösterilen API, ileti kutusunun nasıl görüntülendiğini denetleyen adlı `Typ` bir tamsayı bağımsız değişkenini kabul eder. Winuser. h dosyasındaki `#define` deyimleri inceleyerek, bu sabitlerin sayısal değerini belirleyebilirsiniz. Sayısal değerler genellikle onaltılı olarak gösterilir, bu nedenle bunları eklemek ve Decimal 'a dönüştürmek için bir Hesaplayıcı kullanmak isteyebilirsiniz. Örneğin, ünlem stili `MB_ICONEXCLAMATION` 0x00000030 ve Evet/Hayır stili `MB_YESNO` 0x00000004 olan sabitleri birleştirmek istiyorsanız, sayıları ekleyebilir ve 0x00000034 veya 52 ondalık sonucunu elde edebilirsiniz. Ondalık sonucunu doğrudan kullanabilseniz de, bu değerleri uygulamanızda sabitler olarak bildirmek ve `Or` işlecini kullanarak birleştirmek daha iyidir.  
+#### <a name="windows-api-constants"></a>Windows API Constants  
+ Some arguments are combinations of constants. For example, the `MessageBox` API shown in this walkthrough accepts an integer argument called `Typ` that controls how the message box is displayed. You can determine the numeric value of these constants by examining the `#define` statements in the file WinUser.h. The numeric values are generally shown in hexadecimal, so you may want to use a calculator to add them and convert to decimal. For example, if you want to combine the constants for the exclamation style `MB_ICONEXCLAMATION` 0x00000030 and the Yes/No style `MB_YESNO` 0x00000004, you can add the numbers and get a result of 0x00000034, or 52 decimal. Although you can use the decimal result directly, it is better to declare these values as constants in your application and combine them using the `Or` operator.  
   
-##### <a name="to-declare-constants-for-windows-api-calls"></a>Windows API çağrıları için sabitleri bildirmek için  
+##### <a name="to-declare-constants-for-windows-api-calls"></a>To declare constants for Windows API calls  
   
-1. Aradığınız Windows işlevine yönelik belgelere başvurun. Kullandığı sabitlerin adını ve bu sabitler için sayısal değerleri içeren. h dosyasının adını saptayın.  
+1. Consult the documentation for the Windows function you are calling. Determine the name of the constants it uses and the name of the .h file that contains the numeric values for these constants.  
   
-2. Not Defteri gibi bir metin düzenleyicisini kullanarak üst bilgi (. h) dosyasının içeriğini görüntüleyin ve kullandığınız sabitler ile ilişkili değerleri bulun. Örneğin, `MessageBox` API, ileti kutusunda bir soru `MB_ICONQUESTION` işareti göstermek için sabiti kullanır. Tanımı winuser `MB_ICONQUESTION` . h ' dir ve şu şekilde görünür:  
+2. Use a text editor, such as Notepad, to view the contents of the header (.h) file, and find the values associated with the constants you are using. For example, the `MessageBox` API uses the constant `MB_ICONQUESTION` to show a question mark in the message box. The definition for `MB_ICONQUESTION` is in WinUser.h and appears as follows:  
   
      `#define MB_ICONQUESTION             0x00000020L`  
   
-3. Bu sabitleri `Const` uygulamanız için kullanılabilir hale getirmek için sınıfınıza veya modülünüzü eşdeğer deyimler ekleyin. Örneğin:  
+3. Add equivalent `Const` statements to your class or module to make these constants available to your application. Örneğin:  
   
      [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
-###### <a name="to-call-the-dll-procedure"></a>DLL yordamını çağırmak için  
+###### <a name="to-call-the-dll-procedure"></a>To call the DLL procedure  
   
-1. Projeniz için başlangıç formuna `Button1` adlı bir düğme ekleyin ve sonra kodunu görüntülemek için çift tıklayın. Düğme için olay işleyicisi görüntülenir.  
+1. Add a button named `Button1` to the startup form for your project, and then double-click it to view its code. The event handler for the button is displayed.  
   
-2. Yordamı çağırmak ve uygun `Click` bağımsız değişkenleri sağlamak için, eklediğiniz düğmenin olay işleyicisine kod ekleyin:  
+2. Add code to the `Click` event handler for the button you added, to call the procedure and provide the appropriate arguments:  
   
      [!code-vb[VbVbalrInterop#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#12)]  
   
-3. F5 tuşuna basarak projeyi çalıştırın. İleti kutusu hem **Evet** hem de yanıt düğmesi **olmadan** görüntülenir. Birine tıklayın.  
+3. Run the project by pressing F5. The message box is displayed with both **Yes** and **No** response buttons. Click either one.  
   
-#### <a name="data-marshaling"></a>Veri sıralama  
- Visual Basic, Windows API çağrıları için parametrelerin veri türlerini ve dönüş değerlerini otomatik olarak dönüştürür, ancak bir API 'nin beklediği `MarshalAs` yönetilmeyen veri türlerini açıkça belirtmek için özniteliğini kullanabilirsiniz. Birlikte çalışabilirlik sıralaması hakkında daha fazla bilgi için bkz. [Interop Marshal](../../../framework/interop/interop-marshaling.md).  
+#### <a name="data-marshaling"></a>Data Marshaling  
+ Visual Basic automatically converts the data types of parameters and return values for Windows API calls, but you can use the `MarshalAs` attribute to explicitly specify unmanaged data types that an API expects. For more information about interop marshaling, see [Interop Marshaling](../../../framework/interop/interop-marshaling.md).  
   
-##### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>Bir API çağrısında Declare ve MarshalAs kullanmak için  
+##### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>To use Declare and MarshalAs in an API call  
   
-1. Çağırmak istediğiniz işlevin adını, ayrıca bağımsız değişkenlerini, veri türlerini ve dönüş değerini saptayın.  
+1. Determine the name of the function you want to call, plus its arguments, data types, and return value.  
   
-2. `MarshalAs` Özniteliğe erişimi basitleştirmek için, aşağıdaki örnekte olduğu gibi `Imports` sınıf veya modül için kodun en üstüne bir ifade ekleyin:  
+2. To simplify access to the `MarshalAs` attribute, add an `Imports` statement to the top of the code for the class or module, as in the following example:  
   
      [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
-3. İçeri aktarılan işlev için, kullandığınız sınıfa veya modüle bir işlev prototipi ekleyin ve `MarshalAs` özniteliği parametrelere veya dönüş değerine uygulayın. Aşağıdaki örnekte, türü `void*` bekleyen bir API çağrısı şöyle `AsAny`sıralanır:  
+3. Add a function prototype for the imported function to the class or module you are using, and apply the `MarshalAs` attribute to the parameters or return value. In the following example, an API call that expects the type `void*` is marshaled as `AsAny`:  
   
      [!code-vb[VbVbalrInterop#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#14)]  
   
-## <a name="api-calls-using-dllimport"></a>DllImport kullanan API çağrıları  
- Özniteliği `DllImport` , dll 'lerdeki işlevleri tür kitaplıkları olmadan çağırmak için ikinci bir yol sağlar. `DllImport`, bir `Declare` deyimin kullanımı için kabaca eşdeğerdir, ancak işlevlerin nasıl çağrıldığı üzerinde daha fazla denetim sağlar.  
+## <a name="api-calls-using-dllimport"></a>API Calls Using DllImport  
+ The `DllImport` attribute provides a second way to call functions in DLLs without type libraries. `DllImport` is roughly equivalent to using a `Declare` statement but provides more control over how functions are called.  
   
- Çağrı paylaşılan ( `DllImport` bazen *statik*olarak adlandırılır) yöntemine başvurduğu sürece, çoğu Windows API çağrısı ile kullanabilirsiniz. Bir sınıf örneği gerektiren yöntemleri kullanamazsınız. Deyimlerden farklı `DllImport` olarak `Declare` , çağrılar `MarshalAs` özniteliği kullanamaz.  
+ You can use `DllImport` with most Windows API calls as long as the call refers to a shared (sometimes called *static*) method. You cannot use methods that require an instance of a class. Unlike `Declare` statements, `DllImport` calls cannot use the `MarshalAs` attribute.  
   
-### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>DllImport özniteliğini kullanarak bir Windows API 'SI çağırmak için  
+### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>To call a Windows API using the DllImport attribute  
   
-1. **Dosya** menüsünde **Yeni** ' ye ve ardından **Proje**' ye tıklayarak yeni bir Windows uygulaması projesi açın. **Yeni Proje** iletişim kutusu görünür.  
+1. Open a new Windows Application project by clicking **New** on the **File** menu, and then clicking **Project**. The **New Project** dialog box appears.  
   
-2. Visual Basic proje şablonları listesinden **Windows uygulaması** ' nı seçin. Yeni proje görüntülenir.  
+2. Select **Windows Application** from the list of Visual Basic project templates. The new project is displayed.  
   
-3. Başlangıç formuna adlı `Button2` bir düğme ekleyin.  
+3. Add a button named `Button2` to the startup form.  
   
-4. Form için kod `Button2` görünümünü açmak üzere çift tıklayın.  
+4. Double-click `Button2` to open the code view for the form.  
   
-5. Erişimini `DllImport`basitleştirmek için, başlangıç form sınıfı `Imports` için kodun en üstüne bir ifade ekleyin:  
+5. To simplify access to `DllImport`, add an `Imports` statement to the top of the code for the startup form class:  
   
      [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
-6. Form için olan `End Class` deyimden önceki boş bir işlev bildirin ve işlevi `MoveFile`adlandırın.  
+6. Declare an empty function preceding the `End Class` statement for the form, and name the function `MoveFile`.  
   
-7. İşlev bildirimine ve `Shared` değiştiricilerini uygulayın ve Windows API işlevinin kullandığı bağımsız değişkenlere göreparametreleriayarlayın:`MoveFile` `Public`  
+7. Apply the `Public` and `Shared` modifiers to the function declaration and set parameters for `MoveFile` based on the arguments the Windows API function uses:  
   
      [!code-vb[VbVbalrInterop#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#16)]  
   
-     İşleviniz geçerli bir yordam adına sahip olabilir; `DllImport` öznitelik, dll 'de adı belirtir. Ayrıca parametreler ve dönüş değerleri için birlikte çalışabilirlik sıralamasını işler, böylece API 'nin kullandığı veri türlerine benzer Visual Studio veri türlerini seçebilirsiniz.  
+     Your function can have any valid procedure name; the `DllImport` attribute specifies the name in the DLL. It also handles interoperability marshaling for the parameters and return values, so you can choose Visual Studio data types that are similar to the data types the API uses.  
   
-8. `DllImport` Özniteliği boş işleve uygulayın. İlk parametre, aradığınız işlevi içeren DLL 'nin adı ve konumudur. Windows sistem dizinlerinde bulunan dosyaların yolunu belirtmeniz gerekmez. İkinci parametre, Windows API 'sindeki işlevin adını belirten adlandırılmış bir bağımsız değişkendir. Bu örnekte, `DllImport` özniteliği Kernel32 içinde öğesine `MoveFileW` iletime `MoveFile` çağrısı yapılmasını zorlar. Dosyasını. `MoveFileW` Yöntemi yolu `src` yolundan`dst`bir dosya kopyalar.  
+8. Apply the `DllImport` attribute to the empty function. The first parameter is the name and location of the DLL containing the function you are calling. You do not need to specify the path for files located in the Windows system directories. The second parameter is a named argument that specifies the name of the function in the Windows API. In this example, the `DllImport` attribute forces calls to `MoveFile` to be forwarded to `MoveFileW` in KERNEL32.DLL. The `MoveFileW` method copies a file from the path `src` to the path `dst`.  
   
      [!code-vb[VbVbalrInterop#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#17)]  
   
-9. İşlevi çağırmak için `Button2_Click` olay işleyicisine kod ekleyin:  
+9. Add code to the `Button2_Click` event handler to call the function:  
   
      [!code-vb[VbVbalrInterop#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#18)]  
   
-10. Test. txt adlı bir dosya oluşturun ve sabit sürücünüzdeki C:\Tmp dizinine yerleştirin. Gerekirse, tmp dizinini oluşturun.  
+10. Create a file named Test.txt and place it in the C:\Tmp directory on your hard drive. Create the Tmp directory if necessary.  
   
-11. Uygulamayı başlatmak için F5 tuşuna basın. Ana form görüntülenir.  
+11. Press F5 to start the application. The main form appears.  
   
-12. **Button2**'ye tıklayın. Dosya taşınabilmesi durumunda "dosya başarıyla taşındı" iletisi görüntülenir.  
+12. Click **Button2**. The message "The file was moved successfully" is displayed if the file can be moved.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -153,7 +153,7 @@ Windows API 'Leri, Windows işletim sisteminin bir parçası olan dinamik bağla
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
-- [Diğer ad](../../../visual-basic/language-reference/statements/alias-clause.md)
+- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
 - [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Yönetilen Kodda Prototipler Oluşturma](../../../framework/interop/creating-prototypes-in-managed-code.md)
 - [Geri Çağırma Yöntemi Olarak Bir Temsilci Hazırlama](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)

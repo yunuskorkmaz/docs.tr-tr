@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Visual Basic'te sabit genişlikli metin dosyalarını okuma"
+title: 'How to: read from fixed-width text Files'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fixed-width text file
@@ -8,59 +8,62 @@ helpviewer_keywords:
 - text files [Visual Basic], tasks
 - text files [Visual Basic], reading
 ms.assetid: 99be5692-967a-4e85-993e-cd18139a5a69
-ms.openlocfilehash: 1df1c84e6eaf90b737b51e5512638e4a15de6866
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3cea9bfe2388f0ca510b15cb020f899b81c4603c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623447"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334623"
 ---
-# <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te sabit genişlikli metin dosyalarını okuma
-`TextFieldParser` Nesneyi kolayca ve verimli bir şekilde günlükleri gibi yapılandırılmış metin dosyalarını ayrıştırmak için bir yol sağlar.  
+# <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>How to: read from fixed-width text files in Visual Basic
+
+The `TextFieldParser` object provides a way to easily and efficiently parse structured text files, such as logs.  
   
- `TextFieldType` Özelliği ayrıştırılmış dosya sınırlandırılmış bir dosyanın veya bir sabit genişlikli metin alanlarının sahip olup olmadığını tanımlar. Bir sabit genişlikli metin dosyasında, alanın sonunda bir değişken genişliği olabilir. Alanın sonunda bir değişken genişliği olduğunu belirtmek için bir genişlik daha az veya eşit sıfır olması tanımlayın.  
+ The `TextFieldType` property defines whether the parsed file is a delimited file or one that has fixed-width fields of text. In a fixed-width text file, the field at the end can have a variable width. To specify that the field at the end has a variable width, define it to have a width less than or equal to zero.  
   
-### <a name="to-parse-a-fixed-width-text-file"></a>Sabit genişlikte metin dosyası ayrıştırılamıyor  
+### <a name="to-parse-a-fixed-width-text-file"></a>To parse a fixed-width text file  
   
-1. Yeni bir `TextFieldParser`. Aşağıdaki kod oluşturur `TextFieldParser` adlı `Reader` ve dosyayı açar `test.log`.  
+1. Create a new `TextFieldParser`. The following code creates the `TextFieldParser` named `Reader` and opens the file `test.log`.  
   
      [!code-vb[VbFileIORead#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#9)]  
   
-2. Tanımlama `TextFieldType` özelliği olarak `FixedWidth`, genişliği tanımlama ve biçimlendirin. Aşağıdaki kod, metin sütunlarını tanımlar; ilk 5 karakterini geniş, ikinci 10, üçüncü 11 ve dördüncü değişken genişliği.  
+2. Define the `TextFieldType` property as `FixedWidth`, defining the width and format. The following code defines the columns of text; the first is 5 characters wide, the second 10, the third 11, and the fourth is of variable width.  
   
      [!code-vb[VbFileIORead#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#10)]  
   
-3. Dosya alanları döngü. Satırları bozuk, bir hata rapor ve ayrıştırma devam edin.  
+3. Loop through the fields in the file. If any lines are corrupted, report an error and continue parsing.  
   
      [!code-vb[VbFileIORead#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#11)]  
   
-4. Kapat `While` ve `Using` ile engeller `End While` ve `End Using`.  
+4. Close the `While` and `Using` blocks with `End While` and `End Using`.  
   
      [!code-vb[VbFileIORead#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte dosyadan okur `test.log`.  
+
+ This example reads from the file `test.log`.  
   
  [!code-vb[VbFileIORead#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#13)]  
   
-## <a name="robust-programming"></a>Güçlü programlama  
+## <a name="robust-programming"></a>Robust programming  
+
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Belirtilen biçimi kullanarak bir satır ayrıştırılamıyor (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). Özel durum iletisi satırı belirtir. özel durum neden, while <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> özelliği satırda bulunan metin atanır.  
+- A row cannot be parsed using the specified format (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). The exception message specifies the line causing the exception, while the <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> property is assigned to the text contained in the line.  
   
-- Belirtilen dosya yok (<xref:System.IO.FileNotFoundException>).  
+- The specified file does not exist (<xref:System.IO.FileNotFoundException>).  
   
-- Bir kısmi güven durum kullanıcının dosyaya erişmek için yeterli izinleri yok. (<xref:System.Security.SecurityException>).  
+- A partial-trust situation in which the user does not have sufficient permissions to access the file. (<xref:System.Security.SecurityException>).  
   
-- Yol çok uzun (<xref:System.IO.PathTooLongException>).  
+- The path is too long (<xref:System.IO.PathTooLongException>).  
   
-- Kullanıcının dosyaya erişmek için yeterli izinlere sahip değil (<xref:System.UnauthorizedAccessException>).  
+- The user does not have sufficient permissions to access the file (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
-- [Nasıl yapılır: Virgülle ayrılmış metin dosyalarından okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [Nasıl yapılır: Birden çok biçimli metin dosyalarını okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
+- [Nasıl Yapılır: Virgülle Ayrılmış Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
+- [Nasıl Yapılır: Birden Çok Biçimli Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
 - [TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
-- [İzlenecek yol: Dosyaları ve dizinleri Visual Basic'te düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
-- [Sorun giderme: Okuma ve dosyalara metin yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Walkthrough: Manipulating Files and Directories in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
+- [Sorun Giderme: Metin Dosyalarını Okuma ve Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

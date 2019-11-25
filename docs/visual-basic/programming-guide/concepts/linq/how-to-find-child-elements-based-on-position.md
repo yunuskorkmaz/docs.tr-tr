@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: konuma göre alt öğeleri bulma (XPath-LINQ to XML) (Visual Basic)'
+title: 'How to: Find Child Elements Based on Position (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
-ms.openlocfilehash: 11a9fdd7ed8565c38b0527d266af75b8fb611a20
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: c3062963c6144dfafed8b49410208f480c273ec9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249701"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349077"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: konuma göre alt öğeleri bulma (XPath-LINQ to XML) (Visual Basic)
-Bazen, konumlarına göre öğeleri bulmak isteyebilirsiniz. İkinci öğeyi bulmak isteyebilirsiniz veya beşinci öğe aracılığıyla üçüncü öğeyi bulmak isteyebilirsiniz.  
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>How to: Find Child Elements Based on Position (XPath-LINQ to XML) (Visual Basic)
+Sometimes you want to find elements based on their position. You might want to find the second element, or you might want to find the third through the fifth element.  
   
- XPath ifadesi:  
+ The XPath expression is:  
   
  `Test[position() >= 2 and position() <= 4]`  
   
- Bu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgusunu geç bir şekilde yazmak için iki yaklaşım vardır. @No__t-0 ve <xref:System.Linq.Enumerable.Take%2A> işleçlerini kullanabilir veya bir dizini alan <xref:System.Linq.Enumerable.Where%2A> aşırı yüklemesini kullanabilirsiniz. @No__t-0 aşırı yüklemesini kullandığınızda iki bağımsız değişken alan bir lambda ifadesi kullanırsınız. Aşağıdaki örnek, konum temelinde seçim yapmak için her iki yöntemi gösterir.  
+ There are two approaches to writing this [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query in a lazy way. You can use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> operators, or you can use the <xref:System.Linq.Enumerable.Where%2A> overload that takes an index. When you use the <xref:System.Linq.Enumerable.Where%2A> overload, you use a lambda expression that takes two arguments. The following example shows both methods of selecting based on position.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, dördüncü `Test` öğesi ile ikincisini bulur. Sonuç, öğelerin bir koleksiyonudur.  
+ This example finds the second through the fourth `Test` element. The result is a collection of elements.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: test yapılandırması (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim testCfg As XElement = XElement.Load("TestConfig.xml")  
@@ -54,7 +54,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```console  
 Results are identical  
@@ -80,4 +80,4 @@ Results are identical
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XPath kullanıcıları için LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

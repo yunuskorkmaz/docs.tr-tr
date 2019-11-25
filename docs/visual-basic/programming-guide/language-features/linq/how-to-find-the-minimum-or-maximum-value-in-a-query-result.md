@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: LINQ (Visual Basic) kullanarak bir sorgu sonucunda en düşük ve en fazla değeri bulma'
+title: 'How to: Find the Minimum or Maximum Value in a Query Result by Using LINQ'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - max operator [LINQ in Visual Basic]
@@ -14,67 +14,67 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-ms.openlocfilehash: af5f4bf829664057c40004a842df95d927cc5d71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: bddb90baa0b01fd9d724583b472af9f9fa7569e5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337480"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344974"
 ---
-# <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>Nasıl yapılır: LINQ (Visual Basic) kullanarak bir sorgu sonucunda en düşük ve en fazla değeri bulma
-Dil ile tümleşik sorgu (LINQ), Veritabanı bilgilerine erişmek ve sorguları yürütmek kolaylaştırır.  
+# <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>Nasıl yapılır: LINQ Kullanarak Bir Sorgu Sonucunda En Düşük ve En Fazla Değeri Bulma (Visual Basic)
+Language-Integrated Query (LINQ) makes it easy to access database information and execute queries.  
   
- Aşağıdaki örnek, bir SQL Server veritabanında sorgu gerçekleştiren yeni bir uygulama oluşturma işlemi gösterilmektedir. Örnek sonuçlar için minimum ve maksimum değerleri kullanarak belirler `Aggregate` ve `Group By` yan tümceleri. Daha fazla bilgi için [Aggregate tümcesi](../../../../visual-basic/language-reference/queries/aggregate-clause.md) ve [Group yan tümcesi tarafından](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
+ The following example shows how to create a new application that performs queries against a SQL Server database. The sample determines the minimum and maximum values for the results by using the `Aggregate` and `Group By` clauses. For more information, see [Aggregate Clause](../../../../visual-basic/language-reference/queries/aggregate-clause.md) and [Group By Clause](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
- Bu konudaki örnekler, Northwind örnek veritabanını kullanır. Geliştirme bilgisayarınızda bu veritabanı yoksa Microsoft Download Center'dan gelen indirebilirsiniz. Yönergeler için [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-connection-to-a-database"></a>Bir veritabanına bir bağlantı oluşturmak için  
+### <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database  
   
-1. Visual Studio'da açın **Sunucu Gezgini**/**veritabanı Gezgini** tıklayarak **Sunucu Gezgini**/**veritabanı Explorer** üzerinde **görünümü** menüsü.  
+1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking **Server Explorer**/**Database Explorer** on the **View** menu.  
   
-2. Sağ **veri bağlantıları** içinde **Sunucu Gezgini**/**veritabanı Gezgini** ve ardından **Bağlantı Ekle**.  
+2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer** and then click **Add Connection**.  
   
-3. Northwind örnek veritabanıyla kurulan geçerli bir bağlantı belirtin.  
+3. Specify a valid connection to the Northwind sample database.  
   
-### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>LINQ to SQL dosyası içeren bir proje eklemek için  
+### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>To add a project that contains a LINQ to SQL file  
   
-1. Visual Studio'da üzerinde **dosya** menüsünde **yeni** ve ardından **proje**. Visual Basic seçin **Windows Forms uygulaması** proje türü.  
+1. In Visual Studio, on the **File** menu, point to **New** and then click **Project**. Select Visual Basic **Windows Forms Application** as the project type.  
   
-2. Üzerinde **proje** menüsünü tıklatın **Yeni Öğe Ekle**. Seçin **LINQ to SQL sınıfları** öğe şablonu.  
+2. On the **Project** menu, click **Add New Item**. Select the **LINQ to SQL Classes** item template.  
   
-3. Dosyayı `northwind.dbml` olarak adlandırın. **Ekle**'yi tıklatın. Object Relational Designer (O/R Tasarımcısı) için northwind.dbml dosyası açılır.  
+3. Name the file `northwind.dbml`. **Ekle**'yi tıklatın. The Object Relational Designer (O/R Designer) is opened for the northwind.dbml file.  
   
-### <a name="to-add-tables-to-query-to-the-or-designer"></a>O/R Tasarımcısı için sorgulamak için tablo eklemek için  
+### <a name="to-add-tables-to-query-to-the-or-designer"></a>To add tables to query to the O/R Designer  
   
-1. İçinde **Sunucu Gezgini**/**veritabanı Gezgini**, Northwind veritabanına bağlantı genişletin. Genişletin **tabloları** klasör.  
+1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Tables** folder.  
   
-     O/R Tasarımcısı kapattıysanız, daha önce eklediğiniz northwind.dbml dosyasına çift tıklayarak açabilirsiniz.  
+     If you have closed the O/R Designer, you can reopen it by double-clicking the northwind.dbml file that you added earlier.  
   
-2. Müşteriler tablosu tıklayın ve tasarımcının sol bölmeye sürükleyin. Siparişler tablosu tıklayın ve tasarımcının sol bölmeye sürükleyin.  
+2. Click the Customers table and drag it to the left pane of the designer. Click the Orders table and drag it to the left pane of the designer.  
   
-     Tasarımcı yeni oluşturur `Customer` ve `Order` projeniz için nesneleri. Tasarımcı otomatik olarak tablolar arasındaki ilişkileri algılar ve alt ilgili nesnelerin özelliklerini oluşturur dikkat edin. Örneğin, IntelliSense, gösterilir `Customer` nesnesinin bir `Orders` özelliği için tüm siparişleri o müşteri ile ilgili.  
+     The designer creates new `Customer` and `Order` objects for your project. Notice that the designer automatically detects relationships between the tables and creates child properties for related objects. For example, IntelliSense will show that the `Customer` object has an `Orders` property for all orders related to that customer.  
   
-3. Değişikliklerinizi kaydetmek ve Tasarımcısı'nı kapatın.  
+3. Save your changes and close the designer.  
   
-4. Projenizi kaydedin.  
+4. Save your project.  
   
-### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Veritabanını sorgulama ve sonuçları görüntülemek üzere kod eklemek için  
+### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>To add code to query the database and display the results  
   
-1. Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.DataGridView> Form1 projeniz için varsayılan Windows Form denetimi.  
+1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.  
   
-2. Form1 kod eklemek için çift `Load` formun olay.  
+2. Double-click Form1 to add code to the `Load` event of the form.  
   
-3. Tasarımcı tablolar için O/R Tasarımcısı eklendiğinde, eklenen bir <xref:System.Data.Linq.DataContext> projeniz için nesne. Bu nesne, ayrı ayrı nesneleri ve koleksiyonları her tablo için ek olarak bu tablolar erişmek için gereken kodu içerir. <xref:System.Data.Linq.DataContext> Nesne projeniz için .dbml dosyanızın adına bağlı. Bu proje için <xref:System.Data.Linq.DataContext> nesne adlı `northwindDataContext`.  
+3. When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object for your project. This object contains the code that you must have to access those tables, in addition to individual objects and collections for each table. The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.  
   
-     Bir örneği oluşturabilir <xref:System.Data.Linq.DataContext> tabloları, kod ve sorgu O/R tasarımcısı tarafından belirtilen.  
+     You can create an instance of the <xref:System.Data.Linq.DataContext> in your code and query the tables specified by the O/R Designer.  
   
-     Aşağıdaki kodu ekleyin `Load` olay. Bu kod, veri bağlamının özellikleri olarak sunulur ve sonuçlar için minimum ve maksimum değerleri belirler tabloları sorgular. Örnek kullanır kendisinin `Aggregate` tek bir sonuç için sorgu yan tümcesinin ve `Group By` yan tümcesi için ortalama gösterilecek gruplandırılmış sonuçları.  
+     Add the following code to the `Load` event. This code queries the tables that are exposed as properties of your data context and determines the minimum and maximum values for the results. The sample uses he `Aggregate` clause to query for a single result, and the `Group By` clause to show an average for grouped results.  
   
      [!code-vb[VbLINQToSQLHowTos#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form7.vb#14)]  
   
-4. Projenizi çalıştırma ve sonuçları görüntülemek için F5 tuşuna basın.  
+4. Press F5 to run your project and view the results.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

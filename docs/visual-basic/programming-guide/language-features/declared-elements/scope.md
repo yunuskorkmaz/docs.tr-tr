@@ -1,5 +1,5 @@
 ---
-title: Visual Basic'de Kapsam
+title: Kapsam
 ms.date: 07/20/2015
 helpviewer_keywords:
 - module scope [Visual Basic]
@@ -15,63 +15,63 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 7f7e32d6ac838e250c260987d3d5c375f8697c45
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 37fcfa897accb23e9c8c56407ce4ebd956b39c4d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512857"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345283"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic'de Kapsam
 
-Belirtilen bir öğenin *kapsamı* , adını nitelemeden veya bir [içeri aktarmalar Ifadesiyle (.net ad alanı ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)kullanılabilir hale getirmeden başvurabilen tüm kod kümesidir. Bir öğesi aşağıdaki düzeylerin birinde kapsama sahip olabilir:
+The *scope* of a declared element is the set of all code that can refer to it without qualifying its name or making it available through an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). An element can have scope at one of the following levels:
 
 |Düzey|Açıklama|
 |-----------|-----------------|
-|Blok kapsamı|Yalnızca bildirildiği kod bloğu içinde kullanılabilir|
-|Yordam kapsamı|İçinde bildirildiği yordamın içindeki tüm kodlar için kullanılabilir|
-|Modül kapsamı|Bildirildiği modül, sınıf veya yapı içindeki tüm kodlar için kullanılabilir|
-|Ad alanı kapsamı|İçinde bildirildiği ad alanındaki tüm kodlar için kullanılabilir|
+|Block scope|Available only within the code block in which it is declared|
+|Procedure scope|Available to all code within the procedure in which it is declared|
+|Module scope|Available to all code within the module, class, or structure in which it is declared|
+|Namespace scope|Available to all code in the namespace in which it is declared|
 
-Bu kapsam düzeyleri en dar (blok) en geniş (ad alanı) arasında ilerleme gösterir; burada *dar kapsam* , nitelendirme olmadan öğeye başvurabilen en küçük kod kümesidir. Daha fazla bilgi için bu sayfadaki "kapsam düzeyleri" başlığına bakın.
+These levels of scope progress from the narrowest (block) to the widest (namespace), where *narrowest scope* means the smallest set of code that can refer to the element without qualification. For more information, see "Levels of Scope" on this page.
 
-## <a name="specifying-scope-and-defining-variables"></a>Kapsam belirtme ve değişkenleri tanımlama
+## <a name="specifying-scope-and-defining-variables"></a>Specifying Scope and Defining Variables
 
-Bir öğenin kapsamını bildirdiğinizde belirtirsiniz. Kapsam aşağıdaki faktörlere bağlı olabilir:
+You specify the scope of an element when you declare it. The scope can depend on the following factors:
 
-- İçinde öğeyi bildirdiğiniz bölge (blok, yordam, modül, sınıf veya yapı)
+- The region (block, procedure, module, class, or structure) in which you declare the element
 
-- Öğenin bildirimini içeren ad alanı
+- The namespace containing the element's declaration
 
-- Öğesi için bildirdiğiniz erişim düzeyi
+- The access level you declare for the element
 
-Aynı ada ancak farklı kapsama sahip değişkenler tanımladığınızda, bu durum beklenmedik sonuçlara yol açacağından dikkatli olmanız gerekir. Daha fazla bilgi için bkz. [bildirilmemiş öğelere başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+Use care when you define variables with the same name but different scope, because doing so can lead to unexpected results. For more information, see [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 
-## <a name="levels-of-scope"></a>Kapsam düzeyleri
+## <a name="levels-of-scope"></a>Levels of Scope
 
-Bir programlama öğesi, bildirdiğiniz bölgenin tamamında kullanılabilir. Aynı bölgedeki tüm kodlar, adını nitelemeden öğesine başvurabilir.
+A programming element is available throughout the region in which you declare it. All code in the same region can refer to the element without qualifying its name.
 
-### <a name="block-scope"></a>Blok kapsamı
+### <a name="block-scope"></a>Block Scope
 
-Blok, aşağıdaki gibi bildirim deyimlerini başlatma ve sonlandırma içinde yer alan deyimler kümesidir:
+A block is a set of statements enclosed within initiating and terminating declaration statements, such as the following:
 
-- `Do` ve `Loop`
+- `Do` and `Loop`
 
-- `For`[`Each`] ve`Next`
+- `For` [`Each`] and `Next`
 
-- `If` ve `End If`
+- `If` and `End If`
 
-- `Select` ve `End Select`
+- `Select` and `End Select`
 
-- `SyncLock` ve `End SyncLock`
+- `SyncLock` and `End SyncLock`
 
-- `Try` ve `End Try`
+- `Try` and `End Try`
 
-- `While` ve `End While`
+- `While` and `End While`
 
-- `With` ve `End With`
+- `With` and `End With`
 
-Bir blok içinde bir değişken bildirirseniz, bunu yalnızca bu blok içinde kullanabilirsiniz. Aşağıdaki örnekte, `cube` tamsayı değişkeninin kapsamı ve `End If`arasındaki `If` blokdır ve artık yürütme bloğundan dışarı geçtiğinde başvurursunuz `cube` .
+If you declare a variable within a block, you can use it only within that block. In the following example, the scope of the integer variable `cube` is the block between `If` and `End If`, and you can no longer refer to `cube` when execution passes out of the block.
 
 ```vb
 If n < 1291 Then
@@ -81,26 +81,26 @@ End If
 ```
 
 > [!NOTE]
-> Bir değişkenin kapsamı bir blokla sınırlı olsa da, ömrü tamamen yordamın tamamıdır. Yordamı yordam sırasında birden fazla kez girerseniz, her blok değişkeni önceki değerini korur. Böyle bir durumda beklenmedik sonuçlara engel olmak için, bloğun başlangıcında blok değişkenlerini başlatmak uygun değildir.
+> Even if the scope of a variable is limited to a block, its lifetime is still that of the entire procedure. If you enter the block more than once during the procedure, each block variable retains its previous value. To avoid unexpected results in such a case, it is wise to initialize block variables at the beginning of the block.
 
-### <a name="procedure-scope"></a>Yordam kapsamı
+### <a name="procedure-scope"></a>Procedure Scope
 
-Yordam içinde belirtilen bir öğe, bu yordamın dışında kullanılamaz. Yalnızca bildirimi içeren yordam bunu kullanabilir. Bu düzeydeki değişkenler *yerel değişkenler*olarak da bilinir. Onları, [static](../../../../visual-basic/language-reference/modifiers/static.md) anahtar sözcüğüyle veya olmadan [Dim ifadesiyle](../../../../visual-basic/language-reference/statements/dim-statement.md)bildirirsiniz.
+An element declared within a procedure is not available outside that procedure. Only the procedure that contains the declaration can use it. Variables at this level are also known as *local variables*. You declare them with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), with or without the [Static](../../../../visual-basic/language-reference/modifiers/static.md) keyword.
 
-Yordam ve blok kapsamı yakından ilgilidir. Bir yordam içinde bir değişken bildirirseniz, ancak bu yordamın içindeki herhangi bir blok dışında, değişkenini blok kapsamına sahip olarak düşünebilirsiniz; burada blok tüm yordamdır.
+Procedure and block scope are closely related. If you declare a variable inside a procedure but outside any block within that procedure, you can think of the variable as having block scope, where the block is the entire procedure.
 
 > [!NOTE]
-> `Static` Değişkenler olsalar bile tüm yerel öğeler, göründükleri yordama özeldir. Bir yordam içinde [Public](../../../../visual-basic/language-reference/modifiers/public.md) anahtar sözcüğünü kullanarak hiçbir öğe bildiremezsiniz.
+> All local elements, even if they are `Static` variables, are private to the procedure in which they appear. You cannot declare any element using the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword within a procedure.
 
-### <a name="module-scope"></a>Modül kapsamı
+### <a name="module-scope"></a>Module Scope
 
-Kolaylık olması için, tek vadeli *Modül düzeyi* modüller, sınıflar ve yapılar için eşit oranda geçerlidir. Bildirim ifadesini herhangi bir yordamın veya bloğun dışında, ancak modül, sınıf veya yapı içinde yerleştirerek bu düzeydeki öğeleri bildirebilirsiniz.
+For convenience, the single term *module level* applies equally to modules, classes, and structures. You can declare elements at this level by placing the declaration statement outside of any procedure or block but within the module, class, or structure.
 
-Modül düzeyinde bir bildirim yaptığınızda seçtiğiniz erişim düzeyi kapsamı belirler. Modül, sınıf veya yapıyı içeren ad alanı da kapsamı etkiler.
+When you make a declaration at the module level, the access level you choose determines the scope. The namespace that contains the module, class, or structure also affects the scope.
 
-[Özel](../../../../visual-basic/language-reference/modifiers/private.md) erişim düzeyi bildirdiğiniz öğeler, bu modüldeki her yordamda kullanılabilir, ancak farklı bir modüldeki herhangi bir koda uygulanmaz. Modül `Dim` düzeyindeki deyimin `Private` değeri, herhangi bir erişim düzeyi anahtar sözcüğü kullanmıyorsanız varsayılan değerdir. Ancak, `Private` `Dim` bildiriminde anahtar sözcüğünü kullanarak kapsamı ve erişim düzeyini daha belirgin hale getirebilirsiniz.
+Elements for which you declare [Private](../../../../visual-basic/language-reference/modifiers/private.md) access level are available to every procedure in that module, but not to any code in a different module. The `Dim` statement at module level defaults to `Private` if you do not use any access level keywords. However, you can make the scope and access level more obvious by using the `Private` keyword in the `Dim` statement.
 
-Aşağıdaki örnekte, modülünde tanımlanan tüm yordamlar dize değişkenine `strMsg`başvurabilir. İkinci yordam çağrıldığında, dize değişkeninin `strMsg` içeriğini bir iletişim kutusunda görüntüler.
+In the following example, all procedures defined in the module can refer to the string variable `strMsg`. When the second procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.
 
 ```vb
 ' Put the following declaration at module level (not in any procedure).
@@ -115,40 +115,40 @@ Sub usePrivateVariable()
 End Sub
 ```
 
-### <a name="namespace-scope"></a>Ad alanı kapsamı
+### <a name="namespace-scope"></a>Namespace Scope
 
-Bir öğeyi, [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) veya [Public](../../../../visual-basic/language-reference/modifiers/public.md) anahtar sözcüğünü kullanarak modül düzeyinde bildirirseniz, bu, öğenin bildirildiği ad alanı boyunca tüm yordamlarda kullanılabilir hale gelir. Önceki örnekte yapılan aşağıdaki değişiklikle, dize değişkenine `strMsg` , bildiriminin ad alanı içinde herhangi bir yerde kod eklenebilir.
+If you declare an element at module level using the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword, it becomes available to all procedures throughout the namespace in which the element is declared. With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.
 
 ```vb
 ' Include this declaration at module level (not inside any procedure).
 Public strMsg As String
 ```
 
-Ad alanı kapsamı iç içe geçmiş ad alanlarını içerir. Ad alanı içinde bulunan bir öğe, bu ad alanı içinde iç içe yerleştirilmiş herhangi bir ad alanı içinde de kullanılabilir.
+Namespace scope includes nested namespaces. An element available from within a namespace is also available from within any namespace nested inside that namespace.
 
-Projeniz herhangi bir [ad alanı bildirisi](../../../../visual-basic/language-reference/statements/namespace-statement.md)içermiyorsa, projedeki her şey aynı ad alanında bulunur. Bu durumda, ad alanı kapsamı Proje kapsamı olarak düşünülebilir. `Public`bir modül, sınıf veya yapıdaki öğeler, projesine başvuran tüm projeler için de kullanılabilir.
+If your project does not contain any [Namespace Statement](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, everything in the project is in the same namespace. In this case, namespace scope can be thought of as project scope. `Public` elements in a module, class, or structure are also available to any project that references their project.
 
-## <a name="choice-of-scope"></a>Kapsam seçimi
+## <a name="choice-of-scope"></a>Choice of Scope
 
-Bir değişken bildirdiğinizde, kapsamını seçerken aşağıdaki noktaları göz önünde bulundurmanız gerekir.
+When you declare a variable, you should keep in mind the following points when choosing its scope.
 
-### <a name="advantages-of-local-variables"></a>Yerel değişkenlerin avantajları
+### <a name="advantages-of-local-variables"></a>Advantages of Local Variables
 
-Yerel değişkenler, aşağıdaki nedenlerden dolayı her türlü geçici hesaplama için iyi bir seçimdir:
+Local variables are a good choice for any kind of temporary calculation, for the following reasons:
 
-- **Ad çakışması engelleme.** Yerel değişken adları çakışmaya karşı savunmasız değildir. Örneğin, adlı `intTemp`bir değişken içeren birkaç farklı yordam oluşturabilirsiniz. Her biri `intTemp` yerel değişken olarak bildirildiği sürece, her yordam yalnızca kendi `intTemp`sürümünü tanır. Herhangi bir yordam, diğer yordamlardan değişkenleri etkilemeden `intTemp` `intTemp` yerel içindeki değeri değiştirebilir.
+- **Name Conflict Avoidance.** Local variable names are not susceptible to conflict. For example, you can create several different procedures containing a variable called `intTemp`. As long as each `intTemp` is declared as a local variable, each procedure recognizes only its own version of `intTemp`. Any one procedure can alter the value in its local `intTemp` without affecting `intTemp` variables in other procedures.
 
-- **Bellek tüketimi.** Yerel değişkenler yalnızca yordamı çalışırken belleği tüketir. Yordamı çağıran koda geri döndüğünde, belleği serbest bırakılır. Aksine, [paylaşılan](../../../../visual-basic/language-reference/modifiers/shared.md) ve [statik](../../../../visual-basic/language-reference/modifiers/static.md) değişkenler, uygulamanız çalışmayı durdurana kadar bellek kaynaklarını kullanır, bu nedenle onları yalnızca gerekli olduğunda kullanın. Örnek *değişkenleri* , örnekleri mevcut olmaya devam ederken belleği tüketir, bu da yerel değişkenlerden daha az verimlidir, ancak büyük olasılıkla `Shared` veya `Static` değişkenlerinden daha etkilidir.
+- **Memory Consumption.** Local variables consume memory only while their procedure is running. Their memory is released when the procedure returns to the calling code. By contrast, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) and [Static](../../../../visual-basic/language-reference/modifiers/static.md) variables consume memory resources until your application stops running, so use them only when necessary. *Instance variables* consume memory while their instance continues to exist, which makes them less efficient than local variables, but potentially more efficient than `Shared` or `Static` variables.
 
-### <a name="minimizing-scope"></a>Kapsamı küçültme
+### <a name="minimizing-scope"></a>Minimizing Scope
 
-Genel olarak, herhangi bir değişken veya sabit bildirirken, kapsamı olabildiğince dar hale getirmek için iyi bir programlama uygulamasıdır (blok kapsam en dar olur). Bu, belleğin korunmasına yardımcı olur ve yanlış değişkene başvuran kodunuzun yanlışlıkla yanlış olduğunu en aza indirir. Benzer şekilde, bir değişkeni yalnızca yordam çağrıları arasında değerini korumak gerektiğinde [statik](../../../../visual-basic/language-reference/modifiers/static.md) olacak şekilde bildirmeniz gerekir.
+In general, when declaring any variable or constant, it is good programming practice to make the scope as narrow as possible (block scope is the narrowest). This helps conserve memory and minimizes the chances of your code erroneously referring to the wrong variable. Similarly, you should declare a variable to be [Static](../../../../visual-basic/language-reference/modifiers/static.md) only when it is necessary to preserve its value between procedure calls.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bildirilen Öğe Özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
-- [Nasıl yapılır: Bir değişkenin kapsamını denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
-- [Visual Basic ömrü](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Visual Basic erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Nasıl yapılır: Bir Değişkenin Kapsamını Denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
+- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

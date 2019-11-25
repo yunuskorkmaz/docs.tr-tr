@@ -1,19 +1,19 @@
 ---
-title: Temsilcilerde varyans (Visual Basic)
+title: Temsilcilerde Varyans
 ms.date: 07/20/2015
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-ms.openlocfilehash: 0c52fd3fb36162de16a91a85088018f4f579611c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 11146bc4a60f55fc0373f0b5dfa5d44dcf748a5b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664348"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349009"
 ---
-# <a name="variance-in-delegates-visual-basic"></a>Temsilcilerde varyans (Visual Basic)
+# <a name="variance-in-delegates-visual-basic"></a>Variance in Delegates (Visual Basic)
 
-.NET Framework 3,5, C# ve Visual Basic tüm Temsilcilerde temsilci türleriyle eşleşen yöntem imzaları için varyans desteği getirmiştir. Bu, yalnızca eşleşen imzalara sahip yöntemlerin değil, aynı zamanda daha fazla türetilmiş tür (Kovaryans) döndüren veya temsilci türü tarafından belirtilenden daha az türetilmiş türler (değişken varyans) döndüren parametreleri kabul eden yöntemlere atayabileceğiniz anlamına gelir. . Bu hem genel hem de genel olmayan temsilcileri içerir.
+.NET Framework 3.5 introduced variance support for matching method signatures with delegate types in all delegates in C# and Visual Basic. This means that you can assign to delegates not only methods that have matching signatures, but also methods that return more derived types (covariance) or that accept parameters that have less derived types (contravariance) than that specified by the delegate type. This includes both generic and non-generic delegates.
 
-Örneğin, iki sınıfı ve iki temsilciyi olan aşağıdaki kodu düşünün: genel ve genel olmayan.
+For example, consider the following code, which has two classes and two delegates: generic and non-generic.
 
 ```vb
 Public Class First
@@ -27,7 +27,7 @@ Public Delegate Function SampleDelegate(ByVal a As Second) As First
 Public Delegate Function SampleGenericDelegate(Of A, R)(ByVal a As A) As R
 ```
 
-`SampleDelegate` Veya`SampleDelegate(Of A, R)` türlerinin temsilcilerini oluşturduğunuzda, aşağıdaki yöntemlerden herhangi birini bu temsilcilere atayabilirsiniz.
+When you create delegates of the `SampleDelegate` or `SampleDelegate(Of A, R)` types, you can assign any one of the following methods to those delegates.
 
 ```vb
 ' Matching signature.
@@ -56,7 +56,7 @@ Public Shared Function AFirstRSecond(
 End Function
 ```
 
-Aşağıdaki kod örneği, yöntem imzası ve temsilci türü arasındaki örtük dönüştürmeyi gösterir.
+The following code example illustrates the implicit conversion between the method signature and the delegate type.
 
 ```vb
 ' Assigning a method with a matching signature
@@ -76,15 +76,15 @@ Dim dGeneric As SampleGenericDelegate(Of Second, First) = AddressOf ASecondRFirs
 Dim dGenericConversion As SampleGenericDelegate(Of Second, First) = AddressOf AFirstRSecond
 ```
 
-Daha fazla örnek için bkz. [Temsilcilerde varyans kullanma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) ve [Func ve eylem genel temsilcileri için varyans kullanma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+For more examples, see [Using Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
 
-## <a name="variance-in-generic-type-parameters"></a>Genel tür parametrelerindeki varyans
+## <a name="variance-in-generic-type-parameters"></a>Variance in Generic Type Parameters
 
-.NET Framework 4 ' te ve daha sonraki sürümlerde temsilciler arasında örtük dönüştürmeyi etkinleştirebilirsiniz, böylece türler, her biri için gerekli olan genel tür parametreleri tarafından belirtilen genel temsilcilerin birbirlerine atanabilmesini sağlar. denetlemesini.
+In .NET Framework 4 and later you can enable implicit conversion between delegates, so that generic delegates that have different types specified by generic type parameters can be assigned to each other, if the types are inherited from each other as required by variance.
 
-Örtük dönüştürmeyi etkinleştirmek için, `in` veya `out` anahtar sözcüğünü kullanarak bir temsilcinin genel parametrelerini birlikte değişken veya değişken karşıtı olarak açıkça bildirmeniz gerekir.
+To enable implicit conversion, you must explicitly declare generic parameters in a delegate as covariant or contravariant by using the `in` or `out` keyword.
 
-Aşağıdaki kod örneği, birlikte değişken genel tür parametresine sahip olan bir temsilciyi nasıl oluşturabileceğiniz gösterilmektedir.
+The following code example shows how you can create a delegate that has a covariant generic type parameter.
 
 ```vb
 ' Type T is declared covariant by using the out keyword.
@@ -97,9 +97,9 @@ Sub Test()
 End Sub
 ```
 
-Yöntem imzalarını temsilci türleriyle eşleştirmek için yalnızca varyans desteğini kullanırsanız ve `in` ve `out` anahtar sözcüklerini kullanmıyorsanız, bazen özdeş lambda ifadeleri veya yöntemlerine sahip temsilciler örnekleyebilirsiniz, ancak şunları yapabilirsiniz bir temsilciyi diğerine atayın.
+If you use only variance support to match method signatures with delegate types and do not use the `in` and `out` keywords, you may find that sometimes you can instantiate delegates with identical lambda expressions or methods, but you cannot assign one delegate to another.
 
-Aşağıdaki `SampleGenericDelegate(Of String)` kod örneğinde, açıkça öğesine `SampleGenericDelegate(Of Object)`dönüştürülemez, ancak `String` devralır `Object`. Genel parametreyi `T` `out` anahtar sözcüğüyle işaretleyerek bu sorunu çözebilirsiniz.
+In the following code example, `SampleGenericDelegate(Of String)` can't be explicitly converted to `SampleGenericDelegate(Of Object)`, although `String` inherits `Object`. You can fix this problem by marking the generic parameter `T` with the `out` keyword.
 
 ```vb
 Public Delegate Function SampleGenericDelegate(Of T)() As T
@@ -119,59 +119,59 @@ Sub Test()
 End Sub
 ```
 
-### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>.NET Framework değişken tür parametrelerine sahip genel Temsilciler
+### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>Generic Delegates That Have Variant Type Parameters in the .NET Framework
 
-.NET Framework 4, çeşitli genel temsilcilerde genel tür parametrelerine yönelik varyans desteği getirmiştir:
+.NET Framework 4 introduced variance support for generic type parameters in several existing generic delegates:
 
-- `Action`<xref:System> ad alanından temsilciler, <xref:System.Action%601> örneğin ve<xref:System.Action%602>
+- `Action` delegates from the <xref:System> namespace, for example, <xref:System.Action%601> and <xref:System.Action%602>
 
-- `Func`<xref:System> ad alanından temsilciler, <xref:System.Func%601> örneğin ve<xref:System.Func%602>
+- `Func` delegates from the <xref:System> namespace, for example, <xref:System.Func%601> and <xref:System.Func%602>
 
-- <xref:System.Predicate%601> Temsilci
+- The <xref:System.Predicate%601> delegate
 
-- <xref:System.Comparison%601> Temsilci
+- The <xref:System.Comparison%601> delegate
 
-- <xref:System.Converter%602> Temsilci
+- The <xref:System.Converter%602> delegate
 
-Daha fazla bilgi ve örnek için bkz. [Func ve eylem genel temsilcileri Için varyans kullanma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+For more information and examples, see [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
 
-### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Genel Temsilcilerde değişken tür parametreleri bildirme
+### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Declaring Variant Type Parameters in Generic Delegates
 
-Genel bir temsilcinin birlikte değişken veya değişken karşıtı genel tür parametreleri varsa, bu, *VARIANT genel temsilcisi*olarak adlandırılır.
+If a generic delegate has covariant or contravariant generic type parameters, it can be referred to as a *variant generic delegate*.
 
-`out` Anahtar sözcüğünü kullanarak genel bir temsilci içinde genel bir tür parametresi ortak değişkeni bildirebilirsiniz. Covaryant türü, yöntem bağımsız değişkenlerinin türü olarak değil, yalnızca bir yöntem dönüş türü olarak kullanılabilir. Aşağıdaki kod örneği, bir covaryant genel temsilcisinin nasıl bildirilemeyeceğini gösterir.
+You can declare a generic type parameter covariant in a generic delegate by using the `out` keyword. The covariant type can be used only as a method return type and not as a type of method arguments. The following code example shows how to declare a covariant generic delegate.
 
 ```vb
 Public Delegate Function DCovariant(Of Out R)() As R
 ```
 
-`in` Anahtar sözcüğünü kullanarak genel bir temsilci içinde genel bir tür parametresi değişken değişkeni bildirebilirsiniz. Değişken karşıtı türü, yöntem dönüş türü olarak değil, yalnızca Yöntem bağımsız değişkenlerinin türü olarak kullanılabilir. Aşağıdaki kod örneği, bir değişken karşıtı genel temsilcinin nasıl bildirilemeyeceğini gösterir.
+You can declare a generic type parameter contravariant in a generic delegate by using the `in` keyword. The contravariant type can be used only as a type of method arguments and not as a method return type. The following code example shows how to declare a contravariant generic delegate.
 
 ```vb
 Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```
 
 > [!IMPORTANT]
-> `ByRef`Visual Basic parametreler değişken olarak işaretlenemez.
+> `ByRef` parameters in Visual Basic can't be marked as variant.
 
-Aynı temsilci, ancak farklı tür parametreleri için hem varyansı hem de kovaryansı desteklemek de mümkündür. Bu, aşağıdaki örnekte gösterilir.
+It is also possible to support both variance and covariance in the same delegate, but for different type parameters. Bu, aşağıdaki örnekte gösterilir.
 
 ```vb
 Public Delegate Function DVariant(Of In A, Out R)(ByVal a As A) As R
 ```
 
-### <a name="instantiating-and-invoking-variant-generic-delegates"></a>VARIANT genel temsilcileri örnekleme ve çağırma
+### <a name="instantiating-and-invoking-variant-generic-delegates"></a>Instantiating and Invoking Variant Generic Delegates
 
-Sabit temsilcileri örneklediğinizde ve çağırdığınızda değişken temsilcileri örnek oluşturabilir ve çağırabilirsiniz. Aşağıdaki örnekte, temsilci bir lambda ifadesi tarafından oluşturulur.
+You can instantiate and invoke variant delegates just as you instantiate and invoke invariant delegates. In the following example, the delegate is instantiated by a lambda expression.
 
 ```vb
 Dim dvariant As DVariant(Of String, String) = Function(str) str + " "
 dvariant("test")
 ```
 
-### <a name="combining-variant-generic-delegates"></a>Değişken genel temsilcileri birleştirme
+### <a name="combining-variant-generic-delegates"></a>Combining Variant Generic Delegates
 
-Değişken temsilcileri birleştirmemelisiniz. <xref:System.Delegate.Combine%2A> Yöntem, değişken temsilci dönüştürmeyi desteklemez ve temsilcilerin tamamen aynı türde olmasını bekler. Bu, aşağıdaki kod örneğinde gösterildiği <xref:System.Delegate.Combine%2A> gibi, temsilcileri kullandığınızda ( C# ve Visual Basic) `+` veya işlecini (içinde C#) kullanarak bir çalışma zamanı özel durumuna neden olabilir.
+You should not combine variant delegates. The <xref:System.Delegate.Combine%2A> method does not support variant delegate conversion and expects delegates to be of exactly the same type. This can lead to a run-time exception when you combine delegates either by using the <xref:System.Delegate.Combine%2A> method (in C# and Visual Basic) or by using the `+` operator (in C#), as shown in the following code example.
 
 ```vb
 Dim actObj As Action(Of Object) = Sub(x) Console.WriteLine("object: {0}", x)
@@ -181,11 +181,11 @@ Dim actStr As Action(Of String) = Sub(x) Console.WriteLine("string: {0}", x)
 ' Dim actCombine = [Delegate].Combine(actStr, actObj)
 ```
 
-## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>Değer ve başvuru türleri için genel tür parametrelerinin varyansı
+## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>Variance in Generic Type Parameters for Value and Reference Types
 
-Genel tür parametrelerinin varyansı yalnızca başvuru türleri için desteklenir. Örneğin, `DVariant(Of Int)`tamsayı bir değer türü olduğundan, örtülü `DVariant(Of Long)`olarak `DVariant(Of Object)` veya türüne dönüştürülemez.
+Variance for generic type parameters is supported for reference types only. For example, `DVariant(Of Int)`can't be implicitly converted to `DVariant(Of Object)` or `DVariant(Of Long)`, because integer is a value type.
 
-Aşağıdaki örnek, genel tür parametrelerinin farkının değer türleri için desteklenmediğini gösterir.
+The following example demonstrates that variance in generic type parameters is not supported for value types.
 
 ```vb
 ' The type T is covariant.
@@ -207,11 +207,11 @@ Sub Test()
 End Sub
 ```
 
-## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Visual Basic için gevşek temsilci dönüştürme
+## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Relaxed Delegate Conversion in Visual Basic
 
-Gevşek temsilci dönüştürme, temsilci türleriyle eşleşen Yöntem imzalarında daha fazla esneklik sağlar. Örneğin, bir temsilciye bir yöntem atarken parametre belirtimlerini ve işlev dönüş değerlerini atlamanızı sağlar. Daha fazla bilgi için bkz. [gevşek temsilci dönüştürme](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).
+Relaxed delegate conversion enables more flexibility in matching method signatures with delegate types. For example, it lets you omit parameter specifications and omit function return values when you assign a method to a delegate. For more information, see [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Genel Türler](../../../../standard/generics/index.md)
-- [Func ve eylem genel temsilcileri için varyans kullanma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

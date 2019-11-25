@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: XmlSerializer kullanarak serileştirme (Visual Basic)'
+title: 'How to: Serialize Using XmlSerializer'
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-ms.openlocfilehash: afde54ed7d0e8049f52468e17f4500fb090f3124
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 6d5874d6722fac6deba93de01cb5441e7dbc7503
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835119"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352363"
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Nasıl yapılır: XmlSerializer kullanarak serileştirme (Visual Basic)
-Bu konuda, <xref:System.Xml.Serialization.XmlSerializer> kullanarak seri hale getirilen ve seri hale getirilen bir örnek gösterilmektedir.  
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>How to: Serialize Using XmlSerializer (Visual Basic)
+This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek <xref:System.Xml.Linq.XElement> nesneleri içeren bir dizi nesne oluşturur. Daha sonra bunları bir bellek akışına serileştirir ve sonra bellek akışından serileştirir.  
+ The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects. It then serializes them to a memory stream, and then deserializes them from the memory stream.  
   
 ```vb  
 Imports System  
@@ -69,7 +69,7 @@ Public Class XLinqTest
 End Class  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```console  
 Testing for type: XElementNullContainer  
@@ -82,4 +82,4 @@ Testing for type: XElementContainer
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XElement nesneleri içeren nesne grafiklerini serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [Serializing Object Graphs that Contain XElement Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

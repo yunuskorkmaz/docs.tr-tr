@@ -1,29 +1,29 @@
 ---
-title: 'Nasıl yapılır: En büyük dosya veya dizin ağacında (LINQ) (Visual Basic) dosyalar için sorgu'
+title: 'Nasıl yapılır: Bir Dizin Ağacındaki En Büyük Dosya veya Dosyalar için Sorgu (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-ms.openlocfilehash: 91cfba02bade5811dbc5f45a5106731ff637efcf
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4f7dcb46670612695b5a7219b12a7f2e83746af2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593283"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347661"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Nasıl yapılır: En büyük dosya veya dizin ağacında (LINQ) (Visual Basic) dosyalar için sorgu
-Bu örnek dosyanın bayt cinsinden boyutu ile ilgili beş sorguları gösterir:  
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic)
+This example shows five queries related to file size in bytes:  
   
-- Bayt cinsinden en büyük dosya boyutu almak nasıl.  
+- How to retrieve the size in bytes of the largest file.  
   
-- En küçük dosyanın bayt cinsinden boyutunu almak nasıl.  
+- How to retrieve the size in bytes of the smallest file.  
   
-- Nasıl alınacağını <xref:System.IO.FileInfo> belirtilen kök klasörünün altında bir veya daha fazla klasörlerden nesne en büyük veya küçük dosyası.  
+- How to retrieve the <xref:System.IO.FileInfo> object largest or smallest file from one or more folders under a specified root folder.  
   
-- 10 en büyük dosyaları gibi bir dizi almak nasıl.  
+- How to retrieve a sequence such as the 10 largest files.  
   
-- Nasıl yapılır sırası dosyaları, dosya boyutu bayt cinsinden göre gruplara belirtilen bir boyuttan daha az olan dosyalar yoksayılıyor.  
+- How to order files into groups based on their file size in bytes, ignoring files that are less than a specified size.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, sorgulama ve bunların dosya boyutunu bayt cinsinden bağlı olarak, Grup dosyaları göster beş ayrı sorguları içerir. Bu örnekler diğer bazı özellikte sorgu temel kolayca değiştirebilirsiniz <xref:System.IO.FileInfo> nesne.  
+ The following example contains five separate queries that show how to query and group files, depending on their file size in bytes. You can easily modify these examples to base the query on some other property of the <xref:System.IO.FileInfo> object.  
   
 ```vb  
 Module QueryBySize  
@@ -113,14 +113,14 @@ Module QueryBySize
 End Module  
 ```  
   
- Bir veya daha fazla tamamlamak döndürülecek <xref:System.IO.FileInfo> nesneler, sorguyu ilk denetleyeceğini her bir veri kaynağı ve sonra bunları kendi uzunluğu özelliğinin değeri sıralayın. Ardından tek bir ya da ile en fazla uzunluk dizisi döndürebilir. Kullanım <xref:System.Linq.Enumerable.First%2A> listedeki ilk öğe döndürmek için. Kullanım <xref:System.Linq.Enumerable.Take%2A> ilk n öğe sayısını döndürmek için. Listenin başında en küçük öğeleri yerleştirmek için azalan sıralama düzeni belirtin.  
+ To return one or more complete <xref:System.IO.FileInfo> objects, the query first must examine each one in the data source, and then sort them by the value of their Length property. Then it can return the single one or the sequence with the greatest lengths. Use <xref:System.Linq.Enumerable.First%2A> to return the first element in a list. Use <xref:System.Linq.Enumerable.Take%2A> to return the first n number of elements. Specify a descending sort order to put the smallest elements at the start of the list.  
   
- Burada bir dosya silindi başka bir iş parçacığında bu yana zaman dönemi içindeki durumda gerçekleştirilecektir olası özel kullanmak bayt cinsinden boyutunu almak için ayrı bir yöntem için sorguyu çağırır <xref:System.IO.FileInfo> nesne oluşturulduğu çağrısında`GetFiles`. Bile aracılığıyla <xref:System.IO.FileInfo> nesnesi zaten oluşturuldu, özel durum ortaya çıkabilir çünkü bir <xref:System.IO.FileInfo> nesne yenilemek çalışır, <xref:System.IO.FileInfo.Length%2A> erişilen özelliği ilk kez en geçerli boyutunu bayt cinsinden kullanarak özellik. Bu işlem bir try-catch bloğunda sorgu dışında koyarak, biz yan etkilere neden olabilecek sorguları işlemlerinde önleme kural izleyin. Genel olarak, çok dikkatli özel durumlar, tüketildiğinde uygulama bilinmeyen bir durumda kaldı değil emin olmak için özenli olunması gerekir.  
+ The query calls out to a separate method to obtain the file size in bytes in order to consume the possible exception that will be raised in the case where a file was deleted on another thread in the time period since the <xref:System.IO.FileInfo> object was created in the call to `GetFiles`. Even through the <xref:System.IO.FileInfo> object has already been created, the exception can occur because a <xref:System.IO.FileInfo> object will try to refresh its <xref:System.IO.FileInfo.Length%2A> property by using the most current size in bytes the first time the property is accessed. By putting this operation in a try-catch block outside the query, we follow the rule of avoiding operations in queries that can cause side-effects. In general, great care must be taken when consuming exceptions, to make sure that an application is not left in an unknown state.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
-VB.NET konsol uygulama projesi oluşturmak bir `Imports` System.Linq ad alanı bildirimi.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Objects'in (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

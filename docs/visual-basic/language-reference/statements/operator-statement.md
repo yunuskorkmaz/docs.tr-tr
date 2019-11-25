@@ -1,5 +1,5 @@
 ---
-title: Operator ekstresi (Visual Basic)
+title: Operator Deyimi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.operator
@@ -17,16 +17,16 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: c4fae40992fa665121aff637ae427ef0cafbf547
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: aa6ae3977977ded05e47d12dabe72f09251f262d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582377"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353802"
 ---
 # <a name="operator-statement"></a>Operator Deyimi
 
-Bir sınıf veya yapıda operatör yordamını tanımlayan işleç sembolünü, işlenenleri ve kodu bildirir.
+Declares the operator symbol, operands, and code that define an operator procedure on a class or structure.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,138 +43,138 @@ End Operator
 ## <a name="parts"></a>Bölümler
 
 `attrlist`  
-İsteğe bağlı. Bkz. [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).
+İsteğe bağlı. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).
 
 `Public`  
-Gerekli. Bu işleç yordamının [ortak](../../../visual-basic/language-reference/modifiers/public.md) erişime sahip olduğunu gösterir.
+Gerekli. Indicates that this operator procedure has [Public](../../../visual-basic/language-reference/modifiers/public.md) access.
 
 `Overloads`  
-İsteğe bağlı. Bkz. [aşırı yüklemeler](../../../visual-basic/language-reference/modifiers/overloads.md).
+İsteğe bağlı. See [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md).
 
 `Shared`  
-Gerekli. Bu işleç yordamının [paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md) bir yordam olduğunu gösterir.
+Gerekli. Indicates that this operator procedure is a [Shared](../../../visual-basic/language-reference/modifiers/shared.md) procedure.
 
 `Shadows`  
-İsteğe bağlı. Bkz. [gölgeler](../../../visual-basic/language-reference/modifiers/shadows.md).
+İsteğe bağlı. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
 
 `Widening`  
-@No__t_0 belirtmediğiniz takdirde bir dönüştürme işleci için gereklidir. Bu işleç yordamının bir [genişletme](../../../visual-basic/language-reference/modifiers/widening.md) dönüşümünü tanımladığını gösterir. Bu Yardım sayfasında "genişletme ve daraltma dönüşümleri" başlığına bakın.
+Required for a conversion operator unless you specify `Narrowing`. Indicates that this operator procedure defines a [Widening](../../../visual-basic/language-reference/modifiers/widening.md) conversion. See "Widening and Narrowing Conversions" on this Help page.
 
 `Narrowing`  
-@No__t_0 belirtmediğiniz takdirde bir dönüştürme işleci için gereklidir. Bu işleç yordamının bir [daraltma](../../../visual-basic/language-reference/modifiers/narrowing.md) dönüşümünü tanımladığını gösterir. Bu Yardım sayfasında "genişletme ve daraltma dönüşümleri" başlığına bakın.
+Required for a conversion operator unless you specify `Widening`. Indicates that this operator procedure defines a [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md) conversion. See "Widening and Narrowing Conversions" on this Help page.
 
 `operatorsymbol`  
-Gerekli. Bu işleç yordamının tanımladığı işlecin simgesi veya tanımlayıcısı.
+Gerekli. The symbol or identifier of the operator that this operator procedure defines.
 
 `operand1`  
-Gerekli. Birli işlecin tek işleneninin adı ve türü (dönüştürme işleci dahil) veya bir ikili işlecinin sol işleneni.
+Gerekli. The name and type of the single operand of a unary operator (including a conversion operator) or the left operand of a binary operator.
 
 `operand2`  
-İkili işleçler için gereklidir. Bir ikili işlecinin sağ işleneninin adı ve türü.
+Required for binary operators. The name and type of the right operand of a binary operator.
 
-`operand1` ve `operand2` aşağıdaki söz dizimi ve bölümlere sahiptir:
+`operand1` and `operand2` have the following syntax and parts:
 
 `[ ByVal ] operandname [ As operandtype ]`
 
-|Bölümüyle|Açıklama|
+|Part|Açıklama|
 |----------|-----------------|
-|`ByVal`|İsteğe bağlı, ancak geçen mekanizmanın [ByVal](../../../visual-basic/language-reference/modifiers/byval.md)olması gerekir.|
-|`operandname`|Gerekli. Bu işleneni temsil eden değişkenin adı. Bkz. [tanımlanmış öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`operandtype`|@No__t_0 `On` olmadığı müddetçe isteğe bağlıdır. Bu işlenenin veri türü.|
+|`ByVal`|Optional, but the passing mechanism must be [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).|
+|`operandname`|Gerekli. Name of the variable representing this operand. See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`operandtype`|Optional unless `Option Strict` is `On`. Data type of this operand.|
 
 `type`  
-@No__t_0 `On` olmadığı müddetçe isteğe bağlıdır. İşleç yordamının döndürdüğü değerin veri türü.
+Optional unless `Option Strict` is `On`. Data type of the value the operator procedure returns.
 
 `statements`  
-İsteğe bağlı. İşleç yordamının çalıştığı deyimler bloğu.
+İsteğe bağlı. Block of statements that the operator procedure runs.
 
 `returnvalue`  
-Gerekli. İşleç yordamının çağırma koduna döndürdüğü değer.
+Gerekli. The value that the operator procedure returns to the calling code.
 
 `End``Operator`  
-Gerekli. Bu işleç yordamının tanımını sonlandırır.
+Gerekli. Terminates the definition of this operator procedure.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yalnızca bir sınıf veya yapıda `Operator` kullanabilirsiniz. Bu, bir işlecin *bildirim bağlamının* kaynak dosya, ad alanı, modül, arabirim, yordam veya blok olamayacağı anlamına gelir. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+You can use `Operator` only in a class or structure. This means the *declaration context* for an operator cannot be a source file, namespace, module, interface, procedure, or block. For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
 
-Tüm işleçler `Public Shared` olmalıdır. Her iki işlenen için `ByRef`, `Optional` veya `ParamArray` belirtemezsiniz.
+All operators must be `Public Shared`. You cannot specify `ByRef`, `Optional`, or `ParamArray` for either operand.
 
-Dönüş değerini tutmak için işleç sembolünü veya tanımlayıcıyı kullanamazsınız. @No__t_0 ifadesini kullanmanız ve bir değer belirtmesi gerekir. Herhangi bir sayıda `Return` deyimi yordamda herhangi bir yerde görünebilir.
+You cannot use the operator symbol or identifier to hold a return value. You must use the `Return` statement, and it must specify a value. Any number of `Return` statements can appear anywhere in the procedure.
 
-Bir işlecin bu şekilde tanımlanması, `Overloads` anahtar sözcüğünü kullanıp kullanmayacağınızı, *işleç aşırı yüklemesi*olarak adlandırılır. Aşağıdaki tabloda, tanımlayabilmeniz için kullanabileceğiniz işleçler listelenmektedir.
+Defining an operator in this way is called *operator overloading*, whether or not you use the `Overloads` keyword. The following table lists the operators you can define.
 
 |Tür|İşleçler|
 |----------|---------------|
-|Li|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|
-|İkili|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, 0, 1, 2, 3, 4, 5 , 6, 7, 8, 9|
-|Dönüştürme (birli)|`CType`|
+|Unary|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|
+|İkili|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|
+|Conversion (unary)|`CType`|
 
-İkili listedeki `=` işlecinin, atama operatörü değil karşılaştırma operatörü olduğunu unutmayın.
+Note that the `=` operator in the binary list is the comparison operator, not the assignment operator.
 
-@No__t_0 tanımladığınızda, `Widening` veya `Narrowing` belirtmeniz gerekir.
+When you define `CType`, you must specify either `Widening` or `Narrowing`.
 
-## <a name="matched-pairs"></a>Eşleşen çiftler
+## <a name="matched-pairs"></a>Matched Pairs
 
-Belirli işleçleri eşleşen çiftler olarak tanımlamanız gerekir. Böyle bir çiftin işlecini tanımlarsanız, diğerini de tanımlamanız gerekir. Eşleşen çiftler şunlardır:
+You must define certain operators as matched pairs. If you define either operator of such a pair, you must define the other as well. The matched pairs are the following:
 
-- `=` ve `<>`
+- `=` and `<>`
 
-- `>` ve `<`
+- `>` and `<`
 
-- `>=` ve `<=`
+- `>=` and `<=`
 
-- `IsTrue` ve `IsFalse`
+- `IsTrue` and `IsFalse`
 
-## <a name="data-type-restrictions"></a>Veri türü kısıtlamaları
+## <a name="data-type-restrictions"></a>Data Type Restrictions
 
-Tanımladığınız her operatör, üzerinde tanımladığınız sınıf veya yapıyı içermelidir. Bu, sınıfın veya yapının aşağıdakilerin veri türü olarak görünmesi gerektiği anlamına gelir:
+Every operator you define must involve the class or structure on which you define it. This means that the class or structure must appear as the data type of the following:
 
-- Birli işlecin işleneni.
+- The operand of a unary operator.
 
-- Bir ikili işlecinin işlenenlerinden en az biri.
+- At least one of the operands of a binary operator.
 
-- Bir dönüştürme işlecinin işleneni ya da dönüş türü.
+- Either the operand or the return type of a conversion operator.
 
- Bazı işleçler, aşağıdaki gibi ek veri türü kısıtlamalarına sahiptir:
+ Certain operators have additional data type restrictions, as follows:
 
-- @No__t_0 ve `IsFalse` işleçlerini tanımlarsanız, her ikisi de `Boolean` türünü döndürmelidir.
+- If you define the `IsTrue` and `IsFalse` operators, they must both return the `Boolean` type.
 
-- @No__t_0 ve `>>` işleçlerini tanımlarsanız, her ikisi de `operand2` `operandtype` için `Integer` türünü belirtmelidir.
+- If you define the `<<` and `>>` operators, they must both specify the `Integer` type for the `operandtype` of `operand2`.
 
-Dönüş türünün, her iki işlenenin türüne karşılık gelmesi gerekmez. Örneğin, `=` veya `<>` gibi bir karşılaştırma işleci, hiçbir işlenen `Boolean` bile `Boolean` döndürebilir.
+The return type does not have to correspond to the type of either operand. For example, a comparison operator such as `=` or `<>` can return `Boolean` even if neither operand is `Boolean`.
 
 ## <a name="logical-and-bitwise-operators"></a>Mantıksal ve Bit Düzeyinde İşleçler
 
-@No__t_0, `Or`, `Not` ve `Xor` işleçleri Visual Basic mantıksal veya bit tabanlı işlemler gerçekleştirebilir. Ancak, bu işleçlerden birini bir sınıf veya yapıda tanımlarsanız, yalnızca bit düzeyinde işlemini tanımlayabilirsiniz.
+The `And`, `Or`, `Not`, and `Xor` operators can perform either logical or bitwise operations in Visual Basic. However, if you define one of these operators on a class or structure, you can define only its bitwise operation.
 
-@No__t_0 işlecini doğrudan bir `Operator` ifadesiyle tanımlayamazsınız. Ancak, aşağıdaki koşulları karşıladıysanız `AndAlso` kullanabilirsiniz:
+You cannot define the `AndAlso` operator directly with an `Operator` statement. However, you can use `AndAlso` if you have fulfilled the following conditions:
 
-- @No__t_1 için kullanmak istediğiniz aynı işlenen türlerinde `And` tanımladınız.
+- You have defined `And` on the same operand types you want to use for `AndAlso`.
 
-- @No__t_0 tanımınız, tanımladığınız sınıf veya yapı ile aynı türü döndürür.
+- Your definition of `And` returns the same type as the class or structure on which you have defined it.
 
-- @No__t_1 tanımladığınız sınıf veya yapıda `IsFalse` işlecini tanımladınız.
+- You have defined the `IsFalse` operator on the class or structure on which you have defined `And`.
 
-Benzer şekilde, aynı işlenenler üzerinde `Or` tanımladıysanız, sınıf veya yapının dönüş türü ile ve sınıf veya yapı üzerinde `IsTrue` tanımlamış olmanız durumunda `OrElse` kullanabilirsiniz.
+Similarly, you can use `OrElse` if you have defined `Or` on the same operands, with the return type of the class or structure, and you have defined `IsTrue` on the class or structure.
 
 ## <a name="widening-and-narrowing-conversions"></a>Genişletme ve Daraltma Dönüşümleri
 
-Her *zaman* çalışma zamanında bir daraltma dönüştürmesi başarısız olsa da, bir *daraltma* dönüştürmesi çalışma zamanında başarısız olabilir. Daha fazla bilgi için bkz. [genişletme ve daraltma dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).
+A *widening conversion* always succeeds at run time, while a *narrowing conversion* can fail at run time. For more information, see [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).
 
-@No__t_0 bir dönüştürme yordamı bildirirseniz, yordam kodunuzun herhangi bir başarısızlık üretmemelidir. Bu, aşağıdakiler anlamına gelir:
+If you declare a conversion procedure to be `Widening`, your procedure code must not generate any failures. This means the following:
 
-- Her zaman `type` türünde geçerli bir değer döndürmelidir.
+- It must always return a valid value of type `type`.
 
-- Tüm olası özel durumları ve diğer hata koşullarını ele almalıdır.
+- It must handle all possible exceptions and other error conditions.
 
-- Çağrı yaptığı tüm yordamlardan hata getirlerinin işlenmesi gerekir.
+- It must handle any error returns from any procedures it calls.
 
-Bir dönüştürme yordamının başarılı bir şekilde başarısız olabileceği veya işlenmemiş bir özel duruma neden olabileceği durumlarda, `Narrowing` olması gerekir.
+If there is any possibility that a conversion procedure might not succeed, or that it might cause an unhandled exception, you must declare it to be `Narrowing`.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği, `And`, `Or`, `IsFalse` ve `IsTrue` işleçleri için işleç yordamları içeren bir yapının anahattını tanımlamak için `Operator` ifadesini kullanır. `And` ve `Or` her biri, `abc` türü ve dönüş türü `abc` iki işlenen alır. `IsFalse` ve `IsTrue` her biri `abc` türünde tek bir işlenen alır ve `Boolean` döndürür. Bu tanımlar çağıran kodun, `abc` türündeki işlenenleri `And`, `AndAlso`, `Or` ve `OrElse` kullanmasına izin verir.
+The following code example uses the `Operator` statement to define the outline of a structure that includes operator procedures for the `And`, `Or`, `IsFalse`, and `IsTrue` operators. `And` and `Or` each take two operands of type `abc` and return type `abc`. `IsFalse` and `IsTrue` each take a single operand of type `abc` and return `Boolean`. These definitions allow the calling code to use `And`, `AndAlso`, `Or`, and `OrElse` with operands of type `abc`.
 
 [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]
 

@@ -1,5 +1,5 @@
 ---
-title: -başvuru (Visual Basic)
+title: -reference
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /reference compiler option [Visual Basic]
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 8f144dbd9376f15ac92e283472dac786a6972045
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8b57affa05c77d8ed20bfead7de767a8dd994241
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775599"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348593"
 ---
-# <a name="-reference-visual-basic"></a>-başvuru (Visual Basic)
-Derleyicinin, belirtilen derlemelerde bulunan tür bilgilerini şu anda derlediğiniz projede kullanılabilir hale getirmesine neden olur.  
+# <a name="-reference-visual-basic"></a>-reference (Visual Basic)
+Causes the compiler to make type information in the specified assemblies available to the project you are currently compiling.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,27 +35,27 @@ veya
   
 |Terim|Tanım|  
 |---|---|  
-|`fileList`|Gerekli. Bütünleştirilmiş kod dosyası adlarının virgülle ayrılmış listesi. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri içine alın.|  
+|`fileList`|Gerekli. Comma-delimited list of assembly file names. If the file name contains a space, enclose the name in quotation marks.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İçeri aktardığınız dosya (ler) bütünleştirilmiş kod meta verisi içermelidir. Yalnızca ortak türler derleme dışında görünür. [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) seçeneği bir modülden meta verileri içeri aktarır.  
+ The file(s) you import must contain assembly metadata. Only public types are visible outside the assembly. The [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) option imports metadata from a module.  
   
- Kendisi başka bir derlemeye (derleme B) başvuran bir derlemeye (derleme A) başvuruyorsa, şu durumlarda derleme B 'ye başvurmanız gerekir:  
+ If you reference an assembly (Assembly A) which itself references another assembly (Assembly B), you need to reference Assembly B if:  
   
-- Derleme A 'dan bir tür bir türden devralınır veya derleme B 'den bir arabirim uygular.  
+- A type from Assembly A inherits from a type or implements an interface from Assembly B.  
   
-- B derlemesinden dönüş türü veya parametre türü olan bir alan, özellik, olay veya yöntem çağrılır.  
+- A field, property, event, or method that has a return type or parameter type from Assembly B is invoked.  
   
- Bir veya daha fazla derleme başvurularınızın bulunduğu dizini belirtmek için [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) kullanın.  
+ Use [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) to specify the directory in which one or more of your assembly references is located.  
   
- Derleyicinin bir derlemede (modül değil) bir türü tanıması için, türün çözümlenmesinin zorunlu olması gerekir. Bunu nasıl yapabileceğiniz bir örnek, türün bir örneğini tanımlamaktır. Derleyici için bir derlemede tür adlarını çözümlemek için diğer yollar mevcuttur. Örneğin, derlemedeki bir türden devralma yaparsanız, tür adı derleyici tarafından bilinmiş olur.  
+ For the compiler to recognize a type in an assembly (not a module), it must be forced to resolve the type. One example of how you can do this is to define an instance of the type. Other ways are available to resolve type names in an assembly for the compiler. For example, if you inherit from a type in an assembly, the type name then becomes known to the compiler.  
   
- Yaygın olarak kullanılan .NET Framework derlemelerine başvuran Vbc. rsp yanıt dosyası varsayılan olarak kullanılır. Derleyicinin Vbc. rsp kullanmasını istemiyorsanız, `-noconfig` kullanın.  
+ The Vbc.rsp response file, which references commonly used .NET Framework assemblies, is used by default. Use `-noconfig` if you do not want the compiler to use Vbc.rsp.  
   
- @No__t_0 kısa biçimi `/r`.  
+ The short form of `-reference` is `/r`.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki komut, `Metad1.dll` ve `Metad2.dll` ' den `Out.exe` üretmek için kaynak dosyayı `Input.vb` ve başvuru derlemelerini derler.  
+ The following command compiles source file `Input.vb` and reference assemblies from `Metad1.dll` and `Metad2.dll` to produce `Out.exe`.  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
@@ -63,7 +63,7 @@ vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)

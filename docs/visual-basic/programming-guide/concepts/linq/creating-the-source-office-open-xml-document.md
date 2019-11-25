@@ -1,28 +1,28 @@
 ---
-title: Kaynak Office Open XML belgesi (Visual Basic) oluşturuluyor
+title: Kaynak Office Open XML Belgesi Oluşturma
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 75030f3d1c2940cc84f81b85dca921497137439f
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5f7a9baebd2d1db73ab17924e0ff8a7408637ee8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352953"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346413"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Kaynak Office Open XML belgesi (Visual Basic) oluşturuluyor
-Bu konu başlığında, bu öğreticideki diğer örneklerin kullandığı Office Open XML WordprocessingML belgesinin nasıl oluşturulacağı gösterilmektedir. Bu yönergeleri izlerseniz, çıktılarınız her örnekte girilen çıktıyla eşleşir.  
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Creating the Source Office Open XML Document (Visual Basic)
+This topic shows how to create the Office Open XML WordprocessingML document that the other examples in this tutorial use. If you follow these instructions, your output will match the output provided in each example.  
   
- Ancak, bu öğreticideki örnekler geçerli bir WordprocessingML belgesiyle çalışacaktır.  
+ However, the examples in this tutorial will work with any valid WordprocessingML document.  
   
- Bu öğreticinin kullandığı belgeyi oluşturmak için Microsoft Office 2007 veya sonraki bir sürümü yüklemiş olmanız ya da Word, Excel ve PowerPoint 2007 dosya biçimleri için Microsoft Office Uyumluluk Paketi ile Microsoft Office 2003 olmalıdır.  
+ To create the document that this tutorial uses, you must either have Microsoft Office 2007 or later installed, or you must have Microsoft Office 2003 with the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats.  
   
-## <a name="creating-the-wordprocessingml-document"></a>WordprocessingML belgesi oluşturma  
+## <a name="creating-the-wordprocessingml-document"></a>Creating the WordprocessingML Document  
   
-#### <a name="to-create-the-wordprocessingml-document"></a>WordprocessingML belgesi oluşturmak için  
+#### <a name="to-create-the-wordprocessingml-document"></a>To create the WordprocessingML document  
   
-1. Yeni bir Microsoft Word belgesi oluşturun.  
+1. Create a new Microsoft Word document.  
   
-2. Aşağıdaki metni yeni belgeye yapıştırın:  
+2. Paste the following text into the new document:  
   
     ```text  
     Parsing WordprocessingML with LINQ to XML  
@@ -42,17 +42,17 @@ Bu konu başlığında, bu öğreticideki diğer örneklerin kullandığı Offic
     Hello World  
     ```  
   
-3. İlk satırı "Başlık 1" stiliyle biçimlendirin.  
+3. Format the first line with the style "Heading 1".  
   
-4. Visual Basic kodunu içeren satırları seçin. İlk satır `Imports` anahtar sözcüğüyle başlar. Son satır "End Class" dır. Çizgileri Courier yazı tipiyle biçimlendirin. Bunları yeni bir stille biçimlendirin ve yeni "Code" stilini adlandırın.  
+4. Select the lines that contain the Visual Basic code. The first line starts with the `Imports` keyword. The last line is "End Class". Format the lines with the courier font. Format them with a new style, and name the new style "Code".  
   
-5. Son olarak, çıktıyı içeren satırın tamamını seçin ve `Code` stiliyle biçimlendirin.  
+5. Finally, select the entire line that contains the output, and format it with the `Code` style.  
   
-6. Belgeyi kaydedin ve SampleDoc. docx olarak adlandırın.  
+6. Save the document, and name it SampleDoc.docx.  
   
     > [!NOTE]
-    > Microsoft Word 2003 kullanıyorsanız, **farklı kaydet türü** açılan listesinde **Word 2007 belgesi** ' ni seçin.  
+    > If you are using Microsoft Word 2003, select **Word 2007 Document** in the **Save as Type** drop-down list.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: WordprocessingML belgesinde Içerik işleme (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

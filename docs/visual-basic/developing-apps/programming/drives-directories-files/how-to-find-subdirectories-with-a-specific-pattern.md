@@ -1,26 +1,26 @@
 ---
-title: 'Nasıl yapılır: Visual Basic belirli bir düzene sahip alt dizinleri bul'
+title: 'Nasıl Yapılır: Belirli bir Desendeki Alt Dizinleri Bulma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-ms.openlocfilehash: 96ae5c5c44263a47343058012d8b8aa064d9cd92
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c8e13598080139cafabffb2e17d0a3b99c37dc5d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039435"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348768"
 ---
-# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Nasıl yapılır: Visual Basic belirli bir düzene sahip alt dizinleri bul
+# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Belirli bir Desendeki Alt Dizinleri Bulma
 
-Yöntemi <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> , bir dizindeki alt dizinlerin yol adlarını temsil eden salt okunurdur bir dize koleksiyonu döndürür. Belirli bir kalıbı belirtmek `wildCards` için parametresini kullanabilirsiniz. Aramada alt dizinlerin içeriğini eklemek istiyorsanız, `searchType` parametresini olarak `SearchOption.SearchAllSubDirectories`ayarlayın.
+The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> method returns a read-only collection of strings representing the path names for the subdirectories in a directory. You can use the `wildCards` parameter to specify a specific pattern. If you would like to include the contents of subdirectories in the search, set the `searchType` parameter to `SearchOption.SearchAllSubDirectories`.
 
-Belirtilen Düzenle eşleşen hiçbir dizin bulunamazsa boş bir koleksiyon döndürülür.
+An empty collection is returned if no directories matching the specified pattern are found.
 
-## <a name="to-find-subdirectories-with-a-specific-pattern"></a>Belirli bir düzene sahip alt dizinleri bulmak için
+## <a name="to-find-subdirectories-with-a-specific-pattern"></a>To find subdirectories with a specific pattern
 
-Arama yapmak istediğiniz dizinin adını ve yolunu sağlayarak yönteminikullanın.`GetDirectories` Aşağıdaki örnek, dizin yapısındaki, adında "Logs" sözcüğünü içeren tüm dizinleri döndürür ve içine ekler `ListBox1`.
+Use the `GetDirectories` method, supplying the name and path of the directory you want to search. The following example returns all the directories in the directory structure that contain the word "Logs" in their name, and adds them to `ListBox1`.
 
 [!code-vb[VbVbcnFileAccess#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnFileAccess/VB/Class1.vb#1)]
 
@@ -28,25 +28,25 @@ Arama yapmak istediğiniz dizinin adını ve yolunu sağlayarak yönteminikullan
 
 Aşağıdaki koşullar özel bir duruma neden olabilir:
 
-- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (ile \\ \\başlar.\\) (<xref:System.ArgumentException>).
+- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).
 
-- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğu için geçerli değil.
+- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).
 
-- Belirtilen Joker karakterlerden `Nothing`biri veya birkaçı, boş bir dize veya yalnızca boşluk (<xref:System.ArgumentNullException>) içeriyor.
+- One or more of the specified wildcard characters is `Nothing`, an empty string, or contains only spaces (<xref:System.ArgumentNullException>).
 
-- `directory`yok (<xref:System.IO.DirectoryNotFoundException>).
+- `directory` does not exist (<xref:System.IO.DirectoryNotFoundException>).
 
-- `directory`var olan bir dosyaya (<xref:System.IO.IOException>) işaret eder.
+- `directory` points to an existing file (<xref:System.IO.IOException>).
 
-- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.
+- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).
 
-- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).
+- A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).
 
-- Kullanıcı, (<xref:System.Security.SecurityException>) yolunu görüntülemek için gerekli izinlere sahip değil.
+- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).
 
-- Kullanıcının gerekli izinleri (<xref:System.UnauthorizedAccessException>) yok.
+- The user lacks necessary permissions (<xref:System.UnauthorizedAccessException>).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>
-- [Nasıl yapılır: Belirli bir düzene sahip dosyaları bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
+- [Nasıl Yapılır: Belirli bir Düzendeki Dosyaları Bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)

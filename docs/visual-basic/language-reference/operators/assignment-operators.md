@@ -1,5 +1,5 @@
 ---
-title: Atama İşleçleri (Visual Basic)
+title: Atama İşleçleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - assignment operators [Visual Basic], Visual Basic
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - = assignment statements [Visual Basic]
 - assignment operators [Visual Basic]
 ms.assetid: 43b7e40c-b7af-45f6-b100-198a90f2561e
-ms.openlocfilehash: 217ae092872b5de1638d88051aed1f8a4e785b7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5de4f781d82278fb747b58a41462a470900efde4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778612"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336546"
 ---
 # <a name="assignment-operators-visual-basic"></a>Atama İşleçleri (Visual Basic)
-Visual Basic'te tanımlı atama işleçleri şunlardır:  
+The following are the assignment operators defined in Visual Basic.  
   
  [= İşleci](../../../visual-basic/language-reference/operators/assignment-operator.md)  
   
@@ -25,13 +25,13 @@ Visual Basic'te tanımlı atama işleçleri şunlardır:
   
  [/= İşleci](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
- [\\= İşleci](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
   
  [+= İşleci](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
  [-= İşleci](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)  
   
- [<\<= İşleci](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
+ [<\<= Operator](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
   
  [>>= İşleci](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
   
@@ -39,6 +39,6 @@ Visual Basic'te tanımlı atama işleçleri şunlardır:
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Deyimler](../../../visual-basic/language-reference/statements/index.md)

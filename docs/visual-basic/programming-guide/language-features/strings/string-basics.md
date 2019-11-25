@@ -1,79 +1,79 @@
 ---
-title: Visual Basic'de Dize Temelleri
+title: Dize Temelleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], Like operator
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: f1f6b98d7db510373f2729fab2a6e0ad993ea086
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7141966e3c8a8cbce42111c56a85a00709e8fe1a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591387"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344289"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic'de Dize Temelleri
-`String` Veri türünü temsil eden bir karakter dizisi (her sırayla örneğini temsil eden `Char` veri türü). Bu konu Visual Basic'de dizeleri temel kavramları tanıtır.  
+The `String` data type represents a series of characters (each representing in turn an instance of the `Char` data type). This topic introduces the basic concepts of strings in Visual Basic.  
   
-## <a name="string-variables"></a>Dize değişkenleri  
- Bir dizenin bir örneğini temsil eden bir karakter dizisi değişmez değer atanabilir. Örneğin:  
+## <a name="string-variables"></a>String Variables  
+ An instance of a string can be assigned a literal value that represents a series of characters. Örneğin:  
   
  [!code-vb[VbVbalrStrings#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#63)]  
   
- A `String` değişkeni de bir dizeye değerlendirilen bir ifade kabul edin. Aşağıda örnekler gösterilmektedir:  
+ A `String` variable can also accept any expression that evaluates to a string. Aşağıda örnekler gösterilmektedir:  
   
  [!code-vb[VbVbalrStrings#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#64)]  
   
- Atanan tüm sabit bir `String` değişkeni tırnak içine alınmalıdır (""). Bu, bir dize içindeki bir tırnak işareti bir tırnak işareti temsil edilemeyen anlamına gelir. Örneğin, aşağıdaki kod bir derleyici hatasına neden olur:  
+ Any literal that is assigned to a `String` variable must be enclosed in quotation marks (""). This means that a quotation mark within a string cannot be represented by a quotation mark. For example, the following code causes a compiler error:  
   
  [!code-vb[VbVbalrStrings#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#65)]  
   
- Bu kod, çünkü derleyici dize ikinci bir tırnak işaretinden sonra sona erer ve dizenin geri kalanı, kod olarak yorumlanır, bir hataya neden olur. Bu sorunu çözmek için Visual Basic, iki tırnak işaretleri dize değişmez değeri tek tırnak işareti içinde dize olarak yorumlar. Aşağıdaki örnek, bir dizedeki bir tırnak işareti eklemek için doğru şekilde gösterir:  
+ This code causes an error because the compiler terminates the string after the second quotation mark, and the remainder of the string is interpreted as code. To solve this problem, Visual Basic interprets two quotation marks in a string literal as one quotation mark in the string. The following example demonstrates the correct way to include a quotation mark in a string:  
   
  [!code-vb[VbVbalrStrings#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#66)]  
   
- Yukarıdaki örnekte, iki tırnak işaretleri Word'ün önceki `Look` dizesinde tek tırnak işareti haline gelir. Satır sonundaki üç tırnak işaretleri dize ve dize sonlandırma karakter bir tırnak işareti temsil eder.  
+ In the preceding example, the two quotation marks preceding the word `Look` become one quotation mark in the string. The three quotation marks at the end of the line represent one quotation mark in the string and the string termination character.  
   
- Çok satırlı dize değişmez değerleri içerebilir:  
+ String literals can contain multiple lines:  
   
 ```vb  
 Dim x = "hello  
 world"  
 ```  
   
- Ortaya çıkan dize, dize sabit değerinde (vbcr, vbcrlf, vb.) kullanılan yeni satır dizilerinin içerir.  Artık eski geçici çözümü kullanmanız gerekir:  
+ The resulting string contains newline sequences that you used in your string literal (vbcr, vbcrlf, etc.).  You no longer need to use the old workaround:  
   
 ```vb  
 Dim x = <xml><![CDATA[Hello  
 World]]></xml>.Value  
 ```  
   
-## <a name="characters-in-strings"></a>Dizelerdeki karakterleri  
- Bir dize, bir dizi olarak düşünülebilir `Char` değerleri ve `String` türü diziler tarafından izin verilen işlemeleri benzer bir dizesine birçok işlemeleri gerçekleştirme olanak tanıyan yerleşik işlevleri vardır. .NET Framework'teki tüm dizi gibi sıfır tabanlı diziler şunlardır. Bir dize içinde belirli bir karakter bakabilirsiniz `Chars` özelliği bir karakter dizesi içinde göründüğü konumu erişmek için bir yol sağlar. Örneğin:  
+## <a name="characters-in-strings"></a>Characters in Strings  
+ A string can be thought of as a series of `Char` values, and the `String` type has built-in functions that allow you to perform many manipulations on a string that resemble the manipulations allowed by arrays. Like all array in .NET Framework, these are zero-based arrays. You may refer to a specific character in a string through the `Chars` property, which provides a way to access a character by the position in which it appears in the string. Örneğin:  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   
- Yukarıdaki örnekte, `Chars` dize özelliğini döndürür dördüncü karakter olan dizesinde `D`ve buna atayan `myChar`. Belirli bir dizenin uzunluğunu da edinebilirsiniz `Length` özelliği. Bir dize üzerinde birden fazla dizi türü değişikliklerini gerçekleştirmeniz gerekiyorsa, bunu bir dizisi olarak dönüştürebilirsiniz `Char` kullanarak örnekler `ToCharArray` dize işlevi. Örneğin:  
+ In the above example, the `Chars` property of the string returns the fourth character in the string, which is `D`, and assigns it to `myChar`. You can also get the length of a particular string through the `Length` property. If you need to perform multiple array-type manipulations on a string, you can convert it to an array of `Char` instances using the `ToCharArray` function of the string. Örneğin:  
   
  [!code-vb[VbVbalrStrings#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#68)]  
   
- Değişken `myArray` artık bir dizi içeren `Char` değerleri, her bir karakteri temsil eden `myString`.  
+ The variable `myArray` now contains an array of `Char` values, each representing a character from `myString`.  
   
-## <a name="the-immutability-of-strings"></a>Değiştirilemezlik dizeler  
- Bir dizedir *değişmez*, değeri bir kez değiştirilemez anlamına oluşturuldu. Ancak, bu, birden fazla değer bir dize değişkenine atamanızı engellemez. Aşağıdaki örnek göz önünde bulundurun:  
+## <a name="the-immutability-of-strings"></a>The Immutability of Strings  
+ A string is *immutable*, which means its value cannot be changed once it has been created. However, this does not prevent you from assigning more than one value to a string variable. Consider the following example:  
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  
   
- Burada verilen bir değer bir dize değişkeni oluşturulur ve ardından değeri değiştirilir.  
+ Here, a string variable is created, given a value, and then its value is changed.  
   
- Özellikle, ilk satırda, türün bir örneğini `String` oluşturulur ve değerin `This string is immutable`. Örneğin ikinci satırda yeni bir örneği oluşturulur ve değerin `Or is it?`, string değişkeni, ilk örneğine başvuru atar ve yeni örneğe bir başvuru depolar.  
+ More specifically, in the first line, an instance of type `String` is created and given the value `This string is immutable`. In the second line of the example, a new instance is created and given the value `Or is it?`, and the string variable discards its reference to the first instance and stores a reference to the new instance.  
   
- Diğer iç veri türleri farklı `String` bir başvuru türüdür. Verilerin depolandığı bellek adresi başvurusu, başvuru türünde bir değişken bağımsız değişken olarak bir işlev veya alt yordamı geçirildiğinde, gerçek dize değerini yerine geçirilir. Önceki örnekte, değişken adı aynı kalır, ancak bir yeni ve farklı örneğine işaret `String` yeni değeri tutan sınıfı.  
+ Unlike other intrinsic data types, `String` is a reference type. When a variable of reference type is passed as an argument to a function or subroutine, a reference to the memory address where the data is stored is passed instead of the actual value of the string. So in the previous example, the name of the variable remains the same, but it points to a new and different instance of the `String` class, which holds the new value.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Introduction to Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
 - [String Veri Türü](../../../../visual-basic/language-reference/data-types/string-data-type.md)
 - [Char Veri Türü](../../../../visual-basic/language-reference/data-types/char-data-type.md)
 - [Temel Dize İşlemleri](../../../../standard/base-types/basic-string-operations.md)

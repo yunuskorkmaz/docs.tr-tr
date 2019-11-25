@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) için bir yordam parametresini tanımlama'
+title: 'Nasıl yapılır: Bir Yordamın Parametresini Tanımlama'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure parameters [Visual Basic], defining data types for
@@ -8,58 +8,58 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: bf57d4dbd7e8596396fb2e9099d5984759d6e90d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 411959a7be92ea49a59558b508e992bfba8eff95
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665373"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344880"
 ---
-# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Nasıl yapılır: (Visual Basic) için bir yordam parametresini tanımlama
-A *parametre* çağıran kod, çağırdığında bir değeri yordama geçirmeye izin verir. Her parametre için bir yordam adı ve veri türünü belirten bir değişken bildirmek aynı şekilde bildirin. Ayrıca geçirme mekanizma belirtin ve parametre isteğe bağlıdır.  
+# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Nasıl yapılır: Bir Yordamın Parametresini Tanımlama (Visual Basic)
+A *parameter* allows the calling code to pass a value to the procedure when it calls it. You declare each parameter for a procedure the same way you declare a variable, specifying its name and data type. You also specify the passing mechanism, and whether the parameter is optional.  
   
- Daha fazla bilgi için [parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md).  
+ For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
   
-### <a name="to-define-a-procedure-parameter"></a>Bir yordamın parametresini tanımlama  
+### <a name="to-define-a-procedure-parameter"></a>To define a procedure parameter  
   
-1. Yordam bildiriminde parametre adı, diğer parametreler virgülle ayırarak, yordam parametre listesine ekleyin.  
+1. In the procedure declaration, add the parameter name to the procedure's parameter list, separating it from other parameters by commas.  
   
-2. Parametrenin veri türünü karar verin.  
+2. Decide the data type of the parameter.  
   
-3. Parametre adı ile bir `As` yan veri türü belirtin.  
+3. Follow the parameter name with an `As` clause to specify the data type.  
   
-4. Parametresi için istediğiniz geçirme mekanizması karar verin. Normalde çağıran koddaki değeri değiştirebilmesi için yordamı istemediğiniz sürece değere göre bir parametre geçirin.  
+4. Decide the passing mechanism you want for the parameter. Normally you pass a parameter by value, unless you want the procedure to be able to change its value in the calling code.  
   
-5. Parametre adıyla önünde [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) geçirme mekanizması belirtmek için. Daha fazla bilgi için [farklar arasında geçen bir bağımsız değişken değer ve başvuru tarafından](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+5. Precede the parameter name with [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) to specify the passing mechanism. For more information, see [Differences Between Passing an Argument By Value and By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6. Parametre isteğe bağlıysa geçirme mekanizmasıyla önünde [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) ve parametre veri türü bir eşittir işareti ile izleyin (`=`) ve varsayılan değeri.  
+6. If the parameter is optional, precede the passing mechanism with [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) and follow the parameter data type with an equal sign (`=`) and a default value.  
   
-     Aşağıdaki örnek, ana hat tanımlar. bir `Sub` yordamı üç parametrelere sahip. İlk iki gereklidir ve üçüncü isteğe bağlıdır. Parametre bildirimleri parametre listesinde virgülle ayrılır.  
+     The following example defines the outline of a `Sub` procedure with three parameters. The first two are required and the third is optional. The parameter declarations are separated in the parameter list by commas.  
   
      [!code-vb[VbVbcnProcedures#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#33)]  
   
-     İlk parametre kabul eden bir `customer` nesnesi ve `updateCustomer` doğrudan geçirilen değişkeni güncelleştirebilirsiniz `c` geçirilen bağımsız değişken olduğundan [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Geçirilen çünkü yordamın son iki bağımsız değişken değerlerini değiştiremezsiniz [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
+     The first parameter accepts a `customer` object, and `updateCustomer` can directly update the variable passed to `c` because the argument is passed [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). The procedure cannot change the values of the last two arguments because they are passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   
-     Çağıran kod için bir değer sağlamıyor varsa `level` parametre, Visual Basic ayarlar, varsayılan değeri 0 olarak.  
+     If the calling code does not supply a value for the `level` parameter, Visual Basic sets it to the default value of 0.  
   
-     Tür denetleme geçerseniz ([Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) olan `Off`, `As` yan tümcesi olduğunda isteğe bağlı bir parametre tanımlayın. Ancak, herhangi bir parametre kullanıyorsa bir `As` yan tümcesi, bunların tümünün gerekir kullanır. Geçiş denetimi türü ise `On`, `As` yan tümcesi için her bir parametre tanımında gereklidir.  
+     If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off`, the `As` clause is optional when you define a parameter. However, if any one parameter uses an `As` clause, all of them must use it. If the type checking switch is `On`, the `As` clause is required for every parameter definition.  
   
-     Tüm programlama öğeleriniz için veri türlerini belirtme olarak bilinir *güçlü yazım, yazım*. Ayarladığınızda `Option Strict On`, Visual Basic güçlü yazım, yazım zorlar. Bu, aşağıdaki nedenlerden dolayı önerilir:  
+     Specifying data types for all your programming elements is known as *strong typing*. When you set `Option Strict On`, Visual Basic enforces strong typing. This is strongly recommended, for the following reasons:  
   
-    - Bu değişkenler ve parametreler için IntelliSense desteği sağlar. Bunu siz kodunuzu yazarken, özelliklerini ve diğer üyeleri görmenizi sağlar.  
+    - It enables IntelliSense support for your variables and parameters. This allows you to see their properties and other members as you type in your code.  
   
-    - Derleyicinin tür denetimi sağlar. Bu, catch taşma gibi hatalar nedeniyle çalışma zamanında başarısız olabilir deyimleri yardımcı olur. Ayrıca bunları desteği olmayan nesneler üzerinde yöntemlere yapılan çağrılar yakalar.  
+    - It allows the compiler to perform type checking. This helps catch statements that can fail at run time due to errors such as overflow. It also catches calls to methods on objects that do not support them.  
   
-    - Bu, kodunuzun daha hızlı bir şekilde yürütülmesini sonuçlanır. Bunun bir nedeni olduğundan bir programlama öğesi için bir veri türü belirtmezseniz, Visual Basic Derleyicisi, atamasını `Object` türü. Derlenmiş kod arasında ileri ve geri dönüştürmek zorunda kalabilirsiniz `Object` ve diğer veri türleri, performansı azaltır.  
+    - It results in faster execution of your code. One reason for this is that if you do not specify a data type for a programming element, the Visual Basic compiler assigns it the `Object` type. Your compiled code might have to convert back and forth between `Object` and other data types, which reduces performance.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yordamlar](./index.md)
 - [Alt Yordamlar](./sub-procedures.md)
 - [İşlev Yordamları](./function-procedures.md)
-- [Nasıl yapılır: Bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)
+- [Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme](./how-to-pass-arguments-to-a-procedure.md)
 - [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)
 - [Özyinelemeli Yordamlar](./recursive-procedures.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
 - [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Nesne odaklı programlama (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [Object-Oriented Programming (Visual Basic)](../../concepts/object-oriented-programming.md)

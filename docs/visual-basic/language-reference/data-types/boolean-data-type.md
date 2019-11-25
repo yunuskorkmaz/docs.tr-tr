@@ -1,5 +1,5 @@
 ---
-title: Boole Veri Türü (Visual Basic)
+title: Boole Veri Türü
 ms.date: 07/20/2015
 f1_keywords:
 - vb.FALSE
@@ -12,38 +12,42 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: b1e4add39cee6c733a6f4b95aa1668975f2f2d6d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 5d05514207c5d07e81aab897f40f728570f6bd87
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268261"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347843"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boole Veri Türü (Visual Basic)
-Yalnızca ayrı tutma değerleri `True` veya `False`. Anahtar sözcükler `True` ve `False` iki durum için karşılık gelen `Boolean` değişkenleri.  
+
+Holds values that can be only `True` or `False`. The keywords `True` and `False` correspond to the two states of `Boolean` variables.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım [Boole veri türü (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) Evet/Hayır veya açık/kapalı true/false gibi iki durumlu değerler içerecek şekilde.  
+
+ Use the [Boolean Data Type (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) to contain two-state values such as true/false, yes/no, or on/off.  
   
- Varsayılan değer olan `Boolean` olduğu `False`.  
+ The default value of `Boolean` is `False`.  
   
- `Boolean` Değer sayı olarak depolanmaz ve depolanan değerler sayıya eşdeğer olması amaçlanmamıştır. Hiçbir zaman eşdeğer sayısal değerler için dayanan kod yazmanız gerekir `True` ve `False`. Mümkün olduğunda, kullanımını sınırlamanız gerekir `Boolean` kendisi için tasarlanan mantıksal değerleri değişkenlere.  
+ `Boolean` values are not stored as numbers, and the stored values are not intended to be equivalent to numbers. You should never write code that relies on equivalent numeric values for `True` and `False`. Whenever possible, you should restrict usage of `Boolean` variables to the logical values for which they are designed.  
   
 ## <a name="type-conversions"></a>Tür Dönüştürmeleri  
- Visual Basic sayısal veri türü değerleri için ne zaman dönüştürür `Boolean`, 0 olur `False` ve diğer tüm değerler `True`. Visual Basic zaman dönüştürür `Boolean` değerleri sayısal türlere `False` 0 olur ve `True` -1 olur.  
+
+ When Visual Basic converts numeric data type values to `Boolean`, 0 becomes `False` and all other values become `True`. When Visual Basic converts `Boolean` values to numeric types, `False` becomes 0 and `True` becomes -1.  
   
- Arasında dönüştürürken `Boolean` değerlerini ve sayısal veri türlerini tutmak .NET Framework dönüştürme yöntemleri Visual Basic dönüştürme anahtar sözcükleri'dekiyle aynı sonucu her zaman oluşturmamasını unutmayın. Visual Basic dönüştürme davranışını önceki sürümleriyle uyumlu korur olmasıdır. Daha fazla bilgi için "Boole türü mu değil dönüştürmek için sayısal türü doğru" bölümüne bakın [veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ When you convert between `Boolean` values and numeric data types, keep in mind that the .NET Framework conversion methods do not always produce the same results as the Visual Basic conversion keywords. This is because the Visual Basic conversion retains behavior compatible with previous versions. For more information, see "Boolean Type Does Not Convert to Numeric Type Accurately" in [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
-- **Negatif sayılar.** `Boolean` bir sayısal tür değil ve negatif bir değeri temsil edemeyen. Her iki durumda da kullanmamalısınız `Boolean` sayısal değerleri tutmak için.  
+- **Negative Numbers.** `Boolean` is not a numeric type and cannot represent a negative value. In any case, you should not use `Boolean` to hold numeric values.  
   
-- **Tür karakterleri.** `Boolean` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri var.  
+- **Type Characters.** `Boolean` has no literal type character or identifier type character.  
   
-- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Boolean?displayProperty=nameWithType> yapısı.  
+- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Boolean?displayProperty=nameWithType> structure.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, `runningVB` olduğu bir `Boolean` Evet/Hayır basit depolayan değişken.  
+
+ In the following example, `runningVB` is a `Boolean` variable, which stores a simple yes/no setting.  
   
 ```vb  
 Dim runningVB As Boolean  

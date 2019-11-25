@@ -1,5 +1,5 @@
 ---
-title: Visual Basic'de Me, My, MyBase ve MyClass
+title: Me, My, MyBase ve MyClass
 ms.date: 07/20/2015
 f1_keywords:
 - MyClass
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: 7df146e09a1d7cd730f4cf539d6823f7ced44bd1
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: a21dfeb12e8d99f5f8b8afede084846711c299ab
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002538"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347345"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic'de Me, My, MyBase ve MyClass
-`Me`, `My`, `MyBase` ve Visual Basic `MyClass` benzer adlara sahiptir, ancak farklı amaçlara sahiptir. Bu konu, bu varlıkların her birini ayırt edebilmek için açıklar.  
+`Me`, `My`, `MyBase`, and `MyClass` in Visual Basic have similar names, but different purposes. This topic describes each of these entities in order to distinguish them.  
   
 ## <a name="me"></a>Beni  
- @No__t-0 anahtar sözcüğü, kodun Şu anda yürütüldüğü bir sınıfın veya yapının belirli bir örneğine başvurmak için bir yol sağlar. `Me`, geçerli örneğe başvuran bir nesne değişkeni ya da bir yapı değişkeni gibi davranır. @No__t-0 kullanmak, bir sınıfın veya yapının Şu anda yürütülmekte olan örneği hakkındaki bilgileri başka bir sınıf, yapı veya modüldeki bir yordama iletmek için özellikle yararlıdır.  
+ The `Me` keyword provides a way to refer to the specific instance of a class or structure in which the code is currently executing. `Me` behaves like either an object variable or a structure variable referring to the current instance. Using `Me` is particularly useful for passing information about the currently executing instance of a class or structure to a procedure in another class, structure, or module.  
   
- Örneğin, bir modülde aşağıdaki yordama sahip olduğunuzu varsayalım.  
+ For example, suppose you have the following procedure in a module.  
   
 ```vb  
 Sub ChangeFormColor(FormName As Form)  
@@ -43,20 +43,20 @@ Sub ChangeFormColor(FormName As Form)
 End Sub  
 ```  
   
- Aşağıdaki ifadeyi kullanarak, bu yordamı çağırabilir ve <xref:System.Windows.Forms.Form> sınıfının geçerli örneğini bir bağımsız değişken olarak geçirebilirsiniz.  
+ You can call this procedure and pass the current instance of the <xref:System.Windows.Forms.Form> class as an argument by using the following statement.  
   
 ```vb  
 ChangeFormColor(Me)  
 ```  
   
 ## <a name="my"></a>Benim  
- @No__t-0 özelliği, Visual Basic kullanıcının bilgisayar, uygulama, ayarlar, kaynaklar vb. ile etkileşime geçmesini sağlayan bir dizi .NET Framework sınıfa kolay ve sezgisel erişim sağlar.  
+ The `My` feature provides easy and intuitive access to a number of .NET Framework classes, enabling the Visual Basic user to interact with the computer, application, settings, resources, and so on.  
   
 ## <a name="mybase"></a>MyBase  
- @No__t-0 anahtar sözcüğü, sınıfın geçerli örneğinin temel sınıfına başvuran bir nesne değişkeni gibi davranır. `MyBase` genellikle türetilmiş bir sınıfta geçersiz kılınan veya gölgeli temel sınıf üyelerine erişmek için kullanılır. `MyBase.New`, türetilmiş bir sınıf oluşturucusundan bir taban sınıf oluşturucuyu açıkça çağırmak için kullanılır.  
+ The `MyBase` keyword behaves like an object variable referring to the base class of the current instance of a class. `MyBase` is commonly used to access base class members that are overridden or shadowed in a derived class. `MyBase.New` is used to explicitly call a base class constructor from a derived class constructor.  
   
-## <a name="myclass"></a>Sınıfım  
- @No__t-0 anahtar sözcüğü, başlangıçta uygulanmış olan bir sınıfın geçerli örneğine başvuran bir nesne değişkeni gibi davranır. `MyClass`, `Me` ile benzerdir, ancak üzerinde tüm Yöntem çağrıları Yöntem `NotOverridable` gibi değerlendirilir.  
+## <a name="myclass"></a>MyClass  
+ The `MyClass` keyword behaves like an object variable referring to the current instance of a class as originally implemented. `MyClass` is similar to `Me`, but all method calls on it are treated as if the method were `NotOverridable`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

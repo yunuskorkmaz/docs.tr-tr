@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: alt öğe bulma (XPath-LINQ to XML) (Visual Basic)'
+title: 'How to: Find a Child Element (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: adb46c98-a650-42e2-b62d-835920fe8421
-ms.openlocfilehash: 9dac53f70882791fb05265d4a04444c98adff451
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 3697dabb1b277ceab7b7bb9be54b72ef8be6974d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249984"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353038"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: alt öğe bulma (XPath-LINQ to XML) (Visual Basic)
-Bu konu, XPath alt öğe eksenini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> yöntemiyle karşılaştırır.  
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>How to: Find a Child Element (XPath-LINQ to XML) (Visual Basic)
+This topic compares the XPath child element axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> method.  
   
- XPath ifadesi `DeliveryNotes` ' dır.  
+ The XPath expression is `DeliveryNotes`.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek `DeliveryNotes` alt öğesini bulur.  
+ This example finds the child element `DeliveryNotes`.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -39,7 +39,7 @@ End If
 Console.WriteLine(el1)  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```console
 Results are identical  
@@ -48,4 +48,4 @@ Results are identical
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XPath kullanıcıları için LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

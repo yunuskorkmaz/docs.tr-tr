@@ -1,5 +1,5 @@
 ---
-title: SByte Veri Türü (Visual Basic)
+title: SByte Veri Türü
 ms.date: 04/20/2017
 f1_keywords:
 - vb.sbyte
@@ -14,39 +14,39 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: a962200195002858257b92e92e0dd1383d4fb2d2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 01a0a4a261213d7e6e2016bf49128092e5b22308
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582513"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343943"
 ---
-# <a name="sbyte-data-type-visual-basic"></a>SByte veri türü (Visual Basic)
+# <a name="sbyte-data-type-visual-basic"></a>SByte data type (Visual Basic)
 
--128 ile 127 arasında bir değer olan işaretli 8 bit (1 baytlık) tamsayıları tutar.
+Holds signed 8-bit (1-byte) integers that range in value from -128 through 127.
 
 ## <a name="remarks"></a>Açıklamalar
 
-@No__t_1 tam veri genişliğine veya `Short` yarı veri genişliğine gerek gerektirmeyen tamsayı değerleri içermesi için `SByte` veri türünü kullanın. Bazı durumlarda, ortak dil çalışma zamanı `SByte` değişkenlerinizi birbirine yakından paketlenebilir ve bellek tüketimini kaydedebilir.
+Use the `SByte` data type to contain integer values that do not require the full data width of `Integer` or even the half data width of `Short`. In some cases, the common language runtime might be able to pack your `SByte` variables closely together and save memory consumption.
 
-@No__t_0 varsayılan değeri 0 ' dır.
+The default value of `SByte` is 0.
 
-## <a name="literal-assignments"></a>Değişmez değer atamaları
+## <a name="literal-assignments"></a>Literal assignments
 
-Bir `SByte` değişkeni bir ondalık sabit değer, bir onaltılı sabit değer, sekizlik bir sabit değer veya (Visual Basic 2017 ' den başlayarak) ikili bir değişmez değer atayarak başlatabilir ve başlatabilirsiniz.
+You can declare and initialize an `SByte` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal.
 
-Aşağıdaki örnekte, ondalık, onaltılık ve ikili sabit değerler olarak temsil edilen-102 ' e eşit tamsayılar `SByte` değerlere atanır. Bu örnek, `/removeintchecks` derleyici anahtarıyla derlemeniz gerekir.
+In the following example, integers equal to -102 that are represented as decimal, hexadecimal, and binary literals are assigned to `SByte` values. This example requires that you compile with the `/removeintchecks` compiler switch.
 
 [!code-vb[SByte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByte)]
 
 > [!NOTE]
-> Ön ek `&h` veya `&H` bir onaltılık sabit değeri, ön ek `&b` veya `&B` bir ikili sabit değer belirtmek için, önek `&o` veya `&O`, sekizlik bir sabit değeri belirtmek için kullanılır. Ondalık değişmez değerlerinin ön eki yok.
+> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. Decimal literals have no prefix.
 
-Visual Basic 2017 ' den başlayarak, aşağıdaki örnekte gösterildiği gibi, okunabilirliği geliştirmek için `_` alt çizgi karakterini bir rakam ayırıcısı olarak da kullanabilirsiniz.
+Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]
 
-Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini (`_`) ön ek ile onaltılık, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak kullanabilirsiniz. Örneğin:
+Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. Örneğin:
 
 ```vb
 Dim number As SByte = &H_F9
@@ -54,23 +54,23 @@ Dim number As SByte = &H_F9
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Tamsayı sabit değeri `SByte` aralığının dışındaysa (yani, <xref:System.SByte.MinValue?displayProperty=nameWithType> veya <xref:System.SByte.MaxValue?displayProperty=nameWithType> değerinden daha küçükse, bir derleme hatası oluşur. Bir tamsayı değişmez değeri hiç sonekine sahip olmadığında, bir [tamsayı](integer-data-type.md) çıkarsanın. Tamsayı sabit değeri `Integer` türü aralığının dışındaysa [Long](long-data-type.md) değeri algılanır. Yani, önceki örneklerde `0x9A` ve `0b10011010` sayısal değişmez değerler 156 değerine sahip 32 bitlik işaretli tamsayılar olarak yorumlanır ve bu da <xref:System.SByte.MaxValue?displayProperty=nameWithType> değerini aşar. Bir `SByte` ondalık olmayan bir tamsayı atayan bu gibi bir kodu başarıyla derlemek için aşağıdakilerden birini yapabilirsiniz:
+If the integer literal is outside the range of `SByte` (that is, if it is less than <xref:System.SByte.MinValue?displayProperty=nameWithType> or greater than <xref:System.SByte.MaxValue?displayProperty=nameWithType>, a compilation error occurs. When an integer literal has no suffix, an [Integer](integer-data-type.md) is inferred. If the integer literal is outside the range of the `Integer` type, a [Long](long-data-type.md) is inferred. This means that, in the previous examples, the numeric literals `0x9A` and `0b10011010` are interpreted as 32-bit signed integers with a value of 156, which exceeds <xref:System.SByte.MaxValue?displayProperty=nameWithType>. To successfully compile code like this that assigns a non-decimal integer to an `SByte`, you can do either of the following:
 
-- @No__t_0 derleyici anahtarıyla derleme yaparak tamsayı sınırları denetimlerini devre dışı bırakın.
+- Disable integer bounds checks by compiling with the `/removeintchecks` compiler switch.
 
-- @No__t_1 atamak istediğiniz sabit değeri açıkça tanımlamak için bir [tür karakteri](../../programming-guide/language-features/data-types/type-characters.md) kullanın. Aşağıdaki örnek bir `SByte` negatif değişmez değer `Short` değeri atar. Negatif sayılar için, sayısal sabit değerin yüksek sıralı sözcüğünün yüksek sıralı bitinin ayarlanmış olması gerektiğini unutmayın. Örneğimizde bu, sabit değer `Short` değerinin 15 bit değeridir.
+- Use a [type character](../../programming-guide/language-features/data-types/type-characters.md) to explicitly define the literal value that you want to assign to the `SByte`. The following example assigns a negative literal `Short` value to an `SByte`. Note that, for negative numbers, the high-order bit of the high-order word of the numeric literal must be set. In the case of our example, this is bit 15 of the literal `Short` value.
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 
 ## <a name="programming-tips"></a>Programlama ipuçları
 
-- **CLS uyumluluğu.** @No__t_0 veri türü [ortak dil belirtiminin](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod onu kullanan bir bileşeni tüketmez.
+- **CLS Compliance.** The `SByte` data type is not part of the [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), so CLS-compliant code cannot consume a component that uses it.
 
-- **Kan.** @No__t_0 veri türü `Short`, `Integer`, `Long`, `Decimal`, `Single` ve `Double` için. Bu, bir <xref:System.OverflowException?displayProperty=nameWithType> hatasıyla karşılaşmadan `SByte` bu türlerden birine dönüştürebileceğiniz anlamına gelir.
+- **Widening.** The `SByte` data type widens to `Short`, `Integer`, `Long`, `Decimal`, `Single`, and `Double`. This means you can convert `SByte` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
 
-- **Tür karakterleri.** `SByte` değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok.
+- **Type Characters.** `SByte` has no literal type character or identifier type character.
 
-- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.SByte?displayProperty=nameWithType> yapısıdır.
+- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.SByte?displayProperty=nameWithType> structure.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

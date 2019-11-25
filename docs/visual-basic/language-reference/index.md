@@ -1,5 +1,5 @@
 ---
-title: Visual Basic Dil Başvurusu
+title: Dil Başvurusu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic language reference
@@ -10,80 +10,83 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: 2c0372e0176ea54a975e787631ba2849f79e5493
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e1838fe6c9d563358757700d74cbf27228812a9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803187"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349949"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic Dil Başvurusu
-Bu bölümde, Visual Basic dilinin çeşitli yönlerine başvuru bilgileri sağlar.  
+
+This section provides reference information for various aspects of the Visual Basic language.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Tipografi ve Kod Kuralları](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- Anahtar sözcükler, yer tutucular ve dil diğer öğeleri Visual Basic belgelerinde biçimlendirildiğini şekilde özetler.  
+ Summarizes the way that keywords, placeholders, and other elements of the language are formatted in the Visual Basic documentation.  
   
  [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../visual-basic/language-reference/runtime-library-members.md)  
- Sınıfları ve modüllerini listeler <xref:Microsoft.VisualBasic?displayProperty=nameWithType> kendi üye işlevleri, yöntemler, özellikler, sabitler ve numaralandırmalar için bağlantılarla birlikte ad alanı.  
+ Lists the classes and modules of the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace, with links to their member functions, methods, properties, constants, and enumerations.  
   
  [Anahtar Sözcükler](../../visual-basic/language-reference/keywords/index.md)  
- Tüm Visual Basic anahtar sözcükleri listeler ve daha fazla bilgi için bağlantılar sağlar.  
+ Lists all Visual Basic keywords and provides links to more information.  
   
- [Öznitelikler (Visual Basic)](../../visual-basic/language-reference/attributes.md)  
- Visual Basic'te kullanılabilir öznitelikler belgeler.  
+ [Attributes (Visual Basic)](../../visual-basic/language-reference/attributes.md)  
+ Documents the attributes available in Visual Basic.  
   
  [Sabitler ve Sabit Listeleri](../../visual-basic/language-reference/constants-and-enumerations.md)  
- Sabitler ve numaralandırmalar Visual Basic'te kullanılabilir belgeler.  
+ Documents the constants and enumerations available in Visual Basic.  
   
  [Veri Türleri](../../visual-basic/language-reference/data-types/index.md)  
- Visual Basic'te kullanılabilir veri türleri listelenmiştir.  
+ Documents the data types available in Visual Basic.  
   
  [Yönergeler](../../visual-basic/language-reference/directives/index.md)  
- Visual Basic'te kullanılabilir derleyici yönergeleri içermektedir.  
+ Documents the compiler directives available in Visual Basic.  
   
  [İşlevler](../../visual-basic/language-reference/functions/index.md)  
- Visual Basic'te kullanılabilir çalışma zamanı işlevleri belgeleri.  
+ Documents the run-time functions available in Visual Basic.  
   
  [Değiştiriciler](../../visual-basic/language-reference/modifiers/index.md)  
- Visual Basic çalışma zamanı değiştiriciler listeler ve daha fazla bilgi için bağlantılar sağlar.  
+ Lists the Visual Basic run-time modifiers and provides links to more information.  
   
  [Modüller](../../visual-basic/language-reference/modules.md)  
- Visual Basic ve bunların üyeleri de kullanılabilir modül içermektedir.  
+ Documents the modules available in Visual Basic and their members.  
   
  [Nothing](../../visual-basic/language-reference/nothing.md)  
- Herhangi bir veri türünün varsayılan değerini açıklar.  
+ Describes the default value of any data type.  
   
  [Nesneler](../../visual-basic/language-reference/objects/index.md)  
- Visual Basic ve bunların üyeleri de var olan nesneler listelenmiştir.  
+ Documents the objects available in Visual Basic and their members.  
   
- [İşleçler](../../visual-basic/language-reference/operators/index.md)  
- Visual Basic'de işleçler belgeler.  
+ [işleçler](../../visual-basic/language-reference/operators/index.md)  
+ Documents the operators available in Visual Basic.  
   
- [Özellikler](../../visual-basic/language-reference/properties.md)  
- Visual Basic'te kullanılabilir özellikleri içermektedir.  
+ [Veri Erişimi](../../visual-basic/language-reference/properties.md)  
+ Documents the properties available in Visual Basic.  
   
  [Sorgular](../../visual-basic/language-reference/queries/index.md)  
- Kullanma hakkında başvuru bilgileri sağlar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] kodunuzda ifadeler.  
+ Provides reference information about using [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.  
   
  [Deyimler](../../visual-basic/language-reference/statements/index.md)  
- Visual Basic'te kullanılabilir bildirimi ve yürütülebilir deyimleri belgeler.  
+ Documents the declaration and executable statements available in Visual Basic.  
   
  [XML Açıklama Etiketleri](../../visual-basic/language-reference/xmldoc/index.md)  
- IntelliSense Visual Basic Kod Düzenleyicisi'nde sağlanan belge açıklamaları açıklar.  
+ Describes the documentation comments for which IntelliSense is provided in the Visual Basic Code Editor.  
   
  [XML Eksen Özellikleri](../../visual-basic/language-reference/xml-axis/index.md)  
- Kodunuzda doğrudan XML erişmek için XML eksen özelliklerini kullanma hakkında bilgi için bağlantılar sağlar.  
+ Provides links to information about using XML axis properties to access XML directly in your code.  
   
  [XML Değişmez Değerleri](../../visual-basic/language-reference/xml-literals/index.md)  
- XML değişmez değerleri, kodunuzda doğrudan XML birleştirmek için kullanma hakkında bilgi için bağlantılar sağlar.  
+ Provides links to information about using XML literals to incorporate XML directly in your code.  
   
  [Hata İletileri](../../visual-basic/language-reference/error-messages/index.md)  
- Bunları nasıl ele alınacağını Visual Basic derleyici ve çalışma zamanı hata iletileri ve Yardım listesini sağlar.  
+ Provides a listing of Visual Basic compiler and run-time error messages and help on how to handle them.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Visual Basic](../../visual-basic/index.md)  
- Visual Basic dilinin tüm alanlara kapsamlı Yardım sağlar.  
+ Provides comprehensive help on all areas of the Visual Basic language.  
   
- [Visual Basic komut satırı derleyicisi](../../visual-basic/reference/command-line-compiler/index.md)  
- Visual Studio tümleşik geliştirme ortamında (IDE) programları derleme alternatif olarak komut satırı derleyicisini kullanmayı açıklar.
+ [Visual Basic Command-Line Compiler](../../visual-basic/reference/command-line-compiler/index.md)  
+ Describes how to use the command-line compiler as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).

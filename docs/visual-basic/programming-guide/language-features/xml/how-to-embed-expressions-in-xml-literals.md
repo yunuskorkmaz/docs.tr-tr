@@ -1,33 +1,33 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) XML değişmez değerlerine ifade katıştırma'
+title: 'Nasıl yapılır: XML Değişmez Değerlerine İfade Katıştırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 9d0fd1e3713dc5b81cfca0ce54b571b38e648f87
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2e8dd10b334b0271e3c9de11ed155c9d5d7aae48
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879108"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332935"
 ---
-# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Nasıl yapılır: (Visual Basic) XML değişmez değerlerine ifade katıştırma
-XML değişmez değerleri, bir XML belge, parça veya çalışma zamanında oluşturulan içeriği içeren bir öğe oluşturmak için katıştırılmış ifadeleri ile birleştirebilirsiniz. Aşağıdaki örnekler, katıştırılmış ifadeler öğe içeriği, öznitelikleri ve öğe adları çalışma zamanında doldurmak için nasıl kullanılacağını göstermektedir.  
+# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Nasıl yapılır: XML Değişmez Değerlerine İfade Katıştırma (Visual Basic)
+You can combine XML literals with embedded expressions to create an XML document, fragment, or element that contains content created at run time. The following examples demonstrate how to use embedded expressions to populate element content, attributes, and element names at run time.  
   
- Katıştırılmış bir ifade sözdizimi `<%=` `exp` `%>`, aynı sözdizimini kullanan ASP.NET olduğu. Daha fazla bilgi için [XML'de katıştırılmış ifadeler](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ The syntax for an embedded expression is `<%=` `exp` `%>`, which is the same syntax that ASP.NET uses. For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- Ayrıca [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oluşturmak için API'ler [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesneleri. Daha fazla bilgi için bkz. <xref:System.Xml.Linq.XElement>.  
+ You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. Daha fazla bilgi için bkz. <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="procedures"></a>Yordamlar  
   
-#### <a name="to-insert-text-as-element-content"></a>Öğe içeriği metin eklemek için  
+#### <a name="to-insert-text-as-element-content"></a>To insert text as element content  
   
-- Aşağıdaki örnekte yer alan metin eklemek gösterilmektedir `contactName` açılış ve kapanış adı öğeler arasında değişken.  
+- The following example shows how to insert the text that is contained in the `contactName` variable between the opening and closing name elements.  
   
      [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
-     Bu örnek aşağıdaki çıktıyı üretir:  
+     This example produces the following output:  
   
     ```xml  
     <contact>  
@@ -35,13 +35,13 @@ XML değişmez değerleri, bir XML belge, parça veya çalışma zamanında olu�
     </contact>  
     ```  
   
-#### <a name="to-insert-text-as-an-attribute-value"></a>Bir öznitelik değeri metin eklemek için  
+#### <a name="to-insert-text-as-an-attribute-value"></a>To insert text as an attribute value  
   
-- Aşağıdaki örnekte yer alan metin eklemek gösterilmektedir `phoneType` değeri olarak değişken `type` özniteliği.  
+- The following example shows how to insert the text that is contained in the `phoneType` variable as the value of the `type` attribute.  
   
      [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
-     Bu örnek aşağıdaki çıktıyı üretir:  
+     This example produces the following output:  
   
     ```xml  
     <contact>  
@@ -49,15 +49,15 @@ XML değişmez değerleri, bir XML belge, parça veya çalışma zamanında olu�
     </contact>  
     ```  
   
-#### <a name="to-insert-text-for-an-element-name"></a>Bir öğe adı için metin eklemek için  
+#### <a name="to-insert-text-for-an-element-name"></a>To insert text for an element name  
   
-- Aşağıdaki örnekte yer alan metin eklemek gösterilmektedir `elementName` değişken olarak bir öğe adı.  
+- The following example shows how to insert the text that is contained in the `elementName` variable as the name of an element.  
   
-     Bu tekniği kullanarak öğeleri oluştururken kapatmalısınız \</ > etiketi.  
+     When creating elements by using this technique, you must close them with the \</> tag.  
   
      [!code-vb[VbXMLSamples#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#41)]  
   
-     Bu örnek aşağıdaki çıktıyı üretir:  
+     This example produces the following output:  
   
     ```xml  
     <contact>  
@@ -67,7 +67,7 @@ XML değişmez değerleri, bir XML belge, parça veya çalışma zamanında olu�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: XML değişmez değerleri oluşturma](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
+- [Nasıl yapılır: XML Değişmez Değerleri Oluşturma](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
 - [XML'de Katıştırılmış İfadeler](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
-- [Visual Basic'de XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

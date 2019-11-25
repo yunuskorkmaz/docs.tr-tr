@@ -1,5 +1,5 @@
 ---
-title: Visual Basic'de Ana Yordam
+title: Main Yordamı
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Main
@@ -8,34 +8,34 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: 1c76e3ade0b383727c3241fdaf5ae44b677559c8
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 61cd397b82b4bb9a8b24a1a7d30eaea68e37368f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775689"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347353"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic'de Ana Yordam
-Her Visual Basic uygulaması `Main` adlı bir yordam içermelidir. Bu yordam, uygulamanız için başlangıç noktası ve genel denetim görevi görür. .NET Framework, uygulamanızı yüklemiş ve denetimi geçirmeye hazırsa `Main` yordamınız çağrılır. Bir Windows Forms uygulaması oluşturmadıkça, kendi kendilerine çalışan uygulamalar için `Main` yordamını yazmanız gerekir.
+Every Visual Basic application must contain a procedure called `Main`. This procedure serves as the starting point and overall control for your application. The .NET Framework calls your `Main` procedure when it has loaded your application and is ready to pass control to it. Unless you are creating a Windows Forms application, you must write the `Main` procedure for applications that run on their own.
 
- `Main` ilk olarak çalışan kodu içerir. @No__t_0, program başlatıldığında ilk olarak hangi formun yükleneceğini belirleyebilirsiniz, uygulamanızın bir kopyasının sistemde zaten çalışmakta olup olmadığını bulabilir, uygulamanız için bir dizi değişken oluşturabilir veya uygulamanın gerektirdiği bir veritabanını açabilirsiniz.
+ `Main` contains the code that runs first. In `Main`, you can determine which form is to be loaded first when the program starts, find out if a copy of your application is already running on the system, establish a set of variables for your application, or open a database that the application requires.
 
-## <a name="requirements-for-the-main-procedure"></a>Ana yordamın gereksinimleri
- Kendi üzerinde çalışan bir dosya (genellikle uzantısı. exe) bir `Main` yordamı içermelidir. Bir kitaplık (örneğin,. dll uzantılı) kendi üzerinde çalışmaz ve `Main` yordamı gerektirmez. Oluşturabileceğiniz farklı proje türleri için gereksinimler şunlardır:
+## <a name="requirements-for-the-main-procedure"></a>Requirements for the Main Procedure
+ A file that runs on its own (usually with extension .exe) must contain a `Main` procedure. A library (for example with extension .dll) does not run on its own and does not require a `Main` procedure. The requirements for the different types of projects you can create are as follows:
 
-- Konsol uygulamaları kendi üzerinde çalışır ve en az bir `Main` yordamı sağlamanız gerekir.
+- Console applications run on their own, and you must supply at least one `Main` procedure.
 
-- Windows Forms uygulamalar kendi kendilerine çalışır. Ancak, Visual Basic derleyici bu uygulama için otomatik olarak bir `Main` yordamı oluşturur ve bir tane yazmanız gerekmez.
+- Windows Forms applications run on their own. However, the Visual Basic compiler automatically generates a `Main` procedure in such an application, and you do not need to write one.
 
-- Sınıf kitaplıkları `Main` yordam gerektirmez. Bunlar Windows Denetim kitaplıklarını ve Web denetim kitaplıklarını içerir. Web uygulamaları, sınıf kitaplıkları olarak dağıtılır.
+- Class libraries do not require a `Main` procedure. These include Windows Control Libraries and Web Control Libraries. Web applications are deployed as class libraries.
 
-## <a name="declaring-the-main-procedure"></a>Ana yordamı bildirme
- @No__t_0 yordamı belirtmenin dört yolu vardır. Bağımsız değişkenler alabilir veya içermez ve bir değer döndürebilir.
+## <a name="declaring-the-main-procedure"></a>Declaring the Main Procedure
+ There are four ways to declare the `Main` procedure. It can take arguments or not, and it can return a value or not.
 
 > [!NOTE]
-> Bir sınıfta `Main` bildirirseniz `Shared` anahtar sözcüğünü kullanmanız gerekir. Bir modülde, `Main` `Shared` olması gerekmez.
+> If you declare `Main` in a class, you must use the `Shared` keyword. In a module, `Main` does not need to be `Shared`.
 
-- En basit yol, bağımsız değişken almaz veya bir değer döndürmemelidir `Sub` yordamı bildirmenin bir yoludur.
+- The simplest way is to declare a `Sub` procedure that does not take arguments or return a value.
 
     ```vb
     Module mainModule
@@ -47,7 +47,7 @@ Her Visual Basic uygulaması `Main` adlı bir yordam içermelidir. Bu yordam, uy
     End Module
     ```
 
-- `Main`, işletim sisteminin programınız için çıkış kodu olarak kullandığı bir `Integer` değeri de döndürebilir. Diğer programlar Windows ERRORLEVEL değerini inceleyerek bu kodu test edebilir. Çıkış kodu döndürmek için, `Main` `Sub` yordamı yerine `Function` yordamı olarak bildirmeniz gerekir.
+- `Main` can also return an `Integer` value, which the operating system uses as the exit code for your program. Other programs can test this code by examining the Windows ERRORLEVEL value. To return an exit code, you must declare `Main` as a `Function` procedure instead of a `Sub` procedure.
 
     ```vb
     Module mainModule
@@ -64,7 +64,7 @@ Her Visual Basic uygulaması `Main` adlı bir yordam içermelidir. Bu yordam, uy
     End Module
     ```
 
-- `Main`, bir `String` dizisini bağımsız değişken olarak da alabilir. Dizideki her dize, programınızı çağırmak için kullanılan komut satırı bağımsız değişkenlerinden birini içerir. Değerlerine bağlı olarak farklı eylemler gerçekleştirebilirsiniz.
+- `Main` can also take a `String` array as an argument. Each string in the array contains one of the command-line arguments used to invoke your program. You can take different actions depending on their values.
 
     ```vb
     Module mainModule
@@ -88,7 +88,7 @@ Her Visual Basic uygulaması `Main` adlı bir yordam içermelidir. Bu yordam, uy
     End Module
     ```
 
-- Komut satırı bağımsız değişkenlerini incelemek için `Main` bildirebilirsiniz, ancak aşağıdaki gibi bir çıkış kodu döndürmez.
+- You can declare `Main` to examine the command-line arguments but not return an exit code, as follows.
 
     ```vb
     Module mainModule
@@ -113,7 +113,7 @@ Her Visual Basic uygulaması `Main` adlı bir yordam içermelidir. Bu yordam, uy
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
-- [Visual Basic programın yapısı](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
+- [Structure of a Visual Basic Program](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)

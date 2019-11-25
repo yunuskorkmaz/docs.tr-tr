@@ -1,42 +1,42 @@
 ---
-title: XML Değişmez Değerlerinde Boşluk (Visual Basic)
+title: XML Değişmez Değerlerinde Boşluk
 ms.date: 07/20/2015
 helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: f72dcc25b158d793850069e5cc32c3a3c02fad17
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56ededeb12d07e979bc86b03924e1ae0f0432822
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939208"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336004"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML Değişmez Değerlerinde Boşluk (Visual Basic)
-Visual Basic derleyici bir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesne oluşturduğunda yalnızca bir XML sabit değerinden önemli boşluk karakterleri ekler. Önemli boşluk karakterleri dahil değildir.  
+The Visual Basic compiler incorporates only the significant white space characters from an XML literal when it creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object. The insignificant white space characters are not incorporated.  
   
-## <a name="significant-and-insignificant-white-space"></a>Önemli ve çok önemli boşluk  
- XML değişmez değerlerinde boşluk karakterleri yalnızca üç alanda önemlidir:  
+## <a name="significant-and-insignificant-white-space"></a>Significant and Insignificant White Space  
+ White space characters in XML literals are significant in only three areas:  
   
-- Bir öznitelik değeri olduğunda.  
+- When they are in an attribute value.  
   
-- Bir öğenin metin içeriğinin bir parçası olduklarında ve metin diğer karakterleri de içeriyorsa.  
+- When they are part of an element's text content and the text also contains other characters.  
   
-- Bir öğenin metin içeriği için gömülü bir ifadede olduklarında.  
+- When they are in an embedded expression for an element's text content.  
   
- Aksi halde, derleyici boşluk karakterlerini önemli olarak değerlendirir ve daha sonra [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] değişmez değer için nesnesine içermez.  
+ Otherwise, the compiler treats white space characters as insignificant and does not include then in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object for the literal.  
   
- Bir XML sabit değerinde boş bir boşluk eklemek için, boşluk içeren bir dize sabit değeri içeren gömülü bir ifade kullanın.  
+ To include insignificant white space in an XML literal, use an embedded expression that contains a string literal with the white space.  
   
 > [!NOTE]
-> Öznitelik bir XML öğesi değişmez değerinde görünürse, Visual Basic derleyici <xref:System.Xml.Linq.XElement> nesnedeki özniteliği içerir, ancak bu özniteliği eklemek derleyicinin boşluk olarak nasıl davrandığını değiştirmez. `xml:space`  
+> If the `xml:space` attribute appears in an XML element literal, the Visual Basic compiler includes the attribute in the <xref:System.Xml.Linq.XElement> object, but adding this attribute does not change how the compiler treats white space.  
   
 ## <a name="examples"></a>Örnekler  
- Aşağıdaki örnek, Outer ve Inner olmak üzere iki XML öğesi içerir. Her iki öğe de metin içeriklerinde boşluk içeriyor. Dış öğedeki boşluk, yalnızca boşluk ve bir XML öğesi içerdiği için çok önemlidir. İç öğedeki boşluk, boşluk ve metin içerdiğinden önemlidir.  
+ The following example contains two XML elements, outer and inner. Both elements contain white space in their text content. The white space in the outer element is insignificant because it contains only white space and an XML element. The white space in the inner element is significant because it contains white space and text.  
   
  [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
   
- Çalıştırıldığında, bu kod aşağıdaki metni görüntüler.  
+ When run, this code displays the following text.  
   
 ```xml  
 <outer>  
@@ -48,4 +48,4 @@ Visual Basic derleyici bir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

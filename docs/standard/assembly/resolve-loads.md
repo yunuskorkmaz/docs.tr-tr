@@ -12,67 +12,67 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 6a49c070bd7d2e3819044c6bb653671a2fc8199f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: edd398cd3e42e23301dcc992093d14d087754e76
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73106991"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347250"
 ---
 # <a name="resolve-assembly-loads"></a>Derleme yüklerini çözme
-.NET, derleme yüklemesi üzerinde daha fazla denetim gerektiren uygulamalar için <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayı sağlar. Uygulamanız, bu olayı işleyerek, yük bağlamına normal yoklama yollarının dışından bir derleme yükleyebilir, kaç tane derleme sürümünden hangilerinin yükleneceğini seçebilir, dinamik bir derlemeyi yayarak ve bu şekilde devam edebilir. Bu konu, <xref:System.AppDomain.AssemblyResolve> olayını işlemeye yönelik rehberlik sağlar.  
+.NET provides the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event for applications that require greater control over assembly loading. By handling this event, your application can load an assembly into the load context from outside the normal probing paths, select which of several assembly versions to load, emit a dynamic assembly and return it, and so on. This topic provides guidance for handling the <xref:System.AppDomain.AssemblyResolve> event.  
   
 > [!NOTE]
-> Yalnızca yansıma bağlamındaki derleme yüklerini çözümlemek için bunun yerine <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> olayını kullanın.  
+> For resolving assembly loads in the reflection-only context, use the <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> event instead.  
   
-## <a name="how-the-assemblyresolve-event-works"></a>AssemblyResolve olayı nasıl kullanılır?  
- <xref:System.AppDomain.AssemblyResolve> olayı için bir işleyici kaydettiğinizde, çalışma zamanı bir derlemeye ada göre bağlama başarısız olduğunda işleyici çağrılır. Örneğin, kullanıcı kodundan aşağıdaki yöntemleri çağırmak <xref:System.AppDomain.AssemblyResolve> olayının oluşturulmasına neden olabilir:  
+## <a name="how-the-assemblyresolve-event-works"></a>How the AssemblyResolve event works  
+ When you register a handler for the <xref:System.AppDomain.AssemblyResolve> event, the handler is invoked whenever the runtime fails to bind to an assembly by name. For example, calling the following methods from user code can cause the <xref:System.AppDomain.AssemblyResolve> event to be raised:  
   
-- İlk bağımsız değişkeni, yüklenecek derlemenin görünen adını temsil eden bir dize olan (yani <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> özelliği tarafından döndürülen dize) bir <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesi veya <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntem aşırı yüklemesi.  
+- An <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> method overload or <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method overload whose first argument is a string that represents the display name of the assembly to load (that is, the string returned by the <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> property).  
   
-- İlk bağımsız değişkeni yüklenecek derlemeyi tanımlayan bir <xref:System.Reflection.AssemblyName> nesnesi olan bir <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesi veya <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesi.  
+- An <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> method overload or <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method overload whose first argument is an <xref:System.Reflection.AssemblyName> object that identifies the assembly to load.  
   
-- <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesi.  
+- An <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> method overload.  
   
-- Başka bir uygulama etki alanındaki bir nesneyi örnekleyen bir <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> veya <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesi.  
+- An <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> or <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> method overload that instantiates an object in another application domain.  
   
-### <a name="what-the-event-handler-does"></a>Olay işleyicisinin yaptığı  
- <xref:System.AppDomain.AssemblyResolve> olayının işleyicisi, yüklenecek derlemenin görünen adını <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> özelliğinde alır. İşleyici derleme adını tanımıyorsa, `null` (C#), `Nothing` (Visual Basic) veya `nullptr` (görsel C++) döndürür.  
+### <a name="what-the-event-handler-does"></a>What the event handler does  
+ The handler for the <xref:System.AppDomain.AssemblyResolve> event receives the display name of the assembly to be loaded, in the <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> property. If the handler does not recognize the assembly name, it returns `null` (C#), `Nothing` (Visual Basic), or `nullptr` (Visual C++).  
   
- İşleyici derleme adını tanırsa, isteği karşılayan bir derlemeyi yükleyebilir ve döndürebilir. Aşağıdaki listede bazı örnek senaryolar açıklanmaktadır.  
+ If the handler recognizes the assembly name, it can load and return an assembly that satisfies the request. The following list describes some sample scenarios.  
   
-- İşleyici derlemenin bir sürümünün konumunu biliyorsa, <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> yöntemini kullanarak derlemeyi yükleyebilir ve başarılı olursa yüklenen derlemeyi döndürebilir.  
+- If the handler knows the location of a version of the assembly, it can load the assembly by using the <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> or <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> method, and can return the loaded assembly if successful.  
   
-- İşleyicinin bayt dizileri olarak depolanan derlemelerin bir veritabanına erişimi varsa, bayt dizisi alan <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi aşırı yüklemelerinin birini kullanarak bir bayt dizisi yükleyebilir.  
+- If the handler has access to a database of assemblies stored as byte arrays, it can load a byte array by using one of the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method overloads that take a byte array.  
   
-- İşleyici dinamik bir derleme üretebilir ve döndürebilir.  
+- The handler can generate a dynamic assembly and return it.  
   
 > [!NOTE]
-> İşleyici, derlemeyi yük bağlamı içine, yük bağlamına veya Bağlamsız olarak yüklemesi gerekir. İşleyici derlemeyi yalnızca yansıma bağlamına <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> yöntemini kullanarak yüklerse, <xref:System.AppDomain.AssemblyResolve> olayını oluşturan yük girişimi başarısız olur.  
+> The handler must load the assembly into the load-from context, into the load context, or without context.If the handler loads the assembly into the reflection-only context by using the <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> or the <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> method, the load attempt that raised the <xref:System.AppDomain.AssemblyResolve> event fails.  
   
- Bu, uygun bir derlemeyi döndürecek olay işleyicisinin sorumluluğundadır. İşleyici, <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> özellik değerini <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> oluşturucusuna geçirerek istenen derlemenin görünen adını ayrıştırabilirler. .NET Framework 4 ' ten başlayarak, işleyici, geçerli isteğin başka bir derlemenin bağımlılığı olup olmadığını anlamak için <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> özelliğini kullanabilir. Bu bilgiler, bağımlılığı karşılayan bir derlemeyi belirlemesine yardımcı olabilir.  
+ It is the responsibility of the event handler to return a suitable assembly. The handler can parse the display name of the requested assembly by passing the <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> property value to the <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> constructor. Beginning with the .NET Framework 4, the handler can use the <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> property to determine whether the current request is a dependency of another assembly. This information can help identify an assembly that will satisfy the dependency.  
   
- Olay işleyicisi derlemenin farklı bir sürümünü istenen sürümden döndürebilir.  
+ The event handler can return a different version of the assembly than the version that was requested.  
   
- Çoğu durumda, işleyici tarafından döndürülen derleme, işleyicinin onu içine yüklediği bağlamdan bağımsız olarak yükleme bağlamında görünür. Örneğin, işleyici bir derlemeyi yük-from bağlamına yüklemek için <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> yöntemini kullanıyorsa, işleyici onu döndürdüğünde, derleme yükleme bağlamında görüntülenir. Ancak, aşağıdaki örnekte, işleyici onu döndürdüğünde derleme bağlam olmadan görünür:  
+ In most cases, the assembly that is returned by the handler appears in the load context, regardless of the context the handler loads it into. For example, if the handler uses the <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> method to load an assembly into the load-from context, the assembly appears in the load context when the handler returns it. However, in the following case the assembly appears without context when the handler returns it:  
   
-- İşleyici bağlamı olmayan bir derlemeyi yükler.  
+- The handler loads an assembly without context.  
   
-- <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> özelliği null değil.  
+- The <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> property is not null.  
   
-- İstekte bulunan derleme (yani, <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> özelliği tarafından döndürülen derleme), bağlam olmadan yükleniydi.  
+- The requesting assembly (that is, the assembly that is returned by the <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> property) was loaded without context.  
   
- Bağlamlar hakkında bilgi için <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=nameWithType> yöntemi aşırı yüklemesi ' ne bakın.  
+ For information about contexts, see the <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=nameWithType> method overload.  
   
- Aynı derlemenin birden çok sürümü aynı uygulama etki alanına yüklenebilir. Tür atama sorunlarına yol açabildiğinden bu uygulama önerilmez. Bkz. [derleme yüklemesi Için en iyi uygulamalar](../../framework/deployment/best-practices-for-assembly-loading.md).  
+ Multiple versions of the same assembly can be loaded into the same application domain. This practice is not recommended, because it can lead to type assignment problems. See [Best practices for assembly loading](../../framework/deployment/best-practices-for-assembly-loading.md).  
   
-### <a name="what-the-event-handler-should-not-do"></a>Olay işleyicisinin yapması gereken  
-<xref:System.AppDomain.AssemblyResolve> olayını işlemeye yönelik birincil kural, tanımadığınız bir derlemeyi döndürmeye çalışmayın. İşleyiciyi yazdığınızda hangi derlemelerin olay oluşturulmasına neden olabileceğini bilmeniz gerekir. İşleyiciniz diğer derlemeler için null değer döndürmelidir.  
+### <a name="what-the-event-handler-should-not-do"></a>What the event handler should not do  
+The primary rule for handling the <xref:System.AppDomain.AssemblyResolve> event is that you should not try to return an assembly you do not recognize. When you write the handler, you should know which assemblies might cause the event to be raised. Your handler should return null for other assemblies.  
 
 > [!IMPORTANT]
-> .NET Framework 4 ' ten başlayarak, <xref:System.AppDomain.AssemblyResolve> olayı uydu derlemeleri için oluşturulur. Bu değişiklik, işleyici tüm derleme yükleme isteklerini çözümlemeye çalışırsa .NET Framework önceki bir sürümü için yazılmış bir olay işleyicisini etkiler. Tanımadığı derlemeleri yoksaymayan olay işleyicileri bu değişiklikten etkilenmez: null döndürür ve normal geri dönüş mekanizmaları izlenir.  
+> Beginning with the .NET Framework 4, the <xref:System.AppDomain.AssemblyResolve> event is raised for satellite assemblies. This change affects an event handler that was written for an earlier version of the .NET Framework, if the handler tries to resolve all assembly load requests. Event handlers that ignore assemblies they do not recognize are not affected by this change: They return null, and normal fallback mechanisms are followed.  
 
-Bir derlemeyi yüklerken, olay işleyicisi bir yığın taşmasına yol açabileceğinden, <xref:System.AppDomain.AssemblyResolve> olayının yinelemeli olarak oluşturulmasına neden olabilecek <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi aşırı yüklemelerinin hiçbirini kullanamaz. (Bu konunun önceki kısımlarında sunulan listeye bakın.) Tüm olay işleyicileri döndürülünceye kadar hiçbir özel durum oluşturulmadığından, yükleme isteği için özel durum işleme sağlıyorsanız bile bu durum oluşur. Bu nedenle, `MyAssembly` bulunamazsa aşağıdaki kod yığın taşmasına neden olur:  
+When loading an assembly, the event handler must not use any of the <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> or <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method overloads that can cause the <xref:System.AppDomain.AssemblyResolve> event to be raised recursively, because this can lead to a stack overflow. (See the list provided earlier in this topic.) This happens even if you provide exception handling for the load request, because no exception is thrown until all event handlers have returned. Thus, the following code results in a stack overflow if `MyAssembly` is not found:  
 
 ```cpp
 using namespace System;
@@ -160,7 +160,6 @@ Process is terminated due to StackOverflowException.
 ```
 
 ```vb
-Imports System
 Imports System.Reflection
 
 Class BadExample
@@ -199,5 +198,5 @@ End Class
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derleme yükleme için en iyi uygulamalar](../../framework/deployment/best-practices-for-assembly-loading.md)
-- [Uygulama etki alanlarını kullanma](../../framework/app-domains/use.md)
+- [Best practices for assembly loading](../../framework/deployment/best-practices-for-assembly-loading.md)
+- [Use application domains](../../framework/app-domains/use.md)

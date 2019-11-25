@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Sorgu sonuçlarını LINQ kullanarak filtreleme (Visual Basic)'
+title: 'How to: Filter Query Results by Using LINQ'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - filtering [Visual Basic]
@@ -11,70 +11,70 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: 1250f2fe0ccd7661b9bc1986000143ec4a15a9f0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2ea8a852a2f012ddb25ec1198c66e09df880ff47
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053283"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344984"
 ---
-# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Nasıl yapılır: Sorgu sonuçlarını LINQ kullanarak filtreleme (Visual Basic)
+# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Nasıl yapılır: Sorgu Sonuçlarını LINQ Kullanarak Filtreleme (Visual Basic)
 
-Dil ile tümleşik sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları yürütmeyi kolaylaştırır.
+Language-Integrated Query (LINQ) makes it easy to access database information and execute queries.
 
-Aşağıdaki örnek, bir SQL Server veritabanına yönelik sorgular gerçekleştiren yeni bir uygulamanın nasıl oluşturulduğunu ve `Where` yan tümcesini kullanarak belirli bir değere göre sonuçları filtreleyeceğini gösterir. Daha fazla bilgi için bkz. [WHERE yan tümcesi](../../../../visual-basic/language-reference/queries/where-clause.md).
+The following example shows how to create a new application that performs queries against a SQL Server database and filters the results by a particular value by using the `Where` clause. For more information, see [Where Clause](../../../../visual-basic/language-reference/queries/where-clause.md).
 
-Bu konudaki örneklerde Northwind örnek veritabanı kullanılır. Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Indirme Merkezi ' nden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).
+The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-a-connection-to-a-database"></a>Bir veritabanına bağlantı oluşturmak için
+## <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database
 
-1. Visual Studio 'da, **Görünüm** menüsünde **Sunucu Gezgini**/**veritabanı Gezgini** ' a tıklayarak **Sunucu Gezgini**/**veritabanı Gezgini** açın.
+1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking **Server Explorer**/**Database Explorer** on the **View** menu.
 
-2. **Sunucu Gezgini** veritabanıGezgini/veri bağlantıları ' na sağ tıklayın ve ardından **bağlantı ekle**' ye tıklayın.
+2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer** and then click **Add Connection**.
 
-3. Northwind örnek veritabanına geçerli bir bağlantı belirtin.
+3. Specify a valid connection to the Northwind sample database.
 
-## <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>LINQ to SQL dosyası içeren bir proje eklemek için
+## <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>To add a project that contains a LINQ to SQL file
 
-1. Visual Studio'da üzerinde **dosya** menüsünde **yeni** ve ardından **proje**. Proje türü olarak Visual Basic **Windows Forms uygulaması** ' nı seçin.
+1. In Visual Studio, on the **File** menu, point to **New** and then click **Project**. Select Visual Basic **Windows Forms Application** as the project type.
 
-2. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın. **LINQ to SQL sınıfları** öğe şablonunu seçin.
+2. On the **Project** menu, click **Add New Item**. Select the **LINQ to SQL Classes** item template.
 
-3. Dosyayı `northwind.dbml` olarak adlandırın. **Ekle**'yi tıklatın. Northwind. dbml dosyası için Nesne İlişkisel Tasarımcısı (O/R Designer) açılır.
+3. Name the file `northwind.dbml`. **Ekle**'yi tıklatın. The Object Relational Designer (O/R Designer) opens for the northwind.dbml file.
 
-## <a name="to-add-tables-to-query-to-the-or-designer"></a>O/R tasarımcısına sorguya tablo eklemek için
+## <a name="to-add-tables-to-query-to-the-or-designer"></a>To add tables to query to the O/R Designer
 
-1. **Sunucu Gezgini**/**veritabanı Gezgini**, Northwind veritabanına olan bağlantıyı genişletin. **Tablolar** klasörünü genişletin.
+1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Tables** folder.
 
-     O/R tasarımcısını kapattıysanız, daha önce eklediğiniz Northwind. dbml dosyasını çift tıklayarak yeniden açabilirsiniz.
+     If you have closed the O/R Designer, you can reopen it by double-clicking the northwind.dbml file that you added earlier.
 
-2. Müşteriler tablosuna tıklayın ve tasarımcı 'nın sol bölmesine sürükleyin. Siparişler tablosuna tıklayın ve tasarımcı 'nın sol bölmesine sürükleyin.
+2. Click the Customers table and drag it to the left pane of the designer. Click the Orders table and drag it to the left pane of the designer.
 
-     Tasarımcı projeniz için yeni `Customer` ve `Order` nesneler oluşturur. Tasarımcı, tablolar arasındaki ilişkileri otomatik olarak algıladığını ve ilgili nesneler için alt özellikler oluşturduğunu unutmayın. Örneğin IntelliSense, `Customer` nesnenin bu müşteriyle ilgili tüm siparişler için bir `Orders` özelliğe sahip olduğunu gösterir.
+     The designer creates new `Customer` and `Order` objects for your project. Notice that the designer automatically detects relationships between the tables and creates child properties for related objects. For example, IntelliSense will show that the `Customer` object has an `Orders` property for all orders related to that customer.
 
-3. Değişikliklerinizi kaydedin ve tasarımcıyı kapatın.
+3. Save your changes and close the designer.
 
-4. Projenizi kaydedin.
+4. Save your project.
 
-## <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Veritabanını sorgulamak ve sonuçları göstermek üzere kod eklemek için
+## <a name="to-add-code-to-query-the-database-and-display-the-results"></a>To add code to query the database and display the results
 
-1. **Araç kutusundan**, bir <xref:System.Windows.Forms.DataGridView> denetimi projeniz için varsayılan Windows formu üzerine sürükleyin, Form1.
+1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.
 
-2. Form `Load` olayına kod eklemek için Form1 ' e çift tıklayın.
+2. Double-click Form1 to add code to the `Load` event of the form.
 
-3. Tabloları O/R tasarımcısına eklediğinizde, tasarımcı projeniz için bir <xref:System.Data.Linq.DataContext> nesne ekledi. Bu nesne, her tablo için ayrı nesneler ve koleksiyonlara ek olarak bu tablolara erişmeniz gereken kodu içerir. Projeniz için olan nesne,. dbml dosyanızın adına göre adlandırılır. <xref:System.Data.Linq.DataContext> Bu proje için, <xref:System.Data.Linq.DataContext> nesne olarak adlandırılır. `northwindDataContext`
+3. When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object for your project. This object contains the code that you must have to access those tables, in addition to individual objects and collections for each table. The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.
 
-    Kodunuzda <xref:System.Data.Linq.DataContext> ' ın bir örneğini oluşturabilir ve O/R Tasarımcısı tarafından belirtilen tabloları sorgulayabilirsiniz.
+    You can create an instance of the <xref:System.Data.Linq.DataContext> in your code and query the tables specified by the O/R Designer.
 
-    Veri bağlamınızın özellikleri olarak gösterilen `Load` tabloları sorgulamak için olaya aşağıdaki kodu ekleyin. Sorgu sonuçlara filtre uygular ve yalnızca içinde `London`bulunan müşterileri döndürür.
+    Add the following code to the `Load` event to query the tables that are exposed as properties of your data context. The query filters the results and returns only customers that are located in `London`.
 
     [!code-vb[VbLINQToSQLHowTos#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#11)]
 
-4. Projenizi çalıştırmak ve sonuçları görüntülemek için F5 tuşuna basın.
+4. Press F5 to run your project and view the results.
 
-5. Deneyebileceğiniz bazı diğer filtreler aşağıda verilmiştir.
+5. Following are some other filters that you can try.
 
     [!code-vb[VbLINQToSQLHowTos#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#12)]
 

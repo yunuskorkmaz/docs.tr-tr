@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) bir değer döndüren bir yordam çağırma'
+title: 'Nasıl yapılır: Değer Döndüren Bir Yordam Çağırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
@@ -7,40 +7,40 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: 6f45f01489ee84b6addb1f7c7c8dc584332f38dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f5d46babf31ea3c6babb29c0f1c08a23e51d598
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864188"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340736"
 ---
-# <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir değer döndüren bir yordam çağırma
-A `Function` yordamın çağrıldığı koda bir değer döndürür. Bu adı ve bağımsız değişkenler dahil ederek işlecin sağ tarafındaki Atama ifadesinin veya bir ifade ya da çağırırsınız.  
+# <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Nasıl yapılır: Değer Döndüren Bir Yordam Çağırma (Visual Basic)
+A `Function` procedure returns a value to the calling code. You call it by including its name and arguments either on the right side of an assignment statement or in an expression.  
   
-### <a name="to-call-a-function-procedure-within-an-expression"></a>İçinde bir ifade bir işlev yordam çağırmak için  
+### <a name="to-call-a-function-procedure-within-an-expression"></a>To call a Function procedure within an expression  
   
-1. Kullanma `Function` yordamı kullandığınız bir değişken gibi adlandırın. Kullanabileceğiniz bir `Function` kullanabileceğiniz bir değişken veya sabit bir ifadede herhangi bir yordam çağırma.  
+1. Use the `Function` procedure name the same way you would use a variable. You can use a `Function` procedure call anywhere you can use a variable or constant in an expression.  
   
-2. Parantez içine bağımsız değişken listesi için yordamın adıyla izleyin. Hiçbir bağımsız değişken varsa, isteğe bağlı olarak ayraçları atlayabilirsiniz. Ancak, parantezler kullanarak kodunuzu okumayı kolaylaştırır.  
+2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
   
-3. Bağımsız değişken listesi parantezlerinin virgülle ayırarak yerleştirin. Bağımsız değişkenler aynı sırada sağladığınız emin olun, `Function` yordamı karşılık gelen parametreleri tanımlar.  
+3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Function` procedure defines the corresponding parameters.  
   
-     Alternatif olarak, ada göre bir veya daha fazla bağımsız değişken geçirebilirsiniz. Daha fazla bilgi için [geçirmeden bağımsız değişkenleri konuma ve ada göre](./passing-arguments-by-position-and-by-name.md).  
+     Alternatively, you can pass one or more arguments by name. For more information, see [Passing Arguments by Position and by Name](./passing-arguments-by-position-and-by-name.md).  
   
-4. Yordamdan döndürülen değer, bir değişken değeri olarak yalnızca ifade katıldığı veya sabiti gerekir.  
+4. The value returned from the procedure participates in the expression just as the value of a variable or constant would.  
   
-### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>Bir atama ifadesinde bir işlev yordam çağırmak için  
+### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>To call a Function procedure in an assignment statement  
   
-1. Kullanım `Function` eşit aşağıdaki yordam adı (`=`) atama ifadesi oturum açın.  
+1. Use the `Function` procedure name following the equal (`=`) sign in the assignment statement.  
   
-2. Parantez içine bağımsız değişken listesi için yordamın adıyla izleyin. Hiçbir bağımsız değişken varsa, isteğe bağlı olarak ayraçları atlayabilirsiniz. Ancak, parantezler kullanarak kodunuzu okumayı kolaylaştırır.  
+2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
   
-3. Bağımsız değişken listesi parantezlerinin virgülle ayırarak yerleştirin. Bağımsız değişkenler aynı sırada sağladığınız emin olun, `Function` yordamı ada göre geçirme sürece, karşılık gelen parametreleri tanımlar.  
+3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Function` procedure defines the corresponding parameters, unless you are passing them by name.  
   
-4. Yordamdan döndürülen değer değişken veya özellik atama ifadesi sol tarafında depolanır.  
+4. The value returned from the procedure is stored in the variable or property on the left side of the assignment statement.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, Visual Basic çağırır <xref:Microsoft.VisualBasic.Interaction.Environ%2A> bir işletim sistemi ortam değişkeninin değerini almak için. İlk satırı çağrıları `Environ` satır içinde bir ifade ve ikinci bir atama ifadesinde çağırır. `Environ` değişken adı, tek bir bağımsız değişken olarak alır. Çağrıldığı koda değişken değerini döndürür.  
+ The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> to retrieve the value of an operating system environment variable. The first line calls `Environ` within an expression, and the second line calls it in an assignment statement. `Environ` takes the variable name as its sole argument. It returns the variable's value to the calling code.  
   
  [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
@@ -49,6 +49,6 @@ A `Function` yordamın çağrıldığı koda bir değer döndürür. Bu adı ve 
 - [İşlev Yordamları](./function-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Function Deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Nasıl yapılır: Bir değer döndüren bir yordam oluşturma](./how-to-create-a-procedure-that-returns-a-value.md)
-- [Nasıl yapılır: Bir yordamdan değer döndürme](./how-to-return-a-value-from-a-procedure.md)
-- [Nasıl yapılır: Bir değer döndürmeyen bir yordam çağırma](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+- [Nasıl yapılır: Değer Döndüren Bir Yordam Oluşturma](./how-to-create-a-procedure-that-returns-a-value.md)
+- [Nasıl yapılır: Bir Yordamdan Değer Döndürme](./how-to-return-a-value-from-a-procedure.md)
+- [Nasıl yapılır: Değer Döndürmeyen Bir Yordam Çağırma](./how-to-call-a-procedure-that-does-not-return-a-value.md)

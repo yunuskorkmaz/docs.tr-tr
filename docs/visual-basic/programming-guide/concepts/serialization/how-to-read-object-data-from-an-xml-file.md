@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: Okuma nesne verilerden bir XML dosyası (Visual Basic)'
+title: 'Nasıl Yapılır: Nesne Verilerini bir XML Dosyasından Okuma'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: b1e9033d7aba8b4f423f29cd4fb4f7efbbe17a29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c997af4729a24a6b5bd5b22d0153860cff3282d7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624356"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346430"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Nasıl yapılır: Okuma nesne verilerden bir XML dosyası (Visual Basic)
-Bu örnek daha önce bir XML dosyası kullanmayı yazılmış nesne verilerini okur <xref:System.Xml.Serialization.XmlSerializer> sınıfı.  
+# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>How to: Read Object Data from an XML File (Visual Basic)
+This example reads object data that was previously written to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.  
   
 ## <a name="example"></a>Örnek  
   
@@ -30,27 +30,27 @@ End Sub
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Dosya adı "c:\temp\SerializationOverview.xml" seri hale getirilmiş veri içeren dosyanın adıyla değiştirin. Verileri seri hale getirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Nesne verilerini bir XML dosyası (Visual Basic) yazma](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
+ Replace the file name "c:\temp\SerializationOverview.xml" with the name of the file containing the serialized data. For more information about serializing data, see [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
   
- Sınıfı, parametresiz bir ortak oluşturucuya sahip olmalıdır.  
+ The class must have a public constructor without parameters.  
   
- Yalnızca ortak özellikler ve alanları seri.  
+ Only public properties and fields are deserialized.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Serileştirilmekte olan sınıfın ortak, parametresiz bir oluşturucusu yok.  
+- The class being serialized does not have a public, parameterless constructor.  
   
-- Dosyasındaki verilerin veri seri durumdan sınıftan temsil etmiyor.  
+- The data in the file does not represent data from the class to be deserialized.  
   
-- Dosya yok (<xref:System.IO.IOException>).  
+- The file does not exist (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Her zaman girişleri doğrulayın ve hiçbir zaman güvenilmeyen bir kaynaktan gelen verileri seri durumdan. Yeniden oluşturulan nesne, seri durumdan kodun izinlere sahip bir yerel bilgisayarda çalıştırır. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  
+ Always verify inputs, and never deserialize data from an untrusted source. The re-created object runs on a local computer with the permissions of the code that deserialized it. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IO.StreamWriter>
-- [Nasıl yapılır: Nesne verilerini bir XML dosyası (Visual Basic) yazma](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
-- [Seri hale getirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)
+- [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [Serialization (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+- [Visual Basic Programming Guide](../../../../visual-basic/programming-guide/index.md)

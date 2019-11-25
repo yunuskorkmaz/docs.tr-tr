@@ -1,5 +1,5 @@
 ---
-title: Özellik Yordamları (Visual Basic)
+title: Özellik Yordamları
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Set statement [Visual Basic], Property procedures
@@ -13,35 +13,35 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: 118c9e776813f303ed921946f4cf6f1236ac02e3
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a4b8ac3e27348764f537ee9502ce1fbb165bb3ef
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040968"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352571"
 ---
 # <a name="property-procedures-visual-basic"></a>Özellik Yordamları (Visual Basic)
 
-Özellik yordamı bir modül, sınıf veya yapıda özel bir özelliği düzenleyen Visual Basic deyimlerinin bir dizisidir. Özellik yordamları, *özellik erişimcileri*olarak da bilinir.
+A property procedure is a series of Visual Basic statements that manipulate a custom property on a module, class, or structure. Property procedures are also known as *property accessors*.
 
-Visual Basic aşağıdaki özellik yordamları için sağlar:
+Visual Basic provides for the following property procedures:
 
-- `Get` yordam bir özelliğin değerini döndürür. Bir ifadede özelliğe eriştiğinizde çağrılır.
-- `Set` yordam bir özelliği bir nesne başvurusu dahil olmak üzere bir değere ayarlar. Özelliğe bir değer atadığınızda çağrılır.
+- A `Get` procedure returns the value of a property. It is called when you access the property in an expression.
+- A `Set` procedure sets a property to a value, including an object reference. It is called when you assign a value to the property.
 
-Genellikle özellik yordamlarını `Get` ve `Set` deyimlerini kullanarak çiftler halinde tanımlarsınız, ancak özellik salt okunurdur ([Get deyimi](../../../../visual-basic/language-reference/statements/get-statement.md)) veya salt yazılır ([küme deyimi](../../../../visual-basic/language-reference/statements/set-statement.md)) ise tek başına yordamı tanımlayabilirsiniz.
+You usually define property procedures in pairs, using the `Get` and `Set` statements, but you can define either procedure alone if the property is read-only ([Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md)) or write-only ([Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md)).
 
-Otomatik uygulanan bir özellik kullanırken `Get` ve `Set` yordamını atlayabilirsiniz. Daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](./auto-implemented-properties.md).
+You can omit the `Get` and `Set` procedure when using an auto-implemented property. For more information, see [Auto-Implemented Properties](./auto-implemented-properties.md).
 
-Sınıflar, yapılar ve modüllerde özellikler tanımlayabilirsiniz. Özellikler, varsayılan olarak `Public` ' dır. Bu, uygulamanızın, özelliğin kapsayıcısına erişebilen her yerden çağırabileceği anlamına gelir.
+You can define properties in classes, structures, and modules. Properties are `Public` by default, which means you can call them from anywhere in your application that can access the property's container.
 
-Özelliklerin ve değişkenlerin karşılaştırması için [Visual Basic Özellikler ve değişkenler arasındaki farklılıklar](differences-between-properties-and-variables.md)bölümüne bakın.
+For a comparison of properties and variables, see [Differences Between Properties and Variables in Visual Basic](differences-between-properties-and-variables.md).
 
-## <a name="declaration-syntax"></a>Bildirim söz dizimi
+## <a name="declaration-syntax"></a>Declaration syntax
 
-Özelliğin kendisi, [özellik bildiriminde](../../../../visual-basic/language-reference/statements/property-statement.md) ve `End Property` ifadesinde yer alan bir kod bloğu tarafından tanımlanır. Bu bloğun içinde her özellik yordamı bir bildirim bildirimi (`Get` veya `Set`) ve eşleşen `End` bildirimi içinde iç bir blok olarak görünür.
+A property itself is defined by a block of code enclosed within the [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. Inside this block, each property procedure appears as an internal block enclosed within a declaration statement (`Get` or `Set`) and the matching `End` declaration.
 
-Bir özelliği ve yordamlarını bildirmek için sözdizimi aşağıdaki gibidir:
+The syntax for declaring a property and its procedures is as follows:
 
 ```vb
 [Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]
@@ -60,62 +60,62 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]
 ```
 
-`Modifiers`, aşırı yükleme, geçersiz kılma, paylaşma ve gölgeleme ile ilgili erişim düzeyini ve bilgileri belirtebilir, özelliğin salt okunurdur mi yoksa salt yazılır mı olduğunu belirtir. `Get` veya `Set` yordamındaki `AccessLevel`, özelliğin kendisi için belirtilen erişim düzeyinden daha kısıtlayıcı olan herhangi bir düzey olabilir. Daha fazla bilgi için bkz. [özellik açıklaması](../../../../visual-basic/language-reference/statements/property-statement.md).
+The `Modifiers` can specify access level and information regarding overloading, overriding, sharing, and shadowing, as well as whether the property is read-only or write-only. The `AccessLevel` on the `Get` or `Set` procedure can be any level that is more restrictive than the access level specified for the property itself. For more information, see [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md).
 
 ### <a name="data-type"></a>Veri Türü
 
-Özelliğin veri türü ve asıl erişim düzeyi, özellik yordamlarında değil, `Property` ifadesinde tanımlanır. Bir özellik yalnızca bir veri türüne sahip olabilir. Örneğin, bir `Decimal` değeri depolamak için bir özellik tanımlayamazsınız, ancak bir `Double` değeri alabilirsiniz.
+A property's data type and principal access level are defined in the `Property` statement, not in the property procedures. A property can have only one data type. For example, you cannot define a property to store a `Decimal` value but retrieve a `Double` value.
 
-### <a name="access-level"></a>Erişim düzeyi
+### <a name="access-level"></a>Access Level
 
-Ancak, bir özellik için bir asıl erişim düzeyi tanımlayabilir ve özellik yordamlarından birinde erişim düzeyini daha da kısıtlayabilirsiniz. Örneğin, bir `Public` özelliği tanımlayabilir ve sonra bir `Private Set` yordamı tanımlayabilirsiniz. `Get` yordam `Public`kalır. Erişim düzeyini bir özelliğin yordamlarından yalnızca birinde değiştirebilirsiniz ve yalnızca asıl erişim düzeyinden daha kısıtlayıcı hale getirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: karışık erişim düzeylerine sahip bir özellik bildirme](how-to-declare-a-property-with-mixed-access-levels.md).
+However, you can define a principal access level for a property and further restrict the access level in one of its property procedures. For example, you can define a `Public` property and then define a `Private Set` procedure. The `Get` procedure remains `Public`. You can change the access level in only one of a property's procedures, and you can only make it more restrictive than the principal access level. For more information, see [How to: Declare a Property with Mixed Access Levels](how-to-declare-a-property-with-mixed-access-levels.md).
 
-## <a name="parameter-declaration"></a>Parametre bildirimi
+## <a name="parameter-declaration"></a>Parameter declaration
 
-Geçiş mekanizmasının `ByVal` olması dışında, her bir parametreyi [alt yordamlar](sub-procedures.md)için yaptığınız gibi bildirirsiniz.
+You declare each parameter the same way you do for [Sub Procedures](sub-procedures.md), except that the passing mechanism must be `ByVal`.
 
-Parametre listesindeki her bir parametre için sözdizimi aşağıdaki gibidir:
+The syntax for each parameter in the parameter list is as follows:
 
 ```vb
 [Optional] ByVal [ParamArray] parametername As datatype
 ```
 
-Parametre isteğe bağlı ise, bildiriminin bir parçası olarak bir varsayılan değer de belirtmeniz gerekir. Varsayılan bir değer belirtmek için sözdizimi aşağıdaki gibidir:
+If the parameter is optional, you must also supply a default value as part of its declaration. The syntax for specifying a default value is as follows:
 
 ```vb
 Optional ByVal parametername As datatype = defaultvalue
 ```
 
-## <a name="property-value"></a>Özellik değeri
+## <a name="property-value"></a>Property value
 
-`Get` yordamında, dönüş değeri, özelliğin değeri olarak çağırma ifadesine sağlanır.
+In a `Get` procedure, the return value is supplied to the calling expression as the value of the property.
 
-`Set` yordamında, yeni özellik değeri `Set` deyimin parametresine geçirilir. Açıkça bir parametre bildirirseniz, özelliği ile aynı veri türüyle bildirmeniz gerekir. Bir parametre bildirmezsiniz, derleyici, özelliğe atanacak yeni değeri göstermek için, `Value` örtük parametresini kullanır.
+In a `Set` procedure, the new property value is passed to the parameter of the `Set` statement. If you explicitly declare a parameter, you must declare it with the same data type as the property. If you do not declare a parameter, the compiler uses the implicit parameter `Value` to represent the new value to be assigned to the property.
 
-## <a name="calling-syntax"></a>Çağırma sözdizimi
+## <a name="calling-syntax"></a>Calling syntax
 
-Özelliğe başvuru yaparak bir özellik yordamını örtük olarak çağırılır. Özelliği, isteğe bağlı olmayan tüm bağımsız değişkenlerin değerlerini sağlamanız ve bağımsız değişken listesini parantez içine almanız gerekir, ancak, özelliğin adını bir değişkenin adını kullandığınız şekilde kullanırsınız. Herhangi bir bağımsız değişken sağlanmazsa, isteğe bağlı olarak ayraçları atlayabilirsiniz.
+You invoke a property procedure implicitly by making reference to the property. You use the name of the property the same way you would use the name of a variable, except that you must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses.
 
-Bir `Set` yordamına örtük çağrının sözdizimi aşağıdaki gibidir:
+The syntax for an implicit call to a `Set` procedure is as follows:
 
 ```vb
 propertyname[(argumentlist)] = expression
 ```
 
-Bir `Get` yordamına örtük çağrının sözdizimi aşağıdaki gibidir:
+The syntax for an implicit call to a `Get` procedure is as follows:
 
 ```vb
 lvalue = propertyname[(argumentlist)]
 Do While (propertyname[(argumentlist)] > expression)
 ```
 
-### <a name="illustration-of-declaration-and-call"></a>Bildirim ve çağrı gösterimi
+### <a name="illustration-of-declaration-and-call"></a>Illustration of declaration and call
 
-Aşağıdaki özellik, tam adı iki anayent adı, ad ve soyadı olarak depolar. Çağıran kod `fullName` ' ı okuduğunda, `Get` yordamı iki anayent adını birleştirir ve tam adı döndürür. Çağıran kod yeni bir tam ad atarken, `Set` yordamı onu iki anayada bölmek için çalışır. Bir boşluk bulamazsa, ilk ad olarak tümünü depolar.
+The following property stores a full name as two constituent names, the first name and the last name. When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name. When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names. If it does not find a space, it stores it all as the first name.
 
 [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]
 
-Aşağıdaki örnek, `fullName`Özellik yordamlarına yapılan tipik çağrıları gösterir:
+The following example shows typical calls to the property procedures of `fullName`:
 
 [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]
 
@@ -125,9 +125,9 @@ Aşağıdaki örnek, `fullName`Özellik yordamlarına yapılan tipik çağrılar
 - [İşlev Yordamları](function-procedures.md)
 - [İşleç Yordamları](operator-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](procedure-parameters-and-arguments.md)
-- [Visual Basic Özellikler ve değişkenler arasındaki farklar](differences-between-properties-and-variables.md)
+- [Differences Between Properties and Variables in Visual Basic](differences-between-properties-and-variables.md)
 - [Nasıl yapılır: Özellik Oluşturma](how-to-create-a-property.md)
 - [Nasıl yapılır: Bir Özellik Yordamı Çağırma](how-to-call-a-property-procedure.md)
-- [Nasıl yapılır: Visual Basic varsayılan bir özellik bildirme ve çağırma](how-to-declare-and-call-a-default-property.md)
+- [How to: Declare and Call a Default Property in Visual Basic](how-to-declare-and-call-a-default-property.md)
 - [Nasıl yapılır: Bir Özelliğe Değer Ekleme](how-to-put-a-value-in-a-property.md)
 - [Nasıl yapılır: Bir Özellikten Değer Alma](how-to-get-a-value-from-a-property.md)

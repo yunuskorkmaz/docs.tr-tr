@@ -1,5 +1,5 @@
 ---
-title: Kullanıcı tanımlı veri türü (Visual Basic)
+title: Kullanıcı Tanımlı Veri Türü
 ms.date: 07/20/2015
 f1_keywords:
 - UserDefined
@@ -23,50 +23,50 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: d95feec3a976a38c92a215f6da58ae6324085fe8
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 99eeb4b619f6bb23d00f8e449de953d41843f714
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696860"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343872"
 ---
 # <a name="user-defined-data-type"></a>Kullanıcı Tanımlı Veri Türü
 
-Verileri tanımladığınız biçimde tutar. @No__t-0 ifadesinde biçim tanımlanmaktadır.
+Holds data in a format you define. The `Structure` statement defines the format.
 
-Önceki Visual Basic sürümleri Kullanıcı tanımlı türü (UDT) destekler. Geçerli sürüm, UDT 'yi bir *yapıya*genişletir. Yapı, çeşitli veri türlerindeki bir veya daha fazla *üyenin* bitiştirilmesi olur. Visual Basic, üyelerine tek bir birim olarak davranır, ancak üyelerine ayrı ayrı de erişebilirsiniz.
+Previous versions of Visual Basic support the user-defined type (UDT). The current version expands the UDT to a *structure*. A structure is a concatenation of one or more *members* of various data types. Visual Basic treats a structure as a single unit, although you can also access its members individually.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Çeşitli veri türlerini tek bir birimde birleştirmeniz gerektiğinde veya temel veri türlerinden hiçbiri ihtiyaçlarınıza uygun olmadığında bir yapı veri türü tanımlayın ve kullanın.
+Define and use a structure data type when you need to combine various data types into a single unit, or when none of the elementary data types serve your needs.
 
-Bir yapı veri türünün varsayılan değeri, üyelerinden her birinin varsayılan değerlerinin birleşiminden oluşur.
+The default value of a structure data type consists of the combination of the default values of each of its members.
 
-## <a name="declaration-format"></a>Bildirim biçimi
+## <a name="declaration-format"></a>Declaration Format
 
-Yapı bildirimi, [Yapı ifadesiyle](../../../visual-basic/language-reference/statements/structure-statement.md) başlar ve `End Structure` ifadesiyle biter. @No__t-0 ifadesinde yapının adı, aynı zamanda yapının tanımlamakta olduğu veri türünün tanımlayıcısı da sağlanır. Kodun diğer kısımları, bu yapının veri türünde olması için değişkenleri, parametreleri ve işlev dönüş değerlerini bildirmek üzere bu tanımlayıcıyı kullanabilir.
+A structure declaration starts with the [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) and ends with the `End Structure` statement. The `Structure` statement supplies the name of the structure, which is also the identifier of the data type the structure is defining. Other parts of the code can use this identifier to declare variables, parameters, and function return values to be of this structure's data type.
 
-@No__t-0 ve `End Structure` deyimleri arasındaki bildirimler yapının üyelerini tanımlar.
+The declarations between the `Structure` and `End Structure` statements define the members of the structure.
 
-## <a name="member-access-levels"></a>Üye erişim düzeyleri
+## <a name="member-access-levels"></a>Member Access Levels
 
-Her üyeyi, bir [Dim ifadesini](../../../visual-basic/language-reference/statements/dim-statement.md) veya [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)veya [Private](../../../visual-basic/language-reference/modifiers/private.md)gibi erişim düzeyini belirten bir bildirimi kullanarak bildirmeniz gerekir. @No__t-0 ifadesini kullanırsanız, erişim düzeyi varsayılan olarak ortak olur.
+You must declare every member using a [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md) or a statement that specifies access level, such as [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../visual-basic/language-reference/modifiers/private.md). If you use a `Dim` statement, the access level defaults to public.
 
 ## <a name="programming-tips"></a>Programlama İpuçları
 
-- **Bellek tüketimi.** Tüm bileşik veri türlerinde olduğu gibi, üyelerinin nominal depolama ayırmalarını birlikte ekleyerek bir yapının toplam bellek tüketimini güvenle hesaplayabilirsiniz. Ayrıca, bellekteki depolama sırasının bildirimin sıralamayla aynı olduğunu güvenli bir şekilde varsayamaz. Bir yapının depolama yerleşimini denetetmeniz gerekiyorsa, <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliğini `Structure` ifadesine uygulayabilirsiniz.
+- **Memory Consumption.** As with all composite data types, you cannot safely calculate the total memory consumption of a structure by adding together the nominal storage allocations of its members. Furthermore, you cannot safely assume that the order of storage in memory is the same as your order of declaration. If you need to control the storage layout of a structure, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the `Structure` statement.
 
-- **Birlikte çalışma konuları.** Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle ilgili bir arabirimleriniz varsa, diğer ortamlardaki Kullanıcı tanımlı türlerin Visual Basic yapısı türleriyle uyumlu olmadığını aklınızda bulundurun.
+- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that user-defined types in other environments are not compatible with Visual Basic structure types.
 
-- **Kan.** Herhangi bir yapı veri türünden veya bundan otomatik dönüşüm yoktur. [Işleç ifadesini](../../../visual-basic/language-reference/statements/operator-statement.md)kullanarak yapınıza dönüştürme işleçleri tanımlayabilir ve her bir dönüştürme işlecini `Widening` veya `Narrowing` olarak bildirebilirsiniz.
+- **Widening.** There is no automatic conversion to or from any structure data type. You can define conversion operators on your structure using the [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md), and you can declare each conversion operator to be `Widening` or `Narrowing`.
 
-- **Tür karakterleri.** Yapı veri türlerinde değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok.
+- **Type Characters.** Structure data types have no literal type character or identifier type character.
 
-- **Çerçeve türü.** .NET Framework ilgili hiçbir tür yoktur. Tüm yapılar <xref:System.ValueType?displayProperty=nameWithType> .NET Framework sınıfından devralınır, ancak tek bir yapı <xref:System.ValueType?displayProperty=nameWithType> ' e karşılık gelir.
+- **Framework Type.** There is no corresponding type in the .NET Framework. All structures inherit from the .NET Framework class <xref:System.ValueType?displayProperty=nameWithType>, but no individual structure corresponds to <xref:System.ValueType?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki paradigma, bir yapının bildiriminin ana hattını gösterir.
+The following paradigm shows the outline of the declaration of a structure.
 
 ```vb
 [Public | Protected | Friend | Protected Friend | Private] Structure structname

@@ -1,5 +1,5 @@
 ---
-title: Shared (Visual Basic)
+title: Shared
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Shared
@@ -11,44 +11,44 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: fd43ef7cb5c16995fff87a65fc0f0974d8f4a47d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 98fa25d2283408dfb80e82fbc620a1b284e5c530
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647699"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349125"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
-Bir veya daha fazla bildirilmiş programlama öğesine bir sınıf veya yapı büyük ile değil, belirli bir sınıfın veya yapının örneği ile ilişkili olduğunu belirtir.  
+Specifies that one or more declared programming elements are associated with a class or structure at large, and not with a specific instance of the class or structure.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="when-to-use-shared"></a>Paylaşılan ne zaman kullanılır?  
- Bir sınıf veya yapı üyesi paylaşımı kullanılabilir hale getirir, her örnek için yerine *paylaşılmayan*, burada her örnek kendi kopyasını tutar. Bir değişkenin değeri uygulamanın tamamı için geçerliyse bu örneğin, kullanışlıdır. Olması için bu değişken bildirirseniz `Shared`, ardından tüm örnekleri aynı depolama konumu erişmek ve bir örnek, değişkenin değeri değişirse, güncelleştirilmiş değeri tüm örneklere erişmek.  
+## <a name="when-to-use-shared"></a>When to Use Shared  
+ Sharing a member of a class or structure makes it available to every instance, rather than *nonshared*, where each instance keeps its own copy. This is useful, for example, if the value of a variable applies to the entire application. If you declare that variable to be `Shared`, then all instances access the same storage location, and if one instance changes the variable's value, all instances access the updated value.  
   
- Paylaşımı bir üye erişim düzeyini değiştirmez. Örneğin, bir sınıf üyesinin paylaşılabilir ve özel (sınıf içinde erişilebilir yalnızca), veya paylaşılmayan hem de ortak. Daha fazla bilgi için [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Sharing does not alter the access level of a member. For example, a class member can be shared and private (accessible only from within the class), or nonshared and public. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Bildirim bağlamı.** Kullanabileceğiniz `Shared` yalnızca Modül düzeyinde. Bildirim bağlamı başka bir deyişle bir `Shared` öğesi bir sınıf veya yapı olmalıdır ve bir kaynak dosyası, ad alanı ya da yordamın olamaz.  
+- **Declaration Context.** You can use `Shared` only at module level. This means the declaration context for a `Shared` element must be a class or structure, and cannot be a source file, namespace, or procedure.  
   
-- **Birleşik değiştiriciler.** Belirtemezsiniz `Shared` ile birlikte [geçersiz kılmalar](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), veya [ Statik](../../../visual-basic/language-reference/modifiers/static.md) aynı bildirimde.  
+- **Combined Modifiers.** You cannot specify `Shared` together with [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), or [Static](../../../visual-basic/language-reference/modifiers/static.md) in the same declaration.  
   
-- **Erişme.** Sınıf veya yapı adı ile belirli bir örneği, sınıfın veya yapının değişken adı ile değil niteleme tarafından paylaşılan bir öğe erişin. Bile bir sınıf veya yapı paylaşılan üyelerine erişmek için bir örneğini oluşturmak gerekmez.  
+- **Accessing.** You access a shared element by qualifying it with its class or structure name, not with the variable name of a specific instance of its class or structure. You do not even have to create an instance of a class or structure to access its shared members.  
   
-     Aşağıdaki örnek, paylaşılan bir yordam çağrıları <xref:System.Double.IsNaN%2A> tarafından kullanıma sunulan <xref:System.Double> yapısı.  
+     The following example calls the shared procedure <xref:System.Double.IsNaN%2A> exposed by the <xref:System.Double> structure.  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
-- **Örtük paylaşma.** Kullanamazsınız `Shared` değiştiricisini bir [Const deyimi](../../../visual-basic/language-reference/statements/const-statement.md), ancak sabitleri örtük olarak paylaşılır. Benzer şekilde, bir üyesinin bir modül veya bir arabirim bildiremezsiniz `Shared`, ancak örtük olarak paylaşılır.  
+- **Implicit Sharing.** You cannot use the `Shared` modifier in a [Const Statement](../../../visual-basic/language-reference/statements/const-statement.md), but constants are implicitly shared. Similarly, you cannot declare a member of a module or an interface to be `Shared`, but they are implicitly shared.  
   
 ## <a name="behavior"></a>Davranış  
   
-- **Depolama alanı.** Yalnızca ne kadar ya da birkaç örnek ne olursa olsun, kendi sınıf veya yapı oluşturduktan sonra paylaşılan bir değişken veya olay bellekte depolanır. Benzer şekilde, paylaşılan bir yordam veya özellik yerel değişkenler yalnızca bir kümesini içerir.  
+- **Storage.** A shared variable or event is stored in memory only once, no matter how many or few instances you create of its class or structure. Similarly, a shared procedure or property holds only one set of local variables.  
   
-- **Bir örnek değişkeni erişme.** Belirli bir alt sınıf veya yapının örneğini içeren bir değişken adını nitelendirme tarafından paylaşılan bir öğeye erişmeyi mümkündür. Bu genellikle beklendiği gibi çalışır, ancak derleyici bir uyarı iletisi oluşturuyor ve sınıf veya yapı adı yerine değişken üzerinden erişim sağlar.  
+- **Accessing through an Instance Variable.** It is possible to access a shared element by qualifying it with the name of a variable that contains a specific instance of its class or structure. Although this usually works as expected, the compiler generates a warning message and makes the access through the class or structure name instead of the variable.  
   
-- **Bir örnek ifade yoluyla erişme.** Paylaşılan öğe, bir sınıfın veya yapının örneğini döndüren bir ifade erişirseniz, derleyici ifadenin değerlendirilmesi yerine sınıf veya yapı adı aracılığıyla erişim sağlar. Bu, diğer eylemlerin yanı sıra örneği döndüren gerçekleştirmek için ifade hedeflediyseniz beklenmeyen sonuçlar üretir. Aşağıdaki örnek bunu göstermektedir.  
+- **Accessing through an Instance Expression.** If you access a shared element through an expression that returns an instance of its class or structure, the compiler makes the access through the class or structure name instead of evaluating the expression. This produces unexpected results if you intended the expression to perform other actions as well as returning the instance. Aşağıdaki örnek bunu göstermektedir.  
   
     ```vb
     Sub main()  
@@ -76,9 +76,9 @@ Bir veya daha fazla bildirilmiş programlama öğesine bir sınıf veya yapı b�
     End Class  
     ```  
   
-     Önceki örnekte, derleyici bir uyarı iletisi kod erişen paylaşılan değişkeni iki kez oluşturur `total` bir örnek üzerinden. Her durumda, sınıf üzerinden doğrudan erişim sağlar `shareTotal` ve kullanmayan herhangi bir örneğini kullanın. Hedeflenen çağrı yordam söz konusu olduğunda `returnClass`, bu, hatta oluşturmaz çağrısı anlamına gelir `returnClass`, "adlı işlevi returnClass()" görüntülemenin başka bir işlem gerçekleştirilemiyor.  
+     In the preceding example, the compiler generates a warning message both times the code accesses the shared variable `total` through an instance. In each case it makes the access directly through the class `shareTotal` and does not make use of any instance. In the case of the intended call to the procedure `returnClass`, this means it does not even generate a call to `returnClass`, so the additional action of displaying "Function returnClass() called" is not performed.  
   
- `Shared` Bu bağlamda değiştirici kullanılabilir:  
+ The `Shared` modifier can be used in these contexts:  
   
  [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
@@ -96,7 +96,7 @@ Bir veya daha fazla bildirilmiş programlama öğesine bir sınıf veya yapı b�
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Static](../../../visual-basic/language-reference/modifiers/static.md)
-- [Visual Basic'de ömür](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

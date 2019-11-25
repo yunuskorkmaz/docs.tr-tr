@@ -1,30 +1,30 @@
 ---
-title: Uygulama Web Hizmetlerine Erişme (Visual Basic)
+title: Uygulama Web Hizmetlerine Erişme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web services [Visual Basic], My.WebServices object
 - My.WebServices object
 - applications [Visual Basic], Web services
 ms.assetid: 8ad5405b-e771-42b1-82d3-ce97af2cea9e
-ms.openlocfilehash: faefb49e252445216bdce2e5606b1eb3fbcd430d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ad616bd46f92261ec5ad6ae81d0db48138631ed1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582003"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349220"
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>Uygulama Web Hizmetlerine Erişme (Visual Basic)
 
-@No__t_0 nesnesi, geçerli proje tarafından başvurulan her bir Web hizmetinin örneğini sağlar. Her örnek isteğe bağlı olarak oluşturulur. Bu Web hizmetlerine `My.WebServices` nesnesinin özellikleri aracılığıyla erişebilirsiniz. Özelliğin adı, özelliğin eriştiği Web hizmetinin adıyla aynıdır. @No__t_0 devralan tüm sınıflar bir Web hizmetidir.
+The `My.WebServices` object provides an instance of each Web service referenced by the current project. Each instance is instantiated on demand. You can access these Web services through the properties of the `My.WebServices` object. The name of the property is the same as the name of the Web service that the property accesses. Any class that inherits from <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> is a Web service.
 
 ## <a name="tasks"></a>Görevler
 
-Aşağıdaki tabloda, bir uygulama tarafından başvurulan Web hizmetlerine erişmenin olası yolları listelenmektedir.
+The following table lists possible ways to access Web services referenced by an application.
 
 |Bitiş|Bkz.|
 |---|---|
-|Web hizmeti çağırma|[My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
-|Bir Web hizmetini zaman uyumsuz olarak çağırma ve tamamlandığında bir olayı işleme|[Nasıl Yapılır: Web Hizmetini Zaman Uyumsuz Çağırma](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
+|Call a Web service|[My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
+|Call a Web service asynchronously and handle an event when it completes|[Nasıl Yapılır: Web Hizmetini Zaman Uyumsuz Çağırma](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

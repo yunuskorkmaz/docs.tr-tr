@@ -1,33 +1,33 @@
 ---
-title: (Visual Basic) dosya erişimi için Async kullanma
+title: Dosya Erişimi için Async Kullanma
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: dac3348657310a38284d9b6680082050a07e19bb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 803d182f5b0f3071feb7aae4945bc3c0a1fd82c3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642408"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349103"
 ---
-# <a name="using-async-for-file-access-visual-basic"></a>(Visual Basic) dosya erişimi için Async kullanma
-Async özelliği dosyalara erişmek için kullanabilirsiniz. Async özelliği'ni kullanarak geri çağırmaları kullanarak veya birden çok yöntemlerde veya lambda ifadelerinde kodunuzu bölme olmadan zaman uyumsuz yöntemleri çağırabilir. Eş zamanlı kod zaman uyumsuz hale getirmek için yalnızca zaman uyumlu bir yöntem yerine zaman uyumsuz yöntemini çağırın ve birkaç anahtar sözcükler için kodu ekleyin.  
+# <a name="using-async-for-file-access-visual-basic"></a>Using Async for File Access (Visual Basic)
+You can use the Async feature to access files. By using the Async feature, you can call into asynchronous methods without using callbacks or splitting your code across multiple methods or lambda expressions. To make synchronous code asynchronous, you just call an asynchronous method instead of a synchronous method and add a few keywords to the code.  
   
- Dosya erişim çağrıları zaman uyumsuzluğu eklemek için aşağıdaki nedenlerden düşünebilirsiniz:  
+ You might consider the following reasons for adding asynchrony to file access calls:  
   
-- İşlemi başlatan kullanıcı Arabirimi iş parçacığı başka işleri gerçekleştirebilirsiniz çünkü faaliyetler UI uygulamaları daha hızlı sağlar. UI iş parçacığı kod yürütülmesi gerekiyorsa (örneğin, 50'den fazla milisaniye) uzun zaman alan, UI ve UI iş parçacığı yeniden klavye işleyebilir ve giriş ve diğer olayları fare g/ç işlemi tamamlanana kadar donabilir.  
+- Asynchrony makes UI applications more responsive because the UI thread that launches the operation can perform other work. If the UI thread must execute code that takes a long time (for example, more than 50 milliseconds), the UI may freeze until the I/O is complete and the UI thread can again process keyboard and mouse input and other events.  
   
-- İş parçacıkları gereksinimini azaltarak ASP.NET ölçeklenebilirliğini ve diğer sunucu tabanlı uygulamalar faaliyetler artırır. Binlerce iş parçacıkları, adanmış bir iş parçacığı başına yanıt uygulama kullanıyorsa ve binlerce istekleri aynı anda işlenmekte gereklidir. Zaman uyumsuz işlemler genellikle bir iş parçacığı bekleme sırasında kullanmanız gerekmez. Mevcut g/ç Tamamlama iş parçacığı kısa bir süre sonunda kullanırlar.  
+- Asynchrony improves the scalability of ASP.NET and other server-based applications by reducing the need for threads. If the application uses a dedicated thread per response and a thousand requests are being handled simultaneously, a thousand threads are needed. Asynchronous operations often don’t need to use a thread during the wait. They use the existing I/O completion thread briefly at the end.  
   
-- Bir dosya erişim işlemi gecikme süresini geçerli koşullar altında çok düşük olabilir ancak gecikme süresi gelecekte büyük ölçüde artırabilir. Örneğin, bir dosya dünya genelindeki bir sunucuya taşınabilir.  
+- The latency of a file access operation might be very low under current conditions, but the latency may greatly increase in the future. For example, a file may be moved to a server that's across the world.  
   
-- Ek yükü zaman uyumsuz özelliğini kullanarak küçük.  
+- The added overhead of using the Async feature is small.  
   
-- Zaman uyumsuz görevleri kolayca paralel olarak çalıştırılabilir.  
+- Asynchronous tasks can easily be run in parallel.  
   
-## <a name="running-the-examples"></a>Örnekleri çalıştırma  
- Bu konudaki örnekleri çalıştırmak için oluşturabileceğiniz bir **WPF uygulaması** veya **Windows Forms uygulaması** ve ardından eklemek bir **düğmesi**. Düğmenin içinde `Click` olay, her örnekte ilk yönteme bir çağrı ekleyin.  
+## <a name="running-the-examples"></a>Running the Examples  
+ To run the examples in this topic, you can create a **WPF Application** or a **Windows Forms Application** and then add a **Button**. In the button's `Click` event, add a call to the first method in each example.  
   
- Aşağıdaki örneklerde, aşağıdakiler dahil `Imports` deyimleri.  
+ In the following examples, include the following `Imports` statements.  
   
 ```vb  
 Imports System  
@@ -38,13 +38,13 @@ Imports System.Text
 Imports System.Threading.Tasks  
 ```  
   
-## <a name="use-of-the-filestream-class"></a>FILESTREAM sınıfının kullanımı  
- Bu konuda kullanım örnekleri <xref:System.IO.FileStream> işletim sistemi düzeyinde gerçekleşmesi zaman uyumsuz g/ç neden olan bir seçenek olduğu sınıf. Bu seçeneği kullanarak, çoğu durumda bir iş parçacığı havuzu iş parçacığını engelleme önleyebilirsiniz. Bu seçeneği etkinleştirmek için belirttiğiniz `useAsync=true` veya `options=FileOptions.Asynchronous` Oluşturucusu çağrısında bağımsız değişken.  
+## <a name="use-of-the-filestream-class"></a>Use of the FileStream Class  
+ The examples in this topic use the <xref:System.IO.FileStream> class, which has an option that causes asynchronous I/O to occur at the operating system level. By using this option, you can avoid blocking a ThreadPool thread in many cases. To enable this option, you specify the `useAsync=true` or `options=FileOptions.Asynchronous` argument in the constructor call.  
   
- Bu seçeneği kullanamazsınız <xref:System.IO.StreamReader> ve <xref:System.IO.StreamWriter> doğrudan bir dosya yolu belirterek açarsanız. Ancak, bunları sağlarsanız, bu seçeneği kullanabilirsiniz bir <xref:System.IO.Stream> , <xref:System.IO.FileStream> sınıfı açılır. Bir iş parçacığı havuzu iş parçacığı engellenir bile, UI iş parçacığı, bekleme sırasında bloke değildir çünkü zaman uyumsuz çağrıları UI uygulamaları daha hızlı olduğunu unutmayın.  
+ You can’t use this option with <xref:System.IO.StreamReader> and <xref:System.IO.StreamWriter> if you open them directly by specifying a file path. However, you can use this option if you provide them a <xref:System.IO.Stream> that the <xref:System.IO.FileStream> class opened. Note that asynchronous calls are faster in UI apps even if a ThreadPool thread is blocked, because the UI thread isn’t blocked during the wait.  
   
-## <a name="writing-text"></a>Metin yazma  
- Aşağıdaki örnek, bir dosyaya metin yazar. Her deyim await, yöntem hemen çıkar. Dosya g/ç işlemi tamamlandığında, yöntem bekleme ifadesinin izleyen deyime sürdürür. Zaman uyumsuz değiştirici bekleme ifadesinin yöntem tanımında olduğuna dikkat edin.  
+## <a name="writing-text"></a>Writing Text  
+ The following example writes text to a file. At each await statement, the method immediately exits. When the file I/O is complete, the method resumes at the statement that follows the await statement. Note that the async modifier is in the definition of methods that use the await statement.  
   
 ```vb  
 Public Async Sub ProcessWrite()  
@@ -66,17 +66,17 @@ Private Async Function WriteTextAsync(filePath As String, text As String) As Tas
 End Function  
 ```  
   
- Deyimi özgün örneğe sahip `Await sourceStream.WriteAsync(encodedText, 0, encodedText.Length)`, aşağıdaki iki deyimi, bir kısaltma olduğundan:  
+ The original example has the statement `Await sourceStream.WriteAsync(encodedText, 0, encodedText.Length)`, which is a contraction of the following two statements:  
   
 ```vb  
 Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length)  
 Await theTask  
 ```  
   
- İlk deyim, bir görev döndürür ve başlatmak, dosya işleme neden olur. Await ile ikinci deyim, yöntem hemen çıkın ve farklı bir görev döndürür neden olur. Dosya daha sonra işleme tamamlandıktan sonra yürütme bekleme takip eden deyime döndürür. Daha fazla bilgi için [zaman uyumsuz programlarda (Visual Basic) denetim akışı](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ The first statement returns a task and causes file processing to start. The second statement with the await causes the method to immediately exit and return a different task. When the file processing later completes, execution returns to the statement that follows the await. For more information, see  [Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
-## <a name="reading-text"></a>Metin okuma  
- Aşağıdaki örnek, bir dosyadan metin okur. Metin arabelleğe alınır ve bu durumda, içine yerleştirilen bir <xref:System.Text.StringBuilder>. Önceki örnekte, farklı bir değer await değerlendirilmesiyle üretir. <xref:System.IO.Stream.ReadAsync%2A> Yöntemi döndürür bir <xref:System.Threading.Tasks.Task> \< <xref:System.Int32>>, await değerlendirilmesiyle üreten bir `Int32` değeri (`numRead`) işlemi tamamlandıktan sonra. Daha fazla bilgi için [zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+## <a name="reading-text"></a>Reading Text  
+ The following example reads text from a file. The text is buffered and, in this case, placed into a <xref:System.Text.StringBuilder>. Unlike in the previous example, the evaluation of the await produces a value. The <xref:System.IO.Stream.ReadAsync%2A> method returns a <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, so the evaluation of the await produces an `Int32` value (`numRead`) after the operation completes. For more information, see [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ```vb  
 Public Async Sub ProcessRead()  
@@ -117,12 +117,12 @@ Private Async Function ReadTextAsync(filePath As String) As Task(Of String)
 End Function  
 ```  
   
-## <a name="parallel-asynchronous-io"></a>Paralel zaman uyumsuz g/ç  
- Aşağıdaki örnek, 10 metin dosyaları yazma tarafından paralel işleme gösterir. Her dosya için <xref:System.IO.Stream.WriteAsync%2A> yöntemi görevlerinin listesi için daha sonra eklenen bir görev döndürür. `Await Task.WhenAll(tasks)` Deyimi yöntemin çıkar ve sürdürür dosya işleme olduğunda yöntemi içindeki tüm görevlerin tamamlayın.  
+## <a name="parallel-asynchronous-io"></a>Parallel Asynchronous I/O  
+ The following example demonstrates parallel processing by writing 10 text files. For each file, the <xref:System.IO.Stream.WriteAsync%2A> method returns a task that is then added to a list of tasks. The `Await Task.WhenAll(tasks)` statement exits the method and resumes within the method when file processing is complete for all of the tasks.  
   
- Tüm örnek kapatır <xref:System.IO.FileStream> içinde örnekler bir `Finally` görevler tamamlandıktan sonra engelleyin. Her varsa `FileStream` yerine içinde oluşturulmuş bir `Imports` deyimi `FileStream` görev tamamlanmadan önce elden.  
+ The example closes all <xref:System.IO.FileStream> instances in a `Finally` block after the tasks are complete. If each `FileStream` was instead created in a `Imports` statement, the `FileStream` might be disposed of before the task was complete.  
   
- Herhangi bir performans artışının neredeyse tamamen paralel işleme ve olmayan uyumsuz olduğuna dikkat edin. Faaliyetler avantajları şunlardır: birden çok iş parçacıklarını tie değil ve kullanıcı arabirimi iş parçacığı ' tie değil.  
+ Note that any performance boost is almost entirely from the parallel processing and not the asynchronous processing. The advantages of asynchrony are that it doesn’t tie up multiple threads, and that it doesn’t tie up the user interface thread.  
   
 ```vb  
 Public Async Sub ProcessWriteMult()  
@@ -158,10 +158,10 @@ Public Async Sub ProcessWriteMult()
 End Sub  
 ```  
   
- Kullanırken <xref:System.IO.Stream.WriteAsync%2A> ve <xref:System.IO.Stream.ReadAsync%2A> yöntemleri belirtebilirsiniz bir <xref:System.Threading.CancellationToken>, hangi işlemin ortasında akış iptal etmek için kullanabilirsiniz. Daha fazla bilgi için [Fine-Tuning Async uygulamanızda (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) ve [yönetilen iş parçacıklarında iptal](../../../../standard/threading/cancellation-in-managed-threads.md).  
+ When using the <xref:System.IO.Stream.WriteAsync%2A> and <xref:System.IO.Stream.ReadAsync%2A> methods, you can specify a <xref:System.Threading.CancellationToken>, which you can use to cancel the operation mid-stream. For more information, see [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) and [Cancellation in Managed Threads](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [Zaman uyumsuz programlarda (Visual Basic) denetim akışı](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)

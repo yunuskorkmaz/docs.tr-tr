@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e0e35562e2351f9b985c74b60d8769577c3e3f56
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421580"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283891"
 ---
 # <a name="tour-of-net"></a>.NET Turu
 
@@ -29,7 +29,7 @@ Kod örneklerini çalıştırmak için bir geliştirme ortamı ayarlamayı öğr
 
 Microsoft, üç .NET dilini etkin bir şekilde geliştirir C#ve F#destekler:, ve Visual Basic (vb). 
 
-* C#basit, güçlü, tür kullanımı uyumlu ve nesne yönelimlidir. Bu, C stili dillerin ifade ve inceliğini bir kısmını korur. C ve benzer dilleri bilen herkes, ile uyumlu olan bazı sorunlar buluyor C#. Hakkında C#daha fazla bilgi edinmek için [ C# kılavuza](../csharp/index.md) göz atın.
+* C#basit, güçlü, tür kullanımı uyumlu ve nesne yönelimlidir. Bu, C stili dillerin ifade ve inceliğini bir kısmını korur. C ve benzer dilleri bilen herkes, ile uyumlu olan bazı sorunlar buluyor C#. Hakkında C#daha fazla bilgi edinmek için [ C# kılavuza](../csharp/index.yml) göz atın.
 
 * F#, geleneksel nesne yönelimli ve kesinlik temelli programlamayı da destekleyen platformlar arası, işlevsel ilk programlama dilidir. Hakkında F#daha fazla bilgi edinmek için [ F# kılavuza](../fsharp/index.md) göz atın.
 
@@ -47,7 +47,7 @@ Bellek ayırmayı serbest bırakmak için benzer bir anahtar sözcük yoktur, ç
 
 Çöp toplayıcı, *bellek güvenliğini*sağlamaya yardımcı olan hizmetlerden biridir. Bir program, yalnızca ayrılmış belleğe eriştiğinde bellek güvende olur. Örneğin, çalışma zamanı, bir uygulamanın ayrılmamış belleğe bir dizi sınırlarının ötesinde erişmesini sağlar.
 
-Aşağıdaki örnekte, çalışma zamanı bellek güvenliğini zorlamak için `InvalidIndexException` özel durumu oluşturur:
+Aşağıdaki örnekte, çalışma zamanı bellek güvenliğini zorlamak için bir `InvalidIndexException` özel durumu oluşturur:
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
@@ -55,7 +55,7 @@ Aşağıdaki örnekte, çalışma zamanı bellek güvenliğini zorlamak için `I
 
 Bazı nesneler *yönetilmeyen kaynaklara*başvurur. Yönetilmeyen kaynaklar, .NET çalışma zamanı tarafından otomatik olarak tutulmayan kaynaklardır. Örneğin, bir dosya tanıtıcısı yönetilmeyen bir kaynaktır. <xref:System.IO.FileStream> nesne yönetilen bir nesnedir, ancak yönetilmeyen bir dosya tanıtıcısına başvurur. <xref:System.IO.FileStream>kullanmayı tamamladığınızda dosya tanıtıcısını serbest bırakmanız gerekir.
 
-.NET ' te, yönetilmeyen kaynaklara başvuran nesneler <xref:System.IDisposable> arabirimini uygular. Nesnesini kullanarak işiniz bittiğinde, yönetilmeyen kaynakları serbest bırakmaktan sorumlu olan nesnenin <xref:System.IDisposable.Dispose> yöntemini çağırılırsınız. .NET dilleri, aşağıdaki örnekte gösterildiği gibi, bu nesneler için uygun bir [`using` ekstresi](../csharp/language-reference/keywords/using.md) sağlar:
+.NET ' te, yönetilmeyen kaynaklara başvuran nesneler <xref:System.IDisposable> arabirimini uygular. Nesnesini kullanarak işiniz bittiğinde, yönetilmeyen kaynakları serbest bırakmaktan sorumlu olan nesnenin <xref:System.IDisposable.Dispose> yöntemini çağırın. .NET dilleri, aşağıdaki örnekte gösterildiği gibi, bu nesneler için uygun bir [`using` bildirimine](../csharp/language-reference/keywords/using.md) sahiptir:
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
@@ -69,7 +69,7 @@ Daha fazla bilgi için aşağıdaki konulara bakın:
 
 ## <a name="type-safety"></a>Tür güvenliği
 
-Bir nesne, belirli bir türün örneğidir. Belirli bir nesne için izin verilen tek işlemler, türü olanlardır. Bir `Dog` türü `Jump` ve `WagTail` yöntemlerine sahip olabilir ancak `SumTotal` bir yöntemi değildir. Program yalnızca belirli bir türe ait yöntemleri çağırır. Diğer tüm çağrılar, derleme zamanı hatası veya çalışma zamanı özel durumuyla sonuçlanır (dinamik özellikleri veya `object` ' i kullanmak durumunda).
+Bir nesne, belirli bir türün örneğidir. Belirli bir nesne için izin verilen tek işlemler, türü olanlardır. Bir `Dog` türü `Jump` ve `WagTail` yöntemlerine sahip olabilir ancak `SumTotal` bir yöntemi değildir. Program yalnızca belirli bir türe ait yöntemleri çağırır. Diğer tüm çağrılar, derleme zamanı hatası veya çalışma zamanı özel durumuyla sonuçlanır (dinamik özellikleri veya `object`kullanmak durumunda).
 
 .NET dilleri, temel ve türetilmiş sınıfların Hiyerarşileriyle nesne yönelimlidir. .NET çalışma zamanı, yalnızca nesne hiyerarşisine göre hizalı nesne yayınlarına ve çağrılarına izin verir. Herhangi bir .NET dilinde tanımlanan her türün temel <xref:System.Object> türünden türetildiğinden emin unutmayın.
 
@@ -79,7 +79,7 @@ Tür güvenliği, erişimci anahtar sözcüklerinin aslına uygunluğunu garanti
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#, VB ve F# desteği yerel *tür çıkarımı*. Tür çıkarımı, derleyicinin sağ taraftaki ifadeden sol taraftaki ifadenin türünü akmasıdır. Bu, tür güvenliği kopmuş veya kaçınılmış değildir. Elde edilen türün, her şeyi ifade eden güçlü bir türü vardır. Önceki örnekte, `dog` tür çıkarımı tanıtmak için yeniden yazılır ve örneğin geri kalanı değiştirilmez:
+C#, VB ve F# desteği yerel *tür çıkarımı*. Tür çıkarımı, derleyicinin sağ taraftaki ifadeden sol taraftaki ifadenin türünü akmasıdır. Bu, tür güvenliği kopmuş veya kaçınılmış değildir. Elde edilen türün, her şeyi ifade eden güçlü bir türü vardır. Önceki örnekte, tür çıkarımı tanıtmak için `dog` yeniden yazılır ve örneğin geri kalanı değiştirilmez:
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
@@ -97,7 +97,7 @@ Temsilciler tür kullanımı C++ güvenli olduklarından hariç işlev işaretç
 
 Genel türler, programcı 'nin, istemci kodunun (tür kullanıcıları) tür parametresi yerine kullanılacak tam türü belirtmesini sağlayan sınıflarını tasarlarken bir *tür parametresi* almasına izin verir.
 
-Yardım geliştirenler genel veri yapıları uygulayan genel türler eklenmiştir. `List` türü gibi bir türün genel olması için alınmadan önce, `object`türünde olan öğelerle çalışması gerekir. Bu, olası hafif çalışma zamanı hatalarıyla birlikte çeşitli performans ve anlam sorunları içeriyordu. İkincinin en fazla bir veri yapısı, örneğin, hem tamsayılar hem de dizeler ve listenin üyeleriyle çalışma sırasında bir `InvalidCastException` ' ı içerdiğinde oluşur.
+Yardım geliştirenler genel veri yapıları uygulayan genel türler eklenmiştir. `List` türü gibi bir türün genel olması için alınmadan önce, `object`türünde olan öğelerle çalışması gerekir. Bu, olası hafif çalışma zamanı hatalarıyla birlikte çeşitli performans ve anlam sorunları içeriyordu. İkinci öğesinin en fazla bir veri yapısı, örneğin, hem tamsayılar hem de dizeler ve listenin üyeleriyle birlikte çalışarak bir `InvalidCastException` oluşur.
 
 Aşağıdaki örnek, bir <xref:System.Collections.Generic.List%601> türleri örneği kullanılarak çalışan temel bir programı göstermektedir:
 
@@ -107,7 +107,7 @@ Daha fazla bilgi için [Genel türler (genel türler) genel bakış](generics.md
 
 ## <a name="async-programming"></a>Zaman uyumsuz programlama
 
-Zaman uyumsuz programlama, .NET içinde çalışma zamanı, çerçeve kitaplıkları ve .NET dil yapılarında zaman uyumsuz destek içeren birinci sınıf kavramdır. Dahili olarak, g/ç bağlantılı işleri mümkün olduğunca verimli bir şekilde gerçekleştirmek için işletim sisteminden faydalanan nesneleri (`Task`) temel alırlar.
+Zaman uyumsuz programlama, .NET içinde çalışma zamanı, çerçeve kitaplıkları ve .NET dil yapılarında zaman uyumsuz destek içeren birinci sınıf kavramdır. Dahili olarak, g/ç bağlantılı işleri mümkün olduğunca verimli bir şekilde gerçekleştirmek için işletim sisteminden faydalanan nesneleri (örneğin, `Task`) temel alırlar.
 
 .NET 'te zaman uyumsuz programlama hakkında daha fazla bilgi edinmek için [zaman uyumsuz genel bakış](async.md) konusuyla başlayın.
 
@@ -129,7 +129,7 @@ Yerel birlikte çalışabilirlik hakkında daha fazla bilgi için bkz. [yerel bi
 
 ## <a name="unsafe-code"></a>Güvenli olmayan kod
 
-Dil desteğine bağlı olarak, CLR yerel belleğe erişmenizi ve `unsafe` kodu aracılığıyla işaretçi aritmetiği yapmanızı sağlar. Bu işlemler, bazı algoritmalar ve sistem birlikte çalışabilirliği için gereklidir. Güçlü, güvenli olmayan kod kullanımı, sistem API 'Leriyle birlikte çalışabilmek ya da en verimli algoritmayı uygulamak için gerekli olmadığı için önerilmez. Güvenli olmayan kod farklı ortamlarda aynı şekilde yürütülemeyebilir ve ayrıca çöp toplayıcı ve tür güvenliği avantajlarından de yararlanmaya başlayabilir. Güvenli olmayan kodu sınırlamak ve merkezileştirmek ve kodu tamamen test etmeniz önerilir.
+Dil desteğine bağlı olarak, CLR yerel belleğe erişmenize ve `unsafe` kod aracılığıyla işaretçi aritmetiği yapmanızı sağlar. Bu işlemler, bazı algoritmalar ve sistem birlikte çalışabilirliği için gereklidir. Güçlü, güvenli olmayan kod kullanımı, sistem API 'Leriyle birlikte çalışabilmek ya da en verimli algoritmayı uygulamak için gerekli olmadığı için önerilmez. Güvenli olmayan kod farklı ortamlarda aynı şekilde yürütülemeyebilir ve ayrıca çöp toplayıcı ve tür güvenliği avantajlarından de yararlanmaya başlayabilir. Güvenli olmayan kodu sınırlamak ve merkezileştirmek ve kodu tamamen test etmeniz önerilir.
 
 Aşağıdaki örnek, `StringBuilder` sınıfından `ToString()` yönteminin değiştirilmiş bir sürümüdür. `unsafe` kodun kullanımını, belleğin öbeklerini doğrudan hareket ettirerek bir algoritmayı verimli bir şekilde nasıl uygulayabileceğinizi gösterir:
 

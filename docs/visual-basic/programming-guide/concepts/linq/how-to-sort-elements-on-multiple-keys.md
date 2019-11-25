@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: birden çok anahtar üzerinde öğeleri sıralama (Visual Basic)'
+title: 'How to: Sort Elements on Multiple Keys'
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-ms.openlocfilehash: 9e70a54dcf7ff8cd2e0f767773ad7a56b1da2330
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: bf1749983700656508b781091ab349943dbc7bc1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835135"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333744"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Nasıl yapılır: birden çok anahtar üzerinde öğeleri sıralama (Visual Basic)
-Bu konu başlığı altında, birden çok anahtar üzerinde nasıl sıralama yapılacağı gösterilmektedir.  
+# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>How to: Sort Elements on Multiple Keys (Visual Basic)
+This topic shows how to sort on multiple keys.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, sonuçlar önce sevkiyat posta kodu tarafından, ardından sipariş tarihine göre sıralanır.  
+ In this example, the results are ordered first by the shipping postal code, then by the order date.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -62,9 +62,9 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ The following example shows the same query for XML that is in a namespace. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanındaki müşteriler ve siparişler](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
+ This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adventure-works.com'>  
@@ -118,4 +118,4 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

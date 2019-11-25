@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Değişkenin Kullanılabilirliğini Denetleme (Visual Basic)'
+title: 'Nasıl yapılır: Bir Değişkenin Kullanılabilirliğini Denetleme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access levels, declared elements
@@ -11,69 +11,69 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: 84aaeecdbd3cc8ab12589c0342b982bf3f1c8529
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 886b57909cf6ba25dbaceea5c5f06eb4e3ba6f1f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582613"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345388"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Nasıl yapılır: Bir Değişkenin Kullanılabilirliğini Denetleme (Visual Basic)
-Bir değişkenin kullanılabilirliğini, *erişim düzeyini*belirterek kontrol edersiniz. Erişim düzeyi, hangi kodun değişkene okuma veya yazma izni olduğunu belirler.  
+You control the availability of a variable by specifying its *access level*. The access level determines what code has permission to read or write to the variable.  
   
-- *Üye değişkenleri* (modül düzeyinde ve herhangi bir yordam dışında tanımlanır) varsayılan olarak genel erişim için, bu, bunlara erişebilen herhangi bir kod anlamına gelir. Bu, bir erişim değiştiricisi belirterek değiştirebilirsiniz.  
+- *Member variables* (defined at module level and outside any procedure) default to public access, which means any code that can see them can access them. You can change this by specifying an access modifier.  
   
-- *Yerel değişkenler* (bir yordamda tanımlanan) genel erişime sahiptir, ancak yordamındaki yalnızca kod bunlara erişebilir. Yerel bir değişkenin erişim düzeyini değiştiremezsiniz, ancak onu içeren yordamın erişim düzeyini değiştirebilirsiniz.  
+- *Local variables* (defined inside a procedure) nominally have public access, although only code within their procedure can access them. You cannot change the access level of a local variable, but you can change the access level of the procedure that contains it.  
   
- Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-## <a name="private-and-public-access"></a>Özel ve genel erişim  
+## <a name="private-and-public-access"></a>Private and Public Access  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>Bir değişkeni yalnızca kendi modülünün, sınıfının veya yapısının içinden erişilebilir hale getirmek için  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>To make a variable accessible only from within its module, class, or structure  
   
-1. Değişken için [Dim ifadesini](../../../../visual-basic/language-reference/statements/dim-statement.md) modül, sınıf veya yapının içine, ancak herhangi bir yordamın dışına yerleştirin.  
+1. Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable inside the module, class, or structure, but outside any procedure.  
   
-2. @No__t_1 ifadesine [Private](../../../../visual-basic/language-reference/modifiers/private.md) anahtar sözcüğünü ekleyin.  
+2. Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.  
   
-     Değişkeni modülün, sınıfın veya yapının içinden herhangi bir yerden okuyabilir veya yazabilirsiniz, ancak dışından kullanamazsınız.  
+     You can read or write to the variable from anywhere within the module, class, or structure, but not from outside it.  
   
-#### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>Bir değişkeni, görebileceği koddan erişilebilir hale getirmek için  
+#### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>To make a variable accessible from any code that can see it  
   
-1. Bir üye değişkeni için, değişken için `Dim` ifadesini modül, sınıf veya yapının içine, ancak herhangi bir yordamın dışına koyun.  
+1. For a member variable, place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.  
   
-2. @No__t_1 ifadesine [Public](../../../../visual-basic/language-reference/modifiers/public.md) anahtar sözcüğünü ekleyin.  
+2. Include the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.  
   
-     Derlemeden birlikte çalışan herhangi bir koddan değişkeni okuyabilir veya yazabilirsiniz.  
+     You can read or write to the variable from any code that interoperates with your assembly.  
   
  veya  
   
-1. Yerel bir değişken için, değişkenin `Dim` ifadesini bir yordamın içine yerleştirin.  
+1. For a local variable, place the `Dim` statement for the variable inside a procedure.  
   
-2. @No__t_1 ifadesine `Public` anahtar sözcüğünü eklemeyin.  
+2. Do not include the `Public` keyword in the `Dim` statement.  
   
-     Değişkeni yordamın içinden herhangi bir yerden okuyabilir veya yazabilirsiniz.  
+     You can read or write to the variable from anywhere within the procedure, but not from outside it.  
   
-## <a name="protected-and-friend-access"></a>Korumalı ve arkadaş erişimi  
- Bir değişkenin erişim düzeyini sınıfı ve türetilmiş sınıflar ya da kendi derlemesi ile sınırlayabilirsiniz. Ayrıca, herhangi bir türetilmiş sınıftaki koddan veya aynı derlemede bulunan başka bir yerde erişime izin veren bu kısıtlamaların birleşimini de belirtebilirsiniz. Bu UNION `Protected` ve `Friend` anahtar sözcüklerini aynı bildirimde birleştirerek belirlersiniz.  
+## <a name="protected-and-friend-access"></a>Protected and Friend Access  
+ You can limit the access level of a variable to its class and any derived classes, or to its assembly. You can also specify the union of these limitations, which allows access from code in any derived class or in any other place in the same assembly. You specify this union by combining the `Protected` and `Friend` keywords in the same declaration.  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>Bir değişkeni yalnızca kendi sınıfının ve türetilmiş sınıfların içinden erişilebilir hale getirmek için  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>To make a variable accessible only from within its class and any derived classes  
   
-1. Değişken için `Dim` ifadesini bir sınıfın içine, ancak herhangi bir yordamın dışına yerleştirin.  
+1. Place the `Dim` statement for the variable inside a class, but outside any procedure.  
   
-2. [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) anahtar sözcüğünü `Dim` ifadesine ekleyin.  
+2. Include the [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) keyword in the `Dim` statement.  
   
-     Değişkeni sınıfın içinde herhangi bir yerden okuyabilir veya yazabilirsiniz, ancak türetme zincirindeki herhangi bir sınıfın dışından değil, onun içinden türetilmiş herhangi bir sınıf içinden.  
+     You can read or write to the variable from anywhere within the class, as well as from within any class derived from it, but not from outside any class in the derivation chain.  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>Bir değişkeni yalnızca aynı derlemenin içinden erişilebilir hale getirmek için  
+#### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>To make a variable accessible only from within the same assembly  
   
-1. Değişken için `Dim` ifadesini modül, sınıf veya yapının içine, ancak herhangi bir yordamın dışına yerleştirin.  
+1. Place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.  
   
-2. @No__t_1 ifadesine [arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md) anahtar sözcüğünü ekleyin.  
+2. Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) keyword in the `Dim` statement.  
   
-     Değişkeni modül, sınıf veya yapının içinden herhangi bir yerden okuyabilir veya yazabilirsiniz, ancak derlemenin dışından değil, aynı derlemede bulunan herhangi bir koddan.  
+     You can read or write to the variable from anywhere within the module, class, or structure, as well as from any code in the same assembly, but not from outside the assembly.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek `Public`, `Protected`, `Friend`, `Protected Friend` ve `Private` erişim düzeylerine sahip değişkenlerin bildirimlerini gösterir. @No__t_0 deyimin bir erişim düzeyi belirttiğinde, `Dim` anahtar sözcüğünü eklemeniz gerekmediğini unutmayın.  
+ The following example shows declarations of variables with `Public`, `Protected`, `Friend`, `Protected Friend`, and `Private` access levels. Note that when the `Dim` statement specifies an access level, you do not need to include the `Dim` keyword.  
   
 ```vb  
 Public Class classForEverybody  
@@ -84,11 +84,11 @@ Private numberForMeOnly As Integer
 ```  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Bir değişkenin erişim düzeyi daha kısıtlayıcıysa, kötü amaçlı kodun yanlış kullanımı ihtimaline karşı daha az olabilir.  
+ The more restrictive the access level of a variable, the smaller the chances that malicious code can make improper use of it.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Dim Deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Public](../../../../visual-basic/language-reference/modifiers/public.md)
 - [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)

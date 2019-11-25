@@ -1,5 +1,5 @@
 ---
-title: Implements Tümcesi (Visual Basic)
+title: Implements Yan Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ImplementsClause
@@ -17,28 +17,28 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: dcd20f21a989c327dcfcf27d5638d500b6e4b6da
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f114aee75356e59eafd9d3ba6af9c64402cb374f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929312"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345867"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements Tümcesi (Visual Basic)
-Bir sınıf veya yapı üyesinin, arabirim içinde tanımlanmış bir üye için uygulama sağladığını gösterir.  
+Indicates that a class or structure member is providing the implementation for a member defined in an interface.  
   
 ## <a name="remarks"></a>Açıklamalar  
-Anahtar sözcüğü, [Implements ifadesiyle](../../../visual-basic/language-reference/statements/implements-statement.md)aynı değildir. `Implements` Bir sınıf ya `Implements` da yapının bir veya daha fazla arabirim uyguladığını belirtmek için ifadesini kullanın ve ardından her üye için hangi arabirimin ve hangi `Implements` üyenin uyguladığı, anahtar sözcüğünü kullanırsınız.
+The `Implements` keyword is not the same as the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md). You use the `Implements` statement to specify that a class or structure implements one or more interfaces, and then for each member you use the `Implements` keyword to specify which interface and which member it implements.
 
-Bir sınıf veya yapı bir arabirim uygularsa, [sınıf deyimden](../../../visual-basic/language-reference/statements/class-statement.md) veya `Implements` [Yapı deyimden](../../../visual-basic/language-reference/statements/structure-statement.md)hemen sonra ifadesini içermesi gerekir ve arabirim tarafından tanımlanan tüm üyeleri uygulamalıdır.
+If a class or structure implements an interface, it must include the `Implements` statement immediately after the [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) or [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md), and it must implement all the members defined by the interface.
 
-## <a name="reimplementation"></a>Yeniden uygulama  
-Türetilmiş bir sınıfta, temel sınıfın zaten uygulanmış olduğu bir arabirim üyesini yeniden uygulayabilirsiniz. Bu, aşağıdaki gibi temel sınıf üyesini geçersiz kılmadan farklıdır:
+## <a name="reimplementation"></a>Reimplementation  
+In a derived class, you can reimplement an interface member that the base class has already implemented. This is different from overriding the base class member in the following respects:
 
-- Temel sınıf üyesinin yeniden uygulanması için [geçersiz kılınabilir](../../../visual-basic/language-reference/modifiers/overridable.md) olması gerekmez.
-- Üyeyi farklı bir adla yeniden uygulayabilirsiniz.
+- The base class member does not need to be [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) to be reimplemented.
+- You can reimplement the member with a different name.
 
-`Implements` Anahtar sözcüğü aşağıdaki bağlamlarda kullanılabilir:
+The `Implements` keyword can be used in the following contexts:
 
 - [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)

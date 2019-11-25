@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Komut satırı derleyicisini çağır (Visual Basic)'
+title: 'Nasıl yapılır: Komut Satırı Derleyicisini Çağırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,58 +7,58 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: a81d5b4f4eae76b0306e2d27475cb8527bda0ff2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3b34ebba68c9c9b2a8335822d0ffaef2a9b06d7c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054226"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344254"
 ---
-# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Nasıl yapılır: Komut satırı derleyicisini çağır (Visual Basic)
+# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Nasıl yapılır: Komut Satırı Derleyicisini Çağırma (Visual Basic)
 
-Komut satırı derleyicisini, yürütülebilir dosyasının adını MS-DOS istemi olarak da bilinen komut satırına yazarak çağırabilirsiniz. Varsayılan Windows komut Isteminden derleme yaparsanız, yürütülebilir dosyanın tam yolunu yazmanız gerekir. Bu varsayılan davranışı geçersiz kılmak için, Visual Studio Geliştirici Komut İstemi kullanabilir ya da PATH ortam değişkenini değiştirebilirsiniz. Her ikisi de yalnızca derleyici adını yazarak herhangi bir dizinden derlemenize izin verir.
+You can invoke the command-line compiler by typing the name of its executable file into the command line, also known as the MS-DOS prompt. If you compile from the default Windows Command Prompt, you must type the fully qualified path to the executable file. To override this default behavior, you can either use the Developer Command Prompt for Visual Studio, or modify the PATH environment variable. Both allow you to compile from any directory by simply typing the compiler name.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>Visual Studio için Geliştirici Komut İstemi kullanarak derleyiciyi çağırmak için
+## <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>To invoke the compiler using the Developer Command Prompt for Visual Studio
 
-1. Microsoft Visual Studio program grubu içinde Visual Studio Araçları program klasörünü açın.
+1. Open the Visual Studio Tools program folder within the Microsoft Visual Studio program group.
 
-2. Visual Studio 'nun yüklüyse, makinenizde herhangi bir dizinden derleyiciye erişmek için Visual Studio Geliştirici Komut İstemi kullanabilirsiniz.
+2. You can use the Developer Command Prompt for Visual Studio to access the compiler from any directory on your machine, if Visual Studio is installed.
 
-3. Visual Studio için Geliştirici Komut İstemi çağırın.
+3. Invoke the Developer Command Prompt for Visual Studio.
 
-4. Komut satırında `vbc.exe` *sourceFileName* yazın ve ENTER tuşuna basın.
+4. At the command line, type `vbc.exe` *sourceFileName* and then press ENTER.
 
-    Örneğin, kaynak kodunuzu adlı `SourceFiles`bir dizinde depoladıysanız, komut istemi ' ni açıp bu dizine geçmek için yazın. `cd SourceFiles` Dizinde adlı `Source.vb`bir kaynak dosyası varsa, yazarak `vbc.exe Source.vb`derleyebilirsiniz.
+    For example, if you stored your source code in a directory called `SourceFiles`, you would open the Command Prompt and type `cd SourceFiles` to change to that directory. If the directory contained a source file named `Source.vb`, you could compile it by typing `vbc.exe Source.vb`.
 
-## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>Windows komut Istemi için PATH ortam değişkenini derleyiciye ayarlamak için
+## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>To set the PATH environment variable to the compiler for the Windows Command Prompt
 
-1. Yerel diskinizde Vbc. exe ' yi bulmak için Windows Search özelliğini kullanın.
+1. Use the Windows Search feature to find Vbc.exe on your local disk.
 
-    Derleyicinin bulunduğu dizinin tam adı Windows dizininin konumuna ve ".NET Framework" sürümünün yüklü olmasına bağlıdır. ".NET Framework" öğesinin birden fazla sürümü yüklüyse, hangi sürümün kullanılacağını (genellikle en son sürüm) belirlemelisiniz.
+    The exact name of the directory where the compiler is located depends on the location of the Windows directory and the version of the ".NET Framework" installed. If you have more than one version of the ".NET Framework" installed, you must determine which version to use (typically the latest version).
 
-2. **Başlangıç** menüsünde **, Bilgisayarım ' a sağ tıklayın ve**ardından kısayol menüsünde **Özellikler** ' e tıklayın.
+2. From your **Start** Menu, right-click **My Computer**, and then click **Properties** from the shortcut menu.
 
-3. **Gelişmiş** sekmesine tıklayın ve ardından **ortam değişkenleri**' ne tıklayın.
+3. Click the **Advanced** tab, and then click **Environment Variables**.
 
-4. **Sistem** değişkenleri bölmesinde listeden **yol** ' ı seçin ve **Düzenle**' ye tıklayın.
+4. In the **System** variables pane, select **Path** from the list and click **Edit**.
 
-5. Sistem değişkenini **Düzenle** iletişim kutusunda, ekleme noktasını **değişken değer** alanındaki dizenin sonuna taşıyın ve noktalı virgül (;) yazın ardından adım 1 ' de bulunan tam dizin adı.
+5. In the **Edit System** Variable dialog box, move the insertion point to the end of the string in the **Variable Value** field and type a semicolon (;) followed by the full directory name found in Step 1.
 
-6. Düzenlemelerinizi onaylamak ve iletişim kutularını kapatmak için **Tamam** ' ı tıklatın.
+6. Click **OK** to confirm your edits and close the dialog boxes.
 
-     PATH ortam değişkenini değiştirdikten sonra, Visual Basic derleyicisini bilgisayardaki herhangi bir dizinden Windows komut Isteminde çalıştırabilirsiniz.
+     After you change the PATH environment variable, you can run the Visual Basic compiler at the Windows Command Prompt from any directory on the computer.
 
-## <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Windows komut Istemi kullanarak derleyiciyi çağırmak için
+## <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>To invoke the compiler using the Windows Command Prompt
 
-1. **Başlat** menüsünde, **Donatılar** klasörüne tıklayın ve ardından **Windows komut istemi**' ni açın.
+1. From the **Start** menu, click on the **Accessories** folder, and then open the **Windows Command Prompt**.
 
-2. Komut satırında `vbc.exe` *sourceFileName* yazın ve ENTER tuşuna basın.
+2. At the command line, type `vbc.exe`*sourceFileName* and then press ENTER.
 
-     Örneğin, kaynak kodunuzu adlı `SourceFiles`bir dizinde depoladıysanız, komut istemi ' ni açıp bu dizine geçmek için yazın. `cd SourceFiles` Dizinde adlı `Source.vb`bir kaynak dosyası varsa, yazarak `vbc.exe Source.vb`derleyebilirsiniz.
+     For example, if you stored your source code in a directory called `SourceFiles`, you would open the Command Prompt and type `cd SourceFiles` to change to that directory. If the directory contained a source file named `Source.vb`, you could compile it by typing `vbc.exe Source.vb`.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

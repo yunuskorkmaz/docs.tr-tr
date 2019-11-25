@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: karmaşık filtrelemeye sahip sorgular yazma (Visual Basic)'
+title: 'How to: Write Queries with Complex Filtering'
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
-ms.openlocfilehash: 41b967e2876be98016b48da5122478f63385c6a8
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 28e84b7785948e9d50c08438494b89c906ab8505
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834967"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344451"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>Nasıl yapılır: karmaşık filtrelemeye sahip sorgular yazma (Visual Basic)
-Bazen karmaşık filtrelerle LINQ to XML sorguları yazmak isteyebilirsiniz. Örneğin, belirli bir ada ve değere sahip bir alt öğesi olan tüm öğeleri bulmanız gerekebilir. Bu konu, karmaşık filtrelemeye sahip sorgu yazma örneği sağlar.  
+# <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>How to: Write Queries with Complex Filtering (Visual Basic)
+Sometimes you want to write LINQ to XML queries with complex filters. For example, you might have to find all elements that have a child element with a particular name and value. This topic gives an example of writing a query with complex filtering.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, "Shipping" değerine eşit bir `Type` özniteliği ve bir alt `State` öğesi "NY" değerine eşit olan bir alt `Address` öğesine sahip olan `PurchaseOrder` öğelerinin nasıl bulunacağını gösterir. @No__t-0 yan tümcesinde iç içe geçmiş bir sorgu kullanır ve koleksiyonda herhangi bir öğe varsa `Any` işleci `True` ' i döndürür.  
+ This example shows how to find all `PurchaseOrder` elements that have a child `Address` element that has a `Type` attribute equal to "Shipping" and a child `State` element equal to "NY". It uses a nested query in the `Where` clause, and the `Any` operator returns `True` if the collection has any elements in it.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
- @No__t-0 işleci hakkında daha fazla bilgi için bkz. [nicelik belirteci işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).  
+ For more information about the `Any` operator, see [Quantifier Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -43,9 +43,9 @@ Next
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ The following example shows the same query for XML that is in a namespace. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında birden fazla satın alma siparişi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ This example uses the following XML document: [Sample XML File: Multiple Purchase Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -80,9 +80,9 @@ End Module
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [XML alt eksen özelliği](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
-- [XML özniteliği eksen özelliği](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [XML değeri özelliği](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
-- [Projeksiyon Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
-- [Nicelik belirteci Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [XML Alt Axis Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
+- [XML Özniteliği Axis Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+- [XML Value Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+- [Projection Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Quantifier Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)

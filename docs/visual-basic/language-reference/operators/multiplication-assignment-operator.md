@@ -1,5 +1,5 @@
 ---
-title: '*= İşleci (Visual Basic)'
+title: '*= İşleci'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.*=
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - '*= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 96c86509-6eb8-4682-8226-3852e049376f
-ms.openlocfilehash: 47d3239af6ff24501e6babc23c0db4103c477796
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4b60fa44a92bff683e13f850da025d7fe753618d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701062"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349781"
 ---
 # <a name="-operator-visual-basic"></a>*= İşleci (Visual Basic)
-Bir değişkenin veya özelliğin değerini bir ifadenin değeri ile çarpar ve sonucu değişkenine veya özelliğe atar.  
+Multiplies the value of a variable or property by the value of an expression and assigns the result to the variable or property.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,21 +28,21 @@ variableorproperty *= expression
   
 ## <a name="parts"></a>Bölümler  
  `variableorproperty`  
- Gerekli. Herhangi bir sayısal değişken veya özellik.  
+ Gerekli. Any numeric variable or property.  
   
  `expression`  
- Gerekli. Herhangi bir sayısal ifade.  
+ Gerekli. Any numeric expression.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 işlecinin sol tarafındaki öğe basit bir skaler değişken, bir özellik veya bir dizi öğesi olabilir. Değişken veya özellik [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)olamaz.  
+ The element on the left side of the `*=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- @No__t-0 işleci ilk olarak, ifadenin değerini (işlecin sağ tarafında) değişkenin veya özelliğin değerine (işlecin sol tarafında) çarpar. İşleci daha sonra bu işlemin sonucunu değişkenine veya özelliğe atar.  
+ The `*=` operator first multiplies the value of the expression (on the right-hand side of the operator) by the value of the variable or property (on the left-hand side of the operator). The operator then assigns the result of that operation to the variable or property.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- [* İşleci](../../../visual-basic/language-reference/operators/multiplication-operator.md) *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. @No__t aşırı yükleme-0 işleci `*=` işlecinin davranışını etkiler. Kodunuz, `*` ' i aşırı yükleyen bir sınıf veya yapıda `*=` kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The [* Operator](../../../visual-basic/language-reference/operators/multiplication-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `*` operator affects the behavior of the `*=` operator. If your code uses `*=` on a class or structure that overloads `*`, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir `Integer` değişkenini ikinci olarak çarpmak ve sonucu ilk değişkene atamak için `*=` işlecini kullanır.  
+ The following example uses the `*=` operator to multiply one `Integer` variable by a second and assign the result to the first variable.  
   
  [!code-vb[VbVbalrOperators#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#5)]  
   
@@ -51,6 +51,6 @@ variableorproperty *= expression
 - [* İşleci](../../../visual-basic/language-reference/operators/multiplication-operator.md)
 - [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

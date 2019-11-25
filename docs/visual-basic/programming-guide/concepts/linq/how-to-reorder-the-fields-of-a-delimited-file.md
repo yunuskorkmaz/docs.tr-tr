@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: ayrılmış bir dosyanın alanlarını yeniden sıralama (LINQ) (Visual Basic)'
+title: 'Nasıl Yapılır: Sınırlandırılmış bir Dosyanın Alanlarını Yeniden Sıralama (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: 21c887dbcf008cbdd9a8a4197f4739f9271ba95f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 736f0218f14f0077683456599d3d7ef3ecec7517
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582794"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347595"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Nasıl yapılır: ayrılmış bir dosyanın alanlarını yeniden sıralama (LINQ) (Visual Basic)
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>How to: Reorder the Fields of a Delimited File (LINQ) (Visual Basic)
 
-Virgülle ayrılmış değer (CSV) dosyası, elektronik tablo verilerini veya satırlar ve sütunlar tarafından temsil edilen diğer tablo verilerini depolamak için genellikle kullanılan bir metin dosyasıdır. Alanları ayırmak için <xref:System.String.Split%2A> yöntemini kullanarak, LINQ kullanarak CSV dosyalarını sorgulamak ve işlemek çok kolaydır. Aslında, yapılandırılmış herhangi bir metin satırının parçalarını yeniden sıralamak için aynı teknik de kullanılabilir; CSV dosyalarıyla sınırlı değildir.
+A comma-separated value (CSV) file is a text file that is often used to store spreadsheet data or other tabular data that is represented by rows and columns. By using the <xref:System.String.Split%2A> method to separate the fields, it is very easy to query and manipulate CSV files by using LINQ. In fact, the same technique can be used to reorder the parts of any structured line of text; it is not limited to CSV files.
 
-Aşağıdaki örnekte, üç sütunun öğrencileri ' "soyadı," "First Name" ve "ID" temsil ettiğini varsayın. Alanlar, öğrencilerin son adlarına göre alfabetik sıralardır. Sorgu önce KIMLIK sütununun ilk göründüğü yeni bir dizi oluşturur, ardından öğrencinin adı ve soyadı birleştiren ikinci bir sütun gelir. Satırlar KIMLIK alanına göre yeniden sıralanabilir. Sonuçlar yeni bir dosyaya kaydedilir ve özgün veriler değiştirilmez.
+In the following example, assume that the three columns represent students' "last name," "first name", and "ID." The fields are in alphabetical order based on the students' last names. The query produces a new sequence in which the ID column appears first, followed by a second column that combines the student's first name and last name. The lines are reordered according to the ID field. The results are saved into a new file and the original data is not modified.
 
-### <a name="to-create-the-data-file"></a>Veri dosyası oluşturmak için
+### <a name="to-create-the-data-file"></a>To create the data file
 
-1. Aşağıdaki satırları spreadsheet1. csv adlı bir düz metin dosyasına kopyalayın. Dosyayı proje klasörünüze kaydedin.
+1. Copy the following lines into a plain text file that is named spreadsheet1.csv. Save the file in your project folder.
 
     ```csv
     Adams,Terry,120
@@ -77,6 +77,6 @@ End Class
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
 - [Nasıl yapılır: CSV Dosyalarından XML Oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)

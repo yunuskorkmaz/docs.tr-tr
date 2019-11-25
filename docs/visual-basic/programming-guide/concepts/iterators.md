@@ -1,23 +1,23 @@
 ---
-title: Yineleyiciler (Visual Basic)
+title: Yineleyiciler
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: f9d5a976badc80c5ce00258f46e1d347f20be2f3
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 465a8e6650c3d015520164030a146c9502ebe603
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583356"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353733"
 ---
-# <a name="iterators-visual-basic"></a>Yineleyiciler (Visual Basic)
+# <a name="iterators-visual-basic"></a>Iterators (Visual Basic)
 
-Bir *Yineleyici* , listeler ve diziler gibi koleksiyonlardan dolaşmak için kullanılabilir.
+An *iterator* can be used to step through collections such as lists and arrays.
 
-Yineleyici yöntemi veya `get` erişimcisi bir koleksiyon üzerinde özel bir yineleme gerçekleştirir. Yineleyici yöntemi, her öğeyi birer birer döndürmek için [yield](../../../visual-basic/language-reference/statements/yield-statement.md) ifadesini kullanır. @No__t_0 ifadeye ulaşıldığında, koddaki geçerli konum hatırlanır. Bu konumdan, Yineleyici işlevinin bir sonraki çağrılışında yürütme yeniden başlatılır.
+An iterator method or `get` accessor performs a custom iteration over a collection. An iterator method uses the [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) statement to return each element one at a time. When a `Yield` statement is reached, the current location in code is remembered. Execution is restarted from that location the next time the iterator function is called.
 
-Her biri Için bir kullanarak istemci kodundan bir yineleyici kullanıyorsunuz [... Sonraki](../../../visual-basic/language-reference/statements/for-each-next-statement.md) ifade veya BIR LINQ sorgusu kullanarak.
+You consume an iterator from client code by using a [For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement, or by using a LINQ query.
 
-Aşağıdaki örnekte, ilk `Yield` ifadeye ulaşılana kadar `For Each` döngüsünün ilk yinelemesi yürütmenin `SomeNumbers` yineleyici yönteminde devam etmesine neden olur. Bu yineleme 3 değerini döndürür ve yineleyici yöntemindeki geçerli konum korunur. Döngünün bir sonraki yinelemesinde, yineleyici yönteminde yürütme kaldığınız yerden devam eder, bir `Yield` bildirimine ulaştığında yeniden durdurulur. Bu yineleme 5 değerini döndürür ve yineleyici yöntemindeki geçerli konum yeniden korunur. Yineleyici yönteminin sonuna ulaşıldığında döngü tamamlanır.
+In the following example, the first iteration of the `For Each` loop causes execution to proceed  in the `SomeNumbers` iterator method until the first `Yield` statement is reached. This iteration returns a value of 3, and the current location in the iterator method is retained. On the next iteration of the loop, execution in the iterator method continues from where it left off, again stopping when it reaches a `Yield` statement. This iteration returns a value of 5, and the current location in the iterator method is again retained. The loop completes when the end of the iterator method is reached.
 
 ```vb
 Sub Main()
@@ -35,38 +35,38 @@ Private Iterator Function SomeNumbers() As System.Collections.IEnumerable
 End Function
 ```
 
-Yineleyici yöntemi veya `get` erişimcisinin dönüş türü <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> veya <xref:System.Collections.Generic.IEnumerator%601> olabilir.
+The return type of an iterator method or `get` accessor can be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.
 
-Yinelemeyi sonlandırmak için bir `Exit Function` veya `Return` ifadesini kullanabilirsiniz.
+You can use an `Exit Function` or `Return` statement to end the iteration.
 
-Visual Basic Yineleyici işlevi veya `get` erişimci bildirimi bir [Yineleyici](../../../visual-basic/language-reference/modifiers/iterator.md) değiştiricisi içerir.
+A Visual Basic iterator function or `get` accessor declaration includes an [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md) modifier.
 
-Yineleyiciler, Visual Studio 2012 ' de Visual Basic sunulmuştur.
+Iterators were introduced in Visual Basic in Visual Studio 2012.
 
-**Bu konuda**
+**In this topic**
 
-- [Basit Yineleyici](#BKMK_SimpleIterator)
+- [Simple Iterator](#BKMK_SimpleIterator)
 
-- [Koleksiyon sınıfı oluşturma](#BKMK_CollectionClass)
+- [Creating a Collection Class](#BKMK_CollectionClass)
 
-- [TRY blokları](#BKMK_TryBlocks)
+- [Try Blocks](#BKMK_TryBlocks)
 
 - [Anonim Metotlar](#BKMK_AnonymousMethods)
 
-- [Bir genel liste ile yineleyiciler kullanma](#BKMK_GenericList)
+- [Using Iterators with a Generic List](#BKMK_GenericList)
 
-- [Sözdizimi bilgileri](#BKMK_SyntaxInformation)
+- [Syntax Information](#BKMK_SyntaxInformation)
 
-- [Teknik uygulama](#BKMK_Technical)
+- [Technical Implementation](#BKMK_Technical)
 
-- [Yineleyicilerin kullanımı](#BKMK_UseOfIterators)
+- [Use of Iterators](#BKMK_UseOfIterators)
 
 > [!NOTE]
-> Konunun basit Yineleyici örneği hariç tüm örnekleri için, `System.Collections` ve `System.Collections.Generic` ad alanları için [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) deyimlerini ekleyin.
+> For all examples in the topic except the Simple Iterator example, include [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) statements for the `System.Collections` and `System.Collections.Generic` namespaces.
 
-## <a name="BKMK_SimpleIterator"></a>Basit Yineleyici
+## <a name="BKMK_SimpleIterator"></a> Simple Iterator
 
-Aşağıdaki örnek, Için içinde olan tek bir `Yield` bildirimine sahiptir [... Sonraki](../../../visual-basic/language-reference/statements/for-next-statement.md) döngü. @No__t_0, `For Each` deyimin gövdesinin her yinelemesi, bir sonraki `Yield` ifadesine devam eden Yineleyici işlevine bir çağrı oluşturur.
+The following example has a single `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. In `Main`, each iteration of the `For Each` statement body creates a call to the iterator function, which proceeds to the next `Yield` statement.
 
 ```vb
 Sub Main()
@@ -90,11 +90,11 @@ As System.Collections.Generic.IEnumerable(Of Integer)
 End Function
 ```
 
-## <a name="BKMK_CollectionClass"></a>Koleksiyon sınıfı oluşturma
+## <a name="BKMK_CollectionClass"></a> Creating a Collection Class
 
-Aşağıdaki örnekte, `DaysOfTheWeek` sınıfı bir <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemi gerektiren <xref:System.Collections.IEnumerable> arabirimini uygular. Derleyici, bir <xref:System.Collections.IEnumerator> döndüren `GetEnumerator` yöntemini örtülü olarak çağırır.
+In the following example, the `DaysOfTheWeek` class implements the <xref:System.Collections.IEnumerable> interface, which requires a <xref:System.Collections.IEnumerable.GetEnumerator%2A> method. The compiler implicitly calls the `GetEnumerator` method, which returns an <xref:System.Collections.IEnumerator>.
 
-@No__t_0 yöntemi her bir dizeyi her bir kez `Yield` ifadesini kullanarak döndürür ve bir `Iterator` değiştiricisi işlev bildiriminde bulunur.
+The `GetEnumerator` method returns each string one at a time by using the `Yield` statement, and  an `Iterator` modifier is in the function declaration.
 
 ```vb
 Sub Main()
@@ -123,9 +123,9 @@ Private Class DaysOfTheWeek
 End Class
 ```
 
-Aşağıdaki örnek, hayvanlar koleksiyonu içeren bir `Zoo` sınıfı oluşturur.
+The following example creates a `Zoo` class that contains a collection of animals.
 
-Sınıf örneğine (`theZoo`) başvuran `For Each` ifade `GetEnumerator` yöntemini örtülü olarak çağırır. @No__t_1 ve `Mammals` özelliklerine başvuran `For Each` deyimleri, `AnimalsForType` adlı yineleyici yöntemini kullanır.
+The `For Each` statement that refers to the class instance (`theZoo`) implicitly calls the `GetEnumerator` method. The `For Each` statements that refer to the `Birds` and `Mammals` properties use the `AnimalsForType` named iterator method.
 
 ```vb
 Sub Main()
@@ -216,11 +216,11 @@ Public Class Zoo
 End Class
 ```
 
-## <a name="BKMK_TryBlocks"></a>TRY blokları
+## <a name="BKMK_TryBlocks"></a> Try Blocks
 
-Visual Basic TRY `Try` bloğunda `Yield` bildirimine izin verir [... Yakala... Finally ekstresi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). @No__t_1 bildirimine sahip bir `Try` bloğunda `Catch` blokları olabilir ve bir `Finally` bloğuna sahip olabilir.
+Visual Basic allows a `Yield` statement in the `Try` block of a [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). A `Try` block that has a `Yield` statement can have `Catch` blocks, and can have a `Finally` block.
 
-Aşağıdaki örnek bir yineleyici işlevinde `Try`, `Catch` ve `Finally` bloklarını içerir. Yineleyici işlevindeki `Finally` bloğu, `For Each` yineleme tamamlanmadan önce yürütülür.
+The following example includes `Try`, `Catch`, and `Finally` blocks in an iterator function. The `Finally` block in the iterator function executes before the `For Each` iteration finishes.
 
 ```vb
 Sub Main()
@@ -253,13 +253,13 @@ Private Iterator Function Test() As IEnumerable(Of Integer)
 End Function
 ```
 
-@No__t_0 bir ifade `Catch` bloğunun veya `Finally` bloğunun içinde olamaz.
+A `Yield` statement cannot be inside a `Catch` block or a `Finally` block.
 
-@No__t_0 gövdesi (yineleyici yöntemi yerine) bir özel durum oluşturursa, yineleyici işlevindeki bir `Catch` bloğu yürütülmez, ancak Yineleyici işlevindeki bir `Finally` bloğu yürütülür. Yineleyici işlevi içindeki bir `Catch` bloğu yalnızca Yineleyici işlevinin içinde oluşan özel durumları yakalar.
+If the `For Each` body (instead of the iterator method) throws an exception, a `Catch` block in the iterator function is not executed, but a `Finally` block in the iterator function is executed. A `Catch` block inside an iterator function catches only exceptions that occur inside the iterator function.
 
-## <a name="BKMK_AnonymousMethods"></a>Anonim Yöntemler
+## <a name="BKMK_AnonymousMethods"></a> Anonymous Methods
 
-Visual Basic, anonim bir işlev bir yineleyici işlevi olabilir. Aşağıdaki örnek bunu göstermektedir.
+In Visual Basic, an anonymous function can be an iterator function. Aşağıdaki örnek bunu göstermektedir.
 
 ```vb
 Dim iterateSequence = Iterator Function() _
@@ -275,7 +275,7 @@ Next
 Console.ReadKey()
 ```
 
-Aşağıdaki örnek, bağımsız değişkenleri doğrulayan Yineleyici olmayan bir yönteme sahiptir. Yöntemi, koleksiyon öğelerini açıklayan bir anonim yineleyicinin sonucunu döndürür.
+The following example has a non-iterator method that validates the arguments. The method returns the result of an anonymous iterator that describes the collection elements.
 
 ```vb
 Sub Main()
@@ -306,17 +306,17 @@ As IEnumerable
 End Function
 ```
 
-Doğrulama işlemi Yineleyici işlevinin içindeyse, `For Each` gövdesinin ilk yinelemesinin başlangıcına kadar doğrulama gerçekleştirilemez.
+If validation is instead inside the iterator function, the validation cannot be performed until the start of the first iteration of the `For Each` body.
 
-## <a name="BKMK_GenericList"></a>Bir genel liste ile yineleyiciler kullanma
+## <a name="BKMK_GenericList"></a> Using Iterators with a Generic List
 
-Aşağıdaki örnekte, `Stack(Of T)` genel sınıfı <xref:System.Collections.Generic.IEnumerable%601> genel arabirimini uygular. @No__t_0 yöntemi `T` türünde bir diziye değerler atar. @No__t_0 yöntemi `Yield` ifadesini kullanarak dizi değerlerini döndürür.
+In the following example, the `Stack(Of T)` generic class implements the <xref:System.Collections.Generic.IEnumerable%601> generic interface. The `Push` method assigns values to an array of type `T`. The <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method returns the array values by using the `Yield` statement.
 
-Genel <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> metoduna ek olarak, genel olmayan <xref:System.Collections.IEnumerable.GetEnumerator%2A> yönteminin da uygulanması gerekir. Bunun nedeni <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.IEnumerable> devralmasıdır. Genel olmayan uygulama genel uygulamaya erteler.
+In addition to the generic <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method, the non-generic <xref:System.Collections.IEnumerable.GetEnumerator%2A> method must also be implemented. This is because <xref:System.Collections.Generic.IEnumerable%601> inherits from <xref:System.Collections.IEnumerable>. The non-generic implementation defers to the generic implementation.
 
-Örnek, aynı veri topluluğunda tekrarların çeşitli yollarını desteklemek için adlandırılmış yineleyiciler kullanır. Bu adlandırılmış yineleyiciler `TopToBottom` ve `BottomToTop` özelliklerdir ve `TopN` yöntemidir.
+The example uses named iterators to support various ways of iterating through the same collection of data. These named iterators are the `TopToBottom` and `BottomToTop` properties, and the `TopN` method.
 
-@No__t_0 özelliği bildirimi `Iterator` anahtar sözcüğünü içerir.
+The `BottomToTop` property declaration includes the `Iterator` keyword.
 
 ```vb
 Sub Main()
@@ -419,39 +419,39 @@ Public Class Stack(Of T)
 End Class
 ```
 
-## <a name="BKMK_SyntaxInformation"></a>Sözdizimi bilgileri
+## <a name="BKMK_SyntaxInformation"></a> Syntax Information
 
-Yineleyici, bir yöntem veya `get` erişimcisi olarak gerçekleşebilir. Bir olay, örnek Oluşturucu, statik oluşturucu veya statik yok edicisi içinde yineleyici olamaz.
+An iterator can occur as a method or `get` accessor. An iterator cannot occur in an event, instance constructor, static constructor, or static destructor.
 
-@No__t_0 deyimindeki ifade türünden örtük bir dönüştürme, yineleyicinin dönüş türüne sahip olmalıdır.
+An implicit conversion must exist from the expression type in the `Yield` statement to the return type of the iterator.
 
-Visual Basic, yineleyici yöntemi `ByRef` parametreye sahip olamaz.
+In Visual Basic, an iterator method cannot have any `ByRef` parameters.
 
-Visual Basic, "yield" ayrılmış bir sözcük değildir ve yalnızca bir `Iterator` yönteminde veya `get` erişimcisinde kullanıldığında özel anlamı vardır.
+In Visual Basic, "Yield" is not a reserved word and has special meaning only when it is used in an `Iterator` method or `get` accessor.
 
-## <a name="BKMK_Technical"></a>Teknik uygulama
+## <a name="BKMK_Technical"></a> Technical Implementation
 
-Bir yineleyici Yöntem olarak yazdığınızda, derleyici onu bir durum makinesi olan bir iç içe geçmiş sınıfa çevirir. Bu sınıf, istemci kodundaki `For Each...Next` döngüsünün devam ettiği sürece yineleyicinin konumunu izler.
+Although you write an iterator as a method, the compiler translates it into a nested class that is, in effect, a state machine. This class keeps track of the position of the iterator as long the `For Each...Next` loop in the client code continues.
 
-Derleyicinin ne yaptığını görmek için, bir yineleyici yöntemi için oluşturulan Microsoft ara dil kodunu görüntülemek için ıldadsm. exe aracını kullanabilirsiniz.
+To see what the compiler does, you can use the Ildasm.exe tool to view the Microsoft intermediate language code that is generated for an iterator method.
 
-Bir [sınıf](../../../csharp/language-reference/keywords/class.md) veya [Yapı](../../../csharp/language-reference/keywords/struct.md)için yineleyici oluşturduğunuzda, tüm <xref:System.Collections.IEnumerator> arabirimini uygulamanız gerekmez. Derleyici yineleyiciyi algıladığında, <xref:System.Collections.IEnumerator> veya <xref:System.Collections.Generic.IEnumerator%601> arabiriminin `Current`, `MoveNext` ve `Dispose` yöntemlerini otomatik olarak oluşturur.
+When you create an iterator for a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md), you do not have to implement the whole <xref:System.Collections.IEnumerator> interface. When the compiler detects the iterator, it automatically generates the `Current`, `MoveNext`, and `Dispose` methods of the <xref:System.Collections.IEnumerator> or <xref:System.Collections.Generic.IEnumerator%601> interface.
 
-@No__t_0 döngüsünün art arda her tekrarında (veya doğrudan `IEnumerator.MoveNext` çağrısı), sonraki Yineleyici kod gövdesi önceki `Yield` deyimden sonra devam eder. Daha sonra Yineleyici gövdesinin sonuna ulaşılana kadar veya bir `Exit Function` ya da `Return` ifadesiyle karşılaşana kadar sonraki `Yield` bildirimine devam eder.
+On each successive iteration of the `For Each…Next` loop (or the direct call to `IEnumerator.MoveNext`), the next iterator code body resumes after the previous `Yield` statement. It then continues to the next `Yield` statement until the end of the iterator body is reached, or until an `Exit Function` or `Return` statement is encountered.
 
-Yineleyiciler <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> metodunu desteklemez. Başlangıçtan yeniden yinelemek için yeni bir yineleyici edinmeniz gerekir.
+Iterators do not support the <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> method. To re-iterate from the start, you must obtain a new iterator.
 
-Daha fazla bilgi için [Visual Basic dil belirtimine](../../../visual-basic/reference/language-specification/index.md)bakın.
+For additional information, see the [Visual Basic Language Specification](../../../visual-basic/reference/language-specification/index.md).
 
-## <a name="BKMK_UseOfIterators"></a>Yineleyicilerin kullanımı
+## <a name="BKMK_UseOfIterators"></a> Use of Iterators
 
-Yineleyiciler, bir liste dizisini doldurmak için karmaşık kod kullanmanız gerektiğinde `For Each` döngüsünün basitliğini korumanıza olanak sağlar. Bu, aşağıdakileri yapmak istediğinizde yararlı olabilir:
+Iterators enable you to maintain the simplicity of a `For Each` loop when you need to use complex code to populate a list sequence. This can be useful when you want to do the following:
 
-- İlk `For Each` döngüsü yinelemeden sonra liste sırasını değiştirin.
+- Modify the list sequence after the first `For Each` loop iteration.
 
-- @No__t_0 döngüsünün ilk yinelemesinden önce büyük bir listenin tam olarak yüklenmesini önleyin. Tablo satırlarını toplu olarak yüklemek için disk belleğine alınmış bir getirme örneği. Başka bir örnek, .NET Framework içinde yineleyiciler uygulayan <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> yöntemidir.
+- Avoid fully loading a large list before the first iteration of a `For Each` loop. An example is a paged fetch to load a batch of table rows. Another example is the <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> method, which implements iterators within the .NET Framework.
 
-- Yineleyici içinde listenin oluşturulmasını yalıt. Yineleyici yönteminde, listeyi derleyip her sonucu bir döngüde sağlayabilirsiniz.
+- Encapsulate building the list in the iterator. In the iterator method, you can build the list and then yield each result in a loop.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

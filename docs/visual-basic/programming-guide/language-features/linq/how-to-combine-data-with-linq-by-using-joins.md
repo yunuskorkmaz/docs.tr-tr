@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) birleştirmeleri kullanarak verileri LINQ ile birleştirme'
+title: 'How to: Combine Data with LINQ by Using Joins'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], joins
@@ -9,83 +9,83 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7279908c5d262b65f4c4da9cd9b6c1b4117bc402
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775888"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344995"
 ---
-# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Nasıl yapılır: (Visual Basic) birleştirmeleri kullanarak verileri LINQ ile birleştirme
-Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri sağlamak koleksiyonları arasında ortak değerlere göre birden fazla koleksiyonun içeriğini birleştirmek. Bu değerler olarak bilinen *anahtar* değerleri. Geliştiricileri ilişkisel veritabanı kavramlarını tanıdık algılayacağı `Join` INNER JOIN as yan tümcesi ve `Group Join` olarak etkili bir şekilde, LEFT OUTER JOIN yan tümcesi.  
+# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Nasıl yapılır: Birleştirmeleri Kullanarak Verileri LINQ İle Birleştirme (Visual Basic)
+Visual Basic provides the `Join` and `Group Join` query clauses to enable you to combine the contents of multiple collections based on common values between the collections. These values are known as *key* values. Developers familiar with relational database concepts will recognize the `Join` clause as an INNER JOIN and the `Group Join` clause as, effectively, a LEFT OUTER JOIN.  
   
- Bu konudaki örnekler birkaç yolu kullanarak verileri birleştirme gösterir `Join` ve `Group Join` sorgu yan tümceleri.  
+ The examples in this topic demonstrate a few ways to combine data by using the `Join` and `Group Join` query clauses.  
   
-## <a name="create-a-project-and-add-sample-data"></a>Bir proje oluşturun ve örnek veriler ekleyin  
+## <a name="create-a-project-and-add-sample-data"></a>Create a Project and Add Sample Data  
   
-#### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>Örnek veriler ve türlerini içeren bir proje oluşturmak için  
+#### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>To create a project that contains sample data and types  
   
-1. Bu konudaki örnek çalıştırmak için Visual Studio'yu açın ve yeni bir Visual Basic konsol uygulaması projesi ekleyin. Visual Basic tarafından oluşturulan Module1.vb dosyasını çift tıklayın.  
+1. To run the samples in this topic, open Visual Studio and add a new Visual Basic Console Application project. Double-click the Module1.vb file created by Visual Basic.  
   
-2. Bu konuda kullanım örnekleri `Person` ve `Pet` türleri ve verileri aşağıdaki kod örneği. Varsayılan bu kodu kopyalayın `Module1` Visual Basic ile oluşturulan modül.  
+2. The samples in this topic use the `Person` and `Pet` types and data from the following code example. Copy this code into the default `Module1` module created by Visual Basic.  
   
      [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
   
-## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Join yan tümcesi iç birleşim gerçekleştirmek  
- INNER JOIN iki koleksiyon birleştirir. Kendisi için belirtilen anahtar değerlerine eşleşen öğe dahil edilir. Eşleşen bir öğeyi diğer koleksiyonda olmayan tüm koleksiyonlardan biri öğeleri hariç tutulur.  
+## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Perform an Inner Join by Using the Join Clause  
+ An INNER JOIN combines data from two collections. Items for which the specified key values match are included. Any items from either collection that do not have a matching item in the other collection are excluded.  
   
- Visual Basic'te LINQ iç birleşim gerçekleştirmek için iki seçenek sağlar: örtük bir birleştirme ve açık bir birleştirme.  
+ In Visual Basic, LINQ provides two options for performing an INNER JOIN: an implicit join and an explicit join.  
   
- Dolaylı bir birleşim katılması koleksiyonları belirtir bir `From` yan tümcesi ve eşleşen anahtar alanları tanımlayan bir `Where` yan tümcesi. Visual Basic, örtük olarak belirtilen anahtar alanlara göre iki koleksiyon birleştirir.  
+ An implicit join specifies the collections to be joined in a `From` clause and identifies the matching key fields in a `Where` clause. Visual Basic implicitly joins the two collections based on the specified key fields.  
   
- Açık bir birleşim kullanarak belirtebilirsiniz `Join` birleştirme işleminde kullanmak için hangi anahtar alanları belirli olmasını istediğiniz zaman yan tümcesi. Bu durumda, bir `Where` yan tümcesi yine de sorgu sonuçları filtrelemek için kullanılabilir.  
+ You can specify an explicit join by using the `Join` clause when you want to be specific about which key fields to use in the join. In this case, a `Where` clause can still be used to filter the query results.  
   
-#### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>INNER JOIN JOIN yan tümcesi kullanarak gerçekleştirmek için  
+#### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>To perform an Inner Join by using the Join clause  
   
-1. Aşağıdaki kodu ekleyin `Module1` iki örtük ve açık iç birleşim örneklerini görmek için projenizdeki modülü.  
+1. Add the following code to the `Module1` module in your project to see examples of both an implicit and explicit inner join.  
   
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
-## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Group Join tümcesi bir sol dış birleşim gerçekleştirmek  
- SOL dış birleştirme sol taraftaki koleksiyonunun tüm öğeleri birleştirme ve yalnızca eşleşen değerler birleşimin sağ taraftaki koleksiyonunun içerir. Sol taraftaki koleksiyonda eşleşen öğe yok öğeleri birleşimin sağ taraftaki koleksiyonunun sorgu sonucu hariç tutulur.  
+## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Perform a Left Outer Join by Using the Group Join Clause  
+ A LEFT OUTER JOIN includes all the items from the left-side collection of the join and only matching values from the right-side collection of the join. Any items from the right-side collection of the join that do not have a matching item in the left-side collection are excluded from the query result.  
   
- `Group Join` Yan tümcesi gerçekleştirir, aslında LEFT OUTER JOIN. LEFT OUTER JOIN genellikle bilinen ve hangi arasındaki fark `Group Join` yan tümcesi döndürür da `Group Join` yan tümcesi grupları sonuçları birleştirme sol taraftaki koleksiyondaki her öğe için sağ taraftaki koleksiyonu. İlişkisel bir veritabanında, her öğe, sorgu sonucu Gruplandırılmamış bir sonuç her iki koleksiyon birleştirme eşleşen öğeleri içeren bir LEFT OUTER JOIN döndürür. Bu durumda, sağ taraftaki koleksiyonunun eşleşen her öğe için bir birleşimin sol taraftaki koleksiyonun öğelerinden yinelenir. Sonraki yordamı tamamladıktan sonra göründüğüne görürsünüz.  
+ The `Group Join` clause performs, in effect, a LEFT OUTER JOIN. The difference between what is typically known as a LEFT OUTER JOIN and what the `Group Join` clause returns is that the `Group Join` clause groups results from the right-side collection of the join for each item in the left-side collection. In a relational database, a LEFT OUTER JOIN returns an ungrouped result in which each item in the query result contains matching items from both collections in the join. In this case, the items from the left-side collection of the join are repeated for each matching item from the right-side collection. You will see what this looks like when you complete the next procedure.  
   
- Sonuçlarını almak bir `Group Join` her gruplandırılmış sorgu sonucu için bir öğe döndürmek için sorguyu genişleterek Gruplandırılmamış bir sonucu olarak sorgu. Bunu yapmak için üzerinde sorgulama emin olmak sahip `DefaultIfEmpty` gruplandırılmış koleksiyonun yöntemi. Bu, sağ taraftaki koleksiyonunun eşleşen sonuç yok olsa bile bir birleşimin sol taraftaki koleksiyonun öğeleri yine de sorgu sonucuna eklenir sağlar. Sorgunuzu birleşimin sağ taraftaki koleksiyonunun eşleşen hiçbir değer olduğunda bir varsayılan sonuç değeri sağlamak için kod ekleyebilirsiniz.  
+ You can retrieve the results of a `Group Join` query as an ungrouped result by extending your query to return an item for each grouped query result. To accomplish this, you have to ensure that you query on the `DefaultIfEmpty` method of the grouped collection. This ensures that items from the left-side collection of the join are still included in the query result even if they have no matching results from the right-side collection. You can add code to your query to provide a default result value when there is no matching value from the right-side collection of the join.  
   
-#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>Left Outer JOIN gruba katılma yan tümcesini kullanarak gerçekleştirmek için  
+#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>To perform a Left Outer Join by using the Group Join clause  
   
-1. Aşağıdaki kodu ekleyin `Module1` gruplandırılmış bir sol dış birleşim hem gruplanmamış sol dış birleşim örneklerini görmek için projenizdeki modülü.  
+1. Add the following code to the `Module1` module in your project to see examples of both a grouped left outer join and an ungrouped left outer join.  
   
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
-## <a name="perform-a-join-by-using-a-composite-key"></a>Bir bileşik anahtarı kullanarak bir katılma işlemi  
- Kullanabileceğiniz `And` anahtar sözcüğü bir `Join` veya `Group Join` eşleştirme yapılırken kullanılacak birden çok anahtar alanları tanımlamak için yan tümcesi birleştirilen koleksiyonlardan değerleri. `And` Anahtar sözcüğü belirtir belirtilen tüm anahtar alanları öğeleri katılması için aynı olmalıdır.  
+## <a name="perform-a-join-by-using-a-composite-key"></a>Perform a Join by Using a Composite Key  
+ You can use the `And` keyword in a `Join` or `Group Join` clause to identify multiple key fields to use when matching values from the collections being joined. The `And` keyword specifies that all specified key fields must match for items to be joined.  
   
-#### <a name="to-perform-a-join-by-using-a-composite-key"></a>Bir bileşik anahtarı kullanarak bir katılma işlemi için  
+#### <a name="to-perform-a-join-by-using-a-composite-key"></a>To perform a Join by using a composite key  
   
-1. Aşağıdaki kodu ekleyin `Module1` bir bileşik anahtarı kullanan bir birleşim örneklerini görmek için projenizdeki modülü.  
+1. Add the following code to the `Module1` module in your project to see examples of a join that uses a composite key.  
   
      [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
-## <a name="run-the-code"></a>Kodu çalıştırma  
+## <a name="run-the-code"></a>Run the Code  
   
-#### <a name="to-add-code-to-run-the-examples"></a>Örnekleri çalıştırmak için kod eklemek için  
+#### <a name="to-add-code-to-run-the-examples"></a>To add code to run the examples  
   
-1. Değiştirin `Sub Main` içinde `Module1` bu konudaki örnek çalıştırmak için aşağıdaki kodu projenizdeki modülü.  
+1. Replace the `Sub Main` in the `Module1` module in your project with the following code to run the examples in this topic.  
   
      [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
-2. Örnekleri çalıştırmak için F5 tuşuna basın.  
+2. Press F5 to run the examples.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Join Yan Tümcesi](../../../../visual-basic/language-reference/queries/join-clause.md)
 - [Group Join Yan Tümcesi](../../../../visual-basic/language-reference/queries/group-join-clause.md)
 - [From Yan Tümcesi](../../../../visual-basic/language-reference/queries/from-clause.md)
 - [Where Yan Tümcesi](../../../../visual-basic/language-reference/queries/where-clause.md)
 - [Sorgular](../../../../visual-basic/language-reference/queries/index.md)
-- [LINQ (C#) ile veri dönüştürmeler](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)
+- [Data Transformations with LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)

@@ -1,5 +1,5 @@
 ---
-title: Visual Basic'de Sabitler ve Numaralandırmalar
+title: Sabitler ve Numaralandırmalar
 ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic]
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], constants
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
-ms.openlocfilehash: dfd9330210dd748d739cd8da2985795099beacd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 858f22df26d44f47848921ee862c1d4c1ca1fc60
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907302"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353979"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic'de Sabitler ve Numaralandırmalar
-Sabitler değişmez bir değer yerine anlamlı adlar bir yoludur. Sabitler adından da anlaşılacağı gibi bir uygulamanın yürütülmesini sabit kalması değerlerini depolar. Sabitler, sayılar, kodunuzu daha okunabilir yapmak yerine anlamlı adlar sağlamak için kullanabilirsiniz.  
+Constants are a way to use meaningful names in place of a value that does not change. Constants store values that, as the name implies, remain constant throughout the execution of an application. You can use constants to provide meaningful names, instead of numbers, making your code more readable.  
   
- Numaralandırmalar ilgili sabitlerinin kümeleri ile birlikte çalışır ve adları ile sabit değerleri ilişkilendirmek için kullanışlı bir yol sağlar. Örneğin, tamsayı sabitleri haftanın günleri ile ilişkilendirilmiş bir dizi için bir numaralandırmayı bildirmek ve daha sonra kodunuzda tamsayı değerleri yerine gün adlarını kullanın.  
+ Enumerations provide a convenient way to work with sets of related constants, and to associate constant values with names. For example, you can declare an enumeration for a set of integer constants associated with the days of the week, and then use the names of the days rather than their integer values in your code.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Terim|Tanım|  
 |---|---|  
-|[Sabitlere Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|Bu bölümdeki konular, sabitleri ve kullanımları açıklar.|  
-|[Sabit Listelerine Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|Bu bölümdeki konular, numaralandırmalar ve kullanımları açıklanmaktadır.|  
+|[Sabitlere Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|Topics in this section describe constants and their uses.|  
+|[Sabit Listelerine Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|Topics in this section describe enumerations and their uses.|  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
   
 |Terim|Tanım|  
 |---|---|  
-|[Const Deyimi](../../../../visual-basic/language-reference/statements/const-statement.md)|Açıklar `Const` deyimi sabitleri bildirmek için kullanılır.|  
-|[Enum Deyimi](../../../../visual-basic/language-reference/statements/enum-statement.md)|Açıklar `Enum` sabit listeleri oluşturmak için kullanılan ifade.|  
-|[Option Explicit Deyimi](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)|Açıklar `Option Explicit` Modül düzeyinde bu modüldeki tüm değişkenleri açık bildirimini zorlamak için kullanılan ifade.|  
-|[Option Infer Deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)|Açıklar `Option Infer` deyimi değişkenleri bildirme içinde yerel tür çıkarımı kullanımını etkinleştirir.|  
-|[Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Açıklar `Option Strict` örtük veri türü dönüşümünü sadece genişletme dönüştürmeleri için sınırlar, deyimi geç bağlamaya izin vermez ve örtük sonuçlanan yazmaya izin vermeyen bir `Object` türü.|
+|[Const Deyimi](../../../../visual-basic/language-reference/statements/const-statement.md)|Describes the `Const` statement, which is used to declare constants.|  
+|[Enum Deyimi](../../../../visual-basic/language-reference/statements/enum-statement.md)|Describes the `Enum` statement, which is used to create enumerations.|  
+|[Option Explicit Deyimi](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)|Describes the `Option Explicit` statement, which is used at module level to force explicit declaration of all variables in that module.|  
+|[Option Infer Deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)|Describes the `Option Infer` statement, which enables the use of local type inference in declaring variables.|  
+|[Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Describes the `Option Strict` statement, which restricts implicit data type conversions to only widening conversions, disallows late binding, and disallows implicit typing that results in an `Object` type.|

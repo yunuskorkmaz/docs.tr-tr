@@ -1,31 +1,31 @@
 ---
-title: Saf işlevsel dönüşümlere XML (Visual Basic)
+title: Saf İşlevsel XML Dönüşümleri
 ms.date: 07/20/2015
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
-ms.openlocfilehash: 48149faba1c41583ab4e50c539d52e4caf90592a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cccc1321d934dca5563a1e9e52af9352231bd558
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766460"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346597"
 ---
-# <a name="pure-functional-transformations-of-xml-visual-basic"></a>Saf işlevsel dönüşümlere XML (Visual Basic)
-Bu bölüm için XML işlevsel dönüşümü öğretici sağlar. Bu kavramlarla açıklamalarını içerir ve işlevsel dönüşümlere ve bir XML belgesi işlemek için işlevsel dönüşümlere kullanma örnekleri kullanmak için anlamanız gereken dil oluşturur. Bu öğreticide LINQ için XML kod örnekleri sağlasa da, tüm temel kavramları diğer LINQ teknolojileri için de geçerlidir.  
+# <a name="pure-functional-transformations-of-xml-visual-basic"></a>Pure Functional Transformations of XML (Visual Basic)
+This section provides a functional transformation tutorial for XML. This includes explanations of the main concepts and language constructs that you must understand to use functional transformations, and examples of using functional transformations to manipulate an XML document. Although this tutorial provides LINQ to XML code examples, all of the underlying concepts also apply to other LINQ technologies.  
   
- [Öğreticisi: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) öğretici, her eskisinin oluşturmayı örnekler, bir dizi sağlar. Bu örnekler, XML düzenleme saf işlevsel dönüşümsel yaklaşımı gösterir.  
+ The [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial provides a series of examples, each building on the previous one. These examples demonstrate the pure functional transformational approach to manipulating XML.  
   
- Bu öğreticide, Visual Basic bilgisine varsayılır. Dil yapıları ayrıntılı semantikleri, bu öğreticide sağlanmaz, ancak uygun dil belgelerine bağlantılar sağlanır.  
+ This tutorial assumes a working knowledge of Visual Basic. Detailed semantics of the language constructs are not provided in this tutorial, but links are provided to the language documentation as appropriate.  
   
- Temel bilgisayar bilimi kavramları ve XML XML ad alanları da dahil olmak üzere, bilgisine da varsayılır.  
+ A working knowledge of basic computer science concepts and XML, including XML namespaces, is also assumed.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[Saf işlevsel dönüşümlere (Visual Basic) giriş](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|İşlevsel dönüşümlere açıklanmakta ve ilgili terimleri tanımlar.|  
-|[Öğretici: Ertelenmiş yürütme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)|Geç değerlendirme ve ertelenmiş yürütme ayrıntılı açıklar.|  
-|[Öğretici: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|İşlevsel dönüşüm gösteren öğretici.|  
+|[Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|Describes functional transformations and defines the relevant terminology.|  
+|[Tutorial: Deferred Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)|Describes lazy evaluation and deferred execution in detail.|  
+|[Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|A tutorial that demonstrates a functional transformation.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [(Visual Basic) XML ağaçlarını sorgulama](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
+- [Querying XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

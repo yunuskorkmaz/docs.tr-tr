@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Uygulama olay günlüğüne yazma (Visual Basic)'
+title: 'Nasıl Yapılır: Uygulama Olay Günlüğüne Yazma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Computer.EventLog element
@@ -7,48 +7,48 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: 385a85d956a0de727e3c061ec447a3d53ad6c159
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 511bb8fb16851872c1a16ae7627ed0fc6594337c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054143"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352041"
 ---
-# <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Nasıl yapılır: Uygulama olay günlüğüne yazma (Visual Basic)
+# <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Nasıl Yapılır: Uygulama Olay Günlüğüne Yazma (Visual Basic)
 
-Uygulamanızda gerçekleşen olaylar hakkında `My.Application.Log` bilgi `My.Log` yazmak için ve nesnelerini kullanabilirsiniz. Bu örnek, bir olay günlüğü dinleyicisinin izleme bilgilerini uygulama `My.Application.Log` olay günlüğü 'ne yazmalarını sağlayacak şekilde nasıl yapılandırılacağını gösterir.
+You can use the `My.Application.Log` and `My.Log` objects to write information about events that occur in your application. This example shows how to configure an event log listener so `My.Application.Log` writes tracing information to the Application event log.
 
-Güvenlik günlüğüne yazılamıyor. Sistem günlüğüne yazmak için LocalSystem veya Administrator hesabının bir üyesi olmanız gerekir.
+You cannot write to the Security log. In order to write to the System log, you must be a member of the LocalSystem or Administrator account.
 
-Bir olay günlüğünü görüntülemek için **Sunucu Gezgini** veya **Windows Olay Görüntüleyicisi**kullanabilirsiniz. Daha fazla bilgi için [.NET Framework ETW olayları](../../../../framework/performance/etw-events.md)bölümüne bakın.
+To view an event log, you can use **Server Explorer** or **Windows Event Viewer**. For more information, see [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).
 
-## <a name="to-add-and-configure-the-event-log-listener"></a>Olay günlüğü dinleyicisini eklemek ve yapılandırmak için
+## <a name="to-add-and-configure-the-event-log-listener"></a>To add and configure the event log listener
 
-1. **Çözüm Gezgini** içinde App. config öğesine sağ tıklayın ve **Aç**' ı seçin.
+1. Right-click app.config in **Solution Explorer** and choose **Open**.
 
-    \- veya -
+    \- or -
 
-    App. config dosyası yoksa,
+    If there is no app.config file,
 
-    1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
+    1. On the **Project** menu, choose **Add New Item**.
 
-    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası**' nı seçin.
+    2. From the **Add New Item** dialog box, choose **Application Configuration File**.
 
     3. **Ekle**'yi tıklatın.
 
-2. Uygulama yapılandırma dosyasında bölümünü bulun. `<listeners>`
+2. Locate the `<listeners>` section in the application configuration file.
 
-    Bölümünün, üst düzey `<listeners>` `<system.diagnostics>` `<source>` bölüm`<configuration>` altında iç içe yerleştirilmiş olan bölümünde iç içe yerleştirilmiş olan "DefaultSource" adlı ad özniteliğiyle birlikte bölümünü bulabilirsiniz.
+    You will find the `<listeners>` section in the `<source>` section with the name attribute "DefaultSource", which is nested under the `<system.diagnostics>` section, which is nested under the top-level `<configuration>` section.
 
-3. Bu öğeyi `<listeners>` bu bölüme ekleyin:
+3. Add this element to that `<listeners>` section:
 
     ```xml
     <add name="EventLog"/>
     ```
 
-4. Bölümünde, üst düzey `<system.diagnostics>` `<configuration>` bölümünde bölümünde bulunan bölümünübulun.`<sharedListeners>`
+4. Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
 
-5. Bu öğeyi `<sharedListeners>` bu bölüme ekleyin:
+5. Add this element to that `<sharedListeners>` section:
 
     ```xml
     <add name="EventLog"
@@ -56,16 +56,16 @@ Bir olay günlüğünü görüntülemek için **Sunucu Gezgini** veya **Windows 
          initializeData="APPLICATION_NAME"/>
     ```
 
-    Uygulamanızın `APPLICATION_NAME` adıyla değiştirin.
+    Replace `APPLICATION_NAME` with the name of your application.
 
     > [!NOTE]
-    > Genellikle, bir uygulama olay günlüğüne yalnızca hataları yazar. Günlük çıktısını filtreleme hakkında daha fazla bilgi için [bkz. İzlenecek yol: My. Application. log çıktımı](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)filtreleniyor.
+    > Typically, an application writes only errors to the event log. For information on filtering log output, see [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
 
-## <a name="to-write-event-information-to-the-event-log"></a>Olay günlüğüne olay bilgilerini yazmak için
+## <a name="to-write-event-information-to-the-event-log"></a>To write event information to the event log
 
-Olay günlüğüne bilgi `My.Application.Log.WriteException` yazmak için veyayönteminikullanın.`My.Application.Log.WriteEntry` Daha fazla bilgi için [nasıl yapılır: Yazma günlüğü iletileri](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) ve [nasıl yapılır: Günlük özel](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)durumları.
+Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the event log. For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
 
-Bir derleme için olay günlüğü dinleyicisini yapılandırdıktan sonra, bu derlemeden `My.Application.Log` yazan tüm iletileri alır.
+After you configure the event log listener for an assembly, it receives all messages that `My.Application.Log` writes from that assembly.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -73,5 +73,5 @@ Bir derleme için olay günlüğü dinleyicisini yapılandırdıktan sonra, bu d
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Uygulama Günlükleriyle Çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Nasıl yapılır: Günlük özel durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [İzlenecek yol: My. Application. log bilgisinin nereden yazabileceğini belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [Nasıl Yapılır: Günlük Özel Durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Nereye Yazdığını Belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)

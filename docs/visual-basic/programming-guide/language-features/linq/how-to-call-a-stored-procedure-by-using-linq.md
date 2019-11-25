@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: LINQ (Visual Basic) kullanarak bir saklı yordamı çağırma'
+title: 'How to: Call a Stored Procedure by Using LINQ'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], stored procedure calls
@@ -7,66 +7,66 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: af25ebe10681ebb1c346f90afc0291e53224833a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: f91ccda1842887b3785ce304fd41bdd020a55479
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319579"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345021"
 ---
-# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Nasıl yapılır: LINQ (Visual Basic) kullanarak bir saklı yordamı çağırma
-Dil ile tümleşik sorgu (LINQ), veritabanı bilgileri, veritabanı nesneleri gibi depolanan yordamları da dahil olmak üzere erişim kolaylaştırır.  
+# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Nasıl yapılır: Bir Saklı Yordamı LINQ Kullanarak Çağırma (Visual Basic)
+Language-Integrated Query (LINQ) makes it easy to access database information, including database objects such as stored procedures.  
   
- Aşağıdaki örnek, bir SQL Server veritabanında bir saklı yordamı çağıran bir uygulama oluşturma işlemi gösterilmektedir. Örnek veritabanında iki farklı saklı yordam çağırmak nasıl gösterir. Her yordam, bir sorgunun sonuçlarını döndürür. Bir yordam giriş parametreleri alır ve diğer yordam parametre almaz.  
+ The following example shows how to create an application that calls a stored procedure in a SQL Server database. The sample shows how to call two different stored procedures in the database. Each procedure returns the results of a query. One procedure takes input parameters, and the other procedure does not take parameters.  
   
- Bu konudaki örnekler, Northwind örnek veritabanını kullanır. Geliştirme bilgisayarınızda bu veritabanı yoksa Microsoft Download Center'dan gelen indirebilirsiniz. Yönergeler için [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-connection-to-a-database"></a>Bir veritabanına bir bağlantı oluşturmak için  
+### <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database  
   
-1. Visual Studio'da açın **Sunucu Gezgini**/**veritabanı Gezgini** tıklayarak **Sunucu Gezgini**/**veritabanı Explorer** üzerinde **görünümü** menüsü.  
+1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking **Server Explorer**/**Database Explorer** on the **View** menu.  
   
-2. Sağ **veri bağlantıları** içinde **Sunucu Gezgini**/**veritabanı Gezgini** ve ardından **Bağlantı Ekle**.  
+2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer** and then click **Add Connection**.  
   
-3. Northwind örnek veritabanıyla kurulan geçerli bir bağlantı belirtin.  
+3. Specify a valid connection to the Northwind sample database.  
   
-### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>LINQ to SQL dosyası içeren bir proje eklemek için  
+### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>To add a project that contains a LINQ to SQL file  
   
-1. Visual Studio'da üzerinde **dosya** menüsünde **yeni** ve ardından **proje**. Visual Basic seçin **Windows Forms uygulaması** proje türü.  
+1. In Visual Studio, on the **File** menu, point to **New** and then click **Project**. Select Visual Basic **Windows Forms Application** as the project type.  
   
-2. Üzerinde **proje** menüsünü tıklatın **Yeni Öğe Ekle**. Seçin **LINQ to SQL sınıfları** öğe şablonu.  
+2. On the **Project** menu, click **Add New Item**. Select the **LINQ to SQL Classes** item template.  
   
-3. Dosyayı `northwind.dbml` olarak adlandırın. **Ekle**'yi tıklatın. Object Relational Designer (O/R Tasarımcısı) için northwind.dbml dosyası açılır.  
+3. Name the file `northwind.dbml`. **Ekle**'yi tıklatın. The Object Relational Designer (O/R Designer) is opened for the northwind.dbml file.  
   
-### <a name="to-add-stored-procedures-to-the-or-designer"></a>O/R Tasarımcısı için saklı yordamlar eklemek için  
+### <a name="to-add-stored-procedures-to-the-or-designer"></a>To add stored procedures to the O/R Designer  
   
-1. İçinde **Sunucu Gezgini**/**veritabanı Gezgini**, Northwind veritabanına bağlantı genişletin. Genişletin **saklı yordamlar** klasör.  
+1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Stored Procedures** folder.  
   
-     O/R Tasarımcısı kapattıysanız, daha önce eklediğiniz northwind.dbml dosyasına çift tıklayarak açabilirsiniz.  
+     If you have closed the O/R Designer, you can reopen it by double-clicking the northwind.dbml file that you added earlier.  
   
-2. Tıklayın **yıla göre satış** saklı yordam ve tasarımcısının sağ bölmeye sürükleyin. Tıklayın **on en pahalı ürün** saklı yordam, tasarımcının sağ bölmeye sürükleyin.  
+2. Click the **Sales by Year** stored procedure and drag it to the right pane of the designer. Click the **Ten Most Expensive Products** stored procedure drag it to the right pane of the designer.  
   
-3. Değişikliklerinizi kaydetmek ve Tasarımcısı'nı kapatın.  
+3. Save your changes and close the designer.  
   
-4. Projenizi kaydedin.  
+4. Save your project.  
   
-### <a name="to-add-code-to-display-the-results-of-the-stored-procedures"></a>Saklı yordamları sonuçlarını görüntülemek için kod eklemek için  
+### <a name="to-add-code-to-display-the-results-of-the-stored-procedures"></a>To add code to display the results of the stored procedures  
   
-1. Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.DataGridView> Form1 projeniz için varsayılan Windows Form denetimi.  
+1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.  
   
-2. Form1 kod eklemek için çift tıklayın, `Load` olay.  
+2. Double-click Form1 to add code to its `Load` event.  
   
-3. Tasarımcı saklı yordamlar için O/R Tasarımcısı eklendiğinde, eklenen bir <xref:System.Data.Linq.DataContext> projeniz için nesne. Bu nesne, bu yordamları erişmek için gereken kodu içerir. <xref:System.Data.Linq.DataContext> Nesne proje adı için bir .dbml dosyası adına bağlı. Bu proje için <xref:System.Data.Linq.DataContext> nesne adlı `northwindDataContext`.  
+3. When you added stored procedures to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object for your project. This object contains the code that you must have to access those procedures. The <xref:System.Data.Linq.DataContext> object for the project is named based on the name of the .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.  
   
-     Bir örneği oluşturabilir <xref:System.Data.Linq.DataContext> , kodu ve çağrı O/R tasarımcısı tarafından belirtilen saklı yordam yöntemleri. Bağlanacak <xref:System.Windows.Forms.DataGridView> nesnesini çağırarak hemen yürütme için sorguyu zorlamak sahip olabileceğiniz <xref:System.Linq.Enumerable.ToList%2A> saklı yordam sonuçlarında yöntemi.  
+     You can create an instance of the <xref:System.Data.Linq.DataContext> in your code and call the stored procedure methods specified by the O/R Designer. To bind to the <xref:System.Windows.Forms.DataGridView> object, you may have to force the query to execute immediately by calling the <xref:System.Linq.Enumerable.ToList%2A> method on the results of the stored procedure.  
   
-     Aşağıdaki kodu ekleyin `Load` veri Bağlamınızı yöntemler olarak kullanıma sunulan saklı yordamlardan birini çağrılacak olay.  
+     Add the following code to the `Load` event to call either of the stored procedures exposed as methods for your data context.  
   
      [!code-vb[VbLINQtoSQLHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form3.vb#1)]  
     [!code-vb[VbLINQtoSQLHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form3.vb#2)]  
   
-4. Projenizi çalıştırma ve sonuçları görüntülemek için F5 tuşuna basın.  
+4. Press F5 to run your project and view the results.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: Visual Basic'de Tür Dönüştürmeleri
+title: Tür Dönüştürmeleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [Visual Basic], type
@@ -10,38 +10,38 @@ helpviewer_keywords:
 - changing data types [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
-ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbf0c9877cf9a9b4364c8c058c61e847ad7bf049
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663290"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348717"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Visual Basic'de Tür Dönüştürmeleri
-Değeri bir veri türünden başka bir türe değiştirme işleminin adlı *dönüştürme*. Dönüştürmeleri değerleri *genişletme* veya *daraltma*türleri dahil veri kapasiteleri bağlı olarak. Ayrıca bunlar *örtük* veya *açık*kaynak kodunda sözdizimi bağlı olarak.  
+The process of changing a value from one data type to another type is called *conversion*. Conversions are either *widening* or *narrowing*, depending on the data capacities of the types involved. They are also *implicit* or *explicit*, depending on the syntax in the source code.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Genişletme ve Daraltma Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- Dönüştürmeler verileri hedef türü olup olmadığını tutabilir tarafından sınıflandırılan açıklar.  
+ Explains conversions classified by whether the destination type can hold the data.  
   
  [Örtük ve Açık Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- Dönüştürmeleri olup Visual Basic bunları otomatik olarak gerçekleştirir tarafından sınıflandırılan açıklanır.  
+ Discusses conversions classified by whether Visual Basic performs them automatically.  
   
  [Dizeler ve Diğer Türler Arasında Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- Dizeler ve sayısal arasında dönüştürme gösterilmektedir `Boolean`, veya tarih/saat değerleri.  
+ Illustrates converting between strings and numeric, `Boolean`, or date/time values.  
   
- [Nasıl yapılır: Bir nesneyi Visual Basic'de başka bir türe dönüştürme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- Nasıl dönüştürüleceğini gösterir bir `Object` değişkenini herhangi bir veri türü.  
+ [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ Shows how to convert an `Object` variable to any other data type.  
   
  [Dizi Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- Farklı veri türlerinin dizileri arasında dönüştürme işleminde adımları.  
+ Steps you through the process of converting between arrays of different data types.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Visual Basic veri türlerini tanıtır ve bunların nasıl kullanılacağını açıklar.  
+ Introduces the Visual Basic data types and describes how to use them.  
   
  [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)  
- Visual Basic tarafından sağlanan başlangıç veri türleri listeler.  
+ Lists the elementary data types supplied by Visual Basic.  
   
  [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- Veri türleri ile çalışırken ortaya çıkabilecek bazı yaygın sorunlar ele alınmaktadır.
+ Discusses some common problems that can arise when working with data types.

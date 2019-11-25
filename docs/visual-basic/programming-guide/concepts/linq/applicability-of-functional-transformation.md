@@ -1,39 +1,39 @@
 ---
-title: (Visual Basic) işlev dönüşümün uygulanabilirliği
+title: İşlev Dönüşümün Uygulanabilirliği
 ms.date: 07/20/2015
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
-ms.openlocfilehash: 1903a59ec666c7d0b4c585abe5424cc1a0fd902d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 292201f4964142126d428939807cb20f354a7d2f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642412"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345763"
 ---
-# <a name="applicability-of-functional-transformation-visual-basic"></a>(Visual Basic) işlev dönüşümün uygulanabilirliği
-Saf işlevsel dönüşümlere çok çeşitli durumlarda geçerlidir.  
+# <a name="applicability-of-functional-transformation-visual-basic"></a>Applicability of Functional Transformation (Visual Basic)
+Pure functional transformations are applicable in a wide variety of situations.  
   
- İşlevsel dönüşüm yaklaşım, ideal olarak sorgulama ve düzenleme yapılandırılmış veriler için uygundur; Bu nedenle de LINQ teknolojileriyle uyar. Ancak LINQ ile kullanmak daha çok geniş bir Uygulanabilirlik işlevsel dönüşümü yoktur. Verileri bir biçimden diğerine dönüştürme üzerinde odaklandığı olduğu herhangi bir işlem büyük olasılıkla işlevsel dönüşüm adayı olarak kabul edilmelidir.  
+ The functional transformation approach is ideally suited for querying and manipulating structured data; therefore it fits well with LINQ technologies. However, functional transformation has a much wider applicability than use with LINQ. Any process where the main focus is on transforming data from one form to another should probably be considered as a candidate for functional transformation.  
   
- Bu yaklaşım, ilk bakışta bir aday olarak görünmeyebilir karşılaşılan birçok sorun için geçerlidir. Birlikte veya ayrı olarak LINQ birlikte kullanıldığında, işlevsel dönüşümü için aşağıdaki alanları bulundurulmalıdır:  
+ This approach is applicable to many problems that might not appear at first glance to be a candidate. Used in conjunction with or separately from LINQ, functional transformation should be considered for the following areas:  
   
-- XML-tabanlı belge. Tüm XML diyalekti doğru biçimlendirilmiş verilerin işlevsel dönüşüm kolayca işlenebilir. Daha fazla bilgi için [işlevsel XML Dönüşümü (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md).  
+- XML-based documents. Well-formed data of any XML dialect can be easily manipulated through functional transformation. For more information, see [Functional Transformation of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md).  
   
-- Diğer yapılandırılmış dosya biçimleri. Düz metin belgelere Windows.ini dosyalarından çoğu dosya kendisini çözümleme ve dönüştürme için uygundur bazı yapıdadır.  
+- Other structured file formats. From Windows.ini files to plain text documents, most files have some structure that lends itself to analysis and transformation.  
   
-- Veri akış protokolleri. Veri kodlama ve kod çözme verilerden iletişim protokolleri genellikle basit bir işlev dönüştürme işlemi tarafından temsil edilebilir.  
+- Data streaming protocols. Encoding data into and decoding data from communication protocols can often be represented by a simple functional transform.  
   
-- RDBMS ve OODBMS verileri. İlişkisel ve nesne yönelimli veritabanları, XML, olduğu gibi yaygın olarak kullanılan yapılandırılmış veri kaynağıdır.  
+- RDBMS and OODBMS data. Relational and object-oriented databases, just like XML, are widely-used structured data sources.  
   
-- Matematik istatistik ve Bilim çözümler. Bu alanlar, kullanıcının görselleştirme, tahmin etme veya gerçekten Önemsiz sorunları çözmeye yardımcı olmak için büyük veri kümelerini işleme eğilimindedir.  
+- Mathematic, statistic, and science solutions. These fields tend to manipulate large data sets to assist the user in visualizing, estimating, or actually solving non-trivial problems.  
   
- Bölümünde anlatıldığı gibi [yeniden düzenleme içine saf işlevleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md), saf işlevler kullanarak, işlevsel programlama örneği verilmiştir. Ek anında faydaları için saf işlevler kullanarak işlevsel dönüşüm açısından sorunlar hakkında düşünmeye değerli deneyimi sağlar. Bu yaklaşım, ayrıca program ve sınıf tasarımı üzerinde önemli bir etkisi olabilir. Bu, özellikle kendi yukarıda açıklandığı gibi bir veri dönüştürme çözüme uygundur bir sorun olduğunda geçerlidir.  
+ As described in [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md), using pure functions is an example of functional programming. In additional to their immediate benefits, using pure functions provides valuable experience in thinking about problems from a functional transformation perspective. This approach can also have major impact on program and class design. This is especially true when a problem lends itself to a data transformation solution as described above.  
   
- Bunlar bu Eğitimin kapsamı dışında olsa da, işlevsel dönüşüm perspektife göre etkileyen tasarımları üzerinde işlemler birden fazla aktör olarak nesnelerde merkezi eğilimindedir ve ortaya çıkan çözüm, büyük ölçekli dizi olarak uygulanması eğilimindedir değişiklikler tek tek bir nesne yerine dönüşümleri belirtin.  
+ Although they are beyond the scope of this tutorial, designs that are influenced by the functional transformation perspective tend to center on processes more than on objects as actors, and the resulting solution tends to be implemented as series of large-scale transformations, rather than individual object state changes.  
   
- Yeniden uygulamanız için en iyi tasarım öğelerinin her ikisi de bir araya getirebilir için Visual Basic hem zorunlu hem de işlevsel yaklaşım desteklediğini unutmayın.  
+ Again, remember that Visual Basic supports both imperative and functional approaches, so the best design for your application might incorporate elements of both.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Saf işlevsel dönüşümlere (Visual Basic) giriş](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [(Visual Basic) XML işlevsel dönüşümü](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)
-- [(Visual Basic) saf işlevler halinde yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Functional Transformation of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)
+- [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

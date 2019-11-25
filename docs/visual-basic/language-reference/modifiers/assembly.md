@@ -1,5 +1,5 @@
 ---
-title: Derleme (Visual Basic)
+title: Derleme
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Assembly
@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Assembly keyword [Visual Basic]
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
-ms.openlocfilehash: 819fa9cf1bd25e9426fb1e75925a269fcf7a71cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1385919a1205a60104125fff1bdd24f409a091df
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802001"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351643"
 ---
 # <a name="assembly-visual-basic"></a>Derleme (Visual Basic)
-Bir kaynak dosyasının başında bir öznitelik tüm derleme için geçerli olduğunu belirtir.  
+Specifies that an attribute at the beginning of a source file applies to the entire assembly.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tek programlama öğesine, bir sınıf ya da özellik gibi birçok öznitelikleri ilgilidir. Açılı ayraçlar içinde öznitelik bloğuna ekleyerek bu tür bir öznitelik uygulamak (`< >`), doğrudan bildirim deyiminin için.  
+ Many attributes pertain to an individual programming element, such as a class or property. You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.  
   
- Bir öznitelik yalnızca şu öğe ancak tüm derleme ilgiliyse, öznitelik bloğuna kaynak dosyasının başında yerleştirin ve özniteliğiyle tanımlamak `Assembly` anahtar sözcüğü. Geçerli derleme modülü için geçerliyse, kullandığınız [Modülü](../../../visual-basic/language-reference/modifiers/module-keyword.md) anahtar sözcüğü.  
+ If an attribute pertains not only to the following element but to the entire assembly, you place the attribute block at the beginning of the source file and identify the attribute with the `Assembly` keyword. If it applies to the current assembly module, you use the [Module](../../../visual-basic/language-reference/modifiers/module-keyword.md) keyword.  
   
- Öznitelik bir derlemeye AssemblyInfo.vb dosyasında, bu durumda öznitelik bloğuna ana kaynak kodu dosyanızda kullanın gerekmez de uygulayabilirsiniz.  
+ You can also apply an attribute to an assembly in the AssemblyInfo.vb file, in which case you do not have to use an attribute block in your main source-code file.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Modül \<anahtar sözcüğü >](../../../visual-basic/language-reference/modifiers/module-keyword.md)
-- [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Module \<keyword>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md)

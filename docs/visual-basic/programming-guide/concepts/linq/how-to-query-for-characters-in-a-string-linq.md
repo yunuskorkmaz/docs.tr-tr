@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: bir dizedeki karakterleri sorgulama (LINQ) (Visual Basic)'
+title: 'Nasıl yapılır: Bir Dizedeki Karakterleri Sorgulama (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: f2102a8cb149fa9c7886826e509bf254fad5eb95
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9da6d5abd6155a7af5ec59e17693e8acae7e7b73
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582719"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347716"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Nasıl yapılır: bir dizedeki karakterleri sorgulama (LINQ) (Visual Basic)
+# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>How to: Query for Characters in a String (LINQ) (Visual Basic)
 
-@No__t_0 sınıfı genel <xref:System.Collections.Generic.IEnumerable%601> arabirimini gerçekleştirdiğinden, herhangi bir dize bir karakter dizisi olarak sorgulanabilir. Ancak bu, LINQ 'in yaygın bir kullanımı değildir. Karmaşık kalıp eşleştirme işlemleri için <xref:System.Text.RegularExpressions.Regex> sınıfını kullanın.
+Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters. However, this is not a common use of LINQ. For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, içerdiği sayısal basamak sayısını belirlemede bir dizeyi sorgular. Sorgunun ilk kez yürütüldükten sonra "yeniden kullanılır" olduğunu unutmayın. Sorgunun kendisi gerçek sonuçları depolamadığından bu mümkündür.
+The following example queries a string to determine the number of numeric digits it contains. Note that the query is "reused" after it is executed the first time. This is possible because the query itself does not store any actual results.
 
 ```vb
 Class QueryAString
@@ -58,9 +58,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>Kod Derleniyor
 
-System. Linq ad alanı için `Imports` ifadesiyle bir VB.NET konsol uygulaması projesi oluşturun.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [Nasıl yapılır: LINQ sorgularını normal Ifadelerle birleştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+- [LINQ and Strings (Visual Basic)](linq-and-strings.md)
+- [How to combine LINQ queries with regular expressions (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md)

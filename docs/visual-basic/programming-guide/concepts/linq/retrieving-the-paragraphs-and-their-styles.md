@@ -1,47 +1,47 @@
 ---
-title: Paragrafları ve stillerini alma (Visual Basic)
+title: Paragrafları ve Stillerini Alma
 ms.date: 07/20/2015
 ms.assetid: d9ed2238-d38e-4ad4-b88b-db7859df9bde
-ms.openlocfilehash: 4bc20556fb668db2db3e6bcfa42e96cc0d963b93
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 862a07c26733a4989ae010854ceaca1fd7e3578e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582146"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347506"
 ---
-# <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>Paragrafları ve stillerini alma (Visual Basic)
-Bu örnekte, bir WordprocessingML belgesinden paragraf düğümlerini alan bir sorgu yazdık. Ayrıca her bir paragrafın stilini belirler.  
+# <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>Retrieving the Paragraphs and Their Styles (Visual Basic)
+In this example, we write a query that retrieves the paragraph nodes from a WordprocessingML document. It also identifies the style of each paragraph.  
   
- Bu sorgu, stil listesinden varsayılan stili alan [varsayılan paragraf stilini (Visual Basic) bularak](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md), önceki örnekteki sorgu üzerinde oluşturulur. Bu bilgiler, sorgunun açıkça ayarlanmış bir stile sahip olmayan paragrafların stilini belirleyebilmesi için gereklidir. Paragraf stilleri `w:pPr` öğesi ile ayarlanır; bir paragraf bu öğeyi içermiyorsa, varsayılan stille biçimlendirilir.  
+ This query builds on the query in the previous example, [Finding the Default Paragraph Style (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md), which retrieves the default style from the list of styles. This information is required so that the query can identify the style of paragraphs that do not have a style explicitly set. Paragraph styles are set through the `w:pPr` element; if a paragraph does not contain this element, it is formatted with the default style.  
   
- Bu konuda, sorgunun bazı parçalarının önemi açıklanmakta ve sorgu tam, çalışan bir örnek kapsamında gösteriliyor.  
+ This topic explains the significance of some pieces of the query, then shows the query as part of a complete, working example.  
   
 ## <a name="example"></a>Örnek  
- Belgedeki tüm paragrafları ve bunların stillerini almak için sorgunun kaynağı aşağıdaki gibidir:  
+ The source of the query to retrieve all the paragraphs in a document and their styles is as follows:  
   
 ```vb  
 xDoc.Root.<w:body>...<w:p>  
 ```  
   
- Bu ifade, önceki örnekteki sorgunun kaynağına benzer, [varsayılan paragraf stilini (Visual Basic) buluyor](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). Temel fark, <xref:System.Xml.Linq.XContainer.Elements%2A> ekseni yerine <xref:System.Xml.Linq.XContainer.Descendants%2A> eksenini kullanmadır. Sorgu, bölüm içeren belgelerde,, gövde öğesinin doğrudan alt öğeleri olmayacak şekilde <xref:System.Xml.Linq.XContainer.Descendants%2A> eksenini kullanır; Bunun yerine, paragraflar hiyerarşide iki düzey olur. @No__t_0 eksenini kullanarak, kod belgenin bölüm kullanıp kullanmadığını belirtir.  
+ This expression is similar to the source of the query in the previous example, [Finding the Default Paragraph Style (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). The main difference is that it uses the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis instead of the <xref:System.Xml.Linq.XContainer.Elements%2A> axis. The query uses the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis because in documents that have sections, the paragraphs will not be the direct children of the body element; rather, the paragraphs will be two levels down in the hierarchy. By using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis, the code will work of whether or not the document uses sections.  
   
 ## <a name="example"></a>Örnek  
- Sorgu, stil düğümünü içeren öğeyi belirlemede bir `Let` yan tümcesi kullanır. Öğe yoksa `styleNode` `Nothing` olarak ayarlanır:  
+ The query uses a `Let` clause to determine the element that contains the style node. If there is no element, then `styleNode` is set to `Nothing`:  
   
 ```vb  
 Let styleNode As XElement = para.<w:pPr>.<w:pStyle>.FirstOrDefault()  
 ```  
   
- @No__t_0 yan tümcesi ilk olarak `pPr` adlı tüm öğeleri bulmak için <xref:System.Xml.Linq.XContainer.Elements%2A> eksenini kullanır, sonra `pStyle` adlı tüm alt öğeleri bulmak için <xref:System.Xml.Linq.Extensions.Elements%2A> genişletme yöntemini kullanır ve son olarak, koleksiyonu tek bir olarak dönüştürmek için <xref:System.Linq.Enumerable.FirstOrDefault%2A> standart sorgu işlecini kullanır. Koleksiyon boşsa, `styleNode` `Nothing` olarak ayarlanır. Bu, `pStyle` alt düğümünü aramak için kullanışlı bir deyimdir. @No__t_0 alt düğümü yoksa, bir özel durum oluşturarak kodun, veya başarısız olduğunu unutmayın; Bunun yerine, bu `Let` yan tümcesinin istenen davranışı olan `styleNode` `Nothing` olarak ayarlanır.  
+ The `Let` clause first uses the <xref:System.Xml.Linq.XContainer.Elements%2A> axis to find all elements named `pPr`, then uses the <xref:System.Xml.Linq.Extensions.Elements%2A> extension method to find all child elements named `pStyle`, and finally uses the <xref:System.Linq.Enumerable.FirstOrDefault%2A> standard query operator to convert the collection to a singleton. If the collection is empty, `styleNode` is set to `Nothing`. This is a useful idiom to look for the `pStyle` descendant node. Note that if the `pPr` child node does not exist, the code does nor fail by throwing an exception; instead, `styleNode` is set to `Nothing`, which is the desired behavior of this `Let` clause.  
   
- Sorgu, `StyleName` ve `ParagraphNode` iki üyeli anonim bir tür koleksiyonunu projeler.  
+ The query projects a collection of an anonymous type with two members, `StyleName` and `ParagraphNode`.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, WordprocessingML belgesinden paragraf düğümlerini alarak bir WordprocessingML belgesini işler. Ayrıca her bir paragrafın stilini belirler. Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır. Yeni sorgu, aşağıdaki koddaki açıklamalarda çağrılır.  
+ This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document. It also identifies the style of each paragraph. This example builds on the previous examples in this tutorial. The new query is called out in comments in the code below.  
   
- Kaynak [Office Open XML belgesi (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)bölümünde bu örnek için kaynak belge oluşturma yönergelerini bulabilirsiniz.  
+ You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. @No__t_0 ad alanındaki türleri kullanır.  
+ This example uses classes found in the WindowsBase assembly. It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -111,7 +111,7 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek, [kaynak Office Open XML belgesi (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)bölümünde açıklanan belgeye uygulandığında aşağıdaki çıktıyı üretir.  
+ This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
 ```console  
 StyleName:Heading1  
@@ -132,8 +132,8 @@ StyleName:Code
 ```  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Bir sonraki konu başlığında, [paragrafların metnini (Visual Basic) alırken](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), paragrafların metnini almak için bir sorgu oluşturacaksınız.  
+ In the next topic, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), you'll create a query to retrieve the text of paragraphs.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

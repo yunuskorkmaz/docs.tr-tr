@@ -1,5 +1,5 @@
 ---
-title: '- İşleç (Visual Basic)'
+title: '- İşleç'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Negate
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 5f6b6b67e2999d380cfca078a43162b3e1db2206
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9687c366c5b23693c05ab5c6b34f50c04131dfda
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701298"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348219"
 ---
 # <a name="--operator-visual-basic"></a>- İşleci (Visual Basic)
-İki sayısal ifade arasındaki farkı ya da sayısal bir ifadenin negatif değerini döndürür.  
+Returns the difference between two numeric expressions or the negative value of a numeric expression.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,40 +41,40 @@ veya
   
 ## <a name="parts"></a>Bölümler  
  `expression1`  
- Gerekli. Herhangi bir sayısal ifade.  
+ Gerekli. Any numeric expression.  
   
  `expression2`  
- @No__t-0 işleci negatif bir değer hesaplanmadığı için gereklidir. Herhangi bir sayısal ifade.  
+ Required unless the `–` operator is calculating a negative value. Any numeric expression.  
   
 ## <a name="result"></a>Sonuç  
- Sonuç, `expression1` ile `expression2` arasındaki fark veya `expression1` ' nin Değillenmiş değeri.  
+ The result is the difference between `expression1` and `expression2`, or the negated value of `expression1`.  
   
- Sonuç veri türü, `expression1` ve `expression2` veri türleri için uygun bir sayısal türdür. [Işleç sonuçlarının veri türlerinde](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)"tamsayı aritmetiği" tablolarına bakın.  
+ The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
-## <a name="supported-types"></a>Desteklenen türler  
- Tüm sayısal türler. Bu, işaretsiz ve kayan nokta türlerini ve `Decimal` ' ı içerir.  
+## <a name="supported-types"></a>Supported Types  
+ All numeric types. This includes the unsigned and floating-point types and `Decimal`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Daha önce gösterilen sözdiziminde gösterilen ilk kullanımda, `–` işleci iki sayısal ifade arasındaki fark için *ikili* aritmetik çıkarma işleçtir.  
+ In the first usage shown in the syntax shown previously, the `–` operator is the *binary* arithmetic subtraction operator for the difference between two numeric expressions.  
   
- Daha önce gösterilen sözdiziminde gösterilen ikinci kullanımda, `–` işleci bir ifadenin negatif değeri için *birli* olumsuzlama işleçidir. Bu anlamda, Olumsuzlaştırma `expression1` ' ın işaretini tersine döndürdükten sonra, `expression1` negatifse sonuç pozitif olur.  
+ In the second usage shown in the syntax shown previously, the `–` operator is the *unary* negation operator for the negative value of an expression. In this sense, the negation consists of reversing the sign of `expression1` so that the result is positive if `expression1` is negative.  
   
- Her iki ifade de [Nothing](../../../visual-basic/language-reference/nothing.md)olarak değerlendirilirse, `–` işleci onu sıfır olarak değerlendirir.  
+ If either expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the `–` operator treats it as zero.  
   
 > [!NOTE]
-> @No__t-0 işleci *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> The `–` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, make sure that you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, iki sayı arasındaki farkı hesaplamak ve döndürmek için `–` işlecini, sonra da bir sayıyı bir sayı olarak döndürür.  
+ The following example uses the `–` operator to calculate and return the difference between two numbers, and then to negate a number.  
   
  [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
- @No__t-0, bu deyimlerin yürütülmesini takip eden 124,45 ve `unaryResult` içerir – 334,90 içerir.  
+ Following the execution of these statements, `binaryResult` contains 124.45 and `unaryResult` contains –334.90.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [-= İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [-= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
 - [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic aritmetik Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

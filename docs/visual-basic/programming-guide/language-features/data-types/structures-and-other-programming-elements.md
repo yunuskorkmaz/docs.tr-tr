@@ -1,5 +1,5 @@
 ---
-title: Yapılar ve Diğer Programlama Öğeleri (Visual Basic)
+title: Yapılar ve Diğer Programlama Öğeleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - structures [Visual Basic], arrays
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: ec65c75fcfd907097f1cd1e0d3092a547272a782
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 309d0e5214897675e1758bd98b964392b379ca1b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933243"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346114"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Yapılar ve Diğer Programlama Öğeleri (Visual Basic)
-Yapıları diziler, nesneler ve yordamlarla birlikte, birbirleriyle de kullanabilirsiniz. Etkileşimler, bu öğeler tek tek kullanıldığı için aynı sözdizimini kullanır.  
+You can use structures in conjunction with arrays, objects, and procedures, as well as with each other. The interactions use the same syntax as these elements use individually.  
   
 > [!NOTE]
-> Yapı bildiriminde yapı öğelerinden hiçbirini başlatamıyor. Yalnızca bir yapı türü olarak tanımlanmış bir değişkenin öğelerine değerler atayabilirsiniz.  
+> You cannot initialize any of the structure elements in the structure declaration. You can assign values only to elements of a variable that has been declared to be of a structure type.  
   
-## <a name="structures-and-arrays"></a>Yapılar ve diziler  
- Bir yapı, öğelerinden biri veya daha fazlası olarak bir dizi içerebilir. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="structures-and-arrays"></a>Structures and Arrays  
+ A structure can contain an array as one or more of its elements. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- Bir yapı içindeki bir dizinin değerlerine, bir nesne üzerindeki bir özelliğe erişirken aynı şekilde erişirsiniz. Aşağıdaki örnek bunu göstermektedir.  
+ You access the values of an array within a structure the same way you access a property on an object. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -41,13 +41,13 @@ ReDim mySystem.diskDrives(3)
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- Ayrıca, bir yapı dizisi bildirebilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
+ You can also declare an array of structures. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- Bu veri mimarisinin bileşenlerine erişmek için aynı kurallara uyun. Aşağıdaki örnek bunu göstermektedir.  
+ You follow the same rules to access the components of this data architecture. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -55,8 +55,8 @@ allSystems(5).CPU = "386SX"
 allSystems(5).diskDrives(2) = "100M SCSI"  
 ```  
   
-## <a name="structures-and-objects"></a>Yapılar ve nesneler  
- Bir yapı, bir veya daha fazla öğelerinden oluşan bir nesne içerebilir. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="structures-and-objects"></a>Structures and Objects  
+ A structure can contain an object as one or more of its elements. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Protected Structure userInput  
@@ -66,10 +66,10 @@ Protected Structure userInput
 End Structure  
 ```  
   
- Bu tür bir bildirimde, `Object`yerine belirli bir nesne sınıfını kullanmanız gerekir.  
+ You should use a specific object class in such a declaration, rather than `Object`.  
   
-## <a name="structures-and-procedures"></a>Yapılar ve yordamlar  
- Bir yapıyı yordam bağımsız değişkeni olarak geçirebilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="structures-and-procedures"></a>Structures and Procedures  
+ You can pass a structure as a procedure argument. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- Önceki örnek, yapıyı *başvuruya göre*geçirir, bu da değişikliklerin çağıran kodda etkili olması için öğelerini değiştirmesine olanak tanır. Bir yapıyı bu değişikliğe karşı korumak istiyorsanız, değere göre geçirin.  
+ The preceding example passes the structure *by reference*, which allows the procedure to modify its elements so that the changes take effect in the calling code. If you want to protect a structure against such modification, pass it by value.  
   
- Ayrıca, bir `Function` yordamdan bir yapı da döndürebilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
+ You can also return a structure from a `Function` procedure. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -96,8 +96,8 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## <a name="structures-within-structures"></a>Yapılar Içindeki yapılar  
- Yapılar, diğer yapıları içerebilir. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="structures-within-structures"></a>Structures Within Structures  
+ Structures can contain other structures. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Public Structure driveInfo  
@@ -118,9 +118,9 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- Bu tekniği, farklı bir modülde tanımlanan bir yapıda bir modülde tanımlanan bir yapıyı kapsüllemek için de kullanabilirsiniz.  
+ You can also use this technique to encapsulate a structure defined in one module within a structure defined in a different module.  
   
- Yapılar, rastgele bir derinlikte diğer yapıları içerebilir.  
+ Structures can contain other structures to an arbitrary depth.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -130,7 +130,7 @@ allSystems(1).diskDrives(0).type = "Floppy"
 - [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Nasıl yapılır: Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Nasıl yapılır: Bir Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Yapı Değişkenleri](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
 - [Yapılar ve Sınıflar](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
 - [Structure Deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)

@@ -1,5 +1,5 @@
 ---
-title: GoTo ekstresi (Visual Basic)
+title: GoTo Deyimi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.GoTo
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 4b7a5cce56dfdd2bdc7e068aadbc18b92bba269d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d5cdcd214c9679e245645505fe11cb5d521ce085
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581813"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351081"
 ---
 # <a name="goto-statement"></a>GoTo Deyimi
-Bir yordamda belirtilen satıra koşulsuz olarak dallandırır.  
+Branches unconditionally to a specified line in a procedure.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,35 +29,35 @@ Bir yordamda belirtilen satıra koşulsuz olarak dallandırır.
 GoTo line  
 ```  
   
-## <a name="part"></a>Bölümüyle  
+## <a name="part"></a>Part  
  `line`  
- Gerekli. Herhangi bir satır etiketi.  
+ Gerekli. Any line label.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 ifadesi yalnızca göründüğü yordamdaki satırlara dallandırır. Çizgi, `GoTo` başvurabileceği bir çizgi etiketine sahip olmalıdır. Daha fazla bilgi için bkz. [nasıl yapılır: Label deyimleri](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ The `GoTo` statement can branch only to lines in the procedure in which it appears. The line must have a line label that `GoTo` can refer to. For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
-> `GoTo` deyimleri kodun okunmasını ve bakımını kolaylaştırabilir. Mümkün olduğunda, bunun yerine bir denetim yapısı kullanın. Daha fazla bilgi için bkz. [Denetim akışı](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+> `GoTo` statements can make code difficult to read and maintain. Whenever possible, use a control structure instead. For more information, see [Control Flow](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
- @No__t_1 dışından dallandırmak için `GoTo` ifadesini kullanamazsınız... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, `For`0... 1 veya 2... içindeki bir etikete 3 oluşturma.  
+ You cannot use a `GoTo` statement to branch from outside a `For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`, or `Using`...`End Using` construction to a label inside.  
   
-## <a name="branching-and-try-constructions"></a>Dallandırma ve TRY kurulumlarını  
- @No__t_0 içinde... `Catch`... `Finally` oluşturma, aşağıdaki kurallar `GoTo` ifadesiyle dallandırma için geçerlidir.  
+## <a name="branching-and-try-constructions"></a>Branching and Try Constructions  
+ Within a `Try`...`Catch`...`Finally` construction, the following rules apply to branching with the `GoTo` statement.  
   
-|Blok veya bölge|Dışarıdan içinde dallanma|İçinden dallanma|  
+|Block or region|Branching in from outside|Branching out from inside|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try` bloğu|Yalnızca aynı yapı <sup>1</sup> ' in `Catch` bloğundan|Yalnızca tüm oluşturma dışında|  
-|`Catch` bloğu|Hiçbir izin verilmiyor|Yalnızca tüm oluşturma veya aynı yapı <sup>1</sup> ' in `Try` bloğunun dışında|  
-|`Finally` bloğu|Hiçbir izin verilmiyor|Hiçbir izin verilmiyor|  
+|`Try` block|Only from a `Catch` block of the same construction <sup>1</sup>|Only to outside the whole construction|  
+|`Catch` block|Never allowed|Only to outside the whole construction, or to the `Try` block of the same construction <sup>1</sup>|  
+|`Finally` block|Never allowed|Never allowed|  
   
- <sup>1</sup> `Try`... `Catch`... `Finally` oluşturma diğeri içinde iç içe geçmiş `Catch` bir blok, `Try` bloğunu kendi iç içe düzeyinde (başka bir `Try` bloğunda değil) dallandırır. İç içe geçmiş `Try`... `Catch`... `Finally` oluşturma, iç içe geçmiş bir `Try` veya `Catch` bloğunda tamamen bulunmalıdır.  
+ <sup>1</sup> If one `Try`...`Catch`...`Finally` construction is nested within another, a `Catch` block can branch into the `Try` block at its own nesting level, but not into any other `Try` block. A nested `Try`...`Catch`...`Finally` construction must be contained completely in a `Try` or `Catch` block of the construction within which it is nested.  
   
- Aşağıdaki çizimde, başka bir `Try` oluşturma bir diğeri içinde gösterilmektedir. İki kurulumlarını blokları arasındaki çeşitli dallar geçerli veya geçersiz olarak belirtilir.  
+ The following illustration shows one `Try` construction nested within another. Various branches among the blocks of the two constructions are indicated as valid or invalid.  
   
- ![TRY kurulumlarını içinde dallanma grafik Diyagramı](./media/goto-statement/try-construction-branching.gif)  
+ ![Graphic diagram of branching in Try constructions](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir yordamdaki çizgi etiketlerine dallandırmak için `GoTo` ifadesini kullanır.  
+ The following example uses the `GoTo` statement to branch to line labels in a procedure.  
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   

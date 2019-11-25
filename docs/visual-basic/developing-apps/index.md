@@ -1,42 +1,45 @@
 ---
-title: Visual Basic ile Uygulama Geliştirme
+title: Uygulama Geliştirme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-ms.openlocfilehash: a8f3b530c6205572ccf6944af1620cb54486b306
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8eed001ed1daccdfb861b1bcc13337122133ab0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014433"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349246"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Visual Basic ile Uygulama Geliştirme
-Bu bölüm, Visual Basic dili için kavramsal belgelerde kapsar.  
+
+This section covers conceptual documentation for the Visual Basic language.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Visual Basic'te Programlama](../../visual-basic/developing-apps/programming/index.md)  
- Çeşitli programlama konuları kapsar.  
+ Covers a variety of programming subjects.  
   
  [My Özelliğiyle Geliştirme](../../visual-basic/developing-apps/development-with-my/index.md)  
- Adlı yeni bir özellik anlatılmaktadır `My`, uygulama ve onun çalışma zamanı ortamı ilgili nesne örneklerini bilgi ve varsayılan erişim sağlar.  
+ Discusses a new feature called `My`, which provides access to information and default object instances that are related to an application and its run-time environment.  
   
- [Visual Basic uygulamalarındaki verilere erişme](../../visual-basic/developing-apps/accessing-data.md)  
- Visual Basic veri erişimi hakkında Yardım içerir.  
+ [Accessing Data in Visual Basic Applications](../../visual-basic/developing-apps/accessing-data.md)  
+ Contains Help on accessing data in Visual Basic.  
   
- [Oluşturma ve Visual Basic bileşenleri kullanma](../../visual-basic/developing-apps/creating-and-using-components.md)  
- Terim tanımlar *bileşen* ve nasıl ve ne zaman anlatılmaktadır bileşenler oluşturmak için.  
+ [Creating and Using Components in Visual Basic](../../visual-basic/developing-apps/creating-and-using-components.md)  
+ Defines the term *component* and discusses how and when to create components.  
   
  [Windows Forms Uygulaması Temelleri](../../visual-basic/developing-apps/windows-forms/index.md)  
- Visual Studio kullanarak Windows Forms uygulamaları oluşturma hakkında bilgi sağlar.  
+ Provides information about creating Windows Forms applications by using Visual Studio.  
   
- [Projeleri özelleştirme ve genişletme My](../../visual-basic/developing-apps/customizing-extending-my/index.md)  
- Ek sağlamak için proje şablonlarını nasıl özelleştirebileceğinizi açıklar `My` nesneleri.  
+ [Customizing Projects and Extending My](../../visual-basic/developing-apps/customizing-extending-my/index.md)  
+ Describes how you can customize project templates to provide additional `My` objects.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Visual Basic programlama kılavuzu](../../visual-basic/programming-guide/index.md)  
- Visual Basic programlamanın temel öğeleri gösterilmektedir.  
+
+ [Visual Basic Programming Guide](../../visual-basic/programming-guide/index.md)  
+ Walks through the essential elements of programming with Visual Basic.  
   
  [Visual Basic Dili Başvurusu](../../visual-basic/language-reference/index.md)  
- Visual Basic Dil Başvurusu belgelerini içerir.
+ Contains reference documentation for the Visual Basic language.

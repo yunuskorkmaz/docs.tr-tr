@@ -1,5 +1,5 @@
 ---
-title: Property açıklaması (Visual Basic)
+title: Property Deyimi
 ms.date: 05/12/2018
 f1_keywords:
 - vb.PropertySet
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 2c3e417aad404171a43342dc92773615ec350ef5
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 80bce2442d96ecb9c548a88c8e5ee44c6258473b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332742"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346752"
 ---
 # <a name="property-statement"></a>Property Deyimi
 
-Bir özelliğin adını ve özellik değerini depolamak ve almak için kullanılan özellik yordamlarını bildirir.
+Declares the name of a property, and the property procedures used to store and retrieve the value of the property.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,15 +45,15 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `attributelist`
 
-  İsteğe bağlı. Bu özelliğe veya `Get` veya `Set` yordama uygulanan özniteliklerin listesi. Bkz. [öznitelik listesi](attribute-list.md).
+  İsteğe bağlı. List of attributes that apply to this property or `Get` or `Set` procedure. See [Attribute List](attribute-list.md).
 
 - `Default`
 
-  İsteğe bağlı. Bu özelliğin tanımlandığı sınıf veya yapı için varsayılan özellik olduğunu belirtir. Varsayılan Özellikler parametreleri kabul etmeli ve özellik adı belirtilmeden ayarlanabilir ve alınmış olabilir. Özelliği `Default` olarak bildirirseniz, özellik üzerinde veya özellik yordamlarından birinde `Private` kullanamazsınız.
+  İsteğe bağlı. Specifies that this property is the default property for the class or structure on which it is defined. Default properties must accept parameters and can be set and retrieved without specifying the property name. If you declare the property as `Default`, you cannot use `Private` on the property or on either of its property procedures.
 
 - `accessmodifier`
 
-  @No__t-0 ifadesinde ve `Get` ve `Set` deyimlerinin en üstünde yer alan isteğe bağlıdır. Aşağıdakilerden biri olabilir:
+  Optional on the `Property` statement and on at most one of the `Get` and `Set` statements. Can be one of the following:
 
   - [Public](../modifiers/public.md)
 
@@ -67,11 +67,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
   - [Private Protected](../modifiers/private-protected.md)
 
-  [Visual Basic erişim düzeylerine](../../programming-guide/language-features/declared-elements/access-levels.md)bakın.
+  See [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
 - `propertymodifiers`
 
-  İsteğe bağlı. Aşağıdakilerden biri olabilir:
+  İsteğe bağlı. Can be one of the following:
 
   - [Overloads](../modifiers/overloads.md)
 
@@ -89,116 +89,116 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Shared`
 
-  İsteğe bağlı. Bkz. [paylaşılan](../modifiers/shared.md).
+  İsteğe bağlı. See [Shared](../modifiers/shared.md).
 
 - `Shadows`
 
-  İsteğe bağlı. Bkz. [gölgeler](../modifiers/shadows.md).
+  İsteğe bağlı. See [Shadows](../modifiers/shadows.md).
 
 - `ReadOnly`
 
-  İsteğe bağlı. Bkz. [ReadOnly](../modifiers/readonly.md).
+  İsteğe bağlı. See [ReadOnly](../modifiers/readonly.md).
 
 - `WriteOnly`
 
-  İsteğe bağlı. Bkz. [WriteOnly](../modifiers/writeonly.md).
+  İsteğe bağlı. See [WriteOnly](../modifiers/writeonly.md).
 
 - `Iterator`
 
-  İsteğe bağlı. Bkz. [Yineleyici](../modifiers/iterator.md).
+  İsteğe bağlı. See [Iterator](../modifiers/iterator.md).
 
 - `name`
 
-  Gerekli. Özelliğin adı. Bkz. [tanımlanmış öğe adları](../../programming-guide/language-features/declared-elements/declared-element-names.md).
+  Gerekli. Özelliğin adı. See [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).
 
 - `parameterlist`
 
-  İsteğe bağlı. Bu özelliğin parametrelerini temsil eden yerel değişken adlarının listesi ve `Set` yordamının olası ek parametreleri. Bkz. [parametre listesi](parameter-list.md).
+  İsteğe bağlı. List of local variable names representing the parameters of this property, and possible additional parameters of the `Set` procedure. See [Parameter List](parameter-list.md).
 
 - `returntype`
 
-  @No__t-0 `On` ise gereklidir. Bu özellik tarafından döndürülen değerin veri türü.
+  Required if `Option Strict` is `On`. Data type of the value returned by this property.
 
 - `Implements`
 
-  İsteğe bağlı. Bu özelliğin, her biri bu özelliğin kapsayan sınıf veya yapı tarafından uygulanan bir arabirimde tanımlanan bir veya daha fazla özelliği uyguladığını gösterir. Bkz. [Implements açıklaması](implements-statement.md).
+  İsteğe bağlı. Indicates that this property implements one or more properties, each one defined in an interface implemented by this property's containing class or structure. See [Implements Statement](implements-statement.md).
 
 - `implementslist`
 
-  @No__t-0 sağlanırsa gereklidir. Uygulanan özelliklerin listesi.
+  Required if `Implements` is supplied. List of properties being implemented.
 
   `implementedproperty [ , implementedproperty ... ]`
 
-  Her `implementedproperty` aşağıdaki söz dizimi ve bölümlere sahiptir:
+  Each `implementedproperty` has the following syntax and parts:
 
   `interface.definedname`
 
-  |Bölümüyle|Açıklama|
+  |Part|Açıklama|
   |---|---|
-  |`interface`|Gerekli. Bu özelliğin içeren sınıf veya yapı tarafından uygulanan bir arabirimin adı.|
-  |`definedname`|Gerekli. @No__t-0 ' da tanımlanan özelliğin adı.|
+  |`interface`|Gerekli. Name of an interface implemented by this property's containing class or structure.|
+  |`definedname`|Gerekli. Name by which the property is defined in `interface`.|
 
 - `Get`
 
-  İsteğe bağlı. Özellik `ReadOnly` olarak işaretlenmişse gereklidir. Özelliğin değerini döndürmek için kullanılan `Get` özellik yordamını başlatır.  @No__t-0 deyimleri [Otomatik uygulanan özelliklerle](../../programming-guide/language-features/procedures/auto-implemented-properties.md)kullanılmaz.
+  İsteğe bağlı. Required if the property is marked `ReadOnly`. Starts a `Get` property procedure that is used to return the value of the property.  The `Get` statement is not used with [auto-implemented properties](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
 
 - `statements`
 
-  İsteğe bağlı. @No__t-0 veya `Set` yordamı içinde çalıştırılacak deyimler bloğu.
+  İsteğe bağlı. Block of statements to run within the `Get` or `Set` procedure.
 
 - `End Get`
 
-  @No__t-0 özellik yordamını sonlandırır.
+  Terminates the `Get` property procedure.
 
 - `Set`
 
-  İsteğe bağlı. Özellik `WriteOnly` olarak işaretlenmişse gereklidir. Özelliğin değerini depolamak için kullanılan `Set` özellik yordamını başlatır.  @No__t-0 deyimleri [Otomatik uygulanan özelliklerle](../../programming-guide/language-features/procedures/auto-implemented-properties.md)kullanılmaz.
+  İsteğe bağlı. Required if the property is marked `WriteOnly`. Starts a `Set` property procedure that is used to store the value of the property.  The `Set` statement is not used with [auto-implemented properties](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
 
 - `End Set`
 
-  @No__t-0 özellik yordamını sonlandırır.
+  Terminates the `Set` property procedure.
 
 - `End Property`
 
-  Bu özelliğin tanımını sonlandırır.
+  Terminates the definition of this property.
 
 ## <a name="remarks"></a>Açıklamalar
 
-@No__t-0 ifadesinde bir özelliğin bildirimi tanıtılmaktadır. Bir özellik `Get` yordamına (salt okuma), bir `Set` yordama (salt yazılır) veya her ikisine (okuma-yazma) sahip olabilir. Otomatik uygulanan bir özellik kullanırken `Get` ve `Set` yordamını atlayabilirsiniz. Daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
+The `Property` statement introduces the declaration of a property. A property can have a `Get` procedure (read only), a `Set` procedure (write only), or both (read-write). You can omit the `Get` and `Set` procedure when using an auto-implemented property. For more information, see [Auto-Implemented Properties](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
 
-@No__t-0 ' i yalnızca sınıf düzeyinde kullanabilirsiniz. Yani bir özelliğin *Bildirim bağlamı* bir sınıf, yapı, modül veya arabirim olmalıdır ve kaynak dosya, ad alanı, yordam veya blok olamaz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](declaration-contexts-and-default-access-levels.md).
+You can use `Property` only at class level. This means the *declaration context* for a property must be a class, structure, module, or interface, and cannot be a source file, namespace, procedure, or block. For more information, see [Declaration Contexts and Default Access Levels](declaration-contexts-and-default-access-levels.md).
 
-Varsayılan olarak, Özellikler ortak erişim kullanır. Bir özelliğin erişim düzeyini `Property` ifadesinde bir erişim değiştiricisiyle ayarlayabilir ve isteğe bağlı olarak özellik yordamlarından birini daha kısıtlayıcı bir erişim düzeyine ayarlayabilirsiniz.
+By default, properties use public access. You can adjust a property's access level with an access modifier on the `Property` statement, and you can optionally adjust one of its property procedures to a more restrictive access level.
 
-Visual Basic, özellik atamaları sırasında bir parametreyi `Set` yordamına geçirir. @No__t-0 için bir parametre belirtmezseniz, tümleşik geliştirme ortamı (IDE), `value` adlı örtük bir parametre kullanır. Bu parametre, özelliğine atanacak değeri tutar. Genellikle bu değeri özel bir yerel değişkende depolar ve `Get` yordamı çağrıldığında bunu döndürün.
+Visual Basic passes a parameter to the `Set` procedure during property assignments. If you do not supply a parameter for `Set`, the integrated development environment (IDE) uses an implicit parameter named `value`. This parameter holds the value to be assigned to the property. You typically store this value in a private local variable and return it whenever the `Get` procedure is called.
 
 ## <a name="rules"></a>Kurallar
 
-- **Karışık erişim düzeyleri.** Okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak `Get` veya `Set` yordamı için farklı bir erişim düzeyi belirtebilirsiniz, ancak her ikisini birden belirtemezsiniz. Bunu yaparsanız, yordam erişim düzeyinin özelliğin erişim düzeyinden daha kısıtlayıcı olması gerekir. Örneğin, özellik `Friend` olarak bildirilirse, `Set` yordamını `Private` değil, `Public` olarak bildirebilirsiniz.
+- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Set` procedure `Private`, but not `Public`.
 
-  @No__t-0 veya `WriteOnly` özelliği tanımlıyorsanız, tek özellik yordamı (sırasıyla `Get` veya `Set`) tüm özelliği temsil eder. Bu tür bir yordam için farklı bir erişim düzeyi bildiremezsiniz, çünkü bu özellik için iki erişim düzeyi ayarlayacaktı.
+  If you are defining a `ReadOnly` or `WriteOnly` property, the single property procedure (`Get` or `Set`, respectively) represents all of the property. You cannot declare a different access level for such a procedure, because that would set two access levels for the property.
 
-- **Dönüş türü.** @No__t-0 bildirimi, döndürdüğü değerin veri türünü bildirebilirler. Herhangi bir veri türü veya bir numaralandırma, yapı, sınıf veya arabirim adı belirtebilirsiniz.
+- **Return Type.** The `Property` statement can declare the data type of the value it returns. You can specify any data type or the name of an enumeration, structure, class, or interface.
 
-  @No__t-0 belirtmezseniz, özellik `Object` döndürür.
+  If you do not specify `returntype`, the property returns `Object`.
 
-- **Paylaşır.** Bu özellik `Implements` anahtar sözcüğünü kullanıyorsa, kapsayan sınıf veya yapının `Class` veya `Structure` ifadesiyle hemen sonra bir `Implements` ifadesine sahip olması gerekir. @No__t-0 ifadesinin `implementslist` ' de belirtilen her arabirimi içermesi gerekir. Ancak, `Property` ' ı tanımlayan adın (`definedname` ' de), bu özelliğin adıyla aynı olması gerekmez (`name` ' de).
+- **Implementation.** If this property uses the `Implements` keyword, the containing class or structure must have an `Implements` statement immediately following its `Class` or `Structure` statement. The `Implements` statement must include each interface specified in `implementslist`. However, the name by which an interface defines the `Property` (in `definedname`) does not have to be the same as the name of this property (in `name`).
 
 ## <a name="behavior"></a>Davranış
 
-- **Bir özellik yordamından döndürülüyor.** @No__t-0 veya `Set` yordamı çağıran koda döndüğünde, yürütme onu çağıran deyimden sonraki deyimle devam eder.
+- **Returning from a Property Procedure.** When the `Get` or `Set` procedure returns to the calling code, execution continues with the statement following the statement that invoked it.
 
-  @No__t-0 ve `Return` deyimleri, bir özellik yordamından anında çıkış oluşmasına neden olur. Herhangi bir sayıda `Exit Property` ve `Return` deyimi yordamda herhangi bir yerde görünebilir ve `Exit Property` ve `Return` deyimlerini karıştırabilirsiniz.
+  The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.
 
-- **Dönüş değeri.** @No__t-0 yordamından bir değer döndürmek için, değeri özellik adına atayabilir ya da bir `Return` ifadesine dahil edebilirsiniz. Aşağıdaki örnek, dönüş değerini `quoteForTheDay` özellik adına atar ve sonra geri dönmek için `Exit Property` ifadesini kullanır.
+- **Return Value.** To return a value from a `Get` procedure, you can either assign the value to the property name or include it in a `Return` statement. The following example assigns the return value to the property name `quoteForTheDay` and then uses the `Exit Property` statement to return.
 
   [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
 
   [!code-vb[VbVbalrStatements#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#28)]
 
-  @No__t-1 ' e bir değer atamadan `Exit Property` ' ı kullanırsanız, `Get` yordamı özelliğin veri türü için varsayılan değeri döndürür.
+  If you use `Exit Property` without assigning a value to `name`, the `Get` procedure returns the default value for the property's data type.
 
-  Aynı anda `Return` deyimleri, `Get` yordam dönüş değeri atar ve yordamdan çıkar. Aşağıdaki örnek bunu gösterir.
+  The `Return` statement at the same time assigns the `Get` procedure return value and exits the procedure. The following example shows this.
 
   [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
 
@@ -206,7 +206,7 @@ Visual Basic, özellik atamaları sırasında bir parametreyi `Set` yordamına g
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek bir sınıfında bir özelliği bildirir.
+The following example declares a property in a class.
 
 [!code-vb[VbVbalrStatements#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#51)]
 
@@ -217,4 +217,4 @@ Aşağıdaki örnek bir sınıfında bir özelliği bildirir.
 - [Get Deyimi](get-statement.md)
 - [Set Deyimi](set-statement.md)
 - [Parametre Listesi](parameter-list.md)
-- [Varsayılan](../modifiers/default.md)
+- [Default](../modifiers/default.md)

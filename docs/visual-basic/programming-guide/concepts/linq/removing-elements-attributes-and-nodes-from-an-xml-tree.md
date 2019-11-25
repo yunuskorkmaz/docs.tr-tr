@@ -1,40 +1,40 @@
 ---
-title: (Visual Basic) XML ağacından öğe, öznitelik ve düğümleri kaldırma
+title: XML Ağacından Öğe, Öznitelik ve Düğümleri Kaldırma
 ms.date: 07/20/2015
 ms.assetid: 5cf21919-4360-4b49-b29d-58ea3164ac72
-ms.openlocfilehash: 85a7a3b4047e269c562177cfa045b952472aaac2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cce1eff469c1f737e18b88cce30155547d9f11b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787076"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348948"
 ---
-# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>(Visual Basic) XML ağacından öğe, öznitelik ve düğümleri kaldırma
-Bir XML ağacına öğe, öznitelik ve düğümleri diğer türleri kaldırma değiştirebilirsiniz.  
+# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>Removing Elements, Attributes, and Nodes from an XML Tree (Visual Basic)
+You can modify an XML tree, removing elements, attributes, and other types of nodes.  
   
- Tek bir öğe veya tek bir öznitelik, bir XML belgesinden kaldırma açıktır. Ancak, öğeler veya öznitelikleri koleksiyonları kaldırırken, ilk listesini bir koleksiyona depolanabildiği ve öğeler veya öznitelikleri listeden silin. En iyi yaklaşımdır <xref:System.Xml.Linq.Extensions.Remove%2A> bu sizin için yapacak genişletme yöntemi.  
+ Removing a single element or a single attribute from an XML document is straightforward. However, when removing collections of elements or attributes, you should first materialize a collection into a list, and then delete the elements or attributes from the list. The best approach is to use the <xref:System.Xml.Linq.Extensions.Remove%2A> extension method, which will do this for you.  
   
- Bunu yapmak için ana nedeni, bir XML ağacından almak koleksiyonların çoğu ertelenmiş yürütme kullanarak veriyor, olmasıdır. Önce bunları bir liste olarak depolanabildiği değil veya uzantı yöntemlerini kullanmazsanız, belirli bir sınıf hataların karşılaşmak mümkündür. Daha fazla bilgi için [karma bildirim temelli kod/kesinliği kod hataları karışımı (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).  
+ The main reason for doing this is that most of the collections you retrieve from an XML tree are yielded using deferred execution. If you do not first materialize them into a list, or if you do not use the extension methods, it is possible to encounter a certain class of bugs. For more information, see [Mixed Declarative Code/Imperative Code Bugs (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).  
   
- Aşağıdaki yöntemlerden bir XML ağacından düğümleri ve özniteliklerini kaldırın.  
+ The following methods remove nodes and attributes from an XML tree.  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|Kaldırır bir <xref:System.Xml.Linq.XAttribute> üst öğesinden.|  
-|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|Alt düğümleri kaldırır bir <xref:System.Xml.Linq.XContainer>.|  
-|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|İçerik kaldırır ve özniteliklerini bir <xref:System.Xml.Linq.XElement>.|  
-|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=nameWithType>|Özniteliklerini kaldırır bir <xref:System.Xml.Linq.XElement>.|  
-|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=nameWithType>|Geçirirseniz `null` değeri için ardından özniteliğini kaldırır.|  
-|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=nameWithType>|Geçirirseniz `null` değeri için ardından alt öğeyi kaldırır.|  
-|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=nameWithType>|Kaldırır bir <xref:System.Xml.Linq.XNode> üst öğesinden.|  
-|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=nameWithType>|Her bir öznitelik veya öğenin üst öğesi kaynak koleksiyondan kaldırır.|  
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|Removes an <xref:System.Xml.Linq.XAttribute> from its parent.|  
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|Removes the child nodes from an <xref:System.Xml.Linq.XContainer>.|  
+|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|Removes content and attributes from an <xref:System.Xml.Linq.XElement>.|  
+|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=nameWithType>|Removes the attributes of an <xref:System.Xml.Linq.XElement>.|  
+|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=nameWithType>|If you pass `null` for value, then removes the attribute.|  
+|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=nameWithType>|If you pass `null` for value, then removes the child element.|  
+|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=nameWithType>|Removes an <xref:System.Xml.Linq.XNode> from its parent.|  
+|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=nameWithType>|Removes every attribute or element in the source collection from its parent element.|  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Bu örnekte, öğelerin kaldırılması için üç yaklaşım gösterilmektedir. İlk olarak, tek bir öğe kaldırır. İkinci olarak, öğelerinin bir koleksiyonunu alır, bunları gerçekleştiren kullanarak <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> işleci ve koleksiyon kaldırır. Son olarak, öğelerinin bir koleksiyonunu alır ve bunları kaldırır kullanarak <xref:System.Xml.Linq.Extensions.Remove%2A> genişletme yöntemi.  
+ This example demonstrates three approaches to removing elements. First, it removes a single element. Second, it retrieves a collection of elements, materializes them using the <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> operator, and removes the collection. Finally, it retrieves a collection of elements and removes them using the <xref:System.Xml.Linq.Extensions.Remove%2A> extension method.  
   
- Daha fazla bilgi için <xref:System.Linq.Enumerable.ToList%2A> işleci bkz [dönüştürme veri türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md).  
+ For more information on the <xref:System.Linq.Enumerable.ToList%2A> operator, see [Converting Data Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md).  
   
 ### <a name="code"></a>Kod  
   
@@ -77,8 +77,8 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- İlk en alt öğeyi kaldırılmıştır bildirimi `Child1`. Tüm alt bağımlı öğelere öğeleri kaldırılmış olan `Child2` ve `Child3`.  
+ Notice that the first grandchild element has been removed from `Child1`. All grandchildren elements have been removed from `Child2` and from `Child3`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [(LINQ to XML) XML ağaçlarını değiştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

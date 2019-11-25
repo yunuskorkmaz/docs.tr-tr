@@ -1,44 +1,46 @@
 ---
-title: "Nasıl yapılır: Visual Basic'te bir dizin oluşturun"
+title: 'Nasıl Yapılır: Dizin Oluşturma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - directories [Visual Basic], creating
 - folders [Visual Basic], creating
 ms.assetid: 0351a2ca-24d8-43b5-bb39-9b99e6401cff
-ms.openlocfilehash: 54696dab41c99774bb3638e0c19837a906144d27
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3d838352a0a3dd69a1555dc34b8acba3afba278b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629072"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348806"
 ---
-# <a name="how-to-create-a-directory-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te bir dizin oluşturun
-Kullanım `CreateDirectory` yöntemi `My.Computer.FileSystem` dizinler oluşturmak için nesne.  
+# <a name="how-to-create-a-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dizin Oluşturma
+
+Use the `CreateDirectory` method of the `My.Computer.FileSystem` object to create directories.  
   
- Dizin zaten varsa, hiçbir özel durum oluşturulur.  
+ If the directory already exists, no exception is thrown.  
   
-### <a name="to-create-a-directory"></a>Bir dizin oluşturmak için  
+### <a name="to-create-a-directory"></a>To create a directory  
   
-- Kullanım `CreateDirectory` burada dizin oluşturulmalıdır konumun tam yolunu belirterek yöntemi. Bu örnek dizini `NewDirectory` içinde `C:\Documents and Settings\All Users\Documents`.  
+- Use the `CreateDirectory` method by specifying the full path of the location where the directory should be created. This example creates the directory `NewDirectory` in `C:\Documents and Settings\All Users\Documents`.  
   
      [!code-vb[VbVbcnMyFileSystem#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#2)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
+
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Dizin adı yanlış biçimlendirilmiş. Örneğin, geçersiz karakterler içeriyor veya yalnızca boşluk (<xref:System.ArgumentException>).  
+- The directory name is malformed. For example, it contains illegal characters or is only white space (<xref:System.ArgumentException>).  
   
-- Oluşturulacak dizinin üst dizin salt okunur (<xref:System.IO.IOException>).  
+- The parent directory of the directory to be created is read-only (<xref:System.IO.IOException>).  
   
-- Dizin adı `Nothing` (<xref:System.ArgumentNullException>).  
+- The directory name is `Nothing` (<xref:System.ArgumentNullException>).  
   
-- Dizin adı çok uzun (<xref:System.IO.PathTooLongException>).  
+- The directory name is too long (<xref:System.IO.PathTooLongException>).  
   
-- Dizin adı iki nokta olan ":" (<xref:System.NotSupportedException>).  
+- The directory name is a colon ":" (<xref:System.NotSupportedException>).  
   
-- Kullanıcının dizin oluşturma izni yok (<xref:System.UnauthorizedAccessException>).  
+- The user does not have permission to create the directory (<xref:System.UnauthorizedAccessException>).  
   
-- Kullanıcı izinleri kısmi güven durumda eksik (<xref:System.Security.SecurityException>).  
+- The user lacks permissions in a partial-trust situation (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

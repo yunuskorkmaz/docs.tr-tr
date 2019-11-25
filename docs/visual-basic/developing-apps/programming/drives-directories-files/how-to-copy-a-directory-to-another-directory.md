@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir dizini Visual Basic başka bir dizine kopyalama'
+title: 'Nasıl Yapılır: Bir Dizini Diğerine Kopyalama'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
@@ -7,63 +7,63 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: d8f32da0f4b701d745cd5f70feb7cc461a09842f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a23079f093f53ab8e20eb71c684a594dcf7f894b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039464"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348858"
 ---
-# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Nasıl yapılır: Bir dizini Visual Basic başka bir dizine kopyalama
+# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te bir Dizini Diğerine Kopyalama
 
-Bir dizini başka bir dizine kopyalamak için yönteminikullanın.<xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> Bu yöntem, dizinin içeriğini ve dizinin kendisini kopyalar. Hedef dizin yoksa, oluşturulur. Hedef konumda aynı ada sahip bir dizin varsa ve `overwrite` olarak `False`ayarlanırsa, iki dizinin içeriği birleştirilir. İşlem sırasında dizin için yeni bir ad belirtebilirsiniz.
+Use the <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> method to copy a directory to another directory. This method copies the contents of the directory as well as the directory itself. If the target directory does not exist, it will be created. If a directory with the same name exists in the target location and `overwrite` is set to `False`, the contents of the two directories will be merged. You can specify a new name for the directory during the operation.
 
-Dosyaları bir dizin içinde kopyalarken, özel bir dosya (örneğin, birleştirme `overwrite` `False`sırasında var olan bir dosya gibi) nedeniyle özel durumlar oluşturulabilir. Bu tür özel durumlar oluştuğunda, `Data` özelliği dosya veya dizin yolunun anahtar olduğu ve belirli özel durum iletisinin karşılık gelen değerde bulunduğu girdileri tutan tek bir özel durum halinde birleştirilir.
+When copying files within a directory, exceptions may be thrown that are caused by specific file, such as a file existing during a merge while `overwrite` is set to `False`. When such exceptions are thrown, they are consolidated into a single exception, whose `Data` property holds entries in which the file or directory path is the key and the specific exception message is contained in the corresponding value.
 
-## <a name="to-copy-a-directory-to-another-directory"></a>Bir dizini başka bir dizine kopyalamak için
+## <a name="to-copy-a-directory-to-another-directory"></a>To copy a directory to another directory
 
-- Kaynak ve hedef dizin adlarını belirterek yönteminikullanın.`CopyDirectory` Aşağıdaki örnek, var olan dosyaların üzerine `TestDirectory1` yazarak `TestDirectory2`adlı dizini içine kopyalar.
+- Use the `CopyDirectory` method, specifying source and destination directory names. The following example copies the directory named `TestDirectory1` into `TestDirectory2`, overwriting existing files.
 
     [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]
 
-    Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide **dosya sistemi Işleme sürücülerinde, klasörlerinde ve dosyalarında**bulunur. Daha fazla bilgi için [kod parçacıkları](/visualstudio/ide/code-snippets).
+    This code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **File system - Processing Drives, Folders, and Files**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).
 
 ## <a name="robust-programming"></a>Güçlü Programlama
 
 Aşağıdaki koşullar özel bir duruma neden olabilir:
 
-- Dizin için belirtilen yeni ad iki nokta içerir (:) veya eğik çizgi (\ veya/)<xref:System.ArgumentException>().
+- The new name specified for the directory contains a colon (:) or slash (\ or /) (<xref:System.ArgumentException>).
 
-- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (ile \\ \\başlar.\\) (<xref:System.ArgumentException>).
+- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).
 
-- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğu için geçerli değil.
+- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).
 
-- `destinationDirectoryName`ya da boş bir dize (<xref:System.ArgumentNullException>) `Nothing`
+- `destinationDirectoryName` is `Nothing` or an empty string (<xref:System.ArgumentNullException>)
 
-- Kaynak dizin yok (<xref:System.IO.DirectoryNotFoundException>).
+- The source directory does not exist (<xref:System.IO.DirectoryNotFoundException>).
 
-- Kaynak dizin bir kök dizin (<xref:System.IO.IOException>).
+- The source directory is a root directory (<xref:System.IO.IOException>).
 
-- Birleşik yol, var olan bir dosyaya (<xref:System.IO.IOException>) işaret eder.
+- The combined path points to an existing file (<xref:System.IO.IOException>).
 
-- Kaynak yolu ve hedef yolu aynı (<xref:System.IO.IOException>).
+- The source path and target path are the same (<xref:System.IO.IOException>).
 
-- `ShowUI`, olarak `UIOption.AllDialogs` ayarlanır ve Kullanıcı işlemi iptal eder veya dizindeki bir veya daha fazla Dosya kopyalanamıyor (<xref:System.OperationCanceledException>).
+- `ShowUI` is set to `UIOption.AllDialogs` and the user cancels the operation, or one or more files in the directory cannot be copied (<xref:System.OperationCanceledException>).
 
-- İşlem döngüsel (<xref:System.InvalidOperationException>).
+- The operation is cyclic (<xref:System.InvalidOperationException>).
 
-- Yol iki nokta içerir (:) (<xref:System.NotSupportedException>).
+- The path contains a colon (:) (<xref:System.NotSupportedException>).
 
-- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.
+- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).
 
-- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).
+- A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).
 
-- Kullanıcı, (<xref:System.Security.SecurityException>) yolunu görüntülemek için gerekli izinlere sahip değil.
+- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).
 
-- Hedef dosya var, ancak erişilemez (<xref:System.UnauthorizedAccessException>).
+- A destination file exists but cannot be accessed (<xref:System.UnauthorizedAccessException>).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
-- [Nasıl yapılır: Belirli bir düzene sahip alt dizinler bulun](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
-- [Nasıl yapılır: Dizindeki dosyaların toplanmasını al](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Nasıl Yapılır: Belirli bir Desendeki Alt Dizinleri Bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Nasıl Yapılır: Dizindeki Dosya Koleksiyonunu Alma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

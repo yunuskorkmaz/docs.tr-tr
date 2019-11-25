@@ -1,46 +1,46 @@
 ---
-title: Standart sorgu Işleçleri yürütme yöntemine göre sınıflandırma (Visual Basic)
+title: Standart Sorgu İşleçlerinin Yürütme Yöntemine Göre Sınıflandırılması
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: e89c58707b4980b208395cce67434a6e5efa5d22
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: edace870ea684c70bbf2768c44388f2236622c2c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939264"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345711"
 ---
-# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Standart sorgu Işleçleri yürütme yöntemine göre sınıflandırma (Visual Basic)
-Standart sorgu işleci yöntemlerinin LINQ to Objects uygulamaları iki ana yöntemden biriyle yürütülür: ımımor ertelenmiş. Ertelenmiş yürütmeyi kullanan sorgu işleçleri Ayrıca iki kategoriye ayrılabilir: akış ve akış olmayan. Farklı sorgu işleçlerinin nasıl yürütüleceğini biliyorsanız, belirli bir sorgudan aldığınız sonuçları anlamanıza yardımcı olabilir. Bu, veri kaynağı değiştirilirken veya başka bir sorgunun üstünde bir sorgu oluşturuyorsanız özellikle doğrudur. Bu konu, standart sorgu işleçlerini yürütme tarzlarına göre sınıflandırır.  
+# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Classification of Standard Query Operators by Manner of Execution (Visual Basic)
+The LINQ to Objects implementations of the standard query operator methods execute in one of two main ways: immediate or deferred. The query operators that use deferred execution can be additionally divided into two categories: streaming and non-streaming. If you know how the different query operators execute, it may help you understand the results that you get from a given query. This is especially true if the data source is changing or if you are building a query on top of another query. This topic classifies the standard query operators according to their manner of execution.  
   
-## <a name="manners-of-execution"></a>Yürütme mananlar  
+## <a name="manners-of-execution"></a>Manners of Execution  
   
-### <a name="immediate"></a>Hemen  
- Anında yürütme, veri kaynağının okunduğu ve işlemin sorgunun bildirildiği noktada gerçekleştirildiği anlamına gelir. Tek, Numaralandırılmamış bir sonuç döndüren tüm standart sorgu işleçleri hemen yürütülür.  
+### <a name="immediate"></a>Immediate  
+ Immediate execution means that the data source is read and the operation is performed at the point in the code where the query is declared. All the standard query operators that return a single, non-enumerable result execute immediately.  
   
-### <a name="deferred"></a>Ertelenmiş  
- Ertelenmiş yürütme, işlemin sorgunun bildirildiği noktada gerçekleştirilmediği anlamına gelir. İşlem yalnızca sorgu değişkeni numaralandırıldıktan sonra, örneğin bir `For Each` ifade kullanılarak yapılır. Bu, sorguyu yürütmenin sonuçlarının sorgu tanımlandığında değil, sorgu yürütüldüğünde veri kaynağının içeriğine bağlı olduğunu gösterir. Sorgu değişkeni birden çok kez numaralandırıldıktan sonra sonuçlar her seferinde farklılık gösterebilir. Dönüş türü <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Linq.IOrderedEnumerable%601> ertelenmiş bir şekilde yürütülen tüm standart sorgu işleçleri neredeyse hepsi.  
+### <a name="deferred"></a>Deferred  
+ Deferred execution means that the operation is not performed at the point in the code where the query is declared. The operation is performed only when the query variable is enumerated, for example by using a `For Each` statement. This means that the results of executing the query depend on the contents of the data source when the query is executed rather than when the query is defined. If the query variable is enumerated multiple times, the results might differ every time. Almost all the standard query operators whose return type is <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IOrderedEnumerable%601> execute in a deferred manner.  
   
- Ertelenmiş yürütmeyi kullanan sorgu işleçleri ayrıca akış veya akış olmayan olarak sınıflandırılabilirler.  
+ Query operators that use deferred execution can be additionally classified as streaming or non-streaming.  
   
 #### <a name="streaming"></a>Akış  
- Akış işleçleri, öğeleri almadan önce tüm kaynak verileri okumak zorunda değildir. Yürütme sırasında, bir akış işleci her kaynak öğe okunışında işlemini gerçekleştirir ve uygunsa öğeyi verir. Bir akış işleci, bir sonuç öğesi üretilene kadar kaynak öğeleri okumaya devam eder. Bu, bir sonuç öğesi oluşturmak için birden fazla kaynak öğesinin okunabileceğini gösterir.  
+ Streaming operators do not have to read all the source data before they yield elements. At the time of execution, a streaming operator performs its operation on each source element as it is read and yields the element if appropriate. A streaming operator continues to read source elements until a result element can be produced. This means that more than one source element might be read to produce one result element.  
   
-#### <a name="non-streaming"></a>Akış olmayan  
- Akış olmayan operatörler, bir sonuç öğesi elde etmeden önce tüm kaynak verileri okummalıdır. Sıralama veya gruplama gibi işlemler bu kategoriye girer. Yürütme sırasında akış olmayan sorgu işleçleri tüm kaynak verileri okur, veri yapısına koyar, işlemi gerçekleştirir ve sonuçta elde edilen öğeleri verir.  
+#### <a name="non-streaming"></a>Non-Streaming  
+ Non-streaming operators must read all the source data before they can yield a result element. Operations such as sorting or grouping fall into this category. At the time of execution, non-streaming query operators read all the source data, put it into a data structure, perform the operation, and yield the resulting elements.  
   
-## <a name="classification-table"></a>Sınıflandırma tablosu  
- Aşağıdaki tabloda, her standart sorgu operatörü yöntemi yürütme yöntemine göre sınıflandırılırdı.  
+## <a name="classification-table"></a>Classification Table  
+ The following table classifies each standard query operator method according to its method of execution.  
   
 > [!NOTE]
-> Bir işleç iki sütunda işaretlenmişse, işleme iki giriş dizisi dahil edilir ve her sıra farklı şekilde değerlendirilir. Bu durumlarda, parametre listesindeki her zaman, ertelenmiş, akış halinde değerlendirilen ilk dizidir.  
+> If an operator is marked in two columns, two input sequences are involved in the operation, and each sequence is evaluated differently. In these cases, it is always the first sequence in the parameter list that is evaluated in a deferred, streaming manner.  
   
-|Standart sorgu Işleci|Dönüş Türü|Hemen Yürütme|Ertelenmiş akış yürütme|Ertelenmiş akış olmayan yürütme|  
+|Standard Query Operator|Dönüş Türü|Hemen Yürütme|Deferred Streaming Execution|Deferred Non-Streaming Execution|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
 |<xref:System.Linq.Enumerable.Aggregate%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.All%2A>|<xref:System.Boolean>|X|||  
 |<xref:System.Linq.Enumerable.Any%2A>|<xref:System.Boolean>|X|||  
 |<xref:System.Linq.Enumerable.AsEnumerable%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Average%2A>|Tek sayısal değer|X|||  
+|<xref:System.Linq.Enumerable.Average%2A>|Single numeric value|X|||  
 |<xref:System.Linq.Enumerable.Cast%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Concat%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Contains%2A>|<xref:System.Boolean>|X|||  
@@ -60,8 +60,8 @@ Standart sorgu işleci yöntemlerinin LINQ to Objects uygulamaları iki ana yön
 |<xref:System.Linq.Enumerable.Last%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.LastOrDefault%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.LongCount%2A>|<xref:System.Int64>|X|||  
-|<xref:System.Linq.Enumerable.Max%2A>|Tek sayısal değer, TSource veya TResult|X|||  
-|<xref:System.Linq.Enumerable.Min%2A>|Tek sayısal değer, TSource veya TResult|X|||  
+|<xref:System.Linq.Enumerable.Max%2A>|Single numeric value, TSource, or TResult|X|||  
+|<xref:System.Linq.Enumerable.Min%2A>|Single numeric value, TSource, or TResult|X|||  
 |<xref:System.Linq.Enumerable.OfType%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.OrderBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
 |<xref:System.Linq.Enumerable.OrderByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
@@ -75,12 +75,12 @@ Standart sorgu işleci yöntemlerinin LINQ to Objects uygulamaları iki ana yön
 |<xref:System.Linq.Enumerable.SingleOrDefault%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.Skip%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.SkipWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Sum%2A>|Tek sayısal değer|X|||  
+|<xref:System.Linq.Enumerable.Sum%2A>|Single numeric value|X|||  
 |<xref:System.Linq.Enumerable.Take%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 <xref:System.Linq.Enumerable.TakeWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.ThenBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
 |<xref:System.Linq.Enumerable.ThenByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.ToArray%2A>|TSource dizisi|X|||  
+|<xref:System.Linq.Enumerable.ToArray%2A>|TSource array|X|||  
 |<xref:System.Linq.Enumerable.ToDictionary%2A>|<xref:System.Collections.Generic.Dictionary%602>|X|||  
 |<xref:System.Linq.Enumerable.ToList%2A>|<xref:System.Collections.Generic.IList%601>|X|||  
 |<xref:System.Linq.Enumerable.ToLookup%2A>|<xref:System.Linq.ILookup%602>|X|||  
@@ -90,6 +90,6 @@ Standart sorgu işleci yöntemlerinin LINQ to Objects uygulamaları iki ana yön
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq.Enumerable>
-- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Standart sorgu Işleçleri için sorgu Ifadesi sözdizimi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Query Expression Syntax for Standard Query Operators (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

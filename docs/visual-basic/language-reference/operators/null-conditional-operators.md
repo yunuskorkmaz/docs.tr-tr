@@ -1,23 +1,23 @@
 ---
-title: Null-koşullu Işleçler (Visual Basic)
+title: Null-conditional Operators
 ms.date: 10/19/2018
 helpviewer_keywords:
 - null-conditional operators [Visual Basic]
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: 40cb63705eda563b4c3cfd30fa9836a8f632dccf
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 003f579a7128bbe2462b7fbe7057de03e61bfbe6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581631"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348294"
 ---
-# <a name="-and--null-conditional-operators-visual-basic"></a>?. '? () null-koşullu işleçler (Visual Basic)
+# <a name="-and--null-conditional-operators-visual-basic"></a>?. and ?() null-conditional operators (Visual Basic)
 
-Bir üye erişimi (`?.`) veya dizin (`?()`) işlemini gerçekleştirmeden önce sol işlenenin değerini null (`Nothing`) olarak sınar. Sol işlenen `Nothing` olarak değerlendirilirse `Nothing` döndürür. Normalde değer türlerini döndüren ifadelerde, null koşullu işlecin bir <xref:System.Nullable%601> döndürdüğünü unutmayın.
+Tests the value of the left-hand operand for null (`Nothing`) before performing a member access (`?.`) or index (`?()`) operation; returns `Nothing` if the left-hand operand evaluates to `Nothing`. Note that in expressions that ordinarily return value types, the null-conditional operator returns a <xref:System.Nullable%601>.
 
-Bu işleçler, özellikle veri yapılarına göre azalan sırada null denetimleri işlemek için daha az kod yazmanıza yardımcı olur. Örneğin:
+These operators help you write less code to handle null checks, especially when descending into data structures. Örneğin:
 
 ```vb
 ' Nothing if customers is Nothing
@@ -30,7 +30,7 @@ Dim first As Customer = customers?(0)
 Dim count As Integer? = customers?(0)?.Orders?.Count()
 ```
 
-Karşılaştırma için, bu ifadelerin ilki için alternatif kod, null-Conditional işleci olmadan:
+For comparison, the alternative code for the first of these expressions without a null-conditional operator is:
 
 ```vb
 Dim length As Integer
@@ -39,7 +39,7 @@ If customers IsNot Nothing Then
 End If
 ```
 
-Bazen, bu nesnedeki bir Boole üyesinin değerine bağlı olarak null olabilecek bir nesne üzerinde işlem yapmanız gerekir (aşağıdaki örnekte `IsAllowedFreeShipping` Boolean özelliği gibi):
+Sometimes you need to take an action on an object that may be null, based on the value of a Boolean member on that object (like the Boolean property `IsAllowedFreeShipping` in the following example):
 
 ```vb
 Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
@@ -49,7 +49,7 @@ If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
 End If
 ```
 
-Kodunuzu kısaltabilir ve null koşullu işleci kullanarak null için el ile kontrol edebilirsiniz:
+You can shorten your code and avoid manually checking for null by using the null-conditional operator as follows:
 
 ```vb
 Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
@@ -57,13 +57,13 @@ Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
 If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
-Null koşullu işleçler kısa devre dışı.  Koşullu üye erişimi ve dizin işlemleri zincirindeki bir işlem `Nothing` döndürürse, zincir yürütmenin geri kalanı duraklar.  Aşağıdaki örnekte, `A`, `B` veya `C` `Nothing` değerlendirilirse `C(E)` değerlendirilmez.
+The null-conditional operators are short-circuiting.  If one operation in a chain of conditional member access and index operations returns `Nothing`, the rest of the chain’s execution stops.  In the following example, `C(E)` isn't evaluated if `A`, `B`, or `C` evaluates to `Nothing`.
 
 ```vb
-A?.B?.C?(E);
+A?.B?.C?(E)
 ```
 
-Null koşullu üye erişimi için başka bir kullanım, temsilcileri çok daha az kodla iş parçacığı güvenli bir şekilde çağırmektir.  Aşağıdaki örnek, `NewsBroadcaster` ve `NewsReceiver` iki türü tanımlar. Haber öğeleri `NewsBroadcaster.SendNews` temsilcisi tarafından alıcıya gönderilir.
+Another use for null-conditional member access is to invoke delegates in a thread-safe way with much less code.  The following example defines two types, a `NewsBroadcaster` and a `NewsReceiver`. News items are sent to the receiver by the `NewsBroadcaster.SendNews` delegate.
 
 ```vb
 Public Module NewsBroadcaster
@@ -91,7 +91,7 @@ Public Class NewsReceiver
 End Class
 ```
 
-@No__t_0 çağrısı listesinde hiç öğe yoksa, `SendNews` temsilcisi bir <xref:System.NullReferenceException> oluşturur. Null koşullu işleçlerden önce, aşağıdaki gibi kod temsilci çağırma listesi `Nothing` değildi:
+If there are no elements in the `SendNews` invocation list, the `SendNews` delegate throws a <xref:System.NullReferenceException>. Before null conditional operators, code like the following ensured that the delegate invocation list was not `Nothing`:
 
 ```vb
 SendNews = SendNews.Combine({SendNews, client})
@@ -100,17 +100,17 @@ If SendNews IsNot Nothing Then
 End If
 ```
 
-Yeni yol çok daha basittir:
+The new way is much simpler:
 
 ```vb
 SendNews = SendNews.Combine({SendNews, client})
 SendNews?.Invoke("Just in...")
 ```
 
-Derleyici, yalnızca bir kez `SendNews` değerlendirmek üzere kod oluşturduğundan ve sonucu geçici bir değişkende tutarak, yeni yöntem iş parçacığı açısından güvenlidir. Null koşullu temsilci çağırma sözdizimi `SendNews?(String)` olmadığından `Invoke` yöntemi açıkça çağırmanız gerekir.
+The new way is thread-safe because the compiler generates code to evaluate `SendNews` one time only, keeping the result in a temporary variable. You need to explicitly call the `Invoke` method because there is no null-conditional delegate invocation syntax `SendNews?(String)`.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İşleçler (Visual Basic)](index.md)
-- [Visual Basic programlama kılavuzu](../../../visual-basic/programming-guide/index.md)
+- [Operators (Visual Basic)](index.md)
+- [Visual Basic Programming Guide](../../../visual-basic/programming-guide/index.md)
 - [Visual Basic Dili Başvurusu](../../../visual-basic/language-reference/index.md)

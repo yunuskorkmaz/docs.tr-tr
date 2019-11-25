@@ -1,35 +1,35 @@
 ---
-title: Saf IŞLEVLERE yeniden düzenleme (Visual Basic)
+title: Saf İşlevler Halinde Yeniden Düzenleme
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: e951b3e9108f26a9c861eb49c44bb0a510131819
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 22b371c6136836d6e0f1281f824b69378c0d3e4a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834911"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346515"
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a>Saf IŞLEVLERE yeniden düzenleme (Visual Basic)
+# <a name="refactoring-into-pure-functions-visual-basic"></a>Refactoring Into Pure Functions (Visual Basic)
 
-Saf işlevsel dönüştürmelerin önemli bir yönü, saf işlevleri kullanarak kodu yeniden düzenleme hakkında bilgi ediniyor.
+An important aspect of pure functional transformations is learning how to refactor code using pure functions.
 
-Daha önce bu bölümde belirtildiği gibi, saf bir işlev iki yararlı özelliğe sahiptir:
+As noted previously in this section, a pure function has two useful characteristics:
 
-- Yan etkileri yoktur. İşlev herhangi bir değişken veya işlev dışındaki herhangi bir türdeki veriyi değiştirmez.
+- It has no side effects. The function does not change any variables or the data of any type outside of the function.
 
-- Tutarlıdır. Aynı giriş verisi kümesi verildiğinde, her zaman aynı çıkış değerini döndürür.
+- It is consistent. Given the same set of input data, it will always return the same output value.
 
- İşlevsel programlamaya geçiş yapmanın bir yolu, gereksiz yan etkileri ve dış bağımlılıkları ortadan kaldırmak için mevcut kodu yeniden düzenleme yöntemidir. Bu şekilde, var olan kodun saf işlev sürümlerini oluşturabilirsiniz.
+ One way of transitioning to functional programming is to refactor existing code to eliminate unnecessary side effects and external dependencies. In this way, you can create pure function versions of existing code.
 
-Bu konuda, saf bir işlevin ne olduğu ve ne olmadığı açıklanmaktadır. [Öğretici: bir WordprocessingML belgesi (Visual Basic) öğreticisindeki Içeriği düzenleme](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) bir WordprocessingML belgesinin nasıl düzenleneceğini gösterir ve saf bir işlev kullanarak yeniden düzenleme ile iki örnek içerir.
+This topic discusses what a pure function is and what it is not. The [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial shows how to manipulate a WordprocessingML document, and includes two examples of how to refactor using a pure function.
 
-## <a name="eliminating-side-effects-and-external-dependencies"></a>Yan etkileri ve dış bağımlılıkları ortadan kaldırma
+## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminating Side Effects and External Dependencies
 
-Aşağıdaki örneklerde, saf olmayan iki işlev ve bir saf işlev kontrast vardır.
+The following examples contrast two non-pure functions and a pure function.
 
-### <a name="non-pure-function-that-changes-a-class-member"></a>Bir sınıf üyesini değiştiren saf olmayan Işlev
+### <a name="non-pure-function-that-changes-a-class-member"></a>Non-Pure Function that Changes a Class Member
 
-Aşağıdaki kodda `HyphenatedConcat` işlevi saf bir işlev değildir, çünkü sınıfta `aMember` veri üyesini değiştirir:
+In the following code, the `HyphenatedConcat` function is not a pure function, because it modifies the `aMember` data member in the class:
 
 ```vb
 Module Module1
@@ -52,11 +52,11 @@ Bu kod aşağıdaki çıktıyı üretir:
 StringOne-StringTwo
 ```
 
-Değiştirilen verilerin `public` veya `private` erişimine sahip olup olmadığını veya `shared` üyesi mi yoksa örnek üyesini mi olduğunu unutmayın. Saf bir işlev, işlevin dışındaki herhangi bir veriyi değiştirmez.
+Note that it is irrelevant whether the data being modified has `public` or `private` access, or is a  `shared` member or an instance member. A pure function does not change any data outside of the function.
 
-### <a name="non-pure-function-that-changes-an-argument"></a>Bir bağımsız değişkeni değiştiren saf olmayan Işlev
+### <a name="non-pure-function-that-changes-an-argument"></a>Non-Pure Function that Changes an Argument
 
-Ayrıca, aynı işlevin aşağıdaki sürümü saf değildir çünkü parametresinin içeriğini değiştirir, `sb`.
+Furthermore, the following version of this same function is not pure because it modifies the contents of its parameter, `sb`.
 
 ```vb
 Module Module1
@@ -72,14 +72,14 @@ Module Module1
 End Module
 ```
 
-Programın bu sürümü ilk sürümle aynı çıktıyı üretir, çünkü `HyphenatedConcat` işlevi, <xref:System.Text.StringBuilder.Append%2A> üye işlevini çağırarak ilk parametresinin değerini (durum) değiştirdi. Bu değişiklik, `HyphenatedConcat` ' ın değer olarak çağırma parametresi geçirdiğine rağmen meydana gelir.
+This version of the program produces the same output as the first version, because the `HyphenatedConcat` function has changed the value (state) of its first parameter by invoking the <xref:System.Text.StringBuilder.Append%2A> member function. Note that this alteration occurs despite that fact that `HyphenatedConcat` uses call-by-value parameter passing.
 
 > [!IMPORTANT]
-> Başvuru türleri için bir parametreyi değere göre geçirirseniz, başvurunun geçirildiği bir nesnenin kopyasına neden olur. Bu kopya, özgün başvurusuyla aynı örnek verileriyle ilişkili olmaya devam eder (başvuru değişkeni yeni bir nesneye atanana kadar). Bir parametreyi değiştirmek için bir işlev için başvuruya göre arama gerekli değildir.
+> For reference types, if you pass a parameter by value, it results in a copy of the reference to an object being passed. This copy is still associated with the same instance data as the original reference (until the reference variable is assigned to a new object). Call-by-reference is not necessarily required for a function to modify a parameter.
 
-### <a name="pure-function"></a>Saf Işlev
+### <a name="pure-function"></a>Pure Function
 
-Programın bu sonraki sürümü, `HyphenatedConcat` işlevini saf işlev olarak nasıl uygulayacağınızı barındırdı.
+This next version of the program hows how to implement the `HyphenatedConcat` function as a pure function.
 
 ```vb
 Module Module1
@@ -95,17 +95,17 @@ Module Module1
 End Module
 ```
 
-Yine, bu sürüm aynı çıkış satırını üretir: `StringOne-StringTwo`. Art arda gelen değeri bekletmek için `s2` ara değişkeninde depolandığını unutmayın.
+Again, this version produces the same line of output: `StringOne-StringTwo`. Note that to retain the concatenated value, it is stored in the intermediate variable `s2`.
 
-Çok yararlı olabilecek bir yaklaşım, yerel olarak etkileyici olan işlevleri yazmak (yani yerel değişkenleri bildirdikleri ve değiştirdiklerinde), ancak Global olarak saf bir yaklaşımdır. Bu gibi işlevler, istenen ek özelliklerin çoğuna sahiptir, ancak basit bir döngü aynı şeyi gerçekleştirirken özyineleme kullanmak zorunda kalmadan, daha fazla çalışan işlevsel programlama deyimidir.
+One approach that can be very useful is to write functions that are locally impure (that is, they declare and modify local variables) but are globally pure. Such functions have many of the desirable composability characteristics, but avoid some of the more convoluted functional programming idioms, such as having to use recursion when a simple loop would accomplish the same thing.
 
-## <a name="standard-query-operators"></a>Standart sorgu Işleçleri
+## <a name="standard-query-operators"></a>Standard Query Operators
 
-Standart sorgu işleçlerinin önemli bir özelliği, saf işlevler olarak uygulanırlar.
+An important characteristic of the standard query operators is that they are implemented as pure functions.
 
-Daha fazla bilgi için bkz. [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
+For more information, see [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Saf Işlevsel dönüşümlere giriş (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Fonksiyonel programlama ile kesinlik temelli programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Functional Programming vs. Imperative Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

@@ -1,5 +1,5 @@
 ---
-title: Özel (Visual Basic)
+title: Özel
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Private
@@ -7,33 +7,33 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: ddb2d165de330758f58fbbcb5872e820e639808f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5600744aeca79a54f51a1f9ecd0ef00fed4b00fd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642794"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351327"
 ---
 # <a name="private-visual-basic"></a>Özel (Visual Basic)
-Bir veya daha fazla bildirilmiş programlama öğesine yalnızca gelen içinde kapsanan tüm türleri dahil olmak üzere bildirim bağlamları içinde erişilebileceğini belirtir.  
+Specifies that one or more declared programming elements are accessible only from within their declaration context, including from within any contained types.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir programlama öğesi özel işlevleri temsil eder ya da gizli veriler içeren, genellikle erişimi mümkün olduğunca kesinlikle sınırlamak istiyorsunuz. En fazla sınırlama, yalnızca modül, sınıf veya ona erişmek için tanımladığı yapısı sağlayarak elde edin. Bu şekilde bir öğe erişimi sınırlamak için onunla bildirebilirsiniz `Private`.  
+ If a programming element represents proprietary functionality, or contains confidential data, you usually want to limit access to it as strictly as possible. You achieve the maximum limitation by allowing only the module, class, or structure that defines it to access it. To limit access to an element in this way, you can declare it with `Private`.  
 
 > [!NOTE]
-> Ayrıca [Protected Private](private-protected.md) erişim değiştiricisi, üye erişilebilir bir sınıftaki ve türetilen sınıflar, kapsayan bir derlemede yer sağlar.
+> You can also use the [Private Protected](private-protected.md) access modifier, which makes a member accessible from within that class and from derived classes located in its containing assembly.
 
 ## <a name="rules"></a>Kurallar  
 
-- **Bildirim bağlamı.** Kullanabileceğiniz `Private` yalnızca Modül düzeyinde. Bildirim bağlamı başka bir deyişle bir `Private` öğesi bir modül, sınıf veya yapı olmalıdır ve bir kaynak dosyası, ad alanı, arabirim ya da yordamın olamaz.  
+- **Declaration Context.** You can use `Private` only at module level. This means the declaration context for a `Private` element must be a module, class, or structure, and cannot be a source file, namespace, interface, or procedure.  
   
 ## <a name="behavior"></a>Davranış  
   
-- **Erişim düzeyi.** Bildirim bağlam içinde tüm kod erişip kendi `Private` öğeleri. Bu, iç içe geçmiş bir sınıf veya bir sabit listesi içindeki bir atama ifadesi gibi bağımsız bir tür içindeki kodu içerir. Bildirim bağlamı dışında hiçbir kod erişip kendi `Private` öğeleri.  
+- **Access Level.** All code within a declaration context can access its `Private` elements. This includes code within a contained type, such as a nested class or an assignment expression in an enumeration. No code outside of the declaration context can access its `Private` elements.  
   
-- **Erişim değiştiricileri.** Erişim düzeyini sağlayacaklarını anahtar sözcükleri adlı *erişim değiştiricilerine*. Erişim değiştiricileri bir karşılaştırması için bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
- `Private` Bu bağlamda değiştirici kullanılabilir:  
+ The `Private` modifier can be used in these contexts:  
   
  [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -65,7 +65,7 @@ Bir veya daha fazla bildirilmiş programlama öğesine yalnızca gelen içinde k
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private Protected](./private-protected.md)
-- [Korumalı Friend](./protected-friend.md)[erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Protected Friend](./protected-friend.md)    [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

@@ -1,49 +1,49 @@
 ---
-title: 'Nasıl yapılır: Visual Basic Ikili dosyalara yazma'
+title: 'Nasıl Yapılır: İkili Dosyalara Yazma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], binary access
 - WriteAllBytes method [Visual Basic]
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
-ms.openlocfilehash: ab42fa50aaf39397ac51db8a4cc3a3b00f6ce878
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 72d019f5f49868bd84d0507535e8ebc547b50e25
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039412"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334427"
 ---
-# <a name="how-to-write-to-binary-files-in-visual-basic"></a>Nasıl yapılır: Visual Basic Ikili dosyalara yazma
+# <a name="how-to-write-to-binary-files-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te İkili Dosyalara Yazma
 
-Yöntemi <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> , verileri bir ikili dosyaya yazar. `append` Parametresi ise`True`, verileri dosyaya ekler; Aksi halde dosyadaki verilerin üzerine yazılır.
+The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> method writes data to a binary file. If the `append` parameter is `True`, it will append the data to the file; otherwise data in the file is overwritten.
 
-Dosya adı hariç belirtilen yol geçerli değilse, bir <xref:System.IO.DirectoryNotFoundException> özel durum oluşturulur. Yol geçerliyse ancak dosya yoksa dosya oluşturulur.
+If the specified path excluding the file name is not valid, a <xref:System.IO.DirectoryNotFoundException> exception will be thrown. If the path is valid but the file does not exist, the file will be created.
 
-## <a name="to-write-to-a-binary-file"></a>İkili bir dosyaya yazmak için
+## <a name="to-write-to-a-binary-file"></a>To write to a binary file
 
-Dosya yolu ve adı ve yazılacak baytları sağlayarak yönteminikullanın.`WriteAllBytes` Bu örnek, veri dizisini `CustomerData` adlı `CollectedData.dat`dosyaya ekler.
+Use the `WriteAllBytes` method, supplying the file path and name and the bytes to be written. This example appends the data array `CustomerData` to the file named `CollectedData.dat`.
 
 [!code-vb[VbVbcnMyFileSystem#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#27)]
 
 ## <a name="robust-programming"></a>Güçlü Programlama
 
-Aşağıdaki koşullar bir özel durum oluşturabilir:
+The following conditions may create an exception:
 
-- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir; yalnızca boşluk içeriyor; veya geçersiz karakterler içeriyor. (<xref:System.ArgumentException>).
+- The path is not valid for one of the following reasons: it is a zero-length string; it contains only white space; or it contains invalid characters. (<xref:System.ArgumentException>).
 
-- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğu için geçerli değil.
+- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).
 
-- `File`varolmayan bir yola işaret eder (<xref:System.IO.FileNotFoundException> veya <xref:System.IO.DirectoryNotFoundException>).
+- `File` points to a path that does not exist (<xref:System.IO.FileNotFoundException> or <xref:System.IO.DirectoryNotFoundException>).
 
-- Dosya başka bir işlem tarafından kullanılıyor veya bir g/ç hatası oluştu (<xref:System.IO.IOException>).
+- The file is in use by another process, or an I/O error occurs (<xref:System.IO.IOException>).
 
-- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.
+- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).
 
-- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).
+- A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).
 
-- Kullanıcı, (<xref:System.Security.SecurityException>) yolunu görüntülemek için gerekli izinlere sahip değil.
+- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
-- [Nasıl yapılır: Dosyalara metin yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)
+- [Nasıl Yapılır: Dosyalara Metin Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)

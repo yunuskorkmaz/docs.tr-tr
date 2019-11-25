@@ -1,5 +1,5 @@
 ---
-title: .NET Framework yöntemleri kullanarak dosyaları düzenleme (Visual Basic)
+title: .NET Framework Yöntemlerini Kullanarak Dosyaları Düzenleme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], walkthroughs
@@ -15,142 +15,142 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: fc02b795834dba4a777dc78f4c8179238ac593af
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 02cdbcc59e8817ff4ec06c2f78f835cad77b10f2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582491"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333777"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>İzlenecek Yol: .NET Framework Yöntemlerini Kullanarak Dosyaları Düzenleme (Visual Basic)
 
-Bu izlenecek yol, <xref:System.IO.StreamReader> sınıfını kullanarak bir dosyayı nasıl açıp okuyacağınızı, bir dosyaya erişilmekte olup olmadığını kontrol etmek için <xref:System.IO.StreamReader> sınıfının örneğiyle okunan bir dosya içinde bir dizeyi aramak ve <xref:System.IO.StreamWriter> sınıfını kullanarak bir dosyaya yazmak demektir.
+This walkthrough demonstrates how to open and read a file using the <xref:System.IO.StreamReader> class, check to see if a file is being accessed, search for a string within a file read with an instance of the <xref:System.IO.StreamReader> class, and write to a file using the <xref:System.IO.StreamWriter> class.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="creating-the-application"></a>Uygulama oluşturma
+## <a name="creating-the-application"></a>Creating the Application
 
-Visual Studio 'Yu başlatın ve kullanıcının belirlenen dosyaya yazmak için kullanabileceği bir form oluşturarak projeye başlayın.
+Start Visual Studio and begin the project by creating a form that the user can use to write to the designated file.
 
 ### <a name="to-create-the-project"></a>Proje oluşturmak için
 
-1. **Dosya** menüsünde **Yeni proje**' yi seçin.
+1. On the **File** menu, select **New Project**.
 
-2. **Yeni proje** bölmesinde **Windows uygulaması**' na tıklayın.
+2. In the **New Project** pane, click **Windows Application**.
 
-3. **Ad** kutusuna `MyDiary` yazın ve **Tamam**' a tıklayın.
+3. In the **Name** box type `MyDiary` and click **OK**.
 
-     Visual Studio, projeyi **Çözüm Gezgini**ekler ve **Windows Form Tasarımcısı** açılır.
+     Visual Studio adds the project to **Solution Explorer**, and the **Windows Forms Designer** opens.
 
-4. Aşağıdaki tablodaki denetimleri forma ekleyin ve özellikleri için karşılık gelen değerleri ayarlayın.
+4. Add the controls in the following table to the form and set the corresponding values for their properties.
 
-|**Nesne**|**Veri Erişimi**|**Değer**|
+|**Object**|**Veri Erişimi**|**Değer**|
 |---|---|---|
-|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**|`Submit`<br /><br /> **Giriş Gönder**|
-|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**|`Clear`<br /><br /> **Girişi temizle**|
-|<xref:System.Windows.Forms.TextBox>|**Ad**<br /><br /> **Metin**<br /><br /> **Çok satırlı**|`Entry`<br /><br /> **Lütfen bir ad girin.**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**|`Submit`<br /><br /> **Submit Entry**|
+|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**|`Clear`<br /><br /> **Clear Entry**|
+|<xref:System.Windows.Forms.TextBox>|**Ad**<br /><br /> **Metin**<br /><br /> **Multiline**|`Entry`<br /><br /> **Please enter something.**<br /><br /> `False`|
 
-## <a name="writing-to-the-file"></a>Dosyaya yazma
+## <a name="writing-to-the-file"></a>Writing to the File
 
-Uygulama aracılığıyla bir dosyaya yazma özelliğini eklemek için <xref:System.IO.StreamWriter> sınıfını kullanın. <xref:System.IO.StreamWriter>, belirli bir kodlamada karakter çıkışı için tasarlanmıştır, ancak <xref:System.IO.Stream> sınıfı bayt girişi ve çıkışı için tasarlanmıştır. Bir standart metin dosyasına bilgi satırları yazmak için <xref:System.IO.StreamWriter> kullanın. @No__t_0 sınıfı hakkında daha fazla bilgi için bkz. <xref:System.IO.StreamWriter>.
+To add the ability to write to a file via the application, use the <xref:System.IO.StreamWriter> class. <xref:System.IO.StreamWriter> is designed for character output in a particular encoding, whereas the <xref:System.IO.Stream> class is designed for byte input and output. Use <xref:System.IO.StreamWriter> for writing lines of information to a standard text file. For more information on the <xref:System.IO.StreamWriter> class, see <xref:System.IO.StreamWriter>.
 
-### <a name="to-add-writing-functionality"></a>Yazma işlevselliği eklemek için
+### <a name="to-add-writing-functionality"></a>To add writing functionality
 
-1. **Görünüm** menüsünde **kod** ' yi seçerek kod düzenleyicisini açın.
+1. From the **View** menu, choose **Code** to open the Code Editor.
 
-2. Uygulama <xref:System.IO> ad alanına başvurduğundan, form için Sınıf bildiriminden önce, `Public Class Form1` başlayan, kodunuzun en başına aşağıdaki deyimlerini ekleyin.
+2. Because the application references the <xref:System.IO> namespace, add the following statements at the very beginning of your code, before the class declaration for the form, which begins `Public Class Form1`.
 
      [!code-vb[VbVbcnMyFileSystem#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#35)]
 
-     Dosyaya yazmadan önce <xref:System.IO.StreamWriter> sınıfının bir örneğini oluşturmanız gerekir.
+     Before writing to the file, you must create an instance of a <xref:System.IO.StreamWriter> class.
 
-3. **Görünüm** menüsünden, **Windows Form Tasarımcısı**geri dönmek için **Tasarımcı** ' yı seçin. Düğme için bir <xref:System.Windows.Forms.Control.Click> olay işleyicisi oluşturmak üzere `Submit` düğmesine çift tıklayın ve ardından aşağıdaki kodu ekleyin.
+3. From the **View** menu, choose **Designer** to return to the **Windows Forms Designer**. Double-click the `Submit` button to create a <xref:System.Windows.Forms.Control.Click> event handler for the button, and then add the following code.
 
      [!code-vb[VbVbcnMyFileSystem#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#36)]
 
 > [!NOTE]
-> Visual Studio tümleşik geliştirme ortamı (IDE), kod düzenleyicisine dönerek ekleme noktasını kodu eklemeniz gereken olay işleyicisine göre konumlandıracaktır.
+> The Visual Studio Integrated Development Environment (IDE) will return to the Code Editor and position the insertion point within the event handler where you should add the code.
 
-1. Dosyaya yazmak için <xref:System.IO.StreamWriter> sınıfının <xref:System.IO.StreamWriter.Write%2A> yöntemini kullanın. @No__t_0 sonra doğrudan aşağıdaki kodu ekleyin. Zaten mevcut değilse oluşturulacak bir özel durumun, dosyanın bulunamaması durumunda oluşturulmadığından endişelenmeniz gerekmez.
+1. To write to the file, use the <xref:System.IO.StreamWriter.Write%2A> method of the <xref:System.IO.StreamWriter> class. Add the following code directly after `Dim fw As StreamWriter`. You do not need to worry that an exception will be thrown if the file is not found, because it will be created if it does not already exist.
 
      [!code-vb[VbVbcnMyFileSystem#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#37)]
 
-2. @No__t_0 hemen sonra aşağıdaki kodu ekleyerek kullanıcının boş bir giriş gönderebildiğinden emin olun.
+2. Make sure that the user cannot submit a blank entry by adding the following code directly after `Dim ReadString As String`.
 
      [!code-vb[VbVbcnMyFileSystem#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#38)]
 
-3. Bu bir Diary olduğundan, Kullanıcı her girişe bir tarih atamak isteyeceksiniz. @No__t_0 sonra `Today` değişkeni geçerli tarihe ayarlamak için aşağıdaki kodu ekleyin.
+3. Because this is a diary, the user will want to assign a date to each entry. Insert the following code after `fw = New StreamWriter("C:\MyDiary.txt", True)` to set the variable `Today` to the current date.
 
      [!code-vb[VbVbcnMyFileSystem#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#39)]
 
-4. Son olarak, <xref:System.Windows.Forms.TextBox> temizlemek için kod ekleyin. @No__t_0 düğmesinin <xref:System.Windows.Forms.Control.Click> olayına aşağıdaki kodu ekleyin.
+4. Finally, attach code to clear the <xref:System.Windows.Forms.TextBox>. Add the following code to the `Clear` button's <xref:System.Windows.Forms.Control.Click> event.
 
      [!code-vb[VbVbcnMyFileSystem#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#40)]
 
-## <a name="adding-display-features-to-the-diary"></a>Diary 'e görüntüleme özellikleri ekleme
+## <a name="adding-display-features-to-the-diary"></a>Adding Display Features to the Diary
 
-Bu bölümde, `DisplayEntry` <xref:System.Windows.Forms.TextBox> en son girişi görüntüleyen bir özellik eklersiniz. Ayrıca, çeşitli girdileri görüntüleyen ve kullanıcının `DisplayEntry` <xref:System.Windows.Forms.TextBox> görüntülenecek girişi seçebileceğiniz bir <xref:System.Windows.Forms.ComboBox> ekleyebilirsiniz. @No__t_0 sınıfının bir örneği `MyDiary.txt` okur. @No__t_0 sınıfı gibi, <xref:System.IO.StreamReader> metin dosyalarıyla kullanılmak üzere tasarlanmıştır.
+In this section, you add a feature that displays the latest entry in the `DisplayEntry`<xref:System.Windows.Forms.TextBox>. You can also add a <xref:System.Windows.Forms.ComboBox> that displays various entries and from which a user can select an entry to display in the `DisplayEntry`<xref:System.Windows.Forms.TextBox>. An instance of the <xref:System.IO.StreamReader> class reads from `MyDiary.txt`. Like the <xref:System.IO.StreamWriter> class, <xref:System.IO.StreamReader> is intended for use with text files.
 
-İzlenecek yolun bu bölümü için, aşağıdaki tablodaki denetimleri forma ekleyin ve özellikleri için karşılık gelen değerleri ayarlayın.
+For this section of the walkthrough, add the controls in the following table to the form and set the corresponding values for their properties.
 
 |Denetim|Özellikler|Değerler|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.TextBox>|**Ad**<br /><br /> **Görüne**<br /><br /> **Boyutla**<br /><br /> **Çok satırlı**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
-|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**|`Display`<br /><br /> **Görüntülenme**|
-|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**|`GetEntries`<br /><br /> **Girişleri Al**|
-|<xref:System.Windows.Forms.ComboBox>|**Ad**<br /><br /> **Metin**<br /><br /> **Etkinletir**|`PickEntries`<br /><br /> **Bir giriş seçin**<br /><br /> `False`|
+|<xref:System.Windows.Forms.TextBox>|**Ad**<br /><br /> **Visible**<br /><br /> **Size**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
+|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**|`Display`<br /><br /> **Display**|
+|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**|`GetEntries`<br /><br /> **Get Entries**|
+|<xref:System.Windows.Forms.ComboBox>|**Ad**<br /><br /> **Metin**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **Select an Entry**<br /><br /> `False`|
 
-### <a name="to-populate-the-combo-box"></a>Birleşik giriş kutusunu doldurmak için
+### <a name="to-populate-the-combo-box"></a>To populate the combo box
 
-1. @No__t_0 <xref:System.Windows.Forms.ComboBox>, kullanıcının her girişi gönderdiği tarihleri göstermek için kullanılır, böylece Kullanıcı belirli bir tarihten itibaren bir giriş seçebilir. @No__t_1 düğmesine <xref:System.Windows.Forms.Control.Click> bir olay işleyicisi oluşturun ve aşağıdaki kodu ekleyin.
+1. The `PickEntries`<xref:System.Windows.Forms.ComboBox> is used to display the dates on which a user submits each entry, so the user can select an entry from a specific date. Create a <xref:System.Windows.Forms.Control.Click> event handler to the `GetEntries` button and add the following code.
 
      [!code-vb[VbVbcnMyFileSystem#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#41)]
 
-2. Kodunuzu test etmek için F5 tuşuna basarak uygulamayı derleyin ve ardından **Girişleri Al**' a tıklayın. Giriş tarihlerini göstermek için <xref:System.Windows.Forms.ComboBox> açılan oka tıklayın.
+2. To test your code, press F5 to compile the application, and then click **Get Entries**. Click the drop-down arrow in the <xref:System.Windows.Forms.ComboBox> to display the entry dates.
 
-### <a name="to-choose-and-display-individual-entries"></a>Tek tek girdileri seçme ve görüntüleme
+### <a name="to-choose-and-display-individual-entries"></a>To choose and display individual entries
 
-1. @No__t_1 düğmesi için <xref:System.Windows.Forms.Control.Click> olay işleyicisi oluşturun ve aşağıdaki kodu ekleyin.
+1. Create a <xref:System.Windows.Forms.Control.Click> event handler for the `Display` button and add the following code.
 
      [!code-vb[VbVbcnMyFileSystem#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#42)]
 
-2. Kodunuzu test etmek için F5 tuşuna basarak uygulamayı derleyin ve ardından bir giriş gönderebilirsiniz. **Girişleri Al**' a tıklayın, <xref:System.Windows.Forms.ComboBox> bir giriş seçin ve ardından **görüntüle**' ye tıklayın. Seçili girdinin içeriği `DisplayEntry` <xref:System.Windows.Forms.TextBox> görüntülenir.
+2. To test your code, press F5 to compile the application, and then submit an entry. Click **Get Entries**, select an entry from the <xref:System.Windows.Forms.ComboBox>, and then click **Display**. The contents of the selected entry appear in the `DisplayEntry`<xref:System.Windows.Forms.TextBox>.
 
-## <a name="enabling-users-to-delete-or-modify-entries"></a>Kullanıcıların girdileri silmesini veya değiştirmesini sağlama
+## <a name="enabling-users-to-delete-or-modify-entries"></a>Enabling Users to Delete or Modify Entries
 
-Son olarak, kullanıcıların `DeleteEntry` ve `EditEntry` düğmelerini kullanarak bir girişi silmesine veya değiştirmesine olanak tanıyan ek işlevler ekleyebilirsiniz. Bir giriş görüntülenmediği takdirde her iki düğme de devre dışı kalır.
+Finally, you can include additional functionality enables users to delete or modify an entry by using `DeleteEntry` and `EditEntry` buttons. Both buttons remain disabled unless an entry is displayed.
 
-Aşağıdaki tablodaki denetimleri forma ekleyin ve özellikleri için karşılık gelen değerleri ayarlayın.
+Add the controls in the following table to the form and set the corresponding values for their properties.
 
 |Denetim|Özellikler|Değerler|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**<br /><br /> **Etkinletir**|`DeleteEntry`<br /><br /> **Girişi Sil**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**<br /><br /> **Etkinletir**|`EditEntry`<br /><br /> **Girişi Düzenle**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**<br /><br /> **Etkinletir**|`SubmitEdit`<br /><br /> **Düzenleme gönder**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **Delete Entry**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **Edit Entry**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Submit Edit**<br /><br /> `False`|
 
-### <a name="to-enable-deletion-and-modification-of-entries"></a>Girişlerin silinmesini ve değiştirilmesini etkinleştirmek için
+### <a name="to-enable-deletion-and-modification-of-entries"></a>To enable deletion and modification of entries
 
-1. @No__t_0 düğmenin <xref:System.Windows.Forms.Control.Click> olayına, `DisplayEntry.Text = ReadString` sonra aşağıdaki kodu ekleyin.
+1. Add the following code to the `Display` button's <xref:System.Windows.Forms.Control.Click> event, after `DisplayEntry.Text = ReadString`.
 
      [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]
 
-2. @No__t_1 düğmesi için <xref:System.Windows.Forms.Control.Click> olay işleyicisi oluşturun ve aşağıdaki kodu ekleyin.
+2. Create a <xref:System.Windows.Forms.Control.Click> event handler for the `DeleteEntry` button and add the following code.
 
      [!code-vb[VbVbcnMyFileSystem#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#44)]
 
-3. Bir Kullanıcı bir girişi görüntülediğinde `EditEntry` düğmesi etkinleştirilir. @No__t_2 sonra `Display` düğmesinin <xref:System.Windows.Forms.Control.Click> olayına aşağıdaki kodu ekleyin.
+3. When a user displays an entry, the `EditEntry` button becomes enabled. Add the following code to the <xref:System.Windows.Forms.Control.Click> event of the `Display` button after `DisplayEntry.Text = ReadString`.
 
      [!code-vb[VbVbcnMyFileSystem#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#45)]
 
-4. @No__t_1 düğmesi için <xref:System.Windows.Forms.Control.Click> olay işleyicisi oluşturun ve aşağıdaki kodu ekleyin.
+4. Create a <xref:System.Windows.Forms.Control.Click> event handler for the `EditEntry` button and add the following code.
 
      [!code-vb[VbVbcnMyFileSystem#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#46)]
 
-5. @No__t_1 düğmesi için <xref:System.Windows.Forms.Control.Click> olay işleyicisi oluşturun ve aşağıdaki kodu ekleyin
+5. Create a <xref:System.Windows.Forms.Control.Click> event handler for the `SubmitEdit` button and add the following code
 
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]
 
-Kodunuzu test etmek için F5 tuşuna basarak uygulamayı derleyin. **Girişleri Al**' a tıklayın, bir giriş seçin ve ardından **görüntüle**' ye tıklayın. Giriş `DisplayEntry` <xref:System.Windows.Forms.TextBox> görünür. **Girişi Düzenle**' ye tıklayın. Giriş `Entry` <xref:System.Windows.Forms.TextBox> görünür. @No__t_0 <xref:System.Windows.Forms.TextBox> girişi düzenleyin ve **Düzenle gönder**' e tıklayın. Düzeltinizi onaylamak için `MyDiary.txt` dosyasını açın. Şimdi bir girdi seçip **girişi Sil**' e tıklayın. @No__t_0 onay istediğinde, **Tamam**' a tıklayın. Uygulamayı kapatın ve silme işlemini onaylamak için `MyDiary.txt` açın.
+To test your code, press F5 to compile the application. Click **Get Entries**, select an entry, and then click **Display**. The entry appears in the `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Click **Edit Entry**. The entry appears in the `Entry`<xref:System.Windows.Forms.TextBox>. Edit the entry in the `Entry`<xref:System.Windows.Forms.TextBox> and click **Submit Edit**. Open the `MyDiary.txt` file to confirm your correction. Now select an entry and click **Delete Entry**. When the <xref:System.Windows.Forms.MessageBox> requests confirmation, click **OK**. Close the application and open `MyDiary.txt` to confirm the deletion.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

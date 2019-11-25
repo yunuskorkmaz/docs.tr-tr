@@ -1,5 +1,5 @@
 ---
-title: Olayları işleme (Visual Basic)
+title: Olayları İşleme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handling [Visual Basic], walkthroughs
@@ -9,114 +9,114 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 12267e0a70419298bc581421c4f3a220088d205f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb42f2e41e366cf8765cb9395d1a5641434bab40
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956306"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345078"
 ---
-# <a name="walkthrough-handling-events-visual-basic"></a>İzlenecek yol: Olayları işleme (Visual Basic)
-Bu, etkinliklerle nasıl çalışabileceğini gösteren iki konunun ikinci konudır. İlk konu, [izlenecek yol: Olayları](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)bildirme ve oluşturma, olayların nasıl bildirilemeyeceğini ve tetiklemeyeceğini gösterir. Bu bölüm, bu kılavuzda yer alan formu ve sınıfı kullanır.  
+# <a name="walkthrough-handling-events-visual-basic"></a>İzlenecek yol: Olayları İşleme (Visual Basic)
+This is the second of two topics that demonstrate how to work with events. The first topic, [Walkthrough: Declaring and Raising Events](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), shows how to declare and raise events. This section uses the form and class from that walkthrough to show how to handle events when they take place.  
   
- `Widget` Sınıf örneği geleneksel olay işleme deyimlerini kullanır. Visual Basic olaylarla çalışmaya yönelik başka teknikler de sağlar. Bir alıştırma olarak, `AddHandler` ve `Handles` deyimlerini kullanmak için bu örneği değiştirebilirsiniz.  
+ The `Widget` class example uses traditional event-handling statements. Visual Basic provides other techniques for working with events. As an exercise, you can modify this example to use the `AddHandler` and `Handles` statements.  
   
-### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>Pencere öğesi sınıfının PercentDone olayını işlemek için  
+### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>To handle the PercentDone event of the Widget class  
   
-1. Aşağıdaki kodu içine `Form1`yerleştirin:  
+1. Place the following code in `Form1`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
-     Anahtar sözcüğü, değişkenin `mWidget` bir nesnenin olaylarını işlemek için kullanıldığını belirtir. `WithEvents` Nesnenin türünü, nesnenin oluşturulacağı sınıfın adını sağlayarak belirtirsiniz.  
+     The `WithEvents` keyword specifies that the variable `mWidget` is used to handle an object's events. You specify the kind of object by supplying the name of the class from which the object will be created.  
   
-     Değişkenler sınıf `mWidget` düzeyi olması gerektiğinden `Form1` `WithEvents` değişken içinde olarak belirtilir. Bu, yerleştirdiğiniz sınıf türünden bağımsız olarak geçerlidir.  
+     The variable `mWidget` is declared in `Form1` because `WithEvents` variables must be class-level. This is true regardless of the type of class you place them in.  
   
-     Değişkeni `mblnCancel` , `LongTask` yöntemi iptal etmek için kullanılır.  
+     The variable `mblnCancel` is used to cancel the `LongTask` method.  
   
-## <a name="writing-code-to-handle-an-event"></a>Bir olayı Işlemek için kod yazma  
- Kullanarak `WithEvents`bir değişken bildirdikten hemen sonra, sınıfın **kod düzenleyicisinin**sol açılır listesinde değişken adı belirir. `mWidget` Seçtiğinizde`Widget` , sınıfın olayları sağ açılan listede görüntülenir. Bir olay seçilmesi, ilgili olay yordamını önek `mWidget` ve alt çizgi ile görüntüler. Bir `WithEvents` değişkenle ilişkili tüm olay yordamlarına önek olarak değişken adı verilir.  
+## <a name="writing-code-to-handle-an-event"></a>Writing Code to Handle an Event  
+ As soon as you declare a variable using `WithEvents`, the variable name appears in the left drop-down list of the class's **Code Editor**. When you select `mWidget`, the `Widget` class's events appear in the right drop-down list. Selecting an event displays the corresponding event procedure, with the prefix `mWidget` and an underscore. All the event procedures associated with a `WithEvents` variable are given the variable name as a prefix.  
   
-#### <a name="to-handle-an-event"></a>Bir olayı işlemek için  
+#### <a name="to-handle-an-event"></a>To handle an event  
   
-1. `mWidget` **Kod düzenleyicisinde**sol aşağı açılan listeden seçim yapın.  
+1. Select `mWidget` from the left drop-down list in the **Code Editor**.  
   
-2. Sağ açılan listeden olayı seçin. `PercentDone` **Kod Düzenleyicisi** `mWidget_PercentDone` olay yordamını açar.  
+2. Select the `PercentDone` event from the right drop-down list. The **Code Editor** opens the `mWidget_PercentDone` event procedure.  
   
     > [!NOTE]
-    > **Kod Düzenleyicisi** , yeni olay işleyicileri eklemek için yararlıdır, ancak gerekli değildir. Bu kılavuzda, yalnızca olay işleyicilerini doğrudan kodunuza kopyalamak daha doğrudan bir örnek olur.  
+    > The **Code Editor** is useful, but not required, for inserting new event handlers. In this walkthrough, it is more direct to just copy the event handlers directly into your code.  
   
-3. Aşağıdaki kodu `mWidget_PercentDone` olay işleyicisine ekleyin:  
+3. Add the following code to the `mWidget_PercentDone` event handler:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
-     Olay gerçekleştiğinde olay yordamı bir `Label` denetimdeki tamamlanma yüzdesini gösterir. `PercentDone` Yöntemi etiketin yeniden çizileceğü sağlar ve kullanıcıya iptal düğmesine tıklama fırsatı verir. `DoEvents`  
+     Whenever the `PercentDone` event is raised, the event procedure displays the percent complete in a `Label` control. The `DoEvents` method allows the label to repaint, and also gives the user the opportunity to click the **Cancel** button.  
   
-4. `Button2_Click` Olay işleyicisi için aşağıdaki kodu ekleyin:  
+4. Add the following code for the `Button2_Click` event handler:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
- Kullanıcı çalışırken **iptal** `LongTask` düğmesine tıkladığında, `Button2_Click` etkinlik olay işlemenin oluşmasına izin verdiği anda `DoEvents` olay yürütülür. Sınıf `mblnCancel` düzeyi değişkeni `True`olarak `True`ayarlanır ve `mWidget_PercentDone` olay bundan sonra test eder ve `ByRef Cancel` bağımsız değişkenini olarak ayarlar.  
+ If the user clicks the **Cancel** button while `LongTask` is running, the `Button2_Click` event is executed as soon as the `DoEvents` statement allows event processing to occur. The class-level variable `mblnCancel` is set to `True`, and the `mWidget_PercentDone` event then tests it and sets the `ByRef Cancel` argument to `True`.  
   
-## <a name="connecting-a-withevents-variable-to-an-object"></a>Bir WithEvents değişkenini bir nesneye bağlama  
- `Form1`Artık bir `Widget` nesnenin olaylarını işleyecek şekilde ayarlanır. Her şey bir `Widget` yerde bulunmaya devam etmektedir.  
+## <a name="connecting-a-withevents-variable-to-an-object"></a>Connecting a WithEvents Variable to an Object  
+ `Form1` is now set up to handle a `Widget` object's events. All that remains is to find a `Widget` somewhere.  
   
- Tasarım zamanında bir değişken `WithEvents` bildirdiğinizde, onunla ilişkili bir nesne yoktur. `WithEvents` Değişken, tıpkı diğer nesne değişkenleri gibi. Bir nesnesi oluşturmanız ve `WithEvents` değişkenine bir başvuru atamanız gerekir.  
+ When you declare a variable `WithEvents` at design time, no object is associated with it. A `WithEvents` variable is just like any other object variable. You have to create an object and assign a reference to it with the `WithEvents` variable.  
   
-#### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>Bir nesne oluşturmak ve buna bir başvuru atamak için  
+#### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>To create an object and assign a reference to it  
   
-1. **Kod düzenleyicisinde**sol aşağı açılan listeden **(Form1 olayları)** öğesini seçin.  
+1. Select **(Form1 Events)** from the left drop-down list in the **Code Editor**.  
   
-2. Sağ açılan listeden olayı seçin. `Load` **Kod Düzenleyicisi** `Form1_Load` olay yordamını açar.  
+2. Select the `Load` event from the right drop-down list. The **Code Editor** opens the `Form1_Load` event procedure.  
   
-3. Oluşturmak için `Form1_Load` olay yordamı için aşağıdaki kodu ekleyin: `Widget`  
+3. Add the following code for the `Form1_Load` event procedure to create the `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
- Bu kod yürütüldüğünde, Visual Basic bir `Widget` nesnesi oluşturur ve olaylarını ile `mWidget`ilişkili olay yordamlarına bağlar. Bu noktadan itibaren, olayı her ne `Widget` zaman `PercentDone` oluşturur `mWidget_PercentDone` olay yordamı yürütülür.  
+ When this code executes, Visual Basic creates a `Widget` object and connects its events to the event procedures associated with `mWidget`. From that point on, whenever the `Widget` raises its `PercentDone` event, the `mWidget_PercentDone` event procedure is executed.  
   
-#### <a name="to-call-the-longtask-method"></a>LongTask yöntemini çağırmak için  
+#### <a name="to-call-the-longtask-method"></a>To call the LongTask method  
   
-- Aşağıdaki kodu `Button1_Click` olay işleyicisine ekleyin:  
+- Add the following code to the `Button1_Click` event handler:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#8)]  
   
- Yöntemi çağrılmadan önce, tamamlanma yüzdesini gösteren etiketin başlatılması ve yöntemin iptal edilmesi için sınıf düzeyi `Boolean` bayrağının olarak `False`ayarlanması gerekir. `LongTask`  
+ Before the `LongTask` method is called, the label that displays the percent complete must be initialized, and the class-level `Boolean` flag for canceling the method must be set to `False`.  
   
- `LongTask`, 12,2 saniyelik bir görev süresiyle çağrılır. Olay `PercentDone` , saniyenin her biri üçte bir kez tetiklenir. Olay her oluşturulduğunda `mWidget_PercentDone` olay yordamı yürütülür.  
+ `LongTask` is called with a task duration of 12.2 seconds. The `PercentDone` event is raised once every one-third of a second. Each time the event is raised, the `mWidget_PercentDone` event procedure is executed.  
   
- `mblnCancel` İşinizbittiğinde`mblnCancel` , normal olarak mısonlandırıldığı`LongTask` , yoksa durdurulmuş mi olduğunu görmek için test edilmiştir. `True` `LongTask` Tamamlanma yüzdesi yalnızca önceki durumda güncelleştirilir.  
+ When `LongTask` is done, `mblnCancel` is tested to see if `LongTask` ended normally, or if it stopped because `mblnCancel` was set to `True`. The percent complete is updated only in the former case.  
   
-#### <a name="to-run-the-program"></a>Programı çalıştırmak için  
+#### <a name="to-run-the-program"></a>To run the program  
   
-1. Projeyi çalışma moduna almak için F5 tuşuna basın.  
+1. Press F5 to put the project in run mode.  
   
-2. **Görevi Başlat** düğmesine tıklayın. `PercentDone` Olay her oluşturulduğunda etiket, tamamlanan görevin yüzdesine göre güncelleştirilir.  
+2. Click the **Start Task** button. Each time the `PercentDone` event is raised, the label is updated with the percentage of the task that is complete.  
   
-3. Görevi durdurmak için **iptal** düğmesine tıklayın. **İptal** düğmesinin görünümü tıkladığınızda hemen değişmediğine dikkat edin. Etkinlik olay işlemeye izin verdiğinden olay gerçekleşmeyecek `My.Application.DoEvents`. `Click`  
+3. Click the **Cancel** button to stop the task. Notice that the appearance of the **Cancel** button does not change immediately when you click it. The `Click` event cannot happen until the `My.Application.DoEvents` statement allows event processing.  
   
     > [!NOTE]
-    > `My.Application.DoEvents` Yöntemi, olayları yalnızca formla aynı şekilde işlemez. Örneğin, bu kılavuzda, **iptal** düğmesine iki kez tıklamanız gerekir. Formun olayları doğrudan işlemesine izin vermek için çoklu iş parçacığı kullanımı ' nı kullanabilirsiniz. Daha fazla bilgi için bkz. [yönetilen Iş parçacığı](../../../../standard/threading/index.md).
+    > The `My.Application.DoEvents` method does not process events in exactly the same way as the form does. For example, in this walkthrough, you must click the **Cancel** button twice. To allow the form to handle the events directly, you can use multithreading. For more information, see [Managed Threading](../../../../standard/threading/index.md).
   
- Programı F11 ile çalıştırmaya ve bir kerede bir satırda bir satır adım adım ilerlebileceğinizi fark edebilirsiniz. Yürütmenin nasıl girdiğini `LongTask`açıkça görebilir ve `PercentDone` olay `Form1` her oluşturulduğunda kısa bir süre sonra yeniden girebilirsiniz.  
+ You may find it instructive to run the program with F11 and step through the code a line at a time. You can clearly see how execution enters `LongTask`, and then briefly re-enters `Form1` each time the `PercentDone` event is raised.  
   
- Yürütme kodunda `Form1` `LongTask` geri yüklenirken ne olur?, yöntem yeniden çağırılır mi? En kötü, olay her oluştuğunda çağrılırsa bir yığın `LongTask` taşması meydana gelebilir.  
+ What would happen if, while execution was back in the code of `Form1`, the `LongTask` method were called again? At worst, a stack overflow might occur if `LongTask` were called every time the event was raised.  
   
- `mWidget` `Widget` Yeni öğesinebir`mWidget`başvuru atayarak, değişkenin farklı bir nesne için olayları işlemesine neden olabilirsiniz. `Widget` Aslında, düğmeye her tıkladığınızda kodu `Button1_Click` bunu yapabilirsiniz.  
+ You can cause the variable `mWidget` to handle events for a different `Widget` object by assigning a reference to the new `Widget` to `mWidget`. In fact, you can make the code in `Button1_Click` do this every time you click the button.  
   
-#### <a name="to-handle-events-for-a-different-widget"></a>Farklı bir pencere öğesinin olaylarını işlemek için  
+#### <a name="to-handle-events-for-a-different-widget"></a>To handle events for a different widget  
   
-- Aşağıdaki kod satırını, şu şekilde `Button1_Click` `mWidget.LongTask(12.2, 0.33)`görüntülenen satırdan hemen önce ekleyin:  
+- Add the following line of code to the `Button1_Click` procedure, immediately preceding the line that reads `mWidget.LongTask(12.2, 0.33)`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#9)]  
   
- Yukarıdaki kod, düğme tıklandığında yeni `Widget` bir oluşturur. `LongTask` Yöntemi tamamlandıktan hemen sonra, başvurusu `Widget` serbest bırakılır ve `Widget` yok edilir.  
+ The code above creates a new `Widget` each time the button is clicked. As soon as the `LongTask` method completes, the reference to the `Widget` is released, and the `Widget` is destroyed.  
   
- Bir değişken tek seferde yalnızca bir nesne başvurusu içerebilir, bu nedenle ' `mWidget`ye farklı `Widget` bir nesne atarsanız, önceki `Widget` nesnenin olayları artık işlenmeyecek. `WithEvents` Eğer `mWidget` eski`Widget`bir başvuruyu içeren tek nesne değişkense, nesne yok edilir. Çeşitli `Widget` nesnelerden olayları işlemek istiyorsanız, her bir nesneden olayları ayrı olarak `AddHandler` işlemek için ifadesini kullanın.  
+ A `WithEvents` variable can contain only one object reference at a time, so if you assign a different `Widget` object to `mWidget`, the previous `Widget` object's events will no longer be handled. If `mWidget` is the only object variable containing a reference to the old `Widget`, the object is destroyed. If you want to handle events from several `Widget` objects, use the `AddHandler` statement to process events from each object separately.  
   
 > [!NOTE]
-> İhtiyaç duyduğunuz kadar çok `WithEvents` değişken bildirebilirsiniz, ancak `WithEvents` değişkenlerin dizileri desteklenmez.  
+> You can declare as many `WithEvents` variables as you need, but arrays of `WithEvents` variables are not supported.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Olayları bildirme ve oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
+- [İzlenecek yol: Olay Bildirme ve Oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
 - [Olaylar](../../../../visual-basic/programming-guide/language-features/events/index.md)

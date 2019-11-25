@@ -1,5 +1,5 @@
 ---
-title: '#ExternalSource yönergesi (Visual Basic)'
+title: '#ExternalSource Yönergesi'
 ms.date: 07/20/2015
 f1_keywords:
 - '#Externalsource'
@@ -12,15 +12,16 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: ac7096e998dd8d2a416dc739e1d7625e1abff7a6
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: fa0a40827c1b3865b90c7d796ea4dd364774e1c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696833"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343825"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource Yönergesi
-Kaynak kodunun belirli satırları ve kaynağın dış metni arasındaki eşlemeyi gösterir.  
+
+Indicates a mapping between specific lines of source code and text external to the source.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,24 +32,26 @@ Kaynak kodunun belirli satırları ve kaynağın dış metni arasındaki eşleme
 ```  
   
 ## <a name="parts"></a>Bölümler  
+
  `StringLiteral`  
- Dış kaynağın yolu.  
+ The path to the external source.  
   
  `IntLiteral`  
- Dış kaynağın ilk satırının satır numarası.  
+ The line number of the first line of the external source.  
   
  `LogicalLine`  
- Dış kaynakta Hatanın gerçekleştiği satır.  
+ The line where the error occurs in the external source.  
   
  `#End ExternalSource`  
- @No__t-0 bloğunu sonlandırır.  
+ Terminates the `#ExternalSource` block.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yönerge yalnızca derleyici ve hata ayıklayıcı tarafından kullanılır.  
+
+ This directive is used only by the compiler and the debugger.  
   
- Kaynak dosya, kaynak dosyadaki belirli kod satırları ve bir. aspx dosyası gibi, kaynağın harici metni arasındaki eşlemeyi gösteren dış kaynak yönergeleri içerebilir. Derleme sırasında belirlenen kaynak kodunda hatalarla karşılaşılırsa, bunlar dış kaynaktan geldiği şekilde tanımlanır.  
+ A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file. If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.  
   
- Dış kaynak yönergelerinin derleme üzerinde hiçbir etkisi yoktur ve iç içe geçirilemez. Bunlar yalnızca uygulama tarafından dahili kullanım için tasarlanmıştır.  
+ External source directives have no effect on compilation and cannot be nested. They are intended for internal use by the application only.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

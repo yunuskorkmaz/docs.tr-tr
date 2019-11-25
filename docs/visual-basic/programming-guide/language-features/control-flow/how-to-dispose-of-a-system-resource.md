@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Sistem Kaynağını Atma (Visual Basic)'
+title: 'Nasıl yapılır: Bir Sistem Kaynağını Atma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: c780ee1a174ad044593960bc30a3ee2e1f929390
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c493051050442597196ba484fb9ce8e99249dbb7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583140"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353938"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Nasıl yapılır: Bir Sistem Kaynağını Atma (Visual Basic)
-Kodunuzun bloğundan çıkılırken sistemin bir kaynağı ortadan kaldırabileceğini garantilemek için `Using` bloğu kullanabilirsiniz. Bu, büyük miktarda bellek tüketen bir sistem kaynağı kullanıyorsanız veya diğer bileşenlerin de kullanılmasını istiyorsanız kullanışlıdır.  
+You can use a `Using` block to guarantee that the system disposes of a resource when your code exits the block. This is useful if you are using a system resource that consumes a large amount of memory, or that other components also want to use.  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Kodunuz ile işiniz bittiğinde bir veritabanı bağlantısını atmak için  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>To dispose of a database connection when your code is finished with it  
   
-1. Kaynak dosyanızın başlangıcında (Bu durumda, <xref:System.Data.SqlClient>) veritabanı bağlantısı için uygun [Imports bildirisini (.net ad alanı ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) eklediğinizden emin olun.  
+1. Make sure you include the appropriate [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) for the database connection at the beginning of your source file (in this case, <xref:System.Data.SqlClient>).  
   
-2. @No__t_1 ve `End Using` deyimleriyle `Using` bloğu oluşturun. Bloğun içinde, veritabanı bağlantısıyla ilgilenen kodu koyun.  
+2. Create a `Using` block with the `Using` and `End Using` statements. Inside the block, put the code that deals with the database connection.  
   
-3. Bağlantıyı bildirin ve `Using` deyimin bir parçası olarak bir örneğini oluşturun.  
+3. Declare the connection and create an instance of it as part of the `Using` statement.  
   
     ```vb  
     ' Insert the following line at the beginning of your source file.  
@@ -38,11 +38,11 @@ Kodunuzun bloğundan çıkılırken sistemin bir kaynağı ortadan kaldırabilec
     End Sub  
     ```  
   
-     İşlenmeyen bir özel durum da dahil olmak üzere bloğundan çıktığınızda sistem kaynağı ortadan kaldırsın.  
+     The system disposes of the resource no matter how you exit the block, including the case of an unhandled exception.  
   
-     Kapsamı bloğa sınırlı olduğundan, `Using` bloğunun dışından `sqc` erişemediğini unutmayın.  
+     Note that you cannot access `sqc` from outside the `Using` block, because its scope is limited to the block.  
   
-     Bu tekniği, bir dosya tanıtıcısı veya bir COM sarmalayıcı gibi bir sistem kaynağı üzerinde kullanabilirsiniz. @No__t_1 bloğundan çıktıktan sonra kaynağın diğer bileşenler için kullanılabilir durumda kalmasını sağlamak istediğinizde bir `Using` bloğu kullanırsınız.  
+     You can use this same technique on a system resource such as a file handle or a COM wrapper. You use a `Using` block when you want to be sure to leave the resource available for other components after you have exited the `Using` block.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

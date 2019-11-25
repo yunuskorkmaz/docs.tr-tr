@@ -1,5 +1,5 @@
 ---
-title: İşleçlerin Etkili Bileşimi (Visual Basic)
+title: İşleçlerin Etkili Bileşimi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expressions [Visual Basic], parentheses
@@ -13,45 +13,45 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: 8f5dd6c56b3e4576b9d798e0e5e10b2996f558dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83ad53e4c75490a75eba0f80a6bf0f078aa4d426
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864665"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348976"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>İşleçlerin Etkili Bileşimi (Visual Basic)
-Birçok farklı işleçleri karmaşık ifadeleri içerebilir. Aşağıdaki örnek bunu göstermektedir.  
+Complex expressions can contain many different operators. Aşağıdaki örnek bunu göstermektedir.  
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
   
- Bir önceki örnekte gibi karmaşık ifadeler oluşturmak için işleç önceliği kurallarına Azure'un gerekir. Daha fazla bilgi için [Visual Basic'de İşleç önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+ Creating complex expressions such as the one in the preceding example requires a thorough understanding of the rules of operator precedence. For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
-## <a name="parenthetical-expressions"></a>Parantez içinde ifadeler  
- Çoğu zaman İşleç önceliği tarafından belirlenen olanlardan farklı bir düzende devam etmek için işlem ister. Aşağıdaki örnek göz önünde bulundurun.  
+## <a name="parenthetical-expressions"></a>Parenthetical Expressions  
+ Often you want operations to proceed in a different order from that determined by operator precedence. Consider the following example.  
   
  `x = z * y + 4`  
   
- Yukarıdaki örnekte çarpar `z` tarafından `y`, ardından sonuca ekler `4`. Ancak eklemek istiyorsanız `y` ve `4` sonucu çarpmadan önce `z`, parantezler kullanarak normal İşleç önceliği geçersiz kılabilirsiniz. Bir ifadeyi parantez içine alarak, ilk olarak, İşleç önceliği bağımsız olarak değerlendirilecek ifade zorlar. Ayrıca ilk yapmak için önceki örnekte zorlamak için aşağıdaki örnekte olduğu gibi yeniden yazabilirsiniz.  
+ The preceding example multiplies `z` by `y`, then adds the result to `4`. But if you want to add `y` and `4` before multiplying the result by `z`, you can override normal operator precedence by using parentheses. By enclosing an expression in parentheses, you force that expression to be evaluated first, regardless of operator precedence. To force the preceding example to do the addition first, you could rewrite it as in the following example.  
   
  `x = z * (y + 4)`  
   
- Yukarıdaki örnekte ekler `y` ve `4`, ardından toplamı ile çarpar `z`.  
+ The preceding example adds `y` and `4`, then multiplies that sum by `z`.  
   
-### <a name="nested-parenthetical-expressions"></a>Parantez içinde iç içe geçmiş ifadeler  
- Daha da önceliği geçersiz kılmak için parantez, birden çok düzeyi ifadelerini iç içe yerleştirebilirsiniz. Parantez içine en derin yuvalanmış ifadeleri en, vb. az derin şekilde iç içe geçmiş ve son olarak parantez dışında ifadeleri iç içe girmiş sonraki ardından ilk olarak değerlendirilir. Aşağıdaki örnek bunu göstermektedir.  
+### <a name="nested-parenthetical-expressions"></a>Nested Parenthetical Expressions  
+ You can nest expressions in multiple levels of parentheses to override precedence even further. The expressions most deeply nested in parentheses are evaluated first, followed by the next most deeply nested, and so on to the least deeply nested, and finally the expressions outside parentheses. Aşağıdaki örnek bunu göstermektedir.  
   
  `x = (z * 4) ^ (y * (z + 2))`  
   
- Önceki örnekte `z + 2` değerlendirilen ilk sonra parantez içinde bir ifade. Diğer ifadeler ayraç içindeki çünkü normalde toplama veya çarpma daha yüksek bir önceliğe sahiptir, üs olarak gösterme Bu örnekte son değerlendirilir.  
+ In the preceding example, `z + 2` is evaluated first, then the other parenthetical expressions. Exponentiation, which normally has higher precedence than addition or multiplication, is evaluated last in this example because the other expressions are enclosed in parentheses.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de aritmetik işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Visual Basic'de Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Visual Basic'de mantıksal ve bit düzeyinde işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
-- [Mantıksal/bit düzeyinde işleçler (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Logical/Bitwise Operators (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Boole İfadeleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [Değer Karşılaştırmaları](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
-- [Nasıl yapılır: Sayısal değerleri hesaplama](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)
-- [Visual Basic'de İşleç önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Nasıl yapılır: Sayısal Değerleri Hesaplama](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)
+- [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)

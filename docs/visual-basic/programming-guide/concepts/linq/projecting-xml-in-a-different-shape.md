@@ -1,25 +1,25 @@
 ---
-title: Planlanması XML farklı bir şekil (Visual Basic)
+title: XML’i Farklı Şekilde Yansıtma
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: e5639948cbc264a4b17cffe80de70b011e4d2a70
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd8b95ca442c9f2f17940423dde22f627669cd0b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666116"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347141"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Planlanması XML farklı bir şekil (Visual Basic)
-Bu konuda, farklı bir şekil XML kaynak planlanması XML örneği gösterilmektedir.  
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projecting XML in a Different Shape (Visual Basic)
+This topic shows an example of projecting XML that is in a different shape than the source XML.  
   
- Zincirleme sorgular, bu örnekte olduğu gibi birçok tipik XML dönüşümleri oluşur. Başlamak XML biçimi Ara sonuçlar anonim türler bir koleksiyon olarak proje veya adlandırılmış ve ardından son olarak proje sonuçları XML kaynak tamamen farklı bir şekil içinde XML halinde yeniden yaygındır.  
+ Many typical XML transformations consist of chained queries, as in this example. It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, paragraf düğümleri WordprocessingML belge alınırken WordprocessingML belgesinin işler. Ayrıca, stil ve her bir paragraf metni tanımlar. Son olarak, örnek XML ile farklı bir şekil yansıtıyor. Bu örnek, önceki örneklerde üzerinde Bu öğreticide oluşturur. Yansıtma yapan yeni deyim aşağıdaki kod açıklamalarda çağrılır.  
+ This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document. It also identifies the style and text of each paragraph. Finally, the example projects XML with a different shape. This example builds on the previous examples in this tutorial. The new statement that does the projection is called out in comments in the code below.  
   
- Bu örneğin kaynak belge oluşturma yönergeleri için bkz. [kaynak Office Open XML belgesi (Visual Basic) oluşturulmasını](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- Bu örnek WindowsBase derlemesinden sınıfları kullanır. Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
+ This example uses classes from the WindowsBase assembly. It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -160,7 +160,7 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ This example produces the following output:  
   
 ```xml  
 <Root>  
@@ -228,10 +228,10 @@ End Module
 ```  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Sonraki örnekte, bir Word belgesinde tüm metni bulmak için sorgu:  
+ In the next example, you'll query to find all the text in a Word document:  
   
-- [(Visual Basic) Word belgelerinde metin bulma](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Finding Text in Word Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

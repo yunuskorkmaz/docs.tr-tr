@@ -1,65 +1,65 @@
 ---
-title: LINQ ve dizeler (Visual Basic)
+title: LINQ ve Dizeler
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: 7e0ebe64494182191dafa033ecbc38bad17180be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73ce4bf5586f1f9ff4995ea6f425b90744b7e333
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663421"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353278"
 ---
-# <a name="linq-and-strings-visual-basic"></a>LINQ ve dizeler (Visual Basic)
-LINQ Sorgu dizeleri ve dizelerden oluşan koleksiyonları dönüştürmek için kullanılabilir. Metin dosyalarında yarı yapısal verilerle özellikle yararlı olabilir. LINQ sorguları, geleneksel dize işlevleri ve normal ifadeler ile birleştirilebilir. Örneğin, kullanabileceğiniz <xref:System.String.Split%2A> veya <xref:System.Text.RegularExpressions.Regex.Split%2A> sonra sorgulayabilir veya LINQ kullanarak değiştirme dizeleri bir dizi oluşturmak için yöntemi. Kullanabileceğiniz <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> yönteminde `where` bir LINQ sorgu yan tümcesi. LINQ Sorgu veya değiştirmek için kullanabileceğiniz <xref:System.Text.RegularExpressions.MatchCollection> normal bir ifade tarafından döndürülen sonuç.  
+# <a name="linq-and-strings-visual-basic"></a>LINQ and Strings (Visual Basic)
+LINQ can be used to query and transform strings and collections of strings. It can be especially useful with semi-structured data in text files. LINQ queries can be combined with traditional string functions and regular expressions. For example, you can use the <xref:System.String.Split%2A> or <xref:System.Text.RegularExpressions.Regex.Split%2A> method to create an array of strings that you can then query or modify by using LINQ. You can use the <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> method in the `where` clause of a LINQ query. And you can use LINQ to query or modify the <xref:System.Text.RegularExpressions.MatchCollection> results returned by a regular expression.  
   
- Bu bölümde açıklanan olan tekniklerle da XML'e yarı yapılandırılmış metin verileri dönüştürmek için de kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: CSV dosyalarından XML oluşturma](how-to-generate-xml-from-csv-files.md).  
+ You can also use the techniques described in this section to transform semi-structured text data to XML. For more information, see [How to: Generate XML from CSV Files](how-to-generate-xml-from-csv-files.md).  
   
- Bu bölümdeki örnekler, iki kategoriye ayrılır:  
+ The examples in this section fall into two categories:  
   
-## <a name="querying-a-block-of-text"></a>Metin bloğu sorgulama  
- Sorgu, analiz ve daha küçük dizeleri sorgulanabilir bir diziye bölerek kullanarak metin blokları değiştirme <xref:System.String.Split%2A> yöntemi veya <xref:System.Text.RegularExpressions.Regex.Split%2A> yöntemi. Kaynak metni sözcükler, cümle, paragraf, sayfaları veya başka bir ölçüt bölmek ve sorgunuzda gerekirse ek bölmelerini gerçekleştirin.  
+## <a name="querying-a-block-of-text"></a>Querying a Block of Text  
+ You can query, analyze, and modify text blocks by splitting them into a queryable array of smaller strings by using the <xref:System.String.Split%2A> method or the <xref:System.Text.RegularExpressions.Regex.Split%2A> method. You can split the source text into words, sentences, paragraphs, pages, or any other criteria, and then perform additional splits if they are required in your query.  
   
- [Nasıl yapılır: Bir sözcüğün bir dizede (LINQ) (Visual Basic) oluşum sayısı](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
- Basit metin üzerinde sorgulamak için LINQ kullanma işlemi gösterilmektedir.  
+ [How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
+ Shows how to use LINQ for simple querying over text.  
   
- [Nasıl yapılır: Belirli bir sözcükler (LINQ) (Visual Basic) kümesini içeren cümleleri sorgulama](how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)
+ [How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (Visual Basic)](how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)
 
- Metin dosyaları rastgele sınırlarındaki bölme ve her parça karşı sorguları gerçekleştirmeyi gösterir.  
+ Shows how to split text files on arbitrary boundaries and how to perform queries against each part.  
   
- [Nasıl yapılır: (LINQ) (Visual Basic) bir dizedeki karakterleri sorgulama](how-to-query-for-characters-in-a-string-linq.md)  
- Bir dize sorgulanabilir tür olduğunu gösterir.  
+ [How to: Query for Characters in a String (LINQ) (Visual Basic)](how-to-query-for-characters-in-a-string-linq.md)  
+ Demonstrates that a string is a queryable type.  
   
- [Nasıl yapılır: (Visual Basic) Normal ifadelerle LINQ sorgularını birleştirme](how-to-combine-linq-queries-with-regular-expressions.md)  
- Filtrelenmiş sorgu sonuçlarına karmaşık desen için LINQ sorgularında normal ifadeleri kullanma işlemi gösterilmektedir.  
+ [How to combine LINQ queries with regular expressions (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md)  
+ Shows how to use regular expressions in LINQ queries for complex pattern matching on filtered query results.  
   
-## <a name="querying-semi-structured-data-in-text-format"></a>Metin biçimindeki yarı yapılandırılmış verileri Sorgulama  
- Satırları, genellikle sekme veya virgülle sınırlandırılmış dosyalar veya sabit uzunluklu satırları gibi benzer biçimlendirmeye sahip olan bir dizi farklı türlerde metin dosyaları oluşur. Bu tür bir metin dosyası belleğe okuduktan sonra sorgu ve/veya satırları değiştirmek için LINQ kullanabilirsiniz. LINQ sorguları ayrıca birden çok kaynaktan veri birleştirme görevini basitleştirir.  
+## <a name="querying-semi-structured-data-in-text-format"></a>Querying Semi-Structured Data in Text Format  
+ Many different types of text files consist of a series of lines, often with similar formatting, such as tab- or comma-delimited files or fixed-length lines. After you read such a text file into memory, you can use LINQ to query and/or modify the lines. LINQ queries also simplify the task of combining data from multiple sources.  
   
- [Nasıl yapılır: (LINQ) (Visual Basic) iki liste arasında ayarlanmış farkı bulma](how-to-find-the-set-difference-between-two-lists-linq.md)  
- Bir liste ancak diğer mevcut olan tüm dizeleri bulmak gösterilmektedir.  
+ [How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)](how-to-find-the-set-difference-between-two-lists-linq.md)  
+ Shows how to find all the strings that are present in one list but not the other.  
   
- [Nasıl yapılır: Herhangi bir sözcük veya alana (LINQ) (Visual Basic) göre filtre metin verilerini sıralama veya](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)  
- Herhangi bir sözcük veya alana göre metin satırlarını sıralama işlemi gösterilmektedir.  
+ [How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)  
+ Shows how to sort text lines based on any word or field.  
   
- [Nasıl yapılır: (LINQ) (Visual Basic) sınırlandırılmış bir dosyanın alanlarını yeniden sıralama](how-to-reorder-the-fields-of-a-delimited-file.md)  
- Bir .csv dosyası bir satırda alanları yeniden sıralama işlemi gösterilmektedir.  
+ [How to: Reorder the Fields of a Delimited File (LINQ) (Visual Basic)](how-to-reorder-the-fields-of-a-delimited-file.md)  
+ Shows how to reorder fields in a line in a .csv file.  
   
- [Nasıl yapılır: Birleştirme ve karşılaştırma (LINQ) (Visual Basic) dize koleksiyonları](how-to-combine-and-compare-string-collections-linq.md)  
- Dize listesi çeşitli şekillerde birleştirme işlemi gösterilmektedir.  
+ [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](how-to-combine-and-compare-string-collections-linq.md)  
+ Shows how to combine string lists in various ways.  
   
- [Nasıl yapılır: (LINQ) (Visual Basic) birden fazla kaynaktan nesne koleksiyonları doldurma](how-to-populate-object-collections-from-multiple-sources-linq.md)  
- Veri kaynağı olarak birden çok metin dosyasını kullanarak nesne koleksiyonları oluşturma işlemi gösterilmektedir.  
+ [How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)](how-to-populate-object-collections-from-multiple-sources-linq.md)  
+ Shows how to create object collections by using multiple text files as data sources.  
   
- [Nasıl yapılır: Dosyalardan içerik (LINQ) (Visual Basic) katılın](how-to-join-content-from-dissimilar-files-linq.md)  
- Eşleşen bir anahtar kullanarak iki liste dizelerde tek bir dize olarak birleştirilecek gösterilmektedir.  
+ [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md)  
+ Shows how to combine strings in two lists into a single string by using a matching key.  
   
- [Nasıl yapılır: Gruplar (LINQ) (Visual Basic) kullanarak bir dosyayı birden çok dosyaya bölme](how-to-split-a-file-into-many-files-by-using-groups-linq.md)  
- Veri kaynağı olarak tek bir dosyayı kullanarak yeni dosyalar oluşturma işlemi gösterilmektedir.  
+ [How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)  
+ Shows how to create new files by using a single file as a data source.  
   
- [Nasıl yapılır: İşlem sütun değerleri bir CSV metinde dosyasında (LINQ) (Visual Basic)](how-to-compute-column-values-in-a-csv-text-file-linq.md)  
- Metin verileri .csv dosyalarındaki matematiksel hesaplamalar gerçekleştirmek nasıl gösterir.  
+ [How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)](how-to-compute-column-values-in-a-csv-text-file-linq.md)  
+ Shows how to perform mathematical computations on text data in .csv files.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](index.md)
-- [Nasıl yapılır: CSV dosyalarından XML oluşturma](how-to-generate-xml-from-csv-files.md)
+- [Language-Integrated Query (LINQ) (Visual Basic)](index.md)
+- [Nasıl yapılır: CSV Dosyalarından XML Oluşturma](how-to-generate-xml-from-csv-files.md)

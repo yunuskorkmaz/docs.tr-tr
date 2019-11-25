@@ -1,58 +1,58 @@
 ---
-title: Nesne odaklı programlama (Visual Basic)
+title: Object-oriented programming
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-ms.openlocfilehash: 058d8b932e50f784d4a5cefa9fadfb31953687f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3739919273f4cdd285d519c414c542f1a82a16d2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783519"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348158"
 ---
-# <a name="object-oriented-programming-visual-basic"></a>Nesne odaklı programlama (Visual Basic)
+# <a name="object-oriented-programming-visual-basic"></a>Object-oriented programming (Visual Basic)
 
-Visual Basic kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne yönelimli programlama için tam destek sağlar.
+Visual Basic provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.
 
- *Kapsülleme* ilgili özellikleri, yöntemleri ve diğer üyeleri bir grup işlem tek bir birim veya nesne anlamına gelir.
+ *Encapsulation* means that a group of related properties, methods, and other members are treated as a single unit or object.
 
- *Devralma* mevcut bir sınıfı temel alan yeni sınıflar oluşturma becerisidir.
+ *Inheritance* describes the ability to create new classes based on an existing class.
 
- *Çok biçimlilik* her sınıf aynı özellikleri veya yöntemleri farklı şekilde uygular olsa da birbirinin yerine kullanılabilen birden fazla sınıfınız olabileceği anlamına gelir.
+ *Polymorphism* means that you can have multiple classes that can be used interchangeably, even though each class implements the same properties or methods in different ways.
 
- Bu bölüm aşağıdaki kavramları açıklar:
+ This section describes the following concepts:
 
 - [Sınıflar ve nesneler](#classes-and-objects)
-  - [Sınıf üyeleri](#class-members)
-    - [Özellikler ve alanları](#properties-and-fields)
+  - [Class members](#class-members)
+    - [Properties and fields](#properties-and-fields)
     - [Yöntemler](#methods)
     - [Oluşturucular](#constructors)
     - [Yıkıcılar](#destructors)
     - [Olaylar](#events)
-    - [İç içe geçmiş sınıflar](#nested-classes)
-  - [Erişim değiştiricileri ve erişim düzeyleri](#access-modifiers-and-access-levels)
-    - [Sınıf oluşturma](#instantiating-classes)
-    - [Paylaşılan sınıflar ve Üyeler](#shared-classes-and-members)
-    - [Anonim türler](#anonymous-types)
+    - [Nested classes](#nested-classes)
+  - [Access modifiers and access levels](#access-modifiers-and-access-levels)
+    - [Instantiating classes](#instantiating-classes)
+    - [Shared classes and members](#shared-classes-and-members)
+    - [Anonymous types](#anonymous-types)
 - [Devralma](#inheritance)
-  - [Üyeleri geçersiz kılma](#overriding-members)
+  - [Overriding members](#overriding-members)
 - [Arabirimler](#interfaces)
 - [Genel Türler](#generics)
 - [Temsilciler](#delegates)
 
 ## <a name="classes-and-objects"></a>Sınıflar ve nesneler
 
-Koşulları *sınıfı* ve *nesne* bazen birbirlerinin yerine, ancak aslında sınıfları açıklar kullanılan *türü* nesnelerin nesneleri iken  *örnekleri* sınıf. Bu nedenle, bir nesne oluşturma işlemi olarak da adlandırılır *oluşturmada*. Blueprint benzerliği kullanarak bir sınıf plandır ve nesne bu yapılan bir binadır.
+The terms *class* and *object* are sometimes used interchangeably, but in fact, classes describe the *type* of objects, while objects are usable *instances* of classes. So, the act of creating an object is called *instantiation*. Using the blueprint analogy, a class is a blueprint, and an object is a building made from that blueprint.
 
-Bir sınıf tanımlamak için:
+To define a class:
 
 ```vb
 Class SampleClass
 End Class
 ```
 
-Visual Basic, hafif bir sınıflar adlandırılan sürümünü de sağlar *yapıları* yapın ve büyük nesneler dizisi oluşturmanız gerektiğinde yararlı olan çok fazla bellek için kullanmak istemiyorsanız.
+Visual Basic also provides a light version of classes called *structures* that are useful when you need to create large array of objects and do not want to consume too much memory for that.
 
-Yapı tanımlamak için:
+To define a structure:
 
 ```vb
 Structure SampleStructure
@@ -64,15 +64,15 @@ Daha fazla bilgi için bkz.:
 - [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)
 
-### <a name="class-members"></a>Sınıf üyeleri
+### <a name="class-members"></a>Class members
 
-Her sınıf farklı olabilir *sınıf üyeleri* sınıf verilerini, sınıf davranışını tanımlayan yöntemleri ve farklı sınıflar ve nesneler arasındaki iletişimi sağlayan olayları tanımlayan özellikler içerir.
+Each class can have different *class members* that include properties that describe class data, methods that define class behavior, and events that provide communication between different classes and objects.
 
-#### <a name="properties-and-fields"></a>Özellikler ve alanları
+#### <a name="properties-and-fields"></a>Properties and fields
 
-Alanlar ve özellikler bir nesnenin içerdiği bilgileri temsil eder. Bunlar okunabilir ve doğrudan ayarlamak için alanları gibi değişkenlerdir.
+Fields and properties represent information that an object contains. Fields are like variables because they can be read or set directly.
 
-Bir alanı tanımlamak için:
+To define a field:
 
 ```vb
 Class SampleClass
@@ -80,11 +80,11 @@ Class SampleClass
 End Class
 ```
 
-Özellik get ve set yordamları, değerlerin nasıl ayarlanacağı veya döndürüleceği hakkında daha fazla denetim sağlar.
+Properties have get and set procedures, which provide more control on how values are set or returned.
 
-Visual Basic ya da özellik değerini depolamak için özel bir alan oluşturabilir veya bu alanı arka planda otomatik olarak oluşturmak ve özellik yordamları için temel mantığı sağlayan sözde ve otomatik olarak uygulanan özellikler sağlar.
+Visual Basic allows you either to create a private field for storing the property value or use so-called auto-implemented properties that create this field automatically behind the scenes and provide the basic logic for the property procedures.
 
-Otomatik uygulanan bir özellik tanımlamak için:
+To define an auto-implemented property:
 
 ```vb
 Class SampleClass
@@ -92,7 +92,7 @@ Class SampleClass
 End Class
 ```
 
-Okuma için bazı ek işlemler gerçekleştirebilir ve yazma özellik değeri özellik değerini depolamak için bir alan tanımlayın ve depolanması ve alınması için temel mantığı sağlayan gerekiyorsa:
+If you need to perform some additional operations for reading and writing the property value, define a field for storing the property value and provide the basic logic for storing and retrieving it:
 
 ```vb
 Class SampleClass
@@ -110,7 +110,7 @@ Class SampleClass
 End Class
 ```
 
-Çoğu özellikleri, yöntemleri ya da yordamlar hem ayarlamak ve özellik değerini almak için vardır. Ancak, değiştiren veya okunmalarını kısıtlamak için salt okunur veya salt yazılır özellikler oluşturabilirsiniz. Visual Basic'te kullanabileceğiniz `ReadOnly` ve `WriteOnly` anahtar sözcükleri. Ancak, otomatik uygulanan özellikler salt okunur veya salt yazılır olamaz.
+Most properties have methods or procedures to both set and get the property value. However, you can create read-only or write-only properties to restrict them from being modified or read. In Visual Basic you can use `ReadOnly` and `WriteOnly` keywords. However, auto-implemented properties cannot be read-only or write-only.
 
 Daha fazla bilgi için bkz.:
 
@@ -122,12 +122,12 @@ Daha fazla bilgi için bkz.:
 
 #### <a name="methods"></a>Yöntemler
 
- A *yöntemi* , nesnenin gerçekleştirebileceği bir eylemdir.
+ A *method* is an action that an object can perform.
 
 > [!NOTE]
-> Visual Basic'te, bir yöntem oluşturmanın iki yolu vardır: `Sub` deyimi kullanılır; değer döndürmezse `Function` bir yöntem bir değer döndürüyorsa deyimi kullanılır.
+> In Visual Basic, there are two ways to create a method: the `Sub` statement is used if the method does not return a value; the `Function` statement is used if a method returns a value.
 
-Bir sınıfın yöntemini tanımlamak için:
+To define a method of a class:
 
 ```vb
 Class SampleClass
@@ -137,9 +137,9 @@ Class SampleClass
 End Class
 ```
 
-Bir sınıfta çeşitli uygulamalar olabilir veya *aşırı*, parametre sayıları veya parametre türleri içinde farklı aynı yöntemin.
+A class can have several implementations, or *overloads*, of the same method that differ in the number of parameters or parameter types.
 
-Bir yöntemi aşırı yüklemek için:
+To overload a method:
 
 ```vb
 Overloads Sub Display(ByVal theChar As Char)
@@ -150,7 +150,7 @@ Overloads Sub Display(ByVal theInteger As Integer)
 End Sub
 ```
 
-Çoğu durumda, sınıf tanımında bir yöntem bildirin. Ancak, Visual Basic de destekler *genişletme yöntemleri* mevcut sınıfa sınıfın gerçek tanımı dışında yöntemler eklemenize olanak tanıyan.
+In most cases you declare a method within a class definition. However, Visual Basic also supports *extension methods* that allow you to add methods to an existing class outside the actual definition of the class.
 
 Daha fazla bilgi için bkz.:
 
@@ -161,9 +161,9 @@ Daha fazla bilgi için bkz.:
 
 #### <a name="constructors"></a>Oluşturucular
 
-Oluşturucular, belirli bir türde bir nesne oluşturulduğunda, otomatik olarak yürütülen sınıf yöntemleridir. Kurucular genellikle yeni nesnenin veri üyeleri başlatın. Sonra yalnızca bir sınıf oluşturulduğunda Oluşturucu çalıştırabilirsiniz. Ayrıca, Oluşturucudaki kod her zaman bir sınıftaki herhangi bir kod önce çalışır. Ancak, başka bir yöntem olduğu gibi birden çok oluşturucu aşırı yüklemeleri oluşturabilirsiniz.
+Constructors are class methods that are executed automatically when an object of a given type is created. Constructors usually initialize the data members of the new object. A constructor can run only once when a class is created. Furthermore, the code in the constructor always runs before any other code in a class. However, you can create multiple constructor overloads in the same way as for any other method.
 
-Bir sınıf için bir kurucu tanımlamak için:
+To define a constructor for a class:
 
 ```vb
 Class SampleClass
@@ -173,29 +173,29 @@ Class SampleClass
 End Class
 ```
 
-Daha fazla bilgi için bkz.: [Nesne ömrü: Nesneler nasıl oluşturulur ve imha](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+For more information, see: [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 #### <a name="destructors"></a>Yıkıcılar
 
-Yıkıcılar, sınıfların örneklerini yok etmek üzere kullanılır. .NET Framework, atık toplayıcı sağlanmasını ve ayrılmasını uygulamanızda yönetilen nesneler için bellek otomatik olarak yönetir. Ancak, Yıkıcılar uygulamanızın oluşturduğu herhangi yönetilmeyen kaynakları temizlemek için yine de gerekebilir. Bir sınıf için yalnızca bir yıkıcı olabilir.
+Destructors are used to destruct instances of classes. In the .NET Framework, the garbage collector automatically manages the allocation and release of memory for the managed objects in your application. However, you may still need destructors to clean up any unmanaged resources that your application creates. There can be only one destructor for a class.
 
-Yok ediciler ve çöp toplama .NET Framework'teki hakkında daha fazla bilgi için bkz: [çöp toplama](../../../standard/garbage-collection/index.md).
+For more information about destructors and garbage collection in the .NET Framework, see [Garbage Collection](../../../standard/garbage-collection/index.md).
 
 #### <a name="events"></a>Olaylar
 
-Bir sınıf olayları etkinleştirin veya nesneyi diğer sınıfları veya nesneleri ilgilendiğiniz bir şeyler olduğunda gerçekleşir. Olay gönderir (veya harekete geçiren) sınıf adlı *yayımcı* ve olay alma (veya tanıtıcı) sınıflar adlandırılan *aboneleri*. Olaylar hakkında daha fazla bilgi için nasıl oluştukları ve işlendikleri bkz [olayları](../../../standard/events/index.md).
+Events enable a class or object to notify other classes or objects when something of interest occurs. The class that sends (or raises) the event is called the *publisher* and the classes that receive (or handle) the event are called *subscribers*. For more information about events, how they are raised and handled, see [Events](../../../standard/events/index.md).
 
-- Olayları bildirmek için kullanın [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md).
+- To declare events, use the [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).
 
-- Olayları yükseltmek için kullanmak [RaiseEvent deyimi](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
+- To raise events, use the [RaiseEvent Statement](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
 
-- Bildirim temelli bir yöntemini kullanarak olay işleyicileri belirtmek için kullanın [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) deyimi ve [işleme](../../../visual-basic/language-reference/statements/handles-clause.md) yan tümcesi.
+- To specify event handlers using a declarative way, use the [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) statement and the [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) clause.
 
-- Dinamik olarak ekleme, kaldırma ve bir olay ile ilişkili olay işleyicisini değiştirme yapabilmek için kullanmak [AddHandler deyimi](../../../visual-basic/language-reference/statements/addhandler-statement.md) ve [RemoveHandler deyimi](../../../visual-basic/language-reference/statements/removehandler-statement.md) ile birlikte [AddressOf İşleç](../../../visual-basic/language-reference/operators/addressof-operator.md).
+- To be able to dynamically add, remove, and change the event handler associated with an event, use the [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md) and [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) together with the [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md).
 
-#### <a name="nested-classes"></a>İç içe geçmiş sınıflar
+#### <a name="nested-classes"></a>Nested classes
 
-Başka bir sınıfın içinde tanımlanan bir sınıfa *iç içe geçmiş*. Varsayılan olarak, iç içe geçmiş özel sınıftır.
+A class defined within another class is called *nested*. By default, the nested class is private.
 
 ```vb
 Class Container
@@ -205,37 +205,37 @@ Class Container
 End Class
 ```
 
-İç içe geçmiş sınıfının bir örneğini oluşturmak için kapsayıcı sınıfının arkasına bir nokta koyun ve sonra ardından iç içe geçmiş sınıf adı adını kullanın:
+To create an instance of the nested class, use the name of the container class followed by the dot and then followed by the name of the nested class:
 
 ```vb
 Dim nestedInstance As Container.Nested = New Container.Nested()
 ```
 
-### <a name="access-modifiers-and-access-levels"></a>Erişim değiştiricileri ve erişim düzeyleri
+### <a name="access-modifiers-and-access-levels"></a>Access modifiers and access levels
 
-Tüm sınıflar ve sınıf üyeleri sağlamaları için diğer sınıflar kullanılarak hangi erişim düzeyini belirtebilirsiniz *erişim değiştiricilerine*.
+All classes and class members can specify what access level they provide to other classes by using *access modifiers*.
 
-Aşağıdaki erişim değiştiriciler kullanılabilir:
+The following access modifiers are available:
 
-|Visual Basic değiştiricisi|Tanım|
+|Visual Basic Modifier|Tanım|
 |---------------------------|----------------|
-|[Public](../../../visual-basic/language-reference/modifiers/public.md)|Türe veya üyeye aynı derlemenin veya ona başvuran başka bir derleme içindeki diğer kodlardan tarafından erişilebilir.|
-|[Private](../../../visual-basic/language-reference/modifiers/private.md)|Türe veya üyeye aynı sınıftaki kod tarafından yalnızca erişilebilir.|
-|[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|Türe veya üyeye aynı sınıftaki veya türetilmiş bir sınıf içinde kod tarafından yalnızca erişilebilir.|
-|[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|Türe veya üyeye aynı derlemedeki ancak farklı derlemeyle herhangi bir kod tarafından erişilebilir.|
-|`Protected Friend`|Türe veya üyeye aynı derlemedeki kod ile veya başka bir derlemedeki türetilmiş sınıfla erişilebilir.|
+|[Public](../../../visual-basic/language-reference/modifiers/public.md)|The type or member can be accessed by any other code in the same assembly or another assembly that references it.|
+|[Private](../../../visual-basic/language-reference/modifiers/private.md)|The type or member can only be accessed by code in the same class.|
+|[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|The type or member can only be accessed by code in the same class or in a derived class.|
+|[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|The type or member can be accessed by any code in the same assembly, but not from another assembly.|
+|`Protected Friend`|The type or member can be accessed by any code in the same assembly, or by any derived class in another assembly.|
 
-Daha fazla bilgi için [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-### <a name="instantiating-classes"></a>Sınıf oluşturma
+### <a name="instantiating-classes"></a>Instantiating classes
 
-Bir nesne oluşturmak için bir sınıf örneği başlatmanız veya sınıf örneği oluşturmanız gerekir.
+To create an object, you need to instantiate a class, or create a class instance.
 
 ```vb
 Dim sampleObject as New SampleClass()
 ```
 
-Bir sınıf başlatıldıktan sonra Örneğin özelliklerine ve alanlarına değerler atayın ve sınıf yöntemini çağırabilirsiniz.
+After instantiating a class, you can assign values to the instance's properties and fields and invoke class methods.
 
 ```vb
 ' Set a property value.
@@ -244,7 +244,7 @@ sampleObject.SampleProperty = "Sample String"
 sampleObject.SampleMethod()
 ```
 
-Sınıf örnekleme işlemi sırasında özellikleri değerleri atamak için nesne başlatıcıları kullanın:
+To assign values to properties during the class instantiation process, use object initializers:
 
 ```vb
 Dim sampleObject = New SampleClass With
@@ -254,13 +254,13 @@ Dim sampleObject = New SampleClass With
 Daha fazla bilgi için bkz.:
 
 - [New İşleci](../../../visual-basic/language-reference/operators/new-operator.md)
-- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-### <a name="shared-classes-and-members"></a>Paylaşılan sınıflar ve Üyeler
+### <a name="shared-classes-and-members"></a>Shared classes and members
 
- Paylaşılan bir sınıfın üyesi bir özellik, yordam veya bir sınıfın tüm örnekleri tarafından paylaşıldığını alan var.
+ A shared member of the class is a property, procedure, or field that is shared by all instances of a class.
 
- Paylaşılan bir üye tanımlamak için:
+ To define a shared member:
 
 ```vb
 Class SampleClass
@@ -268,24 +268,24 @@ Class SampleClass
 End Class
 ```
 
- Paylaşılan üyeye erişmek için sınıfın adını, bu sınıfın bir nesnesi oluşturmadan kullanın:
+ To access the shared member, use the name of the class without creating an object of this class:
 
 ```vb
 MsgBox(SampleClass.SampleString)
 ```
 
- Visual Basic'te paylaşılan modülleri, üyeleri yalnızca paylaşılan ve örnekleri oluşturulamaz. Paylaşılan üyeleri ayrıca paylaşılmayan özellikleri, alanlara veya yöntemlere erişemez
+ Shared modules in Visual Basic have shared members only and cannot be instantiated. Shared members also cannot access non-shared properties, fields or methods
 
  Daha fazla bilgi için bkz.:
 
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)
 
-### <a name="anonymous-types"></a>Anonim türler
+### <a name="anonymous-types"></a>Anonymous types
 
-Anonim türler nesne veri türü için bir sınıf tanımı yazmaya gerek kalmadan oluşturmanıza olanak sağlar. Bunun yerine, derleyici bir sınıf sizin için oluşturur. Sınıfın kullanılabilir adı yok ve nesneyi bildirirken belirttiğiniz özellikleri içeriyor.
+Anonymous types enable you to create objects without writing a class definition for the data type. Instead, the compiler generates a class for you. The class has no usable name and contains the properties you specify in declaring the object.
 
-Anonim bir türün bir örneğini oluşturmak için:
+To create an instance of an anonymous type:
 
 ```vb
 ' sampleObject is an instance of a simple anonymous type.
@@ -293,16 +293,16 @@ Dim sampleObject =
     New With {Key .FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-Daha fazla bilgi için bkz.: [Anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+For more information, see: [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
 ## <a name="inheritance"></a>Devralma
 
-Devralma, başka bir sınıfta tanımlanan davranışı değiştirir kullanır ve genişleten yeni bir sınıf oluşturmanıza olanak sağlar. Üyeleri devralınan sınıf *temel sınıfı*, ve bu üyeleri devralan sınıf *türetilmiş sınıf*. Ancak, Visual Basic'te tüm sınıflar örtük olarak devralınacak <xref:System.Object> .NET sınıf hiyerarşisini destekleyen ve tüm sınıflara alt düzey hizmetler sağlayan sınıf.
+Inheritance enables you to create a new class that reuses, extends, and modifies the behavior that is defined in another class. The class whose members are inherited is called the *base class*, and the class that inherits those members is called the *derived class*. However, all classes in Visual Basic implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.
 
 > [!NOTE]
-> Visual Basic, birden çok devralmayı desteklemez. Diğer bir deyişle, türetilmiş bir sınıf için yalnızca bir temel sınıf belirtebilirsiniz.
+> Visual Basic doesn't support multiple inheritance. That is, you can specify only one base class for a derived class.
 
-Temel sınıfından devralmak için:
+To inherit from a base class:
 
 ```vb
 Class DerivedClass
@@ -310,16 +310,16 @@ Class DerivedClass
 End Class
 ```
 
-Varsayılan olarak, tüm sınıflar devralınabilir. Ancak, bir sınıfın temel sınıf olarak kullanılmamalıdır veya yalnızca temel sınıf olarak kullanılan bir sınıf oluşturmak olup olmadığını belirtebilirsiniz.
+By default all classes can be inherited. However, you can specify whether a class must not be used as a base class, or create a class that can be used as a base class only.
 
-Bir sınıfın temel sınıf olarak kullanılamayacağını belirtmek için:
+To specify that a class cannot be used as a base class:
 
 ```vb
 NotInheritable Class SampleClass
 End Class
 ```
 
-Bir sınıf yalnızca temel sınıf olarak kullanılabilecek ve başlatılamayacak belirtmek için:
+To specify that a class can be used as a base class only and cannot be instantiated:
 
 ```vb
 MustInherit Class BaseClass
@@ -332,25 +332,25 @@ Daha fazla bilgi için bkz.:
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 
-### <a name="overriding-members"></a>Üyeleri geçersiz kılma
+### <a name="overriding-members"></a>Overriding members
 
-Varsayılan olarak, türetilmiş bir sınıf tüm üyelerini kendi temel sınıfından devralır. Devralınan üye davranışını değiştirmek istiyorsanız, onu geçersiz kılmanız gerekir. Diğer bir deyişle, türetilmiş bir sınıf içindeki yöntemin, özelliğin veya olayın yeni bir uygulamasını tanımlayabilirsiniz.
+By default, a derived class inherits all members from its base class. If you want to change the behavior of the inherited member, you need to override it. That is, you can define a new implementation of the method, property or event in the derived class.
 
-Özellikleri ve yöntemleri nasıl geçersiz kılınacağını denetlemek için aşağıdaki değiştiriciler kullanılır:
+The following modifiers are used to control how properties and methods are overridden:
 
-|Visual Basic değiştiricisi|Tanım|
+|Visual Basic Modifier|Tanım|
 |---------------------------|----------------|
-|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|Bir sınıf üyesinin türetilmiş bir sınıfta geçersiz kılınmasına izin verir.|
-|[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|Temel sınıfta tanımlanan sanal bir (geçersiz kılınabilir) üyeyi geçersiz kılar.|
-|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|Üye devralınan bir sınıfta kılınmasını önler.|
-|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|Gerektiren bir sınıf üyesinin derlenen sınıfta geçersiz kılınacak.|
-|[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|Bir temel sınıftan devralınan üyeyi gizler|
+|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|Allows a class member to be overridden in a derived class.|
+|[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|Overrides a virtual (overridable) member defined in the base class.|
+|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|Prevents a member from being overridden in an inheriting class.|
+|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|Requires that a class member to be overridden in the derived class.|
+|[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|Hides a member inherited from a base class|
 
 ## <a name="interfaces"></a>Arabirimler
 
-Sınıflar gibi arabirimler, özellikleri, yöntemleri ve olayları kümesi tanımlarsınız. Ancak, sınıflardan farklı olarak, arabirimler uygulama sağlamaz. Bunlar sınıfları tarafından uygulanır ve sınıflardan ayrı varlıklar olarak tanımlanır. Tam olarak tanımlandığı şekilde bir arabirimi uygulayan bir sınıf, o arabirimi her yönüyle uygulamalıdır bir arabirim bir sözleşmeyi temsil eder.
+Interfaces, like classes, define a set of properties, methods, and events. But unlike classes, interfaces do not provide implementation. They are implemented by classes, and defined as separate entities from classes. An interface represents a contract, in that a class that implements an interface must implement every aspect of that interface exactly as it is defined.
 
-Arabirim tanımlamak için:
+To define an interface:
 
 ```vb
 Public Interface ISampleInterface
@@ -358,7 +358,7 @@ Public Interface ISampleInterface
 End Interface
 ```
 
-Bir sınıf içinde arabirim uygulamak için:
+To implement an interface in a class:
 
 ```vb
 Class SampleClass
@@ -377,9 +377,9 @@ Daha fazla bilgi için bkz.:
 
 ## <a name="generics"></a>Genel Türler
 
-Sınıflar, yapılar, arabirimler ve yöntemler .NET içerebilir *tür parametrelerindeki* bunlar depolayabildikleri veya kullanabildikleri nesnelerin türlerini tanımlayan. Genel türlerin yararları en yaygın örnek, bir koleksiyonda depolanacak nesnelerin türünü belirleyebileceğiniz koleksiyonudur.
+Classes, structures, interfaces and methods in .NET can include *type parameters* that define types of objects that they can store or use. The most common example of generics is a collection, where you can specify the type of objects to be stored in a collection.
 
-Genel bir sınıf tanımlamak için:
+To define a generic class:
 
 ```vb
 Class SampleGeneric(Of T)
@@ -387,7 +387,7 @@ Class SampleGeneric(Of T)
 End Class
 ```
 
-Bir genel sınıfın bir örneğini oluşturmak için:
+To create an instance of a generic class:
 
 ```vb
 Dim sampleObject As New SampleGeneric(Of String)
@@ -397,22 +397,22 @@ sampleObject.Field = "Sample string"
 Daha fazla bilgi için bkz.:
 
 - [Genel Türler](../../../standard/generics/index.md)
-- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 
 ## <a name="delegates"></a>Temsilciler
 
- A *temsilci* , yöntem imzasını tanımlayan bir türdür ve uyumlu bir imza ile herhangi bir yönteme başvuru sağlayabilir. Çağırma (çağrı yöntemi temsilci aracılığıyla veya). Temsilciler, yöntemleri bağımsız değişkenler olarak diğer yöntemlere geçirmek için kullanılır.
+ A *delegate* is a type that defines a method signature, and can provide a reference to any method with a compatible signature. You can invoke (or call) the method through the delegate. Temsilciler, yöntemleri bağımsız değişkenler olarak diğer yöntemlere geçirmek için kullanılır.
 
 > [!NOTE]
-> Olay işleyicileri, temsilciler aracılığıyla çağrılan yöntemlerden başka bir şey değildir. Temsilcileri olay işlemede kullanma hakkında daha fazla bilgi için bkz. [olayları](../../../standard/events/index.md).
+> Olay işleyicileri, temsilciler aracılığıyla çağrılan yöntemlerden başka bir şey değildir. For more information about using delegates in event handling, see [Events](../../../standard/events/index.md).
 
-Temsilci oluşturmak için:
+To create a delegate:
 
 ```vb
 Delegate Sub SampleDelegate(ByVal str As String)
 ```
 
-Temsilci tarafından belirtilen imzayla eşleşen bir yönteme başvuru oluşturmak için:
+To create a reference to a method that matches the signature specified by the delegate:
 
 ```vb
 Class SampleClass
@@ -436,4 +436,4 @@ Daha fazla bilgi için bkz.:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic programlama kılavuzu](../../../visual-basic/programming-guide/index.md)
+- [Visual Basic Programming Guide](../../../visual-basic/programming-guide/index.md)

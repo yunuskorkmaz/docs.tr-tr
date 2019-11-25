@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Dosyalara metin yazma Visual Basic'te Belgelerim dizini"
+title: 'Nasıl Yapılır: Belgelerim Dizinindeki Dosyalara Metin Yazma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
@@ -7,41 +7,46 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 - writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
-ms.openlocfilehash: 4f9eb4c9e0eb92712b5ea1a4feef24f2bb95d70b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc62f2bc63a2ea185b8ea4c8d271dd28d347d6f0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772573"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334519"
 ---
-# <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Nasıl yapılır: Dosyalara metin yazma Visual Basic'te Belgelerim dizini
-`My.Computer.FileSystem.SpecialDirectories` Nesnesinin özel dizinleri gibi erişmenizi sağlar **MyDocuments** dizin.  
+# <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Belgelerim Dizinindeki Dosyalara Metin Yazma
+
+The `My.Computer.FileSystem.SpecialDirectories` object allows you to access special directories, such as the **MyDocuments** directory.  
   
 ## <a name="procedure"></a>Yordam  
   
-#### <a name="to-write-new-text-files-in-the-my-documents-directory"></a>Belgelerim dizini içinde yeni metin dosyaları yazma  
+#### <a name="to-write-new-text-files-in-the-my-documents-directory"></a>To write new text files in the My Documents directory  
   
-1. Kullanım `My.Computer.FileSystem.SpecialDirectories.MyDocuments` yolunu sağlamak için özellik.  
+1. Use the `My.Computer.FileSystem.SpecialDirectories.MyDocuments` property to supply the path.  
   
      [!code-vb[VbFileIOWrite#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#1)]  
   
-2. Kullanım `WriteAllText` metni belirtilen dosyaya yazmak için yöntemi.  
+2. Use the `WriteAllText` method to write text to the specified file.  
   
      [!code-vb[VbVbcnMyFileSystem#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Örnek  
+
  [!code-vb[VbFileIOWrite#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#2)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Değiştirin `test.txt` yazmak istediğiniz dosyanın adı.  
+
+ Replace `test.txt` with the name of the file you want to write to.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Bu kod, metin dosyasına yazma sırasında oluşabilecek tüm özel durumları yeniden oluşturur. Windows Forms denetimlerini kullanarak özel durumları olasılığını azaltabilirsiniz [OpenFileDialog](../../../../framework/winforms/controls/openfiledialog-component-windows-forms.md) ve [SaveFileDialog](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md) geçerli dosya adları için kullanıcı seçenekler sınırlandıran bileşenleri. Bu denetimleri kullanarak ancak kusursuz, değildir. Dosya sistemi, bir dosya kullanıcının seçtiği zaman ve kodu yürüten saat arasında değiştirebilirsiniz. Özel durum işleme Bu nedenle neredeyse her zaman dosyalarıyla çalışma ile gereklidir.  
+
+ This code rethrows all the exceptions that may occur when writing text to the file. You can reduce the likelihood of exceptions by using Windows Forms controls such as the [OpenFileDialog](../../../../framework/winforms/controls/openfiledialog-component-windows-forms.md) and the [SaveFileDialog](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md) components that limit the user choices to valid file names. Using these controls is not foolproof, however. The file system can change between the time the user selects a file and the time that the code executes. Exception handling is therefore nearly always necessary when with working with files.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Kısmi güven bağlamda çalıştırıyorsanız, kod bir özel durum yetersiz ayrıcalıklar nedeniyle fırlatabilir. Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../../../framework/misc/code-access-security-basics.md).  
+
+ If you are running in a partial-trust context, the code might throw an exception due to insufficient privileges. For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md).  
   
- Bu örnek, yeni bir dosya oluşturur. Bir uygulama bir dosya oluşturması gerekiyorsa, bu uygulama için klasör oluşturma izniniz gerekiyor. İzinler, erişim denetim listeleri kullanılarak ayarlanır. Dosya zaten varsa, uygulamanın yalnızca yazma izni, daha az ayrıcalıkla gerekir. Mümkün olan yerlerde, dosyayı dağıtım sırasında oluşturmak ve yalnızca tek bir dosyayı okuma ayrıcalıkları vermek yerine bir klasör oluşturma ayrıcalıkları vermek için daha güvenli olması. Ayrıca, verileri kullanıcı klasörleri kök klasörüne yazmak için daha güvenli olması veya **Program dosyaları** klasör. Daha fazla bilgi için [ACL teknolojisine genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100)).  
+ This example creates a new file. If an application needs to create a file, that application needs Create permission for the folder. Permissions are set using access control lists. If the file already exists, the application needs only Write permission, a lesser privilege. Where possible, it is more secure to create the file during deployment, and only grant Read privileges to a single file, rather than to grant Create privileges for a folder. Also, it is more secure to write data to user folders than to the root folder or the **Program Files** folder. For more information, see [ACL Technology Overview](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

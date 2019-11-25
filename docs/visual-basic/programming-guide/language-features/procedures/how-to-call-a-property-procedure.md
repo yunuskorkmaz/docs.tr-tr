@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) bir özellik yordamı çağırma'
+title: 'Nasıl yapılır: Bir Özellik Yordamı Çağırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -8,60 +8,60 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: d05c1b63f5567ade9935f80ecc022eb4840e0af0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52e6c62ffb81c480ccc1abf06f04eb780218dbf1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864370"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340550"
 ---
-# <a name="how-to-call-a-property-procedure-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir özellik yordamı çağırma
-Özelliğin değeri depolamak veya değeri alınırken bir özellik yordamı çağırma. Bir özelliği bir değişkene erişme gibi erişebilirsiniz.  
+# <a name="how-to-call-a-property-procedure-visual-basic"></a>Nasıl yapılır: Bir Özellik Yordamı Çağırma (Visual Basic)
+You call a property procedure by storing a value in the property or retrieving its value. You access a property the same way you access a variable.  
   
- Özelliğin `Set` yordamı bir değer depolar ve kendi `Get` yordamı değeri alır. Ancak, açıkça bu yordamları adıyla çağırmayın. Yalnızca siz depolamak veya bir değişkenin değerini almak bir atama ifadesi veya bir ifade özelliği kullanın. Visual Basic özelliğin yordamları çağrılar yapar.  
+ The property's `Set` procedure stores a value, and its `Get` procedure retrieves the value. However, you do not explicitly call these procedures by name. You use the property in an assignment statement or an expression, just as you would store or retrieve the value of a variable. Visual Basic makes the calls to the property's procedures.  
   
-### <a name="to-call-a-propertys-get-procedure"></a>Özellik Get yordamı çağırmak için  
+### <a name="to-call-a-propertys-get-procedure"></a>To call a property's Get procedure  
   
-1. Özellik adı bir ifade bir değişken adı kullanacağınız aynı şekilde kullanın. Bir özellik kullanabileceğiniz bir değişken veya sabit her yerde kullanabilirsiniz.  
+1. Use the property name in an expression the same way you would use a variable name. You can use a property anywhere you can use a variable or a constant.  
   
-     -veya-  
+     veya  
   
-     Eşit aşağıdaki özellik adını kullanın (`=`) bir atama ifadesinde oturum açın.  
+     Use the property name following the equal (`=`) sign in an assignment statement.  
   
-     Aşağıdaki örnek değerini okur <xref:Microsoft.VisualBasic.DateAndTime.Now%2A> örtük olarak arama özelliğini kendi `Get` yordamı.  
+     The following example reads the value of the <xref:Microsoft.VisualBasic.DateAndTime.Now%2A> property, implicitly calling its `Get` procedure.  
   
      [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
-2. Özellik bağımsız değişkeni alır, parantez içine bağımsız değişken listesi için özellik adıyla izleyin. Hiçbir bağımsız değişken varsa, isteğe bağlı olarak ayraçları atlayabilirsiniz.  
+2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
   
-3. Bağımsız değişken listesi parantezlerinin virgülle ayırarak yerleştirin. Bağımsız değişkenler özelliği karşılık gelen parametreleri tanımlar aynı sırada sağladığınız emin olun.  
+3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
   
- İfade bir değişken gibi bir özelliğin değerini katıldığı sabiti misiniz veya değişken veya özellik atama ifadesi sol tarafında depolanır.  
+ The value of the property participates in the expression just as a variable or constant would, or it is stored in the variable or property on the left side of the assignment statement.  
   
-### <a name="to-call-a-propertys-set-procedure"></a>Bir özellik çağırmak için yordam kümesinde  
+### <a name="to-call-a-propertys-set-procedure"></a>To call a property's Set procedure  
   
-1. Özellik adı, atama deyiminin sol tarafında kullanın.  
+1. Use the property name on the left side of an assignment statement.  
   
-     Aşağıdaki örnekte ayarlar <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> özelliği, örtük olarak çağırma `Set` yordamı.  
+     The following example sets the value of the <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> property, implicitly calling the `Set` procedure.  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
-2. Özellik bağımsız değişkeni alır, parantez içine bağımsız değişken listesi için özellik adıyla izleyin. Hiçbir bağımsız değişken varsa, isteğe bağlı olarak ayraçları atlayabilirsiniz.  
+2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
   
-3. Bağımsız değişken listesi parantezlerinin virgülle ayırarak yerleştirin. Bağımsız değişkenler özelliği karşılık gelen parametreleri tanımlar aynı sırada sağladığınız emin olun.  
+3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
   
- Atama ifadesi sağ tarafında oluşturulan değeri özelliğinde depolanır.  
+ The value generated on the right side of the assignment statement is stored in the property.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Özellik Yordamları](./property-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Visual Basic'de özellikler ile değişkenler arasındaki farklar](./differences-between-properties-and-variables.md)
-- [Nasıl yapılır: Özellik oluşturma](./how-to-create-a-property.md)
-- [Nasıl yapılır: Bir özelliği karışık erişim düzeyleriyle bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Nasıl yapılır: Bildirme ve Visual Basic'te bir varsayılan özelliğini çağırın](./how-to-declare-and-call-a-default-property.md)
-- [Nasıl yapılır: Bir özelliğe değer ekleme](./how-to-put-a-value-in-a-property.md)
-- [Nasıl yapılır: Bir özellikten değer alma](./how-to-get-a-value-from-a-property.md)
+- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Nasıl yapılır: Özellik Oluşturma](./how-to-create-a-property.md)
+- [Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Nasıl yapılır: Bir Özelliğe Değer Ekleme](./how-to-put-a-value-in-a-property.md)
+- [Nasıl yapılır: Bir Özellikten Değer Alma](./how-to-get-a-value-from-a-property.md)
 - [Get Deyimi](../../../../visual-basic/language-reference/statements/get-statement.md)
 - [Set Deyimi](../../../../visual-basic/language-reference/statements/set-statement.md)

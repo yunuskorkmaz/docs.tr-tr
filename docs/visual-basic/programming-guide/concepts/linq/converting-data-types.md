@@ -1,46 +1,46 @@
 ---
-title: Veri türlerini dönüştürme (Visual Basic)
+title: Veri Türlerini Dönüştürme
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-ms.openlocfilehash: 744dec0093384a15470186fc09695c17e79468fa
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 25d21954f0bb7555f1f5666f83fb37f4f73e2a60
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524235"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354254"
 ---
-# <a name="converting-data-types-visual-basic"></a>Veri türlerini dönüştürme (Visual Basic)
+# <a name="converting-data-types-visual-basic"></a>Converting Data Types (Visual Basic)
 
-Dönüştürme yöntemleri giriş nesnelerinin türünü değiştirir.
+Conversion methods change the type of input objects.
 
- LINQ sorgularındaki dönüştürme işlemleri çeşitli uygulamalarda yararlıdır. Aşağıda bazı örnekler verilmiştir:
+ Conversion operations in LINQ queries are useful in a variety of applications. The following are some examples:
 
-- @No__t_0 yöntemi, bir türün standart sorgu işlecinin özel uygulamasını gizlemek için kullanılabilir.
+- The <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> method can be used to hide a type's custom implementation of a standard query operator.
 
-- @No__t_0 yöntemi, LINQ sorgulaması için parametreli olmayan koleksiyonları etkinleştirmek üzere kullanılabilir.
+- The <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> method can be used to enable non-parameterized collections for LINQ querying.
 
-- @No__t_0, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> ve <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> yöntemleri, sorgu numaralandırılana kadar, sorgu yürütmeye zorlamak yerine hemen bu işlemi yapmak için kullanılabilir.
+- The <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>, and <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> methods can be used to force immediate query execution instead of deferring it until the query is enumerated.
 
 ## <a name="methods"></a>Yöntemler
 
-Aşağıdaki tabloda, veri türü dönüştürmeleri gerçekleştiren standart sorgu işleci yöntemleri listelenmektedir.
+The following table lists the standard query operator methods that perform data-type conversions.
 
-Bu tablodaki, adları "as" ile başlayan dönüştürme yöntemleri, kaynak koleksiyonun statik türünü değiştirir ancak onu numaralandırmaz. Adları "to" ile başlayan Yöntemler, kaynak koleksiyonu numaralandırır ve öğeleri karşılık gelen koleksiyon türüne koyar.
+The conversion methods in this table whose names start with "As" change the static type of the source collection but do not enumerate it. The methods whose names start with "To" enumerate the source collection and put the items into the corresponding collection type.
 
-|Yöntem adı|Açıklama|Sorgu Ifadesi söz dizimini Visual Basic|Daha fazla bilgi|
+|Method Name|Açıklama|Visual Basic Query Expression Syntax|Daha fazla bilgi|
 |-----------------|-----------------|------------------------------------------|----------------------|
-|Asılabilir|@No__t_0 olarak yazılan girişi döndürür.|Yok.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
-|AsQueryable|Bir (genel) <xref:System.Collections.IEnumerable> bir (genel) <xref:System.Linq.IQueryable> dönüştürür.|Yok.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
-|Cast|Bir koleksiyonun öğelerini belirtilen bir türe yayınlar.|`From … As …`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|
-|OfType|Değerleri, belirli bir türe atama becerisine bağlı olarak filtreler.|Yok.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
-|ToArray|Bir koleksiyonu bir diziye dönüştürür. Bu yöntem sorgu yürütmeyi zorlar.|Yok.|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|
-|ToDictionary|Öğeleri bir anahtar Seçici işlevine göre <xref:System.Collections.Generic.Dictionary%602> koyar. Bu yöntem sorgu yürütmeyi zorlar.|Yok.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|
-|ToList|Bir koleksiyonu bir <xref:System.Collections.Generic.List%601> dönüştürür. Bu yöntem sorgu yürütmeyi zorlar.|Yok.|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|
-|ToLookup|Öğeleri bir anahtar Seçici işlevine göre bir <xref:System.Linq.Lookup%602> (bire çok sözlüğüne) koyar. Bu yöntem sorgu yürütmeyi zorlar.|Yok.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|
+|AsEnumerable|Returns the input typed as <xref:System.Collections.Generic.IEnumerable%601>.|Yok.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
+|AsQueryable|Converts a (generic) <xref:System.Collections.IEnumerable> to a (generic) <xref:System.Linq.IQueryable>.|Yok.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
+|Cast|Casts the elements of a collection to a specified type.|`From … As …`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|
+|OfType|Filters values, depending on their ability to be cast to a specified type.|Yok.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
+|ToArray|Converts a collection to an array. This method forces query execution.|Yok.|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|
+|ToDictionary|Puts elements into a <xref:System.Collections.Generic.Dictionary%602> based on a key selector function. This method forces query execution.|Yok.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|
+|ToList|Converts a collection to a <xref:System.Collections.Generic.List%601>. This method forces query execution.|Yok.|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|
+|ToLookup|Puts elements into a <xref:System.Linq.Lookup%602> (a one-to-many dictionary) based on a key selector function. This method forces query execution.|Yok.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|
 
-## <a name="query-expression-syntax-example"></a>Sorgu Ifadesi söz dizimi örneği
+## <a name="query-expression-syntax-example"></a>Query Expression Syntax Example
 
-Aşağıdaki kod örneği, yalnızca alt tür üzerinde kullanılabilir olan bir üyeye erişmeden önce bir türü bir alt türe dönüştürmek için `From As` yan tümcesini kullanır.
+The following code example uses the `From As` clause to cast a type to a subtype before accessing a member that is available only on the subtype.
 
 ```vb
 Class Plant
@@ -83,6 +83,6 @@ End Sub
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq>
-- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [From Yan Tümcesi](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [Nasıl yapılır: LINQ ile ArrayList 'i sorgulama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [How to: Query an ArrayList with LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Visual Basic 'de kullanılabilir seri bağlantı noktalarını göster"
+title: 'Nasıl Yapılır: Kullanılabilir Seri Bağlantı Noktalarını Gösterme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports, availability
@@ -7,45 +7,49 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-ms.openlocfilehash: e8e0f6d63f7135c3bbe24ee6426cd714f2eb275f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c7e5f797c1d098a3b2d01745b949ed50375ea7e8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956918"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345569"
 ---
-# <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Nasıl yapılır: Visual Basic 'de kullanılabilir seri bağlantı noktalarını göster
-Bu konuda, Visual Basic ' de `My.Computer.Ports` bilgisayarın kullanılabilir seri bağlantı noktalarını göstermek için nasıl kullanılacağı açıklanmaktadır.  
+# <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kullanılabilecek Seri Bağlantı Noktalarını Gösterme
+
+This topic describes how to use `My.Computer.Ports` to show the available serial ports of the computer in Visual Basic.  
   
- Bir kullanıcının kullanılacak bağlantı noktasını seçmesine izin vermek için seri bağlantı noktalarının adları bir <xref:System.Windows.Forms.ListBox> denetime yerleştirilir.  
+ To allow a user to select which port to use, the names of the serial ports are placed in a <xref:System.Windows.Forms.ListBox> control.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `My.Computer.Ports.SerialPortNames` özelliğin döndürdüğü tüm dizelerin üzerinde döngüye geçer. Bu dizeler bilgisayardaki kullanılabilir seri bağlantı noktalarının adlarıdır.  
+
+ This example loops over all the strings that the `My.Computer.Ports.SerialPortNames` property returns. These strings are the names of the available serial ports on the computer.  
   
- Genellikle, bir kullanıcı uygulamanın kullanılabilir bağlantı noktaları listesinden kullanması gereken seri bağlantı noktasını seçer. Bu örnekte, seri bağlantı noktası adları bir <xref:System.Windows.Forms.ListBox> denetimde depolanır. Daha fazla bilgi için bkz. [ListBox Control](../../../../framework/winforms/controls/listbox-control-windows-forms.md).  
+ Typically, a user selects which serial port the application should use from the list of available ports. In this example, the serial port names are stored in a <xref:System.Windows.Forms.ListBox> control. For more information, see [ListBox Control](../../../../framework/winforms/controls/listbox-control-windows-forms.md).  
   
  [!code-vb[VbVbalrMyComputer#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#45)]  
   
- Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide, **bağlantı ve ağ**bölümünde bulunur. Daha fazla bilgi için [kod parçacıkları](/visualstudio/ide/code-snippets).  
+ This code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Connectivity and Networking**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek şunları gerektirir:  
+
+ This example requires:  
   
-- System. Windows. Forms. dll ' ye bir proje başvurusu.  
+- A project reference to System.Windows.Forms.dll.  
   
-- <xref:System.Windows.Forms> Ad alanının üyelerine erişin. Kodunuzda üye `Imports` adlarını tam olarak nitedıysanız bir ifade ekleyin. Daha fazla bilgi için bkz. [Imports açıklaması (.net ad alanı ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Access to the members of the <xref:System.Windows.Forms> namespace. Add an `Imports` statement if you are not fully qualifying member names in your code. For more information, see [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
-- Formunuzda adlı <xref:System.Windows.Forms.ListBox> `ListBox1`bir denetim vardır.  
+- That your form have a <xref:System.Windows.Forms.ListBox> control named `ListBox1`.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Kullanılabilir seri bağlantı noktası adlarını göstermek için <xref:System.Windows.Forms.ListBox> denetimi kullanmak zorunda değilsiniz. Bunun yerine, bir veya başka <xref:System.Windows.Forms.ComboBox> bir denetim kullanabilirsiniz. Uygulamanın kullanıcıdan bir yanıt ihtiyacı yoksa, bilgileri göstermek için bir <xref:System.Windows.Forms.TextBox> denetim kullanabilirsiniz.  
+
+ You do not have to use the <xref:System.Windows.Forms.ListBox> control to display the available serial port names. Instead, you can use a <xref:System.Windows.Forms.ComboBox> or other control. If the application does not need a response from the user, you can use a <xref:System.Windows.Forms.TextBox> control to display the information.  
   
 > [!NOTE]
-> Tarafından `My.Computer.Ports.SerialPortNames` döndürülen bağlantı noktası adları, Windows 98 üzerinde çalıştırıldığında yanlış olabilir. Uygulama hatalarını engellemek için, bağlantı noktalarını açmak üzere bağlantı noktası adlarını `Try...Catch...Finally` kullanırken, bildirim `Using` veya bildirim gibi özel durum işleme kullanın.  
+> The port names returned by `My.Computer.Ports.SerialPortNames` may be incorrect when run on Windows 98. To prevent application errors, use exception handling, such as the `Try...Catch...Finally` statement or the `Using` statement, when using the port names to open ports.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
-- [Nasıl yapılır: Seri bağlantı noktalarına bağlı modemleri ara](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
-- [Nasıl yapılır: Dizeleri seri bağlantı noktalarına gönder](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
-- [Nasıl yapılır: Seri bağlantı noktalarından dize alma](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
+- [Nasıl Yapılır: Seri Bağlantı Noktalarına Ekli Modemleri Çevirme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
+- [Nasıl Yapılır: Seri Bağlantı Noktalarına Dizeler Gönderme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
+- [Nasıl Yapılır: Seri Bağlantı Noktalarından Dize Alma](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)

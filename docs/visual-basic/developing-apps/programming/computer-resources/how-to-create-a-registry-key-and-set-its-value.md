@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Visual Basic bir kayıt defteri anahtarı oluşturma ve değerini ayarlama'
+title: 'Nasıl Yapılır: Kayıt Defteri Anahtarı Oluşturma ve Değerini Ayarlama'
 ms.date: 07/20/2015
 f1_keywords:
 - RegistryKey.CreateSubKey
@@ -11,68 +11,68 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 84fc824ad5911621c679d70f480d9b5e83c095ad
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 459c4b3f971009ee4b6b669c55bc058db0826595
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054126"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349195"
 ---
-# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Nasıl yapılır: Visual Basic bir kayıt defteri anahtarı oluşturma ve değerini ayarlama
+# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kayıt Defteri Anahtarı Oluşturma ve Değerini Ayarlama
 
-`My.Computer.Registry` Nesnesinin yöntemi bir kayıt defteri anahtarı oluşturmak için kullanılabilir. `CreateSubKey`
+The `CreateSubKey` method of the `My.Computer.Registry` object can be used to create a registry key.
 
 ## <a name="procedure"></a>Yordam
 
-### <a name="to-create-a-registry-key"></a>Kayıt defteri anahtarı oluşturmak için
+### <a name="to-create-a-registry-key"></a>To create a registry key
 
-- Anahtar adının yanı sıra anahtarın altına hangi Hive yerleştirileceğini belirterek yönteminikullanın.`CreateSubKey` Parametre `Subkey` , büyük/küçük harfe duyarlı değildir. Bu örnek, HKEY_CURRENT_USER altında kayıt `MyTestKey` defteri anahtarı oluşturur.
-
-    [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]
-
-### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>Bir kayıt defteri anahtarı oluşturmak ve içinde bir değer ayarlamak için
-
-1. Anahtar adının yanı sıra anahtarın altına hangi Hive yerleştirileceğini belirterek yönteminikullanın.`CreateSubkey` Bu örnek, HKEY_CURRENT_USER altında kayıt `MyTestKey` defteri anahtarı oluşturur.
+- Use the `CreateSubKey` method, specifying which hive to place the key under as well as the name of the key. The parameter `Subkey` is not case-sensitive. This example creates the registry key `MyTestKey` under HKEY_CURRENT_USER.
 
     [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]
 
-2. Değerini `SetValue` yöntemiyle ayarlayın. Bu örnek dize değerini ayarlar. "Bu bir test değeridir" için "MyTestKeyValue".
+### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>To create a registry key and set a value in it
+
+1. Use the `CreateSubkey` method, specifying which hive to place the key under as well as the name of the key. This example creates the registry key `MyTestKey` under HKEY_CURRENT_USER.
+
+    [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]
+
+2. Set the value with the `SetValue` method. This example sets the string value. "MyTestKeyValue" to "This is a test value".
 
     [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, HKEY_CURRENT_USER altında kayıt `MyTestKey` defteri anahtarı oluşturulur ve sonra dize değeri `MyTestKeyValue` olarak `This is a test value`ayarlanır.
+This example creates the registry key `MyTestKey` under HKEY_CURRENT_USER and then sets the string value `MyTestKeyValue` to `This is a test value`.
 
 [!code-vb[VbResourceTasks#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#15)]
 
 ## <a name="robust-programming"></a>Güçlü Programlama
 
-Anahtarınız için uygun bir konum bulmak üzere kayıt defteri yapısını inceleyin. Örneğin, geçerli kullanıcının HKEY_CURRENT_USER\Software anahtarını açmak ve şirketinizin adıyla bir anahtar oluşturmak isteyebilirsiniz. Ardından kayıt defteri değerlerini şirketinizin anahtarına ekleyin.
+Examine the registry structure to find a suitable location for your key. For example, you may want to open the HKEY_CURRENT_USER\Software key of the current user, and create a key with your company's name. Then add the registry values to your company's key.
 
-Bir Web uygulamasından kayıt defteri okurken, geçerli kullanıcı Web uygulamasında uygulanan kimlik doğrulamasına ve kimliğe bürünmeye bağlıdır.
+When reading the registry from a Web application, the current user depends on the authentication and impersonation implemented in the Web application.
 
-Yerel bilgisayar (<xref:Microsoft.Win32.Registry.CurrentUser><xref:Microsoft.Win32.Registry.LocalMachine>) yerine Kullanıcı klasörüne () veri yazmak daha güvenlidir.
+It is more secure to write data to the user folder (<xref:Microsoft.Win32.Registry.CurrentUser>) rather than to the local computer (<xref:Microsoft.Win32.Registry.LocalMachine>).
 
-Bir kayıt defteri değeri oluşturduğunuzda, bu değer zaten varsa ne yapılacağını belirlemeniz gerekir. Belki de kötü amaçlı olan bir işlem, değeri zaten oluşturmuş ve ona erişime sahip olabilir. Verileri kayıt defteri değerine yerleştirdiğinizde, veriler diğer işlem tarafından kullanılabilir. Bunu engellemek için <xref:Microsoft.Win32.RegistryKey.GetValue%2A> yöntemini kullanın. Anahtar zaten `Nothing` mevcut değilse döndürür.
+When you create a registry value, you need to decide what to do if that value already exists. Another process, perhaps a malicious one, may have already created the value and have access to it. When you put data in the registry value, the data is available to the other process. To prevent this, use the <xref:Microsoft.Win32.RegistryKey.GetValue%2A> method. It returns `Nothing` if the key does not already exist.
 
-Kayıt defteri anahtarı ACL 'Ler (Access Control listeleri) tarafından korunsa bile, parolalar gibi gizli dizileri, kayıt defterinde düz metin olarak depolamak güvenli değildir.
+It is not secure to store secrets, such as passwords, in the registry as plain text, even if the registry key is protected by ACLs (Access Control Lists).
 
 Aşağıdaki koşullar özel bir duruma neden olabilir:
 
-- Anahtarın `Nothing` adı (<xref:System.ArgumentNullException>).
+- The name of the key is `Nothing` (<xref:System.ArgumentNullException>).
 
-- Kullanıcının kayıt defteri anahtarları oluşturma izni yok (<xref:System.Security.SecurityException>).
+- The user does not have permissions to create registry keys (<xref:System.Security.SecurityException>).
 
-- Anahtar adı 255 karakter sınırını (<xref:System.ArgumentException>) aşıyor.
+- The key name exceeds the 255-character limit (<xref:System.ArgumentException>).
 
-- Anahtar kapalı (<xref:System.IO.IOException>).
+- The key is closed (<xref:System.IO.IOException>).
 
-- Kayıt defteri anahtarı salt okunurdur (<xref:System.UnauthorizedAccessException>).
+- The registry key is read-only (<xref:System.UnauthorizedAccessException>).
 
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği
 
-Bu işlemi çalıştırmak için, derlemeniz <xref:System.Security.Permissions.RegistryPermission> sınıf tarafından verilen bir ayrıcalık düzeyi gerektiriyor. Kısmi güven bağlamında çalıştırıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle bir özel durum oluşturabilir. Benzer şekilde, Kullanıcı oluşturma veya ayarları yazma için doğru ACL 'Lere sahip olmalıdır. Örneğin, kod erişim güvenliği iznine sahip bir yerel uygulama işletim sistemi iznine sahip olmayabilir. Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](../../../../framework/misc/code-access-security-basics.md).
+To run this process, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.RegistryPermission> class. If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges. Similarly, the user must have the correct ACLs for creating or writing to settings. For example, a local application that has the code access security permission might not have operating system permission. For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -80,4 +80,4 @@ Bu işlemi çalıştırmak için, derlemeniz <xref:System.Security.Permissions.R
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>
 - <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>
 - [Kayıt Defterinden Okuma ve Kayıt Defterine Yazma](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-- [Kod erişim güvenliği temelleri](../../../../framework/misc/code-access-security-basics.md)
+- [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md)

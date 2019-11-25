@@ -1,60 +1,64 @@
 ---
-title: "Nasıl yapılır: Visual Basic'te seri bağlantı noktalarına ekli modemleri çevirme"
+title: 'Nasıl Yapılır: Seri Bağlantı Noktalarına Ekli Modemleri Çevirme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - modems [Visual Basic], dialing
 - serial ports [Visual Basic], dialing
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
-ms.openlocfilehash: db482af7750012d8805d4f834063a2c82224cf67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: febec0a8579d34f8ff59066da5b5aa59c1cce6b2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014004"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345635"
 ---
-# <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te seri bağlantı noktalarına ekli modemleri çevirme
-Bu konu nasıl kullanılacağını açıklar `My.Computer.Ports` Visual Basic'te bir modem çevirmek için.  
+# <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Seri Bağlantı Noktalarına Ekli Modemleri Çevirme
+
+This topic describes how to use `My.Computer.Ports` to dial a modem in Visual Basic.  
   
- Genellikle, bilgisayardaki seri bağlantı noktalarından birine modem bağlı. Modem ile iletişim kurmak, uygulamanız için uygun bir seri bağlantı noktasına komutları göndermeniz gerekir.  
+ Typically, the modem is connected to one of the serial ports on the computer. For your application to communicate with the modem, it must send commands to the appropriate serial port.  
   
-### <a name="to-dial-a-modem"></a>Modem aramak için  
+### <a name="to-dial-a-modem"></a>To dial a modem  
   
-1. Modem bağlı hangi seri bağlantı noktası belirleyin. Bu örnekte, COM1 üzerinde modem olduğunu varsayar.  
+1. Determine which serial port the modem is connected to. This example assumes the modem is on COM1.  
   
-2. Kullanım `My.Computer.Ports.OpenSerialPort` bağlantı noktasına bir başvuru almak için yöntemi. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+2. Use the `My.Computer.Ports.OpenSerialPort` method to obtain a reference to the port. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
-     `Using` Blok bile bir özel durum oluşturur seri bağlantı noktası kapatmak uygulama izin verir. Seri bağlantı noktası yöneten tüm kod gözükeceğini bu blok içinde veya içinde bir `Try...Catch...Finally` blok.  
+     The `Using` block allows the application to close the serial port even if it generates an exception. All code that manipulates the serial port should appear within this block, or within a `Try...Catch...Finally` block.  
   
      [!code-vb[VbVbalrMyComputer#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#28)]  
   
-3. Ayarlama `DtrEnable` bilgisayar modemden gelen bir iletim kabul etmeye hazır olduğunu belirtmek için özelliği.  
+3. Set the `DtrEnable` property to indicate that the computer is ready to accept an incoming transmission from the modem.  
   
      [!code-vb[VbVbalrMyComputer#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#29)]  
   
-4. Modem ile seri bağlantı noktası aracılığıyla arama komut ve telefon numarası göndermek <xref:System.IO.Ports.SerialPort.Write%2A> yöntemi.  
+4. Send the dial command and the phone number to the modem through the serial port by means of the <xref:System.IO.Ports.SerialPort.Write%2A> method.  
   
      [!code-vb[VbVbalrMyComputer#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#30)]  
   
 ## <a name="example"></a>Örnek  
+
  [!code-vb[VbVbalrMyComputer#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#27)]  
   
- Bu kod örneği, bir IntelliSense kod parçacığı da kullanılabilir. Kod parçacığı Seçici'de bulunur **bağlantı ve ağ**. Daha fazla bilgi için [kod parçacıkları](/visualstudio/ide/code-snippets).  
+ This code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Connectivity and Networking**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek, bir başvuru gerektirir <xref:System?displayProperty=nameWithType> ad alanı.  
+
+ This example requires a reference to the <xref:System?displayProperty=nameWithType> namespace.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Bu örnekte, modem COM1'e bağlı olduğu varsayılır. Kodunuzu istenen seri bağlantı noktası kullanılabilir bağlantı noktaları bir listesinden seçmek kullanıcı izin öneririz. Daha fazla bilgi için [nasıl yapılır: Kullanılabilir seri bağlantı noktalarını gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
+
+ This example assumes the modem is connected to COM1. We recommend that your code allow the user to select the desired serial port from a list of available ports. For more information, see [How to: Show Available Serial Ports](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
   
- Bu örnekte bir `Using` bir özel durum oluşturursa bile uygulama bağlantı noktasını kapatır emin olmak için blok. Daha fazla bilgi için [Using deyimi](../../../../visual-basic/language-reference/statements/using-statement.md).  
+ This example uses a `Using` block to make sure that the application closes the port even if it throws an exception. For more information, see [Using Statement](../../../../visual-basic/language-reference/statements/using-statement.md).  
   
- Bu örnekte, uygulama modem çevirir sonra seri bağlantı noktası bağlantısını keser. Gerçekçi olarak, modem gelen ve giden veri aktarımı isteyeceksiniz. Daha fazla bilgi için [nasıl yapılır: Seri bağlantı noktalarından dize alma](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md).  
+ In this example, the application disconnects the serial port after it dials the modem. Realistically, you will want to transfer data to and from the modem. For more information, see [How to: Receive Strings From Serial Ports](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
-- [Nasıl yapılır: Seri bağlantı noktalarına dizeler gönderme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
-- [Nasıl yapılır: Seri bağlantı noktalarından dize alma](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
-- [Nasıl yapılır: Kullanılabilir seri bağlantı noktalarını gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+- [Nasıl Yapılır: Seri Bağlantı Noktalarına Dizeler Gönderme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
+- [Nasıl Yapılır: Seri Bağlantı Noktalarından Dize Alma](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
+- [Nasıl Yapılır: Kullanılabilir Seri Bağlantı Noktalarını Gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: belirli bir öğe adına sahip alt öğeleri bulma (Visual Basic)'
+title: 'How to: Find Descendants with a Specific Element Name'
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 5c4556ae7bf4c7560618781be51e066f659b0b4c
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 1a8aa07a79d05e62e0d5517c1675bc715e87de42
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249677"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344399"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Nasıl yapılır: belirli bir öğe adına sahip alt öğeleri bulma (Visual Basic)
-Bazen belirli bir ada sahip tüm alt öğeleri bulmak isteyebilirsiniz. Tüm alt öğeler boyunca yinelemek için kod yazabilirsiniz, ancak <xref:System.Xml.Linq.XContainer.Descendants%2A> eksenini kullanmak daha kolaydır.  
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>How to: Find Descendants with a Specific Element Name (Visual Basic)
+Sometimes you want to find all descendants with a particular name. You could write code to iterate through all of the descendants, but it is easier to use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, öğe adına göre alt öğelerin nasıl bulunacağını gösterir.  
+ The following example shows how to find descendants based on the element name.  
   
 ```vb  
 Dim root As XElement = _  
@@ -54,7 +54,7 @@ Some text that is broken up into multiple segments.
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ The following example shows the same query for XML that is in a namespace. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -103,4 +103,4 @@ Some text that is broken up into multiple segments.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
-- [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

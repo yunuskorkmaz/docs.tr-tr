@@ -1,5 +1,5 @@
 ---
-title: -= İşleci (Visual Basic)
+title: -= İşleci
 ms.date: 07/20/2015
 f1_keywords:
 - vb.-=
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - operator -=
 - compound assignment statements [Visual Basic]
 ms.assetid: 5ead0c37-ae50-48f7-8435-8e341d81cae1
-ms.openlocfilehash: f857c8bf2f89120e047c49674ce9e8a3bff22f7d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 44cb226d64e9f0b86c6566eb25fbafd6323a6d4c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701313"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347805"
 ---
 # <a name="--operator-visual-basic"></a>-= İşleci (Visual Basic)
-Bir ifadenin değerini bir değişkenin veya özelliğin değerinden çıkartır ve sonucu değişkenine veya özelliğe atar.  
+Subtracts the value of an expression from the value of a variable or property and assigns the result to the variable or property.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,29 +28,29 @@ variableorproperty -= expression
   
 ## <a name="parts"></a>Bölümler  
  `variableorproperty`  
- Gerekli. Herhangi bir sayısal değişken veya özellik.  
+ Gerekli. Any numeric variable or property.  
   
  `expression`  
- Gerekli. Herhangi bir sayısal ifade.  
+ Gerekli. Any numeric expression.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 işlecinin sol tarafındaki öğe basit bir skaler değişken, bir özellik veya bir dizi öğesi olabilir. Değişken veya özellik [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)olamaz.  
+ The element on the left side of the `-=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- @No__t-0 işleci ilk olarak, ifadenin değerini (işlecin sağ tarafında) değişkenin veya özelliğin değerinden (işlecin sol tarafında) çıkartır. İşleci daha sonra bu işlemin sonucunu değişkenine veya özelliğe atar.  
+ The `-=` operator first subtracts the value of the expression (on the right-hand side of the operator) from the value of the variable or property (on the left-hand side of the operator). The operator then assigns the result of that operation to the variable or property.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- [-İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md) *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. @No__t aşırı yükleme-0 işleci `-=` işlecinin davranışını etkiler. Kodunuz, `-` ' i aşırı yükleyen bir sınıf veya yapıda `-=` kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The [- Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `-` operator affects the behavior of the `-=` operator. If your code uses `-=` on a class or structure that overloads `-`, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir `Integer` değişkenini diğerinden çıkarmak için `-=` işlecini kullanır ve sonucu ikinci değişkene atar.  
+ The following example uses the `-=` operator to subtract one `Integer` variable from another and assign the result to the latter variable.  
   
  [!code-vb[VbVbalrOperators#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [-İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)
+- [- Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)
 - [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

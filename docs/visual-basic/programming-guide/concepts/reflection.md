@@ -1,18 +1,18 @@
 ---
-title: Yansıma (Visual Basic)
+title: Yansıma
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 6d1206d84dec4202a7dad8f03c3d88c8a97ff5ba
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 28f33c88f7aaaf51938a7d27fd2218a97b628acd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972114"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349276"
 ---
-# <a name="reflection-visual-basic"></a>Yansıma (Visual Basic)
-Yansıma derlemeleri, modülleri ve türleri <xref:System.Type>tanımlayan nesneler (türü) sağlar. Bir türün örneğini dinamik olarak oluşturmak, türü var olan bir nesneye bağlamak veya var olan bir nesneden türü almak ya da onun yöntemlerini çağırmak ya da alanları ve özelliklerine erişmek için yansıma kullanabilirsiniz. Kodunuzda öznitelikler kullanıyorsanız, yansıma bunlara erişmenizi sağlar. Daha fazla bilgi için bkz. [öznitelikler](../../../standard/attributes/index.md).  
+# <a name="reflection-visual-basic"></a>Reflection (Visual Basic)
+Reflection provides objects (of type <xref:System.Type>) that describe assemblies, modules and types. You can use reflection to dynamically create an instance of a type, bind the type to an existing object, or get the type from an existing object and invoke its methods or access its fields and properties. If you are using attributes in your code, reflection enables you to access them. For more information, see [Attributes](../../../standard/attributes/index.md).  
   
- Bir değişkenin türünü almak için `GetType` `Object` temel sınıftan tüm türler tarafından devralınan statik yöntemi kullanan basit bir yansıma örneği aşağıda verilmiştir:  
+ Here's a simple example of reflection using the static method `GetType` - inherited by all types from the `Object` base class - to obtain the type of a variable:  
   
 ```vb  
 ' Using GetType to obtain type information:  
@@ -21,11 +21,11 @@ Dim type As System.Type = i.GetType()
 System.Console.WriteLine(type)  
 ```  
   
- Çıktı:  
+ The output is:  
   
  `System.Int32`  
   
- Aşağıdaki örnek, yüklü derlemenin tam adını almak için yansıma kullanır.  
+ The following example uses reflection to obtain the full name of the loaded assembly.  
   
 ```vb  
 ' Using Reflection to get information from an Assembly:  
@@ -33,20 +33,20 @@ Dim info As System.Reflection.Assembly = GetType(System.Int32).Assembly
 System.Console.WriteLine(info)  
 ```  
   
- Çıktı:  
+ The output is:  
   
  `mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089`  
   
-## <a name="reflection-overview"></a>Yansımaya genel bakış  
- Aşağıdaki durumlarda yansıma yararlı olur:  
+## <a name="reflection-overview"></a>Reflection Overview  
+ Reflection is useful in the following situations:  
   
-- Programınızın meta verilerindeki özniteliklere erişmeniz gerektiğinde. Daha fazla bilgi için bkz. [özniteliklerde depolanan bilgileri alma](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
+- When you have to access attributes in your program's metadata. For more information, see [Retrieving Information Stored in Attributes](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
   
-- Bir derlemedeki türleri İnceleme ve örnekleme için.  
+- For examining and instantiating types in an assembly.  
   
-- Çalışma zamanında yeni türler oluşturmak için. İçinde <xref:System.Reflection.Emit>sınıfları kullanın.  
+- For building new types at runtime. Use classes in <xref:System.Reflection.Emit>.  
   
-- Geç bağlama gerçekleştirmek için çalışma zamanında oluşturulan türler üzerindeki yöntemlere erişme. [Türleri dinamik olarak yükleme ve kullanma](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)konusuna bakın.  
+- For performing late binding, accessing methods on types created at run time. See the topic [Dynamically Loading and Using Types](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için:  
@@ -63,5 +63,5 @@ System.Console.WriteLine(info)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic programlama kılavuzu](../../../visual-basic/programming-guide/index.md)
+- [Visual Basic Programming Guide](../../../visual-basic/programming-guide/index.md)
 - [.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)

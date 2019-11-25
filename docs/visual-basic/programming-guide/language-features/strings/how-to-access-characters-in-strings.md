@@ -1,35 +1,35 @@
 ---
-title: "Nasıl yapılır: Visual Basic'de Dizelerdeki karakterlere erişim"
+title: 'Nasıl Yapılır: Dizelerdeki Karakterlere Erişme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: 840a769b0bb322ef7b878a312437c5ec200ab074
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44a021ed3ce1d10613cf6ab7c959c62feec6046c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054036"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352457"
 ---
-# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de Dizelerdeki karakterlere erişim
-Bu örnek nasıl kullanılacağını gösterir <xref:System.String.Chars%2A> belirtilen konumda bir dizedeki karakter erişmek için özelliği.  
+# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'de Dizelerdeki Karakterlere Erişme
+This example demonstrates how to use the <xref:System.String.Chars%2A> property to access the character at the specified location in a string.  
   
 ## <a name="example"></a>Örnek  
- Bazen, dize ve bu karakterleri, dize içindeki konumunu karakterler hakkında veriler kullanışlıdır. Bir dizenin karakter dizisi olarak düşünebilirsiniz (`Char` örnekleri); belirli bir karakterin bu karakter dizinini başvurarak alabilirsiniz <xref:System.String.Chars%2A> özelliği.  
+ Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string. You can think of a string as an array of characters (`Char` instances); you can retrieve a particular character by referencing the index of that character through the <xref:System.String.Chars%2A> property.  
   
  [!code-vb[VbVbalrStrings#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#49)]  
   
- `index` Parametresinin <xref:System.String.Chars%2A> özelliği sıfır tabanlı.  
+ The `index` parameter of the <xref:System.String.Chars%2A> property is zero-based.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- <xref:System.String.Chars%2A> Özelliği belirtilen konumdaki karakteri döndürür. Ancak, bazı Unicode karakterler birden fazla karakter gösterilebilir. Unicode karakter ile çalışma konusunda daha fazla bilgi için bkz. [nasıl yapılır: Bir dizeyi karakter dizilerine dönüştürme](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).  
+ The <xref:System.String.Chars%2A> property returns the character at the specified position. However, some Unicode characters can be represented by more than one character. For more information on how to work with Unicode characters, see [How to: Convert a String to an Array of Characters](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).  
   
- <xref:System.String.Chars%2A> Özelliği oluşturur bir <xref:System.IndexOutOfRangeException> özel durum, `index` parametresi değerinden büyük veya eşit bir dizenin uzunluğunu veya onu küçükse sıfırdan  
+ The <xref:System.String.Chars%2A> property throws an <xref:System.IndexOutOfRangeException> exception if the `index` parameter is greater than or equal to the length of the string, or if it is less than zero  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.String.Chars%2A>
-- [Nasıl yapılır: Bir dizeyi karakter dizilerine dönüştürme](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)
-- [Dizeler ve Visual Basic'te diğer veri türleri arasında dönüştürme](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
+- [Nasıl yapılır: Bir Dizeyi Karakter Dizilerine Dönüştürme](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)
+- [Converting Between Strings and Other Data Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
 - [Dizeler](../../../../visual-basic/programming-guide/language-features/strings/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Erken ve Geç Bağlama (Visual Basic)
+title: Erken ve Geç Bağlama
 ms.date: 07/20/2015
 helpviewer_keywords:
 - early binding [Visual Basic]
@@ -13,32 +13,32 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
-ms.openlocfilehash: d05322ba831aac6173ac9d7fa7f369a208b676d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bd70d8642c18e9bc2baba8128ec908c88e0477ce
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965386"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345179"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Erken ve Geç Bağlama (Visual Basic)
-Visual Basic derleyici bir nesne değişkenine bir nesne `binding` atandığında çağrılan bir işlem gerçekleştirir. Bir nesne, belirli bir nesne türü olarak belirtilen bir değişkene atandığında *erken bağlanır* . Erken bağlantılı nesneler, derleyicinin bellek ayırmasını ve uygulama yürütmeden önce diğer iyileştirmeler gerçekleştirmesini sağlar. Örneğin, aşağıdaki kod parçası türünde <xref:System.IO.FileStream>bir değişken bildirir:  
+The Visual Basic compiler performs a process called `binding` when an object is assigned to an object variable. An object is *early bound* when it is assigned to a variable declared to be of a specific object type. Early bound objects allow the compiler to allocate memory and perform other optimizations before an application executes. For example, the following code fragment declares a variable to be of type <xref:System.IO.FileStream>:  
   
  [!code-vb[VbVbalrOOP#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#90)]  
   
- , <xref:System.IO.FileStream> Belirli bir nesne türü olduğundan, öğesine atanan örnek erken `FS` bir şekilde bağlanır.  
+ Because <xref:System.IO.FileStream> is a specific object type, the instance assigned to `FS` is early bound.  
   
- Buna karşılık, bir nesne, türü `Object`olarak belirtilen bir değişkene atandığında *geç bağlanır* . Bu türdeki nesneler herhangi bir nesneye başvuruları tutabilir, ancak erken bağlantılı nesnelerin avantajlarından birçoğuna sahip olabilir. Örneğin, aşağıdaki kod parçası, `CreateObject` işlev tarafından döndürülen bir nesneyi tutacak bir nesne değişkeni bildirir:  
+ By contrast, an object is *late bound* when it is assigned to a variable declared to be of type `Object`. Objects of this type can hold references to any object, but lack many of the advantages of early-bound objects. For example, the following code fragment declares an object variable to hold an object returned by the `CreateObject` function:  
   
  [!code-vb[VbVbalrOOP#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/LateBinding.vb#91)]  
   
-## <a name="advantages-of-early-binding"></a>Erken bağlamanın avantajları  
- Derleyicinin daha verimli uygulamalar sunan önemli iyileştirmeler yapmasına izin verdiklerinden, mümkün olduğunda erken bağlanan nesneleri kullanmanız gerekir. Erken bağlantılı nesneler, geç bağlantılı nesnelerden önemli ölçüde daha hızlıdır ve tam olarak hangi tür nesnelerin kullanıldığını belirterek kodunuzun okunmasını ve bakımını daha kolay hale getirir. Erken bağlamanın bir diğer avantajı da, Visual Studio tümleşik geliştirme ortamı (IDE), sizin düzenlediğiniz sırada çalıştığınız nesne türünü tam olarak belirleyebildiğinden, otomatik kod tamamlama ve dinamik yardım gibi faydalı özellikleri mümkün hale getirmenizi sağlar. kodudur. Erken bağlama, bir program derlendiğinde derleyicinin hata raporlenmesini sağladığından, çalışma zamanı hatalarının sayısını ve önem derecesini azaltır.  
+## <a name="advantages-of-early-binding"></a>Advantages of Early Binding  
+ You should use early-bound objects whenever possible, because they allow the compiler to make important optimizations that yield more efficient applications. Early-bound objects are significantly faster than late-bound objects and make your code easier to read and maintain by stating exactly what kind of objects are being used. Another advantage to early binding is that it enables useful features such as automatic code completion and Dynamic Help because the Visual Studio integrated development environment (IDE) can determine exactly what type of object you are working with as you edit the code. Early binding reduces the number and severity of run-time errors because it allows the compiler to report errors when a program is compiled.  
   
 > [!NOTE]
-> Geç bağlama yalnızca, olarak `Public`belirtilen tür üyelerine erişmek için kullanılabilir. Bir çalışma zamanı hatası `Friend` olarak `Protected Friend` belirtilen üyelere erişme.  
+> Late binding can only be used to access type members that are declared as `Public`. Accessing members declared as `Friend` or `Protected Friend` results in a run-time error.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>
-- [Nesne ömrü: Nesneleri oluşturma ve yok etme](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)

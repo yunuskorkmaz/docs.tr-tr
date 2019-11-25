@@ -1,37 +1,37 @@
 ---
-title: Visual Basic ile .NET Framework'te Bağlantı Noktası İşlemleri
+title: .NET Framework'te Bağlantı Noktası İşlemleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ports, Visual Basic
 ms.assetid: 1eba223b-7bd3-401a-b097-982bce96df1b
-ms.openlocfilehash: 10488f896ff7c6761e831d2a8af52249a19cf7d6
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 68f0c67b8135c6bb7ce8a134e2a324bc12c0aad9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524389"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345513"
 ---
 # <a name="port-operations-in-the-net-framework-with-visual-basic"></a>Visual Basic ile .NET Framework'te Bağlantı Noktası İşlemleri
 
-@No__t_0 ad alanındaki .NET Framework sınıfları aracılığıyla bilgisayarınızın seri bağlantı noktalarına erişebilirsiniz. @No__t_0 en önemli sınıfı, zaman uyumlu ve olay odaklı g/ç için bir çerçeve sağlar, PIN ve kesme durumlarına erişebilir ve seri sürücü özelliklerine erişebilir. @No__t_1 özelliği aracılığıyla erişilebilen bir <xref:System.IO.Stream> nesnesine kaydırılmış olabilir. Bir <xref:System.IO.Stream> nesnesinde sarmalama <xref:System.IO.Ports.SerialPort>, akış kullanan sınıflar tarafından seri bağlantı noktasına erişilmesine izin verir. Ad alanı, seri bağlantı noktalarının denetimini kolaylaştıran numaralandırmalar içerir.
+You can access your computer's serial ports through the .NET Framework classes in the <xref:System.IO.Ports?displayProperty=nameWithType> namespace. The most important class, <xref:System.IO.Ports.SerialPort>, provides a framework for synchronous and event-driven I/O, access to pin and break states, and access to serial driver properties. It can be wrapped in a <xref:System.IO.Stream> object, accessible through the <xref:System.IO.Ports.SerialPort.BaseStream> property. Wrapping <xref:System.IO.Ports.SerialPort> in a <xref:System.IO.Stream> object allows the serial port to be accessed by classes that use streams. The namespace includes enumerations that simplify the control of serial ports.
 
-@No__t_0 nesne oluşturmanın en kolay yolu <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A> yöntemi kullanmaktır.
+The simplest way to create a <xref:System.IO.Ports.SerialPort> object is through the <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A> method.
 
 > [!NOTE]
-> Paralel bağlantı noktaları, USB bağlantı noktaları vb. gibi diğer bağlantı noktası türlerine doğrudan erişmek için .NET Framework sınıfları kullanamazsınız.
+> You cannot use .NET Framework classes to directly access other types of ports, such as parallel ports, USB ports, and so on.
 
 ## <a name="enumerations"></a>Numaralandırmalar
 
-Bu tablo, bir seri bağlantı noktasına erişmek için kullanılan ana numaralandırmaları listeler ve açıklar:
+This table lists and describes the main enumerations used for accessing a serial port:
 
 |Sabit Listesi|Açıklama|
 |---|---|
-|<xref:System.IO.Ports.Handshake>|@No__t_0 nesnesi için seri bağlantı noktası iletişimi kurarken kullanılan denetim protokolünü belirtir.|
-|<xref:System.IO.Ports.Parity>|@No__t_0 nesne için eşlik bitini belirtir.|
-|<xref:System.IO.Ports.SerialData>|@No__t_0 nesnesinin seri bağlantı noktasında alınan karakter türünü belirtir.|
-|<xref:System.IO.Ports.SerialError>|@No__t_0 nesnesinde oluşan hataları belirtir|
-|<xref:System.IO.Ports.SerialPinChange>|@No__t_0 nesnesinde gerçekleşen değişikliğin türünü belirtir.|
-|<xref:System.IO.Ports.StopBits>|@No__t_0 nesnesinde kullanılan durdurma bitlerinin sayısını belirtir.|
+|<xref:System.IO.Ports.Handshake>|Specifies the control protocol used in establishing a serial port communication for a <xref:System.IO.Ports.SerialPort> object.|
+|<xref:System.IO.Ports.Parity>|Specifies the parity bit for a <xref:System.IO.Ports.SerialPort> object.|
+|<xref:System.IO.Ports.SerialData>|Specifies the type of character that was received on the serial port of the <xref:System.IO.Ports.SerialPort> object.|
+|<xref:System.IO.Ports.SerialError>|Specifies errors that occur on the <xref:System.IO.Ports.SerialPort> object|
+|<xref:System.IO.Ports.SerialPinChange>|Specifies the type of change that occurred on the <xref:System.IO.Ports.SerialPort> object.|
+|<xref:System.IO.Ports.StopBits>|Specifies the number of stop bits used on the <xref:System.IO.Ports.SerialPort> object.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

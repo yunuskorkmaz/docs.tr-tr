@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: ad alanındaki tüm düğümleri bulma (Visual Basic)'
+title: 'How to: Find All Nodes in a Namespace'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: 5ccc996aa986c97fdffb3deeea36346da726a588
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: f6bc38140bc2ea43393133d78c798469d26671c5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249940"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352965"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Nasıl yapılır: ad alanındaki tüm düğümleri bulma (Visual Basic)
-Söz konusu ad alanındaki tüm düğümleri bulmak için her öğe veya özniteliğin ad alanı üzerinde filtre uygulayabilirsiniz.  
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>How to: Find All Nodes in a Namespace (Visual Basic)
+You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek iki ad alanı olan bir XML ağacı oluşturur. Daha sonra ağaç üzerinde dolaşır ve bu ad alanlarından birindeki tüm öğelerin ve özniteliklerin adlarını yazdırır.  
+ The following example creates an XML tree with two namespaces. It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -52,9 +52,9 @@ Nodes in the http://www.adventure-works.com namespace
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sorgu tarafından erişilen XML dosyası, satın alma emirlerini iki farklı ad alanında içerir. Sorgu, yalnızca ad alanlarından birindeki öğeleri içeren yeni bir ağaç oluşturur.  
+ The XML file accessed by the following query contains purchase orders in two different namespaces. The query creates a new tree with just the elements in one of the namespaces.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birleştirilmiş satın alma siparişleri](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -111,4 +111,4 @@ End Module
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

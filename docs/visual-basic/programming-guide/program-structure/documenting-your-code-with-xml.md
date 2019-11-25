@@ -1,43 +1,43 @@
 ---
-title: XML ile Kodunuzu Belgeleme (Visual Basic)
+title: XML ile Kodunuzu Belgeleme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [Visual Basic], documenting code
 - XML comments, Visual Basic
 - Visual Basic code, documenting with XML
 ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
-ms.openlocfilehash: 58c8716450fd8310b81050c86dc297c5b7527761
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: bdf0da7a8acc919e4a1d66b81e30c9ed912dd321
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524498"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347448"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>XML ile Kodunuzu Belgeleme (Visual Basic)
 
-Visual Basic, kodunuzu XML kullanarak belgeedebilirsiniz
+In Visual Basic, you can document your code using XML
 
 ## <a name="xml-documentation-comments"></a>XML Belgeleri Yorumları
 
-Visual Basic, projeler için otomatik olarak XML belgelerinin oluşturulması için kolay bir yol sağlar. Türleriniz ve üyelerinize yönelik otomatik olarak bir XML iskelet oluşturabilir, ardından her bir parametre için özetler, açıklayıcı belgeler ve diğer açıklamalar sağlayabilirsiniz. Uygun kurulumla, XML belgeleri projeniz ve. xml uzantısı ile aynı ada sahip bir XML dosyasına otomatik olarak yayılır. Daha fazla bilgi için bkz. [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
+Visual Basic provides an easy way to automatically create XML documentation for projects. You can automatically generate an XML skeleton for your types and members, and then provide summaries, descriptive documentation for each parameter, and other remarks. With the appropriate setup, the XML documentation is automatically emitted into an XML file with the same name as your project and the .xml extension. For more information, see [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
 
-XML dosyası, XML olarak tüketilebilir veya başka bir şekilde yönetilebilir. Bu dosya, projenizin output. exe veya. dll dosyası ile aynı dizinde bulunur.
+The XML file can be consumed or otherwise manipulated as XML. This file is located in the same directory as the output .exe or .dll file of your project.
 
-XML belgeleri `'''` başlar. Bu yorumların işlenmesinde bazı kısıtlamalar vardır:
+XML documentation starts with `'''`. The processing of these comments has some restrictions:
 
-- Belgeler düzgün biçimlendirilmiş XML olmalıdır. XML düzgün biçimlendirilmediyse bir uyarı oluşturulur ve belge dosyası bir hata ile karşılaşıldığını söyleyen bir açıklama içerir.
+- The documentation must be well-formed XML. If the XML is not well formed, a warning is generated and the documentation file contains a comment saying that an error was encountered.
 
-- Geliştiriciler kendi etiket kümesini oluşturmak ücretsizdir. Önerilen bir etiket kümesi vardır (Bu konudaki "Ilgili bölümler" bölümüne bakın). Önerilen etiketlerden bazılarının özel anlamları vardır:
+- Developers are free to create their own set of tags. There is a recommended set of tags (see "Related Sections" in this topic). Some of the recommended tags have special meanings:
 
-  - @No__t_0param > etiketi parametreleri tanımlamakta kullanılır. Kullanıldıysa, derleyici parametrenin var olduğunu ve tüm parametrelerin belgelerde açıklananlandığından emin olur. Doğrulama başarısız olursa, derleyici bir uyarı verir.
+  - The \<param> tag is used to describe parameters. If used, the compiler will verify that the parameter exists and that all parameters are described in the documentation. If the verification fails, the compiler issues a warning.
 
-  - @No__t_0 özniteliği, bir kod öğesine başvuru sağlamak için herhangi bir etikete iliştirilebilir. Derleyici bu kod öğesinin varolduğunu doğrular. Doğrulama başarısız olursa, derleyici bir uyarı verir. Derleyici Ayrıca, `cref` özniteliğinde açıklanan bir tür ararken tüm `Imports` deyimlerine uyar.
+  - The `cref` attribute can be attached to any tag to provide a reference to a code element. The compiler verifies that this code element exists. If the verification fails, the compiler issues a warning. The compiler also respects any `Imports` statements when looking for a type described in the `cref` attribute.
 
-  - @No__t_0summary > etiketi, Visual Studio 'da IntelliSense tarafından bir tür veya üyeyle ilgili ek bilgileri göstermek için kullanılır.
+  - The \<summary> tag is used by IntelliSense in Visual Studio to display additional information about a type or member.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
-Belge açıklamalarıyla bir XML dosyası oluşturma hakkında daha fazla bilgi için aşağıdaki konulara bakın:
+For details on creating an XML file with documentation comments, see the following topics:
 
 - [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 
@@ -51,5 +51,5 @@ Belge açıklamalarıyla bir XML dosyası oluşturma hakkında daha fazla bilgi 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic ile uygulama geliştirme](../../../visual-basic/developing-apps/index.md)
-- [Visual Basic programlama kılavuzu](../../../visual-basic/programming-guide/index.md)
+- [Developing Applications with Visual Basic](../../../visual-basic/developing-apps/index.md)
+- [Visual Basic Programming Guide](../../../visual-basic/programming-guide/index.md)

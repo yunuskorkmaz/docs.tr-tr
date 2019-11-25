@@ -1,28 +1,28 @@
 ---
-title: 'Nasıl yapılır: Iki klasörün Içeriğini karşılaştırma (LINQ) (Visual Basic)'
+title: 'Nasıl yapılır: İki Klasörün İçeriğini Karşılaştırma (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 36128af71bb494a48e52564befe84fa7c7ffc3c0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d11299e3e36f4b6a8b837af59b1c27bb1c7aaf41
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582860"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348406"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Nasıl yapılır: Iki klasörün Içeriğini karşılaştırma (LINQ) (Visual Basic)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)
 
-Bu örnekte iki dosya listesi karşılaştırmanın üç yolu gösterilmektedir:
+This example demonstrates three ways to compare two file listings:
 
-- İki dosya listelerinin aynı olup olmadığını belirten bir Boolean değeri sorgulayarak.
+- By querying for a Boolean value that specifies whether the two file lists are identical.
 
-- Her iki klasördeki dosyaları almak için kesişimini sorgulayarak.
+- By querying for the intersection to retrieve the files that are in both folders.
 
-- Bir klasörde olan ancak diğeri olmayan dosyaları almak için ayarlanan farkı sorgulayarak.
+- By querying for the set difference to retrieve the files that are in one folder but not the other.
 
     > [!NOTE]
-    > Burada gösterilen teknikler, herhangi bir türdeki nesne dizilerini karşılaştırmak için uyarlanmıştır.
+    > The techniques shown here can be adapted to compare sequences of objects of any type.
 
-Burada gösterilen `FileComparer` sınıfı, standart sorgu Işleçleri ile birlikte özel bir karşılaştırıcı sınıfının nasıl kullanılacağını gösterir. Sınıfı, gerçek dünyada senaryolarda kullanılmak üzere tasarlanmamıştır. Her bir klasörün içeriğinin aynı olup olmadığını anlamak için her bir dosyanın bayt cinsinden adını ve uzunluğunu kullanır. Gerçek dünyada bir senaryoda, daha kapsamlı bir eşitlik denetimi gerçekleştirmek için bu karşılaştırıcıyı değiştirmelisiniz.
+The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators. The class is not intended for use in real-world scenarios. It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not. In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.
 
 ## <a name="example"></a>Örnek
 
@@ -116,9 +116,9 @@ End Module
 
 ## <a name="compiling-the-code"></a>Kod Derleniyor
 
-System. Linq ad alanı için `Imports` ifadesiyle bir VB.NET konsol uygulaması projesi oluşturun.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -1,5 +1,5 @@
 ---
-title: My. WebServices nesnesi (Visual Basic)
+title: My.WebServices Nesnesi
 ms.date: 07/20/2015
 f1_keywords:
 - My.WebServices
@@ -7,59 +7,59 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: c887f9b7c5a41c0aa02016354c46d5507b103d25
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 290d025985663bc45fe605a2e9904fc90fb2bc63
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918174"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350343"
 ---
 # <a name="mywebservices-object"></a>My.WebServices Nesnesi
-Geçerli proje tarafından başvurulan her bir XML Web hizmetinin tek bir örneğini oluşturmaya ve bunlara erişmeye yönelik özellikler sağlar.  
+Provides properties for creating and accessing a single instance of each XML Web service referenced by the current project.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `My.WebServices` Nesnesi, geçerli proje tarafından başvurulan her bir Web hizmetinin örneğini sağlar. Her örnek isteğe bağlı olarak oluşturulur. Bu Web hizmetlerine `My.WebServices` nesnenin özellikleri aracılığıyla erişebilirsiniz. Özelliğin adı, özelliğin eriştiği Web hizmetinin adıyla aynıdır. Öğesinden <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> devralan tüm sınıflar bir Web hizmetidir. Bir projeye Web Hizmetleri ekleme hakkında daha fazla bilgi için bkz. [uygulama Web Hizmetleri 'Ne erişme](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ The `My.WebServices` object provides an instance of each Web service referenced by the current project. Each instance is instantiated on demand. You can access these Web services through the properties of the `My.WebServices` object. The name of the property is the same as the name of the Web service that the property accesses. Any class that inherits from <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> is a Web service. For information about adding Web services to a project, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- `My.WebServices` Nesne yalnızca geçerli projeyle ilişkili Web hizmetlerini kullanıma sunar. Başvurulan DLL 'lerde belirtilen Web hizmetlerine erişim sağlamaz. Bir DLL 'nin sağladığı bir Web hizmetine erişmek için, Web hizmeti 'nin adı *dlladı*biçiminde kullanmanız gerekir. *WebServiceName*. Daha fazla bilgi için bkz. [uygulama Web Hizmetleri 'Ne erişme](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ The `My.WebServices` object exposes only the Web services associated with the current project. It does not provide access to Web services declared in referenced DLLs. To access a Web service that a DLL provides, you must use the qualified name of the Web service, in the form *DllName*.*WebServiceName*. For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- Nesne ve özellikleri Web uygulamaları için kullanılamaz.  
+ The object and its properties are not available for Web applications.  
   
 ## <a name="properties"></a>Özellikler  
- `My.WebServices` Nesnesinin her özelliği, geçerli proje tarafından başvurulan bir Web hizmeti örneğine erişim sağlar. Özelliğin adı, özelliğin eriştiği Web hizmeti adı ile aynıdır ve özellik türü, Web hizmetinin türüyle aynıdır.  
+ Each property of the `My.WebServices` object provides access to an instance of a Web service referenced by the current project. The name of the property is the same as the name of the Web service that the property accesses, and the property type is the same as the Web service's type.  
   
 > [!NOTE]
-> Ad çakışması varsa, bir Web hizmetine erişmek için özellik adı *RootNamespace*_*ad*\_alanı*HizmetAdı*olur. Örneğin, adlı `Service1`iki Web hizmeti göz önünde bulundurun. Bu hizmetlerden biri kök ad alanında `WindowsApplication1` ve ad `Namespace1`alanında ise, kullanarak `My.WebServices.WindowsApplication1_Namespace1_Service1`bu hizmete erişirsiniz.  
+> If there is a name collision, the property name for accessing a Web service is *RootNamespace*_*Namespace*\_*ServiceName*. For example, consider two Web services named `Service1`. If one of these services is in the root namespace `WindowsApplication1` and in the namespace `Namespace1`, you would access that service by using `My.WebServices.WindowsApplication1_Namespace1_Service1`.  
   
- `My.WebServices` Nesnenin özelliklerinden birine ilk kez eriştiğinizde, Web hizmetinin yeni bir örneğini oluşturur ve depolar. Bu özelliğin sonraki erişimleri, Web hizmetinin bu örneğini döndürür.  
+ When you first access one of the `My.WebServices` object's properties, it creates a new instance of the Web service and stores it. Subsequent accesses of that property return that instance of the Web service.  
   
- Bu Web hizmeti için özelliğine atayarak `Nothing` bir Web hizmetini atabilirsiniz. Özellik ayarlayıcısı saklı değere `Nothing` atar. Özelliği dışında bir değer `Nothing` atarsanız, ayarlayıcı bir <xref:System.ArgumentException> özel durum oluşturur.  
+ You can dispose of a Web service by assigning `Nothing` to the property for that Web service. The property setter assigns `Nothing` to the stored value. If you assign any value other than `Nothing` to the property, the setter throws an <xref:System.ArgumentException> exception.  
   
- Bir `My.WebServices` nesnenin özelliğinin, `Is` veya `IsNot` işlecini kullanarak bir Web hizmeti örneğini depolayıp depomadığını test edebilirsiniz. Özelliğin değerinin olup olmadığını denetlemek için bu işleçleri kullanabilirsiniz `Nothing`.  
+ You can test whether a property of the `My.WebServices` object stores an instance of the Web service by using the `Is` or `IsNot` operator. You can use those operators to check if the value of the property is `Nothing`.  
   
 > [!NOTE]
-> Genellikle, `Is` veya `IsNot` işlecinin karşılaştırmayı gerçekleştirmek için özelliğinin değerini okuması gerekir. Ancak, özelliği şu anda depoluyorsa `Nothing`, özelliği Web hizmetinin yeni bir örneğini oluşturur ve ardından bu örneği döndürür. Ancak, Visual Basic Derleyicisi `My.WebServices` nesnenin özelliklerini özel olarak değerlendirir ve `Is` veya `IsNot` işlecinin değeri değiştirmeden özelliğin durumunu denetlemesini sağlar.  
+> Typically, the `Is` or `IsNot` operator has to read the value of the property to perform the comparison. However, if the property currently stores `Nothing`, the property creates a new instance of the Web service and then returns that instance. However, the Visual Basic compiler treats the properties of the `My.WebServices` object specially, and allows the `Is` or `IsNot` operator to check the status of the property without altering its value.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `TemperatureConverter` XML `FahrenheitToCelsius` Web hizmetinin yöntemini çağırır ve sonucu döndürür.  
+ This example calls the `FahrenheitToCelsius` method of the `TemperatureConverter` XML Web service, and returns the result.  
   
  [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  
   
- Bu örneğin çalışması için, projeniz adlı `Converter`bir Web hizmetine başvurmalıdır ve Web hizmeti `ConvertTemperature` yöntemi kullanıma sunmalıdır. Daha fazla bilgi için bkz. [uygulama Web Hizmetleri 'Ne erişme](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ For this example to work, your project must reference a Web service named `Converter`, and that Web service must expose the `ConvertTemperature` method. For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- Bu kod, bir Web uygulaması projesinde çalışmaz.  
+ This code does not work in a Web application project.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
 ### <a name="availability-by-project-type"></a>Proje Türüne Göre Kullanılabilirlik  
   
-|Proje türü|Kullanılabilir|  
+|Project type|Kullanılabilir|  
 |---|---|  
-|Windows uygulaması|**Evet**|  
-|Sınıf Kitaplığı|**Evet**|  
-|Konsol Uygulaması|**Evet**|  
-|Windows Denetim Kitaplığı|**Evet**|  
-|Web Denetim Kitaplığı|**Evet**|  
-|Windows Hizmeti|**Evet**|  
+|Windows Application|**Yes**|  
+|Sınıf Kitaplığı|**Yes**|  
+|Konsol Uygulaması|**Yes**|  
+|Windows Control Library|**Yes**|  
+|Web Denetim Kitaplığı|**Yes**|  
+|Windows Hizmeti|**Yes**|  
 |Web Sitesi|Hayır|  
   
 ## <a name="see-also"></a>Ayrıca bkz.

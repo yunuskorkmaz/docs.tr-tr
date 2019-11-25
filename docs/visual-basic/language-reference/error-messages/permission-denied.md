@@ -1,26 +1,26 @@
 ---
-title: İzin reddedildi (Visual Basic)
+title: İzin reddedildi
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-ms.openlocfilehash: ad75c556748bf5c0f9cef55310c4ffa7b01fd458
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 410301a1e99040fc617ab1bf1e851329ab3072d2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920841"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346999"
 ---
 # <a name="permission-denied-visual-basic"></a>İzin reddedildi (Visual Basic)
-Yazma korumalı bir diske yazmak için ya da kilitli bir dosyaya erişmek için girişimde bulunuldu.  
+An attempt was made to write to a write-protected disk or to access a locked file.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Yazma korumalı bir dosyayı açmak için dosyanın yazma korumasını özniteliğini değiştirin.  
+1. To open a write-protected file, change the write-protection attribute of the file.  
   
-2. Başka bir işlem dosya kilitlemiş değil emin olun ve bunu diğer işlem yayımları kadar dosyayı açmak için bekleyin.  
+2. Make sure that another process has not locked the file, and wait to open the file until the other process releases it.  
   
-3. Kayıt defterine erişim için kullanıcı izinlerinizi bu tür bir kayıt defteri erişimi içerdiğini kontrol edin.  
+3. To access the registry, check that your user permissions include this type of registry access.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

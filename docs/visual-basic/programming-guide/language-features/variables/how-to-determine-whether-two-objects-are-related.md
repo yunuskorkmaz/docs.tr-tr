@@ -1,34 +1,34 @@
 ---
-title: 'Nasıl yapılır: Iki nesnenin Ilgili olup olmadığını belirleme (Visual Basic)'
+title: 'Nasıl yapılır: İki Nesnenin İlgili Olup Olmadığını Belirleme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [Visual Basic], Visual Basic objects
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: 2b17be4ef5a7dabfc4779ab6f5675cc2baec9c3c
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b3f5fc017166ba9cf28359db5de850c81b73bd69
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626559"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348623"
 ---
-# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Nasıl yapılır: Iki nesnenin Ilgili olup olmadığını belirleme (Visual Basic)
+# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Nasıl yapılır: İki Nesnenin İlgili Olup Olmadığını Belirleme (Visual Basic)
 
-İki nesneyi, varsa, varsa aralarındaki ilişkiyi belirleyebilir şekilde karşılaştırabilirsiniz. Sınıfın yöntemi, belirtilen sınıf geçerli sınıftan devralırsa veya geçerli tür belirtilen sınıf tarafından desteklenen bir arabirimse döndürür `True`. <xref:System.Type.IsInstanceOfType%2A> <xref:System.Type?displayProperty=nameWithType>
+You can compare two objects to determine the relationship, if any, between the classes from which they are created. The <xref:System.Type.IsInstanceOfType%2A> method of the <xref:System.Type?displayProperty=nameWithType> class returns `True` if the specified class inherits from the current class, or if the current type is an interface supported by the specified class.
 
-### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>Bir nesnenin başka bir nesnenin sınıfından veya arabiriminden devralıp devrmadığını belirleme
+### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>To determine if one object inherits from another object's class or interface
 
-1. Düşündüğünüz nesnede, temel türünde olabilir, <xref:System.Object.GetType%2A> yöntemi çağırın.
+1. On the object you think might be of the base type, invoke the <xref:System.Object.GetType%2A> method.
 
-2. <xref:System.Type.IsInstanceOfType%2A> Tarafından <xref:System.Type?displayProperty=nameWithType> döndürülen<xref:System.Object.GetType%2A>nesnedeki yöntemi çağırın.
+2. On the <xref:System.Type?displayProperty=nameWithType> object returned by <xref:System.Object.GetType%2A>, invoke the <xref:System.Type.IsInstanceOfType%2A> method.
 
-3. İçin <xref:System.Type.IsInstanceOfType%2A>bağımsız değişken listesinde, türetilmiş türden olabileceğini düşündüğünüz nesneyi belirtin.
+3. In the argument list for <xref:System.Type.IsInstanceOfType%2A>, specify the object you think might be of the derived type.
 
-    <xref:System.Type.IsInstanceOfType%2A>bağımsız `True` değişken türü <xref:System.Type?displayProperty=nameWithType> nesne türünden devralırsa döndürür.
+    <xref:System.Type.IsInstanceOfType%2A> returns `True` if its argument type inherits from the <xref:System.Type?displayProperty=nameWithType> object type.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir nesnenin başka bir nesnenin sınıfından türetilmiş bir sınıfı temsil edip etmediğini belirler.
+ The following example determines whether one object represents a class derived from another object's class.
 
 ```vb
 Public Class baseClass
@@ -46,7 +46,7 @@ Public Class testTheseClasses
 End Class
 ```
 
-Çağrısındaki iki nesne değişkeninin beklenmedik yerleşimini Note <xref:System.Type.IsInstanceOfType%2A>. Beklenen temel tür <xref:System.Type?displayProperty=nameWithType> sınıfı oluşturmak için kullanılır ve beklenen türetilmiş tür <xref:System.Type.IsInstanceOfType%2A> yönteme bir bağımsız değişken olarak geçirilir.
+Note the unexpected placement of the two object variables in the call to <xref:System.Type.IsInstanceOfType%2A>. The supposed base type is used to generate the <xref:System.Type?displayProperty=nameWithType> class, and the supposed derived type is passed as an argument to the <xref:System.Type.IsInstanceOfType%2A> method.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -56,4 +56,4 @@ End Class
 - [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Nesne Değişkeni Değerleri](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Nasıl yapılır: Iki nesnenin aynı olup olmadığını belirleme](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [Nasıl yapılır: İki Nesnenin Aynı Olup Olmadığını Belirleme](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

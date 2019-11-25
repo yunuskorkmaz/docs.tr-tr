@@ -1,97 +1,97 @@
 ---
-title: Olaylar (Visual Basic)
+title: Olaylar
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 65b4f5633e589ae02e9ed495074000181864428a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 666e138a747c480ef9e8b593f8c6233105fcdc93
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956365"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345113"
 ---
 # <a name="events-visual-basic"></a>Olaylar (Visual Basic)
-Bir Visual Studio projesini bir dizide yürütülen bir dizi yordam olarak görselleştirirken, gerçekte çoğu program olay odaklı olur, yani yürütme akışı *Olaylar*olarak adlandırılan dış oluşumlara göre belirlenir.  
+While you might visualize a Visual Studio project as a series of procedures that execute in a sequence, in reality, most programs are event driven—meaning the flow of execution is determined by external occurrences called *events*.  
   
- Bir olay, bir uygulamaya önemli bir şeyi oluştuğunu bildiren sinyaldir. Örneğin, Kullanıcı formdaki bir denetime tıkladığında form bir `Click` olay oluşturabilir ve olayı işleyen bir yordamı çağırabilir. Olaylar ayrıca ayrı görevlerin iletişim kurmasına izin verir. Örneğin, uygulamanızın ana uygulamadan ayrı bir sıralama görevi gerçekleştirmesini söyleyin. Kullanıcı sıralamayı iptal ederse, uygulamanız sıralama işlemini durdurmak için bir iptal olayı gönderebilir.  
+ An event is a signal that informs an application that something important has occurred. For example, when a user clicks a control on a form, the form can raise a `Click` event and call a procedure that handles the event. Events also allow separate tasks to communicate. Say, for example, that your application performs a sort task separately from the main application. If a user cancels the sort, your application can send a cancel event instructing the sort process to stop.  
   
-## <a name="event-terms-and-concepts"></a>Olay terimleri ve kavramlar  
- Bu bölümde, Visual Basic olaylar ile kullanılan hüküm ve kavramlar açıklanmaktadır.  
+## <a name="event-terms-and-concepts"></a>Event Terms and Concepts  
+ This section describes the terms and concepts used with events in Visual Basic.  
   
 ### <a name="declaring-events"></a>Olayları Bildirme  
- Aşağıdaki örnekte olduğu gibi `Event` anahtar sözcüğünü kullanarak sınıflar, yapılar, modüller ve arabirimler içindeki olayları bildirebilirsiniz:  
+ You declare events within classes, structures, modules, and interfaces using the `Event` keyword, as in the following example:  
   
  [!code-vb[VbVbalrEvents#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#24)]  
   
-### <a name="raising-events"></a>Olayları yükseltme  
- Bir olay, önemli bir şeyin oluştuğunu bildiren bir ileti gibidir. İletiyi yayınlama eylemi olayı oluşturma olarak adlandırılır. Visual Basic, aşağıdaki örnekte olduğu gibi `RaiseEvent` ifadesiyle olayları oluşturursunuz:  
+### <a name="raising-events"></a>Raising Events  
+ An event is like a message announcing that something important has occurred. The act of broadcasting the message is called *raising* the event. In Visual Basic, you raise events with the `RaiseEvent` statement, as in the following example:  
   
  [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
   
- Olayların bildirildiği sınıf, modül veya yapının kapsamı içinde oluşturulması gerekir. Örneğin, türetilmiş bir sınıf temel sınıftan devralınan olayları tetiklemez.  
+ Events must be raised within the scope of the class, module, or structure where they are declared. For example, a derived class cannot raise events inherited from a base class.  
   
-### <a name="event-senders"></a>Olay Gönderenler  
- Olayı tetiklenebilecek herhangi bir nesne, *olay kaynağı*olarak da bilinen bir *olay gönderisine*sahiptir. Formlar, denetimler ve Kullanıcı tanımlı nesneler, olay gönderenlerin örnekleridir.  
+### <a name="event-senders"></a>Event Senders  
+ Any object capable of raising an event is an *event sender*, also known as an *event source*. Forms, controls, and user-defined objects are examples of event senders.  
   
 ### <a name="event-handlers"></a>Olay İşleyicileri  
- *Olay işleyicileri* , karşılık gelen bir olay gerçekleştiğinde çağrılan yordamlardır. Eşleşen imzaya sahip herhangi bir geçerli alt yordamı olay işleyicisi olarak kullanabilirsiniz. Bir işlevi olay işleyicisi olarak kullanamazsınız, ancak olay kaynağına bir değer döndüremez.  
+ *Event handlers* are procedures that are called when a corresponding event occurs. You can use any valid subroutine with a matching signature as an event handler. You cannot use a function as an event handler, however, because it cannot return a value to the event source.  
   
- Visual Basic, olay işleyicileri için, olay göndericisinin adını, alt çizgi ve olay adını birleştiren standart bir adlandırma kuralı kullanır. Örneğin, `Click` adlı `button1` bir düğmenin olayı adlandırılır `Sub button1_Click`.  
+ Visual Basic uses a standard naming convention for event handlers that combines the name of the event sender, an underscore, and the name of the event. For example, the `Click` event of a button named `button1` would be named `Sub button1_Click`.  
   
 > [!NOTE]
-> Kendi olaylarınız için olay işleyicilerini tanımlarken bu adlandırma kuralını kullanmanızı öneririz, ancak gerekli değildir; geçerli bir altyordam adı kullanabilirsiniz.  
+> We recommend that you use this naming convention when defining event handlers for your own events, but it is not required; you can use any valid subroutine name.  
   
-## <a name="associating-events-with-event-handlers"></a>Olayları olay Işleyicileriyle ilişkilendirme  
- Bir olay işleyicisi kullanılabilir hale gelmeden önce, `Handles` veya `AddHandler` ifadesini kullanarak onu bir olayla ilişkilendirmeniz gerekir.  
+## <a name="associating-events-with-event-handlers"></a>Associating Events with Event Handlers  
+ Before an event handler becomes usable, you must first associate it with an event by using either the `Handles` or `AddHandler` statement.  
   
-### <a name="withevents-and-the-handles-clause"></a>WithEvents ve Handles yan tümcesi  
- Deyimi `WithEvents` ve`Handles` yan tümcesi, olay işleyicilerini belirtmenin bildirim temelli bir yöntemini sağlar. `WithEvents` Anahtar sözcüğüyle belirtilen bir nesne tarafından oluşturulan bir olay, aşağıdaki örnekte gösterildiği gibi, bu olay için `Handles` bir deyimle herhangi bir yordam tarafından işlenebilir:  
+### <a name="withevents-and-the-handles-clause"></a>WithEvents and the Handles Clause  
+ The `WithEvents` statement and `Handles` clause provide a declarative way of specifying event handlers. An event raised by an object declared with the `WithEvents` keyword can be handled by any procedure with a `Handles` statement for that event, as shown in the following example:  
   
  [!code-vb[VbVbalrEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#1)]  
   
- `WithEvents` Deyimi`Handles` ve yan tümcesi genellikle olay işleyicileri için en iyi seçenektir çünkü kullandıkları bildirime dayalı sözdizimi, kod, okuma ve hata ayıklama işlemlerini daha kolay hale getirir. Ancak, `WithEvents` değişkenlerin kullanımıyla ilgili aşağıdaki sınırlamalara dikkat edin:  
+ The `WithEvents` statement and the `Handles` clause are often the best choice for event handlers because the declarative syntax they use makes event handling easier to code, read and debug. However, be aware of the following limitations on the use of `WithEvents` variables:  
   
-- Bir `WithEvents` değişkeni bir nesne değişkeni olarak kullanamazsınız. Yani, bunu olarak `Object`bildiremezsiniz; değişkeni bildirdiğinizde sınıf adını belirtmeniz gerekir.  
+- You cannot use a `WithEvents` variable as an object variable. That is, you cannot declare it as `Object`—you must specify the class name when you declare the variable.  
   
-- Paylaşılan olaylar sınıf örneklerine bağlı olmadığından, paylaşılan olayları bildirimli olarak işlemek için `WithEvents` kullanamazsınız. Benzer şekilde, bir `WithEvents` `Structure`' dan `Handles` olayları işlemek için veya kullanamazsınız. Her iki durumda da, bu olayları işlemek `AddHandler` için ifadesini kullanabilirsiniz.  
+- Because shared events are not tied to class instances, you cannot use `WithEvents` to declaratively handle shared events. Similarly, you cannot use `WithEvents` or `Handles` to handle events from a `Structure`. In both cases, you can use the `AddHandler` statement to handle those events.  
   
-- `WithEvents` Değişken dizileri oluşturamazsınız.  
+- You cannot create arrays of `WithEvents` variables.  
   
- `WithEvents`değişkenler, tek bir olay işleyicisinin bir veya daha fazla olay türünü işlemesini sağlar veya aynı olay türünü işlemek için bir veya daha fazla olay işleyicisidir.  
+ `WithEvents` variables allow a single event handler to handle one or more kind of event, or one or more event handlers to handle the same kind of event.  
   
- `Handles` Yan tümcesi bir olayı bir olay işleyicisiyle ilişkilendirmenin standart yoludur, ancak derleme zamanında olayları olay işleyicilerle ilişkilendirme sınırlıdır.  
+ Although the `Handles` clause is the standard way of associating an event with an event handler, it is limited to associating events with event handlers at compile time.  
   
- Form veya denetimlerle ilişkili olaylar gibi bazı durumlarda, boş bir olay işleyicisini otomatik olarak ve bir olayla ilişkilendirir Visual Basic. Örneğin, Tasarım modunda bir form üzerindeki bir komut düğmesine çift tıkladığınızda Visual Basic, aşağıdaki kodda olduğu gibi, komut düğmesi için boş bir olay işleyicisi `WithEvents` ve bir değişken oluşturur:  
+ In some cases, such as with events associated with forms or controls, Visual Basic automatically stubs out an empty event handler and associates it with an event. For example, when you double-click a command button on a form in design mode, Visual Basic creates an empty event handler and a `WithEvents` variable for the command button, as in the following code:  
   
  [!code-vb[VbVbalrEvents#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#26)]  
   
-### <a name="addhandler-and-removehandler"></a>AddHandler ve RemoveHandler  
- Deyimi, ' de bir olay `Handles` işleyicisi belirtmenize izin veren yan tümcesine benzerdir. `AddHandler` Ancak, ile birlikte `RemoveHandler`kullanıldığında, bir olayla ilişkili olay işleyicisini `Handles` dinamik olarak eklemenize, kaldırmanıza ve değiştirmenize olanak sağlayan yan tümcesinden daha fazla esneklik sağlar. `AddHandler` Bir yapıdaki paylaşılan olayları veya olayları işlemek istiyorsanız, kullanmanız `AddHandler`gerekir.  
+### <a name="addhandler-and-removehandler"></a>AddHandler and RemoveHandler  
+ The `AddHandler` statement is similar to the `Handles` clause in that both allow you to specify an event handler. However, `AddHandler`, used with `RemoveHandler`, provides greater flexibility than the `Handles` clause, allowing you to dynamically add, remove, and change the event handler associated with an event. If you want to handle shared events or events from a structure, you must use `AddHandler`.  
   
- `AddHandler`iki bağımsız değişken alır: bir olay göndericisinden bir olayın adı ve bir temsilci olarak değerlendirilen bir ifade. Bildirim her zaman temsilciye bir başvuru döndürdüğünden, `AddHandler`kullanırken temsilci sınıfını açık bir şekilde belirtmeniz gerekmez. `AddressOf` Aşağıdaki örnek bir olay işleyicisini bir nesne tarafından oluşturulan bir olayla ilişkilendirir:  
+ `AddHandler` takes two arguments: the name of an event from an event sender such as a control, and an expression that evaluates to a delegate. You do not need to explicitly specify the delegate class when using `AddHandler`, since the `AddressOf` statement always returns a reference to the delegate. The following example associates an event handler with an event raised by an object:  
   
  [!code-vb[VbVbalrEvents#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#28)]  
   
- `RemoveHandler`bir olayın olay işleyicisinden bağlantısını kestiği, ile `AddHandler`aynı sözdizimini kullanır. Örneğin:  
+ `RemoveHandler`, which disconnects an event from an event handler, uses the same syntax as `AddHandler`. Örneğin:  
   
  [!code-vb[VbVbalrEvents#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#29)]  
   
- Aşağıdaki örnekte, bir olay işleyicisi bir olayla ilişkilendirilir ve olay tetiklenir. Olay işleyicisi olayı yakalar ve bir ileti görüntüler.  
+ In the following example, an event handler is associated with an event, and the event is raised. The event handler catches the event and displays a message.  
   
- Ardından, ilk olay işleyicisi kaldırılır ve olayla ilişkili farklı bir olay işleyicisi olur. Olay yeniden oluşturulduğunda, farklı bir ileti görüntülenir.  
+ Then the first event handler is removed and a different event handler is associated with the event. When the event is raised again, a different message is displayed.  
   
- Son olarak, ikinci olay işleyicisi kaldırılır ve olay üçüncü bir kez tetiklenir. Artık olayla ilişkili bir olay işleyicisi olmadığından, hiçbir işlem yapılmaz.  
+ Finally, the second event handler is removed and the event is raised for a third time. Because there is no longer an event handler associated with the event, no action is taken.  
   
  [!code-vb[VbVbalrEvents#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class2.vb#38)]  
   
-## <a name="handling-events-inherited-from-a-base-class"></a>Temel sınıftan devralınan olayları işleme  
- *Türetilmiş sınıflar*— bir temel sınıftan özellikleri miras alan sınıflar —, kendi temel sınıfları tarafından oluşturulan olayları, `Handles MyBase` ifadesini kullanarak işleyebilir.  
+## <a name="handling-events-inherited-from-a-base-class"></a>Handling Events Inherited from a Base Class  
+ *Derived classes*—classes that inherit characteristics from a base class—can handle events raised by their base class using the `Handles MyBase` statement.  
   
-### <a name="to-handle-events-from-a-base-class"></a>Bir temel sınıftan olayları işlemek için  
+### <a name="to-handle-events-from-a-base-class"></a>To handle events from a base class  
   
-- Olay işleyicisi prosedürünün bildirim satırına bir `Handles MyBase.` *EventName* bildirimi ekleyerek türetilmiş sınıfta bir olay işleyicisi bildirin; burada *EventName* , işlemekte olduğunuz temel sınıftaki olayın adıdır. Örneğin:  
+- Declare an event handler in the derived class by adding a `Handles MyBase.`*eventname* statement to the declaration line of your event-handler procedure, where *eventname* is the name of the event in the base class you are handling. Örneğin:  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   
@@ -99,11 +99,11 @@ Bir Visual Studio projesini bir dizide yürütülen bir dizi yordam olarak görs
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[İzlenecek yol: Olayları bildirme ve oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Bir sınıf için olayların nasıl bildirilemeyeceğini ve tetiklemeyeceğini gösteren adım adım bir açıklama sağlar.|  
-|[İzlenecek yol: Olayları işleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Bir olay işleyicisi yordamının nasıl yazılacağını gösterir.|  
-|[Nasıl yapılır: Engellemeyi önlemek Için özel olaylar bildirin](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Olay işleyicilerinin zaman uyumsuz olarak çağrılmasına izin veren özel bir olayın nasıl tanımlanacağını gösterir.|  
-|[Nasıl yapılır: Belleği korumak Için özel olaylar bildirme](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Yalnızca olay işlendiği zaman belleği kullanan özel bir olayın nasıl tanımlanacağını gösterir.|  
-|[Visual Basic devralınan olay Işleyicileriyle ilgili sorunları giderme](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Devralınan bileşenlerde olay işleyicileriyle ortaya çıkan yaygın sorunları listeler.|  
+|[İzlenecek yol: Olay Bildirme ve Oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Provides a step-by-step description of how to declare and raise events for a class.|  
+|[İzlenecek yol: Olayları İşleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Demonstrates how to write an event-handler procedure.|  
+|[Nasıl yapılır: Engellemekten Kaçınacak Şekilde Özel Olayları Bildirme](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Demonstrates how to define a custom event that allows its event handlers to be called asynchronously.|  
+|[Nasıl yapılır: Bellekten Kazanacak Şekilde Özel Olayları Bildirme](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Demonstrates how to define a custom event that uses memory only when the event is handled.|  
+|[Troubleshooting Inherited Event Handlers in Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Lists common issues that arise with event handlers in inherited components.|  
 |[Olaylar](../../../../standard/events/index.md)|.NET Framework içindeki olay modeli için genel bir bakış sağlar.|  
-|[Windows Forms'ta Olay İşleyicileri Oluşturma](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Windows Forms nesneleriyle ilişkili olaylarla nasıl çalışabileceğinizi açıklar.|  
-|[Temsilciler](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Visual Basic temsilcileri için bir genel bakış sağlar.|
+|[Windows Forms'ta Olay İşleyicileri Oluşturma](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Describes how to work with events associated with Windows Forms objects.|  
+|[Temsilciler](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Provides an overview of delegates in Visual Basic.|

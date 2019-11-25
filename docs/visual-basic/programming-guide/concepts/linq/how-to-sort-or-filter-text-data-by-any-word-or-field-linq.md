@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: herhangi bir sözcük veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (Visual Basic)'
+title: 'Nasıl yapılır: Herhangi bir Sözcük veya Alana Göre Metin Verilerini Sıralama veya Filtreleme (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: fa9efc51f72a47acfa32d42fc9ff8e5aadf61721
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 15e7666a5fcb5a16628216354c18599f87c7d905
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524132"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341512"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Nasıl yapılır: herhangi bir sözcük veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (Visual Basic)
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)
 
-Aşağıdaki örnek, virgülle ayrılmış değerler gibi yapılandırılmış metnin çizgilerinin satırdaki herhangi bir alana göre nasıl sıralanacağını gösterir. Alan, çalışma zamanında dinamik olarak belirtilmiş olabilir. Puanlar. csv içindeki alanların, bir öğrencinin KIMLIK numarasını temsil ettiğini ve ardından bir dizi dört test puandığını varsayın.
+The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line. The field may be dynamically specified at runtime. Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.
 
-### <a name="to-create-a-file-that-contains-data"></a>Veri içeren bir dosya oluşturmak için
+### <a name="to-create-a-file-that-contains-data"></a>To create a file that contains data
 
-Bu konudaki puanlarını. csv verilerini, [benzer dosyalardan (LINQ) (Visual Basic) Içerik ekleme](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) ve çözüm klasörünüze kaydetme konularına kopyalayın.
+Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.
 
 ## <a name="example"></a>Örnek
 
@@ -70,12 +70,12 @@ End Class
 ' 115, 35, 72, 91, 70
 ```
 
-Bu örnek ayrıca bir Işlevden nasıl sorgu değişkeni dönebileceğinizi gösterir.
+This example also demonstrates how to return a query variable from a Function.
 
 ## <a name="compiling-the-code"></a>Kod Derleniyor
 
-System. Linq ad alanı için `Imports` ifadesiyle bir VB.NET konsol uygulaması projesi oluşturun.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

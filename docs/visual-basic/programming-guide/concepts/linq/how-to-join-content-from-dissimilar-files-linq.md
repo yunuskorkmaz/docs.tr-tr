@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: farklı dosyalardan Içerik ekleme (LINQ) (Visual Basic)'
+title: 'Nasıl yapılır: Farklı Dosyalardan İçerik Birleştirme (LINQ)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: f5bdfecc91f5b2f0ed3764d0f38dee99570d66d4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a6528f623d084003bb85dc5bae784b8d96c84d02
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524199"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344562"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Nasıl yapılır: farklı dosyalardan Içerik ekleme (LINQ) (Visual Basic)
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)
 
-Bu örnek, eşleşen anahtar olarak kullanılan ortak bir değeri paylaşan, virgülle ayrılmış iki dosyadan verilerin nasıl birleştirileceğini gösterir. Bu teknik, iki elektronik tablodan veya bir elektronik tabloda ve başka bir biçime sahip bir dosyadan yeni bir dosyaya veri birleştirmek istiyorsanız yararlı olabilir. Örneği herhangi bir tür yapılandırılmış metinle çalışacak şekilde değiştirebilirsiniz.
+This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key. This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file. You can modify the example to work with any kind of structured text.
 
-## <a name="to-create-the-data-files"></a>Veri dosyalarını oluşturmak için
+## <a name="to-create-the-data-files"></a>To create the data files
 
-1. Aşağıdaki satırları puanlarını. csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, elektronik tablo verilerini temsil eder. 1\. sütun, öğrencinin KIMLIĞIDIR ve 2 ile 5 arasındaki sütunlar test puanlarıdır.
+1. Copy the following lines into a file that is named scores.csv and save it to your project folder. The file represents spreadsheet data. Column 1 is the student's ID, and columns 2 through 5 are test scores.
 
     ```csv
     111, 97, 92, 81, 60
@@ -32,7 +32,7 @@ Bu örnek, eşleşen anahtar olarak kullanılan ortak bir değeri paylaşan, vir
     122, 94, 92, 91, 91
     ```
 
-2. Aşağıdaki satırları Names. csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, öğrencinin Soyadı, adı ve öğrenci KIMLIĞINI içeren bir elektronik tabloyu temsil eder.
+2. Copy the following lines into a file that is named names.csv and save it to your project folder. The file represents a spreadsheet that contains the student's last name, first name, and student ID.
 
     ```csv
     Omelchenko,Svetlana,111
@@ -122,5 +122,5 @@ End Class
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

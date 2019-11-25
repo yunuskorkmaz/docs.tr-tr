@@ -1,5 +1,5 @@
 ---
-title: -Yalnızca ref(Visual Basic)
+title: -refonly
 ms.date: 03/16/2018
 f1_keywords:
 - -refonly
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /refonly compiler option [Visual Basic]
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
-ms.openlocfilehash: 8e64989ac1410b51991027ffcb33e8dae0c0284b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b906178abf8d159083d95e41448596d512e857de
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775560"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348571"
 ---
-# <a name="-refonly-visual-basic"></a>-Yalnızca ref(Visual Basic)
+# <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
-**-Refonly** seçeneği, derlemenin birincil çıktısının uygulama derlemesi yerine bir başvuru derlemesi olması gerektiğini gösterir. Başvuru derlemeleri yürütülene kadar `-refonly` parametresi, pdb 'leri çıktısını sessizce devre dışı bırakır.
+The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly. The `-refonly` parameter silently disables outputting PDBs, as reference assemblies cannot be executed.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -28,14 +28,14 @@ ms.locfileid: "72775560"
 
 ## <a name="remarks"></a>Açıklamalar
 
-Visual Basic, sürüm 15,3 ' den başlayarak `-refonly` anahtarını destekler.
+Visual Basic supports the `-refonly` switch starting with version 15.3.
 
-Başvuru derlemeleri, kitaplığın ortak API yüzeyini göstermek için gereken en düşük meta veri miktarını içeren özel bir derleme türüdür. Derleme araçlarındaki bir derlemeye başvururken önemli olan tüm Üyeler için bildirimler içerirler, ancak API sözleşmeleri üzerinde herhangi bir observable etkisi olmayan özel üyelerin tüm üye uygulamalarını ve bildirimlerini hariç tutar. Daha fazla bilgi için bkz. .NET kılavuzundaki [başvuru derlemeleri](../../../standard/assembly/reference-assemblies.md) .
+Reference assemblies are a special type of assembly that contain only the minimum amount of metadata required to represent the library's public API surface. They include declarations for all members that are significant when referencing an assembly in build tools, but exclude all member implementations and declarations of private members that have no observable impact on their API contract. For more information, see [Reference assemblies](../../../standard/assembly/reference-assemblies.md) in .NET Guide.
 
-@No__t_0 ve [`-refout`](refout-compiler-option.md) seçenekleri birbirini dışlıyor.
+The `-refonly` and [`-refout`](refout-compiler-option.md) options are mutually exclusive.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [-refout](refout-compiler-option.md)
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line Compiler](index.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

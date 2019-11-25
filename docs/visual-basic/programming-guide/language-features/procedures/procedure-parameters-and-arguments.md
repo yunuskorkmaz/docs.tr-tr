@@ -1,5 +1,5 @@
 ---
-title: Yordam Parametreleri ve Bağımsız Değişkenler (Visual Basic)
+title: Parametreler ve Bağımsız Değişkenler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -18,45 +18,45 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 08bb05f681d5f795bc448ddc62976d7675696023
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7dfbbcb39cf7bb05c8a62a7a252e425f287c9a09
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638843"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352577"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Yordam Parametreleri ve Bağımsız Değişkenler (Visual Basic)
-Çoğu durumda, bir yordam içinde bunu çağrıldıktan koşullar hakkında bazı bilgiler gerekiyor. Yinelenen veya paylaşılan görevleri gerçekleştiren bir yordam her çağrı için farklı bilgileri kullanır. Bu bilgiler, değişkenleri, sabitleri ve onu çağırdığınızda yordama geçirdiğiniz ifadeleri oluşur.  
+In most cases, a procedure needs some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
   
- A *parametre* yordamı çağırdığınızda, temin etmeniz bekliyor. bir değeri temsil eder. Yordam bildirimi parametrelerini tanımlar.  
+ A *parameter* represents a value that the procedure expects you to supply when you call it. The procedure's declaration defines its parameters.  
   
- Bir yordam parametre, bir parametre veya birden fazla tanımlayabilirsiniz. Parametreleri belirtir bir yordam tanımının bir parçası olarak adlandırılan *parametre listesi*.  
+ You can define a procedure with no parameters, one parameter, or more than one. The part of the procedure definition that specifies the parameters is called the *parameter list*.  
   
- Bir *bağımsız değişken* yordamı çağırdığınızda, sağladığınız değerin bir yordamın parametresini temsil eder. Yordamı çağırdığında, çağıran kodun bağımsız değişkenleri sağlar. Bağımsız değişkenleri belirten yordam çağrısı bir parçası olarak adlandırılan *bağımsız değişken listesi*.  
+ An *argument* represents the value you supply to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure. The part of the procedure call that specifies the arguments is called the *argument list*.  
   
- Yordamı çağırma kodu aşağıdaki çizimde `safeSquareRoot` iki farklı yerde. İlk çağrı değişkenin değeri olarak geçirir `x` (4.0) parametresine `number`ve dönüş değeri `root` (2.0) değişkenine atanan `y`. Değişmez değer 9.0 için yapılan ikinci çağrı geçirir `number`ve dönüş değeri (3.0) değişkene atar `z`.  
+ The following illustration shows code calling the procedure `safeSquareRoot` from two different places. The first call passes the value of the variable `x` (4.0) to the parameter `number`, and the return value in `root` (2.0) is assigned to the variable `y`. The second call passes the literal value 9.0 to `number`, and assigns the return value (3.0) to variable `z`.  
   
- ![Bir parametre bağımsız değişken geçirme gösteren diyagram](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
+ ![Diagram that shows passing an argument to a parameter](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
- Daha fazla bilgi için [arasındaki farklar parametreler ve bağımsız değişkenler](./differences-between-parameters-and-arguments.md).  
+ For more information, see [Differences Between Parameters and Arguments](./differences-between-parameters-and-arguments.md).  
   
-## <a name="parameter-data-type"></a>Parametre veri türü  
- Bir parametrenin veri türünü kullanarak tanımladığınız `As` bildiriminden yan tümcesi. Örneğin, aşağıdaki işlev bir dize ve tamsayı kabul eder.  
+## <a name="parameter-data-type"></a>Parameter Data Type  
+ You define a data type for a parameter by using the `As` clause in its declaration. For example, the following function accepts a string and an integer.  
   
  [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
   
- Tür denetleme geçerseniz ([Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) olan `Off,` `As` yan tümcesi, isteğe bağlıdır, hariç, herhangi bir parametre kullanıyorsa, tüm parametreleri onu kullanmanız gerekir. Tür denetleme ise `On`, `As` yan tümcesi tüm parametreler için gereklidir.  
+ If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off,` the `As` clause is optional, except that if any one parameter uses it, all parameters must use it. If type checking is `On`, the `As` clause is required for all procedure parameters.  
   
- Çağıran kod gibi bir bağımsız değişkeni, karşılık gelen parametresinin farklı bir veri türü ile sağlamak bekliyor durumunda `Byte` için bir `String` parametresi, aşağıdakilerden birini yapmalısınız:  
+ If the calling code expects to supply an argument with a data type different from that of its corresponding parameter, such as `Byte` to a `String` parameter, it must do one of the following:  
   
-- Kaynağı yalnızca bağımsız değişkenler için parametre veri türü genişletmek veri türleriyle;  
+- Supply only arguments with data types that widen to the parameter data type;  
   
-- Ayarlama `Option Strict Off` daraltma dönüştürmelerini örtülü; izin vermek veya  
+- Set `Option Strict Off` to allow implicit narrowing conversions; or  
   
-- Dönüştürme anahtar sözcüğü, veri türüne açıkça dönüştürmek için kullanın.  
+- Use a conversion keyword to explicitly convert the data type.  
   
 ### <a name="type-parameters"></a>Tür ParameTReleri  
- A *genel yordam* ayrıca bir veya daha fazla tanımlar *tür parametrelerindeki* normal parametrelerini yanı sıra. Çağıran kod, veri türleri için her bir çağrıyı gereksinimlerini karşılayacak hale getirebilirsiniz şekilde yordamı, çağırdığı her zaman geçiş farklı veri türleri genel bir yordam sağlar. Bkz: [Visual Basic'de genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
+ A *generic procedure* also defines one or more *type parameters* in addition to its normal parameters. A generic procedure allows the calling code to pass different data types each time it calls the procedure, so it can tailor the data types to the requirements of each individual call. See [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -65,8 +65,8 @@ ms.locfileid: "64638843"
 - [İşlev Yordamları](./function-procedures.md)
 - [Özellik Yordamları](./property-procedures.md)
 - [İşleç Yordamları](./operator-procedures.md)
-- [Nasıl yapılır: Bir yordamın parametresini tanımlama](./how-to-define-a-parameter-for-a-procedure.md)
-- [Nasıl yapılır: Bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)
+- [Nasıl yapılır: Bir Yordamın Parametresini Tanımlama](./how-to-define-a-parameter-for-a-procedure.md)
+- [Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme](./how-to-pass-arguments-to-a-procedure.md)
 - [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
-- [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

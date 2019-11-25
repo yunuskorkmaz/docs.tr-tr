@@ -1,5 +1,5 @@
 ---
-title: Matematik Özeti (Visual Basic)
+title: Matematik Özeti
 ms.date: 07/20/2015
 helpviewer_keywords:
 - math functions, summary
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - math functions, Visual Basic
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
-ms.openlocfilehash: d7447a3155c9727a9c55ea86826d1ef15ac21243
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21c6d35b4e6aa17bb29be1c1e4b5e88a5fb389d8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802962"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348499"
 ---
 # <a name="math-summary-visual-basic"></a>Matematik Özeti (Visual Basic)
-Visual Basic dili anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaç tarafından düzenlenir ve kullanın.  
+Visual Basic language keywords and run-time library members are organized by purpose and use.  
   
 |Eylem|Dil öğesi|  
 |------------|----------------------|  
-|Trigonometrik işlevler türetilir.|<xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A>|  
-|Genel hesaplamalar.|<xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A>|  
-|Rastgele sayılar üretin.|<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|  
-|Mutlak değer elde edin.|<xref:System.Math.Abs%2A>|  
-|Bir ifadenin oturum alın.|<xref:System.Math.Sign%2A>|  
-|Sayısal dönüşümler gerçekleştirin.|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
+|Derive trigonometric functions.|<xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A>|  
+|General calculations.|<xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A>|  
+|Generate random numbers.|<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|  
+|Get absolute value.|<xref:System.Math.Abs%2A>|  
+|Get the sign of an expression.|<xref:System.Math.Sign%2A>|  
+|Perform numeric conversions.|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,17 +1,17 @@
 ---
-title: 'Nasıl yapılır: dizedeki bir sözcüğün tekrarlamalarını sayma (LINQ) (Visual Basic)'
+title: 'Nasıl yapılır: Bir Sözcüğün Bir Dizede Kaç Kez Geçtiğini Sayma (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-ms.openlocfilehash: 3a2ae52a3380e4a0d8df4adb580e84362e3f13f3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 92e0b522a1367566c64d6158fd239534e37ad44f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524170"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353694"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Nasıl yapılır: dizedeki bir sözcüğün tekrarlamalarını sayma (LINQ) (Visual Basic)
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)
 
-Bu örnek, bir dizedeki belirli bir sözcüğün tekrarlamalarını saymak için bir LINQ sorgusunun nasıl kullanılacağını gösterir. Sayıyı tamamlamak için öncelikle <xref:System.String.Split%2A> yönteminin bir dizi sözcük oluşturmak için çağrıldığını unutmayın. @No__t_0 yönteminin performans maliyeti vardır. Dizedeki tek işlem kelimeleri saymaya ise bunun yerine <xref:System.Text.RegularExpressions.Regex.Matches%2A> veya <xref:System.String.IndexOf%2A> yöntemlerini kullanmayı düşünmelisiniz. Ancak, performans kritik bir sorun değilse veya tümceyi zaten böldüğünüz takdirde, diğer sorgu türlerini kullanmak için tümceyi daha önce ayırdıysanız, LINQ 'ı kullanarak sözcükleri veya tümceleri de saymanız mantıklıdır.
+This example shows how to use a LINQ query to count the occurrences of a specified word in a string. Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words. There is a performance cost to the <xref:System.String.Split%2A> method. If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead. However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.
 
 ## <a name="example"></a>Örnek
 
@@ -60,8 +60,8 @@ End Class
 
 ## <a name="compiling-the-code"></a>Kod Derleniyor
 
-System. Linq ad alanı için `Imports` ifadesiyle bir VB.NET konsol uygulaması projesi oluşturun.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

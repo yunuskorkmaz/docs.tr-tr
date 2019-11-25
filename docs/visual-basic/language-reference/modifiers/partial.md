@@ -1,5 +1,5 @@
 ---
-title: Kısmi (Visual Basic)
+title: Kısmi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Partial
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: acfe47f52ede289093b3554a7dd190ef3f0e2c80
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: df85571b757fd54496677bad1195fab9690b79cc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592109"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351354"
 ---
 # <a name="partial-visual-basic"></a>Kısmi (Visual Basic)
-Tür bildiriminin türün kısmi bir tanımı olduğunu gösterir.  
+Indicates that a type declaration is a partial definition of the type.  
   
- @No__t-0 anahtar sözcüğünü kullanarak, bir türün tanımını birkaç bildirim arasında ayırabilirsiniz. İstediğiniz kadar çok sayıda kısmi bildirim, istediğiniz kadar farklı kaynak dosyasında kullanabilirsiniz. Ancak, tüm bildirimlerin aynı derlemede ve aynı ad alanında olması gerekir.  
+ You can divide the definition of a type among several declarations by using the `Partial` keyword. You can use as many partial declarations as you want, in as many different source files as you want. However, all the declarations must be in the same assembly and the same namespace.  
   
 > [!NOTE]
-> Visual Basic, genellikle kısmi sınıflarda uygulanan *Kısmi yöntemleri*destekler. Daha fazla bilgi için bkz. [kısmi Yöntemler](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) ve [Sub deyimleri](../../../visual-basic/language-reference/statements/sub-statement.md).  
+> Visual Basic supports *partial methods*, which are typically implemented in partial classes. For more information, see [Partial Methods](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) and [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,53 +45,53 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 |Terim|Tanım|  
 |---|---|  
-|`attrlist`|İsteğe bağlı. Bu tür için uygulanan özniteliklerin listesi. [Öznitelik listesini](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraç içine almalısınız (`< >`).|  
-|`accessmodifier`|İsteğe bağlı. Hangi kodun bu türe erişebileceğini belirtir. [Visual Basic erişim düzeylerine](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)bakın.|  
-|`Shadows`|İsteğe bağlı. Bkz. [gölgeler](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|İsteğe bağlı. Bkz. [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|İsteğe bağlı. [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)öğesine bakın.|  
-|`name`|Gerekli. Bu türün adı. Aynı türdeki tüm diğer kısmi bildirimlerde tanımlanan adla eşleşmelidir.|  
-|`Of`|İsteğe bağlı. Bunun genel bir tür olduğunu belirtir. Bkz. [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
-|`typelist`|[Kullanıyorsanız gereklidir.](../../../visual-basic/language-reference/statements/of-clause.md) Bkz. [tür listesi](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|İsteğe bağlı. Bkz. [Inherits açıklaması](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
-|`classname`|@No__t-0 kullanırsanız gereklidir. Bu sınıfın türetildiği sınıfın veya arabirimin adı.|  
-|`Implements`|İsteğe bağlı. Bkz. [Implements açıklaması](../../../visual-basic/language-reference/statements/implements-statement.md).|  
-|`interfacenames`|@No__t-0 kullanırsanız gereklidir. Bu türün uyguladığı arabirimlerin adları.|  
-|`variabledeclarations`|İsteğe bağlı. Türün ek değişkenlerini ve olaylarını bildiren deyimler.|  
-|`proceduredeclarations`|İsteğe bağlı. Tür için ek yordamlar bildiren ve tanımlayan deyimler.|  
-|`End Class` veya `End Structure`|Bu kısmi `Class` veya `Structure` tanımını sonlandırır.|  
+|`attrlist`|İsteğe bağlı. List of attributes that apply to this type. You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets (`< >`).|  
+|`accessmodifier`|İsteğe bağlı. Specifies what code can access this type. See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|İsteğe bağlı. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`MustInherit`|İsteğe bağlı. See [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
+|`NotInheritable`|İsteğe bağlı. See [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
+|`name`|Gerekli. Name of this type. Must match the name defined in all other partial declarations of the same type.|  
+|`Of`|İsteğe bağlı. Specifies that this is a generic type. See [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
+|`typelist`|Required if you use [Of](../../../visual-basic/language-reference/statements/of-clause.md). See [Type List](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|İsteğe bağlı. See [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`classname`|Required if you use `Inherits`. The name of the class or interface from which this class derives.|  
+|`Implements`|İsteğe bağlı. See [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`interfacenames`|Required if you use `Implements`. The names of the interfaces this type implements.|  
+|`variabledeclarations`|İsteğe bağlı. Statements which declare additional variables and events for the type.|  
+|`proceduredeclarations`|İsteğe bağlı. Statements which declare and define additional procedures for the type.|  
+|`End Class` or `End Structure`|Ends this partial `Class` or `Structure` definition.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Visual Basic, oluşturulan kodu ayrı kaynak dosyalardaki Kullanıcı tarafından yazılan koddan ayırmak için kısmi sınıf tanımları kullanır. Örneğin, **Windows form tasarımcısı** <xref:System.Windows.Forms.Form> gibi denetimler için kısmi sınıfları tanımlar. Bu denetimlerde oluşturulan kodu değiştirmemelisiniz.  
+ Visual Basic uses partial-class definitions to separate generated code from user-authored code in separate source files. For example, the **Windows Form Designer** defines partial classes for controls such as <xref:System.Windows.Forms.Form>. You should not modify the generated code in these controls.  
   
- Değiştirici kullanımı ve devralmayla ilgili olanlar gibi sınıf, yapı, arabirim ve modül oluşturma kuralları kısmi bir tür oluştururken geçerlidir.  
+ All the rules for class, structure, interface, and module creation, such as those for modifier usage and inheritance, apply when creating a partial type.  
   
 ## <a name="best-practices"></a>En İyi Yöntemler  
   
-- Normal koşullarda, tek bir türün geliştirilmesini iki veya daha fazla bildirim arasında bölmemelisiniz. Bu nedenle, çoğu durumda `Partial` anahtar sözcüğüne gerek kalmaz.  
+- Under normal circumstances, you should not split the development of a single type across two or more declarations. Therefore, in most cases you do not need the `Partial` keyword.  
   
-- Okunabilirlik için, bir türün her kısmi bildirimi `Partial` anahtar sözcüğünü içermelidir. Derleyici en çok bir kısmi bildirimin anahtar sözcüğünü atmasını sağlar; iki veya daha fazla atlarsanız, derleyici bir hata bildirir.  
+- For readability, every partial declaration of a type should include the `Partial` keyword. The compiler allows at most one partial declaration to omit the keyword; if two or more omit it the compiler signals an error.  
   
 ## <a name="behavior"></a>Davranış  
   
-- **Bildirimlerin birleşimi.** Derleyici, türü tüm kısmi bildirimlerinin birleşimi olarak değerlendirir. Her kısmi tanımdaki her değiştirici tüm tür için geçerlidir ve her kısmi tanımdan her üye tüm tür için kullanılabilir.  
+- **Union of Declarations.** The compiler treats the type as the union of all its partial declarations. Every modifier from every partial definition applies to the entire type, and every member from every partial definition is available to the entire type.  
   
-- **Modüllerde kısmi türler Için tür yükseltmeye Izin verilmiyor.** Kısmi Tanım bir modülün içindeyse, bu türden yükseltme otomatik olarak doldurulur. Böyle bir durumda, kısmi tanımlar kümesi beklenmedik sonuçlara ve hatta derleyici hatalarına neden olabilir. Daha fazla bilgi için bkz. [yükseltme türü](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
+- **Type Promotion Not Allowed For Partial Types in Modules.** If a partial definition is inside a module, type promotion of that type is automatically defeated. In such a case, a set of partial definitions can cause unexpected results and even compiler errors. For more information, see [Type Promotion](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
-     Derleyici, kısmi tanımları yalnızca kendi tam yolları özdeş olduğunda birleştirir.  
+     The compiler merges partial definitions only when their fully qualified paths are identical.  
   
- @No__t-0 anahtar sözcüğü şu bağlamlarda kullanılabilir:  
+ The `Partial` keyword can be used in these contexts:  
   
  [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
  [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, her biri farklı bir `Sub` yordamı tanımlayan `sampleClass` sınıfının tanımını iki bildirime ayırır.  
+ The following example splits the definition of class `sampleClass` into two declarations, each of which defines a different `Sub` procedure.  
   
  [!code-vb[VbVbalrKeywords#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#3)]  
   
- Yukarıdaki örnekteki iki kısmi tanım aynı kaynak dosyasında veya iki farklı kaynak dosyada olabilir.  
+ The two partial definitions in the preceding example could be in the same source file or in two different source files.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -99,5 +99,5 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 - [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Tür Yükseltme](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
-- [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Kısmi Yöntemler](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

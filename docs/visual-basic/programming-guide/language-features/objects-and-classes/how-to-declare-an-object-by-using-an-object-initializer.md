@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) nesne Başlatıcı kullanarak nesne bildirme'
+title: 'Nasıl yapılır: Nesne Başlatıcı Kullanarak Nesne Bildirme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring objects using object initializer
@@ -7,61 +7,61 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 850e20fe8b5b6bfd392c80c87950a81a1a8a5c24
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae04d338b61027c3917ad3a7f62ff40f0a95e53e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755204"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347131"
 ---
-# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Nasıl yapılır: (Visual Basic) nesne Başlatıcı kullanarak nesne bildirme
-Nesne başlatıcıları bildirme ve tek bir deyimde bir sınıfın bir örneğini sağlar. Ayrıca, parametreli bir kurucu çağırmadan aynı anda bir veya daha fazla üye örneğinin başlatabilirsiniz.  
+# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Nasıl yapılır: Nesne Başlatıcı Kullanarak Bir Nesne Bildirme (Visual Basic)
+Object initializers enable you to declare and instantiate an instance of a class in a single statement. In addition, you can initialize one or more members of the instance at the same time, without invoking a parameterized constructor.  
   
- Adlandırılmış bir türün bir örneğini oluşturmak için bir nesne Başlatıcısı kullandığınızda, belirttiğiniz sırada belirtilen üyeleri başlatma sonrasında sınıfı için parametresiz oluşturucu çağrılır.  
+ When you use an object initializer to create an instance of a named type, the parameterless constructor for the class is called, followed by initialization of designated members in the order you specify.  
   
- Aşağıdaki yordam bir örneğini oluşturmak nasıl gösterir bir `Student` üç farklı yolla sınıfı. Sınıfı, ad, Soyadı ve diğerlerinin yanı sıra sınıf yıl özelliklerine sahiptir. Her üç bildirimlerinin yeni bir örneğini oluşturur `Student`, özelliğiyle `First` "Michael için", özellik kümesi `Last` "Tucker için" ve diğer tüm üyeleri varsayılan değerlerine ayarlayın. Yordamdaki her bildirimin sonucu nesne Başlatıcı kullanmaz aşağıdaki örneğe eşdeğerdir.  
+ The following procedure shows how to create an instance of a `Student` class in three different ways. The class has first name, last name, and class year properties, among others. Each of the three declarations creates a new instance of `Student`, with property `First` set to "Michael", property `Last` set to "Tucker", and all other members set to their default values. The result of each declaration in the procedure is equivalent to the following example, which does not use an object initializer.  
   
  [!code-vb[VbVbalrObjectInit#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#20)]  
   
- Bir uygulama için `Student` sınıfı [nasıl yapılır: Öğe listesi oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Sınıfı oluşturan ve listesini oluşturmak için bu konudan kod kopyalayabilirsiniz `Student` çalışmak için nesneleri.  
+ For an implementation of the `Student` class, see [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). You can copy the code from that topic to set up the class and create a list of `Student` objects to work with.  
   
-### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>Bir nesne Başlatıcı kullanarak adlandırılmış bir sınıfın bir nesnesi oluşturmak için  
+### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>To create an object of a named class by using an object initializer  
   
-1. Bir oluşturucu kullanmayı planladığınız gibi bildirimi başlar.  
+1. Begin the declaration as if you planned to use a constructor.  
   
      `Dim student1 As New Student`  
   
-2. Anahtar sözcüğü yazın `With`, küme ayraçları içinde bir başlatma listesi tarafından izlenen.  
+2. Type the keyword `With`, followed by an initialization list in braces.  
   
      `Dim student1 As New Student With { <initialization list> }`  
   
-3. Başlatma listesinde başlatın ve bir başlangıç değeri için atamak istediğiniz her bir özellik içerir. Özelliğin adı öncesinde bir nokta.  
+3. In the initialization list, include each property that you want to initialize and assign an initial value to it. The name of the property is preceded by a period.  
   
      [!code-vb[VbVbalrObjectInit#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#21)]  
   
-     Bir veya daha fazla sınıf üyelerini başlatabilirsiniz.  
+     You can initialize one or more members of the class.  
   
-4. Alternatif olarak, yeni bir sınıf örneği bildirebilir ve bir değer atayın. İlk olarak, bir örneğini bildirmeniz `Student`:  
+4. Alternatively, you can declare a new instance of the class and then assign a value to it. First, declare an instance of `Student`:  
   
      `Dim student2 As Student`  
   
-5. Bir örneğinin oluşturulmasını başlatmak `Student` normal şekilde.  
+5. Begin the creation of an instance of `Student` in the normal way.  
   
      `Dim student2 As Student = New Student`  
   
-6. Tür `With` ve ardından bir veya daha fazla üyesi yeni örneği başlatmak için nesne Başlatıcı.  
+6. Type `With` and then an object initializer to initialize one or more members of the new instance.  
   
      [!code-vb[VbVbalrObjectInit#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#22)]  
   
-7. Tanım önceki adımda gt;(yok) basitleştirebilirsiniz `As Student`. Bunu yaparsanız, derleyici belirleyen `student3` örneğidir `Student` yerel tür çıkarımı kullanarak.  
+7. You can simplify the definition in the previous step by omitting `As Student`. If you do this, the compiler determines that `student3` is an instance of `Student` by using local type inference.  
   
      [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
-     Daha fazla bilgi için [yerel tür çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+     For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Nasıl yapılır: Öğe listesi oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
-- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Nasıl yapılır: Öğe Listesi Oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

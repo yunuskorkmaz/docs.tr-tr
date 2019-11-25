@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: Sorgu (LINQ) (Visual Basic) bir dizin ağacında yineleyen dosyalar için'
+title: 'Nasıl yapılır: Bir Dizin Ağacında Yineleyen Dosyalar için Sorgu (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: 192f279a74cfbbd35e67d8f166a3d35248409459
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9be0d1e7be70569e1fac0033414400a85071bfec
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586340"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347700"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Nasıl yapılır: Sorgu (LINQ) (Visual Basic) bir dizin ağacında yineleyen dosyalar için
-Bazen aynı ada sahip dosyaları birden fazla klasöründe bulunabilir. Örneğin, Visual Studio yükleme klasörü altında çeşitli klasörleri readme.htm dosyasına sahip. Bu örnekte, böyle yinelenen dosya adları belirtilen kök klasörü altında sorgulamak gösterilmektedir. İkinci örnek boyutu için dosyaları sorgulama işlemini gösterir ve ayrıca oluşturma kez Eşleştir.  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>How to: Query for Duplicate Files in a Directory Tree (LINQ) (Visual Basic)
+Sometimes files that have the same name may be located in more than one folder. For example, under the Visual Studio installation folder, several folders have a readme.htm file. This example shows how to query for such duplicate file names under a specified root folder. The second example shows how to query for files whose size and creation times also match.  
   
 ## <a name="example"></a>Örnek  
   
@@ -98,12 +98,12 @@ Module QueryDuplicateFileNames
 End Module  
 ```  
   
- İlk sorgu, bir eşleşme belirlemek için basit bir anahtarı kullanır; Bu, aynı ada sahip olan ancak içerikleri farklı olabilir. dosyaları bulur. İkinci sorgu, üç özelliklerini karşı eşleşecek şekilde bir bileşik anahtarı kullanır. <xref:System.IO.FileInfo> nesne. Bu sorgu ortamınızdakilerle benzer veya aynı içerik ve aynı ada sahip dosyaları bulmak çok daha yüksektir.  
+ The first query uses a simple key to determine a match; this finds files that have the same name but whose contents might be different. The second query uses a compound key to match against three properties of the <xref:System.IO.FileInfo> object. This query is much more likely to find files that have the same name and similar or identical content.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
-VB.NET konsol uygulama projesi oluşturmak bir `Imports` System.Linq ad alanı bildirimi.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Objects'in (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
