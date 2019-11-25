@@ -8,22 +8,22 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 15f4d10a70dc3c6abd32869f5b7b0006a799b4bf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 78f6418160b80096214c6e37268a5a90498d6d4d
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698037"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089246"
 ---
-# <a name="module-element-network-settings"></a><span data-ttu-id="b02ff-102">\<module > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="b02ff-102">\<module> Element (Network Settings)</span></span>
-<span data-ttu-id="b02ff-103">Uygulamaya yeni bir proxy modülü ekler.</span><span class="sxs-lookup"><span data-stu-id="b02ff-103">Adds a new proxy module to the application.</span></span>  
-  
-[<span data-ttu-id="b02ff-104"> **\<Yapılandırma >** </span><span class="sxs-lookup"><span data-stu-id="b02ff-104">**\<configuration>**</span></span>](../configuration-element.md)  
-<span data-ttu-id="b02ff-105">&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="b02ff-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>  
-<span data-ttu-id="b02ff-106">&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="b02ff-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)</span></span>  
-<span data-ttu-id="b02ff-107">&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<module >**</span><span class="sxs-lookup"><span data-stu-id="b02ff-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<module>**</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="b02ff-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b02ff-108">Syntax</span></span>  
+# <a name="module-element-network-settings"></a><span data-ttu-id="512fa-102">\<Module > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="512fa-102">\<module> Element (Network Settings)</span></span>
+<span data-ttu-id="512fa-103">Uygulamaya yeni bir proxy modülü ekler.</span><span class="sxs-lookup"><span data-stu-id="512fa-103">Adds a new proxy module to the application.</span></span>  
+
+<span data-ttu-id="512fa-104">[ **\<configuration >** ](../configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="512fa-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="512fa-105">[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;</span><span class="sxs-lookup"><span data-stu-id="512fa-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>\
+<span data-ttu-id="512fa-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="512fa-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)</span></span>\
+<span data-ttu-id="512fa-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<modülü >**</span><span class="sxs-lookup"><span data-stu-id="512fa-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<module>**</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="512fa-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="512fa-108">Syntax</span></span>  
   
 ```xml  
 <module   
@@ -31,34 +31,34 @@ ms.locfileid: "71698037"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b02ff-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="b02ff-109">Attributes and Elements</span></span>  
- <span data-ttu-id="b02ff-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="b02ff-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="512fa-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="512fa-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="512fa-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="512fa-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b02ff-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="b02ff-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="512fa-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="512fa-111">Attributes</span></span>  
   
-|<span data-ttu-id="b02ff-112">**Öznitelik**</span><span class="sxs-lookup"><span data-stu-id="b02ff-112">**Attribute**</span></span>|<span data-ttu-id="b02ff-113">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="b02ff-113">**Description**</span></span>|  
+|<span data-ttu-id="512fa-112">**Öznitelik**</span><span class="sxs-lookup"><span data-stu-id="512fa-112">**Attribute**</span></span>|<span data-ttu-id="512fa-113">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="512fa-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`type`|<span data-ttu-id="b02ff-114">Proxy 'yi uygulayan, tam nitelikli tür adı (<xref:System.Type.FullName%2A> özelliği tarafından belirtilir) ve derleme adı (<xref:System.Reflection.Assembly.FullName%2A> özelliği ile belirtilir).</span><span class="sxs-lookup"><span data-stu-id="b02ff-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements the proxy.</span></span>|  
+|`type`|<span data-ttu-id="512fa-114">Proxy 'yi uygulayan, tam nitelikli tür adı (<xref:System.Type.FullName%2A> özelliği tarafından belirtilir) ve derleme adı (<xref:System.Reflection.Assembly.FullName%2A> özelliği tarafından belirtilir).</span><span class="sxs-lookup"><span data-stu-id="512fa-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements the proxy.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="b02ff-115">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="b02ff-115">Child Elements</span></span>  
- <span data-ttu-id="b02ff-116">Yok.</span><span class="sxs-lookup"><span data-stu-id="b02ff-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="512fa-115">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="512fa-115">Child Elements</span></span>  
+ <span data-ttu-id="512fa-116">Yok.</span><span class="sxs-lookup"><span data-stu-id="512fa-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="b02ff-117">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="b02ff-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="512fa-117">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="512fa-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="b02ff-118">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="b02ff-118">**Element**</span></span>|<span data-ttu-id="b02ff-119">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="b02ff-119">**Description**</span></span>|  
+|<span data-ttu-id="512fa-118">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="512fa-118">**Element**</span></span>|<span data-ttu-id="512fa-119">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="512fa-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="b02ff-120">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="b02ff-120">defaultProxy</span></span>](defaultproxy-element-network-settings.md)|<span data-ttu-id="b02ff-121">Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="b02ff-121">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
+|[<span data-ttu-id="512fa-120">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="512fa-120">defaultProxy</span></span>](defaultproxy-element-network-settings.md)|<span data-ttu-id="512fa-121">Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="512fa-121">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b02ff-122">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b02ff-122">Remarks</span></span>  
- <span data-ttu-id="b02ff-123">@No__t-0 öğesi, <xref:System.Net.IWebProxy> arabirimini uygulayan proxy sınıflarını kaydeder.</span><span class="sxs-lookup"><span data-stu-id="b02ff-123">The `module` element registers proxy classes that implement the <xref:System.Net.IWebProxy> interface.</span></span> <span data-ttu-id="b02ff-124">Proxy sınıfı kaydedildikten sonra, desteklenen proxy aracılığıyla bilgi istemek için `module` kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="b02ff-124">After registering the proxy class, `module` can be used to request information through the supported proxy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="512fa-122">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="512fa-122">Remarks</span></span>  
+ <span data-ttu-id="512fa-123">`module` öğesi <xref:System.Net.IWebProxy> arabirimini uygulayan proxy sınıflarını kaydeder.</span><span class="sxs-lookup"><span data-stu-id="512fa-123">The `module` element registers proxy classes that implement the <xref:System.Net.IWebProxy> interface.</span></span> <span data-ttu-id="512fa-124">Proxy sınıfına kaydolduktan sonra, `module` desteklenen proxy aracılığıyla bilgi istemek için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="512fa-124">After registering the proxy class, `module` can be used to request information through the supported proxy.</span></span>  
   
- <span data-ttu-id="b02ff-125">@No__t-0 özniteliğinin değeri, modülün sınıf adı ve karşılık gelen dinamik bağlantı kitaplığının (DLL) adı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="b02ff-125">The value for the `type` attribute should be the class name of the module and the name of its corresponding Dynamic Link Library (DLL).</span></span>  
+ <span data-ttu-id="512fa-125">`type` özniteliğin değeri, modülün sınıf adı ve karşılık gelen dinamik bağlantı kitaplığının (DLL) adı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="512fa-125">The value for the `type` attribute should be the class name of the module and the name of its corresponding Dynamic Link Library (DLL).</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="b02ff-126">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="b02ff-126">Configuration Files</span></span>  
- <span data-ttu-id="b02ff-127">Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="b02ff-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="512fa-126">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="512fa-126">Configuration Files</span></span>  
+ <span data-ttu-id="512fa-127">Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="512fa-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b02ff-128">Örnek</span><span class="sxs-lookup"><span data-stu-id="b02ff-128">Example</span></span>  
- <span data-ttu-id="b02ff-129">Aşağıdaki örnek bir özel proxy sınıfı kaydeder.</span><span class="sxs-lookup"><span data-stu-id="b02ff-129">The following example registers a custom proxy class.</span></span>  
+## <a name="example"></a><span data-ttu-id="512fa-128">Örnek</span><span class="sxs-lookup"><span data-stu-id="512fa-128">Example</span></span>  
+ <span data-ttu-id="512fa-129">Aşağıdaki örnek bir özel proxy sınıfı kaydeder.</span><span class="sxs-lookup"><span data-stu-id="512fa-129">The following example registers a custom proxy class.</span></span>  
   
 ```xml  
 <configuration>  
@@ -72,7 +72,7 @@ ms.locfileid: "71698037"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b02ff-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b02ff-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="512fa-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="512fa-130">See also</span></span>
 
 - <xref:System.Net.IWebProxy?displayProperty=nameWithType>
-- [<span data-ttu-id="b02ff-131">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="b02ff-131">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="512fa-131">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="512fa-131">Network Settings Schema</span></span>](index.md)

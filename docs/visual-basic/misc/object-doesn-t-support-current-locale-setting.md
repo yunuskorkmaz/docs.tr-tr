@@ -1,23 +1,23 @@
 ---
-title: Nesnesi, geçerli yerel ayarı (Visual Basic) desteklemiyor
+title: Object doesn't support current locale setting
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID447
 ms.assetid: 580a26bc-479a-4569-9246-10dcf0251bcb
-ms.openlocfilehash: f5ad91b7af38c0db39d98a4073521d763fb56c2d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2c0a178ff5242f021684c63f9ac74f7a4438fc8c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591846"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353889"
 ---
-# <a name="object-doesnt-support-current-locale-setting-visual-basic"></a><span data-ttu-id="d8d3a-102">Nesnesi, geçerli yerel ayarı (Visual Basic) desteklemiyor</span><span class="sxs-lookup"><span data-stu-id="d8d3a-102">Object doesn't support current locale setting (Visual Basic)</span></span>
-<span data-ttu-id="d8d3a-103">Yerel ayar geçerli proje için desteği olmayan bir nesne erişmeyi denedi.</span><span class="sxs-lookup"><span data-stu-id="d8d3a-103">You tried to access an object that does not support the locale setting for the current project.</span></span>  
+# <a name="object-doesnt-support-current-locale-setting-visual-basic"></a><span data-ttu-id="2a80f-102">Object doesn't support current locale setting (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2a80f-102">Object doesn't support current locale setting (Visual Basic)</span></span>
+<span data-ttu-id="2a80f-103">You tried to access an object that does not support the locale setting for the current project.</span><span class="sxs-lookup"><span data-stu-id="2a80f-103">You tried to access an object that does not support the locale setting for the current project.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="d8d3a-104">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="d8d3a-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="2a80f-104">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="2a80f-104">To correct this error</span></span>  
   
-- <span data-ttu-id="d8d3a-105">Nesne destekleyen hangi yerel ayarlarını kontrol edin.</span><span class="sxs-lookup"><span data-stu-id="d8d3a-105">Check which locale settings the object supports.</span></span>  
+- <span data-ttu-id="2a80f-105">Check which locale settings the object supports.</span><span class="sxs-lookup"><span data-stu-id="2a80f-105">Check which locale settings the object supports.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8d3a-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d8d3a-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2a80f-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2a80f-106">See also</span></span>
 
-- [<span data-ttu-id="d8d3a-107">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="d8d3a-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="2a80f-107">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="2a80f-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

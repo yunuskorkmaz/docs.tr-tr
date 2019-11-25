@@ -1,34 +1,36 @@
 ---
-title: "Nasıl yapılır: Visual Basic'te uygulama ayarlarını okuma"
+title: 'How to: Read Application Settings'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reading application settings
 - My.Settings object [Visual Basic], reading application settings
 - application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
-ms.openlocfilehash: e7d909563ca7e991a51c2f921b5248aa587a83d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04726381f8d285ae61045d1624b3b41b7f47e491
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014082"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329565"
 ---
-# <a name="how-to-read-application-settings-in-visual-basic"></a><span data-ttu-id="73b61-102">Nasıl yapılır: Visual Basic'te uygulama ayarlarını okuma</span><span class="sxs-lookup"><span data-stu-id="73b61-102">How to: Read Application Settings in Visual Basic</span></span>
-<span data-ttu-id="73b61-103">Bir kullanıcı ayarı üzerinde ayarın özelliğine erişerek edinebilirsiniz `My.Settings` nesne.</span><span class="sxs-lookup"><span data-stu-id="73b61-103">You can read a user setting by accessing the setting's property on the `My.Settings` object.</span></span>  
+# <a name="how-to-read-application-settings-in-visual-basic"></a><span data-ttu-id="bfd2d-102">Nasıl Yapılır: Visual Basic'te Uygulama Ayarlarını Okuma</span><span class="sxs-lookup"><span data-stu-id="bfd2d-102">How to: Read Application Settings in Visual Basic</span></span>
+
+<span data-ttu-id="bfd2d-103">You can read a user setting by accessing the setting's property on the `My.Settings` object.</span><span class="sxs-lookup"><span data-stu-id="bfd2d-103">You can read a user setting by accessing the setting's property on the `My.Settings` object.</span></span>  
   
- <span data-ttu-id="73b61-104">`My.Settings` Nesnesi, her ayarın bir özellik olarak kullanıma sunar.</span><span class="sxs-lookup"><span data-stu-id="73b61-104">The `My.Settings` object exposes each setting as a property.</span></span> <span data-ttu-id="73b61-105">Özellik adı ayar adı ile aynıdır ve özellik türü ayar türü ile aynıdır.</span><span class="sxs-lookup"><span data-stu-id="73b61-105">The property name is the same as the setting name, and the property type is the same as the setting type.</span></span> <span data-ttu-id="73b61-106">Ayarın **kapsam** özelliği salt okunur; olup olmadığını gösterir özellik için bir **uygulama** kapsam ayardır sırasında özelliği salt okunur bir **kullanıcı** kapsam ayarı okunur-yazılır olmuştur.</span><span class="sxs-lookup"><span data-stu-id="73b61-106">The setting's **Scope** indicates if the property is read-only; the property for an **Application** scope setting is read-only, while the property for a **User** scope setting is read-write.</span></span> <span data-ttu-id="73b61-107">Daha fazla bilgi için [My.Settings nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md).</span><span class="sxs-lookup"><span data-stu-id="73b61-107">For more information, see [My.Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md).</span></span>  
+ <span data-ttu-id="bfd2d-104">The `My.Settings` object exposes each setting as a property.</span><span class="sxs-lookup"><span data-stu-id="bfd2d-104">The `My.Settings` object exposes each setting as a property.</span></span> <span data-ttu-id="bfd2d-105">The property name is the same as the setting name, and the property type is the same as the setting type.</span><span class="sxs-lookup"><span data-stu-id="bfd2d-105">The property name is the same as the setting name, and the property type is the same as the setting type.</span></span> <span data-ttu-id="bfd2d-106">The setting's **Scope** indicates if the property is read-only; the property for an **Application** scope setting is read-only, while the property for a **User** scope setting is read-write.</span><span class="sxs-lookup"><span data-stu-id="bfd2d-106">The setting's **Scope** indicates if the property is read-only; the property for an **Application** scope setting is read-only, while the property for a **User** scope setting is read-write.</span></span> <span data-ttu-id="bfd2d-107">For more information, see [My.Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md).</span><span class="sxs-lookup"><span data-stu-id="bfd2d-107">For more information, see [My.Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="73b61-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="73b61-108">Example</span></span>  
- <span data-ttu-id="73b61-109">Bu örnek değeri görüntüler `Nickname` ayarı.</span><span class="sxs-lookup"><span data-stu-id="73b61-109">This example displays the value of the `Nickname` setting.</span></span>  
+## <a name="example"></a><span data-ttu-id="bfd2d-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="bfd2d-108">Example</span></span>  
+
+ <span data-ttu-id="bfd2d-109">This example displays the value of the `Nickname` setting.</span><span class="sxs-lookup"><span data-stu-id="bfd2d-109">This example displays the value of the `Nickname` setting.</span></span>  
   
  [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
   
- <span data-ttu-id="73b61-110">Bu örneğin çalışması, uygulamanız olmalıdır bir `Nickname` biriminin türü `String`.</span><span class="sxs-lookup"><span data-stu-id="73b61-110">For this example to work, your application must have a `Nickname` setting, of type `String`.</span></span> <span data-ttu-id="73b61-111">Daha fazla bilgi için [uygulama ayarlarını yönetme (.NET)](/visualstudio/ide/managing-application-settings-dotnet).</span><span class="sxs-lookup"><span data-stu-id="73b61-111">For more information, see [Managing Application Settings (.NET)](/visualstudio/ide/managing-application-settings-dotnet).</span></span>  
+ <span data-ttu-id="bfd2d-110">For this example to work, your application must have a `Nickname` setting, of type `String`.</span><span class="sxs-lookup"><span data-stu-id="bfd2d-110">For this example to work, your application must have a `Nickname` setting, of type `String`.</span></span> <span data-ttu-id="bfd2d-111">For more information, see [Managing Application Settings (.NET)](/visualstudio/ide/managing-application-settings-dotnet).</span><span class="sxs-lookup"><span data-stu-id="bfd2d-111">For more information, see [Managing Application Settings (.NET)](/visualstudio/ide/managing-application-settings-dotnet).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="73b61-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="73b61-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bfd2d-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bfd2d-112">See also</span></span>
 
-- [<span data-ttu-id="73b61-113">My.Settings Nesnesi</span><span class="sxs-lookup"><span data-stu-id="73b61-113">My.Settings Object</span></span>](../../../../visual-basic/language-reference/objects/my-settings-object.md)
-- [<span data-ttu-id="73b61-114">Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını değiştirme</span><span class="sxs-lookup"><span data-stu-id="73b61-114">How to: Change User Settings in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
-- [<span data-ttu-id="73b61-115">Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını kalıcı yapma</span><span class="sxs-lookup"><span data-stu-id="73b61-115">How to: Persist User Settings in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
-- [<span data-ttu-id="73b61-116">Nasıl yapılır: Visual Basic'te kullanıcı ayarları için özellik kılavuzu oluşturma</span><span class="sxs-lookup"><span data-stu-id="73b61-116">How to: Create Property Grids for User Settings in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
-- [<span data-ttu-id="73b61-117">Uygulama Ayarlarını Yönetme</span><span class="sxs-lookup"><span data-stu-id="73b61-117">Managing Application Settings (.NET)</span></span>](/visualstudio/ide/managing-application-settings-dotnet)
+- [<span data-ttu-id="bfd2d-113">My.Settings Nesnesi</span><span class="sxs-lookup"><span data-stu-id="bfd2d-113">My.Settings Object</span></span>](../../../../visual-basic/language-reference/objects/my-settings-object.md)
+- [<span data-ttu-id="bfd2d-114">How to: Change User Settings in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bfd2d-114">How to: Change User Settings in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [<span data-ttu-id="bfd2d-115">How to: Persist User Settings in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bfd2d-115">How to: Persist User Settings in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [<span data-ttu-id="bfd2d-116">How to: Create Property Grids for User Settings in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bfd2d-116">How to: Create Property Grids for User Settings in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [<span data-ttu-id="bfd2d-117">Uygulama Ayarlarını Yönetme</span><span class="sxs-lookup"><span data-stu-id="bfd2d-117">Managing Application Settings (.NET)</span></span>](/visualstudio/ide/managing-application-settings-dotnet)

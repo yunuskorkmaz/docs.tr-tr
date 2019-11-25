@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: Ilgili öğeleri bul (XPath-LINQ to XML) (C#)'
+title: İlgili öğeleri bulma (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 2aa3f6c6c2c2ac327ff2dffc206cdd294e12d7a2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cdc281d0b08ee7b7f93ac28b14e82fa113a3379d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253639"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141025"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="4ae5c-102">Nasıl yapılır: Ilgili öğeleri bul (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="4ae5c-102">How to: Find Related Elements (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="4ae5c-103">Bu konu başlığı altında, başka bir öğenin değeri tarafından başvurulan bir özniteliği seçme öğesinin nasıl alınacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="4ae5c-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="e0c11-102">İlgili öğeleri bulma (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="e0c11-102">How to find related elements (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="e0c11-103">Bu konu başlığı altında, başka bir öğenin değeri tarafından başvurulan bir özniteliği seçme öğesinin nasıl alınacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="e0c11-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
   
- <span data-ttu-id="4ae5c-104">XPath ifadesi:</span><span class="sxs-lookup"><span data-stu-id="4ae5c-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="e0c11-104">XPath ifadesi:</span><span class="sxs-lookup"><span data-stu-id="e0c11-104">The XPath expression is:</span></span>  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
-## <a name="example"></a><span data-ttu-id="4ae5c-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="4ae5c-105">Example</span></span>  
- <span data-ttu-id="4ae5c-106">Bu örnek 12 `Order` . öğesini bulur ve ardından o sipariş için müşteriyi bulur.</span><span class="sxs-lookup"><span data-stu-id="4ae5c-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
+## <a name="example"></a><span data-ttu-id="e0c11-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="e0c11-105">Example</span></span>  
+ <span data-ttu-id="e0c11-106">Bu örnek, 12. `Order` öğesini bulur ve ardından o sipariş için müşteriyi bulur.</span><span class="sxs-lookup"><span data-stu-id="e0c11-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
   
- <span data-ttu-id="4ae5c-107">.NET 'teki bir listede dizin oluşturmanın ' sıfır ' tabanlı olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="4ae5c-107">Note that indexing into a list in .NET is 'zero' based.</span></span> <span data-ttu-id="4ae5c-108">XPath koşulunda bir düğümler koleksiyonuna dizin oluşturma işlemi ' One ' tabanlıdır.</span><span class="sxs-lookup"><span data-stu-id="4ae5c-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="4ae5c-109">Bu örnek, bu farkı yansıtır.</span><span class="sxs-lookup"><span data-stu-id="4ae5c-109">This example reflects this difference.</span></span>  
+ <span data-ttu-id="e0c11-107">.NET 'teki bir listede dizin oluşturmanın ' sıfır ' tabanlı olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="e0c11-107">Note that indexing into a list in .NET is 'zero' based.</span></span> <span data-ttu-id="e0c11-108">XPath koşulunda bir düğümler koleksiyonuna dizin oluşturma işlemi ' One ' tabanlıdır.</span><span class="sxs-lookup"><span data-stu-id="e0c11-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="e0c11-109">Bu örnek, bu farkı yansıtır.</span><span class="sxs-lookup"><span data-stu-id="e0c11-109">This example reflects this difference.</span></span>  
   
- <span data-ttu-id="4ae5c-110">Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="4ae5c-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
+ <span data-ttu-id="e0c11-110">Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="e0c11-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  
@@ -64,7 +64,7 @@ else
 Console.WriteLine(customer1);  
 ```  
   
- <span data-ttu-id="4ae5c-111">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="4ae5c-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="e0c11-111">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="e0c11-111">This example produces the following output:</span></span>  
   
 ```output  
 Results are identical  

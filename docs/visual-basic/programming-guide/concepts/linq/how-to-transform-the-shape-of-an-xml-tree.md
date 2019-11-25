@@ -1,29 +1,29 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) XML ağacının şeklini dönüştürme'
+title: 'How to: Transform the Shape of an XML Tree'
 ms.date: 07/20/2015
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
-ms.openlocfilehash: 067bf56b8dff994080ba78147d992b97a56867cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67ffd5f50572c0deba75c664ffd0e12ecfabf730
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61615005"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332415"
 ---
-# <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a><span data-ttu-id="c7df3-102">Nasıl yapılır: (Visual Basic) XML ağacının şeklini dönüştürme</span><span class="sxs-lookup"><span data-stu-id="c7df3-102">How to: Transform the Shape of an XML Tree (Visual Basic)</span></span>
-<span data-ttu-id="c7df3-103">*Şekli* alt öğe adları, öznitelik adları ve özellikleri, hiyerarşinin bir XML'sini belge başvuruyor.</span><span class="sxs-lookup"><span data-stu-id="c7df3-103">The *shape* of an XML document refers to its element names, attribute names, and the characteristics of its hierarchy.</span></span>  
+# <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a><span data-ttu-id="a0449-102">How to: Transform the Shape of an XML Tree (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0449-102">How to: Transform the Shape of an XML Tree (Visual Basic)</span></span>
+<span data-ttu-id="a0449-103">The *shape* of an XML document refers to its element names, attribute names, and the characteristics of its hierarchy.</span><span class="sxs-lookup"><span data-stu-id="a0449-103">The *shape* of an XML document refers to its element names, attribute names, and the characteristics of its hierarchy.</span></span>  
   
- <span data-ttu-id="c7df3-104">Bazen, bir XML belgesi şeklini değiştirmek gerekir.</span><span class="sxs-lookup"><span data-stu-id="c7df3-104">Sometimes you will have to change the shape of an XML document.</span></span> <span data-ttu-id="c7df3-105">Örneğin, var olan bir XML belgesi farklı öğe ve öznitelik adları gerektiren başka bir sisteme gönderme gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="c7df3-105">For example, you might have to send an existing XML document to another system that requires different element and attribute names.</span></span> <span data-ttu-id="c7df3-106">Belgede, silme ve gerekli, ancak kullanarak işlevsel oluşturma sonuçları daha okunabilir ve sürdürülebilir kod öğeleri yeniden adlandırma gidilemedi.</span><span class="sxs-lookup"><span data-stu-id="c7df3-106">You could go through the document, deleting and renaming elements as required, but using functional construction results in more readable and maintainable code.</span></span> <span data-ttu-id="c7df3-107">İşlevsel oluşturma hakkında daha fazla bilgi için bkz: [işlevsel oluşturma (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="c7df3-107">For more information about functional construction, see [Functional Construction (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="a0449-104">Sometimes you will have to change the shape of an XML document.</span><span class="sxs-lookup"><span data-stu-id="a0449-104">Sometimes you will have to change the shape of an XML document.</span></span> <span data-ttu-id="a0449-105">For example, you might have to send an existing XML document to another system that requires different element and attribute names.</span><span class="sxs-lookup"><span data-stu-id="a0449-105">For example, you might have to send an existing XML document to another system that requires different element and attribute names.</span></span> <span data-ttu-id="a0449-106">You could go through the document, deleting and renaming elements as required, but using functional construction results in more readable and maintainable code.</span><span class="sxs-lookup"><span data-stu-id="a0449-106">You could go through the document, deleting and renaming elements as required, but using functional construction results in more readable and maintainable code.</span></span> <span data-ttu-id="a0449-107">For more information about functional construction, see [Functional Construction (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="a0449-107">For more information about functional construction, see [Functional Construction (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="c7df3-108">İlk örnek, XML belgesi kuruluş değiştirir.</span><span class="sxs-lookup"><span data-stu-id="c7df3-108">The first example changes the organization of the XML document.</span></span> <span data-ttu-id="c7df3-109">Bu karmaşık öğe ağacında bir konumdan diğerine taşır.</span><span class="sxs-lookup"><span data-stu-id="c7df3-109">It moves complex elements from one location in the tree to another.</span></span>  
+ <span data-ttu-id="a0449-108">The first example changes the organization of the XML document.</span><span class="sxs-lookup"><span data-stu-id="a0449-108">The first example changes the organization of the XML document.</span></span> <span data-ttu-id="a0449-109">It moves complex elements from one location in the tree to another.</span><span class="sxs-lookup"><span data-stu-id="a0449-109">It moves complex elements from one location in the tree to another.</span></span>  
   
- <span data-ttu-id="c7df3-110">Bu konudaki ikinci örnek, kaynak belgedeki daha farklı bir şekilde bir XML belgesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="c7df3-110">The second example in this topic creates an XML document with a different shape than the source document.</span></span> <span data-ttu-id="c7df3-111">Öğe adları büyük küçük harfleri değiştirir, bazı öğelerin yeniden adlandırır ve bazı öğeleri kaynak ağaç dönüştürülmüş ağaç dışında bırakır.</span><span class="sxs-lookup"><span data-stu-id="c7df3-111">It changes the casing of the element names, renames some elements, and leaves some elements from the source tree out of the transformed tree.</span></span>  
+ <span data-ttu-id="a0449-110">The second example in this topic creates an XML document with a different shape than the source document.</span><span class="sxs-lookup"><span data-stu-id="a0449-110">The second example in this topic creates an XML document with a different shape than the source document.</span></span> <span data-ttu-id="a0449-111">It changes the casing of the element names, renames some elements, and leaves some elements from the source tree out of the transformed tree.</span><span class="sxs-lookup"><span data-stu-id="a0449-111">It changes the casing of the element names, renames some elements, and leaves some elements from the source tree out of the transformed tree.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c7df3-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="c7df3-112">Example</span></span>  
- <span data-ttu-id="c7df3-113">Aşağıdaki kod, katıştırılmış sorgu ifadeleri kullanarak bir XML dosyası şeklini değiştirir.</span><span class="sxs-lookup"><span data-stu-id="c7df3-113">The following code changes the shape of an XML file using embedded query expressions.</span></span>  
+## <a name="example"></a><span data-ttu-id="a0449-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="a0449-112">Example</span></span>  
+ <span data-ttu-id="a0449-113">The following code changes the shape of an XML file using embedded query expressions.</span><span class="sxs-lookup"><span data-stu-id="a0449-113">The following code changes the shape of an XML file using embedded query expressions.</span></span>  
   
- <span data-ttu-id="c7df3-114">Bu örnekte kaynak XML belgesinde içeren bir `Customers` öğesi altında `Root` tüm müşteriler içeren öğe.</span><span class="sxs-lookup"><span data-stu-id="c7df3-114">The source XML document in this example contains a `Customers` element under the `Root` element that contains all customers.</span></span> <span data-ttu-id="c7df3-115">Ayrıca içerdiği bir `Orders` öğesi altında `Root` tüm siparişleri içeren öğe.</span><span class="sxs-lookup"><span data-stu-id="c7df3-115">It also contains an `Orders` element under the `Root` element that contains all orders.</span></span> <span data-ttu-id="c7df3-116">Bu örnekte, her bir müşterinin siparişlerini içerdiği yeni bir XML ağacı oluşturur bir `Orders` öğesiyle `Customer` öğesi.</span><span class="sxs-lookup"><span data-stu-id="c7df3-116">This example creates a new XML tree in which the orders for each customer are contained in an `Orders` element within the `Customer` element.</span></span> <span data-ttu-id="c7df3-117">Özgün belgeyi de içeren bir `CustomerID` öğesinde `Order` öğesi; yeniden şekillendirilmiş belgeden kaldırılması bu öğe olacaktır.</span><span class="sxs-lookup"><span data-stu-id="c7df3-117">The original document also contains a `CustomerID` element in the `Order` element; this element will be removed from the re-shaped document.</span></span>  
+ <span data-ttu-id="a0449-114">The source XML document in this example contains a `Customers` element under the `Root` element that contains all customers.</span><span class="sxs-lookup"><span data-stu-id="a0449-114">The source XML document in this example contains a `Customers` element under the `Root` element that contains all customers.</span></span> <span data-ttu-id="a0449-115">It also contains an `Orders` element under the `Root` element that contains all orders.</span><span class="sxs-lookup"><span data-stu-id="a0449-115">It also contains an `Orders` element under the `Root` element that contains all orders.</span></span> <span data-ttu-id="a0449-116">This example creates a new XML tree in which the orders for each customer are contained in an `Orders` element within the `Customer` element.</span><span class="sxs-lookup"><span data-stu-id="a0449-116">This example creates a new XML tree in which the orders for each customer are contained in an `Orders` element within the `Customer` element.</span></span> <span data-ttu-id="a0449-117">The original document also contains a `CustomerID` element in the `Order` element; this element will be removed from the re-shaped document.</span><span class="sxs-lookup"><span data-stu-id="a0449-117">The original document also contains a `CustomerID` element in the `Order` element; this element will be removed from the re-shaped document.</span></span>  
   
- <span data-ttu-id="c7df3-118">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="c7df3-118">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="a0449-118">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="a0449-118">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -53,7 +53,7 @@ Dim newCustOrd = _
 Console.WriteLine(newCustOrd)  
 ```  
   
- <span data-ttu-id="c7df3-119">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="c7df3-119">This code produces the following output:</span></span>  
+ <span data-ttu-id="a0449-119">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="a0449-119">This code produces the following output:</span></span>  
   
 ```xml  
         <Root>  
@@ -89,12 +89,12 @@ Console.WriteLine(newCustOrd)
 . . .  
 ```  
   
-## <a name="example"></a><span data-ttu-id="c7df3-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="c7df3-120">Example</span></span>  
- <span data-ttu-id="c7df3-121">Bu örnek, bazı öğelerin yeniden adlandırır ve bazı öznitelikler öğesine dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="c7df3-121">This example renames some elements and converts some attributes to elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="a0449-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="a0449-120">Example</span></span>  
+ <span data-ttu-id="a0449-121">This example renames some elements and converts some attributes to elements.</span><span class="sxs-lookup"><span data-stu-id="a0449-121">This example renames some elements and converts some attributes to elements.</span></span>  
   
- <span data-ttu-id="c7df3-122">Kod çağrıları `ConvertAddress`, listesini döndürür <xref:System.Xml.Linq.XElement> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="c7df3-122">The code calls `ConvertAddress`, which returns a list of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="c7df3-123">Yöntem bağımsız değişkeninin belirleyen bir sorgudur `Address` karmaşık bir öğe olduğu `Type` öznitelik değerine sahip `"Shipping"`.</span><span class="sxs-lookup"><span data-stu-id="c7df3-123">The argument to the method is a query that determines the `Address` complex element where the `Type` attribute has a value of `"Shipping"`.</span></span>  
+ <span data-ttu-id="a0449-122">The code calls `ConvertAddress`, which returns a list of <xref:System.Xml.Linq.XElement> objects.</span><span class="sxs-lookup"><span data-stu-id="a0449-122">The code calls `ConvertAddress`, which returns a list of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="a0449-123">The argument to the method is a query that determines the `Address` complex element where the `Type` attribute has a value of `"Shipping"`.</span><span class="sxs-lookup"><span data-stu-id="a0449-123">The argument to the method is a query that determines the `Address` complex element where the `Type` attribute has a value of `"Shipping"`.</span></span>  
   
- <span data-ttu-id="c7df3-124">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="c7df3-124">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="a0449-124">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="a0449-124">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
   
 ```vb  
 Function ConvertAddress(ByVal add As XElement) As IEnumerable(Of XElement)  
@@ -127,7 +127,7 @@ Sub Main()
 End Sub  
 ```  
   
- <span data-ttu-id="c7df3-125">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="c7df3-125">This code produces the following output:</span></span>  
+ <span data-ttu-id="a0449-125">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="a0449-125">This code produces the following output:</span></span>  
   
 ```xml  
 <PO>  
@@ -142,6 +142,6 @@ End Sub
 </PO>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c7df3-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c7df3-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a0449-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a0449-126">See also</span></span>
 
-- [<span data-ttu-id="c7df3-127">Projeksiyonlar ve Dönüşümler (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7df3-127">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="a0449-127">Projections and Transformations (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0449-127">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

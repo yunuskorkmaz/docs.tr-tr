@@ -1,17 +1,17 @@
 ---
-title: Özel öznitelikler oluşturma (Visual Basic)
+title: Özel Öznitelikler Oluşturma
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 3b1b03f69229bd4d824d6fff734b83400c2aab44
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 773a3e8e974f37a1554892dd3441c115681c5bae
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524292"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350153"
 ---
-# <a name="creating-custom-attributes-visual-basic"></a><span data-ttu-id="dd782-102">Özel öznitelikler oluşturma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd782-102">Creating Custom Attributes (Visual Basic)</span></span>
+# <a name="creating-custom-attributes-visual-basic"></a><span data-ttu-id="e9962-102">Creating Custom Attributes (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9962-102">Creating Custom Attributes (Visual Basic)</span></span>
 
-<span data-ttu-id="dd782-103">Meta verilerde hızlı ve kolay bir şekilde öznitelik tanımları tanımlamayı sağlayan, <xref:System.Attribute> doğrudan veya dolaylı olarak türetilen bir sınıf olan bir öznitelik sınıfı tanımlayarak kendi özel öznitelerinizi oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="dd782-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span></span> <span data-ttu-id="dd782-104">Türleri, türünü yazan programcının adıyla etiketlemek istediğinizi varsayalım.</span><span class="sxs-lookup"><span data-stu-id="dd782-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span></span> <span data-ttu-id="dd782-105">Özel bir `Author` öznitelik sınıfı tanımlayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="dd782-105">You might define a custom `Author` attribute class:</span></span>
+<span data-ttu-id="e9962-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span><span class="sxs-lookup"><span data-stu-id="e9962-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span></span> <span data-ttu-id="e9962-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span><span class="sxs-lookup"><span data-stu-id="e9962-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span></span> <span data-ttu-id="e9962-105">You might define a custom `Author` attribute class:</span><span class="sxs-lookup"><span data-stu-id="e9962-105">You might define a custom `Author` attribute class:</span></span>
 
 ```vb
 <System.AttributeUsage(System.AttributeTargets.Class Or
@@ -27,9 +27,9 @@ Public Class Author
 End Class
 ```
 
-<span data-ttu-id="dd782-106">Sınıf adı özniteliğin adı, `Author`.</span><span class="sxs-lookup"><span data-stu-id="dd782-106">The class name is the attribute's name, `Author`.</span></span> <span data-ttu-id="dd782-107">@No__t_0 türetilir, bu nedenle özel bir öznitelik sınıfıdır.</span><span class="sxs-lookup"><span data-stu-id="dd782-107">It is derived from `System.Attribute`, so it is a custom attribute class.</span></span> <span data-ttu-id="dd782-108">Oluşturucunun parametreleri özel özniteliğin konumsal parametreleridir.</span><span class="sxs-lookup"><span data-stu-id="dd782-108">The constructor's parameters are the custom attribute's positional parameters.</span></span> <span data-ttu-id="dd782-109">Bu örnekte, `name` konumsal bir parametredir.</span><span class="sxs-lookup"><span data-stu-id="dd782-109">In this example, `name` is a positional parameter.</span></span> <span data-ttu-id="dd782-110">Tüm genel okuma/yazma alanları veya özellikleri parametreler olarak adlandırılır.</span><span class="sxs-lookup"><span data-stu-id="dd782-110">Any public read-write fields or properties are named parameters.</span></span> <span data-ttu-id="dd782-111">Bu durumda, `version` tek parametre olarak adlandırılır.</span><span class="sxs-lookup"><span data-stu-id="dd782-111">In this case, `version` is the only named parameter.</span></span> <span data-ttu-id="dd782-112">@No__t_1 özniteliğini yalnızca sınıf ve `Structure` bildirimlerinde geçerli hale getirmek için `AttributeUsage` özniteliğinin kullanımını unutmayın.</span><span class="sxs-lookup"><span data-stu-id="dd782-112">Note the use of the `AttributeUsage` attribute to make the `Author` attribute valid only on class and `Structure` declarations.</span></span>
+<span data-ttu-id="e9962-106">The class name is the attribute's name, `Author`.</span><span class="sxs-lookup"><span data-stu-id="e9962-106">The class name is the attribute's name, `Author`.</span></span> <span data-ttu-id="e9962-107">It is derived from `System.Attribute`, so it is a custom attribute class.</span><span class="sxs-lookup"><span data-stu-id="e9962-107">It is derived from `System.Attribute`, so it is a custom attribute class.</span></span> <span data-ttu-id="e9962-108">The constructor's parameters are the custom attribute's positional parameters.</span><span class="sxs-lookup"><span data-stu-id="e9962-108">The constructor's parameters are the custom attribute's positional parameters.</span></span> <span data-ttu-id="e9962-109">In this example, `name` is a positional parameter.</span><span class="sxs-lookup"><span data-stu-id="e9962-109">In this example, `name` is a positional parameter.</span></span> <span data-ttu-id="e9962-110">Any public read-write fields or properties are named parameters.</span><span class="sxs-lookup"><span data-stu-id="e9962-110">Any public read-write fields or properties are named parameters.</span></span> <span data-ttu-id="e9962-111">In this case, `version` is the only named parameter.</span><span class="sxs-lookup"><span data-stu-id="e9962-111">In this case, `version` is the only named parameter.</span></span> <span data-ttu-id="e9962-112">Note the use of the `AttributeUsage` attribute to make the `Author` attribute valid only on class and `Structure` declarations.</span><span class="sxs-lookup"><span data-stu-id="e9962-112">Note the use of the `AttributeUsage` attribute to make the `Author` attribute valid only on class and `Structure` declarations.</span></span>
 
-<span data-ttu-id="dd782-113">Bu yeni özniteliği şu şekilde kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="dd782-113">You could use this new attribute as follows:</span></span>
+<span data-ttu-id="e9962-113">You could use this new attribute as follows:</span><span class="sxs-lookup"><span data-stu-id="e9962-113">You could use this new attribute as follows:</span></span>
 
 ```vb
 <Author("P. Ackerman", Version:=1.1)>
@@ -38,7 +38,7 @@ Class SampleClass
 End Class
 ```
 
-<span data-ttu-id="dd782-114">`AttributeUsage` adlandırılmış bir parametreye sahiptir ve bu, özel bir özniteliği tek veya çoklu kullanımı yapmak için `AllowMultiple`.</span><span class="sxs-lookup"><span data-stu-id="dd782-114">`AttributeUsage` has a named parameter, `AllowMultiple`, with which you can make a custom attribute single-use or multiuse.</span></span> <span data-ttu-id="dd782-115">Aşağıdaki kod örneğinde, Multiuse özniteliği oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="dd782-115">In the following code example, a multiuse attribute is created.</span></span>
+<span data-ttu-id="e9962-114">`AttributeUsage` has a named parameter, `AllowMultiple`, with which you can make a custom attribute single-use or multiuse.</span><span class="sxs-lookup"><span data-stu-id="e9962-114">`AttributeUsage` has a named parameter, `AllowMultiple`, with which you can make a custom attribute single-use or multiuse.</span></span> <span data-ttu-id="e9962-115">In the following code example, a multiuse attribute is created.</span><span class="sxs-lookup"><span data-stu-id="e9962-115">In the following code example, a multiuse attribute is created.</span></span>
 
 ```vb
 ' multiuse attribute
@@ -49,7 +49,7 @@ Public Class Author
     Inherits System.Attribute
 ```
 
-<span data-ttu-id="dd782-116">Aşağıdaki kod örneğinde, aynı türde birden çok öznitelik bir sınıfa uygulanır.</span><span class="sxs-lookup"><span data-stu-id="dd782-116">In the following code example, multiple attributes of the same type are applied to a class.</span></span>
+<span data-ttu-id="e9962-116">In the following code example, multiple attributes of the same type are applied to a class.</span><span class="sxs-lookup"><span data-stu-id="e9962-116">In the following code example, multiple attributes of the same type are applied to a class.</span></span>
 
 ```vb
 <Author("P. Ackerman", Version:=1.1),
@@ -61,14 +61,14 @@ End Class
 ```
 
 > [!NOTE]
-> <span data-ttu-id="dd782-117">Öznitelik sınıfınız bir özellik içeriyorsa, bu özellik oku-yaz olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="dd782-117">If your attribute class contains a property, that property must be read-write.</span></span>
+> <span data-ttu-id="e9962-117">If your attribute class contains a property, that property must be read-write.</span><span class="sxs-lookup"><span data-stu-id="e9962-117">If your attribute class contains a property, that property must be read-write.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="dd782-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dd782-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9962-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e9962-118">See also</span></span>
 
 - <xref:System.Reflection>
-- [<span data-ttu-id="dd782-119">Visual Basic programlama kılavuzu</span><span class="sxs-lookup"><span data-stu-id="dd782-119">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
-- [<span data-ttu-id="dd782-120">Özel Öznitelikler Yazma</span><span class="sxs-lookup"><span data-stu-id="dd782-120">Writing Custom Attributes</span></span>](../../../../standard/attributes/writing-custom-attributes.md)
-- [<span data-ttu-id="dd782-121">Yansıma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd782-121">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [<span data-ttu-id="dd782-122">Öznitelikler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd782-122">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
-- [<span data-ttu-id="dd782-123">Yansıma kullanarak özniteliklere erişme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd782-123">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-- [<span data-ttu-id="dd782-124">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd782-124">AttributeUsage (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [<span data-ttu-id="e9962-119">Visual Basic Programming Guide</span><span class="sxs-lookup"><span data-stu-id="e9962-119">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
+- [<span data-ttu-id="e9962-120">Özel Öznitelikler Yazma</span><span class="sxs-lookup"><span data-stu-id="e9962-120">Writing Custom Attributes</span></span>](../../../../standard/attributes/writing-custom-attributes.md)
+- [<span data-ttu-id="e9962-121">Reflection (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9962-121">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [<span data-ttu-id="e9962-122">Attributes (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9962-122">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
+- [<span data-ttu-id="e9962-123">Accessing Attributes by Using Reflection (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9962-123">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [<span data-ttu-id="e9962-124">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9962-124">AttributeUsage (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

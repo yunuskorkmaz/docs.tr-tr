@@ -3,6 +3,8 @@
   items:
     - name: Temel Güvenlik Kavramları
       href: key-security-concepts.md
+    - name: .NET Core FIPS uyumluluğu
+      href: fips-compliance.md
     - name: Rol Tabanlı Güvenlik
       href: role-based-security.md
       items:

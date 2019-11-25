@@ -14,7 +14,7 @@
           href: migration/differences-from-net-framework.md
         - name: Framework’ten Core’a geçiş
           href: migration/convert-project-from-net-framework.md
-    - name: Temel Konular
+    - name: Temeller
       items:
         - name: XAML
           href: fundamentals/xaml.md
@@ -26,6 +26,8 @@
               href: fundamentals/styles-templates-overview.md
             - name: Stil oluşturma ve uygulama
               href: fundamentals/styles-templates-create-apply-style.md
+            - name: Şablon oluşturma ve uygulama
+              href: themes/how-to-create-apply-template.md
     - name: Verilerle çalışma
       items:
         - name: Veri bağlamaya genel bakış

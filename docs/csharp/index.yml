@@ -1,0 +1,113 @@
+### YamlMime:Landing
+title: C#belgelerle
+summary: .NET platformunda C# programlama dilini kullanarak herhangi bir uygulamayı yazmayı öğrenin.
+metadata:
+  title: C#docs-kullanmaya başlayın, Öğreticiler, başvuru.
+  description: Programlama C# hakkında bilgi edinin-başlangıç geliştiricileri, yeni C#, geliştiriciler ve deneyimli C# /.NET geliştiricileri
+  ms.topic: landing-page
+  author: billwagner
+  ms.author: wiwagn
+  ms.date: 11/19/2019
+  ms.openlocfilehash: 5af88b8a75ecd3cfca7c93b08cb262f161498903
+  ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/21/2019
+  ms.locfileid: "74284019"
+landingContent:
+- title: İçindeki programı öğreninC#
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Çevrimiçi, etkileşimli Merhaba Dünya
+      url: tutorials/intro-to-csharp/hello-world.yml
+    - text: İçindeki matematik ve sayılarC#
+      url: tutorials/intro-to-csharp/numbers-in-csharp.yml
+    - text: Giriş öğreticileri
+      url: tutorials/intro-to-csharp/index.md
+    - text: Visual C# Studio ile uygulama oluşturma
+      url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-console
+  - linkListType: video
+    links:
+    - text: Nedir C#?
+      url: https://channel9.msdn.com/Series/CSharp-101/What-is-C/player
+    - text: C#101 video serisi
+      url: https://aka.ms/dotnet3-csharp
+  - linkListType: download
+    links:
+    - text: .NET Core SDK indirin
+      url: https://dotnet.microsoft.com/download
+- title: C#Temelleri
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Turuna katılınC#
+      url: tour-of-csharp/index.md
+    - text: C# programı içinde
+      url: programming-guide/inside-a-program/index.md
+    - text: Ana() ve komut satırı bağımsız değişkenleri
+      url: programming-guide/main-and-command-args/index.md
+  - linkListType: concept
+    links:
+    - text: C# Ve .net tür sistemi
+      url: programming-guide/types/index.md
+    - text: Dil ile Tümleşik Sorgu (LINQ)
+      url: linq/index.md
+    - text: Async ve await
+      url: programming-guide/concepts/async/index.md
+  - linkListType: tutorial
+    links:
+    - text: Nesne odaklı devralma
+      url: tutorials/inheritance.md
+    - text: Verileri sorgulamak için LINQ kullanma
+      url: tutorials/working-with-linq.md
+    - text: Dize ilişkilendirmeyi kullanarak metin biçimlendirme
+      url: tutorials/string-interpolation.md
+    - text: Tüm öğreticilere gözatamazsınız
+      url: tutorials/index.md
+- title: C# 8,0 sürümündeki yeni özellikler
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: C# 8,0 sürümündeki yenilikler
+      url: whats-new/csharp-8.md
+  - linkListType: overview
+    links:
+    - text: Desen eşleştirme
+      url: pattern-matching.md
+    - text: Boş değer atanabilir başvuru türleri
+      url: nullable-references.md
+  - linkListType: concept
+    links:
+    - text: Null değer alabilme için API 'Lere açıklama ekleme
+      url: nullable-attributes.md
+  - linkListType: tutorial
+    links:
+    - text: Zaman uyumsuz akışlar tüketme ve oluşturma
+      url: tutorials/generate-consume-asynchronous-stream.md
+    - text: Null yapılabilir başvuru türleriyle geliştirme
+      url: tutorials/nullable-reference-types.md
+    - text: Mevcut kodu Nullable başvuru türlerini kullanacak şekilde yükselt
+      url: tutorials/upgrade-to-nullable-references.md
+    - text: Daha açıklayıcı algoritmalar için model eşleştirmeyi kullanın
+      url: tutorials/pattern-matching.md
+    - text: Varsayılan arabirim üyeleriyle güvenli bir şekilde sürüm arabirimleri
+      url: tutorials/default-interface-methods-versions.md
+    - text: Varsayılan arabirim üyeleri ile işlevsellikten karıştırma
+      url: tutorials/mixins-with-default-interface-methods.md
+    - text: Aralıklar ve dizinler kullanarak alt kümeler ile çalışma
+      url: tutorials/ranges-indexes.md
+- title: C# dili başvurusu
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Dil başvurusu
+      url: language-reference/index.md
+    - text: C# anahtar sözcükleri
+      url: language-reference/keywords/index.md
+    - text: C# işleçleri
+      url: language-reference/operators/index.md
+    - text: Dil sürümünü yapılandırma
+      url: language-reference/configure-language-version.md
+    - text: C# dili belirtimi
+      url: ../../_csharplang/spec/introduction.md
