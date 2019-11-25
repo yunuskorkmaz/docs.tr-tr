@@ -1,5 +1,5 @@
 ---
-title: Dizilerle İlgili Sorun Giderme (Visual Basic)
+title: Dizilerle İlgili Sorun Giderme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting arrays
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 69d5294eacc59718adb1b0a226594d2cf69273f5
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 3c50c68c2a39aa04cff2dd43b5dfde709aec290f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913460"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349074"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Dizilerle İlgili Sorun Giderme (Visual Basic)
-Bu sayfada dizilerle çalışırken ortaya çıkabilecek bazı yaygın sorunlar listelenir.  
+This page lists some common problems that can occur when working with arrays.  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Derleme hataları bildirme ve bir dizi başlatma  
- Yanlış anlama bildirme, oluşturma ve dizileri başlatma kurallarını, gelen derleme hataları oluşabilir. Hataların en yaygın nedenleri şunlardır:  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Compilation Errors Declaring and Initializing an Array  
+ Compilation errors can arise from misunderstanding of the rules for declaring, creating, and initializing arrays. The most common causes of errors are the following:  
   
-- Sağlama bir [New işleci](../../../../visual-basic/language-reference/operators/new-operator.md) boyutun uzunluğu dizi değişken bildiriminde belirttikten sonra yan tümcesi. Aşağıdaki kod satırları bu türünde geçersiz bildirimi gösterir.  
+- Supplying a [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) clause after specifying dimension lengths in the array variable declaration. The following code lines show invalid declarations of this type.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ Bu sayfada dizilerle çalışırken ortaya çıkabilecek bazı yaygın sorunlar 
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
-- Birden çok basit bir dizi en üst düzey dizi boyut uzunlukları belirtme. Aşağıdaki kod satırı, bu tür geçersiz bir bildirimi gösterir.  
+- Specifying dimension lengths for more than the top-level array of a jagged array. The following code line shows an invalid declaration of this type.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
-- Atlama `New` öğe değerlerini belirlerken anahtar sözcüğü. Aşağıdaki kod satırı, bu tür geçersiz bir bildirimi gösterir.  
+- Omitting the `New` keyword when specifying the element values. The following code line shows an invalid declaration of this type.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
-- Sağlama bir `New` yan tümcesi küme ayraçları olmadan (`{}`). Aşağıdaki kod satırları bu türünde geçersiz bildirimi gösterir.  
+- Supplying a `New` clause without braces (`{}`). The following code lines show invalid declarations of this type.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -48,16 +48,16 @@ Bu sayfada dizilerle çalışırken ortaya çıkabilecek bazı yaygın sorunlar 
   
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
-## <a name="accessing-an-array-out-of-bounds"></a>Bir dizi je mimo rozsah erişme  
- Dizi başlatma işlemi, her boyut için üst limit ve alt sınırı atar. Her bir öğe dizinin erişim, geçerli dizin veya her boyut için alt simge belirtmeniz gerekir. Herhangi bir dizini altında kendi alt sınır veya üst sınır, yukarıda ise bir <xref:System.IndexOutOfRangeException> özel durum sonuçları. Çalışma zamanında bir hata oluşmaz derleyici bu tür bir hataya algılayamaz.  
+## <a name="accessing-an-array-out-of-bounds"></a>Accessing an Array Out of Bounds  
+ The process of initializing an array assigns an upper bound and a lower bound to each dimension. Every access to an element of the array must specify a valid index, or subscript, for every dimension. If any index is below its lower bound or above its upper bound, an <xref:System.IndexOutOfRangeException> exception results. The compiler cannot detect such an error, so an error occurs at run time.  
   
-### <a name="determining-bounds"></a>Sınırları belirleme  
- Başka bir bileşen, kodunuzu bir dizi geçerse, örneğin bir yordam bağımsız değişken olarak, bu dizinin boyutu veya boyutlarının uzunluklarının bilmezsiniz. Herhangi bir öğe erişmeye çalışmadan önce her zaman bir dizinin her boyutunun üst sınırını belirlemeniz gerekir. Dizi dışındaki bir Visual Basic bazı yollarla oluşturulduysa `New` yan tümcesi alt sınırı 0 dışında bir şey olabilir ve de bu alt sınır belirlemek en güvenlisidir.  
+### <a name="determining-bounds"></a>Determining Bounds  
+ If another component passes an array to your code, for example as a procedure argument, you do not know the size of that array or the lengths of its dimensions. You should always determine the upper bound for every dimension of an array before you attempt to access any elements. If the array has been created by some means other than a Visual Basic `New` clause, the lower bound might be something other than 0, and it is safest to determine that lower bound as well.  
   
-### <a name="specifying-the-dimension"></a>Boyut belirtme  
- Çok boyutlu bir dizinin sınırları belirlerken, boyut nasıl belirttiğiniz ilgileniriz. `dimension` Parametrelerinin <xref:System.Array.GetLowerBound%2A> ve <xref:System.Array.GetUpperBound%2A> yöntemleri 0 tabanlıdır; çalışırken `Rank` Visual Basic parametrelerinin <xref:Microsoft.VisualBasic.Information.LBound%2A> ve <xref:Microsoft.VisualBasic.Information.UBound%2A> işlevleri 1 tabanlı.  
+### <a name="specifying-the-dimension"></a>Specifying the Dimension  
+ When determining the bounds of a multidimensional array, take care how you specify the dimension. The `dimension` parameters of the <xref:System.Array.GetLowerBound%2A> and <xref:System.Array.GetUpperBound%2A> methods are 0-based, while the `Rank` parameters of the Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> and <xref:Microsoft.VisualBasic.Information.UBound%2A> functions are 1-based.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Nasıl yapılır: Visual Basic'te dizi değişkeni başlatma](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

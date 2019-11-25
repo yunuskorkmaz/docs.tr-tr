@@ -1,5 +1,5 @@
 ---
-title: İç İçe Geçmiş Denetim Yapıları (Visual Basic)
+title: İç İçe Geçmiş Denetim Yapıları
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, control flow
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: f559bf603605873f1b9155e9a96cb367e5420343
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5818b13661fb4415c6f531b741b8a963a80bd2b8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941682"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348145"
 ---
 # <a name="nested-control-structures-visual-basic"></a>İç İçe Geçmiş Denetim Yapıları (Visual Basic)
-Denetim deyimlerini diğer denetim deyimlerinin içine yerleştirebilirsiniz. Örneğin, bir `If...Then...Else` `For...Next` döngü içindeki bir blok. Başka bir denetim ifadesinin içine yerleştirilmiş bir denetim ifadesinin *iç içe*olduğu söylenir.  
+You can place control statements inside other control statements, for example an `If...Then...Else` block within a `For...Next` loop. A control statement placed inside another control statement is said to be *nested*.  
   
-## <a name="nesting-levels"></a>İç içe düzeyler  
- Visual Basic içindeki denetim yapıları, istediğiniz kadar sayıda düzeyde iç içe olabilir. İç içe yapıları, her birinin gövdesini girintileyerek daha okunaklı hale getirmek yaygın bir uygulamadır. Tümleşik geliştirme ortamı (IDE) Düzenleyicisi bunu otomatik olarak yapar.  
+## <a name="nesting-levels"></a>Nesting Levels  
+ Control structures in Visual Basic can be nested to as many levels as you want. It is common practice to make nested structures more readable by indenting the body of each one. The integrated development environment (IDE) editor automatically does this.  
   
- Aşağıdaki örnekte, yordam `sumRows` matrisin her satırının pozitif öğelerini birlikte ekler.  
+ In the following example, the procedure `sumRows` adds together the positive elements of each row of the matrix.  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- Yukarıdaki `Next` örnekte, ilk ifade iç `For` döngüyü kapatır ve son `Next` ifade dıştaki `For` döngüyü kapatır.  
+ In the preceding example, the first `Next` statement closes the inner `For` loop and the last `Next` statement closes the outer `For` loop.  
   
- Benzer şekilde, iç `If` içe geçmiş deyimlerde `End If` deyimler, en yakın önceki `If` ifadeye otomatik olarak uygulanır. İç `Do` içe döngüler benzer bir şekilde çalışarak en içteki `Do` ifadesiyle eşleşen `Loop` en içteki deyimle birlikte çalışır.  
+ Likewise, in nested `If` statements, the `End If` statements automatically apply to the nearest prior `If` statement. Nested `Do` loops work in a similar fashion, with the innermost `Loop` statement matching the innermost `Do` statement.  
   
 > [!NOTE]
-> Birçok denetim yapısında, bir anahtar sözcüğe tıkladığınızda yapıdaki tüm anahtar sözcükler vurgulanır. `If` Örneğin, bir `ElseIf` `Then` `Else` yapıyatıkladığınızda`End If` ,,,, ve oluşturma içindeki tüm örnekleri vurgulanır.`If` `If...Then...Else` Sonraki veya önceki vurgulanmış anahtar sözcüğe geçmek için CTRL + SHIFT + aşağı ok veya CTRL + SHIFT + yukarı ok tuşlarına basın.  
+> For many control structures, when you click a keyword, all of the keywords in the structure are highlighted. For instance, when you click `If` in an `If...Then...Else` construction, all instances of `If`, `Then`, `ElseIf`, `Else`, and `End If` in the construction are highlighted. To move to the next or previous highlighted keyword, press CTRL+SHIFT+DOWN ARROW or CTRL+SHIFT+UP ARROW.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Farklı türlerdeki denetim yapılarını iç içe geçirme  
- Bir tür denetim yapısını başka bir tür içinde iç içe geçirebilirsiniz. Aşağıdaki örnek, `For Each` döngüsünün içinde `With` bir blok `With` ve blok içindeki iç `If` içe bloklar kullanır.  
+## <a name="nesting-different-kinds-of-control-structures"></a>Nesting Different Kinds of Control Structures  
+ You can nest one kind of control structure within another kind. The following example uses a `With` block inside a `For Each` loop and nested `If` blocks inside the `With` block.  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -64,12 +64,12 @@ For Each ctl As System.Windows.Forms.Control In Me.Controls
 Next ctl  
 ```  
   
-## <a name="overlapping-control-structures"></a>Çakışan denetim yapıları  
- Denetim yapılarıyla çakışamaz. Bu, herhangi bir iç içe yapının bir sonraki en içteki yapıda tamamen dahil olması gerektiği anlamına gelir. Örneğin, `For` döngü iç `With` blok sonlandırılmadan önce sonlandırdığı için aşağıdaki düzenleme geçersizdir.  
+## <a name="overlapping-control-structures"></a>Overlapping Control Structures  
+ You cannot overlap control structures. This means that any nested structure must be completely contained within the next innermost structure. For example, the following arrangement is invalid because the `For` loop terminates before the inner `With` block terminates.  
   
- ![Geçersiz iç içe geçme örneğini gösteren diyagram.](./media/nested-control-structures/example-invalid-nesting.gif) 
+ ![Diagram that shows an example of invalid nesting.](./media/nested-control-structures/example-invalid-nesting.gif) 
   
- Visual Basic derleyici, bu tür çakışan denetim yapılarını algılar ve derleme zamanı hatasına işaret eder.  
+ The Visual Basic compiler detects such overlapping control structures and signals a compile-time error.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
