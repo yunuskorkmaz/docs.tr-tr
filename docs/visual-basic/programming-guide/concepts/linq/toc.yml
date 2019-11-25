@@ -65,7 +65,7 @@
           href: how-to-query-for-sentences-that-contain-a-specified-set-of-words.md
         - name: 'Nasıl yapılır: Bir Dizedeki Karakterleri Sorgulama (LINQ)'
           href: how-to-query-for-characters-in-a-string-linq.md
-        - name: 'Nasıl yapılır: Normal İfadelerle LINQ Sorgularını Birleştirme'
+        - name: Normal ifadelerle LINQ sorgularını birleştirme
           href: how-to-combine-linq-queries-with-regular-expressions.md
         - name: 'Nasıl yapılır: İki Liste Arasında Ayarlanmış Farkı Bulma (LINQ)'
           href: how-to-find-the-set-difference-between-two-lists-linq.md
@@ -103,7 +103,7 @@
           href: how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md
         - name: 'Nasıl yapılır: Bir Dizin Ağacında Yineleyen Dosyalar için Sorgu (LINQ)'
           href: how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
-        - name: 'Nasıl yapılır: Bir Klasördeki Dosyaların İçeriğini Sorgulama (LINQ)'
+        - name: Bir klasördeki dosyaların içeriklerini sorgulama (LINQ)
           href: how-to-query-the-contents-of-files-in-a-folder-linq.md
         - name: 'Nasıl yapılır: LINQ ile ArrayList Sorgulama'
           href: how-to-query-an-arraylist-with-linq.md

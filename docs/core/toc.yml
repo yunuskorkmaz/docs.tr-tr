@@ -2,6 +2,46 @@
   href: index.md
 - name: .NET Core hakkında
   href: about.md
+- name: Yükleme
+  items:
+    - name: Genel Bakış
+      href: install/index.md
+    - name: SDK yükleme
+      href: install/sdk.md
+    - name: Çalışma zamanı yükleme
+      href: install/runtime.md
+    - name: Desteklenen işletim sistemi ve bağımlılıklar
+      href: install/dependencies.md
+    - name: .NET Core sürümlerini denetleme
+      href: install/how-to-detect-installed-versions.md
+    - name: Linux paket yöneticileri
+      items:
+        - name: RHEL 7
+          href: install/linux-package-manager-rhel7.md
+        - name: RHEL 8.1
+          href: install/linux-package-manager-rhel81.md
+        - name: Ubuntu 16.04
+          href: install/linux-package-manager-ubuntu-1604.md
+        - name: Ubuntu 18.04
+          href: install/linux-package-manager-ubuntu-1804.md
+        - name: Ubuntu 19.04
+          href: install/linux-package-manager-ubuntu-1904.md
+        - name: Debian 9
+          href: install/linux-package-manager-debian9.md
+        - name: Debian 10
+          href: install/linux-package-manager-debian10.md
+        - name: Fedora 29
+          href: install/linux-package-manager-fedora29.md
+        - name: Fedora 30
+          href: install/linux-package-manager-fedora30.md
+        - name: CentOS 7
+          href: install/linux-package-manager-centos7.md
+        - name: OpenSUSE 15
+          href: install/linux-package-manager-opensuse15.md
+        - name: SLES 12
+          href: install/linux-package-manager-sles12.md
+        - name: SLES 15
+          href: install/linux-package-manager-sles15.md
 - name: Kullanmaya başlayın
   href: get-started.md
   items:
@@ -23,12 +63,6 @@
       href: tutorials/testing-library-with-visual-studio.md
     - name: Visual Studio 2017’de bir .NET Standard kitaplığı kullanma
       href: tutorials/consuming-library-with-visual-studio.md
-- name: Windows Önkoşulları
-  href: windows-prerequisites.md
-- name: macOS Önkoşulları
-  href: macos-prerequisites.md
-- name: Linux Önkoşulları
-  href: linux-prerequisites.md
 - name: ​.NET Core’daki yenilikler
   items:
     - name: ​.NET Core 3.0’daki yenilikler
@@ -54,15 +88,15 @@
           href: tutorials/cli-templates-create-template-pack.md
     - name: MacOS üzerinde .NET Core kullanmaya başlama
       href: tutorials/using-on-macos.md
-    - name: Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama
+    - name: Mac için Visual Studio kullanarak .NET Core kullanmaya başlama
       href: tutorials/using-on-mac-vs.md
-    - name: Mac için Visual Studio kullanarak macOS’ta eksiksiz bir .NET Core çözümü derleme
+    - name: macOS üzerinde kapsamlı bir .NET Core çözümü oluşturma
       href: tutorials/using-on-mac-vs-full-solution.md
     - name: CLI araçları ile .NET Core kullanmaya başlama
       href: tutorials/using-with-xplat-cli.md
-    - name: .NET Core komut satırı ile projeleri düzenleme ve test etme
+    - name: .NET Core CLI ile projeleri düzenleme ve test etme
       href: tutorials/testing-with-cli.md
-    - name: Platformlar Arası Araçlarla Kitaplık Geliştirme
+    - name: Platformlar arası araçlarla kitaplık geliştirme
       href: tutorials/libraries.md
     - name: Eklentilerle .NET Core uygulaması oluşturma
       href: tutorials/creating-app-with-plugin-support.md
@@ -70,9 +104,15 @@
       href: tutorials/aspnet-core.md
     - name: Yerel koddan .NET Core barındırma
       href: tutorials/netcore-hosting.md
-- name: Native ile Birlikte Çalışma
+- name: Çalışma zamanı yapılandırması
   items:
-    - name: .NET Core Bileşenlerini COM’da Gösterme
+    - name: Ayarlar
+      href: run-time-config/index.md
+    - name: Atık toplayıcı ayarları
+      href: run-time-config/garbage-collector.md
+- name: Native ile birlikte çalışma
+  items:
+    - name: .NET Core bileşenlerini COM’da kullanıma sunma
       href: native-interop/expose-components-to-com.md
 - name: 'Paketler, Meta Paketler ve Çerçeveler'
   href: packages.md

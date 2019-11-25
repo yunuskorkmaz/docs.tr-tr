@@ -1,8 +1,8 @@
-- name: 'C# Kılavuzu'
-  href: index.md
+- name: 'C# belgeleri'
+  href: index.yml
 - name: Başlarken
   items:
-    - name: Bu kılavuz nasıl kullanılır?
+    - name: Genel Bakış
       href: getting-started/index.md
     - name: 'C# Diline ve.NET Framework’e Giriş'
       href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
@@ -158,7 +158,7 @@
           href: delegates-strongly-typed.md
         - name: Temsilciler için Ortak Desenler
           href: delegates-patterns.md
-        - name: Olaylara Giriş
+        - name: Olaylara giriş
           href: events-overview.md
         - name: Standart .NET olay desenleri
           href: event-pattern.md
@@ -320,9 +320,9 @@
               href: programming-guide/concepts/async/task-asynchronous-programming-model.md
             - name: 'İzlenecek yol: Async ve await kullanarak Web''e erişme'
               href: programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md
-            - name: 'Nasıl yapılır: Task.WhenAll Kullanarak zaman uyumsuz izlenecek yolu genişletme'
+            - name: Task.WhenAll kullanarak zaman uyumsuz izlenecek yolu genişletme
               href: programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-            - name: 'Nasıl yapılır: Async ve await Kullanarak Birden Çok Web İsteğini Paralel Hale Getirme'
+            - name: Async ve await kullanarak birden çok web isteğini paralel hale getirme
               href: programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
             - name: Zaman Uyumsuz Dönüş Türleri
               href: programming-guide/concepts/async/async-return-types.md
@@ -354,7 +354,7 @@
               href: programming-guide/concepts/attributes/attributeusage.md
             - name: Yansıma Kullanarak Özniteliklere Erişme
               href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
-            - name: 'Nasıl yapılır: Öznitelikleri Kullanarak C/C++ Birleşimi Oluşturma'
+            - name: Öznitelikleri kullanarak C/C++ birleşimi oluşturma
               href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
             - name: Ortak Öznitelikler
               href: programming-guide/concepts/attributes/common-attributes.md
@@ -384,11 +384,11 @@
           items:
             - name: Genel Bakış
               href: programming-guide/concepts/expression-trees/index.md
-            - name: 'Nasıl yapılır: İfade Ağaçlarını Yürütme'
+            - name: İfade ağaçlarını yürütme
               href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
-            - name: 'Nasıl yapılır: İfade Ağaçlarını Değiştirme'
+            - name: İfade ağaçlarını değiştirme
               href: programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md
-            - name: 'Nasıl yapılır: Dinamik Sorgular Derlemek için İfade Ağaçları Kullanma'
+            - name: Dinamik sorgular derlemek için ifade ağaçları kullanma
               href: programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md
             - name: Visual Studio’da İfade Ağacı Hatalarını Ayıklama
               href: programming-guide/concepts/expression-trees/debugging-expression-trees-in-visual-studio.md
@@ -462,13 +462,13 @@
                   href: programming-guide/concepts/linq/linq-and-strings.md
                 - name: Nasıl yapılır makaleleri
                   items:
-                    - name: 'Nasıl yapılır: Bir Sözcüğün Bir Dizede Kaç Kez Geçtiğini Sayma (LINQ)'
+                    - name: Bir sözcüğün bir dizede kaç kez geçtiğini sayma (LINQ)
                       href: programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md
                     - name: 'Nasıl yapılır: Belirli bir Sözcükler Kümesini İçeren Cümleleri Sorgulama (LINQ)'
                       href: programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
                     - name: 'Nasıl yapılır: Bir Dizedeki Karakterleri Sorgulama (LINQ)'
                       href: programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md
-                    - name: 'Nasıl yapılır: Normal İfadelerle LINQ Sorgularını Birleştirme'
+                    - name: Normal ifadelerle LINQ sorgularını birleştirme
                       href: programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md
                     - name: 'Nasıl yapılır: İki Liste Arasında Ayarlanmış Farkı Bulma (LINQ)'
                       href: programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md
@@ -476,7 +476,7 @@
                       href: programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
                     - name: 'Nasıl yapılır: Sınırlandırılmış bir Dosyanın Alanlarını Yeniden Sıralama (LINQ)'
                       href: programming-guide/concepts/linq/how-to-reorder-the-fields-of-a-delimited-file-linq.md
-                    - name: 'Nasıl yapılır: Dize Koleksiyonlarını Birleştirme ve Karşılaştırma (LINQ)'
+                    - name: Dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ)
                       href: programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md
                     - name: 'Nasıl yapılır: Birden Fazla Kaynaktan Nesne Koleksiyonları Doldurma (LINQ)'
                       href: programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md
@@ -484,7 +484,7 @@
                       href: programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md
                     - name: 'Nasıl yapılır: Farklı Dosyalardan İçerik Birleştirme (LINQ)'
                       href: programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md
-                    - name: 'Nasıl yapılır: Bir CSV Metinde Dosyasında Sütun Değerlerini Hesaplama (LINQ)'
+                    - name: Bir CSV metin dosyasında sütun değerlerini hesaplama (LINQ)
                       href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
                 - name: LINQ ve Yansıma
                   href: programming-guide/concepts/linq/linq-and-reflection.md
@@ -500,7 +500,7 @@
                       href: programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md
                     - name: 'Nasıl yapılır: Bir Klasör Kümesindeki Toplam Bayt Sayısını Sorgulama (LINQ)'
                       href: programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md
-                    - name: 'Nasıl yapılır: İki Klasörün İçeriğini Karşılaştırma (LINQ)'
+                    - name: İki klasörün içeriğini karşılaştırma (LINQ)
                       href: programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md
                     - name: 'Nasıl yapılır: Bir Dizin Ağacındaki En Büyük Dosya veya Dosyalar için Sorgu (LINQ)'
                       href: programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
@@ -510,7 +510,7 @@
                       href: programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md
                 - name: 'Nasıl yapılır: LINQ ile ArrayList Sorgulama'
                   href: programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md
-                - name: 'Nasıl yapılır: LINQ Sorguları için Özel Yöntemler'
+                - name: LINQ sorguları için özel yöntem ekleme
                   href: programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md
             - name: LINQ - XML
               items:
@@ -536,7 +536,7 @@
                           href: programming-guide/concepts/linq/xattribute-class-overview.md
                         - name: XDocument Sınıfına Genel Bakış
                           href: programming-guide/concepts/linq/xdocument-class-overview.md
-                        - name: 'Nasıl yapılır: LINQ to XML Örnekleri Derleme'
+                        - name: LINQ to XML örnekleri derleme
                           href: programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md
                     - name: XML Ağaçları
                       items:
@@ -552,9 +552,9 @@
                               href: programming-guide/concepts/linq/how-to-load-xml-from-a-file.md
                             - name: XML Yükleme veya Ayrıştırma Sırasında Boşluk Koruma
                               href: programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml1.md
-                            - name: 'Nasıl yapılır: Ayrıştırma Hatalarını Yakalama'
+                            - name: Ayrıştırma hatalarını yakalama
                               href: programming-guide/concepts/linq/how-to-catch-parsing-errors.md
-                            - name: 'Nasıl yapılır: XmlReader’dan Ağaç Oluşturma'
+                            - name: XmlReader’dan ağaç oluşturma
                               href: programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md
                             - name: 'Nasıl yapılır: XmlReader’dan XML Parçalarının Akışını Yapma'
                               href: programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md
@@ -568,9 +568,9 @@
                       items:
                         - name: Ad Alanlarına Genel Bakış (LINQ to XML)
                           href: programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md
-                        - name: 'Nasıl yapılır: Ad Alanları ile Belge Oluşturma (LINQ to XML)'
+                        - name: Ad alanları ile belge oluşturma (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md
-                        - name: 'Nasıl yapılır: Ad Alanı Ön Eklerini Denetleme (LINQ to XML)'
+                        - name: Ad alanı ön eklerini denetleme (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md
                         - name: 'C# Dilinde Varsayılan Ad Alanlarının Kapsamı'
                           href: programming-guide/concepts/linq/scope-of-default-namespaces.md
@@ -594,9 +594,9 @@
                           href: programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md
                         - name: 'Nasıl yapılır: Öğe Değerini Alma (LINQ to XML)'
                           href: programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md
-                        - name: 'Nasıl yapılır: Öğe Adlarını Filtreleme (LINQ to XML)'
+                        - name: Öğe adlarını filtreleme (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md
-                        - name: 'Nasıl yapılır: Zincir Eksen Yöntem Çağrıları (LINQ to XML)'
+                        - name: Zincir eksen yöntem çağrıları (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md
                         - name: 'Nasıl yapılır: Tek Bir Alt Öğe Alma (LINQ to XML)'
                           href: programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md
@@ -612,31 +612,31 @@
                       items:
                         - name: Temel Sorgular (LINQ to XML)
                           items:
-                            - name: 'Nasıl yapılır: Belirli Bir Özniteliğe Sahip Öğeyi Bulma'
+                            - name: Belirli bir özniteliğe sahip öğeyi bulma
                               href: programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md
-                            - name: 'Nasıl yapılır: Belirli Bir Alt Öğeye Sahip Öğeyi Bulma'
+                            - name: Belirli bir alt öğeye sahip öğeyi bulma
                               href: programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md
                             - name: XDocument Sorgulama ve XElement Sorgulama Karşılaştırması
                               href: programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md
-                            - name: 'Nasıl yapılır: Belirli Bir Öğe Adına Sahip Alt Öğeleri Bulma'
+                            - name: Belirli bir öğe adına sahip alt öğeleri bulma
                               href: programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md
-                            - name: 'Nasıl yapılır: Descendants Yöntemini Kullanarak Tek Bir Alt Öğeyi Bulma'
+                            - name: Alt öğe yöntemini kullanarak tek bir alt öğeyi bulma
                               href: programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md
                             - name: 'Nasıl yapılır: Karmaşık Filtreleme ile Sorgu Yazma'
                               href: programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md
-                            - name: 'Nasıl yapılır: İsteğe Bağlı Öğeyi Filtreleme'
+                            - name: İsteğe bağlı öğeyi filtreleme
                               href: programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md
-                            - name: 'Nasıl yapılır: Ad Alanındaki Tüm Düğümleri Bulma'
+                            - name: Ad alanındaki tüm düğümleri bulma
                               href: programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md
                             - name: 'Nasıl yapılır: Öğeleri Sıralama'
                               href: programming-guide/concepts/linq/how-to-sort-elements.md
                             - name: 'Nasıl yapılır: Birden Çok Anahtarda Öğeleri Sıralama'
                               href: programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md
-                            - name: 'Nasıl yapılır: Ara Değerleri Hesaplama'
+                            - name: Ara değerleri hesaplama
                               href: programming-guide/concepts/linq/how-to-calculate-intermediate-values.md
                             - name: 'Nasıl yapılır: Bağlama Göre Öğeleri Bulan Bir Sorgu Yazma'
                               href: programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md
-                            - name: 'Nasıl yapılır: Boş Sorgu Sonucu Kümelerinin Hatalarını Ayıklama'
+                            - name: Boş sorgu sonucu kümelerinin hatalarını ayıklama
                               href: programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md
                         - name: Projeksiyonlar ve Dönüşümler (LINQ to XML)
                           items:
@@ -644,7 +644,7 @@
                               href: programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md
                             - name: 'Nasıl yapılır: XML Ağacının Şeklini Dönüştürme'
                               href: programming-guide/concepts/linq/how-to-transform-the-shape-of-an-xml-tree.md
-                            - name: 'Nasıl yapılır: Projeksiyon Türünü Denetleme'
+                            - name: Projeksiyon türünü denetleme
                               href: programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md
                             - name: 'Nasıl yapılır: Yeni Bir Tür Yansıtma (LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-project-a-new-type-linq-to-xml.md
@@ -660,7 +660,7 @@
                           items:
                             - name: 'Nasıl yapılır: İki Koleksiyonu Birleştirme (LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md
-                            - name: 'Nasıl yapılır: Gruplandırma Kullanarak Hiyerarşi Oluşturma'
+                            - name: Gruplandırma kullanarak hiyerarşi oluşturma
                               href: programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md
                             - name: 'Nasıl yapılır: XPath Kullanarak LINQ to XML Sorgulama'
                               href: programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md
@@ -680,37 +680,37 @@
                           items:
                             - name: XPath ile LINQ to XML Karşılaştırması
                               href: programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md
-                            - name: 'Nasıl yapılır: Alt Öğe Bulma (XPath-LINQ to XML)'
+                            - name: Alt öğe bulma (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md
-                            - name: 'Nasıl yapılır: Alt Öğe Listesini Bulma (XPath-LINQ to XML)'
+                            - name: Alt öğe listesini bulma (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md
                             - name: 'Nasıl yapılır: Kök Öğe Bulma (XPath-LINQ to XML)'
                               href: programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md
-                            - name: 'Nasıl yapılır: Alt Öğe Bulma (XPath-LINQ to XML)'
+                            - name: Alt öğe bulma (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md
-                            - name: 'Nasıl yapılır: Öznitelik Filtreleme (XPath-LINQ to XML)'
+                            - name: Öznitelik filtreleme (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-filter-on-an-attribute-xpath-linq-to-xml.md
-                            - name: 'Nasıl yapılır: İlgili Öğeleri Bulma (XPath-LINQ to XML)'
+                            - name: İlgili öğeleri bulma (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-related-elements-xpath-linq-to-xml.md
-                            - name: 'Nasıl yapılır: Ad Alanındaki Öğeleri Bulma (XPath-LINQ to XML)'
+                            - name: Ad alanındaki öğeleri bulma (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-elements-in-a-namespace-xpath-linq-to-xml.md
-                            - name: 'Nasıl yapılır: Önceki Eşdüzeyleri Bulma (XPath-LINQ to XML)'
+                            - name: Önceki eşdüzeyleri bulma (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-preceding-siblings-xpath-linq-to-xml.md
-                            - name: 'Nasıl yapılır: Bir Alt Öğenin Alt Öğelerini Bulma (XPath-LINQ to XML)'
+                            - name: Bir alt öğenin alt öğelerini bulma (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md
-                            - name: 'Nasıl yapılır: İki Konum Yolunun Birleşimini Bulma (XPath-LINQ to XML)'
+                            - name: İki konum yolunun birleşimini bulma (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml.md
-                            - name: 'Nasıl yapılır: Eşdüzey Düğümleri Bulma (XPath-LINQ to XML)'
+                            - name: Eşdüzey düğümleri bulma (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md
-                            - name: 'Nasıl yapılır: Üst Öğenin Özniteliğini Bulma (XPath-LINQ to XML)'
+                            - name: Üst öğenin özniteliğini bulma (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md
-                            - name: 'Nasıl yapılır: Belirli bir Ada Sahip Eşdüzeylerin Özniteliklerini Bulma (XPath-LINQ to XML)'
+                            - name: Belirli bir ada sahip eşdüzeylerin özniteliklerini bulma (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml.md
-                            - name: 'Nasıl yapılır: Belirli bir Özniteliğe Sahip Öğeleri Bulma (XPath-LINQ to XML)'
+                            - name: Belirli bir özniteliğe sahip öğeleri bulma (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml.md
-                            - name: 'Nasıl yapılır: Konuma Göre Alt Öğeleri Bulma (XPath-LINQ to XML)'
+                            - name: Konuma göre alt öğeleri bulma (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md
-                            - name: 'Nasıl yapılır: Bir Önceki Eşdüzeyi Bulma (XPath-LINQ to XML)'
+                            - name: Bir önceki eşdüzeyi bulma (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md
                         - name: Saf İşlevsel XML Dönüşümleri
                           items:
@@ -790,7 +790,7 @@
                           href: programming-guide/concepts/linq/removing-elements-attributes-and-nodes-from-an-xml-tree.md
                         - name: Ad-Değer Çiftleri Sağlama
                           href: programming-guide/concepts/linq/maintaining-name-value-pairs.md
-                        - name: 'Nasıl yapılır: Tüm XML Ağacının Ad Alanını Değiştirme'
+                        - name: Tüm XML ağacının ad alanını değiştirme
                           href: programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md
                     - name: Performans (LINQ to XML)
                       items:
@@ -948,7 +948,7 @@
               href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
             - name: Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme
               href: programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md
-            - name: 'Nasıl yapılır: ToString Yöntemini Geçersiz Kılma'
+            - name: ToString yöntemini geçersiz kılma
               href: programming-guide/classes-and-structs/how-to-override-the-tostring-method.md
         - name: Üyeler
           items:
@@ -964,9 +964,9 @@
               href: programming-guide/classes-and-structs/fields.md
             - name: Sabitler
               href: programming-guide/classes-and-structs/constants.md
-            - name: 'Nasıl yapılır: Soyut Özellikleri Tanımlama'
+            - name: Soyut özellikleri tanımlama
               href: programming-guide/classes-and-structs/how-to-define-abstract-properties.md
-            - name: 'Nasıl yapılır: C# İçinde Sabitleri Tanımlama'
+            - name: 'C# içinde sabitleri tanımlama'
               href: programming-guide/classes-and-structs/how-to-define-constants.md
         - name: Özellikler
           items:
@@ -978,11 +978,11 @@
               href: programming-guide/classes-and-structs/interface-properties.md
             - name: Erişimci Erişilebilirliğini Kısıtlama
               href: programming-guide/classes-and-structs/restricting-accessor-accessibility.md
-            - name: 'Nasıl yapılır: Okuma Yazma Özellikleri Bildirme ve Kullanma'
+            - name: Okuma yazma özellikleri bildirme ve kullanma
               href: programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md
             - name: Otomatik Uygulanan Özellikler
               href: programming-guide/classes-and-structs/auto-implemented-properties.md
-            - name: 'Nasıl yapılır: Otomatik Uygulanan Özelliklerle Hafif bir Sınıf Uygulama'
+            - name: 'Nasıl yapılır: Otomatik uygulanan özelliklerle hafif bir sınıf uygulama'
               href: programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
         - name: Yöntemler
           items:
@@ -1000,21 +1000,21 @@
                   href: programming-guide/classes-and-structs/passing-value-type-parameters.md
                 - name: Başvuru Türü Parametreleri Geçirme
                   href: programming-guide/classes-and-structs/passing-reference-type-parameters.md
-                - name: 'Nasıl yapılır: Yapı Geçirme ile Yönteme Sınıf Başvurusu Geçirme Arasındaki Farkı Bilme'
+                - name: Yapı geçirme ile yönteme sınıf başvurusu geçirme arasındaki farkı bilme
                   href: programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
             - name: Örtülü Olarak Yazılan Yerel Değişkenler
               href: programming-guide/classes-and-structs/implicitly-typed-local-variables.md
-            - name: 'Nasıl yapılır: Sorgu İfadesinde Türü Örtük Olarak Belirlenmiş Yerel Değişkenleri ve Dizileri Kullanma'
+            - name: Sorgu ifadesinde türü örtük olarak belirlenmiş yerel değişkenleri ve dizileri kullanma
               href: programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
             - name: Genişletme Yöntemleri
               href: programming-guide/classes-and-structs/extension-methods.md
-            - name: 'Nasıl yapılır: Özel bir Genişletme Yöntemi Uygulama ve Arama'
+            - name: Özel bir genişletme yöntemi uygulama ve arama
               href: programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md
-            - name: 'Nasıl yapılır: Sabit Listesi için Yeni bir Yöntem Oluşturma'
+            - name: Numaralandırma için yeni bir yöntem oluşturma
               href: programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md
             - name: Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler
               href: programming-guide/classes-and-structs/named-and-optional-arguments.md
-            - name: 'Nasıl yapılır: Office Programlamada Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenleri Kullanma'
+            - name: Office programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma
               href: programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md
         - name: Oluşturucular
           items:
@@ -1028,13 +1028,13 @@
               href: programming-guide/classes-and-structs/private-constructors.md
             - name: Statik Oluşturucular
               href: programming-guide/classes-and-structs/static-constructors.md
-            - name: 'Nasıl yapılır: Kopya Oluşturucu Yazma'
+            - name: Kopya oluşturucu yazma
               href: programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md
         - name: Sonlandırıcılar
           href: programming-guide/classes-and-structs/destructors.md
         - name: Nesne ve Koleksiyon Başlatıcıları
           href: programming-guide/classes-and-structs/object-and-collection-initializers.md
-        - name: 'Nasıl yapılır: Nesne Başlatıcı Kullanarak Nesneleri Başlatma'
+        - name: Nesne başlatıcı kullanarak nesneleri başlatma
           href: programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md
         - name: 'Nasıl yapılır: Koleksiyon Başlatıcısı ile bir Sözlük Başlatma'
           href: programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md
@@ -1044,7 +1044,7 @@
           href: programming-guide/classes-and-structs/partial-classes-and-methods.md
         - name: Anonim Türler
           href: programming-guide/classes-and-structs/anonymous-types.md
-        - name: 'Nasıl yapılır: Bir Sorguda Öğe Özelliklerinin Alt Kümelerini Döndürme'
+        - name: Bir sorguda öğe özelliklerinin alt kümelerini döndürme
           href: programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md
     - name: Arabirimler
       items:
@@ -1301,7 +1301,7 @@
                 - name: bool
                   href: language-reference/keywords/bool.md
                 - name: char
-                  href: language-reference/keywords/char.md
+                  href: language-reference/builtin-types/char.md
                 - name: enum
                   href: language-reference/keywords/enum.md
                 - name: struct
@@ -1675,7 +1675,7 @@
           href: language-reference/compiler-options/index.md
         - name: csc.exe Kullanarak Komut Satırı Derleme
           href: language-reference/compiler-options/command-line-building-with-csc-exe.md
-        - name: 'Nasıl yapılır: Visual Studio Komut Satırı için Ortam Değişkenlerini Ayarlama'
+        - name: Visual Studio Komut Satırı için ortam değişkenlerini ayarlama
           href: language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md
         - name: 'Kategorilere Göre Listelenen C# Derleyici Seçenekleri'
           href: language-reference/compiler-options/listed-by-category.md
