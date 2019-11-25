@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: 541d71efa66d14855704797892cac68799215159
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: f3cddcd6cd90e7e43ea6af67725e709673f7650f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919750"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978348"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Karma Uygulama Sorunlarını Giderme
 <a name="introduction"></a>Bu konuda, hem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hem de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] teknolojilerini kullanan karma uygulamalar yazarken oluşabilecek bazı yaygın sorunlar listelenmektedir.  
@@ -96,7 +96,7 @@ ms.locfileid: "72919750"
   
 <a name="wpf_designer"></a>   
 ## <a name="wpf-designer"></a>WPF Tasarımcısı  
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]kullanarak WPF içeriğinizi tasarlayabilirsiniz. Aşağıdaki bölümlerde, [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]ile karma uygulamalar yazarken oluşabilecek bazı yaygın sorunlar listelenmektedir.  
+ Visual Studio için WPF Tasarımcısı 'nı kullanarak WPF içeriğinizi tasarlayabilirsiniz. Aşağıdaki bölümlerde, WPF Tasarımcısı ile karma uygulamalar yazarken oluşabilecek bazı yaygın sorunlar listelenmektedir.  
   
 ### <a name="backcolortransparent-is-ignored-at-design-time"></a>BackColorTransparent, tasarım zamanında yoksayılıyor  
  <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> özelliği tasarım zamanında beklendiği gibi çalışmayabilir.  

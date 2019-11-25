@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 8f381a06aa916be378052d00f0d65f37ef910433
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5cce8ff04dbf163aba95346447f0557da14197da
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740655"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976771"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi
 Bu konu, bir WPF XAML dosyasının kök etiketinde genellikle bulunan iki XAML ad alanı eşleştirmelerinin varlığını ve amacını açıklamaktadır. Ayrıca, kendi kodunuzda ve/veya ayrı derlemelerde tanımlanmış öğeleri kullanmak için benzer eşlemelerin nasıl üretileceğini açıklar.  
@@ -112,7 +112,7 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>XAML şablonlarından tasarımcı ad alanları ve diğer ön ekler  
  WPF XAML için geliştirme ortamları ve/veya tasarım araçları ile çalışıyorsanız XAML biçimlendirmesinde diğer tanımlı XAML ad alanları/önekleri olduğunu fark edebilirsiniz.  
   
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)], genellikle önek `d:`eşlenen bir tasarımcı ad alanı kullanır. WPF için daha yeni proje şablonları, [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] ve diğer tasarım ortamları arasında XAML değişimini desteklemek üzere bu XAML ad alanını önceden eşlemenizi gerektirebilir. Bu tasarım XAML ad alanı, tasarımcıda XAML tabanlı kullanıcı arabirimine gidiş dönüş sırasında tasarım durumunu aktarmak için kullanılır. Ayrıca, bir Tasarımcıda çalışma zamanı veri kaynaklarını etkinleştiren `d:IsDataSource`gibi özellikler için de kullanılır.  
+ Visual Studio için WPF Tasarımcısı, genellikle `d:`önekiyle eşlenen bir tasarımcı ad alanı kullanır. WPF için daha yeni proje şablonları, Visual Studio için WPF Tasarımcısı ve diğer tasarım ortamları arasında XAML değişimi desteklemek üzere bu XAML ad alanını önceden eşlemenizi gerektirebilir. Bu tasarım XAML ad alanı, tasarımcıda XAML tabanlı kullanıcı arabirimine gidiş dönüş sırasında tasarım durumunu aktarmak için kullanılır. Ayrıca, bir Tasarımcıda çalışma zamanı veri kaynaklarını etkinleştiren `d:IsDataSource`gibi özellikler için de kullanılır.  
   
  Eşlenmiş olarak gördüğünüz başka bir önek `mc:`. `mc:`, biçimlendirme uyumluluğuna yöneliktir ve XAML 'e özgü olmayan bir biçimlendirme uyumluluğu düzeniyle yararlanmıştır. Biçimlendirme uyumluluğu özellikleri, bazı bir ölçüde, çerçeveler arasında XAML veya yedekleme uygulamasının diğer sınırları arasında XAML alışverişi yapmak, XAML şema bağlamları arasında çalışmak, tasarımcılar için sınırlı modlar için uyumluluk sağlamak ve bu şekilde devam etmek için kullanılabilir. Biçimlendirme uyumluluğu kavramları ve WPF ile nasıl ilişkilendirildikleri hakkında daha fazla bilgi için bkz. [Biçimlendirme uyumluluğu (MC:) Dil özellikleri](markup-compatibility-mc-language-features.md).  
   

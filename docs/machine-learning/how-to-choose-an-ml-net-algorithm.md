@@ -4,12 +4,12 @@ description: Machine Learning modeliniz için bir ML.NET algoritması seçme hak
 author: natke
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: dfea21908258e6eb0b696de7affe1b03cff5cb3b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 0721418d8b0b3c9ab645eb9885b0f4951c37762e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972083"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976691"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET algoritması seçme
 
@@ -19,11 +19,11 @@ Algoritmalar **Özellikler**üzerinde çalışır. Özellikler, giriş verilerin
 
 ## <a name="trainer--algorithm--task"></a>Trainer = algoritması + görev
 
-Algoritma, bir **model**oluşturmak için yürütülen matematik. Farklı algoritmalar farklı özelliklerle modeller üretir. 
+Algoritma, bir **model**oluşturmak için yürütülen matematik. Farklı algoritmalar farklı özelliklerle modeller üretir.
 
-ML.NET ile aynı algoritma farklı görevlere de uygulanabilir. Örneğin, Stochastic Dual ınent, Ikili sınıflandırma, birden çok Lass sınıflandırması ve gerileme için kullanılabilir. Fark, algoritmanın çıktısının görevle eşleşecek şekilde nasıl yorumlanacağına ilişkin farktır. 
+ML.NET ile aynı algoritma farklı görevlere de uygulanabilir. Örneğin, Stochastic Dual ınent, Ikili sınıflandırma, birden çok Lass sınıflandırması ve gerileme için kullanılabilir. Fark, algoritmanın çıktısının görevle eşleşecek şekilde nasıl yorumlanacağına ilişkin farktır.
 
-Her algoritma/görev birleşimi için, ML.NET eğitim algoritmasını yürüten ve yorumu yapan bir bileşen sağlar. Bu bileşenlere, traers adı verilir. Örneğin <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> , **regresyon** görevine uygulanan **stochasticdualkoordinatör tedadscent** algoritmasını kullanır.
+Her algoritma/görev birleşimi için, ML.NET eğitim algoritmasını yürüten ve yorumu yapan bir bileşen sağlar. Bu bileşenlere, traers adı verilir. Örneğin <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>, **regresyon** görevine uygulanan **Stochasticdualkoordinatör Tedadscent** algoritmasını kullanır.
 
 ## <a name="linear-algorithms"></a>Doğrusal algoritmalar
 
@@ -64,8 +64,8 @@ Artırılmış karar ağaçları, her bir ağacın giriş verilerini puanların�
 
 |Algoritmalar|Özellikler|Eğitmenler|
 |---------|----------|--------|
-|Hafif gradyan tarafından artırılmış makine|İkili sınıflandırma ağacı izleyenilerinin en hızlı ve en doğru. Yüksek düzeyde ayarlanabilir|<xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer><xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer><xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>|
-|Hızlı ağaç|Korleştirilmiş görüntü verileri için kullanın. Dengesiz verilere dayanıklı. Yüksek düzeyde ayarlanabilir | <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer><xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer><xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>|
+|Hafif gradyan tarafından artırılmış makine|İkili sınıflandırma ağacı izleyenilerinin en hızlı ve en doğru. Yüksek düzeyde ayarlanabilir|<xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>|
+|Hızlı ağaç|Korleştirilmiş görüntü verileri için kullanın. Dengesiz verilere dayanıklı. Yüksek düzeyde ayarlanabilir | <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>|
 |Hızlı orman|Gürültülü verilerle iyi çalışma|<xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer><xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>|
 |Genelleştirilmiş eklenebilir model (GAM)|Ağaç algoritmalarıyla iyi bir şekilde gerçekleştiren, ancak explainability bir öncelik olduğu sorunlar için idealdir|<xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer><xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>|
 
@@ -77,11 +77,11 @@ Artırılmış karar ağaçları, her bir ağacın giriş verilerini puanların�
 
 ## <a name="meta-algorithms"></a>Meta algoritmalar
 
-Bu traçler, ikili bir eğitimci tarafından çok sınıf bir adım oluşturur. <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer> ,<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> ,,<xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>,,, İle kullanın. <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
+Bu traçler, ikili bir eğitimci tarafından çok sınıf bir adım oluşturur. <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>, <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>, <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>, <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>, <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>, <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>, <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>ile kullanın.
 
 |Algoritmalar|Özellikler|Eğitmenler|
 |---------|----------|--------|
-|Tek ve tüm|Bu çok sınıf Sınıflandırıcısı her sınıf için bir ikili sınıflandırıcının yanı da bu sınıfı diğer tüm sınıflardan ayırt eder. Sınıflandırılacak sınıf sayısına göre ölçeğe göre sınırlandırılmıştır|[Oneversusalltrainer\<BinaryClassificationTrainer >](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
+|Tek ve tüm|Bu çok sınıf Sınıflandırıcısı her sınıf için bir ikili sınıflandırıcının yanı da bu sınıfı diğer tüm sınıflardan ayırt eder. Sınıflandırılacak sınıf sayısına göre ölçeğe göre sınırlandırılmıştır|[OneVersusAllTrainer\<BinaryClassificationTrainer >](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
 |İkili eşlenme|Bu çok sınıf Sınıflandırıcısı, her sınıf çiftinde ikili bir sınıflandırma algoritması oluşturur. , İki sınıfın birleşiminin eğitililmesi gerektiği için sınıfların sayısına göre ölçeklendirilmesine sınırlıdır.|[PairwiseCouplingTrainer\<BinaryClassificationTrainer >](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
 ## <a name="k-means"></a>K-anlamı

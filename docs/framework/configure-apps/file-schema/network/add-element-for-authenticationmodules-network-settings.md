@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: a68434aaa118db60a502c2bcc0bb188b83b0f463
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9c011cf1216b98fa20e330e185e4cf2c331b31d4
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698427"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087947"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<authenticationmodules için > öğesi ekleme (ağ ayarları)
+# <a name="add-element-for-authenticationmodules-network-settings"></a>authenticationModules için > öğesi eklemek \<(ağ ayarları)
 Uygulamaya bir kimlik doğrulama modülü ekler.  
-  
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<add >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -40,7 +40,7 @@ Uygulamaya bir kimlik doğrulama modülü ekler.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`type`|Tam nitelikli tür adı (<xref:System.Type.FullName%2A> özelliği ile gösterilir) ve derleme adı (<xref:System.Reflection.Assembly.FullName%2A> özelliği ile belirtilir), virgülle ayrılır.|  
+|`type`|Tam nitelikli tür adı (<xref:System.Type.FullName%2A> özelliği ile gösterilir) ve derleme adı (<xref:System.Reflection.Assembly.FullName%2A> özelliği tarafından belirtilir), virgülle ayrılır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -52,9 +52,9 @@ Uygulamaya bir kimlik doğrulama modülü ekler.
 |[authenticationModules](authenticationmodules-element-network-settings.md)|Ağ isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 öğesi, kayıtlı kimlik doğrulama modülleri listesinin sonuna bir kimlik doğrulama modülü ekler. Kimlik doğrulama modülleri, listeye eklendikleri sırada çağırılır.  
+ `add` öğesi, kayıtlı kimlik doğrulama modülleri listesinin sonuna bir kimlik doğrulama modülü ekler. Kimlik doğrulama modülleri, listeye eklendikleri sırada çağırılır.  
   
- @No__t-0 özniteliğinin değeri, virgülle ayrılmış geçerli bir tür adı ve karşılık gelen derleme adı olmalıdır.  
+ `type` özniteliğin değeri, virgülle ayrılmış olarak geçerli bir tür adı ve karşılık gelen derleme adı olmalıdır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: eed2a4d06906d2928be62aed20a75484c3eea946
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4564cf59e3b6cfbdcd9dca06cd0f966d524834de
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699764"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088544"
 ---
 # <a name="oidentry-element"></a>\<Oıdentry > öğesi
 Bir ASN. 1 nesne tanımlayıcısını (OID) kolay bir ada eşler.  
-  
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<Cryptographrivsettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<Oıdmap >** ](oidmap-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 **\<Oıdentry >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Cryptographyısettings >** ](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Oıdmap >** ](oidmap-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Oıdentry >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -38,7 +38,7 @@ Bir ASN. 1 nesne tanımlayıcısını (OID) kolay bir ada eşler.
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |**ID**|Gerekli öznitelik.<br /><br /> Sınıfınız tarafından uygulanan algoritmaya karşılık gelen ASN. 1 OID 'yi belirtir.|  
-|**ada**|Gerekli öznitelik.<br /><br /> [@No__t-2nameEntry >](nameentry-element.md) etiketindeki **ad** özniteliğinin değerini belirtir.|  
+|**ada**|Gerekli öznitelik.<br /><br /> [\<nameEntry >](nameentry-element.md) etiketindeki **Name** özniteliğinin değerini belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -49,7 +49,7 @@ Bir ASN. 1 nesne tanımlayıcısını (OID) kolay bir ada eşler.
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
 |`cryptographySettings`|Şifreleme ayarlarını içerir.|  
-|`mscorlib`|@No__t-0 öğesi içerir.|  
+|`mscorlib`|`cryptographySettings` öğesini içerir.|  
 |`oidMap`|Sınıflara ASN. 1 nesne tanımlayıcısı (OID) eşlemelerini içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  

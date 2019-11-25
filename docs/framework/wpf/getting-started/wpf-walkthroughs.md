@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 34cd7e96442a570a3951e6303d2ac90ce5da6239
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: fbd5006611a0a8e0d90b589df7b2cb6a34101457
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920403"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977023"
 ---
 # <a name="wpf-walkthroughs"></a>WPF İzlenecek Yollar
 İzlenecek yollar, yaygın senaryolar için adım adım yönergeler sağlar. Bu, ürün veya belirli bir özellik alanı hakkında öğrenmeye başlamak için iyi bir yer sağlar.
@@ -21,11 +21,11 @@ ms.locfileid: "72920403"
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[İzlenecek yol: WPF Tasarımcısı ile basit bir WPF uygulaması oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]basit bir WPF uygulamasının nasıl oluşturulacağını gösterir.|
+|[İzlenecek yol: WPF Tasarımcısı ile basit bir WPF uygulaması oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|WPF Tasarımcısı ile basit bir WPF uygulamasının nasıl oluşturulacağını gösterir.|
 |[İzlenecek yol: Dinamik düzen oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|<xref:System.Windows.Controls.Grid> panel denetimi kullanarak dinamik düzen oluşturmayı gösterir.|
 |[İzlenecek yol: WPF tasarımcısını kullanarak yeniden boyutlandırılabilir bir uygulama oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546954(v=vs.100))|Çalışma zamanında Kullanıcı tarafından yeniden boyutlandırılabilir pencere düzenleri oluşturmayı gösterir.|
-|[İzlenecek yol: WPF Tasarımcısı kullanarak veri bağlama oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Bir denetime veri bağlayan veri bağlamaları oluşturmak için [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] nasıl kullanacağınızı gösterir.|
-|[İzlenecek yol: tasarımcıda verilere bağlamak için bir DesignInstance kullanma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Çalışma zamanında atanan bir veri bağlamı için tasarım zamanında veri bağlamaları oluşturmak üzere [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] nasıl kullanacağınızı gösterir.|
+|[İzlenecek yol: WPF Tasarımcısı kullanarak veri bağlama oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Bir denetime veri bağlayan veri bağlamaları oluşturmak için WPF Tasarımcısı 'nın nasıl kullanılacağını gösterir.|
+|[İzlenecek yol: tasarımcıda verilere bağlamak için bir DesignInstance kullanma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Çalışma zamanında atanan bir veri bağlamı için tasarım zamanında veri bağlamaları oluşturmak üzere WPF Tasarımcısı 'nın nasıl kullanılacağını gösterir.|
 
 ## <a name="wpf-walkthroughs"></a>WPF İzlenecek Yollar
 

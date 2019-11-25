@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f5010f944dba007e24d3c0e22d4e339f9ed0522a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459193"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977352"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Öğretici: model Oluşturucu ile gerileme kullanarak fiyatları tahmin etme
 
@@ -68,13 +68,13 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
     - **payment_type:** Ödeme yöntemi (nakit veya kredi kartı) bir özelliktir.
     - **fare_amount:** Ödenen toplam TAXI tarifeli havayolu etikettir.
 
-`label`, tahmin etmek istediğiniz sütundur. Regresyon görevi gerçekleştirirken, amaç sayısal bir değeri tahmin etmek için kullanılır. Bu fiyat tahmin senaryosunda, bir TAXI arttırıldığında 'nın maliyeti tahmin ediliyor. Bu nedenle, **fare_amount** etikettir. Tanımlanan `features`, modele `label` tahmin etmek için verdiğiniz girişlerdir. Bu durumda, **trip_time_in_secs** özel durumu ile sütunların geri kalanı, tarifeli havayolu tutarını tahmin etmek için özellik veya giriş olarak kullanılır.
+`label`, tahmin etmek istediğiniz sütundur. Regresyon görevi gerçekleştirirken, amaç sayısal bir değeri tahmin etmek için kullanılır. Bu fiyat tahmin senaryosunda, bir TAXI arttırıldığında 'nın maliyeti tahmin ediliyor. Bu nedenle, **fare_amount** etikettir. Tanımlanan `features`, modele `label`tahmin etmek için verdiğiniz girişlerdir. Bu durumda, **trip_time_in_secs** özel durumuna sahip sütunların geri kalanı, tarifeli havayolu tutarını tahmin etmek için özellik veya giriş olarak kullanılır.
 
 ## <a name="choose-a-scenario"></a>Senaryo seçin
 
-Modelinize eğitebilmeniz için, model Oluşturucu tarafından sağlanan kullanılabilir makine öğrenimi senaryoları listesinden seçim yapmanız gerekir. Bu durumda, senaryo `Price Prediction` ' dır.
+Modelinize eğitebilmeniz için, model Oluşturucu tarafından sağlanan kullanılabilir makine öğrenimi senaryoları listesinden seçim yapmanız gerekir. Bu durumda, senaryo `Price Prediction`.
 
-1. **Çözüm Gezgini**, *taxifaretahmine* projesine sağ tıklayın ve **Ekle** > **Machine Learning**' yı seçin.
+1. **Çözüm Gezgini**, *Taxifaretahmin* projesine sağ tıklayın ve > **Ekle** **Machine Learning**' yi seçin.
 1. Model Oluşturucu aracının senaryo adımında *fiyat tahmini* senaryosu ' nı seçin.
 
 ## <a name="load-the-data"></a>Verileri yükleme
@@ -83,8 +83,8 @@ Model Oluşturucu, bir SQL Server veritabanı veya CSV ya da TSV biçimindeki ye
 
 1. Model Oluşturucu aracının veri adımında, veri kaynağı açılır listesinden *Dosya* ' yı seçin.
 1. *Dosya Seç* metin kutusunun yanındaki düğmeyi seçin ve *veri* dizinindeki *Taxi-fare-test. csv* dosyasına gidip seçmek için dosya Gezgini 'ni kullanın
-1. *Tahmin edilecek (etiket)* aşağı açılan sütunda *fare_amount* öğesini seçin.
-1. *Giriş sütunları (Özellikler)* açılan listesini genişletin ve eğitim sırasında bunu bir özellik olarak dışlamak için *trip_time_in_secs* sütununun işaretini kaldırın.  Model Oluşturucu aracının eğitme adımına gidin.
+1. *Tahmin edilecek (etiket) açılan sütundaki* *fare_amount* seçin.
+1. *Giriş sütunları (Özellikler)* açılır listesini genişletin ve eğitim sırasında bir özellik olarak dışlamak için *trip_time_in_secs* sütununun işaretini kaldırın.  Model Oluşturucu aracının eğitme adımına gidin.
 
 ## <a name="train-the-model"></a>Modeli eğitme
 
@@ -115,7 +115,7 @@ Doğruluk ölçümlerinizi tatmin ediyorsanız, model doğruluğunu denemeye yö
 Eğitim sürecinin bir sonucu olarak iki proje oluşturulacaktır.
 
 - TaxiFarePredictionML. ConsoleApp: model eğitimi ve örnek tüketim kodu içeren bir .NET Core konsol uygulaması.
-- TaxiFarePredictionML. Model: giriş ve çıkış modeli verilerinin şemasını tanımlayan veri modellerini, eğitim sırasında en iyi gerçekleştirme modelinin kaydedilmiş sürümünü ve tahmine dayalı hale getirmek için `ConsumeModel` adlı bir yardımcı sınıfı içeren .NET Standard bir sınıf kitaplığı.
+- TaxiFarePredictionML. Model: giriş ve çıkış modeli verilerinin şemasını tanımlayan veri modellerini, eğitim sırasında en iyi gerçekleştirme modelinin kaydedilmiş sürümünü ve tahmin yapmak için `ConsumeModel` adlı bir yardımcı sınıfı içeren .NET Standard bir sınıf kitaplığı.
 
 1. Model Oluşturucu aracının kod adımında, otomatik olarak oluşturulan projeleri çözüme eklemek için **Proje Ekle** ' yi seçin.
 1. *Program.cs* dosyasını *Taxifaretahmin* projesinde açın.
@@ -126,7 +126,7 @@ Eğitim sürecinin bir sonucu olarak iki proje oluşturulacaktır.
     using TaxiFarePredictionML.Model;
     ```
 
-1. Modeli kullanarak yeni verileri tahmin etmek için, uygulamanızın `Main` yöntemi içinde `ModelInput` sınıfının yeni bir örneğini oluşturun. Tarifeli havayolu tutarının girişin bir parçası olmadığına dikkat edin. Bunun nedeni, modelin tahmin oluşturması olacaktır. 
+1. Modeli kullanarak yeni verileri tahmin etmek için, uygulamanızın `Main` yöntemi içinde `ModelInput` sınıfının yeni bir örneğini oluşturun. Tarifeli havayolu tutarının girişin bir parçası olmadığına dikkat edin. Bunun nedeni, modelin tahmin oluşturması olacaktır.
 
     ```csharp
     // Create sample data
@@ -140,7 +140,7 @@ Eğitim sürecinin bir sonucu olarak iki proje oluşturulacaktır.
     };
     ```
 
-1. `ConsumeModel` sınıfındaki `Predict` yöntemi kullanın. `Predict` yöntemi eğitilen modeli yükler, model için bir [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) oluşturur ve yeni verilerde tahmine dayalı hale getirmek için onu kullanır. 
+1. `ConsumeModel` sınıfındaki `Predict` yöntemi kullanın. `Predict` yöntemi eğitilen modeli yükler, model için bir [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) oluşturur ve yeni verilerde tahmine dayalı hale getirmek için onu kullanır.
 
     ```csharp
     // Make prediction

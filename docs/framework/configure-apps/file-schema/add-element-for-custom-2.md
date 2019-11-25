@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a9e7d68530ae1f0666fc4940ffe7605c3bf8dfe3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ac07fc9ba6f030209a5e0d0160689fab95bc1b4a
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119608"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088759"
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler ve DictionarySectionHandler için > öğesi \<ekleyin
 
 Özel uygulama ayarları ekler. Her **\<add >** etiketi bir anahtar/değer çifti içerir.
 
-[ **\<yapılandırma >** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)   
+[ **\<configuration >** ](configuration-element.md) \
+&nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<ekleme >**
 
 ## <a name="syntax"></a>Sözdizimi

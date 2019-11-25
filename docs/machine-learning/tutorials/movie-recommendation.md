@@ -5,12 +5,12 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 2d960a43f7934e262fa0e19abfea0209aa4e9ff0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5b4541b527559ee05c9b97d84324e9e70599a014
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425217"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977374"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Öğretici: ML.NET ile matris factorizaton kullanarak bir film öneren oluşturma
 
@@ -48,7 +48,7 @@ Bir film listesi önermek veya ilgili ürünlerin bir listesini önermek gibi ö
 
 ### <a name="create-a-project"></a>Proje oluşturma
 
-1. Visual Studio 2017 ' i açın. Menü çubuğundan **dosya** > **Yeni** > **Proje** ' yi seçin. **Yeni proje** iletişim kutusunda,  **C# Visual** düğümünü ve ardından **.NET Core** düğümünü seçin. Ardından **konsol uygulaması (.NET Core)** proje şablonunu seçin. **Ad** metin kutusuna "MovieRecommender" yazın ve **Tamam** düğmesini seçin.
+1. Visual Studio 2017 ' i açın. Menü çubuğundan **dosya** > **Yeni** > **projesi** öğesini seçin. **Yeni proje** iletişim kutusunda,  **C# Visual** düğümünü ve ardından **.NET Core** düğümünü seçin. Ardından **konsol uygulaması (.NET Core)** proje şablonunu seçin. **Ad** metin kutusuna "MovieRecommender" yazın ve **Tamam** düğmesini seçin.
 
 2. Veri kümesini depolamak için projenizde *veri* adlı bir dizin oluşturun:
 
@@ -102,7 +102,7 @@ Film derecelendirmelerini tahmin etmek istiyorsunuz, bu nedenle Derecelendirme s
 | `movieId`      |               |
 | `timestamp`     |               |
 
-`Label`tahmin etmek için hangi `Features` kullanıldığına karar verirsiniz. En iyi `Features` seçmeye yardımcı olması için [özellik permütasyon önem derecesi](../how-to-guides/determine-global-feature-importance-in-model.md) gibi yöntemleri de kullanabilirsiniz.
+`Label`tahmin etmek için hangi `Features` kullanıldığına karar verirsiniz. En iyi `Features`seçmeye yardımcı olması için [permütasyon özelliği önem derecesi](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md) gibi yöntemleri de kullanabilirsiniz.
 
 Bu durumda, zaman damgası bir kullanıcının belirli bir filmi nasıl derecelendirmediğini etkilemediğinden ve daha doğru bir tahmin yapma konusunda katkıda bulunmamasının gerektiği için `timestamp` sütununu `Feature` olarak ortadan kaldırmanız gerekir:
 
@@ -373,7 +373,7 @@ Bu yöntem, eğitilen modelinizi, daha sonra tahmine dayalı hale getirmek için
 
 ### <a name="use-your-saved-model"></a>Kayıtlı modelinizi kullanın
 
-Eğitilen modelinizi kaydettikten sonra modeli farklı ortamlarda kullanabilirsiniz (uygulamalarda eğitilen bir makine öğrenimi modelinin nasıl yapılacağını öğrenmek için bkz. ["nasıl yapılır Kılavuzu"](../how-to-guides/consuming-model-ml-net.md) ).
+Eğitilen modelinizi kaydettikten sonra modeli farklı ortamlarda kullanabilirsiniz. Uygulamalarda eğitilen makine öğrenimi modelini nasıl gerçekleştireceğinizi öğrenmek için [eğitilen modelleri kaydetme ve yükleme](../how-to-guides/save-load-machine-learning-models-ml-net.md) konusuna bakın.
 
 ## <a name="results"></a>Sonuçlar
 
@@ -420,7 +420,7 @@ Daha doğru öngörülere ulaşmak için modelinizin performansını iyileştire
 
 Her Kullanıcı ve film kimliği için yeterli sayıda örnek içeren eğitim verileri eklemek, öneri modelinin kalitesini artırmaya yardımcı olabilir.
 
-[Çapraz doğrulama](../how-to-guides/train-cross-validation-ml-net.md) , verileri rastgele kümeler halinde ayırır (Bu öğreticide yaptığınız gibi veri kümesinden test verilerinin ayıklanmasının yerine) ve bazı gruplardan verileri test verileri olarak eğitme ve gruplardan bazılarını alan bir yöntem. Bu yöntem, model kalitesi açısından bir eğitme testi ayırma yapmayı gerçekleştirir.
+[Çapraz doğrulama](../how-to-guides/train-machine-learning-model-cross-validation-ml-net.md) , verileri rastgele kümeler halinde ayırır (Bu öğreticide yaptığınız gibi veri kümesinden test verilerinin ayıklanmasının yerine) ve bazı gruplardan verileri test verileri olarak eğitme ve gruplardan bazılarını alan bir yöntem. Bu yöntem, model kalitesi açısından bir eğitme testi ayırma yapmayı gerçekleştirir.
 
 ### <a name="features"></a>Özellikler
 
@@ -428,7 +428,7 @@ Bu öğreticide, yalnızca veri kümesi tarafından sunulan üç `Features` (`us
 
 Bu iyi bir başlangıç olsa da, gerçekte veri kümesine dahil edildiklerinde başka öznitelikler veya `Features` (örneğin, Age, cinsiyeti, coğrafi konum vb.) eklemek isteyebilirsiniz. Daha fazla ilgili `Features` eklemek, öneri modelinizin performansını artırmaya yardımcı olabilir.
 
-Makinenizin öğrenimi göreviniz için en uygun `Features` emin değilseniz, özellik katkı hesaplaması (FCC) ve özellik bilimi [önem](../how-to-guides/determine-global-feature-importance-in-model.md)derecesini de kullanabilirsiniz. bu, ml.net 'in en etkili olduğunu keşfetmesini sağlar  `Features`.
+Makinenizin öğrenimi göreviniz için en uygun `Features` emin değilseniz, ML.NET 'in en etkili `Features`bulmasını sağlamak için sağladığı Özellik katkısı hesaplama (FCC) ve [permütasyon özelliği önem derecesi](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)de kullanabilirsiniz.
 
 ### <a name="algorithm-hyperparameters"></a>Algoritma hiper parametreleri
 

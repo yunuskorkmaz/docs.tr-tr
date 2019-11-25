@@ -3,20 +3,20 @@ title: ML.NET öğreticileri
 description: Özel AI çözümleri oluşturmayı ve bunları .NET uygulamalarınız ile tümleştirmeyi öğrenmek için ML.NET öğreticilerini keşfedebilirsiniz.
 ms.custom: seodec18
 ms.date: 07/08/2019
-ms.openlocfilehash: 6d5b622194cbaa20ed4e7283e6f1ea66f16a7b47
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bf59efb4118d9d4fac24413d7568df412a0e9475
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054007"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977166"
 ---
-# <a name="mlnet-tutorials"></a>ML.NET öğreticileri 
+# <a name="mlnet-tutorials"></a>ML.NET öğreticileri
 
 Aşağıdaki öğreticiler, özel makine öğrenimi çözümleri oluşturmak ve bunları .NET uygulamalarınızla bütünleştirmek için [ml.net](../index.yml) kullanmayı anlamanıza olanak tanır:
 
 - Yaklaşım [Analizi](sentiment-analysis.md): ml.NET kullanarak bir **ikili sınıflandırma** görevinin nasıl uygulanacağını gösterir.
 - [GitHub sorun sınıflandırması](github-issue-classification.md): ml.NET kullanarak **birden çok Lass sınıflandırma** görevinin nasıl uygulanacağını gösterir.
-- [Fiyat öngörüleyici](taxi-fare.md): ml.NET kullanarak bir **gerileme** görevinin nasıl uygulanacağını gösterir.
+- [Fiyat öngörüleyici](predict-prices.md): ml.NET kullanarak bir **gerileme** görevinin nasıl uygulanacağını gösterir.
 - [Iris Kümelemesi](iris-clustering.md): ml.NET kullanarak bir **kümeleme** görevinin nasıl uygulanacağını gösterir.
 - [Öneri](movie-recommendation.md): önceki Kullanıcı derecelendirmelerine dayalı olarak film **önerileri** oluştur
 - [Görüntü sınıflandırması](image-classification.md): ml.NET kullanarak özel görüntü Sınıflandırıcısı oluşturmak için var olan bir TensorFlow modelinin nasıl yeniden eğeceğinizi gösterir.

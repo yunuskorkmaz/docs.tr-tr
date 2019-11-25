@@ -8,20 +8,20 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: ba08f630dc602c950da309bf29482d85b41af7ef
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d510c445c585a36005ed415b14188efc4be03984
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697692"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089114"
 ---
-# <a name="settings-element-network-settings"></a>\<settings > öğesi (ağ ayarları)
-@No__t-0 ad alanı için temel ağ seçeneklerini yapılandırır.  
-  
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<settings >**  
-  
+# <a name="settings-element-network-settings"></a>\<ayarları > öğesi (ağ ayarları)
+<xref:System.Net?displayProperty=nameWithType> ad alanı için temel ağ seçeneklerini yapılandırır.  
+
+[ **\<configuration >** ](../configuration-element.md) \
+[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<ayarları >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -46,7 +46,7 @@ ms.locfileid: "71697692"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[httpListener](httplistener-element-network-settings.md)|@No__t-0 sınıfı tarafından kullanılan parametreleri özelleştirir.|  
+|[httpListener](httplistener-element-network-settings.md)|<xref:System.Net.HttpListener> sınıfı tarafından kullanılan parametreleri özelleştirir.|  
 |[httpWebRequest](httpwebrequest-element-network-settings.md)|Web isteği parametrelerini özelleştirir.|  
 |[IPv6](ipv6-element-network-settings.md)|Internet Protokolü sürüm 6 (IPv6) desteğini sunar.|  
 |[\<performanceCounter > öğesi (ağ ayarları)](performancecounter-element-network-settings.md)|Ağ performans sayaçlarını etkinleştirilir.|  

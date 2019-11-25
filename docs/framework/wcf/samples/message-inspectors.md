@@ -2,12 +2,12 @@
 title: İleti Denetçileri
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 01553084aa049688cd05fa36e46fb6f67983fb21
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7b8cc0f8e8aa0544c531566a8fe35f54a3914896
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424146"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977300"
 ---
 # <a name="message-inspectors"></a>İleti Denetçileri
 Bu örnek, istemci ve hizmet ileti denetçilerini nasıl uygulanacağını ve yapılandırılacağını gösterir.  
@@ -19,7 +19,7 @@ Bu örnek, istemci ve hizmet ileti denetçilerini nasıl uygulanacağını ve ya
 ## <a name="message-inspector"></a>İleti denetçisi  
  İstemci ileti Inspectors <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> arabirimini ve hizmet iletisi denetçilerini <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> arabirimini uygular. Uygulamalar, her iki taraf için de çalışacak bir ileti denetçisi oluşturmak için tek bir sınıfta birleştirilebilir. Bu örnek, bu tür bir Birleşik ileti denetçisi uygular. Inspector, gelen ve giden iletilerin doğrulandığı bir şema kümesi ile oluşturulur ve geliştiricinin gelen veya giden mesajların doğrulanıp onaylanmadığını ve Inspector 'ın gönderim veya istemci modunda olup olmadığını belirtmesini sağlar. Bu konunun ilerleyen kısımlarında açıklanan hata işlemesini etkiler.  
   
-```csharp  
+```csharp
 public class SchemaValidationMessageInspector : IClientMessageInspector, IDispatchMessageInspector  
 {  
     XmlSchemaSet schemaSet;  
@@ -206,7 +206,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
   
  Aşağıdaki `SchemaValidationBehavior` sınıfı, bu örneğin ileti denetçisini istemciye veya dağıtım çalışma zamanına eklemek için kullanılan davranıştır. Uygulama, her iki durumda da temel değildir. <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> ve <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>' de ileti denetçisi oluşturulur ve ilgili çalışma zamanının <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> koleksiyonuna eklenir.  
   
-```csharp  
+```csharp
 public class SchemaValidationBehavior : IEndpointBehavior  
 {  
     XmlSchemaSet schemaSet;   
@@ -299,7 +299,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
   
  Geçersiz kılınan `CreateBehavior` yöntemi, çalışma zamanı bir istemci veya uç nokta oluşturduğunda yapılandırma verilerini değerlendirirken, yapılandırma verilerini bir davranış nesnesine dönüştürür.  
   
-```csharp  
+```csharp
 public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public SchemaValidationBehaviorExtensionElement()  

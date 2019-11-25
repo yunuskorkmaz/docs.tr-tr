@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: eec2c4745ad5a0492ccf04c8f23b901275f23c01
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5f055d6e665f68586191ab760fb5658eeb5c2cb2
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698446"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087989"
 ---
 # <a name="oidmap-element"></a>\<Oıdmap > öğesi
 Sınıflara ASN. 1 nesne tanımlayıcısı (OID) eşlemelerini içerir.  
-  
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<Cryptographrivsettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<Oıdmap >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Cryptographyısettings >** ](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Oıdmap >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -48,7 +48,7 @@ Sınıflara ASN. 1 nesne tanımlayıcısı (OID) eşlemelerini içerir.
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
 |`cryptographySettings`|Şifreleme ayarlarını içerir.|  
-|`mscorlib`|@No__t-0 öğesi içerir.|  
+|`mscorlib`|`cryptographySettings` öğesini içerir.|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, RIPEMD-160 karma algoritması için bir OID 'nin bu karma algoritmanın bir uygulamasına eşlemesini içeren **\<Oıdmap >** öğesinin nasıl kullanılacağını gösterir.  

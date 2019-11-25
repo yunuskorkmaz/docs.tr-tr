@@ -4,12 +4,12 @@ description: ML.NET sürümünde desteklenen farklı makine öğrenimi görevler
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: d19593358361c9c8d3657053e766ec4a2c1ec163
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d0634ce8a0559ab3cdb5bf27fc5406ab02af8df6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424223"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977250"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 'de makine öğrenimi görevleri
 
@@ -17,7 +17,7 @@ Bir makine öğrenimi modeli oluştururken, öncelikle verilerinize ulaşmak iç
 
 Senaryolarınız için hangi görevin çalıştığına karar verdikten sonra, modelinize eğitebilmeniz için en iyi algoritmayı seçmeniz gerekir. Kullanılabilir algoritmalar her görevin bölümünde listelenmiştir.
 
-## <a name="binary-classification"></a>İkili sınıflandırma
+## <a name="binary-classification"></a>ikili sınıflandırma
 
 İki sınıftan (kategori) hangisinin ait olduğunu tahmin etmek için kullanılan [denetimli bir makine öğrenimi](glossary.md#supervised-machine-learning) görevi. Sınıflandırma algoritmasının girişi, her etiketin 0 veya 1 tamsayısı olduğu etiketli örnekler kümesidir. İkili sınıflandırma algoritmasının çıktısı, yeni etiketlenmiş olmayan örneklerin sınıfını tahmin etmek için kullanabileceğiniz bir sınıflandırıcıdır. İkili sınıflandırma senaryolarına örnek olarak şunlar verilebilir:
 
@@ -34,15 +34,15 @@ Aşağıdaki algoritmaları kullanarak bir ikili sınıflandırma modeli eğiteb
 
 * <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer> 
-* <xref:Microsoft.ML.Trainers.PriorTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
+* <xref:Microsoft.ML.Trainers.PriorTrainer>
 * <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
 
 ### <a name="binary-classification-inputs-and-outputs"></a>İkili sınıflandırma girişleri ve çıkışları
@@ -59,7 +59,7 @@ Bu traçler aşağıdaki sütunları çıktı:
 | `Score` | <xref:System.Single> | Model tarafından hesaplanan ham puan|
 | `PredictedLabel` | <xref:System.Boolean> | Puanınızın işaretine göre öngörülen etiket. Negatif puan, `false` eşlenir ve bir pozitif puan `true`eşlenir.|
 
-## <a name="multiclass-classification"></a>Birden çok Lass sınıflandırması
+## <a name="multiclass-classification"></a>birden çok Lass sınıflandırması
 
 Bir veri örneğinin sınıfını (kategori) tahmin etmek için kullanılan [denetimli bir makine öğrenimi](glossary.md#supervised-machine-learning) görevi. Sınıflandırma algoritmasının girişi, etiketlenmiş bir örnek kümesidir. Her etiket normalde metin olarak başlar. Daha sonra TermTransform aracılığıyla çalıştırılır. Bu, anahtar (sayısal) türüne dönüştürür. Bir sınıflandırma algoritmasının çıktısı, yeni etiketlenmiş olmayan örneklerin sınıfını tahmin etmek için kullanabileceğiniz bir sınıflandırıcıdır. Çok sınıflı sınıflandırma senaryolarına örnek olarak şunlar verilebilir:
 
@@ -79,10 +79,10 @@ Aşağıdaki eğitim algoritmalarını kullanarak çok bir Lass sınıflandırma
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> 
-* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
-* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer> 
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
 
 ### <a name="multiclass-classification-inputs-and-outputs"></a>Birden çok Lass sınıflandırma girişleri ve çıkışları
 
@@ -96,7 +96,7 @@ Bu, aşağıdaki çıkışları verir:
 | `Score` | <xref:System.Single> vektörü | Tüm sınıfların puanları. Daha yüksek değer, ilişkili sınıfa düşecek daha büyük olasılık anlamına gelir. İ-th öğesi en büyük değere sahipse, tahmin edilen etiket dizini i olur. Sıfır tabanlı dizin olduğunu unutmayın. |
 | `PredictedLabel` | [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türü | Tahmin edilen etiketin dizini. Değeri i ise, gerçek etiket anahtar değerli giriş etiketi türündeki ı-TH kategorisi olacaktır. |
 
-## <a name="regression"></a>Regresyon
+## <a name="regression"></a>regresyon
 
 Bir ilişkili özellikler kümesinden etiketin değerini tahmin etmek için kullanılan [denetimli bir makine öğrenimi](glossary.md#supervised-machine-learning) görevi. Etiket herhangi bir gerçek değer olabilir ve sınıflandırma görevlerinde olduğu gibi sınırlı bir değer kümesinden değildir. Regresyon algoritmaları, özelliğin değerleri farklılaştırılmadıkça etiketin nasıl değiştirileceğini anlamak için ilgili özellikler üzerindeki etiketin bağımlılığını modelleyebilir. Regresyon algoritmasının girişi, bilinen değerlerin etiketlerine sahip bir örnek kümesidir. Regresyon algoritmasının çıktısı, herhangi bir yeni giriş özellikleri kümesi için etiket değerini tahmin etmek üzere kullanabileceğiniz bir işlevdir. Regresyon senaryolarına örnek olarak şunlar verilebilir:
 
@@ -112,7 +112,7 @@ Aşağıdaki algoritmaları kullanarak bir regresyon modeli eğitebilirsiniz:
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.OlsTrainer>
-* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer> 
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
@@ -140,7 +140,7 @@ Benzer özellikler içeren kümelere veri örneklerini gruplamak için kullanıl
 
 Aşağıdaki algoritmayı kullanarak bir kümeleme modeli eğitebilirsiniz:
 
-* <xref:Microsoft.ML.Trainers.KMeansTrainer> 
+* <xref:Microsoft.ML.Trainers.KMeansTrainer>
 
 ### <a name="clustering-inputs-and-outputs"></a>Kümeleme girişleri ve çıkışları
 
@@ -193,7 +193,7 @@ Bir derecelendirme görevi bir etiketli örnekler kümesinden derecelendiricisin
 Aşağıdaki algoritmalarla bir derecelendirme modeli eğitebilirsiniz:
 
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
 
 ### <a name="ranking-input-and-outputs"></a>Sıralama girişi ve çıkışları
 

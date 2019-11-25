@@ -2,15 +2,15 @@
 title: 'Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 706c2886bda9497835d98eeeb594e68c2191d8d8
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8f8cf715269fd0ed67e2265eee4139a509f70cd1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969997"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977132"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma
-WCF Hizmetleri ve istemcileri, <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için bağlamayı kullanabilir.  WebSockets, <xref:System.ServiceModel.NetHttpBinding> hizmet sözleşmesinin bir geri çağırma anlaşması tanımladığını belirlediğinde kullanılır. Bu konuda, <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için kullanan bir WCF hizmeti ve istemcisinin nasıl uygulanacağı açıklanmaktadır.  
+WCF Hizmetleri ve istemcileri, WebSockets üzerinden iletişim kurmak için <xref:System.ServiceModel.NetHttpBinding> bağlamayı kullanabilir.  WebSockets, <xref:System.ServiceModel.NetHttpBinding> hizmet sözleşmesinin bir geri çağırma anlaşması tanımladığını belirlediğinde kullanılacaktır. Bu konuda, WebSockets üzerinden iletişim kurmak için <xref:System.ServiceModel.NetHttpBinding> kullanan bir WCF hizmeti ve istemcisinin nasıl uygulanacağı açıklanmaktadır.  
   
 ### <a name="define-the-service"></a>Hizmeti tanımlama  
   
@@ -27,7 +27,7 @@ WCF Hizmetleri ve istemcileri, <xref:System.ServiceModel.NetHttpBinding> WebSock
   
      Bu sözleşme, hizmetin istemciye geri ileti göndermesini sağlamak için istemci uygulaması tarafından uygulanır.  
   
-2. Hizmet sözleşmesini tanımlayın ve `IStockQuoteCallback` arabirimi geri çağırma sözleşmesi olarak belirtin.  
+2. Hizmet sözleşmesini tanımlayın ve geri çağırma anlaşması olarak `IStockQuoteCallback` arabirimini belirtin.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -42,24 +42,24 @@ WCF Hizmetleri ve istemcileri, <xref:System.ServiceModel.NetHttpBinding> WebSock
   
     ```csharp
     public class StockQuoteService : IStockQuoteService  
+    {  
+        public async Task StartSendingQuotes()  
         {  
-            public async Task StartSendingQuotes()  
+            var callback = OperationContext.Current.GetCallbackChannel<IStockQuoteCallback>();  
+            var random = new Random();  
+            double price = 29.00;  
+
+            while (((IChannel)callback).State == CommunicationState.Opened)  
             {  
-                var callback = OperationContext.Current.GetCallbackChannel<IStockQuoteCallback>();  
-                var random = new Random();  
-                double price = 29.00;  
-  
-                while (((IChannel)callback).State == CommunicationState.Opened)  
-                {  
-                    await callback.SendQuote("MSFT", price);  
-                    price += random.NextDouble();  
-                    await Task.Delay(1000);  
-                }  
+                await callback.SendQuote("MSFT", price);  
+                price += random.NextDouble();  
+                await Task.Delay(1000);  
             }  
         }  
+    }  
     ```  
   
-     Hizmet işlemi `StartSendingQuotes` zaman uyumsuz bir çağrı olarak uygulanır. Kullanarak geri çağırma kanalını alıyoruz `OperationContext` ve kanal açıksa geri çağırma kanalında zaman uyumsuz bir çağrı yaptık.  
+     Hizmet işlemi `StartSendingQuotes` zaman uyumsuz bir çağrı olarak uygulanır. `OperationContext` kullanarak geri çağırma kanalını aldık ve kanal açıksa geri çağırma kanalında zaman uyumsuz bir çağrı yaptık.  
   
 4. Hizmeti yapılandırma  
   
@@ -90,7 +90,7 @@ WCF Hizmetleri ve istemcileri, <xref:System.ServiceModel.NetHttpBinding> WebSock
     </configuration>  
     ```  
   
-     Hizmetin yapılandırma dosyası WCF 'nin varsayılan uç noktalarını kullanır. `<protocolMapping>` Bölümü ,`NetHttpBinding` oluşturulan varsayılan uç noktalar için kullanılması gerektiğini belirtmek için kullanılır.  
+     Hizmetin yapılandırma dosyası WCF 'nin varsayılan uç noktalarını kullanır. `<protocolMapping>` bölümü, oluşturulan varsayılan uç noktalar için `NetHttpBinding` kullanılması gerektiğini belirtmek için kullanılır.  
   
 ### <a name="define-the-client"></a>Istemciyi tanımlama  
   
@@ -158,7 +158,7 @@ WCF Hizmetleri ve istemcileri, <xref:System.ServiceModel.NetHttpBinding> WebSock
         </configuration>  
         ```  
   
-         İstemci yapılandırmasında yapmanız gereken özel bir şey yoktur, kullanarak `NetHttpBinding`istemci tarafı uç noktasını belirtmeniz yeterlidir.  
+         İstemci yapılandırmasında yapmanız gereken özel bir şey yoktur, `NetHttpBinding`kullanarak istemci tarafı uç noktasını belirtmeniz yeterlidir.  
   
 ## <a name="example"></a>Örnek  
  Bu konuda kullanılan kodun tamamı aşağıda verilmiştir.  

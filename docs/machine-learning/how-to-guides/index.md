@@ -1,63 +1,51 @@
 ---
-title: ML.NET nasıl yapılır kılavuzları
-description: Özel yapay ZEKA çözümleri oluşturma ve Machine Learning .NET uygulamalarınızı tümleştirmeye yardımcı olmak üzere belirli görevlerin nasıl yapılacağını öğrenin.
+title: ML.NET nasıl yapılır kılavuzlarını
+description: Özel AI çözümleri oluşturma ve .NET uygulamalarınıza tümleştirme Machine Learning konusunda yardımcı olmak üzere belirli görevleri nasıl gerçekleştireceğinizi öğrenin.
 ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: c16adf6bf85aec1aef51751c6d4fe8c7f0f3c9f4
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e2b4ff77c7f76282d70c06b5ef534306fe4e93a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645040"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977105"
 ---
-# <a name="net-machine-learning-how-to-guides"></a>.NET makine öğrenimi ile ilgili nasıl yapılır kılavuzları 
+# <a name="net-machine-learning-how-to-guides"></a>.NET Machine Learning nasıl yapılır kılavuzlarından
 
-ML.NET Kılavuzu bölümüne nasıl hızlı sık sorulan soruların yanıtlarını bulabilirsiniz. Bazı durumlarda, makaleler bulmayı kolaylaştırmak için birden çok bölümlerinde listelenen.
+ML.NET kılavuzunun nasıl yapılır bölümünde yaygın soruların hızlı yanıtlarını bulabilirsiniz. Bazı durumlarda, makaleleri bulmayı kolaylaştırmak için birden çok bölümde listelenebilir.
 
-## <a name="load-the-data"></a>Verileri yükleme
+## <a name="load-data"></a>Veri yükleme
 
-* [Machine learning hizmetinin işlem için bir CSV dosyasından çok sütunlu veri yükleyin.](load-data-from-mult-column-csv-ml-net.md)
-
-* [Machine learning işlemi için birden çok dosyadan verileri yükleyin.](load-data-from-multiple-files-ml-net.md)
-
-* [Machine learning hizmetinin işlem için bir metin dosyasından veri yükleyin.](load-data-from-text-file-ml-net.md)
+* [Dosyaları ve SQL veritabanlarından verileri yükleyin.](load-data-ml-net.md)
 
 ### <a name="prepare-the-data"></a>Verileri hazırlama
 
-* [Eğitim verileri ile veri işlemeye kullanılacak normalizers ön işleme.](normalizers-preprocess-data-ml-net.md)
+* [Veri işlemede kullanılacak normalde eğitim verilerini önceden işleyin.](normalizers-preprocess-data-ml-net.md)
 
 ## <a name="train-the-model"></a>Modeli eğitme
 
-* [Bir metin dosyasına olmayan veriler ile machine learning modeli eğitin.](load-non-file-training-data-ml-net.md)
+* [Çapraz doğrulama kullanarak makine öğrenimi modelini eğitme.](train-machine-learning-model-cross-validation-ml-net.md)
 
-* [Çapraz doğrulama kullanarak makine öğrenme modeli eğitin.](train-cross-validation-ml-net.md)
+* [ML.NET kullanarak bir değer tahmin etmek için regresyon modeli eğitme.](train-machine-learning-model-ml-net.md)
 
-* [ML.NET kullanarak bir değeri tahmin etmek için regresyon modeli eğitin.](train-regression-model-ml-net.md)
-
-### <a name="evaluate-the-model-quality"></a>Model kalitesi değerlendir
+### <a name="evaluate-the-model-quality"></a>Model kalitesini değerlendirin
 
 * [Model kalitesini değerlendirmek için ölçümleri hesaplayın.](verify-model-quality-ml-net.md)
 
 ### <a name="model-explainability"></a>Model explainability
 
-* [Modelleri özellik önemini özellik önem permütasyon ile belirleyin.](determine-global-feature-importance-in-model.md)
+* [Permütasyon özelliği önem derecesine sahip modellerin Özellik önemini saptayın.](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
 
-* [Genelleştirilmiş eklenebilir modelleri ve Şekil işlevleri için model explainability kullanın.](use-gams-for-model-explainability.md)
-
-### <a name="feature-engineering"></a>Özellik mühendisliği
-
-* [Kategorik veriler üzerinde özellik Mühendisliği, eğitim modeli için geçerlidir.](train-model-categorical-ml-net.md)
-
-* [ML.NET ile metinsel veriler üzerinde özellik Mühendisliği, eğitim modeli için geçerlidir.](train-model-textual-ml-net.md)
+* [Explainability modeli için genelleştirilmiş ekleme modellerini ve şekil işlevlerini kullanın.](use-gams-for-model-explainability.md)
 
 ## <a name="run"></a>Çalıştır
 
-* [ML.NET ardışık düzen işleme sırasında ara veri değerleri inceleyin.](inspect-intermediate-data-ml-net.md)
+* [ML.NET işlem hattı işleme sırasında Ara veri değerlerini inceleyin.](inspect-intermediate-data-ml-net.md)
 
-* [Eğitilen makine öğrenme modeli uygulamalarda kullanıma hazır hale getirin.](consuming-model-ml-net.md)
+* [Eğitilen bir makine öğrenme modeli yükleyin.](save-load-machine-learning-models-ml-net.md)
 
-* [Aynı anda bir tahminde bulunmak için PredictionFunction kullanın.](single-predict-model-ml-net.md)
+* [Eğitilen bir modelle tahminlere sahip olun.](machine-learning-model-predictions-ml-net.md)
 
-## <a name="probabilistic-infernet"></a>Olasılıklara (Infer.NET)
+## <a name="probabilistic-infernet"></a>Dayalı (Infer.NET)
 
-* [Bir oyun eşleme listesi uygulaması Infer.NET olasılığa dayalı programlama ile oluşturun.](matchup-app-infer-net.md)
+* [Infer.NET ve dayalı programlamasında bir oyun eşleşmesi liste uygulaması oluşturun.](matchup-app-infer-net.md)

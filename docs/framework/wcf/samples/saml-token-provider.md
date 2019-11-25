@@ -2,12 +2,12 @@
 title: SAML Belirteç Sağlayıcı
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 87aef572c2179034d295361c62942cea2ad6ed7a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d599992949b87f0ac3f178d8f79f244781eda6fa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424233"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976705"
 ---
 # <a name="saml-token-provider"></a>SAML Belirteç Sağlayıcı
 Bu örnek, özel bir istemci SAML belirteci sağlayıcısının nasıl uygulanacağını gösterir. Güvenlik altyapısına kimlik bilgileri sağlamak için Windows Communication Foundation (WCF) içindeki bir belirteç sağlayıcısı kullanılır. Genel içindeki belirteç sağlayıcısı hedefi inceler ve güvenlik altyapısının iletiyi güvenli hale getirmek için uygun kimlik bilgilerini verir. WCF varsayılan kimlik bilgileri Yöneticisi belirteç sağlayıcısıyla birlikte gelir. WCF Ayrıca bir CardSpace belirteç sağlayıcısıyla birlikte gelir. Özel belirteç sağlayıcıları aşağıdaki durumlarda faydalıdır:
@@ -161,8 +161,7 @@ Bu örnek, özel bir istemci SAML belirteci sağlayıcısının nasıl uygulanac
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> sınıfı, `CreateSecurityTokenProvider` yönteminde kendisine geçirilen belirli <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> için <xref:System.IdentityModel.Selectors.SecurityTokenProvider> oluşturmak için kullanılır. Belirteç kimlik doğrulaması ve belirteç seri hale getirici oluşturmak için bir güvenlik belirteci Yöneticisi de kullanılır, ancak bunlar bu örnek kapsamında değildir. Bu örnekte, özel güvenlik belirteci Yöneticisi <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> sınıfından devralır ve geçilen belirteç gereksinimleri SAML belirtecinin istendiğini gösteriyorsa, özel SAML belirteci sağlayıcısını döndürmek için `CreateSecurityTokenProvider` yöntemini geçersiz kılar. İstemci kimlik bilgileri sınıfı (bkz. Adım 3) bir onaylama belirtmediğinden, güvenlik belirteci Yöneticisi uygun bir örnek oluşturur.
 
     ```csharp
-    public class SamlSecurityTokenManager :
-     ClientCredentialsSecurityTokenManager
+    public class SamlSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
      SamlClientCredentials samlClientCredentials;
 

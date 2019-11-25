@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 2105a6dd25a7f6e5e4c1ce286be7f60beae1dca0
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 625c3cb82a8659c742b540724e5cf31be65a705e
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697602"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089097"
 ---
-# <a name="smtp-element-network-settings"></a>\<smtp > öğesi (ağ ayarları)
+# <a name="smtp-element-network-settings"></a>\<SMTP > öğesi (ağ ayarları)
 Teslim biçimini, teslim yöntemini ve e-posta gönderme adresini yapılandırır.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<mailSettings >** ](mailsettings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<smtp >**  
+[ **\<configuration >** ](../configuration-element.md) \
+[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**mailSettings >** ](mailsettings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<smtp >**
   
 ## <a name="syntax"></a>Sözdizimi  
   

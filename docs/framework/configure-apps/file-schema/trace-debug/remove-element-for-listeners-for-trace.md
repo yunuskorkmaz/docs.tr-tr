@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: 56d1e56514aed98d5f3b9f7363e461af6ac68a8c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: f06973ec30d5061e4a200d6bf7e68adcf6302018
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697213"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088844"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<trace için \<listeners > için \<> öğesini kaldırın >
+# <a name="remove-element-for-listeners-for-trace"></a>\<Trace için \<Listeners > > öğesi \<kaldırın >
 **Dinleyicileri** koleksiyondan bir dinleyiciyi kaldırır.  
-  
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<listeners >** ](listeners-element-for-trace.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+[**System. diagnostics\<** ](system-diagnostics-element.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<izleme >** ](trace-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dinleyicileri >** ](listeners-element-for-trace.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<kaldır >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -53,7 +53,7 @@ ms.locfileid: "71697213"
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> @No__t-1 koleksiyonundan <xref:System.Diagnostics.DefaultTraceListener> ' ı kaldırmak, <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> ve <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> yöntemlerinin davranışını değiştirir. @No__t-0 veya `Fail` yönteminin çağrılması normalde bir ileti kutusunun görüntülenmesine neden olur, ancak <xref:System.Diagnostics.DefaultTraceListener> `Listeners` koleksiyonunda değilse ileti kutusu görüntülenmez.  
+> `Listeners` koleksiyonundan <xref:System.Diagnostics.DefaultTraceListener> kaldırmak <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>ve <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> yöntemlerinin davranışını değiştirir. Bir `Assert` veya `Fail` yöntemini çağırmak normalde bir ileti kutusunun görüntülenmesine neden olur, ancak <xref:System.Diagnostics.DefaultTraceListener> `Listeners` koleksiyonunda değilse ileti kutusu görüntülenmez.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, izleme **dinleyicileri** koleksiyonundan varsayılan izleme dinleyicisinin nasıl kaldırılacağını gösterir.  

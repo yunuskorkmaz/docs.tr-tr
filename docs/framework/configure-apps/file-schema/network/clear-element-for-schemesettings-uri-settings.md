@@ -2,21 +2,21 @@
 title: schemeSettings için <clear> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-ms.openlocfilehash: e954fef455d0279a945c33f2014913fea9d63064
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 90035c1c9ccdb8ac888aec84e506ccde41748c9f
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699439"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087439"
 ---
-# <a name="clear-element-for-schemesettings-uri-settings"></a>@no__t, ıviewmesettings için > öğesi (URI ayarları)
+# <a name="clear-element-for-schemesettings-uri-settings"></a>ıviewmesettings için > öğesini \<temizle (URI ayarları)
 Varolan tüm düzen ayarlarını temizler.  
-  
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<urı >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<bir mesettings >** ](schemesettings-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<urı >** ](uri-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ayarları**](schemesettings-element-uri-settings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -36,7 +36,7 @@ Varolan tüm düzen ayarlarını temizler.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Ramesettings > öğesi (Uri Ayarları)](schemesettings-element-uri-settings.md)|Belirli düzenler için <xref:System.Uri> ' ın nasıl ayrıştıralınacağını belirtir.|  
+|[\<düzeni > öğesi (URI ayarları)](schemesettings-element-uri-settings.md)|Belirli düzenler için <xref:System.Uri> nasıl ayrıştırılagösterir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Varsayılan olarak, <xref:System.Uri?displayProperty=nameWithType> sınıfı, yol sıkıştırmayı yürütmeden önce yüzde kodlamalı yol sınırlayıcılarını kaldırır. Bu, aşağıdaki gibi saldırılara karşı bir güvenlik mekanizması olarak uygulanmıştır:  
@@ -47,7 +47,7 @@ Varolan tüm düzen ayarlarını temizler.
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Bu nedenle, <xref:System.Uri?displayProperty=nameWithType> sınıfı ilk olarak yol sınırlayıcılarını yok eder ve ardından yol sıkıştırması uygular. Yukarıdaki kötü amaçlı URL 'YI <xref:System.Uri?displayProperty=nameWithType> sınıf oluşturucusuna geçirmenin sonucu aşağıdaki URI ile sonuçlanır:  
+ Bu nedenle, <xref:System.Uri?displayProperty=nameWithType> sınıfı ilk olarak yol sınırlayıcılarını kaldırın ve ardından yol sıkıştırması uygular. Yukarıdaki kötü amaçlı URL 'YI <xref:System.Uri?displayProperty=nameWithType> sınıf oluşturucusuna geçirmenin sonucu aşağıdaki URI ile sonuçlanır:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   

@@ -1,13 +1,13 @@
 ---
 title: Tür Genişletmeleri
 description: Tür uzantılarının F# daha önce tanımlanmış bir nesne türüne yeni üyeler eklemenize nasıl izin vereceğinizi öğrenin.
-ms.date: 02/08/2019
-ms.openlocfilehash: 5d31d87095d3381e66dc32da4b6d7bb746886406
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 11/04/2019
+ms.openlocfilehash: d26d7b2b507f04e9cb68ade4c0409403643f74ba
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106851"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978257"
 ---
 # <a name="type-extensions"></a>Tür uzantıları
 
@@ -66,11 +66,11 @@ type Variant with
 
 Bir tür uzantısı kullanmak, aşağıdakilerin her birini ayırmanızı sağlar:
 
-- Bir `Variant` türün bildirimi
-- `Variant` Sınıfı "şekle" göre yazdırma işlevselliği
-- Nesne stili `.`gösterimle yazdırma işlevlerine erişmenin bir yolu
+- `Variant` türünün bildirimi
+- `Variant` sınıfını "şekle" göre yazdırma işlevselliği
+- Nesne stili `.`gösterimi ile yazdırma işlevlerine erişmenin bir yolu
 
-Bu, her şeyi üzerinde `Variant`üye olarak tanımlamaya alternatiftir. Doğal olarak daha iyi bir yaklaşım olmasa da, bazı durumlarda işlevlerin temizleyici bir gösterimi olabilir.
+Bu, her şeyi `Variant`üye olarak tanımlamaya alternatiftir. Doğal olarak daha iyi bir yaklaşım olmasa da, bazı durumlarda işlevlerin temizleyici bir gösterimi olabilir.
 
 İç tür uzantıları, genişlettikleri türün üyeleri olarak derlenir ve tür yansıma tarafından incelenirse tür üzerinde görünür.
 
@@ -83,19 +83,16 @@ Bu, her şeyi üzerinde `Variant`üye olarak tanımlamaya alternatiftir. Doğal 
 ```fsharp
 module Extensions
 
-open System.Collections.Generic
-
 type IEnumerable<'T> with
     /// Repeat each element of the sequence n times
     member xs.RepeatElements(n: int) =
         seq {
             for x in xs do
-                for i in 1 .. n do
-                    yield x
+                for _ in 1 .. n -> x
         }
 ```
 
-Artık, `Extensions` modül üzerinde `RepeatElements` çalıştığınız kapsamda açıldığı sürece bir üyesi olan <xref:System.Collections.Generic.IEnumerable%601> olarak erişebilirsiniz.
+Artık `RepeatElements`, `Extensions` modülü üzerinde çalıştığınız kapsamda açıldığı sürece <xref:System.Collections.Generic.IEnumerable%601> bir üyesi olarak erişebilirsiniz.
 
 İsteğe bağlı uzantılar, yansıma tarafından incelenmişse genişletilmiş tür üzerinde görünmez. İsteğe bağlı uzantılar modüllerde olmalıdır ve yalnızca uzantıyı içeren modül açık olduğunda ya da kapsamda yoksa kapsam içinde yer alır.
 
@@ -121,9 +118,9 @@ type IEnumerable<'T> with
 
 Bu kodu isteğe bağlı bir tür uzantısıyla çalışacak şekilde almanın bir yolu yoktur:
 
-- Olduğu gibi, `Sum` üyenin tür uzantısının tanımladığı sayıdan farklı bir `'T` kısıtlaması`static member get_Zero` ( `static member (+)`ve) vardır.
-- Tür uzantısının aynı kısıtlamaya `Sum` sahip olacak şekilde değiştirilmesi, ' deki `IEnumerable<'T>`tanımlı kısıtlamayla artık eşleşmeyecektir.
-- `member this.Sum` Olarak`member inline this.Sum` değiştirmek, tür kısıtlamalarının eşleşmeyen bir hata verir.
+- Olduğu gibi `Sum` üyesinin, tür uzantısının tanımladığı `'T` (`static member get_Zero` ve `static member (+)`) farklı bir kısıtlaması vardır.
+- Tür uzantısının aynı kısıtlamaya sahip olacak şekilde değiştirilmesi, `Sum` artık `IEnumerable<'T>`tanımlı kısıtlama ile eşleşmez.
+- `member this.Sum` `member inline this.Sum` olarak değiştirmek, tür kısıtlamalarının eşleşmeyen bir hata verir.
 
 İstenen, "boşluk olarak float" ve bir tür genişledikleri gibi sunulabilir statik yöntemlerdir. Bu, uzantı yöntemlerinin gerekli hale geldiği yerdir.
 
@@ -144,7 +141,7 @@ type IEnumerableExtensions() =
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
-Kullanıldığında, bu kod ' de `Sum` <xref:System.Collections.Generic.IEnumerable%601>tanımlandığı gibi görünür, bu yüzden `Extensions` açık veya kapsam içinde yer alır.
+Kullanıldığında, bu kod, `Extensions` açıldığı veya kapsam içinde olduğu sürece, `Sum` <xref:System.Collections.Generic.IEnumerable%601>tanımlanmış gibi görünmesini sağlayacak.
 
 ## <a name="other-remarks"></a>Diğer açıklamalar
 
@@ -152,7 +149,7 @@ Tür uzantıları da aşağıdaki özniteliklere sahiptir:
 
 - Erişilebilen herhangi bir tür genişletilebilir.
 - İç ve isteğe bağlı tür uzantıları, yalnızca yöntemleri değil _herhangi bir_ üye türünü tanımlayabilir. Bu nedenle, örneğin uzantı özellikleri de mümkündür.
-- [Söz diziminde belirteç,](type-extensions.md#syntax) normal üyelerde olduğu gibi, çağrılan türün örneğini temsil eder. `self-identifier`
+- [Söz diziminde](type-extensions.md#syntax) `self-identifier` belirteci, normal Üyeler gibi, çağrılan türün örneğini temsil eder.
 - Genişletilmiş Üyeler statik veya örnek üyeleri olabilir.
 - Tür uzantısı üzerindeki tür değişkenleri, belirtilen tür kısıtlamasıyla eşleşmelidir.
 
@@ -163,7 +160,7 @@ Tür uzantıları için aşağıdaki sınırlamalar de mevcuttur:
 - Tür uzantıları [statik olarak çözümlenen tür parametrelerini](./generics/statically-resolved-type-parameters.md)desteklemez.
 - İsteğe bağlı tür uzantıları, oluşturucuları genişletmeler olarak desteklemez.
 - Tür genişletmeleri [tür kısaltmaları](type-abbreviations.md)üzerinde tanımlanamaz.
-- Tür uzantıları için `byref<'T>` geçerli değildir (ancak bildirilenler olabilir).
+- Tür uzantıları `byref<'T>` için geçerli değil (bildirilebilecek olmasına rağmen).
 - Tür uzantıları, öznitelikler için geçerli değildir (ancak bildirilenler olabilir).
 - Aynı ada sahip diğer yöntemleri aşırı yükleyen uzantılar tanımlayabilirsiniz, ancak belirsiz bir çağrı varsa F# derleyici uzantı olmayan yöntemlere tercih verir.
 

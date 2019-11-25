@@ -8,20 +8,20 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: fb4c8844ed3eb13af483c214d659090c0c563c33
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4e8bf23ce39edadf80f019315c690b597b3d7361
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698073"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089227"
 ---
 # <a name="mailsettings-element-network-settings"></a>\<mailSettings > öğesi (ağ ayarları)
 Posta gönderme seçeneklerini yapılandırır.  
 
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<mailSettings >**  
-  
+[ **\<configuration >** ](../configuration-element.md) \
+[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<mailSettings >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -40,13 +40,13 @@ Posta gönderme seçeneklerini yapılandırır.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|[\<smtp > öğesi (ağ ayarları)](smtp-element-network-settings.md)|Basit Posta Aktarım Protokolü seçeneklerini yapılandırır.|  
+|[\<SMTP > öğesi (ağ ayarları)](smtp-element-network-settings.md)|Basit Posta Aktarım Protokolü seçeneklerini yapılandırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[\<Sistem .net > öğesi (ağ ayarları)](system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.|  
+|[\<sistem .net > öğesi (ağ ayarları)](system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, varsayılan ağ kimlik bilgilerini kullanarak e-posta göndermek için uygun SMTP parametrelerini belirtir.  

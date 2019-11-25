@@ -2,21 +2,21 @@
 title: schemeSettings için <add> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: efd52557ea8b617a39e685ff8ad69bab01322a7a
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ed40098e8d4c2d1298771e67a618b8d04f59c912
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699602"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087712"
 ---
-# <a name="add-element-for-schemesettings-uri-settings"></a>\<mesettings için > öğesi ekleme (URI ayarları)
+# <a name="add-element-for-schemesettings-uri-settings"></a>\<için > öğesi ekleme (Uri Ayarları)
 Düzen adı için bir düzen ayarı ekler.  
-  
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<urı >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<bir mesettings >** ](schemesettings-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<add >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<urı >** ](uri-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ayarları**](schemesettings-element-uri-settings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -48,7 +48,7 @@ Düzen adı için bir düzen ayarı ekler.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Ramesettings > öğesi (Uri Ayarları)](schemesettings-element-uri-settings.md)|Belirli düzenler için <xref:System.Uri> ' ın nasıl ayrıştıralınacağını belirtir.|  
+|[\<düzeni > öğesi (URI ayarları)](schemesettings-element-uri-settings.md)|Belirli düzenler için <xref:System.Uri> nasıl ayrıştırılagösterir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Varsayılan olarak, <xref:System.Uri?displayProperty=nameWithType> sınıfı, yol sıkıştırmayı yürütmeden önce yüzde kodlamalı yol sınırlayıcılarını kaldırır. Bu, aşağıdaki gibi saldırılara karşı bir güvenlik mekanizması olarak uygulanmıştır:  
@@ -59,7 +59,7 @@ Düzen adı için bir düzen ayarı ekler.
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Bu nedenle, <xref:System.Uri?displayProperty=nameWithType> sınıfı ilk olarak yol sınırlayıcılarını yok eder ve ardından yol sıkıştırması uygular. Yukarıdaki kötü amaçlı URL 'YI <xref:System.Uri?displayProperty=nameWithType> sınıf oluşturucusuna geçirmenin sonucu aşağıdaki URI ile sonuçlanır:  
+ Bu nedenle, <xref:System.Uri?displayProperty=nameWithType> sınıfı ilk olarak yol sınırlayıcılarını kaldırın ve ardından yol sıkıştırması uygular. Yukarıdaki kötü amaçlı URL 'YI <xref:System.Uri?displayProperty=nameWithType> sınıf oluşturucusuna geçirmenin sonucu aşağıdaki URI ile sonuçlanır:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -69,7 +69,7 @@ Düzen adı için bir düzen ayarı ekler.
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, http şeması için yüzde kodlamalı bir yol sınırlayıcılarını yok etmek üzere <xref:System.Uri> sınıfı tarafından kullanılan bir yapılandırmayı gösterir.  
+ Aşağıdaki örnek, http şemasına yönelik yüzde kodlamalı yol sınırlayıcılarını yok etmek için <xref:System.Uri> sınıfı tarafından kullanılan bir yapılandırmayı gösterir.  
   
 ```xml  
 <configuration>  

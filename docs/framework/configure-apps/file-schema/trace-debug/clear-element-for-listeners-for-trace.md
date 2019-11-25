@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-ms.openlocfilehash: 0361580724351f8f42d058d5e20354e3335bac2f
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 049b8e7ed17633c0f34b062915afaf719927dad6
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699376"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088924"
 ---
-# <a name="clear-element-for-listeners-for-trace"></a>\<trace için \<listeners > için \<clear > öğesi >
+# <a name="clear-element-for-listeners-for-trace"></a>\<Trace için \<dinleyicileri > için > \<Temizle >
 İzleme için `Listeners` koleksiyonunu temizler.  
-  
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<listeners >** ](listeners-element-for-trace.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<clear >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+[**System. diagnostics\<** ](system-diagnostics-element.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<izleme >** ](trace-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dinleyicileri >** ](listeners-element-for-trace.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -48,17 +48,17 @@ ms.locfileid: "71699376"
 |`listeners`|İletileri toplayacak, depolayan ve yönlendiren dinleyicileri içerir. Dinleyiciler izleme çıkışını uygun bir hedefe yönlendirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 öğesi, izleme için `Listeners` koleksiyonundan tüm dinleyicileri kaldırır. Koleksiyonda başka hiçbir etkin dinleyici bulunmadığından emin olmak için `<add>` öğesini kullanmadan önce `<clear>` öğesini kullanabilirsiniz.  
+ `<clear>` öğesi, izleme için `Listeners` koleksiyonundan tüm dinleyicileri kaldırır. Koleksiyonda başka hiçbir etkin dinleyici bulunmadığından emin olmak için `<add>` öğesini kullanmadan önce `<clear>` öğesini kullanabilirsiniz.  
   
- @No__t-0 koleksiyonunu <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> özelliği (`System.Diagnostics.Trace.Listeners.Clear()`) üzerinde <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> yöntemini çağırarak programlı bir şekilde temizleyebilirsiniz.  
+ <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> özelliğinde <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> yöntemini çağırarak `Listeners` koleksiyonunu programlama yoluyla temizleyebilirsiniz (`System.Diagnostics.Trace.Listeners.Clear()`).  
   
  Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 > [!NOTE]
-> @No__t-0 öğesi, <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> ve <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> yöntemlerinin davranışını değiştirerek `Listeners` koleksiyonundan <xref:System.Diagnostics.DefaultTraceListener> ' i kaldırır. @No__t-0 veya `Fail` yöntemini çağırmak normalde bir ileti kutusunun görüntüsüne neden olur. Ancak, <xref:System.Diagnostics.DefaultTraceListener> `Listeners` koleksiyonunda değilse ileti kutusu görüntülenmez.  
+> `<clear>` öğesi, <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>ve <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> yöntemlerinin davranışını değiştirerek `Listeners` koleksiyonundan <xref:System.Diagnostics.DefaultTraceListener> kaldırır. Bir `Assert` veya `Fail` yöntemini çağırmak normalde bir ileti kutusunun görüntüsüne neden olur. Ancak, <xref:System.Diagnostics.DefaultTraceListener> `Listeners` koleksiyonunda değilse ileti kutusu görüntülenmez.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, izleme için `Listeners` koleksiyonuna `console` dinleyicisini eklemek üzere `<add>` öğesi kullanılmadan önce `<clear>` öğesinin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, izleme için `Listeners` koleksiyonuna dinleyici `console` eklemek için `<add>` öğesini kullanmadan önce `<clear>` öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -84,5 +84,5 @@ ms.locfileid: "71699376"
 - <xref:System.Diagnostics.Debug>
 - <xref:System.Diagnostics.TraceSource>
 - [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)
-- [\<remove >](remove-element-for-listeners-for-trace.md)
+- [\<> Kaldır](remove-element-for-listeners-for-trace.md)
 - [İzleme Dinleyicileri](../../../debug-trace-profile/trace-listeners.md)

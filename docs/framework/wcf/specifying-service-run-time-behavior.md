@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 087aaf5ebc69046d5404765114cfaecd28798915
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: ffa2f906ac2ff4630de83938ce365c1b9d5d4d64
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321386"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976630"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Hizmet Çalışma Zamanı Davranışını Belirtme
 Bir hizmet sözleşmesini tasarladıktan ([hizmet sözleşmeleri tasarladıktan](designing-service-contracts.md)) ve hizmet sözleşmenizi ([hizmet sözleşmelerini uygulama](implementing-service-contracts.md)) uyguladıktan sonra, hizmet çalışma zamanının işlem davranışını yapılandırabilirsiniz. Bu konuda, sistem tarafından sunulan hizmet ve işlem davranışları açıklanmakta ve yeni davranışlar oluşturmak için nereden daha fazla bilgi bulacağınız açıklanmaktadır. Bazı davranışlar öznitelik olarak uygulandığından, çoğu uygulama yapılandırma dosyası veya programlı olarak uygulanır. Hizmet uygulamanızı yapılandırma hakkında daha fazla bilgi için bkz. [Hizmetleri yapılandırma](configuring-services.md).  
@@ -20,7 +20,7 @@ Bir hizmet sözleşmesini tasarladıktan ([hizmet sözleşmeleri tasarladıktan]
   
  Ancak, iş parçacığı sorunları veya örnek yönetimi gibi işlem özellikleri, istemciler için opaktır. Hizmet sözleşmenizi uyguladıktan sonra, *davranışları*kullanarak çok sayıda işlem özelliği yapılandırabilirsiniz. Davranışlar, çalışma zamanı özelliğini ayarlayarak ya da çalışma zamanına bir özelleştirme türü ekleyerek Windows Communication Foundation (WCF) çalışma zamanını değiştiren nesnelerdir. Kullanıcı tanımlı davranışlar oluşturarak çalışma zamanını değiştirme hakkında daha fazla bilgi için bkz. [ServiceHost ve hizmet modeli katmanını genişletme](./extending/extending-servicehost-and-the-service-model-layer.md).  
   
- @No__t-0 ve <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> öznitelikleri en yaygın olarak kullanılan davranışlardır ve en sık istenen işlem özelliklerini kullanıma sunar. Öznitelikleri olduklarından, bunları hizmet veya işlem uygulamasına uygularsınız. @No__t-0 veya <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType> gibi diğer davranışlar genellikle bir uygulama yapılandırma dosyası kullanılarak uygulanır, ancak bunları programlı olarak kullanabilirsiniz.  
+ <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> ve <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> öznitelikleri en yaygın olarak kullanılan davranışlardır ve en sık istenen işlem özelliklerini kullanıma sunar. Öznitelikleri olduklarından, bunları hizmet veya işlem uygulamasına uygularsınız. <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>gibi diğer davranışlar genellikle bir uygulama yapılandırma dosyası kullanılarak uygulanır, ancak bunları programlı olarak kullanabilirsiniz.  
   
  Bu konu, <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> özniteliklerine genel bir bakış sağlar, davranışların çalışacağı çeşitli kapsamları açıklar ve WCF ile ilgili olabilecek çeşitli kapsamlar üzerinde sistem tarafından sağlanan davranışların birçoğu için hızlı bir açıklama sağlar geliştiricilerinin.  
   
@@ -53,20 +53,20 @@ Bir hizmet sözleşmesini tasarladıktan ([hizmet sözleşmeleri tasarladıktan]
  Özelliklerin birçoğu bağlamadan ek destek gerektirir. Örneğin, istemciden bir işlem gerektiren bir işlem, akışlı işlemleri destekleyen bir bağlama kullanacak şekilde yapılandırılmalıdır.  
   
 ### <a name="well-known-singleton-services"></a>İyi bilinen Singleton Hizmetleri  
- @No__t-0 ve <xref:System.ServiceModel.OperationBehaviorAttribute> özniteliklerini, her ikisi de işlemleri uygulayan <xref:System.ServiceModel.InstanceContext> ve hizmet nesnelerinin belirli yaşam sürelerini denetlemek için kullanabilirsiniz.  
+ <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> özniteliklerini kullanarak, her ikisi de işlemleri uygulayan <xref:System.ServiceModel.InstanceContext> ve hizmet nesnelerinin belirli yaşam sürelerini kontrol edebilirsiniz.  
   
- Örneğin <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliği, <xref:System.ServiceModel.InstanceContext> ' in ne sıklıkta yayınlanacağını ve hizmet nesnesi yayınlandığında <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> ve <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> Özellikler denetimini denetler.  
+ Örneğin <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliği, <xref:System.ServiceModel.InstanceContext> ne sıklıkla yayımlanacağını ve hizmet nesnesi serbest bırakıldığında <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> ve <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> özellikleri denetimini denetler.  
   
- Bununla birlikte, kendiniz de bir hizmet nesnesi oluşturabilir ve bu nesneyi kullanarak hizmet konağını oluşturabilirsiniz. Bunu yapmak için, <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.InstanceContextMode.Single> olarak ayarlamanız gerekir ya da hizmet ana bilgisayarı açıldığında bir özel durum oluşturulur.  
+ Bununla birlikte, kendiniz de bir hizmet nesnesi oluşturabilir ve bu nesneyi kullanarak hizmet konağını oluşturabilirsiniz. Bunu yapmak için <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.InstanceContextMode.Single> olarak ayarlamanız gerekir veya hizmet ana bilgisayarı açıldığında bir özel durum oluşturulur.  
   
- Böyle bir hizmet oluşturmak için <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> oluşturucusunu kullanın. Tek bir hizmet tarafından kullanılmak üzere belirli bir nesne örneği sağlamak istediğinizde, özel bir @no__t uygulamak için bir alternatif sağlar. Bu aşırı yüklemeyi, hizmet uygulama türü oluşturulması zor olduğunda kullanabilirsiniz (örneğin, hiçbir parametresi olmayan varsayılan bir ortak Oluşturucu uygulamaz).  
+ Böyle bir hizmet oluşturmak için <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> oluşturucusunu kullanın. Tek bir hizmet tarafından kullanılmak üzere belirli bir nesne örneği sağlamak istediğinizde özel bir <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> uygulamak için alternatif sağlar. Bu aşırı yüklemeyi, hizmet uygulama türü oluşturulması zor olduğunda kullanabilirsiniz (örneğin, parametresiz bir ortak Oluşturucu uygulamadıysanız).
   
- Bu oluşturucuya bir nesne sağlandığında, Windows Communication Foundation (WCF) örnek oluşturma davranışıyla ilgili bazı özelliklerin farklı şekilde çalıştığını unutmayın. Örneğin, <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> ' ı çağırmak iyi bilinen bir nesne örneği sağlandığında hiçbir etkiye sahip değildir. Benzer şekilde, diğer örnek yayın mekanizması yok sayılır. @No__t-0 sınıfı her zaman <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> özelliği tüm işlemler için <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> olarak ayarlanmış gibi davranır.  
+ Bu oluşturucuya bir nesne sağlandığında, Windows Communication Foundation (WCF) örnek oluşturma davranışıyla ilgili bazı özelliklerin farklı şekilde çalıştığını unutmayın. Örneğin, <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> çağırmak iyi bilinen bir nesne örneği sağlandığında hiçbir etkiye sahip değildir. Benzer şekilde, diğer örnek yayın mekanizması yok sayılır. <xref:System.ServiceModel.ServiceHost> sınıfı her zaman, <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> özelliği tüm işlemler için <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> olarak ayarlanmış gibi davranır.  
   
 ## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>Diğer hizmet, uç nokta, sözleşme ve Işlem davranışları  
- @No__t-0 özniteliği gibi hizmet davranışları bir hizmetin tamamında çalışır. Örneğin, <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> olarak ayarlarsanız, söz konusu hizmette her bir işlem içindeki iş parçacığı eşitleme sorunlarını işlemeniz gerekir. Uç nokta davranışları bir uç nokta boyunca çalışır; sistem tarafından sunulan uç nokta davranışlarının birçoğu istemci işlevselliğine yöneliktir. Sözleşme davranışları sözleşme düzeyinde çalışır ve işlem davranışları işlem teslimini değiştirir.  
+ <xref:System.ServiceModel.ServiceBehaviorAttribute> özniteliği gibi hizmet davranışları bir hizmetin tamamında çalışır. Örneğin, <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> olarak ayarlarsanız, söz konusu hizmette her bir işlem içindeki iş parçacığı eşitleme sorunlarını işlemeniz gerekir. Uç nokta davranışları bir uç nokta boyunca çalışır; sistem tarafından sunulan uç nokta davranışlarının birçoğu istemci işlevselliğine yöneliktir. Sözleşme davranışları sözleşme düzeyinde çalışır ve işlem davranışları işlem teslimini değiştirir.  
   
- Bu davranışların birçoğu özniteliklere uygulanır ve bunları uygun hizmet sınıfına veya işlem uygulamasına uygulayarak <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> özniteliklerini yaptığınız gibi kullanırsınız. @No__t-0 veya <xref:System.ServiceModel.Description.ServiceDebugBehavior> nesneleri gibi diğer davranışlar, genellikle program aracılığıyla da kullanılabilmesine rağmen bir uygulama yapılandırma dosyası kullanılarak uygulanır.  
+ Bu davranışların birçoğu özniteliklere uygulanır ve bunları uygun hizmet sınıfına veya işlem uygulamasına uygulayarak <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> özniteliklerini yaptığınız gibi kullanırsınız. <xref:System.ServiceModel.Description.ServiceMetadataBehavior> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior> nesneleri gibi diğer davranışlar genellikle bir uygulama yapılandırma dosyası kullanılarak uygulanır, ancak program aracılığıyla da kullanılabilir.  
   
  Örneğin, meta veri yayını <xref:System.ServiceModel.Description.ServiceMetadataBehavior> nesnesi kullanılarak yapılandırılır. Aşağıdaki uygulama yapılandırma dosyasında en sık kullanılan kullanım gösterilmektedir.  
   
@@ -114,9 +114,9 @@ Bir hizmet sözleşmesini tasarladıktan ([hizmet sözleşmeleri tasarladıktan]
 ### <a name="operation-behaviors"></a>İşlem davranışları  
  Aşağıdaki işlem davranışları işlemler için serileştirme ve işlem denetimleri belirtir.  
   
-- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. @No__t-0 ' ın çalışma zamanı davranışını temsil eder.  
+- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>çalışma zamanı davranışını temsil eder.  
   
-- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. @No__t-0 ' ın çalışma zamanı davranışını denetler ve bir işlemle ilişkilendirir.  
+- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. `XmlSerializer` çalışma zamanı davranışını denetler ve bir işlemle ilişkilendirir.  
   
 - <xref:System.ServiceModel.TransactionFlowAttribute>. Bir hizmet işleminin bir işlem üst bilgisini kabul ettiği düzeyi belirtir.  
   

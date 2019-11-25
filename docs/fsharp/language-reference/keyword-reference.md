@@ -1,13 +1,13 @@
 ---
 title: Klavye Başvurusu
 description: Tüm F# dil anahtar kelimeleri hakkındaki bilgilerin bağlantılarını bulun.
-ms.date: 05/16/2016
-ms.openlocfilehash: 2be6d078653a4595cbdfe97be7aab8e3b3c10ea9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 64bb680a0861f4b8287f887ea67edb6fcf4f88a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425078"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976615"
 ---
 # <a name="keyword-reference"></a>Klavye Başvurusu
 
@@ -87,7 +87,7 @@ Aşağıdaki tabloda, kısa açıklamalarla F# birlikte tüm anahtar sözcükler
 |`when`|[Kısıtlamalar](./generics/constraints.md)|Bir genel tür parametresi için bir kısıtlama yan tümcesi tanıtmak üzere, desenli Boole koşulları (*korumaları olduğunda*) için kullanılır.|
 |`while`|[Döngüler: `while...do` Ifade](loops-while-do-expression.md)|Bir döngü yapısı tanıtır.|
 |`with`|[Eşleşme İfadeleri](match-expressions.md)<br /><br />[Nesne İfadeleri](object-expressions.md)<br /><br />[Kayıt İfadelerini Kopyalama ve Güncelleştirme](copy-and-update-record-expressions.md)<br /><br />[Tür Uzantıları](type-extensions.md)<br /><br />[Özel durumlar: `try...with` Ifadesi](./exception-handling/the-try-with-expression.md)|Desenler ile eşleşen ifadelerde `match` anahtar sözcüğüyle birlikte kullanılır. Ayrıca, nesne ifadelerinde, üye tanımlarını tanıtmak ve özel durum işleyicilerini tanıtmak için tür uzantıları kaydetmek için kullanılır.|
-|`yield`|[Diziler](sequences.md)|Bir dizi için değer üretmek üzere bir dizi ifadesinde kullanılır.|
+|`yield`|[Listeler](lists.md), [diziler](arrays.md), [diziler](sequences.md)|Bir dizi için değer üretmek üzere bir liste, dizi veya dizi ifadesinde kullanılır. Genellikle, çoğu durumda örtük olduğu için atlanabilir.|
 |`yield!`|[Hesaplama İfadeleri](computation-expressions.md)<br /><br />[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)|Belirli bir hesaplama ifadesinin sonucunu, kapsayan hesaplama ifadesi için bir sonuç koleksiyonuna eklemek üzere bir hesaplama ifadesinde kullanılır.|
 
 Aşağıdaki belirteçler, OCaml dilinde F# anahtar sözcükler olduklarından ' de ayrılmıştır:

@@ -1,13 +1,13 @@
 ---
 title: Arayan bilgileri
 description: Bir yöntemden çağıran bilgileri elde etmek için çağıran bilgileri bağımsız değişken özniteliklerinin nasıl kullanılacağını açıklar.
-ms.date: 04/25/2017
-ms.openlocfilehash: e7bbc3830a95bd25cfc2fb369b204d367b775815
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 11/04/2019
+ms.openlocfilehash: d995b37149277b7c7d1b6217ee484d3c90a7f8b3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106591"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976806"
 ---
 # <a name="caller-information"></a>Arayan bilgileri
 
@@ -31,7 +31,7 @@ open System.Runtime.CompilerServices
 open System.Runtime.InteropServices
 
 type Tracer() =
-    member __.DoTrace(message: string,
+    member _.DoTrace(message: string,
                       [<CallerMemberName; Optional; DefaultParameterValue("")>] memberName: string,
                       [<CallerFilePath; Optional; DefaultParameterValue("")>] path: string,
                       [<CallerLineNumber; Optional; DefaultParameterValue(0)>] line: int) =
@@ -51,10 +51,10 @@ Arayan bilgisini denetlemek veya gizlemek için isteğe bağlı bağımsız değ
 
 ## <a name="member-names"></a>Üye adları
 
-[`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) Özniteliği, çağrılan yönteme bir `String` bağımsız değişken olarak üye adını belirtmekten kaçınmak için kullanabilirsiniz. Bu tekniği kullanarak yeniden düzenlemeyi yeniden adlandırma sorunu, `String` değerleri değiştirmez. Bu, özellikle aşağıdaki görevler için yararlı olur:
+Üyenin adını çağrılan metoda bir `String` bağımsız değişkeni olarak belirtmekten kaçınmak için [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) özniteliğini kullanabilirsiniz. Bu tekniği kullanarak, yeniden düzenlemeyi yeniden adlandırma sorununun `String` değerleri değiştirmediğini önleyin. Bu, özellikle aşağıdaki görevler için yararlı olur:
 
 - İzleme ve tanılama yordamlarını kullanma.
-- Verileri bağlarken [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) arabirimini uygulama. Bu arabirim, bir nesnenin özelliğinin bağlama denetimine özelliğin değiştirildiğini bildirmesini ve böylece denetimin güncelleştirilmiş bilgileri görüntüleyebilmesini sağlar. [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) Özniteliği olmadan, özellik adını bir sabit değer olarak belirtmeniz gerekir.
+- Verileri bağlarken [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) arabirimini uygulama. Bu arabirim, bir nesnenin özelliğinin bağlama denetimine özelliğin değiştirildiğini bildirmesini ve böylece denetimin güncelleştirilmiş bilgileri görüntüleyebilmesini sağlar. [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) özniteliği olmadan, özellik adını bir sabit değer olarak belirtmeniz gerekir.
 
 Aşağıdaki grafikte, CallerMemberName özniteliğini kullandığınızda döndürülen üye adları gösterilmektedir.
 

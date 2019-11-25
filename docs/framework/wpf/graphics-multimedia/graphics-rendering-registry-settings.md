@@ -8,34 +8,34 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: f2af32315f8f955495c51f2928c2b8eed5350759
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 0d6eda0aea9ad97063cc5362d83163443de034a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016090"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976953"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Grafik İşleme Kayıt Defteri Ayarları
-Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları etkileyen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik işleme kayıt defteri ayarlarına genel bir bakış sağlar.  
+Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalarını etkileyen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik işleme kayıt defteri ayarlarına genel bir bakış sağlar.  
 
 <a name="overview"></a>   
 ## <a name="when-to-use-graphics-rendering-registry-settings"></a>Grafik Işleme kayıt defteri ayarları ne zaman kullanılır?  
- Bu kayıt defteri ayarları, sorun giderme, hata ayıklama ve ürün desteği amacıyla sağlanır. Kayıt defterindeki değişiklikler tüm [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları etkilediğinden, uygulamanız bu kayıt defteri anahtarlarını hiçbir şekilde otomatik olarak veya yükleme sırasında değiştirmemelidir.  
+ Bu kayıt defteri ayarları, sorun giderme, hata ayıklama ve ürün desteği amacıyla sağlanır. Kayıt defterindeki değişiklikler tüm [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalarını etkilediği için, uygulamanız bu kayıt defteri anahtarlarını hiçbir şekilde otomatik olarak veya yükleme sırasında değiştirmemelidir.  
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>XPDM ve WDDM nedir?  
- Grafik işleme kayıt defteri ayarlarından bazıları, video kartınızın bir XPDM veya WDDM Sürücüsü kullanıp kullanmadığına bağlı olarak farklı varsayılan değerlere sahiptir. XPDM, görüntüleme sürücüsü modeli ve WDDM Windows görüntüleme sürücüsü modelidir. [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] WDDM, ve [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] [!INCLUDE[win7](../../../../includes/win7-md.md)]çalıştıran bilgisayarlarda kullanılabilir. XPDM,, ve [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]çalıştıran bilgisayarlarda kullanılabilir. WDDM hakkında daha fazla bilgi için bkz. [Windows Vista görüntü sürücüsü modeli tasarım kılavuzu](https://go.microsoft.com/fwlink/?LinkId=178394).  
+ Grafik işleme kayıt defteri ayarlarından bazıları, video kartınızın bir XPDM veya WDDM Sürücüsü kullanıp kullanmadığına bağlı olarak farklı varsayılan değerlere sahiptir. XPDM, [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] görüntü sürücüsü modeli ve WDDM Windows görüntüleme sürücüsü modelidir. WDDM, Windows Vista ve [!INCLUDE[win7](../../../../includes/win7-md.md)]çalıştıran bilgisayarlarda kullanılabilir. XPDM, Windows Vista, [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]ve [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]çalıştıran bilgisayarlarda kullanılabilir. WDDM hakkında daha fazla bilgi için bkz. [Windows Vista görüntü sürücüsü modeli tasarım kılavuzu](https://go.microsoft.com/fwlink/?LinkId=178394).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Kayıt defteri ayarları  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]oluşturmayı denetlemek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] için dört kayıt defteri ayarı sağlar:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işlemesini denetlemek için dört kayıt defteri ayarı sağlar:  
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
 |**Donanım hızlandırma seçeneğini devre dışı bırak**|Donanım hızlandırmasının etkinleştirilip etkinleştirilmeyeceğini belirtir.|  
 |**Maksimum çok örnekli değer**|3-b içeriğini düzgünleştirmek için çoklu örnekleme derecesini belirtir.|  
 |**Gerekli video sürücüsü tarih ayarı**|Sistemin donanım hızlandırmasını 2004 Kasım 'Dan önce yayınlanan sürücüler için devre dışı bırakıp bırakmadığını belirtir.|  
-|**Başvuru tarayıcısı seçeneğini kullanma**|Başvuru tarayıcısının [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanılması gerekip gerekmediğini belirtir.|  
+|**Başvuru tarayıcısı seçeneğini kullanma**|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] başvuru tarayıcısını kullanması gerekip gerekmediğini belirtir.|  
   
  Bu ayarlara, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kayıt defteri ayarlarına nasıl başvurulacağını bilen herhangi bir dış yapılandırma yardımcı programı tarafından erişilebilir. Bu ayarlar, Windows kayıt defteri Düzenleyicisi kullanılarak değerlere doğrudan erişerek da oluşturulabilir veya değiştirilebilir.  
   
@@ -57,11 +57,11 @@ Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclie
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- **En fazla çoklu örnek değeri** , 3-b içeriğin en yüksek düzgünleştirme miktarını ayarlamanıza olanak sağlar. Üzerinde 3-b düzgünleştirme [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] devre dışı bırakmak veya etkinleştirmek [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]için bu düzeyi kullanın.  
+ **En fazla çoklu örnek değeri** , 3-b içeriğin en yüksek düzgünleştirme miktarını ayarlamanıza olanak sağlar. Windows Vista 'da 3-b düzgünleştirmenin devre dışı bırakılması veya [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]içinde etkinleştirilmesi için bu düzeyi kullanın.  
   
  **En fazla MultiSample değeri** , 0 ile 16 arasında DEĞIŞEN bir DWORD değeridir. 0 değeri, 3-b içeriğin çok örnekli düzgünleştirmesinin devre dışı bırakılacağını ve 16 değerinin, video kartı tarafından destekleniyorsa, en çok 16X çoklu örnek düzgünleştirme kullanmayı deneyeceği belirtir. XPDM sürücülerini kullanan bilgisayarlarda bu kayıt defteri anahtarı değerini ayarlamanın, uygulamaların büyük miktarda ek video belleği kullanmasına, 3-b işleme performansını azaltmasına ve işleme hatalarının ve kararlığın tanıtılmasına neden olacağını unutmayın sorunlarının.  
   
- Bu kayıt defteri anahtarı ayarlanmamışsa, XPDM sürücüleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] için varsayılan olarak 0, WDDM sürücüleri için 4 olarak ayarlanır.  
+ Bu kayıt defteri anahtarı ayarlanmamışsa, XPDM sürücüleri için varsayılan olarak 0 ve WDDM sürücüleri için 4 ' ü [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 <a name="requiredvideodriverdatesetting"></a>   
 ## <a name="required-video-driver-date-setting"></a>Gerekli video sürücüsü tarih ayarı  
@@ -70,17 +70,17 @@ Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclie
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Dize|  
   
- Kasım, 2004 ' de, Microsoft sürücü sınama yönergelerinin yeni bir sürümünü yayımladı; Bu tarihten sonra yazılan sürücüler daha iyi kararlılık sağlar. Varsayılan olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bu sürücüler için donanım hızlandırma işlem hattını kullanır ve bu tarihten önce yayımlanan XPDM sürücüleri için yazılım işlemeye geri döner.  
+ Kasım, 2004 ' de, Microsoft sürücü sınama yönergelerinin yeni bir sürümünü yayımladı; Bu tarihten sonra yazılan sürücüler daha iyi kararlılık sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], varsayılan olarak bu sürücüler için donanım hızlandırma işlem hattını kullanır ve bu tarihten önce yayımlanan XPDM sürücüleri için yazılım işlemeye geri döner.  
   
- **Gerekli video sürücüsü tarih ayarı** , XPDM sürücüleri için alternatif bir en düşük Tarih belirtmenize olanak sağlar. Video sürücünüzün desteklemeye [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]yetecek kadar kararlı olduğundan emin değilseniz, yalnızca Kasım 2004 ' den önceki bir tarihi belirtmeniz gerekir.  
+ **Gerekli video sürücüsü tarih ayarı** , XPDM sürücüleri için alternatif bir en düşük Tarih belirtmenize olanak sağlar. Video sürücünüzün [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]desteklemeye yetecek kadar kararlı olduğundan eminseniz, yalnızca Kasım 2004 ' den önceki bir tarihi belirtmeniz gerekir.  
   
  Gerekli video sürücüsü ayarı aşağıdaki biçimde bir dize alır:  
   
 | |  
 |-|  
-|*YYYY* *AA* GG `/` `/`|  
+|*YYYY* `/` *mm* `/` *gg*|  
   
- *Yyyy* dört basamaklı bir yıl, *dd* Iki haneli ay, *gg* ise iki rakamlı gün olur. Bu değer ayarlanmadığında, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gereken video sürücüsü tarihi olarak Kasım, 2004 kullanır.  
+ *Yyyy* dört basamaklı bir yıl, *dd* Iki haneli ay, *gg* ise iki rakamlı gün olur. Bu değer ayarlanmadığında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], gereken video sürücüsü tarihi olarak Kasım, 2004 ' i kullanır.  
   
 <a name="usereferencerasterizeroption"></a>   
 ## <a name="use-reference-rasterizer-option"></a>Başvuru tarayıcısı seçeneğini kullanma  
@@ -89,11 +89,11 @@ Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclie
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|DWORD|  
   
- **Başvuru tarayıcısını kullan seçeneği** , hata ayıklama için sanal [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir donanım işleme moduna zorlamanıza olanak sağlar: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] donanım moduna geçer, ancak Microsoft Direct3D Reference yazılım tarayıcısını, d3dref9. dll ' yi kullanır. yerine, gerçek bir donanım cihazı.  
+ **Başvuru tarayıcısını kullan seçeneği** , hata ayıklama için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sanal bir donanım işleme moduna zorlamanıza olanak sağlar: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] donanım moduna geçer, ancak gerçek bir donanım cihazı yerine Microsoft Direct3D Reference yazılım tarayıcısını, d3dref9. dll dosyasını kullanır.  
   
  Başvuru tarayıcısı çok yavaştır, ancak sürücü sorunlarından kaynaklanan işleme sorunlarından kaçınmak için video sürücünüzü atlar. Bu nedenle, işleme sorunlarının video sürücüsünden kaynaklanıp kaynaklanmadığını anlamak için başvuru tarayıcısını kullanabilirsiniz. D3dref9. dll dosyası, uygulamanın, sistem yolundaki herhangi bir konumda veya uygulamanın yerel dizininde olduğu gibi, erişebileceği bir konumda olmalıdır.  
   
- **Başvuru tarayıcısını kullan seçeneği** bir DWORD değeri alır. 0 değeri, başvuru tarayıcısının kullanılmadığını gösterir. Sıfır olmayan başka bir değer, başvuru [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tarayıcısını kullanmaya zorlar.  
+ **Başvuru tarayıcısını kullan seçeneği** bir DWORD değeri alır. 0 değeri, başvuru tarayıcısının kullanılmadığını gösterir. Sıfır olmayan başka bir değer, başvuru tarayıcısını kullanmaya [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zorlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - SaveFileDialog [Windows Forms], opt out of automatic upgrade
 - AutoUpgradeEnabled property
 ms.assetid: 522e482e-cc01-48b1-8d59-9617dc2c4ac1
-ms.openlocfilehash: 0753873ac37f26d6503397290ef4603702737a86
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: bbde260cc7f05226c9b06325b45708e1cde3cf8c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170623"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976889"
 ---
 # <a name="how-to-opt-out-of-file-dialog-box-automatic-upgrade"></a>Nasıl yapılır: Dosya İletişim Kutusu Otomatik Yükseltmeyi İptal Etme
-Zaman <xref:System.Windows.Forms.OpenFileDialog> ve <xref:System.Windows.Forms.SaveFileDialog> sınıflar, bir uygulamada kullanılıyorsa, üzerinde uygulamayı çalıştırdığınız Windows sürümü görünümlerini ve davranışlarını bağlıdır. Ne zaman .NET Framework 2.0 veya daha önce oluşturulmuş bir uygulama görüntülenir [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)], <xref:System.Windows.Forms.OpenFileDialog> ve <xref:System.Windows.Forms.SaveFileDialog> ile otomatik olarak görüntülenen [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] görünümünü ve davranışını. .NET Framework 3. 0'dan başlayarak görüntülemek için otomatik yükseltmeyi iptal etme <xref:System.Windows.Forms.OpenFileDialog> ve <xref:System.Windows.Forms.SaveFileDialog> ile bir [!INCLUDE[winxp](../../../../includes/winxp-md.md)]-stil görünümünü ve davranışını.  
+<xref:System.Windows.Forms.OpenFileDialog> ve <xref:System.Windows.Forms.SaveFileDialog> sınıfları bir uygulamada kullanıldığında, görünümü ve davranışı uygulamanın üzerinde çalıştığı Windows sürümüne bağlıdır. .NET Framework 2,0 veya önceki bir sürümde oluşturulan bir uygulama Windows Vista 'da görüntüleniyorsa, <xref:System.Windows.Forms.OpenFileDialog> ve <xref:System.Windows.Forms.SaveFileDialog> otomatik olarak Windows Vista görünümü ve davranışıyla birlikte görüntülenir. .NET Framework 3,0 ' den başlayarak, <xref:System.Windows.Forms.OpenFileDialog> ve <xref:System.Windows.Forms.SaveFileDialog> [!INCLUDE[winxp](../../../../includes/winxp-md.md)]stili bir görünüm ve davranışla birlikte göstermek için otomatik yükseltmeyi devre dışı bırakabilirsiniz.  
   
-### <a name="to-opt-out-of-file-dialog-box-automatic-upgrade"></a>Dosya iletişim kutusu otomatik yükseltmeyi iptal etme için  
+### <a name="to-opt-out-of-file-dialog-box-automatic-upgrade"></a>Dosya iletişim kutusu otomatik yükseltmeyi devre dışı bırakmak için  
   
-1. Ayarlama <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> özelliği <xref:System.Windows.Forms.OpenFileDialog> veya <xref:System.Windows.Forms.SaveFileDialog> için `false` önce iletişim kutusunu görüntüler.  
+1. İletişim kutusunu görüntülemeden önce <xref:System.Windows.Forms.OpenFileDialog> veya <xref:System.Windows.Forms.SaveFileDialog> <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> özelliğini `false` olarak ayarlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

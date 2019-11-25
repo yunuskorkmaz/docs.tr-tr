@@ -2,12 +2,12 @@
 title: Özel İleti Kesici
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: daa041bf63442dace0d33e1e3207d0857b6b7312
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 61f9bae24f5edb70430f4f3eaa16e42da221a7b4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928914"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978304"
 ---
 # <a name="custom-message-interceptor"></a>Özel İleti Kesici
 Bu örnek, kanal genişletilebilirlik modelinin kullanımını gösterir. Özellikle, çalışma zamanı yığınında belirli bir noktada tüm gelen ve giden iletileri kesmeye yönelik kanal fabrikaları ve kanal dinleyicileri oluşturan özel bir bağlama öğesinin nasıl uygulanacağını gösterir. Örnek ayrıca, bu özel fabrikaların kullanımını gösteren bir istemci ve sunucu içerir.  
@@ -22,7 +22,7 @@ Bu örnek, kanal genişletilebilirlik modelinin kullanımını gösterir. Özell
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
@@ -37,14 +37,14 @@ Bu örnek, kanal genişletilebilirlik modelinin kullanımını gösterir. Özell
 4. Yeni bağlama öğesini yapılandırma sistemine göstermek için bağlama öğesi uzantısı bölümü ekleyin.  
   
 ## <a name="channel-shapes"></a>Kanal şekilleri  
- Özel katmanlı kanal yazmanın ilk adımı, kanal için hangi şekillerin gerekli olduğuna karar vermeye yöneliktir. İleti denetçimiz için, altındaki katmanın desteklediği herhangi <xref:System.ServiceModel.Channels.IOutputChannel> bir şekli destekliyoruz (örneğin, ABD altındaki katmanın ve <xref:System.ServiceModel.Channels.IDuplexSessionChannel>oluşturup, <xref:System.ServiceModel.Channels.IDuplexSessionChannel>daha sonra da kullanıma sunduğumuz <xref:System.ServiceModel.Channels.IOutputChannel> ).  
+ Özel katmanlı kanal yazmanın ilk adımı, kanal için hangi şekillerin gerekli olduğuna karar vermeye yöneliktir. İleti denetçimiz için, altındaki katmanın desteklediği herhangi bir şekli destekliyoruz (örneğin, ABD altındaki katmanın <xref:System.ServiceModel.Channels.IOutputChannel> ve <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, <xref:System.ServiceModel.Channels.IOutputChannel> ve <xref:System.ServiceModel.Channels.IDuplexSessionChannel>) de kullanıma sunarız.  
   
 ## <a name="channel-factory-and-listener-factory"></a>Kanal fabrikası ve dinleyici fabrikası  
- Özel katmanlı kanal yazmanın bir sonraki adımı, istemci kanalları <xref:System.ServiceModel.Channels.IChannelFactory> <xref:System.ServiceModel.Channels.IChannelListener> ve hizmet kanalları için bir uygulama oluşturmaktır.  
+ Özel katmanlı kanal yazmanın bir sonraki adımı, istemci kanalları için <xref:System.ServiceModel.Channels.IChannelFactory> ve hizmet kanalları için <xref:System.ServiceModel.Channels.IChannelListener> bir uygulama oluşturmaktır.  
   
- Bu sınıflar bir iç fabrika ve dinleyici alır ve tüm, `OnCreateChannel` `OnAcceptChannel` iç fabrika ve dinleyiciye çağrıları hariç tüm bunları devredebilir.  
+ Bu sınıflar bir iç fabrika ve dinleyici alır ve tüm, iç fabrika ve dinleyiciye `OnCreateChannel` ve `OnAcceptChannel` çağrıları hariç değildir.  
   
-```csharp  
+```csharp
 class InterceptingChannelFactory<TChannel> : ChannelFactoryBase<TChannel>  
 { 
     //... 
@@ -57,10 +57,10 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>Bağlama öğesi ekleme  
- Örnek, özel bir bağlama öğesi tanımlar: `InterceptingBindingElement`. `InterceptingBindingElement`bir `ChannelMessageInterceptor` giriş olarak alır ve bunu, üzerinden geçen `ChannelMessageInterceptor` iletileri işlemek için kullanır. Bu, genel olması gereken tek sınıftır. Fabrika, dinleyici ve kanalların hepsi, genel çalışma zamanı arabirimlerinin iç uygulamaları olabilir.  
+ Örnek, bir özel bağlama öğesi tanımlar: `InterceptingBindingElement`. `InterceptingBindingElement` giriş olarak bir `ChannelMessageInterceptor` alır ve bu `ChannelMessageInterceptor` üzerinden geçen iletileri işlemek için kullanır. Bu, genel olması gereken tek sınıftır. Fabrika, dinleyici ve kanalların hepsi, genel çalışma zamanı arabirimlerinin iç uygulamaları olabilir.  
   
 ```csharp
-public class InterceptingBindingElement : BindingElement 
+public class InterceptingBindingElement : BindingElement
 {
 }
 ```  
@@ -76,12 +76,12 @@ public abstract class InterceptingElement : BindingElementExtensionElement
 ```  
   
 ## <a name="adding-policy"></a>Ilke ekleniyor  
- İlke sistemimizi tümleştirmek için, `InterceptingBindingElement` ilke oluşturmaya katılabilmemiz için IPolicyExportExtension 'ı uygular. Oluşturulan bir istemcide ilke içeri aktarmayı desteklemek için Kullanıcı, ilke etkin `InterceptingBindingElementImporter` `ChannelMessageInterceptor` sınıfını oluşturmak üzere türetilmiş bir sınıfı kaydedebilir `CreateMessageInterceptor`ve geçersiz kılabilir ().  
+ İlke sistemimizi tümleştirmek için `InterceptingBindingElement`, ilke oluşturmaya katılabilmemiz için IPolicyExportExtension 'ı uygular. Oluşturulan bir istemcide ilke içeri aktarmayı desteklemek için, Kullanıcı `InterceptingBindingElementImporter` türetilen bir sınıf kaydedebilir ve ilke etkin `ChannelMessageInterceptor` sınıfını oluşturmak için `CreateMessageInterceptor`() geçersiz kılabilir.  
   
-## <a name="example-droppable-message-inspector"></a>Örnek: Açılan Ileti denetçisi  
- Örneğe dahil edilen örnek, iletileri bırakılanlar örnek `ChannelMessageInspector` uygulamasıdır.  
+## <a name="example-droppable-message-inspector"></a>Örnek: açılan Ileti denetçisi  
+ Örneğe dahil edilen örnek, iletileri bırakılanlar `ChannelMessageInspector` örnek bir uygulamasıdır.  
   
-```csharp  
+```csharp
 class DroppingServerElement : InterceptingElement  
 {  
     protected override ChannelMessageInterceptor CreateMessageInterceptor()  
@@ -120,7 +120,7 @@ class DroppingServerElement : InterceptingElement
 </customBinding>  
 ```  
   
- İstemci, `MessageInterceptor` hatta numaralandırılmış iletilere özel bir üst bilgi eklemek için kitaplığı kullanır. Diğer taraftaki hizmet, bu özel üst `MessageInterceptor` bilgisine sahip olmayan iletileri bırakmak için kitaplığı kullanır.  
+ İstemci, hatta numaralandırılmış iletilere özel bir üst bilgi eklemek için `MessageInterceptor` kitaplığını kullanır. Diğer taraftaki hizmet, bu özel üst bilgisine sahip olmayan iletileri bırakmak için `MessageInterceptor` kitaplığı kullanır.  
   
  Hizmetini ve ardından istemcisini çalıştırdıktan sonra aşağıdaki istemci çıktısını görmeniz gerekir.  
   

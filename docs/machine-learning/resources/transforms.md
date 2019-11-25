@@ -4,12 +4,12 @@ description: ML.NET sürümünde desteklenen özellik Mühendisliği bileşenler
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 25da3cceb3c9090661b34254ed240207aaf3b9d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb191b1688dce8f703bdabcd220eb39efe68fd48
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929250"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977243"
 ---
 # <a name="data-transformations"></a>Veri dönüştürmeleri
 
@@ -21,9 +21,9 @@ Veri dönüştürmeleri şu şekilde kullanılır:
 
 Bu kılavuzdaki dönüşümler, [ıestimator](xref:Microsoft.ML.IEstimator%601) arabirimini uygulayan sınıflar döndürüyor. Veri dönüştürmeleri birlikte zincirlenebilir. Her bir dönüşüm, bağlantılı başvuru belgelerinde belirtilen belirli tür ve biçimlerin verilerini bekler ve üretir.
 
-Bazı veri dönüştürmeleri, parametrelerini hesaplamak için eğitim verileri gerektirir. Örneğin: <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> transformatör, `Fit()` işlem sırasında eğitim verilerinin ortalama ve varyansını hesaplar ve bu parametreleri `Transform()` işleminde kullanır. 
+Bazı veri dönüştürmeleri, parametrelerini hesaplamak için eğitim verileri gerektirir. Örneğin: <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> transformatörü `Fit()` işlemi sırasında eğitim verilerinin ortalama ve varyansını hesaplar ve bu parametreleri `Transform()` işleminde kullanır.
 
-Diğer veri dönüştürmeleri eğitim verileri gerektirmez. Örneğin: <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> dönüştürme işlemi sırasında `Fit()` herhangi bir eğitim `Transform()` verisi görünmeden işlemi gerçekleştirebilir.
+Diğer veri dönüştürmeleri eğitim verileri gerektirmez. Örneğin: <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> dönüşümü, `Fit()` işlemi sırasında herhangi bir eğitim verisi görünmeden `Transform()` işlemini gerçekleştirebilir.
 
 ## <a name="column-mapping-and-grouping"></a>Sütun eşleme ve gruplama
 
@@ -62,7 +62,7 @@ Diğer veri dönüştürmeleri eğitim verileri gerektirmez. Örneğin: <xref:Mi
 
 | Dönüştürme | Tanım |
 | --- | --- |
-| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Metin sütununu normalleştirilmiş Ngram ve karakter-gram sayıları float dizisine Dönüştür | 
+| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Metin sütununu normalleştirilmiş Ngram ve karakter-gram sayıları float dizisine Dönüştür |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | Bir veya daha fazla metin sütununu tekil sözcüklere Böl |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys*> | Bir veya daha fazla metin sütununu bir konu kümesi üzerinde ayrı karakterlere böler |
 | <xref:Microsoft.ML.TextCatalog.NormalizeText*> | Durumu değiştir, aksanlı işaretleri, noktalama işaretlerini ve sayıları kaldır |
@@ -80,7 +80,7 @@ Diğer veri dönüştürmeleri eğitim verileri gerektirmez. Örneğin: <xref:Mi
 | Dönüştürme | Tanım |
 | --- | --- |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> | Bir görüntüyü gri tonlamaya Dönüştür |
-| <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToImage*> | Piksel vektörünü Dönüştür<xref:Microsoft.ML.Transforms.Image.ImageDataViewType> |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToImage*> | Piksel vektörünü <xref:Microsoft.ML.Transforms.Image.ImageDataViewType> Dönüştür |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*> | Giriş görüntüsünden pikselleri sayı vektörüne Dönüştür |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*> | Bir klasörden belleğe görüntü yükleme |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*> | Görüntüleri yeniden boyutlandırma |

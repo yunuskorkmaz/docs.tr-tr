@@ -1,14 +1,14 @@
 ---
 title: ML.NET otomatik ML API 'sini kullanma
 description: ML.NET otomatikleştirilen ML API 'SI, model oluşturma işlemini otomatikleştirir ve dağıtım için hazırlamış bir model oluşturur. Otomatik makine öğrenimi görevlerini yapılandırmak için kullanabileceğiniz seçenekleri öğrenin.
-ms.date: 04/24/2019
+ms.date: 11/7/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c1c18decc48bc1499aa55210becff305cdec4a53
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774559"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977123"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>ML.NET otomatik makine öğrenimi API 'sini kullanma
 
@@ -32,11 +32,12 @@ using Microsoft.ML.AutoML;
 ```
 
 ## <a name="select-the-machine-learning-task-type"></a>Machine Learning görev türünü seçin
+
 Bir deneme oluşturmadan önce, çözmek istediğiniz makine öğrenimi sorunu türünü saptayın. Otomatik makine öğrenimi aşağıdaki ML görevlerini destekler:
 
 * İkili sınıflandırma
 * Birden çok Lass sınıflandırması
-* Regresyon
+* regresyon
 
 ## <a name="create-experiment-settings"></a>Deneme ayarları oluşturma
 
@@ -54,7 +55,7 @@ Belirlenen ML görev türü için deneme ayarları oluşturun:
   var experimentSettings = new MulticlassExperimentSettings();
   ```
 
-* Regresyon
+* regresyon
 
   ```csharp
   var experimentSettings = new RegressionExperimentSettings();
@@ -62,7 +63,7 @@ Belirlenen ML görev türü için deneme ayarları oluşturun:
 
 ## <a name="configure-experiment-settings"></a>Deneme ayarlarını yapılandırma
 
-Denemeleri, yüksek oranda yapılandırılabilir. Yapılandırma ayarlarının tam listesi için bkz. [oto ml API belgeleri](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) .
+Denemeleri, yüksek oranda yapılandırılabilir. Yapılandırma ayarlarının tam listesi için bkz. [oto ml API belgeleri](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview) .
 
 Bazı örnekler şunlardır:
 
@@ -88,7 +89,7 @@ Bazı örnekler şunlardır:
     experimentSettings.OptimizingMetric = RegressionMetric.MeanSquaredError;
     ```
 
-1. @No__t_0 ayarı, otomatik ml görevi sırasında eğitilen tüm modellerin kaydedileceği dizine yönelik bir işaretçidir. @No__t_0 null olarak ayarlandıysa, modeller diske yazılmak yerine bellekte tutulur.
+1. `CacheDirectory` ayarı, otomatik ml görevi sırasında eğitilen tüm modellerin kaydedileceği dizine yönelik bir işaretçidir. `CacheDirectory` null olarak ayarlandıysa, modeller diske yazılmak yerine bellekte tutulur.
 
     ```csharp
     experimentSettings.CacheDirectory = null;

@@ -10,22 +10,22 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 4d078dac14103560423bfccdd4a1717031e7a60f
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 2ad6b16370f600299439d2e810dfefa1b5fa3c06
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699506"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087537"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>BypassList için \<clear > öğesi (ağ ayarları)
+# <a name="clear-element-for-bypasslist-network-settings"></a>BypassList için \<Clear > öğesi (ağ ayarları)
 Proxy atlama listesini temizler.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<clear >**  
-  
+[ **\<configuration >** ](../configuration-element.md) \
+[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BypassList >** ](bypasslist-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -48,7 +48,7 @@ Proxy atlama listesini temizler.
 |[BypassList](bypasslist-element-network-settings.md)|Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 öğesi atlama listesinden tüm girdileri temizler.  
+ `clear` öğesi atlama listesinden tüm girdileri temizler.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  

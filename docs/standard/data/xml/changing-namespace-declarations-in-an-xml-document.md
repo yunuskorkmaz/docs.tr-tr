@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a6b80a885f43facf4b3d4dd1dcb56d937d4f8de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5457eab1f34eb3e7424d508509f5dd6a42ffb51f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669166"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976943"
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>Bir XML Belgesindeki Ad Alanı Bildirimlerini Değiştirme
-**XmlDocument** ad alanı bildirimi gösterir ve **xmlns** belge nesne modeli bir parçası olarak öznitelikleri. Bunlar depolanır **XmlDocument**, belgeyi kaydettiğinizde, bu öznitelikleri konumunu koruyabilirsiniz. Bu öznitelikler değiştirme sahip herhangi bir etkisi **adı**, **namespaceURI**, ve **önek** diğer düğümlere ağacında özellikleri. Örneğin aşağıdaki belge yüklemek, sonra `test` öğesinin **namespaceURI** `123.`  
+**XmlDocument** , belge nesne modelinin bir parçası olarak ad alanı bildirimlerini ve **xmlns** özniteliklerini gösterir. Bunlar **XmlDocument**içinde depolanır, böylece belgeyi kaydettiğinizde, bu özniteliklerin konumunu koruyabilir. Bu özniteliklerin değiştirilmesinin, ağaçta zaten bulunan diğer düğümlerin **adı**, **NamespaceURI**ve **önek** özellikleri üzerinde hiçbir etkisi yoktur. Örneğin, aşağıdaki belgeyi yüklerseniz `test` öğesi **namespaceUri 'sine** sahiptir `123.`  
   
 ```xml  
 <test xmlns="123"/>  
 ```  
   
- Kaldırırsanız `xmlns` özniteliğini aşağıdaki gibi ardından `test` hala öğesinin **namespaceURI** , `123`.  
+ `xmlns` özniteliğini aşağıdaki gibi kaldırırsanız, `test` öğesi hala `123`**NamespaceURI 'sine** sahiptir.  
   
 ```vb  
 doc.documentElement.RemoveAttribute("xmlns")  
@@ -32,17 +32,17 @@ doc.documentElement.RemoveAttribute("xmlns")
 doc.documentElement.RemoveAttribute("xmlns");  
 ```  
   
- Benzer şekilde, farklı bir eklerseniz `xmlns` özniteliğini `doc` öğesi gösterildiği gibi ardından `test` hala öğesinin **namespaceURI** `123`.  
+ Benzer şekilde, `doc` öğesine aşağıdaki şekilde farklı bir `xmlns` özniteliği eklerseniz, `test` öğesinde de **NamespaceURI** `123`vardır.  
   
 ```vb  
-doc.documentElement.SetAttribute("xmlns","456");  
+doc.documentElement.SetAttribute("xmlns","456")
 ```  
   
 ```csharp  
 doc.documentElement.SetAttribute("xmlns","456");  
 ```  
   
- Bu nedenle, değiştirme `xmlns` öznitelikleri, herhangi bir etkisi olacaktır, kaydedebilir ve yeniden kadar **XmlDocument** nesne.  
+ Bu nedenle, **XmlDocument** nesnesini kaydedip yeniden yükleyene kadar `xmlns` özniteliklerinin değiştirilmesinin hiçbir etkisi olmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

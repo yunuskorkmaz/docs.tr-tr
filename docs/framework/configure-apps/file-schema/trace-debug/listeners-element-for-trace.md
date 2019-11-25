@@ -7,21 +7,21 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: 84b67532825372e7f69d86e1ef6060f4263587eb
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 10530cfadf2e182f912c699e50294af4b57f47b5
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699346"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088869"
 ---
-# <a name="listeners-element-for-trace"></a>\<trace için \<listeners > öğesi >
+# <a name="listeners-element-for-trace"></a>\<Trace için \<dinleyicileri > öğesi >
 İletileri toplayan, depolayan ve yönlendiren bir dinleyici belirtir. Dinleyiciler izleme çıkışını uygun bir hedefe yönlendirir.  
-  
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<listeners >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+[**System. diagnostics\<** ](system-diagnostics-element.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<izleme >** ](trace-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dinleyicileri >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -42,9 +42,9 @@ ms.locfileid: "71699346"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<> Ekle](add-element-for-listeners-for-trace.md)|@No__t-0 koleksiyonuna bir dinleyici ekler.|  
-|[\<clear >](clear-element-for-listeners-for-trace.md)|İzleme için `Listeners` koleksiyonunu temizler.|  
-|[\<remove >](remove-element-for-listeners-for-trace.md)|@No__t-0 koleksiyonundan bir dinleyiciyi kaldırır.|  
+|[\<> Ekle](add-element-for-listeners-for-trace.md)|`Listeners` koleksiyonuna bir dinleyici ekler.|  
+|[\<Temizle >](clear-element-for-listeners-for-trace.md)|İzleme için `Listeners` koleksiyonunu temizler.|  
+|[\<> Kaldır](remove-element-for-listeners-for-trace.md)|`Listeners` koleksiyonundan bir dinleyiciyi kaldırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -55,13 +55,13 @@ ms.locfileid: "71699346"
 |`trace`|İzleme iletilerini toplayıp depolayan, depolayan ve yönlendiren dinleyicileri içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 ve <xref:System.Diagnostics.Trace> sınıfları aynı **dinleyici** koleksiyonunu paylaşır. Bu sınıflardan birindeki koleksiyona bir dinleyici nesnesi eklerseniz, diğer sınıf aynı dinleyiciyi kullanır. .NET Framework ile birlikte gelen dinleyici sınıfları <xref:System.Diagnostics.TraceListener> sınıfından türetilir.  
+ <xref:System.Diagnostics.Debug> ve <xref:System.Diagnostics.Trace> sınıfları aynı **dinleyici** koleksiyonunu paylaşır. Bu sınıflardan birindeki koleksiyona bir dinleyici nesnesi eklerseniz, diğer sınıf aynı dinleyiciyi kullanır. .NET Framework ile birlikte gelen dinleyici sınıfları <xref:System.Diagnostics.TraceListener> sınıfından türetilir.  
   
 ## <a name="configuration-file"></a>Yapılandırma Dosyası  
  Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `MyListener` ve `MyEventListener` dinleyicilerini **dinleyiciler** koleksiyonuna eklemek için **\<listeners >** öğesinin nasıl kullanılacağını gösterir. `MyListener` `MyListener.log` adlı bir dosya oluşturur ve çıktıyı dosyaya yazar. `MyEventListener` olay günlüğünde bir giriş oluşturur.  
+ Aşağıdaki örnek **, dinleyicileri `MyListener`** ve `MyEventListener` dinleyiciler koleksiyonuna eklemek için **\<dinleyicileri >** öğesinin nasıl kullanılacağını gösterir. `MyListener`, `MyListener.log` adlı bir dosya oluşturur ve çıktıyı dosyaya yazar. `MyEventListener` olay günlüğünde bir giriş oluşturur.  
   
 ```xml  
 <configuration>  

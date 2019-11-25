@@ -2,12 +2,12 @@
 title: Akış Gerçekleştirme Örneği
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 1eb9f2194b2c7e4879cf9e443fea337c73986361
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ede1dbb4f5c682b8182dda4888a9cbd373b95dd8
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425353"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976369"
 ---
 # <a name="streaming-feeds-sample"></a>Akış Gerçekleştirme Örneği
 Bu örnek, çok sayıda öğe içeren dağıtım akışlarının nasıl yönetileceğini gösterir. Sunucusunda, örnek, öğe ağ akışına yazılmadan önce, akış içinde bireysel <xref:System.ServiceModel.Syndication.SyndicationItem> nesnelerinin oluşturulma süresinin nasıl geciktirileceğini gösterir.  
@@ -33,7 +33,7 @@ interface IStreamingFeedService
   
  Hizmet, aşağıdaki kodda gösterildiği gibi bir yineleyici kullanarak <xref:System.ServiceModel.Syndication.SyndicationItem> örneklerinin potansiyel olarak sonsuz bir akışını oluşturmak için bir `ItemGenerator` sınıfını kullanarak bu sözleşmeyi uygular.  
   
-```csharp  
+```csharp
 class ItemGenerator  
 {  
     public IEnumerable<SyndicationItem> GenerateItems()  
@@ -51,7 +51,7 @@ class ItemGenerator
   
  Hizmet uygulama akışı oluşturduğunda, `ItemGenerator.GenerateItems()` çıkışı, arabelleğe alınmış bir öğe koleksiyonu yerine kullanılır.  
   
-```csharp  
+```csharp
 public Atom10FeedFormatter StreamedFeed()  
 {  
     SyndicationFeed feed = new SyndicationFeed("Streamed feed", "Feed to test streaming", null);  

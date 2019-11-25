@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: fa00aed2cd1e96ec788d4bc9c1c63f20561d8d1c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d33dadc14510feb00e05ca557b507b0cf8fa0dd0
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698178"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087453"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest > öğesi (ağ ayarları)
 Web isteği parametrelerini özelleştirir.  
-  
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<httpWebRequest >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ayarları >** ](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<httpWebRequest >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -53,10 +53,10 @@ Web isteği parametrelerini özelleştirir.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[Ayarlar](settings-element-network-settings.md)|@No__t-0 ad alanı için temel ağ seçeneklerini yapılandırır.|  
+|[Ayarlar](settings-element-network-settings.md)|<xref:System.Net> ad alanı için temel ağ seçeneklerini yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework, varsayılan olarak, URI ayrıştırma için RFC 2616 ' i kesinlikle uygular. Bazı sunucu yanıtları yasaklanmış alanlardaki denetim karakterlerini içerebilir ve bu da <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> yönteminin <xref:System.Net.WebException> oluşturmasını sağlar. **Useunsafeheaderayrýþtýrmaya** **true**olarak ayarlanırsa, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> Bu durumda throw; Bununla birlikte, uygulamanız çeşitli URI ayrıştırma saldırılarına karşı savunmasız olacaktır. En iyi çözüm, yanıtın denetim karakterleri içermediği şekilde sunucuyu değiştirmemelidir.  
+ .NET Framework, varsayılan olarak, URI ayrıştırma için RFC 2616 ' i kesinlikle uygular. Bazı sunucu yanıtları yasaklanmış alanlardaki denetim karakterlerini içerebilir ve bu da <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> yönteminin bir <xref:System.Net.WebException>oluşturmasına neden olur. **Useunsafeheaderayrýþtýrmaya** **true**olarak ayarlanırsa <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> bu durumda throw; Bununla birlikte, uygulamanız çeşitli URI ayrıştırma saldırılarına karşı savunmasız olacaktır. En iyi çözüm, yanıtın denetim karakterleri içermediği şekilde sunucuyu değiştirmemelidir.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  

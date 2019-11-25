@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 399e4ac223d2fcb728ece2c92d25a087990992f2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 6d89978b907c8f124b5162c97de5edc034cf1e95
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458663"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976667"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding Biçimlendirme Uzantısı
 Denetim şablonunda bir özelliğin değerini, şablonlu denetim üzerinde açıkça gösterilen başka bir özelliğin değerine bağlar.  
@@ -38,7 +38,7 @@ Denetim şablonunda bir özelliğin değerini, şablonlu denetim üzerinde açı
 |`sourceProperty`|Şablonlu tür üzerinde bulunan ve <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>tarafından belirtilen başka bir bağımlılık özelliği.<br /><br /> veya<br /><br /> Şablonu oluşturulan hedef türünden farklı bir tür tarafından tanımlanan "aşağı noktalanmış" özellik adı. Bu aslında bir <xref:System.Windows.PropertyPath>. Bkz. [PROPERTYPATH XAML sözdizimi](propertypath-xaml-syntax.md).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `TemplateBinding`, `{Binding RelativeSource={RelativeSource TemplatedParent}}`ile oluşturulmuş bir `Binding` benzer şablon senaryoları için en iyileştirilmiş bir [bağlama](binding-markup-extension.md) biçimidir. Bir `TemplateBinding` her zaman tek yönlü bir bağlamadır ve özellikler varsayılan olarak iki yönlü bağlamaya dahil olur. İlgili iki özellik de bağımlılık özellikleri olmalıdır. Şablonlu bir üst öğeye iki yönlü bağlama ulaşmak için `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`yerine aşağıdaki bağlama ifadesini kullanın. 
+ `TemplateBinding`, `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`ile oluşturulmuş bir `Binding` benzer şablon senaryoları için en iyileştirilmiş bir [bağlama](binding-markup-extension.md) biçimidir. Bir `TemplateBinding` her zaman tek yönlü bir bağlamadır ve özellikler varsayılan olarak iki yönlü bağlamaya dahil olur. İlgili iki özellik de bağımlılık özellikleri olmalıdır. Şablonlu bir üst öğeye iki yönlü bağlama ulaşmak için `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`yerine aşağıdaki bağlama ifadesini kullanın. 
   
  [RelativeSource](relativesource-markupextension.md) , bir şablon içinde göreli Özellik bağlamayı gerçekleştirmek için bazen `TemplateBinding` veya yerine ile birlikte kullanılan başka bir işaretleme uzantısıdır.  
   

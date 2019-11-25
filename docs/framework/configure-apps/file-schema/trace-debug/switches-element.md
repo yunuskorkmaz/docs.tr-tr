@@ -9,20 +9,20 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-ms.openlocfilehash: c161f842192396101dcc6850f3b3da328958eac3
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4aeb3cb0cd75f0fb27e3b359b86da61a77b491c7
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697091"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088799"
 ---
-# <a name="switches-element"></a>\<switches > öğesi
+# <a name="switches-element"></a>\<anahtarlar > öğesi
 İzleme anahtarlarını ve izleme anahtarlarının ayarlandığı düzeyi içerir.  
-  
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\< anahtar >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+[**System. diagnostics\<** ](system-diagnostics-element.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<anahtarlar >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -50,10 +50,10 @@ ms.locfileid: "71697091"
 |`System.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir izleme anahtarı düzeyini bir yapılandırma dosyasına yerleştirerek değiştirebilirsiniz. Anahtar bir <xref:System.Diagnostics.BooleanSwitch> ise, açıp kapatabilirsiniz. Anahtar bir <xref:System.Diagnostics.TraceSwitch> ise, uygulamanın çıkışları için izleme veya hata ayıklama iletilerinin türlerini belirtmek üzere buna farklı düzeyler atayabilirsiniz.  
+ Bir izleme anahtarı düzeyini bir yapılandırma dosyasına yerleştirerek değiştirebilirsiniz. Anahtar bir <xref:System.Diagnostics.BooleanSwitch>, açıp kapatabilirsiniz. Anahtar bir <xref:System.Diagnostics.TraceSwitch>ise, uygulamanın çıkışları için izleme veya hata ayıklama iletilerinin türlerini belirtmek üzere buna farklı düzeyler atayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `General` izleme anahtarını <xref:System.Diagnostics.TraceLevel> düzeyine ayarlamak ve `Data` Boole izleme anahtarını etkinleştirmek için **\<Anahtar >** öğesinin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, `General` izleme anahtarını <xref:System.Diagnostics.TraceLevel> düzeyine ayarlamak ve `Data` Boole izleme anahtarını etkinleştirmek için **\<anahtar >** öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,3 @@ ms.locfileid: "71697091"
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
 - [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)
- 

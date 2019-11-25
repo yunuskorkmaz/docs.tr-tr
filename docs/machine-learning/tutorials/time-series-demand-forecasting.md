@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: e913c27c3501c4c553d7d62f948de31abb3d6f49
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 2482709abfadad0505a40f4c37fd58cee4a2634c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740539"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978197"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Öğretici: zaman serisi analizi ve ML.NET ile tahmin Bisiklet kiralama hizmeti talebi
 
@@ -37,9 +37,9 @@ Bu örnek, tek bir spekme analizi olarak bilinen bağımsız bir zaman serisi an
 
 ## <a name="understand-the-problem"></a>Sorunu anlama
 
-Verimli bir işlem çalıştırmak için, envanter yönetimi bir anahtar rol oynar. Ücretteki bir ürünün çok fazla olması, raflardan herhangi bir gelir üretmeden satışa açık ürünler anlamına gelir. Çok az ürün, rakiplerden satın alınan satışları ve müşterileri kaybetmeyecek. Bu nedenle, sabit soru, elinizin altında tutulacak en uygun stok miktarı nedir? Zaman serisi analizi, geçmiş verileri inceleyerek, desenleri tanımlayarak ve bu bilgileri gelecekte bir süre tahmin etmek için kullanarak bu sorulara yanıt sağlanmasına yardımcı olur. 
+Verimli bir işlem çalıştırmak için, envanter yönetimi bir anahtar rol oynar. Ücretteki bir ürünün çok fazla olması, raflardan herhangi bir gelir üretmeden satışa açık ürünler anlamına gelir. Çok az ürün, rakiplerden satın alınan satışları ve müşterileri kaybetmeyecek. Bu nedenle, sabit soru, elinizin altında tutulacak en uygun stok miktarı nedir? Zaman serisi analizi, geçmiş verileri inceleyerek, desenleri tanımlayarak ve bu bilgileri gelecekte bir süre tahmin etmek için kullanarak bu sorulara yanıt sağlanmasına yardımcı olur.
 
-Bu öğreticide kullanılan verileri çözümlemeye yönelik teknik, zaman serisi analizinden bağımsız bir yöntemdir. Tek bir zaman serisi analizi, aylık satış gibi belirli aralıklarda tek bir sayısal izlemeye göz atacağız. 
+Bu öğreticide kullanılan verileri çözümlemeye yönelik teknik, zaman serisi analizinden bağımsız bir yöntemdir. Tek bir zaman serisi analizi, aylık satış gibi belirli aralıklarda tek bir sayısal izlemeye göz atacağız.
 
 Bu öğreticide kullanılan algoritma, [tek bir Spekme analizidir (SSA)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf). SSA, bir dizi sorumlu bileşen için zaman serisini kaldırarak işe yarar. Bu bileşenler, eğilimler, gürültü, mevsimsellik ve birçok başka etkene karşılık gelen bir sinyalin parçaları olarak yorumlanamaz. Ardından, bu bileşenler yeniden yapılandırılır ve gelecekte değerleri tahmin etmek için kullanılır.
 
@@ -62,7 +62,7 @@ Bu öğreticide kullanılan algoritma, [tek bir Spekme analizidir (SSA)](http://
 > [!NOTE]
 > Bu öğreticide kullanılan veriler, [UCI bisiklet paylaşımı veri kümesinden](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)gelir. Fanaee-T, hadi ve gama, Joao, ' olay etiketleme birleştirme algılayıcıları ve arka plan bilgisi ', yapay zeka 'da Ilerleme (2013): PP. 1-15, Sprümlberg, [Web bağlantısı](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
 
-Özgün veri kümesi mevsimsellik ve hava durumu ile ilgili birkaç sütun içerir. Breçekimi ve bu öğreticide kullanılan algoritma yalnızca tek bir sayısal sütundan değer gerektirdiğinden, özgün veri kümesi yalnızca aşağıdaki sütunları içerecek şekilde yoğunlaştırılmış:  
+Özgün veri kümesi mevsimsellik ve hava durumu ile ilgili birkaç sütun içerir. Breçekimi ve bu öğreticide kullanılan algoritma yalnızca tek bir sayısal sütundan değer gerektirdiğinden, özgün veri kümesi yalnızca aşağıdaki sütunları içerecek şekilde yoğunlaştırılmış:
 
 - **dteday**: Gözlem tarihi.
 - **yıl**: gözlemin kodlanmış yılı (0 = 2011, 1 = 2012).
@@ -94,7 +94,7 @@ Aşağıda, verilerin bir örneği verilmiştir:
 
 1. `ModelInput` sınıfı oluşturun. `Program` sınıfının altına aşağıdaki kodu ekleyin.
 
-    [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L120-L127)]    
+    [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L120-L127)]
 
     `ModelInput` sınıfı şu sütunları içerir:
 
@@ -134,7 +134,7 @@ Aşağıda, verilerin bir örneği verilmiştir:
 
     [!code-csharp [DefineSQLQuery](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L25)]
 
-    ML.NET algoritmaları verilerin [`Single`](xref:System.Single)türünde olmasını bekler. Bu nedenle, tek duyarlıklı kayan noktalı bir değer olan [`Real`](xref:System.Data.SqlDbType)türünde olmayan veritabanından gelen sayısal değerlerin [`Real`](xref:System.Data.SqlDbType)olarak dönüştürülmesi gerekir. 
+    ML.NET algoritmaları verilerin [`Single`](xref:System.Single)türünde olmasını bekler. Bu nedenle, tek duyarlıklı kayan noktalı bir değer olan [`Real`](xref:System.Data.SqlDbType)türünde olmayan veritabanından gelen sayısal değerlerin [`Real`](xref:System.Data.SqlDbType)olarak dönüştürülmesi gerekir.
 
     `Year` ve `TotalRental` sütunları, veritabanındaki tamsayı türlerdir. `CAST` yerleşik işlevini kullanarak her ikisi de `Real`dönüştürülür.
 
@@ -146,7 +146,7 @@ Aşağıda, verilerin bir örneği verilmiştir:
 
     [!code-csharp [LoadData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L31)]
 
-1. Veri kümesi iki yıl değer içerir. Eğitim için yalnızca ilk yılın verileri kullanılır, ikinci yıl, gerçek değerleri model tarafından üretilen tahmine göre karşılaştırmak için tutulur. [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) dönüşümünü kullanarak verileri filtreleyin. 
+1. Veri kümesi iki yıl değer içerir. Eğitim için yalnızca ilk yılın verileri kullanılır, ikinci yıl, gerçek değerleri model tarafından üretilen tahmine göre karşılaştırmak için tutulur. [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) dönüşümünü kullanarak verileri filtreleyin.
 
     [!code-csharp [SplitData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L33-L34)]
 
@@ -158,7 +158,7 @@ Aşağıda, verilerin bir örneği verilmiştir:
 
     [!code-csharp [DefinePipeline](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L36-L45)]
 
-    `forecastingPipeline`, ilk yıl ve örnekler için 365 veri noktası alır ya da zaman serisi veri kümesini, `seriesLength` parametresi tarafından belirtilen 30 günlük (aylık) aralıklarına böler. Bu örneklerin her biri haftalık veya 7 günlük bir pencere ile çözümlenir. Sonraki periyotalar için tahmin edilen değerin ne olduğu belirlenirken, önceki yedi günün değerleri bir tahmin yapmak için kullanılır. Model, daha sonra `horizon` parametresi tarafından tanımlanan şekilde yedi dönemi tahmin etmek üzere ayarlanmıştır. Tahmin bilinçli bir tahmin olduğundan, her zaman %100 doğru değildir. Bu nedenle, üst ve alt sınırlar tarafından tanımlanan en iyi ve en kötü durum senaryolarında değer aralığını bilmemiz yararlı olur. Bu durumda, alt ve üst sınırlara yönelik güven düzeyi %95 olarak ayarlanmıştır. Güvenirlik düzeyi, uygun şekilde artırılabilir veya azaltılabilir. Değerin ne kadar yüksekse, istenen güven düzeyini elde etmek için Aralık üst ve alt sınır arasındadır. 
+    `forecastingPipeline`, ilk yıl ve örnekler için 365 veri noktası alır ya da zaman serisi veri kümesini, `seriesLength` parametresi tarafından belirtilen 30 günlük (aylık) aralıklarına böler. Bu örneklerin her biri haftalık veya 7 günlük bir pencere ile çözümlenir. Sonraki periyotalar için tahmin edilen değerin ne olduğu belirlenirken, önceki yedi günün değerleri bir tahmin yapmak için kullanılır. Model, daha sonra `horizon` parametresi tarafından tanımlanan şekilde yedi dönemi tahmin etmek üzere ayarlanmıştır. Tahmin bilinçli bir tahmin olduğundan, her zaman %100 doğru değildir. Bu nedenle, üst ve alt sınırlar tarafından tanımlanan en iyi ve en kötü durum senaryolarında değer aralığını bilmemiz yararlı olur. Bu durumda, alt ve üst sınırlara yönelik güven düzeyi %95 olarak ayarlanmıştır. Güvenirlik düzeyi, uygun şekilde artırılabilir veya azaltılabilir. Değerin ne kadar yüksekse, istenen güven düzeyini elde etmek için Aralık üst ve alt sınır arasındadır.
 
 1. Modeli eğitme ve verileri daha önce tanımlanan `forecastingPipeline`sığacak şekilde [`Fit`](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator.Fit*) yöntemi kullanın.
 
@@ -173,7 +173,7 @@ Sonraki yılın verilerini tahmin ederek ve gerçek değerlerle karşılaştıra
     ```csharp
     static void Evaluate(IDataView testData, ITransformer model, MLContext mlContext)
     {
-        
+
     }
     ```
 
@@ -200,7 +200,7 @@ Sonraki yılın verilerini tahmin ederek ve gerçek değerlerle karşılaştıra
     Performansı değerlendirmek için aşağıdaki ölçümler kullanılır:
 
     - **Mutlak ortalama hata**: kapanış tahminlerinin gerçek değere nasıl geldiğini ölçer. Bu değer 0 ile sonsuz arasında aralıklar. 0 ' a yaklaşarak modelin kalitesi daha iyidir.
-    - **Kök ortalama kare hatası**: modelde hata olduğunu özetler. Bu değer 0 ile sonsuz arasında aralıklar. 0 ' a yaklaşarak modelin kalitesi daha iyidir.
+    - **Kök ortalama kare hatası**: modeldeki hatayı özetler. Bu değer 0 ile sonsuz arasında aralıklar. 0 ' a yaklaşarak modelin kalitesi daha iyidir.
 
 1. Ölçümleri konsola çıkış.
 
@@ -278,7 +278,7 @@ Gerçek ve tahmin edilen değerlerin incelemesinde aşağıdaki ilişkiler göst
 
 ![Gerçek vs tahmini karşılaştırması](./media/time-series-demand-forecasting/forecast.png)
 
-Tahmin edilen değerler tam sayı sayısını tahmin etmez, ancak bir işlemin kaynakları kullanımlarını en uygun hale getirmesine izin veren daha dar bir değer aralığı sağlarlar. 
+Tahmin edilen değerler tam sayı sayısını tahmin etmez, ancak bir işlemin kaynakları kullanımlarını en uygun hale getirmesine izin veren daha dar bir değer aralığı sağlarlar.
 
 Mühendisi! Artık Bisiklet Kiralama talebini tahmin etmek için bir zaman serisi makine öğrenimi modelini başarıyla oluşturdunuz.
 

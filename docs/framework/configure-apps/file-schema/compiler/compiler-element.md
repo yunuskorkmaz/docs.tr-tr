@@ -10,21 +10,21 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-ms.openlocfilehash: a19cf8182cdb338fd8596ef38311916de0daae37
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 46676f25597f85596598d6f67c98930971cb0447
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168936"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088050"
 ---
-# <a name="compiler-element"></a>\<Derleyici > öğesi
+# <a name="compiler-element"></a>\<derleyici > öğesi
 
 Bir dil sağlayıcısı için derleyici yapılandırma özniteliklerini belirtir.
 
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. CodeDom >** ](system-codedom-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<derleyiciler >** ](compilers-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Derleyici >**  
+[ **\<configuration >** ](../configuration-element.md) \
+[**System. codedom >\<** ](system-codedom-element.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<derleyiciler >** ](compilers-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<derleyicisi >**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,7 +46,7 @@ Bir dil sağlayıcısı için derleyici yapılandırma özniteliklerini belirtir
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`compilerOptions`|İsteğe bağlı öznitelik.<br /><br /> Derleme için derleyiciye özgü ek bağımsız değişkenleri belirtir. `compilerOptions` Özniteliği için değerler, genellikle derleyicinin derleyici seçenekleri konusunda listelenir.|
+|`compilerOptions`|İsteğe bağlı öznitelik.<br /><br /> Derleme için derleyiciye özgü ek bağımsız değişkenleri belirtir. `compilerOptions` özniteliği için değerler, genellikle derleyicinin derleyici seçenekleri konusunda listelenir.|
 |`extension`|Gerekli öznitelik.<br /><br /> Dil sağlayıcısı için kaynak dosyalar tarafından kullanılan, noktalı virgülle ayrılmış dosya adı uzantılarının bir listesini sağlar. Örneğin, ". cs".|
 |`language`|Gerekli öznitelik.<br /><br /> Dil sağlayıcısı tarafından desteklenen dil adlarının noktalı virgülle ayrılmış bir listesini sağlar. Örneğin, "c#; CS; CSharp".|
 |`type`|Gerekli öznitelik.<br /><br /> Sağlayıcı uygulamasını içeren derlemenin adı da dahil olmak üzere, dil sağlayıcısının tür adını belirtir. Tür adı, [tam nitelikli tür adlarını belirtirken](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)tanımlanan gereksinimlere uymalıdır.|
@@ -63,14 +63,14 @@ Bir dil sağlayıcısı için derleyici yapılandırma özniteliklerini belirtir
 |Öğe|Açıklama|
 |-------------|-----------------|
 |[\<Yapılandırma > öğesi](../configuration-element.md)|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|
-|[\<System. CodeDom > öğesi](system-codedom-element.md)|Kullanılabilir dil sağlayıcılarının derleyici yapılandırma ayarlarını belirtir.|
-|[\<derleyiciler > öğesi](compilers-element.md)|Derleyici yapılandırma öğeleri için kapsayıcı; sıfır veya daha fazla `<compiler>` öğe içeriyor.|
+|[System. CodeDom > öğesi \<](system-codedom-element.md)|Kullanılabilir dil sağlayıcılarının derleyici yapılandırma ayarlarını belirtir.|
+|[\<derleyiciler > öğesi](compilers-element.md)|Derleyici yapılandırma öğeleri için kapsayıcı; sıfır veya daha fazla `<compiler>` öğesi içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Her `<compiler>` öğe, belirli bir dil sağlayıcısı için derleyici yapılandırma özniteliklerini belirtir. Sağlayıcı, <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> sınıfı belirli bir dil için genişletiyor `<compiler>` ; öğesi, dil sağlayıcısı için derleyici ve kod Oluşturucu ayarlarını tanımlar.
+Her `<compiler>` öğesi, belirli bir dil sağlayıcısı için derleyici yapılandırma özniteliklerini belirtir. Sağlayıcı, belirli bir dil için <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> sınıfını genişletir; `<compiler>` öğesi, dil sağlayıcısı için derleyici ve kod Oluşturucu ayarlarını tanımlar.
 
-.NET Framework, makine yapılandırma dosyasındaki (Machine. config) ilk derleyici ayarlarını tanımlar. Geliştiriciler ve derleyici satıcıları, yeni <xref:System.CodeDom.Compiler.CodeDomProvider> bir uygulama için yapılandırma ayarları ekleyebilir. Bir bilgisayardaki dil sağlayıcısını ve derleyici yapılandırma ayarlarını programlı bir şekilde numaralandırmak için yönteminikullanın.<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>
+.NET Framework, makine yapılandırma dosyasındaki (Machine. config) ilk derleyici ayarlarını tanımlar. Geliştiriciler ve derleyici satıcıları, yeni bir <xref:System.CodeDom.Compiler.CodeDomProvider> uygulamasının yapılandırma ayarlarını ekleyebilir. Bir bilgisayardaki dil sağlayıcısını ve derleyici yapılandırma ayarlarını programlı bir şekilde numaralandırmak için <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> yöntemini kullanın.
 
 Uygulama veya Web yapılandırma dosyasındaki derleyici öğeleri, makine yapılandırma dosyasındaki ayarları tamamlayabilir veya geçersiz kılabilir. Aynı dil adı veya aynı dosya uzantısı için birden fazla sağlayıcı uygulamanız yapılandırılmışsa, son eşleştirme yapılandırması söz konusu dil adı veya dosya uzantısı için önceden yapılandırılmış tüm sağlayıcıları geçersiz kılar.
 

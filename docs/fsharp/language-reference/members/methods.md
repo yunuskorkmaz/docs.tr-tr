@@ -1,13 +1,13 @@
 ---
 title: Yöntemler
 description: Bir F# yöntemin, nesnelerin ve türlerin işlevlerini ve davranışlarını göstermek ve uygulamak için kullanılan bir türle ilişkili bir işlev olduğunu öğrenin.
-ms.date: 05/16/2016
-ms.openlocfilehash: 13503690a59ace13dacba93b6fce9ea3240c5cc2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 11/04/2019
+ms.openlocfilehash: 6f5ae76ea450b07763eb58d0c95b18b30f634551
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627444"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976644"
 ---
 # <a name="methods"></a>Yöntemler
 
@@ -53,13 +53,13 @@ override self-identifier.method-name parameter-list [ : return-type ] =
 
 Öznitelikler, herhangi bir yöntem bildirimine uygulanabilir. Bir yöntem tanımı için sözdiziminin önüne ve genellikle ayrı bir satırda listelenir. Daha fazla bilgi için bkz. [öznitelikler](../attributes.md).
 
-Yöntemler işaretlenebilir `inline`. Hakkında `inline`bilgi için bkz. [satır içi işlevler](../functions/inline-functions.md).
+Yöntemler `inline`olarak işaretlenebilir. `inline`hakkında bilgi için bkz. [Inline Functions](../functions/inline-functions.md).
 
 Satır içi olmayan yöntemler, türü içinde yinelemeli olarak kullanılabilir; `rec` anahtar sözcüğünü açıkça kullanmaya gerek yoktur.
 
 ## <a name="instance-methods"></a>Örnek yöntemleri
 
-Örnek yöntemleri, `member` anahtar sözcüğü ve bir *kendinden tanımlayıcı*ile, ardından bir nokta (.) ve Yöntem adı ve parametreleri ile birlikte bildirilmiştir. Bağlamalarda olduğu gibi, *parametre listesi* bir kalıp olabilir. `let` Genellikle, yöntem parametrelerini parantez içinde, yöntemlerin diğer .NET Framework dillerde F# oluşturulduklarında görünme yöntemi olan bir demet formunda çevreleolursunuz. Ancak, curried formu (boşluklarla ayrılmış parametreler) de ortaktır ve diğer desenler de desteklenir.
+Örnek yöntemleri, bir nokta (.) ve Yöntem adı ve parametreleri tarafından izlenen `member` anahtar sözcüğü ve bir *kendinden tanımlayıcı*ile tanımlanır. `let` bağlamalarda olduğu gibi, *parametre listesi* bir kalıp olabilir. Genellikle, yöntem parametrelerini parantez içinde, yöntemlerin diğer .NET Framework dillerde F# oluşturulduklarında görünme yöntemi olan bir demet formunda çevreleolursunuz. Ancak, curried formu (boşluklarla ayrılmış parametreler) de ortaktır ve diğer desenler de desteklenir.
 
 Aşağıdaki örnek Özet olmayan bir örnek yönteminin tanımını ve kullanımını gösterir.
 
@@ -69,25 +69,25 @@ Aşağıdaki örnek Özet olmayan bir örnek yönteminin tanımını ve kullanı
 
 ## <a name="static-methods"></a>Statik yöntemler
 
-Anahtar sözcüğü `static` , bir yöntemin bir örnek olmadan çağrılabilecek olduğunu ve bir nesne örneğiyle ilişkilendirilmediği belirtmek için kullanılır. Aksi halde Yöntemler örnek yöntemlerdir.
+Anahtar sözcüğü `static`, bir yöntemin bir örnek olmadan çağrılabilecek olduğunu ve bir nesne örneğiyle ilişkilendirilmediği belirtmek için kullanılır. Aksi halde Yöntemler örnek yöntemlerdir.
 
-Sonraki bölümde yer alan örnek, anahtar sözcükle belirtilen özellik üyeleri `let` `member` ve anahtar sözcüğüyle belirtilen `static` statik bir yöntem ile tanımlanan alanları gösterir.
+Sonraki bölümde yer alan örnek, `let` anahtar sözcüğü, `member` anahtar sözcüğüyle belirtilen özellik üyeleri ve `static` anahtar sözcüğüyle belirtilen statik bir yöntem ile belirtilen alanları gösterir.
 
-Aşağıdaki örnek, statik yöntemlerin tanımını ve kullanımını gösterir. Bu yöntem tanımlarının `SomeType` önceki bölümdeki sınıfında olduğunu varsayın.
+Aşağıdaki örnek, statik yöntemlerin tanımını ve kullanımını gösterir. Bu yöntem tanımlarının önceki bölümde `SomeType` sınıfında olduğunu varsayalım.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3402.fs)]
 
 ## <a name="abstract-and-virtual-methods"></a>Soyut ve sanal yöntemler
 
-Anahtar sözcüğü `abstract` , bir yöntemin sanal bir dağıtım yuvasına sahip olduğunu ve sınıfta tanımına sahip olabileceğini gösterir. *Sanal dağıtım yuvası* , bir nesne odaklı türdeki sanal işlev çağrılarını aramak için çalışma zamanında kullanılan, dahili olarak tutulan işlevlerin bir girişi olan bir giriştir. Sanal dağıtım mekanizması, nesne odaklı bir Programlamanın önemli bir özelliği olan çok *biçimlilik*uygulayan bir mekanizmadır. Tanımı olmayan en az bir soyut metoda sahip bir sınıf *soyut bir sınıftır*ve bu sınıfın hiçbir örneği oluşturulamadığını gösterir. Soyut sınıflar hakkında daha fazla bilgi için bkz. [soyut sınıflar](../abstract-classes.md).
+Anahtar sözcüğü `abstract` bir yöntemin sanal bir dağıtım yuvasına sahip olduğunu ve sınıfta bir tanımı olabileceğini gösterir. *Sanal dağıtım yuvası* , bir nesne odaklı türdeki sanal işlev çağrılarını aramak için çalışma zamanında kullanılan, dahili olarak tutulan işlevlerin bir girişi olan bir giriştir. Sanal dağıtım mekanizması, nesne odaklı bir Programlamanın önemli bir özelliği olan çok *biçimlilik*uygulayan bir mekanizmadır. Tanımı olmayan en az bir soyut metoda sahip bir sınıf *soyut bir sınıftır*ve bu sınıfın hiçbir örneği oluşturulamadığını gösterir. Soyut sınıflar hakkında daha fazla bilgi için bkz. [soyut sınıflar](../abstract-classes.md).
 
-Soyut yöntem bildirimleri bir yöntem gövdesi içermez. Bunun yerine, yöntemin adı iki nokta üst üste gelir (:) ve yöntemi için bir tür imzası. Bir yöntemin tür imzası, fare işaretçisini parametre adları hariç Visual Studio Code düzenleyicisinde bir yöntem adı üzerinde duraklatdığınızda IntelliSense tarafından gösterilenle aynı olur. Etkileşimli olarak çalışırken tür imzaları, fsi. exe yorumlayıcı tarafından da görüntülenir. Bir yöntemin tür imzası, parametre türleri ve ardından dönüş türü, uygun ayırıcı sembolleri ile eklenerek oluşturulur. Curried parametreleri ile ayrılır `->` ve demet parametreleri ile `*`ayrılır. Dönüş değeri her zaman bağımsız değişkenlerden bir `->` sembol ile ayrılır. Parantezler, bir işlev türü parametre olduğunda ya da bir kayıt düzeninin iki parametre yerine tek bir parametre olarak ele alındığı zaman göstermek için, karmaşık parametreleri gruplandırmak için kullanılabilir.
+Soyut yöntem bildirimleri bir yöntem gövdesi içermez. Bunun yerine, yöntemin adı iki nokta üst üste gelir (:) ve yöntemi için bir tür imzası. Bir yöntemin tür imzası, fare işaretçisini parametre adları hariç Visual Studio Code düzenleyicisinde bir yöntem adı üzerinde duraklatdığınızda IntelliSense tarafından gösterilenle aynı olur. Etkileşimli olarak çalışırken tür imzaları, fsi. exe yorumlayıcı tarafından da görüntülenir. Bir yöntemin tür imzası, parametre türleri ve ardından dönüş türü, uygun ayırıcı sembolleri ile eklenerek oluşturulur. Curried parametreleri `->` ile ayrılır ve demet parametreleri `*`ile ayrılır. Dönüş değeri her zaman bağımsız değişkenlerden `->` simgesiyle ayrılır. Parantezler, bir işlev türü parametre olduğunda ya da bir kayıt düzeninin iki parametre yerine tek bir parametre olarak ele alındığı zaman göstermek için, karmaşık parametreleri gruplandırmak için kullanılabilir.
 
-Ayrıca, bu konudaki Sözdizimi bloğunda gösterildiği gibi, tanımı sınıfa ekleyerek ve `default` anahtar sözcüğünü kullanarak soyut yöntemlere varsayılan tanımlamalar da verebilirsiniz. Aynı sınıfta bir tanımı olan soyut bir yöntem, diğer .NET Framework dillerdeki sanal bir yönteme eşdeğerdir. Bir tanım olup olmadığı, `abstract` anahtar sözcüğü sınıfı için sanal işlev tablosunda yeni bir dağıtım yuvası oluşturur.
+Ayrıca, tanımı sınıfa ekleyerek ve bu konudaki Sözdizimi bloğunda gösterildiği gibi `default` anahtar sözcüğünü kullanarak soyut yöntemlere varsayılan tanımlar verebilirsiniz. Aynı sınıfta bir tanımı olan soyut bir yöntem, diğer .NET Framework dillerdeki sanal bir yönteme eşdeğerdir. Bir tanım olup olmadığı, `abstract` anahtar sözcüğü, sınıfının sanal işlev tablosunda yeni bir dağıtım yuvası oluşturur.
 
-Bir temel sınıfın soyut yöntemlerini uygulayıp uygulamamasından bağımsız olarak, türetilmiş sınıflar soyut yöntemler için uygulamalar sağlayabilir. Türetilmiş bir sınıfta soyut bir yöntem uygulamak için, türetilmiş sınıfta aynı ada ve imzaya sahip bir yöntemi tanımlayın, `override` or `default` anahtar sözcüğünü kullanın ve Yöntem gövdesini sağlayın. Anahtar sözcükler `override` ve `default` tam olarak aynı şey anlamına gelir. Yeni `override` Yöntem bir temel sınıf uygulamasını geçersiz kıldığında kullanın; özgün `default` soyut bildirimle aynı sınıfta bir uygulama oluşturduğunuzda kullanın. Temel sınıfta soyut olarak `abstract` tanımlanan yöntemi uygulayan yöntemde anahtar sözcüğünü kullanmayın.
+Bir temel sınıfın soyut yöntemlerini uygulayıp uygulamamasından bağımsız olarak, türetilmiş sınıflar soyut yöntemler için uygulamalar sağlayabilir. Türetilmiş bir sınıfta soyut bir yöntem uygulamak için, türetilmiş sınıfta aynı ada ve imzaya sahip olan ve `override` veya `default` anahtar sözcüğünü kullan dışında bir yöntem tanımlayın ve Yöntem gövdesini sağlayın. `override` ve `default` anahtar sözcükleri tam olarak aynı şeyi ifade ederler. Yeni yöntem bir temel sınıf uygulamasını geçersiz kılıyorsa `override` kullanın; özgün soyut bildirimle aynı sınıfta bir uygulama oluşturduğunuzda `default` kullanın. Temel sınıfta soyut olarak tanımlanan yöntemi uygulayan yöntemde `abstract` anahtar sözcüğünü kullanmayın.
 
-Aşağıdaki örnek, bir .NET Framework sanal yönteminin `Rotate` eşdeğeri olan varsayılan bir uygulamaya sahip olan soyut bir yöntemi gösterir.
+Aşağıdaki örnek, bir .NET Framework sanal yönteminin eşdeğeri olan varsayılan bir uygulamaya sahip `Rotate` soyut bir yöntemi gösterir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3403.fs)]
 
@@ -106,10 +106,10 @@ Aşırı yüklenmiş yöntemler, belirli bir tür içinde özdeş adlara sahip a
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.
 type C() =
-    __.M([<Optional; DefaultParameterValue(12)>] i) = i + 1
+    _.M([<Optional; DefaultParameterValue(12)>] i) = i + 1
 ```
 
-İçin `DefaultParameterValue` geçirilen değerin giriş türüyle eşleşmesi gerektiğini unutmayın.  Yukarıdaki örnekte, bir `int`.  Tamsayı olmayan bir değeri `DefaultParameterValue` ' a geçirmeye çalışmak, derleme hatasına neden olur.
+`DefaultParameterValue` için geçirilen değerin giriş türüyle eşleşmesi gerektiğini unutmayın.  Yukarıdaki örnekte, bir `int`.  Tamsayı olmayan bir değeri `DefaultParameterValue` 'e geçirmeye çalışmak, derleme hatasına neden olur.
 
 ## <a name="example-properties-and-methods"></a>Örnek: Özellikler ve Yöntemler
 

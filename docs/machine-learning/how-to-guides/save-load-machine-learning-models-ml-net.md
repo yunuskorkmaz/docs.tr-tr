@@ -5,16 +5,16 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: f1a3131126f9f3af0bab0b1592430fbf7dddf78a
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: e3cebe979b5c279ce8cb90db5510f8758c24c2b4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799094"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977004"
 ---
 # <a name="save-and-load-trained-models"></a>Eğitilen modelleri kaydetme ve yükleme
 
-Uygulamanıza eğitilen modelleri kaydetmeyi ve yüklemeyi öğrenin. 
+Uygulamanıza eğitilen modelleri kaydetmeyi ve yüklemeyi öğrenin.
 
 Model oluşturma işlemi boyunca, bir model bellekte bulunur ve uygulamanın yaşam döngüsü boyunca erişilebilir. Ancak, uygulama çalışmayı durdurduktan sonra, model yerel olarak veya uzaktan kaydedilmezse artık erişilebilir değildir. Genellikle modeller, diğer uygulamalarda eğitim sonrasında, çıkarım veya yeniden eğitim için bir noktada kullanılır. Bu nedenle, modelin depolanması önemlidir. Veri hazırlama ve model eğitimi işlem hatlarını kullanırken aşağıda açıklandığı gibi, bu belgenin sonraki bölümlerinde açıklanan adımları kullanarak modelleri kaydedin ve yükleyin. Bu örnek bir doğrusal regresyon modeli kullansa da, aynı işlem diğer ML.NET algoritmaları için de geçerlidir.
 
@@ -60,7 +60,7 @@ ITransformer trainedModel = pipelineEstimator.Fit(data);
 mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 ```
 
-Çoğu model ve veri hazırlama işlem hattı aynı sınıf kümesinden devraldığı için, bu bileşenlere yönelik Save ve Load Yöntem imzaları aynıdır. Kullanım durumunuza bağlı olarak, veri hazırlama işlem hattını ve modelini tek bir [`ITransformer`](xref:Microsoft.ML.ITransformer) çıkarmak veya ayrı bir [`ITransformer`](xref:Microsoft.ML.ITransformer) oluşturmak için ayrı bir [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601) birleştirebilirsiniz. 
+Çoğu model ve veri hazırlama işlem hattı aynı sınıf kümesinden devraldığı için, bu bileşenlere yönelik Save ve Load Yöntem imzaları aynıdır. Kullanım durumunuza bağlı olarak, veri hazırlama işlem hattını ve modelini tek bir [`ITransformer`](xref:Microsoft.ML.ITransformer) çıkarmak veya ayrı bir [`ITransformer`](xref:Microsoft.ML.ITransformer) oluşturmak için ayrı bir [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601) birleştirebilirsiniz.
 
 ## <a name="save-a-model-locally"></a>Modeli yerel olarak kaydetme
 
@@ -69,7 +69,7 @@ Bir modeli kaydederken iki şey olması gerekir:
 1. Modelin [`ITransformer`](xref:Microsoft.ML.ITransformer) .
 2. [`ITransformer`](xref:Microsoft.ML.ITransformer)beklenen girdinin [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) .
 
-Modeli eğitdikten sonra, eğitim modelini giriş verilerinin `DataViewSchema` kullanarak `model.zip` adlı bir dosyaya kaydetmek için [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) yöntemini kullanın. 
+Modeli eğitdikten sonra, eğitim modelini giriş verilerinin `DataViewSchema` kullanarak `model.zip` adlı bir dosyaya kaydetmek için [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) yöntemini kullanın.
 
 ```csharp
 // Save Trained Model
@@ -78,7 +78,7 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 
 ## <a name="load-a-model-stored-locally"></a>Yerel olarak depolanan bir modeli yükleme
 
-Yerel olarak depolanan modeller, `ASP.NET Core` ve `Serverless Web Applications`gibi diğer işlemlerde veya uygulamalarda kullanılabilir. Daha fazla bilgi edinmek için bkz. [Web API 'de ml.NET kullanma](./serve-model-web-api-ml-net.md) ve [ml.net sunucusuz Web uygulaması](./serve-model-serverless-azure-functions-ml-net.md) nasıl yapılır makaleleri dağıtma. 
+Yerel olarak depolanan modeller, `ASP.NET Core` ve `Serverless Web Applications`gibi diğer işlemlerde veya uygulamalarda kullanılabilir. Daha fazla bilgi edinmek için bkz. [Web API 'de ml.NET kullanma](./serve-model-web-api-ml-net.md) ve [ml.net sunucusuz Web uygulaması](./serve-model-serverless-azure-functions-ml-net.md) nasıl yapılır makaleleri dağıtma.
 
 Ayrı bir uygulama veya işlemde, eğitilen modeli uygulamanıza almak için [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) yöntemini dosya yoluyla birlikte kullanın.
 
@@ -102,7 +102,7 @@ MLContext mlContext = new MLContext();
 DataViewSchema modelSchema;
 ITransformer trainedModel;
 
-// Load data prep pipeline and trained model 
+// Load data prep pipeline and trained model
 using (HttpClient client = new HttpClient())
 {
     Stream modelFile = await client.GetStreamAsync("<YOUR-REMOTE-FILE-LOCATION>");
@@ -151,7 +151,7 @@ mlContext.Model.Save(dataPrepTransformer, data.Schema, "data_preparation_pipelin
 mlContext.Model.Save(trainedModel, transformedData.Schema, "model.zip");
 ```
 
-### <a name="load-data-preparation-pipeline-and-trained-model"></a>Veri hazırlama işlem hattı ve eğitilen model yükleme 
+### <a name="load-data-preparation-pipeline-and-trained-model"></a>Veri hazırlama işlem hattı ve eğitilen model yükleme
 
 Ayrı bir süreç veya uygulamada, veri hazırlama işlem hattını ve eğitilen modeli şu anda aşağıdaki gibi yükleyin:
 

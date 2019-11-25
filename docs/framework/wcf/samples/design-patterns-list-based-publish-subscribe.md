@@ -2,12 +2,12 @@
 title: 'Tasarım Desenleri: Liste Tabanlı Yayımlama-Abone Olma'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cd7cc6f68362c7a69256f0488e2fa00caffdabc7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928835"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978206"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Tasarım Desenleri: Liste Tabanlı Yayımlama-Abone Olma
 Bu örnek, Windows Communication Foundation (WCF) programı olarak uygulanan liste tabanlı yayımla-abone ol modelini gösterir.  
@@ -21,7 +21,7 @@ Bu örnek, Windows Communication Foundation (WCF) programı olarak uygulanan lis
   
  Bu örnekte, istemci ve veri kaynağı konsol programlarıdır (. exe dosyaları) ve hizmet Internet Information Services (IIS) içinde barındırılan bir kitaplıktır (. dll). İstemci ve veri kaynağı etkinliği masaüstünde görülebilir.  
   
- Hizmet çift yönlü iletişimi kullanır. Hizmet sözleşmesi bir `ISampleClientCallback` geri çağırma sözleşmesiyle eşleştirilmiş. `ISampleContract` Hizmet, abone ve abonelik kaldırma hizmeti işlemlerini, istemcilerin abone listesini birleştirmek veya abone olmak için kullanır. Hizmet Ayrıca, veri kaynağı `PublishPriceChange` programının hizmeti yeni bilgi sağlamak üzere çağırdığı hizmet işlemini de uygular. İstemci programı, hizmetin bir `PriceChange` fiyat değişikliğinin tüm abonelerini bilgilendirmek için çağırdığı hizmet işlemini uygular.  
+ Hizmet çift yönlü iletişimi kullanır. `ISampleContract` hizmet sözleşmesi bir `ISampleClientCallback` geri çağırma sözleşmesiyle eşleştirilmiş. Hizmet, abone ve abonelik kaldırma hizmeti işlemlerini, istemcilerin abone listesini birleştirmek veya abone olmak için kullanır. Hizmet Ayrıca, veri kaynağı programının hizmeti yeni bilgi sağlamak üzere çağırdığı `PublishPriceChange` hizmeti işlemini de uygular. İstemci programı, hizmet tarafından bir fiyat değişikliğinin tüm abonelerini bilgilendirmek için çağıran `PriceChange` hizmeti işlemini uygular.  
   
 ```csharp  
 // Create a service contract and define the service operations.  
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  Hizmet, tüm abonelere yeni bilgiler hakkında bilgilendirmek için mekanizma olarak bir .NET Framework olayı kullanır. Bir istemci, abone 'yı çağırarak hizmete katıldığında bir olay işleyicisi sağlar. İstemci ayrıldığında olay işleyicisinin aboneliğini olaydan kaldırır. Bir veri kaynağı bir fiyat değişikliğini raporlamak için hizmete çağrı yaptığı zaman, hizmet olayı başlatır. Bu, bir hizmetin her bir örneğini, abone olan her istemci için bir tane çağırır ve olay işleyicilerinin yürütülmesine neden olur. Her olay işleyicisi, geri çağırma işlevi aracılığıyla bilgileri istemcisine geçirir.  
   
-```csharp  
+```csharp
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  
@@ -120,9 +120,9 @@ public class PriceChangeEventArgs : EventArgs
   
 1. Aşağıdaki adresi girerek bir tarayıcı kullanarak hizmete erişebilirsiniz: `http://localhost/servicemodelsamples/service.svc`. Yanıt olarak bir onay sayfası görüntülenmelidir.  
   
-2. \ Client\bin\\' den dile özgü klasörden Client. exe ' yi çalıştırın. İstemci etkinliği istemci konsol penceresinde görüntülenir. Birkaç istemciyi başlatın.  
+2. Dile özgü klasörün altındaki \client\bin\\adresinden Client. exe ' yi çalıştırın. İstemci etkinliği istemci konsol penceresinde görüntülenir. Birkaç istemciyi başlatın.  
   
-3. \ Datasource\bin\\' den, dile özgü klasörün altında DataSource. exe ' yi çalıştırın. Veri kaynağı etkinliği konsol penceresinde görüntülenir. Veri kaynağı hizmete bilgi gönderdiğinde, her istemciye geçirilmesi gerekir.  
+3. Dile özgü klasörün altında bulunan \datasource\bin\\adresinden DataSource. exe ' yi çalıştırın. Veri kaynağı etkinliği konsol penceresinde görüntülenir. Veri kaynağı hizmete bilgi gönderdiğinde, her istemciye geçirilmesi gerekir.  
   
 4. İstemci, veri kaynağı ve hizmet programları iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
@@ -157,6 +157,6 @@ public class PriceChangeEventArgs : EventArgs
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  

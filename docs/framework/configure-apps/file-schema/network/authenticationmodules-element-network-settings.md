@@ -8,20 +8,20 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 4fe44deba951e5302518ed855589ad1b0ca75343
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bacaaf92464a355804a9ea8307f6e6f1caac1f05
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699528"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087607"
 ---
 # <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > öğesi (ağ ayarları)
 Ağ isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.  
-  
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<authenticationModules >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<authenticationModules >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -50,7 +50,7 @@ Ağ isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.
 |[system.net](system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 öğesi, bir sunucusuyla kimlik doğrulama işlemini gerçekleştiren kimlik doğrulama modüllerini belirtir. Bir kimlik doğrulama modülünün <xref:System.Net.IAuthenticationModule> arabirimini uygulaması gerekir.  
+ `authenticationModule` öğesi, bir sunucusuyla kimlik doğrulama işlemini gerçekleştiren kimlik doğrulama modüllerini belirtir. Bir kimlik doğrulama modülünün <xref:System.Net.IAuthenticationModule> arabirimini uygulaması gerekir.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  

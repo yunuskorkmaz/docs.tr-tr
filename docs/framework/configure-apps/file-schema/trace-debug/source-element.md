@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: c4f7e31422ccd8129599db1120f9b0cb327d9319
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: b59144f4772c940f8c7e6ca19aa21666069b4b55
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697206"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088825"
 ---
-# <a name="source-element"></a>\<source > öğesi
+# <a name="source-element"></a>\<kaynak > öğesi
 İzleme iletilerini Başlatan bir izleme kaynağını belirtir.  
-  
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<source >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+[**System. diagnostics\<** ](system-diagnostics-element.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<kaynakları >** ](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<kaynak >**
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -38,15 +38,15 @@ ms.locfileid: "71697206"
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |`name`|İsteğe bağlı öznitelik.<br /><br /> İzleme kaynağının adını belirtir.|  
-|`switchName`|İsteğe bağlı öznitelik.<br /><br /> Uygulamadaki bir izleme anahtarı örneğinin adını belirtir. Anahtar `<switches>` öğesinde tanımlanmamışsa değer, anahtarın düzeyini belirtir.|  
+|`switchName`|İsteğe bağlı öznitelik.<br /><br /> Uygulamadaki bir izleme anahtarı örneğinin adını belirtir. Anahtar bir `<switches>` öğesinde tanımlanmamışsa değer, anahtarın düzeyini belirtir.|  
 |`switchType`|İsteğe bağlı öznitelik.<br /><br /> İzleme anahtarının türünü belirtir. Varsa, türün geçerli bir sınıf adı olması ve boş bir dize olmaması gerekir.|  
-|`extraAttribute`|İsteğe bağlı öznitelik.<br /><br /> Bu izleme kaynağı için <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> yöntemiyle tanımlanan izleme kaynağına özgü bir özniteliğin değerini belirtir.|  
+|`extraAttribute`|İsteğe bağlı öznitelik.<br /><br /> Bu izleme kaynağı için <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> yöntemi tarafından tanımlanan izleme kaynağına özgü bir özniteliğin değerini belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<listeners >](listeners-element-for-source.md)|İletileri toplayacak, depolayan ve yönlendiren dinleyicileri içerir.|  
+|[\<dinleyicileri >](listeners-element-for-source.md)|İletileri toplayacak, depolayan ve yönlendiren dinleyicileri içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -60,7 +60,7 @@ ms.locfileid: "71697206"
  Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `mySource` izleme kaynağını eklemek ve `sourceSwitch` adlı kaynak anahtarın düzeyini ayarlamak için `<source>` öğesinin nasıl kullanılacağını gösterir. İzleme bilgilerini konsola yazan bir konsol izleme dinleyicisi eklenir.  
+ Aşağıdaki örnek, izleme kaynağı `mySource` eklemek ve `sourceSwitch`adlı kaynak anahtarın düzeyini ayarlamak için `<source>` öğesinin nasıl kullanılacağını gösterir. İzleme bilgilerini konsola yazan bir konsol izleme dinleyicisi eklenir.  
   
 ```xml  
 <configuration>  

@@ -4,12 +4,12 @@ description: Analiz için kullanım bilgilerini toplayan, hangi verilerin toplan
 ms.topic: conceptual
 ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: 77a24416a8008d36006c293cb174b5a8c2f516b7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: edd74b6f3d3c50d5eff012629f0b1db6b62d9021
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929275"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977260"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLı tarafından telemetri toplama
 
@@ -17,32 +17,32 @@ ms.locfileid: "70929275"
 
 ## <a name="how-microsoft-uses-the-data"></a>Microsoft verileri nasıl kullanır?
 
-Ürün ekibi, araçların nasıl geliştirilmesine yardımcı olmak için ML.NET CLı telemetri verilerini kullanır. Örneğin, müşteriler belirli bir makine öğrenimi görevini sık sık kullanıyorsa, ürün ekibi, özellik geliştirmeyi önceliklendirmek için neden ve bulguları araştırır kullanır. ML.NET CLı telemetrisi, çökmeler ve kod bozuklukları gibi sorunların hatalarını ayıklamanıza de yardımcı olur. 
+Ürün ekibi, araçların nasıl geliştirilmesine yardımcı olmak için ML.NET CLı telemetri verilerini kullanır. Örneğin, müşteriler belirli bir makine öğrenimi görevini sık sık kullanıyorsa, ürün ekibi, özellik geliştirmeyi önceliklendirmek için neden ve bulguları araştırır kullanır. ML.NET CLı telemetrisi, çökmeler ve kod bozuklukları gibi sorunların hatalarını ayıklamanıza de yardımcı olur.
 
 Ürün ekibi bu öngörüleri öğrenirken, herkesin bu verileri göndermek istediğini da biliyoruz. [Telemetriyi devre dışı bırakmayı öğrenin.](#opt-out-of-data-collection)
 
 ## <a name="scope"></a>Kapsam
 
-`mlnet` Komut ml.net CLI 'yi başlatır, ancak komut telemetri toplamaz.
+`mlnet` komutu ML.NET CLı 'yi başlatır ancak komutun kendisi telemetri toplamaz.
 
-`mlnet` Komutu başka bir komut ekli olmadan çalıştırdığınızda telemetri *etkin değildir* . Örneğin:
+`mlnet` komutunu başka bir komut ekli olmadan çalıştırdığınızda telemetri *etkin değildir* . Örneğin:
 
 - `mlnet`
 - `mlnet --help`
 
-Telemetri`mlnet auto-train`, gıbı bir [ml.net CLI komutu](../reference/ml-net-cli-reference.md)çalıştırdığınızda *etkinleştirilir* .
+`mlnet auto-train`gibi bir [ml.net CLI komutu](../reference/ml-net-cli-reference.md)çalıştırdığınızda telemetri *etkinleştirilir* .
 
 ## <a name="opt-out-of-data-collection"></a>Veri toplamayı geri çevirme
 
 ML.NET CLı telemetri özelliği varsayılan olarak etkindir.
 
-`MLDOTNET_CLI_TELEMETRY_OPTOUT` Ortam değişkenini `1` veya`true`olarak ayarlayarak telemetri özelliğini geri çevirin. Bu ortam değişkeni, ML.NET CLı aracına Global olarak uygulanır.
+`MLDOTNET_CLI_TELEMETRY_OPTOUT` ortam değişkenini `1` veya `true`olarak ayarlayarak telemetri özelliğini geri çevirin. Bu ortam değişkeni, ML.NET CLı aracına Global olarak uygulanır.
 
 ## <a name="data-points-collected"></a>Toplanan veri noktaları
 
 Bu özellik aşağıdaki verileri toplar:
 
-- Çağrılan komut`auto-train`
+- `auto-train` gibi çağrılan komut
 - Kullanılan komut satırı parametre adları (yani, "veri kümesi-adı, etiket-sütun-adı, ml-görevi, çıkış-yolu, en fazla araştırma zamanı, ayrıntı")
 - Karma hale getirilmiş MAC adresi: bir makine için bir şifreleme (SHA256) anonim ve benzersiz KIMLIĞI
 - Bir çağrının zaman damgası
@@ -51,12 +51,13 @@ Bu özellik aşağıdaki verileri toplar:
 - Karma veri kümesi dosya adı
 - Veri kümesi dosya boyutu demeti
 - İşletim sistemi ve sürümü
-- --Görev parametresi değeri: , Ve gibi kategorik değerler `regression` `binary-classification``multiclass-classification`
+- --Task parametresinin değeri: `regression`, `binary-classification`ve `multiclass-classification` gibi kategorik değerler
 - ML.NET CLı sürümü (yani, 0.3.27703.4)
 
 Veriler, [azure Application Insights](https://azure.microsoft.com/services/application-insights/) teknolojisi kullanılarak Microsoft sunucularına güvenli bir şekilde gönderilir, kısıtlı erişim altında tutulur ve güvenli [Azure depolama](https://azure.microsoft.com/services/storage/) sistemlerinden katı güvenlik denetimleri altında kullanılır.
 
 ### <a name="data-points-not-collected"></a>Veri noktaları toplanmadı
+
 Telemetri *özelliği toplanmaz* :
 
 - Kullanıcı adları gibi kişisel veriler
@@ -65,13 +66,13 @@ Telemetri *özelliği toplanmaz* :
 
 ML.NET CLı telemetrinin hassas verileri toplamasını veya verilerin güvenli veya uygun şekilde işlenmekte olduğunu kuşkulanıyorsanız, araştırma için [ml.net](https://github.com/dotnet/machinelearning) deposunda bir sorun verin.
 
-## <a name="license"></a>Lisans
+## <a name="license"></a>lisan
 
-ML.net CLI 'nin Microsoft dağıtımı, [Microsoft yazılımı lisans koşulları ile lisanslanır: Microsoft .NET kitaplığı](https://aka.ms/dotnet-core-eula). Veri toplama ve işleme hakkında daha fazla bilgi için "veri" başlıklı bölüme bakın.
+ML.NET CLı 'nin Microsoft dağıtımı, [Microsoft yazılım lisans koşulları: Microsoft .NET kitaplığı](https://aka.ms/dotnet-core-eula)ile lisanslanır. Veri toplama ve işleme hakkında daha fazla bilgi için "veri" başlıklı bölüme bakın.
 
 ## <a name="disclosure"></a>Savunmasız
 
-Gibi bir [ml.net CLI komutunu](../reference/ml-net-cli-reference.md) `mlnet auto-train`ilk kez çalıştırdığınızda, ml.net CLI aracı Telemetriyi nasıl kabul eteceklerini belirten açıklama metnini görüntüler. Metin, çalıştırdığınız CLı sürümüne bağlı olarak biraz farklılık gösterebilir.
+`mlnet auto-train`gibi bir [ml.net CLI komutunu](../reference/ml-net-cli-reference.md) ilk kez çalıştırdığınızda, ml.net CLI aracı Telemetriyi nasıl kabul eteceklerini belirten açıklama metnini görüntüler. Metin, çalıştırdığınız CLı sürümüne bağlı olarak biraz farklılık gösterebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
