@@ -115,12 +115,22 @@
           tocHref: /dotnet/core/
           topicHref: /dotnet/core/index
           items:
-            - name: Araçlar
-              tocHref: /dotnet/core/tools/
-              topicHref: /dotnet/core/tools/index
             - name: Uyumluluk
               tocHref: /dotnet/core/compatibility/
               topicHref: /dotnet/core/compatibility/index
+            - name: Çalışma zamanı yapılandırması
+              tocHref: /dotnet/core/run-time-config/
+              topicHref: /dotnet/core/run-time-config/index
+            - name: Araçlar
+              tocHref: /dotnet/core/tools/
+              topicHref: /dotnet/core/tools/index
+            - name: Yükleme kılavuzu
+              tocHref: /dotnet/core/install/
+              topicHref: /dotnet/core/install/index
+              items:
+                - name: Linux paket yöneticileri
+                  tocHref: /dotnet/core/install/
+                  topicHref: /dotnet/core/install/index
         - name: .NET Framework
           tocHref: /dotnet/framework/
           topicHref: /dotnet/framework/index

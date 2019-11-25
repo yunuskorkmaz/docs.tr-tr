@@ -8,18 +8,20 @@
       href: breaking-changes.md
     - name: Sürüme göre
       items:
-        - name: .NET Framework - .NET Core
-          href: framework-core.md
-        - name: 2.2’den 3.0’a
-          href: 2.2-3.0.md
-        - name: 3.0 Preview 6 - 3.0 Preview 7
-          href: 3.0.6-3.0.7.md
-        - name: 3.0 Preview 7 - 3.0 Preview 8
-          href: 3.0.7-3.0.8.md
+        - name: 3.0’dan 3.1’e
+          href: 3.0-3.1.md
+        - name: 3.0 Preview 9 - 3.0
+          href: 3.0.9-3.0rc1.md
         - name: 3.0 Preview 8 - 3.0 Preview 9
           href: 3.0.8-3.0.9.md
-        - name: 3.0 Preview 9 - 3.0 RC1
-          href: 3.0.9-3.0rc1.md
+        - name: 3.0 Preview 7 - 3.0 Preview 8
+          href: 3.0.7-3.0.8.md
+        - name: 3.0 Preview 6 - 3.0 Preview 7
+          href: 3.0.6-3.0.7.md
+        - name: 2.2’den 3.0’a
+          href: 2.2-3.0.md
+        - name: .NET Framework - .NET Core
+          href: framework-core.md
     - name: Kategoriye göre
       items:
         - name: ASP.NET Core

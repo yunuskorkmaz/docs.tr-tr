@@ -3,100 +3,116 @@
   items:
     - name: Microsoft.SqlServer.Server
       items:
-        - name: SmiOrderProperty Sınıfı
+        - name: SmiOrderProperty sınıfı
           items:
             - name: SmiOrderProperty.Item
               href: microsoft.sqlserver.server.smiorderproperty.item.md
     - name: Sistem
       items:
-        - name: Exception Sınıfı
+        - name: Özel durum sınıfı
           items:
-            - name: Exception.PrepForRemoting Metodu
+            - name: Exception.PrepForRemoting yöntemi
               href: system.exception.prepforremoting.md
     - name: System.Data.SqlTypes
       items:
-        - name: SqlChars Sınıfı
+        - name: SqlChars sınıfı
           items:
-            - name: SqlChars.Stream Özelliği
+            - name: SqlChars.Stream özelliği
               href: system.data.sqltypes.sqlchars.stream.md
-        - name: SqlStreamChars Sınıfı
+        - name: SqlStreamChars sınıfı
           items:
-            - name: SqlStreamChars Oluşturucusu
+            - name: SqlStreamChars oluşturucusu
               href: system.data.sqltypes.sqlstreamchars.-ctor.md
-            - name: CanSeek Özelliği
+            - name: CanSeek özelliği
               href: system.data.sqltypes.sqlstreamchars.canseek.md
-            - name: IsNull Özelliği
+            - name: IsNull özelliği
               href: system.data.sqltypes.sqlstreamchars.isnull.md
-            - name: Length Özelliği
+            - name: Length özelliği
               href: system.data.sqltypes.sqlstreamchars.length.md
-            - name: Close Yöntemi
+            - name: Close yöntemi
               href: system.data.sqltypes.sqlstreamchars.close.md
-            - name: Dispose Yöntemi
+            - name: Dispose yöntemi
               href: system.data.sqltypes.sqlstreamchars.dispose.md
-            - name: Flush Yöntemi
+            - name: Flush yöntemi
               href: system.data.sqltypes.sqlstreamchars.flush.md
-            - name: Read Yöntemi
+            - name: Read yöntemi
               href: system.data.sqltypes.sqlstreamchars.read.md
-            - name: Seek Yöntemi
+            - name: Seek yöntemi
               href: system.data.sqltypes.sqlstreamchars.seek.md
-            - name: SetLength Yöntemi
+            - name: SetLength yöntemi
               href: system.data.sqltypes.sqlstreamchars.setlength.md
-            - name: Write Yöntemi
+            - name: Write yöntemi
               href: system.data.sqltypes.sqlstreamchars.write.md
+    - name: System.IO
+      items:
+        - name: MemoryStream sınıfı
+          items:
+            - name: InternalGetOriginAndLength yöntemi
+              href: system.io.memorystream.internalgetoriginandlength.md
     - name: System.Net
       items:
-        - name: Connection Sınıfı
+        - name: Connection sınıfı
           href: connection.md
           items:
-            - name: m_WriteList Alanı
+            - name: m_WriteList alanı
               href: m_writelist.md
-        - name: ConnectionGroup Sınıfı
+        - name: ConnectionGroup sınıfı
           href: connectiongroup.md
           items:
-            - name: m_ConnectionList Alanı
+            - name: m_ConnectionList alanı
               href: m_connectionlist.md
-        - name: ConnectStream Sınıfı
+        - name: ConnectStream sınıfı
           items:
-            - name: Bağlantı Özelliği
+            - name: Bağlantı özelliği
               href: system.net.connectstream.connection.md
-        - name: CoreResponseData Sınıfı
+        - name: CoreResponseData sınıfı
           href: coreresponsedata.md
           items:
-            - name: m_ResponseHeaders Alanı
+            - name: m_ResponseHeaders alanı
               href: coreresponsedata_m_responseheaders.md
-            - name: m_StatusCode Alanı
+            - name: m_StatusCode alanı
               href: coreresponsedata_m_statuscode.md
-        - name: HttpWebRequest Sınıfı
+        - name: HttpWebRequest sınıfı
           items:
-            - name: _AutoRedirects Alanı
+            - name: _AutoRedirects alanı
               href: _autoredirects.md
-            - name: _CoreResponse Alanı
+            - name: _CoreResponse alanı
               href: httpwebrequest__coreresponse.md
-            - name: _HttpResponse Alanı
+            - name: _HttpResponse alanı
               href: _httpresponse.md
-        - name: PooledStream Sınıfı
+        - name: PooledStream sınıfı
           items:
-            - name: NetworkStream Özelliği
+            - name: NetworkStream özelliği
               href: system.net.pooledstream.networkstream.md
-        - name: ServicePoint Sınıfı
+        - name: RtcState sınıfı
+          href: system.net.rtcstate.md
+        - name: ServicePoint sınıfı
           items:
-            - name: m_ConnectionGroupList Alanı
+            - name: m_ConnectionGroupList alanı
               href: m_connectiongrouplist.md
-            - name: s_ServicePointTable Alanı
+            - name: s_ServicePointTable alanı
               href: s_servicepointtable.md
-        - name: TlsStream Sınıfı
+        - name: TlsStream sınıfı
           items:
-            - name: m_Worker Alanı
+            - name: m_Worker alanı
               href: system.net.tlsstream.m_worker.md
     - name: System.Net.Security
       items:
-        - name: SslState Sınıfı
+        - name: SslState sınıfı
           items:
-            - name: SslProtocol Özelliği
+            - name: SslProtocol özelliği
               href: system.net.security.sslstate.sslprotocol.md
+    - name: System.ServiceModel.Channels
+      items:
+        - name: Message Sınıfı
+          items:
+            - name: BodyToString metodu
+              href: system.servicemodel.channels.message.bodytostring.md
+            - name: WriteStartHeaders metodu
+              href: system.servicemodel.channels.message.writestartheaders.md
     - name: System.Windows.Diagnostics
       items:
-        - name: VisualDiagnostics Sınıfı
+        - name: VisualDiagnostics sınıfı
           items:
             - name: s_isDebuggerCheckDisabledForTestPurposes alanı
               href: s-isdebuggercheckdisabledfortestpurposes-field.md
@@ -110,11 +126,11 @@
       items:
         - name: XpsDocumentWriter
           items:
-            - name: raise__WritingCancelled Metodu
+            - name: raise__WritingCancelled metodu
               href: xpsdocumentwriter-raise-writingcancelled-method-system-windows-xps.md
-            - name: raise__WritingCompleted Metodu
+            - name: raise__WritingCompleted metodu
               href: xpsdocumentwriter-raise-writingcompleted-method-system-windows-xps.md
-            - name: raise__WritingPrintTicketRequired Metodu
+            - name: raise__WritingPrintTicketRequired metodu
               href: xpsdocumentwriter-raise-writingprintticketrequired-method-system-windows-xps.md
             - name: raise__WritingProgressChanged
               href: xpsdocumentwriter-raise-writingprogresschanged-method-system-windows-xps.md
@@ -126,13 +142,13 @@
               href: xpsdocumentwriter-writingprogresschanged-event-system-windows-xps.md
     - name: System.Xml
       items:
-        - name: XmlReader Sınıfı
+        - name: XmlReader sınıfı
           items:
-            - name: XmlReader.CreateSqlReader Metodu
+            - name: XmlReader.CreateSqlReader metodu
               href: system.xml.xmlreader.createsqlreader.md
     - name: adodb Ad Alanı
       items:
-        - name: Bağlantı Arabirimi
+        - name: Bağlantı arabirimi
           href: adodb.connection.md
         - name: EventReason Sabit Listesi
           href: adodb.eventreasonenum.md
@@ -140,21 +156,21 @@
           href: adodb.eventstatusenum.md
     - name: stdole Ad Alanı
       items:
-        - name: DISPPARAMS Yapısı
+        - name: DISPPARAMS yapısı
           href: stdole.dispparams.md
-        - name: EXCEPINFO Yapısı
+        - name: EXCEPINFO yapısı
           href: stdole.excepinfo.md
-        - name: IFont.Name Özelliği
+        - name: IFont.Name özelliği
           href: stdole.ifont.name.md
-        - name: IFontDisp Arabirimi
+        - name: IFontDisp arabirimi
           href: stdole.ifontdisp.md
-        - name: IPicture.Handle Özelliği
+        - name: IPicture.Handle özelliği
           href: stdole.ipicture.handle.md
-        - name: IPictureDisp Arabirimi
+        - name: IPictureDisp arabirimi
           href: stdole.ipicturedisp.md
-        - name: IPictureDisp.Handle Özelliği
+        - name: IPictureDisp.Handle özelliği
           href: stdole.ipicturedisp.handle.md
-        - name: StdFont Arabirimi
+        - name: StdFont arabirimi
           href: stdole.stdfont.md
-        - name: StdPicture Arabirimi
+        - name: StdPicture arabirimi
           href: stdole.stdpicture.md
