@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Visual Basic'te bağlantı durumunu denetleyin"
+title: 'Nasıl Yapılır: Bağlantı Durumunu Denetleme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web connections [Visual Basic]
@@ -7,27 +7,28 @@ helpviewer_keywords:
 - connections [Visual Basic], checking status
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
-ms.openlocfilehash: 1a03b181c2e363c3380c4f9858b629713641f2c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 89ef431759dac25bd213fd954db0712ad95434b0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620683"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345888"
 ---
-# <a name="how-to-check-connection-status-in-visual-basic"></a><span data-ttu-id="59c1b-102">Nasıl yapılır: Visual Basic'te bağlantı durumunu denetleyin</span><span class="sxs-lookup"><span data-stu-id="59c1b-102">How to: Check Connection Status in Visual Basic</span></span>
-<span data-ttu-id="59c1b-103"><xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> Özelliği, bilgisayar bir çalışma ağ veya Internet bağlantısı olup olmadığını belirlemek için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="59c1b-103">The <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> property can be used to determine whether the computer has a working network or Internet connection.</span></span>  
+# <a name="how-to-check-connection-status-in-visual-basic"></a><span data-ttu-id="10706-102">Nasıl Yapılır: Visual Basic'te Bağlantı Durumunu Denetleme</span><span class="sxs-lookup"><span data-stu-id="10706-102">How to: Check Connection Status in Visual Basic</span></span>
+
+<span data-ttu-id="10706-103">The <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> property can be used to determine whether the computer has a working network or Internet connection.</span><span class="sxs-lookup"><span data-stu-id="10706-103">The <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> property can be used to determine whether the computer has a working network or Internet connection.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-check-whether-a-computer-has-a-working-connection"></a><span data-ttu-id="59c1b-104">Bir bilgisayarda çalışan bir bağlantı olup olmadığını denetlemek için</span><span class="sxs-lookup"><span data-stu-id="59c1b-104">To check whether a computer has a working connection</span></span>  
+### <a name="to-check-whether-a-computer-has-a-working-connection"></a><span data-ttu-id="10706-104">To check whether a computer has a working connection</span><span class="sxs-lookup"><span data-stu-id="10706-104">To check whether a computer has a working connection</span></span>  
   
-- <span data-ttu-id="59c1b-105">Belirlemek olmadığını `IsAvailable` özelliği `True` veya `False`.</span><span class="sxs-lookup"><span data-stu-id="59c1b-105">Determine whether the `IsAvailable` property is `True` or `False`.</span></span> <span data-ttu-id="59c1b-106">Aşağıdaki kod, özelliğin durumunu denetler ve rapor:</span><span class="sxs-lookup"><span data-stu-id="59c1b-106">The following code checks the property's status and reports it:</span></span>  
+- <span data-ttu-id="10706-105">Determine whether the `IsAvailable` property is `True` or `False`.</span><span class="sxs-lookup"><span data-stu-id="10706-105">Determine whether the `IsAvailable` property is `True` or `False`.</span></span> <span data-ttu-id="10706-106">The following code checks the property's status and reports it:</span><span class="sxs-lookup"><span data-stu-id="10706-106">The following code checks the property's status and reports it:</span></span>  
   
      [!code-vb[VbResourceTasks#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#3)]  
   
-     <span data-ttu-id="59c1b-107">Bu kod örneği, bir IntelliSense kod parçacığı da kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="59c1b-107">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="59c1b-108">Kod parçacığı Seçici'de bulunur **bağlantı ve ağ**.</span><span class="sxs-lookup"><span data-stu-id="59c1b-108">In the code snippet picker, it is located in **Connectivity and Networking**.</span></span> <span data-ttu-id="59c1b-109">Daha fazla bilgi için [kod parçacıkları](/visualstudio/ide/code-snippets).</span><span class="sxs-lookup"><span data-stu-id="59c1b-109">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
+     <span data-ttu-id="10706-107">This code example is also available as an IntelliSense code snippet.</span><span class="sxs-lookup"><span data-stu-id="10706-107">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="10706-108">In the code snippet picker, it is located in **Connectivity and Networking**.</span><span class="sxs-lookup"><span data-stu-id="10706-108">In the code snippet picker, it is located in **Connectivity and Networking**.</span></span> <span data-ttu-id="10706-109">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span><span class="sxs-lookup"><span data-stu-id="10706-109">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59c1b-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="59c1b-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10706-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="10706-110">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>

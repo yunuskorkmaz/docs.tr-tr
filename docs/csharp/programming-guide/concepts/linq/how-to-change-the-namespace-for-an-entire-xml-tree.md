@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Tüm XML ağacının (C#) ad alanını değiştirme'
+title: Tüm XML ağacının (C#) ad alanını değiştirme
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
-ms.openlocfilehash: 80ab1f3b1a6df1debc3d94e89d3e0f3a8d78de7f
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 6462cbb5001682b6a464c1446f8ae6de3c5669d1
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709973"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141516"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a><span data-ttu-id="dad96-102">Nasıl yapılır: Tüm XML ağacının (C#) ad alanını değiştirme</span><span class="sxs-lookup"><span data-stu-id="dad96-102">How to: Change the Namespace for an Entire XML Tree (C#)</span></span>
-<span data-ttu-id="dad96-103">Bazen bir öğe veya öznitelik için ad alanını programlı olarak değiştirmeniz gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="dad96-103">You sometimes have to programmatically change the namespace for an element or an attribute.</span></span> <span data-ttu-id="dad96-104">LINQ to XML bu kadar kolay hale gelir.</span><span class="sxs-lookup"><span data-stu-id="dad96-104">LINQ to XML makes this easy.</span></span> <span data-ttu-id="dad96-105"><xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> Özelliği ayarlanabilir.</span><span class="sxs-lookup"><span data-stu-id="dad96-105">The <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> property can be set.</span></span> <span data-ttu-id="dad96-106">Özelliği ayarlanamaz, ancak öznitelikleri bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>öğesine kolayca kopyalayabilir, var olan öznitelikleri kaldırabilir ve ardından yeni istenen ad alanındaki yeni öznitelikleri ekleyebilirsiniz. <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="dad96-106">The <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> property cannot be set, but you can easily copy the attributes into a <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remove the existing attributes, and then add new attributes that are in the new desired namespace.</span></span>  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a><span data-ttu-id="a3f6b-102">Tüm XML ağacının (C#) ad alanını değiştirme</span><span class="sxs-lookup"><span data-stu-id="a3f6b-102">How to change the namespace for an entire XML tree (C#)</span></span>
+<span data-ttu-id="a3f6b-103">Bazen bir öğe veya öznitelik için ad alanını programlı olarak değiştirmeniz gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="a3f6b-103">You sometimes have to programmatically change the namespace for an element or an attribute.</span></span> <span data-ttu-id="a3f6b-104">LINQ to XML bu kadar kolay hale gelir.</span><span class="sxs-lookup"><span data-stu-id="a3f6b-104">LINQ to XML makes this easy.</span></span> <span data-ttu-id="a3f6b-105"><xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> özelliği ayarlanabilir.</span><span class="sxs-lookup"><span data-stu-id="a3f6b-105">The <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> property can be set.</span></span> <span data-ttu-id="a3f6b-106"><xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> özelliği ayarlanamaz, ancak öznitelikleri kolayca bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>kopyalayabilir, var olan öznitelikleri kaldırabilir ve ardından yeni istenen ad alanındaki yeni öznitelikler ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a3f6b-106">The <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> property cannot be set, but you can easily copy the attributes into a <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remove the existing attributes, and then add new attributes that are in the new desired namespace.</span></span>  
   
- <span data-ttu-id="dad96-107">Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="dad96-107">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="a3f6b-107">Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="a3f6b-107">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dad96-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="dad96-108">Example</span></span>  
- <span data-ttu-id="dad96-109">Aşağıdaki kod, ad alanı olmadan iki XML ağacı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="dad96-109">The following code creates two XML trees in no namespace.</span></span> <span data-ttu-id="dad96-110">Daha sonra ağaçların her birinin ad alanını değiştirir ve bunları tek bir ağaçta birleştirir.</span><span class="sxs-lookup"><span data-stu-id="dad96-110">It then changes the namespace of each of the trees, and combines them into a single tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="a3f6b-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="a3f6b-108">Example</span></span>  
+ <span data-ttu-id="a3f6b-109">Aşağıdaki kod, ad alanı olmadan iki XML ağacı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="a3f6b-109">The following code creates two XML trees in no namespace.</span></span> <span data-ttu-id="a3f6b-110">Daha sonra ağaçların her birinin ad alanını değiştirir ve bunları tek bir ağaçta birleştirir.</span><span class="sxs-lookup"><span data-stu-id="a3f6b-110">It then changes the namespace of each of the trees, and combines them into a single tree.</span></span>  
   
 ```csharp  
 XElement tree1 = new XElement("Data",  
@@ -64,7 +64,7 @@ XElement root = new XElement("Root",
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="dad96-111">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="dad96-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="a3f6b-111">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="a3f6b-111">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  

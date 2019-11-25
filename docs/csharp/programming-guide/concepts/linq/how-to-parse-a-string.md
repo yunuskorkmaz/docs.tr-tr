@@ -2,20 +2,20 @@
 title: 'Nasıl yapılır: bir dizeyi ayrıştırma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: 16310e37afec950c372c7b47637986bb0eb399b8
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 086a4baecee9ee927b08d6da53d16324ef32e8a8
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956615"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140983"
 ---
-# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="513de-102">Nasıl yapılır: bir dizeyi ayrıştırma (C#)</span><span class="sxs-lookup"><span data-stu-id="513de-102">How to: Parse a String (C#)</span></span>
+# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="aaacb-102">Nasıl yapılır: bir dizeyi ayrıştırma (C#)</span><span class="sxs-lookup"><span data-stu-id="aaacb-102">How to: Parse a String (C#)</span></span>
 
-<span data-ttu-id="513de-103">Bu konuda, içinde C#bir XML ağacı oluşturmak için bir dizeyi ayrıştırma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="513de-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>
+<span data-ttu-id="aaacb-103">Bu konuda, içinde C#bir XML ağacı oluşturmak için bir dizeyi ayrıştırma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="aaacb-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>
 
-## <a name="example"></a><span data-ttu-id="513de-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="513de-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="aaacb-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="aaacb-104">Example</span></span>
 
-<span data-ttu-id="513de-105">Aşağıdaki C# kod, bir XML dizesinin nasıl ayrıştıralınacağını gösterir:</span><span class="sxs-lookup"><span data-stu-id="513de-105">The following C# code shows how to parse an XML string:</span></span>
+<span data-ttu-id="aaacb-105">Aşağıdaki C# kod, bir XML dizesinin nasıl ayrıştıralınacağını gösterir:</span><span class="sxs-lookup"><span data-stu-id="aaacb-105">The following C# code shows how to parse an XML string:</span></span>
 
 ```csharp
 XElement contacts = XElement.Parse(
@@ -47,13 +47,13 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);
 ```
 
-<span data-ttu-id="513de-106">Kök `Contacts` düğümünün iki `Contact` düğümü vardır.</span><span class="sxs-lookup"><span data-stu-id="513de-106">The root `Contacts` node has two `Contact` nodes.</span></span> <span data-ttu-id="513de-107">Ayrıştırılmış XML 'inizdeki bazı belirli verilere erişmek için, bu örnekte kök `Contacts` düğümünün alt öğelerini döndüren [XElement. Elements ()](xref:System.Xml.Linq.XContainer.Elements) yöntemini kullanın.</span><span class="sxs-lookup"><span data-stu-id="513de-107">To access some specific data in your parsed XML, use the [XElement.Elements()](xref:System.Xml.Linq.XContainer.Elements) method, which in this case returns the child elements of the root `Contacts` node.</span></span> <span data-ttu-id="513de-108">Aşağıdaki örnek, ilk `Contact` düğümünü konsola yazdırır:</span><span class="sxs-lookup"><span data-stu-id="513de-108">The following example prints the first `Contact` node to the console:</span></span>
+<span data-ttu-id="aaacb-106">Kök `Contacts` düğümünün iki `Contact` düğümü vardır.</span><span class="sxs-lookup"><span data-stu-id="aaacb-106">The root `Contacts` node has two `Contact` nodes.</span></span> <span data-ttu-id="aaacb-107">Ayrıştırılmış XML 'deki belirli verilere erişmek için, bu örnekte kök `Contacts` düğümünün alt öğelerini döndüren [XElement. Elements ()](xref:System.Xml.Linq.XContainer.Elements) yöntemini kullanın.</span><span class="sxs-lookup"><span data-stu-id="aaacb-107">To access some specific data in your parsed XML, use the [XElement.Elements()](xref:System.Xml.Linq.XContainer.Elements) method, which in this case returns the child elements of the root `Contacts` node.</span></span> <span data-ttu-id="aaacb-108">Aşağıdaki örnek, ilk `Contact` düğümünü konsola yazdırır:</span><span class="sxs-lookup"><span data-stu-id="aaacb-108">The following example prints the first `Contact` node to the console:</span></span>
 
 ```csharp
 List<XElement> contactNodes = contacts.Elements("Contact").ToList();
 Console.WriteLine(contactNodes[0]);
 ```
 
-## <a name="see-also"></a><span data-ttu-id="513de-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="513de-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aaacb-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aaacb-109">See also</span></span>
 
-- [<span data-ttu-id="513de-110">Nasıl yapılır: belirli bir özniteliğe (C#) sahip bir öğe bulma</span><span class="sxs-lookup"><span data-stu-id="513de-110">How to: Find an Element with a Specific Attribute (C#)</span></span>](how-to-find-an-element-with-a-specific-attribute.md)
+- [<span data-ttu-id="aaacb-110">Belirli bir özniteliğe (C#) sahip bir öğe bulma</span><span class="sxs-lookup"><span data-stu-id="aaacb-110">How to find an element with a specific attribute (C#)</span></span>](how-to-find-an-element-with-a-specific-attribute.md)

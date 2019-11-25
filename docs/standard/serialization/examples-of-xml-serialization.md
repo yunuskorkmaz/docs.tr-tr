@@ -13,20 +13,20 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: c206faf81868d6e871327a73ef0680936b132918
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 17ad1b4b5eae38a4f1dc90e154841b1315dea1b2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459256"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349772"
 ---
-# <a name="examples-of-xml-serialization"></a><span data-ttu-id="d3a0e-102">XML Serileştirme Örnekleri</span><span class="sxs-lookup"><span data-stu-id="d3a0e-102">Examples of XML Serialization</span></span>
+# <a name="examples-of-xml-serialization"></a><span data-ttu-id="cc447-102">XML Serileştirme Örnekleri</span><span class="sxs-lookup"><span data-stu-id="cc447-102">Examples of XML Serialization</span></span>
 
-<span data-ttu-id="d3a0e-103">XML serileştirme birden fazla formdan, karmaşık için basit sürebilir.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-103">XML serialization can take more than one form, from simple to complex.</span></span> <span data-ttu-id="d3a0e-104">Örneğin, [XML serileştirmesini tanıtma](../../../docs/standard/serialization/introducing-xml-serialization.md)bölümünde gösterildiği gibi, yalnızca genel alanlardan ve özelliklerden oluşan bir sınıfı seri hale getirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-104">For example, you can serialize a class that simply consists of public fields and properties, as shown in [Introducing XML Serialization](../../../docs/standard/serialization/introducing-xml-serialization.md).</span></span> <span data-ttu-id="d3a0e-105">Aşağıdaki kod örnekleri, belirli bir XML şeması (XSD) belgesine uyan bir XML akışı oluşturmak için XML serileştirmesini kullanma dahil çeşitli gelişmiş senaryolara yönelik olarak ele verilmektedir.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-105">The following code examples address various advanced scenarios, including how to use XML serialization to generate an XML stream that conforms to a specific XML Schema (XSD) document.</span></span>
+<span data-ttu-id="cc447-103">XML serileştirme birden fazla formdan, karmaşık için basit sürebilir.</span><span class="sxs-lookup"><span data-stu-id="cc447-103">XML serialization can take more than one form, from simple to complex.</span></span> <span data-ttu-id="cc447-104">For example, you can serialize a class that simply consists of public fields and properties, as shown in [Introducing XML Serialization](../../../docs/standard/serialization/introducing-xml-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="cc447-104">For example, you can serialize a class that simply consists of public fields and properties, as shown in [Introducing XML Serialization](../../../docs/standard/serialization/introducing-xml-serialization.md).</span></span> <span data-ttu-id="cc447-105">The following code examples address various advanced scenarios, including how to use XML serialization to generate an XML stream that conforms to a specific XML Schema (XSD) document.</span><span class="sxs-lookup"><span data-stu-id="cc447-105">The following code examples address various advanced scenarios, including how to use XML serialization to generate an XML stream that conforms to a specific XML Schema (XSD) document.</span></span>
 
-## <a name="serializing-a-dataset"></a><span data-ttu-id="d3a0e-106">Bir veri kümesi seri hale getirilmedi</span><span class="sxs-lookup"><span data-stu-id="d3a0e-106">Serializing a DataSet</span></span>
+## <a name="serializing-a-dataset"></a><span data-ttu-id="cc447-106">Bir veri kümesi seri hale getirilmedi</span><span class="sxs-lookup"><span data-stu-id="cc447-106">Serializing a DataSet</span></span>
 
-<span data-ttu-id="d3a0e-107">Sınıfının bir örneği bir ortak, örneğini serileştirmek yanı sıra bir <xref:System.Data.DataSet> Ayrıca, aşağıdaki kod örneğinde gösterildiği gibi seri hale getirilebilir.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-107">Besides serializing an instance of a public class, an instance of a <xref:System.Data.DataSet> can also be serialized, as shown in the following code example.</span></span>
+<span data-ttu-id="cc447-107">Sınıfının bir örneği bir ortak, örneğini serileştirmek yanı sıra bir <xref:System.Data.DataSet> Ayrıca, aşağıdaki kod örneğinde gösterildiği gibi seri hale getirilebilir.</span><span class="sxs-lookup"><span data-stu-id="cc447-107">Besides serializing an instance of a public class, an instance of a <xref:System.Data.DataSet> can also be serialized, as shown in the following code example.</span></span>
 
 ```vb
 Private Sub SerializeDataSet(filename As String)
@@ -72,9 +72,9 @@ private void SerializeDataSet(string filename){
 }
 ```
 
-## <a name="serializing-an-xmlelement-and-xmlnode"></a><span data-ttu-id="d3a0e-108">Bir XmlElement ve XmlNode seri hale getirilmedi</span><span class="sxs-lookup"><span data-stu-id="d3a0e-108">Serializing an XmlElement and XmlNode</span></span>
+## <a name="serializing-an-xmlelement-and-xmlnode"></a><span data-ttu-id="cc447-108">Bir XmlElement ve XmlNode seri hale getirilmedi</span><span class="sxs-lookup"><span data-stu-id="cc447-108">Serializing an XmlElement and XmlNode</span></span>
 
-<span data-ttu-id="d3a0e-109">Ayrıca, aşağıdaki kod örneğinde gösterildiği gibi bir <xref:System.Xml.XmlElement> veya <xref:System.Xml.XmlNode> sınıfının örneklerini seri hale getirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-109">You can also serialize instances of an <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.</span></span>
+<span data-ttu-id="cc447-109">You can also serialize instances of an <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.</span><span class="sxs-lookup"><span data-stu-id="cc447-109">You can also serialize instances of an <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.</span></span>
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -121,9 +121,9 @@ private void SerializeNode(string filename){
 }
 ```
 
-## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a><span data-ttu-id="d3a0e-110">Karmaşık bir nesnenin döndüren bir alan içeren bir sınıf seri hale getirilmedi</span><span class="sxs-lookup"><span data-stu-id="d3a0e-110">Serializing a Class that Contains a Field Returning a Complex Object</span></span>
+## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a><span data-ttu-id="cc447-110">Karmaşık bir nesnenin döndüren bir alan içeren bir sınıf seri hale getirilmedi</span><span class="sxs-lookup"><span data-stu-id="cc447-110">Serializing a Class that Contains a Field Returning a Complex Object</span></span>
 
-<span data-ttu-id="d3a0e-111">Bir özellik veya alan (örneğin, bir dizi veya bir sınıf örneği), karmaşık bir nesne döndürür, <xref:System.Xml.Serialization.XmlSerializer> bir öğe için iç içe geçmiş ana XML belgesi içindeki dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-111">If a property or field returns a complex object (such as an array or a class instance), the <xref:System.Xml.Serialization.XmlSerializer> converts it to an element nested within the main XML document.</span></span> <span data-ttu-id="d3a0e-112">Örneğin, aşağıdaki kod örneğinde ilk sınıf saniye sınıfının bir örneğini döndürür.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-112">For example, the first class in the following code example returns an instance of the second class.</span></span>
+<span data-ttu-id="cc447-111">Bir özellik veya alan (örneğin, bir dizi veya bir sınıf örneği), karmaşık bir nesne döndürür, <xref:System.Xml.Serialization.XmlSerializer> bir öğe için iç içe geçmiş ana XML belgesi içindeki dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="cc447-111">If a property or field returns a complex object (such as an array or a class instance), the <xref:System.Xml.Serialization.XmlSerializer> converts it to an element nested within the main XML document.</span></span> <span data-ttu-id="cc447-112">Örneğin, aşağıdaki kod örneğinde ilk sınıf saniye sınıfının bir örneğini döndürür.</span><span class="sxs-lookup"><span data-stu-id="cc447-112">For example, the first class in the following code example returns an instance of the second class.</span></span>
 
 ```vb
 Public Class PurchaseOrder
@@ -146,7 +146,7 @@ public class Address
 }
 ```
 
-<span data-ttu-id="d3a0e-113">Serileştirilmiş XML çıktısı aşağıdakine benzer.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-113">The serialized XML output might resemble the following.</span></span>
+<span data-ttu-id="cc447-113">Serileştirilmiş XML çıktısı aşağıdakine benzer.</span><span class="sxs-lookup"><span data-stu-id="cc447-113">The serialized XML output might resemble the following.</span></span>
 
 ```xml
 <PurchaseOrder>
@@ -156,9 +156,9 @@ public class Address
 </PurchaseOrder>
 ```
 
-## <a name="serializing-an-array-of-objects"></a><span data-ttu-id="d3a0e-114">Bir nesne dizisi seri hale getirilmedi</span><span class="sxs-lookup"><span data-stu-id="d3a0e-114">Serializing an Array of Objects</span></span>
+## <a name="serializing-an-array-of-objects"></a><span data-ttu-id="cc447-114">Bir nesne dizisi seri hale getirilmedi</span><span class="sxs-lookup"><span data-stu-id="cc447-114">Serializing an Array of Objects</span></span>
 
-<span data-ttu-id="d3a0e-115">Aşağıdaki kod örneğinde gösterildiği gibi ayrıca nesneleri, bir dizi döndürür bir alan serileştirebiliyorsa.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-115">You can also serialize a field that returns an array of objects, as shown in the following code example.</span></span>
+<span data-ttu-id="cc447-115">Aşağıdaki kod örneğinde gösterildiği gibi ayrıca nesneleri, bir dizi döndürür bir alan serileştirebiliyorsa.</span><span class="sxs-lookup"><span data-stu-id="cc447-115">You can also serialize a field that returns an array of objects, as shown in the following code example.</span></span>
 
 ```vb
 Public Class PurchaseOrder
@@ -184,7 +184,7 @@ public class Item
 }
 ```
 
-<span data-ttu-id="d3a0e-116">İki öğe sipariş serileştirilmiş sınıf örneği, aşağıdakine benzer.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-116">The serialized class instance might resemble the following, if two items are ordered.</span></span>
+<span data-ttu-id="cc447-116">İki öğe sipariş serileştirilmiş sınıf örneği, aşağıdakine benzer.</span><span class="sxs-lookup"><span data-stu-id="cc447-116">The serialized class instance might resemble the following, if two items are ordered.</span></span>
 
 ```xml
 <PurchaseOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -201,14 +201,13 @@ public class Item
 </PurchaseOrder>
 ```
 
-## <a name="serializing-a-class-that-implements-the-icollection-interface"></a><span data-ttu-id="d3a0e-117">Bu ICollection arabirimini uygulayan bir sınıf seri hale getirilmedi</span><span class="sxs-lookup"><span data-stu-id="d3a0e-117">Serializing a Class that Implements the ICollection Interface</span></span>
+## <a name="serializing-a-class-that-implements-the-icollection-interface"></a><span data-ttu-id="cc447-117">Bu ICollection arabirimini uygulayan bir sınıf seri hale getirilmedi</span><span class="sxs-lookup"><span data-stu-id="cc447-117">Serializing a Class that Implements the ICollection Interface</span></span>
 
-<span data-ttu-id="d3a0e-118">Uygulanarak, kendi koleksiyon sınıfları oluşturabilirsiniz <xref:System.Collections.ICollection> arabirim ve kullanma <xref:System.Xml.Serialization.XmlSerializer> bu sınıfların örneklerini serileştirmek için.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-118">You can create your own collection classes by implementing the <xref:System.Collections.ICollection> interface, and use the <xref:System.Xml.Serialization.XmlSerializer> to serialize instances of these classes.</span></span> <span data-ttu-id="d3a0e-119">Arabirimini uygulayan bir sınıf unutmayın <xref:System.Collections.ICollection> arabirimi, yalnızca sınıfı tarafından bulunan koleksiyonun seri hale getirilmiş.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-119">Note that when a class implements the <xref:System.Collections.ICollection> interface, only the collection contained by the class is serialized.</span></span> <span data-ttu-id="d3a0e-120">Herhangi bir genel özelliklerini veya sınıfa eklediğiniz alanları serileştirilecek değil.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-120">Any public properties or fields added to the class will not be serialized.</span></span> <span data-ttu-id="d3a0e-121">Sınıf, seri hale getirilecek bir **Add** yöntemi ve bir **öğe** özelliğiC# (Dizin Oluşturucu) içermelidir.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-121">The class must include an **Add** method and an **Item** property (C# indexer) to be serialized.</span></span>
+<span data-ttu-id="cc447-118">Uygulanarak, kendi koleksiyon sınıfları oluşturabilirsiniz <xref:System.Collections.ICollection> arabirim ve kullanma <xref:System.Xml.Serialization.XmlSerializer> bu sınıfların örneklerini serileştirmek için.</span><span class="sxs-lookup"><span data-stu-id="cc447-118">You can create your own collection classes by implementing the <xref:System.Collections.ICollection> interface, and use the <xref:System.Xml.Serialization.XmlSerializer> to serialize instances of these classes.</span></span> <span data-ttu-id="cc447-119">Arabirimini uygulayan bir sınıf unutmayın <xref:System.Collections.ICollection> arabirimi, yalnızca sınıfı tarafından bulunan koleksiyonun seri hale getirilmiş.</span><span class="sxs-lookup"><span data-stu-id="cc447-119">Note that when a class implements the <xref:System.Collections.ICollection> interface, only the collection contained by the class is serialized.</span></span> <span data-ttu-id="cc447-120">Herhangi bir genel özelliklerini veya sınıfa eklediğiniz alanları serileştirilecek değil.</span><span class="sxs-lookup"><span data-stu-id="cc447-120">Any public properties or fields added to the class will not be serialized.</span></span> <span data-ttu-id="cc447-121">The class must include an **Add** method and an **Item** property (C# indexer) to be serialized.</span><span class="sxs-lookup"><span data-stu-id="cc447-121">The class must include an **Add** method and an **Item** property (C# indexer) to be serialized.</span></span>
 
 ```vb
-Imports System
-Imports System.IO
 Imports System.Collections
+Imports System.IO
 Imports System.Xml.Serialization
 
 Public Class Test
@@ -298,8 +297,8 @@ End Class
 
 ```csharp
 using System;
-using System.IO;
 using System.Collections;
+using System.IO;
 using System.Xml.Serialization;
 
 public class Test {
@@ -360,23 +359,22 @@ public class Employee {
 }
 ```
 
-## <a name="purchase-order-example"></a><span data-ttu-id="d3a0e-122">Satınalma siparişi örneği</span><span class="sxs-lookup"><span data-stu-id="d3a0e-122">Purchase Order Example</span></span>
+## <a name="purchase-order-example"></a><span data-ttu-id="cc447-122">Satınalma siparişi örneği</span><span class="sxs-lookup"><span data-stu-id="cc447-122">Purchase Order Example</span></span>
 
-<span data-ttu-id="d3a0e-123">Kes ve bir .cs veya .vb dosya adı uzantısı ile yeniden adlandırılamaz bir metin dosyası aşağıdaki kod örneği yapıştırın.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-123">You can cut and paste the following example code into a text file renamed with a .cs or .vb file name extension.</span></span> <span data-ttu-id="d3a0e-124">C# veya Visual Basic derleyici dosya derlemek için kullanın.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-124">Use the C# or Visual Basic compiler to compile the file.</span></span> <span data-ttu-id="d3a0e-125">Daha sonra yürütülebilir dosya adını kullanarak çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-125">Then run it using the name of the executable.</span></span>
+<span data-ttu-id="cc447-123">Kes ve bir .cs veya .vb dosya adı uzantısı ile yeniden adlandırılamaz bir metin dosyası aşağıdaki kod örneği yapıştırın.</span><span class="sxs-lookup"><span data-stu-id="cc447-123">You can cut and paste the following example code into a text file renamed with a .cs or .vb file name extension.</span></span> <span data-ttu-id="cc447-124">C# veya Visual Basic derleyici dosya derlemek için kullanın.</span><span class="sxs-lookup"><span data-stu-id="cc447-124">Use the C# or Visual Basic compiler to compile the file.</span></span> <span data-ttu-id="cc447-125">Daha sonra yürütülebilir dosya adını kullanarak çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="cc447-125">Then run it using the name of the executable.</span></span>
 
-<span data-ttu-id="d3a0e-126">Bu örnek, bir nesne örneğinin nasıl oluşturulup <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> yöntemi kullanılarak bir dosya akışına serileştirildiği göstermek için basit bir senaryo kullanır.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-126">This example uses a simple scenario to demonstrate how an instance of an object is created and serialized into a file stream using the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method.</span></span> <span data-ttu-id="d3a0e-127">XML akışı bir dosyaya kaydedilir ve aynı dosya daha sonra geri okur ve <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> yöntemi kullanılarak özgün nesnenin bir kopyasına yeniden oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-127">The XML stream is saved to a file, and the same file is then read back and reconstructed into a copy of the original object using the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method.</span></span>
+<span data-ttu-id="cc447-126">This example uses a simple scenario to demonstrate how an instance of an object is created and serialized into a file stream using the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method.</span><span class="sxs-lookup"><span data-stu-id="cc447-126">This example uses a simple scenario to demonstrate how an instance of an object is created and serialized into a file stream using the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method.</span></span> <span data-ttu-id="cc447-127">The XML stream is saved to a file, and the same file is then read back and reconstructed into a copy of the original object using the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method.</span><span class="sxs-lookup"><span data-stu-id="cc447-127">The XML stream is saved to a file, and the same file is then read back and reconstructed into a copy of the original object using the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method.</span></span>
 
-<span data-ttu-id="d3a0e-128">Bu örnekte, bir sınıf adlı `PurchaseOrder` serileştirilmiş ve ardından seri durumdan.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-128">In this example, a class named `PurchaseOrder` is serialized and then deserialized.</span></span> <span data-ttu-id="d3a0e-129">İkinci adında bir sınıf `Address` ortak alan adlı de dahil olduğundan `ShipTo` ayarlanmalıdır bir `Address`.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-129">A second class named `Address` is also included because the public field named `ShipTo` must be set to an `Address`.</span></span> <span data-ttu-id="d3a0e-130">Benzer şekilde, bir `OrderedItem` çünkü sınıfı dahil, bir dizi `OrderedItem` nesneleri ayarlanmalıdır `OrderedItems` alan.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-130">Similarly, an `OrderedItem` class is included because an array of `OrderedItem` objects must be set to the `OrderedItems` field.</span></span> <span data-ttu-id="d3a0e-131">Son olarak, adlı bir sınıf `Test` serileştirir ve sınıflar çıkarır kodu içerir.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-131">Finally, a class named `Test` contains the code that serializes and deserializes the classes.</span></span>
+<span data-ttu-id="cc447-128">Bu örnekte, bir sınıf adlı `PurchaseOrder` serileştirilmiş ve ardından seri durumdan.</span><span class="sxs-lookup"><span data-stu-id="cc447-128">In this example, a class named `PurchaseOrder` is serialized and then deserialized.</span></span> <span data-ttu-id="cc447-129">İkinci adında bir sınıf `Address` ortak alan adlı de dahil olduğundan `ShipTo` ayarlanmalıdır bir `Address`.</span><span class="sxs-lookup"><span data-stu-id="cc447-129">A second class named `Address` is also included because the public field named `ShipTo` must be set to an `Address`.</span></span> <span data-ttu-id="cc447-130">Benzer şekilde, bir `OrderedItem` çünkü sınıfı dahil, bir dizi `OrderedItem` nesneleri ayarlanmalıdır `OrderedItems` alan.</span><span class="sxs-lookup"><span data-stu-id="cc447-130">Similarly, an `OrderedItem` class is included because an array of `OrderedItem` objects must be set to the `OrderedItems` field.</span></span> <span data-ttu-id="cc447-131">Son olarak, adlı bir sınıf `Test` serileştirir ve sınıflar çıkarır kodu içerir.</span><span class="sxs-lookup"><span data-stu-id="cc447-131">Finally, a class named `Test` contains the code that serializes and deserializes the classes.</span></span>
 
-<span data-ttu-id="d3a0e-132">`CreatePO` Yöntemi oluşturur `PurchaseOrder`, `Address`, ve `OrderedItem` sınıf nesneleri ve ortak alan değerlerini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-132">The `CreatePO` method creates the `PurchaseOrder`, `Address`, and `OrderedItem` class objects, and sets the public field values.</span></span> <span data-ttu-id="d3a0e-133">Yöntemi ayrıca, `PurchaseOrder`serileştirmek ve serisini kaldırmak için kullanılan <xref:System.Xml.Serialization.XmlSerializer> sınıfının bir örneğini oluşturur.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-133">The method also constructs an instance of the <xref:System.Xml.Serialization.XmlSerializer> class that is used to serialize and deserialize the `PurchaseOrder`.</span></span> <span data-ttu-id="d3a0e-134">Kodun oluşturucuya serileştirilecek sınıfın türünü geçirdiğine unutmayın.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-134">Note that the code passes the type of the class that will be serialized to the constructor.</span></span> <span data-ttu-id="d3a0e-135">Kod ayrıca XML akışını bir XML belgesine yazmak için kullanılan bir `FileStream` oluşturur.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-135">The code also creates a `FileStream` that is used to write the XML stream to an XML document.</span></span>
+<span data-ttu-id="cc447-132">`CreatePO` Yöntemi oluşturur `PurchaseOrder`, `Address`, ve `OrderedItem` sınıf nesneleri ve ortak alan değerlerini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="cc447-132">The `CreatePO` method creates the `PurchaseOrder`, `Address`, and `OrderedItem` class objects, and sets the public field values.</span></span> <span data-ttu-id="cc447-133">The method also constructs an instance of the <xref:System.Xml.Serialization.XmlSerializer> class that is used to serialize and deserialize the `PurchaseOrder`.</span><span class="sxs-lookup"><span data-stu-id="cc447-133">The method also constructs an instance of the <xref:System.Xml.Serialization.XmlSerializer> class that is used to serialize and deserialize the `PurchaseOrder`.</span></span> <span data-ttu-id="cc447-134">Note that the code passes the type of the class that will be serialized to the constructor.</span><span class="sxs-lookup"><span data-stu-id="cc447-134">Note that the code passes the type of the class that will be serialized to the constructor.</span></span> <span data-ttu-id="cc447-135">The code also creates a `FileStream` that is used to write the XML stream to an XML document.</span><span class="sxs-lookup"><span data-stu-id="cc447-135">The code also creates a `FileStream` that is used to write the XML stream to an XML document.</span></span>
 
-<span data-ttu-id="d3a0e-136">`ReadPo` Yöntemi biraz basittir.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-136">The `ReadPo` method is a little simpler.</span></span> <span data-ttu-id="d3a0e-137">Yalnızca seri durumdan çıkarılacak nesne oluşturur ve değerlerine okur.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-137">It just creates objects to deserialize and reads out their values.</span></span> <span data-ttu-id="d3a0e-138">`CreatePo` yönteminde olduğu gibi, ilk olarak bir <xref:System.Xml.Serialization.XmlSerializer>oluşturmanız gerekir ve bu sınıf türünü oluşturucuya seri durumdan çıkarılacak şekilde geçirerek.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-138">As with the `CreatePo` method, you must first construct an <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor.</span></span> <span data-ttu-id="d3a0e-139">Ayrıca, bir <xref:System.IO.FileStream> XML belgesi okumak için gereklidir.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-139">Also, a <xref:System.IO.FileStream> is required to read the XML document.</span></span> <span data-ttu-id="d3a0e-140">Nesneleri seri durumdan çıkarılacak çağrısı <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> yöntemiyle <xref:System.IO.FileStream> bağımsız değişken olarak.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-140">To deserialize the objects, call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method with the <xref:System.IO.FileStream> as an argument.</span></span> <span data-ttu-id="d3a0e-141">Seri durumdan çıkarılmış nesne türü için bir nesne değişkeni dönüştürülmelidir `PurchaseOrder`.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-141">The deserialized object must be cast to an object variable of type `PurchaseOrder`.</span></span> <span data-ttu-id="d3a0e-142">Kodu daha sonra seri durumdan çıkarılmış değerlerini okur `PurchaseOrder`.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-142">The code then reads the values of the deserialized `PurchaseOrder`.</span></span> <span data-ttu-id="d3a0e-143">Gerçek XML görmek için oluşturulan PO.xml dosya ayrıca okuyabilirsiniz Not çıktı.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-143">Note that you can also read the PO.xml file that is created to see the actual XML output.</span></span>
+<span data-ttu-id="cc447-136">`ReadPo` Yöntemi biraz basittir.</span><span class="sxs-lookup"><span data-stu-id="cc447-136">The `ReadPo` method is a little simpler.</span></span> <span data-ttu-id="cc447-137">Yalnızca seri durumdan çıkarılacak nesne oluşturur ve değerlerine okur.</span><span class="sxs-lookup"><span data-stu-id="cc447-137">It just creates objects to deserialize and reads out their values.</span></span> <span data-ttu-id="cc447-138">As with the `CreatePo` method, you must first construct an <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor.</span><span class="sxs-lookup"><span data-stu-id="cc447-138">As with the `CreatePo` method, you must first construct an <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor.</span></span> <span data-ttu-id="cc447-139">Ayrıca, bir <xref:System.IO.FileStream> XML belgesi okumak için gereklidir.</span><span class="sxs-lookup"><span data-stu-id="cc447-139">Also, a <xref:System.IO.FileStream> is required to read the XML document.</span></span> <span data-ttu-id="cc447-140">Nesneleri seri durumdan çıkarılacak çağrısı <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> yöntemiyle <xref:System.IO.FileStream> bağımsız değişken olarak.</span><span class="sxs-lookup"><span data-stu-id="cc447-140">To deserialize the objects, call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method with the <xref:System.IO.FileStream> as an argument.</span></span> <span data-ttu-id="cc447-141">Seri durumdan çıkarılmış nesne türü için bir nesne değişkeni dönüştürülmelidir `PurchaseOrder`.</span><span class="sxs-lookup"><span data-stu-id="cc447-141">The deserialized object must be cast to an object variable of type `PurchaseOrder`.</span></span> <span data-ttu-id="cc447-142">Kodu daha sonra seri durumdan çıkarılmış değerlerini okur `PurchaseOrder`.</span><span class="sxs-lookup"><span data-stu-id="cc447-142">The code then reads the values of the deserialized `PurchaseOrder`.</span></span> <span data-ttu-id="cc447-143">Gerçek XML görmek için oluşturulan PO.xml dosya ayrıca okuyabilirsiniz Not çıktı.</span><span class="sxs-lookup"><span data-stu-id="cc447-143">Note that you can also read the PO.xml file that is created to see the actual XML output.</span></span>
 
 ```vb
-Imports System
+Imports System.IO
 Imports System.Xml
 Imports System.Xml.Serialization
-Imports System.IO
 Imports Microsoft.VisualBasic
 
 ' The XmlRoot attribute allows you to set an alternate name
@@ -553,9 +551,9 @@ End Class 'Test
 
 ```csharp
 using System;
+using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
-using System.IO;
 
 // The XmlRoot attribute allows you to set an alternate name
 // (PurchaseOrder) for the XML element and its namespace. By
@@ -742,7 +740,7 @@ public class Test
 }
 ```
 
-<span data-ttu-id="d3a0e-144">XML çıktısı aşağıdakine benzer.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-144">The XML output might resemble the following.</span></span>
+<span data-ttu-id="cc447-144">XML çıktısı aşağıdakine benzer.</span><span class="sxs-lookup"><span data-stu-id="cc447-144">The XML output might resemble the following.</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -769,11 +767,11 @@ public class Test
 </PurchaseOrder>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="d3a0e-145">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d3a0e-145">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cc447-145">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cc447-145">See also</span></span>
 
-- [<span data-ttu-id="d3a0e-146">XML Serileştirmeye Giriş</span><span class="sxs-lookup"><span data-stu-id="d3a0e-146">Introducing XML Serialization</span></span>](introducing-xml-serialization.md)
-- [<span data-ttu-id="d3a0e-147">Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme</span><span class="sxs-lookup"><span data-stu-id="d3a0e-147">Controlling XML Serialization Using Attributes</span></span>](controlling-xml-serialization-using-attributes.md)
-- [<span data-ttu-id="d3a0e-148">XML Serileştirmeyi Denetleyen Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="d3a0e-148">Attributes That Control XML Serialization</span></span>](attributes-that-control-xml-serialization.md)
-- [<span data-ttu-id="d3a0e-149">XmlSerializer sınıfı</span><span class="sxs-lookup"><span data-stu-id="d3a0e-149">XmlSerializer Class</span></span>](xref:System.Xml.Serialization.XmlSerializer)
-- [<span data-ttu-id="d3a0e-150">Nasıl yapılır: Nesne Serileştirme</span><span class="sxs-lookup"><span data-stu-id="d3a0e-150">How to: Serialize an Object</span></span>](how-to-serialize-an-object.md)
-- [<span data-ttu-id="d3a0e-151">Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma</span><span class="sxs-lookup"><span data-stu-id="d3a0e-151">How to: Deserialize an Object</span></span>](how-to-deserialize-an-object.md)
+- [<span data-ttu-id="cc447-146">XML Serileştirmeye Giriş</span><span class="sxs-lookup"><span data-stu-id="cc447-146">Introducing XML Serialization</span></span>](introducing-xml-serialization.md)
+- [<span data-ttu-id="cc447-147">Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme</span><span class="sxs-lookup"><span data-stu-id="cc447-147">Controlling XML Serialization Using Attributes</span></span>](controlling-xml-serialization-using-attributes.md)
+- [<span data-ttu-id="cc447-148">XML Serileştirmeyi Denetleyen Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="cc447-148">Attributes That Control XML Serialization</span></span>](attributes-that-control-xml-serialization.md)
+- [<span data-ttu-id="cc447-149">XmlSerializer Class</span><span class="sxs-lookup"><span data-stu-id="cc447-149">XmlSerializer Class</span></span>](xref:System.Xml.Serialization.XmlSerializer)
+- [<span data-ttu-id="cc447-150">Nasıl yapılır: Nesne Serileştirme</span><span class="sxs-lookup"><span data-stu-id="cc447-150">How to: Serialize an Object</span></span>](how-to-serialize-an-object.md)
+- [<span data-ttu-id="cc447-151">Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma</span><span class="sxs-lookup"><span data-stu-id="cc447-151">How to: Deserialize an Object</span></span>](how-to-deserialize-an-object.md)

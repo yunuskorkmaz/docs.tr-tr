@@ -1,23 +1,23 @@
 ---
-title: Saf Işlev kullanarak yeniden düzenleme (Visual Basic)
+title: Saf İşlev Kullanarak Yeniden Düzenleme
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: 361aef2baa2102f4f942b5ddd37ed8a9704fbf19
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: a19285e3a70c14b86898aef0e77c4d04b3abace3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582682"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346540"
 ---
-# <a name="refactoring-using-a-pure-function-visual-basic"></a><span data-ttu-id="4792a-102">Saf Işlev kullanarak yeniden düzenleme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4792a-102">Refactoring Using a Pure Function (Visual Basic)</span></span>
-<span data-ttu-id="4792a-103">Aşağıdaki örnek, [bir genişletme yöntemi kullanarak yeniden düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), bu örnekte saf bir işlev kullanmak için, bir paragrafın metnini bulma kodu saf statik metoda `ParagraphText` taşınır.</span><span class="sxs-lookup"><span data-stu-id="4792a-103">The following example refactors the previous example, [Refactoring Using an Extension Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  
+# <a name="refactoring-using-a-pure-function-visual-basic"></a><span data-ttu-id="1aeb0-102">Refactoring Using a Pure Function (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1aeb0-102">Refactoring Using a Pure Function (Visual Basic)</span></span>
+<span data-ttu-id="1aeb0-103">The following example refactors the previous example, [Refactoring Using an Extension Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span><span class="sxs-lookup"><span data-stu-id="1aeb0-103">The following example refactors the previous example, [Refactoring Using an Extension Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4792a-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="4792a-104">Example</span></span>  
- <span data-ttu-id="4792a-105">Bu örnek, WordprocessingML belgesinden paragraf düğümlerini alarak bir WordprocessingML belgesini işler.</span><span class="sxs-lookup"><span data-stu-id="4792a-105">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="4792a-106">Ayrıca her bir paragrafın stilini belirler.</span><span class="sxs-lookup"><span data-stu-id="4792a-106">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="4792a-107">Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır.</span><span class="sxs-lookup"><span data-stu-id="4792a-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="4792a-108">Yeniden düzenlenmiş kodu, aşağıdaki koddaki açıklamalarda çağrılır.</span><span class="sxs-lookup"><span data-stu-id="4792a-108">The refactored code is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="1aeb0-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="1aeb0-104">Example</span></span>  
+ <span data-ttu-id="1aeb0-105">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span><span class="sxs-lookup"><span data-stu-id="1aeb0-105">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="1aeb0-106">It also identifies the style of each paragraph.</span><span class="sxs-lookup"><span data-stu-id="1aeb0-106">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="1aeb0-107">This example builds on the previous examples in this tutorial.</span><span class="sxs-lookup"><span data-stu-id="1aeb0-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="1aeb0-108">The refactored code is called out in comments in the code below.</span><span class="sxs-lookup"><span data-stu-id="1aeb0-108">The refactored code is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="4792a-109">Bu örnek için kaynak belge oluşturmaya ilişkin yönergeler için bkz. [kaynak Office Open XML belgesi oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="4792a-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="1aeb0-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="1aeb0-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="4792a-110">Bu örnek, WindowsBase derlemesinden sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="4792a-110">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="4792a-111">@No__t_0 ad alanındaki türleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="4792a-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="1aeb0-110">This example uses classes from the WindowsBase assembly.</span><span class="sxs-lookup"><span data-stu-id="1aeb0-110">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="1aeb0-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span><span class="sxs-lookup"><span data-stu-id="1aeb0-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -147,7 +147,7 @@ Module Module1
 End Module   
 ```  
   
- <span data-ttu-id="4792a-112">Bu örnek, yeniden düzenlemeden önceki ile aynı çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="4792a-112">This example produces the same output as before the refactoring:</span></span>  
+ <span data-ttu-id="1aeb0-112">This example produces the same output as before the refactoring:</span><span class="sxs-lookup"><span data-stu-id="1aeb0-112">This example produces the same output as before the refactoring:</span></span>  
   
 ```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -167,13 +167,13 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-### <a name="next-steps"></a><span data-ttu-id="4792a-113">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="4792a-113">Next Steps</span></span>  
- <span data-ttu-id="4792a-114">Sonraki örnekte, XML 'in farklı bir şekle nasıl proje yapılacağı gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="4792a-114">The next example shows how to project XML into a different shape:</span></span>  
+### <a name="next-steps"></a><span data-ttu-id="1aeb0-113">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="1aeb0-113">Next Steps</span></span>  
+ <span data-ttu-id="1aeb0-114">The next example shows how to project XML into a different shape:</span><span class="sxs-lookup"><span data-stu-id="1aeb0-114">The next example shows how to project XML into a different shape:</span></span>  
   
-- [<span data-ttu-id="4792a-115">XML 'i farklı bir şekilde yansıtma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4792a-115">Projecting XML in a Different Shape (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [<span data-ttu-id="1aeb0-115">Projecting XML in a Different Shape (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1aeb0-115">Projecting XML in a Different Shape (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4792a-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4792a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1aeb0-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1aeb0-116">See also</span></span>
 
-- [<span data-ttu-id="4792a-117">Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4792a-117">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [<span data-ttu-id="4792a-118">Bir genişletme yöntemi kullanarak yeniden düzenleme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4792a-118">Refactoring Using an Extension Method (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
-- [<span data-ttu-id="4792a-119">Saf IŞLEVLERE yeniden düzenleme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4792a-119">Refactoring Into Pure Functions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [<span data-ttu-id="1aeb0-117">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1aeb0-117">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="1aeb0-118">Refactoring Using an Extension Method (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1aeb0-118">Refactoring Using an Extension Method (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
+- [<span data-ttu-id="1aeb0-119">Refactoring Into Pure Functions (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1aeb0-119">Refactoring Into Pure Functions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

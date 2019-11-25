@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir derlemenin tam nitelikli adını bulma'
+title: "How to: Find an assembly's fully qualified name"
 ms.date: 08/20/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -10,24 +10,24 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: bf24db03ca1dc4fbf3041f5e83d740029d87928f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 49ebaeabee7a346fb84f09e5a9e34590d1ea9811
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740504"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348192"
 ---
-# <a name="how-to-find-an-assemblys-fully-qualified-name"></a><span data-ttu-id="2bdbd-102">Nasıl yapılır: bir derlemenin tam nitelikli adını bulma</span><span class="sxs-lookup"><span data-stu-id="2bdbd-102">How to: Find an assembly's fully qualified name</span></span>
+# <a name="how-to-find-an-assemblys-fully-qualified-name"></a><span data-ttu-id="4c413-102">How to: Find an assembly's fully qualified name</span><span class="sxs-lookup"><span data-stu-id="4c413-102">How to: Find an assembly's fully qualified name</span></span>
 
-<span data-ttu-id="2bdbd-103">Genel derleme önbelleğinde bir .NET Framework derlemesinin tam adını öğrenmek için genel derleme önbelleği aracını ([Gacutil. exe](../../framework/tools/gacutil-exe-gac-tool.md)) kullanın.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-103">To discover the fully qualified name of a .NET Framework assembly in the global assembly cache, use the Global Assembly Cache tool ([Gacutil.exe](../../framework/tools/gacutil-exe-gac-tool.md)).</span></span> <span data-ttu-id="2bdbd-104">Bkz. [nasıl yapılır: genel derleme önbelleğinin Içeriğini görüntüleme](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).</span><span class="sxs-lookup"><span data-stu-id="2bdbd-104">See [How to: View the contents of the global assembly cache](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).</span></span>
+<span data-ttu-id="4c413-103">To discover the fully qualified name of a .NET Framework assembly in the global assembly cache, use the Global Assembly Cache tool ([Gacutil.exe](../../framework/tools/gacutil-exe-gac-tool.md)).</span><span class="sxs-lookup"><span data-stu-id="4c413-103">To discover the fully qualified name of a .NET Framework assembly in the global assembly cache, use the Global Assembly Cache tool ([Gacutil.exe](../../framework/tools/gacutil-exe-gac-tool.md)).</span></span> <span data-ttu-id="4c413-104">See [How to: View the contents of the global assembly cache](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).</span><span class="sxs-lookup"><span data-stu-id="4c413-104">See [How to: View the contents of the global assembly cache](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).</span></span>
 
-<span data-ttu-id="2bdbd-105">.NET Core derlemeleri ve genel derleme önbelleğinde olmayan .NET Framework derlemeler için, tam derleme adını çeşitli yollarla alabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="2bdbd-105">For .NET Core assemblies, and for .NET Framework assemblies that aren't in the global assembly cache, you can get the fully qualified assembly name in a number of ways:</span></span>
+<span data-ttu-id="4c413-105">For .NET Core assemblies, and for .NET Framework assemblies that aren't in the global assembly cache, you can get the fully qualified assembly name in a number of ways:</span><span class="sxs-lookup"><span data-stu-id="4c413-105">For .NET Core assemblies, and for .NET Framework assemblies that aren't in the global assembly cache, you can get the fully qualified assembly name in a number of ways:</span></span>
 
-- <span data-ttu-id="2bdbd-106">Bilgileri konsola veya bir değişkene çıkarmak için kodu kullanabilir veya tam nitelikli adı içeren derlemenin meta verilerini incelemek için [ıldadsm. exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-106">You can use code to output the information to the console or to a variable, or you can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.</span></span>
+- <span data-ttu-id="4c413-106">You can use code to output the information to the console or to a variable, or you can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.</span><span class="sxs-lookup"><span data-stu-id="4c413-106">You can use code to output the information to the console or to a variable, or you can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.</span></span>
 
-- <span data-ttu-id="2bdbd-107">Derleme uygulama tarafından zaten yüklenmişse, tam adı almak için <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> özelliğinin değerini alabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-107">If the assembly is already loaded by the application, you can retrieve the value of the <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> property to get the fully qualified name.</span></span> <span data-ttu-id="2bdbd-108"><xref:System.Reflection.Assembly> nesnesine bir başvuru almak için, bu derlemede tanımlanan bir <xref:System.Type> <xref:System.Type.Assembly> özelliğini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-108">You can use the <xref:System.Type.Assembly> property of a <xref:System.Type> defined in that assembly to retrieve a reference to the <xref:System.Reflection.Assembly> object.</span></span> <span data-ttu-id="2bdbd-109">Örnek, bir gösterim sağlar.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-109">The example provides an illustration.</span></span>
+- <span data-ttu-id="4c413-107">If the assembly is already loaded by the application, you can retrieve the value of the <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> property to get the fully qualified name.</span><span class="sxs-lookup"><span data-stu-id="4c413-107">If the assembly is already loaded by the application, you can retrieve the value of the <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> property to get the fully qualified name.</span></span> <span data-ttu-id="4c413-108">You can use the <xref:System.Type.Assembly> property of a <xref:System.Type> defined in that assembly to retrieve a reference to the <xref:System.Reflection.Assembly> object.</span><span class="sxs-lookup"><span data-stu-id="4c413-108">You can use the <xref:System.Type.Assembly> property of a <xref:System.Type> defined in that assembly to retrieve a reference to the <xref:System.Reflection.Assembly> object.</span></span> <span data-ttu-id="4c413-109">Örnek, bir gösterim sağlar.</span><span class="sxs-lookup"><span data-stu-id="4c413-109">The example provides an illustration.</span></span>
 
-- <span data-ttu-id="2bdbd-110">Derlemenin dosya sistemi yolunu biliyorsanız, tam derleme adını almak için `static` (C#) veya `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> yöntemini çağırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-110">If you know the assembly's file system path, you can call the `static` (C#) or `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> method to get the fully qualified assembly name.</span></span> <span data-ttu-id="2bdbd-111">Aşağıda basit bir örnek verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-111">The following is a simple example.</span></span>
+- <span data-ttu-id="4c413-110">If you know the assembly's file system path, you can call the `static` (C#) or `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> method to get the fully qualified assembly name.</span><span class="sxs-lookup"><span data-stu-id="4c413-110">If you know the assembly's file system path, you can call the `static` (C#) or `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> method to get the fully qualified assembly name.</span></span> <span data-ttu-id="4c413-111">The following is a simple example.</span><span class="sxs-lookup"><span data-stu-id="4c413-111">The following is a simple example.</span></span>
 
   ```csharp
   using System;
@@ -56,13 +56,13 @@ ms.locfileid: "73740504"
   '   UtilityLibrary, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null
   ```
 
-- <span data-ttu-id="2bdbd-112">Tam nitelikli adı içeren derlemenin meta verilerini incelemek için [ıldadsm. exe ' yi (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-112">You can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.</span></span>
+- <span data-ttu-id="4c413-112">You can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.</span><span class="sxs-lookup"><span data-stu-id="4c413-112">You can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.</span></span>
 
-<span data-ttu-id="2bdbd-113">Sürüm, kültür ve derleme adı gibi derleme özniteliklerini ayarlama hakkında daha fazla bilgi için bkz. [derleme özniteliklerini ayarlama](set-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="2bdbd-113">For more information about setting assembly attributes such as version, culture, and assembly name, see [Set assembly attributes](set-attributes.md).</span></span> <span data-ttu-id="2bdbd-114">Bütünleştirilmiş koda tanımlayıcı ad verme hakkında daha fazla bilgi için bkz. [tanımlayıcı adlı derlemeler oluşturma ve kullanma](create-use-strong-named.md).</span><span class="sxs-lookup"><span data-stu-id="2bdbd-114">For more information about giving an assembly a strong name, see [Create and use strong-named assemblies](create-use-strong-named.md).</span></span>
+<span data-ttu-id="4c413-113">For more information about setting assembly attributes such as version, culture, and assembly name, see [Set assembly attributes](set-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="4c413-113">For more information about setting assembly attributes such as version, culture, and assembly name, see [Set assembly attributes](set-attributes.md).</span></span> <span data-ttu-id="4c413-114">For more information about giving an assembly a strong name, see [Create and use strong-named assemblies](create-use-strong-named.md).</span><span class="sxs-lookup"><span data-stu-id="4c413-114">For more information about giving an assembly a strong name, see [Create and use strong-named assemblies](create-use-strong-named.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="2bdbd-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="2bdbd-115">Example</span></span>
+## <a name="example"></a><span data-ttu-id="4c413-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="4c413-115">Example</span></span>
 
-<span data-ttu-id="2bdbd-116">Aşağıdaki örnek, konsoluna belirtilen bir sınıf içeren bir derlemenin tam adının nasıl görüntüleneceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-116">The following example shows how to display the fully qualified name of an assembly containing a specified class to the console.</span></span> <span data-ttu-id="2bdbd-117">Bu derlemede tanımlanan bir türden derlemeye başvuru almak için <xref:System.Type.Assembly?displayProperty=nameWithType> özelliğini kullanır.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-117">It uses the <xref:System.Type.Assembly?displayProperty=nameWithType> property to retrieve a reference to an assembly from a type that's defined in that assembly.</span></span>
+<span data-ttu-id="4c413-116">The following example shows how to display the fully qualified name of an assembly containing a specified class to the console.</span><span class="sxs-lookup"><span data-stu-id="4c413-116">The following example shows how to display the fully qualified name of an assembly containing a specified class to the console.</span></span> <span data-ttu-id="4c413-117">It uses the <xref:System.Type.Assembly?displayProperty=nameWithType> property to retrieve a reference to an assembly from a type that's defined in that assembly.</span><span class="sxs-lookup"><span data-stu-id="4c413-117">It uses the <xref:System.Type.Assembly?displayProperty=nameWithType> property to retrieve a reference to an assembly from a type that's defined in that assembly.</span></span>
 
 ```cpp
 #using <System.dll>
@@ -106,7 +106,6 @@ class asmname
 ```
 
 ```vb
-Imports System
 Imports System.Reflection
 
 Class asmname
@@ -119,10 +118,10 @@ Class asmname
 End Class
 ```
 
-## <a name="see-also"></a><span data-ttu-id="2bdbd-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4c413-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4c413-118">See also</span></span>
 
-- [<span data-ttu-id="2bdbd-119">Derleme adları</span><span class="sxs-lookup"><span data-stu-id="2bdbd-119">Assembly names</span></span>](names.md)
-- [<span data-ttu-id="2bdbd-120">Derlemeler oluştur</span><span class="sxs-lookup"><span data-stu-id="2bdbd-120">Create assemblies</span></span>](create.md)
-- [<span data-ttu-id="2bdbd-121">Tanımlayıcı adlı derlemeler oluşturma ve kullanma</span><span class="sxs-lookup"><span data-stu-id="2bdbd-121">Create and use strong-named assemblies</span></span>](create-use-strong-named.md)
-- [<span data-ttu-id="2bdbd-122">Genel derleme önbelleği</span><span class="sxs-lookup"><span data-stu-id="2bdbd-122">Global assembly cache</span></span>](../../framework/app-domains/gac.md)
-- [<span data-ttu-id="2bdbd-123">Çalışma zamanının derlemeleri nasıl konumlandırır</span><span class="sxs-lookup"><span data-stu-id="2bdbd-123">How the runtime locates assemblies</span></span>](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [<span data-ttu-id="4c413-119">Assembly names</span><span class="sxs-lookup"><span data-stu-id="4c413-119">Assembly names</span></span>](names.md)
+- [<span data-ttu-id="4c413-120">Create assemblies</span><span class="sxs-lookup"><span data-stu-id="4c413-120">Create assemblies</span></span>](create.md)
+- [<span data-ttu-id="4c413-121">Create and use strong-named assemblies</span><span class="sxs-lookup"><span data-stu-id="4c413-121">Create and use strong-named assemblies</span></span>](create-use-strong-named.md)
+- [<span data-ttu-id="4c413-122">Global assembly cache</span><span class="sxs-lookup"><span data-stu-id="4c413-122">Global assembly cache</span></span>](../../framework/app-domains/gac.md)
+- [<span data-ttu-id="4c413-123">How the runtime locates assemblies</span><span class="sxs-lookup"><span data-stu-id="4c413-123">How the runtime locates assemblies</span></span>](../../framework/deployment/how-the-runtime-locates-assemblies.md)
