@@ -7,7 +7,7 @@
       items:
         - name: ML.NET API’si
           href: how-does-mldotnet-work.md
-    - name: Araçlar
+    - name: Model Oluşturucu ve CLI
       items:
         - name: ML.NET Model Oluşturucu aracı
           href: automate-training-with-model-builder.md
@@ -97,7 +97,7 @@
               href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
             - name: Modeli bir web API'sine dağıtma
               href: how-to-guides/serve-model-web-api-ml-net.md
-    - name: Araçlar
+    - name: Model Oluşturucu ve CLI
       items:
         - name: Model Oluşturucu’ya veri yükleme
           href: how-to-guides/load-data-model-builder.md
@@ -109,18 +109,12 @@
           href: how-to-guides/how-to-use-the-automl-api.md
 - name: Başvuru
   items:
-    - name: API
-      items:
-        - name: ML.NET API Başvurusu
-          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
-        - name: ML.NET API Önizlemesi API Başvurusu
-          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
-    - name: Araçlar
-      items:
-        - name: CLI başvurusu
-          href: reference/ml-net-cli-reference.md
-        - name: ML.NET AutoML API Başvurusu
-          href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
+    - name: ML.NET API Başvurusu
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+    - name: ML.NET API Önizlemesi API Başvurusu
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
+    - name: CLI başvurusu
+      href: reference/ml-net-cli-reference.md
 - name: Kaynaklar
   items:
     - name: Genel Bakış
