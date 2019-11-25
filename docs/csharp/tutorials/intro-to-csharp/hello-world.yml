@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="193ec-101">Merhaba Dünya- C# etkileşimli C# öğreticiye giriş</span><span class="sxs-lookup"><span data-stu-id="193ec-101">Hello World - Introduction to C# interactive C# tutorial</span></span>
+title: Merhaba Dünya- C# etkileşimli C# öğreticiye giriş
 metadata:
   title: Merhaba Dünya- C# etkileşimli C# öğreticiye giriş
   description: Bu öğreticide, etkileşimli olarak öğrenmek C# için tarayıcınızı kullanacaksınız. Kod yazar C# ve kodunuzu doğrudan tarayıcıda derleyip çalıştırmanın sonuçlarını görürsünüz.
@@ -7,24 +7,24 @@ metadata:
   level: Beginner
   ms.date: 08/24/2018
   nextTutorialHref: numbers-in-csharp.yml
-  nextTutorialTitle: <span data-ttu-id="193ec-105">C# numaraları</span><span class="sxs-lookup"><span data-stu-id="193ec-105">Numbers in C#</span></span>
+  nextTutorialTitle: C# numaraları
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850790"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969418"
 items:
 - durationInMinutes: 1
   content: >
-    <span data-ttu-id="193ec-106">Bu öğreticide, C# kodunuzu derleyip çalıştırmanın sonuçlarını yazmak C# ve görüntülemek için tarayıcınızı kullanarak etkileşimli olarak öğretilir.</span><span class="sxs-lookup"><span data-stu-id="193ec-106">This tutorial teaches you C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="193ec-107">Bir "Merhaba Dünya" programıyla başlayan bir dizi ders içerir.</span><span class="sxs-lookup"><span data-stu-id="193ec-107">It contains a series of lessons that begin with a "Hello World" program.</span></span> <span data-ttu-id="193ec-108">Bu dersler, C# dilin temellerini öğretir.</span><span class="sxs-lookup"><span data-stu-id="193ec-108">These lessons teach you the fundamentals of the C# language.</span></span>
-- title: <span data-ttu-id="193ec-109">İlk C# programınızı çalıştırma</span><span class="sxs-lookup"><span data-stu-id="193ec-109">Run your first C# program</span></span>
+    Bu öğreticide, C# kodunuzu derleyip çalıştırmanın sonuçlarını yazmak C# ve görüntülemek için tarayıcınızı kullanarak etkileşimli olarak öğretilir. Bir "Merhaba Dünya" programıyla başlayan bir dizi ders içerir. Bu dersler, C# dilin temellerini öğretir.
+- title: İlk C# programınızı çalıştırma
   durationInMinutes: 2
   content: >
-    <span data-ttu-id="193ec-110">Etkileşimli pencerede aşağıdaki kodu çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="193ec-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="193ec-111">Bunu yapmak için, etkileşimli pencereye aşağıdaki kod bloğunu yazın ve **Çalıştır** düğmesine tıklayın:</span><span class="sxs-lookup"><span data-stu-id="193ec-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
+    Etkileşimli pencerede aşağıdaki kodu çalıştırın. **Odak modunu girin** düğmesini seçin. Ardından, etkileşimli pencereye aşağıdaki kod bloğunu yazın ve **Çalıştır**' ı seçin:
 
 
     ```csharp
@@ -34,29 +34,29 @@ items:
     ```
 
 
-    <span data-ttu-id="193ec-112">Tebrikler!</span><span class="sxs-lookup"><span data-stu-id="193ec-112">Congratulations!</span></span> <span data-ttu-id="193ec-113">İlk C# programınızı çalıştırdık.</span><span class="sxs-lookup"><span data-stu-id="193ec-113">You've run your first C# program.</span></span> <span data-ttu-id="193ec-114">Bu, "Merhaba Dünya!" iletisini yazdıran basit bir programdır.</span><span class="sxs-lookup"><span data-stu-id="193ec-114">It's a simple program that prints the message "Hello World!".</span></span> <span data-ttu-id="193ec-115">Bu iletiyi yazdırmak <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> için yöntemini kullandı.</span><span class="sxs-lookup"><span data-stu-id="193ec-115">It used the <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> method to print that message.</span></span> <span data-ttu-id="193ec-116">`Console`Konsol penceresini temsil eden bir türdür.</span><span class="sxs-lookup"><span data-stu-id="193ec-116">`Console` is a type that represents the console window.</span></span> <span data-ttu-id="193ec-117">`WriteLine`, bu metin konsoluna bir `Console` metin satırı yazdıran türün bir yöntemidir.</span><span class="sxs-lookup"><span data-stu-id="193ec-117">`WriteLine` is a method of the `Console` type that prints a line of text to that text console.</span></span>
+    Mühendisi! İlk C# programınızı çalıştırdık. Bu, "Merhaba Dünya!" iletisini yazdıran basit bir programdır. Bu iletiyi yazdırmak için <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> yöntemini kullandı. `Console`, konsol penceresini temsil eden bir türdür. `WriteLine`, metin konsoluna metin satırı yazdıran `Console` türünün bir yöntemidir.
 
 
-    <span data-ttu-id="193ec-118">Daha fazlasını taşıyıp daha fazla inceleyelim.</span><span class="sxs-lookup"><span data-stu-id="193ec-118">Let's move on and explore more.</span></span> <span data-ttu-id="193ec-119">Bu dersin geri kalanı, ' de `string` C#metni temsil eden türüyle çalışmayı araştırır.</span><span class="sxs-lookup"><span data-stu-id="193ec-119">The rest of this lesson explores working with the `string` type, which represents text in C#.</span></span> <span data-ttu-id="193ec-120">`Console` Türü gibi`string` , türün yöntemleri vardır.</span><span class="sxs-lookup"><span data-stu-id="193ec-120">Like the `Console` type, the `string` type has methods.</span></span> <span data-ttu-id="193ec-121">`string` Yöntemler metinle çalışır.</span><span class="sxs-lookup"><span data-stu-id="193ec-121">The `string` methods work with text.</span></span>
+    Daha fazlasını taşıyıp daha fazla inceleyelim. Bu dersin geri kalanı, içindeki C#metni temsil eden `string` türüyle çalışmayı araştırır. `Console` türü gibi `string` türünün yöntemleri vardır. `string` yöntemleri metinle birlikte çalışır.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="193ec-122">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="193ec-122">This online coding experience is in preview mode.</span></span> <span data-ttu-id="193ec-123">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="193ec-123">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="193ec-124">Değişkenleri bildirme ve kullanma</span><span class="sxs-lookup"><span data-stu-id="193ec-124">Declare and use variables</span></span>
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Değişkenleri bildirme ve kullanma
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="193ec-125">İlk programınız `string` "Merhaba Dünya!" öğesini yazdırıldı</span><span class="sxs-lookup"><span data-stu-id="193ec-125">Your first program printed the `string` "Hello World!"</span></span> <span data-ttu-id="193ec-126">ekranda.</span><span class="sxs-lookup"><span data-stu-id="193ec-126">on the screen.</span></span>
+    İlk programınız "Merhaba Dünya!" `string` yazdırıldı ekranda.
 
 
     > [!TIP]
 
-    > <span data-ttu-id="193ec-127">Keşfederken C# (veya herhangi bir programlama dilini), kod yazarken hata oluşturursunuz.</span><span class="sxs-lookup"><span data-stu-id="193ec-127">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="193ec-128">**Derleyici** bu hataları bulacak ve size rapor eder.</span><span class="sxs-lookup"><span data-stu-id="193ec-128">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="193ec-129">Çıktı hata iletileri içerdiğinde, nelerin düzeltileceğini görmek için örnek koda ve etkileşimli penceredeki koda yakından bakın.</span><span class="sxs-lookup"><span data-stu-id="193ec-129">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
+    > Keşfederken C# (veya herhangi bir programlama dilini), kod yazarken hata oluşturursunuz. **Derleyici** bu hataları bulacak ve size rapor eder. Çıktı hata iletileri içerdiğinde, nelerin düzeltileceğini görmek için örnek koda ve etkileşimli penceredeki koda yakından bakın.
 
-    > <span data-ttu-id="193ec-130">Bu alıştırma, C# kod yapısını öğrenmenize yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="193ec-130">That exercise will help you learn the structure of C# code.</span></span>
+    > Bu alıştırma, C# kod yapısını öğrenmenize yardımcı olur.
 
 
-    <span data-ttu-id="193ec-131">İlk programınız bir ileti yazdırmaya sınırlandırılmıştır.</span><span class="sxs-lookup"><span data-stu-id="193ec-131">Your first program is limited to printing one message.</span></span> <span data-ttu-id="193ec-132">**Değişkenleri**kullanarak daha kullanışlı programlar yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-132">You can write more useful programs by using **variables**.</span></span> <span data-ttu-id="193ec-133">**Değişken** , aynı kodu farklı değerlerle çalıştırmak için kullanabileceğiniz bir simgedir.</span><span class="sxs-lookup"><span data-stu-id="193ec-133">A **variable** is a symbol you can use to run the same code with different values.</span></span> <span data-ttu-id="193ec-134">Deneyelim!</span><span class="sxs-lookup"><span data-stu-id="193ec-134">Let's try it!</span></span> <span data-ttu-id="193ec-135">Etkileşimli pencerede yazdığınız kodu aşağıdaki kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="193ec-135">Replace the code you've written in the interactive window with the following code:</span></span>
+    İlk programınız bir ileti yazdırmaya sınırlandırılmıştır. **Değişkenleri**kullanarak daha kullanışlı programlar yazabilirsiniz. **Değişken** , aynı kodu farklı değerlerle çalıştırmak için kullanabileceğiniz bir simgedir. Deneyelim! Etkileşimli pencerede yazdığınız kodu aşağıdaki kodla değiştirin:
 
 
     ```csharp
@@ -68,10 +68,10 @@ items:
     ```
 
 
-    <span data-ttu-id="193ec-136">İlk satır bir değişken `aFriend` bildirir ve buna "fatura" değeri atar.</span><span class="sxs-lookup"><span data-stu-id="193ec-136">The first line declares a variable, `aFriend` and assigns it a value, "Bill".</span></span> <span data-ttu-id="193ec-137">İkinci satır, adı yazdırır.</span><span class="sxs-lookup"><span data-stu-id="193ec-137">The second line prints out the name.</span></span>
+    İlk satır bir değişken bildirir, `aFriend` ve bir "fatura" değeri atar. İkinci satır, adı yazdırır.
 
 
-    <span data-ttu-id="193ec-138">Bildirdiğiniz herhangi bir değişkene farklı değerler atayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-138">You can assign different values to any variable you declare.</span></span> <span data-ttu-id="193ec-139">Adı arkadaşlarınızla birine dönüştürebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-139">You can change the name to one of your friends.</span></span> <span data-ttu-id="193ec-140">Bu iki satırı, zaten eklemiş olduğunuz kodu izleyerek etkileşimli pencereye ekleyin:</span><span class="sxs-lookup"><span data-stu-id="193ec-140">Add these two lines in the interactive window following the code you've already added:</span></span>
+    Bildirdiğiniz herhangi bir değişkene farklı değerler atayabilirsiniz. Adı arkadaşlarınızla birine dönüştürebilirsiniz. Bu iki satırı, zaten eklemiş olduğunuz kodu izleyerek etkileşimli pencereye ekleyin:
 
 
     ```csharp
@@ -83,10 +83,10 @@ items:
     ```
 
 
-    <span data-ttu-id="193ec-141">Aynı kod satırının, `aFriend` değişkende depolanan değere göre iki farklı ileti yazdırdığına dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="193ec-141">Notice that the same line of code prints two different messages, based on the value stored in the `aFriend` variable.</span></span>
+    Aynı kod satırının `aFriend` değişkeninde depolanan değere göre iki farklı ileti yazdırdığına dikkat edin.
 
 
-    <span data-ttu-id="193ec-142">Ayrıca, son iki iletinin "Hello" sözcüğünün eksik olduğunu fark etmiş olabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-142">You may have also noticed that the word "Hello" was missing in the last two messages.</span></span> <span data-ttu-id="193ec-143">Şimdi bunu düzeldelim.</span><span class="sxs-lookup"><span data-stu-id="193ec-143">Let's fix that now.</span></span>  <span data-ttu-id="193ec-144">İletiyi şu şekilde yazdıracak satırları değiştirin:</span><span class="sxs-lookup"><span data-stu-id="193ec-144">Modify the lines that print the message to the following:</span></span>
+    Ayrıca, son iki iletinin "Hello" sözcüğünün eksik olduğunu fark etmiş olabilirsiniz. Şimdi bunu düzeldelim.  İletiyi şu şekilde yazdıracak satırları değiştirin:
 
 
     ```csharp
@@ -96,18 +96,18 @@ items:
     ```
 
 
-    <span data-ttu-id="193ec-145">Sonuçları görmek için yeniden **Çalıştır** ' a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="193ec-145">Click **Run** again to see the results.</span></span>
+    Sonuçları görmek için yeniden **Çalıştır** ' ı seçin.
 
 
-    <span data-ttu-id="193ec-146">`+` **Değişkenlerden** ve **sabit** dizelerdeki dizeleri derlemek için kullanıyorsunuz.</span><span class="sxs-lookup"><span data-stu-id="193ec-146">You've been using `+` to build strings from **variables** and **constant** strings.</span></span> <span data-ttu-id="193ec-147">Daha iyi bir yoldur.</span><span class="sxs-lookup"><span data-stu-id="193ec-147">There's a better way.</span></span>
+    **Değişkenlerden** ve **sabit** dizelerdeki dizeleri derlemek için `+` kullanıyorsunuz. Daha iyi bir yoldur.
 
-    <span data-ttu-id="193ec-148">Metnin değişkenin değeri ile değiştirilmesini söylemek `{` C# için `}` , ve karakterleri arasına bir değişken yerleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-148">You can place a variable between `{` and `}` characters to tell C# to replace that text with the value of the variable.</span></span>
-
-
-    <span data-ttu-id="193ec-149">Bu, [dize ilişkilendirme](../../language-reference/tokens/interpolated.md)olarak adlandırılır.</span><span class="sxs-lookup"><span data-stu-id="193ec-149">This is called [String interpolation](../../language-reference/tokens/interpolated.md).</span></span>
+    Metnin değişkenin değeriyle değiştirilmesini söylemek C# için `{` ve `}` karakterleri arasına bir değişken yerleştirebilirsiniz.
 
 
-    <span data-ttu-id="193ec-150">Dizenin açılış tırnağından önce bir `$` eklerseniz, gibi `aFriend`değişkenleri, küme ayraçları arasındaki dizenin içine ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-150">If you add a `$` before the opening quote of the string, you can then include variables, like `aFriend`, inside the string between curly braces.</span></span> <span data-ttu-id="193ec-151">Deneyin:</span><span class="sxs-lookup"><span data-stu-id="193ec-151">Give it a try:</span></span>
+    Bu, [dize ilişkilendirme](../../language-reference/tokens/interpolated.md)olarak adlandırılır.
+
+
+    Dizenin açılış tırnağından önce bir `$` eklerseniz, küme ayraçları arasındaki dizenin içinde `aFriend`gibi değişkenleri ekleyebilirsiniz. Deneyin:
 
 
 
@@ -118,19 +118,19 @@ items:
     ```
 
 
-    <span data-ttu-id="193ec-152">Sonuçları görmek için yeniden **Çalıştır** ' a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="193ec-152">Click **Run** again to see the results.</span></span> <span data-ttu-id="193ec-153">"Merhaba {aFriend}" yerine ileti "Hello Maira" olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="193ec-153">Instead of "Hello {aFriend}", the message should be "Hello Maira".</span></span>
+    Sonuçları görmek için yeniden **Çalıştır** ' ı seçin. "Merhaba {aFriend}" yerine ileti "Hello Maira" olmalıdır.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="193ec-154">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="193ec-154">This online coding experience is in preview mode.</span></span> <span data-ttu-id="193ec-155">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="193ec-155">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="193ec-156">Dizelerle çalışma</span><span class="sxs-lookup"><span data-stu-id="193ec-156">Work with strings</span></span>
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Dizelerle çalışma
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="193ec-157">Son düzenlemeniz, dizelerle yapabileceklerinize ilk bakmıştı.</span><span class="sxs-lookup"><span data-stu-id="193ec-157">Your last edit was our first look at what you can do with strings.</span></span> <span data-ttu-id="193ec-158">Daha fazlasını inceleyelim.</span><span class="sxs-lookup"><span data-stu-id="193ec-158">Let's explore more.</span></span>
+    Son düzenlemeniz, dizelerle yapabileceklerinize ilk bakmıştı. Daha fazlasını inceleyelim.
 
 
-    <span data-ttu-id="193ec-159">Küme ayraçları arasında tek bir değişkenle sınırlı değilsiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-159">You're not limited to a single variable between the curly braces.</span></span> <span data-ttu-id="193ec-160">Şunu deneyin:</span><span class="sxs-lookup"><span data-stu-id="193ec-160">Try this:</span></span>
+    Küme ayraçları arasında tek bir değişkenle sınırlı değilsiniz. Şunu deneyin:
 
 
     ```csharp
@@ -144,7 +144,7 @@ items:
     ```
 
 
-    <span data-ttu-id="193ec-161">Dizelerle daha fazlasını keşfettireceğiz, dizelerin bir harf koleksiyonundan daha fazla olduğunu fark edeceksiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-161">As you explore more with strings, you'll find that strings are more than a collection of letters.</span></span> <span data-ttu-id="193ec-162">Kullanarak `Length`bir dizenin uzunluğunu bulabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-162">You can find the length of a string using `Length`.</span></span> <span data-ttu-id="193ec-163">`Length`, bir dizenin **özelliğidir** ve bu dizedeki karakter sayısını döndürür.</span><span class="sxs-lookup"><span data-stu-id="193ec-163">`Length` is a **property** of a string and it returns the number of characters in that string.</span></span> <span data-ttu-id="193ec-164">Aşağıdaki kodu etkileşimli pencerenin altına ekleyin:</span><span class="sxs-lookup"><span data-stu-id="193ec-164">Add the following code at the bottom of the interactive window:</span></span>
+    Dizelerle daha fazlasını keşfettireceğiz, dizelerin bir harf koleksiyonundan daha fazla olduğunu fark edeceksiniz. `Length`kullanarak bir dizenin uzunluğunu bulabilirsiniz. `Length` bir dizenin **özelliğidir** ve bu dizedeki karakter sayısını döndürür. Aşağıdaki kodu etkileşimli pencerenin altına ekleyin:
 
 
     ```csharp
@@ -158,21 +158,21 @@ items:
 
     > [!TIP]
 
-    > <span data-ttu-id="193ec-165">Bu, kendi kendinize araştırmak için iyi bir zamandır.</span><span class="sxs-lookup"><span data-stu-id="193ec-165">This is a good time to explore on your own.</span></span> <span data-ttu-id="193ec-166">Bunu ekrana metin `Console.WriteLine()` yazdığınızı öğrendiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-166">You've learned that `Console.WriteLine()` writes text to the screen.</span></span> <span data-ttu-id="193ec-167">Değişkenleri bildirme ve dizeleri birlikte birleştirme hakkında daha fazla öğrendiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-167">You've learned how to declare variables and concatenate strings together.</span></span> <span data-ttu-id="193ec-168">Etkileşimli pencerede deneyin.</span><span class="sxs-lookup"><span data-stu-id="193ec-168">Experiment in the interactive window.</span></span> <span data-ttu-id="193ec-169">Pencerede, **IntelliSense** adlı bir özellik bulunur ve yapabilecekleriniz için öneriler sağlar.</span><span class="sxs-lookup"><span data-stu-id="193ec-169">The window has a feature called **IntelliSense** that makes suggestions for what you can do.</span></span> <span data-ttu-id="193ec-170">Öğesinden sonra `.` biryazın.`d` `firstFriend`</span><span class="sxs-lookup"><span data-stu-id="193ec-170">Type a `.` after the `d` in `firstFriend`.</span></span> <span data-ttu-id="193ec-171">Kullanabileceğiniz özellikler ve yöntemler için önerilerin bir listesini görürsünüz.</span><span class="sxs-lookup"><span data-stu-id="193ec-171">You'll see a list of suggestions for properties and methods you can use.</span></span>
+    > Bu, kendi kendinize araştırmak için iyi bir zamandır. `Console.WriteLine()` ekrana metin yazdığınızı öğrendiniz. Değişkenleri bildirme ve dizeleri birlikte birleştirme hakkında daha fazla öğrendiniz. Etkileşimli pencerede deneyin. Pencerede, **IntelliSense** adlı bir özellik bulunur ve yapabilecekleriniz için öneriler sağlar. `firstFriend``d` sonra `.` yazın. Kullanabileceğiniz özellikler ve yöntemler için önerilerin bir listesini görürsünüz.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="193ec-172">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="193ec-172">This online coding experience is in preview mode.</span></span> <span data-ttu-id="193ec-173">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="193ec-173">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="193ec-174">Dizelerle daha fazlasını yapın</span><span class="sxs-lookup"><span data-stu-id="193ec-174">Do more with strings</span></span>
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Dizelerle daha fazlasını yapın
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="193ec-175">İletileri yazdırmak için bir **Yöntem** <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>kullanıyorsunuz.</span><span class="sxs-lookup"><span data-stu-id="193ec-175">You've been using a **method**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, to print messages.</span></span> <span data-ttu-id="193ec-176">**Yöntemi** , bazı eylemleri uygulayan bir kod bloğudur.</span><span class="sxs-lookup"><span data-stu-id="193ec-176">A **method** is a block of code that implements some action.</span></span> <span data-ttu-id="193ec-177">Bir ada sahip olduğundan, ona erişebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-177">It has a name, so you can access it.</span></span>
+    İletileri yazdırmak için <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>bir **Yöntem**kullanıyorsunuz. **Yöntemi** , bazı eylemleri uygulayan bir kod bloğudur. Bir ada sahip olduğundan, ona erişebilirsiniz.
 
 
-    <span data-ttu-id="193ec-178">Dizelerinizin görüntülenmesini istemediğiniz baştaki veya sondaki boşlukların olduğunu varsayalım.</span><span class="sxs-lookup"><span data-stu-id="193ec-178">Suppose your strings have leading or trailing spaces that you don't want to display.</span></span> <span data-ttu-id="193ec-179">Dizelerin içindeki boşlukları **kırpmak** istiyorsunuz.</span><span class="sxs-lookup"><span data-stu-id="193ec-179">You want to **trim** the spaces from the strings.</span></span>
+    Dizelerinizin görüntülenmesini istemediğiniz baştaki veya sondaki boşlukların olduğunu varsayalım. Dizelerin içindeki boşlukları **kırpmak** istiyorsunuz.
 
-    <span data-ttu-id="193ec-180">Yöntemi ve ilgili yöntemleri <xref:System.String.TrimStart%2A> ve <xref:System.String.TrimEnd%2A> bunu çalışır. <xref:System.String.Trim%2A></span><span class="sxs-lookup"><span data-stu-id="193ec-180">The <xref:System.String.Trim%2A> method and related methods <xref:System.String.TrimStart%2A> and <xref:System.String.TrimEnd%2A> do that work.</span></span> <span data-ttu-id="193ec-181">Baştaki ve sondaki boşlukları kaldırmak için yalnızca bu yöntemleri kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-181">You can just use those methods to remove leading and trailing spaces.</span></span> <span data-ttu-id="193ec-182">Aşağıdaki kodu deneyin:</span><span class="sxs-lookup"><span data-stu-id="193ec-182">Try the following code:</span></span>
+    <xref:System.String.Trim%2A> yöntemi ve ilgili yöntemler <xref:System.String.TrimStart%2A> ve <xref:System.String.TrimEnd%2A> işler. Baştaki ve sondaki boşlukları kaldırmak için yalnızca bu yöntemleri kullanabilirsiniz. Aşağıdaki kodu deneyin:
 
 
     ```csharp
@@ -199,10 +199,10 @@ items:
     ```
 
 
-    <span data-ttu-id="193ec-183">Bu örnek, dizeler ile çalışmaya yönelik birkaç önemli kavramı güçlendirir.</span><span class="sxs-lookup"><span data-stu-id="193ec-183">This sample reinforces a couple of important concepts for working with strings.</span></span> <span data-ttu-id="193ec-184">Dizeleri işleyen yöntemler, değişiklikleri yerinde yapmak yerine yeni dize nesneleri döndürür.</span><span class="sxs-lookup"><span data-stu-id="193ec-184">The methods that manipulate strings return new string objects rather than making modifications in place.</span></span> <span data-ttu-id="193ec-185">`Trim` Yöntemlerin herhangi birine yönelik her çağrının yeni bir dize döndürdüğünü, ancak özgün iletiyi değiştirmediğini görebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-185">You can see that each call to any of the `Trim` methods returns a new string but doesn't change the original message.</span></span>
+    Bu örnek, dizeler ile çalışmaya yönelik birkaç önemli kavramı güçlendirir. Dizeleri işleyen yöntemler, değişiklikleri yerinde yapmak yerine yeni dize nesneleri döndürür. `Trim` metotlarından birine yapılan her çağrının yeni bir dize döndürdüğünü, ancak özgün iletiyi değiştirmediğini görebilirsiniz.
 
 
-    <span data-ttu-id="193ec-186">Bir dizeyle çalışmak için kullanılabilecek başka yöntemler vardır.</span><span class="sxs-lookup"><span data-stu-id="193ec-186">There are other methods available to work with a string.</span></span> <span data-ttu-id="193ec-187">Örneğin, büyük olasılıkla bir düzenleyicide veya Word işlemcisinde bir arama ve değiştirme komutu kullandınız.</span><span class="sxs-lookup"><span data-stu-id="193ec-187">For example, you've probably used a search and replace command in an editor or word processor before.</span></span> <span data-ttu-id="193ec-188">Yöntemi <xref:System.String.Replace%2A> , bir dizede benzer bir şey yapar.</span><span class="sxs-lookup"><span data-stu-id="193ec-188">The <xref:System.String.Replace%2A> method does something similar in a string.</span></span> <span data-ttu-id="193ec-189">Bir alt dizeyi arar ve farklı bir metinle değiştirir.</span><span class="sxs-lookup"><span data-stu-id="193ec-189">It searches for a substring and replaces it with different text.</span></span> <span data-ttu-id="193ec-190">Yöntemi iki parametre alır. \*\*\*\* <xref:System.String.Replace%2A></span><span class="sxs-lookup"><span data-stu-id="193ec-190">The <xref:System.String.Replace%2A> method takes two **parameters**.</span></span> <span data-ttu-id="193ec-191">Bunlar parantez arasındaki dizelerdir.</span><span class="sxs-lookup"><span data-stu-id="193ec-191">These are the strings between the parentheses.</span></span> <span data-ttu-id="193ec-192">İlk dize, aranacak metindir.</span><span class="sxs-lookup"><span data-stu-id="193ec-192">The first string is the text to search for.</span></span> <span data-ttu-id="193ec-193">İkinci dize, ile değiştirilecek metindir.</span><span class="sxs-lookup"><span data-stu-id="193ec-193">The second string is the text to replace it with.</span></span> <span data-ttu-id="193ec-194">Kendiniz deneyin.</span><span class="sxs-lookup"><span data-stu-id="193ec-194">Try it for yourself.</span></span> <span data-ttu-id="193ec-195">Bu kodu ekleyin.</span><span class="sxs-lookup"><span data-stu-id="193ec-195">Add this code.</span></span> <span data-ttu-id="193ec-196">Değişkenden sonra yazmaya `.Re` başladığınızda ipuçlarına bakmak için yazın: `sayHello`</span><span class="sxs-lookup"><span data-stu-id="193ec-196">Type it in to see the hints as you start typing `.Re` after the `sayHello` variable:</span></span>
+    Bir dizeyle çalışmak için kullanılabilecek başka yöntemler vardır. Örneğin, büyük olasılıkla bir düzenleyicide veya Word işlemcisinde bir arama ve değiştirme komutu kullandınız. <xref:System.String.Replace%2A> yöntemi bir dizedeki benzer bir şey yapar. Bir alt dizeyi arar ve farklı bir metinle değiştirir. <xref:System.String.Replace%2A> yöntemi iki **parametre**alır. Bunlar parantez arasındaki dizelerdir. İlk dize, aranacak metindir. İkinci dize, ile değiştirilecek metindir. Kendiniz deneyin. Bu kodu ekleyin. `sayHello` değişkenden sonra `.Re` yazmaya başladığınızda ipuçlarına bakmak için yazın:
 
 
     ```csharp
@@ -218,7 +218,7 @@ items:
     ```
 
 
-    <span data-ttu-id="193ec-197">Diğer iki yararlı yöntem, bir dizeyi tümüyle büyük veya küçük harf yapar.</span><span class="sxs-lookup"><span data-stu-id="193ec-197">Two other useful methods make a string ALL CAPS or all lower case.</span></span> <span data-ttu-id="193ec-198">Aşağıdaki kodu deneyin.</span><span class="sxs-lookup"><span data-stu-id="193ec-198">Try the following code.</span></span> <span data-ttu-id="193ec-199">**IntelliSense** 'in şunu yazmakta `To`başladığınızda ipuçları nasıl sağladığını görmek için yazın:</span><span class="sxs-lookup"><span data-stu-id="193ec-199">Type it in to see how **IntelliSense** provides hints as you start to type `To`:</span></span>
+    Diğer iki yararlı yöntem, bir dizeyi tümüyle büyük veya küçük harf yapar. Aşağıdaki kodu deneyin. **IntelliSense** 'in `To`yazarken nasıl ipuçları sağladığını görmek için yazın:
 
 
     ```csharp
@@ -232,11 +232,11 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="193ec-200">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="193ec-200">This online coding experience is in preview mode.</span></span> <span data-ttu-id="193ec-201">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="193ec-201">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="193ec-202">Dizeleri arama</span><span class="sxs-lookup"><span data-stu-id="193ec-202">Search strings</span></span>
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Dizeleri arama
   durationInMinutes: 10
   content: >
-    <span data-ttu-id="193ec-203">*Arama ve değiştirme* işleminin diğer bölümü bir dizedeki metni bulmasından oluşur.</span><span class="sxs-lookup"><span data-stu-id="193ec-203">The other part of a *search and replace* operation is to find text in a string.</span></span> <span data-ttu-id="193ec-204">Arama için <xref:System.String.Contains%2A> yöntemini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-204">You can use the  <xref:System.String.Contains%2A> method for searching.</span></span> <span data-ttu-id="193ec-205">Bir dize bunun içinde bir alt dize içerip içermeyeceğini söyler.</span><span class="sxs-lookup"><span data-stu-id="193ec-205">It tells you if a string contains a substring inside it.</span></span> <span data-ttu-id="193ec-206">Araştırmak <xref:System.String.Contains%2A>için aşağıdaki kodu deneyin:</span><span class="sxs-lookup"><span data-stu-id="193ec-206">Try the following code to explore <xref:System.String.Contains%2A>:</span></span>
+    *Arama ve değiştirme* işleminin diğer bölümü bir dizedeki metni bulmasından oluşur. Arama için <xref:System.String.Contains%2A> yöntemini kullanabilirsiniz. Bir dize bunun içinde bir alt dize içerip içermeyeceğini söyler. <xref:System.String.Contains%2A>araştırmak için aşağıdaki kodu deneyin:
 
 
     ```csharp
@@ -250,30 +250,30 @@ items:
     ```
 
 
-    <span data-ttu-id="193ec-207">Yöntemi, aradığınız dize bulunursa size söyleyen bir Boole değeri döndürür. \*\*\*\* <xref:System.String.Contains%2A></span><span class="sxs-lookup"><span data-stu-id="193ec-207">The <xref:System.String.Contains%2A> method returns a **boolean** value which tells you if the string you were searching for was found.</span></span> <span data-ttu-id="193ec-208">**Boole** değeri bir `true` veya bir `false` değer depolar.</span><span class="sxs-lookup"><span data-stu-id="193ec-208">A **boolean** stores either a `true` or a `false` value.</span></span> <span data-ttu-id="193ec-209">Daha sonraki bir derste **Boolean** değerler hakkında daha fazla bilgi edineceksiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-209">You'll learn more about **boolean** values in a later lesson.</span></span>
+    <xref:System.String.Contains%2A> yöntemi, aradığınız dize bulunursa size söyleyen bir **Boole** değeri döndürür. **Boolean** bir `true` veya `false` değeri depolar. Daha sonraki bir derste **Boolean** değerler hakkında daha fazla bilgi edineceksiniz.
 
 
-    <span data-ttu-id="193ec-210">***Sına***</span><span class="sxs-lookup"><span data-stu-id="193ec-210">***Challenge***</span></span>
+    ***Sına***
 
 
-    <span data-ttu-id="193ec-211">Benzer iki yöntem <xref:System.String.StartsWith%2A> vardır ve <xref:System.String.EndsWith%2A> aynı zamanda bir dizedeki alt dizeleri arar.</span><span class="sxs-lookup"><span data-stu-id="193ec-211">There are two similar methods, <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> that also search for sub-strings in a string.</span></span> <span data-ttu-id="193ec-212">Bu, dizenin başında veya sonunda bir alt dize bulur.</span><span class="sxs-lookup"><span data-stu-id="193ec-212">These find a substring at the beginning or the end of the string.</span></span> <span data-ttu-id="193ec-213">Önceki örneği yerine <xref:System.String.StartsWith%2A> <xref:System.String.EndsWith%2A>vekullanmak için değiştirmeyi deneyin. <xref:System.String.Contains%2A></span><span class="sxs-lookup"><span data-stu-id="193ec-213">Try to modify the previous sample to use <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> instead of <xref:System.String.Contains%2A>.</span></span> <span data-ttu-id="193ec-214">Bir dizenin başlangıcında "Siz" veya "güle" araması yapın.</span><span class="sxs-lookup"><span data-stu-id="193ec-214">Search for "You" or "goodbye" at the beginning of a string.</span></span> <span data-ttu-id="193ec-215">Bir dizenin sonunda "Merhaba" veya "güle" araması yapın.</span><span class="sxs-lookup"><span data-stu-id="193ec-215">Search for "hello" or "goodbye" at the end of a string.</span></span>
-
-
-    > [!NOTE]
-
-    > <span data-ttu-id="193ec-216">Dizenin sonundaki metni test ettiğinizde noktalarınızı izleyin.</span><span class="sxs-lookup"><span data-stu-id="193ec-216">Watch your punctuation when you test for the text at the end of the string.</span></span> <span data-ttu-id="193ec-217">Dize bir noktayla biterdiğinde, noktayla biten bir dizeyi denetlemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="193ec-217">If the string ends with a period, you must check for a string that ends with a period.</span></span>
-
-
-    <span data-ttu-id="193ec-218">"Siz" `true` ve "Merhaba" ile başlayıp, "güle" ile başlamak için false ve "hoşlanal" ile başlamak için yapmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="193ec-218">You should get `true` for starting with "You" and ending with "hello" and false for starting with or ending with "goodbye".</span></span>
+    Aynı zamanda bir dizedeki alt dizeleri de arayacak <xref:System.String.StartsWith%2A> ve <xref:System.String.EndsWith%2A> iki benzer yöntem vardır. Bu, dizenin başında veya sonunda bir alt dize bulur. Önceki örneği <xref:System.String.Contains%2A>yerine <xref:System.String.StartsWith%2A> ve <xref:System.String.EndsWith%2A> kullanacak şekilde değiştirmeyi deneyin. Bir dizenin başlangıcında "Siz" veya "güle" araması yapın. Bir dizenin sonunda "Merhaba" veya "güle" araması yapın.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="193ec-219">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="193ec-219">This online coding experience is in preview mode.</span></span> <span data-ttu-id="193ec-220">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="193ec-220">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="193ec-221">Sınama Tamam</span><span class="sxs-lookup"><span data-stu-id="193ec-221">Complete challenge</span></span>
+    > Dizenin sonundaki metni test ettiğinizde noktalarınızı izleyin. Dize bir noktayla biterdiğinde, noktayla biten bir dizeyi denetlemeniz gerekir.
+
+
+    "Siz" ile başlayıp "Merhaba" ile başlayıp "güle" ile başlamak için yanlış `true` almalısınız.
+
+
+    > [!NOTE]
+
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Sınama Tamam
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="193ec-222">Bunun gibi bir konuyla karşılaştınız mı?</span><span class="sxs-lookup"><span data-stu-id="193ec-222">Did you come up with something like this?</span></span>
+    Bunun gibi bir konuyla karşılaştınız mı?
 
 
     ```csharp
@@ -294,13 +294,13 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="193ec-223">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="193ec-223">This online coding experience is in preview mode.</span></span> <span data-ttu-id="193ec-224">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="193ec-224">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
 - content: >-
-    <span data-ttu-id="193ec-225">C# Öğreticiye "Merhaba C#" giriş sayfasını tamamladınız.</span><span class="sxs-lookup"><span data-stu-id="193ec-225">You've completed the "Hello C#" introduction to C# tutorial.</span></span> <span data-ttu-id="193ec-226">Sonraki etkileşimli öğreticiye başlamak için aşağıdaki bağlantıda **bulunan C# sayılara** tıklayabilir veya .NET Core SDK indirmek, makinenizde bir proje oluşturmak ve kodlamaya devam etmek için [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="193ec-226">You can click the **Numbers in C#** link below to start the next interactive tutorial, or you can visit the [.NET site](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="193ec-227">"Sonraki adımlar" bölümü, sizi bu öğreticilere geri getirir.</span><span class="sxs-lookup"><span data-stu-id="193ec-227">The "Next steps" section brings you back to these tutorials.</span></span>
+    C# Öğreticiye "Merhaba C#" giriş sayfasını tamamladınız. Sonraki etkileşimli öğreticiye başlamak için aşağıdaki bağlantıdan ** C# numaraları** seçebilirsiniz veya .NET Core SDK indirmek, makinenizde bir proje oluşturmak ve kodlamaya devam etmek için [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret edebilirsiniz. "Sonraki adımlar" bölümü, sizi bu öğreticilere geri getirir.
 
 
-    <span data-ttu-id="193ec-228">`string` Tür hakkında daha fazla bilgi için:</span><span class="sxs-lookup"><span data-stu-id="193ec-228">For further reading on the `string` type:</span></span>
+    `string` türü hakkında daha fazla bilgi için:
 
-    - <span data-ttu-id="193ec-229">[Dizeler hakkında](../../programming-guide/strings/index.md)Programlama Kılavuzu konusu. [ C# ](../../programming-guide/index.md)</span><span class="sxs-lookup"><span data-stu-id="193ec-229">[C# Programming Guide](../../programming-guide/index.md) topic on [strings](../../programming-guide/strings/index.md).</span></span>
+    - [Dizeler hakkında](../../programming-guide/strings/index.md)Programlama Kılavuzu konusu. [ C# ](../../programming-guide/index.md)
 
-    - <span data-ttu-id="193ec-230">[Dizelerle çalışma hakkında ipuçları](../../how-to/index.md#working-with-strings).</span><span class="sxs-lookup"><span data-stu-id="193ec-230">[How to tips on working with strings](../../how-to/index.md#working-with-strings).</span></span>
+    - [Dizelerle çalışma hakkında ipuçları](../../how-to/index.md#working-with-strings).

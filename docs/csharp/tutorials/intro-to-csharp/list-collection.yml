@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="df76b-101">Genel liste türünü kullanarak veri koleksiyonlarını yönetmeyi öğrenin</span><span class="sxs-lookup"><span data-stu-id="df76b-101">Learn to manage data collections using the generic list type</span></span>
+title: Genel liste türünü kullanarak veri koleksiyonlarını yönetmeyi öğrenin
 metadata:
   title: Veri koleksiyonları- C# etkileşimli öğreticiye giriş
   description: Bu öğreticide, etkileşimli olarak öğrenmek C# için tarayıcınızı kullanacaksınız. Kod yazar C# ve kodunuzu doğrudan tarayıcıda derleyip çalıştırmanın sonuçlarını görürsünüz.
@@ -9,20 +9,20 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: fb08cef284a016dd65c99a1efb0a661624a731f1
-  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+  ms.openlocfilehash: f7fd68120defbfcda6ac11e14bc749bf4d69c109
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/09/2019
-  ms.locfileid: "72179002"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969383"
 items:
 - durationInMinutes: 1
   content: >
-    <span data-ttu-id="df76b-105">Bu öğreticide, C# kodunuzu yazmak C# ve kodunuzu derleyip çalıştırmanın sonuçlarını görmek için tarayıcınızı kullanarak etkileşimli olarak öğretilir.</span><span class="sxs-lookup"><span data-stu-id="df76b-105">This tutorial teaches you C# interactively, using your browser to write C# code and see the results of compiling and running your code.</span></span> <span data-ttu-id="df76b-106">Koleksiyonlar ve diziler oluşturan, değiştiren ve keşfetmenize yönelik bir dizi ders içerir.</span><span class="sxs-lookup"><span data-stu-id="df76b-106">It contains a series of lessons that create, modify, and explore collections and arrays.</span></span>
-- title: <span data-ttu-id="df76b-107">Liste oluşturma</span><span class="sxs-lookup"><span data-stu-id="df76b-107">Create lists</span></span>
+    Bu öğreticide, C# kodunuzu yazmak C# ve kodunuzu derleyip çalıştırmanın sonuçlarını görmek için tarayıcınızı kullanarak etkileşimli olarak öğretilir. Koleksiyonlar ve diziler oluşturan, değiştiren ve keşfetmenize yönelik bir dizi ders içerir.
+- title: Liste oluşturma
   durationInMinutes: 2
   content: >
-    <span data-ttu-id="df76b-108">Etkileşimli pencerede aşağıdaki kodu çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="df76b-108">Run the following code in the interactive window.</span></span> <span data-ttu-id="df76b-109">Bunu yapmak için, etkileşimli pencereye aşağıdaki kod bloğunu yazın (`<name>` ' ı adınızla değiştirin) ve **Çalıştır** düğmesine tıklayın:</span><span class="sxs-lookup"><span data-stu-id="df76b-109">To do that, type the following code block in the interactive window (replace `<name>` with your name) and click the **Run** button:</span></span>
+    Etkileşimli pencerede aşağıdaki kodu çalıştırın. **Odak modunu girin** düğmesini seçin. Ardından, etkileşimli pencereye aşağıdaki kod bloğunu yazın (`<name>` adınızla değiştirin) ve **Çalıştır**' ı seçin:
 
 
     ```csharp
@@ -38,28 +38,28 @@ items:
     ```
 
 
-    <span data-ttu-id="df76b-110">Bunu ortamınızda çalıştırıyorsanız, bunun yerine [Yerel sürümün](arrays-and-collections.md) yönergelerini izlemelisiniz.</span><span class="sxs-lookup"><span data-stu-id="df76b-110">If you are running this on your environment, you should follow the instructions for the [local version](arrays-and-collections.md) instead.</span></span>
+    Bunu ortamınızda çalıştırıyorsanız, bunun yerine [Yerel sürümün](arrays-and-collections.md) yönergelerini izlemelisiniz.
 
 
-    <span data-ttu-id="df76b-111">Dizelerin bir listesini oluşturdunuz, bu listeye üç ad eklediniz ve adları tüm büyük harfler halinde yazdırdık.</span><span class="sxs-lookup"><span data-stu-id="df76b-111">You've created a list of strings, added three names to that list, and printed out the names in all CAPS.</span></span> <span data-ttu-id="df76b-112">Önceki öğreticilerde, listede döngü gerçekleştirmek için öğrenmiş olduğunuz kavramları kullanıyorsunuz.</span><span class="sxs-lookup"><span data-stu-id="df76b-112">You're using concepts that you've learned in earlier tutorials to loop through the list.</span></span>
+    Dizelerin bir listesini oluşturdunuz, bu listeye üç ad eklediniz ve adları tüm büyük harfler halinde yazdırdık. Önceki öğreticilerde, listede döngü gerçekleştirmek için öğrenmiş olduğunuz kavramları kullanıyorsunuz.
 
 
-    <span data-ttu-id="df76b-113">Adları görüntülenecek kod, [dize ilişkilendirme](../../language-reference/tokens/interpolated.md) özelliğini kullanır.</span><span class="sxs-lookup"><span data-stu-id="df76b-113">The code to display names makes use of the [string interpolation](../../language-reference/tokens/interpolated.md) feature.</span></span> <span data-ttu-id="df76b-114">@No__t-1 karakteriyle `string` ' dan önce, dize bildirimine C# kod ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="df76b-114">When you precede a `string` with the `$` character, you can embed C# code in the string declaration.</span></span> <span data-ttu-id="df76b-115">Gerçek dize, bu C# kodun oluşturduğu değerle değiştirir.</span><span class="sxs-lookup"><span data-stu-id="df76b-115">The actual string replaces that C# code with the value it generates.</span></span> <span data-ttu-id="df76b-116">Bu örnekte, <xref:System.String.ToUpper%2A?displayProperty=nameWithType> yöntemini çağırdığından, `{name.ToUpper()}` ' ı her bir adla değiştirir ve büyük harflere dönüştürülür.</span><span class="sxs-lookup"><span data-stu-id="df76b-116">In this example, it replaces the `{name.ToUpper()}` with each name, converted to capital letters, because you called the <xref:System.String.ToUpper%2A?displayProperty=nameWithType> method.</span></span>
+    Adları görüntülenecek kod, [dize ilişkilendirme](../../language-reference/tokens/interpolated.md) özelliğini kullanır. Bir `string` `$` karakteri ile önce kullandığınızda, C# kodu String bildiriminde ekleyebilirsiniz. Gerçek dize, bu C# kodun oluşturduğu değerle değiştirir. Bu örnekte, <xref:System.String.ToUpper%2A?displayProperty=nameWithType> yöntemini çağırdığı için `{name.ToUpper()}` her bir adla değiştirir ve büyük harflere dönüştürülür.
 
 
-    <span data-ttu-id="df76b-117">Araştırma devam edelim.</span><span class="sxs-lookup"><span data-stu-id="df76b-117">Let's keep exploring.</span></span>
+    Araştırma devam edelim.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="df76b-118">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="df76b-118">This online coding experience is in preview mode.</span></span> <span data-ttu-id="df76b-119">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="df76b-119">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="df76b-120">Liste içeriğini değiştirme</span><span class="sxs-lookup"><span data-stu-id="df76b-120">Modify list contents</span></span>
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Liste içeriğini değiştirme
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="df76b-121">Oluşturduğunuz koleksiyon <xref:System.Collections.Generic.List%601> türünü kullanır.</span><span class="sxs-lookup"><span data-stu-id="df76b-121">The collection you created uses the <xref:System.Collections.Generic.List%601> type.</span></span> <span data-ttu-id="df76b-122">Bu tür öğe dizilerini depolar.</span><span class="sxs-lookup"><span data-stu-id="df76b-122">This type stores sequences of elements.</span></span> <span data-ttu-id="df76b-123">Açılı ayraçlar arasındaki öğelerin türünü belirtirsiniz.</span><span class="sxs-lookup"><span data-stu-id="df76b-123">You specify the type of the elements between the angle brackets.</span></span>
+    Oluşturduğunuz koleksiyon <xref:System.Collections.Generic.List%601> türünü kullanır. Bu tür öğe dizilerini depolar. Açılı ayraçlar arasındaki öğelerin türünü belirtirsiniz.
 
 
-    <span data-ttu-id="df76b-124">Bu @no__t önemli bir yönü-0 türü, öğe eklemenize veya kaldırmanıza olanak tanıyan büyümeye veya küçülebilir.</span><span class="sxs-lookup"><span data-stu-id="df76b-124">One important aspect of this <xref:System.Collections.Generic.List%601> type is that it can grow or shrink, enabling you to add or remove elements.</span></span> <span data-ttu-id="df76b-125">İçeriğini görüntülendikten sonra içerikleri değiştirerek sonuçları görebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="df76b-125">You can see the results by modifying the contents after you've displayed its contents.</span></span> <span data-ttu-id="df76b-126">Zaten yazdığınız kodun altına aşağıdaki kodu ekleyin (içeriği yazdıran döngünün altında):</span><span class="sxs-lookup"><span data-stu-id="df76b-126">Add the following code below the code you've already written (below the loop that prints the contents):</span></span>
+    Bu <xref:System.Collections.Generic.List%601> türünün önemli bir yönü büyümenin veya küçülebileceği, böylece öğe eklemenize veya kaldırmanıza olanak tanır. İçeriğini görüntülendikten sonra içerikleri değiştirerek sonuçları görebilirsiniz. Zaten yazdığınız kodun altına aşağıdaki kodu ekleyin (içeriği yazdıran döngünün altında):
 
 
     ```csharp
@@ -81,10 +81,10 @@ items:
     ```
 
 
-    <span data-ttu-id="df76b-127">Listenin sonuna iki ad daha eklediniz.</span><span class="sxs-lookup"><span data-stu-id="df76b-127">You've added two more names to the end of the list.</span></span> <span data-ttu-id="df76b-128">Ayrıca bir tane de kaldırmış olursunuz.</span><span class="sxs-lookup"><span data-stu-id="df76b-128">You've also removed one as well.</span></span> <span data-ttu-id="df76b-129">Bu kod bloğunun çıktısı başlangıçtaki içerikleri gösterir, ardından boş bir satırı ve yeni içerikleri yazdırır.</span><span class="sxs-lookup"><span data-stu-id="df76b-129">The output from this block of code shows the initial contents, then prints a blank line and the new contents.</span></span>
+    Listenin sonuna iki ad daha eklediniz. Ayrıca bir tane de kaldırmış olursunuz. Bu kod bloğunun çıktısı başlangıçtaki içerikleri gösterir, ardından boş bir satırı ve yeni içerikleri yazdırır.
 
 
-    <span data-ttu-id="df76b-130">@No__t-0, tek tek öğeleri **dizine** göre de başvurmanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="df76b-130">The <xref:System.Collections.Generic.List%601> enables you to reference individual items by **index** as well.</span></span> <span data-ttu-id="df76b-131">Öğelere `[` ve `]` belirteçleri kullanarak erişirsiniz.</span><span class="sxs-lookup"><span data-stu-id="df76b-131">You access items using the `[` and `]` tokens.</span></span> <span data-ttu-id="df76b-132">Aşağıdaki kodu zaten yazdıklarınız altına ekleyin ve deneyin:</span><span class="sxs-lookup"><span data-stu-id="df76b-132">Add the following code below what you've already written and try it:</span></span>
+    <xref:System.Collections.Generic.List%601>, tek tek öğeleri **dizine** göre de başvurmanızı sağlar. Öğelere `[` ve `]` belirteçlerini kullanarak erişirsiniz. Aşağıdaki kodu zaten yazdıklarınız altına ekleyin ve deneyin:
 
 
     ```csharp
@@ -96,7 +96,7 @@ items:
     ```
 
 
-    <span data-ttu-id="df76b-133">Listenin sonuna kadar erişmenize izin verilmiyor.</span><span class="sxs-lookup"><span data-stu-id="df76b-133">You're not allowed to access past the end of the list.</span></span> <span data-ttu-id="df76b-134">Listenin <xref:System.Collections.Generic.List%601.Count%2A> özelliğini ne kadar süreyle kullandığını kontrol edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="df76b-134">You can check how long the list is using the <xref:System.Collections.Generic.List%601.Count%2A> property.</span></span> <span data-ttu-id="df76b-135">Denemek için aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="df76b-135">Add the following code to try it:</span></span>
+    Listenin sonuna kadar erişmenize izin verilmiyor. Listenin <xref:System.Collections.Generic.List%601.Count%2A> özelliğini ne kadar süreyle kullandığını kontrol edebilirsiniz. Denemek için aşağıdaki kodu ekleyin:
 
 
     ```csharp
@@ -106,16 +106,16 @@ items:
     ```
 
 
-    <span data-ttu-id="df76b-136">Sonuçları görmek için yeniden **Çalıştır** ' a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="df76b-136">Click **Run** again to see the results.</span></span> <span data-ttu-id="df76b-137">' C#De, dizinler 0 ' dan başlar, bu nedenle en büyük geçerli dizin listedeki öğe sayısından bir küçüktür.</span><span class="sxs-lookup"><span data-stu-id="df76b-137">In C#, indices start at 0, so the largest valid index is one less than the number of items in the list.</span></span>
+    Sonuçları görmek için yeniden **Çalıştır** ' ı seçin. ' C#De, dizinler 0 ' dan başlar, bu nedenle en büyük geçerli dizin listedeki öğe sayısından bir küçüktür.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="df76b-138">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="df76b-138">This online coding experience is in preview mode.</span></span> <span data-ttu-id="df76b-139">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="df76b-139">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="df76b-140">Arama ve sıralama listeleri</span><span class="sxs-lookup"><span data-stu-id="df76b-140">Search and sort lists</span></span>
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Arama ve sıralama listeleri
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="df76b-141">Örneklerimizde görece küçük listeler kullanılıyor, ancak uygulamalarınız genellikle binlerce numaralandırma olan çok sayıda öğesi olan listeler oluşturabilir.</span><span class="sxs-lookup"><span data-stu-id="df76b-141">Our samples use relatively small lists, but your applications may often create lists with many more elements, sometimes numbering in the thousands.</span></span> <span data-ttu-id="df76b-142">Bu daha büyük koleksiyonlardaki öğeleri bulmak için listede farklı öğeler için arama yapmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="df76b-142">To find elements in these larger collections, you need to search the list for different items.</span></span> <span data-ttu-id="df76b-143">@No__t-0 yöntemi bir öğe arar ve öğenin dizinini döndürür.</span><span class="sxs-lookup"><span data-stu-id="df76b-143">The <xref:System.Collections.Generic.List%601.IndexOf%2A> method searches for an item and returns the index of the item.</span></span> <span data-ttu-id="df76b-144">Nasıl çalıştığını görmek için deneyin.</span><span class="sxs-lookup"><span data-stu-id="df76b-144">Try it to see how it works.</span></span>  <span data-ttu-id="df76b-145">Şu ana kadar yazdıklarınız için aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="df76b-145">Add the following code below what you've written so far:</span></span>
+    Örneklerimizde görece küçük listeler kullanılıyor, ancak uygulamalarınız genellikle binlerce numaralandırma olan çok sayıda öğesi olan listeler oluşturabilir. Bu daha büyük koleksiyonlardaki öğeleri bulmak için listede farklı öğeler için arama yapmanız gerekir. <xref:System.Collections.Generic.List%601.IndexOf%2A> yöntemi bir öğe arar ve öğenin dizinini döndürür. Nasıl çalıştığını görmek için deneyin.  Şu ana kadar yazdıklarınız için aşağıdaki kodu ekleyin:
 
 
     ```csharp
@@ -130,10 +130,10 @@ items:
     ```
 
 
-    <span data-ttu-id="df76b-146">Listede bir öğe olup olmadığını bilmiyor olabilirsiniz, bu nedenle <xref:System.Collections.Generic.List%601.IndexOf%2A> tarafından döndürülen dizini her zaman denetlemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="df76b-146">You may not know if an item is in the list, so you should always check the index returned by <xref:System.Collections.Generic.List%601.IndexOf%2A>.</span></span> <span data-ttu-id="df76b-147">-1 ise, öğe bulunamadı.</span><span class="sxs-lookup"><span data-stu-id="df76b-147">If it is -1, the item was not found.</span></span>
+    Listede bir öğe olup olmadığını bilmiyor olabilirsiniz, bu nedenle <xref:System.Collections.Generic.List%601.IndexOf%2A>tarafından döndürülen dizini her zaman denetlemeniz gerekir. -1 ise, öğe bulunamadı.
 
 
-    <span data-ttu-id="df76b-148">Listenizdeki öğeler de sıralanmış olabilir.</span><span class="sxs-lookup"><span data-stu-id="df76b-148">The items in your list can be sorted as well.</span></span> <span data-ttu-id="df76b-149">@No__t-0 yöntemi listedeki tüm öğeleri normal sıralarına göre sıralar (dizeler söz konusu olduğunda alfabetik olarak).</span><span class="sxs-lookup"><span data-stu-id="df76b-149">The <xref:System.Collections.Generic.List%601.Sort%2A> method sorts all the items in the list in their normal order (alphabetically in the case of strings).</span></span> <span data-ttu-id="df76b-150">Bu kodu ekleyin ve yeniden çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="df76b-150">Add this code and run again:</span></span>
+    Listenizdeki öğeler de sıralanmış olabilir. <xref:System.Collections.Generic.List%601.Sort%2A> yöntemi, listedeki tüm öğeleri normal sıralarına göre sıralar (dizeler söz konusu olduğunda alfabetik olarak). Bu kodu ekleyin ve yeniden çalıştırın:
 
 
     ```csharp
@@ -151,11 +151,11 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="df76b-151">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="df76b-151">This online coding experience is in preview mode.</span></span> <span data-ttu-id="df76b-152">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="df76b-152">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="df76b-153">Diğer türlerin listeleri</span><span class="sxs-lookup"><span data-stu-id="df76b-153">Lists of other types</span></span>
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Diğer türlerin listeleri
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="df76b-154">Şu ana kadar listelerde `string` türü kullanıyorsunuz.</span><span class="sxs-lookup"><span data-stu-id="df76b-154">You've been using the `string` type in lists so far.</span></span> <span data-ttu-id="df76b-155">@No__t-0 ' i farklı bir tür kullanarak yapalim.</span><span class="sxs-lookup"><span data-stu-id="df76b-155">Let's make a <xref:System.Collections.Generic.List%601> using a different type.</span></span> <span data-ttu-id="df76b-156">Bir sayı kümesi oluşturalım.</span><span class="sxs-lookup"><span data-stu-id="df76b-156">Let's build a set of numbers.</span></span> <span data-ttu-id="df76b-157">Şimdiye kadar yazdığınız kodu silin ve aşağıdaki kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="df76b-157">Delete the code you wrote so far, and replace it with the following code:</span></span>
+    Şu ana kadar listelerde `string` türü kullanıyorsunuz. <xref:System.Collections.Generic.List%601> farklı bir tür kullanalım. Bir sayı kümesi oluşturalım. Şimdiye kadar yazdığınız kodu silin ve aşağıdaki kodla değiştirin:
 
 
     ```csharp
@@ -165,7 +165,7 @@ items:
     ```
 
 
-    <span data-ttu-id="df76b-158">Bu, tamsayıların bir listesini oluşturur ve ilk iki tamsayının değerini 1 değerine ayarlar.</span><span class="sxs-lookup"><span data-stu-id="df76b-158">That creates a list of integers, and sets the first two integers to the value 1.</span></span> <span data-ttu-id="df76b-159">*Fıbonaccı sırası*, sayı dizisi iki 1s ile başlar.</span><span class="sxs-lookup"><span data-stu-id="df76b-159">The *Fibonacci Sequence*, a sequence of numbers, starts with two 1s.</span></span> <span data-ttu-id="df76b-160">Her bir sonraki Fibonaccı numarası, önceki iki sayının toplamı alınarak bulunur.</span><span class="sxs-lookup"><span data-stu-id="df76b-160">Each next Fibonacci number is found by taking the sum of the previous two numbers.</span></span> <span data-ttu-id="df76b-161">Şu kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="df76b-161">Add this code:</span></span>
+    Bu, tamsayıların bir listesini oluşturur ve ilk iki tamsayının değerini 1 değerine ayarlar. *Fıbonaccı sırası*, sayı dizisi iki 1s ile başlar. Her bir sonraki Fibonaccı numarası, önceki iki sayının toplamı alınarak bulunur. Şu kodu ekleyin:
 
 
     ```csharp
@@ -183,25 +183,25 @@ items:
     ```
 
 
-    <span data-ttu-id="df76b-162">Sonuçları görmek için **Çalıştır** ' a basın;</span><span class="sxs-lookup"><span data-stu-id="df76b-162">Press **Run** to see the results;</span></span>
+    Sonuçları görmek için **Çalıştır** ' a basın;
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="df76b-163">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="df76b-163">This online coding experience is in preview mode.</span></span> <span data-ttu-id="df76b-164">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="df76b-164">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="df76b-165">Sına</span><span class="sxs-lookup"><span data-stu-id="df76b-165">Challenge</span></span>
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Sına
   durationInMinutes: 10
   content: >
-    <span data-ttu-id="df76b-166">Bu ve önceki derslerden bazılarını bir araya getirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="df76b-166">See if you can put together some of the concepts from this and earlier lessons.</span></span> <span data-ttu-id="df76b-167">Fibonaccı numaralarına en fazla ne kadar derlediğiniz hakkında ' yı genişletin.</span><span class="sxs-lookup"><span data-stu-id="df76b-167">Expand on what you've built so far with Fibonacci Numbers.</span></span> <span data-ttu-id="df76b-168">Dizideki ilk 20 sayıyı oluşturmak için kodu deneyin ve yazın.</span><span class="sxs-lookup"><span data-stu-id="df76b-168">Try and write the code to generate the first 20 numbers in the sequence.</span></span> <span data-ttu-id="df76b-169">(İpucu olarak, 20 fibonaccı numarası 6765 ' dir.)</span><span class="sxs-lookup"><span data-stu-id="df76b-169">(As a hint, the 20th Fibonacci number is 6765.)</span></span>
+    Bu ve önceki derslerden bazılarını bir araya getirebilirsiniz. Fibonaccı numaralarına en fazla ne kadar derlediğiniz hakkında ' yı genişletin. Dizideki ilk 20 sayıyı oluşturmak için kodu deneyin ve yazın. (İpucu olarak, 20 fibonaccı numarası 6765 ' dir.)
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="df76b-170">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="df76b-170">This online coding experience is in preview mode.</span></span> <span data-ttu-id="df76b-171">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="df76b-171">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="df76b-172">Sınama Tamam</span><span class="sxs-lookup"><span data-stu-id="df76b-172">Complete challenge</span></span>
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Sınama Tamam
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="df76b-173">Bunun gibi bir konuyla karşılaştınız mı?</span><span class="sxs-lookup"><span data-stu-id="df76b-173">Did you come up with something like this?</span></span>
+    Bunun gibi bir konuyla karşılaştınız mı?
 
 
     ```csharp
@@ -223,20 +223,20 @@ items:
     ```
 
 
-    <span data-ttu-id="df76b-174">Döngünün her tekrarında, listedeki son iki tamsayının yerine getiriyorsunuz ve bu değeri listeye ekliyor olursunuz.</span><span class="sxs-lookup"><span data-stu-id="df76b-174">With each iteration of the loop, you're taking the last two integers in the list, summing them, and adding that value to the list.</span></span> <span data-ttu-id="df76b-175">Döngü, listeye 20 öğe ekleyinceye kadar yinelenir.</span><span class="sxs-lookup"><span data-stu-id="df76b-175">The loop repeats until you've added 20 items to the list.</span></span>
+    Döngünün her tekrarında, listedeki son iki tamsayının yerine getiriyorsunuz ve bu değeri listeye ekliyor olursunuz. Döngü, listeye 20 öğe ekleyinceye kadar yinelenir.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="df76b-176">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="df76b-176">This online coding experience is in preview mode.</span></span> <span data-ttu-id="df76b-177">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="df76b-177">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
 - content: >-
-    <span data-ttu-id="df76b-178">Etkileşimli öğreticiyi listesini tamamladınız.</span><span class="sxs-lookup"><span data-stu-id="df76b-178">You've completed the list interactive tutorial.</span></span> <span data-ttu-id="df76b-179">Bu, C# etkileşimli öğreticiye son bakış niteliğindedir.</span><span class="sxs-lookup"><span data-stu-id="df76b-179">That's the final introduction to C# interactive tutorial.</span></span> <span data-ttu-id="df76b-180">.NET Core SDK indirmek için [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret edebilir, makinenizde bir proje oluşturabilir ve kodlamayı tutabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="df76b-180">You can visit the [.NET site](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="df76b-181">"Sonraki adımlar" bölümü, sizi bu öğreticilere geri getirir.</span><span class="sxs-lookup"><span data-stu-id="df76b-181">The "Next steps" section brings you back to these tutorials.</span></span>
+    Etkileşimli öğreticiyi listesini tamamladınız. Bu, C# etkileşimli öğreticiye son bakış niteliğindedir. .NET Core SDK indirmek için [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret edebilir, makinenizde bir proje oluşturabilir ve kodlamayı tutabilirsiniz. "Sonraki adımlar" bölümü, sizi bu öğreticilere geri getirir.
 
 
-    <span data-ttu-id="df76b-182">Aşağıdaki makalelerde [.net koleksiyonları](../../../standard/collections/index.md) hakkında daha fazla bilgi edinebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="df76b-182">You can learn more about [.NET collections](../../../standard/collections/index.md) in the following articles:</span></span>
+    Aşağıdaki makalelerde [.net koleksiyonları](../../../standard/collections/index.md) hakkında daha fazla bilgi edinebilirsiniz:
 
-    - [<span data-ttu-id="df76b-183">Koleksiyon türü seçme</span><span class="sxs-lookup"><span data-stu-id="df76b-183">Selecting a collection type</span></span>](../../../standard/collections/selecting-a-collection-class.md)
+    - [Koleksiyon türü seçme](../../../standard/collections/selecting-a-collection-class.md)
 
-    - [<span data-ttu-id="df76b-184">Yaygın olarak kullanılan koleksiyon türleri</span><span class="sxs-lookup"><span data-stu-id="df76b-184">Commonly used collection types</span></span>](../../../standard/collections/commonly-used-collection-types.md)
+    - [Yaygın olarak kullanılan koleksiyon türleri](../../../standard/collections/commonly-used-collection-types.md)
 
-    - [<span data-ttu-id="df76b-185">Genel Koleksiyonlar ne zaman kullanılır?</span><span class="sxs-lookup"><span data-stu-id="df76b-185">When to use generic collections</span></span>](../../../standard/collections/when-to-use-generic-collections.md)
+    - [Genel Koleksiyonlar ne zaman kullanılır?](../../../standard/collections/when-to-use-generic-collections.md)

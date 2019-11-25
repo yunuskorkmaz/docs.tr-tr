@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="aba6c-101">Dal ve döngü deyimleri ile koşullu mantık öğrenin</span><span class="sxs-lookup"><span data-stu-id="aba6c-101">Learn conditional logic with branch and loop statements</span></span>
+title: Dal ve döngü deyimleri ile koşullu mantık öğrenin
 metadata:
   title: Dallar ve döngüler- C# etkileşimli öğreticiye giriş
   description: Dallar ve döngüler hakkında bu öğreticide, etkileşimli olarak öğrenmek C# için tarayıcınızı kullanacaksınız. Kod yazacak C# ve kodunuzu doğrudan tarayıcıda derleyip çalıştırmanın sonuçlarını görürsünüz.
@@ -10,21 +10,21 @@ metadata:
   displayType: two-column
   interactive: csharp
   nextTutorialHref: list-collection.yml
-  nextTutorialTitle: <span data-ttu-id="aba6c-105">Liste koleksiyonu</span><span class="sxs-lookup"><span data-stu-id="aba6c-105">The list collection</span></span>
-  ms.openlocfilehash: 445017337663aea428af2f8dcd4027d716d05751
-  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+  nextTutorialTitle: Liste koleksiyonu
+  ms.openlocfilehash: ab709b6b30b5a173e2faf08b577e4d7a3d9a9034
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/09/2019
-  ms.locfileid: "72179878"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969422"
 items:
 - durationInMinutes: 1
   content: >
-    <span data-ttu-id="aba6c-106">Bu öğretici, değişkenleri inceleyen ve bu değişkenlere göre yürütme yolunu değiştiren bir kod yazmayı öğretir.</span><span class="sxs-lookup"><span data-stu-id="aba6c-106">This tutorial teaches you how to write code that examines variables and changes execution path based on those variables.</span></span> <span data-ttu-id="aba6c-107">Etkileşimli olarak yazmak C# ve kodunuzu derleyip çalıştırmanın sonuçlarını görmek için tarayıcınızı kullanacaksınız.</span><span class="sxs-lookup"><span data-stu-id="aba6c-107">You'll use your browser to write C# interactively and see the results of compiling and running your code.</span></span> <span data-ttu-id="aba6c-108">Bu öğreticide, ' de C#dallanma ve döngü yapılarını keşfeden oluşan bir dizi ders bulunur.</span><span class="sxs-lookup"><span data-stu-id="aba6c-108">This tutorial contains a series of lessons that explore branching and looping constructs in C#.</span></span> <span data-ttu-id="aba6c-109">Bu dersler, C# dilin temellerini öğretir.</span><span class="sxs-lookup"><span data-stu-id="aba6c-109">These lessons teach you the fundamentals of the C# language.</span></span>
-- title: <span data-ttu-id="aba6c-110">If ifadesini kullanarak kararlar alın</span><span class="sxs-lookup"><span data-stu-id="aba6c-110">Make decisions using the if statement</span></span>
+    Bu öğretici, değişkenleri inceleyen ve bu değişkenlere göre yürütme yolunu değiştiren bir kod yazmayı öğretir. Etkileşimli olarak yazmak C# ve kodunuzu derleyip çalıştırmanın sonuçlarını görmek için tarayıcınızı kullanacaksınız. Bu öğreticide, ' de C#dallanma ve döngü yapılarını keşfeden oluşan bir dizi ders bulunur. Bu dersler, C# dilin temellerini öğretir.
+- title: If ifadesini kullanarak kararlar alın
   durationInMinutes: 4
   content: >
-    <span data-ttu-id="aba6c-111">Etkileşimli pencerede aşağıdaki kodu çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="aba6c-111">Run the following code in the interactive window.</span></span> <span data-ttu-id="aba6c-112">Bunu yapmak için, etkileşimli pencereye aşağıdaki kod bloğunu yazın ve **Çalıştır** düğmesine tıklayın:</span><span class="sxs-lookup"><span data-stu-id="aba6c-112">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
+    Etkileşimli pencerede aşağıdaki kodu çalıştırın. **Odak modunu girin** düğmesini seçin. Ardından, etkileşimli pencereye aşağıdaki kod bloğunu yazın ve **Çalıştır**' ı seçin:
 
 
     ```csharp
@@ -38,10 +38,10 @@ items:
     ```
 
 
-    <span data-ttu-id="aba6c-113">Bunu ortamınızda çalıştırıyorsanız, bunun yerine [Yerel sürümün](branches-and-loops-local.md) yönergelerini izlemelisiniz.</span><span class="sxs-lookup"><span data-stu-id="aba6c-113">If you are running this on your environment, you should follow the instructions for the [local version](branches-and-loops-local.md) instead.</span></span>
+    Bunu ortamınızda çalıştırıyorsanız, bunun yerine [Yerel sürümün](branches-and-loops-local.md) yönergelerini izlemelisiniz.
 
 
-    <span data-ttu-id="aba6c-114">Toplamın 10 ' dan küçük olması için `b` ' ın bildirimini değiştirin:</span><span class="sxs-lookup"><span data-stu-id="aba6c-114">Modify the declaration of `b` so that the sum is less than 10:</span></span>
+    Toplamın 10 ' dan küçük olması için `b` bildirimini değiştirin:
 
 
     ```csharp
@@ -51,32 +51,32 @@ items:
     ```
 
 
-    <span data-ttu-id="aba6c-115">**Çalıştır** düğmesine tekrar tıklayın.</span><span class="sxs-lookup"><span data-stu-id="aba6c-115">Click the **Run** button again.</span></span> <span data-ttu-id="aba6c-116">Yanıt 10 ' dan az olduğu için hiçbir şey yazdırılmaz.</span><span class="sxs-lookup"><span data-stu-id="aba6c-116">Because the answer is less than 10, nothing is printed.</span></span> <span data-ttu-id="aba6c-117">Test ettiğiniz **koşul** false 'tur.</span><span class="sxs-lookup"><span data-stu-id="aba6c-117">The **condition** you're testing is false.</span></span> <span data-ttu-id="aba6c-118">Yalnızca bir `if` ifadesine ait olası dallardan birini yazdığınız için yürütülecek bir kodunuz yok: doğru dal.</span><span class="sxs-lookup"><span data-stu-id="aba6c-118">You don't have any code to execute because you've only written one of the possible branches for an `if` statement: the true branch.</span></span>
+    **Çalıştır** düğmesini yeniden seçin. Yanıt 10 ' dan az olduğu için hiçbir şey yazdırılmaz. Test ettiğiniz **koşul** false 'tur. Yalnızca bir `if` bildirimine ait olası dallardan birini yazdığınız için yürütmek için herhangi bir kodunuz yok: doğru dal.
 
 
     > [!TIP]
 
-    > <span data-ttu-id="aba6c-119">Keşfederken C# (veya herhangi bir programlama dilini), kod yazarken hata oluşturursunuz.</span><span class="sxs-lookup"><span data-stu-id="aba6c-119">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="aba6c-120">**Derleyici** bu hataları bulacak ve size rapor eder.</span><span class="sxs-lookup"><span data-stu-id="aba6c-120">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="aba6c-121">Çıktı hata iletileri içerdiğinde, nelerin düzeltileceğini görmek için örnek koda ve etkileşimli penceredeki koda yakından bakın.</span><span class="sxs-lookup"><span data-stu-id="aba6c-121">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
+    > Keşfederken C# (veya herhangi bir programlama dilini), kod yazarken hata oluşturursunuz. **Derleyici** bu hataları bulacak ve size rapor eder. Çıktı hata iletileri içerdiğinde, nelerin düzeltileceğini görmek için örnek koda ve etkileşimli penceredeki koda yakından bakın.
 
-    > <span data-ttu-id="aba6c-122">Bu alıştırma, C# kod yapısını öğrenmenize yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="aba6c-122">That exercise will help you learn the structure of C# code.</span></span>
-
-
-    <span data-ttu-id="aba6c-123">Bu ilk örnek `if` ve Boole türlerinin gücünü gösterir.</span><span class="sxs-lookup"><span data-stu-id="aba6c-123">This first sample shows the power of `if` and boolean types.</span></span> <span data-ttu-id="aba6c-124">*Boole* değeri iki değerden birine sahip olabilir: `true` veya `false`.</span><span class="sxs-lookup"><span data-stu-id="aba6c-124">A *boolean* is a variable that can have one of two values: `true` or `false`.</span></span> <span data-ttu-id="aba6c-125">C#Boole değişkenleri için `bool` özel türünü tanımlar.</span><span class="sxs-lookup"><span data-stu-id="aba6c-125">C# defines a special type, `bool` for boolean variables.</span></span> <span data-ttu-id="aba6c-126">@No__t-0 ifadesinde, bir `bool` değeri kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="aba6c-126">The `if` statement checks the value of a `bool`.</span></span> <span data-ttu-id="aba6c-127">Değer `true` olduğunda, `if` ' i izleyen ifade yürütülür.</span><span class="sxs-lookup"><span data-stu-id="aba6c-127">When the value is `true`, the statement following the `if` executes.</span></span> <span data-ttu-id="aba6c-128">Aksi takdirde, atlanır.</span><span class="sxs-lookup"><span data-stu-id="aba6c-128">Otherwise, it is skipped.</span></span>
+    > Bu alıştırma, C# kod yapısını öğrenmenize yardımcı olur.
 
 
-    <span data-ttu-id="aba6c-129">Bu koşullara göre koşulları denetleme ve deyimleri yürütme işlemi çok güçlüdür.</span><span class="sxs-lookup"><span data-stu-id="aba6c-129">This process of checking conditions and executing statements based on those conditions is very powerful.</span></span> <span data-ttu-id="aba6c-130">Daha fazlasını inceleyelim.</span><span class="sxs-lookup"><span data-stu-id="aba6c-130">Let's explore more.</span></span>
+    Bu ilk örnekte `if` ve Boole türlerinin gücü gösterilmektedir. *Boole* değeri iki değerden birine sahip olabilir: `true` veya `false`. C#Boole değişkenleri için `bool` özel bir tür tanımlar. `if` bildiri bir `bool`değerini denetler. Değer `true`olduğunda, `if` izleyen ifade yürütülür. Aksi takdirde, atlanır.
+
+
+    Bu koşullara göre koşulları denetleme ve deyimleri yürütme işlemi çok güçlüdür. Daha fazlasını inceleyelim.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="aba6c-131">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="aba6c-131">This online coding experience is in preview mode.</span></span> <span data-ttu-id="aba6c-132">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="aba6c-132">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="aba6c-133">Eğer ve başka bir birlikte çalışır yap</span><span class="sxs-lookup"><span data-stu-id="aba6c-133">Make if and else work together</span></span>
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Eğer ve başka bir birlikte çalışır yap
   durationInMinutes: 10
-  content: "\n<span data-ttu-id=\"aba6c-134\">Doğru ve yanlış dallarda farklı kodu yürütmek için, koşul yanlış olduğunda yürütülen bir `else` dalı oluşturursunuz.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-134\">To execute different code in both the true and false branches, you create an `else` branch that executes when the condition is false.</span></span> <span data-ttu-id=\"aba6c-135\">Şunu deneyin:</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-135\">Try this:</span></span>\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\n<span data-ttu-id=\"aba6c-136\">@No__t-0 anahtar sözcüğünü izleyen ifade yalnızca test edilen koşul `false` olduğunda yürütülür.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-136\">The statement following the `else` keyword executes only when the condition being tested is `false`.</span></span> <span data-ttu-id=\"aba6c-137\">@No__t-0 ve `else` ' i birleştirmek, Boolean koşullara ihtiyacınız olan tüm gücü sağlar.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-137\">Combining `if` and `else` with boolean conditions provides all the power you need.</span></span>\n\n> [!IMPORTANT]\n> <span data-ttu-id=\"aba6c-138\">@No__t-0 ve `else` deyimlerinin altındaki girintileme insan okuyucular içindir.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-138\">The indentation under the `if` and `else` statements is for human readers.</span></span>\n> <span data-ttu-id=\"aba6c-139\">Dil C# , girintileme veya boşluk olarak kabul etmez.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-139\">The C# language doesn't treat indentation or white space as significant.</span></span>\n> <span data-ttu-id=\"aba6c-140\">@No__t-0 veya `else` anahtar sözcüğünü izleyen ifade, koşula bağlı olarak yürütülür.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-140\">The statement following the `if` or `else` keyword will be executed based on the condition.</span></span> <span data-ttu-id=\"aba6c-141\">Bu öğreticideki tüm örnekler, ifadelerin denetim akışına göre satırları girintilemek için ortak bir uygulama izler.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-141\">All the samples in this tutorial follow a common practice to indent lines based on the control flow of statements.</span></span>\n\n<span data-ttu-id=\"aba6c-142\">Girintileme önemli olmadığından, çok sayıda deyimin koşullu olarak yürütülen bloğun bir parçası olmasını istediğiniz zaman göstermek için `{` ve `}` ' i kullanmanız gerekir.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-142\">Because indentation is not significant, you need to use `{` and `}` to indicate when you want more than one statement to be part of the block that executes conditionally.</span></span> <span data-ttu-id=\"aba6c-143\">C#programcılar genellikle bu ayraçları tüm `if` ve `else` yan tümcelerinde kullanır.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-143\">C# programmers typically use those braces on all `if` and `else` clauses.</span></span> <span data-ttu-id=\"aba6c-144\">Aşağıdaki örnek, yeni oluşturduğunuz şeydir.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-144\">The following example is the same as what you just created.</span></span> <span data-ttu-id=\"aba6c-145\">Deneyin.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-145\">Try it.</span></span>\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> <span data-ttu-id=\"aba6c-146\">Bu öğreticinin geri kalanında, kod örnekleri, kabul edilen uygulamaları takip eden ayraçları içerir.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-146\">Through the rest of this tutorial, the code samples all include the braces, following accepted practices.</span></span>\n\n<span data-ttu-id=\"aba6c-147\">Daha karmaşık koşulları test edebilirsiniz:</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-147\">You can test more complicated conditions:</span></span>\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\n<span data-ttu-id=\"aba6c-148\">@No__t-0 simgesi *eşitlik*için sınar.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-148\">The `==` symbol tests for *equality*.</span></span> <span data-ttu-id=\"aba6c-149\">@No__t-0 ' ı kullanmak, `a = 5` ' de gördüğünüz atamanın testini atamayı ayırır.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-149\">Using `==` distinguishes the test for equality from assignment, which you saw in `a = 5`.</span></span>\n\n<span data-ttu-id=\"aba6c-150\">@No__t-0 \"ve\" temsil eder.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-150\">The `&&` represents \"and\".</span></span> <span data-ttu-id=\"aba6c-151\">Doğru dalda deyimin yürütülmesi için her iki koşulun de true olması gerektiği anlamına gelir.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-151\">It means both conditions must be true to execute the statement in the true branch.</span></span>  <span data-ttu-id=\"aba6c-152\">Bu örnekler Ayrıca, `{` ve `}` ' de yer alan her bir koşullu dalda birden çok deyim olduğunu gösterir.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-152\">These examples also show that you can have multiple statements in each conditional branch, provided you enclose them in `{` and `}`.</span></span>\n\n<span data-ttu-id=\"aba6c-153\">Ayrıca, \"veya\" öğesini göstermek için `||` kullanabilirsiniz:</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-153\">You can also use  `||` to represent \"or\":</span></span>\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\n<span data-ttu-id=\"aba6c-154\">@No__t-0, `b` ve `c` değerlerini değiştirip `&&` ile `||` arasında geçiş yapın.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-154\">Modify the values of `a`, `b`, and `c` and switch between `&&` and `||` to explore.</span></span> <span data-ttu-id=\"aba6c-155\">@No__t-0 ve `||` işleçlerinin nasıl çalıştığını daha iyi anlayabilirsiniz.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-155\">You'll gain more understanding of how the `&&` and `||` operators work.</span></span>\n\n> [!NOTE]\n> <span data-ttu-id=\"aba6c-156\">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-156\">This online coding experience is in preview mode.</span></span> <span data-ttu-id=\"aba6c-157\">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class=\"sxs-lookup\"><span data-stu-id=\"aba6c-157\">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>\n"
-- title: <span data-ttu-id="aba6c-158">İşlemleri yinelemek için döngüleri kullanma</span><span class="sxs-lookup"><span data-stu-id="aba6c-158">Use loops to repeat operations</span></span>
+  content: "\nDoğru ve yanlış dallarda farklı kodu yürütmek için, koşul yanlış olduğunda yürütülen bir `else` dalı oluşturun. Şunu deneyin:\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\n`else` anahtar sözcüğünü izleyen ifade, yalnızca test edilen koşul `false`olduğunda yürütülür. `if` ve `else` Boole koşullarına göre birleştirmek, ihtiyacınız olan tüm gücü sağlar.\n\n> [!IMPORTANT]\n> `if` ve `else` deyimlerinin altındaki girintileme insan okuyucular içindir.\n> Dil C# , girintileme veya boşluk olarak kabul etmez.\n> `if` veya `else` anahtar sözcüğünü izleyen ifade, koşula bağlı olarak yürütülür. Bu öğreticideki tüm örnekler, ifadelerin denetim akışına göre satırları girintilemek için ortak bir uygulama izler.\n\nGirintileme önemli olmadığından, çok sayıda deyimin koşullu olarak yürütülen bloğun bir parçası olmasını istediğiniz zaman göstermek için `{` ve `}` kullanmanız gerekir. C#programcılar genellikle bu ayraçları tüm `if` ve `else` yan tümcelerinde kullanır. Aşağıdaki örnek, yeni oluşturduğunuz şeydir. Deneyin.\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> Bu öğreticinin geri kalanında, kod örnekleri, kabul edilen uygulamaları takip eden ayraçları içerir.\n\nDaha karmaşık koşulları test edebilirsiniz:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\n*Eşitlik*için `==` sembol testi. `==` kullanmak, `a = 5`' de gördüğünüz sınav için testi birbirinden ayırır.\n\n`&&` \"ve\" temsil eder. Doğru dalda deyimin yürütülmesi için her iki koşulun de true olması gerektiği anlamına gelir.  Bu örnekler Ayrıca, `{` ve `}`içine almanız kaydıyla, her bir koşullu dalda birden çok deyim olduğunu gösterir.\n\nAyrıca, \"veya\" öğesini göstermek için `||` de kullanabilirsiniz:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\n`a`, `b`ve `c` değerlerini değiştirip `&&` ile `||` arasında geçiş yapın. `&&` ve `||` işleçlerinin nasıl çalıştığını daha iyi anlayabilirsiniz.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.\n"
+- title: İşlemleri yinelemek için döngüleri kullanma
   durationInMinutes: 6
   content: >
-    <span data-ttu-id="aba6c-159">Daha büyük programlar oluşturmak için başka bir önemli kavram **döngülere**sahiptir.</span><span class="sxs-lookup"><span data-stu-id="aba6c-159">Another important concept to create larger programs is **loops**.</span></span> <span data-ttu-id="aba6c-160">Birden çok kez yürütülmesini istediğiniz deyimleri yinelemek için döngüleri kullanacaksınız.</span><span class="sxs-lookup"><span data-stu-id="aba6c-160">You'll use loops to repeat statements that you want executed more than once.</span></span> <span data-ttu-id="aba6c-161">Etkileşimli pencerede şu kodu deneyin:</span><span class="sxs-lookup"><span data-stu-id="aba6c-161">Try this code in the interactive window:</span></span>
+    Daha büyük programlar oluşturmak için başka bir önemli kavram **döngülere**sahiptir. Birden çok kez yürütülmesini istediğiniz deyimleri yinelemek için döngüleri kullanacaksınız. Etkileşimli pencerede şu kodu deneyin:
 
 
     ```csharp
@@ -93,18 +93,18 @@ items:
     ```
 
 
-    <span data-ttu-id="aba6c-162">@No__t-0 ifadesinde bir koşul denetlenir ve `while` ' i izleyen ifade yürütülür.</span><span class="sxs-lookup"><span data-stu-id="aba6c-162">The `while` statement checks a condition and executes the statement following the `while`.</span></span> <span data-ttu-id="aba6c-163">Koşul false olana kadar koşulu denetlemeyi ve bu deyimleri yürütmeyi tekrarlayacak.</span><span class="sxs-lookup"><span data-stu-id="aba6c-163">It will repeat checking the condition and executing those statements until the condition is false.</span></span>
+    `while` bildiri bir koşulu denetler ve `while`takip eden deyimden yürütülür. Koşul false olana kadar koşulu denetlemeyi ve bu deyimleri yürütmeyi tekrarlayacak.
 
 
-    <span data-ttu-id="aba6c-164">Bu örnekte başka bir yeni işleç vardır.</span><span class="sxs-lookup"><span data-stu-id="aba6c-164">There's one other new operator in this example.</span></span> <span data-ttu-id="aba6c-165">@No__t-1 değişkeninden sonra `++` **artım** işleçtir.</span><span class="sxs-lookup"><span data-stu-id="aba6c-165">The `++` after the `counter` variable is the **increment** operator.</span></span> <span data-ttu-id="aba6c-166">Sayaç değerine 1 ekler ve bu değeri sayaç değişkeninde depolar.</span><span class="sxs-lookup"><span data-stu-id="aba6c-166">It adds 1 to the value of counter, and stores that value in the counter variable.</span></span>
+    Bu örnekte başka bir yeni işleç vardır. `counter` değişkenden sonra `++` **artırma** işleçtir. Sayaç değerine 1 ekler ve bu değeri sayaç değişkeninde depolar.
 
 
     > [!IMPORTANT]
 
-    > <span data-ttu-id="aba6c-167">Kodu yürüttüğünüzde `while` döngü koşulunun false olarak geçdiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="aba6c-167">Make sure that the `while` loop condition does switch to false as you execute the code.</span></span> <span data-ttu-id="aba6c-168">Aksi takdirde, programınızın hiç bitmediğini **sonsuz bir döngü** oluşturursunuz.</span><span class="sxs-lookup"><span data-stu-id="aba6c-168">Otherwise, you create an **infinite loop** where your program never ends.</span></span> <span data-ttu-id="aba6c-169">Kodunuzu çalıştıran altyapının zaman aşımına uğradığından ve programınızda hiçbir çıkış göreceğinden, bunu gösterelim.</span><span class="sxs-lookup"><span data-stu-id="aba6c-169">Let's not demonstrate that, because the engine that runs your code will time out and you'll see no output from your program.</span></span>
+    > Kodu yürüttüğünüzde `while` Loop koşulunun false olarak geçdiğinizden emin olun. Aksi takdirde, programınızın hiç bitmediğini **sonsuz bir döngü** oluşturursunuz. Kodunuzu çalıştıran altyapının zaman aşımına uğradığından ve programınızda hiçbir çıkış göreceğinden, bunu gösterelim.
 
 
-    <span data-ttu-id="aba6c-170">@No__t-0 döngüsü, `while` ' den sonra kodu yürütmeden önce koşulu sınar.</span><span class="sxs-lookup"><span data-stu-id="aba6c-170">The `while` loop tests the condition before executing the code following the `while`.</span></span> <span data-ttu-id="aba6c-171">@No__t-0... `while` döngüsü önce kodu yürütür ve sonra koşulu kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="aba6c-171">The `do` ... `while` loop executes the code first, and then checks the condition.</span></span> <span data-ttu-id="aba6c-172">Şöyle görünür:</span><span class="sxs-lookup"><span data-stu-id="aba6c-172">It looks like this:</span></span>
+    `while` döngüsü, `while`takip eden kodu yürütmeden önce koşulu sınar. `do`... `while` döngüsü önce kodu yürütür ve sonra koşulu kontrol eder. Şöyle görünür:
 
 
     ```csharp
@@ -121,19 +121,19 @@ items:
     ```
 
 
-    <span data-ttu-id="aba6c-173">Bu `do` döngüsü ve önceki `while` döngüsü aynı şekilde çalışır.</span><span class="sxs-lookup"><span data-stu-id="aba6c-173">This `do` loop and the earlier `while` loop work the same.</span></span>
+    Bu `do` döngüsü ve önceki `while` döngüsü aynı şekilde çalışır.
 
 
-    <span data-ttu-id="aba6c-174">Bir son döngü ifadesine geçelim.</span><span class="sxs-lookup"><span data-stu-id="aba6c-174">Let's move on to one last loop statement.</span></span>
+    Bir son döngü ifadesine geçelim.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="aba6c-175">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="aba6c-175">This online coding experience is in preview mode.</span></span> <span data-ttu-id="aba6c-176">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="aba6c-176">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="aba6c-177">For döngüsü ile çalışma</span><span class="sxs-lookup"><span data-stu-id="aba6c-177">Work with the for loop</span></span>
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: For döngüsü ile çalışma
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="aba6c-178">C# Kodda göreceğiniz diğer bir yaygın döngü açıklaması `for` döngüsüdür.</span><span class="sxs-lookup"><span data-stu-id="aba6c-178">Another common loop statement that you'll see in C# code is the `for` loop.</span></span> <span data-ttu-id="aba6c-179">Etkileşimli pencerede şu kodu deneyin:</span><span class="sxs-lookup"><span data-stu-id="aba6c-179">Try this code in the interactive window:</span></span>
+    C# Kodda göreceğiniz diğer bir yaygın döngü bildirisi `for` döngüdür. Etkileşimli pencerede şu kodu deneyin:
 
 
     ```csharp
@@ -147,55 +147,55 @@ items:
     ```
 
 
-    <span data-ttu-id="aba6c-180">Bu, `while` döngüsü ile aynı çalışmayı ve zaten kullandığınız `do` döngüsünü yapar.</span><span class="sxs-lookup"><span data-stu-id="aba6c-180">This does the same work as the `while` loop and the `do` loop you've already used.</span></span> <span data-ttu-id="aba6c-181">@No__t-0 ifadesinde nasıl çalıştığını denetleyen üç bölüm vardır.</span><span class="sxs-lookup"><span data-stu-id="aba6c-181">The `for` statement has three parts that control how it works.</span></span>
+    Bu, `while` döngüsüyle aynı çalışmayı ve zaten kullandığınız `do` döngüsünü yapar. `for` deyimin nasıl çalıştığını denetleyen üç bölümü vardır.
 
 
-    <span data-ttu-id="aba6c-182">İlk bölüm, **for başlatıcıdır**: `int counter = 0;`, `counter` ' nin döngü değişkeni olduğunu bildirir ve ilk değerini `0` olarak ayarlar.</span><span class="sxs-lookup"><span data-stu-id="aba6c-182">The first part is the **for initializer**: `int counter = 0;` declares that `counter` is the loop variable, and sets its initial value to `0`.</span></span>
+    İlk bölüm **for başlatıcıdır**: `int counter = 0;` `counter` döngü değişkeni olduğunu bildirir ve başlangıç değerini `0`olarak ayarlar.
 
 
-    <span data-ttu-id="aba6c-183">Orta kısım **için**: `counter < 10`, sayaç değeri 10 ' dan az olduğu sürece bu @no__t 2 döngüsünün yürütülmeye devam ettiğini bildirir.</span><span class="sxs-lookup"><span data-stu-id="aba6c-183">The middle part is the **for condition**: `counter < 10` declares that this `for` loop continues to execute as long as the value of counter is less than 10.</span></span>
+    Orta kısım **için olan durumdur**: `counter < 10` sayaç değeri 10 ' dan az olduğu sürece bu `for` döngüsünün yürütülmeye devam ettiğini bildirir.
 
 
-    <span data-ttu-id="aba6c-184">Son bölüm **Yineleyici için**: `counter++`, `for` ifadesiyle sonra blok yürütüldükten sonra döngü değişkeninin nasıl değiştirileceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="aba6c-184">The final part is the **for iterator**: `counter++` specifies how to modify the loop variable after executing the block following the `for` statement.</span></span> <span data-ttu-id="aba6c-185">Burada, blok her yürütüldüğünde `counter` ' ı 1 ' in artırılabilmelidir.</span><span class="sxs-lookup"><span data-stu-id="aba6c-185">Here, it specifies that `counter` should be incremented by 1 each time the block executes.</span></span>
+    Son bölüm **Yineleyici için**: `counter++` `for` deyimden sonra blok yürütüldükten sonra döngü değişkeninin nasıl değiştirileceğini belirtir. Burada, blok her çalıştırıldığında `counter` 1 ' in artırılabilmelidir.
 
 
-    <span data-ttu-id="aba6c-186">Bunlarla deneyin.</span><span class="sxs-lookup"><span data-stu-id="aba6c-186">Experiment with these yourself.</span></span> <span data-ttu-id="aba6c-187">Aşağıdakilerin her birini deneyin:</span><span class="sxs-lookup"><span data-stu-id="aba6c-187">Try each of the following:</span></span>
+    Bunlarla deneyin. Aşağıdakilerin her birini deneyin:
 
 
-    - <span data-ttu-id="aba6c-188">Başlatıcıyı farklı bir değerle başlayacak şekilde değiştirin.</span><span class="sxs-lookup"><span data-stu-id="aba6c-188">Change the initializer to start at a different value.</span></span>
+    - Başlatıcıyı farklı bir değerle başlayacak şekilde değiştirin.
 
-    - <span data-ttu-id="aba6c-189">Koşulu, farklı bir değerde durdurulacak şekilde değiştirin.</span><span class="sxs-lookup"><span data-stu-id="aba6c-189">Change the condition to stop at a different value.</span></span>
+    - Koşulu, farklı bir değerde durdurulacak şekilde değiştirin.
 
 
-    <span data-ttu-id="aba6c-190">İşiniz bittiğinde, öğrendiklerinizi kullanmak için kendinize bir kod yazmak üzere ilerlim.</span><span class="sxs-lookup"><span data-stu-id="aba6c-190">When you're done, let's move on to write some code yourself to use what you've learned.</span></span>
+    İşiniz bittiğinde, öğrendiklerinizi kullanmak için kendinize bir kod yazmak üzere ilerlim.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="aba6c-191">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="aba6c-191">This online coding experience is in preview mode.</span></span> <span data-ttu-id="aba6c-192">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="aba6c-192">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="aba6c-193">Dalları ve döngüleri birleştirme</span><span class="sxs-lookup"><span data-stu-id="aba6c-193">Combine branches and loops</span></span>
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Dalları ve döngüleri birleştirme
   durationInMinutes: 12
   content: >
-    <span data-ttu-id="aba6c-194">@No__t-0 ifadesini ve bu C# dilin döngü yapılarını gördüğünüze göre, 3 ' e bölünebilen 1 ile 20 arasındaki C# tüm tamsayıların toplamını bulmak için kod yazıp yazbileceğinizi inceleyin.</span><span class="sxs-lookup"><span data-stu-id="aba6c-194">Now that you've seen the `if` statement and the looping constructs in the C# language, see if you can write C# code to find the sum of all integers 1 through 20 that are divisible by 3.</span></span>  <span data-ttu-id="aba6c-195">İşte birkaç ipucu:</span><span class="sxs-lookup"><span data-stu-id="aba6c-195">Here are a few hints:</span></span>
+    Artık `if` ifadesini ve bu C# dilin döngü yapılarını gördüğünüze göre, 3 ' e bölünebilen 1 ile 20 C# arasındaki tüm tamsayıların toplamını bulmak için kod yazıp yazbileceğinizi inceleyin.  İşte birkaç ipucu:
 
 
-    - <span data-ttu-id="aba6c-196">@No__t-0 işleci, bir bölme işleminin geri kalanını sağlar.</span><span class="sxs-lookup"><span data-stu-id="aba6c-196">The `%` operator gives you the remainder of a division operation.</span></span>
+    - `%` işleci, bir bölme işleminin kalanını sağlar.
 
-    - <span data-ttu-id="aba6c-197">@No__t-0 ifadesinde, bir sayının toplamın bir parçası olup olmadığını görmek için koşul sağlanır.</span><span class="sxs-lookup"><span data-stu-id="aba6c-197">The `if` statement gives you the condition to see if a number should be part of the sum.</span></span>
+    - `if` ifade, bir sayının toplamın bir parçası olup olmadığını görmek için koşul sağlar.
 
-    - <span data-ttu-id="aba6c-198">@No__t-0 döngüsü, 1 ile 20 arasındaki tüm sayılar için bir dizi adımı yinelemenize yardımcı olabilir.</span><span class="sxs-lookup"><span data-stu-id="aba6c-198">The `for` loop can help you repeat a series of steps for all the numbers 1 through 20.</span></span>
+    - `for` döngüsü, 1 ile 20 arasındaki tüm sayılar için bir dizi adımı yinelemenize yardımcı olabilir.
 
 
-    <span data-ttu-id="aba6c-199">Kendiniz deneyin.</span><span class="sxs-lookup"><span data-stu-id="aba6c-199">Try it yourself.</span></span> <span data-ttu-id="aba6c-200">Sonra nasıl yapıldığını kontrol edin.</span><span class="sxs-lookup"><span data-stu-id="aba6c-200">Then check how you did.</span></span> <span data-ttu-id="aba6c-201">İpucu olarak bir yanıt için 63 almalısınız.</span><span class="sxs-lookup"><span data-stu-id="aba6c-201">As a hint, you should get 63 for an answer.</span></span>
+    Kendiniz deneyin. Sonra nasıl yapıldığını kontrol edin. İpucu olarak bir yanıt için 63 almalısınız.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="aba6c-202">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="aba6c-202">This online coding experience is in preview mode.</span></span> <span data-ttu-id="aba6c-203">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="aba6c-203">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="aba6c-204">Sınama Tamam</span><span class="sxs-lookup"><span data-stu-id="aba6c-204">Complete challenge</span></span>
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Sınama Tamam
   durationInMinutes: 1
   content: >
-    <span data-ttu-id="aba6c-205">Bunun gibi bir konuyla karşılaştınız mı?</span><span class="sxs-lookup"><span data-stu-id="aba6c-205">Did you come up with something like this?</span></span>
+    Bunun gibi bir konuyla karşılaştınız mı?
 
 
     ```csharp
@@ -218,19 +218,6 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="aba6c-206">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="aba6c-206">This online coding experience is in preview mode.</span></span> <span data-ttu-id="aba6c-207">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="aba6c-207">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="aba6c-208">Tebrikler!</span><span class="sxs-lookup"><span data-stu-id="aba6c-208">Congratulations!</span></span>
-  content: >-
-    <span data-ttu-id="aba6c-209">"Dallar ve döngüler" Etkileşimli öğreticisini tamamladınız.</span><span class="sxs-lookup"><span data-stu-id="aba6c-209">You've completed the "branches and loops" interactive tutorial.</span></span> <span data-ttu-id="aba6c-210">Sonraki etkileşimli öğreticiye başlamak için aşağıdaki **liste koleksiyonu** bağlantısına tıklayabilir veya [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret ederek .NET Core SDK indirebilir, makinenizde bir proje oluşturabilir ve kodlamadan haberdar olabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="aba6c-210">You can click the **list collection** link below to start the next interactive tutorial, or you can visit the [.NET site](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="aba6c-211">"Sonraki adımlar" bölümü, sizi bu öğreticilere geri getirir.</span><span class="sxs-lookup"><span data-stu-id="aba6c-211">The "Next steps" section brings you back to these tutorials.</span></span>
-
-
-    <span data-ttu-id="aba6c-212">Bu kavramlar hakkında daha fazla bilgi için aşağıdaki konulara bakın:</span><span class="sxs-lookup"><span data-stu-id="aba6c-212">You can learn more about these concepts in these topics:</span></span>
-
-
-    - [<span data-ttu-id="aba6c-213">If ve Else deyimleri</span><span class="sxs-lookup"><span data-stu-id="aba6c-213">If and else statement</span></span>](../../language-reference/keywords/if-else.md)
-
-    - [<span data-ttu-id="aba6c-214">While ekstresi</span><span class="sxs-lookup"><span data-stu-id="aba6c-214">While statement</span></span>](../../language-reference/keywords/while.md)
-
-    - [<span data-ttu-id="aba6c-215">Do ekstresi</span><span class="sxs-lookup"><span data-stu-id="aba6c-215">Do statement</span></span>](../../language-reference/keywords/do.md)
-
-    - [<span data-ttu-id="aba6c-216">For deyimleri</span><span class="sxs-lookup"><span data-stu-id="aba6c-216">For statement</span></span>](../../language-reference/keywords/for.md)
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Mühendisi!
+  content: "\"Dallar ve döngüler\" Etkileşimli öğreticisini tamamladınız. Sonraki etkileşimli öğreticiye başlamak için aşağıdaki **liste koleksiyonu** bağlantısını seçebilir veya [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret ederek .NET Core SDK indirebilir, makinenizde bir proje oluşturabilir ve kodlamadan haberdar olabilirsiniz. \"Sonraki adımlar\" bölümü, sizi bu öğreticilere geri getirir.\n\nBu kavramlar hakkında daha fazla bilgi için aşağıdaki konulara bakın:\n\n- [If ve Else deyimleri](../../language-reference/keywords/if-else.md)\n- [While ekstresi](../../language-reference/keywords/while.md)\n- [Do ekstresi](../../language-reference/keywords/do.md)\n- [For deyimleri](../../language-reference/keywords/for.md)"
