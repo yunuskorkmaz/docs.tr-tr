@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443591"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>CorErrorIfEmitOutOfOrder Numaralandırması
-Contains flag values that indicate the conditions under which an error message should be generated when metadata is emitted out of order.  
+Meta veriler sıralı dışı bırakıldığında bir hata iletisinin oluşturulması gereken koşulları belirten bayrak değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,25 +41,25 @@ typedef enum CorErrorIfEmitOutOfOrder {
 } CorErrorIfEmitOutOfOrder;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|Indicates the default behavior, which does not generate error messages.|  
-|`MDErrorOutOfOrderNone`|Indicates that the compiler should not generate error messages.|  
-|`MDErrorOutOfOrderAll`|Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.|  
-|`MDMethodOutOfOrder`|Indicates that the compiler should generate an error message when a method is emitted out of order.|  
-|`MDFieldOutOfOrder`|Indicates that the compiler should generate an error message when a field is emitted out of order.|  
-|`MDParamOutOfOrder`|Indicates that the compiler should generate an error message when a parameter is emitted out of order.|  
-|`MDPropertyOutOfOrder`|Indicates that the compiler should generate an error message when a property is emitted out of order.|  
-|`MDEventOutOfOrder`|Indicates that the compiler should generate an error message when an event is emitted out of order.|  
+|`MDErrorOutOfOrderDefault`|Hata iletileri oluşturabilen varsayılan davranışı gösterir.|  
+|`MDErrorOutOfOrderNone`|Derleyicinin hata iletileri üretmemelidir anlamına gelir.|  
+|`MDErrorOutOfOrderAll`|Bir alan, özellik, olay, yöntem veya parametre sıralı olarak yayıldığınızda derleyicinin bir hata mesajı oluşturması gerektiğini gösterir.|  
+|`MDMethodOutOfOrder`|Bir yöntem bir sıra dışına yayıldığınızda derleyicinin bir hata mesajı oluşturması gerektiğini gösterir.|  
+|`MDFieldOutOfOrder`|Bir alan sipariş dışı bırakıldığında derleyicinin bir hata mesajı oluşturması gerektiğini gösterir.|  
+|`MDParamOutOfOrder`|Bir parametre sıralı olarak yayıldığınızda derleyicinin bir hata mesajı oluşturması gerektiğini gösterir.|  
+|`MDPropertyOutOfOrder`|Bir özellik sıralı olarak yayıldığınızda derleyicinin bir hata mesajı oluşturması gerektiğini gösterir.|  
+|`MDEventOutOfOrder`|Bir olay bir sıra dışına yayıldığınızda derleyicinin bir hata mesajı oluşturması gerektiğini gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

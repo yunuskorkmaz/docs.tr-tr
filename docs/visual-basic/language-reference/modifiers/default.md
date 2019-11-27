@@ -18,24 +18,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351578"
 ---
 # <a name="default-visual-basic"></a>Varsayılan (Visual Basic)
-Identifies a property as the default property of its class, structure, or interface.  
+Bir özelliği sınıfının, yapısının veya arabirimin varsayılan özelliği olarak tanımlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- A class, structure, or interface can designate at most one of its properties as the *default property*, provided that property takes at least one parameter. If code makes a reference to a class or structure without specifying a member, Visual Basic resolves that reference to the default property.  
+ Bir sınıf, yapı veya arabirim, özelliğin en az bir parametre almasını sağlayan *varsayılan özellik*olarak özelliklerinden en çok birini belirtebilir. Kod, bir üye belirtmeden bir sınıfa veya yapıya bir başvuru yapıyorsa Visual Basic, bu başvuruyu varsayılan özelliğe çözer.  
   
- Default properties can result in a small reduction in source code-characters, but they can make your code more difficult to read. If the calling code is not familiar with your class or structure, when it makes a reference to the class or structure name it cannot be certain whether that reference accesses the class or structure itself, or a default property. This can lead to compiler errors or subtle run-time logic errors.  
+ Varsayılan Özellikler, kaynak kodu karakterlerinin küçük bir azalmasına neden olabilir, ancak kodunuzun okunmasını zorlaşabilir. Çağıran kod sınıfınız veya yapınız hakkında bilgi sahibi değilse, sınıf veya yapı adına bir başvuru yaptığında, başvurunun sınıfa veya yapıya ya da bir varsayılan özelliğe erişim izni verip etmediği kesin olamaz. Bu, derleyici hatalarına veya hafif çalışma zamanı mantığı hatalarına neden olabilir.  
   
- You can somewhat reduce the chance of default property errors by always using the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) to set compiler type checking to `On`.  
+ Derleyici türü denetimini `On`olarak ayarlamak için, her zaman [katı bildiri seçeneğini](../../../visual-basic/language-reference/statements/option-strict-statement.md) kullanarak varsayılan özellik hatalarının olasılığını azaltabilirsiniz.  
   
- If you are planning to use a predefined class or structure in your code, you must determine whether it has a default property, and if so, what its name is.  
+ Kodunuzda önceden tanımlanmış bir sınıf veya yapı kullanmayı planlıyorsanız, bunun varsayılan bir özelliği olup olmadığını ve varsa adının ne olduğunu belirlemelisiniz.  
   
- Because of these disadvantages, you should consider not defining default properties. For code readability, you should also consider always referring to all properties explicitly, even default properties.  
+ Bu dezavantajlar nedeniyle varsayılan özellikleri tanımlamamalısınız. Kod okunabilirlik için, her zaman tüm özelliklere, hatta varsayılan özelliklere de her zaman başvurmanız gerekir.  
   
- The `Default` modifier can be used in this context:  
+ `Default` değiştiricisi Bu bağlamda kullanılabilir:  
   
  [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [How to: Declare and Call a Default Property in Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
+- [Nasıl yapılır: Visual Basic varsayılan bir özellik bildirme ve çağırma](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

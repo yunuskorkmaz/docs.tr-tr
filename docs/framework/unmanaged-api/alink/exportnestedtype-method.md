@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438426"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType Yöntemi
-Specifies nested types as exportable. The [ExportType Method](exporttype-method.md) can also export nested types, but this method is faster.  
+İç içe geçmiş türleri verilebilir olarak belirtir. [ExportType Yöntemi](exporttype-method.md) iç içe geçmiş türleri de dışa aktarabilir, ancak bu yöntem daha hızlıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,31 +41,31 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- ID of assembly to export from.  
+ Dışarı aktarılacak derlemenin KIMLIĞI.  
   
  `FileToken`  
- File token or Assembly of file that defines the type to be made exportable.  
+ Dışarı aktarılabilir hale getirilme türünü tanımlayan dosya belirteci veya dosya derlemesi.  
   
  `TypeToken`  
- Type token of type to be made exportable.  
+ Dışarı aktarılabilir hale getirilme türünün tür belirteci.  
   
  `ParentType`  
- Token of parent type.  
+ Üst tür belirteci.  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ Dışarı aktarılacak tam tür adı.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `tdPublic` veya `tdNested`gibi bayrakları `ComType`. Bu değer [DefineExportedType yöntemine](../metadata/imetadataassemblyemit-defineexportedtype-method.md)geçirilebilir.  
   
  `pType`  
- Receives token for exported type.  
+ İçe aktarılmış tür için belirteç alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

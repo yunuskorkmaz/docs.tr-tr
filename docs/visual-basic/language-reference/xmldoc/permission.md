@@ -12,8 +12,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352271"
 ---
-# <a name="permission-visual-basic"></a>\<permission> (Visual Basic)
-Specifies a required permission for the member.  
+# <a name="permission-visual-basic"></a>\<izin > (Visual Basic)
+Üye için gerekli izinleri belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,18 +23,18 @@ Specifies a required permission for the member.
   
 ## <a name="parameters"></a>Parametreler  
  `member`  
- A reference to a member or field that is available to be called from the current compilation environment. The compiler checks that the given code element exists and translates `member` to the canonical element name in the output XML. Enclose `member` in quotation marks (" ").  
+ Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında kurallı öğe adına `member` çevirir. `member` tırnak işaretleri ("") içine alın.  
   
  `description`  
- A description of the access to the member.  
+ Üyeye erişim açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Use the `<permission>` tag to document the access of a member. Use the <xref:System.Security.PermissionSet> class to specify access to a member.  
+ Üyenin erişimini belgelemek için `<permission>` etiketini kullanın. Bir üyeye erişimi belirtmek için <xref:System.Security.PermissionSet> sınıfını kullanın.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.  
+ Bu örnek, `ReadFile` yöntemi tarafından <xref:System.Security.Permissions.FileIOPermission> gerektiğini belirtmek için `<permission>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   

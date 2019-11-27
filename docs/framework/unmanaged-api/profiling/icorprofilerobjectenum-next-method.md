@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428158"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next Yöntemi
-Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.  
+Numaralandırıcının dizideki geçerli konumundan başlayarak sıralı nesne koleksiyonundan belirtilen sayıda bitişik nesneyi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +38,22 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] The number of objects to be retrieved.  
+ 'ndaki Alınacak nesne sayısı.  
   
  `objects`  
- [out] An array of `ObjectID` values, each of which represents a retrieved object.  
+ dışı Her biri alınan bir nesneyi temsil eden `ObjectID` değerleri dizisi.  
   
  `pceltFetched`  
- [out] A pointer to the number of elements actually returned in the `objects` array.  
+ dışı `objects` dizisinde aslında döndürülen öğe sayısına yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

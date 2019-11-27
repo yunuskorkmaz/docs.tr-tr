@@ -24,7 +24,7 @@ ms.locfileid: "74343840"
 ---
 # <a name="const-directive"></a>#Const Yönergesi
 
-Defines conditional compiler constants for Visual Basic.  
+Visual Basic için koşullu derleyici sabitleri tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,26 +35,26 @@ Defines conditional compiler constants for Visual Basic.
 ## <a name="parts"></a>Bölümler  
 
  `constname`  
- Gerekli. Name of the constant being defined.  
+ Gerekli. Tanımlanmakta olan sabitin adı.  
   
  `expression`  
- Gerekli. Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.  
+ Gerekli. Değişmez değer, diğer koşullu derleyici sabiti veya `Is`dışında herhangi bir ya da tüm aritmetik veya mantıksal işleçleri içeren herhangi bir bileşim.  
   
 ## <a name="remarks"></a>Açıklamalar  
 
- Conditional compiler constants are always private to the file in which they appear. You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.  
+ Koşullu derleyici sabitleri, her zaman göründükleri dosya için özeldir. `#Const` yönergesini kullanarak ortak derleyici sabitleri oluşturamazsınız; Onları yalnızca Kullanıcı arabiriminde veya `/define` derleyici seçeneğiyle oluşturabilirsiniz.  
   
- You can use only conditional compiler constants and literals in `expression`. Using a standard constant defined with `Const` causes an error. Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation. Constants can also be undefined, in which case they have a value of `Nothing`.  
+ `expression`yalnızca koşullu derleyici sabitlerini ve sabit değerlerini kullanabilirsiniz. `Const` ile tanımlanmış standart bir sabit kullanmak hataya neden olur. Buna karşılık, yalnızca koşullu derleme için `#Const` anahtar sözcüğüyle tanımlanmış sabitleri kullanabilirsiniz. Sabitler de tanımsız olabilir ve bu durumda `Nothing`değeri vardır.  
   
 ## <a name="example"></a>Örnek  
 
- This example uses the `#Const` directive.  
+ Bu örnek `#Const` yönergesini kullanır.  
   
  [!code-vb[VbVbalrConditionalComp#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+- [-tanımla (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [#If...Then...#Else Yönergesi](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)
 - [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: read from comma-delimited text files'
+title: 'Nasıl yapılır: virgülle ayrılmış metin dosyalarından okuma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], parsing
@@ -14,47 +14,47 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335071"
 ---
-# <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>How to: read from comma-delimited text files in Visual Basic
+# <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>Nasıl yapılır: Visual Basic içinde virgülle ayrılmış metin dosyalarından okuma
 
-The `TextFieldParser` object provides a way to easily and efficiently parse structured text files, such as logs. The `TextFieldType` property defines whether it is a delimited file or one with fixed-width fields of text.  
+`TextFieldParser` nesnesi, günlük gibi yapılandırılmış metin dosyalarını kolayca ve verimli bir şekilde ayrıştırabilmeniz için bir yol sağlar. `TextFieldType` özelliği, ayrılmış bir dosya mı yoksa sabit genişlikte metin alanları mı olduğunu tanımlar.  
   
-### <a name="to-parse-a-comma-delimited-text-file"></a>To parse a comma delimited text file  
+### <a name="to-parse-a-comma-delimited-text-file"></a>Virgülle ayrılmış bir metin dosyasını ayrıştırmak için  
   
-1. Create a new `TextFieldParser`. The following code creates the `TextFieldParser` named `MyReader` and opens the file `test.txt`.  
+1. Yeni bir `TextFieldParser`oluşturun. Aşağıdaki kod, `MyReader` adlı `TextFieldParser` oluşturur ve dosyayı `test.txt`açar.  
   
      [!code-vb[VbFileIORead#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#15)]  
   
-2. Define the `TextField` type and delimiter. The following code defines the `TextFieldType` property as `Delimited` and the delimiter as ",".  
+2. `TextField` türünü ve sınırlandırıcıyı tanımlayın. Aşağıdaki kod, `Delimited` olarak `TextFieldType` özelliğini ve sınırlandırıcıyı "," olarak tanımlar.  
   
      [!code-vb[VbFileIORead#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#16)]  
   
-3. Loop through the fields in the file. If any lines are corrupt, report an error and continue parsing. The following code loops through the file, displaying each field in turn and reporting any fields that are formatted incorrectly.  
+3. Dosyadaki alanlar arasında döngü gerçekleştirin. Herhangi bir satır bozuksa bir hata bildirin ve ayrıştırmaya devam edin. Aşağıdaki kod, dosyasında her bir alanı görüntüleyerek ve yanlış biçimlendirilmiş tüm alanları bildiren bir dosya üzerinden döngü başlatır.  
   
      [!code-vb[VbFileIORead#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#17)]  
   
-4. Close the `While` and `Using` blocks with `End While` and `End Using`.  
+4. `End While` ve `End Using``While` ve `Using` blokları kapatın.  
   
      [!code-vb[VbFileIORead#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#18)]  
   
 ## <a name="example"></a>Örnek  
 
- This example reads from the file `test.txt`.  
+ Bu örnek `test.txt`dosyadan okur.  
   
  [!code-vb[VbFileIORead#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#19)]  
   
-## <a name="robust-programming"></a>Robust programming  
+## <a name="robust-programming"></a>Güçlü programlama  
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- A row cannot be parsed using the specified format (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). The exception message specifies the line causing the exception, while the <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> property is assigned the text contained in the line.  
+- Satır belirtilen biçim (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>) kullanılarak ayrıştırılamıyor. Özel durum iletisi, özel duruma neden olan satırı belirtir, <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> özelliğine satırda içerilen metin atanır.  
   
-- The specified file does not exist (<xref:System.IO.FileNotFoundException>).  
+- Belirtilen dosya yok (<xref:System.IO.FileNotFoundException>).  
   
-- A partial-trust situation in which the user does not have sufficient permissions to access the file. (<xref:System.Security.SecurityException>).  
+- Kullanıcının dosyaya erişmek için yeterli izinlere sahip olmadığı kısmi güven durumu. (<xref:System.Security.SecurityException>).  
   
-- The path is too long (<xref:System.IO.PathTooLongException>).  
+- Yol çok uzun (<xref:System.IO.PathTooLongException>).  
   
-- The user does not have sufficient permissions to access the file (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcı, dosyaya erişmek için yeterli izinlere sahip değil (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -62,5 +62,5 @@ The `TextFieldParser` object provides a way to easily and efficiently parse stru
 - [Nasıl Yapılır: Sabit Genişlikli Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
 - [Nasıl Yapılır: Birden Çok Biçimli Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
 - [TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
-- [Walkthrough: Manipulating Files and Directories in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
+- [İzlenecek yol: Visual Basic dosya ve dizinleri düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
 - [Sorun Giderme: Metin Dosyalarını Okuma ve Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

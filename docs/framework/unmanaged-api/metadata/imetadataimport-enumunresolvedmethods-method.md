@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449960"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods Yöntemi
-Enumerates MemberDef tokens representing the unresolved methods in the current metadata scope.  
+Geçerli meta veri kapsamındaki çözümlenmemiş yöntemleri temsil eden MemberDef belirteçlerini numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,37 +38,37 @@ HRESULT EnumUnresolvedMethods (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu NULL olmalıdır.  
   
  `rMethods`  
- [out] The array used to store the MemberDef tokens.  
+ dışı MemberDef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- [in] The maximum size of the `rMethods` array.  
+ 'ndaki `rMethods` dizisinin en büyük boyutu.  
   
  `pcTokens`  
- [out] The number of MemberDef tokens returned in `rMethods`.  
+ dışı `rMethods`' de döndürülen MemberDef belirteçleri sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumUnresolvedMethods` başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda `pcTokens` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- An unresolved method is one that has been declared but not implemented. A method is included in the enumeration if the method is marked `miForwardRef` and either `mdPinvokeImpl` or `miRuntime` is set to zero. In other words, an unresolved method is a class method that is marked `miForwardRef` but which is not implemented in unmanaged code (reached via PInvoke) nor implemented internally by the runtime itself  
+ Çözümlenmemiş bir yöntem, tanımlanan ancak uygulanmayan bir yöntemdir. Yöntem `miForwardRef` işaretlenmişse ve `mdPinvokeImpl` ya da `miRuntime` sıfıra ayarlandıysa, bir yöntem numaralandırmaya dahil edilir. Diğer bir deyişle, çözümlenmemiş bir yöntem `miForwardRef` işaretlenen, ancak yönetilmeyen kodda uygulanmayan (PInvoke aracılığıyla ulaşılan) veya çalışma zamanı tarafından dahili olarak uygulanan bir sınıf yöntemidir  
   
- The enumeration excludes all methods that are defined either at module scope (globals) or in interfaces or abstract classes.  
+ Sabit listesi, modül kapsamında (genel) veya arabirimlerde ya da soyut sınıflarda tanımlanmış tüm yöntemleri dışlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

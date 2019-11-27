@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448177"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>ICorProfilerInfo::GetAppDomainInfo Yöntemi
-Accepts an application domain ID. Returns an application domain name and the ID of the process that contains it.  
+Bir uygulama etki alanı KIMLIĞINI kabul eder. Bir uygulama etki alanı adı ve onu içeren işlemin KIMLIĞINI döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,33 +39,33 @@ HRESULT GetAppDomainInfo(
   
 ## <a name="parameters"></a>Parametreler  
  `appDomainId`  
- [in] The ID of the application domain.  
+ 'ndaki Uygulama etki alanının KIMLIĞI.  
   
  `cchName`  
- [in] The length, in characters, of the `szName` return buffer.  
+ 'ndaki `szName` dönüş arabelleğinin karakter cinsinden uzunluğu.  
   
  `pcchName`  
- [out] A pointer to the total character length of the application domain name.  
+ dışı Uygulama etki alanı adının toplam karakter uzunluğuna yönelik bir işaretçi.  
   
  `szName`  
- [out] A caller-provided wide character buffer. When the method returns, `szName` will contain the full or partial application domain name.  
+ dışı Arayan tarafından sunulan geniş bir karakter arabelleği. Yöntemi döndürüldüğünde, `szName` tam veya kısmi uygulama etki alanı adını içerecektir.  
   
  `pProcessId`  
- [out] A pointer to the ID of the process that contains the application domain.  
+ dışı Uygulama etki alanını içeren işlemin KIMLIĞINE yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the application domain. To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter. If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAppDomainInfo` again.  
+ Bu yöntem çağrıldıktan sonra, `szName` arabelleğinin uygulama etki alanının tam adını içerecek kadar büyük olduğunu doğrulamanız gerekir. Bunu yapmak için `pcchName` işaret eden değeri `cchName` parametresinin değeri ile karşılaştırın. `pcchName`, `cchName`daha büyük bir değere işaret ediyorsa, daha büyük bir `szName` arabelleği ayırın, yeni, daha büyük boyuttaki `cchName` güncelleştirin ve `GetAppDomainInfo` çağırın.  
   
- Alternatively, you can first call `GetAppDomainInfo` with a zero-length `szName` buffer to obtain the correct buffer size. You can then set the buffer size to the value returned in `pcchName` and call `GetAppDomainInfo` again.  
+ Alternatif olarak, doğru arabellek boyutunu elde etmek için ilk olarak `GetAppDomainInfo` sıfır uzunluklu `szName` arabelleği ile çağırabilirsiniz. Daha sonra arabellek boyutunu `pcchName` döndürülen değere ayarlayabilir ve `GetAppDomainInfo` tekrar çağırabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

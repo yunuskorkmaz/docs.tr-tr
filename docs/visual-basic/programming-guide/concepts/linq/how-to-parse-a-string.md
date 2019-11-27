@@ -1,5 +1,5 @@
 ---
-title: 'How to: Parse a String'
+title: 'Nasıl yapılır: bir dizeyi ayrıştırma'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
 ms.openlocfilehash: 31bae00eb3ebf0d8e64fc657693e8c0767c4f5d4
@@ -9,16 +9,16 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344493"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>How to: Parse a String (Visual Basic)
-This topic shows how to create an XML tree in C#.  
+# <a name="how-to-parse-a-string-visual-basic"></a>Nasıl yapılır: bir dizeyi ayrıştırma (Visual Basic)
+Bu konuda ' de C#bir xml ağacının nasıl oluşturulacağı gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- You can parse a string in Visual Basic by using the `XElement.Parse` method. However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.  
+ `XElement.Parse` metodunu kullanarak Visual Basic bir dizeyi ayrıştırabilirsiniz. Ancak, XML değişmez değerleri bir dizeden XML ayrıştırılırken aynı performans yaptırımlarından etkilemediğinden, aşağıdaki kodda gösterildiği gibi XML değişmez değerleri kullanmak daha verimlidir.  
   
- By using XML literals, you can just copy and paste your XML into your Visual Basic program.  
+ XML sabit değerlerini kullanarak yalnızca XML dosyanızı Visual Basic programınıza kopyalayabilir ve yapıştırabilirsiniz.  
   
 > [!NOTE]
-> Parsing text or loading an XML document from a text file is less efficient than functional construction. If you are initializing an XML tree from code, it takes less processor time to use functional construction than to parse text.  
+> Bir metin dosyasından metin ayrıştırma veya bir XML belgesi yükleme, işlevsel oluşturma işleminden daha az verimlidir. Koddan bir XML ağacı başlatdıysanız, işlevsel oluşturma işlevinin metin ayrıştırılmaya kıyasla daha az işlemci süresi sürer.  
   
 ```vb  
 Dim contacts as XElement = _  
@@ -51,4 +51,4 @@ Dim contacts as XElement = _
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [XML 'yi ayrıştırma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

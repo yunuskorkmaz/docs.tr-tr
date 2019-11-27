@@ -15,7 +15,7 @@ ms.locfileid: "74351727"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 
-Specifies the format of compiler output.
+Derleyici çıktısının biçimini belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -25,34 +25,34 @@ Specifies the format of compiler output.
 
 ## <a name="remarks"></a>Açıklamalar
 
-The following table summarizes the effect of the `-target` option.
+Aşağıdaki tablo `-target` seçeneğinin etkisini özetler.
 
-|**Option**|**Behavior**|
+|**Seçeneği**|**Durum**|
 |----------------|------------------|
-|`-target:exe`|Causes the compiler to create an executable console application.<br /><br /> This is the default option when no `-target` option is specified. The executable file is created with an .exe extension.<br /><br /> Unless otherwise specified with the `/out` option, the output file name takes the name of the input file that contains the `Sub Main` procedure.<br /><br /> Only one `Sub Main` procedure is required in the source-code files that are compiled into an .exe file. Use the `-main` compiler option to specify which class contains the `Sub Main` procedure.|
-|`-target:library`|Causes the compiler to create a dynamic-link library (DLL).<br /><br /> The dynamic-link library file is created with a .dll extension.<br /><br /> Unless otherwise specified with the `-out` option, the output file name takes the name of the first input file.<br /><br /> When building a DLL, a `Sub Main` procedure is not required.|
-|`-target:module`|Causes the compiler to generate a module that can be added to an assembly.<br /><br /> The output file is created with an extension of .netmodule.<br /><br /> The .NET common language runtime cannot load a file that does not have an assembly. However, you can incorporate such a file into the assembly manifest of an assembly by using `-reference`.<br /><br /> When code in one module references internal types in another module, both modules must be incorporated into an assembly manifest by using `-reference`.<br /><br /> The [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) option imports metadata from a module.|
-|`-target:winexe`|Causes the compiler to create an executable Windows-based application.<br /><br /> The executable file is created with an .exe extension. A Windows-based application is one that provides a user interface from either the .NET Framework class library or with the Windows APIs.<br /><br /> Unless otherwise specified with the `-out` option, the output file name takes the name of the input file that contains the `Sub Main` procedure.<br /><br /> Only one `Sub Main` procedure is required in the source-code files that are compiled into an .exe file. In cases where your code has more than one class that has a `Sub Main` procedure, use the `-main` compiler option to specify which class contains the `Sub Main` procedure|
-|`-target:appcontainerexe`|Causes the compiler to create an executable Windows-based application that must be run in an app container. This setting is designed to be used for Windows 8.x Store applications.<br /><br /> The **appcontainerexe** setting sets a bit in the Characteristics field of the [Portable Executable](/windows/desktop/Debug/pe-format) file. This bit indicates that the app must be run in an app container. When this bit is set, an error occurs if the `CreateProcess` method tries to launch the application outside of an app container. Aside from this bit setting, **-target:appcontainerexe** is equivalent to **-target:winexe**.<br /><br /> The executable file is created with an .exe extension.<br /><br /> Unless you specify otherwise by using the `-out` option, the output file name takes the name of the input file that contains the `Sub Main` procedure.<br /><br /> Only one `Sub Main` procedure is required in the source-code files that are compiled into an .exe file. If your code contains more than one class that has a `Sub Main` procedure, use the `-main` compiler option to specify which class contains the `Sub Main` procedure|
-|`-target:winmdobj`|Causes the compiler to create an intermediate file that you can convert to a Windows Runtime binary (.winmd) file. The .winmd file can be consumed by JavaScript and C++ programs, in addition to managed language programs.<br /><br /> The intermediate file is created with a .winmdobj extension.<br /><br /> Unless you specify otherwise by using the `-out` option, the output file name takes the name of the first input file. A `Sub Main` procedure isn’t required.<br /><br /> The .winmdobj file is designed to be used as input for the <xref:Microsoft.Build.Tasks.WinMDExp> export tool to produce a Windows metadata (WinMD) file. The WinMD file has a .winmd extension and contains both the code from the original library and the WinMD definitions that JavaScript, C++, and  the Windows Runtime use.|
+|`-target:exe`|Derleyicinin yürütülebilir bir konsol uygulaması oluşturmasına neden olur.<br /><br /> `-target` seçeneği belirtilmediğinde bu varsayılan seçenektir. Yürütülebilir dosya bir. exe uzantısıyla oluşturulur.<br /><br /> Aksi takdirde, `/out` seçeneğiyle belirtilmediği takdirde, çıkış dosyası adı `Sub Main` yordamını içeren giriş dosyasının adını alır.<br /><br /> Bir. exe dosyasına derlenen kaynak kodu dosyalarında yalnızca bir `Sub Main` yordamı gereklidir. Hangi sınıfın `Sub Main` yordamını içerdiğini belirtmek için `-main` derleyici seçeneğini kullanın.|
+|`-target:library`|Derleyicinin dinamik bağlantı kitaplığı (DLL) oluşturmasına neden olur.<br /><br /> Dinamik bağlantı kitaplığı dosyası bir. dll uzantısıyla oluşturulur.<br /><br /> Aksi takdirde, `-out` seçeneğiyle belirtilmediği takdirde, çıkış dosyası adı ilk giriş dosyasının adını alır.<br /><br /> Bir DLL derlerken `Sub Main` yordam gerekli değildir.|
+|`-target:module`|Derleyicinin bir derlemeye eklenebilecek bir modül oluşturmasına neden olur.<br /><br /> Çıkış dosyası. netmodule uzantısıyla oluşturulur.<br /><br /> .NET ortak dil çalışma zamanı, derlemesi olmayan bir dosyayı yükleyemez. Ancak, `-reference`kullanarak bu tür bir dosyayı derlemenin derleme bildirimine ekleyebilirsiniz.<br /><br /> Bir modüldeki kod, başka bir modüldeki iç türlere başvurduğunda, her iki modülün `-reference`kullanılarak bir derleme bildirimine dahil olması gerekir.<br /><br /> [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) seçeneği bir modülden meta verileri içeri aktarır.|
+|`-target:winexe`|Derleyicinin yürütülebilir bir Windows tabanlı uygulama oluşturmasına neden olur.<br /><br /> Yürütülebilir dosya bir. exe uzantısıyla oluşturulur. Windows tabanlı bir uygulama, .NET Framework sınıf kitaplığından veya Windows API 'Leriyle bir kullanıcı arabirimi sağlayan bir uygulamadır.<br /><br /> Aksi takdirde, `-out` seçeneğiyle belirtilmediği takdirde, çıkış dosyası adı `Sub Main` yordamını içeren giriş dosyasının adını alır.<br /><br /> Bir. exe dosyasına derlenen kaynak kodu dosyalarında yalnızca bir `Sub Main` yordamı gereklidir. Kodunuzun `Sub Main` yordamına sahip birden fazla sınıfı olduğu durumlarda, hangi sınıfın `Sub Main` yordamını içerdiğini belirtmek için `-main` derleyici seçeneğini kullanın|
+|`-target:appcontainerexe`|Derleyicinin bir uygulama kapsayıcısında çalıştırılması gereken yürütülebilir bir Windows tabanlı uygulama oluşturmasına neden olur. Bu ayar, Windows 8. x Mağazası uygulamaları için kullanılmak üzere tasarlanmıştır.<br /><br /> **Appcontainerexe** ayarı, [taşınabilir yürütülebilir](/windows/desktop/Debug/pe-format) dosyanın Özellikler alanında bir bit ayarlar. Bu bit, uygulamanın bir uygulama kapsayıcısında çalıştırılması gerektiğini gösterir. Bu bit ayarlandığında, `CreateProcess` metodu uygulamayı bir uygulama kapsayıcısı dışında başlatmaya çalışırsa bir hata oluşur. Bu bit ayarından itibaren **-target: appcontainerexe** eşittir **-target: winexe**.<br /><br /> Yürütülebilir dosya bir. exe uzantısıyla oluşturulur.<br /><br /> Aksi takdirde, `-out` seçeneğini kullanarak aksini belirtmediğiniz takdirde, çıkış dosyası adı `Sub Main` yordamını içeren giriş dosyasının adını alır.<br /><br /> Bir. exe dosyasına derlenen kaynak kodu dosyalarında yalnızca bir `Sub Main` yordamı gereklidir. Kodunuz `Sub Main` yordamına sahip birden fazla sınıf içeriyorsa, hangi sınıfın `Sub Main` yordamını içerdiğini belirtmek için `-main` derleyici seçeneğini kullanın|
+|`-target:winmdobj`|Derleyicinin Windows Çalışma Zamanı ikili (. winmd) dosyasına dönüştürebileceğiniz bir ara dosya oluşturmasına neden olur. . Winmd dosyası, yönetilen dil programlarına ek olarak JavaScript C++ ve programlar tarafından tüketilebilir.<br /><br /> Ara dosya bir. winmdobj uzantısıyla oluşturulur.<br /><br /> Aksi takdirde, `-out` seçeneğini kullanarak aksini belirtmediğiniz takdirde, çıkış dosyası adı ilk giriş dosyasının adını alır. `Sub Main` yordam gerekli değildir.<br /><br /> . Winmdobj dosyası, Windows meta verileri (WinMD) dosyası üretmek için <xref:Microsoft.Build.Tasks.WinMDExp> dışa aktarma aracının girişi olarak kullanılmak üzere tasarlanmıştır. WinMD dosyası bir. winmd uzantısına sahiptir ve hem özgün kitaplıktan hem de JavaScript, C++ve Windows çalışma zamanı kullanılan winmd tanımlarındaki kodu içerir.|
 
-Unless you specify `-target:module`, `-target` causes a .NET Framework assembly manifest to be added to an output file.
+`-target:module`belirtmediğiniz takdirde `-target`, bir .NET Framework derleme bildiriminin bir çıkış dosyasına eklenmesine neden olur.
 
-Each instance of Vbc.exe produces, at most, one output file. If you specify a compiler option such as `-out` or `-target` more than one time, the last one the compiler processes is put into effect. Information about all files in a compilation is added to the manifest. All output files except those created with `-target:module` contain assembly metadata in the manifest. Use [Ildasm.exe (IL Disassembler)](../../../framework/tools/ildasm-exe-il-disassembler.md) to view the metadata in an output file.
+Her Vbc. exe örneği, en çok bir çıkış dosyası üretir. `-out` veya birden çok kez `-target` gibi bir derleyici seçeneği belirtirseniz, derleyici işlemlerinin son bir etkisi olur. Bir derlemedeki tüm dosyalar hakkındaki bilgiler bildirime eklenir. `-target:module` ile oluşturulanlar dışındaki tüm çıkış dosyaları, bildirimde derleme meta verileri içerir. Meta verileri bir çıkış dosyasında görüntülemek için [ıldadsm. exe (IL Disassembler)](../../../framework/tools/ildasm-exe-il-disassembler.md) kullanın.
 
-The short form of `-target` is `-t`.
+`-target` kısa biçimi `-t`.
 
-### <a name="to-set--target-in-the-visual-studio-ide"></a>To set -target in the Visual Studio IDE
+### <a name="to-set--target-in-the-visual-studio-ide"></a>Visual Studio IDE 'de set-Target
 
-1. Have a project selected in **Solution Explorer**. On the **Project** menu, click **Properties**.
+1. **Çözüm Gezgini**' de bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın.
 
-2. Click the **Application** tab.
+2. **Uygulama** sekmesine tıklayın.
 
-3. Modify the value in the **Application Type** box.
+3. **Uygulama türü** kutusunda değeri değiştirin.
 
 ## <a name="example"></a>Örnek
 
-The following code compiles `in.vb`, creating `in.dll`:
+Aşağıdaki kod, `in.dll`oluşturarak `in.vb`derler:
 
 ```console
 vbc -target:library in.vb
@@ -60,10 +60,10 @@ vbc -target:library in.vb
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
-- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
-- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-Out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
+- [-başvuru (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
 - [.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)

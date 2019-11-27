@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432541"
 ---
 # <a name="imetadataemitsetmethodimplflags-method"></a>IMetaDataEmit::SetMethodImplFlags Yöntemi
-Sets or updates the metadata signature of the inherited method implementation that is referenced by the specified token.  
+Belirtilen belirteç tarafından başvurulan devralınmış Yöntem uygulamasının meta veri imzasını ayarlar veya güncelleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT SetMethodImplFlags (
   
 ## <a name="parameters"></a>Parametreler  
  `md`  
- [in] The token for the method to be changed.  
+ 'ndaki Değiştirilecek metodun belirteci.  
   
  `dwImplFlags`  
- [in] A combination of the values of the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration that specifies the method implementation features.  
+ 'ndaki Yöntem uygulama özelliklerini belirten [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) numaralandırması değerlerinin birleşimi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

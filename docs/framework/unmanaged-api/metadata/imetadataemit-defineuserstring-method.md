@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450179"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>IMetaDataEmit::DefineUserString Yöntemi
-Gets a metadata token for the specified literal string.  
+Belirtilen sabit dize için bir meta veri belirteci alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT DefineUserString (
   
 ## <a name="parameters"></a>Parametreler  
  `szString`  
- [in] The user string to store.  
+ 'ndaki Depolanacak Kullanıcı dizesi.  
   
  `cchString`  
- [in] The count of wide characters in `szString`.  
+ 'ndaki `szString`geniş karakterlerin sayısı.  
   
  `pstk`  
- [out] The string token assigned.  
+ dışı Atanan dize belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,20 +9,20 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353463"
 ---
-# <a name="functional-construction-linq-to-xml-visual-basic"></a>Functional Construction (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] provides a powerful way to create XML elements called *functional construction*. Functional construction is the ability to create an XML tree in a single statement.  
+# <a name="functional-construction-linq-to-xml-visual-basic"></a>İşlevsel oluşturma (LINQ to XML) (Visual Basic)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] *işlevsel oluşturma*adlı XML öğeleri oluşturmak için güçlü bir yol sağlar. İşlevsel oluşturma, tek bir bildirimde bir XML ağacı oluşturma olanağıdır.  
   
- There are several key features of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] programming interface that enable functional construction:  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] programlama arabiriminin işlevsel oluşturmayı etkinleştiren birkaç temel özelliği vardır:  
   
-- The <xref:System.Xml.Linq.XElement> constructor takes various types of arguments for content. For example, you can pass another <xref:System.Xml.Linq.XElement> object, which becomes a child element. You can pass an <xref:System.Xml.Linq.XAttribute> object, which becomes an attribute of the element. Or you can pass any other type of object, which is converted to a string and becomes the text content of the element.  
+- <xref:System.Xml.Linq.XElement> Oluşturucu içerik için çeşitli bağımsız değişken türlerini alır. Örneğin, bir alt öğe haline gelen başka bir <xref:System.Xml.Linq.XElement> nesnesini geçirebilirsiniz. Öğesinin bir özniteliği haline gelen bir <xref:System.Xml.Linq.XAttribute> nesnesini geçirebilirsiniz. Ya da bir dizeye dönüştürülen ve öğenin metin içeriği haline gelen başka herhangi bir nesne türünü geçirebilirsiniz.  
   
-- The <xref:System.Xml.Linq.XElement> constructor takes a `params` array of type <xref:System.Object>, so that you can pass any number of objects to the constructor. This enables you to create an element that has complex content.  
+- <xref:System.Xml.Linq.XElement> Oluşturucu <xref:System.Object>türünde bir `params` dizisi alır, böylece oluşturucuya herhangi bir sayıda nesne geçirebilirsiniz. Bu, karmaşık içeriğe sahip bir öğe oluşturmanıza olanak sağlar.  
   
-- If an object implements <xref:System.Collections.Generic.IEnumerable%601>, the collection in the object is enumerated, and all items in the collection are added. If the collection contains <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects, each item in the collection is added separately. This is important because it lets you pass the results of a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query to the constructor.  
+- Bir nesne <xref:System.Collections.Generic.IEnumerable%601>uygularsa, nesnedeki koleksiyon numaralandırılır ve koleksiyondaki tüm öğeler eklenir. Koleksiyon <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute> nesneler içeriyorsa, koleksiyondaki her öğe ayrı olarak eklenir. Bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusunun sonuçlarını oluşturucuya geçirmenize izin sağladığından bu önemlidir.  
   
- The following is an example:  
+ Aşağıda bir örnek verilmiştir:  
   
- These features enable you to write code using XML literals to create an XML tree, and also to write code that uses the results of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries when you create an XML tree:  
+ Bu özellikler, XML ağacı oluşturmak için XML değişmez değerleri kullanarak kod yazmanızı ve ayrıca bir XML ağacı oluştururken [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgularının sonuçlarını kullanan kodu yazmanızı sağlar:  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -44,7 +44,7 @@ Dim xmlTree As XElement = _
 Console.WriteLine(xmlTree)  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  
@@ -58,4 +58,4 @@ Console.WriteLine(xmlTree)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML ağaçları oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

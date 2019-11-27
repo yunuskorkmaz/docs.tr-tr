@@ -12,8 +12,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352215"
 ---
-# <a name="seealso-visual-basic"></a>\<seealso> (Visual Basic)
-Specifies a link that appears in the See Also section.  
+# <a name="seealso-visual-basic"></a>\<seede > (Visual Basic)
+Ayrıca bkz. bölümünde görüntülenen bir bağlantı belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,15 +23,15 @@ Specifies a link that appears in the See Also section.
   
 ## <a name="parameters"></a>Parametreler  
  `member`  
- A reference to a member or field that is available to be called from the current compilation environment. The compiler checks that the given code element exists and passes `member` to the element name in the output XML. `member` must appear within double quotation marks (" ").  
+ Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında öğe adına `member` geçirir. `member` çift tırnak işaretleri ("") içinde yer almalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Use the `<seealso>` tag to specify the text that you want to appear in a See Also section. Use [\<see>](../../../visual-basic/language-reference/xmldoc/see.md) to specify a link from within text.  
+ Ayrıca bkz. bölümünde görünmesini istediğiniz metni belirtmek için `<seealso>` etiketini kullanın. Metin içinden bir bağlantı belirtmek için [\<> bakın](../../../visual-basic/language-reference/xmldoc/see.md) .  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `<seealso>` tag in the `DoesRecordExist` remarks section to refer to the `UpdateRecord` method.  
+ Bu örnek `UpdateRecord` yöntemine başvurmak için `DoesRecordExist` açıklamaları bölümündeki `<seealso>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

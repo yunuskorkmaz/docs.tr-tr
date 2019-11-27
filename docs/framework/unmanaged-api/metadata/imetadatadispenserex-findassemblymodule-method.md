@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442185"
 ---
 # <a name="imetadatadispenserexfindassemblymodule-method"></a>IMetaDataDispenserEx::FindAssemblyModule Yöntemi
-Bu yöntem uygulanmadı. If called, it returns E_NOTIMPL.  
+Bu yöntem uygulanmadı. Çağrılırsa, E_NOTIMPL döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,37 +42,37 @@ HRESULT FindAssemblyModule(
   
 ## <a name="parameters"></a>Parametreler  
  `szAppBase`  
- [in] Not used.  
+ 'ndaki Kullanılmıyor.  
   
  `szPrivateBin`  
- [in] Not used.  
+ 'ndaki Kullanılmıyor.  
   
  `szGlobalBin`  
- [in] Not used.  
+ 'ndaki Kullanılmıyor.  
   
  `szAssemblyName`  
- [in] The name of the module.  
+ 'ndaki Modülün adı.  
   
  `szModuleName`  
- [in] The assembly to be found.  
+ 'ndaki Bulunan bütünleştirilmiş kod.  
   
  `szName`  
- [out] The simple name of the assembly.  
+ dışı Derlemenin basit adı.  
   
  `cchName`  
- [in] The size, in bytes, of `szName`.  
+ 'ndaki `szName`bayt cinsinden boyutu.  
   
  `pcName`  
- [out] The number of characters actually returned in `szName`.  
+ dışı `szName`' de aslında döndürülen karakterlerin sayısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

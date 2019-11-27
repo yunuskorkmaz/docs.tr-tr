@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428046"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument Yöntemi
-Defines a source document. GUIDs are provided for known languages, vendors, and document types.  
+Bir kaynak belge tanımlar. GUID 'Ler, bilinen diller, satıcılar ve belge türleri için sağlanır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,25 +38,25 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>Parametreler  
  `url`  
- [in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.  
+ 'ndaki Belgeyi tanımlayan Tekdüzen Kaynak Konumlandırıcı 'sını (URL) tanımlayan bir `WCHAR` işaretçisi.  
   
  `language`  
- [in] A pointer to a GUID that defines the document language.  
+ 'ndaki Belge dilini tanımlayan bir GUID işaretçisi.  
   
  `languageVendor`  
- [in] A pointer to a GUID that defines the identity of the vendor for the document language.  
+ 'ndaki Belge dili için satıcının kimliğini tanımlayan bir GUID işaretçisi.  
   
  `documentType`  
- [in] A pointer to a GUID that defines the type of the document.  
+ 'ndaki Belge türünü tanımlayan GUID için bir işaretçi.  
   
  `pRetVal`  
- [out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.  
+ dışı Döndürülen [ıdimunmanagedwriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) arabirimine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

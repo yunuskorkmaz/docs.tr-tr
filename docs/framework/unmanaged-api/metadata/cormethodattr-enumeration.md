@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450233"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr Numaralandırması
-Contains values that describe the features of a method.  
+Bir yöntemin özelliklerini tanımlayan değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -66,37 +66,37 @@ typedef enum CorMethodAttr {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`mdMemberAccessMask`|Specifies member access.|  
-|`mdPrivateScope`|Specifies that the member cannot be referenced.|  
-|`mdPrivate`|Specifies that the member is accessible only by the parent type.|  
-|`mdFamANDAssem`|Specifies that the member is accessible by subtypes only in this assembly.|  
-|`mdAssem`|Specifies that the member is accessibly by anyone in the assembly.|  
-|`mdFamily`|Specifies that the member is accessible only by type and subtypes.|  
-|`mdFamORAssem`|Specifies that the member is accessible by derived classes and by other types in its assembly.|  
-|`mdPublic`|Specifies that the member is accessible by all types with access to the scope.|  
-|`mdStatic`|Specifies that the member is defined as part of the type rather than as a member of an instance.|  
-|`mdFinal`|Specifies that the method cannot be overridden.|  
-|`mdVirtual`|Specifies that the method can be overridden.|  
-|`mdHideBySig`|Specifies that the method hides by name and signature, rather than just by name.|  
-|`mdVtableLayoutMask`|Specifies virtual table layout.|  
-|`mdReuseSlot`|Specifies that the slot used for this method in the virtual table be reused. Bu varsayılandır.|  
-|`mdNewSlot`|Specifies that the method always gets a new slot in the virtual table.|  
-|`mdCheckAccessOnOverride`|Specifies that the method can be overridden by the same types to which it is visible.|  
-|`mdAbstract`|Specifies that the method is not implemented.|  
-|`mdSpecialName`|Specifies that the method is special, and that its name describes how.|  
-|`mdPinvokeImpl`|Specifies that the method implementation is forwarded using PInvoke.|  
-|`mdUnmanagedExport`|Specifies that the method is a managed method exported to unmanaged code.|  
-|`mdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`mdRTSpecialName`|Specifies that the common language runtime should check the encoding of the method name.|  
-|`mdHasSecurity`|Specifies that the method has security associated with it.|  
-|`mdRequireSecObject`|Specifies that the method calls another method containing security code.|  
+|`mdMemberAccessMask`|Üye erişimini belirtir.|  
+|`mdPrivateScope`|Üyenin başvurumadığını belirtir.|  
+|`mdPrivate`|Üyenin yalnızca üst tür tarafından erişilebilir olduğunu belirtir.|  
+|`mdFamANDAssem`|Üyenin yalnızca bu derlemede alt türler tarafından erişilebilir olduğunu belirtir.|  
+|`mdAssem`|Üyenin derlemedeki herkes tarafından erişilebilir olduğunu belirtir.|  
+|`mdFamily`|Üyenin yalnızca Type ve alt türleri tarafından erişilebilir olduğunu belirtir.|  
+|`mdFamORAssem`|Üyenin türetilmiş sınıflar ve kendi derlemesindeki diğer türler tarafından erişilebilir olduğunu belirtir.|  
+|`mdPublic`|Üyenin kapsama erişimi olan tüm türler tarafından erişilebilir olduğunu belirtir.|  
+|`mdStatic`|Üyenin, bir örneğin üyesi olarak değil türün bir parçası olarak tanımlandığını belirtir.|  
+|`mdFinal`|Yöntemin geçersiz kılınamayacağını belirtir.|  
+|`mdVirtual`|Yöntemin geçersiz kılınabileceğini belirtir.|  
+|`mdHideBySig`|Yöntemin yalnızca ada göre değil, ad ve imzaya göre gizlediğini belirtir.|  
+|`mdVtableLayoutMask`|Sanal tablo yerleşimini belirtir.|  
+|`mdReuseSlot`|Sanal tabloda bu yöntem için kullanılan yuvanın yeniden kullanıldığını belirtir. Bu varsayılandır.|  
+|`mdNewSlot`|Yöntemin sanal tabloda her zaman yeni bir yuva aldığından emin olur.|  
+|`mdCheckAccessOnOverride`|Yöntemin görünür olduğu aynı türler tarafından geçersiz kılınabileceğini belirtir.|  
+|`mdAbstract`|Yöntemin uygulandığını belirtir.|  
+|`mdSpecialName`|Yöntemin özel olduğunu ve adının nasıl kullanıldığını belirtir.|  
+|`mdPinvokeImpl`|Yöntem uygulamasının PInvoke kullanılarak iletildiğini belirtir.|  
+|`mdUnmanagedExport`|Yöntemin yönetilmeyen koda aktarılmış yönetilen bir yöntem olduğunu belirtir.|  
+|`mdReservedMask`|Ortak dil çalışma zamanı tarafından iç kullanım için ayrılmıştır.|  
+|`mdRTSpecialName`|Ortak dil çalışma zamanının Yöntem adının kodlamasını denetlemesi gerektiğini belirtir.|  
+|`mdHasSecurity`|Metodun onunla ilişkili güvenlik olduğunu belirtir.|  
+|`mdRequireSecObject`|Metodun güvenlik kodu içeren başka bir yöntemi çağırıyorsa belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

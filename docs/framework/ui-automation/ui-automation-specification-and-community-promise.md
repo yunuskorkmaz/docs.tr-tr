@@ -10,9 +10,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441199"
 ---
 # <a name="ui-automation-specification-and-community-promise"></a>UI Otomasyonu Belirtimi ve Topluluk Taahhüdü
-UI Automation provides programmatic access to most user interface (UI) elements on the desktop, enabling assistive technology products such as screen readers to provide information about the UI to end users and to manipulate the UI by means other than standard input.  
+UI Otomasyonu, masaüstündeki çoğu kullanıcı arabirimi (UI) öğesine programlı erişim sağlar ve ekran okuyucular gibi yardımcı teknoloji ürünlerinin, son kullanıcılara Kullanıcı arabirimi hakkında bilgi sağlamasına ve Kullanıcı arabirimini standart girişten farklı yollarla işlemesine olanak sağlar .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Automation Specification](https://developer.microsoft.com/windows/accessible-apps)
-- [UI Automation Community Promise](https://developer.microsoft.com/windows/accessible-apps)
+- [UI Otomasyon belirtimi](https://developer.microsoft.com/windows/accessible-apps)
+- [UI Otomasyonu topluluk Promise](https://developer.microsoft.com/windows/accessible-apps)

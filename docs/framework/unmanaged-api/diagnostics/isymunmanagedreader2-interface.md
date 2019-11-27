@@ -22,18 +22,18 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448272"
 ---
 # <a name="isymunmanagedreader2-interface"></a>ISymUnmanagedReader2 Arabirimi
-Represents a symbol reader that provides access to documents, methods, and variables within a symbol store. This interface extends the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.  
+Bir sembol deposu içindeki belgelere, yöntemlere ve değişkenlere erişim sağlayan bir sembol okuyucuyu temsil eder. Bu arabirim [ıstreamunmanagedreader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) arabirimini genişletir.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetMethodByVersionPreRemap Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodbyversionpreremap-method.md)|Get a symbol reader method, given a method token and an edit-and-continue version number.|  
-|[GetMethodsInDocument Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodsindocument-method.md)|Gets every method that has line information in the provided document.|  
-|[GetSymAttributePreRemap Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getsymattributepreremap-method.md)|Gets a custom attribute based upon its name.|  
+|[GetMethodByVersionPreRemap Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodbyversionpreremap-method.md)|Bir yöntem belirteci ve bir Düzenle ve devam et sürüm numarası verilen bir sembol okuyucu yöntemi alın.|  
+|[GetMethodsInDocument Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getmethodsindocument-method.md)|Belirtilen belgede satır bilgilerine sahip her yöntemi alır.|  
+|[GetSymAttributePreRemap Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-getsymattributepreremap-method.md)|Özel bir özniteliği adına göre alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

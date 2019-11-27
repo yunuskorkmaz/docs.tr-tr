@@ -16,51 +16,51 @@ ms.locfileid: "74348858"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te bir Dizini Diğerine Kopyalama
 
-Use the <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> method to copy a directory to another directory. This method copies the contents of the directory as well as the directory itself. If the target directory does not exist, it will be created. If a directory with the same name exists in the target location and `overwrite` is set to `False`, the contents of the two directories will be merged. You can specify a new name for the directory during the operation.
+Bir dizini başka bir dizine kopyalamak için <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> yöntemini kullanın. Bu yöntem, dizinin içeriğini ve dizinin kendisini kopyalar. Hedef dizin yoksa, oluşturulur. Hedef konumda aynı ada sahip bir dizin varsa ve `overwrite` `False`olarak ayarlanırsa, iki dizinin içeriği birleştirilir. İşlem sırasında dizin için yeni bir ad belirtebilirsiniz.
 
-When copying files within a directory, exceptions may be thrown that are caused by specific file, such as a file existing during a merge while `overwrite` is set to `False`. When such exceptions are thrown, they are consolidated into a single exception, whose `Data` property holds entries in which the file or directory path is the key and the specific exception message is contained in the corresponding value.
+Dosyalar bir dizin içinde kopyalanırken, bir birleştirme sırasında var olan bir dosya gibi belirli bir dosya (örneğin, `overwrite` `False`olarak ayarlandığında) özel durumlar oluşturulabilir. Bu tür özel durumlar oluştuğunda, `Data` özelliği dosya veya dizin yolunun anahtar olduğu ve belirli özel durum iletisinin karşılık gelen değerde bulunduğu girdileri tutan tek bir özel durum halinde birleştirilir.
 
-## <a name="to-copy-a-directory-to-another-directory"></a>To copy a directory to another directory
+## <a name="to-copy-a-directory-to-another-directory"></a>Bir dizini başka bir dizine kopyalamak için
 
-- Use the `CopyDirectory` method, specifying source and destination directory names. The following example copies the directory named `TestDirectory1` into `TestDirectory2`, overwriting existing files.
+- Kaynak ve hedef dizin adlarını belirterek `CopyDirectory` yöntemini kullanın. Aşağıdaki örnek, `TestDirectory1` adlı dizini var olan dosyaların üzerine yazarak `TestDirectory2`kopyalar.
 
     [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]
 
-    This code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **File system - Processing Drives, Folders, and Files**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).
+    Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide **dosya sistemi Işleme sürücülerinde, klasörlerinde ve dosyalarında**bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).
 
 ## <a name="robust-programming"></a>Güçlü Programlama
 
 Aşağıdaki koşullar özel bir duruma neden olabilir:
 
-- The new name specified for the directory contains a colon (:) or slash (\ or /) (<xref:System.ArgumentException>).
+- Dizin için belirtilen yeni ad iki nokta içerir (:) veya eğik çizgi (\ veya/) (<xref:System.ArgumentException>).
 
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (\\\\.\\) (<xref:System.ArgumentException>) ile başlar.
 
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.
 
-- `destinationDirectoryName` is `Nothing` or an empty string (<xref:System.ArgumentNullException>)
+- `destinationDirectoryName` `Nothing` veya boş bir dize (<xref:System.ArgumentNullException>)
 
-- The source directory does not exist (<xref:System.IO.DirectoryNotFoundException>).
+- Kaynak dizin yok (<xref:System.IO.DirectoryNotFoundException>).
 
-- The source directory is a root directory (<xref:System.IO.IOException>).
+- Kaynak dizin bir kök dizin (<xref:System.IO.IOException>).
 
-- The combined path points to an existing file (<xref:System.IO.IOException>).
+- Birleşik yol, var olan bir dosyaya (<xref:System.IO.IOException>) işaret eder.
 
-- The source path and target path are the same (<xref:System.IO.IOException>).
+- Kaynak yolu ve hedef yolu aynı (<xref:System.IO.IOException>).
 
-- `ShowUI` is set to `UIOption.AllDialogs` and the user cancels the operation, or one or more files in the directory cannot be copied (<xref:System.OperationCanceledException>).
+- `ShowUI` `UIOption.AllDialogs` olarak ayarlanır ve Kullanıcı işlemi iptal eder veya dizindeki bir veya daha fazla Dosya kopyalanamıyor (<xref:System.OperationCanceledException>).
 
-- The operation is cyclic (<xref:System.InvalidOperationException>).
+- İşlem döngüsel (<xref:System.InvalidOperationException>).
 
-- The path contains a colon (:) (<xref:System.NotSupportedException>).
+- Yol iki nokta içerir (:) (<xref:System.NotSupportedException>).
 
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.
 
-- A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).
+- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).
 
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).
+- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).
 
-- A destination file exists but cannot be accessed (<xref:System.UnauthorizedAccessException>).
+- Hedef dosya var, ancak erişilemez (<xref:System.UnauthorizedAccessException>).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

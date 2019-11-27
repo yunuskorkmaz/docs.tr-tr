@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo9::GetNativeCodeStartAddresses
+title: 'ICorProfilerInfo9:: Getnativecodestartaadresler'
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -18,9 +18,9 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444721"
 ---
-# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9::GetNativeCodeStartAddresses Method
+# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: Getnativecodestartaadresler yöntemi
 
-Given a functionId and rejitId, enumerates the native code start address of all jitted versions of this code that currently exist.
+Bir FunctionID ve ReJITID verildiğinde, bu kodun Şu anda var olan tüm jıderlenen sürümlerinin yerel kod başlangıç adresini numaralandırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,34 +35,34 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 #### <a name="parameters"></a>Parametreler
 
 `functionId` \
-[in] The ID of the function whose native code start addresses should be returned.
+'ndaki Yerel kod başlatma adresleri döndürülecek olan işlevin KIMLIĞI.
 
 `reJitId` \
-[in] The identity of the JIT-recompiled function.
+'ndaki JıT-yeniden derleme işlevinin kimliği.
 
 `cCodeStartAddresses` \
-[in] The maximum size of the `codeStartAddresses` array.
+'ndaki `codeStartAddresses` dizisinin en büyük boyutu.
 
 `pcCodeStartAddresses` \
-[out] The number of available addresses.
+dışı Kullanılabilir adreslerin sayısı.
 
 `codeStartAddresses` \
-[out] An array of `UINT_PTR`, each one of which is the start address for a native body for the specified function.
+dışı Her birinin belirtilen işlev için yerel gövde başlangıç adresi olan `UINT_PTR`dizisi.
 
 ## <a name="remarks"></a>Açıklamalar
 
-When tiered compilation is enabled, a function may have more than one native code body.
+Katmanlı derleme etkinleştirildiğinde, bir işlevde birden fazla yerel kod gövdesi olabilir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Platformlar:** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Header:** CorProf.idl, CorProf.h
+**Üst bilgi:** CorProf. IDL, CorProf. h
 
-**Library:** CorGuids.lib
+**Kitaplık:** Corguid. lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET sürümleri:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

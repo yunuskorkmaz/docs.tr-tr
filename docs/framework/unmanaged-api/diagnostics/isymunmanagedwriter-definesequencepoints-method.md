@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427988"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints Yöntemi
-Defines a group of sequence points within the current method. Each starting line and starting column define the start of a statement within a method. Each ending line and ending column define the end of a statement within a method. The arrays should be sorted in increasing order of offsets. The offset is always measured from the start of the method, in bytes.  
+Geçerli yöntem içindeki bir dizi noktası grubunu tanımlar. Her başlangıç satırı ve başlangıç sütunu, bir yöntem içinde bir deyimin başlangıcını tanımlar. Her bitiş satırı ve bitiş sütunu, bir yöntem içindeki bir deyimin sonunu tanımlar. Dizilerin, uzaklıklarda artan sırada sıralanması gerekir. Konum her zaman yöntemin başından (bayt cinsinden) ölçülür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,31 +40,31 @@ HRESULT DefineSequencePoints(
   
 ## <a name="parameters"></a>Parametreler  
  `document`  
- [in] The document object for which the sequence points are being defined.  
+ 'ndaki Sıra noktalarının tanımlandığı belge nesnesi.  
   
  `spCount`  
- [in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.  
+ 'ndaki `offsets`, `lines`, `columns`, `endLines`ve `endColumns` arabelleklerinin her birinin boyutunu belirten `ULONG32`.  
   
  `offsets`  
- [in] The offset of the sequence points measured from the beginning of the method.  
+ 'ndaki Yöntemin başından itibaren ölçülen dizi noktalarının boşluğu.  
   
  `lines`  
- [in] The starting line numbers of the sequence points.  
+ 'ndaki Sıra noktalarının başlangıç satırı numaraları.  
   
  `columns`  
- [in] The starting column numbers of the sequence points.  
+ 'ndaki Sıra noktalarının başlangıç sütunu numaraları.  
   
  `endLines`  
- [in] The ending line numbers of the sequence points. This parameter is optional.  
+ 'ndaki Sıra noktalarının bitiş çizgisi numaraları. Bu parametre isteğe bağlıdır.  
   
  `endColumns`  
- [in] The ending column numbers of the sequence points. This parameter is optional.  
+ 'ndaki Sıra noktalarının bitiş sütun numaraları. Bu parametre isteğe bağlıdır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

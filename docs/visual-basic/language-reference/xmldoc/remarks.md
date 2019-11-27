@@ -12,8 +12,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352259"
 ---
-# <a name="remarks-visual-basic"></a>\<remarks> (Visual Basic)
-Specifies a remarks section for the member.  
+# <a name="remarks-visual-basic"></a>\<açıklamalar > (Visual Basic)
+Üye için bir açıklamalar bölümü belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,17 +23,17 @@ Specifies a remarks section for the member.
   
 ## <a name="parameters"></a>Parametreler  
  `description`  
- A description of the member.  
+ Üyenin açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Use the `<remarks>` tag to add information about a type, supplementing the information specified with [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md).  
+ Bir tür hakkında bilgi eklemek için `<remarks>` etiketini kullanın, [\<özet >](../../../visual-basic/language-reference/xmldoc/summary.md)ile belirtilen bilgileri ekleyin.  
   
- This information appears in the Object Browser. For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).  
+ Bu bilgiler Nesne Tarayıcısı görüntülenir. Nesne Tarayıcısı hakkında daha fazla bilgi için bkz. [kod yapısını görüntüleme](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `<remarks>` tag to explain what the `UpdateRecord` method does.  
+ Bu örnek, `UpdateRecord` yönteminin ne yaptığını açıklamak için `<remarks>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

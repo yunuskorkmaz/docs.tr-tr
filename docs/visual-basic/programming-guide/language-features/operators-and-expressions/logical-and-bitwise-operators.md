@@ -29,33 +29,33 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343600"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic'de Mantıksal ve Bit Düzeyinde İşleçler
-Logical operators compare `Boolean` expressions and return a `Boolean` result. The `And`, `Or`, `AndAlso`, `OrElse`, and `Xor` operators are *binary* because they take two operands, while the `Not` operator is *unary* because it takes a single operand. Some of these operators can also perform bitwise logical operations on integral values.  
+Mantıksal işleçler `Boolean` ifadelerini karşılaştırır ve `Boolean` sonucunu döndürür. `And`, `Or`, `AndAlso`, `OrElse`ve `Xor` işleçleri *ikili bir dosya* olsa da, tek bir işlenen aldığı için `Not` işleci *birli* olur. Bu işleçlerden bazıları, tam sayı değerlerinde bit düzeyinde mantıksal işlemler de gerçekleştirebilir.  
   
-## <a name="unary-logical-operator"></a>Unary Logical Operator  
- The [Not Operator](../../../../visual-basic/language-reference/operators/not-operator.md) performs logical *negation* on a `Boolean` expression. It yields the logical opposite of its operand. If the expression evaluates to `True`, then `Not` returns `False`; if the expression evaluates to `False`, then `Not` returns `True`. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="unary-logical-operator"></a>Birli mantıksal Işleç  
+ [Not işleci](../../../../visual-basic/language-reference/operators/not-operator.md) `Boolean` ifadesinde mantıksal *değilleme* gerçekleştirir. İşleneni, işleneninin mantıksal tersini verir. İfade `True`olarak değerlendirilirse `Not` `False`döndürür; ifade `False`olarak değerlendirilirse `Not` `True`döndürür. Aşağıdaki örnek bunu göstermektedir.  
   
  [!code-vb[VbVbalrOperators#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#77)]  
   
-## <a name="binary-logical-operators"></a>Binary Logical Operators  
- The [And Operator](../../../../visual-basic/language-reference/operators/and-operator.md) performs logical *conjunction* on two `Boolean` expressions. If both expressions evaluate to `True`, then `And` returns `True`. If at least one of the expressions evaluates to `False`, then `And` returns `False`.  
+## <a name="binary-logical-operators"></a>İkili mantıksal Işleçler  
+ [And işleci](../../../../visual-basic/language-reference/operators/and-operator.md) iki `Boolean` ifadelerinde mantıksal bir *birlikte* gerçekleştirir. Her iki ifade de `True`olarak değerlendirilir `And` `True`döndürür. Deyimlerden en az biri `False`değerlendirilirse `And` `False`döndürür.  
   
- The [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) performs logical *disjunction* or *inclusion* on two `Boolean` expressions. If either expression evaluates to `True`, or both evaluate to `True`, then `Or` returns `True`. If neither expression evaluates to `True`, `Or` returns `False`.  
+ [OR işleci](../../../../visual-basic/language-reference/operators/or-operator.md) , mantıksal *ayırıcı* veya iki `Boolean` ifadeye *dahil* etme işlemini gerçekleştirir. Her iki ifade de `True`olarak değerlendirilir veya `True`her ikisi de `Or` `True`döndürür. Hiçbir ifadenin `True`olarak değerlendiriliyorsa `Or` `False`döndürür.  
   
- The [Xor Operator](../../../../visual-basic/language-reference/operators/xor-operator.md) performs logical *exclusion* on two `Boolean` expressions. If exactly one expression evaluates to `True`, but not both, `Xor` returns `True`. If both expressions evaluate to `True` or both evaluate to `False`, `Xor` returns `False`.  
+ [Xor işleci](../../../../visual-basic/language-reference/operators/xor-operator.md) iki `Boolean` ifadelerinde mantıksal *dışlama* gerçekleştirir. Tam olarak bir ifade `True`olarak değerlendirilir, ancak her ikisini birden değil `Xor` `True`döndürür. Her iki ifade de `True` veya her ikisi de `False`olarak değerlendirilir `Xor` `False`döndürür.  
   
- The following example illustrates the `And`, `Or`, and `Xor` operators.  
+ Aşağıdaki örnekte `And`, `Or`ve `Xor` işleçleri gösterilmektedir.  
   
  [!code-vb[VbVbalrOperators#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#78)]  
   
-## <a name="short-circuiting-logical-operations"></a>Short-Circuiting Logical Operations  
- The [AndAlso Operator](../../../../visual-basic/language-reference/operators/andalso-operator.md) is very similar to the `And` operator, in that it also performs logical conjunction on two `Boolean` expressions. The key difference between the two is that `AndAlso` exhibits *short-circuiting* behavior. If the first expression in an `AndAlso` expression evaluates to `False`, then the second expression is not evaluated because it cannot alter the final result, and `AndAlso` returns `False`.  
+## <a name="short-circuiting-logical-operations"></a>Kısa devre mantıksal Işlemler yürütülüyor  
+ [AndAlso işleci](../../../../visual-basic/language-reference/operators/andalso-operator.md) `And` işlecine çok benzer ve ayrıca iki `Boolean` ifadesi üzerinde mantıksal bir işlem gerçekleştirir. İkisi arasındaki temel fark, `AndAlso` *kısa* devre davranýþý davranışını gösteriyor. `AndAlso` ifadesindeki ilk ifade `False`olarak değerlendirilirse, ikinci ifade, nihai sonucu değiştirmediği ve `AndAlso` `False`döndürdüğü için değerlendirilmez.  
   
- Similarly, the [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md) performs short-circuiting logical disjunction on two `Boolean` expressions. If the first expression in an `OrElse` expression evaluates to `True`, then the second expression is not evaluated because it cannot alter the final result, and `OrElse` returns `True`.  
+ Benzer şekilde, [OrElse işleci](../../../../visual-basic/language-reference/operators/orelse-operator.md) iki `Boolean` ifadeye kısa devre uygulayan mantıksal bir birleşim gerçekleştirir. `OrElse` ifadesindeki ilk ifade `True`olarak değerlendirilirse, ikinci ifade, nihai sonucu değiştirmediği ve `OrElse` `True`döndürdüğü için değerlendirilmez.  
   
-### <a name="short-circuiting-trade-offs"></a>Short-Circuiting Trade-Offs  
- Short-circuiting can improve performance by not evaluating an expression that cannot alter the result of the logical operation. However, if that expression performs additional actions, short-circuiting skips those actions. For example, if the expression includes a call to a `Function` procedure, that procedure is not called if the expression is short-circuited, and any additional code contained in the `Function` does not run. Therefore, the function might run only occasionally, and might not be tested correctly. Or the program logic might depend on the code in the `Function`.  
+### <a name="short-circuiting-trade-offs"></a>Kısa süreli bir denge  
+ Kısa devre uygulayan, mantıksal işlemin sonucunu değiştirebilecek bir ifadeyi değerlendirmeden performansı iyileştirebilir. Ancak, bu ifade ek eylemler gerçekleştirdiğinde, kısa devre uygulayan bu eylemleri atlar. Örneğin, ifade bir `Function` yordamına çağrı içeriyorsa, ifade kısa devre dışı ise ve `Function` dahil olan ek kodlar çalıştırılmadığından Bu yordam çağrılmaz. Bu nedenle, işlev yalnızca belirli bir zaman çalışabilir ve doğru şekilde sınanmayabilir. Ya da program mantığı `Function`koda bağlı olarak değişebilir.  
   
- The following example illustrates the difference between `And`, `Or`, and their short-circuiting counterparts.  
+ Aşağıdaki örnek, `And`, `Or`ve bunların kısa devre dışı karşılıkları arasındaki farkı gösterir.  
   
  [!code-vb[VbVbalrOperators#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#81)]  
   
@@ -63,43 +63,43 @@ Logical operators compare `Boolean` expressions and return a `Boolean` result. T
   
  [!code-vb[VbVbalrOperators#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#79)]  
   
- In the preceding example, note that some important code inside `checkIfValid()` does not run when the call is short-circuited. The first `If` statement calls `checkIfValid()` even though `12 > 45` returns `False`, because `And` does not short-circuit. The second `If` statement does not call `checkIfValid()`, because when `12 > 45` returns `False`, `AndAlso` short-circuits the second expression. The third `If` statement calls `checkIfValid()` even though `12 < 45` returns `True`, because `Or` does not short-circuit. The fourth `If` statement does not call `checkIfValid()`, because when `12 < 45` returns `True`, `OrElse` short-circuits the second expression.  
+ Yukarıdaki örnekte, çağrı kısa devre dışı olduğunda `checkIfValid()` içindeki bazı önemli kodun çalıştırılmadığını unutmayın. İlk `If` ifade, `And` kısa devre olmadığından `12 > 45` `False`döndürse bile `checkIfValid()` çağırır. İkinci `If` deyimi `checkIfValid()`çağırmaz; çünkü `12 > 45` `False`döndürdüğünde, `AndAlso` kısa devreler ikinci ifadedir. `Or` kısa devre olmadığından, üçüncü `If` ifade `12 < 45` `True`döndürse bile `checkIfValid()` çağırır. Dördüncü `If` deyimi, `12 < 45` `True`döndürdüğünde, `OrElse` kısa devreden ikinci ifadeye `checkIfValid()`çağırmaz.  
   
-## <a name="bitwise-operations"></a>Bitwise Operations  
- Bitwise operations evaluate two integral values in binary (base 2) form. They compare the bits at corresponding positions and then assign values based on the comparison. The following example illustrates the `And` operator.  
+## <a name="bitwise-operations"></a>Bit düzeyinde Işlemler  
+ Bit düzeyinde işlemler ikili (taban 2) formda iki integral değeri değerlendirir. Bunlara karşılık gelen konumlarda bitleri karşılaştırırlar ve sonra karşılaştırmaya göre değerler atar. Aşağıdaki örnekte `And` işleci gösterilmektedir.  
   
  [!code-vb[VbVbalrConcepts#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#2)]  
   
- The preceding example sets the value of `x` to 1. This happens for the following reasons:  
+ Yukarıdaki örnek `x` değerini 1 olarak ayarlar. Bu durum aşağıdaki nedenlerden dolayı gerçekleşir:  
   
-- The values are treated as binary:  
+- Değerler ikili olarak değerlendirilir:  
   
-     3 in binary form = 011  
+     3 ikili biçiminde 3 = 011  
   
-     5 in binary form = 101  
+     5 ikili biçimi = 101  
   
-- The `And` operator compares the binary representations, one binary position (bit) at a time. If both bits at a given position are 1, then a 1 is placed in that position in the result. If either bit is 0, then a 0 is placed in that position in the result. In the preceding example this works out as follows:  
+- `And` işleci, tek seferde bir ikili konum (bit) ikili gösterimlerini karşılaştırır. Belirli bir konumdaki bitlerin her ikisi de 1 ise, sonuçta bu konuma bir 1 konur. Her iki bit de 0 ise, sonuçta bu konuma 0 yerleştirilir. Yukarıdaki örnekte bu, aşağıdaki gibi çalışmaktadır:  
   
-     011 (3 in binary form)  
+     011 (ikili biçimde 3)  
   
-     101 (5 in binary form)  
+     101 (ikili biçimde 5)  
   
-     001 (The result, in binary form)  
+     001 (sonuç, ikili biçimde)  
   
-- The result is treated as decimal. The value 001 is the binary representation of 1, so `x` = 1.  
+- Sonuç ondalık olarak değerlendirilir. 001 değeri 1 ' in ikili gösterimidir, bu nedenle `x` = 1 ' dir.  
   
- The bitwise `Or` operation is similar, except that a 1 is assigned to the result bit if either or both of the compared bits is 1. `Xor` assigns a 1 to the result bit if exactly one of the compared bits (not both) is 1. `Not` takes a single operand and inverts all the bits, including the sign bit, and assigns that value to the result. This means that for signed positive numbers, `Not` always returns a negative value, and for negative numbers, `Not` always returns a positive or zero value.  
+ Bit düzeyinde `Or` işlem benzerdir, ancak karşılaştırılan bitlerin biri veya her ikisi 1 ise sonuç bitine 1 atanır. `Xor`, karşılaştırılan bitlerin (her ikisi de değil) tam olarak biri 1 olduğunda sonuç bitini 1 atar. `Not` tek bir işlenen alır ve işaret biti dahil olmak üzere tüm bitleri ters çevirir ve bu değeri sonuca atar. Bu, `Not` her zaman negatif bir değer döndüren ve negatif sayılar için `Not` her zaman pozitif veya sıfır değeri döndüren anlamına gelir.  
   
- The `AndAlso` and `OrElse` operators do not support bitwise operations.  
+ `AndAlso` ve `OrElse` işleçleri bit düzeyinde işlemleri desteklemez.  
   
 > [!NOTE]
-> Bitwise operations can be performed on integral types only. Floating-point values must be converted to integral types before bitwise operation can proceed.  
+> Bit düzeyinde işlemler yalnızca integral türlerinde gerçekleştirilebilir. Bit düzeyinde işlemin devam edebilmesi için kayan nokta değerlerinin tamsayı türlerine dönüştürülmesi gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Logical/Bitwise Operators (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Mantıksal/bit düzeyinde Işleçler (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Boole İfadeleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
-- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic aritmetik Işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic karşılaştırma Işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic birleştirme Işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
 - [İşleçlerin Etkili Bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

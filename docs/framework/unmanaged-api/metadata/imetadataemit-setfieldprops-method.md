@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445453"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps Yöntemi
-Sets or updates the default value for the field referenced by the specified field token.  
+Belirtilen alan belirteci tarafından başvurulan alan için varsayılan değeri ayarlar veya güncelleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +39,28 @@ HRESULT SetFieldProps (
   
 ## <a name="parameters"></a>Parametreler  
  `fd`  
- [in] The token for the target field.  
+ 'ndaki Hedef alan için belirteç.  
   
  `dwFieldFlags`  
- [in] Field attributes. This is a bitmask of `CorFieldAttr` values.  
+ 'ndaki Alan öznitelikleri. Bu, `CorFieldAttr` değerlerinin bir bit dır.  
   
  `dwCPlusTypeFlag`  
- [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.  
+ 'ndaki Sabit değer için `ELEMENT_TYPE_` *\** . Bu bir `CorElementType` değeridir. Bir sabit tanımlanmamışsa, bu değeri `ELEMENT_TYPE_END`olarak ayarlayın.  
   
  `pValue`  
- [in] The constant value for the field.  
+ 'ndaki Alanın sabit değeri.  
   
  `cchValue`  
- [in] The size, in Unicode characters, of `pValue`.  
+ 'ndaki `pValue`Unicode karakter cinsinden boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

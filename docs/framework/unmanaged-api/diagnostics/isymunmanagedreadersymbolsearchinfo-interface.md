@@ -22,17 +22,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446386"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfo-interface"></a>ISymUnmanagedReaderSymbolSearchInfo Arabirimi
-Provides methods that get symbol search information. Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.  
+Sembol arama bilgilerini alan yöntemler sağlar. [Idimunmanagedreader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) arabirimini uygulayan bir nesne üzerinde `QueryInterface` çağırarak bu arabirimi elde edin.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetSymbolSearchInfo Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md)|Gets symbol search information.|  
-|[GetSymbolSearchInfoCount Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|Gets a count of symbol search information.|  
+|[GetSymbolSearchInfo Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md)|Sembol arama bilgilerini alır.|  
+|[GetSymbolSearchInfoCount Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|Sembol arama bilgilerinin sayısını alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435939"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save Yöntemi
-Saves all metadata in the current scope to the file at the specified address.  
+Geçerli kapsamdaki tüm meta verileri belirtilen adresteki dosyaya kaydeder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT Save (
   
 ## <a name="parameters"></a>Parametreler  
  `wzFile`  
- [in] The name of the file to save to. If this value is null, the in-memory copy will be saved to the last location that was used.  
+ 'ndaki Kaydedilecek dosyanın adı. Bu değer null ise, bellek içi kopyalama kullanılan son konuma kaydedilir.  
   
  `dwSaveFlags`  
- [in] Reserved. Must be zero.  
+ 'ndaki Ayrılamadı. Sıfır olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

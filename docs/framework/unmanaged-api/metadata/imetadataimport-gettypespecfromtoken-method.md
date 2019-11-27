@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436698"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken Metodu
-Gets the binary metadata signature of the type specification represented by the specified token.  
+Belirtilen belirteçle temsil edilen tür belirtiminin ikili meta veri imzasını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,25 +37,25 @@ HRESULT GetTypeSpecFromToken (
   
 ## <a name="parameters"></a>Parametreler  
  `typespec`  
- [in] The TypeSpec token associated with the requested metadata signature.  
+ 'ndaki İstenen meta veri imzasıyla ilişkili TypeSpec belirteci.  
   
  `ppvSig`  
- [out] A pointer to the binary metadata signature.  
+ dışı İkili meta veri imzasına yönelik bir işaretçi.  
   
  `pcbSig`  
- [out] The size, in bytes, of the metadata signature.  
+ dışı Meta veri imzasının bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- An HRESULT that indicates success or failure. Failures can be tested with the FAILED macro.  
+ Başarılı veya başarısız olduğunu gösteren bir HRESULT. Başarısızlıklar başarısız makroyla test edilebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

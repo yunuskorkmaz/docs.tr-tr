@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433878"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash Yöntemi
-Retrieves a hash blob for a given assembly.  
+Verilen derleme için bir karma blobu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT GetAssemblyRefHash(
   
 ## <a name="parameters"></a>Parametreler  
  `FileToken`  
- ID of assembly to which the hash will refer.  
+ Karmasının başvurabileceği derlemenin KIMLIĞI.  
   
  `ppvHash`  
- Receives the resulting hash blob.  
+ Elde edilen karma blobu alır.  
   
  `pcbHash`  
- Receives size, in bytes, of hash blob.  
+ Karma Blobun boyutunu bayt cinsinden alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

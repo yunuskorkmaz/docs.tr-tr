@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436040"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo Metodu
-Gets detailed information about an array object.  
+Bir dizi nesnesi hakkında ayrıntılı bilgi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,31 +38,31 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="parameters"></a>Parametreler  
  `objectId`  
- [in] The ID of a valid array object.  
+ 'ndaki Geçerli bir array nesnesinin KIMLIĞI.  
   
  `cDimensions`  
- [in] The rank (number of dimensions) of the array.  
+ 'ndaki Dizinin derece (boyut sayısı).  
   
  `pDimensionSizes`  
- [out] An array that contains integers, each representing the size of a dimension of the array.  
+ dışı Her biri dizi boyutunun boyutunu temsil eden tamsayılar içeren bir dizi.  
   
  `pDimensionLowerBounds`  
- [out] An array that contains integers, each representing the lower bound of a dimension of the array.  
+ dışı Her biri dizi boyutunun alt sınırını temsil eden tamsayılar içeren bir dizi.  
   
  `ppData`  
- [out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.  
+ dışı Dizi için, C++ kurala göre düzenlendiği ham arabelleğin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.  
+ `pDimensionSizes` ve `pDimensionLowerBounds` paralel dizilerdir, bu nedenle her dizide aynı dizinde bulunan öğeler aynı varlığın niteliklerinden oluşur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

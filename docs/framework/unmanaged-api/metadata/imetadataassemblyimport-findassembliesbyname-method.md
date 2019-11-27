@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448297"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName Yöntemi
-Gets an array of assemblies with the specified `szAssemblyName` parameter, using the standard rules employed by the common language runtime (CLR) for resolving references.  
+Başvuruları çözümlemek için ortak dil çalışma zamanı (CLR) tarafından kullanılan standart kuralları kullanarak, belirtilen `szAssemblyName` parametresine sahip derlemelerin dizisini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,47 +40,47 @@ HRESULT FindAssembliesByName (
   
 ## <a name="parameters"></a>Parametreler  
  `szAppBase`  
- [in] The root directory in which to search for the given assembly. If this value is set to `null`, `FindAssembliesByName` will look only in the global assembly cache for the assembly.  
+ 'ndaki Verilen derlemenin aranacağı kök dizin. Bu değer `null`olarak ayarlandıysa, `FindAssembliesByName` yalnızca derleme için genel derleme önbelleğinde görünür.  
   
  `szPrivateBin`  
- [in] A list of semicolon-delimited subdirectories (for example, "bin;bin2"), under the root directory, in which to search for the assembly. These directories are probed in addition to those specified in the default probing rules.  
+ 'ndaki Derlemenin aranacağı kök dizin altında, noktalı virgülle ayrılmış alt dizinlerin (örneğin, "bin; bin2") bir listesi. Bu dizinler, varsayılan yoklama kurallarında belirtienlere ek olarak araştırlanır.  
   
  `szAssemblyName`  
- [in] The name of the assembly to find. The format of this string is defined in the class reference page for <xref:System.Reflection.AssemblyName>.  
+ 'ndaki Bulunacak derlemenin adı. Bu dizenin biçimi <xref:System.Reflection.AssemblyName>için sınıf başvurusu sayfasında tanımlanmıştır.  
   
  `ppIUnk`  
- [in] An array of type [IUnknown](/cpp/atl/iunknown) in which to put the `IMetadataAssemblyImport` interface pointers.  
+ 'ndaki `IMetadataAssemblyImport` arabirim işaretçilerine yerleştirilecek [IUnknown](/cpp/atl/iunknown) türünde bir dizi.  
   
  `cMax`  
- [out] The maximum number of interface pointers that can be placed in `ppIUnk`.  
+ dışı `ppIUnk`yerleştirilebilecek en fazla arabirim işaretçisi sayısı.  
   
  `pcAssemblies`  
- [out] The number of interface pointers returned. That is, the number of interface pointers actually placed in `ppIUnk`.  
+ dışı Döndürülen arabirim işaretçilerinin sayısı. Diğer bir deyişle, gerçekten `ppIUnk`yer alan arabirim işaretçilerinin sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`FindAssembliesByName` returned successfully.|  
-|`S_FALSE`|There are no assemblies.|  
+|`S_OK`|`FindAssembliesByName` başarıyla döndürüldü.|  
+|`S_FALSE`|Hiçbir derleme yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Given an assembly name, the `FindAssembliesByName` method finds the assembly by following the standard rules for resolving assembly references. (For more information, see [How the Runtime Locates Assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` allows the caller to configure various aspects of the assembly resolver context, such as application base and private search path.  
+ Derleme adı verildiğinde `FindAssembliesByName` yöntemi, derleme başvurularını çözümlemek için standart kuralları izleyerek derlemeyi bulur. (Daha fazla bilgi için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName`, çağıranın uygulama temeli ve özel arama yolu gibi bütünleştirilmiş kod çözümleyici bağlamının çeşitli yönlerini yapılandırmasına izin verir.  
   
- The `FindAssembliesByName` method requires the CLR to be initialized in the process in order to invoke the assembly resolution logic. Therefore, you must call [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (passing COINITEE_DEFAULT) before calling `FindAssembliesByName`, and then follow with a call to [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
+ `FindAssembliesByName` yöntemi, derleme çözümleme mantığını çağırmak için CLR 'nin işlemde başlatılmasını gerektirir. Bu nedenle, `FindAssembliesByName`çağrılmadan önce [Coınitialeee](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (geçirme COINITEE_DEFAULT) yöntemini çağırmanız ve sonra [Counınitializecor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md)çağrısı ile izlemeniz gerekir.  
   
- `FindAssembliesByName` returns an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) pointer to the file containing the assembly manifest for the assembly name that is passed in. If the given assembly name is not fully specified (for example, if it does not include a version), multiple assemblies might be returned.  
+ `FindAssembliesByName`, geçirilen derleme adı için derleme bildirimini içeren dosyaya bir [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) işaretçisi döndürür. Verilen derleme adı tam olarak belirtilmemişse (örneğin, bir sürüm içermiyorsa), birden çok derleme döndürülebilir.  
   
- `FindAssembliesByName` is commonly used by a compiler that attempts to find a referenced assembly at compile time.  
+ `FindAssembliesByName`, derleme zamanında başvurulan bir derlemeyi bulmayı deneyen bir derleyici tarafından yaygın olarak kullanılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

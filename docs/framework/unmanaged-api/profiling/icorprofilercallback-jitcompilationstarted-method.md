@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426189"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>ICorProfilerCallback::JITCompilationStarted Yöntemi
-Notifies the profiler that the just-in-time (JIT) compiler has started to compile a function.  
+Profil oluşturucuyu, Just-In-Time (JıT) derleyicisinin bir işlevi derlemek için başlatıldığını bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,26 +35,26 @@ HRESULT JITCompilationStarted(
   
 ## <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] The ID of the function for which the compilation is starting.  
+ 'ndaki Derlemenin başladığı işlevin KIMLIĞI.  
   
  `fIsSafeToBlock`  
- [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
+ 'ndaki Profiler 'ın çalışma zamanının işlemini etkilemesinin ne olmayacağını gösteren bir değer. Engelleme, çalışma zamanının çağıran iş parçacığının bu geri aramadan dönmesini beklemesini neden olabileceğinden `true`. Aksi takdirde, `false`.  
   
- Although a value of `true` will not harm the runtime, it can skew the profiling results.  
+ `true` değeri çalışma zamanına zarar verse de, profil oluşturma sonuçlarını çarpıtmasına neden olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- It is possible to receive more than one pair of `JITCompilationStarted` and [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) calls for each function because of the way the runtime handles class constructors. For example, the runtime starts to JIT-compile method A, but the class constructor for class B needs to be run. Therefore, the runtime JIT-compiles the constructor for class B and runs it. While the constructor is running, it makes a call to method A, which causes method A to be JIT-compiled again. In this scenario, the first JIT compilation of method A is halted. However, both attempts to JIT-compile method A are reported with JIT-compilation events. If the profiler is going to replace Microsoft intermediate language (MSIL) code for method A by calling the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, it must do so for both `JITCompilationStarted` events, but it may use the same MSIL block for both.  
+ Çalışma zamanının sınıf oluşturucularını işleme biçimi nedeniyle her bir işlev için birden fazla `JITCompilationStarted` ve [ICorProfilerCallback:: JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) çağrısı almak mümkündür. Örneğin, çalışma zamanı JıT-Compile yöntemine başlar, ancak B sınıfı için sınıf oluşturucusunun çalıştırılması gerekir. Bu nedenle, çalışma zamanı JıT-oluşturucuyu B sınıfı için derler ve çalıştırır. Oluşturucu çalışırken, a yöntemine bir çağrı yapar ve bu, yönteminin JıT olarak derlenmesine neden olur. Bu senaryoda, A yönteminin ilk JıT derlemesi durdurulur. Ancak, JIT-Compile yöntemine her ikisi de JıT derleme olayları ile bildirilir. Profil Oluşturucu, [ICorProfilerInfo:: SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) metodunu çağırarak bir yöntem için Microsoft ara DILI (MSIL) kodu ' nu değiştirmek için, her iki `JITCompilationStarted` olayına de bunu yapması gerekir, ancak her ikisi için de aynı MSIL bloğunu kullanabilir.  
   
- Profilers must support the sequence of JIT callbacks in cases where two threads are simultaneously making callbacks. For example, thread A calls `JITCompilationStarted`. However, before thread A calls `JITCompilationFinished`, thread B calls [ICorProfilerCallback::ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) with the function ID from thread A's `JITCompilationStarted` callback. It might appear that the function ID should not yet be valid because a call to `JITCompilationFinished` had not yet been received by the profiler. However, in a case like this one, the function ID is valid.  
+ Profil oluşturucular, iki iş parçacığının aynı anda geri çağırma yapmakta olduğu durumlarda JıT geri çağırmaları dizisini desteklemelidir. Örneğin, iş parçacığı bir çağrı `JITCompilationStarted`. Ancak, iş parçacığından bir çağrı `JITCompilationFinished`önce, B iş parçacığı [ICorProfilerCallback:: ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) ' i Iş parçacığı A 'nın `JITCompilationStarted` geri ÇAĞRıSıNıN işlev kimliğiyle çağırır. Bir `JITCompilationFinished` çağrısı henüz profil oluşturucu tarafından alınmadığından, işlev KIMLIĞININ henüz geçerli olmaması gerekebilir. Ancak, bunun gibi bir durumda, işlev KIMLIĞI geçerli olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

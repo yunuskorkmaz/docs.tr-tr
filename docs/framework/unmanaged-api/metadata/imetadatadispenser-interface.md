@@ -22,24 +22,24 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436230"
 ---
 # <a name="imetadatadispenser-interface"></a>IMetaDataDispenser Arabirimi
-Provides methods to create a new metadata scope, or open an existing one.  
+Yeni bir meta veri kapsamı oluşturmak için yöntemler sağlar veya var olan bir verileri açar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[DefineScope Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-definescope-method.md)|Creates a new area in memory where you can create new metadata.|  
-|[OpenScope Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)|Opens an existing, on-disk file and maps its metadata into memory.|  
-|[OpenScopeOnMemory Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)|Opens an area of memory that contains existing metadata. That is, this method opens a specified area of memory in which the existing data is treated as metadata.|  
+|[DefineScope Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-definescope-method.md)|Bellekte yeni meta veri oluşturabileceğiniz yeni bir alan oluşturur.|  
+|[OpenScope Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)|Mevcut, disk üzerindeki bir dosyayı açar ve meta verilerini belleğe eşler.|  
+|[OpenScopeOnMemory Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)|Mevcut meta verileri içeren bir bellek alanını açar. Diğer bir deyişle, bu yöntem mevcut verilerin meta veri olarak değerlendirilme belirtilen bir bellek alanını açar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

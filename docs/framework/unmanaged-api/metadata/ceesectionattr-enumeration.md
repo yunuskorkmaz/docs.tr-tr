@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444253"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr Numaralandırması
-Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
+[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) arabirimi tarafından kullanılmak üzere bir bölümün özniteliklerini belirten değerler sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,19 +41,19 @@ typedef enum  {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`sdNone`|Section has no attributes.|  
-|`sdReadOnly`|Section contains initialized data that can be only read, not updated.|  
-|`sdReadWrite`|Section contains initialized data that can be read or updated.|  
-|`sdExecute`|Section contains executable code that is allowed to be read and executed.|  
+|`sdNone`|Bölümünde hiç öznitelik yok.|  
+|`sdReadOnly`|Bölüm yalnızca okunabilir, güncelleştirilmemiş, başlatılmamış verileri içerir.|  
+|`sdReadWrite`|Bölüm, okunabilecek veya güncelleştirilebilen başlatılmış verileri içerir.|  
+|`sdExecute`|Bölüm, okunve yürütülmesine izin verilen yürütülebilir kodu içerir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

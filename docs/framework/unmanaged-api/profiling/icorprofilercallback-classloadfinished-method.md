@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445121"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished Yöntemi
-Notifies the profiler that a class has finished loading.  
+Profil oluşturucuyu bir sınıfın yükleme tamamlandığını bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,24 +35,24 @@ HRESULT ClassLoadFinished(
   
 ## <a name="parameters"></a>Parametreler  
  `classId`  
- [in] Identifies the class that was loaded.  
+ 'ndaki Yüklenen sınıfı tanımlar.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the class loaded successfully.  
+ 'ndaki Sınıfın başarıyla yüklenip yüklenmediğini gösteren bir HRESULT.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.  
+ `classId` değeri, `ClassLoadFinished` yöntemi çağrılana kadar bir bilgi isteği için geçerli değildir.  
   
- Some parts of loading the class might continue after the `ClassLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.  
+ Sınıfı yüklemenin bazı bölümleri `ClassLoadFinished` geri çağrısından sonra devam edebilir. `hrStatus` HRESULT hatası, bir hatayı gösterir. Ancak, `hrStatus` başarılı bir HRESULT, yalnızca sınıfın yüklemesinin ilk bölümünün başarılı olduğunu gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

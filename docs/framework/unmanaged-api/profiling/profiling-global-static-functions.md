@@ -14,59 +14,59 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447435"
 ---
 # <a name="profiling-global-static-functions"></a>Profil Oluşturma Genel Statik İşlevleri
-This section describes the unmanaged API functions that the profiling API uses.  
+Bu bölümde profil oluşturma API 'sinin kullandığı yönetilmeyen API işlevleri açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
-## <a name="net-framework-version-1-profiling-functions"></a>.NET Framework version 1 Profiling Functions  
+## <a name="net-framework-version-1-profiling-functions"></a>.NET Framework sürüm 1 profil oluşturma Işlevleri  
  [FunctionEnter İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)  
- Notifies the profiler that control is being passed to a function. Deprecated in the .NET Framework 2.0.  
+ Profil oluşturucuya denetimin bir işleve geçtiğini bildirir. .NET Framework 2,0 ' de kullanımdan kaldırılmıştır.  
   
  [FunctionLeave İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)  
- Notifies the profiler that a function is about to return to the caller. Deprecated in the .NET Framework 2.0.  
+ Profiler öğesine bir işlevin çağırana dönmek üzere olduğunu bildirir. .NET Framework 2,0 ' de kullanımdan kaldırılmıştır.  
   
  [FunctionTailcall İşlevi](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md)  
- Notifies the profiler that the currently executing function is about to perform a tail call to another function. Deprecated in the .NET Framework 2.0.  
+ Profil oluşturucuyu Şu anda yürütülmekte olan işlevin başka bir işleve tail çağrısı gerçekleştirmek üzere olduğunu bildirir. .NET Framework 2,0 ' de kullanımdan kaldırılmıştır.  
   
-## <a name="net-framework-version-2-profiling-functions"></a>.NET Framework version 2 Profiling Functions  
+## <a name="net-framework-version-2-profiling-functions"></a>.NET Framework sürüm 2 profil oluşturma Işlevleri  
  [FunctionIDMapper İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)  
- Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), and [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) callbacks for that function. Also enables the profiler to indicate whether it wants to receive callbacks for that function  
+ Profil oluşturucuyu, bir işlevin verilen tanımlayıcısının, bu işlev için [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)ve [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) geri ÇAĞıRMALAR içinde kullanılacak alternatif bir kimliğe yeniden eşlenilebileceği konusunda bilgilendirir. Ayrıca, profil oluşturucunun bu işlev için geri çağırmaları almak isteyip istemediğini belirtmek için izin sağlar  
   
  [FunctionEnter2 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- Notifies the profiler that control is being passed to a function and provides information about the stack frame and function arguments. Deprecated in the .NET Framework 4.  
+ Profil oluşturucuyu denetimin bir işleve geçtiğini ve yığın çerçevesi ve işlev bağımsız değişkenleri hakkında bilgi sağladığını bildirir. .NET Framework 4 ' te kullanım dışıdır.  
   
  [FunctionLeave2 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value. Deprecated in the .NET Framework 4.  
+ Profil oluşturucuya bir işlevin çağırana dönmek üzere olduğunu bildirir ve yığın çerçevesi ve işlev dönüş değeri hakkında bilgi sağlar. .NET Framework 4 ' te kullanım dışıdır.  
   
  [FunctionTailcall2 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame. Deprecated in the .NET Framework 4.  
+ Şu anda yürütülmekte olan işlevin başka bir işleve bir tail çağrısı gerçekleştirmek üzere olduğunu ve yığın çerçevesi hakkında bilgi sağladığını bildiren Profiler öğesine bildirir. .NET Framework 4 ' te kullanım dışıdır.  
   
  [StackSnapshotCallback İşlevi](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)  
- Provides the profiler with information about each managed frame and each run of unmanaged frames on the stack during a stack walk, which is initiated by the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
+ , Profil oluşturucuyu her yönetilen çerçeve ve yığın üzerinde her yönetilmeyen çerçeve, [ICorProfilerInfo2::D oStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) yöntemi tarafından başlatılan bir yığın ilerleme durumuyla ilgili bilgilerle birlikte sağlar.  
   
-## <a name="net-framework-version-4-profiling-functions"></a>.NET Framework version 4 Profiling Functions  
+## <a name="net-framework-version-4-profiling-functions"></a>.NET Framework sürüm 4 profil oluşturma Işlevleri  
  [FunctionIDMapper2 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)  
- Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), and [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), or[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) callbacks for that function. Also enables the profiler to indicate whether it wants to receive callbacks for that function.  
+ Profil oluşturucuyu, bir işlevin verilen tanımlayıcısının, bu işlev için [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)ve [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)veya[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)ve [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) geri çağırmalar içinde kullanılacak alternatif bir kimliğe yeniden eşlenilebileceği konusunda bilgilendirir. Ayrıca, profil oluşturucunun bu işlev için geri çağırmaları almak isteyip istemediğini belirtmek için de olanak sağlar.  
   
- `FunctionIDMapper2` extends the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function with a `clientData` parameter, which profilers may use to disambiguate among runtimes.  
+ `FunctionIDMapper2` [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) işlevini bir `clientData` parametresiyle genişleterek, bu, çalışma zamanları arasında belirsizliği ortadan kaldırmak için kullanılabilir.  
   
  [FunctionEnter3 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)  
- Notifies the profiler that control is being passed to a function.  
+ Profil oluşturucuya denetimin bir işleve geçtiğini bildirir.  
   
  [FunctionEnter3WithInfo İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
- Notifies the profiler that control is being passed to a function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to retrieve the stack frame and function arguments.  
+ Denetim oluşturucuyu denetimin bir işleve geçtiğini bildirir ve yığın çerçevesini ve işlev bağımsız değişkenlerini almak için [ICorProfilerInfo3:: GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) öğesine geçirilebilecek bir tanıtıcı sağlar.  
   
  [FunctionLeave3 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)  
- Notifies the profiler that control is being returned from a function.  
+ Denetim oluşturucuyu, denetimin bir işlevden döndürülmekte olduğunu bildirir.  
   
  [FunctionLeave3WithInfo İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
- Notifies the profiler that control is being returned from a function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) to retrieve the stack frame and the return value.  
+ Denetim oluşturucuyu denetimin bir işlevden döndürülmekte olduğunu bildirir ve yığın çerçevesini ve dönüş değerini almak için [ICorProfilerInfo3:: GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) öğesine geçirilebilecek bir tanıtıcı sağlar.  
   
  [FunctionTailcall3 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)  
- Notifies the profiler that the currently executing function is about to perform a tail call to another function.  
+ Profil oluşturucuyu Şu anda yürütülmekte olan işlevin başka bir işleve tail çağrısı gerçekleştirmek üzere olduğunu bildirir.  
   
  [FunctionTailcall3WithInfo İşlevi](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
- Notifies the profiler that the currently executing function is about to perform a tail call to another function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionTailcall3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) to retrieve the stack frame.  
+ Profiler 'ın Şu anda yürütülmekte olan işlevin başka bir işleve tail çağrısı gerçekleştirmek üzere olduğunu bildirir ve yığın çerçevesini almak için [ICorProfilerInfo3:: GetFunctionTailcall3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) öğesine geçirilebilecek bir tanıtıcı sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Profil Oluşturmaya Genel Bakış](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  

@@ -1,5 +1,5 @@
 ---
-title: Ref Return Values
+title: Başvuru dönüş değerleri
 ms.date: 04/28/2017
 helpviewer_keywords:
 - variables [Visual Basic]
@@ -13,39 +13,39 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352544"
 ---
-# <a name="support-for-reference-return-values-visual-basic"></a>Support for reference return values (Visual Basic)
+# <a name="support-for-reference-return-values-visual-basic"></a>Başvuru dönüş değerleri için destek (Visual Basic)
 
-Starting with C# 7.0, the C# language supports *reference return values*. One way to understand reference return values is that they are the opposite of arguments that are passed by reference to a method. When an argument passed by reference is modified, the changes are reflected in value of the variable on the caller. When an method provides a reference return value to a caller, modifications made to the reference return value by the caller are reflected in the called method's data.
+7,0 ile C# başlayarak, C# dil *Başvuru dönüş değerlerini*destekler. Başvuru dönüş değerlerini anlamanın bir yolu, bir yönteme başvuruya göre geçirilen bağımsız değişkenlerin tersidir. Başvuruya göre geçirilen bir bağımsız değişken değiştirildiğinde, değişiklikler çağıranın değişkeninin değerine yansıtılır. Bir yöntem bir çağırana bir başvuru dönüş değeri sağlıyorsa, çağıran tarafından başvuru dönüş değeri yapılan değişiklikler çağrılan metodun verilerinde yansıtılır.
 
-Visual Basic does not allow you to author methods with reference return values, but it does allow you to consume reference return values. In other words, you can call a method with a reference return value and modify that return value, and changes to the reference return value are reflected in the called method's data.
+Visual Basic, başvuru dönüş değerleri olan Yöntemler yazmanıza izin vermez, ancak başvuru dönüş değerlerini kullanmanıza izin verir. Diğer bir deyişle, başvuru dönüş değeri olan bir yöntemi çağırabilir ve bu dönüş değerini değiştirebilir ve başvuru dönüş değerindeki değişiklikler çağrılan metodun verilerinde yansıtılır.
 
-## <a name="modifying-the-ref-return-value-directly"></a>Modifying the ref return value directly
+## <a name="modifying-the-ref-return-value-directly"></a>Başvuru dönüş değerini doğrudan değiştirme
 
-For methods that always succeed and have no `ByRef` parameters, you can modify the reference return value directly. You do this by assigning the new value to the expressions that returns the reference return value.
+Her zaman başarılı ve `ByRef` parametreye sahip olmayan yöntemler için başvuru dönüş değerini doğrudan değiştirebilirsiniz. Bunu, başvuru dönüş değeri döndüren deyimlere yeni değeri atayarak yapabilirsiniz.
 
-The following C# example defines a `NumericValue.IncrementValue` method that increments an internal value and returns it as a reference return value.
+Aşağıdaki C# örnek, bir iç değeri artıran ve başvuru dönüş değeri olarak döndüren bir `NumericValue.IncrementValue` yöntemi tanımlar.
 
 [!code-csharp[Ref-Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/procedures/ref-returns1.cs)]
 
-The reference return value is then modified by the caller in the following Visual Basic example. Note that the line with the `NumericValue.IncrementValue` method call does not assign a value to the method. Instead, it assigns a value to the reference return value returned by the method.
+Başvuru dönüş değeri daha sonra aşağıdaki Visual Basic örneğinde çağıran tarafından değiştirilir. `NumericValue.IncrementValue` yöntemi çağrısının bulunduğu satırın yöntemine bir değer atamayacağını unutmayın. Bunun yerine, yöntemi tarafından döndürülen başvuru dönüş değerine bir değer atar.
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/procedures/use-ref-returns1.vb)]
 
-## <a name="using-a-helper-method"></a>Using a helper method
+## <a name="using-a-helper-method"></a>Yardımcı yöntemi kullanma
 
-In other cases, modifying the reference return value of a method call directly may not always be desirable. For example, a search method that returns a string may not always find a match. In that case, you want to modify the reference return value only if the search is successful.
+Diğer durumlarda, doğrudan yöntem çağrısının başvuru dönüş değerini değiştirmek her zaman istenmeyebilir. Örneğin, bir dize döndüren arama yöntemi her zaman bir eşleşme bulmayabilir. Bu durumda, başvuru dönüş değerini yalnızca arama başarılı olursa değiştirmek istersiniz.
 
-The following C# example illustrates this scenario. It defines a `Sentence` class written in C# includes a `FindNext` method that finds the next word in a sentence that begins with a specified substring. The string is returned as a reference return value, and a `Boolean` variable passed by reference to the method indicates whether the search was successful. The reference return value indicates that the caller can not only read the returned value; he or she can also modify it, and that modification is reflected in the data contained internally in the `Sentence` class.
+Aşağıdaki C# örnekte bu senaryo gösterilmektedir. İçinde C# yazılmış bir `Sentence` sınıfını tanımlar, belirtilen bir alt dizeyle başlayan bir tümcede bulunan sonraki kelimeyi bulan bir `FindNext` yöntemi içerir. Dize bir başvuru dönüş değeri olarak döndürülür ve yöntemine başvuruya göre geçirilen bir `Boolean` değişkeni, aramanın başarılı olup olmadığını gösterir. Başvuru dönüş değeri, çağıranın yalnızca döndürülen değeri okuyamayacağını belirtir; Ayrıca, bunu değiştirebilir ve bu değişiklik `Sentence` sınıfında dahili olarak bulunan verilere yansıtılır.
 
 [!code-csharp[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
-Directly modifying the reference return value in this case is not reliable, since the method call may fail to find a match and return the first word in the sentence. In that case, the caller will inadvertently modify the first word of the sentence. This could be prevented by the caller returning a `null` (or `Nothing` in Visual Basic). But in that case, attempting to modify a string whose value is `Nothing` throws a <xref:System.NullReferenceException>. If could also be prevented by the caller returning <xref:System.String.Empty?displayProperty=nameWithType>, but this requires that the caller define a string variable whose value is <xref:System.String.Empty?displayProperty=nameWithType>. While the caller can modify that string, the modification itself serves no purpose, since the modified string has no relationship to the words in the sentence stored by the `Sentence` class.
+Bu durumda başvuru dönüş değerini doğrudan değiştirmek güvenilir değildir, çünkü Yöntem çağrısı bir eşleşme bulamamasına ve tümcedeki ilk sözcüğü döndürmeyebilir. Bu durumda, çağıran, tümcenin ilk sözcüğünü yanlışlıkla değiştirmeyecektir. Bu, çağıran tarafından bir `null` (veya Visual Basic `Nothing` döndüren) tarafından engellenebilir. Ancak bu durumda, değeri `Nothing` olan bir dizeyi değiştirme girişimi bir <xref:System.NullReferenceException>oluşturur. <xref:System.String.Empty?displayProperty=nameWithType>döndüren çağıran tarafından da engellenebilir, ancak çağıranın değeri <xref:System.String.Empty?displayProperty=nameWithType>bir dize değişkeni tanımlamasına gerek vardır. Çağıran bu dizeyi değiştire, ancak değiştirilen dizenin `Sentence` sınıfı tarafından depolanan tümcedeki sözcüklerle hiçbir ilişkisi olmadığından, değişikliğin kendisi hiçbir amaca hizmet eder.
 
-The best way to handle this scenario is to pass the reference return value by reference to a helper method. The helper method then contains the logic to determine whether the method call succeeded and, if it did, to modify the reference return value. The following example provides a possible implementation.
+Bu senaryoyu işlemenin en iyi yolu, başvuru dönüş değerini bir yardımcı yönteme başvuruya göre geçirmektir. Yardımcı yöntemi daha sonra yöntem çağrısının başarılı olup olmadığını ve başvuru dönüş değerini değiştirmek için bir mantığı içerir. Aşağıdaki örnek olası bir uygulama sağlar.
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Passing arguments by value and by reference](passing-arguments-by-value-and-by-reference.md)
+- [Bağımsız değişkenleri değere ve başvuruya göre geçirme](passing-arguments-by-value-and-by-reference.md)
 - [Visual Basic'te Yordamlar](index.md)

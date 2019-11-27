@@ -1,5 +1,5 @@
 ---
-title: AddFile Yöntemi
+title: AddFile Metodu
 ms.date: 03/30/2017
 api_name:
 - IALink.AddFile
@@ -22,8 +22,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446676"
 ---
-# <a name="addfile-method"></a>AddFile Yöntemi
-Adds files to the assembly. Can also be used to create unbound modules.  
+# <a name="addfile-method"></a>AddFile Metodu
+Derlemeye dosya ekler. , İlişkisiz modüller oluşturmak için de kullanılabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +39,25 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Unique ID of the assembly to be augmented.  
+ Artırılması için derlemenin benzersiz KIMLIĞI.  
   
  `pszFilename`  
- Fully qualified name of file to be added.  
+ Eklenecek dosyanın tam adı.  
   
  `dwFlags`  
- COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
+ `ffContainsNoMetaData` ve `ffWriteable`gibi COM+ Fıledef bayrakları. `dwFlags` [DefineFile yöntemine](../metadata/imetadataassemblyemit-definefile-method.md)geçirilir.  
   
  `pEmitter`  
- [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.  
+ Gerekirse meta verileri yayan için kullanılacak [ımetadatayayma arabirimi](../metadata/imetadataemit-interface.md) arabirimi.  
   
  `pFileToken`  
- Pointer to where the unique ID of the added file will be stored.  
+ Eklenen dosyanın benzersiz KIMLIĞININ depolanacağı işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h.  
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

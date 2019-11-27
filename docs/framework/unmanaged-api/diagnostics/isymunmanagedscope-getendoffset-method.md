@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446359"
 ---
 # <a name="isymunmanagedscopegetendoffset-method"></a>ISymUnmanagedScope::GetEndOffset Metodu
-Gets the end offset for this scope.  
+Bu kapsamın bitiş sapmasını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,13 +34,13 @@ HRESULT GetEndOffset(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the end offset.  
+ dışı Bitiş sapmasını alan `ULONG32` işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

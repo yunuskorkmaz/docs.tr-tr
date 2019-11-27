@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442772"
 ---
 # <a name="icorprofilermoduleenumgetcount-method"></a>ICorProfilerModuleEnum::GetCount Yöntemi
-Gets the number of managed modules that were loaded into the application.  
+Uygulamaya yüklenmiş olan yönetilen modüllerin sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,16 +33,16 @@ HRESULT GetCount([out] ULONG * pcelt);
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
- [out] The number of runtime modules in the collection.  
+ dışı Koleksiyondaki çalışma zamanı modüllerinin sayısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,20 +9,20 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350972"
 ---
-# <a name="working-with-xml-namespaces-visual-basic"></a>Working with XML Namespaces (Visual Basic)
-The topics in this section describe how [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supports namespaces.  
+# <a name="working-with-xml-namespaces-visual-basic"></a>XML ad alanları ile çalışma (Visual Basic)
+Bu bölümdeki konularda [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ad alanlarını nasıl desteklediğine ilişkin konular açıklanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[Ad Alanlarına Genel Bakış (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|This topic introduces namespaces, the <xref:System.Xml.Linq.XName> class, and the <xref:System.Xml.Linq.XNamespace> class.|  
-|[How to: Create a Document with Namespaces (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-document-with-namespaces.md)|Shows how to create documents with namespaces.|  
-|[How to: Control Namespace Prefixes (Visual Basic) (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md)|Shows how to control namespace prefixes by declaring global namespaces.|  
-|[Scope of Default Namespaces in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/scope-of-default-namespaces.md)|Demonstrates the appropriate way to write queries for XML in the default namespace.|  
-|[Working with Global Namespaces (Visual Basic) (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/working-with-global-namespaces-linq-to-xml.md)|Explains the semantics of global namespaces in Visual Basic, and reasons for using them.|  
-|[How to: Write Queries on XML in Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|Demonstrates how to specify XML namespaces in Visual Basic LINQ to XML queries.|  
+|[Ad Alanlarına Genel Bakış (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|Bu konu, ad alanlarını, <xref:System.Xml.Linq.XName> sınıfını ve <xref:System.Xml.Linq.XNamespace> sınıfını tanıtır.|  
+|[Nasıl yapılır: ad alanları ile belge oluşturma (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-document-with-namespaces.md)|Ad alanları ile belgelerin nasıl oluşturulacağını gösterir.|  
+|[Nasıl yapılır: ad alanı öneklerini denetleme (Visual Basic) (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md)|Genel ad alanlarını bildirerek ad alanı öneklerini nasıl denetleyerek gösterir.|  
+|[Visual Basic varsayılan ad alanlarının kapsamı](../../../../visual-basic/programming-guide/concepts/linq/scope-of-default-namespaces.md)|Varsayılan ad alanına XML için sorguları yazmanın uygun yolunu gösterir.|  
+|[Genel ad alanları (Visual Basic) ile çalışma (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/working-with-global-namespaces-linq-to-xml.md)|Visual Basic genel ad alanlarının semantiğini ve bunların kullanılmasıyla ilgili nedenleri açıklar.|  
+|[Nasıl yapılır: ad alanlarında XML üzerinde sorgu yazma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|Visual Basic LINQ to XML sorgularında XML ad alanlarının nasıl belirtileceğini gösterir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Programlama Kılavuzu (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

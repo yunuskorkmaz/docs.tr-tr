@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438108"
 ---
 # <a name="notify_filter-enumeration"></a>NOTIFY_FILTER Numaralandırması
-Identifies callbacks for debugger functions. For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.  
+Hata ayıklayıcı işlevleri için geri çağırmaları tanımlar. Daha fazla bilgi için bkz. [INotifySource2:: SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) yöntemi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,16 +43,16 @@ enum tagNOTIFY_FILTER
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`NOTIFY_FILTER_ONSYNCCALLOUT`|Indicates that the [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) method should be invoked.|  
-|`NOTIFY_FILTER_ONSYNCCALLENTER`|Indicates that the [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) method should be invoked.|  
-|`NOTIFY_FILTER_ONSYNCCALLEXIT`|Indicates that the [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) method should be invoked.|  
-|`NOTIFY_FILTER_ONSYNCCALLRETURN`|Indicates that the [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) method should be invoked.|  
-|`NOTIFY_FILTER_ALLSYNC`|Indicates that all of the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) methods should be invoked.|  
-|`NOTIFY_FILTER_ALL`|Activates all existing and future notifications.|  
-|`NOTIFY_FILTER_NONE`|Indicates that no notification methods should be invoked.|  
+|`NOTIFY_FILTER_ONSYNCCALLOUT`|[INotifySink2:: Onsyncbelirtme](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) yönteminin çağrılması gerektiğini gösterir.|  
+|`NOTIFY_FILTER_ONSYNCCALLENTER`|[INotifySink2:: OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) yönteminin çağrılması gerektiğini gösterir.|  
+|`NOTIFY_FILTER_ONSYNCCALLEXIT`|[INotifySink2:: OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) yönteminin çağrılması gerektiğini gösterir.|  
+|`NOTIFY_FILTER_ONSYNCCALLRETURN`|[INotifySink2:: OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) yönteminin çağrılması gerektiğini gösterir.|  
+|`NOTIFY_FILTER_ALLSYNC`|Tüm [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) yöntemlerinin çağrılması gerektiğini gösterir.|  
+|`NOTIFY_FILTER_ALL`|Tüm mevcut ve gelecekteki bildirimleri etkinleştirir.|  
+|`NOTIFY_FILTER_NONE`|Hiçbir bildirim yönteminin çağrılması gerektiğini gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** ProtocolNotify2.idl  
+ **Üst bilgi:** ProtocolNotify2. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

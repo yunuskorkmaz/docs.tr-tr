@@ -15,48 +15,48 @@ ms.locfileid: "74447097"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>UI Otomasyonu Tablo Denetim Düzenini Uygulama
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.ITableProvider>, including information about properties, methods, and events. Links to additional references are listed at the end of the overview.  
+ Bu konuda özellikler, Yöntemler ve olaylar hakkında bilgiler de dahil olmak üzere <xref:System.Windows.Automation.Provider.ITableProvider>uygulamak için yönergeler ve kurallar tanıtılmaktadır. Ek başvuruların bağlantıları genel bakış sonunda listelenir.  
   
- The <xref:System.Windows.Automation.TablePattern> control pattern is used to support controls that act as containers for a collection of child elements. The children of this element must implement <xref:System.Windows.Automation.Provider.ITableItemProvider> and be organized in a two-dimensional logical coordinate system that can be traversed by row and column. This control pattern is analogous to <xref:System.Windows.Automation.Provider.IGridProvider>, with the distinction that any control implementing <xref:System.Windows.Automation.Provider.ITableProvider> must also expose a column and/or row header relationship for each child element. For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
+ <xref:System.Windows.Automation.TablePattern> denetim deseninin bir alt öğe koleksiyonu için kapsayıcılar olarak davranan denetimleri desteklemek için kullanılır. Bu öğenin alt öğeleri <xref:System.Windows.Automation.Provider.ITableItemProvider> uygulamalıdır ve satır ve sütun tarafından çapraz bir şekilde iki boyutlu bir mantıksal koordinat sisteminde düzenlenmelidir. Bu denetim deseninin <xref:System.Windows.Automation.Provider.IGridProvider>benzer şekilde, <xref:System.Windows.Automation.Provider.ITableProvider> uygulayan herhangi bir denetimin her alt öğe için bir sütun ve/veya satır üst bilgisi ilişkisi olması gerekir. Bu denetim modelini uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementation Guidelines and Conventions  
- When implementing the Table control pattern, note the following guidelines and conventions:  
+## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
+ Tablo denetim modelini uygularken aşağıdaki kılavuz ve kurallara göz önünde yer verilmiştir:  
   
-- Access to the content of individual cells is through a two-dimensional logical coordinate system or array provided by the required concurrent implementation of <xref:System.Windows.Automation.Provider.IGridProvider>.  
+- Tek tek hücrelerin içeriğine erişim iki boyutlu bir mantıksal koordinat sistemi veya <xref:System.Windows.Automation.Provider.IGridProvider>için gereken eşzamanlı uygulama tarafından sağlanmış dizi.  
   
-- A column or row header can be contained within a table object or be a separate header object that is associated with a table object.  
+- Bir sütun veya satır üst bilgisi, tablo nesnesi içinde veya tablo nesnesiyle ilişkili ayrı bir üst bilgi nesnesi olabilir.  
   
-- Column and row headers may include both a primary header as well as any supporting headers.  
+- Sütun ve satır başlıkları hem birincil üstbilgiyi hem de tüm destekleyici üst bilgileri içerebilir.  
   
 > [!NOTE]
-> This concept becomes evident in a Microsoft Excel spreadsheet where a user has defined a "First name" column. This column now has two headers—the "First name" header defined by the user and the alphanumeric designation for that column assigned by the application.  
+> Bu kavram, bir kullanıcının "Ilk ad" sütunu tanımladığı bir Microsoft Excel elektronik tablosunda görünür hale gelir. Bu sütunda artık iki üst bilgi vardır: Kullanıcı tarafından tanımlanan "Ilk ad" üstbilgisi ve uygulama tarafından atanan sütun için alfasayısal atama.  
   
-- See [Implementing the UI Automation Grid Control Pattern](implementing-the-ui-automation-grid-control-pattern.md) for related grid functionality.  
+- İlgili kılavuz işlevselliği için [UI Otomasyonu kılavuz denetim modelini uygulama](implementing-the-ui-automation-grid-control-pattern.md) bölümüne bakın.  
   
- ![Table with complex header items.](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
-Example of a Table with Complex Column Headers  
+ ![Karmaşık üstbilgi öğeleri içeren tablo.](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
+Karmaşık sütun başlıkları içeren bir tablo örneği  
   
- ![Table with ambiguous RowOrColumnMajor property.](./media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
-Example of a Table with Ambiguous RowOrColumnMajor Property  
+ ![Belirsiz Roworcolumnana özelliği olan tablo.](./media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
+Belirsiz Roworcolumnana özelliği olan bir tablo örneği  
   
 <a name="Required_Members_for_ITableProvider"></a>   
-## <a name="required-members-for-itableprovider"></a>Required Members for ITableProvider  
- The following properties and methods are required for the ITableProvider interface.  
+## <a name="required-members-for-itableprovider"></a>ITableProvider için gerekli Üyeler  
+ ITableProvider arabirimi için aşağıdaki özellikler ve Yöntemler gereklidir.  
   
-|Required members|Member type|Notlar|  
+|Gerekli Üyeler|Üye türü|Notlar|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Yöntem|Yok.|  
 |<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Yöntem|Yok.|  
   
- This control pattern has no associated events.  
+ Bu denetim deseninin ilişkili olayları yok.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Özel Durumlar  
- This control pattern has no associated exceptions.  
+ Bu denetim deseninin ilişkili özel durumları yok.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

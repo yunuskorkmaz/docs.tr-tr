@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427969"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize Yöntemi
-Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.  
+Bu yazıcının ilişkilendirileceği meta veri verici arabirimini ayarlar ve hata ayıklama simgelerinin yazılacağı çıkış dosyası adını ayarlar.  
   
- This method can be called only once, and it must be called before any other writer methods. Some writers may require a file name. However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.  
+ Bu yöntem yalnızca bir kez çağrılabilir ve diğer herhangi bir yazıcı yönteminden önce çağrılmalıdır. Bazı yazarlar bir dosya adı gerektirebilir. Ancak, dosya adını kullanmayan yazarlar üzerinde herhangi bir olumsuz etkisi olmadan bu yönteme her zaman bir dosya adı geçirebilirsiniz.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +39,22 @@ HRESULT Initialize(
   
 ## <a name="parameters"></a>Parametreler  
  `emitter`  
- [in] A pointer to the metadata emitter interface.  
+ 'ndaki Meta veri verici arabirimine yönelik bir işaretçi.  
   
  `filename`  
- [in] The file name to which the debugging symbols are written. If a file name is specified for a writer that does not use file names, this parameter is ignored.  
+ 'ndaki Hata ayıklama simgelerinin yazıldığı dosya adı. Dosya adları kullanmayan bir yazıcı için dosya adı belirtilmişse, bu parametre yoksayılır.  
   
  `pIStream`  
- [in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. The `pIStream` parameter is optional.  
+ 'ndaki Belirtilmişse, sembol yazıcı sembolleri `filename` parametresinde belirtilen dosya yerine verilen <xref:System.Runtime.InteropServices.ComTypes.IStream> yayar. `pIStream` parametresi isteğe bağlıdır.  
   
  `fFullBuild`  
- [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
+ [in] Bu bir tam yeniden oluşturma ise `true`; Bu, artımlı bir derleme ise `false`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

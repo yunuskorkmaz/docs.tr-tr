@@ -12,8 +12,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352180"
 ---
-# <a name="value-visual-basic"></a>\<value> (Visual Basic)
-Specifies the description of a property.  
+# <a name="value-visual-basic"></a>\<değeri > (Visual Basic)
+Bir özelliğin açıklamasını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,15 +23,15 @@ Specifies the description of a property.
   
 ## <a name="parameters"></a>Parametreler  
  `property-description`  
- A description for the property.  
+ Özelliği için bir açıklama.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Use the `<value>` tag to describe a property. Note that when you add a property using the code wizard in the Visual Studio development environment, it will add a [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md) tag for the new property. You should then manually add a `<value>` tag to describe the value that the property represents.  
+ Bir özelliği anlatmak için `<value>` etiketini kullanın. Visual Studio geliştirme ortamındaki kod Sihirbazı 'nı kullanarak bir özellik eklediğinizde, yeni özellik için bir [\<summary >](../../../visual-basic/language-reference/xmldoc/summary.md) etiketi ekleneceğini unutmayın. Ardından, özelliğin temsil ettiği değeri tanımlayan bir `<value>` etiketini el ile eklemeniz gerekir.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `<value>` tag to describe what value the `Counter` property holds.  
+ Bu örnek, `Counter` özelliğinin hangi değere sahip olduğunu belirlemek için `<value>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

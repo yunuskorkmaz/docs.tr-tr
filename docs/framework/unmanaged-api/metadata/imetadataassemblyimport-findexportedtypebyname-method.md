@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449454"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName Yöntemi
-Gets a pointer to an exported type, given its name and enclosing type.  
+Adı ve kapsayan türü verilen, verilen bir türe yönelik bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,25 +37,25 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- [in] The name of the exported type.  
+ 'ndaki İçe aktarılmış türün adı.  
   
  `mdtExportedType`  
- [in] The metadata token for the enclosing class of the exported type. This value is `mdExportedTypeNil` if the requested exported type is not a nested type.  
+ 'ndaki İçe aktarılmış türün kapsayan sınıfına ait meta veri belirteci. İstenen veriliyor türü iç içe bir tür değilse, bu değer `mdExportedTypeNil`.  
   
  `ptkExportedType`  
- [out] A pointer to the `mdExportedType` token that represents the exported type.  
+ dışı `mdExportedType` belirtecin bir işaretçisi, dışarıya aktarılmış türü temsil eder.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.  
+ `FindExportedTypeByName` yöntemi, başvuruları çözümlemek için ortak dil çalışma zamanı tarafından çalıştırılan standart kuralları kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

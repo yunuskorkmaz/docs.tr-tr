@@ -1,5 +1,5 @@
 ---
-title: 'How to: Convert an Array of Bytes into a String'
+title: 'Nasıl yapılır: bayt dizisini dizeye dönüştürme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string conversion [Visual Basic], arrays
@@ -15,31 +15,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351984"
 ---
 # <a name="how-to-convert-an-array-of-bytes-into-a-string-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de Bir Bayt Dizisini Dizeye Dönüştürme
-This topic shows how to convert the bytes from a byte array into a string.  
+Bu konu, bayt dizisindeki baytların dizeye nasıl dönüştürüleceğini gösterir.  
   
 ## <a name="example"></a>Örnek  
- This example uses the <xref:System.Text.Encoding.GetString%2A> method of the <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> encoding class to convert all the bytes from a byte array into a string.  
+ Bu örnek, bir bayt dizisinden tüm baytları dizeye dönüştürmek için <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> Encoding sınıfının <xref:System.Text.Encoding.GetString%2A> yöntemini kullanır.  
   
  [!code-vb[VbVbalrStrings#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#72)]  
   
- You can choose from several encoding options to convert a byte array into a string:  
+ Bir bayt dizisini dizeye dönüştürmek için çeşitli kodlama seçenekleri arasından seçim yapabilirsiniz:  
   
-- <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType>: Gets an encoding for the ASCII (7-bit) character set.  
+- <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType>: ASCII (7 bit) karakter kümesi için bir kodlama alır.  
   
-- <xref:System.Text.Encoding.BigEndianUnicode%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-16 format using the big-endian byte order.  
+- <xref:System.Text.Encoding.BigEndianUnicode%2A?displayProperty=nameWithType>: büyük endian bayt sırasını kullanarak UTF-16 biçimi için bir kodlama alır.  
   
-- <xref:System.Text.Encoding.Default%2A?displayProperty=nameWithType>: Gets an encoding for the system's current ANSI code page.  
+- <xref:System.Text.Encoding.Default%2A?displayProperty=nameWithType>: sistemin geçerli ANSI kod sayfası için bir kodlama alır.  
   
-- <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-16 format using the little-endian byte order.  
+- <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>: küçük endian bayt sırasını kullanarak UTF-16 biçimi için bir kodlama alır.  
   
-- <xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-32 format using the little-endian byte order.  
+- <xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType>: küçük endian bayt sırasını kullanarak UTF-32 biçimi için bir kodlama alır.  
   
-- <xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-7 format.  
+- <xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType>: UTF-7 biçimi için bir kodlama alır.  
   
-- <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-8 format.  
+- <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: UTF-8 biçimi için bir kodlama alır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Text.Encoding?displayProperty=nameWithType>
 - <xref:System.Text.Encoding.GetString%2A>
-- [How to: Convert Strings into an Array of Bytes in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-strings-into-an-array-of-bytes.md)
+- [Nasıl yapılır: dizeleri Visual Basic bayt dizisine dönüştürme](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-strings-into-an-array-of-bytes.md)

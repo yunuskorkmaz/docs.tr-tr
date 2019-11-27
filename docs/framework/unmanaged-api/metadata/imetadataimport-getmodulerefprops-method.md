@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437323"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps Yöntemi
-Gets the name of the module referenced by the specified metadata token.  
+Belirtilen meta veri belirtecinin başvurduğu modülün adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,25 +38,25 @@ HRESULT GetModuleRefProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mur`  
- [in] The ModuleRef metadata token that references the module to get metadata information for.  
+ 'ndaki Meta veri bilgilerini almak için modüle başvuruda bulunan ModuleRef meta veri belirteci.  
   
  `szName`  
- [out] A buffer to hold the module name.  
+ dışı Modül adını tutan bir arabellek.  
   
  `cchName`  
- [in] The requested size of `szName` in wide characters.  
+ 'ndaki Geniş karakterdeki `szName` istenen boyutu.  
   
  `pchName`  
- [out] The returned size of `szName` in wide characters.  
+ dışı Geniş karakterdeki `szName` döndürülen boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

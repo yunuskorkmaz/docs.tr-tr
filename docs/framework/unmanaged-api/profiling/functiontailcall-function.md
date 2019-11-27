@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427339"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall İşlevi
-Notifies the profiler that the currently executing function is about to perform a tail call to another function.  
+Profil oluşturucuyu Şu anda yürütülmekte olan işlevin başka bir işleve tail çağrısı gerçekleştirmek üzere olduğunu bildirir.  
   
 > [!NOTE]
-> The `FunctionTailcall` function is deprecated in the .NET Framework version 2.0. It will continue to work, but will incur a performance penalty. Use the [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) function instead.  
+> `FunctionTailcall` işlevi, .NET Framework sürüm 2,0 ' de kullanımdan kaldırılmıştır. Çalışmaya devam eder, ancak bir performans cezası olur. Bunun yerine [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) işlevini kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,31 +37,31 @@ void __stdcall FunctionTailcall (
   
 ## <a name="parameters"></a>Parametreler  
  `funcID`  
- [in] The identifier of the currently executing function that is about to make a tail call.  
+ 'ndaki Bir tail çağrısı yapmak üzere olan şu anda yürütülmekte olan işlevin tanımlayıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call. This means that a [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) callback will not be issued for a function that is the target of a tail call.  
+ Tail çağrısının hedef işlevi geçerli yığın çerçevesini kullanır ve doğrudan kuyruk çağrısını yapan işlevin çağıranına döndürülür. Bu, bir tail çağrısının hedefi olan bir işlev için [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) geri çağrısının verilmeyeceği anlamına gelir.  
   
- The `FunctionTailcall` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ `FunctionTailcall` işlevi bir geri çağırmasıdır; Uygulamanızı uygulamanız gerekir. Uygulamanın `__declspec`(`naked`) depolama sınıfı özniteliğini kullanması gerekir.  
   
- The execution engine does not save any registers before calling this function.  
+ Yürütme altyapısı, bu işlevi çağırmadan önce hiçbir kaydı kaydetmez.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- Girişte, kayan nokta birimi (FPU) dahil olmak üzere, kullandığınız tüm Yazmaçları kaydetmelisiniz.  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- Çıkışta, çağıran tarafından gönderilen tüm parametreleri kaldırarak yığını geri yüklemeniz gerekir.  
   
- The implementation of `FunctionTailcall` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionTailcall` returns.  
+ `FunctionTailcall` uygulanması çöp toplamayı ertelendirilemediğinden engellenmemelidir. Yığın atık toplama kolay bir durumda olmadığından uygulama çöp toplamayı denememelidir. Çöp toplama denendiğinde, çalışma zamanı `FunctionTailcall` dönüşene kadar engeller.  
   
- Also, the `FunctionTailcall` function must not call into managed code or in any way cause a managed memory allocation.  
+ Ayrıca, `FunctionTailcall` işlevi yönetilen koda çağrı içermemelidir veya herhangi bir şekilde yönetilen bellek ayırmaya neden olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Üst bilgi:** CorProf. IDL  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework sürümleri:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

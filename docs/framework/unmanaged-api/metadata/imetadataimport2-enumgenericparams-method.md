@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428311"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams Yöntemi
-Gets an enumerator for an array of generic parameter tokens associated with the specified TypeDef or MethodDef token.  
+Belirtilen TypeDef veya MethodDef belirteciyle ilişkili bir genel parametre belirteçleri dizisi için bir Numaralandırıcı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,35 +39,35 @@ HRESULT EnumGenericParams (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] Numaralandırıcı için bir işaretçi.  
   
  `tk`  
- [in] The TypeDef or MethodDef token whose generic parameters are to be enumerated.  
+ 'ndaki Genel parametreleri numaralandırılmış olan TypeDef veya MethodDef belirteci.  
   
  `rGenericParams`  
- [out] The array of generic parameters to enumerate.  
+ dışı Numaralandırılacak genel parametrelerin dizisi.  
   
  `cMax`  
- [in] The requested maximum number of tokens to place in `rGenericParams`.  
+ 'ndaki `rGenericParams`yerleştirmek için istenen en fazla belirteç sayısı.  
   
  `pcGenericParams`  
- [out] The returned number of tokens placed in `rGenericParams`.  
+ dışı `rGenericParams`yerleştirilmiş belirteç sayısı döndürüldü.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParams` is set to 0 (zero).|  
+|`S_OK`|`EnumGenericParams` başarıyla döndürüldü.|  
+|`S_FALSE`|`phEnum` üye öğesi yok. Bu durumda, `pcGenericParams` 0 (sıfır) olarak ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

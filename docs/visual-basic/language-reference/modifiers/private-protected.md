@@ -11,13 +11,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351341"
 ---
-# <a name="private-protected-visual-basic"></a>Private Protected (Visual Basic)
+# <a name="private-protected-visual-basic"></a>Özel korumalı (Visual Basic)
 
-The `Private Protected` keyword combination is a member access modifier. A `Private Protected` member is accessible by all members in its containing class, as well as by types derived from the containing class, but only if they are found in its containing assembly.
+`Private Protected` anahtar sözcük birleşimi bir üye erişim değiştiricisidir. `Private Protected` üyeye, kapsayan sınıftaki tüm üyeler tarafından ve kapsayan sınıftan türetilmiş türler tarafından erişilebilir, ancak yalnızca kendi kapsayıcı derlemesinde bulunur.
 
-You can specify `Private Protected` only on members of classes; you cannot apply `Private Protected` to members of a structure because structures cannot be inherited.
+Yalnızca sınıfların üyelerinde `Private Protected` belirtebilirsiniz; yapılar devralınamadığı için `Private Protected` bir yapının üyelerine uygulayamazsınız.
 
-The `Private Protected` access modifier is supported by Visual Basic 15.5 and later. To use it, you can add the following element to your Visual Basic project (\*.vbproj) file. As long as Visual Basic 15.5 or later is installed on your system, it lets you take advantage of all the language features supported by the latest version of the Visual Basic compiler:
+`Private Protected` erişim değiştiricisi Visual Basic 15,5 ve üzeri tarafından desteklenir. Bunu kullanmak için, Visual Basic projesi (\*. vbproj) dosyanıza aşağıdaki öğeyi ekleyebilirsiniz. Visual Basic 15,5 veya üzeri bir sürümü sisteminize yüklendiği sürece, Visual Basic derleyicinin en son sürümü tarafından desteklenen tüm dil özelliklerinden yararlanmanızı sağlar:
 
 ```xml
 <PropertyGroup>
@@ -25,44 +25,44 @@ The `Private Protected` access modifier is supported by Visual Basic 15.5 and la
 </PropertyGroup>
 ```
 
-For more information see [setting the Visual Basic language version](../../language-reference/configure-language-version.md).
+Daha fazla bilgi için bkz. [Visual Basic dil sürümünü ayarlama](../../language-reference/configure-language-version.md).
 
 > [!NOTE]
-> In Visual Studio, selecting F1 help on `private protected` provides help for either [private](private.md) or [protected](protected.md). The IDE picks the single token under the cursor rather than the compound word.
+> Visual Studio 'da F1 Yardımı ' nı seçmek `private protected` [özel](private.md) veya [korumalı](protected.md)yardım sağlar. IDE, bileşik sözcük yerine imleç altında tek belirteci seçer.
 
 ## <a name="rules"></a>Kurallar
 
-- **Declaration Context.** You can use `Private Protected` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+- **Bildirim bağlamı.** `Private Protected` yalnızca sınıf düzeyinde kullanabilirsiniz. Yani, bir `Protected` öğesi için bildirim bağlamı bir sınıf olmalıdır ve kaynak dosya, ad alanı, arabirim, modül, yapı veya yordam olamaz.
 
 ## <a name="behavior"></a>Davranış
 
-- **Access Level.** All code in a class can access its elements. Code in any class that derives from a base class and is contained in the same assembly can access all the `Private Protected` elements of the base class. However, code in any class that derives from a base class and is contained in a different assembly can't access the base class `Private Protected` elements.
+- **Erişim düzeyi.** Bir sınıftaki tüm kod öğelerine erişebilir. Bir taban sınıftan türetilen ve aynı derlemede yer alan herhangi bir sınıftaki kod, temel sınıfın tüm `Private Protected` öğelerine erişebilir. Ancak, bir taban sınıftan türetilen ve farklı bir derlemede yer alan herhangi bir sınıftaki kod, temel sınıfa `Private Protected` öğelerine erişemez.
 
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+- **Erişim değiştiricileri.** Erişim düzeyi belirten anahtar sözcüklere *erişim değiştiricileri*denir. Erişim değiştiricilerinden oluşan bir karşılaştırma için bkz. [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-The `Private Protected` modifier can be used in these contexts:
+`Private Protected` değiştiricisi şu bağlamlarda kullanılabilir:
 
-- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) of a nested class
+- İç içe bir sınıfın [sınıf ekstresi](../../../visual-basic/language-reference/statements/class-statement.md)
 
 - [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)
 
 - [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
 
-- [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) of a delegate nested in a class
+- Sınıf içinde iç içe bir temsilcinin [temsilci ekstresi](../../../visual-basic/language-reference/statements/delegate-statement.md)
 
 - [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)
 
-- [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md) of an enumeration nested in a class
+- Bir sınıfta iç içe geçmiş bir numaralandırmanın [enum bildirimi](../../../visual-basic/language-reference/statements/enum-statement.md)
 
 - [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)
 
 - [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
 
-- [Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md) of an interface nested in a class
+- Bir sınıfta iç içe yerleştirilmiş bir arabirimin [arabirim ekstresi](../../../visual-basic/language-reference/statements/interface-statement.md)
 
 - [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
 
-- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) of a structure nested in a class
+- Bir sınıfta iç içe yerleştirilmiş bir yapının [Yapı ekstresi](../../../visual-basic/language-reference/statements/structure-statement.md)
 
 - [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
 
@@ -73,7 +73,7 @@ The `Private Protected` modifier can be used in these contexts:
 - [Friend](friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Protected Friend](./protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

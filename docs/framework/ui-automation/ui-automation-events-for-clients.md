@@ -14,52 +14,52 @@ ms.locfileid: "74441510"
 ---
 # <a name="ui-automation-events-for-clients"></a>İstemciler İçin UI Otomasyon Olayları
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic describes how [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] events are used by UI Automation clients.  
+ Bu konu, [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] olaylarının UI Otomasyon istemcileri tarafından nasıl kullanıldığını açıklar.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] allows clients to subscribe to events of interest. This capability improves performance by eliminating the need to continually poll all the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elements in the system to see if any information, structure, or state has changed.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], istemcilerin ilgilendiğiniz olaylara abone olmalarını sağlar. Bu özellik, herhangi bir bilgi, yapı veya durumun değişip değişmediğini görmek için sistemdeki tüm [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğelerini sürekli olarak yoklamaya gerek gereksinimini ortadan kaldırarak performansı geliştirir.  
   
- Efficiency is also improved by the ability to listen for events only within a defined scope. For example, a client can listen for focus change events on all [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements in the tree, or on just one element and its descendants.  
+ Verimlilik Ayrıca yalnızca tanımlı bir kapsamdaki olayları dinlemek için de geliştirilmiştir. Örneğin, bir istemci, ağaçtaki tüm [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğelerinde veya yalnızca bir öğe ve onun alt öğeleri üzerinde odak değişikliği olaylarını dinleyebilir.  
   
 > [!NOTE]
-> Do not assume that all possible events are raised by a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] provider. For example, not all property changes cause events to be raised by the standard proxy providers for [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] and [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controls.  
+> Tüm olası olayların bir [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] sağlayıcısı tarafından gerçekleştiğini varsaymayın. Örneğin, tüm özellik değişiklikleri değil, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] denetimleri için standart proxy sağlayıcıları tarafından olayların oluşturulmasına neden olmaz.  
   
- For a broader view of [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events, see [UI Automation Events Overview](ui-automation-events-overview.md).  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olaylarının daha geniş bir görünümü için bkz. [UI Otomasyonu olaylarına genel bakış](ui-automation-events-overview.md).  
   
 <a name="Subscribing_to_Events"></a>   
-## <a name="subscribing-to-events"></a>Subscribing to Events  
- Client applications subscribe to events of a particular kind by registering an event handler, using one of the following methods.  
+## <a name="subscribing-to-events"></a>Olaylara abone olma  
+ İstemci uygulamaları, aşağıdaki yöntemlerden birini kullanarak bir olay işleyicisini kaydederek belirli bir türdeki olaylara abone olur.  
   
-|Yöntem|Event Type|Event Arguments Type|Delegate Type|  
+|Yöntem|Olay Türü|Olay bağımsız değişkenleri türü|Temsilci türü|  
 |------------|----------------|--------------------------|-------------------|  
-|<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>|Focus change|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|<xref:System.Windows.Automation.AutomationFocusChangedEventHandler>|  
-|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>|Property change|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|  
-|<xref:System.Windows.Automation.Automation.AddStructureChangedEventHandler%2A>|Structure change|<xref:System.Windows.Automation.StructureChangedEventArgs>|<xref:System.Windows.Automation.StructureChangedEventHandler>|  
-|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|All other events, identified by an <xref:System.Windows.Automation.AutomationEvent>|<xref:System.Windows.Automation.AutomationEventArgs> or <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
+|<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>|Odak değişikliği|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|<xref:System.Windows.Automation.AutomationFocusChangedEventHandler>|  
+|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>|Özellik değişikliği|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|  
+|<xref:System.Windows.Automation.Automation.AddStructureChangedEventHandler%2A>|Yapı değişikliği|<xref:System.Windows.Automation.StructureChangedEventArgs>|<xref:System.Windows.Automation.StructureChangedEventHandler>|  
+|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|<xref:System.Windows.Automation.AutomationEvent> tarafından tanımlanan diğer tüm olaylar|<xref:System.Windows.Automation.AutomationEventArgs> veya <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
   
- Before calling the method, you must create a delegate method to handle the event. If you prefer, you can handle different kinds of events in a single method, and pass this method in multiple calls to one of the methods in the table. For example, a single <xref:System.Windows.Automation.AutomationEventHandler> can be set up to handle various events differently according to the <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A>.  
+ Yöntemi çağırmadan önce, olayı işlemek için bir temsilci yöntemi oluşturmanız gerekir. İsterseniz, farklı türdeki olayları tek bir yöntemde işleyebilir ve bu yöntemi tablodaki yöntemlerden birine birden çok çağrıda geçirebilirsiniz. Örneğin, tek bir <xref:System.Windows.Automation.AutomationEventHandler> <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A>göre farklı olayları işlemek üzere ayarlanabilir.  
   
 > [!NOTE]
-> To process window-closed events, cast the argument type that is passed to the event handler as <xref:System.Windows.Automation.WindowClosedEventArgs>. Because the [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] element for the window is no longer valid, you cannot use the `sender` parameter to retrieve information; use <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A> instead.  
+> Pencere kapalı olaylarını işlemek için, olay işleyicisine geçirilen bağımsız değişken türünü <xref:System.Windows.Automation.WindowClosedEventArgs>olarak atayın. Pencerenin [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] öğesi artık geçerli olmadığından, bilgileri almak için `sender` parametresini kullanamazsınız; Bunun yerine <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A> kullanın.  
   
 > [!CAUTION]
-> If your application might receive events from its own [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], do not use your application's [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] thread to subscribe to events, or to unsubscribe. Doing so might lead to unpredictable behavior. For more information, see [UI Automation Threading Issues](ui-automation-threading-issues.md).  
+> Uygulamanız kendi [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]olayları alabiliyorsanız, olaylara abone olmak veya aboneliğinizi kaldırmak için uygulamanızın [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] iş parçacığını kullanmayın. Bunun yapılması öngörülemeyen davranışlara neden olabilirler. Daha fazla bilgi için bkz. [UI Otomasyonu Iş parçacığı sorunları](ui-automation-threading-issues.md).  
   
- On shutdown, or when [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events are no longer of interest to the application, UI Automation clients should call one of the following methods.  
+ Kapatılırken veya [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayları uygulamaya artık ilgilenmeyen Kullanıcı Arabirimi Otomasyonu istemcileri aşağıdaki yöntemlerden birini çağırmalıdır.  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|Unregisters an event handler that was registered by using <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>.|  
-|<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|Unregisters an event handler that was registered by using <xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>.|  
-|<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|Unregisters an event handler that was registered by using <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>.|  
-|<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|Unregisters all registered event handlers.|  
+|<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>kullanılarak kaydedilmiş bir olay işleyicisinin kaydını siler.|  
+|<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>kullanılarak kaydedilmiş bir olay işleyicisinin kaydını siler.|  
+|<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>kullanılarak kaydedilmiş bir olay işleyicisinin kaydını siler.|  
+|<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|Tüm kayıtlı olay işleyicilerinin kaydını siler.|  
   
- For example code, see [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md).  
+ Örnek kod için bkz. [UI Otomasyon olaylarına abone olma](subscribe-to-ui-automation-events.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [UI Otomasyonu Olaylarına Abone Olma](subscribe-to-ui-automation-events.md)
 - [UI Otomasyonu Olaylarına Genel Bakış](ui-automation-events-overview.md)
 - [UI Otomasyonu Özelliklerine Genel Bakış](ui-automation-properties-overview.md)
-- [TrackFocus Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)
+- [TrackFocus örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

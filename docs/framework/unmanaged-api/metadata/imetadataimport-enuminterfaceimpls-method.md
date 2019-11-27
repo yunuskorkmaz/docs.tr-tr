@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449528"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls Yöntemi
-Enumerates all interfaces implemented by the specified `TypeDef`. 
+Belirtilen `TypeDef`tarafından uygulanan tüm arabirimleri numaralandırır. 
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,39 +39,39 @@ HRESULT EnumInterfaceImpls (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] Numaralandırıcı için bir işaretçi.  
   
  `td`  
- [in] The token of the TypeDef whose MethodDef tokens representing interface implementations are to be enumerated.  
+ 'ndaki MethodDef belirteçleri arabirim uygulamalarını temsil eden TypeDef 'in belirteci NUMARALANDIRILAMAZ.  
   
  `rImpls`  
- [out] The array used to store the MethodDef tokens.  
+ dışı MethodDef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- [in] The maximum size of the `rImpls` array.  
+ 'ndaki `rImpls` dizisinin en büyük boyutu.  
   
  `pcImpls`  
- [out] The actual number of tokens returned in `rImpls`.  
+ dışı `rImpls`' de döndürülen gerçek belirteç sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls` returned successfully.|  
-|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcImpls` is set to zero.|  
+|`S_OK`|`EnumInterfaceImpls` başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak bir MethodDef belirteci yok. Bu durumda `pcImpls` sıfır olarak ayarlanır.|  
 
 ## <a name="remarks"></a>Açıklamalar
 
-The enumeration returns a collection of `mdInterfaceImpl` tokens for each interface implemented by the specified `TypeDef`. Interface tokens are returned in the order the interfaces were specified (through `DefineTypeDef` or `SetTypeDefProps`). Properties of the returned `mdInterfaceImpl` tokens can be queried using [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
+Sabit listesi, belirtilen `TypeDef`tarafından uygulanan her arabirim için `mdInterfaceImpl` belirteçlerinin bir koleksiyonunu döndürür. Arabirim belirteçleri, arabirimlerin belirtildiği sırada döndürülür (`DefineTypeDef` veya `SetTypeDefProps`aracılığıyla). Döndürülen `mdInterfaceImpl` belirteçlerinin özellikleri [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)kullanılarak sorgulanabilir.
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

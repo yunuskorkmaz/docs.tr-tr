@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350276"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf İşleci (Visual Basic)
-Creates a delegate instance that references the specific procedure.  
+Belirli yordama başvuran bir temsilci örneği oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,20 +26,20 @@ AddressOf procedurename
   
 ## <a name="parts"></a>Bölümler  
  `procedurename`  
- Gerekli. Specifies the procedure to be referenced by the newly created delegate.  
+ Gerekli. Yeni oluşturulan temsilci tarafından başvurulacak prosedürü belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `AddressOf` operator creates a delegate that points to the sub or function specified by `procedurename`. When the specified procedure is an instance method then the delegate refers to both the instance and the method. Then, when the  delegate is invoked the specified method of the specified instance is called.  
+ `AddressOf` işleci, `procedurename`tarafından belirtilen Sub veya Function öğesine işaret eden bir temsilci oluşturur. Belirtilen yordam bir örnek yöntemi olduğunda, temsilci hem örneğe hem de yöntemine başvurur. Ardından, temsilci çağrıldığında belirtilen örnek için belirtilen yöntem çağrılır.  
   
- The `AddressOf` operator can be used as the operand of a delegate constructor or it can be used in a context in which the type of the delegate can be determined by the compiler.  
+ `AddressOf` işleci, bir temsilci oluşturucusunun işleneni olarak kullanılabilir ya da temsilci türünün derleyici tarafından belirlenebileceği bir bağlamda kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `AddressOf` operator to designate a delegate to handle the `Click` event of a button.  
+ Bu örnek, bir düğmenin `Click` olayını işlemek üzere bir temsilci belirlemek için `AddressOf` işlecini kullanır.  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Örnek  
- The following example uses the `AddressOf` operator to designate the startup function for a thread.  
+ Aşağıdaki örnek, bir iş parçacığının başlangıç işlevini belirlemek için `AddressOf` işlecini kullanır.  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   

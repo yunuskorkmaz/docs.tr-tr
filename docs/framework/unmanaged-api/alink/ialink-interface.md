@@ -14,12 +14,12 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441822"
 ---
 # <a name="ialink-interface"></a>IALink Arabirimi
-Helps in constructing .NET Framework assemblies. Among other things, the interface contains methods that assist in writing assembly manifests for multi-module assemblies, signing assemblies with strong names, and creating netmodules.  
+.NET Framework derlemeleri oluşturulmasına yardımcı olur. Diğer şeyler arasında arabirim, çok modüllü derlemeler için derleme bildirimleri yazma, güçlü adlara sahip derlemeleri imzalama ve netmodules oluşturma konusunda yardımcı olan yöntemleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [AddFile Method](addfile-method.md)  
+ [AddFile yöntemi](addfile-method.md)  
   
- [AddImport Method](addimport-method.md)  
+ [AddImport yöntemi](addimport-method.md)  
   
  [CloseAssembly Yöntemi](closeassembly-method.md)  
   
@@ -51,7 +51,7 @@ Helps in constructing .NET Framework assemblies. Among other things, the interfa
   
  [GetResolutionScope Yöntemi](getresolutionscope-method.md)  
   
- [GetScope Method](getscope-method.md)  
+ [GetScope yöntemi](getscope-method.md)  
   
  [GetWin32ResBlob Yöntemi](getwin32resblob-method.md)  
   
@@ -61,7 +61,7 @@ Helps in constructing .NET Framework assemblies. Among other things, the interfa
   
  [ImportTypes Yöntemi](importtypes-method.md)  
   
- "Init Method"  
+ "Init yöntemi"  
   
  [LinkResource Yöntemi](linkresource-method.md)  
   

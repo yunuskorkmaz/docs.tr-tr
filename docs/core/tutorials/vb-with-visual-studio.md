@@ -1,6 +1,6 @@
 ---
-title: .NET Core Hello World application with Visual Basic in Visual Studio 2017
-description: Learn how to build a simple .NET Core console application with Visual Basic using Visual Studio 2017.
+title: Visual Studio 2017 ' de Visual Basic ile .NET Core Merhaba Dünya uygulaması
+description: Visual Studio 2017 kullanarak Visual Basic basit bir .NET Core konsol uygulaması derlemeyi öğrenin.
 ms.date: 08/07/2017
 dev_langs:
 - vb
@@ -12,75 +12,75 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428574"
 ---
-# <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Build a Visual Basic Hello World application with the .NET Core SDK in Visual Studio 2017
+# <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017 ' de .NET Core SDK ile Visual Basic Merhaba Dünya uygulaması derleme
 
-This topic provides a step-by-step introduction to building, debugging, and publishing a simple .NET Core console application using Visual Basic in Visual Studio 2017. Visual Studio 2017 provides a full-featured development environment for building .NET Core applications. As long as the application doesn't have platform-specific dependencies, the application can run on any platform that .NET Core targets and on any system that has .NET Core installed.
+Bu konu, Visual Studio 2017 ' de Visual Basic kullanarak basit bir .NET Core konsol uygulaması oluşturmaya, hata ayıklamanıza ve yayımlamaya yönelik adım adım bir giriş sağlar. Visual Studio 2017, .NET Core uygulamaları oluşturmak için tam özellikli bir geliştirme ortamı sağlar. Uygulama platforma özgü bağımlılıklara sahip olmadığı sürece, uygulama .NET Core 'un hedeflediği tüm platformlarda ve .NET Core yüklü olan herhangi bir sistemde çalışabilir.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
-[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) with the ".NET Core cross-platform development" workload installed. You can develop your app with .NET Core 2.1 or later versions.
+[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ".NET Core platformlar arası geliştirme" iş yükü yüklendi. Uygulamanızı .NET Core 2,1 veya sonraki sürümleriyle geliştirebilirsiniz.
 
-For more information, see [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
+Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-## <a name="a-simple-hello-world-application"></a>A simple Hello World application
+## <a name="a-simple-hello-world-application"></a>Basit bir Merhaba Dünya uygulaması
 
-Begin by creating a simple "Hello World" console application. Aşağıdaki adımları uygulayın:
+Basit bir "Merhaba Dünya" konsol uygulaması oluşturarak başlayın. Aşağıdaki adımları uygulayın:
 
-1. Launch Visual Studio 2017. Select **File** > **New** > **Project** from the menu bar. In the *New Project** dialog, select the **Visual Basic** node followed by the **.NET Core** node. Then select the **Console App (.NET Core)** project template. In the **Name** text box, type "HelloWorld". Select the **OK** button.
+1. Visual Studio 2017 ' i başlatın. Menü çubuğundan **dosya** > **Yeni** > **projesi** öğesini seçin. *Yeni proje** iletişim kutusunda **Visual Basic** düğümünü ve ardından **.NET Core** düğümünü seçin. Ardından **konsol uygulaması (.NET Core)** proje şablonunu seçin. **Ad** metin kutusuna "HelloWorld" yazın. **Tamam** düğmesini seçin.
 
-   ![New Project dialog with Console App selected](./media/vb-with-visual-studio/visual-studio-new-project.png)
+   ![Konsol uygulaması seçiliyken yeni proje iletişim kutusu](./media/vb-with-visual-studio/visual-studio-new-project.png)
 
-1. Visual Studio uses the template to create your project. The Visual Basic Console Application template for .NET Core automatically defines a class, `Program`, with a single method, `Main`, that takes a <xref:System.String> array as an argument. `Main` is the application entry point, the method that's called automatically by the runtime when it launches the application. Any command-line arguments supplied when the application is launched are available in the *args* array.
+1. Visual Studio, projenizi oluşturmak için şablonu kullanır. .NET Core için Visual Basic konsol uygulaması şablonu, bağımsız değişken olarak <xref:System.String> dizisi alan `Main`tek bir yöntemle `Program`bir sınıfını otomatik olarak tanımlar. `Main`, uygulamayı başlattığında çalışma zamanı tarafından otomatik olarak çağrılan yöntem olan uygulama giriş noktasıdır. Uygulama başlatıldığında sağlanan herhangi bir komut satırı bağımsız değişkeni, *args* dizisinde kullanılabilir.
 
-   ![Visual Studio and the new HelloWorld project](./media/vb-with-visual-studio/visual-studio-main-window.png)
+   ![Visual Studio ve yeni HelloWorld projesi](./media/vb-with-visual-studio/visual-studio-main-window.png)
 
-   The template creates a simple "Hello World" application. It calls the <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> method to display the literal string "Hello World!" in the console window. By selecting the **HelloWorld** button with the green arrow on the toolbar, you can run the program in Debug mode. If you do, the console window is visible for only a brief time interval before it closes. This occurs because the `Main` method terminates and the application ends as soon as the single statement in the `Main` method executes.
+   Şablon basit bir "Merhaba Dünya" uygulaması oluşturur. "Merhaba Dünya!" değişmez dizesini göstermek için <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> yöntemini çağırır Konsol penceresinde. Araç çubuğunda yeşil oklu **HelloWorld** düğmesini seçerek programı hata ayıklama modunda çalıştırabilirsiniz. Bunu yaparsanız, konsol penceresi kapanmadan önce yalnızca kısa bir zaman aralığı için görünür olur. Bu durum `Main` yöntemi sonlandırıldığında ve `Main` yönteminde tek bir deyimin yürütüldüğü anda uygulamanın sona erdiği için oluşur.
 
-1. To cause the application to pause before it closes the console window, add the following code immediately after the call to the <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> method:
+1. Uygulamanın konsol penceresini kapatmadan önce duraklatılmasını sağlamak için, <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> yöntemine yapılan çağrıdan hemen sonra aşağıdaki kodu ekleyin:
 
    ```vb
    Console.Write("Press any key to continue...")
    Console.ReadKey(true)
    ```
 
-   This code prompts the user to press any key and then pauses the program until a key is pressed.
+   Bu kod, kullanıcıdan herhangi bir tuşa basması ve bir tuşa basılana kadar programı duraklayacağını ister.
 
-1. On the menu bar, select **Build** > **Build Solution**. This compiles your program into an intermediate language (IL) that's converted into binary code by a just-in-time (JIT) compiler.
+1. Menü çubuğunda **derleme** > **Build Solution**' ı seçin. Bu, programınızı bir tam zamanında (JıT) derleyicisi tarafından ikili koda dönüştürülen bir ara dile (IL) derler.
 
-1. Run the program by selecting the **HelloWorld** button with the green arrow on the toolbar.
+1. Araç çubuğunda yeşil oklu **HelloWorld** düğmesini seçerek programı çalıştırın.
 
-   ![Console window showing Hello World Press any key to continue](./media/with-visual-studio/hello-world-console.png)
+   ![Merhaba Dünya devam etmek için herhangi bir tuşa basarak konsol penceresi](./media/with-visual-studio/hello-world-console.png)
 
-1. Press any key to close the console window.
+1. Konsol penceresini kapatmak için herhangi bir tuşa basın.
 
-## <a name="enhancing-the-hello-world-application"></a>Enhancing the Hello World application
+## <a name="enhancing-the-hello-world-application"></a>Merhaba Dünya uygulamasını geliştirme
 
-Enhance your application to prompt the user for his or her name and to display it along with the date and time. To modify and test the program, do the following:
+Uygulamanızı, adını ve Tarih ve saat ile birlikte göstermek için kullanıcıya bir ad isteyecek şekilde geliştirin. Programı değiştirmek ve test etmek için aşağıdakileri yapın:
 
-1. Enter the following Visual Basic code in the code window immediately after the opening bracket that follows the `Sub Main(args As String())` line and before the first closing bracket:
+1. Aşağıdaki Visual Basic kodu, `Sub Main(args As String())` satırını izleyen açma köşeli ayracından hemen sonra ve ilk kapanış ayracından önce kod penceresine girin:
 
    [!code-vb[GettingStarted#1](../../../samples/snippets/core/tutorials/vb-with-visual-studio/helloworld.vb#1)]
 
-   This code replaces the contents of the `Main` method.
+   Bu kod `Main` yönteminin içeriğini değiştirir.
 
-   ![Visual Studio Program file with updated Main method](./media/vb-with-visual-studio/visual-basic-code-window.png)
+   ![Güncelleştirilmiş Main yöntemiyle Visual Studio program dosyası](./media/vb-with-visual-studio/visual-basic-code-window.png)
 
-   This code displays "What is your name?" in the console window and waits until the user enters a string followed by the Enter key. It stores this string into a variable named `name`. It also retrieves the value of the <xref:System.DateTime.Now?displayProperty=nameWithType> property, which contains the current local time, and assigns it to a variable named `currentDate`. Finally, it uses an [interpolated string](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) to display these values in the console window.
+   Bu kod "adınız nedir?" görüntüler Konsol penceresinde ve ardından ENTER tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi `name`adlı bir değişkende depolar. Ayrıca, geçerli yerel saati içeren <xref:System.DateTime.Now?displayProperty=nameWithType> özelliğinin değerini alır ve bunu `currentDate`adlı bir değişkene atar. Son olarak, bu değerleri konsol penceresinde göstermek için bir [enterpolasyonlu dize](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) kullanır.
 
-1. Compile the program by choosing **Build** > **Build Solution**.
+1. **Build** > **Build Solution**öğesini seçerek programı derleyin.
 
-1. Run the program in Debug mode in Visual Studio by selecting the green arrow on the toolbar, pressing F5, or choosing the **Debug** > **Start Debugging** menu item. Respond to the prompt by entering a name and pressing the Enter key.
+1. Araç çubuğundan yeşil oku seçerek, F5 tuşuna basarak **veya hata ayıklama > ** **Başlat** menü öğesini seçerek programı Visual Studio 'daki hata ayıklama modunda çalıştırın. Bir ad girip ENTER tuşuna basarak istemi yanıtlayın.
 
-   ![Console window with modified program output](./media/with-visual-studio/hello-world-update.png)
+   ![Değiştirilen program çıkışıyla konsol penceresi](./media/with-visual-studio/hello-world-update.png)
 
-1. Press any key to close the console window.
+1. Konsol penceresini kapatmak için herhangi bir tuşa basın.
 
-You've created and run your application. To develop a professional application, take some additional steps to make your application ready for release:
+Uygulamanızı oluşturdunuz ve çalıştırdık. Profesyonel bir uygulama geliştirmek için uygulamanızı yayın için hazırlamak üzere bazı ek adımlar gerçekleştirin:
 
-- To debug your application, see [Debug your .NET Core Hello World application using Visual Studio 2017](debugging-with-visual-studio.md).
+- Uygulamanızda hata ayıklamak için bkz. [Visual Studio 2017 kullanarak .NET Core Merhaba Dünya uygulamanızda hata ayıklama](debugging-with-visual-studio.md).
 
-- To publish a distributable version of your application, see [Publish your .NET Core Hello World application with Visual Studio 2017](publishing-with-visual-studio.md).
+- Uygulamanızın dağıtılabilir bir sürümünü yayımlamak için bkz. [Visual Studio 2017 ile .NET Core Merhaba Dünya uygulamanızı yayımlama](publishing-with-visual-studio.md).
 
 ## <a name="related-topics"></a>İlgili konular
 
-Instead of a console application, you can also build a .NET Standard class library with Visual Basic, .NET Core, and Visual Studio 2017. For a step-by-step introduction, see [Build a .NET Standard library with Visual Basic and .NET Core SDK in Visual Studio 2017](vb-library-with-visual-studio.md).
+Konsol uygulaması yerine, Visual Basic, .NET Core ve Visual Studio 2017 ile .NET Standard bir sınıf kitaplığı da oluşturabilirsiniz. Adım adım bir giriş için bkz. [Visual Studio 2017 'de Visual Basic ve .NET Core SDK ile .NET Standard kitaplığı oluşturma](vb-library-with-visual-studio.md).

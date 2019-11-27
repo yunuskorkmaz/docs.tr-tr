@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445241"
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind Yöntemi
-Gets a value identifying the nature of the code in the portable executable (PE) file, typically a DLL or EXE file, that is defined in the current metadata scope.  
+Taşınabilir yürütülebilir (PE) dosyasındaki, genellikle geçerli meta veri kapsamında tanımlanan bir DLL veya EXE dosyası olan kodun yapısını tanımlayan bir değer alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,28 +36,28 @@ HRESULT GetPEKind (
   
 ## <a name="parameters"></a>Parametreler  
  `pdwPEKind`  
- [out] A pointer to a value of the [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) enumeration that describes the PE file.  
+ dışı PE dosyasını tanımlayan bir [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) numaralandırması değerine yönelik bir işaretçi.  
   
  `pdwMachine`  
- [out] A pointer to a value that identifies the architecture of the machine. See the next section for possible values.  
+ dışı Makinenin mimarisini tanımlayan bir değere yönelik bir işaretçi. Olası değerler için sonraki bölüme bakın.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The value referenced by the `pdwMachine` parameter can be one of the following.  
+ `pdwMachine` parametresi tarafından başvurulan değer aşağıdakilerden biri olabilir.  
   
-|Değer|Machine architecture|  
+|Değer|Makine mimarisi|  
 |-----------|--------------------------|  
 |IMAGE_FILE_MACHINE_I386<br /><br /> 0x014C|x86|  
-|IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|Intel IPF|  
-|IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|X64|  
+|IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|Intel ıPF|  
+|IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|x64|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

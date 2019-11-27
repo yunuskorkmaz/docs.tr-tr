@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432332"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>IMetaDataEmit::SetPermissionSetProps Yöntemi
-Sets or updates features of the metadata signature of a permission set defined by a prior call to [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
+[Imetadatayayma::D efinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md)için önceki bir çağrı tarafından tanımlanan izin kümesinin meta veri imzasının özelliklerini ayarlar veya güncelleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +39,28 @@ HRESULT SetPermissionSetProps (
   
 ## <a name="parameters"></a>Parametreler  
  `tk`  
- [in] A metadata token that represents the object to be decorated.  
+ 'ndaki Tasarlankullanılacak nesneyi temsil eden bir meta veri belirteci.  
   
  `dwAction`  
- [in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.  
+ 'ndaki Kullanılacak bildirime dayalı güvenlik türünü belirten bir [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) değeri.  
   
  `pvPermission`  
- [in] The permission BLOB.  
+ 'ndaki İzin blobu.  
   
  `cbPermission`  
- [in] The size, in bytes, of `pvPermission`.  
+ 'ndaki `pvPermission`bayt cinsinden boyutu.  
   
  `ppm`  
- [out] An `mdPermission` metadata token that represents the updated permissions.  
+ dışı Güncelleştirilmiş izinleri temsil eden bir `mdPermission` meta veri belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

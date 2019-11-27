@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427946"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2 Yöntemi
-Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written. This method also lets you set the final location of the program database (PDB) file.  
+Bu yazıcının ilişkilendirileceği meta veri verici arabirimini ayarlar ve hata ayıklama simgelerinin yazılacağı çıkış dosyası adını ayarlar. Bu yöntem, program veritabanı (PDB) dosyasının son konumunu ayarlamanıza de olanak tanır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,25 +38,25 @@ HRESULT Initialize2(
   
 ## <a name="parameters"></a>Parametreler  
  `emitter`  
- [in] A pointer to the metadata emitter interface.  
+ 'ndaki Meta veri verici arabirimine yönelik bir işaretçi.  
   
  `tempfilename`  
- [in] A pointer to a `WCHAR` that contains the file name to which the debugging symbols are written. If a file name is specified for a writer that does not use file names, this parameter is ignored.  
+ 'ndaki Hata ayıklama simgelerinin yazıldığı dosya adını içeren `WCHAR` işaretçisi. Dosya adları kullanmayan bir yazıcı için dosya adı belirtilmişse, bu parametre yoksayılır.  
   
  `pIStream`  
- [in] If specified, the symbol writer emits the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. The `pIStream` parameter is optional.  
+ 'ndaki Belirtilmişse, sembol yazıcı sembolleri `filename` parametresinde belirtilen dosya yerine verilen <xref:System.Runtime.InteropServices.ComTypes.IStream> yayar. `pIStream` parametresi isteğe bağlıdır.  
   
  `fFullBuild`  
- [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
+ [in] Bu bir tam yeniden oluşturma ise `true`; Bu, artımlı bir derleme ise `false`.  
   
  `finalfilename`  
- [in] A pointer to a `WCHAR` that is the path string to the final location of the PDB file.  
+ 'ndaki PDB dosyasının son konumunun yol dizesi olan bir `WCHAR` işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

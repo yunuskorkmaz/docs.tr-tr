@@ -9,15 +9,15 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350575"
 ---
-# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Statically Compiled Queries (LINQ to XML) (Visual Basic)
+# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Statik olarak derlenen sorgular (LINQ to XML) (Visual Basic)
 
-One of the most important performance benefits LINQ to XML, as opposed to <xref:System.Xml.XmlDocument>, is that queries in LINQ to XML are statically compiled, whereas XPath queries must be interpreted at run time. This feature is built in to LINQ to XML, so you do not have to perform extra steps to take advantage of it, but it is helpful to understand the distinction when choosing between the two technologies. This topic explains the difference.
+<xref:System.Xml.XmlDocument>aksine LINQ to XML en önemli performans avantajlarından biri, LINQ to XML sorguların statik olarak derlenmesine karşın XPath sorgularının çalışma zamanında yorumlanması gerekir. Bu özellik LINQ to XML ' de yerleşiktir. bu nedenle, bundan faydalanmak için ek adımlar gerçekleştirmeniz gerekmez, ancak iki teknoloji arasında seçim yaparken farkın anlaşılması yararlı olur. Bu konu, farkı açıklamaktadır.
 
-## <a name="statically-compiled-queries-vs-xpath"></a>Statically Compiled Queries vs. XPath
+## <a name="statically-compiled-queries-vs-xpath"></a>Statik olarak derlenen sorgular ve XPath karşılaştırması
 
-The following example shows how to get the descendant elements with a specified name, and with an attribute with a specified value.
+Aşağıdaki örnek, belirtilen bir ada sahip ve belirtilen değere sahip bir öznitelik ile alt öğelerin nasıl alınacağını gösterir.
 
-The following is the equivalent XPath expression:
+Eşdeğer XPath ifadesi aşağıda verilmiştir:
 
 ```vb
 //Address[@Type='Shipping']
@@ -34,7 +34,7 @@ For Each el In list1
 Next
 ```
 
-The query expression in this example is re-written by the compiler to method-based query syntax. The following example, which is written in method-based query syntax, produces the same results as the previous one:
+Bu örnekteki sorgu ifadesi derleyici tarafından Yöntem tabanlı sorgu söz dizimine yeniden yazılır. Yöntem tabanlı sorgu sözdiziminde yazılan aşağıdaki örnek, öncekiyle aynı sonuçları üretir:
 
 ```vb
 Dim po = XDocument.Load("PurchaseOrders.xml")
@@ -46,7 +46,7 @@ For Each el In list1
 Next
 ```
 
-The <xref:System.Linq.Enumerable.Where%2A> method is an extension method. For more information, see [Extension Methods](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Because <xref:System.Linq.Enumerable.Where%2A> is an extension method, the query above is compiled as though it were written as follows:
+<xref:System.Linq.Enumerable.Where%2A> yöntemi bir genişletme yöntemidir. Daha fazla bilgi için bkz. [Uzantı yöntemleri](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). <xref:System.Linq.Enumerable.Where%2A> bir genişletme yöntemi olduğundan, yukarıdaki sorgu aşağıdaki gibi yazılmış gibi derlenir:
 
 ```vb
 Dim po = XDocument.Load("PurchaseOrders.xml")
@@ -58,14 +58,14 @@ For Each el In list1
 Next
 ```
 
-This example produces exactly the same results as the previous two examples. This illustrates the fact that queries are effectively compiled into statically linked method calls. This, combined with the deferred execution semantics of iterators, improves performance. For more information about the deferred execution semantics of iterators, see [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Bu örnek, önceki iki örnekle tam olarak aynı sonuçları üretir. Bu, sorguların statik olarak bağlı yöntem çağrılarına etkin bir şekilde derlendiğini gösterir. Yineleyicilerin ertelenmiş yürütme semantiği ile birlikte, performansı geliştirir. Yineleyicilerin ertelenmiş yürütme semantiği hakkında daha fazla bilgi için bkz. [LINQ to XML ertelenmiş yürütme ve geç değerlendirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
 
 > [!NOTE]
-> These examples are representative of the code that the compiler might write. The actual implementation might differ slightly from these examples, but the performance will be the same or similar to these examples.
+> Bu örnekler, derleyicinin yazabilmesi için kod temsilcisidir. Gerçek uygulama bu örneklerden biraz farklı olabilir, ancak performans aynı veya bu örneklere benzer olacaktır.
 
-## <a name="executing-xpath-expressions-with-xmldocument"></a>Executing XPath Expressions with XmlDocument
+## <a name="executing-xpath-expressions-with-xmldocument"></a>XmlDocument ile XPath Ifadeleri yürütme
 
-The following example uses <xref:System.Xml.XmlDocument> to accomplish the same results as the previous examples:
+Aşağıdaki örnek, önceki örneklerle aynı sonuçları başarmak için <xref:System.Xml.XmlDocument> kullanır:
 
 ```vb
 Dim reader = Xml.XmlReader.Create("PurchaseOrders.xml")
@@ -78,20 +78,20 @@ Next
 reader.Close()
 ```
 
-This query returns the same output as the examples that use LINQ to XML; the only difference is that LINQ to XML indents the printed XML, whereas <xref:System.Xml.XmlDocument> does not.
+Bu sorgu, LINQ to XML kullanan örneklerle aynı çıktıyı döndürür; Tek fark, LINQ to XML yazdırılan XML 'nin girintilebilirken <xref:System.Xml.XmlDocument> değildir.
 
-However, the <xref:System.Xml.XmlDocument> approach generally does not perform as well as LINQ to XML, because the <xref:System.Xml.XmlNode.SelectNodes%2A> method must do the following internally every time it is called:
+Ancak, <xref:System.Xml.XmlDocument> yaklaşımı genellikle LINQ to XML ve <xref:System.Xml.XmlNode.SelectNodes%2A> yönteminin her çağrılışında aşağıdakileri yapması gerektiğinden, her zaman bir şekilde gerçekleştirmez:
 
-- It parses the string that contains the XPath expression, breaking the string into tokens.
+- XPath ifadesini içeren dizeyi ayrıştırır ve dizeyi belirteçlere ayırır.
 
-- It validates the tokens to make sure that the XPath expression is valid.
+- XPath ifadesinin geçerli olduğundan emin olmak için belirteçleri doğrular.
 
-- It translates the expression into an internal expression tree.
+- İfadeyi bir iç ifade ağacına çevirir.
 
-- It iterates through the nodes, appropriately selecting the nodes for the result set based on the evaluation of the expression.
+- İfadenin değerlendirmesine bağlı olarak sonuç kümesi düğümlerini uygun şekilde seçerek düğümleri üzerinde dolaşır.
 
-This is significantly more than the work done by the corresponding LINQ to XML query. The specific performance difference varies for different types of queries, but in general LINQ to XML queries do less work, and therefore perform better, than evaluating XPath expressions using <xref:System.Xml.XmlDocument>.
+Bu, karşılık gelen LINQ to XML sorgusu tarafından gerçekleştirilen işin önemli ölçüde daha yüksektir. Belirli performans farkı farklı sorgu türleri için farklılık gösterir, ancak genel LINQ to XML sorgularında daha az iş yapılır ve bu nedenle, <xref:System.Xml.XmlDocument>kullanarak XPath ifadelerini değerlendirmeden daha iyi gerçekleştirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [Performans (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

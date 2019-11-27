@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450014"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>IMetaDataImport::EnumSignatures Yöntemi
-Enumerates Signature tokens representing stand-alone signatures in the current scope.  
+Geçerli kapsamdaki tek başına imzaları temsil eden Imza belirteçlerini numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,35 +38,35 @@ HRESULT EnumSignatures (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu NULL olmalıdır.  
   
  `rSignatures`  
- [out] The array used to store the Signature tokens.  
+ dışı Imza belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- [in] The maximum size of the `rSignatures` array.  
+ 'ndaki `rSignatures` dizisinin en büyük boyutu.  
   
  `pcSignatures`  
- [out] The number of Signature tokens returned in `rSignatures`.  
+ dışı `rSignatures`' de döndürülen Imza belirteçleri sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcSignatures` is zero.|  
+|`S_OK`|`EnumSignatures` başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda `pcSignatures` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The Signature tokens are created by the [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) method.  
+ Imza belirteçleri [ımetadatayayma:: GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) yöntemi tarafından oluşturulur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

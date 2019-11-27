@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445050"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated Yöntemi
-Notifies the profiler that a COM interop vtable for the specified IID and class has been created.  
+Profil oluşturucuya, belirtilen IID ve sınıf için bir COM birlikte çalışma vtable 'ın oluşturulduğunu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,30 +37,30 @@ HRESULT COMClassicVTableCreated(
   
 ## <a name="parameters"></a>Parametreler  
  `wrappedClasId`  
- [in] The ID of the class for which the vtable has been created.  
+ 'ndaki Vtable 'ın oluşturulduğu sınıfın KIMLIĞI.  
   
  `implementedIID`  
- [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
+ 'ndaki Sınıf tarafından uygulanan arabirimin KIMLIĞI. Arabirim yalnızca dahili ise bu değer NULL olabilir.  
   
  `pVTable`  
- [in] A pointer to the start of the vtable.  
+ 'ndaki Vtable başlangıcına yönelik bir işaretçi.  
   
  `cSlots`  
- [in] The number of slots that are in the vtable.  
+ 'ndaki Vtable 'daki yuva sayısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ Yığın atık toplamaya izin veren bir durumda olmadığından profil oluşturucu bu yöntemin uygulamasında engellenmemelidir, bu nedenle preemptive çöp toplama etkinleştirilemez. Profil Oluşturucu burada ve çöp toplama denendiğinde, bu geri arama dönene kadar çalışma zamanı engellenir.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ Profil oluşturucunun bu yöntemin uygulanması yönetilen koda veya herhangi bir şekilde bir yönetilen bellek ayırmaya yol açmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

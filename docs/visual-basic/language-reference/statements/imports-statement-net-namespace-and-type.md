@@ -1,5 +1,5 @@
 ---
-title: Imports Statement - .NET Namespace and Type
+title: Imports ekstresi-.NET ad alanı ve türü
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Imports
@@ -25,7 +25,7 @@ ms.locfileid: "74351076"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports Deyimi (.NET Ad Alanı ve Türü)
 
-Enables type names to be referenced without namespace qualification.
+Ad alanı nitelendirme olmadan tür adlarına başvurulmalarını sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -39,54 +39,54 @@ Imports [ aliasname = ] namespace.element
 
 |Terim|Tanım|
 |---|---|
-|`aliasname`|İsteğe bağlı. An *import alias* or name by which code can refer to `namespace` instead of the full qualification string. See [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`namespace`|Gerekli. The fully qualified name of the namespace being imported. Can be a string of namespaces nested to any level.|
-|`element`|İsteğe bağlı. The name of a programming element declared in the namespace. Can be any container element.|
+|`aliasname`|İsteğe bağlı. Kodun tam nitelendirme dizesi yerine `namespace` başvuruda bulunduğu bir *içeri aktarma diğer* adı veya adı. Bkz. [tanımlanmış öğe adları](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`namespace`|Gerekli. İçeri aktarılmakta olan ad alanının tam adı. Herhangi bir düzeye yuvalanmış bir ad alanı dizesi olabilir.|
+|`element`|İsteğe bağlı. Ad alanında bildirildiği bir programlama öğesinin adı. Herhangi bir kapsayıcı öğesi olabilir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-The `Imports` statement enables types that are contained in a given namespace to be referenced directly.
+`Imports` ifadeye, belirtilen bir ad alanında bulunan türlerin doğrudan başvurmalarını sağlar.
 
-You can supply a single namespace name or a string of nested namespaces. Each nested namespace is separated from the next higher level namespace by a period (`.`), as the following example illustrates:
+Tek bir ad alanı adı veya iç içe geçmiş ad alanları dizesi sağlayabilirsiniz. Aşağıdaki örnekte gösterildiği gibi, iç içe geçmiş her ad alanı bir nokta (`.`) ile bir sonraki daha yüksek düzey ad alanından ayrılır:
 
 ```vb
 Imports System.Collections.Generic
 ```
 
-Each source file can contain any number of `Imports` statements. These must follow any option declarations, such as the `Option Strict` statement, and they must precede any programming element declarations, such as `Module` or `Class` statements.
+Her kaynak dosya, herhangi bir sayıda `Imports` deyimi içerebilir. Bunlar, `Option Strict` deyimi gibi herhangi bir seçenek bildirimini izlemelidir ve `Module` veya `Class` deyimleri gibi herhangi bir programlama öğesi bildiriminin önüne gelmelidir.
 
-You can use `Imports` only at file level. This means the declaration context for importation must be a source file, and cannot be a namespace, class, structure, module, interface, procedure, or block.
+`Imports` yalnızca dosya düzeyinde kullanabilirsiniz. Bu, içe aktarılması işlemini için bildirim bağlamının bir kaynak dosya olması ve bir ad alanı, sınıf, yapı, modül, arabirim, yordam veya blok olamayacağı anlamına gelir.
 
-Note that the `Imports` statement does not make elements from other projects and assemblies available to your project. Importing does not take the place of setting a reference. It only removes the need to qualify names that are already available to your project. For more information, see "Importing Containing Elements" in [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+`Imports` deyimin, projeniz için kullanılabilir olan diğer projelerden ve derlemelerden öğe olmadığını unutmayın. İçeri aktarma, başvuru ayarlamanın yerini almaz. Yalnızca, projeniz için zaten kullanılabilir olan adları nitelendirme gereksinimini ortadan kaldırır. Daha fazla bilgi için, bkz. "Içerilen öğeleri Içeri aktarma", [belirtilen öğelerin başvuruları](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 
 > [!NOTE]
-> You can define implicit `Imports` statements by using the [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). For more information, see [How to: Add or Remove Imported Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).
+> [Başvurular sayfasını, proje tasarımcısını (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)kullanarak örtük `Imports` deyimlerini tanımlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Içeri aktarılan ad alanlarını ekleme veya kaldırma (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).
 
-## <a name="import-aliases"></a>Import Aliases
+## <a name="import-aliases"></a>Diğer adları içeri aktar
 
-An *import alias* defines the alias for a namespace or type. Import aliases are useful when you need to use items with the same name that are declared in one or more namespaces. For more information and an example, see "Qualifying an Element Name" in [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+Bir *içeri aktarma diğer adı* , bir ad alanı veya tür için diğer adı tanımlar. İçeri aktarma diğer adları, bir veya daha fazla ad alanında tanımlanan aynı ada sahip öğeleri kullanmanız gerektiğinde faydalıdır. Daha fazla bilgi ve bir örnek için, bkz. "öğe adını niteleyen", [belirtilen öğelerin başvuruları](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 
-You should not declare a member at module level with the same name as `aliasname`. If you do, the Visual Basic compiler uses `aliasname` only for the declared member and no longer recognizes it as an import alias.
+Modül düzeyinde bir üyeyi, `aliasname`aynı ada sahip olarak bildirmemelisiniz. Bunu yaparsanız, Visual Basic derleyici yalnızca, yalnızca belirtilen üye için `aliasname` kullanır ve bunu artık içeri aktarma diğer adı olarak tanımaz.
 
-Although the syntax used for declaring an import alias is like that used for importing an XML namespace prefix, the results are different. An import alias can be used as an expression in your code, whereas an XML namespace prefix can be used only in XML literals or XML axis properties as the prefix for a qualified element or attribute name.
+Bir içeri aktarma diğer adını bildirmek için kullanılan söz dizimi, bir XML ad alanı önekini içeri aktarmak için kullanılan gibidir, ancak sonuçlar farklı olur. Bir içeri aktarma diğer adı kodunuzda bir ifade olarak kullanılabilir, ancak bir XML ad alanı ön eki yalnızca XML sabit değerlerinde veya XML eksen özelliklerinde nitelenmiş bir öğe veya öznitelik adı ön eki olarak kullanılabilir.
 
 ### <a name="element-names"></a>Öğe adları
 
-If you supply `element`, it must represent a *container element*, that is, a programming element that can contain other elements. Container elements include classes, structures, modules, interfaces, and enumerations.
+`element`sağlarsanız, bir *kapsayıcı öğe*, diğer bir deyişle diğer öğeleri içerebilen bir programlama öğesi temsil etmelidir. Kapsayıcı öğeleri sınıflar, yapılar, modüller, arabirimler ve numaralandırmalar içerir.
 
-The scope of the elements made available by an `Imports` statement depends on whether you specify `element`. If you specify only `namespace`, all uniquely named members of that namespace, and members of container elements within that namespace, are available without qualification. If you specify both `namespace` and `element`, only the members of that element are available without qualification.
+Bir `Imports` deyimin kullanımına sunulan öğelerin kapsamı, `element`belirtdiğinize bağlıdır. Yalnızca `namespace`belirtirseniz, bu ad alanı için benzersiz olarak adlandırılan tüm Üyeler ve bu ad alanı içindeki kapsayıcı öğelerinin üyeleri, nitelendirme olmadan kullanılabilir. Hem `namespace` hem de `element`belirtirseniz, yalnızca bu öğenin üyeleri nitelendirme olmadan kullanılabilir.
 
 ## <a name="example"></a>Örnek
 
-The following example returns all the folders in the *C:\\* directory by using the <xref:System.IO.DirectoryInfo> class:
+Aşağıdaki örnek, <xref:System.IO.DirectoryInfo> sınıfını kullanarak *C:\\* dizinindeki tüm klasörleri döndürür:
 
-The code has no `Imports` statements at the top of the file. Therefore, the <xref:System.IO.DirectoryInfo>, <xref:System.Text.StringBuilder>, and <xref:Microsoft.VisualBasic.ControlChars.CrLf> references are all fully qualified with the namespaces.
+Kodun, dosyanın üst kısmında `Imports` deyimleri yok. Bu nedenle, <xref:System.IO.DirectoryInfo>, <xref:System.Text.StringBuilder>ve <xref:Microsoft.VisualBasic.ControlChars.CrLf> başvuruları ad alanlarıyla tamamen nitelenir.
 
 [!code-vb[VbVbalrStatements#152](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#152)]
 
 ## <a name="example"></a>Örnek
 
-The following example includes `Imports` statements for the referenced namespaces. Therefore, the types do not have to be fully qualified with the namespaces.
+Aşağıdaki örnek, başvurulan ad alanları için `Imports` deyimlerini içerir. Bu nedenle, türlerin ad alanları ile tam nitelikli olması gerekmez.
 
 [!code-vb[VbVbalrStatements#153](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#153)]
 
@@ -94,7 +94,7 @@ The following example includes `Imports` statements for the referenced namespace
   
 ## <a name="example"></a>Örnek
 
-The following example includes `Imports` statements that create aliases for the referenced namespaces. The types are qualified with the aliases.
+Aşağıdaki örnek, başvurulan ad alanları için diğer adlar oluşturan `Imports` deyimlerini içerir. Türler diğer adlarla nitelenir.
 
 [!code-vb[VbVbalrStatements#155](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#155)]
 
@@ -102,7 +102,7 @@ The following example includes `Imports` statements that create aliases for the 
 
 ## <a name="example"></a>Örnek
 
-The following example includes `Imports` statements that create aliases for the referenced types. Aliases are used to specify the types.
+Aşağıdaki örnek, başvurulan türler için diğer adlar oluşturan `Imports` deyimlerini içerir. Diğer adlar, türleri belirtmek için kullanılır.
 
 [!code-vb[VbVbalrStatements#157](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#157)]
 
@@ -111,7 +111,7 @@ The following example includes `Imports` statements that create aliases for the 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Namespace Deyimi](namespace-statement.md)
-- [Namespaces in Visual Basic](../../programming-guide/program-structure/namespaces.md)
+- [Visual Basic ad alanları](../../programming-guide/program-structure/namespaces.md)
 - [References ve Imports Deyimi](../../programming-guide/program-structure/references-and-the-imports-statement.md)
 - [Imports Deyimi (XML Ad Alanı)](imports-statement-xml-namespace.md)
 - [Bildirilmiş Öğelere Başvurular](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

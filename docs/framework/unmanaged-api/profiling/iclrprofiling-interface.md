@@ -22,24 +22,24 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448718"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling Arabirimi
-Provides the [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method, which enables a profiler to attach to a running process.  
+, Bir profil oluşturucunun çalışan bir işleme iliştirmesine olanak sağlayan [ıclrprofile:: AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) metodunu sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[AttachProfiler Yöntemi](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|Attaches the specified profiler to the specified process.|  
+|[AttachProfiler Yöntemi](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|Belirtilen işlem oluşturucuyu belirtilen işleme iliştirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

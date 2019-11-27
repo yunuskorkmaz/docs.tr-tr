@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428014"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable Yöntemi
-Defines a single variable in the current lexical scope. This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
+Geçerli sözcük kapsamındaki tek bir değişkeni tanımlar. Bu yöntem, bir kapsam genelinde birden çok evye sahip olan aynı ada sahip bir değişken için birden çok kez çağrılabilir. Ancak, bu durumda, `startOffset` ve `endOffset` parametrelerinin değerleri çakışmamalıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,40 +43,40 @@ HRESULT DefineLocalVariable(
   
 ## <a name="parameters"></a>Parametreler  
  `name`  
- [in] A pointer to a `WCHAR` that defines the local variable name.  
+ 'ndaki Yerel değişken adını tanımlayan bir `WCHAR` işaretçisi.  
   
  `attributes`  
- [in] The local variable attributes.  
+ 'ndaki Yerel değişken öznitelikleri.  
   
  `cSig`  
- [in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.  
+ 'ndaki `signature` arabelleğinin boyutunu bayt cinsinden belirten bir `ULONG32`.  
   
  `signature`  
- [in] The local variable signature.  
+ 'ndaki Yerel değişken imzası.  
   
  `addrKind`  
- [in] The address type.  
+ 'ndaki Adres türü.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ 'ndaki Parametre belirtiminin ilk adresi.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ 'ndaki Parametre belirtiminin ikinci adresi.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ 'ndaki Parametre belirtiminin üçüncü adresi.  
   
  `startOffset`  
- [in] The start offset for the variable. This parameter is optional. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ 'ndaki Değişkenin başlangıç boşluğu. Bu parametre isteğe bağlıdır. 0 ise, bu parametre yok sayılır ve değişken tüm kapsam genelinde tanımlanır. Sıfır olmayan bir değerse, değişken geçerli kapsamın uzaklıkları dahilinde olur.  
   
  `endOffset`  
- [in] The end offset for the variable. This parameter is optional. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ 'ndaki Değişkenin bitiş boşluğu. Bu parametre isteğe bağlıdır. 0 ise, bu parametre yok sayılır ve değişken tüm kapsam genelinde tanımlanır. Sıfır olmayan bir değerse, değişken geçerli kapsamın uzaklıkları dahilinde olur.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

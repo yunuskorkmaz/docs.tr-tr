@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447217"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps Metodu
-Gets the properties of the file with the specified metadata signature.  
+Belirtilen meta veri imzasıyla dosyanın özelliklerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,34 +41,34 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mdf`  
- [in] The `mdFile` metadata token that represents the file for which to get the properties.  
+ 'ndaki Özelliklerinin alınacağı dosyayı temsil eden `mdFile` meta veri belirteci.  
   
  `szName`  
- [out] The simple name of the file.  
+ dışı Dosyanın basit adı.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ 'ndaki `szName`geniş karakter cinsinden boyutu.  
   
  `pchName`  
- [out] The number of wide chars actually returned in `szName`.  
+ dışı `szName`' de döndürülen geniş karakter sayısı.  
   
  `ppbHashValue`  
- [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the file.  
+ dışı Karma değere yönelik bir işaretçi. Bu, dosyanın SHA-1 algoritmasını kullanan karmadır.  
   
  `pcbHashValue`  
- [out] The number of wide chars in the returned hash value.  
+ dışı Döndürülen karma değerindeki geniş karakter sayısı.  
   
  `pdwFileFlags`  
- [out] A pointer to the flags that describe the metadata applied to a file. The flags value is a combination of one or more [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values.  
+ dışı Bir dosyaya uygulanan meta verileri tanımlayan bayrakların işaretçisi. Flags değeri bir veya daha fazla [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) değerinin birleşimidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

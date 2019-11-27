@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433213"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs Metodu
-Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.  
+Belirtilen meta veri belirtecini kullanarak bir işlevin `FunctionID` alır, sınıfı ve tür bağımsız değişkenlerinin `ClassID` değerlerini.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,38 +39,38 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>Parametreler  
  `moduleID`  
- [in] The ID of the module in which the function resides.  
+ 'ndaki İşlevin bulunduğu modülün KIMLIĞI.  
   
  `funcDef`  
- [in] An `mdMethodDef` metadata token that references the function.  
+ 'ndaki İşleve başvuran bir `mdMethodDef` meta veri belirteci.  
   
  `classId`  
- [in] The ID of the function's containing class.  
+ 'ndaki İşlevin kapsayan sınıfının KIMLIĞI.  
   
  `cTypeArgs`  
- [in] The number of type parameters for the given function. This value must be zero for non-generic functions.  
+ 'ndaki Verilen işlev için tür parametrelerinin sayısı. Bu değer, genel olmayan işlevler için sıfır olmalıdır.  
   
  `typeArgs`  
- [in] An array of `ClassID` values, each of which is an argument of the function. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
+ 'ndaki Her biri işlevin bağımsız değişkeni olan bir `ClassID` değerleri dizisi. `cTypeArgs` sıfır olarak ayarlandıysa `typeArgs` değeri NULL olabilir.  
   
  `pFunctionID`  
- [out] A pointer to the `FunctionID` of the specified function.  
+ dışı Belirtilen işlevin `FunctionID` bir işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results. Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.  
+ `GetFunctionFromTokenAndTypeArgs` yönteminin `mdMethodDef` meta veri belirteci yerine `mdMethodRef` meta verileriyle çağrılması öngörülemeyen sonuçlara neden olabilir. Çağıranlar, `mdMethodRef` bir `mdMethodDef` geçirmeden çözümlenmelidir.  
   
- If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.  
+ İşlev zaten yüklü değilse, `GetFunctionFromTokenAndTypeArgs` çağrısı, çok sayıda bağlamda tehlikeli bir işlem olan yüklemenin oluşmasına neden olur. Örneğin, modül veya tür yükleme sırasında bu yöntemi çağırmak, çalışma zamanı döngüsel olarak yükleme yapmayı denediğinde sonsuz döngüye neden olabilir.  
   
- In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.  
+ Genel olarak, `GetFunctionFromTokenAndTypeArgs` kullanımı önerilmez. Profil oluşturucular belirli bir işlevin olaylarıyla ilgileniyorsa, bu işlevin `ModuleID` ve `mdMethodDef` depolarlar ve belirli bir `FunctionID` istenen işlevin olup olmadığını denetlemek için [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

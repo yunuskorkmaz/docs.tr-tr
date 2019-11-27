@@ -9,11 +9,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353130"
 ---
-# <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>Performance of Chained Queries (LINQ to XML) (Visual Basic)
+# <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>Zincirleme sorgularının performansı (LINQ to XML) (Visual Basic)
 
-One of the most important benefits of LINQ (and LINQ to XML) is that chained queries can perform as well as a single larger, more complicated query.
+LINQ 'in (ve LINQ to XML) en önemli avantajlarından biri, zincir sorgularının ve çok daha karmaşık bir sorgunun gerçekleştirebildiği bir işlemdir.
 
-A chained query is a query that uses another query as its source. For example, in the following simple code, `query2` has `query1` as its source:
+Zincirleme sorgu, kaynağı olarak başka bir sorgu kullanan bir sorgudur. Örneğin, aşağıdaki basit kodda, `query1` kaynağı olarak `query2`:
 
 ```vb
 Dim root As New XElement("Root", New XElement("Child", 1), New XElement("Child", 2), New XElement("Child", 3), New XElement("Child", 4))
@@ -27,24 +27,24 @@ For Each i As var In query2
 Next
 ```
 
-This example produces the following output:
+Bu örnek aşağıdaki çıktıyı üretir:
 
 ```console
 4
 ```
 
-This chained query provides the same performance profile as iterating through a linked list.
+Bu zincirleme sorgu, bağlantılı bir liste ile yineleme ile aynı performans profilini sağlar.
 
-- The <xref:System.Xml.Linq.XContainer.Elements%2A> axis has essentially the same performance as iterating through a linked list. <xref:System.Xml.Linq.XContainer.Elements%2A> is implemented as an iterator with deferred execution. This means that it does some work in addition to iterating through the linked list, such as allocating the iterator object and keeping track of execution state. This work can be divided into two categories: the work that is done at the time the iterator is set up, and the work that is done during each iteration. The setup work is a small, fixed amount of work and the work done during each iteration is proportional to the number of items in the source collection.
+- <xref:System.Xml.Linq.XContainer.Elements%2A> eksen temelde, bağlantılı bir liste ile yineleme ile aynı performansa sahiptir. <xref:System.Xml.Linq.XContainer.Elements%2A>, ertelenmiş yürütme ile bir yineleyici olarak uygulanır. Bu, yineleyici nesnesini ayırma ve yürütme durumunu izleme gibi bağlantılı listede yineleme yapmak için ek olarak bir iş yaptığı anlamına gelir. Bu iş iki kategoriye ayrılabilir: yineleyicinin ayarlandığı sırada gerçekleştirilen iş ve her yineleme sırasında gerçekleştirilen iş. Kurulum işi küçük, sabit bir iş miktarı ve her yineleme sırasında yapılan iş, kaynak koleksiyondaki öğelerin sayısıyla orantılıdır.
 
-- In `query1`, the `Where` clause causes the query to call the <xref:System.Linq.Enumerable.Where%2A> method. This method is also implemented as an iterator. The setup work consists of instantiating the delegate that will reference the lambda expression, plus the normal setup for an iterator. With each iteration, the delegate is called to execute the predicate. The setup work and the work done during each iteration is the similar to the work done while iterating through the axis.
+- `query1`, `Where` yan tümcesi sorgunun <xref:System.Linq.Enumerable.Where%2A> yöntemini çağırmasını sağlar. Bu yöntem ayrıca bir yineleyici olarak uygulanır. Kurulum işi, lambda ifadesine başvuracak temsilciyi örnekledikten ve bir yineleyici için normal kuruluma oluşur. Her yinelemeyle, bu temsilci, koşulu yürütmek için çağırılır. Kurulum işi ve her yineleme sırasında yapılan iş, eksen boyunca yineleme sırasında yapılan işe benzer.
 
-- In `query1`, the select clause causes the query to call the <xref:System.Linq.Enumerable.Select%2A> method. This method has the same performance profile as the <xref:System.Linq.Enumerable.Where%2A> method.
+- `query1`, select yan tümcesi sorgunun <xref:System.Linq.Enumerable.Select%2A> metodunu çağırmasını sağlar. Bu yöntemin <xref:System.Linq.Enumerable.Where%2A> yöntemiyle aynı performans profili vardır.
 
-- In `query2`, both the `Where` clause and the `Select` clause have the same performance profile as in `query1`.
+- `query2`, hem `Where` yan tümcesi hem de `Select` yan tümcesi `query1`ile aynı performans profiline sahiptir.
 
- The iteration through `query2` is therefore directly proportional to the number of items in the source of the first query, in other words, linear time.
+ `query2` yoluyla yineleme, diğer bir deyişle, doğrusal zaman içinde ilk sorgunun kaynağındaki öğe sayısıyla doğrudan orantılıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [Performans (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Build a multifile assembly'
+title: 'Nasıl yapılır: çok dosyalı bütünleştirilmiş kod derleme'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -24,18 +24,18 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429560"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>How to: Build a multifile assembly
+# <a name="how-to-build-a-multifile-assembly"></a>Nasıl yapılır: çok dosyalı bütünleştirilmiş kod derleme
 
-This article explains how to create a multifile assembly and provides code that illustrates each step in the procedure.
+Bu makalede, çok dosyalı bir derlemenin nasıl oluşturulacağı ve yordamdaki her adımın gösterildiği kod nasıl kullanılacağı açıklanmaktadır.
 
 > [!NOTE]
-> The Visual Studio IDE for C# and Visual Basic can only be used to create single-file assemblies. If you want to create multifile assemblies, you must use the command-line compilers or Visual Studio with Visual C++. Multifile assemblies are supported by .NET Framework only.
+> Ve Visual Basic için C# VISUAL Studio IDE yalnızca tek dosya derlemeler oluşturmak için kullanılabilir. Çok dosyalı derlemeler oluşturmak istiyorsanız, komut satırı derleyicilerini veya Visual Studio 'Yu Visual C++Studio kullanmanız gerekir. Çok dosyalı derlemeler yalnızca .NET Framework tarafından desteklenir.
 
-## <a name="create-a-multifile-assembly"></a>Create a multifile assembly
+## <a name="create-a-multifile-assembly"></a>Çoklu dosya derlemesi oluşturma
 
-1. Compile all files that contain namespaces referenced by other modules in the assembly into code modules. The default extension for code modules is *.netmodule*.
+1. Derlemedeki diğer modüller tarafından kod modüllerine başvuruda bulunulan ad alanlarını içeren tüm dosyaları derleyin. Kod modülleri için varsayılan uzantı *. netmodule*'dir.
 
-   For example, let's say the `Stringer` file has a namespace called `myStringer`, which includes a class called `Stringer`. The `Stringer` class contains a method called `StringerMethod` that writes a single line to the console.
+   Örneğin, `Stringer` dosyanın `Stringer`adlı bir sınıf içeren `myStringer`adlı bir ad alanına sahip olduğunu varsayalım. `Stringer` sınıfı, konsola tek bir satır yazan `StringerMethod` adlı bir yöntemi içerir.
 
    ```cpp
    // Assembly building example in the .NET Framework.
@@ -81,7 +81,7 @@ This article explains how to create a multifile assembly and provides code that 
    End Namespace
    ```
 
-2. Use the following command to compile this code:
+2. Bu kodu derlemek için aşağıdaki komutu kullanın:
 
    ```cpp
    cl /clr:pure /LN Stringer.cpp
@@ -95,11 +95,11 @@ This article explains how to create a multifile assembly and provides code that 
    vbc /t:module Stringer.vb
    ```
 
-   Specifying the *module* parameter with the **/t:** compiler option indicates that the file should be compiled as a module rather than as an assembly. The compiler produces a module called *Stringer.netmodule*, which can be added to an assembly.
+   **/T:** derleyici seçeneğiyle *Modül* parametresini belirtme, dosyanın derleme yerine bir modül olarak derlenmesi gerektiğini gösterir. Derleyici, bir derlemeye eklenebilecek *strger. netmodule*adlı bir modül oluşturur.
 
-3. Compile all other modules, using the necessary compiler options to indicate the other modules that are referenced in the code. This step uses the **/addmodule** compiler option.
+3. Kodda başvurulan diğer modülleri göstermek için gerekli derleyici seçeneklerini kullanarak diğer tüm modülleri derleyin. Bu adım, **/addmodule** derleyici seçeneğini kullanır.
 
-   In the following example, a code module called *Client* has an entry point `Main` method that references a method in the *Stringer.dll* module created in step 1.
+   Aşağıdaki örnekte, *istemci* adlı bir kod modülünün, 1. adımda oluşturulan *strger. dll* modülündeki bir yönteme başvuran bir giriş noktası `Main` yöntemi vardır.
 
    ```cpp
    #using "Stringer.netmodule"
@@ -154,7 +154,7 @@ This article explains how to create a multifile assembly and provides code that 
    End Class
    ```
 
-4. Use the following command to compile this code:
+4. Bu kodu derlemek için aşağıdaki komutu kullanın:
 
    ```cpp
    cl /clr:pure /FUStringer.netmodule /LN Client.cpp
@@ -168,12 +168,12 @@ This article explains how to create a multifile assembly and provides code that 
    vbc /addmodule:Stringer.netmodule /t:module Client.vb
    ```
 
-   Specify the **/t:module** option because this module will be added to an assembly in a future step. Specify the **/addmodule** option because the code in *Client* references a namespace created by the code in *Stringer.netmodule*. The compiler produces a module called *Client.netmodule* that contains a reference to another module, *Stringer.netmodule*.
+   Bu modül gelecekteki bir adımda bir derlemeye eklenecağından **/t: Module** seçeneğini belirtin. *İstemci* içindeki kod, *strger. netmodule*içindeki kodla oluşturulan bir ad alanına başvurduğundan **/addmodule** seçeneğini belirtin. Derleyici, farklı bir modül olan *strger. netmodule*'e yönelik bir başvuru içeren *Client. netmodule* adlı bir modül üretir.
 
    > [!NOTE]
-   > The C# and Visual Basic compilers support directly creating multifile assemblies using the following two different syntaxes.
+   > C# Ve Visual Basic derleyicileri, aşağıdaki iki farklı sözdizimleri kullanılarak çok dosyalı derlemeler doğrudan oluşturulmasını destekler.
    >
-   > Two compilations create a two-file assembly:
+   > İki derleme iki dosya derleme oluşturur:
    >
    >   ```cpp
    >   cl /clr:pure /LN Stringer.cpp
@@ -190,7 +190,7 @@ This article explains how to create a multifile assembly and provides code that 
    >   vbc Client.vb /addmodule:Stringer.netmodule
    >   ```
    >
-   > One compilation creates a two-file assembly:
+   > Bir derleme iki dosya derleme oluşturur:
    >
    >   ```cpp
    >   cl /clr:pure /LN Stringer.cpp
@@ -205,25 +205,25 @@ This article explains how to create a multifile assembly and provides code that 
    >   vbc /out:Client.exe Client.vb /out:Stringer.netmodule Stringer.vb
    >   ```
 
-5. Use the [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) to create the output file that contains the assembly manifest. This file contains reference information for all modules or resources that are part of the assembly.
+5. Derleme bildirimini içeren çıktı dosyasını oluşturmak için [derleme Bağlayıcısı (al. exe)](../tools/al-exe-assembly-linker.md) kullanın. Bu dosya, derlemenin parçası olan tüm modüller veya kaynaklar için başvuru bilgileri içerir.
 
     Komut satırında, aşağıdaki komutu yazın:
 
-    **al** \<*module name*> \<*module name*> … **/main:** \<*method name*>  **/out:** \<*file name*>  **/target:** \<*assembly file type*>
+    **\<** *modül adı*> \<*Modül adı*>... **/Main:** \<*Yöntem adı*>  **/out:** \<*dosya adı*>  **/target:** \<*derleme dosyası türü*>
 
-    In this command, the *module name* arguments specify the name of each module to include in the assembly. The **/main:** option specifies the method name that is the assembly's entry point. The **/out:** option specifies the name of the output file, which contains assembly metadata. The **/target:** option specifies that the assembly is a console application executable ( *.exe*) file, a Windows executable ( *.win*) file, or a library ( *.lib*) file.
+    Bu komutta, *Modül adı* bağımsız değişkenleri derlemeye dahil edilecek her modülün adını belirtir. **/Main:** seçeneği derlemenin giriş noktası olan yöntem adını belirtir. **/Out:** seçeneği, derleme meta verilerini içeren çıkış dosyasının adını belirtir. **/Target:** seçeneği, derlemenin bir konsol uygulaması yürütülebilir ( *. exe*) dosyası, bir Windows yürütülebilir ( *. Win*) dosyası veya bir kitaplık ( *. lib*) dosyası olduğunu belirtir.
 
-    In the following example, *Al.exe* creates an assembly that is a console application executable called *myAssembly.exe*. The application consists of two modules called *Client.netmodule* and *Stringer.netmodule*, and the executable file called *myAssembly.exe*, which contains only assembly metadata. The entry point of the assembly is the `Main` method in the class `MainClientApp`, which is located in *Client.dll*.
+    Aşağıdaki örnekte, *al. exe* , *MyAssembly. exe*adlı bir konsol uygulaması yürütülebilir dosyası olan bir derleme oluşturur. Uygulama, *istemci. netmodule* ve *strger. netmodule*adlı iki modülden oluşur ve yalnızca derleme meta verilerini içeren *MyAssembly. exe*adlı yürütülebilir dosyadır. Derlemenin giriş noktası, *Client. dll*' de bulunan `MainClientApp`sınıfında `Main` yöntemidir.
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
     ```
 
-    You can use the [MSIL Disassembler (Ildasm.exe)](../tools/ildasm-exe-il-disassembler.md) to examine the contents of an assembly, or determine whether a file is an assembly or a module.
+    Bir derlemenin içeriğini incelemek veya bir dosyanın derleme veya modülle olduğunu anlamak için [MSIL Disassembler (ıldadsm. exe)](../tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Create assemblies](../../standard/assembly/create.md)
-- [How to: View assembly contents](../../standard/assembly/view-contents.md)
-- [How the runtime locates assemblies](../deployment/how-the-runtime-locates-assemblies.md)
-- [Multifile assemblies](multifile-assemblies.md)
+- [Derlemeler oluştur](../../standard/assembly/create.md)
+- [Nasıl yapılır: derleme içeriğini görüntüleme](../../standard/assembly/view-contents.md)
+- [Çalışma zamanının derlemeleri nasıl konumlandırır](../deployment/how-the-runtime-locates-assemblies.md)
+- [Çoklu dosya derlemeleri](multifile-assemblies.md)

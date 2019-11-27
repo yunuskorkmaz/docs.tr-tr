@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431844"
 ---
 # <a name="imetadataemitdefineimporttype-method"></a>IMetaDataEmit::DefineImportType Yöntemi
-Creates a reference to the specified type that is defined outside the current scope, and defines a token for that reference.  
+Geçerli kapsamın dışında tanımlanan belirtilen türe bir başvuru oluşturur ve bu başvuru için bir belirteç tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,37 +41,37 @@ HRESULT DefineImportType (
   
 ## <a name="parameters"></a>Parametreler  
  `pAssemImport`  
- [in] An [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface that represents the assembly from which the target type is imported.  
+ 'ndaki Hedef türün içeri aktarıldığı derlemeyi temsil eden bir [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) arabirimi.  
   
  `pbHashValue`  
- [in] An array that contains the hash for the assembly specified by `pAssemImport`.  
+ 'ndaki `pAssemImport`tarafından belirtilen derlemenin karmasını içeren bir dizi.  
   
  `cbHashValue`  
- [in] The number of bytes in the `pbHashValue` array.  
+ 'ndaki `pbHashValue` dizisindeki bayt sayısı.  
   
  `pImport`  
- [in] An [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface that represents the metadata scope from which the target type is imported.  
+ 'ndaki Hedef türün içeri aktarıldığı meta veri kapsamını temsil eden bir [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) arabirimi.  
   
  `tdImport`  
- [in] An `mdTypeDef` token that specifies the target type.  
+ 'ndaki Hedef türünü belirten `mdTypeDef` belirteci.  
   
  `pAssemEmit`  
- [in] An [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) interface that represents the assembly into which the target type is imported.  
+ 'ndaki Hedef türün içeri aktarıldığı derlemeyi temsil eden bir [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) arabirimi.  
   
  `ptr`  
- [out] The `mdTypeRef` token that is defined in the current scope for the type reference.  
+ dışı Tür başvurusu için geçerli kapsamda tanımlanan `mdTypeRef` belirteci.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Prior to calling the [IMetaDataEmit::DefineImportMember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) method, you can use the `DefineImportType` method to create a type reference, in the current scope, for the member's parent class or parent interface.  
+ [Imetadatayayma::D Efineımportmember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) metodunu çağırmadan önce, üyenin üst sınıfı veya üst arabirimi için geçerli kapsamda bir tür başvurusu oluşturmak için `DefineImportType` yöntemini kullanabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

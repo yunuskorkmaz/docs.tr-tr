@@ -14,10 +14,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353585"
 ---
 # <a name="in-clause-visual-basic"></a>In Tümcesi (Visual Basic)
-Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.  
+Döngü değişkeninin bir `For Each` döngüsünde gezeceği grubu belirtir veya bir `From`, `Join`veya `Group Join` yan tümcesinde Sorgulanacak koleksiyonu belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `In` keyword can be used in the following contexts:  
+ `In` anahtar sözcüğü aşağıdaki bağlamlarda kullanılabilir:  
   
  [For Each...Next Deyimi](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   

@@ -22,18 +22,18 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448354"
 ---
 # <a name="isymunmanagednamespace-interface"></a>ISymUnmanagedNamespace Arabirimi
-Represents a namespace.  
+Bir ad alanını temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetName Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|Gets the name of this namespace.|  
-|[GetNamespaces Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|Gets the children of this namespace.|  
-|[GetVariables Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|Returns all variables defined at global scope within this namespace.|  
+|[GetName Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|Bu ad alanının adını alır.|  
+|[GetNamespaces Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|Bu ad alanının alt öğelerini alır.|  
+|[GetVariables Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|Bu ad alanı içinde genel kapsamda tanımlanan tüm değişkenleri döndürür.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431826"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef Yöntemi
-Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.  
+Geçerli kapsam dışındaki bir modülün üyesine yönelik bir başvuru tanımlar ve bu başvuru tanımına bir belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +39,28 @@ HRESULT DefineMemberRef (
   
 ## <a name="parameters"></a>Parametreler  
  `tkImport`  
- [in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.  
+ 'ndaki Üye genel değilse hedef üyenin sınıfı veya arabirimi için belirteç; üye geneldir ise, bu dosya için `mdModuleRef` belirteç.  
   
  `szName`  
- [in] The name of the target member.  
+ 'ndaki Hedef üyenin adı.  
   
  `pvSigBlob`  
- [in] The signature of the target member.  
+ 'ndaki Hedef üyenin imzası.  
   
  `cbSigBlob`  
- [in] The count of bytes in `pvSigBlob`.  
+ 'ndaki `pvSigBlob`bayt sayısı.  
   
  `pmr`  
- [out] The `mdMemberRef` token assigned.  
+ dışı `mdMemberRef` belirteci atandı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

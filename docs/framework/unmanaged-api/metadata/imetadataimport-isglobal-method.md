@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434722"
 ---
 # <a name="imetadataimportisglobal-method"></a>IMetaDataImport::IsGlobal Yöntemi
-Gets a value indicating whether the field, method, or type represented by the specified metadata token has global scope.  
+Belirtilen meta veri belirteci tarafından temsil edilen alanın, yöntemin veya türün genel kapsama sahip olup olmadığını gösteren bir değer alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT IsGlobal (
   
 ## <a name="parameters"></a>Parametreler  
  `pd`  
- [in] A metadata token that represents a type, field, or method.  
+ 'ndaki Bir türü, alanı veya yöntemi temsil eden bir meta veri belirteci.  
   
  `pbGlobal`  
- [out] 1 if the object has global scope; otherwise, 0 (zero).  
+ [out] nesnenin genel kapsamı varsa 1; Aksi takdirde, 0 (sıfır).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,61 +9,61 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351913"
 ---
-# <a name="serialization-visual-basic"></a>Serialization (Visual Basic)
-Serialization is the process of converting an object into a stream of bytes in order to store the object or transmit it to memory, a database, or a file. Its main purpose is to save the state of an object in order to be able to recreate it when needed. The reverse process is called deserialization.  
+# <a name="serialization-visual-basic"></a>Serileştirme (Visual Basic)
+Serileştirme, nesneyi depolamak veya belleğe, veritabanına veya bir dosyaya aktarmak için bir nesneyi bayt akışına dönüştürme işlemidir. Temel amacı, bir nesnenin durumunu gerektiğinde yeniden oluşturmak için kaydetmeyecektir. Ters işlem serisini kaldırma olarak adlandırılır.  
   
-## <a name="how-serialization-works"></a>How Serialization Works  
- This illustration shows the overall process of serialization.  
+## <a name="how-serialization-works"></a>Serileştirme çalışma şekli  
+ Bu çizimde serileştirme işleminin genel işlemi gösterilmektedir.  
   
-![Serialization graphic](./media/index/serialization-process.gif)
+![Serileştirme grafiği](./media/index/serialization-process.gif)
   
- The object is serialized to a stream, which carries not just the data, but information about the object's type, such as its version, culture, and assembly name. From that stream, it can be stored in a database, a file, or memory.  
+ Nesne yalnızca verileri değil bir akışa serileştirilir, ancak nesnenin sürümü, kültürü ve derleme adı gibi bilgiler hakkında bilgi. Bu akıştan, bir veritabanında, bir dosyada veya bellekte depolanabilir.  
   
-### <a name="uses-for-serialization"></a>Uses for Serialization  
- Serialization allows the developer to save the state of an object and recreate it as needed, providing storage of objects as well as data exchange. Through serialization, a developer can perform actions like sending the object to a remote application by means of a Web Service, passing an object from one domain to another, passing an object through a firewall as an XML string, or maintaining security or user-specific information across applications.  
+### <a name="uses-for-serialization"></a>Serileştirme için kullanımlar  
+ Serileştirme, geliştiricinin bir nesnenin durumunu kaydetmesine ve bu verileri gerektiği gibi yeniden oluşturmasından, Ayrıca nesnelerin depolanmasını ve veri değişimini sağlar. Bir geliştirici, serileştirme aracılığıyla nesneyi bir Web hizmeti aracılığıyla uzak uygulamaya gönderme, bir etki alanından diğerine geçirme, bir nesneyi bir güvenlik duvarı üzerinden bir XML dizesi olarak geçirme veya güvenliği koruma gibi eylemler gerçekleştirebilir. uygulamalar arasında kullanıcıya özgü bilgiler.  
   
-### <a name="making-an-object-serializable"></a>Making an Object Serializable  
- To serialize an object, you need the object to be serialized, a stream to contain the serialized object, and a <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization> contains the classes necessary for serializing and deserializing objects.  
+### <a name="making-an-object-serializable"></a>Bir nesneyi seri hale getirilebilir hale getirme  
+ Bir nesneyi seri hale getirmek için, seri hale getirilecek nesnenin, seri hale getirilen nesneyi içeren bir akışın ve bir <xref:System.Runtime.Serialization.Formatter>olması gerekir. <xref:System.Runtime.Serialization> nesneleri serileştirmek ve seri durumdan çıkarmak için gerekli sınıfları içerir.  
   
- Apply the <xref:System.SerializableAttribute> attribute to a type to indicate that instances of this type can be serialized. A <xref:System.Runtime.Serialization.SerializationException> exception is thrown if you attempt to serialize but the type does not have the <xref:System.SerializableAttribute> attribute.  
+ Bu türün örneklerinin seri hale getirilebilir olduğunu göstermek için <xref:System.SerializableAttribute> özniteliğini bir türe uygulayın. Seri hale getirme girişiminde bulunursa bir <xref:System.Runtime.Serialization.SerializationException> özel durumu oluşturulur ancak türün <xref:System.SerializableAttribute> özniteliği yok.  
   
- If you do not want a field within your class to be serializable, apply the <xref:System.NonSerializedAttribute> attribute. If a field of a serializable type contains a pointer, a handle, or some other data structure that is specific to a particular environment, and the field cannot be meaningfully reconstituted in a different environment, then you may want to make it nonserializable.  
+ Sınıfınızın içindeki bir alanın seri hale getirilebilir olmasını istemiyorsanız <xref:System.NonSerializedAttribute> özniteliğini uygulayın. Seri hale getirilebilir türdeki bir alan belirli bir ortama özel bir işaretçi, tanıtıcı veya başka bir veri yapısı içeriyorsa ve alan farklı bir ortamda anlamlı bir reconstituted değilse, bu durumda seri hale getirilebilir olmayan bir şekilde oluşturulabilir.  
   
- If a serialized class contains references to objects of other classes that are marked <xref:System.SerializableAttribute>, those objects will also be serialized.  
+ Serileştirilmiş bir sınıf, <xref:System.SerializableAttribute>olarak işaretlenen diğer sınıfların nesnelerine başvurular içeriyorsa, bu nesneler de serileştirilir.  
   
-## <a name="binary-and-xml-serialization"></a>Binary and XML Serialization  
- Either binary or XML serialization can be used. In binary serialization, all members, even those that are read-only, are serialized, and performance is enhanced. XML serialization provides more readable code, as well as greater flexibility of object sharing and usage for interoperability purposes.  
+## <a name="binary-and-xml-serialization"></a>İkili ve XML serileştirme  
+ İkili veya XML serileştirme kullanılabilir. İkili serileştirme ' de, salt okunan, hatta tüm Üyeler ve performans geliştirilir. XML serileştirme, nesne paylaşımının ve birlikte çalışabilirlik amacıyla kullanımının daha fazla esnekliğine sahip olmak üzere daha okunabilir kod sağlar.  
   
 ### <a name="binary-serialization"></a>İkili Serileştirme  
- Binary serialization uses binary encoding to produce compact serialization for uses such as storage or socket-based network streams.  
+ İkili serileştirme, depolama veya soket tabanlı ağ akışları gibi kullanımlar için sıkıştırılmış serileştirme oluşturmak üzere ikili kodlama kullanır.  
   
 ### <a name="xml-serialization"></a>XML seri hale getirme  
- XML serialization serializes the public fields and properties of an object, or the parameters and return values of methods, into an XML stream that conforms to a specific XML Schema definition language (XSD) document. XML serialization results in strongly typed classes with public properties and fields that are converted to XML. <xref:System.Xml.Serialization> contains the classes necessary for serializing and deserializing XML.  
+ XML serileştirme, bir nesnenin ortak alanlarını ve özelliklerini veya parametrelerinin parametrelerini ve dönüş değerlerini belirli bir XML şeması tanım dili (XSD) belgesine uygun bir XML akışı olarak serileştirir. XML serileştirme, XML 'e dönüştürülen ortak özellikler ve alanlarla kesin olarak belirlenmiş sınıflarda oluşur. <xref:System.Xml.Serialization>, XML serileştirilmek ve seri durumdan çıkarmak için gerekli sınıfları içerir.  
   
- You can apply attributes to classes and class members in order to control the way the <xref:System.Xml.Serialization.XmlSerializer> serializes or deserializes an instance of the class.  
+ Sınıfın bir örneğini seri hale getirmek veya seri hale getirmek <xref:System.Xml.Serialization.XmlSerializer> denetlemek için sınıflara ve sınıf üyelerine öznitelikler uygulayabilirsiniz.  
   
-## <a name="basic-and-custom-serialization"></a>Basic and Custom Serialization  
- Serialization can be performed in two ways, basic and custom. Basic serialization uses the .NET Framework to automatically serialize the object.  
+## <a name="basic-and-custom-serialization"></a>Temel ve özel serileştirme  
+ Serileştirme, temel ve özel olmak üzere iki şekilde gerçekleştirilebilir. Temel serileştirme, nesneyi otomatik olarak seri hale getirmek için .NET Framework kullanır.  
   
 ### <a name="basic-serialization"></a>Temel Serileştirme  
- The only requirement in basic serialization is that the object has the <xref:System.SerializableAttribute> attribute applied. The <xref:System.NonSerializedAttribute> can be used to keep specific fields from being serialized.  
+ Temel seri hale getirmeyle ilgili tek gereksinim, nesnenin <xref:System.SerializableAttribute> özniteliğin uygulanmış olması olur. <xref:System.NonSerializedAttribute>, belirli alanların serileştirilme tutulmasını sağlamak için kullanılabilir.  
   
- When you use basic serialization, the versioning of objects may create problems, in which case custom serialization may be preferable. Basic serialization is the easiest way to perform serialization, but it does not provide much control over the process.  
+ Temel serileştirme kullandığınızda nesnelerin sürümü oluşturma sorunları oluşturabilir, bu durumda özel serileştirme tercih edilebilir. Temel serileştirme, serileştirme gerçekleştirmenin en kolay yoludur, ancak süreç üzerinde çok fazla denetim sağlamaz.  
   
 ### <a name="custom-serialization"></a>Özel Serileştirme  
- In custom serialization, you can specify exactly which objects will be serialized and how it will be done. The class must be marked <xref:System.SerializableAttribute> and implement the <xref:System.Runtime.Serialization.ISerializable> interface.  
+ Özel seri hale getirmek için, tam olarak hangi nesnelerin serileştirildiği ve nasıl yapılacağını belirtebilirsiniz. Sınıfın <xref:System.SerializableAttribute> işaretlenmesi ve <xref:System.Runtime.Serialization.ISerializable> arabirimini uygulamanız gerekir.  
   
- If you want your object to be deserialized in a custom manner as well, you must use a custom constructor.  
+ Nesnenizin bir özel şekilde seri durumdan çıkarılabilmesini istiyorsanız özel bir Oluşturucu kullanmanız gerekir.  
   
-## <a name="designer-serialization"></a>Designer Serialization  
- Designer serialization is a special form of serialization that involves the kind of object persistence usually associated with development tools. Designer serialization is the process of converting an object graph into a source file that can later be used to recover the object graph. A source file can contain code, markup, or even SQL table information.  
+## <a name="designer-serialization"></a>Tasarımcı serileştirme  
+ Tasarımcı serileştirme, genellikle geliştirme araçlarıyla ilişkili nesne kalıcılığı türünü içeren özel bir serileştirme biçimidir. Tasarımcı serileştirme bir nesne grafiğini, daha sonra nesne grafiğini kurtarmak için kullanılabilecek bir kaynak dosyaya dönüştürme işlemidir. Kaynak dosya, kod, biçimlendirme veya hatta SQL tablo bilgisi içerebilir.  
   
-## <a name="BKMK_RelatedTopics"></a> Related Topics and Examples  
- [Walkthrough: Persisting an Object in Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
- Demonstrates how serialization can be used to persist an object's data between instances, allowing you to store values and retrieve them the next time the object is instantiated.  
+## <a name="BKMK_RelatedTopics"></a>İlgili konular ve örnekler  
+ [İzlenecek yol: Visual Studio 'da bir nesneyi kalıcı hale getirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
+ Serileştirme 'in nesnelerin örnekleri arasında bir nesne verilerini kalıcı hale getirmek için nasıl kullanılabileceğini gösterir. Bu, değerleri depolamanızı ve nesnenin bir sonraki örneklendirilmesi durumunda bunları almanızı sağlar.  
   
- [How to: Read Object Data from an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- Shows how to read object data that was previously written to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.  
+ [Nasıl yapılır: bir XML dosyasından nesne verilerini okuma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+ Daha önce <xref:System.Xml.Serialization.XmlSerializer> sınıfını kullanarak bir XML dosyasına yazılmış nesne verilerinin nasıl okunacağını gösterir.  
   
- [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
- Shows how to write the object from a class to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.
+ [Nasıl yapılır: nesne verilerini bir XML dosyasına yazma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
+ <xref:System.Xml.Serialization.XmlSerializer> sınıfını kullanarak bir sınıftan XML dosyasına nesnenin nasıl yazılacağını gösterir.

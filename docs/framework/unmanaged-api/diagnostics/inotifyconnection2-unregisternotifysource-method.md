@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440990"
 ---
 # <a name="inotifyconnection2unregisternotifysource-method"></a>INotifyConnection2::UnregisterNotifySource Yöntemi
-Removes a specified notification source object from the connection.  
+Belirtilen bir bildirim kaynağı nesnesini bağlantıdan kaldırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,13 +36,13 @@ HRESULT UnregisterNotifySource
   
 ## <a name="parameters"></a>Parametreler  
  `in_pNotifySource`  
- [in] Notification object to be unregistered.  
+ 'ndaki Kayıt kaldırılacak bildirim nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** ProtocolNotify2.idl  
+ **Üst bilgi:** ProtocolNotify2. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

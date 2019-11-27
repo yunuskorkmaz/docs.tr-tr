@@ -22,17 +22,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449090"
 ---
 # <a name="isymunmanageddocumentwriter-interface"></a>ISymUnmanagedDocumentWriter Arabirimi
-Provides methods for writing to a document referenced by a symbol store.  
+Sembol deposu tarafından başvurulan bir belgeye yazmak için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[SetCheckSum Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|Sets checksum information.|  
-|[SetSource Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Sets embedded source for a document that is being written.|  
+|[SetCheckSum Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|Sağlama toplamı bilgilerini ayarlar.|  
+|[SetSource Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Yazılmakta olan bir belge için gömülü kaynağı ayarlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

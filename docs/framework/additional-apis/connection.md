@@ -1,5 +1,5 @@
 ---
-title: Connection Class (System.Net)
+title: Bağlantı sınıfı (System.Net)
 ms.date: 05/01/2017
 ms.technology: dotnet-networking
 topic_type:
@@ -22,7 +22,7 @@ ms.locfileid: "74429353"
 ---
 # <a name="connection-class"></a>Connection Sınıfı
 
-The `Connection` class parses server responses, queue requests, and pipeline requests.
+`Connection` sınıfı sunucu yanıtlarını, kuyruk isteklerini ve işlem hattı isteklerini ayrıştırır.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -31,14 +31,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> The `Connection` class is internal and is not meant to be used directly in your code.
+> `Connection` sınıfı dahili ve doğrudan kodunuzda kullanılmamalıdır.
 > 
-> Microsoft does not support the use of this class in a production application under any circumstance.
+> Microsoft, bu sınıfın herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Net>
+**Ad alanı:** <xref:System.Net>
 
-**Assembly:** System (in System.dll)
+**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
 
-**.NET Framework versions:** Available since 2.0.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

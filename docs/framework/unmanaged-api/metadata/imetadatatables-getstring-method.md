@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426804"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString Metodu
-Gets the string at the specified index from the table column in the current reference scope.  
+Geçerli başvuru kapsamındaki tablo sütunundan belirtilen dizindeki dizeyi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>Parametreler  
  `ixString`  
- [in] The index at which to start to search for the next value.  
+ 'ndaki Sonraki değeri aramaya başlamak için kullanılacak dizin.  
   
  `ppString`  
- [out] A pointer to a pointer to the returned string value.  
+ dışı Döndürülen dize değerine yönelik işaretçiye yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

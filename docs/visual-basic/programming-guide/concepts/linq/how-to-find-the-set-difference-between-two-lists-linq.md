@@ -9,12 +9,12 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344578"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)
-This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Nasıl yapılır: Iki liste arasındaki küme farkını bulma (LINQ) (Visual Basic)
+Bu örnek, iki dize listesini karşılaştırmak ve names1. txt içinde olan ancak names2. txt içinde olmayan satırları çıkarmak için LINQ 'ın nasıl kullanılacağını gösterir.  
   
-### <a name="to-create-the-data-files"></a>To create the data files  
+### <a name="to-create-the-data-files"></a>Veri dosyalarını oluşturmak için  
   
-1. Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
+1. Names1. txt ve names2. txt ' i [nasıl yapılır: birleştirme ve karşılaştırma dize koleksiyonlarını (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)gösterildiği gibi çözüm klasörünüze kopyalayın.  
   
 ## <a name="example"></a>Örnek  
   
@@ -51,11 +51,11 @@ End Class
 ' Garcia, Debra  
 ```  
   
- Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.  
+ Visual Basic <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>ve <xref:System.Linq.Enumerable.Concat%2A>gibi bazı sorgu işlemleri türleri yalnızca Yöntem tabanlı sözdiziminde ifade edilebilir.  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+## <a name="compiling-the-code"></a>Kod Derleme  
+System. Linq ad alanı için `Imports` ifadesiyle bir VB.NET konsol uygulaması projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

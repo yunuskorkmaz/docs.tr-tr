@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350783"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>Bu dizi sabit veya geçici olarak kilitli (Visual Basic)
-This error has the following possible causes:  
+Bu hatanın olası nedenleri şunlardır:  
   
-- Using `ReDim` to change the number of elements of a fixed-size array.  
+- Sabit boyutlu bir dizinin öğelerinin sayısını değiştirmek için `ReDim` kullanma.  
   
-- Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure. If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.  
+- Bir öğe için bağımsız değişken olarak geçirilen bir modül düzeyinde dinamik dizi yeniden boyutlama. Bir öğe geçirilirse, işlem içindeki başvuru parametresi için bellek ayırmayı engellemek üzere dizi kilitlenir.  
   
-- Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.  
+- Bir dizi içeren `Variant` değişkenine değer atamaya çalışılıyor, ancak `Variant` Şu anda kilitli.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.  
+1. `ReDim` (dizi bir yordam içinde bildirilirse) veya öğe sayısını belirtmeden (dizi modül düzeyinde bildirilmişse), özgün diziyi sabit yerine dinamik hale getirin.  
   
-2. Determine whether you really need to pass the element, since it is visible within all procedures in the module.  
+2. Modüldeki tüm yordamlarda görünür olduğundan, gerçekten öğeyi iletmeniz gerekip gerekmediğini belirleme.  
   
-3. Determine what is locking the `Variant` and remedy it.  
+3. `Variant` kilitlemenin ne olduğunu ve sorunu nasıl yaptığını saptayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

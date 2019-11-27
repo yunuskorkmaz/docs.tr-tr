@@ -1,5 +1,5 @@
 ---
-title: 'How to: Retrieve the Value of an Attribute (LINQ to XML)'
+title: 'Nasıl yapılır: bir özniteliğin değerini alma (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 5f4b3790-c83f-4eb3-a889-e3587edf3ca1
 ms.openlocfilehash: 693746c24488029415e68a7c954143a86b7dbb16
@@ -9,11 +9,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352394"
 ---
-# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>How to: Retrieve the Value of an Attribute (LINQ to XML) (Visual Basic)
-This topic shows how to obtain the value of attributes. There are two main ways: You can cast an <xref:System.Xml.Linq.XAttribute> to the desired type; the explicit conversion operator then converts the contents of the element or attribute to the specified type. Alternatively, you can use the <xref:System.Xml.Linq.XAttribute.Value%2A> property. However, casting is generally the better approach. If you cast the attribute to a nullable type, the code is simpler to write when retrieving the value of an attribute that might or might not exist. For examples of this technique, see [How to: Retrieve the Value of an Element (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
+# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>Nasıl yapılır: bir özniteliğin değerini alma (LINQ to XML) (Visual Basic)
+Bu konu, özniteliklerin değerinin nasıl alınacağını gösterir. İki ana yol vardır: <xref:System.Xml.Linq.XAttribute> istenen türe çevirebilirsiniz; Açık dönüştürme işleci daha sonra öğe veya özniteliğin içeriğini belirtilen türe dönüştürür. Alternatif olarak, <xref:System.Xml.Linq.XAttribute.Value%2A> özelliğini de kullanabilirsiniz. Ancak, atama genellikle daha iyi bir yaklaşımdır. Özniteliğini null yapılabilir bir türe çevirebilirsiniz, bu, var olabilen veya varolmayan bir özniteliğin değeri alınırken yazmak daha basittir. Bu tekniğin örnekleri için bkz. [nasıl yapılır: bir öğenin değerini alma (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
   
 ## <a name="example"></a>Örnek  
- In Visual Basic, you can use the integrated attribute property to retrieve the value of an attribute.  
+ Visual Basic, bir özniteliğin değerini almak için tümleşik öznitelik özelliğini kullanabilirsiniz.  
   
 ```vb  
 Dim root As XElement = <Root Attr="abcde"/>  
@@ -22,7 +22,7 @@ Dim str As String = root.@Attr
 Console.WriteLine(str)  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root Attr="abcde" />  
@@ -30,7 +30,7 @@ abcde
 ```  
   
 ## <a name="example"></a>Örnek  
- In Visual Basic, you can use the integrated attribute property to set the value of an attribute. Further, if you use the integrated attribute property to set the value of an attribute that does not exist, the attribute will be created.  
+ Visual Basic, bir özniteliğin değerini ayarlamak için tümleşik öznitelik özelliğini kullanabilirsiniz. Ayrıca, var olmayan bir özniteliğin değerini ayarlamak için tümleşik öznitelik özelliğini kullanırsanız, öznitelik oluşturulur.  
   
 ```vb  
 Dim root As XElement = <Root Att1="content"/>  
@@ -39,14 +39,14 @@ root.@Att2 = "new attribute"
 Console.WriteLine(root)  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root Att1="new content" Att2="new attribute" />  
 ```  
   
 ## <a name="example"></a>Örnek  
- The following example shows how to retrieve the value of an attribute where the attribute is in a namespace. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, özniteliğinin bir ad alanında olduğu bir özniteliğin değerinin nasıl alınacağını gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -60,7 +60,7 @@ Module Module1
 End Module  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```console  
 abcde  
@@ -68,4 +68,4 @@ abcde
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML Axes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435934"
 ---
 # <a name="imetadataemitsavetostream-method"></a>IMetaDataEmit::SaveToStream Yöntemi
-Saves all metadata in the current scope to the specified `IStream`.  
+Geçerli kapsamdaki tüm meta verileri belirtilen `IStream`kaydeder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT SaveToStream (
   
 ## <a name="parameters"></a>Parametreler  
  `pIStream`  
- [in] The writable stream to save to.  
+ 'ndaki Kaydedilecek yazılabilir akış.  
   
  `dwSaveFlags`  
- [in] Reserved. Must be zero.  
+ 'ndaki Ayrılamadı. Sıfır olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

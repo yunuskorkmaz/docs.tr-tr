@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431477"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef Yöntemi
-Resolves a <xref:System.Type> reference represented by the specified TypeRef token.  
+Belirtilen TypeRef belirteci ile temsil edilen bir <xref:System.Type> başvurusunu çözümler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,34 +38,34 @@ HRESULT ResolveTypeRef (
   
 ## <a name="parameters"></a>Parametreler  
  `tr`  
- [in] The TypeRef metadata token to return the referenced type information for.  
+ 'ndaki İçin başvurulan tür bilgilerini döndürecek olan TypeRef meta veri belirteci.  
   
  `riid`  
- [in] The IID of the interface to return in `ppIScope`. Typically, this would be IID_IMetaDataImport.  
+ 'ndaki `ppIScope`döndürülecek arabirimin IID 'si. Genellikle bu IID_IMetaDataImport olacaktır.  
   
  `ppIScope`  
- [out] An interface to the module scope in which the referenced type is defined.  
+ dışı Başvurulan türün tanımlandığı modül kapsamına yönelik arabirim.  
   
  `ptd`  
- [out] A pointer to a TypeDef token that represents the referenced type.  
+ dışı Başvurulan türü temsil eden bir TypeDef belirtecinin işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!IMPORTANT]
-> Do not use this method if multiple application domains are loaded. The method does not respect application domain boundaries. If multiple versions of an assembly are loaded, and they contain the same type with the same namespace, the method returns the module scope of the first type it finds.  
+> Birden çok uygulama etki alanı yüklenmişse bu yöntemi kullanmayın. Yöntem, uygulama etki alanı sınırlarına uymaz. Bir derlemenin birden çok sürümü yüklüyse ve aynı ad alanıyla aynı türü içeriyorsa, yöntemi bulduğu ilk türün modül kapsamını döndürür.  
   
- The `ResolveTypeRef` method searches for the type definition in other modules. If the type definition is found, `ResolveTypeRef` returns an interface to that module scope as well as the TypeDef token for the type.  
+ `ResolveTypeRef` yöntemi, diğer modüllerde tür tanımını arar. Tür tanımı bulunursa `ResolveTypeRef`, bu modül kapsamına bir arabirim ve tür için de TypeDef belirtecini döndürür.  
   
- If the type reference to be resolved has a resolution scope of AssemblyRef, the `ResolveTypeRef` method searches for a match only in the metadata scopes that have already been opened with calls to either the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method or the [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method. This is because `ResolveTypeRef` cannot determine from only the AssemblyRef scope where on disk or in the global assembly cache the assembly is stored.  
+ Çözümlenecek tür başvurusunda AssemblyRef 'nin bir çözüm kapsamı varsa `ResolveTypeRef` yöntemi, yalnızca [ımetadatadağıtıcı:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) yöntemi veya [ımetadatadağıtıcı:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) metoduna yapılan çağrılarla zaten açılmış olan meta veri kapsamlarındaki eşleşmeyi arar. Bunun nedeni `ResolveTypeRef` yalnızca diskte veya derlemenin depolandığı genel derleme önbelleğinde bulunan AssemblyRef kapsamından saptanamıyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

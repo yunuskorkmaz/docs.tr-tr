@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445567"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile Yöntemi
-Enables you to specify or reset the manifest file that the linker uses when it creates the assembly.  
+Bağlayıcının, derlemeyi oluşturduğunda kullandığı bildirim dosyasını belirtmenize veya sıfırlamasına olanak sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,16 +35,16 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>Parametreler  
  `pszFile`  
   
- The name of the manifest file whose contents are put into the Win32 resources blob.  
+ İçeriği Win32 kaynakları blobuna yerleştirilen bildirim dosyasının adı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Call this before asking for the Win32ResBlob. The value of the `pszFile` parameter is the name of the manifest file whose contents are read and put in the Win32 resources with ID of RT_MANIFEST. When called by using a parameter of NULL, any previously read manifest is cleared. This enables one to reset the state of the linker to that of initialization time.  
+ Win32ResBlob sorulmadan önce bunu çağırın. `pszFile` parametresinin değeri, içeriği okunan ve KIMLIĞI RT_MANIFEST olan Win32 kaynaklarına yerleştirilen bildirim dosyasının adıdır. NULL parametresi kullanılarak çağrıldığında, daha önce okuma bildirimi temizlenir. Bu, bir tane, bağlayıcının durumunu başlatma zamanına sıfırlamasına olanak sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires aLink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

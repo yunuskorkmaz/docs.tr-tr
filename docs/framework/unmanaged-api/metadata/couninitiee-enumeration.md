@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436440"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE Numaralandırması
-Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.  
+Ortak dil çalışma zamanı başlatılırken [Counınitialeee](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) tarafından kullanılan sabitleri belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,17 +38,17 @@ typedef enum tagCOUNINITEE
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|Indicates default uninitialization mode.|  
-|`COUNINITEE_DLL`|Indicates uninitialization mode for unloading an assembly.|  
+|`COUNINITEE_DEFAULT`|Varsayılan başlatma modunu gösterir.|  
+|`COUNINITEE_DLL`|Bir derlemeyi kaldırmak için başlatma modunu gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

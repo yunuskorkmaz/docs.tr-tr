@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448129"
 ---
 # <a name="imetadataemitsetcustomattributevalue-method"></a>IMetaDataEmit::SetCustomAttributeValue Yöntemi
-Sets or updates the value of a custom attribute defined by a prior call to [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).  
+[Imetadatayay::D efineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)öğesine yapılan önceki çağrı tarafından tanımlanan özel bir özniteliğin değerini ayarlar veya güncelleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT SetCustomAttributeValue (
   
 ## <a name="parameters"></a>Parametreler  
  `pcv`  
- [in] The token of the target custom attribute.  
+ 'ndaki Hedef özel özniteliğin belirteci.  
   
  `pCustomAttribute`  
- [in] A pointer to the array that contains the custom attribute.  
+ 'ndaki Özel özniteliği içeren dizi için bir işaretçi.  
   
  `cbCustomAttribute`  
- [in] The size, in bytes, of the custom attribute.  
+ 'ndaki Özel özniteliğin bayt cinsinden boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

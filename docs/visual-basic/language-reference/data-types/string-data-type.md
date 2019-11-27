@@ -27,23 +27,23 @@ ms.locfileid: "74343906"
 ---
 # <a name="string-data-type-visual-basic"></a>Dize Veri Türü (Visual Basic)
 
-Holds sequences of unsigned 16-bit (2-byte) code points that range in value from 0 through 65535. Each *code point*, or character code, represents a single Unicode character. A string can contain from 0 to approximately two billion (2 ^ 31) Unicode characters.  
+0 ile 65535 arasında bir değer olarak aralıktaki işaretsiz 16 bit (2 baytlık) kod noktalarının dizilerini barındırır. Her *kod noktası*veya karakter kodu, tek bir Unicode karakteri temsil eder. Dize, 0 ile yaklaşık 2.000.000.000 (2 ^ 31) Unicode karakter içerebilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
 
- Use the `String` data type to hold multiple characters without the array management overhead of `Char()`, an array of `Char` elements.  
+ Dizi yönetim ek yükü olmadan birden çok karakteri tutmak için `String` veri türünü kullanın, bir dizi `Char` öğesi `Char()`.  
   
- The default value of `String` is `Nothing` (a null reference). Note that this is not the same as the empty string (value `""`).  
+ `String` varsayılan değeri `Nothing` (null başvuru). Bunun boş dize (değer `""`) ile aynı olmadığına unutmayın.  
   
-## <a name="unicode-characters"></a>Unicode Characters  
+## <a name="unicode-characters"></a>Unicode karakterler  
 
- The first 128 code points (0–127) of Unicode correspond to the letters and symbols on a standard U.S. keyboard. These first 128 code points are the same as those the ASCII character set defines. The second 128 code points (128–255) represent special characters, such as Latin-based alphabet letters, accents, currency symbols, and fractions. Unicode uses the remaining code points (256-65535) for a wide variety of symbols. This includes worldwide textual characters, diacritics, and mathematical and technical symbols.  
+ Unicode 'un ilk 128 kod noktası (0 – 127), standart bir ABD klavyesinde bulunan harflere ve simgelere karşılık gelir. Bu ilk 128 kod noktası, ASCII karakter kümesi tarafından tanımlananlarla aynıdır. İkinci 128 kod noktaları (128 – 255) Latin tabanlı alfabe harfleri, vurgular, para birimi sembolleri ve kesirler gibi özel karakterleri temsil eder. Unicode, çok çeşitli semboller için kalan kod noktalarını (256-65535) kullanır. Bu, dünya genelindeki metinsel karakter, Aksanlar ve matematik ve teknik sembolleri içerir.  
   
- You can use methods such as <xref:System.Char.IsDigit%2A> and <xref:System.Char.IsPunctuation%2A> on an individual character in a `String` variable to determine its Unicode classification.  
+ <xref:System.Char.IsDigit%2A> ve <xref:System.Char.IsPunctuation%2A> gibi yöntemleri, bir `String` değişkenindeki tek bir karakter üzerinde, Unicode sınıflandırmasını belirleyebilmeniz için kullanabilirsiniz.  
   
-## <a name="format-requirements"></a>Format Requirements  
+## <a name="format-requirements"></a>Biçim gereksinimleri  
 
- You must enclose a `String` literal within quotation marks (`" "`). If you must include a quotation mark as one of the characters in the string, you use two contiguous quotation marks (`""`). Aşağıdaki örnek bunu göstermektedir.  
+ `String` değişmez değerini tırnak işaretleri içine almalısınız (`" "`). Dizedeki karakterlerden biri olarak bir tırnak işareti eklemeniz gerekiyorsa, iki bitişik tırnak işareti (`""`) kullanırsınız. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Dim j As String = "Joe said ""Hello"" to me."  
@@ -55,13 +55,13 @@ MsgBox("Joe said " & """" & h & """" & " to me.")
 MsgBox("Joe said """ & h & """ to me.")  
 ```  
   
- Note that the contiguous quotation marks that represent a quotation mark in the string are independent of the quotation marks that begin and end the `String` literal.  
+ Dizedeki bir tırnak işaretini temsil eden bitişik tırnak işaretlerinin, `String` değişmez değeri başlayıp biten tırnak işaretlerinden bağımsız olduğunu unutmayın.  
   
-## <a name="string-manipulations"></a>String Manipulations  
+## <a name="string-manipulations"></a>Dize Işlemeleri  
 
- Once you assign a string to a `String` variable, that string is *immutable*, which means you cannot change its length or contents. When you alter a string in any way, Visual Basic creates a new string and abandons the previous one. The `String` variable then points to the new string.  
+ Bir `String` değişkenine bir dize atadıktan sonra, bu dize *sabittir*, bu da uzunluğunu veya içeriğini değiştiremeyeceğiniz anlamına gelir. Bir dizeyi dilediğiniz şekilde değiştirdiğinizde, Visual Basic yeni bir dize oluşturur ve öncekini terk ediyor. `String` değişkeni daha sonra yeni dizeyi gösterir.  
   
- You can manipulate the contents of a `String` variable by using a variety of string functions. The following example illustrates the <xref:Microsoft.VisualBasic.Strings.Left%2A> function  
+ Bir `String` değişkeninin içeriğini çeşitli dize işlevleri kullanarak değiştirebilirsiniz. Aşağıdaki örnekte <xref:Microsoft.VisualBasic.Strings.Left%2A> işlevi gösterilmektedir  
   
 ```vb  
 Dim S As String = "Database"  
@@ -69,19 +69,19 @@ Dim S As String = "Database"
 S = Microsoft.VisualBasic.Left(S, 4)  
 ```  
   
- A string created by another component might be padded with leading or trailing spaces. If you receive such a string, you can use the <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, and <xref:Microsoft.VisualBasic.Strings.RTrim%2A> functions to remove these spaces.  
+ Başka bir bileşen tarafından oluşturulan bir dize, başında veya sonunda boşluklarla doldurulmuş olabilir. Böyle bir dize alırsanız, bu alanları kaldırmak için <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>ve <xref:Microsoft.VisualBasic.Strings.RTrim%2A> işlevlerini kullanabilirsiniz.  
   
- For more information about string manipulations, see [Strings](../../../visual-basic/programming-guide/language-features/strings/index.md).  
+ Dize işlemeleri hakkında daha fazla bilgi için bkz. [dizeler](../../../visual-basic/programming-guide/language-features/strings/index.md).  
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
-- **Negative Numbers.** Remember that the characters held by `String` are unsigned and cannot represent negative values. In any case, you should not use `String` to hold numeric values.  
+- **Negatif sayılar.** `String` tarafından tutulan karakterlerin işaretsiz olduğunu ve negatif değerleri temsil ettiğini unutmayın. Herhangi bir durumda, sayısal değerleri tutmak için `String` kullanmamalısınız.  
   
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, remember that string characters have a different data width (8 bits) in other environments. If you are passing a string argument of 8-bit characters to such a component, declare it as `Byte()`, an array of `Byte` elements, instead of `String` in your new Visual Basic code.  
+- **Birlikte çalışma konuları.** Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle arabirimleriniz varsa, diğer ortamlarda dize karakterlerinin farklı bir veri genişliğine (8 bit) sahip olduğunu unutmayın. Bu bileşene 8 bitlik karakterlerin dize bağımsız değişkenini geçirdiğinizden, yeni Visual Basic kodunuzda `String` yerine bir dizi `Byte` öğesi `Byte()`olarak bildirin.  
   
-- **Type Characters.** Appending the identifier type character `$` to any identifier forces it to the `String` data type. `String` has no literal type character. However, the compiler treats literals enclosed in quotation marks (`" "`) as `String`.  
+- **Tür karakterleri.** Tanımlayıcı türü karakter `$` herhangi bir tanımlayıcıya eklemek, `String` veri türüne zorlar. `String` değişmez değer türü karakteri yok. Ancak derleyici, sabit değerleri (`" "`) `String`olarak tırnak işaretleri içinde değerlendirir.  
   
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.String?displayProperty=nameWithType> class.  
+- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.String?displayProperty=nameWithType> sınıfıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

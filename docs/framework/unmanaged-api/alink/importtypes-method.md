@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445683"
 ---
 # <a name="importtypes-method"></a>ImportTypes Yöntemi
-Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).  
+[ImportFile yöntemi](importfile-method.md)aracılığıyla içeri aktarılan her kapsamdan türlerin içeri aktarılmasını başlatır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +39,28 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- ID of the assembly to import to.  
+ İçeri aktarılacak derlemenin KIMLIĞI.  
   
  `FileToken`  
- ID of the file to import from.  
+ İçeri aktarılacak dosyanın KIMLIĞI.  
   
  `dwScope`  
- Zero-based scope to import.  
+ İçeri aktarılacak sıfır tabanlı kapsam.  
   
  `phEnum`  
- Receives enumerator handle for the types in this scope.  
+ Bu kapsamdaki türler için numaralandırıcı tanıtıcısını alır.  
   
  `ppImportScope`  
- Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.  
+ İsteğe bağlı olarak [IMetaDataImport arabirim](../metadata/imetadataimport-interface.md) arabirimini alır.  
   
  `pdwCountOfTypes`  
- Optionally receives count of types in the indicated scope.  
+ İsteğe bağlı olarak, belirtilen kapsamdaki türlerin sayısını alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444260"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA Yapısı
-Contains information about the referenced assembly, including its version and its level of support for locales, processors, and operating systems.  
+Başvurulan derleme hakkında, sürümü ve yerel ayarlar, işlemciler ve işletim sistemleri için destek düzeyi dahil olmak üzere bilgiler içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,29 +41,29 @@ typedef struct {
 } ASSEMBLYMETADATA;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`usMajorVersion`|The major version number of the referenced assembly. This value cannot be zero. If all the bits of `usMajorVersion` are set, the major version is not specified.|  
-|`usMinorVersion`|The minor version number of the referenced assembly. This value cannot be zero. If all the bits of `usMinorVersion` are set, the minor version is not specified.|  
-|`usBuildNumber`|The build number of the referenced assembly. This value cannot be zero. If all the bits of `usBuildNumber` are set, the build number is not specified.|  
-|`usRevisionNumber`|The revision number of the referenced assembly. This value cannot be zero. If all the bits of `usRevisionNumber` are set, the revision number is not specified.|  
-|`szLocale`|A list of locale names conforming to the RFC1766 specification, separated by semicolons, specifying the locales supported by the referenced assembly. A null value indicates locale independence. **Note:**  In the .NET Framework version 1.0 you cannot specify more than one locale.|  
-|`cbLocale`|The size in wide characters of `szLocale`.|  
-|`rdwProcessor`|An array of identifiers, as defined in Winnt.h, for the processor types that are supported by the referenced assembly. A NULL value indicates processor independence.|  
-|`ulProcessor`|The length of the `rdwProcessor` array.|  
-|`rOS`|An array of [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) instances specifying the operating systems that are supported by the referenced assembly. A NULL value indicates operating-system independence.|  
-|`ulOS`|The length of the `rOS` array.|  
+|`usMajorVersion`|Başvurulan derlemenin ana sürüm numarası. Bu değer sıfır olamaz. Tüm `usMajorVersion` bitleri ayarlanırsa, ana sürüm belirtilmez.|  
+|`usMinorVersion`|Başvurulan derlemenin ikincil sürüm numarası. Bu değer sıfır olamaz. Tüm `usMinorVersion` bitleri ayarlandıysa, ikincil sürüm belirtilmez.|  
+|`usBuildNumber`|Başvurulan derlemenin yapı numarası. Bu değer sıfır olamaz. Tüm `usBuildNumber` bitleri ayarlandıysa, derleme numarası belirtilmez.|  
+|`usRevisionNumber`|Başvurulan derlemenin düzeltme numarası. Bu değer sıfır olamaz. Tüm `usRevisionNumber` bitleri ayarlandıysa, düzeltme numarası belirtilmez.|  
+|`szLocale`|RFC1766 belirtimine uyan, başvurulan derleme tarafından desteklenen yerel ayarları belirten, noktalı virgülle ayrılmış yerel ayar adlarının listesi. Null değer yerel ayar bağımsızlığını gösterir. **Note:**  .NET Framework sürüm 1,0 ' de birden fazla yerel ayar belirtemezsiniz.|  
+|`cbLocale`|`szLocale`geniş karakterdeki boyut.|  
+|`rdwProcessor`|Başvurulan derleme tarafından desteklenen işlemci türleri için Winnt. h içinde tanımlanan bir dizi tanımlayıcıdır. NULL değer işlemci bağımsızlığını gösterir.|  
+|`ulProcessor`|`rdwProcessor` dizisinin uzunluğu.|  
+|`rOS`|Başvurulan derleme tarafından desteklenen işletim sistemlerini belirten bir [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) örnekleri dizisi. NULL değer, işletim sistemi bağımsızlığını gösterir.|  
+|`ulOS`|`rOS` dizisinin uzunluğu.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

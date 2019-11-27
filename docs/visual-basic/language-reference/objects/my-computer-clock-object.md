@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344089"
 ---
 # <a name="mycomputerclock-object"></a>My.Computer.Clock Nesnesi
-Provides properties for accessing the current local time and Universal Coordinated Time (equivalent to Greenwich Mean Time) from the system clock.  
+Geçerli yerel saate ve Evrensel Eşgüdümlü saate (Greenwich Ortalama Saati ile eşdeğer) sistem saatinden erişilmesine yönelik özellikler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For information about the methods and properties of the `My.Computer.Clock` object, see <xref:Microsoft.VisualBasic.Devices.Clock>.  
+ `My.Computer.Clock` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Clock>.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+ **Ad alanı:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Clock>  
+ **Sınıf:** <xref:Microsoft.VisualBasic.Devices.Clock>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

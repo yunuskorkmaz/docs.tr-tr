@@ -12,8 +12,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352238"
 ---
-# <a name="returns-visual-basic"></a>\<returns> (Visual Basic)
-Specifies the return value of the property or function.  
+# <a name="returns-visual-basic"></a>\<> döndürür (Visual Basic)
+Özelliğin veya işlevin dönüş değerini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,15 +23,15 @@ Specifies the return value of the property or function.
   
 ## <a name="parameters"></a>Parametreler  
  `description`  
- A description of the return value.  
+ Dönüş değerinin açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Use the `<returns>` tag in the comment for a method declaration to describe the return value.  
+ Dönüş değerini anlatmak için bir yöntem bildirimi açıklamasında `<returns>` etiketini kullanın.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `<returns>` tag to explain what the `DoesRecordExist` function returns.  
+ Bu örnek, `DoesRecordExist` işlevinin döndürdüğü şeyi açıklamak için `<returns>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

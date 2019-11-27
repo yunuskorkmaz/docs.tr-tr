@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431234"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>ISymUnmanagedReader::GetSymbolStoreFileName Yöntemi
-Provides the on-disk file name of the symbol store.  
+Sembol deposunun disk üzerindeki dosya adını sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- [in] The size of the `szName` buffer.  
+ 'ndaki `szName` arabelleğinin boyutu.  
   
  `pcchName`  
- [out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.  
+ dışı Null sonlandırma dahil olmak üzere, `szName`döndürülen adın uzunluğunu alan değişkene yönelik bir işaretçi.  
   
  `szName`  
- [out] A pointer to the variable that receives the file name of the symbol store.  
+ dışı Sembol deposunun dosya adını alan değişkene yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

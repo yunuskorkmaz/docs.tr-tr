@@ -16,61 +16,61 @@ ms.locfileid: "74446790"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Dinamik Yöntemleri ve Derlemeleri Yayma
 
-This section describes a set of managed types in the <xref:System.Reflection.Emit> namespace that allow a compiler or tool to emit metadata and Microsoft intermediate language (MSIL) at run time and optionally generate a portable executable (PE) file on disk. Script engines and compilers are the primary users of this namespace. In this section, the functionality provided by the <xref:System.Reflection.Emit> namespace is referred to as reflection emit.  
+Bu bölümde, bir derleyicinin veya aracın, çalışma zamanında meta verileri ve Microsoft ara dili 'ni (MSIL) yayabilmesini ve isteğe bağlı olarak diskte taşınabilir bir çalıştırılabilir (PE) dosyası oluşturmasını sağlayan <xref:System.Reflection.Emit> ad alanındaki bir yönetilen türler kümesi açıklanmaktadır. Komut dosyası motorları ve derleyiciler, bu ad alanının birincil kullanıcılardır. Bu bölümde, <xref:System.Reflection.Emit> ad alanı tarafından sunulan işlevselliğe yansıma yayma denir.  
   
-Reflection emit provides the following capabilities:  
+Yansıma yayma aşağıdaki özellikleri sağlar:  
   
-- Define lightweight global methods at run time, using the <xref:System.Reflection.Emit.DynamicMethod> class, and execute them using delegates.  
+- Çalışma zamanında hafif Global Yöntemler tanımlayın, <xref:System.Reflection.Emit.DynamicMethod> sınıfını kullanarak bunları temsilciler kullanarak yürütün.  
   
-- Define assemblies at run time and then run them and/or save them to disk.  
+- Çalışma zamanında derlemeleri tanımlayın ve ardından bunları çalıştırın ve/veya diske kaydedin.  
   
-- Define assemblies at run time, run them, and then unload them and allow garbage collection to reclaim their resources.  
+- Çalışma zamanında derlemeleri tanımlayın, çalıştırın ve ardından bunları kaldırın ve çöp toplamanın kaynaklarını geri kazanmak için izin verin.  
   
-- Define modules in new assemblies at run time and then run and/or save them to disk.  
+- Çalışma zamanında yeni derlemelerde modüller tanımlayın ve ardından bunları diske kaydedip/veya diske kaydedin.  
   
-- Define types in modules at run time, create instances of these types, and invoke their methods.  
+- Çalışma zamanında modüllerde türler tanımlayın, bu türlerin örneklerini oluşturun ve yöntemlerini çağırın.  
   
-- Define symbolic information for defined modules that can be used by tools such as debuggers and code profilers.  
+- Hata ayıklayıcıları ve kod profil oluşturucular gibi araçlar tarafından kullanılabilen tanımlı modüller için sembolik bilgiler tanımlayın.  
   
-In addition to the managed types in the <xref:System.Reflection.Emit> namespace, there are unmanaged metadata interfaces which are described in the [Metadata Interfaces](../unmanaged-api/metadata/metadata-interfaces.md) reference documentation. Managed reflection emit provides stronger semantic error checking and a higher level of abstraction of the metadata than the unmanaged metadata interfaces.  
+<xref:System.Reflection.Emit> ad alanındaki yönetilen türlere ek olarak, [meta veri arabirimleri](../unmanaged-api/metadata/metadata-interfaces.md) başvuru belgelerinde açıklanan yönetilmeyen meta veri arabirimleri vardır. Yönetilen yansıma yayma, daha güçlü anlamsal hata denetimi ve meta verilerin yönetilmeyen bir soyutlama düzeyini yönetilmeyen meta veri arabirimlerine göre sağlar.  
   
-Another useful resource for working with metadata and MSIL is the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics" and "Partition III: CIL Instruction Set". The documentation is available online at the [Ecma Web site](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+Meta veriler ve MSIL ile çalışmaya yönelik başka bir faydalı kaynak, yaygın olarak kullanılan dil altyapısı (CLı) belgeleri, özellikle "Bölüm II: meta veri tanımı ve semantiği" ve "Bölüm III: CıL yönerge kümesi". Belgeler, [ecma Web sitesinde](https://www.ecma-international.org/publications/standards/Ecma-335.htm)çevrimiçi olarak sunulmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde
   
-[Security issues in reflection emit](security-issues-in-reflection-emit.md)  
-Describes security issues related to creating dynamic assemblies using reflection emit.  
+[Yansıma Yaymadaki güvenlik sorunları](security-issues-in-reflection-emit.md)  
+Yansıma yayma kullanarak dinamik derlemeler oluşturmayla ilgili güvenlik konularını açıklar.  
 
-[How to: Define and execute dynamic methods](how-to-define-and-execute-dynamic-methods.md)   
-Shows how to execute a simple dynamic method and a dynamic method bound to an instance of a class.
+[Nasıl yapılır: dinamik yöntemleri tanımlama ve yürütme](how-to-define-and-execute-dynamic-methods.md)   
+Basit bir dinamik yöntemin ve bir sınıfın örneğine bağlantılı dinamik yöntemin nasıl yürütüleceğini gösterir.
 
-[How to: Define a generic type with reflection emit](how-to-define-a-generic-type-with-reflection-emit.md)   
-Shows how to create a simple generic type with two type parameters, how to apply class, interface, and special constraints to the type parameters, and how to create members that use the type parameters of the class as parameter types and return types.
+[Nasıl yapılır: yansıma yayma ile genel tür tanımlama](how-to-define-a-generic-type-with-reflection-emit.md)   
+İki tür parametresiyle basit bir genel türün nasıl oluşturulduğunu, tür parametrelerine sınıf, arabirim ve özel kısıtlamaları uygulamayı ve sınıfın tür parametrelerini parametre türleri ve dönüş türleri olarak kullanan üyelerin nasıl oluşturulacağını gösterir.
 
-[How to: Define a generic method with reflection emit](how-to-define-a-generic-method-with-reflection-emit.md)   
-Shows how to create, emit, and invoke a simple generic method.
+[Nasıl yapılır: yansıma yayma ile genel bir yöntem tanımlama](how-to-define-a-generic-method-with-reflection-emit.md)   
+Basit bir genel yöntemin nasıl oluşturulacağını, yayalınacağını ve çağıralınacağını gösterir.
 
-[Collectible assemblies for dynamic type generation](collectible-assemblies.md)   
-Introduces collectible assemblies, which are dynamic assemblies that can be unloaded without unloading the application domain in which they were created.
+[Dinamik tür oluşturma Için toplanabilir derlemeler](collectible-assemblies.md)   
+, Oluşturuldukları uygulama etki alanını kaldırmadan kaldırılabilen dinamik derlemeler olan toplanabilir derlemeleri tanıtır.
   
 ## <a name="reference"></a>Başvuru  
 
 <xref:System.Reflection.Emit.OpCodes>  
-Catalogs the MSIL instruction codes you can use to build method bodies.  
+Yöntem gövdeleri oluşturmak için kullanabileceğiniz MSIL Yönerge kodlarını kataloglandırır.  
   
 <xref:System.Reflection.Emit>  
-Contains managed classes used to emit dynamic methods, assemblies, and types.  
+Dinamik yöntemleri, derlemeleri ve türleri yayma için kullanılan yönetilen sınıfları içerir.  
   
 <xref:System.Type>  
-Describes the <xref:System.Type> class, which represents types in managed reflection and reflection emit, and which is key to the use of these technologies.  
+Yönetilen yansıma ve yansıma yayma türlerini temsil eden ve bu teknolojilerin kullanımına yönelik anahtar olan <xref:System.Type> sınıfını açıklar.  
   
 <xref:System.Reflection>  
-Contains managed classes used to explore metadata and managed code.  
+Meta verileri ve yönetilen kodu araştırmak için kullanılan yönetilen sınıfları içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 
 [Yansıma](reflection.md)  
-Explains how to explore metadata and managed code.  
+Meta verilerin ve yönetilen kodun nasıl araştırılacağını açıklar.  
   
 [.NET’te bütünleştirilmiş kodlar](../../standard/assembly/index.md)  
-Provides an overview of assemblies in .NET implementations.
+.NET uygulamalarında derlemelere genel bakış sağlar.

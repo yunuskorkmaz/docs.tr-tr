@@ -18,11 +18,11 @@ ms.locfileid: "74433610"
 ---
 # <a name="expose-a-server-side-ui-automation-provider"></a>Sunucu Tarafı UI Otomasyon Sağlayıcıyı Gösterme
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic contains example code that shows how to expose a server-side UI Automation provider that is hosted in a <xref:System.Windows.Forms.Control?displayProperty=nameWithType> window.  
+ Bu konu, bir <xref:System.Windows.Forms.Control?displayProperty=nameWithType> penceresinde barındırılan bir sunucu tarafı UI Otomasyon sağlayıcısını açığa çıkarmak için örnek kod içerir.  
   
- The example overrides the window procedure to trap WM_GETOBJECT, which is the message sent by the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core service when a client application requests information about the window.  
+ Örnek, bir istemci uygulaması pencere hakkında bilgi istediğinde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çekirdek hizmeti tarafından gönderilen ileti olan WM_GETOBJECT yakalamak için pencere yordamını geçersiz kılar.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[UIAFragmentProvider_snip#116](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#116)]

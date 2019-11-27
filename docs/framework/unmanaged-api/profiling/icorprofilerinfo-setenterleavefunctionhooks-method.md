@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438652"
 ---
 # <a name="icorprofilerinfosetenterleavefunctionhooks-method"></a>ICorProfilerInfo::SetEnterLeaveFunctionHooks Yöntemi
-Specifies profiler-implemented functions to be called on "enter", "leave", and "tailcall" hooks of managed functions.  
+Yönetilen işlevlerin "Enter", "Leave" ve "cloncall" kancalarında çağrılacak Profil Oluşturucu uygulanmış işlevleri belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,29 +36,29 @@ HRESULT SetEnterLeaveFunctionHooks(
   
 ## <a name="parameters"></a>Parametreler  
  `pFuncEnter`  
- [in] A pointer to the implementation to be used as the [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) callback.  
+ 'ndaki [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) geri çağırması olarak kullanılacak uygulamaya yönelik bir işaretçi.  
   
  `pFuncLeave`  
- [in] A pointer to the implementation to be used as the [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) callback.  
+ 'ndaki [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) geri araması olarak kullanılacak uygulamaya yönelik bir işaretçi.  
   
  `pFuncTailcall`  
- [in] A pointer to the implementation to be used as the [FunctionTailcall](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md) callback.  
+ 'ndaki [Functionsemblycall](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md) geri çağırması olarak kullanılacak uygulamaya yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- In the .NET Framework version 1.0, each function pointer can be null to disable that corresponding callback.  
+ .NET Framework sürüm 1,0 ' de, her işlev işaretçisi ilgili geri çağırma işlemini devre dışı bırakmak için null olabilir.  
   
- Only one set of callbacks can be active at a time. Thus, if a profiler calls both `SetEnterLeaveFunctionHooks` and [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), then `SetEnterLeaveFunctionHooks2` takes precedence.  
+ Tek seferde yalnızca bir geri çağırma kümesi etkin olabilir. Bu nedenle, bir profil oluşturucu hem `SetEnterLeaveFunctionHooks` hem de [ICorProfilerInfo2:: SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)' i çağırırsa `SetEnterLeaveFunctionHooks2` önceliklidir.  
   
- The `SetEnterLeaveFunctionHooks` method can be called only from the profiler's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.  
+ `SetEnterLeaveFunctionHooks` yöntemi yalnızca Profiler 'ın [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) geri çağrısından çağrılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

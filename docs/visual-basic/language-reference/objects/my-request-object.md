@@ -15,15 +15,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350686"
 ---
 # <a name="myrequest-object"></a>My.Request Nesnesi
-Gets the <xref:System.Web.HttpRequest> object for the requested page.  
+İstenen sayfa için <xref:System.Web.HttpRequest> nesnesini alır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `My.Request` object contains information about the current HTTP request.  
+ `My.Request` nesnesi geçerli HTTP isteğiyle ilgili bilgiler içerir.  
   
- The `My.Request` object is available only for ASP.NET applications.  
+ `My.Request` nesnesi yalnızca ASP.NET uygulamaları için kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.  
+ Aşağıdaki örnek, `My.Request` nesnesinden üst bilgi koleksiyonunu alır ve ASP.NET sayfasına yazmak için `My.Response` nesnesini kullanır.  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   

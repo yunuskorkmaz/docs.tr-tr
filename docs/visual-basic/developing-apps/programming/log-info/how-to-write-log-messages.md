@@ -13,19 +13,19 @@ ms.locfileid: "74352062"
 ---
 # <a name="how-to-write-log-messages-visual-basic"></a>Nasıl Yapılır: Günlük İletileri Yazma (Visual Basic)
 
-You can use the `My.Application.Log` and `My.Log` objects to log information about your application. This example shows how to use the `My.Application.Log.WriteEntry` method to log tracing information.
+Uygulamanız hakkındaki bilgileri günlüğe kaydetmek için `My.Application.Log` ve `My.Log` nesnelerini kullanabilirsiniz. Bu örnek, izleme bilgilerini günlüğe kaydetmek için `My.Application.Log.WriteEntry` yönteminin nasıl kullanılacağını gösterir.
 
-For logging exception information, use the `My.Application.Log.WriteException` method; see [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
+Özel durum bilgilerini günlüğe kaydetmek için `My.Application.Log.WriteException` yöntemini kullanın. bkz. [nasıl yapılır: günlük özel durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
 
 ## <a name="example"></a>Örnek
 
-This example uses the `My.Application.Log.WriteEntry` method to write out the trace information.
+Bu örnekte, izleme bilgilerini yazmak için `My.Application.Log.WriteEntry` yöntemi kullanılmaktadır.
 
 [!code-vb[VbVbalrMyApplicationLog#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#11)]
 
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği
 
-Make sure the data you write to the log does not include sensitive information such as user passwords. For more information, see [Working with Application Logs](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
+Günlüğe yazdığınız verilerin kullanıcı parolaları gibi hassas bilgileri içermediğinden emin olun. Daha fazla bilgi için bkz. [Uygulama Günlükleriyle Çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: Fixed Size Buffers - C# Programming Guide
+title: Sabit boyutlu arabellekler- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
@@ -15,7 +15,7 @@ ms.locfileid: "74429404"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Sabit Boyutlu Arabellekler (C# Programlama Kılavuzu)
 
-In C#, you can use the [fixed](../../language-reference/keywords/fixed-statement.md) statement to create a buffer with a fixed size array in a data structure. Fixed size buffers are useful when you write methods that interop with data sources from other languages or platforms. The fixed array can take any attributes or modifiers that are allowed for regular struct members. The only restriction is that the array type must be `bool`, `byte`, `char`, `short`, `int`, `long`, `sbyte`, `ushort`, `uint`, `ulong`, `float`, or `double`.
+İçinde C#, bir veri yapısında sabit boyutlu bir diziye sahip bir arabellek oluşturmak için [fixed](../../language-reference/keywords/fixed-statement.md) ifadesini kullanabilirsiniz. Sabit boyutlu arabellekler, diğer dillerdeki veya platformlardaki veri kaynaklarıyla birlikte bulunan Yöntemler yazdığınızda faydalıdır. Sabit dizi, normal yapı üyeleri için izin verilen herhangi bir özniteliği veya değiştiricilerini alabilir. Tek kısıtlama, dizi türünün `bool`, `byte`, `char`, `short`, `int`, `long`, `sbyte`, `ushort`, `uint`, `ulong`, `float`veya `double`olması gerekir.
 
 ```csharp
 private fixed char name[30];
@@ -23,31 +23,31 @@ private fixed char name[30];
 
 ## <a name="remarks"></a>Açıklamalar
 
-In safe code, a C# struct that contains an array does not contain the array elements. Instead, the struct contains a reference to the elements. You can embed an array of fixed size in a [struct](../../language-reference/keywords/struct.md) when it is used in an [unsafe](../../language-reference/keywords/unsafe.md) code block.
+Güvenli kodda, dizi içeren C# bir struct dizi öğelerini içermez. Bunun yerine, yapı öğelerine bir başvuru içerir. [Güvenli olmayan](../../language-reference/keywords/unsafe.md) bir kod bloğunda kullanıldığında bir [yapıda](../../language-reference/keywords/struct.md) sabit boyutlu bir dizi ekleyebilirsiniz.
 
-The following `struct` is 8 bytes in size. The `pathName` array is a reference:
+Aşağıdaki `struct` boyutu 8 bayttır. `pathName` dizi bir başvurudur:
 
 [!code-csharp[Struct with embedded array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#6)]
 
-A `struct` can contain an embedded array in unsafe code. In the following example, the `fixedBuffer` array has a fixed size. You use a `fixed` statement to establish a pointer to the first element. You access the elements of the array through this pointer. The `fixed` statement pins the `fixedBuffer` instance field to a specific location in memory.
+`struct`, güvenli olmayan kodda gömülü bir dizi içerebilir. Aşağıdaki örnekte, `fixedBuffer` dizisinin sabit bir boyutu vardır. İlk öğe için bir işaretçi oluşturmak üzere bir `fixed` ifadesini kullanın. Bu işaretçi aracılığıyla dizinin öğelerine erişirsiniz. `fixed` ifade `fixedBuffer` örneği alanını bellekte belirli bir konuma sabitsabitler.
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
 
-The size of the 128 element `char` array is 256 bytes. Fixed size [char](../../language-reference/builtin-types/char.md) buffers always take two bytes per character, regardless of the encoding. This is true even when char buffers are marshaled to API methods or structs with `CharSet = CharSet.Auto` or `CharSet = CharSet.Ansi`. Daha fazla bilgi için bkz. <xref:System.Runtime.InteropServices.CharSet>.
+128 öğesi `char` dizi boyutu 256 bayttır. Sabit boyutlu [char](../../language-reference/builtin-types/char.md) arabellekleri, kodlamadan bağımsız olarak her zaman karakter başına iki bayt alır. Bu, karakter arabellekleri API yöntemlerine veya `CharSet = CharSet.Auto` ya da `CharSet = CharSet.Ansi`yapılar halinde Sıralansa bile geçerlidir. Daha fazla bilgi için bkz. <xref:System.Runtime.InteropServices.CharSet>.
 
-The  preceding example demonstrates accessing `fixed` fields without pinning, which is available starting with C# 7.3.
+Yukarıdaki örnekte, 7,3 ile C# başlayarak kullanılabilir olan sabitleme olmadan `fixed` alanlarına erişim gösterilmektedir.
 
-Another common fixed-size array is the [bool](../../language-reference/keywords/bool.md) array. The elements in a `bool` array are always one byte in size. `bool` arrays are not appropriate for creating bit arrays or buffers.
+Diğer bir yaygın sabit boyutlu dizi [bool](../../language-reference/keywords/bool.md) dizidir. Bir `bool` dizisindeki öğeler her zaman boyuttaki bir bayttır. `bool` diziler, bit dizileri veya arabellekleri oluşturmak için uygun değildir.
 
 > [!NOTE]
-> Except for memory created by using [stackalloc](../../language-reference/operators/stackalloc.md), the C# compiler and the common language runtime (CLR) do not perform any security buffer overrun checks. As with all unsafe code, use caution.
+> [Stackalloc](../../language-reference/operators/stackalloc.md)kullanılarak oluşturulan bellek dışında, C# derleyici ve ortak DIL çalışma zamanı (CLR) herhangi bir güvenlik arabelleği taşma denetimi gerçekleştirmez. Tüm güvenli olmayan kodlarda olduğu gibi dikkatli olun.
 
-Unsafe buffers differ from regular arrays in the following ways:
+Güvenli olmayan arabellekler aşağıdaki yollarla normal dizilerden farklıdır:
 
-- You can only use unsafe buffers in an unsafe context.
-- Unsafe buffers are always vectors, or one-dimensional arrays.
-- The declaration of the array should include a count, such as `char id[8]`. You cannot use `char id[]`.
-- Unsafe buffers can only be instance fields of structs in an unsafe context.
+- Güvenli olmayan arabellekleri yalnızca güvenli olmayan bir bağlamda kullanabilirsiniz.
+- Güvenli olmayan arabellekler her zaman vektörlerdir veya tek boyutlu dizilerdir.
+- Dizi bildirimi, `char id[8]`gibi bir sayı içermelidir. `char id[]`kullanamazsınız.
+- Güvenli olmayan arabellekler yalnızca güvenli olmayan bağlamdaki yapıların örnek alanları olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428042"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField Yöntemi
-Defines a single variable that is not within a method. This method is used for certain fields in classes, bit fields, and so on.  
+Bir yöntem içinde olmayan tek bir değişkeni tanımlar. Bu yöntem, sınıflardaki belirli alanlar, bit alanları vb. için kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,37 +42,37 @@ HRESULT DefineField(
   
 ## <a name="parameters"></a>Parametreler  
  `parent`  
- [in] The metadata type or method token.  
+ 'ndaki Meta veri türü veya yöntem belirteci.  
   
  `name`  
- [in] The field name.  
+ 'ndaki Alan adı.  
   
  `attributes`  
- [in] The field attributes.  
+ 'ndaki Alan öznitelikleri.  
   
  `cSig`  
- [in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.  
+ 'ndaki Alan imzasını içermesi için gereken arabelleğin karakter cinsinden boyutu. `ULONG32`  
   
  `signature`  
- [in] The array of field signatures.  
+ 'ndaki Alan imzalarının dizisi.  
   
  `addrKind`  
- [in] The address type.  
+ 'ndaki Adres türü.  
   
  `addr1`  
- [in] The first address for the field specification.  
+ 'ndaki Alan belirtiminin ilk adresi.  
   
  `addr2`  
- [in] The second address for the field specification.  
+ 'ndaki Alan belirtiminin ikinci adresi.  
   
  `addr3`  
- [in] The third address for the field specification.  
+ 'ndaki Alan belirtiminin üçüncü adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

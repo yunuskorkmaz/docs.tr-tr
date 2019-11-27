@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449615"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach Yöntemi
-Instructs the runtime to detach the profiler.  
+Çalışma zamanına profil oluşturucuyu ayırmasını söyler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,35 +34,35 @@ HRESULT RequestProfilerDetach(
   
 ## <a name="parameters"></a>Parametreler  
  `dwExpectedCompletionMilliseconds`  
- [in] The length of time, in milliseconds, the common language runtime (CLR) should wait before checking to see whether it is safe to unload the profiler.  
+ 'ndaki Ortak dil çalışma zamanının (CLR), profil oluşturucunun kaldırılması için güvenli olup olmadığını denetlemeden önce beklemesi gereken süre (milisaniye cinsinden).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
+ Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|The detach request is valid, and the detach procedure is now continuing on another thread. When the detach is fully complete, a `ProfilerDetachSucceeded` event is issued.|  
-|E_ CORPROF_E_CALLBACK3_REQUIRED|The profiler failed an [IUnknown::QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) attempt for the [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) interface, which it must implement to support the detach operation. Detach was not attempted.|  
-|CORPROF_E_IMMUTABLE_FLAGS_SET|Detachment is impossible because the profiler set immutable flags at startup. Detachment was not attempted; the profiler is still fully attached.|  
-|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Detachment is impossible because the profiler used instrumented Microsoft intermediate language (MSIL) code, or inserted `enter`/`leave` hooks. Detachment was not attempted; the profiler is still fully attached.<br /><br /> **Note** Instrumented MSIL is code is code that is provided by the profiler using the [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method.|  
-|CORPROF_E_RUNTIME_UNINITIALIZED|The runtime has not been initialized yet in the managed application. (That is, the runtime has not been fully loaded.) This error code may be returned when detachment is requested inside the profiler callback's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) method.|  
-|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` was called at an unsupported time. This occurs if the method is called on a managed thread but not from within an [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) method or from within an [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) method that cannot tolerate a garbage collection. For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
+|S_OK|Ayırma isteği geçerli ve ayırma yordamı artık başka bir iş parçacığında devam ediyor. Ayırma tam olarak tamamlandığında `ProfilerDetachSucceeded` bir olay verilir.|  
+|E_ CORPROF_E_CALLBACK3_REQUIRED|Profil Oluşturucu, ayırma işlemini desteklemek için uygulanması gereken [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) arabirimi için [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) girişimi başarısız oldu. Ayırma denenmedi.|  
+|CORPROF_E_IMMUTABLE_FLAGS_SET|Profil Oluşturucu başlangıçta sabit bayraklar ayarlandığı için, kesilmesi olanaksızdır. Kesilmesi denenmedi; Profil Oluşturucu hala tam olarak iliştirildi.|  
+|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Profil Oluşturucu, belgelenmiş Microsoft ara dili (MSIL) kodu tarafından kullanılan veya `enter`/`leave` kancaları eklenmiş olduğundan, bu, kesilmesi olanaksızdır. Kesilmesi denenmedi; Profil Oluşturucu hala tam olarak iliştirildi.<br /><br /> **Göz önünde** Belgelenmiş MSIL, [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) yöntemi kullanılarak profil oluşturucu tarafından belirtilen koddur.|  
+|CORPROF_E_RUNTIME_UNINITIALIZED|Çalışma zamanı, yönetilen uygulamada henüz başlatılmadı. (Diğer bir deyişle, çalışma zamanı tam olarak yüklenmemiştir.) Bu hata kodu, profil oluşturucu geri çağrısının [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) yöntemi içinde, bir hastame istendiğinde döndürülebilir.|  
+|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` desteklenmeyen bir zamanda çağrıldı. Bu, yöntemi yönetilen bir iş parçacığında çağrılırsa veya bir [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) yöntemi içinden ya da bir atık toplamaya tolerans yamayan [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) yöntemi içinden çağrıldığında oluşur. Daha fazla bilgi için bkz. [HRESULT corprof_e_unsupported_call_sequence](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- During the detach procedure, the detach thread (the thread created specifically for detaching the profiler) occasionally checks whether all threads have exited the profiler’s code. The profiler should provide an estimate of how long this should take through the `dwExpectedCompletionMilliseconds` parameter. A good value to use is the typical amount of time the profiler spends inside any given `ICorProfilerCallback*` method; this value should not be less than half of the maximum amount of time the profiler expects to spend.  
+ Ayırma yordamı sırasında, ayırma iş parçacığı (profil oluşturucuyu ayırmak için özel olarak oluşturulan iş parçacığı) zaman zaman, tüm iş parçacıklarının profil oluşturucunun kodundan çıkılmadığını denetler. Profil Oluşturucu, bunun `dwExpectedCompletionMilliseconds` parametresinden ne kadar süreceğine ilişkin bir tahmin sağlamalıdır. Kullanım için iyi bir değer, profil oluşturucunun verilen `ICorProfilerCallback*` yöntemi içinde harcadığı tipik zamandır; Bu değer, profil oluşturucunun harcamayı beklediği maksimum sürenin yarısından daha az olmamalıdır.  
   
- The detach thread uses `dwExpectedCompletionMilliseconds` to decide how long to sleep before checking whether profiler callback code has been popped off all stacks. Although the details of the following algorithm may change in future releases of the CLR, it illustrates one way `dwExpectedCompletionMilliseconds` can be used when determining when it is safe to unload the profiler. The detach thread first sleeps for `dwExpectedCompletionMilliseconds` milliseconds. If, after awakening from the sleep, the CLR finds that profiler callback code is still present, the detach thread sleeps again, this time for two times `dwExpectedCompletionMilliseconds` milliseconds. If, after awakening from this second sleep, the detach thread finds that profiler callback code is still present, it sleeps for 10 minutes before checking again. The detach thread continues to recheck every 10 minutes.  
+ Ayırma iş parçacığı, profil oluşturucu geri çağırma kodunun tüm yığınların yapılıp yapılmayacağını kontrol etmeden önce ne kadar uyku moduna geçmeye karar vermek için `dwExpectedCompletionMilliseconds` kullanır. Aşağıdaki algoritmanın ayrıntıları CLR 'nin gelecek sürümlerinde değişebilir, ancak `dwExpectedCompletionMilliseconds` profil oluşturucunun kaldırılması ne zaman güvenli olduğunun belirlenmesi sırasında kullanılabilecek bir yolu gösterir. Ayırma iş parçacığı ilk olarak `dwExpectedCompletionMilliseconds` milisaniyelik için uykuya geçer. Uyandırma başlatıldıktan sonra CLR, profil oluşturucu geri çağırma kodunun hala mevcut olduğunu bulur, bu kez iki kez `dwExpectedCompletionMilliseconds` milisaniyelik. Bu ikinci Uykudan uyandırma sonra, ayırma iş parçacığı profil oluşturucu geri çağırma kodunun hala mevcut olduğunu belirlerse, yeniden denetlemeden önce 10 dakika boyunca uykuya geçer. Ayırma iş parçacığı her 10 dakikada bir yeniden denetlemeye devam eder.  
   
- If the profiler specifies `dwExpectedCompletionMilliseconds` as 0 (zero), the CLR uses a default value of 5000, which means that it will perform a check after 5 seconds, again after 10 seconds, and then every 10 minutes thereafter.  
+ Profil Oluşturucu 0 (sıfır) olarak `dwExpectedCompletionMilliseconds` belirtiyorsa, CLR varsayılan 5000 değerini kullanır. Bu, 5 saniye sonra, 10 saniye sonra yeniden denetim gerçekleştirecek ve sonrasında her 10 dakikada bir kontrol gerçekleştireceği anlamına gelir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446485"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest Yöntemi
-Emits the final manifest. Call this method after importing all other files and setting all options. Do not call this method for unbound modules.  
+Son bildirimi yayar. Diğer tüm dosyaları içeri aktardıktan sonra ve tüm seçenekleri ayarlayarak bu yöntemi çağırın. İlişkisiz modüller için bu yöntemi çağırmayın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT EmitManifest(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- ID of the assembly.  
+ Derlemenin KIMLIĞI.  
   
  `pdwReserveSize`  
- Receives the size to reserve in the assembly file, retrieved from [StrongNameSignatureSize Function](../strong-naming/strongnamesignaturesize-function.md).  
+ [Strongnametabeturesize işlevinden](../strong-naming/strongnamesignaturesize-function.md)alınan derleme dosyasında ayrılacak boyutu alır.  
   
  `ptkManifest`  
- Optionally receives the assembly manifest token.  
+ İsteğe bağlı olarak, derleme bildirimi belirtecini alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h.  
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

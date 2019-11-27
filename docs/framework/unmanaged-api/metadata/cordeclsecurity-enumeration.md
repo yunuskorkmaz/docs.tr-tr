@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443747"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity Numaralandırması
-Specifies the security actions that can be performed using declarative security.  
+Bildirime dayalı güvenlik kullanılarak gerçekleştirilebilecek güvenlik eylemlerini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -58,34 +58,34 @@ typedef enum CorDeclSecurity {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`dclActionMask`|Reserved.|  
-|`dclActionNil`|Reserved.|  
-|`dclRequest`|Reserved.|  
-|`dclDemand`|All callers higher in the call stack are required to have been granted the permission specified by the current permission object.|  
-|`dclAssert`|The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource|  
-|`dclDeny`|The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.|  
-|`dclPermitOnly`|Only the resources specified by this permission object can be accessed, even if the code has been granted permission to access other resources.|  
-|`dclLinktimeCheck`|The immediate caller is required to have been granted the specified permission for a given period of time.|  
-|`dclInheritanceCheck`|The derived class inheriting another class or overriding a method is required to have been granted the specified permission.|  
-|`dclRequestMinimum`|The caller can request for the minimum permissions required for code to run. This action can only be used within the scope of the assembly.|  
-|`dclRequestOptional`|The caller can request for additional permissions that are optional (not required to run). This request implicitly refuses all other permissions not specifically requested. This action can only be used within the scope of the assembly.|  
-|`dclRequestRefuse`|The caller's request for permissions that might be misused will not be granted. This action can only be used within the scope of the assembly.|  
-|`dclPrejitGrant`|Reserved.|  
-|`dclPrejitDenied`|Reserved.|  
-|`dclNonCasDemand`|Reserved.|  
-|`dclNonCasLinkDemand`|The immediate caller is required to have been granted the specified permission.|  
-|`dclNonCasInheritance`|Reserved.|  
-|`dclLinkDemandChoice`|Reserved.|  
-|`dclInheritanceDemandChoice`|Reserved.|  
-|`dclDemandChoice`|Reserved.|  
-|`dclMaximumValue`|Reserved.|  
+|`dclActionMask`|Ayrılamadı.|  
+|`dclActionNil`|Ayrılamadı.|  
+|`dclRequest`|Ayrılamadı.|  
+|`dclDemand`|Çağrı yığınında daha yüksek olan tüm arayanlara geçerli izin nesnesi tarafından belirtilen izin verilmesi gerekir.|  
+|`dclAssert`|Çağıran kod, yığında daha yüksek arayanlara kaynağa erişim izni verilmese bile, geçerli izin nesnesi tarafından tanımlanan kaynağa erişebilir|  
+|`dclDeny`|Geçerli izin nesnesi tarafından belirtilen kaynağa erişme özelliği, bunlara erişim izni verilmiş olsa bile çağıranlara reddedilir.|  
+|`dclPermitOnly`|Koda diğer kaynaklara erişim izni verilse bile, yalnızca bu izin nesnesi tarafından belirtilen kaynaklara erişilebilir.|  
+|`dclLinktimeCheck`|Hemen çağıranın belirli bir süre için belirtilen izin verilmesi gerekir.|  
+|`dclInheritanceCheck`|Başka bir sınıfı devralan veya bir yöntemi geçersiz kılan türetilmiş sınıfın belirtilen izin verilmesi gerekir.|  
+|`dclRequestMinimum`|Çağıran, kodun çalışması için gereken en düşük izinleri isteyebilir. Bu eylem yalnızca derlemenin kapsamı içinde kullanılabilir.|  
+|`dclRequestOptional`|Çağıran, isteğe bağlı (çalışması için gerekli değildir) ek izinler talep edebilir. Bu istek özellikle istenen tüm diğer izinleri örtülü olarak reddeder. Bu eylem yalnızca derlemenin kapsamı içinde kullanılabilir.|  
+|`dclRequestRefuse`|Çağıranın, yanlış bir şekilde kötüye olabilecek izin isteği verilmeyecektir. Bu eylem yalnızca derlemenin kapsamı içinde kullanılabilir.|  
+|`dclPrejitGrant`|Ayrılamadı.|  
+|`dclPrejitDenied`|Ayrılamadı.|  
+|`dclNonCasDemand`|Ayrılamadı.|  
+|`dclNonCasLinkDemand`|Hemen çağıranın belirtilen izin verilmesi gerekir.|  
+|`dclNonCasInheritance`|Ayrılamadı.|  
+|`dclLinkDemandChoice`|Ayrılamadı.|  
+|`dclInheritanceDemandChoice`|Ayrılamadı.|  
+|`dclDemandChoice`|Ayrılamadı.|  
+|`dclMaximumValue`|Ayrılamadı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

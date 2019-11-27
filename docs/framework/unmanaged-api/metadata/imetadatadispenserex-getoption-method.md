@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435997"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption Yöntemi
-Gets the value of the specified option for the current metadata scope. The option controls how calls to the current metadata scope are handled.  
+Geçerli meta veri kapsamı için belirtilen seçeneğin değerini alır. Seçeneği, geçerli meta veri kapsamına yapılan çağrıların işlenme biçimini denetler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,36 +36,36 @@ HRESULT GetOption (
   
 ## <a name="parameters"></a>Parametreler  
  `optionId`  
- [in] A pointer to a GUID that specifies the option to be retrieved. See the Remarks section for a list of supported GUIDs.  
+ 'ndaki Alınacak seçeneği belirten bir GUID işaretçisi. Desteklenen GUID 'lerin listesi için açıklamalar bölümüne bakın.  
   
  `pValue`  
- [out] The value of the returned option. The type of this value will be a variant of the specified option's type.  
+ dışı Döndürülen seçeneğin değeri. Bu değerin türü, belirtilen seçeneğin türünün bir değişkeni olacaktır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The following list shows the GUIDs that are supported for this method. For descriptions, see the [IMetaDataDispenserEx::SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) method. If `optionId` is not in this list, this method returns HRESULT `E_INVALIDARG`, indicating an incorrect parameter.  
+ Aşağıdaki liste, bu yöntem için desteklenen GUID 'Leri gösterir. Açıklamalar için, bkz. [ımetadatadağıtıserex:: SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) yöntemi. `optionId` bu listede yoksa, bu yöntem, yanlış bir parametre belirten HRESULT `E_INVALIDARG`döndürür.  
   
 - MetaDataCheckDuplicatesFor  
   
 - MetaDataRefToDefCheck  
   
-- MetaDataNotificationForTokenMovement  
+- Metadadtanocertificate Ationfortokentaşıması  
   
 - MetaDataSetENC  
   
-- MetaDataErrorIfEmitOutOfOrder  
+- Metadataerrorifemıtoutoforder  
   
-- MetaDataGenerateTCEAdapters  
+- Metadatageneratetcebağdaştırıcıları  
   
-- MetaDataLinkerOptions  
+- Metaveriveri ınkeroptions  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

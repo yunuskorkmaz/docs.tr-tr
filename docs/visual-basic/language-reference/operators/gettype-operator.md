@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349545"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType İşleci (Visual Basic)
-Returns a <xref:System.Type> object for the specified type. The <xref:System.Type> object provides information about the type such as its properties, methods, and events.  
+Belirtilen tür için bir <xref:System.Type> nesnesi döndürür. <xref:System.Type> nesnesi, bu tür hakkında özellikler, Yöntemler ve olaylar gibi bilgiler sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,38 +27,38 @@ GetType(typename)
   
 |Parametre|Açıklama|  
 |---|---|  
-|`typename`|The name of the type for which you desire information.|  
+|`typename`|Bilgilerini istediğiniz türün adı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `GetType` operator returns the <xref:System.Type> object for the specified `typename`. You can pass the name of any defined type in `typename`. Bu, aşağıdakileri içerir:  
+ `GetType` işleci, belirtilen `typename`için <xref:System.Type> nesnesini döndürür. Tanımlı herhangi bir türün adını `typename`geçirebilirsiniz. Buna aşağıdakiler dahildir:  
   
-- Any Visual Basic data type, such as `Boolean` or `Date`.  
+- `Boolean` veya `Date`gibi herhangi bir Visual Basic veri türü.  
   
-- Any .NET Framework class, structure, module, or interface, such as <xref:System.ArgumentException?displayProperty=nameWithType> or <xref:System.Double?displayProperty=nameWithType>.  
+- <xref:System.ArgumentException?displayProperty=nameWithType> veya <xref:System.Double?displayProperty=nameWithType>gibi .NET Framework sınıf, yapı, modül veya arabirim.  
   
-- Any class, structure, module, or interface defined by your application.  
+- Uygulamanız tarafından tanımlanan herhangi bir sınıf, yapı, modül veya arabirim.  
   
-- Any array defined by your application.  
+- Uygulamanız tarafından tanımlanan herhangi bir dizi.  
   
-- Any delegate defined by your application.  
+- Uygulamanız tarafından tanımlanan tüm temsilciler.  
   
-- Any enumeration defined by Visual Basic, the .NET Framework, or your application.  
+- Visual Basic, .NET Framework veya uygulamanız tarafından tanımlanan tüm sabit listesi.  
   
- If you want to get the type object of an object variable, use the <xref:System.Type.GetType%2A?displayProperty=nameWithType> method.  
+ Bir nesne değişkeninin Type nesnesini almak istiyorsanız <xref:System.Type.GetType%2A?displayProperty=nameWithType> yöntemini kullanın.  
   
- The `GetType` operator can be useful in the following circumstances:  
+ `GetType` işleci aşağıdaki koşullarda yararlı olabilir:  
   
-- You must access the metadata for a type at run time. The <xref:System.Type> object supplies metadata such as type members and deployment information. You need this, for example, to reflect over an assembly. Daha fazla bilgi için bkz. <xref:System.Reflection?displayProperty=nameWithType>.  
+- Çalışma zamanında bir türün meta verilerine erişmeniz gerekir. <xref:System.Type> nesnesi, tür üyeleri ve dağıtım bilgileri gibi meta verileri sağlar. Örneğin, bir derlemeyi yansıtmak için bu gereklidir. Daha fazla bilgi için bkz. <xref:System.Reflection?displayProperty=nameWithType>.  
   
-- You want to compare two object references to see if they refer to instances of the same type. If they do, `GetType` returns references to the same <xref:System.Type> object.  
+- Aynı türdeki örneklere başvurduklarında, iki nesne başvurularını karşılaştırmak istiyorsunuz. `GetType`, aynı <xref:System.Type> nesnesine başvuruları döndürür.  
   
 ## <a name="example"></a>Örnek  
- The following examples show the `GetType` operator in use.  
+ Aşağıdaki örneklerde kullanılan `GetType` işleci gösterilmektedir.  
   
  [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

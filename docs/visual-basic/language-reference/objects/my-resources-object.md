@@ -16,64 +16,64 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350334"
 ---
 # <a name="myresources-object"></a>My.Resources Nesnesi
-Provides properties and classes for accessing the application's resources.  
+Uygulamanın kaynaklarına erişmek için özellikler ve sınıflar sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `My.Resources` object provides access to the application's resources and lets you dynamically retrieve resources for your application. For more information, see [Managing Application Resources (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
+ `My.Resources` nesnesi, uygulamanın kaynaklarına erişim sağlar ve uygulamanıza yönelik kaynakları dinamik olarak almanızı sağlar. Daha fazla bilgi için bkz. [uygulama kaynaklarını yönetme (.net)](/visualstudio/ide/managing-application-resources-dotnet).  
   
- The `My.Resources` object exposes only global resources. It does not provide access to resource files associated with forms. You must access the form resources from the form.  
+ `My.Resources` nesnesi yalnızca genel kaynakları kullanıma sunar. Formlarla ilişkili kaynak dosyalarına erişim sağlamaz. Form kaynaklarına formdan erişmeniz gerekir.  
   
- You can access the application's culture-specific resource files from the `My.Resources` object. By default, the `My.Resources` object looks up resources from the resource file that matches the culture in the <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> property. However, you can override this behavior and specify a particular culture to use for the resources. For more information, see [Resources in Desktop Apps](../../../framework/resources/index.md).  
+ Uygulamanın kültüre özgü kaynak dosyalarına `My.Resources` nesnesinden erişebilirsiniz. Varsayılan olarak, `My.Resources` nesnesi kaynak dosyasındaki <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> özelliğindeki kültür ile eşleşen kaynakları arar. Ancak, bu davranışı geçersiz kılabilir ve kaynaklar için kullanmak üzere belirli bir kültür belirtebilirsiniz. Daha fazla bilgi için bkz. [Masaüstü uygulamalarındaki kaynaklar](../../../framework/resources/index.md).  
   
 ## <a name="properties"></a>Özellikler  
- The properties of the `My.Resources` object provide read-only access to your application's resources. To add or remove resources, use the **Project Designer**. You can access resources added through the **Project Designer** by using `My.Resources.`*resourceName*.  
+ `My.Resources` nesnesinin özellikleri, uygulamanızın kaynaklarına salt okuma erişimi sağlar. Kaynak eklemek veya kaldırmak için, **Proje tasarımcısını**kullanın. `My.Resources.`*resourceName*kullanarak **Proje Tasarımcısı** aracılığıyla eklenen kaynaklara erişebilirsiniz.  
   
- You can also add or remove resource files by selecting your project in **Solution Explorer** and clicking **Add New Item** or **Add Existing Item** from the **Project** menu. You can access resources added in this manner by using `My.Resources.`*resourceFileName*`.`*resourceName*.  
+ Ayrıca, **Çözüm Gezgini** ' de projenizi seçip **Yeni öğe Ekle ' ye** tıklayarak veya **Proje** menüsünden **Varolan öğe** Ekle ' yi seçerek kaynak dosyalarını ekleyebilir veya kaldırabilirsiniz. `My.Resources.`*resourceFileName*`.`*resourceName*kullanarak bu şekilde eklenen kaynaklara erişebilirsiniz.  
   
- Each resource has a name, category, and value, and these resource settings determine how the property to access the resource appears in the `My.Resources` object. For resources added in the **Project Designer**:  
+ Her kaynağın bir adı, kategorisi ve değeri vardır ve bu kaynak ayarları, kaynağa erişme özelliğinin `My.Resources` nesnesinde nasıl göründüğünü belirlenir. **Proje Tasarımcısı**'nda eklenen kaynaklar için:  
   
-- The name determines the name of the property,  
+- Ad, özelliğin adını belirler,  
   
-- The resource data is the value of the property,  
+- Kaynak verileri, özelliğinin değeridir,  
   
-- The category determines the type of the property:  
+- Kategori, özelliğin türünü belirler:  
   
-|Kategori|Property data type|  
+|Kategori|Özellik veri türü|  
 |---|---|  
 |**Dizeler**|[Dize](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
 |**Görüntüler**|<xref:System.Drawing.Bitmap>|  
 |**Simgeler**|<xref:System.Drawing.Icon>|  
-|**Ses**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> The <xref:System.IO.UnmanagedMemoryStream> class derives from the <xref:System.IO.Stream> class, so it can be used with methods that take streams, such as the <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> method.|  
-|**Dosyalar**|-   [String](../../../visual-basic/language-reference/data-types/string-data-type.md) for text files.<br />-   <xref:System.Drawing.Bitmap> for image files.<br />-   <xref:System.Drawing.Icon> for icon files.<br />-   <xref:System.IO.UnmanagedMemoryStream> for sound files.|  
-|**Diğer**|Determined by the information in the designer's **Type** column.|  
+|**Ses**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> <xref:System.IO.UnmanagedMemoryStream> sınıfı <xref:System.IO.Stream> sınıfından türetilir, bu nedenle <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> yöntemi gibi akışları alan yöntemlerle kullanılabilir.|  
+|**Dosyalar**|metin dosyaları için -   [dizesi](../../../visual-basic/language-reference/data-types/string-data-type.md) .<br />görüntü dosyaları için <xref:System.Drawing.Bitmap> -   .<br />simge dosyaları için <xref:System.Drawing.Icon> -   .<br />ses dosyaları için <xref:System.IO.UnmanagedMemoryStream> -   .|  
+|**Diğer**|Tasarımcının **tür** sütunundaki bilgiler tarafından belirlenir.|  
   
 ## <a name="classes"></a>Sınıflar  
- The `My.Resources` object exposes each resource file as a class with shared properties. The class name is the same as the name of the resource file. As described in the previous section, the resources in a resource file are exposed as properties in the class.  
+ `My.Resources` nesnesi, her kaynak dosyasını paylaşılan özelliklere sahip bir sınıf olarak kullanıma sunar. Sınıf adı, kaynak dosyasının adıyla aynıdır. Önceki bölümde açıklandığı gibi, bir kaynak dosyasındaki kaynaklar sınıfında Özellikler olarak gösterilir.  
   
 ## <a name="example"></a>Örnek  
- This example sets the title of a form to the string resource named `Form1Title` in the application resource file. For the example to work, the application must have a string named `Form1Title` in its resource file.  
+ Bu örnek, bir formun başlığını uygulama kaynak dosyasında `Form1Title` adlı dize kaynağına ayarlar. Örneğin çalışması için, uygulamanın kaynak dosyasında `Form1Title` adlı bir dize olması gerekir.  
   
  [!code-vb[VbVbalrMyResources#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#1)]  
   
 ## <a name="example"></a>Örnek  
- This example sets the icon of the form to the icon named `Form1Icon` that is stored in the application's resource file. For the example to work, the application must have an icon named `Form1Icon` in its resource file.  
+ Bu örnek, formun simgesini uygulamanın kaynak dosyasında depolanan `Form1Icon` adlı simgeye ayarlar. Örneğin çalışması için, uygulamanın kaynak dosyasında `Form1Icon` adlı bir simgeye sahip olması gerekir.  
   
  [!code-vb[VbVbalrMyResources#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#2)]  
   
 ## <a name="example"></a>Örnek  
- This example sets the background image of a form to the image resource named `Form1Background`, which is in the application resource file. For this example to work, the application must have an image resource named `Form1Background` in its resource file.  
+ Bu örnek, bir formun arka plan görüntüsünü, uygulama kaynak dosyasında bulunan `Form1Background`adlı görüntü kaynağı olarak ayarlar. Bu örneğin çalışması için, uygulamanın kaynak dosyasında `Form1Background` adlı bir görüntü kaynağı olması gerekir.  
   
  [!code-vb[VbVbalrMyResources#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>Örnek  
- This example plays the sound that is stored as an audio resource named `Form1Greeting` in the application's resource file. For the example to work, the application must have an audio resource named `Form1Greeting` in its resource file. The `My.Computer.Audio.Play` method is available only for Windows Forms applications.  
+ Bu örnek, uygulamanın kaynak dosyasında `Form1Greeting` adlı bir ses kaynağı olarak depolanan sesi çalar. Örneğin çalışması için, uygulamanın kaynak dosyasında `Form1Greeting` adlı bir ses kaynağına sahip olması gerekir. `My.Computer.Audio.Play` yöntemi yalnızca Windows Forms uygulamalar için kullanılabilir.  
   
  [!code-vb[VbVbalrMyResources#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#4)]  
   
 ## <a name="example"></a>Örnek  
- This example retrieves the French-culture version of a  string resource of the application. The resource is named `Message`. To change the culture that the `My.Resources` object uses, the example uses <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
+ Bu örnekte, uygulamanın dize kaynağının Fransızca-kültür sürümü alınır. Kaynak `Message`olarak adlandırılır. `My.Resources` nesnesinin kullandığı kültürü değiştirmek için, örnek <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>kullanır.  
   
- For this example to work, the application must have a string named `Message` in its resource file, and the application should have the French-culture version of that resource file, Resources.fr-FR.resx. If the application does not have the French-culture version of the resource file, the `My.Resource` object retrieves the resource from the default-culture resource file.  
+ Bu örneğin çalışması için, uygulamanın kaynak dosyasında `Message` adlı bir dizeye sahip olması ve uygulamanın bu kaynak dosyasının (Resources.fr-FR. resx) Fransızca-kültür sürümüne sahip olması gerekir. Uygulama, kaynak dosyasının Fransızca-kültür sürümüne sahip değilse, `My.Resource` nesnesi kaynağı varsayılan kültür kaynak dosyasından alır.  
   
  [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
   

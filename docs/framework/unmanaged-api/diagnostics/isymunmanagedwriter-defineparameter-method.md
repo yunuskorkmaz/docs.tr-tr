@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428002"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter Yöntemi
-Defines a single parameter in the current method. The parameter type is taken from the parameter's position (sequence) within the method's signature.  
+Geçerli yöntemde tek bir parametre tanımlar. Parametre türü, yöntemin imzasında parametre konumundan (sıra) alınır.  
   
- If parameters are defined in the metadata for a given method, you do not have to define them again by using this method. The symbol readers must check the normal metadata for the parameters before checking the symbol store.  
+ Belirli bir yöntemin meta verilerinde Parametreler tanımlanmışsa, bu yöntemi kullanarak bunları tekrar tanımlamanız gerekmez. Sembol okuyucuları, sembol deposunu denetlemeden önce parametrelerin normal meta verilerini denetmelidir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,31 +42,31 @@ HRESULT DefineParameter(
   
 ## <a name="parameters"></a>Parametreler  
  `name`  
- [in] The parameter name.  
+ 'ndaki Parametre adı.  
   
  `attributes`  
- [in] The parameter attributes.  
+ 'ndaki Parametre öznitelikleri.  
   
  `sequence`  
- [in] The parameter signature.  
+ 'ndaki Parametre imzası.  
   
  `addrKind`  
- [in] The address type.  
+ 'ndaki Adres türü.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ 'ndaki Parametre belirtiminin ilk adresi.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ 'ndaki Parametre belirtiminin ikinci adresi.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ 'ndaki Parametre belirtiminin üçüncü adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

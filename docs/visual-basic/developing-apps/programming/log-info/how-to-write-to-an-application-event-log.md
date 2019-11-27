@@ -16,39 +16,39 @@ ms.locfileid: "74352041"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Nasıl Yapılır: Uygulama Olay Günlüğüne Yazma (Visual Basic)
 
-You can use the `My.Application.Log` and `My.Log` objects to write information about events that occur in your application. This example shows how to configure an event log listener so `My.Application.Log` writes tracing information to the Application event log.
+Uygulamanızda gerçekleşen olaylar hakkında bilgi yazmak için `My.Application.Log` ve `My.Log` nesnelerini kullanabilirsiniz. Bu örnek bir olay günlüğü dinleyicisinin nasıl yapılandırılacağını gösterir. bu nedenle, `My.Application.Log` izleme bilgilerini uygulama olay günlüğüne yazar.
 
-You cannot write to the Security log. In order to write to the System log, you must be a member of the LocalSystem or Administrator account.
+Güvenlik günlüğüne yazılamıyor. Sistem günlüğüne yazmak için LocalSystem veya Administrator hesabının bir üyesi olmanız gerekir.
 
-To view an event log, you can use **Server Explorer** or **Windows Event Viewer**. For more information, see [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).
+Bir olay günlüğünü görüntülemek için **Sunucu Gezgini** veya **Windows Olay Görüntüleyicisi**kullanabilirsiniz. Daha fazla bilgi için [.NET Framework ETW olayları](../../../../framework/performance/etw-events.md)bölümüne bakın.
 
-## <a name="to-add-and-configure-the-event-log-listener"></a>To add and configure the event log listener
+## <a name="to-add-and-configure-the-event-log-listener"></a>Olay günlüğü dinleyicisini eklemek ve yapılandırmak için
 
-1. Right-click app.config in **Solution Explorer** and choose **Open**.
+1. **Çözüm Gezgini** içinde App. config öğesine sağ tıklayın ve **Aç**' ı seçin.
 
-    \- or -
+    \- veya-
 
-    If there is no app.config file,
+    App. config dosyası yoksa,
 
-    1. On the **Project** menu, choose **Add New Item**.
+    1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-    2. From the **Add New Item** dialog box, choose **Application Configuration File**.
+    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası**' nı seçin.
 
     3. **Ekle**'yi tıklatın.
 
-2. Locate the `<listeners>` section in the application configuration file.
+2. Uygulama yapılandırma dosyasında `<listeners>` bölümünü bulun.
 
-    You will find the `<listeners>` section in the `<source>` section with the name attribute "DefaultSource", which is nested under the `<system.diagnostics>` section, which is nested under the top-level `<configuration>` section.
+    En üst düzey `<configuration>` bölümünün altında yer aldığı `<system.diagnostics>` bölümünde iç içe yerleştirilmiş olan "DefaultSource" ad özniteliğiyle birlikte `<source>` bölümünde `<listeners>` bölümünü bulabilirsiniz.
 
-3. Add this element to that `<listeners>` section:
+3. Bu öğeyi bu `<listeners>` bölümüne ekleyin:
 
     ```xml
     <add name="EventLog"/>
     ```
 
-4. Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
+4. Üst düzey `<configuration>` bölümündeki `<system.diagnostics>` bölümünde `<sharedListeners>` bölümünü bulun.
 
-5. Add this element to that `<sharedListeners>` section:
+5. Bu öğeyi bu `<sharedListeners>` bölümüne ekleyin:
 
     ```xml
     <add name="EventLog"
@@ -56,16 +56,16 @@ To view an event log, you can use **Server Explorer** or **Windows Event Viewer*
          initializeData="APPLICATION_NAME"/>
     ```
 
-    Replace `APPLICATION_NAME` with the name of your application.
+    `APPLICATION_NAME` değerini uygulamanızın adıyla değiştirin.
 
     > [!NOTE]
-    > Typically, an application writes only errors to the event log. For information on filtering log output, see [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
+    > Genellikle, bir uygulama olay günlüğüne yalnızca hataları yazar. Günlük çıkışını filtreleme hakkında daha fazla bilgi için bkz. [Izlenecek yol: filtreleme My. Application. log output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
 
-## <a name="to-write-event-information-to-the-event-log"></a>To write event information to the event log
+## <a name="to-write-event-information-to-the-event-log"></a>Olay günlüğüne olay bilgilerini yazmak için
 
-Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the event log. For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
+Olay günlüğüne bilgi yazmak için `My.Application.Log.WriteEntry` veya `My.Application.Log.WriteException` metodunu kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: yazma günlüğü iletileri](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) ve [nasıl yapılır: günlüğe kaydetme özel durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
 
-After you configure the event log listener for an assembly, it receives all messages that `My.Application.Log` writes from that assembly.
+Bir derleme için olay günlüğü dinleyicisini yapılandırdıktan sonra, bu derlemeden yazma `My.Application.Log` tüm iletileri alır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

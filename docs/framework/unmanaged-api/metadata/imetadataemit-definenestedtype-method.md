@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431709"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType Yöntemi
-Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.  
+Bir tür tanımının meta veri imzasını oluşturur, bu tür için bir `mdTypeDef` belirteci döndürür ve tanımlanan türün, `tdEncloser` parametresi tarafından başvurulan türün bir üyesi olduğunu belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,31 +40,31 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>Parametreler  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ 'ndaki Unicode 'daki türün adı.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
+ [in] `TypeDef` öznitelikleri. Bu, `CorTypeAttr` değerlerinin bir bit dır.  
   
  `tkExtends`  
- [in] The token of the base class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
+ 'ndaki Taban sınıfının belirteci. Bu bir `mdTypeDef` ya da `mdTypeRef` belirteci.  
   
  `rtkImplements`[]  
- [in] An array of tokens that specify the interfaces that this class or interface implements.  
+ 'ndaki Bu sınıfın veya arabirimin uyguladığı arabirimleri belirten bir belirteç dizisi.  
   
  `tdEncloser`  
- [in] The token of the enclosing type. The last element of the array must be `mdTokenNil`.  
+ 'ndaki Kapsayan türün belirteci. Dizinin son öğesi `mdTokenNil`olmalıdır.  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ dışı `mdTypeDef` belirteci atandı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

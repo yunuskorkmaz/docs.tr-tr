@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434326"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize Metodu
-Gets the estimated binary size of the assembly and its metadata in the current scope.  
+Derlemenin tahmini ikili boyutunu ve geçerli kapsamdaki meta verilerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,32 +36,32 @@ HRESULT GetSaveSize (
   
 ## <a name="parameters"></a>Parametreler  
  `fSave`  
- [in] A value of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) enumeration that specifies whether to get an accurate or approximate size. Only three values are valid: cssAccurate, cssQuick, and cssDiscardTransientCAs:  
+ 'ndaki Doğru veya yaklaşık bir boyut almak isteyip istemediğinizi belirten [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) numaralandırması değeri. Yalnızca üç değer geçerlidir: cssAccurate, cssQuick ve cssDiscardTransientCAs:  
   
-- cssAccurate returns the exact save size but takes longer to calculate.  
+- cssAccurate, tam kaydetme boyutunu döndürür ancak daha uzun süre içinde hesaplama gerçekleştirir.  
   
-- cssQuick returns a size, padded for safety, but takes less time to calculate.  
+- cssQuick, güvenlik için doldurulmuş bir boyut döndürür, ancak hesaplanması daha az zaman alır.  
   
-- cssDiscardTransientCAs tells `GetSaveSize` that it can throw away discardable custom attributes.  
+- cssDiscardTransientCAs, discardable özel öznitelikleri `GetSaveSize` olduğunu söyler.  
   
  `pdwSaveSize`  
- [out] A pointer to the size that is required to save the file.  
+ dışı Dosyanın kaydedilmesi için gereken boyuta yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetSaveSize` calculates the space required, in bytes, to save the assembly and all its metadata in the current scope. (A call to the [IMetaDataEmit::SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) method would emit this number of bytes.)  
+ `GetSaveSize`, geçerli kapsamdaki derlemeyi ve tüm meta verilerini kaydetmek için gereken alanı bayt cinsinden hesaplar. ( [Imetadatayayma:: SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) metoduna yapılan bir çağrı, bu sayıda bayt yaymalıdır.)  
   
- If the caller implements the [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interface (through [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) or [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` will perform two passes over the metadata to optimize and compress it. Otherwise, no optimizations are performed.  
+ Arayan, [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) arabirimini ( [ımetadatayayma:: SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) veya [ımetadatayayma:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)) uygularsa, `GetSaveSize` iyileştirmek ve sıkıştırmak için meta veriler üzerinde iki geçiş gerçekleştirilir. Aksi takdirde, iyileştirmeler yapılmaz.  
   
- If optimization is performed, the first pass simply sorts the metadata structures to tune the performance of import-time searches. This step typically results in moving records around, with the side effect that tokens retained by the tool for future reference are invalidated. The metadata does not inform the caller of these token changes until after the second pass, however. In the second pass, various optimizations are performed that are intended to reduce the overall size of the metadata, such as optimizing away (early binding) `mdTypeRef` and `mdMemberRef` tokens when the reference is to a type or member that is declared in the current metadata scope. In this pass, another round of token mapping occurs. After this pass, the metadata engine notifies the caller, through its `IMapToken` interface, of any changed token values.  
+ İyileştirme gerçekleştirilirse, ilk geçiş yalnızca meta veri yapılarını sıralar ve içeri aktarma zamanı aramalarının performansını ayarlar. Bu adım genellikle, sonraki başvuru için araç tarafından tutulan belirteçlerin geçersiz kılınmasıyla birlikte kayıtları taşımaya neden olur. Ancak meta veriler, ikinci pass öğesine kadar bu belirteç değişikliklerini çağırana bildirir. İkinci geçişte, en iyi duruma getirme (erken bağlama) `mdTypeRef` ve `mdMemberRef` belirteçleri geçerli meta veri kapsamında bildirilmeyen bir türe veya üyeye olduğunda, verilerin genel boyutunu azaltmaya yönelik çeşitli iyileştirmeler gerçekleştirilir. Bu geçişte, belirteç eşlemesinin başka bir turu oluşur. Bu geçiş sonrasında, meta veri altyapısı, değişen belirteç değerlerinin `IMapToken` arabirimi aracılığıyla çağrıyı yapana bildirir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

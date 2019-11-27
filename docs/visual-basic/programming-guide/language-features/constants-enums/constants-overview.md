@@ -12,39 +12,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74338348"
 ---
 # <a name="constants-overview-visual-basic"></a>Sabitlere Genel Bakış (Visual Basic)
-A constant is a meaningful name that takes the place of a number or string that does not change. Constants store values that, as the name implies, remain the same throughout the execution of an application. You can greatly improve the readability of your code and make it easier to maintain by using constants. Use them in code that contains values that reappear or that depends on certain numbers that are difficult to remember or have no obvious meaning.  
+Sabit, değişmez bir sayının veya dizenin yerini alan anlamlı bir addır. Adın gösterdiği gibi sabitler depolama değerleri, uygulamanın yürütülmesi boyunca aynı kalır. Kodunuzun okunabilirliğini büyük ölçüde geliştirebilirsiniz ve sabitleri kullanarak daha kolay koruma sağlayabilirsiniz. Bunları yeniden görüntülenen veya belirgin bir anlamı olmayan belirli numaralara bağlı olan değerleri içeren kodda kullanın.  
   
-## <a name="how-to-create-and-use-constants"></a>How to Create and Use Constants  
- Visual Basic contains a number of predefined constants, mainly using for printing and displaying. You can also create your own constants with the `Const` statement, using the same guidelines you would for creating a variable name. If `Option Strict` is `On`, you must explicitly declare the constant type.  
+## <a name="how-to-create-and-use-constants"></a>Sabitleri oluşturma ve kullanma  
+ Visual Basic, genellikle yazdırma ve görüntüleme için kullanılan bir dizi önceden tanımlanmış sabitler içerir. Ayrıca, `Const` ifadesiyle kendi sabitlerinizi oluşturarak, bir değişken adı oluşturmak için kullandığınız yönergeleri kullanabilirsiniz. `Option Strict` `On`, sabit türü açıkça bildirmeniz gerekir.  
   
- A constant's scope, which is the set of all code that can refer to it without qualifying its name, is the same as that of a variable declared in the same location. To create a constant that exists within the scope of a particular procedure, declare it inside that procedure. To create a constant that is available throughout an application, declare it using the `Public` keyword in the declarations section of the class.  
+ Bir sabitin, adını nitelemeden kendisine başvurabilen tüm kod kümesi, aynı konumda bildirildiği değişkenle aynı. Belirli bir yordamın kapsamında var olan bir sabit oluşturmak için, bu yordamın içinde bildirin. Bir uygulamanın tamamında kullanılabilir bir sabit oluşturmak için, sınıfının bildirimler bölümündeki `Public` anahtar sözcüğünü kullanarak bildirin.  
   
 > [!NOTE]
-> Although constants somewhat resemble variables, you cannot modify them or assign new values to them as you can to variables.  
+> Sabitler değişkenlere benzer olsa da, değişkenleri değiştiremeyeceğiniz sürece bunları değiştiremez veya yeni değerler atayamazsınız.  
   
- The constants you use in your code can be defined by the object model for controls or components you work with, or they can be user-defined (that is, those you create yourself).  
+ Kodunuzda kullandığınız sabitler, birlikte çalıştığınız denetimler veya bileşenler için nesne modeli tarafından tanımlanabilir veya Kullanıcı tanımlı (diğer bir deyişle, sizin oluşturduğunuz) olabilir.  
   
-## <a name="compile-time-and-run-time-constants"></a>Compile-time and Run-time Constants  
- A compile-time constant is computed at the time the code is compiled, while a run-time constant can only be computed while the application is running. A compile-time constant will have the same value each time an application runs, while a run-time constant may change each time. Compile-time constants are required for cases such as array bounds, case expressions, or enumerator initializers.  
+## <a name="compile-time-and-run-time-constants"></a>Derleme zamanı ve çalışma zamanı sabitleri  
+ Derleme zamanı sabiti, kodun derlenmesi sırasında hesaplanır, ancak bir çalışma zamanı sabiti yalnızca uygulama çalışırken hesaplanabilir. Bir derleme zamanı sabiti her seferinde aynı değere sahip olacaktır, ancak bir çalışma zamanı sabiti her seferinde değişebilir. Dizi sınırları, Case ifadeleri veya Numaralandırıcı başlatıcıları gibi durumlar için derleme zamanı sabitleri gereklidir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Tanım|Terim|  
 |---|---|  
-|[Nasıl yapılır: Bir Sabit Bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Explains how to use the `Const` statement to declare a constant and set its value; by declaring a constant, you assign a meaningful name to the value.|  
-|[Kullanıcı Tanımlı Sabitler](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Describes how to create your own constants, including information on scoping and how to avoid circular references.|  
-|[Sabit ve Değişmez Değerli Veri Türleri](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Provides information on how the Visual Basic compiler initializes constants when `Option Explicit` is turned off.|  
-|[Nasıl yapılır: İlgili Sabit Değerleri Birlikte Gruplandırma](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Demonstrates how to group constant values that are related.|  
+|[Nasıl yapılır: Bir Sabit Bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|`Const` deyimin bir sabiti bildirmek ve değerini ayarlamak için nasıl kullanılacağını açıklar; bir sabiti bildirerek değere anlamlı bir ad atarsınız.|  
+|[Kullanıcı Tanımlı Sabitler](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Kapsam ve dairesel başvuruların nasıl engelleneceği hakkında bilgiler de dahil olmak üzere kendi sabitlerinizi oluşturmayı açıklar.|  
+|[Sabit ve Değişmez Değerli Veri Türleri](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|`Option Explicit` kapalıyken Visual Basic derleyicisinin sabitleri nasıl Başlatan hakkında bilgi sağlar.|  
+|[Nasıl yapılır: İlgili Sabit Değerleri Birlikte Gruplandırma](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|İlgili sabit değerlerin nasıl gruplandırılacağını gösterir.|  
   
 ## <a name="reference"></a>Başvuru  
   
 |Tanım|Terim|  
 |---|---|  
-|[Sabitler ve Sabit Listeleri](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Lists the constants predefined by Visual Basic.|  
-|[Const Deyimi](../../../../visual-basic/language-reference/statements/const-statement.md)|Describes the `Const` statement and its use.|  
-|[Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Describes the `Option Strict` statement and its use.|  
+|[Sabitler ve Sabit Listeleri](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Visual Basic tarafından önceden tanımlanan sabitleri listeler.|  
+|[Const Deyimi](../../../../visual-basic/language-reference/statements/const-statement.md)|`Const` ifadesini ve kullanımını açıklar.|  
+|[Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|`Option Strict` ifadesini ve kullanımını açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sabit Listelerine Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [Nasıl yapılır: Visual Basic dizi değişkenini başlatma](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

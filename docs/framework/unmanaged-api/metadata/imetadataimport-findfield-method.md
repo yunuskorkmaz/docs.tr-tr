@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437944"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField Yöntemi
-Gets a pointer to the FieldDef token for the field that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
+Belirtilen <xref:System.Type> içine alınmış ve belirtilen ad ve meta veri imzasına sahip olan alan için FieldDef belirtecine yönelik bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,35 +39,35 @@ HRESULT FindField (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- [in] The TypeDef token for the class or interface that encloses the field to search for. If this value is `mdTokenNil`, the lookup is done for a global variable.  
+ 'ndaki Aranacak alanı kapsayan sınıf veya arabirim için TypeDef belirteci. Bu değer `mdTokenNil`, genel bir değişken için arama yapılır.  
   
  `szName`  
- [in] The name of the field to search for.  
+ 'ndaki Aranacak alanın adı.  
   
  `pvSigBlob`  
- [in] A pointer to the binary metadata signature of the field.  
+ 'ndaki Alanın ikili meta veri imzasına yönelik bir işaretçi.  
   
  `cbSigBlob`  
- [in] The size in bytes of `pvSigBlob`.  
+ 'ndaki `pvSigBlob`bayt cinsinden boyutu.  
   
  `pmb`  
- [out] A pointer to the matching FieldDef token.  
+ dışı Eşleşen FieldDef belirtecine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- You specify the field using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
+ Alanı kapsayan sınıfını veya arabirimini (`td`), adını (`szName`) ve isteğe bağlı olarak imzasını (`pvSigBlob`) kullanarak belirtirsiniz.  
   
- The signature passed to `FindField` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. (The token is an index into the local TypeDef table). You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindField`.  
+ İmzaların belirli bir kapsama bağlandığı için `FindField` geçirilen imza geçerli kapsamda oluşturulmuş olmalıdır. İmza, kapsayan sınıf veya değer türünü tanımlayan bir belirteç ekleyebilir. (Belirteç yerel TypeDef tablosunun bir dizinidir). Geçerli kapsamın bağlamı dışında bir çalışma zamanı imzası derlenemez ve bu imzayı `FindField`giriş olarak kullanabilirsiniz.  
   
- `FindField` finds only fields that were defined directly in the class or interface; it does not find inherited fields.  
+ `FindField` yalnızca doğrudan sınıfta veya arabirimde tanımlanan alanları bulur; devralınan alanları bulamaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

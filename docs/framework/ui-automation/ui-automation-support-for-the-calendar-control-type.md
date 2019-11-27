@@ -15,72 +15,72 @@ ms.locfileid: "74441134"
 ---
 # <a name="ui-automation-support-for-the-calendar-control-type"></a>Takvim Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the Calendar control type. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property. The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values, control patterns, and [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events.  
+ Bu konu, Takvim denetim türü için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] desteği hakkında bilgi sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], denetim türü, bir denetimin <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> özelliğini kullanmak için karşılaması gereken koşullar kümesidir. Koşullar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısına, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellik değerlerine, denetim desenlerine ve [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olaylara yönelik belirli yönergeleri içerir.  
   
- Calendar controls allow a user to easily determine the date and select other dates.  
+ Takvim denetimleri, bir kullanıcının tarihi kolayca belirlemesine ve diğer tarihleri seçmesine izin verir.  
   
- The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the Calendar control type. The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all calendar controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ Aşağıdaki bölümler, Takvim denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimler, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]veya [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]bakılmaksızın tüm takvim denetimleri için geçerlidir.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## <a name="required-ui-automation-tree-structure"></a>Required UI Automation Tree Structure  
- The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to calendar controls and describes what can be contained in each view. For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](ui-automation-tree-overview.md).  
+## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyonu ağaç yapısı  
+ Aşağıdaki tabloda, takvim denetimleriyle ilgili [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının denetim görünümü ve içerik görünümü gösterilmektedir ve her görünümde nelerin yer aldığı açıklanmaktadır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı hakkında daha fazla bilgi için bkz. [UI Otomasyon ağacına genel bakış](ui-automation-tree-overview.md).  
   
-|Control View|Content View|  
+|Denetim görünümü|İçerik görünümü|  
 |------------------|------------------|  
-|Takvim<br /><br /> <ul><li>DataGrid<br /><br /> <ul><li>Header (0 or 1)</li><li>HeaderItem (0 or 7; quantity depends on how many days are displayed in columns)</li><li>ListItem (quantity depends on how many days are displayed)</li><li>Button (0 or 2; for paging calendar view)</li></ul></li></ul>|Takvim<br /><br /> -   ListItem (quantity depends on how many days are displayed)|  
+|Takvim<br /><br /> <ul><li>DataGrid<br /><br /> <ul><li>Üst bilgi (0 veya 1)</li><li>HeaderItem (0 veya 7; miktar, sütunlarda kaç gün gösterileceğini gösterir)</li><li>ListItem (miktar, kaç gün görüntülenmiş olarak değişir)</li><li>Düğme (0 veya 2; sayfalama takvim görünümü için)</li></ul></li></ul>|Takvim<br /><br /> -ListItem (miktar kaç gün görüntülenirken değişir)|  
   
- Calendar controls can be represented in many different forms within the user interface. The only guaranteed controls to be in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree are the data grid, header, header item, and list item controls.  
+ Takvim denetimleri, Kullanıcı arabirimi içinde birçok farklı biçimde gösterilebilir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının denetim görünümünde olması için tek garanti edilen denetimler, veri kılavuzu, üst bilgi, üstbilgi öğesi ve liste öğesi denetimleridir.  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## <a name="required-ui-automation-properties"></a>Required UI Automation Properties  
- The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to the calendar controls. For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
+## <a name="required-ui-automation-properties"></a>Gerekli UI Otomasyon Özellikleri  
+ Aşağıdaki tabloda, değeri veya tanımı özellikle takvim denetimleriyle ilgili olan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri listelenmektedir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri hakkında daha fazla bilgi için bkz. [istemciler Için UI Otomasyon özellikleri](ui-automation-properties-for-clients.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Property|Değer|Notlar|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliği|Değer|Notlar|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|See notes.|The value of this property needs to be unique across all controls in an application.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|See notes.|The outermost rectangle that contains the whole control.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|See notes.|Supported if there is a bounding rectangle. If not every point within the bounding rectangle is clickable, and you perform specialized hit testing, then override and provide a clickable point.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Takvim|This value is the same for all [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] frameworks.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Doğru|The calendar control is always included in the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Doğru|The calendar control is always included in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|See notes.|If the control can receive keyboard focus, it must support this property.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|See notes.|The label of the document control. Typically, the title of the document is used.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"calendar"|Localized string corresponding to the Calendar control type.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|See notes.|The calendar control typically gets its name from the current day’s date.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Notlara bakın.|Bu özelliğin değerinin bir uygulamadaki tüm denetimlerde benzersiz olması gerekir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Notlara bakın.|Tüm denetimi içeren en dıştaki dikdörtgen.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Notlara bakın.|Sınırlayıcı bir dikdörtgen varsa desteklenir. Sınırlayıcı dikdörtgenin içindeki her nokta tıklatılabilir ise ve özelleştirilmiş isabet testi gerçekleştirirseniz ve ardından tıklatılabilir bir nokta sağlayabilirsiniz.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Takvim|Bu değer tüm [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] çerçeveleri için aynıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Doğru|Takvim denetimi her zaman [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının içerik görünümüne dahil edilmiştir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Doğru|Takvim denetimi her zaman [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının denetim görünümüne dahil edilmiştir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Notlara bakın.|Denetim, klavye odağı alamıyorsa, bu özelliği desteklemesi gerekir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Notlara bakın.|Belge denetiminin etiketi. Genellikle, belgenin başlığı kullanılır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|Takviminizde|Takvim denetim türüne karşılık gelen yerelleştirilmiş dize.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Notlara bakın.|Takvim denetimi genellikle adını geçerli günün tarihinden alır.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## <a name="required-ui-automation-control-patterns"></a>Required UI Automation Control Patterns  
- The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by all calendar controls. For more information on control patterns, see [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
+## <a name="required-ui-automation-control-patterns"></a>Gerekli UI Otomasyonu Denetim desenleri  
+ Aşağıdaki tabloda tüm takvim denetimleri tarafından desteklenmesi gereken [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Denetim desenleri listelenmektedir. Denetim desenleri hakkında daha fazla bilgi için bkz. [UI Otomasyonu Denetim desenlerine genel bakış](ui-automation-control-patterns-overview.md).  
   
-|Control Pattern/Pattern Property|Destek|Notlar|  
+|Denetim deseninin/deseninin özelliği|Destek|Notlar|  
 |---------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|Evet|The calendar control always supports the Grid pattern because the days within a month are items that can be navigated spatially.|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider>|Depends|Most calendar controls support flipping the view by page. The Scroll pattern is recommended in order to support paging navigation.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Depends|Most calendar controls retain a specific day, month, or year as a selection of the sub-element. Some calendars are multi-selectable and others only single-selectable.|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|Evet|The calendar control always has a header within its subtree for the days of the week, so the Table pattern must be supported.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|Hayır|The Value control pattern is not necessary for calendar controls because you cannot set the value directly on the control. If a specific date is associated with the control, the information should be provided by the Selection control pattern.|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|Evet|Takvim denetimi her zaman kılavuz düzenlerini destekler çünkü bir ayın içindeki günler, istenmeyen olarak gezinilebilirler.|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider>|Şekline|Çoğu Takvim denetimi, görünümü sayfaya göre ters çevirme desteğini destekler. Disk belleği gezintisini desteklemek için kaydırma düzeni önerilir.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Şekline|Çoğu Takvim denetimi, alt öğe seçimi olarak belirli bir günü, ayı veya yılı korur. Bazı takvimler çoklu seçilebilir ve diğerleri yalnızca tek seçilebilir.|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|Evet|Takvim denetimi her zaman alt ağacı içinde haftanın günleri için bir üst bilgiye sahiptir, bu nedenle tablo deseninin desteklenmesi gerekir.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|Hayır|Değer denetim deseninin Takvim denetimleri için gerekli değildir çünkü değeri doğrudan denetimde ayarlayamazsınız. Belirli bir tarih denetimle ilişkiliyse, bilgilerin seçim denetim düzeniyle sağlanması gerekir.|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## <a name="required-ui-automation-events"></a>Required UI Automation Events  
- The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all calendar controls. For more information about events, see [UI Automation Events Overview](ui-automation-events-overview.md).  
+## <a name="required-ui-automation-events"></a>Gerekli UI Otomasyon olayları  
+ Aşağıdaki tabloda tüm takvim denetimleri tarafından desteklenmesi gereken [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayları listelenmektedir. Olaylar hakkında daha fazla bilgi için bkz. [UI Otomasyonu olaylarına genel bakış](ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Event|Destek|Notlar|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayı|Destek|Notlar|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.|Gerekli|Yok.|  
+|özellik değişti olayı <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>.|Gerekli|Yok.|  
+|özellik değişti olayı <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>.|Gerekli|Yok.|  
+|özellik değişti olayı <xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>.|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> property-changed event.|Depends|Yok.|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> property-changed event.|Depends|If the control supports the Scroll control pattern, it must support this event.|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> property-changed event.|Depends|If the control supports the Scroll control pattern, it must support this event.|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> property-changed event.|Depends|If the control supports the Scroll control pattern, it must support this event.|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> property-changed event.|Depends|If the control supports the Scroll control pattern, it must support this event.|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> property-changed event.|Depends|If the control supports the Scroll control pattern, it must support this event.|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> property-changed event.|Depends|If the control supports the Scroll control pattern, it must support this event.|  
+|özellik değişti olayı <xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty>.|Şekline|Yok.|  
+|özellik değişti olayı <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>.|Şekline|Denetim, kaydırma denetim modelini destekliyorsa, bu olayı desteklemelidir.|  
+|özellik değişti olayı <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty>.|Şekline|Denetim, kaydırma denetim modelini destekliyorsa, bu olayı desteklemelidir.|  
+|özellik değişti olayı <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty>.|Şekline|Denetim, kaydırma denetim modelini destekliyorsa, bu olayı desteklemelidir.|  
+|özellik değişti olayı <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty>.|Şekline|Denetim, kaydırma denetim modelini destekliyorsa, bu olayı desteklemelidir.|  
+|özellik değişti olayı <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty>.|Şekline|Denetim, kaydırma denetim modelini destekliyorsa, bu olayı desteklemelidir.|  
+|özellik değişti olayı <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty>.|Şekline|Denetim, kaydırma denetim modelini destekliyorsa, bu olayı desteklemelidir.|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Gerekli|Yok.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439146"
 ---
 # <a name="icorprofilerinfogetfunctionfromtoken-method"></a>ICorProfilerInfo::GetFunctionFromToken Metodu
-Gets the ID of a function. This method is obsolete in the .NET Framework version 2.0. Use the [ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) method instead.  
+Bir işlevin KIMLIĞINI alır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor. Bunun yerine [ICorProfilerInfo2:: GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) metodunu kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,16 +35,16 @@ HRESULT GetFunctionFromToken(
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `GetFunctionFromToken` method will not work for generic functions or functions in generic types; it is now obsolete. Use `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` for all functions.  
+ `GetFunctionFromToken` yöntemi genel türlerde genel işlevler veya işlevler için çalışmaz; artık kullanılmıyor. Tüm işlevler için `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework sürümleri:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -12,22 +12,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354135"
 ---
 # <a name="clauses-visual-basic"></a>Tümceler (Visual Basic)
-The topics in this section document Visual Basic run-time clauses.  
+Bu bölüm belgesindeki konular çalışma zamanı yan tümceleri Visual Basic.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
+ [Ek](../../../visual-basic/language-reference/statements/alias-clause.md)  
   
- [As](../../../visual-basic/language-reference/statements/as-clause.md)  
+ [Gerektiği](../../../visual-basic/language-reference/statements/as-clause.md)  
   
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ [İşlendiğini](../../../visual-basic/language-reference/statements/handles-clause.md)  
   
- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)  
+ [Uygular](../../../visual-basic/language-reference/statements/implements-clause.md)  
   
- [In](../../../visual-basic/language-reference/statements/in-clause.md)  
+ ['Ndaki](../../../visual-basic/language-reference/statements/in-clause.md)  
   
- [Into](../../../visual-basic/language-reference/statements/into-clause.md)  
+ [Birleştirin](../../../visual-basic/language-reference/statements/into-clause.md)  
   
- [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
+ [Durumunu](../../../visual-basic/language-reference/statements/of-clause.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Visual Basic Dili Başvurusu](../../../visual-basic/language-reference/index.md)  

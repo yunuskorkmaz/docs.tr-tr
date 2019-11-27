@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430692"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob Metodu
-Retrieves Win32 resource blob. Call this method after setting assembly options.  
+Win32 kaynak blobu alır. Derleme seçeneklerini ayarladıktan sonra bu yöntemi çağırın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +39,28 @@ HRESULT GetWin32ResBlob(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- ID of the assembly.  
+ Derlemenin KIMLIĞI.  
   
  `FileToken`  
- File token used to retrieve the filename to be used when constructing the Win32 Version resource  
+ Win32 sürüm kaynağı oluşturulurken kullanılacak dosya adını almak için kullanılan dosya belirteci  
   
  `fDll`  
- TRUE if file is a DLL, false for an EXE.  
+ Dosya DLL ise TRUE, bir EXE için false.  
   
  `pszIconFile`  
- Optional icon to insert into the resource blob.  
+ Kaynak blobuna eklenecek isteğe bağlı simge.  
   
  `ppResBlob`  
- Receives the resource blob.  
+ Kaynak blobu alır.  
   
  `pcbResBlob`  
- Receives the size of the blob.  
+ Blobun boyutunu alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

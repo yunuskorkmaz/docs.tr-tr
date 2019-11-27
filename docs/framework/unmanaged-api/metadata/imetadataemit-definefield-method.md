@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432550"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField Yöntemi
-Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.  
+Belirtilen meta veri imzasına sahip bir alan için tanım oluşturur ve bu alan tanımına bir belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,40 +43,40 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- [in] The `mdTypeDef` token for the enclosing class or interface.  
+ 'ndaki Kapsayan sınıf veya arabirim için `mdTypeDef` belirteci.  
   
  `szName`  
- [in] The field name in Unicode.  
+ 'ndaki Unicode 'daki alan adı.  
   
  `dwFieldFlags`  
- [in] The field attributes. This is a bitmask of `CorFieldAttr` values.  
+ 'ndaki Alan öznitelikleri. Bu, `CorFieldAttr` değerlerinin bir bit dır.  
   
  `pvSigBlob`  
- [in] The field signature as a BLOB.  
+ 'ndaki BLOB olarak alan imzası.  
   
  `cbSigBlob`  
- [in] The count of bytes in `pvSigBlob`.  
+ 'ndaki `pvSigBlob`bayt sayısı.  
   
  `dwCPlusTypeFlag`  
- [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If not defining a constant value for the field, use `ELEMENT_TYPE_END`.  
+ 'ndaki Sabit değer için `ELEMENT_TYPE_` *\** . Bu bir `CorElementType` değeridir. Alan için sabit bir değer tanımlamadıysanız `ELEMENT_TYPE_END`kullanın.  
   
  `pValue`  
- [in] The constant value for the field.  
+ 'ndaki Alanın sabit değeri.  
   
  `cchValue`  
- [in] The size in (Unicode) characters of `pValue`.  
+ 'ndaki `pValue`(Unicode) karakter boyutu.  
   
  `pmd`  
- [out] The `mdFieldDef` token assigned.  
+ dışı `mdFieldDef` belirteci atandı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

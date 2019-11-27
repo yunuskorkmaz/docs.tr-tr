@@ -12,8 +12,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354317"
 ---
-# <a name="code-visual-basic"></a>\<code> (Visual Basic)
-Indicates that the text is multiple lines of code.  
+# <a name="code-visual-basic"></a>\<kodu > (Visual Basic)
+Metnin birden çok kod satırı olduğunu gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,15 +23,15 @@ Indicates that the text is multiple lines of code.
   
 ## <a name="parameters"></a>Parametreler  
  `content`  
- The text to mark as code.  
+ Kod olarak işaretlemek için metin.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Use the `<code>` tag to indicate multiple lines as code. Use [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) to indicate that text within a description should be marked as code.  
+ Birden çok satırı kod olarak göstermek için `<code>` etiketini kullanın. Bir açıklama içindeki metnin kod olarak işaretlenmesi gerektiğini göstermek için [\<c >](../../../visual-basic/language-reference/xmldoc/c.md) kullanın.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- This example uses the \<code> tag to include example code for using the `ID` field.  
+ Bu örnek, `ID` alanının kullanılmasına ilişkin örnek kodu eklemek için \<Code > etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   

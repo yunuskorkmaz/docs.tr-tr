@@ -22,17 +22,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445485"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 Arabirimi
-Declares methods for registering and unregistering a connection notification source.  
+Bağlantı bildirim kaynağını kaydetme ve kaydını silme yöntemlerini bildirir.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[RegisterNotifySource Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Installs a specified notification source object.|  
-|[UnregisterNotifySource Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Removes a specified notification source object from the connection.|  
+|[RegisterNotifySource Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Belirtilen bir bildirim kaynağı nesnesini yüklüyor.|  
+|[UnregisterNotifySource Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Belirtilen bir bildirim kaynağı nesnesini bağlantıdan kaldırır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** ProtocolNotify2.idl  
+ **Üst bilgi:** ProtocolNotify2. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

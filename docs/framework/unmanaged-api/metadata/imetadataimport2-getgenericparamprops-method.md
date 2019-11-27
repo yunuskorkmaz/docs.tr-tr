@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427302"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps Yöntemi
-Gets the metadata associated with the generic parameter represented by the specified token.  
+Belirtilen belirteç tarafından temsil edilen genel parametreyle ilişkili meta verileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,37 +42,37 @@ HRESULT GetGenericParamProps (
   
 ## <a name="parameters"></a>Parametreler  
  `gp`  
- [in] The token that represents the generic parameter for which to return metadata.  
+ 'ndaki Meta veri döndürülecek genel parametresini temsil eden belirteç.  
   
  `pulParamSeq`  
- [out] The ordinal position of the `Type` parameter in the parent constructor or method.  
+ dışı Üst Oluşturucu veya yöntemde `Type` parametresinin sıra konumu.  
   
  `pdwParamFlags`  
- [out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.  
+ dışı Genel parametre için `Type` tanımlayan [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) numaralandırması değeri.  
   
  `ptOwner`  
- [out] A TypeDef or MethodDef token that represents the owner of the parameter.  
+ dışı Parametrenin sahibini temsil eden bir TypeDef veya MethodDef belirteci.  
   
  `reserved`  
- [out] Reserved for future extensibility.  
+ dışı Gelecekteki genişletilebilirlik için ayrılmıştır.  
   
  `wzName`  
- [out] The name of the generic parameter.  
+ dışı Genel parametrenin adı.  
   
  `cchName`  
- [in] The size of the `wzName` buffer.  
+ 'ndaki `wzName` arabelleğinin boyutu.  
   
  `pchName`  
- [out] The returned size of the name, in wide characters.  
+ dışı Adın, geniş karakter olarak döndürülen boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

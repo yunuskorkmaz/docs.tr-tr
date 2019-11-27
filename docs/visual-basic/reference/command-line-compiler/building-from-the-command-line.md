@@ -22,32 +22,32 @@ ms.locfileid: "74344788"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Komut Satırından Derleme (Visual Basic)
 
-A Visual Basic project is made up of one or more separate source files. During the process known as compilation, these files are brought together into one package—a single executable file that can be run as an application.
+Bir Visual Basic projesi bir veya daha fazla ayrı kaynak dosyadan oluşur. Derleme olarak bilinen işlem sırasında, bu dosyalar tek bir pakette birlikte getirilir; bir uygulama olarak çalıştırılabilen tek bir yürütülebilir dosyadır.
 
-Visual Basic provides a command-line compiler as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE). The command-line compiler is designed for situations in which you do not require the full set of features in the IDE—for example, when you are using or writing for computers with limited system memory or storage space.
+Visual Basic, Visual Studio tümleşik geliştirme ortamı (IDE) içinden program derlemeye alternatif olarak bir komut satırı derleyicisi sağlar. Komut satırı derleyicisi, IDE 'de tam özellik kümesine gerek olmayan (örneğin, sınırlı sistem belleği veya depolama alanı olan bilgisayarlar için kullanırken veya yazarken) gerekli durumlar için tasarlanmıştır.
 
-To compile source files from within the Visual Studio IDE, choose the **Build** command from the **Build** menu.
+Visual Studio IDE içinden kaynak dosyalarını derlemek için, **Derle** menüsünde **Build** komutunu seçin.
 
 > [!TIP]
-> When you build project files by using the Visual Studio IDE, you can display information about the associated **vbc** command and its switches in the output window. To display this information, open the [Options Dialog Box,  Projects and Solutions, Build and Run](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), and then set the **MSBuild project build output verbosity** to **Normal** or a higher level of verbosity. For more information, see [How to: View, Save, and Configure Build Log Files](/visualstudio/ide/how-to-view-save-and-configure-build-log-files).
+> Visual Studio IDE 'yi kullanarak proje dosyaları oluşturduğunuzda, ilişkili **vbc** komutu ve bu dosyanın anahtarları hakkında bilgileri çıkış penceresinde görüntüleyebilirsiniz. Bu bilgileri göstermek için, [Seçenekler Iletişim kutusu, projeler ve çözümler ' i açın ve çalıştırın](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), sonra **MSBuild proje yapı çıkış ayrıntı** düzeyini **normal** veya daha yüksek ayrıntı düzeyi olarak ayarlayın. Daha fazla bilgi için bkz. [nasıl yapılır: yapı günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](/visualstudio/ide/how-to-view-save-and-configure-build-log-files).
 
-You can compile project (.vbproj) files at a command prompt by using MSBuild. For more information, see [Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) and [Walkthrough: Using MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild).
+MSBuild kullanarak, bir komut isteminde proje (. vbproj) dosyalarını derleyebilirsiniz. Daha fazla bilgi için bkz. [komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference) ve [Izlenecek yol: MSBuild kullanma](/visualstudio/msbuild/walkthrough-using-msbuild).
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[How to: Invoke the Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
-Describes how to invoke the command-line compiler at the MS-DOS prompt or from a specific subdirectory.
+[Nasıl yapılır: komut satırı derleyicisini çağırma](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
+Komut satırı derleyicisinin MS-DOS isteminde veya belirli bir alt dizinden nasıl çağırılacağını açıklar.
 
-[Sample Compilation Command Lines](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
-Provides a list of sample command lines that you can modify for your own use.
+[Örnek derleme komut satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
+Kendi kullanımı için değiştirebileceğiniz örnek komut satırlarının bir listesini sağlar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
-[Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md) \
-Provides lists of compiler options, organized alphabetically or by purpose.
+[Komut satırı derleyicisini Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md) \
+Alfabetik olarak veya amacına göre düzenlenmiş derleyici seçeneklerinin listesini sağlar.
 
-[Conditional Compilation](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
-Describes how to compile particular sections of code.
+[Koşullu derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
+Kodun belirli bölümlerinin nasıl derlenebileceğinizi açıklar.
 
-[Building and Cleaning Projects and Solutions in Visual Studio](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \
-Describes how to organize what will be included in different builds, choose project properties, and ensure that projects build in the correct order.
+[Visual Studio \ projeler ve çözümler oluşturma ve Temizleme](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)
+Farklı yapılarda nelerin ekleneceğini nasıl düzenleyebileceğinizi, proje özellikleri ' ni seçmenizi ve projelerin doğru sırada oluşturulmasını sağlar.

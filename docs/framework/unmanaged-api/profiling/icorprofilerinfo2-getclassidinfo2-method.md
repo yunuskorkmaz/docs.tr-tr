@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433428"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>ICorProfilerInfo2::GetClassIDInfo2 Yöntemi
-Gets the parent module and metadata token for the open generic definition of the specified class, the `ClassID` of its parent class, and the `ClassID` for each type argument, if present, of the class.  
+Belirtilen sınıfın açık genel tanımına, üst sınıfının `ClassID` ve varsa sınıfının her bir tür bağımsız değişkeni için `ClassID` ait üst modülü ve meta veri belirtecini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,43 +40,43 @@ HRESULT GetClassIDInfo2(
   
 ## <a name="parameters"></a>Parametreler  
  `classId`  
- [in] The ID of the class for which information will be retrieved.  
+ 'ndaki Bilgilerin alınacağı sınıfın KIMLIĞI.  
   
  `pModuleId`  
- [out] Pointer to the ID of the parent module for the open generic definition of the specified class.  
+ dışı Belirtilen sınıfın açık genel tanımının üst modülünün KIMLIĞINE yönelik işaretçi.  
   
  `pTypeDefToken`  
- [out] Pointer to the metadata token for the open generic definition of the specified class.  
+ dışı Belirtilen sınıfın açık genel tanımı için meta veri belirtecinin işaretçisi.  
   
  `pParentClassId`  
- [out] Pointer to the ID of the parent class.  
+ dışı Üst sınıfın KIMLIĞINE yönelik işaretçi.  
   
  `cNumTypeArgs`  
- [in] The size of the `typeArgs` array.  
+ 'ndaki `typeArgs` dizisinin boyutu.  
   
  `pcNumTypeArgs`  
- [out] Pointer to the total number of available elements.  
+ dışı Kullanılabilir öğelerin toplam sayısına yönelik işaretçi.  
   
  `typeArgs`  
- [out] An array of `ClassID` values, each of which represents the ID of a type argument of the class. When the method returns, `typeArgs` will contain some or all the available `ClassID` values.  
+ dışı Her biri sınıfının bir tür bağımsız değişkeninin KIMLIĞINI temsil eden `ClassID` değerleri dizisi. Yöntemi döndürüldüğünde `typeArgs`, kullanılabilir `ClassID` değerlerinin bazılarını veya tümünü içerecektir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `GetClassIDInfo2` method is similar to the [ICorProfilerInfo::GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) method, but `GetClassIDInfo2` obtains additional information about a generic type.  
+ `GetClassIDInfo2` yöntemi [ICorProfilerInfo:: GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) yöntemine benzer, ancak `GetClassIDInfo2` genel bir tür hakkında ek bilgiler elde eder.  
   
- The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../../../../docs/framework/unmanaged-api/metadata/index.md) interface for a given module. The metadata token that is returned to the location referenced by `pTypeDefToken` can then be used to access the metadata for the class.  
+ Profil Oluşturucu kodu, belirli bir modül için [meta](../../../../docs/framework/unmanaged-api/metadata/index.md) veri arabirimi elde etmek üzere [ICorProfilerInfo:: GetModuleMetaData öğesini](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) çağırabilir. `pTypeDefToken` tarafından başvurulan konuma döndürülen meta veri belirteci, daha sonra sınıfının meta verilerine erişmek için kullanılabilir.  
   
- After `GetClassIDInfo2` returns, you must verify that the `typeArgs` buffer was large enough to contain all the `ClassID` values. To do this, compare the value that `pcNumTypeArgs` points to with the value of the `cNumTypeArgs` parameter. If `pcNumTypeArgs` points to a value that is larger than `cNumTypeArgs`, allocate a larger `typeArgs` buffer, update `cNumTypeArgs` with the new, larger size, and call `GetClassIDInfo2` again.  
+ `GetClassIDInfo2` çağrıldıktan sonra, `typeArgs` arabelleğinin tüm `ClassID` değerlerini içerecek kadar büyük olduğunu doğrulamanız gerekir. Bunu yapmak için `pcNumTypeArgs` işaret eden değeri `cNumTypeArgs` parametresinin değeri ile karşılaştırın. `pcNumTypeArgs`, `cNumTypeArgs`daha büyük bir değere işaret ediyorsa, daha büyük bir `typeArgs` arabelleği ayırın, yeni, daha büyük boyuttaki `cNumTypeArgs` güncelleştirin ve `GetClassIDInfo2` çağırın.  
   
- Alternatively, you can first call `GetClassIDInfo2` with a zero-length `typeArgs` buffer to obtain the correct buffer size. You can then set the `typeArgs` buffer size to the value returned in `pcNumTypeArgs` and call `GetClassIDInfo2` again.  
+ Alternatif olarak, doğru arabellek boyutunu elde etmek için ilk olarak `GetClassIDInfo2` sıfır uzunluklu `typeArgs` arabelleği ile çağırabilirsiniz. Daha sonra `typeArgs` arabellek boyutunu `pcNumTypeArgs` döndürülen değere ayarlayabilir ve `GetClassIDInfo2` yeniden çağırabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

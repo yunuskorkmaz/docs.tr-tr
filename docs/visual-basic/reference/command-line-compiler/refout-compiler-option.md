@@ -16,7 +16,7 @@ ms.locfileid: "74348649"
 ---
 # <a name="-refout-visual-basic"></a>-refout (Visual Basic)
 
-The **-refout** option specifies a file path where the reference assembly should be output.
+**-Refout** seçeneği, başvuru derlemesinin çıkış olması gereken bir dosya yolunu belirtir.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -26,21 +26,21 @@ The **-refout** option specifies a file path where the reference assembly should
 -refout:filepath
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 `filepath`  
-The path and filename of the reference assembly. It should generally be in a sub-folder of the primary assembly. The recommended convention (used by MSBuild) is to place the reference assembly in a "ref/" sub-folder relative to the primary assembly. All folders in `filepath` must exist; the compiler does not create them.
+Başvuru derlemesinin yolu ve dosya adı. Genellikle birincil derlemenin alt klasöründe olmalıdır. Önerilen kural (MSBuild tarafından kullanılır), başvuru derlemesini birincil derlemeye göre bir "ref/" alt klasörüne yerleştirmelidir. `filepath` tüm klasörler var olmalıdır; derleyici bunları oluşturmaz.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Visual Basic supports the `-refout` switch starting with version 15.3.
+Visual Basic, sürüm 15,3 ' den başlayarak `-refout` anahtarını destekler.
 
-Reference assemblies are a special type of assembly that contain only the minimum amount of metadata required to represent the library's public API surface. They include declarations for all members that are significant when referencing an assembly in build tools, but exclude all member implementations and declarations of private members that have no observable impact on their API contract. For more information, see [Reference assemblies](../../../standard/assembly/reference-assemblies.md) in .NET Guide.
+Başvuru derlemeleri, kitaplığın ortak API yüzeyini göstermek için gereken en düşük meta veri miktarını içeren özel bir derleme türüdür. Derleme araçlarındaki bir derlemeye başvururken önemli olan tüm Üyeler için bildirimler içerirler, ancak API sözleşmeleri üzerinde herhangi bir observable etkisi olmayan özel üyelerin tüm üye uygulamalarını ve bildirimlerini hariç tutar. Daha fazla bilgi için bkz. .NET kılavuzundaki [başvuru derlemeleri](../../../standard/assembly/reference-assemblies.md) .
 
-The `-refout` and [`-refonly`](refonly-compiler-option.md) options are mutually exclusive.
+`-refout` ve [`-refonly`](refonly-compiler-option.md) seçenekleri birbirini dışlıyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [-refonly](refonly-compiler-option.md)
-- [Visual Basic Command-Line Compiler](index.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

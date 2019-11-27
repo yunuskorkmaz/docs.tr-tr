@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432748"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec Yöntemi
-Creates a generic instance of a method, and gets a token to the definition.  
+Bir yönteminin genel bir örneğini oluşturur ve tanımına bir belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,25 +38,25 @@ HRESULT DefineMethodSpec (
   
 ## <a name="parameters"></a>Parametreler  
  `tkParent`  
- [in] A token for the method of which to create the generic instance. The token must be of type `mdMethodDef` or `mdMemberRef`.  
+ 'ndaki Genel örneğin oluşturulacağı yöntemi için bir belirteç. Belirtecin `mdMethodDef` veya `mdMemberRef`türünde olması gerekir.  
   
  `pvSigBlob`  
- [in] A pointer to the binary COM+ signature of the method.  
+ 'ndaki Metodun ikili COM+ imzasına yönelik bir işaretçi.  
   
  `cbSibBlob`  
- [in] The size, in bytes, of `pvSigBlob`.  
+ 'ndaki `pvSigBlob`bayt cinsinden boyutu.  
   
  `pmi`  
- [out] A token to the metadata signature definition of the method.  
+ dışı Metodun meta veri imza tanımına belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

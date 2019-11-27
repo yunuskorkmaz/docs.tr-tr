@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431411"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout Yöntemi
-Gets information about the layout of a string object. This method is deprecated in the .NET Framework 4, and is superseded by the [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) method.  
+Bir dize nesnesinin yerleşimi hakkında bilgi alır. Bu yöntem .NET Framework 4 ' te kullanım dışıdır ve yerine [ICorProfilerInfo3:: GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) yöntemi almıştır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,36 +36,36 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>Parametreler  
  `pBufferLengthOffset`  
- [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string. The length is stored as a `DWORD`.  
+ dışı Dizenin uzunluğunu depolayan `ObjectID` işaretçisine göre konum uzaklığına yönelik bir işaretçi. Uzunluk bir `DWORD`olarak depolanır.  
   
 > [!NOTE]
-> This parameter returns the length of the string itself, not the length of the buffer. The length of the buffer is no longer available.  
+> Bu parametre, arabelleğin uzunluğunu değil, dizenin kendisinin uzunluğunu döndürür. Arabelleğin uzunluğu artık kullanılamıyor.  
   
  `PStringLengthOffset`  
- [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself. The length is stored as a `DWORD`.  
+ dışı Konumun, dizenin uzunluğunu depolayan `ObjectID` işaretçisine göre konum uzaklığına yönelik bir işaretçi. Uzunluk bir `DWORD`olarak depolanır.  
   
  `pBufferOffset`  
- [out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, that stores the string of wide characters.  
+ dışı Geniş karakter dizesini depolayan `ObjectID` işaretçisine göre arabelleğin uzaklığına yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `GetStringLayout` method gets the offsets, relative to the `ObjectID` pointer, of the locations in which the following are stored:  
+ `GetStringLayout` yöntemi, aşağıdakilerin depolandığı konumların `ObjectID` işaretçisine göre uzaklıkları alır:  
   
-- The length of the string's buffer.  
+- Dize arabelleğinin uzunluğu.  
   
-- The length of the string itself.  
+- Dizenin kendisi için uzunluğu.  
   
-- The buffer that contains the actual string of wide characters.  
+- Geniş karakterlerden oluşan gerçek dizeyi içeren arabellek.  
   
- Strings may be null-terminated.  
+ Dizeler null ile sonlandırılmış olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

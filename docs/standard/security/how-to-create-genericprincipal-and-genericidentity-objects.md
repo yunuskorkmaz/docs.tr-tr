@@ -22,11 +22,11 @@ ms.locfileid: "74353823"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Nasıl yapılır: GenericPrincipal ve GenericIdentity Nesneleri Oluşturma
 
-You can use the <xref:System.Security.Principal.GenericIdentity> class in conjunction with the <xref:System.Security.Principal.GenericPrincipal> class to create an authorization scheme that exists independent of a Windows domain.
+Bir Windows etki alanından bağımsız olarak bulunan bir yetkilendirme şeması oluşturmak için, <xref:System.Security.Principal.GenericIdentity> sınıfını <xref:System.Security.Principal.GenericPrincipal> sınıfıyla birlikte kullanabilirsiniz.
 
-### <a name="to-create-a-genericprincipal-object"></a>To create a GenericPrincipal object
+### <a name="to-create-a-genericprincipal-object"></a>GenericPrincipal nesnesi oluşturmak için
 
-1. Create a new instance of the identity class and initialize it with the name you want it to hold. The following code creates a new **GenericIdentity** object and initializes it with the name `MyUser`.
+1. Identity sınıfının yeni bir örneğini oluşturun ve onu tutmak istediğiniz adla başlatın. Aşağıdaki kod, yeni bir **GenericIdentity** nesnesi oluşturur ve adı `MyUser`ile başlatır.
 
     ```vb
     Dim myIdentity As New GenericIdentity("MyUser")
@@ -36,7 +36,7 @@ You can use the <xref:System.Security.Principal.GenericIdentity> class in conjun
     GenericIdentity myIdentity = new GenericIdentity("MyUser");
     ```
 
-2. Create a new instance of the **GenericPrincipal** class and initialize it with the previously created **GenericIdentity** object and an array of strings that represent the roles that you want associated with this principal. The following code example specifies an array of strings that represent an administrator role and a user role. The **GenericPrincipal** is then initialized with the previous **GenericIdentity** and the string array.
+2. **GenericPrincipal** sınıfının yeni bir örneğini oluşturun ve daha önce oluşturulan **GenericIdentity** nesnesiyle ve bu sorumluya ilişkilendirilmesini istediğiniz rolleri temsil eden dizeler dizisiyle başlatın. Aşağıdaki kod örneği, bir yönetici rolünü ve Kullanıcı rolünü temsil eden dizelerin dizisini belirtir. **GenericPrincipal** daha sonra önceki **GenericIdentity** ve String dizisi ile başlatılır.
 
     ```vb
     Dim myStringArray As String() = {"Manager", "Teller"}
@@ -48,7 +48,7 @@ You can use the <xref:System.Security.Principal.GenericIdentity> class in conjun
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. Use the following code to attach the principal to the current thread. This is valuable in situations where the principal must be validated several times, it must be validated by other code running in your application, or it must be validated by a <xref:System.Security.Permissions.PrincipalPermission> object. You can still perform role-based validation on the principal object without attaching it to the thread. For more information, see [Replacing a Principal Object](../../../docs/standard/security/replacing-a-principal-object.md).
+3. Geçerli iş parçacığına asıl eklemek için aşağıdaki kodu kullanın. Bu, sorumlunun birkaç kez doğrulanması gereken durumlarda, uygulamanızda çalıştırılan diğer kodlar tarafından doğrulanması veya bir <xref:System.Security.Permissions.PrincipalPermission> nesnesi tarafından doğrulanması gerekir. Principal nesnesinde, iş parçacığına iliştirmeden rol tabanlı doğrulama işlemi gerçekleştirmeye devam edebilirsiniz. Daha fazla bilgi için bkz. [Principal nesnesini değiştirme](../../../docs/standard/security/replacing-a-principal-object.md).
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -60,7 +60,7 @@ You can use the <xref:System.Security.Principal.GenericIdentity> class in conjun
 
 ## <a name="example"></a>Örnek
 
-The following code example demonstrates how to create an instance of a **GenericPrincipal** and a **GenericIdentity**. This code displays the values of these objects to the console.
+Aşağıdaki kod örneği, **GenericPrincipal** ve **GenericIdentity**'nin bir örneğinin nasıl oluşturulacağını göstermektedir. Bu kod, bu nesnelerin değerlerini konsola görüntüler.
 
 ```vb
 Imports System.Security.Principal
@@ -133,7 +133,7 @@ public class Class1
 }
 ```
 
-When executed, the application displays output similar to the following.
+Yürütüldüğünde, uygulama aşağıdakine benzer bir çıktı görüntüler.
 
 ```console
 The Name is: MyIdentity

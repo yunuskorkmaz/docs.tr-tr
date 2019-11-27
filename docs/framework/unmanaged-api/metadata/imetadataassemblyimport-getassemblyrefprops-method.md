@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448231"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps Yöntemi
-Gets the set of properties for the assembly reference with the specified metadata signature.  
+Belirtilen meta veri imzasıyla derleme başvurusunun özellik kümesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,46 +44,46 @@ HRESULT GetAssemblyRefProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mdar`  
- [in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.  
+ 'ndaki Özelliklerinin alınacağı derleme başvurusunu temsil eden `mdAssemblyRef` meta veri belirteci.  
   
  `ppbPublicKeyOrToken`  
- [out] A pointer to the public key or the metadata token.  
+ dışı Ortak anahtara veya meta veri belirtecine yönelik bir işaretçi.  
   
  `pcbPublicKeyOrToken`  
- [out] The number of bytes in the returned public key or token.  
+ dışı Döndürülen ortak anahtar veya belirteçteki bayt sayısı.  
   
  `szName`  
- [out] The simple name of the assembly.  
+ dışı Derlemenin basit adı.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ 'ndaki `szName`geniş karakter cinsinden boyutu.  
   
  `pchName`  
- [out] A pointer to the number of wide chars actually returned in `szName`.  
+ dışı `szName`' de döndürülen geniş karakter sayısının bir işaretçisi.  
   
  `pMetaData`  
- [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
+ dışı Derleme meta verilerini içeren bir ASSEMBLYMETADATA yapısına yönelik işaretçi.  
   
  `ppbHashValue`  
- [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.  
+ dışı Karma değere yönelik bir işaretçi. Bu, [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) numaralandırması Için arfFullOriginator bayrağı ayarlanmadığı takdirde, başvurulan derlemenin `PublicKey` özelliğinin SHA-1 algoritmasını kullanan karmadır.  
   
  `pcbHashValue`  
- [out] The number of wide chars in the returned hash value.  
+ dışı Döndürülen karma değerindeki geniş karakter sayısı.  
   
  `pdwAssemblyRefFlags`  
- [out] A pointer to flags that describe the metadata applied to an assembly. The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
+ dışı Bir derlemeye uygulanan meta verileri tanımlayan bayrakların işaretçisi. Flags değeri bir veya daha fazla [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) değeri birleşimidir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.  
+ Bu yöntem başarılı olursa S_OK döndürür; Aksi takdirde, Winerror. h üstbilgi dosyasında tanımlanan hata kodlarından birini döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: Converting between strings and other data types
+title: Dizeler ve diğer veri türleri arasında dönüştürme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, strings
@@ -14,26 +14,26 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352484"
 ---
-# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Converting between strings and other data types in Visual Basic
+# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Visual Basic dizeler ve diğer veri türleri arasında dönüştürme
 
-This section describes how to convert strings into other data types.
+Bu bölüm, dizelerin diğer veri türlerine nasıl dönüştürüleceğini açıklar.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[How to: Convert an Array of Bytes into a String in Visual Basic](how-to-convert-an-array-of-bytes-into-a-string.md)  
-How to convert the bytes from a byte array into a string.
+[Nasıl yapılır: bayt dizisini Visual Basic bir dizeye dönüştürme](how-to-convert-an-array-of-bytes-into-a-string.md)  
+Bayt dizisindeki baytları dizeye dönüştürme.
 
-[How to: Convert Strings into an Array of Bytes in Visual Basic](how-to-convert-strings-into-an-array-of-bytes.md)  
-How to convert a string into an array of bytes.
+[Nasıl yapılır: dizeleri Visual Basic bayt dizisine dönüştürme](how-to-convert-strings-into-an-array-of-bytes.md)  
+Bir dizeyi bir bayt dizisine dönüştürme.
 
 [Nasıl yapılır: Karakter Değerleri Dizisinden Bir Dize Oluşturma](how-to-create-a-string-from-an-array-of-char-values.md)  
-How to create the string "abcd" from individual characters.
+Bağımsız karakterlerden "abcd" dizesini oluşturma.
 
 [Nasıl yapılır: Onaltılık Dizeleri Sayılara Dönüştürme](how-to-convert-hexadecimal-strings-to-numbers.md)  
-How to convert a hexadecimal string into an integer.
+Bir onaltılık dizeyi tamsayıya dönüştürme.
 
-[How to: Convert a String to an Array of Characters in Visual Basic](how-to-convert-a-string-to-an-array-of-characters.md)  
-How to convert a string into an array of characters.
+[Nasıl yapılır: bir dizeyi Visual Basic bir karakter dizisine dönüştürme](how-to-convert-a-string-to-an-array-of-characters.md)  
+Bir dizeyi bir karakter dizisine dönüştürme.
 
-[How to: Access Characters in Strings in Visual Basic](how-to-access-characters-in-strings.md)  
-How to access a character in a string by its index.
+[Nasıl yapılır: Visual Basic dizelerdeki karakterlere erişme](how-to-access-characters-in-strings.md)  
+Bir dizedeki bir karaktere dizin tarafından nasıl erişirsiniz.

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450361"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>ICorProfilerInfo::GetILFunctionBody Metodu
-Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.  
+Üst bilgisinden başlayarak, Microsoft ara dili (MSIL) kodundaki bir yöntemin gövdesine yönelik bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,30 +37,30 @@ HRESULT GetILFunctionBody(
   
 ## <a name="parameters"></a>Parametreler  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ 'ndaki İşlevin bulunduğu modülün KIMLIĞI.  
   
  `methodId`  
- [in] The metadata token for the method.  
+ 'ndaki Yöntemi için meta veri belirteci.  
   
  `ppMethodHeader`  
- [out] A pointer to the method's header.  
+ dışı Metodun üstbilgisine yönelik bir işaretçi.  
   
  `pcbMethodSize`  
- [out] An integer that specifies the size of the method.  
+ dışı Yöntemin boyutunu belirten bir tamsayı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- A method is scoped by the module in which it lives. Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.  
+ Bir yöntem, bulunduğu modülün kapsamına alınır. `GetILFunctionBody` yöntemi, ortak dil çalışma zamanı (CLR) tarafından yüklenmeden önce MSIL koduna bir araç erişimi vermek üzere tasarlandığından, istenen örneği bulmak için yönteminin meta veri belirtecini kullanır.  
   
- `GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).  
+ `GetILFunctionBody`, bir MSIL kodu (soyut bir yöntem veya platform çağırma (PInvoke) yöntemi) olmadan bir yönteme işaret ediyorsa, CORPROF_E_FUNCTION_NOT_IL HRESULT bir `methodId` döndürebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

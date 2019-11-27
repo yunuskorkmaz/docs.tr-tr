@@ -1,7 +1,7 @@
 ---
-title: Built-in types table - C# Reference
+title: Yerleşik türler tablo- C# başvuru
 ms.custom: seodec18
-description: Keywords for built-in C# types
+description: Yerleşik C# türler için anahtar sözcükler
 ms.date: 08/17/2018
 helpviewer_keywords:
 - types [C#], built-in
@@ -14,11 +14,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428550"
 ---
-# <a name="built-in-types-table-c-reference"></a>Built-in types table (C# Reference)
+# <a name="built-in-types-table-c-reference"></a>Yerleşik türler tablosu (C# başvuru)
 
-The following table shows the keywords for built-in C# types, which are aliases of predefined types in the <xref:System> namespace:
+Aşağıdaki tabloda, <xref:System> ad alanında önceden tanımlanmış türlerin diğer C# adları olan yerleşik türler için anahtar sözcükler gösterilmektedir:
 
-|C# type|.NET type|  
+|C#türüyle|.NET türü|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
 |[byte](../builtin-types/integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|  
@@ -38,16 +38,16 @@ The following table shows the keywords for built-in C# types, which are aliases 
   
 ## <a name="remarks"></a>Açıklamalar
 
-All of the types in the table, except `object` and `string`, are referred to as simple types.
+Tablodaki tüm türler, `object` ve `string`hariç, basit türler olarak adlandırılır.
 
-The .NET types and their C# type keyword aliases are interchangeable. For example, you can declare an integer variable by using either of the following declarations:
+.NET türleri ve bunların C# tür anahtar sözcük diğer adları değiştirilebilir. Örneğin, aşağıdaki bildirimlerden birini kullanarak bir tamsayı değişkeni bildirebilirsiniz:
 
 ```csharp
 int x = 123;
 System.Int32 y = 123;
 ```
 
-Use the [typeof](../operators/type-testing-and-cast.md#typeof-operator) operator to get the <xref:System.Type?displayProperty=nameWithType> instance that represents the specified type:
+Belirtilen türü temsil eden <xref:System.Type?displayProperty=nameWithType> örneğini almak için [typeof](../operators/type-testing-and-cast.md#typeof-operator) işlecini kullanın:
 
 ```csharp
 Type stringType = typeof(string);
@@ -63,10 +63,10 @@ Console.WriteLine(doubleType.FullName);
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Reference](../index.md)
+- [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [Value types](value-types.md)
-- [Reference types](reference-types.md)
-- [Default values table](default-values-table.md)
+- [Değer türleri](value-types.md)
+- [Başvuru türleri](reference-types.md)
+- [Varsayılan değerler tablosu](default-values-table.md)
 - [dynamic](../builtin-types/reference-types.md)

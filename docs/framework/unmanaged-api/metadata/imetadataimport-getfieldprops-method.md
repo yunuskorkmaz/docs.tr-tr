@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438000"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps Metodu
-Gets metadata associated with the field referenced by the specified FieldDef token.  
+Belirtilen FieldDef belirtecinin başvurduğu alanla ilişkili meta verileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,46 +45,46 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mb`  
- [in] A FieldDef token that represents the field to get associated metadata for.  
+ 'ndaki İlişkili meta verileri almak için alanı temsil eden bir FieldDef belirteci.  
   
  `pClass`  
- [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
+ dışı Bir TypeDef belirtecinin, alanın ait olduğu sınıfın türünü temsil eden bir işaretçisi.  
   
  `szField`  
- [out] The name of the field.  
+ dışı Alanın adı.  
   
  `cchField`  
- [in] The size in wide characters of the buffer for *szField*.  
+ 'ndaki *SzField*arabelleğinin geniş karakterdeki boyutu.  
   
  `pchField`  
- [out] The actual size of the returned buffer.  
+ dışı Döndürülen arabelleğin gerçek boyutu.  
   
  `pdwAttr`  
- [out] Flags associated with the field's metadata.  
+ dışı Alanın meta verileriyle ilişkili bayraklar.  
   
  `ppvSigBlob`  
- [in] A pointer to the binary metadata value that describes the field.  
+ 'ndaki Alanı açıklayan ikili meta veri değerine yönelik bir işaretçi.  
   
  `pcbSigBlob`  
- [out] The size in bytes of `ppvSigBlob`.  
+ dışı `ppvSigBlob`bayt cinsinden boyutu.  
   
  `pdwCPlusTypeFlag`  
- [out] A flag that specifies the value type of the field.  
+ dışı Alanın değer türünü belirten bayrak.  
   
  `ppValue`  
- [out] A constant value for the field.  
+ dışı Alan için sabit bir değer.  
   
  `pcchValue`  
- [out] The size in chars of `ppValue`, or zero if no string exists.  
+ dışı `ppValue`karakter cinsinden boyut veya hiçbir dize yoksa sıfır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

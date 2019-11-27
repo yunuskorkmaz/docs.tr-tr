@@ -1,5 +1,5 @@
 ---
-title: 'How to: Declare an Object Variable and Assign an Object to It'
+title: 'Nasıl yapılır: bir nesne değişkeni bildirme ve ona bir nesne atama'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object variables [Visual Basic], declaring
@@ -14,32 +14,32 @@ ms.locfileid: "74352899"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de Bir Nesne Değişkeni Bildirme ve bir Nesne Atama
 
-You declare a variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) by specifying `As Object` in a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md). You assign an object to such a variable by placing the object after the equal sign (`=`) in an assignment statement or initialization clause.
+Bir [Dim ifadesinde](../../../../visual-basic/language-reference/statements/dim-statement.md)`As Object` belirterek [nesne veri türünde](../../../../visual-basic/language-reference/data-types/object-data-type.md) bir değişken bildirirsiniz. Bir atama deyimi veya başlatma yan tümcesindeki eşittir işaretinden (`=`) sonra nesneyi yerleştirerek bu tür bir değişkene bir nesne atarsınız.
 
 ## <a name="example"></a>Örnek
 
-The following example declares an `Object` variable and assigns the current instance to it.
+Aşağıdaki örnek bir `Object` değişken bildirir ve geçerli örneği buna atar.
 
 ```vb
 Dim thisObject As Object
 thisObject = "This is an Object"
 ```
 
-You can combine the declaration and assignment by initializing the variable as part of its declaration. The following example is equivalent to the preceding example.
+Bildirimi ve atamayı, bildiriminin parçası olarak değişkeni başlatarak birleştirebilirsiniz. Aşağıdaki örnek, önceki örneğe eşdeğerdir.
 
 ```vb
 Dim thisObject As Object= "This is an Object"
 ```
 
-## <a name="compiling-the-code"></a>Kod Derleniyor
+## <a name="compiling-the-code"></a>Kod Derleme
 
-This example requires:
+Bu örnek şunları gerektirir:
 
-- A reference to the <xref:System> namespace.
+- <xref:System> ad alanına bir başvuru.
 
-- A class, structure, or module in which to put the `Dim` statement.
+- `Dim` deyimin konulacağı bir sınıf, yapı veya modül.
 
-- A procedure in which to put the assignment statement.
+- Atama ekstresini koyabileceğiniz bir yordam.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

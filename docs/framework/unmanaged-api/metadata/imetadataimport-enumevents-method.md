@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440013"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents Yöntemi
-Enumerates event definition tokens for the specified TypeDef token.  
+Belirtilen TypeDef belirtecinin olay tanımı belirteçlerini numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,35 +39,35 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] Numaralandırıcı için bir işaretçi.  
   
  `td`  
- [in] The TypeDef token whose event definitions are to be enumerated.  
+ 'ndaki Olay tanımları Numaralandırılacak olan TypeDef belirteci.  
   
  `rEvents`  
- [out] The array of returned events.  
+ dışı Döndürülen olayların dizisi.  
   
  `cMax`  
- [in] The maximum size of the `rEvents` array.  
+ 'ndaki `rEvents` dizisinin en büyük boyutu.  
   
  `pcEvents`  
- [out] The actual number of events returned in `rEvents`.  
+ dışı `rEvents`döndürülen gerçek olay sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` returned successfully.|  
-|`S_FALSE`|There are no events to enumerate. In that case, `pcEvents` is zero.|  
+|`S_OK`|`EnumEvents` başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak olay yok. Bu durumda `pcEvents` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -18,26 +18,26 @@ ms.locfileid: "74333948"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Sürücüleri, Dizinleri ve Dosyaları İşleme (Visual Basic)
 
-You can use Visual Basic to process drives, folders, and files with the `My.Computer.FileSystem` object, which provides better performance and is easier to use than traditional methods such as the `FileOpen` and `Write` functions (although they are still available). The following sections discuss these methods in detail.  
+Daha iyi performans sağlayan ve `FileOpen` ve `Write` işlevleri gibi geleneksel metotlardan daha kolay bir şekilde (yine de kullanılabilir olsalar), sürücüleri, klasörleri ve dosyaları `My.Computer.FileSystem` nesne ile işlemek için Visual Basic kullanabilirsiniz. Aşağıdaki bölümlerde bu yöntemler ayrıntılı olarak ele alınmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
  [Visual Basic ile Dosya Erişimi](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)  
- Discusses how to use the `My.Computer.FileSystem` object to work with files, drives, and folders.  
+ Dosyalar, sürücüler ve klasörlerle çalışmak için `My.Computer.FileSystem` nesnesinin nasıl kullanılacağını açıklar.  
   
- [Basics of .NET Framework File I/O and the File System (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)  
- Provides an overview of file I/O concepts in the .NET Framework, including streams, isolated storage, file events, file attributes, and file access.  
+ [.NET Framework dosya g/ç ve dosya sistemi (Visual Basic) temelleri](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)  
+ Akışlar, yalıtılmış depolama, dosya olayları, dosya öznitelikleri ve dosya erişimi gibi .NET Framework dosya g/ç kavramlarına genel bir bakış sağlar.  
   
  [İzlenecek Yol: .NET Framework Yöntemlerini Kullanarak Dosyaları Düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Demonstrates how to use the .NET Framework to manipulate files and folders.  
+ Dosya ve klasörleri işlemek için .NET Framework nasıl kullanacağınızı gösterir.  
   
- [Walkthrough: Manipulating Files and Directories in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Demonstrates how to use the `My.Computer.FileSystem` object to manipulate files and folders.  
+ [İzlenecek yol: Visual Basic dosya ve dizinleri düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ Dosya ve klasörleri işlemek için `My.Computer.FileSystem` nesnesinin nasıl kullanılacağını gösterir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 
  [Program Yapısı ve Kod Kuralları](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Provides guidelines for the physical structure and appearance of programs.  
+ Programların fiziksel yapısına ve görünümüne ilişkin yönergeler sağlar.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- Reference documentation for the `My.Computer.FileSystem` object and its members.
+ `My.Computer.FileSystem` nesnesi ve üyeleri için başvuru belgeleri.

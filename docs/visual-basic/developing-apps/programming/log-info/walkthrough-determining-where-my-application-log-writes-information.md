@@ -18,50 +18,50 @@ ms.locfileid: "74353600"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Nereye Yazdığını Belirleme (Visual Basic)
 
-The `My.Application.Log` object can write information to several log listeners. The log listeners are configured by the computer's configuration file and can be overridden by an application's configuration file. This topic describes the default settings and how to determine the settings for your application.
+`My.Application.Log` nesnesi, çeşitli günlük dinleyicilerine bilgi yazabilir. Günlük dinleyicileri bilgisayarın yapılandırma dosyası tarafından yapılandırılır ve bir uygulamanın yapılandırma dosyası tarafından geçersiz kılınabilir. Bu konu, varsayılan ayarları ve uygulamanızın ayarlarının nasıl belirleneceğini açıklar.
 
-For more information about the default output locations, see [Working with Application Logs](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
+Varsayılan çıkış konumları hakkında daha fazla bilgi için bkz. [Uygulama Günlükleriyle Çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
 
-### <a name="to-determine-the-listeners-for-myapplicationlog"></a>To determine the listeners for My.Application.Log
+### <a name="to-determine-the-listeners-for-myapplicationlog"></a>My. Application. log için dinleyicileri belirleme
 
-1. Locate the assembly's configuration file. If you are developing the assembly, you can access the app.config in Visual Studio from the **Solution Explorer**. Otherwise, the configuration file name is the assembly's name appended with ".config", and it is located in the same directory as the assembly.
+1. Derlemenin yapılandırma dosyasını bulun. Derlemeyi geliştiriyorsanız, **Çözüm Gezgini**Visual Studio 'da App. config dosyasına erişebilirsiniz. Aksi takdirde, yapılandırma dosya adı ". config" ile eklenen derlemenin adıdır ve derlemeyle aynı dizinde bulunur.
 
     > [!NOTE]
-    > Not every assembly has a configuration file.
+    > Her derlemenin bir yapılandırma dosyası yoktur.
 
-    The configuration file is an XML file.
+    Yapılandırma dosyası bir XML dosyasıdır.
 
-2. Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", located in the `<sources>` section. The `<sources>` section is located in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
+2. `<sources>` bölümünde yer alan "DefaultSource" `name` özniteliğiyle birlikte `<source>` bölümünde `<listeners>` bölümünü bulun. `<sources>` bölümü, üst düzey `<configuration>` bölümünde `<system.diagnostics>` bölümünde bulunur.
 
-    If these sections do not exist, then the computer's configuration file may configure the `My.Application.Log` log listeners. The following steps describe how to determine what the computer configuration file defines:
+    Bu bölümler yoksa, bilgisayarın yapılandırma dosyası `My.Application.Log` log dinleyicilerini yapılandırabilir. Aşağıdaki adımlarda, bilgisayar yapılandırma dosyasının neyi tanımladığı nasıl belirleneceği açıklanır:
 
-    1. Locate the computer's machine.config file. Typically, it is located in the *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* directory, where `SystemRoot` is the operating system directory, and `frameworkVersion` is the version of the .NET Framework.
+    1. Bilgisayarın Machine. config dosyasını bulun. Genellikle, *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* dizininde bulunur, burada `SystemRoot` işletim sistemi dizinidir ve `frameworkVersion` .NET Framework sürümüdür.
 
-        The settings in machine.config can be overridden by an application's configuration file.
+        Machine. config dosyasındaki ayarlar bir uygulamanın yapılandırma dosyası tarafından geçersiz kılınabilir.
 
-        If the optional elements listed below do not exist, you can create them.
+        Aşağıda listelenen isteğe bağlı öğeler yoksa, bunları oluşturabilirsiniz.
 
-    2. Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", in the `<sources>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
+    2. En üst düzey `<system.diagnostics>` bölümündeki `<configuration>` bölümünde bulunan `<sources>` bölümündeki "DefaultSource" `name` özniteliğine sahip `<source>` bölümündeki `<listeners>` bölümünü bulun.
 
-        If these sections do not exist, then the `My.Application.Log` has only the default log listeners.
+        Bu bölümler yoksa `My.Application.Log` yalnızca varsayılan günlük dinleyicilerine sahiptir.
 
-3. Locate the <`add>` elements in the <`listeners>` section.
+3. <`listeners>` bölümünde <`add>` öğelerini bulun.
 
-     These elements add the named log listeners to `My.Application.Log` source.
+     Bu öğeler `My.Application.Log` kaynağına adlandırılmış günlük dinleyicileri ekler.
 
-4. Locate the `<add>` elements with the names of the log listeners in the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
+4. `<add>` öğelerini, üst düzey `<configuration>` bölümündeki `<system.diagnostics>` bölümünde bulunan `<sharedListeners>` bölümündeki günlük dinleyicilerinin adlarıyla bulun.
 
-5. For many types of shared listeners, the listener's initialization data includes a description of where the listener directs the data:
+5. Birçok türdeki paylaşılan dinleyici için, dinleyicinin başlatma verileri, dinleyicinin verileri nerede yönlendirdiği hakkında bir açıklama içerir.
 
-    - A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> listener writes to a file log, as described in the introduction.
+    - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> dinleyicisi, giriş bölümünde açıklandığı gibi bir dosya günlüğüne yazar.
 
-    - A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> listener writes information to the computer event log specified by the `initializeData` parameter. To view an event log, you can use **Server Explorer** or **Windows Event Viewer**. For more information, see [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).
+    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> dinleyicisi, `initializeData` parametresi tarafından belirtilen bilgisayar olay günlüğüne bilgi yazar. Bir olay günlüğünü görüntülemek için **Sunucu Gezgini** veya **Windows Olay Görüntüleyicisi**kullanabilirsiniz. Daha fazla bilgi için [.NET Framework ETW olayları](../../../../framework/performance/etw-events.md)bölümüne bakın.
 
-    - The <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> and <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> listeners write to the file specified in the `initializeData` parameter.
+    - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> ve <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> dinleyicileri `initializeData` parametresinde belirtilen dosyaya yazar.
 
-    - A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> listener writes to the command-line console.
+    - <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> dinleyicisi komut satırı konsoluna yazar.
 
-    - For information about where other types of log listeners write information, consult that type's documentation.
+    - Diğer günlük dinleyicisi türlerinin yazma bilgileri hakkında daha fazla bilgi için, bu türün belgelerine başvurun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

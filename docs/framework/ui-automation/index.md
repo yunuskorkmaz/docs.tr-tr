@@ -15,11 +15,11 @@ ms.locfileid: "74447021"
 ---
 # <a name="accessibility"></a>Erişilebilirlik
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] is the new accessibility framework for Microsoft Windows. It addresses the needs of assistive technology products and automated test frameworks by providing programmatic access to information about the [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]. In addition, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] enables control and application developers to make their products accessible.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)], Microsoft Windows için yeni erişilebilirlik çerçevesidir. [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]hakkındaki bilgilere programlı erişim sağlayarak yardımcı teknoloji ürünlerinin ve otomatikleştirilmiş test çerçevelerinin ihtiyaçlarını ele alınmaktadır. Ayrıca, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetim ve uygulama geliştiricilerinin ürünlerini erişilebilir hale getirmenizi sağlar.  
   
- This documentation describes the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API for managed code. For information on programming for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] in C++, see [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal).  
+ Bu belgede, yönetilen kod için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API açıklanmaktadır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] C++için programlama hakkında daha fazla bilgi için bkz. [Win32 uygulamaları için UI Otomasyonu](/windows/desktop/winauto/windows-automation-api-portal).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [En İyi Erişilebilirlik Uygulamaları](accessibility-best-practices.md)  
@@ -33,4 +33,4 @@ ms.locfileid: "74447021"
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 
-- [Accessibility Samples](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
+- [Erişilebilirlik örnekleri](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 

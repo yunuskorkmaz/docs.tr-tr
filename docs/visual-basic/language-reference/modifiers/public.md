@@ -1,5 +1,5 @@
 ---
-title: Ortak
+title: Genel
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Public
@@ -16,26 +16,26 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351290"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
-Specifies that one or more declared programming elements have no access restrictions.  
+Bir veya daha fazla tanımlanmış programlama öğesinin erişim kısıtlaması olmadığını belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- If you are publishing a component or set of components, such as a class library, you usually want the programming elements to be accessible by any code that interoperates with your assembly. To confer such unlimited access on an element, you can declare it with `Public`.  
+ Sınıf kitaplığı gibi bir bileşeni veya bileşen kümesini yayınlıyorsanız, genellikle programlama öğelerine derlemele birlikte çalışan herhangi bir kod tarafından erişilebilmesini istersiniz. Bir öğe üzerinde sınırsız erişim sağlamak için, `Public`ile bildirebilirsiniz.  
   
- Public access is the normal level for a programming element when you do not need to limit access to it. Note that the access level of an element declared within an interface, module, class, or structure defaults to `Public` if you do not declare it otherwise.  
+ Genel erişim, bir programlama öğesi için erişimi sınırlandırmanıza gerek olmadığında normal düzeydir. Bir arabirim, modül, sınıf veya yapı içinde belirtilen bir öğenin erişim düzeyinin, aksi belirtilmedikçe `Public` varsayılan olarak olduğunu unutmayın.  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Declaration Context.** You can use `Public` only at module, interface, or namespace level. This means the declaration context for a `Public` element must be a source file, namespace, interface, module, class, or structure, and cannot be a procedure.  
+- **Bildirim bağlamı.** `Public` yalnızca modül, arabirim veya ad alanı düzeyinde kullanabilirsiniz. Bu, bir `Public` öğesi için bildirim bağlamının kaynak dosya, ad alanı, arabirim, modül, sınıf veya yapı olması ve bir yordam olması gerektiği anlamına gelir.  
   
 ## <a name="behavior"></a>Davranış  
   
-- **Access Level.** All code that can access a module, class, or structure can access its `Public` elements.  
+- **Erişim düzeyi.** Bir modüle, sınıfa veya yapıya erişebilen tüm kodlar `Public` öğelerine erişebilir.  
   
-- **Default Access.** Local variables inside a procedure default to public access, and you cannot use any access modifiers on them.  
+- **Varsayılan erişim.** Bir yordamın içindeki yerel değişkenler, genel erişim için varsayılan olarak kullanılır ve bunlara herhangi bir erişim değiştiricisi kullanamazsınız.  
   
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **Erişim değiştiricileri.** Erişim düzeyi belirten anahtar sözcüklere *erişim değiştiricileri*denir. Erişim değiştiricilerinden oluşan bir karşılaştırma için bkz. [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
- The `Public` modifier can be used in these contexts:  
+ `Public` değiştiricisi şu bağlamlarda kullanılabilir:  
   
  [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -72,7 +72,7 @@ Specifies that one or more declared programming elements have no access restrict
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430708"
 ---
 # <a name="isymunmanageddisposedestroy-method"></a>ISymUnmanagedDispose::Destroy Yöntemi
-Causes the underlying object to release all internal references and return failure on any subsequent method calls.  
+Alttaki nesnenin tüm iç başvuruları serbest bırakmaya ve sonraki yöntem çağrılarında hata döndürmesine neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,10 +32,10 @@ HRESULT Destroy();
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

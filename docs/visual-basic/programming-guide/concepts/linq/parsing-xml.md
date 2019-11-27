@@ -9,20 +9,20 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353161"
 ---
-# <a name="parsing-xml-visual-basic"></a>Parsing XML (Visual Basic)
-The topics in this section describe how to parse XML documents.  
+# <a name="parsing-xml-visual-basic"></a>XML 'yi ayrıştırma (Visual Basic)
+Bu bölümdeki konular XML belgelerinin nasıl ayrıştıralınacağını açıklamaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[How to: Parse a String (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-parse-a-string.md)|Shows how to parse a string to create an XML tree.|  
-|[How to: Load XML from a File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)|Shows how to load XML from a URI using the <xref:System.Xml.Linq.XElement.Load%2A> method.|  
-|[XML Yükleme veya Ayrıştırma Sırasında Boşluk Koruma](../../../../visual-basic/programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml.md)|Describes how to control the white space behavior of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] while loading XML trees.|  
-|[How to: Catch Parsing Errors (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-catch-parsing-errors.md)|Shows how to detect badly formed or invalid XML.|  
-|[How to: Create a Tree from an XmlReader (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md)|Shows how to create an XML tree directly from an <xref:System.Xml.XmlReader>.|  
-|[How to: Stream XML Fragments from an XmlReader (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|Shows how to stream XML fragments by using an <xref:System.Xml.XmlReader>.<br /><br /> When you have to process arbitrarily large XML files, it might not be feasible to load the whole XML tree into memory. Instead, you can stream XML fragments.|  
+|[Nasıl yapılır: bir dizeyi ayrıştırma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-parse-a-string.md)|Bir XML ağacı oluşturmak için bir dizenin nasıl ayrıştıralınacağını gösterir.|  
+|[Nasıl yapılır: dosyadan XML yükleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)|<xref:System.Xml.Linq.XElement.Load%2A> yöntemi kullanılarak bir URI 'den XML 'nin nasıl yükleneceğini gösterir.|  
+|[XML Yükleme veya Ayrıştırma Sırasında Boşluk Koruma](../../../../visual-basic/programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml.md)|XML ağaçları yüklenirken [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] boşluk davranışının nasıl kontrol edileceğini açıklar.|  
+|[Nasıl yapılır: ayrıştırma hatalarını yakalama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-catch-parsing-errors.md)|Hatalı biçimlendirilmiş veya geçersiz XML 'nin nasıl algılanacağını gösterir.|  
+|[Nasıl yapılır: XmlReader 'dan ağaç oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md)|Bir <xref:System.Xml.XmlReader>doğrudan bir XML ağacının nasıl oluşturulacağını gösterir.|  
+|[Nasıl yapılır: bir XmlReader 'dan XML parçalarını akışa alma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|Bir <xref:System.Xml.XmlReader>kullanarak XML parçalarının nasıl akışının nasıl yapılacağını gösterir.<br /><br /> Rastgele büyük XML dosyalarını işlemek zorunda olduğunuzda, tüm XML ağacının belleğe yüklenmesi mümkün olmayabilir. Bunun yerine, XML parçalarını akışla aktarabilirsiniz.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML ağaçları oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

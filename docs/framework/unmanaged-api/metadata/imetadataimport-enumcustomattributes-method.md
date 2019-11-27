@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440245"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes Yöntemi
-Enumerates custom attribute-definition tokens associated with the specified type or member.  
+Belirtilen tür veya üyeyle ilişkili özel öznitelik tanımı belirteçlerini numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,38 +40,38 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the returned enumerator.  
+ [in, out] Döndürülen Numaralandırıcı için bir işaretçi.  
   
  `tk`  
- [in] A token for the scope of the enumeration, or zero for all custom attributes.  
+ 'ndaki Numaralandırma kapsamı için bir belirteç veya tüm özel öznitelikler için sıfır.  
   
  `tkType`  
- [in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.  
+ 'ndaki Numaralandırılacak özniteliklerin türü oluşturucusuna yönelik belirteç veya tüm türler için `null`.  
   
  `rCustomAttributes`  
- [out] An array of custom attribute tokens.  
+ dışı Özel öznitelik belirteçlerinin dizisi.  
   
  `cMax`  
- [in] The maximum size of the `rCustomAttributes` array.  
+ 'ndaki `rCustomAttributes` dizisinin en büyük boyutu.  
   
  `pcCustomAttributes`  
- [out, optional] The actual number of token values returned in `rCustomAttributes`.  
+ [Out, isteğe bağlı] `rCustomAttributes`' de döndürülen belirteç değerlerinin gerçek sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` returned successfully.|  
-|`S_FALSE`|There are no custom attributes to enumerate. In that case, `pcCustomAttributes` is zero.|  
+|`S_OK`|`EnumCustomAttributes` başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak özel öznitelik yok. Bu durumda `pcCustomAttributes` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

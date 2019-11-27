@@ -6,15 +6,15 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429217"
 ---
-### <a name="removed-controls"></a>Removed controls
+### <a name="removed-controls"></a>Kaldırılan denetimler
 
-Starting in .NET Core 3.1, some Windows Forms controls are no longer available.
+.NET Core 3,1 ' den başlayarak bazı Windows Forms denetimleri artık kullanılamaz.
 
-#### <a name="change-description"></a>Change description
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-Starting with .NET Core 3.1, various Windows Forms controls are no longer available. Replacement controls that have better design and support were introduced in .NET Framework 2.0. The deprecated controls were previously removed from designer toolboxes but were still available to be used.
+.NET Core 3,1 ile başlayarak, çeşitli Windows Forms denetimleri artık kullanılamaz. Daha iyi tasarım ve destek içeren değiştirme denetimleri .NET Framework 2,0 ' de sunulmuştur. Kullanım dışı bırakılan denetimler daha önce Tasarımcı araç kutularından kaldırılmıştır ancak yine de kullanılabilir.
 
-The following types are no longer available:
+Aşağıdaki türler artık kullanılamaz:
 
 - <xref:System.Windows.Forms.Menu>
 - <xref:System.Windows.Forms.Menu.MenuItemCollection>
@@ -45,23 +45,23 @@ The following types are no longer available:
 - <xref:System.Windows.Forms.DataGrid.HitTestType>
 - <xref:System.Windows.Forms.Design.IMenuEditorService>
 
-#### <a name="version-introduced"></a>Version introduced
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3.1
 
-#### <a name="recommended-action"></a>Recommended action
+#### <a name="recommended-action"></a>Önerilen eylem
 
-Each removed control has a recommended replacement control. Refer to the following table:
+Her kaldırılan denetimin önerilen bir değiştirme denetimi vardır. Aşağıdaki tabloya bakın:
 
-| Removed control (API) | Recommended replacement | Associated APIs that are removed |
+| Kaldırılan denetim (API) | Önerilen değiştirme | Kaldırılan ilişkili API 'Ler |
 |-|-|-|
 | DataGrid | DataGridView | DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType |
-| ToolBar | ToolStrip | ToolBarAppearance |
-| ToolBarButton | ToolStripButton | ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign|
+| ToolBar | ToolStrip | Araç Barappearance |
+| ToolBarButton | ToolStripButton | Toolbarbuttonkerkeventargs, Toolbarbuttonclick Kerkeventhandler, ToolBarButtonStyle, ToolBarTextAlign|
 | ContextMenu | ContextMenuStrip | |
 | Menü | ToolStripDropDown, ToolstripDropDownMenu | MenuItemCollection |
 | MainMenu | MenuStrip | |
-| MenuItem | ToolstripMenuItem | |
+| MenuItem | ToolStripMenuItem | |
 
 #### <a name="category"></a>Kategori
 

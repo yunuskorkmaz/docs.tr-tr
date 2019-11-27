@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450202"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl Numaralandırması
-Contains values that describe method implementation features.  
+Yöntem uygulama özelliklerini tanımlayan değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -52,33 +52,33 @@ typedef enum CorMethodImpl {
 } CorMethodImpl;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`miCodeTypeMask`|Flags that describe code type.|  
-|`miIL`|Specifies that the method implementation is Microsoft intermediate language (MSIL).|  
-|`miNative`|Specifies that the method implementation is native.|  
-|`miOPTIL`|Specifies that the method implementation is OPTIL.|  
-|`miRuntime`|Specifies that the method implementation is provided by the common language runtime.|  
-|`miManagedMask`|Flags that indicate whether the code is managed or unmanaged.|  
-|`miUnmanaged`|Specifies that the method implementation is unmanaged.|  
-|`miManaged`|Specifies that the method implementation is managed.|  
-|`miForwardRef`|Specifies that the method is defined. This flag is used primarily in merge scenarios.|  
-|`miPreserveSig`|Specifies that the method signature cannot be mangled for an HRESULT conversion.|  
-|`miInternalCall`|Reserved for internal use by the common language runtime.|  
-|`miSynchronized`|Specifies that the method is single-threaded through its body.|  
-|`miNoInlining`|Specifies that the method cannot be inlined.|  
-|`miAggressiveInlining`|Specifies that the method should be inlined if possible.|  
-|`miNoOptimization`|Specifies that the method should not be optimized.|  
-|`miMaxMethodImplVal`|The maximum valid value for a `CorMethodImpl`.|  
+|`miCodeTypeMask`|Kod türünü tanımlayan bayraklar.|  
+|`miIL`|Yöntem uygulamasının Microsoft ara dil (MSIL) olduğunu belirtir.|  
+|`miNative`|Yöntem uygulamasının yerel olduğunu belirtir.|  
+|`miOPTIL`|Yöntem uygulamasının OPTIL olduğunu belirtir.|  
+|`miRuntime`|Yöntem uygulamasının ortak dil çalışma zamanı tarafından sağlandığını belirtir.|  
+|`miManagedMask`|Kodun yönetilip yönetilmediğini belirten bayraklar.|  
+|`miUnmanaged`|Yöntem uygulamasının yönetilmediğini belirtir.|  
+|`miManaged`|Yöntem uygulamasının yönetileceğini belirtir.|  
+|`miForwardRef`|Yöntemin tanımlandığını belirtir. Bu bayrak birincil olarak birleştirme senaryolarında kullanılır.|  
+|`miPreserveSig`|Bir HRESULT dönüştürmesi için yöntem imzasının karıştırılamıyor olduğunu belirtir.|  
+|`miInternalCall`|Ortak dil çalışma zamanı tarafından iç kullanım için ayrılmıştır.|  
+|`miSynchronized`|Yöntemin gövdesinde tek iş parçacıklı olduğunu belirtir.|  
+|`miNoInlining`|Metodun satır içine alınamıyor olduğunu belirtir.|  
+|`miAggressiveInlining`|Mümkünse yöntemin satır içine alınmış olması gerektiğini belirtir.|  
+|`miNoOptimization`|Yöntemin iyileştirilmemelidir.|  
+|`miMaxMethodImplVal`|`CorMethodImpl`için geçerli en büyük değer.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

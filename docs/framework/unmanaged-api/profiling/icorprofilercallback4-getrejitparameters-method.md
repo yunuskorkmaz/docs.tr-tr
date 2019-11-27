@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439445"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>ICorProfilerCallback4::GetReJITParameters Yöntemi
-Allows the code profiler to set alternate code generation flags for a new recompiled method body.  
+Kod Profilcisi yeni bir yeniden derlenmiş Yöntem gövdesi için alternatif kod oluşturma bayrakları ayarlamasına izin verir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,25 +33,25 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
   
 ## <a name="parameters"></a>Parametreler  
  `moduleID`  
- [in] The module that contains the method for which the CLR needs JIT recompilation parameters.  
+ 'ndaki CLR 'nin JıT yeniden derleme parametrelerine ihtiyacı olan yöntemini içeren modül.  
   
  `methodId`  
- [in] The `MethodDef` of the method for which the CLR needs JIT recompilation parameters.  
+ 'ndaki CLR 'nin JıT yeniden derleme parametrelerine ihtiyacı olan metodun `MethodDef`.  
   
  `pFunctionControl`  
- [in] A pointer to an [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface that the profiler can use to provide JIT recompilation information for the method being recompiled.  
+ 'ndaki Profiler 'ın yeniden Derlenmekte olan yönteme yönelik JıT yeniden derleme bilgileri sağlamak için kullanabileceği [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) arabirimine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The CLR issues a `GetReJITParameters` callback so that the profiler can specify the parameters for recompiling a given method. The `GetReJITParameters` callback is issued only once per function; the parameters supplied by the profiler apply to all instances of that function.  
+ CLR, profil oluşturucunun belirli bir yöntemi yeniden derleme parametrelerini belirleyebilmesi için `GetReJITParameters` bir geri çağırma işlemini yayınlar. `GetReJITParameters` geri çağırması her işlev için yalnızca bir kez verilir; Profil Oluşturucu tarafından sağlanan parametreler, bu işlevin tüm örneklerine uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

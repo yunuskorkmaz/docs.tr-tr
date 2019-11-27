@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting procedures
+title: Sorun giderme yordamları
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
@@ -15,13 +15,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352508"
 ---
-# <a name="troubleshooting-procedures-visual-basic"></a>Troubleshooting procedures (Visual Basic)
+# <a name="troubleshooting-procedures-visual-basic"></a>Sorun giderme yordamları (Visual Basic)
 
-This page lists some common problems that can occur when working with procedures.  
+Bu sayfada, yordamlarla çalışırken oluşabilecek bazı yaygın sorunlar listelenmektedir.  
   
-## <a name="returning-an-array-type-from-a-function-procedure"></a>Returning an array type from a function procedure
+## <a name="returning-an-array-type-from-a-function-procedure"></a>Bir işlev yordamından dizi türü döndürme
 
-If a `Function` procedure returns an array data type, you cannot use the `Function` name to store values in the elements of the array. If you attempt to do this, the compiler interprets it as a call to the `Function`. The following example generates compiler errors:
+Bir `Function` yordam bir dizi veri türü döndürürse, değerleri dizinin öğelerine depolamak için `Function` adı kullanamazsınız. Bunu yapmayı denerseniz, derleyici onu `Function`bir çağrı olarak yorumlar. Aşağıdaki örnek derleyici hataları üretir:
   
 ```vb
 Function AllOnes(n As Integer) As Integer()
@@ -35,92 +35,92 @@ Function AllOnes(n As Integer) As Integer()
 End Function
 ```
 
-The statement `AllOnes(i) = 1` generates a compiler error because it appears to call `AllOnes` with an argument of the wrong data type (a scalar `Integer` instead of an `Integer` array). The statement `Return AllOnes()` generates a compiler error because it appears to call `AllOnes` with no argument.  
+İfade `AllOnes(i) = 1`, yanlış veri türünde bir bağımsız değişkenle (`Integer` dizisi yerine skaler bir `Integer`) çağrı `AllOnes` göründüğünden bir derleyici hatası oluşturuyor. İfade `Return AllOnes()`, bir derleyici hatası oluşturur çünkü bu, bağımsız değişken olmadan `AllOnes` çağrısı görünüyor.  
   
- **Correct approach:** To be able to modify the elements of an array that is to be returned, define an internal array as a local variable. The following example compiles without error:
+ **Doğru yaklaşım:** Döndürülecek bir dizinin öğelerini değiştirebilmek için, bir iç diziyi yerel bir değişken olarak tanımlayın. Aşağıdaki örnek hata olmadan derlenir:
 
  [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]
 
-## <a name="argument-not-modified-by-procedure-call"></a>Argument not modified by procedure call
+## <a name="argument-not-modified-by-procedure-call"></a>Bağımsız değişken yordam çağrısı tarafından değiştirilmedi
 
-If you intend to allow a procedure to change a programming element underlying an argument in the calling code, you must pass it by reference. But a procedure can access the elements of a reference type argument even if you pass it by value.
+Çağıran koddaki bağımsız değişkenin temelindeki bir programlama öğesini değiştirme yordamına izin vermeyi düşünüyorsanız, başvuruya göre geçirmeniz gerekir. Ancak bir yordam, bir başvuru türü bağımsız değişkeninin öğelerine değere göre geçseniz bile bu öğelere erişebilir.
 
-- **Underlying variable**. To allow the procedure to replace the value of the underlying variable element itself, the procedure must declare the parameter [ByRef](../../../language-reference/modifiers/byref.md). Also, the calling code must not enclose the argument in parentheses, because that would override the `ByRef` passing mechanism.
+- **Temel alınan değişken**. Yordamın temel alınan değişken öğesinin değerini değiştirmesine izin vermek için, yordam [ByRef](../../../language-reference/modifiers/byref.md)parametresini bildirmelidir. Ayrıca, çağıran kodun bağımsız değişkeni parantez içine almamalıdır, çünkü bu `ByRef` geçen mekanizmayı geçersiz kılar.
 
-- **Reference type elements**. If you declare a parameter [ByVal](../../../language-reference/modifiers/byval.md), the procedure cannot modify the underlying variable element itself. However, if the argument is a reference type, the procedure can modify the members of the object to which it points, even though it cannot replace the variable's value. For example, if the argument is an array variable, the procedure cannot assign a new array to it, but it can change one or more of its elements. The changed elements are reflected in the underlying array variable in the calling code.
+- **Başvuru türü öğeleri**. Bir [ByVal](../../../language-reference/modifiers/byval.md)parametresi bildirirseniz yordam, temeldeki değişken öğesinin kendisini değiştiremez. Ancak bağımsız değişken bir başvuru türü ise, yordam değişkenin değerini değiştiremese de, işaret ettiği nesnenin üyelerini değiştirebilir. Örneğin, bağımsız değişken bir dizi değişkenidir, yordam buna yeni bir dizi atayamaz, ancak bir veya daha fazla öğesini değiştirebilir. Değiştirilen öğeler, çağıran koddaki temeldeki dizi değişkenine yansıtılır.
 
-The following example defines two procedures that take an array variable by value and operate on its elements. Procedure `increase` simply adds one to each element. Procedure `replace` assigns a new array to the parameter `a()` and then adds one to each element. However, the reassignment does not affect the underlying array variable in the calling code because `a()` is declared `ByVal`.
+Aşağıdaki örnek, bir dizi değişkenini değere göre alan ve öğelerinde çalışan iki yordamı tanımlar. Yordam `increase` her bir öğeye yalnızca bir tane ekler. Yordam `replace`, `a()` parametresine yeni bir dizi atar ve sonra her öğeye bir tane ekler. Ancak, `a()` `ByVal`bildirildiği için yeniden atama, çağıran koddaki temeldeki dizi değişkenini etkilemez.
 
 [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]
 
 [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]
 
-The following example makes calls to `increase` and `replace`:
+Aşağıdaki örnek `increase` ve `replace`çağrıları yapar:
 
 [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]
   
-The first `MsgBox` call displays "After increase(n): 11, 21, 31, 41". Because `n` is a reference type, `increase` can change its members, even though it is passed `ByVal`.
+İlk `MsgBox` çağrısı, "artdıktan sonra (n): 11, 21, 31, 41" olarak görüntülenir. `n` bir başvuru türü olduğundan, `increase` `ByVal`geçirilmiş olsa bile üyelerini değiştirebilir.
 
-The second `MsgBox` call displays "After replace(n): 11, 21, 31, 41". Because `n` is passed `ByVal`, `replace` cannot modify the variable `n` by assigning a new array to it. When `replace` creates the new array instance `k` and assigns it to the local variable `a`, it loses the reference to `n` passed in by the calling code. When it increments the members of `a`, only the local array `k` is affected.
+İkinci `MsgBox` çağrısı "yenisiyle değiştirildikten sonra (n): 11, 21, 31, 41" olarak görüntülenir. `n` `ByVal`geçirildiğinden `replace`, bu değişkene yeni bir dizi atayarak `n` değiştirebilir. `replace` yeni dizi örneği `k` oluşturduğunda ve yerel değişkene `a`atarken, çağıran kod tarafından geçirilen `n` başvurusunu kaybeder. `a`üyelerini artırdığı zaman, yalnızca yerel dizi `k` etkilenir.
 
-**Correct approach:** To be able to modify an underlying variable element itself, pass it by reference. The following example shows the change in the declaration of `replace` that allows it to replace one array with another in the calling code:
+**Doğru yaklaşım:** Temel bir değişken öğesinin kendisini değiştirebilmek için, başvuruya göre geçirin. Aşağıdaki örnek, bir diziyi çağıran kodda başka bir dizi ile değiştirmesine izin veren `replace` bildiriminde değişiklik gösterir:
 
 [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]
 
-## <a name="unable-to-define-an-overload"></a>Unable to define an overload
+## <a name="unable-to-define-an-overload"></a>Aşırı yükleme tanımlanamıyor
 
-If you want to define an overloaded version of a procedure, you must use the same name but a different signature. If the compiler cannot differentiate your declaration from an overload with the same signature, it generates an error.
+Bir yordamın aşırı yüklenmiş bir sürümünü tanımlamak istiyorsanız, aynı adı ancak farklı bir imzayı kullanmanız gerekir. Derleyici, bildirimi aynı imzaya sahip bir aşırı yükten ayırt edemez bir hata oluşturur.
 
-The *signature* of a procedure is determined by the procedure name and the parameter list. Each overload must have the same name as all the other overloads but must differ from all of them in at least one of the other components of the signature. For more information, see [Procedure Overloading](./procedure-overloading.md).
+Bir yordamın *imzası* , yordam adı ve parametre listesine göre belirlenir. Her aşırı yükleme diğer tüm aşırı yüklemeleriyle aynı ada sahip olmalıdır, ancak imzaların diğer bileşenlerinden en az birinde farklı olmalıdır. Daha fazla bilgi için bkz. [yordam aşırı yüklemesi](./procedure-overloading.md).
 
-The following items, even though they pertain to the parameter list, are not components of a procedure's signature:
+Aşağıdaki öğeler, parametre listesine ait olsalar bile bir yordamın imzasının bileşenleri değildir:
 
-- Procedure modifier keywords, such as `Public`, `Shared`, and `Static`.
-- Parameter names.
-- Parameter modifier keywords, such as `ByRef` and `Optional`.
-- The data type of the return value (except for a conversion operator).
+- `Public`, `Shared`ve `Static`gibi yordam değiştirici anahtar sözcükleri.
+- Parametre adları.
+- `ByRef` ve `Optional`gibi parametre değiştirici anahtar sözcükleri.
+- Dönüş değerinin veri türü (bir dönüştürme işleci dışında).
 
-You cannot overload a procedure by varying only one or more of the preceding items.
+Bir yordamı yalnızca bir veya daha fazla önceki öğeden farklı şekilde değiştirerek aşırı yükleyemezsiniz.
 
-**Correct approach:** To be able to define a procedure overload, you must vary the signature. Because you must use the same name, you must vary the number, order, or data types of the parameters. In a generic procedure, you can vary the number of type parameters. In a conversion operator ([CType Function](../../../language-reference/functions/ctype-function.md)), you can vary the return type.
+**Doğru yaklaşım:** Bir yordam aşırı yüklemesi tanımlayabilmek için imzayı değişiklik yapmanız gerekir. Aynı adı kullanmanız gerektiğinden, parametrelerin sayı, sıra veya veri türleri arasında değişiklik yapmanız gerekir. Genel yordamda, tür parametrelerinin sayısını değiştirebilirsiniz. Bir dönüştürme işlecinde ([CType işlevi](../../../language-reference/functions/ctype-function.md)), dönüş türünü değiştirebilirsiniz.
 
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Overload resolution with Optional and ParamArray arguments
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Isteğe bağlı ve ParamArray bağımsız değişkenleriyle aşırı yükleme çözümü
 
-If you are overloading a procedure with one or more [Optional](../../../language-reference/modifiers/optional.md) parameters or a [ParamArray](../../../language-reference/modifiers/paramarray.md) parameter, you must avoid duplicating any of the *implicit overloads*. For information, see [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).
+Bir veya daha fazla [Isteğe bağlı](../../../language-reference/modifiers/optional.md) parametre ya da bir [ParamArray](../../../language-reference/modifiers/paramarray.md) parametresiyle bir yordamı aşırı yüklüyorsanız, *örtük aşırı yüklemelerin*hiçbirini çoğaltmaktan kaçınmanız gerekir. Daha fazla bilgi için bkz. [yordamları aşırı yükleme](./considerations-in-overloading-procedures.md).
 
-## <a name="calling-the-wrong-version-of-an-overloaded-procedure"></a>Calling the wrong version of an overloaded procedure
+## <a name="calling-the-wrong-version-of-an-overloaded-procedure"></a>Aşırı yüklenmiş yordamın yanlış sürümünü çağırma
 
-If a procedure has several overloaded versions, you should be familiar with all their parameter lists and understand how Visual Basic resolves calls among the overloads. Otherwise you could call an overload other than the intended one.
+Bir yordamda birkaç aşırı yüklenmiş sürüm varsa, tüm parametre listelerine alışkın olmanız ve Visual Basic aşırı yüklemeler arasında çağrıların nasıl çözümlendiğini anlamanız gerekir. Aksi takdirde, amaçlanan bir aşırı yüklemeyi çağırabilirsiniz.
 
-When you have determined which overload you want to call, be careful to observe the following rules:
+Hangi aşırı yüklemeyi çağırmak istediğinizi belirledikten sonra, aşağıdaki kuralları gözlemlemeye dikkat edin:
 
-- Supply the correct number of arguments, and in the correct order.  
-- Ideally, your arguments should have the exact same data types as the corresponding parameters. In any case, the data type of each argument must widen to that of its corresponding parameter. This is true even with the [Option Strict Statement](../../../language-reference/statements/option-strict-statement.md) set to `Off`. If an overload requires any narrowing conversion from your argument list, that overload is not eligible to be called.
-- If you supply arguments that require widening, make their data types as close as possible to the corresponding parameter data types. If two or more overloads accept your argument data types, the compiler resolves your call to the overload that calls for the least amount of widening.
+- Doğru sayıda bağımsız değişken sağlayın ve doğru sırada.  
+- İdeal olarak, bağımsız değişkenleriniz karşılık gelen parametrelerle tam olarak aynı veri türlerine sahip olmalıdır. Herhangi bir durumda, her bağımsız değişkenin veri türü karşılık gelen parametresinden sonra genişlemelidir. Bu, [katı ifadesiyle](../../../language-reference/statements/option-strict-statement.md) `Off`olarak ayarlanan seçenek ile birlikte geçerlidir. Aşırı yükleme, bağımsız değişken listenizden herhangi bir daraltma dönüştürmesi gerektiriyorsa, bu aşırı yükleme çağrılabilir.
+- Genişleyen bir bağımsız değişken sağlarsanız, veri türlerini karşılık gelen parametre veri türlerine mümkün olduğunca yakın hale getirin. İki veya daha fazla aşırı yükleme bağımsız değişken veri türlerinizi kabul ettiğinde, derleyici en az genişletme miktarını çağıran aşırı yüklemeye yönelik çağrınızı çözer.
 
-You can reduce the chance of data type mismatches by using the [CType Function](../../../language-reference/functions/ctype-function.md) conversion keyword when preparing your arguments.
+Bağımsız değişkenlerinizi hazırlarken [CType işlev](../../../language-reference/functions/ctype-function.md) dönüştürme anahtar sözcüğünü kullanarak veri türü uyuşmazlığı olasılığını azaltabilirsiniz.
 
-### <a name="overload-resolution-failure"></a>Overload resolution failure
+### <a name="overload-resolution-failure"></a>Aşırı yükleme çözümleme hatası
 
-When you call an overloaded procedure, the compiler attempts to eliminate all but one of the overloads. If it succeeds, it resolves the call to that overload. If it eliminates all the overloads, or if it cannot reduce the eligible overloads to a single candidate, it generates an error.
+Aşırı yüklenmiş bir yordamı çağırdığınızda, derleyici aşırı yüklerden biri hariç tümünü ortadan kaldırmaya çalışır. Başarılı olursa, bu aşırı yüklemeye çağrı çözülür. Tüm aşırı yüklemeleri ortadan kaldırarsa veya uygun olan aşırı yüklemeleri tek bir aday için azaltamazsanız bir hata oluşturur.
 
-The following example illustrates the overload resolution process:
+Aşağıdaki örnek, aşırı yükleme çözümleme işlemini göstermektedir:
 
 [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]
 
 [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]
   
-In the first call, the compiler eliminates the first overload because the type of the first argument (`Short`) narrows to the type of the corresponding parameter (`Byte`). It then eliminates the third overload because each argument type in the second overload (`Short` and `Single`) widens to the corresponding type in the third overload (`Integer` and `Single`). The second overload requires less widening, so the compiler uses it for the call.
+İlk çağrıda derleyici ilk tekrar yüklemeyi ortadan kaldırır çünkü ilk bağımsız değişkenin türü (`Short`) karşılık gelen parametrenin türüne (`Byte`) daraltır. İkinci aşırı yükteki (`Short` ve `Single`) her bağımsız değişken türü üçüncü Aşırı yükte (`Integer` ve `Single`) karşılık gelen türe widens için üçüncü aşırı yüklemeyi ortadan kaldırır. İkinci aşırı yükleme daha az genişletme gerektirir, bu nedenle derleyici onu çağrı için kullanır.
 
-In the second call, the compiler cannot eliminate any of the overloads on the basis of narrowing. It eliminates the third overload for the same reason as in the first call, because it can call the second overload with less widening of the argument types. However, the compiler cannot resolve between the first and second overloads. Each has one defined parameter type that widens to the corresponding type in the other (`Byte` to `Short`, but `Single` to `Double`). The compiler therefore generates an overload resolution error.
+İkinci çağrıda, derleyici daraltma temelinde aşırı yüklemelerin hiçbirini ortadan kaldırmaz. İkinci aşırı yükleme, bağımsız değişken türlerini daha az genişletme ile çağırabildiğinden, birinci çağrıdan itibaren aynı nedenden dolayı üçüncü aşırı yüklemeyi ortadan kaldırır. Ancak, derleyici birinci ve ikinci aşırı yüklemeler arasında çözümlenemez. Her biri, widens öğesine karşılık gelen türe (`Byte` `Short`, ancak `Double``Single`) sahip bir tanımlı parametre türüne sahiptir. Bu nedenle derleyici aşırı yükleme çözümlemesi hatası oluşturur.
 
-**Correct approach:** To be able to call an overloaded procedure without ambiguity, use [CType Function](../../../language-reference/functions/ctype-function.md) to match the argument data types to the parameter types. The following example shows a call to `z` that forces resolution to the second overload.
+**Doğru yaklaşım:** Aşırı yüklenmiş bir yordamı belirsizlik olmadan çağırabilmek için [CType işlevini](../../../language-reference/functions/ctype-function.md) kullanarak bağımsız değişken veri türlerini parametre türleriyle eşleştirin. Aşağıdaki örnek, ikinci aşırı yüklemeye çözümlemeyi zorlayan `z` bir çağrısını gösterir.
 
 [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]
 
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Overload resolution with Optional and ParamArray arguments
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Isteğe bağlı ve ParamArray bağımsız değişkenleriyle aşırı yükleme çözümü
 
-If two overloads of a procedure have identical signatures except that the last parameter is declared [Optional](../../../language-reference/modifiers/optional.md) in one and [ParamArray](../../../language-reference/modifiers/paramarray.md) in the other, the compiler resolves a call to that procedure according to the closest match. For more information, see [Overload Resolution](./overload-resolution.md).
+Bir yordamın iki aşırı yüklemesi aynı imzaya sahip ise, son parametrenin diğer bir ve [ParamArray](../../../language-reference/modifiers/paramarray.md) 'de [isteğe bağlı](../../../language-reference/modifiers/optional.md) olarak bildirildiği durumlar dışında, derleyici en yakın eşleşmeye göre o yordama bir çağrı çözer. Daha fazla bilgi için bkz. [aşırı yükleme çözünürlüğü](./overload-resolution.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

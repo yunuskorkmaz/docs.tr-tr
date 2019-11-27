@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443407"
 ---
 # <a name="imetadatavalidatevalidatemetadata-method"></a>IMetaDataValidate::ValidateMetaData Yöntemi
-Validates the metadata signatures of the objects in the current metadata scope.  
+Geçerli meta veri kapsamındaki nesnelerin meta veri imzalarını doğrular.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,13 +32,13 @@ HRESULT ValidateMetaData ();
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

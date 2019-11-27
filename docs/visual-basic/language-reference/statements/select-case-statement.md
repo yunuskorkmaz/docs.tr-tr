@@ -29,7 +29,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352821"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case Deyimi (Visual Basic)
-Runs one of several groups of statements, depending on the value of an expression.  
+Bir ifadenin değerine bağlı olarak çeşitli deyim gruplarından birini çalıştırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,39 +46,39 @@ End Select
   
 |Terim|Tanım|  
 |---|---|  
-|`testexpression`|Gerekli. Expression. Must evaluate to one of the elementary data types (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, and `UShort`).|  
-|`expressionlist`|Required in a `Case` statement. List of expression clauses representing match values for `testexpression`. Multiple expression clauses are separated by commas. Each clause can take one of the following forms:<br /><br /> -   *expression1* `To` *expression2*<br />-   [ `Is` ] *comparisonoperator* *expression*<br />-   *expression*<br /><br /> Use the `To` keyword to specify the boundaries of a range of match values for `testexpression`. The value of `expression1` must be less than or equal to the value of `expression2`.<br /><br /> Use the `Is` keyword with a comparison operator (`=`, `<>`, `<`, `<=`, `>`, or `>=`) to specify a restriction on the match values for `testexpression`. If the `Is` keyword is not supplied, it is automatically inserted before *comparisonoperator*.<br /><br /> The form specifying only `expression` is treated as a special case of the `Is` form where *comparisonoperator* is the equal sign (`=`). This form is evaluated as `testexpression` = `expression`.<br /><br /> The expressions in `expressionlist` can be of any data type, provided they are implicitly convertible to the type of `testexpression` and the appropriate `comparisonoperator` is valid for the two types it is being used with.|  
-|`statements`|İsteğe bağlı. One or more statements following `Case` that run if `testexpression` matches any clause in `expressionlist`.|  
-|`elsestatements`|İsteğe bağlı. One or more statements following `Case Else` that run if `testexpression` does not match any clause in the `expressionlist` of any of the `Case` statements.|  
-|`End Select`|Terminates the definition of the `Select`...`Case` construction.|  
+|`testexpression`|Gerekli. İfadesini. , Temel veri türlerinden biri olarak değerlendirilmelidir (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`ve `UShort`).|  
+|`expressionlist`|`Case` bildiriminde gereklidir. `testexpression`için eşleşme değerlerini temsil eden ifade yan tümceleri listesi. Birden çok ifade yan tümceleri virgüller ile ayrılmıştır. Her yan tümce aşağıdaki formlardan birini alabilir:<br /><br /> -   *ifade1* `To` *İfade2*<br />-[`Is`] *ComparisonOperator* *ifadesi*<br />-   *ifadesi*<br /><br /> `testexpression`için bir eşleşme değerleri aralığının sınırlarını belirtmek üzere `To` anahtar sözcüğünü kullanın. `expression1` değeri `expression2`değerinden küçük veya bu değere eşit olmalıdır.<br /><br /> `<=`eşleşme değerlerinde bir kısıtlama belirtmek için karşılaştırma işleci (`=`, `<>`, `<`, `>`, `>=`veya `testexpression`) ile `Is` anahtar sözcüğünü kullanın. `Is` anahtar sözcüğü sağlanmazsa, *ComparisonOperator*öğesinden önce otomatik olarak eklenir.<br /><br /> Yalnızca `expression` belirten form, *ComparisonOperator* eşittir işareti (`=`) olduğu `Is` formunda özel bir durum olarak değerlendirilir. Bu form `testexpression` = `expression`olarak değerlendirilir.<br /><br /> `expressionlist` ifadeler herhangi bir veri türünde olabilir, bu, `testexpression` türüne örtülü olarak dönüştürülebilir ve uygun `comparisonoperator`, birlikte kullanıldığı iki tür için geçerlidir.|  
+|`statements`|İsteğe bağlı. `testexpression` `expressionlist`herhangi bir yan tümcesiyle eşleşiyorsa çalıştırılan `Case` izleyen bir veya daha fazla deyim.|  
+|`elsestatements`|İsteğe bağlı. `testexpression` `Case Else` sonraki bir veya daha fazla deyim, `Case` deyimlerinin herhangi bir `expressionlist` hiçbir yan tümcesiyle eşleşmezse.|  
+|`End Select`|`Select`...`Case` oluşturma tanımını sonlandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- If `testexpression` matches any `Case` `expressionlist` clause, the statements following that `Case` statement run up to the next `Case`, `Case Else`, or `End Select` statement. Control then passes to the statement following `End Select`. If `testexpression` matches an `expressionlist` clause in more than one `Case` clause, only the statements following the first match run.  
+ `testexpression` herhangi bir `Case` `expressionlist` yan tümcesiyle eşleşiyorsa, bu `Case` deyimini izleyen deyimler bir sonraki `Case`, `Case Else`veya `End Select` ifadesine kadar çalışır. Denetim daha sonra `End Select`izleyen ifadeye geçer. `testexpression` birden fazla `Case` yan tümcesindeki bir `expressionlist` yan tümcesiyle eşleşiyorsa, yalnızca ilk eşleşmeyi izleyen deyimler çalıştırılır.  
   
- The `Case Else` statement is used to introduce the `elsestatements` to run if no match is found between the `testexpression` and an `expressionlist` clause in any of the other `Case` statements. Although not required, it is a good idea to have a `Case Else` statement in your `Select Case` construction to handle unforeseen `testexpression` values. If no `Case` `expressionlist` clause matches `testexpression` and there is no `Case Else` statement, control passes to the statement following `End Select`.  
+ `Case Else` deyimi, diğer `Case` deyimlerinin herhangi birinde `testexpression` ve `expressionlist` tümcesi arasında eşleşme bulunmazsa çalıştırılacak `elsestatements` tanıtmak için kullanılır. Gerekli olmasa da, öngörülemeyen `testexpression` değerlerini işlemek için `Select Case` oluşturma konusunda bir `Case Else` deyiminin olması iyi bir fikirdir. `Case` `expressionlist` yan tümcesinin `testexpression` eşleşmez ve `Case Else` deyimi yoksa, denetim `End Select`izleyen ifadeye geçer.  
   
- You can use multiple expressions or ranges in each `Case` clause. For example, the following line is valid.  
+ Her bir `Case` yan tümcesinde birden çok ifade veya Aralık kullanabilirsiniz. Örneğin, aşağıdaki satır geçerlidir.  
   
  `Case 1 To 4, 7 To 9, 11, 13, Is > maxNumber`  
   
 > [!NOTE]
-> The `Is` keyword used in the `Case` and `Case Else` statements is not the same as the [Is Operator](../../../visual-basic/language-reference/operators/is-operator.md), which is used for object reference comparison.  
+> `Case` ve `Case Else` deyimlerde kullanılan `Is` anahtar sözcüğü, nesne başvuru karşılaştırması için kullanılan [, Işleç işleci](../../../visual-basic/language-reference/operators/is-operator.md)ile aynı değildir.  
   
- You can specify ranges and multiple expressions for character strings. In the following example, `Case` matches any string that is exactly equal to "apples", has a value between "nuts" and "soup" in alphabetical order, or contains the exact same value as the current value of `testItem`.  
+ Karakter dizeleri için aralıklar ve birden çok ifade belirtebilirsiniz. Aşağıdaki örnekte, `Case`, "elmalar" ile tam olarak eşit olan herhangi bir dizeyle eşleşir, alfabetik düzende "nut" ve "Soup" arasında bir değere sahiptir veya geçerli `testItem`değeri ile tam aynı değeri içerir.  
   
  `Case "apples", "nuts" To "soup", testItem`  
   
- The setting of `Option Compare` can affect string comparisons. Under `Option Compare Text`, the strings "Apples" and "apples" compare as equal, but under `Option Compare Binary`, they do not.  
+ `Option Compare` ayarı, dize karşılaştırmaları etkileyebilir. `Option Compare Text`altında, "elmalar" ve "elmalar" dizeleri eşit olarak karşılaştırılır, ancak `Option Compare Binary`altında değildir.  
   
 > [!NOTE]
-> A `Case` statement with multiple clauses can exhibit behavior known as *short-circuiting*. Visual Basic evaluates the clauses from left to right, and if one produces a match with `testexpression`, the remaining clauses are not evaluated. Short-circuiting can improve performance, but it can produce unexpected results if you are expecting every expression in `expressionlist` to be evaluated. For more information on short-circuiting, see [Boolean Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).  
+> Birden çok yan tümcesini içeren `Case` bir ifade, kısa devre *dışı*olarak bilinen davranışları ortaya kaydedebilir. Visual Basic yan tümceleri soldan sağa değerlendirir ve biri `testexpression`bir eşleşme üretirse, kalan yan tümceler değerlendirilmez. Kısa devre, performansı iyileştirebilir, ancak `expressionlist` içindeki her ifadenin değerlendirilmesi bekleniyorsa beklenmeyen sonuçlar üretebilir. Kısa devre dışı hakkında daha fazla bilgi için bkz. [Boolean ifadeleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).  
   
- If the code within a `Case` or `Case Else` statement block does not need to run any more of the statements in the block, it can exit the block by using the `Exit Select` statement. This transfers control immediately to the statement following `End Select`.  
+ Bir `Case` veya `Case Else` deyim bloğundaki kodun bloğunda daha fazla deyim çalıştırması gerekmiyorsa, `Exit Select` deyimini kullanarak bloğundan çıkabilir. Bu, denetimi hemen `End Select`izleyen deyime aktarır.  
   
- `Select Case` constructions can be nested. Each nested `Select Case` construction must have a matching `End Select` statement and must be completely contained within a single `Case` or `Case Else` statement block of the outer `Select Case` construction within which it is nested.  
+ `Select Case` kurulumlarını iç içe olabilir. Her iç içe `Select Case` oluşturma, eşleşen bir `End Select` bildirimine sahip olmalı ve iç içe geçmiş dış `Select Case` oluşturma işleminin tek bir `Case` veya `Case Else` bir ifade bloğunda tamamen yer almalıdır.  
   
 ## <a name="example"></a>Örnek  
- The following example uses a `Select Case` construction to write a line corresponding to the value of the variable `number`. The second `Case` statement contains the value that matches the current value of `number`, so the statement that writes "Between 6 and 8, inclusive" runs.  
+ Aşağıdaki örnek, `number`değişkeninin değerine karşılık gelen bir satırı yazmak için `Select Case` oluşturma kullanır. İkinci `Case` ifade, geçerli `number`değeri ile eşleşen değeri içerir, bu nedenle "6 ve 8. dahil" olarak yazan ifade çalışır.  
   
  [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  
   

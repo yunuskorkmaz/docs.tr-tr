@@ -15,20 +15,20 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448544"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>Tanılama Sembol Deposu Numaralandırmaları
-This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.  
+Bu konuda, tanılama sembol deposu API 'sinin kullandığı yönetilmeyen numaralandırmalar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [CorSymAddrKind Sabit Listesi](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
- Indicates the type of memory address.  
+ Bellek adresi türünü gösterir.  
   
  [CorSymSearchPolicyAttributes Sabit Listesi](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- Specifies the policy to be used when doing a search for a symbol reader.  
+ Sembol okuyucu ararken kullanılacak ilkeyi belirtir.  
   
  [CorSymVarFlag Sabit Listesi](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
- Indicates whether a variable is compiler-generated.  
+ Bir değişkenin derleyici tarafından oluşturulup oluşturulmayacağını gösterir.  
   
  [NOTIFY_FILTER Sabit Listesi](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
- Identifies callbacks for debugger functions.  
+ Hata ayıklayıcı işlevleri için geri çağırmaları tanımlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

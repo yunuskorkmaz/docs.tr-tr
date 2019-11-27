@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437890"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod Yöntemi
-Gets a pointer to the MethodDef token for the method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
+Belirtilen <xref:System.Type> içine alınmış ve belirtilen ad ve meta veri imzasına sahip olan metodun MethodDef belirtecine yönelik bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,35 +39,35 @@ HRESULT FindMethod (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- [in] The `mdTypeDef` token for the type (a class or interface) that encloses the member to search for. If this value is `mdTokenNil`, then the lookup is done for a global function.  
+ 'ndaki Aramak için üyeyi kapsayan türün `mdTypeDef` belirteci (bir sınıf veya arabirim). Bu değer `mdTokenNil`, genel bir işlev için arama yapılır.  
   
  `szName`  
- [in] The name of the method to search for.  
+ 'ndaki Aranacak yöntemin adı.  
   
  `pvSigBlob`  
- [in] A pointer to the binary metadata signature of the method.  
+ 'ndaki Metodun ikili meta veri imzasına yönelik bir işaretçi.  
   
  `cbSigBlob`  
- [in] The size in bytes of `pvSigBlob`.  
+ 'ndaki `pvSigBlob`bayt cinsinden boyutu.  
   
  `pmb`  
- [out] A pointer to the matching MethodDef token.  
+ dışı Eşleşen MethodDef belirtecine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- You specify the method using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`). There might be multiple methods with the same name in a class or interface. In that case, pass the method's signature to find the unique match.  
+ Yöntemi kapsayan sınıfını veya arabirimini (`td`), adını (`szName`) ve isteğe bağlı olarak imzasını (`pvSigBlob`) kullanarak belirtirsiniz. Bir sınıfta veya arabirimde aynı ada sahip birden çok yöntem olabilir. Bu durumda, benzersiz eşleşmeyi bulmak için yöntemin imzasını geçirin.  
   
- The signature passed to `FindMethod` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMethod`.  
+ İmzaların belirli bir kapsama bağlandığı için `FindMethod` geçirilen imza geçerli kapsamda oluşturulmuş olmalıdır. İmza, kapsayan sınıf veya değer türünü tanımlayan bir belirteç ekleyebilir. Belirteç, yerel TypeDef tablosunun bir dizinidir. Geçerli kapsamın bağlamı dışında bir çalışma zamanı imzası derlenemez ve bu imzayı `FindMethod`giriş olarak kullanabilirsiniz.  
   
- `FindMethod` finds only methods that were defined directly in the class or interface; it does not find inherited methods.  
+ `FindMethod` yalnızca doğrudan sınıfta veya arabirimde tanımlanmış yöntemleri bulur; devralınan yöntemleri bulmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436333"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer Metodu
-Gets a buffer of the appropriate size for the method at the specified relative virtual address.  
+Belirtilen göreli sanal adreste Yöntem için uygun boyutun bir arabelleğini alır.  
   
- This method is obsolete and should not be used.  
+ Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +38,19 @@ HRESULT GetMethodBuffer (
   
 ## <a name="parameters"></a>Parametreler  
  `RVA`  
- [in] The relative virtual address of the method for which to return a buffer.  
+ 'ndaki Arabellek döndürülecek yöntemin göreli sanal adresi.  
   
  `lpBuffer`  
- [out] A pointer to the returned buffer.  
+ dışı Döndürülen arabelleğin işaretçisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

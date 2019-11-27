@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436854"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken Yöntemi
-Gets the binary metadata signature associated with the specified token.  
+Belirtilen belirteçle ilişkili ikili meta veri imzasını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT GetSigFromToken (
   
 ## <a name="parameters"></a>Parametreler  
  `mdSig`  
- [in] The token to return the binary metadata signature for.  
+ 'ndaki İçin ikili meta veri imzasını döndürecek belirteç.  
   
  `ppvSig`  
- [out] A pointer to the returned metadata signature.  
+ dışı Döndürülen meta veri imzasına yönelik bir işaretçi.  
   
  `pcbSig`  
- [out] The size in bytes of the binary metadata signature.  
+ dışı İkili meta veri imzasının bayt cinsinden boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

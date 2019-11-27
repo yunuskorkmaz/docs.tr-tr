@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437104"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>IMetaDataImport::GetPinvokeMap Yöntemi
-Gets a ModuleRef token to represent the target assembly of a PInvoke call.  
+Bir PInvoke çağrısının hedef derlemesini temsil eden bir ModuleRef belirteci alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,31 +40,31 @@ HRESULT GetPinvokeMap (
   
 ## <a name="parameters"></a>Parametreler  
  `tk`  
- [in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.  
+ 'ndaki İçin PInvoke eşleme meta verilerini almak için FieldDef veya MethodDef belirteci.  
   
  `pdwMappingFlags`  
- [out] A pointer to flags used for mapping. This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.  
+ dışı Eşleme için kullanılan bayrakların işaretçisi. Bu değer, [Corpınvokemap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) numaralandırmasındaki bir bit dır.  
   
  `szImportName`  
- [out] The name of the unmanaged target DLL.  
+ dışı Yönetilmeyen hedef DLL 'in adı.  
   
  `cchImportName`  
- [in] The size in wide characters of `szImportName`.  
+ 'ndaki `szImportName`geniş karakterdeki boyut.  
   
  `pchImportName`  
- [out] The number of wide characters returned in `szImportName`.  
+ dışı `szImportName`' de döndürülen geniş karakter sayısı.  
   
  `pmrImportDLL`  
- [out] A pointer to a ModuleRef token that represents the unmanaged target object library.  
+ dışı Yönetilmeyen hedef nesne kitaplığını temsil eden bir ModuleRef belirtecinin işaretçisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

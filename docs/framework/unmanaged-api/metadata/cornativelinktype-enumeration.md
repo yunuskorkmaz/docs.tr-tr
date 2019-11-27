@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436620"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType Numaralandırması
-Provides values that indicate the type linked in native code.  
+Yerel kodda bağlantılı türü gösteren değerler sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,21 +42,21 @@ typedef enum
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`nltNone`|Indicates that none of the keywords are specified.|  
-|`nltAnsi`|Indicates that an ANSI keyword is specified.|  
-|`nltUnicode`|Indicates that a Unicode keyword is specified|  
-|`nltAuto`|Indicates that an auto keyword is specified.|  
-|`nltOle`|Indicates that an OLE keyword is specified.|  
+|`nltNone`|Anahtar sözcüklerin hiçbirinin belirtilmediğini belirtir.|  
+|`nltAnsi`|Bir ANSI anahtar sözcüğünün belirtildiğini belirtir.|  
+|`nltUnicode`|Unicode anahtar sözcüğünün belirtildiğini belirtir|  
+|`nltAuto`|Bir auto anahtar sözcüğünün belirtildiğini gösterir.|  
+|`nltOle`|OLE anahtar sözcüğünün belirtildiğini belirtir.|  
 |`nltMaxValue`|Kullanılmadı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

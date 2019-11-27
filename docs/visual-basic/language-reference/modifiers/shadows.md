@@ -20,31 +20,31 @@ ms.locfileid: "74351270"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 
-Specifies that a declared programming element redeclares and hides an identically named element, or set of overloaded elements, in a base class.
+Bir temel sınıfta, belirtilen bir programlama öğesinin, aynı adlı bir öğeyi yeniden bildirdiğini ve daha fazla yüklenmiş öğeler kümesini gizlediğini belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-The main purpose of shadowing (which is also known as *hiding by name*) is to preserve the definition of your class members. The base class might undergo a change that creates an element with the same name as one you have already defined. If this happens, the `Shadows` modifier forces references through your class to be resolved to the member you defined, instead of to the new base class element.
+Gölgeleme için ana amaç ( *ada göre gizleme*olarak da bilinir), sınıf üyelerinizin tanımını korur. Temel sınıf, zaten tanımlamış olduğunuz adla aynı ada sahip bir öğe oluşturan bir değişikliği olumsuz etkileyebilir. Bu durumda `Shadows` değiştirici, sınıfınızın içindeki başvuruyu, yeni temel sınıf öğesi yerine tanımladığınız üyeye çözümlenmeye zorlar.
 
-Both shadowing and overriding redefine an inherited element, but there are significant differences between the two approaches. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+Hem gölgeleme hem de geçersiz kılma devralınan bir öğeyi yeniden tanımlayın, ancak iki yaklaşım arasında önemli farklılıklar vardır. Daha fazla bilgi için [Visual Basic 'Da gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)bölümüne bakın.
 
 ## <a name="rules"></a>Kurallar
 
-- **Declaration Context.** You can use `Shadows` only at class level. This means the declaration context for a `Shadows` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+- **Bildirim bağlamı.** `Shadows` yalnızca sınıf düzeyinde kullanabilirsiniz. Yani, bir `Shadows` öğesi için bildirim bağlamı bir sınıf olmalıdır ve kaynak dosya, ad alanı, arabirim, modül, yapı veya yordam olamaz.
 
-  You can declare only one shadowing element in a single declaration statement.
+  Tek bir bildirim ifadesinde yalnızca bir gölgeleme öğesi bildirebilirsiniz.
 
-- **Combined Modifiers.** You cannot specify `Shadows` together with `Overloads`, `Overrides`, or `Static` in the same declaration.
+- **Birleşik değiştiriciler.** Aynı bildirimde `Overloads`, `Overrides`veya `Static` birlikte `Shadows` belirtemezsiniz.
 
-- **Element Types.** You can shadow any kind of declared element with any other kind. If you shadow a property or procedure with another property or procedure, the parameters and the return type do not have to match those in the base class property or procedure.
+- **Öğe türleri.** Herhangi bir tür tanımlanmış öğeyi başka bir tür ile gölgelendirebilmeniz gerekir. Bir özelliği veya yordamı başka bir özellik veya yordamla gölgelendirebiliyorsanız, parametrelerin ve dönüş türünün temel sınıf özelliği veya yordamındakilerle eşleşmesi gerekmez.
 
-- **Accessing.** The shadowed element in the base class is normally unavailable from within the derived class that shadows it. However, the following considerations apply.
+- **Erişme.** Temel sınıftaki gölgelendirilmiş öğe, normalde onu gölgelendirilebilen türetilmiş sınıfın içinden kullanılamaz. Ancak aşağıdaki noktalar geçerlidir.
 
-  - If the shadowing element is not accessible from the code referring to it, the reference is resolved to the shadowed element. For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.
+  - Gölgeleme öğesine başvuran koddan erişilebilir değilse, başvuru gölgelendirilmiş öğe olarak çözümlenir. Örneğin, bir `Private` öğesi bir temel sınıf öğesini göltikten sonra, `Private` öğesine erişim izni olmayan kod bunun yerine temel sınıf öğesine erişir.
 
-  - If you shadow an element, you can still access the shadowed element through an object declared with the type of the base class. You can also access it through `MyBase`.
+  - Bir öğeyi gölgelendiriseniz, taban sınıfının türüyle belirtilen bir nesne aracılığıyla gölgelendirilmiş öğeye erişmeye devam edebilirsiniz. Ayrıca, `MyBase`aracılığıyla da erişebilirsiniz.
 
-The `Shadows` modifier can be used in these contexts:
+`Shadows` değiştiricisi şu bağlamlarda kullanılabilir:
 
 - [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
 
@@ -82,4 +82,4 @@ The `Shadows` modifier can be used in these contexts:
 - [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

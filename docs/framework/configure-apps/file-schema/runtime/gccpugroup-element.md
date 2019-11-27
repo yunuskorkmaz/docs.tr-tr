@@ -12,13 +12,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430485"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpuGroup> Element
+# <a name="gccpugroup-element"></a>\<GCCpuGroup > öğesi
 
-Specifies whether garbage collection supports multiple CPU groups.
+Çöp toplamanın birden çok CPU grubunu destekleyip desteklemediğini belirtir.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**
+[ **\<yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<çalışma zamanı >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup >**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,14 +35,14 @@ Specifies whether garbage collection supports multiple CPU groups.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`enabled`|Gerekli öznitelik.<br /><br /> Specifies whether garbage collection supports multiple CPU groups.|
+|`enabled`|Gerekli öznitelik.<br /><br /> Çöp toplamanın birden çok CPU grubunu destekleyip desteklemediğini belirtir.|
 
 ## <a name="enabled-attribute"></a>etkin Öznitelik
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`false`|Garbage collection does not support multiple CPU groups. Bu varsayılandır.|
-|`true`|Garbage collection supports multiple CPU groups, if server garbage collection is enabled.|
+|`false`|Çöp toplama birden çok CPU grubunu desteklemiyor. Bu varsayılandır.|
+|`true`|Çöp toplama, sunucu çöp toplama etkinse birden çok CPU grubunu destekler.|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -57,14 +57,14 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.
+Bir bilgisayarda birden çok CPU grubu olduğunda ve sunucu çöp toplama özelliği etkin olduğunda (bkz. [\<gcServer >](gcserver-element.md) öğesi), bu ÖĞENIN tüm CPU gruplarında çöp toplamayı genişlettiği ve Heap 'ler oluştururken ve bunları dengeleyerek tüm çekirdekleri hesaba getirecek şekilde etkinleştirir.
 
 > [!NOTE]
-> This element applies only to garbage collection threads. To enable the runtime to distribute user threads across all CPU groups, you must also enable the [\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md) element.
+> Bu öğe yalnızca çöp toplama iş parçacıkları için geçerlidir. Çalışma zamanının tüm CPU gruplarında Kullanıcı iş parçacıklarını dağıtmasını sağlamak için, [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) öğesini de etkinleştirmeniz gerekir.
 
 ## <a name="example"></a>Örnek
 
-The following example shows how to enable garbage collection for multiple CPU groups.
+Aşağıdaki örnekte, birden çok CPU grubu için çöp toplamanın nasıl etkinleştirileceği gösterilmektedir.
 
 ```xml
 <configuration>
@@ -79,5 +79,5 @@ The following example shows how to enable garbage collection for multiple CPU gr
 
 - [Çalışma Zamanı Ayarları Şeması](index.md)
 - [Yapılandırma Dosyası Şeması](../index.md)
-- [To disable concurrent garbage collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
-- [Workstation and server garbage collection](../../../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)
+- [Eşzamanlı atık toplamayı devre dışı bırakmak için](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [İş istasyonu ve sunucu atık toplama](../../../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)

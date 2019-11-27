@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431136"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo Yöntemi
-Bu yöntem uygulanmadı. If called, it returns E_NOTIMPL.  
+Bu yöntem uygulanmadı. Çağrılırsa, E_NOTIMPL döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,25 +38,25 @@ HRESULT OpenScopeOnITypeInfo (
   
 ## <a name="parameters"></a>Parametreler  
  `pITI`  
- [in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.  
+ 'ndaki Kapsamın açılacağı tür bilgilerini sağlayan bir [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) arabirimine yönelik işaretçi.  
   
  `dwOpenFlags`  
- [in] The open mode flags.  
+ 'ndaki Açık mod bayrakları.  
   
  `riid`  
- [in] The desired interface.  
+ 'ndaki İstenen arabirim.  
   
  `ppIUnk`  
- [out] Pointer to a pointer to the returned interface.  
+ dışı Döndürülen arabirime yönelik işaretçinin işaretçisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

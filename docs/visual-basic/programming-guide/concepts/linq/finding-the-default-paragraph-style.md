@@ -9,17 +9,17 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353447"
 ---
-# <a name="finding-the-default-paragraph-style-visual-basic"></a>Finding the Default Paragraph Style (Visual Basic)
-The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.  
+# <a name="finding-the-default-paragraph-style-visual-basic"></a>Varsayılan paragraf stilini bulma (Visual Basic)
+WordprocessingML belgesi öğreticisindeki düzenleme bilgilerinde ilk görev, belgede varsayılan paragraf stilini bullevidir.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- The following example opens an Office Open XML WordprocessingML document, finds the document and style parts of the package, and then executes a query that finds the default style name. For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).  
+ Aşağıdaki örnek, bir Office Open XML WordprocessingML belgesi açar, paketin belge ve stil parçalarını bulur ve ardından varsayılan stil adını bulan bir sorgu yürütür. Office Open XML belge paketleri ve içerdikleri parçalar hakkında daha fazla bilgi için bkz. [Office Open XML WordprocessingML belgelerinin ayrıntıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).  
   
- The query finds a node named `w:style` that has an attribute named `w:type` with a value of "paragraph", and also has an attribute named `w:default` with a value of "1". Because there will be only one XML node with these attributes, the query uses the <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operator to convert a collection to a singleton. It then gets the value of the attribute with the name `w:styleId`.  
+ Sorgu, "paragraf" değerine sahip `w:type` adlı bir özniteliğe sahip `w:style` adlı bir düğüm bulur ve ayrıca "1" değerine sahip `w:default` adlı bir özniteliğe sahiptir. Bu özniteliklere sahip yalnızca bir XML düğümü olacağı için, sorgu <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> işlecini kullanarak bir koleksiyonu tek bir öğesine dönüştürür. Daha sonra `w:styleId`adı ile özniteliğin değerini alır.  
   
- This example uses classes from the WindowsBase assembly. It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.  
+ Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.  
   
 ### <a name="code"></a>Kod  
   
@@ -80,17 +80,17 @@ End Module
 ```  
   
 ### <a name="comments"></a>Açıklamalar  
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```console  
 The default style is: Normal  
 ```  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- In the next example, you'll create a similar query that finds all the paragraphs in a document and their styles:  
+ Sonraki örnekte, bir belgedeki ve stillerinin tüm paragraflarını bulan benzer bir sorgu oluşturacaksınız:  
   
-- [Retrieving the Paragraphs and Their Styles (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [Paragrafları ve stillerini alma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

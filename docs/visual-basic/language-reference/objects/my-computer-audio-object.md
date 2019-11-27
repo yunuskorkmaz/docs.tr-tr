@@ -13,19 +13,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344112"
 ---
 # <a name="mycomputeraudio-object"></a>My.Computer.Audio Nesnesi
-Provides methods for playing sounds.  
+Ses çalmak için yöntemler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.  
+ `My.Computer.Audio` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Audio>.  
   
- For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
+ Daha fazla bilgi için bkz. [sesleri oynatma](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+ **Ad alanı:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Audio>  
+ **Sınıf:** <xref:Microsoft.VisualBasic.Devices.Audio>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

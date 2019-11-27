@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442161"
 ---
 # <a name="imetadataemitsethandler-method"></a>IMetaDataEmit::SetHandler Yöntemi
-Sets the method referenced by the specified `IUnknown` pointer as a notification callback for token remaps.  
+Belirtilen `IUnknown` işaretçisinin başvurduğu yöntemi, belirteç yeniden eşlemeleri için bir bildirim geri çağırması olarak ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,21 +35,21 @@ HRESULT SetHandler (
   
 ## <a name="parameters"></a>Parametreler  
  `pUnk`  
- [in] The handler to register.  
+ 'ndaki Kaydolmak için işleyici.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The metadata engine sends notification by using the method that is provided by `SetHandler`, to compilers that do not generate records in an optimized way and that would like to optimize saved records.  
+ Meta veri altyapısı, `SetHandler`tarafından sunulan yöntemi kullanarak, iyileştirilmiş bir şekilde kayıt üretmeyen ve kaydedilen kayıtları iyileştirmek üzere, bir bildirimi gönderir.  
   
- If the callback method is not provided through `SetHandler`, no optimization will be performed on save except where several import scopes have been merged using `IMapToken` on merge for each scope.  
+ Geri çağırma yöntemi `SetHandler`aracılığıyla sağlanmazsa, farklı içeri aktarma kapsamlarının her kapsam için birleştirme sırasında `IMapToken` kullanılarak birleştirilebilmesi dışında, kaydetme sırasında hiçbir iyileştirme gerçekleştirilmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437578"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps Yöntemi
-Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.  
+Bildirim türü, temsilciler için ekleme ve kaldırma yöntemleri ve tüm bayraklar ve diğer ilişkili veriler de dahil olmak üzere, belirtilen olay belirteci tarafından temsil edilen olay için meta veri bilgilerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,49 +47,49 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>Parametreler  
  `ev`  
- [in] The event metadata token representing the event to get metadata for.  
+ 'ndaki Meta verilerinin alınacağı olayı temsil eden olay meta veri belirteci.  
   
  `pClass`  
- [out] A pointer to the TypeDef token representing the class that declares the event.  
+ dışı Olayı bildiren sınıfı temsil eden TypeDef belirtecinin işaretçisi.  
   
  `szEvent`  
- [out] The name of the event referenced by `ev`.  
+ dışı `ev`başvurduğu olayın adı.  
   
  `pchEvent`  
- [in] The requested length in wide characters of `szEvent`.  
+ 'ndaki `szEvent`geniş karakterdeki istenen uzunluk.  
   
  `pdwEventFlags`  
- [out] The returned length in wide characters of `szEvent`.  
+ dışı `szEvent`geniş karakterde döndürülen uzunluk.  
   
  `ptkEventType`  
- [out] A pointer to a TypeRef or TypeDef metadata token representing the <xref:System.Delegate> type of the event.  
+ dışı Olayın <xref:System.Delegate> türünü temsil eden TypeRef veya TypeDef meta veri belirtecinin işaretçisi.  
   
  `pmdAddOn`  
- [out] A pointer to the metadata token representing the method that adds handlers for the event.  
+ dışı Olaya yönelik işleyiciler ekleyen yöntemi temsil eden meta veri belirteci işaretçisi.  
   
  `pmdRemoveOn`  
- [out] A pointer to the metadata token representing the method that removes handlers for the event.  
+ dışı Olay için işleyicileri kaldıran yöntemi temsil eden meta veri belirteci işaretçisi.  
   
  `pmdFire`  
- [out] A pointer to the metadata token representing the method that raises the event.  
+ dışı Olayı başlatan yöntemi temsil eden meta veri belirtecinin işaretçisi.  
   
  `rmdOtherMethod`  
- [out] An array of token pointers to other methods associated with the event.  
+ dışı Olayla ilişkili diğer yöntemlere belirteç işaretçileri dizisi.  
   
  `cMax`  
- [in] The maximum size of the `rmdOtherMethod` array.  
+ 'ndaki `rmdOtherMethod` dizisinin en büyük boyutu.  
   
  `pcOtherMethod`  
- [out] The number of tokens returned in `rmdOtherMethod`.  
+ dışı `rmdOtherMethod`döndürülen belirteçlerin sayısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

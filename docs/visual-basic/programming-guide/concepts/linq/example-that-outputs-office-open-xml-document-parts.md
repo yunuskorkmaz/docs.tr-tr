@@ -9,13 +9,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353505"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Example that Outputs Office Open XML Document Parts (Visual Basic)
-This topic shows how to open an Office Open XML document and access parts within it.  
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Office Open XML belge parçalarının (Visual Basic) çıkışı veren örnek
+Bu konuda, bir Office Open XML belgesinin nasıl açılacağı ve içindeki parçalara nasıl erişebileceği gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- The following example opens an Office Open XML document, and prints the document part and the style part to the console.  
+ Aşağıdaki örnek, bir Office Open XML belgesi açar ve belge parçasını ve stil parçasını konsola yazdırır.  
   
- This example uses classes from the WindowsBase assembly. It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.  
+ Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.  
   
 ```vb  
 Const fileName As String = "SampleDoc.docx"  
@@ -66,4 +66,4 @@ End Using
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Details of Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Office Open XML WordprocessingML belgelerinin ayrıntıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

@@ -22,16 +22,16 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449234"
 ---
 # <a name="isymunmanageddispose-interface"></a>ISymUnmanagedDispose Arabirimi
-Disposes of unmanaged resources.  
+Yönetilmeyen kaynakları ortadan kaldırın.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Destroy Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|Causes the underlying object to release all internal references and return failure on any subsequent method calls.|  
+|[Destroy Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|Alttaki nesnenin tüm iç başvuruları serbest bırakmaya ve sonraki yöntem çağrılarında hata döndürmesine neden olur.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

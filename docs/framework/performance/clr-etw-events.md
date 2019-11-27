@@ -16,55 +16,55 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428170"
 ---
 # <a name="clr-etw-events"></a>CLR ETW Olayları
-The topics in this section describe event tracing for Windows (ETW) events. Each event has an associated keyword and level, which are described in the [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md) topic. The CLR has two providers for the events:  
+Bu bölümdeki konular, Windows için olay izleme (ETW) olaylarını anlatmaktadır. Her olayın ilişkili bir anahtar sözcüğü ve düzeyi vardır ve bu, [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md) konusunda açıklanmıştır. CLR, olaylar için iki sağlayıcıya sahiptir:  
   
-- The runtime provider, which raises events depending on which keywords (categories of events) are enabled. The CLR runtime provider GUID is e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
+- Hangi anahtar kelimelerle (olay kategorileri) etkin olarak olay başlatan çalışma zamanı sağlayıcısı. CLR çalışma zamanı sağlayıcısı GUID 'SI e13c0d23-CCBC-4e12-931B-d9cc2eee27e4.  
   
-- The rundown provider, which has special-purpose uses. The CLR rundown provider GUID is a669021c-c450-4609-a035-5af59af4df18.  
+- Özel amaçlı kullanımları olan özet sağlayıcısı. CLR özeti sağlayıcısı GUID 'SI A669021C-C450-4609-A035-5AF59AF4DF18.  
   
- For more information about the providers, see [CLR ETW Providers](clr-etw-providers.md).  
+ Sağlayıcılar hakkında daha fazla bilgi için bkz. [CLR ETW sağlayıcıları](clr-etw-providers.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Çalışma Zamanı Bilgileri Olayları](runtime-information-etw-events.md)  
- Captures information about the runtime, including the SKU, version number, the manner in which the runtime was activated, the command-line parameters it was started with, the GUID (if applicable), and other relevant information.  
+ Çalışma zamanı hakkında SKU, sürüm numarası, çalışma zamanının etkinleştirildiği yol, ile başlatıldığı komut satırı parametreleri, GUID (varsa) ve diğer ilgili bilgiler dahil olmak üzere çalışma zamanı hakkındaki bilgileri yakalar.  
   
  [Özel Durum Thrown_V1 Olayı](exception-thrown-v1-etw-event.md)  
- Captures information about exceptions that are thrown.  
+ Oluşturulan özel durumlarla ilgili bilgileri yakalar.  
   
  [Çekişme Olayları](contention-etw-events.md)  
- Captures information about contention for monitor locks or native locks that the runtime uses.  
+ İzleme kilitleri veya çalışma zamanının kullandığı yerel kilitler hakkında çekişme hakkında bilgi yakalar.  
   
  [İş Parçacığı Havuzu Olayları](thread-pool-etw-events.md)  
- Captures information about worker thread pools and I/O thread pools.  
+ Çalışan iş parçacığı havuzları ve g/ç iş parçacığı havuzları hakkında bilgi yakalar.  
   
  [Yükleyici Olayları](loader-etw-events.md)  
- Captures information about loading and unloading application domains, assemblies, and modules.  
+ Uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve kaldırma hakkında bilgi yakalar.  
   
  [Yöntem Olayları](method-etw-events.md)  
- Captures information about CLR methods for symbol resolution.  
+ Sembol çözümleme için CLR yöntemleriyle ilgili bilgileri yakalar.  
   
  [Atık Toplama Olayları](garbage-collection-etw-events.md)  
- Captures information pertaining to garbage collection, to help in diagnostics and debugging.  
+ Tanılama ve hata ayıklama konusunda yardımcı olmak için çöp koleksiyonuyla ilgili bilgileri yakalar.  
   
  [Olayları Tam Zamanında İzleme](jit-tracing-etw-events.md)  
- Captures information about just-in-time (JIT) inlining and tail calls.  
+ Tam zamanında (JıT) giriş ve kuyruk çağrıları hakkındaki bilgileri yakalar.  
   
  [Birlikte Çalışma Olayları](interop-etw-events.md)  
- Captures information about Microsoft intermediate language (MSIL) stub generation and caching.  
+ Microsoft ara dili (MSIL) saplama oluşturma ve önbelleğe alma hakkında bilgi yakalar.  
   
  [ARM Olayları](application-domain-resource-monitoring-arm-etw-events.md)  
- Captures detailed diagnostic information about the state of an application domain.  
+ Bir uygulama etki alanının durumu hakkında ayrıntılı tanılama bilgilerini yakalar.  
   
  [Güvenlik Olayları](security-etw-events.md)  
- Captures information about strong name and Authenticode verification.  
+ Tanımlayıcı ad ve Authenticode doğrulama hakkındaki bilgileri yakalar.  
   
  [Yığın Olayı](stack-etw-event.md)  
- Captures information that is used with other events to generate stack traces after an event is raised.  
+ Bir olay oluşturulduktan sonra yığın izlemeleri oluşturmak için diğer olaylarla birlikte kullanılan bilgileri yakalar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Improve Debugging And Performance Tuning With ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
-- [Windows Performance Blog](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
+- [ETW Ile hata ayıklama ve performans ayarlamayı geliştirme](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [Windows performans blogu](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [.NET Framework Günlük Kaydını Denetleme](controlling-logging.md)
 - [CLR ETW Sağlayıcılar](clr-etw-providers.md)
 - [CLR ETW Anahtar Sözcükleri ve Düzeyler](clr-etw-keywords-and-levels.md)

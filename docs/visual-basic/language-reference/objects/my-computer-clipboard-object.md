@@ -13,22 +13,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344101"
 ---
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard Nesnesi
-Provides methods for manipulating the Clipboard.  
+Panoyu işlemek için yöntemler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For information about the methods and properties of the `My.Computer.Clipboard` object, see <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.  
+ `My.Computer.Clipboard` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.  
   
- For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
+ Daha fazla bilgi için bkz. [Verileri Panoda Depolama ve Panodan Okuma](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
   
 > [!NOTE]
-> You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.  
+> Panoyu değiştirmek için <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> sınıfının yöntemlerini de kullanabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
+ **Ad alanı:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)  
+ **Sınıf:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (<xref:System.Windows.Forms.Clipboard>erişim sağlar)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Write Queries on XML in Namespaces'
+title: 'Nasıl yapılır: ad alanlarında XML üzerinde sorgu yazma'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
 ms.openlocfilehash: 496cf8daf5136e8aafff000312bbd730a5152e9f
@@ -9,15 +9,15 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344466"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>How to: Write Queries on XML in Namespaces (Visual Basic)
-To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.  
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Nasıl yapılır: ad alanlarında XML üzerinde sorgu yazma (Visual Basic)
+Bir ad alanında olan XML üzerinde bir sorgu yazmak için, doğru ad alanına sahip <xref:System.Xml.Linq.XName> nesneleri kullanmanız gerekir.  
   
- In Visual Basic, the most common approach is to define a global namespace, and then use XML literals and XML properties that use the global namespace. You can define a global default namespace, in which case elements in the XML literals will be in the namespace by default. Alternatively, you can define a global namespace with a prefix, and then use the prefix as required in the XML literals, and in XML properties. As with other forms of XML, attributes are always in no namespace by default.  
+ Visual Basic, en yaygın yaklaşım genel bir ad alanı tanımlamaktır ve sonra genel ad alanını kullanan XML değişmez değerlerini ve XML özelliklerini kullanır. Genel bir varsayılan ad alanı tanımlayabilirsiniz. Bu durumda, XML sabit değerlerinde bulunan öğeler varsayılan olarak ad alanında yer alabilir. Alternatif olarak, ön ek içeren bir genel ad alanı tanımlayabilir ve sonra öneki XML sabit değerlerinde ve XML özelliklerinde gereken şekilde kullanabilirsiniz. Diğer XML formlarında olduğu gibi, özniteliklerin her zaman varsayılan olarak ad alanı yoktur.  
   
- The first set of examples in this topic shows how to create an XML tree in a default namespace. The second set shows how to create an XML tree in a namespace with a prefix.  
+ Bu konudaki ilk örnek kümesi, varsayılan bir ad alanında bir XML ağacının nasıl oluşturulacağını gösterir. İkinci küme, öneki olan bir ad alanında bir XML ağacının nasıl oluşturulacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- The following example creates an XML tree that is in a default namespace. It then retrieves a collection of elements.  
+ Aşağıdaki örnek, varsayılan bir ad alanında bulunan bir XML ağacı oluşturur. Daha sonra bir öğe koleksiyonu alır.  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -43,7 +43,7 @@ Module Module1
 End Module  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```console  
 1  
@@ -52,9 +52,9 @@ End Module
 ```  
   
 ## <a name="example"></a>Örnek  
- In Visual Basic, however, writing queries on an XML tree that uses a namespace with a prefix is quite different from querying an XML tree in a default namespace. Typically you use the `Imports` statement to import the namespace with a prefix. You then use the prefix in the element and attribute names when you construct the XML tree. You also use the prefix when querying an XML tree using XML properties.  
+ Ancak Visual Basic ' de, ön ek içeren bir ad alanı kullanan bir XML ağacına sorgu yazmak, varsayılan bir ad alanında bir XML ağacını sorgulamadan oldukça farklıdır. Genellikle `Imports` ifadesini kullanarak ad alanını önekiyle içeri aktarabilirsiniz. Ardından, XML ağacını oluştururken öğesi ve öznitelik adlarında öneki kullanın. Xml özelliklerini kullanarak bir XML ağacını sorgularken de ön eki kullanırsınız.  
   
- The following example creates an XML tree that is in a namespace with a prefix. It then retrieves a collection of elements.  
+ Aşağıdaki örnek, öneki olan bir ad alanında olan bir XML ağacı oluşturur. Daha sonra bir öğe koleksiyonu alır.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -80,7 +80,7 @@ Module Module1
 End Module  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```console  
 1  
@@ -90,4 +90,4 @@ End Module
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

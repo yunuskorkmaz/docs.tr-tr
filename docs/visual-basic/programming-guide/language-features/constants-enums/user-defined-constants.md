@@ -17,43 +17,43 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354015"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Kullanıcı Tanımlı Sabitler (Visual Basic)
-A constant is a meaningful name that takes the place of a number or string that does not change. Constants store values that, as the name implies, remain constant throughout the execution of an application. You can use constants that are defined by the controls or components you work with, or you can create your own. Constants you create yourself are described as *user-defined*.  
+Sabit, değişmez bir sayının veya dizenin yerini alan anlamlı bir addır. Adın gösterdiği gibi sabitler depolama değerleri, bir uygulamanın yürütülmesi boyunca sabit kalır. Üzerinde çalıştığınız denetimler veya bileşenler tarafından tanımlanan sabitleri kullanabilir veya kendi kendinize de oluşturabilirsiniz. Kendi oluşturduğunuz sabitler *Kullanıcı tanımlı*olarak açıklanmaktadır.  
   
- You declare a constant with the `Const` statement, using the same guidelines you would for creating a variable name. If `Option Strict` is `On`, you must explicitly declare the constant type.  
+ Bir değişken adı oluşturmak için kullandığınız yönergeleri kullanarak `Const` ifadesiyle bir sabit değeri bildirirsiniz. `Option Strict` `On`, sabit türü açıkça bildirmeniz gerekir.  
   
-## <a name="const-statement-usage"></a>Const Statement Usage  
- A `Const` statement can represent a mathematical or date/time quantity:  
+## <a name="const-statement-usage"></a>Const deyimin kullanımı  
+ `Const` bir ifade matematiksel veya tarih/saat sayısını temsil edebilir:  
   
  [!code-vb[VbEnumsTask#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#10)]  
   
- It also can define `String` constants:  
+ Ayrıca, `String` sabitleri tanımlayabilir:  
   
  [!code-vb[VbEnumsTask#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#13)]  
   
- The expression on the right side of the equal sign ( `=` ) is often a number or literal string, but it also can be an expression that results in a number or string (although that expression cannot contain calls to functions). You can even define constants in terms of previously defined constants:  
+ Eşittir işaretinin (`=`) sağ tarafındaki ifade genellikle bir sayı veya sabit dizedir, ancak aynı zamanda bir sayı veya dize ile sonuçlanan bir ifade da olabilir (Bu ifade işlevlere çağrı içeremez halde). Sabitleri, daha önce tanımlanmış sabitler bakımından bile tanımlayabilirsiniz:  
   
  [!code-vb[VbEnumsTask#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#15)]  
   
-## <a name="scope-of-user-defined-constants"></a>Scope of User-Defined Constants  
- A `Const` statement's scope is the same as that of a variable declared in the same location. You can specify scope in any of the following ways:  
+## <a name="scope-of-user-defined-constants"></a>Kullanıcı tanımlı sabitler kapsamı  
+ `Const` deyimin kapsamı aynı konumda belirtilen bir değişkenle aynı. Kapsamı aşağıdaki yollarla belirtebilirsiniz:  
   
-- To create a constant that exists only within a procedure, declare it within that procedure.  
+- Yalnızca bir yordamda var olan bir sabit oluşturmak için, bu yordamın içinde bildirin.  
   
-- To create a constant available to all procedures within a class, but not to any code outside that module, declare it in the declarations section of the class.  
+- Bir sınıf içindeki tüm yordamlar için kullanılabilen, ancak bu modül dışındaki hiçbir koda yönelik bir sabit oluşturmak için, sınıfın Bildirimler bölümünde bildirin.  
   
-- To create a constant that is available to all members of an assembly, but not to outside clients of the assembly, declare it using the `Friend` keyword in the declarations section of the class.  
+- Bir derlemenin tüm üyeleri için kullanılabilir ancak derlemenin dış istemcilerine yönelik bir sabit oluşturmak için, sınıfının bildirimler bölümündeki `Friend` anahtar sözcüğünü kullanarak bildirin.  
   
-- To create a constant available throughout the application, declare it using the `Public` keyword in the declarations section the class.  
+- Uygulama genelinde kullanılabilir bir sabit oluşturmak için, sınıfının bildirimler bölümündeki `Public` anahtar sözcüğünü kullanarak bildirin.  
   
- For more information, see [How to: Declare A Constant](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
+ Daha fazla bilgi için bkz. [nasıl yapılır: bir sabit bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
   
-### <a name="avoiding-circular-references"></a>Avoiding Circular References  
- Because constants can be defined in terms of other constants, it is possible to inadvertently create a *cycle*, or circular reference, between two or more constants. A cycle occurs when you have two or more public constants, each of which is defined in terms of the other, as in the following example:  
+### <a name="avoiding-circular-references"></a>Döngüsel başvuruların kaçınma  
+ Sabitler diğer sabitler açısından tanımlanabileceğinden, iki veya daha fazla sabitler arasında yanlışlıkla bir *döngü*veya döngüsel başvuru oluşturmak mümkündür. İki veya daha fazla ortak sabitiniz olduğunda, her biri diğeri farklı olduğunda, aşağıdaki örnekte olduğu gibi bir döngüden oluşur:  
   
  [!code-vb[VbEnumsTask#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#16)]  
 [!code-vb[VbEnumsTask#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#17)]  
   
- If a cycle occurs, Visual Basic generates a compiler error.  
+ Bir döngüyle karşılaşırsanız Visual Basic bir derleyici hatası oluşturur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -63,6 +63,6 @@ A constant is a meaningful name that takes the place of a number or string that 
 - [Sabitler ve Sabit Listeleri](../../../../visual-basic/language-reference/constants-and-enumerations.md)
 - [Sabit Listelerine Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [Sabitlere Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Nasıl yapılır: numaralandırma bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Sabit Listeleri ve Ad Niteliği](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

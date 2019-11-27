@@ -18,25 +18,25 @@ ms.locfileid: "74353249"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Uygulamadan Günlüğe Bilgi Kaydetme (Visual Basic)
 
-This section contains topics that cover how to log information from your application using the `My.Application.Log` or `My.Log` object, and how to extend the application's logging capabilities.  
+Bu bölüm, `My.Application.Log` veya `My.Log` nesnesini kullanarak uygulamanızdaki bilgilerin nasıl günlüğe alınacağını ve uygulamanın günlüğe kaydetme yeteneklerini genişletmeyi kapsayan konuları içerir.  
   
- The `Log` object provides methods for writing information to the application's log listeners, and the `Log` object's advanced `TraceSource` property provides detailed configuration information. The `Log` object is configured by the application's configuration file.  
+ `Log` nesnesi, uygulamanın günlük dinleyicilerine bilgi yazma yöntemleri sağlar ve `Log` nesnesinin gelişmiş `TraceSource` özelliği ayrıntılı yapılandırma bilgileri sağlar. `Log` nesnesi, uygulamanın yapılandırma dosyası tarafından yapılandırılır.  
   
- The `My.Log` object is available only for ASP.NET applications. For client applications, use `My.Application.Log`. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Logging.Log>.  
+ `My.Log` nesnesi yalnızca ASP.NET uygulamaları için kullanılabilir. İstemci uygulamaları için `My.Application.Log`kullanın. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Logging.Log>.  
   
 ## <a name="tasks"></a>Görevler  
   
 |Bitiş|Bkz.|  
 |--------|---------|  
-|Write event information to the application's logs.|[Nasıl Yapılır: Günlük İletileri Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
-|Write exception information to the application's logs.|[Nasıl Yapılır: Günlük Özel Durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
-|Write trace information to the application's logs when the application starts and shuts down.|[Nasıl Yapılır: Uygulama Başlarken veya Kapanırken İletileri Günlüğe Kaydetme](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)|  
-|Configure `My.Application.Log` to write information to a text file.|[Nasıl Yapılır: Olay Bilgilerini Metin Dosyasına Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)|  
-|Configure `My.Application.Log` to write information to an event log.|[Nasıl Yapılır: Uygulama Olay Günlüğüne Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)|  
-|Change where `My.Application.Log` writes information.|[İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)|  
-|Determine where `My.Application.Log` writes information.|[İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Nereye Yazdığını Belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
-|Create a custom log listener for `My.Application.Log`.|[İzlenecek Yol: Özel Günlük Dinleyicileri Oluşturma](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)|  
-|Filter the output of the `My.Application.Log` logs.|[İzlenecek Yol: My.Application.Log Çıktısını Filtreleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
+|Olay bilgilerini uygulamanın günlüklerine yazın.|[Nasıl Yapılır: Günlük İletileri Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
+|Özel durum bilgilerini uygulamanın günlüklerine yazın.|[Nasıl Yapılır: Günlük Özel Durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
+|Uygulama başlatıldığında ve kapandığında izleme bilgilerini uygulamanın günlüklerine yazın.|[Nasıl Yapılır: Uygulama Başlarken veya Kapanırken İletileri Günlüğe Kaydetme](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)|  
+|Bir metin dosyasına bilgi yazmak için `My.Application.Log` yapılandırın.|[Nasıl Yapılır: Olay Bilgilerini Metin Dosyasına Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)|  
+|Bir olay günlüğüne bilgi yazmak için `My.Application.Log` yapılandırın.|[Nasıl Yapılır: Uygulama Olay Günlüğüne Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)|  
+|`My.Application.Log` nereden bilgi yazabileceğini değiştirin.|[İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)|  
+|`My.Application.Log` nereden bilgi yazabileceğini belirleme.|[İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Nereye Yazdığını Belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
+|`My.Application.Log`için özel bir günlük dinleyicisi oluşturun.|[İzlenecek Yol: Özel Günlük Dinleyicileri Oluşturma](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)|  
+|`My.Application.Log` günlüklerinin çıkışını filtreleyin.|[İzlenecek Yol: My.Application.Log Çıktısını Filtreleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

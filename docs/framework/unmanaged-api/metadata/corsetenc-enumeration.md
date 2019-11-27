@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432766"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC Numaralandırması
-Contains values used to influence behavior during the generation of metadata.  
+Meta veri oluşturma sırasında davranışı etkilemek için kullanılan değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -48,19 +48,19 @@ typedef enum CorSetENC {
 |------------|-----------------|  
 |`MDSetENCOn`|Kullanımdan kalktı.|  
 |`MDSetENCOff`|Kullanımdan kalktı.|  
-|`MDUpdateENC`|Indicates that whereas metadata can be updated, tokens cannot be moved.|  
-|`MDUpdateFull`|Indicates that tokens can be moved during updates.|  
-|`MDUpdateExtension`|Indicates that updates can consist only of additions. Tokens cannot be moved.|  
-|`MDUpdateIncremental`|Indicates that compilation is incremental.|  
-|`MDUpdateDelta`|Indicates that only changed metadata should be saved.|  
-|`MDUpdateMask`|Includes `MDUpdateENC`, `MDUpdateFull` and `MDUpdateIncremental`.|  
+|`MDUpdateENC`|Meta verilerin güncelleştirilebileceğini, belirteçlerin taşınamayacağını gösterir.|  
+|`MDUpdateFull`|Simgelerin güncelleştirmeler sırasında taşınabileceğini gösterir.|  
+|`MDUpdateExtension`|Güncelleştirmelerin yalnızca eklemelerden oluşabileceğini gösterir. Belirteçler taşınamaz.|  
+|`MDUpdateIncremental`|Derlemenin artımlı olduğunu gösterir.|  
+|`MDUpdateDelta`|Yalnızca değiştirilen meta verilerin kaydedilmesi gerektiğini gösterir.|  
+|`MDUpdateMask`|`MDUpdateENC`, `MDUpdateFull` ve `MDUpdateIncremental`içerir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

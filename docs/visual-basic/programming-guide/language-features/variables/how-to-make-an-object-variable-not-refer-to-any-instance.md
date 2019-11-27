@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352891"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Nasıl yapılır: Bir Nesne Değişkeninin Hiçbir Örneğe Başvurmamasını Sağlama (Visual Basic)
-You can disassociate an object variable from any object instance by setting it to [Nothing](../../../../visual-basic/language-reference/nothing.md).  
+Herhangi bir nesne örneğinden bir nesne değişkeninin ilişkisini [Nothing](../../../../visual-basic/language-reference/nothing.md)olarak ayarlayarak kaldırabilirsiniz.  
   
-### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>To disassociate an object variable from any object instance  
+### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>Herhangi bir nesne örneğinden bir nesne değişkeninin ilişkisini kaldırmak için  
   
-- Set the variable to `Nothing` in an assignment statement.  
+- Değişkeni atama ifadesinde `Nothing` olarak ayarlayın.  
   
     ```vb  
     ' Assume account is a defined class  
@@ -26,10 +26,10 @@ You can disassociate an object variable from any object instance by setting it t
     ```  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- If your code tries to access a member of an object variable that has been set to `Nothing`, a <xref:System.NullReferenceException> occurs. If you set an object variable to `Nothing` frequently, or if it is possible the variable is not initialized, it is a good idea to enclose member accesses in a `Try...Catch...Finally` block.  
+ Kodunuz, `Nothing`olarak ayarlanmış bir nesne değişkeninin üyesine erişmeyi denediğinde, bir <xref:System.NullReferenceException> gerçekleşir. Bir nesne değişkenini sıklıkla `Nothing` olarak ayarlarsanız veya değişken başlatılamıyorsa, üye erişimlerini bir `Try...Catch...Finally` bloğuna eklemek iyi bir fikirdir.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- If you use an object variable for objects that contain confidential or sensitive data, you can set the variable to `Nothing` when you are not actively dealing with one of those objects. This reduces the chance of malicious code gaining access to the data.  
+ Gizli veya hassas veriler içeren nesneler için bir nesne değişkeni kullanırsanız, bu nesnelerden biriyle etkin bir şekilde ilgilenirken değişkeni `Nothing` olarak ayarlayabilirsiniz. Bu, kötü amaçlı kodun verilere erişme olasılığını azaltır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

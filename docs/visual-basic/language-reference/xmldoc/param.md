@@ -12,8 +12,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352292"
 ---
-# <a name="param-visual-basic"></a>\<param> (Visual Basic)
-Defines a parameter name and description.  
+# <a name="param-visual-basic"></a>\<param > (Visual Basic)
+Bir parametre adı ve açıklama tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,24 +23,24 @@ Defines a parameter name and description.
   
 ## <a name="parameters"></a>Parametreler  
  `name`  
- The name of a method parameter. Enclose the name in double quotation marks (" ").  
+ Bir yöntem parametresinin adı. Adı çift tırnak işareti ("") içine alın.  
   
  `description`  
- A description for the parameter.  
+ Parametresi için bir açıklama.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `<param>` tag should be used in the comment for a method declaration to describe one of the parameters for the method.  
+ Metodun parametrelerinden birini açıklayacak bir yöntem bildirimine ilişkin açıklamada `<param>` etiketinin kullanılması gerekir.  
   
- The text for the `<param>` tag will appear in the following locations:  
+ `<param>` etiketinin metni aşağıdaki konumlarda görünür:  
   
-- Parameter Info of IntelliSense. For more information, see [Using IntelliSense](/visualstudio/ide/using-intellisense).  
+- IntelliSense parametre bilgileri. Daha fazla bilgi için bkz. [IntelliSense kullanma](/visualstudio/ide/using-intellisense).  
   
-- Object Browser. For more information, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).  
+- Nesne Tarayıcısı. Daha fazla bilgi için bkz. [kod yapısını görüntüleme](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `<param>` tag to describe the `id` parameter.  
+ Bu örnek, `id` parametresini anlatmak için `<param>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

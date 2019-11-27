@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426832"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot Yöntemi
-Walks the managed frames on the stack for the specified thread, and sends information to the profiler through a callback.  
+Belirtilen iş parçacığı için yığındaki yönetilen çerçevelere kılavuzluk eder ve geri çağırma yoluyla profil oluşturucuya bilgi gönderir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,72 +39,72 @@ HRESULT DoStackSnapshot(
   
 ## <a name="parameters"></a>Parametreler  
  `thread`  
- [in] The ID of the target thread.  
+ 'ndaki Hedef iş parçacığının KIMLIĞI.  
   
- Passing null in `thread` yields a snapshot of the current thread. If a `ThreadID` of a different thread is passed, the common language runtime (CLR) suspends that thread, performs the snapshot, and resumes.  
+ `thread` null geçirme, geçerli iş parçacığının bir anlık görüntüsünü verir. Farklı bir iş parçacığının `ThreadID` geçirilirse, ortak dil çalışma zamanı (CLR) bu iş parçacığını askıya alır, anlık görüntüyü gerçekleştirir ve sürdürür.  
   
  `callback`  
- [in] A pointer to the implementation of the [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) method, which is called by the CLR to provide the profiler with information on each managed frame and each run of unmanaged frames.  
+ 'ndaki Profil oluşturucuyu, yönetilen her çerçeve ve her yönetilmeyen çerçeve çalıştırması hakkında bilgi sağlamak için CLR tarafından çağrılan [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) yönteminin uygulamasına yönelik bir işaretçi.  
   
- The `StackSnapshotCallback` method is implemented by the profiler writer.  
+ `StackSnapshotCallback` yöntemi profil oluşturucu yazıcı tarafından uygulanır.  
   
  `infoFlags`  
- [in] A value of the [COR_PRF_SNAPSHOT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md) enumeration, which specifies the amount of data to be passed back for each frame by `StackSnapshotCallback`.  
+ 'ndaki `StackSnapshotCallback`tarafından her çerçeve için geri geçirilecek veri miktarını belirten [COR_PRF_SNAPSHOT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md) numaralandırması değeri.  
   
  `clientData`  
- [in] A pointer to the client data, which is passed straight through to the `StackSnapshotCallback` callback function.  
+ 'ndaki İstemci verilerine yönelik bir işaretçi, `StackSnapshotCallback` geri çağırma işlevine doğrudan geçirilir.  
   
  `context`  
- [in] A pointer to a Win32 `CONTEXT` structure, which is used to seed the stack walk. The Win32 `CONTEXT` structure contains values of the CPU registers and represents the state of the CPU at a particular moment in time.  
+ 'ndaki Yığın ilerlemesini temel almak için kullanılan bir Win32 `CONTEXT` yapısına yönelik bir işaretçi. Win32 `CONTEXT` yapısı, CPU yazmaçlarının değerlerini içerir ve belirli bir anda CPU 'nun durumunu temsil eder.  
   
- The seed helps the CLR determine where to begin the stack walk, if the top of the stack is unmanaged helper code; otherwise, the seed is ignored. A seed must be supplied for an asynchronous walk. If you are doing a synchronous walk, no seed is necessary.  
+ Çekirdek, yığının en üstünde yönetilmeyen yardımcı kod olması halinde CLR 'nin yığın ilerleme durumunu belirlemesine yardımcı olur. Aksi takdirde, çekirdek yok sayılır. Zaman uyumsuz bir ilerleme için çekirdek sağlanmalıdır. Zaman uyumlu bir adım yapıyorsanız, hiçbir çekirdek gerekmez.  
   
- The `context` parameter is valid only if the COR_PRF_SNAPSHOT_CONTEXT flag was passed in the `infoFlags` parameter.  
+ `context` parametresi yalnızca `infoFlags` parametresindeki COR_PRF_SNAPSHOT_CONTEXT bayrağı geçirildiğinde geçerlidir.  
   
  `contextSize`  
- [in] The size of the `CONTEXT` structure, which is referenced by the `context` parameter.  
+ 'ndaki `context` parametresi tarafından başvurulan `CONTEXT` yapısının boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Passing null for `thread` yields a snapshot of the current thread. Snapshots can be taken of other threads only if the target thread is suspended at the time.  
+ `thread` için null geçirme, geçerli iş parçacığının anlık görüntüsünü verir. Yalnızca hedef iş parçacığı zaman askıya alınırsa, anlık görüntüler diğer iş parçacıklarından alınabilir.  
   
- When the profiler wants to walk the stack, it calls `DoStackSnapshot`. Before the CLR returns from that call, it calls your `StackSnapshotCallback` several times, once for each managed frame (or run of unmanaged frames) on the stack. When unmanaged frames are encountered, you must walk them yourself.  
+ Profil Oluşturucu yığına ilerlemek istediğinde `DoStackSnapshot`çağırır. CLR Bu çağrıdan geri dönüşden önce, yığın üzerinde her yönetilen çerçeve (veya yönetilmeyen çerçeveler) için `StackSnapshotCallback` birkaç kez çağırır. Yönetilmeyen çerçevelerle karşılaşıldığında, bunları kendiniz yapmanız gerekir.  
   
- The order in which the stack is walked is the reverse of how the frames were pushed onto the stack: leaf (last-pushed) frame first, main (first-pushed) frame last.  
+ Yığının hangi sıraya gönderildiği sırası, çerçevelerin yığına nasıl itileceği, ana (ilk itilmiş) çerçevenin en sonda yer aldığı sıra.  
   
- For more information about how to program the profiler to walk managed stacks, see [Profiler Stack Walking in the .NET Framework 2.0: Basics and Beyond](https://go.microsoft.com/fwlink/?LinkId=73638).  
+ Profil oluşturucunun yönetilen yığınları izlenecek şekilde programlamanın nasıl yapılacağı hakkında daha fazla bilgi için, bkz. [.NET Framework 2,0: temel bilgiler ve daha fazlası Için Profiler Stack](https://go.microsoft.com/fwlink/?LinkId=73638).  
   
- A stack walk can be synchronous or asynchronous, as explained in the following sections.  
+ Aşağıdaki bölümlerde açıklandığı gibi bir yığın adım zaman uyumlu veya zaman uyumsuz olabilir.  
   
-## <a name="synchronous-stack-walk"></a>Synchronous Stack Walk  
- A synchronous stack walk involves walking the stack of the current thread in response to a callback. It does not require seeding or suspending.  
+## <a name="synchronous-stack-walk"></a>Zaman uyumlu yığın Ilerleme  
+ Zaman uyumlu bir yığın, geri çağırmaya yanıt olarak geçerli iş parçacığının yığınını yürüter. Dengeli dağıtım veya askıya alma gerektirmez.  
   
- You make a synchronous call when, in response to the CLR calling one of your profiler's [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (or [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) methods, you call `DoStackSnapshot` to walk the stack of the current thread. This is useful when you want to see what the stack looks like at a notification such as [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md). You just call `DoStackSnapshot` from within your `ICorProfilerCallback` method, passing null in the `context` and `thread` parameters.  
+ Profil oluşturucunun [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (veya [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) yöntemlerinden birini çağıran clr 'ye yanıt olarak, geçerli iş parçacığının yığınını kolaylaştırmak için `DoStackSnapshot` çağırdığınızda, zaman uyumlu bir çağrı yaparsınız. Bu, yığının [ICorProfilerCallback:: Objectalkonumlandırılan](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)gibi bir bildirimde nasıl göründüğünü görmek istediğinizde yararlıdır. `ICorProfilerCallback` yönteminizin içinden `DoStackSnapshot`, `context` ve `thread` parametrelerinde null geçirerek ' ı çağırmanız yeterlidir.  
   
-## <a name="asynchronous-stack-walk"></a>Asynchronous Stack Walk  
- An asynchronous stack walk entails walking the stack of a different thread, or walking the stack of the current thread, not in response to a callback, but by hijacking the current thread's instruction pointer. An asynchronous walk requires a seed if the top of the stack is unmanaged code that is not part of a platform invoke (PInvoke) or COM call, but helper code in the CLR itself. For example, code that does just-in-time (JIT) compiling or garbage collection is helper code.  
+## <a name="asynchronous-stack-walk"></a>Zaman uyumsuz yığın Ilerleme  
+ Zaman uyumsuz bir yığın, farklı bir iş parçacığının yığınını yürüyerek veya geçerli iş parçacığının yığınını yürüyerek geri çağırmaya yanıt vermez, ancak geçerli iş parçacığının yönerge işaretçisini ele alarak. Zaman uyumsuz bir izlenecek yol, yığının en üstünde platform Invoke (PInvoke) veya COM çağrısının bir parçası olmayan yönetilmeyen kod ise ve CLR 'nin kendisindeki yardımcı kod ise çekirdek gerektirir. Örneğin, tam zamanında (JıT) derleme veya çöp toplama yapan kod yardımcı koddur.  
   
- You obtain a seed by directly suspending the target thread and walking its stack yourself, until you find the topmost managed frame. After the target thread is suspended, get the target thread's current register context. Next, determine whether the register context points to unmanaged code by calling [ICorProfilerInfo::GetFunctionFromIP](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md) — if it returns a `FunctionID` equal to zero, the frame is unmanaged code. Now, walk the stack until you reach the first managed frame, and then calculate the seed context based on the register context for that frame.  
+ Hedef iş parçacığını doğrudan askıya alarak ve en üstteki yönetilen çerçeveyi bulana kadar kendi yığınını yürüyerek bir çekirdek elde edersiniz. Hedef iş parçacığı askıya alındıktan sonra, hedef iş parçacığının geçerli kayıt bağlamını alın. Sonra, kayıt bağlamının [ICorProfilerInfo:: GetFunctionFromIP](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md) öğesini çağırarak yönetilmeyen koda işaret ettiğini ve sıfıra eşit bir `FunctionID` döndürürse, çerçevenin yönetilmeyen kod olduğunu tespit edin. Şimdi, ilk yönetilen çerçeveye ulaşana kadar yığına ilerleme uygulayın ve ardından bu çerçeveye ait yazmaç bağlamına göre çekirdek bağlamını hesaplayın.  
   
- Call `DoStackSnapshot` with your seed context to begin the asynchronous stack walk. If you do not supply a seed, `DoStackSnapshot` might skip managed frames at the top of the stack and, consequently, will give you an incomplete stack walk. If you do supply a seed, it must point to JIT-compiled or Native Image Generator (Ngen.exe)-generated code; otherwise, `DoStackSnapshot` returns the failure code, CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX.  
+ Zaman uyumsuz yığın yürüme işlemini başlatmak için çekirdek bağlamınıza `DoStackSnapshot` çağırın. Bir çekirdek sağlamadıysanız, `DoStackSnapshot` yığının en üstünde yönetilen çerçeveleri atlayabilir ve sonuç olarak size tamamlanmamış bir yığın yürüme olanağı verecektir. Çekirdek sağlarsanız, JıT ile derlenen veya yerel görüntü Oluşturucu (Ngen. exe) tarafından oluşturulan kodu işaret etmelidir; Aksi takdirde, `DoStackSnapshot`, CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX hata kodunu döndürür.  
   
- Asynchronous stack walks can easily cause deadlocks or access violations, unless you follow these guidelines:  
+ Bu yönergeleri izlemeden zaman uyumsuz yığın, kilitlenmeleri veya erişim ihlallerine kolayca yol açabilir:  
   
-- When you directly suspend threads, remember that only a thread that has never run managed code can suspend another thread.  
+- İş parçacıklarını doğrudan askıya aldığınızda, yalnızca yönetilen kodu çalıştırmayan bir iş parçacığının başka bir iş parçacığını askıya alamayacağını unutmayın.  
   
-- Always block in your [ICorProfilerCallback::ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) callback until that thread's stack walk is complete.  
+- [ICorProfilerCallback:: threadnot](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) , iş parçacığının yığın yürüme tamamlanana kadar geri çağırmada her zaman engellenir.  
   
-- Do not hold a lock while your profiler calls into a CLR function that can trigger a garbage collection. That is, do not hold a lock if the owning thread might make a call that triggers a garbage collection.  
+- Profiler, bir atık toplamayı tetikleyebilen bir CLR işlevine çağrı yaparken bir kilit tutmayın. Yani, sahip iş parçacığı çöp toplamayı tetikleyen bir çağrı yapamadığında bir kilit tutmayın.  
   
- There is also a risk of deadlock if you call `DoStackSnapshot` from a thread that your profiler has created so that you can walk the stack of a separate target thread. The first time the thread you created enters certain `ICorProfilerInfo*` methods (including `DoStackSnapshot`), the CLR will perform per-thread, CLR-specific initialization on that thread. If your profiler has suspended the target thread whose stack you are trying to walk, and if that target thread happened to own a lock necessary for performing this per-thread initialization, a deadlock will occur. To avoid this deadlock, make an initial call into `DoStackSnapshot` from your profiler-created thread to walk a separate target thread, but do not suspend the target thread first. This initial call ensures that the per-thread initialization can complete without deadlock. If `DoStackSnapshot` succeeds and reports at least one frame, after that point, it will be safe for that profiler-created thread to suspend any target thread and call `DoStackSnapshot` to walk the stack of that target thread.  
+ Ayrıca, profil oluşturucunun oluşturduğu bir iş parçacığından `DoStackSnapshot` çağırırsanız, ayrı bir hedef iş parçacığının yığınına yol göstermek için de bir kilitlenme riski vardır. Oluşturduğunuz iş parçacığı, bazı `ICorProfilerInfo*` yöntemlerine (`DoStackSnapshot`dahil) girdiğinde, CLR bu iş parçacığında iş parçacığı başına, CLR 'ye özgü başlatma işlemini gerçekleştirir. Profil oluşturucunuz, yığınına kılavuzluk eden hedef iş parçacığını askıya alıyorsa ve bu hedef iş parçacığı bu iş parçacığı başına başlatmayı gerçekleştirmek için gerekli bir kilide gerçekleştiyse, bir kilitlenme meydana gelir. Bu kilitlenmeyi önlemek için, profil oluşturucu tarafından oluşturulan iş parçacığından ayrı bir hedef iş parçacığı getirmek için `DoStackSnapshot` bir ilk çağrı yapın, ancak önce hedef iş parçacığını askıya alın. Bu ilk çağrı, iş parçacığı başına başlatmanın kilitlenme olmadan tamamlanmamasını sağlar. `DoStackSnapshot` başarılı olursa ve en az bir çerçeve raporladığında, bu noktadan sonra herhangi bir hedef iş parçacığını askıya almak ve bu hedef iş parçacığı yığınını kolaylaştırmak için `DoStackSnapshot` çağırmak üzere bu profil oluşturucu tarafından oluşturulan iş parçacığı için güvenli olacaktır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

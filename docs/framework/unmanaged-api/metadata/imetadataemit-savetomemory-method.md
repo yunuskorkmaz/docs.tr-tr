@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435801"
 ---
 # <a name="imetadataemitsavetomemory-method"></a>IMetaDataEmit::SaveToMemory Yöntemi
-Saves all metadata in the current scope to the specified area of memory.  
+Geçerli kapsamdaki tüm meta verileri belirtilen bellek alanına kaydeder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT SaveToMemory (
   
 ## <a name="parameters"></a>Parametreler  
  `pbData`  
- [out] The address at which to begin writing metadata.  
+ dışı Meta veri yazmaya başlamak için kullanılacak adres.  
   
  `cbData`  
- [in] The size, in bytes, of the allocated memory.  
+ 'ndaki Ayrılan belleğin bayt cinsinden boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

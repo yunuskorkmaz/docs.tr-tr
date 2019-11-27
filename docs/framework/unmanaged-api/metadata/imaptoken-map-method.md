@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432143"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map Yöntemi
-Maps a relationship between the assemblies using metadata signatures.  
+Meta veri imzalarını kullanarak derlemeler arasında bir ilişki eşler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,22 +36,22 @@ HRESULT Map (
   
 ## <a name="parameters"></a>Parametreler  
  `tkImp`  
- [in] The metadata token that represents the imported code object.  
+ 'ndaki İçeri aktarılan kod nesnesini temsil eden meta veri belirteci.  
   
  `tkEmit`  
- [in] The metadata token that represents the emitted code object.  
+ 'ndaki Yayınlanan kod nesnesini temsil eden meta veri belirteci.  
   
 ## <a name="remarks"></a>Açıklamalar  
- When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.  
+ Belirteç yeniden eşlemesi bir birleştirme sırasında gerçekleştiğinde, özgün belirteç içeri aktarılan (kaynak) meta veri kapsamında kapsamlandırılır ve yeni belirteç, yayılan (hedef) meta veri kapsamında kapsamdadır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

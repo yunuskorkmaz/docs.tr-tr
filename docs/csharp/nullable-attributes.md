@@ -1,6 +1,6 @@
 ---
-title: Upgrade APIs for nullable reference types with attributes that define expectations for null values
-description: Learn to use the descriptive attributes AllowNull, DisallowNull, MaybeNull, NotNull and more to fully describe the null state of your APIs.
+title: Null değerler için beklentileri tanımlayan özniteliklere sahip Nullable başvuru türleri için API 'Leri yükseltin
+description: API 'lerinizin null durumunu tam olarak anlatmak için AllowNull, DisallowNull, MaybeNull, NotNull ve daha fazlasını açıklayan açıklayıcı öznitelikleri kullanmayı öğrenin.
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
 ms.openlocfilehash: 7142fe0566b1cc7373f5dc777c36443041114c4f
@@ -10,94 +10,94 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204628"
 ---
-# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Update libraries to use nullable reference types and communicate nullable rules to callers
+# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Kitaplıkları null yapılabilir başvuru türleri kullanacak şekilde güncelleştirme ve arayanlara null olabilecek kuralları iletişim kurma
 
-The addition of [nullable reference types](nullable-references.md) means you can declare whether or not a `null` value is allowed or expected for every variable. In addition, you can apply a number of attributes: `AllowNull`, `DisallowNull`, `MaybeNull`, `NotNull`, `NotNullWhen`, `MaybeNullWhen`, and `NotNullWhenNotNull` to completely describe the null states of argument and return values. That provides a great experience as you write code. You get warnings if a non-nullable variable might be set to `null`. You get warnings if a nullable variable isn't null-checked before you dereference it. Updating your libraries can take time, but the payoffs are worth it. The more information you provide to the compiler about *when* a `null` value is allowed or prohibited, the better warnings users of your API will get. Let's start with a familiar example. Imagine your library has the following API to retrieve a resource string:
+[Null yapılabilir başvuru türlerinin](nullable-references.md) eklenmesi, her değişken için `null` bir değere izin verilip verilmeyeceğini veya beklenmediğini bildirebilmeniz anlamına gelir. Ayrıca, bağımsız değişkenin ve dönüş değerlerinin null durumlarını tamamen anlatmak için `AllowNull`, `DisallowNull`, `MaybeNull`, `NotNull`, `NotNullWhen`, `MaybeNullWhen`ve `NotNullWhenNotNull` gibi çeşitli öznitelikler de uygulayabilirsiniz. Bu, kod yazarken harika bir deneyim sağlar. Null atanabilir olmayan bir değişken `null`olarak ayarlanmayabilir, uyarılar alırsınız. Nullable bir değişken, başvuru yapılmadan önce null olarak işaretli değilse uyarılar alırsınız. Kitaplıklarınızın güncelleştirilmesi zaman alabilir, ancak ödeme bu duruma göre yapılır. `null` değere izin verildiğinde ya da yasaklanmış *olduğunda* derleyiciye daha fazla bilgi SAĞLARSANıZ, API 'nizin kullanıcıları daha iyi uyarıları alır. Tanıdık bir örnekle başlayalım. Kitaplığınızın bir kaynak dizesini almak için aşağıdaki API 'ye sahip olduğunu düşünün:
 
 ```csharp
 bool TryGetMessage(string key, out string message)
 ```
 
-The preceding example follows the familiar `Try*` pattern in .NET. There are two reference arguments for this API: the `key` and the `message` parameter. This API has the following rules relating to the nullness of these arguments:
+Yukarıdaki örnek, .NET 'teki tanıdık `Try*` modelini izler. Bu API için iki başvuru bağımsız değişkeni vardır: `key` ve `message` parametresi. Bu API, bu bağımsız değişkenlerin nulldurumuyla ilgili aşağıdaki kurallara sahiptir:
 
-- Callers shouldn't pass `null` as the argument for `key`.
-- Callers can pass a variable whose value is `null` as the argument for `message`.
-- If the `TryGetMessage` method returns `true`, the value of `message` isn't null. If the return value is `false,` the value of `message` (and its null state) is null.
+- Çağıranlar, `key`bağımsız değişkeni olarak `null` iletmemelidir.
+- Çağıranlar, `message`bağımsız değişkeni olarak `null` değeri olan bir değişken geçirebilir.
+- `TryGetMessage` yöntemi `true`döndürürse `message` değeri null değildir. Dönüş değeri `false,` `message` değeri (ve null durumu) null ise.
 
-The rule for `key` can be completely expressed by the variable type: `key` should be a non-nullable reference type. The `message` parameter is more complex. It allows `null` as the argument, but guarantees that, on success, that `out` argument isn't null. For these scenarios, you need a richer vocabulary to describe the expectations.
+`key` kuralı, değişken türü ile tamamen ifade edilebilir: `key` null yapılamayan bir başvuru türü olmalıdır. `message` parametresi daha karmaşıktır. Bağımsız değişken olarak `null` izin verir, ancak başarıyı, `out` bağımsız değişkeninin null olmadığını garanti eder. Bu senaryolar için beklentileri betimleyen daha zengin bir sözlük gerekir.
 
-Updating your library for nullable references requires more than sprinkling `?` on some of the variables and type names. The preceding example shows that you need to examine your APIs and consider your expectations for each input argument. Consider the guarantees for the return value, and any `out` or `ref` arguments upon the method's return. Then communicate those rules to the compiler, and the compiler will provide warnings when callers don't abide by those rules.
+Boş değer atanabilir başvurular için kitaplığınızın güncelleştirilmesi, bazı değişkenlerde ve tür adlarından daha fazla Sprink `?` gerektirir. Yukarıdaki örnek, API 'lerinizi incelemeniz ve her giriş bağımsız değişkeni için beklentilerinizi göz önünde bulundurmanız gerektiğini gösterir. Dönüş değeri için garantiler ve yöntemin dönüşi üzerinde herhangi bir `out` veya `ref` bağımsız değişkeni göz önünde bulundurun. Sonra bu kuralları derleyiciye iletmeyin ve bu kurallar tarafından çağıranlar olmadığında Derleyici uyarılar sağlar.
 
-This work takes time. Let's start with strategies to make your library or application nullable-aware, while balancing other requirements and deliverables. You'll see how to balance ongoing development enabling nullable reference types. You'll learn challenges for generic type definitions. You'll learn to apply attributes to describe pre- and post-conditions on individual APIs.
+Bu iş zaman alır. Diğer gereksinimleri ve teslim edilebilirleri dengelarken, kitaplığınızı veya uygulamanızı null yapılabilir hale getirme stratejileriyle başlayalım. Devam eden geliştirmeyi nasıl dengeleyebilirsiniz, null yapılabilir başvuru türleri etkinleştiriliyor. Genel tür tanımları için zorluk öğrenirsiniz. Tek tek API 'lerde ön ve son koşulları betimleyen öznitelikler uygulamayı öğreneceksiniz.
 
-## <a name="choose-a-nullable-strategy"></a>Choose a nullable strategy
+## <a name="choose-a-nullable-strategy"></a>Null yapılabilir bir strateji seçin
 
-The first choice is whether nullable reference types should be on or off by default. You have two strategies:
+İlk seçenek, null yapılabilir başvuru türlerinin varsayılan olarak açık veya kapalı olması gerekip gerekmediğini belirtir. İki stratejileriniz vardır:
 
-- Enable nullable reference types for the entire project, and disable it in code that's not ready.
-- Only enable nullable reference types for code that's been annotated for nullable reference types.
+- Tüm proje için null yapılabilir başvuru türlerini etkinleştirin ve devre dışı olan kodda devre dışı bırakın.
+- Yalnızca Nullable başvuru türleri için açıklama eklenmiş kod için null yapılabilir başvuru türlerini etkinleştirin.
 
-The first strategy works best when you're adding other features to the library as you update it for nullable reference types. All new development is nullable aware. As you update existing code, you enable nullable reference types in those classes.
+İlk strateji, null yapılabilir başvuru türleri için güncelleştirdiğinizde, kitaplığa başka özellikler eklerken en iyi şekilde kullanılır. Tüm yeni geliştirmeler null yapılabilir. Mevcut kodu güncelleştirdiğinizde bu sınıflarda null yapılabilir başvuru türlerini etkinleştirirsiniz.
 
-Following this first strategy, you do the following:
+Bu ilk stratejiyi izleyerek şunları yapın:
 
-1. Enable nullable types for the entire project by adding the `<Nullable>enable</Nullable>` element to your *csproj* files. 
-1. Add the `#nullable disable` pragma to every source file in your project. 
-1. As you work on each file, remove the pragma and address any warnings.
+1. *Csproj* dosyalarınıza `<Nullable>enable</Nullable>` öğesini ekleyerek projenin tamamına ait null yapılabilir türleri etkinleştirin. 
+1. `#nullable disable` pragma öğesini projenizdeki her kaynak dosyaya ekleyin. 
+1. Her dosya üzerinde çalışırken, pragmayı kaldırın ve tüm uyarıları çözün.
 
-This first strategy has more up-front work to add the pragma to every file. The advantage is that every new code file added to the project will be nullable enabled. Any new work will be nullable aware; only existing code must be updated.
+Bu ilk stratejide, her dosyaya pragma eklemek için daha fazla yukarı iş vardır. Avantajı, projeye eklenen her yeni kod dosyasının null yapılabilir olmasını sağlar. Herhangi bir yeni iş, null yapılabilir. yalnızca var olan kodun güncellenmesi gerekiyor.
 
-The second strategy works better if the library is generally stable, and the main focus of the development is to adopt nullable reference types. You turn on nullable reference types as you annotate APIs. When you've finished, you enable nullable reference types for the entire project.
+İkinci strateji, kitaplığın genellikle kararlı olması ve geliştirmenin ana odağının null yapılabilir başvuru türlerini benimsemeniz durumunda daha iyi bir şekilde çalışacaktır. API 'Leri not yazarken null yapılabilir başvuru türlerini açabilirsiniz. İşiniz bittiğinde, tüm proje için null yapılabilir başvuru türlerini etkinleştirirsiniz.
 
-Following this second strategy you do the following:
+Bu ikinci stratejiyi izleyerek şunları yapın:
 
-1. Add the `#nullable enable` pragma to the file you want to make nullable aware.
-1. Address any warnings.
-1. Continue these first two steps until you've made the entire library nullable aware.
-1. Enable nullable types for the entire project by adding the `<Nullable>enable</Nullable>` element to your *csproj* files. 
-1. Remove the `#nullable enable` pragmas, as they're no longer needed.
+1. `#nullable enable` pragma 'ı, null yapılabilir yapmak istediğiniz dosyaya ekleyin.
+1. Tüm uyarıları çözün.
+1. Tüm kitaplığı null yapılabilir olarak farkında olana kadar bu ilk iki adıma devam edin.
+1. *Csproj* dosyalarınıza `<Nullable>enable</Nullable>` öğesini ekleyerek projenin tamamına ait null yapılabilir türleri etkinleştirin. 
+1. Artık gerekli olmadığı için `#nullable enable` pragmaları kaldırın.
 
-This second strategy has less work up-front. The tradeoff is that the first task when you create a new file is to add the pragma and make it nullable aware. If any developers on your team forget, that new code is now in the backlog of work to make all code nullable aware.
+Bu ikinci stratejinin daha az iş ön ucu vardır. Zorunluluğunu getirir, yeni bir dosya oluşturduğunuz ilk görevin pragmasını eklemek ve null yapılabilir olduğunu fark edevidir. Takımınızdaki herhangi bir geliştirici unutur, bu yeni kod artık tüm kod Nullable olarak uyumlu hale getirmek için iş kapsamındedir.
 
-Which of these strategies you pick depends on how much active development is taking place in your project. The more mature and stable your project, the better the second strategy. The more features being developed, the better the first strategy.
+Seçtiğiniz bu Stratejiler, projenizde ne kadar etkin geliştirme gerçekleştireceğinize bağlıdır. Projeniz ne kadar fazla olgun ve kararlı, ikinci strateji daha iyidir. Daha fazla geliştirmekte olan özellikler, ilk strateji daha iyidir.
 
-## <a name="should-nullable-warnings-introduce-breaking-changes"></a>Should nullable warnings introduce breaking changes?
+## <a name="should-nullable-warnings-introduce-breaking-changes"></a>Null yapılabilir uyarılar, son değişiklikleri mi göstermelidir?
 
-Before you enable nullable reference types, variables are considered *nullable oblivious*. Once you enable nullable reference types, all those variables are *non-nullable*. The compiler will issue warnings if those variables aren't initialized to non-null values.
+Null yapılabilir başvuru türlerini etkinleştirmeden önce, değişkenler *null yapılabilir zorunluluvou*olarak değerlendirilir. Null yapılabilir başvuru türlerini etkinleştirdikten sonra, bu değişkenlerin hepsi *null değer atanamaz*. Bu değişkenler null olmayan değerlere başlatılamıyorsa, derleyici uyarılar verebilir.
 
-Another likely source of warnings is return values when the value hasn't been initialized.
+Büyük olasılıkla başka bir uyarı kaynağı, değer başlatılmamış olduğunda değerler döndürür.
 
-The first step in addressing the compiler warnings is to use `?` annotations on parameter and return types to indicate when arguments or return values may be null. When reference variables must not be null, the original declaration is correct. As you do this, your goal isn't just to fix warnings. The more important goal is to make the compiler understand your intent for potential null values. As you examine the warnings, you reach your next major decision for your library. Do you want to consider modifying API signatures to more clearly communicate your design intent? A better API signature for the `TryGetMessage` method examined earlier could be:
+Derleyici uyarılarını adresleyen ilk adım, parametre üzerinde `?` ek açıklamaları ve bağımsız değişkenlerin veya dönüş değerlerinin null olabileceğini göstermek için dönüş türlerini kullanmaktır. Başvuru değişkenleri null olmamalı, özgün bildirim doğru olur. Bunu yaparken hedefiniz yalnızca uyarıları düzeltemedi. Daha önemli hedef, derleyicinin olası null değerler için amacınızı anlaması sağlamaktır. Uyarıları incelerken, kitaplığınız için bir sonraki önemli kararına ulaşabilirsiniz. Tasarım amacınızı daha net bir şekilde iletmek için API imzalarını değiştirmeyi düşünmek istiyor musunuz? Daha önce incelenen `TryGetMessage` yöntemi için daha iyi bir API imzası şu olabilir:
 
 ```csharp
 string? TryGetMessage(string key);
 ```
 
-The return value indicates success or failure, and carries the value if the value was found. In many cases, changing API signatures can improve how they communicate null values.
+Dönüş değeri başarılı veya başarısız olduğunu gösterir ve değer bulunursa değeri taşır. Çoğu durumda, API imzalarını değiştirmek, null değerleri nasıl ilettikleri iyileştirebilirler.
 
-However, for public libraries, or libraries with large user bases, you may prefer not introducing any API signature changes. For those cases, and other common patterns, you can apply attributes to more clearly define when an argument or return value may be `null`. Whether or not you consider changing the surface of your API, you'll likely find that type annotations alone aren't sufficient for describing `null` values for arguments or return values. In those instances, you can apply attributes to more clearly describe an API. 
+Ancak, genel kitaplıklar veya büyük Kullanıcı temellerine sahip kitaplıklar için herhangi bir API imza değişikliğine giriş yapmayı tercih edebilirsiniz. Bu durumlar ve diğer yaygın desenler için, bir bağımsız değişken veya dönüş değeri `null`olduğunda daha net bir şekilde tanımlanacak öznitelikler uygulayabilirsiniz. API 'nizin yüzeyini değiştirmeyi göz önünde bulundurmayın, büyük olasılıkla tür ek açıklamalarını bağımsız değişkenler veya dönüş değerleri için `null` değerleri tanımlamak için yeterli değildir. Bu örneklerde, bir API 'yi daha net bir şekilde anlatmak için öznitelikler uygulayabilirsiniz. 
 
-## <a name="attributes-extend-type-annotations"></a>Attributes extend type annotations
+## <a name="attributes-extend-type-annotations"></a>Öznitelikler tür ek açıklamalarını Genişlet
 
-Several attributes have been added to express additional information about the null state of variables. All code you wrote before C# 8 introduced nullable reference types was *null oblivious*. That means any reference type variable may be null, but null checks aren't required. Once your code is *nullable aware*, those rules change. Reference types should never be the `null` value, and nullable reference types must be checked against `null` before being dereferenced.
+Değişkenlerin null durumu hakkında ek bilgileri ifade etmek için çeşitli öznitelikler eklenmiştir. 8 ' den önce C# yazdığınız tüm kod null yapılabilir başvuru türleri olarak *null zorunluluvou*idi. Yani herhangi bir başvuru türü değişkeni null olabilir, ancak null denetimleri gerekli değildir. Kodunuz *Nullable olarak farkında*olduktan sonra bu kurallar değişir. Başvuru türleri asla `null` değer olmamalı ve null yapılabilir başvuru türleri başvurulmadan önce `null` karşı denetlenmelidir.
 
-The rules for your APIs are likely more complicated, as you saw with the `TryGetValue` API scenario. Many of your APIs have more complex rules for when variables can or can't be `null`. In these cases, you'll use one of the following attributes to express those rules:
+API 'nizin kuralları `TryGetValue` API senaryosuyla gördüğünüz gibi büyük olasılıkla daha karmaşıktır. Birçok API 'niz, değişkenlerin `null`veya ne zaman oluşturulabileceğine ilişkin daha karmaşık kurallara sahiptir. Bu durumlarda, bu kuralları ifade etmek için aşağıdaki özniteliklerden birini kullanacaksınız:
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): A non-nullable input argument may be null.
-- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): A nullable input argument should never be null.
-- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): A non-nullable return value may be null.
-- [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): A nullable return value will never be null.
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): A non-nullable input argument may be null when the method returns the specified `bool` value.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): A nullable input argument will not be null when the method returns the specified `bool` value.
-- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): A return value isn't null if the argument for the specified parameter isn't null.
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null yapılamayan bir giriş bağımsız değişkeni null olabilir.
+- [Disallownull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null olabilen bir giriş bağımsız değişkeni hiçbir şekilde null olmamalıdır.
+- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): null yapılamayan bir dönüş değeri null olabilir.
+- [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): null olabilen bir dönüş değeri hiçbir şekilde null olmaz.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): yöntem belirtilen `bool` değerini döndürdüğünde null yapılamayan bir giriş bağımsız değişkeni null olabilir.
+- [Notnullne zaman](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): yöntem belirtilen `bool` değerini döndürdüğünde null olabilen bir giriş bağımsız değişkeni null olmaz.
+- [Notnullifnotnull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): belirtilen parametrenin bağımsız değişkeni null değilse, dönüş değeri null olamaz.
 
-The preceding descriptions are a quick reference to what each attribute does. Each following section describes the behavior and meaning more thoroughly.
+Yukarıdaki açıklamalar, her bir özniteliğin yaptığı işe yönelik hızlı bir başvurudur. Aşağıdaki her bölümde davranışı ve anlamı daha kapsamlı bir şekilde açıklanmıştır.
 
-Adding these attributes gives the compiler more information about the rules for your API. When calling code is compiled in a nullable enabled context, the compiler will warn callers when they violate those rules. These attributes don't enable additional checks on your implementation.
+Bu özniteliklerin eklenmesi, derleyiciye API 'nizin kuralları hakkında daha fazla bilgi verir. Kodu çağırma özelliği, null yapılabilir etkin bir bağlamda derlenirse, derleyici bu kuralları ihlal ettiklerinde çağıranları uyarır. Bu öznitelikler, uygulamanızda ek denetimleri etkinleştirmez.
 
-## <a name="specify-preconditions-allownull-and-disallownull"></a>Specify preconditions: `AllowNull` and `DisallowNull`
+## <a name="specify-preconditions-allownull-and-disallownull"></a>Önkoşulları belirtin: `AllowNull` ve `DisallowNull`
 
-Consider a read/write property that never returns `null` because it has a reasonable default value. Callers pass `null` to the set accessor when setting it to that default value. For example, consider a messaging system that asks for a screen name in a chat room. If none is provided, the system generates a random name:
+Makul bir varsayılan değere sahip olduğu için hiçbir süre `null` döndürmediği bir okuma/yazma özelliği düşünün. Çağıranlar, bu varsayılan değere ayarlarken ayarlanan erişimciye `null` geçer. Örneğin, bir sohbet odasında ekran adı isteyen bir mesajlaşma sistemi düşünün. Hiçbiri sağlanmazsa, sistem rastgele bir ad üretir:
 
 ```csharp
 public string ScreenName
@@ -108,7 +108,7 @@ public string ScreenName
 private string screenName;
 ```
 
-When you compile the preceding code in a nullable oblivious context, everything is fine. Once you enable nullable reference types, the `ScreenName` property becomes a non-nullable reference. That's correct for the `get` accessor: it never returns `null`. Callers don't need to check the returned property for `null`. But now setting the property to `null` generates a warning. In order to continue to support this type of code, you add the <xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute?displayProperty=nameWithType> attribute to the property, as shown in the following code: 
+Önceki kodu null olabilir bir zorunluluvou bağlamında derlerken her şey iyidir. Null yapılabilir başvuru türlerini etkinleştirdikten sonra, `ScreenName` özelliği null yapılamayan bir başvuru haline gelir. Bu, `get` erişimcisi için doğrudur: hiçbir süre `null`döndürmez. Çağıranlar `null`için döndürülen özelliği denetmek zorunda değildir. Ancak şimdi özelliği `null` olarak ayarlamak bir uyarı oluşturur. Bu tür bir kodu desteklemeye devam etmek için, aşağıdaki kodda gösterildiği gibi, <xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute?displayProperty=nameWithType> özniteliğini özelliğine eklersiniz: 
 
 ```csharp
 [AllowNull]
@@ -120,16 +120,16 @@ public string ScreenName
 private string screenName = GenerateRandomScreenName();
 ```
 
-You may need to add a `using` directive for <xref:System.Diagnostics.CodeAnalysis> to use this and other attributes discussed in this article. The attribute is applied to the property, not the `set` accessor. The `AllowNull` attribute specifies *pre-conditions*, and only applies to inputs. The `get` accessor has a return value, but no input arguments. Therefore, the `AllowNull` attribute only applies to the `set` accessor.
+Bu makalede açıklanan bu ve diğer öznitelikleri kullanmak için <xref:System.Diagnostics.CodeAnalysis> için bir `using` yönergesi eklemeniz gerekebilir. Özniteliği, `set` erişimcisine değil, özelliğine uygulanır. `AllowNull` özniteliği *ön koşulları*belirtir ve yalnızca girişler için geçerlidir. `get` erişimcisinin dönüş değeri var, ancak giriş bağımsız değişkeni yok. Bu nedenle `AllowNull` özniteliği yalnızca `set` erişimcisi için geçerlidir.
 
-The preceding example demonstrates what to look for when adding the `AllowNull` attribute on an argument:
+Yukarıdaki örnekte, bir bağımsız değişkende `AllowNull` özniteliği eklenirken ne aranacağı gösterilmektedir:
 
-1. The general contract for that variable is that it shouldn't be `null`, so you want a non-nullable reference type.
-1. There are scenarios for the input variable to be `null`, though they aren't the most common usage.
+1. Bu değişken için genel sözleşme, `null`olmaması ve null yapılamayan bir başvuru türü istemeniz gerekir.
+1. Giriş değişkeninin `null`olması, en sık kullanılan kullanımlar olmasa da senaryolar vardır.
 
-Most often you'll need this attribute for properties, or `in`, `out`, and `ref` arguments. The `AllowNull` attribute is the best choice when a variable is typically non-null, but you need to allow `null` as a precondition.
+Çoğu kez bu özniteliğe özellikler veya `in`, `out`ve `ref` bağımsız değişkenleri için ihtiyaç duyarsınız. `AllowNull` özniteliği, genellikle null olmayan bir değişken olduğunda en iyi seçenektir, ancak önkoşul olarak `null` izin vermeniz gerekir.
 
-Contrast that with scenarios for using `DisallowNull`: You use this attribute to specify that an input variable of a nullable type shouldn't be `null`. Consider a property where `null` is the default value, but clients can only set it to a non-null value. Consider the following code:
+`DisallowNull`kullanmaya yönelik senaryolar ile karşıtlık: Bu özniteliği, null yapılabilir bir türdeki bir giriş değişkeninin `null`olmaması gerektiğini belirtmek için kullanırsınız. `null` varsayılan değer olduğu ancak istemciler yalnızca null olmayan bir değere ayarlayabileceği bir özelliği düşünün. Aşağıdaki kodu göz önünde bulundurun:
 
 ```csharp
 public string ReviewComment
@@ -140,7 +140,7 @@ public string ReviewComment
 string _comment;
 ```
 
-The preceding code is the best way to express your design that the `ReviewComment` could be `null`, but can't be set to `null`. Once this code is nullable aware, you can express this concept more clearly to callers using the <xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute?displayProperty=nameWithType>:
+Yukarıdaki kod, tasarımınızı `ReviewComment` `null`, ancak `null`olarak ayarlayabilmenin en iyi yoludur. Bu kod null yapılabilir olduğunda, bu kavramı <xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute?displayProperty=nameWithType>kullanarak çağıranlara daha net bir şekilde ifade edebilirsiniz:
 
 ```csharp
 [DisallowNull] 
@@ -152,50 +152,50 @@ public string? ReviewComment
 string? _comment;
 ```
 
-In a nullable context, the `ReviewComment` `get` accessor could return the default value of `null`. The compiler warns that it must be checked before access. Furthermore, it warns callers that, even though it could be `null`, callers shouldn't explicitly set it to `null`. The `DisallowNull` attribute also specifies a *pre-condition*, it does not affect the `get` accessor. You should choose to use the `DisallowNull` attribute when you observe these characteristics about:
+Null yapılabilir bir bağlamda, `ReviewComment` `get` erişimcisi `null`varsayılan değerini döndürebilir. Derleyici, erişim öncesinde denetlenmesi gerektiğini uyarır. Ayrıca, arayanlara, `null`gibi görünse de, çağıranlar açıkça `null`olarak ayarlanmamalıdır. `DisallowNull` özniteliği bir *ön koşul*de belirtir, `get` erişimcisini etkilemez. Aşağıdaki özellikleri gözlemlerseniz `DisallowNull` özniteliğini kullanmayı seçmeniz gerekir:
 
-1. The variable could be `null` in core scenarios, often when first instantiated.
-1. The variable shouldn't be explicitly set to `null`.
+1. Değişken, genellikle ilk örneklendiği zaman çekirdek senaryolarda `null` olabilir.
+1. Değişken açıkça `null`olarak ayarlanmamalıdır.
 
-These situations are common in code that was originally *null oblivious*. It may be that object properties are set in two distinct initialization operations. It may be that some properties are set only after some asynchronous work has completed.
+Bu durumlar, başlangıçta *null yükümlülüğü*oluşturulan kodda ortaktır. Nesne özelliklerinin iki ayrı başlatma işlemi olarak ayarlanmış olması olabilir. Bazı özelliklerin bazı zaman uyumsuz çalışma tamamlandıktan sonra ayarlanmış olması olabilir.
 
-The `AllowNull` and `DisallowNull` attributes enable you to specify that preconditions on variables may not match the nullable annotations on those variables. These provide more detail about the characteristics of your API. This additional information helps callers use your API correctly. Remember you specify preconditions using the following attributes:
+`AllowNull` ve `DisallowNull` öznitelikleri, değişkenlerde önkoşulların Bu değişkenlerde boş değer atanabilir açıklamalarıyla eşleşmeyebilir belirtmenize olanak tanır. Bunlar, API 'nizin özellikleri hakkında daha ayrıntılı bilgi sağlar. Bu ek bilgiler, arayanların API 'nizi doğru şekilde kullanmasına yardımcı olur. Aşağıdaki öznitelikleri kullanarak önkoşulları belirtdüğünü unutmayın:
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): A non-nullable input argument may be null.
-- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): A nullable input argument should never be null.
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null yapılamayan bir giriş bağımsız değişkeni null olabilir.
+- [Disallownull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null olabilen bir giriş bağımsız değişkeni hiçbir şekilde null olmamalıdır.
 
-## <a name="specify-post-conditions-maybenull-and-notnull"></a>Specify post-conditions: `MaybeNull` and `NotNull`
+## <a name="specify-post-conditions-maybenull-and-notnull"></a>Son koşulları belirtin: `MaybeNull` ve `NotNull`
 
-Suppose you have a method with the following signature:
+Aşağıdaki imzaya sahip bir yönteminiz olduğunu varsayalım:
 
 ```csharp
 public Customer FindCustomer(string lastName, string firstName)
 ```
 
-You've likely written a method like this to return `null` when the name sought wasn't found. The `null` clearly indicates that the record wasn't found. In this example, you'd likely change the return type from `Customer` to `Customer?`. Declaring the return value as a nullable reference type specifies the intent of this API clearly. 
+Aranan ad bulunamadığı zaman `null` döndürmek için bunun gibi bir yöntem yazmış oldunuz. `null`, kaydın bulunamadığını açıkça gösterir. Bu örnekte, büyük ihtimalle `Customer` dönüş türünü `Customer?`olarak değiştirirsiniz. Dönüş değerinin null yapılabilir bir başvuru türü olarak bildirilmesi, bu API 'nin amacını açıkça belirtir. 
 
-For reasons covered under [Generic definitions and nullability](#generic-definitions-and-nullability) that technique does not work with generic methods. You may have a generic method that follows a similar pattern:
+[Genel tanımlar ve null değer verilebilme](#generic-definitions-and-nullability) kapsamında, tekniği genel yöntemlerle çalışmayan nedenler için. Benzer bir kalıbı izleyen genel bir yönteminiz olabilir:
 
 ```csharp
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
 ```
 
-You can't specify that the return value is `T?`. The method returns `null` when the sought item isn't found. Since you can't declare a `T?` return type, you add the `MaybeNull` annotation to the method return:
+Dönüş değerinin `T?`belirtemezsiniz. Bu yöntem, Aranan öğe bulunamadığında `null` döndürür. `T?` bir dönüş türü bildiremiyoruz, bu ek açıklamayı Yöntem döndürecek şekilde `MaybeNull` ekleyin:
 
 ```csharp
 [return: MaybeNull]
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
 ```
 
-The preceding code informs callers that the contract implies a non-nullable type, but the return value *may* actually be null.  Use the `MaybeNull` attribute when your API should be a non-nullable type, typically a generic type parameter, but there may be instances where `null` would be returned.
+Yukarıdaki kod, arayanlara sözleşmenin null yapılamayan bir tür gösterdiği anlamına gelir, ancak *dönüş değeri gerçekten null olabilir.*  API 'niz null yapılamayan bir tür olması gerektiğinde (genellikle genel bir tür parametresi) `MaybeNull` özniteliğini kullanın, ancak `null` döndürüldüğünden örnek olabilir.
 
-You can also specify that a return value or an `out` or `ref` argument isn't null even though the type is a nullable type. Consider a method that ensures an array is large enough to hold a number of elements. If the input argument doesn't have capacity, the routine would allocate a new array and copy all the existing elements into it. If the input argument is `null`, the routine would allocate new storage. If there's sufficient capacity, the routine does nothing:
+Bir dönüş değeri veya `out` ya da `ref` bağımsız değişkeninin tür null yapılabilir bir tür olmasına rağmen null olmadığını belirtebilirsiniz. Bir dizinin birçok öğe tutabilecek kadar büyük olmasını sağlayan bir yöntemi düşünün. Giriş bağımsız değişkeninin kapasitesi yoksa, yordam yeni bir dizi ayırır ve var olan tüm öğeleri buna kopyalar. Giriş bağımsız değişkeni `null`, yordam yeni depolama alanı ayırır. Yeterli kapasite varsa, yordam hiçbir şey yapmaz:
 
 ```csharp
 public void EnsureCapacity<T>(ref T[] storage, int size)
 ```
 
-You could call this routine as follows:
+Bu yordamı aşağıdaki şekilde çağırabilirsiniz:
 
 ```csharp
 // messages has the default value (null) when EnsureCapacity is called:
@@ -204,28 +204,28 @@ EnsureCapacity<string>(ref messages, 10);
 EnsureCapacity<string>(messages, 50);
 ```
 
-After enabling null reference types, you want to ensure that the preceding code compiles without warnings. When the method returns, the `storage` argument is guaranteed to be not null. However, it's acceptable to call `EnsureCapacity` with a null reference. You can make `storage` a nullable reference type, and add the `NotNull` post-condition to the parameter declaration:
+Null başvuru türlerini etkinleştirdikten sonra, önceki kodun uyarı olmadan derlendiğinden emin olmak istersiniz. Yöntem döndüğünde, `storage` bağımsız değişkeninin null olmadığı garanti edilir. Ancak, null başvurusuyla `EnsureCapacity` çağırmak kabul edilebilir. `storage` null yapılabilir bir başvuru türü yapabilirsiniz ve `NotNull` koşul sonrası parametre bildirimine ekleyebilirsiniz:
 
 ```csharp
 public void EnsureCapacity<T>([NotNull]ref T[]? storage, int size)
 ```
 
-The preceding code expresses the existing contract very clearly: Callers can pass a variable with the `null` value, but the return value is guaranteed to never be null. The `NotNull` attribute is most useful for `ref` and `out` arguments where `null` may be passed as an argument, but that argument is guaranteed to be not null when the method returns.
+Yukarıdaki kod, mevcut sözleşmeyi çok açık bir şekilde ifade eder: çağıranlar `null` değeri olan bir değişken geçirebilir, ancak dönüş değeri hiçbir şekilde null olmamalıdır. `NotNull` özniteliği, `null` bağımsız değişken olarak geçirilebilecek `ref` ve `out` bağımsız değişkenleri için en yararlı seçenektir, ancak yöntemin döndürdüğü bağımsız değişkenin null olmaması garanti edilir.
 
-You specify unconditional postconditions using the following attributes:
+Aşağıdaki öznitelikleri kullanarak koşulsuz Sonkoşulları belirtirsiniz:
 
-- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): A non-nullable return value may be null.
-- [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): A nullable return value will never be null.
+- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): null yapılamayan bir dönüş değeri null olabilir.
+- [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): null olabilen bir dönüş değeri hiçbir şekilde null olmaz.
 
-## <a name="specify-conditional-post-conditions-notnullwhen-maybenullwhen-and-notnullifnotnull"></a>Specify conditional post-conditions: `NotNullWhen`, `MaybeNullWhen`, and `NotNullIfNotNull`
+## <a name="specify-conditional-post-conditions-notnullwhen-maybenullwhen-and-notnullifnotnull"></a>Koşullu koşulları belirtin: `NotNullWhen`, `MaybeNullWhen`ve `NotNullIfNotNull`
 
-You're likely familiar with the `string` method <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>. This method returns `true` when the argument is null or an empty string. It's a form of null-check: Callers don't need to null-check the argument if the method returns `false`. To make a method like this nullable aware, you'd set the argument to a nullable type, and add the `NotNullWhen` attribute:
+Büyük olasılıkla `string` yöntemi <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>hakkında bilgi sahibisiniz. Bu yöntem, bağımsız değişken null veya boş bir dize olduğunda `true` döndürür. Bu bir null denetim biçimidir: çağıranların null olması gerekmez; Yöntem `false`döndürürse bağımsız değişkeni denetleyin. Bu null yapılabilir bir yöntemi gibi bir yöntem oluşturmak için bağımsız değişkenini null yapılabilir bir türe ayarlarsınız ve `NotNullWhen` özniteliği ekleyebilirsiniz:
 
 ```csharp
 bool IsNullOrEmpty([NotNullWhen(false)]string? value);
 ```
 
-That informs the compiler that any code where the return value is `false` need not be null-checked. The addition of the attribute informs the compiler's static analysis that `IsNullOrEmpty` performs the necessary null check: when it returns `false`, the input argument is not `null`.
+Bu, derleyiciye dönüş değerinin `false` olduğu herhangi bir kodun null denetimli olması gerektiğini bildirir. Özniteliğin eklenmesi derleyicinin statik analizine `IsNullOrEmpty` gerekli null denetimi gerçekleştirmesini bildirir: `false`döndürdüğünde, giriş bağımsız değişkeni `null`değildir.
 
 ```csharp
 string? userInput = GetUserInput();
@@ -236,71 +236,71 @@ if (!string.IsNullOrEmpty(userInput))
 // null check needed on userInput here.
 ```
 
-The <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType> method will be annotated as shown above for .NET Core 3.0. You may have similar methods in your codebase that check the state of objects for null values. The compiler won't recognize custom null check methods, and you'll need to add the annotations yourself. When you add the attribute, the compiler's static analysis knows when the tested variable has been null checked.
+<xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType> yöntemine .NET Core 3,0 için yukarıda gösterildiği gibi açıklama eklenir. Kod tabanınızda, null değerler için nesnelerin durumunu kontrol eden benzer yöntemlere sahip olabilirsiniz. Derleyici özel null denetim yöntemlerini tanımaz ve ek açıklamaları kendiniz eklemeniz gerekir. Özniteliğini eklediğinizde, derleyicinin statik analizi, sınanan değişkenin null olarak işaretli olduğunu bilir.
 
-Another use for these attributes is the `Try*` pattern. The postconditions for `ref` and `out` variables are communicated through the return value. Consider this method shown earlier:
+Bu öznitelikler için başka bir kullanım `Try*` öründir. `ref` ve `out` değişkenlerine yönelik Sonkoşulları, dönüş değeri üzerinden iletilir. Daha önce gösterilen bu yöntemi göz önünde bulundurun:
 
 ```csharp
 bool TryGetMessage(string key, out string message)
 ```
 
-The preceding method follows a typical .NET idiom: the return value indicates if `message` was set to the found value or, if no message is found, to the default value. If the method returns `true`, the value of `message` isn't null; otherwise, the method sets `message` to null.
+Yukarıdaki yöntem tipik bir .NET deyimidir OM: dönüş değeri, `message` bulunan değere ayarlanmış olup olmadığını veya hiçbir ileti bulunamazsa varsayılan değere ayarlandığını gösterir. Yöntem `true`döndürürse, `message` değeri null değildir; Aksi takdirde, yöntemi null olarak `message` ayarlar.
 
-You can communicate that idiom using the `NotNullWhen` attribute. When you update the signature for nullable reference types, make `message` a `string?` and add an attribute:
+`NotNullWhen` özniteliğini kullanarak bu deyimden iletişim kurabilirsiniz. Null yapılabilir başvuru türleri için imzayı güncelleştirdiğinizde `message` bir `string?` yapın ve bir öznitelik ekleyin:
 
 ```csharp
 bool TryGetMessage(string key, [NotNullWhen(true)] out string? message)
 ```
 
-In the preceding example, the value of `message` is known to be not null when `TryGetMessage` returns `true`. You should annotate similar methods in your codebase in the same way: the arguments could be `null`, and are known to be not null when the method returns `true`.
+Yukarıdaki örnekte, `TryGetMessage` `true`döndürüldüğünde `message` değeri null değil olarak bilinir. Kod tabanınızda benzer yöntemlere aynı şekilde açıklama eklemek gerekir: bağımsız değişkenler `null`olabilir ve Yöntem `true`döndürdüğünde null olmadığı bilinmektedir.
 
-There's one final attribute you may also need. Sometimes the null state of a return value depends on the null state of one or more input arguments. These methods will return a non-null value whenever certain input arguments aren't `null`. To correctly annotate these methods, you use the `NotNullIfNotNull` attribute. Consider the following method:
+Ayrıca ihtiyacınız olabilecek bir son öznitelik vardır. Bazen bir dönüş değerinin null durumu, bir veya daha fazla giriş bağımsız değişkenlerinin null durumuna bağlıdır. Bu yöntemler, belirli giriş bağımsız değişkenleri `null`olmadığında null olmayan bir değer döndürür. Bu yöntemlere doğru şekilde açıklama eklemek için `NotNullIfNotNull` özniteliğini kullanırsınız. Aşağıdaki yöntemi göz önünde bulundurun:
 
 ```csharp
 string GetTopLevelDomainFromFullUrl(string url);
 ```
 
-If the `url` argument isn't null, the output isn't `null`. Once nullable references are enabled, that signature works correctly, provided your API never accepts a null input. However, if the input could be null, then return value could also be null. Therefore, you could change the signature to the following code:
+`url` bağımsız değişkeni null değilse, çıktı `null`olmaz. Null yapılabilir başvurular etkinleştirildikten sonra, bu imza doğru şekilde çalışarak API 'niz hiçbir şekilde null girişi kabul etmez. Ancak, giriş null ise, dönüş değeri de null olabilir. Bu nedenle, imzayı aşağıdaki kodla değiştirebilirsiniz:
 
 ```csharp
 string? GetTopLevelDomainFromFullUrl(string? url);
 ```
 
-That also works, but will often force callers to implement extra `null` checks. The contract is that the return value would be `null` only when the input argument `url` is `null`. To express that contract, you would annotate this method as shown in the following code:
+Bu da çalışır, ancak arayanlara ek `null` denetimleri uygulamaya zorlayacaktır. Sözleşme, dönüş değerinin yalnızca `url` giriş bağımsız değişkeni `null`olduğunda `null` olacaktır. Bu sözleşmeyi ifade etmek için, aşağıdaki kodda gösterildiği gibi bu yönteme açıklama ekleyebilirsiniz:
 
 ```csharp
 [return: NotNullIfNotNull("url")]
 string? GetTopLevelDomainFromFullUrl(string? url);
 ```
 
-The return value and the argument have both been annotated with the `?` indicating that either could be `null`. The attribute further clarifies that the return value won't be null when the `url` argument isn't `null`.
+Dönüş değerine ve bağımsız değişkenine, `null``?` olduğunu belirten açıklanmalıdır. Öznitelik, `url` bağımsız değişkeni `null`olmadığında döndürülen değerin null olmaması gerektiğini açıklığa kavuşturmaz.
 
-You specify conditional postconditions using these attributes:
+Şu öznitelikleri kullanarak koşullu Sonkoşulları belirtirsiniz:
 
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): A non-nullable input argument may be null when the method returns the specified `bool` value.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): A nullable input argument will not be null when the method returns the specified `bool` value.
-- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): A return value isn't null if the input argument for the specified parameter isn't null.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): yöntem belirtilen `bool` değerini döndürdüğünde null yapılamayan bir giriş bağımsız değişkeni null olabilir.
+- [Notnullne zaman](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): yöntem belirtilen `bool` değerini döndürdüğünde null olabilen bir giriş bağımsız değişkeni null olmaz.
+- [Notnullifnotnull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): belirtilen parametrenin giriş bağımsız değişkeni null değilse, dönüş değeri null olamaz.
 
-## <a name="generic-definitions-and-nullability"></a>Generic definitions and nullability
+## <a name="generic-definitions-and-nullability"></a>Genel tanımlar ve null değer alabilirlik
 
-Correctly communicating the null state of generic types and generic methods requires special care. This stems from the fact that a nullable value type and a nullable reference type are fundamentally different. An `int?` is a synonym for `Nullable<int>`, whereas `string?` is `string` with an attribute added by the compiler. The result is that the compiler can't generate correct code for `T?` without knowing if `T` is a `class` or a `struct`. 
+Genel türlerin ve genel yöntemlerin null durumuna doğru bir şekilde iletişim kurmak için özel bakım yapılması gerekir. Bu, null olabilen bir değer türünün ve null olabilen bir başvuru türünün temelde farklı olduğu gerçekten farklıdır. `int?`, `Nullable<int>`için bir eş anladır, ancak derleyici tarafından eklenen bir özniteliğe sahip `string?` `string`. Sonuç olarak, `T` bir `class` veya bir `struct`olup olmadığını bilmeden derleyicinin `T?` için doğru kodu oluşturabileceği bir sonucudur. 
 
-This doesn't mean you can't use a nullable type (either value type or reference type) as the type argument for a closed generic type. Both `List<string?>` and `List<int?>` are valid instantiations of `List<T>`. 
+Bu, kapalı bir genel türün tür bağımsız değişkeni olarak null yapılabilir bir tür (değer türü veya başvuru türü) kullanmayacağınız anlamına gelmez. Hem `List<string?>` hem de `List<int?>` `List<T>`geçerli örneklerdir. 
 
-What it does mean is that you can't use `T?` in a generic class or method declaration without constraints. For example, <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D)?displayProperty=nameWithType> won't be changed to return `T?`. You can overcome this limitation by adding either the `struct` or `class` constraint. With either of those constraints, the compiler knows how to generate code for both `T` and `T?`.
+Ne anlama geliyor, bir genel sınıfta veya yöntem bildiriminde kısıtlama olmadan `T?` kullanmayacağınız anlamına gelir. Örneğin, <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D)?displayProperty=nameWithType> `T?`döndürecek şekilde değiştirilmez. `struct` veya `class` kısıtlamasını ekleyerek bu sınırlamayı aşabilirsiniz. Bu kısıtlamalardan biri ile derleyici, hem `T` hem de `T?`için nasıl kod üretireceğini bilir.
 
-You may want to restrict the types used for a generic type argument to be non-nullable types. You can do that by adding the `notnull` constraint on that type argument. When that constraint is applied, the type argument must not be a nullable type.
+Genel tür bağımsız değişkeni için kullanılan türleri null yapılamayan türler olacak şekilde kısıtlamak isteyebilirsiniz. Bunu, bu tür bağımsız değişkenine `notnull` kısıtlamasını ekleyerek yapabilirsiniz. Bu kısıtlama uygulandığında tür bağımsız değişkeni null yapılabilir bir tür olmamalıdır.
 
 ## <a name="conclusions"></a>Sonuçlar
 
-Adding nullable reference types provides an initial vocabulary to describe your APIs expectations for variables that could be `null`. The additional attributes provide a richer vocabulary to describe the null state of variables as preconditions and postconditions. These attributes more clearly describe your expectations and provide a better experience for the developers using your APIs.
+Null yapılabilir başvuru türleri eklemek, `null`olabilecek değişkenlere yönelik API beklentilerinizi tanımlayan bir başlangıç sözlüğü sağlar. Ek öznitelikler, değişkenlerin null durumunu ön koşullar ve Postconditions olarak tanımlamaya yönelik daha zengin bir sözlük sağlar. Bu öznitelikler beklentilerinizi daha net bir şekilde anlatır ve API 'lerinizi kullanan geliştiriciler için daha iyi bir deneyim sağlar.
 
-As you update libraries for a nullable context, add these attributes to guide users of your APIs to the correct usage. These attributes help you fully describe the null-state of input arguments and return values:
+Bir null yapılabilir bağlam için kitaplıkları güncelleştirdiğinizde, API 'lerinizi kullanıcılarına doğru kullanım için bu öznitelikleri ekleyin. Bu öznitelikler, giriş bağımsız değişkenlerinin ve dönüş değerlerinin Null durumunu tam olarak açıklamanıza yardımcı olur:
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): A non-nullable input argument may be null.
-- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): A nullable input argument should never be null.
-- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): A non-nullable return value may be null.
-- [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): A nullable return value will never be null.
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): A non-nullable input argument may be null when the method returns the specified `bool` value.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): A nullable input argument will not be null when the method returns the specified `bool` value.
-- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): A return value isn't null if the input argument for the specified parameter isn't null.
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null yapılamayan bir giriş bağımsız değişkeni null olabilir.
+- [Disallownull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null olabilen bir giriş bağımsız değişkeni hiçbir şekilde null olmamalıdır.
+- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): null yapılamayan bir dönüş değeri null olabilir.
+- [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): null olabilen bir dönüş değeri hiçbir şekilde null olmaz.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): yöntem belirtilen `bool` değerini döndürdüğünde null yapılamayan bir giriş bağımsız değişkeni null olabilir.
+- [Notnullne zaman](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): yöntem belirtilen `bool` değerini döndürdüğünde null olabilen bir giriş bağımsız değişkeni null olmaz.
+- [Notnullifnotnull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): belirtilen parametrenin giriş bağımsız değişkeni null değilse, dönüş değeri null olamaz.

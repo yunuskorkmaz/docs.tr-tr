@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432878"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType Numaralandırması
-Specifies how an object is serialized by the common language runtime.  
+Bir nesnenin ortak dil çalışma zamanı tarafından nasıl serileştirildiği belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -57,33 +57,33 @@ typedef enum CorSerializationType {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|Serialization of the object is undefined.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|Object is serialized as a Boolean type|  
-|`SERIALIZATION_TYPE_CHAR`|Object is serialized as a character type.|  
-|`SERIALIZATION_TYPE_I1`|Object is serialized as a signed 1-byte integer.|  
-|`SERIALIZATION_TYPE_U1`|Object is serialized as an unsigned 1-byte integer.|  
-|`SERIALIZATION_TYPE_I2`|Object is serialized as a signed 2-byte integer.|  
-|`SERIALIZATION_TYPE_U2`|Object is serialized as an unsigned 2-byte integer.|  
-|`SERIALIZATION_TYPE_I4`|Object is serialized as a signed 4-byte integer.|  
-|`SERIALIZATION_TYPE_U4`|Object is serialized as an unsigned 4-byte integer.|  
-|`SERIALIZATION_TYPE_I8`|Object is serialized as a signed 8-byte integer.|  
-|`SERIALIZATION_TYPE_U8`|Object is serialized as an unsigned 8-byte integer.|  
-|`SERIALIZATION_TYPE_R4`|Object is serialized as a 4-byte floating point.|  
-|`SERIALIZATION_TYPE_R8`|Object is serialized as an 8-byte floating point.|  
-|`SERIALIZATION_TYPE_STRING`|Object is serialized as a System.String type.|  
-|`SERIALIZATION_TYPE_SZARRAY`|Object is serialized as a single-dimensional, zero lower-bound array.|  
-|`SERIALIZATION_TYPE_TYPE`|Object is serialized as a generic type.|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Object is serialized as a tagged object.|  
-|`SERIALIZATION_TYPE_FIELD`|Object is serialized as a field.|  
-|`SERIALIZATION_TYPE_PROPERTY`|Object is serialized as a property.|  
-|`SERIALIZATION_TYPE_ENUM`|Object is serialized as an enumeration.|  
+|`SERIALIZATION_TYPE_UNDEFINED`|Nesnenin serileştirilmesi tanımsız.|  
+|`SERIALIZATION_TYPE_BOOLEAN`|Nesne, Boole türü olarak serileştirilir|  
+|`SERIALIZATION_TYPE_CHAR`|Nesne bir karakter türü olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_I1`|Nesne, işaretli bir 1 baytlık tamsayı olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_U1`|Nesne işaretsiz bir 1 baytlık tamsayı olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_I2`|Nesne, işaretli bir 2 baytlık tamsayı olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_U2`|Nesne işaretsiz bir 2 baytlık tamsayı olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_I4`|Nesne, imzalanmış 4 baytlık tamsayı olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_U4`|Nesne işaretsiz 4 baytlık tamsayı olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_I8`|Nesne, imzalanmış 8 baytlık tamsayı olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_U8`|Nesne işaretsiz 8 baytlık tamsayı olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_R4`|Nesne 4 baytlık kayan nokta olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_R8`|Nesne 8 baytlık kayan nokta olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_STRING`|Nesne bir System. String türü olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_SZARRAY`|Nesne tek boyutlu, sıfır alt sınır dizisi olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_TYPE`|Nesne genel bir tür olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Nesne etiketli bir nesne olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_FIELD`|Nesne bir alan olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_PROPERTY`|Nesne bir özellik olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_ENUM`|Nesne bir sabit listesi olarak serileştirilir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

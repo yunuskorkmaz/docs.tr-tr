@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439747"
 ---
 # <a name="icorprofilercallback2handledestroyed-method"></a>ICorProfilerCallback2::HandleDestroyed Yöntemi
-Notifies the code profiler that a garbage collection handle has been destroyed.  
+Kod Profilcisi bir çöp toplama tanıtıcısının yok edildiğini bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,16 +34,16 @@ HRESULT HandleDestroyed(
   
 ## <a name="parameters"></a>Parametreler  
  `handleId`  
- [in] The ID of the handle for the garbage collection.  
+ 'ndaki Çöp toplama tanıtıcısının KIMLIĞI.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

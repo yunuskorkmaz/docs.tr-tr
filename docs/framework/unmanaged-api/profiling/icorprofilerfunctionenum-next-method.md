@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447781"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>ICorProfilerFunctionEnum::Next Yöntemi
-Gets the specified number of contiguous functions from a sequential collection of functions, starting at the enumerator's current position in the sequence.  
+Numaralandırıcının dizideki geçerli konumundan başlayarak sıralı bir işlevler koleksiyonundan belirtilen sayıda bitişik işlevi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,30 +36,30 @@ HRESULT Next([in]  ULONG      celt,
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] The number of functions to retrieve.  
+ 'ndaki Alınacak işlevlerin sayısı.  
   
  `ids`  
- [out] An array of `COR_PRF_FUNCTION` values, each of which represents a retrieved function.  
+ dışı Her biri alınan bir işlevi temsil eden `COR_PRF_FUNCTION` değerleri dizisi.  
   
  `pceltFetched`  
- [out] A pointer to the number of functions actually returned in the `ids` array.  
+ dışı `ids` dizisinde aslında döndürülen işlev sayısına yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
+ Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`celt` elements were returned.|  
-|S_FALSE|Fewer than `celt` elements were returned, which indicates that the enumeration is complete.|  
+|S_OK|`celt` öğeler döndürüldü.|  
+|S_FALSE|`celt` öğelerinden daha azı döndürüldü, bu, numaralandırmanın tamamlandığını gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

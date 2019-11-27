@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438418"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder Metodu
-Adds a type forwarder for a nested type to the type table of the given assembly.  
+İç içe geçmiş bir tür için verilen derlemenin tür tablosuna bir tür ileticisi ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,31 +40,31 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- ID of the assembly to export from.  
+ Dışarı aktarılacak derlemenin KIMLIĞI.  
   
  `FileToken`  
- File token or assembly ID of file that defines the type.  
+ Türü tanımlayan dosyanın belirteç veya derleme KIMLIĞI.  
   
  `TypeToken`  
- Token for the type.  
+ Tür için belirteç.  
   
  `ParentType`  
- Token of parent type.  
+ Üst tür belirteci.  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ Dışarı aktarılacak tam tür adı.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`.  
+ `tdPublic` veya `tdNested`gibi bayrakları `ComType`.  
   
  `pType`  
- Receives token of export type. This is necessary only for emitting nested types.  
+ Dışarı aktarma türünün belirtecini alır. Bu yalnızca iç içe geçmiş türleri yayma için gereklidir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

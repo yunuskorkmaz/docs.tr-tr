@@ -1,5 +1,5 @@
 ---
-title: 'How to: Iterate Through An Enumeration'
+title: 'Nasıl yapılır: sabit listesi üzerinden yineleme yapma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [Visual Basic], iterating
@@ -14,18 +14,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354018"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de Numaralandırma Yoluyla Yineleme Yapma
-Enumerations provide a convenient way to work with sets of related constants, and to associate constant values with names. To iterate through an enumeration, you can move it into an array using the <xref:System.Enum.GetValues%2A> method. You could also iterate through an enumeration using a `For...Each` statement, using the <xref:System.Enum.GetNames%2A> or <xref:System.Enum.GetValues%2A> method to extract the string or numeric value.  
+Numaralandırmalar ilgili sabitler kümesiyle çalışmanın kolay bir yolunu sağlar ve sabit değerleri adlarla ilişkilendirir. Bir sabit listesi üzerinden yinelemek için <xref:System.Enum.GetValues%2A> yöntemini kullanarak onu bir diziye taşıyabilirsiniz. Ayrıca, dize veya sayısal değeri ayıklamak için <xref:System.Enum.GetNames%2A> veya <xref:System.Enum.GetValues%2A> metodunu kullanarak `For...Each` bir sıralama kullanarak bir sabit listesi üzerinden de yineleyebilirsiniz.  
   
-### <a name="to-iterate-through-an-enumeration"></a>To iterate through an enumeration  
+### <a name="to-iterate-through-an-enumeration"></a>Bir sabit listesi üzerinden yinelemek için  
   
-- Declare an array and convert the enumeration to it with the <xref:System.Enum.GetValues%2A> method before passing the array as you would any other variable. The following example displays each member of the enumeration <xref:Microsoft.VisualBasic.FirstDayOfWeek> as it iterates through the enumeration.  
+- Diziyi başka herhangi bir değişken gibi geçirmeden önce bir diziyi bildirin ve <xref:System.Enum.GetValues%2A> yöntemi ile numaralandırmayı buna dönüştürün. Aşağıdaki örnek, sabit listesinin her bir üyesini numaralandırma boyunca yineleme <xref:Microsoft.VisualBasic.FirstDayOfWeek> görüntüler.  
   
      [!code-vb[VbEnumsTask#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#7)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sabit Listelerine Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Nasıl yapılır: numaralandırma bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Sabit Listesi Ne Zaman Kullanılır?](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [Nasıl yapılır: Bir Sabit Listesi Değeriyle İlişkili Dizeyi Belirleme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Nasıl yapılır: Bir Sabit Listesi Üyesine Başvurma](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)

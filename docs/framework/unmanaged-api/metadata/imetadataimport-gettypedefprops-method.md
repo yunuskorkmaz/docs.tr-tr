@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436755"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps Yöntemi
-Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.  
+Belirtilen TypeDef belirteci tarafından temsil edilen <xref:System.Type> için meta veri bilgilerini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,31 +40,31 @@ HRESULT GetTypeDefProps (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- [in] The TypeDef token that represents the type to return metadata for.  
+ 'ndaki Meta verilerini döndürecek türü temsil eden TypeDef belirteci.  
   
  `szTypeDef`  
- [out] A buffer containing the type name.  
+ dışı Tür adını içeren bir arabellek.  
   
  `cchTypeDef`  
- [in] The size in wide characters of `szTypeDef`.  
+ 'ndaki `szTypeDef`geniş karakterdeki boyut.  
   
  `pchTypeDef`  
- [out] The number of wide characters returned in `szTypeDef`.  
+ dışı `szTypeDef`' de döndürülen geniş karakter sayısı.  
   
  `pdwTypeDefFlags`  
- [out] A pointer to any flags that modify the type definition. This value is a bitmask from the [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration.  
+ dışı Tür tanımını değiştiren bayrakların bir işaretçisi. Bu değer [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) numaralandırmasından bir bit dır.  
   
  `ptkExtends`  
- [out] A TypeDef or TypeRef metadata token that represents the base type of the requested type.  
+ dışı İstenen türün temel türünü temsil eden bir TypeDef veya TypeRef meta veri belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

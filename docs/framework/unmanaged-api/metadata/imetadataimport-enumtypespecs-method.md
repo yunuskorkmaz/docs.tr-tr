@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449975"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs Yöntemi
-Enumerates TypeSpec tokens defined in the current metadata scope.  
+Geçerli meta veri kapsamında tanımlanan TypeSpec belirteçlerini numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,35 +38,35 @@ HRESULT EnumTypeSpecs (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the enumerator. This value must be NULL for the first call of this method.  
+ [in, out] Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu değer NULL olmalıdır.  
   
  `rTypeSpecs`  
- [out] The array used to store the TypeSpec tokens.  
+ dışı TypeSpec belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- [in] The maximum size of the `rTypeSpecs` array.  
+ 'ndaki `rTypeSpecs` dizisinin en büyük boyutu.  
   
  `pcTypeSpecs`  
- [out] The number of TypeSpec tokens returned in `rTypeSpecs`.  
+ dışı `rTypeSpecs`' de döndürülen TypeSpec belirteçleri sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeSpecs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeSpecs` is zero.|  
+|`S_OK`|`EnumTypeSpecs` başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda `pcTypeSpecs` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The TypeSpec tokens are created by the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.  
+ TypeSpec belirteçleri [ımetadatayayma:: GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) yöntemi tarafından oluşturulur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
