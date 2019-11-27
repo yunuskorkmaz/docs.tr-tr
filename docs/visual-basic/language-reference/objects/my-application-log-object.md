@@ -11,24 +11,24 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344130"
 ---
-# <a name="myapplicationlog-object"></a><span data-ttu-id="56dc5-102">My.Application.Log Nesnesi</span><span class="sxs-lookup"><span data-stu-id="56dc5-102">My.Application.Log Object</span></span>
-<span data-ttu-id="56dc5-103">Provides a property and methods to write event and exception information to the application's log listeners.</span><span class="sxs-lookup"><span data-stu-id="56dc5-103">Provides a property and methods to write event and exception information to the application's log listeners.</span></span>  
+# <a name="myapplicationlog-object"></a><span data-ttu-id="a8a80-102">My.Application.Log Nesnesi</span><span class="sxs-lookup"><span data-stu-id="a8a80-102">My.Application.Log Object</span></span>
+<span data-ttu-id="a8a80-103">Uygulamanın günlük dinleyicilerine olay ve özel durum bilgilerini yazmak için bir özellik ve yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="a8a80-103">Provides a property and methods to write event and exception information to the application's log listeners.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="56dc5-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="56dc5-104">Remarks</span></span>  
- <span data-ttu-id="56dc5-105">For information about the methods and properties of the `My.Application.Log` object, see <xref:Microsoft.VisualBasic.Logging.Log>.</span><span class="sxs-lookup"><span data-stu-id="56dc5-105">For information about the methods and properties of the `My.Application.Log` object, see <xref:Microsoft.VisualBasic.Logging.Log>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a8a80-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a8a80-104">Remarks</span></span>  
+ <span data-ttu-id="a8a80-105">`My.Application.Log` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.Logging.Log>.</span><span class="sxs-lookup"><span data-stu-id="a8a80-105">For information about the methods and properties of the `My.Application.Log` object, see <xref:Microsoft.VisualBasic.Logging.Log>.</span></span>  
   
- <span data-ttu-id="56dc5-106">For more information, see [Logging Information from the Application](../../../visual-basic/developing-apps/programming/log-info/index.md).</span><span class="sxs-lookup"><span data-stu-id="56dc5-106">For more information, see [Logging Information from the Application](../../../visual-basic/developing-apps/programming/log-info/index.md).</span></span>  
+ <span data-ttu-id="a8a80-106">Daha fazla bilgi için bkz. [uygulamadan bilgileri günlüğe kaydetme](../../../visual-basic/developing-apps/programming/log-info/index.md).</span><span class="sxs-lookup"><span data-stu-id="a8a80-106">For more information, see [Logging Information from the Application](../../../visual-basic/developing-apps/programming/log-info/index.md).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="56dc5-107">You can also use classes in the .NET Framework to log information from your application.</span><span class="sxs-lookup"><span data-stu-id="56dc5-107">You can also use classes in the .NET Framework to log information from your application.</span></span> <span data-ttu-id="56dc5-108">For more information, see [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).</span><span class="sxs-lookup"><span data-stu-id="56dc5-108">For more information, see [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).</span></span>  
+> <span data-ttu-id="a8a80-107">Uygulamanızdaki bilgileri günlüğe kaydetmek için .NET Framework sınıfları da kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a8a80-107">You can also use classes in the .NET Framework to log information from your application.</span></span> <span data-ttu-id="a8a80-108">Daha fazla bilgi için bkz. [uygulamaları izleme ve işaretleme](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).</span><span class="sxs-lookup"><span data-stu-id="a8a80-108">For more information, see [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="56dc5-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="56dc5-109">Requirements</span></span>  
- <span data-ttu-id="56dc5-110">**Namespace:** <xref:Microsoft.VisualBasic.Logging></span><span class="sxs-lookup"><span data-stu-id="56dc5-110">**Namespace:** <xref:Microsoft.VisualBasic.Logging></span></span>  
+## <a name="requirements"></a><span data-ttu-id="a8a80-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a8a80-109">Requirements</span></span>  
+ <span data-ttu-id="a8a80-110">**Ad alanı:** <xref:Microsoft.VisualBasic.Logging></span><span class="sxs-lookup"><span data-stu-id="a8a80-110">**Namespace:** <xref:Microsoft.VisualBasic.Logging></span></span>  
   
- <span data-ttu-id="56dc5-111">**Class:** <xref:Microsoft.VisualBasic.Logging.Log></span><span class="sxs-lookup"><span data-stu-id="56dc5-111">**Class:** <xref:Microsoft.VisualBasic.Logging.Log></span></span>  
+ <span data-ttu-id="a8a80-111">**Sınıf:** <xref:Microsoft.VisualBasic.Logging.Log></span><span class="sxs-lookup"><span data-stu-id="a8a80-111">**Class:** <xref:Microsoft.VisualBasic.Logging.Log></span></span>  
   
- <span data-ttu-id="56dc5-112">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="56dc5-112">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="a8a80-112">**Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)</span><span class="sxs-lookup"><span data-stu-id="a8a80-112">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56dc5-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="56dc5-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a8a80-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a8a80-113">See also</span></span>
 
-- [<span data-ttu-id="56dc5-114">My.Application Nesnesi</span><span class="sxs-lookup"><span data-stu-id="56dc5-114">My.Application Object</span></span>](../../../visual-basic/language-reference/objects/my-application-object.md)
+- [<span data-ttu-id="a8a80-114">My.Application Nesnesi</span><span class="sxs-lookup"><span data-stu-id="a8a80-114">My.Application Object</span></span>](../../../visual-basic/language-reference/objects/my-application-object.md)
