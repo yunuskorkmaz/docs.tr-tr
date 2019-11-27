@@ -15,18 +15,18 @@ ms.locfileid: "74348741"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework Uygulamalarında COM Birlikte Çalışabilirliği (Visual Basic)
 
-When you want to use COM objects and .NET Framework objects in the same application, you need to address the differences in how the objects exist in memory. A .NET Framework object is located in managed memory—the memory controlled by the common language runtime—and may be moved by the runtime as needed. A COM object is located in unmanaged memory and is not expected to move to another memory location. Visual Studio and the .NET Framework provide tools to control the interaction of these managed and unmanaged components. For more information about managed code, see [Common Language Runtime](../../../standard/clr.md).
+Aynı uygulamadaki COM nesnelerini ve .NET Framework nesneleri kullanmak istediğinizde, nesnelerin bellekte nasıl mevcut olduğu farklılıkları ele almanız gerekir. .NET Framework nesne yönetilen bellekte bulunur — ortak dil çalışma zamanı tarafından denetlenen bellek — ve gerektiğinde çalışma zamanı tarafından taşınabilir. Bir COM nesnesi, yönetilmeyen bellekte bulunur ve başka bir bellek konumuna taşınması beklenmez. Visual Studio ve .NET Framework, bu yönetilen ve yönetilmeyen bileşenlerin etkileşimini denetlemek için araçlar sağlar. Yönetilen kod hakkında daha fazla bilgi için bkz. [ortak dil çalışma zamanı](../../../standard/clr.md).
 
-In addition to using COM objects in .NET applications, you may also want to use Visual Basic to develop objects accessible from unmanaged code through COM.
+.NET uygulamalarında COM nesneleri kullanmanın yanı sıra, COM aracılığıyla yönetilmeyen koddan erişilebilen nesneleri geliştirmek için Visual Basic kullanmak da isteyebilirsiniz.
 
-The links on this page provide details on the interactions between COM and .NET Framework objects.
+Bu sayfadaki bağlantılar, COM ve .NET Framework nesneleri arasındaki etkileşimler hakkında ayrıntılı bilgi sağlar.
 
-## <a name="related-sections"></a>Related sections
+## <a name="related-sections"></a>İlgili bölümler
 
 | | |
 |---------|---------|
-| [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md) | Provides links to topics covering COM interoperability in Visual Basic, including COM objects, ActiveX controls, Win32 DLLs, managed objects, and inheritance of COM objects. |
-| [Yönetilmeyen Kod ile Birlikte Çalışma](../../../framework/interop/index.md) | Briefly describes some of the interaction issues between managed and unmanaged code, and provides links for further study. |
-| [COM Sarmalayıcıları](../../../standard/native-interop/com-wrappers.md) | Discusses runtime callable wrappers, which allow managed code to call COM methods, and COM callable wrappers, which allow COM clients to call .NET object methods. |
-| [Advanced COM Interoperability](../../../framework/interop/index.md) | Provides links to topics covering COM interoperability with respect to wrappers, exceptions, inheritance, threading, events, conversions, and marshaling. |
-| [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Discusses the tool you can use to convert the type definitions found within a COM type library into equivalent definitions in a common language runtime assembly. |
+| [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md) | Com nesneleri, ActiveX denetimleri, Win32 DLL 'Leri, yönetilen nesneler ve COM nesnelerinin devralınması gibi Visual Basic COM birlikte çalışabilirliğini kapsayan konuların bağlantılarını sağlar. |
+| [Yönetilmeyen Kod ile Birlikte Çalışma](../../../framework/interop/index.md) | Yönetilen ve yönetilmeyen kod arasındaki etkileşim sorunlarından bazılarını kısaca açıklar ve daha fazla çalışma için bağlantılar sağlar. |
+| [COM Sarmalayıcıları](../../../standard/native-interop/com-wrappers.md) | Yönetilen kodun COM yöntemlerine çağrı yapmasına izin veren ve com 'un .NET nesne yöntemlerini çağırabileceği com çağrılabilir sarmalayıcıları sağlayan, çalışma zamanında çağrılabilir sarmalayıcıları açıklar. |
+| [Gelişmiş COM birlikte çalışabilirlik](../../../framework/interop/index.md) | Sarmalayıcılar, özel durumlar, devralma, iş parçacığı, olaylar, dönüştürmeler ve sıralama açısından COM birlikte çalışabilirliğini kapsayan konuların bağlantılarını sağlar. |
+| [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Bir COM tür kitaplığı içinde bulunan tür tanımlarını ortak dil çalışma zamanı derlemesinde eşdeğer tanımlara dönüştürmek için kullanabileceğiniz aracı açıklar. |

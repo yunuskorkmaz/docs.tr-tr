@@ -1,5 +1,5 @@
 ---
-title: GetScope Yöntemi
+title: GetScope Metodu
 ms.date: 03/30/2017
 api_name:
 - IALink.GetScope
@@ -21,8 +21,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447198"
 ---
-# <a name="getscope-method"></a>GetScope Yöntemi
-Gets an import scope.  
+# <a name="getscope-method"></a>GetScope Metodu
+İçeri aktarma kapsamı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT GetScope(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Unique ID of assembly to import to.  
+ İçeri aktarılacak derlemenin benzersiz KIMLIĞI.  
   
  `FileToken`  
- Unique ID of the file to import from.  
+ İçeri aktarılacak dosyanın benzersiz KIMLIĞI.  
   
  `dwScope`  
- Zero-based scope to import.  
+ İçeri aktarılacak sıfır tabanlı kapsam.  
   
  `ppImportScope`  
- Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.  
+ Kapsam için [IMetaDataImport arabirimi](../metadata/imetadataimport-interface.md) arabirimini alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

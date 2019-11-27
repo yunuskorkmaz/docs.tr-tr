@@ -12,22 +12,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344130"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log Nesnesi
-Provides a property and methods to write event and exception information to the application's log listeners.  
+Uygulamanın günlük dinleyicilerine olay ve özel durum bilgilerini yazmak için bir özellik ve yöntemler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For information about the methods and properties of the `My.Application.Log` object, see <xref:Microsoft.VisualBasic.Logging.Log>.  
+ `My.Application.Log` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.Logging.Log>.  
   
- For more information, see [Logging Information from the Application](../../../visual-basic/developing-apps/programming/log-info/index.md).  
+ Daha fazla bilgi için bkz. [uygulamadan bilgileri günlüğe kaydetme](../../../visual-basic/developing-apps/programming/log-info/index.md).  
   
 > [!NOTE]
-> You can also use classes in the .NET Framework to log information from your application. For more information, see [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  
+> Uygulamanızdaki bilgileri günlüğe kaydetmek için .NET Framework sınıfları da kullanabilirsiniz. Daha fazla bilgi için bkz. [uygulamaları izleme ve işaretleme](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** <xref:Microsoft.VisualBasic.Logging>  
+ **Ad alanı:** <xref:Microsoft.VisualBasic.Logging>  
   
- **Class:** <xref:Microsoft.VisualBasic.Logging.Log>  
+ **Sınıf:** <xref:Microsoft.VisualBasic.Logging.Log>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

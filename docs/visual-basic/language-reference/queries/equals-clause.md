@@ -14,10 +14,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335386"
 ---
 # <a name="equals-clause-visual-basic"></a>Equals Tümcesi (Visual Basic)
-Compares keys from collections being joined.  
+Katılmakta olan koleksiyonlardan anahtarları karşılaştırır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `Equals` keyword is used in the following contexts:  
+ `Equals` anahtar sözcüğü aşağıdaki bağlamlarda kullanılır:  
   
  [Group Join Yan Tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   

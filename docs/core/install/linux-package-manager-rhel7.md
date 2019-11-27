@@ -1,6 +1,6 @@
 ---
-title: Install .NET Core on Linux RHEL 7 package manager - .NET Core
-description: Use a package manager to install .NET Core SDK and runtime on RHEL 7.
+title: Linux RHEL 7 Paket Yöneticisi 'ne .NET Core 'u yükler-.NET Core
+description: .NET Core SDK ve çalışma zamanını RHEL 7 ' ye yüklemek için bir paket Yöneticisi kullanın.
 author: thraka
 ms.author: adegeo
 ms.date: 11/06/2019
@@ -11,19 +11,19 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450984"
 ---
-# <a name="rhel-7-package-manager---install-net-core"></a>RHEL 7 Package Manager - Install .NET Core
+# <a name="rhel-7-package-manager---install-net-core"></a>RHEL 7 Paket Yöneticisi-.NET Core 'u yükler
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
-This article describes how to use a package manager to install .NET Core on RHEL 7.
+Bu makalede, RHEL 7 üzerinde .NET Core yüklemek için bir paket yöneticisi 'nin nasıl kullanılacağı açıklanır.
 
-## <a name="register-your-red-hat-subscription"></a>Register your Red Hat subscription
+## <a name="register-your-red-hat-subscription"></a>Red Hat aboneliğinizi kaydetme
 
-To install .NET Core from Red Hat on RHEL, you first need to register using the Red Hat Subscription Manager. If this hasn't been done on your system, or if you're unsure, see the [Red Hat Product Documentation for .NET Core](https://access.redhat.com/documentation/net_core/).
+RHEL 'de Red Hat 'ten .NET Core yüklemek için, önce Red Hat abonelik Yöneticisi 'Ni kullanarak kaydolmanız gerekir. Bu, sisteminizde yapmadıysanız veya emin değilseniz, [.NET Core Için Red Hat ürün belgelerine](https://access.redhat.com/documentation/net_core/)bakın.
 
-## <a name="install-the-net-core-sdk"></a>Install the .NET Core SDK
+## <a name="install-the-net-core-sdk"></a>.NET Core SDK 'i yükler
 
-After registering with the Subscription Manager, you're ready to install and enable the .NET Core SDK. In your terminal, run the following commands to enable the RHEL 7 dotnet channel and install .
+Abonelik Yöneticisi ile kaydolduktan sonra, .NET Core SDK yüklenmeye ve etkinleştirmeye hazırsınız demektir. Terminalinizde, RHEL 7 DotNet kanalını etkinleştirmek ve yüklemek için aşağıdaki komutları çalıştırın.
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
@@ -31,9 +31,9 @@ yum install rh-dotnet30 -y
 scl enable rh-dotnet30 bash
 ```
 
-## <a name="install-the-aspnet-core-runtime"></a>Install the ASP.NET Core Runtime
+## <a name="install-the-aspnet-core-runtime"></a>ASP.NET Core çalışma zamanını yükler
 
-After registering with the Subscription Manager, you're ready to install and enable the ASP.NET Core Runtime. In your terminal, run the following commands.
+Abonelik Yöneticisi ile kaydolduktan sonra, ASP.NET Core çalışma zamanını yüklemek ve etkinleştirmek için hazırsınız demektir. Terminalinizde aşağıdaki komutları çalıştırın.
 
 <!-- TODO: is this the correct value? Taken from the webpage but it doesn't have aspnet in the name -->
 ```bash
@@ -42,9 +42,9 @@ yum install rh-dotnet30-dotnet-runtime-3.0 -y
 scl enable rh-dotnet30 bash
 ```
 
-## <a name="install-the-net-core-runtime"></a>Install the .NET Core Runtime
+## <a name="install-the-net-core-runtime"></a>.NET Core çalışma zamanını yükler
 
-After registering with the Subscription Manager, you're ready to install and enable the .NET Core Runtime. In your terminal, run the following commands.
+Abonelik Yöneticisi ile kaydolduktan sonra .NET Core çalışma zamanını yüklemeye ve etkinleştirmeye hazırsınız demektir. Terminalinizde aşağıdaki komutları çalıştırın.
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
