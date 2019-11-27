@@ -21,10 +21,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445596"
 ---
-# <a name="setassemblyfile-method"></a><span data-ttu-id="17a0f-102">SetAssemblyFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="17a0f-102">SetAssemblyFile Method</span></span>
-<span data-ttu-id="17a0f-103">Assigns the name of the assembly to be built.</span><span class="sxs-lookup"><span data-stu-id="17a0f-103">Assigns the name of the assembly to be built.</span></span> <span data-ttu-id="17a0f-104">Not for use when producing unbound modules.</span><span class="sxs-lookup"><span data-stu-id="17a0f-104">Not for use when producing unbound modules.</span></span>  
+# <a name="setassemblyfile-method"></a><span data-ttu-id="be353-102">SetAssemblyFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="be353-102">SetAssemblyFile Method</span></span>
+<span data-ttu-id="be353-103">Oluşturulacak derlemenin adını atar.</span><span class="sxs-lookup"><span data-stu-id="be353-103">Assigns the name of the assembly to be built.</span></span> <span data-ttu-id="be353-104">İlişkisiz modüller üretilirken kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="be353-104">Not for use when producing unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="17a0f-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="17a0f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be353-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="be353-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetAssemblyFile(  
@@ -35,27 +35,27 @@ HRESULT SetAssemblyFile(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="17a0f-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="17a0f-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="be353-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="be353-106">Parameters</span></span>  
  `pszFilename`  
- <span data-ttu-id="17a0f-107">Fully qualified name of the manifest file.</span><span class="sxs-lookup"><span data-stu-id="17a0f-107">Fully qualified name of the manifest file.</span></span>  
+ <span data-ttu-id="be353-107">Bildirim dosyasının tam adı.</span><span class="sxs-lookup"><span data-stu-id="be353-107">Fully qualified name of the manifest file.</span></span>  
   
  `pEmitter`  
- <span data-ttu-id="17a0f-108">Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="17a0f-108">Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.</span></span>  
+ <span data-ttu-id="be353-108">[Imetadatayayma arabirim](../metadata/imetadataemit-interface.md) arabirimine yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="be353-108">Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.</span></span>  
   
  `afFlags`  
- <span data-ttu-id="17a0f-109">Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="17a0f-109">Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).</span></span>  
+ <span data-ttu-id="be353-109">[AssemblyFlags numaralandırmasında](../metadata/assemblyflags-enumeration.md)tanımlanan bayraklar.</span><span class="sxs-lookup"><span data-stu-id="be353-109">Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).</span></span>  
   
  `pAssemblyID`  
- <span data-ttu-id="17a0f-110">Pointer to ID of resulting assembly.</span><span class="sxs-lookup"><span data-stu-id="17a0f-110">Pointer to ID of resulting assembly.</span></span>  
+ <span data-ttu-id="be353-110">Elde edilen derlemenin KIMLIĞI işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="be353-110">Pointer to ID of resulting assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="17a0f-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="17a0f-111">Return Value</span></span>  
- <span data-ttu-id="17a0f-112">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="17a0f-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="be353-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="be353-111">Return Value</span></span>  
+ <span data-ttu-id="be353-112">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="be353-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="17a0f-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="17a0f-113">Requirements</span></span>  
- <span data-ttu-id="17a0f-114">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="17a0f-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="be353-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="be353-113">Requirements</span></span>  
+ <span data-ttu-id="be353-114">ALink. h gerektirir.</span><span class="sxs-lookup"><span data-stu-id="be353-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17a0f-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="17a0f-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be353-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="be353-115">See also</span></span>
 
-- [<span data-ttu-id="17a0f-116">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="17a0f-116">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="17a0f-117">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="17a0f-117">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="17a0f-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="17a0f-118">ALink API</span></span>](index.md)
+- [<span data-ttu-id="be353-116">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="be353-116">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="be353-117">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="be353-117">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="be353-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="be353-118">ALink API</span></span>](index.md)

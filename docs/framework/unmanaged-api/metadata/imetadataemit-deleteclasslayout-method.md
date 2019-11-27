@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450162"
 ---
-# <a name="imetadataemitdeleteclasslayout-method"></a><span data-ttu-id="1f8e8-102">IMetaDataEmit::DeleteClassLayout Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1f8e8-102">IMetaDataEmit::DeleteClassLayout Method</span></span>
-<span data-ttu-id="1f8e8-103">Destroys the class layout metadata signature for the type represented by the specified token.</span><span class="sxs-lookup"><span data-stu-id="1f8e8-103">Destroys the class layout metadata signature for the type represented by the specified token.</span></span>  
+# <a name="imetadataemitdeleteclasslayout-method"></a><span data-ttu-id="50473-102">IMetaDataEmit::DeleteClassLayout Yöntemi</span><span class="sxs-lookup"><span data-stu-id="50473-102">IMetaDataEmit::DeleteClassLayout Method</span></span>
+<span data-ttu-id="50473-103">Belirtilen belirteçle temsil edilen tür için sınıf düzeni meta veri imzasını yok eder.</span><span class="sxs-lookup"><span data-stu-id="50473-103">Destroys the class layout metadata signature for the type represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1f8e8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1f8e8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="50473-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="50473-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DeleteClassLayout (  
@@ -33,20 +33,20 @@ HRESULT DeleteClassLayout (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1f8e8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1f8e8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="50473-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="50473-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="1f8e8-106">[in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.</span><span class="sxs-lookup"><span data-stu-id="1f8e8-106">[in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.</span></span>  
+ <span data-ttu-id="50473-106">'ndaki Sınıf düzeninin silineceği türü temsil eden bir `mdTypeDef` meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="50473-106">[in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1f8e8-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1f8e8-107">Requirements</span></span>  
- <span data-ttu-id="1f8e8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1f8e8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="50473-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="50473-107">Requirements</span></span>  
+ <span data-ttu-id="50473-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="50473-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1f8e8-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1f8e8-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="50473-109">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="50473-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="1f8e8-110">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1f8e8-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="50473-110">**Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="50473-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1f8e8-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1f8e8-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="50473-111">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50473-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1f8e8-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1f8e8-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="50473-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="50473-112">See also</span></span>
 
-- [<span data-ttu-id="1f8e8-113">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1f8e8-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="1f8e8-114">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1f8e8-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="50473-113">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="50473-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="50473-114">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="50473-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

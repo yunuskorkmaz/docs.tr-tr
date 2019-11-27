@@ -1,5 +1,5 @@
 ---
-title: 'How to: Generate XML from CSV Files'
+title: 'Nasıl yapılır: CSV dosyalarından XML oluşturma'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
 ms.openlocfilehash: 2e2d76fdae8473e47e397f2559f3051c47a180fd
@@ -9,11 +9,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344602"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a><span data-ttu-id="1bbb5-102">How to: Generate XML from CSV Files (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1bbb5-102">How to: Generate XML from CSV Files (Visual Basic)</span></span>
-<span data-ttu-id="1bbb5-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span><span class="sxs-lookup"><span data-stu-id="1bbb5-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a><span data-ttu-id="e5f03-102">Nasıl yapılır: CSV dosyalarından XML oluşturma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5f03-102">How to: Generate XML from CSV Files (Visual Basic)</span></span>
+<span data-ttu-id="e5f03-103">Bu örnek, bir virgülle ayrılmış değer (CSV) dosyasından bir XML dosyası oluşturmak için [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nasıl kullanacağınızı gösterir.</span><span class="sxs-lookup"><span data-stu-id="e5f03-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1bbb5-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="1bbb5-104">Example</span></span>  
- <span data-ttu-id="1bbb5-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span><span class="sxs-lookup"><span data-stu-id="1bbb5-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="e5f03-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="e5f03-104">Example</span></span>  
+ <span data-ttu-id="e5f03-105">Aşağıdaki kod, dizeler dizisinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusu gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="e5f03-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
   
 ```vb  
       ' Create the text file.  
@@ -48,7 +48,7 @@ Dim cust As XElement = _
 Console.WriteLine(cust)  
 ```  
   
- <span data-ttu-id="1bbb5-106">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="1bbb5-106">This code produces the following output:</span></span>  
+ <span data-ttu-id="e5f03-106">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="e5f03-106">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -107,6 +107,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1bbb5-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1bbb5-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e5f03-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e5f03-107">See also</span></span>
 
-- [<span data-ttu-id="1bbb5-108">Projections and Transformations (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1bbb5-108">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="e5f03-108">Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5f03-108">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

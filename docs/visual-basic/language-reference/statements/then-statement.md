@@ -11,16 +11,16 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352795"
 ---
-# <a name="then-statement"></a><span data-ttu-id="05fd2-102">Then Deyimi</span><span class="sxs-lookup"><span data-stu-id="05fd2-102">Then Statement</span></span>
-<span data-ttu-id="05fd2-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span><span class="sxs-lookup"><span data-stu-id="05fd2-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span></span>  
+# <a name="then-statement"></a><span data-ttu-id="42876-102">Then Deyimi</span><span class="sxs-lookup"><span data-stu-id="42876-102">Then Statement</span></span>
+<span data-ttu-id="42876-103">Test edilmiş bir koşul doğru ise, derlenebilecek veya yürütülecek bir ifade bloğunu tanıtır.</span><span class="sxs-lookup"><span data-stu-id="42876-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="05fd2-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="05fd2-104">Remarks</span></span>  
- <span data-ttu-id="05fd2-105">The `Then` keyword can be used in these contexts:</span><span class="sxs-lookup"><span data-stu-id="05fd2-105">The `Then` keyword can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="42876-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="42876-104">Remarks</span></span>  
+ <span data-ttu-id="42876-105">`Then` anahtar sözcüğü şu bağlamlarda kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="42876-105">The `Then` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="05fd2-106">#If...Then...#Else Directive</span><span class="sxs-lookup"><span data-stu-id="05fd2-106">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="42876-106">#If... Then... #Else yönergesi</span><span class="sxs-lookup"><span data-stu-id="42876-106">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
- [<span data-ttu-id="05fd2-107">If...Then...Else Deyimi</span><span class="sxs-lookup"><span data-stu-id="05fd2-107">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="42876-107">If...Then...Else Deyimi</span><span class="sxs-lookup"><span data-stu-id="42876-107">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="05fd2-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="05fd2-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42876-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="42876-108">See also</span></span>
 
-- [<span data-ttu-id="05fd2-109">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="05fd2-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="42876-109">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="42876-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

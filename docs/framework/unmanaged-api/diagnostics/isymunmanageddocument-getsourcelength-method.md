@@ -22,23 +22,23 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449157"
 ---
-# <a name="isymunmanageddocumentgetsourcelength-method"></a><span data-ttu-id="4c1ab-102">ISymUnmanagedDocument::GetSourceLength Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4c1ab-102">ISymUnmanagedDocument::GetSourceLength Method</span></span>
-<span data-ttu-id="4c1ab-103">Gets the length, in bytes, of the embedded source.</span><span class="sxs-lookup"><span data-stu-id="4c1ab-103">Gets the length, in bytes, of the embedded source.</span></span>  
+# <a name="isymunmanageddocumentgetsourcelength-method"></a><span data-ttu-id="56e8d-102">ISymUnmanagedDocument::GetSourceLength Yöntemi</span><span class="sxs-lookup"><span data-stu-id="56e8d-102">ISymUnmanagedDocument::GetSourceLength Method</span></span>
+<span data-ttu-id="56e8d-103">Gömülü kaynağın uzunluğunu bayt olarak alır.</span><span class="sxs-lookup"><span data-stu-id="56e8d-103">Gets the length, in bytes, of the embedded source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4c1ab-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4c1ab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="56e8d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="56e8d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSourceLength(  
     [out, retval]  ULONG32*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4c1ab-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4c1ab-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="56e8d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="56e8d-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="4c1ab-106">[out] A pointer to a variable that indicates the length, in bytes, of the embedded source.</span><span class="sxs-lookup"><span data-stu-id="4c1ab-106">[out] A pointer to a variable that indicates the length, in bytes, of the embedded source.</span></span>  
+ <span data-ttu-id="56e8d-106">dışı Gömülü kaynağın bayt cinsinden uzunluğunu belirten bir değişken işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="56e8d-106">[out] A pointer to a variable that indicates the length, in bytes, of the embedded source.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4c1ab-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="4c1ab-107">Return Value</span></span>  
- <span data-ttu-id="4c1ab-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="4c1ab-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="56e8d-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="56e8d-107">Return Value</span></span>  
+ <span data-ttu-id="56e8d-108">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="56e8d-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c1ab-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4c1ab-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="56e8d-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="56e8d-109">See also</span></span>
 
-- [<span data-ttu-id="4c1ab-110">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4c1ab-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="56e8d-110">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="56e8d-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

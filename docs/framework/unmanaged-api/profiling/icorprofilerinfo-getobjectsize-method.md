@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438832"
 ---
-# <a name="icorprofilerinfogetobjectsize-method"></a><span data-ttu-id="dccff-102">ICorProfilerInfo::GetObjectSize Yöntemi</span><span class="sxs-lookup"><span data-stu-id="dccff-102">ICorProfilerInfo::GetObjectSize Method</span></span>
-<span data-ttu-id="dccff-103">Gets the size of a specified object.</span><span class="sxs-lookup"><span data-stu-id="dccff-103">Gets the size of a specified object.</span></span>  
+# <a name="icorprofilerinfogetobjectsize-method"></a><span data-ttu-id="c8f32-102">ICorProfilerInfo::GetObjectSize Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c8f32-102">ICorProfilerInfo::GetObjectSize Method</span></span>
+<span data-ttu-id="c8f32-103">Belirtilen nesnenin boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="c8f32-103">Gets the size of a specified object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dccff-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dccff-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c8f32-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c8f32-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetObjectSize(  
@@ -33,35 +33,35 @@ HRESULT GetObjectSize(
     [out] ULONG  *pcSize);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dccff-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="dccff-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c8f32-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c8f32-105">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="dccff-106">[in] The ID of the object.</span><span class="sxs-lookup"><span data-stu-id="dccff-106">[in] The ID of the object.</span></span>  
+ <span data-ttu-id="c8f32-106">'ndaki Nesnenin KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="c8f32-106">[in] The ID of the object.</span></span>  
   
  `pcSize`  
- <span data-ttu-id="dccff-107">[out] A pointer to the object's size, in bytes.</span><span class="sxs-lookup"><span data-stu-id="dccff-107">[out] A pointer to the object's size, in bytes.</span></span>  
+ <span data-ttu-id="c8f32-107">dışı Nesnenin boyutunun bayt cinsinden işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="c8f32-107">[out] A pointer to the object's size, in bytes.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="dccff-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="dccff-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c8f32-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c8f32-108">Remarks</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="dccff-109">This method is obsolete.</span><span class="sxs-lookup"><span data-stu-id="dccff-109">This method is obsolete.</span></span> <span data-ttu-id="dccff-110">It returns COR_E_OVERFLOW for objects greater than 4GB on 64-bit platforms.</span><span class="sxs-lookup"><span data-stu-id="dccff-110">It returns COR_E_OVERFLOW for objects greater than 4GB on 64-bit platforms.</span></span> <span data-ttu-id="dccff-111">Use the  [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) method instead.</span><span class="sxs-lookup"><span data-stu-id="dccff-111">Use the  [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) method instead.</span></span>  
+> <span data-ttu-id="c8f32-109">Bu yöntem artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="c8f32-109">This method is obsolete.</span></span> <span data-ttu-id="c8f32-110">64-bit platformlarda 4.000'DEN büyük nesneler için COR_E_OVERFLOW döndürür.</span><span class="sxs-lookup"><span data-stu-id="c8f32-110">It returns COR_E_OVERFLOW for objects greater than 4GB on 64-bit platforms.</span></span> <span data-ttu-id="c8f32-111">Bunun yerine [ICorProfilerInfo4:: GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) yöntemini kullanın.</span><span class="sxs-lookup"><span data-stu-id="c8f32-111">Use the  [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) method instead.</span></span>  
   
- <span data-ttu-id="dccff-112">Different objects of the same types often have the same size.</span><span class="sxs-lookup"><span data-stu-id="dccff-112">Different objects of the same types often have the same size.</span></span> <span data-ttu-id="dccff-113">However, some types, such as arrays or strings, may have a different size for each object.</span><span class="sxs-lookup"><span data-stu-id="dccff-113">However, some types, such as arrays or strings, may have a different size for each object.</span></span>  
+ <span data-ttu-id="c8f32-112">Aynı türdeki farklı nesneler genellikle aynı boyutta olur.</span><span class="sxs-lookup"><span data-stu-id="c8f32-112">Different objects of the same types often have the same size.</span></span> <span data-ttu-id="c8f32-113">Ancak, diziler veya dizeler gibi bazı türlerin her nesne için farklı boyutta bir boyutu olabilir.</span><span class="sxs-lookup"><span data-stu-id="c8f32-113">However, some types, such as arrays or strings, may have a different size for each object.</span></span>  
   
- <span data-ttu-id="dccff-114">The size returned by the `GetObjectSize` method does not include any alignment padding that may appear after the object is on the garbage collection heap.</span><span class="sxs-lookup"><span data-stu-id="dccff-114">The size returned by the `GetObjectSize` method does not include any alignment padding that may appear after the object is on the garbage collection heap.</span></span> <span data-ttu-id="dccff-115">If you use the `GetObjectSize` method to advance from object to object on the garbage collection heap, add alignment padding manually, as necessary.</span><span class="sxs-lookup"><span data-stu-id="dccff-115">If you use the `GetObjectSize` method to advance from object to object on the garbage collection heap, add alignment padding manually, as necessary.</span></span>  
+ <span data-ttu-id="c8f32-114">`GetObjectSize` yöntemi tarafından döndürülen boyut, nesne çöp toplama yığınında olduktan sonra görünebilen herhangi bir hizalama dolgusu içermez.</span><span class="sxs-lookup"><span data-stu-id="c8f32-114">The size returned by the `GetObjectSize` method does not include any alignment padding that may appear after the object is on the garbage collection heap.</span></span> <span data-ttu-id="c8f32-115">Çöp toplama yığınında nesnesinden nesneye ilerlemek için `GetObjectSize` yöntemini kullanırsanız, gerektiğinde hizalama doldurmayı el ile ekleyin.</span><span class="sxs-lookup"><span data-stu-id="c8f32-115">If you use the `GetObjectSize` method to advance from object to object on the garbage collection heap, add alignment padding manually, as necessary.</span></span>  
   
-- <span data-ttu-id="dccff-116">On 32-bit Windows, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1, and COR_PRF_GC_GEN_2 use 4-byte alignment, and COR_PRF_GC_LARGE_OBJECT_HEAP uses 8-byte alignment.</span><span class="sxs-lookup"><span data-stu-id="dccff-116">On 32-bit Windows, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1, and COR_PRF_GC_GEN_2 use 4-byte alignment, and COR_PRF_GC_LARGE_OBJECT_HEAP uses 8-byte alignment.</span></span>  
+- <span data-ttu-id="c8f32-116">32 bit Windows, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1 ve COR_PRF_GC_GEN_2 4 baytlık hizalama kullanın ve COR_PRF_GC_LARGE_OBJECT_HEAP 8 baytlık hizalama kullanır.</span><span class="sxs-lookup"><span data-stu-id="c8f32-116">On 32-bit Windows, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1, and COR_PRF_GC_GEN_2 use 4-byte alignment, and COR_PRF_GC_LARGE_OBJECT_HEAP uses 8-byte alignment.</span></span>  
   
-- <span data-ttu-id="dccff-117">On 64-bit Windows, the alignment is always 8 bytes.</span><span class="sxs-lookup"><span data-stu-id="dccff-117">On 64-bit Windows, the alignment is always 8 bytes.</span></span>  
+- <span data-ttu-id="c8f32-117">64 bit Windows üzerinde hizalama her zaman 8 bayttır.</span><span class="sxs-lookup"><span data-stu-id="c8f32-117">On 64-bit Windows, the alignment is always 8 bytes.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dccff-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="dccff-118">Requirements</span></span>  
- <span data-ttu-id="dccff-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dccff-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c8f32-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c8f32-118">Requirements</span></span>  
+ <span data-ttu-id="c8f32-119">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c8f32-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dccff-120">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="dccff-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c8f32-120">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="c8f32-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="dccff-121">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dccff-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c8f32-121">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="c8f32-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dccff-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dccff-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c8f32-122">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8f32-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dccff-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dccff-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8f32-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c8f32-123">See also</span></span>
 
-- [<span data-ttu-id="dccff-124">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="dccff-124">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="c8f32-124">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c8f32-124">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

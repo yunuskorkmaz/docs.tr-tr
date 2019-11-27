@@ -21,10 +21,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428395"
 ---
-# <a name="cor_prf_code_info-structure"></a><span data-ttu-id="b9373-102">COR_PRF_CODE_INFO Yapısı</span><span class="sxs-lookup"><span data-stu-id="b9373-102">COR_PRF_CODE_INFO Structure</span></span>
-<span data-ttu-id="b9373-103">Represents one contiguous block of native code stored in memory.</span><span class="sxs-lookup"><span data-stu-id="b9373-103">Represents one contiguous block of native code stored in memory.</span></span>  
+# <a name="cor_prf_code_info-structure"></a><span data-ttu-id="a17a7-102">COR_PRF_CODE_INFO Yapısı</span><span class="sxs-lookup"><span data-stu-id="a17a7-102">COR_PRF_CODE_INFO Structure</span></span>
+<span data-ttu-id="a17a7-103">Bellekte depolanan yerel kodun bir bitişik bloğunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="a17a7-103">Represents one contiguous block of native code stored in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b9373-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b9373-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a17a7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a17a7-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _COR_PRF_CODE_INFO {  
@@ -33,22 +33,22 @@ typedef struct _COR_PRF_CODE_INFO {
 } COR_PRF_CODE_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b9373-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="b9373-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a17a7-105">Üyeleri</span><span class="sxs-lookup"><span data-stu-id="a17a7-105">Members</span></span>  
   
-|<span data-ttu-id="b9373-106">Üye</span><span class="sxs-lookup"><span data-stu-id="b9373-106">Member</span></span>|<span data-ttu-id="b9373-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b9373-107">Description</span></span>|  
+|<span data-ttu-id="a17a7-106">Üyesi</span><span class="sxs-lookup"><span data-stu-id="a17a7-106">Member</span></span>|<span data-ttu-id="a17a7-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a17a7-107">Description</span></span>|  
 |------------|-----------------|  
-|`startAddress`|<span data-ttu-id="b9373-108">The starting address of the contiguous block of code.</span><span class="sxs-lookup"><span data-stu-id="b9373-108">The starting address of the contiguous block of code.</span></span>|  
-|`size`|<span data-ttu-id="b9373-109">The size of the block.</span><span class="sxs-lookup"><span data-stu-id="b9373-109">The size of the block.</span></span>|  
+|`startAddress`|<span data-ttu-id="a17a7-108">Ardışık kod bloğunun başlangıç adresi.</span><span class="sxs-lookup"><span data-stu-id="a17a7-108">The starting address of the contiguous block of code.</span></span>|  
+|`size`|<span data-ttu-id="a17a7-109">Bloğun boyutu.</span><span class="sxs-lookup"><span data-stu-id="a17a7-109">The size of the block.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b9373-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b9373-110">Requirements</span></span>  
- <span data-ttu-id="b9373-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b9373-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a17a7-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a17a7-110">Requirements</span></span>  
+ <span data-ttu-id="a17a7-111">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a17a7-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b9373-112">**Header:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="b9373-112">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="a17a7-112">**Üst bilgi:** CorProf. IDL</span><span class="sxs-lookup"><span data-stu-id="a17a7-112">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="b9373-113">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b9373-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a17a7-113">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="a17a7-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b9373-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b9373-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a17a7-114">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a17a7-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b9373-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b9373-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a17a7-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a17a7-115">See also</span></span>
 
-- [<span data-ttu-id="b9373-116">Profil Oluşturma Yapıları</span><span class="sxs-lookup"><span data-stu-id="b9373-116">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [<span data-ttu-id="a17a7-116">Profil Oluşturma Yapıları</span><span class="sxs-lookup"><span data-stu-id="a17a7-116">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

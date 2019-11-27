@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431226"
 ---
-# <a name="imetadataerroronerror-method"></a><span data-ttu-id="05719-102">IMetaDataError::OnError Yöntemi</span><span class="sxs-lookup"><span data-stu-id="05719-102">IMetaDataError::OnError Method</span></span>
-<span data-ttu-id="05719-103">Provides notification of errors that occur during the metadata merge.</span><span class="sxs-lookup"><span data-stu-id="05719-103">Provides notification of errors that occur during the metadata merge.</span></span>  
+# <a name="imetadataerroronerror-method"></a><span data-ttu-id="86075-102">IMetaDataError::OnError Yöntemi</span><span class="sxs-lookup"><span data-stu-id="86075-102">IMetaDataError::OnError Method</span></span>
+<span data-ttu-id="86075-103">Meta veri birleştirme sırasında oluşan hataların bildirimini sağlar.</span><span class="sxs-lookup"><span data-stu-id="86075-103">Provides notification of errors that occur during the metadata merge.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05719-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="05719-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="86075-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="86075-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT OnError (  
@@ -34,22 +34,22 @@ HRESULT OnError (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="05719-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="05719-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="86075-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="86075-105">Parameters</span></span>  
  `hrError`  
- <span data-ttu-id="05719-106">[in] The HRESULT error value returned to the calling method.</span><span class="sxs-lookup"><span data-stu-id="05719-106">[in] The HRESULT error value returned to the calling method.</span></span>  
+ <span data-ttu-id="86075-106">'ndaki Çağırma yöntemine döndürülen HRESULT hata değeri.</span><span class="sxs-lookup"><span data-stu-id="86075-106">[in] The HRESULT error value returned to the calling method.</span></span>  
   
  `token`  
- <span data-ttu-id="05719-107">[in] The metadata token of the code object that was being merged when the error occurred.</span><span class="sxs-lookup"><span data-stu-id="05719-107">[in] The metadata token of the code object that was being merged when the error occurred.</span></span>  
+ <span data-ttu-id="86075-107">'ndaki Hata oluştuğunda birleştirilmekte olan kod nesnesinin meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="86075-107">[in] The metadata token of the code object that was being merged when the error occurred.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05719-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="05719-108">Requirements</span></span>  
- <span data-ttu-id="05719-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05719-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="86075-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="86075-108">Requirements</span></span>  
+ <span data-ttu-id="86075-109">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="86075-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05719-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="05719-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="86075-110">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="86075-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="05719-111">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="05719-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="86075-111">**Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="86075-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="05719-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05719-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="86075-112">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86075-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05719-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="05719-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="86075-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="86075-113">See also</span></span>
 
-- [<span data-ttu-id="05719-114">IMetaDataError Arabirimi</span><span class="sxs-lookup"><span data-stu-id="05719-114">IMetaDataError Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)
+- [<span data-ttu-id="86075-114">IMetaDataError Arabirimi</span><span class="sxs-lookup"><span data-stu-id="86075-114">IMetaDataError Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)

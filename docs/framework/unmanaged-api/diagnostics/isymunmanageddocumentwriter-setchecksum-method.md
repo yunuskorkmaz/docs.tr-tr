@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449050"
 ---
-# <a name="isymunmanageddocumentwritersetchecksum-method"></a><span data-ttu-id="75666-102">ISymUnmanagedDocumentWriter::SetCheckSum Yöntemi</span><span class="sxs-lookup"><span data-stu-id="75666-102">ISymUnmanagedDocumentWriter::SetCheckSum Method</span></span>
-<span data-ttu-id="75666-103">Sets checksum information.</span><span class="sxs-lookup"><span data-stu-id="75666-103">Sets checksum information.</span></span>  
+# <a name="isymunmanageddocumentwritersetchecksum-method"></a><span data-ttu-id="2ce08-102">ISymUnmanagedDocumentWriter::SetCheckSum Yöntemi</span><span class="sxs-lookup"><span data-stu-id="2ce08-102">ISymUnmanagedDocumentWriter::SetCheckSum Method</span></span>
+<span data-ttu-id="2ce08-103">Sağlama toplamı bilgilerini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="2ce08-103">Sets checksum information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="75666-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="75666-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ce08-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2ce08-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetCheckSum(  
@@ -34,22 +34,22 @@ HRESULT SetCheckSum(
     [in, size_is(checkSumSize)]  BYTE checkSum[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="75666-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="75666-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2ce08-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2ce08-105">Parameters</span></span>  
  `algorithmId`  
- <span data-ttu-id="75666-106">[in] The GUID that represents the algorithm identifier.</span><span class="sxs-lookup"><span data-stu-id="75666-106">[in] The GUID that represents the algorithm identifier.</span></span>  
+ <span data-ttu-id="2ce08-106">'ndaki Algoritma tanımlayıcısını temsil eden GUID.</span><span class="sxs-lookup"><span data-stu-id="2ce08-106">[in] The GUID that represents the algorithm identifier.</span></span>  
   
  `checkSumSize`  
- <span data-ttu-id="75666-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span><span class="sxs-lookup"><span data-stu-id="75666-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span></span>  
+ <span data-ttu-id="2ce08-107">'ndaki `checkSum` arabelleğinin boyutunu bayt cinsinden belirten bir `ULONG32`.</span><span class="sxs-lookup"><span data-stu-id="2ce08-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span></span>  
   
  `checkSum`  
- <span data-ttu-id="75666-108">[in] The buffer that stores the checksum information.</span><span class="sxs-lookup"><span data-stu-id="75666-108">[in] The buffer that stores the checksum information.</span></span>  
+ <span data-ttu-id="2ce08-108">'ndaki Sağlama toplamı bilgilerini depolayan arabellek.</span><span class="sxs-lookup"><span data-stu-id="2ce08-108">[in] The buffer that stores the checksum information.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="75666-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="75666-109">Return Value</span></span>  
- <span data-ttu-id="75666-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="75666-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2ce08-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="2ce08-109">Return Value</span></span>  
+ <span data-ttu-id="2ce08-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="2ce08-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="75666-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="75666-111">Requirements</span></span>  
- <span data-ttu-id="75666-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="75666-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2ce08-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2ce08-111">Requirements</span></span>  
+ <span data-ttu-id="2ce08-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="2ce08-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="75666-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="75666-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2ce08-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2ce08-113">See also</span></span>
 
-- [<span data-ttu-id="75666-114">ISymUnmanagedDocumentWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="75666-114">ISymUnmanagedDocumentWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+- [<span data-ttu-id="2ce08-114">ISymUnmanagedDocumentWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2ce08-114">ISymUnmanagedDocumentWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

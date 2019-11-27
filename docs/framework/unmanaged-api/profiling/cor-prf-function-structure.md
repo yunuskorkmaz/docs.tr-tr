@@ -21,33 +21,33 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428321"
 ---
-# <a name="cor_prf_function-structure"></a><span data-ttu-id="bf7d0-102">COR_PRF_FUNCTION Yapısı</span><span class="sxs-lookup"><span data-stu-id="bf7d0-102">COR_PRF_FUNCTION Structure</span></span>
-<span data-ttu-id="bf7d0-103">Provides a unique representation of a function by combining its ID with the ID of its recompiled version.</span><span class="sxs-lookup"><span data-stu-id="bf7d0-103">Provides a unique representation of a function by combining its ID with the ID of its recompiled version.</span></span>  
+# <a name="cor_prf_function-structure"></a><span data-ttu-id="a315f-102">COR_PRF_FUNCTION Yapısı</span><span class="sxs-lookup"><span data-stu-id="a315f-102">COR_PRF_FUNCTION Structure</span></span>
+<span data-ttu-id="a315f-103">, KIMLIĞINI yeniden derlenmesi sürümünün KIMLIĞIYLE birleştirerek bir işlevin benzersiz bir gösterimini sağlar.</span><span class="sxs-lookup"><span data-stu-id="a315f-103">Provides a unique representation of a function by combining its ID with the ID of its recompiled version.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf7d0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bf7d0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a315f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a315f-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJitId;} COR_PRF_FUNCTION;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="bf7d0-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="bf7d0-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a315f-105">Üyeleri</span><span class="sxs-lookup"><span data-stu-id="a315f-105">Members</span></span>  
   
-|<span data-ttu-id="bf7d0-106">Üye</span><span class="sxs-lookup"><span data-stu-id="bf7d0-106">Member</span></span>|<span data-ttu-id="bf7d0-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="bf7d0-107">Description</span></span>|  
+|<span data-ttu-id="a315f-106">Üyesi</span><span class="sxs-lookup"><span data-stu-id="a315f-106">Member</span></span>|<span data-ttu-id="a315f-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a315f-107">Description</span></span>|  
 |------------|-----------------|  
-|`functionId`|<span data-ttu-id="bf7d0-108">The ID of the function.</span><span class="sxs-lookup"><span data-stu-id="bf7d0-108">The ID of the function.</span></span>|  
-|`reJitId`|<span data-ttu-id="bf7d0-109">The ID of the recompiled function.</span><span class="sxs-lookup"><span data-stu-id="bf7d0-109">The ID of the recompiled function.</span></span> <span data-ttu-id="bf7d0-110">A value of 0 (zero) represents the original version of the function.</span><span class="sxs-lookup"><span data-stu-id="bf7d0-110">A value of 0 (zero) represents the original version of the function.</span></span>|  
+|`functionId`|<span data-ttu-id="a315f-108">İşlevin KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="a315f-108">The ID of the function.</span></span>|  
+|`reJitId`|<span data-ttu-id="a315f-109">Yeniden derlenen işlevin KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="a315f-109">The ID of the recompiled function.</span></span> <span data-ttu-id="a315f-110">0 (sıfır) değeri, işlevin orijinal sürümünü temsil eder.</span><span class="sxs-lookup"><span data-stu-id="a315f-110">A value of 0 (zero) represents the original version of the function.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bf7d0-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bf7d0-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a315f-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a315f-111">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bf7d0-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bf7d0-112">Requirements</span></span>  
- <span data-ttu-id="bf7d0-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bf7d0-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a315f-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a315f-112">Requirements</span></span>  
+ <span data-ttu-id="a315f-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a315f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bf7d0-114">**Header:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="bf7d0-114">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="a315f-114">**Üst bilgi:** CorProf. IDL</span><span class="sxs-lookup"><span data-stu-id="a315f-114">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="bf7d0-115">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bf7d0-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a315f-115">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="a315f-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bf7d0-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf7d0-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="a315f-116">**.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a315f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bf7d0-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bf7d0-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a315f-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a315f-117">See also</span></span>
 
-- [<span data-ttu-id="bf7d0-118">Profil Oluşturma Yapıları</span><span class="sxs-lookup"><span data-stu-id="bf7d0-118">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [<span data-ttu-id="a315f-118">Profil Oluşturma Yapıları</span><span class="sxs-lookup"><span data-stu-id="a315f-118">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

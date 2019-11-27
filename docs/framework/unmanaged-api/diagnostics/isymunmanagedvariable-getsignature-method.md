@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446039"
 ---
-# <a name="isymunmanagedvariablegetsignature-method"></a><span data-ttu-id="cac8a-102">ISymUnmanagedVariable::GetSignature Metodu</span><span class="sxs-lookup"><span data-stu-id="cac8a-102">ISymUnmanagedVariable::GetSignature Method</span></span>
-<span data-ttu-id="cac8a-103">Gets the signature of this variable.</span><span class="sxs-lookup"><span data-stu-id="cac8a-103">Gets the signature of this variable.</span></span>  
+# <a name="isymunmanagedvariablegetsignature-method"></a><span data-ttu-id="b86ca-102">ISymUnmanagedVariable::GetSignature Metodu</span><span class="sxs-lookup"><span data-stu-id="b86ca-102">ISymUnmanagedVariable::GetSignature Method</span></span>
+<span data-ttu-id="b86ca-103">Bu değişkenin imzasını alır.</span><span class="sxs-lookup"><span data-stu-id="b86ca-103">Gets the signature of this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cac8a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cac8a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b86ca-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b86ca-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSignature(  
@@ -35,22 +35,22 @@ HRESULT GetSignature(
         length_is(*pcSig)] BYTE sig[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cac8a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cac8a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b86ca-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b86ca-105">Parameters</span></span>  
  `cSig`  
- <span data-ttu-id="cac8a-106">[in] The length of the buffer pointed to by the `sig` parameter.</span><span class="sxs-lookup"><span data-stu-id="cac8a-106">[in] The length of the buffer pointed to by the `sig` parameter.</span></span>  
+ <span data-ttu-id="b86ca-106">'ndaki `sig` parametresi tarafından işaret edilen arabelleğin uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="b86ca-106">[in] The length of the buffer pointed to by the `sig` parameter.</span></span>  
   
  `pcSig`  
- <span data-ttu-id="cac8a-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span><span class="sxs-lookup"><span data-stu-id="cac8a-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
+ <span data-ttu-id="b86ca-107">dışı İmzayı içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir `ULONG32` işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="b86ca-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
   
  `sig`  
- <span data-ttu-id="cac8a-108">[out] The buffer that stores the signature.</span><span class="sxs-lookup"><span data-stu-id="cac8a-108">[out] The buffer that stores the signature.</span></span>  
+ <span data-ttu-id="b86ca-108">dışı İmzayı depolayan arabellek.</span><span class="sxs-lookup"><span data-stu-id="b86ca-108">[out] The buffer that stores the signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cac8a-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="cac8a-109">Return Value</span></span>  
- <span data-ttu-id="cac8a-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="cac8a-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b86ca-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b86ca-109">Return Value</span></span>  
+ <span data-ttu-id="b86ca-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="b86ca-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cac8a-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cac8a-111">Requirements</span></span>  
- <span data-ttu-id="cac8a-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="cac8a-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b86ca-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b86ca-111">Requirements</span></span>  
+ <span data-ttu-id="b86ca-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="b86ca-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cac8a-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cac8a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b86ca-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b86ca-113">See also</span></span>
 
-- [<span data-ttu-id="cac8a-114">ISymUnmanagedVariable Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cac8a-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="b86ca-114">ISymUnmanagedVariable Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b86ca-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

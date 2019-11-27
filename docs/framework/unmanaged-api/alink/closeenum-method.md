@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446567"
 ---
-# <a name="closeenum-method"></a><span data-ttu-id="4367e-102">CloseEnum Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4367e-102">CloseEnum Method</span></span>
-<span data-ttu-id="4367e-103">Closes the indicated enumeration and frees associated resources.</span><span class="sxs-lookup"><span data-stu-id="4367e-103">Closes the indicated enumeration and frees associated resources.</span></span>  
+# <a name="closeenum-method"></a><span data-ttu-id="885bd-102">CloseEnum Yöntemi</span><span class="sxs-lookup"><span data-stu-id="885bd-102">CloseEnum Method</span></span>
+<span data-ttu-id="885bd-103">Belirtilen numaralandırmayı kapatır ve ilişkili kaynakları serbest bırakır.</span><span class="sxs-lookup"><span data-stu-id="885bd-103">Closes the indicated enumeration and frees associated resources.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4367e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4367e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="885bd-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="885bd-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CloseEnum(  
@@ -33,18 +33,18 @@ HRESULT CloseEnum(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4367e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4367e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="885bd-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="885bd-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="4367e-106">Handle of enumeration to be closed.</span><span class="sxs-lookup"><span data-stu-id="4367e-106">Handle of enumeration to be closed.</span></span>  
+ <span data-ttu-id="885bd-106">Kapatılacak numaralandırmanın tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="885bd-106">Handle of enumeration to be closed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4367e-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="4367e-107">Return Value</span></span>  
- <span data-ttu-id="4367e-108">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="4367e-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="885bd-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="885bd-107">Return Value</span></span>  
+ <span data-ttu-id="885bd-108">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="885bd-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4367e-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4367e-109">Requirements</span></span>  
- <span data-ttu-id="4367e-110">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="4367e-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="885bd-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="885bd-109">Requirements</span></span>  
+ <span data-ttu-id="885bd-110">ALink. h gerektirir</span><span class="sxs-lookup"><span data-stu-id="885bd-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4367e-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4367e-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="885bd-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="885bd-111">See also</span></span>
 
-- [<span data-ttu-id="4367e-112">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4367e-112">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="4367e-113">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4367e-113">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="4367e-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="4367e-114">ALink API</span></span>](index.md)
+- [<span data-ttu-id="885bd-112">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="885bd-112">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="885bd-113">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="885bd-113">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="885bd-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="885bd-114">ALink API</span></span>](index.md)

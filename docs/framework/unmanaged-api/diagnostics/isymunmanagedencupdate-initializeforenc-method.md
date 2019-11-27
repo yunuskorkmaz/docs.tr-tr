@@ -22,21 +22,21 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449024"
 ---
-# <a name="isymunmanagedencupdateinitializeforenc-method"></a><span data-ttu-id="f8e5b-102">ISymUnmanagedENCUpdate::InitializeForEnc Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f8e5b-102">ISymUnmanagedENCUpdate::InitializeForEnc Method</span></span>
-<span data-ttu-id="f8e5b-103">Allows method boundaries to be computed before the first call to the [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="f8e5b-103">Allows method boundaries to be computed before the first call to the [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) method.</span></span>  
+# <a name="isymunmanagedencupdateinitializeforenc-method"></a><span data-ttu-id="f6c8b-102">ISymUnmanagedENCUpdate::InitializeForEnc Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f6c8b-102">ISymUnmanagedENCUpdate::InitializeForEnc Method</span></span>
+<span data-ttu-id="f6c8b-103">Yöntem sınırlarının [ISymUnmanagedENCUpdate:: UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) metoduna ilk çağrıdan önce hesaplanmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="f6c8b-103">Allows method boundaries to be computed before the first call to the [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f8e5b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f8e5b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6c8b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f6c8b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT InitializeForEnc();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="f8e5b-105">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="f8e5b-105">Return Value</span></span>  
- <span data-ttu-id="f8e5b-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="f8e5b-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f6c8b-105">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="f6c8b-105">Return Value</span></span>  
+ <span data-ttu-id="f6c8b-106">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="f6c8b-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f8e5b-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f8e5b-107">Requirements</span></span>  
- <span data-ttu-id="f8e5b-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f8e5b-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f6c8b-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f6c8b-107">Requirements</span></span>  
+ <span data-ttu-id="f6c8b-108">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="f6c8b-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8e5b-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f8e5b-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f6c8b-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f6c8b-109">See also</span></span>
 
-- [<span data-ttu-id="f8e5b-110">ISymUnmanagedENCUpdate Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f8e5b-110">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="f6c8b-110">ISymUnmanagedENCUpdate Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f6c8b-110">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

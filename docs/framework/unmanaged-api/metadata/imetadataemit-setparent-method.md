@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432447"
 ---
-# <a name="imetadataemitsetparent-method"></a><span data-ttu-id="50bc2-102">IMetaDataEmit::SetParent Yöntemi</span><span class="sxs-lookup"><span data-stu-id="50bc2-102">IMetaDataEmit::SetParent Method</span></span>
-<span data-ttu-id="50bc2-103">Establishes that the specified member, as defined by a prior call to [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), is a member of the specified type, as defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span><span class="sxs-lookup"><span data-stu-id="50bc2-103">Establishes that the specified member, as defined by a prior call to [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), is a member of the specified type, as defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
+# <a name="imetadataemitsetparent-method"></a><span data-ttu-id="a7502-102">IMetaDataEmit::SetParent Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a7502-102">IMetaDataEmit::SetParent Method</span></span>
+<span data-ttu-id="a7502-103">Belirtilen üyenin [ımetadatayay::D efineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)öğesine yapılan önceki bir çağrı tarafından tanımlandığı gibi, belirtilen türün bir üyesi olduğunu ve [ımetadatayayma::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)'in bir önceki çağrısıyla tanımlanan bir üyesini olduğunu belirler.</span><span class="sxs-lookup"><span data-stu-id="a7502-103">Establishes that the specified member, as defined by a prior call to [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), is a member of the specified type, as defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="50bc2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="50bc2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a7502-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a7502-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetParent (   
@@ -34,23 +34,23 @@ HRESULT SetParent (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="50bc2-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="50bc2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a7502-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a7502-105">Parameters</span></span>  
  `mr`  
- <span data-ttu-id="50bc2-106">[in] The `mdMemberRef` token to receive a new parent.</span><span class="sxs-lookup"><span data-stu-id="50bc2-106">[in] The `mdMemberRef` token to receive a new parent.</span></span>  
+ <span data-ttu-id="a7502-106">'ndaki Yeni bir üst öğe alacak `mdMemberRef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="a7502-106">[in] The `mdMemberRef` token to receive a new parent.</span></span>  
   
  `tk`  
- <span data-ttu-id="50bc2-107">[in] The `mdToken` for the new parent.</span><span class="sxs-lookup"><span data-stu-id="50bc2-107">[in] The `mdToken` for the new parent.</span></span>  
+ <span data-ttu-id="a7502-107">'ndaki Yeni üst öğe için `mdToken`.</span><span class="sxs-lookup"><span data-stu-id="a7502-107">[in] The `mdToken` for the new parent.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="50bc2-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="50bc2-108">Requirements</span></span>  
- <span data-ttu-id="50bc2-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="50bc2-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a7502-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a7502-108">Requirements</span></span>  
+ <span data-ttu-id="a7502-109">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a7502-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="50bc2-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="50bc2-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a7502-110">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="a7502-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="50bc2-111">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="50bc2-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a7502-111">**Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="a7502-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="50bc2-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50bc2-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a7502-112">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a7502-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="50bc2-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="50bc2-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a7502-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a7502-113">See also</span></span>
 
-- [<span data-ttu-id="50bc2-114">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="50bc2-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="50bc2-115">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="50bc2-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="a7502-114">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a7502-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="a7502-115">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a7502-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

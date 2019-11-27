@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445914"
 ---
-# <a name="icorprofilercallbackmoduleunloadfinished-method"></a><span data-ttu-id="26475-102">ICorProfilerCallback::ModuleUnloadFinished Yöntemi</span><span class="sxs-lookup"><span data-stu-id="26475-102">ICorProfilerCallback::ModuleUnloadFinished Method</span></span>
-<span data-ttu-id="26475-103">Notifies the profiler that a module has finished unloading.</span><span class="sxs-lookup"><span data-stu-id="26475-103">Notifies the profiler that a module has finished unloading.</span></span>  
+# <a name="icorprofilercallbackmoduleunloadfinished-method"></a><span data-ttu-id="625e8-102">ICorProfilerCallback::ModuleUnloadFinished Yöntemi</span><span class="sxs-lookup"><span data-stu-id="625e8-102">ICorProfilerCallback::ModuleUnloadFinished Method</span></span>
+<span data-ttu-id="625e8-103">Profil oluşturucuyu bir modülün kaldırmayı bitirmediğini bildirir.</span><span class="sxs-lookup"><span data-stu-id="625e8-103">Notifies the profiler that a module has finished unloading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="26475-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="26475-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="625e8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="625e8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ModuleUnloadFinished(  
@@ -33,27 +33,27 @@ HRESULT ModuleUnloadFinished(
     [in] HRESULT  hrStatus);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="26475-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="26475-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="625e8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="625e8-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="26475-106">[in] The ID of the module that was unloaded.</span><span class="sxs-lookup"><span data-stu-id="26475-106">[in] The ID of the module that was unloaded.</span></span>  
+ <span data-ttu-id="625e8-106">'ndaki Bellekten kaldırılan modülün KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="625e8-106">[in] The ID of the module that was unloaded.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="26475-107">[in] An HRESULT that indicates whether the module was unloaded successfully.</span><span class="sxs-lookup"><span data-stu-id="26475-107">[in] An HRESULT that indicates whether the module was unloaded successfully.</span></span>  
+ <span data-ttu-id="625e8-107">'ndaki Modülün başarıyla yüklenip yüklenmediğini gösteren bir HRESULT.</span><span class="sxs-lookup"><span data-stu-id="625e8-107">[in] An HRESULT that indicates whether the module was unloaded successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="26475-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="26475-108">Remarks</span></span>  
- <span data-ttu-id="26475-109">The value of `moduleId` is not valid for an information request after the [ICorProfilerCallback::ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) method returns.</span><span class="sxs-lookup"><span data-stu-id="26475-109">The value of `moduleId` is not valid for an information request after the [ICorProfilerCallback::ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) method returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="625e8-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="625e8-108">Remarks</span></span>  
+ <span data-ttu-id="625e8-109">`moduleId` değeri, [ICorProfilerCallback:: ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) yöntemi döndüğünde bir bilgi isteği için geçerli değildir.</span><span class="sxs-lookup"><span data-stu-id="625e8-109">The value of `moduleId` is not valid for an information request after the [ICorProfilerCallback::ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) method returns.</span></span>  
   
- <span data-ttu-id="26475-110">Some parts of unloading the class might continue after the `ModuleUnloadFinished` callback.</span><span class="sxs-lookup"><span data-stu-id="26475-110">Some parts of unloading the class might continue after the `ModuleUnloadFinished` callback.</span></span> <span data-ttu-id="26475-111">A failure HRESULT in `hrStatus` indicates a failure.</span><span class="sxs-lookup"><span data-stu-id="26475-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="26475-112">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the module has succeeded.</span><span class="sxs-lookup"><span data-stu-id="26475-112">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the module has succeeded.</span></span>  
+ <span data-ttu-id="625e8-110">Sınıfı kaldırma işleminin bazı bölümleri `ModuleUnloadFinished` geri çağrısından sonra devam edebilir.</span><span class="sxs-lookup"><span data-stu-id="625e8-110">Some parts of unloading the class might continue after the `ModuleUnloadFinished` callback.</span></span> <span data-ttu-id="625e8-111">`hrStatus` HRESULT hatası, bir hatayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="625e8-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="625e8-112">Ancak `hrStatus` başarılı bir HRESULT, yalnızca modülün kaldırılmasının ilk bölümünün başarılı olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="625e8-112">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the module has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="26475-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="26475-113">Requirements</span></span>  
- <span data-ttu-id="26475-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="26475-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="625e8-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="625e8-113">Requirements</span></span>  
+ <span data-ttu-id="625e8-114">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="625e8-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="26475-115">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="26475-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="625e8-115">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="625e8-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="26475-116">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="26475-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="625e8-116">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="625e8-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="26475-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="26475-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="625e8-117">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="625e8-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="26475-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="26475-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="625e8-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="625e8-118">See also</span></span>
 
-- [<span data-ttu-id="26475-119">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="26475-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="625e8-119">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="625e8-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

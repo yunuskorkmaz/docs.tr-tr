@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448618"
 ---
-# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="339f3-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Yöntemi</span><span class="sxs-lookup"><span data-stu-id="339f3-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
-<span data-ttu-id="339f3-103">Gets the smallest start line and largest end line for the method in a specific document.</span><span class="sxs-lookup"><span data-stu-id="339f3-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
+# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="afa1d-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Yöntemi</span><span class="sxs-lookup"><span data-stu-id="afa1d-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
+<span data-ttu-id="afa1d-103">Belirli bir belgedeki Yöntem için en küçük başlangıç satırını ve en büyük bitiş satırını alır.</span><span class="sxs-lookup"><span data-stu-id="afa1d-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="339f3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="339f3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="afa1d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="afa1d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSourceExtentInDocument(  
@@ -34,22 +34,22 @@ HRESULT GetSourceExtentInDocument(
     [out] ULONG32* pendLine);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="339f3-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="339f3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="afa1d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="afa1d-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="339f3-106">[in] A pointer to the document.</span><span class="sxs-lookup"><span data-stu-id="339f3-106">[in] A pointer to the document.</span></span>  
+ <span data-ttu-id="afa1d-106">'ndaki Belgeye yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="afa1d-106">[in] A pointer to the document.</span></span>  
   
  `pstartLine`  
- <span data-ttu-id="339f3-107">[out] A pointer to a `ULONG32` that receives the start line.</span><span class="sxs-lookup"><span data-stu-id="339f3-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
+ <span data-ttu-id="afa1d-107">dışı Başlangıç satırını alan `ULONG32` işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="afa1d-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
   
  `pendLine`  
- <span data-ttu-id="339f3-108">[out] A pointer to a `ULONG32` that receives the end line.</span><span class="sxs-lookup"><span data-stu-id="339f3-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
+ <span data-ttu-id="afa1d-108">dışı Bitiş satırını alan `ULONG32` işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="afa1d-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="339f3-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="339f3-109">Return Value</span></span>  
- <span data-ttu-id="339f3-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="339f3-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="afa1d-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="afa1d-109">Return Value</span></span>  
+ <span data-ttu-id="afa1d-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="afa1d-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="339f3-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="339f3-111">Requirements</span></span>  
- <span data-ttu-id="339f3-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="339f3-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="afa1d-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="afa1d-111">Requirements</span></span>  
+ <span data-ttu-id="afa1d-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="afa1d-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="339f3-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="339f3-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="afa1d-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="afa1d-113">See also</span></span>
 
-- [<span data-ttu-id="339f3-114">ISymENCUnmanagedMethod Arabirimi</span><span class="sxs-lookup"><span data-stu-id="339f3-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [<span data-ttu-id="afa1d-114">ISymENCUnmanagedMethod Arabirimi</span><span class="sxs-lookup"><span data-stu-id="afa1d-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

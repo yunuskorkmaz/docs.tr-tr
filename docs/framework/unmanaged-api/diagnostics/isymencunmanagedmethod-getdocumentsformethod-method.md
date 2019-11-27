@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448389"
 ---
-# <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a><span data-ttu-id="ddce5-102">ISymENCUnmanagedMethod::GetDocumentsForMethod Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ddce5-102">ISymENCUnmanagedMethod::GetDocumentsForMethod Method</span></span>
-<span data-ttu-id="ddce5-103">Gets the documents that this method has lines in.</span><span class="sxs-lookup"><span data-stu-id="ddce5-103">Gets the documents that this method has lines in.</span></span>  
+# <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a><span data-ttu-id="a5e07-102">ISymENCUnmanagedMethod::GetDocumentsForMethod Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a5e07-102">ISymENCUnmanagedMethod::GetDocumentsForMethod Method</span></span>
+<span data-ttu-id="a5e07-103">Bu yöntemin içindeki satırları içeren belgeleri alır.</span><span class="sxs-lookup"><span data-stu-id="a5e07-103">Gets the documents that this method has lines in.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ddce5-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ddce5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a5e07-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a5e07-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDocumentsForMethod(  
@@ -34,22 +34,22 @@ HRESULT GetDocumentsForMethod(
     [in, size_is(cDocs)] ISymUnmanagedDocument* documents[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ddce5-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ddce5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a5e07-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a5e07-105">Parameters</span></span>  
  `cDocs`  
- <span data-ttu-id="ddce5-106">[in] The length of the buffer pointed to by `pcDocs`.</span><span class="sxs-lookup"><span data-stu-id="ddce5-106">[in] The length of the buffer pointed to by `pcDocs`.</span></span>  
+ <span data-ttu-id="a5e07-106">'ndaki `pcDocs`tarafından işaret edilen arabelleğin uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="a5e07-106">[in] The length of the buffer pointed to by `pcDocs`.</span></span>  
   
  `pcDocs`  
- <span data-ttu-id="ddce5-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.</span><span class="sxs-lookup"><span data-stu-id="ddce5-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.</span></span>  
+ <span data-ttu-id="a5e07-107">dışı Belgeleri içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir `ULONG32` işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="a5e07-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.</span></span>  
   
  `documents`  
- <span data-ttu-id="ddce5-108">[in] The buffer that contains the documents.</span><span class="sxs-lookup"><span data-stu-id="ddce5-108">[in] The buffer that contains the documents.</span></span>  
+ <span data-ttu-id="a5e07-108">'ndaki Belgeleri içeren arabellek.</span><span class="sxs-lookup"><span data-stu-id="a5e07-108">[in] The buffer that contains the documents.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ddce5-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="ddce5-109">Return Value</span></span>  
- <span data-ttu-id="ddce5-110">S_OK if the method succeeds; otherwise, an error code.</span><span class="sxs-lookup"><span data-stu-id="ddce5-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a5e07-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="a5e07-109">Return Value</span></span>  
+ <span data-ttu-id="a5e07-110">Yöntem başarılı olursa S_OK; Aksi takdirde, bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="a5e07-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ddce5-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ddce5-111">Requirements</span></span>  
- <span data-ttu-id="ddce5-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ddce5-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a5e07-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a5e07-111">Requirements</span></span>  
+ <span data-ttu-id="a5e07-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="a5e07-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ddce5-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ddce5-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a5e07-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a5e07-113">See also</span></span>
 
-- [<span data-ttu-id="ddce5-114">ISymENCUnmanagedMethod Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ddce5-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [<span data-ttu-id="a5e07-114">ISymENCUnmanagedMethod Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a5e07-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

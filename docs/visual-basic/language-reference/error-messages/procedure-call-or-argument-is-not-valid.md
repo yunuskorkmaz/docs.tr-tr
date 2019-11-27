@@ -11,13 +11,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346989"
 ---
-# <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a><span data-ttu-id="f9ca4-102">Yordam çağrısı veya bağımsız değişken geçerli değil (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f9ca4-102">Procedure call or argument is not valid (Visual Basic)</span></span>
-<span data-ttu-id="f9ca4-103">Some part of the call cannot be completed.</span><span class="sxs-lookup"><span data-stu-id="f9ca4-103">Some part of the call cannot be completed.</span></span>  
+# <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a><span data-ttu-id="ba093-102">Yordam çağrısı veya bağımsız değişken geçerli değil (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ba093-102">Procedure call or argument is not valid (Visual Basic)</span></span>
+<span data-ttu-id="ba093-103">Çağrının bir bölümü tamamlanamıyor.</span><span class="sxs-lookup"><span data-stu-id="ba093-103">Some part of the call cannot be completed.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f9ca4-104">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="f9ca4-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ba093-104">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="ba093-104">To correct this error</span></span>  
   
-- <span data-ttu-id="f9ca4-105">Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.</span><span class="sxs-lookup"><span data-stu-id="f9ca4-105">Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.</span></span>  
+- <span data-ttu-id="ba093-105">Hiçbir düzenlemenin izin verilen değerleri aştığından emin olmak için bağımsız değişkenler için izin verilen aralıkları denetleyin.</span><span class="sxs-lookup"><span data-stu-id="ba093-105">Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f9ca4-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f9ca4-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba093-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ba093-106">See also</span></span>
 
-- [<span data-ttu-id="f9ca4-107">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="f9ca4-107">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="ba093-107">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="ba093-107">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
