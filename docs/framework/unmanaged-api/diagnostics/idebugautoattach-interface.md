@@ -21,18 +21,18 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445513"
 ---
-# <a name="idebugautoattach-interface"></a><span data-ttu-id="d018e-102">IDebugAutoAttach Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d018e-102">IDebugAutoAttach Interface</span></span>
-<span data-ttu-id="d018e-103">Defines the interface for server-invoked debugger auto attach.</span><span class="sxs-lookup"><span data-stu-id="d018e-103">Defines the interface for server-invoked debugger auto attach.</span></span>  
+# <a name="idebugautoattach-interface"></a><span data-ttu-id="7bbaf-102">IDebugAutoAttach Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7bbaf-102">IDebugAutoAttach Interface</span></span>
+<span data-ttu-id="7bbaf-103">Sunucu tarafından çağrılan hata ayıklayıcı otomatik iliştirme arabirimini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="7bbaf-103">Defines the interface for server-invoked debugger auto attach.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="d018e-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="d018e-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="7bbaf-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="7bbaf-104">Methods</span></span>  
   
-|<span data-ttu-id="d018e-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="d018e-105">Method</span></span>|<span data-ttu-id="d018e-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d018e-106">Description</span></span>|  
+|<span data-ttu-id="7bbaf-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="7bbaf-105">Method</span></span>|<span data-ttu-id="7bbaf-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7bbaf-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="d018e-107">AutoAttach Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d018e-107">AutoAttach Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|<span data-ttu-id="d018e-108">Performs server-invoked debugger auto attach.</span><span class="sxs-lookup"><span data-stu-id="d018e-108">Performs server-invoked debugger auto attach.</span></span>|  
+|[<span data-ttu-id="7bbaf-107">AutoAttach Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7bbaf-107">AutoAttach Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|<span data-ttu-id="7bbaf-108">Sunucu tarafından çağrılan hata ayıklayıcı otomatik iliştirme işlemini gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="7bbaf-108">Performs server-invoked debugger auto attach.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d018e-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d018e-109">Requirements</span></span>  
- <span data-ttu-id="d018e-110">**Header:** DbgAutoAttach.idl</span><span class="sxs-lookup"><span data-stu-id="d018e-110">**Header:** DbgAutoAttach.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7bbaf-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7bbaf-109">Requirements</span></span>  
+ <span data-ttu-id="7bbaf-110">**Üst bilgi:** Dbgoto Attach. IDL</span><span class="sxs-lookup"><span data-stu-id="7bbaf-110">**Header:** DbgAutoAttach.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d018e-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d018e-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7bbaf-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7bbaf-111">See also</span></span>
 
-- [<span data-ttu-id="d018e-112">Tanılama Simge Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="d018e-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="7bbaf-112">Tanılama Simge Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="7bbaf-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

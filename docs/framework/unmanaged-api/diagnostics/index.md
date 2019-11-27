@@ -13,15 +13,15 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445492"
 ---
-# <a name="diagnostics-symbol-store-unmanaged-api-reference"></a><span data-ttu-id="6be81-102">Tanılama Sembol Deposu (Yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="6be81-102">Diagnostics Symbol Store (Unmanaged API Reference)</span></span>
-<span data-ttu-id="6be81-103">The diagnostics symbol store API enables a compiler to generate symbol information for use by a debugger.</span><span class="sxs-lookup"><span data-stu-id="6be81-103">The diagnostics symbol store API enables a compiler to generate symbol information for use by a debugger.</span></span>  
+# <a name="diagnostics-symbol-store-unmanaged-api-reference"></a><span data-ttu-id="bc6ec-102">Tanılama Sembol Deposu (Yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="bc6ec-102">Diagnostics Symbol Store (Unmanaged API Reference)</span></span>
+<span data-ttu-id="bc6ec-103">Tanılama sembol deposu API 'SI, bir derleyicinin bir hata ayıklayıcı tarafından kullanılmak üzere sembol bilgisi oluşturmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="bc6ec-103">The diagnostics symbol store API enables a compiler to generate symbol information for use by a debugger.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6be81-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="6be81-104">In This Section</span></span>  
- [<span data-ttu-id="6be81-105">Tanılama Simge Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="6be81-105">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- <span data-ttu-id="6be81-106">Describes the unmanaged interfaces that the diagnostics symbol store API uses.</span><span class="sxs-lookup"><span data-stu-id="6be81-106">Describes the unmanaged interfaces that the diagnostics symbol store API uses.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="bc6ec-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="bc6ec-104">In This Section</span></span>  
+ [<span data-ttu-id="bc6ec-105">Tanılama Simge Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="bc6ec-105">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+ <span data-ttu-id="bc6ec-106">Tanılama sembol deposu API 'sinin kullandığı yönetilmeyen arabirimleri açıklar.</span><span class="sxs-lookup"><span data-stu-id="bc6ec-106">Describes the unmanaged interfaces that the diagnostics symbol store API uses.</span></span>  
   
- [<span data-ttu-id="6be81-107">Tanılama Simge Deposu Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="6be81-107">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
- <span data-ttu-id="6be81-108">Describes the unmanaged enumerations that the diagnostics symbol store API uses.</span><span class="sxs-lookup"><span data-stu-id="6be81-108">Describes the unmanaged enumerations that the diagnostics symbol store API uses.</span></span>  
+ [<span data-ttu-id="bc6ec-107">Tanılama Simge Deposu Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="bc6ec-107">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
+ <span data-ttu-id="bc6ec-108">Tanılama sembol deposu API 'sinin kullandığı yönetilmeyen numaralandırmaları açıklar.</span><span class="sxs-lookup"><span data-stu-id="bc6ec-108">Describes the unmanaged enumerations that the diagnostics symbol store API uses.</span></span>  
   
- [<span data-ttu-id="6be81-109">Tanılama Simge Deposu Yapıları</span><span class="sxs-lookup"><span data-stu-id="6be81-109">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
- <span data-ttu-id="6be81-110">Describes the unmanaged structures that the diagnostics symbol store API uses.</span><span class="sxs-lookup"><span data-stu-id="6be81-110">Describes the unmanaged structures that the diagnostics symbol store API uses.</span></span>
+ [<span data-ttu-id="bc6ec-109">Tanılama Simge Deposu Yapıları</span><span class="sxs-lookup"><span data-stu-id="bc6ec-109">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
+ <span data-ttu-id="bc6ec-110">Tanılama sembol deposu API 'sinin kullandığı yönetilmeyen yapıları açıklar.</span><span class="sxs-lookup"><span data-stu-id="bc6ec-110">Describes the unmanaged structures that the diagnostics symbol store API uses.</span></span>
